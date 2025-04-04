@@ -3,16 +3,16 @@ keywords: Experience Platform;홈;인기 항목;사각형;사각형
 title: UI에서 정사각형 Source 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Square 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 7cdfeb36-c989-4875-bb94-e6594ddf30da
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '458'
 ht-degree: 3%
 
 ---
 
 # UI에서 [!DNL Square] 소스 연결 만들기
 
-이 자습서에서는 Platform 사용자 인터페이스를 사용하여 [!DNL Square] 소스 커넥터를 만드는 단계를 제공합니다.
+이 자습서에서는 Experience Platform 사용자 인터페이스를 사용하여 [!DNL Square] 소스 커넥터를 만드는 단계를 제공합니다.
 
 ## 시작하기
 
@@ -25,7 +25,7 @@ ht-degree: 3%
 
 ### 필요한 자격 증명 수집
 
-[!DNL Square] 계정 플랫폼에 액세스하려면 다음 값을 제공해야 합니다.
+[!DNL Square] 계정 Experience Platform에 액세스하려면 다음 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | --- | --- |
@@ -37,11 +37,11 @@ ht-degree: 3%
 
 이러한 자격 증명과 자격 증명을 얻는 방법에 대한 자세한 내용은 [[!DNL Square] OAuth에 대한 설명서](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens)를 참조하십시오.
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL Square] 계정을 플랫폼에 연결할 수 있습니다.
+필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL Square] 계정을 Experience Platform에 연결할 수 있습니다.
 
 ## [!DNL Square] 계정 연결
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
@@ -65,4 +65,4 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL Square] 계정과 플랫폼 간의 소스 연결을 인증하고 만들었습니다. 이제 다음 자습서를 계속 진행하고 [데이터 흐름을 만들어 결제 데이터를 플랫폼으로 가져올 수 있습니다](../../dataflow/payments.md).
+이 자습서를 따라 [!DNL Square] 계정과 Experience Platform 간의 소스 연결을 인증하고 만들었습니다. 이제 다음 자습서를 계속 진행하고 [데이터 흐름을 만들어 결제 데이터를 Experience Platform으로 가져올 수 있습니다](../../dataflow/payments.md).

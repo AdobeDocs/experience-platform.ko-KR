@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 대상 데이터 흐름 업데이트
 type: Tutorial
 description: 이 튜토리얼에서는 대상 데이터 흐름을 업데이트하는 단계를 설명합니다. 흐름 서비스 API를 사용하여 데이터 흐름을 활성화 또는 비활성화하거나, 기본 정보를 업데이트하거나, 대상 및 속성을 추가 및 제거하는 방법을 알아봅니다.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: c1d4a0586111d9cd8a66f4239f67f2f7e6ac8633
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2404'
+source-wordcount: '2410'
 ht-degree: 3%
 
 ---
@@ -26,8 +26,8 @@ ht-degree: 3%
 
 또한 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [대상](../home.md): [!DNL Destinations]은(는) Adobe Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
-* [샌드박스](../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [대상](../home.md): [!DNL Destinations]은(는) Adobe Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+* [샌드박스](../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 데이터 흐름을 성공적으로 업데이트하기 위해 알아야 하는 추가 정보를 제공합니다.
 
@@ -37,13 +37,13 @@ ht-degree: 3%
 
 ### 필수 헤더에 대한 값 수집 {#gather-values-for-required-headers}
 
-Platform API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 필요한 각 헤더의 값이 제공됩니다.
+Experience Platform API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Flow Service]에 속하는 리소스를 포함한 Experience Platform의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. Platform API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Flow Service]에 속하는 리소스를 포함한 Experience Platform의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. Experience Platform API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -57,7 +57,7 @@ Platform API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/
 
 ## 데이터 흐름 세부 정보 조회 {#look-up-dataflow-details}
 
-대상 데이터 흐름을 업데이트하는 첫 번째 단계는 흐름 ID를 사용하여 데이터 흐름 세부 정보를 검색하는 것입니다. `/flows` 끝점에 대한 GET 요청을 수행하여 기존 데이터 흐름의 현재 세부 정보를 볼 수 있습니다.
+대상 데이터 흐름을 업데이트하는 첫 번째 단계는 흐름 ID를 사용하여 데이터 흐름 세부 정보를 검색하는 것입니다. `/flows` 끝점에 대한 GET 요청을 수행하면 기존 데이터 흐름의 현재 세부 정보를 볼 수 있습니다.
 
 **API 형식**
 
@@ -349,7 +349,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->PATCH 요청을 할 때 `If-Match` 헤더가 필요합니다. 이 헤더의 값은 업데이트하려는 데이터 흐름의 고유 버전입니다. 데이터 흐름이 성공적으로 업데이트될 때마다 etag 값이 업데이트됩니다.
+>PATCH 요청을 수행할 때 `If-Match` 헤더가 필요합니다. 이 헤더의 값은 업데이트하려는 데이터 흐름의 고유 버전입니다. 데이터 흐름이 성공적으로 업데이트될 때마다 etag 값이 업데이트됩니다.
 
 **API 형식**
 
@@ -391,7 +391,7 @@ curl -X PATCH \
 
 **응답**
 
-성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 하여 업데이트를 확인할 수 있습니다.
+성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하면서 [!DNL Flow Service] API에 대한 GET 요청을 만들어 업데이트를 확인할 수 있습니다.
 
 ```json
 {
@@ -438,7 +438,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 하여 업데이트를 확인할 수 있습니다.
+성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하면서 [!DNL Flow Service] API에 대한 GET 요청을 만들어 업데이트를 확인할 수 있습니다.
 
 ```json
 {
@@ -449,7 +449,7 @@ curl -X POST \
 
 ## 데이터 흐름에 대상 추가 {#add-segment}
 
-대상 데이터 흐름에 대상을 추가하려면 흐름 ID, 버전 및 추가할 대상을 제공하는 동안 [!DNL Flow Service] API에 대한 PATCH 요청을 수행합니다.
+대상 데이터 흐름에 대상을 추가하려면 흐름 ID, 버전 및 추가할 대상을 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행합니다.
 
 **API 형식**
 
@@ -499,17 +499,17 @@ curl -X PATCH \
 | `value` | 매개 변수를 업데이트할 새 값입니다. |
 | `id` | 대상 데이터 흐름에 추가할 대상자의 ID를 지정합니다. |
 | `name` | **(선택 사항)**. 대상 데이터 흐름에 추가할 대상자의 이름을 지정합니다. 이 필드는 필수가 아니므로 이름을 제공하지 않고 대상 데이터 흐름에 대상을 성공적으로 추가할 수 있습니다. |
-| `filenameTemplate` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br> 이 필드는 대상으로 내보내는 파일의 파일 이름 형식을 결정합니다. <br> 다음 옵션을 사용할 수 있습니다. <br> <ul><li>`%DESTINATION_NAME%`: 필수입니다. 내보낸 파일에는 대상 이름이 포함되어 있습니다.</li><li>`%SEGMENT_ID%`: 필수입니다. 내보낸 파일에는 내보낸 대상자의 ID가 들어 있습니다.</li><li>`%SEGMENT_NAME%`: **(선택 사항)**. 내보낸 파일에는 내보낸 대상자의 이름이 포함됩니다.</li><li>`DATETIME(YYYYMMdd_HHmmss)` 또는 `%TIMESTAMP%`: **(선택 사항)**. 다음 두 옵션 중 하나를 선택하여 Experience Platform으로 생성된 시간을 파일에 포함합니다.</li><li>`custom-text`: **(선택 사항)**. 이 자리 표시자를 파일 이름 끝에 추가할 사용자 지정 텍스트로 바꿉니다.</li></ul> <br> 파일 이름 구성에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서의 [파일 이름 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 섹션을 참조하십시오. |
+| `filenameTemplate` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br> 이 필드는 대상으로 내보내는 파일의 파일 이름 형식을 결정합니다. <br> 다음 옵션을 사용할 수 있습니다. <br> <ul><li>`%DESTINATION_NAME%`: 필수입니다. 내보낸 파일에는 대상 이름이 포함되어 있습니다.</li><li>`%SEGMENT_ID%`: 필수입니다. 내보낸 파일에는 내보낸 대상자의 ID가 들어 있습니다.</li><li>`%SEGMENT_NAME%`: **(선택 사항)**. 내보낸 파일에는 내보낸 대상자의 이름이 포함됩니다.</li><li>`DATETIME(YYYYMMdd_HHmmss)` 또는 `%TIMESTAMP%`: **(선택 사항)**. Experience Platform에서 생성한 시간을 파일에 포함하려면 다음 두 옵션 중 하나를 선택합니다.</li><li>`custom-text`: **(선택 사항)**. 이 자리 표시자를 파일 이름 끝에 추가할 사용자 지정 텍스트로 바꿉니다.</li></ul> <br> 파일 이름 구성에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서의 [파일 이름 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 섹션을 참조하십시오. |
 | `exportMode` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br>은(는) 필수입니다. `"DAILY_FULL_EXPORT"` 또는 `"FIRST_FULL_THEN_INCREMENTAL"`을(를) 선택하십시오. 두 옵션에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서에서 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)를 참조하십시오. |
 | `startDate` | 대상자가 대상으로 프로필 내보내기를 시작할 날짜를 선택합니다. |
 | `frequency` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br>은(는) 필수입니다. <br> <ul><li>`"DAILY_FULL_EXPORT"` 내보내기 모드의 경우 `ONCE` 또는 `DAILY`을(를) 선택할 수 있습니다.</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` 내보내기 모드의 경우 `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`을(를) 선택할 수 있습니다.</li></ul> |
-| `triggerType` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 `frequency` 선택기에서 `"DAILY_FULL_EXPORT"` 모드를 선택하는 경우에만 필요합니다. <br>은(는) 필수입니다. <br> <ul><li>매일 플랫폼 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행하려면 `"AFTER_SEGMENT_EVAL"`을(를) 선택하십시오. 이렇게 하면 활성화 작업이 실행될 때 가장 최신 프로필을 대상으로 내보냅니다.</li><li>고정된 시간에 활성화 작업을 실행하려면 `"SCHEDULED"`을(를) 선택하십시오. 이렇게 하면 Experience Platform 프로필 데이터를 매일 동시에 내보낼 수 있지만 활성화 작업이 시작되기 전에 배치 세분화 작업이 완료되었는지 여부에 따라 내보내는 프로필이 최신 프로필이 아닐 수 있습니다. 이 옵션을 선택할 때는 일별 내보내기가 발생하는 시간을 UTC로 나타내려면 `startTime`도 추가해야 합니다.</li></ul> |
+| `triggerType` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 `frequency` 선택기에서 `"DAILY_FULL_EXPORT"` 모드를 선택하는 경우에만 필요합니다. <br>은(는) 필수입니다. <br> <ul><li>매일 Experience Platform 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행하려면 `"AFTER_SEGMENT_EVAL"`을(를) 선택하십시오. 이렇게 하면 활성화 작업이 실행될 때 가장 최신 프로필을 대상으로 내보냅니다.</li><li>고정된 시간에 활성화 작업을 실행하려면 `"SCHEDULED"`을(를) 선택하십시오. 이렇게 하면 Experience Platform 프로필 데이터를 매일 동시에 내보낼 수 있지만 활성화 작업이 시작되기 전에 배치 세분화 작업이 완료되었는지 여부에 따라 내보내는 프로필이 최신 프로필이 아닐 수 있습니다. 이 옵션을 선택할 때는 일별 내보내기가 발생하는 시간을 UTC로 나타내려면 `startTime`도 추가해야 합니다.</li></ul> |
 | `endDate` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. `"exportMode":"DAILY_FULL_EXPORT"` 및 `"frequency":"ONCE"`을(를) 선택할 때는 <br>을(를) 적용할 수 없습니다. <br> 대상 구성원의 대상 내보내기를 중지할 날짜를 설정합니다. |
 | `startTime` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br>은(는) 필수입니다. 대상자의 멤버가 포함된 파일을 생성하여 대상으로 내보내야 하는 시간을 선택합니다. |
 
 **응답**
 
-성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 하여 업데이트를 확인할 수 있습니다.
+성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하면서 [!DNL Flow Service] API에 대한 GET 요청을 만들어 업데이트를 확인할 수 있습니다.
 
 ```json
 {
@@ -565,12 +565,12 @@ curl -X PATCH \
 | 속성 | 설명 |
 | --------- | ----------- |
 | `op` | 데이터 흐름을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 `add`, `replace` 및 `remove`이(가) 포함됩니다. 데이터 흐름에서 대상을 제거하려면 `remove` 작업을 사용하십시오. |
-| `path` | 대상 선택기의 색인에 따라 대상 데이터 흐름에서 제거해야 하는 기존 대상을 지정합니다. 데이터 흐름에서 대상 순서를 검색하려면 `/flows` 끝점에 대한 GET 호출을 수행하고 `transformations.segmentSelectors` 속성을 검사하십시오. 데이터 흐름의 첫 번째 대상을 삭제하려면 `"path":"/transformations/0/params/segmentSelectors/selectors/0"`을(를) 사용합니다. |
+| `path` | 대상 선택기의 색인에 따라 대상 데이터 흐름에서 제거해야 하는 기존 대상을 지정합니다. 데이터 흐름에서 대상자 순서를 검색하려면 `/flows` 끝점에 대한 GET 호출을 수행하고 `transformations.segmentSelectors` 속성을 검사하십시오. 데이터 흐름의 첫 번째 대상을 삭제하려면 `"path":"/transformations/0/params/segmentSelectors/selectors/0"`을(를) 사용합니다. |
 
 
 **응답**
 
-성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 하여 업데이트를 확인할 수 있습니다.
+성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하면서 [!DNL Flow Service] API에 대한 GET 요청을 만들어 업데이트를 확인할 수 있습니다.
 
 ```json
 {
@@ -591,7 +591,7 @@ PATCH /flows/{FLOW_ID}
 
 **요청**
 
-기존 대상 데이터 흐름에서 대상을 업데이트할 때에는 먼저 업데이트할 대상의 세부 정보를 검색하는 GET 작업을 수행해야 합니다. 그런 다음 업데이트하려는 필드뿐만 아니라 페이로드에 모든 대상 정보를 제공합니다. 아래 예에서는 파일 이름 템플릿 끝에 사용자 정의 텍스트가 추가되고 내보내기 일정 빈도가 6시간에서 12시간으로 업데이트됩니다.
+기존 대상 데이터 흐름에서 대상을 업데이트할 때에는 먼저 GET 작업을 수행하여 업데이트할 대상의 세부 정보를 검색해야 합니다. 그런 다음 업데이트하려는 필드뿐만 아니라 페이로드에 모든 대상 정보를 제공합니다. 아래 예에서는 파일 이름 템플릿 끝에 사용자 정의 텍스트가 추가되고 내보내기 일정 빈도가 6시간에서 12시간으로 업데이트됩니다.
 
 ```shell
 curl -X PATCH \
@@ -631,7 +631,7 @@ curl -X PATCH \
 
 **응답**
 
-성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 하여 업데이트를 확인할 수 있습니다.
+성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하면서 [!DNL Flow Service] API에 대한 GET 요청을 만들어 업데이트를 확인할 수 있습니다.
 
 ```json
 {
@@ -644,7 +644,7 @@ curl -X PATCH \
 
 ## 대상자의 내보내기 모드를 예약됨에서 대상자 평가 후로 업데이트 {#update-export-mode}
 
-+++ 대상자 내보내기가 지정된 시간에 매일 활성화되지 않고 플랫폼 일괄 처리 세분화 작업이 완료된 후 매일 활성화되도록 업데이트되는 예를 보려면 를 클릭합니다.
++++ 대상 내보내기가 Experience Platform 배치 세분화 작업이 완료된 후 지정된 시간에 매일 활성화됨에서 매일 활성화됨으로 업데이트되는 예를 보려면 클릭하십시오.
 
 대상은 매일 16:00 UTC에 내보내집니다.
 
@@ -720,7 +720,7 @@ curl -X PATCH \
 }
 ```
 
-내보낸 파일에는 대상 이름, Experience Platform 대상 ID, Experience Platform에 의해 파일이 생성된 날짜와 시간, 파일 끝에 추가된 사용자 지정 텍스트가 포함되어 있습니다.
+내보낸 파일에는 대상 이름, Experience Platform 대상 ID, Experience Platform에서 파일을 생성한 날짜와 시간, 파일 끝에 추가된 사용자 지정 텍스트가 포함되어 있습니다.
 
 
 ```json
@@ -790,7 +790,7 @@ curl -X PATCH \
 
 **응답**
 
-성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 하여 업데이트를 확인할 수 있습니다.
+성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하면서 [!DNL Flow Service] API에 대한 GET 요청을 만들어 업데이트를 확인할 수 있습니다.
 
 ```json
 {
@@ -801,7 +801,7 @@ curl -X PATCH \
 
 ## 데이터 흐름에서 프로필 속성 제거 {#remove-profile-attribute}
 
-기존 대상 데이터 흐름에서 프로필 특성을 제거하려면 제거할 프로필 특성의 흐름 ID, 버전 및 인덱스 선택기를 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행합니다. 인덱싱이 `0`에 시작됩니다. 예를 들어 아래의 샘플 요청은 데이터 흐름에서 다섯 번째 프로필 속성을 제거합니다.
+기존 대상 데이터 흐름에서 프로필 특성을 제거하려면 제거할 프로필 특성의 흐름 ID, 버전 및 인덱스 선택기를 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하십시오. 인덱싱이 `0`에 시작됩니다. 예를 들어 아래의 샘플 요청은 데이터 흐름에서 다섯 번째 프로필 속성을 제거합니다.
 
 
 **API 형식**
@@ -844,7 +844,7 @@ curl -X PATCH \
 
 **응답**
 
-성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 하여 업데이트를 확인할 수 있습니다.
+성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하면서 [!DNL Flow Service] API에 대한 GET 요청을 만들어 업데이트를 확인할 수 있습니다.
 
 ```json
 {
@@ -855,7 +855,7 @@ curl -X PATCH \
 
 ## API 오류 처리 {#api-error-handling}
 
-이 자습서의 API 끝점은 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 오류 응답 해석에 대한 자세한 내용은 플랫폼 문제 해결 안내서의 [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+이 자습서의 API 끝점은 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 오류 응답 해석에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 

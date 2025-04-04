@@ -2,9 +2,9 @@
 title: Query Accelerated Store 보고 인사이트 안내서
 description: 가속화된 스토어 데이터 및 사용자 정의 대시보드와 함께 사용할 수 있도록 쿼리 서비스를 통해 보고 인사이트 데이터 모델을 구축하는 방법에 대해 알아봅니다.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1037'
 ht-degree: 0%
 
 ---
@@ -13,31 +13,31 @@ ht-degree: 0%
 
 쿼리 가속 저장소를 사용하면 데이터에서 중요한 통찰력을 얻는 데 필요한 시간과 처리 능력을 줄일 수 있습니다. 일반적으로 데이터는 집계 보기가 생성되고 보고되는 정기적인 간격(예: 시간별 또는 일별)으로 처리됩니다. 집계된 데이터에서 생성된 이러한 보고서를 분석하면 비즈니스 성과를 향상시키기 위한 통찰력을 도출합니다. 쿼리 가속 저장소는 캐시 서비스, 동시성, 대화형 경험 및 상태 비저장 API를 제공합니다. 단, 데이터는 원시 데이터 쿼리가 아닌 집계된 쿼리에 대해 사전 처리되고 최적화된다고 가정합니다.
 
-쿼리 가속 저장소를 사용하면 사용자 지정 데이터 모델을 구축하거나 기존 Adobe Real-time Customer Data Platform 데이터 모델을 확장할 수 있습니다. 그런 다음 보고 통찰력을 참여하거나 선택한 보고/시각화 프레임워크에 포함할 수 있습니다. [SQL 쿼리 템플릿을 사용자 지정하여 마케팅 및 KPI(주요 성능 지표) 사용 사례에 대한 Real-Time CDP 보고서를 만드는 방법](../../../dashboards/data-models/cdp-insights-data-model-b2c.md)을 알아보려면 Real-time Customer Data Platform 통찰력 데이터 모델 설명서를 참조하십시오.
+쿼리 가속 저장소를 사용하면 사용자 지정 데이터 모델을 구축하거나 기존 Adobe Real-Time Customer Data Platform 데이터 모델을 확장할 수 있습니다. 그런 다음 보고 통찰력을 참여하거나 선택한 보고/시각화 프레임워크에 포함할 수 있습니다. [SQL 쿼리 템플릿을 사용자 지정하여 마케팅 및 KPI(주요 성능 지표) 사용 사례에 대한 Real-Time CDP 보고서를 만드는 방법](../../../dashboards/data-models/cdp-insights-data-model-b2c.md)을 알아보려면 Real-Time Customer Data Platform 통찰력 데이터 모델 설명서를 참조하십시오.
 
-Adobe Experience Platform의 Real-Time CDP 데이터 모델은 프로필, 대상 및 대상에 대한 인사이트를 제공하며 Real-Time CDP 인사이트 대시보드를 사용할 수 있습니다. 이 문서에서는 Reporting Insights 데이터 모델을 만드는 과정을 안내하고 필요에 따라 Real-Time CDP 데이터 모델을 확장하는 방법을 안내합니다.
+Adobe Experience Platform의 Real-Time CDP 데이터 모델은 프로필, 대상 및 대상에 대한 통찰력을 제공하며 Real-Time CDP insight 대시보드를 사용할 수 있도록 합니다. 이 문서에서는 Reporting Insights 데이터 모델을 만드는 과정을 안내하고 필요에 따라 Real-Time CDP 데이터 모델을 확장하는 방법을 안내합니다.
 
 ## 전제 조건
 
-이 자습서에서는 사용자 정의 대시보드를 사용하여 Platform UI 내에서 사용자 정의 데이터 모델의 데이터를 시각화합니다. 이 기능에 대한 자세한 내용은 [사용자 정의 대시보드 설명서](../../../dashboards/standard-dashboards.md)를 참조하세요.
+이 자습서에서는 사용자 정의 대시보드를 사용하여 Experience Platform UI 내에서 사용자 지정 데이터 모델의 데이터를 시각화합니다. 이 기능에 대한 자세한 내용은 [사용자 정의 대시보드 설명서](../../../dashboards/standard-dashboards.md)를 참조하세요.
 
 ## 시작하기
 
-Data Distiller SKU는 보고 통찰력에 대한 사용자 지정 데이터 모델을 구축하고 풍부한 플랫폼 데이터를 포함하는 Real-Time CDP 데이터 모델을 확장하는 데 필요합니다. Data Distiller SKU와 관련된 [패키징](../../packaging.md), [보호 기능](../../guardrails.md#query-accelerated-store) 및 [라이선스](../../data-distiller/license-usage.md) 설명서를 참조하십시오. Data Distiller SKU가 없는 경우 Adobe 고객 서비스 담당자에게 자세한 내용을 문의하십시오.
+Data Distiller SKU는 보고 통찰력에 대한 사용자 지정 데이터 모델을 구축하고 풍부한 Experience Platform 데이터를 포함하는 Real-Time CDP 데이터 모델을 확장하는 데 필요합니다. Data Distiller SKU와 관련된 [패키징](../../packaging.md), [보호 기능](../../guardrails.md#query-accelerated-store) 및 [라이선스](../../data-distiller/license-usage.md) 설명서를 참조하십시오. Data Distiller SKU가 없는 경우 Adobe 고객 서비스 담당자에게 자세한 내용을 문의하십시오.
 
 ## 보고 통찰력 데이터 모델 구축
 
-이 자습서에서는 대상 통찰력 데이터 모델 구축의 예를 사용합니다. 한 개 이상의 광고주 플랫폼을 사용하여 대상자에게 도달하는 경우 광고주의 API를 사용하여 대상자의 대략적인 일치 수를 얻을 수 있습니다.
+이 자습서에서는 대상 insight 데이터 모델 구축의 예를 사용합니다. 한 개 이상의 광고주 플랫폼을 사용하여 대상자에게 도달하는 경우 광고주의 API를 사용하여 대상자의 대략적인 일치 수를 얻을 수 있습니다.
 
 처음에는 소스(잠재적으로 광고주 플랫폼 API)의 초기 데이터 모델이 있습니다. 원시 데이터를 집계하여 보려면 아래 이미지에 설명된 대로 보고 통찰력 모델을 만드십시오. 이를 통해 하나의 데이터 세트가 대상 일치의 상한과 하한을 얻을 수 있습니다.
 
-![대상 인사이트 사용자 모델의 ERD(엔터티 관계 다이어그램)입니다.](../../images/data-distiller/sql-insights/audience-insight-user-model.png)
+![대상 insight 사용자 모델의 ERD(엔터티 관계형 다이어그램)입니다.](../../images/data-distiller/sql-insights/audience-insight-user-model.png)
 
-이 예에서 `externalaudiencereach` 테이블/데이터 집합은 ID를 기반으로 하며 일치 횟수의 하한과 상한을 추적합니다. `externalaudiencemapping` 차원 테이블/데이터 집합은 외부 ID를 플랫폼의 대상 및 대상에 매핑합니다.
+이 예에서 `externalaudiencereach` 테이블/데이터 집합은 ID를 기반으로 하며 일치 횟수의 하한과 상한을 추적합니다. `externalaudiencemapping` 차원 테이블/데이터 집합은 외부 ID를 Experience Platform의 대상 및 대상에 매핑합니다.
 
 ## Data Distiller을 사용하여 보고 통찰력에 대한 모델 만들기
 
-그런 다음 보고 인사이트 모델(`audienceinsight` 이 예제에서는 )을 만들고 SQL 명령 `ACCOUNT=acp_query_batch and TYPE=QSACCEL`을(를) 사용하여 가속화된 저장소에 만들도록 합니다. 그런 다음 쿼리 서비스를 사용하여 `audienceinsight` 데이터베이스에 대한 `audienceinsight.audiencemodel` 스키마를 만듭니다.
+그런 다음 보고 insight 모델(`audienceinsight` 이 예제에서는 )을 만들고 SQL 명령 `ACCOUNT=acp_query_batch and TYPE=QSACCEL`을(를) 사용하여 가속화된 저장소에 만들도록 합니다. 그런 다음 쿼리 서비스를 사용하여 `audienceinsight` 데이터베이스에 대한 `audienceinsight.audiencemodel` 스키마를 만듭니다.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ CREATE schema audienceinsight.audiencemodel;
 
 ## 테이블, 관계 만들기 및 데이터 채우기
 
-`audienceinsight` 보고 인사이트 모델을 만들었으므로 이제 `externalaudiencereach` 및 `externalaudiencemapping` 테이블을 만들고 테이블 간의 관계를 설정하십시오. 그런 다음 `ALTER TABLE` 명령을 사용하여 테이블 사이에 외래 키 제약 조건을 추가하고 관계를 정의합니다. 다음 SQL 예제에서는 이 작업을 수행하는 방법을 보여 줍니다.
+`audienceinsight` 보고 insight 모델을 만들었으므로 이제 `externalaudiencereach` 및 `externalaudiencemapping` 테이블을 만들고 테이블 간의 관계를 설정하십시오. 그런 다음 `ALTER TABLE` 명령을 사용하여 테이블 사이에 외래 키 제약 조건을 추가하고 관계를 정의합니다. 다음 SQL 예제에서는 이 작업을 수행하는 방법을 보여 줍니다.
 
 ```sql
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencereach
@@ -93,7 +93,7 @@ ALTER TABLE externalaudiencereach ADD  CONSTRAINT FOREIGN KEY (ext_custom_audien
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencereach   | true           | 1b941a6d-6214-4810-815c-81c497a0b636
 ```
 
-## 보고 통찰력 데이터 모델 쿼리
+## 보고 insight 데이터 모델 쿼리
 
 쿼리 서비스를 사용하여 `audiencemodel.externalaudiencereach` 차원 테이블을 쿼리합니다. 예제 쿼리는 아래에 표시됩니다.
 
@@ -131,7 +131,7 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 추가 세부 정보로 대상 모델을 확장하여 더 풍부한 차원 테이블을 만들 수 있습니다. 예를 들어 대상 이름 및 대상 이름을 외부 대상 식별자에 매핑할 수 있습니다. 이렇게 하려면 쿼리 서비스 를 사용하여 새 데이터 세트를 만들거나 새로 고친 후 대상 및 대상을 외부 ID와 결합하는 대상 모델에 추가하십시오. 아래 다이어그램은 이 데이터 모델 확장의 개념을 보여 줍니다.
 
-![Real-Time CDP 인사이트 데이터 모델과 쿼리 가속 저장소 모델을 연결하는 ERD 다이어그램입니다.](../../images/data-distiller/sql-insights/updatingAudienceInsightUserModel.png)
+![Real-Time CDP insight 데이터 모델과 쿼리 가속 저장소 모델을 연결하는 ERD 다이어그램입니다.](../../images/data-distiller/sql-insights/updatingAudienceInsightUserModel.png)
 
 ## 차원 테이블을 생성하여 보고 통찰력 모델 확장
 

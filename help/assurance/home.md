@@ -1,17 +1,17 @@
 ---
 title: Adobe Experience Platform Assurance 개요
-description: Adobe Experience Platform Assurance를 사용하면 모바일 애플리케이션 내에서 데이터를 수집하거나 경험을 제공하는 방식을 검사하고, 증명하고, 시뮬레이션하고, 검증할 수 있습니다.
+description: Adobe Experience Platform Assurance를 사용하면 모바일 애플리케이션 내에서 데이터를 수집하거나 경험을 제공하는 방식을 검사하고, 교정하고, 시뮬레이션하고, 검증할 수 있습니다.
 exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 100%
+source-wordcount: '809'
+ht-degree: 95%
 
 ---
 
 # Adobe Experience Platform Assurance
 
-Adobe Experience Platform Assurance는 모바일 앱에서 데이터를 수집하거나 경험을 제공하는 방법을 검사, 증명, 시뮬레이션 및 확인하는 데 도움이 되는 [Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html)의 제품입니다.
+Adobe Experience Platform Assurance는 모바일 앱에서 데이터를 수집하거나 경험을 제공하는 방법을 검사, 교정, 시뮬레이션 및 확인하는 데 도움이 되는 [Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html)의 제품입니다.
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ Adobe Experience Platform Assurance는 모바일 앱에서 데이터를 수집�
 
 10월 15일 - Assurance에 대한 액세스는 Admin Console을 통해 관리됩니다. 중단 없이 계속 액세스할 수 있도록 [사용자 액세스 안내서](./user-access.md)를 참조하십시오.
 
-기존 Assurance 통합, 세션 및 이벤트에는 다른 변경이나 중단이 예상되지 않습니다. Assurance는 [https://griffon.adobe.com](https://griffon.adobe.com) **또는** 사용자가 사용할 수 있는 [https://experience.adobe.com/assurance](https://experience.adobe.com/assurance)(및 책갈피)를 통해 계속 액세스할 수 있습니다.
+기존 Assurance 통합, 세션 및 이벤트에는 다른 변경이나 중단이 예상되지 않습니다. Assurance는 [https://griffon.adobe.com](https://griffon.adobe.com) **또는** 사용자가 사용할 수 있는 [https://experience.adobe.com/assurance](https://experience.adobe.com/assurance)&#x200B;(및 책갈피)를 통해 계속 액세스할 수 있습니다.
 
 ## Assurance의 기능은 무엇입니까?
 
@@ -43,7 +43,7 @@ Adobe Experience Platform Assurance는 모바일 앱에서 데이터를 수집�
 
 ### 간편한 연결
 
-Assurance를 사용하면 Platform과 앱을 간단하고 안정적으로 연결할 수 있습니다. 네트워크 프록시, [MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) 및 기타 네트워크 도구를 사용할 필요가 없이 QR 코드를 스캔하거나 버튼을 누르는 것처럼 손쉽게 앱을 Assurance에 연결할 수 있습니다.
+Assurance을 사용하면 앱을 Experience Platform에 연결할 때 편리하고 신뢰할 수 있습니다. 네트워크 프록시, [MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) 및 기타 네트워크 도구를 사용할 필요가 없이 QR 코드를 스캔하거나 버튼을 누르는 것처럼 손쉽게 앱을 Assurance에 연결할 수 있습니다.
 
 ![](./images/index/no-hassle-connection.png)
 
@@ -67,7 +67,7 @@ Assurance를 통해 Adobe Experience Platform Mobile SDK에서 생성된 원시 
 
 ### Adobe Analytics
 
-Adobe Analytics > Analytics 이벤트 보기는 Adobe Analytics 모바일 구현과 관련된 이벤트를 표시하는 집중 보기입니다. 목록 보기는 형식이 특별 지정된 보기에서 필수 이벤트 세부 정보와 함께 수명 주기 또는 작업/상태 이벤트, 후처리된 “상태”를 보여 줍니다. 후처리된 상태는 이벤트에 처리 규칙이 적용된 후 Adobe Analytics에서 이벤트를 처리하는 방법을 보여 줍니다.
+Adobe Analytics > Analytics 이벤트 보기는 Adobe Analytics 모바일 구현과 관련된 이벤트를 표시하는 집중 보기입니다. 목록 보기에는 특정 형식의 보기에서 필수 이벤트 세부 사항과 함께 라이프사이클 또는 작업/상태 이벤트인 후 처리된 &quot;상태&quot;가 표시됩니다. 후처리된 상태는 이벤트에 처리 규칙이 적용된 후 Adobe Analytics에서 이벤트를 처리하는 방법을 보여 줍니다.
 
 ### 스트리밍 미디어용 Adobe Analytics
 

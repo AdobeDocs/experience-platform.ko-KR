@@ -4,10 +4,10 @@ user-guide-title: Catalog and Datasets 안내서
 user-guide-description: 데이터 레이크 내의 데이터 계보, 메타데이터, 파일 설명, 디렉터리 및 데이터 세트를 탐색하고 카탈로그 서비스 시스템에 대해 자세히 알아봅니다.
 feature: Catalog
 role: Developer
-source-git-commit: 74b6e5f10f7532745180760adf1d96bc57e7b590
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 33%
+source-wordcount: '124'
+ht-degree: 42%
 
 ---
 
@@ -34,8 +34,8 @@ ht-degree: 33%
    * [API를 사용하여 데이터 세트 만들기 및 채우기](datasets/create.md)
    * [프로필 및 ID에 대한 데이터 세트 활성화](datasets/enable-for-profile.md)
    * [프로필 업데이트(업데이트)에 대한 데이터 세트 활성화](datasets/enable-upsert.md)
-   * [데이터 레이크의 경험 이벤트 데이터 세트 유지](datasets/experience-event-dataset-retention-ttl-guide.md)
+   * [데이터 레이크에서 경험 이벤트 데이터 세트 유지](datasets/experience-event-dataset-retention-ttl-guide.md)
 * [데이터 레이크에서 개인 정보 보호 요청 처리](privacy.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [자주 묻는 질문](catalog-faq.md)
-* [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+* [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

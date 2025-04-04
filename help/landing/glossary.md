@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 용어
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '7996'
+source-wordcount: '8009'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 **액세스 제어**: 역할 기반 액세스 제어를 통해 관리자는 Experience Platform 사용자에게 액세스 및 권한을 할당할 수 있습니다. 권한에는 샌드박스 생성, 스키마 정의 및 데이터 세트 관리와 같은 Experience Platform 기능을 보거나 사용할 수 있는 기능이 포함됩니다.
 
-**액세스 키 ID**: 액세스 키 ID는 [!DNL Amazon] S3 비밀 액세스 키와 연결된 고유 식별자입니다. 액세스 키 ID와 비밀 액세스 키는 [!DNL Amazon Web Services](AWS) 요청에 서명하는 데 함께 사용됩니다.
+**액세스 키 ID**: 액세스 키 ID는 [!DNL Amazon] S3 비밀 액세스 키와 연결된 고유 식별자입니다. 액세스 키 ID와 비밀 액세스 키는 [!DNL Amazon Web Services]&#x200B;(AWS) 요청에 서명하는 데 함께 사용됩니다.
 
 **Action**: 태그 컨텍스트에서 작업은 이벤트가 발생하고 조건이 평가 및 전달된 후 수행해야 하는 작업을 정의하는 특정 유형의 규칙 구성 요소입니다.
 
@@ -25,29 +25,29 @@ ht-degree: 0%
 
 **활동**: [!DNL Offer Decisioning]에서 활동에는 오퍼의 선택을 알리는 논리가 포함되어 있습니다.
 
-**관리자**: 조직에서 Adobe Admin Console의 Experience Platform 권한을 구성하고 사용자 지정할 수 있는 한 명 이상의 개인 사용자.
+**관리자**: 조직에서 Adobe Admin Console에서 Experience Platform에 대한 권한을 구성하고 사용자 지정할 수 있는 한 명 이상의 개인 사용자.
 
-**Adobe Admin Console**: Adobe Admin Console은 조직의 Adobe 제품 권한 및 액세스를 관리하기 위한 중앙 위치를 제공합니다. 관리자는 콘솔을 통해 사용자 그룹에 &quot;데이터 세트 관리&quot;, &quot;데이터 세트 보기&quot; 또는 &quot;프로필 관리&quot;와 같은 다양한 Platform 기능에 대한 액세스 권한을 부여할 수 있습니다.
+**Adobe Admin Console**: Adobe Admin Console은 조직의 Adobe 제품 권한 및 액세스를 관리하기 위한 중앙 위치를 제공합니다. 관리자는 콘솔을 통해 사용자 그룹에 &quot;데이터 세트 관리&quot;, &quot;데이터 세트 보기&quot; 또는 &quot;프로필 관리&quot;와 같은 다양한 Experience Platform 기능에 대한 액세스 권한을 부여할 수 있습니다.
 
 **Adobe Experience Platform**: Adobe Experience Platform은 기업 전체의 데이터 및 콘텐츠를 표준화하므로 실시간 고객 프로필을 기반으로 데이터 과학을 구현하고 콘텐츠 속도를 가속화하여 고객 여정 전반에서 경험 개인화를 촉진합니다.
 
-**Adobe Experience Platform 쿼리 서비스**: 데이터 분석가는 분석 및 기계 학습에 사용할 이벤트 및 프로필을 쿼리할 수 있습니다. Query Service를 사용하면 데이터 과학자와 분석가가 Experience Platform에 저장된 모든 데이터 세트(행동 데이터와 POS(판매점), CRM(고객 관계 관리) 등)를 가져와서 해당 데이터 세트를 쿼리하여 데이터에 대한 특정 질문에 답변할 수 있습니다.
+**Adobe Experience Platform 쿼리 서비스**: 데이터 분석가는 분석 및 기계 학습에 사용할 이벤트 및 프로필을 쿼리할 수 있습니다. 데이터 과학자와 분석가는 Query Service를 사용하여 행동 데이터는 물론 POS(판매 시점 관리), CRM(고객 관계 관리) 등 Experience Platform에 저장된 모든 데이터 세트를 가져오고, 해당 데이터 세트를 쿼리하여 데이터에 대한 특정 질문에 답변할 수 있습니다.
 
 **Adobe Experience Platform 세분화 서비스**: 실시간 고객 프로필 데이터에서 세그먼트를 작성하고 대상을 생성할 수 있습니다. 그런 다음 이러한 대상을 데이터 레이크 내의 자체 데이터 세트로 내보낼 수 있습니다.
 
-**Adobe 인텔리전트 서비스**: Attribution AI 및 고객 AI와 같은 인텔리전트 서비스는 머신 러닝, 인공 지능 기반 모델로 Experience Platform이 실행 및 운영되어야 합니다.
+**Adobe Intelligent Services**: Attribution AI 및 Customer AI와 같은 Intelligent Services는 머신 러닝, 인공 지능 기반 모델로 특별히 빌드되었으며 Experience Platform을 실행하고 운영해야 합니다.
 
-**Adobe I/O**: Adobe I/O은 Experience Platform의 일부이며 API, 이벤트, 개발자 콘솔 및 유용한 도구 등 개발자가 플랫폼을 통합, 확장 및 사용자 지정하는 데 필요한 모든 기능에 액세스할 수 있습니다.
+**Adobe I/O**: Adobe I/O은 Experience Platform의 일부이며 API, 이벤트, 개발자 콘솔 및 유용한 도구 등 개발자가 Experience Platform을 통합, 확장 및 사용자 지정하는 데 필요한 모든 기능에 액세스할 수 있습니다.
 
 **Adobe Sensei**: Adobe Sensei은 Experience Platform을 지원하는 인텔리전스 프레임워크입니다. 또한 브랜드가 개인화된 실시간 고객 경험을 제공할 수 있도록 지원하는 AI 서비스 세트를 제공합니다.
 
 **Amazon S3 버킷**: [!DNL Amazon S3] 버킷은 [!DNL Amazon] 에코시스템에 저장된 데이터의 기본 컨테이너입니다. 버킷에는 객체가 들어 있으며 각 객체는 고유한 개발자가 할당한 키를 사용하여 저장되고 검색됩니다.
 
-**Amazon S3 커넥터**: [!DNL Amazon] S3 커넥터를 사용하면 Experience Platform 고객이 [!DNL Amazon] S3 데이터를 안전하게 연결하고 액세스할 수 있습니다.
+**Amazon S3 커넥터**: [!DNL Amazon] S3 커넥터를 사용하면 Experience Platform 고객이 [!DNL Amazon] S3 데이터에 안전하게 연결하고 액세스할 수 있습니다.
 
 **APA**: [[!DNL Australia Privacy Act (Privacy Act)]](https://www.oaic.gov.au/privacy/the-privacy-act)은(는) 개인의 개인 정보를 홍보하고 보호하며 호주 정부 기관 및 조직이 개인 정보를 처리하는 방법을 규제합니다. [!DNL Privacy Act]에는 민간 부문 조직에 적용되는 원칙이 포함되어 있습니다. 예를 들어 개인에게는 개인정보가 수집되는 이유와 그 이용 방식, 데이터에 접근하고 지우는 기능, 개인정보 수정 등을 이해할 수 있는 권리가 주어진다.
 
-**저장 전략 추가**: &quot;추가&quot; 저장 전략은 연결을 통해 수집할 타사 데이터를 지정하고 데이터 집합의 끝에 새 데이터나 행을 추가할 때 사용되는 옵션입니다. 이전에 수집된 행은 그대로 유지되며 마지막으로 예약된 실행 이후 생성된 행만 Experience Platform에 수집됩니다. 소스 시스템에서 변경된 모든 행은 Experience Platform 시 변경되지 않습니다.
+**저장 전략 추가**: &quot;추가&quot; 저장 전략은 연결을 통해 수집할 타사 데이터를 지정하고 데이터 집합의 끝에 새 데이터나 행을 추가할 때 사용되는 옵션입니다. 이전에 수집된 행은 그대로 유지되며 마지막으로 예약된 실행 이후 생성된 행만 Experience Platform에 수집됩니다. 소스 시스템에서 변경된 모든 행은 Experience Platform에서 변경되지 않습니다.
 
 **배열**: 배열은 데이터 형식이 같은 정렬된 요소에 사용됩니다.
 
@@ -55,9 +55,9 @@ ht-degree: 0%
 
 **특성**: 특성은 프로필을 나타내는 지정된 특성입니다.
 
-**특성 병합**: Real-Time Customer Profile API를 사용하여 병합 정책을 정의할 때 `attributeMerge` 개체는 데이터 충돌 시 병합 정책에서 프로필 특성에 우선 순위를 매기는 방식을 나타냅니다. Platform UI에서 병합 정책을 정의할 때 [!UICONTROL 병합 메서드]를 선택하는 것과 같습니다.
+**특성 병합**: Real-Time Customer Profile API를 사용하여 병합 정책을 정의할 때 `attributeMerge` 개체는 데이터 충돌 시 병합 정책에서 프로필 특성에 우선 순위를 매기는 방식을 나타냅니다. Experience Platform UI에서 병합 정책을 정의할 때 [!UICONTROL 병합 메서드]을(를) 선택하는 것과 같습니다.
 
-**Attribution AI**: [!DNL Attribution AI]은(는) 전체 고객 라이프사이클에 걸쳐 알고리즘 방식의 다중 채널 속성 기능을 제공하는 Adobe Sensei 기반의 지능형 서비스입니다.
+**Attribution AI**: [!DNL Attribution AI]은(는) Adobe Sensei에서 제공하는 지능형 서비스로, 전체 고객 라이프사이클에 걸쳐 알고리즘 방식의 다채널 속성 기능을 제공합니다.
 
 **대상**: 대상은 세그먼트 정의의 기준을 충족하는 결과 프로필 집합입니다.
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 **일괄 처리**: 일괄 처리는 일정 기간 동안 수집된 데이터 집합이며 단일 단위로 함께 처리됩니다. 데이터 세트는 여러 배치로 구성됩니다.
 
-**배치 ID**: 배치 ID는 데이터 배치에 대해 Adobe이 생성한 식별자입니다.
+**배치 ID**: 배치 ID는 데이터 배치에 대해 Adobe에서 생성한 식별자입니다.
 
 **일괄 처리 수집**: 일괄 처리 수집을 사용하면 데이터를 일괄 처리 파일로 Experience Platform에 수집할 수 있습니다. 배치는 단일 단위로 수집할 하나 이상의 파일로 구성된 데이터 단위입니다.
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
 **카탈로그**: 원본 및 대상 컨텍스트에서 카탈로그는 Adobe 응용 프로그램 및 타사 기술에 대한 사용 가능한 연결이 있는 갤러리입니다. [!DNL Catalog Service]과(와) 혼동하면 안 됩니다.
 
-**[!DNL Catalog Service]**: [!DNL Catalog Service]([!DNL Catalog]이라고도 함)은 Adobe Experience Platform 내의 데이터 위치 및 계보에 대한 레코드 시스템입니다. Experience Platform에 수집되는 모든 데이터는 파일 및 디렉터리로 데이터 레이크에 저장되지만 [!DNL Catalog]은(는) 조회, 모니터링 및 데이터 거버넌스 목적으로 해당 파일 및 디렉터리의 메타데이터와 설명을 포함합니다.
+**[!DNL Catalog Service]**: [!DNL Catalog Service]&#x200B;([!DNL Catalog]이라고도 함)은 Adobe Experience Platform 내의 데이터 위치 및 계보에 대한 레코드 시스템입니다. Experience Platform에 수집되는 모든 데이터는 데이터 레이크에 파일 및 디렉터리로 저장되지만 [!DNL Catalog]에는 조회, 모니터링 및 데이터 거버넌스 목적으로 이러한 파일 및 디렉터리에 대한 메타데이터와 설명이 들어 있습니다.
 
 **CCPA**: [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa)은(는) 미국 캘리포니아주 거주자를 위해 개인 정보 보호 권한 및 소비자 보호를 개선합니다. CCPA는 개인 데이터가 판매되었거나 공개되었는지의 여부 및 그 대상을 확인하거나 개인 데이터를 제3자에게 판매하지 않도록 선택할 수 있는 개인 데이터 액세스 및 삭제 권한과 같은 새로운 데이터 개인 정보 권한을 캘리포니아 거주자에게 제공합니다.
 
@@ -155,7 +155,7 @@ ht-degree: 0%
 
 **데이터 요소**: 태그와 관련하여 데이터 요소는 규칙 및 확장 내에서 클라이언트 장치에 있는 특정 데이터 조각을 가리키도록 사용되는 포인터입니다.
 
-**데이터 수집**: 데이터 수집은 원본에서 Experience Platform으로 데이터를 추가하는 프로세스입니다. 데이터는 스트리밍, 일괄 처리, 소스 커넥터를 통한 추가 등 다양한 방식으로 플랫폼에 수집될 수 있습니다.
+**데이터 수집**: 데이터 수집은 원본의 데이터를 Experience Platform에 추가하는 프로세스입니다. 데이터는 스트리밍, 일괄 처리, 소스 커넥터를 통한 추가 등 다양한 방식으로 Experience Platform에 수집될 수 있습니다.
 
 **데이터 계층**: 태그의 컨텍스트에서 데이터 계층은 페이지 또는 화면을 보는 컨텍스트에 대한 메타데이터를 포함하는 클라이언트 장치에 있는 데이터 구조입니다.
 
@@ -165,7 +165,7 @@ ht-degree: 0%
 
 **데이터 세트 레이블**: 데이터 사용 레이블을 데이터 세트에 추가할 수 있습니다. 해당 데이터 세트 내의 모든 필드는 데이터 세트의 레이블을 상속합니다.
 
-Experience Platform 내 **데이터 과학 Workspace**: [!DNL Data Science Workspace]을(를) 사용하면 고객이 플랫폼 및 Adobe 애플리케이션에서 데이터를 활용하여 기계 학습 모델을 만들어 지능형 세그먼트를 만들고, 인사이트를 생성하고, 예측을 제공할 수 있으므로 최종 사용자의 디지털 경험을 크게 향상시킬 수 있습니다.
+**Experience Platform 내의 데이터 과학 Workspace**: [!DNL Data Science Workspace]을(를) 통해 고객은 Experience Platform 및 Adobe 애플리케이션 전반의 데이터를 활용하여 기계 학습 모델을 만들어 지능형 세그먼트를 만들고, 인사이트를 생성하고, 예측을 제공할 수 있으므로 최종 사용자의 디지털 경험을 크게 향상시킬 수 있습니다.
 
 **데이터 원본**: 데이터 원본은 사용자가 지정한 데이터 원본입니다. 데이터 소스의 예로는 모바일 앱, 프로필 및/또는 경험 이벤트, 웹 사이트 프로필 이벤트 또는 CRM이 있습니다.
 
@@ -177,7 +177,7 @@ Experience Platform 내 **데이터 과학 Workspace**: [!DNL Data Science Works
 
 **데이터 사용 레이블**: 데이터 사용 레이블을 사용하면 개인 정보 보호 관련 고려 사항 및 계약 조건을 반영하여 규정 및 기업 정책을 준수하는 데이터를 분류할 수 있습니다. 데이터 세트에 추가된 데이터 사용 레이블은 상속되거나 해당 데이터 세트 내의 모든 필드에 적용됩니다. 데이터 사용 레이블은 필드에 직접 적용할 수도 있습니다.
 
-**데이터 흐름**: 데이터 흐름은 소스에서 플랫폼으로 흘러 대상으로 나가는 데이터의 가상 파이프라인입니다.
+**데이터 흐름**: 데이터 흐름은 원본에서 Experience Platform으로 유입되고 대상으로 유출되는 데이터의 가상 파이프라인입니다.
 
 **데이터 흐름 실행**: 데이터 흐름 실행은 사용자가 지정한 일정에 따라 Experience Platform에 들어오는 데이터 흐름입니다.
 
@@ -191,11 +191,11 @@ Experience Platform 내 **데이터 과학 Workspace**: [!DNL Data Science Works
 
 **델타 열**: 델타 열을 사용하면 증분 수집에 대한 타임스탬프를 나타내는 원본 데이터 필드를 선택할 수 있습니다.
 
-**델타 저장 전략**: 델타 저장 전략은 소스 연결을 통해 서드파티 데이터를 수집하는 옵션입니다. 옵션을 사용하면 소스 데이터의 새 행이나 변경된 행을 Experience Platform 대상으로 수집하도록 지정할 수 있습니다. 새 행은 데이터 세트의 끝에 추가되고 변경된 행은 Experience Platform 시 데이터 세트에서 업데이트됩니다.
+**델타 저장 전략**: 델타 저장 전략은 소스 연결을 통해 서드파티 데이터를 수집하는 옵션입니다. 옵션을 사용하면 소스 데이터의 새 행이나 변경된 행을 Experience Platform에 수집하도록 지정할 수 있습니다. 새 행은 데이터 세트의 끝에 추가되고 변경된 행은 Experience Platform의 데이터 세트에서 업데이트됩니다.
 
-**설명자**: XDM(Experience Data Model)에서 설명자는 필드의 특정 동작을 설명하는 스키마 관련 메타데이터의 추가 집합입니다. 설명자는 Experience Platform에서 두 스키마 간의 관계와 같은 의도된 스키마 동작을 이해하는 데 사용할 수 있습니다.
+**설명자**: XDM(Experience Data Model)에서 설명자는 필드의 특정 동작을 설명하는 스키마 관련 메타데이터의 추가 집합입니다. 설명자는 Experience Platform에서 두 스키마 간의 관계와 같은 의도된 스키마 비헤이비어를 이해하는 데 사용할 수 있습니다.
 
-**대상**: 대상은 Adobe 응용 프로그램, 광고 플랫폼, 클라우드 저장소 서비스 또는 마케팅 서비스와 같이 대상을 활성화하고 제공하는 모든 끝점에 대한 일반 용어입니다.
+**대상**: 대상은 대상을 활성화하고 전달하는 Adobe 응용 프로그램, 광고 플랫폼, 클라우드 저장소 서비스 또는 마케팅 서비스와 같이 모든 끝점에 대한 일반 용어입니다.
 
 **대상 범주**: 대상 범주는 유사한 특성을 가진 대상을 그룹화한 것입니다.
 
@@ -305,7 +305,7 @@ Experience Platform 내 **데이터 과학 Workspace**: [!DNL Data Science Works
 
 **입력 기능**: 입력 기능은 기능 매핑에 지정되며 기계 학습 모델에서 예측을 수행하는 데 사용됩니다.
 
-**[!DNL Intelligent Services]**: [!DNL Attribution AI] 및 [!DNL Customer AI]과(와) 같은 [!DNL Intelligent Services]은(는) Experience Platform(또는 Adobe Real-time Customer Data Platform과 같은 플랫폼 위에 구축된 애플리케이션)을 실행하고 운영해야 하는 머신 러닝, 인공 지능 기반 모델입니다.
+**[!DNL Intelligent Services]**: [!DNL Attribution AI] 및 [!DNL Customer AI]과(와) 같은 [!DNL Intelligent Services]은(는) Experience Platform(또는 Adobe Real-Time Customer Data Platform과 같은 Experience Platform 위에 구축된 애플리케이션)를 실행하고 운영해야 하는 머신 러닝, 인공 지능 기반 모델입니다.
 
 **관심 기반 타기팅 또는 개인화**: 다음 세 가지 조건이 충족되는 경우 관심 기반 타기팅(개인화)이 발생합니다.
 
@@ -315,7 +315,7 @@ Experience Platform 내 **데이터 과학 Workspace**: [!DNL Data Science Works
 
 ## J
 
-**[!DNL JupyterLab]**: Platform UI에 통합된 [!DNL Jupyter] 프로젝트에 대한 오픈 소스 웹 기반 인터페이스입니다.
+**[!DNL JupyterLab]**: Experience Platform UI에 통합된 프로젝트 [!DNL Jupyter]의 오픈 소스 웹 기반 인터페이스입니다.
 
 **[!DNL Jupyter Notebook]**: JupyterLab과 통합된 Jupyter Notebooks를 사용하면 Python, Scala 및 PySpark와 같은 다양한 언어로 Experience Platform 데이터에 대한 데이터 정리 및 변환, 수치 시뮬레이션, 통계 모델링, 데이터 시각화, 머신 러닝 등을 수행할 수 있습니다.
 
@@ -341,9 +341,9 @@ Experience Platform 내 **데이터 과학 Workspace**: [!DNL Data Science Works
 
 **마케팅 작업**: 데이터 거버넌스 프레임워크에서 마케팅 작업(마케팅 사용 사례라고도 함)은 Experience Platform 데이터 소비자가 수행하는 작업으로서 데이터 사용 정책 위반을 확인해야 합니다.
 
-**병합 메서드**: Platform UI를 사용하여 병합 정책을 정의할 때 병합 메서드는 충돌이 발생할 때 데이터 조각의 우선 순위를 지정하는 방법을 지정합니다. 실시간 고객 프로필 API를 사용하여 병합 정책을 정의하는 경우 `attributeMerge` 개체를 사용하여 병합 방법을 결정합니다.
+**병합 메서드**: Experience Platform UI를 사용하여 병합 정책을 정의할 때 병합 메서드는 충돌이 발생할 때 데이터 조각의 우선 순위를 지정하는 방법을 지정합니다. 실시간 고객 프로필 API를 사용하여 병합 정책을 정의하는 경우 `attributeMerge` 개체를 사용하여 병합 방법을 결정합니다.
 
-**병합 정책**: 병합 정책은 Experience Platform이 여러 소스의 고객 데이터 조각을 결합하여 개별 프로필을 만드는 방법을 결정하는 데 사용하는 규칙입니다. 데이터 충돌이 발생하면 병합 정책에서 프로필에 포함하기 위해 우선 순위를 지정해야 하는 데이터를 결정합니다.
+**병합 정책**: 병합 정책은 Experience Platform에서 여러 소스의 고객 데이터 조각을 결합하여 개별 프로필을 만드는 방법을 결정하는 데 사용하는 규칙입니다. 데이터 충돌이 발생하면 병합 정책에서 프로필에 포함하기 위해 우선 순위를 지정해야 하는 데이터를 결정합니다.
 
 **MHMDAa**: [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true)은(는) 상태 데이터와 관련된 소비자의 개인 정보 권한을 향상시킵니다. 건강 데이터에 대한 공개, 소비자 동의, 삭제 권한을 의무화하고, 허가 없이 건강 데이터를 판매하는 것을 금지한다. 또한, 이 법은 의료 시설 주변에서 지오펜싱을 사용하는 것을 불법으로 만듭니다.
 
@@ -391,9 +391,9 @@ Experience Platform 내 **데이터 과학 Workspace**: [!DNL Data Science Works
 
 **배치**: 배치는 최종 사용자에게 나타나는 오퍼의 위치 및 컨텍스트입니다.
 
-**정책 작업 영역**: 데이터 관리자가 조직의 데이터 사용 레이블 및 정책을 보고 관리할 수 있는 Platform UI의 작업 영역입니다.
+**정책 작업 영역**: 데이터 관리자가 조직의 데이터 사용 레이블 및 정책을 보고 관리할 수 있는 Experience Platform UI의 작업 영역입니다.
 
-**정책**: 데이터 사용 정책은 플랫폼 데이터에 적용된 사용 레이블 적용에 따라 제한된 마케팅 작업을 지정하는 규칙입니다.
+**정책**: 데이터 사용 정책은 Experience Platform 데이터에 적용된 사용 레이블 적용에 따라 제한된 마케팅 작업을 지정하는 규칙입니다.
 
 **정책 적용**: 조직 내에서 정책 위반을 구성하는 데이터 작업을 방지하기 위해 적용된 마케팅 작업으로 데이터 사용 정책을 적용할 수 있습니다.
 
@@ -403,7 +403,7 @@ Experience Platform 내 **데이터 과학 Workspace**: [!DNL Data Science Works
 
 **개인 ID 그래프**: 개인 ID 그래프(개인 그래프라고도 함)는 자사 데이터를 기반으로 구축되고 조직에서만 볼 수 있는 결합된 ID와 연결된 ID 간의 관계에 대한 개인 맵입니다. 각 조직에 대해 하나의 개인 그래프만 존재하며 브랜드와 상호 작용하는 각 고객을 위해 생성된 개별 ID 그래프의 구조적 블루프린트 역할을 합니다.
 
-**제품 프로필**: 제품 프로필을 사용하면 관리자가 Experience Platform과 관련된 모든 서비스 또는 서비스의 하위 집합에 대한 사용자 액세스 권한을 부여할 수 있습니다.
+**제품 프로필**: 제품 프로필을 사용하면 관리자가 Experience Platform과 관련된 모든 서비스 또는 일부 서비스에 대한 사용자 액세스 권한을 부여할 수 있습니다.
 
 **프로덕션 샌드박스**: 프로덕션 샌드박스는 프로덕션 환경에서 사용하기 위한 샌드박스입니다. 비프로덕션 샌드박스와 달리 프로덕션 샌드박스는 재설정하거나 삭제할 수 없습니다.
 
@@ -433,11 +433,11 @@ Experience Platform 내 **데이터 과학 Workspace**: [!DNL Data Science Works
 
 ## R
 
-**Real-time Customer Data Platform**: Adobe Real-time Customer Data Platform(Real-Time CDP)는 디지털 고객 여정 전반에서 간소화된 통합, 지능적인 세분화 및 실시간 활성화를 통해 신뢰할 수 있는 고객 프로필을 만들기 위해 알려진 데이터와 알 수 없는 고객 데이터를 통합합니다.
+**Real-Time Customer Data Platform**: Adobe Real-Time Customer Data Platform(Real-Time CDP)는 디지털 고객 여정 전반에서 간소화된 통합, 지능적인 세분화 및 실시간 활성화를 통해 신뢰할 수 있는 고객 프로필을 만들기 위해 알려진 데이터와 알 수 없는 고객 데이터를 통합합니다.
 
 **실시간 고객 프로필**: 실시간 고객 프로필(프로필이라고도 함)은 온라인, 오프라인, CRM 및 서드파티를 비롯한 여러 채널의 데이터를 결합하여 각 개별 고객에 대한 거시적인 보기를 제공합니다. 프로필을 사용하면 고객 데이터를 개별 프로필로 통합하여 모든 고객 상호 작용에 대해 실행 가능한 타임스탬프 계정을 제공할 수 있습니다.
 
-**레시피**: 레시피는 모델 사양에 대한 Adobe의 용어이며 훈련된 모델을 만들고 실행하여 특정 비즈니스 문제를 해결하는 데 필요한 특정 기계 학습 프로세스, AI 알고리즘, 처리 논리 및 구성 매개 변수를 나타내는 최상위 컨테이너입니다.
+**레시피**: 레시피는 Adobe의 모델 사양 용어이며 훈련된 모델을 만들고 실행하여 특정 비즈니스 문제를 해결하는 데 필요한 특정 기계 학습 프로세스, AI 알고리즘, 처리 논리 및 구성 매개 변수를 나타내는 최상위 컨테이너입니다.
 
 **레코드**: 레코드는 데이터 집합에서 행으로 유지되는 데이터입니다.
 
@@ -461,7 +461,7 @@ Experience Platform 내 **데이터 과학 Workspace**: [!DNL Data Science Works
 
 **샘플 데이터**: 샘플 데이터는 데이터 파일(일반적으로 처음 100행)의 미리 보기입니다. 이 미리 보기는 데이터 과학자나 엔지니어에게 데이터 파일에 있는 스키마나 데이터에 대한 아이디어를 제공합니다.
 
-**샌드박스**: 샌드박스는 디지털 경험 응용 프로그램을 개발하고 발전시키기 위해 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 구성입니다.
+**샌드박스**: 샌드박스는 디지털 경험 응용 프로그램을 개발하고 발전시키기 위해 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 구성입니다.
 
 **샌드박스 재설정**: 샌드박스 재설정은 샌드박스 내의 데이터, 프로필 및 세그먼트를 포함한 모든 데이터를 삭제합니다. 샌드박스 재설정은 내부 또는 외부 대상에 연결된 데이터에 영향을 줄 수 있습니다.
 
@@ -483,7 +483,7 @@ Experience Platform 내 **데이터 과학 Workspace**: [!DNL Data Science Works
 
 **세그먼트**: 세그먼트는 여러 프로필을 대상으로 하는 특성 및 이벤트 데이터를 포함하는 규칙 집합입니다.
 
-**세그먼트 빌더**: [!DNL Segment Builder]은(는) 세그먼트 정의를 만드는 데 사용되는 시각적 개발 환경입니다. Experience Platform 세분화 서비스를 사용하는 모든 애플리케이션의 공통 구성 요소 역할을 합니다.
+**세그먼트 빌더**: [!DNL Segment Builder]은(는) 세그먼트 정의를 만드는 데 사용되는 시각적 개발 환경입니다. Experience Platform 세그멘테이션 서비스를 사용하는 모든 애플리케이션의 공통 구성 요소 역할을 합니다.
 
 **세그먼트 정의**: 세그먼트 정의는 대상 대상의 주요 특성 또는 동작을 설명하는 데 사용되는 규칙 집합입니다. 개념화되면 세그먼트 정의에 요약된 규칙을 사용하여 세그먼트에 대한 자격 있는 대상 구성원을 결정합니다.
 
@@ -499,11 +499,11 @@ Experience Platform 내 **데이터 과학 Workspace**: [!DNL Data Science Works
 
 **세분화**: 세분화는 유사한 특성을 공유하고 특정 마케팅 전략에 유사하게 반응하는 대규모 고객, 잠재 고객 또는 소비자 그룹을 더 작은 그룹으로 나누는 프로세스입니다.
 
-**Sensei ML 프레임워크**: Sensei ML 프레임워크는 Experience Platform 데이터를 활용하여 데이터 과학자가 ML 기반 인텔리전스 서비스를 보다 빠르고 확장 가능하며 재사용 가능한 방식으로 개발할 수 있도록 지원하는 통합 ML(기계 학습) 프레임워크입니다.
+**Sensei ML 프레임워크**: Sensei ML 프레임워크는 통합 ML(기계 학습) 프레임워크로서, Experience Platform 데이터를 활용하여 데이터 과학자가 ML 기반 인텔리전스 서비스를 보다 빠르고 확장 가능하며 재사용할 수 있는 방식으로 개발할 수 있도록 지원합니다.
 
 **중요(&quot;S&quot;) 레이블**: 중요(&quot;S&quot;) 레이블은 중요로 표시하려는 다른 유형의 행동 또는 지리적 데이터와 같이 중요하다고 간주되는 데이터를 분류하는 데 사용됩니다.
 
-**서비스**: Adobe 인텔리전트 서비스를 활용하여 AI 및 ML 서비스를 운영할 수 있는 강력한 프레임워크입니다. 서비스는 개인화된 실시간 고객 경험을 제공하거나 맞춤형 인텔리전트 서비스를 운영합니다.
+**서비스**: Adobe Intelligent Services를 활용하여 AI 및 ML 서비스를 운영할 수 있는 강력한 프레임워크입니다. 서비스는 개인화된 실시간 고객 경험을 제공하거나 맞춤형 인텔리전트 서비스를 운영합니다.
 
 **단일 ID 개인화 마케팅 작업**: 온사이트 콘텐츠 개인화를 위해 데이터를 사용하는 마케팅 작업입니다. 온사이트 개인화는 사용자의 관심 분야를 추론하는 데 사용되는 모든 데이터이며 이러한 추론을 기반으로 어떤 콘텐츠 또는 광고를 제공할지 선택하는 데 사용됩니다.
 
@@ -511,7 +511,7 @@ Experience Platform 내 **데이터 과학 Workspace**: [!DNL Data Science Works
 
 **S2 데이터 사용 레이블**: `S2` 데이터 사용 레이블은 광범위하게 정의된 지오펜스 영역을 결정하는 데 사용할 수 있는 데이터를 분류하는 데 사용됩니다.
 
-**Source**: 소스는 플랫폼의 모든 입력 커넥터에 대한 일반 용어입니다. 참고 항목: Source 커넥터
+**Source**: 소스는 Experience Platform의 모든 입력 커넥터에 대한 일반 용어입니다. 참고 항목: Source 커넥터
 
 **Source 특성**: 원본 특성은 원본 데이터 집합의 필드입니다. Source 속성은 대상 스키마 필드에 매핑됩니다.
 

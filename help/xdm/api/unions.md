@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;홈;인기 주제;api;API;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마 레지스트리;유니온;유니온;유니온;유니온;유니온;segmentMembership;timeSeriesEvents;
+keywords: Experience Platform;홈;인기 주제;api;API;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마 레지스트리;유니온;유니온;유니온;유니온;세그먼트 멤버십;timeSeriesEvents;
 solution: Experience Platform
 title: 유니온 API 엔드포인트
 description: 스키마 레지스트리 API의 /union 끝점을 사용하면 경험 애플리케이션에서 XDM 유니온 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '900'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 ### 세그먼트 멤버십 맵
 
-`segmentMembership` 맵은 세그먼트 정의를 평가한 결과를 저장합니다. [세그먼테이션 API](https://www.adobe.io/experience-platform-apis/references/segmentation/)를 사용하여 세그먼트 작업이 성공적으로 실행되면 맵이 업데이트됩니다. `segmentMembership`은(는) Platform에 수집되는 미리 평가된 대상도 모두 저장하여 Adobe Audience Manager과 같은 다른 솔루션과 통합할 수 있습니다. 자세한 내용은 [API를 사용하여 대상자 만들기](../../segmentation/tutorials/create-a-segment.md)에 대한 자습서를 참조하십시오.
+`segmentMembership` 맵은 세그먼트 정의를 평가한 결과를 저장합니다. [세그먼테이션 API](https://www.adobe.io/experience-platform-apis/references/segmentation/)를 사용하여 세그먼트 작업이 성공적으로 실행되면 맵이 업데이트됩니다. `segmentMembership`은(는) Experience Platform에 수집되는 미리 평가된 대상도 모두 저장하여 Adobe Audience Manager과 같은 다른 솔루션과 통합할 수 있습니다. 자세한 내용은 [API를 사용하여 대상자 만들기](../../segmentation/tutorials/create-a-segment.md)에 대한 자습서를 참조하십시오.
 
 ## 유니온 목록 검색 {#list}
 
@@ -180,7 +180,7 @@ curl -X GET \
 
 ## 유니온 멤버십에 대한 스키마 활성화 {#enable}
 
-스키마가 해당 클래스의 유니온에 포함되려면 스키마의 `meta:immutableTags` 특성에 `union` 태그를 추가해야 합니다. 단일 문자열 값이 `union`인 `meta:immutableTags` 배열을 해당 스키마에 추가하도록 PATCH 요청을 수행하면 됩니다. 자세한 예제는 [스키마 끝점 안내서](./schemas.md#union)를 참조하십시오.
+스키마가 해당 클래스의 유니온에 포함되려면 스키마의 `meta:immutableTags` 특성에 `union` 태그를 추가해야 합니다. 단일 문자열 값이 `union`인 `meta:immutableTags` 배열을 해당 스키마에 추가하도록 PATCH에 요청하여 이 작업을 수행할 수 있습니다. 자세한 예제는 [스키마 끝점 안내서](./schemas.md#union)를 참조하십시오.
 
 ## 유니온에 스키마 나열 {#list-schemas}
 

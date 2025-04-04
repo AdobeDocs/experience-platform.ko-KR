@@ -3,16 +3,16 @@ title: SugarCRM Source 개요
 description: API 또는 사용자 인터페이스를 사용하여 SugarCRM을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2023-08-23T00:00:00Z
 exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
 
 # [!DNL SugarCRM]
 
-Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 Experience Platform은 타사 CRM 애플리케이션에서 데이터를 수집하는 기능을 지원합니다. CRM 공급자에 대한 지원에는 [!DNL SugarCRM]이(가) 포함됩니다.
 
@@ -38,15 +38,15 @@ Experience Platform은 타사 CRM 애플리케이션에서 데이터를 수집�
 
 * 마케팅 또는 판매 프로세스와 연결된 사용자 계정과 별도의 고유한 API 사용자 이름 및 계정입니다. 이 고유한 사용자 이름 및 계정 조합에는 API 액세스 권한이 있어야 합니다. 계정을 설정하는 프로세스에 대한 자세한 내용은 [[!DNL SugarMarket RESTFUL API]](https://market.apidocs.sugarcrm.com/#intro) 설명서를 참조하십시오.
 
-## [!DNL SugarCRM Accounts & Contacts]을(를) 플랫폼에 연결
+## Experience Platform에 [!DNL SugarCRM Accounts & Contacts] 연결
 
-* [API를 사용하여  [!DNL SugarCRM Accounts & Contacts] 데이터를 플랫폼으로 가져올 원본 연결을 만듭니다](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md).
-* [소스 연결을 만들어  [!DNL SugarCRM Accounts & Contacts] 사용자 인터페이스를 사용하여 데이터를 플랫폼으로 가져오기](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md).
+* [API를 사용하여  [!DNL SugarCRM Accounts & Contacts] 데이터를 Experience Platform으로 가져오기](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md)할 원본 연결을 만듭니다.
+* [사용자 인터페이스를 사용하여  [!DNL SugarCRM Accounts & Contacts] Experience Platform으로 데이터를 가져올 원본 연결을 만듭니다](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md).
 * [흐름 서비스 API를 사용하여 CRM 소스의 데이터 흐름 만들기](../../tutorials/api/collect/crm.md)
 
 
-## [!DNL SugarCRM Events]을(를) 플랫폼에 연결
+## Experience Platform에 [!DNL SugarCRM Events] 연결
 
-* [API를 사용하여  [!DNL SugarCRM Events] 데이터를 플랫폼으로 가져올 원본 연결을 만듭니다](../../tutorials/ui/create/crm/sugarcrm-events.md).
-* [소스 연결을 만들어  [!DNL SugarCRM Events] 사용자 인터페이스를 사용하여 데이터를 플랫폼으로 가져오기](../../tutorials/ui/create/crm/sugarcrm-events.md).
+* [API를 사용하여  [!DNL SugarCRM Events] 데이터를 Experience Platform으로 가져오기](../../tutorials/ui/create/crm/sugarcrm-events.md)할 원본 연결을 만듭니다.
+* [사용자 인터페이스를 사용하여  [!DNL SugarCRM Events] Experience Platform으로 데이터를 가져올 원본 연결을 만듭니다](../../tutorials/ui/create/crm/sugarcrm-events.md).
 * [UI에서 CRM 소스 연결에 대한 데이터 흐름 만들기](../../tutorials/ui/dataflow/crm.md)

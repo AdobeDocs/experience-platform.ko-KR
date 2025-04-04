@@ -5,10 +5,10 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 21%
+source-wordcount: '401'
+ht-degree: 22%
 
 ---
 
@@ -143,4 +143,4 @@ ht-degree: 21%
 - [자주 묻는 질문](troubleshooting-guide.md)
 - [허용 목록에 추가하다 IP 주소](ip-address-allowlist.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+- [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

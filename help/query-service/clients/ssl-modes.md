@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;홈;자주 찾는 항목;쿼리 서비스;쿼리 서비스;연결;쿼리 서비스에 연결;SSL;SSL;SSLMODE;
+keywords: Experience Platform;홈;자주 찾는 항목;쿼리 서비스;쿼리 서비스;연결;쿼리 서비스에 연결;SSL;ssl;sslmode;
 title: 쿼리 서비스 SSL 옵션
 description: Adobe Experience Platform 쿼리 서비스에 대한 서드파티 연결에 대한 SSL 지원과 전체 SSL 확인 모드를 사용하여 연결하는 방법에 대해 알아봅니다.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: 37c30fc1a040efbce0c221c10b36e105d5b1a962
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1011'
 ht-degree: 1%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 1%
 
 ## 전제 조건
 
-이 문서에서는 사용자가 플랫폼 데이터에 사용할 타사 데스크탑 클라이언트 애플리케이션을 이미 다운로드했다고 가정합니다. 타사 클라이언트와 연결할 때 SSL 보안을 통합하는 방법에 대한 특정 지침은 해당 연결 안내서 설명서에서 찾을 수 있습니다. 지원되는 모든 클라이언트 [!DNL Query Service]개의 목록에 대해서는 [클라이언트 연결 개요](./overview.md)를 참조하십시오.
+이 문서에서는 Experience Platform 데이터에 사용할 타사 데스크탑 클라이언트 애플리케이션을 이미 다운로드했다고 가정합니다. 타사 클라이언트와 연결할 때 SSL 보안을 통합하는 방법에 대한 특정 지침은 해당 연결 안내서 설명서에서 찾을 수 있습니다. 지원되는 모든 클라이언트 [!DNL Query Service]개의 목록에 대해서는 [클라이언트 연결 개요](./overview.md)를 참조하십시오.
 
 ## 사용 가능한 SSL 옵션 {#available-ssl-options}
 
-플랫폼은 사용자의 데이터 보안 요구 사항에 맞게 다양한 SSL 옵션을 지원하며 암호화 및 키 교환의 처리 오버헤드를 조정합니다.
+Experience Platform은 데이터 보안 요구 사항에 맞게 다양한 SSL 옵션을 지원하고 암호화 및 키 교환의 처리 오버헤드를 조정합니다.
 
 서로 다른 `sslmode` 매개 변수 값은 서로 다른 보호 수준을 제공합니다. SSL 인증서로 데이터를 암호화하면 &quot;중간자&quot;(MITM) 공격, 도청 및 가장을 방지하는 데 도움이 됩니다. 아래 표는 사용 가능한 다양한 SSL 모드와 이들이 제공하는 보호 수준에 대한 분류를 제공합니다.
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 >
 >`verify-ca`과(와) `verify-full`의 차이는 루트 CA(인증 기관)의 정책에 따라 다릅니다. 응용 프로그램에 대한 개인 인증서를 발급할 수 있도록 고유한 로컬 CA를 만든 경우 `verify-ca`을(를) 사용하면 충분한 보호 기능이 제공됩니다. 공용 CA를 사용하는 경우 `verify-ca`에서 다른 사람이 CA에 등록한 서버에 연결할 수 있습니다. `verify-full`은(는) 항상 공용 루트 CA와 함께 사용해야 합니다.
 
-Platform 데이터베이스에 대한 서드파티 연결을 설정할 때는 최소한 `sslmode=require`을(를) 사용하여 동작 중인 데이터에 대한 보안 연결을 확인하는 것이 좋습니다. `verify-full` SSL 모드는 대부분의 보안 중요 환경에서 사용하는 것이 좋습니다.
+Experience Platform 데이터베이스에 대한 서드파티 연결을 설정할 때는 최소한 `sslmode=require`을(를) 사용하여 동작 중인 데이터에 대한 보안 연결을 확인하는 것이 좋습니다. `verify-full` SSL 모드는 대부분의 보안 중요 환경에서 사용하는 것이 좋습니다.
 
 ## 서버 확인을 위한 루트 인증서 설정 {#root-certificate}
 

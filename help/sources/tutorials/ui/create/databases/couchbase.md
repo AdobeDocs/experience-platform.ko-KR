@@ -5,7 +5,7 @@ title: UI에서 Couchbase Source 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Couchbase 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 2%
@@ -18,11 +18,11 @@ ht-degree: 2%
 >
 >[!DNL Couchbase] 원본은 2025년 6월 말에 사용되지 않습니다.
 
-[!DNL Adobe Experience Platform]의 Source 커넥터는 일정에 따라 외부에서 가져온 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Platform] 사용자 인터페이스를 사용하여 [!DNL Couchbase] 소스 커넥터를 만드는 단계를 제공합니다.
+[!DNL Adobe Experience Platform]의 Source 커넥터는 일정에 따라 외부에서 가져온 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 [!DNL Couchbase] 소스 커넥터를 만드는 단계를 제공합니다.
 
 ## 시작하기
 
-이 자습서에서는 [!DNL Platform]의 다음 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 [!DNL Experience Platform]의 다음 구성 요소를 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
@@ -41,7 +41,7 @@ ht-degree: 2%
 
 ## [!DNL Couchbase] 계정 연결
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL Couchbase] 계정을 [!DNL Platform]에 연결할 수 있습니다.
+필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL Couchbase] 계정을 [!DNL Experience Platform]에 연결할 수 있습니다.
 
 [Adobe Experience Platform](https://platform.adobe.com)에 로그인한 다음 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 **[!UICONTROL 소스]** 작업 영역에 액세스합니다. **[!UICONTROL 카탈로그]** 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
@@ -67,4 +67,4 @@ ht-degree: 2%
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL Couchbase] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 가져올 데이터 흐름을 구성 [!DNL Platform]](../../dataflow/databases.md)할 수 있습니다.
+이 자습서에 따라 [!DNL Couchbase] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 가져올 데이터 흐름을 구성 [!DNL Experience Platform]](../../dataflow/databases.md)할 수 있습니다.

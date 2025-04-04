@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;데이터 모델;ui;작업 영역;
+keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;데이터 모델;ui;workspace;
 solution: Experience Platform
 title: 스키마 UI 개요
-description: 이 개요에서는 Experience Platform의 스키마 작업 영역의 주요 기능을 다룹니다.
+description: 이 개요에서는 Experience Platform에 있는 스키마 작업 영역의 주요 기능을 다룹니다.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: 16d6090bc71dbdc9ab42db98eafa0ea5afb5967b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '310'
 ht-degree: 9%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 9%
 
 Adobe Experience Platform 사용자 인터페이스의 [!UICONTROL 스키마] 작업 영역을 사용하면 스키마, 클래스, 스키마 필드 그룹 및 데이터 형식을 비롯한 XDM(Experience Data Model) 리소스를 관리할 수 있습니다. Adobe에서 제공하는 핵심 리소스를 보고 탐색하며 조직의 사용자 정의 리소스와 스키마를 만들 수 있습니다.
 
-Platform UI의 작업 영역에 액세스하려면 왼쪽 레일에서 **[!UICONTROL 스키마]**&#x200B;를 선택하십시오.
+Experience Platform UI의 작업 영역에 액세스하려면 왼쪽 레일에서 **[!UICONTROL 스키마]**&#x200B;를 선택하십시오.
 
-![플랫폼 UI 왼쪽 탐색에서 스키마가 강조 표시된 스키마 작업 영역입니다.](../images/ui/overview/schemas-tab.png)
+![Experience Platform UI 왼쪽 탐색에서 스키마가 강조 표시된 스키마 작업 영역입니다.](../images/ui/overview/schemas-tab.png)
 
 ## 시작하기
 
@@ -40,4 +40,4 @@ Platform UI의 작업 영역에 액세스하려면 왼쪽 레일에서 **[!UICON
 
 ## 다음 단계
 
-이 문서에서는 Platform UI의 [!UICONTROL 스키마] 작업 영역에 대한 소개를 제공했습니다. 스키마 및 기타 XDM 리소스를 관리하는 방법에 대한 자세한 내용은 이 개요 전체에 연결된 설명서를 참조하십시오.
+이 문서에서는 Experience Platform UI의 [!UICONTROL 스키마] 작업 영역에 대한 소개를 제공했습니다. 스키마 및 기타 XDM 리소스를 관리하는 방법에 대한 자세한 내용은 이 개요 전체에 연결된 설명서를 참조하십시오.

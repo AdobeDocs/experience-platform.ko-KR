@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 레이크에서 개인 정보 보호 요청 처리
 description: Adobe Experience Platform Privacy Service은 법적 및 조직의 개인 정보 보호 규정에 명시된 대로 개인 데이터에 액세스하거나, 판매를 거부하거나, 삭제하기 위한 고객 요청을 처리합니다. 이 문서에서는 데이터 레이크에 저장된 고객 데이터에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1430'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) 법적 및 조직의 �
 >
 >이 안내서에서는 Experience Platform의 데이터 레이크에 대해 개인 정보 보호 요청을 하는 방법만 다룹니다. Real-Time Customer Profile 데이터 저장소에 대한 개인 정보 보호 요청도 수행할 계획이라면 이 자습서 외에 [프로필에 대한 개인 정보 보호 요청 처리](../profile/privacy.md)에 대한 안내서를 참조하십시오.
 >
->다른 Adobe Experience Cloud 애플리케이션에 대한 개인 정보 보호 요청을 하는 방법에 대한 단계는 [Privacy Service 문서](../privacy-service/experience-cloud-apps.md)를 참조하십시오.
+>다른 Adobe Experience Cloud 애플리케이션에 대한 개인 정보 보호 요청을 하는 방법에 대한 단계는 [Privacy Service 설명서](../privacy-service/experience-cloud-apps.md)를 참조하십시오.
 
 ## 시작하기
 
@@ -34,7 +34,7 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) 법적 및 조직의 �
 
 ## ID 네임스페이스 이해 {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service]은(는) 시스템 및 장치 간에 고객 id 데이터를 브리지합니다. [!DNL Identity Service]은(는) id 네임스페이스를 사용하여 id 값을 원본 시스템과 연결하여 컨텍스트를 제공합니다. 네임스페이스는 이메일 주소(&quot;이메일&quot;)와 같은 일반적인 개념을 나타내거나 Adobe Advertising Cloud ID(&quot;AdCloud&quot;) 또는 Adobe Target ID(&quot;TNTID&quot;)와 같은 특정 애플리케이션과 ID를 연결할 수 있습니다.
+Adobe Experience Platform [!DNL Identity Service]은(는) 시스템 및 장치 간에 고객 id 데이터를 브리지합니다. [!DNL Identity Service]은(는) id 네임스페이스를 사용하여 id 값을 원본 시스템과 연결하여 컨텍스트를 제공합니다. 네임스페이스는 이메일 주소(&quot;이메일&quot;)와 같은 일반 개념을 나타내거나 Adobe Advertising Cloud ID(&quot;AdCloud&quot;) 또는 Adobe Target ID(&quot;TNTID&quot;)와 같은 특정 애플리케이션과 ID를 연결할 수 있습니다.
 
 [!DNL Identity Service]은(는) 전역적으로 정의된(표준) id 및 사용자 정의된(사용자 지정) id 네임스페이스의 저장소를 유지 관리합니다. 표준 네임스페이스는 모든 조직에서 사용할 수 있으며(예: &quot;이메일&quot; 및 &quot;ECID&quot;), 조직에서는 특정 요구 사항에 맞게 사용자 정의 네임스페이스를 만들 수도 있습니다.
 
@@ -73,7 +73,7 @@ Adobe Experience Platform [!DNL Identity Service]은(는) 시스템 및 장치 �
 >
 >또한 이 섹션에서는 사용자가 스키마 레지스트리 API를 호출하는 방법을 알고 있다고 가정합니다. `{TENANT_ID}` 및 컨테이너의 개념 등 API 사용과 관련된 중요한 정보는 API 안내서의 [시작](../xdm/api/getting-started.md) 섹션을 참조하십시오.
 
-[!DNL Schema Registry] API의 `/descriptors` 끝점에 대한 POST 요청을 수행하여 데이터 세트의 XDM 스키마에 ID 설명자를 추가할 수 있습니다.
+[!DNL Schema Registry] API의 `/descriptors` 끝점에 POST 요청을 수행하여 데이터 세트의 XDM 스키마에 ID 설명자를 추가할 수 있습니다.
 
 **API 형식**
 
@@ -200,11 +200,11 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Platform은 조직에 속한 모든 [샌드박스](../sandboxes/home.md)에서 개인 정보 요청을 처리합니다. 따라서 요청에 포함된 모든 `x-sandbox-name` 헤더는 시스템에서 무시됩니다.
+>Experience Platform은 조직에 속한 모든 [샌드박스](../sandboxes/home.md)에서 개인 정보 요청을 처리합니다. 따라서 요청에 포함된 모든 `x-sandbox-name` 헤더는 시스템에서 무시됩니다.
 
 ## 삭제 요청 처리
 
-[!DNL Experience Platform]이(가) [!DNL Privacy Service]에서 삭제 요청을 받으면 [!DNL Platform]이(가) 요청이 수신되었고 영향을 받는 데이터가 삭제되도록 표시되었다는 확인을 [!DNL Privacy Service]에 보냅니다. 그런 다음 7일 이내에 레코드가 데이터 레이크에서 제거됩니다. 7일 동안 데이터가 일시 삭제되므로 [!DNL Platform] 서비스에서 액세스할 수 없습니다.
+[!DNL Experience Platform]이(가) [!DNL Privacy Service]에서 삭제 요청을 받으면 [!DNL Experience Platform]이(가) 요청이 수신되었고 영향을 받는 데이터가 삭제되도록 표시되었다는 확인을 [!DNL Privacy Service]에 보냅니다. 그런 다음 7일 이내에 레코드가 데이터 레이크에서 제거됩니다. 7일 동안 데이터가 일시 삭제되므로 [!DNL Experience Platform] 서비스에서 액세스할 수 없습니다.
 
 개인 정보 보호 요청에 `ProfileService` 또는 `identity`도 포함한 경우 연결된 데이터가 별도로 처리됩니다. 자세한 내용은 [프로필에 대한 요청 처리 삭제](../profile/privacy.md#delete)의 섹션을 참조하십시오.
 

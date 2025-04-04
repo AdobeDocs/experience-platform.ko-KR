@@ -2,9 +2,9 @@
 title: API를 사용하여 Google 광고를 Experience Platform에 연결
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Google 광고에 연결하는 방법을 알아봅니다.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '462'
 ht-degree: 1%
 
 ---
@@ -28,9 +28,9 @@ ht-degree: 1%
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL Google Ads]에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
 
-### Platform API 사용
+### Experience Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ### 필요한 자격 증명 수집
 
@@ -38,7 +38,7 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 ## 기본 연결 만들기
 
-기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
+기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 Experience Platform 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
 기본 연결 ID를 만들려면 요청 매개 변수의 일부로 Google Ads 인증 자격 증명을 제공하는 동안 `/connections` 끝점에 대한 POST 요청을 만듭니다.
 
@@ -110,4 +110,4 @@ curl -X POST \
 이 자습서에 따라 [!DNL Flow Service] API를 사용하여 [!DNL Google Ads] 기본 연결을 만들고 [!DNL Google Ads] 계정을 Experience Platform에 연결했습니다. 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다.
 
 * [ [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
-* [ [!DNL Flow Service] API를 사용하여 광고 데이터를 플랫폼으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/advertising.md)
+* [ [!DNL Flow Service] API를 사용하여 광고 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/advertising.md)

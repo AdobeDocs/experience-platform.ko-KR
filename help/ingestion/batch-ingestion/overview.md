@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;홈;인기 항목;데이터 수집;일괄 처리;일괄 처리;데이터 세트 활성화;일괄 처리 수집 개요;개요;일괄 처리 수집 개요;
+keywords: Experience Platform;홈;인기 주제;데이터 수집;일괄 처리;일괄 처리;데이터 세트 활성화;일괄 처리 수집 개요;개요;일괄 처리 수집 개요;
 solution: Experience Platform
 title: 일괄 처리 수집 API 개요
-description: 'Adobe Experience Platform 일괄 처리 수집 API 를 사용하면 데이터를 플랫폼에 일괄 처리 파일로 수집할 수 있습니다. 수집되는 데이터는 CRM 시스템의 플랫 파일(예: Parquet 파일)의 프로필 데이터이거나 Experience Data Model(XDM) 레지스트리의 알려진 스키마를 준수하는 데이터일 수 있습니다.'
+description: 'Adobe Experience Platform 일괄 처리 수집 API 를 사용하면 데이터를 Experience Platform에 일괄 처리 파일로 수집할 수 있습니다. 수집되는 데이터는 CRM 시스템의 플랫 파일(예: Parquet 파일)의 프로필 데이터이거나 Experience Data Model(XDM) 레지스트리의 알려진 스키마를 준수하는 데이터일 수 있습니다.'
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1390'
 ht-degree: 4%
 
 ---
 
 # 일괄 처리 수집 API 개요
 
-Adobe Experience Platform 일괄 처리 수집 API 를 사용하면 데이터를 플랫폼에 일괄 처리 파일로 수집할 수 있습니다. 수집되는 데이터는 플랫 파일(예: Parquet 파일)의 프로필 데이터이거나 [!DNL Experience Data Model](XDM) 레지스트리의 알려진 스키마를 준수하는 데이터일 수 있습니다.
+Adobe Experience Platform 일괄 처리 수집 API 를 사용하면 데이터를 Experience Platform에 일괄 처리 파일로 수집할 수 있습니다. 수집되는 데이터는 플랫 파일(예: Parquet 파일)의 프로필 데이터이거나 [!DNL Experience Data Model]&#x200B;(XDM) 레지스트리의 알려진 스키마를 준수하는 데이터일 수 있습니다.
 
 [일괄 처리 수집 API 참조](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)에서 이러한 API 호출에 대한 추가 정보를 제공합니다.
 
@@ -52,15 +52,15 @@ Adobe Experience Platform 일괄 처리 수집 API 를 사용하면 데이터를
 
 ### 유형
 
-데이터를 수집할 때 [!DNL Experience Data Model](XDM) 스키마가 작동하는 방식을 이해하는 것이 중요합니다. XDM 필드 유형이 다른 형식으로 매핑되는 방법에 대한 자세한 내용은 [스키마 레지스트리 개발자 안내서](../../xdm/api/getting-started.md)를 참조하십시오.
+데이터를 수집할 때 [!DNL Experience Data Model]&#x200B;(XDM) 스키마가 작동하는 방식을 이해하는 것이 중요합니다. XDM 필드 유형이 다른 형식으로 매핑되는 방법에 대한 자세한 내용은 [스키마 레지스트리 개발자 안내서](../../xdm/api/getting-started.md)를 참조하십시오.
 
 데이터 수집 시 약간의 유연성이 있습니다. 유형이 대상 스키마의 유형과 일치하지 않으면 데이터는 표현된 대상 유형으로 변환됩니다. 그렇지 않으면 `TypeCompatibilityException`(으)로 일괄 처리가 실패합니다.
 
-예를 들어 JSON과 CSV에 `date` 또는 `date-time` 유형이 없습니다. 그 결과, 이러한 값은 [ISO 8601 형식의 문자열](https://www.iso.org/iso-8601-date-and-time-format.html)(&quot;2018-07-10T15:05:59.000-08:00&quot;) 또는 밀리초 형식의 Unix 시간(1531263959000)을 사용하여 표현되며 수집 시 대상 XDM 유형으로 변환됩니다.
+예를 들어 JSON과 CSV에 `date` 또는 `date-time` 유형이 없습니다. 그 결과, 이러한 값은 [ISO 8601 형식의 문자열](https://www.iso.org/iso-8601-date-and-time-format.html)&#x200B;(&quot;2018-07-10T15:05:59.000-08:00&quot;) 또는 밀리초 형식의 Unix 시간(1531263959000)을 사용하여 표현되며 수집 시 대상 XDM 유형으로 변환됩니다.
 
 아래 표는 데이터 수집 시 지원되는 전환을 보여 줍니다.
 
-| 인바운드(행)와 대상(열) | 문자열 | 바이트 | 짧음 | 정수 | Long | 더블 | 날짜 | 날짜-시간 | 오브젝트 | 맵 |
+| 인바운드(행)와 대상(열) | 문자열 | 바이트 | 짧음 | 정수 | Long | 더블 | 일자 | 날짜-시간 | 오브젝트 | 맵 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 문자열 | X | X | X | X | X | X | X | X |   |   |
 | 바이트 | X | X | X | X | X | X |   |   |   |   |
@@ -68,7 +68,7 @@ Adobe Experience Platform 일괄 처리 수집 API 를 사용하면 데이터를
 | 정수 | X | X | X | X | X | X |   |   |   |   |
 | Long | X | X | X | X | X | X | X | X |   |   |
 | 더블 | X | X | X | X | X | X |   |   |   |   |
-| 날짜 |   |   |   |   |   |   | X |   |   |   |
+| 일자 |   |   |   |   |   |   | X |   |   |   |
 | 날짜-시간 |   |   |   |   |   |   |   | X |   |   |
 | 오브젝트 |   |   |   |   |   |   |   |   | X | X |
 | 맵 |   |   |   |   |   |   |   |   | X | X |
@@ -220,7 +220,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### 대용량 파일 업로드 - 후속 부분 업로드
 
-파일이 만들어지면 파일의 각 섹션에 대해 하나씩 반복된 PATCH 요청을 수행하여 모든 후속 청크를 업로드할 수 있습니다.
+파일이 만들어지면, 파일의 각 섹션에 대해 하나씩, PATCH 요청을 반복하여 모든 후속 청크를 업로드할 수 있습니다.
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}

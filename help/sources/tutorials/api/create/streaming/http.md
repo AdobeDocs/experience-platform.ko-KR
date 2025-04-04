@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;스트리밍 연결;스트리밍 연결 만들기;api 안내서;자습서;스트리밍 연결 만들기;스트리밍 수집;수집;
+keywords: Experience Platform;홈;인기 주제;스트리밍 연결;스트리밍 연결 만들기;api 안내서;자습서;스트리밍 연결 만들기;스트리밍 수집;수집;
 title: 흐름 서비스 API를 사용하여 HTTP API 스트리밍 연결 만들기
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 원시 데이터와 XDM 데이터 모두에 대해 HTTP API 소스를 사용하여 스트리밍 연결을 만드는 방법에 대한 단계를 제공합니다
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1656'
 ht-degree: 3%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 3%
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): [!DNL Platform]에서 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): [!DNL Experience Platform]에서 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 원본에서 집계한 데이터를 기반으로 통합 소비자 프로필을 실시간으로 제공합니다.
 
 또한 스트리밍 연결을 만들려면 타겟 XDM 스키마와 데이터 세트가 있어야 합니다. 이러한 데이터를 만드는 방법에 대해 알아보려면 [레코드 데이터 스트리밍](../../../../../ingestion/tutorials/streaming-record-data.md)에 대한 자습서 또는 [시계열 데이터 스트리밍](../../../../../ingestion/tutorials/streaming-time-series-data.md)에 대한 자습서를 참조하십시오.
 
-### Platform API 사용
+### Experience Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ## 기본 연결 만들기
 
@@ -36,9 +36,9 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 ### 인증되지 않은 연결
 
-인증되지 않은 연결은 데이터를 플랫폼으로 스트리밍할 때 만들 수 있는 표준 스트리밍 연결입니다.
+인증되지 않은 연결은 Experience Platform에 데이터를 스트리밍할 때 만들 수 있는 표준 스트리밍 연결입니다.
 
-인증되지 않은 기본 연결을 만들려면 연결 이름, 데이터 형식 및 HTTP API 연결 사양 ID를 제공하는 동안 `/connections` 끝점에 POST 요청을 합니다. 이 ID는 `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`입니다.
+인증되지 않은 기본 연결을 만들려면 연결의 이름, 데이터 형식 및 HTTP API 연결 사양 ID를 제공하는 동안 `/connections` 끝점에 대한 POST 요청을 만듭니다. 이 ID는 `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`입니다.
 
 **API 형식**
 
@@ -130,7 +130,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 ### 인증된 연결
 
-인증된 연결은 신뢰할 수 있는 원본과 신뢰할 수 없는 원본에서 오는 레코드를 구별해야 할 때 사용해야 합니다. PII(개인 식별 정보)가 있는 정보를 전송하려는 사용자는 Platform으로 정보를 스트리밍할 때 인증된 연결을 만들어야 합니다.
+인증된 연결은 신뢰할 수 있는 원본과 신뢰할 수 없는 원본에서 오는 레코드를 구별해야 할 때 사용해야 합니다. PII(개인 식별 정보)가 있는 정보를 전송하려는 사용자는 Experience Platform으로 정보를 스트리밍할 때 인증된 연결을 만들어야 합니다.
 
 인증된 기본 연결을 만들려면 요청에 `authenticationRequired` 매개 변수를 포함하고 해당 값을 `true`(으)로 지정해야 합니다. 이 단계에서는 인증된 기본 연결에 대한 소스 ID를 제공할 수도 있습니다. 이 매개 변수는 선택 사항이며, 지정하지 않을 경우 `name` 특성과 동일한 값을 사용합니다.
 
@@ -332,7 +332,7 @@ curl -X POST \
 
 ## 대상 XDM 스키마 만들기 {#target-schema}
 
-소스 데이터를 플랫폼에서 사용하려면 타겟 스키마를 만들어 필요에 따라 소스 데이터를 구조화해야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 Platform 데이터 세트를 만듭니다.
+소스 데이터를 Experience Platform에서 사용하려면 타겟 스키마를 만들어 필요에 따라 소스 데이터를 구조화해야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 Experience Platform 데이터 세트를 만듭니다.
 
 [스키마 레지스트리 API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)에 대한 POST 요청을 수행하여 대상 XDM 스키마를 만들 수 있습니다.
 
@@ -340,7 +340,7 @@ curl -X POST \
 
 ### 타겟 데이터 세트 만들기 {#target-dataset}
 
-[카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하고 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
+[카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하여 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
 
 대상 데이터 집합을 만드는 방법에 대한 자세한 단계는 [API를 사용하여 데이터 집합 만들기](../../../../../catalog/api/create-dataset.md)에 대한 자습서를 참조하십시오.
 
@@ -398,7 +398,7 @@ curl -X POST \
 
 소스 데이터를 타겟 데이터 세트에 수집하려면 먼저 타겟 데이터 세트가 준수하는 타겟 스키마에 매핑해야 합니다.
 
-매핑 세트를 만들려면 대상 XDM 스키마 `$id`과(와) 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)의 `mappingSets` 끝점에 POST 요청을 하십시오.
+매핑 세트를 만들려면 대상 XDM 스키마 `$id`과(와) 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)의 `mappingSets` 끝점에 대한 POST 요청을 수행하십시오.
 
 **API 형식**
 
@@ -559,7 +559,7 @@ curl -X POST \
 }
 ```
 
-## 플랫폼에 수집할 게시물 데이터 {#ingest-data}
+## Experience Platform에 수집할 게시물 데이터 {#ingest-data}
 
 >[!NOTE]
 >
@@ -575,7 +575,7 @@ POST /collection/{INLET_URL}
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
-| `{INLET_URL}` | 스트리밍 끝점 URL. 기본 연결 ID를 제공하는 동안 `/connections` 끝점에 대한 GET 요청을 수행하여 이 URL을 검색할 수 있습니다. |
+| `{INLET_URL}` | 스트리밍 끝점 URL. 기본 연결 ID를 제공하는 동안 `/connections` 끝점에 GET 요청을 만들어 이 URL을 검색할 수 있습니다. |
 | `{FLOW_ID}` | HTTP API 스트리밍 데이터 흐름의 ID입니다. 이 ID는 XDM 및 RAW 데이터 모두에 필요합니다. |
 
 **요청**
@@ -686,15 +686,15 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
 | 속성 | 설명 |
 | -------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 이전에 만든 스트리밍 연결의 ID입니다. |
-| `xactionId` | 방금 전송한 레코드에 대해 서버측에서 생성된 고유 식별자입니다. 이 ID는 Adobe이 다양한 시스템을 통해 디버깅을 사용하여 이 레코드의 라이프사이클을 추적하는 데 도움이 됩니다. |
+| `xactionId` | 방금 전송한 레코드에 대해 서버측에서 생성된 고유 식별자입니다. 이 ID는 Adobe이 다양한 시스템을 통해 디버깅을 통해 이 레코드의 라이프사이클을 추적하는 데 도움이 됩니다. |
 | `receivedTimeMs` | 요청이 수신된 시간을 보여 주는 타임스탬프(시간(밀리초 단위))입니다. |
 
 
 ## 다음 단계
 
-이 자습서에 따라 스트리밍 HTTP 연결을 만들어 스트리밍 끝점을 사용하여 데이터를 Platform에 수집할 수 있습니다. UI에서 스트리밍 연결을 만드는 방법에 대한 지침은 [스트리밍 연결 만들기 자습서](../../../ui/create/streaming/http.md)를 참조하십시오.
+이 자습서에 따라 스트리밍 HTTP 연결을 만들어 스트리밍 끝점을 사용하여 데이터를 Experience Platform에 수집할 수 있습니다. UI에서 스트리밍 연결을 만드는 방법에 대한 지침은 [스트리밍 연결 만들기 자습서](../../../ui/create/streaming/http.md)를 참조하십시오.
 
-데이터를 플랫폼으로 스트리밍하는 방법에 대해 알아보려면 [시계열 데이터 스트리밍](../../../../../ingestion/tutorials/streaming-time-series-data.md)에 대한 자습서 또는 [레코드 데이터 스트리밍](../../../../../ingestion/tutorials/streaming-record-data.md)에 대한 자습서를 참조하십시오.
+Experience Platform으로 데이터를 스트리밍하는 방법에 대해 알아보려면 [시계열 데이터 스트리밍](../../../../../ingestion/tutorials/streaming-time-series-data.md)에 대한 자습서 또는 [레코드 데이터 스트리밍](../../../../../ingestion/tutorials/streaming-record-data.md)에 대한 자습서를 참조하십시오.
 
 ## 부록
 

@@ -4,7 +4,7 @@ title: 스키마 레지스트리 API를 사용하여 두 스키마 간의 관계
 description: 이 문서에서는 스키마 레지스트리 API를 사용하여 조직에서 정의한 두 스키마 간의 일대일 관계를 정의하는 자습서를 제공합니다.
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # [!DNL Schema Registry] API를 사용하여 두 스키마 간의 관계 정의
 
-Adobe Experience Platform에서는 다양한 채널에서 고객과 브랜드와의 상호 작용 간의 관계를 이해하는 기능이 중요합니다. [!DNL Experience Data Model](XDM) 스키마 구조 내에서 이러한 관계를 정의하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
+Adobe Experience Platform에서는 다양한 채널에서 고객과 브랜드와의 상호 작용 간의 관계를 이해하는 기능이 중요합니다. [!DNL Experience Data Model]&#x200B;(XDM) 스키마 구조 내에서 이러한 관계를 정의하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
 
 유니온 스키마와 [!DNL Real-Time Customer Profile]을(를) 사용하여 스키마 관계를 유추할 수 있지만 이는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 별도의 **참조 스키마**&#x200B;의 ID를 나타내는 **소스 스키마**&#x200B;에 전용 관계 필드를 추가해야 합니다.
 
@@ -25,12 +25,12 @@ Adobe Experience Platform에서는 다양한 채널에서 고객과 브랜드와
 
 ## 시작하기
 
-이 자습서에서는 [!DNL Experience Data Model](XDM) 및 [!DNL XDM System]을(를) 이해하고 있어야 합니다. 이 자습서를 시작하기 전에 다음 설명서를 검토하십시오.
+이 자습서에서는 [!DNL Experience Data Model]&#x200B;(XDM) 및 [!DNL XDM System]을(를) 이해하고 있어야 합니다. 이 자습서를 시작하기 전에 다음 설명서를 검토하십시오.
 
 * [Experience Platform의 XDM 시스템](../home.md): XDM 및 [!DNL Experience Platform]의 구현에 대한 개요입니다.
    * [스키마 컴포지션 기본 사항](../schema/composition.md): XDM 스키마 빌딩 블록 소개.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 이 자습서를 시작하기 전에 [개발자 안내서](../api/getting-started.md)에서 [!DNL Schema Registry] API를 성공적으로 호출하기 위해 알아야 할 중요한 정보를 검토하십시오. 여기에는 `{TENANT_ID}`, &quot;컨테이너&quot; 개념 및 요청을 하는 데 필요한 헤더가 포함됩니다([!DNL Accept] 헤더 및 가능한 값에 특별한 주의를 기울임).
 
@@ -238,7 +238,7 @@ curl -X POST\
 
 ### 소스 스키마에 필드 그룹 추가
 
-필드 그룹을 만든 후에는 `/tenant/schemas/{SCHEMA_ID}` 끝점에 PATCH 요청을 하여 소스 스키마에 추가할 수 있습니다.
+필드 그룹을 만든 후에는 `/tenant/schemas/{SCHEMA_ID}` 끝점에 PATCH 요청을 만들어 소스 스키마에 추가할 수 있습니다.
 
 **API 형식**
 
@@ -348,7 +348,7 @@ curl -X PATCH \
 
 스키마 필드는 관계에서 다른 스키마에 대한 참조로 사용되는 경우 해당 필드에 참조 ID 설명자가 적용되어야 합니다. &quot;[!DNL Loyalty Members]&quot;의 `favoriteHotel` 필드가 &quot;[!DNL Hotels]&quot;의 `hotelId` 필드를 참조하므로 `favoriteHotel`에 참조 ID 설명자를 지정해야 합니다.
 
-`/tenant/descriptors` 끝점에 대한 POST 요청을 만들어 원본 스키마에 대한 참조 설명자를 만듭니다.
+`/tenant/descriptors` 끝점에 대한 POST 요청을 수행하여 소스 스키마에 대한 참조 설명자를 만듭니다.
 
 **API 형식**
 

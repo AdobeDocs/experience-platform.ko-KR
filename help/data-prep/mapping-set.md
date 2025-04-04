@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 매핑 세트 개요
 description: Adobe Experience Platform 데이터 준비와 함께 매핑 세트를 사용하는 방법을 알아봅니다.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: 660948b7a43ed3c18feb74cccf8f9c607470759c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 이 개요를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 - [데이터 준비](./home.md): 데이터 준비를 통해 데이터 엔지니어는 데이터를 XDM(Experience Data Model)에 매핑하고, 변환하고, 유효성을 검사할 수 있습니다.
-- [데이터 흐름](../dataflows/home.md): 데이터 흐름은 플랫폼 간에 데이터를 이동하는 데이터 작업을 나타냅니다. 데이터 흐름은 여러 서비스에 걸쳐 구성되어 있으므로 데이터를 소스 커넥터에서 대상 데이터 세트로, [!DNL Identity] 및 [!DNL Profile], [!DNL Destinations](으)로 이동하는 데 도움이 됩니다.
+- [데이터 흐름](../dataflows/home.md): 데이터 흐름은 Experience Platform에서 데이터를 이동하는 데이터 작업을 나타냅니다. 데이터 흐름은 여러 서비스에 걸쳐 구성되어 있으므로 데이터를 소스 커넥터에서 대상 데이터 세트로, [!DNL Identity] 및 [!DNL Profile], [!DNL Destinations]&#x200B;(으)로 이동하는 데 도움이 됩니다.
 - [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md): 데이터를 [!DNL Experience Platform]에 보낼 수 있는 메서드입니다.
 - [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 

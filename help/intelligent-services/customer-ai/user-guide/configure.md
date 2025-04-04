@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;사용 안내서;고객 ai;인기 항목;인스턴스 구성;인스턴스 만들기;
+keywords: Experience Platform;사용 안내서;고객 ai;인기 주제;인스턴스 구성;인스턴스 만들기;
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Customer AI 인스턴스 구성
 description: AI/ML 서비스는 다양한 사용 사례에 맞게 구성할 수 있는 사용하기 쉬운 Adobe Sensei 서비스로 고객 AI를 제공합니다. 다음 섹션에서는 고객 AI의 인스턴스를 구성하는 단계를 제공합니다.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2829'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ AI/ML 서비스는 다양한 사용 사례에 맞게 구성할 수 있는 사용
 
 ## 인스턴스 만들기 {#set-up-your-instance}
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 서비스]**&#x200B;를 선택합니다. **[!UICONTROL 서비스]** 브라우저가 나타나고 사용자가 원하는 대로 사용 가능한 모든 서비스를 표시합니다. Customer AI용 컨테이너에서 **[!UICONTROL 열기]**&#x200B;를 선택합니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 서비스]**&#x200B;를 선택합니다. **[!UICONTROL 서비스]** 브라우저가 나타나고 사용자가 원하는 대로 사용 가능한 모든 서비스를 표시합니다. Customer AI용 컨테이너에서 **[!UICONTROL 열기]**&#x200B;를 선택합니다.
 
 ![](../images/user-guide/navigate-to-service.png)
 
@@ -35,7 +35,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 서비스]**&#x200B;를 선택�
 
 - **[!UICONTROL 편집]**: **[!UICONTROL 편집]**&#x200B;을 선택하면 기존 서비스 인스턴스를 수정할 수 있습니다. 인스턴스의 이름, 설명 및 채점 빈도를 편집할 수 있습니다.
 - **[!UICONTROL 복제]**: **[!UICONTROL 복제]**&#x200B;을(를) 선택하면 현재 선택한 서비스 인스턴스 설정이 복사됩니다. 그런 다음 워크플로우를 수정하여 약간 수정하고 새 인스턴스로 이름을 바꿀 수 있습니다.
-- **[!UICONTROL 삭제]**: 내역 실행을 포함하는 서비스 인스턴스를 삭제할 수 있습니다. 해당 출력 데이터 세트가 플랫폼에서 삭제됩니다. 단, 실시간 고객 프로필에 동기화된 점수는 삭제되지 않습니다.
+- **[!UICONTROL 삭제]**: 내역 실행을 포함하는 서비스 인스턴스를 삭제할 수 있습니다. 해당 출력 데이터 세트가 Experience Platform에서 삭제됩니다. 단, 실시간 고객 프로필에 동기화된 점수는 삭제되지 않습니다.
 - **[!UICONTROL 데이터 원본]**: 이 인스턴스에서 사용하는 데이터 집합에 대한 링크입니다. 여러 데이터 세트를 사용 중인 경우 하이퍼링크 텍스트를 선택하면 데이터 세트 미리보기 팝오버가 열립니다.
 - **[!UICONTROL 마지막 실행 세부 정보]**: 실행이 실패할 때만 표시됩니다. 오류 코드 등 실행이 실패한 이유에 대한 정보가 여기에 표시됩니다.
 - **[!UICONTROL 점수 정의]**: 이 인스턴스에 대해 구성한 목표에 대한 빠른 개요입니다.

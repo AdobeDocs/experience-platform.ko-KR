@@ -2,9 +2,9 @@
 description: 이 페이지에서는 /authoring/testing/template/render 끝점을 사용하여 대상 구성에 정의된 템플릿화된 고객 데이터 필드의 모양을 시각화하는 방법에 대해 설명합니다.
 title: 템플릿화된 고객 필드의 유효성 검사
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
-source-git-commit: 6bd169075cd3826ae2a0907e6e624fd901076a4a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '388'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 2%
 `/template/render` 끝점을 사용하기 전에 다음 조건을 충족하는지 확인하십시오.
 
 * Destination SDK을 통해 만든 기존 파일 기반 대상이 있으며 [대상 카탈로그](../../../ui/destinations-workspace.md)에서 볼 수 있습니다.
-* API 요청을 성공적으로 수행하려면 테스트할 대상 인스턴스에 해당하는 대상 인스턴스 ID가 필요합니다. Platform UI에서 대상과의 연결을 검색할 때 API 호출에 사용해야 하는 대상 인스턴스 ID를 URL에서 가져옵니다.
+* API 요청을 성공적으로 수행하려면 테스트할 대상 인스턴스에 해당하는 대상 인스턴스 ID가 필요합니다. Experience Platform UI에서 대상과의 연결을 검색할 때 API 호출에 사용해야 하는 대상 인스턴스 ID를 URL에서 가져옵니다.
 
   URL에서 대상 인스턴스 ID를 가져오는 방법을 보여 주는 ![UI 이미지.](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -98,7 +98,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 ## API 오류 처리 {#api-error-handling}
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 

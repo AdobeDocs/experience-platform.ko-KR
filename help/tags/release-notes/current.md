@@ -2,10 +2,10 @@
 title: 태그 및 이벤트 전달 릴리스 정보
 description: Adobe Experience Platform의 태그 및 이벤트 전달에 대한 최신 릴리스 정보입니다.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: e300e57df998836a8c388511b446e90499185705
-workflow-type: ht
-source-wordcount: '771'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '773'
+ht-degree: 93%
 
 ---
 
@@ -54,13 +54,13 @@ ht-degree: 100%
 
 ## 2022년 10월 26일
 
-* **데이터스트림에 대한 민감한 데이터 처리**: 데이터스트림은 이제 HIPAA(건강 보험 이동성 및 책임법) 등의 규정에 따라 민감한 데이터를 적절히 처리하기 위해 여러 가지 플랫폼 기술을 활용합니다. 자세한 내용은 [데이터스트림의 민감한 데이터 처리](../../datastreams/overview.md#sensitive)에 대한 섹션을 참조하십시오.
+* **데이터 스트림에 대한 중요한 데이터 처리**: 이제 데이터 스트림은 여러 Experience Platform 기술을 활용하여 HIPAA(Health Insurance Portability and Accountability Act)와 같은 규정에 따라 중요한 데이터를 적절히 처리합니다. 자세한 내용은 [데이터스트림의 민감한 데이터 처리](../../datastreams/overview.md#sensitive)에 대한 섹션을 참조하십시오.
 * **[!DNL Splunk]확장 기능을 통한 이벤트 전달**: 이제 [이벤트 전달](../ui/event-forwarding/overview.md) 확장 기능을 통해 데이터를 [!DNL Splunk]로 전송할 수 있습니다. 자세한 내용은 [[!DNL Splunk] 확장 기능 개요](../extensions/server/splunk/overview.md)를 참조하십시오.
 * **[!DNL Zendesk]확장 기능을 통한 이벤트 전달**: 이제 [이벤트 전달](../ui/event-forwarding/overview.md) 확장 기능을 통해 데이터를 [!DNL Zendesk]로 전송할 수 있습니다. 자세한 내용은 [[!DNL Zendesk] 확장 기능 개요](../extensions/server/zendesk/overview.md)를 참조하십시오.
 
 ## 2022년 9월 28일
 
-* **Adobe Experience Platform 왼쪽 탐색 영역 통합**: 이전에 데이터 수집 UI에서만 사용할 수 있었던 모든 기능(태그 및 이벤트 전달 포함)을 이제 Experience Platform UI의 왼쪽 탐색 영역의 **[!UICONTROL 데이터 수집]** 범주 아래에서도 사용할 수 있습니다. 이렇게 하면 Platform에서 데이터 수집 기능을 사용할 때 UI를 전환할 필요가 없습니다.
+* **Adobe Experience Platform 왼쪽 탐색 영역 통합**: 이전에 데이터 수집 UI에서만 사용할 수 있었던 모든 기능(태그 및 이벤트 전달 포함)을 이제 Experience Platform UI의 왼쪽 탐색 영역의 **[!UICONTROL 데이터 수집]** 범주 아래에서도 사용할 수 있습니다. 이렇게 하면 Experience Platform에서 데이터 수집 기능을 사용할 때 UI 간을 전환할 필요가 없습니다.
 * **태그 및 이벤트 전달에서의 사용자 속성**: 태그 및 이벤트 전달에서 사용 가능한 속성을 나열할 때, 나열된 각 속성에는 마지막 업데이트 날짜와 업데이트한 사용자가 표시됩니다.
 * **[[!DNL Snap Conversions API] 확장 기능](https://exchange.adobe.com/apps/ec/108550)을 통한 이벤트 전달**: 이제 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장 기능을 통해 데이터를 [!DNL Snapchat Conversions API]로 전송할 수 있습니다. API 인증 및 사용 방법에 대한 자세한 내용은 이 [[!DNL Snapchat Marketing API] 설명서](https://marketingapi.snapchat.com/docs/conversion.html)를 참조하십시오.
 

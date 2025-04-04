@@ -3,7 +3,7 @@ keywords: 대상;대상;대상 세부 사항 페이지;대상 세부 사항 페�
 title: 대상 세부 사항 보기
 description: 개별 대상에 대한 세부 정보 페이지에서는 대상 세부 정보에 대한 개요를 제공합니다. 대상 세부 사항에는 대상 이름, ID, 대상에 매핑된 대상자 및 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤이 포함됩니다.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 
 >[!NOTE]
 >
->대상 세부 정보 페이지는 [!DNL Platform] [!DNL UI]의 [!UICONTROL 대상] 작업 영역에 속합니다. 자세한 내용은 [[!UICONTROL 대상] 작업 영역 개요](./destinations-workspace.md)를 참조하십시오.
+>대상 세부 정보 페이지는 [!DNL Experience Platform] [!DNL UI]의 [!UICONTROL 대상] 작업 영역에 속합니다. 자세한 내용은 [[!UICONTROL 대상] 작업 영역 개요](./destinations-workspace.md)를 참조하십시오.
 
 ## 대상 세부 사항 보기 {#view-details}
 
@@ -64,7 +64,7 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 | [!UICONTROL 범주] | 대상 유형을 나타냅니다. 자세한 내용은 [대상 카탈로그](../catalog/overview.md)를 참조하세요. |
 | [!UICONTROL 연결 유형] | 대상자를 대상으로 전송하는 양식을 나타냅니다. 가능한 값에는 [!UICONTROL 쿠키] 및 [!UICONTROL 프로필 기반]이 포함됩니다. |
 | [!UICONTROL 빈도] | 대상자를 대상으로 보내는 빈도를 나타냅니다. 가능한 값은 [!UICONTROL 스트리밍] 및 [!UICONTROL 일괄 처리]입니다. |
-| [!UICONTROL 신원] | `GAID`, `IDFA` 또는 `email` 등 대상에서 허용하는 ID 네임스페이스를 나타냅니다. 허용되는 ID 네임스페이스에 대한 자세한 내용은 [ID 네임스페이스 개요](../../identity-service/features/namespaces.md)를 참조하십시오. |
+| [!UICONTROL ID] | `GAID`, `IDFA` 또는 `email` 등 대상에서 허용하는 ID 네임스페이스를 나타냅니다. 허용되는 ID 네임스페이스에 대한 자세한 내용은 [ID 네임스페이스 개요](../../identity-service/features/namespaces.md)를 참조하십시오. |
 | [!UICONTROL 만든 사람] | 이 대상을 만든 사용자를 나타냅니다. |
 | [!UICONTROL 생성일] | 이 대상을 만들 때의 UTC 날짜/시간을 나타냅니다. |
 
@@ -82,7 +82,7 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 
 >[!NOTE]
 >
->* 대상 모니터링 기능은 현재 *Experience Platform의 모든 대상에 대해 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [사용자 지정 개인화](/help/destinations/catalog/personalization/custom-personalization.md) 및 [대상 Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) 대상을 제외한*&#x200B;에 대해 지원됩니다.
+>* 대상 모니터링 기능은 현재 Experience Platform의 모든 대상에 대해 지원됩니다. [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [사용자 지정 개인화](/help/destinations/catalog/personalization/custom-personalization.md) 및 [Experience Cloud 대상](/help/destinations/catalog/adobe/experience-cloud-audiences.md) 대상 제외&#x200B;*.*
 >* [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) 및 [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 대상의 경우 제외, 실패 및 활성화된 ID와 관련된 지표를 예측합니다. 활성화 데이터의 볼륨이 높을수록 지표의 정확도가 높아집니다.
 
 ![데이터 흐름 실행 보기](../assets/ui/details-page/dataflow-runs.png)
@@ -93,7 +93,7 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 
 ### 스트리밍 대상 {#streaming}
 
-대부분의 스트리밍 데이터 흐름 실행에 대해 지정된 **[!UICONTROL 처리 기간]**&#x200B;은(는) 아래 그림과 같이 약 4시간이지만, 데이터 흐름 실행의 실제 처리 시간은 훨씬 짧습니다. 데이터 흐름 실행 창은 Experience Platform이 대상에 대한 호출을 다시 시도해야 하는 경우 더 오랫동안 열어 두어야 하며, 동일한 시간 동안 늦게 도착하는 데이터를 놓치지 않도록 해야 합니다.
+대부분의 스트리밍 데이터 흐름 실행에 대해 지정된 **[!UICONTROL 처리 기간]**&#x200B;은(는) 아래 그림과 같이 약 4시간이지만, 데이터 흐름 실행의 실제 처리 시간은 훨씬 짧습니다. Experience Platform이 대상에 대한 호출을 다시 시도하고 동일한 시간 동안 늦게 도착하는 데이터를 놓치지 않도록 해야 하는 경우 데이터 흐름 실행 창은 더 이상 열려 있어야 합니다.
 
 ![스트리밍 대상에 대해 처리 시간 열이 강조 표시된 데이터 흐름 실행 페이지](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 

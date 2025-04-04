@@ -2,9 +2,9 @@
 title: 자동화된 데이터 세트 만료
 description: Adobe Experience Platform UI에서 데이터 세트 만료를 예약하는 방법을 알아봅니다.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '873'
 ht-degree: 18%
 
 ---
@@ -22,13 +22,13 @@ Adobe Experience Platform UI의 [[!UICONTROL 데이터 수명 주기] 작업 공
 >
 >데이터 세트가 만료되도록 설정된 경우 다운스트림 워크플로우가 부정적인 영향을 받지 않도록 데이터를 해당 데이터 세트로 수집할 수 있는 모든 데이터 흐름을 수동으로 변경해야 합니다.
 
-이 문서에서는 Platform UI에서 데이터 세트 만료를 예약하고 자동화하는 방법을 다룹니다.
+이 문서에서는 Experience Platform UI에서 데이터 세트 만료를 예약하고 자동화하는 방법을 다룹니다.
 
 >[!NOTE]
 >
 >데이터 세트 만료는 현재 Adobe Experience Platform Edge Network에서 데이터를 삭제하지 않습니다. 그러나 데이터 세트가 만료되도록 설정된 후에는 데이터가 Edge Network 내에 남아 있을 가능성이 없습니다. 데이터 세트 만료에 대한 15일 서비스 라이선스 계약이 데이터가 삭제되기 전에 Edge Network 내에 존재하는 14일 기간과 겹치기 때문입니다.
 
-Advanced Data Lifecycle Management는 [데이터 세트 만료 끝점](../api/dataset-expiration.md)을 통해 데이터 세트 삭제를 지원하고 [작업 주문 끝점](../api/workorder.md)을 통해 기본 ID를 사용하여 ID 삭제(행 수준 데이터)를 지원합니다. Platform UI를 통해 데이터 세트 만료와 [레코드 삭제](./record-delete.md)를 관리할 수도 있습니다. 자세한 내용은 연결된 설명서 를 참조하십시오.
+Advanced Data Lifecycle Management는 [데이터 세트 만료 끝점](../api/dataset-expiration.md)을 통해 데이터 세트 삭제를 지원하고 [작업 주문 끝점](../api/workorder.md)을 통해 기본 ID를 사용하여 ID 삭제(행 수준 데이터)를 지원합니다. Experience Platform UI를 통해 데이터 세트 만료와 [레코드 삭제](./record-delete.md)를 관리할 수도 있습니다. 자세한 내용은 연결된 설명서 를 참조하십시오.
 
 >[!NOTE]
 >

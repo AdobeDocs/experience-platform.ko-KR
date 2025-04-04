@@ -2,9 +2,9 @@
 title: 쿼리 서비스 패키징
 description: 다음 문서에서는 쿼리 서비스에 사용할 수 있는 기능 및 제품의 패키지 구성에 대해 간략히 설명하고 애드혹 쿼리와 배치 쿼리의 차이점을 조명합니다.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '987'
 ht-degree: 2%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 2%
 
 Adobe Experience Platform 쿼리 서비스는 실행할 수 있는 쿼리 패턴에 따라 다음 두 가지 기능으로 나눌 수 있습니다.
 
-- **임시 쿼리**&#x200B;는 확인, 유효성 검사, 실험 등을 위해 수집된 데이터 세트를 탐색하는 데 사용되는 SQL 쿼리입니다. 이러한 쿼리는 데이터를 플랫폼 데이터 레이크에 다시 쓰지 않습니다.
-- **일괄 처리 쿼리**&#x200B;는 수집된 데이터 세트의 수집 후 처리를 수행하는 데 사용되는 SQL 쿼리입니다. 이러한 쿼리는 데이터를 정리, 셰이프, 조작 및 강화하고, 그 결과를 플랫폼 데이터 레이크에 다시 기록합니다. 이러한 쿼리는 배치 작업으로 예약, 관리 및 모니터링할 수 있습니다.
+- **임시 쿼리**&#x200B;는 확인, 유효성 검사, 실험 등을 위해 수집된 데이터 세트를 탐색하는 데 사용되는 SQL 쿼리입니다. 이러한 쿼리는 Experience Platform 데이터 레이크에 데이터를 다시 쓰지 않습니다.
+- **일괄 처리 쿼리**&#x200B;는 수집된 데이터 세트의 수집 후 처리를 수행하는 데 사용되는 SQL 쿼리입니다. 이러한 쿼리는 데이터를 정리, 셰이프, 조작 및 강화하고, 그 결과를 Experience Platform 데이터 레이크에 다시 기록합니다. 이러한 쿼리는 배치 작업으로 예약, 관리 및 모니터링할 수 있습니다.
 
 쿼리 서비스 기능은 다음 제품 및 추가 기능과 함께 패키지됩니다.
 
-- **플랫폼 기반 응용 프로그램**(Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics 및 Adobe Journey Optimizer): 임시 쿼리를 실행하기 위한 쿼리 서비스 액세스는 플랫폼 기반 응용 프로그램의 모든 변형 및 계층에서 처음부터 제공됩니다.
+- **Experience Platform 기반 응용 프로그램**(Adobe Real-Time Customer Data Platform, Adobe Customer Journey Analytics 및 Adobe Journey Optimizer): 애드 혹 쿼리를 실행하기 위한 쿼리 서비스 액세스는 Experience Platform 기반 응용 프로그램의 모든 변형 및 계층에서 처음부터 제공됩니다.
 - **[!DNL Data Distiller]**(Adobe Real-Time CDP, Customer Journey Analytics 및 Adobe Journey Optimizer과 함께 구입할 수 있는 추가 기능 패키지): 일괄 처리 쿼리를 실행하기 위한 쿼리 서비스 액세스 권한은 [!DNL Data Distiller]과(와) 함께 제공됩니다.
 
 ## 권한 {#entitlements}
 
 다음 표에서는 패키지화 방법을 기반으로 하는 주요 쿼리 서비스 권한에 대해 설명합니다.
 
-| 쿼리 서비스 권한 | 플랫폼 기반 애플리케이션과 함께 제공 | [!DNL Data Distiller](으)로 패키지됨 |
+| 쿼리 서비스 권한 | Experience Platform 기반 애플리케이션 패키지 | [!DNL Data Distiller]&#x200B;(으)로 패키지됨 |
 |---|---|---|
 | 쿼리 패턴 지원됨 | 애드혹 쿼리 전용 | 일괄 처리 쿼리 |
 | 지원되는 사용 사례 | <ul><li>탐험&#x200B;</li><li>데이터 검색 &#x200B;</li><li>데이터 유효성 검사</li><li>실험</li></ul> | <ul><li>청소</li><li>모양 지정</li><li>조작</li><li>강화</li></ul> |
@@ -62,14 +62,14 @@ Experience Platform에 대한 액세스 제어는 제품 프로필이 사용 권
 
 | 사용 권한 | 함수 |
 |---|---|
-| [!DNL Manage Queries](데이터 쓰기 권한 없음) | 애드혹 쿼리 실행에 대한 액세스 권한 제공 |
-| [!DNL Manage Queries](데이터 쓰기 권한 있음) | 일괄 처리 쿼리 실행에 대한 액세스 권한 제공 |
+| [!DNL Manage Queries]&#x200B;(데이터 쓰기 권한 없음) | 애드혹 쿼리 실행에 대한 액세스 권한 제공 |
+| [!DNL Manage Queries]&#x200B;(데이터 쓰기 권한 있음) | 일괄 처리 쿼리 실행에 대한 액세스 권한 제공 |
 
 {style="table-layout:auto"}
 
 ### 관련 SQL Insights 권한 {#sql-insights-permissions}
 
-대시보드 내에 Data Distiller [SQL Insights](./data-distiller/sql-insights/overview.md)를 만들려면 Admin Console 내에 다음 권한 **을(를) 활성화해야**&#x200B;합니다.
+대시보드 내에 Data Distiller [SQL Insights](./data-distiller/sql-insights/overview.md)를 만들려면 Admin Console 내에서 다음 권한 **을(를) 활성화해야**&#x200B;합니다.
 
 | 사용 권한 | 함수 |
 |---|---|
@@ -80,7 +80,7 @@ Experience Platform에 대한 액세스 제어는 제품 프로필이 사용 권
 
 ## 샌드박스 지원 {#sandbox-support}
 
-샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션입니다. 각 플랫폼 인스턴스는 여러 프로덕션 및 비프로덕션 샌드박스를 지원하며, 각 샌드박스는 고유한 플랫폼 리소스 라이브러리를 유지 관리합니다. 비프로덕션 샌드박스를 사용하면 프로덕션 샌드박스에 영향을 주지 않고 기능을 테스트하고, 실험을 실행하고, 사용자 지정 구성을 수행할 수 있습니다. 샌드박스에 대한 자세한 내용은 [샌드박스 개요](../sandboxes/home.md)를 참조하십시오. 모든 Query Service 권한은 모든 샌드박스에서 공유됩니다.
+샌드박스는 Experience Platform의 단일 인스턴스 내에 있는 가상 파티션입니다. 각 Experience Platform 인스턴스는 여러 프로덕션 및 비프로덕션 샌드박스를 지원하며, 각 샌드박스는 Experience Platform 리소스의 자체 라이브러리를 유지 관리합니다. 비프로덕션 샌드박스를 사용하면 프로덕션 샌드박스에 영향을 주지 않고 기능을 테스트하고, 실험을 실행하고, 사용자 지정 구성을 수행할 수 있습니다. 샌드박스에 대한 자세한 내용은 [샌드박스 개요](../sandboxes/home.md)를 참조하십시오. 모든 Query Service 권한은 모든 샌드박스에서 공유됩니다.
 
 ## 다음 단계
 

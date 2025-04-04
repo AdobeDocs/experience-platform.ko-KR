@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 세트 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 5184f714d6bd8fb6e202a5ca6eea2d52a7169ae6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4108'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
 * [데이터 집합](overview.md): [!DNL Experience Platform]의 데이터 지속성을 위한 저장소 및 관리 구성입니다.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
-   * [스키마 편집기](../../xdm/tutorials/create-schema-ui.md): [!DNL Platform] 사용자 인터페이스 내에서 [!DNL Schema Editor]을(를) 사용하여 사용자 지정 XDM 스키마를 만드는 방법을 알아봅니다.
+   * [스키마 편집기](../../xdm/tutorials/create-schema-ui.md): [!DNL Experience Platform] 사용자 인터페이스 내에서 [!DNL Schema Editor]을(를) 사용하여 사용자 지정 XDM 스키마를 만드는 방법을 알아봅니다.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): 고객 데이터 사용과 관련된 규정, 제한 사항 및 정책을 준수하도록 하십시오.
 
@@ -57,7 +57,7 @@ ht-degree: 4%
 
 [!DNL Experience Platform] UI의 왼쪽 탐색에서 **[!UICONTROL 데이터 세트]**&#x200B;를 선택하여 **[!UICONTROL 데이터 세트]** 대시보드를 엽니다. 대시보드에는 조직에서 사용 가능한 모든 데이터 세트가 나열됩니다. 이름, 데이터 세트가 준수하는 스키마, 가장 최근 수집 실행 상태 등 나열된 각 데이터 세트에 대한 세부 사항이 표시됩니다.
 
-![왼쪽 탐색 막대에서 데이터 세트 항목이 강조 표시된 플랫폼 UI입니다.](../images/datasets/user-guide/browse-datasets.png)
+![왼쪽 탐색 막대에서 데이터 세트 항목이 강조 표시된 Experience Platform UI입니다.](../images/datasets/user-guide/browse-datasets.png)
 
 [!UICONTROL 찾아보기] 탭에서 데이터 세트 이름을 선택하여 **[!UICONTROL 데이터 세트 활동]** 화면에 액세스하고 선택한 데이터 세트에 대한 세부 정보를 확인합니다. 활동 탭에는 메시지 사용률을 시각화한 그래프와 성공/실패한 일괄 처리 집합 목록이 있습니다.
 
@@ -168,7 +168,7 @@ ht-degree: 4%
 
 태그가 데이터 세트에 추가되면 데이터 세트는 해당 태그를 기반으로 필터링될 수 있습니다. 자세한 내용은 [태그로 데이터 세트를 필터링](#enable-profile)하는 방법에 대한 섹션을 참조하십시오.
 
-쉽게 검색하고 분류할 수 있도록 비즈니스 개체를 분류하는 방법에 대한 자세한 내용은 [메타데이터 분류 관리](../../administrative-tags/ui/managing-tags.md)에 대한 안내서를 참조하십시오. 이 안내서에서는 올바른 권한이 있는 사용자가 사전 정의된 태그를 만들고, 이를 범주에 할당하고, Platform UI에서 모든 관련 CRUD 작업을 관리하는 방법에 대해 설명합니다.
+쉽게 검색하고 분류할 수 있도록 비즈니스 개체를 분류하는 방법에 대한 자세한 내용은 [메타데이터 분류 관리](../../administrative-tags/ui/managing-tags.md)에 대한 안내서를 참조하십시오. 이 안내서에서는 올바른 권한이 있는 사용자가 Experience Platform UI에서 사전 정의된 태그를 만들고, 이를 범주에 할당하고, 모든 관련 CRUD 작업을 관리하는 방법에 대해 설명합니다.
 
 ### (Beta) 데이터 보존 정책 설정 {#data-retention-policy}
 
@@ -176,7 +176,7 @@ ht-degree: 4%
 > 
 >데이터 보존 설정은 현재 Beta 버전이며 일부 조직의 **제한된 릴리스**&#x200B;에서만 사용할 수 있습니다. 아래 설명된 기능이 UI에 반영되지 않을 수 있습니다.
 
-[!UICONTROL 데이터 세트] 작업 영역의 [!UICONTROL 찾아보기] 탭에서 인라인 작업 메뉴를 사용하여 데이터 세트 만료 및 보존 설정을 관리합니다. 이 기능을 사용하여 데이터가 데이터 레이크 및 프로필 저장소에 유지되는 기간을 구성할 수 있습니다. 만료 날짜는 데이터가 플랫폼에 수집된 시간과 구성된 보존 기간을 기반으로 합니다.
+[!UICONTROL 데이터 세트] 작업 영역의 [!UICONTROL 찾아보기] 탭에서 인라인 작업 메뉴를 사용하여 데이터 세트 만료 및 보존 설정을 관리합니다. 이 기능을 사용하여 데이터가 데이터 레이크 및 프로필 저장소에 유지되는 기간을 구성할 수 있습니다. 만료 날짜는 Experience Platform에 데이터가 수집된 시기 및 구성된 보존 기간을 기반으로 합니다.
 
 >[!TIP]
 >
@@ -419,7 +419,7 @@ CSV 파일을 사용하여 데이터 세트를 만들면 제공된 CSV 파일과
 
 ## 다음 단계
 
-이 사용 안내서는 [!DNL Experience Platform] 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 지침을 제공했습니다. 데이터 세트와 관련된 일반적인 [!DNL Platform] 워크플로를 수행하는 단계는 다음 튜토리얼을 참조하십시오.
+이 사용 안내서는 [!DNL Experience Platform] 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 지침을 제공했습니다. 데이터 세트와 관련된 일반적인 [!DNL Experience Platform] 워크플로를 수행하는 단계는 다음 튜토리얼을 참조하십시오.
 
 * [API를 사용하여 데이터 세트 만들기](create.md)
 * [데이터 액세스 API를 사용하여 데이터 세트 데이터 쿼리](../../data-access/home.md)

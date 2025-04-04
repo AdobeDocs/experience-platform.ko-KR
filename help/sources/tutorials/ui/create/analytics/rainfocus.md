@@ -3,9 +3,9 @@ title: UI를 사용하여 RainFocus 계정을 Experience Platform에 연결
 description: UI를 사용하여 RainFocus 계정을 Experience Platform에 연결하는 방법을 알아봅니다.
 badge: Beta
 exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '989'
 ht-degree: 1%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 1%
 
 ## 시작하기
 
-이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기 튜토리얼](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아봅니다.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
@@ -43,7 +43,7 @@ ht-degree: 1%
 
 ## RainFocus 계정을 Experience Platform에 연결
 
-Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 소스 작업 영역에 액세스합니다. *[!UICONTROL 카탈로그]* 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 소스 작업 영역에 액세스합니다. *[!UICONTROL 카탈로그]* 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
@@ -53,7 +53,7 @@ Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선
 
 ## 데이터 선택
 
-Experience Platform 시 가져올 데이터를 선택할 수 있는 인터페이스를 제공하는 데이터 선택 단계가 나타납니다.
+Experience Platform으로 가져오는 데이터를 선택할 수 있는 인터페이스를 제공하는 데이터 선택 단계가 나타납니다.
 
 * 인터페이스의 왼쪽 부분은 계정 내에서 사용 가능한 데이터 스트림을 볼 수 있는 브라우저입니다.
 * 인터페이스의 오른쪽 부분에서 JSON 파일에서 최대 100개의 데이터 행을 미리 볼 수 있습니다.
@@ -113,11 +113,11 @@ Experience Platform은 선택한 대상 스키마 또는 데이터 세트를 기
 
 * [[!DNL RainFocus] platform](https://app.rainfocus.com)에 로그인합니다. 기본 탐색에서 **[!DNL Libraries]** 및 **[!DNL Integration Profiles]** 선택
 * [필수 구성 요소](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus)의 일부로 이전에 만든 [!DNL Integration Profile]을(를) 엽니다.
-* Experience Platform의 데이터 흐름에서 복사한 **데이터 흐름 ID** 및 **스트리밍 끝점**&#x200B;을 붙여 넣고 **저장**&#x200B;을(를) 선택합니다.
+* Experience Platform의 데이터 흐름에서 복사한 **데이터 흐름 ID** 및 **스트리밍 끝점**&#x200B;을 붙여 넣고 **저장**&#x200B;을 선택합니다.
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL RainFocus] 소스에 대한 연결을 설정하여 이벤트 관리 및 분석 데이터를 Experience Platform으로 스트리밍할 수 있습니다.
+이 자습서를 따라 이벤트 관리 및 분석 데이터를 Experience Platform에 스트리밍할 수 있도록 [!DNL RainFocus] 소스에 대한 연결을 설정했습니다.
 
 ## 추가 리소스
 

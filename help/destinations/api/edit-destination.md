@@ -4,9 +4,9 @@ title: 흐름 서비스 API를 사용하여 대상 연결 편집
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 대상 연결의 다양한 구성 요소를 편집하는 방법에 대해 알아봅니다.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: 2a72f6886f7a100d0a1bf963eedaed8823a7b313
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1609'
 ht-degree: 5%
 
 ---
@@ -29,8 +29,8 @@ ht-degree: 5%
 
 또한 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [대상](../home.md): [!DNL Destinations]은(는) Adobe Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
-* [샌드박스](../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [대상](../home.md): [!DNL Destinations]은(는) Adobe Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+* [샌드박스](../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 데이터 흐름을 성공적으로 업데이트하기 위해 알아야 하는 추가 정보를 제공합니다.
 
@@ -40,13 +40,13 @@ ht-degree: 5%
 
 ### 필수 헤더에 대한 값 수집 {#gather-values-for-required-headers}
 
-Platform API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 필요한 각 헤더의 값이 제공됩니다.
+Experience Platform API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Flow Service]에 속하는 리소스를 포함한 Experience Platform의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. Platform API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Flow Service]에 속하는 리소스를 포함한 Experience Platform의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. Experience Platform API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -60,11 +60,11 @@ Platform API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/
 
 ## 데이터 흐름 세부 정보 조회 {#look-up-dataflow-details}
 
-대상 연결을 편집하는 첫 번째 단계는 흐름 ID를 사용하여 데이터 흐름 세부 정보를 검색하는 것입니다. `/flows` 끝점에 대한 GET 요청을 수행하여 기존 데이터 흐름의 현재 세부 정보를 볼 수 있습니다.
+대상 연결을 편집하는 첫 번째 단계는 흐름 ID를 사용하여 데이터 흐름 세부 정보를 검색하는 것입니다. `/flows` 끝점에 대한 GET 요청을 수행하면 기존 데이터 흐름의 현재 세부 정보를 볼 수 있습니다.
 
 >[!TIP]
 >
->Experience Platform UI를 사용하여 대상의 원하는 데이터 흐름 ID를 가져올 수 있습니다. **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**(으)로 이동하여 원하는 대상 데이터 흐름을 선택하고 오른쪽 레일에서 대상 ID를 찾습니다. 대상 ID는 다음 단계에서 흐름 ID로 사용할 값입니다.
+>Experience Platform UI를 사용하여 원하는 대상 데이터 흐름 ID를 가져올 수 있습니다. **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**(으)로 이동하여 원하는 대상 데이터 흐름을 선택하고 오른쪽 레일에서 대상 ID를 찾습니다. 대상 ID는 다음 단계에서 흐름 ID로 사용할 값입니다.
 >
 > ![Experience Platform UI를 사용하여 대상 ID 가져오기](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
@@ -394,7 +394,7 @@ curl -X PATCH \
 
 **응답**
 
-성공적인 응답은 기본 연결 ID와 업데이트된 etag를 반환합니다. 기본 연결 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 하여 업데이트를 확인할 수 있습니다.
+성공적인 응답은 기본 연결 ID와 업데이트된 etag를 반환합니다. 기본 연결 ID를 제공하면서 [!DNL Flow Service] API에 대한 GET 요청을 만들어 업데이트를 확인할 수 있습니다.
 
 ```json
 {
@@ -436,7 +436,7 @@ curl -X PATCH \
 
 **응답**
 
-성공적인 응답은 기본 연결 ID와 업데이트된 etag를 반환합니다. 기본 연결 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 하여 업데이트를 확인할 수 있습니다.
+성공적인 응답은 기본 연결 ID와 업데이트된 etag를 반환합니다. 기본 연결 ID를 제공하면서 [!DNL Flow Service] API에 대한 GET 요청을 만들어 업데이트를 확인할 수 있습니다.
 
 ```json
 {
@@ -451,7 +451,7 @@ curl -X PATCH \
 
 ## API 오류 처리 {#api-error-handling}
 
-이 자습서의 API 끝점은 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 오류 응답 해석에 대한 자세한 내용은 플랫폼 문제 해결 안내서의 [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+이 자습서의 API 끝점은 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 오류 응답 해석에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 

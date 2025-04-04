@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Platform Web SDK를 사용하여 IAB TCF 2.0 지원 통합
+title: Adobe Experience Platform 웹 SDK을 사용하여 IAB TCF 2.0 지원 통합
 description: 태그를 사용하지 않고 웹 사이트에 대한 IAB TCF 2.0 지원을 설정하는 방법에 대해 알아봅니다.
 seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Web SDK
 exl-id: 14f1802a-0f8d-487f-ae17-5daaaab05162
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '617'
 ht-degree: 0%
 
 ---
 
-# Platform Web SDK와 IAB TCF 2.0 지원 통합
+# Experience Platform 웹 SDK과 IAB TCF 2.0 지원 통합
 
-이 안내서에서는 태그를 사용하지 않고 대화형 Advertising Bureau Transparency &amp; Consent Framework, 버전 2.0(IAB TCF 2.0)을 Adobe Experience Platform Web SDK와 통합하는 방법을 보여줍니다. IAB TCF 2.0과 통합에 대한 개요를 보려면 [개요](./overview.md)를 읽어 보십시오. 태그와 통합하는 방법에 대한 안내서는 [태그에 대한 IAB TCF 2.0 안내서](./with-tags.md)를 참조하십시오.
+이 안내서에서는 태그를 사용하지 않고 대화형 Advertising Bureau Transparency &amp; Consent Framework, 버전 2.0(IAB TCF 2.0)을 Adobe Experience Platform Web SDK과 통합하는 방법을 보여줍니다. IAB TCF 2.0과 통합에 대한 개요를 보려면 [개요](./overview.md)를 읽어 보십시오. 태그와 통합하는 방법에 대한 안내서는 [태그에 대한 IAB TCF 2.0 안내서](./with-tags.md)를 참조하십시오.
 
 ## 시작하기
 
@@ -22,9 +22,9 @@ ht-degree: 0%
 >
 >이 예제에서는 코드가 실행될 때까지 페이지에 `window.__tcfapi`이(가) 정의되어 있다고 가정합니다. CMP는 `__tcfapi` 개체가 준비되었을 때 이러한 함수를 실행할 수 있는 후크를 제공할 수 있습니다.
 
-태그 및 Adobe Experience Platform 웹 SDK 확장과 함께 IAB TCF 2.0을 사용하려면 사용 가능한 XDM 스키마가 있어야 합니다. 이러한 설정을 하지 않은 경우 계속 진행하기 전에 이 페이지를 보는 것부터 시작하십시오.
+태그 및 Adobe Experience Platform Web SDK 확장과 함께 IAB TCF 2.0을 사용하려면 XDM 스키마를 사용할 수 있어야 합니다. 이러한 설정을 하지 않은 경우 계속 진행하기 전에 이 페이지를 보는 것부터 시작하십시오.
 
-또한 이 안내서를 사용하려면 Adobe Experience Platform Web SDK에 대한 작업 이해 권한이 필요합니다. 빠른 새로 고침은 [Adobe Experience Platform Web SDK 개요](../../home.md) 및 [자주 묻는 질문](../../faq.md) 설명서를 참조하십시오.
+또한 이 안내서를 사용하려면 Adobe Experience Platform Web SDK에 대한 작업 이해도가 있어야 합니다. 빠른 새로 고침은 [Adobe Experience Platform Web SDK 개요](../../home.md) 및 [자주 묻는 질문](../../faq.md) 설명서를 참조하십시오.
 
 ## 기본 동의 활성화
 
@@ -106,4 +106,4 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 
 ## 다음 단계
 
-Platform Web SDK 확장과 함께 IAB TCF 2.0을 사용하는 방법에 대해 배웠으므로 Adobe Analytics 또는 Adobe Real-time Customer Data Platform과 같은 다른 Adobe 솔루션과 통합하도록 선택할 수도 있습니다. 자세한 내용은 [IAB Transparency &amp; Consent Framework 2.0 개요](./overview.md)를 참조하십시오.
+Experience Platform Web SDK 확장 기능과 함께 IAB TCF 2.0을 사용하는 방법에 대해 배웠으므로 Adobe Analytics 또는 Adobe Real-Time Customer Data Platform과 같은 다른 Adobe 솔루션과 통합하도록 선택할 수도 있습니다. 자세한 내용은 [IAB Transparency &amp; Consent Framework 2.0 개요](./overview.md)를 참조하십시오.

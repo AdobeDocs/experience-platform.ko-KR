@@ -4,18 +4,18 @@ solution: Experience Platform
 title: 데이터 수집 알림
 description: 수집 프로세스 모니터링을 지원하기 위해 Adobe Experience Platform에서는 프로세스의 각 단계에서 게시되는 이벤트 세트를 구독하여 수집된 데이터의 상태와 가능한 오류를 알릴 수 있습니다.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '651'
 ht-degree: 1%
 
 ---
 
 # 데이터 수집 알림
 
-Adobe Experience Platform으로 데이터를 수집하는 프로세스는 여러 단계로 구성됩니다. [!DNL Platform]에 수집해야 하는 데이터 파일을 식별하면 수집 프로세스가 시작되고 데이터가 성공적으로 수집되거나 실패할 때까지 각 단계가 연속적으로 발생합니다. [Adobe Experience Platform 일괄 처리 수집 API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)를 사용하거나 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 수집 프로세스를 시작할 수 있습니다.
+Adobe Experience Platform으로 데이터를 수집하는 프로세스는 여러 단계로 구성됩니다. [!DNL Experience Platform]에 수집해야 하는 데이터 파일을 식별하면 수집 프로세스가 시작되고 데이터가 성공적으로 수집되거나 실패할 때까지 각 단계가 연속적으로 발생합니다. [Adobe Experience Platform 일괄 처리 수집 API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)를 사용하거나 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 수집 프로세스를 시작할 수 있습니다.
 
-[!DNL Platform]에 로드된 데이터는 해당 대상, [!DNL Data Lake] 또는 [!DNL Real-Time Customer Profile] 데이터 저장소에 도달하려면 여러 단계를 거쳐야 합니다. 각 단계에는 데이터를 처리하고, 데이터의 유효성을 검사한 다음, 데이터를 다음 단계로 전달하기 전에 저장하는 작업이 포함됩니다. 수집하는 데이터의 양에 따라 시간이 오래 걸리는 프로세스가 될 수 있으며 유효성 검사, 의미 체계 또는 처리 오류로 인해 프로세스가 실패할 가능성이 항상 있습니다. 장애가 발생하면 데이터 문제를 해결한 다음 수정된 데이터 파일을 사용하여 전체 수집 프로세스를 다시 시작해야 합니다.
+[!DNL Experience Platform]에 로드된 데이터는 해당 대상, [!DNL Data Lake] 또는 [!DNL Real-Time Customer Profile] 데이터 저장소에 도달하려면 여러 단계를 거쳐야 합니다. 각 단계에는 데이터를 처리하고, 데이터의 유효성을 검사한 다음, 데이터를 다음 단계로 전달하기 전에 저장하는 작업이 포함됩니다. 수집하는 데이터의 양에 따라 시간이 오래 걸리는 프로세스가 될 수 있으며 유효성 검사, 의미 체계 또는 처리 오류로 인해 프로세스가 실패할 가능성이 항상 있습니다. 장애가 발생하면 데이터 문제를 해결한 다음 수정된 데이터 파일을 사용하여 전체 수집 프로세스를 다시 시작해야 합니다.
 
 수집 프로세스를 모니터링하기 위해 [!DNL Experience Platform]을(를) 사용하면 프로세스의 각 단계에서 게시되는 이벤트 집합을 구독하여 수집된 데이터의 상태와 가능한 오류를 알릴 수 있습니다.
 
@@ -71,7 +71,7 @@ Webhook을 성공적으로 등록하고 새 데이터를 수집하면 이벤트 
 
 ## 다음 단계
 
-프로젝트에 [!DNL Platform]개의 알림을 등록하면 [!UICONTROL 프로젝트 개요]에서 받은 이벤트를 볼 수 있습니다. 이벤트를 추적하는 방법에 대한 자세한 지침은 [Adobe I/O 이벤트 추적](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)에 대한 안내서를 참조하세요.
+프로젝트에 [!DNL Experience Platform]개의 알림을 등록하면 [!UICONTROL 프로젝트 개요]에서 받은 이벤트를 볼 수 있습니다. 이벤트를 추적하는 방법에 대한 자세한 지침은 [Adobe I/O Events 추적](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)에 대한 안내서를 참조하세요.
 
 ## 부록
 
@@ -81,7 +81,7 @@ Webhook을 성공적으로 등록하고 새 데이터를 수집하면 이벤트 
 
 다음 표에는 가입할 수 있는 사용 가능한 데이터 수집 상태 알림이 나열되어 있습니다.
 
-| 이벤트 코드 | 플랫폼 서비스 | 상태 | 이벤트 설명 |
+| 이벤트 코드 | Experience Platform 서비스 | 상태 | 이벤트 설명 |
 | --- | ---------------- | ------ | ----------------- |
 | `ing_load_success` | [!DNL Data Ingestion] | 성공 | 배치가 [!DNL Data Lake] 내의 데이터 세트로 수집되었습니다. |
 | `ing_load_failure` | [!DNL Data Ingestion] | 실패 | 일괄 처리를 [!DNL Data Lake] 내의 데이터 세트로 수집하지 못했습니다. |

@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;홈;인기 항목;정책 적용;자동 적용;API 기반 적용;데이터 거버넌스;테스트
+keywords: Experience Platform;홈;자주 찾는 항목;정책 적용;자동 적용;API 기반 적용;데이터 거버넌스;테스트
 solution: Experience Platform
 title: 정책 서비스 API를 사용하여 데이터 사용 정책 시행
 type: Tutorial
 description: 데이터에 대한 데이터 사용 레이블을 만들고 이러한 레이블에 대한 마케팅 작업에 대한 사용 정책을 만들었으면, Policy Service API 를 사용하여 데이터 세트 또는 임의의 레이블 그룹에 대해 수행된 마케팅 작업이 정책 위반을 구성하는지 여부를 평가할 수 있습니다. 그런 다음 API 응답을 기반으로 정책 위반을 처리하도록 자체 내부 프로토콜을 설정할 수 있습니다.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '999'
 ht-degree: 1%
 
 ---
@@ -26,10 +26,10 @@ ht-degree: 1%
 
 이 자습서에서는 데이터 사용 정책을 적용하는 데 관련된 다음 주요 개념을 이해해야 합니다.
 
-* [데이터 거버넌스](../home.md): [!DNL Platform]에서 데이터 사용 규정 준수를 적용하는 프레임워크입니다.
+* [데이터 거버넌스](../home.md): [!DNL Experience Platform]에서 데이터 사용 규정 준수를 적용하는 프레임워크입니다.
    * [데이터 사용 레이블](../labels/overview.md): 데이터 사용 레이블은 데이터 세트(및/또는 해당 데이터 세트 내의 개별 필드)에 적용되며, 데이터 사용 방법에 대한 제한을 지정합니다.
    * [데이터 사용 정책](../policies/overview.md): 데이터 사용 정책은 특정 데이터 사용 레이블 집합에 대해 허용되거나 제한되는 마케팅 작업 종류를 설명하는 규칙입니다.
-* [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 이 자습서를 시작하기 전에 필수 헤더와 예제 API 호출을 읽는 방법을 포함하여 [!DNL Policy Service] API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보는 [개발자 안내서](../api/getting-started.md)를 검토하십시오.
 
@@ -376,4 +376,4 @@ curl -X POST \
 
 이 문서를 읽고 데이터 세트 또는 데이터 사용 레이블 세트에 대한 마케팅 작업을 수행할 때 정책 위반을 성공적으로 확인했습니다. API 응답에서 반환된 데이터를 사용하여 경험 애플리케이션 내에 프로토콜을 설정하여 정책 위반이 발생할 때 적절하게 적용할 수 있습니다.
 
-Platform에서 활성화된 세그먼트에 자동으로 정책 적용을 제공하는 방법에 대한 자세한 내용은 [자동 적용](./auto-enforcement.md)에 대한 안내서를 참조하십시오.
+Experience Platform에서 활성화된 세그먼트에 자동으로 정책 적용을 제공하는 방법에 대한 자세한 내용은 [자동 적용](./auto-enforcement.md)에 대한 안내서를 참조하십시오.

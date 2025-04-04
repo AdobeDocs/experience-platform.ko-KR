@@ -2,9 +2,9 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 기존 대상 구성을 삭제하는 데 사용되는 API 호출을 구현합니다.
 title: 대상 구성 삭제
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '280'
 ht-degree: 1%
 
 ---
@@ -58,11 +58,11 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 ## API 오류 처리 {#error-handling}
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 Destination SDK `/authoring/destinations` API 끝점을 통해 기존 대상 구성을 삭제하는 방법을 알 수 있습니다.
+이제 이 문서를 읽고 Destination SDK `/authoring/destinations` API 끝점을 통해 기존 대상 구성을 삭제하는 방법을 알 수 있습니다.
 
 이 끝점으로 수행할 수 있는 작업에 대한 자세한 내용은 다음 문서를 참조하십시오.
 

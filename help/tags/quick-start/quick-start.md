@@ -2,9 +2,9 @@
 title: 빠른 시작 안내서
 description: Adobe Experience Platform에서 태그를 빠르게 시작하고 실행하는 방법에 대해 알아봅니다.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8c881d99554a8694da79bdc29ad30ebbc870db20
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1522'
 ht-degree: 44%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 44%
 
 ## 2. 로그인
 
-Adobe ID에 태그 권한이 추가되면 Experience Platform UI 또는 데이터 수집 UI에 로그인해야 합니다. 이렇게 하려면 [Experience Cloud 로그인 화면](https://experience.adobe.com/)(으)로 직접 이동한 다음 **[!UICONTROL 데이터 수집]** 또는 **[!UICONTROL Experience Platform]**&#x200B;을(를) 선택하면 됩니다.
+Adobe ID에 태그 권한이 추가되면 Experience Platform UI 또는 데이터 수집 UI에 로그인해야 합니다. 이렇게 하려면 [Experience Cloud 로그인 화면](https://experience.adobe.com/)&#x200B;(으)로 직접 이동한 다음 **[!UICONTROL 데이터 수집]** 또는 **[!UICONTROL Experience Platform]**&#x200B;을(를) 선택하면 됩니다.
 
 >[!NOTE]
 >
@@ -51,11 +51,11 @@ UI에 로그인하면 맨 먼저 속성을 만듭니다. 속성은 사이트에 
 
 ## 4. 확장 설치
 
-확장은 Adobe 또는 Adobe 파트너가 빌드한 통합으로, 사용자가 자신의 사이트에 배포할 수 있는 태그에 대한 새로운 옵션과 무제한 옵션을 추가합니다. 태그를 운영 체제라고 생각하면 확장은 사용자가 설치하는 앱으로, 태그가 수행해야 하는 특정 작업을 수행합니다.
+확장은 Adobe 또는 Adobe 파트너가 빌드한 통합으로, 사용자가 자신의 사이트에 배포할 수 있는 태그에 대한 새롭고 무한한 옵션을 추가합니다. 태그를 운영 체제라고 생각하면 확장은 사용자가 설치하는 앱으로, 태그가 수행해야 하는 특정 작업을 수행합니다.
 
-새 속성은 모두 [코어 확장](../extensions/client/core/overview.md)을 설치하면 제공됩니다. 모바일 속성은 추가 확장으로 제공됩니다. 코어 확장은 데이터 계층에 강력한 기본 데이터 요소 유형 세트를 제공하고 규칙에 이벤트 유형을 제공하기 위해 Adobe에 의해 구축됩니다. 수행하려는 대부분의 작업(ECID 가져오기, [!DNL Adobe Analytics] 비콘 보내기, [!DNL Target] 글로벌 mbox 로드 등)은 카탈로그에서 설치하는 확장에서 가져옵니다.
+새 속성은 모두 [코어 확장](../extensions/client/core/overview.md)을 설치하면 제공됩니다. 모바일 속성은 추가 확장으로 제공됩니다. 코어 확장은 데이터 계층에 강력한 기본 데이터 요소 유형 세트를 제공하고 규칙에 이벤트 유형을 제공하기 위해 Adobe에서 빌드합니다. 수행하려는 대부분의 작업(ECID 가져오기, [!DNL Adobe Analytics] 비콘 보내기, [!DNL Target] 글로벌 mbox 로드 등)은 카탈로그에서 설치하는 확장에서 가져옵니다.
 
-Platform의 태그가 진정으로 고유한 이유는 이러한 확장을 누구나 구축할 수 있다는 것입니다. 사이트에서 Facebook 리마케팅 픽셀을 삭제해야 합니까? Facebook에서 작성한 확장을 확인합니다. Twitter나 LinkedIn에 대해 동일하게 하시겠습니까? 그러한 확장을 사용합니다. 설문 조사를 실행해야 합니까? Question Pro 또는 Foresee를 참조하십시오. [!DNL GDPR]을(를) 지원하기 위해 최종 사용자의 개인 정보를 관리하고 동의를 받아야 합니까? Evidon 및 Trust Arc를 살펴보십시오. 사이트에서 개별 사용자의 행동에 대한 세부적인 통찰력을 보시겠습니까? Clicktale을 살펴보십시오. 자세한 내용은 [새 확장 추가](../ui/managing-resources/extensions/overview.md#add-a-new-extension)에 대한 섹션을 참조하십시오.
+Experience Platform의 태그를 고유하게 만드는 것은 이러한 확장을 누구나 구축할 수 있다는 것입니다. 사이트에서 Facebook 리마케팅 픽셀을 삭제해야 합니까? Facebook에서 작성한 확장을 확인합니다. Twitter나 LinkedIn에 대해 동일하게 하시겠습니까? 그러한 확장을 사용합니다. 설문 조사를 실행해야 합니까? Question Pro 또는 Foresee를 참조하십시오. [!DNL GDPR]을(를) 지원하기 위해 최종 사용자의 개인 정보를 관리하고 동의를 받아야 합니까? Evidon 및 Trust Arc를 살펴보십시오. 세분화된 insight을 통해 사이트에서 개별 사용자의 행동을 보시겠습니까? Clicktale을 살펴보십시오. 자세한 내용은 [새 확장 추가](../ui/managing-resources/extensions/overview.md#add-a-new-extension)에 대한 섹션을 참조하십시오.
 
 ## 5. 데이터 요소 및 규칙 만들기
 
@@ -136,4 +136,4 @@ Platform의 태그가 진정으로 고유한 이유는 이러한 확장을 누�
 
 * **[데이터 수집 커뮤니티](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: 질문 및 답변하고, 아이디어를 제출하고, 다른 사람의 아이디어를 투표할 수 있습니다. Adobe ID으로 로그인합니다.
 * **[개발자 문서](../api/overview.md)**: 태그 개발자 커뮤니티에 참여하여 확장을 빌드하거나 태그 API를 사용합니다
-* **[Tutorials 개요](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**: 이 문서에서는 Android 앱의 이벤트 전달 및 Mobile SDK을 포함한 태그 개념을 소개합니다.
+* **[자습서 개요](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**: 이 문서에서는 Android 앱의 이벤트 전달 및 모바일 SDK을 포함한 태그 개념을 소개합니다.

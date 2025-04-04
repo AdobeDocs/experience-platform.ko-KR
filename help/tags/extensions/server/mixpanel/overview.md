@@ -4,9 +4,9 @@ title: Mixpanel 추적 이벤트 API 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장은 Edge Network 이벤트를 Mixpanel로 보냅니다.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '893'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 사용 사례
 
-[!DNL Mixpanel]에 있는 Edge Network의 데이터를 사용하여 제품 분석 기능을 이용하려면 이 확장을 사용해야 합니다.
+[!DNL Mixpanel]의 Edge Network 데이터를 사용하여 제품 분석 기능을 이용하려면 이 확장을 사용해야 합니다.
 
 예를 들어, 다중 채널 존재(웹 사이트 및 모바일)가 있는 소매 조직을 고려해 보십시오. 조직은 트랜잭션 또는 대화 입력을 해당 플랫폼에서 이벤트 데이터로 캡처하고 이벤트 전달 확장을 사용하여 [!DNL Mixpanel]에 로드합니다.
 
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 ## [!DNL Mixpanel]개 필수 구성 요소 {#prerequisites-mixpanel}
 
-이 확장을 사용하려면 올바른 [!DNL Mixpanel] 계정이 있어야 합니다. 아직 계정이 없는 경우 [[!DNL Mixpanel] 등록 페이지](https://mixpanel.com/register/)(으)로 이동하여 등록하고 계정을 만드십시오.
+이 확장을 사용하려면 올바른 [!DNL Mixpanel] 계정이 있어야 합니다. 아직 계정이 없는 경우 [[!DNL Mixpanel] 등록 페이지](https://mixpanel.com/register/)&#x200B;(으)로 이동하여 등록하고 계정을 만드십시오.
 
 프로젝트에 대해 [[!DNL Identity Merge]](https://help.mixpanel.com/hc/en-us/articles/9648680824852-ID-Merge-Implementation-Best-Practices) 설정이 활성화되어 있는지 확인하십시오. **[!DNL Settings]** > **[!DNL Project Setting]** > **[!DNL Identity Merge]**(으)로 이동하여 설정을 전환합니다.
 
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 [!DNL Mixpanel]은(는) 다음 두 가지 방법을 통해 ID 클러스터를 확인합니다.
 
-* **식별** : [!DNL Mixpanel]은(는) 선택한 식별자를 익명 `distinct_id`에 연결합니다. 웹 사이트에서 [!DNL Mixpanel] SDK를 사용하도록 설정한 경우 Platform은 현재 로그인한 사용자에게 할당된 `distinct_id`을(를) 사용합니다.
+* **식별** : [!DNL Mixpanel]은(는) 선택한 식별자를 익명 `distinct_id`에 연결합니다. 웹 사이트에서 [!DNL Mixpanel] SDK이 활성화되어 있으면 Experience Platform은 현재 로그인한 사용자에게 할당된 `distinct_id`을(를) 사용합니다.
 * **별칭**: [!DNL Mixpanel]은(는) 추가 병합 기준이 충족되는 경우 익명이 아닌 두 개의 `distinct id`을(를) 결합합니다.
 
 >[!NOTE]
@@ -74,7 +74,7 @@ Experience Platform을 [!DNL Mixpanel]에 연결하려면 다음 입력이 있�
 
 ## [!DNL Send Event] 규칙 만들기
 
-이벤트 전달 속성에서 새 규칙 만들기를 시작합니다. **[!UICONTROL 작업]**&#x200B;에서 새 작업을 추가하고 확장을 **[!UICONTROL Mixpanel]**(으)로 설정합니다. 그런 다음 작업 유형을 **[!UICONTROL 이벤트 추적]**(으)로 설정하여 Edge Network 이벤트를 [!DNL Mixpanel](으)로 보냅니다.
+이벤트 전달 속성에서 새 규칙 만들기를 시작합니다. **[!UICONTROL 작업]**&#x200B;에서 새 작업을 추가하고 확장을 **[!UICONTROL Mixpanel]**(으)로 설정합니다. 그런 다음 작업 유형을 **[!UICONTROL 이벤트 추적]**(으)로 설정하여 Edge Network 이벤트를 [!DNL Mixpanel]&#x200B;(으)로 보냅니다.
 
 | 입력 | 설명 | 필수 여부 |
 | --- | --- | --- |
@@ -95,7 +95,7 @@ Experience Platform을 [!DNL Mixpanel]에 연결하려면 다음 입력이 있�
 
 >[!IMPORTANT]
 >
->웹 사이트에서 [!DNL Mixpanel] SDK를 사용하는 경우 [내에서 데이터 유효성 검사 [!DNL Mixpanel]](#validate)의 다음 단계를 계속할 수 있습니다. [!DNL Mixpanel] SDK를 사용하지 않는 경우 사용자 식별 이벤트가 발생할 때 적절한 이벤트와 `distinct_id` 값이 [!DNL Mixpanel](으)로 전송되도록 하려면 [별도의 ID 추적 규칙을 만들기](#create-an-identity-tracking-rule)해야 합니다.
+>웹 사이트에서 [!DNL Mixpanel] SDK을 사용하는 경우 [내 데이터 유효성 검사 [!DNL Mixpanel]](#validate)의 다음 단계를 계속할 수 있습니다. [!DNL Mixpanel] SDK을 사용하지 않는 경우 사용자 식별 이벤트가 발생할 때 적절한 이벤트와 `distinct_id` 값이 [!DNL Mixpanel]에 전송되도록 하려면 [별도의 ID 추적 규칙을 만들기](#create-an-identity-tracking-rule)해야 합니다.
 
 ## [!DNL Mixpanel] 내의 데이터 유효성 검사 {#validate}
 

@@ -2,9 +2,9 @@
 title: ID 그래프 뷰어
 description: ID 그래프는 특정 고객에 대한 서로 다른 ID 간의 관계 맵으로, 고객이 다양한 채널에서 브랜드와 상호 작용하는 방식을 시각적으로 보여 줍니다.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1407'
 ht-degree: 6%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 6%
 
 ID 그래프는 특정 고객에 대한 서로 다른 ID 간의 관계 맵으로, 고객이 다양한 채널에서 브랜드와 상호 작용하는 방식을 시각적으로 보여 줍니다. 모든 고객 신원 그래프는 고객 활동에 반응하여 거의 실시간으로 Adobe Experience Platform Identity Service를 통해 통합 관리, 업데이트됩니다.
 
-Platform 사용자 인터페이스의 ID 그래프 뷰어를 통해 서로 결합된 고객 ID와 방식을 시각화하고 더 잘 이해할 수 있습니다. 뷰어에서는 그래프의 여러 부분을 드래그하는 방식으로 상호 작용할 수 있습니다. 이를 통해 신원 간 복잡한 관계를 살펴보고 디버깅의 효율을 높이며, 정보 활용 방식을 보다 투명하게 확인하는 이점을 누릴 수 있습니다.
+Experience Platform 사용자 인터페이스의 ID 그래프 뷰어를 사용하면 어떤 고객 ID가 결합되어 있는지 시각화하고 더 잘 이해할 수 있습니다. 뷰어에서는 그래프의 여러 부분을 드래그하는 방식으로 상호 작용할 수 있습니다. 이를 통해 ID 간 복잡한 관계를 살펴보고 디버깅의 효율을 높이며, 정보 활용 방식을 보다 투명하게 확인하는 이점을 누릴 수 있습니다.
 
-다음 문서에서는 Platform UI에서 ID 그래프 뷰어에 액세스하고 사용하는 방법에 대한 단계를 제공합니다.
+다음 문서에서는 Experience Platform UI에서 ID 그래프 뷰어에 액세스하고 사용하는 방법에 대한 단계를 제공합니다.
 
 ## 튜토리얼 비디오
 
@@ -38,7 +38,7 @@ ID 그래프 뷰어를 사용하여 작업하려면 관련된 다양한 Adobe Ex
 
 ## ID 그래프 뷰어 액세스 {#access-identity-graph-viewer}
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL ID]**&#x200B;를 선택한 다음 헤더의 탭 목록에서 **[!UICONTROL ID 그래프]**&#x200B;를 선택합니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL ID]**&#x200B;를 선택한 다음 헤더의 탭 목록에서 **[!UICONTROL ID 그래프]**&#x200B;를 선택합니다.
 
 ![ID 그래프 탭이 선택된 Experience Platform UI의 ID 작업 영역](../images/graph-viewer/identity-graph.png)
 
@@ -135,11 +135,11 @@ ID 그래프 뷰어에 액세스할 때 오류가 발생할 수 있습니다. �
 
 ## 다음 단계
 
-이 문서를 읽고 Platform UI에서 고객의 ID 그래프를 살펴보는 방법에 대해 알아보았습니다. 플랫폼의 ID에 대한 자세한 내용은 [ID 서비스 개요](../home.md)를 참조하십시오.
+이 문서를 검토하여 Experience Platform UI에서 고객의 ID 그래프를 살펴보는 방법에 대해 알아보았습니다. Experience Platform의 ID에 대한 자세한 내용은 [ID 서비스 개요](../home.md)를 참조하세요.
 
 ## 변경 로그
 
-| 날짜 | 작업 |
+| 일자 | 작업 |
 | ---- | ------ |
 | 2021-01 | <ul><li>수집된 데이터 스트리밍 및 비프로덕션 샌드박스에 대한 지원이 추가되었습니다.</li><li>사소한 버그가 수정되었습니다.</li></ul> |
 | 2021-02 | <ul><li>ID 그래프 뷰어는 데이터 세트 미리보기를 통해 액세스할 수 있습니다.</li><li>사소한 버그가 수정되었습니다.</li><li>ID 그래프 뷰어는 일반적으로 사용할 수 있습니다.</li></ul> |

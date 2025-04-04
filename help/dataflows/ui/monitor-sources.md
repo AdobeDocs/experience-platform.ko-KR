@@ -2,9 +2,9 @@
 description: 모니터링 대시보드를 사용하여 소스에서 수집된 데이터를 모니터링하는 방법에 대해 알아봅니다.
 title: UI에서 소스에 대한 데이터 흐름 모니터링
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 9d9ae58997ec1c23af2a9124321fdfd9f03b7c4e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1323'
 ht-degree: 11%
 
 ---
@@ -15,18 +15,18 @@ ht-degree: 11%
 >
 >[HTTP API 원본](../../sources/connectors/streaming/http.md)과 같은 스트리밍 원본은 현재 모니터링 대시보드에서 지원되지 않습니다. 현재는 대시보드만 사용하여 배치 소스를 모니터링할 수 있습니다.
 
-모니터링 대시보드를 사용하여 Experience Platform UI에서 소스 데이터 흐름을 모니터링하는 방법을 알아보려면 이 문서 를 참조하십시오.
+모니터링 대시보드를 사용하여 Experience Platform UI에서 소스 데이터 흐름을 모니터링하는 방법을 배우려면 이 문서를 참조하십시오.
 
 ## 시작하기 {#get-started}
 
 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [데이터 흐름](../home.md): 데이터 흐름은 플랫폼 간에 데이터를 이동하는 데이터 작업을 나타냅니다. 데이터 흐름은 여러 서비스에 걸쳐 구성되어 있으므로 데이터를 소스 커넥터에서 대상 데이터 세트로, [!DNL Identity] 및 [!DNL Profile], [!DNL Destinations](으)로 이동하는 데 도움이 됩니다.
+* [데이터 흐름](../home.md): 데이터 흐름은 Experience Platform에서 데이터를 이동하는 데이터 작업을 나타냅니다. 데이터 흐름은 여러 서비스에 걸쳐 구성되어 있으므로 데이터를 소스 커넥터에서 대상 데이터 세트로, [!DNL Identity] 및 [!DNL Profile], [!DNL Destinations]&#x200B;(으)로 이동하는 데 도움이 됩니다.
    * [데이터 흐름 실행](../../sources/notifications.md): 데이터 흐름 실행은 선택한 데이터 흐름의 빈도 구성에 따라 반복되는 예약된 작업입니다.
-* [소스](../../sources/home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [소스](../../sources/home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
 * [ID 서비스](../../identity-service/home.md): 장치 및 시스템 간에 ID를 연결하여 개별 고객 및 개별 고객의 행동을 더 잘 볼 수 있습니다.
 * [실시간 고객 프로필](../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합된 실시간 고객 프로필을 제공합니다.
-* [샌드박스](../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [샌드박스](../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 ## 모니터링 대시보드를 사용하여 소스 데이터 모니터링
 
@@ -42,7 +42,7 @@ ht-degree: 11%
 >abstract="소스 처리에는 레코드 수집과 레코드 실패 등 데이터 레이크 서비스의 데이터 활동 상태와 지표에 대한 정보가 포함됩니다. 지표와 그래프에 대해 자세한 내용은 지표 정의 안내서를 검토하십시오."
 >text="Learn more in documentation"
 
-<!-- In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+<!-- In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
 
 At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
 
@@ -64,7 +64,7 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 | --- | --- |
 | 레코드 수신됨 | 주어진 소스에서 받은 총 레코드 수입니다. |
 | 레코드 수집됨 | 데이터 레이크에 수집된 총 레코드 수입니다. |
-| 건너뛴 레코드 | 건너뛴 총 레코드 수입니다. 생략된 레코드는 수집에 필요하지 않아 생략된 필드를 나타냅니다. 예를 들어 부분 수집이 활성화된 소스 데이터 흐름을 생성하는 경우 허용 가능한 오류율 임계값을 구성할 수 있습니다. 수집 프로세스 중에 오류 임계값 내에 있는 한 ID 필드와 같이 필요하지 않은 필드의 레코드는 수집에서 건너뜁니다. |
+| 생략된 레코드 | 건너뛴 총 레코드 수입니다. 생략된 레코드는 수집에 필요하지 않아 생략된 필드를 나타냅니다. 예를 들어 부분 수집이 활성화된 소스 데이터 흐름을 생성하는 경우 허용 가능한 오류율 임계값을 구성할 수 있습니다. 수집 프로세스 중에 오류 임계값 내에 있는 한 ID 필드와 같이 필요하지 않은 필드의 레코드는 수집에서 건너뜁니다. |
 | 레코드 실패 | 오류로 인해 수집할 수 없는 총 레코드 수입니다. |
 | 수집 비율 | 받은 총 레코드 수를 기반으로 하여 수집된 레코드의 백분율입니다. |
 | 총 실패한 데이터 흐름 | 실패한 총 데이터 흐름 수입니다. |
@@ -118,7 +118,7 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 | 데이터 흐름 실행 종료 | 데이터 흐름 실행이 종료된 시점을 나타내는 타임스탬프입니다. |
 | 데이터 세트 | 데이터 흐름을 만드는 데 사용되는 데이터 세트입니다. |
 | 데이터 유형 | 데이터 흐름에 있었던 데이터의 유형입니다. |
-| 부분 수집 | 부분 일괄 처리 수집은 구성 가능한 특정 임계값까지 오류가 포함된 데이터를 수집하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Experience Platform으로 성공적으로 수집할 수 있으며 잘못된 데이터는 모두 잘못된 이유에 대한 정보로 별도로 배치됩니다. 데이터 흐름 생성 프로세스 중에 부분 수집을 활성화할 수 있습니다. |
+| 부분 수집 | 부분 일괄 처리 수집은 구성 가능한 특정 임계값까지 오류가 포함된 데이터를 수집하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Experience Platform에 성공적으로 수집할 수 있으며 잘못된 데이터는 모두 잘못된 이유에 대한 정보로 별도로 배치됩니다. 데이터 흐름 생성 프로세스 중에 부분 수집을 활성화할 수 있습니다. |
 | 오류 진단 | 오류 진단은 소스에서 데이터 세트 활동 및 데이터 흐름 상태를 모니터링할 때 나중에 참조할 수 있는 오류 진단을 생성하도록 지시합니다. 데이터 흐름 생성 프로세스 중에 오류 진단을 활성화할 수 있습니다. |
 | 오류 요약 | 데이터 흐름 실행이 실패한 경우 오류 요약에는 실행 반복이 실패한 이유를 요약하는 오류 코드와 설명이 표시됩니다. |
 

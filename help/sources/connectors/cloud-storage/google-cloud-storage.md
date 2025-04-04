@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google 클라우드 스토리지 Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Google Cloud Storage를 Adobe Experience Platform에 연결하는 방법에 대해 알아봅니다.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->이제 Amazon Web Services(AWS)에서 Adobe Experience Platform을 실행할 때 [!DNL Google Cloud Storage] 소스를 사용할 수 있습니다. 현재 AWS에서 실행 중인 Experience Platform은 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../landing/multi-cloud.md)를 참조하세요.
+>이제 Amazon Web Services(AWS)에서 Adobe Experience Platform을 실행할 때 [!DNL Google Cloud Storage] 소스를 사용할 수 있습니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../landing/multi-cloud.md)를 참조하세요.
 
 Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]과(와) 같은 클라우드 공급업체에 기본 연결을 제공하므로 이러한 시스템에서 데이터를 가져올 수 있습니다.
 
-클라우드 스토리지 소스는 다운로드, 포맷 또는 업로드 없이도 고유한 데이터를 플랫폼으로 가져올 수 있습니다. 수집된 데이터는 XDM(Experience 데이터 모델) 을 준수하는 JSON 또는 Parquet으로 포맷하거나 구분된 형식으로 포맷할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. 플랫폼을 사용하면 [!DNL Google Cloud Storage]에서 일괄 처리를 통해 데이터를 가져올 수 있습니다.
+클라우드 스토리지 소스는 다운로드, 포맷 또는 업로드 없이도 자신의 데이터를 Experience Platform으로 가져올 수 있습니다. 수집된 데이터는 XDM(Experience 데이터 모델) 을 준수하는 JSON 또는 Parquet으로 포맷하거나 구분된 형식으로 포맷할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. Experience Platform을 사용하면 일괄 처리를 통해 [!DNL Google Cloud Storage]에서 데이터를 가져올 수 있습니다.
 
 ## IP 주소 허용 목록
 
@@ -27,7 +27,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]�
 
 ## [!DNL Google Cloud Storage] 계정에 연결하기 위한 필수 구성 요소 설정
 
-플랫폼에 연결하려면 먼저 [!DNL Google Cloud Storage] 계정에 대해 상호 운용성을 사용하도록 설정해야 합니다. 상호 운용성 설정에 액세스하려면 [!DNL Google Cloud Platform]을(를) 열고 탐색 패널의 **[!UICONTROL 클라우드 저장소]** 옵션에서 **[!UICONTROL 설정]**&#x200B;을(를) 선택하십시오.
+Experience Platform에 연결하려면 먼저 [!DNL Google Cloud Storage] 계정에 대해 상호 운용성을 사용하도록 설정해야 합니다. 상호 운용성 설정에 액세스하려면 [!DNL Google Cloud Platform]을(를) 열고 탐색 패널의 **[!UICONTROL 클라우드 저장소]** 옵션에서 **[!UICONTROL 설정]**&#x200B;을(를) 선택하십시오.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
@@ -39,7 +39,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]�
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
-새로 생성된 액세스 키 ID 및 비밀 액세스 키를 사용하여 [!DNL Google Cloud Storage] 계정을 플랫폼에 연결할 수 있습니다.
+새로 생성된 액세스 키 ID 및 비밀 액세스 키를 사용하여 [!DNL Google Cloud Storage] 계정을 Experience Platform에 연결할 수 있습니다.
 
 자세한 내용은 [!DNL Google Cloud] 설명서에서 [서비스 계정 키 만들기 및 관리](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)에 대한 안내서를 참조하십시오.
 
@@ -54,9 +54,9 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]�
 - 잘못된 URL 경로 문자는 허용되지 않습니다. `\uE000` 같은 코드 포인트는 NTFS 파일 이름에서 사용할 수 있지만 올바른 유니코드 문자가 아닙니다. 또한 제어 문자(0x00 ~ 0x1F, \u0081 등)와 같은 일부 ASCII 또는 유니코드 문자도 사용할 수 없습니다. HTTP/1.1의 유니코드 문자열을 제어하는 규칙에 대해서는 [RFC 2616, 섹션 2.2: 기본 규칙](https://www.ietf.org/rfc/rfc2616.txt) 및 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)을 참조하십시오.
 - LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, 점 문자(.) 및 점 문자(..) 두 개를 사용할 수 없습니다.
 
-## [!DNL Google Cloud Storage]을(를) 플랫폼에 연결
+## Experience Platform에 [!DNL Google Cloud Storage] 연결
 
-아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Google Cloud Storage]을(를) 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Google Cloud Storage]을(를) Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
 
 ### API 사용
 

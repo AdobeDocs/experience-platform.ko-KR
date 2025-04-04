@@ -5,9 +5,9 @@ title: 스트리밍 수집 API를 사용하여 레코드 데이터 스트리밍
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 수집 서비스 API의 일부인 수집 API 스트리밍을 사용하는 데 도움이 됩니다.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1036'
 ht-degree: 2%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 2%
 
 이 자습서에서는 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Platform]에서 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Experience Platform]에서 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    - [스키마 레지스트리 개발자 안내서](../../xdm/api/getting-started.md): [!DNL Schema Registry] API의 사용 가능한 각 끝점과 해당 끝점을 호출하는 방법을 다루는 포괄적인 안내서입니다. 여기에는 이 자습서 전체의 호출에 표시되는 `{TENANT_ID}`에 대해 알고, 수집을 위한 데이터 세트를 만드는 데 사용되는 스키마를 만드는 방법에 대해 아는 것이 포함됩니다.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 원본에서 집계한 데이터를 기반으로 통합 소비자 프로필을 실시간으로 제공합니다.
 
-### Platform API 사용
+### Experience Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ## [!DNL XDM Individual Profile] 클래스를 기반으로 스키마 구성
 
@@ -247,7 +247,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 ## 스트리밍 연결로 레코드 데이터 수집 {#ingest-data}
 
-데이터 세트 및 스트리밍 연결을 통해 XDM 형식의 JSON 레코드를 수집하여 레코드 데이터를 [!DNL Platform](으)로 수집할 수 있습니다.
+데이터 세트 및 스트리밍 연결을 통해 XDM 형식의 JSON 레코드를 수집하여 레코드 데이터를 [!DNL Experience Platform]&#x200B;(으)로 수집할 수 있습니다.
 
 **API 형식**
 
@@ -264,7 +264,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 레코드 데이터를 스트리밍 연결로 수집하는 작업은 소스 이름을 사용하거나 사용하지 않고 수행할 수 있습니다.
 
-아래 예제 요청은 소스 이름이 누락된 레코드를 Platform으로 수집합니다. 레코드에 소스 이름이 없는 경우 스트리밍 연결 정의에서 소스 ID가 추가됩니다.
+아래 예제 요청은 소스 이름이 누락된 레코드를 Experience Platform으로 수집합니다. 레코드에 소스 이름이 없는 경우 스트리밍 연결 정의에서 소스 ID가 추가됩니다.
 
 >[!NOTE]
 >
@@ -346,7 +346,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 | 속성 | 설명 |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | 이전에 만든 스트리밍 연결의 ID입니다. |
-| `xactionId` | 방금 전송한 레코드에 대해 서버측에서 생성된 고유 식별자입니다. 이 ID는 Adobe이 다양한 시스템을 통해 디버깅을 사용하여 이 레코드의 라이프사이클을 추적하는 데 도움이 됩니다. |
+| `xactionId` | 방금 전송한 레코드에 대해 서버측에서 생성된 고유 식별자입니다. 이 ID는 Adobe이 다양한 시스템을 통해 디버깅을 통해 이 레코드의 라이프사이클을 추적하는 데 도움이 됩니다. |
 | `receivedTimeMs` | 요청이 수신된 시간을 보여 주는 타임스탬프(시간(밀리초 단위))입니다. |
 | `syncValidation.status` | 쿼리 매개 변수 `syncValidation=true`이(가) 추가되었으므로 이 값이 표시됩니다. 유효성 검사가 성공하면 상태는 `pass`이(가) 됩니다. |
 
@@ -374,7 +374,7 @@ GET /access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.c
 
 **요청**
 
-다음 GET 요청으로 이전에 수집된 레코드 데이터를 검토할 수 있습니다.
+다음 GET 요청을 사용하여 이전에 수집된 레코드 데이터를 검토할 수 있습니다.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\
@@ -435,6 +435,6 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 
 ## 다음 단계
 
-이 문서를 읽으면 스트리밍 연결을 사용하여 레코드 데이터를 [!DNL Platform](으)로 수집하는 방법을 이해할 수 있습니다. 다른 값으로 더 많은 호출을 하고 업데이트된 값을 검색해 볼 수 있습니다. 또한 [!DNL Platform] UI를 통해 수집된 데이터를 모니터링할 수 있습니다. 자세한 내용은 [데이터 수집 모니터링](../quality/monitor-data-ingestion.md) 안내서를 참조하십시오.
+이 문서를 읽으면 스트리밍 연결을 사용하여 레코드 데이터를 [!DNL Experience Platform]&#x200B;(으)로 수집하는 방법을 이해할 수 있습니다. 다른 값으로 더 많은 호출을 하고 업데이트된 값을 검색해 볼 수 있습니다. 또한 [!DNL Experience Platform] UI를 통해 수집된 데이터를 모니터링할 수 있습니다. 자세한 내용은 [데이터 수집 모니터링](../quality/monitor-data-ingestion.md) 안내서를 참조하십시오.
 
 일반적인 스트리밍 수집에 대한 자세한 내용은 [스트리밍 수집 개요](../streaming-ingestion/overview.md)를 참조하십시오.

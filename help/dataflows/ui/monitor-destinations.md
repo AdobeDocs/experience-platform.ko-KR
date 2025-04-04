@@ -4,16 +4,16 @@ solution: Experience Platform
 title: UI에서 대상에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3620'
-ht-degree: 9%
+source-wordcount: '3626'
+ht-degree: 10%
 
 ---
 
 # UI의 대상에 대한 데이터 흐름 모니터링
 
-Experience Platform 카탈로그의 다양한 대상을 사용하여 플랫폼에서 수많은 외부 파트너로 데이터를 활성화합니다. Platform은 데이터 흐름과 함께 투명성을 제공하여 대상으로의 데이터 흐름을 추적하는 프로세스를 간소화합니다.
+Experience Platform 카탈로그의 다양한 대상을 사용하여 Experience Platform에서 수많은 외부 파트너에게 데이터를 활성화합니다. Experience Platform은 데이터 흐름과 함께 투명성을 제공하여 대상으로의 데이터 흐름을 추적하는 프로세스를 보다 쉽게 만듭니다.
 
 모니터링 대시보드는 데이터가 활성화되고 있는 대상, 보고 있는 데이터 유형, 데이터 흐름 실행당 내보낸 데이터 등을 포함하여 데이터 흐름의 여정을 시각적으로 표시합니다.
 
@@ -23,14 +23,14 @@ Experience Platform 카탈로그의 다양한 대상을 사용하여 플랫폼�
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-- [데이터 흐름](../home.md): 데이터 흐름은 플랫폼 간에 데이터를 이동하는 데이터 작업을 나타냅니다. 데이터 흐름은 여러 서비스에 걸쳐 구성되어 있으므로 데이터를 소스 커넥터에서 대상 데이터 세트로, [!DNL Identity] 및 [!DNL Profile], [!DNL Destinations]&#x200B;(으)로 이동하는 데 도움이 됩니다.
+- [데이터 흐름](../home.md): 데이터 흐름은 Experience Platform에서 데이터를 이동하는 데이터 작업을 나타냅니다. 데이터 흐름은 여러 서비스에 걸쳐 구성되어 있으므로 데이터를 소스 커넥터에서 대상 데이터 세트로, [!DNL Identity] 및 [!DNL Profile], [!DNL Destinations]&#x200B;(으)로 이동하는 데 도움이 됩니다.
    - [데이터 흐름 실행](../../sources/notifications.md): 데이터 흐름 실행은 선택한 데이터 흐름의 빈도 구성에 따라 반복되는 예약된 작업입니다.
-- [대상](../../destinations/home.md): 대상은 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례를 위해 플랫폼에서 데이터를 원활하게 활성화할 수 있도록 일반적으로 사용되는 애플리케이션과의 사전 빌드된 통합입니다.
-- [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+- [대상](../../destinations/home.md): 대상은 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 다양한 사용 사례를 위해 Experience Platform의 데이터를 원활하게 활성화할 수 있도록 일반적으로 사용되는 애플리케이션과의 사전 빌드된 통합입니다.
+- [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 ## 대상 작업 영역에서 데이터 흐름 모니터링 {#monitor-dataflows-in-the-destinations-workspace}
 
-Platform UI의 **[!UICONTROL 대상]** 작업 영역에서 **[!UICONTROL 찾아보기]** 탭으로 이동하여 보려는 대상의 이름을 선택합니다.
+Experience Platform UI의 **[!UICONTROL 대상]** 작업 영역에서 **[!UICONTROL 찾아보기]** 탭으로 이동하여 보려는 대상의 이름을 선택합니다.
 
 ![대상 연결이 강조 표시된 대상 보기 선택](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -97,7 +97,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
   >[!IMPORTANT]
   >
-  > 2025년 3월부터 Adobe은 스트리밍 대상에 대한 보고 정확도를 높이기 위해 업데이트를 롤아웃합니다. 이 향상된 기능을 통해 Experience Platform의 보고와 대상 플랫폼 간의 정렬 성능이 향상되었습니다.
+  > Adobe는 2025년 3월부터 스트리밍 대상에 대한 보고 정확도를 높이기 위한 업데이트를 출시할 예정입니다. 이 향상된 기능을 통해 Experience Platform의 보고와 대상 플랫폼 간의 정렬 성능이 향상되었습니다.
   >
   > 이 업데이트 이전에는 **[!UICONTROL ID 실패]**&#x200B;에 모든 활성화 다시 시도가 포함되었습니다. 이 업데이트 후에는 마지막 활성화 재시도만 총 횟수에 포함됩니다.
   > 
@@ -349,4 +349,4 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 ## 다음 단계 {#next-steps}
 
-이 안내서를 따라 처리 시간, 활성화 비율 및 상태와 같은 모든 관련 정보를 포함하여 배치 및 스트리밍 대상에 대한 데이터 흐름을 모니터링하는 방법을 이해합니다. Platform의 데이터 흐름에 대한 자세한 내용은 [데이터 흐름 개요](../home.md)를 참조하십시오. 대상에 대해 자세히 알아보려면 [대상 개요](../../destinations/home.md)를 읽어 보세요.
+이 안내서를 따라 처리 시간, 활성화 비율 및 상태와 같은 모든 관련 정보를 포함하여 배치 및 스트리밍 대상에 대한 데이터 흐름을 모니터링하는 방법을 이해합니다. Experience Platform의 데이터 흐름에 대해 자세히 알아보려면 [데이터 흐름 개요](../home.md)를 읽어 보십시오. 대상에 대해 자세히 알아보려면 [대상 개요](../../destinations/home.md)를 읽어 보세요.

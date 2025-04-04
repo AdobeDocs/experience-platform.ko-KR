@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 정보;
+keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2285'
+source-wordcount: '2288'
 ht-degree: 5%
 
 ---
@@ -294,7 +294,7 @@ ht-degree: 5%
 - 이제 [`getIdentity`](/help/web-sdk/commands/getidentity.md) 명령이 ID와 함께 에지 영역 ID를 반환합니다.
 - 서버에서 받은 경고 및 오류가 개선되었으며 더 적절한 방식으로 처리됩니다.
 - [`setConsent`](/help/web-sdk/commands/setconsent.md) 명령에 대한 Adobe 동의 2.0 표준에 대한 지원이 추가되었습니다.
-- 동의 환경 설정이 수신되면 해시되어 CMP, Platform Web SDK 및 Platform Edge Network 간의 최적화된 통합을 위해 로컬 저장소에 저장됩니다. 동의 환경 설정을 수집하는 경우 이제 모든 페이지 로드 시 `setConsent`을(를) 호출하는 것이 좋습니다.
+- 동의 환경 설정이 수신되면 해시되어 CMP, Experience Platform Web SDK 및 Experience Platform Edge Network 간의 최적화된 통합을 위해 로컬 저장소에 저장됩니다. 동의 환경 설정을 수집하는 경우 이제 모든 페이지 로드 시 `setConsent`을(를) 호출하는 것이 좋습니다.
 - [모니터링 후크](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` 및 `onCommandRejected` 두 개가 추가되었습니다.
 - 버그 수정: Personalization 상호 작용 알림 이벤트에는 사용자가 새 단일 페이지 앱 보기로 이동했다가 원래 보기로 돌아간 후, 전환을 위해 자격을 갖춘 요소를 클릭할 때 동일한 활동에 대한 중복 정보가 포함됩니다.
 - 버그 수정: SDK에서 보낸 첫 번째 이벤트에 `documentUnloading`이(가) `true`(으)로 설정된 경우 [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon)이(가) 이벤트를 보내는 데 사용되므로 ID가 설정되지 않는 것과 관련된 오류가 발생합니다.

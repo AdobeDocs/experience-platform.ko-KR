@@ -3,9 +3,9 @@ title: 스트리밍 대상으로 대상 데이터 활성화
 type: Tutorial
 description: 스트리밍 대상에 매핑하여 Adobe Experience Platform에 있는 대상을 활성화하는 방법을 알아봅니다.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1189'
 ht-degree: 6%
 
 ---
@@ -52,8 +52,8 @@ ht-degree: 6%
 출처에 따라 여러 유형의 대상 중에서 선택할 수 있습니다.
 
 * **[!UICONTROL 세그먼테이션 서비스]**: 세그먼테이션 서비스에 의해 Experience Platform 내에서 생성된 대상입니다. 자세한 내용은 [세그먼테이션 설명서](../../segmentation/ui/overview.md)를 참조하세요.
-* **[!UICONTROL 사용자 지정 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드되는 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience)에 대한 설명서를 참조하십시오.
-* [!DNL Audience Manager]과(와) 같은 다른 Adobe 솔루션에서 가져온 다른 유형의 대상입니다.
+* **[!UICONTROL 사용자 지정 업로드]**: Experience Platform 외부에서 생성되어 Experience Platform에 CSV 파일로 업로드된 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience)에 대한 설명서를 참조하십시오.
+* 다른 Adobe 솔루션에서 가져온 다른 유형의 대상(예: [!DNL Audience Manager]).
 
 ![대상 선택 단계에서 강조 표시된 여러 대상.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
@@ -125,7 +125,7 @@ ht-degree: 6%
 
      ![매핑 ID 드롭다운이 강조 표시되었습니다.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
-   * 일부 대상을 사용하려면 [!DNL Platform] 대상을 대상 대상의 해당 대상에 수동으로 매핑해야 합니다. 이렇게 하려면 각 대상을 선택한 다음 **[!UICONTROL 매핑 ID]** 필드에 대상 플랫폼의 해당 대상 ID를 입력합니다. 대상에 이 필드가 포함되지 않은 경우 이 단계를 건너뜁니다.
+   * 일부 대상을 사용하려면 [!DNL Experience Platform] 대상을 대상 대상의 해당 대상에 수동으로 매핑해야 합니다. 이렇게 하려면 각 대상을 선택한 다음 **[!UICONTROL 매핑 ID]** 필드에 대상 플랫폼의 해당 대상 ID를 입력합니다. 대상에 이 필드가 포함되지 않은 경우 이 단계를 건너뜁니다.
 
      ![대상 원본 드롭다운이 강조 표시되었습니다.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 

@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침;제한;
+keywords: Experience Platform;identity;identity 서비스;문제 해결;보호 기능;지침;제한;
 title: ID 서비스 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1586'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 다음 Experience Platform 서비스는 ID 데이터 모델링과 관련되어 있습니다.
 
-* [ID](home.md): Bridge ID가 플랫폼에 수집될 때 서로 다른 데이터 소스의 ID입니다.
+* [ID](home.md): Bridge ID가 Experience Platform에 수집될 때 서로 다른 데이터 소스의 ID입니다.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): 여러 소스의 데이터를 사용하여 통합 소비자 프로필을 만듭니다.
 
 ## 데이터 모델 제한
@@ -60,7 +60,7 @@ ht-degree: 1%
 
 ## 성능 가드레일 {#performance-guardrails}
 
-ID 서비스는 들어오는 데이터를 지속적으로 모니터링하여 규모에 맞게 높은 성능과 안정성을 보장합니다. 그러나 경험 이벤트 데이터가 짧은 기간에 유입되면 성능 저하 및 지연 시간이 발생할 수 있습니다. Adobe은 이러한 성능 저하의 원인이 아닙니다.
+ID 서비스는 들어오는 데이터를 지속적으로 모니터링하여 규모에 맞게 높은 성능과 안정성을 보장합니다. 그러나 경험 이벤트 데이터가 짧은 기간에 유입되면 성능 저하 및 지연 시간이 발생할 수 있습니다. Adobe은 이러한 성능 저하에 대한 책임이 없습니다.
 
 ## 생산 능력의 ID 그래프가 업데이트될 때의 삭제 논리 이해 {#deletion-logic}
 
@@ -95,7 +95,7 @@ ID 서비스는 들어오는 데이터를 지속적으로 모니터링하여 규
 * 개인 식별자(예: CRMID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.
 * 쿠키/장치 식별자가 교차 장치 ID 유형으로 구성된 사용자 지정 네임스페이스입니다.
 
-이 기능을 사용할 수 있게 되면 50개 ID의 제한을 초과하는 그래프는 최대 50개 ID로 줄어듭니다. Real-Time CDP B2C Edition의 경우, 이전에 세분화 및 활성화에서 이들 프로필이 무시되었으므로 대상에 대해 자격을 부여하는 프로필 수가 최소한으로 증가할 수 있습니다.
+이 기능을 사용할 수 있게 되면 50개 ID의 제한을 초과하는 그래프는 최대 50개 ID로 줄어듭니다. Real-Time CDP B2C Edition의 경우, 이전에는 세분화 및 활성화에서 무시했던 프로필이므로 대상자에 적합한 프로필 수가 최소한으로 증가할 수 있습니다.
 
 #### 실시간 고객 프로필: 대응 가능 대상에 미치는 영향
 
@@ -200,6 +200,6 @@ Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보�
 
 * [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
 * 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams).
-* [Real-time Customer Data Platform(B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

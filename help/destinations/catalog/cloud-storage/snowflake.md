@@ -4,13 +4,13 @@ description: 비공개 목록을 사용하여 Snowflake 계정으로 데이터�
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 2893356e36fde4759ffe76e01296fcb8811ab8e7
+exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '676'
 ht-degree: 6%
 
 ---
-
 
 # Snowflake 연결 {#snowflake-destination}
 
@@ -99,7 +99,7 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 
 Snowflake 대상은 프로필 속성을 사용자 지정 속성에 매핑할 수 있도록 지원합니다.
 
-![Snowflake 대상에 대한 매핑 화면을 표시하는 Platform 사용자 인터페이스 이미지입니다.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Snowflake 대상에 대한 매핑 화면을 표시하는 Experience Platform 사용자 인터페이스 이미지입니다.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
 
 대상 특성은 **[!UICONTROL 특성 이름]** 필드에 입력한 특성 이름을 사용하여 Snowflake에서 자동으로 만들어집니다.
 

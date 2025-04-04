@@ -2,9 +2,9 @@
 description: 이 페이지에서는 /testing/destinationInstance API 끝점을 사용하여 테스트 결과에 대한 전체 세부 정보를 보는 방법에 대해 설명합니다. 이 API 끝점은 흐름 서비스 API를 사용하여 데이터 흐름을 모니터링할 때 얻는 것과 동일한 결과를 반환합니다.
 title: 자세한 활성화 결과 보기
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '547'
 ht-degree: 1%
 
 ---
@@ -32,8 +32,8 @@ ht-degree: 1%
 `/testing/destinationInstance` 끝점을 사용하기 전에 다음 조건을 충족하는지 확인하십시오.
 
 * Destination SDK을 통해 만든 기존 파일 기반 대상이 있으며 [대상 카탈로그](../../../ui/destinations-workspace.md)에서 볼 수 있습니다.
-* Experience Platform UI에서 대상에 대한 활성화 흐름을 하나 이상 만들었습니다.
-* API 요청을 성공적으로 수행하려면 테스트할 대상 인스턴스에 해당하는 대상 인스턴스 ID가 필요합니다. Platform UI에서 대상과의 연결을 검색할 때 API 호출에 사용해야 하는 대상 인스턴스 ID를 URL에서 가져옵니다.
+* Experience Platform UI에서 대상에 대한 활성화 플로우를 하나 이상 만들었습니다.
+* API 요청을 성공적으로 수행하려면 테스트할 대상 인스턴스에 해당하는 대상 인스턴스 ID가 필요합니다. Experience Platform UI에서 대상과의 연결을 검색할 때 API 호출에 사용해야 하는 대상 인스턴스 ID를 URL에서 가져옵니다.
 
   URL에서 대상 인스턴스 ID를 가져오는 방법을 보여 주는 ![UI 이미지.](../../assets/testing-api/get-destination-instance-id.png)
 * 이전에 [대상 구성을 테스트하고](file-based-destination-testing-api.md) `results` 속성이 포함된 올바른 API 응답을 받았습니다. 이 `results` 값을 사용하여 대상을 추가로 테스트합니다.
@@ -213,10 +213,10 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/testing/de
 
 ## API 오류 처리 {#api-error-handling}
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계
 
 이제 이 문서를 읽고 파일 기반 대상 구성을 테스트하고 활성화 결과에 대한 전체 세부 정보를 확인하는 방법을 알 수 있습니다.
 
-공개 대상을 만드는 경우 이제 [대상 구성을 제출](../../guides/submit-destination.md)하여 검토를 위해 Adobe에 액세스할 수 있습니다.
+공개 대상을 만드는 경우 이제 [대상 구성을 제출](../../guides/submit-destination.md)하여 검토할 수 있습니다. Adobe

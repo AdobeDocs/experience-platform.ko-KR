@@ -3,16 +3,16 @@ title: Mixpanel Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Mixpanel을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
 
 # [!DNL Mixpanel]
 
-Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 Experience Platform은 타사 분석 애플리케이션에서 데이터를 수집하는 기능을 지원합니다. 분석 공급자에 대한 지원에는 [!DNL Mixpanel]이(가) 포함됩니다.
 
@@ -26,7 +26,7 @@ Experience Platform은 타사 분석 애플리케이션에서 데이터를 수�
 
 ## [!DNL Mixpanel] 계정 인증
 
-이 섹션에서는 계정을 인증하고 [!DNL Mixpanel] 데이터를 플랫폼으로 가져오기 위해 완료해야 하는 필수 조건 단계에 대해 설명합니다.
+이 단원에서는 계정을 인증하고 [!DNL Mixpanel] 데이터를 Experience Platform으로 가져오기 위해 완료해야 하는 필수 조건 단계에 대해 설명합니다.
 
 [!DNL Mixpanel] 원본 연결 및 데이터 흐름을 만들려면 먼저 올바른 [!DNL Mixpanel] 계정이 있어야 합니다. 유효한 [!DNL Mixpanel] 계정이 없는 경우 [Mixpanel 등록](https://mixpanel.com/register/) 페이지에서 계정을 만드십시오.
 
@@ -42,17 +42,17 @@ Experience Platform은 타사 분석 애플리케이션에서 데이터를 수�
 
 ![Mixpanel 서비스 계정](../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png)
 
-마지막으로 [!DNL Mixpanel Event Export API]에 필요한 플랫폼 [스키마](../../../xdm/schema/composition.md)을(를) 만듭니다. 스키마에 필요한 매핑에 대한 자세한 내용은 [UI에서  [!DNL Mixpanel] 소스 연결 만들기](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources)에 대한 안내서를 참조하십시오.
+마지막으로 [!DNL Mixpanel Event Export API]에 필요한 Experience Platform [스키마](../../../xdm/schema/composition.md)을(를) 만듭니다. 스키마에 필요한 매핑에 대한 자세한 내용은 [UI에서  [!DNL Mixpanel] 소스 연결 만들기](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources)에 대한 안내서를 참조하십시오.
 
 ![스키마 만들기](../../images/tutorials/create/mixpanel-export-events/schema.png)
 
-## API를 사용하여 [!DNL Mixpanel]을(를) 플랫폼에 연결
+## API를 사용하여 [!DNL Mixpanel]을(를) Experience Platform에 연결
 
-아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Mixpanel]을(를) 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Mixpanel]을(를) Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
 
 * [흐름 서비스 API를 사용하여  [!DNL Mixpanel] 에 대한 소스 연결 및 데이터 흐름을 만듭니다.](../../tutorials/api/create/analytics/mixpanel.md)
 
-## UI를 사용하여 [!DNL Mixpanel]을(를) 플랫폼에 연결
+## UI를 사용하여 [!DNL Mixpanel]을(를) Experience Platform에 연결
 
 * [UI에서  [!DNL Mixpanel] 소스 연결 만들기](../../tutorials/ui/create/analytics/mixpanel.md)
 * [UI에서 고객 성공 소스 연결에 대한 데이터 흐름 만들기](../../tutorials/ui/dataflow/analytics.md)

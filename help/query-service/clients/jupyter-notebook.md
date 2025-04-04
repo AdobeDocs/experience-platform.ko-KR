@@ -2,9 +2,9 @@
 title: Jupyter Notebook을 쿼리 서비스에 연결
 description: Jupyter Notebook을 Adobe Experience Platform 쿼리 서비스와 연결하는 방법에 대해 알아봅니다.
 exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
-source-git-commit: 1af89160cbf5b689396921869fec6c30a5bcfff0
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '566'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 이 안내서를 사용하려면 [!DNL Jupyter Notebook]에 대한 액세스 권한이 있고 해당 인터페이스에 익숙해야 합니다. [!DNL Jupyter Notebook] 이상을 다운로드하려면 [공식 [!DNL Jupyter Notebook] 설명서](https://jupyter.org/)를 참조하세요.
 
-[!DNL Jupyter Notebook]을(를) Experience Platform에 연결하는 데 필요한 자격 증명을 획득하려면 Platform UI에서 [!UICONTROL 쿼리] 작업 영역에 액세스할 수 있어야 합니다. 현재 [!UICONTROL 쿼리] 작업 영역에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
+[!DNL Jupyter Notebook]을(를) Experience Platform에 연결하는 데 필요한 자격 증명을 획득하려면 Experience Platform UI에서 [!UICONTROL 쿼리] 작업 영역에 액세스할 수 있어야 합니다. 현재 [!UICONTROL 쿼리] 작업 영역에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
 
 >[!TIP]
 >
@@ -26,7 +26,7 @@ ht-degree: 0%
 >Anaconda Navigator 홈 화면의 지원되는 응용 프로그램 목록에서 **[!DNL Jupyter Notebook]**을(를) 선택하여 프로그램을 시작합니다.
 >자세한 내용은 [공식 Anaconda 설명서](https://docs.anaconda.com/anaconda/navigator/)에서 확인할 수 있습니다.
 
-공식 Jupyter 설명서는 [명령줄 인터페이스에서 전자 필기장을 실행](https://docs.jupyter.org/en/latest/running.html#how-do-i-open-a-specific-notebook)(CLI)하는 방법에 대한 지침을 제공합니다.
+공식 Jupyter 설명서는 [명령줄 인터페이스에서 전자 필기장을 실행](https://docs.jupyter.org/en/latest/running.html#how-do-i-open-a-specific-notebook)&#x200B;(CLI)하는 방법에 대한 지침을 제공합니다.
 
 ## Launch [!DNL Jupyter Notebook]
 
@@ -40,13 +40,13 @@ ht-degree: 0%
 
 그런 다음 [!DNL Python]에 대한 [!DNL PostgreSQL] 데이터베이스 어댑터를 가져옵니다. 값 `import psycopg2`을(를) 입력하고 **[!DNL Run]**&#x200B;을(를) 선택합니다. 이 프로세스에 대한 성공 메시지가 없습니다. 오류 메시지가 없으면 다음 단계를 계속합니다.
 
-이제 값을 입력하여 Adobe Experience Platform 자격 증명을 제공해야 합니다. `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. 연결 자격 증명은 Platform UI의 [!UICONTROL 자격 증명] 탭에 있는 [!UICONTROL 쿼리] 섹션에서 찾을 수 있습니다. 자세한 지침은 [조직 자격 증명을 찾는 방법](../ui/credentials.md)에 대한 설명서를 참조하십시오.
+이제 값을 입력하여 Adobe Experience Platform 자격 증명을 제공해야 합니다. `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. 연결 자격 증명은 Experience Platform UI의 [!UICONTROL 자격 증명] 탭에 있는 [!UICONTROL 쿼리] 섹션에서 찾을 수 있습니다. 자세한 지침은 [조직 자격 증명을 찾는 방법](../ui/credentials.md)에 대한 설명서를 참조하십시오.
 
 타사 클라이언트를 사용하여 세부 정보를 반복적으로 입력하는 작업을 줄일 때 만료되지 않는 자격 증명을 사용하는 것이 좋습니다. [만료되지 않는 자격 증명을 생성하고 사용하는 방법](../ui/credentials.md#non-expiring-credentials)에 대한 지침은 설명서를 참조하세요.
 
 >[!IMPORTANT]
 >
->Platform UI에서 자격 증명을 복사할 때에는 자격 증명의 추가적인 형식이 필요하지 않습니다. 속성과 값 사이에 하나의 공백이 있는 한 줄로 지정할 수 있습니다. 자격 증명은 따옴표로 묶여 있으며 **not**&#x200B;은(는) 쉼표로 구분됩니다.
+>Experience Platform UI에서 자격 증명을 복사할 때에는 자격 증명의 추가적인 형식이 필요하지 않습니다. 속성과 값 사이에 하나의 공백이 있는 한 줄로 지정할 수 있습니다. 자격 증명은 따옴표로 묶여 있으며 **not**&#x200B;은(는) 쉼표로 구분됩니다.
 
 ```python
 conn = psycopg2.connect('''sslmode=require host=<YOUR_HOST_CREDENTIAL> port=80 dbname=prod:all user=<YOUR_ORGANIZATION_ID> password=<YOUR_PASSWORD>''')"

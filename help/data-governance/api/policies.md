@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;정책 시행;API 기반 시행;데이터 거버넌스
 solution: Experience Platform
 title: 데이터 거버넌스 정책 API 끝점
-description: 데이터 거버넌스 정책은 Experience Platform 내에서 데이터에 대해 수행하도록 허용하거나 제한하는 마케팅 작업 종류를 설명하는 조직에서 채택하는 규칙입니다. /policies 끝점은 데이터 거버넌스 정책 보기, 만들기, 업데이트 또는 삭제와 관련된 모든 API 호출에 사용됩니다.
+description: 데이터 거버넌스 정책은 Experience Platform 내에서 데이터 수행을 허용하거나 제한하는 마케팅 작업 종류를 설명하는 조직에서 채택하는 규칙입니다. /policies 끝점은 데이터 거버넌스 정책 보기, 만들기, 업데이트 또는 삭제와 관련된 모든 API 호출에 사용됩니다.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1864'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->거버넌스 정책은 조직의 특정 Platform 사용자가 액세스할 수 있는 특정 데이터 속성을 결정하는 액세스 제어 정책과 혼동되지 않습니다. 액세스 제어 정책을 프로그래밍 방식으로 관리하는 방법에 대한 자세한 내용은 [액세스 제어 API](../../access-control/abac/api/policies.md)에 대한 `/policies` 끝점 가이드를 참조하십시오.
+>거버넌스 정책은 조직의 특정 Experience Platform 사용자가 액세스할 수 있는 특정 데이터 속성을 결정하는 액세스 제어 정책과 혼동하지 않도록 합니다. 액세스 제어 정책을 프로그래밍 방식으로 관리하는 방법에 대한 자세한 내용은 [액세스 제어 API](../../access-control/abac/api/policies.md)에 대한 `/policies` 끝점 가이드를 참조하십시오.
 
 ## 시작하기
 
@@ -378,7 +378,7 @@ curl -X POST \
 >
 >사용자 지정 정책만 업데이트할 수 있습니다. 핵심 정책을 활성화하거나 비활성화하려면 [활성화된 핵심 정책 목록 업데이트](#update-enabled-core)의 섹션을 참조하십시오.
 
-정책 전체가 업데이트된 형식을 포함하는 페이로드와 함께 PUT 요청 경로에 ID를 제공하여 기존 사용자 지정 정책을 업데이트할 수 있습니다. 즉, PUT 요청은 본질적으로 정책을 재작성한다.
+업데이트된 정책 형식이 전체적으로 포함된 페이로드와 함께 PUT 요청 경로에 ID를 제공하여 기존 사용자 지정 정책을 업데이트할 수 있습니다. 즉, PUT 요청은 본질적으로 정책을 재작성합니다.
 
 >[!NOTE]
 >
@@ -478,7 +478,7 @@ curl -X PUT \
 >
 >사용자 지정 정책만 업데이트할 수 있습니다. 핵심 정책을 활성화하거나 비활성화하려면 [활성화된 핵심 정책 목록 업데이트](#update-enabled-core)의 섹션을 참조하십시오.
 
-정책의 특정 부분은 PATCH 요청을 사용하여 업데이트될 수 있다. 정책을 다시 작성하는 PUT 요청과 달리, PATCH 요청은 요청 본문에 지정된 속성만 업데이트합니다. 이 기능은 적절한 속성(`/status`)에 대한 경로와 해당 값(`ENABLED` 또는 `DISABLED`)만 제공하면 되므로 정책을 활성화하거나 비활성화하려는 경우에 특히 유용합니다.
+정책의 특정 부분은 PATCH 요청을 사용하여 업데이트될 수 있다. 정책을 다시 작성하는 PUT 요청과 달리 PATCH 요청은 요청 본문에 지정된 속성만 업데이트합니다. 이 기능은 적절한 속성(`/status`)에 대한 경로와 해당 값(`ENABLED` 또는 `DISABLED`)만 제공하면 되므로 정책을 활성화하거나 비활성화하려는 경우에 특히 유용합니다.
 
 >[!NOTE]
 >

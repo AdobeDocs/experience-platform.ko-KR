@@ -4,16 +4,16 @@ title: 실시간 고객 프로필 문제 해결 안내서
 type: Documentation
 description: 이 문서에서는 실시간 고객 프로필에 대해 자주 묻는 질문에 대한 답변과 Adobe Experience Platform을 사용하여 프로필 데이터 작업 시 발생하는 일반적인 오류에 대한 문제 해결 안내서를 제공합니다.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '968'
 ht-degree: 1%
 
 ---
 
 # 실시간 고객 프로필 문제 해결 안내서
 
-이 문서에서는 실시간 고객 프로필에 대해 자주 묻는 질문에 대한 답변과 일반적인 오류에 대한 문제 해결 안내서를 제공합니다. Adobe Experience Platform의 다른 서비스와 관련된 질문 및 문제 해결은 [Experience Platform 문제 해결 가이드](../landing/troubleshooting.md)를 참조하십시오.
+이 문서에서는 실시간 고객 프로필에 대해 자주 묻는 질문에 대한 답변과 일반적인 오류에 대한 문제 해결 안내서를 제공합니다. Adobe Experience Platform의 다른 서비스와 관련된 질문 및 문제 해결은 [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
 
 [!DNL Real-Time Customer Profile]을(를) 사용하면 온라인, 오프라인, CRM 및 서드파티를 비롯한 여러 채널의 데이터를 결합하여 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. 이를 통해 마케터는 여러 채널에서 고객을 위해 조정되고 일관되며 관련 있는 경험을 제공할 수 있습니다.
 
@@ -25,15 +25,15 @@ ht-degree: 1%
 
 해당 데이터에 고유한 개별 사용자와 데이터를 연결하는 ID 값이 하나 이상 포함되어 있으면 프로필에서 **레코드** 및 **시계열** 데이터를 모두 허용합니다.
 
-모든 Platform 서비스와 마찬가지로 Profile은 데이터를 XDM(Experience Data Model) 스키마에서 의미론적으로 구조화해야 합니다. 따라서 이 스키마에는 **기본 ID**&#x200B;가 정의되어 있어야 하며 프로필에서 사용할 수 있어야 합니다.
+모든 Experience Platform 서비스와 마찬가지로, 프로필도 XDM(경험 데이터 모델) 스키마에서 데이터를 의미론적으로 구조화해야 합니다. 따라서 이 스키마에는 **기본 ID**&#x200B;가 정의되어 있어야 하며 프로필에서 사용할 수 있어야 합니다.
 
 XDM에 익숙하지 않은 경우 [XDM 개요](../xdm/home.md)로 시작하여 자세히 알아보세요. 다음으로 [ID 필드 설정](../xdm/tutorials/create-schema-ui.md#identity-field) 및 [프로필에 대한 스키마를 활성화](../xdm/tutorials/create-schema-ui.md#profile)하는 방법에 대한 단계는 XDM 사용 안내서를 참조하십시오.
 
 ### 프로필 데이터는 어디에 저장되어 있습니까?
 
-실시간 고객 프로필은 수집된 다른 플랫폼 데이터를 포함하는 데이터 레이크와 별도로 자체 데이터 저장소(이하 &quot;프로필 저장소&quot;)를 유지 관리합니다.
+실시간 고객 프로필은 수집된 다른 Experience Platform 데이터가 포함된 데이터 레이크와 별도로 자체 데이터 저장소(이하 &quot;프로필 저장소&quot;)를 유지 관리합니다.
 
-### 이미 데이터를 Platform으로 수집한 경우 Profile Store에서 사용할 수 있도록 할 수 있습니까?
+### 이미 Experience Platform에 데이터를 수집했다면 프로필 스토어에서 사용할 수 있도록 할 수 있습니까?
 
 비프로필 데이터 세트로 데이터가 수집된 경우 해당 데이터를 프로필 스토어에서 사용할 수 있도록 하려면 해당 데이터를 프로필 활성화 데이터 세트로 다시 수집해야 합니다. 프로필에 대해 기존 데이터 세트를 활성화할 수 있지만, 해당 구성 전에 수집된 데이터는 여전히 프로필 스토어에 표시되지 않습니다.
 
@@ -57,7 +57,7 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 작업 영역의 **[!UIC
 
 ## 오류 코드
 
-다음은 실시간 고객 프로필 API로 작업할 때 발생할 수 있는 오류 메시지 목록입니다. 오류가 여기에 나열되지 않으면 일반 [플랫폼 문제 해결 안내서](../landing/troubleshooting.md)에서 대신 찾을 수 있습니다.
+다음은 실시간 고객 프로필 API로 작업할 때 발생할 수 있는 오류 메시지 목록입니다. 오류가 여기에 나열되지 않으면 일반 [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md)에서 대신 찾을 수 있습니다.
 
 ### 제공된 경로에 대해 계산된 특성의 스키마를 조회할 수 없음
 

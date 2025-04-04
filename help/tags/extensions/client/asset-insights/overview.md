@@ -1,19 +1,19 @@
 ---
-title: AEM Asset Insights 확장 개요
+title: AEM 자산 통찰력 확장 개요
 description: Adobe Experience Platform의 AEM Asset Insights 태그 확장에 대해 알아봅니다.
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1062'
-ht-degree: 77%
+source-wordcount: '1063'
+ht-degree: 82%
 
 ---
 
-# AEM Asset Insights 확장 개요
+# AEM 자산 통찰력 확장 개요
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 이 확장은 [AEM 자산 통찰력](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)과 함께 사용됩니다. 보다 구체적으로 설명하면 &quot;pageTracker&quot; 프로세스 및 포함 코드를 대체합니다. 구성된 경우, 이 확장은 자산 *노출* 및 *클릭* 지표를 Adobe Analytics로 전송하며 해당 지표는 이후 AEM 자산 통찰력 보고서로 가져옵니다. 그런 다음 AEM 자산 통찰력 또는 Adobe Analytics Project Workspaces를 사용하여 자산 지표를 보고할 수 있습니다.
 
@@ -43,17 +43,17 @@ Adobe Experience Platform용 &quot;*Adobe Analytics*&quot; 태그 확장은 동�
 
    >[!IMPORTANT]
    >
-   >AEM Asset 구성 설정 **[!UICONTROL UUID 추적 비활성화]**&#x200B;를 선택한 경우 이 확장은 *not* 함수가 됩니다. 기본적으로 선택되어 있지 않습니다.
+   >AEM 자산 구성 설정 **[!UICONTROL UUID 추적 비활성화]**&#x200B;를 선택한 경우 이 확장은 *not* 함수가 됩니다. 기본적으로 선택되어 있지 않습니다.
 
    ![UUID 추적 비활성화](images/disableassets.jpg)
 
 ## AEM(Adobe Experience Manager) 구성
 
-이 섹션에서는 Adobe Experience Platform에서 태그를 사용하여 AEM을 구성하는 방법, AEM에서 Asset Insight를 활성화하는 방법 및 Assets에 대해 UUID 추적을 활성화하는 방법에 대해 설명합니다.
+이 섹션에서는 Adobe Experience Platform에서 태그를 사용하여 AEM을 구성하는 방법, AEM에서 에셋 Insight을 활성화하는 방법 및 Assets에 대해 UUID 추적을 활성화하는 방법에 대해 설명합니다.
 
 ### 태그와 AEM 통합
 
-Adobe Experience Manager과 [Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)의 권장 통합은 Adobe I/O을 통해 수행됩니다.
+Adobe Experience Manager과 [Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)의 권장 통합은 Adobe I/O을 통해 수행됩니다.
 
 1. [Adobe I/O을 사용하여 태그와 AEM 연결](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html).
 

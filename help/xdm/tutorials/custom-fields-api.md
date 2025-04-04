@@ -2,9 +2,9 @@
 title: 스키마 레지스트리 API에서 XDM 필드 정의
 description: 스키마 레지스트리 API에서 사용자 지정 XDM(경험 데이터 모델) 리소스를 만들 때 다양한 필드를 정의하는 방법을 알아봅니다.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
@@ -368,7 +368,7 @@ XDM에서는 이 스토리지 힌트의 사용에 대해 다음과 같은 제한
 * 1억 개의 레코드에 대해 [Adobe Experience Platform 쿼리 서비스](../../query-service/home.md)의 응답 시간이 3초에서 10초로 감소합니다.
 * 맵의 키가 16개 미만이어야 합니다. 그렇지 않으면 더 이상 성능이 저하될 수 있습니다.
 
-Platform 사용자 인터페이스에서도 맵 유형 필드의 키를 추출하는 방법에 제한이 있습니다. 개체 유형 필드는 확장할 수 있지만 맵은 대신 단일 필드로 표시됩니다.
+Experience Platform 사용자 인터페이스에서도 맵 유형 필드의 키를 추출하는 방법에 제한이 있습니다. 개체 유형 필드는 확장할 수 있지만 맵은 대신 단일 필드로 표시됩니다.
 
 ## 다음 단계
 

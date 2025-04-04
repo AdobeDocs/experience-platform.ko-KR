@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;홈;자주 찾는 주제;수집;배치 데이터 수집;자습서;배치 수집;자습서;ui 안내서;
+keywords: Experience Platform;홈;자주 찾는 주제;수집;배치 데이터 수집;튜토리얼;배치 수집;튜토리얼;ui 안내서;
 solution: Experience Platform
-title: 데이터를 Experience Platform에 수집
+title: Experience Platform에 데이터 수집
 type: Tutorial
 description: Adobe Experience Platform을 사용하면 데이터를 Parquet 파일 또는 알려진 XDM(Experience Data Model) 스키마를 준수하는 데이터의 형태로 배치 파일로 쉽게 가져올 수 있습니다.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1322'
 ht-degree: 0%
 
 ---
 
 # Adobe Experience Platform에 데이터 수집
 
-Adobe Experience Platform을 사용하면 데이터를 [!DNL Platform]에 배치 파일로 쉽게 가져올 수 있습니다. 수집할 데이터의 예로는 CRM 시스템의 플랫 파일(예: Parquet 파일)의 프로필 데이터 또는 스키마 레지스트리의 알려진 [!DNL Experience Data Model](XDM) 스키마를 준수하는 데이터가 포함될 수 있습니다.
+Adobe Experience Platform을 사용하면 데이터를 [!DNL Experience Platform]에 배치 파일로 쉽게 가져올 수 있습니다. 수집할 데이터의 예로는 CRM 시스템의 플랫 파일(예: Parquet 파일)의 프로필 데이터 또는 스키마 레지스트리의 알려진 [!DNL Experience Data Model]&#x200B;(XDM) 스키마를 준수하는 데이터가 포함될 수 있습니다.
 
 ## 시작하기
 
@@ -80,7 +80,7 @@ Adobe Experience Platform을 사용하면 데이터를 [!DNL Platform]에 배치
 
 ## [!DNL Real-Time Customer Profile]에 대한 데이터 집합 사용
 
-데이터 세트는 데이터를 [!DNL Experience Platform](으)로 수집하는 데 사용되며, 이 데이터는 궁극적으로 개인을 식별하고 여러 소스에서 가져온 정보를 결합하는 데 사용됩니다. 결합된 정보를 [!DNL Real-Time Customer Profile]이라고 합니다. [!DNL Platform]이(가) [!DNL Real-Time Profile]에 포함해야 하는 정보를 알 수 있도록 **[!UICONTROL 프로필]** 전환을 사용하여 데이터 세트를 포함용으로 표시할 수 있습니다.
+데이터 세트는 데이터를 [!DNL Experience Platform]&#x200B;(으)로 수집하는 데 사용되며, 이 데이터는 궁극적으로 개인을 식별하고 여러 소스에서 가져온 정보를 결합하는 데 사용됩니다. 결합된 정보를 [!DNL Real-Time Customer Profile]이라고 합니다. [!DNL Experience Platform]이(가) [!DNL Real-Time Profile]에 포함해야 하는 정보를 알 수 있도록 **[!UICONTROL 프로필]** 전환을 사용하여 데이터 세트를 포함용으로 표시할 수 있습니다.
 
 기본적으로 이 토글은 꺼져 있습니다. [!DNL Profile]을(를) 켜도록 선택하면 데이터 집합에 수집된 모든 데이터가 개인을 식별하고 해당 [!DNL Real-Time Profile]을(를) 연결하는 데 사용됩니다.
 
@@ -106,13 +106,13 @@ Adobe Experience Platform을 사용하면 데이터를 [!DNL Platform]에 배치
 
 >[!NOTE]
 >
->Platform은 데이터 수집에 Parquet 또는 JSON의 두 가지 파일 유형을 지원합니다. 한 번에 최대 5개의 파일을 추가할 수 있으며, 각 파일의 최대 파일 크기는 1GB입니다.
+>Experience Platform은 데이터 수집에 Parquet 또는 JSON의 두 가지 파일 유형을 지원합니다. 한 번에 최대 5개의 파일을 추가할 수 있으며, 각 파일의 최대 파일 크기는 1GB입니다.
 
 ![데이터 탭 추가](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## 파일 업로드 {#upload-file}
 
-업로드하려는 Parquet 또는 JSON 파일을 드래그 앤 드롭(또는 찾아보기 및 선택)하면 [!DNL Platform]이(가) 즉시 파일 처리를 시작하며 **[!UICONTROL 데이터 추가]** 탭에 파일 업로드 진행 상황을 보여주는 **[!UICONTROL 업로드]** 대화 상자가 나타납니다.
+업로드하려는 Parquet 또는 JSON 파일을 드래그 앤 드롭(또는 찾아보기 및 선택)하면 [!DNL Experience Platform]이(가) 즉시 파일 처리를 시작하며 **[!UICONTROL 데이터 추가]** 탭에 파일 업로드 진행 상황을 보여주는 **[!UICONTROL 업로드]** 대화 상자가 나타납니다.
 
 ![대화 상자 업로드](../images/tutorials/ingest-batch-data/uploading-file.png)
 
@@ -150,6 +150,6 @@ Adobe Experience Platform을 사용하면 데이터를 [!DNL Platform]에 배치
 
 >[!WARNING]
 >
->다음 비디오에 표시된 [!DNL Platform] UI가 최신 상태가 아닙니다. 최신 UI 스크린샷 및 기능은 위의 설명서를 참조하십시오.
+>다음 비디오에 표시된 [!DNL Experience Platform] UI가 최신 상태가 아닙니다. 최신 UI 스크린샷 및 기능은 위의 설명서를 참조하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

@@ -4,9 +4,9 @@ title: UI에서 XDM 스키마 내보내기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 스키마를 다른 샌드박스 또는 조직으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '657'
 ht-degree: 11%
 
 ---
@@ -28,11 +28,11 @@ ht-degree: 11%
 
 ## 전제 조건
 
-Platform UI를 사용하여 XDM 리소스를 내보낼 수 있지만 워크플로우를 완료하려면 스키마 레지스트리 API를 사용하여 해당 리소스를 다른 샌드박스 또는 조직으로 가져와야 합니다. 이 안내서를 따르기 전에 필수 인증 헤더에 대한 중요한 정보가 필요하면 [스키마 레지스트리 API 시작하기](../api/getting-started.md)에 대한 안내서를 참조하십시오.
+Experience Platform UI를 사용하여 XDM 리소스를 내보낼 수 있지만 워크플로우를 완료하려면 스키마 레지스트리 API를 사용하여 해당 리소스를 다른 샌드박스 또는 조직으로 가져와야 합니다. 이 안내서를 따르기 전에 필수 인증 헤더에 대한 중요한 정보가 필요하면 [스키마 레지스트리 API 시작하기](../api/getting-started.md)에 대한 안내서를 참조하십시오.
 
 ## 내보내기 페이로드 생성 {#generate-export-payload}
 
-내보내기 페이로드는 [!UICONTROL 찾아보기] 탭의 세부 정보 패널에서 Platform UI를 생성하거나 스키마 편집기의 스키마 캔버스에서 직접 생성할 수 있습니다.
+내보내기 페이로드는 [!UICONTROL 찾아보기] 탭의 세부 정보 패널에서 Experience Platform UI를 생성하거나 스키마 편집기의 스키마 캔버스에서 직접 생성할 수 있습니다.
 
 내보내기 페이로드를 생성하려면 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택하십시오. [!UICONTROL 스키마] 작업 영역 내에서 내보낼 스키마의 행을 선택하여 오른쪽 사이드바에 스키마 세부 정보를 표시합니다.
 
@@ -226,7 +226,7 @@ Platform UI를 사용하여 XDM 리소스를 내보낼 수 있지만 워크플�
 
 ## API를 사용하여 리소스 가져오기 {#import-resource-with-api}
 
-스키마에 대한 내보내기 JSON을 복사한 후에는 스키마 레지스트리 API의 `/rpc/import` 끝점에 대한 POST 요청에 대한 페이로드로 사용할 수 있습니다. 원하는 조직 및 샌드박스로 스키마를 보내는 호출을 구성하는 방법에 대한 자세한 내용은 [끝점 가져오기 안내서](../api/import.md)를 참조하십시오.
+스키마에 대한 내보내기 JSON을 복사한 후에는 스키마 레지스트리 API의 `/rpc/import` 끝점에 대한 POST 요청의 페이로드로 사용할 수 있습니다. 원하는 조직 및 샌드박스로 스키마를 보내는 호출을 구성하는 방법에 대한 자세한 내용은 [끝점 가져오기 안내서](../api/import.md)를 참조하십시오.
 
 ## 다음 단계
 

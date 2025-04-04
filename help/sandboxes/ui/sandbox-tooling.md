@@ -2,9 +2,9 @@
 title: 샌드박스 도구
 description: 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져옵니다.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 3cedf019cff7ef0aa06da1242798a533196f9b2a
+source-git-commit: 480785dc17ab27df5544524cf08baa9150fe426f
 workflow-type: tm+mt
-source-wordcount: '2485'
+source-wordcount: '2486'
 ht-degree: 7%
 
 ---
@@ -252,7 +252,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 ![가져오기 세부 정보] 대화 상자에서 가져오기의 세부 정보를 확인할 수 있습니다.](../images/ui/sandbox-tooling/import-details.png)[!UICONTROL 
 
-가져오기가 완료되면 Platform UI에서 알림을 받습니다. 경고 아이콘에서 이러한 알림에 액세스할 수 있습니다. 작업이 실패한 경우 여기에서 문제 해결로 이동할 수 있습니다.
+가져오기가 완료되면 Experience Platform UI에서 알림이 수신됩니다. 경고 아이콘에서 이러한 알림에 액세스할 수 있습니다. 작업이 실패한 경우 여기에서 문제 해결로 이동할 수 있습니다.
 
 ## 비디오 튜토리얼
 

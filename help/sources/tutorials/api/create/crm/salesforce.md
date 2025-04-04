@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 Salesforce을 Experience Platform에 연결
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Salesforce 계정에 연결하는 방법을 알아봅니다.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 01f655df8679383f57d60796be5274acd9b5df68
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1082'
 ht-degree: 2%
 
 ---
@@ -17,16 +17,16 @@ ht-degree: 2%
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [원본](../../../../home.md): [!DNL Experience Platform]에서는 데이터를 다양한 원본에서 수집할 수 있으며 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공합니다.
-* [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [원본](../../../../home.md): [!DNL Experience Platform]에서는 데이터를 다양한 원본에서 수집할 수 있으며 [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공합니다.
+* [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-### Platform API 사용
+### Experience Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
-## [!DNL Azure]의 Experience Platform에 [!DNL Salesforce] 연결 {#azure}
+## [!DNL Azure]에서 [!DNL Salesforce]을(를) Experience Platform에 연결 {#azure}
 
-[!DNL Salesforce] 원본을 [!DNL Azure]의 Experience Platform에 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하세요.
+[!DNL Azure]에서 [!DNL Salesforce] 소스를 Experience Platform에 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하십시오.
 
 ### 필요한 자격 증명 수집
 
@@ -67,9 +67,9 @@ OAuth 2 클라이언트 자격 증명을 사용하여 [!DNL Salesforce] 계정�
 
 ### [!DNL Azure]의 Experience Platform에서 [!DNL Salesforce]에 대한 기본 연결 만들기
 
-기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
+기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 Experience Platform 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-기본 연결을 만들고 [!DNL Salesforce] 계정을 [!DNL Azure]에 있는 Experience Platform에 연결하려면 `/connections` 끝점에 POST을 요청하고 요청 본문에 [!DNL Salesforce] 인증 자격 증명을 제공하십시오.
+기본 연결을 만들고 [!DNL Salesforce] 계정을 [!DNL Azure]의 Experience Platform에 연결하려면 `/connections` 끝점에 POST 요청을 만들고 요청 본문에 [!DNL Salesforce] 인증 자격 증명을 제공하십시오.
 
 **API 형식**
 
@@ -198,9 +198,9 @@ curl -X POST \
 
 >[!AVAILABILITY]
 >
->이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. 현재 AWS에서 실행 중인 Experience Platform은 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../../../landing/multi-cloud.md)를 참조하세요.
+>이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../../../landing/multi-cloud.md)를 참조하세요.
 
-[!DNL Salesforce] 원본을 AWS의 Experience Platform에 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하세요.
+[!DNL Salesforce] 소스를 AWS의 Experience Platform에 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하십시오.
 
 ### 전제 조건
 
@@ -208,7 +208,7 @@ AWS의 Experience Platform에 연결할 수 있도록 [!DNL Salesforce] 계정�
 
 ### AWS의 Experience Platform에서 [!DNL Salesforce]에 대한 기본 연결 만들기
 
-기본 연결을 만들고 [!DNL Salesforce] 계정을 AWS의 Experience Platform에 연결하려면 `/connections` 끝점에 POST을 요청하고 자격 증명에 적절한 값을 제공하십시오.
+기본 연결을 만들고 [!DNL Salesforce] 계정을 AWS의 Experience Platform에 연결하려면 `/connections` 끝점에 대한 POST 요청을 만들고 자격 증명에 적절한 값을 제공하십시오.
 
 **API 형식**
 
@@ -248,7 +248,7 @@ curl -X POST \
   }'
 ```
 
-[!DNL Salesforce] `jwtToken`을(를) 검색하는 방법에 대한 자세한 내용은 [AWS의 Experience Platform에 연결할 소스를 설정하는 방법 [!DNL Salesforce] 방법](../../../../connectors/crm/salesforce.md#aws)에 대한 안내서를 참조하십시오.
+[!DNL Salesforce] `jwtToken`을(를) 검색하는 방법에 대한 자세한 내용은 [AWS에서 Experience Platform에 연결하도록  [!DNL Salesforce] 소스를 설정하는 방법](../../../../connectors/crm/salesforce.md#aws)에 대한 안내서를 참조하십시오.
 
 +++
 
@@ -394,4 +394,4 @@ curl -X GET \
 이 자습서에 따라 [!DNL Flow Service] API를 사용하여 [!DNL Salesforce] 기본 연결을 만들었습니다. 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다.
 
 * [ [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
-* [ [!DNL Flow Service] API를 사용하여 CRM 데이터를 플랫폼으로 가져오는 데이터 흐름을 만듭니다.](../../collect/crm.md)
+* [ [!DNL Flow Service] API를 사용하여 CRM 데이터를 Experience Platform으로 가져오는 데이터 흐름을 만듭니다.](../../collect/crm.md)

@@ -1,12 +1,12 @@
 ---
-keywords: Amazon Kinesis;kinesis 대상;kinesis
+keywords: Amazon Kinesis;Kinesis 대상;Kinesis
 title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '1989'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 [!DNL Amazon Web Services]의 [!DNL Kinesis Data Streams] 서비스를 사용하면 큰 데이터 레코드를 실시간으로 수집하고 처리할 수 있습니다.
 
@@ -25,7 +25,7 @@ ht-degree: 5%
 
 * [!DNL Amazon Kinesis]에 대한 자세한 내용은 [Amazon 설명서](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)를 참조하세요.
 * 프로그래밍 방식으로 [!DNL Amazon Kinesis]에 연결하려면 [스트리밍 대상 API 자습서](../../api/streaming-destinations.md)를 참조하십시오.
-* 플랫폼 사용자 인터페이스를 사용하여 [!DNL Amazon Kinesis]에 연결하려면 아래 섹션을 참조하십시오.
+* Experience Platform 사용자 인터페이스를 사용하여 [!DNL Amazon Kinesis]에 연결하려면 아래 섹션을 참조하십시오.
 
 UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
@@ -41,8 +41,8 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -59,17 +59,17 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 
 ## 허용 목록에 추가하다 IP 주소 {#ip-address-allowlist}
 
-고객의 보안 및 규정 준수 요구 사항을 충족하기 위해 Experience Platform은 [!DNL Amazon Kinesis] 대상에 대해 허용 목록에 추가하다할 수 있는 정적 IP 목록을 제공합니다. IP에서 허용 목록에 추가하다에 대한 전체 목록은 [스트리밍 대상의 IP 주소 허용 목록](/help/destinations/catalog/streaming/ip-address-allow-list.md)을 참조하십시오.
+고객 보안 및 규정 준수 요구 사항을 충족하기 위해 Experience Platform에서는 [!DNL Amazon Kinesis] 대상에 대해 허용 목록에 추가하다할 수 있는 정적 IP 목록을 제공합니다. IP에서 허용 목록에 추가하다에 대한 전체 목록은 [스트리밍 대상의 IP 주소 허용 목록](/help/destinations/catalog/streaming/ip-address-allow-list.md)을 참조하십시오.
 
 ## 필요한 [!DNL Amazon Kinesis] 권한 {#required-kinesis-permission}
 
-데이터를 [!DNL Amazon Kinesis] 스트림에 연결하고 내보내려면 Experience Platform에게 다음 작업에 대한 권한이 필요합니다.
+데이터를 [!DNL Amazon Kinesis] 스트림에 연결하고 내보내려면 Experience Platform에 다음 작업에 대한 권한이 필요합니다.
 
 * `kinesis:ListStreams`
 * `kinesis:PutRecord`
 * `kinesis:PutRecords`
 
-이러한 권한은 [!DNL Kinesis] 콘솔을 통해 정렬되며 Platform 사용자 인터페이스에서 Kinesis 대상을 구성하면 Platform에서 확인합니다.
+이러한 권한은 [!DNL Kinesis] 콘솔을 통해 정렬되며 Experience Platform 사용자 인터페이스에서 Kinesis 대상을 구성하면 Experience Platform에서 확인합니다.
 
 아래 예제에서는 데이터를 [!DNL Kinesis] 대상으로 내보내는 데 필요한 최소 액세스 권한을 표시합니다.
 
@@ -95,8 +95,8 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 | 속성 | 설명 |
 | -------- | ----------- |
 | `kinesis:ListStreams` | Amazon Kinesis 데이터 스트림을 나열하는 작업입니다. |
-| `kinesis:PutRecord` | 단일 데이터 레코드를 Kinesis 데이터 스트림에 쓰는 작업입니다. |
-| `kinesis:PutRecords` | 한 번의 호출로 여러 데이터 레코드를 Kinesis 데이터 스트림에 쓰는 작업입니다. |
+| `kinesis:PutRecord` | Kinesis 데이터 스트림에 단일 데이터 레코드를 쓰는 작업입니다. |
+| `kinesis:PutRecords` | 한 번의 호출로 Kinesis 데이터 스트림에 여러 데이터 레코드를 쓰는 작업입니다. |
 
 {style="table-layout:auto"}
 
@@ -116,7 +116,7 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 
 ![Amazon Kinesis 인증 세부 정보에 대해 완료된 필드를 표시하는 UI 화면 이미지](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
-* **[!DNL Amazon Web Services]액세스 키 및 비밀 키**: [!DNL Amazon Web Services]에서 `access key - secret access key` 쌍을 생성하여 [!DNL Amazon Kinesis] 계정에 플랫폼 액세스 권한을 부여합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)를 참조하세요.
+* **[!DNL Amazon Web Services]액세스 키 및 비밀 키**: [!DNL Amazon Web Services]에서 `access key - secret access key` 쌍을 생성하여 [!DNL Amazon Kinesis] 계정에 Experience Platform 액세스 권한을 부여합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)를 참조하세요.
 * **[!UICONTROL 지역]**: 데이터를 스트리밍할 [!DNL Amazon Web Services] 지역을 가리킵니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
@@ -137,7 +137,7 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 
 * **[!UICONTROL 이름]**: [!DNL Amazon Kinesis]에 연결할 이름을 입력하십시오.
 * **[!UICONTROL 설명]**: [!DNL Amazon Kinesis] 연결에 대한 설명을 입력하십시오.
-* **[!UICONTROL 스트림]**: [!DNL Amazon Kinesis] 계정에 있는 기존 데이터 스트림의 이름을 제공하십시오. 플랫폼에서 데이터를 이 스트림으로 내보냅니다.
+* **[!UICONTROL 스트림]**: [!DNL Amazon Kinesis] 계정에 있는 기존 데이터 스트림의 이름을 제공하십시오. Experience Platform은 데이터를 이 스트림으로 내보냅니다.
 * **[!UICONTROL 세그먼트 이름 포함]**: 내보내는 대상의 이름을 데이터 내보내기에 포함하려면 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 아래의 [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
 * **[!UICONTROL 세그먼트 타임스탬프 포함]**: 대상을 만들고 업데이트할 때 데이터 내보내기에 UNIX 타임스탬프와 활성화를 위해 대상을 대상에 매핑할 때 UNIX 타임스탬프를 포함하도록 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 아래의 [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
 
@@ -145,7 +145,7 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 
 >[!IMPORTANT]
 >
->Platform needs `write` permissions on the bucket object where the export files will be delivered.
+>Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 
@@ -166,7 +166,7 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 
 ## 프로필 내보내기 동작 {#profile-export-behavior}
 
-Experience Platform은 대상 자격 조건 또는 다른 중요한 이벤트 후에 프로필에 대한 관련 업데이트가 발생한 경우에만 데이터를 대상으로 내보내도록 [!DNL Amazon Kinesis] 대상에 대한 프로필 내보내기 동작을 최적화합니다. 프로필은 다음과 같은 경우 대상으로 내보내집니다.
+Experience Platform은 대상 자격 조건 또는 기타 중요한 이벤트 후에 프로필에 대한 관련 업데이트가 발생한 경우에만 데이터를 대상으로 내보내도록 [!DNL Amazon Kinesis] 대상에 대한 프로필 내보내기 동작을 최적화합니다. 프로필은 다음과 같은 경우 대상으로 내보내집니다.
 
 * 프로필 업데이트는 대상에 매핑된 대상자 중 하나 이상에 대한 대상자 멤버십 변경에 따라 결정되었습니다. 예를 들어 프로필이 대상에 매핑된 대상자 중 하나에 대해 자격이 있거나 대상에 매핑된 대상자 중 하나를 종료했습니다.
 * 프로필 업데이트는 [ID 맵](/help/xdm/field-groups/profile/identitymap.md)의 변경 내용으로 결정됩니다. 예를 들어 대상에 매핑된 대상자 중 하나에 대해 이미 자격이 있는 프로필이 ID 맵 특성에 새 ID를 추가했습니다.
@@ -196,7 +196,7 @@ Experience Platform은 대상 자격 조건 또는 다른 중요한 이벤트 �
 
 ## 내역 데이터 채우기 {#historical-data-backfill}
 
-기존 대상에 새 대상을 추가하거나 새 대상을 만들고 대상에 대상을 매핑하면 Experience Platform은 이전 대상 자격 데이터를 대상에 내보냅니다. 대상에 대상을 추가하기 전에 대상 *이전*&#x200B;에 대해 자격이 있는 프로필은 약 1시간 내에 대상으로 내보냅니다.
+기존 대상에 새 대상을 추가하거나 새 대상을 만들고 대상에 대상을 매핑하면 Experience Platform에서 이전 대상 자격 데이터를 대상으로 내보냅니다. 대상에 대상을 추가하기 전에 대상 *이전*&#x200B;에 대해 자격이 있는 프로필은 약 1시간 내에 대상으로 내보냅니다.
 
 ## 내보낸 데이터 {#exported-data}
 
@@ -298,9 +298,9 @@ Experience Platform은 대상 자격 조건 또는 다른 중요한 이벤트 �
 
 ## 제한 및 재시도 정책 {#limits-retry-policy}
 
-시간의 95%에서 Experience Platform은 HTTP 대상에 대한 각 데이터 흐름의 초당 요청 수가 10,000개 미만인 상태로 성공적으로 전송된 메시지에 대해 10분 미만의 처리량 지연 시간을 제공하려고 합니다.
+그 중 95% 동안 Experience Platform은 HTTP 대상에 대한 각 데이터 흐름의 초당 요청 수가 10,000개 미만인 상태로 성공적으로 전송된 메시지에 대해 10분 미만의 처리량 지연 시간을 제공하려고 합니다.
 
-HTTP API 대상에 대한 요청이 실패한 경우 Experience Platform은 실패한 요청을 저장하고 두 번 다시 시도하여 요청을 엔드포인트에 보냅니다.
+HTTP API 대상에 대한 요청이 실패한 경우 Experience Platform은 실패한 요청을 저장하고 두 번 재시도하여 요청을 엔드포인트에 전송합니다.
 
 >[!MORELIKETHIS]
 >

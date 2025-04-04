@@ -3,11 +3,11 @@ keywords: Experience Platform;홈;자주 찾는 항목;스트리밍;클라우드
 solution: Experience Platform
 title: UI에서 클라우드 스토리지 소스에 대한 스트리밍 데이터 흐름 만들기
 type: Tutorial
-description: 데이터 흐름은 소스에서 Platform 데이터 세트로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 클라우드 스토리지 기반 커넥터를 사용하여 새 데이터 흐름을 구성하는 단계를 제공합니다.
+description: 데이터 흐름은 소스에서 Experience Platform 데이터 세트로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 클라우드 스토리지 기반 커넥터를 사용하여 새 데이터 흐름을 구성하는 단계를 제공합니다.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 6419ae7648a91dc7f9432281c1960beccc65bdb0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1078'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 데이터 흐름은 소스에서 Adobe Experience Platform 데이터 세트로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 UI에서 클라우드 스토리지 소스에 대한 스트리밍 데이터 흐름을 만드는 단계를 제공합니다.
 
-이 자습서를 시도하기 전에 먼저 클라우드 스토리지 계정과 플랫폼 간에 유효하고 인증된 연결을 설정해야 합니다. 인증된 연결이 없는 경우 스트리밍 클라우드 스토리지 계정 인증에 대한 자세한 내용은 다음 튜토리얼 중 하나를 참조하십시오.
+이 자습서를 시도하기 전에 먼저 클라우드 스토리지 계정과 Experience Platform 간에 유효하고 인증된 연결을 설정해야 합니다. 인증된 연결이 없는 경우 스트리밍 클라우드 스토리지 계정 인증에 대한 자세한 내용은 다음 튜토리얼 중 하나를 참조하십시오.
 
 - [[!DNL Amazon Kinesis]](../../../ui/create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../../../ui/create/cloud-storage/eventhub.md)
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-- [데이터 흐름](../../../../../dataflows/home.md): 데이터 흐름은 플랫폼 간에 데이터를 이동하는 데이터 작업을 나타냅니다. 데이터 흐름은 원본에서 [!DNL Identity Service], [!DNL Profile] 및 [!DNL Destinations](으)로 다양한 서비스에 걸쳐 구성됩니다.
+- [데이터 흐름](../../../../../dataflows/home.md): 데이터 흐름은 Experience Platform에서 데이터를 이동하는 데이터 작업을 나타냅니다. 데이터 흐름은 원본에서 [!DNL Identity Service], [!DNL Profile] 및 [!DNL Destinations]&#x200B;(으)로 다양한 서비스에 걸쳐 구성됩니다.
 - [데이터 준비](../../../../../data-prep/home.md): 데이터 준비를 통해 데이터 엔지니어는 데이터를 XDM(Experience Data Model)에 매핑하고, 변환하고, 유효성을 검사할 수 있습니다. 데이터 준비는 CSV 수집 워크플로를 포함하여 데이터 수집 프로세스에서 &quot;맵&quot; 단계로 표시됩니다.
 - [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    - [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
@@ -39,7 +39,7 @@ ht-degree: 1%
 >
 >지정된 이벤트 허브에 대해 소비자 그룹당 하나의 소스 데이터 흐름만 만들 수 있습니다.
 
-스트리밍 클라우드 저장소 계정을 인증하면 플랫폼으로 가져올 데이터 스트림을 선택할 수 있는 인터페이스를 제공하는 **[!UICONTROL 데이터 선택]** 단계가 나타납니다.
+스트리밍 클라우드 저장소 계정을 인증하면 **[!UICONTROL 데이터 선택]** 단계가 나타나고 Experience Platform으로 가져올 데이터 스트림을 선택할 수 있는 인터페이스를 제공합니다.
 
 - 인터페이스의 왼쪽 부분은 계정 내에서 사용 가능한 데이터 스트림을 볼 수 있는 브라우저입니다.
 - 인터페이스의 오른쪽 부분에서 JSON 파일에서 최대 100개의 데이터 행을 미리 볼 수 있습니다.
@@ -62,7 +62,7 @@ ht-degree: 1%
 
 ## 매핑
 
-소스 데이터를 Platform 데이터 집합에 매핑하는 인터페이스를 제공하는 **[!UICONTROL 매핑]** 단계가 나타납니다.
+소스 데이터를 Experience Platform 데이터 집합에 매핑하는 인터페이스를 제공하는 **[!UICONTROL 매핑]** 단계가 나타납니다.
 
 수집할 인바운드 데이터에 대한 데이터 세트를 선택합니다. 기존 데이터 세트를 사용하거나 새 데이터 세트를 만들 수 있습니다.
 
@@ -106,7 +106,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->Platform은 선택한 대상 스키마 또는 데이터 세트를 기반으로 자동 매핑된 필드에 대한 지능형 권장 사항을 제공합니다. 사용 사례에 맞게 매핑 규칙을 수동으로 조정할 수 있습니다.
+>Experience Platform은 선택한 대상 스키마 또는 데이터 세트를 기반으로 자동 매핑된 필드에 대한 지능형 권장 사항을 제공합니다. 사용 사례에 맞게 매핑 규칙을 수동으로 조정할 수 있습니다.
 
 필요에 따라 필드를 직접 매핑하도록 선택하거나 데이터 준비 함수를 사용하여 소스 데이터를 변환하여 계산된 값 또는 계산된 값을 파생할 수 있습니다. 매퍼 인터페이스 및 계산된 필드 사용에 대한 포괄적인 단계는 [데이터 준비 UI 안내서](../../../../../data-prep/ui/mapping.md)를 참조하십시오.
 
@@ -139,7 +139,7 @@ ht-degree: 1%
 
 ## 다음 단계
 
-이 자습서에 따라 클라우드 스토리지 소스에서 데이터를 스트리밍하기 위한 데이터 흐름을 만들었습니다. 이제 [!DNL Real-Time Customer Profile] 및 [!DNL Data Science Workspace]과(와) 같은 다운스트림 플랫폼 서비스에서 수신 데이터를 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서에 따라 클라우드 스토리지 소스에서 데이터를 스트리밍하기 위한 데이터 흐름을 만들었습니다. 이제 [!DNL Real-Time Customer Profile] 및 [!DNL Data Science Workspace]과(와) 같은 다운스트림 Experience Platform 서비스에서 수신 데이터를 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
 - [[!DNL Real-Time Customer Profile] 개요](../../../../../profile/home.md)
 - [[!DNL Data Science Workspace] 개요](../../../../../data-science-workspace/home.md)

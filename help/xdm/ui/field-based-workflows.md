@@ -2,24 +2,24 @@
 title: 스키마 편집기의 필드 기반 워크플로
 description: 기존 필드 그룹의 필드를 XDM(Experience Data Model) 스키마에 개별적으로 추가하는 방법을 알아봅니다.
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1301'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
 
 # 스키마 편집기의 필드 기반 워크플로
 
-Adobe Experience Platform은 XDM(경험 데이터 모델) 스키마에서 사용하기 위해 강력한 표준화된 [필드 그룹](../schema/composition.md#field-group) 집합을 제공합니다. 이러한 필드 그룹의 구조 및 의미 체계는 플랫폼의 다양한 세분화 사용 사례 및 기타 다운스트림 애플리케이션을 충족하도록 세심하게 조정됩니다. 고유한 비즈니스 요구 사항을 해결하기 위해 사용자 정의 필드 그룹을 정의할 수도 있습니다.
+Adobe Experience Platform은 XDM(경험 데이터 모델) 스키마에서 사용하기 위해 강력한 표준화된 [필드 그룹](../schema/composition.md#field-group) 집합을 제공합니다. 이러한 필드 그룹 이면의 구조와 의미 체계는 Experience Platform의 다양한 세그먼테이션 사용 사례와 기타 다운스트림 애플리케이션을 충족하도록 세심하게 맞춤화되었습니다. 고유한 비즈니스 요구 사항을 해결하기 위해 사용자 정의 필드 그룹을 정의할 수도 있습니다.
 
 스키마에 필드 그룹을 추가하면 해당 스키마는 해당 그룹에 포함된 모든 필드를 상속합니다. 그러나 이제 필요하지 않은 관련 필드 그룹의 다른 필드를 포함할 필요 없이 스키마에 개별 필드를 추가할 수 있습니다.
 
-이 안내서에서는 Platform UI의 스키마에 개별 필드를 추가하는 다양한 방법을 다룹니다.
+이 안내서에서는 Experience Platform UI의 스키마에 개별 필드를 추가하는 다양한 방법을 다룹니다.
 
 ## 전제 조건
 
-이 자습서에서는 사용자가 [XDM 스키마의 구성](../schema/composition.md)과 Platform UI에서 스키마 편집기를 사용하는 방법을 잘 알고 있다고 가정합니다. 계속하려면 이 안내서를 계속하기 전에 [새 스키마를 만들고](./resources/schemas.md)표준 클래스에 할당하는 프로세스를 시작해야 합니다.
+이 자습서에서는 사용자가 [XDM 스키마의 구성](../schema/composition.md)과 Experience Platform UI의 스키마 편집기를 사용하는 방법을 잘 알고 있다고 가정합니다. 계속하려면 이 안내서를 계속하기 전에 [새 스키마를 만들고](./resources/schemas.md)표준 클래스에 할당하는 프로세스를 시작해야 합니다.
 
 ## 표준 필드 그룹에서 추가된 필드 제거 {#remove-field-group}
 
@@ -111,4 +111,4 @@ Adobe Experience Platform은 XDM(경험 데이터 모델) 스키마에서 사용
 
 ## 다음 단계
 
-이 안내서에서는 Platform UI의 스키마 편집기를 위한 새로운 필드 기반 워크플로우에 대해 다룹니다. UI에서 스키마를 관리하는 방법에 대한 자세한 내용은 [UI 개요](./overview.md)를 참조하십시오.
+이 안내서에서는 Experience Platform UI의 스키마 편집기에 대한 새로운 필드 기반 워크플로우에 대해 다룹니다. UI에서 스키마를 관리하는 방법에 대한 자세한 내용은 [UI 개요](./overview.md)를 참조하십시오.

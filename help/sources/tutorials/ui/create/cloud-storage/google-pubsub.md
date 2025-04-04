@@ -1,11 +1,11 @@
 ---
 title: UI에서 Google PubSub Source 연결 만들기
-description: Platform 사용자 인터페이스를 사용하여 Google PubSub 소스 커넥터를 만드는 방법을 알아봅니다.
+description: Experience Platform 사용자 인터페이스를 사용하여 Google PubSub 소스 커넥터를 만드는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1106'
 ht-degree: 1%
 
 ---
@@ -14,16 +14,16 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->[!DNL Google PubSub] 원본은 Real-time Customer Data Platform Ultimate를 구입한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
+>[!DNL Google PubSub] 소스는 Real-Time Customer Data Platform Ultimate을 구매한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
 
-이 자습서에서는 Platform 사용자 인터페이스를 사용하여 [!DNL Google PubSub](이하 &quot;[!DNL PubSub]&quot;)을(를) 만드는 단계를 제공합니다.
+이 자습서에서는 Experience Platform 사용자 인터페이스를 사용하여 [!DNL Google PubSub]&#x200B;(이하 &quot;[!DNL PubSub]&quot;)을(를) 만드는 단계를 제공합니다.
 
 ## 시작하기
 
 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 이미 올바른 [!DNL PubSub] 연결이 있는 경우 이 문서의 나머지 부분을 건너뛰고 [데이터 흐름 구성](../../dataflow/batch/cloud-storage.md)에 대한 자습서로 진행할 수 있습니다.
 
@@ -57,11 +57,11 @@ ht-degree: 1%
 >
 >서비스 계정 기반 인증을 사용하는 경우 자격 증명을 복사하고 붙여넣을 때 서비스 계정에 대한 충분한 사용자 액세스 권한을 부여했는지 그리고 JSON에 추가 공백이 없는지 확인하십시오.
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL PubSub] 계정을 플랫폼에 연결할 수 있습니다.
+필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL PubSub] 계정을 Experience Platform에 연결할 수 있습니다.
 
 ## [!DNL PubSub] 계정 연결
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
@@ -112,7 +112,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 
 ## 데이터 선택
 
-인증이 성공하면 [!UICONTROL 데이터 선택] 단계로 이동합니다. 이 단계에서는 [!DNL PubSub] 데이터 계층 구조를 탐색하고 Experience Platform으로 가져올 데이터를 선택할 수 있습니다.
+인증이 성공하면 [!DNL PubSub] 데이터 계층 구조를 탐색하고 Experience Platform으로 가져올 데이터를 선택할 수 있는 [!UICONTROL 데이터 선택] 단계로 이동합니다.
 
 >[!BEGINTABS]
 
@@ -136,4 +136,4 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 
 ## 다음 단계
 
-이 자습서를 따라 [!DNL PubSub] 계정과 플랫폼 간에 연결을 만들었습니다. 이제 다음 자습서를 계속 진행하고 [클라우드 저장소에서 플랫폼으로 스트리밍 데이터를 가져오도록 데이터 흐름을 구성](../../dataflow/streaming/cloud-storage-streaming.md)할 수 있습니다.
+이 자습서를 따라 [!DNL PubSub] 계정과 Experience Platform 간의 연결을 만들었습니다. 이제 다음 자습서를 계속 진행하고 [데이터 흐름을 구성하여 클라우드 저장소에서 Experience Platform으로 스트리밍 데이터를 가져올 수 있습니다](../../dataflow/streaming/cloud-storage-streaming.md).

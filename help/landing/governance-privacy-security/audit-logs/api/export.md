@@ -4,9 +4,9 @@ description: 감사 쿼리 API를 사용하여 Experience Platform에서 감사 
 role: Developer
 feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '159'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ GET /audit/export
 | `status` | 작업의 상태입니다. 상태는 다음 중 하나일 수 있습니다. </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul><br/>예: `?property=status==Deny`. |
 | `action` | 이벤트에 대해 기록된 작업 유형입니다. 작업은 다음 중 하나일 수 있습니다. <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`Remove` </li><li>`Reset` </li><li>`Segment Activate` </li><li>`Segment remove` </li><li>`Update` </li></ul> 예: `?property=action==Create`. |
 | `user` | 이벤트를 수행한 사용자입니다. |
-| `assetType` | 작업이 수행된 플랫폼 리소스의 유형입니다. <br/>예: `?property=assetType==<an asset type>`. |
+| `assetType` | 작업이 수행된 Experience Platform 리소스의 유형입니다. <br/>예: `?property=assetType==<an asset type>`. |
 
 **요청**
 

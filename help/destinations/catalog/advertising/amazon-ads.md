@@ -1,11 +1,11 @@
 ---
 title: Amazon 광고
-description: Amazon Ads는 등록된 판매자, 공급업체, 서적 공급업체, Kindle Direct Publishing(KDP) 작성자, 앱 개발자 및/또는 에이전시에 대한 광고 목표를 달성하는 데 도움이 되는 다양한 옵션을 제공합니다. Amazon Ads와 Adobe Experience Platform의 통합은 ADSP(Amazon DSP)를 비롯한 Amazon Ads 제품에 턴키 통합을 제공합니다. Adobe Experience Platform의 Amazon 광고 대상을 사용하면 Amazon DSP에서 타깃팅 및 활성화를 위해 광고주 대상을 정의할 수 있습니다.
+description: Amazon Ads는 등록된 판매자, 공급업체, 서적 공급업체, Kindle Direct Publishing(KDP) 작성자, 앱 개발자 및/또는 에이전시에 대한 광고 목표를 달성하는 데 도움이 되는 다양한 옵션을 제공합니다. Adobe Experience Platform과 Amazon Ads 통합에서는 ADSP(Amazon DSP)를 비롯한 Amazon Ads 제품에 대한 전환 키 통합을 제공합니다. Adobe Experience Platform의 Amazon Ads 대상을 사용하면 Amazon DSP에서 타깃팅 및 활성화를 위해 광고주 대상을 정의할 수 있습니다.
 last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1820'
 ht-degree: 2%
 
 ---
@@ -36,15 +36,15 @@ AMC는 Amazon 소유 및 운영되는 속성에서 디스플레이, 비디오, �
 
 ### Analytics 및 측정 {#analytics-and-measurement}
 
-[!DNL Amazon Marketing Cloud](AMC)과의 이러한 통합을 통해 [!DNL Amazon Ads] 광고주가 Adobe Experience Platform 양식의 CDP 세그먼트를 AMC에 전달할 수 있습니다. 그런 다음 광고주는 [!DNL Amazon Ads] 신호를 사용하여 CDP 입력에 참여하고 미디어 영향, 대상 세그먼트 및 개인 정보 보호 준수 형식의 고객 여정과 같은 주제에 대한 사용자 지정 분석을 수행할 수 있습니다. 예를 들어 광고주는 기존 고객 목록을 업로드하여 전체 광고 캠페인 성과 또는 제품 세부 사항 페이지 보기, 장바구니에 제품 추가 또는 제품 구매와 같은 Amazon 전환 이벤트의 집계된 통계를 파악할 수 있습니다.
+[!DNL Amazon Marketing Cloud]&#x200B;(AMC)과의 이러한 통합을 통해 [!DNL Amazon Ads] 광고주가 Adobe Experience Platform 양식의 CDP 세그먼트를 AMC에 전달할 수 있습니다. 그런 다음 광고주는 [!DNL Amazon Ads] 신호를 사용하여 CDP 입력에 참여하고 미디어 영향, 대상 세그먼트 및 개인 정보 보호 준수 형식의 고객 여정과 같은 주제에 대한 사용자 지정 분석을 수행할 수 있습니다. 예를 들어 광고주는 기존 고객 목록을 업로드하여 전체 광고 캠페인 성과 또는 제품 세부 사항 페이지 보기, 장바구니에 제품 추가 또는 제품 구매와 같은 Amazon 전환 이벤트의 집계된 통계를 파악할 수 있습니다.
 
 ### Advertising 최적화
 
-[!DNL Amazon Marketing Cloud](AMC)과의 이러한 통합을 통해 광고주는 자신의 고객 목록을 업로드하고 [!DNL Amazon Marketing Cloud] SQL을 사용하여 타깃팅을 위해 Amazon DSP에서 활성화 준비 대상을 만들기 전에 반복해서 대상에 중복 분석, 억제, 추가 또는 최적화를 수행할 수 있습니다.
+[!DNL Amazon Marketing Cloud]&#x200B;(AMC)과의 이러한 통합을 통해 광고주는 자신의 고객 목록을 업로드하고 [!DNL Amazon Marketing Cloud] SQL을 사용하여 타깃팅을 위해 Amazon DSP에서 활성화 준비 대상을 만들기 전에 반복해서 대상에 중복 분석, 억제, 추가 또는 최적화를 수행할 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
-Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼저 사용자가 Amazon DSP Advertiser 계정 또는 [!DNL Amazon Marketing Cloud] 인스턴스에 액세스할 수 있어야 합니다. 이러한 인스턴스를 프로비전하려면 [!DNL Amazon Ads] 웹 사이트의 다음 페이지를 방문하십시오.
+Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼저 사용자가 Amazon DSP 광고주 계정 또는 [!DNL Amazon Marketing Cloud] 인스턴스에 액세스할 수 있어야 합니다. 이러한 인스턴스를 프로비전하려면 [!DNL Amazon Ads] 웹 사이트의 다음 페이지를 방문하십시오.
 
 * [Amazon DSP 시작](https://advertising.amazon.com/solutions/products/amazon-dsp)
 * [Amazon Marketing Cloud 시작](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
@@ -55,8 +55,8 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
-| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
 
 {style="table-layout:auto"}
 
@@ -122,11 +122,11 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 [!DNL Amazon Ads] 연결은 ID 일치를 위해 해시된 이메일 주소와 해시된 전화 번호를 지원합니다. 아래 스크린샷은 [!DNL Amazon Ads] 연결과 호환되는 예제 일치를 제공합니다.
 
-![Amazon 광고 매핑 Adobe](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png)
+![Adobe과 Amazon 광고 매핑](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png)
 
 * 해시된 이메일 주소를 매핑하려면 `Email_LC_SHA256` ID 네임스페이스를 원본 필드로 선택하십시오.
 * 해시된 전화 번호를 매핑하려면 `Phone_SHA256` ID 네임스페이스를 원본 필드로 선택하십시오.
-* 해시되지 않은 이메일 주소 또는 전화번호를 매핑하려면 해당 ID 네임스페이스를 소스 필드로 선택하고 `Apply Transformation` 옵션을 선택하여 활성화 시 Platform이 ID를 해시하도록 합니다.
+* 해시되지 않은 이메일 주소 또는 전화번호를 매핑하려면 해당 ID 네임스페이스를 소스 필드로 선택하고 `Apply Transformation` 옵션을 선택하여 활성화 시 Experience Platform에서 ID를 해시하도록 합니다.
 * *2024년 9월 릴리스부터 새로 만들기*: Amazon 광고에서는 ID 확인 프로세스를 용이하게 하기 위해 `countryCode` 값이 포함된 필드를 2자 ISO 형식으로 매핑해야 합니다(예: US, GB, MX, CA 등). `countryCode` 매핑이 없는 연결은 ID 일치율에 부정적인 영향을 줍니다.
 
 [!DNL Amazon Ads] 커넥터의 대상 구성에서 지정된 대상 필드를 한 번만 선택합니다.  예를 들어 비즈니스 이메일을 제출하는 경우 동일한 대상 구성에서 개인 이메일을 매핑할 수도 없습니다.
@@ -137,7 +137,7 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 대상이 업로드되면 다음 단계를 통해 대상이 올바르게 생성 및 업로드되었는지 확인할 수 있습니다.
 
-**Amazon DSP용**
+**Amazon DSP의 경우**
 
 **[!UICONTROL 광고주 ID]** > **[!UICONTROL 대상]** > **[!UICONTROL 광고주 대상]**(으)로 이동합니다. 대상자가 만들어졌고 최소 대상자 구성원 수를 충족하면 `Active` 상태가 표시됩니다. 대상자 크기 및 도달에 대한 자세한 내용은 Amazon DSP 사용자 인터페이스 오른쪽에 있는 예측 도달 패널에서 확인할 수 있습니다.
 
@@ -171,7 +171,7 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 |---|---|---|
 | 2025년 2월 | 데이터 흐름을 내보내고 대상을 Beta에서 일반적으로 사용할 수 있도록 승격하기 위해 **[!UICONTROL Amazon 광고 동의 신호]**&#x200B;를 추가하는 요구 사항이 추가되었습니다. |
 | 2024년 5월 | 기능 및 설명서 업데이트 | `countryCode` 매개 변수를 Amazon 광고로 내보내는 매핑 옵션을 추가했습니다. [매핑 단계](#map)에서 `countryCode`를 사용하여 Amazon의 ID 일치율을 개선해 보십시오. |
-| 2024년 3월 | 기능 및 설명서 업데이트 | [!DNL Amazon Marketing Cloud](AMC)에서 사용할 대상을 내보내는 옵션이 추가되었습니다. |
+| 2024년 3월 | 기능 및 설명서 업데이트 | [!DNL Amazon Marketing Cloud]&#x200B;(AMC)에서 사용할 대상을 내보내는 옵션이 추가되었습니다. |
 | 2023년 5월 | 기능 및 설명서 업데이트 | <ul><li>[대상 연결 워크플로](#destination-details)에서 광고주 영역 선택에 대한 지원을 추가했습니다.</li><li>광고주 지역 선택 사항의 추가를 반영하도록 설명서를 업데이트했습니다. 올바른 광고주 지역 선택에 대한 자세한 내용은 [Amazon 설명서](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)를 참조하세요.</li></ul> |
 | 2023년 3월 | 초기 릴리스 | 초기 대상 릴리스 및 설명서가 게시되었습니다. |
 

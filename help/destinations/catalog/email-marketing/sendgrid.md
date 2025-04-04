@@ -3,7 +3,7 @@ keywords: 이메일;이메일;이메일;이메일 대상;sendgrid;sendgrid 대�
 title: SendGrid 연결
 description: SendGrid 대상을 사용하면 자사 데이터를 내보내고 비즈니스 요구 사항에 맞게 SendGrid 내에서 활성화할 수 있습니다.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 3%
@@ -48,7 +48,7 @@ SendGrid는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| 이메일 | 이메일 주소 | [!DNL Adobe Experience Platform]은(는) 일반 텍스트와 SHA256 해시된 이메일 주소를 모두 지원합니다. Experience platform 소스 필드에 해시되지 않은 특성이 포함되어 있는 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오.<br/><br/> **SendGrid**&#x200B;은(는) 해시된 전자 메일 주소를 지원하지 않으므로 변환되지 않은 일반 텍스트 데이터만 대상으로 전송됩니다. |
+| 이메일 | 이메일 주소 | [!DNL Adobe Experience Platform]은(는) 일반 텍스트와 SHA256 해시된 이메일 주소를 모두 지원합니다. Experience platform 소스 필드에 해시되지 않은 특성이 포함되어 있는 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오.<br/><br/> **SendGrid**&#x200B;은(는) 해시된 전자 메일 주소를 지원하지 않으므로 변환되지 않은 일반 텍스트 데이터만 대상으로 전송됩니다. |
 
 {style="table-layout:auto"}
 

@@ -3,28 +3,28 @@ keywords: DoubleClick Floodlight;doubleclick floodlight extension;doubleclick;fl
 title: DoubleClick Floodlight(Beta) 확장
 description: DoubleClick Floodlight(Beta) 확장은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 64e1f964-a58e-43d2-8b1a-3baa6104ab3a
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '448'
 ht-degree: 3%
 
 ---
 
-# [!DNL DoubleClick Floodlight](Beta) 확장
+# [!DNL DoubleClick Floodlight]&#x200B;(Beta) 확장
 
 ## 개요 {#overview}
 
 이 확장을 사용하면 기존 Floodlight 형식(전역 사이트 태그 아님)을 사용하여 [!DNL DoubleClick Floodlight] 태그를 빠르고 쉽게 배포할 수 있습니다. 참고: 이 확장 기능은 Beta 버전입니다.
 
-[!DNL DoubleClick Floodlight](Beta)은(는) Adobe Experience Platform의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en)에 대한 [!DNL Google] 지원 설명서를 참조하십시오.
+[!DNL DoubleClick Floodlight]&#x200B;(Beta)은(는) Adobe Experience Platform의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en)에 대한 [!DNL Google] 지원 설명서를 참조하십시오.
 
-이 대상은 태그 확장입니다. Platform에서 태그 확장이 작동하는 방식에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
+이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
 ![Doubleclick Floodlight 확장](../../assets/catalog/advertising/doubleclick-floodlight/catalog.png)
 
 ## 전제 조건 {#prerequisites}
 
-이 확장은 Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
+이 확장은 Experience Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
 이 확장을 사용하려면 Adobe Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 문의하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여해 달라고 요청하십시오.
 
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 DoubleClick Floodlight(Beta) 확장을 설치하려면
 
-[플랫폼 인터페이스](https://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**(으)로 이동합니다.
+[Experience Platform 인터페이스](https://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**(으)로 이동합니다.
 
 카탈로그에서 확장을 선택하거나 검색 창을 사용합니다.
 
@@ -56,6 +56,6 @@ DoubleClick Floodlight(Beta) 확장을 설치하려면
 
 >[!TIP]
 >
->확장이 속성 중 하나에 이미 설치되어 있는 경우에도 Platform UI에 확장에 대한 **[!UICONTROL 설치]**&#x200B;가 표시됩니다. 확장을 구성하거나 삭제하려면 [확장 설치](#install-extension)에 설명된 대로 설치 워크플로를 시작합니다.
+>확장이 속성 중 하나에 이미 설치되어 있는 경우에도 Experience Platform UI에 확장에 대한 **[!UICONTROL 설치]**&#x200B;가 표시됩니다. 확장을 구성하거나 삭제하려면 [확장 설치](#install-extension)에 설명된 대로 설치 워크플로를 시작합니다.
 
 확장을 업그레이드하려면 태그 설명서의 [확장 업그레이드 프로세스](../../../tags/ui/managing-resources/extensions/extension-upgrade.md)에 대한 안내서를 참조하십시오.

@@ -2,9 +2,9 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 게시 요청에 대한 세부 정보를 검색하는 데 사용되는 API 호출을 예시합니다.
 title: 대상 게시 요청 검색
 exl-id: fceef12d-a52c-4259-a91e-7af88b132800
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '837'
 ht-degree: 2%
 
 ---
@@ -19,12 +19,12 @@ ht-degree: 2%
 >
 >**API 끝점**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-대상을 구성하고 테스트한 후 검토 및 게시를 위해 Adobe에 제출할 수 있습니다. 대상 제출 프로세스의 일부로 수행해야 하는 다른 모든 단계에 대해 [Destination SDK에 작성된 대상을 검토하려면 제출](../guides/submit-destination.md)을 읽으십시오.
+대상을 구성하고 테스트한 후 검토 및 게시를 위해 Adobe에 제출할 수 있습니다. 대상 제출 프로세스의 일부로 수행해야 하는 다른 모든 단계에 대해 [Destination SDK에서 작성된 대상을 검토하려면 제출](../guides/submit-destination.md)을 읽으십시오.
 
 다음과 같은 경우에 게시 요청을 제출하려면 게시 대상 API 엔드포인트를 사용합니다.
 
-* Destination SDK 파트너로서 모든 Experience Platform 조직에서 모든 Experience Platform 고객이 사용할 수 있는 제품화된 대상을 만들고 싶을 수 있습니다.
-* 구성에 대해 *모든 업데이트*&#x200B;합니다. 구성 업데이트는 Experience Platform 팀이 승인하는 새 게시 요청을 제출한 후에만 대상에 반영됩니다.
+* Destination SDK 파트너는 모든 Experience Platform 고객이 사용할 수 있도록 모든 Experience Platform 조직에서 제품화된 대상을 사용할 수 있도록 하고자 합니다.
+* 구성에 대해 *모든 업데이트*&#x200B;합니다. 구성 업데이트는 Experience Platform 팀에서 승인하는 새 게시 요청을 제출한 후에만 대상에 반영됩니다.
 
 >[!IMPORTANT]
 >
@@ -183,4 +183,4 @@ API 호출에서 `DESTINATION_ID`을(를) 전달한 경우 응답은 지정된 �
 
 ## API 오류 처리
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.

@@ -2,10 +2,10 @@
 title: Adobe Experience Cloud Identity Service 확장 개요
 description: Adobe Experience Platform의 Adobe Experience Cloud Identity 서비스 태그 확장에 대해 알아봅니다.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 73%
+source-wordcount: '793'
+ht-degree: 75%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Cloud ID 확장 구성 및 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -49,7 +49,7 @@ URL이 지정된 경로와 일치하는 경우 Experience Cloud ID가 로드되�
 
 옵트인 옵션을 사용하여 방문자의 활동을 추적하는 쿠키를 만들지 여부를 포함하여 방문자가 사이트에서 Adobe 서비스를 옵트인해야 하는지 여부를 결정합니다.
 
-옵트인은 모든 플랫폼 솔루션 클라이언트측 라이브러리에 대한 중앙 참조점으로, 사용자가 사이트를 방문할 때 사용자의 장치나 브라우저에 쿠키를 만들 수 있는지 여부를 결정합니다. 옵트인은 사용자 동의 기본 설정을 수집하거나 저장하는 기능을 지원하지 않습니다.
+옵트인은 모든 Experience Platform 솔루션 클라이언트측 라이브러리에 대한 중앙 참조점으로, 사용자 사이트를 방문할 때 사용자의 디바이스 또는 브라우저에 쿠키를 만들 수 있는지 여부를 결정합니다. 옵트인은 사용자 동의 기본 설정을 수집하거나 저장하는 기능을 지원하지 않습니다.
 
 **Enable Opt In?**
 
@@ -89,7 +89,7 @@ URL이 지정된 경로와 일치하는 경우 Experience Cloud ID가 로드되�
 
 ### 변수
 
-이름-값 쌍을 Experience Cloud ID 인스턴스 속성으로 설정합니다. 드롭다운을 사용하여 변수를 선택한 다음 값을 입력하거나 선택합니다. 각 변수에 대한 자세한 내용은 [Experience Cloud ID 서비스 설명서](https://experiencecloud.adobe.com/resources/help/ko_KR/mcvid/mcvid-overview.html)를 참조하세요.
+이름-값 쌍을 Experience Cloud ID 인스턴스 속성으로 설정합니다. 드롭다운을 사용하여 변수를 선택한 다음 값을 입력하거나 선택합니다. 각 변수에 대한 자세한 내용은 [Experience Cloud Identity Service 설명서](https://experiencecloud.adobe.com/resources/help/ko_KR/mcvid/mcvid-overview.html)를 참조하세요.
 
 ## Experience Cloud ID 확장 작업 유형
 

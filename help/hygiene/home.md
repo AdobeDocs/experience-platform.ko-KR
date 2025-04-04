@@ -2,9 +2,9 @@
 title: 고급 데이터 수명주기 관리 개요
 description: 고급 데이터 수명 주기 관리를 사용하면 오래되거나 부정확한 레코드를 업데이트하거나 삭제하여 데이터의 수명 주기를 관리할 수 있습니다.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 6ef09957d1eb2c07e5607105c782c36f20344bfa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform은 소비자 경험을 조정하기 위해 크고 복잡한 데이터 작업을 관리하는 강력한 도구 세트를 제공합니다. 시간이 지나면서 데이터가 시스템에 수집되면 데이터가 예상대로 사용되고, 잘못된 데이터를 수정해야 할 때 업데이트되고, 조직 정책에서 필요하다고 판단할 때 삭제되도록 데이터 저장소를 관리하는 것이 점점 더 중요해집니다.
 
-<!-- Platform's data lifecycle capabilities allow you to manage your stored data through the following:
+<!-- Experience Platform's data lifecycle capabilities allow you to manage your stored data through the following:
 
 * Scheduling automated dataset expirations
 * Deleting individual records from one or all datasets
@@ -26,11 +26,11 @@ Adobe Experience Platform은 소비자 경험을 조정하기 위해 크고 복�
 
 >[!NOTE]
 >
->Advanced Data Lifecycle Management는 [데이터 세트 만료 끝점](./api/dataset-expiration.md)을 통해 데이터 세트 삭제를 지원하고 [작업 주문 끝점](./api/workorder.md)을 통해 기본 ID를 사용하여 ID 삭제(행 수준 데이터)를 지원합니다. Platform UI를 통해 [데이터 세트 만료](./ui/dataset-expiration.md) 및 [레코드 삭제](./ui/record-delete.md)을 관리할 수도 있습니다. 자세한 내용은 연결된 설명서 를 참조하십시오. 데이터 수명 주기는 일괄 삭제를 지원하지 않습니다.
+>Advanced Data Lifecycle Management는 [데이터 세트 만료 끝점](./api/dataset-expiration.md)을 통해 데이터 세트 삭제를 지원하고 [작업 주문 끝점](./api/workorder.md)을 통해 기본 ID를 사용하여 ID 삭제(행 수준 데이터)를 지원합니다. Experience Platform UI를 통해 [데이터 세트 만료](./ui/dataset-expiration.md) 및 [레코드 삭제](./ui/record-delete.md)을 관리할 수도 있습니다. 자세한 내용은 연결된 설명서 를 참조하십시오. 데이터 수명 주기는 일괄 삭제를 지원하지 않습니다.
 
 ## [!UICONTROL 데이터 수명 주기] UI 작업 영역 {#ui}
 
-Platform UI의 [!UICONTROL 데이터 수명 주기] 작업 영역을 사용하면 데이터 수명 주기 작업을 구성하고 예약할 수 있으므로 레코드가 예상대로 유지될 수 있습니다.
+Experience Platform UI의 [!UICONTROL 데이터 수명 주기] 작업 영역을 사용하면 데이터 수명 주기 작업을 구성하고 예약할 수 있으므로 레코드가 예상대로 유지될 수 있습니다.
 
 UI에서 데이터 라이프사이클 작업을 관리하는 자세한 단계는 [데이터 라이프사이클 UI 안내서](./ui/overview.md)를 참조하십시오.
 
@@ -58,7 +58,7 @@ UI에서 데이터 라이프사이클 작업을 관리하는 자세한 단계는
 
 >[!IMPORTANT]
 >
->Amazon Web Services(AWS)의 데이터 세트 삭제는 변경 사항이 완전히 적용되기 전에 약 3시간의 지연 시간이 적용됩니다. 여기에는 데이터 세트가 삭제에 플래그가 지정되는 데 최대 2시간이 포함된 다음 시스템에서 완전히 삭제되기 전에 추가 1시간이 포함됩니다. 반면 Azure Data Lake를 사용하는 플랫폼 인스턴스에 대한 삭제 요청은 비즈니스 기능 전반에 걸쳐 즉각적인 변경을 초래합니다.
+>Amazon Web Services(AWS)의 데이터 세트 삭제는 변경 사항이 완전히 적용되기 전에 약 3시간의 지연 시간이 적용됩니다. 여기에는 데이터 세트가 삭제에 플래그가 지정되는 데 최대 2시간이 포함된 다음 시스템에서 완전히 삭제되기 전에 추가 1시간이 포함됩니다. 반면 Azure 데이터 레이크를 사용하는 Experience Platform 인스턴스에 대한 삭제 요청은 비즈니스 기능 전반에 걸쳐 즉각적인 변경을 초래합니다.
 >
 >AWS 사용자의 경우 이 지연은 배치 세분화, 스트리밍 세분화, 미리보기, 예상, 내보내기 및 데이터 액세스에 영향을 줄 수 있습니다. Azure Data Lake 사용자는 즉시 업데이트를 경험하므로 이 지연 시간은 AWS을 사용하는 고객에게만 영향을 줍니다. AWS 사용자의 경우 삭제 요청이 영향을 받는 모든 시스템을 통해 완전히 전파되는 데 최대 3시간이 걸릴 수 있습니다. 그에 따라 기대치를 조정하십시오.
 
@@ -80,4 +80,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## 다음 단계
 
-이 문서에서는 플랫폼의 데이터 수명주기 기능에 대한 개요를 제공합니다. UI에서 데이터 위생 요청을 시작하려면 [UI 안내서](./ui/overview.md)를 참조하세요. 프로그래밍 방식으로 데이터 수명 주기 작업을 만드는 방법에 대해 알아보려면 [데이터 위생 API 안내서](./api/overview.md)를 참조하세요.
+이 문서에서는 Experience Platform의 데이터 라이프사이클 기능에 대한 개요를 제공합니다. UI에서 데이터 위생 요청을 시작하려면 [UI 안내서](./ui/overview.md)를 참조하세요. 프로그래밍 방식으로 데이터 수명 주기 작업을 만드는 방법에 대해 알아보려면 [데이터 위생 API 안내서](./api/overview.md)를 참조하세요.

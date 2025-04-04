@@ -4,9 +4,9 @@ title: 통합 태그 API 시작하기
 description: 다음 설명서는 통합 태그 API를 성공적으로 사용하기 위해 알아야 하는 추가 정보를 제공합니다.
 role: Developer
 exl-id: 8f33707f-b46d-4054-802c-9e42ecabd9ba
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '262'
 ht-degree: 9%
 
 ---
@@ -23,13 +23,13 @@ ht-degree: 9%
 
 ## 필수 헤더
 
-또한 API 설명서를 사용하려면 플랫폼 끝점을 성공적으로 호출하려면 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 Experience Platform API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
+또한 API 설명서를 사용하려면 Experience Platform 끝점을 성공적으로 호출하기 위해 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 Experience Platform API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
 
 - 인증: `Bearer {ACCESS_TOKEN}`
 - x-api 키: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Platform] API에 대한 모든 요청에는 작업을 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업을 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 

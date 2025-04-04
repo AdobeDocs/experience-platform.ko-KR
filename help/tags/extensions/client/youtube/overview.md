@@ -2,10 +2,10 @@
 title: YouTube 비디오 추적 확장 개요
 description: Adobe Experience Platform의 YouTube 비디오 추적 태그 확장에 대해 알아봅니다.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 30%
+source-wordcount: '897'
+ht-degree: 35%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 30%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 **전제 조건**
 
@@ -23,7 +23,7 @@ Adobe Experience Platform의 각 태그 속성을 사용하려면 확장 화면�
 * Experience Cloud Visitor ID 서비스
 * 코어 확장
 
-비디오 플레이어를 렌더링할 각 웹 페이지의 HTML에 있는 Google 개발자 문서의 \&lt;iframe\> 태그&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) 코드 조각을 사용하여 [&quot;플레이어 포함&quot;을 사용합니다.
+비디오 플레이어를 렌더링할 각 웹 페이지의 HTML에 있는 Google 개발자 문서에서 \&lt;iframe\> 태그&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) 코드 조각을 사용하여 [&quot;플레이어 포함&quot;을 사용하십시오.
 
 이 확장 버전 2.0.1은 iframe 스크립트 태그에 고유한 값이 있는 `id` 특성을 삽입하고 아직 포함되지 않은 경우 `src` 특성 값의 끝에 `enablejsapi=1` 및 `rel=0`을(를) 추가하여 단일 웹 페이지에 하나 이상의 YouTube 비디오를 포함하도록 지원합니다. 예:
 
@@ -98,7 +98,7 @@ document.onreadystatechange = function () {
 
 >[!TIP]
 > 
->각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 사용할 수 없는 구현의 경우, 데이터 요소 값을 플랫폼 내에서 연결하고, 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석한 다음, [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)에 설명된 대로 Analysis Workspace에서 세그먼트로 적용할 수 있습니다.
+>각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 사용할 수 없는 구현의 경우, 데이터 요소 값을 Experience Platform 내에서 연결하고, 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석한 다음, [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)에 설명된 대로 Analysis Workspace에서 세그먼트로 적용할 수 있습니다.
 
 비디오 정보 값을 연결하려면 &quot;비디오 메타데이터&quot;라는 새 데이터 요소를 만들고 이를 프로그래밍하여 모든 비디오 데이터 요소(위에 나열됨)를 가져와서 함께 조합합니다. 예:
 
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-플랫폼 내에서 데이터 요소를 효과적으로 만들고 활용하는 방법에 대한 자세한 내용은 [데이터 요소](../../../ui/managing-resources/data-elements.md) 설명서를 참조하십시오.
+Experience Platform 내에서 데이터 요소를 효과적으로 만들고 활용하는 방법에 대한 자세한 내용은 [데이터 요소](../../../ui/managing-resources/data-elements.md) 설명서를 참조하십시오.

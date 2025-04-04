@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM 필드 유형 제한
 description: 매핑할 수 있는 다른 일련화 형식과 API에서 고유한 필드 유형을 정의하는 방법을 포함하여 XDM(Experience Data Model)의 필드 유형 제약 조건에 대한 참조입니다.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: ca8859c7b71d1b0aad30880ff066d2b4b33b0a35
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '684'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
 
 >[!NOTE]
 >
->JSON 스키마 및 Platform API의 다른 기본 기술에 대한 자세한 내용은 [API 기본 사항 안내서](../../landing/api-fundamentals.md#json-schema)를 참조하십시오.
+>JSON 스키마 및 Experience Platform API의 기타 기본 기술에 대한 자세한 내용은 [API 기본 사항 안내서](../../landing/api-fundamentals.md#json-schema)를 참조하십시오.
 
 다음 표에서는 해당 유형을 준수하는 예제 값과 함께 각 XDM 유형이 JSON 스키마에서 표시되는 방식을 간략하게 설명합니다.
 

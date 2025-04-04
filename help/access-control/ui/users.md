@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 제품 프로필에 대한 사용자 관리
 description: 이 문서에서는 Adobe Experience Platform용 UI에서 제품 프로필의 사용자를 관리하는 방법을 보여줍니다.
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
-source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
@@ -33,4 +33,4 @@ ht-degree: 0%
 
 ## 다음 단계
 
-[!DNL Admin Console]을(를) 통해 플랫폼 기능에 대한 액세스를 제어하는 방법에 대해 알아보았으므로 [액세스 제어 개요](../home.md)의 부록 섹션을 참조하여 각 개별 권한 및 액세스 권한을 부여하는 플랫폼 기능에 대해 자세히 알아보십시오.
+[!DNL Admin Console]을(를) 통해 Experience Platform 기능에 대한 액세스를 제어하는 방법에 대해 알아보았으므로, [액세스 제어 개요](../home.md)의 부록 섹션을 참조하여 각 개별 권한 및 액세스 권한을 부여하는 Experience Platform 기능에 대해 자세히 알아보십시오.

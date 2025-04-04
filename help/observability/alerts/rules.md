@@ -4,9 +4,9 @@ title: 표준 경고 규칙
 description: 이 문서에서는 Experience Platform에서 제공하는 사전 정의된 경고 규칙에 대해 설명합니다.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 3a800560376973a85f9f77a481ffead3c28a05aa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4277'
+source-wordcount: '4279'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Adobe Experience Platform은 조직에 대해 활성화할 수 있는 사전 정의된 경고 규칙을 몇 가지 제공합니다. 이 문서에서는 Adobe에서 제공하는 이러한 경고 규칙의 세부 사항을 다룹니다. Experience Platform의 경고에 대한 일반적인 정보는 [경고 개요](./overview.md)를 참조하십시오.
 
-[Platform UI에서 경고 규칙을 볼 때](./ui.md) 각 규칙을 개별적으로 구독할 수 있습니다. 그러나 [I/O 이벤트 알림](./subscribe.md)을 통해 경고를 구독하면 경고 규칙이 다른 구독 패키지로 구성됩니다. 아래 표에는 각 규칙이 해당 I/O 이벤트 구독 이름과 함께 표시됩니다.
+[Experience Platform UI에서 경고 규칙을 볼 때](./ui.md) 각 규칙을 개별적으로 구독할 수 있습니다. 그러나 [I/O 이벤트 알림](./subscribe.md)을 통해 경고를 구독하면 경고 규칙이 다른 구독 패키지로 구성됩니다. 아래 표에는 각 규칙이 해당 I/O 이벤트 구독 이름과 함께 표시됩니다.
 
 ## 소스 {#sources}
 
@@ -36,7 +36,7 @@ Adobe Experience Platform은 조직에 대해 활성화할 수 있는 사전 정
 
 | I/O 이벤트 구독 | 경고 규칙 | 설명 |
 | --- | --- | --- |
-| Source 흐름 실행 지연, 실패 및 오류 | 수집 부족 | 이 경고는 수집이 7시간 이상 지연되고 플랫폼으로 데이터가 수집되지 않는 경우 메시지를 보냅니다. |
+| Source 흐름 실행 지연, 실패 및 오류 | 수집 부족 | 이 경고는 수집이 7시간 이상 지연되고 Experience Platform에 데이터가 수집되지 않는 경우 메시지를 보냅니다. |
 
 {style="table-layout:auto"}
 

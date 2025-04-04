@@ -4,9 +4,9 @@ title: 경고 개요
 description: 경고 규칙이 정의되는 구조를 포함하여 Adobe Experience Platform에서의 다양한 경고에 대해 알아봅니다.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: 829d7da1dc53486eba1cdceddb7888b578e1c137
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '804'
 ht-degree: 3%
 
 ---
@@ -19,13 +19,13 @@ ht-degree: 3%
 
 Adobe Experience Platform을 사용하면 Adobe Experience Platform 활동과 관련된 이벤트 기반 경고를 구독할 수 있습니다. 경고는 작업이 완료되었는지, 워크플로우 내의 특정 마일스톤에 도달했는지 또는 오류가 발생했는지 확인하기 위해 [[!DNL Observability Insights] API](../api/overview.md)를 폴링하지 않아도 됩니다.
 
-플랫폼 작업의 특정 조건 세트에 도달하면(예: 시스템이 임계값을 위반한 경우 발생할 수 있는 문제), Platform은 경고 메시지를 구독한 조직의 모든 사용자에게 전달할 수 있습니다. 이러한 메시지는 경고가 해결될 때까지 사전 정의된 시간 간격 동안 반복될 수 있습니다.
+Experience Platform 작업의 특정 조건 세트에 도달하면(예: 시스템이 임계값을 위반한 경우 발생할 수 있는 문제) Experience Platform에서 이를 구독한 조직의 모든 사용자에게 경고 메시지를 전달할 수 있습니다. 이러한 메시지는 경고가 해결될 때까지 사전 정의된 시간 간격 동안 반복될 수 있습니다.
 
 이 문서에서는 경고 규칙이 정의되는 구조를 포함하여 Adobe Experience Platform의 경고에 대한 개요를 제공합니다.
 
 ## 일회성 경고와 반복 경고 비교
 
-Platform 경고를 한 번 전송하거나 해결할 때까지 사전 정의된 간격 동안 반복할 수 있습니다. 이러한 각 옵션의 사용 사례는 다음과 같은 점에서 다르기 위한 것입니다.
+Experience Platform 경고는 한 번 전송하거나 해결할 때까지 사전 정의된 간격 동안 반복할 수 있습니다. 이러한 각 옵션의 사용 사례는 다음과 같은 점에서 다르기 위한 것입니다.
 
 | 일회성 경고 | 반복 경고 |
 | --- | --- |
@@ -53,20 +53,20 @@ Platform 경고를 한 번 전송하거나 해결할 때까지 사전 정의된 
 
 경고는 다음 두 가지 채널을 통해 수신 및 관리할 수 있습니다.
 
-* [Adobe I/O 이벤트](#events)
-* [플랫폼 UI](#ui)
+* [Adobe I/O Events](#events)
+* [EXPERIENCE PLATFORM UI](#ui)
 
 ### I/O 이벤트 {#events}
 
-활동 모니터링의 효율적인 자동화를 용이하게 하기 위해 구성된 웹후크에 경고를 보낼 수 있습니다. Webhook을 통해 경고를 수신하려면 Adobe Developer Console에서 Platform 경고에 대한 Webhook을 등록해야 합니다. 특정 단계는 [Adobe I/O 이벤트 알림 구독](./subscribe.md)에 대한 안내서를 참조하십시오.
+활동 모니터링의 효율적인 자동화를 용이하게 하기 위해 구성된 웹후크에 경고를 보낼 수 있습니다. Webhook을 통해 경고를 수신하려면 Adobe Developer Console에서 Experience Platform 경고에 대한 Webhook을 등록해야 합니다. 특정 단계는 [Adobe I/O 이벤트 알림 구독](./subscribe.md)에 대한 안내서를 참조하십시오.
 
-### 플랫폼 UI {#ui}
+### EXPERIENCE PLATFORM UI {#ui}
 
-Platform UI를 사용하면 수신한 경고를 보고 경고 규칙을 관리할 수 있습니다. 다음 비디오에서는 이러한 기능에 대해 소개합니다.
+Experience Platform UI를 통해 수신된 경고를 보고 경고 규칙을 관리할 수 있습니다. 다음 비디오에서는 이러한 기능에 대해 소개합니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
-Platform UI에서 경고로 작업하려면 Adobe Admin Console을 통해 다음과 같은 액세스 제어 권한이 활성화되어야 합니다.
+Experience Platform UI에서 경고를 사용하여 작업하려면 Adobe Admin Console을 통해 다음 액세스 제어 권한을 활성화해야 합니다.
 
 | 사용 권한 | 설명 |
 | --- | --- |
@@ -81,7 +81,7 @@ Platform UI에서 경고로 작업하려면 Adobe Admin Console을 통해 다음
 
 >[!NOTE]
 >
->플랫폼에서 권한을 관리하는 방법에 대한 자세한 내용은 [액세스 제어 설명서](../../access-control/ui/overview.md)를 참조하세요.
+>Experience Platform에서 권한을 관리하는 방법에 대한 자세한 내용은 [액세스 제어 설명서](../../access-control/ui/overview.md)를 참조하세요.
 
 경고 보기 권한으로 오른쪽 상단 모서리에서 벨 아이콘(![벨 아이콘](/help/images/icons/bell.png))을 선택하여 받은 경고를 볼 수 있습니다.
 
@@ -95,4 +95,4 @@ Platform UI에서 경고로 작업하려면 Adobe Admin Console을 통해 다음
 
 ## 다음 단계
 
-이 문서를 검토하여 플랫폼 경고 및 플랫폼 생태계에서의 역할에 대해 알아보았습니다. 경고를 받고 관리하는 방법은 이 개요 전체에 연결된 프로세스 설명서를 참조하십시오.
+이 문서를 읽고 Experience Platform 알림 및 Experience Platform 생태계에서의 역할에 대해 알아보았습니다. 경고를 받고 관리하는 방법은 이 개요 전체에 연결된 프로세스 설명서를 참조하십시오.

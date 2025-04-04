@@ -1,10 +1,10 @@
 ---
-description: 이 페이지에서는 Adobe Experience Platform Destination SDK을 통해 기존 대상 서버 구성을 업데이트하는 데 사용되는 API 호출을 보여 줍니다.
+description: 이 페이지에서는 Adobe Experience Platform Destination SDK을 통해 기존 대상 서버 구성을 업데이트하는 데 사용되는 API 호출을 구현합니다.
 title: 대상 서버 구성 업데이트
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1103'
 ht-degree: 7%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 7%
 
 이 끝점을 통해 구성할 수 있는 기능에 대한 자세한 설명은 다음 문서를 참조하십시오.
 
-* [Destination SDK으로 생성된 대상의 서버 사양](../../../destination-sdk/functionality/destination-server/server-specs.md)
-* [Destination SDK으로 만든 대상에 대한 템플릿 사양](../../../destination-sdk/functionality/destination-server/templating-specs.md)
+* [Destination SDK으로 만든 대상의 서버 사양](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [Destination SDK으로 만든 대상에 대한 사양 템플릿](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [메시지 포맷](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [파일 서식 구성](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
@@ -92,13 +92,13 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 | 매개변수 | 유형 | 설명 |
 | -------- | ----------- | ----------- |
-| `name` | 문자열 | *필수.* Adobe에 대해서만 표시되는 서버의 이름을 나타냅니다. 이 이름은 파트너나 고객에게 표시되지 않습니다. 예 `Moviestar destination server`. |
+| `name` | 문자열 | *필수.* Adobe에만 표시되는 서버의 알기 쉬운 이름을 나타냅니다. 이 이름은 파트너나 고객에게 표시되지 않습니다. 예 `Moviestar destination server`. |
 | `destinationServerType` | 문자열 | *필수.실시간(스트리밍) 대상에 대해*&#x200B;을(를) `URL_BASED`(으)로 설정합니다. |
-| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe이 아래 `value` 필드의 URL을 변환해야 하는 경우 `PEBBLE_V1`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있는 경우 이 옵션을 사용합니다. </li><li> Adobe 측에서 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items` 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오.</li></ul> |
-| `urlBasedDestination.url.value` | 문자열 | *필수.* Experience Platform이 연결해야 하는 API 끝점의 주소를 입력합니다. |
-| `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe이 서버 호출에 사용할 메서드입니다. 옵션은 `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`입니다. |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe에서 아래 `value` 필드의 URL을 변환해야 하는 경우 `PEBBLE_V1`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있는 경우 이 옵션을 사용합니다. </li><li> Adobe 측에 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items`과 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오.</li></ul> |
+| `urlBasedDestination.url.value` | 문자열 | *필수.* Experience Platform에서 연결할 API 끝점의 주소를 입력합니다. |
+| `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe에서 서버 호출에 사용할 메서드입니다. 옵션은 `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`입니다. |
 | `httpTemplate.requestBody.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
-| `httpTemplate.requestBody.value` | 문자열 | *필수.* 이 문자열은 플랫폼 고객의 데이터를 서비스에 필요한 형식으로 변환하는 문자 이스케이프 처리된 버전입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. </li><li> 간단한 변환의 예를 보려면 [프로필 특성](../../functionality/destination-server/message-format.md#attributes) 변환을 참조하십시오. </li></ul> |
+| `httpTemplate.requestBody.value` | 문자열 | *필수.* 이 문자열은 Experience Platform 고객의 데이터를 서비스에 필요한 형식으로 변환하는 문자 이스케이프 처리된 버전입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. </li><li> 간단한 변환의 예를 보려면 [프로필 특성](../../functionality/destination-server/message-format.md#attributes) 변환을 참조하십시오. </li></ul> |
 | `httpTemplate.contentType` | 문자열 | *필수.* 서버가 허용하는 콘텐츠 형식입니다. 이 값은 `application/json`일 수 있습니다. |
 
 {style="table-layout:auto"}
@@ -752,7 +752,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## API 오류 처리 {#error-handling}
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 

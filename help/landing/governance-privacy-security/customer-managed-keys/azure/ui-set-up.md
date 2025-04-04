@@ -1,21 +1,21 @@
 ---
-title: 플랫폼 UI를 사용하여 Azure에 대한 고객 관리 키 설정 및 구성
+title: Experience Platform UI를 사용하여 Azure에 대한 고객 관리 키 설정 및 구성
 description: Azure 테넌트로 CMK 앱을 설정하고 암호화 키 ID를 Adobe Experience Platform으로 보내는 방법에 대해 알아봅니다.
 role: Developer
 feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: 58bc7a650ff58f877550fa8838c6f8e2908f0090
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
 
-# 플랫폼 UI를 사용하여 Azure에 대한 고객 관리 키 설정 및 구성
+# Experience Platform UI를 사용하여 Azure에 대한 고객 관리 키 설정 및 구성
 
-이 문서에서는 UI를 사용하여 플랫폼에서 CMK(고객 관리 키) 기능을 활성화하기 위한 Azure 관련 지침을 다룹니다. AWS 관련 지침은 [AWS 설치 안내서](../aws/ui-set-up.md)를 참조하세요.
+이 문서에서는 UI를 사용하여 Experience Platform에서 CMK(고객 관리 키) 기능을 활성화하기 위한 Azure 관련 지침을 다룹니다. AWS 관련 지침은 [AWS 설치 안내서](../aws/ui-set-up.md)를 참조하세요.
 
-API를 사용하여 Azure 호스팅 플랫폼 인스턴스에 대해 이 프로세스를 완료하는 방법에 대한 지침은 [API CMK 설정 문서](./api-set-up.md)를 참조하세요.
+API를 사용하여 Azure 호스팅 Experience Platform 인스턴스에 대해 이 프로세스를 완료하는 방법에 대한 지침은 [API CMK 설정 문서](./api-set-up.md)를 참조하세요.
 
 ## 전제 조건
 
@@ -56,7 +56,7 @@ CMK를 사용하려면 다음 설정으로 [[!DNL Azure] Key Vault를 구성](./
 
 >[!IMPORTANT]
 >
->[!DNL Microsoft Azure]개의 구독이 여러 개 있는 경우 Platform 인스턴스를 잘못된 키 자격 증명 모음에 연결할 수 있습니다. 이 경우 응용 프로그램 인증 URL 이름의 `common` 섹션을 CMK 디렉터리 ID로 바꿔야 합니다.<br>[!DNL Microsoft Azure] 응용 프로그램의 Portal 설정, 디렉터리 및 구독 페이지에서 CMK 디렉터리 ID를 복사합니다.<br>![디렉터리 ID가 강조 표시된 [!DNL Microsoft Azure] 응용 프로그램 Portal 설정, 디렉터리 및 구독 페이지입니다.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>다음 브라우저 주소 표시줄에 붙여 넣습니다.<br>![응용 프로그램 인증 URL의 &#39;공통&#39; 섹션이 강조 표시된 Google 브라우저 페이지입니다.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
+>[!DNL Microsoft Azure]개의 구독이 여러 개 있는 경우 Experience Platform 인스턴스를 잘못된 키 자격 증명 모음에 연결할 수 있습니다. 이 경우 응용 프로그램 인증 URL 이름의 `common` 섹션을 CMK 디렉터리 ID로 바꿔야 합니다.<br>[!DNL Microsoft Azure] 응용 프로그램의 Portal 설정, 디렉터리 및 구독 페이지에서 CMK 디렉터리 ID를 복사합니다.<br>![디렉터리 ID가 강조 표시된 [!DNL Microsoft Azure] 응용 프로그램 Portal 설정, 디렉터리 및 구독 페이지입니다.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>다음 브라우저 주소 표시줄에 붙여 넣습니다.<br>![응용 프로그램 인증 URL의 &#39;공통&#39; 섹션이 강조 표시된 Google 브라우저 페이지입니다.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
 
 ### CMK 앱을 역할에 지정 {#assign-to-role}
 
@@ -82,11 +82,11 @@ CMK를 사용하려면 다음 설정으로 [[!DNL Azure] Key Vault를 구성](./
 
 ![응용 프로그램 ID [!UICONTROL 이(가) 강조 표시된 [!UICONTROL 고객 관리 키 구성] 보기.](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)]
 
-Azure 도구를 확인하는 데 필요한 모든 세부 정보가 Platform UI에 포함됩니다. 이 수준의 세부 기간은 다른 Azure 도구를 사용하여 이러한 응용 프로그램의 주요 자격 증명 모음에 대한 액세스를 모니터링하고 기록하는 기능을 향상시키려는 사용자의 요구에 따라 제공됩니다. 이러한 식별자를 이해하는 것은 해당 목적 및 Adobe 서비스가 키에 액세스할 수 있도록 하는 데 매우 중요합니다.
+Azure 도구를 확인하는 데 필요한 모든 세부 정보가 Experience Platform UI에 포함되어 있습니다. 이 수준의 세부 기간은 다른 Azure 도구를 사용하여 이러한 응용 프로그램의 주요 자격 증명 모음에 대한 액세스를 모니터링하고 기록하는 기능을 향상시키려는 사용자의 요구에 따라 제공됩니다. 이러한 식별자를 이해하는 것은 해당 목적 및 Adobe 서비스가 키에 액세스할 수 있도록 하는 데 매우 중요합니다.
 
-## Experience Platform 시 암호화 키 구성 활성화 {#send-to-adobe}
+## Experience Platform에서 암호화 키 구성 활성화 {#send-to-adobe}
 
-[!DNL Azure]에 CMK 앱을 설치한 후 암호화 키 식별자를 Adobe에 보낼 수 있습니다. 왼쪽 탐색에서 **[!DNL Keys]**&#x200B;을(를) 선택한 다음 보낼 키의 이름을 선택합니다.
+[!DNL Azure]에 CMK 앱을 설치한 후 암호화 키 식별자를 Adobe으로 보낼 수 있습니다. 왼쪽 탐색에서 **[!DNL Keys]**&#x200B;을(를) 선택한 다음 보낼 키의 이름을 선택합니다.
 
 ![[!DNL Keys] 개체와 키 이름이 강조 표시된 Microsoft Azure 대시보드.](../../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
@@ -110,11 +110,11 @@ Azure 도구를 확인하는 데 필요한 모든 세부 정보가 Platform UI�
 
 ## 구성 상태 확인 {#check-status}
 
-처리에 상당한 시간이 걸릴 수 있습니다. 구성 상태를 확인하려면 [!UICONTROL 고객 관리 키 구성] 보기로 돌아가서 [!UICONTROL 구성 상태](으)로 스크롤합니다. 진행률 표시줄은 세 단계 중 한 단계로 진행되었으며 시스템에서 Platform이 키 및 키 저장소에 액세스할 수 있는지 확인하고 있다고 설명합니다.
+처리에 상당한 시간이 걸릴 수 있습니다. 구성 상태를 확인하려면 [!UICONTROL 고객 관리 키 구성] 보기로 돌아가서 [!UICONTROL 구성 상태]&#x200B;(으)로 스크롤합니다. 진행률 표시줄이 세 단계 중 한 단계로 진행되었으며 시스템에서 Experience Platform이 키 및 키 저장소에 액세스할 수 있는지 확인하고 있다고 설명합니다.
 
 CMK 구성에는 네 가지 잠재적인 상태가 있습니다. 이는 다음과 같습니다.
 
-* 1단계: Platform에 키 및 키 저장소에 액세스할 수 있는 권한이 있는지 확인합니다.
+* 1단계: Experience Platform에 키 및 키 자격 증명 모음에 액세스할 수 있는 권한이 있는지 확인합니다.
 * 2단계: 키 저장소와 키 이름을 조직의 모든 데이터 저장소에 추가하는 중입니다.
 * 3단계: 키 저장소 및 키 이름이 데이터 저장소에 성공적으로 추가되었습니다.
 * `FAILED`: 주로 키, 키 자격 증명 모음 또는 다중 테넌트 앱 설정과 관련된 문제가 발생했습니다.

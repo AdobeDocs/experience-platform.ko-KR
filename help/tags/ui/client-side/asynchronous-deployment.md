@@ -2,9 +2,9 @@
 title: 비동기 배포
 description: 웹 사이트에 Adobe Experience Platform 태그 라이브러리를 비동기적으로 배포하는 방법을 알아봅니다.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1046'
 ht-degree: 60%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 60%
 >
 >Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
-제품에 필요한 JavaScript 라이브러리의 성능과 비차단 배포는 Adobe Experience Cloud 사용자에게 점점 더 중요해지고 있습니다. [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/)과(와) 같은 도구는 사용자가 자신의 사이트에 Adobe 라이브러리를 배포하는 방식을 변경할 것을 권장합니다. 이 문서에서는 비동기 방식으로 JavaScript Adobe 라이브러리를 사용하는 방법을 설명합니다.
+제품에 필요한 JavaScript 라이브러리의 성능과 비차단 배포는 Adobe Experience Cloud 사용자에게 점점 더 중요해지고 있습니다. [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/)과(와) 같은 도구는 사용자가 자신의 사이트에 Adobe 라이브러리를 배포하는 방식을 변경할 것을 권장합니다. 이 문서에서는 비동기 방식으로 Adobe JavaScript 라이브러리를 사용하는 방법을 설명합니다.
 
 ## 동기와 비동기
 
@@ -106,4 +106,4 @@ ht-degree: 60%
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   이 코드는 브라우저 파서가 페이지 하단에 도달했음을 Platform에 알려줍니다. 이 시간 전에 태그가 로드되고 실행되지 않을 수 있으므로 `_satellite.pageBottom()`을(를) 호출하면 오류가 발생하고 Page Bottom 이벤트 유형이 제대로 작동하지 않을 수 있습니다.
+   이 코드는 Experience Platform에 브라우저 파서가 페이지 하단에 도달했음을 알려 줍니다. 이 시간 전에 태그가 로드되고 실행되지 않을 수 있으므로 `_satellite.pageBottom()`을(를) 호출하면 오류가 발생하고 Page Bottom 이벤트 유형이 제대로 작동하지 않을 수 있습니다.

@@ -4,16 +4,16 @@ title: 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로
 description: 흐름 서비스 API를 사용하여 적격 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: df7b9bb0c5dc4348e8be7a0ea93296e24bc0fb1d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4760'
+source-wordcount: '4763'
 ht-degree: 3%
 
 ---
 
 # 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로 활성화
 
-Experience Platform 외부에서 파일을 내보낼 때 향상된 사용자 정의 기능에 액세스하려면 향상된 파일 내보내기 기능을 사용하십시오.
+Experience Platform에서 파일을 내보낼 때 강화된 사용자 정의 기능에 액세스하려면 강화된 파일 내보내기 기능을 사용하십시오.
 
 * 추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 * [향상된 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능.
@@ -51,9 +51,9 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service]을(를) 사용하면 대상을 빌드하고 [!DNL Real-Time Customer Profile] 데이터에서 [!DNL Adobe Experience Platform]의 대상을 생성할 수 있습니다.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform]은(는) 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform]은(는) 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 Platform에서 파일 기반 대상에 데이터를 활성화하기 위해 알아야 하는 추가 정보를 제공합니다.
+다음 섹션에서는 Experience Platform의 파일 기반 대상에 데이터를 활성화하기 위해 알아야 하는 추가 정보를 제공합니다.
 
 ### 필요한 권한 {#permissions}
 
@@ -67,13 +67,13 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ### 필수 및 선택적 헤더에 대한 값 수집 {#gather-values-headers}
 
-[!DNL Platform]개의 API를 호출하려면 먼저 [Experience Platform 인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [Experience Platform 인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 * 인증: 전달자 `{ACCESS_TOKEN}`
 * x-api 키: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-[!DNL Experience Platform]의 리소스는 특정 가상 샌드박스로 격리될 수 있습니다. [!DNL Platform] API에 대한 요청에서 작업을 수행할 샌드박스의 이름과 ID를 지정할 수 있습니다. 이러한 매개 변수는 선택 사항입니다.
+[!DNL Experience Platform]의 리소스는 특정 가상 샌드박스로 격리될 수 있습니다. [!DNL Experience Platform] API에 대한 요청에서 작업을 수행할 샌드박스의 이름과 ID를 지정할 수 있습니다. 이러한 매개 변수는 선택 사항입니다.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -3742,7 +3742,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **예제 스키마가 있는 응답**
 
-Inspect 위의 호출을 수행할 때 받는 응답입니다. `targetSpec.attributes.partnerSchema.jsonSchema` 개체를 찾으려면 응답을 드릴다운해야 합니다.
+위의 호출을 수행할 때 받는 응답을 검사합니다. `targetSpec.attributes.partnerSchema.jsonSchema` 개체를 찾으려면 응답을 드릴다운해야 합니다.
 
 +++ 출력 스키마에 대한 파트너 스키마 가져오기 응답
 
@@ -4817,11 +4817,11 @@ API 참조 설명서에서 데이터 흐름에서 반환된 [다양한 매개 �
 
 ## API 오류 처리 {#api-error-handling}
 
-이 자습서의 API 끝점은 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 오류 응답 해석에 대한 자세한 내용은 플랫폼 문제 해결 안내서의 [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+이 자습서의 API 끝점은 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 오류 응답 해석에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 
-이 자습서에 따라 선호하는 클라우드 스토리지 대상 중 하나에 플랫폼을 연결하고 대상을 내보내도록 각 대상에 데이터 흐름을 설정했습니다. 흐름 서비스 API를 사용하여 기존 데이터 흐름을 편집하는 방법과 같은 자세한 내용은 다음 페이지를 참조하십시오.
+이 자습서에 따라 선호하는 클라우드 스토리지 대상 중 하나에 Experience Platform을 연결하고 대상을 내보내도록 각 대상에 데이터 흐름을 설정했습니다. 흐름 서비스 API를 사용하여 기존 데이터 흐름을 편집하는 방법과 같은 자세한 내용은 다음 페이지를 참조하십시오.
 
 * [대상 개요](../home.md)
 * [대상 카탈로그 개요](../catalog/overview.md)

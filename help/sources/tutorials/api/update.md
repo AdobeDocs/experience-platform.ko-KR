@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 계정 업데이트
 description: 이 튜토리얼에서는 흐름 서비스 API를 사용하여 계정의 세부 정보 및 자격 증명을 업데이트하는 단계를 설명합니다.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '544'
 ht-degree: 2%
 
 ---
@@ -25,16 +25,16 @@ ht-degree: 2%
 
 또한 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [샌드박스](../../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [소스](../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-### Platform API 사용
+### Experience Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ## 연결 세부 정보 조회
 
-연결을 업데이트하는 첫 번째 단계는 연결 ID를 사용하여 세부 사항을 검색하는 것입니다. 연결의 현재 세부 정보를 검색하려면 업데이트할 연결의 연결 ID를 제공하는 동안 [!DNL Flow Service] API에 GET 요청을 합니다.
+연결을 업데이트하는 첫 번째 단계는 연결 ID를 사용하여 세부 사항을 검색하는 것입니다. 연결의 현재 세부 정보를 검색하려면 업데이트할 연결의 연결 ID를 제공하는 동안 [!DNL Flow Service] API에 GET 요청을 만듭니다.
 
 **API 형식**
 
@@ -103,7 +103,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->PATCH 요청을 할 때 `If-Match` 헤더가 필요합니다. 이 헤더의 값은 업데이트할 연결의 고유한 버전입니다.
+>PATCH 요청을 수행할 때 `If-Match` 헤더가 필요합니다. 이 헤더의 값은 업데이트할 연결의 고유한 버전입니다.
 
 **API 형식**
 
@@ -158,7 +158,7 @@ curl -X PATCH \
 
 **응답**
 
-성공적인 응답은 연결 ID와 업데이트된 etag를 반환합니다. 연결 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 하여 업데이트를 확인할 수 있습니다.
+성공적인 응답은 연결 ID와 업데이트된 etag를 반환합니다. 연결 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 수행하여 업데이트를 확인할 수 있습니다.
 
 ```json
 {

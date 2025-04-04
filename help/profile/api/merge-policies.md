@@ -2,25 +2,25 @@
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 병합 정책 API 끝점
 type: Documentation
-description: Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각을 한데 모아 결합하여 각 개별 고객에 대한 전체 보기를 볼 수 있습니다. 이 데이터를 결합할 때 병합 정책은 Platform이 데이터를 우선 순위가 매겨지는 방법과 어떤 데이터를 결합하여 통합 보기를 만들 것인지 결정하는 데 사용하는 규칙입니다.
+description: Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각을 한데 모아 결합하여 각 개별 고객에 대한 전체 보기를 볼 수 있습니다. 이 데이터를 결합할 때 병합 정책은 Experience Platform이 데이터의 우선 순위 지정 방법 및 데이터를 결합하여 통합 보기를 만드는 방법을 결정하는 데 사용하는 규칙입니다.
 role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2465'
+source-wordcount: '2468'
 ht-degree: 1%
 
 ---
 
 # 병합 정책 끝점
 
-Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각을 한데 모아 결합하여 각 개별 고객에 대한 전체 보기를 볼 수 있습니다. 이 데이터를 함께 가져올 때 병합 정책은 [!DNL Platform]이(가) 데이터 우선 순위 지정 방법 및 통합 보기를 만들기 위해 결합할 데이터를 결정하는 데 사용하는 규칙입니다.
+Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각을 한데 모아 결합하여 각 개별 고객에 대한 전체 보기를 볼 수 있습니다. 이 데이터를 함께 가져올 때 병합 정책은 [!DNL Experience Platform]이(가) 데이터 우선 순위 지정 방법 및 통합 보기를 만들기 위해 결합할 데이터를 결정하는 데 사용하는 규칙입니다.
 
-예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직에는 여러 데이터 세트에 표시되는 단일 고객과 관련된 여러 프로필 조각이 있습니다. 이러한 조각을 Platform에 수집하면 해당 고객을 위한 단일 프로필을 만들기 위해 함께 병합됩니다. 여러 소스의 데이터가 충돌할 때(예: 한 조각은 고객을 &quot;단일&quot;로 나열하고 다른 조각은 고객을 &quot;기혼&quot;으로 나열함) 병합 정책은 개인에 대한 프로필에 포함할 정보를 결정합니다.
+예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직에는 여러 데이터 세트에 표시되는 단일 고객과 관련된 여러 프로필 조각이 있습니다. 이러한 조각을 Experience Platform에 수집하면 해당 고객을 위한 단일 프로필을 만들기 위해 함께 병합됩니다. 여러 소스의 데이터가 충돌할 때(예: 한 조각은 고객을 &quot;단일&quot;로 나열하고 다른 조각은 고객을 &quot;기혼&quot;으로 나열함) 병합 정책은 개인에 대한 프로필에 포함할 정보를 결정합니다.
 
 RESTful API 또는 사용자 인터페이스를 사용하여 새 병합 정책을 만들고 기존 정책을 관리하며 조직의 기본 병합 정책을 설정할 수 있습니다. 이 안내서에서는 API를 사용하여 병합 정책 작업을 수행하는 단계를 제공합니다.
 
-UI를 사용하여 병합 정책으로 작업하려면 [병합 정책 UI 안내서](../merge-policies/ui-guide.md)를 참조하십시오. 일반적인 병합 정책 및 Experience Platform 내에서 병합 정책에 대한 자세한 내용은 [병합 정책 개요](../merge-policies/overview.md)를 읽어 보십시오.
+UI를 사용하여 병합 정책으로 작업하려면 [병합 정책 UI 안내서](../merge-policies/ui-guide.md)를 참조하십시오. 일반적인 병합 정책 및 Experience Platform 내에서의 병합 정책에 대해 자세히 알아보려면 [병합 정책 개요](../merge-policies/overview.md)를 읽어 보십시오.
 
 ## 시작하기
 
@@ -28,7 +28,7 @@ UI를 사용하여 병합 정책으로 작업하려면 [병합 정책 UI 안내�
 
 ## 병합 정책의 구성 요소 {#components-of-merge-policies}
 
-병합 정책은 조직의 전용이며, 이를 통해 다른 정책을 만들어 필요한 특정 방법으로 스키마를 병합할 수 있습니다. [!DNL Profile] 데이터에 액세스하는 모든 API에는 병합 정책이 필요하지만 명시적으로 제공되지 않으면 기본값이 사용됩니다. [!DNL Platform]에서 조직에 기본 병합 정책을 제공하거나 특정 XDM(Experience Data Model) 스키마 클래스에 대한 병합 정책을 만들어 조직의 기본값으로 표시할 수 있습니다.
+병합 정책은 조직의 전용이며, 이를 통해 다른 정책을 만들어 필요한 특정 방법으로 스키마를 병합할 수 있습니다. [!DNL Profile] 데이터에 액세스하는 모든 API에는 병합 정책이 필요하지만 명시적으로 제공되지 않으면 기본값이 사용됩니다. [!DNL Experience Platform]에서 조직에 기본 병합 정책을 제공하거나 특정 XDM(Experience Data Model) 스키마 클래스에 대한 병합 정책을 만들어 조직의 기본값으로 표시할 수 있습니다.
 
 각 조직에는 스키마 클래스당 여러 개의 병합 정책이 있을 수 있지만 각 클래스에는 하나의 기본 병합 정책만 있을 수 있습니다. 스키마 클래스의 이름이 제공되고 병합 정책이 필요하지만 제공되지 않는 경우 기본값으로 설정된 모든 병합 정책이 사용됩니다.
 
@@ -73,7 +73,7 @@ UI를 사용하여 병합 정책으로 작업하려면 [병합 정책 UI 안내�
 | `name` | 목록 보기에서 병합 정책을 식별할 수 있는 알기 쉬운 이름. |
 | `imsOrgId` | 이 병합 정책이 속한 조직 ID |
 | `schema.name` | [`schema`](#schema) 개체의 일부로 `name` 필드에 병합 정책과 관련된 XDM 스키마 클래스가 포함되어 있습니다. 스키마 및 클래스에 대한 자세한 내용은 [XDM 설명서](../../xdm/home.md)를 참조하십시오. |
-| `version` | [!DNL Platform] 유지 관리되는 병합 정책 버전. 이 읽기 전용 값은 병합 정책이 업데이트될 때마다 증가합니다. |
+| `version` | [!DNL Experience Platform] 유지 관리되는 병합 정책 버전. 이 읽기 전용 값은 병합 정책이 업데이트될 때마다 증가합니다. |
 | `identityGraph` | 관련 ID를 가져올 ID 그래프를 나타내는 [ID 그래프](#identity-graph) 개체입니다. 모든 관련 ID에 대해 찾은 프로필 조각이 병합됩니다. |
 | `attributeMerge` | 데이터 충돌 시 병합 정책에서 프로필 특성의 우선 순위를 지정하는 방식을 나타내는 [특성 병합](#attribute-merge) 개체입니다. |
 | `isActiveOnEdge` | 이 병합 정책을 에지(edge)에서 사용할 수 있는지 보여 주는 부울 값. 기본적으로 이 값은 `false`입니다. |
@@ -103,7 +103,7 @@ UI를 사용하여 병합 정책으로 작업하려면 [병합 정책 UI 안내�
     }
 ```
 
-### 아이덴티티 그래프 {#identity-graph}
+### ID 그래프 {#identity-graph}
 
 [Adobe Experience Platform Identity Service](../../identity-service/home.md)에서는 [!DNL Experience Platform]의 각 조직에 대해 전역적으로 사용되는 ID 그래프를 관리합니다. 병합 정책의 `identityGraph` 특성은 사용자의 관련 ID를 결정하는 방법을 정의합니다.
 
@@ -283,7 +283,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 HTTP 상태 207(다중 상태)과 POST 요청에 제공된 ID의 병합 정책 세부 사항을 반환합니다.
+성공적인 응답은 HTTP 상태 207(다중 상태)과 POST 요청에서 ID가 제공된 병합 정책의 세부 정보를 반환합니다.
 
 ```json
 { 
@@ -551,11 +551,11 @@ curl -X POST \
 
 ## 병합 정책 업데이트 {#update}
 
-개별 속성(PATCH)을 편집하거나 전체 병합 정책을 새 속성(PUT)으로 덮어써서 기존 병합 정책을 수정할 수 있습니다. 각 의 예는 아래에 나와 있습니다.
+개별 속성을 편집하거나(PATCH) 전체 병합 정책을 새 속성으로 덮어써서(PUT) 기존 병합 정책을 수정할 수 있습니다. 각 의 예는 아래에 나와 있습니다.
 
 ### 개별 병합 정책 필드 편집
 
-`/config/mergePolicies/{mergePolicyId}` 끝점에 대한 PATCH 요청을 수행하여 병합 정책에 대한 개별 필드를 편집할 수 있습니다.
+`/config/mergePolicies/{mergePolicyId}` 끝점에 대한 PATCH 요청을 만들어 병합 정책에 대한 개별 필드를 편집할 수 있습니다.
 
 **API 형식**
 
@@ -762,6 +762,6 @@ curl -X DELETE \
 
 ## 다음 단계
 
-이제 조직에 대한 병합 정책을 만들고 구성하는 방법을 알았으므로 이를 사용하여 플랫폼 내에서 고객 프로필 보기를 조정하고 [!DNL Real-Time Customer Profile] 데이터에서 대상을 만들 수 있습니다.
+이제 조직의 병합 정책을 만들고 구성하는 방법을 알았으므로 이를 사용하여 Experience Platform 내에서 고객 프로필 보기를 조정하고 [!DNL Real-Time Customer Profile] 데이터에서 대상을 만들 수 있습니다.
 
 대상자를 정의하고 작업하려면 [Adobe Experience Platform 세그먼테이션 서비스 설명서](../../segmentation/home.md)를 참조하십시오.

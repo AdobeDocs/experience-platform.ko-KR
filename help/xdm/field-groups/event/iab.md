@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 이벤트 스키마에 대한 IAB TCF 2.0 동의 필드 그룹
 description: XDM ExperienceEvent 클래스에 대한 IAB TCF 2.0 동의 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '234'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-이 필드 그룹의 사용 사례에 대한 자세한 내용은 ](../../../landing/governance-privacy-security/consent/iab/overview.md) 플랫폼의 [IAB TCF 2.0 지원 가이드를 참조하십시오. 필드 그룹 자체에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
+이 필드 그룹의 사용 사례에 대한 자세한 내용은 Experience Platform의 [IAB TCF 2.0 지원](../../../landing/governance-privacy-security/consent/iab/overview.md)에 대한 안내서를 참조하십시오. 필드 그룹 자체에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
 
 * [채워진 예](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
 * [전체 스키마](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)

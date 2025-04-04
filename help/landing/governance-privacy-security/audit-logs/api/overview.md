@@ -4,9 +4,9 @@ description: 감사 쿼리는 개발자가 Adobe Experience Platform에서 누�
 role: Developer
 feature: Audits, API
 exl-id: 9ed291c6-ff8b-4d9b-9fed-d1e3fa8f92fb
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '172'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## 이벤트
 
-감사 이벤트는 작업 유형, 날짜 및 시간, 작업을 수행한 사용자의 이메일 ID 및 Adobe Experience Platform의 다양한 기능에 대한 작업 유형과 관련된 추가 속성을 포함하여 플랫폼의 사용자 작업에 대한 통찰력을 제공합니다. API를 사용하여 지표를 검색하는 방법에 대한 자세한 내용은 [이벤트 끝점 안내서](./events.md)를 참조하세요.
+감사 이벤트는 작업 유형, 날짜 및 시간, 작업을 수행한 사용자의 이메일 ID 및 Adobe Experience Platform의 다양한 기능에 대한 작업 유형과 관련된 추가 속성을 포함하여 Experience Platform의 사용자 작업에 대한 통찰력을 제공합니다. API를 사용하여 지표를 검색하는 방법에 대한 자세한 내용은 [이벤트 끝점 안내서](./events.md)를 참조하세요.
 
 ## 내보내기
 

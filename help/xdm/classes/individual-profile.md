@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM 개별 프로필 클래스
 description: XDM 개별 프로필 클래스에 대해 알아봅니다.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: ce937f1335283382189fa40f65aa268735c02715
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL XDM Individual Profile]은(는) 개별 사용자의 단일 표시(또는 &quot;프로필&quot;)를 구성하는 표준 경험 데이터 모델(XDM) 클래스입니다. 특히 클래스(및 호환 가능한 필드 그룹)는 브랜드와 상호 작용하는 식별된 개인과 부분적으로 식별된 개인 모두의 속성과 관심을 캡처합니다.
 
-프로필의 범위는 익명 행동 신호(예: 브라우저 쿠키)부터 이름, 생년월일, 위치 및 이메일 주소와 같은 세부 정보가 포함된 고도로 식별된 프로필까지 다양합니다. 프로필이 성장하면 개인의 개인 정보, ID, 연락처 세부 정보 및 커뮤니케이션 환경 설정을 저장하는 강력한 저장소가 됩니다. 플랫폼 생태계에서 이 클래스를 사용하는 방법에 대한 자세한 내용은 [XDM 개요](../home.md#data-behaviors)를 참조하세요.
+프로필의 범위는 익명 행동 신호(예: 브라우저 쿠키)부터 이름, 생년월일, 위치 및 이메일 주소와 같은 세부 정보가 포함된 고도로 식별된 프로필까지 다양합니다. 프로필이 성장하면 개인의 개인 정보, ID, 연락처 세부 정보 및 커뮤니케이션 환경 설정을 저장하는 강력한 저장소가 됩니다. Experience Platform 에코시스템에서 이 클래스의 사용에 대한 자세한 내용은 [XDM 개요](../home.md#data-behaviors)를 참조하세요.
 
 ![XDM 개별 프로필 클래스의 스키마 다이어그램입니다.](../images/classes/individual-profile.png)
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 >
 >여러 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../field-groups/name-updates.md)에 대한 문서를 참조하십시오.
 
-Adobe은 [!DNL XDM Individual Profile] 클래스와 함께 사용할 여러 표준 필드 그룹을 제공합니다. 다음은 클래스에서 일반적으로 사용되는 몇 가지 필드 그룹 목록입니다.
+Adobe에서는 [!DNL XDM Individual Profile] 클래스와 함께 사용할 수 있는 여러 표준 필드 그룹을 제공합니다. 다음은 클래스에서 일반적으로 사용되는 몇 가지 필드 그룹 목록입니다.
 
 * [[!UICONTROL 동의 및 환경 설정]](../field-groups/profile/consents.md)
 * [[!UICONTROL 인구 통계 세부 정보]](../field-groups/profile/demographic-details.md)
@@ -50,6 +50,6 @@ Adobe은 [!DNL XDM Individual Profile] 클래스와 함께 사용할 여러 표�
 * [[!UICONTROL XDM 비즈니스 사용자 구성 요소]](../field-groups/profile/business-person-components.md)\*
 * [[!UICONTROL XDM 비즈니스 사용자 세부 정보]](../field-groups/profile/business-person-details.md)\*
 
-*\*이 필드 그룹은 Adobe Real-time Customer Data Platform의 B2B 버전에 액세스할 수 있는 조직에서만 사용할 수 있습니다.*
+*\*이 필드 그룹은 Adobe Real-Time Customer Data Platform의 B2B edition에 액세스할 수 있는 조직에서만 사용할 수 있습니다.*
 
 [!DNL XDM Individual Profile]에 대해 호환되는 모든 필드 그룹의 전체 목록을 보려면 [XDM GitHub 저장소](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile)를 참조하세요.

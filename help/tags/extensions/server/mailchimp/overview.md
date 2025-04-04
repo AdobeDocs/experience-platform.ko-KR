@@ -7,10 +7,10 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1267'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >  
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html)를 참조하십시오.
 
 Mailchimp [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장은 Mailchimp 마케팅 캠페인, 여정 또는 트랜잭션에 대한 이메일을 트리거할 수 있는 이벤트를 Mailchimp Marketing API에 보냅니다.
 
@@ -103,17 +103,17 @@ Mailchimp 플랜과 트랜잭션 이메일, 고객 여정 또는 기타 Mailchim
 
 ## 데이터 수집
 
-[규칙](../../../ui/managing-resources/rules.md)에서 이 확장을 사용할 때 확장에서 각 이벤트와 함께 Mailchimp에 보내는 여러 데이터 값이 있습니다. 일반적인 구현의 경우 이벤트 전달 속성에서 확장을 사용할 수 있도록 해당 데이터를 [!DNL Platform Edge Network]에 보내도록 [Adobe Experience Platform Web SDK 확장](../../client/web-sdk/overview.md)을 구성할 수 있습니다.
+[규칙](../../../ui/managing-resources/rules.md)에서 이 확장을 사용할 때 확장에서 각 이벤트와 함께 Mailchimp에 보내는 여러 데이터 값이 있습니다. 일반적인 구현의 경우 이벤트 전달 속성에서 확장을 사용할 수 있도록 해당 데이터를 [!DNL Experience Platform Edge Network]에 보내도록 [Adobe Experience Platform Web SDK 확장](../../client/web-sdk/overview.md)을 구성할 수 있습니다.
 
 이 확장에 필요한 데이터는 Web SDK에서 XDM 데이터([`xdm`](/help/web-sdk/commands/sendevent/xdm.md) 개체 사용) 또는 비 XDM 데이터([`data`](/help/web-sdk/commands/sendevent/data.md) 개체 사용)로 보낼 수 있습니다.
 
-예를 들어 고객이 사이트에서 이벤트를 구매하거나 등록하는 경우 이 확장 기능을 사용하여 Mailchimp를 통해 확인 이메일을 보낼 수 있습니다. Web SDK에서 Edge Network으로 필수 정보를 전송하면 확장 프로그램에서 Mailchimp를 사용하여 이메일을 트리거합니다.
+예를 들어 고객이 사이트에서 이벤트를 구매하거나 등록하는 경우 이 확장 기능을 사용하여 Mailchimp를 통해 확인 이메일을 보낼 수 있습니다. 웹 SDK에서 Edge Network으로 필수 정보를 전송하면 확장 기능이 Mailchimp를 사용하여 이메일을 트리거합니다.
 
 ![이벤트 작업 구성 추가](../../../images/extensions/server/mailchimp/action-configurations.png)
 
 ### 데이터 요소
 
-이전 섹션의 스크린샷은 이 확장에서 Mailchimp로 각 이벤트와 함께 보낼 수 있는 데이터를 보여 줍니다. 이 데이터를 Edge Network에 보내도록 Web SDK를 구성하면 확장이 해당 값에 액세스할 수 있도록 이벤트 전달 속성에서 데이터 요소를 만들 수 있습니다.
+이전 섹션의 스크린샷은 이 확장에서 Mailchimp로 각 이벤트와 함께 보낼 수 있는 데이터를 보여 줍니다. 이 데이터를 Edge Network으로 보내도록 Web SDK을 구성하면 확장 프로그램에서 해당 값에 액세스할 수 있도록 이벤트 전달 속성에 데이터 요소를 만들 수 있습니다.
 
 아래 표는 가능한 각 값에 대한 자세한 내용을 제공합니다.
 
@@ -130,7 +130,7 @@ Mailchimp 플랜과 트랜잭션 이메일, 고객 여정 또는 기타 Mailchim
 
 >[!IMPORTANT]
 >  
->위의 **예제 경로** 값은 예제입니다. 위의 단계에서 Web SDK의 이름을 지정하고 구성한 방식에 따라 해당 데이터 요소에서 참조하는 필드 이름과 [경로](../../../ui/event-forwarding/overview.md#data-element-path)가 속성에서 다를 수 있습니다.
+>위의 **예제 경로** 값은 예제입니다. 위의 단계에서 웹 SDK의 이름을 지정하고 구성한 방식에 따라 해당 데이터 요소에서 참조하는 필드 이름과 [경로](../../../ui/event-forwarding/overview.md#data-element-path)가 속성에서 다를 수 있습니다.
 
 이벤트 전달 속성에서 위에 설명된 각 필드에 대한 데이터 요소를 만들 수 있습니다. 만든 후에는 이 확장의 [!UICONTROL 이벤트 추가] 작업에서 데이터 요소를 참조할 수 있습니다.
 
@@ -140,7 +140,7 @@ Mailchimp 플랜과 트랜잭션 이메일, 고객 여정 또는 기타 Mailchim
 
 ## 데이터 유효성 검사
 
-이벤트 전달 확장을 사용할 때 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)이(가) 매우 유용합니다. 로그 섹션의 Edge 로그에서 이벤트 전달 규칙이 트리거된 후 수행한 요청을 볼 수 있습니다. 다음 스크린샷은 확장에 의해 Mailchimp API에 수행된 요청을 보여줍니다.
+이벤트 전달 확장을 사용할 때 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)은(는) 매우 유용합니다. 로그 섹션의 Edge 로그에서 이벤트 전달 규칙이 트리거된 후 수행한 요청을 볼 수 있습니다. 다음 스크린샷은 확장에 의해 Mailchimp API에 수행된 요청을 보여줍니다.
 
 ![Adobe Experience Platform Debugger](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
 

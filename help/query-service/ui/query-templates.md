@@ -2,9 +2,9 @@
 title: 쿼리 템플릿
 description: 쿼리 템플릿은 다른 사용자가 재사용하여 시간과 노력을 절약할 수 있는 재사용 가능한 저장된 SQL 쿼리입니다. 쿼리 편집기 또는 쿼리 서비스 API를 사용하여 만들 수 있으며, 모든 Experience Platform 데이터 세트에서 사용할 수 있습니다.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: 1a44be939a4678078b414658199472e07dee153b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform Query Service를 사용하면 SQL 코드를 쿼리 템
 
 ## 전제 조건
 
-쿼리 편집기에 액세스하고 Platform UI 내에서 쿼리 대시보드를 보려면 [!UICONTROL 쿼리 관리] 권한을 활성화해야 합니다. Adobe [Admin Console](https://adminconsole.adobe.com/)을(를) 통해 사용 권한을 사용하도록 설정했습니다. 이 권한을 활성화하기 위한 관리자 권한이 없는 경우 조직의 관리자에게 문의하십시오. [Admin Console을 통해 권한을 추가하는 방법에 대한 전체 지침](../../access-control/home.md)은 액세스 제어 설명서를 참조하세요.
+쿼리 편집기에 액세스하고 Experience Platform UI 내에서 쿼리 대시보드를 보려면 [!UICONTROL 쿼리 관리] 권한을 활성화해야 합니다. 권한은 Adobe [Admin Console](https://adminconsole.adobe.com/)을 통해 사용할 수 있습니다. 이 권한을 활성화하기 위한 관리자 권한이 없는 경우 조직의 관리자에게 문의하십시오. Admin Console을 통해 권한을 추가하는 방법에 대한 [전체 지침](../../access-control/home.md)은 액세스 제어 설명서를 참조하십시오.
 
 ## 쿼리 템플릿 만들기
 
@@ -33,7 +33,7 @@ Adobe Experience Platform Query Service를 사용하면 SQL 코드를 쿼리 템
 
 ## 쿼리 템플릿 찾아보기 {#browse}
 
-Platform UI의 쿼리 작업 영역에서 **[!UICONTROL 템플릿]**&#x200B;을(를) 선택하여 사용 가능한 저장된 쿼리 목록을 표시합니다.
+Experience Platform UI의 쿼리 작업 영역에서 **[!UICONTROL 템플릿]**&#x200B;을(를) 선택하여 사용 가능한 저장된 쿼리 목록을 표시합니다.
 
 ![템플릿 탭이 강조 표시된 쿼리 작업 영역입니다.](../images/ui/query-templates/query-templates.png)
 
@@ -55,7 +55,7 @@ Platform UI의 쿼리 작업 영역에서 **[!UICONTROL 템플릿]**&#x200B;을(
 
 >[!NOTE]
 >
->API를 사용하여 만든 템플릿은 Platform UI 쿼리 서비스 템플릿 탭에도 표시됩니다.
+>API를 사용하여 만든 템플릿은 Experience Platform UI 쿼리 서비스 템플릿 탭에도 표시됩니다.
 
 ## 다음 단계
 

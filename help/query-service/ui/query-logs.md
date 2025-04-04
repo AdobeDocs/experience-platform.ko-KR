@@ -2,9 +2,9 @@
 title: 쿼리 로그
 description: 쿼리가 실행될 때마다 쿼리 로그가 자동으로 생성되며 UI를 통해 문제 해결에 도움을 줄 수 있습니다. 이 문서에서는 UI의 쿼리 서비스 로그 섹션을 사용하고 탐색하는 방법에 대해 간략하게 설명합니다.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform은 API 및 UI를 통해 발생하는 모든 쿼리 이
 >
 >시스템 쿼리와 대시보드 쿼리는 모두 기본적으로 제외됩니다. 설정에 따라 표시된 로그를 구체화하는 방법에 대한 자세한 내용은 [필터](#filter-logs) 섹션을 참조하십시오.
 
-![쿼리 및 로그가 강조 표시된 Platform UI입니다.](../images/ui/query-log/logs.png)
+![쿼리 및 로그가 강조 표시된 Experience Platform UI입니다.](../images/ui/query-log/logs.png)
 
 ## 사용자 지정 및 검색 {#customize-and-search}
 

@@ -3,16 +3,16 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;사용자 인
 title: UI의 프로필 세부 정보 사용자 정의
 description: 이 안내서는 Adobe Experience Platform UI 내에서 실시간 고객 프로필 데이터가 표시되는 방식을 맞춤화하기 위한 단계별 지침을 제공합니다.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 69ac6d3f98675df11183082ecbbb49d18ddb57af
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1395'
 ht-degree: 0%
 
 ---
 
 # [!DNL Real-Time Customer Profile] 세부 정보 사용자 지정 {#profile-detail-customization}
 
-Adobe Experience Platform 사용자 인터페이스에서 [!DNL Real-Time Customer Profile] 데이터를 고객 프로필 형식으로 보고 상호 작용할 수 있습니다. UI에 표시되는 프로필 정보가 여러 프로필 조각에서 함께 병합되어 각 개별 고객에 대한 단일 뷰를 형성합니다. 여기에는 기본 속성, 연결된 ID 및 채널 환경 설정 등의 세부 사항이 포함됩니다. 프로필에 표시되는 기본 필드를 조직 수준에서 변경하여 기본 [!DNL Profile] 특성을 표시할 수도 있습니다. 이 안내서에서는 [!DNL Profile] 데이터가 Platform UI 내에 표시되는 방식을 사용자 지정하는 단계별 지침을 제공합니다.
+Adobe Experience Platform 사용자 인터페이스에서 [!DNL Real-Time Customer Profile] 데이터를 고객 프로필 형식으로 보고 상호 작용할 수 있습니다. UI에 표시되는 프로필 정보가 여러 프로필 조각에서 함께 병합되어 각 개별 고객에 대한 단일 뷰를 형성합니다. 여기에는 기본 속성, 연결된 ID 및 채널 환경 설정 등의 세부 사항이 포함됩니다. 프로필에 표시되는 기본 필드를 조직 수준에서 변경하여 기본 [!DNL Profile] 특성을 표시할 수도 있습니다. 이 안내서에서는 Experience Platform UI 내에서 [!DNL Profile] 데이터가 표시되는 방식을 사용자 지정하는 단계별 지침을 제공합니다.
 
 프로필 UI에 대한 전체 안내서는 [프로필 UI 안내서](user-guide.md)를 참조하십시오.
 
@@ -74,7 +74,7 @@ Adobe Experience Platform 사용자 인터페이스에서 [!DNL Real-Time Custom
 
 ## 새 카드 추가 {#add-a-new-card}
 
-Experience Platform 내에서 프로필 모양을 추가로 사용자 정의하려면 대시보드에 새 카드를 추가하도록 선택하고 해당 카드에 표시할 속성을 선택할 수 있습니다. 시작하려면 **[!UICONTROL 세부 정보]** 탭에서 **[!UICONTROL 대시보드 수정]**&#x200B;을 선택하세요.
+Experience Platform 내의 프로필 모양을 추가로 사용자 정의하려면 대시보드에 새 카드를 추가하도록 선택하고 해당 카드에 표시할 속성을 선택할 수 있습니다. 시작하려면 **[!UICONTROL 세부 정보]** 탭에서 **[!UICONTROL 대시보드 수정]**&#x200B;을 선택하세요.
 
 ![프로필 세부 정보 사용자 지정 단추가 강조 표시됩니다.](../images/profile-customization/customize-profile-details.png)
 

@@ -2,10 +2,10 @@
 title: CSP(콘텐츠 보안 정책) 지원
 description: Adobe Experience Platform에서 웹 사이트를 태그와 통합할 때 CSP(콘텐츠 보안 정책) 제한을 처리하는 방법을 알아봅니다.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 54%
+source-wordcount: '1076'
+ht-degree: 58%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 CSP(콘텐츠 보안 정책)는 XSS(교차 사이트 스크립팅) 공격을 방지하는 보안 기능입니다. 이는 실제로는 알 수 없는 곳에서 가져온 것이지만 출처를 신뢰할 수 있는 것처럼 브라우저를 속여 악의적인 콘텐츠를 실행하게 할 때 발생합니다. CSP를 사용하면 사용자를 대신하여 브라우저가 스크립트가 실제로 신뢰할 수 있는 소스에서 오고 있는지 확인할 수 있습니다.
 
@@ -82,7 +82,7 @@ CSP는 기본적으로 인라인 스크립트를 허용하지 않으므로 이�
 
 >[!NOTE]
 >
->CSP 사양은 해시를 사용하는 세 번째 옵션에 대한 세부 사항이 있지만 이 접근 방식은 태그와 같은 태그 관리 시스템에 적합하지 않습니다. Platform의 태그에 해시를 사용하는 제한 사항에 대한 자세한 내용은 [SRI(Subresource Integrity) 안내서](./sri.md)를 참조하십시오.
+>CSP 사양은 해시를 사용하는 세 번째 옵션에 대한 세부 사항이 있지만 이 접근 방식은 태그와 같은 태그 관리 시스템에 적합하지 않습니다. Experience Platform의 태그와 함께 해시를 사용하는 제한 사항에 대한 자세한 내용은 [SRI(Subresource Integrity) 안내서](./sri.md)를 참조하십시오.
 
 ### 임시 허용 {#nonce}
 
@@ -158,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 이 문서를 읽은 후에는 태그 라이브러리 파일 및 인라인 스크립트를 수락하도록 CSP 헤더를 구성하는 방법을 이해할 수 있어야 합니다.
 
-추가 보안 조치로서 SRI(Subresource Integrity)를 사용하여 가져온 라이브러리 빌드의 유효성을 확인할 수도 있습니다. 그러나 이 기능은 태그와 같은 태그 관리 시스템과 함께 사용할 때 몇 가지 주요 제한 사항이 있습니다. 자세한 내용은 [Platform의 SRI 호환성](./sri.md)에 대한 안내서를 참조하십시오.
+추가 보안 조치로서 SRI(Subresource Integrity)를 사용하여 가져온 라이브러리 빌드의 유효성을 확인할 수도 있습니다. 그러나 이 기능은 태그와 같은 태그 관리 시스템과 함께 사용할 때 몇 가지 주요 제한 사항이 있습니다. 자세한 내용은 Experience Platform의 [SRI 호환성](./sri.md)에 대한 안내서를 참조하십시오.

@@ -2,7 +2,7 @@
 title: XDM 스키마에 CSV 파일 매핑
 description: 이 자습서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 CSV 파일을 XDM 스키마에 매핑하는 방법을 다룹니다.
 exl-id: b80ab18f-9f4d-4044-b11d-238e9a45710f
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # XDM 스키마에 CSV 파일 매핑
 
-CSV 데이터를 [!DNL Adobe Experience Platform](으)로 수집하려면 데이터를 [!DNL Experience Data Model](XDM) 스키마에 매핑해야 합니다. 다음 자습서에서는 [!DNL Platform] 사용자 인터페이스를 사용하여 CSV 파일을 XDM 스키마에 매핑하는 방법을 다룹니다.
+CSV 데이터를 [!DNL Adobe Experience Platform]&#x200B;(으)로 수집하려면 데이터를 [!DNL Experience Data Model]&#x200B;(XDM) 스키마에 매핑해야 합니다. 다음 자습서에서는 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 CSV 파일을 XDM 스키마에 매핑하는 방법을 다룹니다.
 
 * [기존 XDM 스키마에 CSV 파일 매핑](./existing-schema.md)
 * [AI가 생성한 권장 사항을 사용하여 CSV 파일을 새 XDM 스키마에 매핑](./recommendations.md)

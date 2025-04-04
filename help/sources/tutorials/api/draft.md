@@ -2,9 +2,9 @@
 title: 흐름 서비스 엔티티 API의 초안 만들기
 description: 흐름 서비스 API를 사용하여 기본 연결, 소스 연결, 타겟 연결 및 데이터 흐름의 초안을 만드는 방법을 알아봅니다
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
-source-git-commit: 9c40f6254b548027d271e5831bd1b03aec98df77
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1193'
 ht-degree: 3%
 
 ---
@@ -21,12 +21,12 @@ ht-degree: 3%
 
 이 자습서를 사용하려면 Adobe Experience Platform의 다음 구성 요소를 잘 알고 있어야 합니다.
 
-* [소스](../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [샌드박스](../../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [소스](../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-### Platform API 사용
+### Experience Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ### 초안 모드 지원 확인
 
@@ -571,7 +571,7 @@ curl -X GET \
 
 ## 구배 베이스 연결 생성 {#create-a-draft-base-connection}
 
-초안 기본 연결을 만들려면 [!DNL Flow Service] API의 `/connections` 끝점에 POST 요청을 하고 `mode=draft`을(를) 쿼리 매개 변수로 제공하십시오.
+초안 기본 연결을 만들려면 [!DNL Flow Service] API의 `/connections` 끝점에 POST 요청을 만들고 `mode=draft`을(를) 쿼리 매개 변수로 제공하십시오.
 
 **API 형식**
 
@@ -624,9 +624,9 @@ curl -X POST \
 }
 ```
 
-## 초안 기본 연결 Publish {#publish-your-draft-base-connection}
+## 초안 기본 연결 게시 {#publish-your-draft-base-connection}
 
-초안을 게시할 준비가 되면 `/connections` 끝점에 POST 요청을 만들고 게시할 초안 기본 연결의 ID와 게시를 위한 작업 작업을 제공합니다.
+초안을 게시할 준비가 되면 `/connections` 끝점에 POST 요청을 만들고 게시하려는 초안 기본 연결의 ID와 게시를 위한 작업 작업을 제공합니다.
 
 **API 형식**
 
@@ -716,13 +716,13 @@ curl -X POST \
 }
 ```
 
-## 초안 소스 연결 Publish {#publish-your-draft-source-connection}
+## 초안 소스 연결 게시 {#publish-your-draft-source-connection}
 
 >[!NOTE]
 >
 >연관된 기본 연결이 여전히 초안 상태인 경우 소스 연결을 게시할 수 없습니다. 소스 연결을 게시하기 전에 기본 연결이 먼저 게시되었는지 확인하십시오.
 
-초안을 게시할 준비가 되면 `/sourceConnections` 끝점에 POST 요청을 만들고 게시할 초안 원본 연결의 ID와 게시를 위한 작업 작업을 제공합니다.
+초안을 게시할 준비가 되면 `/sourceConnections` 끝점에 POST 요청을 만들고 게시하려는 초안 원본 연결의 ID와 게시를 위한 작업 작업을 제공합니다.
 
 **API 형식**
 
@@ -761,7 +761,7 @@ curl -X POST \
 
 ## 초안 대상 연결 만들기 {#create-a-draft-target-connection}
 
-초안 대상 연결을 만들려면 [!DNL Flow Service] API의 `/targetConnections` 끝점에 POST 요청을 하고 `mode=draft`을(를) 쿼리 매개 변수로 제공하십시오.
+초안 대상 연결을 만들려면 [!DNL Flow Service] API의 `/targetConnections` 끝점에 POST 요청을 만들고 `mode=draft`을(를) 쿼리 매개 변수로 제공하십시오.
 
 **API 형식**
 
@@ -813,7 +813,7 @@ curl -X POST \
 }
 ```
 
-## 초안 대상 연결 Publish {#publish-your-draft-target-connection}
+## 초안 대상 연결 게시 {#publish-your-draft-target-connection}
 
 >[!NOTE]
 >
@@ -858,7 +858,7 @@ curl -X POST \
 
 ## 초안 데이터 흐름 만들기 {#create-a-draft-dataflow}
 
-데이터 흐름을 초안으로 설정하려면 `mode=draft`을(를) 쿼리 매개 변수로 추가하는 동안 `/flows` 끝점에 POST 요청을 하십시오. 이를 통해 데이터 흐름을 만들고 초안으로 저장할 수 있습니다.
+데이터 흐름을 초안으로 설정하려면 `mode=draft`을(를) 쿼리 매개 변수로 추가하는 동안 `/flows` 끝점에 POST 요청을 만듭니다. 이를 통해 데이터 흐름을 만들고 초안으로 저장할 수 있습니다.
 
 **API 형식**
 
@@ -908,13 +908,13 @@ POST /flows?mode=draft
 }
 ```
 
-## 초안 데이터 흐름 Publish {#publish-your-draft-dataflow}
+## 초안 데이터 흐름 게시 {#publish-your-draft-dataflow}
 
 >[!NOTE]
 >
 >연결된 소스 및 타겟 연결이 여전히 초안 상태인 경우 데이터 흐름을 게시할 수 없습니다. 데이터 흐름을 게시하기 전에 소스 및 타겟 연결이 먼저 게시되었는지 확인하십시오.
 
-초안을 게시할 준비가 되면 게시하려는 초안 데이터 흐름의 ID와 게시를 위한 작업 작업을 제공하면서 `/flows` 끝점에 POST 요청을 만듭니다.
+초안을 게시할 준비가 되면 게시하려는 초안 데이터 흐름의 ID와 게시를 위한 작업 작업을 제공하면서 `/flows` 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 

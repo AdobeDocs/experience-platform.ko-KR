@@ -3,7 +3,7 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 한 대상자 타겟팅, 개인화 및 억제에 대한 Facebook 캠페인을 위한 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 6%
@@ -26,7 +26,7 @@ ht-degree: 6%
 
 ### 사용 사례 #1
 
-온라인 소매업체는 소셜 플랫폼을 통해 기존 고객에게 도달하고 이전 주문을 기반으로 개인화된 오퍼를 표시하려고 합니다. 온라인 소매업체는 자체 CRM에서 Adobe Experience Platform으로 이메일 주소를 수집하고, 자체 오프라인 데이터에서 대상을 작성하고, 이러한 대상을 [!DNL Facebook] 소셜 플랫폼으로 보내 광고 지출을 최적화할 수 있습니다.
+온라인 retailer은 소셜 플랫폼을 통해 기존 고객에게 도달하고 이전 주문을 기반으로 개인화된 오퍼를 표시하려고 합니다. 온라인 retailer은 자체 CRM에서 Adobe Experience Platform으로 전자 메일 주소를 수집하고, 자체 오프라인 데이터에서 대상을 만들고, 이러한 대상을 [!DNL Facebook] 소셜 플랫폼으로 보내어 광고 지출을 최적화할 수 있습니다.
 
 ### 사용 사례 #2
 
@@ -44,8 +44,8 @@ ht-degree: 6%
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
-| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따르고 일반 텍스트와 해시된 전화 번호에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
-| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침에 따라 일반 텍스트와 해시된 이메일 주소에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따르고 일반 텍스트와 해시된 전화 번호에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침에 따라 일반 텍스트와 해시된 이메일 주소에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
 | extern_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
 
 ## 지원되는 대상자 {#supported-audiences}
@@ -98,8 +98,8 @@ Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사�
 
 [!DNL Facebook]에서 전화 번호를 활성화하는 방법에는 두 가지가 있습니다.
 
-* **원시 전화 번호 수집**: [!DNL E.164] 형식의 원시 전화 번호를 [!DNL Platform]&#x200B;(으)로 수집할 수 있습니다. 활성화 시 자동으로 해시됩니다. 이 옵션을 선택하는 경우 항상 원시 전화 번호를 `Phone_E.164` 네임스페이스로 수집해야 합니다.
-* **해시된 전화번호 수집**: [!DNL Platform]에 수집하기 전에 전화번호를 미리 해시할 수 있습니다. 이 옵션을 선택하는 경우 해시된 전화 번호를 항상 `Phone_SHA256` 네임스페이스로 수집해야 합니다.
+* **원시 전화 번호 수집**: [!DNL E.164] 형식의 원시 전화 번호를 [!DNL Experience Platform]&#x200B;(으)로 수집할 수 있습니다. 활성화 시 자동으로 해시됩니다. 이 옵션을 선택하는 경우 항상 원시 전화 번호를 `Phone_E.164` 네임스페이스로 수집해야 합니다.
+* **해시된 전화번호 수집**: [!DNL Experience Platform]에 수집하기 전에 전화번호를 미리 해시할 수 있습니다. 이 옵션을 선택하는 경우 해시된 전화 번호를 항상 `Phone_SHA256` 네임스페이스로 수집해야 합니다.
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사�
 
 ## 이메일 해시 요구 사항 {#email-hashing-requirements}
 
-이메일 주소를 Adobe Experience Platform에 수집하기 전에 해시하거나 Experience Platform에서 이메일 주소를 지우고 활성화 시 [!DNL Platform]에게 해시하도록 할 수 있습니다.
+이메일 주소를 Adobe Experience Platform에 수집하기 전에 해시하거나 Experience Platform에서 이메일 주소를 지우고 활성화 시 [!DNL Experience Platform]에게 해시하도록 할 수 있습니다.
 
 Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 자세한 내용은 [일괄 처리 수집 개요](/help/ingestion/batch-ingestion/overview.md) 및 [스트리밍 수집 개요](/help/ingestion/streaming-ingestion/overview.md)를 참조하십시오.
 
@@ -122,8 +122,8 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 >[!NOTE]
 >
->해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Platform]에 의해 자동으로 해시됩니다.
-> 속성 소스 데이터는 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오.
+>해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Experience Platform]에 의해 자동으로 해시됩니다.
+> 속성 소스 데이터는 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오.
 > **[!UICONTROL 변환 적용]** 옵션은 특성을 소스 필드로 선택하는 경우에만 표시됩니다. 네임스페이스를 선택하면 표시되지 않습니다.
 
 ![매핑 단계에서 강조 표시된 변환 컨트롤을 적용합니다.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
@@ -230,9 +230,9 @@ Facebook 토큰은 60일마다 만료됩니다. 토큰이 만료되면 대상으
 소스 필드 선택:
 
 * 사용 중인 전자 메일 주소가 해시되지 않은 경우 `Email` 네임스페이스를 원본 ID로 선택하십시오.
-* [!DNL Facebook] [전자 메일 해시 요구 사항](#email-hashing-requirements)에 따라 데이터 수집 시 고객 전자 메일 주소를 [!DNL Platform]&#x200B;(으)로 해시했다면 `Email_LC_SHA256` 네임스페이스를 원본 ID로 선택하십시오.
-* 데이터가 해시되지 않은 전화 번호로 구성된 경우 `PHONE_E.164` 네임스페이스를 원본 ID로 선택하십시오. [!DNL Platform]이(가) [!DNL Facebook] 요구 사항을 준수하기 위해 전화 번호를 해시합니다.
-* [!DNL Facebook] [전화 번호 해시 요구 사항](#phone-number-hashing-requirements)에 따라 데이터 수집 시 전화 번호를 [!DNL Platform]&#x200B;(으)로 해시했다면 `Phone_SHA256` 네임스페이스를 원본 ID로 선택하십시오.
+* [!DNL Facebook] [전자 메일 해시 요구 사항](#email-hashing-requirements)에 따라 데이터 수집 시 고객 전자 메일 주소를 [!DNL Experience Platform]&#x200B;(으)로 해시했다면 `Email_LC_SHA256` 네임스페이스를 원본 ID로 선택하십시오.
+* 데이터가 해시되지 않은 전화 번호로 구성된 경우 `PHONE_E.164` 네임스페이스를 원본 ID로 선택하십시오. [!DNL Experience Platform]이(가) [!DNL Facebook] 요구 사항을 준수하기 위해 전화 번호를 해시합니다.
+* [!DNL Facebook] [전화 번호 해시 요구 사항](#phone-number-hashing-requirements)에 따라 데이터 수집 시 전화 번호를 [!DNL Experience Platform]&#x200B;(으)로 해시했다면 `Phone_SHA256` 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 [!DNL Apple] 장치 ID로 구성된 경우 `IDFA` 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 [!DNL Android] 장치 ID로 구성된 경우 `GAID` 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 다른 유형의 식별자로 구성된 경우 `Custom` 네임스페이스를 소스 ID로 선택하십시오.
@@ -246,9 +246,9 @@ Facebook 토큰은 60일마다 만료됩니다. 토큰이 만료되면 대상으
 
 >[!IMPORTANT]
 >
->해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Platform]에 의해 자동으로 해시됩니다.
+>해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Experience Platform]에 의해 자동으로 해시됩니다.
 > 
->속성 소스 데이터는 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오.
+>속성 소스 데이터는 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오.
 
 ![매핑 단계에서 강조 표시된 변환 컨트롤을 적용합니다.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 

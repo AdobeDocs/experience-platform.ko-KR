@@ -5,10 +5,10 @@ breadcrumb-title: 액세스 제어 안내서
 user-guide-description: Adobe Admin Console에서 제품 프로필을 사용하여 사용자 권한을 관리할 수 있습니다. 제품 및 샌드박스에 사용자를 할당하는 방법을 알아봅니다.
 feature: Access Control
 role: Admin
-source-git-commit: e2e16572c9c03b28d99d309b6810090b8778a941
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 45%
+source-wordcount: '132'
+ht-degree: 56%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 45%
 * 특성 기반 액세스 제어 {#abac}
    * [개요](abac/overview.md)
    * [전체 안내서](abac/end-to-end-guide.md)
-   * [액세스 레이블을 사용하여 대상 데이터 흐름에 대한 사용자 액세스 관리](/help/access-control/abac/apply-access-labels-destinations.md)
+   * [액세스 레이블을 사용하여 대상 데이터 흐름에 대한 사용자 액세스를 관리할 수 있습니다.](/help/access-control/abac/apply-access-labels-destinations.md)
    * 권한 {#permissions-ui}
       * [찾아보기](abac/ui/browse.md)
       * [레이블](abac/ui/labels.md)
@@ -50,4 +50,4 @@ ht-degree: 45%
    * [유효한 정책 보기](api/effective-policies.md)
 * [문제 해결 안내서](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+* [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

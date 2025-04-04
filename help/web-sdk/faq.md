@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK FAQ
 description: Adobe Experience Platform 웹 SDK에 대해 자주 묻는 질문에 대한 답변을 얻으십시오.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: c26abeed890e06dce4e77133502b7031443bb4fa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2080'
+source-wordcount: '2082'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform Web SDK은 Adobe Experience Cloud의 다양한 서비�
 * 이러한 라이브러리는 서로 작동하도록 빌드되지 않았습니다.
 * 솔루션 간 및 Adobe Experience Platform 사용 사례에서는 이러한 서로 다른 라이브러리가 상호 종속되어 배포 마찰을 일으킵니다.
 
-Platform의 태그를 사용하여 이러한 라이브러리를 최대한 쉽게 배포 및 관리할 수 있지만 여전히 다음과 같은 문제가 있습니다.
+Experience Platform의 태그를 사용하여 이러한 라이브러리를 최대한 쉽게 배포하고 관리할 수 있지만 여전히 다음과 같은 문제가 있습니다.
 
 * 라이브러리 크기(페이지에 Adobe 코드가 너무 많음)
 * 성능(사이트 로드 시간이 너무 오래 걸림)
@@ -124,7 +124,7 @@ Adobe 서버가 SDK에서 오는 인바운드 데이터를 제대로 처리하�
 
 ## 웹 SDK 사용을 시작할 때 웹 사이트 방문자가 새 방문자로 표시되지 않도록 ECID를 마이그레이션할 수 있습니까?
 
-예. Adobe Experience Platform Web SDK은 ID 마이그레이션 기능을 제공합니다. 자세한 내용은 [Platform Web SDK ID 설명서](/help/web-sdk/identity/overview.md#id-migration)의 ID 마이그레이션에 대한 지침을 따르십시오.
+예. Adobe Experience Platform Web SDK은 ID 마이그레이션 기능을 제공합니다. 자세한 내용은 [Experience Platform Web SDK ID 설명서](/help/web-sdk/identity/overview.md#id-migration)의 ID 마이그레이션에 대한 지침을 따르십시오.
 
 ## 웹 SDK은 태그와 어떻게 다릅니까?
 

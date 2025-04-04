@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;홈;인기 있는 주제;
+keywords: Experience Platform;home;popular topics;
 title: 데이터 준비 문제 해결 안내서
 description: 이 문서에서는 Adobe Experience Platform 데이터 준비에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: ff8f660c2b3a04d8b4b9d4f19891816a44069088
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
 
 # [!DNL Data Prep] 문제 해결 안내서
 
-이 문서에서는 Adobe Experience Platform [!DNL Data Prep]에 대해 자주 묻는 질문에 대한 답변과 일반적인 오류에 대한 문제 해결 안내서를 제공합니다. 일반적으로 Platform API에 대한 질문 및 문제 해결 정보는 [Adobe Experience Platform API 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
+이 문서에서는 Adobe Experience Platform [!DNL Data Prep]에 대해 자주 묻는 질문에 대한 답변과 일반적인 오류에 대한 문제 해결 안내서를 제공합니다. 일반적으로 Experience Platform API에 대한 질문 및 문제 해결 정보는 [Adobe Experience Platform API 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
 
 ## FAQ
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ### 변환 오류는 어떻게 해결됩니까?
 
-[!DNL Data Prep]은(는) 모든 변환 오류를 발생한 열로 지역화합니다. 그 결과 해당 열이 무효화되고 나머지 행은 계속 처리됩니다. 이러한 변환 문제는 **경고**(으)로 기록됩니다. 정기적으로 경고를 검토하고 변형 문제를 고려하여 변형 논리를 조정하는 것이 좋습니다. 이렇게 하면 Experience Platform에 수집된 데이터의 품질이 향상됩니다.
+[!DNL Data Prep]은(는) 모든 변환 오류를 발생한 열로 지역화합니다. 그 결과 해당 열이 무효화되고 나머지 행은 계속 처리됩니다. 이러한 변환 문제는 **경고**(으)로 기록됩니다. 정기적으로 경고를 검토하고 변형 문제를 고려하여 변형 논리를 조정하는 것이 좋습니다. 이렇게 하면 Experience Platform에 수집되는 데이터의 품질이 향상됩니다.
 
 변환 문제로 인해 **Required**(으)로 표시된 열이 무효화된 경우 행이 수집되지 않습니다. 부분 데이터 수집이 활성화되면 전체 흐름이 실패하기 전에 이러한 거부의 임계값을 설정할 수 있습니다. 무효화된 속성이 스키마 수준 유효성 검사에 영향을 주지 않았다면 행은 계속 수집됩니다.
 
@@ -98,7 +98,7 @@ iif(marketing_type.equals("phyMail"), nullify(), marketing_type)
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | --- | --- | --- | --- | --- | --- |
 | iif | 주어진 부울 표현식을 평가하고 결과를 기반으로 지정된 값을 반환합니다. | <ul><li>식: **필수** 계산 중인 부울 식입니다.</li><li>TRUE_VALUE: **필수** 식이 true로 평가되는 경우 반환되는 값입니다.</li><li>FALSE_VALUE: **필수** 식이 false로 평가되는 경우 반환되는 값입니다.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
-| 같음 | 두 문자열을 비교하여 동일한지 확인합니다. 이 함수는 대/소문자를 구분합니다. | <ul><li>STRING1: **필수** 비교할 첫 번째 문자열입니다.</li><li>STRING2: **필수** 비교할 두 번째 문자열입니다. | 문자열1&#x200B;.equals(&#x200B;STRING2) | &quot;string1&quot;. &#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
+| 같음 | 두 문자열을 비교하여 동일한지 확인합니다. 이 함수는 대/소문자를 구분합니다. | <ul><li>STRING1: **필수** 비교할 첫 번째 문자열입니다.</li><li>STRING2: **필수** 비교할 두 번째 문자열입니다. | 문자열1&#x200B;.equals(&#x200B;STRING2) | &quot;string1&quot;. &#x200B;equals&#x200B;(&quot;STRING1&quot;) | 거짓 |
 | 무효화 | 속성 값을 null로 설정합니다. 필드를 대상 스키마에 복사하지 않으려는 경우 사용해야 합니다. | | 무효화() | 무효화() | null |
 
 {style="table-layout:auto"}

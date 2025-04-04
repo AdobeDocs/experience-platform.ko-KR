@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 SFTP 기본 연결 만들기
 description: Flow Service API를 사용하여 Adobe Experience Platform을 SFTP(Secure File Transfer Protocol) 서버에 연결하는 방법에 대해 알아봅니다.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 919e2c34bf8b9b4646936fe8bfbd4ee33d44407a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '761'
 ht-degree: 2%
 
 ---
@@ -13,14 +13,14 @@ ht-degree: 2%
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL SFTP](Secure File Transfer Protocol)에 대한 기본 연결을 만드는 단계를 안내합니다.
+이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL SFTP]&#x200B;(Secure File Transfer Protocol)에 대한 기본 연결을 만드는 단계를 안내합니다.
 
 ## 시작하기
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 >[!IMPORTANT]
 >
@@ -32,9 +32,9 @@ ht-degree: 2%
 
 인증 자격 증명을 검색하는 방법에 대한 자세한 단계는 [[!DNL SFTP] 인증 안내서](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials)를 참조하십시오.
 
-### Platform API 사용
+### Experience Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ## 기본 연결 만들기
 
@@ -42,11 +42,11 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 >
 >만든 후에는 [!DNL SFTP] 기본 연결의 인증 유형을 변경할 수 없습니다. 인증 유형을 변경하려면 새 기본 연결을 만들어야 합니다.
 
-기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
+기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 Experience Platform 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
 [!DNL SFTP] 원본은 기본 인증과 SSH 공개 키를 통한 인증을 모두 지원합니다. 이 단계에서 액세스 권한을 제공할 하위 폴더의 경로를 지정할 수도 있습니다.
 
-기본 연결 ID를 만들려면 [!DNL SFTP] 인증 자격 증명을 요청 매개 변수의 일부로 제공하는 동안 `/connections` 끝점에 POST 요청을 하십시오.
+기본 연결 ID를 만들려면 [!DNL SFTP] 인증 자격 증명을 요청 매개 변수의 일부로 제공하는 동안 `/connections` 끝점에 대한 POST 요청을 만듭니다.
 
 >[!IMPORTANT]
 >
@@ -100,7 +100,7 @@ curl -X POST \
 | `auth.params.port` | SFTP 서버의 포트입니다. 이 정수 값은 기본적으로 22입니다. |
 | `auth.params.username` | SFTP 서버와 연결된 사용자 이름입니다. |
 | `auth.params.password` | SFTP 서버와 연결된 암호입니다. |
-| `auth.params.maxConcurrentConnections` | 플랫폼을 SFTP에 연결할 때 지정된 최대 동시 연결 수입니다. 활성화된 경우 이 값을 1 이상으로 설정해야 합니다. |
+| `auth.params.maxConcurrentConnections` | Experience Platform을 SFTP에 연결할 때 지정된 최대 동시 연결 수입니다. 활성화된 경우 이 값을 1 이상으로 설정해야 합니다. |
 | `auth.params.folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. |
 | `auth.params.disableChunking` | SFTP 서버가 청크를 지원하는지 여부를 확인하는 데 사용되는 부울 값입니다. |
 | `connectionSpec.id` | SFTP 서버 연결 사양 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
@@ -162,7 +162,7 @@ curl -X POST \
 | `auth.params.username` | [!DNL SFTP] 서버와 연결된 사용자 이름입니다. |
 | `auth.params.privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류되어야 합니다. |
 | `auth.params.passPhrase` | 키 파일 또는 키 콘텐츠가 암호로 보호되어 있는 경우 개인 키를 해독하기 위한 암호나 암호입니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수는 PrivateKeyContent의 암호와 함께 값으로 사용해야 합니다. |
-| `auth.params.maxConcurrentConnections` | 플랫폼을 SFTP에 연결할 때 지정된 최대 동시 연결 수입니다. 활성화된 경우 이 값을 1 이상으로 설정해야 합니다. |
+| `auth.params.maxConcurrentConnections` | Experience Platform을 SFTP에 연결할 때 지정된 최대 동시 연결 수입니다. 활성화된 경우 이 값을 1 이상으로 설정해야 합니다. |
 | `auth.params.folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. |
 | `auth.params.disableChunking` | SFTP 서버가 청크를 지원하는지 여부를 확인하는 데 사용되는 부울 값입니다. |
 | `connectionSpec.id` | [!DNL SFTP] 서버 연결 사양 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |

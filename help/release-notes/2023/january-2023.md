@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2023년 1월
 description: Adobe Experience Platform의 2023년 1월 릴리스 정보입니다.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2224'
-ht-degree: 99%
+source-wordcount: '2227'
+ht-degree: 97%
 
 ---
 
@@ -59,7 +59,7 @@ Real-Time Customer Data Platform용 고객 AI를 사용하여 크기에 따라 �
 
 ## 보증 {#assurance}
 
-Adobe Assurance를 사용하면 모바일 앱에서 데이터를 수집하거나 경험을 제공하는 방식을 검사하고, 증명하고, 시뮬레이션하고, 검증할 수 있습니다.
+Adobe Assurance를 사용하면 모바일 앱에서 데이터를 수집하거나 경험을 제공하는 방식을 검사하고, 교정하고, 시뮬레이션하고, 검증할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
@@ -86,7 +86,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 ## 대상 (2월 2일 업데이트됨) {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 대상**
 
@@ -117,7 +117,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
     </tr>
     <tr>
         <td>필수 매핑 및 중복 매핑에 대한 UI 및 API 유효성 검사 (PLAT-123316)</td>
-        <td>이제 활성화 대상 워크플로의 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#mapping">필드를 매핑</a>할 때 UI 및 API에 다음과 같이 유효성 검사가 시행됩니다.<ul><li><b>필수 매핑</b>: 대상 개발자가 필수 매핑(예: <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html">Google Ad Manager 360</a> 대상)을 사용하여 대상을 설정한 경우 사용자가 대상에 데이터를 활성화할 때 이러한 필수 매핑을 추가해야 합니다. </li><li><b>중복 매핑</b>: 활성화 워크플로의 매핑 단계에서 소스 필드에 중복 값을 추가할 수 있지만 대상 필드에는 추가할 수 없습니다. 허용 및 금지 매핑 조합의 예는 아래 표를 참조하십시오. <br><table><thead><tr><th>허용/금지</th><th>소스 필드</th><th>대상 필드</th></tr></thead><tbody><tr><td>허용됨</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>이메일   별칭2</li></ul></td></tr><tr><td>금지</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+        <td>이제 활성화 대상 워크플로의 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#mapping">필드를 매핑</a>할 때 UI 및 API에 다음과 같이 유효성 검사가 시행됩니다.<ul><li><b>필수 매핑</b>: 대상 개발자가 필수 매핑(예: <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html">Google Ad Manager 360</a> 대상)을 사용하여 대상을 설정한 경우 사용자가 대상에 데이터를 활성화할 때 이러한 필수 매핑을 추가해야 합니다. </li><li><b>중복 매핑</b>: 활성화 워크플로의 매핑 단계에서 소스 필드에 중복 값을 추가할 수 있지만 대상 필드에는 추가할 수 없습니다. 허용 및 금지 매핑 조합의 예는 아래 테이블을 참조하십시오. <br><table><thead><tr><th>허용/금지</th><th>소스 필드</th><th>대상 필드</th></tr></thead><tbody><tr><td>허용됨</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>이메일   별칭2</li></ul></td></tr><tr><td>금지</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
     </tr>    
 </table>
 
@@ -163,7 +163,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 {style="table-layout:auto"}
 
-Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
+Experience Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
 ## 실시간 고객 프로필 {#profile}
 
@@ -189,7 +189,7 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 | ------- | ----------- |
 | 세그먼트 빌더에서 일괄 처리 값 가져오기 | 세그먼트 빌더는 이제 CSV 또는 TSV 파일을 업로드하거나 쉼표로 구분된 값을 수동으로 삽입하여 여러 값 가져오기를 지원합니다. 더 자세한 내용은 [세그먼트 빌더 안내서](../../segmentation/ui/segment-builder.md#rule-builder-canvas)에서 확인할 수 있습니다. |
 | 외부 대상자 멤버십 만료 | 기본적으로 외부 대상자 멤버십은 30일 동안 유지됩니다. 더 오래 유지하려면 대상자 데이터를 수집하는 동안 `validUntil` 필드를 사용합니다. |
-| Platform에서 생성된 세그먼트 멤버십 만료 | `lastQualificationTime` 필드를 기준으로 30일 넘게 `Exited` 상태에 있는 세그먼트 멤버십은 삭제될 수 있습니다. |
+| Experience Platform에서 생성한 세그먼트 멤버십 만료 | `lastQualificationTime` 필드를 기준으로 30일 넘게 `Exited` 상태에 있는 세그먼트 멤버십은 삭제될 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -197,7 +197,7 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 
 ## 소스 {#sources}
 
-Adobe Experience Platform은 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 라벨링하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform은 외부 소스에서 데이터를 수집할 수 있으며 Experience Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 

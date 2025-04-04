@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Oracle DB;oracle DB
+keywords: Experience Platform;홈;인기 항목;Oracle DB;oracle db
 solution: Experience Platform
 title: UI에서 Oracle DB Source 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Oracle DB 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '459'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # UI에서 [!DNL Oracle DB] 소스 연결 만들기
 
-Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Platform] 사용자 인터페이스를 사용하여 [!DNL Oracle DB] 소스 커넥터를 만드는 단계를 제공합니다.
+Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 [!DNL Oracle DB] 소스 커넥터를 만드는 단계를 제공합니다.
 
 ## 시작하기
 
@@ -29,18 +29,18 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ### 필요한 자격 증명 수집
 
-[!DNL Platform]에서 [!DNL Oracle DB] 계정에 액세스하려면 다음 값을 제공해야 합니다.
+[!DNL Experience Platform]에서 [!DNL Oracle DB] 계정에 액세스하려면 다음 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
 | `connectionString` | [!DNL Oracle DB]에 연결하는 데 사용되는 연결 문자열입니다. [!DNL Oracle DB] 연결 문자열 패턴은 `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`입니다. |
 | `connectionSpec.id` | 연결을 만드는 데 필요한 고유 식별자입니다. [!DNL Oracle DB]의 연결 사양 ID는 `d6b52d86-f0f8-475f-89d4-ce54c8527328`입니다. |
 
-시작에 대한 자세한 내용은 [이 Oracle 문서](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)를 참조하세요.
+시작하기에 대한 자세한 내용은 [이 Oracle 문서](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)를 참조하세요.
 
 ## [!DNL Oracle DB] 계정 연결
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL Oracle DB] 계정을 연결하여 [!DNL Platform]에 연결할 수 있습니다.
+필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL Oracle DB] 계정을 연결하여 [!DNL Experience Platform]에 연결할 수 있습니다.
 
 [Adobe Experience Platform](https://platform.adobe.com)에 로그인한 다음 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 **[!UICONTROL 소스]** 작업 영역에 액세스합니다. **[!UICONTROL 카탈로그]** 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
@@ -66,4 +66,4 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL Oracle DB] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 가져올 데이터 흐름을 구성 [!DNL Platform]](../../dataflow/databases.md)할 수 있습니다.
+이 자습서에 따라 [!DNL Oracle DB] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 가져올 데이터 흐름을 구성 [!DNL Experience Platform]](../../dataflow/databases.md)할 수 있습니다.

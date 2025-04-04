@@ -2,9 +2,9 @@
 title: Query Service의 데이터 자산 조직에 대한 우수 사례
 description: 이 문서에서는 쿼리 서비스에서 쉽게 사용할 수 있도록 데이터를 구성하는 논리적 방법에 대해 설명합니다.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 이 문서에서는 Adobe Experience Platform 쿼리 서비스와 함께 사용할 데이터 세트, 보기 및 임시 테이블을 포함한 데이터 에셋을 구성하기 위한 모범 사례에 대한 지침을 제공합니다. 데이터 구성 방법과 이 정보에 액세스, 업데이트 및 삭제하는 방법에 대한 정보를 다룹니다.
 
-[!DNL Data Lake] 플랫폼 내에서 데이터 자산이 증가할 때 논리적으로 구성하는 것이 중요합니다. Query Service는 샌드박스 내에서 데이터 자산을 논리적으로 그룹화할 수 있도록 SQL 구문을 확장합니다. 이 조직 방법을 사용하면 물리적으로 이동할 필요 없이 스키마 간에 데이터 자산을 공유할 수 있습니다.
+Experience Platform [!DNL Data Lake] 내에서 데이터 자산이 증가할 때 논리적으로 구성하는 것이 중요합니다. Query Service는 샌드박스 내에서 데이터 자산을 논리적으로 그룹화할 수 있도록 SQL 구문을 확장합니다. 이 조직 방법을 사용하면 물리적으로 이동할 필요 없이 스키마 간에 데이터 자산을 공유할 수 있습니다.
 
 ## 시작하기
 

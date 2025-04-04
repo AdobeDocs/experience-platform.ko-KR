@@ -1,10 +1,10 @@
 ---
-title: Real-time Customer Data Platform B2B 에디션에서 두 스키마 간의 관계 정의
-description: Adobe Real-time Customer Data Platform B2B 에디션에서 두 스키마 간의 다대일 관계를 정의하는 방법을 알아봅니다.
+title: Real-Time Customer Data Platform B2B edition에서 두 스키마 간의 관계 정의
+description: Adobe Real-Time Customer Data Platform B2B edition에서 두 스키마 간의 다대일 관계를 정의하는 방법을 알아봅니다.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1769'
+source-wordcount: '1771'
 ht-degree: 12%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 12%
 >title="참조 스키마"
 >abstract="관계를 설정할 스키마를 선택합니다. 스키마 클래스에 따라 B2B 컨텍스트의 다른 엔티티와 기존 관계를 유지할 수도 있습니다. B2B 스키마 클래스를 상호 연관시키는 방법에 대한 자세한 내용은 설명서를 참조하십시오."
 
-Adobe Real-time Customer Data Platform B2B 에디션은 [계정](../classes/b2b/business-account.md), [기회](../classes/b2b/business-opportunity.md), [캠페인](../classes/b2b/business-campaign.md) 등을 포함하여 기본 B2B 데이터 엔터티를 캡처하는 여러 XDM(Experience Data Model) 클래스를 제공합니다. 이러한 클래스를 기반으로 스키마를 빌드하고 [실시간 고객 프로필](../../profile/home.md)에서 사용할 수 있도록 활성화하면 서로 다른 소스의 데이터를 통합 스키마라는 통합 표현으로 병합할 수 있습니다.
+Adobe Real-Time Customer Data Platform B2B edition은 [계정](../classes/b2b/business-account.md), [기회](../classes/b2b/business-opportunity.md), [캠페인](../classes/b2b/business-campaign.md) 등을 포함하여 기본 B2B 데이터 엔터티를 캡처하는 여러 XDM(Experience Data Model) 클래스를 제공합니다. 이러한 클래스를 기반으로 스키마를 빌드하고 [실시간 고객 프로필](../../profile/home.md)에서 사용할 수 있도록 활성화하면 서로 다른 소스의 데이터를 통합 스키마라는 통합 표현으로 병합할 수 있습니다.
 
 그러나 결합 스키마에는 동일한 클래스를 공유하는 스키마로 캡처된 필드만 포함될 수 있습니다. 여기서 스키마 관계가 시작됩니다. B2B 스키마에서 관계를 구현하면 이러한 비즈니스 엔티티가 서로 관련되는 방식을 설명하고 다운스트림 세그먼테이션 사용 사례에 여러 클래스의 속성을 포함할 수 있습니다.
 
@@ -24,13 +24,13 @@ Adobe Real-time Customer Data Platform B2B 에디션은 [계정](../classes/b2b/
 
 ![B2B 클래스 관계](../images/tutorials/relationship-b2b/classes.png)
 
-이 자습서에서는 Real-Time CDP B2B 에디션의 두 스키마 간의 다대일 관계를 정의하는 단계를 다룹니다.
+이 자습서에서는 Real-Time CDP B2B edition에서 두 스키마 간의 다대일 관계를 정의하는 단계를 다룹니다.
 
 >[!NOTE]
 >
->Real-time Customer Data Platform B2B 에디션을 사용하지 않거나 일대일 관계를 만들려면 대신 [일대일 관계 만들기](./relationship-ui.md)에 대한 안내서를 참조하십시오.
+>Real-Time Customer Data Platform B2B edition을 사용하지 않거나 일대일 관계를 만들려면 [일대일 관계 만들기](./relationship-ui.md)에 대한 안내서를 대신 참조하십시오.
 >
->이 자습서에서는 Platform UI에서 B2B 스키마 간의 관계를 수동으로 설정하는 방법에 중점을 둡니다. B2B 소스 연결에서 데이터를 가져오는 경우 자동 생성 유틸리티를 사용하여 대신 필요한 스키마, ID 및 관계를 만들 수 있습니다. [자동 생성 유틸리티 사용](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md)에 대한 자세한 내용은 B2B 네임스페이스 및 스키마에 대한 소스 설명서를 참조하십시오.
+>이 자습서에서는 Experience Platform UI에서 B2B 스키마 간의 관계를 수동으로 설정하는 방법에 중점을 둡니다. B2B 소스 연결에서 데이터를 가져오는 경우 자동 생성 유틸리티를 사용하여 대신 필요한 스키마, ID 및 관계를 만들 수 있습니다. [자동 생성 유틸리티 사용](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md)에 대한 자세한 내용은 B2B 네임스페이스 및 스키마에 대한 소스 설명서를 참조하십시오.
 
 ## 시작하기
 
@@ -53,7 +53,7 @@ Adobe Real-time Customer Data Platform B2B 에디션은 [계정](../classes/b2b/
 >title="참조 ID 네임스페이스"
 >abstract="참조 스키마의 기본 ID 필드에 대한 네임스페이스(유형)입니다. 관계에 참여하려면 참조 스키마에 기본 ID 필드가 설정되어 있어야 합니다. B2B 관계에서 ID에 대한 자세한 내용은 설명서를 참조하십시오."
 
-관계를 설정하려면 참조 스키마에 정의된 기본 ID가 있어야 합니다. B2B 엔티티에 대한 기본 ID를 설정할 때 문자열 기반 엔티티 ID는 서로 다른 시스템 또는 위치에서 수집하는 경우 겹칠 수 있으며, 이로 인해 플랫폼에서 데이터 충돌이 발생할 수 있다는 점을 유의하십시오.
+관계를 설정하려면 참조 스키마에 정의된 기본 ID가 있어야 합니다. B2B 엔티티에 대한 기본 ID를 설정할 때 문자열 기반 엔티티 ID는 서로 다른 시스템 또는 위치에서 수집하는 경우 겹칠 수 있으며, 이로 인해 Experience Platform에서 데이터 충돌이 발생할 수 있다는 점을 유의하십시오.
 
 이를 위해 모든 표준 B2B 클래스에는 [[!UICONTROL B2B Source] 데이터 형식](../data-types/b2b-source.md)을 준수하는 &quot;key&quot; 필드가 포함되어 있습니다. 이 데이터 유형은 식별자의 소스에 대한 다른 컨텍스트 정보와 함께 B2B 엔티티의 문자열 식별자에 대한 필드를 제공합니다. 이러한 필드 중 하나인 `sourceKey`은(는) 데이터 형식의 다른 필드 값을 연결하여 엔터티에 대해 완전히 고유한 식별자를 생성합니다. 이 필드는 항상 B2B 엔티티 스키마의 기본 ID로 사용해야 합니다.
 
@@ -61,13 +61,13 @@ Adobe Real-time Customer Data Platform B2B 에디션은 [계정](../classes/b2b/
 
 >[!NOTE]
 >
->[XDM 필드를 ID로 설정](../ui/fields/identity.md)할 때 아래에서 ID를 정의할 ID 네임스페이스를 제공해야 합니다. Adobe에서 제공하는 표준 네임스페이스이거나 조직에서 정의한 사용자 정의 네임스페이스일 수 있습니다. 실제로 네임스페이스는 단순히 컨텍스트 문자열이며, ID 유형을 분류하는 데 조직에서 의미가 있는 경우 원하는 값으로 설정할 수 있습니다. 자세한 내용은 [ID 네임스페이스](../../identity-service/features/namespaces.md)에 대한 개요를 참조하십시오.
+>[XDM 필드를 ID로 설정](../ui/fields/identity.md)할 때 아래에서 ID를 정의할 ID 네임스페이스를 제공해야 합니다. Adobe에서 제공하는 표준 네임스페이스 또는 조직에서 정의한 사용자 지정 네임스페이스가 될 수 있습니다. 실제로 네임스페이스는 단순히 컨텍스트 문자열이며, ID 유형을 분류하는 데 조직에서 의미가 있는 경우 원하는 값으로 설정할 수 있습니다. 자세한 내용은 [ID 네임스페이스](../../identity-service/features/namespaces.md)에 대한 개요를 참조하십시오.
 
 참조용으로 다음 섹션에서는 관계가 정의되기 전에 이 자습서에서 사용되는 각 스키마의 구조를 설명합니다. 스키마 구조에서 기본 ID가 정의된 위치와 기본 ID가 사용하는 사용자 정의 네임스페이스를 참고하십시오.
 
 ### 영업 기회 스키마
 
-소스 스키마 &quot;[!DNL Opportunities]&quot;이(가) [!UICONTROL XDM 비즈니스 영업 기회] 클래스를 기반으로 합니다. 클래스에서 제공하는 필드 중 하나(`opportunityKey`)가 스키마의 식별자 역할을 합니다. 특히 `opportunityKey` 개체 아래의 `sourceKey` 필드는 [!DNL B2B Opportunity](이)라는 사용자 지정 네임스페이스에서 스키마의 기본 ID로 설정됩니다.
+소스 스키마 &quot;[!DNL Opportunities]&quot;이(가) [!UICONTROL XDM 비즈니스 영업 기회] 클래스를 기반으로 합니다. 클래스에서 제공하는 필드 중 하나(`opportunityKey`)가 스키마의 식별자 역할을 합니다. 특히 `opportunityKey` 개체 아래의 `sourceKey` 필드는 [!DNL B2B Opportunity]&#x200B;(이)라는 사용자 지정 네임스페이스에서 스키마의 기본 ID로 설정됩니다.
 
 **[!UICONTROL 필드 속성]**&#x200B;에서 볼 수 있듯이 이 스키마는 [!DNL Real-Time Customer Profile]에서 사용할 수 있도록 설정되었습니다.
 

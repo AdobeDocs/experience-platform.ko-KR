@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2024년 1월
 description: Adobe Experience Platform의 2024년 1월 릴리스 정보.
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
-workflow-type: ht
-source-wordcount: '1659'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1662'
+ht-degree: 95%
 
 ---
 
@@ -43,9 +43,9 @@ Experience Platform의 기존 기능 업데이트:
 
 ## 속성 기반 액세스 제어 {#abac}
 
-속성 기반 액세스 제어는 개인 정보 보호를 중시하는 브랜드가 사용자 액세스를 더욱 유연하게 관리할 수 있도록 하는 Adobe Experience Platform의 기능입니다. 스키마 필드 및 세그먼트와 같은 개별 오브젝트를 사용자 역할에 할당할 수 있습니다. 이 기능을 사용하면 조직 내 특정 플랫폼 사용자에 대한 개별 오브젝트에 액세스를 허용하거나 취소할 수 있습니다.
+속성 기반 액세스 제어는 개인 정보 보호를 중시하는 브랜드가 사용자 액세스를 더욱 유연하게 관리할 수 있도록 하는 Adobe Experience Platform의 기능입니다. 스키마 필드 및 세그먼트와 같은 개별 오브젝트를 사용자 역할에 할당할 수 있습니다. 이 기능을 사용하면 조직의 특정 Experience Platform 사용자에 대해 개별 객체에 대한 액세스 권한을 부여하거나 취소할 수 있습니다.
 
-조직의 관리자는 속성 기반 액세스 제어를 통해 모든 플랫폼 워크플로와 리소스에서 민감한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 정의 유형의 데이터에 대한 액세스를 제어할 수 있습니다. 관리자는 특정 필드에만 액세스할 수 있는 사용자 역할과 필드에 해당하는 데이터를 정의할 수 있습니다.
+조직 관리자는 속성 기반 액세스 제어를 통해 모든 Experience Platform 워크플로 및 리소스에서 중요한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 지정된 유형의 데이터에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 특정 필드에만 액세스할 수 있는 사용자 역할과 필드에 해당하는 데이터를 정의할 수 있습니다.
 
 **새로운 설명서 또는 업데이트된 설명서**
 
@@ -79,7 +79,7 @@ Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터�
 
 | 기능 | 설명 |
 | --- | --- |
-| SQL 보기 | 이제 SQL 토글 보기를 사용하여 프로필, 대상자, 대상 및 사용자 정의 인사이트에 대한 SQL을 확인하고 쿼리 편집기를 통해 온디맨드 쿼리를 실행할 수 있습니다. Real-Time CDP 인사이트를 제공하는 SQL에 액세스하면 데이터 모델 분석의 논리를 이해하는 데 도움이 됩니다. 이러한 투명성을 통해 Adobe Real-Time CDP 데이터에 더 쉽게 액세스하고 이해할 수 있으며 의사 결정에 더 큰 영향을 줄 수 있습니다.<br>40개 이상의 기존 인사이트에 대한 SQL에서 영감을 받아 비즈니스 요구에 따라 플랫폼 데이터에서 고유한 인사이트를 도출하는 새로운 쿼리를 생성하십시오. SQL은 Experience League 설명서의 [프로필](../../dashboards/insights/profiles.md), [대상자](../../dashboards/insights/audiences.md), [대상](../../dashboards/insights/destinations.md) 인사이트에도 사용할 수 있습니다. 이러한 문서에서는 표준 인사이트로 답변할 수 있는 비즈니스 사용 사례를 강조합니다. 자세한 내용은 [인사이트 SQL 보기](../../dashboards/view-sql.md)에 대한 안내서를 참조하십시오. |
+| SQL 보기 | 이제 SQL 토글 보기를 사용하여 프로필, 대상자, 대상 및 사용자 정의 인사이트에 대한 SQL을 확인하고 쿼리 편집기를 통해 온디맨드 쿼리를 실행할 수 있습니다. Real-Time CDP 인사이트를 제공하는 SQL에 액세스하면 데이터 모델 분석의 논리를 이해하는 데 도움이 됩니다. 이러한 투명성을 통해 Adobe Real-Time CDP 데이터에 더 쉽게 액세스하고 이해할 수 있으며 의사 결정에 더 큰 영향을 줄 수 있습니다.<br>40개 이상의 기존 인사이트를 가진 SQL에서 영감을 얻어 비즈니스 요구 사항에 따라 Experience Platform 데이터에서 고유한 인사이트를 얻는 새 쿼리를 만드십시오. SQL은 Experience League 설명서의 [프로필](../../dashboards/insights/profiles.md), [대상자](../../dashboards/insights/audiences.md), [대상](../../dashboards/insights/destinations.md) 인사이트에도 사용할 수 있습니다. 이러한 문서에서는 표준 인사이트로 답변할 수 있는 비즈니스 사용 사례를 강조합니다. 자세한 내용은 [인사이트 SQL 보기](../../dashboards/view-sql.md)에 대한 안내서를 참조하십시오. |
 
 {style="table-layout:auto"}
 

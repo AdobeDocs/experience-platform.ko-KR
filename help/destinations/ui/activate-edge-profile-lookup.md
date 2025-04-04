@@ -3,9 +3,9 @@ title: 실시간으로 에지 프로필 속성 조회
 description: 사용자 지정 Personalization 대상 및 Edge Network API를 사용하여 실시간으로 에지 프로필 속성을 조회하는 방법을 알아봅니다
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1907'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform은 [실시간 고객 프로필](../../profile/home.md)
 
 ## 용어 및 사전 요구 사항 {#prerequisites}
 
-이 페이지에 설명된 사용 사례를 구성할 때는 다음 Platform 구성 요소를 사용합니다.
+이 페이지에 설명된 사용 사례를 구성할 때는 다음 Experience Platform 구성 요소를 사용하게 됩니다.
 
 * [데이터스트림](../../datastreams/overview.md): 데이터스트림은 Web SDK에서 들어오는 이벤트 데이터를 수신하고 에지 프로필 데이터로 응답합니다.
 * [병합 정책](../../segmentation/ui/segment-builder.md#merge-policies): Edge 프로필에서 올바른 프로필 데이터를 사용하도록 [!UICONTROL Active-On-Edge] 병합 정책을 만듭니다.
@@ -54,7 +54,7 @@ Edge 프로필 조회 사용 사례는 아래 표에 설명된 특정 성능 가
     >
     >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-  ![데이터 스트림 구성 화면을 표시하는 플랫폼 UI 이미지입니다.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+  ![데이터 스트림 구성 화면을 표시하는 Experience Platform UI 이미지입니다.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## 2단계: Edge 평가를 위한 대상 구성 {#audience-edge-evaluation}
@@ -110,7 +110,7 @@ Edge에서 프로필 속성을 조회하려면 Edge 평가를 위해 대상을 �
    출처에 따라 여러 유형의 대상 중에서 선택할 수 있습니다.
 
    * **[!UICONTROL 세그먼테이션 서비스]**: 세그먼테이션 서비스에 의해 Experience Platform 내에서 생성된 대상입니다. 자세한 내용은 [세그먼테이션 설명서](../../segmentation/ui/overview.md)를 참조하세요.
-   * **[!UICONTROL 사용자 지정 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드되는 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/overview.md#import-audience)에 대한 설명서를 참조하십시오.
+   * **[!UICONTROL 사용자 지정 업로드]**: Experience Platform 외부에서 생성되어 Experience Platform에 CSV 파일로 업로드된 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/overview.md#import-audience)에 대한 설명서를 참조하십시오.
    * 다른 Adobe 솔루션에서 가져온 다른 유형의 대상(예: [!DNL Audience Manager]).
 
      ![여러 대상이 강조 표시된 활성화 워크플로의 대상 선택 단계입니다.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

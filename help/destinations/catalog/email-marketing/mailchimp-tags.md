@@ -3,9 +3,9 @@ title: Mailchimp 태그
 description: Mailchimp 태그 대상을 사용하면 계정 데이터를 내보내고 Mailchimp 내에서 활성화하여 연락처에 참여할 수 있습니다.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1657'
 ht-degree: 2%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 2%
 
 [!DNL Mailchimp Tags]은(는) [대상](https://mailchimp.com/help/getting-started-audience/) 및 [태그](https://mailchimp.com/help/getting-started-tags/)를 사용하여 연락처 정보를 관리합니다. 태그는 연락처를 구성하고 [!DNL Mailchimp] 내에서 내부 분류에 대해 레이블을 지정할 수 있는 레이블입니다.
 
-관심사 및 환경 설정에 따라 연락처를 정렬하는 데 사용하는 [!DNL Mailchimp Interest Categories]과(와) 비교하여 [!DNL Mailchimp Tags]은(는) 연락처가 관심을 가질 수 있는 관심 항목에 대한 구독을 관리하기 위한 것입니다. *참고: Experience Platform에 [!DNL Mailchimp Interest Categories]에 대한 연결도 있습니다. [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md) 페이지에서 확인할 수 있습니다.*
+관심사 및 환경 설정에 따라 연락처를 정렬하는 데 사용하는 [!DNL Mailchimp Interest Categories]과(와) 비교하여 [!DNL Mailchimp Tags]은(는) 연락처가 관심을 가질 수 있는 관심 항목에 대한 구독을 관리하기 위한 것입니다. *참고: Experience Platform에도 [!DNL Mailchimp Interest Categories]에 대한 연결이 있습니다. [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md) 페이지에서 확인할 수 있습니다.*
 
-이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) 끝점을 활용합니다. 새 대상 내에서 활성화한 후 기존 [!DNL Mailchimp] 대상 내에서 **새 연락처를 추가**&#x200B;하거나 **기존 [!DNL Mailchimp] 연락처의 태그를 업데이트**&#x200B;할 수 있습니다. [!DNL Mailchimp Tags]은(는) 플랫폼에서 선택한 대상 이름을 [!DNL Mailchimp] 내의 태그 이름으로 사용합니다.
+이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) 끝점을 활용합니다. 새 대상 내에서 활성화한 후 기존 [!DNL Mailchimp] 대상 내에서 **새 연락처를 추가**&#x200B;하거나 **기존 [!DNL Mailchimp] 연락처의 태그를 업데이트**&#x200B;할 수 있습니다. [!DNL Mailchimp Tags]은(는) Experience Platform에서 선택한 대상 이름을 [!DNL Mailchimp] 내의 태그 이름으로 사용합니다.
 
 ## 사용 사례 {#use-cases}
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ### 마케팅 캠페인을 위해 연락처에 이메일 보내기 {#use-case-send-emails}
 
-조직의 영업 부서에서 이메일 기반 마케팅 캠페인을 선별된 연락처 목록에 브로드캐스트하려고 합니다. 연락처 목록은 다른 오프라인 출처에서 일괄적으로 수신되므로 추적해야 합니다. 팀은 기존 [!DNL Mailchimp]명의 대상을 식별하고 각 목록의 연락처가 추가되는 Experience Platform 대상을 빌드하기 시작합니다. 이 대상자를 [!DNL Mailchimp Tags](으)로 보낸 후 선택한 [!DNL Mailchimp] 대상자에 없는 연락처가 있으면 연락처가 속한 대상자 이름을 포함하는 연결된 태그와 함께 추가됩니다. [!DNL Mailchimp] 대상에 이미 연락처가 있는 경우 대상자의 이름을 가진 새 태그가 추가됩니다. 레이블이 [!DNL Mailchimp]에 표시되므로 오프라인 소스를 쉽게 식별할 수 있습니다. 데이터를 [!DNL Mailchimp](으)로 보낸 후 마케팅 캠페인 이메일을 대상자에게 보냅니다.
+조직의 영업 부서에서 이메일 기반 마케팅 캠페인을 선별된 연락처 목록에 브로드캐스트하려고 합니다. 연락처 목록은 다른 오프라인 출처에서 일괄적으로 수신되므로 추적해야 합니다. 팀은 기존 [!DNL Mailchimp]명의 대상을 식별하고 각 목록의 연락처가 추가되는 Experience Platform 대상을 빌드하기 시작합니다. 이 대상자를 [!DNL Mailchimp Tags]&#x200B;(으)로 보낸 후 선택한 [!DNL Mailchimp] 대상자에 없는 연락처가 있으면 연락처가 속한 대상자 이름을 포함하는 연결된 태그와 함께 추가됩니다. [!DNL Mailchimp] 대상에 이미 연락처가 있는 경우 대상자의 이름을 가진 새 태그가 추가됩니다. 레이블이 [!DNL Mailchimp]에 표시되므로 오프라인 소스를 쉽게 식별할 수 있습니다. 데이터를 [!DNL Mailchimp]&#x200B;(으)로 보낸 후 마케팅 캠페인 이메일을 대상자에게 보냅니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -38,7 +38,7 @@ Experience Platform 및 [!DNL Mailchimp]에서 설정해야 하는 필수 구성
 
 ### [!DNL Mailchimp Tags] 대상에 대한 필수 구성 요소 {#prerequisites-destination}
 
-Platform에서 [!DNL Mailchimp Tags] 계정으로 데이터를 내보내려면 다음 전제 조건을 참고하십시오.
+Experience Platform에서 [!DNL Mailchimp Tags] 계정으로 데이터를 내보내려면 다음 전제 조건을 참고하십시오.
 
 #### [!DNL Mailchimp] 계정이 있어야 합니다. {#prerequisites-account}
 
@@ -88,8 +88,8 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -99,7 +99,7 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화번호, 성)*&#x200B;과(와) 함께 대상자의 모든 구성원을 내보냅니다.</li><li> 플랫폼에서 선택한 각 대상에 대해 해당 [!DNL Mailchimp Tags] 세그먼트 상태가 플랫폼의 대상 상태로 업데이트됩니다.</li></ul> |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화번호, 성)*&#x200B;과(와) 함께 대상자의 모든 구성원을 내보냅니다.</li><li> Experience Platform에서 선택한 각 대상에 대해 해당 [!DNL Mailchimp Tags] 세그먼트 상태가 Experience Platform의 대상 상태로 업데이트됩니다.</li></ul> |
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
@@ -125,7 +125,7 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 {style="table-layout:auto"}
 
-인증 방법을 보여 주는 ![플랫폼 UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
+인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
 
 제공된 세부 정보가 유효하면 UI에 녹색 확인 표시와 함께 **[!UICONTROL 연결됨]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
 
@@ -133,14 +133,14 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-![대상 세부 정보를 표시하는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
+대상 세부 정보를 표시하는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
 
 | 필드 | 설명 |
 | --- | --- |
 | **[!UICONTROL 이름]** | 나중에 이 대상을 인식할 수 있는 이름입니다. |
 | **[!UICONTROL 설명]** | 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다. |
 | **[!UICONTROL 데이터 센터]** | [!DNL Mailchimp] 계정 `data center`입니다. 자세한 내용은 [데이터 센터 식별 [!DNL Mailchimp] 섹션](#identify-data-center)을 참조하세요. |
-| **[!UICONTROL 대상 이름(먼저 데이터 센터를 입력하십시오)]** | **[!UICONTROL 데이터 센터]**&#x200B;를 입력하면 이 드롭다운이 [!DNL Mailchimp] 계정의 대상 이름으로 자동으로 채워집니다. Platform의 데이터로 업데이트할 대상을 선택합니다. |
+| **[!UICONTROL 대상 이름(먼저 데이터 센터를 입력하십시오)]** | **[!UICONTROL 데이터 센터]**&#x200B;를 입력하면 이 드롭다운이 [!DNL Mailchimp] 계정의 대상 이름으로 자동으로 채워집니다. Experience Platform의 데이터로 업데이트할 대상을 선택합니다. |
 
 {style="table-layout:auto"}
 
@@ -161,18 +161,18 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 ### 매핑 고려 사항 및 예제 {#mapping-considerations-example}
 
-대상 데이터를 Adobe Experience Platform에서 [!DNL Mailchimp Tags] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 필드 간에 링크를 만드는 것으로 구성됩니다.
+대상 데이터를 Adobe Experience Platform에서 [!DNL Mailchimp Tags] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Experience Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 스키마 필드 간에 링크를 작성하는 것으로 구성됩니다.
 
 XDM 필드를 [!DNL Mailchimp Tags] 대상 필드에 올바르게 매핑하려면 아래 단계를 따르십시오.
 
 1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다. 화면에 새 매핑 행이 표시됩니다.
 1. **[!UICONTROL 원본 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 `Email` ID 네임스페이스를 선택합니다.
 
-   ![ID 네임스페이스에서 Source 필드를 이메일로 사용하는 플랫폼 UI 스크린샷.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+   ![ID 네임스페이스에서 전자 메일로 Source 필드가 있는 Experience Platform UI 스크린샷.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
 1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 `Email` ID 네임스페이스를 선택합니다.
 
-   ![ID 네임스페이스에서 Target 필드가 전자 메일로 포함된 플랫폼 UI 스크린샷.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
+   ![ID 네임스페이스에서 Target 필드를 이메일로 사용하는 Experience Platform UI 스크린샷.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
    XDM 프로필 스키마와 [!DNL Mailchimp Tags] 간의 매핑은 다음과 같습니다.
 
@@ -181,7 +181,7 @@ XDM 필드를 [!DNL Mailchimp Tags] 대상 필드에 올바르게 매핑하려�
    | `IdentityMap: Email` | `Identity: Email` | 예 |
 
    완료된 매핑의 예가 아래에 나와 있습니다.
-   ![필드 매핑을 보여 주는 플랫폼 UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
+   필드 매핑을 보여 주는 ![Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
 
 대상 연결에 대한 매핑을 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 

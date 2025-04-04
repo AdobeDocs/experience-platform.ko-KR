@@ -1,12 +1,12 @@
 ---
 keywords: advertising; criteo;
 title: 크리테오 연결
-description: 크리터는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인터넷을 통해 모든 소비자에게 더 풍부한 경험을 제공할 수 있도록 지원합니다. 세계 최대 규모의 상거래 데이터 세트와 동급 최고의 AI를 갖춘 Criteo는 쇼핑 여정의 각 접점이 적절한 시간에 적절한 광고를 통해 고객에게 도달하도록 개인화되도록 보장합니다.
+description: Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인터넷을 이용하는 모든 소비자에게 더욱 풍부한 경험을 제공합니다. Criteo는 세계 최대 규모의 상거래 데이터 세트와 동급 최고의 AI를 바탕으로 쇼핑 여정 전반의 각 터치포인트를 개인화하여 적절한 시점에 적절한 광고를 고객에게 전달합니다.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: e594e473ac78663203c9254623fe8e324985fa39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 3%
+source-wordcount: '1017'
+ht-degree: 12%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 3%
 >
 >이 대상 커넥터 및 설명서 페이지는 Criteo에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 크리터에 직접 [여기](mailto:criteoTechnicalPartnerships@criteo.com)로 문의하십시오.
 
-크리터는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인터넷을 통해 모든 소비자에게 더 풍부한 경험을 제공할 수 있도록 지원합니다. 세계 최대 규모의 상거래 데이터 세트와 동급 최고의 AI를 갖춘 Criteo는 쇼핑 여정의 각 접점이 적절한 시간에 적절한 광고를 통해 고객에게 도달하도록 개인화되도록 보장합니다.
+Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인터넷을 이용하는 모든 소비자에게 더욱 풍부한 경험을 제공합니다. Criteo는 세계 최대 규모의 상거래 데이터 세트와 동급 최고의 AI를 바탕으로 쇼핑 여정 전반의 각 터치포인트를 개인화하여 적절한 시점에 적절한 광고를 고객에게 전달합니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 
 | 대상 ID | 설명 | 고려 사항 |
 | --- | --- | --- |
-| `email_sha256` | SHA-256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA-256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 [!UICONTROL 변환 적용] 옵션을 선택하여 Platform이 활성화 시 데이터를 자동으로 해시하도록 합니다. |
+| `email_sha256` | SHA-256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA-256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 [!UICONTROL 변환 적용] 옵션을 선택하여 Experience Platform이 활성화 시 데이터를 자동으로 해시하도록 합니다. |
 | `gum_id` | 기준 [!DNL GUM] 쿠키 식별자 | [!DNL GUM IDs]을(를) 사용하면 클라이언트가 사용자 식별 시스템과 크리터의 사용자 식별([!DNL UID]) 간에 서신을 유지할 수 있습니다. 식별자 유형이 `gum_id`인 경우 추가 매개 변수인 [!DNL GUM Caller ID]도 포함되어야 합니다. 필요한 경우 해당 [!DNL GUM Caller ID]을(를) 위해 Criteo 계정 팀에 연락하거나 이 [!DNL GUM ID] 동기화에 대한 자세한 정보를 얻으십시오. |
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}

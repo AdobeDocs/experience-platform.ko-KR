@@ -2,7 +2,7 @@
 description: Destination SDK으로 빌드된 대상에서 지원하는 내역 프로필 자격에 대해 알아봅니다.
 title: 과거 프로필 자격 요건
 exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 2%
@@ -11,13 +11,13 @@ ht-degree: 2%
 
 # 과거 프로필 자격 요건
 
-Destination SDK을 통해 생성된 모든 대상은 기본적으로 내역 프로필 자격을 지원합니다. 즉, 사용자가 처음으로 대상에 대한 활성화 데이터 흐름을 설정할 때 첫 번째 내보내기에는 해당 세그먼트에 대해 자격이 부여된 모든 대상 멤버가 포함됩니다.
+Destination SDK을 통해 만든 모든 대상은 기본적으로 내역 프로필 자격을 지원합니다. 즉, 사용자가 처음으로 대상에 대한 활성화 데이터 흐름을 설정할 때 첫 번째 내보내기에는 해당 세그먼트에 대해 자격이 부여된 모든 대상 멤버가 포함됩니다.
 
 이 동작은 대상 구성의 `"backfillHistoricalProfileData":true` 매개 변수에 의해 정의됩니다.
 
 >[!IMPORTANT]
 >
->Destination SDK을 통해 만든 모든 대상에 대해 이전 프로필 자격을 사용할 수 있으며 `backfillHistoricalProfileData` 매개 변수는 사용자가 구성할 수 없습니다.
+>내역 프로필 자격은 Destination SDK을 통해 만든 모든 대상에 대해 활성화되며 `backfillHistoricalProfileData` 매개 변수는 사용자가 구성할 수 없습니다.
 
 ## 지원되는 통합 유형 {#supported-integration-types}
 
@@ -33,14 +33,14 @@ Destination SDK을 통해 생성된 모든 대상은 기본적으로 내역 프�
 <!-- 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
+|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Experience Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Experience Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
 
 {style="table-layout:auto"} -->
 
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽은 후에는 대상자를 대상으로 처음 내보낼 때 활성화된 대상자에 대해 자격이 부여된 모든 프로필의 내역 모집단을 Experience Platform이 자동으로 내보냅니다. 이 옵션은 Destination SDK 또는 Experience Platform UI에서 구성할 수 없습니다.
+이 문서를 읽은 후에는 대상자를 대상으로 처음 내보낼 때 Experience Platform에서 활성화된 대상자에 대해 자격이 부여된 모든 프로필의 기록 모집단을 자동으로 내보냅니다. 이 옵션은 Destination SDK 또는 Experience Platform UI에서 구성할 수 없습니다.
 
 다른 대상 구성 요소에 대한 자세한 내용은 다음 문서를 참조하십시오.
 

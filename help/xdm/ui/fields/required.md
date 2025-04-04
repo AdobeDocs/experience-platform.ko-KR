@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;데이터 모델;ui;작업 공간;필수;필드;
+keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;데이터 모델;ui;workspace;필수;필드;
 title: UI에서 필수 필드 정의
 description: Experience Platform 사용자 인터페이스에서 필수 XDM 필드를 정의하는 방법을 알아봅니다.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ XDM(Experience Data Model)에서 필수 필드는 데이터 수집 중에 특정
 
 >[!IMPORTANT]
 >
->스키마 필드의 필요 여부에 관계없이, Platform은 수집된 모든 필드에 대해 `null` 또는 빈 값을 허용하지 않습니다. 레코드나 이벤트에 특정 필드에 대한 값이 없는 경우 해당 필드의 키를 수집 페이로드에서 제외해야 합니다.
+>스키마 필드의 필요 여부에 관계없이, Experience Platform은 수집된 모든 필드에 대해 `null` 또는 빈 값을 허용하지 않습니다. 레코드나 이벤트에 특정 필드에 대한 값이 없는 경우 해당 필드의 키를 수집 페이로드에서 제외해야 합니다.
 
 Adobe Experience Platform 사용자 인터페이스에서 [새 필드를 정의](./overview.md#define)할 때 오른쪽 레일에서 **[!UICONTROL 필수]** 확인란을 선택하여 필수 필드로 설정할 수 있습니다. **[!UICONTROL 적용]**&#x200B;을 선택하여 스키마에 변경 내용을 적용합니다.
 

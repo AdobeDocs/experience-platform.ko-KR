@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azure Blob Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Azure Blob를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: 8877e7dceeebfb1d4f31b63fef4544a69c72b38e
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Azure Blob 커넥터
 
-Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]과(와) 같은 클라우드 공급업체에 기본 연결을 제공합니다. 이러한 시스템에서 데이터를 [!DNL Platform](으)로 가져올 수 있습니다.
+Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]과(와) 같은 클라우드 공급업체에 기본 연결을 제공합니다. 이러한 시스템에서 데이터를 [!DNL Experience Platform]&#x200B;(으)로 가져올 수 있습니다.
 
-클라우드 저장소 소스는 다운로드, 포맷 또는 업로드 없이도 자신의 데이터를 [!DNL Platform](으)로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. [!DNL Platform]을(를) 사용하면 일괄 처리를 통해 [!DNL Azure Blob]에서 데이터를 가져올 수 있습니다.
+클라우드 저장소 소스는 다운로드, 포맷 또는 업로드 없이도 자신의 데이터를 [!DNL Experience Platform]&#x200B;(으)로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. [!DNL Experience Platform]을(를) 사용하면 일괄 처리를 통해 [!DNL Azure Blob]에서 데이터를 가져올 수 있습니다.
 
 ## IP 주소 허용 목록
 
@@ -36,7 +36,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]�
 - 잘못된 URL 경로 문자는 허용되지 않습니다. `\uE000` 같은 코드 포인트는 NTFS 파일 이름에서 사용할 수 있지만 올바른 유니코드 문자가 아닙니다. 또한 제어 문자(0x00 ~ 0x1F, \u0081 등)와 같은 일부 ASCII 또는 유니코드 문자도 사용할 수 없습니다. HTTP/1.1의 유니코드 문자열을 제어하는 규칙에 대해서는 [RFC 2616, 섹션 2.2: 기본 규칙](https://www.ietf.org/rfc/rfc2616.txt) 및 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)을 참조하십시오.
 - LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, 점 문자(.) 및 점 문자(..) 두 개를 사용할 수 없습니다.
 
-## [!DNL Azure Blob]을(를) [!DNL Platform]에 연결
+## [!DNL Azure Blob]을(를) [!DNL Experience Platform]에 연결
 
 아래 설명서는 API 또는 사용자 인터페이스를 사용하여 Azure Blob를 Adobe Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
 

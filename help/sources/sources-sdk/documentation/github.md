@@ -4,9 +4,9 @@ solution: Experience Platform
 title: GitHub 웹 인터페이스를 사용하여 소스 설명서 페이지 만들기
 description: 이 문서에서는 GitHub 웹 인터페이스를 사용하여 설명서를 작성하고 가져오기 요청(PR)을 제출하는 방법에 대한 단계를 제공합니다.
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -33,11 +33,11 @@ GitHub 환경을 설정하는 첫 번째 단계는 [Adobe Experience Platform Gi
 
 ![create-branch](../assets/create-branch.png)
 
-포크된 리포지토리의 GitHub 폴더 구조에서 [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create)(으)로 이동한 다음 목록에서 소스에 대한 적절한 범주를 선택합니다. 예를 들어 새 CRM 원본에 대한 설명서를 만드는 경우 **crm**&#x200B;을 선택하십시오.
+포크된 리포지토리의 GitHub 폴더 구조에서 [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create)&#x200B;(으)로 이동한 다음 목록에서 소스에 대한 적절한 범주를 선택합니다. 예를 들어 새 CRM 원본에 대한 설명서를 만드는 경우 **crm**&#x200B;을 선택하십시오.
 
 >[!TIP]
 >
->UI에 대한 설명서를 만드는 경우 [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create)(으)로 이동하여 소스에 적합한 범주를 선택합니다. 이미지를 추가하려면 [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create)(으)로 이동한 다음 스크린샷을 `sdk` 폴더에 추가합니다.
+>UI에 대한 설명서를 만드는 경우 [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create)&#x200B;(으)로 이동하여 소스에 적합한 범주를 선택합니다. 이미지를 추가하려면 [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create)&#x200B;(으)로 이동한 다음 스크린샷을 `sdk` 폴더에 추가합니다.
 
 ![crm](../assets/crm.png)
 
@@ -45,7 +45,7 @@ GitHub 환경을 설정하는 첫 번째 단계는 [Adobe Experience Platform Gi
 
 ![create-new-file](../assets/create-new-file.png)
 
-소스 파일 이름을 `YOURSOURCE.md`로 지정합니다. 여기서 YOURSOURCE는 Platform의 소스 이름입니다. 예를 들어 회사가 ACME CRM인 경우 파일 이름은 `acme-crm.md`이어야 합니다.
+소스 파일 이름을 `YOURSOURCE.md`로 지정합니다. 여기서 YOURSOURCE는 Experience Platform의 소스 이름입니다. 예를 들어 회사가 ACME CRM인 경우 파일 이름은 `acme-crm.md`이어야 합니다.
 
 ![git-interface](../assets/git-interface.png)
 
@@ -63,11 +63,11 @@ GitHub 웹 편집기 인터페이스에 복사된 템플릿을 사용하여 템�
 
 ## 검토를 위해 설명서 제출
 
-파일이 커밋되면 가져오기 요청(PR)을 열어 작업 분기를 Adobe 문서 저장소의 마스터 분기로 병합할 수 있습니다. 작업 중인 분기가 선택되었는지 확인한 다음 **비교 및 가져오기 요청**&#x200B;을 선택하십시오.
+파일이 커밋되면 가져오기 요청(PR)을 열어 작업 분기를 Adobe 설명서 저장소의 마스터 분기로 병합할 수 있습니다. 작업 중인 분기가 선택되었는지 확인한 다음 **비교 및 가져오기 요청**&#x200B;을 선택하십시오.
 
 ![compare-pr](../assets/compare-pr.png)
 
-기준 및 비교 분기가 올바른지 확인합니다. PR에 업데이트를 설명하는 메모를 추가한 다음 **끌어오기 요청 만들기**&#x200B;를 선택합니다. 그러면 작업의 작업 분기를 Adobe 저장소의 마스터 분기로 병합하는 PR이 열립니다.
+기준 및 비교 분기가 올바른지 확인합니다. PR에 업데이트를 설명하는 메모를 추가한 다음 **끌어오기 요청 만들기**&#x200B;를 선택합니다. 이렇게 하면 작업의 작업 분기를 Adobe 저장소의 마스터 분기로 병합하기 위한 PR이 열립니다.
 
 >[!TIP]
 >

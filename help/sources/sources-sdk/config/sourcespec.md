@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
-title: 셀프서비스 소스에 대한 소스 사양 구성(일괄 SDK)
-description: 이 문서에서는 셀프서비스 소스(Batch SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
+title: 셀프서비스 소스에 대한 소스 사양 구성(배치 SDK)
+description: 이 문서에서는 셀프서비스 소스(일괄 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2090'
 ht-degree: 1%
 
 ---
 
-# 셀프서비스 소스에 대한 소스 사양 구성(일괄 SDK)
+# 셀프 서비스 소스에 대한 소스 사양 구성(배치 SDK)
 
 Source 사양에는 소스의 카테고리, Beta 상태 및 카탈로그 아이콘과 관련된 속성을 포함하여 소스와 관련된 정보가 포함되어 있습니다. 여기에는 URL 매개 변수, 콘텐츠, 헤더 및 일정과 같은 유용한 정보도 포함됩니다. Source 사양은 기본 연결에서 소스 연결을 만드는 데 필요한 매개 변수의 스키마도 설명합니다. 소스 연결을 만들려면 스키마가 필요합니다.
 
@@ -233,21 +233,21 @@ Source 사양에는 소스의 카테고리, Beta 상태 및 카탈로그 아이�
 | `sourceSpec.attributes.uiAttributes` | UI와 관련된 소스에 대한 정보를 표시합니다. |
 | `sourceSpec.attributes.uiAttributes.isBeta` | 소스에 해당 기능에 추가하기 위해 고객의 피드백이 더 필요한지 여부를 나타내는 부울 속성. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | 소스의 범주를 정의합니다. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.icon` | Platform UI에서 소스의 렌더링에 사용되는 아이콘을 정의합니다. | `mailchimp-icon.svg` |
+| `sourceSpec.attributes.uiAttributes.icon` | Experience Platform UI에서 소스를 렌더링하는 데 사용되는 아이콘을 정의합니다. | `mailchimp-icon.svg` |
 | `sourceSpec.attributes.uiAttributes.description` | 소스에 대한 간단한 설명을 표시합니다. |
-| `sourceSpec.attributes.uiAttributes.label` | Platform UI에서 소스의 렌더링에 사용할 레이블을 표시합니다. |
+| `sourceSpec.attributes.uiAttributes.label` | Experience Platform UI에서 소스의 렌더링에 사용할 레이블을 표시합니다. |
 | `sourceSpec.attributes.spec.properties.urlParams` | URL 리소스 경로, 메서드 및 지원되는 쿼리 매개 변수에 대한 정보를 포함합니다. |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | 데이터를 가져올 위치의 리소스 경로를 정의합니다. | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | 데이터를 가져오도록 리소스에 요청하는 데 사용할 HTTP 메서드를 정의합니다. | `GET`, `POST` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | 데이터 가져오기를 요청할 때 소스 URL을 추가하는 데 사용할 수 있는 지원되는 쿼리 매개 변수를 정의합니다. **참고**: 사용자가 제공한 매개 변수 값은 자리 표시자로 포맷해야 합니다. 예: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}`이(가) `/?key=value&key1=value1`(으)로 원본 URL에 추가됩니다. |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | 데이터를 가져오는 동안 소스 URL에 대한 HTTP 요청에서 제공해야 하는 헤더를 정의합니다. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
 | `sourceSpec.attributes.spec.properties.bodyParams` | 이 속성은 POST 요청을 통해 HTTP 본문을 보내도록 구성할 수 있습니다. |
-| `sourceSpec.attributes.spec.properties.contentPath` | 플랫폼에 수집해야 하는 항목 목록이 포함된 노드를 정의합니다. 이 속성은 유효한 JSON 경로 구문을 따라야 하며 특정 배열을 가리켜야 합니다. | 콘텐츠 경로에 포함된 리소스의 예를 보려면 [추가 리소스 섹션](#content-path)을(를) 보십시오. |
-| `sourceSpec.attributes.spec.properties.contentPath.path` | 플랫폼에 수집할 컬렉션 레코드를 가리키는 경로입니다. | `$.emails` |
+| `sourceSpec.attributes.spec.properties.contentPath` | Experience Platform에 수집해야 하는 항목 목록을 포함하는 노드를 정의합니다. 이 속성은 유효한 JSON 경로 구문을 따라야 하며 특정 배열을 가리켜야 합니다. | 콘텐츠 경로에 포함된 리소스의 예를 보려면 [추가 리소스 섹션](#content-path)을(를) 보십시오. |
+| `sourceSpec.attributes.spec.properties.contentPath.path` | Experience Platform에 수집될 컬렉션 레코드를 가리키는 경로입니다. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | 이 속성을 사용하면 콘텐츠 경로에서 식별된 리소스에서 수집에서 제외할 특정 항목을 식별할 수 있습니다. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | 이 속성을 사용하면 유지할 개별 속성을 명시적으로 지정할 수 있습니다. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | 이 속성을 사용하면 `contentPath`에 지정한 특성 이름의 값을 재정의할 수 있습니다. | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | 이 속성을 사용하면 두 배열을 병합하고 리소스 데이터를 플랫폼 리소스로 변환할 수 있습니다. |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | 이 속성을 사용하면 두 배열을 병합하고 리소스 데이터를 Experience Platform 리소스로 변환할 수 있습니다. |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | 평면화할 컬렉션 레코드를 가리키는 경로입니다. | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | 이 속성을 사용하면 엔티티 경로에서 식별된 리소스에서 수집되지 않도록 제외할 특정 항목을 식별할 수 있습니다. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | 이 속성을 사용하면 유지할 개별 속성을 명시적으로 지정할 수 있습니다. | `[total_items]` |
@@ -379,7 +379,7 @@ Source 사양에는 소스의 카테고리, Beta 상태 및 카탈로그 아이�
 
 ### 소스에 대해 다양한 페이지 매김 유형 구성 {#pagination}
 
-다음은 셀프 서비스 소스(Batch SDK)에서 지원하는 다른 페이지 매김 유형의 예입니다.
+다음은 셀프서비스 소스(일괄 SDK)에서 지원하는 다른 페이지 매김 유형의 예입니다.
 
 >[!BEGINTABS]
 
@@ -509,7 +509,7 @@ Source 사양에는 소스의 카테고리, Beta 상태 및 카탈로그 아이�
 
 >[!TAB 없음]
 
-사용 가능한 페이지 매김 유형을 지원하지 않는 소스에는 `NONE` 페이지 매김 유형을 사용할 수 있습니다. `NONE`의 페이지 매김 형식을 사용하는 원본은 GET 요청이 있을 때 검색 가능한 모든 레코드를 반환하면 됩니다.
+사용 가능한 페이지 매김 유형을 지원하지 않는 소스에는 `NONE` 페이지 매김 유형을 사용할 수 있습니다. `NONE`의 페이지 매김 유형을 사용하는 원본은 GET 요청이 수행될 때 검색 가능한 모든 레코드를 반환하면 됩니다.
 
 ```json
 "paginationParams": {
@@ -519,7 +519,7 @@ Source 사양에는 소스의 카테고리, Beta 상태 및 카탈로그 아이�
 
 >[!ENDTABS]
 
-### 셀프 서비스 소스에 대한 고급 예약(일괄 처리 SDK)
+### 셀프 서비스 소스에 대한 고급 예약(일괄 SDK)
 
 고급 예약을 사용하여 소스의 증분 및 채우기 일정을 구성합니다. `incremental` 속성을 사용하면 원본에서 새 레코드나 수정된 레코드만 수집하는 일정을 구성할 수 있고, `backfill` 속성을 사용하면 이전 데이터를 수집하는 일정을 만들 수 있습니다.
 
@@ -556,7 +556,7 @@ Source 사양에는 소스의 카테고리, Beta 상태 및 카탈로그 아이�
 
 ### 사용자 정의 스키마를 추가하여 소스의 동적 속성 정의
 
-`sourceSpec`에 사용자 지정 스키마를 포함하여 필요한 동적 특성을 포함하여 소스에 필요한 모든 특성을 정의할 수 있습니다. 연결 사양의 `sourceSpec` 섹션에 사용자 지정 스키마를 제공하는 동안 [!DNL Flow Service] API의 `/connectionSpecs` 끝점에 PUT 요청을 하여 소스의 해당 연결 사양을 업데이트할 수 있습니다.
+`sourceSpec`에 사용자 지정 스키마를 포함하여 필요한 동적 특성을 포함하여 소스에 필요한 모든 특성을 정의할 수 있습니다. 연결 사양의 `sourceSpec` 섹션에 사용자 지정 스키마를 제공하는 동안 [!DNL Flow Service] API의 `/connectionSpecs` 끝점에 대해 PUT 요청을 수행하여 소스의 해당 연결 사양을 업데이트할 수 있습니다.
 
 다음은 소스의 연결 사양에 추가할 수 있는 사용자 정의 스키마의 예입니다.
 
@@ -659,4 +659,4 @@ Source 사양에는 소스의 카테고리, Beta 상태 및 카탈로그 아이�
 
 ## 다음 단계
 
-소스 세부 항목을 채운 상태에서 Platform에 통합할 소스에 대한 세부 항목 탐색 을 구성할 수 있습니다. 자세한 내용은 [세부 항목 탐색 구성](./explorespec.md)에 대한 문서를 참조하십시오.
+소스 세부 항목을 채운 상태로 Experience Platform에 통합할 소스에 대한 세부 항목 구성을 진행할 수 있습니다. 자세한 내용은 [세부 항목 탐색 구성](./explorespec.md)에 대한 문서를 참조하십시오.

@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform ID 서비스
-breadcrumb-title: Platform Identity Service 안내서
+breadcrumb-title: Experience Platform Identity 서비스 안내서
 user-guide-description: 다양한 디바이스와 시스템에서 고객 ID를 연결하여 개인화된 디지털 경험을 전달할 수 있습니다.
 feature: Identities
 role: Admin,Developer
-source-git-commit: cbdfa76d546be631a8c1fa588896648835d2a159
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '145'
 ht-degree: 30%
 
 ---
@@ -47,4 +47,4 @@ ht-degree: 30%
 - [UI에서 ID 필드 정의](label-identities.md)
 - [개인 정보 보호 요청 처리](privacy.md)
 - [문제 해결 안내서](troubleshooting-guide.md)
-- [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+- [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

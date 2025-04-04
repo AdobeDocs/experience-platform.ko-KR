@@ -2,16 +2,16 @@
 title: LiveRamp - 배포 연결
 description: LiveRamp - 배포 커넥터를 사용하여 이전에 LiveRamp에 온보딩된 대상자를 다운스트림 광고 대상으로 오케스트레이션하고 활성화하는 방법에 대해 알아봅니다.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2722'
-ht-degree: 38%
+source-wordcount: '2744'
+ht-degree: 37%
 
 ---
 
 # [!DNL LiveRamp - Distribution] 연결
 
-[!DNL LiveRamp - Distribution] 연결을 사용하면 모바일, 웹, 디스플레이 및 연결된 TV 미디어에 있는 Experience Platform에서 프리미엄 게시자까지 대상을 활성화할 수 있습니다.
+[!DNL LiveRamp - Distribution] 연결을 사용하면 모바일, 웹, 디스플레이 및 연결된 TV 미디어에서 Experience Platform의 대상을 프리미엄 게시자로 활성화할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -46,7 +46,7 @@ ht-degree: 38%
 
 [!DNL LiveRamp - Distribution] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례를 소개합니다.
 
-스포츠 의류 소매점의 마케팅 팀은 [LiveRamp - 온보딩](liveramp-onboarding.md) 연결을 사용하여 Experience Platform에서 LiveRamp 계정으로 대상자를 보냈습니다.
+스포츠 의류 retailer의 마케팅 팀은 [LiveRamp - 온보딩](liveramp-onboarding.md) 연결을 사용하여 Experience Platform의 대상자를 LiveRamp 계정으로 보냈습니다.
 
 이제 [!DNL LiveRamp - Distribution] 연결을 통해 [지원되는 대상](#supported-destinations)에 대한 온보딩된 대상의 활성화를 트리거할 수 있습니다. 그런 다음 모바일, 열린 웹, 소셜 및 [!DNL CTV] 플랫폼에서 사용자를 타깃팅할 수 있습니다.
 
@@ -73,7 +73,7 @@ ht-degree: 38%
 
 대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
 
-![대상 연결 화면을 표시하는 플랫폼 UI 이미지.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
+![대상 연결 화면을 표시하는 Experience Platform UI 이미지.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
 
 * **[!UICONTROL LiveRamp 조직 ID]**: LiveRamp 계정의 조직 ID(LiveRamp 제공 자격 증명에 _owner_org_(으)로 나열됨).
 * **[!UICONTROL 암호]**: LiveRamp 계정 암호(LiveRamp 제공 자격 증명에 _secret_key_(으)로 나열됨).
@@ -84,13 +84,13 @@ ht-degree: 38%
 
 LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대상에 연결하는 데 필요한 정보를 입력하십시오.
 
-![대상 세부 정보 화면을 표시하는 플랫폼 UI 이미지.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
+![대상 세부 정보 화면을 표시하는 Experience Platform UI 이미지.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
 
 * **[!UICONTROL 이름]**: 대상 연결에 대한 기본 이름을 입력하십시오.
 
 >[!NOTE]
 >
->대상 이름을 지정할 때 Adobe은 `LiveRamp - Downstream Destination Name` 형식을 따르는 것이 좋습니다. 이 이름 지정 패턴을 통해 대상 작업 영역의 [찾아보기](../../ui/destinations-workspace.md#browse) 탭에서 대상을 빠르게 식별할 수 있습니다.
+>대상 이름을 지정할 때 Adobe에서는 다음 형식을 따르는 것이 좋습니다. `LiveRamp - Downstream Destination Name`. 이 이름 지정 패턴을 통해 대상 작업 영역의 [찾아보기](../../ui/destinations-workspace.md#browse) 탭에서 대상을 빠르게 식별할 수 있습니다.
 ><br>
 >예: `LiveRamp - Roku`.
 
@@ -114,7 +114,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![4C 인사이트 대상에 대한 고객 데이터 필드를 표시하는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
+![4C 인사이트 대상에 대한 고객 데이터 필드를 보여주는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
 
 * **[!UICONTROL 4C 브랜드 프로필 ID]**: 4C 브랜드 프로필과 연결된 숫자 ID를 입력합니다. 이 ID가 없는 경우 4C 클라이언트 서비스 담당자에게 문의하시기 바랍니다.
 
@@ -127,7 +127,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![Acast 대상에 대한 고객 데이터 필드를 표시하는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Acast_DestSpecific.png)
+![Acast 대상에 대한 고객 데이터 필드를 보여주는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Acast_DestSpecific.png)
 
 * **[!UICONTROL 클라이언트 이름]**: 대상 파트너에게 표시하려는 광고주 계정 이름입니다. 회사 이름을 사용합니다. 공백이나 특수 문자는 사용하지 마십시오.
 
@@ -140,7 +140,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![앰퍼샌드 대상에 대한 고객 데이터 필드를 표시하는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Ampersand_DestSpecific.png)
+![앰퍼샌드 대상에 대한 고객 데이터 필드를 보여주는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Ampersand_DestSpecific.png)
 
 * **[!UICONTROL 회사 이름]**: 대상 파트너에게 표시하려는 회사 이름입니다. 공백이나 특수 문자는 사용하지 마십시오.
 
@@ -153,7 +153,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![Captivate 대상에 대한 고객 데이터 필드를 보여주는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Captify_DestSpecific.png)
+![Captify 대상에 대한 고객 데이터 필드를 보여주는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Captify_DestSpecific.png)
 
 * **[!UICONTROL 클라이언트 이름]**: 대상 파트너에게 표시하려는 광고주 계정 이름입니다. 회사 이름을 사용합니다. 공백이나 특수 문자는 사용하지 마십시오.
 
@@ -166,7 +166,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![Cardlytics 대상에 대한 고객 데이터 필드를 표시하는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Cardlytics_DestSpecific.png)
+![Cardlytics 대상에 대한 고객 데이터 필드를 보여주는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Cardlytics_DestSpecific.png)
 
 * **[!UICONTROL 클라이언트 이름]**: 대상 파트너에게 표시하려는 광고주 계정 이름입니다. 회사 이름을 사용합니다. 공백이나 특수 문자는 사용하지 마십시오.
 
@@ -191,7 +191,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![Disney 대상에 대한 고객 데이터 필드를 보여주는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-disney-fields.png)
+![Disney 대상에 대한 고객 데이터 필드를 보여주는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-disney-fields.png)
 
 * **[!UICONTROL 광고주 데이터 대상 약관 동의]**: Disney 광고주 데이터 약관에 대한 승인 및 동의를 확인하려면 `I AGREE`을(를) 입력하십시오.
 * **[!UICONTROL 클라이언트 이름]**: 대상 파트너에게 표시할 회사 이름을 입력하십시오.
@@ -206,7 +206,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![iHeartMedia 대상에 대한 고객 데이터 필드를 표시하는 플랫폼 UI 이미지](../../assets/catalog/advertising/liveramp-distribution/LR_iHeart_DestSpecific.png)
+![iHeartMedia 대상에 대한 고객 데이터 필드를 표시하는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_iHeart_DestSpecific.png)
 
 * **[!UICONTROL 클라이언트 이름]**: 대상 파트너에게 표시하려는 광고주 계정 이름입니다. 회사 이름을 사용합니다. 공백이나 특수 문자는 사용하지 마십시오.
 
@@ -219,7 +219,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![인덱스 교환 대상의 고객 데이터 필드를 표시하는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
+![인덱스 교환 대상의 고객 데이터 필드를 보여주는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
 
 * **[!UICONTROL 계정 이름]**: Index Exchange 클라이언트 계정 이름입니다. 공백이나 특수 문자는 사용하지 마십시오.
 
@@ -232,7 +232,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![Magnite CTV 대상에 대한 고객 데이터 필드를 표시하는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
+![Magnite CTV 대상에 대한 고객 데이터 필드를 보여주는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
 
 * **[!UICONTROL 클라이언트]**: 대상 파트너에게 표시하려는 클라이언트 이름입니다. 회사 이름을 사용합니다. 공백이나 특수 문자는 사용하지 마십시오.
 
@@ -250,7 +250,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![Magnite DV+ 대상에 대한 고객 데이터 필드를 표시하는 플랫폼 UI 이미지](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
+![Magnite DV+ 대상에 대한 고객 데이터 필드를 표시하는 Experience Platform UI 이미지](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
 
 * **[!UICONTROL 파트너 ID]**: 세그먼트/데이터를 소유한 게시자와 연결된 Rubicon 프로젝트 파트너 ID입니다. 어떤 값을 사용해야 하는지 알 수 없는 경우 Rubicon Project 계정 담당자에게 문의하시기 바랍니다.
 * **[!UICONTROL 시트 ID]**: Magnite 계정 관리자가 제공한 Magnite DV+ 시트 ID
@@ -279,7 +279,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![Nexxen 대상에 대한 고객 데이터 필드를 표시하는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
+![Nexxen 대상에 대한 고객 데이터 필드를 보여주는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
 
 * **[!UICONTROL 요금 유형]**: 요금 유형은 데이터 사용량을 청구하는 방법을 나타냅니다. 모든 $0.00 요금은 정액 요금이어야 합니다. 어떤 요금 유형을 사용해야 할지 알 수 없는 경우 Nexxen 담당자에게 문의하시기 바랍니다.
 * **[!UICONTROL Market ID]**: Nexxen 데이터 계약을 만들 숫자 Market ID를 입력하십시오. Nexxen 플랫폼의 모든 시장에서 “AlwaysOn” 신디케이션을 수행하는 경우 -1을 입력합니다.
@@ -295,7 +295,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![One Fox 대상에 대한 고객 데이터 필드를 보여주는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
+![One Fox 대상에 대한 고객 데이터 필드를 보여주는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
 
 * **[!UICONTROL 클라이언트]**: 파트너에게 표시하려는 회사/배포 계정의 이름입니다. 기본적으로 회사 이름을 사용하십시오. 어떤 이름을 사용해야 할지 알 수 없는 경우 파트너 계정 담당자에게 문의하시기 바랍니다. 공백이나 특수 문자는 사용하지 마십시오.
 
@@ -308,7 +308,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![Pandora 대상에 대한 고객 데이터 필드를 보여주는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Pandora_DestSpecific.png)
+![Pandora 대상에 대한 고객 데이터 필드를 보여주는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Pandora_DestSpecific.png)
 
 * **[!UICONTROL 계정 이름]**: Pandora 계정의 이름입니다. 계정 이름을 모를 경우에는 Pandora 계정 담당자에게 문의하십시오. 공백이나 특수 문자는 사용하지 마십시오.
 
@@ -326,7 +326,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![Reddit 대상에 대한 고객 데이터 필드를 표시하는 Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)
+![Reddit 대상에 대한 고객 데이터 필드를 표시하는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)
 
 * **[!UICONTROL Reddit 광고주 ID]**: Reddit 광고주 ID입니다. “t2_” 또는 “a2_”로 시작해야 합니다. 광고주 ID를 모르는 경우 Reddit 담당자에게 문의하십시오.
 * **[!UICONTROL Reddit 광고주 이름]**: Reddit 광고주 이름입니다. 공백이나 특수 문자는 사용하지 마십시오.
@@ -345,7 +345,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![Roku 대상에 대해 지원되는 식별자를 보여 주는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-roku-fields.png)
+![Roku 대상에 대해 지원되는 식별자를 보여 주는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-roku-fields.png)
 
 * **[!UICONTROL Roku 계정 전자 메일 주소]**: Roku 계정에 연결된 전자 메일 주소를 입력하십시오.
 * **[!UICONTROL Roku 계정 담당자 이메일 주소]**: Roku 계정 담당자의 이메일 주소를 입력합니다. 여러 주소를 입력하려면 쉼표로 구분합니다.
@@ -359,7 +359,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![Spotify 대상에 대해 지원되는 식별자를 보여 주는 Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Spotify_DestSpecific.png)
+![Spotify 대상에 대해 지원되는 식별자를 보여 주는 Experience Platform UI 이미지](../../assets/catalog/advertising/liveramp-distribution/LR_Spotify_DestSpecific.png)
 
 * **[!UICONTROL 클라이언트 이름]**: 대상 파트너에게 표시하려는 광고주 계정 이름입니다. 회사 이름을 사용합니다. 공백이나 특수 문자는 사용하지 마십시오.
 
@@ -377,7 +377,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![Tabola 대상에 대해 지원되는 식별자를 보여 주는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
+![Tabola 대상에 대해 지원되는 식별자를 보여 주는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
 
 * **[!UICONTROL 계정 관리자 전자 메일 주소]**: 금기 계정 관리자의 전자 메일 주소입니다.
 * **[!UICONTROL 세그먼트 유형]**: 세그먼트 유형입니다. 현재 자사 세그먼트만 지원됩니다.
@@ -391,7 +391,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![TargetSpot 대상에 대해 지원되는 식별자를 보여 주는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
+![TargetSpot 대상에 대해 지원되는 식별자를 보여 주는 Experience Platform UI 이미지](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
 
 * **[!UICONTROL 클라이언트 이름]**: 대상 파트너에게 표시하려는 광고주 계정 이름입니다. 회사 이름을 사용합니다. 공백이나 특수 문자는 사용하지 마십시오.
 
@@ -404,7 +404,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![TargetSpot 대상에 대해 지원되는 식별자를 보여 주는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Teads_DestSpecific.png)
+![TargetSpot 대상에 대해 지원되는 식별자를 보여 주는 Experience Platform UI 이미지](../../assets/catalog/advertising/liveramp-distribution/LR_Teads_DestSpecific.png)
 
 * **[!UICONTROL 티드 ID]**: 내 티드 ID
 
@@ -417,7 +417,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
-![WB 검색 대상에 대해 지원되는 식별자를 보여 주는 Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_WBD_DestSpecific.png)
+![WB 검색 대상에 대해 지원되는 식별자를 보여 주는 Experience Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_WBD_DestSpecific.png)
 
 * **[!UICONTROL 클라이언트 이름]**: 대상 파트너에게 표시하려는 광고주 계정 이름입니다. 회사 이름을 사용합니다. 공백이나 특수 문자는 사용하지 마십시오.
 

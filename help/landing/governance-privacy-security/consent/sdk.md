@@ -1,21 +1,21 @@
 ---
-title: Adobe Experience Platform Web SDK를 사용하여 고객 동의 데이터 처리
-description: Adobe Experience Platform Web SDK를 통합하여 Adobe Experience Platform에서 고객 동의 데이터를 처리하는 방법에 대해 알아봅니다.
+title: Adobe Experience Platform Web SDK을 사용하여 고객 동의 데이터 처리
+description: Adobe Experience Platform Web SDK을 통합하여 Adobe Experience Platform에서 고객 동의 데이터를 처리하는 방법에 대해 알아봅니다.
 role: Developer
 feature: Consent, Web SDK
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1322'
 ht-degree: 0%
 
 ---
 
-# Platform Web SDK를 통합하여 고객 동의 데이터 처리
+# Experience Platform Web SDK을 통합하여 고객 동의 데이터 처리
 
-Adobe Experience Platform Web SDK를 사용하면 동의 관리 플랫폼(CMP)에서 생성된 고객 동의 신호를 검색하고 동의 변경 이벤트가 발생할 때마다 Adobe Experience Platform으로 전송할 수 있습니다.
+Adobe Experience Platform 웹 SDK을 사용하면 동의 관리 플랫폼(CMP)에서 생성된 고객 동의 신호를 검색하고 동의 변경 이벤트가 발생할 때마다 Adobe Experience Platform으로 전송할 수 있습니다.
 
-**SDK가 기본 CMP와 인터페이스하지 않습니다**. SDK를 웹 사이트에 통합하는 방법을 결정하고 CMP에서 동의 변경 사항을 수신하고 적절한 명령을 호출하는 것은 사용자가 결정합니다. 이 문서에서는 CMP를 Platform Web SDK와 통합하는 방법에 대한 일반적인 지침을 제공합니다.
+**SDK이 기본 CMP와 인터페이스하지 않습니다**. SDK을 웹 사이트에 통합하는 방법을 결정하고 CMP에서 동의 변경 사항을 수신하고 적절한 명령을 호출하는 것은 사용자가 결정합니다. 이 문서에서는 CMP를 Experience Platform 웹 SDK과 통합하는 방법에 대한 일반적인 지침을 제공합니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -24,7 +24,7 @@ Adobe Experience Platform Web SDK를 사용하면 동의 관리 플랫폼(CMP)�
 * [Adobe 표준을 사용하여 데이터 세트 만들기](./adobe/dataset.md)
 * [TCF 2.0 표준을 사용하여 데이터 세트 만들기](./iab/dataset.md)
 
-이 안내서는 UI에서 태그 확장을 사용하여 SDK를 설정하는 워크플로를 따릅니다. 확장을 사용하지 않고 사이트에 독립 실행형 SDK 버전을 직접 포함하려는 경우 이 안내서 대신 다음 문서를 참조하십시오.
+이 안내서는 UI에서 태그 확장을 사용하여 SDK을 설정하는 워크플로를 따릅니다. 확장을 사용하지 않고 SDK의 독립 실행형 버전을 사이트에 직접 포함하려는 경우 이 안내서 대신 다음 문서를 참조하십시오.
 
 * [데이터스트림 구성](/help/datastreams/overview.md)
 * [SDK 설치](/help/web-sdk/install/overview.md)
@@ -38,7 +38,7 @@ Adobe Experience Platform Web SDK를 사용하면 동의 관리 플랫폼(CMP)�
 
 ## 데이터 스트림 설정
 
-SDK가 데이터를 Experience Platform으로 보내려면 먼저 데이터 스트림을 구성해야 합니다. 데이터 수집 UI 또는 Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 데이터스트림]**&#x200B;을 선택합니다.
+SDK에서 Experience Platform으로 데이터를 보내려면 먼저 데이터 스트림을 구성해야 합니다. 데이터 수집 UI 또는 Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 데이터스트림]**&#x200B;을 선택합니다.
 
 새 데이터 스트림을 만들거나 편집할 기존 데이터 스트림을 선택한 후 **[!UICONTROL Adobe Experience Platform]** 옆에 있는 전환 단추를 선택합니다. 그런 다음 아래 나열된 값을 사용하여 양식을 작성합니다.
 
@@ -46,19 +46,19 @@ SDK가 데이터를 Experience Platform으로 보내려면 먼저 데이터 스�
 
 | 데이터 스트림 필드 | 값 |
 | --- | --- |
-| [!UICONTROL 샌드박스] | 데이터 스트림을 설정하는 데 필요한 스트리밍 연결 및 데이터 세트가 포함된 Platform [sandbox](../../../sandboxes/home.md)의 이름입니다. |
-| [!UICONTROL 이벤트 데이터 세트] | SDK를 사용하여 이벤트 데이터를에 전송할 [!DNL XDM ExperienceEvent] 데이터 집합입니다. Platform 데이터 스트림을 만들기 위해 이벤트 데이터 세트를 제공해야 하지만, 이벤트를 통해 전송된 동의 데이터는 다운스트림 시행 워크플로우에서 적용되지 않습니다. |
+| [!UICONTROL 샌드박스] | 데이터 스트림을 설정하는 데 필요한 스트리밍 연결 및 데이터 세트가 포함된 Experience Platform [sandbox](../../../sandboxes/home.md)의 이름입니다. |
+| [!UICONTROL 이벤트 데이터 세트] | SDK을 사용하여 이벤트 데이터를에 보낼 [!DNL XDM ExperienceEvent] 데이터 집합입니다. Experience Platform 데이터 스트림을 만들기 위해 이벤트 데이터 세트를 제공해야 하지만, 이벤트를 통해 전송된 동의 데이터는 다운스트림 시행 워크플로우에서 적용되지 않습니다. |
 | [!UICONTROL 프로필 데이터 세트] | [이전](#prerequisites)에 만든 고객 동의 필드가 있는 [!DNL Profile] 사용 데이터 집합입니다. |
 
 완료되면 화면 하단에서 **[!UICONTROL 저장]**&#x200B;을 선택하고 추가 프롬프트에 따라 계속 구성을 완료합니다.
 
-## Platform Web SDK 설치 및 구성
+## Experience Platform Web SDK 설치 및 구성
 
-이전 섹션에서 설명한 대로 데이터 스트림을 생성했으면 궁극적으로 사이트에 배포할 Platform Web SDK 확장을 구성해야 합니다. 태그 속성에 SDK 확장이 설치되어 있지 않은 경우 왼쪽 탐색에서 **[!UICONTROL 확장]**&#x200B;을 선택한 다음 **[!UICONTROL 카탈로그]** 탭을 선택합니다. 그런 다음 사용 가능한 확장 목록의 Platform SDK 확장 아래에서 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
+이전 섹션에서 설명한 대로 데이터 스트림을 생성했으면 궁극적으로 사이트에 배포할 Experience Platform Web SDK 확장을 구성해야 합니다. 태그 속성에 SDK 확장이 설치되어 있지 않으면 왼쪽 탐색에서 **[!UICONTROL 확장]**&#x200B;을 선택한 다음 **[!UICONTROL 카탈로그]** 탭을 선택합니다. 그런 다음 사용 가능한 확장 목록의 Experience Platform SDK 확장 아래에서 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
-SDK를 구성할 때 **[!UICONTROL Edge 구성]**&#x200B;에서 이전 단계에서 만든 데이터 스트림을 선택합니다.
+SDK을 구성할 때 **[!UICONTROL Edge 구성]**&#x200B;에서 이전 단계에서 만든 데이터 스트림을 선택합니다.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
 
@@ -66,7 +66,7 @@ SDK를 구성할 때 **[!UICONTROL Edge 구성]**&#x200B;에서 이전 단계에
 
 ### 기본 동의를 설정할 데이터 요소 만들기
 
-SDK 확장을 설치하면 사용자의 기본 데이터 수집 동의 값(`collect.val`)을 나타내는 데이터 요소를 만들 수 있습니다. 이 기능은 유럽 연합 사용자의 경우 `pending`, 북미 사용자의 경우 `in`과 같이 사용자에 따라 다른 기본값을 사용하려는 경우에 유용합니다.
+SDK 확장이 설치되어 있으면 사용자의 기본 데이터 수집 동의 값(`collect.val`)을 나타내는 데이터 요소를 만들 수 있는 옵션이 있습니다. 이 기능은 유럽 연합 사용자의 경우 `pending`, 북미 사용자의 경우 `in`과 같이 사용자에 따라 다른 기본값을 사용하려는 경우에 유용합니다.
 
 이 사용 사례에서는 다음을 구현하여 사용자의 지역을 기반으로 기본 동의를 설정할 수 있습니다.
 
@@ -86,7 +86,7 @@ UI에서 데이터 요소를 만들려면 왼쪽 탐색에서 **[!UICONTROL 데�
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-데이터 요소가 만들어지면 웹 SDK 확장 구성 페이지로 다시 이동합니다. [!UICONTROL 개인 정보] 섹션에서 **[!UICONTROL 데이터 요소에서 제공]**&#x200B;을 선택하고 제공된 대화 상자를 사용하여 이전에 만든 기본 동의 데이터 요소를 선택합니다.
+데이터 요소가 생성되면 웹 SDK 확장 구성 페이지로 다시 이동합니다. [!UICONTROL 개인 정보] 섹션에서 **[!UICONTROL 데이터 요소에서 제공]**&#x200B;을 선택하고 제공된 대화 상자를 사용하여 이전에 만든 기본 동의 데이터 요소를 선택합니다.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 
@@ -96,7 +96,7 @@ UI에서 데이터 요소를 만들려면 왼쪽 탐색에서 **[!UICONTROL 데�
 
 ## 동의 변경 명령 만들기 {#commands}
 
-SDK 확장을 웹 사이트에 통합하면 Platform Web SDK `setConsent` 명령을 사용하여 Platform에 동의 데이터를 전송할 수 있습니다.
+웹 사이트에 SDK 확장을 통합하면 Experience Platform Web SDK `setConsent` 명령을 사용하여 Experience Platform에 동의 데이터를 보낼 수 있습니다.
 
 `setConsent` 명령은 다음 두 가지 작업을 수행합니다.
 
@@ -114,7 +114,7 @@ SDK 확장을 웹 사이트에 통합하면 Platform Web SDK `setConsent` 명령
 
 [`setConsent`](/help/web-sdk/commands/setconsent.md) 명령에는 단일 배열 형식 속성이 포함된 페이로드 개체가 필요합니다. `consent`. `consent` 배열에는 Adobe 표준에 필요한 동의 필드를 제공하는 개체가 하나 이상 있어야 합니다.
 
-다음 예제 `setConsent` 호출에는 Adobe 표준에 대한 필수 동의 필드가 표시됩니다.
+Adobe 표준에 대한 필수 동의 필드는 다음 `setConsent` 호출에 표시됩니다.
 
 ```js
 alloy("setConsent", {
@@ -182,7 +182,7 @@ var setConsent = function () {
     }
   };
 
-  // Pass the XDM object to the Platform Web SDK
+  // Pass the XDM object to the Experience Platform Web SDK
   alloy("setConsent", {
     consent: [{
       standard: "Adobe",
@@ -195,13 +195,13 @@ var setConsent = function () {
 
 ## SDK 응답 처리
 
-모든 [!DNL Platform SDK] 명령은 호출의 성공 또는 실패 여부를 나타내는 약속을 반환합니다. 그런 다음 고객에게 확인 메시지를 표시하는 것과 같은 추가 논리에 이러한 응답을 사용할 수 있습니다. 자세한 내용은 [명령 응답](/help/web-sdk/commands/command-responses.md)을 참조하세요.
+모든 [!DNL Experience Platform SDK] 명령은 호출의 성공 또는 실패 여부를 나타내는 약속을 반환합니다. 그런 다음 고객에게 확인 메시지를 표시하는 것과 같은 추가 논리에 이러한 응답을 사용할 수 있습니다. 자세한 내용은 [명령 응답](/help/web-sdk/commands/command-responses.md)을 참조하세요.
 
-SDK를 사용하여 `setConsent`번 호출하면 Platform UI의 프로필 뷰어를 사용하여 데이터가 프로필 스토어에 도달하는지 확인할 수 있습니다. 자세한 내용은 [ID별로 프로필 찾아보기](../../../profile/ui/user-guide.md#browse-identity)의 섹션을 참조하십시오.
+SDK을 사용하여 `setConsent`번 호출하면 Experience Platform UI의 프로필 뷰어를 사용하여 데이터가 프로필 스토어에 도달하는지 확인할 수 있습니다. 자세한 내용은 [ID별로 프로필 찾아보기](../../../profile/ui/user-guide.md#browse-identity)의 섹션을 참조하십시오.
 
 ## 다음 단계
 
-이 안내서에 따라 동의 데이터를 Experience Platform으로 보내도록 Platform Web SDK 확장을 구성했습니다. 구현 테스트에 대한 지침은 구현 중인 동의 표준에 대한 설명서를 참조하십시오.
+이 안내서에 따라 동의 데이터를 Experience Platform으로 보내도록 Experience Platform Web SDK 확장을 구성했습니다. 구현 테스트에 대한 지침은 구현 중인 동의 표준에 대한 설명서를 참조하십시오.
 
-* [Adobe 표준](./adobe/overview.md#test)
+* [Adobe standard](./adobe/overview.md#test)
 * [TCF 2.0 표준](./iab/overview.md#test)

@@ -3,9 +3,9 @@ title: Google 클라우드 스토리지 연결
 description: Google Cloud Storage에 연결하고 대상을 활성화하거나 데이터 세트를 내보내는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1236'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 ## API 또는 UI를 통해 [!DNL Google Cloud Storage] 저장소에 연결합니다. {#connect-api-or-ui}
 
-* 플랫폼 사용자 인터페이스를 사용하여 [!DNL Google Cloud Storage] 저장소 위치에 연결하려면 아래의 [대상에 연결](#connect) 및 [이 대상에 대상 활성화](#activate) 섹션을 참조하십시오.
+* Experience Platform 사용자 인터페이스를 사용하여 [!DNL Google Cloud Storage] 저장소 위치에 연결하려면 아래의 [대상에 연결](#connect) 및 [이 대상에 대상 활성화](#activate) 섹션을 참조하십시오.
 * 프로그래밍 방식으로 [!DNL Google Cloud Storage] 저장소 위치에 연결하려면 흐름 서비스 API 자습서를 사용하여 [파일 기반 대상에 대상 활성화](../../api/activate-segments-file-based-destinations.md)를 읽어 보십시오.
 
 ## 지원되는 대상자 {#supported-audiences}
@@ -27,8 +27,8 @@ ht-degree: 2%
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -47,18 +47,18 @@ ht-degree: 2%
 
 이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기 설정 방법에 대한 자세한 내용은 튜토리얼을 참조하십시오.
 
-* [플랫폼 사용자 인터페이스를 사용하여 데이터 세트를 내보내는 방법](/help/destinations/ui/export-datasets.md).
+* [Experience Platform 사용자 인터페이스를 사용하여 데이터 세트를 내보내는 방법](/help/destinations/ui/export-datasets.md).
 * 흐름 서비스 API를 사용하여 프로그래밍 방식으로 데이터 세트를 [내보내는 방법](/help/destinations/api/export-datasets.md).
 
 ## 내보낸 데이터의 파일 형식 {#file-format}
 
-*대상 데이터*&#x200B;를 내보낼 때 Platform은 사용자가 제공한 저장소 위치에 `.csv`, `parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 대상 활성화 자습서에서 [내보내기에 지원되는 파일 형식](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) 섹션을 참조하십시오.
+*대상 데이터*&#x200B;를 내보낼 때 Experience Platform은 사용자가 제공한 저장소 위치에 `.csv`, `parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 대상 활성화 자습서에서 [내보내기에 지원되는 파일 형식](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) 섹션을 참조하십시오.
 
-*데이터 세트*&#x200B;를 내보낼 때 Platform은 사용자가 제공한 저장소 위치에 `.parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 데이터 세트 내보내기 자습서에서 [데이터 세트 내보내기에 성공했는지 확인](../../ui/export-datasets.md#verify) 섹션을 참조하십시오.
+*데이터 세트*&#x200B;를 내보낼 때 Experience Platform은 사용자가 제공한 저장소 위치에 `.parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 데이터 세트 내보내기 자습서에서 [데이터 세트 내보내기에 성공했는지 확인](../../ui/export-datasets.md#verify) 섹션을 참조하십시오.
 
 ## [!DNL Google Cloud Storage] 계정에 연결하기 위한 필수 구성 요소 설정 {#prerequisites}
 
-[!DNL Google Cloud Storage]에 플랫폼을 연결하려면 먼저 [!DNL Google Cloud Storage] 계정에 대해 상호 운용성을 사용하도록 설정해야 합니다. 상호 운용성 설정에 액세스하려면 [!DNL Google Cloud Platform]을(를) 열고 탐색 패널의 **[!UICONTROL 클라우드 저장소]** 옵션에서 **[!UICONTROL 설정]**&#x200B;을(를) 선택하십시오.
+Experience Platform을 [!DNL Google Cloud Storage]에 연결하려면 먼저 [!DNL Google Cloud Storage] 계정에 대해 상호 운용성을 사용하도록 설정해야 합니다. 상호 운용성 설정에 액세스하려면 [!DNL Google Cloud Platform]을(를) 열고 탐색 패널의 **[!UICONTROL 클라우드 저장소]** 옵션에서 **[!UICONTROL 설정]**&#x200B;을(를) 선택하십시오.
 
 클라우드 저장소 및 설정이 강조 표시된 ![Google 클라우드 플랫폼 대시보드.](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
@@ -70,7 +70,7 @@ ht-degree: 2%
 
 ![Google Cloud Platform 대시보드에 강조 표시된 서비스 계정 컨트롤에 대한 키를 만듭니다.](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
-새로 생성된 액세스 키 ID 및 비밀 액세스 키를 사용하여 [!DNL Google Cloud Storage] 계정을 플랫폼에 연결할 수 있습니다.
+새로 생성된 액세스 키 ID 및 비밀 액세스 키를 사용하여 [!DNL Google Cloud Storage] 계정을 Experience Platform에 연결할 수 있습니다.
 
 ## 대상에 연결 {#connect}
 
@@ -84,8 +84,8 @@ ht-degree: 2%
 
 대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
 
-* **[!UICONTROL 액세스 키 ID]**: Platform에 [!DNL Google Cloud Storage] 계정을 인증하는 데 사용되는 61자 영숫자 문자열입니다. 이 값을 얻는 방법에 대한 자세한 내용은 위의 [필수 구성 요소](#prerequisites) 섹션을 참조하십시오.
-* **[!UICONTROL 비밀 액세스 키]**: Platform에 [!DNL Google Cloud Storage] 계정을 인증하는 데 사용되는 40자의 base64로 인코딩된 문자열입니다. 이 값을 얻는 방법에 대한 자세한 내용은 위의 [필수 구성 요소](#prerequisites) 섹션을 참조하십시오.
+* **[!UICONTROL 액세스 키 ID]**: Experience Platform에 [!DNL Google Cloud Storage] 계정을 인증하는 데 사용되는 61자 영숫자 문자열입니다. 이 값을 얻는 방법에 대한 자세한 내용은 위의 [필수 구성 요소](#prerequisites) 섹션을 참조하십시오.
+* **[!UICONTROL 비밀 액세스 키]**: Experience Platform에 [!DNL Google Cloud Storage] 계정을 인증하는 데 사용되는 40자의 base64로 인코딩된 문자열입니다. 이 값을 얻는 방법에 대한 자세한 내용은 위의 [필수 구성 요소](#prerequisites) 섹션을 참조하십시오.
 * **[!UICONTROL 암호화 키]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -100,8 +100,8 @@ ht-degree: 2%
 * **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
 * **[!UICONTROL 버킷 이름]**: 이 대상에서 사용할 [!DNL Google Cloud Storage] 버킷의 이름을 입력하십시오.
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력하십시오.
-* **[!UICONTROL 파일 형식]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택하십시오. [!UICONTROL CSV] 옵션을 선택할 때 [파일 서식 옵션을 구성](../../ui/batch-destinations-file-formatting-options.md)할 수도 있습니다.
-* Experience Platform **[!UICONTROL 압축 형식]**: 내보낸 파일에 사용할 압축 형식을 선택합니다.
+* **[!UICONTROL 파일 형식]**: 내보낸 파일에 Experience Platform에서 사용할 형식을 선택하십시오. [!UICONTROL CSV] 옵션을 선택할 때 [파일 서식 옵션을 구성](../../ui/batch-destinations-file-formatting-options.md)할 수도 있습니다.
+* **[!UICONTROL 압축 형식]**: Experience Platform에서 내보낸 파일에 사용할 압축 형식을 선택합니다.
 * **[!UICONTROL 매니페스트 파일 포함]**: 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함된 매니페스트 JSON 파일을 내보내기에 포함하려면 이 옵션을 켜십시오. 매니페스트의 이름은 `manifest-<<destinationId>>-<<dataflowRunId>>.json` 형식을 사용하여 지정합니다. [샘플 매니페스트 파일](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)을(를) 봅니다. 매니페스트 파일에는 다음 필드가 포함되어 있습니다.
    * `flowRunId`: 내보낸 파일을 생성한 [데이터 흐름 실행](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
    * `scheduledTime`: 파일을 내보낸 시간(UTC)입니다.

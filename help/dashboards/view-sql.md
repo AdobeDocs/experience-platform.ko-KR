@@ -1,17 +1,17 @@
 ---
-title: Insight SQL 보기
+title: insight SQL 보기
 description: 프로필, 대상자, 대상 및 맞춤화된 인사이트 뒤에 있는 SQL을 보고 쿼리 편집기를 통해 요청 시 쿼리를 실행합니다.
 exl-id: fd728926-c113-4593-92b1-916a02d09d41
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
 
-# 인사이트 SQL 보기
+# insight SQL 보기
 
-[!UICONTROL SQL 보기] 기능을 사용하여 프로필, 대상 및 사용자 지정된 인사이트 뒤에 있는 SQL을 보고 쿼리 편집기를 통해 요청 시 쿼리를 실행합니다. 40개 이상의 기존 인사이트의 SQL에서 영감을 얻어 비즈니스 요구 사항에 따라 플랫폼 데이터에서 고유한 인사이트를 도출하는 새로운 쿼리를 만들 수 있습니다.
+[!UICONTROL SQL 보기] 기능을 사용하여 프로필, 대상 및 사용자 지정된 인사이트 뒤에 있는 SQL을 보고 쿼리 편집기를 통해 요청 시 쿼리를 실행합니다. 40개 이상의 기존 인사이트의 SQL에서 영감을 얻어 비즈니스 요구 사항에 따라 Experience Platform 데이터에서 고유한 인사이트를 도출하는 새로운 쿼리를 만들 수 있습니다.
 
 ## 대시보드 개요로 이동합니다. {#navigate-to-overview}
 
@@ -31,32 +31,32 @@ ht-degree: 0%
 
 ![[!UICONTROL SQL 보기] 토글이 강조 표시되었습니다.](./images/view-sql/view-sql-toggle.png)
 
-각 개별 인사이트에서 [!UICONTROL SQL 보기] 텍스트를 표시하려면 토글을 활성화하십시오.
+각 개별 insight에서 [!UICONTROL SQL 보기] 텍스트를 표시하려면 토글을 활성화하십시오.
 
-![SQL 보기]가 강조 표시된 인사이트[!UICONTROL 입니다.](./images/view-sql/insight-view-sql.png)
+![SQL 보기 [!UICONTROL 가 강조 표시된 insight].](./images/view-sql/insight-view-sql.png)
 
 **[!UICONTROL SQL 보기]**&#x200B;를 선택하여 위젯의 SQL이 포함된 대화 상자를 엽니다.
 
 ## SQL 대화 상자 {#sql-dialog}
 
-통찰력의 제목과 이를 생성하는 SQL을 포함하는 대화 상자가 나타납니다.
+insight의 제목과 이 제목을 생성하는 SQL이 포함된 대화 상자가 나타납니다.
 
 >[!TIP]
 >
 >복사 아이콘(![복사 아이콘)을 선택하여 전체 SQL 문을 클립보드에 복사할 수 있습니다.대화 상자의 오른쪽 맨 위에 있는 ](/help/images/icons/copy.png)).
 
-![강조 표시된 SQL 문이 있는 인사이트 대화 상자입니다.](./images/view-sql/sql-dialog.png)
+![강조 표시된 SQL 문이 있는 insight 대화 상자입니다.](./images/view-sql/sql-dialog.png)
 
 쿼리가 미리 채워진 쿼리 편집기를 열려면 **[!UICONTROL SQL 실행]**&#x200B;을 선택하십시오.
 
-![[!UICONTROL SQL 실행]이 강조 표시된 인사이트 대화 상자.](./images/view-sql/run-sql.png)
+![[!UICONTROL SQL 실행]이 강조 표시된 insight 대화 상자.](./images/view-sql/run-sql.png)
 
 ## 기존 SQL 편집 {#edit-sql}
 
 쿼리 편집기가 나타납니다. 이제 보고 요구 사항에 더 적합한 방식으로 명령문을 편집하고 플랫폼 데이터를 쿼리할 수 있습니다. 새 쿼리 템플릿을 적절한 이름으로 저장합니다.
 
-![선택한 인사이트 SQL이 미리 채워진 쿼리 편집기.](./images/view-sql/edit-sql.png)
+![선택한 insight SQL을 미리 채운 쿼리 편집기입니다.](./images/view-sql/edit-sql.png)
 
 ## 다음 단계
 
-이 문서를 읽고 나면 이제 표준 대시보드 또는 사용자 정의 대시보드 내의 통찰력을 위해 SQL에 액세스하는 방법을 이해할 수 있습니다. 아직 읽지 않았다면 [Real-time Customer Data Platform 인사이트 데이터 모델 문서](./data-models/cdp-insights-data-model-b2c.md)를 읽는 것이 좋습니다. 이 문서에는 마케팅 및 KPI 요구 사항에 맞게 Real-Time CDP 보고서의 SQL 템플릿을 사용자 지정하는 방법에 대한 통찰력이 포함되어 있습니다.
+이 문서를 읽고 나면 이제 표준 대시보드 또는 사용자 정의 대시보드 내의 모든 insight에 대한 SQL에 액세스하는 방법을 이해할 수 있습니다. 아직 읽지 않았다면 [Real-Time Customer Data Platform 인사이트 데이터 모델 문서](./data-models/cdp-insights-data-model-b2c.md)를 읽는 것이 좋습니다. 이 문서에는 마케팅 및 KPI 요구 사항에 맞게 Real-Time CDP 보고서의 SQL 템플릿을 사용자 지정하는 방법에 대한 통찰력이 포함되어 있습니다.

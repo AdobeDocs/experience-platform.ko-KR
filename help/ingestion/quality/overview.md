@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;홈;인기 항목;데이터 품질;품질;품질;지원되는 유효성 검사;유효성 검사;지원되는 유효성 검사;
+keywords: Experience Platform;홈;자주 찾는 항목;데이터 품질;품질;품질;지원되는 유효성 검사;유효성 검사;지원되는 유효성 검사;
 solution: Experience Platform
 title: 데이터 품질
 description: 다음 문서에서는 Adobe Experience Platform의 일괄 처리 및 스트리밍 수집에 대해 지원되는 검사 및 유효성 검사 동작에 대한 요약을 제공합니다.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 5%
@@ -54,7 +54,7 @@ Adobe Experience Platform은 일괄 처리 또는 스트리밍 수집을 통해 
 | 데이터 세트 | 데이터 세트가 지정, 활성화 및 제거되지 않았는지 확인합니다. |
 | Header | 헤더가 지정되고 유효한지 확인합니다. |
 
-[!DNL Platform]이(가) 데이터를 모니터링하고 확인하는 방법에 대한 자세한 내용은 [데이터 흐름 모니터링](./monitor-data-ingestion.md)에서 확인할 수 있습니다.
+[!DNL Experience Platform]이(가) 데이터를 모니터링하고 확인하는 방법에 대한 자세한 내용은 [데이터 흐름 모니터링](./monitor-data-ingestion.md)에서 확인할 수 있습니다.
 
 ## ID 값 유효성 검사
 

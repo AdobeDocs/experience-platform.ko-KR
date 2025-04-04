@@ -3,10 +3,10 @@ title: 지능형 재참여
 description: 주요 전환 순간에 강력한 연결 환경을 제공하여 방문 빈도가 낮은 고객을 지능적으로 재참여시킵니다.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3894'
-ht-degree: 48%
+source-wordcount: '3896'
+ht-degree: 47%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 48%
 
 지능적이고 책임 있는 방식으로 전환을 포기한 고객을 다시 참여시킵니다. 소멸된 고객과 경험을 통해 전환을 늘리고 클라이언트 라이프타임 값을 높일 수 있습니다.
 
-실시간 고려 사항을 적용하고, 모든 소비자 특성과 행동을 감안하고, 온라인 및 오프라인 이벤트를 기반으로 빠른 재인증을 제공합니다.
+실시간 고려 사항을 적용하고, 모든 소비자 특성과 행동을 감안하고, 온라인 및 오프라인 이벤트를 기반으로 빠른 재선별을 제공합니다.
 
 다음은 Real-Time CDP 및 Journey Optimizer의 다양한 구성 요소에 대한 높은 수준의 아키텍처 보기입니다. 이 다이어그램은 이 페이지에 설명된 사용 사례를 달성하기 위해 데이터가 데이터 수집에서 여정 또는 캠페인을 통해 활성화된 지점까지 두 Experience Platform 앱을 통해 어떻게 이동하는지를 보여 줍니다.
 
@@ -60,7 +60,7 @@ ht-degree: 48%
 포기한 제품 검색 시나리오는 웹 사이트와 모바일 앱 모두에서 포기한 제품 검색을 대상으로 합니다. 이 시나리오는 제품을 보았으나 장바구니에 구매하거나 추가하지 않은 경우에 트리거됩니다. 이 예에서는 지난 24시간 내에 목록 추가가 없는 경우 3일 후에 브랜드 참여가 트리거됩니다.<p>![고객 인텔리전스 중단 제품 검색 시나리오 높은 수준의 시각적 개요.](../intelligent-re-engagement/images/re-engagement-journey.png "고객 인텔리전트 포기 제품 검색 시나리오 높은 수준의 시각적 개요"){width="1920" zoomable="yes"}</p>
 
 1. 스키마와 데이터 세트를 만든 다음 [!UICONTROL 프로필]에 대해 활성화합니다.
-2. Web SDK, Mobile SDK 또는 API를 통해 데이터를 Experience Platform에 수집합니다. Analytics Source 커넥터 도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
+2. 웹 SDK, 모바일 SDK 또는 API를 통해 Experience Platform으로 데이터를 수집합니다. Analytics Source 커넥터 도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
 3. ID 그래프를 통해 인증된 웹 및 모바일 앱 방문자에게 연결할 수 있는 추가 프로필 활성화 데이터를 수집합니다.
 4. **고객**&#x200B;이 지난 3일 동안 참여를 실행했는지 확인하기 위해 프로필 목록에서 집중 대상자를 구축합니다.
 5. [!DNL Adobe Journey Optimizer]에서 구매하지 않은 제품 검색 여정을 만듭니다.
@@ -72,7 +72,7 @@ ht-degree: 48%
 포기한 장바구니 시나리오는 제품을 장바구니에 넣었지만 아직 웹 사이트 및 모바일 앱에서 구매하지 않은 경우에 적용됩니다. 또한 이 방법을 사용하여 유료 미디어 캠페인을 시작하고 중지합니다.<p>![고객이 장바구니를 포기한 시나리오 높은 수준의 시각적 개요.](../intelligent-re-engagement/images/abandoned-cart-journey.png "고객이 장바구니를 포기한 시나리오 높은 수준의 시각적 개요"){width="1920" zoomable="yes"}</p>
 
 1. 스키마와 데이터 세트를 만듭니다. [!UICONTROL 프로필]을(를) 활성화합니다.
-2. Web SDK, Mobile SDK 또는 API를 통해 데이터를 Experience Platform에 수집합니다. Analytics Source 커넥터 도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
+2. 웹 SDK, 모바일 SDK 또는 API를 통해 Experience Platform으로 데이터를 수집합니다. Analytics Source 커넥터 도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
 3. ID 그래프를 통해 인증된 웹 및 모바일 앱 방문자에게 연결할 수 있는 추가 프로필 활성화 데이터를 수집합니다.
 4. **고객**&#x200B;이 장바구니에 품목을 넣었지만 구매를 완료하지 않았는지 확인하기 위해 프로필 목록에서 집중 대상자를 구축합니다. **[!UICONTROL 장바구니에 추가]** 이벤트는 30분 동안 대기한 다음 구매를 확인하는 타이머를 시작합니다. 구매가 완료되면 **고객**&#x200B;이 **[!UICONTROL 장바구니 포기]** 대상자에 추가됩니다.
 5. [!DNL Adobe Journey Optimizer]에서 포기한 장바구니 여정을 만듭니다.
@@ -84,7 +84,7 @@ ht-degree: 48%
 주문 확인 시나리오는 웹사이트와 모바일 앱을 통한 제품 구매에 초점이 맞춰져 있다.<p>![고객 주문 확인 시나리오 높은 수준의 시각적 개요.](../intelligent-re-engagement/images/order-confirmation-journey.png "고객 주문 확인 시나리오 높은 수준의 시각적 개요"){width="1920" zoomable="yes"}</p>
 
 1. 스키마와 데이터 세트를 만든 다음 [!UICONTROL 프로필]에 대해 활성화합니다.
-2. Web SDK, Mobile SDK 또는 API를 통해 데이터를 Experience Platform에 수집합니다. Analytics Source 커넥터 도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
+2. 웹 SDK, 모바일 SDK 또는 API를 통해 Experience Platform으로 데이터를 수집합니다. Analytics Source 커넥터 도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
 3. ID 그래프를 통해 인증된 웹 및 모바일 앱 방문자에게 연결할 수 있는 추가 프로필 활성화 데이터를 수집합니다.
 4. [!DNL Adobe Journey Optimizer]에서 확인 여정을 만듭니다.
 5. [!DNL Adobe Journey Optimizer]는 선호 채널을 사용하여 주문 확인 메시지를 보냅니다.
@@ -147,7 +147,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 #### 고객 디지털 트랜잭션 스키마
 
-이 스키마는 웹 사이트 또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 [Web SDK](/help/web-sdk/home.md)를 통해 [!DNL Adobe Experience Platform]에 수집되며, 여정 트리거, 자세한 온라인 고객 분석, 향상된 대상 기능 및 개인화된 메시징에 사용되는 다양한 찾아보기 및 전환 이벤트를 참조하는 데 필요합니다.
+이 스키마는 웹 사이트 또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 [웹 SDK](/help/web-sdk/home.md)를 통해 [!DNL Adobe Experience Platform]에 수집되며, 여정 트리거, 자세한 온라인 고객 분석, 향상된 대상 기능 및 개인화된 메시징에 사용되는 다양한 찾아보기 및 전환 이벤트를 참조하는 데 필요합니다.
 
 고객 디지털 트랜잭션 스키마는 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스로 표시됩니다.
 
@@ -205,7 +205,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 #### 고객 오프라인 트랜잭션 스키마
 
-이 스키마는 웹 사이트 외부 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구성하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 POS(또는 유사한 시스템)에서 [!DNL Adobe Experience Platform]으로 수집되며, API 연결을 통해 Platform으로 스트리밍되는 경우가 가장 많습니다. 그 목적은 여정 트리거, 딥 온라인 및 오프라인 고객 분석, 향상된 대상 기능 및 개인화된 메시징에 사용되는 다양한 오프라인 전환 이벤트를 참조하는 것입니다.
+이 스키마는 웹 사이트 외부 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구성하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 POS(또는 유사한 시스템)에서 [!DNL Adobe Experience Platform]&#x200B;(으)로 수집되며 API 연결을 통해 Experience Platform으로 스트리밍되는 경우가 가장 많습니다. 그 목적은 여정 트리거, 딥 온라인 및 오프라인 고객 분석, 향상된 대상 기능 및 개인화된 메시징에 사용되는 다양한 오프라인 전환 이벤트를 참조하는 것입니다.
 
 고객 오프라인 트랜잭션 스키마는 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스로 표시됩니다.
 
@@ -263,7 +263,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 >
 >[[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md)를 사용하는 경우 선택적 구현입니다.
 
-이 스키마는 웹 사이트 또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 스키마는 고객 디지털 트랜잭션 스키마와 유사하지만 [Web SDK](/help/web-sdk/home.md)이(가) 데이터 수집에 대한 옵션이 아닌 경우 사용하기 위한 스키마라는 점에서 다릅니다. 따라서 이 스키마는 [!DNL Adobe Analytics Source Connector]을(를) 사용하여 온라인 데이터를 [!DNL Adobe Experience Platform]에 기본 또는 보조 데이터 스트림으로 보낼 때 필요합니다.
+이 스키마는 웹 사이트 또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 스키마는 고객 디지털 트랜잭션 스키마와 유사하지만 [웹 SDK](/help/web-sdk/home.md)이(가) 데이터 수집에 대한 옵션이 아닌 경우 사용하기 위한 스키마라는 점에서 다릅니다. 따라서 이 스키마는 [!DNL Adobe Analytics Source Connector]을(를) 사용하여 온라인 데이터를 [!DNL Adobe Experience Platform]에 기본 또는 보조 데이터 스트림으로 보낼 때 필요합니다.
 
 [!DNL Adobe] 웹 커넥터 스키마는 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스로 표시됩니다.
 
@@ -350,7 +350,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 직접 [대상자](/help/segmentation/home.md)를 구성하는 방법에 대한 자세한 내용은 [대상자 구성 UI 안내서](/help/segmentation/ui/audience-composition.md)를 참조하십시오.
 
-플랫폼에서 파생된 대상 정의를 통해 대상을 만드는 방법에 대한 자세한 내용은 [대상 빌더 UI 안내서](/help/segmentation/ui/segment-builder.md)를 참조하십시오.
+Experience Platform에서 파생된 대상 정의를 통해 대상을 만드는 방법에 대한 자세한 내용은 [대상 빌더 UI 안내서](/help/segmentation/ui/segment-builder.md)를 참조하십시오.
 
 >[!BEGINTABS]
 
@@ -763,7 +763,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 #### 대상에 필요한 데이터
 
-스트리밍 대상 내보내기 대상(예: Facebook, Google Customer Match, Google DV360)은 고객 데이터에서 다양한 ID를 지원합니다.
+스트리밍 대상 내보내기 대상(예: Facebook, Google Customer Match, Google DV360)은 고객 데이터의 다양한 ID를 지원합니다.
 
 * `personalEmail.address`
 * `ECID`

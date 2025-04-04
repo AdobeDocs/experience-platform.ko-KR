@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;홈;인기 주제;ui;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마;스키마;스키마;스키마;스키마;스키마;스키마;만들기;데이터 유형;데이터 유형;
+keywords: Experience Platform;홈;인기 항목;ui;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마;스키마;스키마;스키마;스키마;스키마;생성;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: UI를 사용하여 데이터 유형 만들기 및 편집
 type: Tutorial
 description: Experience Platform 사용자 인터페이스에서 데이터 유형을 만들고 편집하는 방법을 알아봅니다.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1387'
 ht-degree: 6%
 
 ---
@@ -27,7 +27,7 @@ Adobe Experience Platform은 광범위한 일반적인 경험 관리 사용 사�
 >
 >필드가 특정 데이터 유형으로 정의된 경우 다른 스키마에서 다른 데이터 유형으로 동일한 필드를 생성할 수 없습니다. 이 제한은 조직의 테넌트 전체에 적용됩니다.
 
-이 자습서에서는 Platform 사용자 인터페이스에서 사용자 지정 데이터 유형을 만들고 편집하는 단계를 다룹니다.
+이 자습서에서는 Experience Platform 사용자 인터페이스에서 사용자 지정 데이터 유형을 만들고 편집하는 단계를 다룹니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -37,7 +37,7 @@ Adobe Experience Platform은 광범위한 일반적인 경험 관리 사용 사�
 
 ## 데이터 형식에 대한 [!DNL Schema Editor]을(를) 엽니다. {#data-type}
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택하여 [!UICONTROL 스키마] 작업 영역을 연 다음 **[!UICONTROL 데이터 형식]** 탭을 선택합니다. 사용 가능한 데이터 유형 목록이 표시됩니다. 데이터 유형 목록은 작성 방법에 따라 자동으로 필터링됩니다. 기본 설정은 Adobe에 의해 정의된 데이터 유형을 표시합니다. 목록을 필터링하여 조직에서 만든 목록을 표시할 수도 있습니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택하여 [!UICONTROL 스키마] 작업 영역을 연 다음 **[!UICONTROL 데이터 형식]** 탭을 선택합니다. 사용 가능한 데이터 유형 목록이 표시됩니다. 데이터 유형 목록은 작성 방법에 따라 자동으로 필터링됩니다. 기본 설정은 Adobe에서 정의한 데이터 유형을 표시합니다. 목록을 필터링하여 조직에서 만든 목록을 표시할 수도 있습니다.
 
 ![왼쪽 탐색에 [!UICONTROL 스키마]가 있고 [!UICONTROL 데이터 형식]이 강조 표시된 [!UICONTROL 스키마] 작업 영역입니다.](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -125,6 +125,6 @@ Restaurant 데이터 형식에는 레스토랑 이름을 나타내는 문자열 
 
 ## 다음 단계 {#next-steps}
 
-이 안내서에서는 Platform UI를 사용하여 데이터 유형을 만들고 편집하는 방법을 다룹니다. [!UICONTROL 스키마] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md)를 참조하십시오.
+이 안내서에서는 Experience Platform UI를 사용하여 데이터 유형을 만들고 편집하는 방법을 다룹니다. [!UICONTROL 스키마] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md)를 참조하십시오.
 
 [!DNL Schema Registry] API를 사용하여 데이터 형식을 관리하는 방법에 대해 알아보려면 [데이터 형식 끝점 안내서](../../api/data-types.md)를 참조하십시오.

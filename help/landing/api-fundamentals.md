@@ -6,20 +6,20 @@ description: 이 문서에서는 Experience Platform API와 관련된 몇 가지
 role: Developer
 feature: API
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '508'
 ht-degree: 1%
 
 ---
 
 # Experience Platform API 기본 사항
 
-Adobe Experience Platform API는 JSON 기반 [!DNL Platform] 리소스를 효과적으로 관리하기 위해 이해해야 하는 몇 가지 기본 기술과 구문을 사용합니다. 이 문서에서는 이러한 기술에 대한 간략한 개요와 외부 설명서에 대한 링크를 제공합니다.
+Adobe Experience Platform API는 JSON 기반 [!DNL Experience Platform] 리소스를 효과적으로 관리하기 위해 이해해야 하는 몇 가지 기본 기술과 구문을 사용합니다. 이 문서에서는 이러한 기술에 대한 간략한 개요와 외부 설명서에 대한 링크를 제공합니다.
 
 ## JSON 포인터 {#json-pointer}
 
-JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준화된 문자열 구문([RFC 6901](https://tools.ietf.org/html/rfc6901))입니다. JSON 포인터는 개체 키 또는 배열 인덱스를 지정하는 `/`자로 구분된 토큰 문자열이며 토큰은 문자열 또는 숫자일 수 있습니다. JSON 포인터 문자열은 이 문서의 뒷부분에 설명된 대로 [!DNL Platform] API에 대한 많은 PATCH 작업에 사용됩니다. JSON Pointer에 대한 자세한 내용은 [JSON Pointer 개요 설명서](https://rapidjson.org/md_doc_pointer.html)를 참조하세요.
+JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준화된 문자열 구문([RFC 6901](https://tools.ietf.org/html/rfc6901))입니다. JSON 포인터는 개체 키 또는 배열 인덱스를 지정하는 `/`자로 구분된 토큰 문자열이며 토큰은 문자열 또는 숫자일 수 있습니다. JSON 포인터 문자열은 이 문서의 뒷부분에 설명된 대로 [!DNL Experience Platform] API에 대한 많은 PATCH 작업에 사용됩니다. JSON Pointer에 대한 자세한 내용은 [JSON Pointer 개요 설명서](https://rapidjson.org/md_doc_pointer.html)를 참조하세요.
 
 ### 예제 JSON 스키마 오브젝트
 
@@ -94,11 +94,11 @@ JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준화
 
 >[!NOTE]
 >
->[!DNL Experience Data Model](XDM) 설명자의 `xdm:sourceProperty` 및 `xdm:destinationProperty` 특성을 처리할 때 JSON 포인터 문자열에서 `properties` 키를 **제외**&#x200B;해야 합니다. 자세한 내용은 [설명자](../xdm/api/descriptors.md)의 [!DNL Schema Registry] API 개발자 안내서 하위 가이드를 참조하십시오.
+>[!DNL Experience Data Model]&#x200B;(XDM) 설명자의 `xdm:sourceProperty` 및 `xdm:destinationProperty` 특성을 처리할 때 JSON 포인터 문자열에서 `properties` 키를 **제외**&#x200B;해야 합니다. 자세한 내용은 [설명자](../xdm/api/descriptors.md)의 [!DNL Schema Registry] API 개발자 안내서 하위 가이드를 참조하십시오.
 
 ## JSON 패치 {#json-patch}
 
-[!DNL Platform] API에 대해 요청 페이로드에 JSON 패치 개체를 허용하는 많은 PATCH 작업이 있습니다. JSON 패치는 JSON 문서의 변경 내용을 설명하기 위한 표준화된 형식([RFC 6902](https://tools.ietf.org/html/rfc6902))입니다. 요청 본문에 전체 문서를 전송할 필요 없이 JSON에 대한 부분 업데이트를 정의할 수 있습니다.
+[!DNL Experience Platform] API에 대해 요청 페이로드에 JSON 패치 개체를 허용하는 여러 PATCH 작업이 있습니다. JSON 패치는 JSON 문서의 변경 내용을 설명하기 위한 표준화된 형식([RFC 6902](https://tools.ietf.org/html/rfc6902))입니다. 요청 본문에 전체 문서를 전송할 필요 없이 JSON에 대한 부분 업데이트를 정의할 수 있습니다.
 
 ### 예제 JSON 패치 오브젝트
 
@@ -109,7 +109,7 @@ JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준화
 }
 ```
 
-* `op`: 패치 작업의 유형입니다. JSON 패치가 여러 가지 다양한 작업 유형을 지원하지만 [!DNL Platform] API의 모든 PATCH 작업이 모든 작업 유형과 호환되는 것은 아닙니다. 사용 가능한 작업 유형은 다음과 같습니다.
+* `op`: 패치 작업의 유형입니다. JSON 패치가 여러 가지 다양한 작업 유형을 지원하지만 [!DNL Experience Platform] API의 모든 PATCH 작업이 모든 작업 유형과 호환되는 것은 아닙니다. 사용 가능한 작업 유형은 다음과 같습니다.
    * `add`
    * `remove`
    * `replace`
@@ -126,4 +126,4 @@ JSON 스키마는 JSON 데이터의 구조를 설명하고 유효성을 검사�
 
 ## 다음 단계
 
-이 문서에서는 [!DNL Experience Platform]에 대한 JSON 기반 리소스 관리와 관련된 일부 기술 및 구문을 소개했습니다. 모범 사례를 포함한 Platform API 작업에 대한 자세한 내용은 [시작 안내서](api-guide.md)를 참조하십시오. FAQ에 대한 답변은 [플랫폼 문제 해결 안내서](troubleshooting.md)를 참조하세요.
+이 문서에서는 [!DNL Experience Platform]에 대한 JSON 기반 리소스 관리와 관련된 일부 기술 및 구문을 소개했습니다. 모범 사례를 포함한 Experience Platform API 작업에 대한 자세한 내용은 [시작 안내서](api-guide.md)를 참조하십시오. FAQ에 대한 답변은 [Experience Platform 문제 해결 안내서](troubleshooting.md)를 참조하십시오.

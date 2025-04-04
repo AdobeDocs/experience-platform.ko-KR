@@ -2,9 +2,9 @@
 title: 매개 변수가 있는 쿼리
 description: Adobe Experience Platform UI에서 매개 변수가 있는 쿼리를 사용하는 방법에 대해 알아봅니다.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '691'
 ht-degree: 11%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 11%
 
 ## 전제 조건
 
-이 안내서를 계속하기 전에 [쿼리 편집기 UI 안내서](./user-guide.md)를 읽어 보십시오. 쿼리 편집기 안내서에서는 Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행하는 방법에 대한 자세한 정보를 제공합니다.
+이 안내서를 계속하기 전에 [쿼리 편집기 UI 안내서](./user-guide.md)를 읽어 보십시오. 쿼리 편집기 안내서는 Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행하는 방법에 대한 자세한 정보를 제공합니다.
 
 >[!NOTE]
 >
@@ -57,7 +57,7 @@ UI에서 매개 변수가 있는 쿼리를 만들려면 쿼리 편집기로 이�
 
 >[!TIP]
 >
->쿼리의 콘솔 출력을 보려면 탭을 [!UICONTROL 쿼리 매개 변수]에서 [!UICONTROL 콘솔](으)로 변경하십시오.
+>쿼리의 콘솔 출력을 보려면 탭을 [!UICONTROL 쿼리 매개 변수]에서 [!UICONTROL 콘솔]&#x200B;(으)로 변경하십시오.
 
 ## 쿼리 로그 세부 정보를 사용하여 매개 변수 값 확인 {#check-parameter-values}
 
@@ -79,4 +79,4 @@ UI에서 매개 변수가 있는 쿼리를 만들려면 쿼리 편집기로 이�
 
 이 문서를 읽은 후에는 Adobe Experience Platform UI에서 쿼리를 매개 변수화하고 예약된 쿼리 실행에 사용하는 방법에 대해 알아보았습니다. 이 문서에서는 쿼리 실행에 사용되는 매개 변수 값에 대한 로그를 확인하는 방법도 강조했습니다.
 
-다음으로, Platform UI를 통해 모든 쿼리 작업의 상태를 더 잘 이해하려면 [예약된 쿼리 모니터링](./monitor-queries.md)에 대한 안내서를 읽는 것이 좋습니다.
+다음으로, Experience Platform UI를 통해 모든 쿼리 작업의 상태를 더 잘 이해하려면 [예약된 쿼리 모니터링](./monitor-queries.md)에 대한 안내서를 읽는 것이 좋습니다.

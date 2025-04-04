@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 프로필 스키마에 대한 IAB TCF 2.0 동의 필드 그룹
 description: XDM 개인 프로필 클래스에 대한 IAB TCF 2.0 동의 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '322'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 1%
 }
 ```
 
-예제에서 볼 수 있듯이 `xdm:identityPrivacyInfo`의 각 루트 수준 키는 Identity Service에서 인식하는 ID 네임스페이스에 해당합니다. 또한 각 네임스페이스 속성에는 키가 해당 네임스페이스에 대한 고객의 해당 ID 값과 일치하는 하위 속성이 하나 이상 있어야 합니다. 이 예제에서 고객은 `13782522493631189`의 Experience Cloud ID(`ECID`) 값으로 식별됩니다.
+예제에서 볼 수 있듯이 `xdm:identityPrivacyInfo`의 각 루트 수준 키는 Identity Service에서 인식하는 ID 네임스페이스에 해당합니다. 또한 각 네임스페이스 속성에는 키가 해당 네임스페이스에 대한 고객의 해당 ID 값과 일치하는 하위 속성이 하나 이상 있어야 합니다. 이 예에서 고객은 `13782522493631189`의 Experience Cloud ID(`ECID`) 값으로 식별됩니다.
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 각 ID 값에 대해 ID에 대한 TCF 동의 값을 제공하는 `identityIABConsent` 속성을 제공해야 합니다. 이 속성의 값은 [[!UICONTROL 동의 문자열] 데이터 형식](../../data-types/consent-string.md)을 준수해야 합니다.
 
-이 필드 그룹의 사용 사례에 대한 자세한 내용은 ](../../../landing/governance-privacy-security/consent/iab/overview.md) 플랫폼의 [IAB TCF 2.0 지원 가이드를 참조하십시오. 필드 그룹 자체에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
+이 필드 그룹의 사용 사례에 대한 자세한 내용은 Experience Platform의 [IAB TCF 2.0 지원](../../../landing/governance-privacy-security/consent/iab/overview.md)에 대한 안내서를 참조하십시오. 필드 그룹 자체에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
 
 * [채워진 예](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [전체 스키마](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

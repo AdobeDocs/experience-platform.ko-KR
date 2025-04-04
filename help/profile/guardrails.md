@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 기능의 최적 사용을 보장하기 위해 프로필 데이터 및 세분화에 대한 성능 및 시스템 적용 가드레일에 대해 알아봅니다.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2611'
+source-wordcount: '2617'
 ht-degree: 2%
 
 ---
@@ -31,9 +31,9 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 다음 Experience Platform 서비스는 실시간 고객 프로필 데이터 모델링과 관련되어 있습니다.
 
 * [[!DNL Real-Time Customer Profile]](home.md): 여러 소스의 데이터를 사용하여 통합 소비자 프로필을 만듭니다.
-* [ID](../identity-service/home.md): Bridge ID가 플랫폼에 수집될 때 서로 다른 데이터 소스의 ID입니다.
-* [스키마](../xdm/home.md): XDM(Experience Data Model) 스키마는 Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-* [대상](../segmentation/home.md): 플랫폼의 세그먼테이션 엔진을 사용하여 고객 행동 및 특성을 기반으로 고객 프로필에서 대상을 만듭니다.
+* [ID](../identity-service/home.md): Bridge ID가 Experience Platform에 수집될 때 서로 다른 데이터 소스의 ID입니다.
+* [스키마](../xdm/home.md): XDM(Experience Data Model) 스키마는 Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [대상](../segmentation/home.md): Experience Platform의 세그먼테이션 엔진은 고객 행동 및 특성을 기반으로 고객 프로필에서 대상을 만드는 데 사용됩니다.
 
 ## 제한 유형
 
@@ -177,9 +177,9 @@ Dimension 엔티티는 다중 엔티티 세그먼트 정의를 지원 및 간소
 
 ### 병합 정책 {#merge-policies}
 
-여러 소스에서 데이터를 결합할 때 병합 정책은 플랫폼이 데이터를 우선 순위가 매겨지는 방법과 어떤 데이터를 결합하여 해당 통합 보기를 생성할 것인지 결정하는 데 사용하는 규칙입니다. 예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직에는 여러 데이터 세트에 표시되는 단일 고객과 관련된 여러 프로필 조각이 있습니다. 이러한 조각을 Platform에 수집하면 해당 고객을 위한 단일 프로필을 만들기 위해 함께 병합됩니다. 여러 소스의 데이터가 충돌하는 경우 병합 정책이 개인에 대해 프로필에 포함할 정보를 결정합니다. 샌드박스당 `_xdm.context.profile` 스키마를 사용하는 최대 5개의 병합 정책이 허용됩니다. 병합 정책에 대한 자세한 내용은 [병합 정책 개요](merge-policies/overview.md)를 참조하십시오.
+여러 소스에서 데이터를 결합할 때 병합 정책은 Experience Platform에서 데이터의 우선 순위를 결정하는 데 사용하는 규칙이며, 이러한 통합 보기를 만들기 위해 결합할 데이터와 데이터를 결정합니다. 예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직에는 여러 데이터 세트에 표시되는 단일 고객과 관련된 여러 프로필 조각이 있습니다. 이러한 조각을 Experience Platform에 수집하면 해당 고객을 위한 단일 프로필을 만들기 위해 함께 병합됩니다. 여러 소스의 데이터가 충돌하는 경우 병합 정책이 개인에 대해 프로필에 포함할 정보를 결정합니다. 샌드박스당 `_xdm.context.profile` 스키마를 사용하는 최대 5개의 병합 정책이 허용됩니다. 병합 정책에 대한 자세한 내용은 [병합 정책 개요](merge-policies/overview.md)를 참조하십시오.
 
-### Platform의 Adobe Analytics 보고서 세트 데이터 세트 {#aa-datasets}
+### Experience Platform의 Adobe Analytics 보고서 세트 데이터 세트 {#aa-datasets}
 
 모든 데이터 충돌이 해결되면 프로필에 대해 여러 보고서 세트를 활성화할 수 있습니다. 데이터 준비 기능을 사용하여 eVar, 목록 및 Prop 간의 데이터 충돌을 해결할 수 있습니다. 데이터 준비 기능을 사용하는 방법에 대한 자세한 내용은 [Adobe Analytics 커넥터 UI 안내서](../sources/tutorials/ui/create/adobe-applications/analytics.md)를 참조하십시오.
 

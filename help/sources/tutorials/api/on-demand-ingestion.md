@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;흐름 서비스;
 title: 흐름 서비스 API를 사용하여 온디맨드 수집에 대한 흐름 실행 만들기
 description: 흐름 서비스 API를 사용하여 온디맨드 수집을 위한 흐름 실행을 만드는 방법을 알아봅니다
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '801'
 ht-degree: 1%
 
 ---
@@ -26,16 +26,16 @@ ht-degree: 1%
 
 이 자습서를 사용하려면 Adobe Experience Platform의 다음 구성 요소를 잘 알고 있어야 합니다.
 
-* [원본](../../home.md): [!DNL Experience Platform]에서는 데이터를 다양한 원본에서 수집할 수 있으며 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공합니다.
-* [샌드박스](../../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [원본](../../home.md): [!DNL Experience Platform]에서는 데이터를 다양한 원본에서 수집할 수 있으며 [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공합니다.
+* [샌드박스](../../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-### Platform API 사용
+### Experience Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ## 테이블 기반 소스에 대한 흐름 실행 만들기
 
-테이블 기반 소스에 대한 흐름을 만들려면 실행을 만들 흐름의 ID와 시작 시간, 종료 시간 및 델타 열에 대한 값을 제공하면서 [!DNL Flow Service] API에 POST 요청을 합니다.
+테이블 기반 소스에 대한 흐름을 만들려면 실행을 만들 흐름의 ID와 시작 시간, 종료 시간 및 델타 열에 대한 값을 제공하면서 [!DNL Flow Service] API에 대한 POST 요청을 만듭니다.
 
 >[!TIP]
 >
@@ -125,7 +125,7 @@ curl -X POST \
 
 ## 파일 기반 소스에 대한 흐름 실행 만들기
 
-파일 기반 소스에 대한 흐름을 만들려면 실행할 흐름의 ID와 시작 시간 및 종료 시간에 대한 값을 제공하면서 [!DNL Flow Service] API에 POST 요청을 합니다.
+파일 기반 소스에 대한 흐름을 만들려면 실행할 흐름의 ID와 시작 시간 및 종료 시간에 대한 값을 제공하면서 [!DNL Flow Service] API에 대한 POST 요청을 만듭니다.
 
 >[!TIP]
 >
@@ -189,4 +189,4 @@ curl -X POST \
 
 ## 플로우 실행 모니터링
 
-플로우 실행이 생성되면 플로우 실행을 통해 수집되는 데이터를 모니터링하여 플로우 실행, 완료 상태 및 오류에 대한 정보를 확인할 수 있습니다. API를 사용하여 흐름 실행을 모니터링하려면 [API의 데이터 흐름 모니터링](./monitor.md)에 대한 자습서를 참조하십시오. 플랫폼 UI를 사용하여 플로우 실행을 모니터링하려면 [모니터링 대시보드를 사용하여 소스 데이터 흐름 모니터링](../../../dataflows/ui/monitor-sources.md)에 대한 안내서를 참조하십시오.
+플로우 실행이 생성되면 플로우 실행을 통해 수집되는 데이터를 모니터링하여 플로우 실행, 완료 상태 및 오류에 대한 정보를 확인할 수 있습니다. API를 사용하여 흐름 실행을 모니터링하려면 [API의 데이터 흐름 모니터링](./monitor.md)에 대한 자습서를 참조하십시오. Experience Platform UI를 사용하여 플로우 실행을 모니터링하려면 [모니터링 대시보드를 사용하여 소스 데이터 흐름 모니터링](../../../dataflows/ui/monitor-sources.md)에 대한 안내서를 참조하십시오.

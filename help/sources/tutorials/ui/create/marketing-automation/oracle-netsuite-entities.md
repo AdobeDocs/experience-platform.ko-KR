@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Beta
 exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '706'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 ## 시작하기 {#getting-started}
 
-이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
@@ -37,33 +37,33 @@ ht-degree: 2%
 
 ## [!DNL Oracle NetSuite Activities] 계정 연결 {#connect-account}
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
 *마케팅 자동화* 범주에서 **[!DNL Oracle NetSuite Entities]**&#x200B;을(를) 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
 
-![Oracle NetSuite 엔터티 카드가 있는 카탈로그용 플랫폼 UI 스크린샷](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/catalog-card.png)
+![Oracle NetSuite 엔터티 카드가 있는 카탈로그용 Experience Platform UI 스크린샷](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/catalog-card.png)
 
 **[!UICONTROL Oracle NetSuite 엔터티 계정 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
 
 >[!IMPORTANT]
 >
->새로 고침 토큰은 7일 후에 만료됩니다. 토큰이 만료되면 업데이트된 토큰으로 Experience Platform 시 계정을 만들어야 합니다. 업데이트된 토큰으로 새 계정을 만들지 않으면 다음 오류 메시지가 표시될 수 있습니다. `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
+>새로 고침 토큰은 7일 후에 만료됩니다. 토큰이 만료되면 업데이트된 토큰으로 Experience Platform에 계정을 만들어야 합니다. 업데이트된 토큰으로 새 계정을 만들지 않으면 다음 오류 메시지가 표시될 수 있습니다. `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
 
 ### 기존 계정 {#existing-account}
 
 기존 계정을 사용하려면 새 데이터 흐름을 만들 [!DNL Oracle NetSuite Entities] 계정을 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 선택하여 계속합니다.
 
-![Oracle NetSuite Entities 계정을 기존 계정과 연결하는 플랫폼 UI 스크린샷](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/existing.png)
+![Oracle NetSuite Entities 계정을 기존 계정과 연결하는 Experience Platform UI 스크린샷](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/existing.png)
 
 ### 새 계정 {#new-account}
 
 새 계정을 만드는 경우 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택한 다음 이름, 설명(선택 사항) 및 자격 증명을 제공합니다. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택한 다음 새 연결을 설정할 수 있는 시간을 허용하세요.
 
-![Oracle NetSuite Entities 계정을 새 계정과 연결하는 플랫폼 UI 스크린샷](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/new.png)
+![Oracle NetSuite Entities 계정을 새 계정과 연결하는 Experience Platform UI 스크린샷](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/new.png)
 
 ### 데이터 선택
 
-그런 다음 Experience Platform 대상으로 수집할 객체 유형을 선택합니다.
+그런 다음 Experience Platform으로 수집할 객체 유형을 선택합니다.
 
 | 엔티티 유형 | 설명 |
 | --- | --- |
@@ -74,17 +74,17 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 
 >[!TAB 연락처]
 
-![연락처 옵션이 선택된 구성을 보여주는 Oracle Netsuite 엔터티의 플랫폼 UI 스크린샷](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)
+![연락처 옵션이 선택된 구성을 보여주는 Oracle Netsuite 엔터티의 Experience Platform UI 스크린샷](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)
 
 >[!TAB 고객]
 
-![고객 옵션이 선택된 구성을 보여주는 Oracle Netsuite 엔터티의 플랫폼 UI 스크린샷](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)
+![고객 옵션이 선택된 구성을 보여주는 Oracle Netsuite 엔터티의 Experience Platform UI 스크린샷](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)
 
 >[!ENDTABS]
 
 ## 다음 단계 {#next-steps}
 
-이 자습서에 따라 [!DNL Oracle NetSuite Entities] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [마케팅 자동화 데이터를 플랫폼으로 가져오기 위한 데이터 흐름을 구성](../../dataflow/marketing-automation.md)할 수 있습니다.
+이 자습서에 따라 [!DNL Oracle NetSuite Entities] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [마케팅 자동화 데이터를 Experience Platform으로 가져오도록 데이터 흐름을 구성](../../dataflow/marketing-automation.md)할 수 있습니다.
 
 ## 추가 리소스 {#additional-resources}
 
@@ -92,7 +92,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 
 ### 매핑 {#mapping}
 
-Platform은 선택한 대상 스키마 또는 데이터 세트를 기반으로 자동 매핑된 필드에 대한 지능형 권장 사항을 제공합니다. 사용 사례에 맞게 매핑 규칙을 수동으로 조정할 수 있습니다. 필요에 따라 필드를 직접 매핑하도록 선택하거나 데이터 준비 함수를 사용하여 소스 데이터를 변환하여 계산된 값 또는 계산된 값을 파생할 수 있습니다. 매퍼 인터페이스 및 계산된 필드 사용에 대한 포괄적인 단계는 [데이터 준비 UI 안내서](../../../../../data-prep/ui/mapping.md)를 참조하십시오.
+Experience Platform은 선택한 대상 스키마 또는 데이터 세트를 기반으로 자동 매핑된 필드에 대한 지능형 권장 사항을 제공합니다. 사용 사례에 맞게 매핑 규칙을 수동으로 조정할 수 있습니다. 필요에 따라 필드를 직접 매핑하도록 선택하거나 데이터 준비 함수를 사용하여 소스 데이터를 변환하여 계산된 값 또는 계산된 값을 파생할 수 있습니다. 매퍼 인터페이스 및 계산된 필드 사용에 대한 포괄적인 단계는 [데이터 준비 UI 안내서](../../../../../data-prep/ui/mapping.md)를 참조하십시오.
 
 >[!NOTE]
 >

@@ -3,18 +3,18 @@ keywords: Experience Platform;홈;인기 항목;결제 데이터 수집;결제 �
 solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 결제 소스에 대한 데이터 흐름 만들기
 type: Tutorial
-description: 이 자습서에서는 결제 애플리케이션에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 플랫폼으로 수집하는 단계를 다룹니다.
+description: 이 자습서에서는 결제 애플리케이션에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Experience Platform으로 수집하는 단계를 다룹니다.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1375'
 ht-degree: 2%
 
 ---
 
 # [!DNL Flow Service] API를 사용하여 결제 소스에 대한 데이터 흐름 만들기
 
-이 자습서에서는 결제 원본에서 데이터를 검색하고 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 플랫폼으로 가져오는 단계를 다룹니다.
+이 튜토리얼에서는 결제 원본에서 데이터를 검색하고 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)을(를) 사용하여 Experience Platform으로 가져오는 단계를 다룹니다.
 
 >[!NOTE]
 >
@@ -25,16 +25,16 @@ ht-degree: 2%
 
 이 자습서를 사용하려면 Adobe Experience Platform의 다음 구성 요소를 잘 알고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 레지스트리 개발자 안내서](../../../../xdm/api/getting-started.md): 스키마 레지스트리 API에 대한 호출을 성공적으로 수행하기 위해 알아야 하는 중요한 정보가 포함되어 있습니다. 여기에는 `{TENANT_ID}`, &quot;컨테이너&quot; 개념 및 요청을 하는 데 필요한 헤더가 포함됩니다(Accept 헤더 및 가능한 값에 특별한 주의를 기울임).
 * [[!DNL Catalog Service]](../../../../catalog/home.md): 카탈로그는 Experience Platform 내의 데이터 위치 및 계보에 대한 레코드 시스템입니다.
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): 일괄 처리 수집 API를 사용하면 데이터를 일괄 처리 파일로 Experience Platform에 수집할 수 있습니다.
-* [샌드박스](../../../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [샌드박스](../../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-### Platform API 사용
+### Experience Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ## 소스 연결 만들기 {#source}
 
@@ -137,7 +137,7 @@ curl -X POST \
 
 ## 대상 XDM 스키마 만들기 {#target-schema}
 
-소스 데이터를 플랫폼에서 사용하려면 타겟 스키마를 만들어 필요에 따라 소스 데이터를 구조화해야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 Platform 데이터 세트를 만듭니다.
+소스 데이터를 Experience Platform에서 사용하려면 타겟 스키마를 만들어 필요에 따라 소스 데이터를 구조화해야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 Experience Platform 데이터 세트를 만듭니다.
 
 [스키마 레지스트리 API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)에 대한 POST 요청을 수행하여 대상 XDM 스키마를 만들 수 있습니다.
 
@@ -145,7 +145,7 @@ curl -X POST \
 
 ## 타겟 데이터 세트 만들기 {#target-dataset}
 
-[카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하고 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
+[카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하여 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
 
 대상 데이터 집합을 만드는 방법에 대한 자세한 단계는 [API를 사용하여 데이터 집합 만들기](../../../../catalog/api/create-dataset.md)에 대한 자습서를 참조하십시오.
 
@@ -212,7 +212,7 @@ curl -X POST \
 
 소스 데이터를 타겟 데이터 세트에 수집하려면 먼저 타겟 데이터 세트가 준수하는 타겟 스키마에 매핑해야 합니다.
 
-매핑 세트를 만들려면 대상 XDM 스키마 `$id`과(와) 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)의 `mappingSets` 끝점에 POST 요청을 하십시오.
+매핑 세트를 만들려면 대상 XDM 스키마 `$id`과(와) 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)의 `mappingSets` 끝점에 대한 POST 요청을 수행하십시오.
 
 **API 형식**
 
@@ -293,7 +293,7 @@ curl -X POST \
 
 ## 데이터 흐름 사양 조회 {#specs}
 
-데이터 흐름은 소스에서 데이터를 수집하고 플랫폼으로 가져오는 역할을 합니다. 데이터 흐름을 만들려면 먼저 [!DNL Flow Service] API에 대한 GET 요청을 수행하여 데이터 흐름 사양을 얻어야 합니다. 데이터 흐름 사양은 외부 데이터베이스 또는 NoSQL 시스템에서 데이터를 수집하는 역할을 합니다.
+데이터 흐름은 소스에서 데이터를 수집하고 Experience Platform으로 가져오는 역할을 합니다. 데이터 흐름을 만들려면 먼저 [!DNL Flow Service] API에 대한 GET 요청을 수행하여 데이터 흐름 사양을 얻어야 합니다. 데이터 흐름 사양은 외부 데이터베이스 또는 NoSQL 시스템에서 데이터를 수집하는 역할을 합니다.
 
 **API 형식**
 
@@ -313,7 +313,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 소스에서 플랫폼으로 데이터를 가져오는 역할을 하는 데이터 흐름 사양의 세부 정보를 반환합니다. 응답에는 새 데이터 흐름을 만드는 데 필요한 고유한 흐름 사양 `id`이(가) 포함되어 있습니다.
+성공적인 응답은 소스에서 Experience Platform으로 데이터를 가져오는 역할을 하는 데이터 흐름 사양의 세부 정보를 반환합니다. 응답에는 새 데이터 흐름을 만드는 데 필요한 고유한 흐름 사양 `id`이(가) 포함되어 있습니다.
 
 >[!NOTE]
 >
@@ -633,8 +633,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow between payments Platform",
-        "description": "Inbound data to Platform",
+        "name": "Dataflow between payments Experience Platform",
+        "description": "Inbound data to Experience Platform",
         "flowSpec": {
             "id": "14518937-270c-4525-bdec-c2ba7cce3860",
             "version": "1.0"
@@ -701,7 +701,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서에 따라 일정에 따라 결제 애플리케이션에서 데이터를 수집하는 소스 커넥터를 만들었습니다. 이제 [!DNL Real-Time Customer Profile] 및 [!DNL Data Science Workspace]과(와) 같은 다운스트림 플랫폼 서비스에서 수신 데이터를 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서에 따라 일정에 따라 결제 애플리케이션에서 데이터를 수집하는 소스 커넥터를 만들었습니다. 이제 [!DNL Real-Time Customer Profile] 및 [!DNL Data Science Workspace]과(와) 같은 다운스트림 Experience Platform 서비스에서 수신 데이터를 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
 * [실시간 고객 프로필 개요](../../../../profile/home.md)
 * [데이터 과학 작업 영역 개요](../../../../data-science-workspace/home.md)

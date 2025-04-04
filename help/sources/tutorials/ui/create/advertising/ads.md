@@ -2,9 +2,9 @@
 title: UI를 사용하여 Google 광고를 Experience Platform에 연결
 description: UI에서 Google 광고 계정을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
@@ -94,4 +94,4 @@ Experience Platform UI에서 소스 워크플로우의 데이터 선택 단계�
 
 ## 데이터 흐름을 만들어 광고 데이터 수집
 
-이 자습서에 따라 Google Ads 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [광고 데이터를 플랫폼으로 가져오도록 데이터 흐름을 구성](../../dataflow/advertising.md)할 수 있습니다.
+이 자습서에 따라 Google Ads 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터 흐름을 구성하여 광고 데이터를 Experience Platform으로 가져올 수 있습니다](../../dataflow/advertising.md).

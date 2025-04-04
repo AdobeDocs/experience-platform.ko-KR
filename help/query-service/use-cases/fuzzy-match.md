@@ -1,10 +1,10 @@
 ---
 title: 쿼리 서비스의 유사 항목 일치
-description: 선택한 문자열과 거의 일치하여 여러 데이터 세트의 결과를 결합하는 Platform 데이터에 대해 일치 작업을 수행하는 방법을 알아봅니다.
+description: 선택한 문자열과 거의 일치하여 여러 데이터 세트의 결과를 결합하는 Experience Platform 데이터에 대해 일치 작업을 수행하는 방법을 알아봅니다.
 exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ cur = conn.cursor()
 
 [!DNL Jupyter Notebook] 인스턴스가 이제 쿼리 서비스에 연결되어 있습니다. 연결에 성공하면 메시지가 표시되지 않습니다. 연결에 실패하면 오류가 표시됩니다.
 
-### Luma 데이터 세트의 Draw 데이터 {#luma-dataset}
+### Luma 데이터 세트에서 데이터 그리기 {#luma-dataset}
 
 분석할 데이터는 다음 명령을 사용하여 첫 번째 데이터 세트에서 가져옵니다. 간결성을 위해, 예들은 컬럼의 처음 10개의 결과들로 제한되었다.
 
@@ -96,7 +96,7 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Acme 데이터 세트의 Draw 데이터 {#acme-dataset}
+### Acme 데이터 세트에서 데이터 가져오기 {#acme-dataset}
 
 이제 다음 명령을 사용하여 두 번째 데이터 세트에서 분석용 데이터를 가져옵니다. 다시, 간결성을 위해, 예들은 컬럼의 처음 10개의 결과들로 제한되었다.
 
@@ -350,7 +350,7 @@ WHERE
 
 +++
 
-### 유사 항목 일치 결과를 플랫폼에 저장 {#save-to-platform}
+### Experience Platform에 유사 항목 일치 결과 저장 {#save-to-platform}
 
 마지막으로, 유사 항목 일치 결과는 SQL을 사용하여 Adobe Experience Platform에서 사용할 데이터 세트로 저장할 수 있습니다.
 

@@ -2,19 +2,19 @@
 keywords: Experience Platform;홈;인기 항목;액세스 제어;adobe admin console
 solution: Experience Platform
 feature: Attribution AI
-title: Attribution AI 액세스 제어
-description: 이 문서에서는 Attribution AI의 속성 기반 액세스 제어에 대한 정보를 제공합니다.
+title: Attribution AI에 대한 액세스 제어
+description: 이 문서에서는 기여도 AI의 속성 기반 액세스 제어에 대한 정보를 제공합니다.
 exl-id: 3ed672bf-1fa6-4893-99e0-afc2b2179543
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '493'
 ht-degree: 1%
 
 ---
 
 # Attribution AI의 액세스 제어
 
-[Adobe Admin Console](https://adminconsole.adobe.com/)의 Adobe Experience Platform을 통해 Attribution AI에 대한 액세스 제어가 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
+기여도 AI에 대한 액세스 제어는 [Adobe Admin Console](https://adminconsole.adobe.com/)의 Adobe Experience Platform을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 
 액세스 제어에 대한 자세한 내용은 [액세스 제어 개요](../../../access-control/home.md)를 참조하십시오.
 
@@ -28,9 +28,9 @@ ht-degree: 1%
 
 이 기능을 사용하면 XDM(Experience Data Model) 스키마 필드에 조직 또는 데이터 사용 범위를 정의하는 레이블로 레이블을 지정할 수 있습니다. 이와 동시에 관리자는 사용자 및 역할 관리 인터페이스를 사용하여 XDM 스키마 필드를 둘러싼 액세스 정책을 정의하고 사용자 또는 사용자 그룹(내부, 외부 또는 타사 사용자)에 부여된 액세스를 더 잘 관리할 수 있습니다. 또한 속성 기반 액세스 제어를 통해 관리자는 특정 세그먼트에 대한 액세스를 관리할 수 있습니다.
 
-속성 기반 액세스 제어를 통해 관리자는 모든 플랫폼 워크플로 및 리소스에서 중요한 개인 데이터(SPD)와 개인 식별 정보(PII) 모두에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.
+속성 기반 액세스 제어를 통해 관리자는 모든 Experience Platform 워크플로 및 리소스에서 중요한 개인 데이터(SPD)와 개인 식별 정보(PII) 모두에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.
 
-속성 기반 액세스 제어로 인해 일부 필드 및 기능은 액세스가 제한되어 특정 Attribution AI 서비스 모델에서 사용할 수 없습니다. 예를 들면 &quot;ID&quot;, &quot;점수 정의&quot; 및 &quot;복제&quot;가 있습니다.
+속성 기반 액세스 제어로 인해 일부 필드 및 기능은 액세스가 제한되어 특정 Attribution AI 서비스 모델에 사용할 수 없을 수 있습니다. 예를 들면 &quot;ID&quot;, &quot;점수 정의&quot; 및 &quot;복제&quot;가 있습니다.
 
 Attribution AI 작업 영역 **인사이트 페이지**&#x200B;의 맨 위에서 사이드바에 표시되는 세부 정보에 대한 액세스가 제한됩니다.
 
@@ -50,4 +50,4 @@ Attribution AI 작업 영역 **인사이트 페이지**&#x200B;의 맨 위에서
 
 ## 다음 단계
 
-이 안내서를 읽으면 [!DNL Experience Platform]에서 액세스 제어의 주요 원칙에 대해 알아보게 됩니다. 이제 [!DNL Admin Console]을(를) 사용하여 제품 프로필을 만들고 [!DNL Platform]에 대한 권한을 할당하는 방법에 대한 자세한 단계를 보려면 [액세스 제어 사용 안내서](../overview.md)로 계속할 수 있습니다.
+이 안내서를 읽으면 [!DNL Experience Platform]에서 액세스 제어의 주요 원칙에 대해 알아보게 됩니다. 이제 [!DNL Admin Console]을(를) 사용하여 제품 프로필을 만들고 [!DNL Experience Platform]에 대한 권한을 할당하는 방법에 대한 자세한 단계를 보려면 [액세스 제어 사용 안내서](../overview.md)로 계속할 수 있습니다.

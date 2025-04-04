@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Experience Data Model(XDM)의 이름 간격
 description: XDM(Experience Data Model)의 이름 간격을 통해 스키마를 확장하고 다른 스키마 구성 요소를 가져올 때 필드 충돌을 방지하는 방법에 대해 알아봅니다.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ XDM(Experience Data Model) 스키마의 모든 필드에는 연결된 네임스�
 
 ### 표준 XDM {#standard}
 
-표준 XDM 구문은 스키마에서 네임스페이스가 표현되는 방법([Adobe Experience Platform에서 네임스페이스를 변환하는 방법](#compatibility) 포함)에 대한 통찰력을 제공합니다.
+표준 XDM 구문은 insight에 네임스페이스가 스키마에서 표현되는 방법([Adobe Experience Platform에서 네임스페이스를 변환하는 방법](#compatibility) 포함)을 제공합니다.
 
 표준 XDM은 [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) 구문을 사용하여 필드에 네임스페이스를 할당합니다. 이 네임스페이스는 URI(예: `xdm` 네임스페이스의 `https://ns.adobe.com/xdm`) 형태로 제공되거나 스키마의 `@context` 특성에 구성된 축약 접두사로 사용됩니다.
 
@@ -89,7 +89,7 @@ XDM(Experience Data Model) 스키마의 모든 필드에는 연결된 네임스�
 
 ### 호환성 모드 {#compatibility}
 
-Adobe Experience Platform에서 XDM 스키마는 네임스페이스를 나타내는 데 JSON-LD 구문을 사용하지 않는 [호환성 모드](../api/appendix.md#compatibility) 구문으로 표시됩니다. 대신 Platform은 네임스페이스를 상위 필드(밑줄로 시작)로 변환하고 그 아래에 필드를 중첩합니다.
+Adobe Experience Platform에서 XDM 스키마는 네임스페이스를 나타내는 데 JSON-LD 구문을 사용하지 않는 [호환성 모드](../api/appendix.md#compatibility) 구문으로 표시됩니다. 대신 Experience Platform은 네임스페이스를 상위 필드(밑줄로 시작)로 변환하고 그 아래에 필드를 중첩합니다.
 
 예를 들어 표준 XDM `repo:createdDate`은(는) `_repo.createdDate`(으)로 변환되며 호환성 모드에서 다음 구조에 나타납니다.
 

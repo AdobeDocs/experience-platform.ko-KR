@@ -1,11 +1,11 @@
 ---
 keywords: 대상;experience cloud 솔루션;target;target 대상;ad cloud;advertising cloud;audience manager;adobe target 대상;target;audience manager 대상;
 title: Adobe 대상 개요
-description: 광고 타겟팅, 개인화, 마케팅 자동화 등을 위해 플랫폼의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다.
+description: 광고 타기팅, 개인화, 마케팅 자동화 등을 위해 Experience Platform의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '231'
 ht-degree: 7%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 ## 지원되는 Adobe 대상 {#supported-destinations}
 
-현재 Platform에서는 아래에 나열된 Adobe 대상을 지원합니다.
+현재 Experience Platform은 아래에 나열된 Adobe 대상을 지원합니다.
 
 연결과 확장의 차이점을 이해하려면 대상 유형 및 범주 페이지에서 [연결](../../destination-types.md#connections)을 참조하십시오.
 
@@ -36,7 +36,7 @@ ht-degree: 7%
 
 * [Adobe Advertising Cloud 확장](../advertising/adobe-advertising-cloud.md)
 * [Adobe Analytics 확장](../analytics/adobe-analytics.md)
-* [오디오 및 비디오용 Adobe Medium 분석 확장](../analytics/adobe-video-analytics.md)
+* [Adobe Media Analytics for Audio 및 Video 확장](../analytics/adobe-video-analytics.md)
 * [Adobe Target 확장](../personalization/adobe-target.md)
 * [Adobe Target v2 확장](../personalization/adobe-target-v2.md)
 * [Audience Manager DIL 확장](../data-management/aam-dil-extension.md)

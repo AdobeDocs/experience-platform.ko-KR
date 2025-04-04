@@ -5,7 +5,7 @@ type: Documentation
 description: Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터에 액세스할 수 있습니다. 이 안내서에서는 프로필 API를 사용하여 "프로필"로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: efebf8e341b17fdd71586827753eadfe1c2cfa15
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1706'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 >
 >프로필 액세스 API를 사용한 ExperienceEvent 조회는 더 이상 사용되지 않습니다. ExperienceEvents 조회가 필요한 사용 사례에 대해 계산된 속성과 같은 기능을 사용하십시오. 이 변경 사항에 대한 자세한 내용은 Adobe 고객 지원 센터에 문의하십시오.
 
-Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 [!DNL Real-Time Customer Profile] 데이터에 액세스할 수 있습니다. 이 안내서에서는 API를 사용하여 &quot;프로필&quot;로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다. [!DNL Platform] UI를 사용하여 프로필에 액세스하는 방법에 대한 자세한 내용은 [프로필 사용 안내서](../ui/user-guide.md)를 참조하십시오.
+Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 [!DNL Real-Time Customer Profile] 데이터에 액세스할 수 있습니다. 이 안내서에서는 API를 사용하여 &quot;프로필&quot;로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다. [!DNL Experience Platform] UI를 사용하여 프로필에 액세스하는 방법에 대한 자세한 내용은 [프로필 사용 안내서](../ui/user-guide.md)를 참조하십시오.
 
 ## 시작하기
 
@@ -1223,7 +1223,7 @@ curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.n
 
 ## 다음 단계
 
-이 안내서를 따라 [!DNL Real-Time Customer Profile]개의 데이터 필드, 프로필 및 시계열 데이터에 성공적으로 액세스했습니다. [!DNL Platform]에 저장된 다른 데이터 리소스에 액세스하는 방법에 대한 자세한 내용은 [데이터 액세스 개요](../../data-access/home.md)를 참조하세요.
+이 안내서를 따라 [!DNL Real-Time Customer Profile]개의 데이터 필드, 프로필 및 시계열 데이터에 성공적으로 액세스했습니다. [!DNL Experience Platform]에 저장된 다른 데이터 리소스에 액세스하는 방법에 대한 자세한 내용은 [데이터 액세스 개요](../../data-access/home.md)를 참조하세요.
 
 ## 부록 {#appendix}
 

@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마;스키마;스키마;스키마;스키마;스키마;만들기
+keywords: Experience Platform;홈;인기 주제;api;API;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마;스키마;스키마;스키마;스키마;스키마;스키마;만들기
 solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 스키마 만들기
 type: Tutorial
 description: 이 자습서에서는 스키마 레지스트리 API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 설명합니다.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2583'
+source-wordcount: '2584'
 ht-degree: 2%
 
 ---
 
 # [!DNL Schema Registry] API를 사용하여 스키마 만들기
 
-[!DNL Schema Registry]은(는) Adobe Experience Platform 내에서 [!DNL Schema Library]에 액세스하는 데 사용됩니다. [!DNL Schema Library]에는 응용 프로그램을 사용하는 Adobe, [!DNL Experience Platform]개의 파트너 및 공급업체에서 사용할 수 있는 리소스가 포함되어 있습니다. 레지스트리는 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다.
+[!DNL Schema Registry]은(는) Adobe Experience Platform 내에서 [!DNL Schema Library]에 액세스하는 데 사용됩니다. [!DNL Schema Library]에는 응용 프로그램을 사용하는 Adobe, [!DNL Experience Platform]개의 파트너 및 공급업체가 사용할 수 있는 리소스가 포함되어 있습니다. 레지스트리는 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
 이 자습서에서는 [!DNL Schema Registry] API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다. [!DNL Experience Platform]에서 사용자 인터페이스를 사용하려면 [스키마 편집기 자습서](create-schema-ui.md)에서 스키마 편집기에서 유사한 작업을 수행하는 방법에 대한 단계별 지침을 제공합니다.
 
 >[!NOTE]
 >
->CSV 데이터를 플랫폼으로 수집하는 경우 스키마를 직접 수동으로 만들지 않아도 AI가 생성한 권장 사항으로 만든 XDM 스키마에 해당 데이터를 [매핑](../../ingestion/tutorials/map-csv/recommendations.md)(현재 베타 버전)할 수 있습니다.
+>CSV 데이터를 Experience Platform으로 수집하는 경우 직접 스키마를 수동으로 만들지 않아도 해당 데이터를 AI가 생성한 권장 사항으로 만든 XDM 스키마에 [매핑](../../ingestion/tutorials/map-csv/recommendations.md)(현재 베타 버전)할 수 있습니다.
 
 ## 시작하기
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 * [[!DNL Experience Data Model (XDM) System]](../home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform]은(는) 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform]은(는) 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 이 자습서를 시작하기 전에 [개발자 안내서](../api/getting-started.md)에서 [!DNL Schema Registry] API를 성공적으로 호출하기 위해 알아야 할 중요한 정보를 검토하십시오. 여기에는 `{TENANT_ID}`, &quot;컨테이너&quot; 개념 및 요청을 하는 데 필요한 헤더가 포함됩니다(`Accept` 헤더 및 가능한 값에 특별한 주의를 기울임).
 
@@ -45,7 +45,7 @@ ht-degree: 2%
 
 이 자습서에서 만드는 스키마는 [!DNL XDM Individual Profile] 클래스를 사용합니다. [!DNL XDM Individual Profile]은(는) 레코드 동작을 정의하기 위해 Adobe에서 제공하는 표준 클래스입니다. 동작에 대한 자세한 내용은 [스키마 컴포지션의 기본 사항](../schema/composition.md)에서 확인할 수 있습니다.
 
-클래스를 할당하려면 테넌트 컨테이너에서 새 스키마를 만들기(POST)하기 위한 API 호출이 수행됩니다. 이 호출에는 스키마가 구현할 클래스가 포함됩니다. 각 스키마는 하나의 클래스만 구현할 수 있습니다.
+클래스를 할당하기 위해 테넌트 컨테이너에서 새 스키마를 만들기(POST) 위한 API 호출이 수행됩니다. 이 호출에는 스키마가 구현할 클래스가 포함됩니다. 각 스키마는 하나의 클래스만 구현할 수 있습니다.
 
 **API 형식**
 
@@ -424,7 +424,7 @@ curl -X PATCH \
 
 이러한 필드를 추가하려면 `tenant` 컨테이너 내에 사용자 지정 필드 그룹을 정의할 수 있습니다. 이러한 필드 그룹은 조직에 고유하며 조직 외부의 다른 사용자가 표시하거나 편집할 수 없습니다.
 
-새 필드 그룹을 만들기(POST)하려면 필드 그룹과 호환되는 기본 클래스에 대한 `$id`이(가) 포함된 `meta:intendedToExtend` 필드와 필드 그룹에 포함될 속성을 요청에 포함해야 합니다.
+새 필드 그룹을 생성(POST)하려면 필드 그룹과 호환되는 기본 클래스에 대한 `$id`이(가) 포함된 `meta:intendedToExtend` 필드와 필드 그룹에 포함될 속성을 요청에 포함해야 합니다.
 
 다른 필드 그룹 또는 필드와의 충돌을 방지하려면 `TENANT_ID` 아래에 사용자 지정 속성을 중첩해야 합니다.
 
@@ -1112,7 +1112,7 @@ curl -X PATCH \
 
 ### ID 설명자 정의
 
-스키마는 데이터를 [!DNL Experience Platform](으)로 수집하는 데 사용됩니다. 이 데이터는 궁극적으로 여러 서비스에 걸쳐 사용되어 개인에 대한 통합된 단일 보기를 만듭니다. 이 프로세스를 지원하기 위해 주요 필드를 &quot;ID&quot;로 표시할 수 있으며 데이터 수집 시 해당 필드의 데이터가 해당 개인의 &quot;ID 그래프&quot;에 삽입됩니다. 그런 다음 [[!DNL Real-Time Customer Profile]](../../profile/home.md) 및 기타 [!DNL Experience Platform] 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 결합된 보기를 제공할 수 있습니다.
+스키마는 데이터를 [!DNL Experience Platform]&#x200B;(으)로 수집하는 데 사용됩니다. 이 데이터는 궁극적으로 여러 서비스에 걸쳐 사용되어 개인에 대한 통합된 단일 보기를 만듭니다. 이 프로세스를 지원하기 위해 주요 필드를 &quot;ID&quot;로 표시할 수 있으며 데이터 수집 시 해당 필드의 데이터가 해당 개인의 &quot;ID 그래프&quot;에 삽입됩니다. 그런 다음 [[!DNL Real-Time Customer Profile]](../../profile/home.md) 및 기타 [!DNL Experience Platform] 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 결합된 보기를 제공할 수 있습니다.
 
 일반적으로 &quot;ID&quot;로 표시되는 필드에는 전자 메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유 ID 필드가 포함됩니다. 좋은 ID 필드일 수도 있으므로 조직 고유의 식별자를 고려하십시오.
 
@@ -1185,7 +1185,7 @@ curl -X POST \
 
 ### `union` 태그 추가
 
-병합된 유니온 보기에 스키마를 포함하려면 `union` 태그를 스키마의 `meta:immutableTags` 특성에 추가해야 합니다. 이 작업은 스키마를 업데이트하고 값이 `union`인 `meta:immutableTags` 배열을 추가하라는 PATCH 요청을 통해 수행됩니다.
+병합된 유니온 보기에 스키마를 포함하려면 `union` 태그를 스키마의 `meta:immutableTags` 특성에 추가해야 합니다. 이 작업은 PATCH 요청을 통해 스키마를 업데이트하고 값이 `union`인 `meta:immutableTags` 배열을 추가합니다.
 
 **API 형식**
 
@@ -1298,7 +1298,7 @@ curl -X PATCH \
 
 ### 유니온에 스키마 나열
 
-이제 스키마를 [!DNL XDM Individual Profile] 유니온에 추가했습니다. 동일한 유니온에 속하는 모든 스키마 목록을 보려면 쿼리 매개 변수를 사용하여 GET 요청을 수행하여 응답을 필터링할 수 있습니다.
+이제 스키마를 [!DNL XDM Individual Profile] 유니온에 추가했습니다. 동일한 유니온에 포함된 모든 스키마 목록을 보려면 쿼리 매개 변수를 사용하여 GET 요청을 수행하여 응답을 필터링할 수 있습니다.
 
 `property` 쿼리 매개 변수를 사용하여 [!DNL XDM Individual Profile] 클래스의 `$id`과(와) 동일한 `meta:class`을(를) 갖는 `meta:immutableTags` 필드가 포함된 스키마만 반환되도록 지정할 수 있습니다.
 

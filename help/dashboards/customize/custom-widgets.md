@@ -3,9 +3,9 @@ keywords: Experience Platform;사용자 인터페이스;UI;대시보드;대시�
 title: 대시보드용 사용자 정의 위젯 만들기
 description: 이 안내서는 Adobe Experience Platform 대시보드에서 사용할 사용자 정의 위젯을 만드는 단계별 지침을 제공합니다.
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Adobe Experience Platform에서는 여러 대시보드를 사용하여 조직의 데이터를 보고 상호 작용할 수 있습니다. 대시보드 보기에 새 위젯을 추가하여 특정 대시보드를 업데이트할 수도 있습니다. Adobe에서 제공하는 표준 위젯 외에도 사용자 정의 위젯을 만들고 조직 전체에서 공유할 수 있습니다.
 
-이 안내서는 Platform UI의 [!UICONTROL 프로필], [!UICONTROL 세그먼트] 및 [!UICONTROL 대상] 대시보드에 사용자 지정 위젯을 만들고 추가하는 방법에 대한 단계별 지침을 제공합니다.
+이 안내서는 Experience Platform UI의 [!UICONTROL 프로필], [!UICONTROL 세그먼트] 및 [!UICONTROL 대상] 대시보드에 사용자 정의 위젯을 만들고 추가하는 방법에 대한 단계별 지침을 제공합니다.
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ Adobe Experience Platform에서는 여러 대시보드를 사용하여 조직의
 
 ## 위젯 라이브러리 {#widget-library}
 
-이 안내서를 사용하려면 Experience Platform 내에서 [!UICONTROL 위젯 라이브러리]에 액세스해야 합니다. 위젯 라이브러리와 UI 내에서 위젯 라이브러리에 액세스하는 방법에 대해 자세히 알아보려면 [위젯 라이브러리 개요](widget-library.md)를 읽어 보십시오.
+이 안내서를 사용하려면 Experience Platform 내의 [!UICONTROL 위젯 라이브러리]에 액세스해야 합니다. 위젯 라이브러리와 UI 내에서 위젯 라이브러리에 액세스하는 방법에 대해 자세히 알아보려면 [위젯 라이브러리 개요](widget-library.md)를 읽어 보십시오.
 
 ## 사용자 정의 위젯 시작
 
@@ -94,7 +94,7 @@ Adobe Experience Platform에서는 여러 대시보드를 사용하여 조직의
 
 >[!WARNING]
 >
->라이브러리에서 위젯을 숨기더라도 개별 사용자의 대시보드에서 위젯이 제거되지 않습니다. 조직에서 위젯을 더 이상 사용하지 말아야 하는 경우 모든 Platform 사용자가 대시보드에서 위젯을 제거해야 하므로 모든 Platform 사용자에게 직접 전달해야 합니다.
+>라이브러리에서 위젯을 숨기더라도 개별 사용자의 대시보드에서 위젯이 제거되지 않습니다. 위젯이 조직에서 더 이상 사용되지 않아야 하는 경우 모든 Experience Platform 사용자가 대시보드에서 위젯을 제거해야 하므로 모든 사용자에게 직접 전달해야 합니다.
 
 ![위젯 드롭다운 메뉴 옵션 및 숨겨진 위젯 표시가 강조 표시된 위젯 라이브러리 작업 영역의 사용자 정의 탭입니다.](../images/customization/hide-widget.png)
 
@@ -108,7 +108,7 @@ Adobe Experience Platform에서는 여러 대시보드를 사용하여 조직의
 
 >[!WARNING]
 >
->라이브러리에서 위젯을 편집해도 개별 사용자에 대한 위젯은 업데이트되지 않습니다. 위젯이 업데이트된 경우 모든 Platform 사용자가 대시보드에서 오래된 위젯을 제거한 다음 위젯 라이브러리에서 업데이트된 위젯을 선택하고 추가해야 하므로 이를 직접 전달하십시오.
+>라이브러리에서 위젯을 편집해도 개별 사용자에 대한 위젯은 업데이트되지 않습니다. 위젯이 업데이트된 경우 대시보드에서 오래된 위젯을 제거한 다음 위젯 라이브러리에서 업데이트된 위젯을 선택하고 추가해야 하므로 모든 Experience Platform 사용자에게 이를 직접 전달하십시오.
 
 ![위젯 편집 대화 상자](../images/customization/edit-widget.png)
 

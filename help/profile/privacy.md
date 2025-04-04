@@ -5,9 +5,9 @@ title: 실시간 고객 프로필에서 개인 정보 보호 요청 처리
 type: Documentation
 description: Adobe Experience Platform Privacy Service은 수많은 개인 정보 보호 규정에 명시된 대로 개인 데이터에 액세스하거나, 판매를 거부하거나, 삭제하기 위한 고객 요청을 처리합니다. 이 문서에서는 실시간 고객 프로필에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1743'
+source-wordcount: '1751'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) GDPR(일반 데이터 �
 
 >[!NOTE]
 >
->이 안내서에서는 Experience Platform의 프로필 데이터 저장소에 대해 개인 정보 보호 요청을 하는 방법만 다룹니다. Platform 데이터 레이크에 대한 개인 정보 보호 요청도 수행할 계획이라면 이 자습서와 함께 [데이터 레이크의 개인 정보 보호 요청 처리](../catalog/privacy.md)에 대한 안내서를 참조하십시오.
+>이 안내서에서는 Experience Platform의 프로필 데이터 저장소에 대해 개인 정보 보호 요청을 하는 방법만 다룹니다. Experience Platform 데이터 레이크에 대한 개인 정보 보호 요청도 수행할 계획이라면 이 자습서 외에 [데이터 레이크의 개인 정보 보호 요청 처리](../catalog/privacy.md)에 대한 안내서를 참조하십시오.
 >
->다른 Adobe Experience Cloud 애플리케이션에 대한 개인 정보 보호 요청을 하는 방법에 대한 단계는 [Privacy Service 문서](../privacy-service/experience-cloud-apps.md)를 참조하십시오.
+>다른 Adobe Experience Cloud 애플리케이션에 대한 개인 정보 보호 요청을 하는 방법에 대한 단계는 [Privacy Service 설명서](../privacy-service/experience-cloud-apps.md)를 참조하십시오.
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,7 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) GDPR(일반 데이터 �
 
 ## 시작하기
 
-이 안내서를 사용하려면 다음 [!DNL Platform]개의 구성 요소를 제대로 이해하고 있어야 합니다.
+이 안내서를 사용하려면 다음 [!DNL Experience Platform]개의 구성 요소를 제대로 이해하고 있어야 합니다.
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Adobe Experience Cloud 애플리케이션에서 개인 데이터에 액세스하거나, 판매를 거부하거나, 삭제하기 위한 고객 요청을 관리합니다.
 * [[!DNL Identity Service]](../identity-service/home.md): 장치 및 시스템 간에 ID를 연결하여 고객 경험 데이터의 단편화로 인해 발생하는 근본적인 문제를 해결합니다.
@@ -38,7 +38,7 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) GDPR(일반 데이터 �
 
 ## ID 네임스페이스 이해 {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service]은(는) 시스템 및 장치 간에 고객 id 데이터를 브리지합니다. [!DNL Identity Service]은(는) **id 네임스페이스**&#x200B;를 사용하여 ID 값을 원본 시스템에 연결하여 컨텍스트를 제공합니다. 네임스페이스는 이메일 주소(&quot;이메일&quot;)와 같은 일반적인 개념을 나타내거나 Adobe Advertising Cloud ID(&quot;AdCloud&quot;) 또는 Adobe Target ID(&quot;TNTID&quot;)와 같은 특정 애플리케이션과 ID를 연결할 수 있습니다.
+Adobe Experience Platform [!DNL Identity Service]은(는) 시스템 및 장치 간에 고객 id 데이터를 브리지합니다. [!DNL Identity Service]은(는) **id 네임스페이스**&#x200B;를 사용하여 ID 값을 원본 시스템에 연결하여 컨텍스트를 제공합니다. 네임스페이스는 이메일 주소(&quot;이메일&quot;)와 같은 일반 개념을 나타내거나 Adobe Advertising Cloud ID(&quot;AdCloud&quot;) 또는 Adobe Target ID(&quot;TNTID&quot;)와 같은 특정 애플리케이션과 ID를 연결할 수 있습니다.
 
 ID 서비스는 전역 정의(표준) 및 사용자 정의(사용자 정의) ID 네임스페이스 저장소를 유지 관리합니다. 표준 네임스페이스는 모든 조직에서 사용할 수 있으며(예: &quot;이메일&quot; 및 &quot;ECID&quot;), 조직에서는 특정 요구 사항에 맞게 사용자 정의 네임스페이스를 만들 수도 있습니다.
 
@@ -50,10 +50,10 @@ ID 서비스는 전역 정의(표준) 및 사용자 정의(사용자 정의) ID 
 
 >[!IMPORTANT]
 >
->Privacy Service은 ID 결합을 수행하지 않는 병합 정책을 사용하여 [!DNL Profile] 데이터만 처리할 수 있습니다. 자세한 내용은 [병합 정책 제한](#merge-policy-limitations)의 섹션을 참조하십시오.
+>Privacy Service에서는 ID 결합을 수행하지 않는 병합 정책을 사용해야만 [!DNL Profile] 데이터를 처리할 수 있습니다. 자세한 내용은 [병합 정책 제한](#merge-policy-limitations)의 섹션을 참조하십시오.
 >
 >개인 정보 보호 요청은 규정 요구 사항 내에서 비동기적으로 처리되며, 완료하는 데 걸리는 시간은 다를 수 있습니다. 요청이 계속 처리되는 동안 [!DNL Profile] 데이터가 변경되면 해당 수신 레코드도 해당 요청에서 처리되지 않을 수 있습니다. 개인 정보 보호 작업이 요청될 때 데이터 레이크 또는 프로필 저장소에 있는 프로필만 삭제됩니다. 삭제 작업 중에 삭제 요청 주체와 관련된 프로필 데이터를 수집하는 경우 모든 프로필 조각이 삭제되지는 않습니다.
->해당 데이터는 레코드 저장소에 삽입되므로 삭제 요청 시 플랫폼 또는 프로필 서비스의 수신 데이터를 알아야 합니다. 삭제되었거나 삭제 중인 데이터 수집은 신중해야 합니다.
+>해당 데이터는 레코드 저장소에 삽입되므로 삭제 요청 시 Experience Platform 또는 Profile Service에서 들어오는 데이터를 아는 것은 사용자의 책임입니다. 삭제되었거나 삭제 중인 데이터 수집은 신중해야 합니다.
 
 ### API 사용
 
@@ -61,7 +61,7 @@ API에서 작업 요청을 만들 때 `userIDs` 내에 제공된 모든 ID는 �
 
 >[!NOTE]
 >
->ID 그래프 및 프로필 조각이 Platform 데이터 세트에서 배포되는 방법에 따라 각 고객에 대해 두 개 이상의 ID를 제공해야 할 수 있습니다. 자세한 내용은 다음 섹션 [프로필 조각](#fragments)을 참조하세요.
+>ID 그래프 및 프로필 조각이 Experience Platform 데이터 세트에서 배포되는 방식에 따라 각 고객에 대해 두 개 이상의 ID를 제공해야 할 수 있습니다. 자세한 내용은 다음 섹션 [프로필 조각](#fragments)을 참조하세요.
 
 또한 요청 페이로드의 `include` 배열에는 요청을 수행하는 다른 데이터 저장소에 대한 제품 값이 포함되어야 합니다. ID와 연결된 프로필 데이터를 삭제하려면 배열에 값 `ProfileService`이(가) 포함되어야 합니다. 고객의 ID 그래프 연결을 삭제하려면 배열에 값 `identity`이(가) 포함되어야 합니다.
 
@@ -69,7 +69,7 @@ API에서 작업 요청을 만들 때 `userIDs` 내에 제공된 모든 ID는 �
 >
 >`include` 배열에서 `ProfileService` 및 `identity`을(를) 사용하는 영향에 대한 자세한 내용은 이 문서의 뒷부분에서 [프로필 요청 및 ID 요청](#profile-v-identity)에 대한 섹션을 참조하십시오.
 
-다음 요청은 [!DNL Profile] 저장소에 있는 단일 고객 데이터에 대한 새 개인 정보 보호 작업을 만듭니다. `userIDs` 배열에서 고객에 대해 표준 `Email` ID 네임스페이스를 사용하는 ID 값과 사용자 지정 `Customer_ID` 네임스페이스를 사용하는 ID 값 두 개가 제공됩니다. `include` 배열의 [!DNL Profile](`ProfileService`)에 대한 제품 값도 포함됩니다.
+다음 요청은 [!DNL Profile] 저장소에 있는 단일 고객 데이터에 대한 새 개인 정보 보호 작업을 만듭니다. `userIDs` 배열에서 고객에 대해 표준 `Email` ID 네임스페이스를 사용하는 ID 값과 사용자 지정 `Customer_ID` 네임스페이스를 사용하는 ID 값 두 개가 제공됩니다. `include` 배열의 [!DNL Profile]&#x200B;(`ProfileService`)에 대한 제품 값도 포함됩니다.
 
 **요청**
 
@@ -114,7 +114,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Platform은 조직에 속한 모든 [샌드박스](../sandboxes/home.md)에서 개인 정보 요청을 처리합니다. 따라서 요청에 포함된 모든 `x-sandbox-name` 헤더는 시스템에서 무시됩니다.
+>Experience Platform은 조직에 속한 모든 [샌드박스](../sandboxes/home.md)에서 개인 정보 요청을 처리합니다. 따라서 요청에 포함된 모든 `x-sandbox-name` 헤더는 시스템에서 무시됩니다.
 
 **제품 응답**
 
@@ -190,7 +190,7 @@ UI에서 작업 요청을 만들 때 데이터 레이크 또는 [!DNL Real-Time 
 
 ## 삭제 요청 처리 {#delete}
 
-[!DNL Experience Platform]이(가) [!DNL Privacy Service]에서 삭제 요청을 받으면 [!DNL Platform]이(가) 요청이 수신되었고 영향을 받는 데이터가 삭제되도록 표시되었다는 확인을 [!DNL Privacy Service]에 보냅니다. 그런 다음 개인 정보 보호 작업이 완료되면 레코드가 제거됩니다.
+[!DNL Experience Platform]이(가) [!DNL Privacy Service]에서 삭제 요청을 받으면 [!DNL Experience Platform]이(가) 요청이 수신되었고 영향을 받는 데이터가 삭제되도록 표시되었다는 확인을 [!DNL Privacy Service]에 보냅니다. 그런 다음 개인 정보 보호 작업이 완료되면 레코드가 제거됩니다.
 
 >[!IMPORTANT]
 >
@@ -200,10 +200,10 @@ UI에서 작업 요청을 만들 때 데이터 레이크 또는 [!DNL Real-Time 
 
 | 포함된 제품 | 효과 |
 | --- | --- |
-| `ProfileService`만 | Platform에서 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필이 즉시 삭제됩니다. 그러나 프로필의 ID 그래프는 여전히 남아 있으며 동일한 ID를 가진 새 데이터가 수집되면 프로필을 다시 구성할 수 있습니다. 프로필과 연결된 데이터도 데이터 레이크에 유지됩니다. |
-| `ProfileService` 및 `identity` | Platform에서 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필 및 관련 ID 그래프가 즉시 삭제됩니다. 프로필과 연결된 데이터는 데이터 레이크에 유지됩니다. |
-| `ProfileService` 및 `aepDataLake` | Platform에서 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필이 즉시 삭제됩니다. 그러나 프로필의 ID 그래프는 여전히 남아 있으며 동일한 ID를 가진 새 데이터가 수집되면 프로필을 다시 구성할 수 있습니다.<br><br>Data Lake 제품이 요청을 받았으며 현재 처리 중이라는 응답을 보내면 프로필과 연결된 데이터가 일시 삭제되므로 [!DNL Platform] 서비스에서 액세스할 수 없습니다. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
-| `ProfileService`, `identity` 및 `aepDataLake` | Platform에서 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필 및 관련 ID 그래프가 즉시 삭제됩니다.<br><br>Data Lake 제품이 요청을 받았으며 현재 처리 중이라는 응답을 보내면 프로필과 연결된 데이터가 일시 삭제되므로 [!DNL Platform] 서비스에서 액세스할 수 없습니다. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
+| `ProfileService`만 | Experience Platform이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필이 즉시 삭제됩니다. 그러나 프로필의 ID 그래프는 여전히 남아 있으며 동일한 ID를 가진 새 데이터가 수집되면 프로필을 다시 구성할 수 있습니다. 프로필과 연결된 데이터도 데이터 레이크에 유지됩니다. |
+| `ProfileService` 및 `identity` | Experience Platform이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필 및 관련 ID 그래프가 즉시 삭제됩니다. 프로필과 연결된 데이터는 데이터 레이크에 유지됩니다. |
+| `ProfileService` 및 `aepDataLake` | Experience Platform이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필이 즉시 삭제됩니다. 그러나 프로필의 ID 그래프는 여전히 남아 있으며 동일한 ID를 가진 새 데이터가 수집되면 프로필을 다시 구성할 수 있습니다.<br><br>Data Lake 제품이 요청을 받았으며 현재 처리 중이라는 응답을 보내면 프로필과 연결된 데이터가 일시 삭제되므로 [!DNL Experience Platform] 서비스에서 액세스할 수 없습니다. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
+| `ProfileService`, `identity` 및 `aepDataLake` | Experience Platform이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필 및 관련 ID 그래프가 즉시 삭제됩니다.<br><br>Data Lake 제품이 요청을 받았으며 현재 처리 중이라는 응답을 보내면 프로필과 연결된 데이터가 일시 삭제되므로 [!DNL Experience Platform] 서비스에서 액세스할 수 없습니다. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
 
 작업 상태 추적에 대한 자세한 내용은 [[!DNL Privacy Service] 설명서](../privacy-service/home.md#monitor)를 참조하세요.
 
@@ -217,7 +217,7 @@ UI에서 작업 요청을 만들 때 데이터 레이크 또는 [!DNL Real-Time 
 
 ### 병합 정책 제한 사항 {#merge-policy-limitations}
 
-Privacy Service은 ID 결합을 수행하지 않는 병합 정책을 사용하여 [!DNL Profile] 데이터만 처리할 수 있습니다. UI를 사용하여 개인 정보 보호 요청이 처리되고 있는지 확인하는 경우 **[!DNL None]**&#x200B;이(가) 포함된 정책을 [!UICONTROL ID 결합] 유형으로 사용하고 있는지 확인하십시오. 즉, [!UICONTROL ID 결합]이 [!UICONTROL 개인 그래프](으)로 설정된 병합 정책을 사용할 수 없습니다.
+Privacy Service에서는 ID 결합을 수행하지 않는 병합 정책을 사용해야만 [!DNL Profile] 데이터를 처리할 수 있습니다. UI를 사용하여 개인 정보 보호 요청이 처리되고 있는지 확인하는 경우 **[!DNL None]**&#x200B;이(가) 포함된 정책을 [!UICONTROL ID 결합] 유형으로 사용하고 있는지 확인하십시오. 즉, [!UICONTROL ID 결합]이 [!UICONTROL 개인 그래프]&#x200B;(으)로 설정된 병합 정책을 사용할 수 없습니다.
 
 >![병합 정책의 ID 결합이 없음으로 설정되어 있습니다](./images/privacy/no-id-stitch.png)
 
@@ -225,4 +225,4 @@ Privacy Service은 ID 결합을 수행하지 않는 병합 정책을 사용하�
 
 이 문서를 읽고 [!DNL Experience Platform]의 개인 정보 보호 요청 처리와 관련된 중요한 개념을 이해하게 되었습니다. ID 데이터를 관리하고 개인 정보 보호 작업을 만드는 방법을 깊이 이해하려면 이 안내서에 제공된 설명서를 계속 읽으십시오.
 
-[!DNL Profile]에서 사용하지 않는 [!DNL Platform] 리소스에 대한 개인 정보 보호 요청 처리에 대한 자세한 내용은 [데이터 레이크의 개인 정보 보호 요청 처리](../catalog/privacy.md)에 대한 문서를 참조하십시오.
+[!DNL Profile]에서 사용하지 않는 [!DNL Experience Platform] 리소스에 대한 개인 정보 보호 요청 처리에 대한 자세한 내용은 [데이터 레이크의 개인 정보 보호 요청 처리](../catalog/privacy.md)에 대한 문서를 참조하십시오.

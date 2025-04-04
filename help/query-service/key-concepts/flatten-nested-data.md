@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;쿼리 서비스;쿼리 서비스;중첩된 데이터 구조;중첩된 데이터;병합;중첩된 데이터 병합;
+keywords: Experience Platform;쿼리 서비스;쿼리 서비스;중첩된 데이터 구조;중첩된 데이터;평면화;중첩된 데이터 평면화;
 title: BI 도구에 사용할 중첩된 데이터 구조 평면화
 description: 이 문서에서는 쿼리 서비스에서 타사 BI 도구를 사용할 때 세션 중에 모든 테이블 및 뷰에 대한 XDM 스키마를 병합하는 방법을 설명합니다.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '858'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ Adobe Experience Platform Query Service는 타사 BI 도구를 통해 데이터�
 
 `FLATTEN` 설정을 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대한 이해가 필요합니다.
 
-* [XDM 시스템](../../xdm/home.md): XDM과 Experience Platform 구현의 높은 수준의 개요입니다.
+* [XDM 시스템](../../xdm/home.md): Experience Platform에서의 XDM 및 해당 구현에 대한 높은 수준의 개요입니다.
 
-   * [Ad Hoc 스키마 만들기](../../xdm/tutorials/ad-hoc.md): 단일 데이터 집합에서만 사용하도록 이름이 지정된 필드가 있는 XDM 스키마를 Ad Hoc 스키마라고 합니다. 임시 스키마는 특정 종류의 소스 연결을 Experience Platform 및 만들기 위한 다양한 데이터 수집 워크플로우에서 사용됩니다.
+   * [Ad Hoc 스키마 만들기](../../xdm/tutorials/ad-hoc.md): 단일 데이터 집합에서만 사용하도록 이름이 지정된 필드가 있는 XDM 스키마를 Ad Hoc 스키마라고 합니다. 임시 스키마는 Experience Platform의 다양한 데이터 수집 워크플로우에서 사용되며 특정 종류의 소스 연결을 만듭니다.
 
-* [샌드박스](../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [샌드박스](../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 * [중첩된 데이터 구조](./nested-data-structures.md): 이 문서에서는 중첩된 데이터 구조를 포함하여 복잡한 데이터 형식의 데이터 집합을 만들거나 처리하거나 변환하는 방법에 대한 예를 제공합니다.
 

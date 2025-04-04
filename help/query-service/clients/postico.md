@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Postico를 Query Service에 연결
 description: 이 문서에는 Adobe Experience Platform 쿼리 서비스용 백업 클라이언트 Postico를 설치하기 위한 링크가 포함되어 있습니다.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 9fe7e618d251867c90c88f8bee6ef5863ae78f60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -31,11 +31,11 @@ ht-degree: 0%
 | **[!DNL Password]** | 이 영숫자 문자열은 Experience Platform **[!UICONTROL 암호]** 자격 증명입니다. 만료되지 않는 자격 증명을 사용하려면 이 값은 구성 JSON 파일에서 다운로드한 `technicalAccountID` 및 `credential`에서 연결된 인수입니다. 암호 값은 {technicalAccountId}:{credential} 형식을 사용합니다. 만료되지 않는 자격 증명에 대한 구성 JSON 파일은 초기화 중에 Adobe이 복사본을 보관하지 않는 한 번 다운로드됩니다. |
 | **[!DNL Database]** | Experience Platform **[!UICONTROL 데이터베이스]** 자격 증명 값 사용: `prod:all`. |
 
-데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md)를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인한 다음 **[!UICONTROL 쿼리]**, **[!UICONTROL 자격 증명]**&#x200B;을 선택하십시오.
+데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md)를 참조하십시오. 자격 증명을 찾으려면 [!DNL Experience Platform]에 로그인한 다음 **[!UICONTROL 쿼리]**, **[!UICONTROL 자격 증명]**&#x200B;을 선택하십시오.
 
 자격 증명을 삽입한 후 **[!DNL Connect]**&#x200B;을(를) 선택하여 쿼리 서비스에 연결합니다.
 
-Platform에 연결하면 이전에 Query Service와 맺은 모든 관계의 목록을 볼 수 있습니다.
+Experience Platform에 연결하면 이전에 쿼리 서비스와 만든 모든 관계의 목록을 볼 수 있습니다.
 
 ## SQL 문 만들기
 

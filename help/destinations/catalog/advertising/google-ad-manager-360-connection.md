@@ -2,9 +2,9 @@
 title: (Beta) [!DNL Google Ad Manager 360] 연결
 description: Google Ad Manager 360은 게시자에게 웹 사이트, 비디오 및 모바일 앱에서의 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 제공 플랫폼입니다.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 21b76877e8b36d6b844d9c0726a2347b1fab170e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1221'
 ht-degree: 6%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
-> Google은 유럽 연합([EU 사용자 동의 정책](https://www.google.com/about/company/user-consent-policy/))의 [디지털 시장법](https://digital-markets-act.ec.europa.eu/index_en)(DMA)에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [고객 일치](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) 및 [디스플레이 및 비디오 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)에 대한 변경 사항을 출시합니다. 동의 요구 사항에 대한 이러한 변경 사항의 시행은 2024년 3월 6일부터 시작됩니다.
+> Google은 유럽 연합([EU 사용자 동의 정책](https://www.google.com/about/company/user-consent-policy/))의 [디지털 시장법](https://digital-markets-act.ec.europa.eu/index_en)&#x200B;(DMA)에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [고객 일치](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) 및 [디스플레이 및 비디오 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)에 대한 변경 사항을 출시합니다. 동의 요구 사항에 대한 이러한 변경 사항의 시행은 2024년 3월 6일부터 시작됩니다.
 ><br/>
 >EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
 ><br/>
->Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 조치를 취할 필요가 없습니다.
+>Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
 ><br/>
->Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/ui/segment-builder.md)에서 [세그먼트 정의](../../../segmentation/home.md#segment-definitions) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
+>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/ui/segment-builder.md) 내의 [세그먼트 정의](../../../segmentation/home.md#segment-definitions) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
 
-[!DNL Google Ad Manager 360] 연결을 통해 [!DNL publisher provided identifiers](PPID)의 일괄 업로드를 [!DNL Google Cloud Storage]을(를) 통해 [!DNL Google Ad Manager 360]에 사용할 수 있습니다.
+[!DNL Google Ad Manager 360] 연결을 통해 [!DNL publisher provided identifiers]&#x200B;(PPID)의 일괄 업로드를 [!DNL Google Cloud Storage]을(를) 통해 [!DNL Google Ad Manager 360]에 사용할 수 있습니다.
 
 게시자가 Google Ad Manager 360에서 식별자를 제공한 방법에 대한 자세한 내용은 [공식 Google 설명서](https://support.google.com/admanager/answer/2880055?hl=en)를 참조하십시오.
 
@@ -44,7 +44,7 @@ ht-degree: 6%
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| PPID | [!DNL Publisher provided ID] | 대상자를 [!DNL Google Ad Manager 360](으)로 보내려면 이 대상 ID를 선택하십시오. |
+| PPID | [!DNL Publisher provided ID] | 대상자를 [!DNL Google Ad Manager 360]&#x200B;(으)로 보내려면 이 대상 ID를 선택하십시오. |
 
 {style="table-layout:auto"}
 
@@ -54,8 +54,8 @@ ht-degree: 6%
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -74,13 +74,13 @@ ht-degree: 6%
 
 ### 허용 목록 {#allow-listing}
 
-플랫폼에서 첫 번째 [!DNL Google Ad Manager 360] 대상을 설정하기 전에 허용 목록이 필수입니다. 대상을 만들기 전에 아래에 설명된 허용 목록 프로세스를 완료해야 합니다.
+Experience Platform에서 첫 번째 [!DNL Google Ad Manager 360] 대상을 설정하기 전에 허용 목록이 필수입니다. 대상을 만들기 전에 아래에 설명된 허용 목록 프로세스를 완료해야 합니다.
 
 >[!NOTE]
 >
 >이 규칙은 기존 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 고객에 대해 예외입니다. Audience Manager에서 이 Google 대상에 대한 연결을 이미 만든 경우 허용 목록 프로세스를 다시 진행할 필요가 없으며 다음 단계를 진행할 수 있습니다.
 
-1. [Google Ad Manager 설명서](https://support.google.com/admanager/answer/3289669?hl=en)에 설명된 단계에 따라 Adobe을 연결된 데이터 관리 플랫폼(DMP)으로 추가하십시오.
+1. [Google Ad Manager 설명서](https://support.google.com/admanager/answer/3289669?hl=en)에 설명된 단계에 따라 Adobe을 연결된 데이터 관리 플랫폼(DMP)으로 추가합니다.
 2. [!DNL Google Ad Manager] 인터페이스에서 **[!UICONTROL 관리자]** > **[!UICONTROL 전역 설정]** > **[!UICONTROL 네트워크 설정]**(으)로 이동하여 **[!UICONTROL API 액세스]** 슬라이더를 사용하도록 설정합니다.
 
 
@@ -96,8 +96,8 @@ ht-degree: 6%
 
 대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
 
-* **[!UICONTROL 액세스 키 ID]**: Platform에 [!DNL Google Cloud Storage] 계정을 인증하는 데 사용되는 61자 영숫자 문자열입니다.
-* **[!UICONTROL 비밀 액세스 키]**: Platform에 [!DNL Google Cloud Storage] 계정을 인증하는 데 사용되는 40자의 base64로 인코딩된 문자열입니다.
+* **[!UICONTROL 액세스 키 ID]**: Experience Platform에 [!DNL Google Cloud Storage] 계정을 인증하는 데 사용되는 61자 영숫자 문자열입니다.
+* **[!UICONTROL 비밀 액세스 키]**: Experience Platform에 [!DNL Google Cloud Storage] 계정을 인증하는 데 사용되는 40자의 base64로 인코딩된 문자열입니다.
 
 이러한 값에 대한 자세한 내용은 [Google Cloud Storage HMAC 키](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) 안내서를 참조하십시오. 자신의 액세스 키 ID와 비밀 액세스 키를 생성하는 방법에 대한 단계는 [[!DNL Google Cloud Storage] 소스 개요](/help/sources/connectors/cloud-storage/google-cloud-storage.md)를 참조하세요.
 
@@ -139,7 +139,7 @@ ID 매핑 단계에서는 다음과 같은 미리 채워진 매핑을 볼 수 �
 
 | 미리 채워진 매핑 | 설명 |
 |---------|----------|
-| `ECID` -> `ppid` | 이는 사용자가 미리 채울 수 있는 유일한 매핑입니다. Platform에서 특성 또는 ID 네임스페이스를 선택하여 `ppid`에 매핑할 수 있습니다. |
+| `ECID` -> `ppid` | 이는 사용자가 미리 채울 수 있는 유일한 매핑입니다. Experience Platform에서 특성 또는 ID 네임스페이스를 선택하여 `ppid`에 매핑할 수 있습니다. |
 | `metadata.segment.alias` -> `list_id` | Experience Platform 대상 이름을 Google 플랫폼의 대상 ID에 매핑합니다. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | 세그먼트에서 자격이 없는 사용자를 제거할 시기를 Google 플랫폼에 알려줍니다. |
 

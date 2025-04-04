@@ -5,9 +5,9 @@ title: 쿼리 서비스의 쿼리 실행에 대한 일반 지침
 type: Tutorial
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 쿼리를 작성할 때 알아야 할 중요한 세부 사항에 대해 간략하게 설명합니다.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1089'
 ht-degree: 2%
 
 ---
@@ -201,7 +201,7 @@ LIMIT 10
 
 ## 테이블 정보 보기
 
-쿼리 서비스에 연결한 후 `\d` 또는 `SHOW TABLES` 명령을 사용하여 플랫폼에서 사용 가능한 모든 테이블을 볼 수 있습니다.
+쿼리 서비스에 연결한 후 `\d` 또는 `SHOW TABLES` 명령을 사용하여 Experience Platform에서 사용 가능한 모든 테이블을 볼 수 있습니다.
 
 ### 표준 테이블 보기
 

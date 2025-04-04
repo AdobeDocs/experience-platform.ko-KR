@@ -2,9 +2,9 @@
 title: 고급 데이터 수명주기 관리 모범 사례
 description: 고급 데이터 수명 주기 관리 UI 및 데이터 위생 API를 사용하여 Adobe Experience Platform에서 데이터 위생 요청을 효율적으로 관리하는 방법을 알아봅니다. 이 안내서에서는 요청당 ID 최대화, 개별 데이터 세트 지정, 속도 저하를 방지하기 위한 API 조절 주의와 같은 모범 사례를 다룹니다. 이 문서에는 자동 데이터 세트 정리 설정 지침, 작업 주문 상태를 모니터링하는 방법 및 자세한 응답 검색 방법이 포함되어 있습니다. 다음 절차에 따라 요청 처리를 간소화하고 응답 시간을 최적화합니다.
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
-source-git-commit: 5174529d606ac0186ff3193790ada70a46c7e274
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 작업 주문 생성 지침 {#work-order-creation-guidelines}
 
-데이터 위생 API에서 `/workorder` 끝점을 사용하여 Experience Platform의 레코드 삭제 요청을 프로그래밍 방식으로 관리할 수 있습니다. 이 끝점을 사용하면 삭제 요청을 만들거나 삭제 요청의 상태를 확인하거나 기존 요청을 업데이트할 수 있습니다. API를 사용하여 이러한 작업을 수행하는 방법에 대해 알아보려면 [작업 주문 끝점 문서](./api/workorder.md)를 참조하세요.
+데이터 위생 API의 `/workorder` 끝점을 사용하여 Experience Platform에서 레코드 삭제 요청을 프로그래밍 방식으로 관리할 수 있습니다. 이 끝점을 사용하면 삭제 요청을 만들거나 삭제 요청의 상태를 확인하거나 기존 요청을 업데이트할 수 있습니다. API를 사용하여 이러한 작업을 수행하는 방법에 대해 알아보려면 [작업 주문 끝점 문서](./api/workorder.md)를 참조하세요.
 
 >[!TIP]
 >
@@ -45,9 +45,9 @@ ht-degree: 0%
 
 ## 작업 주문 및 데이터 세트 만료 상태 모니터링 {#monitor}
 
-**I/O 이벤트**&#x200B;를 사용하여 데이터 수명 주기 관리의 진행 상황을 효율적으로 모니터링할 수 있습니다. I/O 이벤트는 플랫폼 내의 다양한 서비스의 변경 또는 업데이트에 대한 실시간 알림을 받는 메커니즘입니다.
+**I/O 이벤트**&#x200B;를 사용하여 데이터 수명 주기 관리의 진행 상황을 효율적으로 모니터링할 수 있습니다. I/O 이벤트는 Experience Platform 내의 다양한 서비스의 변경 또는 업데이트에 대한 실시간 알림을 받는 메커니즘입니다.
 
-I/O 이벤트 경고를 구성된 웹후크로 전송하여 작업 모니터링을 자동화할 수 있습니다. Webhook을 통해 경고를 수신하려면 Adobe Developer Console에서 Platform 경고에 대한 Webhook을 등록해야 합니다. 자세한 지침은 [Adobe I/O 이벤트 알림 구독](../observability/alerts/subscribe.md)에 대한 안내서를 참조하세요.
+I/O 이벤트 경고를 구성된 웹후크로 전송하여 작업 모니터링을 자동화할 수 있습니다. Webhook을 통해 경고를 수신하려면 Adobe Developer Console에서 Experience Platform 경고에 대한 Webhook을 등록해야 합니다. 자세한 지침은 [Adobe I/O 이벤트 알림 구독](../observability/alerts/subscribe.md)에 대한 안내서를 참조하세요.
 
 작업 상태를 효과적으로 검색하고 모니터링하려면 다음 데이터 라이프사이클 메서드와 지침을 사용하십시오.
 

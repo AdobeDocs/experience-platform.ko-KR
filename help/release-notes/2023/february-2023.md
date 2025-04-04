@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2023년 2월
 description: Adobe Experience Platform의 2023년 2월 릴리스 정보입니다.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1255'
-ht-degree: 97%
+source-wordcount: '1259'
+ht-degree: 91%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 ### 보증 {#assurance}
 
-Adobe Assurance를 사용하면 모바일 앱에서 데이터를 수집하거나 경험을 제공하는 방식을 검사하고, 증명하고, 시뮬레이션하고, 검증할 수 있습니다.
+Adobe Assurance를 사용하면 모바일 앱에서 데이터를 수집하거나 경험을 제공하는 방식을 검사하고, 교정하고, 시뮬레이션하고, 검증할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
@@ -42,7 +42,7 @@ Assurance에 대한 자세한 내용은 [Assurance 설명서](https://developer.
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-features}
 
@@ -84,7 +84,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 | 구성 요소 유형 | 이름 | 설명 |
 | --- | --- | --- |
-| 필드 그룹 | [!UICONTROL 빈도 설정 제한] | [반복 및 사용자 정의 이벤트를 지원](https://github.com/adobe/xdm/pull/1641/files)하도록 [!UICONTROL 빈도 설정 제한] 필드 그룹이 업데이트되었습니다 |
+| 필드 그룹 | [!UICONTROL 빈도 상한 설정 제한] | [반복 및 사용자 정의 이벤트를 지원](https://github.com/adobe/xdm/pull/1641/files)하도록 [!UICONTROL 빈도 상한 설정 제한] 필드 그룹이 업데이트되었습니다 |
 | 데이터 유형 | [!UICONTROL 웹 레퍼러] | `xdm:linkName` 및 `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files)을 포함하도록 웹 레퍼러 속성이 [업데이트되었습니다. 각각 이전 페이지에서 선택한 HTML 요소의 이름 및 영역입니다. |
 | 필드 그룹 | [!UICONTROL Adobe CJM ExperienceEvent - 메시지 상호 작용 세부 사항] | [[!UICONTROL 추적기 URL] 필드가 [!UICONTROL Adobe CJM ExperienceEvent]에 ](https://github.com/adobe/xdm/pull/1665/files)추가되었습니다. 이 추적기는 사용자가 선택한 URL을 제공합니다. |
 | 필드 그룹 | [!UICONTROL Adobe CJM ExperienceEvent - 메시지 상호 작용 세부 사항] | [](https://github.com/adobe/xdm/pull/1668/files)URL [!UICONTROL 추적 유형] 필드에서 비어 있는 `meta:enum` 속성이 제거되었습니다. |
@@ -92,7 +92,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 {style="table-layout:auto"}
 
-Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 살펴보십시오.&#x200B;
+Experience Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오&#x200B;.
 
 ## 쿼리 서비스 {#query-service}
 
@@ -128,7 +128,7 @@ Real-Time CDP B2B 에디션에 대한 자세한 내용은 [Real-Time CDP B2B 에
 
 ## 소스 {#sources}
 
-Adobe Experience Platform은 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 라벨링하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform은 외부 소스에서 데이터를 수집할 수 있으며 Experience Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
@@ -136,8 +136,8 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| [!DNL Google PubSub]를 사용하여 구독 수준의 액세스 지정 | 이제 인증할 때 구독 ID를 제공하여 [!DNL Google PubSub] 소스를 사용할 경우 특정 주제 구독에 대한 액세스 권한을 정의할 수 있습니다. 자세한 내용은 [Flow Service API](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) 또는 [Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md)를 사용한 [!DNL Google PubSub]인증 튜토리얼을 참조하십시오. |
-| [!DNL Marketo]에서 사용자 정의된 활동 데이터 수집 | 이제 [!DNL Marketo] 인스턴스의 사용자 정의 활동 데이터를 Experience Platform으로 가져올 수 있습니다. 사용자 정의된 활동 데이터를 수집하려면 B2B 활동 스키마에서 사용자 정의된 활동 필드 그룹을 설정하고 활동 데이터 세트를 사용하여 데이터 흐름을 생성해야 합니다. 데이터 흐름이 완료되면 수집된 데이터 집합에는 [!DNL Marketo] 인스턴스의 표준 활동 및 사용자 정의 활동이 모두 포함됩니다. 그런 다음 [쿼리 서비스](../../query-service/home.md)를 사용하여 Platform의 사용자 정의 활동 레코드에 액세스할 수 있습니다. 자세한 내용은 [사용자 정의 활동 데이터의 데이터 흐름 생성](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md)에 대한 안내서를 참조하십시오. |
+| [!DNL Google PubSub]를 사용하여 구독 수준의 액세스 지정 | 이제 인증할 때 구독 ID를 제공하여 [!DNL Google PubSub] 소스를 사용할 경우 특정 주제 구독에 대한 액세스 권한을 정의할 수 있습니다. 자세한 내용은 [!DNL Google PubSub] 인증 튜토리얼 [흐름 서비스 API 사용](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) 또는 [Experience Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md)을(를) 참조하십시오. |
+| [!DNL Marketo]에서 사용자 정의된 활동 데이터 수집 | 이제 [!DNL Marketo] 인스턴스의 사용자 정의 활동 데이터를 Experience Platform으로 가져올 수 있습니다. 사용자 정의된 활동 데이터를 수집하려면 B2B 활동 스키마에서 사용자 정의된 활동 필드 그룹을 설정하고 활동 데이터 세트를 사용하여 데이터 흐름을 생성해야 합니다. 데이터 흐름이 완료되면 수집된 데이터 집합에는 [!DNL Marketo] 인스턴스의 표준 활동 및 사용자 정의 활동이 모두 포함됩니다. 그런 다음 [쿼리 서비스](../../query-service/home.md)를 사용하여 Experience Platform에서 사용자 지정 활동 레코드에 액세스할 수 있습니다. 자세한 내용은 [사용자 정의 활동 데이터의 데이터 흐름 생성](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md)에 대한 안내서를 참조하십시오. |
 | [!DNL Marketo]에서 요청되지 않은 계정 제외 | 이제 회사 데이터에 대한 데이터 흐름을 만들 때 요청되지 않은 계정을 수집에서 제외할지 또는 포함할지 여부를 구성할 수 있습니다. 자세한 내용은 [ [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md)에 대한 소스 연결 및 데이터 흐름 생성에 관한 안내서를 참조하십시오. |
 
 {style="table-layout:auto"}

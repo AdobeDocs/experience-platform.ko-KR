@@ -4,9 +4,9 @@ title: 대시보드 개요
 type: Documentation
 description: Adobe Experience Platform에서 여러 대시보드를 탐색하여 일별 스냅샷 중에 캡처한 조직 데이터에 대한 중요한 정보를 확인합니다.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처한 대로 조직 데
 
 ## 대시보드 소개
 
-대시보드는 조직의 데이터에 대한 기본 보고를 제공하며 Platform 내의 마케터 워크플로우에 직접 빌드됩니다. 이러한 대시보드는 추가적인 IT 지원이나 추가적인 데이터 웨어하우징 설계 및 구현으로 데이터를 내보내고 처리하는 데 소요되는 시간과 노력 없이 사용할 수 있습니다.
+대시보드는 조직의 데이터에 대한 기본 보고를 제공하며 Experience Platform 내의 마케터 워크플로우에 직접 빌드됩니다. 이러한 대시보드는 추가적인 IT 지원이나 추가적인 데이터 웨어하우징 설계 및 구현으로 데이터를 내보내고 처리하는 데 소요되는 시간과 노력 없이 사용할 수 있습니다.
 
 ## 대시보드 시작하기
 
@@ -38,6 +38,6 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처한 대로 조직 데
 
 ## 사용 가능한 대시보드
 
-현재 Experience Platform 내에서 사용할 수 있는 여러 대시보드가 있으며, 각 대시보드는 조직의 고객 데이터에 대한 투명성을 제공합니다.
+현재 Experience Platform 내에는 여러 대시보드가 있으며, 각 대시보드는 조직의 고객 데이터에 대한 투명성을 제공합니다.
 
 이러한 대시보드 및 해당 지표에 대한 자세한 내용은 설명서 탐색의 사용 가능한 대시보드 목록에서 대시보드를 선택하십시오.

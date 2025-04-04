@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 데모 확장 개요
 description: Adobe Experience Platform의 Adobe Experience Platform 데모 확장에 대해 알아봅니다.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 69%
+source-wordcount: '1071'
+ht-degree: 74%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ ht-degree: 69%
 
 이 확장 기능은 새 확장으로 포트되고 있습니다. 다음은 현재 기능을 간단히 비교한 것입니다.
 
-| Platform 데모 확장 | Platform Web SDK |
+| Experience Platform 데모 확장 | Experience Platform Web SDK |
 | ------------------ | ----------- |
 | 사용자 지정 고객 ID 지원 | 사용자 지정 고객 ID 지원 |
 | XDM용 클라이언트측 매핑 UI | ECID로 빌드(visitor.js가 필요 없음) |

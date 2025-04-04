@@ -5,10 +5,10 @@ breadcrumb-title: Data Ingestion 안내서
 user-guide-description: 일괄 처리 또는 스트리밍 통합 기능을 통해 데이터를 Experience Platform으로 가져올 수 있습니다.
 feature: Data Ingestion
 role: Developer
-source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 19%
+source-wordcount: '143'
+ht-degree: 21%
 
 ---
 
@@ -48,4 +48,4 @@ ht-degree: 19%
 - [Source 커넥터](source-connectors.md)
 - [일괄 처리 수집 API 참조](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [스트리밍 수집 API 참조](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+- [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

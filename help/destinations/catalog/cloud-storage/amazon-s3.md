@@ -2,9 +2,9 @@
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 CSV 데이터 파일을 정기적으로 자체 S3 버킷으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1503'
 ht-degree: 16%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 16%
 
 ## API 또는 UI를 통해 [!DNL Amazon S3] 저장소에 연결합니다. {#connect-api-or-ui}
 
-* 플랫폼 사용자 인터페이스를 사용하여 [!DNL Amazon S3] 저장소 위치에 연결하려면 아래의 [대상에 연결](#connect) 및 [이 대상에 대상 활성화](#activate) 섹션을 참조하십시오.
+* Experience Platform 사용자 인터페이스를 사용하여 [!DNL Amazon S3] 저장소 위치에 연결하려면 아래의 [대상에 연결](#connect) 및 [이 대상에 대상 활성화](#activate) 섹션을 참조하십시오.
 * 프로그래밍 방식으로 [!DNL Amazon S3] 저장소 위치에 연결하려면 Flow Service API 자습서를 사용하여 파일 기반 대상에 대해 [대상자를 활성화하는 방법](../../api/activate-segments-file-based-destinations.md)에 대한 안내서를 읽어 보십시오.
 
 ## 지원되는 대상자 {#supported-audiences}
@@ -58,14 +58,14 @@ ht-degree: 16%
 
 이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기 설정 방법에 대한 자세한 내용은 튜토리얼을 참조하십시오.
 
-* [플랫폼 사용자 인터페이스를 사용하여 데이터 세트를 내보내는 방법](/help/destinations/ui/export-datasets.md).
+* [Experience Platform 사용자 인터페이스를 사용하여 데이터 세트를 내보내는 방법](/help/destinations/ui/export-datasets.md).
 * 흐름 서비스 API를 사용하여 프로그래밍 방식으로 데이터 세트를 [내보내는 방법](/help/destinations/api/export-datasets.md).
 
 ## 내보낸 데이터의 파일 형식 {#file-format}
 
-*대상 데이터*&#x200B;를 내보낼 때 Platform은 사용자가 제공한 저장소 위치에 `.csv`, `parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 대상 활성화 자습서에서 [내보내기에 지원되는 파일 형식](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) 섹션을 참조하십시오.
+*대상 데이터*&#x200B;를 내보낼 때 Experience Platform은 사용자가 제공한 저장소 위치에 `.csv`, `parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 대상 활성화 자습서에서 [내보내기에 지원되는 파일 형식](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) 섹션을 참조하십시오.
 
-*데이터 세트*&#x200B;를 내보낼 때 Platform은 사용자가 제공한 저장소 위치에 `.parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 데이터 세트 내보내기 자습서에서 [데이터 세트 내보내기에 성공했는지 확인](../../ui/export-datasets.md#verify) 섹션을 참조하십시오.
+*데이터 세트*&#x200B;를 내보낼 때 Experience Platform은 사용자가 제공한 저장소 위치에 `.parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 데이터 세트 내보내기 자습서에서 [데이터 세트 내보내기에 성공했는지 확인](../../ui/export-datasets.md#verify) 섹션을 참조하십시오.
 
 ## 대상에 연결 {#connect}
 
@@ -93,7 +93,7 @@ Amazon S3 액세스 키와 비밀 키를 입력하여 Experience Platform에서 
 
 ![액세스 키 및 비밀 키 인증을 선택할 때 필요한 필드의 이미지입니다.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
-* **[!DNL Amazon S3]액세스 키** 및 **[!DNL Amazon S3]비밀 키**: [!DNL Amazon S3]에서 `access key - secret access key` 쌍을 생성하여 [!DNL Amazon S3] 계정에 플랫폼 액세스 권한을 부여합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)를 참조하세요.
+* **[!DNL Amazon S3]액세스 키** 및 **[!DNL Amazon S3]비밀 키**: [!DNL Amazon S3]에서 `access key - secret access key` 쌍을 생성하여 [!DNL Amazon S3] 계정에 Experience Platform 액세스 권한을 부여합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)를 참조하세요.
 * **[!UICONTROL 암호화 키]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지입니다.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -154,7 +154,7 @@ Adobe와 계정 키 및 시크릿 키를 공유하지 않으려면 이 인증 �
 
 ### 필요한 [!DNL Amazon S3] 권한 {#required-s3-permission}
 
-데이터를 [!DNL Amazon S3] 저장소 위치에 연결하고 내보내려면 [!DNL Amazon S3]에서 [!DNL Platform]에 대한 IAM(Identity and Access Management) 사용자를 만들고 다음 작업에 대한 권한을 할당하십시오.
+데이터를 [!DNL Amazon S3] 저장소 위치에 연결하고 내보내려면 [!DNL Amazon S3]에서 [!DNL Experience Platform]에 대한 IAM(Identity and Access Management) 사용자를 만들고 다음 작업에 대한 권한을 할당하십시오.
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
@@ -201,7 +201,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 >[!IMPORTANT]
 >
->Platform needs `write` permissions on the bucket object where the export files will be delivered.
+>Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 

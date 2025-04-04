@@ -2,9 +2,9 @@
 title: Adobe Content Analytics 확장 개요
 description: Adobe Experience Platform의 Adobe Content Analytics 태그 확장 기능에 대해 알아봅니다.
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 5f852b69b0eb0a5e6a9119f14eb9e1f51c8a2e33
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!DNL Adobe Content Analytics] 태그 확장을 사용하면 웹 사이트에서 콘텐츠 관련 이벤트를 추적할 수 있습니다. 확장은 웹 속성에서 Experience Platform Edge Network을 통해 Adobe Experience Cloud의 데이터 스트림으로 컨텐츠 데이터(경험 및 자산)를 전송합니다.
 
-확장을 사용하면 특정 콘텐츠 관련 이벤트 데이터를 Platform으로 스트리밍하여 Customer Journey Analytics의 콘텐츠 분석 보고서에서 해당 데이터를 사용할 수 있습니다.
+확장을 사용하면 특정 콘텐츠 관련 이벤트 데이터를 Experience Platform으로 스트리밍하여 Customer Journey Analytics의 콘텐츠 분석 보고서에서 해당 데이터를 사용할 수 있습니다.
 
 이 문서에서는 태그 UI에서 태그 확장을 구성하는 방법을 설명합니다.
 

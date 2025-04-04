@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;csv 매핑;csv 파일 매핑;xdm
 title: 데이터 준비 UI 안내서
 description: Experience Platform UI에서 데이터 준비 기능을 사용하여 CSV 파일을 XDM 스키마에 매핑하는 방법을 알아봅니다.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 06aa84aaccf3aeb45bfe19f8741b6bca96258d89
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1474'
 ht-degree: 0%
 
 ---
@@ -16,14 +16,14 @@ Adobe Experience Platform 사용자 인터페이스에서 [데이터 준비](../
 
 ## 시작하기
 
-이 자습서에서는 다음 플랫폼 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM)] 시스템](../../xdm/home.md): 플랫폼에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)] 시스템](../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기 튜토리얼](../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아봅니다.
 * [ID 서비스](../../identity-service/home.md): 장치 및 시스템 간에 ID를 연결하여 개별 고객 및 개별 고객의 행동을 더 잘 볼 수 있습니다.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [소스](../../sources/home.md): Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [소스](../../sources/home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 ## UI에서 매핑 인터페이스에 액세스
 

@@ -3,10 +3,10 @@ title: 일회성 고객 가치를 라이프타임 가치로 향상
 description: 특정 고객의 특성, 동작 및 과거 구매를 기반으로 최상의 보완 제품 또는 서비스를 제공하기 위해 개인화된 캠페인을 만드는 방법을 알아봅니다.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3179'
-ht-degree: 26%
+source-wordcount: '3181'
+ht-degree: 25%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 26%
 >* 이 페이지에는 설명된 사용 사례를 달성하기 위한 Real-Time CDP 및 Adobe Journey Optimizer의 샘플 구현이 나와 있습니다. 페이지에 제공된 수치, 자격 기준 및 기타 필드를 규범적 수치가 아닌 안내서로 사용하십시오.
 >* 이 사용 사례를 완료하려면 Real-Time CDP 및 Adobe Journey Optimizer에 대한 라이선스가 있어야 합니다. 자세한 내용은 아래의 [필수 구성 요소 및 계획 섹션](#prerequisites-and-planning)을 참조하세요.
 
-일회성 고객 가치 대 라이프타임 가치 사용 사례를 구현하여 브랜드 참여 및 브랜드 충성도를 높입니다. [Real-Time CDP](/help/rtcdp/home.md) 및 [Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/ajo-home)에서 증강된 Experience Platform 기능을 사용하여 여러 채널 또는 여정에서 연결된 고객 경험을 구축하십시오.
+일회성 고객 가치 대 라이프타임 가치 사용 사례를 구현하여 브랜드 참여 및 브랜드 충성도를 높입니다. [Real-Time CDP](/help/rtcdp/home.md) 및 [Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/ajo-home)에서 증강된 Experience Platform의 기능을 사용하여 여러 채널 또는 여정에서 연결된 고객 경험을 구축하십시오.
 
 타겟팅하는 대상은 지난 3개월 이내에 구매한 적이 없는 속성 방문자입니다.
 
@@ -33,7 +33,7 @@ ht-degree: 26%
 
 내부적으로 브랜드 충성도를 높이기 위한 비즈니스 목표 및 목표를 정의했습니다. 이는 고객 참여 및 충성도를 높이기 위한 사용 사례 실행으로 번역할 수 있습니다.
 
-이를 위해 필요한 기술은 두 개의 Experience Platform 앱 [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ko)(으)로 구성됩니다. 아래 목록은 사용 사례를 구현할 때 사용할 두 앱의 다양한 기능과 UI 요소입니다.
+이를 위해 필요한 기술은 두 개의 Experience Platform 앱 [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ko)으로 구성됩니다. 아래 목록은 사용 사례를 구현할 때 사용할 두 앱의 다양한 기능과 UI 요소입니다.
 
 >[!TIP]
 >
@@ -73,7 +73,7 @@ ht-degree: 26%
 ![1회성 값을 라이프타임 값으로 단계별로 발전시켜 높은 수준의 시각적 개요](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
 1. 스키마와 데이터 세트를 만든 다음 [!UICONTROL 프로필]에 대해 표시합니다.
-2. 데이터는 Web SDK, Mobile Edge SDK 또는 API를 통해 수집되고 Experience Platform에 통합됩니다. Analytics Data Connector도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
+2. Web SDK, Mobile Edge SDK 또는 API를 통해 데이터를 수집하고 Experience Platform에 통합합니다. Analytics Data Connector도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
 3. 프로필을 Real-Time CDP에 로드하고 책임 있는 사용을 보장하기 위한 거버넌스 정책을 구축합니다.
 4. 프로필 목록에서 집중 대상자를 만들어 고가치 고객과 저빈도 고객을 확인합니다.
 5. [!DNL Adobe Journey Optimizer]에서 두 개의 여정을 만듭니다. 하나는 사용자에게 새 구독 프로그램에 대한 메시지를 보내고 다른 하나는 사용자에게 나중에 구매를 확인하는 메시지를 보냅니다.
@@ -97,7 +97,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 이 샘플 구현에는 사용 사례에서 일회성 값을 라이프타임 값으로 발전시키는 데 사용할 수 있는 몇 가지 스키마 디자인이 있습니다. 각 스키마에는 설정할 특정 필수 필드와 일부 제안된 필드가 포함되어 있습니다.
 
-Adobe 샘플 구현을 기준으로, 이 사용 사례를 달성하려면 다음 세 가지 스키마를 만드는 것이 좋습니다.
+샘플 구현을 기반으로 Adobe에서는 이 사용 사례를 달성하기 위해 다음 세 가지 스키마를 만드는 것이 좋습니다.
 
 * [고객 특성 스키마](#customer-attributes-schema)(프로필 스키마)
 * [고객 디지털 트랜잭션 스키마](#customer-digital-transactions-schema)(경험 이벤트 스키마)
@@ -137,7 +137,7 @@ Adobe 샘플 구현을 기준으로, 이 사용 사례를 달성하려면 다음
 
 #### 고객 디지털 트랜잭션 스키마 {#customer-digital-transactions-schema}
 
-이 스키마는 웹 사이트 또는 기타 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 [Web SDK](/help/web-sdk/home.md)를 통해 [!DNL Adobe Experience Platform]에 수집되며 여정 트리거, 자세한 온라인 고객 분석 및 향상된 세그멘테이션 기능에 사용되는 다양한 찾아보기 및 전환 이벤트를 참조하는 데 필요합니다.
+이 스키마는 웹 사이트 또는 기타 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 [웹 SDK](/help/web-sdk/home.md)를 통해 [!DNL Adobe Experience Platform]에 수집되며, 여정 트리거, 자세한 온라인 고객 분석 및 향상된 세그멘테이션 기능에 사용되는 다양한 찾아보기 및 전환 이벤트를 참조하는 데 필요합니다.
 
 필드 그룹이 강조 표시된 ![고객 디지털 트랜잭션 스키마](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
@@ -210,7 +210,7 @@ Adobe 샘플 구현을 기준으로, 이 사용 사례를 달성하려면 다음
 
 #### 고객 오프라인 트랜잭션 스키마 {#customer-offline-transactions-schema}
 
-이 스키마는 웹 사이트 외부 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구성하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 POS(또는 유사한 시스템)에서 [!DNL Adobe Experience Platform]으로 수집되며, API 연결을 통해 Platform으로 스트리밍되는 경우가 가장 많습니다. [일괄 처리 수집](/help/ingestion/batch-ingestion/getting-started.md)에 대해 읽어 보십시오. 목적은 여정 트리거, 심층적인 온라인 및 오프라인 고객 분석, 향상된 세분화 기능에 사용되는 다양한 오프라인 전환 이벤트를 참조하는 것입니다.
+이 스키마는 웹 사이트 외부 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구성하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 POS(또는 유사한 시스템)에서 [!DNL Adobe Experience Platform]&#x200B;(으)로 수집되며 API 연결을 통해 Experience Platform으로 스트리밍되는 경우가 가장 많습니다. [일괄 처리 수집](/help/ingestion/batch-ingestion/getting-started.md)에 대해 읽어 보십시오. 목적은 여정 트리거, 심층적인 온라인 및 오프라인 고객 분석, 향상된 세분화 기능에 사용되는 다양한 오프라인 전환 이벤트를 참조하는 것입니다.
 
 필드 그룹이 강조 표시된 ![고객 오프라인 트랜잭션 스키마](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-offline-transactions-schema.png)
 
@@ -240,7 +240,7 @@ Adobe 샘플 구현을 기준으로, 이 사용 사례를 달성하려면 다음
 >
 >[!DNL Adobe Analytics Data Connector]를 사용하는 경우 선택적 구현입니다.
 
-이 스키마는 웹 사이트 또는 기타 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 스키마는 고객 디지털 트랜잭션 스키마와 유사하지만, Web SDK가 데이터 수집에 대한 옵션이 아닐 때 사용할 수 있다는 점에서 다릅니다. 따라서 [!DNL Adobe Analytics Data Connector]을(를) 사용하여 온라인 데이터를 [!DNL Adobe Experience Platform]에 기본 또는 보조 데이터 스트림으로 보낼 때 이 스키마를 사용할 수 있습니다.
+이 스키마는 웹 사이트 또는 기타 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 스키마는 고객 디지털 트랜잭션 스키마와 유사하지만, 웹 SDK이 데이터 수집에 대한 옵션이 아닐 때 사용할 수 있다는 점에서 다릅니다. 따라서 [!DNL Adobe Analytics Data Connector]을(를) 사용하여 온라인 데이터를 [!DNL Adobe Experience Platform]에 기본 또는 보조 데이터 스트림으로 보낼 때 이 스키마를 사용할 수 있습니다.
 
 필드 그룹이 강조 표시된 ![Adobe 웹 커넥터 스키마](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
 
@@ -300,7 +300,7 @@ Adobe 샘플 구현을 기준으로, 이 사용 사례를 달성하려면 다음
 
 * 대상을 만드는 방법에 대한 자세한 내용은 [대상 서비스 UI 안내서](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience)를 참조하세요.
 * [대상](/help/segmentation/home.md)을 구성하는 방법에 대한 자세한 내용은 [대상 구성 UI 안내서](/help/segmentation/ui/audience-composition.md)를 참조하십시오.
-* 플랫폼에서 파생된 세그먼트 정의를 통해 대상자를 만드는 방법에 대한 자세한 내용은 [대상자 빌더 UI 안내서](/help/segmentation/ui/segment-builder.md)를 참조하십시오.
+* Experience Platform에서 파생된 세그먼트 정의를 통해 대상자를 만드는 방법에 대한 자세한 내용은 [대상자 빌더 UI 안내서](/help/segmentation/ui/segment-builder.md)를 참조하십시오.
 
 특히 아래 이미지에 표시된 대로 사용 사례의 여러 단계에서 두 개의 대상을 만들고 사용해야 합니다.
 

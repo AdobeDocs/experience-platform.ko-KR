@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 있는 주제
 title: Identity 서비스에서 개인 정보 보호 요청 처리
 description: Adobe Experience Platform Privacy Service은 수많은 개인 정보 보호 규정에 명시된 대로 개인 데이터에 액세스하거나, 판매를 거부하거나, 삭제하기 위한 고객 요청을 처리합니다. 이 문서에서는 Identity 서비스에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: a75a5603eacc1b4625a19adfddbb2f4bb81f66d3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1005'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) GDPR(일반 데이터 �
 
 >[!NOTE]
 >
->이 안내서에서는 Experience Platform의 ID 데이터 저장소에 대해 개인 정보를 요청하는 방법만 다룹니다. Platform 데이터 레이크 또는 [!DNL Real-Time Customer Profile]에 대한 개인 정보 보호 요청을 수행할 계획이라면 이 자습서 외에 [데이터 레이크에서 개인 정보 보호 요청 처리](../catalog/privacy.md)에 대한 안내서 및 [프로필에 대한 개인 정보 보호 요청 처리](../profile/privacy.md)에 대한 안내서를 참조하십시오.
+>이 안내서에서는 Experience Platform의 ID 데이터 저장소에 대해 개인 정보를 요청하는 방법만 다룹니다. Experience Platform 데이터 레이크 또는 [!DNL Real-Time Customer Profile]에 대한 개인 정보 보호 요청도 수행할 계획이라면 이 자습서 외에 [데이터 레이크의 개인 정보 보호 요청 처리 가이드](../catalog/privacy.md) 및 [프로필에 대한 개인 정보 보호 요청 처리 가이드](../profile/privacy.md)를 참조하십시오.
 >
 >다른 Adobe Experience Cloud 애플리케이션에 대한 개인 정보 보호 요청을 하는 방법에 대한 단계는 [Privacy Service 설명서](../privacy-service/experience-cloud-apps.md)를 참조하십시오.
 
@@ -48,7 +48,7 @@ API에서 작업 요청을 만들 때 `userIDs` 내에 제공된 모든 ID는 �
 
 또한 요청 페이로드의 `include` 배열에는 요청을 수행하는 다른 데이터 저장소에 대한 제품 값이 포함되어야 합니다. [!DNL Identity]에 요청할 때 배열에 값 `Identity`이(가) 포함되어야 합니다.
 
-다음 요청은 GDPR에 [!DNL Identity] 저장소의 단일 고객 데이터에 대한 새 개인 정보 보호 작업을 만듭니다. `userIDs` 배열에서 고객에 대해 두 개의 ID 값이 제공됩니다. 하나는 표준 `Email` ID 네임스페이스를 사용하고 다른 하나는 `ECID` 네임스페이스를 사용하며, 여기에는 `include` 배열의 [!DNL Identity](`Identity`)에 대한 제품 값도 포함됩니다.
+다음 요청은 GDPR에 [!DNL Identity] 저장소의 단일 고객 데이터에 대한 새 개인 정보 보호 작업을 만듭니다. `userIDs` 배열에서 고객에 대해 두 개의 ID 값이 제공됩니다. 하나는 표준 `Email` ID 네임스페이스를 사용하고 다른 하나는 `ECID` 네임스페이스를 사용하며, 여기에는 `include` 배열의 [!DNL Identity]&#x200B;(`Identity`)에 대한 제품 값도 포함됩니다.
 
 >[!TIP]
 >
@@ -104,16 +104,16 @@ UI에서 작업 요청을 만들 때 [!DNL Identity Service]에 저장된 데이
 
 ## 삭제 요청 처리
 
-[!DNL Experience Platform]이(가) [!DNL Privacy Service]에서 삭제 요청을 받으면 [!DNL Platform]이(가) 요청이 수신되었고 영향을 받는 데이터가 삭제되도록 표시되었다는 확인을 [!DNL Privacy Service]에 보냅니다. 개별 ID의 삭제는 제공된 네임스페이스 및/또는 ID 값을 기반으로 합니다. 또한 해당 조직과 연관된 모든 샌드박스에 대해 삭제가 수행됩니다.
+[!DNL Experience Platform]이(가) [!DNL Privacy Service]에서 삭제 요청을 받으면 [!DNL Experience Platform]이(가) 요청이 수신되었고 영향을 받는 데이터가 삭제되도록 표시되었다는 확인을 [!DNL Privacy Service]에 보냅니다. 개별 ID의 삭제는 제공된 네임스페이스 및/또는 ID 값을 기반으로 합니다. 또한 해당 조직과 연관된 모든 샌드박스에 대해 삭제가 수행됩니다.
 
 ID 서비스(`identity`)에 대한 개인 정보 보호 요청에 제품으로 실시간 고객 프로필(`ProfileService`) 및 데이터 레이크(`aepDataLake`)를 포함했는지 여부에 따라 ID와 관련된 다른 데이터 집합이 잠재적으로 다른 시간에 시스템에서 제거됩니다.
 
 | 포함된 제품 | 효과 |
 | --- | --- |
-| `identity`만 | 제공된 ID는 플랫폼이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 삭제됩니다. 해당 ID 그래프에서 생성된 프로필은 여전히 남아 있지만 이제 ID 연결이 제거되므로 새 데이터가 수집될 때 업데이트되지 않습니다. 프로필과 연결된 데이터도 데이터 레이크에 유지됩니다. |
-| `identity` 및 `ProfileService` | 제공된 ID는 플랫폼이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 삭제됩니다. 프로필과 연결된 데이터는 데이터 레이크에 유지됩니다. |
-| `identity` 및 `aepDataLake` | 제공된 ID는 플랫폼이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 삭제됩니다. 해당 ID 그래프에서 생성된 프로필은 여전히 남아 있지만 이제 ID 연결이 제거되므로 새 데이터가 수집될 때 업데이트되지 않습니다.<br><br>Data Lake 제품이 요청을 받았으며 현재 처리 중이라는 응답을 보내면 프로필과 연결된 데이터가 일시 삭제되므로 [!DNL Platform] 서비스에서 액세스할 수 없습니다. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
-| `identity`, `ProfileService` 및 `aepDataLake` | 제공된 ID는 플랫폼이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 삭제됩니다.<br><br>Data Lake 제품이 요청을 받았으며 현재 처리 중이라는 응답을 보내면 프로필과 연결된 데이터가 일시 삭제되므로 [!DNL Platform] 서비스에서 액세스할 수 없습니다. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
+| `identity`만 | Experience Platform에서 삭제 요청이 수신되었다는 확인을 전송하는 즉시 제공된 ID가 삭제됩니다. 해당 ID 그래프에서 생성된 프로필은 여전히 남아 있지만 이제 ID 연결이 제거되므로 새 데이터가 수집될 때 업데이트되지 않습니다. 프로필과 연결된 데이터도 데이터 레이크에 유지됩니다. |
+| `identity` 및 `ProfileService` | Experience Platform에서 삭제 요청이 수신되었다는 확인을 전송하는 즉시 제공된 ID가 삭제됩니다. 프로필과 연결된 데이터는 데이터 레이크에 유지됩니다. |
+| `identity` 및 `aepDataLake` | Experience Platform에서 삭제 요청이 수신되었다는 확인을 전송하는 즉시 제공된 ID가 삭제됩니다. 해당 ID 그래프에서 생성된 프로필은 여전히 남아 있지만 이제 ID 연결이 제거되므로 새 데이터가 수집될 때 업데이트되지 않습니다.<br><br>Data Lake 제품이 요청을 받았으며 현재 처리 중이라는 응답을 보내면 프로필과 연결된 데이터가 일시 삭제되므로 [!DNL Experience Platform] 서비스에서 액세스할 수 없습니다. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
+| `identity`, `ProfileService` 및 `aepDataLake` | Experience Platform에서 삭제 요청이 수신되었다는 확인을 전송하는 즉시 제공된 ID가 삭제됩니다.<br><br>Data Lake 제품이 요청을 받았으며 현재 처리 중이라는 응답을 보내면 프로필과 연결된 데이터가 일시 삭제되므로 [!DNL Experience Platform] 서비스에서 액세스할 수 없습니다. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
 
 작업 상태 추적에 대한 자세한 내용은 [[!DNL Privacy Service] 설명서](../privacy-service/home.md#monitor)를 참조하세요.
 

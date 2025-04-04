@@ -5,22 +5,22 @@ title: UI에서 스키마 리소스 살펴보기
 description: Experience Platform 사용자 인터페이스에서 기존 스키마, 클래스, 스키마 필드 그룹 및 데이터 유형을 탐색하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
 
 # UI에서 스키마 리소스 살펴보기
 
-Adobe Experience Platform에서 모든 XDM(Experience Data Model) 스키마 리소스는 Adobe이 제공하는 표준 리소스 및 조직에서 정의한 사용자 지정 리소스를 포함하여 [!DNL Schema Library]에 저장됩니다. Experience Platform UI에서 [!DNL Schema Library]의 기존 스키마, 클래스, 필드 그룹 또는 데이터 형식의 구조 및 필드를 볼 수 있습니다. UI는 이러한 XDM 리소스에서 제공하는 각 필드의 예상 데이터 유형 및 사용 사례에 대한 정보를 제공하므로 데이터 수집을 계획하고 준비할 때 특히 유용합니다.
+Adobe Experience Platform에서 XDM(Experience Data Model) 스키마 리소스는 Adobe에서 제공하는 표준 리소스 및 조직에서 정의한 사용자 지정 리소스를 포함하여 [!DNL Schema Library]에 저장됩니다. Experience Platform UI에서는 [!DNL Schema Library]에서 기존 스키마, 클래스, 필드 그룹 또는 데이터 형식의 구조 및 필드를 볼 수 있습니다. UI는 이러한 XDM 리소스에서 제공하는 각 필드의 예상 데이터 유형 및 사용 사례에 대한 정보를 제공하므로 데이터 수집을 계획하고 준비할 때 특히 유용합니다.
 
 이 자습서에서는 Experience Platform UI에서 기존 스키마, 클래스, 필드 그룹 및 데이터 유형을 탐색하는 단계를 다룹니다.
 
 ## 스키마 리소스 조회 {#lookup}
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택합니다. [!UICONTROL 스키마] 작업 영역에서는 조직의 모든 스키마를 탐색할 수 있는 **[!UICONTROL 찾아보기]** 탭과 **[!UICONTROL 클래스]**, **[!UICONTROL 필드 그룹]**, **[!UICONTROL 데이터 형식]** 및 **[!UICONTROL 관계]**&#x200B;를 각각 탐색할 수 있는 추가 전용 탭을 제공합니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택합니다. [!UICONTROL 스키마] 작업 영역에서는 조직의 모든 스키마를 탐색할 수 있는 **[!UICONTROL 찾아보기]** 탭과 **[!UICONTROL 클래스]**, **[!UICONTROL 필드 그룹]**, **[!UICONTROL 데이터 형식]** 및 **[!UICONTROL 관계]**&#x200B;를 각각 탐색할 수 있는 추가 전용 탭을 제공합니다.
 
 ![여러 탭이 강조 표시된 스키마 작업 영역](../images/ui/explore/tabs.png)
 
@@ -63,7 +63,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택�
 
 ### 표준 클래스 및 필드 그룹 표시기 {#standard-class-and-field-group-indicator}
 
-스키마 편집기 내에서 표준(Adobe 생성) 클래스와 필드 그룹은 자물쇠 아이콘(![자물쇠 아이콘)으로 표시됩니다.](/help/images/icons/lock-closed.png) 질문에 답합니다. 자물쇠는 클래스 또는 필드 그룹 이름 옆의 왼쪽 레일과 시스템 생성 리소스의 일부인 스키마 다이어그램의 필드 옆에 나타납니다.
+스키마 편집기 내에서 표준(Adobe에서 생성한) 클래스와 필드 그룹은 자물쇠 아이콘(![자물쇠 아이콘)으로 표시됩니다.](/help/images/icons/lock-closed.png) 질문에 답합니다. 자물쇠는 클래스 또는 필드 그룹 이름 옆의 왼쪽 레일과 시스템 생성 리소스의 일부인 스키마 다이어그램의 필드 옆에 나타납니다.
 
 ![자물쇠 아이콘이 강조 표시된 스키마 편집기](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -73,7 +73,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택�
 
 일부 필드 이름은 밑줄(`_repo` 및 `_id`)로 표시됩니다. 이는 데이터가 수집될 때 시스템이 자동으로 생성하고 지정하는 필드의 자리 표시자를 나타냅니다.
 
-따라서 이러한 필드의 대부분은 플랫폼으로 수집할 때 데이터 구조에서 제외해야 합니다. 이 규칙의 주요 예외는 [`_{TENANT_ID}` 필드](../api/getting-started.md#know-your-tenant_id)입니다. 조직에서 만든 모든 XDM 필드는 아래에 네임스페이스가 지정되어야 합니다.
+따라서 Experience Platform으로 수집할 때 이러한 필드의 대부분을 데이터 구조에서 제외해야 합니다. 이 규칙의 주요 예외는 [`_{TENANT_ID}` 필드](../api/getting-started.md#know-your-tenant_id)입니다. 조직에서 만든 모든 XDM 필드는 아래에 네임스페이스가 지정되어야 합니다.
 
 ### 데이터 유형 {#data-types}
 
@@ -107,7 +107,7 @@ ID 필드가 포함된 스키마를 검사할 때 이러한 필드는 스키마�
 
 >[!NOTE]
 >
->ID 필드 및 다운스트림 플랫폼 서비스와의 관계에 대한 자세한 내용은 [ID 필드 정의](./fields/identity.md)에 대한 안내서를 참조하십시오.
+>ID 필드 및 다운스트림 Experience Platform 서비스와의 관계에 대한 자세한 내용은 [ID 필드 정의](./fields/identity.md)에 대한 안내서를 참조하십시오.
 
 ### 관계 필드 {#relationship}
 

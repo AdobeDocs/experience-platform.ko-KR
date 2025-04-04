@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;홈;인기 항목;데이터 수집;데이터 위치;데이터 위치;데이터 관리;데이터 관리;계보;계보;배치;배치;수집된 데이터
+keywords: Experience Platform;홈;인기 항목;데이터 수집;데이터 위치;데이터 위치;데이터 관리;데이터 관리;계보;계보;배치;일괄 처리;수집된 데이터
 solution: Experience Platform
 title: 데이터 수집 개요
-description: 이 문서에서는 각 개요 설명서에 대한 링크를 통해 데이터를 Platform에 수집하는 3가지 주요 방법을 소개합니다.
+description: 이 문서에서는 보다 자세한 정보를 보려면 해당 개요 설명서에 대한 링크와 함께 Experience Platform으로 데이터를 수집하는 세 가지 주요 방법을 소개합니다.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 수 있도록 여러 소스의 데이터를 함께 가져옵니다. Adobe Experience Platform 데이터 수집은 Experience Platform이 이러한 소스에서 데이터를 수집하는 여러 방법과 다운스트림 Experience Platform 서비스에서 사용하기 위해 데이터 레이크 내에서 데이터가 지속되는 방법을 나타냅니다.
 
-이 문서에서는 보다 자세한 정보를 보려면 해당 개요 설명서에 대한 링크와 함께 데이터를 Experience Platform에 수집하는 세 가지 주요 방법을 소개합니다.
+이 문서에서는 보다 자세한 정보를 보려면 해당 개요 설명서에 대한 링크와 함께 Experience Platform으로 데이터를 수집하는 세 가지 주요 방법을 소개합니다.
 
 ## 일괄 처리 수집
 
@@ -31,7 +31,7 @@ Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 
 
 ## 스트리밍 수집
 
-스트리밍 수집을 사용하면 클라이언트측 및 서버측 장치에서 실시간으로 [!DNL Experience Platform](으)로 데이터를 보낼 수 있습니다. Experience Platform은 데이터 레이크 내의 스트리밍 활성화 데이터 세트에서 지속되는 들어오는 경험 데이터를 스트리밍하는 데이터 입력 사용을 지원합니다. 데이터 입력 기능은 수집된 데이터를 자동으로 인증하도록 구성하여 신뢰할 수 있는 소스에서 데이터가 오는지 확인할 수 있습니다.
+스트리밍 수집을 사용하면 클라이언트측 및 서버측 장치에서 실시간으로 [!DNL Experience Platform]&#x200B;(으)로 데이터를 보낼 수 있습니다. Experience Platform은 데이터 입력 기능을 사용하여 들어오는 경험 데이터를 스트리밍할 수 있도록 지원하며, 이는 데이터 레이크 내의 스트리밍 지원 데이터 세트에서 유지됩니다. 데이터 입력 기능은 수집된 데이터를 자동으로 인증하도록 구성하여 신뢰할 수 있는 소스에서 데이터가 오는지 확인할 수 있습니다.
 
 자세한 내용은 [스트리밍 수집 개요](./streaming-ingestion/overview.md)를 참조하십시오.
 

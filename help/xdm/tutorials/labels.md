@@ -2,16 +2,16 @@
 title: 스키마에 대한 데이터 사용 레이블 관리
 description: Adobe Experience Platform UI에서 XDM(Experience Data Model) 스키마 필드에 데이터 사용 레이블을 추가하는 방법을 알아봅니다.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: ac6af3e90c417d1c97860394ce8afb07a0a7917d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '770'
 ht-degree: 8%
 
 ---
 
 # 스키마에 대한 데이터 사용 레이블 관리
 
-Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience Data Model) 스키마의 제한을 받습니다. 이 데이터에는 조직 규정이나 법적 규정에 따른 사용 제한이 적용될 수 있습니다. 이 문제를 해결하기 위해 플랫폼에서 [데이터 사용 레이블](../../data-governance/labels/overview.md)을 사용하여 특정 데이터 세트와 필드의 사용을 제한할 수 있습니다.
+Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience Data Model) 스키마의 제한을 받습니다. 이 데이터에는 조직 규정이나 법적 규정에 따른 사용 제한이 적용될 수 있습니다. 이 문제를 해결하기 위해 Experience Platform에서는 [데이터 사용 레이블](../../data-governance/labels/overview.md)을 사용하여 특정 데이터 세트와 필드의 사용을 제한할 수 있습니다.
 
 스키마 필드에 적용되는 레이블은 해당 특정 필드에 포함된 데이터에 적용되는 사용 정책을 나타냅니다.
 
@@ -19,15 +19,15 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 또한 한 스키마에 추가하는 필드 레이블은 공유 클래스 또는 필드 그룹의 동일한 필드를 사용하는 다른 모든 스키마로 전파됩니다. 이렇게 하면 유사한 필드에 대한 사용 규칙이 전체 데이터 모델에서 일관되도록 할 수 있습니다.
 
-이 자습서에서는 Platform UI에서 스키마 편집기를 사용하여 스키마에 레이블을 추가하는 단계를 다룹니다.
+이 자습서에서는 Experience Platform UI에서 스키마 편집기를 사용하여 스키마에 레이블을 추가하는 단계를 설명합니다.
 
 ## 시작하기
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-   * [스키마 편집기](../ui/overview.md): Platform UI에서 스키마 및 기타 리소스를 만들고 관리하는 방법에 대해 알아봅니다.
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): 레이블이 지정된 데이터에 대해 수행할 수 있는(또는 수행할 수 없는) 마케팅 작업을 정의하는 정책을 사용하여 플랫폼 작업에 대한 데이터 사용 제한을 적용하기 위한 인프라를 제공합니다.
+   * [스키마 편집기](../ui/overview.md): Experience Platform UI에서 스키마 및 기타 리소스를 만들고 관리하는 방법에 대해 알아봅니다.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): 레이블이 지정된 데이터에 대해 수행할 수 있는(또는 수행할 수 없는) 마케팅 작업을 정의하는 정책을 사용하여 Experience Platform 작업에 대한 데이터 사용 제한을 적용하기 위한 인프라를 제공합니다.
 
 ## 레이블을 추가할 스키마 또는 필드 선택 {#select-schema-field}
 

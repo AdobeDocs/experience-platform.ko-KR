@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;인기 주제;XDM;XDM 시스템;XDM 개별 프로필;XDM 경험 이벤트;XDM 경험 이벤트;experienceEvent;experience eventExperience 이벤트;XDM 경험 이벤트;XDM 경험 이벤트;XDM 경험 이벤트;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마;문제 해결;FAQ;FAQ;유니온 스키마;유니온 프로필;유니온 프로필;http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;XDM-1010-404;XDM-1011-404;XDM-1012-404;XDM-1013-404;XDM-1014-404;XDM-1015-404;XDM-1016-404;XDM-1017-404;XDM-1521-400;XDM-1020-400;XDM-1021-400;XDM-1022-400;XDM-1023-400;XDM-1024-400;XDM-1006-400;XDM-1007-400;XDM-1008-400;XDM-1009-400;XDM-1413-400;XDM-1526-400;XDM-1527-400;XDM-1528-400;
+keywords: Experience Platform;인기 주제;XDM;XDM 시스템;XDM 개별 프로필;XDM 경험 이벤트;XDM 경험 이벤트;experienceEvent;experience eventExperience 이벤트;XDM 경험 이벤트;XDM 경험 이벤트;XDM 경험 이벤트;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마;문제 해결;FAQ;FAQ;유니온 스키마;유니온 프로필;유니온 프로필;http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;XDM-1010-404;XDM-1011-404;XDM-1012-404;XDM-1013-404;XDM-1014-404;XDM-1015-404;XDM-1016-404;XDM-1017-404;XDM-1521-400;XDM-1020-400;XDM-1021-400;XDM-1022-400;XDM-1023-400;XDM-1024-400;XDM-1006-400;XDM-1007-400;XDM-1008-400;XDM-1009-400;XDM-1413-400;XDM-1526-400;XDM-1527-400;XDM-1528-400;
 solution: Experience Platform
 title: XDM 시스템 문제 해결 안내서
 description: 일반적인 API 오류를 해결하는 단계를 포함하여 XDM(Experience Data Model)에 대해 자주 묻는 질문에 대한 답변을 찾아보십시오.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: b345330595aadcfe2380dd1795802470b249cb4a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2348'
 ht-degree: 0%
 
 ---
 
 # XDM 시스템 문제 해결 안내서
 
-이 문서에서는 일반적인 오류에 대한 문제 해결 안내서를 포함하여 Adobe Experience Platform의 [!DNL Experience Data Model](XDM) 및 XDM 시스템에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 다른 플랫폼 서비스와 관련된 질문과 문제 해결은 [Experience Platform 문제 해결 가이드](../landing/troubleshooting.md)를 참조하십시오.
+이 문서에서는 일반적인 오류에 대한 문제 해결 안내서를 포함하여 Adobe Experience Platform의 [!DNL Experience Data Model]&#x200B;(XDM) 및 XDM 시스템에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 다른 Experience Platform 서비스와 관련된 질문 및 문제 해결은 [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
 
-**[!DNL Experience Data Model](XDM)**&#x200B;은(는) 고객 경험 관리를 위한 표준화된 스키마를 정의하는 오픈 소스 사양입니다. [!DNL Experience Platform]이(가) 빌드된 방법론인 **XDM 시스템**&#x200B;은(는) [!DNL Platform] 서비스에서 사용할 [!DNL Experience Data Model] 스키마를 운영합니다. **[!DNL Schema Registry]**&#x200B;은(는) [!DNL Experience Platform] 내에서 **[!DNL Schema Library]**&#x200B;에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 자세한 내용은 [XDM 설명서](home.md)를 참조하세요.
+**[!DNL Experience Data Model](XDM)**&#x200B;은(는) 고객 경험 관리를 위한 표준화된 스키마를 정의하는 오픈 소스 사양입니다. [!DNL Experience Platform]이(가) 빌드된 방법론인 **XDM 시스템**&#x200B;은(는) [!DNL Experience Platform] 서비스에서 사용할 [!DNL Experience Data Model] 스키마를 운영합니다. **[!DNL Schema Registry]**&#x200B;은(는) [!DNL Experience Platform] 내에서 **[!DNL Schema Library]**&#x200B;에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 자세한 내용은 [XDM 설명서](home.md)를 참조하세요.
 
 ## FAQ
 
@@ -124,7 +124,7 @@ UI에서 ID를 관리하는 방법에 대한 자세한 내용은 스키마 편�
 
 ### API를 사용하여 [!DNL Profile]에 대한 기존 스키마 사용
 
-PATCH을 업데이트하고 `meta:immutableTags` 특성을 &quot;union&quot; 값을 포함하는 배열로 추가하도록 요청하십시오. 업데이트가 성공하면 이제 유니온 태그가 포함된 업데이트된 스키마가 응답에 표시됩니다.
+스키마를 업데이트하고 `meta:immutableTags` 특성을 &quot;union&quot; 값을 포함하는 배열로 추가하려면 PATCH을 요청하십시오. 업데이트가 성공하면 이제 유니온 태그가 포함된 업데이트된 스키마가 응답에 표시됩니다.
 
 API를 사용하여 [!DNL Real-Time Customer Profile]에서 사용할 스키마를 활성화하는 방법에 대한 자세한 내용은 [!DNL Schema Registry] 개발자 가이드의 [유니온](./api/unions.md) 문서를 참조하십시오.
 
@@ -277,7 +277,7 @@ XDM 리소스에 대한 적절한 데이터 구조의 자세한 예는 스키마
 }
 ```
 
-[!DNL Schema Registry] API의 GET 요청에 대해 시스템에서 응답 형식을 지정하는 방법을 결정하려면 `Accept` 헤더가 필요합니다. 이 오류는 필수 `Accept` 헤더가 잘못되었거나 누락된 경우에 발생합니다.
+시스템에서 응답 형식을 지정하는 방법을 결정하려면 [!DNL Schema Registry] API의 GET 요청에 `Accept` 헤더가 필요합니다. 이 오류는 필수 `Accept` 헤더가 잘못되었거나 누락된 경우에 발생합니다.
 
 사용 중인 끝점에 따라 `detailed-message` 속성은 성공적인 응답을 위해 올바른 `Accept` 헤더의 모양을 나타냅니다. 다시 시도하기 전에 만들려는 API 요청과 호환되는 `Accept` 헤더를 올바르게 입력했는지 확인하십시오.
 

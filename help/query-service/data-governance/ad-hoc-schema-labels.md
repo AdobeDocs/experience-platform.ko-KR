@@ -2,9 +2,9 @@
 title: Ad Hoc 스키마에 대한 속성 기반 액세스 제어 지원
 description: Adobe Experience Platform 쿼리 서비스를 통해 생성된 임시 스키마의 데이터 필드에 대한 액세스를 제한하는 안내서입니다.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1020'
 ht-degree: 2%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 2%
 
 Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience Data Model) 스키마에 의해 캡슐화되며 조직 또는 법적 규정에 의해 정의된 사용 제한이 적용될 수 있습니다.
 
-스키마가 지정되지 않은 경우 쿼리 서비스를 통해 CTAS 쿼리를 실행하면 자동으로 임시 스키마가 생성됩니다. 중요한 개인 데이터와 개인 식별 정보 모두에 대한 액세스를 제어하기 위해 임시 스키마의 특정 필드 또는 데이터 세트의 사용을 제한해야 하는 경우가 많습니다. Adobe Experience Platform은 속성 기반 액세스 제어 기능을 사용하여 Platform UI를 통해 스키마 필드에 레이블을 지정할 수 있도록 함으로써 이 액세스 제어를 용이하게 합니다.
+스키마가 지정되지 않은 경우 쿼리 서비스를 통해 CTAS 쿼리를 실행하면 자동으로 임시 스키마가 생성됩니다. 중요한 개인 데이터와 개인 식별 정보 모두에 대한 액세스를 제어하기 위해 임시 스키마의 특정 필드 또는 데이터 세트의 사용을 제한해야 하는 경우가 많습니다. Adobe Experience Platform은 속성 기반 액세스 제어 기능을 사용하여 Experience Platform UI를 통해 스키마 필드에 레이블을 지정할 수 있도록 함으로써 이 액세스 제어를 용이하게 합니다.
 
-레이블은 언제든지 적용할 수 있으므로 데이터를 제어하는 방법을 유연하게 선택할 수 있습니다. 그러나 데이터를 Platform에 수집하는 즉시 또는 데이터를 Platform에서 사용할 수 있게 되는 즉시 레이블을 지정하는 것이 좋습니다.
+레이블은 언제든지 적용할 수 있으므로 데이터를 제어하는 방법을 유연하게 선택할 수 있습니다. 그러나 데이터를 Experience Platform에 수집하는 즉시 또는 데이터를 Experience Platform에서 사용할 수 있게 되는 즉시 데이터에 레이블을 지정하는 것이 좋습니다.
 
 스키마 기반 레이블 지정은 사용자 또는 사용자 그룹에 부여된 액세스를 더 잘 관리하기 위한 속성 기반 액세스 제어의 중요한 구성 요소입니다. Adobe Experience Platform을 사용하면 레이블을 만들고 적용하여 Ad Hoc 스키마의 모든 필드에 대한 액세스를 제한할 수 있습니다.
 
@@ -25,8 +25,8 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [XDM(경험 데이터 모델) 시스템](../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Platform UI에서 스키마 및 기타 리소스를 만들고 관리하는 방법을 알아봅니다.
+* [XDM(경험 데이터 모델) 시스템](../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Experience Platform UI에서 스키마 및 기타 리소스를 만들고 관리하는 방법을 알아봅니다.
 * [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance]을(를) 통해 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책 준수를 확인하는 방법에 대해 알아봅니다.
 * [특성 기반 액세스 제어](../../access-control/abac/overview.md): 특성 기반 액세스 제어는 관리자가 특성을 기반으로 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있도록 하는 Adobe Experience Platform의 기능입니다. 속성은 Ad Hoc 또는 일반 스키마 필드에 추가된 레이블과 같이 객체에 추가된 메타데이터일 수 있습니다. 관리자는 사용자 액세스 권한을 관리하기 위해 속성이 포함된 액세스 정책을 정의합니다.
 
@@ -34,15 +34,15 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 쿼리가 실행되고 결과가 생성되면 Ad Hoc 스키마가 자동으로 생성되고 스키마 인벤토리에 추가됩니다.
 
-데이터 레이블을 추가하려면 Platform UI의 왼쪽 레일에서 [!UICONTROL 스키마]를 선택하여 [!UICONTROL 스키마] 대시보드 찾아보기 탭으로 이동합니다. 스키마 인벤토리가 표시됩니다.
+데이터 레이블을 추가하려면 Experience Platform UI의 왼쪽 레일에서 [!UICONTROL 스키마]를 선택하여 [!UICONTROL 스키마] 대시보드 찾아보기 탭으로 이동합니다. 스키마 인벤토리가 표시됩니다.
 
 >[!NOTE]
 >
 >임시 스키마는 기본적으로 스키마 인벤토리에 표시되지 않습니다.
 
-## Platform UI의 스키마 인벤토리에서 임시 스키마 살펴보기 {#discover-ad-hoc-schemas}
+## Experience Platform UI의 스키마 인벤토리에서 임시 스키마 살펴보기 {#discover-ad-hoc-schemas}
 
-Platform UI에서 임시 스키마 표시를 활성화하려면 필터 아이콘(![필터 아이콘)을 선택합니다.](/help/images/icons/filter.png)) 검색 필드의 왼쪽에 있는 다음 나타나는 왼쪽 레일에서 **[!UICONTROL 임시 스키마 표시]를 선택합니다.
+Experience Platform UI에서 임시 스키마 표시를 활성화하려면 필터 아이콘(![필터 아이콘)을 선택합니다.](/help/images/icons/filter.png)) 검색 필드의 왼쪽에 있는 다음 나타나는 왼쪽 레일에서 **[!UICONTROL 임시 스키마 표시]를 선택합니다.
 
 ![스키마 대시보드 필터 옵션이 &#39;임시 스키마 표시&#39; 토글이 활성화된 왼쪽 레일입니다.](../images/data-governance/adhoc-schema-toggle.png)
 

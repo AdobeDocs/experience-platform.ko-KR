@@ -2,19 +2,19 @@
 title: RainFocus 참가자 프로필
 description: RainFocus Attendee Profiles 대상 커넥터를 사용하여 대상 프로필을 RainFocus 전역 Attendee 프로필과 동기화하는 방법에 대해 알아봅니다.
 last-substantial-update: 2024-12-17T00:00:00Z
-source-git-commit: a3dcf49d3ed9afacd3ffef10d6f280c71ebdf584
+exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1000'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
-
 
 # RainFocus 참가자 프로필 {#rainfocus-destination}
 
 ## 개요 {#overview}
 
-[!DNL RainFocus Attendee Profiles] 대상을 사용하여 참석자 프로필을 만들고 업데이트하려면 Adobe Experience Platform에서 [!DNL RainFocus] 플랫폼으로 고객 프로필을 스트리밍하십시오.
+[!DNL RainFocus Attendee Profiles] 대상을 사용하여 Adobe Experience Platform에서 [!DNL RainFocus] 플랫폼으로 고객 프로필을 스트리밍하여 참석자 프로필을 만들고 업데이트할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,7 @@ RainFocus 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있�
 
 ### 사용 사례 #2 {#use-case-2}
 
-금융 서비스 브랜드는 신규 고객과 기존 고객을 대상으로 하는 일련의 로드쇼를 개최할 예정이다. Adobe Experience Platform에는 Target 고객이 있는 일련의 대상 세그먼트가 있습니다. [!DNL RainFocus] 대상 커넥터를 사용하면 활성화를 위해 해당 프로필을 [!DNL RainFocus](으)로 쉽게 보낼 수 있습니다.
+금융 서비스 브랜드는 신규 고객과 기존 고객을 대상으로 하는 일련의 로드쇼를 개최할 예정이다. Adobe Experience Platform에는 Target 고객이 있는 일련의 대상 세그먼트가 있습니다. [!DNL RainFocus] 대상 커넥터를 사용하면 활성화를 위해 해당 프로필을 [!DNL RainFocus]&#x200B;(으)로 쉽게 보낼 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -48,7 +48,7 @@ RainFocus 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있�
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
 
 {style="table-layout:auto"}
 
@@ -58,8 +58,8 @@ RainFocus 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있�
 
 | 대상자 원본 | 지원됨 | 설명 |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -70,7 +70,7 @@ RainFocus 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있�
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
 | 내보내기 유형 | **[!UICONTROL 프로필 기반]** | [대상 활성화 워크플로](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)의 프로필 특성 선택 화면에서 선택한 대로 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성)와 함께 세그먼트의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -146,7 +146,7 @@ RainFocus 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있�
 
 ## 내보낸 데이터/데이터 내보내기 유효성 검사 {#exported-data}
 
-프로필 집합이 [!DNL RainFocus](으)로 전송되면 [!DNL RainFocus]의 API 프로필 로깅을 사용하여 프로필이 성공적으로 수집되었는지 확인하십시오.
+프로필 집합이 [!DNL RainFocus]&#x200B;(으)로 전송되면 [!DNL RainFocus]의 API 프로필 로깅을 사용하여 프로필이 성공적으로 수집되었는지 확인하십시오.
 
 ![RainFocus에서 API 프로필의 로그 보기](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-profile.png)
 

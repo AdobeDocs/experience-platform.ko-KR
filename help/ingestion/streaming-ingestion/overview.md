@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스트리밍 수집 개요
 description: Adobe Experience Platform용 스트리밍 수집은 클라이언트 및 서버측 장치에서 실시간으로 Experience Platform으로 데이터를 전송하는 방법을 사용자에게 제공합니다.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Adobe Experience Platform을 사용하면 각 개별 고객에 대해 [!DNL Real
 
 ### 프로필 레코드 및 [!DNL ExperienceEvents] 스트리밍
 
-스트리밍 수집을 통해 사용자는 프로필 레코드와 [!DNL ExperienceEvents]을(를) [!DNL Platform]에 초 단위로 스트리밍하여 실시간 개인화를 촉진할 수 있습니다. 스트리밍 수집 API로 전송된 모든 데이터는 자동으로 [!DNL Data Lake]에 유지됩니다.
+스트리밍 수집을 통해 사용자는 프로필 레코드와 [!DNL ExperienceEvents]을(를) [!DNL Experience Platform]에 초 단위로 스트리밍하여 실시간 개인화를 촉진할 수 있습니다. 스트리밍 수집 API로 전송된 모든 데이터는 자동으로 [!DNL Data Lake]에 유지됩니다.
 
 자세한 내용은 [스트리밍 연결 가이드 만들기](../tutorials/create-streaming-connection.md)를 참조하십시오.
 

@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Edge Network 및 허브 비교
+title: Edge 네트워크와 허브 비교
 description: Adobe Experience Platform에서 사용할 수 있는 다양한 처리 경로에 대해 알아봅니다.
-source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
+exl-id: 3e9c63d2-c798-44b4-870d-bf1551f29690
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 2%
+source-wordcount: '713'
+ht-degree: 3%
 
 ---
 
+# Edge 네트워크와 허브 비교
 
-# Edge Network 및 허브 비교
-
-Adobe Experience Platform은 고객 경험을 주도하는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. Experience Platform을 사용하여 모든 시스템의 고객 데이터와 콘텐츠를 중앙 집중화 및 표준화하고 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험의 디자인과 전달을 획기적으로 향상시킬 수 있습니다. 따라서 Platform에는 데이터를 처리하는 여러 가지 방법이 있으므로 데이터를 가능한 한 가장 적합한 방법으로 평가할 수 있습니다.
+Adobe Experience Platform은 고객 경험을 주도하는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. Experience Platform을 사용하여 모든 시스템의 고객 데이터와 콘텐츠를 중앙 집중화 및 표준화하고 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험의 디자인과 전달을 획기적으로 향상시킬 수 있습니다. 따라서 Experience Platform에는 데이터를 처리하는 여러 가지 방법이 있으므로 데이터를 가능한 한 가장 적합한 방법으로 평가할 수 있습니다.
 
 ## 서버 유형
 
-플랫폼에서 데이터를 두 가지 다른 경로, 즉 일괄 처리 및 스트리밍 워크플로우를 위한 Adobe Experience Platform 허브와 실시간 경험을 위한 Edge Network으로 처리할 수 있습니다.
+Experience Platform에서 데이터는 일괄 처리 및 스트리밍 워크플로우를 위한 Adobe Experience Platform 허브와 실시간 경험을 위한 Edge Network의 두 가지 경로로 처리될 수 있습니다.
 
 ### Adobe Experience Platform 허브
 

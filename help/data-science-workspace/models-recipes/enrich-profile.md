@@ -5,9 +5,9 @@ title: 머신 러닝 인사이트를 통해 실시간 고객 프로필 강화
 type: Tutorial
 description: 이 문서에서는 머신 러닝 통찰력을 통해 실시간 고객 프로필을 보강하는 방법에 대한 안내서를 제공합니다.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,8 @@ Adobe Experience Platform [!DNL Data Science Workspace]은(는) 데이터 예측
 아래 튜토리얼을 완료하려면 [!DNL Profile] 데이터 수집 및 대상 만들기에 대한 작업 이해가 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 각 개별 고객에 대한 완전한 통합 표현을 제공합니다.
-- [[!DNL Identity Service]](../../identity-service/home.md): 플랫폼에 수집되는 서로 다른 데이터 원본의 ID를 연결하여 [!DNL Real-Time Customer Profile]을(를) 사용하도록 설정합니다.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 플랫폼이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [[!DNL Identity Service]](../../identity-service/home.md): Experience Platform에 수집되는 서로 다른 데이터 소스의 ID를 브리징하여 [!DNL Real-Time Customer Profile]을(를) 활성화합니다.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 
 위에서 언급한 문서 외에도 스키마 및 스키마 편집기에 대해 다음 안내서도 검토하는 것이 좋습니다.
 

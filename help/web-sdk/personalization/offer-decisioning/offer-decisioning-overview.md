@@ -1,16 +1,16 @@
 ---
-title: Platform Web SDK에서 Offer Decisioning 사용
+title: Experience Platform Web SDK과 함께 Offer Decisioning 사용
 description: Adobe Experience Platform Web SDK은 Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. Offer Decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
-keywords: offer decisioning;decisioning;웹 SDK;Platform Web SDK;개인화된 오퍼;오퍼 게재;오퍼 게재;오퍼 개인화;
+keywords: offer decisioning;decisioning;웹 SDK;Experience Platform Web SDK;개인화된 오퍼;오퍼 게재;오퍼 게재;오퍼 개인화;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: b2c3b1160782a81ea66f42e21e494e0a7d90e037
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '799'
 ht-degree: 3%
 
 ---
 
-# Platform Web SDK에서 Offer Decisioning 사용
+# Experience Platform Web SDK과 함께 Offer Decisioning 사용
 
 Adobe Experience Platform [!DNL Web SDK]은(는) Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. Offer Decisioning UI(사용자 인터페이스) 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 
@@ -49,7 +49,7 @@ Offer Decisioning을 사용하여 작업할 때는 다음 용어를 이해하는
 
 * **데이터스트림:** 자세한 내용은 [데이터스트림](/help/datastreams/overview.md) 설명서를 참조하십시오.
 
-* **ID**: 자세한 내용은 [Platform Web SDK에서 ID 서비스를 사용하는 방법](../../identity/overview.md)에 대한 개요를 설명하는 이 설명서를 참조하십시오.
+* **ID**: 자세한 내용은 [Experience Platform Web SDK에서 ID 서비스를 사용하는 방법](../../identity/overview.md)에 대한 개요를 설명하는 이 설명서를 참조하십시오.
 
 ## Offer Decisioning 활성화
 
@@ -82,13 +82,13 @@ Offer Decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
       1. [태그 속성 만들기](/help/tags/ui/administration/companies-and-properties.md)
       1. [포함 코드 추가](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. &quot;데이터스트림&quot; 드롭다운에서 구성을 선택하여 생성한 데이터스트림으로 Platform Web SDK 확장 프로그램을 설치하고 구성합니다. [확장](/help/tags/ui/managing-resources/extensions/overview.md)에 대한 설명서를 참조하세요.
+      1. &quot;데이터스트림&quot; 드롭다운에서 구성을 선택하여 생성한 데이터스트림으로 Experience Platform Web SDK 확장 프로그램을 설치하고 구성합니다. [확장](/help/tags/ui/managing-resources/extensions/overview.md)에 대한 설명서를 참조하세요.
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. 필요한 [데이터 요소](/help/tags/ui/managing-resources/data-elements.md)를 만듭니다. 최소한 Platform Web SDK ID 맵 및 Platform Web SDK XDM 개체 데이터 요소를 만들어야 합니다.
+      1. 필요한 [데이터 요소](/help/tags/ui/managing-resources/data-elements.md)를 만듭니다. 최소한 Experience Platform 웹 SDK ID 맵 및 Experience Platform 웹 SDK XDM 개체 데이터 요소를 만들어야 합니다.
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
@@ -96,7 +96,7 @@ Offer Decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
       1. [규칙](/help/tags/ui/managing-resources/rules.md)을 만듭니다.
 
-         * Platform Web SDK 이벤트 보내기 작업을 추가하고 해당 작업의 구성에 관련 `decisionScopes`을(를) 추가합니다.
+         * Experience Platform Web SDK 이벤트 보내기 작업을 추가하고 해당 작업의 구성에 관련 `decisionScopes`을(를) 추가합니다.
 
          ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
 

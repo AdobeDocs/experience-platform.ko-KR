@@ -2,11 +2,11 @@
 keywords: 통찰력;기여도 ai;기여도 ai 통찰력;AAI 쿼리 서비스;기여도 쿼리;기여도 점수
 feature: Attribution AI
 title: 쿼리 서비스를 사용한 속성 점수 분석
-description: Adobe Experience Platform 쿼리 서비스를 사용하여 Attribution AI 점수를 분석하는 방법을 알아봅니다.
+description: Adobe Experience Platform 쿼리 서비스를 사용하여 기여도 AI 점수를 분석하는 방법에 대해 알아봅니다.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 | ---------------------- | ------ |
 | 접점 이름 | `touchpointsDetail. touchpointName` |
 | 접점 채널 | `touchpointsDetail.touchPoint.mediaChannel` |
-| 접점 Attribution AI 알고리즘 점수 | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| 접점 기여도 AI 알고리즘 점수 | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## 데이터 경로 찾기
 
-Adobe Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 데이터 세트]**&#x200B;를 선택합니다. **[!UICONTROL 데이터 세트]** 페이지가 나타납니다. 그런 다음 **[!UICONTROL 찾아보기]** 탭을 선택하고 Attribution AI 점수에 대한 출력 데이터 세트를 찾습니다.
+Adobe Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 데이터 세트]**&#x200B;를 선택합니다. **[!UICONTROL 데이터 세트]** 페이지가 나타납니다. 그런 다음 **[!UICONTROL 찾아보기]** 탭을 선택하고 기여도 AI 점수에 대한 출력 데이터 세트를 찾습니다.
 
 ![모델에 액세스](./images/aai-query/datasets_browse.png)
 
@@ -45,7 +45,7 @@ Adobe Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 데이터 세�
 
 ## 쿼리 서비스 액세스
 
-Platform UI 내에서 쿼리 서비스에 액세스하려면 왼쪽 탐색에서 **[!UICONTROL 쿼리]**&#x200B;를 선택한 다음 **[!UICONTROL 찾아보기]** 탭을 선택하십시오. 이전에 저장한 쿼리 목록이 로드됩니다.
+Experience Platform UI 내에서 쿼리 서비스에 액세스하려면 왼쪽 탐색에서 **[!UICONTROL 쿼리]**&#x200B;를 선택한 다음 **[!UICONTROL 찾아보기]** 탭을 선택하십시오. 이전에 저장한 쿼리 목록이 로드됩니다.
 
 ![쿼리 서비스 찾아보기](./images/aai-query/query_tab.png)
 
@@ -305,7 +305,7 @@ Platform UI 내에서 쿼리 서비스에 액세스하려면 왼쪽 탐색에서
 
 >[!TIP]
 >
-> 이 예제에서는 `_tenantId` 및 `your_score_output_dataset` 외에 `{COLUMN_NAME}`을(를) 바꾸어야 합니다. `COLUMN_NAME` 변수는 Attribution AI 모델을 구성하는 동안 추가된 선택적 통과 열 이름(보고 열)의 값을 사용할 수 있습니다. 채점 출력 스키마를 검토하여 이 쿼리를 완료하는 데 필요한 `{COLUMN_NAME}` 값을 찾으십시오.
+> 이 예제에서는 `_tenantId` 및 `your_score_output_dataset` 외에 `{COLUMN_NAME}`을(를) 바꾸어야 합니다. `COLUMN_NAME` 변수는 기여도 AI 모델을 구성하는 동안 추가된 선택적 통과 열 이름(보고 열)의 값을 사용할 수 있습니다. 채점 출력 스키마를 검토하여 이 쿼리를 완료하는 데 필요한 `{COLUMN_NAME}` 값을 찾으십시오.
 
 ```sql
 SELECT 

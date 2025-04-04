@@ -2,9 +2,9 @@
 title: Salesforce Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1593'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >이제 Amazon Web Services(AWS)에서 Adobe Experience Platform을 실행할 때 [!DNL Salesforce] 소스를 사용할 수 있습니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../landing/multi-cloud.md)를 참조하세요.
 
-Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 Experience Platform은 서드파티 CRM 시스템에서 데이터 수집을 지원합니다. CRM 공급자에 대한 지원에는 [!DNL Salesforce]이(가) 포함됩니다.
 
@@ -29,9 +29,9 @@ Azure에서 Experience Platform에 대한 [!DNL Salesforce] 계정을 설정하�
 
 ### [!DNL Salesforce]에서 XDM으로 필드 매핑
 
-[!DNL Salesforce]과(와) 플랫폼 간에 소스 연결을 설정하려면 [!DNL Salesforce] 소스 데이터 필드를 플랫폼으로 수집하기 전에 해당 대상 XDM 필드에 매핑해야 합니다.
+[!DNL Salesforce]과(와) Experience Platform 간에 소스 연결을 설정하려면 Experience Platform에 수집되기 전에 [!DNL Salesforce] 소스 데이터 필드를 해당 대상 XDM 필드에 매핑해야 합니다.
 
-[!DNL Salesforce] 데이터 세트와 플랫폼 간의 필드 매핑 규칙에 대한 자세한 내용은 다음을 참조하세요.
+[!DNL Salesforce] 데이터 세트와 Experience Platform 간의 필드 매핑 규칙에 대한 자세한 내용은 다음을 참조하세요.
 
 - [연락처](../adobe-applications/mapping/salesforce.md#contact)
 - [잠재 고객](../adobe-applications/mapping/salesforce.md#lead)
@@ -47,11 +47,11 @@ Azure에서 Experience Platform에 대한 [!DNL Salesforce] 계정을 설정하�
 [!DNL Salesforce] 소스를 [!DNL B2B-CDP]의 일부로 사용하려면 먼저 [!DNL Postman] 유틸리티를 설정하여 [!DNL Salesforce] 네임스페이스 및 스키마를 자동 생성해야 합니다. 다음 설명서는 [!DNL Postman] 유틸리티 설정에 대한 추가 정보를 제공합니다.
 
 - 이 [GitHub 저장소](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility)에서 네임스페이스와 스키마 자동 생성 유틸리티 컬렉션 및 환경을 다운로드할 수 있습니다.
-- 필요한 헤더에 대한 값을 수집하고 샘플 API 호출을 읽는 방법에 대한 세부 정보를 포함하여 Platform API 사용에 대한 자세한 내용은 [Platform API 시작하기](../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
-- Platform API에 대한 자격 증명을 생성하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md)에 대한 자습서를 참조하십시오.
-- 플랫폼 API용 [!DNL Postman]을(를) 설정하는 방법에 대한 자세한 내용은 [개발자 콘솔 설정 및 [!DNL Postman]](../../../landing/postman.md)에 대한 자습서를 참조하십시오.
+- 필요한 헤더에 대한 값을 수집하고 샘플 API 호출을 읽는 방법에 대한 세부 정보를 포함하여 Experience Platform API 사용에 대한 자세한 내용은 [Experience Platform API 시작](../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+- Experience Platform API에 대한 자격 증명을 생성하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md)에 대한 자습서를 참조하십시오.
+- Experience Platform API용 [!DNL Postman]을(를) 설정하는 방법에 대한 자세한 내용은 [개발자 콘솔 설정 및 [!DNL Postman]](../../../landing/postman.md)에 대한 자습서를 참조하십시오.
 
-Platform 개발자 콘솔과 [!DNL Postman]을(를) 설정하면 이제 [!DNL Postman] 환경에 적절한 환경 값을 적용할 수 있습니다.
+이제 Experience Platform 개발자 콘솔과 [!DNL Postman]을(를) 설정하여 [!DNL Postman] 환경에 적절한 환경 값을 적용할 수 있습니다.
 
 +++변수 테이블 안내서 보기
 
@@ -269,15 +269,15 @@ public class Main {
 
 [!DNL Salesforce] 계정에 대한 필수 구성 요소 설정을 완료했으면 계속해서 [!DNL Salesforce] 계정을 Experience Platform에 연결하고 CRM 데이터를 수집할 수 있습니다. 자세한 내용은 아래 설명서를 참조하십시오.
 
-### API를 사용하여 [!DNL Salesforce]을(를) 플랫폼에 연결
+### API를 사용하여 [!DNL Salesforce]을(를) Experience Platform에 연결
 
-아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Salesforce]을(를) 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Salesforce]을(를) Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
 
 - [흐름 서비스 API를 사용하여 Salesforce을 Experience Platform에 연결](../../tutorials/api/create/crm/salesforce.md)
 - [흐름 서비스 API를 사용하여 데이터 테이블 탐색](../../tutorials/api/explore/tabular.md)
 - [흐름 서비스 API를 사용하여 CRM 소스의 데이터 흐름 만들기](../../tutorials/api/collect/crm.md)
 
-### UI를 사용하여 [!DNL Salesforce]을(를) 플랫폼에 연결
+### UI를 사용하여 [!DNL Salesforce]을(를) Experience Platform에 연결
 
 - [UI에서 Salesforce 소스 연결 만들기](../../tutorials/ui/create/crm/salesforce.md)
 - [UI에서 CRM 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/crm.md)

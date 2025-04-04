@@ -1,10 +1,10 @@
 ---
-title: UI에서 Source 연결 및 데이터 흐름 Marketo Engage 만들기
+title: UI에서 Marketo Engage Source 연결 및 데이터 흐름 만들기
 description: 이 자습서에서는 B2B 데이터를 Adobe Experience Platform으로 가져오기 위해 UI에서 Marketo Engage 소스 연결 및 데이터 흐름을 만드는 단계를 제공합니다.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 744098777141c61ac27fe6f150c05469d5705dee
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1836'
 ht-degree: 2%
 
 ---
@@ -15,23 +15,23 @@ ht-degree: 2%
 >
 >[!DNL Marketo Engage] 소스 연결 및 데이터 흐름을 만들기 전에 먼저 [!DNL Marketo]에서 [Adobe 조직 ID를 매핑](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html)했는지 확인해야 합니다. 또한 소스 연결 및 데이터 흐름을 만들기 전에 [B [!DNL Marketo] B2B 네임스페이스와 스키마 ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) 자동 채우기를 완료했는지 확인해야 합니다.
 
-이 자습서에서는 B2B 데이터를 Adobe Experience Platform으로 가져오기 위해 UI에서 [!DNL Marketo Engage](이하 &quot;[!DNL Marketo]&quot;) 소스 커넥터를 만드는 단계를 제공합니다.
+이 자습서에서는 B2B 데이터를 Adobe Experience Platform으로 가져오기 위해 UI에서 [!DNL Marketo Engage]&#x200B;(이하 &quot;[!DNL Marketo]&quot;) 소스 커넥터를 만드는 단계를 제공합니다.
 
 ## 시작하기
 
 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
 * [B2B 네임스페이스 및 스키마 자동 생성 유틸리티](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): B2B 네임스페이스 및 스키마 자동 생성 유틸리티를 사용하면 [!DNL Postman]을(를) 사용하여 B2B 네임스페이스 및 스키마에 대한 값을 자동 생성할 수 있습니다. [!DNL Marketo] 원본 연결 및 데이터 흐름을 만들기 전에 먼저 B2B 네임스페이스와 스키마를 완료해야 합니다.
-* [소스](../../../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [XDM(경험 데이터 모델)](../../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [XDM(경험 데이터 모델)](../../../../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [UI에서 스키마를 만들고 편집](../../../../../xdm/ui/resources/schemas.md): UI에서 스키마를 만들고 편집하는 방법에 대해 알아봅니다.
 * [ID 네임스페이스](../../../../../identity-service/features/namespaces.md): ID 네임스페이스는 [!DNL Identity Service]의 구성 요소이며 ID와 관련된 컨텍스트의 지표 역할을 합니다. 정규화된 ID에는 ID 값과 네임스페이스가 포함됩니다.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 ### 필요한 자격 증명 수집
 
-Experience Platform 시 [!DNL Marketo] 계정에 액세스하려면 다음 값을 제공해야 합니다.
+Experience Platform에서 [!DNL Marketo] 계정에 액세스하려면 다음 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | ---- | ---- |
@@ -45,7 +45,7 @@ Experience Platform 시 [!DNL Marketo] 계정에 액세스하려면 다음 값�
 
 ## [!DNL Marketo] 계정 연결
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
 *Adobe 응용 프로그램* 범주에서 **[!UICONTROL Marketo Engage]**&#x200B;을 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
 
@@ -53,7 +53,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 >
 >지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL 설정]** 옵션이 표시됩니다. 인증된 계정이 있으면 이 옵션이 **[!UICONTROL 데이터 추가]**(으)로 변경됩니다.
 
-![Marketo Engage 원본이 있는 원본 카탈로그를 선택했습니다.](../../../../images/tutorials/create/marketo/catalog.png)
+![Marketo Engage 소스가 있는 소스 카탈로그를 선택했습니다.](../../../../images/tutorials/create/marketo/catalog.png)
 
 **[!UICONTROL Marketo Engage 계정 연결]** 페이지가 나타납니다. 이 페이지에서 새 계정을 사용하거나 기존 계정에 액세스할 수 있습니다.
 
@@ -124,7 +124,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 Real-Time Customer Profile에 대해 데이터 세트를 사용하도록 설정한 경우 이 단계에서 **[!UICONTROL 프로필 데이터 세트]**&#x200B;를 전환하여 프로필 수집을 위해 데이터를 사용하도록 설정할 수 있습니다. 이 단계를 사용하여 **[!UICONTROL 오류 진단]** 및 **[!UICONTROL 부분 수집]**&#x200B;을 사용하도록 설정할 수도 있습니다.
 
 * **[!UICONTROL 오류 진단]**: **[!UICONTROL 오류 진단]**&#x200B;을 선택하여 데이터 집합 활동 및 데이터 흐름 상태를 모니터링할 때 나중에 참조할 수 있는 오류 진단을 생성하도록 소스에 지시합니다.
-* **[!UICONTROL 부분 수집]**: [부분 일괄 처리 수집](../../../../../ingestion/batch-ingestion/partial.md)은(는) 구성 가능한 특정 임계값까지 오류가 포함된 데이터를 수집하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Experience Platform으로 성공적으로 수집할 수 있으며 잘못된 데이터는 모두 잘못된 이유에 대한 정보로 별도로 배치됩니다.
+* **[!UICONTROL 부분 수집]**: [부분 일괄 처리 수집](../../../../../ingestion/batch-ingestion/partial.md)은(는) 구성 가능한 특정 임계값까지 오류가 포함된 데이터를 수집하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Experience Platform에 성공적으로 수집할 수 있으며 잘못된 데이터는 모두 잘못된 이유에 대한 정보로 별도로 배치됩니다.
 
 이 단계에서는 **[!UICONTROL 샘플 데이터 흐름]**&#x200B;을 사용하도록 설정하여 데이터 수집을 제한하고 개인 ID를 포함한 모든 이전 데이터를 수집할 때 발생하는 추가 비용을 방지할 수 있습니다.
 
@@ -132,7 +132,7 @@ Real-Time Customer Profile에 대해 데이터 세트를 사용하도록 설정�
 
 **샘플 데이터 흐름 사용에 대한 빠른 안내**
 
-샘플 데이터 흐름은 [!DNL Marketo] 데이터 흐름에 대해 설정하여 수집 속도를 제한한 다음 대량의 데이터를 수집하지 않고도 Experience Platform 기능을 사용할 수 있는 구성입니다.
+샘플 데이터 흐름은 [!DNL Marketo] 데이터 흐름에 대해 설정하여 수집 속도를 제한한 다음 많은 양의 데이터를 수집하지 않고도 Experience Platform 기능을 사용할 수 있는 구성입니다.
 
 * 최대 100k(가장 큰 레코드 ID에서)의 레코드 또는 채우기 작업 중 마지막 10일까지 활동을 수집하여 내역 데이터를 제한하는 샘플 데이터 흐름을 활성화합니다.
 * 모든 B2B 엔티티에 대해 샘플 데이터 흐름 구성을 사용할 때는 소스 데이터의 전체 기록이 수집되지 않기 때문에 일부 관련 레코드가 누락될 수 있음을 고려해야 합니다.
@@ -203,11 +203,11 @@ Real-Time Customer Profile에 대해 데이터 세트를 사용하도록 설정�
 
 ### UI의 오류 메시지 {#error-messages}
 
-플랫폼에서 설정 문제를 감지하면 UI에 다음 오류 메시지가 표시됩니다.
+Experience Platform에서 설정과 관련된 문제를 감지하면 UI에 다음 오류 메시지가 표시됩니다.
 
 #### [!DNL Munchkin ID]이(가) 적절한 조직에 매핑되지 않았습니다.
 
-[!DNL Munchkin ID]이(가) 사용 중인 Platform 조직에 매핑되지 않으면 인증이 거부됩니다. [[!DNL Marketo] 인터페이스](https://app-sjint.marketo.com/#MM0A1)를 사용하여 [!DNL Munchkin ID]과(와) 조직 간의 매핑을 구성하십시오.
+[!DNL Munchkin ID]이(가) 사용 중인 Experience Platform 조직에 매핑되지 않으면 인증이 거부됩니다. [[!DNL Marketo] 인터페이스](https://app-sjint.marketo.com/#MM0A1)를 사용하여 [!DNL Munchkin ID]과(와) 조직 간의 매핑을 구성하십시오.
 
 ![Marketo 인스턴스가 Adobe 조직에 올바르게 매핑되지 않았음을 나타내는 오류 메시지입니다.](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
 

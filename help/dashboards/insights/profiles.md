@@ -2,9 +2,9 @@
 title: 프로필 인사이트
 description: 프로필 인사이트를 제공하는 SQL을 살펴보고 이러한 쿼리를 사용하여 고객 및 고객 경험을 추가로 살펴보는 사용자 지정 인사이트를 생성하십시오.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1660'
 ht-degree: 3%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 3%
 
 프로필을 구동하는 SQL에 액세스하여 프로필 인사이트를 파악한 다음 고유한 인사이트를 생성하여 프로필을 구성하는 고객 및 소비자 경험을 더욱 탐색합니다. 기존 Real-Time CDP 데이터 모델 SQL을 영감으로 사용하여 원시 데이터를 새로운 실행 가능한 통찰력으로 변환하여 고유한 비즈니스 요구 사항에 맞는 쿼리를 만듭니다.
 
-플랫폼 UI를 통해 인사이트의 SQL을 직접 조정하는 방법에 대한 자세한 내용은 [SQL 보기 설명서](../view-sql.md)를 참조하십시오.
+Experience Platform UI를 통해 인사이트의 SQL을 직접 조정하는 방법에 대한 자세한 내용은 [SQL 보기 설명서](../view-sql.md)를 참조하십시오.
 
 다음 인사이트는 모두 [프로필 대시보드](../guides/profiles.md) 또는 사용자 지정 [사용자 정의 대시보드](../standard-dashboards.md)의 일부로 사용할 수 있습니다. 위젯 라이브러리 및 [사용자 정의 대시보드](../standard-dashboards.md#create-widget)에서 대시보드를 사용자 정의하거나 [새 위젯을 만들고 편집](../customize/custom-widgets.md)하는 방법에 대한 지침은 [사용자 정의 개요](../customize/overview.md)를 참조하세요.
 
 ## 병합 정책별 대상자 중복 {#audience-overlap-by-merge-policy}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 두 대상에 공통되는 프로필은 무엇입니까?
 - 중복은 참여 또는 전환율에 어떤 영향을 줍니까?
 - 겹치는 세그먼트에 맞게 마케팅 전략을 어떻게 조정할 수 있습니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -64,17 +64,17 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [병합 정책 위젯별 대상 겹치기 설명서](../guides/profiles.md#audience-overlap-by-merge-policy)를 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [병합 정책 위젯별 대상 겹치기 설명서](../guides/profiles.md#audience-overlap-by-merge-policy)를 참조하십시오.
 
 ## 대상자 오버랩 보고서 {#audience-overlap-report}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 가장 겹치는 50명의 대상은 무엇입니까?
 - 가장 중복이 적은 50명의 대상은 무엇입니까?
 - 병합 정책별로 중복 패턴은 어떻게 변경됩니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT source_segment_name,
@@ -131,17 +131,17 @@ SELECT source_segment_name,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 중복 보고서 위젯 설명서](../guides/profiles.md#audience-overlap-report)를 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [대상 중복 보고서 위젯 설명서](../guides/profiles.md#audience-overlap-report)를 참조하십시오.
 
 ## 대상자(수) {#audiences}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 주로 세그먼테이션에 사용되는 병합 정책은 무엇입니까?
 - 병합 정책 간 대상 분포는 무엇입니까?
 - 시간이 지남에 따라 특정 병합 정책에 대한 대상 수에 중요한 변화가 있습니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT count(DISTINCT a.segment_id) count_of_segments
@@ -159,18 +159,18 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-이 인사이트의 모양과 기능에 대한 자세한 내용은 [대상 위젯 설명서](../guides/profiles.md#audiences)를 참조하세요.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [대상 위젯 설명서](../guides/profiles.md#audiences)를 참조하세요.
 
 ## 대상 상태에 매핑된 대상자 그룹 {#audiences-mapped-to-destination-status}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 매핑된 대상과 매핑되지 않은 대상 간의 전체 대상자 분포는 어떻게 됩니까?
 - 매핑된 대상자 수가 가장 많은 특정 대상은 무엇입니까?
 - 매핑되지 않은 상태로 남아 있는 전체 대상의 비율은 얼마입니까?
 - 매핑되지 않은 이러한 대상자 중 패턴이나 관련 트렌드가 있습니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
@@ -191,17 +191,17 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 상태 위젯 설명서에 매핑된 대상](../guides/profiles.md#audiences-mapped-to-destination-status)을(를) 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [대상 상태 위젯에 매핑된 대상 설명서](../guides/profiles.md#audiences-mapped-to-destination-status)를 참조하십시오.
 
 ## 대상자 크기 {#audiences-size}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 가장 큰 크기를 갖는 대상 세그먼트는 무엇입니까?
 - 가장 많은 5명의 대상자는 어디입니까?
 - 최상위 대상의 대상 크기 분포는 시간에 따라 어떻게 변경됩니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
@@ -224,17 +224,17 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 크기 위젯 설명서](../guides/profiles.md#audiences-size)를 참조하세요.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [대상 크기 위젯 설명서](../guides/profiles.md#audiences-size)를 참조하세요.
 
 ## 고객 AI 점수 분포 {#customer-ai-distribution-of-scores}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 각 고객 AI 모델에 대한 버킷 간 점수 분포는 무엇입니까?
 - 고, 중, 저점수별 점수의 분포는 어떠한가?
 - 병합 정책별 채점 분포의 분류는 무엇입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT b.model_name,
@@ -361,17 +361,17 @@ SELECT b.model_name,
 
 +++
 
-이 인사이트의 모양과 기능에 대한 자세한 내용은 [점수 위젯 설명서의 고객 AI 배포](../guides/profiles.md#customer-ai-distribution-of-scores)를 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [점수 위젯의 고객 AI 배포 설명서](../guides/profiles.md#customer-ai-distribution-of-scores)를 참조하십시오.
 
 ## 고객 AI 점수 요약 {#customer-ai-scoring-summary}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 각 고객 AI 모델에 대한 점수 요약은 무엇입니까?
 - 다양한 대상에 대해 내 고객 AI 성향 점수는 어떻게 변경됩니까?
 - 프로필 개요에서 다른 KPI와 비교하여 채점 요약은 어떻게 변경됩니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT model_name,
@@ -402,18 +402,18 @@ SELECT model_name,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [Customer AI 채점 요약 위젯 설명서](../guides/profiles.md#customer-ai-scoring-summary)를 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [Customer AI 채점 요약 위젯 설명서](../guides/profiles.md#customer-ai-scoring-summary)를 참조하십시오.
 
 ## ID 중첩 {#identity-overlap}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - [!UICONTROL ID 유형 A]과(와) [!UICONTROL ID 유형 B] 간의 일반적인 교집합은 무엇입니까?
 - 특정 ID 유형의 중복을 기반으로 고객 대상을 세분화하여 타깃팅된 마케팅 전략을 향상하려면 어떻게 해야 합니까?
 - 교차하는 영역 내에서 캠페인 성과를 평가함으로써 얻을 수 있는 통찰력은 무엇입니까?
-- 이 캠페인 성과 인사이트를 사용하여 향후 마케팅 노력을 최적화하는 방법은 무엇입니까?
+- 이 캠페인 성과 insight을 사용하여 향후 마케팅 노력을 최적화하려면 어떻게 해야 합니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -459,13 +459,13 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [ID 중복 위젯 설명서](../guides/profiles.md#identity-overlap)를 참조하세요.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [Identity Overlap Widget 설명서](../guides/profiles.md#identity-overlap)를 참조하십시오.
 
 ## 프로필 개수 {#profile-count}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
-- Adobe Real-time Customer Data Platform의 전체 프로필 수는 얼마입니까?
+- Adobe Real-Time Customer Data Platform의 전체 프로필 수는 얼마입니까?
 - 병합 정책을 기반으로 프로필이 배포되는 방법은 무엇입니까?
 - 프로필 수가 가장 많은 병합 정책은 무엇입니까?
 
@@ -481,19 +481,19 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-이 인사이트의 모양 및 기능에 대한 전체 정보는 [프로필 개수 위젯 가이드](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count)에서 찾을 수 있습니다.
+이 insight의 모양 및 기능에 대한 전체 정보는 [프로필 개수 위젯 안내서](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count)에서 확인할 수 있습니다.
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 위젯 설명서](../guides/profiles.md#profile-count)를 참조하세요.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 위젯 설명서](../guides/profiles.md#profile-count)를 참조하세요.
 
 ## 프로필 개수 변경 {#profile-count-change}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 전체 프로필 수 변경의 트렌드는 무엇입니까?
 - 프로필 수가 크게 증가 또는 감소한 원인은 무엇입니까?
 - 프로필 개수 변경을 유도하는 특정 병합 정책이 있습니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
@@ -528,17 +528,17 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 변경 위젯 설명서](../guides/profiles.md#profile-count-change)를 참조하세요.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 변경 위젯 설명서](../guides/profiles.md#profile-count-change)를 참조하세요.
 
 ## 프로필 개수 변경 트렌드 {#profile-count-change-trend}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 병합 정책을 기준으로 지난 12개월 동안 프로필 개수 변경의 전체 트렌드는 무엇입니까?
 - 지난 30일 이내에 주의가 필요한 프로필 개수 변경에 특정 패턴이나 변동이 있습니까?
 - 지난 90일 동안의 프로필 수는 전체 추세와 비교하여 어떻게 변경됩니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT date_key,
@@ -562,18 +562,18 @@ SELECT date_key,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 변경 트렌드 위젯 설명서](../guides/profiles.md#profile-count-change-trend)를 참조하세요.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 변경 트렌드 위젯 설명서](../guides/profiles.md#profile-count-change-trend)를 참조하세요.
 
 ## 프로필 개수 트렌드 {#profile-count-trend}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 지난 30일 동안의 병합 정책을 기반으로 하는 프로필 수의 전반적인 트렌드는 무엇입니까?
 - 이 트렌드를 기반으로 장기 트렌드(예: 90일 및 12개월)와 어떻게 비교합니까?
 - 지정된 기간(30일, 90일 및 12개월) 동안 프로필 수 증감에 가장 큰 기여를 하는 병합 정책은 무엇입니까?
 - 30일 기간 내에 특정 이벤트 또는 기간과 상호 작용하는 프로필 수에 특정 스파이크나 드롭이 있습니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT date_key,
@@ -593,18 +593,18 @@ SELECT date_key,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 트렌드 위젯 설명서](../guides/profiles.md#profile-count-trend)를 참조하세요.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 트렌드 위젯 설명서](../guides/profiles.md#profile-count-trend)를 참조하세요.
 
 ## ID별 프로필 {#profiles-by-identity}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 전체 프로필 수 중에서 어떤 ID 유형이 더 높은 비율을 차지합니까?
 - 정체성 유형 간에 상당한 차이가 있습니까?
 - ID 유형의 전체 분포는 무엇입니까?
 - ID 수에 중요한 차이점이나 예외 항목이 있습니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -622,17 +622,17 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-이 인사이트의 모양과 기능에 대한 자세한 내용은 [ID 위젯 설명서별 프로필](../guides/profiles.md#profiles-by-identity)을 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [ID 위젯별 프로필 설명서](../guides/profiles.md#profiles-by-identity)를 참조하십시오.
 
 ## 프로필 개수 변경 트렌드 {#profiles-count-change-trend}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 병합 정책을 기반으로 지난 12개월 동안 프로필 수 변경의 전반적인 트렌드는 무엇입니까?
 - 지난 30일 동안 주의가 필요한 프로필 수의 변화에 특정 패턴 또는 변동이 있습니까?
 - 지난 90일 동안의 프로필 개수 변경은 전체 추세와 어떻게 비교됩니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT date_key,
@@ -656,17 +656,17 @@ SELECT date_key,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 변경 트렌드 위젯 설명서](../guides/profiles.md#profiles-count-change-trend)를 참조하세요.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 변경 트렌드 위젯 설명서](../guides/profiles.md#profiles-count-change-trend)를 참조하세요.
 
 ## ID별 프로필 개수 변경 트렌드 {#profiles-count-change-trend-by-identity}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 지난 12개월 동안 다른 ID에서 프로필 수가 변경된 전반적인 트렌드는 무엇입니까?
 - 지난 30일 이내에 중요한 변경 사항을 보여주는 특정 ID 트렌드가 있습니까?
 - 특정 ID에 대한 30일, 90일 및 12개월 트렌드를 비교할 때 프로필 수의 변경 사항은 어떻게 다릅니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT date_key,
@@ -697,18 +697,18 @@ SELECT date_key,
 
 +++
 
-이 인사이트의 모양과 기능에 대한 자세한 내용은 [ID 위젯 설명서별 프로필 개수 변경 트렌드](../guides/profiles.md#profiles-count-change-trend-by-identity)를 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [ID 위젯 설명서별 프로필 개수 변경 트렌드](../guides/profiles.md#profiles-count-change-trend-by-identity)를 참조하십시오.
 
 ## 단일 ID 프로필 {#single-identity-profiles}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 내 고객 ID 데이터가 일관되게 단일 ID로 표시됩니까?
 - 단일 ID 유형만 있는 프로필로 구성된 사용자 베이스의 비율은 얼마입니까?
 - 단일 ID 유형만 있는 프로필 중 이러한 프로필의 완성도는 어떻게 영향을 줍니까?
 - 가장 일반적인 ID 유형과 단일 ID 프로필 수 간에 상관 관계가 있습니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -722,17 +722,17 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [단일 ID 프로필 위젯 설명서](../guides/profiles.md#single-identity-profiles)를 참조하세요.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [단일 ID 프로필 위젯 설명서](../guides/profiles.md#single-identity-profiles)를 참조하세요.
 
 ## ID별 단일 ID 프로필 {#single-identity-profiles-by-identity}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 단일 ID(예: 이메일 또는 전화번호)로 등록한 고유 고객은 몇 명입니까?
 - 이메일 또는 전화번호와 같은 다양한 ID 유형 간에 단일 ID 프로필의 분포는 무엇입니까?
 - 단일 ID 프로필 내에 새로운 ID 패턴 또는 이동이 있습니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -749,17 +749,17 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [ID 위젯별 단일 ID 프로필 설명서](../guides/profiles.md#single-identity-profiles-by-identity)를 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [ID 위젯별 단일 ID 프로필 설명서](../guides/profiles.md#single-identity-profiles-by-identity)를 참조하십시오.
 
 ## 분할되지 않은 프로필 {#unsegmented-profiles}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 대상자에 포함되지 않는 프로필은 몇 개입니까?
 - 세분화되지 않은 프로필로 표현되는 대상자 비율은 얼마입니까?
 - 병합 정책이 세그먼트화되지 않은 프로필 수에 기여합니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -773,7 +773,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [세그먼테이션되지 않은 프로필 위젯 설명서](../guides/profiles.md#unsegmented-profiles)를 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [세그먼테이션되지 않은 프로필 위젯 설명서](../guides/profiles.md#unsegmented-profiles)를 참조하십시오.
 
 ## 다음 단계
 

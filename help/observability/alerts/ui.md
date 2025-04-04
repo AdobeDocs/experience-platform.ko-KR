@@ -4,10 +4,10 @@ title: 경고 UI 안내서
 description: Experience Platform 사용자 인터페이스에서 경고를 관리하는 방법을 알아봅니다.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 3%
+source-wordcount: '798'
+ht-degree: 7%
 
 ---
 
@@ -51,7 +51,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 Adobe Experi
 
 ![줄임표를 선택하여 드롭다운 메뉴를 표시합니다. [!UICONTROL 경고 구독자 관리] 옵션이 강조 표시되어 있습니다.](../images/alerts/ui/manage-alert-subscribers.png)
 
-[!UICONTROL 경고 구독자 관리] 페이지가 나타납니다. 특정 사용자에게 알림을 할당하려면 Adobe 사용자 ID, 외부 이메일 주소 또는 이메일 그룹 목록을 입력한 다음 Enter 키를 누릅니다.
+[!UICONTROL 경고 구독자 관리] 페이지가 나타납니다. 특정 사용자에게 알림을 할당하려면 해당 Adobe 사용자 ID, 외부 이메일 주소 또는 이메일 그룹 목록을 입력한 다음 Enter 키를 누릅니다.
 
 >[!NOTE]
 >
@@ -96,10 +96,10 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 Adobe Experi
 | 대상 플로우 실행 지연 | 지연 임계값 |
 | ID 서비스 흐름 실행 지연 | 지연 임계값 |
 | 프로필 흐름 실행 지연 | 지연 임계값 |
-| 소스 플로우 실행 지연 | 지연 임계값 |
+| 소스 흐름 실행 지연 | 지연 임계값 |
 | 쿼리 실행 지연 | 지연 임계값 |
-| 활성화 건너뛰기 비율 초과 | 오류 임계값 |
-| 소스 수집 오류율 초과 | 오류 임계값 |
+| 활성화 건너뛰기 비율 초과됨 | 오류 임계값 |
+| 소스 수집 오류율 초과됨 | 오류 임계값 |
 
 규칙 이름 옆의 생략 부호(**...**)를 선택하면 드롭다운에 컨트롤이 표시됩니다. **[!UICONTROL 편집]**&#x200B;을 선택합니다.
 
@@ -125,4 +125,4 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 Adobe Experi
 
 ## 다음 단계
 
-이 문서에서는 Platform UI에서 경고를 보고 관리하는 방법에 대한 개요를 제공했습니다. 서비스 기능에 대한 자세한 내용은 [Observability Insights](../home.md)의 개요를 참조하십시오.
+이 문서에서는 Experience Platform UI에서 경고를 보고 관리하는 방법에 대한 개요를 제공했습니다. 서비스 기능에 대한 자세한 내용은 [Observability Insights](../home.md)의 개요를 참조하십시오.

@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;통찰력;고객 ai;인기 주제;고객 ai 통찰력
+keywords: Experience Platform;인사이트;고객 ai;인기 주제;고객 ai 인사이트
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Customer AI로 인사이트 탐색
 description: 이 문서는 Intelligent Services Customer AI 사용자 인터페이스에서 서비스 인스턴스 인사이트와 상호 작용하기 위한 안내서 역할을 합니다.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2099'
 ht-degree: 1%
 
 ---
@@ -164,7 +164,7 @@ Customer AI에서 두 개 이상의 데이터 세트를 사용하는 경우 **[!
 
 ![세그먼트 채우기](../images/insights/segment-saving.png)
 
-Platform UI에서 새 세그먼트를 보려면 왼쪽 탐색에서 **[!UICONTROL 세그먼트]**&#x200B;를 선택하십시오. **[!UICONTROL 찾아보기]** 페이지가 나타나고 사용 가능한 모든 세그먼트가 표시됩니다.
+Experience Platform UI에서 새 세그먼트를 보려면 왼쪽 탐색에서 **[!UICONTROL 세그먼트]**&#x200B;를 선택하십시오. **[!UICONTROL 찾아보기]** 페이지가 나타나고 사용 가능한 모든 세그먼트가 표시됩니다.
 
 ![모든 세그먼트](../images/insights/Segments-dashboard.png)
 
@@ -225,7 +225,7 @@ AUC는 점수별 순위와 예측 목표 발생 간의 관계의 강도를 반�
 
 ## 다음 단계
 
-이 문서에서는 고객 AI 서비스 인스턴스가 제공하는 통찰력에 대해 간략히 설명했습니다. 이제 [고객 AI에서 점수 다운로드](./download-scores.md)에 대한 자습서를 계속 진행하거나 제공되는 다른 [Intelligent Services Adobe](../../home.md) 안내서를 찾아볼 수 있습니다.
+이 문서에서는 고객 AI 서비스 인스턴스가 제공하는 통찰력에 대해 간략히 설명했습니다. 이제 [고객 AI에서 점수 다운로드](./download-scores.md)에 대한 자습서를 계속 진행하거나 제공되는 다른 [Adobe Intelligent Services](../../home.md) 안내서를 찾아볼 수 있습니다.
 
 ## 추가 리소스
 

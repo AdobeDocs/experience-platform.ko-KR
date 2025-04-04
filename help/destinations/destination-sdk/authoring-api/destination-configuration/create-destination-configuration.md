@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK을 통해 대상 구성을 만들기 위해 API 호출을 구성하는 방법을 알아봅니다.
 title: 대상 구성 만들기
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1199'
 ht-degree: 3%
 
 ---
@@ -191,11 +191,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 매개변수 | 유형 | 설명 |
 |---------|----------|------|
-| `name` | 문자열 | Experience Platform 카탈로그에서 대상의 제목을 나타냅니다. |
-| `description` | 문자열 | Adobe이 대상 카드의 Experience Platform 대상 카탈로그에서 사용할 설명을 입력합니다. 4-5개 이하의 문장을 목표로 하라. 대상 설명을 표시하는 ![플랫폼 UI 이미지입니다.](../../assets/authoring-api/destination-configuration/destination-description.png "대상 설명"){width="100" zoomable="yes"} |
+| `name` | 문자열 | Experience Platform 카탈로그에 있는 대상의 제목을 나타냅니다. |
+| `description` | 문자열 | Adobe이 대상 카드의 Experience Platform 대상 카탈로그에서 사용할 설명을 입력합니다. 4-5개 이하의 문장을 목표로 하라. 대상 설명을 표시하는 ![Experience Platform UI 이미지입니다.](../../assets/authoring-api/destination-configuration/destination-description.png "대상 설명"){width="100" zoomable="yes"} |
 | `status` | 문자열 | 대상 카드의 라이프사이클 상태를 나타냅니다. 허용되는 값은 `TEST`, `PUBLISHED` 및 `DELETED`입니다. 대상을 처음 구성할 때 `TEST`을(를) 사용하십시오. |
 | `customerAuthenticationConfigurations.authType` | 문자열 | 대상 서버에 Experience Platform 고객을 인증하는 데 사용되는 구성을 나타냅니다. 지원되는 인증 유형에 대한 자세한 내용은 [고객 인증 구성](../../functionality/destination-configuration/customer-authentication.md)을 참조하십시오. |
-| `customerDataFields.name` | 문자열 | 도입 중인 사용자 정의 필드의 이름을 입력합니다. <br/><br/> 이러한 설정에 대한 자세한 내용은 [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md)를 참조하십시오. 고객 데이터 필드를 표시하는 ![플랫폼 UI 이미지입니다.](../../assets/authoring-api/destination-configuration/customer-data-fields.png "고객 데이터 필드"){width="100" zoomable="yes"} |
+| `customerDataFields.name` | 문자열 | 도입 중인 사용자 정의 필드의 이름을 입력합니다. <br/><br/> 이러한 설정에 대한 자세한 내용은 [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md)를 참조하십시오. 고객 데이터 필드를 보여주는 ![Experience Platform UI 이미지입니다.](../../assets/authoring-api/destination-configuration/customer-data-fields.png "고객 데이터 필드"){width="100" zoomable="yes"} |
 | `customerDataFields.type` | 문자열 | 도입 중인 사용자 정의 필드 유형을 나타냅니다. 허용되는 값은 `string`, `object`, `integer`입니다. <br/><br/> 이러한 설정에 대한 자세한 내용은 [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md)를 참조하십시오. |
 | `customerDataFields.title` | 문자열 | Experience Platform 사용자 인터페이스에서 고객에게 표시되는 필드의 이름을 나타냅니다. <br/><br/> 이러한 설정에 대한 자세한 내용은 [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md)를 참조하십시오. |
 | `customerDataFields.description` | 문자열 | 사용자 정의 필드에 대한 설명을 입력합니다. 이러한 설정에 대한 자세한 내용은 [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md)를 참조하세요. |
@@ -203,25 +203,25 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.enum` | 문자열 | 사용자 정의 필드를 드롭다운 메뉴로 렌더링하고 사용자가 사용할 수 있는 옵션을 나열합니다. <br/><br/> 이러한 설정에 대한 자세한 내용은 [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md)를 참조하십시오. |
 | `customerDataFields.default` | 문자열 | `enum` 목록에서 기본값을 정의합니다. |
 | `customerDataFields.pattern` | 문자열 | 필요한 경우 사용자 정의 필드에 패턴을 적용합니다. 패턴을 적용하려면 정규 표현식을 사용하십시오. 예를 들어 고객 ID에 숫자나 밑줄이 포함되지 않은 경우 이 필드에 `^[A-Za-z]+$`을(를) 입력합니다. <br/><br/> 이러한 설정에 대한 자세한 내용은 [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md)를 참조하십시오. |
-| `uiAttributes.documentationLink` | 문자열 | 대상의 [대상 카탈로그](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html#catalog)에 있는 문서 페이지를 참조합니다. `https://www.adobe.com/go/destinations-YOURDESTINATION-en`을(를) 사용합니다. 여기서 `YOURDESTINATION`은(는) 대상 이름입니다. Moviestar라는 대상의 경우 `https://www.adobe.com/go/destinations-moviestar-en`을(를) 사용합니다. 이 링크는 Adobe이 대상을 라이브로 설정하고 설명서가 게시된 후에만 작동합니다. <br/><br/> 이러한 설정에 대한 자세한 내용은 [UI 특성](../../functionality/destination-configuration/ui-attributes.md)을 참조하십시오. 설명서 링크를 표시하는 ![플랫폼 UI 이미지입니다.](../../assets/authoring-api/destination-configuration/documentation-url.png "설명서 URL"){width="100" zoomable="yes"} |
+| `uiAttributes.documentationLink` | 문자열 | 대상의 [대상 카탈로그](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html#catalog)에 있는 문서 페이지를 참조합니다. `https://www.adobe.com/go/destinations-YOURDESTINATION-en`을(를) 사용합니다. 여기서 `YOURDESTINATION`은(는) 대상 이름입니다. Moviestar라는 대상의 경우 `https://www.adobe.com/go/destinations-moviestar-en`을(를) 사용합니다. 이 링크는 Adobe이 대상을 라이브로 설정하고 설명서가 게시된 후에만 작동합니다. <br/><br/> 이러한 설정에 대한 자세한 내용은 [UI 특성](../../functionality/destination-configuration/ui-attributes.md)을 참조하십시오. 설명서 링크를 표시하는 ![Experience Platform UI 이미지입니다.](../../assets/authoring-api/destination-configuration/documentation-url.png "설명서 URL"){width="100" zoomable="yes"} |
 | `uiAttributes.category` | 문자열 | Adobe Experience Platform에서 대상에 할당된 카테고리를 나타냅니다. 자세한 내용은 [대상 범주](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html#destination-categories)를 참조하세요. `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` 값 중 하나를 사용합니다. <br/><br/> 이러한 설정에 대한 자세한 내용은 [UI 특성](../../functionality/destination-configuration/ui-attributes.md)을 참조하십시오. |
 | `uiAttributes.connectionType` | 문자열 | 대상에 따른 연결 유형입니다. 지원되는 값: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 | `uiAttributes.frequency` | 문자열 | 대상에서 지원하는 데이터 내보내기 유형을 나타냅니다. API 기반 통합을 위해 `Streaming`(으)로 설정하거나 파일을 대상으로 내보낼 때 `Batch`(으)로 설정합니다. |
 | `identityNamespaces.externalId.acceptsAttributes` | 부울 | 고객이 표준 프로필 속성을 구성 중인 ID에 매핑할 수 있는지 여부를 나타냅니다. |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | 부울 | 고객이 [사용자 지정 네임스페이스](/help/identity-service/features/namespaces.md#manage-namespaces)에 속하는 ID를 구성할 수 있는지 여부를 나타냅니다. |
-| `identityNamespaces.externalId.transformation` | 문자열 | _예제 구성에 표시되지 않음_. 예를 들어 [!DNL Platform] 고객이 일반 이메일 주소를 특성으로 가지고 있고 플랫폼이 해시된 이메일만 수락하는 경우 사용됩니다. 여기에서 적용해야 하는 변형을 제공합니다(예: 이메일을 소문자로 변환한 다음 해시로 변환). |
+| `identityNamespaces.externalId.transformation` | 문자열 | _예제 구성에 표시되지 않음_. 예를 들어 [!DNL Experience Platform] 고객이 일반 이메일 주소를 특성으로 가지고 있고 플랫폼이 해시된 이메일만 수락하는 경우 사용됩니다. 여기에서 적용해야 하는 변형을 제공합니다(예: 이메일을 소문자로 변환한 다음 해시로 변환). |
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 사용자가 구성하는 ID에 고객이 매핑할 수 있는 [표준 ID 네임스페이스](/help/identity-service/features/namespaces.md#standard)(예: IDFA)를 나타냅니다. <br> `acceptedGlobalNamespaces`을(를) 사용하는 경우 `"requiredTransformation":"sha256(lower($))"`을(를) 사용하여 전자 메일 주소 또는 전화 번호를 소문자로 나타내고 해시할 수 있습니다. |
-| `destinationDelivery.authenticationRule` | 문자열 | [!DNL Platform]명의 고객이 대상에 연결하는 방법을 나타냅니다. 허용되는 값은 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`입니다. <br> <ul><li>플랫폼 고객이 사용자 이름과 암호, 전달자 토큰 또는 다른 인증 방법을 통해 시스템에 로그인하는 경우 `CUSTOMER_AUTHENTICATION`을(를) 사용합니다. 예를 들어 `customerAuthenticationConfigurations`에서 `authType: OAUTH2` 또는 `authType:BEARER`도 선택한 경우 이 옵션을 선택합니다. </li><li> Adobe과 대상 사이에 전역 인증 시스템이 있고 [!DNL Platform] 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우 `PLATFORM_AUTHENTICATION`을(를) 사용합니다. 이 경우 [자격 증명 API](../../credentials-api/create-credential-configuration.md) 구성을 사용하여 자격 증명 개체를 만들어야 합니다. </li><li>대상 플랫폼으로 데이터를 보내는 데 인증이 필요하지 않은 경우 `NONE`을(를) 사용합니다. </li></ul> |
+| `destinationDelivery.authenticationRule` | 문자열 | [!DNL Experience Platform]명의 고객이 대상에 연결하는 방법을 나타냅니다. 허용되는 값은 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`입니다. <br> <ul><li>Experience Platform 고객이 사용자 이름과 암호, 전달자 토큰 또는 다른 인증 방법을 통해 시스템에 로그인하는 경우 `CUSTOMER_AUTHENTICATION`을(를) 사용합니다. 예를 들어 `customerAuthenticationConfigurations`에서 `authType: OAUTH2` 또는 `authType:BEARER`도 선택한 경우 이 옵션을 선택합니다. </li><li> Adobe과 대상 사이에 글로벌 인증 시스템이 있고 [!DNL Experience Platform] 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우 `PLATFORM_AUTHENTICATION`을(를) 사용합니다. 이 경우 [자격 증명 API](../../credentials-api/create-credential-configuration.md) 구성을 사용하여 자격 증명 개체를 만들어야 합니다. </li><li>대상 플랫폼으로 데이터를 보내는 데 인증이 필요하지 않은 경우 `NONE`을(를) 사용합니다. </li></ul> |
 | `destinationDelivery.destinationServerId` | 문자열 | 이 대상에 사용된 [대상 서버 템플릿](../destination-server/create-destination-server.md)의 `instanceId`입니다. |
 | `backfillHistoricalProfileData` | 부울 | 대상이 대상으로 활성화될 때 내역 프로필 데이터를 내보내는지 여부를 제어합니다. 항상 `true`(으)로 설정하십시오. |
 | `segmentMappingConfig.mapUserInput` | 부울 | 대상 활성화 워크플로의 대상 매핑 ID가 사용자에 의해 입력되는지 여부를 제어합니다. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentId` | 부울 | 대상 활성화 워크플로의 대상 매핑 ID가 Experience Platform 대상 ID인지 여부를 제어합니다. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | 부울 | 대상 활성화 워크플로의 대상 매핑 ID가 Experience Platform 대상 이름인지 여부를 제어합니다. |
 | `segmentMappingConfig.audienceTemplateId` | 문자열 | 이 대상에 사용된 [대상 메타데이터 템플릿](../../metadata-api/create-audience-template.md)의 `instanceId`입니다. |
-| `schemaConfig.profileFields` | 배열 | 위의 구성에 표시된 대로 사전 정의된 `profileFields`을(를) 추가하면 사용자는 Experience Platform 특성을 대상 쪽의 사전 정의된 특성에 매핑할 수 있습니다. |
+| `schemaConfig.profileFields` | 배열 | 위의 구성에 표시된 대로 사전 정의된 `profileFields`을(를) 추가하면 사용자는 Experience Platform 특성을 대상 측의 사전 정의된 특성에 매핑할 수 있습니다. |
 | `schemaConfig.profileRequired` | 부울 | 사용자가 위의 예제 구성에 표시된 대로 Experience Platform의 프로필 특성을 대상 측의 사용자 지정 특성에 매핑할 수 있어야 하는 경우 `true`을(를) 사용합니다. |
 | `schemaConfig.segmentRequired` | 부울 | 항상 `segmentRequired:true`을(를) 사용하십시오. |
-| `schemaConfig.identityRequired` | 부울 | 사용자가 Experience Platform에서 원하는 스키마로 ID 네임스페이스를 매핑할 수 있어야 하는 경우 `true`을(를) 사용합니다. |
+| `schemaConfig.identityRequired` | 부울 | 사용자가 Experience Platform의 ID 네임스페이스를 원하는 스키마에 매핑할 수 있어야 하는 경우 `true`을(를) 사용합니다. |
 
 {style="table-layout:auto"}
 
@@ -235,11 +235,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API 오류 처리
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 Destination SDK `/authoring/destinations` API 끝점을 통해 새 대상 구성을 만드는 방법을 알 수 있습니다.
+이 문서를 읽고 나면 이제 Destination SDK `/authoring/destinations` API 끝점을 통해 새 대상 구성을 만드는 방법을 알 수 있습니다.
 
 이 끝점으로 수행할 수 있는 작업에 대한 자세한 내용은 다음 문서를 참조하십시오.
 

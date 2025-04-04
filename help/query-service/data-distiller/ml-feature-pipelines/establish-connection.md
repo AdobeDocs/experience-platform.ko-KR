@@ -2,9 +2,9 @@
 title: Jupyter Notebook에서 Data Distiller에 연결
 description: Jupyter Notebook에서 Data Distiller에 연결하는 방법을 알아봅니다.
 exl-id: e6238b00-aaeb-40c0-a90f-9aebb1a1c421
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ### 연결 자격 증명 가져오기 {#obtain-credentials}
 
-Data Distiller 및 기타 Adobe Experience Platform 서비스에 연결하려면 Experience Platform API 자격 증명이 필요합니다. Experience Platform에 대한 개발자 액세스 권한이 있는 사용자가 [Adobe Developer Console](https://developer.adobe.com/console/home)에서 API 자격 증명을 만들 수 있습니다. 특히 데이터 과학 워크플로에 대한 Oauth2 API 자격 증명을 만들고 조직의 Adobe 시스템 관리자가 적절한 권한이 있는 역할에 자격 증명을 할당하도록 하는 것이 좋습니다.
+Data Distiller 및 기타 Adobe Experience Platform 서비스에 연결하려면 Experience Platform API 자격 증명이 필요합니다. 개발자가 Experience Platform에 액세스할 수 있는 사용자가 [Adobe Developer Console](https://developer.adobe.com/console/home)에서 API 자격 증명을 만들 수 있습니다. 데이터 과학 워크플로에 특히 적합한 Oauth2 API 자격 증명을 만들고 조직의 Adobe 시스템 관리자가 적절한 권한이 있는 역할에 자격 증명을 할당하도록 하는 것이 좋습니다.
 
 API 자격 증명을 만들고 필요한 권한을 얻는 방법에 대한 자세한 지침은 [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md)를 참조하십시오.
 
@@ -32,7 +32,7 @@ API 자격 증명을 만들고 필요한 권한을 얻는 방법에 대한 자�
 - 대상: [!UICONTROL 데이터 집합 대상 관리 및 활성화]
 - 쿼리 서비스: [!UICONTROL 쿼리 관리]
 
-기본적으로 역할(및 해당 역할에 할당된 API 자격 증명)은 레이블이 지정된 데이터에 액세스하지 못하도록 차단됩니다. 조직의 데이터 거버넌스 정책에 따라 시스템 관리자는 데이터 과학 사용에 적절하다고 판단되는 레이블이 지정된 특정 데이터에 대한 액세스 권한을 역할에 부여할 수 있습니다. 플랫폼 고객은 관련 규정 및 조직 정책을 준수하기 위해 레이블 액세스 및 정책을 적절하게 관리할 책임이 있습니다.
+기본적으로 역할(및 해당 역할에 할당된 API 자격 증명)은 레이블이 지정된 데이터에 액세스하지 못하도록 차단됩니다. 조직의 데이터 거버넌스 정책에 따라 시스템 관리자는 데이터 과학 사용에 적절하다고 판단되는 레이블이 지정된 특정 데이터에 대한 액세스 권한을 역할에 부여할 수 있습니다. Experience Platform 고객은 관련 규정 및 조직 정책을 준수하기 위해 레이블 액세스 및 정책을 적절하게 관리할 책임이 있습니다.
 
 ### 자격 증명을 별도의 구성 파일에 저장 {#store-credentials}
 
@@ -69,7 +69,7 @@ org_id = config.get('Credential', 'ims_org_id')
 
 ## Aepp Python 라이브러리 설치 {#install-python-library}
 
-[aepp](https://github.com/adobe/aepp/tree/main)은(는) 다른 Experience Platform 서비스에 요청할 때 Data Distiller에 연결하고 쿼리를 제출하는 기능을 제공하는 Adobe 관리 오픈 소스 [!DNL Python] 라이브러리입니다. `aepp` 라이브러리는 대화형 Data Distiller 쿼리에 대해 PostgreSQL 데이터베이스 어댑터 패키지 `psycopg2`을(를) 사용합니다. `psycopg2`만으로 Data Distiller 및 쿼리 Experience Platform 데이터 세트에 연결할 수 있지만, `aepp`은(는) 모든 Experience Platform API 서비스에 요청할 수 있는 더 큰 편리성과 추가 기능을 제공합니다.
+[aepp](https://github.com/adobe/aepp/tree/main)은(는) 다른 Adobe 서비스에 요청할 때 Data Distiller에 연결하고 쿼리를 제출하는 기능을 제공하는 Experience Platform 관리 오픈 소스 [!DNL Python] 라이브러리입니다. `aepp` 라이브러리는 대화형 Data Distiller 쿼리에 대해 PostgreSQL 데이터베이스 어댑터 패키지 `psycopg2`을(를) 사용합니다. `psycopg2`만 사용하여 Data Distiller에 연결하고 Experience Platform 데이터 세트를 쿼리할 수 있지만 `aepp`은(는) 모든 Experience Platform API 서비스에 요청할 수 있는 더 큰 편의성과 추가 기능을 제공합니다.
 
 사용자의 환경에 `aepp` 및 `psycopg2`을(를) 설치하거나 업그레이드하려면 전자 필기장에서 `%pip` 매직 명령을 사용할 수 있습니다.
 
@@ -137,4 +137,4 @@ dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 
 ## 다음 단계
 
-이 문서를 읽고 기계 학습 환경의 [!DNL Python] 전자 필기장에서 Data Distiller에 연결하는 방법을 배웠습니다. 머신 러닝 환경에서 Experience Platform에서 피드 사용자 지정 모델까지 기능 파이프라인을 만드는 다음 단계는 [데이터 세트를 탐색 및 분석](./exploratory-analysis.md)하는 것입니다.
+이 문서를 읽고 기계 학습 환경의 [!DNL Python] 전자 필기장에서 Data Distiller에 연결하는 방법을 배웠습니다. Experience Platform에서 머신 러닝 환경에 사용자 정의 모델을 공급하기 위한 기능 파이프라인을 만드는 다음 단계는 [데이터 세트를 탐색 및 분석](./exploratory-analysis.md)하는 것입니다.

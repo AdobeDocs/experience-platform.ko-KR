@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service 및 Experience Cloud 애플리케이션
 description: 이 문서에서는 개인 정보 보호 관련 작업을 위해 다양한 Experience Cloud 애플리케이션을 구성하는 방법에 대한 참조를 제공합니다.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: c524e4533f2ebcc6fd27b5ec7f5ac622107a371b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '903'
 ht-degree: 8%
 
 ---
@@ -38,7 +38,7 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) 여러 Adobe Experience
 | Adobe Campaign Classic | ✓ | ✓ | 데이터 주체의 저장된 데이터는 시스템에서 삭제됩니다. | <ul><li>[개인 정보 관리](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=ko)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | 데이터 주체의 저장된 데이터는 시스템에서 삭제됩니다. | <ul><li>[설명서 액세스/삭제](https://experienceleague.adobe.com/en/docs/campaign-standard/using/getting-started/privacy/privacy-management#right-access-forgotten)</li><li>[옵트아웃 설명서](https://experienceleague.adobe.com/en/docs/campaign-standard/using/profiles-and-audiences/understanding-opt-in-and-opt-out-processes/about-opt-in-and-opt-out-in-campaign)</li></ul> |
 | Adobe 고객 속성(CRS) | ✓ | N/A | 데이터 주체의 속성이 시스템에서 삭제됩니다. | <ul><li>[GDPR에 대한 액세스/삭제 설명서](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html)</li><li>[CCPA에 대한 액세스/삭제 설명서](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html)</li><li>고객 속성에는 데이터를 전송할 수 있는 기능이 없으므로 판매 중지 요청을 적용할 수 없습니다.</li></ul> |
-| Adobe Experience Platform | ✓ | ✓ | Experience Platform이 Privacy Service에서 삭제 요청을 받으면 플랫폼이 Privacy Service에 요청이 수신되었고 영향을 받는 데이터가 삭제 표시되었다는 확인을 보냅니다. 그런 다음 개인 정보 보호 작업이 완료되면 레코드가 데이터 레이크 또는 프로필 저장소에서 제거됩니다. 작업이 완료되기 전에 데이터가 일시 삭제되므로 플랫폼 서비스에서 액세스할 수 없습니다. | <ul><li>[데이터 레이크에 대한 액세스/삭제 설명서](../catalog/privacy.md)</li><li>[ID 서비스에 대한 액세스/삭제 설명서](../identity-service/privacy.md)</li><li>[실시간 고객 프로필에 대한 액세스/삭제 설명서](../profile/privacy.md)</li><li>[!DNL Experience Platform]에서 대상 세그먼트에 대한 [옵트아웃 요청을 수행합니다](../segmentation/tutorials/consents.md).</li></ul> |
+| Adobe Experience Platform | ✓ | ✓ | Experience Platform이 Privacy Service에서 삭제 요청을 수신하면 Experience Platform은 요청이 수신되었고 영향을 받는 데이터가 삭제 대상으로 표시되었음을 Privacy Service에 확인합니다. 그런 다음 개인 정보 보호 작업이 완료되면 레코드가 데이터 레이크 또는 프로필 저장소에서 제거됩니다. 작업이 완료되기 전에 데이터가 일시 삭제되므로 Experience Platform 서비스에서 액세스할 수 없습니다. | <ul><li>[데이터 레이크에 대한 액세스/삭제 설명서](../catalog/privacy.md)</li><li>[ID 서비스에 대한 액세스/삭제 설명서](../identity-service/privacy.md)</li><li>[실시간 고객 프로필에 대한 액세스/삭제 설명서](../profile/privacy.md)</li><li>[!DNL Experience Platform]에서 대상 세그먼트에 대한 [옵트아웃 요청을 수행합니다](../segmentation/tutorials/consents.md).</li></ul> |
 | Adobe Journey Optimizer | ✓ | N/A | 데이터 주체의 저장된 데이터는 시스템에서 삭제됩니다. | <ul><li>[설명서 액세스/삭제](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/privacy/requests)</li></ul> |
 | Adobe Pass 인증 | ✓ | N/A | 데이터 주체의 저장된 데이터는 시스템에서 삭제됩니다. | <ul><li>[설명서 액세스/삭제](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>패스에는 데이터를 전송할 수 있는 기능이 없으므로 판매 중지 요청을 적용할 수 없습니다.</li></ul> |
 | Adobe Target | ✓ | N/A | 데이터 주체의 ID와 관련된 모든 데이터가 해당 방문자 프로필에서 삭제됩니다. 개인을 식별하지 않거나 관련이 없는 집계 또는 익명화 데이터(예: 콘텐츠 데이터)는 삭제 요청에 적용되지 않습니다. | <ul><li>[설명서 액세스/삭제](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target]에 데이터를 전송할 수 있는 기능이 없으므로 판매 중지 요청을 적용할 수 없습니다.</li></ul> |

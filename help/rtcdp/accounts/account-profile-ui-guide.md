@@ -1,13 +1,13 @@
 ---
 keywords: rtcdp 프로필;프로필 rtcdp;rtcdp id;rtcdp 병합 정책;실시간 고객 프로필
 title: 계정 프로필 UI 안내서
-description: Adobe Real-time Customer Data Platform B2B 에디션을 사용하면 계정 프로필을 사용하여 여러 소스의 계정 정보를 통합할 수 있습니다. 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스에서 계정 프로필과 상호 작용하는 방법에 대한 세부 정보를 제공합니다.
-badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+description: Adobe Real-Time Customer Data Platform B2B edition을 사용하면 계정 프로필을 사용하여 여러 소스에서 계정 정보를 통합할 수 있습니다. 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스에서 계정 프로필과 상호 작용하는 방법에 대한 세부 정보를 제공합니다.
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 96f29d5c64bb29125d8a63dd3ddb3bdedb5ebd52
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1681'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->계정 프로필은 Real-time Customer Data Platform B2B 에디션 고객만 사용할 수 있습니다. 각 라이선스 유형에서 사용할 수 있는 기능 및 기능을 포함하여 Real-Time CDP에 대한 자세한 내용은 [Real-Time CDP 개요](../overview.md)를 참조하세요.
+>계정 프로필은 Real-Time Customer Data Platform B2B edition 고객만 사용할 수 있습니다. 각 라이선스 유형에서 사용할 수 있는 기능 및 기능을 포함하여 Real-Time CDP에 대한 자세한 내용은 [Real-Time CDP 개요](../overview.md)를 참조하세요.
 
-계정 프로필을 사용하면 여러 소스의 계정 정보를 통합할 수 있습니다. 이렇게 통합된 계정 보기는 많은 마케팅 채널 및 조직에서 현재 고객 계정 정보를 저장하는 데 사용하는 다양한 시스템에서 데이터를 수집합니다. 이 문서에서는 Adobe Experience Platform UI(사용자 인터페이스)에서 사용할 수 있는 Real-Time CDP, B2B 에디션 기능을 사용하여 계정 프로필과 상호 작용하는 방법에 대한 안내서를 제공합니다.
+계정 프로필을 사용하면 여러 소스의 계정 정보를 통합할 수 있습니다. 이렇게 통합된 계정 보기는 많은 마케팅 채널 및 조직에서 현재 고객 계정 정보를 저장하는 데 사용하는 다양한 시스템에서 데이터를 수집합니다. 이 문서에서는 Adobe Experience Platform UI(사용자 인터페이스)에서 사용할 수 있는 Real-Time CDP, B2B edition 기능을 사용하여 계정 프로필과 상호 작용하는 방법에 대한 안내서를 제공합니다.
 
 B2B 워크플로의 일부로 계정 프로필을 만드는 방법에 대한 자세한 내용은 [전체 튜토리얼](../b2b-tutorial.md)을 참조하세요.
 
@@ -28,7 +28,7 @@ B2B 워크플로의 일부로 계정 프로필을 만드는 방법에 대한 자
 
 ![왼쪽 탐색 메뉴의 프로필과 개요가 강조 표시된 계정 프로필 개요 탭](images/b2b-account-profile-overview.png)
 
-자세한 내용은 [[!UICONTROL 계정 프로필]](../../dashboards/guides/account-profiles.md) 대시보드의 설명서를 참조하세요. 인사이트 데이터 모델을 사용하여 대시보드에 대한 사용자 지정 차트를 만드는 방법에 대한 자세한 내용은 [Real-time Customer Data Platform 인사이트 데이터 모델 B2B 에디션](../../dashboards/data-models/cdp-insights-data-model-b2b.md)에 대한 설명서를 참조하십시오.
+자세한 내용은 [[!UICONTROL 계정 프로필]](../../dashboards/guides/account-profiles.md) 대시보드의 설명서를 참조하세요. 인사이트 데이터 모델을 사용하여 대시보드에 대한 사용자 지정 차트를 만드는 방법에 대한 자세한 내용은 [실시간 고객 데이터 플랫폼 인사이트 데이터 모델 B2B edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md)에 대한 설명서를 참조하십시오.
 
 ## 리드-계정 일치 구성 {#configure-lead-to-account-matching}
 
@@ -76,7 +76,7 @@ Enterprise 소스 연결에 대한 자세한 내용은 [소스 개요](../source
 
 ![소스 워크플로우 선택](images/b2b-account-select-source.png)
 
-소스를 선택한 상태에서 이제 소스와 관련된 **[!UICONTROL 계정 ID]**&#x200B;를 입력해야 합니다. 예를 들어 Salesforce 소스를 선택하면 해당 ID에 연결된 계정 프로필을 보려면 Salesforce 인스턴스에서 계정 ID를 입력해야 합니다.
+소스를 선택한 상태에서 이제 소스와 관련된 **[!UICONTROL 계정 ID]**&#x200B;를 입력해야 합니다. 예를 들어 Salesforce 소스를 선택하면 해당 ID에 연결된 계정 프로필을 보기 위해 Salesforce 인스턴스에서 계정 ID를 입력해야 합니다.
 
 >[!NOTE]
 >
@@ -88,11 +88,11 @@ Enterprise 소스 연결에 대한 자세한 내용은 [소스 개요](../source
 
 ### [!UICONTROL 기타] 검색 {#browse-by-others}
 
-Real-Time CDP, B2B 에디션은 보려는 계정에 대해 **[!UICONTROL Source 이름]**, **[!UICONTROL Source 인스턴스]** 및 **[!UICONTROL 계정 ID]**&#x200B;를 입력할 수 있도록 허용하여 직접 조회를 수행하는 기능을 지원합니다. 소스 이름과 인스턴스를 직접 입력하여 Experience Platform이 올바른 계정 프로필 데이터를 검색하고 표시하는 데 필요한 컨텍스트를 제공합니다.
+Real-Time CDP, B2B edition에서는 보려는 계정에 대해 **[!UICONTROL Source 이름]**, **[!UICONTROL Source 인스턴스]** 및 **[!UICONTROL 계정 ID]**&#x200B;를 입력할 수 있도록 하여 직접 조회를 수행하는 기능을 지원합니다. 소스 이름과 인스턴스를 직접 입력하여 Experience Platform이 올바른 계정 프로필 데이터를 검색하고 표시하는 데 필요한 컨텍스트를 제공합니다.
 
-직접 조회를 수행하는 기능은 데이터에 직접 소스 연결이 불가능한 상황에서 유용합니다. 예를 들어 조직에서 CRM에 직접 연결할 수 없는 데이터 거버넌스 정책을 시행하고 있는 경우 해당 데이터를 클라우드 스토리지 시스템으로 내보낸 다음 Experience Platform으로 수집할 수 있습니다.
+직접 조회를 수행하는 기능은 데이터에 직접 소스 연결이 불가능한 상황에서 유용합니다. 예를 들어 조직에 CRM에 직접 연결할 수 없는 데이터 거버넌스 정책이 있는 경우 해당 데이터를 클라우드 스토리지 시스템으로 내보낸 다음 Experience Platform으로 수집할 수 있습니다.
 
-또 다른 예는 시스템에서 나와 플랫폼으로 들어가는 시간 사이에 데이터에 대한 변환을 수행하는 것입니다. 직접 조회 기능을 사용하여 데이터에 대한 컨텍스트를 제공하여(예를 들어 Amazon S3 버킷에서 가져온다는 사실에도 불구하고 Marketo 데이터임을 지정하는 등) 시스템에서 데이터를 찾을 위치와 적절하게 렌더링하는 방법을 알 수 있습니다.
+또 다른 예는 시스템에서 나와 Experience Platform으로 들어가는 시간 사이에 데이터에 대한 변환을 수행하는 것입니다. 직접 조회 기능을 사용하여 데이터에 대한 컨텍스트를 제공하여(예를 들어 Amazon S3 버킷에서 가져온다는 사실에도 불구하고 Marketo 데이터임을 지정하는 등) 시스템에서 데이터를 찾을 위치와 적절하게 렌더링하는 방법을 알 수 있습니다.
 
 직접 조회를 시작하려면 **[!UICONTROL 찾아보기]** 드롭다운에서 **[!UICONTROL 기타]**&#x200B;를 선택한 다음 보려는 계정에 대해 **[!UICONTROL Source 이름]**, **[!UICONTROL Source 인스턴스]** 및 **[!UICONTROL 계정 ID]**&#x200B;를 입력하십시오.
 
@@ -122,19 +122,19 @@ Real-Time CDP, B2B 에디션은 보려는 계정에 대해 **[!UICONTROL Source 
 
 ## 인물 탭 {#people-tab}
 
-**[!UICONTROL 사람]** 탭에서는 계정과 연결된 개별 사용자 목록을 제공합니다. 이러한 직원은 조직 내의 다른 팀에서 관리하는 다른 엔터프라이즈 시스템의 연락처 및 리드일 수 있지만, Real-Time CDP, B2B Edition에서는 계정 연락처를 보다 전체적으로 볼 수 있도록 단일 목록으로 표시됩니다.
+**[!UICONTROL 사람]** 탭에서는 계정과 연결된 개별 사용자 목록을 제공합니다. 이러한 직원은 조직 내의 다른 팀에서 관리하는 다른 엔터프라이즈 시스템의 연락처 및 잠재 고객일 수 있지만, Real-Time CDP의 B2B edition에서는 계정 연락처를 보다 전체적으로 볼 수 있도록 단일 목록으로 표시됩니다.
 
 >[!NOTE]
 >
 >[!UICONTROL 사람] 탭에는 계정과 연결된 최대 25명의 목록이 표시됩니다. 연결된 사람이 25명 이상인 계정의 경우 시스템에서 25개의 레코드를 무작위로 샘플링합니다.
 
-연락처에 대한 정보 스냅숏을 표시하는 것 외에도 나열된 각 사용자에는 해당 사용자에 대한 실시간 고객 프로필을 살펴볼 수 있는 클릭 가능한 링크인 **[!UICONTROL 프로필 ID]**&#x200B;도 포함됩니다. 계정과 관련된 개별 고객 프로필을 보는 방법에 대한 자세한 내용은 [Real-Time CDP, B2B 에디션에서 프로필 탐색](../profile/profile-browse.md)을 위한 안내서를 참조하십시오.
+연락처에 대한 정보 스냅숏을 표시하는 것 외에도 나열된 각 사용자에는 해당 사용자에 대한 실시간 고객 프로필을 살펴볼 수 있는 클릭 가능한 링크인 **[!UICONTROL 프로필 ID]**&#x200B;도 포함됩니다. 계정과 관련된 개별 고객 프로필을 보는 방법에 대한 자세한 내용은 [Real-Time CDP, B2B edition에서 프로필 탐색](../profile/profile-browse.md)을 위한 안내서를 참조하십시오.
 
 ![사람 탭](images/b2b-account-people.png)
 
 ## 기회 탭 {#opportunities-tab}
 
-**[!UICONTROL 기회]** 탭에서는 계정과 관련된 개설 및 마감된 기회에 대한 정보를 제공합니다. 이러한 기회는 여러 소스의 Experience Platform으로 수집될 수 있지만, Real-Time CDP, B2B 에디션을 통해 마케터는 이러한 모든 기회를 한 곳에서 함께 볼 수 있습니다.
+**[!UICONTROL 기회]** 탭에서는 계정과 관련된 개설 및 마감된 기회에 대한 정보를 제공합니다. 이러한 기회는 여러 소스에서 Experience Platform에 수집될 수 있지만, Real-Time CDP, B2B edition을 통해 마케터는 이러한 모든 기회를 한 곳에서 함께 볼 수 있습니다.
 
 >[!NOTE]
 >

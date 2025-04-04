@@ -3,9 +3,9 @@ title: Data Distiller Authorization API 안내서
 description: Data Distiller 인증 API를 사용하여 SQL을 통한 보안 연결에 네트워크 기반 IP 제한을 적용하는 방법에 대해 알아봅니다. 이 API를 사용하여 Adobe Experience Platform 데이터에 대한 데이터 액세스 제어를 강화합니다.
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '425'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Data Distiller Authorization API를 사용하여 IP 기반 제한을 적용합�
 
 ## 감사 및 모니터링 기능
 
-보안 데이터 액세스 사례를 지원하기 위해 Query Service는 Experience Platform에 액세스하거나 액세스하려는 모든 클라이언트 IP를 기록합니다. 거부된 연결을 포함한 감사 이벤트는 플랫폼 감사 로그로 전송됩니다. 이를 통해 다음을 수행할 수 있습니다.
+보안 데이터 액세스 사례를 지원하기 위해 쿼리 서비스는 Experience Platform에 액세스하거나 액세스를 시도하는 모든 클라이언트 IP를 기록합니다. 거부된 연결을 포함한 감사 이벤트는 Experience Platform 감사 로그로 전송됩니다. 이를 통해 다음을 수행할 수 있습니다.
 
 - **실시간 모니터링**: IP 기반 액세스 패턴을 추적하여 준수 여부를 확인합니다.
 - **권한 없는 액세스에 대한 경고**: 권한 없는 IP에서 액세스 시도를 식별하고 응답합니다.

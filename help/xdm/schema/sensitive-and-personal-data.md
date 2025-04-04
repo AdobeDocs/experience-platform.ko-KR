@@ -2,9 +2,9 @@
 title: XDM의 중요 및 개인 정보
 description: XDM(경험 데이터 모델)의 중요 SPI(개인 정보) 및 PII(개인 식별 정보)와 관련된 주요 고려 사항에 대해 알아봅니다.
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: 302dca9a9f834dba1fd3fdac15284ea4e2fba282
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ SPI 및 PII를 구성하는 것은 컨텍스트에 따라 다르므로 중요한
 
 XDM은 고객 경험을 향상시키기 위해 관련성이 있고 일반적으로 사용되는 데이터 구조를 설명하는 다양한 표준 필드 그룹 및 데이터 유형을 제공합니다. 그러나 권장 표준 리소스에 스키마에 포함하지 않으려는 제한된 필드가 포함된 경우 해당 리소스를 사용할 필요가 없습니다.
 
-Platform을 사용하면 사용자 정의 필드 그룹 및 데이터 유형을 정의하여 사용 가능한 표준 리소스가 사용자의 요구를 충족하지 않는 경우 데이터 구성 방식을 완벽하게 제어할 수 있습니다. 이러한 사용자 지정 리소스를 정의하는 방법에 대한 자세한 내용은 다음 설명서를 참조하십시오.
+Experience Platform에서는 사용자 정의 필드 그룹 및 데이터 유형을 정의할 수 있으므로, 사용 가능한 표준 리소스가 요구 사항에 맞지 않을 경우 데이터 구성 방식을 완벽하게 제어할 수 있습니다. 이러한 사용자 지정 리소스를 정의하는 방법에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [사용자 정의 필드 그룹 만들기](../ui/resources/field-groups.md#create)
 * [사용자 지정 데이터 유형 만들기](../ui/resources/data-types.md#create)
@@ -54,4 +54,4 @@ Platform을 사용하면 사용자 정의 필드 그룹 및 데이터 유형을 
 
 이 문서에서는 XDM의 중요 및 개인 데이터와 관련된 주요 고려 사항을 다룹니다. 비즈니스 사용 사례에 가장 적합하게 스키마를 모델링하는 방법에 대한 자세한 내용은 [데이터 모델링 모범 사례](./best-practices.md)에 대한 안내서를 참조하십시오.
 
-Experience Platform의 데이터 거버넌스 및 개인 정보 보호 기능에 대한 자세한 내용은 [거버넌스, 개인 정보 보호 및 보안에 대한 개요](../../landing/governance-privacy-security/overview.md)를 참조하세요.
+Experience Platform의 데이터 거버넌스 및 개인 정보 보호 기능에 대한 자세한 내용은 [거버넌스, 개인 정보 보호 및 보안에 대한 개요](../../landing/governance-privacy-security/overview.md)를 참조하십시오.

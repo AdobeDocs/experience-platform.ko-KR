@@ -3,31 +3,31 @@ keywords: Experience Platform;홈;인기 항목;로컬 시스템;파일 업로�
 solution: Experience Platform
 title: UI에서 로컬 파일 만들기 Source 커넥터 업로드
 type: Tutorial
-description: 로컬 시스템에 대한 소스 연결을 만들어 로컬 파일을 플랫폼으로 가져오는 방법에 대해 알아봅니다
+description: 로컬 시스템에 대한 소스 연결을 만들어 로컬 파일을 Experience Platform으로 가져오는 방법에 대해 알아봅니다
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '777'
 ht-degree: 0%
 
 ---
 
 # UI에서 로컬 파일 업로드 소스 커넥터 만들기
 
-이 자습서에서는 사용자 인터페이스를 사용하여 로컬 파일을 플랫폼으로 수집할 로컬 파일 업로드 소스 커넥터를 만드는 단계를 제공합니다.
+이 자습서에서는 사용자 인터페이스를 사용하여 로컬 파일을 Experience Platform으로 수집할 로컬 파일 업로드 소스 커넥터를 만드는 단계를 제공합니다.
 
 ## 시작하기
 
-이 자습서에서는 다음 플랫폼 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): 플랫폼에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기 튜토리얼](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아봅니다.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
-## 로컬 파일을 Platform에 업로드
+## Experience Platform에 로컬 파일 업로드
 
-Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
@@ -91,4 +91,4 @@ CSV 파일이 매핑되고 생성되면 모니터링 대시보드를 사용하�
 
 ## 다음 단계
 
-이 자습서에 따라 플랫 CSV 파일을 XDM 스키마에 매핑하고 Platform에 수집했습니다. 이제 [!DNL Real-Time Customer Profile]과(와) 같은 다운스트림 [!DNL Platform] 서비스에서 이 데이터를 사용할 수 있습니다. 자세한 내용은 [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)에 대한 개요를 참조하십시오.
+이 자습서에 따라 플랫 CSV 파일을 XDM 스키마에 매핑하고 Experience Platform에 수집했습니다. 이제 [!DNL Real-Time Customer Profile]과(와) 같은 다운스트림 [!DNL Experience Platform] 서비스에서 이 데이터를 사용할 수 있습니다. 자세한 내용은 [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)에 대한 개요를 참조하십시오.

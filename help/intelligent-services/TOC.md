@@ -5,10 +5,10 @@ user-guide-title: 인텔리전트 서비스 도움말
 breadcrumb-title: Intelligent Services 안내서
 user-guide-description: 인텔리전트 AI 서비스를 이용하여 점수를 생성하고 인사이트를 발견하며 마케팅 이벤트 데이터를 통해 세그먼트를 만들 수 있습니다.
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 34%
+source-wordcount: '137'
+ht-degree: 37%
 
 ---
 
@@ -55,4 +55,4 @@ ht-degree: 34%
       - [고객 관리 키](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [데이터 거버넌스](customer-ai/cai-data-governance/data-governance.md)
       - [거버넌스 정책](customer-ai/cai-data-governance/governance-policies.md)
-- [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+- [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

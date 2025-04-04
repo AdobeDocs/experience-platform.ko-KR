@@ -5,10 +5,10 @@ title: Sensei 머신 러닝 API 안내서
 description: Sensei 머신 러닝 API를 통해 개발자는 다양한 데이터 과학 Workspace 리소스에 대한 CRUD 작업을 수행할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아봅니다.
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '255'
-ht-degree: 12%
+ht-degree: 13%
 
 ---
 
@@ -32,11 +32,11 @@ ht-degree: 12%
 * x-api 키: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
+[!DNL Experience Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -48,7 +48,7 @@ ht-degree: 12%
 
 * [엔진](./engines.md)
 * [실험](./experiments.md)
-* [Insights](./insights.md)
+* [인사이트](./insights.md)
 * [MLInstances(레시피)](./mlinstances.md)
 * [MLSservices](./mlservices.md)
 * [모델](./models.md)

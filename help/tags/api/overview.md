@@ -2,9 +2,9 @@
 title: Reactor API 안내서
 description: 개발자는 Reactor API를 통해 프로그래밍 방식으로 Adobe Experience Platform의 태그에 대한 모든 리소스를 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아봅니다.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1080'
 ht-degree: 4%
 
 ---
@@ -99,7 +99,7 @@ API에서 감사 이벤트를 관리하는 방법은 [감사 이벤트 끝점 �
 
 ## 콜백
 
-콜백은 새 감사 이벤트가 생성될 때마다 Platform이 URL 호스트에 보내는 메시지입니다. API에서 콜백을 관리하는 방법을 알아보려면 [콜백 끝점 안내서](./endpoints/callbacks.md)를 참조하세요.
+콜백은 새 감사 이벤트가 생성될 때마다 Experience Platform이 URL 호스트로 보내는 메시지입니다. API에서 콜백을 관리하는 방법을 알아보려면 [콜백 끝점 안내서](./endpoints/callbacks.md)를 참조하세요.
 
 ## 참고
 

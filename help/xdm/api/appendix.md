@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스키마 레지스트리 API 안내서 부록
 description: 이 문서에서는 스키마 레지스트리 API 작업과 관련된 추가 정보를 제공합니다.
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 28891cf37dc9ffcc548f4c0565a77f62432c0b44
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 0%
@@ -57,9 +57,9 @@ ht-degree: 0%
 
 ## 호환성 모드 {#compatibility}
 
-[!DNL Experience Data Model](XDM)은 디지털 경험의 상호 운용성, 표현력 및 기능을 개선하기 위해 Adobe을 기반으로 하는, 공개적으로 문서화된 사양입니다. Adobe은 [GitHub의 오픈 소스 프로젝트](https://github.com/adobe/xdm/)에서 소스 코드 및 공식 XDM 정의를 유지 관리합니다. 이러한 정의는 XDM 스키마를 정의하기 위한 문법으로 JSON-LD(연결된 데이터에 대한 JavaScript 개체 표기법) 및 JSON 스키마를 사용하여 XDM 표준 표기법으로 작성됩니다.
+[!DNL Experience Data Model]&#x200B;(XDM)은 디지털 경험의 상호 운용성, 표현력 및 기능을 개선하기 위해 Adobe에서 제공하는 공개적으로 문서화된 사양입니다. Adobe은 [GitHub의 오픈 소스 프로젝트](https://github.com/adobe/xdm/)에서 소스 코드 및 공식 XDM 정의를 유지 관리합니다. 이러한 정의는 XDM 스키마를 정의하기 위한 문법으로 JSON-LD(연결된 데이터에 대한 JavaScript 개체 표기법) 및 JSON 스키마를 사용하여 XDM 표준 표기법으로 작성됩니다.
 
-공개 저장소의 공식 XDM 정의를 보면 표준 XDM이 Adobe Experience Platform에 표시되는 것과 다르다는 것을 알 수 있습니다. [!DNL Experience Platform]에서 표시되는 항목을 호환 모드라고 하며 표준 XDM과 [!DNL Platform] 내에서 사용하는 방식 간에 간단한 매핑을 제공합니다.
+공개 저장소의 공식 XDM 정의를 보면 표준 XDM이 Adobe Experience Platform에 표시되는 것과 다르다는 것을 알 수 있습니다. [!DNL Experience Platform]에서 표시되는 항목을 호환 모드라고 하며 표준 XDM과 [!DNL Experience Platform] 내에서 사용하는 방식 간에 간단한 매핑을 제공합니다.
 
 ### 호환성 모드 작동 방식
 
@@ -132,6 +132,6 @@ Adobe Experience Platform은 여러 솔루션 및 서비스와 함께 작동하�
 
 [!DNL Catalog], [!DNL Data Lake] 및 [!DNL Real-Time Customer Profile]을(를) 포함한 대부분의 [!DNL Experience Platform] 서비스는 표준 XDM 대신 [!DNL Compatibility Mode]을(를) 사용합니다. [!DNL Schema Registry] API도 [!DNL Compatibility Mode]을(를) 사용하며 이 문서의 예제는 모두 [!DNL Compatibility Mode]을(를) 사용하여 표시됩니다.
 
-매핑은 표준 XDM과 [!DNL Experience Platform]에서 작동하는 방식 간에 수행되지만 [!DNL Platform] 서비스 사용에 영향을 주지 않아야 합니다.
+매핑은 표준 XDM과 [!DNL Experience Platform]에서 작동하는 방식 간에 수행되지만 [!DNL Experience Platform] 서비스 사용에 영향을 주지 않아야 합니다.
 
 공개 소스 프로젝트를 사용할 수 있지만 [!DNL Schema Registry]을(를) 통해 리소스와 상호 작용하는 경우 이 문서의 API 예는 알고 따라야 할 모범 사례를 제공합니다.

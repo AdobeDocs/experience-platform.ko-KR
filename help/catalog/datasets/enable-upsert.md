@@ -4,9 +4,9 @@ title: API를 사용하여 프로필 업데이트에 대한 데이터 세트 활
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform API를 사용하여 "업데이트" 기능이 있는 데이터 세트를 활성화하여 실시간 고객 프로필 데이터를 업데이트하는 방법을 보여줍니다.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1069'
 ht-degree: 6%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 6%
 
 ## 시작하기
 
-이 자습서에서는 프로필 사용 데이터 세트 관리와 관련된 여러 Adobe Experience Platform 서비스에 대한 작업 이해가 필요합니다. 이 자습서를 시작하기 전에 다음 관련 [!DNL Platform] 서비스에 대한 설명서를 검토하십시오.
+이 자습서에서는 프로필 사용 데이터 세트 관리와 관련된 여러 Adobe Experience Platform 서비스에 대한 작업 이해가 필요합니다. 이 자습서를 시작하기 전에 다음 관련 [!DNL Experience Platform] 서비스에 대한 설명서를 검토하십시오.
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 - [[!DNL Catalog Service]](../../catalog/home.md): 데이터 세트를 만들고 [!DNL Real-Time Customer Profile] 및 [!DNL Identity Service]에 대해 구성할 수 있는 RESTful API입니다.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 - [일괄 처리 수집](../../ingestion/batch-ingestion/overview.md): 일괄 처리 수집 API를 사용하면 데이터를 일괄 처리 파일로 Experience Platform에 수집할 수 있습니다.
 
-다음 섹션에서는 Platform API를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다.
+다음 섹션에서는 Experience Platform API를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
@@ -36,7 +36,7 @@ ht-degree: 6%
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -44,7 +44,7 @@ ht-degree: 6%
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 `Content-Type` 헤더가 필요합니다. 이 헤더에 대한 정확한 값이 필요한 경우 샘플 요청에 표시됩니다.
 
-[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 `x-sandbox-name` 헤더가 필요합니다. [!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
+[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 `x-sandbox-name` 헤더가 필요합니다. [!DNL Experience Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
 ## 프로필 업데이트를 위해 활성화된 데이터 세트 만들기
 
@@ -54,7 +54,7 @@ ht-degree: 6%
 >
 >새 프로필 활성화 데이터 세트를 만들려면 프로필에 대해 활성화된 기존 XDM 스키마의 ID를 알고 있어야 합니다. 프로필 사용 스키마를 조회하거나 만드는 방법에 대한 자세한 내용은 [스키마 레지스트리 API를 사용하여 스키마 만들기](../../xdm/tutorials/create-schema-api.md)에 대한 자습서를 참조하십시오.
 
-프로필 및 업데이트에 사용할 수 있는 데이터 집합을 만들려면 `/dataSets` 끝점에 대한 POST 요청을 사용하십시오.
+프로필 및 업데이트에 사용할 수 있는 데이터 집합을 만들려면 `/dataSets` 끝점에 대한 POST 요청을 사용합니다.
 
 **API 형식**
 
@@ -232,11 +232,11 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 ### 프로필 및 업데이트에 대한 데이터 세트 활성화 {#enable-the-dataset}
 
-단일 PATCH 요청을 사용하여 프로필 및 속성 업데이트에 대한 기존 데이터 세트를 활성화할 수 있습니다.
+단일 PATCH 요청을 사용하여 프로필 및 속성 업데이트에 기존 데이터 세트를 활성화할 수 있습니다.
 
 >[!IMPORTANT]
 >
->프로필에 대해 데이터 세트를 활성화할 때 데이터 세트가 연결된 스키마가 **also** 프로필이 활성화되었는지 확인하십시오. 스키마가 프로필이 활성화되지 않은 경우 Platform UI에서 데이터 세트가 프로필이 활성화된 것으로 **표시되지 않음**&#x200B;됩니다.
+>프로필에 대해 데이터 세트를 활성화할 때 데이터 세트가 연결된 스키마가 **also** 프로필이 활성화되었는지 확인하십시오. 스키마가 프로필이 활성화되지 않은 경우 데이터 집합은 Experience Platform UI 내에서 프로필이 활성화되도록 **표시되지 않음**&#x200B;됩니다.
 
 **API 형식**
 

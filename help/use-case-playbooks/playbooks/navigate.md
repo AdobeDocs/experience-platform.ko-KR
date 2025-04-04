@@ -4,9 +4,9 @@ title: 사용 사례 플레이북으로 이동
 description: 플레이북의 갤러리를 탐색하고 영감을 주는 샌드박스를 시작하는 방법에 대해 알아봅니다.
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
@@ -71,4 +71,4 @@ SMS 채널 표면을 만들려면 먼저 SMS API 자격 증명을 만들고 기�
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽고 나면 영감을 주는 샌드박스를 설정하는 방법을 알아보고 Platform 내에서 사용 사례 플레이북에 액세스하는 다양한 방법을 숙지해야 합니다. 다음 단계로 올바른 플레이북을 [선택](/help/use-case-playbooks/playbooks/choose.md)하는 방법에 대해 읽어 보십시오.
+이 문서를 읽고 나면 영감을 주는 샌드박스를 설정하는 방법을 알아보고 Experience Platform 내에서 사용 사례 플레이북에 액세스하는 다양한 방법을 숙지해야 합니다. 다음 단계로 올바른 플레이북을 [선택](/help/use-case-playbooks/playbooks/choose.md)하는 방법에 대해 읽어 보십시오.

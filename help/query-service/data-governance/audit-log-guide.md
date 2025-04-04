@@ -2,22 +2,22 @@
 title: 쿼리 서비스 감사 로그 통합
 description: 쿼리 서비스 감사 로그는 다양한 사용자 작업에 대한 기록을 유지 관리하여 문제 해결 또는 기업 데이터 관리 정책 및 규정 요구 사항 준수에 대한 감사 추적을 구성합니다. 이 자습서에서는 쿼리 서비스와 관련된 감사 로그 기능에 대한 개요를 제공합니다.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '935'
 ht-degree: 1%
 
 ---
 
 # [!DNL Query Service] 감사 로그 통합
 
-Adobe Experience Platform [!DNL Query Service] 감사 로그 통합은 쿼리 관련 사용자 작업의 레코드를 제공합니다. 감사 로그는 기업 데이터 관리 정책 및 규정 요구 사항을 준수하고 문제를 해결하는 데 필수적인 도구입니다. 이 기능을 사용하면 다양한 이벤트 유형에 대한 작업 로그를 반환하고 레코드를 필터링하고 내보낼 수 있습니다. Platform UI 또는 [감사 쿼리 API](https://www.adobe.io/experience-platform-apis/references/audit-query/)를 통해 로그에 액세스하고 CSV 또는 JSON 파일 형식으로 다운로드할 수 있습니다.
+Adobe Experience Platform [!DNL Query Service] 감사 로그 통합은 쿼리 관련 사용자 작업의 레코드를 제공합니다. 감사 로그는 기업 데이터 관리 정책 및 규정 요구 사항을 준수하고 문제를 해결하는 데 필수적인 도구입니다. 이 기능을 사용하면 다양한 이벤트 유형에 대한 작업 로그를 반환하고 레코드를 필터링하고 내보낼 수 있습니다. Experience Platform UI 또는 [감사 쿼리 API](https://www.adobe.io/experience-platform-apis/references/audit-query/)를 통해 로그에 액세스하고 CSV 또는 JSON 파일 형식으로 다운로드할 수 있습니다.
 
-감사 로그 사용자 인터페이스에 대한 자세한 내용은 [감사 로그 개요 문서](../../landing/governance-privacy-security/audit-logs/overview.md)를 참조하세요. Platform API를 호출하는 방법에 대한 자세한 내용은 [감사 로그 API 안내서](../../landing/api-guide.md)를 참조하세요.
+감사 로그 사용자 인터페이스에 대한 자세한 내용은 [감사 로그 개요 문서](../../landing/governance-privacy-security/audit-logs/overview.md)를 참조하세요. Experience Platform API를 호출하는 방법에 대한 자세한 내용은 [감사 로그 API 안내서](../../landing/api-guide.md)를 참조하세요.
 
 ## 전제 조건
 
-Platform UI에서 감사 로그 대시보드를 보려면 [!DNL Data Governance] [!UICONTROL 사용자 활동 로그 보기] 권한이 활성화되어야 합니다. Adobe [Admin Console](https://adminconsole.adobe.com/)을(를) 통해 사용 권한을 사용하도록 설정했습니다. 이 권한을 활성화하기 위한 관리자 권한이 없는 경우 조직의 관리자에게 문의하십시오. [Admin Console을 통해 권한을 추가하는 방법에 대한 전체 지침](../../access-control/home.md)은 액세스 제어 설명서를 참조하세요.
+Experience Platform UI 내에서 감사 로그 대시보드를 보려면 [!DNL Data Governance] [!UICONTROL 사용자 활동 로그 보기] 권한이 활성화되어야 합니다. 권한은 Adobe [Admin Console](https://adminconsole.adobe.com/)을 통해 사용할 수 있습니다. 이 권한을 활성화하기 위한 관리자 권한이 없는 경우 조직의 관리자에게 문의하십시오. Admin Console을 통해 권한을 추가하는 방법에 대한 [전체 지침](../../access-control/home.md)은 액세스 제어 설명서를 참조하십시오.
 
 ## [!DNL Query Service] 감사 로그 범주 {#audit-log-categories}
 
@@ -33,9 +33,9 @@ Platform UI에서 감사 로그 대시보드를 보려면 [!DNL Data Governance]
 
 [!DNL Query Service] 활동에 대한 감사를 수행하려면 왼쪽 탐색에서 **[!UICONTROL 감사]**&#x200B;를 선택한 다음 단계 아이콘(![필터 아이콘)을 선택하십시오.](/help/images/icons/filter.png)) 필터 컨트롤 목록을 표시하여 결과를 좁히는 데 도움이 됩니다.
 
-![왼쪽 탐색 및 필터 컨트롤에 &quot;Audits&quot;가 강조 표시된 플랫폼 UI 감사 로그 대시보드입니다.](../images/audit-log/filter-controls.png)
+![왼쪽 탐색 및 필터 컨트롤에 &quot;Audits&quot;가 강조 표시된 Experience Platform UI 감사 로그 대시보드입니다.](../images/audit-log/filter-controls.png)
 
-[!UICONTROL 감사] 대시보드 [!UICONTROL 활동 로그] 탭에서 [!DNL Query Service] 범주 중 하나로 기록된 모든 Platform 작업을 필터링할 수 있습니다. 로그 결과는 실행된 기간, 수행한 작업/함수 또는 쿼리를 수행한 사용자를 기반으로 추가로 필터링될 수 있습니다. 범주, 작업, 사용자 및 상태에 따라 로그를 필터링하는 방법에 대한 [전체 지침은 감사 로그 설명서를 참조하세요](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
+[!UICONTROL 감사] 대시보드 [!UICONTROL 활동 로그] 탭에서 [!DNL Query Service] 범주 중 하나로 기록된 모든 Experience Platform 작업을 필터링할 수 있습니다. 로그 결과는 실행된 기간, 수행한 작업/함수 또는 쿼리를 수행한 사용자를 기반으로 추가로 필터링될 수 있습니다. 범주, 작업, 사용자 및 상태에 따라 로그를 필터링하는 방법에 대한 [전체 지침은 감사 로그 설명서를 참조하세요](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
 
 반환된 감사 로그 데이터에는 선택한 필터 기준을 충족하는 모든 쿼리에 대한 다음 정보가 포함됩니다.
 
@@ -83,7 +83,7 @@ Platform UI에서 감사 로그 대시보드를 보려면 [!DNL Data Governance]
 | 작업 | 감사 범주 [!DNL Query Service]을(를) 참조할 때 업데이트는 **기존 양식에 대한 수정**&#x200B;이고, 삭제는 **일정 또는 템플릿 제거**&#x200B;이며, 만들기는 **새 일정 또는 템플릿 만들기**&#x200B;이고, 실행은 **쿼리를 실행**&#x200B;합니다. |
 | 사용자 | 사용자별로 필터링할 전체 사용자 ID(예: johndoe@acme.com)를 입력합니다. |
 | 상태 | [!UICONTROL Allow], [!UICONTROL Success] 및 [!UICONTROL Failure] 옵션은 &quot;상태&quot; 또는 &quot;이벤트 상태&quot;를 기준으로 로그를 필터링하지만 [!UICONTROL Deny] 옵션은 **모든** 로그를 필터링합니다. |
-| 날짜 | 시작 날짜 및/또는 종료 날짜를 선택하여 결과를 필터링할 날짜 범위를 정의합니다. |
+| 일자 | 시작 날짜 및/또는 종료 날짜를 선택하여 결과를 필터링할 날짜 범위를 정의합니다. |
 
 ## 다음 단계
 

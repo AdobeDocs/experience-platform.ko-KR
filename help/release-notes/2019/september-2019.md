@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '531'
 ht-degree: 5%
@@ -24,7 +24,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 ## [!DNL Data Ingestion] {#ingestion}
 
-Adobe Experience Platform은 모든 유형의 데이터와 지연 시간을 수집할 수 있는 다양한 기능 세트를 제공합니다. Adobe Experience Platform [!DNL Data Ingestion]은(는) 일괄 처리 API, 스트리밍 API, 기본 Adobe 커넥터, 데이터 통합 파트너 또는 Adobe Experience Platform UI를 포함하여 데이터 수집을 위한 여러 대체 요소를 제공합니다.
+Adobe Experience Platform은 모든 유형의 데이터와 지연 시간을 수집할 수 있는 다양한 기능 세트를 제공합니다. Adobe Experience Platform [!DNL Data Ingestion]은(는) 일괄 처리 API, 스트리밍 API, 기본 Adobe 커넥터, 데이터 통합 파트너 또는 Adobe Experience Platform UI를 포함하여 데이터 수집을 위한 여러 가지 대체 요소를 제공합니다.
 
 **새로운 기능**
 
@@ -36,13 +36,13 @@ Adobe Experience Platform은 모든 유형의 데이터와 지연 시간을 수�
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace]은(는) [!DNL Experience Platform] 내의 완전히 관리되는 서비스로, 데이터 과학자가 머신 러닝 모델을 구축하고 운영하여 Adobe 솔루션 및 서드파티 시스템의 데이터와 콘텐츠에서 통찰력을 원활하게 생성할 수 있습니다. [!DNL Data Science Workspace]은(는) [!DNL Platform]과(와) 긴밀하게 통합되어 있으며 XDM 데이터 탐색 및 준비, 머신 러닝 인사이트로 [!DNL Real-Time Customer Profile]을(를) 자동으로 보강하는 모델 개발 및 운영 등 엔드투엔드 데이터 과학 라이프사이클을 지원합니다.
+Adobe Experience Platform [!DNL Data Science Workspace]은(는) [!DNL Experience Platform] 내의 완전히 관리되는 서비스로, 데이터 과학자가 머신 러닝 모델을 구축하고 운영하여 Adobe 솔루션 및 서드파티 시스템의 데이터와 콘텐츠에서 인사이트를 원활하게 생성할 수 있습니다. [!DNL Data Science Workspace]은(는) [!DNL Experience Platform]과(와) 긴밀하게 통합되어 있으며 XDM 데이터 탐색 및 준비, 머신 러닝 인사이트로 [!DNL Real-Time Customer Profile]을(를) 자동으로 보강하는 모델 개발 및 운영 등 엔드투엔드 데이터 과학 라이프사이클을 지원합니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | -----------| ---------- |
-| UI를 통한 서비스 예약 | [!DNL Platform] 오케스트레이션 서비스와 통합하여 UI를 사용하여 사용자 정의 일정으로 모델 교육 및 채점을 자동화합니다. |
+| UI를 통한 서비스 예약 | [!DNL Experience Platform] 오케스트레이션 서비스와 통합하여 UI를 사용하여 사용자 정의 일정으로 모델 교육 및 채점을 자동화합니다. |
 | [!DNL Service Gallery] | 다시 설계된 [!DNL Service Gallery] 내에서 자동화된 교육 및 채점 작업을 예약하는 기능을 사용하여 머신 러닝 서비스를 탐색, 모니터링 및 액세스합니다. |
 | [!DNL JupyterLab] 5.0.0 | [!DNL JupyterLab] UI 개선 사항. |
 

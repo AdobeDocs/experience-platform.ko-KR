@@ -4,7 +4,7 @@ solution: Experience Platform
 title: RStudio를 쿼리 서비스에 연결
 description: 이 문서에서는 R Studio를 Adobe Experience Platform 쿼리 서비스와 연결하는 단계를 안내합니다.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> [!DNL RStudio]이(가) 이제 [!DNL Posit](으)로 다시 브랜딩되었습니다. [!DNL RStudio] 제품의 이름이 [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] 관리자, [!DNL Posit Cloud] 및 [!DNL Posit Academy](으)로 바뀌었습니다.
+> [!DNL RStudio]이(가) 이제 [!DNL Posit]&#x200B;(으)로 다시 브랜딩되었습니다. [!DNL RStudio] 제품의 이름이 [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] 관리자, [!DNL Posit Cloud] 및 [!DNL Posit Academy]&#x200B;(으)로 바뀌었습니다.
 >
 > 이 안내서에서는 사용자가 이미 [!DNL RStudio]에 액세스할 수 있고 사용 방법을 잘 알고 있다고 가정합니다. [!DNL RStudio]에 대한 자세한 내용은 [공식 [!DNL RStudio] 설명서](https://rstudio.com/products/rstudio/)에서 확인할 수 있습니다.
 > 
@@ -49,7 +49,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 >
 >Adobe Experience Platform 쿼리 서비스에 대한 서드파티 연결에 대한 SSL 지원 및 `verify-full` SSL 모드를 사용하여 연결하는 방법에 대한 자세한 내용은 [[!DNL Query Service] SSL 설명서](./ssl-modes.md)를 참조하세요.
 
-데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md)를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인한 다음 **[!UICONTROL 쿼리]**, **[!UICONTROL 자격 증명]**&#x200B;을 선택하십시오.
+데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md)를 참조하십시오. 자격 증명을 찾으려면 [!DNL Experience Platform]에 로그인한 다음 **[!UICONTROL 쿼리]**, **[!UICONTROL 자격 증명]**&#x200B;을 선택하십시오.
 
 콘솔 출력의 메시지가 쿼리 서비스에 대한 연결을 확인합니다.
 

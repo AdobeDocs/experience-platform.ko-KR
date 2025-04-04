@@ -2,9 +2,9 @@
 description: 대상 테스트 API를 사용하여 대상 테스트에 사용할 수 있는 스트리밍 대상에 대한 샘플 프로필을 생성하는 방법을 알아봅니다.
 title: 소스 스키마를 기반으로 샘플 프로필 생성
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '980'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 >* *대상 ID*&#x200B;을(를) 쿼리 매개 변수로 사용하여 [메시지 변환 템플릿을 만들고 테스트할 때](create-template.md)사용할 프로필을 생성합니다.
 >* *대상 인스턴스 ID*&#x200B;를 쿼리 매개 변수로 사용하여 [대상이 올바르게 구성되었는지 테스트](streaming-destination-testing-overview.md)를 호출할 때 사용할 프로필을 생성합니다.
 
-Adobe XDM 소스 스키마(대상을 테스트할 때 사용) 또는 대상에서 지원하는 대상 스키마(템플릿을 만들 때 사용)를 기반으로 샘플 프로필을 생성할 수 있습니다. Adobe XDM 원본 스키마와 대상 스키마의 차이점을 이해하려면 [메시지 형식](../../functionality/destination-server/message-format.md) 문서의 개요 섹션을 읽어 보세요.
+Adobe XDM 소스 스키마(대상을 테스트할 때 사용) 또는 대상에서 지원하는 대상 스키마(템플릿을 만들 때 사용)를 기반으로 샘플 프로필을 생성할 수 있습니다. Adobe XDM 소스 스키마와 대상 스키마의 차이점을 이해하려면 [메시지 형식](../../functionality/destination-server/message-format.md) 문서의 개요 섹션을 참조하십시오.
 
 샘플 프로필을 사용할 수 있는 목적은 서로 바꿀 수 없습니다. *대상 ID*&#x200B;을(를) 기반으로 생성된 프로필은 메시지 변환 템플릿을 만드는 데만 사용할 수 있으며 *대상 인스턴스 ID*&#x200B;을(를) 기반으로 생성된 프로필은 대상 끝점을 테스트하는 데만 사용할 수 있습니다.
 
@@ -59,7 +59,7 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | 쿼리 매개 변수 | 설명 |
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | 샘플 프로필을 생성하는 데 기준이 되는 대상 인스턴스의 ID입니다. |
-| `{COUNT}` | *선택 사항*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이의 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)의 `maxUsersPerRequest` 값에 의해 생성된 프로필의 기본 수가 결정됩니다. 이 속성이 정의되지 않으면 Adobe에서 샘플 프로필이 생성됩니다. |
+| `{COUNT}` | *선택 사항*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이의 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)의 `maxUsersPerRequest` 값에 의해 생성된 프로필의 기본 수가 결정됩니다. 이 속성이 정의되지 않으면 Adobe에서 하나의 샘플 프로필을 생성합니다. |
 
 {style="table-layout:auto"}
 
@@ -209,7 +209,7 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | 쿼리 매개 변수 | 설명 |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | 샘플 프로필을 생성하는 데 기준이 되는 대상 구성의 ID입니다. |
-| `{COUNT}` | *선택 사항*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이의 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)의 `maxUsersPerRequest` 값에 의해 생성된 프로필의 기본 수가 결정됩니다. 이 속성이 정의되지 않으면 Adobe에서 샘플 프로필이 생성됩니다. |
+| `{COUNT}` | *선택 사항*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이의 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)의 `maxUsersPerRequest` 값에 의해 생성된 프로필의 기본 수가 결정됩니다. 이 속성이 정의되지 않으면 Adobe에서 하나의 샘플 프로필을 생성합니다. |
 
 {style="table-layout:auto"}
 
@@ -373,7 +373,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## API 오류 처리 {#api-error-handling}
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계
 

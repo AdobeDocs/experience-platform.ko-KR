@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK에 대한 단일 페이지 애플리케
 description: Adobe Target을 사용하여 Adobe Experience Platform Web SDK의 단일 페이지 애플리케이션(SPA) 구현을 만드는 방법에 대해 알아봅니다.
 keywords: target;adobe target;xdm 보기;보기;단일 페이지 애플리케이션;SPA;SPA 라이프사이클;클라이언트측;AB 테스트;AB;경험 타깃팅;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
@@ -13,21 +13,21 @@ ht-degree: 0%
 
 # 단일 페이지 애플리케이션 구현
 
-Adobe Experience Platform Web SDK는 단일 페이지 애플리케이션(SPA)과 같은 차세대 클라이언트측 기술에 대한 개인화를 실행하도록 기업을 지원하는 다양한 기능을 제공합니다.
+Adobe Experience Platform Web SDK은 단일 페이지 애플리케이션(SPA)과 같은 차세대 클라이언트측 기술에 대한 개인화를 실행하도록 기업을 지원하는 다양한 기능을 제공합니다.
 
 기존 웹 사이트는 웹 사이트 디자인이 URL과 밀접하게 연결되어 있고 한 웹 페이지에서 다른 웹 페이지로 전환하려면 페이지를 로드해야 하는 다중 페이지 애플리케이션으로도 알려진 &quot;페이지-투-페이지&quot; 탐색 모델에서 작동했습니다.
 
 단일 페이지 애플리케이션과 같은 최신 웹 애플리케이션에서는 대신 종종 페이지 다시 로드와 무관한 브라우저 UI 렌더링을 촉진하는 모델을 채택했습니다. 이러한 경험은 스크롤, 클릭 및 커서 움직임과 같은 고객 상호 작용에 의해 트리거될 수 있습니다. 최신 웹의 패러다임이 발전함에 따라 개인화 및 실험을 배포하기 위한 페이지 로드와 같은 기존 일반 이벤트와의 관련성이 더 이상 작동하지 않습니다.
 
-![기존 페이지 주기와 비교하여 SPA 주기를 보여 주는 다이어그램입니다.](assets/spa-vs-traditional-lifecycle.png)
+![기존 페이지 라이프사이클과 비교하여 SPA 라이프사이클을 보여 주는 다이어그램입니다.](assets/spa-vs-traditional-lifecycle.png)
 
-## SPA용 Platform Web SDK의 이점
+## SPA용 Experience Platform 웹 SDK의 이점
 
-단일 페이지 애플리케이션에 Adobe Experience Platform Web SDK를 사용하면 다음과 같은 몇 가지 이점이 있습니다.
+단일 페이지 애플리케이션에 Adobe Experience Platform Web SDK을 사용하면 다음과 같은 몇 가지 이점이 있습니다.
 
 * 페이지 로드 시 모든 오퍼를 캐시하여 여러 서버 호출을 하나의 서버 호출로 줄일 수 있습니다.
 * 오퍼가 기존 서버 호출로 인해 초래되는 지연 없이 캐시를 통해 즉시 표시되므로 사이트의 사용자 경험을 크게 향상시킬 수 있습니다.
-* 단일 코드 행 및 일회용 개발자 설정을 사용하면 마케터가 SPA의 시각적 경험 작성기(VEC)를 통해 A/B 및 경험 타깃팅(XT) 활동을 만들고 실행할 수 있습니다.
+* 단일 코드 행 및 일회용 개발자 설정을 사용하면 마케터가 SPA에서 VEC(시각적 경험 작성기)를 통해 A/B 및 경험 타깃팅(XT) 활동을 만들고 실행할 수 있습니다.
 
 ## XDM 보기 및 단일 페이지 애플리케이션
 
@@ -215,7 +215,7 @@ class Checkout extends Component {
 } 
 ```
 
-## SPA용 시각적 경험 작성기 사용
+## SPA에서 시각적 경험 작성기 사용
 
 XDM 보기 정의를 완료하고 전달된 해당 XDM 보기로 `sendEvent()`을(를) 구현하면 VEC가 이러한 보기를 감지하고 사용자가 A/B 또는 XT 활동에 대한 작업 및 수정 사항을 만드는 것을 허용할 수 있습니다.
 

@@ -1,17 +1,17 @@
 ---
-description: 대상에 대한 인증 메커니즘을 설정하는 방법을 알아보고 선택한 인증 방법에 따라 UI에 표시되는 사용자에 대한 통찰력을 얻으십시오.
+description: 대상에 대한 인증 메커니즘을 설정하고 선택한 인증 방법에 따라 insight에서 사용자가 보게 될 내용을 파악하는 방법에 대해 알아봅니다.
 title: 고객 인증 구성
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
 
 # 고객 인증 구성
 
-Experience Platform은 파트너와 고객이 사용할 수 있는 인증 프로토콜을 유연하게 제공합니다. [!DNL OAuth2], 전달자 토큰 인증, 암호 인증 등과 같은 업계 표준 인증 방법을 지원하도록 대상을 구성할 수 있습니다.
+Experience Platform은 파트너와 고객이 사용할 수 있는 인증 프로토콜에서 뛰어난 유연성을 제공합니다. [!DNL OAuth2], 전달자 토큰 인증, 암호 인증 등과 같은 업계 표준 인증 방법을 지원하도록 대상을 구성할 수 있습니다.
 
 이 페이지에서는 기본 설정 인증 방법을 사용하여 대상을 설정하는 방법을 설명합니다. 대상을 만들 때 사용하는 인증 구성에 따라 Experience Platform UI에서 대상에 연결할 때 고객에게 다른 유형의 인증 페이지가 표시됩니다.
 
@@ -20,11 +20,11 @@ Experience Platform은 파트너와 고객이 사용할 수 있는 인증 프로
 * [Destination SDK을 사용하여 스트리밍 대상 구성](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Destination SDK을 사용하여 파일 기반 대상 구성](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-고객이 플랫폼에서 대상으로 데이터를 내보내려면 먼저 [대상 연결](../../../ui/connect-destination.md) 자습서에 설명된 단계를 따라 Experience Platform과 대상 간에 새로운 연결을 만들어야 합니다.
+고객이 Experience Platform에서 대상으로 데이터를 내보내려면 먼저 [대상 연결](../../../ui/connect-destination.md) 자습서에 설명된 단계를 따라 Experience Platform과 대상 간에 새 연결을 만들어야 합니다.
 
 Destination SDK을 통해 [대상을 만들기](../../authoring-api/destination-configuration/create-destination-configuration.md)할 때 `customerAuthenticationConfigurations` 섹션은 고객이 [인증 화면](../../../ui/connect-destination.md#authenticate)에서 보는 항목을 정의합니다. 대상 인증 유형에 따라 고객은 다음과 같은 다양한 인증 세부 정보를 제공해야 합니다.
 
-* [기본 인증](#basic)을 사용하는 대상의 경우 Experience Platform UI 인증 페이지에서 사용자 이름과 암호를 직접 제공해야 합니다.
+* [기본 인증](#basic)을 사용하는 대상의 경우 사용자가 Experience Platform UI 인증 페이지에서 직접 사용자 이름과 암호를 제공해야 합니다.
 * [전달자 인증](#bearer)을 사용하는 대상의 경우 사용자는 전달자 토큰을 제공해야 합니다.
 * [OAuth2 인증](#oauth2)을 사용하는 대상의 경우 사용자는 자격 증명으로 로그인할 수 있는 대상의 로그인 페이지로 리디렉션됩니다.
 * [Amazon S3](#s3) 대상의 경우 사용자는 [!DNL Amazon S3] 액세스 키와 비밀 키를 제공해야 합니다.
@@ -39,7 +39,7 @@ Destination SDK을 통해 [대상을 만들기](../../authoring-api/destination-
 
 >[!IMPORTANT]
 >
->고객 인증 구성에서는 매개 변수를 구성할 필요가 없습니다. 대상 구성을 [생성](../../authoring-api/destination-configuration/create-destination-configuration.md) 또는 [업데이트](../../authoring-api/destination-configuration/update-destination-configuration.md)할 때 API 호출에서 이 페이지에 표시된 코드 조각을 복사하여 붙여 넣을 수 있으며 사용자가 Platform UI에서 해당 인증 화면을 보게 됩니다.
+>고객 인증 구성에서는 매개 변수를 구성할 필요가 없습니다. 대상 구성을 [생성](../../authoring-api/destination-configuration/create-destination-configuration.md) 또는 [업데이트](../../authoring-api/destination-configuration/update-destination-configuration.md)할 때 API 호출에서 이 페이지에 표시된 코드 조각을 복사하여 붙여 넣을 수 있으며, 그러면 사용자가 Experience Platform UI에서 해당 인증 화면을 보게 됩니다.
 
 >[!IMPORTANT]
 >
@@ -71,7 +71,7 @@ Destination SDK을 통해 [대상을 만들기](../../authoring-api/destination-
 
 ## 기본 인증 {#basic}
 
-Experience Platform에서의 실시간(스트리밍) 통합에 대해 기본 인증이 지원됩니다.
+Experience Platform에서 실시간(스트리밍) 통합을 위해 기본 인증이 지원됩니다.
 
 기본 인증 유형을 구성할 때 사용자는 대상에 연결하기 위해 사용자 이름과 암호를 입력해야 합니다.
 
@@ -105,7 +105,7 @@ Experience Platform에서의 실시간(스트리밍) 통합에 대해 기본 인
 
 ## OAuth 2 인증 {#oauth2}
 
-twitter 사용자 지정 대상 대상에 대해 아래 예와 같이 대상에 대한 OAuth 2 인증 흐름을 트리거하려면 **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다. 대상 끝점에 대한 OAuth 2 인증 구성에 대한 자세한 내용은 전용 [Destination SDK OAuth 2 인증 페이지](oauth2-authorization.md)를 참조하십시오.
+사용자는 Twitter 사용자 지정 대상 대상에 대해 아래 예와 같이 대상에 대한 OAuth 2 인증 흐름을 트리거하려면 **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다. 대상 끝점에 대한 OAuth 2 인증 구성에 대한 자세한 내용은 전용 [Destination SDK OAuth 2 인증 페이지](oauth2-authorization.md)를 참조하십시오.
 
 ![OAuth 2 인증을 사용하여 UI 렌더링](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -163,7 +163,7 @@ Experience Platform의 파일 기반 대상에 대해 [!DNL Azure Data Lake Stor
 
 [!DNL Azure Data Lake Storage] 인증을 사용하여 ![UI 렌더링](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
 
-대상에 대한 [!DNL Azure Data Lake Storage](ADLS) 인증을 설정하려면 아래와 같이 `/destinations` 끝점에서 `customerAuthenticationConfigurations` 매개 변수를 구성하십시오.
+대상에 대한 [!DNL Azure Data Lake Storage]&#x200B;(ADLS) 인증을 설정하려면 아래와 같이 `/destinations` 끝점에서 `customerAuthenticationConfigurations` 매개 변수를 구성하십시오.
 
 ```json
 "customerAuthenticationConfigurations":[

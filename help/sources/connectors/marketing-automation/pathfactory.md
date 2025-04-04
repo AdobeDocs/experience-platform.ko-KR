@@ -4,9 +4,9 @@ description: API 또는 사용자 인터페이스를 사용하여 PathFactory를
 last-substantial-update: 2024-04-30T00:00:00Z
 badge: Beta
 exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '467'
 ht-degree: 3%
 
 ---
@@ -61,12 +61,12 @@ ht-degree: 3%
 
 ### Experience Platform에 대한 권한 구성
 
-[!DNL PathFactory] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 사용 권한이 모두 활성화되어 있어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/ui/overview.md)를 참조하십시오.
+[!DNL PathFactory] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/ui/overview.md)를 참조하십시오.
 
-## [!DNL PathFactory]을(를) 플랫폼에 연결 {#pathfactory-connect}
+## Experience Platform에 [!DNL PathFactory] 연결 {#pathfactory-connect}
 
-아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL PathFactory]을(를) 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL PathFactory]을(를) Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
 
-* [API를 사용하여 소스 연결 및 데이터 흐름을 만들어  [!DNL PathFactory] 데이터를 플랫폼으로 가져오기](../../tutorials/api/create/marketing-automation/pathfactory.md).
+* [API를 사용하여  [!DNL PathFactory] 데이터를 Experience Platform으로 가져오기](../../tutorials/api/create/marketing-automation/pathfactory.md)할 원본 연결 및 데이터 흐름을 만듭니다.
 * [UI를 사용하여  [!DNL PathFactory] 계정을 Experience Platform에 연결](../../tutorials/ui/create/marketing-automation/pathfactory.md).
 * [UI를 사용하여 원본 연결에 대한 데이터 흐름을 만듭니다](../../tutorials/ui/dataflow/marketing-automation.md).

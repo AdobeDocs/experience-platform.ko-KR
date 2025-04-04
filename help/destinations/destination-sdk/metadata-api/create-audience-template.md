@@ -2,9 +2,9 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 템플릿을 만드는 데 사용되는 API 호출을 예시합니다.
 title: 대상자 템플릿 만들기
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 3447a1c6959419c36fd55359496284daf90e26cf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '623'
 ht-degree: 3%
 
 ---
@@ -281,8 +281,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 ## API 오류 처리
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계
 
-이제 이 문서를 읽고 나면 대상 템플릿을 사용할 시점과 `/authoring/audience-templates` API 끝점을 사용하여 대상 템플릿을 구성하는 방법을 알 수 있습니다. [Destination SDK을 사용하여 대상을 구성하는 방법](../guides/configure-destination-instructions.md)을 읽고 대상 구성 프로세스에 이 단계가 어디에 맞는지 파악하십시오.
+이제 이 문서를 읽고 나면 대상 템플릿을 사용할 시점과 `/authoring/audience-templates` API 끝점을 사용하여 대상 템플릿을 구성하는 방법을 알 수 있습니다. [Destination SDK을 사용하여 대상을 구성하는 방법](../guides/configure-destination-instructions.md)을 읽어 대상을 구성하는 프로세스에 이 단계가 어디에 맞는지 이해합니다.

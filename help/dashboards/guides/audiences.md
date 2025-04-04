@@ -4,9 +4,9 @@ title: 대상자 대시보드
 description: Adobe Experience Platform은 조직이 만든 대상자에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3132'
+source-wordcount: '3136'
 ht-degree: 9%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중에 캡처된 대상자에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. 이 안내서에서는 UI에서 [!UICONTROL 대상] 대시보드에 액세스하고 작업하는 방법에 대해 간략하게 설명하고 대시보드에 표시된 시각화에 대한 자세한 정보를 제공합니다.
 
-Platform 사용자 인터페이스 내의 모든 Adobe Experience Platform 세그멘테이션 서비스 기능에 대한 개요를 보려면 [세그멘테이션 서비스 UI 안내서](../../segmentation/ui/overview.md)를 참조하십시오.
+Experience Platform 사용자 인터페이스 내의 모든 Adobe Experience Platform 세그먼테이션 서비스 기능에 대한 개요를 보려면 [세그먼테이션 서비스 UI 안내서](../../segmentation/ui/overview.md)를 참조하십시오.
 
 ## [!UICONTROL 대상자] 대시보드 데이터
 
@@ -29,11 +29,11 @@ Platform 사용자 인터페이스 내의 모든 Adobe Experience Platform 세�
 
 ## [!UICONTROL 대상] 대시보드 탐색 {#explore}
 
-Platform UI에서 [!UICONTROL 대상] 대시보드로 이동하려면 왼쪽 레일에서 **[!UICONTROL 대상]**&#x200B;을 선택한 다음 **[!UICONTROL 개요]** 탭을 선택하여 대시보드를 표시합니다.
+Experience Platform UI에서 [!UICONTROL 대상] 대시보드로 이동하려면 왼쪽 레일에서 **[!UICONTROL 대상]**&#x200B;을 선택한 다음 **[!UICONTROL 개요]** 탭을 선택하여 대시보드를 표시합니다.
 
 >[!NOTE]
 >
->Platform을 처음 사용하는 조직에 아직 활성 프로필 데이터 세트 또는 병합 정책을 만들지 않은 경우 [!UICONTROL 대상] 대시보드가 표시되지 않습니다. 대신 [!UICONTROL 개요] 탭에는 세그먼테이션을 시작하는 데 도움이 되는 링크 및 설명서가 표시됩니다.
+>조직이 Experience Platform을 처음 사용하고 아직 활성 프로필 데이터 세트 또는 병합 정책을 만들지 않은 경우 [!UICONTROL 대상] 대시보드가 표시되지 않습니다. 대신 [!UICONTROL 개요] 탭에는 세그먼테이션을 시작하는 데 도움이 되는 링크 및 설명서가 표시됩니다.
 
 ![[!UICONTROL 대상] 및 [!UICONTROL 개요]가 강조 표시된 [!UICONTROL 대상] 대시보드 [!UICONTROL 개요] 탭](../images/audiences/dashboard-overview.png)
 
@@ -53,7 +53,7 @@ Platform UI에서 [!UICONTROL 대상] 대시보드로 이동하려면 왼쪽 레
 
 ### SQL 보기 {#view-sql}
 
-[!UICONTROL 개요] 작업 영역에서 토글을 사용하여 대시보드에 시각화된 인사이트를 생성하는 SQL을 볼 수 있습니다. 기존 인사이트의 SQL에서 영감을 얻어 비즈니스 요구 사항에 따라 플랫폼 데이터에서 고유한 인사이트를 도출하는 새 쿼리를 만들 수 있습니다. 이 기능에 대한 자세한 내용은 [SQL UI 보기 가이드](../view-sql.md)를 참조하세요.
+[!UICONTROL 개요] 작업 영역에서 토글을 사용하여 대시보드에 시각화된 인사이트를 생성하는 SQL을 볼 수 있습니다. 기존 인사이트의 SQL에서 영감을 얻어 비즈니스 요구 사항에 따라 Experience Platform 데이터에서 고유한 인사이트를 도출하는 새 쿼리를 만들 수 있습니다. 이 기능에 대한 자세한 내용은 [SQL UI 보기 가이드](../view-sql.md)를 참조하세요.
 
 ## 대상자 선택 {#select-audience}
 
@@ -119,7 +119,7 @@ Platform UI에서 [!UICONTROL 대상] 대시보드로 이동하려면 왼쪽 레
 
 선택한 Customer AI 모델에 대한 자세한 인사이트 페이지로 이동하려면 **[!UICONTROL 모델 세부 정보 보기]**&#x200B;를 선택합니다.
 
-![점수가 [!UICONTROL 고객 AI 배포] 위젯이고 [!UICONTROL 모델 세부 정보를 보기]가 강조 표시된 Experience Platform 대상 대시보드입니다.](../images/segments/customer-ai-distribution-of-scores.png)
+![점수가 [!UICONTROL 고객 AI 배포] 위젯이고 [!UICONTROL 모델 세부 정보를 보기]가 강조 표시된 Experience Platform 대상 대시보드](../images/segments/customer-ai-distribution-of-scores.png)
 
 자세한 모델 인사이트 페이지가 표시됩니다.
 
@@ -146,7 +146,7 @@ Platform UI에서 [!UICONTROL 대상] 대시보드로 이동하려면 왼쪽 레
 >
 >계산된 총 프로필 수는 선택한 병합 정책에 따라 다릅니다. 사용된 병합 정책을 변경하려면 개요 탭 바로 아래에 있는 드롭다운을 선택합니다. 자세한 내용은 [병합 정책](#merge-policies)의 섹션을 참조하십시오. 자세한 설명은 [병합 정책 개요](../../profile/merge-policies/overview.md)를 참조하십시오.
 
-![Customer AI 점수 요약 위젯이 강조 표시된 Experience Platform 대상 대시보드입니다.](../images/segments/customer-ai-scoring-summary.png)
+![Customer AI 채점 요약 위젯이 강조 표시된 Experience Platform 대상 대시보드입니다.](../images/segments/customer-ai-scoring-summary.png)
 
 **[!UICONTROL 모델 세부 정보 보기]**&#x200B;를 선택하여 선택한 고객 AI 모델의 세부 인사이트 페이지로 이동합니다. 고객 AI에 대한 자세한 내용은 [인사이트 찾기 UI 안내서](../../intelligent-services/customer-ai/user-guide/discover-insights.md)를 참조하세요.
 

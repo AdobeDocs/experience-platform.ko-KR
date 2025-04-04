@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform 릴리스 정보 2024년 8월
-description: Adobe Experience Platform의 2024년 8월 릴리스 정보입니다.
+description: Adobe Experience Platform의 2024년 8월 릴리스 정보.
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
-source-git-commit: 4fecb47084a522b4eb9808dc317e0d70e7ef42c6
-workflow-type: ht
-source-wordcount: '1562'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1565'
+ht-degree: 95%
 
 ---
 
@@ -29,15 +29,15 @@ Experience Platform의 기존 기능 및 설명서 업데이트:
 
 ## 속성 기반 액세스 제어 {#abac}
 
-속성 기반 액세스 제어는 개인 정보 보호를 중시하는 브랜드가 사용자 액세스를 더욱 유연하게 관리할 수 있도록 하는 Adobe Experience Platform의 기능입니다. 스키마 필드 및 세그먼트와 같은 개별 오브젝트를 사용자 역할에 할당할 수 있습니다. 이 기능을 사용하면 조직 내 특정 플랫폼 사용자에 대한 개별 오브젝트에 액세스를 허용하거나 취소할 수 있습니다.
+속성 기반 액세스 제어는 개인 정보 보호를 중시하는 브랜드가 사용자 액세스를 더욱 유연하게 관리할 수 있도록 하는 Adobe Experience Platform의 기능입니다. 스키마 필드 및 세그먼트와 같은 개별 오브젝트를 사용자 역할에 할당할 수 있습니다. 이 기능을 사용하면 조직의 특정 Experience Platform 사용자에 대해 개별 객체에 대한 액세스 권한을 부여하거나 취소할 수 있습니다.
 
-조직의 관리자는 속성 기반 액세스 제어를 통해 모든 플랫폼 워크플로와 리소스에서 민감한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 정의 유형의 데이터에 대한 액세스를 제어할 수 있습니다. 관리자는 특정 필드에만 액세스할 수 있는 사용자 역할과 필드에 해당하는 데이터를 정의할 수 있습니다.
+속성 기반 액세스 제어를 통해 조직 관리자는 모든 Experience Platform 워크플로 및 리소스에서 중요한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 지정된 유형의 데이터에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 특정 필드에만 액세스할 수 있는 사용자 역할과 필드에 해당하는 데이터를 정의할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 업데이트 | 설명 |
 | --- | --- |
-| 새로운 권한 관리자 기능 | 이제 [권한 관리자](../../access-control/abac/permission-manager/overview.md)를 사용하여 간단한 쿼리를 사용하여 보고서를 생성할 수 있으므로 액세스 관리를 이해하고 여러 워크플로 및 세분화 수준에서 액세스 권한을 확인하는 데 시간을 절약할 수 있습니다. 사용자 및 역할에 대한 보고서 작성에 대한 자세한 내용은 [권한 관리자 사용 안내서](../../access-control/abac/permission-manager/permissions.md)를 참조하십시오. ![왼쪽 탐색에서 권한 관리자를 강조 표시하는 이미지 Experience Platform 사용자 인터페이스.](assets/august/permission-manager-rn.png "사용자 인터페이스의 권한 관리자."){width="250" align="center" zoomable="yes"} |
+| 새로운 권한 관리자 기능 | 이제 [권한 관리자](../../access-control/abac/permission-manager/overview.md)를 사용하여 간단한 쿼리를 사용하여 보고서를 생성할 수 있으므로 액세스 관리를 이해하고 여러 워크플로 및 세분화 수준에서 액세스 권한을 확인하는 데 시간을 절약할 수 있습니다. 사용자 및 역할에 대한 보고서 작성의 자세한 내용은 [권한 관리자 사용 안내서](../../access-control/abac/permission-manager/permissions.md)를 참조하십시오. ![왼쪽 탐색에서 권한 관리자가 강조 표시된 이미지 Experience Platform 사용자 인터페이스.](assets/august/permission-manager-rn.png "사용자 인터페이스의 권한 관리자."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -47,18 +47,18 @@ Experience Platform의 기존 기능 및 설명서 업데이트:
 
 Adobe Experience Platform은 데이터의 모든 유형과 지연 시간을 수집할 수 있는 다양한 기능 세트를 제공합니다. Adobe에서 구축한 소스, 데이터 통합 파트너 또는 Adobe Experience Platform UI를 사용하여 일괄 처리 또는 스트리밍 API로 수집할 수 있습니다.
 
-**배치 데이터 수집에서 날짜 포맷 처리 업데이트**
+**배치 데이터 수집에서 날짜 형식 처리 업데이트**
 
-이 릴리스는 배치 데이터 수집에서 *날짜 포맷 처리*&#x200B;와 관련된 문제를 해결합니다. 이전에는 클라이언트가 삽입한 날짜 필드를 `Date`로서 `DateTime` 포맷으로 변환했습니다. 이 때문에 시간대가 필드에 자동으로 추가되어 `Date` 포맷을 선호하거나 필요로 하는 사용자에게 어려움을 주었습니다. 앞으로는 시간대가 `Date` 유형 필드에 자동으로 추가되지 않습니다. 이 업데이트를 통해 내보낸 데이터 포맷이 고객의 요청에 따라 해당 필드의 프로필에 표시된 포맷과 일치하는지 확인할 수 있습니다.
+이 릴리스는 배치 데이터 수집에서 *날짜 형식 처리*&#x200B;와 관련된 문제를 해결합니다. 이전에는 클라이언트가 삽입한 날짜 필드를 `Date`로서 `DateTime` 형식으로 변환했습니다. 이 때문에 시간대가 필드에 자동으로 추가되어 `Date` 형식을 선호하거나 필요로 하는 사용자에게 어려움을 주었습니다. 앞으로는 시간대가 `Date` 유형 필드에 자동으로 추가되지 않습니다. 이 업데이트를 통해 내보낸 데이터 형식이 고객의 요청에 따라 해당 필드의 프로필에 표시된 형식과 일치하는지 확인할 수 있습니다.
 
-릴리스 전 `Date` 출시: `"birthDate": "2018-01-12T00:00:00Z"`
+릴리스 전 `Date` 출시 : `"birthDate": "2018-01-12T00:00:00Z"`
 릴리스 후 `Date` 필드: `"birthDate": "2018-01-12"`
 
 [배치 수집](/help/ingestion/batch-ingestion/overview.md)에 대해 자세히 알아보십시오.
 
 ## 대상 {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 대상 또는 업데이트된 대상** {#new-updated-destinations}
 
@@ -73,12 +73,12 @@ Adobe Experience Platform은 데이터의 모든 유형과 지연 시간을 수�
 | 기능 | 설명 |
 | ----------- | ----------- |
 | 이제 배치 대상으로 온디맨드 파일을 내보낼 수 있습니다. | 이제 모든 고객이 온디맨드 파일을 배치 대상으로 내보낼 수 있는 옵션을 사용할 수 있습니다. 자세한 내용은 [전용 설명서](../../destinations/ui/export-file-now.md)를 참조하십시오. |
-| [예약 단계](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)에서 여러 내보낸 대상자에 대한 내보내기 예약을 편집합니다. | 이제 모든 고객이 대상자 활성화 워크플로의 예약 단계에서 여러 내보낸 대상자에 대한 내보내기 예약을 직접 편집할 수 있는 옵션을 사용할 수 있습니다. ![예약 단계에서 예약 편집 옵션을 강조 표시한 Experience Platform 사용자 인터페이스 이미지.](assets/august/edit-schedule.png "예약 단계에서 예약 옵션을 편집합니다."){width="250" align="center" zoomable="yes"} |
-| [예약 단계](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)에서 여러 내보낸 대상자의 파일 이름을 편집합니다. | 이제 모든 고객이 대상자 활성화 워크플로의 예약 단계에서 여러 내보낸 파일의 이름을 직접 편집할 수 있는 옵션을 사용할 수 있습니다. ![예약 단계에서 파일 이름 편집 옵션을 강조 표시 표시한 Experience Platform 사용자 인터페이스 이미지.](assets/august/edit-file-name.png "예약 단계에서 파일 이름 옵션을 편집합니다."){width="250" align="center" zoomable="yes"} |
-| [대상 세부 정보](../../destinations/ui/destination-details-page.md#bulk-remove) 페이지의 데이터 흐름에서 여러 대상자를 삭제합니다. | 이제 모든 고객이 **[!UICONTROL 대상 세부 정보]** 페이지의 기존 데이터 흐름에서 여러 대상자를 삭제할 수 있는 옵션을 사용할 수 있습니다. ![대상 세부 정보 페이지의 대상자 제거 옵션을 강조 표시한 Experience Platform 사용자 인터페이스 이미지.](assets/august/bulk-remove-audiences.png "대상 세부 정보 페이지의 대상자 제거 옵션."){width="250" align="center" zoomable="yes"} |
-| [대상 세부 정보](../../destinations/ui/destination-details-page.md#bulk-export) 페이지에서 여러 온디맨드 파일을 배치 대상으로 내보냅니다. | 이제 모든 고객이 **[!UICONTROL 대상 세부 정보]** 페이지에서 여러 온디맨드 파일을 배치 대상으로 내보낼 수 있는 옵션을 사용할 수 있습니다. ![대상 세부 정보 페이지의 지금 파일 내보내기 옵션을 강조 표시한 Experience Platform 사용자 인터페이스 이미지.](assets/august/bulk-export-file-now.png "대상 세부 정보 페이지의 지금 파일 내보내기 옵션."){width="250" align="center" zoomable="yes"} |
-| [대상 세부 정보](../../destinations/ui/destination-details-page.md#bulk-edit-file-names) 페이지에서 내보낸 여러 대상자의 파일 이름을 편집합니다. | 이제 **[!UICONTROL 대상 세부 정보]** 페이지에서 내보낸 여러 파일의 이름을 직접 편집할 수 있습니다. ![대상 세부 정보 페이지의 파일 이름 편집 옵션을 강조 표시한 Experience Platform 사용자 인터페이스 이미지.](assets/august/edit-file-name-destination-details.png "대상 세부 정보 페이지의 파일 이름 편집 옵션."){width="250" align="center" zoomable="yes"} |
-| [대상 세부 정보](../../destinations/ui/export-datasets.md#remove-dataset) 페이지의 데이터 흐름에서 여러 데이터 세트를 제거합니다. | 이제 모든 고객이 데이터 흐름에서 여러 데이터 세트를 제거하는 옵션을 사용할 수 있습니다. ![대상 세부 정보 페이지의 데이터 세트 제거 옵션을 강조 표시한 Experience Platform 사용자 인터페이스 이미지.](assets/august/bulk-remove-datasets.png "대상 세부 정보 페이지의 데이터 세트 제거 옵션."){width="250" align="center" zoomable="yes"} |
+| [예약 단계](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)에서 여러 내보낸 대상자에 대한 내보내기 예약을 편집합니다. | 이제 모든 고객이 대상자 활성화 워크플로의 예약 단계에서 여러 내보낸 대상자에 대한 내보내기 예약을 직접 편집할 수 있는 옵션을 사용할 수 있습니다. ![예약 단계에서 예약 편집 옵션이 강조 표시된 Experience Platform 사용자 인터페이스 이미지.](assets/august/edit-schedule.png "예약 단계에서 예약 옵션을 편집합니다."){width="250" align="center" zoomable="yes"} |
+| [예약 단계](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)에서 여러 내보낸 대상자의 파일 이름을 편집합니다. | 이제 모든 고객이 대상자 활성화 워크플로의 예약 단계에서 여러 내보낸 파일의 이름을 직접 편집할 수 있는 옵션을 사용할 수 있습니다. ![예약 단계에서 파일 이름 편집 옵션이 강조 표시된 Experience Platform 사용자 인터페이스 이미지.](assets/august/edit-file-name.png "예약 단계에서 파일 이름 옵션을 편집합니다."){width="250" align="center" zoomable="yes"} |
+| [대상 세부 정보](../../destinations/ui/destination-details-page.md#bulk-remove) 페이지의 데이터 흐름에서 여러 대상자를 제거합니다. | 이제 모든 고객이 **[!UICONTROL 대상 세부 정보]** 페이지의 기존 데이터 흐름에서 여러 대상자를 제거할 수 있는 옵션을 사용할 수 있습니다. ![대상 세부 정보 페이지의 대상자 제거 옵션이 강조 표시된 Experience Platform 사용자 인터페이스 이미지.](assets/august/bulk-remove-audiences.png "대상 세부 정보 페이지의 대상자 제거 옵션."){width="250" align="center" zoomable="yes"} |
+| [대상 세부 정보](../../destinations/ui/destination-details-page.md#bulk-export) 페이지에서 여러 온디맨드 파일을 배치 대상으로 내보냅니다. | 이제 모든 고객이 **[!UICONTROL 대상 세부 정보]** 페이지에서 여러 온디맨드 파일을 배치 대상으로 내보낼 수 있는 옵션을 사용할 수 있습니다. ![대상 세부 정보 페이지의 지금 파일 내보내기 옵션이 강조 표시된 Experience Platform 사용자 인터페이스 이미지.](assets/august/bulk-export-file-now.png "대상 세부 정보 페이지의 지금 파일 내보내기 옵션."){width="250" align="center" zoomable="yes"} |
+| [대상 세부 정보](../../destinations/ui/destination-details-page.md#bulk-edit-file-names) 페이지에서 내보낸 여러 대상자의 파일 이름을 편집합니다. | 이제 **[!UICONTROL 대상 세부 정보]** 페이지에서 내보낸 여러 파일의 이름을 직접 편집할 수 있습니다. ![대상 세부 정보 페이지의 파일 이름 편집 옵션이 강조 표시된 Experience Platform 사용자 인터페이스 이미지.](assets/august/edit-file-name-destination-details.png "대상 세부 정보 페이지의 파일 이름 편집 옵션."){width="250" align="center" zoomable="yes"} |
+| [대상 세부 정보](../../destinations/ui/export-datasets.md#remove-dataset) 페이지의 데이터 흐름에서 여러 데이터 세트를 제거합니다. | 이제 모든 고객이 데이터 흐름에서 여러 데이터 세트를 제거하는 옵션을 사용할 수 있습니다. ![대상 세부 정보 페이지의 데이터 세트 제거 옵션이 강조 표시된 Experience Platform 사용자 인터페이스 이미지.](assets/august/bulk-remove-datasets.png "대상 세부 정보 페이지의 데이터 세트 제거 옵션."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -96,7 +96,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 {style="table-layout:auto"}
 
-Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
+Experience Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
 ## ID 서비스 {#identity-service}
 
@@ -106,7 +106,7 @@ Adobe Experience Platform ID 서비스를 사용하여 여러 디바이스 및 �
 
 | 기능 | 설명 |
 | --- | --- |
-| 그래프 구성 안내서 | 아이덴티티 그래프 연결 규칙과 아이덴티티 그래프를 사용하는 동안 발생할 수 있는 일반적인 그래프 시나리오에 대한 정보는 [그래프 구성 안내서](../../identity-service/identity-graph-linking-rules/example-configurations.md)를 참조하십시오. 그래프 구성 안내서는 간단한 1인 그래프 시나리오부터 복잡하고 계층적인 다인 그래프 시나리오에 이르기까지 다양한 예시를 제공합니다. 또한 안내서를 사용하여 [그래프 시뮬레이션 UI](../../identity-service/identity-graph-linking-rules/graph-simulation.md)에 입력할 수 있는 이벤트 및 알고리즘 구성의 예와 특정 그래프 시나리오에서 기본 ID가 선택되는 방식에 대한 세부 정보도 볼 수 있습니다. |
+| 그래프 구성 안내서 | ID 그래프 연결 규칙과 ID 그래프를 사용하는 동안 발생할 수 있는 일반적인 그래프 시나리오에 대한 정보는 [그래프 구성 안내서](../../identity-service/identity-graph-linking-rules/example-configurations.md)를 참조하십시오. 그래프 구성 안내서는 간단한 1인 그래프 시나리오부터 복잡하고 계층적인 다인 그래프 시나리오에 이르기까지 다양한 예시를 제공합니다. 또한 안내서를 사용하여 [그래프 시뮬레이션 UI](../../identity-service/identity-graph-linking-rules/graph-simulation.md)에 입력할 수 있는 이벤트 및 알고리즘 구성의 예와 특정 그래프 시나리오에서 기본 ID가 선택되는 방식에 대한 세부 정보도 볼 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -114,13 +114,13 @@ ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service]를 사용하여 개인 사용자(예: 고객, 잠재 고객, 사용자 또는 조직)와 관련된 [!DNL Experience Platform]에 저장된 데이터를 대상자로 세분화할 수 있습니다. 세그먼트 정의 또는 [!DNL Real-Time Customer Profile] 데이터의 다른 소스를 통해 대상자를 만들 수 있습니다. 이러한 대상자는 [!DNL Platform]을 통해 중앙 집중식으로 구성 및 유지 관리되고 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
+[!DNL Segmentation Service]를 사용하여 개인 사용자(예: 고객, 잠재 고객, 사용자 또는 조직)와 관련된 [!DNL Experience Platform]에 저장된 데이터를 대상자로 세분화할 수 있습니다. 세그먼트 정의 또는 [!DNL Real-Time Customer Profile] 데이터의 다른 소스를 통해 대상자를 만들 수 있습니다. 이러한 대상자는 [!DNL Experience Platform]을 통해 중앙 집중식으로 구성 및 유지 관리되고 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
 
 **업데이트된 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 수집 세부 정보 | 사용자 정의 업로드 원본이 있는 대상자의 경우 대상자 세부 정보 페이지에서 대상자의 수집 세부 정보를 보다 포괄적으로 볼 수 있습니다. 또한 스키마를 선택하고 레이블을 지정할 원하는 속성을 선택하여 페이로드 속성에 레이블을 적용할 수 있습니다. 수집 세부 정보 섹션에 대한 자세한 내용은 [대상자 포털 안내서](../../segmentation/ui/audience-portal.md#ingestion-details)에서 확인할 수 있습니다. |
+| 수집 세부 정보 | 사용자 정의 업로드 원본이 있는 대상자의 경우 대상자 세부 정보 페이지에서 대상자의 수집 세부 정보를 보다 포괄적으로 조회할 수 있습니다. 또한 스키마를 선택하고 레이블을 지정할 속성을 선택하여 페이로드 속성에 레이블을 적용할 수 있습니다. 수집 세부 정보 섹션에 대한 자세한 내용은 [대상자 포털 안내서](../../segmentation/ui/audience-portal.md#ingestion-details)에서 확인할 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -142,7 +142,7 @@ Experience Platform의 소스를 사용하여 Adobe 애플리케이션 또는 �
 
 | 업데이트된 설명서 | 설명 |
 | --- | --- |
-| 데이터 흐름 업데이트에 대한 확장된 문서 | 기존 데이터 흐름에 적용할 수 있는 다양한 구성의 상세 정보를 제공하는 [UI의 기존 소스 데이터 흐름 업데이트 안내서](../../sources/tutorials/ui/update-dataflows.md)가 업데이트되었습니다. 비활성화된 데이터 흐름이 다시 활성화될 때 예상되는 동작을 명확히 하기 위해 안내서도 업데이트되었습니다. |
+| 데이터 흐름 업데이트에 대해 확장된 문서 | 기존 데이터 흐름에 적용할 수 있는 다양한 구성의 상세 정보를 제공하는 [UI의 기존 소스 데이터 흐름 업데이트 안내서](../../sources/tutorials/ui/update-dataflows.md)가 업데이트되었습니다. 비활성화된 데이터 흐름이 다시 활성화될 때 예상되는 비헤이비어를 명확히 하기 위해 안내서도 업데이트되었습니다. |
 
 {style="table-layout:auto"}
 

@@ -1,25 +1,25 @@
 ---
-title: 태그와 Platform Web SDK 확장을 사용하여 IAB TCF 2.0 지원 통합
-description: 태그 및 Adobe Experience Platform 웹 SDK 확장을 사용하여 IAB TCF 2.0 동의를 설정하는 방법을 알아봅니다.
+title: 태그와 Experience Platform Web SDK 확장을 사용하여 IAB TCF 2.0 지원 통합
+description: 태그 및 Adobe Experience Platform Web SDK 확장을 사용하여 IAB TCF 2.0 동의를 설정하는 방법에 대해 알아봅니다.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
 
-# 태그와 Platform Web SDK 확장을 사용하여 IAB TCF 2.0 지원 통합
+# 태그와 Experience Platform Web SDK 확장을 사용하여 IAB TCF 2.0 지원 통합
 
-Adobe Experience Platform Web SDK는 대화형 Advertising Bureau Transparency &amp; Consent Framework, 버전 2.0(IAB TCF 2.0)을 지원합니다. 이 안내서에서는 Adobe Experience Platform Web SDK 태그 확장을 사용하여 Adobe에 IAB TCF 2.0 동의 정보를 전송하기 위한 태그 속성을 설정하는 방법을 보여 줍니다.
+Adobe Experience Platform Web SDK은 Interactive Advertising Bureau Transparency &amp; Consent Framework 버전 2.0(IAB TCF 2.0)을 지원합니다. 이 안내서에서는 Adobe Experience Platform Web SDK 태그 확장을 사용하여 IAB TCF 2.0 동의 정보를 Adobe으로 전송하기 위해 태그 속성을 설정하는 방법을 보여 줍니다.
 
 태그를 사용하지 않으려면 [태그 없이 IAB TCF 2.0 사용](./without-tags.md)에 대한 안내서를 참조하십시오.
 
 ## 시작하기
 
-태그 및 Platform Web SDK 확장과 함께 IAB TCF 2.0을 사용하려면 XDM 스키마 및 데이터 세트를 사용할 수 있어야 합니다.
+태그 및 Experience Platform Web SDK 확장과 함께 IAB TCF 2.0을 사용하려면 XDM 스키마 및 데이터 세트를 사용할 수 있어야 합니다.
 
-또한 이 안내서를 사용하려면 Adobe Experience Platform Web SDK에 대한 작업 이해 권한이 필요합니다. 빠른 새로 고침은 [Adobe Experience Platform Web SDK 개요](../../home.md) 및 [자주 묻는 질문](../../faq.md) 설명서를 참조하십시오.
+또한 이 안내서를 사용하려면 Adobe Experience Platform Web SDK에 대한 작업 이해도가 있어야 합니다. 빠른 새로 고침은 [Adobe Experience Platform Web SDK 개요](../../home.md) 및 [자주 묻는 질문](../../faq.md) 설명서를 참조하십시오.
 
 ## 기본 동의 설정
 
@@ -66,7 +66,7 @@ addEventListener();
 
 >[!IMPORTANT]
 >
->이러한 데이터 요소는 사용자 지정 코드를 통해 만들어졌기 때문에 데이터 요소 선택기를 사용하여 선택할 수 없습니다. 퍼센트 기호가 있는 데이터 요소 이름을 입력해야 합니다. 이 코드는 고객이 변경될 때마다 새로운 동의 환경 설정으로 고객의 프로필을 업데이트합니다. 또한, 서버가 쿠키 값을 반환하므로 Adobe Experience Platform Web SDK에서 경험 이벤트를 기록할 수 없습니다.
+>이러한 데이터 요소는 사용자 지정 코드를 통해 만들어졌기 때문에 데이터 요소 선택기를 사용하여 선택할 수 없습니다. 퍼센트 기호가 있는 데이터 요소 이름을 입력해야 합니다. 이 코드는 고객이 변경될 때마다 새로운 동의 환경 설정으로 고객의 프로필을 업데이트합니다. 또한 서버는 쿠키 값을 반환하므로 Adobe Experience Platform Web SDK에서 경험 이벤트를 기록하지 못할 수 있습니다.
 
 ## 경험 이벤트에 대한 XDM 데이터 요소 생성
 
@@ -113,7 +113,7 @@ addEventListener();
 
 이 코드는 `useractioncomplete` 및 `tcloaded` 이벤트가 모두 처리된다는 점을 제외하면 이전 사용자 지정 코드와 동일합니다. [이전 사용자 지정 코드](#consent-code-1)은(는) 고객이 처음으로 기본 설정을 선택할 때만 트리거됩니다. 이 코드는 고객이 이미 환경 설정을 선택한 경우에도 트리거됩니다. 예를 들어 두 번째 페이지 로드 시.
 
-Platform Web SDK 확장에서 &quot;이벤트 보내기&quot; 작업을 추가합니다. XDM 필드 내에서 이전 섹션에서 만든 XDM 데이터 요소를 선택합니다.
+Experience Platform Web SDK 확장 기능에서 &quot;이벤트 보내기&quot; 작업을 추가합니다. XDM 필드 내에서 이전 섹션에서 만든 XDM 데이터 요소를 선택합니다.
 
 ## IAB TCF 2.0 동의 정보로 다른 이벤트 보내기
 
@@ -121,4 +121,4 @@ Platform Web SDK 확장에서 &quot;이벤트 보내기&quot; 작업을 추가�
 
 ## 다음 단계
 
-Platform Web SDK 확장과 함께 IAB TCF 2.0을 사용하는 방법에 대해 배웠으므로 Adobe Analytics 또는 Adobe Real-time Customer Data Platform과 같은 다른 Adobe 솔루션과 통합하도록 선택할 수도 있습니다. 자세한 내용은 [IAB Transparency &amp; Consent Framework 2.0 개요](./overview.md)를 참조하십시오.
+Experience Platform Web SDK 확장 기능과 함께 IAB TCF 2.0을 사용하는 방법에 대해 배웠으므로 Adobe Analytics 또는 Adobe Real-Time Customer Data Platform과 같은 다른 Adobe 솔루션과 통합하도록 선택할 수도 있습니다. 자세한 내용은 [IAB Transparency &amp; Consent Framework 2.0 개요](./overview.md)를 참조하십시오.

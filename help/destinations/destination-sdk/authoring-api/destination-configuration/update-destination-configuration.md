@@ -1,10 +1,10 @@
 ---
-description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 기존 대상 구성을 업데이트하는 데 사용되는 API 호출을 보여 줍니다.
+description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 기존 대상 구성을 업데이트하는 데 사용되는 API 호출을 구현합니다.
 title: 대상 구성 업데이트
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '371'
 ht-degree: 1%
 
 ---
@@ -207,7 +207,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API 오류 처리 {#error-handling}
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계
 

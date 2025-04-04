@@ -3,9 +3,9 @@ title: TikTok 연결
 description: 광고 캠페인으로 타깃팅할 데이터를 사용하여 TikTok에서 사용자 지정 대상을 작성합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 대상을 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1079'
 ht-degree: 3%
 
 ---
@@ -42,8 +42,8 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. [ID](/help/id
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
-| 전화번호 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원되며 E.164 형식이어야 합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
-| 이메일 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| 전화번호 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원되며 E.164 형식이어야 합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| 이메일 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. [ID](/help/id
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
 | 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
-| [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences)을(를) 통해 Experience Platform으로 가져온 대상입니다. |
+| [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/start/audiences)을(를) 통해 Experience Platform으로 가져온 대상입니다. |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. [ID](/help/id
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-![대상 연결 세부 정보](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "채울 대상 연결 세부 정보를 표시하는 플랫폼 UI의 이미지")
+![대상 연결 세부 정보](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "Experience Platform UI의 이미지로, 채울 대상 연결 세부 정보를 표시합니다")
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
@@ -123,7 +123,7 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. [ID](/help/id
 
 * 이메일 네임스페이스를 대상 ID로 선택합니다.
 
-![ID 매핑](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "플랫폼 UI의 이미지, ID 매핑")
+![ID 매핑](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Experience Platform UI의 이미지, ID 매핑")
 
 ## 내보낸 데이터 {#exported-data}
 

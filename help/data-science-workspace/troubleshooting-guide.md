@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 과학 Workspace 문제 해결 안내서
 description: 이 문서에서는 Adobe Experience Platform Data Science Workspace에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 0%
@@ -19,15 +19,15 @@ ht-degree: 0%
 >
 >이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
-이 문서에서는 Adobe Experience Platform [!DNL Data Science Workspace]에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 일반적으로 [!DNL Platform] API에 대한 질문과 문제 해결은 [Adobe Experience Platform API 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
+이 문서에서는 Adobe Experience Platform [!DNL Data Science Workspace]에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 일반적으로 [!DNL Experience Platform] API에 대한 질문과 문제 해결은 [Adobe Experience Platform API 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
 
 ## JupyterLab Notebook 쿼리 상태가 실행 상태에서 중단됨
 
-JupyterLab Notebook은 일부 메모리 부족 상태에서 셀이 무기한으로 실행 중임을 나타낼 수 있습니다. 예를 들어, 큰 데이터 세트 쿼리하거나 여러 후속 쿼리를 수행할 때 JupiterLab Notebook은 결과 데이터 프레임 개체를 스토어 데 사용 가능한 메모리가 부족할 수 있습니다. 이 상황에서 볼 수 있는 몇 가지 지표가 있습니다. 첫째, 커널은 유휴 상태로 균일 전환되지만 셀은 셀 옆에 아이콘으로 [`*`] 표시된 실행 중으로 표시됩니다. 또한 아래쪽 막대는 사용/사용 가능한 RAM의 양을 나타냅니다.
+JupyterLab Notebook은 일부 메모리 부족 상태에서 셀이 무기한으로 실행 중임을 나타낼 수 있습니다. 예를 들어 큰 데이터 세트를 쿼리하거나 여러 후속 쿼리를 수행할 때 JupyterLab Notebook에 사용 가능한 메모리가 부족하여 결과 데이터 프레임 개체를 저장할 수 있습니다. 이런 상황에서 볼 수 있는 몇 가지 지표가 있다. 먼저, 셀 옆에 [`*`] 아이콘이 표시된 대로 셀이 실행됨으로 표시되더라도 커널은 유휴 상태로 들어갑니다. 또한 맨 아래 막대는 사용/사용 가능한 RAM의 양을 나타냅니다.
 
-![사용 가능한 램](./images/jupyterlab/user-guide/allocate-ram.png)
+![사용 가능한 ram](./images/jupyterlab/user-guide/allocate-ram.png)
 
-데이터를 읽는 동안 메모리는 할당된 메모리의 최대 양에 도달할 때까지 증가할 수 있습니다. 메모리는 최대 메모리에 도달하고 커널이 다시 시작되는 즉시 해제됩니다. 즉, 이 시나리오에서 사용된 메모리는 커널 다시 시작으로 인해 매우 낮은 것으로 표시될 수 있지만 다시 시작하기 직전에는 메모리가 할당된 최대 RAM에 매우 가까웠을 것입니다.
+데이터를 읽는 동안 할당된 최대 메모리 양에 도달할 때까지 메모리가 증가할 수 있습니다. 최대 메모리에 도달하면 메모리가 해제되고 커널이 다시 시작됩니다. 즉, 이 시나리오에서 사용된 메모리는 커널 재시작으로 인해 매우 낮은 것으로 표시될 수 있지만, 재시작 직전에 메모리가 할당된 최대 RAM에 매우 근접했을 수 있습니다.
 
 이 문제를 해결하려면 JupyterLab의 오른쪽 상단에 있는 톱니바퀴 아이콘을 선택하고 슬라이더를 오른쪽으로 밀고 **[!UICONTROL 구성 업데이트]**&#x200B;를 선택하여 추가 RAM을 할당합니다. 또한 여러 쿼리를 실행하고 있고 RAM 값이 최대 할당 양에 가까워지면 이전 쿼리의 결과가 필요하지 않는 한 커널을 다시 시작하여 사용 가능한 RAM을 재설정합니다. 이렇게 하면 현재 쿼리에 사용할 수 있는 최대 RAM 용량을 확보하게 됩니다.
 
@@ -35,27 +35,27 @@ JupyterLab Notebook은 일부 메모리 부족 상태에서 셀이 무기한으�
 
 최대 메모리(RAM)를 할당하고서도 이 문제가 발생하는 경우, 데이터 열이나 범위를 줄여 더 작은 데이터 세트 크기에서 작동하도록 쿼리를 수정할 수 있습니다. 전체 데이터를 사용하려면 Spark 노트북을 활용하는 것이 좋습니다.
 
-## [!DNL JupyterLab] 환경이 로드되지 않습니다. [!DNL Google Chrome]
+## [!DNL JupyterLab] 환경이 [!DNL Google Chrome]에서 로드되지 않음
 
 >[!IMPORTANT]
 >
->이 문제는 해결되었지만 Google 크롬 80.x 브라우저 브라우저에는 여전히 존재할 수 있습니다. 크롬 브라우저 최신 버전인지 확인하십시오.
+>이 문제는 해결되었지만 Google Chrome 80.x 브라우저에 계속 있을 수 있습니다. Chrome 브라우저가 최신 상태인지 확인하십시오.
 
-브라우저 버전 80.x에서는 [!DNL Google Chrome] 모든 서드파티 쿠키가 기본적으로 차단됩니다. 이 정책 Adobe Experience Platform 내에 로드되지 않을 수 있습니다 [!DNL JupyterLab] .
+[!DNL Google Chrome] 브라우저 버전 80.x에서는 모든 서드파티 쿠키가 기본적으로 차단됩니다. 이 정책으로 인해 [!DNL JupyterLab]이(가) Adobe Experience Platform 내에서 로드되지 않을 수 있습니다.
 
-이 문제를 해결하려면 다음 단계를 사용합니다.
+이 문제를 해결하려면 다음 단계를 사용하십시오.
 
-[!DNL Chrome] 브라우저에서 오른쪽 상단으로 이동하여 설정&#x200B;**선택합니다**(또는 주소 표시줄에 &quot;chrome://settings/&quot;를 복사하여 붙여넣을 수 있음). 그런 다음 페이지 맨 아래로 스크롤하여 **고급** 드롭다운을 클릭합니다.
+[!DNL Chrome] 브라우저에서 오른쪽 상단으로 이동하여 **설정**&#x200B;을 선택합니다(또는 주소 표시줄에 &quot;chrome://settings/&quot;을 복사하여 붙여 넣을 수 있음). 그런 다음 페이지 맨 아래로 스크롤하여 **고급** 드롭다운을 클릭합니다.
 
-![Chrome 고급](./images/faq/chrome-advanced.png)
+![chrome advanced](./images/faq/chrome-advanced.png)
 
-개인 정보 및 보안&#x200B;**섹션이**&#x200B;나타납니다. 다음, 사이트 설정&#x200B;**다음에**&#x200B;쿠키 및 사이트 데이터를&#x200B;**클릭합니다**.
+**개인 정보 및 보안** 섹션이 나타납니다. **사이트 설정**, **쿠키 및 사이트 데이터**&#x200B;를 차례로 클릭합니다.
 
-![Chrome 고급](./images/faq/privacy-security.png)
+![chrome advanced](./images/faq/privacy-security.png)
 
-![Chrome 고급](./images/faq/cookies.png)
+![chrome advanced](./images/faq/cookies.png)
 
-마지막으로 &quot;서드파티 쿠키 차단&quot;을 &quot;OFF&quot;로 전환합니다.
+마지막으로 &quot;서드파티 쿠키 차단&quot;을 &quot;끄기&quot;로 전환합니다.
 
 ![chrome advanced](./images/faq/toggle-off.png)
 
@@ -139,11 +139,11 @@ Safari 환경 설정 창에서 **고급**&#x200B;을 선택합니다. 그런 다
 
 <!-- remove this paragraph at a later date once the sdk is updated -->
 
-데이터를 읽는 동안 문제 가 발생하고 데이터에 변환을 적용하는 경우 변환 전에 데이터를 캐싱 해 보십시오. 데이터를 캐싱하면 네트워크를 통한 다중 읽기가 방지됩니다. 데이터를 읽어 시작. 다음, 데이터를 캐시(`df.cache()`)합니다. 마지막으로 변환을 수행합니다.
+데이터를 읽는 동안 문제가 발생하고 데이터에 변형을 적용하는 경우 변형 전에 데이터를 캐시해 보십시오. 데이터를 캐시하면 네트워크를 통한 다중 읽기가 방지됩니다. 데이터를 읽는 것부터 시작하십시오. 그런 다음 데이터를 캐시합니다(`df.cache()`). 마지막으로 변형을 수행합니다.
 
-## Spark/PySpark 노트북이 데이터를 읽고 쓰는 데 시간이 오래 걸리는 이유는 무엇인가요?
+## Spark/PySpark 노트북이 데이터를 읽고 쓰는 데 왜 이렇게 오래 걸립니까?
 
-를 사용하는 `fit()`경우와 같이 데이터에 대한 변환을 수행하는 경우 변환이 여러 번 실행될 수 있습니다. 성능을 향상시키려면 를 수행하기 `fit()`전에 을 사용하여 `df.cache()` 데이터를 캐시하십시오. 이렇게 하면 변환은 한 번만 실행되며 네트워크를 통해 여러 번 읽기를 방지할 수 있습니다.
+`fit()`을(를) 사용하는 등 데이터에 대한 변환을 수행하는 경우 변환이 여러 번 실행될 수 있습니다. 성능을 향상시키려면 `fit()`을(를) 수행하기 전에 `df.cache()`을(를) 사용하여 데이터를 캐시합니다. 이렇게 하면 변환은 한 번만 실행되며 네트워크를 통해 여러 번 읽기를 방지할 수 있습니다.
 
 **권장 순서:** 데이터를 읽는 것부터 시작합니다. 그런 다음 변환을 수행한 다음 데이터를 캐싱(`df.cache()`)합니다. 마지막으로 `fit()`을(를) 수행합니다.
 
@@ -152,15 +152,15 @@ Safari 환경 설정 창에서 **고급**&#x200B;을 선택합니다. 그런 다
 다음 오류가 발생하는 경우:
 
 - 단계 오류로 인해 작업이 중단되었습니다. 각 파티션에 동일한 수의 요소가 있는 RDD만 압축할 수 있습니다.
-- 원격 RPC 클라이언트 연결 해제 및 기타 메모리 오류입니다.
+- 원격 RPC 클라이언트 연결이 끊어지고 다른 메모리 오류가 발생했습니다.
 - 데이터 세트를 읽고 쓸 때 성능이 저하됩니다.
 
-데이터를 쓰기 전에 데이터 (`df.cache()`)를 캐싱 중인지 확인하십시오. Notebook에서 코드를 실행할 때 다음과 `fit()` 같은 작업을 앞에 사용하면 `df.cache()` Notebook 성능을 크게 향상시킬 수 있습니다. 데이터 집합을 쓰기 전에 `df.cache()`을(를) 사용하면 변형이 여러 번 실행되지 않고 한 번만 실행됩니다.
+데이터를 쓰기 전에 데이터(`df.cache()`)를 캐시하고 있는지 확인하십시오. 전자 필기장에서 코드를 실행할 때 `fit()`과(와) 같은 작업 전에 `df.cache()`을(를) 사용하면 전자 필기장 성능이 크게 향상될 수 있습니다. 데이터 집합을 쓰기 전에 `df.cache()`을(를) 사용하면 변형이 여러 번 실행되지 않고 한 번만 실행됩니다.
 
 ## 데이터 과학 Workspace의 [!DNL Docker Hub] 제한
 
-2020년 11월 20일부터 Docker Hub의 익명 및 무료 인증 사용에 대한 속도 제한이 적용되었습니다. 익명 및 무료 [!DNL Docker Hub] 사용자는 6시간마다 100개의 컨테이너 이미지 가져오기 요청으로 제한됩니다. 이러한 변경 사항의 영향을 받는 경우 다음 오류 메시지가 `ERROR: toomanyrequests: Too Many Requests.` `You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limits.`표시됩니다.
+2020년 11월 20일부터 도커 허브의 익명 및 무료 인증 사용에 대한 요금 제한이 적용됩니다. 익명 및 무료 [!DNL Docker Hub] 사용자는 6시간마다 100개의 컨테이너 이미지 가져오기 요청으로 제한됩니다. 이러한 변경 사항의 영향을 받는 경우 `ERROR: toomanyrequests: Too Many Requests.` 또는 `You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limits.` 오류 메시지가 표시됩니다.
 
-현재 이 제한은 6시간 일정 내에 100개의 Notebook to Recipes를 빌드하려고 하거나 자주 확장 및 축소되는 Data Science 작업 영역 내에서 Spark 기반 Notebook을 사용하는 경우에만 조직에 영향을 줍니다. 그러나 이러한 클러스터가 유휴 상태가 되기 전에 2시간 동안 활성 상태로 유지되기 때문에 그럴 가능성은 거의 없습니다. 이렇게 하면 클러스터가 활성 상태일 때 필요한 끌어오기 수가 줄어듭니다. 위의 오류 중 하나라도 발생하면 한도가 재설정될 때까지 기다려야 합니다 [!DNL Docker] .
+현재, 이 제한은 6시간 이내에 100개의 Notebook to Recipes를 작성하려고 하거나 Data Science Workspace 내에서 자주 확대 및 축소되는 Spark 기반 Notebooks를 사용하는 경우에만 조직에 영향을 줍니다. 그러나 이러한 클러스터가 유휴 상태로 유지되기 전에 2시간 동안 활성 상태를 유지하므로 그렇게 할 가능성은 낮습니다. 이렇게 하면 클러스터가 활성 상태일 때 필요한 가져오기 수가 줄어듭니다. 위의 오류가 발생하면 [!DNL Docker] 제한이 재설정될 때까지 기다려야 합니다.
 
-속도 제한에 대한 [!DNL Docker Hub] 자세한 내용은 DockerHub 설명서를](https://www.docker.com/increase-rate-limits) 방문 하세요[. 이에 대한 해결책은 현재 작업 중이며 후속 릴리스에서 나올 것으로 예상됩니다.
+[!DNL Docker Hub] 속도 제한에 대한 자세한 내용은 [DockerHub 설명서](https://www.docker.com/increase-rate-limits)를 참조하세요. 이에 대한 해결 방법은 후속 릴리스에서 진행 중이며 향후 제공될 예정입니다.

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;속성 기반 액세스 제어;속성 기반 액세스 제어
 title: 속성 기반 액세스 제어 API 시작하기
-description: 속성 기반 액세스 제어 API를 사용하면 Adobe Experience Platform 내에서 역할 및 액세스 정책을 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
+description: 속성 기반 액세스 제어 API를 사용하면 Adobe Experience Platform 내에서 역할 및 액세스 정책을 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아봅니다.
 role: Developer
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '328'
 ht-degree: 17%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 17%
 
 ## 필수 헤더에 대한 값 수집
 
-이 안내서를 사용하려면 Platform API를 호출하려면 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 필요한 각 헤더의 값이 제공됩니다.
+이 안내서를 사용하려면 Experience Platform API를 호출하려면 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

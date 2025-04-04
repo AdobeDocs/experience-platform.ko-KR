@@ -2,10 +2,10 @@
 title: 빌드
 description: 빌드의 개념과 Adobe Experience Platform 내에서 작동하는 방식에 대해 알아봅니다.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 48%
+source-wordcount: '791'
+ht-degree: 54%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 빌드는 클라이언트 장치에서 실행되는 모든 코드가 들어 있는 파일 세트입니다.
 
@@ -56,15 +56,15 @@ ht-degree: 48%
 
 축소는 파일에서 실행하는 데 필요하지 않은 데이터를 제거하여 대역폭 비용을 줄이고 속도를 향상시킵니다.
 
-성능을 향상시키기 위해 플랫폼은 다음을 포함한 모든 것을 축소합니다.
+성능을 향상시키기 위해 Experience Platform은 다음을 포함한 모든 것을 축소합니다.
 
 * 기본 태그 라이브러리
 * 확장의 일부로 확장 개발자가 제공하는 모듈 코드
-* Platform 사용자가 제공한 사용자 지정 코드
+* Experience Platform 사용자가 제공한 사용자 지정 코드
 
 >[!NOTE]
 >
->모듈 코드와 사용자 지정 코드가 이미 축소된 경우 Platform에서는 이를 다시 축소합니다. 이러한 두 번째 축소는 추가 이점이 없지만, 아무런 영향을 주지 않으며 Platform이 덜 복잡해지고 유지 관리가 쉬워집니다.
+>모듈 코드와 사용자 지정 코드가 이미 축소된 경우 Experience Platform에서는 이를 다시 축소합니다. 이러한 두 번째 축소는 추가 이점이 없지만, 아무런 영향을 주지 않으며 Experience Platform이 덜 복잡해지고 유지 관리가 쉬워집니다.
 
 제공된 모든 클라이언트측 코드는 축소된 코드 버전을 가리킵니다. 이는 축소된 파일에 대한 표준 명명 규칙을 따르는 파일 이름에 표시됩니다.
 
@@ -74,7 +74,7 @@ ht-degree: 48%
 
 `launch-%environment_id%.js`
 
-확장 개발자가 해당 확장에 축소된 코드를 제공하는 경우 Platform은 축소 해제된 빌드에 축소 해제된 코드를 제공하지 않습니다. 마찬가지로, Platform 사용자가 축소된 코드를 사용자 지정 코드 상자에 입력하면 해당 코드가 축소 해제된 빌드에서 축소됩니다. Platform은 축소를 해제하지 않습니다.
+확장 개발자가 해당 확장에 축소된 코드를 제공하는 경우 Experience Platform은 축소 해제된 빌드에 축소 해제된 코드를 제공하지 않습니다. 마찬가지로, Experience Platform 사용자가 축소된 코드를 사용자 지정 코드 상자에 입력하면 해당 코드가 축소 해제된 빌드에서 축소됩니다. Experience Platform은 아무것도 축소 해제하지 않습니다.
 
 축소에 대한 자세한 내용은 [이 스택 경로 문서](https://blog.stackpath.com/glossary/minification/)를 참조하십시오.
 

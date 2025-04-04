@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;홈;인기 항목;날짜 범위
 title: Adobe I/O 이벤트 알림 구독
-description: 이 문서에서는 Adobe Experience Platform 서비스에 대한 Adobe I/O 이벤트 알림을 구독하는 방법에 대한 단계를 제공합니다. 사용 가능한 이벤트 유형에 대한 참조 정보가 제공되며 적용 가능한 각  [!DNL Platform] 서비스에 대해 반환된 이벤트 데이터를 해석하는 방법에 대한 추가 설명서 링크도 함께 제공됩니다.
+description: 이 문서에서는 Adobe Experience Platform 서비스를 위한 Adobe I/O 이벤트 알림을 구독하는 방법에 대한 단계를 제공합니다. 사용 가능한 이벤트 유형에 대한 참조 정보가 제공되며 적용 가능한 각  [!DNL Experience Platform] 서비스에 대해 반환된 이벤트 데이터를 해석하는 방법에 대한 추가 설명서 링크도 함께 제공됩니다.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8e6301c5f834465acff99b4cd668017581c1dfa9
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 [!DNL Observability Insights]을(를) 통해 Adobe Experience Platform 활동에 대한 Adobe I/O 이벤트 알림을 구독할 수 있습니다. 이러한 이벤트는 활동 모니터링의 효율적인 자동화를 용이하게 하기 위해 구성된 웹후크로 전송됩니다.
 
-이 문서에서는 Adobe Experience Platform 서비스에 대한 Adobe I/O 이벤트 알림을 구독하는 방법에 대한 단계를 제공합니다. 사용 가능한 이벤트 유형에 대한 참조 정보가 제공되며 각 적용 가능한 [!DNL Platform] 서비스에 대해 반환된 이벤트 데이터를 해석하는 방법에 대한 추가 설명서에 대한 링크도 제공됩니다.
+이 문서에서는 Adobe Experience Platform 서비스에 대한 Adobe I/O 이벤트 알림을 구독하는 방법에 대한 단계를 제공합니다. 사용 가능한 이벤트 유형에 대한 참조 정보가 제공되며 각 적용 가능한 [!DNL Experience Platform] 서비스에 대해 반환된 이벤트 데이터를 해석하는 방법에 대한 추가 설명서에 대한 링크도 제공됩니다.
 
 ## 시작하기
 
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ## Adobe Developer Console에서 새 프로젝트 만들기
 
-[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)(으)로 이동하여 Adobe ID으로 로그인합니다. 그런 다음 Adobe Developer Console 설명서에서 [빈 프로젝트 만들기](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/)에 대한 자습서에 설명된 단계를 수행합니다.
+[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)&#x200B;(으)로 이동하여 Adobe ID으로 로그인합니다. 그런 다음 Adobe Developer Console 설명서에서 [빈 프로젝트 만들기](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/)에 대한 자습서에 설명된 단계를 수행합니다.
 
 ## 이벤트 구독
 
@@ -50,7 +50,7 @@ ht-degree: 1%
 프로젝트에 이벤트 공급자를 추가할 수 있는 대화 상자가 나타납니다.
 
 * Experience Platform 알림을 구독하는 경우 **[!UICONTROL 플랫폼 알림]**&#x200B;을 선택하세요.
-* Adobe Experience Platform [!DNL Privacy Service] 알림을 구독하는 경우 **[!UICONTROL 이벤트 Privacy Service]**&#x200B;을(를) 선택하십시오.
+* Adobe Experience Platform [!DNL Privacy Service] 알림을 구독하는 경우 **[!UICONTROL Privacy Service 이벤트]**&#x200B;를 선택하세요.
 
 이벤트 공급자를 선택한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
 

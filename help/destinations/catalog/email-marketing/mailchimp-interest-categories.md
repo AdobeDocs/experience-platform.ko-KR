@@ -3,9 +3,9 @@ title: Mailchimp 관심 범주
 description: Mailchimp(Intuit Mailchimp라고도 함)는 기업이 메일링 목록 및 이메일 마케팅 캠페인을 사용하여 연락처(고객, 고객 또는 기타 이해 당사자)를 관리하고 상담하는 데 사용하는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다. 이 커넥터를 사용하여 관심사 및 선호도에 따라 연락처를 정렬합니다.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2312'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
-이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API를 사용하여 [관심 범주](https://mailchimp.com/developer/marketing/api/interest-categories/)을(를) 만든 다음 선택한 각 Platform 대상의 연락처를 해당 관심 범주에 추가합니다. 새 세그먼트 내에서 새 연락처를 활성화한 후 **새 연락처를 추가**&#x200B;하거나 **기존 [!DNL Mailchimp]개 연락처의 정보를 업데이트**&#x200B;한 다음 **원하는 그룹에서 추가 또는 제거**&#x200B;할 수 있습니다. [!DNL Mailchimp] [!DNL Mailchimp Interest Groups]은(는) 플랫폼에서 선택한 대상 이름을 [!DNL Mailchimp] 내의 관심 범주로 사용합니다.
+이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API를 사용하여 [관심 범주](https://mailchimp.com/developer/marketing/api/interest-categories/)을(를) 만든 다음 선택한 각 Experience Platform 대상의 연락처를 해당 관심 범주에 추가합니다. 새 세그먼트 내에서 새 연락처를 활성화한 후 **새 연락처를 추가**&#x200B;하거나 **기존 [!DNL Mailchimp]개 연락처의 정보를 업데이트**&#x200B;한 다음 **원하는 그룹에서 추가 또는 제거**&#x200B;할 수 있습니다. [!DNL Mailchimp] [!DNL Mailchimp Interest Groups]은(는) Experience Platform에서 선택한 대상 이름을 [!DNL Mailchimp] 내의 관심 범주로 사용합니다.
 
 ## 사용 사례 {#use-cases}
 
@@ -40,7 +40,7 @@ Experience Platform 및 [!DNL Mailchimp]에서 설정해야 하는 필수 구성
 
 ### [!DNL Mailchimp Interest Categories] 대상에 대한 필수 구성 요소 {#prerequisites-destination}
 
-Platform에서 [!DNL Mailchimp] 계정으로 데이터를 내보내려면 다음 전제 조건을 참고하십시오.
+Experience Platform에서 [!DNL Mailchimp] 계정으로 데이터를 내보내려면 다음 전제 조건을 참고하십시오.
 
 #### [!DNL Mailchimp] 계정이 있어야 합니다. {#prerequisites-account}
 
@@ -92,8 +92,8 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> 플랫폼에서 선택한 각 대상에 대해 해당 [!DNL Mailchimp Interest Categories] 세그먼트 상태가 Platform의 대상 상태로 업데이트됩니다.</li></ul> |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필을 업데이트하면 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> Experience Platform에서 선택한 각 대상에 대해 해당 [!DNL Mailchimp Interest Categories] 세그먼트 상태가 Experience Platform의 대상 상태로 업데이트됩니다.</li></ul> |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상 평가를 기반으로 Experience Platform에서 프로필을 업데이트하면 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -118,7 +118,7 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 {style="table-layout:auto"}
 
-인증 방법을 보여 주는 ![플랫폼 UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
+인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
 
 제공된 세부 정보가 유효하면 UI에 녹색 확인 표시와 함께 **[!UICONTROL 연결됨]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
 
@@ -126,15 +126,15 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-![대상 세부 정보를 표시하는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-interest-categories/destination-details.png)
+대상 세부 정보를 표시하는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-interest-categories/destination-details.png)
 
 | 필드 | 설명 |
 | --- | --- |
 | **[!UICONTROL 이름]** | 나중에 이 대상을 인식할 수 있는 이름입니다. |
 | **[!UICONTROL 설명]** | 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다. |
 | **[!UICONTROL 데이터 센터]** | [!DNL Mailchimp] 계정 `data center`입니다. 자세한 내용은 [데이터 센터 식별 [!DNL Mailchimp] 섹션](#identify-data-center)을 참조하세요. |
-| **[!UICONTROL 대상 이름(먼저 데이터 센터를 선택하십시오)]** | **[!UICONTROL 데이터 센터]**&#x200B;를 선택하면 이 드롭다운이 [!DNL Mailchimp] 계정의 대상 이름으로 자동으로 채워집니다. Platform의 데이터로 업데이트할 대상을 선택합니다. |
-| **[!UICONTROL 관심 범주(먼저 데이터 센터와 대상 이름을 선택하십시오)]** | **[!UICONTROL 대상 이름]**&#x200B;을 선택하면 이 드롭다운이 [!DNL Mailchimp] 계정의 관심 그룹 범주 이름으로 자동으로 채워집니다. Platform의 데이터로 업데이트할 카테고리 이름을 선택합니다. |
+| **[!UICONTROL 대상 이름(먼저 데이터 센터를 선택하십시오)]** | **[!UICONTROL 데이터 센터]**&#x200B;를 선택하면 이 드롭다운이 [!DNL Mailchimp] 계정의 대상 이름으로 자동으로 채워집니다. Experience Platform의 데이터로 업데이트할 대상을 선택합니다. |
+| **[!UICONTROL 관심 범주(먼저 데이터 센터와 대상 이름을 선택하십시오)]** | **[!UICONTROL 대상 이름]**&#x200B;을 선택하면 이 드롭다운이 [!DNL Mailchimp] 계정의 관심 그룹 범주 이름으로 자동으로 채워집니다. Experience Platform의 데이터로 업데이트할 카테고리 이름을 선택합니다. |
 
 {style="table-layout:auto"}
 
@@ -159,7 +159,7 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 ### 매핑 고려 사항 및 예제 {#mapping-considerations-example}
 
-대상 데이터를 Adobe Experience Platform에서 [!DNL Mailchimp Interest Categories] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야 합니다. 매핑은 Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 필드 간에 링크를 만드는 것으로 구성됩니다.
+대상 데이터를 Adobe Experience Platform에서 [!DNL Mailchimp Interest Categories] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야 합니다. 매핑은 Experience Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 스키마 필드 간에 링크를 작성하는 것으로 구성됩니다.
 
 XDM 필드를 [!DNL Mailchimp Interest Categories] 대상 필드에 올바르게 매핑하려면 아래 단계를 따르십시오.
 
@@ -192,7 +192,7 @@ XDM 필드를 [!DNL Mailchimp Interest Categories] 대상 필드에 올바르게
    예를 들어 연락처의 기존 주소 필드 `addr1`, `city`, `state` 및 `zip` 값으로 `country`의 값을 `132, My Street, Kingston`, `New York`, `New York` 및 `12401`(으)로 업데이트하려고 합니다. `country`을(를) 업데이트하려면 변경 내용이 *(있는 경우)*&#x200B;인 기존 값과 새 국가 값을 전달해야 합니다. 따라서 데이터 집합의 값은 `132, My Street, Kingston`, `New York`, `New York`, `12401` 및 `US`이어야 합니다. 다시 말하면 `country`만 전달하고 `addr1`, `city`, `state` 및 `zip`에 대한 값을 제공하지 않으면 `NULL`이(가) 덮어씁니다.
 
    완료된 매핑의 예가 아래에 나와 있습니다.
-   ![필드 매핑을 보여 주는 플랫폼 UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
+   필드 매핑을 보여 주는 ![Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
 
 대상 연결에 대한 매핑을 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
@@ -204,7 +204,7 @@ XDM 필드를 [!DNL Mailchimp Interest Categories] 대상 필드에 올바르게
 
 대상 그룹 페이지를 표시하는 ![Mailchimp UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
-* 그룹을 선택하고 선택한 대상이 플랫폼에서 대상 이름을 가진 카테고리로 만들어졌는지 확인합니다. 이 카테고리의 뒤에는 자동으로 생성된 접미사가 올 수 있습니다.
+* 그룹을 선택하고 선택한 대상이 Experience Platform에서 대상 이름을 가진 카테고리로 만들어졌는지 확인합니다. 카테고리의 뒤에는 자동으로 생성된 접미사가 올 수 있습니다.
    * 이 대상은 선택한 세그먼트의 이름을 사용하여 [[!DNL Mailchimp] 관심 항목 추가 API](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/)를 사용하여 관심 항목을 만듭니다. 새 대상을 만들고 동일한 대상을 다시 활성화하는 경우 [!DNL Mailchimp]에서 접미사를 추가하여 기존 세그먼트와 새 세그먼트를 구별합니다.
 * 그룹에 이메일이 없는 연락처는 새로 만든 카테고리에 추가됩니다.
 * 그룹 내에 이미 존재하는 연락처의 경우 속성 필드 데이터가 업데이트되고, 연락처는 새로 생성된 카테고리에 추가됩니다.
@@ -221,7 +221,7 @@ XDM 필드를 [!DNL Mailchimp Interest Categories] 대상 필드에 올바르게
 
 **[!UICONTROL 암호]** 필드 또는 **[!UICONTROL 데이터 센터]** 값에 제공한 API 키가 올바르지 않은 경우 UI에 아래와 같이 [!DNL Mailchimp] API 오류 응답 *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`*&#x200B;이(가) 표시됩니다. 이 경우 **[!UICONTROL 대상 이름(먼저 데이터 센터를 선택하십시오)]** 필드에서 값을 선택할 수 없습니다.
 
-![Mailchimp API 키 또는 데이터 센터 값이 잘못된 경우 오류를 표시하는 Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
+![Mailchimp API 키 또는 데이터 센터 값이 잘못된 경우 오류를 표시하는 Experience Platform UI 스크린샷](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
 
 이 오류를 수정하고 다음 단계로 진행하려면 올바른 값을 제공해야 합니다. [ID [!DNL Mailchimp] 데이터 센터](#identify-data-center)를 참조하고
 지침이 필요한 경우 [API 키 [!DNL Mailchimp] 섹션 수집](#gather-credentials)합니다.

@@ -2,9 +2,10 @@
 title: 머신 러닝 지원 스키마 생성
 description: Experience Platform 사용자 인터페이스에서 스키마를 만드는 방법을 알아봅니다.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
+exl-id: 6b14caed-a3ad-4834-8fa8-8d67dce6290e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '997'
 ht-degree: 2%
 
 ---
@@ -31,7 +32,7 @@ ML 스키마 생성을 사용하면 새로운 데이터 소스를 빠르게 통�
 
 ## 스키마 생성 워크플로우로 이동합니다. {#navigate-to-schema-creation-workflow}
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]** 작업 영역을 선택합니다. **[!UICONTROL 스키마]** 작업 영역이 나타납니다. 스키마 만들기 워크플로를 시작할 새 스키마를 추가하려면 **[!UICONTROL 스키마 만들기]**&#x200B;를 선택하십시오.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]** 작업 영역을 선택합니다. **[!UICONTROL 스키마]** 작업 영역이 나타납니다. 스키마 만들기 워크플로를 시작할 새 스키마를 추가하려면 **[!UICONTROL 스키마 만들기]**&#x200B;를 선택하십시오.
 
 ![왼쪽 탐색에 스키마가 있는 스키마 작업 영역 및 스키마 만들기가 강조 표시되어 있습니다.](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
 

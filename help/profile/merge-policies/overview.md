@@ -2,18 +2,18 @@
 keywords: Experience Platform;프로필;실시간 고객 프로필;병합 정책;UI;사용자 인터페이스;타임스탬프 정렬;데이터 세트 우선 순위
 title: 병합 정책 개요
 type: Documentation
-description: Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각을 한데 모아 결합하여 개별 고객에 대한 전체 보기를 볼 수 있습니다. 이 데이터를 결합할 때 병합 정책은 Platform이 데이터를 우선 순위가 매겨지는 방법과 어떤 데이터를 결합하여 통합 보기를 생성할 것인지 결정하는 데 사용하는 규칙입니다.
+description: Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각을 한데 모아 결합하여 개별 고객에 대한 전체 보기를 볼 수 있습니다. 이 데이터를 결합할 때 병합 정책은 Experience Platform이 데이터의 우선 순위 지정 방법과 어떤 데이터를 결합하여 통합 보기를 생성할 것인지 결정하는 데 사용하는 규칙입니다.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 5e8bbdf5b7b07c31a36730c86b177fce6041e319
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1289'
 ht-degree: 1%
 
 ---
 
 # 병합 정책 개요
 
-Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각을 한데 모아 결합하여 각 개별 고객에 대한 전체 보기를 볼 수 있습니다. 이 데이터를 함께 가져올 때 병합 정책은 [!DNL Platform]이(가) 데이터 우선 순위 지정 방법 및 통합 보기를 만들기 위해 결합할 데이터를 결정하는 데 사용하는 규칙입니다.
+Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각을 한데 모아 결합하여 각 개별 고객에 대한 전체 보기를 볼 수 있습니다. 이 데이터를 함께 가져올 때 병합 정책은 [!DNL Experience Platform]이(가) 데이터 우선 순위 지정 방법 및 통합 보기를 만들기 위해 결합할 데이터를 결정하는 데 사용하는 규칙입니다.
 
 RESTful API 또는 사용자 인터페이스를 사용하여 새 병합 정책을 만들고 기존 정책을 관리하며 조직의 기본 병합 정책을 설정할 수 있습니다. 이 문서에서는 병합 정책 및 Experience Platform 내에서 수행하는 역할에 대한 개요를 제공합니다.
 
@@ -22,14 +22,14 @@ RESTful API 또는 사용자 인터페이스를 사용하여 새 병합 정책�
 이 안내서를 사용하려면 몇 가지 중요한 [!DNL Experience Platform] 기능에 대해 제대로 이해하고 있어야 합니다. 이 안내서를 따르고 병합 정책을 사용하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 * [실시간 고객 프로필](../home.md): 여러 소스의 집계 데이터를 기반으로 통합된 실시간 고객 프로필을 제공합니다.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): [!DNL Platform]에 수집되는 서로 다른 데이터 소스의 ID를 연결하여 실시간 고객 프로필을 활성화합니다.
-* [XDM(경험 데이터 모델)](../../xdm/home.md): [!DNL Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): [!DNL Experience Platform]에 수집되는 서로 다른 데이터 소스의 ID를 연결하여 실시간 고객 프로필을 활성화합니다.
+* [XDM(경험 데이터 모델)](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 
 ## 병합 정책 이해
 
-Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각을 한데 모아 결합하여 각 개별 고객에 대한 완전하고 통합된 보기를 볼 수 있습니다. 이 데이터를 결합할 때 병합 정책은 Platform이 데이터를 우선 순위가 매겨지는 방법과 그러한 통합 보기를 만들기 위해 결합할 데이터를 결정하는 데 사용하는 규칙입니다.
+Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각을 한데 모아 결합하여 각 개별 고객에 대한 완전하고 통합된 보기를 볼 수 있습니다. 이 데이터를 결합할 때 병합 정책은 Experience Platform이 데이터의 우선 순위 지정 방법 및 데이터를 결합하여 해당 통합 보기를 만드는 방법을 결정하는 데 사용하는 규칙입니다.
 
-예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직에는 여러 데이터 세트에 표시되는 단일 고객과 관련된 여러 프로필 조각이 있습니다. 이러한 조각을 Platform에 수집하면 해당 고객을 위한 단일 프로필을 만들기 위해 함께 병합됩니다.
+예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직에는 여러 데이터 세트에 표시되는 단일 고객과 관련된 여러 프로필 조각이 있습니다. 이러한 조각을 Experience Platform에 수집하면 해당 고객을 위한 단일 프로필을 만들기 위해 함께 병합됩니다.
 
 여러 소스의 데이터가 충돌할 때(예: 한 조각은 고객을 &quot;단일&quot;로 나열하고 다른 조각은 고객을 &quot;기혼&quot;으로 나열함) 병합 정책은 개인에 대한 프로필에 포함할 정보를 결정합니다.
 
@@ -54,7 +54,7 @@ Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각�
 
 ### 타임스탬프 정렬됨 {#timestamp-ordered}
 
-Experience Platform 레코드가 프로필에 수집되면 수집 시 시스템 타임스탬프가 획득되어 레코드에 추가됩니다. 병합 정책에 대한 병합 방법으로 **[!UICONTROL 타임스탬프 정렬]**&#x200B;을(를) 선택하면 시스템 타임스탬프를 기반으로 프로필이 병합됩니다. 즉, 레코드가 Platform으로 수집되었을 때의 타임스탬프를 기반으로 병합이 수행됩니다.
+프로필 레코드가 Experience Platform으로 수집되면 수집 시 시스템 타임스탬프가 획득되어 레코드에 추가됩니다. 병합 정책에 대한 병합 방법으로 **[!UICONTROL 타임스탬프 정렬]**&#x200B;을(를) 선택하면 시스템 타임스탬프를 기반으로 프로필이 병합됩니다. 즉, 레코드가 Experience Platform으로 수집되었을 때의 타임스탬프를 기반으로 병합이 수행됩니다.
 
 ## ID 결합 {#id-stitching}
 
@@ -67,7 +67,7 @@ ID 결합([!UICONTROL ID 결합])은 데이터 조각을 식별하고 함께 결
 
 ## 기본 병합 정책 {#default-merge-policy}
 
-조직은 프로필 조각을 병합할 때 사용할 기본 병합 정책을 만들 수 있습니다. 이렇게 하면 Experience Platform에서 고객 프로필 보기 또는 대상 만들기와 같은 작업을 수행할 때 사용자가 기본 정책을 쉽게 선택할 수 있습니다. 대부분의 경우 다른 병합 정책을 지정하지 않으면 기본 병합 정책이 사용됩니다.
+조직은 프로필 조각을 병합할 때 사용할 기본 병합 정책을 만들 수 있습니다. 이렇게 하면 사용자가 Experience Platform에서 고객 프로필 보기 또는 대상 만들기와 같은 작업을 수행할 때 기본 정책을 쉽게 선택할 수 있습니다. 대부분의 경우 다른 병합 정책을 지정하지 않으면 기본 병합 정책이 사용됩니다.
 
 각 조직은 단일 XDM 스키마 클래스와 관련된 여러 병합 정책을 생성할 수 있지만 각 클래스에 대해 하나의 기본 병합 정책만 선언할 수 있습니다. 예를 들어 조직에 [!DNL XDM Individual Profile] 클래스와 관련된 기본 병합 정책과 사용자 지정 제품 인벤토리 클래스에 대한 다른 기본 병합 정책이 있을 수 있습니다.
 
@@ -79,4 +79,4 @@ ID 결합([!UICONTROL ID 결합])은 데이터 조각을 식별하고 함께 결
 
 ## 다음 단계
 
-이제 이 안내서를 읽고 병합 정책이 무엇이며 Experience Platform 내에서 어떤 역할을 하는지 알 수 있습니다. Experience Platform UI에서 병합 정책 작업을 시작하려면 [병합 정책 UI 안내서](ui-guide.md)를 참조하십시오. API를 사용하여 병합 정책으로 작업하려면 [병합 정책 API 끝점 안내서](../api/merge-policies.md)를 참조하십시오.
+이제 이 안내서를 읽고 병합 정책이 무엇이며 Experience Platform 내에서 어떤 역할을 수행하는지 알 수 있습니다. Experience Platform UI에서 병합 정책 작업을 시작하려면 [병합 정책 UI 안내서](ui-guide.md)를 참조하십시오. API를 사용하여 병합 정책으로 작업하려면 [병합 정책 API 끝점 안내서](../api/merge-policies.md)를 참조하십시오.

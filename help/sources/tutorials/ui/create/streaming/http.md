@@ -2,9 +2,9 @@
 title: UI를 사용하여 HTTP API 스트리밍 연결 만들기
 description: 이 UI 안내서는 Adobe Experience Platform을 사용하여 스트리밍 연결을 만드는 데 도움이 됩니다.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1003'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 스트리밍 연결 만들기
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
@@ -66,7 +66,7 @@ HTTP API 연결을 만든 후 데이터를 업로드하고 미리 볼 수 있는
 
 ## 데이터 필드를 XDM 스키마에 매핑
 
-소스 데이터를 Platform 데이터 집합에 매핑하는 인터페이스를 제공하는 [!UICONTROL 매핑] 단계가 나타납니다.
+소스 데이터를 Experience Platform 데이터 집합에 매핑하는 인터페이스를 제공하는 [!UICONTROL 매핑] 단계가 나타납니다.
 
 [!DNL HTTP API] 원본은 JSON 파일 수집을 지원합니다. JSON 파일이 XDM 컴플레인으로 표시된 경우 수동 구성이 필요하지 않습니다. 그렇지 않은 경우 매핑을 명시적으로 구성해야 합니다.
 
@@ -141,4 +141,4 @@ HTTP API 연결을 만든 후 데이터를 업로드하고 미리 볼 수 있는
 
 이 자습서에 따라 스트리밍 HTTP 연결을 만들어 스트리밍 끝점을 사용하여 다양한 [!DNL Data Ingestion] API에 액세스할 수 있습니다. API에서 스트리밍 연결을 만드는 방법에 대한 지침은 [스트리밍 연결 만들기 자습서](../../../api/create/streaming/http.md)를 참조하십시오.
 
-데이터를 플랫폼으로 스트리밍하는 방법에 대해 알아보려면 [시계열 데이터 스트리밍](../../../../../ingestion/tutorials/streaming-time-series-data.md)에 대한 자습서 또는 [레코드 데이터 스트리밍](../../../../../ingestion/tutorials/streaming-record-data.md)에 대한 자습서를 참조하십시오.
+Experience Platform으로 데이터를 스트리밍하는 방법에 대해 알아보려면 [시계열 데이터 스트리밍](../../../../../ingestion/tutorials/streaming-time-series-data.md)에 대한 자습서 또는 [레코드 데이터 스트리밍](../../../../../ingestion/tutorials/streaming-record-data.md)에 대한 자습서를 참조하십시오.

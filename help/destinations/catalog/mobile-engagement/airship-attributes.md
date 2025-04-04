@@ -3,10 +3,10 @@ keywords: 비행선 속성;비행선 목적지
 title: 비행선 속성 연결
 description: Airship 내에서 타깃팅할 대상 속성으로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 453884612e787439ea58f312d8080622ee0441f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 2%
+source-wordcount: '1153'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->* 2025년 3월 25일부터 대상 카탈로그에서 두 개의 [!DNL Airship Attributes] 카드를 나란히 볼 수 있습니다. 이는 대상 서비스에 대한 내부 업그레이드 때문입니다. 기존 [!DNL Airship Attributes] 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) 비행선 특성]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL 비행선 특성]**&#x200B;인 새 카드를 사용할 수 있습니다.
+>* 2025년 3월 25일부터 대상 카탈로그에서 두 개의 [!DNL Airship Attributes] 카드를 나란히 볼 수 있습니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 [!DNL Airship Attributes] 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) 비행선 특성]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL 비행선 특성]**&#x200B;인 새 카드를 사용할 수 있습니다.
 >* 새 활성화 데이터 흐름을 보려면 카탈로그의 **[!UICONTROL 비행선 특성]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않는) 비행선 특성]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 조치가 필요하지 않습니다.
 >* [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다.
 >   * 흐름 사양 ID: `a862e0be-966e-4e5a-80d3-1bb566461986`
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-[!DNL Airship]은(는) 선도적인 고객 참여 플랫폼으로, 고객 라이프사이클의 모든 단계에서 사용자에게 의미 있고 개인화된 옴니채널 메시지를 제공할 수 있습니다.
+[!DNL Airship]은(는) 선도적인 Customer Engagement Experience Platform으로, 고객 수명 주기의 모든 단계에서 사용자에게 의미 있고 개인화된 옴니채널 메시지를 전달할 수 있도록 지원합니다.
 
 이 통합은 타깃팅 또는 트리거를 위해 Adobe 프로필 데이터를 [특성](https://docs.airship.com/guides/audience/attributes/)&#x200B;(으)로 [!DNL Airship]에 전달합니다.
 
@@ -67,7 +67,7 @@ ht-degree: 2%
 
 ## 속성 활성화 {#enable-attributes}
 
-Adobe Experience Platform 프로필 속성은 [!DNL Airship] 속성과 유사하며 이 페이지의 아래에 표시된 매핑 도구를 사용하여 플랫폼에서 서로 쉽게 매핑할 수 있습니다.
+Adobe Experience Platform 프로필 속성은 [!DNL Airship] 속성과 유사하며 이 페이지의 아래에 표시된 매핑 도구를 사용하여 Experience Platform에서 서로 쉽게 매핑할 수 있습니다.
 
 [!DNL Airship] 프로젝트에는 몇 가지 사전 정의된 특성과 기본 특성이 있습니다. 사용자 지정 특성이 있는 경우 먼저 [!DNL Airship]에서 정의해야 합니다. 자세한 내용은 [특성 설정 및 관리](https://docs.airship.com/tutorials/audience/attributes/)를 참조하십시오.
 
@@ -91,7 +91,7 @@ Adobe Experience Platform 프로필 속성은 [!DNL Airship] 속성과 유사하
 
 ### 사용 사례 #2
 
-Adobe Experience Platform의 특성을 활용하여 [!DNL Airship] 프로필을 더욱 보강하고 SDK 또는 [!DNL Airship] 예측 데이터와 결합합니다. 예를 들어, 소매업체는 충성도 상태 및 위치 데이터(플랫폼의 속성)와 이탈할 것으로 예상되는 [!DNL Airship] 데이터로 대상자를 만들어 NV의 Las Vegas에 거주하고 이탈 가능성이 높은 Gold 충성도 상태의 사용자에게 타깃팅된 메시지를 보낼 수 있습니다.
+Adobe Experience Platform의 특성을 활용하여 [!DNL Airship] 프로필을 더욱 보강하고 SDK 또는 [!DNL Airship] 예측 데이터와 결합합니다. 예를 들어 retailer은 충성도 상태 및 위치 데이터(Experience Platform의 특성)와 이탈할 것으로 예상되는 [!DNL Airship]을(를) 통해 대상을 만들어 NV의 라스베이거스에 거주하고 이탈 가능성이 높은 골드 충성도 상태의 사용자에게 높은 타깃팅된 메시지를 보낼 수 있습니다.
 
 ## 대상에 연결 {#connect}
 

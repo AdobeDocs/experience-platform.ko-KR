@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: UI에 대한 셀프서비스 설명서 템플릿
 description: Adobe Experience Platform UI를 사용하여 YOURSOURCE 연결을 만드는 방법을 알아봅니다.
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '725'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 *페이지 맨 위에 있는 메타데이터(제목 및 설명)를 업데이트하여 시작합니다. 이 페이지에서 UICONTROL의 모든 인스턴스를 무시하십시오. 이것은 기계 번역 프로세스가 페이지를 지원하는 여러 언어로 올바르게 번역할 수 있도록 도와주는 태그입니다. 문서를 제출하면 문서에 태그를 추가합니다.*
 
-이 자습서에서는 Platform 사용자 인터페이스를 사용하여 *YOURSOURCE* 소스 커넥터를 만드는 단계를 제공합니다.
+이 자습서에서는 Experience Platform 사용자 인터페이스를 사용하여 *YOURSOURCE* 소스 커넥터를 만드는 단계를 제공합니다.
 
 ## 개요
 
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 ### 필요한 자격 증명 수집
 
-*YOURSOURCE*&#x200B;을(를) 플랫폼에 연결하려면 다음 연결 속성에 대한 값을 제공해야 합니다.
+*YOURSOURCE*&#x200B;을(를) Experience Platform에 연결하려면 다음 연결 속성에 대한 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 | 예 |
 | --- | --- | --- |
@@ -49,7 +49,7 @@ ht-degree: 1%
 
 ## *YOURSOURCE* 계정 연결
 
-Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
@@ -57,7 +57,7 @@ Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선
 
 >[!TIP]
 >
->아래에 사용된 스크린샷은 예입니다. 설명서를 만들 때 이미지를 실제 소스의 스크린샷으로 바꾸십시오. 동일한 파일 이름뿐만 아니라 동일한 마크업 패턴 및 색상을 사용할 수 있습니다. 스크린샷에 전체 Platform UI 화면이 캡처되는지 확인하십시오. 스크린샷을 업로드하는 방법에 대한 자세한 내용은 [검토할 문서 제출](./github.md)에 대한 안내서를 참조하십시오.
+>아래에 사용된 스크린샷은 예입니다. 설명서를 만들 때 이미지를 실제 소스의 스크린샷으로 바꾸십시오. 동일한 파일 이름뿐만 아니라 동일한 마크업 패턴 및 색상을 사용할 수 있습니다. 스크린샷에 전체 Experience Platform UI 화면이 캡처되는지 확인하십시오. 스크린샷을 업로드하는 방법에 대한 자세한 내용은 [검토할 문서 제출](./github.md)에 대한 안내서를 참조하십시오.
 
 ![카탈로그](../assets/ui/catalog.png)
 
@@ -79,7 +79,7 @@ Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선
 
 데이터 흐름을 만드는 나머지 단계에 대한 *워크플로가 모듈화되었습니다. 소스에 대해 수행할 특정 콜아웃이 있는 경우 아래의 추가 리소스 섹션을 참조하십시오.*
 
-이 자습서를 따라 *YOURSOURCE* 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 플랫폼으로 가져오도록 데이터 흐름을 구성](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html)할 수 있습니다.
+이 자습서를 따라 *YOURSOURCE* 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 Experience Platform으로 가져오도록 데이터 흐름을 구성](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html)할 수 있습니다.
 
 ## 추가 리소스
 

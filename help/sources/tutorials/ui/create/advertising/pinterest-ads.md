@@ -6,9 +6,9 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '825'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 ## 시작하기 {#getting-started}
 
-이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
@@ -40,23 +40,23 @@ ht-degree: 2%
 
 이러한 연결 속성에 대한 자세한 내용은 [[!DNL Pinterest Ads] 개요](../../../../connectors/advertising/pinterest-ads.md#prerequisites)를 참조하십시오.
 
-### 플랫폼 스키마 만들기 {#create-platform-schema}
+### Experience Platform 스키마 만들기 {#create-platform-schema}
 
-또한 먼저 [!DNL Pinterst Ads] 소스에 사용할 Platform 스키마를 만들어야 합니다. 스키마를 만드는 방법에 대한 포괄적인 단계를 보려면 [플랫폼 스키마 만들기](../../../../../xdm/schema/composition.md)에 대한 자습서를 참조하십시오.
+또한 먼저 [!DNL Pinterst Ads] 소스에 사용할 Experience Platform 스키마를 만들어야 합니다. 스키마를 만드는 방법에 대한 포괄적인 단계를 보려면 [Experience Platform 스키마 만들기](../../../../../xdm/schema/composition.md)에 대한 자습서를 참조하십시오.
 
-![Pinterest 광고에 대한 예제 플랫폼 스키마](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
+![Pinterest 광고에 대한 Experience Platform 스키마 예](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
 
 [!DNL Pinterest] 캠페인, 광고 그룹 및 광고 API에서 지원하는 필드 목록은 [[!DNL Pinterest] 필드](#pinterest-fields) 섹션을 참조하십시오.
 
 ## [!DNL Pinterest Ads] 계정 연결 {#connect-account}
 
-Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
 *Advertising* 범주에서 **[!UICONTROL Pinterest 광고]**&#x200B;를 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
 
-![Experience Platform의 원본 카탈로그입니다.](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
+![Experience Platform의 소스 카탈로그입니다.](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
 
 **[!UICONTROL Pinterest 광고 계정 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
 
@@ -76,7 +76,7 @@ Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선
 
 ## 데이터 선택 {#select-data}
 
-API에 전달되는 정보를 입력하여 원하는 데이터를 플랫폼으로 가져올 수 있는 인터페이스를 제공하는 **[!UICONTROL 데이터 선택]** 단계가 나타납니다.
+API에 전달되는 정보를 입력하여 원하는 데이터를 Experience Platform으로 가져올 수 있는 인터페이스를 제공하는 **[!UICONTROL 데이터 선택]** 단계가 나타납니다.
 
 | 필드 | 설명 |
 | --- | --- |
@@ -86,7 +86,7 @@ API에 전달되는 정보를 입력하여 원하는 데이터를 플랫폼으�
 
 >[!TIP]
 >
->쉼표로 구분된 값을 전달하여 여러 `object_ids`을(를) 제공할 수 있습니다. 단일 요청에서 전달할 수 있는 최대 ID 수는 100개입니다. 잘못된 값이 전달되면 Platform에 다음 메시지가 표시됩니다. `The request could not be processed. Error from flow provider: Unknown error while processing request.`
+>쉼표로 구분된 값을 전달하여 여러 `object_ids`을(를) 제공할 수 있습니다. 단일 요청에서 전달할 수 있는 최대 ID 수는 100개입니다. 잘못된 값이 전달되면 Experience Platform에 다음 메시지가 표시됩니다. `The request could not be processed. Error from flow provider: Unknown error while processing request.`
 
 값을 제공한 후 **[!UICONTROL 선택]**&#x200B;을 선택합니다. 제공된 값이 유효하면 인터페이스의 오른쪽 부분인 미리보기 데이터가 채워집니다.
 
@@ -94,7 +94,7 @@ API에 전달되는 정보를 입력하여 원하는 데이터를 플랫폼으�
 
 ## 다음 단계 {#next-steps}
 
-이 자습서에 따라 [!DNL Pinterest Ads] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [광고 데이터를 플랫폼으로 가져오도록 데이터 흐름을 구성](../../dataflow/advertising.md)할 수 있습니다.
+이 자습서에 따라 [!DNL Pinterest Ads] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터 흐름을 구성하여 광고 데이터를 Experience Platform으로 가져올 수 있습니다](../../dataflow/advertising.md).
 
 ## 추가 리소스 {#additional-resources}
 
@@ -119,9 +119,9 @@ API에 전달되는 정보를 입력하여 원하는 데이터를 플랫폼으�
 
 원본을 올바르게 설정했는지 확인하고 [!DNL Pinterest Ads] 데이터가 수집되고 있는지 확인하려면 아래 단계를 수행하십시오.
 
-Platform UI에서 카탈로그 페이지의 [!DNL Pinterest Ads] 카드 메뉴 옆에 있는 **[!UICONTROL 데이터 흐름 보기]**&#x200B;를 선택합니다. 그런 다음 [!UICONTROL 데이터 집합 미리 보기]를 선택하여 수집된 데이터를 확인할 수 있습니다.
+Experience Platform UI에서 카탈로그 페이지의 [!DNL Pinterest Ads] 카드 메뉴 옆에 있는 **[!UICONTROL 데이터 흐름 보기]**&#x200B;를 선택합니다. 그런 다음 [!UICONTROL 데이터 집합 미리 보기]를 선택하여 수집된 데이터를 확인할 수 있습니다.
 
-![Pinterest 광고 미리 보기 데이터 세트용 Platform UI 스크린샷](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
+![Pinterest 광고 미리 보기 데이터 세트용 Experience Platform UI 스크린샷](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 
 [!DNL Pinterest] UI에 표시되는 카운트에 대해 데이터를 확인할 수 있습니다
 

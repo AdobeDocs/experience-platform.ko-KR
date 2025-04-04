@@ -4,9 +4,9 @@ description: 소스 연결 및 데이터 흐름을 만들어 Snowflake 인스턴
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '820'
 ht-degree: 1%
 
 ---
@@ -17,12 +17,12 @@ ht-degree: 1%
 >
 >* [!DNL Snowflake] 스트리밍 소스는 Real-Time CDP Ultimate을 구매한 사용자에게 API에서 사용할 수 있습니다.
 >
->* 이제 Amazon Web Services(AWS)에서 Adobe Experience Platform을 실행할 때 [!DNL Snowflake] 스트리밍 소스를 사용할 수 있습니다. 현재 AWS에서 실행 중인 Experience Platform은 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../landing/multi-cloud.md)를 참조하세요.
+>* 이제 Amazon Web Services(AWS)에서 Adobe Experience Platform을 실행할 때 [!DNL Snowflake] 스트리밍 소스를 사용할 수 있습니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../landing/multi-cloud.md)를 참조하세요.
 
 
-Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-Experience Platform은 [!DNL Snowflake] 데이터베이스에서 데이터를 스트리밍할 수 있도록 지원합니다.
+Experience Platform에서는 [!DNL Snowflake] 데이터베이스에서 데이터를 스트리밍할 수 있습니다.
 
 ## [!DNL Snowflake] 스트리밍 원본 이해
 
@@ -38,7 +38,7 @@ Experience Platform은 [!DNL Snowflake] 데이터베이스에서 데이터를 �
 
 소스 커넥터로 작업하려면 먼저 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources) 페이지를 참조하세요.
 
-아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Amazon Redshift]을(를) 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Amazon Redshift]을(를) Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
 
 ### 필요한 자격 증명 수집
 
@@ -47,8 +47,8 @@ Experience Platform은 [!DNL Snowflake] 데이터베이스에서 데이터를 �
 | 자격 증명 | 설명 |
 | --- | --- |
 | `account` | `snowflakecomputing.com` 접미사가 추가된 [!DNL Snowflake] 계정의 전체 계정 식별자(계정 이름 또는 계정 로케이터)입니다. 계정 식별자는 다양한 형식일 수 있습니다. <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com(예: `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com (예: `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com (예: `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> 자세한 내용은 [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>)을(를) 참조하십시오. |
-| `warehouse` | [!DNL Snowflake] 웨어하우스에서 응용 프로그램의 쿼리 실행 프로세스를 관리합니다. 각 [!DNL Snowflake] 웨어하우스는 서로 독립적이며 데이터를 플랫폼으로 가져올 때 개별적으로 액세스해야 합니다. |
-| `database` | [!DNL Snowflake] 데이터베이스에 플랫폼에 가져올 데이터가 있습니다. |
+| `warehouse` | [!DNL Snowflake] 웨어하우스에서 응용 프로그램의 쿼리 실행 프로세스를 관리합니다. 각 [!DNL Snowflake] 웨어하우스는 서로 독립적이므로 Experience Platform으로 데이터를 가져올 때 개별적으로 액세스해야 합니다. |
+| `database` | [!DNL Snowflake] 데이터베이스에 Experience Platform으로 가져올 데이터가 있습니다. |
 | `username` | [!DNL Snowflake] 계정의 사용자 이름입니다. |
 | `password` | [!DNL Snowflake] 사용자 계정의 암호입니다. |
 | `role` | (선택 사항) 지정된 연결에 대해 사용자에게 제공할 수 있는 사용자 정의 역할입니다. 지정하지 않으면 이 값은 기본적으로 `public`(으)로 설정됩니다. |
@@ -90,4 +90,4 @@ Experience Platform은 [!DNL Snowflake] 데이터베이스에서 데이터를 �
 다음 자습서에서는 API를 사용하여 [!DNL Snowflake] 스트리밍 소스를 Experience Platform에 연결하는 방법에 대한 단계를 제공합니다.
 
 * [흐름 서비스 API를 사용하여  [!DNL Snowflake] 데이터베이스에서 Experience Platform으로 데이터 스트리밍](../../tutorials/api/create/databases/snowflake-streaming.md)
-* [Experience Platform 사용자 인터페이스의 원본 작업 영역을 사용하여  [!DNL Snowflake] 데이터베이스에서 Experience Platform으로 데이터 스트리밍](../../tutorials/ui/create/databases/snowflake-streaming.md)
+* [Experience Platform 사용자 인터페이스의 소스 작업 영역을 사용하여  [!DNL Snowflake] 데이터베이스에서 Experience Platform으로 데이터 스트리밍](../../tutorials/ui/create/databases/snowflake-streaming.md)

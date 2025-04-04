@@ -2,10 +2,10 @@
 title: 웹 확장의 보기
 description: Adobe Experience Platform 웹 확장에서 라이브러리 모듈의 보기를 정의하는 방법을 알아봅니다.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2061'
-ht-degree: 70%
+source-wordcount: '2063'
+ht-degree: 73%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 각 이벤트, 조건, 작업 또는 데이터 요소 유형마다 사용자가 설정을 제공할 수 있는 보기를 제공할 수 있습니다. 또한 확장에는 사용자가 전체 확장에 대한 전역 설정을 제공할 수 있는 최상위 [확장 구성 보기](../configuration.md)가 있을 수 있습니다. 뷰 개발 프로세스는 모든 유형의 뷰에서 동일합니다.
 
@@ -72,7 +72,7 @@ window.extensionBridge.register({
 | `settings` | 이 보기에서 이전에 저장한 설정이 포함된 객체입니다. `settings`가 `null`인 경우 사용자가 저장된 버전을 로드하지 않고 초기 설정을 개발 중임을 나타냅니다. `settings`가 객체인 경우에는 사용자가 이전의 지속형 설정을 편집하도록 선택했으므로 이 객체를 사용하여 뷰를 채워야 합니다. |
 | `extensionSettings` | 확장 구성 보기에서 설정이 저장되었습니다. 확장 구성 보기가 아닌 보기의 확장 설정에 액세스하는 데 유용합니다. 현재 보기가 확장 구성 보기인 경우 `settings`을(를) 사용합니다. |
 | `propertySettings` | 속성에 대한 설정이 포함된 객체입니다. 이 객체에 포함된 사항에 대한 자세한 내용은 [터빈 객체 안내서](../turbine.md#property-settings)를 참조하십시오. |
-| `tokens` | API 토큰이 포함된 객체입니다. 보기 내에서 Adobe API에 액세스하려면 일반적으로 `tokens.imsAccess` 아래의 IMS 토큰을 사용해야 합니다. 이 토큰은 Adobe에서 개발한 확장에만 사용할 수 있습니다. Adobe으로 작성된 확장을 제공하는 Adobe 직원의 경우 [데이터 수집 엔지니어링 팀에 전자 메일을 보내](mailto:reactor@adobe.com)하고 허용 목록에 추가할 수 있도록 확장 이름을 제공하십시오. |
+| `tokens` | API 토큰이 포함된 객체입니다. 보기 내에서 Adobe API에 액세스하려면 일반적으로 `tokens.imsAccess` 아래의 IMS 토큰을 사용해야 합니다. 이 토큰은 Adobe에서 개발한 확장에만 사용할 수 있습니다. Adobe에서 개발한 확장을 제공하는 Adobe 직원의 경우 [데이터 수집 엔지니어링 팀에 전자 메일을 보내](mailto:reactor@adobe.com)하고 허용 목록에 추가할 수 있도록 확장 이름을 제공하십시오. |
 | `company` | 단일 속성 `orgId`을(를) 포함하는 개체로, Adobe Experience Cloud ID(24자 영숫자 문자열)를 나타냅니다. |
 | `schema` | [JSON 스키마](https://json-schema.org/) 형식의 객체입니다. 이 객체는 [확장 매니페스트](../manifest.md)에서 가져오며 양식 유효성 검사에 도움이 될 수 있습니다. |
 
@@ -148,9 +148,9 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 
 보기에 사용자가 데이터 요소를 활용하려는 양식 필드가 있을 수 있습니다. 예를 들어, 보기에 사용자가 제품 이름을 입력해야 하는 텍스트 필드가 있는 경우 사용자가 필드에 하드 코딩된 값을 입력하는 것은 적합하지 않을 수 있습니다. 대신 필드의 값이 동적(런타임 시 결정)이고 데이터 요소를 사용하여 이를 수행할 수 있습니다.
 
-예를 들어, 변환을 추적하기 위해 비콘을 보내는 확장을 개발하고 있다고 가정해 보겠습니다. 그리고 이 경우 비콘이 보내는 데이터 중 하나가 제품 이름입니다. 사용자가 비콘을 구성할 수 있는 확장 보기에는 제품 이름에 대한 텍스트 필드가 있을 수 있습니다. 제품 이름은 비콘이 전송될 페이지에 따라 달라지기 때문에 플랫폼 사용자가 &quot;Calzone Oven XL&quot;과 같은 정적 제품 이름을 입력하는 것은 일반적으로 의미가 없습니다. 이 기능은 데이터 요소에 가장 적합합니다.
+예를 들어, 변환을 추적하기 위해 비콘을 보내는 확장을 개발하고 있다고 가정해 보겠습니다. 그리고 이 경우 비콘이 보내는 데이터 중 하나가 제품 이름입니다. 사용자가 비콘을 구성할 수 있는 확장 보기에는 제품 이름에 대한 텍스트 필드가 있을 수 있습니다. 제품 이름은 비콘이 전송될 페이지에 따라 달라지기 때문에 Experience Platform 사용자가 &quot;Calzone Oven XL&quot;과 같은 정적 제품 이름을 입력하는 것은 일반적으로 의미가 없습니다. 이 기능은 데이터 요소에 가장 적합합니다.
 
-사용자가 제품 이름 값에 대해 이름이 `productname`인 데이터 요소를 사용하려는 경우 앞과 뒤 모두에 퍼센트 기호가 있는 데이터 요소의 이름(`%productname%`)을 입력할 수 있습니다. 퍼센트 기호가 래핑된 데이터 요소 이름을 &quot;데이터 요소 토큰&quot;라고 합니다. 플랫폼 사용자는 이러한 구문에 익숙할 때가 많습니다. 그러면 확장은 내보내는 `settings` 객체 내에 데이터 요소 토큰을 저장합니다. 설정 객체는 다음과 유사할 수 있습니다.
+사용자가 제품 이름 값에 대해 이름이 `productname`인 데이터 요소를 사용하려는 경우 앞과 뒤 모두에 퍼센트 기호가 있는 데이터 요소의 이름(`%productname%`)을 입력할 수 있습니다. 퍼센트 기호가 래핑된 데이터 요소 이름을 &quot;데이터 요소 토큰&quot;라고 합니다. Experience Platform 사용자는 이러한 구문에 익숙할 수 있습니다. 그러면 확장은 내보내는 `settings` 객체 내에 데이터 요소 토큰을 저장합니다. 설정 객체는 다음과 유사할 수 있습니다.
 
 ```js
 {
@@ -172,7 +172,7 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 
 >[!NOTE]
 >
->해당 아이콘을 다운로드하려면 Adobe 스펙트럼](https://spectrum.adobe.com/page/icons/)의 [아이콘 페이지로 이동하여 &quot;[!DNL Data]&quot;을(를) 검색합니다.
+>적절한 아이콘을 다운로드하려면 Adobe Spectrum](https://spectrum.adobe.com/page/icons/)의 [아이콘 페이지로 이동하여 &quot;[!DNL Data]&quot;을(를) 검색합니다.
 
 텍스트 필드 옆에 있는 버튼을 사용자가 선택하면 `window.extensionBridge.openDataElementSelector`위의 설명[과 같이 ](#open-data-element)가 호출됩니다. 이름 및 유형 퍼센트 기호를 기억하도록 하는 대신 사용자가 선택할 수 있는 사용자 데이터 요소 목록이 표시됩니다. 사용자가 데이터 요소를 선택하면 퍼센트 기호로 둘러싸인 선택한 데이터 요소의 이름이 전달됩니다(`tokenize` 옵션을 `false`로 설정한 경우 제외). 그런 다음 텍스트 필드를 결과로 채우는 것이 좋습니다.
 

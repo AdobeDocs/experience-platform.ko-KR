@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2024년 2월
 description: Adobe Experience Platform의 2024년 2월 릴리스 정보.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
-workflow-type: ht
-source-wordcount: '1244'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1248'
+ht-degree: 91%
 
 ---
 
@@ -24,7 +24,7 @@ Experience Platform의 기존 기능 업데이트:
 
 ## 경고 {#alerts}
 
-Experience Platform을 사용하면 다양한 플랫폼 활동에 대한 이벤트 기반 경고를 구독할 수 있습니다. 플랫폼 사용자 인터페이스의 [!UICONTROL 경고] 탭을 통해 다양한 경고 규칙을 구독할 수 있으며, UI 자체 또는 이메일 알림을 통해 알림 메시지를 받도록 선택할 수 있습니다.
+Experience Platform을 사용하면 다양한 Experience Platform 활동에 대한 이벤트 기반 경고를 구독할 수 있습니다. Experience Platform 사용자 인터페이스의 [!UICONTROL 경고] 탭을 통해 다양한 경고 규칙을 구독할 수 있으며 UI 자체 내에서 또는 이메일 알림을 통해 경고 메시지를 수신하도록 선택할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
@@ -95,7 +95,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 ## 샌드박스 {#sandboxes}
 
-Adobe Experience Platform은 전 세계적으로 디지털 체험 애플리케이션을 풍부하게 제공하기 위해 구축되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하는 경우가 많으며, 운영 규정 준수를 보장하면서 이러한 애플리케이션의 개발, 테스트 및 배포를 처리해야 합니다. 이러한 필요를 처리하기 위해 Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 샌드박스를 제공합니다.
+Adobe Experience Platform은 전 세계적으로 디지털 체험 애플리케이션을 풍부하게 제공하기 위해 구축되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하는 경우가 많으며, 운영 규정 준수를 보장하면서 이러한 애플리케이션의 개발, 테스트 및 배포를 처리해야 합니다. 이러한 요구 사항을 해결하기 위해 Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하는 샌드박스를 제공합니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
@@ -109,13 +109,13 @@ Adobe Experience Platform은 전 세계적으로 디지털 체험 애플리케�
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service]를 사용하여 개인 사용자(예: 고객, 잠재 고객, 사용자 또는 조직)와 관련된 [!DNL Experience Platform]에 저장된 데이터를 대상자로 세분화할 수 있습니다. 세그먼트 정의 또는 [!DNL Real-Time Customer Profile] 데이터의 다른 소스를 통해 대상자를 만들 수 있습니다. 이러한 대상자는 [!DNL Platform]을 통해 중앙 집중식으로 구성 및 유지 관리되고 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
+[!DNL Segmentation Service]를 사용하여 개인 사용자(예: 고객, 잠재 고객, 사용자 또는 조직)와 관련된 [!DNL Experience Platform]에 저장된 데이터를 대상자로 세분화할 수 있습니다. 세그먼트 정의 또는 [!DNL Real-Time Customer Profile] 데이터의 다른 소스를 통해 대상자를 만들 수 있습니다. 이러한 대상자는 [!DNL Experience Platform]을 통해 중앙 집중식으로 구성 및 유지 관리되고 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 계정 대상자 | 이제 계정 대상자를 일반적으로 사용할 수 있습니다! 이제 계정 세분화를 사용하여 B2B 및 B2P 버전의 Real-Time Customer Platform에서 사람 기반 대상자부터 계정 기반 대상자까지 마케팅 세분화 경험의 편리함과 정교함을 완벽히 구현할 수 있습니다. 이 릴리스를 통해 사람 기반 대상자를 계정 기반 대상자에 대한 예측 기준으로 사용할 수 있고, 검색 기능을 추가하고, 사용자 정의 엔티티의 사용을 지원하며, 데이터 거버넌스를 준수할 수 있습니다. 이 기능에 대한 자세한 내용은 [계정 대상자 개요](../../segmentation/types/account-audiences.md)를 참조하십시오. |
+| 계정 대상자 | 이제 계정 대상자를 일반적으로 사용할 수 있습니다! 이제 계정 세분화를 사용하여 Real-Time Customer Experience Platform의 B2B 및 B2P 에디션 모두에서 사람 기반 대상자에서 계정 기반 대상자로 마케팅 세분화 환경을 완전히 용이하고 정교하게 만들 수 있습니다. 이 릴리스를 통해 사람 기반 대상자를 계정 기반 대상자에 대한 예측 기준으로 사용할 수 있고, 검색 기능을 추가하고, 사용자 정의 엔티티의 사용을 지원하며, 데이터 거버넌스를 준수할 수 있습니다. 이 기능에 대한 자세한 내용은 [계정 대상자 개요](../../segmentation/types/account-audiences.md)를 참조하십시오. |
 
 {style="table-layout:auto"}
 

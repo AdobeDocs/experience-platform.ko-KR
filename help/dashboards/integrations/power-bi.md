@@ -1,25 +1,25 @@
 ---
-title: Platform 대시보드용 Power BI 보고서 템플릿
+title: Experience Platform 대시보드용 Power BI 보고서 템플릿
 description: 보고서 템플릿을 사용함으로써 Power BI를 사용하여 Experience Platform 데이터를 탐색합니다.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1467'
-ht-degree: 91%
+source-wordcount: '1482'
+ht-degree: 75%
 
 ---
 
 # 대시보드용 Power BI 보고서 템플릿
 
-Power BI 보고서 템플릿 기능을 사용하면 Adobe Experience Platform의 데이터로 채워진 강력한 보고서를 작성할 수 있습니다. 간소화된 설치 프로세스는 실시간 고객 프로필, 세분화 및 대상에 대한 표준 위젯을 자동으로 설치합니다. 이러한 설치를 통해 Power BI가 데이터 모델에 연결되므로 보고서 템플릿을 손쉽게 맞춤화하고 확장할 수도 있습니다. 이러한 보고서는 수신자가 Platform에서 조직에 대한 자격 증명을 필요로 하지 않아도 조직 전체에 공유할 수 있습니다.
+Power BI 보고서 템플릿 기능을 사용하면 Adobe Experience Platform의 데이터로 채워진 강력한 보고서를 작성할 수 있습니다. 간소화된 설치 프로세스는 실시간 고객 프로필, 세분화 및 대상에 대한 표준 위젯을 자동으로 설치합니다. 이러한 설치를 통해 Power BI가 데이터 모델에 연결되므로 보고서 템플릿을 손쉽게 맞춤화하고 확장할 수도 있습니다. 이러한 보고서는 수신자가 Experience Platform에서 조직에 대한 자격 증명을 필요로 하지 않고도 조직 전체에 공유할 수 있습니다.
 
-이 문서에서는 Adobe Experience Platform을 Power BI 애플리케이션과 연결하고 보고서 템플릿을 사용하여 주요 Platform 데이터 인사이트를 외부 사용자와 공유하는 방법에 대한 지침을 제공합니다.
+이 문서에서는 Adobe Experience Platform을 Power BI 애플리케이션과 연결하고 보고서 템플릿을 사용하여 주요 Experience Platform 데이터 인사이트를 외부 사용자와 공유하는 방법에 대한 지침을 제공합니다.
 
 ## 시작하기
 
 이 자습서를 계속하기 전에 Experience Platform의 [스키마 구성](../../xdm/schema/composition.md)과, [공용 구조체 스키마](../../xdm/schema/composition.md#union)를 통해 특성이 실시간 고객 프로필에 포함되는 방법을 잘 이해하는 것이 좋습니다.
 
-Power BI 애플리케이션 통합을 설치하려면 먼저 사용자가 다음과 같은 Platform 권한을 획득해야 합니다.
+Power BI 애플리케이션 통합을 설치하려면 먼저 사용자가 다음 Experience Platform 권한을 획득해야 합니다.
 
 - 쿼리 관리
 - 샌드박스 관리
@@ -32,11 +32,11 @@ Power BI 애플리케이션 통합을 설치하려면 먼저 사용자가 다음
 
 >[!NOTE]
 >
->Platform UI의 왼쪽 탐색 영역에 대시보드 탭이 표시되고 대시보드 인벤토리 보기가 표시되도록 하려면 Platform 라이선스의 일부로 프로필, 세그먼트 또는 대상 대시보드 중 하나에 대한 액세스 권한이 있어야 합니다.
+>Experience Platform UI의 왼쪽 탐색 영역에 대시보드 탭이 표시되고 대시보드 인벤토리 보기가 표시되도록 하려면 Experience Platform 라이선스의 일부로 프로필, 세그먼트 또는 대상 대시보드 중 하나에 액세스할 수 있어야 합니다.
 
 ## Power BI 애플리케이션 통합 설치
 
-Platform UI 내의 왼쪽 탐색 영역에서 **[!UICONTROL 대시보드]**&#x200B;를 선택하여 [!UICONTROL 대시보드] 작업 영역을 엽니다. [!UICONTROL 찾아보기] 탭에는 현재 사용 가능한 대시보드 보기 목록이 표시됩니다. 사용 가능한 대시보드를 확인하는 방법에 대한 자세한 내용은 [인벤토리 설명서](../inventory.md)를 참조하십시오.
+Experience Platform UI 내의 왼쪽 탐색 영역에서 **[!UICONTROL 대시보드]**&#x200B;를 선택하여 [!UICONTROL 대시보드] 작업 영역을 엽니다. [!UICONTROL 찾아보기] 탭에는 현재 사용 가능한 대시보드 보기 목록이 표시됩니다. 사용 가능한 대시보드를 확인하는 방법에 대한 자세한 내용은 [인벤토리 설명서](../inventory.md)를 참조하십시오.
 
 그런 다음 **[!UICONTROL 통합]** 탭을 선택합니다. Power BI 애플리케이션 통합 페이지가 표시됩니다. 여기에서 **[!UICONTROL 설치]**&#x200B;를 선택하여 설치를 시작합니다.
 
@@ -76,7 +76,7 @@ JSON 자격 증명 파일을 업로드하여 유효성 검사를 통과할 수�
 
 ![[자격 증명 파일 업로드] 버튼이 강조 표시된 Power BI 자격 증명 화면입니다.](../images/power-bi/upload-credential-file.png)
 
-만료되지 않는 자격 증명을 제공하면 Platform에서 자동으로 유효성을 검사합니다. 유효성 검사가 성공하면 확인 메시지가 표시됩니다. **[!UICONTROL 다음]**&#x200B;을 선택하여 Power BI 애플리케이션에 대한 동의 계약을 검토합니다.
+만료되지 않는 자격 증명을 제공하면 Experience Platform에서 자동으로 유효성을 검사합니다. 유효성 검사가 성공하면 확인 메시지가 표시됩니다. **[!UICONTROL 다음]**&#x200B;을 선택하여 Power BI 애플리케이션에 대한 동의 계약을 검토합니다.
 
 ![[다음] 버튼이 강조 표시된 만료되지 않는 자격 증명 유효성 검사 성공 화면입니다.](../images/power-bi/successfully-uploaded-credential-file.png)
 
@@ -86,7 +86,7 @@ JSON 자격 증명 파일을 업로드하여 유효성 검사를 통과할 수�
 
 ![[동의 검토] 버튼이 강조 표시된 동의 제공 화면입니다.](../images/power-bi/provide-consent-display.png)
 
-**[!UICONTROL 동의]**&#x200B;를 선택하여 Power BI에 Platform 데이터에 액세스하고 사용할 수 있는 권한을 부여합니다.
+Power BI 데이터에 액세스하고 사용할 수 있는 권한을 Experience Platform에 부여하려면 **[!UICONTROL 수락]**&#x200B;을 선택합니다.
 
 ![Power BI 애플리케이션에 대한 권한 요청입니다.](../images/power-bi/permissions.png)
 
@@ -94,7 +94,7 @@ JSON 자격 증명 파일을 업로드하여 유효성 검사를 통과할 수�
 >
 >동의를 제공하기 전에 언제든지 설치 프로세스를 종료하면 Power BI 애플리케이션 통합이 대시보드 인벤토리에 설치되지 않습니다.
 
-동의를 제공하면 보고서 템플릿이 설치 프로세스의 일부로 Power BI 환경에 자동으로 설치됩니다. 그런 다음 Power BI는 만료되지 않는 자격 증명을 사용하여 Platform에 액세스하고, 모든 SQL 쿼리를 순차적으로 실행하고, 보고서 템플릿을 반환된 데이터로 채웁니다.
+동의를 제공하면 보고서 템플릿이 설치 프로세스의 일부로 Power BI 환경에 자동으로 설치됩니다. 그런 다음 Power BI은 만료되지 않는 자격 증명을 사용하여 Experience Platform에 액세스하고, 모든 SQL 쿼리를 순차적으로 실행하고, 보고서 템플릿을 반환된 데이터로 채웁니다.
 
 **[!UICONTROL 완료]**&#x200B;를 선택하여 대시보드 인벤토리로 돌아갑니다.
 
@@ -118,7 +118,7 @@ Power BI 보고서 템플릿이 설치되었으므로 [!UICONTROL 찾아보기] 
 >
 >지정된 대시보드에 대해 편집 권한을 활성화해야 해당 대시보드를 Power BI 환경에 설치할 수 있습니다.
 
-![표준 Platform 프로필 위젯을 사용하는 Power BI 프로필 템플릿 보고서입니다.](../images/power-bi/profile-report-template.png)
+![표준 Experience Platform 프로필 위젯을 사용하는 Power BI 프로필 템플릿 보고서입니다.](../images/power-bi/profile-report-template.png)
 
 Power BI에 대시보드를 설치하면 기본적으로 모든 사용자에게 보고서 템플릿이 표시됩니다. 보고서 템플릿에 대한 액세스를 제한하려면 Power BI 환경 내에서 해당 사용자에 대한 액세스를 비활성화해야 합니다.
 
@@ -136,7 +136,7 @@ Power BI에 대시보드를 설치하면 기본적으로 모든 사용자에게 
 
 >[!IMPORTANT]
 >
->새로 생성된 사용자 정의 위젯은 Adobe Experience Platform 대시보드와 Power BI 보고서 템플릿 간에 자동으로 동기화되지 **않습니다**. Platform UI에서 생성된 모든 사용자 정의 위젯은 Power BI 환경 내에서 수동으로 다시 만들어야 합니다.
+>새로 생성된 사용자 정의 위젯은 Adobe Experience Platform 대시보드와 Power BI 보고서 템플릿 간에 자동으로 동기화되지 **않습니다**. Experience Platform UI에서 생성된 모든 사용자 정의 위젯은 Power BI 환경 내에서 수동으로 다시 만들어야 합니다.
 
 ### Power BI 환경에서 사용자 정의 위젯 다시 만들기
 
@@ -148,7 +148,7 @@ Power BI에 대시보드를 설치하면 기본적으로 모든 사용자에게 
 
 >[!NOTE]
 >
->Power BI 대시보드를 설치한 사용자만 Platform UI에서 통합 기능을 삭제할 수 있습니다.
+>Power BI 대시보드를 설치한 사용자만 Experience Platform UI에서 통합을 삭제할 수 있습니다.
 
 ![[찾아보기] 버튼과 [삭제] 아이콘이 강조 표시된 대시보드 인벤토리 화면 찾아보기 탭입니다.](../images/power-bi/delete-power-bi-dashboard.png)
 
@@ -156,8 +156,8 @@ Power BI에 대시보드를 설치하면 기본적으로 모든 사용자에게 
 
 >[!IMPORTANT]
 >
->Platform UI에서 Power BI 대시보드를 삭제해도 Power BI 환경에서 사용할 수 있는 보고서 템플릿은 삭제되지 **않습니다**. Power BI 보고서 템플릿에 보관된 정보를 완전히 삭제하려면 Power BI 계정에 로그인한 다음 해당 환경에서 보고서 템플릿을 삭제해야 합니다. 삭제한 다음에도 위에서 설명한 것과 동일한 설치 지침에 따라 Power BI 대시보드를 다시 설치할 수 있습니다.
+>Experience Platform UI에서 Power BI 대시보드를 삭제하면 Power BI 환경에서 사용할 수 있는 보고서 템플릿이 **삭제되지** 않습니다. Power BI 보고서 템플릿에 보관된 정보를 완전히 삭제하려면 Power BI 계정에 로그인한 다음 해당 환경에서 보고서 템플릿을 삭제해야 합니다. 삭제한 다음에도 위에서 설명한 것과 동일한 설치 지침에 따라 Power BI 대시보드를 다시 설치할 수 있습니다.
 
 ## 다음 단계
 
-이 문서를 읽으면 Power BI 보고서 템플릿을 Platform에 통합하여 프로필, 세그먼트 또는 대상 대시보드에서 강력한 데이터 인사이트를 공유하는 방법을 더 잘 이해할 수 있습니다. [대시보드 맞춤화 개요](../customize/overview.md)를 참조하여 대시보드 맞춤화에 대해 자세히 알아보십시오.
+이 문서를 읽으면 Power BI 보고서 템플릿을 Experience Platform에 통합하여 프로필, 세그먼트 또는 대상 대시보드에서 강력한 데이터 통찰력을 공유하는 방법을 더 잘 이해할 수 있습니다. [대시보드 맞춤화 개요](../customize/overview.md)를 참조하여 대시보드 맞춤화에 대해 자세히 알아보십시오.

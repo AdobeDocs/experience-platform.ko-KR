@@ -3,9 +3,9 @@ keywords: Experience Platform;사용자 인터페이스;UI;대시보드;대시�
 title: 표준 대시보드 위젯
 description: 이 안내서에서는 Adobe Experience Platform 대시보드에 표준 위젯을 추가하는 방법에 대한 단계별 지침을 제공합니다.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Adobe Experience Platform에서는 여러 대시보드를 사용하여 조직의 데이터를 보고 상호 작용할 수 있습니다. 대시보드 보기에 새 위젯을 추가하여 특정 대시보드를 업데이트할 수도 있습니다. Adobe은 대시보드에 추가하도록 선택할 수 있는 다양한 표준 위젯을 제공합니다.
 
-새 Platform 인스턴스가 만들어질 때 [[!UICONTROL 프로필]](../guides/profiles.md#default-widgets), [[!UICONTROL 대상]](../guides/audiences.md#default-widgets) 및 [[!UICONTROL 대상]](../guides/destinations.md#default-widgets) 대시보드에 각각 기본 위젯 로드가 있습니다. 이 안내서는 Platform UI에서 [!UICONTROL 프로필], [!UICONTROL 대상] 및 [!UICONTROL 대상] 대시보드를 사용자 지정하는 표준 위젯을 추가하는 방법에 대한 단계별 지침을 제공합니다.
+새 Experience Platform 인스턴스가 만들어질 때 [[!UICONTROL 프로필]](../guides/profiles.md#default-widgets), [[!UICONTROL 대상]](../guides/audiences.md#default-widgets) 및 [[!UICONTROL 대상]](../guides/destinations.md#default-widgets) 대시보드에 각각 기본 위젯 로드가 있습니다. 이 안내서는 Experience Platform UI에서 [!UICONTROL 프로필], [!UICONTROL 대상] 및 [!UICONTROL 대상] 대시보드를 사용자 지정하는 표준 위젯을 추가하는 방법에 대한 단계별 지침을 제공합니다.
 
 >[!NOTE]
 >
@@ -24,11 +24,11 @@ Adobe Experience Platform에서는 여러 대시보드를 사용하여 조직의
 
 ## 위젯 라이브러리 {#widget-library}
 
-이 안내서를 사용하려면 Experience Platform 내에서 [!UICONTROL 위젯 라이브러리]에 액세스해야 합니다. 위젯 라이브러리와 UI 내에서 위젯 라이브러리에 액세스하는 방법에 대해 자세히 알아보려면 [위젯 라이브러리 개요](widget-library.md)를 읽어 보십시오.
+이 안내서를 사용하려면 Experience Platform 내의 [!UICONTROL 위젯 라이브러리]에 액세스해야 합니다. 위젯 라이브러리와 UI 내에서 위젯 라이브러리에 액세스하는 방법에 대해 자세히 알아보려면 [위젯 라이브러리 개요](widget-library.md)를 읽어 보십시오.
 
 ## 표준 위젯 시작 {#standard-widgets}
 
-위젯 라이브러리 내에서 **[!UICONTROL 표준]** 탭에는 Adobe으로 만들어진 위젯이 포함되어 있으며 사용 가능한 대시보드를 기반으로 범주로 분류됩니다.
+위젯 라이브러리 내에서 **[!UICONTROL 표준]** 탭에는 Adobe에서 만든 위젯이 포함되어 있으며 사용 가능한 대시보드를 기반으로 범주로 분류됩니다.
 
 선택한 범주는 위젯 라이브러리를 입력한 대시보드와 일치합니다. 즉, [!UICONTROL 프로필] 대시보드에서 위젯 라이브러리를 선택한 경우 [!UICONTROL 프로필] 범주가 선택되고 다른 범주는 회색으로 표시됩니다.
 

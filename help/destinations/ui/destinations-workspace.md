@@ -3,7 +3,7 @@ keywords: 플랫폼;대상;대상 작업 영역;작업 영역;ui;대상 ui;카�
 title: 대상 작업 영역
 description: 대상 작업 영역은 개요, 카탈로그, 찾아보기, 계정 및 시스템 보기의 5개 섹션으로 구성되어 있습니다. 아래 섹션에 설명되어 있습니다.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1233'
 ht-degree: 0%
@@ -24,19 +24,19 @@ Adobe Experience Platform의 왼쪽 탐색 모음에서 **[!UICONTROL 대상]**&
 
 >[!NOTE]
 >
->Experience Platform을 처음 사용하는 조직에 아직 활성 대상이 없는 경우 [!UICONTROL 대상] 대시보드 및 [!UICONTROL 개요] 탭이 표시되지 않습니다. 대신 왼쪽 탐색에서 [!UICONTROL 대상]을 선택하면 [[!UICONTROL 카탈로그] 탭](#catalog)이 표시됩니다.
+>조직이 Experience Platform을 처음 사용하고 아직 활성 대상이 없는 경우 [!UICONTROL 대상] 대시보드 및 [!UICONTROL 개요] 탭이 표시되지 않습니다. 대신 왼쪽 탐색에서 [!UICONTROL 대상]을 선택하면 [[!UICONTROL 카탈로그] 탭](#catalog)이 표시됩니다.
 
 ![대상 대시보드 개요 탭](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL 카탈로그] {#catalog}
 
-**[!UICONTROL 카탈로그]** 탭에는 데이터를 보낼 수 있는 [!DNL Platform]에서 사용 가능한 모든 대상 목록이 표시됩니다.
+**[!UICONTROL 카탈로그]** 탭에는 데이터를 보낼 수 있는 [!DNL Experience Platform]에서 사용 가능한 모든 대상 목록이 표시됩니다.
 
-[!DNL Platform] 사용자 인터페이스는 대상 카탈로그 페이지에서 여러 검색 및 필터 옵션을 제공합니다.
+[!DNL Experience Platform] 사용자 인터페이스는 대상 카탈로그 페이지에서 여러 검색 및 필터 옵션을 제공합니다.
 
 * 페이지의 검색 기능을 사용하여 특정 대상을 찾습니다.
 * [!UICONTROL Categories] 컨트롤을 사용하여 대상을 필터링합니다.
-* [!UICONTROL 모든 대상]과(와) [!UICONTROL 내 대상] 사이를 전환합니다. **[!UICONTROL 모든 대상]**&#x200B;을 선택하면 사용 가능한 모든 [!DNL Platform] 대상이 표시됩니다. **[!UICONTROL 내 대상]**&#x200B;을 선택하면 연결을 설정한 대상만 표시됩니다.
+* [!UICONTROL 모든 대상]과(와) [!UICONTROL 내 대상] 사이를 전환합니다. **[!UICONTROL 모든 대상]**&#x200B;을 선택하면 사용 가능한 모든 [!DNL Experience Platform] 대상이 표시됩니다. **[!UICONTROL 내 대상]**&#x200B;을 선택하면 연결을 설정한 대상만 표시됩니다.
 * **[!UICONTROL 연결]** 및/또는 **[!UICONTROL 확장]** 유형을 보려면 선택하십시오. 두 범주의 차이점을 이해하려면 [대상 형식 및 범주](../destination-types.md)를 읽어 보세요.
 
 ![몇 가지 광고 및 클라우드 저장소 대상을 표시하는 대상 카탈로그입니다.](../assets/ui/workspace/catalog.png)

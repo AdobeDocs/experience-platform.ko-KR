@@ -4,9 +4,9 @@ solution: Experience Platform
 title: DbVisualizer를 쿼리 서비스에 연결
 description: 이 문서에서는 DbVisualizer를 Adobe Experience Platform 쿼리 서비스와 연결하는 단계를 안내합니다.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '896'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 이 안내서를 사용하려면 이미 [!DNL DbVisualizer] 데스크톱 앱에 액세스할 수 있어야 하며 해당 인터페이스를 탐색하는 방법에 익숙해야 합니다. [!DNL DbVisualizer] 데스크톱 앱을 다운로드하거나 자세한 내용은 [공식 [!DNL DbVisualizer] 설명서](https://www.dbvis.com/download/)를 참조하세요.
 
-[!DNL  DbVisualizer]을(를) Experience Platform에 연결하는 데 필요한 자격 증명을 획득하려면 Platform UI에서 쿼리 작업 영역에 액세스할 수 있어야 합니다. 현재 쿼리 작업 영역에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
+[!DNL  DbVisualizer]을(를) Experience Platform에 연결하는 데 필요한 자격 증명을 획득하려면 Experience Platform UI에서 쿼리 작업 영역에 액세스할 수 있어야 합니다. 현재 쿼리 작업 영역에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
 
 ## 데이터베이스 연결 만들기 {#connect-database}
 
@@ -44,7 +44,7 @@ ht-degree: 1%
 | `sslmode` | SSL 보호 수준을 제어합니다. Adobe Experience Platform에 타사 클라이언트를 연결할 때는 `require` SSL 모드를 사용하는 것이 좋습니다. `require` 모드를 사용하면 모든 통신에 암호화가 필요하며 네트워크가 올바른 서버에 연결할 수 있도록 신뢰할 수 있습니다. 서버 SSL 인증서 유효성 검사가 필요하지 않습니다. |
 | `user` | 데이터베이스에 연결된 사용자 이름은 조직 ID입니다. `@Adobe.Org`(으)로 끝나는 영숫자 문자열입니다. 이 값은 Experience Platform **[!UICONTROL 사용자 이름] 자격 증명**&#x200B;입니다. |
 
-검색 창을 사용하여 각 속성을 찾은 다음 매개 변수 값에 해당하는 셀을 선택합니다. 셀이 파란색으로 강조 표시됩니다. 값 필드에 플랫폼 자격 증명을 입력하고 **[!DNL Apply]**&#x200B;을(를) 선택하여 드라이버 속성을 추가합니다.
+검색 창을 사용하여 각 속성을 찾은 다음 매개 변수 값에 해당하는 셀을 선택합니다. 셀이 파란색으로 강조 표시됩니다. 값 필드에 Experience Platform 자격 증명을 입력하고 **[!DNL Apply]**&#x200B;을(를) 선택하여 드라이버 속성을 추가합니다.
 
 >[!NOTE]
 >
@@ -54,9 +54,9 @@ ht-degree: 1%
 
 ### 쿼리 서비스 자격 증명 입력 {#query-service-credentials}
 
-쿼리 서비스와 BBVisualizer를 연결하는 데 필요한 자격 증명을 찾으려면 플랫폼 UI에 로그인하고 왼쪽 탐색에서 **[!UICONTROL 쿼리]**&#x200B;를 선택한 다음 **[!UICONTROL 자격 증명]**&#x200B;을 선택하십시오. **호스트**, **포트**, **데이터베이스**, **사용자 이름** 및 **암호** 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md)를 참조하십시오.
+쿼리 서비스에 BBVisualizer를 연결하는 데 필요한 자격 증명을 찾으려면 Experience Platform UI에 로그인하고 왼쪽 탐색에서 **[!UICONTROL 쿼리]**&#x200B;를 선택한 다음 **[!UICONTROL 자격 증명]**&#x200B;을 선택하십시오. **호스트**, **포트**, **데이터베이스**, **사용자 이름** 및 **암호** 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md)를 참조하십시오.
 
-![자격 증명 및 만료 자격 증명이 강조 표시된 Experience Platform 쿼리 작업 영역의 자격 증명 페이지입니다.](../images/clients/dbvisualizer/query-service-credentials-page.png)
+![자격 증명과 만료 자격 증명이 강조 표시된 Experience Platform 쿼리 작업 영역의 자격 증명 페이지입니다.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
 >[!IMPORTANT]
 >
@@ -68,7 +68,7 @@ ht-degree: 1%
 
 연결 인증 패널에서 **[!DNL Require Userid]** 및 **[!DNL Require Password]** 확인란을 모두 선택한 다음 **[!DNL Apply]**&#x200B;을(를) 선택합니다. [인증 옵션 설정](https://confluence.dbvis.com/display/UG140/Setting+Common+Authentication+Options)에 대한 자세한 내용은 공식 문서에서 확인할 수 있습니다.
 
-## 플랫폼에 연결
+## Experience Platform에 연결
 
 만료되거나 만료되지 않는 자격 증명을 사용하여 연결할 수 있습니다. 연결하려면 [!DNL PostgreSQL] 개체 보기 탭에서 **[!DNL Connection]** 탭을 선택하고 다음 설정에 대한 Experience Platform 자격 증명을 입력하십시오. [수동 연결 설정](https://confluence.dbvis.com/display/UG100/Setting+Up+a+Connection+Manually)에 대한 보완 지침은 공식 DBVisualizer 웹 사이트에서 사용할 수 있습니다.
 
@@ -82,7 +82,7 @@ ht-degree: 1%
 | **[!UICONTROL 데이터베이스 서버]** | Experience Platform **[!UICONTROL 호스트]** 자격 증명입니다. |
 | **[!UICONTROL 데이터베이스 포트]** | [!DNL Query Service]에 대한 포트입니다. [!DNL Query Service]에 연결하려면 **80** 또는 **5432** 포트를 사용해야 합니다. |
 | **[!UICONTROL 데이터베이스]** | Experience Platform **[!UICONTROL 데이터베이스]** 자격 증명 값 사용: `prod:all`. |
-| **[!UICONTROL 데이터베이스 사용자 ID]** | Platform 조직 ID입니다. Experience Platform **[!UICONTROL 사용자 이름]** 자격 증명 값을 사용하십시오. ID는 `ORG_ID@AdobeOrg` 형식입니다. |
+| **[!UICONTROL 데이터베이스 사용자 ID]** | Experience Platform 조직 ID입니다. Experience Platform **[!UICONTROL 사용자 이름]** 자격 증명 값을 사용하십시오. ID는 `ORG_ID@AdobeOrg` 형식입니다. |
 | **[!UICONTROL 데이터베이스 암호]** | 이 영숫자 문자열은 Experience Platform **[!UICONTROL 암호]** 자격 증명입니다. 만료되지 않는 자격 증명을 사용하려면 이 값은 구성 JSON 파일에서 다운로드한 `technicalAccountID` 및 `credential`에서 연결된 인수입니다. 암호 값은 {technicalAccountId}:{credential} 형식을 사용합니다. 만료되지 않는 자격 증명에 대한 구성 JSON 파일은 초기화 중에 Adobe이 복사본을 보관하지 않는 한 번 다운로드됩니다. |
 
 모든 관련 자격 증명을 입력한 후 **[!DNL Connect]**&#x200B;을(를) 선택합니다.

@@ -4,16 +4,16 @@ description: Azure 테넌트로 CMK 앱을 설정하고 암호화 키 ID를 Adob
 role: Developer
 feature: API, Privacy
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: 53598f86e1876bc6d1807e95a26584da4d7db3f2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1035'
 ht-degree: 1%
 
 ---
 
 # API를 사용하여 Azure에 대한 고객 관리 키 설정 및 구성
 
-이 문서에서는 API를 사용하여 Adobe Experience Platform에서 CMK(Customer Managed Keys)를 활성화하기 위한 Azure 관련 지침을 다룹니다. Azure 호스팅 플랫폼 인스턴스용 UI를 사용하여 이 프로세스를 완료하는 방법에 대한 지침은 [UI CMK 설정 문서](./ui-set-up.md)를 참조하세요.
+이 문서에서는 API를 사용하여 Adobe Experience Platform에서 CMK(Customer Managed Keys)를 활성화하기 위한 Azure 관련 지침을 다룹니다. Azure에서 호스팅하는 Experience Platform 인스턴스의 UI를 사용하여 이 프로세스를 완료하는 방법에 대한 지침은 [UI CMK 설정 문서](./ui-set-up.md)를 참조하세요.
 
 AWS 관련 지침은 [AWS 설치 안내서](../aws/ui-set-up.md)를 참조하세요.
 
@@ -23,7 +23,7 @@ Adobe Experience Platform에서 [!UICONTROL 암호화] 섹션을 보고 방문�
 
 Experience Platform에서 역할 및 권한을 할당하는 방법에 대한 자세한 내용은 [권한 구성 설명서](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html)를 참조하세요.
 
-Azure 호스팅 플랫폼 인스턴스에 대해 CMK를 사용하려면 다음 설정으로 [[!DNL Azure] Key Vault를 구성](./azure-key-vault-config.md)해야 합니다.
+Azure에서 호스팅하는 Experience Platform 인스턴스에 대해 CMK를 사용하도록 설정하려면 다음 설정으로 [[!DNL Azure] Key Vault를 구성](./azure-key-vault-config.md)해야 합니다.
 
 * [제거 보호 사용](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [일시 삭제 사용](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
@@ -36,7 +36,7 @@ Azure 호스팅 플랫폼 인스턴스에 대해 CMK를 사용하려면 다음 �
 
 ### 시작하기
 
-CMK 앱을 등록하려면 Platform API를 호출해야 합니다. 이러한 호출을 수행하는 데 필요한 인증 헤더를 수집하는 방법에 대한 자세한 내용은 [Platform API 인증 안내서](../../../api-authentication.md)를 참조하십시오.
+CMK 앱을 등록하려면 Experience Platform API를 호출해야 합니다. 이러한 호출을 수행하는 데 필요한 인증 헤더를 수집하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 안내서](../../../api-authentication.md)를 참조하십시오.
 
 인증 가이드는 필요한 `x-api-key` 요청 헤더에 대한 고유한 값을 생성하는 방법에 대한 지침을 제공하지만 이 가이드의 모든 API 작업은 정적 값 `acp_provisioning`을(를) 대신 사용합니다. 그러나 `{ACCESS_TOKEN}` 및 `{ORG_ID}`에 대한 고유한 값을 제공해야 합니다.
 
@@ -44,7 +44,7 @@ CMK 앱을 등록하려면 Platform API를 호출해야 합니다. 이러한 호
 
 ### 인증 URL 가져오기 {#fetch-authentication-url}
 
-등록 프로세스를 시작하려면 앱 등록 끝점에 조직의 필수 인증 URL을 가져오도록 GET 요청을 만듭니다.
+등록 프로세스를 시작하려면 앱 등록 끝점에 GET 요청을 하여 조직에 필요한 인증 URL을 가져오십시오.
 
 **요청**
 
@@ -94,9 +94,9 @@ curl -X GET \
 >
 >목록에서 애플리케이션을 찾을 수 없는 경우 서비스 주체가 테넌트에 승인되지 않았습니다. 올바른 권한이 있는지 확인하려면 [!DNL Azure] 관리자 또는 담당자에게 문의하세요.
 
-## Experience Platform 시 암호화 키 구성 활성화 {#send-to-adobe}
+## Experience Platform에서 암호화 키 구성 활성화 {#send-to-adobe}
 
-[!DNL Azure]에 CMK 앱을 설치한 후 암호화 키 식별자를 Adobe에 보낼 수 있습니다. 왼쪽 탐색에서 **[!DNL Keys]**&#x200B;을(를) 선택한 다음 보낼 키의 이름을 선택합니다.
+[!DNL Azure]에 CMK 앱을 설치한 후 암호화 키 식별자를 Adobe으로 보낼 수 있습니다. 왼쪽 탐색에서 **[!DNL Keys]**&#x200B;을(를) 선택한 다음 보낼 키의 이름을 선택합니다.
 
 ![[!DNL Keys] 개체와 키 이름이 강조 표시된 Microsoft Azure 대시보드.](../../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
@@ -110,7 +110,7 @@ curl -X GET \
 
 ![[!DNL Permitted operations] 및 복사 키 URL 섹션이 강조 표시된 Microsoft Azure 대시보드 키 세부 정보](../../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
-Key Vault URI를 얻으면 CMK 구성 엔드포인트에 대한 POST 요청을 사용하여 URI를 전송할 수 있습니다.
+Key Vault URI를 얻으면 CMK 구성 끝점에 대한 POST 요청을 사용하여 URI를 전송할 수 있습니다.
 
 >[!NOTE]
 >
@@ -221,13 +221,13 @@ curl -X GET \
 
 `status` 특성은 다음 의미를 갖는 네 가지 값 중 하나를 가질 수 있습니다.
 
-1. `RUNNING`: 플랫폼에서 키 및 키 자격 증명 모음에 액세스할 수 있는지 확인합니다.
+1. `RUNNING`: Experience Platform에서 키 및 키 자격 증명 모음에 액세스할 수 있는지 확인합니다.
 1. `UPDATE_EXISTING_RESOURCES`: 시스템에서 조직의 모든 샌드박스에 있는 데이터 저장소에 키 저장소 및 키 이름을 추가하고 있습니다.
 1. `COMPLETED`: 키 자격 증명 모음 및 키 이름이 데이터 저장소에 추가되었습니다.
 1. `FAILED`: 주로 키, 키 자격 증명 모음 또는 다중 테넌트 앱 설정과 관련된 문제가 발생했습니다.
 
 ## 다음 단계
 
-위의 단계를 완료하면 조직에 대해 CMK를 성공적으로 사용할 수 있게 됩니다. Azure 호스팅 플랫폼 인스턴스의 경우 이제 기본 데이터 저장소에 수집된 데이터는 [!DNL Azure] 키 자격 증명 모음의 키를 사용하여 암호화 및 암호 해독됩니다.
+위의 단계를 완료하면 조직에 대해 CMK를 성공적으로 사용할 수 있게 됩니다. Azure 호스팅 Experience Platform 인스턴스의 경우 이제 기본 데이터 저장소에 수집된 데이터는 [!DNL Azure] 키 자격 증명 모음의 키를 사용하여 암호화 및 암호 해독됩니다.
 
 Adobe Experience Platform의 데이터 암호화에 대한 자세한 내용은 [암호화 설명서](../../encryption.md)를 참조하세요.

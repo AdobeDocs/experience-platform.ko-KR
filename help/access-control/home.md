@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 50d768eeb0dc8fa85af113db7790ad3e3258ea64
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '3816'
+source-wordcount: '3818'
 ht-degree: 0%
 
 ---
@@ -202,7 +202,7 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Data Governance] | [!UICONTROL 사용 레이블 관리] | 사용 레이블을 읽고, 만들고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Data Governance] | [!UICONTROL 데이터 사용 정책 관리] | 데이터 사용 정책을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Data Governance] | [!UICONTROL 데이터 사용 정책 보기] | 조직에 속한 데이터 사용 정책에 대한 읽기 전용 액세스 권한. |
-| [!DNL Data Governance] | [!UICONTROL 사용자 활동 로그 보기] | 플랫폼 활동의 기록된 [감사 로그](../landing/governance-privacy-security/audit-logs/overview.md)를 보기 위한 읽기 전용 액세스입니다. |
+| [!DNL Data Governance] | [!UICONTROL 사용자 활동 로그 보기] | Experience Platform 활동의 기록된 [감사 로그](../landing/governance-privacy-security/audit-logs/overview.md)를 보기 위한 읽기 전용 액세스입니다. |
 | [!DNL Data Governance] | [!UICONTROL 개인 정보 보호 콘솔 보기] | 개인 정보 콘솔에 대한 읽기 전용 액세스 권한. |
 | [!DNL Data Ingestion] | [!UICONTROL 소스 관리] | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있는 액세스 권한. |
 | [!DNL Data Ingestion] | [!UICONTROL 소스 보기] | **[!UICONTROL 카탈로그]** 탭의 사용 가능한 소스와 **[!UICONTROL 찾아보기]** 탭의 인증된 소스에 대한 읽기 전용 액세스 권한입니다. |
@@ -281,7 +281,7 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Profile Management] | [!UICONTROL 프로필 설정 관리] | 모든 프로필 설정을 읽고 편집할 수 있는 액세스 권한 |
 | [!DNL Prospects] | [!UICONTROL 잠재 고객 보기] | 잠재 고객 스키마, 프로필, 대상자 및 잠재 고객 아코디언에 대한 읽기 전용 액세스 권한. |
 | [!DNL Prospects] | [!UICONTROL 잠재 고객 관리] | 잠재 고객 스키마, 프로필 및 고객을 만들고 관리하는 기능. 잠재 고객 아코디언에 대한 읽기 전용 액세스 권한. |
-| [!DNL Query Service] | [!UICONTROL 쿼리 관리] | Platform 데이터에 대한 구조화된 SQL 쿼리를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
+| [!DNL Query Service] | [!UICONTROL 쿼리 관리] | Experience Platform 데이터에 대한 구조화된 SQL 쿼리를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Query Service] | [!UICONTROL 쿼리 서비스 통합 관리] | 쿼리 서비스 액세스에 대한 만료되지 않는 자격 증명을 생성, 업데이트 및 삭제할 수 있는 액세스 권한입니다. |
 | [!DNL Query Service] | [!UICONTROL 쿼리 세션 관리] | 기존 세션을 제거할 수 있습니다. |
 | [!DNL Query Service] | [!UICONTROL 허용 목록 관리] | 조직의 IP 제한 사항을 관리하는 기능. |

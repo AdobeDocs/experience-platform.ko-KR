@@ -2,9 +2,9 @@
 title: SQL을 사용하여 대상 작성
 description: Adobe Experience Platform의 Data Distiller에서 SQL 대상 확장을 사용하여 SQL 명령을 사용하여 대상을 만들고, 관리하고, 게시하는 방법에 대해 알아봅니다. 이 안내서에서는 프로필 만들기, 업데이트 및 삭제, 데이터 기반 대상 정의 사용 등 대상 라이프사이클의 모든 측면을 다룹니다.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1485'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ SQL 대상 확장을 사용하여 기존 차원 엔티티(예: 고객 속성 또
 
 이 SQL 확장을 사용하면 대상 세그먼트를 정의할 때 프로필에 원시 데이터가 필요하지 않으므로 대상을 만들 수 있는 기능이 향상됩니다. 이 방법을 사용하여 만든 대상은 Audience 작업 영역에 자동으로 등록되며, 여기에서 파일 기반 대상으로 추가 타깃팅할 수 있습니다.
 
-![SQL 대상 확장 워크플로를 보여 주는 인포그래픽입니다. 단계에는 SQL 명령을 사용하여 Query Service로 대상을 빌드하고, Platform UI에서 관리하며, 파일 기반 대상에서 활성화합니다.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
+![SQL 대상 확장 워크플로를 보여 주는 인포그래픽입니다. 단계에는 SQL 명령을 사용하여 Query Service로 대상을 빌드하고, Experience Platform UI에서 관리하며, 파일 기반 대상에서 활성화합니다.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
 이 문서에서는 Adobe Experience Platform의 Data Distiller에서 SQL 대상 확장을 사용하여 SQL 명령을 사용하여 대상을 만들고, 관리하고, 게시하는 방법에 대해 설명합니다.
 
@@ -203,7 +203,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### 자동 대상자 등록 및 가용성 {#registration-and-availability}
 
-SQL 확장을 사용하여 만든 대상은 대상 작업 영역의 데이터 Distiller [!UICONTROL 원본]에 자동으로 등록됩니다. 등록되면 이러한 대상을 파일 기반 대상에서 타기팅할 수 있으므로 세그멘테이션 및 타기팅 전략이 향상됩니다. 이 프로세스에서는 추가적인 구성이 필요하지 않으므로 대상자 관리가 간소화됩니다. Platform UI에서 대상을 보고, 관리하고, 만드는 방법에 대한 자세한 내용은 [대상 포털 개요](../../segmentation/ui/audience-portal.md)를 참조하십시오.
+SQL 확장을 사용하여 만든 대상은 대상 작업 영역의 데이터 Distiller [!UICONTROL 원본]에 자동으로 등록됩니다. 등록되면 이러한 대상을 파일 기반 대상에서 타기팅할 수 있으므로 세그멘테이션 및 타기팅 전략이 향상됩니다. 이 프로세스에서는 추가적인 구성이 필요하지 않으므로 대상자 관리가 간소화됩니다. Experience Platform UI에서 대상을 보고, 관리하고, 만드는 방법에 대한 자세한 내용은 [대상 포털 개요](../../segmentation/ui/audience-portal.md)를 참조하십시오.
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
@@ -289,9 +289,9 @@ Data Distiller 대상자는 Adobe Journey Optimizer에서도 사용할 수 있�
 
 이 문서를 읽은 후에는 Data Distiller에서 SQL 대상 확장을 사용하여 SQL 명령을 사용하여 대상을 효과적으로 만들고, 관리하고, 게시하는 방법에 대해 알아보았습니다. 이제 고유한 비즈니스 요구 사항을 기반으로 대상 정의를 사용자 정의하고 다양한 대상에서 활성화하여 마케팅 전략 및 데이터 기반 결정을 최적화할 수 있습니다.
 
-다음으로, 다음 설명서를 읽어 Platform 대상자 관리 전략을 추가로 개발하고 최적화할 수 있습니다.
+다음으로, 다음 설명서를 읽어 Experience Platform 대상자 관리 전략을 추가로 개발하고 최적화할 수 있습니다.
 
-- **대상 평가 살펴보기**: Adobe Experience Platform의 [대상 평가 방법에 대해 알아보기](../../segmentation/home.md#evaluate-segments): 실시간 업데이트를 위한 스트리밍 세분화, 예약된 처리나 온디맨드 처리를 위한 일괄 세분화 및 Edge Network에서 즉각적인 평가를 위한 에지 세분화.
-- **대상과 통합**: Platform Destinations UI를 사용하여 [필요 시 파일을 일괄 처리 대상으로 내보내기](../../destinations/ui/export-file-now.md)하는 방법에 대한 안내서를 읽어 보십시오.
+- **대상 평가 살펴보기**: Adobe Experience Platform의 [대상 평가 방법에 대해 알아보기](../../segmentation/home.md#evaluate-segments): 실시간 업데이트를 위한 스트리밍 세분화, 예약 또는 온디맨드 처리를 위한 일괄 세분화 및 Edge Network에서의 즉각적인 평가를 위한 에지 세분화.
+- **대상과 통합**: Experience Platform 대상 UI를 사용하여 [주문형 파일을 일괄 대상으로 내보내기](../../destinations/ui/export-file-now.md)하는 방법에 대한 안내서를 읽어 보십시오.
 - **대상 성능 검토**: SQL 정의 대상이 다양한 채널에서 어떻게 작동하는지 분석합니다. 데이터 인사이트를 사용하여 대상 정의 및 타깃팅 전략을 조정하고 개선합니다. [대상 인사이트](../../dashboards/insights/audiences.md)의 문서를 읽고 Adobe Real-Time CDP의 대상 인사이트에 대한 SQL 쿼리에 액세스하고 조정하는 방법을 알아보십시오. 그런 다음 대상 대시보드를 사용자 정의하여 이러한 인사이트를 효과적으로 시각화하고 사용하여 보다 나은 의사 결정을 위해 고유한 인사이트를 만들고 원시 데이터를 실행 가능한 정보로 변환할 수 있습니다.
 

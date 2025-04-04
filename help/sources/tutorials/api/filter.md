@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 Source에 대한 행 수준 데이터 필터링
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 소스 수준에서 데이터를 필터링하는 방법에 대한 단계를 다룹니다
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1823'
 ht-degree: 4%
 
 ---
@@ -27,12 +27,12 @@ ht-degree: 4%
 
 이 자습서를 사용하려면 Adobe Experience Platform의 다음 구성 요소를 잘 알고 있어야 합니다.
 
-* [원본](../../home.md): [!DNL Experience Platform]에서는 데이터를 다양한 원본에서 수집할 수 있으며 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공합니다.
-* [샌드박스](../../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [원본](../../home.md): [!DNL Experience Platform]에서는 데이터를 다양한 원본에서 수집할 수 있으며 [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공합니다.
+* [샌드박스](../../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-### Platform API 사용
+### Experience Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ## 소스 데이터 필터링 {#filter-source-data}
 
@@ -155,7 +155,7 @@ curl -X GET \
 
 ### 데이터 미리 보기 {#preview-your-data}
 
-`filters`을(를) 쿼리 매개 변수의 일부로 제공하고 [!DNL Base64]에서 PQL 입력 조건을 지정하는 동안 [!DNL Flow Service] API의 `/explore` 끝점에 GET 요청을 하여 데이터를 미리 볼 수 있습니다.
+`filters`을(를) 쿼리 매개 변수의 일부로 제공하고 [!DNL Base64]에서 PQL 입력 조건을 지정하는 동안 [!DNL Flow Service] API의 `/explore` 끝점에 GET 요청을 수행하여 데이터를 미리 볼 수 있습니다.
 
 **API 형식**
 
@@ -460,7 +460,7 @@ UI에서 소스 카탈로그로 이동한 다음 상단 헤더에서 **[!UICONTR
 
 ### 데이터 흐름 세부 정보 검색
 
-다음으로, 데이터 흐름 세부 정보, 특히 데이터 흐름과 연관된 소스 연결 ID를 검색해야 합니다. 데이터 흐름 세부 정보를 검색하려면 `/flows` 끝점에 대한 GET 요청을 만들고 데이터 흐름 ID를 경로 매개 변수로 제공하십시오.
+다음으로, 데이터 흐름 세부 정보, 특히 데이터 흐름과 연관된 소스 연결 ID를 검색해야 합니다. 데이터 흐름 세부 정보를 검색하려면 `/flows` 끝점에 GET 요청을 만들고 데이터 흐름 ID를 경로 매개 변수로 제공하십시오.
 
 **API 형식**
 
@@ -591,7 +591,7 @@ curl -X GET \
 
 ### 소스 연결 세부 정보 검색
 
-그런 다음 소스 연결 ID를 사용하고 `/sourceConnections` 끝점에 대한 GET 요청을 하여 소스 연결 세부 정보를 검색합니다.
+그런 다음 소스 연결 ID를 사용하고 `/sourceConnections` 끝점에 대한 GET 요청을 만들어 소스 연결 세부 정보를 검색합니다.
 
 **API 형식**
 
@@ -678,11 +678,11 @@ curl -X GET \
 
 이제 소스 연결 ID와 해당 버전이 있으므로 표준 활동 유형을 지정하는 필터 조건으로 PATCH 요청을 수행할 수 있습니다.
 
-원본 연결을 업데이트하려면 `/sourceConnections` 끝점에 PATCH 요청을 하고 원본 연결 ID를 쿼리 매개 변수로 제공하세요. 또한 `If-Match` 헤더 매개 변수를 해당 소스 연결 버전과 함께 제공해야 합니다.
+소스 연결을 업데이트하려면 `/sourceConnections` 끝점에 PATCH 요청을 만들고 소스 연결 ID를 쿼리 매개 변수로 제공하십시오. 또한 `If-Match` 헤더 매개 변수를 해당 소스 연결 버전과 함께 제공해야 합니다.
 
 >[!TIP]
 >
->PATCH 요청을 할 때 `If-Match` 헤더가 필요합니다. 이 헤더의 값은 업데이트하려는 데이터 흐름의 고유한 버전/태그입니다. 버전/etag 값은 데이터 흐름이 성공적으로 업데이트될 때마다 업데이트됩니다.
+>PATCH 요청을 수행할 때 `If-Match` 헤더가 필요합니다. 이 헤더의 값은 업데이트하려는 데이터 흐름의 고유한 버전/태그입니다. 버전/etag 값은 데이터 흐름이 성공적으로 업데이트될 때마다 업데이트됩니다.
 
 **API 형식**
 
@@ -747,9 +747,9 @@ curl -X PATCH \
 
 +++
 
-### 소스 연결 Publish
+### 소스 연결 게시
 
-이제 소스 연결이 필터링 조건으로 업데이트되어 초안 상태에서 이동하고 소스 연결을 게시할 수 있습니다. 이렇게 하려면 `/sourceConnections` 끝점에 POST 요청을 하고 초안 원본 연결의 ID와 게시를 위한 작업 작업을 제공합니다.
+이제 소스 연결이 필터링 조건으로 업데이트되어 초안 상태에서 이동하고 소스 연결을 게시할 수 있습니다. 이렇게 하려면 `/sourceConnections` 끝점에 POST를 요청하고 초안 원본 연결의 ID와 게시를 위한 작업 작업을 제공합니다.
 
 **API 형식**
 
@@ -791,7 +791,7 @@ curl -X POST \
 
 +++
 
-### target 연결 Publish
+### 대상 연결 게시
 
 이전 단계와 마찬가지로 대상 연결도 게시해야 초안 데이터 흐름을 진행하고 게시할 수 있습니다. `/targetConnections` 끝점에 대한 POST 요청을 만들고 게시하려는 초안 대상 연결의 ID와 게시를 위한 작업 작업을 제공합니다.
 
@@ -836,7 +836,7 @@ curl -X POST \
 +++
 
 
-### 데이터 흐름 Publish
+### 데이터 흐름 게시
 
 이제 소스 및 타겟 연결이 모두 게시된 상태에서 마지막 단계로 진행하여 데이터 흐름을 게시할 수 있습니다. 데이터 흐름을 게시하려면 `/flows` 끝점에 POST 요청을 만들고 게시할 데이터 흐름 ID와 작업 작업을 제공하십시오.
 

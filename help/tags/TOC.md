@@ -6,10 +6,10 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 5e3f1517b321cab756305cd61ad5f1def93d3de7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 35%
+source-wordcount: '777'
+ht-degree: 36%
 
 ---
 
@@ -329,5 +329,5 @@ ht-degree: 35%
 * [FAQ](./faq.md)
 * [용어 업데이트](./term-updates.md)
 * [Internet Explorer 10 및 11에 대한 지원 중단](./ie-deprecation.md)
-* [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+* [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
 

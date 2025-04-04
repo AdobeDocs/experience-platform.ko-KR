@@ -1,22 +1,23 @@
 ---
-title: Platform UI를 사용하여 AWS으로 고객 관리 키 설정 및 구성
+title: Experience Platform UI를 사용하여 AWS으로 고객 관리 키 설정 및 구성
 description: Amazon 리소스 이름(ARN)으로 CMK 앱을 설정하고 암호화 키 ID를 Adobe Experience Platform으로 전송하는 방법에 대해 알아봅니다.
-source-git-commit: e67aed9e8072bcd531d5aa6ce5b631c910a1812a
+exl-id: f0e38a60-d448-4975-977e-1367fca10515
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1263'
 ht-degree: 0%
 
 ---
 
-# Platform UI를 사용하여 AWS으로 고객 관리 키 설정 및 구성
+# Experience Platform UI를 사용하여 AWS으로 고객 관리 키 설정 및 구성
 
-이 안내서를 사용하여 Platform UI를 통해 AWS에 호스팅된 플랫폼 인스턴스용 CMK(Customer Managed Key)를 활성화합니다.
+이 안내서를 사용하여 Experience Platform UI를 통해 AWS에서 호스팅되는 Experience Platform 인스턴스용 CMK(Customer Managed Keys)를 활성화할 수 있습니다.
 
 >[!IMPORTANT]
 >
 >이 안내서를 계속하기 전에 [의 CMK용 AWS KMS 구성](./configure-kms.md) 문서에 자세히 설명된 설정을 완료했는지 확인하십시오.
 
-## 키를 Experience Platform과 통합하도록 AWS 키 정책 업데이트
+## AWS 키 정책을 업데이트하여 Experience Platform과 키 통합
 
 AWS 키를 Experience Platform과 통합하려면 KMS 작업 영역의 **[!DNL Key Policy]** 섹션에서 JSON을 편집해야 합니다. 기본 키 정책은 아래 JSON과 유사합니다.
 
@@ -40,11 +41,11 @@ AWS 키를 Experience Platform과 통합하려면 KMS 작업 영역의 **[!DNL K
 }
 ```
 
-위의 예에서 동일한 계정(`Principal.AWS`) 내의 모든 리소스(`"Resource": "*"`)가 키에 액세스할 수 있습니다. 이 정책을 사용하면 지정된 계정으로 제한된 암호화 및 암호 해독 작업을 계정의 서비스에서 수행할 수 있습니다. Platform 단일 테넌트 계정에 이 키에 대한 액세스 권한을 부여하려면 기본 AWS 정책에 새 문을 추가하십시오. Platform UI에서 필요한 JSON 정책을 가져와 AWS KMS 키에 적용하여 Adobe Experience Platform과의 보안 연결을 설정할 수 있습니다.
+위의 예에서 동일한 계정(`Principal.AWS`) 내의 모든 리소스(`"Resource": "*"`)가 키에 액세스할 수 있습니다. 이 정책을 사용하면 지정된 계정으로 제한된 암호화 및 암호 해독 작업을 계정의 서비스에서 수행할 수 있습니다. 이 키에 대한 액세스 권한을 Experience Platform 단일 테넌트 계정에 부여하려면 기본 AWS 정책에 새 문을 추가하십시오. Experience Platform UI에서 필요한 JSON 정책을 가져와 AWS KMS 키에 적용하여 Adobe Experience Platform과의 보안 연결을 설정할 수 있습니다.
 
-Platform UI에서 왼쪽 탐색 레일의 **[!UICONTROL 관리]** 섹션으로 이동한 다음 **[!UICONTROL 암호화]**&#x200B;를 선택합니다. [!UICONTROL 암호화 구성] 작업 영역의 [!UICONTROL 고객 관리 키] 카드에서 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+Experience Platform UI에서 왼쪽 탐색 레일의 **[!UICONTROL 관리]** 섹션으로 이동한 다음 **[!UICONTROL 암호화]**&#x200B;를 선택합니다. [!UICONTROL 암호화 구성] 작업 영역의 [!UICONTROL 고객 관리 키] 카드에서 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
 
-![고객 관리 키 카드에 강조 표시된 구성을 사용하는 플랫폼 암호화 구성 작업 영역입니다.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
+![고객 관리 키 카드에 강조 표시된 [구성]이 있는 Experience Platform 암호화 구성 작업 영역입니다.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
 [!UICONTROL 고객 관리 키 구성]이 나타납니다. [!UICONTROL 고객 관리 키] [!UICONTROL 암호화 구성]에 표시된 CMK KMS 정책에서 `statement` 개체를 복사합니다.
 
@@ -159,9 +160,9 @@ Platform UI에서 왼쪽 탐색 레일의 **[!UICONTROL 관리]** 섹션으로 �
 
 AWS [!DNL Key Management Service]의 업데이트된 [!DNL Customer Managed Keys] 작업 영역이 나타납니다.
 
-### Platform에 AWS 암호화 키 세부 정보 추가
+### Experience Platform에 AWS 암호화 키 세부 정보 추가
 
-그런 다음 암호화를 사용하려면 키의 ARN(Amazon 리소스 이름)을 Platform [!UICONTROL 고객 관리 키 구성]에 추가하십시오. AWS의 [!DNL Customer Managed Keys] 섹션에서 [!DNL Key Management Service]의 목록에서 새 키의 별칭을 선택합니다.
+그런 다음 암호화를 사용하려면 키의 Amazon 리소스 이름(ARN)을 Experience Platform [!UICONTROL 고객 관리 키 구성]에 추가하십시오. AWS의 [!DNL Customer Managed Keys] 섹션에서 [!DNL Key Management Service]의 목록에서 새 키의 별칭을 선택합니다.
 
 ![새 키 별칭이 강조 표시된 AWS KMS 고객 관리 키 작업 영역입니다.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
@@ -172,17 +173,17 @@ AWS [!DNL Key Management Service]의 업데이트된 [!DNL Customer Managed Keys
 
 ![ARN이 강조 표시된 AWS KMS 고객 관리 키의 키 세부 정보입니다.](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
-이제 플랫폼 [!UICONTROL 고객 관리 키 구성] UI로 다시 이동합니다. **[!UICONTROL AWS 암호화 키 세부 정보 추가]** 섹션에서 AWS UI에서 복사한 **[!UICONTROL 구성 이름]** 및 **[!UICONTROL KMS 키 ARN]**&#x200B;을(를) 추가합니다.
+이제 Experience Platform [!UICONTROL 고객 관리 키 구성] UI로 다시 이동합니다. **[!UICONTROL AWS 암호화 키 세부 정보 추가]** 섹션에서 AWS UI에서 복사한 **[!UICONTROL 구성 이름]** 및 **[!UICONTROL KMS 키 ARN]**&#x200B;을(를) 추가합니다.
 
-![구성 이름과 KMS 키 ARN을 사용하는 플랫폼 암호화 구성 작업 영역은 AWS 암호화 키 추가 세부 정보 섹션에서 강조 표시되어 있습니다.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
+![구성 이름과 KMS 키 ARN이 있는 Experience Platform 암호화 구성 작업 영역은 AWS 암호화 키 세부 정보 추가 섹션에서 강조 표시되어 있습니다.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
 그런 다음 **[!UICONTROL 저장]**&#x200B;을 선택하여 구성 이름, KMS 키 ARN을 제출하고 키 유효성 검사를 시작합니다.
 
-![저장 이 강조 표시된 플랫폼 암호화 구성 작업 영역](../../../images/governance-privacy-security/key-management-service/save.png)
+![저장 이 강조 표시된 Experience Platform 암호화 구성 작업 영역입니다.](../../../images/governance-privacy-security/key-management-service/save.png)
 
 [!UICONTROL 암호화 구성] 작업 영역으로 돌아갑니다. 암호화 구성의 상태가 **[!UICONTROL 고객 관리 키]** 카드 하단에 표시됩니다.
 
-![Customer Managed Keys 카드에 강조 표시된 처리 기능이 있는 플랫폼 UI의 암호화 구성 작업 영역입니다.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
+![Experience Platform UI의 암호화 구성 작업 공간(고객 관리 키 카드에서 처리 중 강조 표시됨)](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
 
 키를 확인하면 모든 샌드박스에 대한 Data Lake 및 프로필 데이터 저장소에 Key Vault 식별자가 추가됩니다.
 
@@ -198,7 +199,7 @@ AWS [!DNL Key Management Service]의 업데이트된 [!DNL Customer Managed Keys
 
 다음은 키 취소에 대한 주요 고려 사항입니다.
 
-- 키를 취소하거나 비활성화하면 Platform 데이터에 액세스할 수 없게 됩니다. 이 작업은 취소할 수 없으며 주의하여 수행해야 합니다.
+- 키를 취소하거나 비활성화하면 Experience Platform 데이터에 액세스할 수 없게 됩니다. 이 작업은 취소할 수 없으며 주의하여 수행해야 합니다.
 - 암호화 키에 대한 액세스가 해지된 경우 전파 타임라인을 고려하십시오. 몇 분에서 24시간 내에 운영 데이터 저장소에 액세스할 수 없게 됩니다. 캐시되거나 일시적인 데이터 저장소는 7일 이내에 액세스할 수 없게 됩니다.
 
 키를 취소하려면 AWS KMS 작업 영역으로 이동합니다. **[!DNL Customer managed keys]** 섹션에는 AWS 계정에 사용할 수 있는 모든 키가 표시됩니다. 목록에서 키의 별칭을 선택합니다.
@@ -209,7 +210,7 @@ AWS [!DNL Key Management Service]의 업데이트된 [!DNL Customer Managed Keys
 
 ![키 동작 및 사용 안 함 설정이 강조 표시된 AWS KMS UI의 AWS 키에 대한 세부 정보.](../../../images/governance-privacy-security/key-management-service/disable-key.png)
 
-확인 대화 상자가 나타납니다. **[!DNL Disable key]**&#x200B;을(를) 선택하여 선택을 확인합니다. 키 비활성화의 영향은 약 5분 내에 Platform 애플리케이션과 UI에 반영되어야 합니다.
+확인 대화 상자가 나타납니다. **[!DNL Disable key]**&#x200B;을(를) 선택하여 선택을 확인합니다. 키 비활성화의 영향은 약 5분 내에 Experience Platform 애플리케이션 및 UI에 반영되어야 합니다.
 
 >[!NOTE]
 >
@@ -221,7 +222,7 @@ AWS [!DNL Key Management Service]의 업데이트된 [!DNL Customer Managed Keys
 
 ![편집 기능이 있는 AWS 키의 세부 정보 섹션이 키 정책 섹션에 강조 표시되어 있습니다.](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 
-**[!DNL Edit key policy]** 페이지가 나타납니다. Platform UI에서 복사된 정책 문을 강조 표시하고 삭제하여 고객 관리 키 앱에 대한 권한을 제거합니다. 그런 다음 **[!DNL Save changes]**&#x200B;을(를) 선택하여 프로세스를 완료합니다.
+**[!DNL Edit key policy]** 페이지가 나타납니다. Experience Platform UI에서 복사된 정책 문을 강조 표시하고 삭제하여 고객 관리 키 앱에 대한 권한을 제거합니다. 그런 다음 **[!DNL Save changes]**&#x200B;을(를) 선택하여 프로세스를 완료합니다.
 
 ![JSON 개체 문 및 변경 내용 저장이 강조 표시된 AWS의 키 정책 작업 영역 편집](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Admin Console에서 새 제품 프로필 만들기
 description: 이 문서에서는 Adobe Admin Console에서 새 제품 프로필을 만드는 데 필요한 단계를 설명합니다. 새 프로필 만들기를 시작하려면 제품 프로필 탭으로 이동하여 새 프로필 을 클릭합니다.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ![새 제품 프로필 만들기](../images/create-new-product-profile.png)
 
-다음 화면에서는 프로필에 포함할 플랫폼 서비스를 선택하라는 메시지가 표시됩니다. 서비스 옆에 있는 토글 버튼을 선택하여 비활성화합니다. 서비스를 사용하지 않도록 설정하면 이 제품 프로필에 할당된 사용자가 해당 서비스와 관련된 모든 기능을 사용할 수 없습니다. 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+다음 화면에서는 프로필에 포함할 Experience Platform 서비스를 선택하라는 메시지가 표시됩니다. 서비스 옆에 있는 토글 버튼을 선택하여 비활성화합니다. 서비스를 사용하지 않도록 설정하면 이 제품 프로필에 할당된 사용자가 해당 서비스와 관련된 모든 기능을 사용할 수 없습니다. 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
 ![enable-services](../images/enable-services.png)
 

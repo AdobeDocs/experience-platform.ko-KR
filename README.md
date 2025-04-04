@@ -1,8 +1,8 @@
 ---
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 98%
+source-wordcount: '470'
+ht-degree: 95%
 
 ---
 # 콘텐츠 기여
@@ -19,7 +19,7 @@ Adobe는 Adobe 커뮤니티와 설명서 팀이 아닌 Adobe 직원들의 내용
 
 기여하는 방식은 사용자의 신분과 사용자가 기여하고 싶은 변경 내용의 종류에 따라 다릅니다.
 
-### 부분 변경 사항 또는 요청
+### 사소한 변경 또는 요청
 
 요청을 제출하려면 문서에서 **문제 로그** 링크를 클릭하면 GitHub에서 문제가 열립니다. 제목과 설명을 지정한 다음 **새 문제 제출**&#x200B;을 클릭합니다.
 
@@ -43,7 +43,7 @@ Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터,
 
 ## Experience Platform 설명서 팀에 문의
 
-위에서 언급한 바와 같이 Adobe 커뮤니티 멤버는 적절한 작가에게 할당될 문제를 제출할 수 있습니다. Adobe 직원인 경우 문제를 제출하거나 Experience Platform 설명서 팀에 직접 문의할 수 있습니다. 특정 Platform 영역의 리드 작가를 찾으려면[Adobe Experience Platform 설명서 wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+설명서)를 참조하십시오.
+위에서 언급한 바와 같이 Adobe 커뮤니티 멤버는 적절한 작가에게 할당될 문제를 제출할 수 있습니다. Adobe 직원인 경우 문제를 제출하거나 Experience Platform 설명서 팀에 직접 문의할 수 있습니다. 특정 Experience Platform 영역의 리드 작성자를 찾으려면 [Adobe Experience Platform 설명서 위키](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+설명서)를 참조하세요.
 
 ## 도구 및 설정
 

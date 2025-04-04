@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2023년 3월
 description: Adobe Experience Platform의 2023년 3월 릴리스 정보입니다.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2079'
-ht-degree: 98%
+source-wordcount: '2081'
+ht-degree: 97%
 
 ---
 
@@ -70,7 +70,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 ## 대상 {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 대상** {#new-destinations}
 
@@ -80,7 +80,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | [[!DNL Snap Inc] 연결 GA](../../destinations/catalog/advertising/snap-inc.md) | 마케터는 [!DNL Snap Inc] 대상 커넥터(현재 일반적으로 사용 가능)를 사용하여 Experience Platform에서 만든 사용자 세그먼트를 [!DNL Snapchat Ads]로 가져와서 광고 대상으로 사용할 수 있습니다. |
 | [(API) Oracle Eloqua 연결](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | [!DNL Oracle Eloqua]에 대한 API 기반 연결을 사용하여 캠페인을 계획하고 실행하는 동시에 [!DNL Oracle Eloqua]의 잠재 고객을 위한 맞춤형 고객 경험을 제공합니다. |
 | [(Beta) [!DNL Amazon Ads] 연결](../../destinations/catalog/advertising/amazon-ads.md) | Adobe Experience Platform과 [!DNL Amazon Ads]를 통합하면 [!DNL Amazon DSP (ADSP)]를 포함한 [!DNL Amazon Ads] 제품에 턴키 통합을 제공합니다. 사용자는 Adobe Experience Platform의 [!DNL Amazon Ads] 대상을 사용하여 [!DNL Amazon DSP]에서 타겟팅 및 활성화를 위한 광고주 대상자를 정의할 수 있습니다. |
-| [[!DNL Marketo Measure Ultimate] 연결](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure](이전의 Bizible)는 마케터에게 매출을 늘리고 기업 투자 수익률을 증대시키는 데 가장 효과적인 마케팅 활동을 파악하는 인사이트를 제공합니다. 대상은 Adobe Experience Platform에서 [!DNL Marketo Measure]로 B2B(Business-to-Business) 데이터 흐름을 활성화합니다. 이 카드는 [!DNL Marketo Measure Ultimate] 고객만 사용할 수 있습니다. |
+| [[!DNL Marketo Measure Ultimate] 연결](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure]&#x200B;(이전의 Bizible)는 마케터에게 매출을 늘리고 기업 투자 수익률을 증대시키는 데 가장 효과적인 마케팅 활동을 파악하는 인사이트를 제공합니다. 대상은 Adobe Experience Platform에서 [!DNL Marketo Measure]로 B2B(Business-to-Business) 데이터 흐름을 활성화합니다. 이 카드는 [!DNL Marketo Measure Ultimate] 고객만 사용할 수 있습니다. |
 | [TikTok 연결](../../destinations/catalog/social/tiktok.md) | 광고 캠페인의 타겟팅용 데이터로 TikTok에서 맞춤형 대상자를 구축합니다. |
 | [Zendesk 연결](../../destinations/catalog/crm/zendesk.md) | 이 대상을 사용하여 세그먼트에서 [!DNL Zendesk] 내의 연락처로 ID를 만들고 업데이트합니다. |
 
@@ -147,7 +147,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 {style="table-layout:auto"}
 
-Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 살펴보십시오.
+Experience Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
 ## 쿼리 서비스 {#query-service}
 
@@ -193,7 +193,7 @@ Real-Time CDP B2B 에디션에 대한 자세한 내용은 [Real-Time CDP B2B 에
 
 ## 소스 {#sources}
 
-Adobe Experience Platform은 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 라벨링하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform은 외부 소스에서 데이터를 수집할 수 있으며 Experience Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 

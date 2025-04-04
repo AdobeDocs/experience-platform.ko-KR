@@ -3,9 +3,9 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4452'
+source-wordcount: '4454'
 ht-degree: 11%
 
 ---
@@ -64,7 +64,7 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 출처에 따라 여러 유형의 대상 중에서 선택할 수 있습니다.
 
 * **[!UICONTROL 세그먼테이션 서비스]**: 세그먼테이션 서비스에 의해 Experience Platform 내에서 생성된 대상입니다. 자세한 내용은 [세그먼테이션 설명서](../../segmentation/ui/overview.md)를 참조하세요.
-* **[!UICONTROL 사용자 지정 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드되는 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience)에 대한 설명서를 참조하십시오. **[!UICONTROL 사용자 지정 업로드]**&#x200B;에서 대상을 선택하면 [데이터 보강 특성 선택](#select-enrichment-attributes) 단계가 자동으로 활성화됩니다.
+* **[!UICONTROL 사용자 지정 업로드]**: Experience Platform 외부에서 생성되어 Experience Platform에 CSV 파일로 업로드된 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience)에 대한 설명서를 참조하십시오. **[!UICONTROL 사용자 지정 업로드]**&#x200B;에서 대상을 선택하면 [데이터 보강 특성 선택](#select-enrichment-attributes) 단계가 자동으로 활성화됩니다.
 * 다른 Adobe 솔루션에서 가져온 다른 유형의 대상(예: [!DNL Audience Manager]).
 
 >[!IMPORTANT]
@@ -133,7 +133,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
 2. **[!UICONTROL 시간]** 토글을 사용하여 대상 평가 직후에 내보내기를 수행할지 또는 지정된 시간에 예약된 일정에 따라 내보내기를 수행할지 여부를 선택합니다. **[!UICONTROL 예약됨]** 옵션을 선택할 때 선택기를 사용하여 내보내기를 수행할 시간을 [!DNL UTC] 형식으로 선택할 수 있습니다.
 
-   **[!UICONTROL 세그먼트 평가 후]** 옵션을 사용하여 일일 플랫폼 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행합니다. 이 옵션을 사용하면 활성화 작업이 실행될 때 최신 프로필을 대상으로 내보냅니다. 이로 인해 작업에 따라 대상을 하루에 여러 번 내보낼 수 있습니다.
+   매일 Experience Platform 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행하려면 **[!UICONTROL 세그먼트 평가 후]** 옵션을 사용합니다. 이 옵션을 사용하면 활성화 작업이 실행될 때 최신 프로필을 대상으로 내보냅니다. 이로 인해 작업에 따라 대상을 하루에 여러 번 내보낼 수 있습니다.
 
    >[!IMPORTANT]
    >
@@ -293,7 +293,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
 필수 속성은 모든 프로필 레코드에 선택한 속성이 포함되도록 하는 사용자가 사용할 수 있는 확인란입니다. 예를 들어 내보낸 모든 프로필에는 이메일 주소가 포함됩니다&#x200B;.
 
-[!DNL Platform]이(가) 특정 특성을 포함하는 프로필만 내보내도록 하려면 특성을 필수 항목으로 표시할 수 있습니다. 그 결과, 추가적인 형태의 필터링으로 사용될 수 있다. 특성을 필수 항목으로 표시하는 것은 **필요 없습니다**.
+[!DNL Experience Platform]이(가) 특정 특성을 포함하는 프로필만 내보내도록 하려면 특성을 필수 항목으로 표시할 수 있습니다. 그 결과, 추가적인 형태의 필터링으로 사용될 수 있다. 특성을 필수 항목으로 표시하는 것은 **필요 없습니다**.
 
 필수 속성을 선택하지 않으면 속성에 관계없이 모든 적격 프로필을 내보냅니다.
 
@@ -310,7 +310,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
 중복 제거 키를 사용하면 하나의 내보내기 파일에 동일한 프로필의 레코드가 여러 개 있을 가능성을 방지할 수 있습니다.
 
-[!DNL Platform]에서 중복 제거 키를 사용하는 방법에는 세 가지가 있습니다.
+[!DNL Experience Platform]에서 중복 제거 키를 사용하는 방법에는 세 가지가 있습니다.
 
 * 단일 ID 네임스페이스를 [!UICONTROL 중복 제거 키]&#x200B;(으)로 사용
 * [!DNL XDM] 프로필의 단일 프로필 특성을 [!UICONTROL 중복 제거 키]&#x200B;(으)로 사용

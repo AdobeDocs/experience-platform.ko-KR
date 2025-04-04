@@ -2,16 +2,16 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 8월
 description: Adobe Experience Platform에 대한 2022년 8월 릴리스 정보입니다.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 3069bdb3592ac1cd3fd7fe4f7f9234d5be56547d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '2012'
 ht-degree: 26%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2022년 8월 24일 목요일**
+**릴리스 일자: 2022년 8월 24일 목요일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
@@ -36,23 +36,23 @@ Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 개인 정보 보호 지원 | <ul><li> 이제 Attribution AI은 제품 응용 프로그램 내의 기능 및 개체에 대한 [권한](../../../help/access-control/abac/ui/permissions.md)을 관리하기 위한 사용자 역할 및 액세스 정책 정의를 지원합니다. </li><li>감사 로그 리소스는 활동이 발생하면 자동으로 기록됩니다.</li><li> [특성 기반 액세스 제어](../../access-control/abac/overview.md)를 통해 관리자는 특정 특성에 따라 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있습니다. 특정 특성은 레이블과 같이 개체에 추가된 메타데이터일 수 있습니다. 또한 관리자는 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.</li><li>Attribution AI은 플랫폼 데이터 세트를 활용합니다. 브랜드가 수신할 수 있는 소비자 권한 요청을 지원하기 위해 브랜드는 Platform Privacy Service을 사용하여 액세스 및 삭제에 대한 소비자 요청을 제출하고 데이터 레이크, ID 서비스 및 실시간 고객 프로필에서 데이터를 제거해야 합니다.  </li><li>모델의 입력/출력에 사용되는 모든 데이터 세트는 Platform 지침을 따릅니다. 플랫폼 데이터 암호화는 사용되지 않는 데이터 및 전송 중인 데이터에 적용됩니다. [데이터 암호화](../../../help/landing/governance-privacy-security/encryption.md)에 대한 자세한 내용은 설명서를 참조하세요.</li></ul> |
+| 개인 정보 보호 지원 | <ul><li> 이제 Attribution AI는 제품 애플리케이션 내의 기능 및 개체에 대한 [권한](../../../help/access-control/abac/ui/permissions.md)을(를) 관리하기 위한 사용자 역할 및 액세스 정책 정의를 지원합니다. </li><li>감사 로그 리소스는 활동이 발생하면 자동으로 기록됩니다.</li><li> [특성 기반 액세스 제어](../../access-control/abac/overview.md)를 통해 관리자는 특정 특성에 따라 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있습니다. 특정 특성은 레이블과 같이 개체에 추가된 메타데이터일 수 있습니다. 또한 관리자는 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.</li><li>기여도 AI는 Experience Platform 데이터 세트를 활용합니다. 브랜드가 수신할 수 있는 소비자 권한 요청을 지원하기 위해 브랜드는 Experience Platform Privacy Service을 사용하여 액세스 및 삭제에 대한 소비자 요청을 제출하고 데이터 레이크, ID 서비스 및 실시간 고객 프로필에서 데이터를 제거해야 합니다.  </li><li>모델의 입력/출력에 사용되는 모든 데이터 세트는 Experience Platform 지침을 따릅니다. Experience Platform 데이터 암호화는 사용되지 않는 데이터 및 전송 중인 데이터에 적용됩니다. [데이터 암호화](../../../help/landing/governance-privacy-security/encryption.md)에 대한 자세한 내용은 설명서를 참조하세요.</li></ul> |
 
 {style="table-layout:auto"}
 
-**참고**: Attribution AI은 추가 통지가 있을 때까지 기존 Healthcare Shield 고객에서 사용할 수 없습니다.
+**참고**: 추가 통지가 있을 때까지 기존 Healthcare Shield 고객은 Attribution AI를 사용할 수 없습니다.
 
-Attribution AI에 대한 자세한 내용은 [Attribution AI](../../intelligent-services/attribution-ai/overview.md) 개요를 참조하십시오.
+기여도 AI에 대한 자세한 내용은 [기여도 AI](../../intelligent-services/attribution-ai/overview.md) 개요를 참조하십시오.
 
 ### 고객 AI
 
-Real-time Customer Data Platform에서 사용할 수 있는 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다.
+Real-Time Customer Data Platform에서 사용할 수 있는 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다.
 
 **업데이트된 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 개인 정보 보호 지원 | <ul><li> 이제 Customer AI는 제품 응용 프로그램 내의 기능 및 개체에 대한 [권한](../../../help/access-control/abac/ui/permissions.md)을(를) 관리하기 위한 사용자 역할 및 액세스 정책 정의를 지원합니다. </li><li>감사 로그 리소스는 활동이 발생하면 자동으로 기록됩니다.</li><li> [특성 기반 액세스 제어](../../access-control/abac/overview.md)를 통해 관리자는 특정 특성에 따라 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있습니다. 이러한 속성은 레이블과 같은 객체에 추가된 메타데이터일 수 있습니다. 관리자는 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수도 있습니다.</li><li>고객 AI는 플랫폼 데이터 세트를 활용합니다. 브랜드가 수신할 수 있는 소비자 권한 요청을 지원하기 위해 브랜드는 Platform Privacy Service을 사용하여 액세스 및 삭제에 대한 소비자 요청을 제출하고 데이터 레이크, ID 서비스 및 실시간 고객 프로필에서 데이터를 제거해야 합니다. </li><li>모델의 입력/출력에 사용되는 모든 데이터 세트는 Platform 지침을 따릅니다. 플랫폼 데이터 암호화는 사용되지 않는 데이터 및 전송 중인 데이터에 적용됩니다. [데이터 암호화](../../../help/landing/governance-privacy-security/encryption.md)에 대한 자세한 내용은 설명서를 참조하세요.</li></ul> |
+| 개인 정보 보호 지원 | <ul><li> 이제 Customer AI는 제품 응용 프로그램 내의 기능 및 개체에 대한 [권한](../../../help/access-control/abac/ui/permissions.md)을(를) 관리하기 위한 사용자 역할 및 액세스 정책 정의를 지원합니다. </li><li>감사 로그 리소스는 활동이 발생하면 자동으로 기록됩니다.</li><li> [특성 기반 액세스 제어](../../access-control/abac/overview.md)를 통해 관리자는 특정 특성에 따라 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있습니다. 이러한 속성은 레이블과 같은 객체에 추가된 메타데이터일 수 있습니다. 관리자는 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수도 있습니다.</li><li>고객 AI는 Experience Platform 데이터 세트를 활용합니다. 브랜드가 수신할 수 있는 소비자 권한 요청을 지원하기 위해 브랜드는 Experience Platform Privacy Service을 사용하여 액세스 및 삭제에 대한 소비자 요청을 제출하고 데이터 레이크, ID 서비스 및 실시간 고객 프로필에서 데이터를 제거해야 합니다. </li><li>모델의 입력/출력에 사용되는 모든 데이터 세트는 Experience Platform 지침을 따릅니다. Experience Platform 데이터 암호화는 사용되지 않는 데이터 및 전송 중인 데이터에 적용됩니다. [데이터 암호화](../../../help/landing/governance-privacy-security/encryption.md)에 대한 자세한 내용은 설명서를 참조하세요.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -70,7 +70,7 @@ Adobe Experience Platform에서는 매일 스냅숏 중에 캡처된 조직 데�
 | --- | --- |
 | 예약된 활성화 위젯 | [!UICONTROL 예약된 활성화] 위젯은 가장 최근에 활성화된 대상을 표로 정리한 보기를 제공합니다. 각 세그먼트에 대한 이름, 대상 플랫폼 및 활성화 시작 및 종료 날짜가 포함됩니다. 이 위젯을 사용하면 대상이 활성화되는 위치와 시기를 한 눈에 파악할 수 있으며 중복되거나 불필요한 활성화를 더 투명하게 만듭니다. 이렇게 축적된 정보에서는 활성화가 제외된 위치도 강조합니다. |
 
-[!DNL Dashboards]에 대한 자세한 내용은 [[!DNL Dashboards] 개요](../../dashboards/home.md)를 참조하세요.
+[!DNL Dashboards]에 대한 자세한 내용은 [[!DNL Dashboards] 개요](../../dashboards/home.md)를 참조하십시오.
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -88,13 +88,13 @@ Adobe Experience Platform에서는 매일 스냅숏 중에 캡처된 조직 데�
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| (Beta) 개인화 대상에 대한 속성 기반 개인화 지원 | 특성 기반 개인화의 베타 릴리스에서는 [대상 카탈로그](../../destinations/catalog/overview.md)에 두 개의 새 카드가 표시됩니다. <ul><li>**[!UICONTROL Adobe Target V2]**: 이 커넥터는 현재 Beta 버전이며 일부 고객만 사용할 수 있습니다. Adobe Target V1 카드에서 제공하는 기능 외에도 Target V2 커넥터는 활성화 워크플로에 [매핑 단계](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes)를 추가합니다. 이를 통해 프로필 속성을 Adobe Target에 매핑할 수 있으므로 속성 기반의 동일 페이지 및 다음 페이지 개인화를 수행할 수 있습니다.</li><li>**[!UICONTROL 특성이 있는 사용자 지정 Personalization]**: 이 커넥터는 현재 Beta 상태이며 일부 고객만 사용할 수 있습니다. **[!UICONTROL 사용자 지정 Personalization]**&#x200B;에서 제공하는 기능 외에 **[!UICONTROL 특성을 가진 사용자 지정 Personalization]** 커넥터는 활성화 워크플로에 선택적 [매핑 단계](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes)를 추가합니다. 이를 통해 프로필 특성을 사용자 지정 개인화 대상에 매핑하여 특성을 기반으로 한 동일 페이지 및 다음 페이지 개인화를 활성화할 수 있습니다.</li></ul> <br> 프로필 특성에 중요한 데이터가 포함되어 있을 수 있습니다. 이 데이터를 보호하려면 **[!UICONTROL 특성을 가진 사용자 지정 Personalization]** 대상을 사용하려면 데이터 수집에 [Edge Network 서버 API](../../server-api/overview.md)를 사용해야 합니다. 또한 모든 서버 API 호출은 [인증된 컨텍스트](../../server-api/authentication.md)에서 수행되어야 합니다. |
+| (Beta) 개인화 대상에 대한 속성 기반 개인화 지원 | 특성 기반 개인화의 베타 릴리스에서는 [대상 카탈로그](../../destinations/catalog/overview.md)에 두 개의 새 카드가 표시됩니다. <ul><li>**[!UICONTROL Adobe Target V2]**: 이 커넥터는 현재 Beta 버전이며 일부 고객만 사용할 수 있습니다. Adobe Target V1 카드에서 제공하는 기능 외에도 Target V2 커넥터는 활성화 워크플로에 [매핑 단계](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes)를 추가합니다. 이를 통해 프로필 속성을 Adobe Target에 매핑할 수 있으므로 속성 기반의 동일 페이지 및 다음 페이지 개인화를 수행할 수 있습니다.</li><li>**[!UICONTROL 특성이 있는 사용자 지정 Personalization]**: 이 커넥터는 현재 Beta 상태이며 일부 고객만 사용할 수 있습니다. **[!UICONTROL 사용자 지정 Personalization]**&#x200B;에서 제공하는 기능 외에 **[!UICONTROL 특성을 가진 사용자 지정 Personalization]** 커넥터는 활성화 워크플로에 선택적 [매핑 단계](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes)를 추가합니다. 이를 통해 프로필 특성을 사용자 지정 개인화 대상에 매핑하여 특성을 기반으로 한 동일 페이지 및 다음 페이지 개인화를 활성화할 수 있습니다.</li></ul> <br> 프로필 특성에 중요한 데이터가 포함되어 있을 수 있습니다. 이 데이터를 보호하려면 **[!UICONTROL 특성을 가진 사용자 지정 Personalization]** 대상을 사용하려면 데이터 수집에 [Edge Network Server API](../../server-api/overview.md)를 사용해야 합니다. 또한 모든 서버 API 호출은 [인증된 컨텍스트](../../server-api/authentication.md)에서 수행되어야 합니다. |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ Adobe Experience Platform에서는 매일 스냅숏 중에 캡처된 조직 데�
 
 | 대상 | 설명 |
 | ----------- | ----------- |
-| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/)은(는) 세계에서 가장 많은 B2B 구매자-판매자 상호 작용 데이터와 판매 데이터를 인텔리전스로 변환하기 위한 독점 AI 기술에 대한 상당한 투자가 있는 판매 실행 플랫폼입니다. [!DNL Outreach]을(를) 사용하면 조직의 효율성, 예측 가능성 및 성장을 향상시키기 위해 영업 참여를 자동화하고 매출 인텔리전스를 수행할 수 있습니다. |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/)은(는) 세계에서 가장 많은 B2B 구매자-판매자 상호 작용 데이터와 판매 데이터를 인텔리전스로 변환하기 위한 독점 AI 기술에 대한 상당한 투자가 있는 Sales Execution Experience Platform입니다. [!DNL Outreach]을(를) 사용하면 조직의 효율성, 예측 가능성 및 성장을 향상시키기 위해 영업 참여를 자동화하고 매출 인텔리전스를 수행할 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 {style="table-layout:auto"}
 
-Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
+Experience Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
 ## 실시간 고객 프로필 {#profile}
 
@@ -145,7 +145,7 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 병합 정책 하드 제한 | 이제 플랫폼에서는 샌드박스당 **5** 병합 정책에 대한 엄격한 제한을 적용합니다. 현재 샌드박스에 5개 이상의 병합 정책이 있는 경우, 샌드박스에 5개 미만의 병합 정책이 있을 때까지 **새 병합 정책을 만들 수 없습니다**. |
+| 병합 정책 하드 제한 | 이제 Experience Platform에서 샌드박스당 **5** 병합 정책을 엄격하게 제한합니다. 현재 샌드박스에 5개 이상의 병합 정책이 있는 경우, 샌드박스에 5개 미만의 병합 정책이 있을 때까지 **새 병합 정책을 만들 수 없습니다**. |
 | 분리된 프로필 에지 속성 정리 | 이제 모든 조직의 프로필 서비스는 매일 사용자 활동 영역의 남은 가장자리 속성을 제거하여 시스템에서 프로필을 보다 정확하게 표현합니다. 이 정리는 지정된 프로필에 대한 모든 프로필 조각이 삭제된 후 발생하며 `com_adobe_aep_profile_region_dataset`이(가) `true`(으)로 표시된 데이터 세트에서 병합되는 프로필에 영향을 미칩니다. 이 지표에는 이 릴리스 이전에 남은 에지 속성 조각이 포함되었으므로 라이선스 사용 대시보드의 &quot;대응 가능 대상&quot; 지표가 감소할 수 있고 프로필 대시보드의 &quot;프로필 수&quot; 지표가 감소할 수 있습니다. |
 
 {style="table-layout:auto"}
@@ -160,13 +160,13 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 4000개 세그먼트 지원 | 이제 플랫폼이 있는 모든 조직에서 최대 4000개의 세그먼트 정의를 지원할 수 있습니다. 이 변경 사항이 세그먼트 작업 API에 미치는 영향에 대한 자세한 내용은 [세그먼트 작업 끝점 안내서](../../segmentation/api/segment-jobs.md)를 참조하십시오. |
+| 4000개 세그먼트 지원 | Experience Platform을 사용하는 모든 조직은 이제 최대 4000개의 세그먼트 정의를 지원할 수 있습니다. 이 변경 사항이 세그먼트 작업 API에 미치는 영향에 대한 자세한 내용은 [세그먼트 작업 끝점 안내서](../../segmentation/api/segment-jobs.md)를 참조하십시오. |
 
 [!DNL Segmentation Service]에 대한 자세한 내용은 [세분화 개요](../../segmentation/home.md)를 참조하십시오.
 
 ## 소스 {#sources}
 
-Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 Experience Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
@@ -174,10 +174,10 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| 셀프서비스 소스의 일반 가용성(Batch SDK) | REST API 기반 데이터 소스를 개발, 테스트 및 통합하여 손쉽게 소스 사양을 구성하여 배치 데이터를 Experience Platform에 수집할 수 있습니다. Sources SDK를 사용하여 다음과 같은 작업을 수행할 수 있습니다. <ul><li>Experience Platform 카탈로그에 새 소스를 구성합니다.</li><li>지원되는 인증 유형, 예약 및 리소스 데이터를 가져오는 방법에 대한 정보를 포함하여 소스에 대한 사양을 정의합니다.</li><li>새 소스에 대한 사용자 대면 설명서를 만듭니다.</li></ul> 자세한 내용은 [셀프 서비스 소스(일괄 처리 SDK)](../../sources/sources-sdk/overview.md)에 대한 설명서를 참조하십시오. |
-| [!DNL Google BigQuery] 소스의 일반 가용성 | [!DNL Google BigQuery] 원본을 사용하여 [!DNL Google BigQuery] 데이터 웨어하우스에서 Experience Platform으로 데이터를 수집합니다. 자세한 내용은 [[!DNL Google BigQuery] source](../../sources/connectors/databases/bigquery.md)의 설명서를 참조하십시오. |
+| 셀프 서비스 소스의 일반 가용성(일괄 SDK) | REST API 기반 데이터 소스를 개발, 테스트 및 통합하여 손쉽게 소스 사양을 구성하여 배치 데이터를 Experience Platform으로 수집할 수 있습니다. Sources SDK을 사용하여 다음과 같은 작업을 수행할 수 있습니다. <ul><li>Experience Platform 카탈로그에 새 소스를 구성합니다.</li><li>지원되는 인증 유형, 예약 및 리소스 데이터를 가져오는 방법에 대한 정보를 포함하여 소스에 대한 사양을 정의합니다.</li><li>새 소스에 대한 사용자 대면 설명서를 만듭니다.</li></ul> 자세한 내용은 [셀프 서비스 원본(일괄 SDK)](../../sources/sources-sdk/overview.md)에 대한 설명서를 참조하십시오. |
+| [!DNL Google BigQuery] 소스의 일반 가용성 | [!DNL Google BigQuery] 소스를 사용하여 [!DNL Google BigQuery] 데이터 웨어하우스에서 Experience Platform으로 데이터를 수집합니다. 자세한 내용은 [[!DNL Google BigQuery] source](../../sources/connectors/databases/bigquery.md)의 설명서를 참조하십시오. |
 | [!DNL Teradata Vantage] 소스(Beta) | [!DNL Teradata Vantage] 소스를 사용하여 하이브리드 멀티 클라우드 환경에서 Experience Platform으로 데이터를 수집합니다. 자세한 내용은 [[!DNL Teradata Vantage] source](../../sources/connectors/databases/teradata-vantage.md)의 설명서를 참조하십시오. |
-| Adobe Analytics 소스에 대한 교차 영역 지원 | 이제 모든 지역(미국, 영국 또는 싱가포르)에서 보고서 세트를 수집할 수 있습니다. 보고서 세트는 소스 연결이 생성되는 Experience Platform 샌드박스 인스턴스와 동일한 조직에 매핑되어야 합니다. 자세한 내용은 [UI에서 Adobe Analytics 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/analytics.md)에 대한 안내서를 참조하십시오. |
+| Adobe Analytics 소스에 대한 교차 영역 지원 | 이제 모든 지역(미국, 영국 또는 싱가포르)에서 보고서 세트를 수집할 수 있습니다. 보고서 세트는 소스 연결이 생성되는 Experience Platform Sandbox 인스턴스와 동일한 조직에 매핑되어야 합니다. 자세한 내용은 [UI에서 Adobe Analytics 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/analytics.md)에 대한 안내서를 참조하십시오. |
 
 {style="table-layout:auto"}
 

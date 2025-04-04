@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;데이터 모델;ui;작업 공간;ID;필드;
+keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;데이터 모델;ui;workspace;identity;필드;
 solution: Experience Platform
 title: UI에서 ID 필드 정의
 description: Experience Platform 사용자 인터페이스에서 ID 필드를 정의하는 방법을 알아봅니다.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 0d16bbbaf81b2057c6b3518a5b8a8698920c36f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '652'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ XDM(Experience Data Model)에서 ID 필드는 레코드 또는 시계열 이벤�
 
 ## 전제 조건
 
-ID 필드는 플랫폼에서 고객 ID 그래프를 구성하는 방법에 대한 중요한 구성 요소이며, 이는 궁극적으로 실시간 고객 프로필이 서로 다른 데이터 조각을 병합하여 고객에 대한 완전한 보기를 얻는 방법에 영향을 줍니다. 스키마에서 ID 필드를 정의하기 전에 다음 설명서를 참조하여 ID 필드와 관련된 주요 서비스 및 개념에 대해 알아보십시오.
+ID 필드는 Experience Platform에서 고객 ID 그래프를 구성하는 방법에 대한 중요한 구성 요소이며, 이는 궁극적으로 실시간 고객 프로필이 서로 다른 데이터 조각을 병합하여 고객을 완전히 볼 수 있는 방법에 영향을 줍니다. 스키마에서 ID 필드를 정의하기 전에 다음 설명서를 참조하여 ID 필드와 관련된 주요 서비스 및 개념에 대해 알아보십시오.
 
 * [Adobe Experience Platform ID 서비스](../../../identity-service/home.md): 장치와 시스템 간에 ID를 브리징하여 준수하는 XDM 스키마에 의해 정의된 ID 필드를 기반으로 데이터 세트를 함께 연결합니다.
    * [ID 네임스페이스](../../../identity-service/features/namespaces.md): ID 네임스페이스는 한 사람과 관련된 다양한 유형의 ID 정보를 정의하며 각 ID 필드에 필요한 구성 요소입니다.

@@ -4,9 +4,9 @@ description: 감사 쿼리 API를 사용하면 다양한 Adobe Experience Platfo
 role: Developer
 feature: Audits, API
 exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '391'
 ht-degree: 11%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform을 사용하면 감사 이벤트 로그 형태로 다�
 
 ## 전제 조건
 
-감사 이벤트를 관리하려면 **[!UICONTROL 사용자 활동 로그 보기]** 액세스 제어 권한이 부여되어야 합니다([!UICONTROL 데이터 거버넌스] 범주 아래에 있음). Platform 기능에 대한 개별 권한을 관리하는 방법을 알아보려면 [액세스 제어 설명서](../../../../access-control/home.md)를 참조하십시오.
+감사 이벤트를 관리하려면 **[!UICONTROL 사용자 활동 로그 보기]** 액세스 제어 권한이 부여되어야 합니다([!UICONTROL 데이터 거버넌스] 범주 아래에 있음). Experience Platform 기능에 대한 개별 권한을 관리하는 방법을 알아보려면 [액세스 제어 문서](../../../../access-control/home.md)를 참조하십시오.
 
 ### 샘플 API 호출 읽기
 
@@ -27,13 +27,13 @@ Adobe Experience Platform을 사용하면 감사 이벤트 로그 형태로 다�
 
 ### 필수 헤더에 대한 값 수집
 
-이 안내서를 사용하려면 Platform API를 호출하려면 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 필요한 각 헤더의 값이 제공됩니다.
+이 안내서를 사용하려면 Experience Platform API를 호출하려면 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
 
 * 인증: 전달자 `{ACCESS_TOKEN}`
 * x-api 키: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다. [!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../../../sandboxes/home.md)를 참조하십시오.
+[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다. [!DNL Experience Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../../../sandboxes/home.md)를 참조하십시오.
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 

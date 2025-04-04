@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 수집 모니터링
 description: 이 사용 안내서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터를 모니터링하는 방법에 대한 단계를 제공합니다. 이 안내서를 사용하려면 Adobe ID이 있어야 하며 Adobe Experience Platform에 액세스할 수 있어야 합니다.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # 데이터 수집 모니터링하기
 
-데이터 수집을 사용하면 데이터를 Adobe Experience Platform에 수집할 수 있습니다. 다양한 파일 형식(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 수집이나 스트리밍 끝점을 사용하여 실시간으로 [!DNL Platform]에 데이터를 수집할 수 있는 스트리밍 수집을 사용할 수 있습니다.
+데이터 수집을 사용하면 데이터를 Adobe Experience Platform에 수집할 수 있습니다. 다양한 파일 형식(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 수집이나 스트리밍 끝점을 사용하여 실시간으로 [!DNL Experience Platform]에 데이터를 수집할 수 있는 스트리밍 수집을 사용할 수 있습니다.
 
 이 사용 안내서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터를 모니터링하는 방법에 대한 단계를 제공합니다. 이 안내서를 사용하려면 Adobe ID이 있어야 하며 Adobe Experience Platform에 액세스할 수 있어야 합니다.
 
@@ -32,7 +32,7 @@ ht-degree: 4%
 
 [Experience Platform UI](https://platform.adobe.com)의 왼쪽 탐색 메뉴에서 **[!UICONTROL 모니터링]**&#x200B;을 선택한 다음 **[!UICONTROL 전체 스트리밍]**&#x200B;을 선택합니다.
 
-**[!UICONTROL 스트리밍 전체]** 모니터링 페이지가 나타납니다. 이 작업 영역에서는 [!DNL Platform]이(가) 받는 스트리밍된 이벤트의 비율을 표시하는 그래프, [[!DNL Real-Time Customer Profile]](../../profile/home.md)이(가) 성공적으로 처리한 스트리밍된 이벤트의 비율을 표시하는 그래프 및 들어오는 데이터의 세부 목록을 제공합니다.
+**[!UICONTROL 스트리밍 전체]** 모니터링 페이지가 나타납니다. 이 작업 영역에서는 [!DNL Experience Platform]이(가) 받는 스트리밍된 이벤트의 비율을 표시하는 그래프, [[!DNL Real-Time Customer Profile]](../../profile/home.md)이(가) 성공적으로 처리한 스트리밍된 이벤트의 비율을 표시하는 그래프 및 들어오는 데이터의 세부 목록을 제공합니다.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

@@ -2,10 +2,10 @@
 title: 자체 호스팅 라이브러리
 description: Adobe Experience Platform에서 태그 라이브러리 빌드에 대한 자체 호스팅을 구현하는 방법을 알아봅니다.
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 63%
+source-wordcount: '491'
+ht-degree: 72%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform의 태그를 사용하면 [build](../builds.md)라는 파일 집합을 만들 수 있습니다. 이 파일 세트는 런타임 시 응용 프로그램의 동작을 제어합니다.
 
 빌드는 클라이언트 장치가 런타임 시 필요에 따라 검색할 수 있도록 임의의 위치에서 호스팅해야 합니다.
 
-플랫폼은 이러한 파일의 호스팅을 관리하거나 사용자가 직접 관리할 수 있습니다.
+Experience Platform이 이러한 파일의 호스팅을 관리하거나 사용자가 직접 관리할 수 있습니다.
 
 ## Adobe에서 관리 {#managed-by-adobe}
 
@@ -33,7 +33,7 @@ Adobe은 웹 호스팅 사업이 아닙니다. Adobe에서 호스팅을 관리�
 
 ## 자체 호스팅
 
-Adobe에서 호스팅된 파일을 관리하지 못하게 하려면 직접 호스팅해야 합니다. 파일을 호스팅하려면 완료된 빌드를 Platform에서 가져와서 회사의 릴리스 주기를 통해 회사 관리 서버로 파일을 가져와야 합니다.
+Adobe에서 호스팅된 파일을 관리하지 못하게 하려면 직접 호스팅해야 합니다. 파일을 호스팅하려면 완료된 빌드를 Experience Platform에서 가져와서 회사의 릴리스 주기를 통해 회사 관리 서버로 파일을 가져와야 합니다.
 
 ### 자체 호스팅을 사용하는 이유
 
@@ -42,7 +42,7 @@ Adobe에서 호스팅된 파일을 관리하지 못하게 하려면 직접 호�
 * 일부 브라우저는 최종 사용자가 구성한 개인 정보 설정을 기반으로 하여 assets.adobedtm.com 도메인을 차단합니다.
 * 자체 호스팅은 필요한 DNS 조회 횟수를 줄입니다.
 * 보안을 위해 설정해야 하는 특정 헤더가 있습니다.
-* 캐시 제어 요구 사항이 Adobe 기본 설정과 다릅니다.
+* 캐시 제어 요구 사항이 Adobe 기본 설정과 다릅니다
 * 에지 노드의 위치를 보다 세밀하게 제어할 수 있습니다.
 * 조직에 Adobe 관리 옵션을 사용하지 못하도록 하는 보안 및 법적 요구 사항이 있습니다.
 

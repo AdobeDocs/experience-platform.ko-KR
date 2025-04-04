@@ -3,10 +3,10 @@ title: 데이터 세트 만료 API 끝점
 description: 데이터 위생 API의 /ttl 끝점을 사용하면 Adobe Experience Platform에서 데이터 세트 만료를 프로그래밍 방식으로 예약할 수 있습니다.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 911089ec641d9fbb436807b04dd38e00fd47eecf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1964'
-ht-degree: 1%
+source-wordcount: '1966'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->만료가 특정 순시로 적시되어 있지만 실제 삭제가 시작되기 전에 만료 후 최대 24시간의 지연이 있을 수 있습니다. 삭제가 시작되면 플랫폼 시스템에서 데이터 세트의 모든 추적이 제거되기까지 최대 7일이 걸릴 수 있습니다.
+>만료가 특정 순시로 적시되어 있지만 실제 삭제가 시작되기 전에 만료 후 최대 24시간의 지연이 있을 수 있습니다. 삭제가 시작되면 Experience Platform 시스템에서 데이터 세트의 모든 추적이 제거되기까지 최대 7일이 걸릴 수 있습니다.
 
 데이터 세트 삭제가 실제로 시작되기 전에 언제든지 만료를 취소하거나 트리거 시간을 수정할 수 있습니다. 데이터 세트 만료를 취소한 후 새 만료를 설정하여 다시 열 수 있습니다.
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 >
 >데이터 세트가 만료되도록 설정된 경우 다운스트림 워크플로우가 부정적인 영향을 받지 않도록 데이터를 해당 데이터 세트로 수집할 수 있는 모든 데이터 흐름을 수동으로 변경해야 합니다.
 
-Advanced Data Lifecycle Management는 데이터 집합 만료 끝점을 통해 데이터 집합 삭제를 지원하고 [작업 주문 끝점](./workorder.md)을 통해 기본 ID를 사용하여 ID 삭제(행 수준 데이터)를 지원합니다. Platform UI를 통해 [데이터 세트 만료](../ui/dataset-expiration.md) 및 [레코드 삭제](../ui/record-delete.md)을 관리할 수도 있습니다. 자세한 내용은 연결된 설명서 를 참조하십시오.
+Advanced Data Lifecycle Management는 데이터 집합 만료 끝점을 통해 데이터 집합 삭제를 지원하고 [작업 주문 끝점](./workorder.md)을 통해 기본 ID를 사용하여 ID 삭제(행 수준 데이터)를 지원합니다. Experience Platform UI를 통해 [데이터 세트 만료](../ui/dataset-expiration.md) 및 [레코드 삭제](../ui/record-delete.md)을 관리할 수도 있습니다. 자세한 내용은 연결된 설명서 를 참조하십시오.
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ curl -X GET \
 
 ## 데이터 세트 만료 조회 {#lookup}
 
-데이터 집합 만료를 조회하려면 `{DATASET_ID}` 또는 `{DATASET_EXPIRATION_ID}` 중 하나를 사용하여 GET 요청을 만듭니다.
+데이터 세트 만료를 조회하려면 `{DATASET_ID}` 또는 `{DATASET_EXPIRATION_ID}`(으)로 GET 요청을 만듭니다.
 
 >[!IMPORTANT]
 >
@@ -202,7 +202,7 @@ curl -X GET \
 
 지정된 기간 후에 시스템에서 데이터가 제거되도록 하려면 데이터 세트 ID와 만료 날짜 및 시간을 ISO 8601 형식으로 제공하여 특정 데이터 세트에 대한 만료를 예약하십시오.
 
-데이터 세트 만료를 만들려면 아래 그림과 같이 POST 요청을 수행하고 페이로드 내에 아래 언급된 값을 제공합니다.
+데이터 세트 만료를 만들려면 아래 표시된 대로 POST 요청을 수행하고 페이로드 내에 아래 언급된 값을 제공합니다.
 
 >[!NOTE]
 >
@@ -353,7 +353,7 @@ curl -X PUT \
 
 ## 데이터 세트 만료 취소 {#delete}
 
-DELETE 요청을 통해 데이터 세트 만료를 취소할 수 있습니다.
+DELETE 요청을 하여 데이터 세트 만료를 취소할 수 있습니다.
 
 >[!NOTE]
 >

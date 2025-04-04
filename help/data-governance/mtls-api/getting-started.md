@@ -2,10 +2,11 @@
 title: MTLS 서비스 API 시작하기
 description: 이 문서에서는 MTLS API를 성공적으로 사용하기 위해 알아야 하는 추가 정보를 제공합니다.
 role: Developer
-source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
+exl-id: db5978cf-fe47-4b76-86ba-c8ea1ee6b12f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 7%
+source-wordcount: '215'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +22,7 @@ MTLS 서비스 API 설명서는 요청 형식을 지정하는 방법을 보여 �
 
 ## 필수 헤더
 
-또한 API 설명서를 사용하려면 플랫폼 끝점을 성공적으로 호출하려면 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 Experience Platform API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
+또한 API 설명서를 사용하려면 Experience Platform 끝점을 성공적으로 호출하기 위해 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 Experience Platform API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
 
 - 인증: `Bearer {ACCESS_TOKEN}`
 - x-api 키: `{API_KEY}`

@@ -2,9 +2,9 @@
 title: 계정 프로필 대시보드
 description: Adobe Experience Platform은 조직의 B2B 계정 프로필에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: a0b762cb89f45313724187ce36b80b2f3d0548eb
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2401'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 
 ## 시작하기
 
-B2B [!UICONTROL 계정 프로필] 대시보드에 액세스하려면 [Adobe Real-time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md)에 대한 권한이 있어야 합니다.
+B2B [!UICONTROL 계정 프로필] 대시보드에 액세스하려면 [Adobe Real-Time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md)에 대한 권한이 있어야 합니다.
 
 ## 계정 프로필 데이터 {#data}
 
@@ -31,9 +31,9 @@ B2B [!UICONTROL 계정 프로필] 대시보드에 액세스하려면 [Adobe Real
 
 ## [!UICONTROL 계정 프로필] 대시보드 탐색 {#explore}
 
-Platform UI에서 [!UICONTROL 계정 프로필] 대시보드로 이동하려면 왼쪽 탐색 패널의 [!UICONTROL 계정]에서 **[!UICONTROL 프로필]**&#x200B;을 선택합니다.
+Experience Platform UI에서 [!UICONTROL 계정 프로필] 대시보드로 이동하려면 왼쪽 탐색 패널의 [!UICONTROL 계정]에서 **[!UICONTROL 프로필]**&#x200B;을 선택합니다.
 
-![왼쪽 탐색에 계정 프로필이 있는 플랫폼 UI가 강조 표시되고 개요 탭이 표시됩니다.](../images/account-profiles/account-profiles-dashboard.png)
+![왼쪽 탐색에 계정 프로필이 있는 Experience Platform UI가 강조 표시되고 개요 탭이 표시됩니다.](../images/account-profiles/account-profiles-dashboard.png)
 
 [!UICONTROL 계정 프로필] 대시보드에서 [조직에 수집된 계정 프로필을 검색하거나](#browse-account-profiles), [위젯을 사용하여 전체 계정 프로필 데이터를 한눈에 볼 수 있습니다](#standard-widgets).
 
@@ -61,7 +61,7 @@ Platform UI에서 [!UICONTROL 계정 프로필] 대시보드로 이동하려면 
 
 ![결과가 표시되고 프로필 ID가 강조 표시된 계정 프로필 찾아보기 탭입니다.](../images/account-profiles/account-profiles-browse-tab.png)
 
-[!UICONTROL 세부 정보] 탭에 표시되는 계정 프로필 정보가 여러 프로필 조각에서 병합되어 개별 계정에 대한 단일 보기를 형성했습니다. Platform UI의 계정 프로필 보기 기능에 대한 자세한 내용은 [Adobe Real-time Customer Data Platform에서 계정 프로필 찾아보기](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles)에 대한 설명서를 참조하십시오.
+[!UICONTROL 세부 정보] 탭에 표시되는 계정 프로필 정보가 여러 프로필 조각에서 병합되어 개별 계정에 대한 단일 보기를 형성했습니다. Experience Platform UI의 계정 프로필 보기 기능에 대한 자세한 내용은 [Adobe Real-Time Customer Data Platform에서 계정 프로필 찾아보기](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles)에 대한 설명서를 참조하십시오.
 
 ## 표준 위젯 {#standard-widgets}
 
@@ -103,7 +103,7 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 
 >[!NOTE]
 >
->[!UICONTROL 계정당 고객 개요] 인사이트 및 드릴스루 차트([!UICONTROL 계정당 고객 세부 정보], [!UICONTROL 계정당 기회 개요], [!UICONTROL 계정당 기회 세부 정보])는 설정했을 수 있는 전역 날짜 필터의 영향을 받지 않습니다.
+>[!UICONTROL 계정당 고객 개요] insight 및 드릴스루 차트([!UICONTROL 계정당 고객 세부 정보], [!UICONTROL 계정당 기회 개요], [!UICONTROL 계정당 기회 세부 정보])는 설정했을 수 있는 전역 날짜 필터의 영향을 받지 않습니다.
 
 [!UICONTROL 계정당 고객 개요] 차트는 고객 유형에 따라 계정 요약을 제공합니다. 직접 또는 간접 고객 또는 없는 고객이 있는 것으로 계정을 분류하는 4행 테이블이 표시됩니다. 각 카테고리에 대한 총 계정 수를 제공합니다. 이 차트는 직접 고객 및 간접 고객이 있는 계정의 분포를 식별하는 데 도움이 됩니다.
 
@@ -129,7 +129,7 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 
 ![탐색 드롭다운 메뉴가 강조 표시된 계정 프로필 대시보드의 드릴스루 보기입니다.](../images/account-profiles/navigation-dropdown.png)
 
-Platform UI의 드릴스루에 대한 자세한 내용은 [드릴스루 가이드](../sql-insights-query-pro-mode/drill-through.md)를 참조하십시오.
+Experience Platform UI의 드릴스루에 대한 자세한 내용은 [드릴스루 가이드](../sql-insights-query-pro-mode/drill-through.md)를 참조하십시오.
 
 #### [!UICONTROL 계정당 고객 세부 정보] {#customers-per-account-detail}
 
@@ -167,7 +167,7 @@ Platform UI의 드릴스루에 대한 자세한 내용은 [드릴스루 가이�
 
 >[!NOTE]
 >
->스키마에서 &#39;Opportunity-Person&#39; 브리지 테이블을 사용하지 않으면 [!UICONTROL 데이터를 찾을 수 없음] 또는 [!UICONTROL 로드할 수 없음] 오류가 발생합니다. 인사이트에 이러한 오류 중 하나가 표시되면 결합 스키마를 확인하고 &#39;Opportunity-Person&#39; 필드 그룹이 데이터를 수집하는지 확인하십시오.
+>스키마에서 &#39;Opportunity-Person&#39; 브리지 테이블을 사용하지 않으면 [!UICONTROL 데이터를 찾을 수 없음] 또는 [!UICONTROL 로드할 수 없음] 오류가 발생합니다. insight에 이러한 오류 중 하나가 표시되는 경우 유니온 스키마를 확인하고 &#39;Opportunity-Person&#39; 필드 그룹이 데이터를 수집하는지 확인하십시오.
 
 ![개인 역할 위젯별 새로운 기회입니다.](../images/account-profiles/new-opportunities-by-person-role.png)
 
@@ -233,10 +233,10 @@ Platform UI의 드릴스루에 대한 자세한 내용은 [드릴스루 가이�
 
 위젯에 *[!UICONTROL 이(가) 표시되는 경우 로드할 수 없습니다. 다시 시도하십시오.]* B2B 엔터티에 사용할 수 있는 데이터가 없기 때문입니다. 예를 들어 [!UICONTROL 개인 역할별 새 기회] 아래에 표시된 위젯에는 &quot;[!UICONTROL 로드할 수 없습니다&quot;라는 메시지가 표시됩니다. 다시 시도하십시오.이 샌드박스에는 사용 가능한 영업 기회 데이터가 없으므로 ]&quot;을(를) 입력하십시오.
 
-![인사이트를 로드할 수 없습니다.](../images/account-profiles/unable-to-load.png)
+![insight 오류를 로드할 수 없습니다.](../images/account-profiles/unable-to-load.png)
 
 이 문제를 해결하려면 *기회 사용자* 데이터와 같은 B2B 엔터티 데이터를 샌드박스로 수집해야 합니다. 48시간 후 데이터가 위젯에 반영됩니다.
 
 ## 다음 단계
 
-이 문서를 팔로우하면 이제 [!UICONTROL 계정 프로필] 대시보드를 찾는 방법과 사용 가능한 위젯에 표시되는 지표를 이해할 수 있습니다. Experience Platform UI에서 B2B 데이터의 일부로 계정 프로필을 사용하는 작업에 대한 자세한 내용은 B2B edition Adobe Real-Time CDP의 [계정 프로필 개요](../../rtcdp/accounts/account-profile-overview.md)를 참조하십시오.
+이 문서를 팔로우하면 이제 [!UICONTROL 계정 프로필] 대시보드를 찾는 방법과 사용 가능한 위젯에 표시되는 지표를 이해할 수 있습니다. Experience Platform UI에서 B2B 데이터의 일부로 계정 프로필을 사용하는 작업에 대한 자세한 내용은 Adobe Real-Time CDP, B2B edition의 [계정 프로필 개요](../../rtcdp/accounts/account-profile-overview.md)를 참조하십시오.

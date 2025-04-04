@@ -2,11 +2,11 @@
 keywords: Experience Platform;홈;인기 항목;제품 프로필;권한 관리
 solution: Experience Platform
 title: 제품 프로필에 대한 권한 관리
-description: Adobe Experience Platform의 액세스 제어를 사용하면 Adobe Admin Console을 사용하여 다양한 Platform 기능에 대한 역할과 권한을 관리할 수 있습니다. 이 문서는 Platform용 제품 프로필에 대한 권한을 관리하는 방법에 대한 안내서 역할을 합니다.
+description: Adobe Experience Platform의 액세스 제어를 사용하면 Adobe Admin Console을 사용하여 다양한 Experience Platform 기능에 대한 역할과 권한을 관리할 수 있습니다. 이 문서는 Experience Platform용 제품 프로필에 대한 권한을 관리하는 방법에 대한 안내서 역할을 합니다.
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-source-git-commit: 1812af74e82f3071963177356b3cd4b23ea567f5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '358'
 ht-degree: 0%
 
 ---

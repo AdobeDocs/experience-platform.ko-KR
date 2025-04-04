@@ -4,16 +4,16 @@ title: 경고 구독 끝점
 description: 이 안내서는 쿼리 서비스 API를 사용하여 경고 구독 끝점에 대해 수행할 수 있는 다양한 API 호출에 대한 샘플 HTTP 요청 및 응답을 제공합니다.
 role: Developer
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3204'
+source-wordcount: '3217'
 ht-degree: 1%
 
 ---
 
 # 경고 구독 끝점
 
-Adobe Experience Platform 쿼리 서비스를 사용하면 애드혹 및 예약된 쿼리 모두에 대한 경고를 구독할 수 있습니다. 경고는 이메일로 받거나 Platform UI 내에서 또는 두 가지 모두로 받을 수 있습니다. 알림 콘텐츠는 플랫폼 내 경고 및 이메일 경고에 대해 동일합니다.
+Adobe Experience Platform 쿼리 서비스를 사용하면 애드혹 및 예약된 쿼리 모두에 대한 경고를 구독할 수 있습니다. 경고는 이메일로 받거나 Experience Platform UI 내에서 또는 두 가지 모두로 받을 수 있습니다. 알림 콘텐츠는 Experience Platform 내 경고 및 이메일 경고에 대해 동일합니다.
 
 ## 시작하기
 
@@ -79,7 +79,7 @@ GET /alert-subscriptions?{QUERY_PARAMETERS}
 | `orderby` | 결과 순서를 지정하는 필드입니다. 지원되는 필드는 `created` 및 `updated`입니다. 속성 이름 앞에 오름차순 `+`, 내림차순 `-`을(를) 추가합니다. 기본값은 `-created`입니다. 더하기 기호(`+`)는 `%2B`(으)로 이스케이프해야 합니다. 예를 들어 `%2Bcreated`은(는) 오름차순 생성 순서에 대한 값입니다. |
 | `pagesize` | 이 매개 변수를 사용하여 페이지당 API 호출에서 가져올 레코드 수를 제어합니다. 기본 제한은 페이지당 최대 50개의 레코드 수로 설정됩니다. |
 | `page` | 레코드를 보려는 반환된 결과의 페이지 번호를 나타냅니다. |
-| `property` | 선택한 필드를 기반으로 결과를 필터링합니다. **must** 필터는 HTML 이스케이프해야 합니다. 쉼표는 여러 필터 세트를 결합하는 데 사용됩니다. 다음 속성을 사용하여 필터링할 수 있습니다. <ul><li>ID</li><li>assetId</li><li>상태</li><li>alertType</li></ul> 지원되는 연산자는 `==`(과 같음)입니다. 예를 들어 `id==6ebd9c2d-494d-425a-aa91-24033f3abeec`은(는) ID가 일치하는 경고를 반환합니다. |
+| `property` | 선택한 필드를 기반으로 결과를 필터링합니다. **must** 필터는 HTML 이스케이프되어야 합니다. 쉼표는 여러 필터 세트를 결합하는 데 사용됩니다. 다음 속성을 사용하여 필터링할 수 있습니다. <ul><li>ID</li><li>assetId</li><li>상태</li><li>alertType</li></ul> 지원되는 연산자는 `==`(과 같음)입니다. 예를 들어 `id==6ebd9c2d-494d-425a-aa91-24033f3abeec`은(는) ID가 일치하는 경고를 반환합니다. |
 
 **요청**
 
@@ -165,9 +165,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | 속성 | 설명 |
 | -------- | ----------- |
 | `alerts.assetId` | 경고를 특정 쿼리와 연결한 쿼리 ID입니다. |
-| `alerts.id` | 경고의 이름입니다. 이 이름은 경고 서비스에서 생성되며 경고 대시보드에서 사용됩니다. 경고 이름은 경고를 저장하는 폴더, `alertType` 및 흐름 ID로 구성됩니다. 사용 가능한 경고에 대한 정보는 [플랫폼 경고 대시보드 설명서](../../observability/alerts/ui.md)에서 찾을 수 있습니다. |
+| `alerts.id` | 경고의 이름입니다. 이 이름은 경고 서비스에서 생성되며 경고 대시보드에서 사용됩니다. 경고 이름은 경고를 저장하는 폴더, `alertType` 및 흐름 ID로 구성됩니다. 사용 가능한 경고에 대한 정보는 [Experience Platform 경고 대시보드 설명서](../../observability/alerts/ui.md)에서 찾을 수 있습니다. |
 | `alerts.status` | 경고에는 `enabled`, `enabling`, `disabled` 및 `disabling`의 네 가지 상태 값이 있습니다. 경고는 관련 모든 구독자 및 설정을 유지하면서 나중에 사용할 수 있도록 일시 중지되었거나, 이러한 상태 간에 전환되면서 이벤트를 적극적으로 수신하고 있습니다. |
-| `alerts.alertType` | 경고 유형. 임시 쿼리에 사용할 수 있는 경고 상태는 4개이지만 예약된 쿼리에 사용할 수 있는 경고 상태는 5개입니다. `quarantine` 경고는 예약된 쿼리에만 사용할 수 있습니다. 또한 플랫폼 UI에서는 `delay` 경고만 설정할 수 있습니다. 이러한 이유로 `delay`은(는) 여기에 설명되어 있지 않습니다. 사용 가능한 경고는 다음과 같습니다. <ul><li>`start`: 쿼리 실행이 시작되면 사용자에게 알립니다.</li><li>`success`: 쿼리가 완료되면 사용자에게 알립니다.</li><li>`failure`: 쿼리가 실패하면 사용자에게 알립니다.</li><li>`quarantine`: 예약된 쿼리 실행이 격리된 상태가 되면 활성화됩니다.</li></ul> |
+| `alerts.alertType` | 경고 유형. 임시 쿼리에 사용할 수 있는 경고 상태는 4개이지만 예약된 쿼리에 사용할 수 있는 경고 상태는 5개입니다. `quarantine` 경고는 예약된 쿼리에만 사용할 수 있습니다. 또한 Experience Platform UI에서는 `delay` 경고만 설정할 수 있습니다. 이러한 이유로 `delay`은(는) 여기에 설명되어 있지 않습니다. 사용 가능한 경고는 다음과 같습니다. <ul><li>`start`: 쿼리 실행이 시작되면 사용자에게 알립니다.</li><li>`success`: 쿼리가 완료되면 사용자에게 알립니다.</li><li>`failure`: 쿼리가 실패하면 사용자에게 알립니다.</li><li>`quarantine`: 예약된 쿼리 실행이 격리된 상태가 되면 활성화됩니다.</li></ul> |
 | `alerts._links` | 이 경고 ID와 관련된 정보를 검색, 업데이트, 편집 또는 삭제하는 데 사용할 수 있는 사용 가능한 메서드 및 끝점에 대한 정보를 제공합니다. |
 | `_page` | 개체에는 순서, 크기, 총 페이지 수 및 현재 페이지를 설명하는 속성이 포함되어 있습니다. |
 | `_links` | 개체에는 리소스의 다음 또는 이전 페이지를 가져오는 데 사용할 수 있는 URI 참조가 포함되어 있습니다. |
@@ -294,11 +294,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | 속성 | 설명 |
 | -------- | ----------- |
 | `assetId` | 경고는 이 ID와 연결됩니다. ID는 쿼리 ID 또는 예약 ID일 수 있습니다. |
-| `id` | 경고의 이름입니다. 이 이름은 경고 서비스에서 생성되며 경고 대시보드에서 사용됩니다. 경고 이름은 경고를 저장하는 폴더, `alertType` 및 흐름 ID로 구성됩니다. 사용 가능한 경고에 대한 정보는 [플랫폼 경고 대시보드 설명서](../../observability/alerts/ui.md)에서 찾을 수 있습니다. |
+| `id` | 경고의 이름입니다. 이 이름은 경고 서비스에서 생성되며 경고 대시보드에서 사용됩니다. 경고 이름은 경고를 저장하는 폴더, `alertType` 및 흐름 ID로 구성됩니다. 사용 가능한 경고에 대한 정보는 [Experience Platform 경고 대시보드 설명서](../../observability/alerts/ui.md)에서 찾을 수 있습니다. |
 | `status` | 경고에는 `enabled`, `enabling`, `disabled` 및 `disabling`의 네 가지 상태 값이 있습니다. 경고는 관련 모든 구독자 및 설정을 유지하면서 나중에 사용할 수 있도록 일시 중지되었거나, 이러한 상태 간에 전환되면서 이벤트를 적극적으로 수신하고 있습니다. |
 | `alertType` | 각 경고에는 세 가지 서로 다른 경고 유형이 있을 수 있습니다. 이는 다음과 같습니다. <ul><li>`start`: 쿼리 실행이 시작되면 사용자에게 알립니다.</li><li>`success`: 쿼리가 완료되면 사용자에게 알립니다.</li><li>`failure`: 쿼리가 실패하면 사용자에게 알립니다.</li></ul> |
-| `subscriptions.emailNotifications` | 경고에 대한 이메일 수신을 구독한 사용자에 대한 Adobe 등록 이메일 주소 배열입니다. |
-| `subscriptions.inContextNotifications` | 경고에 대한 UI 알림을 구독한 사용자에 대한 Adobe 등록 이메일 주소 배열입니다. |
+| `subscriptions.emailNotifications` | 경고에 대한 이메일을 수신하도록 구독한 사용자를 위해 Adobe에 등록된 이메일 주소 배열입니다. |
+| `subscriptions.inContextNotifications` | 경고에 대한 UI 알림을 구독한 사용자를 위한 Adobe 등록 이메일 주소 배열입니다. |
 
 ## 특정 쿼리 또는 일정 ID 및 경고 유형에 대한 경고 구독 정보를 검색합니다 {#get-alert-info-by-id-and-alert-type}
 
@@ -382,14 +382,14 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | 속성 | 설명 |
 | -------- | ----------- |
 | `assetId` | 경고를 특정 쿼리와 연결한 쿼리 ID입니다. |
-| `alertType` | 경고 유형. 임시 쿼리에 사용할 수 있는 경고 상태는 4개이지만 예약된 쿼리에 사용할 수 있는 경고 상태는 5개입니다. `quarantine` 경고는 예약된 쿼리에만 사용할 수 있습니다. 또한 플랫폼 UI에서는 `delay` 경고만 설정할 수 있습니다. 이러한 이유로 `delay`은(는) 여기에 설명되어 있지 않습니다. 사용 가능한 경고는 다음과 같습니다. <ul><li>`start`: 쿼리 실행이 시작되면 사용자에게 알립니다.</li><li>`success`: 쿼리가 완료되면 사용자에게 알립니다.</li><li>`failure`: 쿼리가 실패하면 사용자에게 알립니다.</li><li>`quarantine`: 예약된 쿼리 실행이 격리된 상태가 되면 활성화됩니다.</li></ul> |
+| `alertType` | 경고 유형. 임시 쿼리에 사용할 수 있는 경고 상태는 4개이지만 예약된 쿼리에 사용할 수 있는 경고 상태는 5개입니다. `quarantine` 경고는 예약된 쿼리에만 사용할 수 있습니다. 또한 Experience Platform UI에서는 `delay` 경고만 설정할 수 있습니다. 이러한 이유로 `delay`은(는) 여기에 설명되어 있지 않습니다. 사용 가능한 경고는 다음과 같습니다. <ul><li>`start`: 쿼리 실행이 시작되면 사용자에게 알립니다.</li><li>`success`: 쿼리가 완료되면 사용자에게 알립니다.</li><li>`failure`: 쿼리가 실패하면 사용자에게 알립니다.</li><li>`quarantine`: 예약된 쿼리 실행이 격리된 상태가 되면 활성화됩니다.</li></ul> |
 | `subscriptions` | 경고와 연관된 Adobe 등록 이메일 ID 및 사용자가 경고를 수신할 채널을 전달하는 데 사용되는 객체입니다. |
-| `subscriptions.inContextNotifications` | 경고에 대한 UI 알림을 구독한 사용자에 대한 Adobe 등록 이메일 주소 배열입니다. |
-| `subscriptions.emailNotifications` | 경고에 대한 이메일 수신을 구독한 사용자에 대한 Adobe 등록 이메일 주소 배열입니다. |
+| `subscriptions.inContextNotifications` | 경고에 대한 UI 알림을 구독한 사용자를 위한 Adobe 등록 이메일 주소 배열입니다. |
+| `subscriptions.emailNotifications` | 경고에 대한 이메일을 수신하도록 구독한 사용자를 위해 Adobe에 등록된 이메일 주소 배열입니다. |
 
 ## 사용자가 구독 중인 모든 경고 목록 검색 {#get-alert-subscription-list}
 
-`/alert-subscriptions/user-subscriptions/{EMAIL_ID}` 끝점에 대한 GET 요청을 통해 사용자가 구독한 모든 경고 목록을 검색합니다. 응답에는 경고 이름, ID, 상태, 경고 유형 및 알림 채널이 포함됩니다.
+`/alert-subscriptions/user-subscriptions/{EMAIL_ID}` 끝점에 대한 GET 요청을 통해 사용자가 구독하는 모든 경고 목록을 검색합니다. 응답에는 경고 이름, ID, 상태, 경고 유형 및 알림 채널이 포함됩니다.
 
 **API 형식**
 
@@ -399,11 +399,11 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 
 | 매개 변수 | 설명 |
 | -------- | ----------- |
-| `{EMAIL_ID}` | Adobe 계정에 등록된 이메일 주소는 경고에 가입한 사용자를 식별하는 데 사용됩니다. |
+| `{EMAIL_ID}` | Adobe 계정에 등록된 이메일 주소는 경고에 구독한 사용자를 식별하는 데 사용됩니다. |
 | `orderby` | 결과 순서를 지정하는 필드입니다. 지원되는 필드는 `created` 및 `updated`입니다. 속성 이름 앞에 오름차순 `+`, 내림차순 `-`을(를) 추가합니다. 기본값은 `-created`입니다. 더하기 기호(`+`)는 `%2B`(으)로 이스케이프해야 합니다. 예를 들어 `%2Bcreated`은(는) 오름차순 생성 순서에 대한 값입니다. |
 | `pagesize` | 이 매개 변수를 사용하여 페이지당 API 호출에서 가져올 레코드 수를 제어합니다. 기본 제한은 페이지당 최대 50개의 레코드 수로 설정됩니다. |
 | `page` | 레코드를 보려는 반환된 결과의 페이지 번호를 나타냅니다. |
-| `property` | 선택한 필드를 기반으로 결과를 필터링합니다. **must** 필터는 HTML 이스케이프해야 합니다. 쉼표는 여러 필터 세트를 결합하는 데 사용됩니다. 다음 속성을 사용하여 필터링할 수 있습니다. <ul><li>ID</li><li>assetId</li><li>상태</li><li>alertType</li></ul> 지원되는 연산자는 `==`(과 같음)입니다. 예를 들어 `id==6ebd9c2d-494d-425a-aa91-24033f3abeec`은(는) ID가 일치하는 경고를 반환합니다. |
+| `property` | 선택한 필드를 기반으로 결과를 필터링합니다. **must** 필터는 HTML 이스케이프되어야 합니다. 쉼표는 여러 필터 세트를 결합하는 데 사용됩니다. 다음 속성을 사용하여 필터링할 수 있습니다. <ul><li>ID</li><li>assetId</li><li>상태</li><li>alertType</li></ul> 지원되는 연산자는 `==`(과 같음)입니다. 예를 들어 `id==6ebd9c2d-494d-425a-aa91-24033f3abeec`은(는) ID가 일치하는 경고를 반환합니다. |
 
 **요청**
 
@@ -512,10 +512,10 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `name` | 경고의 이름입니다. 이 이름은 경고 서비스에서 생성되며 경고 대시보드에서 사용됩니다. 경고 이름은 경고를 저장하는 폴더, `alertType` 및 흐름 ID로 구성됩니다. 사용 가능한 경고에 대한 정보는 [플랫폼 경고 대시보드 설명서](../../observability/alerts/ui.md)에서 찾을 수 있습니다. |
+| `name` | 경고의 이름입니다. 이 이름은 경고 서비스에서 생성되며 경고 대시보드에서 사용됩니다. 경고 이름은 경고를 저장하는 폴더, `alertType` 및 흐름 ID로 구성됩니다. 사용 가능한 경고에 대한 정보는 [Experience Platform 경고 대시보드 설명서](../../observability/alerts/ui.md)에서 찾을 수 있습니다. |
 | `assetId` | 경고를 특정 쿼리와 연결한 쿼리 ID입니다. |
 | `status` | 경고에는 `enabled`, `enabling`, `disabled` 및 `disabling`의 네 가지 상태 값이 있습니다. 경고는 관련 모든 구독자 및 설정을 유지하면서 나중에 사용할 수 있도록 일시 중지되었거나, 이러한 상태 간에 전환되면서 이벤트를 적극적으로 수신하고 있습니다. |
-| `alertType` | 경고 유형. 임시 쿼리에 사용할 수 있는 경고 상태는 4개이지만 예약된 쿼리에 사용할 수 있는 경고 상태는 5개입니다. `quarantine` 경고는 예약된 쿼리에만 사용할 수 있습니다. 또한 플랫폼 UI에서는 `delay` 경고만 설정할 수 있습니다. 이러한 이유로 `delay`은(는) 여기에 설명되어 있지 않습니다. 사용 가능한 경고는 다음과 같습니다. <ul><li>`start`: 쿼리 실행이 시작되면 사용자에게 알립니다.</li><li>`success`: 쿼리가 완료되면 사용자에게 알립니다.</li><li>`failure`: 쿼리가 실패하면 사용자에게 알립니다.</li><li>`quarantine`: 예약된 쿼리 실행이 격리된 상태가 되면 활성화됩니다.</li></ul> |
+| `alertType` | 경고 유형. 임시 쿼리에 사용할 수 있는 경고 상태는 4개이지만 예약된 쿼리에 사용할 수 있는 경고 상태는 5개입니다. `quarantine` 경고는 예약된 쿼리에만 사용할 수 있습니다. 또한 Experience Platform UI에서는 `delay` 경고만 설정할 수 있습니다. 이러한 이유로 `delay`은(는) 여기에 설명되어 있지 않습니다. 사용 가능한 경고는 다음과 같습니다. <ul><li>`start`: 쿼리 실행이 시작되면 사용자에게 알립니다.</li><li>`success`: 쿼리가 완료되면 사용자에게 알립니다.</li><li>`failure`: 쿼리가 실패하면 사용자에게 알립니다.</li><li>`quarantine`: 예약된 쿼리 실행이 격리된 상태가 되면 활성화됩니다.</li></ul> |
 | `subscriptions` | 경고와 연관된 Adobe 등록 이메일 ID 및 사용자가 경고를 수신할 채널을 전달하는 데 사용되는 객체입니다. |
 | `subscriptions.inContextNotifications` | 사용자가 경고 알림을 받는 방법을 결정하는 부울 값입니다. `true` 값은 UI를 통해 경고를 제공해야 함을 확인합니다. `false` 값을 사용하면 해당 채널을 통해 사용자에게 알림이 전송되지 않습니다. |
 | `subscriptions.emailNotifications` | 사용자가 경고 알림을 받는 방법을 결정하는 부울 값입니다. `true` 값은 경고가 이메일로 제공되어야 함을 확인합니다. `false` 값을 사용하면 해당 채널을 통해 사용자에게 알림이 전송되지 않습니다. |
@@ -526,7 +526,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 >[!IMPORTANT]
 >
->한 번의 요청으로 최대 5개의 Adobe 등록 이메일 ID를 전달할 수 있습니다. 경고에 5명 이상의 사용자를 구독하려면 후속 요청을 수행해야 합니다.
+>단일 요청에서 최대 5개의 Adobe 등록 이메일 ID를 전달할 수 있습니다. 경고에 5명 이상의 사용자를 구독하려면 후속 요청을 수행해야 합니다.
 
 **API 형식**
 
@@ -560,7 +560,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | 속성 | 설명 |
 | -------- | ----------- |
 | `assetId` | 경고는 이 ID와 연결됩니다. ID는 쿼리 ID 또는 예약 ID일 수 있습니다. |
-| `alertType` | 경고 유형. 임시 쿼리에 사용할 수 있는 경고 상태는 4개이지만 예약된 쿼리에 사용할 수 있는 경고 상태는 5개입니다. `quarantine` 경고는 예약된 쿼리에만 사용할 수 있습니다. 또한 플랫폼 UI에서는 `delay` 경고만 설정할 수 있습니다. 이러한 이유로 `delay`은(는) 여기에 설명되어 있지 않습니다. 사용 가능한 경고는 다음과 같습니다. <ul><li>`start`: 쿼리 실행이 시작되면 사용자에게 알립니다.</li><li>`success`: 쿼리가 완료되면 사용자에게 알립니다.</li><li>`failure`: 쿼리가 실패하면 사용자에게 알립니다.</li><li>`quarantine`: 예약된 쿼리 실행이 격리된 상태가 되면 활성화됩니다.</li></ul> |
+| `alertType` | 경고 유형. 임시 쿼리에 사용할 수 있는 경고 상태는 4개이지만 예약된 쿼리에 사용할 수 있는 경고 상태는 5개입니다. `quarantine` 경고는 예약된 쿼리에만 사용할 수 있습니다. 또한 Experience Platform UI에서는 `delay` 경고만 설정할 수 있습니다. 이러한 이유로 `delay`은(는) 여기에 설명되어 있지 않습니다. 사용 가능한 경고는 다음과 같습니다. <ul><li>`start`: 쿼리 실행이 시작되면 사용자에게 알립니다.</li><li>`success`: 쿼리가 완료되면 사용자에게 알립니다.</li><li>`failure`: 쿼리가 실패하면 사용자에게 알립니다.</li><li>`quarantine`: 예약된 쿼리 실행이 격리된 상태가 되면 활성화됩니다.</li></ul> |
 | `subscriptions` | 경고와 연관된 Adobe 등록 이메일 ID 및 사용자가 경고를 수신할 채널을 전달하는 데 사용되는 객체입니다. |
 | `subscriptions.emailIds` | 경고를 수신해야 하는 사용자를 식별하는 이메일 주소 배열. 전자 메일 주소 **must**&#x200B;을(를) Adobe 계정에 등록해야 합니다. |
 | `subscriptions.inContextNotifications` | 사용자가 경고 알림을 받는 방법을 결정하는 부울 값입니다. `true` 값은 UI를 통해 경고를 제공해야 함을 확인합니다. `false` 값을 사용하면 해당 채널을 통해 사용자에게 알림이 전송되지 않습니다. |
@@ -613,7 +613,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `id` | 경고의 이름입니다. 이 이름은 경고 서비스에서 생성되며 경고 대시보드에서 사용됩니다. 경고 이름은 경고를 저장하는 폴더, `alertType` 및 흐름 ID로 구성됩니다. 사용 가능한 경고에 대한 정보는 [플랫폼 경고 대시보드 설명서](../../observability/alerts/ui.md)에서 찾을 수 있습니다. |
+| `id` | 경고의 이름입니다. 이 이름은 경고 서비스에서 생성되며 경고 대시보드에서 사용됩니다. 경고 이름은 경고를 저장하는 폴더, `alertType` 및 흐름 ID로 구성됩니다. 사용 가능한 경고에 대한 정보는 [Experience Platform 경고 대시보드 설명서](../../observability/alerts/ui.md)에서 찾을 수 있습니다. |
 | `_links` | 이 경고 ID와 관련된 정보를 검색, 업데이트, 편집 또는 삭제하는 데 사용할 수 있는 사용 가능한 메서드 및 끝점에 대한 정보를 제공합니다. |
 
 ## 경고 활성화 또는 비활성화 {#enable-or-disable-alert}
@@ -629,7 +629,7 @@ PATCH /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | 매개 변수 | 설명 |
 | -------- | ----------- |
-| `ALERT_TYPE` | 경고 유형. 임시 쿼리에 사용할 수 있는 경고 상태는 4개이지만 예약된 쿼리에 사용할 수 있는 경고 상태는 5개입니다. `quarantine` 경고는 예약된 쿼리에만 사용할 수 있습니다. 또한 플랫폼 UI에서는 `delay` 경고만 설정할 수 있습니다. 이러한 이유로 `delay`은(는) 여기에 설명되어 있지 않습니다. 사용 가능한 경고는 다음과 같습니다. <ul><li>`start`: 쿼리 실행이 시작되면 사용자에게 알립니다.</li><li>`success`: 쿼리가 완료되면 사용자에게 알립니다.</li><li>`failure`: 쿼리가 실패하면 사용자에게 알립니다.</li><li>`quarantine`: 예약된 쿼리 실행이 격리된 상태가 되면 활성화됩니다.</li></ul>변경하려면 끝점 네임스페이스에 현재 경고 유형을 지정해야 합니다. |
+| `ALERT_TYPE` | 경고 유형. 임시 쿼리에 사용할 수 있는 경고 상태는 4개이지만 예약된 쿼리에 사용할 수 있는 경고 상태는 5개입니다. `quarantine` 경고는 예약된 쿼리에만 사용할 수 있습니다. 또한 Experience Platform UI에서는 `delay` 경고만 설정할 수 있습니다. 이러한 이유로 `delay`은(는) 여기에 설명되어 있지 않습니다. 사용 가능한 경고는 다음과 같습니다. <ul><li>`start`: 쿼리 실행이 시작되면 사용자에게 알립니다.</li><li>`success`: 쿼리가 완료되면 사용자에게 알립니다.</li><li>`failure`: 쿼리가 실패하면 사용자에게 알립니다.</li><li>`quarantine`: 예약된 쿼리 실행이 격리된 상태가 되면 활성화됩니다.</li></ul>변경하려면 끝점 네임스페이스에 현재 경고 유형을 지정해야 합니다. |
 | `QUERY_ID` | 업데이트할 쿼리의 고유 식별자입니다. |
 | `SCHEDULE_ID` | 업데이트할 예약된 쿼리의 고유 식별자입니다. |
 
@@ -673,7 +673,7 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptio
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `id` | 경고의 이름입니다. 이 이름은 경고 서비스에서 생성되며 경고 대시보드에서 사용됩니다. 경고 이름은 경고를 저장하는 폴더, `alertType` 및 흐름 ID로 구성됩니다. 사용 가능한 경고에 대한 정보는 [플랫폼 경고 대시보드 설명서](../../observability/alerts/ui.md)에서 찾을 수 있습니다. |
+| `id` | 경고의 이름입니다. 이 이름은 경고 서비스에서 생성되며 경고 대시보드에서 사용됩니다. 경고 이름은 경고를 저장하는 폴더, `alertType` 및 흐름 ID로 구성됩니다. 사용 가능한 경고에 대한 정보는 [Experience Platform 경고 대시보드 설명서](../../observability/alerts/ui.md)에서 찾을 수 있습니다. |
 | `assetId` | 경고는 이 ID와 연결됩니다. ID는 쿼리 ID 또는 예약 ID일 수 있습니다. |
 | `alertType` | 각 경고에는 세 가지 서로 다른 경고 유형이 있을 수 있습니다. 이는 다음과 같습니다. <ul><li>`start`: 쿼리 실행이 시작되면 사용자에게 알립니다.</li><li>`success`: 쿼리가 완료되면 사용자에게 알립니다.</li><li>`failure`: 쿼리가 실패하면 사용자에게 알립니다.</li></ul> |
 | `status` | 경고에는 `enabled`, `enabling`, `disabled` 및 `disabling`의 네 가지 상태 값이 있습니다. 경고는 관련 모든 구독자 및 설정을 유지하면서 나중에 사용할 수 있도록 일시 중지되었거나, 이러한 상태 간에 전환되면서 이벤트를 적극적으로 수신하고 있습니다. |
@@ -689,7 +689,7 @@ DELETE /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | 매개 변수 | 설명 |
 | -------- | ----------- |
-| `ALERT_TYPE` | 경고 유형. 임시 쿼리에 사용할 수 있는 경고 상태는 4개이지만 예약된 쿼리에 사용할 수 있는 경고 상태는 5개입니다. `quarantine` 경고는 예약된 쿼리에만 사용할 수 있습니다. 또한 플랫폼 UI에서는 `delay` 경고만 설정할 수 있습니다. 이러한 이유로 `delay`은(는) 여기에 설명되어 있지 않습니다. 사용 가능한 경고는 다음과 같습니다. <ul><li>`start`: 쿼리 실행이 시작되면 사용자에게 알립니다.</li><li>`success`: 쿼리가 완료되면 사용자에게 알립니다.</li><li>`failure`: 쿼리가 실패하면 사용자에게 알립니다.</li><li>`quarantine`: 예약된 쿼리 실행이 격리된 상태가 되면 활성화됩니다.</li></ul> DELETE 요청은 제공된 특정 경고 유형에만 적용됩니다. |
+| `ALERT_TYPE` | 경고 유형. 임시 쿼리에 사용할 수 있는 경고 상태는 4개이지만 예약된 쿼리에 사용할 수 있는 경고 상태는 5개입니다. `quarantine` 경고는 예약된 쿼리에만 사용할 수 있습니다. 또한 Experience Platform UI에서는 `delay` 경고만 설정할 수 있습니다. 이러한 이유로 `delay`은(는) 여기에 설명되어 있지 않습니다. 사용 가능한 경고는 다음과 같습니다. <ul><li>`start`: 쿼리 실행이 시작되면 사용자에게 알립니다.</li><li>`success`: 쿼리가 완료되면 사용자에게 알립니다.</li><li>`failure`: 쿼리가 실패하면 사용자에게 알립니다.</li><li>`quarantine`: 예약된 쿼리 실행이 격리된 상태가 되면 활성화됩니다.</li></ul> DELETE 요청은 제공된 특정 경고 유형에만 적용됩니다. |
 | `QUERY_ID` | 업데이트할 쿼리의 고유 식별자입니다. |
 | `SCHEDULE_ID` | 업데이트할 예약된 쿼리의 고유 식별자입니다. |
 

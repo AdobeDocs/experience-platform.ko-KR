@@ -4,9 +4,9 @@ title: API를 사용하여 프로필 및 ID 서비스에 대한 데이터 세트
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform API를 사용하여 실시간 고객 프로필 및 ID 서비스에 사용할 데이터 세트를 활성화하는 방법을 보여줍니다.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1070'
 ht-degree: 5%
 
 ---
@@ -24,14 +24,14 @@ ht-degree: 5%
 
 ## 시작하기
 
-이 자습서에서는 프로필 사용 데이터 세트 관리와 관련된 여러 Adobe Experience Platform 서비스에 대한 작업 이해가 필요합니다. 이 자습서를 시작하기 전에 다음 관련 [!DNL Platform] 서비스에 대한 설명서를 검토하십시오.
+이 자습서에서는 프로필 사용 데이터 세트 관리와 관련된 여러 Adobe Experience Platform 서비스에 대한 작업 이해가 필요합니다. 이 자습서를 시작하기 전에 다음 관련 [!DNL Experience Platform] 서비스에 대한 설명서를 검토하십시오.
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-- [[!DNL Identity Service]](../../identity-service/home.md): [!DNL Platform](으)로 수집되는 서로 다른 데이터 소스의 ID를 브리징하여 [!DNL Real-Time Customer Profile]을(를) 사용하도록 설정합니다.
+- [[!DNL Identity Service]](../../identity-service/home.md): [!DNL Experience Platform]&#x200B;(으)로 수집되는 서로 다른 데이터 소스의 ID를 브리징하여 [!DNL Real-Time Customer Profile]을(를) 사용하도록 설정합니다.
 - [[!DNL Catalog Service]](../../catalog/home.md): 데이터 세트를 만들고 [!DNL Real-Time Customer Profile] 및 [!DNL Identity Service]에 대해 구성할 수 있는 RESTful API입니다.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 
-다음 섹션에서는 Platform API를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다.
+다음 섹션에서는 Experience Platform API를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
@@ -39,7 +39,7 @@ ht-degree: 5%
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -47,7 +47,7 @@ ht-degree: 5%
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 `Content-Type` 헤더가 필요합니다. 이 헤더에 대한 정확한 값이 필요한 경우 샘플 요청에 표시됩니다.
 
-[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 `x-sandbox-name` 헤더가 필요합니다. [!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
+[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 `x-sandbox-name` 헤더가 필요합니다. [!DNL Experience Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
 ## 프로필 및 ID에 대해 활성화된 데이터 세트 만들기 {#create-a-dataset-enabled-for-profile-and-identity}
 

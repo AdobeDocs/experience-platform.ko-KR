@@ -3,9 +3,9 @@ keywords: target 개인화, 대상, experience platform 대상, adobe target 대
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1769'
 ht-degree: 9%
 
 ---
@@ -161,7 +161,7 @@ Adobe Experience Platform은 자동으로 회사의 Adobe Target 인스턴스에
 
 기존 Adobe Target 연결에서 대상을 제거하는 데 필요한 추가 단계가 있습니다. 해당 대상이 이미 Adobe Target [activity](https://experienceleague.adobe.com/en/docs/target/using/activities/activities)에서 사용되고 있습니다. Adobe Target 활동에서 대상을 사용하는 경우 Adobe Target 연결에서 대상을 제거하려고 하면 오류가 발생합니다.
 
-![Target 활동에서 사용하는 대상을 제거하려고 시도하여 오류가 표시되는 Platform UI 이미지입니다.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+![Target 활동에서 사용하는 대상을 제거하려고 시도하여 오류가 표시되는 Experience Platform UI 이미지입니다.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
 
 활동에서 대상을 사용 중일 때 Target 대상에서 대상을 제거하려면 먼저 대상을 사용 중인 Target 활동에서 대상을 제거하거나 활동을 모두 삭제해야 합니다. 그런 다음 Target 연결에서 대상을 제거할 수 있습니다.
 

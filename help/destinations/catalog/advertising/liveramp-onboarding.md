@@ -1,18 +1,18 @@
 ---
 title: LiveRamp - 온보드 연결
-description: LiveRamp 커넥터를 사용하여 Adobe Real-time Customer Data Platform에서 LiveRamp Connect로 대상을 온보딩하는 방법을 알아봅니다.
+description: LiveRamp 커넥터를 사용하여 Adobe Real-Time Customer Data Platform에서 LiveRamp Connect로 대상을 온보딩하는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1948'
 ht-degree: 3%
 
 ---
 
 # [!DNL LiveRamp - Onboarding] 연결 {#liveramp-onboarding}
 
-[!DNL LiveRamp - Onboarding] 연결을 사용하여 Adobe Real-time Customer Data Platform에서 [!DNL LiveRamp Connect](으)로 대상자를 온보딩합니다.
+[!DNL LiveRamp - Onboarding] 연결을 사용하여 Adobe Real-Time Customer Data Platform에서 [!DNL LiveRamp Connect]&#x200B;(으)로 대상자를 온보딩합니다.
 
 ## 사용 사례 {#use-cases}
 
@@ -24,7 +24,7 @@ ht-degree: 3%
 
 [!DNL LiveRamp - Onboarding] 연결에서 [LiveRamp의 SFTP](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html) 저장소를 사용하여 파일을 내보냅니다.
 
-Experience Platform에서 [!DNL LiveRamp - Onboarding](으)로 데이터를 보내려면 먼저 [!DNL LiveRamp] 자격 증명이 필요합니다. 자격 증명이 없는 경우 [!DNL LiveRamp] 담당자에게 연락하여 자격 증명을 받으십시오.
+Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터를 보내려면 먼저 [!DNL LiveRamp] 자격 증명이 필요합니다. 자격 증명이 없는 경우 [!DNL LiveRamp] 담당자에게 연락하여 자격 증명을 받으십시오.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -38,8 +38,8 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding](으)로 데이터를 보�
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding](으)로 데이터를 보�
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
 | 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | [!DNL LiveRamp - Onboarding] 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
-| 내보내기 빈도 | **[!UICONTROL 일별 일괄 처리]** | 프로필은 대상 평가를 기반으로 Experience Platform에서 업데이트되므로 프로필(ID)은 대상 플랫폼으로 하루에 한 번 업데이트됩니다. [일괄 파일 기반 대상](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
+| 내보내기 빈도 | **[!UICONTROL 일별 일괄 처리]** | 프로필은 대상 평가를 기반으로 Experience Platform에서 업데이트되므로 프로필(ID)은 대상 플랫폼으로 다운스트림으로 하루에 한 번 업데이트됩니다. [일괄 파일 기반 대상](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -104,14 +104,14 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding](으)로 데이터를 보�
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-![대상에 대한 세부 정보를 채우는 방법을 보여 주는 플랫폼 UI 스크린샷](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+대상에 대한 세부 정보를 채우는 방법을 보여 주는 ![Experience Platform UI 스크린샷](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL 지역]**: LiveRamp SFTP 저장소 인스턴스의 지리적 지역입니다.
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 [!DNL LiveRamp] `uploads` 하위 폴더의 경로입니다. `uploads` 접두사가 폴더 경로에 자동으로 추가됩니다. [!DNL LiveRamp]에서는 파일을 다른 기존 피드와 구분하고 모든 자동화가 원활하게 실행되도록 Adobe Real-Time CDP에서 게재할 전용 하위 폴더를 만들 것을 권장합니다.
    * 예를 들어 파일을 `uploads/my_export_folder`(으)로 내보내려면 **[!UICONTROL 폴더 경로]** 필드에 `my_export_folder`을(를) 입력합니다.
-* Experience Platform **[!UICONTROL 압축 형식]**: 내보낸 파일에 사용할 압축 형식을 선택합니다. 사용 가능한 옵션은 **[!UICONTROL GZIP]** 또는 **[!UICONTROL 없음]**&#x200B;입니다.
+* **[!UICONTROL 압축 형식]**: Experience Platform에서 내보낸 파일에 사용할 압축 형식을 선택합니다. 사용 가능한 옵션은 **[!UICONTROL GZIP]** 또는 **[!UICONTROL 없음]**&#x200B;입니다.
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -135,13 +135,13 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding](으)로 데이터를 보�
 * **[!UICONTROL 빈도]**: [!UICONTROL 일별]
 * **[!UICONTROL 날짜]**: 원하는 대로 내보내기 시작 및 종료 시간을 선택하십시오.
 
-대상 예약 단계를 보여 주는 ![Platform UI 스크린샷입니다.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+대상 예약 단계를 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 내보낸 파일 이름은 현재 사용자가 구성할 수 없습니다. [!DNL LiveRamp - Onboarding] 대상으로 내보낸 모든 파일의 이름은 다음 템플릿을 기준으로 자동 지정됩니다.
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![내보낸 파일 이름 템플릿을 표시하는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+![내보낸 파일 이름 템플릿을 표시하는 Experience Platform UI 스크린샷입니다.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
 
 예를 들어, [!DNL Luma] 조직의 내보낸 파일 이름은 다음과 비슷할 수 있습니다.
 
@@ -161,15 +161,15 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 >[!IMPORTANT]
 >
->[!DNL LiveRamp](으)로 초기 파일을 배달한 후 대상 필드에 대한 변경 내용은 [!DNL LiveRamp] 계정 팀에 알리거나 [LiveRamp 지원에 티켓을 제출](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#creating-a-support-case)하여 변경 내용이 자동화 프로세스에 반영되도록 하십시오.
+>[!DNL LiveRamp]&#x200B;(으)로 초기 파일을 배달한 후 대상 필드에 대한 변경 내용은 [!DNL LiveRamp] 계정 팀에 알리거나 [LiveRamp 지원에 티켓을 제출](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#creating-a-support-case)하여 변경 내용이 자동화 프로세스에 반영되도록 하십시오.
 
 1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다. 화면에 새 매핑 행이 표시됩니다.
 
-   ![Experience Platform UI 화면을 표시합니다.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png)
+   ![매핑 화면을 표시하는 Experience Platform UI 화면입니다.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png)
 
 2. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 매핑할 XDM 특성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]** 범주를 선택하고 대상에 매핑할 ID를 선택합니다.
 
-   ![Experience Platform UI 화면 핫에서 원본 매핑 화면을 표시합니다.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
+   ![소스 매핑 화면을 표시하는 Experience Platform UI 화면입니다.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
 
 3. **[!UICONTROL 대상 필드 선택]** 창에서 선택한 원본 필드를 매핑할 특성 이름을 입력하십시오. 여기에 정의된 속성 이름은 내보낸 CSV 파일에 열 헤더로 반영됩니다.
 
@@ -187,7 +187,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 내보낸 파일의 최대 크기는 1,000만 행입니다. Experience Platform은 선택한 대상이 1천만 행을 초과하는 경우 게재당 여러 파일을 생성합니다. 단일 파일 한도를 초과하려는 경우 [!DNL LiveRamp] 담당자에게 문의하여 일괄 처리 수집을 구성하도록 요청하십시오.
 
-[!DNL LiveRamp - Onboarding] 대상으로 파일을 내보낼 때 플랫폼에서는 각 [병합 정책 ID](../../../profile/merge-policies/overview.md)에 대해 하나의 CSV 파일을 생성합니다.
+[!DNL LiveRamp - Onboarding] 대상으로 파일을 내보낼 때 Experience Platform은 각 [병합 정책 ID](../../../profile/merge-policies/overview.md)에 대해 하나의 CSV 파일을 생성합니다.
 
 예를 들어 다음 대상을 고려해 보겠습니다.
 
@@ -196,7 +196,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 * 대상자 C (병합 정책 1)
 * 대상자 D (병합 정책 1)
 
-플랫폼이 두 개의 CSV 파일을 [!DNL LiveRamp - Onboarding](으)로 내보냅니다.
+Experience Platform에서 두 개의 CSV 파일을 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 내보냅니다.
 
 * 대상 A, C 및 D가 포함된 하나의 CSV 파일
 * 대상자 B가 포함된 CSV 파일 1개.
@@ -211,7 +211,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 * `Expired`: 프로필이 더 이상 대상자에 적합하지 않지만 과거에 자격이 있습니다.
 * `""`(빈 문자열): 대상에 대해 프로필이 정격되지 않았습니다.
 
-예를 들어, 하나의 `email` 특성, Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)에서 시작된 두 대상 및 하나의 [가져온](../../../segmentation/ui/audience-portal.md#import-audience) 외부 대상을 가진 내보낸 CSV 파일은 다음과 같이 표시될 수 있습니다.
+예를 들어, 하나의 `email` 특성, Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)에서 시작된 두 대상 및 하나의 [가져온](../../../segmentation/ui/audience-portal.md#import-audience) 외부 대상으로 내보낸 CSV 파일은 다음과 같이 표시될 수 있습니다.
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,9 +223,9 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-위의 예에서 `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` 및 `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` 섹션은 세분화 서비스에서 시작된 대상을 설명하고, `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e`은(는) 플랫폼으로 가져온 대상을 [사용자 지정 업로드](../../../segmentation/ui/audience-portal.md#import-audience)로 설명합니다.
+위의 예에서 `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` 및 `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` 섹션은 세분화 서비스에서 시작된 대상을 설명하고, `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e`은(는) [사용자 지정 업로드](../../../segmentation/ui/audience-portal.md#import-audience)(으)로 Experience Platform으로 가져온 대상을 설명합니다.
 
-플랫폼은 각 [병합 정책 ID](../../../profile/merge-policies/overview.md)에 대해 하나의 CSV 파일을 생성하므로 각 병합 정책 ID에 대해 별도의 데이터 흐름 실행도 생성합니다.
+Experience Platform은 각 [병합 정책 ID](../../../profile/merge-policies/overview.md)에 대해 하나의 CSV 파일을 생성하므로 각 병합 정책 ID에 대해 별도의 데이터 흐름 실행도 생성합니다.
 
 즉, [데이터 흐름 실행](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 페이지에서 **[!UICONTROL ID가 활성화됨]** 및 **[!UICONTROL 프로필이 수신됨]** 지표가 각 대상에 대해 표시되지 않고 동일한 병합 정책을 사용하는 각 대상 그룹에 대해 집계됩니다.
 

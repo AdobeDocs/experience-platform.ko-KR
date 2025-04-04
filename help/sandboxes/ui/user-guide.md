@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 샌드박스 UI 안내서
 description: 이 문서에서는 Adobe Experience Platform 사용자 인터페이스에서 샌드박스와 관련된 다양한 작업을 수행하는 방법에 대한 단계를 설명합니다.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: b9b00f41f146b34a1326c4c2ac104c022a416dc9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1116'
 ht-degree: 4%
 
 ---
@@ -23,7 +23,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 샌드박스]**&#x20
 
 ## 샌드박스 간 전환
 
-샌드박스 표시기는 Platform UI의 상단 헤더에 있으며 현재 있는 샌드박스의 제목, 지역 및 유형을 표시합니다.
+샌드박스 표시기는 Experience Platform UI의 상단 헤더에 있으며 현재 있는 샌드박스 제목, 지역 및 유형을 표시합니다.
 
 ![샌드박스 표시기가 강조 표시된 샌드박스 대시보드입니다.](../images/ui/sandbox-indicator.png)
 

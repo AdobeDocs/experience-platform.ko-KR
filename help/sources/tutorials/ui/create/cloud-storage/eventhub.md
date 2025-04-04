@@ -3,10 +3,10 @@ title: UI에서 Azure Event Hubs Source 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Azure Event Hubs 소스 연결을 만드는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 2%
+source-wordcount: '1098'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Azure Event Hubs] 원본은 Real-time Customer Data Platform Ultimate를 구입한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
+>[!DNL Azure Event Hubs] 소스는 Real-Time Customer Data Platform Ultimate을 구매한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
 
 Adobe Experience Platform 사용자 인터페이스를 사용하여 [!DNL Azure Event Hubs] 계정을 만드는 방법에 대해 알아보려면 이 자습서를 참조하십시오.
 
@@ -56,7 +56,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 [!DNL Azure 
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| 임차인 ID | 권한을 요청하려는 테넌트 ID입니다. 테넌트 ID는 GUID 또는 친숙한 이름으로 포맷할 수 있습니다. **참고**: 테넌트 ID는 [!DNL Microsoft Azure] 인터페이스에서 &quot;디렉터리 ID&quot;라고 합니다. |
+| 테넌트 ID | 권한을 요청하려는 테넌트 ID입니다. 테넌트 ID는 GUID 또는 친숙한 이름으로 포맷할 수 있습니다. **참고**: 테넌트 ID는 [!DNL Microsoft Azure] 인터페이스에서 &quot;디렉터리 ID&quot;라고 합니다. |
 | 클라이언트 ID | 앱에 할당된 애플리케이션 ID입니다. [!DNL Azure Active Directory]을(를) 등록한 [!DNL Microsoft Entra ID] 포털에서 이 ID를 검색할 수 있습니다. |
 | 클라이언트 암호 값 | 앱을 인증하기 위해 클라이언트 ID와 함께 사용되는 클라이언트 암호입니다. [!DNL Azure Active Directory]을(를) 등록한 [!DNL Microsoft Entra ID] 포털에서 클라이언트 암호를 검색할 수 있습니다. |
 | 네임스페이스 | 액세스 중인 [!DNL Event Hub]의 네임스페이스입니다. [!DNL Event Hub] 네임스페이스는 하나 이상의 [!DNL Event Hubs]을(를) 만들 수 있는 고유한 범위 컨테이너를 제공합니다. |
@@ -67,7 +67,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 [!DNL Azure 
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| 임차인 ID | 권한을 요청하려는 테넌트 ID입니다. 테넌트 ID는 GUID 또는 친숙한 이름으로 포맷할 수 있습니다. **참고**: 테넌트 ID는 [!DNL Microsoft Azure] 인터페이스에서 &quot;디렉터리 ID&quot;라고 합니다. |
+| 테넌트 ID | 권한을 요청하려는 테넌트 ID입니다. 테넌트 ID는 GUID 또는 친숙한 이름으로 포맷할 수 있습니다. **참고**: 테넌트 ID는 [!DNL Microsoft Azure] 인터페이스에서 &quot;디렉터리 ID&quot;라고 합니다. |
 | 클라이언트 ID | 앱에 할당된 애플리케이션 ID입니다. [!DNL Azure Active Directory]을(를) 등록한 [!DNL Microsoft Entra ID] 포털에서 이 ID를 검색할 수 있습니다. |
 | 클라이언트 암호 값 | 앱을 인증하기 위해 클라이언트 ID와 함께 사용되는 클라이언트 암호입니다. [!DNL Azure Active Directory]을(를) 등록한 [!DNL Microsoft Entra ID] 포털에서 클라이언트 암호를 검색할 수 있습니다. |
 | 네임스페이스 | 액세스 중인 [!DNL Event Hub]의 네임스페이스입니다. [!DNL Event Hub] 네임스페이스는 하나 이상의 [!DNL Event Hubs]을(를) 만들 수 있는 고유한 범위 컨테이너를 제공합니다. |
@@ -81,7 +81,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 [!DNL Azure 
 
 ## [!DNL Event Hubs] 계정 연결
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
@@ -142,4 +142,4 @@ Event Hub Azure Active Directory 인증을 사용하여 [!DNL Event Hubs] 계정
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL Event Hubs] 계정을 Experience Platform에 연결했습니다. 이제 다음 자습서를 계속 진행하고 [클라우드 저장소에서 Experience Platform으로 데이터를 가져오도록 데이터 흐름을 구성](../../dataflow/streaming/cloud-storage-streaming.md)할 수 있습니다.
+이 자습서를 따라 [!DNL Event Hubs] 계정을 Experience Platform에 연결했습니다. 이제 다음 자습서를 계속 진행하고 [클라우드 저장소에서 Experience Platform으로 데이터를 가져오도록 데이터 흐름을 구성](../../dataflow/streaming/cloud-storage-streaming.md)할 수 있습니다.

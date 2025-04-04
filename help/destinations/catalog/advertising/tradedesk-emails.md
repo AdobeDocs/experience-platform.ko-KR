@@ -3,9 +3,9 @@ title: 트레이드 데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타기팅 및 억제에 대한 프로필을 트레이드 데스크 계정에 활성화합니다.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: a189a86749996c0ee7b6146bcd030d8495745e12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1122'
 ht-degree: 5%
 
 ---
@@ -76,7 +76,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
 | 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | Trade Desk 대상에 사용된 식별자(이메일 또는 해시된 이메일)로 대상자의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 일별 일괄 처리]** | 프로필은 대상 평가를 기반으로 Experience Platform에서 업데이트되므로 프로필(ID)은 대상 플랫폼으로 하루에 한 번 업데이트됩니다. [일괄 내보내기](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
+| 내보내기 빈도 | **[!UICONTROL 일별 일괄 처리]** | 대상 평가를 기반으로 Experience Platform에서 프로필이 업데이트되면 프로필(ID)은 대상 플랫폼으로 하루에 한 번 업데이트됩니다. [일괄 내보내기](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL 광고주 ID]**: [!DNL Trade Desk Advertiser ID], [!DNL Trade Desk] 계정 관리자가 공유하거나 [!DNL Trade Desk] UI의 [!DNL Advertiser Preferences]에서 찾을 수 있음.
 
-![대상 세부 정보를 채우는 방법을 보여 주는 플랫폼 UI 스크린샷입니다.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+대상 세부 정보를 채우는 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
 대상에 연결할 때 데이터 거버넌스 정책을 설정하는 것은 완전히 선택 사항입니다. 자세한 내용은 Experience Platform [데이터 거버넌스 개요](/help/data-governance/policies/overview.md)를 검토하십시오.
 
@@ -110,17 +110,17 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 
 **[!UICONTROL 예약]** 페이지에서 내보내는 각 대상에 대해 일정 및 파일 이름을 구성할 수 있습니다. 예약을 구성해야 하지만, 파일 이름을 구성하는 것은 선택 사항입니다.
 
-대상자 활성화를 예약하기 위한 ![플랫폼 UI 스크린샷.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+대상자 활성화를 예약하기 위한 ![Experience Platform UI 스크린샷](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
 >[!DNL The Trade Desk] CRM 대상에 대해 활성화된 모든 대상은 자동으로 일일 빈도 및 전체 파일 내보내기로 설정됩니다.
 
-대상자 활성화를 예약하기 위한 ![플랫폼 UI 스크린샷.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+대상자 활성화를 예약하기 위한 ![Experience Platform UI 스크린샷](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 **[!UICONTROL 매핑]** 페이지의 원본 열에서 특성 또는 ID 네임스페이스를 선택하고 대상 열에 매핑해야 합니다.
 
-대상자 활성화를 매핑할 플랫폼 UI 스크린샷이 ![있습니다.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+대상 활성화를 매핑할 수 있는 ![Experience Platform UI 스크린샷](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
 다음은 대상을 [!DNL The Trade Desk] CRM 대상으로 활성화할 때 올바른 ID 매핑의 예입니다.
 
@@ -131,7 +131,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 소스 필드 선택:
 
 * 데이터 수집에 원시 전자 메일 주소를 사용하는 경우 `Email` 네임스페이스 또는 특성을 소스 ID로 선택합니다.
-* 데이터 수집 시 고객 이메일 주소를 Platform으로 해시했다면 `Email_LC_SHA256` 네임스페이스 또는 특성을 소스 ID로 선택하십시오.
+* 데이터 수집에 대한 고객 이메일 주소를 Experience Platform으로 해시했다면 `Email_LC_SHA256` 네임스페이스 또는 특성을 소스 ID로 선택하십시오.
 
 대상 필드 선택:
 
@@ -140,12 +140,12 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 
 ## 데이터 내보내기 유효성 검사 {#validate}
 
-데이터가 Experience Platform에서 [!DNL The Trade Desk](으)로 올바르게 내보내졌는지 확인하려면 [!DNL The Trade Desk] 데이터 관리 플랫폼(DMP)의 Adobe 1PD 데이터 타일 아래에서 대상을 찾으십시오. [!DNL Trade Desk] UI 내에서 해당 ID를 찾는 단계는 다음과 같습니다.
+데이터가 Experience Platform에서 [!DNL The Trade Desk]&#x200B;(으)로 올바르게 내보내졌는지 확인하려면 [!DNL The Trade Desk] 데이터 관리 플랫폼(DMP)의 Adobe 1PD 데이터 타일 아래에서 대상을 찾으십시오. [!DNL Trade Desk] UI 내에서 해당 ID를 찾는 단계는 다음과 같습니다.
 
 1. 먼저 **[!UICONTROL 데이터]** 탭을 선택하고 **[!UICONTROL 자사]** 섹션을 검토합니다.
 2. 페이지를 아래로 스크롤하면 **[!UICONTROL 가져온 데이터]**&#x200B;에서 **[!UICONTROL Adobe 1PD 타일]**&#x200B;을 찾을 수 있습니다.
 3. **[!UICONTROL Adobe 1PD]** 타일을 클릭하면 광고주의 [!DNL Trade Desk] 대상에 활성화된 모든 대상이 나열됩니다. 검색 기능을 사용할 수도 있습니다.
-4. [!DNL Trade Desk] UI에서 Experience Platform의 세그먼트 ID #이 세그먼트 이름으로 표시됩니다.
+4. Experience Platform의 세그먼트 ID #이 [!DNL Trade Desk] UI에서 세그먼트 이름으로 표시됩니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

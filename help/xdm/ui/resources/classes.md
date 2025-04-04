@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;데이터 모델;ui;작업 공간;클래스;클래스;
+keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;데이터 모델;ui;작업 영역;클래스;클래스;
 solution: Experience Platform
 title: UI에서 클래스 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 클래스를 만들고 편집하는 방법을 알아봅니다.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1692'
 ht-degree: 5%
 
 ---
@@ -26,19 +26,19 @@ Adobe은 [XDM 개별 프로필](../../classes/individual-profile.md) 및 [XDM Ex
 
 ## 전제 조건 {#prerequisites}
 
-이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. Experience Platform 에코시스템 내에서 XDM의 역할에 대한 소개는 [XDM 개요](../../home.md)를 참조하고, 클래스가 XDM 스키마에 기여하는 방법은 [스키마 컴포지션의 기본 사항](../../schema/composition.md)을 참조하세요.
+이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. Experience Platform 에코시스템 내에서 XDM의 역할에 대한 소개와 스키마 컴포지션의 [기본 사항](../../schema/composition.md)을(를) 참조하여 클래스가 XDM 스키마에 기여하는 방법을 알아보십시오. [XDM 개요](../../home.md).
 
 이 안내서에서는 필요하지 않지만, [UI에서 스키마 작성](../../tutorials/create-schema-ui.md)에 대한 자습서를 따라 스키마 편집기의 다양한 기능을 숙지하는 것이 좋습니다.
 
 ## 시작하기 {#getting-started}
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택하여 [!UICONTROL 스키마] 작업 영역을 연 다음 **[!UICONTROL 클래스]** 탭을 선택합니다. 사용 가능한 클래스 목록이 표시됩니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택하여 [!UICONTROL 스키마] 작업 영역을 연 다음 **[!UICONTROL 클래스]** 탭을 선택합니다. 사용 가능한 클래스 목록이 표시됩니다.
 
 ![[!UICONTROL 스키마] 작업 영역 [!UICONTROL 클래스] 및 [!UICONTROL 스키마]의 [!UICONTROL 클래스] 탭에 있는 클래스 중 하나를 강조 표시했습니다.](../../images/ui/resources/classes/available-classes.png)
 
 ## 클래스 필터링 {#filter}
 
-클래스 목록은 클래스 생성 방법에 따라 자동으로 필터링됩니다. 기본 설정은 Adobe으로 정의된 클래스를 표시합니다. 목록을 필터링하여 조직에서 만든 목록을 표시할 수도 있습니다. 라디오 단추를 선택하여 [!UICONTROL 표준]과(와) [!UICONTROL 사용자 지정] 옵션 중에서 선택하십시오. [!UICONTROL 표준] 옵션은 Adobe에서 만든 엔터티를 표시하고 [!UICONTROL 사용자 지정] 옵션은 조직 내에서 만든 엔터티를 표시합니다.
+클래스 목록은 클래스 생성 방법에 따라 자동으로 필터링됩니다. 기본 설정은 Adobe에서 정의한 클래스를 표시합니다. 목록을 필터링하여 조직에서 만든 목록을 표시할 수도 있습니다. 라디오 단추를 선택하여 [!UICONTROL 표준]과(와) [!UICONTROL 사용자 지정] 옵션 중에서 선택하십시오. [!UICONTROL 표준] 옵션은 Adobe에서 만든 엔터티를 표시하고 [!UICONTROL 사용자 지정] 옵션은 조직 내에서 만든 엔터티를 표시합니다.
 
 [!UICONTROL Standard] 및 [!UICONTROL Custom]이 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭입니다.](../../images/ui/resources/classes/standard-and-custom-classes.png)![
 
@@ -48,7 +48,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택�
 
 ## 새 클래스 만들기 {#create}
 
-**[!UICONTROL 클래스 만들기]** 또는 **[!UICONTROL 스키마 만들기]**&#x200B;를 통해 Platform UI에서 클래스를 만드는 두 가지 방법이 있습니다.
+**[!UICONTROL 클래스 만들기]** 또는 **[!UICONTROL 스키마 만들기]**&#x200B;를 통해 Experience Platform UI에서 클래스를 만드는 두 가지 방법이 있습니다.
 
 ### 클래스 만들기
 
@@ -124,7 +124,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택�
 
 >[!NOTE]
 >
->조직에서 정의한 사용자 정의 클래스만 완전히 편집하고 사용자 정의할 수 있습니다. Adobe으로 정의된 코어 클래스의 경우, 해당 필드의 표시 이름만 개별 스키마의 컨텍스트 내에서 편집할 수 있습니다. 자세한 내용은 [스키마 필드에 대한 표시 이름 편집](./schemas.md#display-names)의 섹션을 참조하십시오.
+>조직에서 정의한 사용자 정의 클래스만 완전히 편집하고 사용자 정의할 수 있습니다. Adobe으로 정의된 코어 클래스의 경우 개별 스키마의 컨텍스트 내에서 해당 필드의 표시 이름만 편집할 수 있습니다. 자세한 내용은 [스키마 필드에 대한 표시 이름 편집](./schemas.md#display-names)의 섹션을 참조하십시오.
 >
 >사용자 정의 클래스를 저장하고 데이터 수집에 사용하면 이후에 추가 변경 사항만 수행할 수 있습니다. 자세한 내용은 [스키마 진화의 규칙](../../schema/composition.md#evolution)을 참조하십시오.
 
@@ -156,6 +156,6 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택�
 
 ## 다음 단계 {#next-steps}
 
-이 문서에서는 Platform UI를 사용하여 클래스를 만들고 편집하는 방법에 대해 다룹니다. [!UICONTROL 스키마] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md)를 참조하십시오.
+이 문서에서는 Experience Platform UI를 사용하여 클래스를 만들고 편집하는 방법에 대해 설명합니다. [!UICONTROL 스키마] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md)를 참조하십시오.
 
 스키마 레지스트리 API를 사용하여 클래스를 관리하는 방법에 대한 자세한 내용은 [클래스 끝점 안내서](../../api/classes.md)를 참조하십시오.

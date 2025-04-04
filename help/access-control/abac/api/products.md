@@ -5,9 +5,9 @@ title: 제품 API 끝점
 description: 속성 기반 액세스 제어 API의 /products 끝점을 사용하면 Adobe Experience Platform에서 제품을 프로그래밍 방식으로 관리할 수 있습니다.
 role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '514'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 ## 권한이 부여된 제품 목록 검색 {#list}
 
-`/products` 끝점에 대한 GET 요청을 통해 권한 있는 제품 목록을 검색할 수 있습니다.
+`/products` 끝점에 대한 GET 요청을 수행하여 권한 있는 제품 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -145,7 +145,7 @@ curl -X GET \
 
 ## 제품 ID별로 권한 집합 조회
 
-제품 ID를 지정하는 동안 `/products/{PRODUCT_ID}/permission-sets` 끝점에 대한 GET 요청을 수행하여 특정 제품에 대한 권한 집합을 찾을 수 있습니다.
+제품 ID를 지정하는 동안 `/products/{PRODUCT_ID}/permission-sets` 끝점에 대한 GET 요청을 수행하여 특정 제품에 대한 권한 집합을 조회할 수 있습니다.
 
 **API 형식**
 
@@ -240,6 +240,6 @@ curl -X GET \
 | `id` | 쿼리된 권한 집합의 해당 ID. |
 | `name` | 쿼리된 사용 권한 집합의 해당 이름입니다. |
 | `category` | 사용 가능한 권한 범주. |
-| `permissions` | 권한에는 샌드박스 생성, 스키마 정의 및 데이터 세트 관리와 같은 Platform 기능을 보거나 사용할 수 있는 기능이 포함됩니다. |
+| `permissions` | 권한에는 샌드박스 생성, 스키마 정의 및 데이터 세트 관리와 같은 Experience Platform 기능을 보거나 사용할 수 있는 기능이 포함됩니다. |
 | `permissions.resource` | 주체가 액세스할 수 있거나 액세스할 수 없는 에셋 또는 개체입니다. 리소스는 파일, 애플리케이션, 서버 또는 API일 수 있습니다. |
 | `permissions.actions` | 조회한 리소스에 대해 주체가 수행할 수 있는 작업입니다. 가능한 값은 `view`, `read`, `create`, `edit` 및 `delete`입니다. |

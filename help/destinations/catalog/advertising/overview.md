@@ -3,9 +3,9 @@ keywords: 광고 대상;대상;플랫폼 대상
 title: Advertising 대상 개요
 description: 'Adobe Experience Platform을 서드파티 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 이러한 플랫폼에 익명 대상을 공유합니다.'
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: cbc626dbb12f69114c48a0920bf56ec2aabe13de
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '280'
 ht-degree: 1%
 
 ---
@@ -66,4 +66,4 @@ Adobe Experience Platform을 수요 측 플랫폼(DSP), 공급 측 플랫폼(SSP
 
 ## 새 광고 대상에 연결 {#connect-destination}
 
-캠페인을 위해 대상을 광고 대상으로 보내려면 먼저 플랫폼에서 대상에 연결해야 합니다. 새 대상 설정에 대한 자세한 내용은 [대상 만들기 자습서](../../ui/connect-destination.md)를 참조하십시오.
+캠페인을 위해 대상을 광고 대상으로 보내려면 먼저 Experience Platform이 대상에 연결해야 합니다. 새 대상 설정에 대한 자세한 내용은 [대상 만들기 자습서](../../ui/connect-destination.md)를 참조하십시오.

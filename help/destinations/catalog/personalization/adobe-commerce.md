@@ -2,9 +2,9 @@
 title: Adobe Commerce 대상 커넥터
 description: Adobe Commerce 및 Real-Time CDP 판매자가 Real-Time CDP 내에서 구축 및 관리되는 고객 대상에 맞게 맞춤화된, 관련성이 높은 사이트 콘텐츠 및 프로모션을 제공하여 쇼핑 경험을 개인화하는 방법을 알아봅니다.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 3%
 
 ---
@@ -41,7 +41,7 @@ Experience Platform에서 다음을 생성합니다.
 
 [!DNL Adobe Commerce] 대상에 연결하려면:
 
-1. [플랫폼 인터페이스](https://experience.adobe.com/platform/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**(으)로 이동합니다.
+1. [Experience Platform 인터페이스](https://experience.adobe.com/platform/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**(으)로 이동합니다.
 1. **[!UICONTROL Personalization]**&#x200B;을(를) 선택합니다.
 1. Adobe Commerce 대상을 선택하여 강조 표시한 다음 **[!UICONTROL 설정]**&#x200B;을 선택합니다.
 1. [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
@@ -71,7 +71,7 @@ Experience Platform에서 다음을 생성합니다.
 
 ## [!DNL Adobe Commerce]의 다음 단계
 
-Experience Platform 내에서 [!DNL Commerce] 대상을 구성했으므로 [!DNL Commerce]에 [!DNL Audience Activation] 확장을 설치하고 만든 Real-Time CDP 대상을 가져오도록 [!DNL Commerce Admin]을(를) 구성해야 합니다. 자세한 내용은 [[!DNL Commerce] 설명서](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html)를 참조하세요.
+이제 Experience Platform 내에서 [!DNL Commerce] 대상을 구성했으므로 [!DNL Commerce]에 [!DNL Audience Activation] 확장을 설치하고 만든 Real-Time CDP 대상을 가져오도록 [!DNL Commerce Admin]을(를) 구성해야 합니다. 자세한 내용은 [[!DNL Commerce] 설명서](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html)를 참조하세요.
 
 ## Commerce에서 대상자 활성화 확인 {#exported-data}
 

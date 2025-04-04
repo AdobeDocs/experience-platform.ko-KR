@@ -1,10 +1,10 @@
 ---
 title: 샌드박스 도구 API 시작하기
-description: 샌드박스 도구 API를 사용하여 아티팩트를 검사하고 샌드박스 간에 샌드박스 구성의 스냅샷을 내보내고 가져올 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
+description: 샌드박스 도구 API를 사용하여 아티팩트를 검사하고 샌드박스 간에 샌드박스 구성의 스냅샷을 내보내고 가져올 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아봅니다.
 exl-id: 0b34d153-a603-4397-a375-9cc846efe23a
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '312'
 ht-degree: 15%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 15%
 
 ## 필수 헤더에 대한 값 수집 {#headers}
 
-이 안내서를 사용하려면 Platform API를 호출하려면 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 필요한 각 헤더의 값이 제공됩니다.
+이 안내서를 사용하려면 Experience Platform API를 호출하려면 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

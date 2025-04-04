@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 프로필 보강 작업 모니터링
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '765'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 [!UICONTROL 프로필 데이터 보강] 대시보드를 사용하여 프로필 데이터 보강 작업이 성공적으로 실행되고 완료되었는지 확인하고 데이터 보강 효과를 측정하는 기본 지표를 확인하십시오.
 
-[플랫폼 UI](https://platform.adobe.com)의 왼쪽 탐색에서 **[!UICONTROL 모니터링]**&#x200B;을 선택하여 [!UICONTROL 모니터링] 대시보드에 액세스합니다. 보기 선택기에서 **B2B 흐름**&#x200B;을 선택하여 [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md)과 관련된 대시보드 요소를 확인합니다.  [!UICONTROL 모니터링] 대시보드에는 최근에 성공적으로 실행한 기본 지표와 최대 90일 동안의 일일 작업 상태가 포함됩니다.
+[Experience Platform UI](https://platform.adobe.com)의 왼쪽 탐색에서 **[!UICONTROL 모니터링]**&#x200B;을 선택하여 [!UICONTROL 모니터링] 대시보드에 액세스합니다. 보기 선택기에서 **B2B 흐름**&#x200B;을 선택하여 [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md)과 관련된 대시보드 요소를 확인합니다.  [!UICONTROL 모니터링] 대시보드에는 최근에 성공적으로 실행한 기본 지표와 최대 90일 동안의 일일 작업 상태가 포함됩니다.
 
 ## 관련 계정 프로필 보강 {#related-accounts}
 

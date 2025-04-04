@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;홈;인기 항목;일괄 처리 수집;일괄 처리 수집;부분 수집;부분 수집;부분 수집;오류 검색;오류 검색;부분 일괄 처리 수집;부분 일괄 처리 수집;부분;수집;수집;수집;오류 진단;오류 진단 검색;오류 진단 가져오기;오류 진단 가져오기;오류 진단;오류 가져오기;오류 가져오기;오류 검색;
+keywords: Experience Platform;홈;인기 주제;일괄 처리 수집;일괄 처리 수집;부분 수집;부분 수집;부분 수집;오류 검색;오류 검색;부분 일괄 처리 수집;부분 일괄 처리 수집;부분;수집;수집;수집;오류 진단;오류 진단 검색;오류 진단 가져오기;오류 진단 가져오기;오류 진단 가져오기;오류 가져오기;오류 가져오기;오류 검색;
 solution: Experience Platform
 title: 데이터 수집 오류 진단 검색
 description: 이 문서에서는 일괄 처리 수집 모니터링, 부분 일괄 처리 수집 오류 관리 및 부분 일괄 처리 수집 유형에 대한 참조에 대한 정보를 제공합니다.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 8%
@@ -13,7 +13,7 @@ ht-degree: 8%
 
 # 데이터 수집 오류 진단 검색
 
-Adobe Experience Platform은 데이터를 업로드하고 수집하는 두 가지 방법을 제공합니다. 다양한 파일 형식(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 수집이나 스트리밍 끝점을 사용하여 실시간으로 해당 데이터를 [!DNL Platform]에 삽입할 수 있는 스트리밍 수집을 사용할 수 있습니다.
+Adobe Experience Platform은 데이터를 업로드하고 수집하는 두 가지 방법을 제공합니다. 다양한 파일 형식(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 수집이나 스트리밍 끝점을 사용하여 실시간으로 해당 데이터를 [!DNL Experience Platform]에 삽입할 수 있는 스트리밍 수집을 사용할 수 있습니다.
 
 이 문서에서는 일괄 처리 수집 모니터링, 부분 일괄 처리 수집 오류 관리 및 부분 일괄 처리 수집 유형에 대한 참조에 대한 정보를 제공합니다.
 
@@ -30,23 +30,23 @@ Adobe Experience Platform은 데이터를 업로드하고 수집하는 두 가�
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Schema Registry]에 속하는 리소스를 포함한 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Schema Registry]에 속하는 리소스를 포함한 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
+>[!DNL Experience Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
 ## 오류 진단 다운로드 {#download-diagnostics}
 
-Adobe Experience Platform을 사용하면 입력 파일의 오류 진단을 다운로드할 수 있습니다. 진단은 최대 30일 동안 [!DNL Platform] 내에 유지됩니다.
+Adobe Experience Platform을 사용하면 입력 파일의 오류 진단을 다운로드할 수 있습니다. 진단은 최대 30일 동안 [!DNL Experience Platform] 내에 유지됩니다.
 
 ### 입력 파일 나열 {#list-files}
 

@@ -4,9 +4,9 @@ description: API 또는 사용자 인터페이스를 사용하여 Oracle NetSuit
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '756'
 ht-degree: 2%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 2%
 >
 >[!DNL Oracle NetSuite] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions)를 참조하십시오.
 
-Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 Experience Platform은 데이터 수집 서드파티 마케팅 자동화 시스템에 대한 지원을 제공합니다. 마케팅 자동화 공급자에 대한 지원에는 [!DNL Oracle NetSuite]이(가) 포함됩니다.
 
 [[!DNL Oracle NetSuite]](https://www.netsuite.com/)은(는) ERP/재무, CRM 및 전자 상거래 솔루션을 포함하는 클라우드 기반 비즈니스 관리 세트입니다.
 
-서로 다른 두 소스를 사용하여 [!DNL Oracle NetSuite]에서 Experience Platform으로 데이터를 수집할 수 있습니다.
+두 개의 다른 소스를 사용하여 [!DNL Oracle NetSuite]에서 Experience Platform으로 데이터를 수집할 수 있습니다.
 
 * [!DNL Oracle NetSuite Activities] 원본을 사용하여 이벤트 데이터를 수집하십시오.
 * [!DNL Oracle NetSuite Entities] 원본을 사용하여 고객 및 연락처 데이터를 수집하십시오.
@@ -42,7 +42,7 @@ Experience Platform은 데이터 수집 서드파티 마케팅 자동화 시스�
 
 ## 전제 조건 {#prerequisites}
 
-[!DNL Oracle NetSuite] 데이터를 Experience Platform 상태로 전환하려면 먼저 다음을 확인해야 합니다.
+[!DNL Oracle NetSuite] 데이터를 Experience Platform으로 가져오려면 먼저 다음 사항을 확인해야 합니다.
 
 * **[!DNL Oracle NetSuite] 계정**&#x200B;입니다.
    * 올바른 계정이 아직 없는 경우 [[!DNL Oracle NetSuite]](https://www.NetSuite.com/portal/company/contactus.shtml)에 문의하세요.
@@ -58,7 +58,7 @@ Experience Platform은 데이터 수집 서드파티 마케팅 자동화 시스�
 
 ### 필요한 자격 증명 수집 {#gather-credentials}
 
-[!DNL Oracle NetSuite]을(를) 플랫폼에 연결하려면 다음 연결 속성에 대한 값을 제공해야 합니다.
+[!DNL Oracle NetSuite]을(를) Experience Platform에 연결하려면 다음 연결 속성에 대한 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 | 예 |
 | --- | --- | --- |
@@ -71,20 +71,20 @@ Experience Platform은 데이터 수집 서드파티 마케팅 자동화 시스�
 
 >[!IMPORTANT]
 >
->새로 고침 토큰이 만료되면 업데이트된 토큰으로 Experience Platform에 새 계정을 만들어야 합니다.
+>새로 고침 토큰이 만료되면 업데이트된 토큰으로 Experience Platform에서 새 계정을 만들어야 합니다.
 
-## [!DNL Oracle NetSuite Activities]을(를) 플랫폼에 연결 {#oracle-netsuite-activities}
+## Experience Platform에 [!DNL Oracle NetSuite Activities] 연결 {#oracle-netsuite-activities}
 
-아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Oracle NetSuite Activities]을(를) 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Oracle NetSuite Activities]을(를) Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
 
-* [API를 사용하여 소스 연결 및 데이터 흐름을 만들어  [!DNL Oracle NetSuite Activities] 데이터를 플랫폼으로 가져오기](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md).
+* [API를 사용하여  [!DNL Oracle NetSuite Activities] 데이터를 Experience Platform으로 가져오기](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)할 원본 연결 및 데이터 흐름을 만듭니다.
 * [UI를 사용하여  [!DNL Oracle NetSuite Activities] 계정을 Experience Platform에 연결](../../tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md).
 * [UI를 사용하여 원본 연결에 대한 데이터 흐름을 만듭니다](../../tutorials/ui/dataflow/marketing-automation.md).
 
-## [!DNL Oracle NetSuite Entities]을(를) 플랫폼에 연결 {#oracle-netsuite-entities}
+## Experience Platform에 [!DNL Oracle NetSuite Entities] 연결 {#oracle-netsuite-entities}
 
-아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Oracle NetSuite Entities]을(를) 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Oracle NetSuite Entities]을(를) Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
 
-* [API를 사용하여 소스 연결 및 데이터 흐름을 만들어  [!DNL Oracle NetSuite Entities] 데이터를 플랫폼으로 가져오기](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md).
+* [API를 사용하여  [!DNL Oracle NetSuite Entities] 데이터를 Experience Platform으로 가져오기](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)할 원본 연결 및 데이터 흐름을 만듭니다.
 * [UI를 사용하여  [!DNL Oracle NetSuite Entities] 계정을 Experience Platform에 연결](../../tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md).
 * [UI를 사용하여 원본 연결에 대한 데이터 흐름을 만듭니다](../../tutorials/ui/dataflow/marketing-automation.md).

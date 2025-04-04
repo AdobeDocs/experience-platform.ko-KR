@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;홈;인기 주제;스키마;스키마;열거형;믹스인;필드 그룹;필드 그룹;mixins;데이터 유형;데이터 유형;데이터 유형;데이터 유형;기본 ID;기본 ID;XDM 개별 프로필;XDM 필드;열거형 데이터 유형;경험 이벤트;XDM 경험 이벤트;XDM 경험 이벤트;experienceEvent;experienceevent;XDM 경험 이벤트;스키마 디자인;클래스;클래스;클래스;데이터 유형;데이터 유형;데이터 유형;스키마;ID맵;ID 맵;스키마 디자인;맵;유니온 스키마;유니온
+keywords: Experience Platform;홈;인기 주제;스키마;스키마;열거형;믹스인;필드 그룹;필드 그룹;mixins;데이터 유형;데이터 유형;데이터 유형;데이터 유형;기본 ID;기본 ID;XDM 개별 프로필;XDM 필드;열거형 데이터 유형;경험 이벤트;XDM 경험 이벤트;XDM 경험 이벤트;경험 이벤트;EXPERIENCEEVENT;XDM 경험 이벤트;스키마 디자인;클래스;클래스;클래스;클래스;데이터 유형;데이터 유형;데이터 유형;데이터 유형;스키마;ID 맵;ID 맵;스키마 디자인;맵;유니온 스키마;유니온
 solution: Experience Platform
 title: 스키마 컴포지션 기본 사항
 description: XDM(Experience Data Model) 스키마와 Adobe Experience Platform에서 스키마를 구성하기 위한 빌딩 블록, 원칙 및 모범 사례에 대해 알아봅니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 595d9bd6a0aa0c9f1059e485c54e89ce02b7ec68
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4365'
+source-wordcount: '4373'
 ht-degree: 8%
 
 ---
 
 # 스키마 컴포지션 기본 사항
 
-XDM(Experience Data Model) 스키마와 Adobe Experience Platform에서 스키마를 구성하기 위한 빌딩 블록, 원칙 및 모범 사례에 대해 알아봅니다. XDM 및 [!DNL Platform] 내에서 XDM을 사용하는 방법에 대한 일반 정보는 [XDM 시스템 개요](../home.md)를 참조하십시오.
+XDM(Experience Data Model) 스키마와 Adobe Experience Platform에서 스키마를 구성하기 위한 빌딩 블록, 원칙 및 모범 사례에 대해 알아봅니다. XDM 및 [!DNL Experience Platform] 내에서 XDM을 사용하는 방법에 대한 일반 정보는 [XDM 시스템 개요](../home.md)를 참조하십시오.
 
 ## 스키마 이해하기 {#understanding-schemas}
 
@@ -27,11 +27,11 @@ XDM 스키마는 대량의 복잡한 데이터를 자체 포함 형식으로 저
 
 ### Experience Platform의 스키마 기반 워크플로 {#schema-based-workflows}
 
-표준화는 Experience Platform 이면의 핵심 개념입니다. Adobe을 기반으로 하는 XDM은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 표준 스키마를 정의하는 작업입니다.
+표준화는 Experience Platform 뒤의 핵심 개념입니다. Adobe을 기반으로 하는 XDM은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 표준 스키마를 정의하는 작업입니다.
 
-Experience Platform이 빌드되는 인프라([!DNL XDM System])는 스키마 기반 워크플로를 용이하게 하며 [!DNL Schema Registry], [!DNL Schema Editor], 스키마 메타데이터 및 서비스 사용 패턴을 포함합니다. 자세한 내용은 [XDM 시스템 개요](../home.md)를 참조하십시오.
+Experience Platform이 빌드된 인프라([!DNL XDM System])는 스키마 기반 워크플로를 용이하게 하며 [!DNL Schema Registry], [!DNL Schema Editor], 스키마 메타데이터 및 서비스 사용 패턴을 포함합니다. 자세한 내용은 [XDM 시스템 개요](../home.md)를 참조하십시오.
 
-Experience Platform에서 스키마를 사용하면 몇 가지 주요 이점이 있습니다. 첫째, 스키마를 사용하면 데이터 거버넌스 및 데이터 최소화를 개선할 수 있으며, 이는 개인정보 보호 규정과 함께 특히 중요합니다. 둘째, Adobe의 표준 구성 요소를 사용하여 스키마를 빌드하면 즉시 통찰력을 얻을 수 있고 최소한의 사용자 지정으로 AI/ML 서비스를 사용할 수 있습니다. 마지막으로, 스키마는 데이터 공유 통찰력과 효율적인 오케스트레이션을 위한 인프라를 제공합니다.
+Experience Platform에서 스키마를 사용하면 몇 가지 주요 이점이 있습니다. 첫째, 스키마를 사용하면 데이터 거버넌스 및 데이터 최소화를 개선할 수 있으며, 이는 개인정보 보호 규정과 함께 특히 중요합니다. 둘째, Adobe의 표준 구성 요소를 사용하여 스키마를 구축하면 최소한의 맞춤화로 즉시 통찰력을 얻고 AI/ML 서비스를 사용할 수 있습니다. 마지막으로, 스키마는 데이터 공유 통찰력과 효율적인 오케스트레이션을 위한 인프라를 제공합니다.
 
 ## 스키마 계획 {#planning}
 
@@ -39,7 +39,7 @@ Experience Platform에서 스키마를 사용하면 몇 가지 주요 이점이 
 
 ### Experience Platform의 데이터 동작 {#data-behaviors}
 
-Experience Platform에 사용하기 위한 데이터는 다음 두 가지 동작 유형으로 그룹화됩니다.
+Experience Platform에서 사용하기 위한 데이터는 다음 두 가지 동작 유형으로 그룹화됩니다.
 
 * **레코드 데이터**: 제목의 특성에 대한 정보를 제공합니다. 주제는 조직 또는 개인일 수 있습니다.
 * **시계열 데이터**: 레코드 주체가 직접 또는 간접적으로 작업을 수행한 시간에 시스템의 스냅숏을 제공합니다.
@@ -55,7 +55,7 @@ Experience Platform에 사용하기 위한 데이터는 다음 두 가지 동작
 >title="스키마의 ID"
 >abstract="ID는 이메일 주소 또는 마케팅 ID와 같은 주제를 식별하는 데 사용할 수 있는 스키마 내의 핵심 필드입니다. 이들 필드는 각 개인의 ID 그래프를 구성하고 고객 프로필을 만드는 데 사용됩니다. 스키마의 ID에 대한 자세한 내용은 설명서를 참조하십시오."
 
-스키마는 데이터를 Experience Platform에 수집하는 데 사용됩니다. 이 데이터는 여러 서비스에 걸쳐 개별 엔터티의 단일 통합 보기를 만드는 데 사용할 수 있습니다. 따라서 고객 ID용 스키마를 디자인할 때는 데이터의 출처와 관계없이 주제를 식별하는 데 사용할 수 있는 필드를 고려하는 것이 중요합니다.
+스키마는 Experience Platform으로 데이터를 수집하는 데 사용됩니다. 이 데이터는 여러 서비스에 걸쳐 개별 엔터티의 단일 통합 보기를 만드는 데 사용할 수 있습니다. 따라서 고객 ID용 스키마를 디자인할 때는 데이터의 출처와 관계없이 주제를 식별하는 데 사용할 수 있는 필드를 고려하는 것이 중요합니다.
 
 이 프로세스를 지원하기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터를 수집하면 해당 필드의 데이터가 해당 개인의 &quot;[!UICONTROL ID 그래프]&quot;에 삽입됩니다. 그런 다음 [[!DNL Real-Time Customer Profile]](../../profile/home.md) 및 기타 Experience Platform 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 결합 보기를 제공할 수 있습니다.
 
@@ -63,7 +63,7 @@ Experience Platform에 사용하기 위한 데이터는 다음 두 가지 동작
 
 가능한 한 가장 강력한 프로필을 구축하기 위해 데이터를 통합하는 데 도움이 되는 스키마 계획 단계 동안 고객 ID에 대해 고려하는 것이 중요합니다. ID 정보를 통해 디지털 환경을 고객에게 제공하는 방법에 대한 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md)를 참조하세요. 스키마를 만들 때 ID 사용에 대한 [팁은 데이터 모델링 모범 사례 문서를 참조하십시오](./best-practices.md#data-validation-fields).
 
-ID 데이터를 Platform으로 전송하는 방법에는 두 가지가 있습니다.
+ID 데이터를 Experience Platform으로 전송하는 방법에는 두 가지가 있습니다.
 
 1. [스키마 편집기 UI](../ui/fields/identity.md)를 통해 또는 [스키마 레지스트리 API](../api/descriptors.md#create)를 사용하여 ID 설명자를 개별 필드에 추가하는 중
 1. [`identityMap` 필드 사용](#identityMap)
@@ -109,7 +109,7 @@ ID 데이터를 Platform으로 전송하는 방법에는 두 가지가 있습니
 }
 ```
 
-위의 예에서 보듯이 `identityMap` 개체의 각 키는 ID 네임스페이스를 나타냅니다. 각 키의 값은 각 네임스페이스의 ID 값(`id`)을 나타내는 개체 배열입니다. Adobe 응용 프로그램에서 인식하는 [표준 ID 네임스페이스 목록](../../identity-service/troubleshooting-guide.md#standard-namespaces)에 대해서는 [!DNL Identity Service] 설명서를 참조하십시오.
+위의 예에서 보듯이 `identityMap` 개체의 각 키는 ID 네임스페이스를 나타냅니다. 각 키의 값은 각 네임스페이스의 ID 값(`id`)을 나타내는 개체 배열입니다. Adobe 애플리케이션에서 인식하는 [표준 ID 네임스페이스 목록](../../identity-service/troubleshooting-guide.md#standard-namespaces)에 대해서는 [!DNL Identity Service] 설명서를 참조하십시오.
 
 >[!NOTE]
 >
@@ -119,11 +119,11 @@ ID 데이터를 Platform으로 전송하는 방법에는 두 가지가 있습니
 
 디지털 경험의 특성이 계속 발전함에 따라 이를 나타내는 데 사용되는 스키마도 진화해야 합니다. 따라서 잘 설계된 스키마는 이전 버전의 스키마에 파괴적인 변경 없이 필요에 따라 조정 및 발전할 수 있습니다.
 
-이전 버전과의 호환성을 유지하는 것은 스키마 진화에 중요하므로, Experience Platform은 완전히 부가적인 버전 관리 원칙을 적용합니다. 이 원칙은 스키마에 대한 모든 수정 사항이 비파괴적인 업데이트 및 변경만 발생하도록 보장합니다. 즉, **변경 내용 중단이 지원되지 않습니다.**
+이전 버전과의 호환성을 유지하는 것은 스키마 진화에 중요하므로, Experience Platform에서는 완전히 부가적인 버전 관리 원칙을 적용합니다. 이 원칙은 스키마에 대한 모든 수정 사항이 비파괴적인 업데이트 및 변경만 발생하도록 보장합니다. 즉, **변경 내용 중단이 지원되지 않습니다.**
 
 >[!NOTE]
 >
->아직 Experience Platform으로 데이터를 수집하는 데 사용되지 않고 실시간 고객 프로필에서 사용할 수 있도록 활성화되지 않은 스키마에만 획기적인 변경 사항을 적용할 수 있습니다. 그러나 [!DNL Platform]에서 스키마를 사용한 후에는 추가 버전 관리 정책을 준수해야 합니다.
+>아직 Experience Platform으로 데이터를 수집하는 데 사용되지 않고 실시간 고객 프로필에서 사용할 수 있도록 활성화되지 않은 스키마에만 변경 사항을 적용할 수 있습니다. 그러나 [!DNL Experience Platform]에서 스키마를 사용한 후에는 추가 버전 관리 정책을 준수해야 합니다.
 
 다음 표는 스키마, 필드 그룹 및 데이터 유형을 편집할 때 지원되는 변경 사항을 분류합니다.
 
@@ -139,7 +139,7 @@ ID 데이터를 Platform으로 전송하는 방법에는 두 가지가 있습니
 
 >[!IMPORTANT]
 >
->스키마 필드의 필요 여부에 관계없이, Platform은 수집된 모든 필드에 대해 `null` 또는 빈 값을 허용하지 않습니다. 레코드나 이벤트에 특정 필드에 대한 값이 없는 경우 해당 필드의 키를 수집 페이로드에서 제외해야 합니다.
+>스키마 필드의 필요 여부에 관계없이, Experience Platform은 수집된 모든 필드에 대해 `null` 또는 빈 값을 허용하지 않습니다. 레코드나 이벤트에 특정 필드에 대한 값이 없는 경우 해당 필드의 키를 수집 페이로드에서 제외해야 합니다.
 
 #### 수집 후 필요에 따라 필드 설정 {#post-ingestion-required-fields}
 
@@ -149,15 +149,15 @@ ID 데이터를 Platform으로 전송하는 방법에는 두 가지가 있습니
 
 1. 이전 데이터를 쿼리하고 결과를 새 데이터 세트에 쓰는 경우 일부 행에 필수 필드에 대한 null 값이 포함되어 있어 오류가 발생합니다.
 1. 필드가 [실시간 고객 프로필](../../profile/home.md)에 참여하고 필요에 따라 설정하기 전에 데이터를 내보내는 경우 일부 프로필의 경우 null일 수 있습니다.
-1. 스키마 레지스트리 API를 사용하여 새로운 필수 필드를 포함하여 플랫폼의 모든 XDM 리소스에 대한 타임스탬프가 지정된 변경 로그를 볼 수 있습니다. 자세한 내용은 [감사 로그 끝점](../api/audit-log.md)의 안내서를 참조하십시오.
+1. 스키마 레지스트리 API를 사용하여 새 필수 필드를 포함하여 Experience Platform의 모든 XDM 리소스에 대한 타임스탬프가 지정된 변경 로그를 볼 수 있습니다. 자세한 내용은 [감사 로그 끝점](../api/audit-log.md)의 안내서를 참조하십시오.
 
 ### 스키마 및 데이터 수집
 
-데이터를 Experience Platform으로 수집하려면 먼저 데이터 세트를 만들어야 합니다. 데이터 집합은 [[!DNL Catalog Service]](../../catalog/home.md)에 대한 데이터 변환 및 추적을 위한 기본 구성단위이며 일반적으로 수집된 데이터가 포함된 테이블 또는 파일을 나타냅니다. 모든 데이터 세트는 기존 XDM 스키마를 기반으로 하며, 이는 수집된 데이터에 포함해야 하는 항목과 데이터 구성 방법에 대한 제약 조건을 제공합니다. 자세한 내용은 [Adobe Experience Platform 데이터 수집](../../ingestion/home.md)에 대한 개요를 참조하십시오.
+Experience Platform으로 데이터를 수집하려면 먼저 데이터 세트를 만들어야 합니다. 데이터 집합은 [[!DNL Catalog Service]](../../catalog/home.md)에 대한 데이터 변환 및 추적을 위한 기본 구성단위이며 일반적으로 수집된 데이터가 포함된 테이블 또는 파일을 나타냅니다. 모든 데이터 세트는 기존 XDM 스키마를 기반으로 하며, 이는 수집된 데이터에 포함해야 하는 항목과 데이터 구성 방법에 대한 제약 조건을 제공합니다. 자세한 내용은 [Adobe Experience Platform 데이터 수집](../../ingestion/home.md)에 대한 개요를 참조하십시오.
 
 ## 스키마의 빌딩 블록 {#schema-building-blocks}
 
-Experience Platform은 표준 빌딩 블록이 결합되어 스키마를 만드는 작성 접근 방식을 사용합니다. 이 접근 방식은 기존 구성 요소의 재사용을 촉진하고 업계 전반의 표준화를 유도하여 [!DNL Platform]의 공급업체 스키마 및 구성 요소를 지원합니다.
+Experience Platform에서는 표준 빌딩 블록이 결합되어 스키마를 만드는 작성 접근 방식을 사용합니다. 이 접근 방식은 기존 구성 요소의 재사용을 촉진하고 업계 전반의 표준화를 유도하여 [!DNL Experience Platform]의 공급업체 스키마 및 구성 요소를 지원합니다.
 
 스키마는 다음 공식을 사용하여 구성됩니다.
 
@@ -181,9 +181,9 @@ Experience Platform은 표준 빌딩 블록이 결합되어 스키마를 만드�
 
 스키마의 클래스는 해당 스키마에서 사용할 수 있는 필드 그룹을 결정합니다. 자세한 내용은 [다음 섹션](#field-group)을 참조하세요.
 
-Adobe은 몇 가지 표준(&quot;코어&quot;) XDM 클래스를 제공합니다. 이러한 클래스 중 두 개([!DNL XDM Individual Profile] 및 [!DNL XDM ExperienceEvent])는 거의 모든 다운스트림 플랫폼 프로세스에 필요합니다. 이러한 핵심 클래스 외에도 자신만의 사용자 지정 클래스를 만들어 조직에 대한 보다 구체적인 사용 사례를 설명할 수도 있습니다. 사용자 정의 클래스는 고유한 사용 사례를 설명하는 데 사용할 수 있는 Adobe 정의 코어 클래스가 없는 경우 조직에서 정의합니다.
+Adobe은 몇 가지 표준(&quot;코어&quot;) XDM 클래스를 제공합니다. 이러한 클래스 중 두 개([!DNL XDM Individual Profile] 및 [!DNL XDM ExperienceEvent])는 거의 모든 다운스트림 Experience Platform 프로세스에 필요합니다. 이러한 핵심 클래스 외에도 자신만의 사용자 지정 클래스를 만들어 조직에 대한 보다 구체적인 사용 사례를 설명할 수도 있습니다. 고유한 사용 사례를 설명하는 데 사용할 수 있는 Adobe 정의 핵심 클래스가 없는 경우 조직에서 사용자 정의 클래스를 정의합니다.
 
-다음 스크린샷은 Platform UI에서 클래스가 표현되는 방법을 보여 줍니다. 표시된 예제 스키마에는 필드 그룹이 없으므로 표시되는 모든 필드는 스키마의 클래스([!UICONTROL XDM 개인 프로필])에서 제공합니다.
+다음 스크린샷은 Experience Platform UI에서 클래스가 표현되는 방법을 보여 줍니다. 표시된 예제 스키마에는 필드 그룹이 없으므로 표시되는 모든 필드는 스키마의 클래스([!UICONTROL XDM 개인 프로필])에서 제공합니다.
 
 ![스키마 편집기 내의 [!UICONTROL XDM 개별 프로필].](../images/schema-composition/class.png)
 
@@ -205,19 +205,19 @@ Adobe은 몇 가지 표준(&quot;코어&quot;) XDM 클래스를 제공합니다.
 
 필드 그룹은 나타내는 데이터(레코드 또는 시계열)의 동작을 기반으로 호환되는 클래스를 정의합니다. 즉, 모든 필드 그룹을 모든 클래스에서 사용할 수 있는 것은 아닙니다.
 
-Experience Platform은 많은 표준 Adobe 필드 그룹을 포함하며 공급업체는 해당 사용자를 위한 필드 그룹을 정의할 수 있고 개별 사용자는 고유한 개념에 맞는 필드 그룹을 정의할 수 있습니다.
+Experience Platform에는 많은 표준 Adobe 필드 그룹이 포함되어 있으며 공급업체는 이를 통해 사용자를 위한 필드 그룹을 정의하고 개별 사용자는 고유한 개념에 대한 필드 그룹을 정의할 수 있습니다.
 
 예를 들어 &quot;[!UICONTROL 충성도 멤버]&quot; 스키마에 대한 &quot;[!UICONTROL 이름]&quot; 및 &quot;[!UICONTROL 홈 주소]&quot; 등의 세부 정보를 캡처하려면 일반적인 개념을 정의하는 표준 필드 그룹을 사용할 수 있습니다. 그러나 조직에 더 고유한 개념(예: 사용자 정의 충성도 프로그램 세부 정보 또는 제품 속성)은 표준 필드 그룹에서 다루지 않을 수 있습니다. 이 경우 이 정보를 캡처하려면 고유한 필드 그룹을 정의해야 합니다.
 
 >[!NOTE]
 >
->스키마에서 가능한 경우 표준 필드 그룹을 사용하는 것이 좋습니다. 이러한 필드는 Experience Platform 서비스에 의해 암시적으로 인식되며 [!DNL Platform] 구성 요소에서 사용할 때 일관성을 높일 수 있기 때문입니다.
+>표준 필드 그룹은 Experience Platform 서비스에 의해 암시적으로 인식되며, [!DNL Experience Platform] 구성 요소에서 사용할 때 일관성을 높일 수 있으므로 가능한 한 스키마에서 사용하는 것이 좋습니다.
 >
->표준 구성 요소에서 제공하는 필드 (&quot;이름&quot; 및 &quot;이메일 주소&quot; 등)에는 기본 스칼라 필드 유형 이상의 추가된 함축이 포함됩니다. 같은 데이터 형식을 공유하는 모든 필드가 같은 방식으로 동작한다고 [!DNL Platform]에게 알립니다. 이 동작은 데이터의 출처 또는 데이터를 사용하는 [!DNL Platform] 서비스에 관계없이 일관되도록 신뢰할 수 있습니다.
+>표준 구성 요소에서 제공하는 필드 (&quot;이름&quot; 및 &quot;이메일 주소&quot; 등)에는 기본 스칼라 필드 유형 이상의 추가된 함축이 포함됩니다. 같은 데이터 형식을 공유하는 모든 필드가 같은 방식으로 동작한다고 [!DNL Experience Platform]에게 알립니다. 이 동작은 데이터의 출처 또는 데이터를 사용하는 [!DNL Experience Platform] 서비스에 관계없이 일관되도록 신뢰할 수 있습니다.
 
 스키마는 &quot;0개 이상&quot;의 필드 그룹으로 구성되어 있으므로 필드 그룹을 전혀 사용하지 않고도 유효한 스키마를 구성할 수 있음을 의미합니다.
 
-다음 스크린샷은 Platform UI에서 필드 그룹이 어떻게 표시되는지 보여 줍니다. 단일 필드 그룹([!UICONTROL 인구 통계 세부 정보])이 이 예제의 스키마에 추가되어 스키마 구조에 대한 필드 그룹화를 제공합니다.
+다음 스크린샷은 Experience Platform UI에 필드 그룹이 어떻게 표시되는지 보여 줍니다. 단일 필드 그룹([!UICONTROL 인구 통계 세부 정보])이 이 예제의 스키마에 추가되어 스키마 구조에 대한 필드 그룹화를 제공합니다.
 
 ![예제 스키마에서 [!UICONTROL 인구 통계학적 세부 정보] 필드 그룹이 강조 표시된 스키마 편집기.](../images/schema-composition/field-group.png)
 
@@ -235,9 +235,9 @@ Experience Platform은 많은 표준 Adobe 필드 그룹을 포함하며 공급�
 >
 >필드가 특정 데이터 유형으로 정의된 경우 다른 스키마에서 다른 데이터 유형으로 동일한 필드를 생성할 수 없습니다. 이 제한은 조직의 테넌트 전체에 적용됩니다.
 
-Experience Platform은 [!DNL Schema Registry]의 일부로 여러 가지 공통 데이터 형식을 제공하여 공통 데이터 구조를 설명하는 표준 패턴을 사용할 수 있도록 지원합니다. 이 내용은 [스키마 레지스트리 튜토리얼](../tutorials/create-schema-api.md)에 자세히 설명되어 있으며 데이터 형식을 정의하는 단계를 거칠 때 명확해집니다.
+Experience Platform에서는 일반적인 데이터 구조를 설명하는 표준 패턴을 사용할 수 있도록 [!DNL Schema Registry]의 일부로 여러 가지 일반적인 데이터 형식을 제공합니다. 이 내용은 [스키마 레지스트리 튜토리얼](../tutorials/create-schema-api.md)에 자세히 설명되어 있으며 데이터 형식을 정의하는 단계를 거칠 때 명확해집니다.
 
-다음 스크린샷은 Platform UI에서 데이터 유형이 표현되는 방법을 보여 줍니다. [!UICONTROL 인구 통계학적 세부 정보] 필드 그룹에서 제공한 필드 중 하나가 필드 이름 옆에 있는 파이프 문자(`|`) 뒤에 있는 텍스트로 표시된 &quot;[!UICONTROL Object]&quot; 데이터 형식을 사용합니다. 이 특정 데이터 유형은 개별 사용자의 이름과 관련된 여러 하위 필드를 제공하며, 개인의 이름을 캡처해야 하는 다른 필드에 다시 사용할 수 있는 구성입니다.
+다음 스크린샷은 Experience Platform UI에 데이터 유형이 표현되는 방법을 보여 줍니다. [!UICONTROL 인구 통계학적 세부 정보] 필드 그룹에서 제공한 필드 중 하나가 필드 이름 옆에 있는 파이프 문자(`|`) 뒤에 있는 텍스트로 표시된 &quot;[!UICONTROL Object]&quot; 데이터 형식을 사용합니다. 이 특정 데이터 유형은 개별 사용자의 이름과 관련된 여러 하위 필드를 제공하며, 개인의 이름을 캡처해야 하는 다른 필드에 다시 사용할 수 있는 구성입니다.
 
 ![전체 이름 개체 및 특성이 강조 표시된 개인을 위한 스키마 편집기의 다이어그램입니다.](../images/schema-composition/data-type.png)
 
@@ -249,7 +249,7 @@ Experience Platform은 [!DNL Schema Registry]의 일부로 여러 가지 공통 
 
 ### 필드 {#field}
 
-필드는 스키마의 가장 기본적인 빌딩 블록입니다. 필드는 특정 데이터 형식을 정의하여 포함할 수 있는 데이터 형식과 관련된 제약 조건을 제공합니다. 이러한 기본 데이터 형식은 단일 필드를 정의하는 반면, 이전에 언급된 [데이터 형식](#data-type)을(를) 사용하면 여러 하위 필드를 정의하고 여러 스키마 전체에서 동일한 다중 필드 구조를 재사용할 수 있습니다. 따라서 Experience Platform은 필드의 &quot;데이터 유형&quot;을 레지스트리에 정의된 데이터 유형 중 하나로 정의하는 것 외에도 다음과 같은 기본 스칼라 유형을 지원합니다.
+필드는 스키마의 가장 기본적인 빌딩 블록입니다. 필드는 특정 데이터 형식을 정의하여 포함할 수 있는 데이터 형식과 관련된 제약 조건을 제공합니다. 이러한 기본 데이터 형식은 단일 필드를 정의하는 반면, 이전에 언급된 [데이터 형식](#data-type)을(를) 사용하면 여러 하위 필드를 정의하고 여러 스키마 전체에서 동일한 다중 필드 구조를 재사용할 수 있습니다. 따라서 필드의 &quot;데이터 유형&quot;을 레지스트리에 정의된 데이터 유형 중 하나로 정의하는 것 외에도 Experience Platform은 다음과 같은 기본 스칼라 유형을 지원합니다.
 
 * 문자열
 * 정수
@@ -268,7 +268,7 @@ Experience Platform은 [!DNL Schema Registry]의 일부로 여러 가지 공통 
 * Long
 * 짧음
 * 바이트
-* 날짜
+* 일자
 * 날짜-시간
 * 맵
 
@@ -278,7 +278,7 @@ Experience Platform은 [!DNL Schema Registry]의 일부로 여러 가지 공통 
 
 ## 컴포지션 예 {#composition-example}
 
-스키마는 컴포지션 모델을 사용하여 만들어지며 [!DNL Platform]에 수집할 데이터의 형식 및 구조를 나타냅니다. 앞에서 언급했듯이 이러한 스키마는 클래스와 해당 클래스와 호환되는 0개 이상의 필드 그룹으로 구성됩니다.
+스키마는 컴포지션 모델을 사용하여 만들어지며 [!DNL Experience Platform]에 수집할 데이터의 형식 및 구조를 나타냅니다. 앞에서 언급했듯이 이러한 스키마는 클래스와 해당 클래스와 호환되는 0개 이상의 필드 그룹으로 구성됩니다.
 
 예를 들어 소매점에서 구매한 항목을 설명하는 스키마를 &quot;[!UICONTROL 스토어 트랜잭션]&quot;이라고 할 수 있습니다. 스키마는 표준 [!UICONTROL Commerce] 필드 그룹 및 사용자 정의 [!UICONTROL 제품 정보] 필드 그룹과 결합된 [!DNL XDM ExperienceEvent] 클래스를 구현합니다.
 
@@ -294,17 +294,17 @@ Experience Platform을 사용하면 특정 사용 사례에 맞게 스키마를 
 
 ![유니온 스키마를 구성하는 필드를 나타내는 유니온 스키마 흐름 다이어그램입니다.](../images/schema-composition/union.png)
 
-[!DNL Real-Time Customer Profile]에 사용할 스키마를 활성화하면 해당 클래스 형식의 유니온에 포함됩니다. [!DNL Profile]은(는) 고객 특성에 대한 강력한 중앙 집중식 프로필과 [!DNL Platform]과(와) 통합된 모든 시스템에서 고객이 경험한 모든 이벤트에 대한 타임스탬프가 지정된 계정을 제공합니다. [!DNL Profile]은(는) 유니온 보기를 사용하여 이 데이터를 나타내고 각 개별 고객에 대한 거시적인 보기를 제공합니다.
+[!DNL Real-Time Customer Profile]에 사용할 스키마를 활성화하면 해당 클래스 형식의 유니온에 포함됩니다. [!DNL Profile]은(는) 고객 특성에 대한 강력한 중앙 집중식 프로필과 [!DNL Experience Platform]과(와) 통합된 모든 시스템에서 고객이 경험한 모든 이벤트에 대한 타임스탬프가 지정된 계정을 제공합니다. [!DNL Profile]은(는) 유니온 보기를 사용하여 이 데이터를 나타내고 각 개별 고객에 대한 거시적인 보기를 제공합니다.
 
 [!DNL Profile] 작업에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md)를 참조하십시오.
 
 ## XDM 스키마에 데이터 파일 매핑 {#mapping-datafiles}
 
-Experience Platform에 수집되는 모든 데이터 파일은 XDM 스키마 구조를 준수해야 합니다. XDM 계층 구조(샘플 파일 포함)를 준수하도록 데이터 파일의 형식을 지정하는 방법에 대한 자세한 내용은 [샘플 ETL 변환](../../etl/transformations.md)에 대한 문서를 참조하십시오. 데이터 파일을 Experience Platform으로 수집하는 방법에 대한 일반적인 정보는 [일괄 처리 수집 개요](../../ingestion/batch-ingestion/overview.md)를 참조하십시오.
+Experience Platform에 수집되는 모든 데이터 파일은 XDM 스키마 구조를 준수해야 합니다. XDM 계층 구조(샘플 파일 포함)를 준수하도록 데이터 파일의 형식을 지정하는 방법에 대한 자세한 내용은 [샘플 ETL 변환](../../etl/transformations.md)에 대한 문서를 참조하십시오. Experience Platform으로 데이터 파일을 수집하는 방법에 대한 일반적인 정보는 [일괄 처리 수집 개요](../../ingestion/batch-ingestion/overview.md)를 참조하십시오.
 
 ## 외부 대상자용 스키마
 
-외부 시스템의 대상을 Platform으로 가져오는 경우 다음 구성 요소를 사용하여 스키마에서 캡처해야 합니다.
+외부 시스템의 대상을 Experience Platform으로 가져오는 경우 다음 구성 요소를 사용하여 스키마에서 캡처해야 합니다.
 
 * [[!UICONTROL 세그먼트 정의] 클래스](../classes/segment-definition.md): 이 표준 클래스를 사용하여 외부 세그먼트 정의의 주요 특성을 캡처할 수 있습니다.
 * [[!UICONTROL 세그먼트 멤버십 세부 정보] 필드 그룹](../field-groups/profile/segmentation.md): 이 필드 그룹을 [!UICONTROL XDM 개인 프로필] 스키마에 추가하여 고객 프로필을 특정 대상과 연결합니다.
@@ -318,7 +318,7 @@ Experience Platform에 수집되는 모든 데이터 파일은 XDM 스키마 구
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-[!DNL Schema Registry]은(는) Adobe Experience Platform 내에서 [!DNL Schema Library]에 액세스하는 데 사용되며 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. [!DNL Schema Library]에는 Adobe에 의해 정의된 업계 리소스, Experience Platform 파트너에 의해 정의된 공급업체 리소스, 조직의 멤버가 구성한 클래스, 필드 그룹, 데이터 형식 및 스키마가 포함되어 있습니다.
+[!DNL Schema Registry]은(는) Adobe Experience Platform 내에서 [!DNL Schema Library]에 액세스하는 데 사용되며 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. [!DNL Schema Library]에는 Adobe이 정의한 업계 리소스, Experience Platform 파트너가 정의한 공급업체 리소스, 조직의 멤버가 구성한 클래스, 필드 그룹, 데이터 형식 및 스키마가 포함되어 있습니다.
 
 UI를 사용하여 스키마 작성을 시작하려면 [스키마 편집기 튜토리얼](../tutorials/create-schema-ui.md)과(와) 함께 이 문서 전체에서 언급된 &quot;충성도 멤버&quot; 스키마를 빌드하십시오.
 

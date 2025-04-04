@@ -2,16 +2,17 @@
 keywords: 카탈로그 서비스, 질문, 자주 묻는 질문, faq, 데이터 세트 faq
 title: 자주 묻는 질문
 description: Adobe Experience Platform 카탈로그 서비스 및 데이터 세트에 대해 가장 자주 묻는 질문에 대한 답변입니다.
-source-git-commit: 0bb10754e2f5bc289567368c803d4397cec77bf6
+exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
 
 # 자주 묻는 질문 {#faq}
 
-이 문서에서는 Adobe Experience Platform 카탈로그 서비스 및 데이터 세트에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 모든 Platform API에서 발생하는 문제를 포함하여 다른 Platform 서비스와 관련된 질문 및 문제 해결은 [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
+이 문서에서는 Adobe Experience Platform 카탈로그 서비스 및 데이터 세트에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 모든 Experience Platform API에서 발생하는 문제를 포함하여 다른 Experience Platform 서비스와 관련된 질문 및 문제 해결은 [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
 
 ## 보존 정책 및 규칙 {#retention-policies-and-rules}
 
@@ -37,7 +38,7 @@ ExperienceEvent XDM 클래스를 사용하여 만든 데이터 세트에 대해 
 
 +++답변
 
-데이터 세트 만료는 매주 평가되고 처리되며 만료된 모든 레코드를 삭제합니다. 이벤트가 30일 이상(수집 날짜 > 30일) 플랫폼으로 수집되고 이벤트 날짜가 정의된 보존 기간을 초과하는 경우 만료된 것으로 간주됩니다.
+데이터 세트 만료는 매주 평가되고 처리되며 만료된 모든 레코드를 삭제합니다. 이벤트가 30일 이상 Experience Platform에 수집되고(수집 날짜 > 30일) 이벤트 날짜가 정의된 보존 기간을 초과하는 경우 만료된 것으로 간주됩니다.
 
 +++
 
@@ -45,7 +46,7 @@ ExperienceEvent XDM 클래스를 사용하여 만든 데이터 세트에 대해 
 
 +++답변
 
-보존 정책이 설정되면 이벤트 타임스탬프가 보존 기간을 초과하는 경우 기존 이벤트가 플랫폼에서 즉시 삭제됩니다. 타임스탬프가 유지 기간을 초과하면 새 이벤트가 삭제됩니다.
+보존 정책이 설정되면 이벤트 타임스탬프가 보존 기간을 초과하는 경우 기존 이벤트가 Experience Platform에서 즉시 삭제됩니다. 타임스탬프가 유지 기간을 초과하면 새 이벤트가 삭제됩니다.
 
 예를 들어 5월 15일에 30일 만료 정책을 적용하면 다음과 같이 됩니다.
 
@@ -82,4 +83,3 @@ ExperienceEvent XDM 클래스를 사용하여 만든 데이터 세트에 대해 
 아니요. 보존 정책이 적용되면 보존 기간보다 오래된 데이터는 영구적으로 삭제되며 복구할 수 없습니다.
 
 +++
-

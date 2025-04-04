@@ -1,16 +1,16 @@
 ---
-title: 사용자 인터페이스를 사용하여 Stripe 계정에서 Experience Platform으로 결제 데이터를 수집합니다.
-description: 사용자 인터페이스를 사용하여 Stripe 계정에서 Experience Platform으로 결제 데이터를 수집하는 방법을 알아봅니다.
+title: 사용자 인터페이스를 사용하여 Stripe 계정의 결제 데이터를 Experience Platform으로 수집합니다.
+description: 사용자 인터페이스를 사용하여 Stripe 계정의 결제 데이터를 Experience Platform으로 수집하는 방법에 대해 알아봅니다.
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: dd9afe650f4c83b3877f980acac66e703e9ae5d8
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1658'
 ht-degree: 3%
 
 ---
 
-# 사용자 인터페이스를 사용하여 [!DNL Stripe] 계정에서 Experience Platform으로 결제 데이터 수집
+# 사용자 인터페이스를 사용하여 [!DNL Stripe] 계정의 결제 데이터를 Experience Platform으로 수집
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 ## 시작하기
 
-이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 ## [!DNL Stripe] 계정 연결 {#connect}
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
 *결제* 범주에서 **[!DNL Stripe]**&#x200B;을(를) 선택한 다음 **[!UICONTROL 설정]**&#x200B;을(를) 선택합니다.
 
@@ -41,7 +41,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 >
 >지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL 설정]** 옵션이 표시됩니다. 인증된 계정이 있으면 이 옵션이 **[!UICONTROL 데이터 추가]**(으)로 변경됩니다.
 
-![Experience Platform UI의 소스 카탈로그에서 Stripe 소스 카드를 선택했습니다.](../../../../images/tutorials/create/stripe/catalog.png)
+![Experience Platform 소스 카드가 선택된 Stripe UI의 소스 카탈로그입니다.](../../../../images/tutorials/create/stripe/catalog.png)
 
 **[!UICONTROL Stripe 계정 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
 
@@ -121,7 +121,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 Real-Time Customer Profile에 대해 데이터 세트를 사용하도록 설정한 경우 이 단계에서 **[!UICONTROL 프로필 데이터 세트]**&#x200B;를 전환하여 프로필 수집을 위해 데이터를 사용하도록 설정할 수 있습니다. 이 단계를 사용하여 **[!UICONTROL 오류 진단]** 및 **[!UICONTROL 부분 수집]**&#x200B;을 사용하도록 설정할 수도 있습니다.
 
 * **[!UICONTROL 오류 진단]**: **[!UICONTROL 오류 진단]**&#x200B;을 선택하여 데이터 집합 활동 및 데이터 흐름 상태를 모니터링할 때 나중에 참조할 수 있는 오류 진단을 생성하도록 소스에 지시합니다.
-* **[!UICONTROL 부분 수집]**: 부분 일괄 처리 수집은 구성 가능한 특정 임계값까지 오류가 포함된 데이터를 수집하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Experience Platform으로 성공적으로 수집할 수 있으며 잘못된 데이터는 모두 잘못된 이유에 대한 정보로 별도로 배치됩니다.
+* **[!UICONTROL 부분 수집]**: 부분 일괄 처리 수집은 구성 가능한 특정 임계값까지 오류가 포함된 데이터를 수집하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Experience Platform에 성공적으로 수집할 수 있으며 잘못된 데이터는 모두 잘못된 이유에 대한 정보로 별도로 배치됩니다.
 
 +++
 
@@ -182,7 +182,7 @@ Real-Time Customer Profile에 대해 데이터 세트를 사용하도록 설정�
 
 ## 다음 단계
 
-이 자습서를 따라 [!DNL Stripe] 원본에서 결제 데이터를 Experience Platform 상태로 가져오는 데이터 흐름을 만들었습니다. 추가 리소스는 아래 설명된 설명서를 참조하십시오.
+이 자습서를 따라 데이터 흐름을 만들어 [!DNL Stripe] 원본에서 Experience Platform으로 결제 데이터를 가져왔습니다. 추가 리소스는 아래 설명된 설명서를 참조하십시오.
 
 ### 데이터 흐름 모니터링
 

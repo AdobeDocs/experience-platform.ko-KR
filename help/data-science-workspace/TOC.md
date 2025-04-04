@@ -6,10 +6,10 @@ user-guide-description: 머신 러닝을 활용하여 Adobe Sensei 및 JupyterLa
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 32%
+source-wordcount: '227'
+ht-degree: 33%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 32%
    * [실험](api/experiments.md)
    * [모델](api/models.md)
    * [MLSservices](api/mlservices.md)
-   * [Insights](api/insights.md)
+   * [인사이트](api/insights.md)
    * [부록](api/appendix.md)
 * 미리 빌드된 레시피 {#pre-built-recipes}
    * [제품 추천 레시피](pre-built-recipes/product-recommendations.md)
@@ -43,7 +43,7 @@ ht-degree: 32%
 * 모델 작성 {#authoring}
    * [모델 작성 SDK](authoring/sdk.md)
    * [피쳐 파이프라인 생성](authoring/feature-pipeline.md)
-   * [Platform SDK(Python)를 사용한 모델 작성](authoring/platform-sdk.md)
+   * [Experience Platform SDK(Python)를 사용하여 모델 작성](authoring/platform-sdk.md)
    * [Python 데이터 액세스](authoring/python.md)
    * [Spark 데이터 액세스](authoring/spark.md)
 * 모델 및 레시피 튜토리얼 {#models-recipes}
@@ -60,9 +60,9 @@ ht-degree: 32%
    * [모델 점수 매기기(API)](models-recipes/score-model-api.md)
    * [모델 최적화](models-recipes/optimize-model.md)
    * [머신 러닝 통찰력을 통해 실시간 고객 프로필 강화](models-recipes/enrich-profile.md)
-   * [Publish a model as a service (UI)](models-recipes/publish-model-service-ui.md)
-   * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
+   * [모델을 서비스로 게시(UI)](models-recipes/publish-model-service-ui.md)
+   * [모델을 서비스(API)로 게시](models-recipes/publish-model-service-api.md)
    * [서비스에서 자동화된 교육 및 채점 예약(UI)](models-recipes/schedule-models-ui.md)
 * [문제 해결 안내서](troubleshooting-guide.md)
 * [API 참조](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
-* [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+* [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

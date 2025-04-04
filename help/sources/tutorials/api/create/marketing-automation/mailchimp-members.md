@@ -4,16 +4,16 @@ solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 Mailchimp 구성원에 대한 데이터 흐름 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 MailChimp 구성원에 연결하는 방법을 알아봅니다.
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2112'
 ht-degree: 1%
 
 ---
 
 # 흐름 서비스 API를 사용하여 [!DNL Mailchimp Members]에 대한 데이터 흐름 만들기
 
-다음 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Mailchimp Members] 데이터를 플랫폼으로 가져오기 위한 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다.
+다음 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Mailchimp Members] 데이터를 Experience Platform으로 가져오기 위한 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다.
 
 ## 전제 조건
 
@@ -21,15 +21,15 @@ OAuth 2 새로 고침 코드를 사용하여 [!DNL Mailchimp]을(를) Adobe Expe
 
 ## 기본 연결 만들기 {#base-connection}
 
-[!DNL Mailchimp] 인증 자격 증명을 검색했으면 이제 데이터 흐름을 만드는 프로세스를 시작하여 [!DNL Mailchimp Members] 데이터를 플랫폼으로 가져올 수 있습니다. 데이터 흐름을 만드는 첫 번째 단계는 기본 연결을 만드는 것입니다.
+[!DNL Mailchimp] 인증 자격 증명을 검색했으면 이제 데이터 흐름을 만드는 프로세스를 시작하여 [!DNL Mailchimp Members] 데이터를 Experience Platform으로 가져올 수 있습니다. 데이터 흐름을 만드는 첫 번째 단계는 기본 연결을 만드는 것입니다.
 
-기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
+기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 Experience Platform 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
 [!DNL Mailchimp]은(는) 기본 인증과 OAuth 2 새로 고침 코드를 모두 지원합니다. 두 인증 유형 중 하나로 인증하는 방법에 대한 지침은 다음 예를 참조하십시오.
 
 ### 기본 인증을 사용하여 [!DNL Mailchimp] 기본 연결 만들기
 
-기본 인증을 사용하여 [!DNL Mailchimp] 기본 연결을 만들려면 `authorizationTestUrl`, `username` 및 `password`에 대한 자격 증명을 제공하는 동안 [!DNL Flow Service] API의 `/connections` 끝점에 POST 요청을 하십시오.
+기본 인증을 사용하여 [!DNL Mailchimp] 기본 연결을 만들려면 `authorizationTestUrl`, `username` 및 `password`에 대한 자격 증명을 제공하는 동안 [!DNL Flow Service] API의 `/connections` 끝점에 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -72,7 +72,7 @@ curl -X POST \
 | `name` | 기본 연결의 이름입니다. 기본 연결에 대한 정보를 조회하는 데 사용할 수 있으므로 기본 연결의 이름이 설명적인지 확인하십시오. |
 | `description` | (선택 사항) 기본 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
 | `connectionSpec.id` | 소스의 연결 사양 ID입니다. 이 ID는 [!DNL Flow Service] API를 통해 소스를 등록 및 승인한 후에 검색할 수 있습니다. |
-| `auth.specName` | 소스를 플랫폼에 연결하는 데 사용하는 인증 유형입니다. |
+| `auth.specName` | 소스를 Experience Platform에 연결하는 데 사용하는 인증 유형입니다. |
 | `auth.params.authorizationTestUrl` | (선택 사항) 인증 테스트 URL은 기본 연결을 만들 때 자격 증명의 유효성을 검사하는 데 사용됩니다. 제공되지 않으면 소스 연결 생성 단계에서 자격 증명이 자동으로 확인됩니다. |
 | `auth.params.username` | [!DNL Mailchimp] 계정에 해당하는 사용자 이름. 기본 인증에 필요합니다. |
 | `auth.params.password` | [!DNL Mailchimp] 계정에 해당하는 암호입니다. 기본 인증에 필요합니다. |
@@ -90,7 +90,7 @@ curl -X POST \
 
 ### OAuth 2 새로 고침 코드를 사용하여 [!DNL Mailchimp] 기본 연결 만들기
 
-OAuth 2 새로 고침 코드를 사용하여 [!DNL Mailchimp] 기본 연결을 만들려면 `authorizationTestUrl` 및 `accessToken`에 대한 자격 증명을 제공하는 동안 `/connections` 끝점에 POST 요청을 하십시오.
+OAuth 2 새로 고침 코드를 사용하여 [!DNL Mailchimp] 기본 연결을 만들려면 `authorizationTestUrl` 및 `accessToken`에 대한 자격 증명을 제공하는 동안 `/connections` 끝점에 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -132,7 +132,7 @@ curl -X POST \
 | `name` | 기본 연결의 이름입니다. 기본 연결에 대한 정보를 조회하는 데 사용할 수 있으므로 기본 연결의 이름이 설명적인지 확인하십시오. |
 | `description` | (선택 사항) 기본 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
 | `connectionSpec.id` | 소스의 연결 사양 ID입니다. 이 ID는 [!DNL Flow Service] API를 사용하여 소스를 등록한 후에 검색할 수 있습니다. |
-| `auth.specName` | Platform에 소스를 인증하기 위해 사용하는 인증 유형입니다. |
+| `auth.specName` | Experience Platform에 소스를 인증하기 위해 사용하는 인증 유형입니다. |
 | `auth.params.authorizationTestUrl` | (선택 사항) 인증 테스트 URL은 기본 연결을 만들 때 자격 증명의 유효성을 검사하는 데 사용됩니다. 제공되지 않으면 소스 연결 생성 단계에서 자격 증명이 자동으로 확인됩니다. |
 | `auth.params.accessToken` | 소스 인증에 사용되는 해당 액세스 토큰입니다. OAuth 기반 인증에 필요합니다. |
 
@@ -161,7 +161,7 @@ curl -X POST \
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&sourceParams={SOURCE_PARAMS}
 ```
 
-소스의 파일 구조 및 컨텐츠를 탐색하기 위해 GET 요청을 수행할 때 아래 표에 나열된 쿼리 매개 변수를 포함해야 합니다.
+소스의 파일 구조 및 콘텐츠를 살펴보기 위해 GET 요청을 수행할 때 아래 표에 나열된 쿼리 매개 변수를 포함해야 합니다.
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
@@ -393,7 +393,7 @@ curl -X POST \
 
 ## 대상 XDM 스키마 만들기 {#target-schema}
 
-소스 데이터를 플랫폼에서 사용하려면 타겟 스키마를 만들어 필요에 따라 소스 데이터를 구조화해야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 Platform 데이터 세트를 만듭니다.
+소스 데이터를 Experience Platform에서 사용하려면 타겟 스키마를 만들어 필요에 따라 소스 데이터를 구조화해야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 Experience Platform 데이터 세트를 만듭니다.
 
 [스키마 레지스트리 API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)에 대한 POST 요청을 수행하여 대상 XDM 스키마를 만들 수 있습니다.
 
@@ -401,7 +401,7 @@ curl -X POST \
 
 ### 타겟 데이터 세트 만들기 {#target-dataset}
 
-[카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하고 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
+[카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하여 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
 
 대상 데이터 집합을 만드는 방법에 대한 자세한 단계는 [API를 사용하여 데이터 집합 만들기](../../../../../catalog/api/create-dataset.md)에 대한 자습서를 참조하십시오.
 
@@ -454,7 +454,7 @@ curl -X POST \
 | `name` | 대상 연결의 이름입니다. 대상 연결에 대한 정보를 찾을 때 사용할 수 있으므로 대상 연결의 이름이 설명적인지 확인하십시오. |
 | `description` | (선택 사항) 대상 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
 | `connectionSpec.id` | [!DNL Data Lake]에 해당하는 연결 사양 ID입니다. 이 고정 ID는 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`입니다. |
-| `data.format` | 플랫폼으로 가져올 [!DNL Mailchimp] 데이터의 형식입니다. |
+| `data.format` | Experience Platform으로 가져올 [!DNL Mailchimp] 데이터의 형식입니다. |
 | `params.dataSetId` | 이전 단계에서 검색된 대상 데이터 세트 ID입니다. |
 
 
@@ -534,7 +534,7 @@ curl -X POST \
 
 ## 플로우 만들기 {#flow}
 
-[!DNL Mailchimp] 데이터를 플랫폼으로 가져오는 마지막 단계는 데이터 흐름을 만드는 것입니다. 이제 다음 필수 값이 준비되었습니다.
+[!DNL Mailchimp] 데이터를 Experience Platform으로 가져오기 위한 마지막 단계는 데이터 흐름을 만드는 것입니다. 이제 다음 필수 값이 준비되었습니다.
 
 * [Source 연결 ID](#source-connection)
 * [대상 연결 ID](#target-connection)
@@ -599,7 +599,7 @@ curl -X POST \
 | `flowSpec.version` | 흐름 사양 ID의 해당 버전. 이 값은 기본적으로 `1.0`입니다. |
 | `sourceConnectionIds` | 이전 단계에서 생성된 [소스 연결 ID](#source-connection)입니다. |
 | `targetConnectionIds` | 이전 단계에서 생성된 [대상 연결 ID](#target-connection)입니다. |
-| `transformations` | 이 속성에는 데이터에 적용하는 데 필요한 다양한 변형이 포함되어 있습니다. 이 속성은 XDM 규격이 아닌 데이터를 Platform으로 가져올 때 필요합니다. |
+| `transformations` | 이 속성에는 데이터에 적용하는 데 필요한 다양한 변형이 포함되어 있습니다. 이 속성은 XDM 규격이 아닌 데이터를 Experience Platform으로 가져올 때 필요합니다. |
 | `transformations.name` | 변환에 지정된 이름입니다. |
 | `transformations.params.mappingId` | 이전 단계에서 생성된 [매핑 ID](#mapping)입니다. |
 | `transformations.params.mappingVersion` | 매핑 ID의 해당 버전. 이 값은 기본적으로 `0`입니다. |
@@ -628,15 +628,15 @@ curl -X POST \
 
 ### 데이터 흐름 업데이트
 
-데이터 흐름의 ID를 제공하면서 [!DNL Flow Service] API의 `/flows` 끝점에 PATCH 요청을 하여 데이터 흐름의 이름, 설명, 실행 일정 및 관련 매핑 세트와 같은 데이터 흐름의 세부 정보를 업데이트합니다. PATCH 요청을 할 때 `If-Match` 헤더에 데이터 흐름의 고유한 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름을 업데이트하는 방법](../../update-dataflows.md)에 대한 안내서를 참조하십시오.
+데이터 흐름의 ID를 제공하면서 [!DNL Flow Service] API의 `/flows` 끝점에 PATCH 요청을 수행하여 데이터 흐름의 이름, 설명, 실행 일정 및 관련 매핑 세트와 같은 데이터 흐름의 세부 정보를 업데이트합니다. PATCH 요청을 할 때는 `If-Match` 헤더에 데이터 흐름의 고유한 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름을 업데이트하는 방법](../../update-dataflows.md)에 대한 안내서를 참조하십시오.
 
 ### 계정 업데이트
 
-기본 연결 ID를 쿼리 매개 변수로 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. PATCH 요청을 할 때는 `If-Match` 헤더에 원본 계정의 고유 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 계정을 업데이트하는 방법](../../update.md)에 대한 안내서를 참조하십시오.
+기본 연결 ID를 쿼리 매개 변수로 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. PATCH을 요청할 때 `If-Match` 헤더에 소스 계정의 고유 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 계정을 업데이트하는 방법](../../update.md)에 대한 안내서를 참조하십시오.
 
 ### 데이터 흐름 삭제
 
-쿼리 매개 변수의 일부로 삭제할 데이터 흐름의 ID를 제공하면서 [!DNL Flow Service] API에 대한 DELETE 요청을 수행하여 데이터 흐름을 삭제하십시오. 전체 API 예제는 [API를 사용하여 데이터 흐름 삭제](../../delete-dataflows.md)에 대한 안내서를 참조하십시오.
+쿼리 매개 변수의 일부로 삭제할 데이터 흐름의 ID를 제공하면서 [!DNL Flow Service] API에 대한 DELETE 요청을 수행하여 데이터 흐름을 삭제합니다. 전체 API 예제는 [API를 사용하여 데이터 흐름 삭제](../../delete-dataflows.md)에 대한 안내서를 참조하십시오.
 
 ### 계정 삭제
 

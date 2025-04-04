@@ -1,11 +1,11 @@
 ---
 title: 흐름 서비스 API를 사용하여 SAP Commerce에 대한 소스 연결 및 데이터 흐름 만들기
-description: 흐름 서비스 API를 사용하여 SAP Commerce 데이터를 Experience Platform 상태로 만들기 위해 소스 연결 및 데이터 흐름을 만드는 방법을 알아봅니다.
+description: 흐름 서비스 API를 사용하여 SAP Commerce 데이터를 Experience Platform으로 가져오기 위해 소스 연결 및 데이터 흐름을 만드는 방법을 알아봅니다.
 badge: Beta
 exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2314'
+source-wordcount: '2325'
 ht-degree: 1%
 
 ---
@@ -20,10 +20,10 @@ ht-degree: 1%
 
 ## 시작하기
 
-이 안내서를 사용하려면 다음 Experience Platform 구성 요소에 대해 이해하고 있어야 합니다.
+이 안내서를 사용하려면 Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL SAP Commerce]에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
 
@@ -40,13 +40,13 @@ ht-degree: 1%
 
 이러한 자격 증명에 대한 자세한 내용은 [[!DNL SAP Commerce] 설명서](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html)를 참조하세요.
 
-## [!DNL Flow Service] API를 사용하여 [!DNL SAP Commerce]을(를) 플랫폼에 연결
+## [!DNL Flow Service] API를 사용하여 [!DNL SAP Commerce]을(를) Experience Platform에 연결
 
-다음은 [!DNL SAP Commerce] 원본을 인증하고, 원본 연결을 만들고, 데이터 흐름을 만들어 계정과 연락처 데이터를 Experience Platform 상태로 만드는 데 필요한 단계를 간략하게 설명합니다.
+다음은 [!DNL SAP Commerce] 원본을 인증하고, 원본 연결을 만들고, 데이터 흐름을 만들어 계정과 연락처 데이터를 Experience Platform으로 가져오기 위해 수행해야 하는 단계를 간략하게 설명합니다.
 
 ### 기본 연결 만들기 {#base-connection}
 
-기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
+기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 Experience Platform 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
 기본 연결 ID를 만들려면 [!DNL SAP Commerce] 인증 자격 증명을 요청 본문의 일부로 제공하는 동안 `/connections` 끝점에 대한 POST 요청을 만듭니다.
 
@@ -92,7 +92,7 @@ curl -X POST \
 | `name` | 기본 연결의 이름입니다. 기본 연결에 대한 정보를 조회하는 데 사용할 수 있으므로 기본 연결의 이름이 설명적인지 확인하십시오. |
 | `description` | 기본 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 선택적 값입니다. |
 | `connectionSpec.id` | 소스의 연결 사양 ID입니다. 이 ID는 [!DNL Flow Service] API를 통해 소스를 등록 및 승인한 후에 검색할 수 있습니다. |
-| `auth.specName` | Platform에 소스를 인증하기 위해 사용하는 인증 유형입니다. |
+| `auth.specName` | Experience Platform에 소스를 인증하기 위해 사용하는 인증 유형입니다. |
 | `auth.params.region` | 데이터 센터 위치. 영역이 `url`에 있으며 `eu10` 또는 `us10`과(와) 유사한 값을 갖습니다. 예를 들어 `url`이(가) `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`이면 `eu10`이(가) 필요합니다. |
 | `auth.params.clientId` | 서비스 키의 `clientId` 값입니다. |
 | `auth.params.clientSecret` | 서비스 키의 `clientSecret` 값입니다. |
@@ -119,16 +119,16 @@ curl -X POST \
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&sourceParams={SOURCE_PARAMS}
 ```
 
-소스의 파일 구조 및 컨텐츠를 탐색하기 위해 GET 요청을 수행할 때 아래 표에 나열된 쿼리 매개 변수를 포함해야 합니다.
+소스의 파일 구조 및 콘텐츠를 살펴보기 위해 GET 요청을 수행할 때 아래 표에 나열된 쿼리 매개 변수를 포함해야 합니다.
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 이전 단계에서 생성된 기본 연결 ID입니다. |
 | `objectType=rest` | 탐색하려는 오브젝트의 유형입니다. 현재 이 값은 항상 `rest`(으)로 설정되어 있습니다. |
 | `{OBJECT}` | 이 매개 변수는 특정 디렉터리를 볼 때만 필요합니다. 해당 값은 탐색하려는 디렉터리의 경로를 나타냅니다. 이 원본의 값은 `json`입니다. |
-| `fileType=json` | Platform으로 가져올 파일의 파일 유형입니다. 현재 지원되는 파일 형식은 `json`뿐입니다. |
+| `fileType=json` | Experience Platform으로 가져올 파일의 파일 유형입니다. 현재 지원되는 파일 형식은 `json`뿐입니다. |
 | `{PREVIEW}` | 연결 콘텐츠가 미리 보기를 지원하는지 여부를 정의하는 부울 값. |
-| `{SOURCE_PARAMS}` | Platform으로 가져올 소스 파일의 매개 변수를 정의합니다. `{SOURCE_PARAMS}`에 대해 허용되는 형식 유형을 검색하려면 전체 문자열을 base64로 인코딩해야 합니다. <br> [!DNL SAP Commerce]이(가) 여러 API를 지원합니다. 활용하고 있는 오브젝트 유형에 따라 다음 중 하나를 전달하십시오. <ul><li>`customers`</li><li>`contacts`</li></ul> |
+| `{SOURCE_PARAMS}` | Experience Platform으로 가져올 소스 파일의 매개 변수를 정의합니다. `{SOURCE_PARAMS}`에 대해 허용되는 형식 유형을 검색하려면 전체 문자열을 base64로 인코딩해야 합니다. <br> [!DNL SAP Commerce]이(가) 여러 API를 지원합니다. 활용하고 있는 오브젝트 유형에 따라 다음 중 하나를 전달하십시오. <ul><li>`customers`</li><li>`contacts`</li></ul> |
 
 [!DNL SAP Commerce] 원본이 여러 API를 지원합니다. 보낼 요청을 활용하는 오브젝트 유형에 따라 다음과 같습니다.
 
@@ -684,7 +684,7 @@ curl -X POST \
 
 ### 대상 XDM 스키마 만들기 {#target-schema}
 
-소스 데이터를 플랫폼에서 사용하려면 타겟 스키마를 만들어 필요에 따라 소스 데이터를 구조화해야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 Platform 데이터 세트를 만듭니다.
+소스 데이터를 Experience Platform에서 사용하려면 타겟 스키마를 만들어 필요에 따라 소스 데이터를 구조화해야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 Experience Platform 데이터 세트를 만듭니다.
 
 [스키마 레지스트리 API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)에 대한 POST 요청을 수행하여 대상 XDM 스키마를 만들 수 있습니다.
 
@@ -692,7 +692,7 @@ curl -X POST \
 
 ### 타겟 데이터 세트 만들기 {#target-dataset}
 
-[카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하고 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
+[카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하여 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
 
 대상 데이터 집합을 만드는 방법에 대한 자세한 단계는 [API를 사용하여 데이터 집합 만들기](../../../../../catalog/api/create-dataset.md)에 대한 자습서를 참조하십시오.
 
@@ -986,7 +986,7 @@ curl -X POST \
 
 ### 플로우 만들기 {#flow}
 
-[!DNL SAP Commerce]에서 플랫폼으로 데이터를 가져오는 마지막 단계는 데이터 흐름을 만드는 것입니다. 이제 다음 필수 값이 준비되었습니다.
+[!DNL SAP Commerce]에서 Experience Platform으로 데이터를 가져오는 마지막 단계는 데이터 흐름을 만드는 것입니다. 이제 다음 필수 값이 준비되었습니다.
 
 * [Source 연결 ID](#source-connection)
 * [대상 연결 ID](#target-connection)
@@ -1046,7 +1046,7 @@ curl -X POST \
 | `flowSpec.version` | 흐름 사양 ID의 해당 버전. 이 값은 기본적으로 `1.0`입니다. |
 | `sourceConnectionIds` | 이전 단계에서 생성된 [소스 연결 ID](#source-connection)입니다. |
 | `targetConnectionIds` | 이전 단계에서 생성된 [대상 연결 ID](#target-connection)입니다. |
-| `transformations` | 이 속성에는 데이터에 적용하는 데 필요한 다양한 변형이 포함되어 있습니다. 이 속성은 XDM 규격이 아닌 데이터를 Platform으로 가져올 때 필요합니다. |
+| `transformations` | 이 속성에는 데이터에 적용하는 데 필요한 다양한 변형이 포함되어 있습니다. 이 속성은 XDM 규격이 아닌 데이터를 Experience Platform으로 가져올 때 필요합니다. |
 | `transformations.name` | 변환에 지정된 이름입니다. |
 | `transformations.params.mappingId` | 이전 단계에서 생성된 [매핑 ID](#mapping)입니다. |
 | `transformations.params.mappingVersion` | 매핑 ID의 해당 버전. 이 값은 기본적으로 `0`입니다. |
@@ -1075,15 +1075,15 @@ curl -X POST \
 
 ### 데이터 흐름 업데이트
 
-데이터 흐름의 ID를 제공하면서 [!DNL Flow Service] API의 `/flows` 끝점에 PATCH 요청을 하여 데이터 흐름의 이름, 설명, 실행 일정 및 관련 매핑 세트와 같은 데이터 흐름의 세부 정보를 업데이트합니다. PATCH 요청을 할 때 `If-Match` 헤더에 데이터 흐름의 고유한 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름을 업데이트하는 방법](../../update-dataflows.md)에 대한 안내서를 참조하십시오.
+데이터 흐름의 ID를 제공하면서 [!DNL Flow Service] API의 `/flows` 끝점에 PATCH 요청을 수행하여 데이터 흐름의 이름, 설명, 실행 일정 및 관련 매핑 세트와 같은 데이터 흐름의 세부 정보를 업데이트합니다. PATCH 요청을 할 때는 `If-Match` 헤더에 데이터 흐름의 고유한 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름을 업데이트하는 방법](../../update-dataflows.md)에 대한 안내서를 참조하십시오.
 
 ### 계정 업데이트
 
-기본 연결 ID를 쿼리 매개 변수로 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. PATCH 요청을 할 때는 `If-Match` 헤더에 원본 계정의 고유 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 계정을 업데이트하는 방법](../../update.md)에 대한 안내서를 참조하십시오.
+기본 연결 ID를 쿼리 매개 변수로 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. PATCH을 요청할 때 `If-Match` 헤더에 소스 계정의 고유 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 계정을 업데이트하는 방법](../../update.md)에 대한 안내서를 참조하십시오.
 
 ### 데이터 흐름 삭제
 
-쿼리 매개 변수의 일부로 삭제할 데이터 흐름의 ID를 제공하면서 [!DNL Flow Service] API에 대한 DELETE 요청을 수행하여 데이터 흐름을 삭제하십시오. 전체 API 예제는 [API를 사용하여 데이터 흐름 삭제](../../delete-dataflows.md)에 대한 안내서를 참조하십시오.
+쿼리 매개 변수의 일부로 삭제할 데이터 흐름의 ID를 제공하면서 [!DNL Flow Service] API에 대한 DELETE 요청을 수행하여 데이터 흐름을 삭제합니다. 전체 API 예제는 [API를 사용하여 데이터 흐름 삭제](../../delete-dataflows.md)에 대한 안내서를 참조하십시오.
 
 ### 계정 삭제
 

@@ -5,10 +5,10 @@ title: UI에서 Apache HDFS Source 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Apache Hadoop 분산 파일 시스템 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 1%
 >
 >[!DNL Apache] HDFS 커넥터가 Beta 상태입니다. 베타 레이블 커넥터 사용에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
 
-[!DNL Adobe Experience Platform]의 Source 커넥터는 일정에 따라 외부에서 가져온 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Platform] 사용자 인터페이스를 사용하여 [!DNL Apache Hadoop Distributed File System](이하 &quot;HDFS&quot;) 소스 커넥터를 인증하는 단계를 제공합니다.
+[!DNL Adobe Experience Platform]의 Source 커넥터는 일정에 따라 외부에서 가져온 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 [!DNL Apache Hadoop Distributed File System]&#x200B;(이하 &quot;HDFS&quot;) 소스 커넥터를 인증하는 단계를 제공합니다.
 
 ## 시작하기
 
-이 자습서에서는 [!DNL Platform]의 다음 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 [!DNL Experience Platform]의 다음 구성 요소를 이해하고 있어야 합니다.
 
 - [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    - [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
@@ -41,7 +41,7 @@ HDFS 소스 커넥터를 인증하려면 다음 연결 속성에 대한 값을 �
 
 ## HDFS 계정 연결
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 HDFS 계정을 [!DNL Platform]에 연결할 수 있습니다.
+필요한 자격 증명을 수집했으면 아래 단계에 따라 HDFS 계정을 [!DNL Experience Platform]에 연결할 수 있습니다.
 
 [Adobe Experience Platform](https://platform.adobe.com)에 로그인한 다음 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 **[!UICONTROL 소스]** 작업 영역에 액세스합니다. **[!UICONTROL 카탈로그]** 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
@@ -67,4 +67,4 @@ HDFS 소스 커넥터를 인증하려면 다음 연결 속성에 대한 값을 �
 
 ## 다음 단계
 
-이 자습서에 따라 HDFS 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [클라우드 저장소에서  [!DNL Platform]](../../dataflow/batch/cloud-storage.md)(으)로 데이터를 가져오도록 데이터 흐름을 구성할 수 있습니다.
+이 자습서에 따라 HDFS 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [클라우드 저장소에서  [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md)(으)로 데이터를 가져오도록 데이터 흐름을 구성할 수 있습니다.

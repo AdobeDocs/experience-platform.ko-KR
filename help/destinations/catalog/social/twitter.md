@@ -1,8 +1,8 @@
 ---
-title: 사용자 지정 대상 연결 twitter
-description: Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 관련 리마케팅 캠페인을 생성합니다
+title: Twitter 사용자 지정 대상 연결
+description: Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience Platform 내에 구축된 대상을 활성화하여 관련 리마케팅 캠페인을 만듭니다
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: ba9b59a24079b61a0f5d6076f3acfd83fc8f4092
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 5%
@@ -13,14 +13,14 @@ ht-degree: 5%
 
 ## 개요 {#overview}
 
-Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 관련 리마케팅 캠페인을 생성합니다.
+Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience Platform 내에 구축된 대상을 활성화하여 관련 리마케팅 캠페인을 만듭니다.
 
 ## 전제 조건 {#prerequisites}
 
 [!DNL Twitter Custom Audiences] 대상을 구성하기 전에 충족해야 하는 다음 Twitter 필수 구성 요소를 검토하십시오.
 
 1. [!DNL Twitter Ads] 계정은 광고를 할 수 있어야 합니다. 새 [!DNL Twitter Ads] 계정은 만들어진 후 처음 2주 동안은 광고할 수 없습니다.
-2. [!DNL Twitter Audience Manager]에서 액세스 권한을 부여한 Twitter 사용자 계정에는 *[!DNL Partner Audience Manager]* 권한이 활성화되어 있어야 합니다.
+2. [!DNL Twitter Audience Manager]에서 액세스 권한을 부여한 Twitter 사용자 계정에 *[!DNL Partner Audience Manager]* 권한이 활성화되어 있어야 합니다.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -29,7 +29,7 @@ Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에�
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | device_id | IDFA/AdID/Android ID | Google GAID(Advertising ID) 및 IDFA(Apple ID for Advertisers)는 Adobe Experience Platform에서 지원됩니다. 대상 활성화 워크플로의 [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)에서 원본 스키마의 이러한 네임스페이스 및/또는 특성을 적절하게 매핑하십시오. |
-| 이메일 | 사용자의 이메일 주소 | 일반 텍스트 이메일 주소와 SHA256 해시된 이메일 주소를 이 필드에 매핑하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. Adobe Experience Platform에 업로드하기 전에 고객 이메일 주소를 해시하는 경우 이러한 ID는 소금 없이 SHA256을 사용하여 해시해야 합니다. |
+| 이메일 | 사용자의 이메일 주소 | 일반 텍스트 이메일 주소와 SHA256 해시된 이메일 주소를 이 필드에 매핑하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. Adobe Experience Platform에 업로드하기 전에 고객 이메일 주소를 해시하는 경우 이러한 ID는 소금 없이 SHA256을 사용하여 해시해야 합니다. |
 
 {style="table-layout:auto"}
 
@@ -39,8 +39,8 @@ Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에�
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에�
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | twitter 사용자 지정 대상 대상에 사용된 식별자로 대상의 모든 구성원을 내보내고 있습니다. |
+| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | Twitter 사용자 지정 대상 대상에서 사용된 식별자를 사용하여 대상의 모든 구성원을 내보냅니다. |
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
@@ -61,7 +61,7 @@ Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에�
 
 ### 사용 사례 #1
 
-twitter에서 [!DNL List Custom Audiences](으)로 Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 관련 리마케팅 캠페인을 만드십시오.
+Twitter에서 기존 팔로워와 고객을 타겟팅하고 Twitter에서 [!DNL List Custom Audiences]&#x200B;(으)로 Adobe Experience Platform 내에 빌드된 대상을 활성화하여 관련 리마케팅 캠페인을 만드십시오.
 
 ## 대상에 연결 {#connect}
 
@@ -76,7 +76,7 @@ twitter에서 [!DNL List Custom Audiences](으)로 Adobe Experience Platform 내
 1. 대상 카탈로그에서 [!DNL Twitter Custom Audiences] 대상을 찾은 다음 **[!UICONTROL 설정]**&#x200B;을 선택합니다.
 2. **[!UICONTROL 대상에 연결]**을 선택합니다.
    ![LinkedIn 인증](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
-3. twitter 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
+3. Twitter 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -112,7 +112,7 @@ twitter에서 [!DNL List Custom Audiences](으)로 Adobe Experience Platform 내
 
 ### 매핑 고려 사항 {#mapping-considerations}
 
-대상을 Twitter에 매핑할 때 사람이 읽을 수 있는 대상 매핑 이름을 제공하십시오. Experience Platform 세그먼트에 사용한 것과 동일한 이름을 사용하는 것이 좋습니다.
+Twitter에 대상을 매핑할 때 사람이 읽을 수 있는 대상 매핑 이름을 제공합니다. Experience Platform 세그먼트에 사용한 것과 동일한 이름을 사용하는 것이 좋습니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
@@ -120,4 +120,4 @@ twitter에서 [!DNL List Custom Audiences](으)로 Adobe Experience Platform 내
 
 ## 추가 리소스 {#additional-resources}
 
-twitter의 [!DNL List Custom Audiences]에 대한 자세한 내용은 [Twitter 설명서](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html)를 참조하세요.
+Twitter의 [!DNL List Custom Audiences]에 대한 자세한 내용은 [Twitter 설명서](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html)를 참조하십시오.

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스 자격 증명 안내서
 description: Adobe Experience Platform Query Service는 쿼리를 작성하여 실행하고, 이전에 실행한 쿼리를 보고, 조직 내에서 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1830'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform Query Service를 사용하면 외부 클라이언트�
 
 >[!NOTE]
 >
->자격 증명 패널은 모든 사용자가 자동으로 사용할 수 있는 것은 아닙니다. 필요한 경우 Adobe 계정 팀에 문의하여 [!UICONTROL 자격 증명] 탭을 Query Service 작업 영역에 포함하도록 요청하십시오. 요청할 경우 이 변경은 조직 전체에 적용되며 Adobe 엔지니어링 팀에서 수행합니다. 사용자가 제어하는 설정이 아닙니다.
+>자격 증명 패널은 모든 사용자가 자동으로 사용할 수 있는 것은 아닙니다. 필요한 경우 Adobe 계정 팀에 문의하여 [!UICONTROL 자격 증명] 탭을 쿼리 서비스 작업 영역에 포함하도록 요청하십시오. 요청할 경우 이러한 변경은 조직 전체에 적용되며 Adobe 엔지니어링 팀에 의해 수행됩니다. 사용자가 제어하는 설정이 아닙니다.
 
 ## 자격 증명 만료 {#expiring-credentials}
 
@@ -32,7 +32,7 @@ Adobe Experience Platform Query Service를 사용하면 외부 클라이언트�
 
 **[!UICONTROL 자격 증명 만료]** 섹션에서 다음 정보를 제공합니다.
 
-- **[!UICONTROL 호스트]**: 클라이언트를 연결할 호스트의 이름입니다. Platform UI의 상단 리본에 표시된 조직 이름이 통합됩니다.
+- **[!UICONTROL 호스트]**: 클라이언트를 연결할 호스트의 이름입니다. 여기에 Experience Platform UI의 상단 리본에 표시된 조직 이름이 통합됩니다.
 - **[!UICONTROL 포트]**: 연결할 호스트의 포트 번호입니다.
 - **[!UICONTROL 데이터베이스]**: 클라이언트를 연결할 데이터베이스의 이름입니다.
 - **[!UICONTROL 사용자 이름]**: 쿼리 서비스에 연결하는 데 사용되는 사용자 이름입니다.
@@ -42,7 +42,7 @@ Adobe Experience Platform Query Service를 사용하면 외부 클라이언트�
 
 >[!TIP]
 >
->만료되는 자격 증명 연결의 세션 수명을 쿼리 서비스로 변경하려면 [Admin Console](https://adminconsole.adobe.com/)(으)로 이동하여 화면에 표시되는 옵션을 선택하십시오. **설정** > **개인 정보 및 보안** > **인증 설정** > **고급 설정** > **최대 세션 수명**.
+>만료되는 자격 증명 연결의 세션 수명을 쿼리 서비스로 변경하려면 [Admin Console](https://adminconsole.adobe.com/)&#x200B;(으)로 이동하여 화면에 표시되는 옵션을 선택하십시오. **설정** > **개인 정보 및 보안** > **인증 설정** > **고급 설정** > **최대 세션 수명**.
 >
 >![개인 정보 및 보안, 인증 설정 및 최대 세션 수명이 강조 표시된 Admin Console 설정 탭입니다.](../images/ui/credentials/max-session-life.png)
 >
@@ -50,9 +50,9 @@ Adobe Experience Platform Query Service를 사용하면 외부 클라이언트�
 
 ### 쿼리 세션 내의 Customer Journey Analytics 데이터에 연결 {#connect-to-customer-journey-analytics}
 
-Power BI 또는 타블로와 함께 Customer Journey Analytics BI 확장을 사용하여 SQL로 Customer Journey Analytics [데이터 보기](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views)에 액세스합니다. Query Service를 BI 확장과 통합하여 Query Service 세션 내에서 직접 데이터 보기에 액세스할 수 있습니다. 이 통합은 쿼리 서비스를 PostgreSQL 인터페이스로 사용하는 BI 도구의 기능을 간소화합니다. 이 기능을 사용하면 BI 도구에서 데이터 보기를 복제할 필요가 없고, 플랫폼 간에 일관된 보고를 보장하며, Customer Journey Analytics 데이터를 BI 플랫폼의 다른 소스와 간편하게 통합할 수 있습니다.
+Power BI 또는 Tableau와 함께 Customer Journey Analytics BI 확장 기능을 사용하여 SQL로 Customer Journey Analytics [데이터 보기](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views)에 액세스합니다. Query Service를 BI 확장과 통합하여 Query Service 세션 내에서 직접 데이터 보기에 액세스할 수 있습니다. 이 통합은 쿼리 서비스를 PostgreSQL 인터페이스로 사용하는 BI 도구의 기능을 간소화합니다. 이 기능을 사용하면 BI 도구에서 데이터 보기를 복제할 필요가 없고, 플랫폼 간에 일관된 보고를 보장하며, Customer Journey Analytics 데이터를 BI 플랫폼의 다른 소스와 통합하는 작업을 단순화합니다.
 
-[쿼리 서비스를 다양한 데스크톱 클라이언트 응용 프로그램에 연결](../clients/overview.md)(예: [Power BI](../clients/power-bi.md) 또는 [타블로](../clients/tableau.md))하는 방법에 대해 알아보려면 설명서를 참조하세요.
+[쿼리 서비스를 다양한 데스크톱 클라이언트 응용 프로그램에 연결](../clients/overview.md)([Power BI](../clients/power-bi.md) 또는 [Tableau](../clients/tableau.md))하는 방법에 대해 알아보려면 설명서를 참조하세요.
 
 >[!IMPORTANT]
 >
@@ -99,7 +99,7 @@ SQL을 사용하여 Customer Journey Analytics 데이터 보기에 액세스하�
 
 ### 자격 증명 생성 {#generate-credentials}
 
-만료되지 않는 자격 증명 집합을 만들려면 Platform UI로 돌아가서 왼쪽 탐색에서 **[!UICONTROL 쿼리]**&#x200B;를 선택하여 [!UICONTROL 쿼리] 작업 영역에 액세스합니다. **[!UICONTROL 자격 증명]** 탭 다음에 **[!UICONTROL 자격 증명 생성]**&#x200B;을 선택합니다.
+만료되지 않는 자격 증명 집합을 만들려면 Experience Platform UI로 돌아가서 왼쪽 탐색에서 **[!UICONTROL 쿼리]**&#x200B;를 선택하여 [!UICONTROL 쿼리] 작업 영역에 액세스합니다. **[!UICONTROL 자격 증명]** 탭 다음에 **[!UICONTROL 자격 증명 생성]**&#x200B;을 선택합니다.
 
 ![자격 증명 탭과 자격 증명 생성이 강조 표시된 쿼리 대시보드입니다.](../images/ui/credentials/generate-credentials.png)
 
@@ -108,7 +108,7 @@ SQL을 사용하여 Customer Journey Analytics 데이터 보기에 액세스하�
 - **[!UICONTROL 이름]**: 생성 중인 자격 증명의 이름입니다.
 - **[!UICONTROL 설명]**: (선택 사항) 생성 중인 자격 증명에 대한 설명입니다.
 - **[!UICONTROL 할당 대상]**: 자격 증명을 할당할 사용자입니다. 이 값은 자격 증명을 만드는 사용자의 이메일 주소여야 합니다.
-- **[!UICONTROL 암호]**(선택 사항) 자격 증명의 선택적 암호입니다. 암호를 설정하지 않으면 Adobe이 자동으로 암호를 생성합니다.
+- **[!UICONTROL 암호]**(선택 사항) 자격 증명의 선택적 암호입니다. 암호를 설정하지 않으면 Adobe에서 자동으로 암호를 생성합니다.
 
 필요한 모든 세부 정보를 제공했으면 **[!UICONTROL 자격 증명 생성]**&#x200B;을 선택하여 자격 증명을 생성합니다.
 
@@ -144,7 +144,7 @@ SQL을 사용하여 Customer Journey Analytics 데이터 보기에 액세스하�
 
 ## 자격 증명을 사용하여 외부 클라이언트에 연결 {#use-credential-to-connect}
 
-만료 전 또는 만료되지 않는 자격 증명을 사용하여 Aqua Data Studio, Looker 또는 Power BI 같은 외부 클라이언트와 연결할 수 있습니다. 이러한 자격 증명에 대한 입력 방법은 외부 클라이언트에 따라 달라집니다. 이러한 자격 증명 사용에 대한 특정 지침은 외부 클라이언트의 설명서를 참조하십시오.
+만료 전 또는 만료되지 않는 자격 증명을 사용하여 Aqua Data Studio, Looker 또는 Power BI과 같은 외부 클라이언트와 연결할 수 있습니다. 이러한 자격 증명에 대한 입력 방법은 외부 클라이언트에 따라 달라집니다. 이러한 자격 증명 사용에 대한 특정 지침은 외부 클라이언트의 설명서를 참조하십시오.
 
 이 이미지는 만료되지 않는 자격 증명의 암호를 제외하고 UI에서 발견된 각 매개 변수의 위치를 나타냅니다. 만료되지 않는 자격 증명은 JSON 구성 파일에서 제공되지만, UI의 **자격 증명** 탭에서 만료되는 자격 증명을 볼 수 있습니다.
 

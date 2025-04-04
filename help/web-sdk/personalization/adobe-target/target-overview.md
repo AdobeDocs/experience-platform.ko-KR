@@ -1,23 +1,23 @@
 ---
-title: 개인화에 Web SDK와 함께 Adobe Target 사용
-description: Adobe Target을 사용하여 Experience Platform Web SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다
+title: 개인화에 Web SDK과 함께 Adobe Target 사용
+description: Adobe Target을 사용하여 Experience Platform Web SDK으로 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 116db0808835c548c21635148b81b3e884b5cebd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1368'
 ht-degree: 1%
 
 ---
 
 # 개인화에 [!DNL Adobe Target] 및 [!DNL Web SDK] 사용
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK]은(는) [!DNL Adobe Target]에서 관리되는 개인화된 경험을 웹 채널에 전달하고 렌더링할 수 있습니다. VEC([시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html))라고 하는 WYSIWYG 편집기나 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 비시각적 인터페이스를 사용하여 활동 및 개인화 경험을 만들고, 활성화하고, 전달할 수 있습니다.
+[!DNL Adobe Experience Platform] [!DNL Web SDK]은(는) [!DNL Adobe Target]에서 관리되는 개인화된 경험을 웹 채널에 전달하고 렌더링할 수 있습니다. VEC([시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html))라고 하는 WYSIWYG 편집기 또는 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html))를 사용하여 활동 및 개인화 경험을 만들고, 활성화하고, 전달할 수 있습니다.
 
 >[!IMPORTANT]
 >
->[at.js 2.x에서 Platform Web SDK로 Target 마이그레이션](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) 자습서를 사용하여 Target 구현을 Platform Web SDK로 마이그레이션하는 방법에 대해 알아봅니다.
+>[at.js 2.x에서 Experience Platform Web SDK으로 Target 마이그레이션](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) 자습서를 사용하여 Target 구현을 Experience Platform Web SDK으로 마이그레이션하는 방법을 알아봅니다.
 >
->[Web SDK를 사용하여 Adobe Experience Cloud 구현](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ko-KR) 자습서를 사용하여 Target을 처음 구현하는 방법을 알아봅니다. Target에 대한 자세한 내용은 [Platform Web SDK로 Target 설정](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html)이라는 자습서 섹션을 참조하십시오.
+>[Web SDK에서 Adobe Experience Cloud 구현](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ko-KR) 자습서를 사용하여 Target을 처음 구현하는 방법을 알아봅니다. Target에 대한 자세한 내용은 [Experience Platform Web SDK으로 Target 설정](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html)이라는 자습서 섹션을 참조하십시오.
 
 
 다음 기능이 테스트되었으며 현재 [!DNL Target]에서 지원됩니다.
@@ -27,7 +27,7 @@ ht-degree: 1%
 * [Automated Personalization 활동](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [경험 타깃팅 활동](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [MVT(다변량 테스트)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
-* [Recommendations 활동](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
+* [권장 사항 활동](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [기본 대상 노출 및 전환 보고](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [VEC 지원](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
@@ -35,18 +35,18 @@ ht-degree: 1%
 
 다음 다이어그램은 [!DNL Target] 및 [!DNL Web SDK] Edge Decisioning의 워크플로를 이해하는 데 도움이 됩니다.
 
-![Platform Web SDK를 사용한 Adobe Target Edge 의사 결정 다이어그램](assets/target-platform-web-sdk-new.png)
+![Experience Platform Web SDK을 사용한 Adobe Target Edge Decisioning 다이어그램](assets/target-platform-web-sdk-new.png)
 
-| 호출 | 세부 정보 |
+| 호출 | 세부 사항 |
 | --- | --- |
 | 1 | 장치가 [!DNL Web SDK]을(를) 로드합니다. [!DNL Web SDK]이(가) XDM 데이터, 데이터스트림 환경 ID, 전달된 매개 변수 및 고객 ID(선택 사항)를 사용하여 Edge Network에 요청을 보냅니다. 페이지(또는 컨테이너)가 미리 숨겨져 있습니다. |
-| 2 | Edge Network은 Edge Services에 요청을 전송하여 방문자 ID, 동의 및 지리적 위치 및 장치에 친숙한 이름과 같은 기타 방문자 컨텍스트 정보로 보강합니다. |
+| 2 | Edge Network은 Edge Services에 요청을 전송하여 방문자 ID, 동의 및 지리적 위치 및 장치에 친숙한 이름과 같은 기타 방문자 컨텍스트 정보로 이를 보강합니다. |
 | 3 | Edge Network이 방문자 ID 및 전달된 매개 변수와 함께 보강된 개인화 요청을 [!DNL Target] 에지에 보냅니다. |
 | 4 | 프로필 스크립트가 실행된 다음 [!DNL Target] 프로필 저장소에 공급됩니다. 프로필 저장소는 [!UICONTROL 대상 라이브러리]의 세그먼트(예: [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]에서 공유된 세그먼트)를 가져옵니다. |
-| 5 | [!DNL Target]은(는) URL 요청 매개 변수 및 프로필 데이터를 기반으로 현재 페이지 보기 및 향후 프리페치된 보기에 대해 방문자에게 표시할 활동 및 경험을 결정합니다. [!DNL Target]이(가) Edge Network에게 다시 보냅니다. |
+| 5 | [!DNL Target]은(는) URL 요청 매개 변수 및 프로필 데이터를 기반으로 현재 페이지 보기 및 향후 프리페치된 보기에 대해 방문자에게 표시할 활동 및 경험을 결정합니다. [!DNL Target]이(가) Edge Network으로 다시 보냅니다. |
 | 6 | a. Edge Network은 추가적인 개인화를 위한 프로필 값을 선택적으로 포함하여 개인화 응답을 다시 페이지로 전송합니다. 현재 페이지의 개인화된 콘텐츠는 기본 콘텐츠의 플리커 없이 가능한 한 빨리 나타납니다.<br>b. SPA(단일 페이지 애플리케이션)에서 사용자 작업의 결과로 표시되는 보기의 개인화된 콘텐츠는 캐시되므로 보기가 트리거될 때 추가적인 서버 호출 없이 즉시 적용될 수 있습니다. <br>c입니다. Edge Network은 방문자 ID와 동의, 세션 ID, ID, 쿠키 확인, 개인화와 같은 쿠키의 다른 값을 보냅니다. |
-| 7 | Web SDK는 디바이스에서 Edge Network으로 알림을 전송합니다. |
-| 8 | Edge Network이 [!UICONTROL Analytics for Target](A4T) 세부 사항(활동, 경험 및 전환 메타데이터)을 [!DNL Analytics] 에지에 전달합니다. |
+| 7 | 웹 SDK은 장치에서 Edge Network으로 알림을 보냅니다. |
+| 8 | Edge Network은 [!UICONTROL Analytics for Target]&#x200B;(A4T) 세부 사항(활동, 경험 및 전환 메타데이터)을 [!DNL Analytics] 에지에 전달합니다. |
 
 ## [!DNL Adobe Target] 사용
 
@@ -74,7 +74,7 @@ VEC를 [!DNL Web SDK] 구현과 함께 사용하려면 [Firefox](https://addons.
 
 [!DNL Web SDK]을(를) 통해 전달되는 [!DNL Target] 활동에 대한 대상을 정의할 때 [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ko-KR)을(를) 정의하고 사용해야 합니다. XDM 스키마, 클래스 및 스키마 필드 그룹을 정의한 후에는 타깃팅을 위해 XDM 데이터로 정의된 [!DNL Target] 대상 규칙을 만들 수 있습니다. [!DNL Target] 내에서 XDM 데이터는 [!UICONTROL Audience Builder]에 사용자 지정 매개 변수로 표시됩니다. XDM은 점 표기법을 사용하여 serialize됩니다(예: `web.webPageDetails.name`).
 
-사용자 지정 매개 변수 또는 사용자 프로필을 사용하는 사전 정의된 대상이 있는 [!DNL Target] 활동이 있는 경우 SDK를 통해 해당 활동이 올바르게 전달되지 않습니다. 사용자 지정 매개 변수 또는 사용자 프로필을 사용하는 대신 XDM을 사용해야 합니다. 그러나 XDM이 필요하지 않은 [!DNL Web SDK]을(를) 통해 지원되는 기본 대상 타깃팅 필드가 있습니다. 이러한 필드는 XDM이 필요하지 않은 [!DNL Target] UI에서 사용할 수 있습니다.
+사용자 지정 매개 변수 또는 사용자 프로필을 사용하는 사전 정의된 대상이 있는 [!DNL Target] 활동이 있는 경우 SDK을 통해 올바르게 전달되지 않습니다. 사용자 지정 매개 변수 또는 사용자 프로필을 사용하는 대신 XDM을 사용해야 합니다. 그러나 XDM이 필요하지 않은 [!DNL Web SDK]을(를) 통해 지원되는 기본 대상 타깃팅 필드가 있습니다. 이러한 필드는 XDM이 필요하지 않은 [!DNL Target] UI에서 사용할 수 있습니다.
 
 * 타겟 라이브러리
 * 지역
@@ -89,7 +89,7 @@ VEC를 [!DNL Web SDK] 구현과 함께 사용하려면 [Firefox](https://addons.
 
 ### 응답 토큰
 
-응답 토큰은 Google 또는 Facebook과 같은 서드파티로 메타데이터를 전송하는 데 사용됩니다. 응답 토큰이 반환됩니다
+응답 토큰은 Google 또는 Facebook과 같은 서드파티에 메타데이터를 전송하는 데 사용됩니다. 응답 토큰이 반환됩니다
 `propositions` -> `items` 내의 `meta` 필드에서 다음을 수행합니다. 다음은 샘플입니다.
 
 ```json
@@ -223,7 +223,7 @@ alloy("sendEvent", {
 
 | 카테고리 | 속성 | 지원 상태 |
 | --- | --- | --- |
-| Recommendations - 기본 엔티티 속성 | entity.id | 지원됨 |
+| 권장 사항 - 기본 엔티티 속성 | entity.id | 지원됨 |
 |  | entity.name | 지원됨 |
 |  | entity.categoryId | 지원됨 |
 |  | entity.pageUrl | 지원됨 |
@@ -234,13 +234,13 @@ alloy("sendEvent", {
 |  | entity.brand | 지원됨 |
 |  | entity.margin | 지원됨 |
 |  | entity.event.detailsOnly | 지원됨 |
-| Recommendations - 사용자 지정 엔티티 속성 | entity.yourCustomAttributeName | 지원됨 |
-| Recommendations - 예약된 mbox/페이지 매개 변수 | excludedIds | 지원됨 |
+| 권장 사항 - 사용자 지정 엔티티 속성 | entity.yourCustomAttributeName | 지원됨 |
+| 권장 사항 - 예약된 mbox/페이지 매개 변수 | excludedIds | 지원됨 |
 |  | cartIds | 지원됨 |
 |  | productPurchasedId | 지원됨 |
 | 카테고리 관심도에 대한 페이지 또는 항목 카테고리 | user.categoryId | 지원됨 |
 
-**Recommendations 특성을 Adobe Target으로 보내는 방법:**
+**Adobe Target에 Recommendations 특성을 보내는 방법:**
 
 ```js
 alloy("sendEvent", {
@@ -286,7 +286,7 @@ alloy("sendEvent", {
 
 ## 디버깅
 
-mboxTrace 및 mboxDebug는 더 이상 사용되지 않습니다. 대신 [Web SDK 디버깅](/help/web-sdk/use-cases/debugging.md)의 메서드를 사용하십시오.
+mboxTrace 및 mboxDebug는 더 이상 사용되지 않습니다. 대신 [웹 SDK 디버깅](/help/web-sdk/use-cases/debugging.md)의 메서드를 사용하십시오.
 
 ## 용어
 

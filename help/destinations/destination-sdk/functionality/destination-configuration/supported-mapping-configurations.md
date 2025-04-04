@@ -2,9 +2,9 @@
 description: 지원되는 ID 및 속성 매핑 구성에 대한 대상을 구성하는 방법에 대해 알아봅니다.
 title: 지원되는 매핑 구성
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '670'
 ht-degree: 3%
 
 ---
@@ -64,19 +64,19 @@ Destination SDK으로 구축된 실시간(스트리밍) 대상은 아래 표에 
 
 대상 필드 매핑을 선택할 때는 대상 사용자 지정 속성의 이름을 수동으로 입력해야 합니다.
 
-![사용자 지정 특성 선택을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
+![사용자 지정 특성 선택을 보여 주는 Experience Platform UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
 
 결과 UI 경험이 아래 이미지에 표시됩니다.
 
-![스트리밍 대상의 사용자 지정 특성에 대한 XDM 특성 매핑을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
+![스트리밍 대상의 사용자 지정 특성에 대한 XDM 특성 매핑을 보여 주는 Experience Platform UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
 
 ### ID 네임스페이스를 파트너 ID 네임스페이스에 매핑 {#streaming-identity-to-identity}
 
-사용자는 Platform에서 정의한 ID 네임스페이스에 사용자 정의 또는 전역 ID 네임스페이스를 매핑할 수 있습니다.
+사용자는 Experience Platform에서 사용자 정의 또는 글로벌 ID 네임스페이스를 정의한 ID 네임스페이스에 매핑할 수 있습니다.
 
 결과 UI 경험이 아래 이미지에 표시됩니다.
 
-![스트리밍 대상의 ID에 대한 ID 매핑을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
+![스트리밍 대상의 ID에 대한 ID 매핑을 보여 주는 Experience Platform UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
 
 ## 파일 기반 대상에 대해 지원되는 매핑 {#batch-mappings}
 
@@ -118,38 +118,38 @@ Destination SDK으로 빌드된 파일 기반 대상은 아래 표에 설명된 
 
 결과 UI 경험이 아래 이미지에 표시됩니다.
 
-![파일 기반 대상에 대한 사용자 지정 특성에 대한 XDM 매핑을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
+![파일 기반 대상에 대한 사용자 지정 특성에 대한 XDM 매핑을 보여 주는 Experience Platform UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
 
 사용자는 기본 이름을 그대로 두거나 대상 필드 선택 화면에 사용자 지정 속성 이름을 입력할 수 있습니다.
 
-![파일 기반 대상에 대한 사용자 지정 대상 특성 선택을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![파일 기반 대상에 대한 사용자 지정 대상 특성 선택을 보여 주는 Experience Platform UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 ### ID 네임스페이스를 사용자 지정 속성에 매핑 {#batch-identity-to-custom}
 
-사용자는 Platform에서 사용자 정의 또는 전역 ID 네임스페이스를 대상 측의 사용자 정의 속성에 매핑할 수 있습니다.
+사용자는 Experience Platform의 사용자 지정 또는 전역 ID 네임스페이스를 대상 측의 사용자 지정 속성에 매핑할 수 있습니다.
 
 ID 네임스페이스를 소스 필드로 선택하면 대상 필드에 동등한 ID 네임스페이스가 자동으로 채워집니다. 대상 필드를 사용자 지정 속성으로 바꾸려면 사용자가 대상 필드 선택 화면에 사용자 지정 속성 이름을 입력해야 합니다.
 
-![파일 기반 대상에 대한 사용자 지정 대상 특성 선택을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![파일 기반 대상에 대한 사용자 지정 대상 특성 선택을 보여 주는 Experience Platform UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 결과 UI 경험이 아래 이미지에 표시됩니다.
 
-![파일 기반 대상의 사용자 지정 특성에 대한 ID 매핑을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
+![파일 기반 대상의 사용자 지정 특성에 대한 ID 매핑을 보여 주는 Experience Platform UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
 
 ### ID 네임스페이스를 파트너 ID 네임스페이스에 매핑 {#batch-identity-to-identity}
 
-사용자는 Platform에서 사용자 정의 또는 글로벌 ID 네임스페이스를 동일한 ID 네임스페이스에 매핑할 수 있습니다.
+사용자는 Experience Platform에서 사용자 정의 또는 글로벌 ID 네임스페이스를 동일한 ID 네임스페이스에 매핑할 수 있습니다.
 
 ID 네임스페이스를 소스 필드로 선택하면 대상 필드에 동등한 ID 네임스페이스가 자동으로 채워집니다.
 
 결과 UI 경험이 아래 이미지에 표시됩니다.
 
-![파일 기반 대상의 ID에 대한 ID 매핑을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
+![파일 기반 대상의 ID에 대한 ID 매핑을 보여 주는 Experience Platform UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
 
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽고 나면 Destination SDK으로 빌드된 대상에서 지원하는 매핑에 대해 보다 잘 이해할 수 있습니다.
+이 문서를 읽은 후에는 Destination SDK으로 빌드된 대상에서 지원하는 매핑을 보다 잘 이해할 수 있습니다.
 
 다른 대상 구성 요소에 대한 자세한 내용은 다음 문서를 참조하십시오.
 

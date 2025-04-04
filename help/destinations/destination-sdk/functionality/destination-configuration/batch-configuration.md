@@ -2,34 +2,34 @@
 description: Destination SDK으로 빌드된 대상에 대한 파일 내보내기 설정을 구성하는 방법에 대해 알아봅니다.
 title: 일괄 처리 구성
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1058'
 ht-degree: 2%
 
 ---
 
 # 일괄 처리 구성 {#batch-configuration}
 
-사용자가 내보낸 파일 이름을 사용자 정의하고 환경 설정에 따라 내보내기 일정을 구성할 수 있도록 하려면 Destination SDK의 배치 구성 옵션을 사용합니다.
+사용자가 내보낸 파일 이름을 사용자 정의하고 환경 설정에 따라 내보내기 일정을 구성할 수 있도록 하려면 Destination SDK의 일괄 구성 옵션을 사용합니다.
 
-Destination SDK을 통해 파일 기반 대상을 만들 때 기본 파일 이름 지정 및 내보내기 일정을 구성하거나, 사용자에게 Platform UI에서 이러한 설정을 구성하는 옵션을 제공할 수 있습니다. 예를 들어 다음과 같은 동작을 구성할 수 있습니다.
+Destination SDK을 통해 파일 기반 대상을 만들 때 기본 파일 이름 지정 및 내보내기 일정을 구성하거나, 사용자에게 Experience Platform UI에서 이러한 설정을 구성하는 옵션을 제공할 수 있습니다. 예를 들어 다음과 같은 동작을 구성할 수 있습니다.
 
 * 대상 ID, 대상 ID 또는 사용자 지정 정보와 같은 특정 정보를 파일 이름에 포함합니다.
-* 사용자가 플랫폼 UI에서 파일 이름을 사용자 정의할 수 있습니다.
+* 사용자가 Experience Platform UI에서 파일 이름 지정을 사용자 정의할 수 있습니다.
 * 설정된 시간 간격으로 실행되도록 파일 내보내기를 구성합니다.
-* 사용자가 Platform UI에서 볼 수 있는 파일 이름 지정 및 내보내기 예약 사용자 지정 옵션을 정의합니다.
+* 사용자가 Experience Platform UI에서 볼 수 있는 파일 이름 지정 및 내보내기 예약 사용자 지정 옵션을 정의합니다.
 
 배치 구성 설정은 파일 기반 대상에 대한 대상 구성의 일부입니다.
 
-이 구성 요소가 Destination SDK으로 만든 통합에 어떻게 적합한지 이해하려면 [구성 옵션](../configuration-options.md) 설명서에서 다이어그램을 참조하거나 [Destination SDK을 사용하여 파일 기반 대상을 구성하는 방법](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)에 대한 안내서를 참조하십시오.
+이 구성 요소가 Destination SDK으로 만든 통합에 어디에 맞는지 이해하려면 [구성 옵션](../configuration-options.md) 설명서에서 다이어그램을 참조하거나 [Destination SDK을 사용하여 파일 기반 대상을 구성하는 방법](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)에 대한 안내서를 참조하십시오.
 
 `/authoring/destinations` 끝점을 통해 파일 이름 지정 및 내보내기 일정 설정을 구성할 수 있습니다. 이 페이지에 표시된 구성 요소를 구성할 수 있는 자세한 API 호출 예는 다음 API 참조 페이지를 참조하십시오.
 
 * [대상 구성 만들기](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [대상 구성 업데이트](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-이 문서에서는 대상에 사용할 수 있는 지원되는 모든 일괄 처리 구성 옵션에 대해 설명하고 고객이 Platform UI에서 보게 되는 내용을 보여 줍니다.
+이 문서에서는 대상에 사용할 수 있는 지원되는 모든 일괄 처리 구성 옵션에 대해 설명하고 고객이 Experience Platform UI에서 보게 되는 내용을 보여줍니다.
 
 >[!IMPORTANT]
 >
@@ -113,9 +113,9 @@ Destination SDK을 통해 파일 기반 대상을 만들 때 기본 파일 이�
 | 매크로 | UI 레이블 | 설명 | 예 |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL 대상] | UI의 대상 이름입니다. | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL 세그먼트 ID] | 플랫폼에서 생성한 고유 대상 ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_ID` | [!UICONTROL 세그먼트 ID] | Experience Platform에서 생성한 고유 대상 ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
 | `SEGMENT_NAME` | [!UICONTROL 세그먼트 이름] | 사용자 정의 대상 이름 | VIP 구독자 |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL 대상 ID] | 대상 인스턴스에 대한 플랫폼이 생성한 고유 ID | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL 대상 ID] | 대상 인스턴스의 Experience Platform 생성 고유 ID | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL 대상 이름] | 대상 인스턴스의 사용자 정의 이름입니다. | 내 2022 Advertising 대상 |
 | `ORGANIZATION_NAME` | [!UICONTROL 조직 이름] | Adobe Experience Platform에 있는 고객 조직의 이름입니다. | 내 조직 이름 |
 | `SANDBOX_NAME` | [!UICONTROL 샌드박스 이름] | 고객이 사용하는 샌드박스의 이름. | prod |

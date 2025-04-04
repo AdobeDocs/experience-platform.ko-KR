@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목; 경고;대상
 description: 데이터 흐름을 만들 때 경고에 가입하여 흐름 실행의 상태, 성공 또는 실패와 관련된 경고 메시지를 받을 수 있습니다.
 title: 컨텍스트 내 대상 경고 구독
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '953'
 ht-degree: 8%
 
 ---
@@ -22,9 +22,9 @@ Adobe Experience Platform을 사용하면 Adobe Experience Platform 활동과 �
 
 이 문서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 잘 알고 있어야 합니다.
 
-* [대상](../home.md): Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
-* [가시성](../../observability/home.md): [!DNL Observability Insights]을(를) 사용하면 통계 지표 및 이벤트 알림을 사용하여 플랫폼 활동을 모니터링할 수 있습니다.
-   * [경고](../../observability/alerts/overview.md): Platform 작업의 특정 조건 집합에 도달하면(예: 시스템이 임계값을 위반한 경우 발생할 수 있는 문제) Platform에서 해당 조건을 구독한 조직의 모든 사용자에게 경고 메시지를 전달할 수 있습니다.
+* [대상](../home.md): Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+* [가시성](../../observability/home.md): [!DNL Observability Insights]을(를) 사용하면 통계 지표 및 이벤트 알림을 사용하여 Experience Platform 활동을 모니터링할 수 있습니다.
+   * [경고](../../observability/alerts/overview.md): Experience Platform 작업의 특정 조건에 도달하면(예: 시스템이 임계값을 위반한 경우 발생할 수 있는 문제) Experience Platform에서 해당 조건을 구독한 조직의 모든 사용자에게 경고 메시지를 전달할 수 있습니다.
 
 ## UI에서 알림 구독 {#subscribe-destination-alerts}
 
@@ -36,7 +36,7 @@ Adobe Experience Platform을 사용하면 Adobe Experience Platform 활동과 �
 
 >[!IMPORTANT]
 >
->데이터 흐름에 대한 이메일 기반 경고 알림을 수신하려면 Platform 계정에 대해 이메일 인스턴트 알림을 활성화해야 합니다.
+>데이터 흐름에 대한 이메일 기반 경고 알림을 수신하려면 Experience Platform 계정에 대해 이메일 인스턴트 알림을 활성화해야 합니다.
 
 [대상 연결](connect-destination.md) 워크플로의 [!UICONTROL 새 대상 구성] 단계 동안 데이터 흐름에 대한 경고를 사용하도록 설정할 수 있습니다.
 
@@ -63,9 +63,9 @@ Adobe Experience Platform을 사용하면 Adobe Experience Platform 활동과 �
 
 ### UI에서 경고 받기 {#receiving-alerts-in-ui}
 
-경고는 Platform UI의 상단 헤더에 있는 알림 아이콘으로 UI에 표시됩니다. 알림 아이콘을 선택하여 데이터 흐름과 관련된 특정 경고 메시지를 확인합니다.
+경고는 Experience Platform UI의 상단 헤더에 있는 알림 아이콘으로 UI에 표시됩니다. 알림 아이콘을 선택하여 데이터 흐름과 관련된 특정 경고 메시지를 확인합니다.
 
-![Experience Platform에 알림 아이콘을 표시하는 UI 이미지](../assets/ui/alerts/notification.png)
+![Experience Platform의 알림 아이콘을 표시하는 UI 이미지](../assets/ui/alerts/notification.png)
 
 만든 데이터 흐름의 상태 업데이트 목록을 표시하는 알림 패널이 나타납니다.
 

@@ -3,9 +3,9 @@ title: UI에서 Pendo Source 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Pendo 소스 연결을 만드는 방법을 알아봅니다.
 badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1206'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 시작하기 {#getting-started}
 
-이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
@@ -51,25 +51,25 @@ ht-degree: 1%
 
 자세한 내용은 [[!DNL Pendo] Webhooks의 안내서](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks)를 참조하십시오.
 
-### [!DNL Pendo]에 대한 플랫폼 스키마 만들기 {#create-platform-schema}
+### [!DNL Pendo]에 대한 Experience Platform 스키마 만들기 {#create-platform-schema}
 
-또한 먼저 소스에 사용할 Platform 스키마를 만들어야 합니다. 스키마를 만드는 방법에 대한 포괄적인 단계를 보려면 [플랫폼 스키마 만들기](../../../../../xdm/schema/composition.md)에 대한 자습서를 참조하십시오.
+또한 먼저 소스에 사용할 Experience Platform 스키마를 만들어야 합니다. 스키마를 만드는 방법에 대한 포괄적인 단계를 보려면 [Experience Platform 스키마 만들기](../../../../../xdm/schema/composition.md)에 대한 자습서를 참조하십시오.
 
-![Pendo에 대한 예제 스키마를 표시하는 플랫폼 UI](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
+![Pendo에 대한 예제 스키마를 보여 주는 Experience Platform UI.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
 
 ## [!DNL Pendo] 계정 연결 {#connect-account}
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스하고 Experience Platform에서 사용할 수 있는 소스 카탈로그를 확인합니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스하고 Experience Platform에서 사용할 수 있는 소스 카탈로그를 확인합니다.
 
 *[!UICONTROL 범주]* 메뉴를 사용하여 범주별로 원본을 필터링하세요. 또는 검색 막대에 소스 이름을 입력하여 카탈로그에서 특정 소스를 찾습니다.
 
 [!UICONTROL Analytics] 범주로 이동하여 [!DNL Pendo] 원본 카드를 확인합니다. 시작하려면 **[!UICONTROL 데이터 추가]**&#x200B;를 선택하세요.
 
-![Pendo 카드가 있는 Platform UI 원본 카탈로그입니다.](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
+![펜도 카드가 있는 Experience Platform UI 원본 카탈로그입니다.](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
 
 ## 데이터 선택 {#select-data}
 
-플랫폼으로 가져올 데이터를 선택할 수 있는 인터페이스를 제공하는 **[!UICONTROL 데이터 선택]** 단계가 나타납니다.
+Experience Platform으로 가져올 데이터를 선택할 수 있는 인터페이스를 제공하는 **[!UICONTROL 데이터 선택]** 단계가 나타납니다.
 
 * 인터페이스의 왼쪽 부분은 계정 내에서 사용 가능한 데이터 스트림을 볼 수 있는 브라우저입니다.
 * 인터페이스의 오른쪽 부분에서 JSON 파일에서 최대 100개의 데이터 행을 미리 볼 수 있습니다.
@@ -96,7 +96,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 
 소스 스키마의 소스 필드를 대상 스키마의 해당 대상 XDM 필드에 매핑할 수 있는 인터페이스를 제공하는 [!UICONTROL 매핑] 단계가 나타납니다.
 
-Platform은 선택한 대상 스키마 또는 데이터 세트를 기반으로 자동 매핑된 필드에 대한 지능형 권장 사항을 제공합니다. 사용 사례에 맞게 매핑 규칙을 수동으로 조정할 수 있습니다. 필요에 따라 필드를 직접 매핑하도록 선택하거나 데이터 준비 함수를 사용하여 소스 데이터를 변환하여 계산된 값 또는 계산된 값을 파생할 수 있습니다. 매퍼 인터페이스 및 계산된 필드 사용에 대한 포괄적인 단계는 [데이터 준비 UI 안내서](../../../../../data-prep/ui/mapping.md)를 참조하십시오.
+Experience Platform은 선택한 대상 스키마 또는 데이터 세트를 기반으로 자동 매핑된 필드에 대한 지능형 권장 사항을 제공합니다. 사용 사례에 맞게 매핑 규칙을 수동으로 조정할 수 있습니다. 필요에 따라 필드를 직접 매핑하도록 선택하거나 데이터 준비 함수를 사용하여 소스 데이터를 변환하여 계산된 값 또는 계산된 값을 파생할 수 있습니다. 매퍼 인터페이스 및 계산된 필드 사용에 대한 포괄적인 단계는 [데이터 준비 UI 안내서](../../../../../data-prep/ui/mapping.md)를 참조하십시오.
 
 아래 나열된 매핑은 필수이며 [!UICONTROL 검토] 단계로 진행하기 전에 설정해야 합니다.
 
@@ -144,11 +144,11 @@ Platform은 선택한 대상 스키마 또는 데이터 세트를 기반으로 �
 
 >[!TIP]
 >
->다양한 이벤트 범주를 구독하여 [!DNL Pendo] 인스턴스에서 플랫폼으로 보낼 이벤트의 종류를 결정할 수 있습니다. 다른 이벤트에 대한 자세한 내용은 [[!DNL Pendo] 설명서](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4)를 참조하세요.
+>다양한 이벤트 범주를 구독하여 [!DNL Pendo] 인스턴스에서 Experience Platform으로 보낼 이벤트의 종류를 결정할 수 있습니다. 다른 이벤트에 대한 자세한 내용은 [[!DNL Pendo] 설명서](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4)를 참조하세요.
 
 ## 다음 단계 {#next-steps}
 
-이 자습서를 따라 [!DNL Pendo] 데이터를 Experience Platform 상태로 전환하기 위한 스트리밍 데이터 흐름을 구성했습니다. 수집 중인 데이터를 모니터링하려면 [플랫폼 UI를 사용하여 스트리밍 데이터 흐름 모니터링](../../monitor-streaming.md)에 대한 안내서를 참조하세요.
+이 자습서를 따라 [!DNL Pendo] 데이터를 Experience Platform으로 가져오기 위한 스트리밍 데이터 흐름을 구성했습니다. 수집되는 데이터를 모니터링하려면 [Experience Platform UI를 사용하여 스트리밍 데이터 흐름 모니터링](../../monitor-streaming.md)에 대한 안내서를 참조하세요.
 
 ## 추가 리소스 {#additional-resources}
 
@@ -162,15 +162,15 @@ Platform은 선택한 대상 스키마 또는 데이터 세트를 기반으로 �
 
 ![채팅 내역을 표시하는 Pendo UI 스크린샷](../../../../images/tutorials/create/analytics-pendo-webhook/pendo-events.png)
 
-* Platform UI에서 소스 카탈로그의 [!DNL Pendo] 카드 메뉴 옆에 있는 **[!UICONTROL 데이터 흐름 보기]**&#x200B;를 선택합니다. 그런 다음 **[!UICONTROL 데이터 집합 미리 보기]**&#x200B;를 선택하여 [!DNL Pendo] 내에 구성한 웹후크에 대해 수집된 데이터를 확인합니다.
+* Experience Platform UI에서 소스 카탈로그의 [!DNL Pendo] 카드 메뉴 옆에 있는 **[!UICONTROL 데이터 흐름 보기]**&#x200B;를 선택합니다. 그런 다음 **[!UICONTROL 데이터 집합 미리 보기]**&#x200B;를 선택하여 [!DNL Pendo] 내에 구성한 웹후크에 대해 수집된 데이터를 확인합니다.
 
-![수집된 이벤트를 보여주는 플랫폼 UI 스크린샷](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
+![수집된 이벤트를 보여주는 Experience Platform UI 스크린샷](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
 
 ### 오류 및 문제 해결 {#errors-and-troubleshooting}
 
 데이터 흐름 실행을 확인할 때 다음 오류 메시지가 표시될 수 있습니다. `The message can't be validated ... uniqueID:expected minLength:1, actual 0].`
 
-![오류를 표시하는 플랫폼 UI 스크린샷.](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
+![오류를 표시하는 Experience Platform UI 스크린샷](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
 
 이 오류를 해결하려면 *uniqueID* 매핑이 설정되었는지 확인해야 합니다. 추가 지침은 [Mmpping](#mapping) 섹션을 참조하십시오.
 

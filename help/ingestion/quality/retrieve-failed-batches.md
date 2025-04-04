@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;실패한 배치 검색;실패한 배치;배치 수집;배치 수집;실패한 배치;실패한 배치 가져오기;실패한 배치 가져오기;실패한 배치 가져오기;실패한 배치 다운로드;실패한 배치 다운로드;
+keywords: Experience Platform;홈;인기 있는 주제;실패한 배치 검색;실패한 배치;배치 수집;배치 수집;실패한 배치;실패한 배치 가져오기;실패한 배치 가져오기;실패한 배치 다운로드;실패한 배치 다운로드;실패한 배치 다운로드;
 solution: Experience Platform
 title: 데이터 액세스 API를 사용하여 실패한 일괄 처리 검색
 type: Tutorial
 description: 이 자습서에서는 데이터 수집 API를 사용하여 실패한 배치에 대한 정보를 검색하는 단계를 다룹니다.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 13%
@@ -14,7 +14,7 @@ ht-degree: 13%
 
 # 데이터 액세스 API를 사용하여 실패한 일괄 처리 검색
 
-Adobe Experience Platform은 데이터를 업로드하고 수집하는 두 가지 방법을 제공합니다. 다양한 파일 형식(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 수집이나 스트리밍 끝점을 사용하여 실시간으로 해당 데이터를 [!DNL Platform]에 삽입할 수 있는 스트리밍 수집을 사용할 수 있습니다.
+Adobe Experience Platform은 데이터를 업로드하고 수집하는 두 가지 방법을 제공합니다. 다양한 파일 형식(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 수집이나 스트리밍 끝점을 사용하여 실시간으로 해당 데이터를 [!DNL Experience Platform]에 삽입할 수 있는 스트리밍 수집을 사용할 수 있습니다.
 
 이 자습서에서는 [!DNL Data Ingestion] API를 사용하여 실패한 일괄 처리에 대한 정보를 검색하는 단계를 다룹니다.
 
@@ -31,19 +31,19 @@ Adobe Experience Platform은 데이터를 업로드하고 수집하는 두 가�
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Schema Registry]에 속하는 리소스를 포함한 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Schema Registry]에 속하는 리소스를 포함한 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
+>[!DNL Experience Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 

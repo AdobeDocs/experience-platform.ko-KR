@@ -5,10 +5,10 @@ breadcrumb-title: 대시보드 안내서
 user-guide-description: 맞춤화가 가능한 대시보드를 통해 Experience Platform에서 데이터를 시각화하는 방법을 알아봅니다.
 feature: Dashboards
 role: Developer,User
-source-git-commit: cb3cc06a31c0390d9b1f152c2186da3847647f64
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 41%
+source-wordcount: '143'
+ht-degree: 44%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 41%
 * [대시보드 액세스 권한](permissions.md)
 * [대시보드 인벤토리](inventory.md)
 * [표준 대시보드](standard-dashboards.md)
-* [대시보드를 다운로드하여 PDF](download.md)
+* [PDF에 대시보드 다운로드](download.md)
 * SQL Insights: 쿼리 pro 모드 {#sql-insights-query-pro-mode}
    * [개요](sql-insights-query-pro-mode/overview.md)
    * 데이터 Distiller 템플릿 {#templates}
@@ -57,10 +57,10 @@ ht-degree: 41%
 * 인사이트 사용 사례 {#insights-use-cases}
    * [동의 분석](insights-use-cases/consent-analysis.md)
 * 사용 가능한 데이터 모델 {#data-models}
-   * [Real-time Customer Data Platform Insights 데이터 모델 B2B edition](data-models/cdp-insights-data-model-b2b.md)
-   * [Real-time Customer Data Platform Insights 데이터 모델 B2C 에디션](data-models/cdp-insights-data-model-b2c.md)
+   * [Real-Time Customer Data Platform Insights 데이터 모델 B2B edition](data-models/cdp-insights-data-model-b2b.md)
+   * [Real-Time Customer Data Platform Insights 데이터 모델 B2C 에디션](data-models/cdp-insights-data-model-b2c.md)
 * 응용 프로그램 통합 {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [쿼리 대시보드 데이터 세트](query.md)
-* [인사이트 SQL 보기](view-sql.md)
-* [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+* [insight SQL 보기](view-sql.md)
+* [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

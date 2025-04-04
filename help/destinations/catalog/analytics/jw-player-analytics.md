@@ -3,36 +3,36 @@ keywords: JW 플레이어;jw 플레이어;JW 플레이어;jw 확장;JW 확장
 title: JW Player Analytics(Beta) 확장
 description: JW Player Analytics(Beta) 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 32bdb2db-5c1b-4184-b6d3-b07dc4d0b324
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '475'
 ht-degree: 3%
 
 ---
 
-# [!DNL JW Player Analytics](Beta) 확장 {#jw-player-analytics-extension}
+# [!DNL JW Player Analytics]&#x200B;(Beta) 확장 {#jw-player-analytics-extension}
 
 ## 개요 {#overview}
 
-이 확장은 [!DNL JW Player] 이벤트를 Adobe Video Analytics에 연결하는 [!DNL JW Player] 어댑터를 설치합니다. Adobe 비디오 분석의 기능을 활용하여 고객의 비디오 시청 습관을 이해할 수 있는 자세한 통찰력을 얻으십시오.
+이 확장은 [!DNL JW Player] 이벤트를 Adobe Video Analytics에 연결하는 [!DNL JW Player] 어댑터를 설치합니다. Adobe Video Analytics의 기능을 활용하여 고객의 비디오 시청 습관을 이해할 수 있는 자세한 통찰력을 얻을 수 있습니다.
 
-[!DNL JW Player Analytics](Beta)은(는) Adobe Experience Platform의 analytics 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html)의 확장 페이지를 참조하십시오.
+[!DNL JW Player Analytics]&#x200B;(Beta)은(는) Adobe Experience Platform의 analytics 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html)의 확장 페이지를 참조하십시오.
 
-이 대상은 태그 확장입니다. Platform에서 태그 확장이 작동하는 방식에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
+이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
 ![JW 분석 확장](../../assets/catalog/analytics/jw-analytics/catalog.png)
 
 ## 전제 조건 {#prerequisites}
 
-이 확장은 Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
+이 확장은 Experience Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
 이 확장을 사용하려면 Adobe Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 문의하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여해 달라고 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 
-[!DNL JW Player Analytics](Beta) 확장을 설치하려면:
+[!DNL JW Player Analytics]&#x200B;(Beta) 확장을 설치하려면:
 
-[플랫폼 인터페이스](https://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**(으)로 이동합니다.
+[Experience Platform 인터페이스](https://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**(으)로 이동합니다.
 
 카탈로그에서 확장을 선택하거나 검색 창을 사용합니다.
 
@@ -58,6 +58,6 @@ ht-degree: 3%
 
 >[!TIP]
 >
->확장이 속성 중 하나에 이미 설치되어 있는 경우에도 Platform UI에 확장에 대한 **[!UICONTROL 설치]**&#x200B;가 표시됩니다. 확장을 구성하거나 삭제하려면 [확장 설치](#install-extension)에 설명된 대로 설치 워크플로를 시작합니다.
+>확장이 속성 중 하나에 이미 설치되어 있는 경우에도 Experience Platform UI에 확장에 대한 **[!UICONTROL 설치]**&#x200B;가 표시됩니다. 확장을 구성하거나 삭제하려면 [확장 설치](#install-extension)에 설명된 대로 설치 워크플로를 시작합니다.
 
 확장을 업그레이드하려면 태그 설명서의 [확장 업그레이드 프로세스](../../../tags/ui/managing-resources/extensions/extension-upgrade.md)에 대한 안내서를 참조하십시오.

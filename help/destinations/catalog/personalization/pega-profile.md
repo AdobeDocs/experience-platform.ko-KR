@@ -3,9 +3,9 @@ title: Pega 프로필 커넥터
 description: Adobe Experience Platform의 Amazon S3용 Pega Profile Connector를 사용하여 전체 또는 증분, 또는 둘 다 프로필 데이터를 Amazon S3 클라우드 스토리지로 내보냅니다. Pega 고객 의사 결정 허브에서 Amazon S3 스토리지에서 주기적으로 프로필 데이터를 가져오기 위해 고객 프로필 Designer에서 데이터 작업을 예약할 수 있습니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1116'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 [!DNL Amazon Web Services](AWS) S3 저장소에 대한 실시간 아웃바운드 연결을 생성하여 프로필 데이터를 CSV 파일로 Adobe Experience Platform에서 고유한 S3 버킷으로 정기적으로 내보냅니다. [!DNL Pega Customer Decision Hub]에서는 S3 스토리지에서 이 프로필 데이터를 가져와서 [!DNL Pega Customer Decision Hub] 프로필을 업데이트하도록 데이터 작업을 예약할 수 있습니다
+Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 [!DNL Amazon Web Services]&#x200B;(AWS) S3 저장소에 대한 실시간 아웃바운드 연결을 생성하여 프로필 데이터를 CSV 파일로 Adobe Experience Platform에서 고유한 S3 버킷으로 정기적으로 내보냅니다. [!DNL Pega Customer Decision Hub]에서는 S3 스토리지에서 이 프로필 데이터를 가져와서 [!DNL Pega Customer Decision Hub] 프로필을 업데이트하도록 데이터 작업을 예약할 수 있습니다
 
 이 커넥터는 프로필 데이터의 초기 내보내기를 설정하는 데 도움이 되며 새 프로필을 [!DNL Pega Customer Decision Hub]에 주기적으로 동기화하는 데 도움이 됩니다.  Customer Decision Hub에 최신 데이터가 있으면 차후 최상의 조치 결정을 위해 고객 기반을 더 낫고 업데이트된 보기로 확인할 수 있습니다.
 
@@ -36,11 +36,11 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 
 ## 전제 조건 {#prerequisites}
 
-이 대상을 사용하여 Adobe Experience Platform에서 데이터를 내보내고 [!DNL Pega Customer Decision Hub](으)로 프로필을 가져오려면 먼저 다음 전제 조건을 완료하십시오.
+이 대상을 사용하여 Adobe Experience Platform에서 데이터를 내보내고 [!DNL Pega Customer Decision Hub]&#x200B;(으)로 프로필을 가져오려면 먼저 다음 전제 조건을 완료하십시오.
 
 * 데이터 파일 내보내기 및 가져오기에 사용할 [!DNL Amazon S3] 버킷 및 폴더 경로를 구성하십시오.
-* [!DNL Amazon S3] 액세스 키와 [!DNL Amazon S3] 비밀 키를 구성하십시오. [!DNL Amazon S3]에서 `access key - secret access key` 쌍을 생성하여 [!DNL Amazon S3] 계정에 플랫폼 액세스 권한을 부여하십시오.
-* 데이터를 [!DNL Amazon S3] 저장소 위치에 연결하고 내보내려면 [!DNL Amazon S3]에서 [!DNL Platform]에 대한 IAM(Identity and Access Management) 사용자를 만들고 `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts` 등의 권한을 할당합니다
+* [!DNL Amazon S3] 액세스 키와 [!DNL Amazon S3] 비밀 키를 구성하십시오. [!DNL Amazon S3]에서 `access key - secret access key` 쌍을 생성하여 [!DNL Amazon S3] 계정에 Experience Platform 액세스 권한을 부여하십시오.
+* 데이터를 [!DNL Amazon S3] 저장소 위치에 연결하고 내보내려면 [!DNL Amazon S3]에서 [!DNL Experience Platform]에 대한 IAM(Identity and Access Management) 사용자를 만들고 `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts` 등의 권한을 할당합니다
 * [!DNL Pega Customer Decision Hub] 인스턴스가 8.8 버전 이상으로 업그레이드되었는지 확인하십시오.
 
 ## 지원되는 ID {#supported-identities}
@@ -117,7 +117,7 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
 
-[!DNL Pega Profile Connector] 대상의 경우 [!DNL Platform]은(는) 제공한 Amazon S3 저장소 위치에 `.csv` 파일을 만듭니다. 파일에 대한 자세한 내용은 대상 활성화 자습서에서 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](../../ui/activate-batch-profile-destinations.md)를 참조하십시오.
+[!DNL Pega Profile Connector] 대상의 경우 [!DNL Experience Platform]은(는) 제공한 Amazon S3 저장소 위치에 `.csv` 파일을 만듭니다. 파일에 대한 자세한 내용은 대상 활성화 자습서에서 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](../../ui/activate-batch-profile-destinations.md)를 참조하십시오.
 
 S3에서 프로필 데이터를 성공적으로 가져오면 [!DNL Pega Customer] 프로필 데이터 저장소에 데이터가 삽입됩니다. 가져온 고객 프로필 데이터는 다음 그림과 같이 [!DNL Pega Customer Profile Designer]에서 확인할 수 있습니다.
 ![고객 프로필 Designer에서 Adobe 프로필 데이터의 유효성을 검사할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)

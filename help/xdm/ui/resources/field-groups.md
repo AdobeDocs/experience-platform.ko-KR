@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;데이터 모델;ui;작업 공간;필드 그룹;필드 그룹;
+keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;데이터 모델;ui;작업 영역;필드 그룹;필드 그룹;
 solution: Experience Platform
 title: UI에서 스키마 필드 그룹 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마 필드 그룹을 만들고 편집하는 방법을 알아봅니다.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1001'
 ht-degree: 8%
 
 ---
@@ -22,7 +22,7 @@ XDM(Experience Data Model)에서 스키마 필드 그룹은 개인 세부 정보
 
 필드 그룹은 필드 그룹이 나타내는 데이터(레코드 또는 시계열)의 동작을 기반으로 하여 호환되는 클래스를 정의합니다. 즉, 모든 필드 그룹을 모든 클래스에서 사용할 수 있는 것은 아닙니다.
 
-Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 많은 표준 필드 그룹을 제공합니다. 그러나 사용자 정의 필드 그룹을 만들고 편집하여 XDM 스키마 내에서 비즈니스와 관련된 추가 개념을 정의할 수도 있습니다. 이 안내서에서는 Platform UI에서 조직의 사용자 정의 필드 그룹을 생성, 편집 및 관리하는 방법에 대한 개요를 제공합니다.
+Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 많은 표준 필드 그룹을 제공합니다. 그러나 사용자 정의 필드 그룹을 만들고 편집하여 XDM 스키마 내에서 비즈니스와 관련된 추가 개념을 정의할 수도 있습니다. 이 안내서에서는 Experience Platform UI에서 조직의 사용자 정의 필드 그룹을 생성, 편집 및 관리하는 방법에 대한 개요를 제공합니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -48,7 +48,7 @@ Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 �
 
 ## 필드 그룹 필터링 {#filter}
 
-사용할 수 있는 필드 그룹의 목록은 생성 방법에 따라 사전에 필터링됩니다. 기본 설정은 Adobe에 의해 정의된 필드 그룹을 표시합니다. 그러나 목록을 필터링하여 조직에서 만든 목록을 표시할 수도 있습니다. 라디오 단추를 선택하여 [!UICONTROL 표준]과(와) [!UICONTROL 사용자 지정] 옵션 중에서 선택하십시오. [!UICONTROL 표준] 옵션은 Adobe에서 만든 엔터티를 표시하고 [!UICONTROL 사용자 지정] 옵션은 조직 내에서 만든 엔터티를 표시합니다.
+사용할 수 있는 필드 그룹의 목록은 생성 방법에 따라 사전에 필터링됩니다. 기본 설정은 Adobe에서 정의한 필드 그룹을 표시합니다. 그러나 목록을 필터링하여 조직에서 만든 목록을 표시할 수도 있습니다. 라디오 단추를 선택하여 [!UICONTROL 표준]과(와) [!UICONTROL 사용자 지정] 옵션 중에서 선택하십시오. [!UICONTROL 표준] 옵션은 Adobe에서 만든 엔터티를 표시하고 [!UICONTROL 사용자 지정] 옵션은 조직 내에서 만든 엔터티를 표시합니다.
 
 [!UICONTROL Standard] 및 [!UICONTROL Custom]이 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 필드 그룹] 탭](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)![
 
@@ -56,7 +56,7 @@ Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 �
 
 >[!NOTE]
 >
->조직에서 정의한 사용자 정의 필드 그룹만 완전히 편집하고 사용자 정의할 수 있습니다. Adobe으로 정의된 코어 필드 그룹의 경우 개별 스키마의 컨텍스트 내에서 해당 필드의 표시 이름만 편집할 수 있습니다. 이러한 속성은 자물쇠 아이콘(![자물쇠 아이콘)으로 스키마 편집기에 표시됩니다.](/help/images/icons/lock-closed.png)). 자세한 내용은 [스키마 필드에 대한 표시 이름 편집](./schemas.md#display-names)의 섹션을 참조하십시오.
+>조직에서 정의한 사용자 정의 필드 그룹만 완전히 편집하고 사용자 정의할 수 있습니다. Adobe에서 정의한 코어 필드 그룹의 경우 해당 필드에 대한 표시 이름만 개별 스키마의 컨텍스트 내에서 편집할 수 있습니다. 이러한 속성은 자물쇠 아이콘(![자물쇠 아이콘)으로 스키마 편집기에 표시됩니다.](/help/images/icons/lock-closed.png)). 자세한 내용은 [스키마 필드에 대한 표시 이름 편집](./schemas.md#display-names)의 섹션을 참조하십시오.
 >
 >사용자 정의 필드 그룹이 데이터 수집을 위해 스키마에 저장되고 사용된 후에는 필드 그룹에 추가 변경만 수행할 수 있습니다. 자세한 내용은 [스키마 진화의 규칙](../../schema/composition.md#evolution)을 참조하십시오.
 
@@ -92,6 +92,6 @@ Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 �
 
 ## 다음 단계 {#next-steps}
 
-이 안내서에서는 Platform UI를 사용하여 필드 그룹을 만들고 편집하는 방법에 대해 다룹니다. [!UICONTROL 스키마] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md)를 참조하십시오.
+이 안내서에서는 Experience Platform UI를 사용하여 필드 그룹을 만들고 편집하는 방법에 대해 다룹니다. [!UICONTROL 스키마] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md)를 참조하십시오.
 
 [!DNL Schema Registry] API를 사용하여 필드 그룹을 관리하는 방법에 대해 알아보려면 [필드 그룹 끝점 안내서](../../api/field-groups.md)를 참조하십시오.

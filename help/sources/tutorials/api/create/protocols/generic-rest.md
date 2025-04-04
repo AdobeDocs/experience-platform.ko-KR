@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 일반 REST API 기본 연결 만들
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 일반 REST API를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '955'
 ht-degree: 3%
 
 ---
@@ -26,10 +26,10 @@ ht-degree: 3%
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ### 필요한 자격 증명 수집
 
@@ -61,13 +61,13 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 ## 기본 연결 만들기
 
-기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
+기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 Experience Platform 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
 [!DNL Generic REST API]은(는) 기본 인증과 OAuth 2 새로 고침 코드를 모두 지원합니다. 두 인증 유형 중 하나로 인증하는 방법에 대한 지침은 다음 예를 참조하십시오.
 
 ### OAuth 2 새로 고침 코드를 사용하여 [!DNL Generic REST API] 기본 연결 만들기
 
-OAuth 2 새로 고침 코드를 사용하여 기본 연결 ID를 만들려면 OAuth 2 자격 증명을 제공하는 동안 `/connections` 끝점에 POST 요청을 하십시오.
+OAuth 2 새로 고침 코드를 사용하여 기본 연결 ID를 만들려면 OAuth 2 자격 증명을 제공하는 동안 `/connections` 끝점에 POST 요청을 합니다.
 
 **API 형식**
 
@@ -109,7 +109,7 @@ curl -X POST \
 | `name` | 기본 연결의 이름입니다. 기본 연결에 대한 정보를 조회하는 데 사용할 수 있으므로 기본 연결의 이름이 설명적인지 확인하십시오. |
 | `description` | (선택 사항) 기본 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
 | `connectionSpec.id` | [!DNL Generic REST API]에 연결된 연결 사양 ID입니다. 이 고정 ID는 `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`입니다. |
-| `auth.specName` | Platform에 소스를 인증하기 위해 사용하는 인증 유형입니다. |
+| `auth.specName` | Experience Platform에 소스를 인증하기 위해 사용하는 인증 유형입니다. |
 | `auth.params.host` | [!DNL Generic REST API] 소스에 연결하는 데 사용되는 루트 URL입니다. |
 | `auth.params.accessToken` | 소스 인증에 사용되는 해당 액세스 토큰입니다. OAuth 기반 인증에 필요합니다. |
 
@@ -126,7 +126,7 @@ curl -X POST \
 
 ### 기본 인증을 사용하여 [!DNL Generic REST API] 기본 연결 만들기
 
-기본 인증을 사용하여 [!DNL Generic REST API] 기본 연결을 만들려면 기본 인증 자격 증명을 제공하는 동안 [!DNL Flow Service] API의 `/connections` 끝점에 POST 요청을 하십시오.
+기본 인증을 사용하여 [!DNL Generic REST API] 기본 연결을 만들려면 기본 인증 자격 증명을 제공하는 동안 [!DNL Flow Service] API의 `/connections` 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -169,7 +169,7 @@ curl -X POST \
 | `name` | 기본 연결의 이름입니다. 기본 연결에 대한 정보를 조회하는 데 사용할 수 있으므로 기본 연결의 이름이 설명적인지 확인하십시오. |
 | `description` | (선택 사항) 기본 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
 | `connectionSpec.id` | [!DNL Generic REST API]에 연결된 연결 사양 ID입니다. 이 고정 ID는 `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`입니다. |
-| `auth.specName` | 소스를 플랫폼에 연결하는 데 사용하는 인증 유형입니다. |
+| `auth.specName` | 소스를 Experience Platform에 연결하는 데 사용하는 인증 유형입니다. |
 | `auth.params.host` | [!DNL Generic REST API] 소스에 연결하는 데 사용되는 루트 URL입니다. |
 | `auth.params.username` | [!DNL Generic REST API] 소스에 해당하는 사용자 이름입니다. 기본 인증에 필요합니다. |
 | `auth.params.password` | [!DNL Generic REST API] 소스에 해당하는 암호입니다. 기본 인증에 필요합니다. |
@@ -190,4 +190,4 @@ curl -X POST \
 이 자습서에 따라 [!DNL Flow Service] API를 사용하여 [!DNL Generic REST API] 기본 연결을 만들었습니다. 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다.
 
 * [ [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
-* [ [!DNL Flow Service] API를 사용하여 프로토콜 데이터를 플랫폼으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/protocols.md)
+* [ [!DNL Flow Service] API를 사용하여 프로토콜 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/protocols.md)

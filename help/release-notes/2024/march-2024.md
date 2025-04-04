@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2024년 3월
 description: Adobe Experience Platform의 2024년 3월 릴리스 정보.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
-workflow-type: ht
-source-wordcount: '1190'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1192'
+ht-degree: 97%
 
 ---
 
@@ -98,15 +98,15 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 | 기능 | 설명 |
 | --- | --- |
-| Experience Platform UI 맵 데이터 유형 지원 | 플랫폼 UI에서 맵 필드를 정의하여 경험 데이터 모델(XDM) 데이터 구조를 더욱 세부적으로 사용자 정의할 수 있습니다. 이제 스키마 편집기에서 맵 필드를 만들어 유연한 데이터 구조를 모델링하거나 키-값 쌍을 효율적으로 저장할 수 있습니다. 하위 필드를 구성하고 필드 그룹에 할당할 새 필드를 정의할 때 유형 드롭다운에서 “맵”을 선택합니다. 지원되는 맵 값 유형은 문자열과 정수입니다.<br>![유형 및 맵 값 유형 필드가 강조 표시된 스키마 편집기.](../2024/assets/march/maps.png "유형 및 맵 값 유형 필드가 강조 표시된 스키마 편집기."){width="100" zoomable="yes"}<br> [UI에서 맵 필드를 정의](../../xdm/ui/fields/map.md)하는 방법을 알아보려면 UI 안내서를 참조하십시오. |
+| Experience Platform UI 맵 데이터 유형 지원 | Experience Platform UI에서 맵 필드를 정의하여 XDM(Experience Data Model) 데이터 구조를 추가로 사용자 지정합니다. 이제 스키마 편집기에서 맵 필드를 만들어 유연한 데이터 구조를 모델링하거나 키-값 쌍을 효율적으로 저장할 수 있습니다. 하위 필드를 구성하고 필드 그룹에 할당할 새 필드를 정의할 때 유형 드롭다운에서 “맵”을 선택합니다. 지원되는 맵 값 유형은 문자열과 정수입니다.<br>![유형 및 맵 값 유형 필드가 강조 표시된 스키마 편집기.](../2024/assets/march/maps.png "유형 및 맵 값 유형 필드가 강조 표시된 스키마 편집기."){width="100" zoomable="yes"}<br> [UI에서 맵 필드를 정의](../../xdm/ui/fields/map.md)하는 방법을 알아보려면 UI 안내서를 참조하십시오. |
 
 {style="table-layout:auto"}
 
-Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
+Experience Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service]를 사용하여 개인 사용자(예: 고객, 잠재 고객, 사용자 또는 조직)와 관련된 [!DNL Experience Platform]에 저장된 데이터를 대상자로 세분화할 수 있습니다. 세그먼트 정의 또는 [!DNL Real-Time Customer Profile] 데이터의 다른 소스를 통해 대상자를 만들 수 있습니다. 이러한 대상자는 [!DNL Platform]을 통해 중앙 집중식으로 구성 및 유지 관리되고 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
+[!DNL Segmentation Service]를 사용하여 개인 사용자(예: 고객, 잠재 고객, 사용자 또는 조직)와 관련된 [!DNL Experience Platform]에 저장된 데이터를 대상자로 세분화할 수 있습니다. 세그먼트 정의 또는 [!DNL Real-Time Customer Profile] 데이터의 다른 소스를 통해 대상자를 만들 수 있습니다. 이러한 대상자는 [!DNL Experience Platform]을 통해 중앙 집중식으로 구성 및 유지 관리되고 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
 
 **새로운 기능**
 

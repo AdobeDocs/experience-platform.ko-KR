@@ -2,9 +2,9 @@
 description: 대상에 대한 HTTP 요청을 그룹화하고 일괄 처리하는 방법을 결정하는 집계 정책을 설정하는 방법에 대해 알아봅니다.
 title: 집계 정책
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1007'
 ht-degree: 2%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 API 끝점으로 데이터를 내보낼 때 최대의 효율성을 보장하기 위해 다양한 설정을 사용하여 내보낸 프로필을 더 크거나 작은 배치로 집계하고 ID별로 그룹화하고 기타 사용 사례를 사용할 수 있습니다. 또한 데이터 내보내기를 API 끝점에 대한 다운스트림 제한(속도 제한, API 호출당 ID 수 등)으로 사용자 지정할 수 있습니다.
 
-구성 가능한 집계를 사용하여 Destination SDK에서 제공한 설정을 자세히 살펴보거나 우수 사례 집계를 사용하여 Destination SDK에게 API 호출을 가능한 한 가장 잘 일괄 처리하도록 알립니다.
+구성 가능한 집계를 사용하여 Destination SDK에서 제공하는 설정을 자세히 살펴보거나 우수 사례 집계를 사용하여 Destination SDK에 API 호출을 가능한 한 많이 배치하도록 지시합니다.
 
 Destination SDK을 사용하여 실시간(스트리밍) 대상을 작성할 때 내보낸 프로필을 그 결과로 내보내기에 결합하는 방법을 구성할 수 있습니다. 이 동작은 집계 정책 설정에 의해 결정됩니다.
 
-이 구성 요소가 Destination SDK으로 만든 통합에 어떻게 적합한지 이해하려면 [구성 옵션](../configuration-options.md) 설명서에서 다이어그램을 참조하거나 [Destination SDK을 사용하여 스트리밍 대상을 구성하는 방법](../../guides/configure-destination-instructions.md#create-destination-configuration)에 대한 안내서를 참조하십시오.
+이 구성 요소가 Destination SDK으로 만든 통합에 어디에 맞는지 이해하려면 [구성 옵션](../configuration-options.md) 설명서에서 다이어그램을 참조하거나 [Destination SDK을 사용하여 스트리밍 대상을 구성하는 방법](../../guides/configure-destination-instructions.md#create-destination-configuration)에 대한 안내서를 참조하십시오.
 
 `/authoring/destinations` 끝점을 통해 집계 정책 설정을 구성할 수 있습니다. 이 페이지에 표시된 구성 요소를 구성할 수 있는 자세한 API 호출 예는 다음 API 참조 페이지를 참조하십시오.
 
@@ -60,7 +60,7 @@ Destination SDK을 사용하여 실시간(스트리밍) 대상을 작성할 때 
 | 매개변수 | 유형 | 설명 |
 |---------|----------|------|
 | `aggregationType` | 문자열 | 대상에서 사용해야 하는 집계 정책 유형을 나타냅니다. 지원되는 집계 유형: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `bestEffortAggregation.maxUsersPerRequest` | 정수 | Experience Platform은 단일 HTTP 호출에서 내보낸 여러 프로필을 집계할 수 있습니다. <br><br>이 값은 끝점이 단일 HTTP 호출에서 받아야 하는 최대 프로필 수를 나타냅니다. 이는 최선의 작업 집계입니다. 예를 들어 값을 100으로 지정하면 Platform이 호출 시 100보다 작은 수의 프로필을 보낼 수 있습니다. <br><br> 서버가 요청당 여러 사용자를 허용하지 않는 경우 이 값을 `1`(으)로 설정하십시오. |
+| `bestEffortAggregation.maxUsersPerRequest` | 정수 | Experience Platform은 단일 HTTP 호출에서 내보낸 여러 프로필을 집계할 수 있습니다. <br><br>이 값은 끝점이 단일 HTTP 호출에서 받아야 하는 최대 프로필 수를 나타냅니다. 이는 최선의 작업 집계입니다. 예를 들어 100 값을 지정하면 Experience Platform에서 호출 시 100보다 작은 수의 프로필을 보낼 수 있습니다. <br><br> 서버가 요청당 여러 사용자를 허용하지 않는 경우 이 값을 `1`(으)로 설정하십시오. |
 | `bestEffortAggregation.splitUserById` | 부울 | 대상에 대한 호출을 ID로 분할해야 하는 경우 이 플래그를 사용합니다. 서버에서 지정된 ID 네임스페이스에 대해 호출당 하나의 ID만 허용하는 경우 이 플래그를 `true`(으)로 설정하십시오. |
 
 {style="table-layout:auto"}
@@ -109,8 +109,8 @@ Destination SDK을 사용하여 실시간(스트리밍) 대상을 작성할 때 
 |---------|----------|------|
 | `aggregationType` | 문자열 | 대상에서 사용해야 하는 집계 정책 유형을 나타냅니다. 지원되는 집계 유형: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `configurableAggregation.splitUserById` | 부울 | 대상에 대한 호출을 ID로 분할해야 하는 경우 이 플래그를 사용합니다. 서버에서 지정된 ID 네임스페이스에 대해 호출당 하나의 ID만 허용하는 경우 이 플래그를 `true`(으)로 설정하십시오. |
-| `configurableAggregation.maxBatchAgeInSecs` | 정수 | `maxNumEventsInBatch`과(와) 함께 사용되는 이 매개 변수는 끝점에 API 호출을 보낼 때까지 Experience Platform이 대기하는 시간을 결정합니다. <ul><li>최소값(초): 1,800</li><li>최대값(초): 3,600</li></ul> 예를 들어 두 매개 변수에 모두 최대값을 사용하는 경우 Experience Platform은 API 호출을 수행하기 전에 10000개의 적격 프로필이 있을 때까지 3,600초 또는 API를 먼저 호출합니다. |
-| `configurableAggregation.maxNumEventsInBatch` | 정수 | `maxBatchAgeInSecs`과(와) 함께 사용되는 이 매개 변수는 API 호출에서 집계해야 하는 정규화된 프로필 수를 결정합니다. <ul><li>최소값: 1,000</li><li>최대값: 10,000</li></ul> 예를 들어 두 매개 변수에 모두 최대값을 사용하는 경우 Experience Platform은 API 호출을 수행하기 전에 3,600초 또는 10,000개의 적격 프로필이 있을 때까지 기다리며, 둘 중 먼저 발생하는 작업이 수행됩니다. |
+| `configurableAggregation.maxBatchAgeInSecs` | 정수 | `maxNumEventsInBatch`과(와) 함께 사용되는 이 매개 변수는 API 호출을 엔드포인트로 보낼 때까지 Experience Platform이 대기하는 시간을 결정합니다. <ul><li>최소값(초): 1,800</li><li>최대값(초): 3,600</li></ul> 예를 들어 두 매개 변수에 모두 최대값을 사용하는 경우 Experience Platform은 API 호출을 수행하기 전에 3,600초 또는 10000개의 적격 프로필이 있을 때까지 기다리거나 둘 중 먼저 발생하는 작업을 수행합니다. |
+| `configurableAggregation.maxNumEventsInBatch` | 정수 | `maxBatchAgeInSecs`과(와) 함께 사용되는 이 매개 변수는 API 호출에서 집계해야 하는 정규화된 프로필 수를 결정합니다. <ul><li>최소값: 1,000</li><li>최대값: 10,000</li></ul> 예를 들어 두 매개 변수에 모두 최대값을 사용하는 경우 Experience Platform은 API 호출을 수행하기 전에 3,600초 또는 10,000개의 적격 프로필이 있을 때까지 기다리며, 둘 중 먼저 발생하는 작업이 있습니다. |
 | `configurableAggregation.aggregationKey` | - | 아래 설명된 매개 변수를 기반으로 대상에 매핑된 내보낸 프로필을 집계할 수 있습니다. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | 부울 | 대상으로 내보낸 프로필을 대상 ID로 그룹화하려면 이 매개 변수를 `true`(으)로 설정하십시오. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | 부울 | 대상 ID 및 대상 상태별로 대상으로 내보낸 프로필을 그룹화하려면 이 매개 변수와 `includeSegmentId`을(를) 모두 `true`(으)로 설정하십시오. |

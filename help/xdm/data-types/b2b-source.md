@@ -2,9 +2,9 @@
 title: B2B Source 데이터 유형
 description: B2B Source XDM(Experience Data Model) 데이터 유형에 대해 알아봅니다.
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '237'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 문자열 기반 식별자에만 의존하는 경우 여러 시스템에서 ID 간에 겹치는 경우가 있습니다(예: 한 CRM 시스템에서 영업 기회에 문자열 ID를 제공할 수 있지만, 동일한 ID가 완전히 다른 영업 기회를 의미할 수 있음). 이렇게 하면 [실시간 고객 프로필](../../profile/home.md)에서 데이터를 병합할 때 데이터가 충돌할 수 있습니다.
 
-[!UICONTROL B2B Source] 데이터 형식을 사용하면 엔터티의 원래 문자열 ID를 사용하고 이를 소스별 컨텍스트 정보와 결합하여 원본 ID에 관계없이 플랫폼 시스템에서 완전히 고유한 ID를 유지할 수 있습니다.
+[!UICONTROL B2B Source] 데이터 형식을 사용하면 엔터티의 원래 문자열 ID를 사용하고 이를 소스별 컨텍스트 정보와 결합하여 원본과 관계없이 Experience Platform 시스템에서 완전히 고유한 상태를 유지할 수 있습니다.
 
 ![B2B Source 구조](../images/data-types/b2b-source.png)
 

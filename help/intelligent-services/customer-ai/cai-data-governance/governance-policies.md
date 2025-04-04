@@ -4,16 +4,16 @@ feature: Customer AI
 title: 고객 AI를 위한 거버넌스 정책
 description: Adobe Experience Platform은 수집된 경험 데이터를 자신 있게 제어할 수 있는 몇 가지 서비스와 도구를 제공합니다.
 exl-id: be3eca3a-0ea1-4b84-9454-675a4f9ac71e
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
 # 고객 AI의 거버넌스 정책
 
-모델을 만들고 모델의 구성을 제출하는 워크플로를 완료하면 [정책 시행](/help/data-governance/enforcement/auto-enforcement.md)에서 위반이 있는지 확인합니다. 정책 위반이 발생하면 하나 이상의 정책이 위반되었음을 나타내는 팝오버가 표시됩니다. 이는 플랫폼 내에서 데이터 작업 및 마케팅 작업이 데이터 사용 정책을 준수하는지 확인하기 위한 것입니다.
+모델을 만들고 모델의 구성을 제출하는 워크플로를 완료하면 [정책 시행](/help/data-governance/enforcement/auto-enforcement.md)에서 위반이 있는지 확인합니다. 정책 위반이 발생하면 하나 이상의 정책이 위반되었음을 나타내는 팝오버가 표시됩니다. 이는 Experience Platform 내의 데이터 작업 및 마케팅 작업이 데이터 사용 정책을 준수하는지 확인하기 위한 것입니다.
 
 ![정책 위반에 대한 정보를 표시하는 팝오버](../images/user-guide/policy-violation-popover-cai.png).
 

@@ -2,9 +2,9 @@
 title: Ad Hoc 데이터 세트에서 기본 Id 설정
 description: Adobe Experience Platform Query Service를 사용하면 SQL ALTER TABLE 명령을 통해 직접 임시 스키마 데이터 세트 필드에 ID 또는 기본 ID를 설정할 수 있습니다. 이 문서에서는 ALTER TABLE 명령을 사용하여 기본 ID 또는 보조 ID를 설정하는 방법에 대해 설명합니다.
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
-source-git-commit: d9c3ccdf0c0e191af1ab18e894688f301378156d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '447'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platform Query Service를 사용하면 SQL `ALTER TABLE` 명령
 
 ## 제한 추가 {#add-constraints}
 
-`ALTER TABLE` 명령을 사용하면 데이터 집합 열에 개인 ID로 레이블을 지정한 다음 SQL을 사용하여 관련 메타데이터를 업데이트하여 해당 레이블을 기본 ID로 사용할 수 있습니다. 이 기능은 Platform UI를 통해 스키마에서 직접 가져오는 대신 SQL을 통해 데이터 세트를 만들 때 특히 유용합니다. 이 명령은 플랫폼 내의 데이터 작업이 데이터 사용 정책을 준수하는지 확인하는 데 사용할 수 있습니다.
+`ALTER TABLE` 명령을 사용하면 데이터 집합 열에 개인 ID로 레이블을 지정한 다음 SQL을 사용하여 관련 메타데이터를 업데이트하여 해당 레이블을 기본 ID로 사용할 수 있습니다. 이 기능은 Experience Platform UI를 통해 스키마에서 직접 가져오는 대신 SQL을 통해 데이터 세트를 만들 때 특히 유용합니다. 이 명령은 Experience Platform 내의 데이터 작업이 데이터 사용 정책을 준수하는지 확인하는 데 사용할 수 있습니다.
 
 **예**
 

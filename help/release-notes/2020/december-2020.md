@@ -5,16 +5,16 @@ doc-type: release notes
 last-update: December 9, 2020
 author: ens60013 & ens72471
 exl-id: 89d631f1-1b11-4a18-98e1-08e1d5bd8b0d
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 11%
+source-wordcount: '433'
+ht-degree: 13%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2020년 12월 9일**
+**릴리스 일자: 2020년 12월 9일 목요일**
 
 Adobe Experience Platform의 새로운 기능:
 
@@ -27,7 +27,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 ## [!DNL Dataflows] {#dataflows}
 
-데이터 흐름은 플랫폼 간에 데이터를 이동하는 데이터 작업을 나타냅니다. 이러한 데이터 흐름은 여러 다른 서비스에 걸쳐 구성되어 데이터를 소스 커넥터에서 타겟 데이터 세트, ID 및 프로필 서비스, 대상으로 이동하는 데 도움이 됩니다.
+데이터 흐름은 Experience Platform 간에 데이터를 이동하는 데이터 작업을 나타냅니다. 이러한 데이터 흐름은 여러 다른 서비스에 걸쳐 구성되어 데이터를 소스 커넥터에서 타겟 데이터 세트, ID 및 프로필 서비스, 대상으로 이동하는 데 도움이 됩니다.
 
 **주요 기능**
 
@@ -39,7 +39,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Data Science Workspace은 머신 러닝 및 인공 지능을 사용하여 데이터에서 통찰력을 만듭니다. Adobe Experience Platform에 통합된 Data Science Workspace은 Adobe 솔루션 전반에서 컨텐츠 및 데이터 자산을 사용하여 예측을 수행할 수 있도록 합니다.
+Data Science Workspace은 머신 러닝 및 인공 지능을 사용하여 데이터에서 통찰력을 만듭니다. Adobe Experience Platform에 통합된 Data Science Workspace은 Adobe 솔루션 전반에서 컨텐츠 및 데이터 에셋을 사용하여 예측을 수행하는 데 도움이 됩니다.
 
 **주요 기능**
 
@@ -51,7 +51,7 @@ Adobe Experience Platform Intelligence 패키지 추가 정보에 대한 자세�
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 [!DNL Platform] 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 [!DNL Experience Platform] 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 [!DNL Experience Platform]에서는 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 

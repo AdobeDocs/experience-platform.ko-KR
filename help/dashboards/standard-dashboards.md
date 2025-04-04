@@ -2,9 +2,9 @@
 title: 표준 대시보드
 description: 맞춤형 위젯을 만들고, 추가하고, 편집하여 주요 지표를 시각화할 수 있는 사용자 정의 대시보드를 만들고 관리하는 방법을 알아봅니다.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1625'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ## 사용자 지정 대시보드 만들기
 
-사용자 지정 대시보드를 만들려면 먼저 대시보드 인벤토리로 이동합니다. Platform UI의 왼쪽 탐색에서 **[!UICONTROL 대시보드]**&#x200B;를 선택한 다음 **[!UICONTROL 대시보드 만들기]**&#x200B;를 선택합니다.
+사용자 지정 대시보드를 만들려면 먼저 대시보드 인벤토리로 이동합니다. Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 대시보드]**&#x200B;를 선택한 다음 **[!UICONTROL 대시보드 만들기]**&#x200B;를 선택합니다.
 
 ![왼쪽 탐색 영역에 대시보드가 있고 &quot;대시보드 만들기&quot;가 강조 표시된 대시보드 인벤토리.](./images/standard-dashboards/create-dashboard.png)
 
@@ -64,7 +64,7 @@ Data Distiller SKU를 구매한 사용자에게는 사용자 지정 SQL 쿼리�
 
 #### 데이터 모델 선택 {#select-data-model}
 
-[!UICONTROL 데이터 모델 선택] 대화 상자가 나타납니다. 사용 가능한 모든 테이블의 미리보기 목록을 표시하려면 왼쪽 열에서 데이터 모델을 선택합니다. Real-time Customer Data Platform에 대해 미리 구성된 데이터 모델의 이름은 [!UICONTROL CDPInsights]입니다.
+[!UICONTROL 데이터 모델 선택] 대화 상자가 나타납니다. 사용 가능한 모든 테이블의 미리보기 목록을 표시하려면 왼쪽 열에서 데이터 모델을 선택합니다. Real-Time Customer Data Platform에 대해 미리 구성된 데이터 모델의 이름은 [!UICONTROL CDPInsights]입니다.
 
 >[!TIP]
 >
@@ -152,7 +152,7 @@ Data Distiller SKU를 구매한 사용자에게는 사용자 지정 SQL 쿼리�
 
 ![사용자 지정 위젯과 저장 단추가 강조 표시된 사용자 정의 대시보드입니다.](./images/standard-dashboards/user-defined-dashboard.png)
 
-Adobe Real-time Customer Data Platform 인사이트 대시보드에 대한 각 쿼리에 효율적으로 실행할 수 있는 리소스가 충분히 있는지 확인하기 위해 API는 각 쿼리에 동시 슬롯을 할당하여 리소스 사용을 추적합니다. 시스템은 최대 4개의 동시 쿼리를 처리할 수 있으므로 주어진 시간에 4개의 동시 쿼리 슬롯을 사용할 수 있습니다. 쿼리는 동시성 슬롯을 기반으로 대기열에 추가된 다음 충분한 동시성 슬롯을 사용할 수 있을 때까지 대기합니다.
+Adobe Real-Time Customer Data Platform 인사이트 대시보드에 대한 각 쿼리에 효율적으로 실행할 수 있는 리소스가 충분히 있는지 확인하기 위해 API는 각 쿼리에 동시 슬롯을 할당하여 리소스 사용을 추적합니다. 시스템은 최대 4개의 동시 쿼리를 처리할 수 있으므로 주어진 시간에 4개의 동시 쿼리 슬롯을 사용할 수 있습니다. 쿼리는 동시성 슬롯을 기반으로 대기열에 추가된 다음 충분한 동시성 슬롯을 사용할 수 있을 때까지 대기합니다.
 
 ### 위젯 편집, 복제 또는 삭제 {#duplicate}
 
@@ -172,7 +172,7 @@ Adobe Real-time Customer Data Platform 인사이트 대시보드에 대한 각 �
 
 >[!NOTE]
 >
->복제를 통해 처음부터 시작하지 않고도 통찰력의 속성을 사용자 정의하여 고유한 위젯을 만들 수 있습니다. 위젯을 복제하면 사용자 정의 대시보드에 표시됩니다. 그런 다음 새 위젯의 생략 부호를 선택한 다음 **[!UICONTROL 편집]**&#x200B;을 선택하여 인사이트를 사용자 지정할 수 있습니다.
+>복제를 통해 처음부터 시작하지 않고도 insight의 속성을 사용자 정의하여 고유한 위젯을 만들 수 있습니다. 위젯을 복제하면 사용자 정의 대시보드에 표시됩니다. 그런 다음 새 위젯의 생략 부호를 선택한 다음 **[!UICONTROL 편집]**&#x200B;을 선택하여 insight을 사용자 지정할 수 있습니다.
 
 ## 다음 단계 및 추가 리소스
 

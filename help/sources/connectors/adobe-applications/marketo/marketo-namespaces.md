@@ -2,9 +2,9 @@
 title: B2B 네임스페이스 및 스키마
 description: 이 문서에서는 B2B 소스 커넥터를 만들 때 필요한 사용자 지정 네임스페이스에 대한 개요를 제공합니다.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: ebbed5c6ff7037b138588a79a05e6ef13d1856d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1659'
 ht-degree: 11%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 11%
 
 >[!AVAILABILITY]
 >
->B2B 스키마가 [실시간 고객 프로필](../../../../profile/home.md)에 적합하도록 하려면 [Adobe Real-time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md)에 액세스할 수 있어야 합니다.
+>B2B 스키마가 [실시간 고객 프로필](../../../../profile/home.md)에 적합하도록 하려면 [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md)에 액세스할 수 있어야 합니다.
 
 >[!NOTE]
 >
->Adobe Experience Platform UI의 템플릿을 사용하여 B2B 및 B2C 데이터에 대한 에셋을 신속하게 만들 수 있습니다. 자세한 내용은 [Platform UI에서 템플릿 사용](../../../tutorials/ui/templates.md)에 대한 안내서를 참조하십시오.
+>Adobe Experience Platform UI의 템플릿을 사용하여 B2B 및 B2C 데이터에 대한 에셋을 신속하게 만들 수 있습니다. 자세한 내용은 [Experience Platform UI에서 템플릿 사용](../../../tutorials/ui/templates.md)에 대한 안내서를 참조하십시오.
 
 B2B 소스에서 사용할 네임스페이스 및 스키마의 기본 설정에 대한 자세한 내용은 이 문서를 참조하십시오. 이 문서에서는 B2B 네임스페이스 및 스키마를 생성하는 데 필요한 Postman 자동화 유틸리티 설정에 대한 세부 정보도 제공합니다.
 
@@ -30,11 +30,11 @@ B2B 소스에서 사용할 네임스페이스 및 스키마의 기본 설정에 
 B2B 네임스페이스 및 스키마 자동 생성 유틸리티를 지원하도록 [!DNL Postman] 환경을 설정하는 방법에 대한 필수 구성 요소 정보는 다음 설명서를 참조하십시오.
 
 - 이 [GitHub 저장소](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility)에서 네임스페이스와 스키마 자동 생성 유틸리티 컬렉션 및 환경을 다운로드할 수 있습니다.
-- 필요한 헤더에 대한 값을 수집하고 샘플 API 호출을 읽는 방법에 대한 세부 정보를 포함하여 Platform API 사용에 대한 자세한 내용은 [Platform API 시작하기](../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
-- Platform API에 대한 자격 증명을 생성하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../../landing/api-authentication.md)에 대한 자습서를 참조하십시오.
-- 플랫폼 API용 [!DNL Postman]을(를) 설정하는 방법에 대한 자세한 내용은 [개발자 콘솔 설정 및 [!DNL Postman]](../../../../landing/postman.md)에 대한 자습서를 참조하십시오.
+- 필요한 헤더에 대한 값을 수집하고 샘플 API 호출을 읽는 방법에 대한 세부 정보를 포함하여 Experience Platform API 사용에 대한 자세한 내용은 [Experience Platform API 시작](../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+- Experience Platform API에 대한 자격 증명을 생성하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../../landing/api-authentication.md)에 대한 자습서를 참조하십시오.
+- Experience Platform API용 [!DNL Postman]을(를) 설정하는 방법에 대한 자세한 내용은 [개발자 콘솔 설정 및 [!DNL Postman]](../../../../landing/postman.md)에 대한 자습서를 참조하십시오.
 
-Platform 개발자 콘솔과 [!DNL Postman]을(를) 설정하면 이제 [!DNL Postman] 환경에 적절한 환경 값을 적용할 수 있습니다.
+이제 Experience Platform 개발자 콘솔과 [!DNL Postman]을(를) 설정하여 [!DNL Postman] 환경에 적절한 환경 값을 적용할 수 있습니다.
 
 다음 표에는 예제 값과 [!DNL Postman] 환경 채우기에 대한 추가 정보가 포함되어 있습니다.
 
@@ -80,7 +80,7 @@ B2B 네임스페이스는 엔티티의 기본 ID에서 사용됩니다.
 >
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
-| 표시 이름 | 신원 기호 | ID 유형 |
+| 표시 이름 | ID 기호 | ID 유형 |
 | --- | --- | --- |
 | B2B 개인 | `b2b_person` | `CROSS_DEVICE` |
 | B2B 계정 | `b2b_account` | `B2B_ACCOUNT` |
@@ -98,7 +98,7 @@ B2B 네임스페이스는 엔티티의 기본 ID에서 사용됩니다.
 
 Experience Platform은 스키마를 사용하여 데이터의 구조를 일관되고 재사용 가능한 방식으로 설명합니다. 여러 시스템에서 데이터를 일관되게 정의하면 의미를 쉽게 유지할 수 있으므로 데이터의 가치를 얻을 수 있습니다.
 
-데이터를 Platform에 수집하려면 먼저 데이터의 구조를 설명하고 각 필드 내에 포함할 수 있는 데이터 유형에 제약 조건을 제공하는 스키마를 구성해야 합니다. 스키마는 기본 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다.
+Experience Platform에 데이터를 수집하려면 먼저 데이터의 구조를 설명하고 각 필드 내에 포함할 수 있는 데이터 유형에 제약 조건을 제공하는 스키마를 구성해야 합니다. 스키마는 기본 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다.
 
 디자인 원칙 및 모범 사례를 포함하여 스키마 구성 모델에 대한 자세한 내용은 [스키마 구성 기본 사항](../../../../xdm/schema/composition.md)을 참조하십시오.
 
@@ -125,4 +125,4 @@ Experience Platform은 스키마를 사용하여 데이터의 구조를 일관�
 
 ## 다음 단계
 
-[!DNL Marketo] 데이터를 플랫폼에 연결하는 방법은 [UI에서 Marketo 소스 커넥터 만들기](../../../tutorials/ui/create/adobe-applications/marketo.md)에 대한 자습서를 참조하십시오.
+[!DNL Marketo] 데이터를 Experience Platform에 연결하는 방법은 [UI에서 Marketo 소스 커넥터 만들기](../../../tutorials/ui/create/adobe-applications/marketo.md)에 대한 자습서를 참조하십시오.

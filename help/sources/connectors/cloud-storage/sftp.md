@@ -2,16 +2,16 @@
 title: SFTP Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 SFTP 서버를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1226'
 ht-degree: 0%
 
 ---
 
 # SFTP 커넥터
 
-Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 [!DNL SFTP] 계정을 Experience Platform에 연결하기 위해 완료해야 하는 필수 구성 요소 단계는 이 문서를 참조하십시오.
 
@@ -40,7 +40,7 @@ Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수�
 
 ### [!DNL SFTP]에 대한 Base64 인코딩 OpenSSH 개인 키 설정
 
-[!DNL SFTP] 원본은 [!DNL Base64] 인코딩된 OpenSSH 개인 키를 사용하여 인증을 지원합니다. Base64로 인코딩된 OpenSSH 개인 키를 생성하고 [!DNL SFTP]을(를) 플랫폼에 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하십시오.
+[!DNL SFTP] 원본은 [!DNL Base64] 인코딩된 OpenSSH 개인 키를 사용하여 인증을 지원합니다. Base64로 인코딩된 OpenSSH 개인 키를 생성하고 [!DNL SFTP]을(를) Experience Platform에 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하십시오.
 
 >[!BEGINTABS]
 
@@ -96,7 +96,7 @@ The key's randomart image is:
 C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
 ```
 
-위의 명령은 지정한 파일 경로에 [!DNL Base64] 인코딩 개인 키를 저장합니다. 그런 다음 해당 개인 키를 사용하여 [!DNL SFTP]을(를) 인증하고 플랫폼에 연결할 수 있습니다.
+위의 명령은 지정한 파일 경로에 [!DNL Base64] 인코딩 개인 키를 저장합니다. 그런 다음 해당 개인 키를 사용하여 [!DNL SFTP]을(를) 인증하고 Experience Platform에 연결할 수 있습니다.
 
 >[!TAB Mac]
 
@@ -168,7 +168,7 @@ more ~/.ssh/authorized_keys
 | `port` | 연결 중인 [!DNL SFTP] 서버 포트입니다. 지정하지 않으면 기본값은 `22`입니다. |
 | `username` | [!DNL SFTP] 서버에 액세스할 수 있는 사용자 이름입니다. |
 | `password` | [!DNL SFTP] 서버의 암호입니다. |
-| `maxConcurrentConnections` | 이 매개 변수를 사용하면 SFTP 서버에 연결할 때 플랫폼이 생성하는 동시 연결 수에 대한 최대 제한을 지정할 수 있습니다. 이 값을 SFTP에서 설정한 제한보다 작게 설정해야 합니다. **참고**: 기존 SFTP 계정에 대해 이 설정을 사용하면 향후 데이터 흐름에만 영향을 주고 기존 데이터 흐름에는 영향을 주지 않습니다. |
+| `maxConcurrentConnections` | 이 매개 변수를 사용하면 SFTP 서버에 연결할 때 Experience Platform에서 만드는 동시 연결 수의 최대 제한을 지정할 수 있습니다. 이 값을 SFTP에서 설정한 제한보다 작게 설정해야 합니다. **참고**: 기존 SFTP 계정에 대해 이 설정을 사용하면 향후 데이터 흐름에만 영향을 주고 기존 데이터 흐름에는 영향을 주지 않습니다. |
 | `folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. [!DNL SFTP] 원본, 폴더 경로를 제공하여 선택한 하위 폴더에 대한 사용자 액세스를 지정할 수 있습니다. |
 | `disableChunking` | 데이터를 수집하는 동안 [!DNL SFTP] 원본은 먼저 파일 길이를 검색하고 파일을 여러 부분으로 나눈 다음 병렬로 읽을 수 있습니다. 이 값을 활성화하거나 비활성화하여 [!DNL SFTP] 서버가 파일 길이를 검색할 수 있는지 또는 특정 오프셋에서 데이터를 읽을 수 있는지 여부를 지정할 수 있습니다. |
 | `connectionSpec.id` | (API 전용) 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL SFTP]의 연결 사양 ID는 `b7bf2577-4520-42c9-bae9-cad01560f7bc`입니다. |
@@ -185,7 +185,7 @@ SSH 공개 키 인증을 사용하여 [!DNL SFTP] 서버를 인증하려면 다�
 | `password` | [!DNL SFTP] 서버의 암호입니다. |
 | `privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류되어야 합니다. |
 | `passPhrase` | 키 파일 또는 키 콘텐츠가 암호로 보호되어 있는 경우 개인 키를 해독하기 위한 암호나 암호입니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수는 PrivateKeyContent의 암호와 함께 값으로 사용해야 합니다. |
-| `maxConcurrentConnections` | 이 매개 변수를 사용하면 SFTP 서버에 연결할 때 플랫폼이 생성하는 동시 연결 수에 대한 최대 제한을 지정할 수 있습니다. 이 값을 SFTP에서 설정한 제한보다 작게 설정해야 합니다. **참고**: 기존 SFTP 계정에 대해 이 설정을 사용하면 향후 데이터 흐름에만 영향을 주고 기존 데이터 흐름에는 영향을 주지 않습니다. |
+| `maxConcurrentConnections` | 이 매개 변수를 사용하면 SFTP 서버에 연결할 때 Experience Platform에서 만드는 동시 연결 수의 최대 제한을 지정할 수 있습니다. 이 값을 SFTP에서 설정한 제한보다 작게 설정해야 합니다. **참고**: 기존 SFTP 계정에 대해 이 설정을 사용하면 향후 데이터 흐름에만 영향을 주고 기존 데이터 흐름에는 영향을 주지 않습니다. |
 | `folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. [!DNL SFTP] 원본, 폴더 경로를 제공하여 선택한 하위 폴더에 대한 사용자 액세스를 지정할 수 있습니다. |
 | `disableChunking` | 데이터를 수집하는 동안 [!DNL SFTP] 원본은 먼저 파일 길이를 검색하고 파일을 여러 부분으로 나눈 다음 병렬로 읽을 수 있습니다. 이 값을 활성화하거나 비활성화하여 [!DNL SFTP] 서버가 파일 길이를 검색할 수 있는지 또는 특정 오프셋에서 데이터를 읽을 수 있는지 여부를 지정할 수 있습니다. |
 | `connectionSpec.id` | (API 전용) 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL SFTP]의 연결 사양 ID는 `b7bf2577-4520-42c9-bae9-cad01560f7bc`입니다. |

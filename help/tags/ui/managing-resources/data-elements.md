@@ -2,10 +2,10 @@
 title: 데이터 요소
 description: 데이터 요소는 데이터 사전(또는 데이터 맵)의 기본 구성단위입니다. 데이터 요소를 사용하여 마케팅 및 광고 기술 전반에서 데이터를 수집, 구성 및 전달합니다.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1614'
-ht-degree: 68%
+source-wordcount: '1615'
+ht-degree: 71%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 68%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 데이터 요소는 데이터 사전(또는 데이터 맵)의 기본 구성단위입니다. 데이터 요소를 사용하여 마케팅 및 광고 기술 전반에서 데이터를 수집, 구성 및 전달합니다.
 
@@ -238,7 +238,7 @@ CSS 선택기 체인:
 
 ### 방문자 행동
 
-페이지 정보와 유사한 이 데이터 요소는 일반적인 동작 유형을 사용하여 규칙 또는 기타 Platform 솔루션 내에서 논리를 보강합니다.
+페이지 정보와 유사한 이 데이터 요소는 일반적인 동작 유형을 사용하여 규칙 또는 기타 Experience Platform 솔루션 내에서 논리를 보강합니다.
 
 다음 방문자 행동 속성 중 하나를 선택합니다.
 

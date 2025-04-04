@@ -1,10 +1,10 @@
 ---
-description: 이 페이지에서는 Destination SDK에서 /sample-profiles API 끝점을 사용하여 소스 스키마를 기반으로 샘플 프로필을 생성하는 방법을 설명합니다. 이러한 샘플 프로필을 사용하여 파일 기반 대상 구성을 테스트할 수 있습니다.
+description: 이 페이지에서는 Destination SDK의 /sample-profiles API 엔드포인트를 사용하여 소스 스키마를 기반으로 샘플 프로필을 생성하는 방법을 설명합니다. 이러한 샘플 프로필을 사용하여 파일 기반 대상 구성을 테스트할 수 있습니다.
 title: 소스 스키마를 기반으로 샘플 프로필 생성
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '654'
 ht-degree: 1%
 
 ---
@@ -25,14 +25,14 @@ ht-degree: 1%
 `/sample-profiles` 끝점을 사용하기 전에 다음 조건을 충족하는지 확인하십시오.
 
 * Destination SDK을 통해 만든 기존 파일 기반 대상이 있으며 [대상 카탈로그](../../../ui/destinations-workspace.md)에서 볼 수 있습니다.
-* Experience Platform UI에서 대상에 대한 활성화 흐름을 하나 이상 만들었습니다. `/sample-profiles` 끝점은 활성화 흐름에 정의한 소스 스키마를 기반으로 프로필을 만듭니다. 활성화 흐름을 만드는 방법을 알아보려면 [활성화 자습서](../../../ui/activate-batch-profile-destinations.md)를 참조하세요.
-* API 요청을 성공적으로 수행하려면 테스트할 대상 인스턴스에 해당하는 대상 인스턴스 ID가 필요합니다. Platform UI에서 대상과의 연결을 검색할 때 API 호출에 사용해야 하는 대상 인스턴스 ID를 URL에서 가져옵니다.
+* Experience Platform UI에서 대상에 대한 활성화 플로우를 하나 이상 만들었습니다. `/sample-profiles` 끝점은 활성화 흐름에 정의한 소스 스키마를 기반으로 프로필을 만듭니다. 활성화 흐름을 만드는 방법을 알아보려면 [활성화 자습서](../../../ui/activate-batch-profile-destinations.md)를 참조하세요.
+* API 요청을 성공적으로 수행하려면 테스트할 대상 인스턴스에 해당하는 대상 인스턴스 ID가 필요합니다. Experience Platform UI에서 대상과의 연결을 검색할 때 API 호출에 사용해야 하는 대상 인스턴스 ID를 URL에서 가져옵니다.
 
   URL에서 대상 인스턴스 ID를 가져오는 방법을 보여 주는 ![UI 이미지.](../../assets/testing-api/get-destination-instance-id.png)
 
 ## 대상 테스트를 위한 샘플 프로필 생성 {#generate-sample-profiles}
 
-테스트할 대상의 대상 인스턴스 ID로 `/sample-profiles` 끝점에 GET 요청을 하여 소스 스키마를 기반으로 샘플 프로필을 생성할 수 있습니다.
+테스트할 대상의 대상 인스턴스 ID로 `/sample-profiles` 끝점에 GET 요청을 수행하여 소스 스키마를 기반으로 샘플 프로필을 생성할 수 있습니다.
 
 **API 형식**
 
@@ -114,7 +114,7 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 ## API 오류 처리 {#api-error-handling}
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계
 

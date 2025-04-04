@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;데이터 모델;ui;작업 영역;필드;
+keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;데이터 모델;ui;workspace;필드;
 solution: Experience Platform
 title: UI에서 XDM 필드 정의
 description: Experience Platform 사용자 인터페이스에서 XDM 필드를 정의하는 방법을 알아봅니다.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 0360d0eb9f4a01e12ce8619e8d2c5bac9301631f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1607'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform 사용자 인터페이스의 [!DNL Schema Editor]을(�
 
 ## 전제 조건
 
-이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. 클래스 및 필드 그룹이 XDM 스키마에 필드를 제공하는 방법에 대한 소개는 [XDM 개요](../../home.md) 및 Experience Platform 작성의 [기본 사항](../../schema/composition.md)을 참조하세요.
+이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. Experience Platform 에코시스템 내에서 XDM의 역할에 대한 소개와 스키마 컴포지션의 [기본 사항](../../schema/composition.md)을(를) 참조하여 클래스와 필드 그룹이 XDM 스키마에 필드를 기여하는 방법을 알아보십시오. [XDM 개요](../../home.md).
 
 이 안내서에서는 필요하지 않지만 [UI에서 스키마 작성](../../tutorials/create-schema-ui.md)에 대한 자습서를 따라 [!DNL Schema Editor]의 다양한 기능을 숙지하는 것이 좋습니다.
 
@@ -72,7 +72,7 @@ UI에서 새 XDM 필드를 정의하려면 먼저 [!DNL Schema Editor] 내에서
 
 ![스키마 편집기의 [!UICONTROL 필드 속성] 섹션이 강조 표시됩니다.](../../images/ui/fields/overview/field-details.png)
 
-캔버스는 고유한 테넌트 ID로 네임스페이스가 지정된 개체 내에 있는 새로 추가된 필드를 표시하도록 업데이트됩니다(아래 예에서 `_tenantId`(으)로 표시됨). 스키마에 추가된 모든 사용자 정의 필드는 Adobe 제공 클래스 및 필드 그룹의 다른 필드와의 충돌을 방지하기 위해 이 네임스페이스 내에 자동으로 배치됩니다. 이제 오른쪽 레일에 다른 속성 외에도 필드의 경로가 나열됩니다.
+캔버스는 고유한 테넌트 ID로 네임스페이스가 지정된 개체 내에 있는 새로 추가된 필드를 표시하도록 업데이트됩니다(아래 예에서 `_tenantId`(으)로 표시됨). Adobe에서 제공한 클래스 및 필드 그룹의 다른 필드와의 충돌을 방지하기 위해 스키마에 추가되는 모든 사용자 지정 필드는 이 네임스페이스 내에 자동으로 배치됩니다. 이제 오른쪽 레일에 다른 속성 외에도 필드의 경로가 나열됩니다.
 
 ![스키마 다이어그램의 새 필드와 [!UICONTROL 필드 속성] 섹션의 해당 경로가 강조 표시됩니다.](../../images/ui/fields/overview/field-added.png)
 
@@ -102,7 +102,7 @@ UI에서 새 XDM 필드를 정의하려면 먼저 [!DNL Schema Editor] 내에서
 
 ## 특수 필드 유형 {#special}
 
-오른쪽 레일은 선택한 필드에 대해 특수 역할을 지정하는 데 사용할 수 있는 몇 가지 확인란을 제공합니다. 이러한 옵션 중 일부의 사용 사례에는 데이터 모델링 전략과 다운스트림 플랫폼 서비스를 사용하는 방법에 대한 중요한 고려 사항이 포함됩니다.
+오른쪽 레일은 선택한 필드에 대해 특수 역할을 지정하는 데 사용할 수 있는 몇 가지 확인란을 제공합니다. 이러한 옵션 중 일부의 사용 사례에는 데이터 모델링 전략과 다운스트림 Experience Platform 서비스를 사용하는 방법에 관한 중요한 고려 사항이 포함됩니다.
 
 이러한 특수 유형에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 

@@ -3,9 +3,9 @@ title: Edge 개인화 대상에 대한 대상자 활성화
 description: 동일 페이지 및 다음 페이지 개인화 사용 사례를 위해 Adobe Experience Platform에서 Edge 개인화 대상으로 대상을 활성화하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1961'
 ht-degree: 2%
 
 ---
@@ -85,7 +85,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 
 ![Edge 세분화 및 Personalization 대상이 강조 표시된 데이터스트림 구성!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-데이터 스트림을 설정하는 방법에 대한 자세한 내용은 [Platform Web SDK 설명서](../../datastreams/configure.md#aep)에 설명된 지침을 따르십시오.
+데이터 스트림을 설정하는 방법에 대한 자세한 내용은 [Experience Platform Web SDK 설명서](../../datastreams/configure.md#aep)에 설명된 지침을 따르십시오.
 
 ### [!DNL Active-On-Edge] 병합 정책 만들기 {#create-merge-policy}
 
@@ -97,9 +97,9 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 
 [병합 정책 만들기](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)에 대한 지침을 따르고 **[!UICONTROL Active-On-Edge 병합 정책]** 전환을 사용하도록 설정해야 합니다.
 
-### Platform에서 새 대상 만들기 {#create-audience}
+### Experience Platform에서 새 대상 만들기 {#create-audience}
 
-[!DNL Active-On-Edge] 병합 정책을 만든 후에는 Platform에서 새 대상을 만들어야 합니다.
+[!DNL Active-On-Edge] 병합 정책을 만든 후에는 Experience Platform에서 새 대상을 만들어야 합니다.
 
 [대상 빌더](../../segmentation/ui/segment-builder.md) 안내서에 따라 새 대상을 만들고 이전 단계에서 만든 [!DNL Active-On-Edge] 병합 정책을 [할당](../../segmentation/ui/segment-builder.md#merge-policies)하세요.
 
@@ -141,7 +141,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 출처에 따라 여러 유형의 대상 중에서 선택할 수 있습니다.
 
 * **[!UICONTROL 세그먼테이션 서비스]**: 세그먼테이션 서비스에 의해 Experience Platform 내에서 생성된 대상입니다. 자세한 내용은 [세그먼테이션 설명서](../../segmentation/ui/overview.md)를 참조하세요.
-* **[!UICONTROL 사용자 지정 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드되는 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience)에 대한 설명서를 참조하십시오.
+* **[!UICONTROL 사용자 지정 업로드]**: Experience Platform 외부에서 생성되어 Experience Platform에 CSV 파일로 업로드된 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience)에 대한 설명서를 참조하십시오.
 * 다른 Adobe 솔루션에서 가져온 다른 유형의 대상(예: [!DNL Audience Manager]).
 
 ![여러 대상이 강조 표시된 활성화 워크플로의 대상 선택 단계입니다.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

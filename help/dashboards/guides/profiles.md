@@ -4,9 +4,9 @@ title: 프로필 대시보드
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4997'
+source-wordcount: '5005'
 ht-degree: 9%
 
 ---
@@ -19,7 +19,7 @@ Experience Platform 사용자 인터페이스의 프로필 기능에 대한 개�
 
 ## 프로필 대시보드 데이터
 
-Experience Platform 대시보드에는 조직이 Profile Store in Profile 내에 가지고 있는 속성(레코드) 데이터의 스냅샷이 표시됩니다. 스냅샷에는 이벤트(시계열) 데이터가 포함되지 않습니다.
+프로필 대시보드에는 조직이 Experience Platform의 프로필 저장소 내에 가지고 있는 속성(레코드) 데이터의 스냅샷이 표시됩니다. 스냅샷에는 이벤트(시계열) 데이터가 포함되지 않습니다.
 
 스냅샷의 속성 데이터는 스냅샷이 생성된 특정 시점에 나타나는 데이터를 정확하게 표시합니다. 즉, 스냅샷은 데이터의 근사값이나 샘플이 아니며 프로필 대시보드가 실시간으로 업데이트되지 않습니다.
 
@@ -29,11 +29,11 @@ Experience Platform 대시보드에는 조직이 Profile Store in Profile 내에
 
 ## 프로필 대시보드 탐색 {#explore-dashboard}
 
-Platform UI 내에서 프로필 대시보드로 이동하려면 왼쪽 레일에서 **[!UICONTROL 프로필]**&#x200B;을 선택한 다음 **[!UICONTROL 개요]** 탭을 선택하여 대시보드를 표시합니다.
+Experience Platform UI 내의 프로필 대시보드로 이동하려면 왼쪽 레일에서 **[!UICONTROL 프로필]**&#x200B;을 선택한 다음 **[!UICONTROL 개요]** 탭을 선택하여 대시보드를 표시합니다.
 
 >[!NOTE]
 >
->Platform을 처음 사용하는 조직에 아직 활성 프로필 데이터 세트 또는 병합 정책을 만들지 않은 경우 프로필 대시보드가 표시되지 않습니다. 대신 [!UICONTROL 개요] 탭에 실시간 고객 프로필을 시작하는 데 도움이 되는 링크와 설명서가 표시됩니다.
+>조직이 Experience Platform을 처음 사용하는 경우 아직 활성 프로필 데이터 세트나 병합 정책을 만들지 않으면 프로필 대시보드가 표시되지 않습니다. 대신 [!UICONTROL 개요] 탭에 실시간 고객 프로필을 시작하는 데 도움이 되는 링크와 설명서가 표시됩니다.
 
 ![프로필 및 개요가 강조 표시된 Experience Platform 프로필 대시보드입니다.](../images/profiles/dashboard-overview.png)
 
@@ -53,7 +53,7 @@ Platform UI 내에서 프로필 대시보드로 이동하려면 왼쪽 레일에
 
 ### SQL 보기 {#view-sql}
 
-[!UICONTROL 개요] 작업 영역에서 토글을 사용하여 대시보드에 시각화된 인사이트를 생성하는 SQL을 볼 수 있습니다. 기존 인사이트의 SQL에서 영감을 얻어 비즈니스 요구 사항에 따라 플랫폼 데이터에서 고유한 인사이트를 도출하는 새 쿼리를 만들 수 있습니다. 이 기능에 대한 자세한 내용은 [SQL UI 보기 가이드](../view-sql.md)를 참조하세요.
+[!UICONTROL 개요] 작업 영역에서 토글을 사용하여 대시보드에 시각화된 인사이트를 생성하는 SQL을 볼 수 있습니다. 기존 인사이트의 SQL에서 영감을 얻어 비즈니스 요구 사항에 따라 Experience Platform 데이터에서 고유한 인사이트를 도출하는 새 쿼리를 만들 수 있습니다. 이 기능에 대한 자세한 내용은 [SQL UI 보기 가이드](../view-sql.md)를 참조하세요.
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -115,12 +115,12 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ![채널 환경 설정 위젯.](../images/profiles/channel-preferences.png)
 
-고객 동의 및 연락처 환경 설정은 복잡한 주제입니다. 동의 및 컨텍스트 환경 설정을 Experience Platform에서 수집, 처리 및 필터링하는 방법에 대해 알아보려면 다음 문서를 읽는 것이 좋습니다.
+고객 동의 및 연락처 환경 설정은 복잡한 주제입니다. Experience Platform에서 동의 및 컨텍스트 환경 설정을 수집, 처리 및 필터링하는 방법에 대해 알아보려면 다음 문서를 읽는 것이 좋습니다.
 
-* [Adobe 표준에 따라 동의 데이터를 수집](../../landing/governance-privacy-security/consent/adobe/overview.md)하는 데 필요한 스키마 필드 그룹에 대한 자세한 내용은 해당 프로필 사용 스키마 필드 그룹에 대한 설명서를 참조하십시오.
+* [Adobe 표준에 따라 동의 데이터를 수집](../../landing/governance-privacy-security/consent/adobe/overview.md)하는 데 필요한 스키마 필드 그룹에 대한 자세한 내용은 이러한 프로필 사용 스키마 필드 그룹에 대한 설명서를 참조하십시오.
    * [[!UICONTROL 동의 및 환경 설정 세부 정보]](../../xdm/field-groups/profile/consents.md)
-   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md)(Platform 웹 또는 Mobile SDK를 사용하여 동의 신호를 보내는 경우 필요)
-* Adobe 표준을 사용하여 고객 동의 및 환경 설정 데이터를 처리하는 방법에 대해 알아보려면 [Experience Platform의 동의 처리에 대한 개요](../../landing/governance-privacy-security/consent/adobe/overview.md)를 참조하십시오.
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md)(Experience Platform 웹 또는 Mobile SDK을 사용하여 동의 신호를 보내는 경우 필요)
+* Adobe 표준을 사용하여 고객 동의 및 환경 설정 데이터를 처리하는 방법에 대해 알아보려면 Experience Platform의 [동의 처리에 대한 개요](../../landing/governance-privacy-security/consent/adobe/overview.md)를 참조하십시오.
 * 결합된 데이터 거버넌스 및 동의 정책을 사용하여 동의 환경 설정 및 설정한 조직 규칙을 기반으로 세분화를 위한 프로필을 필터링할 수 있습니다. 이러한 결합된 정책을 만들고 사용하는 방법에 대해 알아보려면 [데이터 사용 정책 관리](../../data-governance/policies/user-guide.md#combine-policies)에 대한 사용 안내서를 참조하십시오.
 
 ### 위젯 추가 {#add-widgets}
@@ -169,7 +169,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 결합 스키마는 동일한 클래스를 공유하고 프로필에 대해 활성화된 여러 스키마로 구성됩니다. 단일 보기에서 동일한 클래스를 공유하는 각 스키마 내에 포함된 모든 필드의 합계를 볼 수 있습니다.
 
-[Platform UI에서 유니온 스키마를 보는 중](../../profile/ui/union-schema.md#view-union-schemas)에 대한 자세한 내용은 유니온 스키마 UI 안내서를 참조하십시오.
+[Experience Platform UI에서 유니온 스키마를 보는 중](../../profile/ui/union-schema.md#view-union-schemas)에 대한 자세한 내용은 유니온 스키마 UI 안내서를 참조하십시오.
 
 ## 위젯 및 지표
 
@@ -221,7 +221,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 선택한 Customer AI 모델에 대한 자세한 인사이트 페이지로 이동하려면 **[!UICONTROL 모델 세부 정보 보기]**&#x200B;를 선택합니다.
 
-![점수가 [!UICONTROL 고객 AI 배포] 위젯이고 [!UICONTROL 모델 세부 정보를 보기]가 강조 표시된 Experience Platform 대상 대시보드입니다.](../images/segments/customer-ai-distribution-of-scores.png)
+![점수가 [!UICONTROL 고객 AI 배포] 위젯이고 [!UICONTROL 모델 세부 정보를 보기]가 강조 표시된 Experience Platform 대상 대시보드](../images/segments/customer-ai-distribution-of-scores.png)
 
 자세한 모델 인사이트 페이지가 표시됩니다.
 
@@ -248,7 +248,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 >
 >계산된 총 프로필 수는 선택한 병합 정책에 따라 다릅니다. 사용된 병합 정책을 변경하려면 개요 탭 바로 아래에 있는 드롭다운을 선택합니다. 자세한 내용은 [병합 정책](#merge-policies)의 섹션을 참조하십시오. 자세한 설명은 [병합 정책 개요](../../profile/merge-policies/overview.md)를 참조하십시오.
 
-![Customer AI 점수 요약 위젯이 강조 표시된 Experience Platform 대상 대시보드입니다.](../images/segments/customer-ai-scoring-summary.png)
+![Customer AI 채점 요약 위젯이 강조 표시된 Experience Platform 대상 대시보드입니다.](../images/segments/customer-ai-scoring-summary.png)
 
 선택한 Customer AI 모델에 대한 자세한 인사이트 페이지로 이동하려면 **[!UICONTROL 모델 세부 정보 보기]**&#x200B;를 선택합니다. 고객 AI에 대한 자세한 내용은 [인사이트 찾기 UI 안내서](../../intelligent-services/customer-ai/user-guide/discover-insights.md)를 참조하세요.
 
@@ -314,7 +314,7 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 >
 >[!UICONTROL 프로필 개수 변경] 위젯은 초기 프로필 수집 및 프로필 스토어 설정 **이후**&#x200B;에 추가된 프로필 수를 반영합니다. 즉, 조직에서 프로필 스토어를 설정하고 1일에 4,000,000을 수집한 경우 24시간 이내에 대시보드를 사용할 수 있지만 [!UICONTROL 프로필 개수 변경] 위젯은 0으로 설정됩니다. 이 계산 방법은 프로필의 초기 시스템 수집과 관련된 급증을 방지하기 위해 수행됩니다. 이후 30일 동안 조직은 프로필 스토어에 추가 1,000,000개의 프로필을 수집합니다. 다음 스냅숏이 만들어지면 [!UICONTROL 프로필 개수 변경] 위젯에 추가된 총 1,000,000개의 프로필이 표시되고 [!UICONTROL 프로필 개수] 위젯에 총 5,000,000개의 프로필이 표시됩니다.
 
-![프로필 개수 변경 위젯이 강조 표시된 Platform UI 프로필 대시보드입니다.](../images/profiles/profile-count-change.png)
+![프로필 개수 변경 위젯이 강조 표시된 Experience Platform UI 프로필 대시보드입니다.](../images/profiles/profile-count-change.png)
 
 ### [!UICONTROL 프로필 개수 변경 트렌드] {#profiles-count-change-trend}
 
@@ -323,7 +323,7 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 >title="프로필 개수 변경 트렌드"
 >abstract="이 위젯은 지난 30일, 90일 또는 12개월 동안 매일 프로필 스토어에 추가된 병합된 프로필 개수를 표시합니다. 또한 숫자는 프로필 데이터에 적용되는 선택한 병합 정책에 따라 다릅니다."
 
-**[!UICONTROL 프로필 개수 변경 트렌드]** 위젯은 지난 30일, 90일 또는 12개월 동안 매일 프로필 저장소에 추가된 병합된 프로필의 총 수를 표시합니다. 이 숫자는 스냅숏을 만들 때 매일 업데이트되므로, 프로필을 플랫폼으로 수집하려는 경우 다음 스냅숏을 만들 때까지 프로필 수가 반영되지 않습니다. 추가된 프로필 수는 프로필 조각을 함께 병합하여 각 개인에 대한 단일 프로필을 형성하기 위해 선택한 병합 정책이 프로필 데이터에 적용된 결과입니다.
+**[!UICONTROL 프로필 개수 변경 트렌드]** 위젯은 지난 30일, 90일 또는 12개월 동안 매일 프로필 저장소에 추가된 병합된 프로필의 총 수를 표시합니다. 이 숫자는 스냅숏을 만들 때 매일 업데이트되므로, 프로필을 Experience Platform으로 수집하려는 경우 다음 스냅숏을 만들 때까지 프로필 수가 반영되지 않습니다. 추가된 프로필 수는 프로필 조각을 함께 병합하여 각 개인에 대한 단일 프로필을 형성하기 위해 선택한 병합 정책이 프로필 데이터에 적용된 결과입니다.
 
 자세한 내용은 이 문서의 앞부분에 있는 병합 정책에 대한 [섹션](#merge-policies)을 참조하세요.
 
@@ -514,7 +514,7 @@ The visualization allows you to monitor the overall health of audiences within A
 
 위젯에 세그먼트 정의의 시각적 크로스오버가 표시되므로 세그먼트 정의 간의 유사성을 연구하여 세그먼테이션 전략을 최적화할 수 있습니다.
 
-![병합 정책 드롭다운과 위젯 대상자 드롭다운이 강조 표시된 Platform UI 프로필 대시보드입니다.](../images/profiles/audience-overlap-by-merge-policy.png)
+![병합 정책 드롭다운과 위젯 대상자 드롭다운이 강조 표시된 Experience Platform UI 프로필 대시보드입니다.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

@@ -1,15 +1,15 @@
 ---
-title: Web SDK에서 웹 인앱 메시지 지원 구성
+title: 웹 SDK에서 웹 인앱 메시지 지원 구성
 description: 웹 인앱 메시지를 지원하도록 웹 SDK 태그 확장을 구성하는 방법을 알아봅니다.
 exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
 
-# Web SDK에서 웹 인앱 메시지 지원 구성
+# 웹 SDK에서 웹 인앱 메시지 지원 구성
 
 인앱 메시지는 웹 애플리케이션 내의 사용자에게 보내 특정 관심 영역으로 안내하는 알림입니다.
 
@@ -19,14 +19,14 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Web In-App Messaging은 Web SDK를 사용하여 개인화된 콘텐츠를 제공하는 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ko-KR) 기능입니다.
+>Web In-App Messaging은 Web SDK을 사용하여 개인화된 콘텐츠를 제공하는 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ko-KR) 기능입니다.
 >
 >웹 인앱 메시지 캠페인을 구성하는 방법에 대한 자세한 지침은 [Adobe Journey Optimizer 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html)를 참조하세요.
 
 
 ## 전제 조건 {#prerequisites}
 
-### Web SDK 태그 확장 버전 {#extension-version}
+### 웹 SDK 태그 확장 버전 {#extension-version}
 
 웹 인앱 메시지 기능을 사용하려면 최신 버전의 웹 SDK 태그 확장이 필요합니다.
 
@@ -40,7 +40,7 @@ default-src  blob:;
 
 CSP 구성에 대한 자세한 내용은 [전용 설명서](../use-cases/configuring-a-csp.md)를 참조하십시오.
 
-## Web SDK 태그 확장을 사용하여 웹 인앱 메시지 구성 {#tag-extension}
+## 웹 SDK 태그 확장을 사용하여 웹 인앱 메시지 구성 {#tag-extension}
 
 아래 설명된 설정을 찾을 수 있는 위치를 이해하려면 [웹 SDK 태그 확장 구성 페이지](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)를 참조하세요.
 
@@ -53,12 +53,12 @@ CSP 구성에 대한 자세한 내용은 [전용 설명서](../use-cases/configu
 
 웹 인앱 메시지는 두 가지 유형의 트리거를 지원합니다.
 
-* [플랫폼으로 데이터 보내기](#send-data-platform)
+* [Experience Platform에 데이터 보내기](#send-data-platform)
 * [메시지 수동 트리거](#manual-trigger)
 
 사용할 트리거에 따라 웹 SDK 태그 확장을 구성하려면 다음 섹션을 참조하십시오.
 
-### **[!UICONTROL 플랫폼으로 데이터 보내기]** 트리거에 대한 구성 단계 {#send-data-platform}
+### **[!UICONTROL Experience Platform으로 데이터 보내기]** 트리거에 대한 구성 단계 {#send-data-platform}
 
 웹 SDK 확장이 포함된 태그 속성을 선택하고 다음 설정으로 [새 규칙을 만듭니다](../../tags/ui/managing-resources/rules.md##create-a-rule).
 
@@ -142,7 +142,7 @@ CSP 구성에 대한 자세한 내용은 [전용 설명서](../use-cases/configu
 
 ## 웹 SDK JavaScript 라이브러리를 사용하여 웹 인앱 메시지 구성 {#js-library}
 
-Web SDK 태그 확장을 사용하는 대신 Web SDK JavaScript 라이브러리에서 바로 웹 인앱 메시지를 구성할 수도 있습니다.
+웹 SDK 태그 확장을 사용하는 대신 웹 SDK JavaScript 라이브러리에서 직접 웹 인앱 메시지 를 구성할 수도 있습니다.
 
 
 
@@ -150,7 +150,7 @@ Adobe Journey Optimizer에서 보내는 웹 인앱 메시지를 두 가지 방�
 
 ### 방법 1: 개인화 콘텐츠를 자동으로 가져오기 {#automatic}
 
-페이지 로드 시 Web SDK가 자동으로 개인화 콘텐츠를 가져오게 하려면 아래 예제와 같이 `sendEvent` 명령을 사용합니다.
+웹 SDK에서 페이지를 로드할 때 자동으로 개인화 콘텐츠를 가져오려면 아래 예와 같이 `sendEvent` 명령을 사용하십시오.
 
 ```js
   alloy("sendEvent", {

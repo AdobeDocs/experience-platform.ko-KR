@@ -1,17 +1,17 @@
 ---
-description: Destination SDK으로 빌드된 대상에 대해 설명서 링크, 대상 카드 카테고리, 대상 연결 유형 및 빈도와 같은 UI 속성을 구성하는 방법을 알아봅니다.
+description: Destination SDK으로 빌드된 대상의 설명서 링크, 대상 카드 카테고리, 대상 연결 유형 및 빈도와 같은 UI 속성을 구성하는 방법을 알아봅니다.
 title: UI 속성
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
 
 # UI 속성
 
-UI 속성은 로고, 설명서 페이지에 대한 링크, 대상 설명 및 카테고리 및 유형과 같은 Adobe Experience Platform Adobe 인터페이스에서 대상 카드에 대해 사용자가 표시해야 하는 시각적 요소를 정의합니다.
+UI 속성은 로고, 설명서 페이지에 대한 링크, 대상 설명 및 카테고리 및 유형과 같은 Adobe이 Adobe Experience Platform 사용자 인터페이스에서 대상 카드에 대해 표시해야 하는 시각적 요소를 정의합니다.
 
 이 구성 요소가 Destination SDK으로 만든 통합에 어디에 맞는지 이해하려면 [구성 옵션](../configuration-options.md) 설명서의 다이어그램을 참조하거나 다음 대상 구성 개요 페이지를 참조하십시오.
 
@@ -21,7 +21,7 @@ UI 속성은 로고, 설명서 페이지에 대한 링크, 대상 설명 및 카
 Destination SDK을 통해 [대상을 만들기](../../authoring-api/destination-configuration/create-destination-configuration.md)할 때 `uiAttributes` 섹션은 대상 카드의 다음 시각적 속성을 정의합니다.
 
 * [대상 카탈로그](../../../catalog/overview.md)에 있는 대상 설명서 페이지의 URL입니다.
-* 대상이 Platform UI에 표시되는 카테고리입니다.
+* Experience Platform UI에서 대상이 표시되는 카테고리입니다.
 * 대상의 데이터 내보내기 빈도입니다.
 * Amazon S3, Azure Blob 등과 같은 대상 연결 유형입니다.
 * 대상 카탈로그 카드에 표시할 아이콘을 호스팅한 URL입니다.
@@ -72,7 +72,7 @@ Destination SDK을 통해 [대상을 만들기](../../authoring-api/destination-
 
 >[!NOTE]
 >
->이 링크는 Adobe이 대상을 라이브로 설정하고 문서가 게시된 후에만 작동합니다.
+>이 링크는 Adobe이 대상을 라이브로 설정하고 설명서가 게시된 후에만 작동합니다.
 
 ### `category` {#category}
 
@@ -116,7 +116,7 @@ Destination SDK으로 만드는 대상을 제한된 수의 고객이 사용할 �
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽은 후에는 대상에 대해 구성할 수 있는 UI 속성과 Platform UI에서 사용자에게 표시되는 위치를 더 잘 이해해야 합니다.
+이 문서를 읽은 후에는 대상에 대해 구성할 수 있는 UI 속성과 Experience Platform UI에서 사용자에게 표시되는 위치를 더 잘 이해할 수 있어야 합니다.
 
 다른 대상 구성 요소에 대한 자세한 내용은 다음 문서를 참조하십시오.
 

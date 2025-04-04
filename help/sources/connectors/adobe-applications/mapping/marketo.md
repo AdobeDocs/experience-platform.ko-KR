@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Marketo Engage Source에 대한 필드 매핑
 description: 아래 표에는 Marketo 데이터 세트의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3084ed50f3665c7b33863f3a1aab4236c182c503
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '891'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 ## 활동 {#activities}
 
-이제 [!DNL Marketo] 원본에서 추가 표준 활동을 지원합니다. 스키마를 업데이트하지 않고 새 `activities` 데이터 흐름을 만들면 새 대상 필드가 스키마에 없으므로 표준 활동을 사용하려면 [스키마 자동 생성 유틸리티](../marketo/marketo-namespaces.md)를 사용하여 스키마를 업데이트해야 합니다. 스키마를 업데이트하지 않도록 선택하는 경우에도 새 데이터 흐름을 만들고 오류를 무시할 수 있습니다. 그러나 새 필드나 업데이트된 필드는 Platform에 수집되지 않습니다.
+이제 [!DNL Marketo] 원본에서 추가 표준 활동을 지원합니다. 스키마를 업데이트하지 않고 새 `activities` 데이터 흐름을 만들면 새 대상 필드가 스키마에 없으므로 표준 활동을 사용하려면 [스키마 자동 생성 유틸리티](../marketo/marketo-namespaces.md)를 사용하여 스키마를 업데이트해야 합니다. 스키마를 업데이트하지 않도록 선택하는 경우에도 새 데이터 흐름을 만들고 오류를 무시할 수 있습니다. 그러나 새 필드나 업데이트된 필드는 Experience Platform에 수집되지 않습니다.
 
 XDM 클래스 및 XDM 필드 그룹에 대한 자세한 내용은 [XDM 경험 이벤트 클래스](../../../../xdm/classes/experienceevent.md)에 대한 설명서를 참조하십시오.
 
@@ -415,4 +415,4 @@ XDM 클래스에 대한 자세한 내용은 [XDM 개별 프로필 개요](../../
 
 ## 다음 단계
 
-이 문서를 읽고 [!DNL Marketo] 데이터 세트와 해당 XDM 필드 간의 매핑 관계에 대한 통찰력을 얻었습니다. [!DNL Marketo] 데이터 흐름을 완료하려면 [원본 연결 만들기 [!DNL Marketo] 2}에 대한 자습서를 참조하십시오.](../../../tutorials/ui/create/adobe-applications/marketo.md)
+이 문서를 읽고 [!DNL Marketo] 데이터 세트와 해당 XDM 필드 간의 매핑 관계에 대한 insight을 얻었습니다. [!DNL Marketo] 데이터 흐름을 완료하려면 [원본 연결 만들기 [!DNL Marketo] 2}에 대한 자습서를 참조하십시오.](../../../tutorials/ui/create/adobe-applications/marketo.md)

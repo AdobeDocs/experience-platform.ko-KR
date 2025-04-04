@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service 개요
 description: Adobe Experience Platform Identity Service를 사용하면 디바이스와 시스템 간에 ID를 연결하여 고객과 고객의 행동을 더 잘 볼 수 있으므로 효과적인 개인 디지털 경험을 실시간으로 제공할 수 있습니다.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1556'
 ht-degree: 2%
 
 ---
@@ -31,13 +31,13 @@ ID 서비스에 대한 세부 사항으로 이동하기 전에 주요 용어에 
 
 | 용어 | 정의 |
 | --- | --- |
-| 신원 | ID는 엔티티에 고유한 데이터입니다. 일반적으로 이 개체는 개인, 하드웨어 장치 또는 웹 브라우저(쿠키로 표시됨)와 같은 실제 개체입니다. 정규화된 ID는 **ID 네임스페이스**&#x200B;와(과) **ID 값**, 이렇게 두 개의 요소로 구성됩니다. |
+| ID | ID는 엔티티에 고유한 데이터입니다. 일반적으로 이 개체는 개인, 하드웨어 장치 또는 웹 브라우저(쿠키로 표시됨)와 같은 실제 개체입니다. 정규화된 ID는 **ID 네임스페이스**&#x200B;와(과) **ID 값**, 이렇게 두 개의 요소로 구성됩니다. |
 | ID 네임스페이스 | ID 네임스페이스는 특정 ID의 컨텍스트입니다. 예를 들어 `Email`의 네임스페이스는 ID 값 **julien<span>@acme.com**&#x200B;과(와) 일치할 수 있습니다. 마찬가지로 `Phone`의 네임스페이스는 ID 값 `555-555-1234`과(와) 일치할 수 있습니다. 자세한 내용은 [ID 네임스페이스 개요](./features/namespaces.md)를 참조하십시오. |
 | ID 값 | ID 값은 실제 엔티티를 나타내는 문자열이며, 네임스페이스를 통해 ID 서비스 내에서 분류됩니다. 예를 들어 ID 값(문자열) **julien<span>@acme.com**&#x200B;은(는) `Email` 네임스페이스로 분류할 수 있습니다. |
 | ID 유형 | ID 유형은 ID 네임스페이스의 구성 요소입니다. ID 유형은 ID 데이터가 ID 그래프에 연결되어 있는지 여부를 지정합니다. |
 | 링크 | 링크 또는 연결은 서로 다른 두 ID가 동일한 엔터티를 나타내도록 설정하는 방법입니다. 예를 들어 &quot;`Email` = julien<span>@acme.com&quot;과 &quot;`Phone` = 555-555-1234&quot; 사이의 링크는 두 ID가 동일한 엔터티를 나타냄을 의미합니다. 이는 julien<span>@acme.com이라는 이메일 주소와 555-555-1234 전화 번호로 브랜드와 상호 작용한 고객이 동일함을 나타냅니다. |
-| ID 서비스 | ID 서비스는 ID를 연결(또는 연결 해제)하여 ID 그래프를 유지 관리하는 Experience Platform 내의 서비스입니다. |
-| 아이덴티티 그래프 | ID 그래프는 단일 고객을 나타내는 ID 컬렉션입니다. 자세한 내용은 [ID 그래프 뷰어 사용](./features/identity-graph-viewer.md)에 대한 안내서를 참조하십시오. |
+| ID 서비스 | ID 서비스 는 ID를 연결(또는 연결 해제)하여 ID 그래프를 유지 관리하는 Experience Platform 내의 서비스입니다. |
+| ID 그래프 | ID 그래프는 단일 고객을 나타내는 ID 컬렉션입니다. 자세한 내용은 [ID 그래프 뷰어 사용](./features/identity-graph-viewer.md)에 대한 안내서를 참조하십시오. |
 | 실시간 고객 프로필 | 실시간 고객 프로필은 다음과 같은 Adobe Experience Platform 내의 서비스입니다. <ul><li>ID 그래프를 기반으로 프로필 조각을 병합하여 프로필을 만듭니다.</li><li>프로필을 세그먼트화하여 활성화를 위해 대상으로 전송할 수 있습니다.</li></ul> |
 | 프로필 | 프로파일은 주체, 조직 또는 개인을 나타냅니다. 프로필은 다음 네 가지 요소로 구성됩니다. <ul><li>속성: 속성은 이름, 연령 또는 성별 등의 정보를 제공합니다.</li><li>비헤이비어: 비헤이비어는 지정된 프로필의 활동에 대한 정보를 제공합니다. 예를 들어 프로필 비헤이비어는 지정된 프로필이 &quot;샌들 검색 중&quot; 또는 &quot;티셔츠 주문 중&quot;인지 여부를 알 수 있습니다.</li><li>ID: 병합된 프로필의 경우 해당 개인과 관련된 모든 ID에 대한 정보를 제공합니다. ID는 개인(CRMID, 이메일, 전화), 디바이스(IDFA, GAID) 및 쿠키(ECID, AAID)의 세 가지 범주로 분류될 수 있습니다.</li><li>대상자 멤버십: 프로필이 속한 그룹(단골 사용자, 캘리포니아에 거주하는 사용자 등)입니다.</li></ul> |
 
@@ -45,7 +45,7 @@ ID 서비스에 대한 세부 사항으로 이동하기 전에 주요 용어에 
 
 ## ID 서비스란 무엇입니까?
 
-![플랫폼에서 ID 결합](./images/identity-service-stitching.png)
+![Experience Platform에서 ID 결합](./images/identity-service-stitching.png)
 
 B2C(Business-to-Customer) 컨텍스트에서 고객은 귀하의 비즈니스와 상호 작용하고 브랜드와 관계를 수립합니다. 일반적인 고객은 조직의 데이터 인프라 내에 있는 시스템 수에 관계없이 활성 상태일 수 있습니다. 지정된 모든 고객은 전자 상거래, 충성도 및 헬프 데스크 시스템 내에서 활동할 수 있습니다. 동일한 고객은 익명으로 또는 인증된 수단을 통해 여러 다른 장치에서 참여할 수도 있습니다.
 
@@ -76,7 +76,7 @@ Identity Service는 임무 달성을 위해 다음과 같은 작업을 제공합
 
 ID 네임스페이스와 ID 값이 일치하면 두 ID 간의 링크가 설정됩니다.
 
-일반적인 로그인 이벤트 **은(는) Experience Platform에 두 개의 ID를 전송**&#x200B;합니다.
+일반적인 로그인 이벤트 **은(는) Experience Platform으로 두 개의 ID를 전송**&#x200B;합니다.
 
 * 인증된 사용자를 나타내는 개인 식별자(예: CRMID).
 * 웹 브라우저를 나타내는 브라우저 식별자(예: ECID).
@@ -109,7 +109,7 @@ ID 서비스는 Experience Platform 내에서 중요한 역할을 합니다. 이
 
 * [스키마](../xdm/home.md): 특정 스키마 내에서 ID로 표시된 스키마 필드를 사용하면 ID 그래프를 작성할 수 있습니다.
 * [데이터 세트](../catalog/datasets/overview.md): 실시간 고객 프로필로 수집하도록 데이터 세트를 활성화하면 데이터 세트에 ID로 표시된 필드가 두 개 이상 있는 경우 데이터 세트에서 ID 그래프가 생성됩니다.
-* [Web SDK](../web-sdk/home.md): Web SDK는 경험 이벤트를 Adobe Experience Platform으로 보내고, 이벤트에 둘 이상의 ID가 있으면 ID 서비스에서 그래프를 생성합니다.
+* [웹 SDK](../web-sdk/home.md): 웹 SDK은 경험 이벤트를 Adobe Experience Platform에 보내고, 이벤트에 둘 이상의 ID가 있으면 ID 서비스에서 그래프를 생성합니다.
 * [실시간 고객 프로필](../profile/home.md): 지정된 프로필의 특성 및 이벤트가 병합되기 전에 실시간 고객 프로필에서 ID 그래프를 참조할 수 있습니다. 자세한 내용은 [ID 서비스와 실시간 고객 프로필 간의 관계 이해](./identity-and-profile.md)에 대한 안내서를 참조하십시오.
 * [대상](../destinations/home.md): 대상은 해시된 이메일과 같은 ID 네임스페이스를 기반으로 프로필 정보를 다른 시스템에 보낼 수 있습니다.
 * [세그먼트 일치](../segmentation/ui/segment-match/overview.md): 세그먼트 일치는 ID 네임스페이스와 ID 값이 같은 두 개의 서로 다른 샌드박스에서 두 개의 프로필을 일치시킵니다.

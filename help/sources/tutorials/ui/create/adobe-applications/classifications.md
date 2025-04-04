@@ -2,9 +2,9 @@
 description: UI에서 Adobe Analytics 소스 커넥터를 만들어 분류 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 title: UI에서 분류 데이터에 대한 Adobe Analytics Source 연결 만들기
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: 02b5c5f963c21247adbb1d13114f92b22f8758de
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 Analytics 분류 소스 커넥터를 사용하려면 데이터를 Adobe Analytics의 새 분류 인프라로 마이그레이션해야 합니다. 데이터의 마이그레이션 상태를 확인하려면 Adobe 계정 팀에 문의하십시오.
 
@@ -37,11 +37,11 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 >
 >인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL 설정]** 옵션이 표시됩니다. 계정이 인증되면 옵션이 **[!UICONTROL 데이터 추가]**(으)로 변경됩니다.
 
-![Adobe Analytics 원본이 선택된 Experience Platform UI의 원본 카탈로그입니다.](../../../../images/tutorials/create/classifications/catalog.png)
+![Adobe Analytics 소스가 선택된 Experience Platform UI의 소스 카탈로그입니다.](../../../../images/tutorials/create/classifications/catalog.png)
 
-그런 다음 [!UICONTROL Experience Platform]을(를) 선택한 다음 수집하려는 분류 데이터 세트를 선택합니다.
+그런 다음 [!UICONTROL 분류]를 선택한 다음 Experience Platform으로 수집할 분류 데이터 세트를 선택합니다.
 
-최대 30개의 다양한 분류 데이터 세트를 선택하여 Experience Platform에 포함시킬 수 있습니다. 선택하는 모든 데이터 세트가 오른쪽 레일에 표시됩니다. 완료되면 [!UICONTROL 다음]을(를) 선택하여 계속하십시오.
+최대 30개의 다양한 분류 데이터 세트를 선택하여 Experience Platform으로 가져올 수 있습니다. 선택하는 모든 데이터 세트가 오른쪽 레일에 표시됩니다. 완료되면 [!UICONTROL 다음]을(를) 선택하여 계속하십시오.
 
 ![여러 분류 데이터 세트가 있는 분류 페이지입니다.](../../../../images/tutorials/create/classifications/select.png)
 
@@ -59,7 +59,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 ## 다음 단계
 
-이 자습서에 따라 분류 데이터를 Experience Platform 상태로 가져오는 Analytics 분류 sata 커넥터를 만들었습니다. [!DNL Analytics] 및 분류 데이터에 대한 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서에 따라 분류 데이터를 Experience Platform으로 가져오는 Analytics 분류 sata 커넥터를 만들었습니다. [!DNL Analytics] 및 분류 데이터에 대한 자세한 내용은 다음 문서를 참조하십시오.
 
 * [Adobe Analytics 소스 커넥터 개요](../../../../connectors/adobe-applications/analytics.md)
 * [UI에서 보고서 세트 데이터에 대한 Analytics 소스 연결 만들기](./analytics.md)

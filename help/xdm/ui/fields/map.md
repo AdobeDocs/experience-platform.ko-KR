@@ -2,9 +2,9 @@
 title: UI에서 맵 필드 정의
 description: Experience Platform 사용자 인터페이스에서 맵 필드를 정의하는 방법을 알아봅니다.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Adobe Experience Platform을 사용하면 사용자 지정 XDM(경험 데이터 
 
 스키마 편집기에서 맵 필드를 정의하여 유연하고 동적인 데이터 구조를 모델링하거나 키-값 쌍의 컬렉션을 저장할 수도 있습니다.
 
-Platform UI(사용자 인터페이스)에서 새 필드를 정의할 때 **[!UICONTROL Type]** 드롭다운을 사용하고 목록에서 &quot;**[!UICONTROL 맵]**&quot;을(를) 선택하십시오.
+Experience Platform UI(사용자 인터페이스)에서 새 필드를 정의할 때 **[!UICONTROL Type]** 드롭다운을 사용하고 목록에서 &quot;**[!UICONTROL 맵]**&quot;을(를) 선택하십시오.
 
 ![유형 드롭다운과 맵 값이 강조 표시된 스키마 편집기.](../../images/ui/fields/special/map.png)
 
@@ -44,10 +44,10 @@ XDM에서는 이 데이터 유형의 사용에 대해 다음과 같은 제한 �
 
 >[!NOTE]
 >
->Platform UI는 맵 유형 필드의 키를 추출하는 방법에 제한이 있습니다. 개체 유형 필드는 확장할 수 있지만 맵은 대신 단일 필드로 표시됩니다. 문자열 또는 정수 데이터 형식이 아닌 스키마 레지스트리 API를 통해 만들어진 맵 필드는 &quot;[!UICONTROL Complex]&quot; 데이터 형식으로 표시됩니다.
+>Experience Platform UI는 맵 유형 필드의 키를 추출하는 방법에 제한이 있습니다. 개체 유형 필드는 확장할 수 있지만 맵은 대신 단일 필드로 표시됩니다. 문자열 또는 정수 데이터 형식이 아닌 스키마 레지스트리 API를 통해 만들어진 맵 필드는 &quot;[!UICONTROL Complex]&quot; 데이터 형식으로 표시됩니다.
 
 ## 다음 단계
 
-이제 이 문서를 읽고 Platform UI에서 맵 필드를 정의할 수 있습니다. 클래스와 필드 그룹만 사용하여 스키마에 필드를 추가할 수 있습니다. UI에서 이러한 리소스를 관리하는 방법에 대한 자세한 내용은 [클래스](../resources/classes.md) 및 [필드 그룹](../resources/field-groups.md) 만들기 및 편집에 대한 안내서를 참조하세요.
+이제 이 문서를 읽고 Experience Platform UI에서 맵 필드를 정의할 수 있습니다. 클래스와 필드 그룹만 사용하여 스키마에 필드를 추가할 수 있습니다. UI에서 이러한 리소스를 관리하는 방법에 대한 자세한 내용은 [클래스](../resources/classes.md) 및 [필드 그룹](../resources/field-groups.md) 만들기 및 편집에 대한 안내서를 참조하세요.
 
 [!UICONTROL 스키마] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md)를 참조하십시오.

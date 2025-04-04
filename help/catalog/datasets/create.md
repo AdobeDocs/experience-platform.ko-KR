@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API를 사용하여 데이터 세트 만들기
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 데이터 세트를 만들고 파일을 사용하여 데이터 세트를 채우는 일반적인 단계를 제공합니다.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1302'
 ht-degree: 6%
@@ -21,9 +21,9 @@ ht-degree: 6%
 
 * [일괄 처리 수집](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform]을(를) 사용하면 데이터를 일괄 처리 파일로 수집할 수 있습니다.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform]은(는) 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform]은(는) 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 [!DNL Platform] API를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Experience Platform] API를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
@@ -31,19 +31,19 @@ ht-degree: 6%
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
+>[!DNL Experience Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 `Content-Type: application/json` 헤더가 필요합니다. JSON+PATCH 요청의 경우 `Content-Type`은(는) `application/json-patch+json`이어야 합니다.
 
@@ -466,7 +466,7 @@ curl -X GET \
 
 ## 데이터 세트 스키마 업데이트
 
-필드를 추가하고 만든 데이터 세트에 추가 데이터를 수집할 수 있습니다. 이렇게 하려면 먼저 새 데이터를 정의하는 속성을 추가하여 스키마를 업데이트해야 합니다. 이 작업은 기존 스키마를 업데이트하기 위해 PATCH 및/또는 PUT 작업을 사용하여 수행할 수 있습니다.
+필드를 추가하고 만든 데이터 세트에 추가 데이터를 수집할 수 있습니다. 이렇게 하려면 먼저 새 데이터를 정의하는 속성을 추가하여 스키마를 업데이트해야 합니다. 이 작업은 PATCH 및/또는 PUT 작업을 사용하여 기존 스키마를 업데이트하여 수행할 수 있습니다.
 
 스키마 업데이트에 대한 자세한 내용은 [스키마 레지스트리 API 개발자 안내서](../../xdm/api/getting-started.md)를 참조하십시오.
 

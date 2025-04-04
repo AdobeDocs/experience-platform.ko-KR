@@ -2,16 +2,16 @@
 title: Gen2로 데이터 레이크 마이그레이션
 description: Adobe Experience Platform의 Gen2로 데이터 레이크를 마이그레이션하여 제공하는 새로운 기능에 대해 알아봅니다.
 exl-id: 56d9c77a-d7eb-498d-994f-b15d150dedb7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
 
 # Gen2로 Adobe Experience Platform 데이터 레이크 마이그레이션
 
-Adobe Experience Platform이 Gen2 Data Lake로 마이그레이션하고 있습니다. Platform 사용자에게 지리적 영역 복제, 보다 세밀한 역할 기반 액세스 제어(RBAC), 보다 나은 확장 등의 이점을 제공하는 차세대 데이터 레이크입니다.
+Adobe Experience Platform이 Gen2 Data Lake로 마이그레이션하고 있습니다. Experience Platform 사용자에게 지리적 영역 복제, 더 세밀한 역할 기반 액세스 제어(RBAC), 더 나은 확장 등의 이점을 제공하는 차세대 데이터 레이크입니다.
 
 ## 사용자 영향
 
@@ -22,8 +22,8 @@ Adobe이 Gen1에서 Gen2로 데이터 레이크를 마이그레이션하는 동�
 - **실시간 고객 프로필**: **일괄 처리** 수집을 통해 프로필 스토어에 수집된 데이터는 마이그레이션 중에 사용할 수 없습니다. 그러나 **스트리밍** 수집을 통해 수집된 데이터는 마이그레이션 중에 사용할 수 있습니다. 또한 마이그레이션 중에는 프로필 내보내기를 사용할 수 없습니다.
 - **데이터 과학 Workspace**: 데이터 과학 Workspace에서 쓰는 작업이 실패합니다.
 - **세그먼테이션 서비스**: **일괄 처리** 세그먼테이션에서 파생된 대상은 마이그레이션하는 동안 활성화할 수 없습니다. **스트리밍** 세분화에서 파생된 대상은 영향을 받지 않습니다.
-- **Customer Journey Analytics**: 일괄 처리가 데이터 레이크로 수집되지 않으므로 Customer Journey Analytics 보고서 데이터가 최신 상태가 아닐 수 있으며 마이그레이션 중에 새로 고쳐지지 않습니다.
+- **Customer Journey Analytics**: 일괄 처리가 데이터 레이크로 수집되지 않으므로 Customer Journey Analytics 보고서 데이터가 최신 상태가 아닐 수 있으며 마이그레이션 중에 새로 고침되지 않습니다.
 
-## Platform 사용자에게 전달
+## Experience Platform 사용자에 대한 통신
 
 Adobe은 시스템 관리자에게 연락하여 마이그레이션이 미치는 영향에 대해 자세히 논의하고 특정 조직의 마이그레이션 날짜 및 시간을 확인할 예정입니다.

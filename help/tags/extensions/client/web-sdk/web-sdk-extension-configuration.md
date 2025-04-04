@@ -2,9 +2,9 @@
 title: 웹 SDK 태그 확장 구성
 description: 태그 UI에서 Experience Platform Web SDK 태그 확장 기능을 구성하는 방법을 알아봅니다.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: d267e816f42d1e0a751b188065f5164a5e2b6be9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2875'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 [!DNL Web SDK] 태그 확장은 Experience Platform Edge Network을 통해 웹 속성에서 Adobe Experience Cloud으로 데이터를 전송합니다.
 
-확장을 사용하면 데이터를 Platform으로 스트리밍하고 ID를 동기화하며 고객 동의 신호를 처리하고 컨텍스트 데이터를 자동으로 수집할 수 있습니다.
+확장을 사용하면 데이터를 Experience Platform에 스트리밍하고, ID를 동기화하고, 고객 동의 신호를 처리하고, 컨텍스트 데이터를 자동으로 수집할 수 있습니다.
 
 이 문서에서는 태그 UI에서 태그 확장을 구성하는 방법을 설명합니다.
 

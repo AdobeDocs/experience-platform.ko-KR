@@ -1,20 +1,20 @@
 ---
 title: at.js와 Experience Platform Web SDK 비교
-description: at.js 기능을 Experience Platform Web SDK와 비교하는 방법에 대해 알아봅니다
+description: at.js 기능을 Experience Platform Web SDK과 비교하는 방법에 대해 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;의사 결정 범위;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;의사 결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2183'
 ht-degree: 2%
 
 ---
 
-# at.js 라이브러리와 Web SDK 비교
+# at.js 라이브러리와 웹 SDK 비교
 
 ## 개요
 
-이 문서에서는 `at.js` 라이브러리와 Experience Platform Web SDK의 차이점에 대한 개요를 제공합니다.
+이 문서에서는 `at.js` 라이브러리와 Experience Platform Web SDK 간의 차이점에 대한 개요를 제공합니다.
 
 ## 라이브러리 설치
 
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 고객이 Adobe Experience Cloud의 구현 탭에서 직접 라이브러리를 다운로드할 수 있습니다. at.js 라이브러리는 고객이 like를 가진 clientCode, imsOrgId 등의 설정으로 사용자 정의됩니다.
 
-### Web SDK 설치
+### 웹 SDK 설치
 
 사전 빌드된 버전은 CDN에서 사용할 수 있습니다. 페이지에서 직접 CDN의 라이브러리를 참조하거나, 자체 인프라에서 다운로드하여 호스팅할 수 있습니다. 축소 및 축소 해제된 형식으로 사용할 수 있습니다. 축소되지 않은 버전은 디버깅에 유용합니다.
 
@@ -73,7 +73,7 @@ window.adobe.target.init(window, document, {
 
 ### 웹 SDK 구성
 
-[`configure`](/help/web-sdk/commands/configure/overview.md) 명령을 사용하여 SDK를 구성합니다. `configure` 명령은 먼저 호출된 *always*&#x200B;입니다.
+SDK 구성은 [`configure`](/help/web-sdk/commands/configure/overview.md) 명령을 사용하여 수행됩니다. `configure` 명령은 먼저 호출된 *always*&#x200B;입니다.
 
 ## 페이지 로드 타겟 오퍼를 요청하고 자동으로 렌더링하는 방법
 
@@ -81,11 +81,11 @@ window.adobe.target.init(window, document, {
 
 at.js 2.x를 사용하는 경우 설정 `pageLoadEnabled`을(를) 사용하면 라이브러리가 `execute -> pageLoad`(으)로 Target Edge 호출을 트리거합니다. 모든 설정이 기본값으로 설정되어 있으면 사용자 지정 코딩이 필요하지 않습니다. at.js가 페이지에 추가되고 브라우저에 의해 로드되면 Target Edge 호출이 실행됩니다.
 
-### Web SDK 사용
+### 웹 SDK 사용
 
-Adobe Target의 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 내에서 만든 콘텐츠를 SDK에서 자동으로 검색하고 렌더링할 수 있습니다.
+Adobe Target의 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 내에서 만든 콘텐츠는 SDK에서 자동으로 검색하고 렌더링할 수 있습니다.
 
-Target 오퍼를 요청하고 자동으로 렌더링하려면 `sendEvent` 명령을 사용하고 `renderDecisions` 옵션을 `true`(으)로 설정하십시오. 이렇게 하면 SDK가 자동 렌더링에 적합한 개인화된 콘텐츠를 자동으로 렌더링합니다.
+Target 오퍼를 요청하고 자동으로 렌더링하려면 `sendEvent` 명령을 사용하고 `renderDecisions` 옵션을 `true`(으)로 설정하십시오. 이렇게 하면 SDK에서 자동 렌더링에 적합한 개인화된 콘텐츠를 자동으로 렌더링하도록 할 수 있습니다.
 
 예:
 
@@ -105,7 +105,7 @@ alloy("sendEvent", {
 });
 ```
 
-Experience Platform Web SDK는 웹 SDK에서 실행한 오퍼와 함께 알림을 자동으로 전송합니다. 다음은 알림 요청 페이로드의 예입니다.
+Experience Platform Web SDK은 웹 SDK에서 실행한 오퍼와 함께 알림을 자동으로 전송합니다. 이는 알림 요청 페이로드의 예입니다.
 
 ```json
 {
@@ -217,11 +217,11 @@ adobe.target.getOffers({
 
 [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
-### Web SDK 사용
+### 웹 SDK 사용
 
-`decisionScopes`: `__view__`에서 특수 범위로 `sendEvent` 명령을 실행합니다. 이 범위는 Target에서 모든 페이지 로드 활동을 가져오고 모든 보기를 미리 가져오는 신호로 사용됩니다. 또한 Web SDK는 모든 VEC 보기 기반 활동을 평가하려고 합니다. 보기 프리페치를 사용하지 않도록 설정하는 기능은 현재 웹 SDK에서 지원되지 않습니다.
+`decisionScopes`: `__view__`에서 특수 범위로 `sendEvent` 명령을 실행합니다. 이 범위는 Target에서 모든 페이지 로드 활동을 가져오고 모든 보기를 미리 가져오는 신호로 사용됩니다. 웹 SDK은 또한 모든 VEC 보기 기반 활동을 평가하려고 합니다. 현재 웹 SDK에서는 보기 프리페치를 비활성화할 수 없습니다.
 
-개인화 콘텐츠에 액세스하려면 SDK가 서버로부터 성공적인 응답을 받은 후에 호출되는 콜백 함수를 제공할 수 있습니다. 콜백에는 반환된 개인화 콘텐츠가 포함된 제안 속성이 포함될 수 있는 결과 개체가 제공됩니다.
+개인화 콘텐츠에 액세스하려면 SDK이 서버로부터 성공적인 응답을 받은 후에 호출되는 콜백 함수를 제공할 수 있습니다. 콜백에는 반환된 개인화 콘텐츠가 포함된 제안 속성이 포함될 수 있는 결과 개체가 제공됩니다.
 
 예:
 
@@ -303,7 +303,7 @@ adobe.target.getOffers({
 [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 
-### Web SDK 사용
+### 웹 SDK 사용
 
 `sendEvent` 명령을 사용하고 `decisionScopes` 옵션 아래에 mbox 이름을 전달하여 양식 기반 작성기 기반 활동을 가져올 수 있습니다. `sendEvent` 명령은 요청된 활동/제안을 포함하는 개체로 해결된 약속을 반환합니다.
 다음은 `propositions` 배열의 모양입니다.
@@ -441,7 +441,7 @@ adobe.target.getOffers({...})
 [전용 설명서](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html)에서 `applyOffers` 명령에 대해 자세히 알아보세요.
 
 
-### Web SDK 사용
+### 웹 SDK 사용
 
 `applyPropositions` 명령을 사용하여 Target 활동을 적용할 수 있습니다.
 
@@ -492,7 +492,7 @@ adobe.target.sendNotifications({
 
 [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
 
-### Web SDK 사용
+### 웹 SDK 사용
 
 `sendEvent` 명령을 호출하고 `_experience.decisioning.propositions` XDM 필드 그룹을 채우고 `eventType`을(를) 두 값 중 하나로 설정하여 이벤트와 사용자 작업을 추적할 수 있습니다.
 
@@ -668,9 +668,9 @@ adobe.target.triggerView("homeView")
 [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html)
 
 
-### Web SDK 사용
+### 웹 SDK 사용
 
-단일 페이지 응용 프로그램 보기 변경을 트리거하거나 신호를 보내려면 `sendEvent` 명령의 `xdm` 옵션 아래에 `web.webPageDetails.viewName` 속성을 설정합니다. Web SDK는 보기 캐시를 검사합니다. `sendEvent`에 지정된 `viewName`에 대한 오퍼가 있으면 이 오퍼를 실행하고 표시 알림 이벤트를 보냅니다.
+단일 페이지 응용 프로그램 보기 변경을 트리거하거나 신호를 보내려면 `sendEvent` 명령의 `xdm` 옵션 아래에 `web.webPageDetails.viewName` 속성을 설정합니다. 웹 SDK에서 보기 캐시를 검사합니다. `sendEvent`에 지정된 `viewName`에 대한 오퍼가 있으면 이 오퍼를 실행하고 표시 알림 이벤트를 보냅니다.
 
 **예**
 
@@ -708,11 +708,11 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 
-### Web SDK 사용
+### 웹 SDK 사용
 
 >[!IMPORTANT]
 >
->Platform Web SDK 버전 2.6.0 이상을 사용 중인지 확인하십시오.
+>Experience Platform Web SDK 버전 2.6.0 이상을 사용 중인지 확인하십시오.
 
 응답 토큰은 `sendEvent` 명령의 결과에 노출된 `propositions`의 일부로 반환됩니다. 각 제안에는 `items`의 배열이 포함되어 있으며 Target 관리 UI에서 응답 토큰이 활성화된 경우 각 항목에는 응답 토큰으로 채워진 `meta` 개체가 있습니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
@@ -763,9 +763,9 @@ at.js `bodyHiddenStyle`을(를) 재정의하여 개인화된 콘텐츠가 포함
 기본적으로 `bodyHiddenStyle`은(는) 전체 HTML `body`을(를) 숨깁니다.
 두 설정 모두 `window.targetGlobalSettings`을(를) 사용하여 재정의할 수 있습니다. at.js를 로드하기 전에 `window.targetGlobalSettings`을(를) 배치해야 합니다.
 
-### Web SDK 사용
+### 웹 SDK 사용
 
-고객은 Web SDK를 사용하여 아래 예제와 같이 구성 명령에서 사전 숨김 스타일을 설정할 수 있습니다.
+고객은 Web SDK을 사용하여 아래 예제와 같이 configure 명령에서 사전 숨김 스타일을 설정할 수 있습니다.
 
 ```javascript
 alloy("configure", {
@@ -776,7 +776,7 @@ alloy("configure", {
 });
 ```
 
-Web SDK async를 로드할 때 Web SDK가 삽입되기 전에 페이지에 다음 코드 조각을 삽입하는 것이 좋습니다.
+Web SDK async를 로드할 때 Web SDK이 삽입되기 전에 페이지에 다음 코드 조각을 삽입하는 것이 좋습니다.
 
 ```html
 <script>
@@ -882,9 +882,9 @@ Analytics Server Side 로깅은 at.js 설정에서 `analyticsLogging: server_sid
 
 [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
-### Web SDK 사용
+### 웹 SDK 사용
 
-Web SDK는 또한 다음을 지원합니다.
+웹 SDK은 또한 다음을 지원합니다.
 
 * Analytics 클라이언트측 로깅
 * Analytics 서버측 로깅
@@ -966,7 +966,7 @@ window.targetGlobalSettings = {
 
 [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
-### Web SDK 사용
+### 웹 SDK 사용
 
 이 기능은 웹 SDK에서 지원되지 않습니다.
 
@@ -1007,7 +1007,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-### Web SDK 사용
+### 웹 SDK 사용
 
 Target 프로필을 업데이트하려면 `sendEvent` 명령을 사용하고 `data.__adobe.target` 속성을 설정하여 `profile`을(를) 사용하여 키 이름 앞에 추가합니다.
 
@@ -1067,7 +1067,7 @@ adobe.target.getOffers({
 [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
 
 
-### Web SDK 사용
+### 웹 SDK 사용
 
 권장 사항 데이터를 보내려면 `sendEvent` 명령을 사용하고 `data.__adobe.target` 속성을 설정하여 `entity`을(를) 사용하여 키 이름 앞에 추가합니다.
 
@@ -1146,9 +1146,9 @@ window.targetPageParams = function() {
 
 [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
 
-### Web SDK 사용
+### 웹 SDK 사용
 
-Web SDK는 Target 타사 ID를 지원합니다. 그러나 몇 가지 단계가 더 필요합니다. 해결 방법을 찾기 전에 `identityMap`에 대해 잠시 이야기해야 합니다.
+웹 SDK은 Target 타사 ID를 지원합니다. 그러나 몇 가지 단계가 더 필요합니다. 해결 방법을 찾기 전에 `identityMap`에 대해 잠시 이야기해야 합니다.
 ID 맵을 사용하면 여러 ID를 보낼 수 있습니다. 모든 ID는 네임스페이스가 지정됩니다. 각 네임스페이스에는 하나 이상의 ID가 있을 수 있습니다. 특정 ID를 기본 ID로 표시할 수 있습니다.
 이 지식을 바탕으로 Target 타사 ID를 사용하도록 웹 SDK를 설정하는 데 필요한 단계를 확인할 수 있습니다.
 
@@ -1200,9 +1200,9 @@ window.targetPageParams = function() {
     };
 ```
 
-### Web SDK 사용
+### 웹 SDK 사용
 
-고객은 Web SDK를 사용하여 데이터스트림 구성을 설정할 때 Adobe Target 네임스페이스 아래에 있는 속성을 더 높은 수준에서 설정할 수 있습니다.
+Web SDK을 사용하면 데이터 스트림 구성을 설정할 때 Adobe Target 네임스페이스 아래에 있는 속성을 더 높은 수준에서 설정할 수 있습니다.
 ![Adobe Target 설정을 표시하는 데이터스트림 UI.](assets/at-property-setup.png)
 즉, 특정 데이터 스트림 구성에 대한 모든 Target 호출에 해당 속성 토큰이 포함됩니다.
 
@@ -1235,7 +1235,7 @@ adobe.target.getOffers({
 
 참고: `mboxes` 배열의 모든 `mbox`에 자체 인덱스가 있는지 확인하는 것이 좋습니다. 일반적으로 첫 번째 mbox에는 `index=0`, 다음 mbox에는 `index=1` 등이 있습니다.
 
-### Web SDK 사용
+### 웹 SDK 사용
 
 이 기능은 현재 웹 SDK에서 지원되지 않습니다.
 
@@ -1249,13 +1249,13 @@ At.js는 다음 디버깅 기능을 노출합니다.
 * Mbox 디버그 - at.js는 모든 작업을 기록합니다.
 * 대상 추적 - Bullseye에서 생성된 mbox 추적 토큰을 사용하면 `window.___target_trace` 개체에서 의사 결정 프로세스에 참여한 세부 정보가 포함된 추적 개체를 사용할 수 있습니다.
 
-참고: 이러한 모든 디버깅 기능은 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)의 향상된 기능으로 사용할 수 있습니다
+참고: 이러한 모든 디버깅 기능은 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)의 향상된 기능을 통해 사용할 수 있습니다
 
-### Web SDK 사용
+### 웹 SDK 사용
 
-Web SDK를 사용할 때 여러 디버깅 기능을 사용할 수 있습니다.
+Web SDK을 사용할 때 여러 디버깅 기능을 사용할 수 있습니다.
 
-* [보증](/help/assurance/home.md) 사용
+* [Assurance](/help/assurance/home.md) 사용 중
 * [웹 SDK 디버그 활성화됨](/help/web-sdk/use-cases/debugging.md)
 * [웹 SDK 모니터링 후크 사용](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * [Adobe Experience Platform Debugger](/help/debugger/home.md) 사용

@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 title: 셀프서비스 소스의 구성 옵션(일괄 SDK)
-description: 이 문서에서는 셀프서비스 소스(Batch SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
+description: 이 문서에서는 셀프서비스 소스(일괄 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
 
 # 셀프서비스 소스의 구성 옵션(일괄 SDK)
 
-이 문서에서는 셀프서비스 소스(Batch SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
+이 문서에서는 셀프서비스 소스(일괄 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 
 ## 연결 사양
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 | 사양 | 설명 |
 | --- | --- |
-| `authSpec` | `authSpec` 배열에는 원본을 플랫폼에 연결하는 데 필요한 인증 매개 변수에 대한 정보가 포함되어 있습니다. 지정된 모든 소스는 서로 다른 여러 유형의 인증을 지원할 수 있습니다. |
+| `authSpec` | `authSpec` 배열에는 원본을 Experience Platform에 연결하는 데 필요한 인증 매개 변수에 대한 정보가 포함되어 있습니다. 지정된 모든 소스는 서로 다른 여러 유형의 인증을 지원할 수 있습니다. |
 | `sourceSpec` | `sourceSpec` 배열에는 UI에 소스를 제공하는 데 필요한 특성 정보, 설명서 링크, 페이지 매김, 헤더, 본문 및 예약에 대한 매개 변수 등 소스와 관련된 일반 정보가 포함되어 있습니다. 또한 `sourceSpec`은(는) 기본 연결에서 원본 연결을 만드는 데 필요한 매개 변수의 스키마를 설명하며 원본 연결을 만드는 데 필요합니다. |
 | `exploreSpec` | `exploreSpec` 배열은 소스에 포함된 개체를 탐색하고 검사하는 데 필요한 매개 변수를 정의합니다. `exploreSpec`은(는) 개체를 탐색하고 검사할 때 반환되는 응답 형식도 정의합니다. |
 

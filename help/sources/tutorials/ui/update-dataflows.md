@@ -2,9 +2,9 @@
 description: Experience Platform UI에서 기존 소스 데이터 흐름을 업데이트하는 방법을 알아봅니다.
 title: UI에서 Source 연결 데이터 흐름 업데이트
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: c3082a8769f317407197b3fd05b36cfe00b36470
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '768'
 ht-degree: 8%
 
 ---
@@ -15,10 +15,10 @@ Adobe Experience Platform 사용자 인터페이스의 소스 작업 영역을 �
 
 ## 시작하기
 
-이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [샌드박스](../../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [소스](../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 ## 데이터 흐름 업데이트 {#update-dataflows}
 
@@ -79,7 +79,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 ![데이터 흐름을 사용하지 않도록 설정할지 확인하는 팝업 창](../../images/tutorials/update-dataflows/disable_dataflow.png)
 
-나중에 이 데이터 흐름을 다시 활성화하는 경우, Experience Platform은 데이터 흐름이 비활성화된 기간을 포함하도록 채우기 실행을 자동으로 예약합니다. 예를 들어 데이터 흐름이 시간별로 실행되도록 구성되고 48시간 동안 비활성화되어 있는 경우 이 데이터 흐름을 다시 활성화하면 Experience Platform에서 누락된 간격을 처리하기 위해 48개의 채우기 실행을 만듭니다.
+나중에 이 데이터 흐름을 다시 활성화하면 Experience Platform에서 데이터 흐름이 비활성화된 기간을 포함하도록 채우기 실행을 자동으로 예약합니다. 예를 들어 데이터 흐름이 시간별로 실행되도록 구성되어 48시간 동안 비활성화되어 있는 경우 이 데이터 흐름을 다시 활성화하면 Experience Platform에서 48개의 채우기 실행을 만들어 놓친 간격을 처리합니다.
 
 ## 다음 단계
 

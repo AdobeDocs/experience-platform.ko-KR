@@ -1,10 +1,10 @@
 ---
-title: UI에서 사용자 지정 활동 데이터에 대한 Source 연결 및 데이터 흐름 Marketo Engage 만들기
+title: UI에서 사용자 지정 활동 데이터에 대한 Marketo Engage Source 연결 및 데이터 흐름 만들기
 description: 이 자습서에서는 사용자 지정 활동 데이터를 Adobe Experience Platform으로 가져오기 위해 UI에서 Marketo Engage 소스 연결 및 데이터 흐름을 만드는 단계를 제공합니다.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1477'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->이 자습서에서는 [!DNL Marketo]에서 **사용자 지정 활동** 데이터를 설정하고 Experience Platform 상태로 만드는 방법에 대한 특정 단계를 제공합니다. **표준 활동** 데이터를 가져오는 방법에 대한 단계는 [[!DNL Marketo] UI 안내서](./marketo.md)를 참조하십시오.
+>이 자습서에서는 [!DNL Marketo]에서 **사용자 지정 활동** 데이터를 설정하고 Experience Platform으로 가져오는 방법에 대한 특정 단계를 제공합니다. **표준 활동** 데이터를 가져오는 방법에 대한 단계는 [[!DNL Marketo] UI 안내서](./marketo.md)를 참조하십시오.
 
 [표준 활동](../../../../connectors/adobe-applications/mapping/marketo.md#activities) 외에 [!DNL Marketo] 소스를 사용하여 사용자 지정 활동 데이터를 Adobe Experience Platform으로 가져올 수도 있습니다. 이 문서에서는 UI에서 [!DNL Marketo] 소스를 사용하여 사용자 지정 활동 데이터에 대한 소스 연결 및 데이터 흐름을 만드는 방법에 대한 단계를 제공합니다.
 
@@ -22,16 +22,16 @@ ht-degree: 0%
 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
 * [B2B 네임스페이스 및 스키마 자동 생성 유틸리티](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): B2B 네임스페이스 및 스키마 자동 생성 유틸리티를 사용하면 [!DNL Postman]을(를) 사용하여 B2B 네임스페이스 및 스키마에 대한 값을 자동 생성할 수 있습니다. [!DNL Marketo] 원본 연결 및 데이터 흐름을 만들기 전에 먼저 B2B 네임스페이스와 스키마를 완료해야 합니다.
-* [소스](../../../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [XDM(경험 데이터 모델)](../../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [XDM(경험 데이터 모델)](../../../../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [UI에서 스키마를 만들고 편집](../../../../../xdm/ui/resources/schemas.md): UI에서 스키마를 만들고 편집하는 방법에 대해 알아봅니다.
 * [ID 네임스페이스](../../../../../identity-service/features/namespaces.md): ID 네임스페이스는 [!DNL Identity Service]의 구성 요소이며 ID와 관련된 컨텍스트의 지표 역할을 합니다. 정규화된 ID에는 ID 값과 네임스페이스가 포함됩니다.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 ## 사용자 지정 활동 세부 정보 가져오기
 
-[!DNL Marketo]에서 Experience Platform으로 사용자 지정 활동 데이터를 가져오는 첫 번째 단계는 사용자 지정 활동의 API 이름 및 표시 이름을 검색하는 것입니다.
+[!DNL Marketo]에서 Experience Platform으로 사용자 지정 활동 데이터를 가져오는 첫 번째 단계는 사용자 지정 활동의 API 이름과 표시 이름을 검색하는 것입니다.
 
 [[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1) 인터페이스를 사용하여 계정에 로그인합니다. 왼쪽 탐색의 [!DNL Database Management]에서 **Marketo 사용자 지정 활동**&#x200B;을 선택합니다.
 
@@ -91,13 +91,13 @@ Experience Platform UI의 *[!UICONTROL 스키마]* 대시보드에서 **[!UICONT
 
 스키마 설정이 완료되면 이제 사용자 지정 활동 데이터에 대한 데이터 흐름을 만들 수 있습니다.
 
-Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 창을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
 [!UICONTROL Adobe 응용 프로그램] 범주 아래에서 **[!UICONTROL Marketo Engage]**&#x200B;을 선택합니다. 그런 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택하여 새 [!DNL Marketo] 데이터 흐름을 만듭니다.
 
-![Experience Platform 원본이 선택된 Marketo Engage UI의 원본 카탈로그입니다.](../../../../images/tutorials/create/marketo/catalog.png)
+![Experience Platform UI에서 Marketo Engage 원본을 선택한 원본 카탈로그입니다.](../../../../images/tutorials/create/marketo/catalog.png)
 
 ### 데이터 선택
 
@@ -154,7 +154,7 @@ Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선
 
 데이터 흐름이 완료되면 [쿼리 서비스](../../../../../query-service/home.md)를 사용하여 사용자 지정 활동 데이터에 대한 활동을 필터링할 수 있습니다.
 
-사용자 지정 활동을 플랫폼으로 수집하면 사용자 지정 활동의 API 이름이 자동으로 해당 `eventType`이(가) 됩니다. `eventType={API_NAME}`을(를) 사용하여 사용자 지정 활동 데이터를 필터링합니다.
+사용자 지정 활동을 Experience Platform에 수집하면 사용자 지정 활동의 API 이름이 자동으로 `eventType`(이)가 됩니다. `eventType={API_NAME}`을(를) 사용하여 사용자 지정 활동 데이터를 필터링합니다.
 
 ```sql
 SELECT * FROM with_custom_activities_ds_today WHERE eventType='aepCustomActivityDemo1' 
@@ -169,8 +169,8 @@ SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCus
 
 아래 이미지는 사용자 지정 활동 데이터를 필터링하는 [쿼리 편집기](../../../../../query-service/ui/user-guide.md)의 예제 SQL 문을 보여 줍니다.
 
-![사용자 지정 활동에 대한 쿼리 예제를 표시하는 플랫폼 UI입니다.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
+![사용자 지정 활동에 대한 쿼리 예제를 표시하는 Experience Platform UI입니다.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL Marketo] 사용자 지정 활동 데이터에 대한 플랫폼 스키마를 설정하고 해당 데이터를 플랫폼으로 가져오기 위한 데이터 흐름을 만들었습니다. [!DNL Marketo] 원본에 대한 일반 정보는 [[!DNL Marketo] 원본 개요](../../../../connectors/adobe-applications/marketo/marketo.md)를 참조하세요.
+이 자습서를 따라 [!DNL Marketo] 사용자 지정 활동 데이터에 대한 Experience Platform 스키마를 설정하고 해당 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만들었습니다. [!DNL Marketo] 원본에 대한 일반 정보는 [[!DNL Marketo] 원본 개요](../../../../connectors/adobe-applications/marketo/marketo.md)를 참조하세요.

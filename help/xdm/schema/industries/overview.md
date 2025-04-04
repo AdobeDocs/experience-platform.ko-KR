@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 업계 데이터 모델 개요
 description: 표준 경험 데이터 모델(XDM) 구성 요소를 사용하여 구성할 수 있는 다양한 업계 카테고리에 대한 표준화된 데이터 모델에 대해 알아봅니다.
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ XDM(경험 데이터 모델) 을 사용하면 사용자 지정이 가능한 스�
 
 이 안내서에서 참조하는 ERD를 읽으려면 XDM 구성 요소가 상호 작용하여 스키마를 형성하는 방법과 XDM 스키마가 Experience Platform에서 전체적으로 작동하는 방식을 이해해야 합니다. 계속하기 전에 다음 개요 설명서를 읽었는지 확인하십시오.
 
-* [XDM 시스템 개요](../../home.md): XDM이 플랫폼 생태계에서 작동하는 방식에 대해 알아봅니다.
+* [XDM 시스템 개요](../../home.md): XDM이 Experience Platform 에코시스템에서 작동하는 방식에 대해 알아봅니다.
 * [스키마 컴포지션의 기본 사항](../../schema/composition.md): XDM 구성 요소(예: 스키마 필드 그룹, 클래스 및 데이터 형식)가 스키마 구조와 ID 필드의 역할에 어떻게 기여하는지 알아봅니다.
 
 또한 데이터를 XDM에 매핑하는 방법에 대한 일반 지침은 [데이터 모델링 모범 사례 안내서](../../schema/best-practices.md)를 검토하는 것이 좋습니다.

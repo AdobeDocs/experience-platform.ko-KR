@@ -2,9 +2,9 @@
 title: 실시간 고객 프로필 개요
 description: Real-Time Customer Profile은 다양한 소스의 데이터를 병합하고 개별 고객 프로필 및 관련 시계열 이벤트의 형태로 해당 데이터에 대한 액세스를 제공합니다. 이 기능을 통해 마케터는 여러 채널에서 대상자와 일관되고, 관련성이 높은 경험을 제공할 수 있습니다.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: fc53d1b32eb3fc0251f307d5b2f076b1153a2931
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '1826'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 
 ## 프로필 이해
 
-[!DNL Real-Time Customer Profile]은(는) 다양한 엔터프라이즈 시스템의 데이터를 병합한 다음 고객 프로필 형식으로 해당 데이터에 대한 액세스를 관련 시계열 이벤트와 함께 제공합니다. 이 기능을 통해 마케터는 여러 채널에서 대상자와 일관되고, 관련성이 높은 경험을 제공할 수 있습니다. 다음 섹션에서는 Platform 내에서 프로필을 효과적으로 구축하고 유지하기 위해 이해해야 하는 몇 가지 핵심 개념을 강조합니다.
+[!DNL Real-Time Customer Profile]은(는) 다양한 엔터프라이즈 시스템의 데이터를 병합한 다음 고객 프로필 형식으로 해당 데이터에 대한 액세스를 관련 시계열 이벤트와 함께 제공합니다. 이 기능을 통해 마케터는 여러 채널에서 대상자와 일관되고, 관련성이 높은 경험을 제공할 수 있습니다. 다음 섹션에서는 Experience Platform 내에서 프로필을 효과적으로 구축하고 유지하기 위해 이해해야 하는 몇 가지 핵심 개념을 강조합니다.
 
 ### 프로필 엔티티 구성
 
@@ -45,7 +45,7 @@ Dimension 및 B2B 엔터티가 **스키마 관계**&#x200B;를 통해 기본 엔
 
 [!DNL Real-Time Customer Profile]이(가) 수집된 데이터를 처리하고 Adobe Experience Platform [!DNL Identity Service]을(를) 사용하여 ID 매핑을 통해 관련 데이터를 병합하지만 [!DNL Profile] 데이터 저장소에 자체 데이터를 유지합니다. [!DNL Profile] 저장소는 데이터 레이크의 카탈로그 데이터와 ID 그래프의 [!DNL Identity Service] 데이터와 별개입니다.
 
-프로필 저장소는 Microsoft Azure Cosmos DB 인프라를 사용하고 플랫폼 데이터 레이크는 Microsoft Azure 데이터 레이크 저장소를 사용합니다.
+프로필 저장소는 Microsoft Azure Cosmos DB 인프라를 사용하고 Experience Platform 데이터 레이크는 Microsoft Azure 데이터 레이크 저장소를 사용합니다.
 
 ### 프로필 보호 기능
 
@@ -57,15 +57,15 @@ Experience Platform UI는 일별 스냅샷 중에 캡처한 대로 실시간 고
 
 ### 프로필 조각과 병합된 프로필 {#profile-fragments-vs-merged-profiles}
 
-각 개별 고객 프로필은 해당 고객에 대한 단일 보기를 형성하기 위해 병합된 여러 프로필 조각으로 구성됩니다. 예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직에는 여러 데이터 세트에 표시되는 단일 고객과 관련된 여러 프로필 조각이 있습니다. 이러한 조각을 Platform에 수집하면 해당 고객을 위한 단일 프로필을 만들기 위해 함께 병합됩니다.
+각 개별 고객 프로필은 해당 고객에 대한 단일 보기를 형성하기 위해 병합된 여러 프로필 조각으로 구성됩니다. 예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직에는 여러 데이터 세트에 표시되는 단일 고객과 관련된 여러 프로필 조각이 있습니다. 이러한 조각을 Experience Platform에 수집하면 해당 고객을 위한 단일 프로필을 만들기 위해 함께 병합됩니다.
 
 즉, 프로필 조각은 고유한 기본 ID와 주어진 데이터 세트 내의 해당 ID에 대한 해당 [레코드](#record-data) 또는 [이벤트](#time-series-events) 데이터를 나타냅니다.
 
-여러 데이터 세트의 데이터가 충돌하면(예: 한 조각은 고객을 &quot;단일&quot;로 나열하고 다른 조각은 고객을 &quot;기혼&quot;으로 나열함) [병합 정책](#merge-policies)은 우선 순위를 지정하고 개인에 대한 프로필에 포함할 정보를 결정합니다. 따라서 각 프로필은 일반적으로 여러 데이터 세트의 여러 조각으로 구성되므로 플랫폼 내의 총 프로필 조각 수는 병합된 프로필의 총 수보다 항상 높을 수 있습니다.
+여러 데이터 세트의 데이터가 충돌하면(예: 한 조각은 고객을 &quot;단일&quot;로 나열하고 다른 조각은 고객을 &quot;기혼&quot;으로 나열함) [병합 정책](#merge-policies)은 우선 순위를 지정하고 개인에 대한 프로필에 포함할 정보를 결정합니다. 따라서 각 프로필은 일반적으로 여러 데이터 세트의 여러 조각으로 구성되므로 Experience Platform 내의 총 프로필 조각 수는 병합된 프로필의 총 수보다 항상 높을 수 있습니다.
 
 ### 레코드 데이터 {#record-data}
 
-프로필은 많은 속성(레코드 데이터라고도 함)으로 구성된 주제, 조직 또는 개인의 표현입니다. 예를 들어, 제품 프로필에는 SKU 및 설명이 포함될 수 있지만, 개인 프로필에는 이름, 성 및 이메일 주소와 같은 정보가 포함됩니다. [!DNL Experience Platform]을(를) 사용하여 비즈니스와 관련된 특정 데이터를 사용하도록 프로필을 사용자 지정할 수 있습니다. 표준 [!DNL Experience Data Model]&#x200B;(XDM) 클래스 [!DNL XDM Individual Profile]은(는) 고객 레코드 데이터를 설명할 때 스키마를 구축하는 기본 클래스이며, 플랫폼 서비스 간의 여러 상호 작용에 필수적인 데이터를 제공합니다. [!DNL Experience Platform]의 스키마 작업에 대한 자세한 내용은 [XDM 시스템 개요](../xdm/home.md)를 읽는 것부터 시작하십시오.
+프로필은 많은 속성(레코드 데이터라고도 함)으로 구성된 주제, 조직 또는 개인의 표현입니다. 예를 들어, 제품 프로필에는 SKU 및 설명이 포함될 수 있지만, 개인 프로필에는 이름, 성 및 이메일 주소와 같은 정보가 포함됩니다. [!DNL Experience Platform]을(를) 사용하여 비즈니스와 관련된 특정 데이터를 사용하도록 프로필을 사용자 지정할 수 있습니다. 표준 [!DNL Experience Data Model]&#x200B;(XDM) 클래스 [!DNL XDM Individual Profile]은(는) 고객 레코드 데이터를 설명할 때 스키마를 구축하는 기본 클래스이며, Experience Platform 서비스 간의 많은 상호 작용에 필수적인 데이터를 제공합니다. [!DNL Experience Platform]의 스키마 작업에 대한 자세한 내용은 [XDM 시스템 개요](../xdm/home.md)를 읽는 것부터 시작하십시오.
 
 ### 시계열 이벤트 {#time-series-events}
 
@@ -77,7 +77,7 @@ Experience Platform UI는 일별 스냅샷 중에 캡처한 대로 실시간 고
 
 ### 병합 정책
 
-여러 소스에서 데이터 조각을 가져와서 각 개별 고객에 대한 전체 보기를 볼 수 있도록 결합할 때 병합 정책은 [!DNL Platform]에서 데이터의 우선 순위 지정 방법과 고객 프로필을 만드는 데 사용할 데이터를 결정하는 데 사용하는 규칙입니다.
+여러 소스에서 데이터 조각을 가져와서 각 개별 고객에 대한 전체 보기를 볼 수 있도록 결합할 때 병합 정책은 [!DNL Experience Platform]에서 데이터의 우선 순위 지정 방법과 고객 프로필을 만드는 데 사용할 데이터를 결정하는 데 사용하는 규칙입니다.
 
 여러 데이터 세트의 데이터가 충돌하는 경우 병합 정책에 따라 데이터를 처리하는 방법과 사용할 값이 결정됩니다. RESTful API 또는 사용자 인터페이스를 통해 새 병합 정책을 만들고 기존 정책을 관리하며 조직의 기본 병합 정책을 설정할 수 있습니다.
 
@@ -107,7 +107,7 @@ Adobe Experience Platform [!DNL Segmentation Service]은(는) 개별 고객을 �
 
 ## [!DNL Profile]에 데이터 수집 중
 
-[!DNL Platform]은(는) 실시간 스트리밍 수집 및 일괄 처리 수집을 지원하면서 기록 및 시계열 데이터를 [!DNL Profile]에 보내도록 구성할 수 있습니다. 자세한 내용은 [실시간 고객 프로필에 데이터를 추가](tutorials/add-profile-data.md)하는 방법에 대한 개요를 설명하는 자습서를 참조하십시오.
+[!DNL Experience Platform]은(는) 실시간 스트리밍 수집 및 일괄 처리 수집을 지원하면서 기록 및 시계열 데이터를 [!DNL Profile]에 보내도록 구성할 수 있습니다. 자세한 내용은 [실시간 고객 프로필에 데이터를 추가](tutorials/add-profile-data.md)하는 방법에 대한 개요를 설명하는 자습서를 참조하십시오.
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ Adobe Experience Platform [!DNL Segmentation Service]은(는) 개별 고객을 �
 
 ### 프로필 수집 지표
 
-가시성 인사이트를 통해 Adobe Experience Platform의 주요 지표를 노출할 수 있습니다. 다양한 [!DNL Platform] 기능에 대한 [!DNL Experience Platform] 사용 통계 및 성능 지표 외에도 수신 요청 비율, 성공적인 수집 비율, 수집된 레코드 크기 등에 대한 통찰력을 얻을 수 있는 특정 프로필 관련 지표가 있습니다. 자세한 내용은 [Observability Insights API 개요](../observability/api/overview.md)를 읽는 것부터 시작하고, Real-Time Customer Profile 지표의 전체 목록에 대해서는 [사용 가능한 지표](../observability/api/metrics.md#available-metrics)에 대한 설명서를 참조하십시오.
+가시성 인사이트를 통해 Adobe Experience Platform의 주요 지표를 노출할 수 있습니다. 다양한 [!DNL Experience Platform] 기능에 대한 [!DNL Experience Platform] 사용 통계 및 성능 지표 외에도 수신 요청율, 성공적인 수집률, 수집된 레코드 크기 등으로 insight을 얻을 수 있는 특정 프로필 관련 지표가 있습니다. 자세한 내용은 [Observability Insights API 개요](../observability/api/overview.md)를 읽는 것부터 시작하고, Real-Time Customer Profile 지표의 전체 목록에 대해서는 [사용 가능한 지표](../observability/api/metrics.md#available-metrics)에 대한 설명서를 참조하십시오.
 
 ## 프로필 저장소 데이터 업데이트
 
@@ -131,7 +131,7 @@ Adobe Experience Platform [!DNL Segmentation Service]은(는) 개별 고객을 �
 - 데이터 액세스 정책
 - 마케팅 액션을 위한 데이터에 대한 액세스 제어
 
-데이터 거버넌스는 여러 지점에서 관리됩니다. 여기에는 [!DNL Platform]에 수집할 데이터와 지정된 마케팅 작업에 대한 수집 후 액세스할 수 있는 데이터를 결정하는 작업이 포함됩니다. 자세한 내용은 [데이터 거버넌스 개요](../data-governance/home.md)를 읽는 것부터 시작하십시오.
+데이터 거버넌스는 여러 지점에서 관리됩니다. 여기에는 [!DNL Experience Platform]에 수집할 데이터와 지정된 마케팅 작업에 대한 수집 후 액세스할 수 있는 데이터를 결정하는 작업이 포함됩니다. 자세한 내용은 [데이터 거버넌스 개요](../data-governance/home.md)를 읽는 것부터 시작하십시오.
 
 ### 옵트아웃 및 데이터 개인 정보 보호 요청 처리
 

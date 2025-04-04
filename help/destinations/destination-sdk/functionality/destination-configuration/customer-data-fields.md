@@ -1,10 +1,10 @@
 ---
-description: 사용자가 대상에 데이터를 연결하고 내보내는 방법과 관련된 다양한 정보를 지정할 수 있도록 Experience Platform UI에서 입력 필드를 만드는 방법을 알아봅니다.
+description: Experience Platform UI에서 사용자가 대상에 데이터를 연결하고 내보내는 방법과 관련된 다양한 정보를 지정할 수 있는 입력 필드를 만드는 방법을 알아봅니다.
 title: 고객 데이터 필드
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1750'
 ht-degree: 1%
 
 ---
@@ -53,10 +53,10 @@ Experience Platform UI에서 대상에 연결할 때 사용자가 특정 구성 
 
 | 매개변수 | 유형 | 필수/선택 사항 | 설명 |
 |---------|----------|------|---|
-| `name` | 문자열 | 필수 여부 | 도입 중인 사용자 정의 필드의 이름을 입력합니다. `title` 필드가 비어 있거나 없으면 이 이름이 Platform UI에 표시되지 않습니다. |
+| `name` | 문자열 | 필수 여부 | 도입 중인 사용자 정의 필드의 이름을 입력합니다. `title` 필드가 비어 있거나 누락된 경우가 아니면 이 이름이 Experience Platform UI에 표시되지 않습니다. |
 | `type` | 문자열 | 필수 여부 | 도입 중인 사용자 정의 필드의 유형을 나타냅니다. 허용된 값: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-| `title` | 문자열 | 선택 사항입니다 | Platform UI에서 고객에게 표시되는 필드의 이름을 나타냅니다. 이 필드가 비어 있거나 누락된 경우 UI는 `name` 값에서 필드 이름을 상속합니다. |
-| `description` | 문자열 | 선택 사항입니다 | 사용자 정의 필드에 대한 설명을 입력합니다. 이 설명은 Platform UI에 표시되지 않습니다. |
+| `title` | 문자열 | 선택 사항입니다 | Experience Platform UI에서 고객에게 표시되는 필드의 이름을 나타냅니다. 이 필드가 비어 있거나 누락된 경우 UI는 `name` 값에서 필드 이름을 상속합니다. |
+| `description` | 문자열 | 선택 사항입니다 | 사용자 정의 필드에 대한 설명을 입력합니다. 이 설명은 Experience Platform UI에 표시되지 않습니다. |
 | `isRequired` | 부울 | 선택 사항입니다 | 사용자가 대상 구성 워크플로우에서 이 필드에 대한 값을 제공해야 하는지 여부를 나타냅니다. |
 | `pattern` | 문자열 | 선택 사항입니다 | 필요한 경우 사용자 정의 필드에 패턴을 적용합니다. 패턴을 적용하려면 정규 표현식을 사용하십시오. 예를 들어 고객 ID에 숫자나 밑줄이 포함되지 않은 경우 이 필드에 `^[A-Za-z]+$`을(를) 입력합니다. |
 | `enum` | 문자열 | 선택 사항입니다 | 사용자 정의 필드를 드롭다운 메뉴로 렌더링하고 사용자가 사용할 수 있는 옵션을 나열합니다. |
@@ -67,7 +67,7 @@ Experience Platform UI에서 대상에 연결할 때 사용자가 특정 구성 
 
 {style="table-layout:auto"}
 
-아래 예에서 `customerDataFields` 섹션은 사용자가 대상에 연결할 때 Platform UI에 입력해야 하는 두 개의 필드를 정의합니다.
+아래 예에서 `customerDataFields` 섹션은 사용자가 대상에 연결할 때 Experience Platform UI에 입력해야 하는 두 개의 필드를 정의합니다.
 
 * `Account ID`: 대상 플랫폼에 대한 사용자 계정 ID입니다.
 * `Endpoint region`: 연결할 API의 지역 끝점입니다. `enum` 섹션은 사용자가 선택할 수 있는 내에 정의된 값으로 드롭다운 메뉴를 만듭니다.
@@ -103,7 +103,7 @@ Experience Platform UI에서 대상에 연결할 때 사용자가 특정 구성 
 
 ## 대상 연결 이름 및 설명 {#names-description}
 
-새 대상을 만들 때 Destination SDK은 플랫폼 UI의 대상 연결 화면에 **[!UICONTROL 이름]** 및 **[!UICONTROL 설명]** 필드를 자동으로 추가합니다. 위의 예에서 볼 수 있듯이 **[!UICONTROL 이름]** 및 **[!UICONTROL 설명]** 필드는 고객 데이터 필드 구성에 포함되지 않고 UI에서 렌더링됩니다.
+새 대상을 만들 때 Destination SDK은 Experience Platform UI의 대상 연결 화면에 **[!UICONTROL 이름]** 및 **[!UICONTROL 설명]** 필드를 자동으로 추가합니다. 위의 예에서 볼 수 있듯이 **[!UICONTROL 이름]** 및 **[!UICONTROL 설명]** 필드는 고객 데이터 필드 구성에 포함되지 않고 UI에서 렌더링됩니다.
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ Experience Platform UI에서 대상에 연결할 때 사용자가 특정 구성 
 
 ## 고객 데이터 필드 주문 {#ordering}
 
-대상 구성에서 고객 데이터 필드를 추가하는 순서는 Platform UI에 반영됩니다.
+대상 구성에서 고객 데이터 필드를 추가하는 순서는 Experience Platform UI에 반영됩니다.
 
 예를 들어 아래 구성은 UI에 그에 따라 반영되며, 옵션은 **[!UICONTROL 이름]**, **[!UICONTROL 설명]**, **[!UICONTROL 버킷 이름]**, **[!UICONTROL 폴더 경로]**, **[!UICONTROL 파일 형식]**, **[!UICONTROL 압축 형식]** 순서로 표시됩니다.
 
@@ -559,7 +559,7 @@ API를 동적으로 호출하고 응답을 사용하여 드롭다운 메뉴의 �
 
 ## 템플릿화된 고객 데이터 필드 액세스 {#accessing-templatized-fields}
 
-대상에 사용자 입력이 필요한 경우 사용자가 Platform UI를 통해 입력할 수 있는 고객 데이터 필드 선택을 제공해야 합니다. 그런 다음 고객 데이터 필드의 사용자 입력을 올바르게 읽도록 대상 서버를 구성해야 합니다. 이 작업은 템플릿화된 필드를 통해 수행됩니다.
+대상에 사용자 입력이 필요한 경우 Experience Platform UI를 통해 입력할 수 있는 고객 데이터 필드 선택을 사용자에게 제공해야 합니다. 그런 다음 고객 데이터 필드의 사용자 입력을 올바르게 읽도록 대상 서버를 구성해야 합니다. 이 작업은 템플릿화된 필드를 통해 수행됩니다.
 
 서식 있는 필드는 `{{customerData.fieldName}}` 형식을 사용합니다. 여기서 `fieldName`은(는) 정보를 읽고 있는 고객 데이터 필드의 이름입니다. 서식 있는 모든 고객 데이터 필드 앞에는 `customerData.`이(가) 있고 중괄호 `{{ }}` 안에 묶여 있습니다.
 
@@ -607,13 +607,13 @@ Experience Platform이 [!DNL Amazon S3]에 올바르게 연결하려면 아래�
    }
 ```
 
-Experience Platform이 대상 플랫폼에 성공적으로 연결할 수 있도록 템플릿 값 `{{customerData.bucketName}}` 및 `{{customerData.path}}`이(가) 사용자 제공 값을 읽습니다.
+템플릿화된 값 `{{customerData.bucketName}}` 및 `{{customerData.path}}`이(가) 사용자가 제공한 값을 읽어서 Experience Platform이 대상 플랫폼에 성공적으로 연결할 수 있도록 합니다.
 
 서식 있는 필드를 읽도록 대상 서버를 구성하는 방법에 대한 자세한 내용은 [하드 코딩된 필드와 서식 있는 필드](../destination-server/server-specs.md#templatized-fields)의 설명서를 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽은 후에는 사용자가 고객 데이터 필드를 통해 Experience Platform UI에서 정보를 입력할 수 있도록 허용하는 방법을 보다 잘 이해할 수 있어야 합니다. 이제 사용 사례에 적합한 고객 데이터 필드를 선택하고 Platform UI에서 고객 데이터 필드를 구성, 주문 및 그룹화하는 방법도 알아봅니다.
+이 문서를 읽은 후에는 사용자가 고객 데이터 필드를 통해 Experience Platform UI에서 정보를 입력할 수 있도록 허용하는 방법을 보다 잘 이해할 수 있어야 합니다. 이제 사용 사례에 적합한 고객 데이터 필드를 선택하고 Experience Platform UI에서 고객 데이터 필드를 구성, 주문 및 그룹화하는 방법도 알아봅니다.
 
 다른 대상 구성 요소에 대한 자세한 내용은 다음 문서를 참조하십시오.
 

@@ -3,9 +3,9 @@ keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin 확장 프로그램
 title: Marketo Munchkin 확장 프로그램
 description: Marketo Munchkin 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 0639ff74-5450-456e-b030-8118814ed705
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '462'
 ht-degree: 5%
 
 ---
@@ -18,15 +18,15 @@ ht-degree: 5%
 
 [!DNL Marketo’s Munchkin] JavaScript을 통해 [!DNL Marketo] 랜딩 페이지 및 외부 웹 페이지에 대한 최종 사용자 페이지 방문 수 및 클릭 수를 추적할 수 있습니다.
 
-[!DNL Marketo Munchkin]은(는) Adobe Experience Platform의 이메일 확장입니다. Marketo Munchkin에 대한 자세한 내용은 Marketo 설명서에서 [리드 추적](https://developers.marketo.com/javascript-api/lead-tracking/)을 참조하세요.
+[!DNL Marketo Munchkin]은(는) Adobe Experience Platform의 이메일 확장입니다. Marketo Munchkin에 대한 자세한 내용은 Marketo 설명서에서 [잠재 고객 추적](https://developers.marketo.com/javascript-api/lead-tracking/)을 참조하세요.
 
-이 대상은 태그 확장입니다. Platform에서 태그 확장이 작동하는 방식에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
+이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
 ![Marketo Munchkin 확장 프로그램](../../assets/catalog/email/marketo-munchkin/catalog.png)
 
 ## 전제 조건 {#prerequisites}
 
-이 확장은 Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
+이 확장은 Experience Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
 이 확장을 사용하려면 Adobe Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 문의하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여해 달라고 요청하십시오.
 
@@ -34,7 +34,7 @@ ht-degree: 5%
 
 [!DNL Marketo Munchkin] 확장을 설치하려면:
 
-[플랫폼 인터페이스](https://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**(으)로 이동합니다.
+[Experience Platform 인터페이스](https://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**(으)로 이동합니다.
 
 카탈로그에서 확장을 선택하거나 검색 창을 사용합니다.
 
@@ -58,6 +58,6 @@ ht-degree: 5%
 
 >[!TIP]
 >
->확장이 속성 중 하나에 이미 설치되어 있는 경우에도 Platform UI에 확장에 대한 **[!UICONTROL 설치]**&#x200B;가 표시됩니다. 확장을 구성하거나 삭제하려면 [확장 설치](#install-extension)에 설명된 대로 설치 워크플로를 시작합니다.
+>확장이 속성 중 하나에 이미 설치되어 있는 경우에도 Experience Platform UI에 확장에 대한 **[!UICONTROL 설치]**&#x200B;가 표시됩니다. 확장을 구성하거나 삭제하려면 [확장 설치](#install-extension)에 설명된 대로 설치 워크플로를 시작합니다.
 
 확장을 업그레이드하려면 태그 설명서의 [확장 업그레이드 프로세스](../../../tags/ui/managing-resources/extensions/extension-upgrade.md)에 대한 안내서를 참조하십시오.

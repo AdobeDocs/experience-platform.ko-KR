@@ -4,9 +4,9 @@ description: UI를 사용하여 Acxiom 예상 데이터를 Adobe Experience Plat
 last-substantial-update: 2024-02-21T00:00:00Z
 badge: Beta
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1861'
+source-wordcount: '1862'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 >
 >[!DNL Acxiom Prospecting Data Import] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
 
-[!DNL Acxiom]의 Adobe Real-time Customer Data Platform에 대한 잠재 고객 데이터 가져오기 전망은 가능한 한 가장 생산적인 잠재 고객을 제공하기 위한 프로세스입니다. [!DNL Acxiom]은(는) 보안 내보내기를 통해 Real-Time CDP 자사 데이터를 가져오고 수상 경력에 빛나는 위생 및 ID 해결 시스템을 통해 해당 데이터를 실행합니다. 이렇게 하면 제외 목록으로 사용할 데이터 파일이 생성됩니다. 그런 다음 이 데이터 파일을 Acxiom 글로벌 데이터베이스에 대해 대응시켜 잠재 고객 목록을 가져오기에 맞게 조정할 수 있습니다.
+[!DNL Acxiom]의 Adobe Real-Time Customer Data Platform에 대한 잠재 고객 데이터 가져오기 전망은 가능한 한 가장 생산적인 잠재 고객을 제공하기 위한 프로세스입니다. [!DNL Acxiom]은(는) 보안 내보내기를 통해 Real-Time CDP 자사 데이터를 가져오고 수상 경력에 빛나는 위생 및 ID 해결 시스템을 통해 해당 데이터를 실행합니다. 이렇게 하면 제외 목록으로 사용할 데이터 파일이 생성됩니다. 그런 다음 이 데이터 파일을 Acxiom 글로벌 데이터베이스에 대해 대응시켜 잠재 고객 목록을 가져오기에 맞게 조정할 수 있습니다.
 
 [!DNL Acxiom] 소스를 사용하여 Amazon S3를 드롭 포인트로 사용하여 Acxiom Prospect Service에서 응답을 검색하고 매핑할 수 있습니다.
 
@@ -25,9 +25,9 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 [!DNL Acxiom
 
 ## 전제 조건 {#prerequisites}
 
-이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기 튜토리얼](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아봅니다.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
@@ -35,7 +35,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 [!DNL Acxiom
 
 ### 필요한 자격 증명 수집
 
-Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대한 유효한 값을 제공해야 합니다.
+Experience Platform에서 버킷에 액세스하려면 다음 자격 증명에 대한 유효한 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | --- | --- |
@@ -46,11 +46,11 @@ Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대
 
 >[!IMPORTANT]
 >
->[!DNL Acxiom] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 사용 권한이 모두 활성화되어 있어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../../../access-control/ui/overview.md)를 참조하십시오.
+>[!DNL Acxiom] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../../../access-control/ui/overview.md)를 참조하십시오.
 
 ## [!DNL Acxiom] 계정 연결
 
-Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
@@ -145,7 +145,7 @@ Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선
 
 ## 매핑
 
-Experience Platform에 데이터를 수집하기 전에 매핑 인터페이스를 사용하여 소스 데이터를 적절한 스키마 필드에 매핑합니다.  자세한 내용은 UI의 [매핑 가이드](../../../../../data-prep/ui/mapping.md)를 참조하세요.
+Experience Platform으로 데이터를 수집하기 전에 매핑 인터페이스를 사용하여 소스 데이터를 적절한 스키마 필드에 매핑합니다.  자세한 내용은 UI의 [매핑 가이드](../../../../../data-prep/ui/mapping.md)를 참조하세요.
 
 ![매핑 인터페이스입니다.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
 
@@ -175,7 +175,7 @@ Experience Platform에 데이터를 수집하기 전에 매핑 인터페이스�
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL Acxiom] 소스에서 일괄 처리 데이터를 Experience Platform 상태로 가져오는 데이터 흐름을 만들었습니다. 추가 리소스는 아래 설명된 설명서를 참조하십시오.
+이 자습서를 따라 [!DNL Acxiom] 소스에서 Experience Platform으로 일괄 처리 데이터를 가져오는 데이터 흐름을 만들었습니다. 추가 리소스는 아래 설명된 설명서를 참조하십시오.
 
 ### 데이터 흐름 모니터링
 

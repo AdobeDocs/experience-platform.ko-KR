@@ -5,9 +5,9 @@ title: UI에서 PayPal Source 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 PayPal 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '462'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 >
 >[!DNL PayPal] 원본은 2025년 6월 말에 사용되지 않습니다.
 
-Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 Platform 사용자 인터페이스를 사용하여 [!DNL PayPal] 소스 커넥터를 만드는 단계를 제공합니다.
+Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 Experience Platform 사용자 인터페이스를 사용하여 [!DNL PayPal] 소스 커넥터를 만드는 단계를 제공합니다.
 
 ## 시작하기
 
@@ -33,7 +33,7 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ### 필요한 자격 증명 수집
 
-[!DNL PayPal] 계정 플랫폼에 액세스하려면 다음 값을 제공해야 합니다.
+[!DNL PayPal] 계정 Experience Platform에 액세스하려면 다음 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
@@ -45,7 +45,7 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ## [!DNL PayPal] 계정 연결
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL PayPal] 계정을 플랫폼에 연결할 수 있습니다.
+필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL PayPal] 계정을 Experience Platform에 연결할 수 있습니다.
 
 [Adobe Experience Platform](https://platform.adobe.com)에 로그인한 다음 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 **[!UICONTROL 소스]** 작업 영역에 액세스합니다. **[!UICONTROL 카탈로그]** 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
@@ -71,4 +71,4 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL PayPal] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [결제 데이터를 플랫폼으로 가져오기 위한 데이터 흐름을 구성](../../dataflow/payments.md)할 수 있습니다.
+이 자습서에 따라 [!DNL PayPal] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [결제 데이터를 Experience Platform으로 가져오도록 데이터 흐름을 구성](../../dataflow/payments.md)할 수 있습니다.

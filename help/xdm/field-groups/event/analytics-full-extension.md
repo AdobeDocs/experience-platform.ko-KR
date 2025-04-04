@@ -2,9 +2,9 @@
 title: Adobe Analytics ExperienceEvent 전체 확장 스키마 필드 그룹
 description: Adobe Analytics ExperienceEvent 전체 확장 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: 5eb15a7dfff7e6d8ba815ae4f89142ba50166620
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '812'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->이 필드 그룹의 반복되는 요소 크기와 수로 인해 이 안내서에 표시되는 많은 필드가 축소되어 공간을 절약할 수 있습니다. 이 필드 그룹의 전체 구조를 살펴보려면 [플랫폼 UI에서 찾아보거나](../../ui/explore.md) [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)에서 전체 스키마를 볼 수 있습니다.
+>이 필드 그룹의 반복되는 요소 크기와 수로 인해 이 안내서에 표시되는 많은 필드가 축소되어 공간을 절약할 수 있습니다. 이 필드 그룹의 전체 구조를 살펴보려면 [Experience Platform UI에서 조회](../../ui/explore.md)하거나 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)에서 전체 스키마를 볼 수 있습니다.
 
 ## 필드 그룹 구조
 
@@ -103,4 +103,4 @@ Analytics 확장 필드 그룹은 필드 그룹에 대해 최대 100개의 [사�
 
 이 문서에서는 Analytics 확장 필드 그룹의 구조 및 사용 사례에 대해 다룹니다. 필드 그룹 자체에 대한 자세한 내용은 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)를 참조하세요.
 
-이 필드 그룹을 사용하여 Adobe Experience Platform Web SDK를 사용하여 Analytics 데이터를 수집하는 경우 서버측에서 데이터를 XDM에 매핑하는 방법에 대해 알아보려면 [데이터 스트림 구성](../../../datastreams/overview.md)에 대한 안내서를 참조하십시오.
+이 필드 그룹을 사용하여 Adobe Experience Platform Web SDK을 사용하여 Analytics 데이터를 수집하는 경우 서버측에서 데이터를 XDM에 매핑하는 방법에 대해 알아보려면 [데이터 스트림 구성](../../../datastreams/overview.md)에 대한 안내서를 참조하십시오.

@@ -3,9 +3,9 @@ title: 레코드 삭제
 description: Adobe Experience Platform UI에서 레코드를 삭제하는 방법을 알아봅니다.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1574'
 ht-degree: 8%
 
 ---
@@ -23,19 +23,19 @@ ht-degree: 8%
 
 ## 전제 조건 {#prerequisites}
 
-레코드를 삭제하려면 Experience Platform 시 ID 필드가 작동하는 방식을 이해해야 합니다. 특히 삭제할 데이터 세트(또는 데이터 세트)에 따라 레코드를 삭제할 엔티티의 ID 네임스페이스 값을 알고 있어야 합니다.
+레코드를 삭제하려면 Experience Platform에서 ID 필드가 작동하는 방식을 이해해야 합니다. 특히 삭제할 데이터 세트(또는 데이터 세트)에 따라 레코드를 삭제할 엔티티의 ID 네임스페이스 값을 알고 있어야 합니다.
 
-Platform의 ID에 대한 자세한 내용은 다음 설명서를 참조하십시오.
+Experience Platform의 ID에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [Adobe Experience Platform ID 서비스](../../identity-service/home.md): 장치와 시스템 간에 ID를 브리징하여 준수하는 XDM 스키마에 의해 정의된 ID 필드를 기반으로 데이터 세트를 함께 연결합니다.
 * [ID 네임스페이스](../../identity-service/features/namespaces.md): ID 네임스페이스는 한 사람과 관련된 다양한 유형의 ID 정보를 정의하며 각 ID 필드에 필요한 구성 요소입니다.
 * [실시간 고객 프로필](../../profile/home.md): ID 그래프를 사용하여 실시간으로 업데이트되는 여러 소스의 집계 데이터를 기반으로 통합 소비자 프로필을 제공합니다.
-* [XDM(경험 데이터 모델)](../../xdm/home.md): 스키마를 사용하여 플랫폼 데이터에 대한 표준 정의 및 구조를 제공합니다. 모든 Platform 데이터 세트는 특정 XDM 스키마를 준수하며, 스키마는 ID인 필드를 정의합니다.
+* [XDM(경험 데이터 모델)](../../xdm/home.md): 스키마를 사용하여 Experience Platform 데이터에 대한 표준 정의 및 구조를 제공합니다. 모든 Experience Platform 데이터 세트는 특정 XDM 스키마를 준수하며, 스키마는 ID인 필드를 정의합니다.
 * [ID 필드](../../xdm/ui/fields/identity.md): XDM 스키마에서 ID 필드를 정의하는 방법을 알아봅니다.
 
 ## 요청 만들기 {#create-request}
 
-프로세스를 시작하려면 Platform UI의 왼쪽 탐색에서 **[!UICONTROL 데이터 라이프사이클]**&#x200B;을 선택합니다. [!UICONTROL 데이터 주기 요청] 작업 영역이 나타납니다. 그런 다음 작업 영역의 기본 페이지에서 **[!UICONTROL 요청 만들기]**&#x200B;를 선택합니다.
+프로세스를 시작하려면 Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 데이터 수명 주기]**&#x200B;를 선택하십시오. [!UICONTROL 데이터 주기 요청] 작업 영역이 나타납니다. 그런 다음 작업 영역의 기본 페이지에서 **[!UICONTROL 요청 만들기]**&#x200B;를 선택합니다.
 
 ![[!UICONTROL 요청 만들기]가 선택된 [!UICONTROL 데이터 주기 요청] 작업 영역](../images/ui/record-delete/create-request-button.png)
 
@@ -75,13 +75,13 @@ Platform의 ID에 대한 자세한 내용은 다음 설명서를 참조하십시
 >title="기본 ID 값"
 >abstract="이 열에서는 왼쪽 열에 입력한 ID 유형에 해당되는 레코드의 ID 네임스페이스 값을 입력해야 합니다. ID 네임스페이스 유형이 `email`인 경우 값은 레코드의 이메일 주소이어야 합니다. 자세한 내용은 데이터 라이프사이클 UI 안내서를 참조하십시오."
 
-레코드를 삭제할 때 시스템에서 삭제할 레코드를 결정할 수 있도록 ID 정보를 제공해야 합니다. 플랫폼에 있는 모든 데이터 세트의 경우 데이터 세트의 스키마에 의해 정의된 **ID 네임스페이스** 필드를 기반으로 레코드가 삭제됩니다.
+레코드를 삭제할 때 시스템에서 삭제할 레코드를 결정할 수 있도록 ID 정보를 제공해야 합니다. Experience Platform에 있는 모든 데이터 세트의 경우 데이터 세트의 스키마에 의해 정의된 **ID 네임스페이스** 필드를 기반으로 레코드가 삭제됩니다.
 
-플랫폼의 모든 ID 필드와 마찬가지로 ID 네임스페이스는 **type**(ID 네임스페이스라고도 함)과 **value**, 이렇게 두 가지로 구성됩니다. ID 유형은 필드가 레코드(예: 이메일 주소)를 식별하는 방법에 대한 컨텍스트를 제공합니다. 값은 해당 형식에 대한 레코드의 특정 ID를 나타냅니다(예: `email` ID 형식의 경우 `jdoe@example.com`). ID로 사용되는 일반적인 필드에는 계정 정보, 디바이스 ID 및 쿠키 ID가 포함됩니다.
+Experience Platform의 모든 ID 필드와 마찬가지로 ID 네임스페이스는 **type**(ID 네임스페이스라고도 함)과 **value**, 이렇게 두 가지로 구성됩니다. ID 유형은 필드가 레코드(예: 이메일 주소)를 식별하는 방법에 대한 컨텍스트를 제공합니다. 값은 해당 형식에 대한 레코드의 특정 ID를 나타냅니다(예: `email` ID 형식의 경우 `jdoe@example.com`). ID로 사용되는 일반적인 필드에는 계정 정보, 디바이스 ID 및 쿠키 ID가 포함됩니다.
 
 >[!TIP]
 >
->특정 데이터 세트에 대한 ID 네임스페이스를 모를 경우 Platform UI에서 찾을 수 있습니다. **[!UICONTROL 데이터 세트]** 작업 영역의 목록에서 해당 데이터 세트를 선택합니다. 데이터 세트에 대한 세부 정보 페이지에서 오른쪽 레일의 데이터 세트 스키마 이름 위로 마우스를 가져갑니다. 스키마 이름 및 설명과 함께 ID 네임스페이스가 표시됩니다.
+>특정 데이터 세트에 대한 ID 네임스페이스를 모를 경우 Experience Platform UI에서 찾을 수 있습니다. **[!UICONTROL 데이터 세트]** 작업 영역의 목록에서 해당 데이터 세트를 선택합니다. 데이터 세트에 대한 세부 정보 페이지에서 오른쪽 레일의 데이터 세트 스키마 이름 위로 마우스를 가져갑니다. 스키마 이름 및 설명과 함께 ID 네임스페이스가 표시됩니다.
 >
 >![데이터 집합이 선택된 데이터 집합 대시보드이며 데이터 집합 세부 정보 패널에서 스키마 대화 상자가 열려 있습니다. 데이터 집합의 기본 ID가 강조 표시됩니다.](../images/ui/record-delete/dataset-primary-identity.png)
 
@@ -140,7 +140,7 @@ ID를 한 번에 하나씩 입력할 수 있는 컨트롤이 나타납니다. **
 
 >[!IMPORTANT]
 > 
->매월 제출할 수 있는 총 고유 ID 레코드 삭제 횟수에는 제한이 있습니다. 이러한 제한은 라이선스 계약을 기반으로 합니다. Adobe Real-time Customer Data Platform 또는 Adobe Journey Optimizer의 모든 에디션을 구입한 조직은 매월 최대 10만 건의 ID 레코드 삭제를 제출할 수 있습니다. **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;을(를) 구매한 조직은 매월 최대 60만 개의 ID 레코드 삭제를 제출할 수 있습니다.<br>UI를 통한 단일 레코드 삭제 요청으로 한 번에 10,000개의 ID를 제출할 수 있습니다. [레코드를 삭제하는 API 메서드](../api/workorder.md#create)을(를) 사용하면 한 번에 100,000개의 ID를 제출할 수 있습니다.<br>가능한 한 많은 ID를 요청당 ID 한도까지 제출하는 것이 좋습니다. 많은 양의 ID를 삭제하려는 경우 낮은 볼륨 또는 레코드당 하나의 ID 삭제 요청을 제출하지 않아야 합니다.
+>매월 제출할 수 있는 총 고유 ID 레코드 삭제 횟수에는 제한이 있습니다. 이러한 제한은 라이선스 계약을 기반으로 합니다. Adobe Real-Time Customer Data Platform 또는 Adobe Journey Optimizer의 모든 에디션을 구입한 조직은 매월 최대 10만 건의 ID 레코드 삭제를 제출할 수 있습니다. **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;을(를) 구매한 조직은 매월 최대 60만 개의 ID 레코드 삭제를 제출할 수 있습니다.<br>UI를 통한 단일 레코드 삭제 요청으로 한 번에 10,000개의 ID를 제출할 수 있습니다. [레코드를 삭제하는 API 메서드](../api/workorder.md#create)을(를) 사용하면 한 번에 100,000개의 ID를 제출할 수 있습니다.<br>가능한 한 많은 ID를 요청당 ID 한도까지 제출하는 것이 좋습니다. 많은 양의 ID를 삭제하려는 경우 낮은 볼륨 또는 레코드당 하나의 ID 삭제 요청을 제출하지 않아야 합니다.
 
 ![요청 설정의 [!UICONTROL 이름] 및 [!UICONTROL 설명] 필드에 [!UICONTROL 제출]이 강조 표시되어 있습니다.](../images/ui/record-delete/submit.png)
 

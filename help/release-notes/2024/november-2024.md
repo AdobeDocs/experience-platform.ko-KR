@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2024년 11월
 description: Adobe Experience Platform의 2024년 11월 릴리스 정보입니다.
 exl-id: e3969f8b-70b2-40f8-bb9b-5be6e3d8f722
-source-git-commit: f71fc1d4ad51af52046caeee289546e05967d5bd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '852'
-ht-degree: 98%
+source-wordcount: '853'
+ht-degree: 96%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!TIP]
 >
->이제 새로운 [AI Assistant 제품 설명서](../../ai-assistant/landing.md)를 사용할 수 있습니다. 이 페이지를 모든 AI 어시스턴트 관련 리소스의 허브로 사용해 보십시오.
+>이제 새로운 [AI 어시스턴트 제품 설명서](../../ai-assistant/landing.md)를 사용할 수 있습니다. 이 페이지를 모든 AI 어시스턴트 관련 리소스의 허브로 사용해 보십시오.
 
 **릴리스 날짜: 2024년 11월 26일**
 
@@ -78,7 +78,7 @@ Adobe Experience Platform의 AI 어시스턴트는 Adobe 애플리케이션에�
 
 ## 샌드박스 {#sandboxes}
 
-Adobe Experience Platform은 전 세계적으로 디지털 체험 애플리케이션을 풍부하게 제공하기 위해 구축되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하는 경우가 많으며, 운영 규정 준수를 보장하면서 이러한 애플리케이션의 개발, 테스트 및 배포를 처리해야 합니다. 이러한 필요를 처리하기 위해 Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 샌드박스를 제공합니다.
+Adobe Experience Platform은 전 세계적으로 디지털 체험 애플리케이션을 풍부하게 제공하기 위해 구축되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하는 경우가 많으며, 운영 규정 준수를 보장하면서 이러한 애플리케이션의 개발, 테스트 및 배포를 처리해야 합니다. 이러한 요구 사항을 해결하기 위해 Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하는 샌드박스를 제공합니다.
 
 **새로운 기능 또는 업데이트된 기능**
 

@@ -1,19 +1,19 @@
 ---
-description: Destination SDK으로 빌드된 대상에 대해 파트너 스키마를 구성하는 방법을 알아봅니다.
+description: Destination SDK으로 빌드된 대상에 대한 파트너 스키마를 구성하는 방법을 알아봅니다.
 title: 파트너 스키마 구성
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: f502631a3e97f3c90c13f188f3a4bb081f6db112
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1939'
+source-wordcount: '1949'
 ht-degree: 3%
 
 ---
 
 # 파트너 스키마 구성
 
-Experience Platform은 스키마를 사용하여 데이터의 구조를 일관되고 재사용 가능한 방식으로 설명합니다. 데이터가 Platform에 수집되면 XDM 스키마에 따라 구조화됩니다. 디자인 원칙 및 모범 사례를 포함하여 스키마 구성 모델에 대한 자세한 내용은 [스키마 구성 기본 사항](../../../../xdm/schema/composition.md)을 참조하십시오.
+Experience Platform은 스키마를 사용하여 데이터의 구조를 일관되고 재사용 가능한 방식으로 설명합니다. 데이터가 Experience Platform에 수집되면 XDM 스키마에 따라 구조화됩니다. 디자인 원칙 및 모범 사례를 포함하여 스키마 구성 모델에 대한 자세한 내용은 [스키마 구성 기본 사항](../../../../xdm/schema/composition.md)을 참조하십시오.
 
-Destination SDK을 사용하여 대상을 작성할 때 대상 플랫폼에서 사용할 고유한 파트너 스키마를 정의할 수 있습니다. 이를 통해 사용자는 Platform의 프로필 속성을 대상 플랫폼이 인식하는 특정 필드에 모두 Platform UI 내에서 매핑할 수 있습니다.
+Destination SDK을 사용하여 대상을 작성할 때 대상 플랫폼에서 사용할 고유한 파트너 스키마를 정의할 수 있습니다. 이를 통해 사용자는 Experience Platform의 프로필 속성을 대상 플랫폼이 인식하는 특정 필드에 모두 Experience Platform UI 내에서 매핑할 수 있습니다.
 
 대상에 대한 파트너 스키마를 구성할 때 다음과 같이 대상 플랫폼에서 지원하는 필드 매핑을 미세 조정할 수 있습니다.
 
@@ -21,14 +21,14 @@ Destination SDK을 사용하여 대상을 작성할 때 대상 플랫폼에서 �
 * Experience Platform이 대상 내에서 지원되는 모든 속성 목록을 검색하기 위해 동적으로 호출할 수 있는 동적 파트너 스키마를 만듭니다.
 * 대상 플랫폼에 필요한 필수 필드 매핑을 정의합니다.
 
-이 구성 요소가 Destination SDK으로 만든 통합에 어떻게 적합한지 이해하려면 [구성 옵션](../configuration-options.md) 설명서에서 다이어그램을 참조하거나 [Destination SDK을 사용하여 파일 기반 대상을 구성하는 방법](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)에 대한 안내서를 참조하십시오.
+이 구성 요소가 Destination SDK으로 만든 통합에 어디에 맞는지 이해하려면 [구성 옵션](../configuration-options.md) 설명서에서 다이어그램을 참조하거나 [Destination SDK을 사용하여 파일 기반 대상을 구성하는 방법](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)에 대한 안내서를 참조하십시오.
 
 `/authoring/destinations` 끝점을 통해 스키마 설정을 구성할 수 있습니다. 이 페이지에 표시된 구성 요소를 구성할 수 있는 자세한 API 호출 예는 다음 API 참조 페이지를 참조하십시오.
 
 * [대상 구성 만들기](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [대상 구성 업데이트](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-이 문서에서는 대상에 사용할 수 있는 지원되는 모든 스키마 구성 옵션에 대해 설명하고 고객이 Platform UI에서 보게 되는 내용을 보여 줍니다.
+이 문서에서는 대상에 사용할 수 있는 지원되는 모든 스키마 구성 옵션에 대해 설명하고 고객이 Experience Platform UI에서 보게 되는 내용을 보여줍니다.
 
 >[!IMPORTANT]
 >
@@ -49,7 +49,7 @@ Destination SDK은 여러 스키마 구성을 지원합니다.
 
 * 정적 스키마는 `schemaConfig` 섹션의 `profileFields` 배열을 통해 정의됩니다. 정적 스키마에서는 `profileFields` 배열의 Experience Platform UI에 표시되어야 하는 모든 대상 특성을 정의합니다. 스키마를 업데이트해야 하는 경우 [대상 구성을 업데이트](../../authoring-api/destination-configuration/update-destination-configuration.md)해야 합니다.
 * 동적 스키마는 [동적 스키마 서버](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers)라는 추가 대상 서버 유형을 사용하여 지원되는 대상 특성을 동적으로 검색하고 고유한 API를 기반으로 스키마를 생성합니다. 동적 스키마는 `profileFields` 배열을 사용하지 않습니다. 스키마를 업데이트해야 하는 경우 [대상 구성을 업데이트](../../authoring-api/destination-configuration/update-destination-configuration.md)할 필요가 없습니다. 대신 동적 스키마 서버는 API에서 업데이트된 스키마를 검색합니다.
-* 스키마 구성 내에는 필수(또는 사전 정의된) 매핑을 추가할 수 있는 옵션이 있습니다. 이는 사용자가 Platform UI에서 볼 수 있는 매핑이지만 대상에 대한 연결을 설정할 때 수정할 수 없습니다. 예를 들어 이메일 주소 필드를 항상 대상으로 전송하도록 적용할 수 있습니다.
+* 스키마 구성 내에는 필수(또는 사전 정의된) 매핑을 추가할 수 있는 옵션이 있습니다. 이러한 매핑은 사용자가 Experience Platform UI에서 볼 수 있지만 대상에 대한 연결을 설정할 때 수정할 수 없는 매핑입니다. 예를 들어 이메일 주소 필드를 항상 대상으로 전송하도록 적용할 수 있습니다.
 
 `schemaConfig` 섹션은 아래 섹션에 표시된 대로 필요한 스키마 유형에 따라 여러 구성 매개 변수를 사용합니다.
 
@@ -104,8 +104,8 @@ Destination SDK은 여러 스키마 구성을 지원합니다.
 | `useCustomerSchemaForAttributeMapping` | 부울 | 선택 사항입니다 | 고객 스키마의 특성을 `profileFields` 배열에서 정의한 특성으로 매핑하거나 사용하지 않도록 설정합니다. <ul><li>`true`(으)로 설정된 경우 매핑 필드에 소스 열만 표시됩니다. 이 경우 `profileFields`을(를) 적용할 수 없습니다.</li><li>`false`(으)로 설정하면 사용자는 스키마의 소스 특성을 `profileFields` 배열에서 정의한 특성에 매핑할 수 있습니다.</li></ul> 기본값은 `false`입니다. |
 | `profileRequired` | 부울 | 선택 사항입니다 | 사용자가 Experience Platform의 프로필 특성을 대상 플랫폼의 사용자 지정 특성에 매핑할 수 있어야 하는 경우 `true`을(를) 사용합니다. |
 | `segmentRequired` | 부울 | 필수 여부 | 이 매개 변수는 Destination SDK에 필요하며 항상 `true`(으)로 설정해야 합니다. |
-| `identityRequired` | 부울 | 필수 여부 | 사용자가 Experience Platform의 [ID 형식](identity-namespace-configuration.md)을(를) `profileFields` 배열에서 정의한 특성에 매핑할 수 있어야 하는 경우 `true`(으)로 설정합니다. |
-| `segmentNamespaceAllowList` | 배열 | 선택 사항입니다 | 사용자가 대상을 대상에 매핑할 수 있는 특정 대상 네임스페이스를 정의합니다. 이 매개 변수를 사용하여 Platform 사용자가 배열에서 정의한 대상 네임스페이스에서만 대상을 내보내도록 제한합니다. 이 매개 변수는 `segmentNamespaceDenyList`.<br>과(와) 함께 사용할 수 없습니다 <br> 예: `"segmentNamespaceAllowList": ["AudienceManager"]`에서 사용자는 `AudienceManager` 네임스페이스의 대상자만 이 대상에 매핑할 수 있습니다. <br> <br> 사용자가 대상을 대상으로 내보낼 수 있도록 하려면 이 매개 변수를 무시할 수 있습니다. <br> <br> 구성에서 `segmentNamespaceAllowList`과(와) `segmentNamespaceDenyList`이(가) 모두 누락된 경우 사용자는 [세그먼테이션 서비스](../../../../segmentation/home.md)에서 시작된 대상만 내보낼 수 있습니다. |
+| `identityRequired` | 부울 | 필수 여부 | 사용자가 Experience Platform의 [ID 유형](identity-namespace-configuration.md)을(를) `profileFields` 배열에서 정의한 특성에 매핑할 수 있어야 하는 경우 `true`(으)로 설정합니다. |
+| `segmentNamespaceAllowList` | 배열 | 선택 사항입니다 | 사용자가 대상을 대상에 매핑할 수 있는 특정 대상 네임스페이스를 정의합니다. 이 매개 변수를 사용하여 Experience Platform 사용자가 배열에서 정의한 대상 네임스페이스에서만 대상을 내보내도록 제한합니다. 이 매개 변수는 `segmentNamespaceDenyList`.<br>과(와) 함께 사용할 수 없습니다 <br> 예: `"segmentNamespaceAllowList": ["AudienceManager"]`에서 사용자는 `AudienceManager` 네임스페이스의 대상자만 이 대상에 매핑할 수 있습니다. <br> <br> 사용자가 대상을 대상으로 내보낼 수 있도록 하려면 이 매개 변수를 무시할 수 있습니다. <br> <br> 구성에서 `segmentNamespaceAllowList`과(와) `segmentNamespaceDenyList`이(가) 모두 누락된 경우 사용자는 [세그먼테이션 서비스](../../../../segmentation/home.md)에서 시작된 대상만 내보낼 수 있습니다. |
 | `segmentNamespaceDenyList` | 배열 | 선택 사항입니다 | 사용자가 배열에 정의된 대상 네임스페이스에서 대상을 대상에 매핑하지 못하도록 제한합니다. `segmentNamespaceAllowed`과(와) 함께 사용할 수 없습니다. <br> <br> 예: `"segmentNamespaceDenyList": ["AudienceManager"]`은(는) `AudienceManager` 네임스페이스에서 이 대상으로 대상을 매핑하는 것을 차단합니다. <br> <br> 사용자가 대상을 대상으로 내보낼 수 있도록 하려면 이 매개 변수를 무시할 수 있습니다. <br> <br> 구성에서 `segmentNamespaceAllowed`과(와) `segmentNamespaceDenyList`이(가) 모두 누락된 경우 사용자는 [세그먼테이션 서비스](../../../../segmentation/home.md)에서 시작된 대상만 내보낼 수 있습니다. <br> <br> 원본에 관계없이 모든 대상을 내보내도록 허용하려면 `"segmentNamespaceDenyList":[]`을(를) 설정하십시오. |
 
 {style="table-layout:auto"}
@@ -148,19 +148,19 @@ Destination SDK은 동적 파트너 스키마 생성을 지원합니다. 정적 
 
 | 매개변수 | 유형 | 필수/선택 사항 | 설명 |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | 문자열 | 필수 여부 | [!DNL Platform]명의 고객이 대상에 연결하는 방법을 나타냅니다. 허용되는 값은 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`입니다. <br> <ul><li>플랫폼 고객이 [여기](customer-authentication.md)에 설명된 인증 방법을 통해 시스템에 로그인하는 경우 `CUSTOMER_AUTHENTICATION`을(를) 사용합니다. </li><li> Adobe과 대상 사이에 전역 인증 시스템이 있고 [!DNL Platform] 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우 `PLATFORM_AUTHENTICATION`을(를) 사용합니다. 이 경우 자격 증명 API를 사용하여 [자격 증명 개체를 만들어야](../../credentials-api/create-credential-configuration.md) 합니다. </li><li>대상 플랫폼으로 데이터를 보내는 데 인증이 필요하지 않은 경우 `NONE`을(를) 사용합니다. </li></ul> |
+| `dynamicEnum.authenticationRule` | 문자열 | 필수 여부 | [!DNL Experience Platform]명의 고객이 대상에 연결하는 방법을 나타냅니다. 허용되는 값은 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`입니다. <br> <ul><li>Experience Platform 고객이 [여기](customer-authentication.md)에 설명된 인증 방법을 통해 시스템에 로그인하는 경우 `CUSTOMER_AUTHENTICATION`을(를) 사용합니다. </li><li> Adobe과 대상 사이에 글로벌 인증 시스템이 있고 [!DNL Experience Platform] 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우 `PLATFORM_AUTHENTICATION`을(를) 사용합니다. 이 경우 자격 증명 API를 사용하여 [자격 증명 개체를 만들어야](../../credentials-api/create-credential-configuration.md) 합니다. </li><li>대상 플랫폼으로 데이터를 보내는 데 인증이 필요하지 않은 경우 `NONE`을(를) 사용합니다. </li></ul> |
 | `dynamicEnum.destinationServerId` | 문자열 | 필수 여부 | 동적 스키마 서버의 `instanceId`입니다. 이 대상 서버에는 Experience Platform이 동적 스키마를 검색하기 위해 호출할 API 끝점이 포함됩니다. |
 | `dynamicEnum.value` | 문자열 | 필수 여부 | 동적 스키마 서버 구성에 정의된 동적 스키마의 이름입니다. |
 | `dynamicEnum.responseFormat` | 문자열 | 필수 여부 | 동적 스키마를 정의할 때는 항상 `SCHEMA`(으)로 설정하십시오. |
 | `profileRequired` | 부울 | 선택 사항입니다 | 사용자가 Experience Platform의 프로필 특성을 대상 플랫폼의 사용자 지정 특성에 매핑할 수 있어야 하는 경우 `true`을(를) 사용합니다. |
 | `segmentRequired` | 부울 | 필수 여부 | 이 매개 변수는 Destination SDK에 필요하며 항상 `true`(으)로 설정해야 합니다. |
-| `identityRequired` | 부울 | 필수 여부 | 사용자가 Experience Platform의 [ID 형식](identity-namespace-configuration.md)을(를) `profileFields` 배열에서 정의한 특성에 매핑할 수 있어야 하는 경우 `true`(으)로 설정합니다. |
+| `identityRequired` | 부울 | 필수 여부 | 사용자가 Experience Platform의 [ID 유형](identity-namespace-configuration.md)을(를) `profileFields` 배열에서 정의한 특성에 매핑할 수 있어야 하는 경우 `true`(으)로 설정합니다. |
 
 {style="table-layout:auto"}
 
 ## 필수 매핑 {#required-mappings}
 
-스키마 구성 내에서는 정적 또는 동적 스키마 외에 필수(또는 사전 정의된) 매핑을 추가할 수 있습니다. 이는 사용자가 Platform UI에서 볼 수 있는 매핑이지만 대상에 대한 연결을 설정할 때 수정할 수 없습니다.
+스키마 구성 내에서는 정적 또는 동적 스키마 외에 필수(또는 사전 정의된) 매핑을 추가할 수 있습니다. 이러한 매핑은 사용자가 Experience Platform UI에서 볼 수 있지만 대상에 대한 연결을 설정할 때 수정할 수 없는 매핑입니다.
 
 예를 들어 이메일 주소 필드를 항상 대상으로 전송하도록 적용할 수 있습니다.
 
@@ -203,7 +203,7 @@ Destination SDK은 동적 파트너 스키마 생성을 지원합니다. 정적 
 
 {style="table-layout:auto"}
 
-따라서 Platform UI의 **[!UICONTROL Source 필드]** 및 **[!UICONTROL Target 필드]** 섹션이 모두 회색으로 표시됩니다.
+따라서 Experience Platform UI의 **[!UICONTROL Source 필드]** 및 **[!UICONTROL Target 필드]** 섹션이 모두 회색으로 표시됩니다.
 
 ![UI 활성화 흐름에 필요한 매핑의 이미지입니다.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -233,7 +233,7 @@ Destination SDK은 동적 파트너 스키마 생성을 지원합니다. 정적 
 
 {style="table-layout:auto"}
 
-따라서 Platform UI의 **[!UICONTROL Target 필드]** 섹션은 회색으로 표시되고 **[!UICONTROL Source 필드]** 섹션은 활성 상태이며 사용자는 이 섹션과 상호 작용할 수 있습니다. **[!UICONTROL 필수 키]** 및 **[!UICONTROL 중복 제거 키]** 옵션이 활성화되어 있으므로 사용자가 변경할 수 없습니다.
+따라서 Experience Platform UI의 **[!UICONTROL Target 필드]** 섹션은 회색으로 표시되고 **[!UICONTROL Source 필드]** 섹션은 활성 상태이며 사용자는 이 섹션과 상호 작용할 수 있습니다. **[!UICONTROL 필수 키]** 및 **[!UICONTROL 중복 제거 키]** 옵션이 활성화되어 있으므로 사용자가 변경할 수 없습니다.
 
 ![UI 활성화 흐름에 필요한 매핑의 이미지입니다.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 

@@ -2,9 +2,9 @@
 title: Google 광고 연결
 description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업이 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 과금 광고를 할 수 있도록 해주는 온라인 광고 서비스입니다.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '952'
 ht-degree: 2%
 
 ---
@@ -13,18 +13,18 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-이전에 [!DNL Google AdWords](으)로 알려졌던 [!DNL Google Ads]은(는) 기업이 텍스트 기반 검색, 그래픽 디스플레이, [!DNL YouTube] 비디오 및 인앱 모바일 디스플레이 전반에 걸쳐 클릭당 과금 광고를 할 수 있도록 해주는 온라인 광고 서비스입니다.
+이전에 [!DNL Google AdWords]&#x200B;(으)로 알려졌던 [!DNL Google Ads]은(는) 기업이 텍스트 기반 검색, 그래픽 디스플레이, [!DNL YouTube] 비디오 및 인앱 모바일 디스플레이 전반에 걸쳐 클릭당 과금 광고를 할 수 있도록 해주는 온라인 광고 서비스입니다.
 
 ## 대상 세부 사항 {#specifics}
 
 [!DNL Google Ads] 대상에 해당하는 다음 세부 정보를 참고하십시오.
 
 * 활성화된 대상은 [!DNL Google] 플랫폼에서 프로그래밍 방식으로 만들어집니다.
-* [!DNL Platform]은(는) 현재 성공적인 활성화를 확인하기 위한 측정 지표를 포함하지 않습니다. 통합의 유효성을 검사하고 대상 타깃팅 크기를 이해하려면 Google의 대상 수 를 참조하십시오.
+* [!DNL Experience Platform]은(는) 현재 성공적인 활성화를 확인하기 위한 측정 지표를 포함하지 않습니다. 통합의 유효성을 검사하고 대상 타깃팅 크기를 이해하려면 Google의 대상 수 를 참조하십시오.
 
 >[!IMPORTANT]
 >
->[!DNL Google Ads]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 Google 통합을 설정한 경우 설정한 ID가 플랫폼으로 이월됩니다.
+>[!DNL Google Ads]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Audience Manager 또는 다른 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 Google 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | 소스 ID가 GAID 네임스페이스인 경우 이 대상 ID를 선택합니다. |
 | IDFA | [!DNL Apple ID for Advertisers] | 소스 ID가 IDFA 네임스페이스인 경우 이 대상 ID를 선택합니다. |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)(일명 [!DNL Device ID]). Audience Manager이 상호 작용하는 각 장치에 연결하는 숫자 38자리 장치 ID입니다. | Google은 [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)을(를) 사용하여 캘리포니아에 있는 사용자를 타깃팅하고 다른 모든 사용자의 Google 쿠키 ID를 사용합니다. |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)&#x200B;(일명 [!DNL Device ID]). Audience Manager이 상호 작용하는 각 장치에 연결하는 숫자 38자리 장치 ID입니다. | Google은 [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)을(를) 사용하여 캘리포니아에 있는 사용자를 타깃팅하고 다른 모든 사용자의 Google 쿠키 ID를 사용합니다. |
 | [!DNL Google] 쿠키 ID | [!DNL Google] 쿠키 ID | [!DNL Google]은(는) 이 ID를 사용하여 캘리포니아 외부의 사용자를 타깃팅합니다. |
 | 리다 | Advertising용 Roku ID. 이 ID는 Roku 장치를 고유하게 식별합니다. |  |
 | 하녀 | Microsoft Advertising ID. 이 ID는 Windows 10을 실행하는 장치를 고유하게 식별합니다. |  |
@@ -48,8 +48,8 @@ ht-degree: 2%
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -76,13 +76,13 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->플랫폼에서 첫 번째 [!DNL Google Ads] 대상을 설정하기 전에 허용 목록이 필수입니다. 대상을 만들기 전에 [!DNL Google]이(가) 아래에 설명된 허용 목록 프로세스를 완료했는지 확인하십시오.
+>Experience Platform에서 첫 번째 [!DNL Google Ads] 대상을 설정하기 전에 허용 목록이 필수입니다. 대상을 만들기 전에 [!DNL Google]이(가) 아래에 설명된 허용 목록 프로세스를 완료했는지 확인하십시오.
 >이 규칙은 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 고객에 대해 예외입니다. Audience Manager에서 이 Google 대상에 대한 연결을 이미 만든 경우 허용 목록 프로세스를 다시 진행할 필요가 없으며 다음 단계를 진행할 수 있습니다.
 
-플랫폼에서 [!DNL Google Ads] 대상을 만들기 전에 [!DNL Google]에 연락하여 허용된 데이터 공급자 목록에 Adobe허용 목록에 추가하다 을 넣고 계정에 계정을 추가해야 합니다. [!DNL Google]에게 연락하여 다음 정보를 제공하십시오.
+Experience Platform에서 [!DNL Google Ads] 대상을 만들기 전에 [!DNL Google]에 연락하여 Adobe을 허용된 데이터 공급자 목록에 추가하고 계정을 허용 목록에 추가하다에 추가해야 합니다. [!DNL Google]에게 연락하여 다음 정보를 제공하십시오.
 
-* **계정 ID**: Google의 Adobe 계정 ID입니다. 계정 ID: 87933855.
-* **고객 ID**: Google을 사용하는 Adobe의 고객 계정 ID입니다. 고객 ID: 89690775.
+* **계정 ID**: Adobe의 Google 계정 ID입니다. 계정 ID: 87933855.
+* **고객 ID**: Adobe의 Google 고객 계정 ID입니다. 고객 ID: 89690775.
 * 계정 유형: **AdWords**
 * **Google AdWords ID**: [!DNL Google]의 ID입니다. ID 형식은 일반적으로 123-456-7890입니다.
 
@@ -101,7 +101,7 @@ ht-degree: 2%
 * **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력하십시오.
 * **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
 * **[!UICONTROL 계정 유형]**: AdWords만 사용할 수 있습니다.
-* **[!UICONTROL 계정 ID]**: [!DNL Google Ads](으)로 계정 ID를 입력하십시오. ID 형식은 일반적으로 123-456-7890입니다.
+* **[!UICONTROL 계정 ID]**: [!DNL Google Ads]&#x200B;(으)로 계정 ID를 입력하십시오. ID 형식은 일반적으로 123-456-7890입니다.
 
 ### 경고 활성화 {#enable-alerts}
 

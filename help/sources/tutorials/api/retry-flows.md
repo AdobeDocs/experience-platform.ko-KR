@@ -2,9 +2,9 @@
 title: 실패한 데이터 흐름 실행 다시 시도
 description: 흐름 서비스 API를 사용하여 실패한 데이터 흐름 실행을 다시 시도하는 방법을 알아봅니다.
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
-source-git-commit: d4dba26a151619a555a69287e182ff8398cca7b4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '272'
 ht-degree: 2%
 
 ---
@@ -21,16 +21,16 @@ ht-degree: 2%
 
 이 자습서를 사용하려면 Adobe Experience Platform의 다음 구성 요소를 잘 알고 있어야 합니다.
 
-* [소스](../../home.md): Experience Platform을 사용하면 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [샌드박스](../../../sandboxes/home.md): Experience Platform은 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [소스](../../home.md): Experience Platform을 사용하면 [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../sandboxes/home.md): Experience Platform은 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-### Platform API 사용
+### Experience Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ## 실패한 데이터 흐름 실행 다시 시도
 
-실패한 데이터 흐름 실행을 다시 시도하려면 쿼리 매개 변수의 일부로 데이터 흐름의 실행 ID 및 `re-trigger` 작업을 제공하는 동안 `/runs` 끝점에 POST 요청을 하십시오.
+실패한 데이터 흐름 실행을 다시 시도하려면 쿼리 매개 변수의 일부로 데이터 흐름의 실행 ID 및 `re-trigger` 작업을 제공하는 동안 `/runs` 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 

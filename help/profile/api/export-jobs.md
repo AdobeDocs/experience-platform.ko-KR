@@ -5,7 +5,7 @@ type: Documentation
 description: 실시간 고객 프로필을 사용하면 속성 데이터와 행동 데이터를 모두 포함하여 여러 소스의 데이터를 함께 가져와서 Adobe Experience Platform 내의 개별 고객에 대한 단일 보기를 구축할 수 있습니다. 그런 다음 프로필 데이터를 데이터 세트로 내보내 추가 처리할 수 있습니다.
 role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: fd5042bee9b09182ac643bcc69482a0a2b3f8faa
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 2%
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 ## 내보내기 작업 만들기
 
-[!DNL Profile] 데이터를 내보내려면 먼저 데이터를 내보낼 데이터 세트를 만든 다음 새 내보내기 작업을 시작해야 합니다. 두 단계 모두 Experience Platform API를 사용하여 수행할 수 있습니다. 전자는 카탈로그 서비스 API를 사용하고 후자는 실시간 고객 프로필 API를 사용합니다. 각 단계를 완료하기 위한 자세한 지침은 다음 섹션에 설명되어 있습니다.
+[!DNL Profile] 데이터를 내보내려면 먼저 데이터를 내보낼 데이터 세트를 만든 다음 새 내보내기 작업을 시작해야 합니다. 두 단계 모두 Experience Platform API를 사용하여 수행할 수 있으며, 전자는 카탈로그 서비스 API를 사용하고 후자는 실시간 고객 프로필 API를 사용합니다. 각 단계를 완료하기 위한 자세한 지침은 다음 섹션에 설명되어 있습니다.
 
 ### 타겟 데이터 세트 만들기
 
@@ -38,7 +38,7 @@ ht-degree: 2%
 
 주요 고려 사항 중 하나는 데이터 집합의 기반이 되는 스키마(아래 API 샘플 요청의 `schemaRef.id`)입니다. 프로필 데이터를 내보내려면 데이터 집합이 [!DNL XDM Individual Profile] 유니온 스키마(`https://ns.adobe.com/xdm/context/profile__union`)를 기반으로 해야 합니다. 유니온 스키마는 동일한 클래스를 공유하는 스키마의 필드를 집계하는 시스템 생성 읽기 전용 스키마입니다. 이 경우 [!DNL XDM Individual Profile] 클래스입니다. 유니온 보기 스키마에 대한 자세한 내용은 스키마 컴포지션 기본 사항 안내서](../../xdm/schema/composition.md#union)의 [유니온 섹션을 참조하십시오.
 
-이 자습서의 다음 단계에서는 [!DNL Catalog] API를 사용하여 [!DNL XDM Individual Profile] 공용 구조체 스키마를 참조하는 데이터 집합을 만드는 방법에 대해 설명합니다. [!DNL Platform] 사용자 인터페이스를 사용하여 유니온 스키마를 참조하는 데이터 집합을 만들 수도 있습니다. UI 사용 단계는 [대상자 내보내기를 위한 이 UI 자습서](../../segmentation/tutorials/create-dataset-export-segment.md)에 요약되어 있지만 여기에서도 적용할 수 있습니다. 완료되면 이 자습서로 돌아가 [새 내보내기 작업을 시작](#initiate)하는 단계를 진행할 수 있습니다.
+이 자습서의 다음 단계에서는 [!DNL Catalog] API를 사용하여 [!DNL XDM Individual Profile] 공용 구조체 스키마를 참조하는 데이터 집합을 만드는 방법에 대해 설명합니다. [!DNL Experience Platform] 사용자 인터페이스를 사용하여 유니온 스키마를 참조하는 데이터 집합을 만들 수도 있습니다. UI 사용 단계는 [대상자 내보내기를 위한 이 UI 자습서](../../segmentation/tutorials/create-dataset-export-segment.md)에 요약되어 있지만 여기에서도 적용할 수 있습니다. 완료되면 이 자습서로 돌아가 [새 내보내기 작업을 시작](#initiate)하는 단계를 진행할 수 있습니다.
 
 호환 가능한 데이터 세트가 있고 해당 ID를 알고 있는 경우 [새 내보내기 작업 시작](#initiate) 단계로 바로 진행할 수 있습니다.
 
@@ -85,7 +85,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 ### 내보내기 작업 시작 {#initiate}
 
-유니온 유지 데이터 세트가 있는 경우 Real-Time Customer Profile API의 `/export/jobs` 끝점에 대한 POST 요청을 만들고 요청 본문에 내보낼 데이터의 세부 정보를 제공하여 프로필 데이터를 데이터 세트에 유지하는 내보내기 작업을 만들 수 있습니다.
+유니온 유지 데이터 세트가 있는 경우 Real-Time Customer Profile API에서 `/export/jobs` 끝점에 대한 POST 요청을 만들고 요청 본문에 내보낼 데이터의 세부 정보를 제공하여 프로필 데이터를 데이터 세트에 유지하는 내보내기 작업을 만들 수 있습니다.
 
 **API 형식**
 
@@ -324,7 +324,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/ \
 
 ## 내보내기 진행 상황 모니터링
 
-특정 내보내기 작업의 세부 정보를 보거나 처리할 때 해당 상태를 모니터링하려면 `/export/jobs` 끝점에 GET 요청을 하고 경로에 내보내기 작업의 `id`을(를) 포함할 수 있습니다. `status` 필드가 &quot;SUCCEEDED&quot; 값을 반환하면 내보내기 작업이 완료됩니다.
+특정 내보내기 작업의 세부 정보를 보거나 처리할 때 해당 상태를 모니터링하려면 `/export/jobs` 끝점에 대한 GET 요청을 만들고 경로에 내보내기 작업의 `id`을(를) 포함할 수 있습니다. `status` 필드가 &quot;SUCCEEDED&quot; 값을 반환하면 내보내기 작업이 완료됩니다.
 
 **API 형식**
 

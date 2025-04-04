@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;홈;자주 찾는 항목;타블로;타블로;쿼리 서비스;쿼리 서비스;쿼리 서비스에 연결;
+keywords: Experience Platform;홈;자주 찾는 항목;tableau;Tableau;쿼리 서비스;쿼리 서비스;쿼리 서비스에 연결;
 solution: Experience Platform
 title: 쿼리 서비스에 타블로 연결
 description: 이 문서에서는 Tableau를 Adobe Experience Platform 쿼리 서비스와 연결하는 단계를 안내합니다.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 > 이 안내서에서는 사용자가 이미 [!DNL Tableau]에 액세스할 수 있고 해당 인터페이스를 탐색하는 방법을 잘 알고 있다고 가정합니다. [!DNL Tableau]에 대한 자세한 내용은 [공식 [!DNL Tableau] 설명서](https://help.tableau.com/current/pro/desktop/en-us/default.htm)에서 확인할 수 있습니다.
 
-[Tableau를 사용하여 PostgreSQL 서버에 연결](https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm)하는 방법에 대한 지침은 공식 Tableau 웹 사이트에서 제공됩니다. 연결 설정 대화 상자가 나타나면 매개 변수 필드에 플랫폼 자격 증명을 입력하여 Adobe Experience Platform에 연결합니다. 필수 연결 매개 변수 목록이 아래에 나와 있습니다.
+[Tableau를 사용하여 PostgreSQL 서버에 연결](https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm)하는 방법에 대한 지침은 공식 Tableau 웹 사이트에서 제공됩니다. 연결 설정 대화 상자가 나타나면 매개 변수 필드에 Experience Platform 자격 증명을 입력하여 Adobe Experience Platform에 연결합니다. 필수 연결 매개 변수 목록이 아래에 나와 있습니다.
 
 | 연결 매개 변수 | 설명 |
 |---|---|
@@ -27,10 +27,10 @@ ht-degree: 0%
 | **[!DNL Port]:** | [!DNL Query Service]에 대한 포트입니다. [!DNL Query Service]에 연결하려면 **80** 또는 **5432** 포트를 사용해야 합니다. |
 | **[!DNL Database]** | 액세스하려는 데이터베이스입니다. Experience Platform **[!UICONTROL 데이터베이스]** 자격 증명의 값을 사용합니다. `prod:all`. |
 | **[!DNL Authentication]:** | 사용자 ID를 증명하는 선택한 방법입니다. 드롭다운 메뉴의 사용 가능한 옵션에서 [!DNL Username and Password]을(를) 선택하는 것이 좋습니다. |
-| **[!DNL Username]** | Platform 조직 ID입니다. Experience Platform **[!UICONTROL 사용자 이름]** 자격 증명의 값을 사용하십시오. ID는 `ORG_ID@AdobeOrg` 형식입니다. |
+| **[!DNL Username]** | Experience Platform 조직 ID입니다. Experience Platform **[!UICONTROL 사용자 이름]** 자격 증명의 값을 사용하십시오. ID는 `ORG_ID@AdobeOrg` 형식입니다. |
 | **[!DNL Password]** | 이 영숫자 문자열은 Experience Platform **[!UICONTROL 암호]** 자격 증명입니다. 만료되지 않는 자격 증명을 사용하려면 이 값은 구성 JSON 파일에서 다운로드한 `technicalAccountID` 및 `credential`에서 연결된 인수입니다. 암호 값은 {technicalAccountId}:{credential} 형식을 사용합니다. 만료되지 않는 자격 증명에 대한 구성 JSON 파일은 초기화 중에 Adobe이 복사본을 보관하지 않는 한 번 다운로드됩니다. |
 
-사용자 이름, 암호 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md)를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인한 다음 **[!UICONTROL 쿼리]**, **[!UICONTROL 자격 증명]**&#x200B;을 선택하십시오.
+사용자 이름, 암호 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md)를 참조하십시오. 자격 증명을 찾으려면 [!DNL Experience Platform]에 로그인한 다음 **[!UICONTROL 쿼리]**, **[!UICONTROL 자격 증명]**&#x200B;을 선택하십시오.
 
 >[!IMPORTANT]
 >

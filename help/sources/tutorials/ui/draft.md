@@ -2,9 +2,9 @@
 title: UI의 초안 데이터 흐름
 description: 소스 작업 영역을 사용할 때 데이터 흐름을 초안으로 저장하고 나중에 게시하는 방법에 대해 알아봅니다.
 exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 이 문서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 잘 알고 있어야 합니다.
 
-* [소스](../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [소스](../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 ## 데이터 흐름을 초안으로 저장
 
-플랫폼으로 가져올 데이터를 선택한 후 언제든지 데이터 흐름 만들기 진행 상황을 일시 중지할 수 있습니다.
+Experience Platform으로 가져올 데이터를 선택한 후 언제든지 데이터 흐름 만들기 진행 상황을 일시 중지할 수 있습니다.
 
 예를 들어 데이터 흐름 세부 정보 단계 동안 진행 상황을 저장하려면 **[!UICONTROL 초안으로 저장]**&#x200B;을 선택합니다.
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 ![특정 조직의 데이터 흐름 목록입니다.](../../images/tutorials/draft/catalog-access.png)
 
-## 초안 데이터 흐름 Publish
+## 초안 데이터 흐름 게시
 
 소스 워크플로우의 [!UICONTROL 데이터 추가] 단계로 돌아가서 데이터 형식을 다시 확인하고 데이터 흐름을 계속 진행할 수 있습니다.
 

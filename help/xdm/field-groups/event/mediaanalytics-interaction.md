@@ -2,9 +2,9 @@
 title: MediaAnalytics 상호 작용 세부 정보 스키마 필드 그룹
 description: MediaAnalytics 상호 작용 세부 사항 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 1096d28a-5796-49cc-bd45-b3f5188f699e
-source-git-commit: b81afb8f6c4eaedb19a58b6fe3896286f1486804
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '234'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->Media Edge API에서 사용되지 않는 필드를 숨길 수 있습니다. 이러한 필드를 숨기면 스키마를 읽고 이해하는 것이 쉬워지지만 필수는 아닙니다. 이 필드는 [!UICONTROL MediaAnalytics 상호 작용 세부 정보] 필드 그룹의 필드만 참조합니다. Platform UI에서 가독성을 향상시키려면 [Media Analytics 설명서에서 사용하지 않는 필드를 숨기는 방법](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform)의 지침을 따르십시오.
+>Media Edge API에서 사용되지 않는 필드를 숨길 수 있습니다. 이러한 필드를 숨기면 스키마를 읽고 이해하는 것이 쉬워지지만 필수는 아닙니다. 이 필드는 [!UICONTROL MediaAnalytics 상호 작용 세부 정보] 필드 그룹의 필드만 참조합니다. Experience Platform UI에서 가독성을 향상시키려면 [Media Analytics 설명서에서 사용하지 않는 필드를 숨기는 방법](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform)의 지침을 따르십시오.
 
 <!-- 
 >[!NOTE]

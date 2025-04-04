@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Observability Insights 안내서
-user-guide-description: Adobe Experience Platform Observability Insights의 통계 지표 및 이벤트 알림을 사용하여 플랫폼 활동을 모니터링하는 방법을 알아봅니다.
+user-guide-description: Adobe Experience Platform Observability Insights의 통계 지표 및 이벤트 알림을 사용하여 Experience Platform 활동을 모니터링하는 방법을 알아봅니다.
 feature: Observability
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 61%
+source-wordcount: '57'
+ht-degree: 31%
 
 ---
 
@@ -25,4 +25,4 @@ ht-degree: 61%
    * [UI 안내서](./alerts/ui.md)
    * [I/O 이벤트 알림 구독](./alerts/subscribe.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
-* [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+* [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform 웹 SDK 확장의 작업 유형
-description: Adobe Experience Platform 웹 SDK 태그 확장에서 제공하는 다양한 작업 유형에 대해 알아봅니다.
+title: Adobe Experience Platform Web SDK Extension의 작업 유형
+description: Adobe Experience Platform Web SDK 태그 확장에서 제공하는 다양한 작업 유형에 대해 알아봅니다.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 760484bb7f95df97701f81f78783f0214aecaf5b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2112'
+source-wordcount: '2119'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 1%
 이 작업 유형은 렌더링된 제안에 대한 표시 이벤트를 보내지 않습니다. 렌더링된 제안을 추적하여 후속 **[!UICONTROL 이벤트 보내기]** 호출에 포함할 수 있도록 합니다.
 
 
-![제안 적용 작업 유형을 표시하는 플랫폼 태그 UI입니다.](assets/apply-propositions.png)
+![제안 적용 작업 유형을 표시하는 Experience Platform 태그 UI입니다.](assets/apply-propositions.png)
 
 이 작업 유형은 다음 필드를 지원합니다.
 
@@ -45,7 +45,7 @@ ht-degree: 1%
 
 ## 응답 적용 {#apply-response}
 
-Edge Network의 응답을 기반으로 다양한 작업을 수행하려면 **[!UICONTROL 응답 적용]** 작업 유형을 사용하십시오. 이 작업 유형은 일반적으로 서버가 Edge Network에 대해 초기 호출을 수행하는 하이브리드 배포에서 사용되며, 이 작업 유형은 해당 호출에서 응답을 가져와 브라우저에서 웹 SDK를 초기화합니다.
+Edge Network의 응답을 기반으로 다양한 작업을 수행하려면 **[!UICONTROL 응답 적용]** 작업 유형을 사용하십시오. 이 작업 유형은 일반적으로 서버가 Edge Network을 처음 호출한 후 해당 호출에서 응답을 가져와 브라우저에서 웹 SDK을 초기화하는 하이브리드 배포에서 사용됩니다.
 
 이 작업 유형을 사용하면 하이브리드 개인화 사용 사례에 대한 클라이언트 로드 시간이 줄어들 수 있습니다.
 
@@ -56,7 +56,7 @@ Edge Network의 응답을 기반으로 다양한 작업을 수행하려면 **[!U
 * **[!UICONTROL 인스턴스]**: 사용 중인 웹 SDK 인스턴스를 선택합니다.
 * **[!UICONTROL 응답 헤더]**: Edge Network 서버 호출에서 반환된 헤더 키 및 값이 포함된 개체를 반환하는 데이터 요소를 선택합니다.
 * **[!UICONTROL 응답 본문]**: Edge Network 응답에서 제공한 JSON 페이로드가 포함된 개체를 반환하는 데이터 요소를 선택합니다.
-* **[!UICONTROL 시각적 개인화 결정 렌더링]**: 이 옵션을 사용하여 Edge Network이 제공한 개인화 콘텐츠를 자동으로 렌더링하고 깜박임을 방지하기 위해 콘텐츠를 미리 숨깁니다.
+* **[!UICONTROL 시각적 개인화 결정 렌더링]**: 이 옵션을 사용하여 Edge Network에서 제공하는 개인화 콘텐츠를 자동으로 렌더링하고 깜박임을 방지하기 위해 콘텐츠를 미리 숨깁니다.
 
 ## 규칙 세트 평가 {#evaluate-rulesets}
 
@@ -73,15 +73,15 @@ Edge Network의 응답을 기반으로 다양한 작업을 수행하려면 **[!U
 
 이 작업은 기존 Media Analytics API를 가져오는 데 사용됩니다. 작업을 구성하고 개체 이름이 제공되면 기존 Media Analytics API가 해당 창 개체로 내보내집니다. 아무 것도 제공되지 않으면 현재 Media JS 라이브러리와 마찬가지로 `window.Media`(으)로 내보내집니다.
 
-![Media Analytics 추적기 가져오기 작업 유형을 표시하는 플랫폼 UI 이미지입니다.](assets/get-media-analytics-tracker.png)
+![Media Analytics 추적기 가져오기 작업 유형을 보여 주는 Experience Platform UI 이미지](assets/get-media-analytics-tracker.png)
 
 ## ID로 리디렉션 {#redirect-with-identity}
 
-이 작업 유형을 사용하여 현재 페이지에서 다른 도메인으로 ID를 공유할 수 있습니다. 이 동작은 **[!UICONTROL click]** 이벤트 유형 및 값 비교 조건과 함께 사용하도록 디자인되었습니다. 이 작업 유형을 사용하는 방법에 대한 자세한 내용은 [Web SDK 확장을 사용하여 URL에 ID 추가](../../../../web-sdk/commands/appendidentitytourl.md#extension)를 참조하십시오.
+이 작업 유형을 사용하여 현재 페이지에서 다른 도메인으로 ID를 공유할 수 있습니다. 이 동작은 **[!UICONTROL click]** 이벤트 유형 및 값 비교 조건과 함께 사용하도록 디자인되었습니다. 이 작업 형식을 사용하는 방법에 대한 자세한 내용은 [Web SDK 확장을 사용하여 URL에 ID 추가](../../../../web-sdk/commands/appendidentitytourl.md#extension)를 참조하십시오.
 
 ## 이벤트 보내기 {#send-event}
 
-Platform이 사용자가 전송한 데이터를 수집하고 해당 정보에 대해 조치를 취할 수 있도록 Experience Platform에 이벤트를 전송합니다. 전송하려는 모든 데이터는 **[!UICONTROL XDM 데이터]** 필드에서 전송할 수 있습니다. [!DNL XDM] 스키마의 구조를 준수하는 [!DNL JSON] 개체를 사용합니다. 이 개체는 페이지 또는 **[!UICONTROL 사용자 지정 코드]** **[!UICONTROL 데이터 요소]**&#x200B;를 통해 만들 수 있습니다.
+Experience Platform에서 전송하는 데이터를 수집하고 해당 정보에 대해 조치를 취할 수 있도록 이벤트를 Experience Platform에 보냅니다. 전송하려는 모든 데이터는 **[!UICONTROL XDM 데이터]** 필드에서 전송할 수 있습니다. [!DNL XDM] 스키마의 구조를 준수하는 [!DNL JSON] 개체를 사용합니다. 이 개체는 페이지 또는 **[!UICONTROL 사용자 지정 코드]** **[!UICONTROL 데이터 요소]**&#x200B;를 통해 만들 수 있습니다.
 
 **[!UICONTROL 이벤트 보내기]** 작업 형식은 아래에 설명된 필드와 설정을 지원합니다. 이러한 필드는 모두 선택 사항입니다.
 
@@ -89,7 +89,7 @@ Platform이 사용자가 전송한 데이터를 수집하고 해당 정보에 �
 
 **[!UICONTROL 인스턴스]** 선택기를 사용하여 구성할 웹 SDK 인스턴스를 선택합니다. 인스턴스가 하나만 있는 경우 미리 선택됩니다.
 
-![이벤트 보내기 작업 형식에 대한 인스턴스 설정을 보여 주는 Platform Tags UI 이미지입니다.](assets/instance-settings.png)
+![이벤트 보내기 작업 형식에 대한 인스턴스 설정을 보여 주는 Experience Platform 태그 UI 이미지입니다.](assets/instance-settings.png)
 
 * **[!UICONTROL 인스턴스]**: 구성할 웹 SDK 인스턴스를 선택합니다. 인스턴스가 하나만 있는 경우 미리 선택됩니다.
 * **[!UICONTROL 안내 이벤트 사용]**: 특정 사용 사례를 활성화하기 위해 특정 필드를 자동으로 채우거나 숨기려면 이 옵션을 활성화하십시오. 이 옵션을 활성화하면 다음 설정이 표시됩니다.
@@ -108,18 +108,18 @@ Platform이 사용자가 전송한 데이터를 수집하고 해당 정보에 �
 
 ### 데이터 {#data}
 
-![이벤트 보내기 작업 형식에 대한 데이터 요소 설정을 보여 주는 Platform Tags UI 이미지입니다.](assets/data.png)
+![이벤트 보내기 작업 형식에 대한 데이터 요소 설정을 보여 주는 Experience Platform 태그 UI 이미지입니다.](assets/data.png)
 
 * **[!UICONTROL 유형]**: 이 필드에서는 XDM 스키마에 기록될 이벤트 유형을 지정할 수 있습니다. 자세한 내용은 `sendEvent` 명령의 [`type`](/help/web-sdk/commands/sendevent/type.md)을(를) 참조하십시오.
 * **[!UICONTROL XDM]**
-* **[!UICONTROL 데이터]**: 이 필드를 사용하여 XDM 스키마와 일치하지 않는 데이터를 보냅니다. 이 필드는 Adobe Target 프로필을 업데이트하거나 Target Recommendations 속성을 전송하려는 경우 유용합니다. 자세한 내용은 `sendEvent` 명령의 [`data`](/help/web-sdk/commands/sendevent/data.md)을(를) 참조하십시오.
+* **[!UICONTROL 데이터]**: 이 필드를 사용하여 XDM 스키마와 일치하지 않는 데이터를 보냅니다. 이 필드는 Adobe Target 프로필을 업데이트하거나 Target Recommendations 속성을 보내려는 경우에 유용합니다. 자세한 내용은 `sendEvent` 명령의 [`data`](/help/web-sdk/commands/sendevent/data.md)을(를) 참조하십시오.
 * **[!UICONTROL 렌더링된 제안 포함]**: 렌더링되었지만 표시 이벤트가 전송되지 않은 모든 제안을 포함하려면 이 옵션을 사용합니다. **[!UICONTROL 자동으로 표시 이벤트 보내기]**&#x200B;를 사용하지 않도록 설정한 상태로 동시에 사용합니다. 이 설정은 `_experience.decisioning` XDM 필드를 렌더링된 제안에 대한 정보로 업데이트합니다.
 * **[!UICONTROL 문서가 언로드됩니다]**: 사용자가 페이지에서 멀리 탐색하더라도 이벤트가 서버에 도달하도록 하려면 이 옵션을 활성화하십시오. 이렇게 하면 이벤트가 서버에 도달할 수 있지만 응답은 무시됩니다.
 * **[!UICONTROL 병합 ID]**: **이 필드는 사용되지 않습니다**. `eventMergeId` XDM 필드가 채워집니다.
 
 ### 개인화 {#personalization}
 
-![이벤트 보내기 작업 유형에 대한 Personalization 설정을 보여 주는 Platform Tags UI 이미지입니다.](assets/personalization-settings.png)
+![이벤트 보내기 작업 유형에 대한 Personalization 설정을 보여 주는 Experience Platform 태그 UI 이미지입니다.](assets/personalization-settings.png)
 
 * **[!UICONTROL 범위]**: 개인화에서 명시적으로 요청할 범위(Adobe Target [!DNL mboxes])를 선택하십시오. 수동으로 또는 데이터 요소를 제공하여 범위를 입력할 수 있습니다.
 * **[!UICONTROL 표면]**: 페이지에서 개인화를 사용할 수 있는 웹 표면을 설정합니다. 자세한 내용은 [Adobe Journey Optimizer 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)를 참조하세요.
@@ -140,7 +140,7 @@ Platform이 사용자가 전송한 데이터를 수집하고 해당 정보에 �
 
 Adobe Experience Platform 및/또는 Adobe Analytics에 미디어 이벤트를 보냅니다. 이 작업은 웹 사이트에서 미디어 이벤트를 추적할 때 유용합니다. 인스턴스를 선택합니다(인스턴스가 두 개 이상인 경우). 작업에는 추적된 미디어 세션의 고유 식별자를 나타내는 `playerId`이(가) 필요합니다. 또한 미디어 세션을 시작할 때 **[!UICONTROL 체감 품질]** 및 `playhead` 데이터 요소가 필요합니다.
 
-![미디어 이벤트 보내기 화면을 표시하는 플랫폼 UI 이미지입니다.](assets/send-media-event.png)
+![미디어 이벤트 보내기 화면을 표시하는 Experience Platform UI 이미지입니다.](assets/send-media-event.png)
 
 **[!UICONTROL 미디어 이벤트 보내기]** 작업 유형은 다음 속성을 지원합니다.
 

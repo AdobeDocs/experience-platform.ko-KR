@@ -3,9 +3,9 @@ title: 데이터 위생 API 안내서
 description: Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제하는 방법을 알아봅니다.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '446'
 ht-degree: 6%
 
 ---
@@ -57,4 +57,4 @@ ht-degree: 6%
 
 ## 다음 단계
 
-이 안내서에서는 API 호출을 사용하여 데이터 라이프사이클 요청을 관리하는 방법을 다룹니다. Platform UI에서 이러한 작업을 수행하는 방법에 대한 자세한 내용은 [데이터 라이프사이클 UI 안내서](../ui/overview.md)를 참조하십시오.
+이 안내서에서는 API 호출을 사용하여 데이터 라이프사이클 요청을 관리하는 방법을 다룹니다. Experience Platform UI에서 이러한 작업을 수행하는 방법에 대한 자세한 내용은 [데이터 수명 주기 UI 안내서](../ui/overview.md)를 참조하십시오.

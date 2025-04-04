@@ -1,17 +1,17 @@
 ---
 title: UI에서 Azure Blob Source 연결 만들기
-description: 플랫폼 사용자 인터페이스를 사용하여 Azure Blob 소스 커넥터를 만드는 방법을 알아봅니다.
+description: Experience Platform 사용자 인터페이스를 사용하여 Azure Blob 소스 커넥터를 만드는 방법을 알아봅니다.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '819'
 ht-degree: 2%
 
 ---
 
 # UI에서 [!DNL Azure Blob] 소스 연결 만들기
 
-이 자습서에서는 Platform 사용자 인터페이스를 사용하여 [!DNL Azure Blob](이하 &quot;[!DNL Blob]&quot;) 소스 연결을 만드는 단계를 제공합니다.
+이 자습서에서는 Experience Platform 사용자 인터페이스를 사용하여 [!DNL Azure Blob]&#x200B;(이하 &quot;[!DNL Blob]&quot;) 소스 연결을 만드는 단계를 제공합니다.
 
 ## 시작하기
 
@@ -58,7 +58,7 @@ Experience Platform에서 [!DNL Blob] 저장소에 액세스하려면 다음 자
 
 ## [!DNL Blob] 계정 연결
 
-Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 창을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
@@ -108,4 +108,4 @@ SAS 기반 인증을 사용하면 권한, 시작 및 만료일을 설정할 수 
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL Blob] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [클라우드 저장소에서 플랫폼으로 데이터를 가져오도록 데이터 흐름을 구성](../../dataflow/batch/cloud-storage.md)할 수 있습니다.
+이 자습서에 따라 [!DNL Blob] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [클라우드 저장소에서 Experience Platform으로 데이터를 가져오도록 데이터 흐름을 구성](../../dataflow/batch/cloud-storage.md)할 수 있습니다.

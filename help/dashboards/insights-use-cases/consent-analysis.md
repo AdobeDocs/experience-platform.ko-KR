@@ -2,9 +2,9 @@
 title: 동의 분석 및 추적
 description: 사용자 동의가 시간 경과에 따라 어떻게 트렌드되는지 추적하기 위해 동의 분석 대시보드를 작성하는 방법을 알아봅니다.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '1910'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 동의한 대상자 만들기 {#create-consent-audiences}
 
-동의 대시보드를 작성하려면 먼저 연락하는 데 동의한 모든 프로필의 대상자를 만들어야 합니다. Real-Time Customer Data Platform 세그먼트 빌더로 이동하려면 Platform UI의 왼쪽 탐색에서 **[!UICONTROL 대상]**&#x200B;을 선택합니다. [!UICONTROL 대상] 대시보드의 [!UICONTROL 고객] 탭에서 보기의 오른쪽 상단에 있는 **[!UICONTROL 대상 만들기]**&#x200B;를 선택한 다음 **[!UICONTROL 규칙 작성]**&#x200B;을 선택합니다.
+동의 대시보드를 작성하려면 먼저 연락하는 데 동의한 모든 프로필의 대상자를 만들어야 합니다. Real-Time Customer Data Platform 세그먼트 빌더로 이동하려면 Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 대상]**&#x200B;을 선택합니다. [!UICONTROL 대상] 대시보드의 [!UICONTROL 고객] 탭에서 보기의 오른쪽 상단에 있는 **[!UICONTROL 대상 만들기]**&#x200B;를 선택한 다음 **[!UICONTROL 규칙 작성]**&#x200B;을 선택합니다.
 
 [!UICONTROL 고객], [!UICONTROL 대상자] 및 [!UICONTROL 세그먼트 만들기]가 강조 표시된 [!UICONTROL 대상자] 대시보드.](../images/insights-use-cases/consent-analysis/create-audience.png)![
 
@@ -70,9 +70,9 @@ ht-degree: 0%
 
 Adobe은 프로필, 대상 및 대상 대시보드에서 자동으로 사용할 수 있는 다양한 인사이트를 만들었습니다. 그러면 만든 모든 대상자는 사전 구성된 이러한 통찰력과 함께 자동으로 사용할 수 있습니다. [프로필](../guides/profiles.md#standard-widgets), [대상](../guides/audiences.md#standard-widgets) 및 [대상](../guides/destinations.md) 대시보드에서 사용할 수 있는 인사이트 목록은 표준 위젯 설명서를 참조하십시오.
 
-## 대상자 오버랩 {#audience-overlap}
+## 대상자 중복 {#audience-overlap}
 
-두 동의 대상 간의 겹침을 검토하려면 [!UICONTROL 병합 정책별 대상 겹치기]를 프로필 대시보드에 추가하고 드롭다운 메뉴에서 원하는 대상을 선택하십시오. 인사이트에 대한 자세한 내용은 대시보드에 위젯을 추가하는 방법에 대한 지침을 보려면 [*병합 정책별 대상 중복*](../guides/profiles.md#audience-overlap-by-merge-policy)&#x200B;을 참조하십시오.
+두 동의 대상 간의 겹침을 검토하려면 [!UICONTROL 병합 정책별 대상 겹치기]를 프로필 대시보드에 추가하고 드롭다운 메뉴에서 원하는 대상을 선택하십시오. insight에 대한 자세한 내용은 대시보드에 위젯을 추가하는 방법에 대한 지침을 [*병합 정책별 대상 중복*](../guides/profiles.md#audience-overlap-by-merge-policy)&#x200B;을 참조하십시오.
 
 <!-- Image needs updating to night mode -->
 

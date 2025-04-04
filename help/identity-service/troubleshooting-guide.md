@@ -4,16 +4,16 @@ solution: Experience Platform
 title: ID 서비스 문제 해결 안내서
 description: 이 문서에서는 Adobe Experience Platform ID 서비스에 대해 자주 묻는 질문에 대한 답변과 일반적인 오류에 대한 문제 해결 안내서를 제공합니다.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2165'
+source-wordcount: '2168'
 ht-degree: 0%
 
 ---
 
 # ID 서비스 문제 해결 안내서
 
-이 문서에서는 Adobe Experience Platform [!DNL Identity Service]에 대해 자주 묻는 질문에 대한 답변과 일반적인 오류에 대한 문제 해결 안내서를 제공합니다. 일반적으로 [!DNL Platform] API에 대한 질문과 문제 해결은 [Adobe Experience Platform API 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
+이 문서에서는 Adobe Experience Platform [!DNL Identity Service]에 대해 자주 묻는 질문에 대한 답변과 일반적인 오류에 대한 문제 해결 안내서를 제공합니다. 일반적으로 [!DNL Experience Platform] API에 대한 질문과 문제 해결은 [Adobe Experience Platform API 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
 
 단일 고객을 식별하는 데이터는 종종 브랜드에 참여하기 위해 사용하는 다양한 디바이스 및 시스템에서 조각화됩니다. [!DNL Identity Service]은(는) 이렇게 단편화된 ID를 함께 취합하여 고객 행동을 완벽하게 이해함으로써 효과적인 디지털 경험을 실시간으로 제공할 수 있습니다. 자세한 내용은 [ID 서비스 개요](./home.md)를 참조하세요.
 
@@ -77,11 +77,11 @@ API를 사용하여 ID 설명자를 만들 때 네임스페이스를 정의하�
 
 ## 조직에서 사용할 수 있는 ID 네임스페이스 목록은 어디에서 찾을 수 있습니까?
 
-[ID 서비스 API](https://www.adobe.io/experience-platform-apis/references/identity-service)를 사용하면 `/idnamespace/identities` 끝점에 GET 요청을 하여 조직에서 사용 가능한 모든 ID 네임스페이스를 나열할 수 있습니다. 자세한 내용은 ID 서비스 API 개요의 [사용 가능한 네임스페이스 나열](./api/list-namespaces.md) 섹션을 참조하십시오.
+[ID 서비스 API](https://www.adobe.io/experience-platform-apis/references/identity-service)를 사용하면 `/idnamespace/identities` 끝점에 대한 GET 요청을 통해 조직에서 사용 가능한 모든 ID 네임스페이스를 나열할 수 있습니다. 자세한 내용은 ID 서비스 API 개요의 [사용 가능한 네임스페이스 나열](./api/list-namespaces.md) 섹션을 참조하십시오.
 
 ## 내 조직에 대한 사용자 정의 네임스페이스를 만들려면 어떻게 해야 합니까?
 
-[ID 서비스 API](https://www.adobe.io/experience-platform-apis/references/identity-service)를 사용하면 `/idnamespace/identities` 끝점에 POST 요청을 하여 조직에 대한 사용자 지정 ID 네임스페이스를 만들 수 있습니다. 자세한 내용은 ID 서비스 API 개요에서 [사용자 지정 네임스페이스 만들기](./api/create-custom-namespace.md)에 대한 섹션을 참조하십시오.
+[ID 서비스 API](https://www.adobe.io/experience-platform-apis/references/identity-service)를 사용하면 `/idnamespace/identities` 끝점에 대한 POST 요청을 수행하여 조직에 대한 사용자 지정 ID 네임스페이스를 만들 수 있습니다. 자세한 내용은 ID 서비스 API 개요에서 [사용자 지정 네임스페이스 만들기](./api/create-custom-namespace.md)에 대한 섹션을 참조하십시오.
 
 ## 복합 ID 및 XID란 무엇입니까?
 
@@ -89,7 +89,7 @@ ID는 조합 ID 또는 XID에 의해 API 호출에서 참조됩니다. 복합 ID
 
 ## ID 서비스는 PII(개인 식별 정보)를 어떻게 처리합니까?
 
-ID 서비스에는 전화 번호 및 전자 메일에 대한 해시된 ID 값 수집을 지원하는 표준 네임스페이스가 있습니다. 그러나 값의 해싱은 사용자가 담당합니다. 플랫폼으로 수집되는 데이터 해시에 대한 자세한 내용은 [[!DNL Data Prep] 매핑 함수 가이드](../data-prep/functions.md#hashing)를 참조하세요.
+ID 서비스에는 전화 번호 및 전자 메일에 대한 해시된 ID 값 수집을 지원하는 표준 네임스페이스가 있습니다. 그러나 값의 해싱은 사용자가 담당합니다. Experience Platform에 수집된 데이터 해시에 대한 자세한 내용은 [[!DNL Data Prep] 매핑 함수 안내서](../data-prep/functions.md#hashing)를 참조하십시오.
 
 ## PII 기반 ID를 해싱할 때 고려할 사항이 있습니까?
 
@@ -115,7 +115,7 @@ Internal solutions|Preferred|Common
 
 ## ID 그래프 페이지 또는 API에 액세스할 수 없는 이유는 무엇입니까?
 
-ID 그래프 데이터를 보려면 플랫폼 관리자가 `view-identity-graph` 권한으로 프로비전해야 합니다. 이 권한이 없으면 ID 그래프 뷰어 페이지 및 Platform API를 호출할 때 권한 거부 메시지를 받게 됩니다. 사용 권한에 대한 자세한 내용은 [액세스 제어 개요](../access-control/home.md)를 참조하세요.
+ID 그래프 데이터를 보려면 Experience Platform 관리자가 `view-identity-graph` 권한으로 프로비전해야 합니다. 이 권한이 없으면 ID 그래프 뷰어 페이지와 Experience Platform API를 호출할 때 권한 거부 메시지를 받게 됩니다. 사용 권한에 대한 자세한 내용은 [액세스 제어 개요](../access-control/home.md)를 참조하세요.
 
 ## 문제 해결
 
@@ -216,7 +216,7 @@ ID 그래프 데이터를 보려면 플랫폼 관리자가 `view-identity-graph`
 }
 ```
 
-이 오류의 경우 액세스 토큰이 잘못되었습니다. 액세스 토큰은 24시간마다 만료되며 [!DNL Platform] API를 계속 사용하려면 다시 생성해야 합니다. 새 액세스 토큰 생성에 대한 지침은 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 참조하십시오.
+이 오류의 경우 액세스 토큰이 잘못되었습니다. 액세스 토큰은 24시간마다 만료되며 [!DNL Experience Platform] API를 계속 사용하려면 다시 생성해야 합니다. 새 액세스 토큰 생성에 대한 지침은 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 참조하십시오.
 
 ### 인증 서비스 토큰이 잘못되었습니다.
 
@@ -228,7 +228,7 @@ ID 그래프 데이터를 보려면 플랫폼 관리자가 `view-identity-graph`
 }
 ```
 
-이 오류의 경우 액세스 토큰이 잘못되었습니다. 액세스 토큰은 24시간마다 만료되며 [!DNL Platform] API를 계속 사용하려면 다시 생성해야 합니다. 새 액세스 토큰 생성에 대한 지침은 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 참조하십시오.
+이 오류의 경우 액세스 토큰이 잘못되었습니다. 액세스 토큰은 24시간마다 만료되며 [!DNL Experience Platform] API를 계속 사용하려면 다시 생성해야 합니다. 새 액세스 토큰 생성에 대한 지침은 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 참조하십시오.
 
 ### 사용자 토큰에 유효한 제품 컨텍스트가 없습니다.
 
@@ -276,11 +276,11 @@ ID 그래프 데이터를 보려면 플랫폼 관리자가 `view-identity-graph`
 }
 ```
 
-이 오류는 [!DNL Platform] 서비스 호출 실행 시 예기치 않은 예외가 발생할 때 표시됩니다. 가장 좋은 방법은 이 오류를 수신할 때 시간 간격을 두고 몇 번 요청을 다시 시도하는 자동화된 호출을 프로그래밍하는 것입니다. 문제가 지속되면 시스템 관리자에게 문의하십시오.
+이 오류는 [!DNL Experience Platform] 서비스 호출 실행 시 예기치 않은 예외가 발생할 때 표시됩니다. 가장 좋은 방법은 이 오류를 수신할 때 시간 간격을 두고 몇 번 요청을 다시 시도하는 자동화된 호출을 프로그래밍하는 것입니다. 문제가 지속되면 시스템 관리자에게 문의하십시오.
 
 ## 일괄 처리 수집 오류 코드
 
-[!DNL Identity Service]은(는) 일괄 처리 수집을 사용하여 [!DNL Platform]에 업로드된 레코드 및 시계열 데이터에서 ID 데이터를 수집합니다. 일괄 처리 수집은 비동기 프로세스이므로 오류를 보려면 일괄 처리에 대한 세부 정보를 확인해야 합니다. 배치가 완료될 때까지 배치가 진행됨에 따라 오류가 누적됩니다.
+[!DNL Identity Service]은(는) 일괄 처리 수집을 사용하여 [!DNL Experience Platform]에 업로드된 레코드 및 시계열 데이터에서 ID 데이터를 수집합니다. 일괄 처리 수집은 비동기 프로세스이므로 오류를 보려면 일괄 처리에 대한 세부 정보를 확인해야 합니다. 배치가 완료될 때까지 배치가 진행됨에 따라 오류가 누적됩니다.
 
 다음은 [일괄 처리 수집 API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)를 사용할 때 발생할 수 있는 [!DNL Identity Service]과(와) 관련된 오류 메시지 목록입니다.
 

@@ -2,9 +2,9 @@
 title: 데이터 랜딩 영역 Source
 description: 데이터 랜딩 영역을 Adobe Experience Platform에 연결하는 방법 알아보기
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1366'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >이 페이지는 Experience Platform의 [!DNL Data Landing Zone] *source* 커넥터에 한정됩니다. [!DNL Data Landing Zone] *대상* 커넥터에 연결하는 방법에 대한 자세한 내용은 [[!DNL Data Landing Zone] 대상 설명서 페이지](/help/destinations/catalog/cloud-storage/data-landing-zone.md)를 참조하세요.
 
-[!DNL Data Landing Zone]은(는) Adobe Experience Platform에서 프로비저닝한 [!DNL Azure Blob] 저장소 인터페이스로서, 파일을 플랫폼으로 가져올 수 있는 안전한 클라우드 기반 파일 저장소 기능에 액세스할 수 있도록 허용합니다. 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너에 액세스할 수 있으며 모든 컨테이너의 총 데이터 볼륨은 Platform 제품 및 서비스 라이선스와 함께 제공되는 총 데이터로 제한됩니다. Experience Platform의 모든 고객은 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너로 프로비저닝됩니다. [!DNL Azure Storage Explorer] 또는 명령줄 인터페이스를 통해 컨테이너에 파일을 읽고 쓸 수 있습니다.
+[!DNL Data Landing Zone]은(는) Adobe Experience Platform에서 프로비저닝한 [!DNL Azure Blob] 저장소 인터페이스로서, 파일을 Experience Platform으로 가져올 수 있도록 안전한 클라우드 기반 파일 저장소 기능에 액세스할 수 있도록 허용합니다. 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너에 액세스할 수 있으며 모든 컨테이너의 총 데이터 볼륨은 Experience Platform 제품 및 서비스 라이선스와 함께 제공되는 총 데이터로 제한됩니다. Experience Platform의 모든 고객은 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너로 프로비저닝됩니다. [!DNL Azure Storage Explorer] 또는 명령줄 인터페이스를 통해 컨테이너에 파일을 읽고 쓸 수 있습니다.
 
 [!DNL Data Landing Zone]은(는) SAS 기반 인증을 지원하며, 전송 중이거나 사용하지 않는 표준 [!DNL Azure Blob] 저장소 보안 메커니즘을 통해 데이터를 보호합니다. SAS 기반 인증을 사용하면 공용 인터넷 연결을 통해 [!DNL Data Landing Zone] 컨테이너에 안전하게 액세스할 수 있습니다. [!DNL Data Landing Zone] 컨테이너에 액세스하는 데 필요한 네트워크 변경 내용이 없습니다. 따라서 네트워크에 대한 허용 목록 또는 교차 지역 설정을 구성할 필요가 없습니다. Experience Platform에서는 [!DNL Data Landing Zone] 컨테이너에 업로드된 모든 파일 및 폴더에 대해 엄격한 7일 만료 시간을 적용합니다. 모든 파일과 폴더는 7일 후에 삭제됩니다.
 
@@ -54,7 +54,7 @@ Azure에서 Experience Platform에 대한 [!DNL Data Landing Zone] 계정을 설
 
 >[!TIP]
 >
->Platform UI의 소스 카탈로그에서 [!DNL Data Landing Zone] 자격 증명을 검색할 수 있습니다.
+>Experience Platform UI의 소스 카탈로그에서 [!DNL Data Landing Zone] 자격 증명을 검색할 수 있습니다.
 
 [!DNL Data Landing Zone] SAS URL을 입력한 다음 **다음**&#x200B;을(를) 선택하십시오.
 
@@ -318,6 +318,6 @@ print(f"Sign-in URL: {signin_url}")
 
 ### UI 사용
 
-- [UI를 사용하여  [!DNL Data Landing Zone] 을(를) 플랫폼에 연결](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
+- [UI를 사용하여  [!DNL Data Landing Zone] 을(를) Experience Platform에 연결](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [UI에서 클라우드 스토리지 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/batch/cloud-storage.md)
 

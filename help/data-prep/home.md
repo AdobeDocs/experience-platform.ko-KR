@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 준비 개요
 description: 이 문서에서는 Adobe Experience Platform 내의 데이터 준비에 대해 소개합니다.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 ## 데이터 형식 처리
 
-데이터 준비는 Platform에 수집되는 다양한 형식의 데이터를 강력하게 처리할 수 있습니다. 데이터 준비에서 다양한 데이터 형식을 처리하는 방법에 대한 자세한 내용은 [데이터 형식 처리 개요](./data-handling.md)를 참조하십시오.
+데이터 준비는 Experience Platform에 수집되는 다양한 형식의 데이터를 강력하게 처리할 수 있습니다. 데이터 준비에서 다양한 데이터 형식을 처리하는 방법에 대한 자세한 내용은 [데이터 형식 처리 개요](./data-handling.md)를 참조하십시오.
 
 ## [!DNL Data Prep]을(를) 사용하여 부분 행 업데이트 보내기
 

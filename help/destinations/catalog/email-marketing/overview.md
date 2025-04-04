@@ -4,9 +4,9 @@ title: 이메일 마케팅 대상 개요
 type: Tutorial
 description: ESP(이메일 서비스 공급자)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다. Experience Platform 대상으로 지원되는 ESP에 대해 알아봅니다.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '377'
 ht-degree: 4%
 
 ---
@@ -35,13 +35,13 @@ Adobe Experience Platform은 다음과 같은 이메일 마케팅 대상을 지�
 
 ## 새 이메일 마케팅 대상에 연결 {#connect-destination}
 
-캠페인을 위한 이메일 마케팅 대상으로 대상자를 보내려면 먼저 Platform이 대상에 연결해야 합니다. 새 대상 설정에 대한 자세한 내용은 [대상 만들기 자습서](../../ui/connect-destination.md)를 참조하십시오.
+캠페인을 위해 대상을 이메일 마케팅 대상으로 보내려면 먼저 Experience Platform에서 대상에 연결해야 합니다. 새 대상 설정에 대한 자세한 내용은 [대상 만들기 자습서](../../ui/connect-destination.md)를 참조하십시오.
 
 ## 이메일 마케팅 대상으로 대상자를 활성화할 때의 모범 사례 {#best-practices}
 
 ### ID 선택 {#identity}
 
-Adobe [유니온 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 사용자 ID를 키로 사용하는 필드입니다. 가장 일반적으로 이 필드는 이메일 주소이지만 고객 충성도 프로그램 ID 또는 전화번호일 수도 있습니다. 스키마에서 가장 일반적인 고유 식별자 및 해당 XDM 필드는 아래 표를 참조하십시오.
+Adobe에서는 [유니온 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택할 것을 권장합니다. 사용자 ID를 키로 사용하는 필드입니다. 가장 일반적으로 이 필드는 이메일 주소이지만 고객 충성도 프로그램 ID 또는 전화번호일 수도 있습니다. 스키마에서 가장 일반적인 고유 식별자 및 해당 XDM 필드는 아래 표를 참조하십시오.
 
 | 고유 식별자 | 통합 스키마의 XDM 필드 |
 |----------------- | ---------------------------|

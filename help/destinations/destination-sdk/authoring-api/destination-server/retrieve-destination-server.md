@@ -2,9 +2,9 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 서버 구성을 검색하는 데 사용되는 API 호출을 보여 줍니다.
 title: 대상 서버 구성 검색
 exl-id: 1b375343-e793-4c91-856f-af66fe71822e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 대상 서버에서 사용하는 기능에 대한 자세한 설명은 다음 문서를 참조하십시오.
 
-* [Destination SDK으로 생성된 대상의 서버 사양](../../../destination-sdk/functionality/destination-server/server-specs.md)
-* [Destination SDK으로 만든 대상에 대한 템플릿 사양](../../../destination-sdk/functionality/destination-server/templating-specs.md)
+* [Destination SDK으로 만든 대상의 서버 사양](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [Destination SDK으로 만든 대상에 대한 사양 템플릿](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [메시지 포맷](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [파일 서식 구성](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
@@ -221,11 +221,11 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## API 오류 처리 {#error-handling}
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽은 후에는 Destination SDK `/authoring/destination-servers` API 끝점을 통해 대상 서버 구성을 검색하는 방법을 알 수 있습니다.
+이 문서를 읽은 후에는 Destination SDK `/authoring/destination-servers` API 끝점을 통해 대상 서버 구성을 검색하는 방법을 알게 됩니다.
 
 이 끝점으로 수행할 수 있는 작업에 대한 자세한 내용은 다음 문서를 참조하십시오.
 

@@ -2,10 +2,10 @@
 title: 리소스 복사
 description: Adobe Experience Platform에서 기존 태그 리소스의 설정을 사용하여 새 태그 리소스를 만드는 방법을 알아봅니다.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 73%
+source-wordcount: '781'
+ht-degree: 79%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 기존 리소스의 설정을 사용하여 새 리소스를 만드는 것이 편리한 경우가 있습니다. 이러한 경우 복사본을 만들 수 있습니다.
 
@@ -60,7 +60,7 @@ ht-degree: 73%
 
 ## 규칙 및 데이터 요소 복사
 
-모든 규칙 및 데이터 요소는 확장에서 제공하므로, 속성 간에 복사할 때에는 Platform이 이러한 기본 확장을 고려해야 합니다.
+모든 규칙 및 데이터 요소는 확장에서 제공하므로, 속성 간에 복사할 때에는 Experience Platform에서 이러한 기본 확장을 고려해야 합니다.
 
 ![내 데모 속성에 규칙 복사](../../images/copy-rules-dialog1.png)
 

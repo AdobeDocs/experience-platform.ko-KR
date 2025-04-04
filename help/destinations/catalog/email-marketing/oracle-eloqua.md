@@ -1,11 +1,11 @@
 ---
 keywords: 이메일;이메일;이메일;이메일 대상;oracle eloqua;oracle
 title: (파일) Oracle Eloqua 연결
-description: Oracle Eloqua는 B2B 마케터와 조직이 마케팅 캠페인과 판매 리드 생성을 관리할 수 있도록 지원하는 것을 목표로 하는 Oracle에서 제공하는 마케팅 자동화를 위한 SaaS(Software as a Service) 플랫폼입니다.
+description: Oracle Eloqua는 B2B 마케터 및 조직이 마케팅 캠페인 및 판매 리드 생성을 관리할 수 있도록 지원하기 위해 Oracle에서 제공하는 마케팅 자동화용 SaaS(Software as a Service) 플랫폼입니다.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '719'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/)은(는) B2B 마케터와 조직이 마케팅 캠페인 및 판매 리드 생성을 관리하는 데 도움을 주기 위해 [!DNL Oracle]에서 제공하는 마케팅 자동화를 위한 SaaS(Software as a Service) 플랫폼입니다.
 
-대상 데이터를 [!DNL Oracle Eloqua]에 보내려면 먼저 Adobe Experience Platform에서 [대상을 연결](#connect-destination)한 다음 저장소 위치에서 [!DNL Oracle Eloqua](으)로 [데이터 가져오기를 설정](#import-data-into-eloqua)해야 합니다.
+대상 데이터를 [!DNL Oracle Eloqua]에 보내려면 먼저 Adobe Experience Platform에서 [대상을 연결](#connect-destination)한 다음 저장소 위치에서 [!DNL Oracle Eloqua]&#x200B;(으)로 [데이터 가져오기를 설정](#import-data-into-eloqua)해야 합니다.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -22,8 +22,8 @@ ht-degree: 2%
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -40,7 +40,7 @@ ht-degree: 2%
 
 ## IP 주소 허용 목록 {#allow-list}
 
-SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe은 허용 목록에 특정 IP 범위를 추가할 것을 권장합니다.
+SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe에서는 허용 목록에 특정 IP 범위를 추가할 것을 권장합니다.
 
 허용 목록에 Adobe IP를 추가해야 하는 경우 [SFTP 대상의 IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md)을 참조하세요.
 
@@ -75,14 +75,14 @@ SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe
 * 필요한 경우 RSA 형식의 공개 키를 연결하여 **[!UICONTROL 키]** 섹션 아래에서 내보낸 파일에 PGP/GPG를 사용한 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64] 인코딩된 문자열로 작성되어야 합니다.
 * **[!UICONTROL 이름]**: 대상의 관련 이름을 선택하십시오.
 * **[!UICONTROL 설명]**: 대상에 대한 설명을 입력하십시오.
-* **[!UICONTROL 폴더 경로]**: Platform이 내보내기 데이터를 CSV 파일로 저장할 저장소 위치의 경로를 제공합니다.
+* **[!UICONTROL 폴더 경로]**: Experience Platform에서 내보내기 데이터를 CSV 파일로 저장할 저장소 위치의 경로를 제공합니다.
 * **[!UICONTROL 파일 형식]**: CSV 파일을 저장소 위치로 내보내려면 **CSV**&#x200B;을(를) 선택하십시오.
 
 <!--
 
 Commenting out Amazon S3 bucket part for now until support is clarified
 
-- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Experience Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 
 -->
 
@@ -107,8 +107,8 @@ Adobe 이 대상에 대한 대상을 활성화할 때 [공용 구조체 스키�
 
 ## 내보낸 데이터 {#exported-data}
 
-[!DNL Oracle Eloqua] 대상에 대해 플랫폼은 사용자가 제공한 저장소 위치에 `.csv` 파일을 만듭니다. 파일에 대한 자세한 내용은 대상 활성화 자습서에서 [대상 활성화 확인](../../ui/activate-batch-profile-destinations.md#verify)을 참조하십시오.
+[!DNL Oracle Eloqua] 대상의 경우 Experience Platform은 제공한 저장소 위치에 `.csv` 파일을 만듭니다. 파일에 대한 자세한 내용은 대상 활성화 자습서에서 [대상 활성화 확인](../../ui/activate-batch-profile-destinations.md#verify)을 참조하십시오.
 
-## [!DNL Oracle Eloqua](으)로 데이터 가져오기 설정 {#import-data-into-eloqua}
+## [!DNL Oracle Eloqua]&#x200B;(으)로 데이터 가져오기 설정 {#import-data-into-eloqua}
 
-[!DNL Platform]을(를) [!DNL SFTP] 저장소에 연결한 후 저장소 위치에서 [!DNL Oracle Eloqua](으)로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대해 알아보려면 [!DNL Oracle Eloqua Help Center]에서 [연락처 또는 계정 가져오기](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)를 참조하십시오.
+[!DNL Experience Platform]을(를) [!DNL SFTP] 저장소에 연결한 후 저장소 위치에서 [!DNL Oracle Eloqua]&#x200B;(으)로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대해 알아보려면 [!DNL Oracle Eloqua Help Center]에서 [연락처 또는 계정 가져오기](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)를 참조하십시오.

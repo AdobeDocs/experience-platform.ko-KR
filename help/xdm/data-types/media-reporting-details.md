@@ -2,9 +2,9 @@
 title: 미디어 보고 세부 정보 데이터 유형
 description: 미디어 보고 세부 사항 XDM(경험 데이터 모델) 데이터 유형에 대해 알아봅니다.
 exl-id: e8bf20a9-9ac0-4339-8200-5d6d9328ce3b
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '494'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->아래 필드는 요청을 만드는 데 직접 사용되지 않습니다. 대신, Adobe Experience Platform 또는 Adobe Analytics으로 전송된 필드 컬렉션은 요청 데이터에서 어셈블되고, 지표는 서버 인프라에 의해 통합되거나 처리됩니다. 플랫폼에서 다양한 유형의 사용자 이벤트를 수집하는 동안 반환된 보고서는 `media.sessionStart`, `media.adStart` 및 `media.sessionComplete`과(와) 같은 특정 이벤트에 중점을 둡니다. 즉, 수집 중에 12가지 유형의 이벤트를 전송하지만, 보고서에는 아래 나열된 5가지 이벤트를 기반으로 하는 분류만 표시됩니다.
+>아래 필드는 요청을 만드는 데 직접 사용되지 않습니다. 대신, Adobe Experience Platform 또는 Adobe Analytics으로 전송된 필드 컬렉션은 요청 데이터에서 어셈블되고, 지표는 서버 인프라에 의해 통합되거나 처리됩니다. Experience Platform에서 다양한 유형의 사용자 이벤트를 수집하는 동안 반환된 보고서는 `media.sessionStart`, `media.adStart` 및 `media.sessionComplete`과(와) 같은 특정 이벤트에 중점을 둡니다. 즉, 수집 중에 12가지 유형의 이벤트를 전송하지만, 보고서에는 아래 나열된 5가지 이벤트를 기반으로 하는 분류만 표시됩니다.
 
 +++[!UICONTROL 미디어 보고 세부 정보] 데이터 형식의 다이어그램을 표시하려면 선택하십시오.
 ![[!UICONTROL 미디어 보고 세부 정보] 데이터 형식의 다이어그램입니다.](../images/data-types/media-reporting-details.png)

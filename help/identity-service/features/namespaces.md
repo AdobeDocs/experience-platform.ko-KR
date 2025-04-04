@@ -2,10 +2,10 @@
 title: ID 네임스페이스 개요
 description: ID 서비스의 ID 네임스페이스에 대해 알아봅니다.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1858'
-ht-degree: 16%
+source-wordcount: '1860'
+ht-degree: 17%
 
 ---
 
@@ -85,16 +85,16 @@ Experience Platform 내에서 사용할 수 있는 ID 유형은 다음과 같습
 | 디바이스 ID | 디바이스 ID는 IDFA(iPhone 및 iPad), GAID(Android) 및 RIDA(Roku) 등 하드웨어 디바이스를 식별해 가정에서 여러 명이 공유할 수 있습니다. |
 | 이메일 주소 | 이메일 주소는 종종 단일 사용자와 연결되므로, 다양한 채널에서 해당 사용자를 식별하는 데 사용할 수 있습니다. 이 유형의 ID에는 PII(개인 식별 정보)가 포함됩니다. 값을 민감하게 처리하기 위해 [!DNL Identity Service]에 대한 표시입니다. |
 | 비개인 식별자 | 비사용자 ID는 네임스페이스가 필요하지만 사용자 클러스터에 연결되지 않은 식별자를 저장하는 데 사용됩니다. 예를 들어 제품 SKU, 제품, 조직 또는 스토어와 관련된 데이터입니다. |
-| 파트너 ID | <ul><li>파트너 ID는 데이터 파트너가 사람을 나타내기 위해 사용하는 식별자입니다. 파트너 ID는 종종 개인의 진짜 신분을 밝히지 않기 위해 가명으로 사용되며 확률적일 수 있습니다. Real-time Customer Data Platform에서 파트너 ID는 ID 그래프 링크 구축이 아니라 주로 확장된 대상 활성화 및 데이터 보강에 사용됩니다.</li><li>파트너 ID 유형으로 지정된 ID 네임스페이스가 포함된 ID를 수집할 때 ID 그래프가 생성되지 않습니다.</li><li>파트너 ID의 ID 유형을 사용하여 파트너 데이터를 수집하지 않으면 ID 서비스의 시스템 그래프 제한에 도달할 수 있을 뿐만 아니라 원치 않는 프로필 병합이 발생할 수 있습니다.</li><ul> |
+| 파트너 ID | <ul><li>파트너 ID는 데이터 파트너가 사람을 나타내기 위해 사용하는 식별자입니다. 파트너 ID는 종종 개인의 진짜 신분을 밝히지 않기 위해 가명으로 사용되며 확률적일 수 있습니다. Real-Time Customer Data Platform에서 파트너 ID는 ID 그래프 링크 구축이 아니라 주로 확장된 대상 활성화 및 데이터 보강에 사용됩니다.</li><li>파트너 ID 유형으로 지정된 ID 네임스페이스가 포함된 ID를 수집할 때 ID 그래프가 생성되지 않습니다.</li><li>파트너 ID의 ID 유형을 사용하여 파트너 데이터를 수집하지 않으면 ID 서비스의 시스템 그래프 제한에 도달할 수 있을 뿐만 아니라 원치 않는 프로필 병합이 발생할 수 있습니다.</li><ul> |
 | 전화번호 | 전화번호는 종종 한 사람과 연관되어 있으므로 다른 채널에서 해당 사람을 식별하는 데 사용할 수 있습니다. 이 유형의 ID에는 PII가 포함됩니다. 값을 민감하게 처리하기 위해 [!DNL Identity Service]에 대한 표시입니다. |
 
 {style="table-layout:auto"}
 
 ### 표준 네임스페이스 {#standard}
 
-Experience Platform은 모든 조직에서 사용할 수 있는 여러 ID 네임스페이스를 제공합니다. 표준 네임스페이스라고 하며 [!DNL Identity Service] API를 사용하거나 Platform UI를 통해 볼 수 있습니다.
+Experience Platform에서는 모든 조직에서 사용할 수 있는 여러 id 네임스페이스를 제공합니다. 표준 네임스페이스라고 하며 [!DNL Identity Service] API를 사용하거나 Experience Platform UI를 통해 볼 수 있습니다.
 
-다음 표준 네임스페이스는 Platform 내의 모든 조직에서 사용할 수 있도록 제공됩니다.
+Experience Platform 내의 모든 조직에서 사용할 수 있도록 다음 표준 네임스페이스를 제공합니다.
 
 | 표시 이름 | 설명 |
 | ------------ | ----------- |
@@ -110,7 +110,7 @@ Experience Platform은 모든 조직에서 사용할 수 있는 여러 ID 네임
 | 휴대폰 | 전화 번호를 나타내는 네임스페이스입니다. 이러한 유형의 네임스페이스는 종종 단일 사용자와 연결되므로 여러 채널에서 해당 사용자를 식별하는 데 사용할 수 있습니다. |
 | 전화(E.164) | E.164 형식으로 해시해야 하는 원시 전화 번호를 나타내는 네임스페이스입니다. E.164 형식에는 더하기 기호(`+`), 국제 국가 호출 코드, 지역 번호 및 전화 번호가 포함됩니다. 예: `(+)(country code)(area code)(phone number)`. |
 | 휴대폰 (SHA256) | SHA256을 사용하여 해시해야 하는 전화 번호를 나타내는 네임스페이스입니다. 기호, 문자 및 앞에 오는 0을 제거해야 합니다. 국가 호출 코드도 접두사로 추가해야 합니다. |
-| 전화(SHA256_E.164) | SHA256과 E.164 형식을 모두 사용하여 해시해야 하는 원시 전화 번호를 나타내는 네임스페이스입니다. |
+| 전화(SHA256_E.164) | SHA256과 E.164 포맷을 모두 사용하여 해시해야 하는 원시 전화번호를 나타내는 네임스페이스입니다. |
 | TNTID | Adobe Target을 나타내는 네임스페이스입니다. 자세한 내용은 [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html)에 대한 다음 문서를 참조하십시오. |
 | Windows AID | Windows Advertising ID를 나타내는 네임스페이스입니다. 자세한 내용은 [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041)에서 다음 문서를 참조하십시오. |
 

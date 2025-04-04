@@ -3,10 +3,10 @@ keywords: 클라우드 스토리지 대상;클라우드 스토리지
 title: 클라우드 스토리지 대상 개요
 description: Adobe Experience Platform은 대상을 Amazon S3, AWS Kinesis, Azure Event Hubs 또는 SFTP 클라우드 스토리지 위치에 데이터 파일로 전달할 수 있습니다.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 2e21e62de624c5e7e9fac4d36dbf41b46198062a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 5%
+source-wordcount: '464'
+ht-degree: 6%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 ## 개요 {#overview}
 
-Adobe Experience Platform은 대상을 클라우드 스토리지 위치에 데이터 파일로 제공할 수 있습니다. 이렇게 하면 [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] 및 SFTP에 대한 CSV 파일을 통해 대상자와 해당 프로필 속성을 내부 시스템으로 보낼 수 있습니다. [!DNL Amazon Kinesis] 및 [!DNL Azure Event Hubs] 대상의 경우 데이터가 Experience Platform 밖으로 [!DNL JSON] 형식으로 스트리밍됩니다.
+Adobe Experience Platform은 대상을 클라우드 스토리지 위치에 데이터 파일로 제공할 수 있습니다. 이렇게 하면 [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] 및 SFTP에 대한 CSV 파일을 통해 대상자와 해당 프로필 속성을 내부 시스템으로 보낼 수 있습니다. [!DNL Amazon Kinesis] 및 [!DNL Azure Event Hubs] 대상의 경우 데이터가 [!DNL JSON] 형식으로 Experience Platform에서 스트리밍됩니다.
 
 ![Adobe 클라우드 저장소 대상](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -33,7 +33,7 @@ Adobe Experience Platform은 다음 클라우드 스토리지 대상으로 데�
 
 ## 새 클라우드 스토리지 대상에 연결 {#connect-destination}
 
-캠페인을 위해 대상을 클라우드 스토리지 대상으로 보내려면 먼저 플랫폼에서 대상에 연결해야 합니다. 새 대상 설정에 대한 자세한 내용은 [대상 만들기 자습서](../../ui/connect-destination.md)를 참조하십시오.
+캠페인을 위해 대상을 클라우드 스토리지 대상으로 보내려면 먼저 Experience Platform에서 대상에 연결해야 합니다. 새 대상 설정에 대한 자세한 내용은 [대상 만들기 자습서](../../ui/connect-destination.md)를 참조하십시오.
 
 
 ## 매크로를 사용하여 스토리지 위치에 폴더 만들기 {#use-macros}
@@ -74,7 +74,7 @@ Adobe Experience Platform은 다음 클라우드 스토리지 대상으로 데�
 
 클라우드 스토리지 대상은 다음 내보내기 유형을 지원합니다.
 * **프로필 기반 내보내기**. 즉, 대상의 개인에 대한 세부 정보를 내보내고 있습니다. 이러한 세부 사항은 개인화에 필요하며 속성, 이벤트, 대상 멤버십 등을 포함할 수 있습니다.
-* **데이터 집합 내보내기**. 이 기능을 사용하면 전체 데이터 세트를 클라우드 스토리지 대상으로 내보낼 수 있습니다. 기능에 대해 [자세히 읽어보세요](/help/destinations/ui/export-datasets.md).
+* **데이터 집합 내보내기**. 이 기능을 사용하면 전체 데이터 세트를 클라우드 스토리지 대상으로 내보낼 수 있습니다. 기능에 대해 [자세히 알아보십시오](/help/destinations/ui/export-datasets.md).
 
 ## 다음 단계 {#next-steps}
 

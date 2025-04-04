@@ -5,7 +5,7 @@ title: 참조 API 엔드포인트
 description: 액세스 제어 API의 참조 끝점을 사용하면 사용 가능한 권한 및 리소스 유형의 이름을 볼 수 있으며, 현재 사용자에 대한 유효한 액세스 제어 정책을 보는 데 사용할 수 있습니다.
 role: Developer
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 `/acl/reference` 끝점에 대한 GET 요청을 수행하여 모든 권한 및 리소스 유형의 이름을 나열할 수 있습니다. 그런 다음 현재 사용자의 [유효 액세스 제어 정책 보기](./effective-policies.md)에 대한 API 호출에 이러한 이름을 사용할 수 있습니다.
 
-권한은 Adobe Admin Console을 통해 관리되는 정책이며 0개 이상의 리소스 유형 정책에 매핑됩니다. 리소스 유형은 특정 유형의 [!DNL Platform] 리소스(예: 데이터 세트 또는 스키마)에 대한 읽기, 쓰기 및/또는 삭제 기능을 활성화하는 정책입니다.
+권한은 Adobe Admin Console을 통해 관리되는 정책이며 0개 이상의 리소스 유형 정책에 매핑됩니다. 리소스 유형은 특정 유형의 [!DNL Experience Platform] 리소스(예: 데이터 세트 또는 스키마)에 대한 읽기, 쓰기 및/또는 삭제 기능을 활성화하는 정책입니다.
 
 **API 형식**
 

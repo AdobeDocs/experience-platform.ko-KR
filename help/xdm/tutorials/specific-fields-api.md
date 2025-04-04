@@ -2,16 +2,16 @@
 title: 스키마 레지스트리 API를 사용하여 스키마에 특정 필드 추가
 description: 스키마 레지스트리 API를 사용하여 기존 필드 그룹의 개별 필드를 Experience Data Model(XDM) 스키마에 추가하는 방법을 알아봅니다.
 exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '626'
 ht-degree: 1%
 
 ---
 
 # 스키마 레지스트리 API를 사용하여 스키마에 특정 필드 추가
 
-XDM(Experience Data Model) 스키마는 기본 클래스로 구성되며 Adobe에 의해 정의된 표준 필드 그룹과 조직에 의해 정의된 사용자 지정 필드 그룹을 사용하여 포함된 추가 필드가 있습니다.
+XDM(경험 데이터 모델) 스키마는 기본 클래스로 구성되며, Adobe에서 정의한 표준 필드 그룹과 조직에서 정의한 사용자 정의 필드 그룹을 사용하여 추가 필드가 포함됩니다.
 
 스키마를 작성할 때, 필요하지 않은 동일한 그룹의 필드를 제외하면서 주어진 필드 그룹의 일부 필드를 사용할 수 있습니다. 이 자습서에서는 스키마 레지스트리 API를 사용하여 필드 그룹의 개별 필드를 스키마에 추가하는 방법을 보여줍니다.
 
@@ -285,6 +285,6 @@ curl -X PATCH \
 
 ## 다음 단계
 
-이 안내서에서는 API 호출을 사용하여 기존 필드 그룹의 개별 필드를 스키마에 추가하는 방법을 다룹니다. Platform UI에서 유사한 필드 기반 작업을 수행하는 방법에 대한 자세한 내용은 [필드 기반 워크플로](../ui/field-based-workflows.md)에 대한 안내서를 참조하십시오.
+이 안내서에서는 API 호출을 사용하여 기존 필드 그룹의 개별 필드를 스키마에 추가하는 방법을 다룹니다. Experience Platform UI에서 유사한 필드 기반 작업을 수행하는 방법에 대한 자세한 내용은 [필드 기반 워크플로](../ui/field-based-workflows.md)에 대한 안내서를 참조하십시오.
 
 스키마 레지스트리 API의 기능에 대한 자세한 내용은 끝점 및 프로세스의 전체 목록이 필요하면 [API 개요](../api/overview.md)를 참조하십시오.

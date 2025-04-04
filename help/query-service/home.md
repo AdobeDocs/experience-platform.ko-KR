@@ -4,16 +4,16 @@ solution: Experience Platform
 title: 쿼리 서비스 개요
 description: Experience Platform 내에서 쿼리 서비스의 역할에 대해 알아봅니다.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
 
 # 쿼리 서비스 개요
 
-Adobe Experience Platform은 다양한 소스에서 데이터를 수집합니다. 마케터의 주요 과제는 이 데이터를 이해하여 고객에 대한 통찰력을 얻는 것입니다. 플랫폼에서 데이터를 쿼리하려면 표준 SQL 및 Adobe Experience Platform 쿼리 서비스를 사용할 수 있습니다. 쿼리 서비스를 사용하여 데이터 레이크의 데이터 집합에 참여하고 쿼리 결과를 보고, 머신 러닝 또는 [!DNL Real-Time Customer Profile]에 수집하기 위한 새 데이터 집합으로 캡처할 수 있습니다. 이 문서에서는 Experience Platform 내 쿼리 서비스의 역할에 대한 개요를 제공합니다.
+Adobe Experience Platform은 다양한 소스에서 데이터를 수집합니다. 마케터의 주요 과제는 이 데이터를 이해하여 고객에 대한 통찰력을 얻는 것입니다. Experience Platform에서 데이터를 쿼리하려면 표준 SQL 및 Adobe Experience Platform Query Service를 사용합니다. 쿼리 서비스를 사용하여 데이터 레이크의 데이터 집합에 참여하고 쿼리 결과를 보고, 머신 러닝 또는 [!DNL Real-Time Customer Profile]에 수집하기 위한 새 데이터 집합으로 캡처할 수 있습니다. 이 문서에서는 Experience Platform 내의 쿼리 서비스 역할에 대한 개요를 제공합니다.
 
 쿼리 서비스를 사용하여 온라인과 오프라인 고객 여정을 연결하고 브랜드에 대한 옴니채널 속성을 이해할 수 있습니다. 다음 비디오는 experience business에서 쿼리 서비스를 사용하여 주요 사용 사례를 처리하는 방법과 쿼리 서비스 작동 방식을 보여 줍니다.
 
@@ -50,15 +50,15 @@ Adobe Experience Platform 세분화 서비스를 사용하여 고객을 유사�
 
 ### Adobe Analytics 찾아보기 포기 {#abandon-browse}
 
-이 [찾아보기 포기 예제는 특정 실행 가능한 대상을 만들기 위해 Adobe을 사용하는 것을 중심으로 [!DNL Analytics]](./use-cases/abandoned-browse.md)합니다. Query Service는 세분화를 위한 복잡한 논리를 수용하여 다운스트림에서 사용할 다양한 개인화된 특성을 계산하거나 대상을 구성하는 방법을 크게 단순화합니다.
+이 [찾아보기 포기 예제는 실행 가능한 특정 대상을 만들기 위해 Adobe을 사용하는 것을 중심으로 [!DNL Analytics]](./use-cases/abandoned-browse.md)합니다. Query Service는 세분화를 위한 복잡한 논리를 수용하여 다운스트림에서 사용할 다양한 개인화된 특성을 계산하거나 대상을 구성하는 방법을 크게 단순화합니다.
 
 ## 사용자 정의 대시보드를 사용하여 인사이트 생성 {#custom-dashboards}
 
-Adobe Experience Platform을 사용하면 행동, CRM 및 판매 시점 데이터를 포함하여 저장된 모든 데이터 세트를 수집, 저장, 구조 및 가져올 수 있습니다. [!DNL Experience Platform's Query Service]을(를) 사용하여 이러한 데이터 세트를 쿼리하고 비즈니스에 대한 특정 질문에 답변한 다음 효과적인 통찰력을 생성할 수 있습니다. 맞춤형 위젯을 만들고, 추가하고, 편집하여 [사용자 정의 대시보드](../dashboards/standard-dashboards.md)를 통해 주요 지표를 시각화할 수 있는 사용자 정의 대시보드를 만들고 관리하는 방법을 알아봅니다. Real-time Customer Data Platform Insights 데이터 모델과 함께 SQL 쿼리를 사용하여 마케팅 및 KPI 사용 사례를 위해 [자체 Real-Time CDP 보고서를 사용자 지정](../dashboards/data-models/cdp-insights-data-model-b2c.md)할 수도 있습니다.
+Adobe Experience Platform을 사용하면 행동, CRM 및 판매 시점 데이터를 포함하여 저장된 모든 데이터 세트를 수집, 저장, 구조 및 가져올 수 있습니다. [!DNL Experience Platform's Query Service]을(를) 사용하여 이러한 데이터 세트를 쿼리하고 비즈니스에 대한 특정 질문에 답변한 다음 효과적인 통찰력을 생성할 수 있습니다. 맞춤형 위젯을 만들고, 추가하고, 편집하여 [사용자 정의 대시보드](../dashboards/standard-dashboards.md)를 통해 주요 지표를 시각화할 수 있는 사용자 정의 대시보드를 만들고 관리하는 방법을 알아봅니다. Real-Time Customer Data Platform Insights 데이터 모델과 함께 SQL 쿼리를 사용하여 마케팅 및 KPI 사용 사례를 위해 [자체 Real-Time CDP 보고서를 사용자 지정](../dashboards/data-models/cdp-insights-data-model-b2c.md)할 수도 있습니다.
 
 ## 다음 단계 및 추가 리소스
 
-이 문서를 읽은 후에는 쿼리 서비스 와 쿼리 서비스가 더 큰 Experience Platform 범위 내에서 작동하는 방식에 대해 알아보게 됩니다. 쿼리 서비스 기능에 대해 계속 알아보려면 다음 문서를 읽는 것이 좋습니다.
+이 문서를 읽은 후에는 쿼리 서비스 및 Experience Platform의 광범위한 범위 내에서 작동하는 방식에 대해 알아보게 됩니다. 쿼리 서비스 기능에 대해 계속 알아보려면 다음 문서를 읽는 것이 좋습니다.
 
 - [쿼리 서비스 개발자 안내서](api/getting-started.md): 쿼리 서비스 API 내의 다양한 끝점과 상호 작용하는 방법에 대한 자세한 정보입니다.
 - [쿼리 서비스 사용자 인터페이스 안내서](ui/overview.md): 쿼리 편집기 및 UI 사용에 대한 자세한 정보.

@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;자주 찾는 항목;클라우드 스토리지
 title: 흐름 서비스 API를 사용하여 클라우드 스토리지 폴더 살펴보기
 description: 이 튜토리얼에서는 플로우 서비스 API를 사용하여 서드파티 클라우드 스토리지 시스템을 살펴봅니다.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '695'
 ht-degree: 4%
 
 ---
@@ -22,18 +22,18 @@ ht-degree: 4%
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [원본](../../../home.md): [!DNL Experience Platform]에서는 데이터를 다양한 원본에서 수집할 수 있으며 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공합니다.
-* [샌드박스](../../../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [원본](../../../home.md): [!DNL Experience Platform]에서는 데이터를 다양한 원본에서 수집할 수 있으며 [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공합니다.
+* [샌드박스](../../../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-### Platform API 사용
+### Experience Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ## 클라우드 스토리지 폴더 살펴보기
 
-소스의 기본 연결 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 통해 클라우드 저장소 폴더의 구조에 대한 정보를 검색할 수 있습니다.
+소스의 기본 연결 ID를 제공하면서 [!DNL Flow Service] API에 GET 요청을 만들어 클라우드 저장소 폴더의 구조에 대한 정보를 검색할 수 있습니다.
 
-클라우드 스토리지를 탐색하기 위해 GET 요청을 수행할 때 아래 표에 나열된 쿼리 매개 변수를 포함해야 합니다.
+GET 요청을 수행하여 클라우드 스토리지를 탐색할 때 아래 표에 나열된 쿼리 매개 변수를 포함해야 합니다.
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
@@ -94,11 +94,11 @@ curl -X GET \
 ]
 ```
 
-## 파일 구조 Inspect
+## 파일 구조 검사
 
 클라우드 스토리지에서 데이터 파일의 구조를 검사하려면 파일의 경로와 유형을 쿼리 매개 변수로 제공하면서 GET 요청을 수행합니다.
 
-파일의 경로와 유형을 제공하면서 GET 요청을 수행하여 클라우드 스토리지 소스의 데이터 파일 구조를 검사할 수 있습니다. 쿼리 매개 변수의 일부로 파일 형식을 지정하여 CSV, TSV 또는 압축 JSON과 같은 다양한 파일 형식과 구분된 파일을 검사할 수도 있습니다.
+파일의 경로와 유형을 제공하면서 GET 요청을 수행하여 클라우드 스토리지 소스에서 데이터 파일의 구조를 검사할 수 있습니다. 쿼리 매개 변수의 일부로 파일 형식을 지정하여 CSV, TSV 또는 압축 JSON과 같은 다양한 파일 형식과 구분된 파일을 검사할 수도 있습니다.
 
 **API 형식**
 
@@ -168,4 +168,4 @@ curl -X GET \
 
 ## 다음 단계
 
-이 자습서를 통해 클라우드 스토리지 시스템을 탐색하고 [!DNL Platform]에 가져올 파일의 경로를 찾아서 해당 구조를 확인했습니다. 다음 자습서에서 이 정보를 사용하여 [클라우드 저장소에서 데이터를 수집한 후 플랫폼으로 가져올 수 있습니다](../collect/cloud-storage.md).
+이 자습서를 통해 클라우드 스토리지 시스템을 탐색하고 [!DNL Experience Platform]에 가져올 파일의 경로를 찾아서 해당 구조를 확인했습니다. 다음 자습서에서 이 정보를 사용하여 [클라우드 저장소에서 데이터를 수집하여 Experience Platform으로 가져오기](../collect/cloud-storage.md)할 수 있습니다.

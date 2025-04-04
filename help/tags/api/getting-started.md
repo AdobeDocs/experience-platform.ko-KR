@@ -2,9 +2,9 @@
 title: Reactor API 인증 및 액세스
 description: 필요한 액세스 자격 증명을 생성하는 단계를 포함하여 Reactor API를 시작하는 방법에 대해 알아봅니다.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '912'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 ## Adobe Experience Platform에 대한 개발자 액세스 권한 얻기 {#gain-developer-access}
 
-Reactor API에 대한 인증 값을 생성하려면 먼저 개발자에게 Experience Platform 액세스 권한이 있어야 합니다. 개발자 액세스 권한을 얻으려면 [Experience Platform 인증 자습서](/help/landing/api-authentication.md)의 시작 단계를 따르십시오. [사용자 액세스 권한 획득](/help/landing/api-authentication.md#gain-user-access) 단계를 완료했으면 이 자습서로 돌아가서 Reactor API와 관련된 자격 증명을 생성합니다.
+Reactor API에 대한 인증 값을 생성하려면 먼저 개발자에게 Experience Platform에 대한 액세스 권한이 있어야 합니다. 개발자 액세스 권한을 얻으려면 [Experience Platform 인증 자습서](/help/landing/api-authentication.md)의 시작 단계를 따르십시오. [사용자 액세스 권한 획득](/help/landing/api-authentication.md#gain-user-access) 단계를 완료했으면 이 자습서로 돌아가서 Reactor API와 관련된 자격 증명을 생성합니다.
 
 ## 액세스 자격 증명 생성 {#generate-access-credentials}
 
@@ -37,7 +37,7 @@ Adobe Developer Console을 사용하여 다음 세 가지 액세스 자격 증�
 
 ### 1회 설정 {#one-time-setup}
 
-[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)(으)로 이동하여 Adobe ID으로 로그인합니다. 그런 다음 Developer Console 설명서에서 [빈 프로젝트 만들기](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/)에 대한 자습서에 설명된 단계를 수행합니다.
+[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)&#x200B;(으)로 이동하여 Adobe ID으로 로그인합니다. 그런 다음 Developer Console 설명서에서 [빈 프로젝트 만들기](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/)에 대한 자습서에 설명된 단계를 수행합니다.
 
 프로젝트를 만든 후에는 **프로젝트 개요** 화면에서 **API 추가**&#x200B;를 선택합니다.
 
@@ -51,7 +51,7 @@ Adobe Developer Console을 사용하여 다음 세 가지 액세스 자격 증�
 
 >[!IMPORTANT]
 >
->**[!UICONTROL OAuth Server-to-Server]** 메서드를 선택하십시오. 이 메서드는 앞으로 지원되는 유일한 메서드입니다. **[!UICONTROL 서비스 계정(JWT)]** 메서드가 더 이상 사용되지 않습니다. JWT 인증 방법을 사용하는 통합은 2025년 1월 1일까지 계속 작동하지만, Adobe은 해당 날짜 이전에 기존 통합을 새 OAuth 서버 간 방법으로 마이그레이션할 것을 강력히 권장합니다. [!BADGE 사용되지 않음] 섹션에서 자세한 정보를 확인하세요.{type=negative}플랫폼 API 인증 자습서에서 [JSON 웹 토큰(JWT) 생성](/help/landing/api-authentication.md#jwt).
+>**[!UICONTROL OAuth Server-to-Server]** 메서드를 선택하십시오. 이 메서드는 앞으로 지원되는 유일한 메서드입니다. **[!UICONTROL 서비스 계정(JWT)]** 메서드가 더 이상 사용되지 않습니다. JWT 인증 방법을 사용하는 통합은 2025년 1월 1일까지 계속 작동하지만, Adobe에서는 해당 날짜 이전에 기존 통합을 새로운 OAuth 서버 간 방법으로 마이그레이션할 것을 강력히 권장합니다. [!BADGE 사용되지 않음] 섹션에서 자세한 정보를 확인하세요.{type=negative}Experience Platform API 인증 자습서에서 [JSON 웹 토큰(JWT) 생성](/help/landing/api-authentication.md#jwt).
 
 계속하려면 **다음**&#x200B;을 선택합니다.
 
@@ -69,7 +69,7 @@ Adobe Developer Console을 사용하여 다음 세 가지 액세스 자격 증�
 
 ### 자격 증명 수집 {#gather-credentials}
 
-API가 프로젝트에 추가되면 프로젝트에 대한 **[!UICONTROL Experience Platform API]** 페이지에 Experience Platform API 호출에 필요한 다음 자격 증명이 표시됩니다.
+API가 프로젝트에 추가되면 프로젝트에 대한 **[!UICONTROL Experience Platform API]** 페이지에 Experience Platform API에 대한 모든 호출에 필요한 다음 자격 증명이 표시됩니다.
 
 * `{API_KEY}`([!UICONTROL 클라이언트 ID])
 * `{ORG_ID}`([!UICONTROL 조직 ID])
@@ -78,7 +78,7 @@ API가 프로젝트에 추가되면 프로젝트에 대한 **[!UICONTROL Experie
 
 ### 액세스 토큰 생성 {#generate-access-token}
 
-다음 단계는 Platform API 호출에 사용할 `{ACCESS_TOKEN}` 자격 증명을 생성하는 것입니다. `{API_KEY}` 및 `{ORG_ID}`의 값과 달리 Platform API를 계속 사용하려면 24시간마다 새 토큰을 생성해야 합니다.
+다음 단계는 Experience Platform API 호출에 사용할 `{ACCESS_TOKEN}` 자격 증명을 생성하는 것입니다. `{API_KEY}` 및 `{ORG_ID}`의 값과 달리 Experience Platform API를 계속 사용하려면 24시간마다 새 토큰을 생성해야 합니다.
 
 >[!TIP]
 >
@@ -99,7 +99,7 @@ API가 프로젝트에 추가되면 프로젝트에 대한 **[!UICONTROL Experie
 
 #### 토큰 생성 자동화 {#auto-token}
 
-Postman 환경 및 컬렉션을 사용하여 액세스 토큰을 생성할 수도 있습니다. 자세한 내용은 Experience Platform API 인증 안내서에서 [Postman을 사용하여 API 호출을 인증 및 테스트](/help/landing/api-authentication.md#use-postman)하는 방법에 대한 섹션을 참조하십시오.
+Postman 환경 및 컬렉션을 사용하여 액세스 토큰을 생성할 수도 있습니다. 자세한 내용은 Experience Platform API 인증 안내서에서 [Postman을 사용하여 API 호출 인증 및 테스트](/help/landing/api-authentication.md#use-postman)에 대한 섹션을 참조하십시오.
 
 ## API 자격 증명 테스트 {#test-api-credentials}
 
@@ -115,7 +115,7 @@ Postman 환경 및 컬렉션을 사용하여 액세스 토큰을 생성할 수�
 
 ## 샘플 API 호출 읽기 {#read-sample-api-calls}
 
-각 엔드포인트 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 Platform API 시작 안내서의 [예제 API 호출을 읽는 방법](../../landing/api-guide.md#sample-api)에 대한 섹션을 참조하십시오.
+각 엔드포인트 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform API 시작 안내서의 [예제 API 호출을 읽는 방법](../../landing/api-guide.md#sample-api)에 대한 섹션을 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 

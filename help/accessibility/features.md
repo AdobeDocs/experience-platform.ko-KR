@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;통합 프로필;통합 프로필;통합;프로필;rtcp;XDM 그래프
-title: Platform의 일반 접근성 기능
+title: Experience Platform의 일반 접근성 기능
 type: Documentation
 description: 키보드 탐색, 색상 팔레트 및 대비, 보조 기술 지원을 포함하여 Adobe Experience Platform에서 지원하는 일반적인 접근성 기능에 대해 자세히 알아보십시오.
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
 
 # Experience Platform의 접근성 기능
 
-Adobe Experience Platform은 음성 인식 소프트웨어 및 화면 판독기와 같은 보조 장치로 작업하는 사용자를 포함하여 모든 개인에게 접근 가능하고 포괄적인 기능을 제공하기 위해 노력하고 있습니다. 이 문서에서는 키보드 탐색, 의미 체계 구조, 전경 요소와 배경 요소 간의 충분한 대비 및 보조 기술 지원을 포함하여 플랫폼에서 지원하는 일반적인 접근성 기능에 대해 설명합니다.
+Adobe Experience Platform은 음성 인식 소프트웨어 및 화면 판독기와 같은 보조 장치로 작업하는 사용자를 포함하여 모든 개인에게 접근 가능하고 포괄적인 기능을 제공하기 위해 노력하고 있습니다. 이 문서에서는 키보드 탐색, 의미 체계 구조, 전경 요소와 배경 요소 간의 충분한 대비 및 보조 기술 지원을 포함하여 Experience Platform에서 지원하는 일반적인 접근성 기능에 대해 간략하게 설명합니다.
 
 ## 보조 기술
 
@@ -21,7 +21,7 @@ Adobe Experience Platform은 음성 인식 소프트웨어 및 화면 판독기�
 
 ## 키보드 접근성
 
-Experience Platform은 전체 키보드 접근성을 지원하기 위해 노력합니다.
+Experience Platform은 전체 키보드 접근성을 지원하기 위해 노력하고 있습니다.
 
 다음 탐색 요소는 접근성을 용이하게 합니다.
 * Tab 키는 UI 요소, 섹션 및 메뉴 그룹 간에 이동합니다.

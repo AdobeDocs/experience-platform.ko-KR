@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 23%
@@ -14,7 +14,7 @@ ht-degree: 23%
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2020년 8월 12일 목요일**
+**릴리스 일자: 2020년 8월 12일 목요일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
@@ -25,7 +25,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-[!DNL Data Science Workspace]은(는) 머신 러닝 및 인공 지능을 사용하여 데이터에서 통찰력을 제공합니다. Adobe Experience Platform에 통합된 [!DNL Data Science Workspace]은(는) Adobe 솔루션 전반에서 콘텐츠 및 데이터 자산을 사용하여 예측을 수행하는 데 도움이 됩니다.
+[!DNL Data Science Workspace]은(는) 머신 러닝 및 인공 지능을 사용하여 데이터에서 통찰력을 제공합니다. Adobe Experience Platform에 통합된 [!DNL Data Science Workspace]은(는) Adobe 솔루션 전반에서 사용자의 콘텐츠 및 데이터 자산을 사용하여 예측을 수행하는 데 도움이 됩니다.
 
 **새로운 기능**
 
@@ -37,7 +37,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 ## 대상 {#destinations}
 
-[Real-time Customer Data Platform](../../rtcdp/overview.md)에서 대상은 해당 파트너에게 데이터를 원활하게 활성화하는 대상 플랫폼과의 사전 빌드된 통합입니다.
+[Real-Time Customer Data Platform](../../rtcdp/overview.md)에서 대상은 해당 파트너에게 데이터를 원활하게 활성화하는 대상 플랫폼과의 사전 빌드된 통합입니다.
 
 **새로운 대상**
 
@@ -68,7 +68,7 @@ Experience Platform을 기반으로 구축된 Real-Time Customer Data Platform([
 
 ## 소스 {#sources}
 
-Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 [!DNL Platform] 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 [!DNL Experience Platform] 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 [!DNL Experience Platform]에서는 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 

@@ -4,9 +4,9 @@ description: Acxiom 데이터 섭취 를 사용하여 Acxiom 데이터를 Real-T
 last-substantial-update: 2024-03-19T00:00:00Z
 badge: Beta
 exl-id: a0a080ef-4603-437f-8a68-11dbf530ac90
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1838'
+source-wordcount: '1839'
 ht-degree: 3%
 
 ---
@@ -17,22 +17,22 @@ ht-degree: 3%
 >
 >[!DNL Acxiom Data Ingestion] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 소스 개요에서 [약관](../../../../home.md#terms-and-conditions)을 참조하십시오.
 
-[!DNL Acxiom Data Ingestion] 소스를 사용하여 [!DNL Acxiom] 데이터를 Real-time Customer Data Platform으로 수집하고 자사 프로필을 보강합니다. 그런 다음 [!DNL Acxiom]이(가) 보강된 자사 프로필을 사용하여 대상자를 개선하고 마케팅 채널 전반에서 활성화할 수 있습니다.
+[!DNL Acxiom Data Ingestion] 소스를 사용하여 [!DNL Acxiom] 데이터를 Real-Time Customer Data Platform으로 수집하고 자사 프로필을 보강합니다. 그런 다음 [!DNL Acxiom]이(가) 보강된 자사 프로필을 사용하여 대상자를 개선하고 마케팅 채널 전반에서 활성화할 수 있습니다.
 
 Adobe Experience Platform 사용자 인터페이스를 사용하여 [!DNL Acxiom Data Ingestion] 소스 연결 및 데이터 흐름을 만드는 방법을 알아보려면 이 자습서를 참조하십시오. [!DNL Acxiom Data Ingestion] 원본은 Amazon S3을 놓기 지점으로 사용하여 [!DNL Acxiom] 개선 서비스에서 응답을 검색하고 매핑하는 데 사용됩니다.
 
 ## 전제 조건 {#prerequisites}
 
-이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기 튜토리얼](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아봅니다.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 ### 필요한 자격 증명 수집
 
-Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대한 유효한 값을 제공해야 합니다.
+Experience Platform에서 버킷에 액세스하려면 다음 자격 증명에 대한 유효한 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | --- | --- |
@@ -43,11 +43,11 @@ Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대
 
 >[!IMPORTANT]
 >
->[!DNL Acxiom] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 사용 권한이 모두 활성화되어 있어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../../../access-control/ui/overview.md)를 참조하십시오.
+>[!DNL Acxiom] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../../../access-control/ui/overview.md)를 참조하십시오.
 
 ## [!DNL Acxiom] 계정 연결
 
-Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
@@ -130,7 +130,7 @@ Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선
 Real-Time Customer Profile에 대해 데이터 세트를 사용하도록 설정한 경우 이 단계에서 **[!UICONTROL 프로필 데이터 세트]**&#x200B;를 전환하여 프로필 수집을 위해 데이터를 사용하도록 설정할 수 있습니다. 이 단계를 사용하여 **[!UICONTROL 오류 진단]** 및 **[!UICONTROL 부분 수집]**&#x200B;을 사용하도록 설정할 수도 있습니다.
 
 * **[!UICONTROL 오류 진단]**: **[!UICONTROL 오류 진단]**&#x200B;을 선택하여 데이터 집합 활동 및 데이터 흐름 상태를 모니터링할 때 나중에 참조할 수 있는 오류 진단을 생성하도록 소스에 지시합니다.
-* **[!UICONTROL 부분 수집]**: 부분 일괄 처리 수집은 구성 가능한 특정 임계값까지 오류가 포함된 데이터를 수집하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Experience Platform으로 성공적으로 수집할 수 있으며 잘못된 데이터는 모두 잘못된 이유에 대한 정보로 별도로 배치됩니다.
+* **[!UICONTROL 부분 수집]**: 부분 일괄 처리 수집은 구성 가능한 특정 임계값까지 오류가 포함된 데이터를 수집하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Experience Platform에 성공적으로 수집할 수 있으며 잘못된 데이터는 모두 잘못된 이유에 대한 정보로 별도로 배치됩니다.
 
 +++
 
@@ -148,7 +148,7 @@ Real-Time Customer Profile에 대해 데이터 세트를 사용하도록 설정�
 
 ## 매핑
 
-Experience Platform에 데이터를 수집하기 전에 매핑 인터페이스를 사용하여 소스 데이터를 적절한 스키마 필드에 매핑합니다.  자세한 내용은 UI의 [매핑 가이드](../../../../../data-prep/ui/mapping.md)를 참조하세요.
+Experience Platform으로 데이터를 수집하기 전에 매핑 인터페이스를 사용하여 소스 데이터를 적절한 스키마 필드에 매핑합니다.  자세한 내용은 UI의 [매핑 가이드](../../../../../data-prep/ui/mapping.md)를 참조하세요.
 
 ![매핑 인터페이스입니다.](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-mapping.png)
 
@@ -178,7 +178,7 @@ Experience Platform에 데이터를 수집하기 전에 매핑 인터페이스�
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL Acxiom] 소스에서 일괄 처리 데이터를 Experience Platform 상태로 가져오는 데이터 흐름을 만들었습니다. 추가 리소스는 아래 설명된 설명서를 참조하십시오.
+이 자습서를 따라 [!DNL Acxiom] 소스에서 Experience Platform으로 일괄 처리 데이터를 가져오는 데이터 흐름을 만들었습니다. 추가 리소스는 아래 설명된 설명서를 참조하십시오.
 
 ### 데이터 흐름 모니터링
 

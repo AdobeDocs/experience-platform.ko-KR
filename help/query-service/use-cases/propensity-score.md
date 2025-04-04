@@ -1,17 +1,17 @@
 ---
 title: 머신 러닝에서 생성된 예측 모델을 사용하여 성향 점수 결정
-description: 쿼리 서비스를 사용하여 예측 모델을 플랫폼 데이터에 적용하는 방법에 대해 알아봅니다. 이 문서에서는 플랫폼 데이터를 사용하여 각 방문에서 고객의 구매 성향을 예측하는 방법을 보여 줍니다.
+description: 쿼리 서비스를 사용하여 예측 모델을 Experience Platform 데이터에 적용하는 방법에 대해 알아봅니다. 이 문서에서는 Experience Platform 데이터를 사용하여 각 방문에서 고객의 구매 성향을 예측하는 방법을 보여 줍니다.
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
-source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1309'
 ht-degree: 0%
 
 ---
 
 # 머신 러닝이 생성한 예측 모델을 사용하여 성향 점수 결정
 
-Query Service를 사용하면 머신 러닝 플랫폼에 구축된 성향 점수와 같은 예측 모델을 활용하여 Experience Platform 데이터를 분석할 수 있습니다.
+쿼리 서비스를 사용하면 머신 러닝 플랫폼에 구축된 예측 모델(예: 성향 점수)을 활용하여 Experience Platform 데이터를 분석할 수 있습니다.
 
 이 안내서에서는 컴퓨팅 전자 필기장에서 모델을 교육하기 위해 쿼리 서비스를 사용하여 데이터를 머신 러닝 플랫폼으로 보내는 방법을 설명합니다. 훈련된 모델은 SQL을 사용하여 데이터에 적용하여 각 방문에 대한 고객의 구매 성향을 예측할 수 있습니다.
 
@@ -35,9 +35,9 @@ numpy
 tqdm
 ```
 
-## 플랫폼에서 [!DNL Jupyter Notebook](으)로 분석 테이블 가져오기 {#import-analytics-tables}
+## Experience Platform에서 [!DNL Jupyter Notebook]&#x200B;(으)로 분석 테이블 가져오기 {#import-analytics-tables}
 
-성향 점수 모델을 생성하려면 Platform에 저장된 분석 데이터의 프로젝션을 [!DNL Jupyter Notebook](으)로 가져와야 합니다. 쿼리 서비스에 연결된 [!DNL Python] 3 [!DNL Jupyter Notebook]에서 다음 명령은 가상 의류 매장인 Luma에서 고객 동작 데이터 세트를 가져옵니다. Platform 데이터가 XDM(Experience Data Model) 형식을 사용하여 저장되므로 스키마의 구조를 준수하는 샘플 JSON 개체를 생성해야 합니다. [샘플 JSON 개체를 생성](../../xdm/ui/sample.md)하는 방법에 대한 지침은 설명서를 참조하세요.
+성향 점수 모델을 생성하려면 Experience Platform에 저장된 분석 데이터의 프로젝션을 [!DNL Jupyter Notebook]&#x200B;(으)로 가져와야 합니다. 쿼리 서비스에 연결된 [!DNL Python] 3 [!DNL Jupyter Notebook]에서 다음 명령은 가상 의류 매장인 Luma에서 고객 동작 데이터 세트를 가져옵니다. Experience Platform 데이터가 XDM(Experience Data Model) 형식을 사용하여 저장되므로 스키마의 구조를 준수하는 샘플 JSON 개체를 생성해야 합니다. [샘플 JSON 개체를 생성](../../xdm/ui/sample.md)하는 방법에 대한 지침은 설명서를 참조하세요.
 
 ![여러 명령이 강조 표시된 [!DNL Jupyter Notebook] 대시보드입니다.](../images/use-cases/jupyter-commands.png)
 
@@ -161,7 +161,7 @@ plt.show()
 
 ## 쿼리 서비스를 사용하여 학습된 모델 적용 {#use-query-service-to-apply-trained-model}
 
-훈련된 모델이 만들어지면 Experience Platform에 보관된 데이터에 적용해야 합니다. 이렇게 하려면 머신 러닝 파이프라인의 논리를 SQL로 변환해야 합니다. 이 전환의 두 가지 주요 구성 요소는 다음과 같습니다.
+훈련된 모델이 만들어지면 Experience Platform에 있는 데이터에 적용해야 합니다. 이렇게 하려면 머신 러닝 파이프라인의 논리를 SQL로 변환해야 합니다. 이 전환의 두 가지 주요 구성 요소는 다음과 같습니다.
 
 - 먼저 예측 레이블의 확률을 얻으려면 SQL에서 [!DNL Logistics Regression] 모듈을 대신해야 합니다. Logistics Regression에서 만든 모델은 가중치 `w` 및 절편 `c`이(가) 모델의 출력인 회귀 모델 `y = wX + c`을(를) 생성했습니다. SQL 특징은 확률을 얻기 위해 가중치를 곱하는 데 사용될 수 있다.
 

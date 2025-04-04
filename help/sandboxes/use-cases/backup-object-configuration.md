@@ -1,15 +1,15 @@
 ---
-title: 샌드박스 도구를 사용하여 객체 구성 백업
+title: 샌드박스 도구를 사용하여 오브젝트 구성 백업
 description: 샌드박스를 안전하게 재설정하고 버전 관리 지원을 추가하려면 샌드박스 도구 패키지를 사용하여 객체 구성(또는 메타데이터)을 백업합니다. 백업 패키지는 특히 개발 반복 시 스키마, 데이터 세트 및 대상자와 같은 중요한 구성의 손실을 방지합니다.
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 3%
+source-wordcount: '1167'
+ht-degree: 4%
 
 ---
 
-# 샌드박스 도구를 사용하여 객체 구성 백업
+# 샌드박스 도구를 사용하여 오브젝트 구성 백업
 
 샌드박스를 안전하게 재설정하고 버전 관리 지원을 추가하려면 샌드박스 도구 패키지를 사용하여 객체 구성(또는 메타데이터)을 백업합니다. 백업 패키지는 특히 개발 반복 시 스키마, 데이터 세트 및 대상자와 같은 중요한 구성의 손실을 방지합니다.
 
@@ -30,7 +30,7 @@ ht-degree: 3%
 - 백업할 범위 메타데이터에 따라 개체를 수동으로 [패키지에 추가](../ui/sandbox-tooling.md#add-object-to-a-new-package)하는 방법 또는 [전체 샌드박스를 내보내기](../ui/sandbox-tooling.md#export-an-entire-sandbox)하는 방법을 이해했는지 확인하십시오.
 - 올바른 권한으로 조직의 샌드박스 도구에 액세스할 수 있는지 확인하십시오.
 
-### 사용할 UI 기능, 플랫폼 구성 요소 및 Experience Cloud 제품 {#ui-functionality-and-elements}
+### 사용할 UI 기능, Experience Platform 구성 요소 및 Experience Cloud 제품 {#ui-functionality-and-elements}
 
 이 사용 사례를 성공적으로 구현하려면 Adobe Experience Platform의 여러 영역을 사용해야 합니다. 이러한 모든 영역에 필요한 [특성 기반 액세스 제어 권한](../../access-control/abac/overview.md)이 있는지 확인하거나 시스템 관리자에게 필요한 권한을 부여하도록 요청하십시오.
 
@@ -85,7 +85,7 @@ ht-degree: 3%
 
 ##### 다중 객체 패키지 생성
 
-Experience Platform에서 왼쪽 탐색에서 **[!UICONTROL 샌드박스]**&#x200B;를 선택한 다음 **[!UICONTROL 패키지]**&#x200B;를 선택합니다. 새 패키지를 만들려면 오른쪽 상단에서 **[!UICONTROL 패키지 만들기]**&#x200B;를 선택합니다.
+Experience Platform의 왼쪽 탐색에서 **[!UICONTROL 샌드박스]**&#x200B;를 선택한 다음 **[!UICONTROL 패키지]**&#x200B;를 선택합니다. 새 패키지를 만들려면 오른쪽 상단에서 **[!UICONTROL 패키지 만들기]**&#x200B;를 선택합니다.
 
 ![패키지 만들기가 강조 표시된 샌드박스 대시보드의 패키지 탭입니다.](../images/use-cases/create-package.png)
 
@@ -125,4 +125,4 @@ Experience Platform에서 왼쪽 탐색에서 **[!UICONTROL 샌드박스]**&#x20
 
 샌드박스 도구 를 통해 종료되는 추가 사용 사례를 살펴봅니다.
 
-- [샌드박스 툴링을 사용하여 전문가 중심 활성화](./center-of-excellence.md)
+- [샌드박스 도구를 사용하여 Center of Excellence 활성화](./center-of-excellence.md)

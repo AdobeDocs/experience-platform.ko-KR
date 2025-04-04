@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;사용자 인터페이스;UI;대시보드;대시보드;프로필;세그먼트;대상;라이선스 사용
-title: UI에서 Platform 대시보드 수정
+title: UI에서 Experience Platform 대시보드 수정
 description: 이 안내서는 조직의 Adobe Experience Platform 데이터가 대시보드 내에 표시되는 방식을 사용자 지정하는 단계별 지침을 제공합니다.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform UI(사용자 인터페이스) 내에서 여러 대시�
 >
 >대시보드에 대한 모든 업데이트는 조직당 및 샌드박스별로 수행됩니다.
 
-이 안내서는 Platform UI의 [!UICONTROL 프로필], [!UICONTROL 세그먼트] 및 [!UICONTROL 대상] 대시보드 내에 대시보드 데이터가 표시되는 방식을 사용자 지정하는 방법에 대한 단계별 지침을 제공합니다.
+이 안내서는 Experience Platform UI의 [!UICONTROL 프로필], [!UICONTROL 세그먼트] 및 [!UICONTROL 대상] 대시보드 내에 대시보드 데이터가 표시되는 방식을 사용자 지정하는 방법에 대한 단계별 지침을 제공합니다.
 
 ## 시작하기
 

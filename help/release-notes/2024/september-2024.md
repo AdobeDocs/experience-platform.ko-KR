@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform 릴리스 정보 2024년 9월
 description: Adobe Experience Platform의 2024년 9월 릴리스 정보입니다.
-source-git-commit: eac613434f631cab567ab3fa6e30d33acac79d2f
+exl-id: e5b40712-2a54-4c6f-a4a1-2f078305da59
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2202'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +27,7 @@ Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 
 ## 경고 {#alerts}
 
-Experience Platform을 사용하면 다양한 플랫폼 활동에 대한 이벤트 기반 경고를 구독할 수 있습니다. 플랫폼 사용자 인터페이스의 [!UICONTROL 경고] 탭을 통해 다양한 경고 규칙을 구독할 수 있으며, UI 자체 또는 이메일 알림을 통해 알림 메시지를 받도록 선택할 수 있습니다.
+Experience Platform을 사용하면 다양한 Experience Platform 활동에 대한 이벤트 기반 경고를 구독할 수 있습니다. Experience Platform 사용자 인터페이스의 [!UICONTROL 경고] 탭을 통해 다양한 경고 규칙을 구독할 수 있으며 UI 자체 내에서 또는 이메일 알림을 통해 경고 메시지를 수신하도록 선택할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
@@ -49,10 +50,10 @@ Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 라이선스 사용 추가 기능 테이블 | 핵심 제품 및 추가 기능에 대한 전용 테이블을 통해 라이선스 사용에 대한 세부적인 가시성을 확보하고 플랫폼 리소스를 관리할 수 있습니다. 샌드박스 수준의 드릴 스루 보기를 통해 각 핵심 제품에 대한 주요 지표를 추적하고 분석합니다. 추가 기능 지표는 핵심 제품 지표와 완벽하게 통합되어 사용 현황에 대한 포괄적인 보기를 제공합니다. 가시성이 향상되면 라이선스 관리를 최적화하고 조직의 요구 사항에 맞게 리소스를 조정할 수 있습니다. 자세한 내용은 [[!UICONTROL 라이선스 사용] 대시보드 안내서](../../dashboards/guides/license-usage.md#overview-tab)를 참조하십시오. |
+| 라이선스 사용 추가 기능 테이블 | 라이선스 사용에 대한 세부 가시성을 확보하고 핵심 제품 및 추가 기능에 대한 전용 테이블을 사용하여 Experience Platform 리소스를 관리합니다. 샌드박스 수준의 드릴 스루 보기를 통해 각 핵심 제품에 대한 주요 지표를 추적하고 분석합니다. 추가 기능 지표는 핵심 제품 지표와 완벽하게 통합되어 사용 현황에 대한 포괄적인 보기를 제공합니다. 가시성이 향상되면 라이선스 관리를 최적화하고 조직의 요구 사항에 맞게 리소스를 조정할 수 있습니다. 자세한 내용은 [[!UICONTROL 라이선스 사용] 대시보드 안내서](../../dashboards/guides/license-usage.md#overview-tab)를 참조하십시오. |
 | 쿼리 프로 모드 - 전역 필터 업그레이드 | 쿼리 프로 모드의 새로운 날짜 필터로 분석을 개선하십시오. SQL 쿼리에서 동적 날짜 매개변수를 사용하여 인사이트를 구체화하고 특정 시간대별로 데이터를 필터링하십시오. 직관적인 UI로 사전 설정이나 사용자 정의 날짜 범위를 선택하여 대시보드가 모든 사용자에게 높은 관련성을 유지할 수 있도록 하십시오. 워크플로를 단순화하고, 정확성을 유지하며, 시의적절한 결정을 내려보십시오. 자세한 내용은 [날짜 필터 생성 안내서](../../dashboards/sql-insights-query-pro-mode/filters/global-filter.md)를 참조하십시오. |
 | 쿼리 프로 모드 - 드릴 스루 | 쿼리 프로 모드의 드릴 스루 기능으로 더욱 깊은 인사이트를 얻고 높은 수준의 차트에서 상세한 대시보드까지 원활하게 탐색해 보십시오. 이 기능을 사용해 요약에서 심층 분석으로 간편하게 이동하고 추세, 고객 행동, KPI를 살펴볼 수 있습니다. 자동 필터 패스 스루 및 여러 수준의 드릴 스루를 통해 데이터의 일관성이 유지되므로 원활한 탐색이 가능합니다. 업무 흐름을 단순화하고, 맥락을 유지하고, 의사 결정을 가속화해 보십시오. 자세한 내용은 [드릴 스루 생성에 대한 단계별 안내서](../../dashboards/sql-insights-query-pro-mode/drill-through.md)를 읽어 보십시오. |
-| 쿼리 프로 모드 - 고급 테이블 속성 | 쿼리 프로 모드의 고급 테이블 속성을 사용하면 데이터 시각화 간소화, 워크플로 효율성 강화, 데이터 명확성 개선이 가능합니다. 사용자 정의 대시보드에서 바로 표에 자동 정렬, 크기 조정 및 페이지 매김을 추가해 보십시오. 주요 데이터의 우선순위를 정해 열을 정렬하고, 최적의 가독성을 위해 크기를 조정하고, SQL 쿼리를 수정하지 않고도 대용량 데이터 세트를 원활하게 탐색할 수 있습니다. 이러한 기능들을 통합하고 데이터 인사이트를 강화하는 방법에 대해서는 “[더 보기](../../dashboards/sql-insights-query-pro-mode/view-more.md)” 안내서를 읽어 보십시오. |
+| 쿼리 프로 모드 - 고급 테이블 속성 | 쿼리 프로 모드의 고급 테이블 속성을 사용하면 데이터 시각화 간소화, 워크플로 효율성 강화, 데이터 명확성 개선이 가능합니다. 사용자 정의 대시보드에서 바로 테이블에 자동 정렬, 크기 조정 및 페이지 매김을 추가해 보십시오. 주요 데이터의 우선순위를 정해 열을 정렬하고, 최적의 가독성을 위해 크기를 조정하고, SQL 쿼리를 수정하지 않고도 대용량 데이터 세트를 원활하게 탐색할 수 있습니다. 이러한 기능들을 통합하고 데이터 인사이트를 강화하는 방법에 대해서는 “[더 보기](../../dashboards/sql-insights-query-pro-mode/view-more.md)” 안내서를 읽어 보십시오. |
 | 총 데이터 양 | “평균 프로필 풍부도” 지표가 “총 데이터 양” 지표로 대체되었습니다. 총 데이터 양은 참여 및 개인화 워크플로에 실시간 고객 프로필을 사용하여 사용할 수 있는 데이터의 총량을 나타냅니다. 이 변경 사항에 대한 자세한 내용은 [총 데이터 양 안내서](../../landing/license-usage-and-guardrails/total-data-volume.md)에서 확인할 수 있습니다. |
 
 {style="table-layout:auto"}
@@ -77,13 +78,13 @@ Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대
 
 **업데이트 일자: 2024년 9월 30일**
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 대상 또는 업데이트된 대상** {#new-updated-destinations}
 
 | 대상 | 설명 |
 | --- | --- |
-| [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) | 2024년 9월 릴리스에서는 `countryCode` 매개변수를 Amazon Ads로 내보내는 매핑 옵션을 추가했습니다. [매핑 단계](/help/destinations/catalog/advertising/amazon-ads.md#map)에서 `countryCode`를 사용하여 Amazon의 신원 일치율을 개선해 보십시오. |
+| [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) | 2024년 9월 릴리스에서는 `countryCode` 매개변수를 Amazon Ads로 내보내는 매핑 옵션을 추가했습니다. [매핑 단계](/help/destinations/catalog/advertising/amazon-ads.md#map)에서 `countryCode`를 사용하여 Amazon의 ID 일치율을 개선해 보십시오. |
 | [[!BADGE B2B]{type=Informative} Demandbase](/help/destinations/catalog/advertising/demandbase.md) | 이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대한 계정 대상자를 활성화할 수 있습니다. DemandBase의 B2B Demand Side Platform(DSP)을 통해 대상 계정의 관련 페르소나와 역할에 광고를 게재하십시오. 대상 계정은 마케팅과 판매의 다른 다운스트림 사용 사례를 위해 Demandbase 서드파티 데이터로 강화할 수도 있습니다. |
 
 {style="table-layout:auto"}
@@ -120,14 +121,14 @@ Adobe Experience Platform ID 서비스를 사용하여 여러 디바이스 및 �
 
 | 기능 | 설명 |
 | --- | --- |
-| 아이덴티티 그래프 연결 규칙 제한 공개 | ID 그래프 연결 규칙은 사용자에게 정확한 개인화를 보장하는 데 사용할 수 있는 ID 서비스의 도구 모음입니다. <ul><li>이제 [ID 최적화 알고리즘](../../identity-service/identity-graph-linking-rules/identity-optimization-algorithm.md)을 사용하여 ID 그래프가 단일 사용자를 나타내는지 확인하고, 실시간 고객 프로필에서 원치 않는 ID 병합을 방지할 수 있습니다.</li><li>[네임스페이스 우선 순위](../../identity-service/identity-graph-linking-rules/namespace-priority.md)를 구성하여 각 네임스페이스의 중요성을 정의하고 프로필이 형성되고 세분화되는 방식에 영향을 줍니다.</li><li>[UI의 그래프 시뮬레이션 도구](../../identity-service/identity-graph-linking-rules/graph-simulation.md)를 사용하여 다양한 구성으로 ID 그래프를 시뮬레이션합니다.</li><li>[ID 설정 인터페이스](../../identity-service/identity-graph-linking-rules/identity-settings-ui.md)를 사용하여 고유한 네임스페이스를 지정하고 조직의 모든 네임스페이스에 대한 우선 순위를 설정합니다.</li><li>그래프 데이터와 관련된 지표와 추세에 대한 자세한 내용은 [ID 대시보드](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs)를 참조하십시오.</li></ul> 아이덴티티 그래프 연결 규칙을 시도해 보려면 Adobe 계정 팀에 문의하여 개발 샌드박스에 대한 액세스를 요청하십시오. |
+| ID 그래프 연결 규칙 제한 공개 | ID 그래프 연결 규칙은 사용자에게 정확한 개인화를 보장하는 데 사용할 수 있는 ID 서비스의 도구 모음입니다. <ul><li>이제 [ID 최적화 알고리즘](../../identity-service/identity-graph-linking-rules/identity-optimization-algorithm.md)을 사용하여 ID 그래프가 단일 사용자를 나타내는지 확인하고, 실시간 고객 프로필에서 원치 않는 ID 병합을 방지할 수 있습니다.</li><li>[네임스페이스 우선 순위](../../identity-service/identity-graph-linking-rules/namespace-priority.md)를 구성하여 각 네임스페이스의 중요성을 정의하고 프로필이 형성되고 세분화되는 방식에 영향을 줍니다.</li><li>[UI의 그래프 시뮬레이션 도구](../../identity-service/identity-graph-linking-rules/graph-simulation.md)를 사용하여 다양한 구성으로 ID 그래프를 시뮬레이션합니다.</li><li>[ID 설정 인터페이스](../../identity-service/identity-graph-linking-rules/identity-settings-ui.md)를 사용하여 고유한 네임스페이스를 지정하고 조직의 모든 네임스페이스에 대한 우선 순위를 설정합니다.</li><li>그래프 데이터와 관련된 지표와 추세에 대한 자세한 내용은 [ID 대시보드](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs)를 참조하십시오.</li></ul> ID 그래프 연결 규칙을 시도해 보려면 Adobe 계정 팀에 문의하여 개발 샌드박스에 대한 액세스를 요청하십시오. |
 
 **업데이트된 설명서**
 
 | 기능 | 설명 |
 | --- | --- |
-| 아이덴티티 그래프 연결 규칙에 대한 문제 해결 안내서 | 아이덴티티 그래프 연결 규칙에 대한 새로운 [문제 해결 안내서](../../identity-service/identity-graph-linking-rules/troubleshooting.md)를 읽고 아이덴티티 그래프 연결 규칙 사용에서 발생 가능한 일반적 문제 해결에 활용할 수 있는 접근 방식과 디버깅 솔루션에 대해 알아보십시오. |
-| 아이덴티티 그래프 연결 규칙에 대한 FAQ | 네임스페이스 우선순위, ID 최적화 알고리즘 및 아이덴티티 그래프 연결 규칙의 다른 패싯, 관련 자주 묻는 질문에 대한 답변 목록을 보려면 새로운 [아이덴티티 그래프 연결 규칙 FAQ](../../identity-service/identity-graph-linking-rules/troubleshooting.md#frequently-asked-questions)를 읽어 보십시오. |
+| ID 그래프 연결 규칙에 대한 문제 해결 안내서 | ID 그래프 연결 규칙에 대한 새로운 [문제 해결 안내서](../../identity-service/identity-graph-linking-rules/troubleshooting.md)를 읽고 ID 그래프 연결 규칙 사용에서 발생 가능한 일반적 문제 해결에 활용할 수 있는 접근 방식과 디버깅 솔루션에 대해 알아보십시오. |
+| ID 그래프 연결 규칙에 대한 FAQ | 네임스페이스 우선순위, ID 최적화 알고리즘 및 아이덴티티 그래프 연결 규칙의 다른 패싯, 관련 자주 묻는 질문에 대한 답변 목록을 보려면 새로운 [아이덴티티 그래프 연결 규칙 FAQ](../../identity-service/identity-graph-linking-rules/troubleshooting.md#frequently-asked-questions)를 읽어 보십시오. |
 
 {style="table-layout:auto"}
 

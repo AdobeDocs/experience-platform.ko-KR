@@ -3,30 +3,30 @@ description: Experience Platform 사용자 인터페이스를 사용하여 세�
 title: UI에서 대상에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1864'
 ht-degree: 4%
 
 ---
 
 # UI에서 대상에 대한 데이터 흐름 모니터링
 
-세분화 서비스를 사용하면 [!DNL Real-Time Customer Profile] 데이터에서 세그먼트 정의나 다른 소스를 통해 대상자를 만들 수 있습니다. Platform은 소스에서 대상으로 이러한 데이터 흐름을 투명하게 추적할 수 있는 데이터 흐름을 제공합니다.
+세분화 서비스를 사용하면 [!DNL Real-Time Customer Profile] 데이터에서 세그먼트 정의나 다른 소스를 통해 대상자를 만들 수 있습니다. Experience Platform은 소스에서 대상으로 이러한 데이터 흐름을 투명하게 추적할 수 있는 데이터 흐름을 제공합니다.
 
-모니터링 대시보드를 사용하여 데이터의 세분화 상태를 포함하여 대상자 내의 데이터 활동을 시각적으로 표시합니다. Experience Platform 사용자 인터페이스를 사용하여 모니터링 대시보드를 사용하여 데이터의 세그먼테이션을 모니터링하고, 대상 활성화, 평가 및 내보내기 작업의 상태를 추적할 수 있는 방법에 대한 지침은 튜토리얼을 참조하십시오.
+모니터링 대시보드를 사용하여 데이터의 세분화 상태를 포함하여 대상자 내의 데이터 활동을 시각적으로 표시합니다. 모니터링 대시보드를 사용하여 Experience Platform 사용자 인터페이스를 사용하여 데이터의 세그먼테이션을 모니터링하고, 대상 활성화, 평가 및 내보내기 작업의 상태를 추적할 수 있는 방법에 대한 지침은 튜토리얼을 참조하십시오.
 
 ## 시작하기 {#getting-started}
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-- [데이터 흐름](../home.md): 데이터 흐름은 플랫폼 간에 데이터를 이동하는 데이터 작업을 나타냅니다. 데이터 흐름은 여러 서비스에 걸쳐 구성되어 있으므로 데이터를 소스 커넥터에서 대상 데이터 세트로, [!DNL Identity] 및 [!DNL Profile], [!DNL Destinations](으)로 이동하는 데 도움이 됩니다.
+- [데이터 흐름](../home.md): 데이터 흐름은 Experience Platform에서 데이터를 이동하는 데이터 작업을 나타냅니다. 데이터 흐름은 여러 서비스에 걸쳐 구성되어 있으므로 데이터를 소스 커넥터에서 대상 데이터 세트로, [!DNL Identity] 및 [!DNL Profile], [!DNL Destinations]&#x200B;(으)로 이동하는 데 도움이 됩니다.
    - [데이터 흐름 실행](../../sources/notifications.md): 데이터 흐름 실행은 선택한 데이터 흐름의 빈도 구성에 따라 반복되는 예약된 작업입니다.
 - [세그먼테이션](../../segmentation/home.md): 세그먼테이션을 사용하면 실시간 고객 프로필 데이터에서 대상을 만들 수 있습니다.
    - [활성화 작업](../../destinations/ui/activation-overview.md): 활성화 작업은 대상을 지정된 대상으로 활성화하는 데 사용됩니다.
    - [평가 작업](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): 평가 작업은 대상을 평가하는 비동기 프로세스입니다.
    - [내보내기 작업](../../segmentation/api/export-jobs.md): 내보내기 작업은 대상 구성원을 데이터 세트로 유지하는 데 사용되는 비동기 프로세스입니다.
-- [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+- [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 ## 모니터링 대상자 대시보드 {#monitoring-audiences-dashboard}
 

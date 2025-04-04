@@ -3,16 +3,16 @@ title: 통합 태그 API 개요
 description: Adobe Experience Platform에서 통합 태그 API를 사용하여 통합 태그 및 폴더를 관리하는 방법을 알아봅니다.
 role: Developer
 exl-id: f4da5850-d5b0-4746-9f28-88ce836db800
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '236'
 ht-degree: 2%
 
 ---
 
 # 통합 태그 API 개요
 
-통합 태그 API를 사용하면 Adobe Experience Platform 내에서 비즈니스 개체를 분류하고 관리할 수 있습니다. 이 API의 끝점을 사용하여 대상자 또는 데이터 세트와 같은 Platform 개체를 보다 효율적으로 구성하는 데 사용할 수 있는 폴더와 태그를 모두 만들 수 있습니다.
+통합 태그 API를 사용하면 Adobe Experience Platform 내에서 비즈니스 개체를 분류하고 관리할 수 있습니다. 이 API의 끝점을 사용하여 대상자 또는 데이터 세트와 같은 Experience Platform 개체를 보다 효율적으로 구성하는 데 사용할 수 있는 폴더와 태그를 모두 만들 수 있습니다.
 
 개별 끝점 안내서를 읽기 전에 [시작 안내서](./getting-started.md)에서 필수 헤더, 샘플 API 호출 읽기 등에 대한 중요한 정보를 참조하십시오.
 

@@ -4,9 +4,9 @@ title: Real-Time Customer Data Platform의 개인 정보 보호
 description: Adobe Real-Time Customer Data Platform을 사용하면 데이터 작업이 개인 정보 보호 규정을 준수하도록 하는 프로세스를 간소화할 수 있습니다.
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 고객 액세스 및 삭제 요청 준수
 
-[!DNL General Data Protection Regulation]&#x200B;(GDPR) 및 [!DNL California Consumer Privacy Act]&#x200B;(CCPA)과 같은 법적 개인 정보 보호 규정은 고객에게 수집된 개인 데이터에 대한 액세스 또는 삭제를 요청할 수 있는 권한을 제공합니다. [!DNL Real-Time CDP]은(는) 데이터 수집 및 저장을 위해 [!DNL Experience Platform] 기능을 활용하므로 개인 데이터 액세스 및 삭제에 대한 고객 요청은 [!DNL Platform] 내에서 관리되어야 합니다. 자세한 내용은 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md)의 개요를 참조하십시오.
+[!DNL General Data Protection Regulation]&#x200B;(GDPR) 및 [!DNL California Consumer Privacy Act]&#x200B;(CCPA)과 같은 법적 개인 정보 보호 규정은 고객에게 수집된 개인 데이터에 대한 액세스 또는 삭제를 요청할 수 있는 권한을 제공합니다. [!DNL Real-Time CDP]은(는) 데이터 수집 및 저장을 위해 [!DNL Experience Platform] 기능을 활용하므로 개인 데이터 액세스 및 삭제에 대한 고객 요청은 [!DNL Experience Platform] 내에서 관리되어야 합니다. 자세한 내용은 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md)의 개요를 참조하십시오.
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ## IAB TCF 2.0 지원
 
-[!DNL Real-Time CDP]은(는) [!DNL Interactive Advertising Bureau (IAB)]에 설명된 대로 [!DNL Transparency & Consent Framework (TCF)]에 대해 등록된 [공급업체 목록](https://iabeurope.eu/vendor-list-tcf/)의 일부인 Adobe Experience Platform에 빌드되어 있습니다. TCF 2.0 요구 사항을 준수하는 플랫폼을 사용하면 자세한 고객 동의 데이터를 수집하고 이를 저장된 고객 프로필에 통합할 수 있습니다. 그런 다음 이 동의 데이터를 사용 사례에 따라 특정 프로필이 내보낸 대상에 포함되는지 여부에 팩터링할 수 있습니다.
+[!DNL Real-Time CDP]은(는) [!DNL Interactive Advertising Bureau (IAB)]에 설명된 대로 [!DNL Transparency & Consent Framework (TCF)]에 대해 등록된 [공급업체 목록](https://iabeurope.eu/vendor-list-tcf/)의 일부인 Adobe Experience Platform에 빌드되어 있습니다. TCF 2.0 요구 사항을 준수하는 Experience Platform을 사용하면 자세한 고객 동의 데이터를 수집하고 이를 저장된 고객 프로필에 통합할 수 있습니다. 그런 다음 이 동의 데이터를 사용 사례에 따라 특정 프로필이 내보낸 대상에 포함되는지 여부에 팩터링할 수 있습니다.
 
 자세한 내용은 Experience Platform의 [IAB TCF 2.0 지원에 대한 개요](../../landing/governance-privacy-security/consent/iab/overview.md)를 참조하십시오.
 

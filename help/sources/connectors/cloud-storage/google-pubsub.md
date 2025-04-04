@@ -3,9 +3,9 @@ title: Google PubSub Source 개요
 description: API 또는 사용자 인터페이스를 사용하여 Google PubSub를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 >
 >[!DNL Google PubSub] 소스는 Real-Time CDP Ultimate을 구매한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
 
-Adobe Experience Platform은 [!DNL AWS], [!DNL Google Cloud Platform] 및 [!DNL Azure]과(와) 같은 클라우드 공급자에 대한 기본 연결을 제공하므로 다운스트림 서비스 및 대상에서 사용할 수 있도록 이러한 시스템의 데이터를 플랫폼으로 가져올 수 있습니다.
+Adobe Experience Platform은 [!DNL AWS], [!DNL Google Cloud Platform] 및 [!DNL Azure]과(와) 같은 클라우드 공급자에 대한 기본 연결을 제공하므로 이러한 시스템에서 다운스트림 서비스 및 대상에서 사용할 데이터를 Experience Platform으로 가져올 수 있습니다.
 
-클라우드 스토리지 소스는 다운로드, 포맷 또는 업로드 없이도 데이터를 플랫폼으로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. 플랫폼을 사용하면 [!DNL Google PubSub]에서 실시간으로 데이터를 가져올 수 있습니다.
+클라우드 스토리지 소스는 다운로드, 포맷 또는 업로드 없이도 데이터를 Experience Platform으로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. Experience Platform을 사용하면 [!DNL Google PubSub]에서 실시간으로 데이터를 가져올 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -49,7 +49,7 @@ Adobe Experience Platform은 [!DNL AWS], [!DNL Google Cloud Platform] 및 [!DNL 
 
 ![Google Developer Console의 키 추가 창](../../images/tutorials/create/google-pubsub/add-key.png)
 
-성공하면 컴퓨터에 개인 키가 저장되었으며 파일이 다운로드된다는 메시지가 표시됩니다. 그런 다음 Experience Platform 시 [!DNL Google PubSub] 계정을 만들 때 이 파일의 콘텐츠를 자격 증명으로 사용할 수 있습니다.
+성공하면 컴퓨터에 개인 키가 저장되었으며 파일이 다운로드된다는 메시지가 표시됩니다. 그런 다음 Experience Platform에서 [!DNL Google PubSub] 계정을 만들 때 이 파일의 콘텐츠를 자격 증명으로 사용할 수 있습니다.
 
 ### 주제 및 구독 수준에서 권한 부여 {#grant-permissions}
 
@@ -59,7 +59,7 @@ Adobe Experience Platform은 [!DNL AWS], [!DNL Google Cloud Platform] 및 [!DNL 
 
 ## 최적의 [!DNL Google PubSub usage]을(를) 위한 구성 {#optimal-configurations}
 
-이 섹션에서는 Experience Platform 시 [!DNL Google PubSub] 소스의 사용을 최적화하기 위해 권장되는 구성에 대해 간략히 설명합니다.
+이 섹션에서는 Experience Platform에서 [!DNL Google PubSub] 소스의 사용을 최적화하기 위해 권장되는 구성에 대해 간략히 설명합니다.
 
 ### 구독 속성 {#subscription-properties}
 
@@ -81,9 +81,9 @@ Adobe Experience Platform은 [!DNL AWS], [!DNL Google Cloud Platform] 및 [!DNL 
 >
 >[!DNL Google PubSub] 구독당 하나의 원본 데이터 흐름만 만들 수 있습니다. 샌드박스에서 구독을 재사용하면 데이터가 손실됩니다.
 
-## [!DNL Google PubSub]을(를) Experience Platform에 연결
+## Experience Platform에 [!DNL Google PubSub] 연결
 
-아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Google PubSub]을(를) 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Google PubSub]을(를) Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
 
 ### API 사용
 

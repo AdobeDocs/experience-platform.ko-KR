@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1141'
 ht-degree: 21%
 
 ---
@@ -38,11 +38,11 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처한 대로 조직 데
 
 | 기능 | 설명 |
 | --- | --- |
-| 프로필, 세그먼트, 대상 및 라이선스 사용 대시보드(Beta) | **참고: 대시보드 기능은 현재 Beta 버전이며 모든 사용자가 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.**<br/><br/>&#x200B;대시보드는 조직의 데이터에 대한 기본 보고를 제공하며 Platform 내의 마케터 워크플로우에 직접 빌드됩니다. 이러한 대시보드는 추가적인 IT 지원이나 추가적인 데이터 웨어하우징 설계 및 구현으로 데이터를 내보내고 처리하는 데 소요되는 시간과 노력 없이 사용할 수 있습니다. |
+| 프로필, 세그먼트, 대상 및 라이선스 사용 대시보드(Beta) | **참고: 대시보드 기능은 현재 Beta 버전이며 모든 사용자가 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.**<br/><br/>&#x200B;대시보드는 조직의 데이터에 대한 기본 보고를 제공하며 Experience Platform 내의 마케터 워크플로우에 직접 빌드됩니다. 이러한 대시보드는 추가적인 IT 지원이나 추가적인 데이터 웨어하우징 설계 및 구현으로 데이터를 내보내고 처리하는 데 소요되는 시간과 노력 없이 사용할 수 있습니다. |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Data Science Workspace은 머신 러닝 및 인공 지능을 사용하여 데이터에서 통찰력을 만듭니다. Adobe Experience Platform에 통합된 Data Science Workspace은 Adobe 솔루션 전반에서 컨텐츠 및 데이터 자산을 사용하여 예측을 수행할 수 있도록 합니다.
+Data Science Workspace은 머신 러닝 및 인공 지능을 사용하여 데이터에서 통찰력을 만듭니다. Adobe Experience Platform에 통합된 Data Science Workspace은 Adobe 솔루션 전반에서 컨텐츠 및 데이터 에셋을 사용하여 예측을 수행하는 데 도움이 됩니다.
 
 **새로운 기능**
 
@@ -54,9 +54,9 @@ Data Science Workspace에 대한 일반적인 정보는 [Data Science Workspace 
 
 ## [!DNL Dataflows] {#dataflows}
 
-Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되고, Experience Platform 내에서 분석되며, 다양한 대상으로 활성화됩니다. Platform은 데이터 흐름과 함께 투명성을 제공하여 이 잠재적으로 비선형적인 데이터 흐름을 추적하는 프로세스를 보다 쉽게 만듭니다.
+Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되고, Experience Platform 내에서 분석되며, 다양한 대상으로 활성화됩니다. Experience Platform은 데이터 흐름을 투명하게 제공하여 이 잠재적으로 비선형적인 데이터 흐름을 추적하는 프로세스를 보다 쉽게 만듭니다.
 
-데이터 흐름은 플랫폼 간에 데이터를 이동하는 데이터 작업을 나타냅니다. 이러한 데이터 흐름은 서로 다른 서비스에 걸쳐 구성되어 있으므로 데이터를 소스 커넥터에서 대상 데이터 세트로 이동하는 데 도움이 됩니다. [!DNL Identity Service] 및 [!DNL Real-Time Customer Profile]에서 사용한 후 최종적으로 [!DNL Destinations]에 활성화됩니다.
+데이터 흐름은 Experience Platform 간에 데이터를 이동하는 데이터 작업을 나타냅니다. 이러한 데이터 흐름은 서로 다른 서비스에 걸쳐 구성되어 있으므로 데이터를 소스 커넥터에서 대상 데이터 세트로 이동하는 데 도움이 됩니다. [!DNL Identity Service] 및 [!DNL Real-Time Customer Profile]에서 사용한 후 최종적으로 [!DNL Destinations]에 활성화됩니다.
 
 **새로운 기능**
 
@@ -68,7 +68,7 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되고
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 대상**
 
@@ -80,7 +80,7 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되고
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
-표준화 및 상호 운용성은 [!DNL Experience Platform]의 핵심 개념입니다. Adobe 기반의 [!DNL Experience Data Model](XDM)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 작업입니다.
+표준화 및 상호 운용성은 [!DNL Experience Platform]의 핵심 개념입니다. Adobe을 기반으로 하는 [!DNL Experience Data Model]&#x200B;(XDM)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 작업입니다.
 
 XDM은 디지털 경험의 성능을 개선하기 위해 설계된 공개적으로 문서화된 사양입니다. Adobe Experience Platform의 서비스와 통신하는 모든 애플리케이션에 대한 일반적인 구조와 정의를 제공합니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 일반적인 표현에 통합하여 더 빠르고 통합적인 방식으로 통찰력을 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
 
@@ -120,11 +120,11 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 Experience Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
-**새 소스**
+**새로운 소스**
 
 | 기능 | 설명 |
 | --- | --- |

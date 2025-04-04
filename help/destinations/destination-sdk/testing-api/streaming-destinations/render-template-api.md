@@ -2,9 +2,9 @@
 description: 대상 테스트 API를 사용하여 메시지 변환 템플릿을 기반으로 스트리밍 대상에 대한 출력을 확인하는 방법에 대해 알아봅니다.
 title: 내보낸 프로필 구조의 유효성 검사
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '794'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 ## 메시지 변형 템플릿을 기반으로 내보낸 프로필 렌더링 {#render-exported-data}
 
-`authoring/testing/template/render` 끝점에 POST 요청을 하고 대상 구성의 대상 ID와 [샘플 템플릿 API 끝점](sample-template-api.md)을 사용하여 만든 템플릿을 제공하여 내보낸 프로필을 렌더링할 수 있습니다.
+`authoring/testing/template/render` 끝점에 POST 요청을 수행하고 대상 구성의 대상 ID와 [샘플 템플릿 API 끝점](sample-template-api.md)을 사용하여 만든 템플릿을 제공하여 내보낸 프로필을 렌더링할 수 있습니다.
 
 변형을 적용하지 않고 원시 프로필을 내보내는 간단한 템플릿을 사용하여 시작한 다음 프로필에 변형을 적용하는 보다 복잡한 템플릿으로 이동할 수 있습니다. 단순 템플릿의 구문: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
@@ -43,7 +43,7 @@ POST authoring/testing/template/render
 | -------- | ----------- |
 | `destinationId` | 내보낸 프로필을 렌더링하는 대상 구성의 ID입니다. |
 | `template` | 내보낸 프로필을 렌더링하는 데 기준이 되는 템플릿의 문자 이스케이프 버전입니다. |
-| `profiles` | *선택 사항*. 요청 본문에 프로필을 추가할 수 있습니다. 프로필을 추가하지 않으면 Experience Platform이 프로필을 자동으로 생성하고 요청에 추가합니다. <br> 호출 본문에 프로필을 추가하려면 [샘플 프로필 생성 API](sample-profile-generation-api.md)를 사용하여 일부 프로필을 생성할 수 있습니다. |
+| `profiles` | *선택 사항*. 요청 본문에 프로필을 추가할 수 있습니다. 프로필을 추가하지 않으면 Experience Platform에서 자동으로 프로필을 생성하고 요청에 추가합니다. <br> 호출 본문에 프로필을 추가하려면 [샘플 프로필 생성 API](sample-profile-generation-api.md)를 사용하여 일부 프로필을 생성할 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -1066,8 +1066,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## API 오류 처리 {#api-error-handling}
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽은 후에는 메시지 변환 템플릿을 사용하여 대상의 예상 데이터 형식과 일치하는 내보낸 프로필을 생성하는 방법을 이해할 수 있습니다. [Destination SDK을 사용하여 대상을 구성하는 방법](../../guides/configure-destination-instructions.md)을 읽고 대상 구성 프로세스에 이 단계가 어디에 맞는지 파악하십시오.
+이 문서를 읽은 후에는 메시지 변환 템플릿을 사용하여 대상의 예상 데이터 형식과 일치하는 내보낸 프로필을 생성하는 방법을 이해할 수 있습니다. [Destination SDK을 사용하여 대상을 구성하는 방법](../../guides/configure-destination-instructions.md)을 읽어 대상을 구성하는 프로세스에 이 단계가 어디에 맞는지 이해합니다.

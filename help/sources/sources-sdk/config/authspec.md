@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: 셀프서비스 소스에 대한 인증 사양 구성(일괄 SDK)
 description: 이 문서에서는 셀프서비스 소스(일괄 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 8517532f991413a239e0da890bf53b1bf5b621f0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '772'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 인증 사양은 Adobe Experience Platform 사용자가 소스에 연결하는 방법을 정의합니다.
 
-`authSpec` 배열에는 원본을 플랫폼에 연결하는 데 필요한 인증 매개 변수에 대한 정보가 포함되어 있습니다. 지정된 모든 소스는 서로 다른 여러 유형의 인증을 지원할 수 있습니다.
+`authSpec` 배열에는 원본을 Experience Platform에 연결하는 데 필요한 인증 매개 변수에 대한 정보가 포함되어 있습니다. 지정된 모든 소스는 서로 다른 여러 유형의 인증을 지원할 수 있습니다.
 
 ## 인증 사양
 
@@ -340,4 +340,4 @@ GET /data?X-Auth-Key1={YOUR_AUTH_KEY1}&X-Auth-Key2={YOUR_AUTH_KEY2}
 
 ## 다음 단계
 
-인증 사양을 채워 Platform에 통합할 소스에 대한 소스 사양을 계속 구성할 수 있습니다. 자세한 내용은 [소스 사양 구성](./sourcespec.md)에 대한 문서를 참조하십시오.
+인증 사양을 채워 Experience Platform에 통합할 소스의 소스 사양을 계속 구성할 수 있습니다. 자세한 내용은 [소스 사양 구성](./sourcespec.md)에 대한 문서를 참조하십시오.

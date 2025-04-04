@@ -3,9 +3,9 @@ title: Snapchat Conversions API 확장 개요
 description: Snapchat 변환을 사용하여 서버측 이벤트 데이터를 Snap으로 전송합니다.
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '966'
 ht-degree: 2%
 
 ---
@@ -79,7 +79,7 @@ Snapchat Ads 관리자에서 [!DNL [Snap Pixel]](https://businesshelp.snapchat.c
 
 ## 변환 이벤트를 스냅으로 보내는 규칙 만들기 {#create-snap-rules}
 
-[규칙](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule)은(는) 플랫폼에서 확장을 트리거하는 데 사용됩니다. 이 섹션에서는 이벤트 전달 속성 내에 규칙을 만들어 전환 API 확장을 사용하여 스냅에 전환 이벤트를 보내는 방법에 대해 설명합니다.
+[규칙](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule)은(는) Experience Platform에서 확장을 트리거하는 데 사용됩니다. 이 섹션에서는 이벤트 전달 속성 내에 규칙을 만들어 전환 API 확장을 사용하여 스냅에 전환 이벤트를 보내는 방법에 대해 설명합니다.
 
 ### 새 규칙 만들기
 
@@ -93,9 +93,9 @@ Snapchat Ads 관리자에서 [!DNL [Snap Pixel]](https://businesshelp.snapchat.c
 
 3. 조건을 저장한 후 스냅 변환 API를 트리거하는 작업을 추가합니다. 왼쪽 패널에서 다음을 수행합니다.
 
-   * [!UICONTROL 확장] 드롭다운 메뉴를 [!UICONTROL 스냅 전환 API 확장](으)로 설정합니다.
+   * [!UICONTROL 확장] 드롭다운 메뉴를 [!UICONTROL 스냅 전환 API 확장]&#x200B;(으)로 설정합니다.
 
-   * [!UICONTROL 작업 유형] 드롭다운 메뉴를 [!UICONTROL 보고서 웹 전환](으)로 설정합니다.
+   * [!UICONTROL 작업 유형] 드롭다운 메뉴를 [!UICONTROL 보고서 웹 전환]&#x200B;(으)로 설정합니다.
 
    * 규칙 이름을 적절하게 지정합니다.
 
@@ -201,4 +201,4 @@ Snapchat Ads 관리자에서 [!DNL [Snap Pixel]](https://businesshelp.snapchat.c
 
 ## 다음 단계 {#next-steps}
 
-이 안내서에서는 **[!DNL Snap Conversions API]** 확장을 사용하여 서버측 이벤트 데이터를 **[!DNL Snap]**&#x200B;에 보내는 방법을 다룹니다. 플랫폼의 이벤트 전달 기능에 대한 자세한 내용은 [이벤트 전달 개요](../../../ui/event-forwarding/overview.md)를 참조하십시오.
+이 안내서에서는 **[!DNL Snap Conversions API]** 확장을 사용하여 서버측 이벤트 데이터를 **[!DNL Snap]**&#x200B;에 보내는 방법을 다룹니다. Experience Platform의 이벤트 전달 기능에 대한 자세한 내용은 [이벤트 전달 개요](../../../ui/event-forwarding/overview.md)를 참조하세요.

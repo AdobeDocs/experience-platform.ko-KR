@@ -3,9 +3,9 @@ title: LiveRamp 식별자를 기반으로 조정된 대상에 대상 활성화
 type: Tutorial
 description: LiveRamp Ramp Id를 사용하여 Adobe Experience Platform에서 연결된 TV 및 오디오 대상 및 기타 통합에 대한 대상을 활성화하는 방법을 알아봅니다.
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
@@ -64,9 +64,9 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
-### 1단계: 대상을 [!DNL LiveRamp - Onboarding] 대상을 통해 Experience Platform에서 LiveRamp로 보내기 {#onboarding}
+### 1단계: [!DNL LiveRamp - Onboarding] 대상을 통해 대상을 Experience Platform에서 LiveRamp로 보내기 {#onboarding}
 
-LiveRamp RampID를 기반으로 대상자를 조정된 대상으로 활성화하기 위해 가장 먼저 수행해야 하는 작업은 **Experience Platform에서[!DNL LiveRamp]**(으)로 대상자를 내보내는 것입니다.
+LiveRamp RampID를 기반으로 대상자를 조정된 대상으로 활성화하기 위해 가장 먼저 수행해야 하는 작업은 **대상자를 Experience Platform에서[!DNL LiveRamp]**(으)로 내보내는 것입니다.
 
 **[!DNL LiveRamp - Onboarding]** 대상을 사용하여 이 작업을 수행합니다.
 
@@ -76,7 +76,7 @@ LiveRamp RampID를 기반으로 대상자를 조정된 대상으로 활성화하
 
 >[!IMPORTANT]
 >
->[!DNL LiveRamp - Onboarding] 대상으로 파일을 내보낼 때 플랫폼에서는 각 [병합 정책 ID](../../profile/merge-policies/overview.md)에 대해 하나의 CSV 파일을 생성합니다. LiveRamp로 데이터 내보내기를 확인하는 방법에 대한 자세한 내용은 [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) 대상 설명서를 참조하십시오.
+>[!DNL LiveRamp - Onboarding] 대상으로 파일을 내보낼 때 Experience Platform은 각 [병합 정책 ID](../../profile/merge-policies/overview.md)에 대해 하나의 CSV 파일을 생성합니다. LiveRamp로 데이터 내보내기를 확인하는 방법에 대한 자세한 내용은 [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) 대상 설명서를 참조하십시오.
 
 
 대상을 LiveRamp로 내보냈으면 [2단계](#distribution)를 계속 진행하세요.
@@ -103,11 +103,11 @@ LiveRamp RampID를 기반으로 대상자를 조정된 대상으로 활성화하
 
 >[!TIP]
 >
->대상 이름을 지정할 때 Adobe은 `LiveRamp - Downstream Destination Name` 형식을 권장합니다. 이 이름 지정 패턴을 통해 대상 작업 영역의 [찾아보기](../ui/destinations-workspace.md#browse) 탭에서 대상을 빠르게 식별할 수 있습니다.
+>대상 이름을 지정할 때 Adobe에서는 다음 형식을 권장합니다. `LiveRamp - Downstream Destination Name`. 이 이름 지정 패턴을 통해 대상 작업 영역의 [찾아보기](../ui/destinations-workspace.md#browse) 탭에서 대상을 빠르게 식별할 수 있습니다.
 ><br>
 >예: `LiveRamp - Roku`.
 
-![여러 LiveRamp 대상을 표시하는 Platform UI 스크린샷입니다.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
+![여러 LiveRamp 대상을 표시하는 Experience Platform UI 스크린샷입니다.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
 
 ## 내보낸 데이터/데이터 내보내기 유효성 검사 {#exported-data}
 

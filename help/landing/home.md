@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 개요
 description: Adobe Experience Platform을 사용하면 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험을 더 잘 설계하고 전달하기 전에 고객 데이터를 중앙 집중화 및 표준화할 수 있습니다.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: ca38a2d72681e4a69304cc765ab6b95d3527d336
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '432'
 ht-degree: 2%
 
 ---
@@ -28,13 +28,13 @@ RESTful API를 기반으로 구축된 [!DNL Experience Platform]은(는) 시스�
 
 ## [!DNL Experience Platform] 설명서
 
-[!DNL Experience Platform] 설명서는 다양한 기능 및 응용 프로그램에 대해 여러 형식으로 제공됩니다. 사용 가능한 설명서 유형에 대한 자세한 내용은 [플랫폼 설명서 개요](documentation/overview.md)를 참조하세요.
+[!DNL Experience Platform] 설명서는 다양한 기능 및 응용 프로그램에 대해 여러 형식으로 제공됩니다. 사용 가능한 설명서 유형에 대한 자세한 내용은 [Experience Platform 설명서 개요](documentation/overview.md)를 참조하세요.
 
-특정 [!DNL Platform] 서비스에 대해 자세히 알아보려면 [설명서 랜딩 페이지](https://experienceleague.adobe.com/docs/experience-platform.html)(으)로 돌아가 적절한 안내서를 선택하십시오.
+특정 [!DNL Experience Platform] 서비스에 대해 자세히 알아보려면 [설명서 랜딩 페이지](https://experienceleague.adobe.com/docs/experience-platform.html)&#x200B;(으)로 돌아가 적절한 안내서를 선택하십시오.
 
 ### [!DNL Experience Platform]에 빌드된 응용 프로그램 설명서
 
-Adobe은 Experience Platform 위에 여러 애플리케이션을 구축했습니다. 이러한 애플리케이션에 대한 설명서는 아래에 링크된 해당 안내서에서 찾을 수 있습니다.
+Adobe은 Experience Platform 위에 여러 애플리케이션을 빌드했습니다. 이러한 애플리케이션에 대한 설명서는 아래에 링크된 해당 안내서에서 찾을 수 있습니다.
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
@@ -49,17 +49,17 @@ Adobe은 Experience Platform 위에 여러 애플리케이션을 구축했습니
 
 ## [!DNL Experience Platform] 자습서
 
-수집을 위한 데이터 준비부터 고급 머신 러닝 알고리즘에 이르기까지 모든 내용을 다루는 단계별 자습서와 함께 따라가면 [!DNL Platform]을(를) 빠르고 쉽게 시작할 수 있습니다. 이 자습서는 [!DNL Experience Platform] 설명서에서 찾은 정보를 보완하기 위해 고안된 것이므로 가장 좋은 결과를 얻으려면 자습서를 작성하는 동안 설명서를 보관하십시오.
+수집을 위한 데이터 준비부터 고급 머신 러닝 알고리즘에 이르기까지 모든 내용을 다루는 단계별 자습서와 함께 따라가면 [!DNL Experience Platform]을(를) 빠르고 쉽게 시작할 수 있습니다. 이 자습서는 [!DNL Experience Platform] 설명서에서 찾은 정보를 보완하기 위해 고안된 것이므로 가장 좋은 결과를 얻으려면 자습서를 작성하는 동안 설명서를 보관하십시오.
 
 시작하려면 [Experience Platform 자습서](https://www.adobe.com/go/platform-tutorials-home-en) 랜딩 페이지를 방문하십시오.
 
 ## 참조 문서 및 리소스
 
 * [**API 기본 사항**](api-fundamentals.md)\
-  [!DNL Platform] API 작업의 기본 사항에 대해 알아봅니다.
+  [!DNL Experience Platform] API 작업의 기본 사항에 대해 알아봅니다.
 
 * [**API 참조 문서**](https://www.adobe.com/go/platform-api-reference-en)\
-  헤더, 매개 변수, 샘플 요청 및 응답을 포함한 [!DNL Experience Platform]개의 API를 검색합니다.<br/>*이 문서는 Adobe I/O 시 호스팅됩니다.*
+  헤더, 매개 변수, 샘플 요청 및 응답을 포함한 [!DNL Experience Platform]개의 API를 검색합니다.<br/>*이 문서는 Adobe I/O에서 호스팅됩니다.*
 
 * [**용어집**](glossary.md)\
   Adobe Experience Platform 용어를 검토하십시오.

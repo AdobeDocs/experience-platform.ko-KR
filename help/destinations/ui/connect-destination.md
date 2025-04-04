@@ -3,9 +3,9 @@ title: 새 대상 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform에서 대상에 연결하고, 경고를 활성화하고, 연결된 대상에 대한 마케팅 작업을 설정하는 방법을 알아봅니다.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
@@ -47,13 +47,13 @@ ht-degree: 0%
 
    대상에 대한 새 연결을 설정하려면 **[!UICONTROL 새 대상 구성]**&#x200B;을 선택하십시오.
 
-   사용 가능한 대상 목록과 새 대상 구성 컨트롤이 강조 표시된 Experience Platform UI의 ![스크린샷입니다.](../assets/ui/connect-destinations/configure-new-destination.png)
+   ![사용 가능한 대상 목록과 새 대상 구성 컨트롤이 강조 표시된 Experience Platform UI의 스크린샷입니다.](../assets/ui/connect-destinations/configure-new-destination.png)
 
 ## 대상으로 인증 {#authenticate}
 
 대상에 연결하는 첫 번째 단계는 대상 플랫폼에 인증하는 것입니다.
 
-연결 중인 대상에 따라 대상 파트너의 페이지로 이동하여 인증하거나 플랫폼 워크플로에서 직접 인증 자격 증명을 입력하라는 메시지가 표시될 수 있습니다. 다음은 [!DNL Amazon S3] 대상을 인증하는 데 필요한 입력의 예입니다. 필요한 입력에 대한 자세한 지침은 각 대상 설명서 페이지에 제공됩니다(예: [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) 및 [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)의 인증 섹션 참조).
+연결 중인 대상에 따라 대상 파트너의 페이지로 이동하여 인증하거나 Experience Platform 워크플로에서 직접 인증 자격 증명을 입력하라는 메시지가 표시될 수 있습니다. 다음은 [!DNL Amazon S3] 대상을 인증하는 데 필요한 입력의 예입니다. 필요한 입력에 대한 자세한 지침은 각 대상 설명서 페이지에 제공됩니다(예: [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) 및 [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)의 인증 섹션 참조).
 
 필수 및 선택적 인증 매개 변수 **[!DNL Amazon S3]개**
 
@@ -105,7 +105,7 @@ ht-degree: 0%
 
 ## 마케팅 액션 선택 {#select-marketing-actions}
 
-1. 대상으로 내보낼 데이터에 적용할 수 있는 마케팅 작업을 선택합니다. 마케팅 액션은 데이터를 대상으로 내보내는 의도를 나타냅니다. Adobe 정의 마케팅 액션에서 선택하거나 고유한 마케팅 액션을 만들 수 있습니다. 마케팅 액션에 대한 자세한 내용은 [데이터 사용 정책 개요](../../data-governance/policies/overview.md) 페이지를 참조하세요.
+1. 대상으로 내보낼 데이터에 적용할 수 있는 마케팅 작업을 선택합니다. 마케팅 액션은 데이터를 대상으로 내보내는 의도를 나타냅니다. Adobe에서 정의한 마케팅 작업 중에서 선택하거나 고유한 마케팅 작업을 만들 수 있습니다. 마케팅 액션에 대한 자세한 내용은 [데이터 사용 정책 개요](../../data-governance/policies/overview.md) 페이지를 참조하세요.
 
    ![사용 가능한 마케팅 작업이 강조 표시된 새 대상 구성 대화 상자 대상에 연결 워크플로를 완료하는 데 사용할 수 있는 컨트롤도 강조 표시됩니다.](../assets/ui/connect-destinations/governance.png)
 

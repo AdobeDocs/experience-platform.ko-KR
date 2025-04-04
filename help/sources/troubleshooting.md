@@ -4,16 +4,16 @@ solution: Experience Platform
 title: 소스 문제 해결
 description: 이 문서에서는 Adobe Experience Platform 소스에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
 
 # 소스 문제 해결 안내서
 
-이 문서에서는 Adobe Experience Platform 소스에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 모든 [!DNL Platform] API에서 발생하는 문제를 포함하여 다른 [!DNL Platform] 서비스와 관련된 질문 및 문제 해결은 [Experience Platform 문제 해결 가이드](../landing/troubleshooting.md)를 참조하십시오.
+이 문서에서는 Adobe Experience Platform 소스에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 모든 [!DNL Experience Platform] API에서 발생하는 문제를 포함하여 다른 [!DNL Experience Platform] 서비스와 관련된 질문 및 문제 해결은 [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
 
 ## 자주 묻는 질문
 
@@ -67,7 +67,7 @@ JSON 및 Parquet 파일은 기본적으로 배열을 지원합니다. CSV와 같
 
 ### 부분 수집은 언제 사용해야 합니까?
 
-**not**&#x200B;에 전체 파일을 플랫폼으로 수집하는 것과 같은 제약 조건이 있는 경우 부분 수집을 사용해야 합니다. 또는, 데이터 내에 오류가 있을 수 있는 데이터를 수집하는 것에 관심이 없는 경우 부분 수집을 사용해야 합니다.
+**not**&#x200B;에 전체 파일이 Experience Platform으로 수집되는 것과 같은 제약 조건이 있는 경우 부분 수집을 사용해야 합니다. 또는, 데이터 내에 오류가 있을 수 있는 데이터를 수집하는 것에 관심이 없는 경우 부분 수집을 사용해야 합니다.
 
 ### 일반적인 부분 수집 오류 임계값은 무엇입니까?
 

@@ -5,7 +5,7 @@ title: 플로우 서비스 API를 사용하여 서드파티 클라우드 스토�
 type: Tutorial
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 서드파티 클라우드 스토리지 시스템에서 Apache Parquet 데이터를 수집하는 단계를 안내합니다.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 9%
@@ -22,8 +22,8 @@ ht-degree: 9%
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-- [원본](../../home.md): [!DNL Experience Platform]에서는 데이터를 다양한 원본에서 수집할 수 있으며 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공합니다.
-- [샌드박스](../../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+- [원본](../../home.md): [!DNL Experience Platform]에서는 데이터를 다양한 원본에서 수집할 수 있으며 [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공합니다.
+- [샌드박스](../../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 서드파티 클라우드 저장소에서 Parquet 데이터를 성공적으로 수집하기 위해 알아야 하는 추가 정보를 제공합니다.
 
@@ -33,13 +33,13 @@ ht-degree: 9%
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Flow Service]에 속하는 리소스를 포함한 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Flow Service]에 속하는 리소스를 포함한 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -49,7 +49,7 @@ ht-degree: 9%
 
 ## 연결 만들기
 
-[!DNL Platform] API를 사용하여 Parquet 데이터를 수집하려면 액세스 중인 타사 클라우드 저장소 원본에 대해 올바른 연결을 보유해야 합니다. 작업할 스토리지에 대한 접속이 없는 경우 다음 튜토리얼을 통해 접속을 생성할 수 있습니다.
+[!DNL Experience Platform] API를 사용하여 Parquet 데이터를 수집하려면 액세스 중인 타사 클라우드 저장소 원본에 대해 올바른 연결을 보유해야 합니다. 작업할 스토리지에 대한 접속이 없는 경우 다음 튜토리얼을 통해 접속을 생성할 수 있습니다.
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
@@ -61,7 +61,7 @@ ht-degree: 9%
 
 ## 대상 스키마 만들기
 
-소스 데이터를 [!DNL Platform]에서 사용하려면 필요에 따라 소스 데이터를 구조화하는 대상 스키마도 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 [!DNL Platform] 데이터 집합을 만듭니다.
+소스 데이터를 [!DNL Experience Platform]에서 사용하려면 필요에 따라 소스 데이터를 구조화하는 대상 스키마도 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 [!DNL Experience Platform] 데이터 집합을 만듭니다.
 
 [!DNL Experience Platform]에서 사용자 인터페이스를 사용하려면 [스키마 편집기 자습서](../../../xdm/tutorials/create-schema-ui.md)에서 스키마 편집기에서 유사한 작업을 수행하는 방법에 대한 단계별 지침을 제공합니다.
 
@@ -257,7 +257,7 @@ curl -X POST \
 
 ## 데이터 세트 기본 연결 만들기
 
-외부 데이터를 [!DNL Platform](으)로 수집하려면 먼저 [!DNL Experience Platform] 데이터 집합 기본 연결을 획득해야 합니다.
+외부 데이터를 [!DNL Experience Platform]&#x200B;(으)로 수집하려면 먼저 [!DNL Experience Platform] 데이터 집합 기본 연결을 획득해야 합니다.
 
 데이터 집합 기본 연결을 만들려면 [데이터 집합 기본 연결 자습서](./create-dataset-base-connection.md)에 설명된 단계를 수행합니다.
 
@@ -265,7 +265,7 @@ curl -X POST \
 
 ## 타겟 데이터 세트 만들기
 
-[카탈로그 서비스 API](https://www.adobe.io/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하고 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
+[카탈로그 서비스 API](https://www.adobe.io/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하여 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
 
 **API 형식**
 
@@ -427,7 +427,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서에 따라 일정에 따라 서드파티 클라우드 스토리지 시스템에서 Parquet 데이터를 수집하는 소스 커넥터를 만들었습니다. 이제 [!DNL Real-Time Customer Profile] 및 [!DNL Data Science Workspace] 등의 다운스트림 [!DNL Platform] 서비스에서 수신 데이터를 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서에 따라 일정에 따라 서드파티 클라우드 스토리지 시스템에서 Parquet 데이터를 수집하는 소스 커넥터를 만들었습니다. 이제 [!DNL Real-Time Customer Profile] 및 [!DNL Data Science Workspace] 등의 다운스트림 [!DNL Experience Platform] 서비스에서 수신 데이터를 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
 - [실시간 고객 프로필 개요](../../../profile/home.md)
 - [데이터 과학 작업 영역 개요](../../../data-science-workspace/home.md)

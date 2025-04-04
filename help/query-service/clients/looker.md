@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Service에 Loker 연결
 description: 이 문서에서는 Looker를 Adobe Experience Platform 쿼리 서비스와 연결하는 단계를 안내합니다.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: b059a0191fbf2c3e5d2dfceb9802e2aaa429f7ed
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,9 @@ ht-degree: 0%
 - **[!DNL Username and Password]:** 사용할 로그인 자격 증명입니다. 사용자 이름은 `ORG_ID@AdobeOrg` 형식입니다.
 - **SSL**: SSL을 사용하도록 설정하여 네트워크에서 보안 연결을 보장합니다.
 
-쿼리 서비스와 Looker에 연결하는 데 필요한 자격 증명을 찾으려면 Platform UI에 로그인하고 왼쪽 탐색에서 **[!UICONTROL 쿼리]**&#x200B;를 선택한 다음 **[!UICONTROL 자격 증명]**&#x200B;을 선택하십시오. **호스트**, **포트**, **데이터베이스**, **사용자 이름** 및 **암호** 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md)를 참조하십시오.
+쿼리 서비스와 Looker에 연결하는 데 필요한 자격 증명을 찾으려면 Experience Platform UI에 로그인하고 왼쪽 탐색에서 **[!UICONTROL 쿼리]**&#x200B;를 선택한 다음 **[!UICONTROL 자격 증명]**&#x200B;을 선택합니다. **호스트**, **포트**, **데이터베이스**, **사용자 이름** 및 **암호** 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md)를 참조하십시오.
 
-![자격 증명 및 만료 자격 증명이 강조 표시된 Experience Platform 쿼리 작업 영역의 자격 증명 페이지입니다.](../images/clients/looker/query-service-credentials-page.png)
+![자격 증명과 만료 자격 증명이 강조 표시된 Experience Platform 쿼리 작업 영역의 자격 증명 페이지입니다.](../images/clients/looker/query-service-credentials-page.png)
 
 >[!IMPORTANT]
 >

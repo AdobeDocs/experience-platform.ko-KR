@@ -2,10 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;데이터 준비;api 안내서;스키마;
 solution: Experience Platform
 title: 스키마 API 엔드포인트
-description: Adobe Experience Platform API의 "/schemas" 끝점을 사용하여 Platform의 Mapper에서 사용할 스키마를 프로그래밍 방식으로 검색, 생성 및 업데이트할 수 있습니다.
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+description: Adobe Experience Platform API의 "/schemas" 끝점을 사용하여 Experience Platform의 Mapper에서 사용할 스키마를 프로그래밍 방식으로 검색, 생성 및 업데이트할 수 있습니다.
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '619'
 ht-degree: 3%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 3%
 
 # 스키마 엔드포인트
 
-스키마는 Mapper와 함께 사용하여 Adobe Experience Platform에 수집한 데이터가 수집하려는 데이터와 일치하는지 확인할 수 있습니다. `/schemas` 끝점을 사용하여 Platform의 Mapper에서 사용할 사용자 지정 스키마를 프로그래밍 방식으로 만들고 나열하고 가져올 수 있습니다.
+스키마는 Mapper와 함께 사용하여 Adobe Experience Platform에 수집한 데이터가 수집하려는 데이터와 일치하는지 확인할 수 있습니다. `/schemas` 끝점을 사용하여 Experience Platform에서 Mapper에 사용할 사용자 지정 스키마를 프로그래밍 방식으로 만들고 나열하고 가져올 수 있습니다.
 
 >[!NOTE]
 >
->이 끝점을 사용하여 생성된 스키마는 매퍼 및 매핑 세트와 함께 단독으로 사용됩니다. 다른 Platform 서비스에서 액세스할 수 있는 스키마를 만들려면 [스키마 레지스트리 개발자 안내서](../../xdm/api/schemas.md)를 읽어 보십시오.
+>이 끝점을 사용하여 생성된 스키마는 매퍼 및 매핑 세트와 함께 단독으로 사용됩니다. 다른 Experience Platform 서비스에서 액세스할 수 있는 스키마를 만들려면 [스키마 레지스트리 개발자 안내서](../../xdm/api/schemas.md)를 읽어 보십시오.
 
 ## 모든 스키마 가져오기
 
-`/schemas` 끝점에 대한 GET 요청을 통해 조직에 대해 사용 가능한 모든 매퍼 스키마 목록을 검색할 수 있습니다.
+`/schemas` 끝점에 대한 GET 요청을 만들어 조직에 대해 사용 가능한 모든 매퍼 스키마 목록을 검색할 수 있습니다.
 
 **API 형식**
 

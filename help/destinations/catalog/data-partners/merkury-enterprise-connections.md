@@ -3,7 +3,7 @@ title: Merkury Enterprise 연결 대상
 description: Adobe Experience Platform UI를 사용하여 Merkury Enterprise Connections 대상 연결을 만드는 방법을 알아봅니다.
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 4%
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 ## 개요
 
-[!DNL Merkury Enterprise Connections] 대상을 사용하여 대상자를 [!DNL Merkury]로 안전하게 전달합니다. [!DNL Merkury]은(는) 마케터에게 개인 기반 대상을 쉽게 일치시키고 [!DNL Merkury]의 80개 이상의 프리미엄 주소 지정 가능한 TV/CTV, 게시자 및 광고 기술 연결로 배달할 수 있도록 합니다. [!DNL Merkury]는 2억 6,800만 명 이상의 미국 성인 소비자 아이덴티티 그래프를 기반으로 운영됩니다.
+[!DNL Merkury Enterprise Connections] 대상을 사용하여 대상자를 [!DNL Merkury]로 안전하게 전달합니다. [!DNL Merkury]은(는) 마케터에게 개인 기반 대상을 쉽게 일치시키고 [!DNL Merkury]의 80개 이상의 프리미엄 주소 지정 가능한 TV/CTV, 게시자 및 광고 기술 연결로 배달할 수 있도록 합니다. [!DNL Merkury]는 2억 6,800만 명 이상의 미국 성인 소비자 ID 그래프를 기반으로 운영됩니다.
 
 ![수집 및 활성화를 포함하여 Merkury와 Experience Platform 간의 연결을 보여 주는 다이어그램](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
 
@@ -49,8 +49,8 @@ ht-degree: 4%
 | GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
 | ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 자세한 내용은 [ECID](/help/identity-service/features/ecid.md)에서 다음 문서를 참조하십시오. |
-| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
-| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
 | extern_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
 
 {style="table-layout:auto"}
@@ -61,8 +61,8 @@ ht-degree: 4%
 
 | **대상자** | **지원됨** | **설명 원본** |
 |---|---|---|      
-| Segmentation Service | ✓ 덧신 | Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/ko/docs/experience-platform/segmentation/home)을(를) 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | X | 대상 [[가져옴]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)을(를) CSV 파일에서 Experience Platform으로 가져옵니다. |
+| Segmentation Service | ✓ | Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/ko/docs/experience-platform/segmentation/home)을(를) 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | X | CSV 파일에서 대상 [[가져옴]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)을(를) Experience Platform으로 가져왔습니다. |
 
 {style="table-layout:auto"}
 
@@ -89,7 +89,7 @@ ht-degree: 4%
 
 대상에 인증하려면 필수 필드를 입력한 다음 **대상에 연결**&#x200B;을(를) 선택하십시오.
 
-Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대한 유효한 값을 제공해야 합니다.
+Experience Platform에서 버킷에 액세스하려면 다음 자격 증명에 대한 유효한 값을 제공해야 합니다.
 
 
 | **자격 증명** | **설명** |
@@ -112,7 +112,7 @@ Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대
 * **설명** - 대상의 용도에 대한 간략한 설명
 * **버킷 이름(필수)** - S3에 설정된 Amazon S3 버킷의 이름
 * **폴더 경로(필수)** - 버킷의 하위 디렉터리를 사용하는 경우 루트 경로를 참조하려면 경로를 정의하거나 &#39;/&#39;를 정의해야 합니다.
-* **파일 형식** - 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 계정의 예상 파일 형식을 알려면 Merkury 팀에 문의하십시오.
+* **파일 형식** - Experience Platform에서 내보낸 파일에 사용할 형식을 선택합니다. 계정의 예상 파일 형식을 알려면 Merkury 팀에 문의하십시오.
 
 >[!NOTE]
 >
@@ -150,7 +150,7 @@ Merkury Enterprise Connections 대상을 사용하여 이미 정의된 계정이
 
 | 대상 필드 | Source 설명 |
 |---|---|
-| ID | [!DNL Merkury Enterprise Identity] Source 커넥터를 통해 Experience Platform에 [!DNL Merkury] 데이터를 매핑하는 데 사용할 ID 필드 |
+| ID | [!DNL Merkury Enterprise Identity] Source 커넥터를 통해 [!DNL Merkury] 데이터를 Experience Platform에 매핑하는 데 사용할 ID 필드 |
 | Input_First_Name | Experience Platform의 `person.name.firstName` 값입니다. |
 | Input_Last_Name | Experience Platform의 `person.name.lastName` 값입니다. |
 | Input_Address_Line_1 | Experience Platform의 `mailingAddress.street` 값입니다. |

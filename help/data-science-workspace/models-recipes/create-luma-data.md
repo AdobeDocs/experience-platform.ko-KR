@@ -5,9 +5,9 @@ title: Luma 웹 스키마 및 데이터 세트 만들기
 type: Tutorial
 description: 이 자습서에서는 Luma 데모 성향 모델에 필요한 사전 요구 사항 및 에셋을 제공합니다.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ### Luma 웹 데이터 스키마를 만들고 데이터 수집
 
-모델을 만들려면 모델을 교육하고 평가하는 데 사용되는 데이터 세트가 Platform에 있어야 합니다. [데이터 과학 Workspace 교육 과정](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw)의 다음 비디오 튜토리얼에서는 Luma 스키마를 만들고 구매 성향 모델에서 사용하는 데이터를 수집하는 과정을 안내합니다.
+모델을 만들려면 모델을 교육하고 평가하는 데 사용되는 Experience Platform 데이터 세트가 있어야 합니다. [데이터 과학 Workspace 교육 과정](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw)의 다음 비디오 튜토리얼에서는 Luma 스키마를 만들고 구매 성향 모델에서 사용하는 데이터를 수집하는 과정을 안내합니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 

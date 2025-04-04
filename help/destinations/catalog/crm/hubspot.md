@@ -3,9 +3,9 @@ title: HubSpot 연결
 description: HubSpot 대상을 사용하면 HubSpot 계정에서 연락처 레코드를 관리할 수 있습니다.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1557'
 ht-degree: 3%
 
 ---
@@ -32,15 +32,15 @@ Experience Platform 및 [!DNL HubSpot]에서 설정해야 하는 필수 구성 �
 
 [!DNL HubSpot] 대상에 대한 데이터를 활성화하기 전에 [!DNL Experience Platform]에서 만든 [스키마](/help/xdm/schema/composition.md), [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) 및 [대상](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)이 있어야 합니다.
 
-대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)에 대한 Experience Platform 설명서를 참조하세요.
+대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)은 Experience Platform 설명서를 참조하십시오.
 
 ### [!DNL HubSpot] 대상에 대한 필수 구성 요소 {#prerequisites-destination}
 
-Platform에서 [!DNL HubSpot] 계정으로 데이터를 내보내려면 다음 전제 조건을 참고하십시오.
+Experience Platform에서 [!DNL HubSpot] 계정으로 데이터를 내보내려면 다음 전제 조건을 참고하십시오.
 
 #### [!DNL HubSpot] 계정이 있어야 합니다. {#prerequisites-account}
 
-플랫폼에서 [!DNL Hubspot] 계정으로 데이터를 내보내려면 [!DNL HubSpot] 계정이 있어야 합니다. 아직 계정이 없는 경우 [HubSpot 계정 설정](https://knowledge.hubspot.com/get-started/set-up-your-account) 페이지를 방문하여 안내에 따라 계정을 등록하고 만드십시오.
+Experience Platform에서 [!DNL Hubspot] 계정으로 데이터를 내보내려면 [!DNL HubSpot] 계정이 있어야 합니다. 아직 계정이 없는 경우 [HubSpot 계정 설정](https://knowledge.hubspot.com/get-started/set-up-your-account) 페이지를 방문하여 안내에 따라 계정을 등록하고 만드십시오.
 
 #### [!DNL HubSpot] 개인 앱 액세스 토큰 수집 {#gather-credentials}
 
@@ -90,7 +90,7 @@ Platform에서 [!DNL HubSpot] 계정으로 데이터를 내보내려면 다음 �
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화번호, 성)*&#x200B;과(와) 함께 대상자의 모든 구성원을 내보냅니다.</li><li> 또한 대상 이름을 사용하여 [!DNL HubSpot]에서 새 속성이 만들어지고 해당 값은 선택한 각 대상에 대해 플랫폼의 해당 대상 상태와 함께 사용됩니다.</li></ul> |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화번호, 성)*&#x200B;과(와) 함께 대상자의 모든 구성원을 내보냅니다.</li><li> 또한 대상 이름을 사용하여 [!DNL HubSpot]에서 새 속성이 만들어지고 해당 값은 선택한 각 대상에 대해 Experience Platform의 해당 대상 상태와 함께 사용됩니다.</li></ul> |
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | <ul><li>스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요.</li></ul> |
 
 {style="table-layout:auto"}
@@ -111,14 +111,14 @@ Platform에서 [!DNL HubSpot] 계정으로 데이터를 내보내려면 다음 �
 * **[!UICONTROL 전달자 토큰]**: [!DNL HubSpot] 개인 앱에 대한 액세스 토큰입니다.
 
 대상에 인증하려면 **[!UICONTROL 대상에 연결]**을 선택하세요.
-인증 방법을 보여 주는 ![플랫폼 UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/authenticate-destination.png)
+인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/authenticate-destination.png)
 
 제공된 세부 정보가 유효하면 UI에 녹색 확인 표시와 함께 **[!UICONTROL 연결됨]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
-![대상 세부 정보를 표시하는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/destination-details.png)
+대상 세부 정보를 표시하는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/destination-details.png)
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
@@ -139,7 +139,7 @@ Platform에서 [!DNL HubSpot] 계정으로 데이터를 내보내려면 다음 �
 
 ### 속성 및 ID 매핑 {#map}
 
-대상 데이터를 Adobe Experience Platform에서 [!DNL HubSpot] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야 합니다. 매핑은 Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 필드 간에 링크를 만드는 것으로 구성됩니다.
+대상 데이터를 Adobe Experience Platform에서 [!DNL HubSpot] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야 합니다. 매핑은 Experience Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 스키마 필드 간에 링크를 작성하는 것으로 구성됩니다.
 
 XDM 필드를 [!DNL HubSpot] 대상 필드에 올바르게 매핑하려면 아래 단계를 따르십시오.
 
@@ -147,28 +147,28 @@ XDM 필드를 [!DNL HubSpot] 대상 필드에 올바르게 매핑하려면 아�
 
 `Email` ID는 이 대상에 대한 필수 매핑입니다. 매핑하려면 아래 단계를 따르십시오.
 1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**를 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
-   ![새 매핑 추가 단추가 강조 표시된 플랫폼 UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+   ![새 매핑 추가 단추가 강조 표시된 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**을(를) 선택하고 ID를 선택합니다.
-   ![ID로 매핑할 소스 특성으로 이메일을 선택하는 플랫폼 UI 스크린샷](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
+   ![ID로 매핑할 소스 특성으로 이메일을 선택하는 Experience Platform UI 스크린샷](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
 1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL 특성 선택]**&#x200B;을(를) 선택하고 `email`을(를) 선택합니다.
-   ![ID로 매핑할 대상 특성으로 이메일을 선택하는 플랫폼 UI 스크린샷](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
+   ![ID로 매핑할 대상 특성으로 이메일을 선택하는 Experience Platform UI 스크린샷](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
 | 소스 필드 | 대상 필드 | 필수 |
 | --- | --- | --- |
 | `IdentityMap: Email` | `Identity: email` | 예 |
 
 다음은 ID 매핑의 예입니다.
-![전자 메일 ID 매핑을 사용한 플랫폼 UI 스크린샷 예입니다.](../../assets/catalog/crm/hubspot/mapping-identities.png)
+![이메일 ID 매핑을 사용한 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/hubspot/mapping-identities.png)
 
 #### **선택적** 특성 매핑
 
 XDM 프로필 스키마와 [!DNL HubSpot] 계정 사이에 업데이트할 다른 특성을 추가하려면 아래 단계를 반복합니다.
 1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**를 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
-   ![새 매핑 추가 단추가 강조 표시된 플랫폼 UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+   ![새 매핑 추가 단추가 강조 표시된 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 XDM 특성을 선택합니다.
-   ![Platform UI 스크린샷에서 [이름]을 소스 특성으로 선택합니다.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
+   ![이름을 소스 특성으로 선택하는 Experience Platform UI 스크린샷](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
 1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 [!DNL HubSpot] 계정에서 자동으로 채워지는 특성 목록에서 선택하십시오. 대상은 [[!DNL HubSpot] 속성](https://developers.hubspot.com/docs/api/crm/properties) API를 사용하여 이 정보를 검색합니다. [!DNL HubSpot] [기본 속성](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties)과(와) 사용자 지정 속성을 모두 대상 필드로 선택하기 위해 검색됩니다.
-   ![대상 특성으로 이름을 선택하는 플랫폼 UI 스크린샷](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
+   ![Experience Platform UI 스크린샷이 대상 특성으로 이름을 선택합니다.](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
 
 XDM 프로필 스키마와 [!DNL Hubspot] 간에 사용 가능한 몇 가지 매핑이 아래에 표시되어 있습니다.
 
@@ -181,7 +181,7 @@ XDM 프로필 스키마와 [!DNL Hubspot] 간에 사용 가능한 몇 가지 매
 | `xdm: workAddress.country` | `Attribute: country` |
 
 이러한 속성 매핑을 사용하는 예는 다음과 같습니다.
-특성 매핑이 있는 ![Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
+특성 매핑이 있는 ![Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
 
 대상 연결에 대한 매핑을 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 

@@ -3,9 +3,9 @@ title: Real-Time CDP에서 배열, 맵 및 개체 내보내기
 type: Tutorial
 description: Real-Time CDP에서 클라우드 스토리지 대상으로 배열, 맵 및 개체를 내보내는 방법에 대해 알아봅니다.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1096'
 ht-degree: 13%
 
 ---
@@ -42,7 +42,7 @@ Experience Platform에서 배열, 맵 및 기타 개체 유형을 내보내는 �
 * 배열, 맵 및 개체를 `JSON` 및 `Parquet` 파일의 클라우드 저장소 대상으로 내보낼 수 있습니다. Enterprise 및 Edge 개인화 대상의 경우 내보낸 데이터 형식은 `JSON`입니다. 사용자 및 잠재 고객은 지원되지만 계정 대상은 지원되지 않습니다.
 * 파일 기반 클라우드 저장소 대상의 경우 배열, 맵 및 개체를 CSV 파일로 *할 수*&#x200B;있지만 계산된 필드 기능을 사용하고 `array_to_string` 함수를 사용하여 문자열로 연결하기만 하면 됩니다.
 
-## Platform의 배열 및 기타 개체 유형 {#arrays-strings-other-objects}
+## Experience Platform의 배열 및 기타 개체 유형 {#arrays-strings-other-objects}
 
 Experience Platform에서는 [XDM 스키마](/help/xdm/home.md)를 사용하여 다른 필드 유형을 관리할 수 있습니다. 배열 내보내기에 대한 지원이 추가되기 전에 Experience Platform의 문자열과 같은 간단한 키-값 쌍 유형 필드를 원하는 대상으로 내보낼 수 있습니다. 이전에 내보내기에 지원되는 이러한 필드의 예는 `personalEmail.address`:`johndoe@acme.org`입니다.
 

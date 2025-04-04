@@ -3,9 +3,9 @@ keywords: 대상; 질문; faq; faq; 대상 faq
 title: 자주 묻는 질문
 description: Adobe Experience Platform 대상에 대해 가장 자주 묻는 질문에 대한 답변
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1673'
+source-wordcount: '1675'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-이 문서에서는 Adobe Experience Platform 대상에 대한 FAQ에 대한 답변을 제공합니다. 모든 [!DNL Platform] API에서 발생한 문제를 포함하여 다른 [!DNL Platform] 서비스와 관련된 질문 및 문제 해결은 [Experience Platform 문제 해결 가이드](../landing/troubleshooting.md)를 참조하십시오.
+이 문서에서는 Adobe Experience Platform 대상에 대한 FAQ에 대한 답변을 제공합니다. 모든 [!DNL Experience Platform] API에서 발생한 문제를 포함하여 다른 [!DNL Experience Platform] 서비스와 관련된 질문 및 문제 해결은 [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
 
 ## 일반 대상 질문 {#general}
 
@@ -90,7 +90,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 ### [!DNL Facebook Custom Audiences]에서 대상을 활성화하려면 먼저 무엇을 해야 합니까?
 
 +++답변
-대상자를 [!DNL Facebook](으)로 보내려면 먼저 다음 요구 사항을 충족하는지 확인하십시오.
+대상자를 [!DNL Facebook]&#x200B;(으)로 보내려면 먼저 다음 요구 사항을 충족하는지 확인하십시오.
 
 * [!DNL Facebook] 사용자 계정에는 사용할 광고 계정에 대해 **[!DNL Manage campaigns]** 권한이 활성화되어 있어야 합니다.
 * **Adobe Experience Cloud** 비즈니스 계정을 [!DNL Facebook Ad Account]의 광고 파트너로 추가해야 합니다. `business ID=206617933627973` 사용. 자세한 내용은 Facebook 설명서의 [비즈니스 관리자에 파트너 추가](https://www.facebook.com/business/help/1717412048538897)를 참조하십시오.
@@ -107,24 +107,24 @@ See the table below for a feature comparison between the Experience Cloud Audien
 아니. 픽셀 기반 통합이 아니므로 광고주 계정에 픽셀을 추가할 필요가 없습니다.
 +++
 
-### facebook에서 Adobe Experience Platform의 정보를 처리하는 데 시간이 얼마나 걸립니까?
+### Facebook에서 Adobe Experience Platform의 정보를 처리하는 데 시간이 얼마나 걸립니까?
 
 +++답변
-2021년 3월부터 [!DNL Facebook Custom Audiences]이(가) [!DNL Platform]에서 받은 정보를 처리하려면 최대 한 시간이 필요합니다.
+2021년 3월부터 [!DNL Facebook Custom Audiences]이(가) [!DNL Experience Platform]에서 받은 정보를 처리하려면 최대 한 시간이 필요합니다.
 +++
 
 ### [!DNL Instagram]과(와) 같은 다른 [!DNL Facebook] 앱에서 대상 타깃팅에 [!DNL Facebook Custom Audiences]을(를) 사용할 수 있습니까?
 
 +++앰셔어
-[!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] 및 [!DNL Messenger]을(를) 포함하여 [!DNL Facebook Custom Audiences]에서 지원하는 Facebook 앱 제품군의 대상 타깃팅에 [!DNL Facebook Custom Audiences] 대상을 사용할 수 있습니다. 광고주가 캠페인을 실행할 앱의 선택은 [!DNL Facebook Ads Manager]의 배치 수준에서 표시됩니다.
+[!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] 및 [!DNL Messenger]을(를) 포함하여 [!DNL Facebook Custom Audiences]에서 지원하는 Facebook의 앱 제품군에서 대상 타깃팅에 [!DNL Facebook Custom Audiences] 대상을 사용할 수 있습니다. 광고주가 캠페인을 실행할 앱의 선택은 [!DNL Facebook Ads Manager]의 배치 수준에서 표시됩니다.
 +++
 
 ### [!DNL Facebook Custom Audiences] 연결과 [!DNL Facebook Pixel] 확장 간의 차이점은 무엇입니까?
 
 +++답변
-[!DNL Facebook Custom Audiences] 연결에서는 대상을 [!DNL Facebook]에 보낼 때 [!DNL Platform] ID를 사용하는 반면 [[!DNL Facebook Pixel] 연결](../destinations/catalog/advertising/facebook-pixel.md)에서는 웹 사이트에 통합된 [!DNL Facebook] 픽셀을 사용합니다.
+[!DNL Facebook Custom Audiences] 연결에서는 대상을 [!DNL Facebook]에 보낼 때 [!DNL Experience Platform] ID를 사용하는 반면 [[!DNL Facebook Pixel] 연결](../destinations/catalog/advertising/facebook-pixel.md)에서는 웹 사이트에 통합된 [!DNL Facebook] 픽셀을 사용합니다.
 
-이 두 가지 통합은 상호 보완적입니다. 두 가지 모두를 사용하여 대상 범위를 개선할 수 있습니다. 예를 들어 계정을 만들지 않은 웹 사이트 방문자를 예상하는 데 [!DNL Facebook Pixel] 확장을 사용할 수 있지만, [!DNL Facebook Custom Audiences]은(는) [!DNL Platform]개의 ID를 기반으로 기존 고객을 타깃팅하는 데 도움이 될 수 있습니다.
+이 두 가지 통합은 상호 보완적입니다. 두 가지 모두를 사용하여 대상 범위를 개선할 수 있습니다. 예를 들어 계정을 만들지 않은 웹 사이트 방문자를 예상하는 데 [!DNL Facebook Pixel] 확장을 사용할 수 있지만, [!DNL Facebook Custom Audiences]은(는) [!DNL Experience Platform]개의 ID를 기반으로 기존 고객을 타깃팅하는 데 도움이 될 수 있습니다.
 +++
 
 ### [!DNL Facebook Custom Audiences]과(와) Adobe Experience Platform 통합은 더 이상 자격이 없는 사용자가 대상자로부터 자격을 박탈하는 것을 지원합니까?**
@@ -147,10 +147,10 @@ ID 일치 요구 사항에 대한 자세한 설명은 [ID 일치 요구 사항](
 [!DNL Facebook Custom Audiences]은(는) 해시된 이메일, 해시된 전화번호, [!DNL GAID], [!DNL IDFA] 및 사용자 지정 외부 ID와 같은 ID의 활성화를 지원합니다.
 +++
 
-### 별도의 Facebook 계정에 대해 Platform UI에서 여러 Facebook 대상을 만들 수 있습니까?
+### 별도의 Facebook 계정에 대해 Experience Platform UI에서 여러 Facebook 대상을 만들 수 있습니까?
 
 +++답변
-예. Experience Platform의 Facebook 대상은 Facebook의 광고 계정으로 1:1입니다. 회사의 각 Facebook 광고 계정에 대해 별도의 Facebook 대상을 만들 수 있습니다. [대상 연결 자습서](/help/destinations/ui/connect-destination.md)를 따라 플랫폼 UI에서 각 새 Facebook 대상에 대해 별도의 Facebook 계정에 연결합니다. 연결할 수 있는 Facebook 광고 계정 수에는 제한이 없습니다.
+예. Experience Platform의 Facebook 대상은 Facebook의 광고 계정에 1:1입니다. 회사의 각 Facebook 광고 계정에 대해 별도의 Facebook 대상을 만들 수 있습니다. [대상 연결 자습서](/help/destinations/ui/connect-destination.md)를 따라 Experience Platform UI에서 각 새 Facebook 대상에 대해 별도의 Facebook 계정에 연결합니다. 연결할 수 있는 Facebook 광고 계정 수에는 제한이 없습니다.
 +++
 
 ## Google 고객 일치 타겟팅 {#google-customer-match}
@@ -161,7 +161,7 @@ ID 일치 요구 사항에 대한 자세한 설명은 [ID 일치 요구 사항](
 Google에서는 대상 이름이 고유해야 합니다. 표시되는 숫자는 [UNIX 타임스탬프](https://www.unixtimestamp.com/)이며 동일한 대상을 여러 Google 대상에 매핑한 경우 대상 이름을 고유하게 유지하기 위해 추가됩니다.
 +++
 
-## LinkedIn과 일치하는 대상 {#linkedin}
+## LinkedIn 일치하는 대상 {#linkedin}
 
 ### [!DNL LinkedIn] 광고주 계정에 앱 또는 픽셀을 추가해야 합니까?
 
@@ -172,9 +172,9 @@ Google에서는 대상 이름이 고유해야 합니다. 표시되는 숫자는 
 ### [!DNL LinkedIn Matched Audiences]에서 대상을 활성화하려면 먼저 무엇을 해야 합니까?
 
 +++답변
-[!UICONTROL LinkedIn과 일치하는 대상] 대상을 사용하려면 먼저 [!DNL LinkedIn Campaign Manager] 계정에 [!DNL Creative Manager] 권한 수준 이상이 있는지 확인하십시오.
+[!UICONTROL LinkedIn 일치하는 대상] 대상을 사용하려면 먼저 [!DNL LinkedIn Campaign Manager] 계정에 [!DNL Creative Manager] 권한 수준 이상이 있는지 확인하십시오.
 
-[!DNL LinkedIn Campaign Manager] 사용자 권한을 편집하는 방법에 대해 알아보려면 LinkedIn 설명서의 [Advertising 계정에 대한 사용자 권한 추가, 편집 및 제거](https://www.linkedin.com/help/lms/answer/5753)를 참조하십시오.
+[!DNL LinkedIn Campaign Manager] 사용자 권한을 편집하는 방법에 대해 알아보려면 LinkedIn 설명서에서 [Advertising 계정에 대한 사용자 권한 추가, 편집 및 제거](https://www.linkedin.com/help/lms/answer/5753)를 참조하십시오.
 +++
 
 ### 대상 데이터를 [!DNL LinkedIn]에 보내기 전에 해시하려면 어떻게 해야 합니까?
@@ -194,14 +194,14 @@ ID 일치 요구 사항에 대한 자세한 설명은 [ID 일치 요구 사항](
 
 ## Adobe Target 및 사용자 지정 Personalization 대상을 통한 동일 페이지 및 다음 페이지 개인화 {#same-next-page-personalization}
 
-### Experience Platform Web SDK를 사용하여 대상과 속성을 Adobe Target으로 전송해야 합니까?
+### Experience Platform Web SDK을 사용하여 대상과 속성을 Adobe Target으로 전송해야 합니까?
 
 +++답변
-아니요. [Web SDK](../web-sdk/home.md)은(는) 대상자를 [Adobe Target](catalog/personalization/adobe-target-connection.md)에 활성화하기 위해 필요하지 않습니다.
+아니요. [웹 SDK](../web-sdk/home.md)은(는) 대상자를 [Adobe Target](catalog/personalization/adobe-target-connection.md)에 활성화하기 위해 필요하지 않습니다.
 
 그러나 Web SDK 대신 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html)을(를) 사용하면 다음 세션 개인화만 지원됩니다.
 
-[동일 페이지 및 다음 페이지 개인화](ui/activate-edge-personalization-destinations.md) 사용 사례의 경우 [Web SDK](../web-sdk/home.md) 또는 [Edge Network 서버 API](../server-api/overview.md)를 사용해야 합니다. 자세한 구현 정보는 [Edge 대상으로 대상 활성화](ui/activate-edge-personalization-destinations.md)에 대한 설명서를 참조하십시오.
+[동일 페이지 및 다음 페이지 개인화](ui/activate-edge-personalization-destinations.md) 사용 사례의 경우 [Web SDK](../web-sdk/home.md) 또는 [Edge Network Server API](../server-api/overview.md)를 사용해야 합니다. 자세한 구현 정보는 [Edge 대상으로 대상 활성화](ui/activate-edge-personalization-destinations.md)에 대한 설명서를 참조하십시오.
 +++
 
 ### Real-time Customer Data Platform에서 Adobe Target 또는 사용자 지정 Personalization 대상으로 보낼 수 있는 속성 수에 제한이 있습니까?
@@ -220,7 +220,7 @@ ID 일치 요구 사항에 대한 자세한 설명은 [ID 일치 요구 사항](
 
 Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). -->
 
-### Experience Platform에서 대상자를 만들면 Edge 세그멘테이션 사용 사례에 해당 대상자를 사용할 수 있는 데 얼마나 걸립니까?
+### Experience Platform에서 대상을 만들면 Edge 세그멘테이션 사용 사례에 해당 대상을 사용할 수 있는 데 얼마나 걸립니까?
 
 +++답변
 대상 정의가 최대 1시간 후에 [Edge Network](../web-sdk/home.md)에 전파됩니다. 그러나 대상이 이 첫 번째 시간 내에 활성화되면 대상의 자격이 되었을 일부 방문자를 놓칠 수 있습니다.
@@ -241,13 +241,13 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### Adobe Target 대상을 삭제하면 어떻게 됩니까?
 
 +++답변
-대상을 삭제하면 대상 아래에 매핑된 모든 대상 및 특성이 Adobe Target에서 삭제되고 Edge Network에서 함께 제거됩니다.
+대상을 삭제하면 대상 아래에 매핑된 모든 대상 및 특성이 Adobe Target에서 삭제되며, Edge Network에서도 제거됩니다.
 +++
 
-### 통합이 Edge Network 서버 API를 사용하여 작동합니까?
+### 통합은 Edge Network Server API를 사용하여 작동합니까?
 
 +++답변
-예. Edge Network 서버 API는 사용자 지정 Personalization 대상에서 작동합니다. 프로필 속성에는 중요한 데이터가 포함될 수 있으므로 이 데이터를 보호하려면 사용자 지정 Personalization 대상을 사용하려면 데이터 수집에 Edge Network 서버 API를 사용해야 합니다. 또한 모든 API 호출은 [인증된 컨텍스트](../server-api/authentication.md)에서 수행되어야 합니다.
+예. Edge Network 서버 API는 사용자 지정 Personalization 대상에서 작동합니다. 프로필 속성에 중요한 데이터가 포함될 수 있으므로 이 데이터를 보호하려면 사용자 지정 Personalization 대상에서 데이터 수집을 위해 Edge Network Server API를 사용해야 합니다. 또한 모든 API 호출은 [인증된 컨텍스트](../server-api/authentication.md)에서 수행되어야 합니다.
 +++
 
 ### 에지 상에서 활성 상태인 병합 정책을 하나만 가질 수 있습니다. 다른 병합 정책을 사용하는 대상을 작성하고 이를 스트리밍 대상으로 Adobe Target에 보낼 수 있습니까?
@@ -271,7 +271,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 이 서비스에는 고객 관리 키와 높아진 임계값이 포함되어 있어 고객 데이터 수명주기를 관리할 수 있습니다.
 
-[!DNL Adobe Target] 및 [!DNL Custom Personalization] 대상은 [Experience Platform 데이터 사용 레이블](../data-governance/labels/overview.md) 및 [동의 정책 시행 서비스](../data-governance/enforcement/overview.md)와 통합되었습니다. 이러한 기능은 모든 고객이 사용할 수 있습니다.
+[!DNL Adobe Target] 및 [!DNL Custom Personalization] 대상은 [Experience Platform 데이터 사용 레이블](../data-governance/labels/overview.md) 및 [동의 정책 시행 서비스](../data-governance/enforcement/overview.md)와 통합됩니다. 이러한 기능은 모든 고객이 사용할 수 있습니다.
 
 
 

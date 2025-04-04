@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이들 프로필에서 대상자를 생성하며, 이들 대상자를 서드파티 대상으로 활성화할 수 있습니다.
 role: Admin
-source-git-commit: 4c2431148f584f2ffd5de20b8880a6b4a10ff95e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 67%
+source-wordcount: '302'
+ht-degree: 65%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 67%
    * [고객 AI](segmentation/customer-ai.md)
 * 데이터 세트 {#datasets}
    * [데이터 세트](datasets/dataset.md)
-   * [Platform의 데이터 품질](datasets/data-quality.md)
+   * [Experience Platform의 데이터 품질](datasets/data-quality.md)
 * 대상 {#destinations}
    * [대상 개요](destinations/overview.md)
    * [Real-Time CDP B2B 에디션의 대상](destinations/b2b.md)

@@ -2,9 +2,9 @@
 title: SQL Insights
 description: Data Distiller을 사용하여 SQL Insights 대시보드를 개발하는 사용 사례, 필수 기능 및 필수 단계에 대해 알아봅니다. Data Distiller 내의 SQL Insights 기능을 통해 투명성을 높이고 프로필, 대상, 캠페인, 여정, 권한 및 동의와 같은 다양한 차원에서 운영 통찰력을 얻는 방법에 대해 알아봅니다.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 ## 전제 조건
 
-이 자습서에서는 사용자 정의 대시보드를 사용하여 Platform UI 내에서 사용자 정의 데이터 모델의 데이터를 시각화합니다. 이 기능에 대한 자세한 내용은 [사용자 정의 대시보드 설명서](../../../dashboards/standard-dashboards.md)를 참조하세요.
+이 자습서에서는 사용자 정의 대시보드를 사용하여 Experience Platform UI 내에서 사용자 지정 데이터 모델의 데이터를 시각화합니다. 이 기능에 대한 자세한 내용은 [사용자 정의 대시보드 설명서](../../../dashboards/standard-dashboards.md)를 참조하세요.
 
 ## 시작하기
 
-Data Distiller SKU는 보고 통찰력에 대한 사용자 지정 데이터 모델을 구축하고 풍부한 플랫폼 데이터를 포함하는 Real-Time CDP 데이터 모델을 확장하는 데 필요합니다. Data Distiller SKU와 관련된 [패키징](../../packaging.md), [보호 기능](../../guardrails.md#query-accelerated-store) 및 [라이선스](../../data-distiller/license-usage.md) 설명서를 참조하십시오. Data Distiller SKU가 없는 경우 Adobe 고객 서비스 담당자에게 자세한 내용을 문의하십시오.
+Data Distiller SKU는 보고 통찰력에 대한 사용자 지정 데이터 모델을 구축하고 풍부한 Experience Platform 데이터를 포함하는 Real-Time CDP 데이터 모델을 확장하는 데 필요합니다. Data Distiller SKU와 관련된 [패키징](../../packaging.md), [보호 기능](../../guardrails.md#query-accelerated-store) 및 [라이선스](../../data-distiller/license-usage.md) 설명서를 참조하십시오. Data Distiller SKU가 없는 경우 Adobe 고객 서비스 담당자에게 자세한 내용을 문의하십시오.
 
 ## SQL Insights 활용 사례 {#use-cases}
 
@@ -47,7 +47,7 @@ Data Distiller SKU는 보고 통찰력에 대한 사용자 지정 데이터 모�
 
 **SQL Insights 솔루션:** Data Distiller을 사용하면 사용자 지정 ML 모델의 [성향 점수](../../use-cases/propensity-score.md)를 포함하여 대상 수준에서 집계 점수를 쉽게 계산할 수 있습니다. 그런 다음 표준 KPI와 함께 이 데이터를 보고할 수 있습니다.
 
-### 대상 확장 {#audience-expansion}
+### 대상자 확장 {#audience-expansion}
 
 **과제:** 대상 중복 보고서에서 프로필 카운트 이상을 획득하고 대상 확장 전략을 안내하기 위해 추가적인 인구 통계학적 데이터 또는 환경 설정을 달성하는 방법.
 

@@ -2,10 +2,10 @@
 title: Experience Platform에서 데이터 수집을 위한 권한 관리
 description: Adobe Experience Platform에서 권한을 관리하고 데이터 수집 기능에 대한 액세스를 제어하는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 28%
+source-wordcount: '1358'
+ht-degree: 27%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 28%
 
 ## 사용 가능한 권한
 
-데이터 수집에 대한 관련 권한은 Admin Console에서 두 개의 제품 지정을 통해 제공됩니다. **Adobe Experience Platform** 및 **Adobe Experience Platform 데이터 수집**. 아래 섹션에서는 액세스 권한을 부여하는 특정 기능에 대한 설명과 함께 각 제품에서 제공되는 권한에 대해 간략히 설명합니다.
+데이터 수집에 대한 관련 권한은 Admin Console에서 두 가지 제품 지정을 통해 제공됩니다. **Adobe Experience Platform** 및 **Adobe Experience Platform 데이터 수집**. 아래 섹션에서는 액세스 권한을 부여하는 특정 기능에 대한 설명과 함께 각 제품에서 제공되는 권한에 대해 간략히 설명합니다.
 
 ### Adobe Experience Platform 권한
 
@@ -55,7 +55,7 @@ Adobe Experience Platform 데이터 수집 아래의 권한은 속성, 확장 �
 | 플랫폼 | 웹 | 다른 속성 권한과 결합할 경우 [웹 속성](../tags/ui/administration/companies-and-properties.md)에 대한 액세스 권한을 부여합니다. |
 | 플랫폼 | 모바일 | 다른 속성 권한과 결합할 경우 [모바일 속성](../tags/ui/administration/companies-and-properties.md)에 대한 액세스 권한을 부여합니다. |
 | 플랫폼 | Edge | 다른 속성 권한과 결합할 때 [이벤트 전달 Edge 속성](../tags/ui/event-forwarding/getting-started.md)에 대한 액세스 권한을 부여합니다. |
-| 속성 | (N/A) | 조직에서 만든 속성에 따라 Admin Console의 이 권한 범주를 통해 각 속성에 대한 액세스를 제어할 수 있습니다.<br><br>사용자에게 할당된 속성 권한은 이 권한 범주를 통해 액세스 권한이 부여된 속성에만 적용됩니다. |
+| 속성 | (N/A) | 조직에서 만든 속성에 따라 Admin Console에서 이 권한 범주를 통해 각 속성에 대한 액세스를 제어할 수 있습니다.<br><br>사용자에게 할당된 속성 권한은 이 권한 범주를 통해 액세스 권한이 부여된 속성에만 적용됩니다. |
 | 속성 권한 | 승인 | [게시 흐름](../tags/ui/publishing/publishing-flow.md)의 일부로 라이브러리 빌드를 승인하는 기능을 부여합니다. |
 | 속성 권한 | 개발 | [게시 흐름](../tags/ui/publishing/publishing-flow.md)의 일부로 라이브러리 빌드를 개발하는 기능을 부여합니다. |
 | 속성 권한 | 속성 편집 | 사용자가 액세스할 수 있는 속성의 기본 구성을 편집할 수 있는 권한을 부여합니다. |
@@ -97,11 +97,11 @@ Experience Cloud의 **[!UICONTROL 권한]** 섹션에서 제품 응용 프로그
 
 ![Admin Console에서 데이터 수집 제품 카드를 표시하는 이미지](./images/permissions/platform-permission-card.png)
 
-플랫폼 권한 관리에 대한 자세한 지침은 [액세스 제어 UI 안내서](../access-control/ui/overview.md)를 참조하세요.
+Experience Platform 권한 관리에 대한 자세한 지침은 [액세스 제어 UI 안내서](../access-control/ui/overview.md)를 참조하세요.
 
 >[!NOTE]
 >
->조직에서 액세스할 수 있는 제품 SKU에 따라 사용 가능한 모든 플랫폼 권한이 없을 수 있습니다.
+>조직에서 액세스할 수 있는 제품 SKU에 따라 사용 가능한 모든 Experience Platform 권한이 없을 수도 있습니다.
 
 ### Adobe Experience Platform 데이터 수집에서 권한 관리 {#manage-collection}
 

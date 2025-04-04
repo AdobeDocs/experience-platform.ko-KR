@@ -6,9 +6,9 @@ title: Customer AI의 데이터 요구 사항
 topic-legacy: Getting started
 description: 고객 AI가 활용하는 필수 이벤트, 입력 및 출력에 대해 자세히 알아봅니다.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 63bdb48936070d23d1801d8e6143db3aefad5f6e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2545'
+source-wordcount: '2551'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 1%
 고객 AI는 다음 데이터 세트를 분석하여 이탈(고객이 제품 사용을 중단할 가능성이 있는 경우) 또는 전환(고객이 구매할 가능성이 있는 경우) 성향 점수를 예측합니다.
 
 - [Analytics 소스 커넥터](../../sources/tutorials/ui/create/adobe-applications/analytics.md)를 사용하는 Adobe Analytics 데이터
-- [Audience Manager 원본 커넥터](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)를 사용하는 Adobe Audience Manager 데이터
+- [Audience Manager 소스 커넥터](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)를 사용하는 Adobe Audience Manager 데이터
 - [경험 이벤트 데이터 세트](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
 - [고객 경험 이벤트 데이터 세트](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
@@ -62,12 +62,12 @@ ht-degree: 1%
 
 | 용어 | 정의 |
 | --- | --- |
-| [XDM(경험 데이터 모델)](../../xdm/home.md) | XDM은 Adobe Experience Platform에서 제공하는 Adobe Experience Cloud이 정확한 순간에 정확한 메시지를 적합한 사람에게 전달할 수 있는 기본 프레임워크입니다. Platform은 XDM 시스템을 사용하여 플랫폼 서비스에 보다 쉽게 사용할 수 있도록 데이터를 특정 방식으로 구성합니다. |
-| [XDM 스키마](../../xdm/schema/composition.md) | Experience Platform은 스키마를 사용하여 데이터의 구조를 일관되고 재사용 가능한 방식으로 설명합니다. 여러 시스템에서 데이터를 일관되게 정의하면 의미를 쉽게 유지할 수 있으므로 데이터의 가치를 얻을 수 있습니다. 데이터를 Platform에 수집하려면 먼저 데이터의 구조를 설명하고 각 필드 내에 포함할 수 있는 데이터 유형에 제약 조건을 제공하는 스키마를 구성해야 합니다. 스키마는 기본 XDM 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. |
+| [XDM(경험 데이터 모델)](../../xdm/home.md) | XDM은 Adobe Experience Platform에서 제공하는 Adobe Experience Cloud이 정확한 순간에 정확한 메시지를 적합한 사람에게 전달할 수 있는 기본 프레임워크입니다. Experience Platform은 XDM 시스템을 사용하여 Experience Platform 서비스에 보다 쉽게 사용할 수 있도록 특정 방식으로 데이터를 구성합니다. |
+| [XDM 스키마](../../xdm/schema/composition.md) | Experience Platform은 스키마를 사용하여 데이터의 구조를 일관되고 재사용 가능한 방식으로 설명합니다. 여러 시스템에서 데이터를 일관되게 정의하면 의미를 쉽게 유지할 수 있으므로 데이터의 가치를 얻을 수 있습니다. Experience Platform에 데이터를 수집하려면 먼저 데이터의 구조를 설명하고 각 필드 내에 포함할 수 있는 데이터 유형에 제약 조건을 제공하는 스키마를 구성해야 합니다. 스키마는 기본 XDM 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. |
 | [XDM 클래스](../../xdm/schema/field-constraints.md) | 모든 XDM 스키마는 `Experience Event`(으)로 분류할 수 있는 데이터를 설명합니다. 스키마의 데이터 비헤이비어는 스키마가 처음 생성될 때 스키마에 할당된 스키마의 클래스에 의해 정의됩니다. XDM 클래스는 특정 데이터 동작을 나타내기 위해 스키마에 포함해야 하는 최소 속성 수를 설명합니다. |
 | [필드 그룹](../../xdm/schema/composition.md) | 스키마에서 하나 이상의 필드를 정의하는 구성 요소입니다. 필드 그룹은 필드가 스키마의 계층 구조에 표시되는 방식을 적용하므로 포함되는 모든 스키마에서 동일한 구조를 표시합니다. 필드 그룹은 `meta:intendedToExtend` 특성으로 식별되는 특정 클래스와만 호환됩니다. |
 | [데이터 형식](../../xdm/schema/composition.md) | 스키마에 하나 이상의 필드를 제공할 수도 있는 구성 요소입니다. 그러나 필드 그룹과 달리 데이터 유형은 특정 클래스에 제한되지 않습니다. 이렇게 하면 데이터 형식이 잠재적으로 다른 클래스를 사용하는 여러 스키마에서 재사용 가능한 일반적인 데이터 구조를 설명하는 보다 유연한 옵션이 됩니다. 이 문서에 설명된 데이터 유형은 CEE 및 Adobe Analytics 스키마 모두에서 지원됩니다. |
-| [실시간 고객 프로필](../../profile/home.md) | 실시간 고객 프로필은 타깃팅되고 개인화된 경험 관리를 위한 중앙 집중식 고객 프로필을 제공합니다. 각 프로필에는 모든 시스템에서 집계된 데이터와, Experience Platform 시 사용하는 시스템에서 발생한 개별 이벤트와 관련된 실행 가능한 타임스탬프가 지정된 계정이 포함됩니다. |
+| [실시간 고객 프로필](../../profile/home.md) | 실시간 고객 프로필은 타깃팅되고 개인화된 경험 관리를 위한 중앙 집중식 고객 프로필을 제공합니다. 각 프로필에는 모든 시스템에서 집계된 데이터와 Experience Platform에서 사용하는 시스템에서 발생한 개별 이벤트와 관련된 실행 가능한 타임스탬프가 지정된 계정이 포함됩니다. |
 
 ## 고객 AI 입력 데이터 {#customer-ai-input-data}
 
@@ -75,7 +75,7 @@ Adobe Analytics 및 Adobe Audience Manager과 같은 입력 데이터 세트의 
 
 Adobe Analytics 데이터 또는 Audience Manager 데이터 매핑에 대한 자세한 내용은 Analytics 필드 매핑 또는 Audience Manager [필드 매핑 안내서](../../sources/connectors/adobe-applications/mapping/audience-manager.md)를 참조하십시오.
 
-위의 커넥터 중 하나를 통해 채워지지 않은 입력 데이터 세트에 대해 경험 이벤트 또는 소비자 경험 이벤트 XDM 스키마를 사용할 수 있습니다. 스키마 생성 프로세스 중에 추가 XDM 필드 그룹을 추가할 수 있습니다. 필드 그룹은 표준 필드 그룹 또는 사용자 정의 필드 그룹과 같은 Adobe에 의해 제공될 수 있으며, 이는 플랫폼의 데이터 표현과 일치합니다.
+위의 커넥터 중 하나를 통해 채워지지 않은 입력 데이터 세트에 대해 경험 이벤트 또는 소비자 경험 이벤트 XDM 스키마를 사용할 수 있습니다. 스키마 생성 프로세스 중에 추가 XDM 필드 그룹을 추가할 수 있습니다. 필드 그룹은 Adobe의 데이터 표현과 일치하는 표준 필드 그룹 또는 사용자 정의 필드 그룹과 같이 Experience Platform에서 제공할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -91,7 +91,7 @@ Adobe Analytics 데이터 또는 Audience Manager 데이터 매핑에 대한 자
 
 고객 AI는 기본적으로 Commerce, 웹, 애플리케이션 및 검색의 네 가지 표준 필드 그룹의 이벤트를 사용합니다. 아래 나열된 표준 필드 그룹의 각 이벤트에 대한 데이터가 있을 필요는 없지만 특정 이벤트는 특정 시나리오에 필요합니다. 사용 가능한 표준 필드 그룹에 이벤트가 있는 경우 스키마에 포함하는 것이 좋습니다. 예를 들어 구매 이벤트를 예측하기 위한 고객 AI 모델을 생성하려는 경우 Commerce 및 웹 페이지 세부 정보 필드 그룹의 데이터를 갖는 것이 유용합니다.
 
-Platform UI에서 필드 그룹을 보려면 왼쪽 레일에서 **[!UICONTROL 스키마]** 탭을 선택한 다음 **[!UICONTROL 필드 그룹]** 탭을 선택하십시오.
+Experience Platform UI에서 필드 그룹을 보려면 왼쪽 레일에서 **[!UICONTROL 스키마]** 탭을 선택한 다음 **[!UICONTROL 필드 그룹]** 탭을 선택하십시오.
 
 | 필드 그룹 | 이벤트 유형 | XDM 필드 패스 |
 | --- | --- | --- |
@@ -141,7 +141,7 @@ Platform UI에서 필드 그룹을 보려면 왼쪽 레일에서 **[!UICONTROL �
 
 다음은 일련의 업종별 사용자 지정 이벤트 예입니다.
 
-| 산업 | 사용자 지정 이벤트 |
+| 업계 | 사용자 지정 이벤트 |
 | --- | --- |
 | 소매 | 매장 거래<br>클럽 카드 등록<br>클립 모바일 쿠폰. |
 | 엔터테인먼트 | 구매 시즌 멤버십 <br> 스트림 비디오입니다. |
@@ -211,7 +211,7 @@ Platform UI에서 필드 그룹을 보려면 왼쪽 레일에서 **[!UICONTROL �
 
 고객 AI는 자격이 있는 것으로 간주되는 개별 프로필에 대해 여러 속성을 생성합니다. 프로비저닝된 내용을 기반으로 점수(출력)를 소비하는 두 가지 방법이 있습니다. 실시간 고객 프로필이 활성화된 데이터 세트가 있는 경우 [세그먼트 빌더](../../segmentation/ui/segment-builder.md)의 실시간 고객 프로필에서 인사이트를 사용할 수 있습니다. 프로필이 활성화된 데이터 세트가 없는 경우 데이터 레이크에서 [고객 AI 출력을 다운로드](./user-guide/download-scores.md)할 수 있습니다.
 
-플랫폼 **데이터 세트** 작업 영역에서 출력 데이터 세트를 찾을 수 있습니다. 모든 Customer AI 출력 데이터 세트는 이름 **Customer AI 스코어 - NAME_OF_APP**(으)로 시작합니다. 마찬가지로 모든 Customer AI 출력 스키마는 **Customer AI 스키마 - Name_of_app**(으)로 시작합니다.
+Experience Platform **데이터 세트** 작업 영역에서 출력 데이터 세트를 찾을 수 있습니다. 모든 Customer AI 출력 데이터 세트는 이름 **Customer AI 스코어 - NAME_OF_APP**(으)로 시작합니다. 마찬가지로 모든 Customer AI 출력 스키마는 **Customer AI 스키마 - Name_of_app**(으)로 시작합니다.
 
 ![Customer AI의 출력 데이터 세트 이름](./images/user-guide/cai-schema-name-of-app.png)
 

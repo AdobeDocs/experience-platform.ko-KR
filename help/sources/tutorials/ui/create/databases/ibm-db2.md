@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;DB2;db2;IBM DB2;ibm db2
+keywords: Experience Platform;홈;인기 항목;DB2;DB2;IBM DB2;ibm db2
 solution: Experience Platform
 title: UI에서 IBM DB2 Source 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 IBM DB2 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 > IBM DB2 커넥터는 Beta 버전입니다. 베타 레이블 커넥터 사용에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
 
-Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Platform] 사용자 인터페이스를 사용하여 IBM DB2(이하 &quot;DB2&quot;) 소스 커넥터를 만드는 단계를 제공합니다.
+Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 IBM DB2(이하 &quot;DB2&quot;) 소스 커넥터를 만드는 단계를 제공합니다.
 
 ## 시작하기
 
@@ -46,7 +46,7 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ## IBM DB2 계정 연결
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 DB2 계정을 [!DNL Platform]에 연결할 수 있습니다.
+필요한 자격 증명을 수집했으면 아래 단계에 따라 DB2 계정을 [!DNL Experience Platform]에 연결할 수 있습니다.
 
 [Adobe Experience Platform](https://platform.adobe.com)에 로그인한 다음 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 **[!UICONTROL 소스]** 작업 영역에 액세스합니다. **[!UICONTROL 카탈로그]** 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
@@ -72,4 +72,4 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ## 다음 단계
 
-이 자습서에 따라 DB2 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 가져올 데이터 흐름을 구성 [!DNL Platform]](../../dataflow/databases.md)할 수 있습니다.
+이 자습서에 따라 DB2 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 가져올 데이터 흐름을 구성 [!DNL Experience Platform]](../../dataflow/databases.md)할 수 있습니다.

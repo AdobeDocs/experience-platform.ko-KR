@@ -5,7 +5,7 @@ title: Sensei 머신 러닝 API를 사용하여 패키지된 레시피 가져오
 type: Tutorial
 description: 이 자습서에서는 Sensei 머신 러닝 API를 사용하여 사용자 인터페이스에서 레시피라고도 하는 엔진을 만듭니다.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 3%
@@ -41,7 +41,7 @@ ht-degree: 3%
 
 - `{DOCKER_URL}`: 지능형 서비스의 도커 이미지에 대한 URL 주소입니다.
 
-이 자습서에서는 [!DNL Platform]개의 API를 성공적으로 호출하려면 [Adobe Experience Platform에 대한 인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+이 자습서에서는 [!DNL Experience Platform]개의 API를 성공적으로 호출하려면 [Adobe Experience Platform에 대한 인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - `{ACCESS_TOKEN}`: 인증 후 제공한 특정 전달자 토큰 값입니다.
 - `{ORG_ID}`: 고유한 Adobe Experience Platform 통합에서 조직 자격 증명을 찾았습니다.

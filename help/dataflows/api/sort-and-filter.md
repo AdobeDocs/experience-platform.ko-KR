@@ -2,9 +2,9 @@
 title: 흐름 서비스 API에서 응답 정렬 및 필터링
 description: 이 자습서에서는 몇 가지 고급 사용 사례를 포함하여 흐름 서비스 API에서 쿼리 매개 변수를 사용하여 정렬하고 필터링하는 구문을 다룹니다.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '830'
 ht-degree: 2%
 
 ---
@@ -249,4 +249,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 
 ## 다음 단계
 
-이 안내서에서는 `orderby` 및 `property` 쿼리 매개 변수를 사용하여 흐름 서비스 API에서 응답을 정렬하고 필터링하는 방법을 다룹니다. 플랫폼의 일반 워크플로에 API를 사용하는 방법에 대한 단계별 안내서는 [소스](../../sources/home.md) 및 [대상](../../destinations/home.md) 설명서에 포함된 API 튜토리얼을 참조하십시오.
+이 안내서에서는 `orderby` 및 `property` 쿼리 매개 변수를 사용하여 흐름 서비스 API에서 응답을 정렬하고 필터링하는 방법을 다룹니다. Experience Platform의 일반적인 워크플로에 API를 사용하는 방법에 대한 단계별 안내서는 [소스](../../sources/home.md) 및 [대상](../../destinations/home.md) 설명서에 포함된 API 튜토리얼을 참조하십시오.

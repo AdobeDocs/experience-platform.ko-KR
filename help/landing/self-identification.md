@@ -3,9 +3,9 @@ title: 자체 식별 설문 조사를 사용하여 Experience Platform 개인 �
 description: 자기 식별 설문 조사 UI를 사용하여 직무 기능 및 관련 목표에 따라 관련 콘텐츠를 수신하는 방법에 대해 알아봅니다.
 badge: Beta
 exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '569'
 ht-degree: 16%
 
 ---
@@ -18,17 +18,17 @@ ht-degree: 16%
 
 자가 식별 설문 조사는 Adobe Experience Platform UI 홈 페이지에 표시되는 짧은 설문지입니다. 설문지를 작성하시면 직무에 대한 정보와 일반적인 목표를 알 수 있습니다. 그런 다음 이 정보를 사용하여 제품 내 안내서를 보다 효과적으로 조정하고 궁극적으로 목표에 더 적합한 콘텐츠를 제공합니다.
 
-이 문서에서는 Platform UI의 자체 식별 설문 조사를 사용하여 목표 및 작업에 따라 관련 콘텐츠를 수신하는 방법과 UI를 사용하여 개인 프로필 속성을 재구성하는 방법에 대한 정보를 제공합니다.
+이 문서에서는 Experience Platform UI에서 자체 식별 설문 조사를 사용하여 목표 및 작업에 따라 관련 콘텐츠를 수신하는 방법과 UI를 사용하여 개인 프로필 속성을 재구성하는 방법에 대한 정보를 제공합니다.
 
 Adobe Experience Platform에 대한 자세한 내용은 [Experience Platform 개요](home.md)를 참조하세요.
 
-## 플랫폼 UI의 자체 식별 설문 조사
+## Experience Platform UI의 자체 식별 설문 조사
 
-로그인 시 Platform UI 홈 페이지의 오른쪽 하단에 본인 확인 설문 조사 프롬프트가 표시됩니다.
+로그인 시 Experience Platform UI 홈 페이지의 오른쪽 하단에 본인 확인 설문 조사 프롬프트가 표시됩니다.
 
 설문 조사를 시작하려면 **[!UICONTROL 시작]**&#x200B;을 선택하세요.
 
-![자체 식별 설문 조사를 시작하라는 알림 메시지가 표시된 플랫폼 UI 홈 페이지입니다.](./images/survey/survey-prompt.png)
+![자체 식별 설문 조사를 시작하라는 알림 메시지가 표시된 Experience Platform UI 홈 페이지입니다.](./images/survey/survey-prompt.png)
 
 첫 번째 설문 조사 질문에 자신의 작품을 가장 잘 설명하는 함수를 선택합니다.
 
@@ -79,18 +79,18 @@ Adobe Experience Platform에 대한 자세한 내용은 [Experience Platform 개
 
 ## 설문 조사 응답 업데이트
 
-Experience Cloud 기본 설정 메뉴를 사용하여 작업 기능 및 객체를 갱신합니다. 환경 설정 메뉴에 액세스하려면 위쪽 탐색에서 프로필 아이콘을 선택한 다음 **[!UICONTROL 환경 설정]**&#x200B;을 선택하십시오.
+Experience Cloud 환경 설정 메뉴를 사용하여 작업 기능 및 개체를 업데이트합니다. 환경 설정 메뉴에 액세스하려면 위쪽 탐색에서 프로필 아이콘을 선택한 다음 **[!UICONTROL 환경 설정]**&#x200B;을 선택하십시오.
 
-![프로필 아이콘과 환경 설정 단추가 선택된 Platform UI 홈 페이지입니다.](./images/survey/preferences.png)
+![프로필 아이콘과 환경 설정 단추가 선택된 Experience Platform UI 홈 페이지입니다.](./images/survey/preferences.png)
 
 그런 다음 프로필 환경 설정 메뉴의 [!UICONTROL 일반] 섹션에서 **[!UICONTROL 작업 기능 및 목표 업데이트]**&#x200B;를 선택합니다.
 
-![플랫폼 UI 프로필 환경 설정 페이지의 일반 섹션](./images/survey/update.png)
+![Experience Platform UI 프로필 환경 설정 페이지의 일반 섹션](./images/survey/update.png)
 
 자체 식별 설문 조사가 표시되어 응답을 다시 구성하고 프로필을 업데이트할 수 있습니다.
 
-![Platform UI 프로필 환경 설정 페이지에 사용자가 개인 프로필을 업데이트할 수 있도록 하는 자체 식별 설문 조사가 표시됩니다.](./images/survey/new-survey.png)
+![Experience Platform UI 프로필 환경 설정 페이지에 사용자가 개인 프로필을 업데이트할 수 있도록 하는 자체 식별 설문 조사가 표시됩니다.](./images/survey/new-survey.png)
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 Platform UI 사용 시 더 연관성 있는 콘텐츠를 수신하기 위해 Job 기능 및 목표에 대한 정보를 제출하고 업데이트했습니다. Platform UI에 대한 자세한 내용은 [Experience Platform 개요](home.md)를 참조하십시오.
+이 문서를 읽은 후에는 Experience Platform UI 사용 시 더 관련성 있는 콘텐츠를 받기 위해 작업 기능 및 목표에 대한 정보를 제출하고 업데이트했습니다. Experience Platform UI에 대한 자세한 내용은 [Experience Platform 개요](home.md)를 참조하십시오.

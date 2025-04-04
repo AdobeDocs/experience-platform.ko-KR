@@ -4,9 +4,9 @@ title: 데이터 세트 중복 보고서 생성
 type: Tutorial
 description: 이 자습서에서는 실시간 고객 프로필 API를 사용하여 데이터 세트 중복 보고서를 생성하는 데 필요한 단계에 대해 설명합니다.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '890'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 시작하기
 
-Adobe Experience Platform API를 사용하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료하여 필수 헤더에 필요한 값을 수집해야 합니다. Experience Platform API에 대한 자세한 내용은 [Platform API 시작하기](../../landing/api-guide.md)를 참조하십시오.
+Adobe Experience Platform API를 사용하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료하여 필수 헤더에 필요한 값을 수집해야 합니다. Experience Platform API에 대한 자세한 내용은 [Experience Platform API 시작하기](../../landing/api-guide.md)를 참조하십시오.
 
 이 자습서의 모든 API 호출에 필요한 헤더는 다음과 같습니다.
 
@@ -33,7 +33,7 @@ Adobe Experience Platform API를 사용하려면 먼저 [인증 자습서](https
 
 ## 명령줄을 사용하여 데이터 세트 중복 보고서 생성
 
-명령줄 사용에 익숙한 경우 다음 cURL 요청을 사용하여 `/previewsamplestatus/report/dataset/overlap`에 대한 GET 요청을 수행하여 데이터 집합 중복 보고서를 생성할 수 있습니다.
+명령줄 사용에 익숙한 경우 다음 cURL 요청을 사용하여 `/previewsamplestatus/report/dataset/overlap`에 GET 요청을 수행하여 데이터 집합 중복 보고서를 생성할 수 있습니다.
 
 **요청**
 
@@ -74,7 +74,7 @@ Postman은 API 개발을 위한 공동 작업 플랫폼이며 API 호출을 시�
 
 Postman을 사용하여 데이터 세트 중복 보고서를 요청하려면 다음 단계를 완료하십시오.
 
-* 드롭다운을 사용하여 GET 유형으로 요청을 선택합니다.
+* 드롭다운을 사용하여 GET 를 요청 유형으로 선택합니다.
 * `KEY` 열에 필요한 헤더를 입력하십시오.
    * `Authorization`
    * `x-api-key`

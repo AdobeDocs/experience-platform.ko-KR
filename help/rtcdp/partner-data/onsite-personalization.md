@@ -3,9 +3,9 @@ title: 파트너 지원 방문자 인식을 사용하여 알 수 없는 방문�
 description: 파트너 지원 방문자 인식을 사용하여 방문자에게 개인화된 온사이트 경험을 제공하는 방법을 알아보십시오.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2673'
+source-wordcount: '2676'
 ht-degree: 89%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 89%
 * 확률적으로 파생된 데이터 세트와 결정적으로 확인된 속성을 기반으로 다양한 채널 및 다양한 사용 사례에서 개인화를 제공하는 데 어느 정도 익숙하십니까?
 * 사전 인증되었지만 인식된 방문자의 경험은 인증 시 어떻게 변경되어야 합니까?
 
-### 사용할 UI 기능, 플랫폼 구성 요소 및 Experience Cloud 제품 {#ui-functionality-and-elements}
+### 사용할 UI 기능, Experience Platform 구성 요소 및 Experience Cloud 제품 {#ui-functionality-and-elements}
 
 이 사용 사례를 성공적으로 구현하려면 실시간 고객 데이터 플랫폼 및 기타 Experience Cloud 솔루션의 여러 영역을 사용해야 합니다. 이러한 모든 영역에 대해 필요한 [속성 기반의 액세스 제어 권한](/help/access-control/abac/overview.md)이 있는지 확인하거나, 시스템 관리자에게 필요한 권한 부여를 요청하십시오.
 
@@ -131,7 +131,7 @@ ht-degree: 89%
 
 UI의 **[!UICONTROL 데이터 수집]** 섹션은 아래 이미지와 유사합니다.
 
-![Platform UI의 데이터 수집 섹션.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
+![Experience Platform UI의 데이터 수집 섹션.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
 
 #### 데이터스트림 만들기
 
@@ -259,7 +259,7 @@ XDM 데이터 옆에 있는 데이터베이스 아이콘을 선택하고 `pageVi
 
 #### 대상자 만들기 및 에지 세분화 설정
 
-Platform UI에서 **[!UICONTROL 고객]** > **[!UICONTROL 대상]**(으)로 이동하여 웹 사이트 방문자를 캡처할 대상을 만듭니다.
+Experience Platform UI에서 **[!UICONTROL 고객]** > **[!UICONTROL 대상]**(으)로 이동하여 웹 사이트 방문자를 캡처할 대상을 만듭니다.
 
 ![대상자로 이동하는 방법을 봅니다.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 

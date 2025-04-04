@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '890'
-ht-degree: 12%
+ht-degree: 23%
 
 ---
 
@@ -23,9 +23,9 @@ Adobe Experience Platform의 기존 기능 업데이트:
 * [[!DNL Sources]](#sources)
 * [[!DNL Destinations]](#destinations)
 
-## [!DNL Experience Data Model](XDM) 시스템 {#xdm}
+## [!DNL Experience Data Model]&#x200B;(XDM) 시스템 {#xdm}
 
-표준화 및 상호 운용성은 [!DNL Experience Platform]의 핵심 개념입니다. Adobe 기반의 [!DNL Experience Data Model](XDM)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 작업입니다.
+표준화 및 상호 운용성은 [!DNL Experience Platform]의 핵심 개념입니다. Adobe을 기반으로 하는 [!DNL Experience Data Model]&#x200B;(XDM)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 작업입니다.
 
 XDM은 디지털 경험의 성능을 개선하기 위해 설계된 공개적으로 문서화된 사양입니다. Adobe Experience Platform의 서비스와 통신하는 모든 애플리케이션에 대한 일반적인 구조와 정의를 제공합니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 일반적인 표현에 통합하여 더 빠르고 통합적인 방식으로 통찰력을 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
 
@@ -44,16 +44,16 @@ XDM은 디지털 경험의 성능을 개선하기 위해 설계된 공개적으�
 
 ## [!DNL Privacy Service] {#privacy}
 
-새로운 법률 및 조직 규정은 사용자가 요청 시 데이터 저장소에서 개인 데이터를 액세스하거나 삭제할 수 있는 권한을 제공합니다. Adobe Experience Platform [!DNL Privacy Service]은(는) 고객의 이러한 데이터 요청을 관리하는 데 도움이 되는 RESTful API 및 사용자 인터페이스를 제공합니다. [!DNL Privacy Service]을(를) 사용하면 Adobe Experience Cloud 애플리케이션에서 개인 또는 개인 고객 데이터에 액세스하고 삭제하는 요청을 제출할 수 있으므로 법적 및 조직의 개인 정보 보호 규정을 자동으로 준수할 수 있습니다.
+새로운 법률 및 조직 규정은 사용자가 요청 시 데이터 저장소에서 개인 데이터를 액세스하거나 삭제할 수 있는 권한을 제공합니다. Adobe Experience Platform [!DNL Privacy Service]는 고객의 이러한 데이터 요청을 관리하는 데 도움이 되는 RESTful API 및 사용자 인터페이스를 제공합니다. [!DNL Privacy Service]를 사용하면 Adobe Experience Cloud 애플리케이션에서 비공개 또는 개인 고객 데이터에 액세스하고 삭제하도록 요청할 수 있으므로, 법적 및 조직의 개인 정보 보호 규정을 자동으로 준수할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 |--- | ---|
-| [!DNL Privacy Service] 리브랜딩 | 서비스가 GDPR 외에 다른 규정을 지원하도록 확장됨에 따라 이전에 &quot;GDPR 서비스&quot;라고 했던 이름이 [!DNL Privacy Service](으)로 새롭게 브랜딩되었습니다. |
-| 새 API 엔드포인트 | [!DNL Privacy Service] API의 기본 경로가 `/data/privacy/gdpr`에서 `/data/core/privacy/jobs`(으)로 업데이트되었습니다. |
-| 새 필수 `regulation` 속성 | [!DNL Privacy Service] API에서 새 작업을 만들 때 작업을 추적할 규정을 나타내려면 요청 페이로드에 `regulation` 속성을 제공해야 합니다. 허용되는 값은 `gdpr` 및 `ccpa`입니다. |
-| [!DNL Adobe Primetime Authentication] 지원 | [!DNL Privacy Service]이(가) 이제 `primetimeAuthentication`을(를) 제품 값으로 사용하여 [!DNL Primetime Authentication] Adobe의 액세스/삭제 요청을 수락합니다. |
+| [!DNL Privacy Service] 리브랜딩 | 이전 명칭인 “GDPR 서비스”는 GDPR 외에도 다른 규정을 지원하도록 서비스가 확대됨에 따라 [!DNL Privacy Service]로 이름이 변경되었습니다. |
+| 새로운 API 엔드포인트 | [!DNL Privacy Service] API의 기본 경로가 `/data/privacy/gdpr`에서 `/data/core/privacy/jobs`(으)로 업데이트되었습니다. |
+| 새로운 필수 `regulation` 속성 | [!DNL Privacy Service] API에서 새로운 작업을 만들 때 요청 페이로드에 작업을 추적할 규정을 나타내는 `regulation` 속성을 제공해야 합니다. 허용되는 값은 `gdpr` 및 `ccpa`입니다. |
+| [!DNL Adobe Primetime Authentication] 지원 | [!DNL Privacy Service]이(가) 이제 `primetimeAuthentication`을(를) 제품 값으로 사용하여 Adobe [!DNL Primetime Authentication]의 액세스/삭제 요청을 수락합니다. |
 | Privacy Service UI 개선 사항 | GDPR 및 CCPA 규정에 대한 별도의 작업 추적 페이지입니다. GDPR 및 CCPA에 대한 추적 데이터 간을 전환하는 새로운 **규정 유형**드롭다운. |
 
 **알려진 문제**
@@ -64,7 +64,7 @@ XDM은 디지털 경험의 성능을 개선하기 위해 설계된 공개적으�
 
 ## 소스 {#sources}
 
-Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 [!DNL Platform] 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 [!DNL Experience Platform] 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 [!DNL Experience Platform]에서는 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 

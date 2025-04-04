@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;Power BI;power bi;쿼리 서비스에 연결;
 solution: Experience Platform
-title: 쿼리 서비스에 Power BI 연결
-description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스와 Power BI을 연결하는 단계를 안내합니다.
+title: Power BI을 쿼리 서비스에 연결
+description: 이 문서에서는 Power BI을 Adobe Experience Platform 쿼리 서비스와 연결하는 단계를 안내합니다.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 2b76b99d1e22d75faf8d758edd6cf08acdec7c21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 > [!DNL Power BI] 데스크톱 응용 프로그램은 Windows 장치에서 **전용**&#x200B;입니다.
 
-[!DNL Power BI]을(를) Experience Platform에 연결하는 데 필요한 자격 증명을 획득하려면 Platform UI에서 쿼리 작업 영역에 액세스할 수 있어야 합니다. 현재 쿼리 작업 영역에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
+[!DNL Power BI]을(를) Experience Platform에 연결하는 데 필요한 자격 증명을 획득하려면 Experience Platform UI에서 쿼리 작업 영역에 액세스할 수 있어야 합니다. 현재 쿼리 작업 영역에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
 
 ## 쿼리 서비스에 [!DNL Power BI] 연결 {#connect-power-bi}
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 서버 및 데이터베이스에 대한 값을 요청하는 [!DNL PostgreSQL] 데이터베이스 대화 상자가 나타납니다. [Power Query Desktop에서 PostgreSQL 데이터베이스에 연결](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop)하는 방법에 대한 추가 지침은 공식 [!DNL PowerBI] 설명서에서 찾을 수 있습니다.
 
-이러한 필수 값은 Adobe Experience Platform 자격 증명에서 가져옵니다. 자격 증명을 찾으려면 Platform UI에 로그인하고 왼쪽 탐색에서 **[!UICONTROL 쿼리]**&#x200B;를 선택한 다음 **[!UICONTROL 자격 증명]**&#x200B;을 선택하십시오. 데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md)를 참조하십시오.
+이러한 필수 값은 Adobe Experience Platform 자격 증명에서 가져옵니다. 자격 증명을 찾으려면 Experience Platform UI에 로그인하고 왼쪽 탐색에서 **[!UICONTROL 쿼리]**&#x200B;를 선택한 다음 **[!UICONTROL 자격 증명]**&#x200B;을 선택하십시오. 데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md)를 참조하십시오.
 
 >[!IMPORTANT]
 >
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ### 데이터 연결 모드 {#data-connectivity-mode}
 
-다음으로 **[!DNL Data Connectivity mode]**&#x200B;을(를) 선택할 수 있습니다. [!DNL PostgreSQL database] 대화 상자에서 **[!DNL Import]**, **[!DNL OK]**&#x200B;을(를) 차례로 선택하여 사용 가능한 모든 테이블 목록을 표시하거나 **[!DNL DirectQuery]**&#x200B;을(를) 선택하여 [!DNL Power BI](으)로 직접 데이터를 가져오거나 복사하지 않고 데이터 원본을 직접 쿼리합니다.
+다음으로 **[!DNL Data Connectivity mode]**&#x200B;을(를) 선택할 수 있습니다. [!DNL PostgreSQL database] 대화 상자에서 **[!DNL Import]**, **[!DNL OK]**&#x200B;을(를) 차례로 선택하여 사용 가능한 모든 테이블 목록을 표시하거나 **[!DNL DirectQuery]**&#x200B;을(를) 선택하여 [!DNL Power BI]&#x200B;(으)로 직접 데이터를 가져오거나 복사하지 않고 데이터 원본을 직접 쿼리합니다.
 
 **[!DNL Import]** 모드에 대한 자세한 내용은 [테이블 가져오기](#import)에 대한 섹션을 참조하십시오. **[!DNL DirectQuery]** 모드에 대한 자세한 내용은 [데이터를 가져오지 않고 데이터 집합 쿼리](#direct-query)에 대한 섹션을 참조하십시오.
 
@@ -69,13 +69,13 @@ ht-degree: 0%
 >
 >초기 가져오기 이후 발생한 데이터 변경 사항을 보려면 전체 데이터 세트를 다시 가져와서 [!DNL Power BI] 내의 데이터를 새로 고쳐야 합니다.
 
-테이블을 가져오려면 서버 및 데이터베이스 세부 정보 [을(를) 위에서 설명한 대로 ](#connect-power-bi)입력하고 **[!DNL Import]** [!DNL Data Connectivity mode], **[!DNL OK]**&#x200B;을(를) 선택하십시오. 사용 가능한 모든 테이블 목록이 표시된 [!DNL Navigator] 대화 상자가 나타납니다. 미리 보려는 테이블을 선택한 다음 **[!DNL Load]**&#x200B;을(를) 선택하여 데이터 집합을 Power BI으로 가져옵니다. 이제 테이블을 [!DNL Power BI](으)로 가져왔습니다.
+테이블을 가져오려면 서버 및 데이터베이스 세부 정보 [을(를) 위에서 설명한 대로 ](#connect-power-bi)입력하고 **[!DNL Import]** [!DNL Data Connectivity mode], **[!DNL OK]**&#x200B;을(를) 선택하십시오. 사용 가능한 모든 테이블 목록이 표시된 [!DNL Navigator] 대화 상자가 나타납니다. 미리 보려는 테이블을 선택한 다음 **[!DNL Load]**&#x200B;을(를) 선택하여 데이터 집합을 Power BI으로 가져옵니다. 이제 테이블을 [!DNL Power BI]&#x200B;(으)로 가져왔습니다.
 
 [PowerBi Desktop의 데이터에 연결하는 방법에 대한 일반 정보](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-quickstart-connect-to-data#connect-to-data) 앱은 공식 문서에서 확인할 수 있습니다.
 
 ### 사용자 지정 SQL을 사용하여 테이블 가져오기
 
-[!DNL Power BI] 및 [!DNL Tableau]과(와) 같은 다른 타사 도구는 현재 사용자가 플랫폼의 XDM 개체와 같은 중첩 개체를 가져올 수 없습니다. 이러한 문제를 해결하기 위해 [!DNL Power BI]에서는 사용자 지정 SQL을 사용하여 이러한 중첩 필드에 액세스하고 데이터의 병합된 보기를 만들 수 있습니다. 그런 다음 [!DNL Power BI]은(는) 이전에 중첩된 데이터의 이 병합된 보기를 일반 테이블로 로드합니다.
+[!DNL Power BI] 및 [!DNL Tableau]과(와) 같은 다른 타사 도구는 현재 사용자가 Experience Platform의 XDM 개체와 같은 중첩된 개체를 가져올 수 없도록 합니다. 이러한 문제를 해결하기 위해 [!DNL Power BI]에서는 사용자 지정 SQL을 사용하여 이러한 중첩 필드에 액세스하고 데이터의 병합된 보기를 만들 수 있습니다. 그런 다음 [!DNL Power BI]은(는) 이전에 중첩된 데이터의 이 병합된 보기를 일반 테이블로 로드합니다.
 
 [!DNL PostgreSQL database] 대화 상자에서 **[!DNL Advanced options]**&#x200B;을(를) 선택하여 **[!DNL SQL statement]** 섹션에 사용자 지정 SQL 쿼리를 입력합니다. 이 사용자 지정 쿼리는 JSON 이름-값 쌍을 테이블 형식으로 병합하는 데 사용해야 합니다. 공식 설명서는 고급 옵션에서 SQL 문을 사용하여 [PowerBI를 연결](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-using-advanced-options)하는 방법에 대한 정보도 제공합니다.
 

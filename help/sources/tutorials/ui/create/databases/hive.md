@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Apache Hive;Azure HDInsights;Azure HDINSIGHTS
+keywords: Experience Platform;홈;인기 항목;Apache Hive;Azure HDInsights;Azure hdinsights
 solution: Experience Platform
 title: UI에서 Azure HDInsights Source 연결에 Apache Hive 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Azure HDInsights 소스 연결에서 Apache Hive를 만드는 방법을 알아봅니다.
 exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '479'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 > [!DNL Azure HDInsights] 커넥터의 [!DNL Apache Hive]이(가) 베타 버전입니다. 베타 레이블 커넥터 사용에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
 
-Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Platform] 사용자 인터페이스를 사용하여 [!DNL Azure HDInsights] 소스 커넥터에서 [!DNL Apache Hive]을(를) 만드는 단계를 제공합니다.
+Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 [!DNL Azure HDInsights] 소스 커넥터에서 [!DNL Apache Hive]을(를) 만드는 단계를 제공합니다.
 
 ## 시작하기
 
@@ -33,7 +33,7 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ### 필요한 자격 증명 수집
 
-[!DNL Platform]에서 [!DNL Hive] 계정에 액세스하려면 다음 값을 제공해야 합니다.
+[!DNL Experience Platform]에서 [!DNL Hive] 계정에 액세스하려면 다음 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
@@ -45,7 +45,7 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ## [!DNL Hive] 계정 연결
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL Hive] 계정을 [!DNL Platform]에 연결할 수 있습니다.
+필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL Hive] 계정을 [!DNL Experience Platform]에 연결할 수 있습니다.
 
 [Adobe Experience Platform](https://platform.adobe.com)에 로그인한 다음 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 **[!UICONTROL 소스]** 작업 영역에 액세스합니다. **[!UICONTROL 카탈로그]** 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
@@ -71,4 +71,4 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL Hive] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 가져올 데이터 흐름을 구성 [!DNL Platform]](../../dataflow/databases.md)할 수 있습니다.
+이 자습서에 따라 [!DNL Hive] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 가져올 데이터 흐름을 구성 [!DNL Experience Platform]](../../dataflow/databases.md)할 수 있습니다.

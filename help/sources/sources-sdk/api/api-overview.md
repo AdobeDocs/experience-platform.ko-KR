@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
-title: 셀프서비스 소스(일괄 처리 SDK) API 안내서
+title: 셀프서비스 소스(일괄 SDK) API 안내서
 description: 이 문서에서는 흐름 서비스 API를 사용하여 새 연결 사양을 검색, 작성 및 제출하는 방법에 대한 단계를 포함하여 새 소스를 만드는 프로세스에 대한 개요를 제공합니다.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
 
-# 셀프서비스 소스(일괄 처리 SDK) API 안내서
+# 셀프서비스 소스(일괄 SDK) API 안내서
 
 이 문서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 새 연결 사양을 작성하고 제출하는 방법에 대한 단계를 포함하여 새 소스를 만드는 프로세스에 대한 개요를 제공합니다.
 
-[!DNL Flow Service]은(는) 플랫폼 내의 다양한 개별 소스에서 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 소스 연결을 통해 서드파티 시스템을 인증하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
+[!DNL Flow Service]은(는) Experience Platform 내의 다양한 개별 소스에서 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 소스 연결을 통해 서드파티 시스템을 인증하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
-[!DNL Flow Service] API는 Self-Serve Sources(Batch SDK)를 통해 통합하는 새 소스에 대한 연결 및 흐름 사양을 프로그래밍 방식으로 관리할 수 있도록 하는 몇 가지 끝점을 제공합니다.
+[!DNL Flow Service] API는 셀프 서비스 소스(일괄 SDK)를 통해 통합하는 새 소스에 대한 연결 및 흐름 사양을 프로그래밍 방식으로 관리할 수 있도록 하는 몇 가지 끝점을 제공합니다.
 
 ## 새 연결 사양 만들기
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ## 소스 제출
 
-Experience Platform에 통합할 소스를 제출하려면 먼저 소스에 대한 전체 [!DNL Flow Service] API 워크플로우를 완료하여 소스가 제대로 작동하는지 확인해야 합니다. 소스가 정상적으로 실행되면 계속 진행하여 Adobe 담당자에게 확인 및 홍보를 요청할 수 있습니다. 자세한 내용은 [소스 테스트 및 제출](./submit.md)에 대한 안내서를 참조하십시오
+Experience Platform에 통합을 위해 소스를 제출하려면 먼저 소스에 대한 전체 [!DNL Flow Service] API 워크플로우를 완료해야 소스가 제대로 작동합니다. 소스가 정상적으로 실행되면 계속 진행하여 Adobe 담당자에게 확인 및 홍보를 요청할 수 있습니다. 자세한 내용은 [소스 테스트 및 제출](./submit.md)에 대한 안내서를 참조하십시오
 
 ## 다음 단계
 

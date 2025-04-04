@@ -5,9 +5,9 @@ description: Adobe Real-Time Customer Data Platform B2B 에디션을 통해 계�
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '306'
 ht-degree: 7%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 7%
 
 ## 계정 프로필 뷰어
 
-Real-Time CDP, B2B edition을 사용하면 Experience Platform 사용자 인터페이스를 사용하여 계정 프로필을 보고 연결된 엔터프라이즈 소스의 계정 ID를 사용하거나 소스 세부 정보를 직접 입력하여 특정 계정을 검색할 수 있습니다. Platform UI에서 계정 프로필을 보는 방법에 대한 자세한 내용은 [계정 프로필 UI 안내서](account-profile-ui-guide.md)를 참조하십시오.
+Real-Time CDP, B2B edition을 사용하면 Experience Platform 사용자 인터페이스를 사용하여 계정 프로필을 보고 연결된 엔터프라이즈 소스의 계정 ID를 사용하거나 소스 세부 정보를 직접 입력하여 특정 계정을 검색할 수 있습니다. Experience Platform UI에서 계정 프로필을 보는 방법에 대한 자세한 내용은 [계정 프로필 UI 안내서](account-profile-ui-guide.md)를 참조하십시오.
 
 ## 계정 대상자 만들기 및 활성화
 

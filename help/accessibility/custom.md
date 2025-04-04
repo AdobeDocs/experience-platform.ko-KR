@@ -4,9 +4,9 @@ title: Experience Platform을 위한 맞춤형 접근성 솔루션
 type: Documentation
 description: Adobe Experience Platform 사용자 인터페이스 내의 사용자 지정 접근성 솔루션에 대해 자세히 알아보십시오.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform은 모든 유형의 사용자의 요구 사항을 충�
 
 Experience Platform 사용자 인터페이스는 일반 텍스트, 그래픽 및 UI 구성 요소에 필요한 명암비를 충족합니다. 사용자 인터페이스의 색상은 시각 장애가 있는 사용자를 포함하여 모든 사용자의 접근성을 지원하도록 선택되었습니다.
 
-Platform에서 포인터로 클릭 또는 실행할 수 있는 UI 요소는 키보드를 사용하여 결합할 수도 있습니다. 여기에는 왼쪽 내비게이션, 비디오 플레이어, 테이블 등이 포함됩니다.
+에서 포인터로 클릭 가능하거나 실행 가능한 UI 요소는 키보드를 사용하여 결합할 수도 있습니다. 여기에는 왼쪽 내비게이션, 비디오 플레이어, 테이블 등이 포함됩니다.
 
 Experience Platform은 웹 컨텐츠 액세스 가능성 지침 2.1 레벨 A 및 레벨 AA, 웹 액세스 가능성 이니셔티브 - WAI-ARIA(Accessible Rich Internet Applications) 웹 표준 등 국제 액세스 가능성 표준을 충족하기 위해 노력하고 있습니다.
 
@@ -31,23 +31,23 @@ Experience Platform UI 내의 왼쪽 탐색은 키보드에 액세스할 수 있
 
 홈 화면에서 사용자는 탭을 왼쪽 탐색에 넣을 수 있습니다. **Shift + Tab**&#x200B;을 선택하면 사용자가 홈 화면으로 돌아갑니다.
 
-![Experience Platform이 탐색을 나갔습니다.](images/left-navigation-select.png)
+![Experience Platform 왼쪽 탐색.](images/left-navigation-select.png)
 
 **Tab**&#x200B;은(는) 포커스에 있는 왼쪽 탐색 기능으로 사용자를 확장 및 축소 상호 작용으로 안내합니다. 왼쪽 탐색 영역을 확장하거나 축소하는 기능은 **Enter(Return)**&#x200B;로 활성화됩니다.
 
-![왼쪽 Experience Platform 탐색이 축소되었습니다.](images/left-navigation-collapse.png)
+![Experience Platform 왼쪽 탐색이 축소되었습니다.](images/left-navigation-collapse.png)
 
 왼쪽 탐색을 포커스에 두고 위쪽 및 아래쪽 화살표 키를 사용하여 탐색의 각 항목으로 이동하고 계속 순환합니다(즉, 사용자가 왼쪽 탐색에서 멀리 탭을 누를 때까지 포커스가 이동하지 않음). 선택하면 탐색 항목에 대한 포커스가 표시됩니다. 현재 선택 영역은 강조 표시와 굵은 텍스트로 표시됩니다. 왼쪽 탐색 항목을 선택할 때 **Enter(Return)**&#x200B;하면 오른쪽 패널에서 선택한 UI 항목이 열리지만 사용자가 탭을 닫을 때까지 포커스는 왼쪽 탐색에 남아 있습니다.
 
-![원본을 선택한 상태로 Experience Platform 왼쪽 탐색.](images/left-navigation-sources.png)
+![소스가 선택된 Experience Platform 왼쪽 탐색.](images/left-navigation-sources.png)
 
-Platform 내의 일부 기능은 모든 사용자에 대해 활성화되지 않습니다. 이러한 항목은 탐색에 표시되지만 선택할 수 없습니다. 키보드로 탐색하는 경우 화살표 탐색 중에 이러한 항목을 건너뛰며 **Enter(Return)**&#x200B;을 사용하여 선택할 수 없습니다.
+Experience Platform 내의 일부 기능은 모든 사용자에 대해 활성화되지 않습니다. 이러한 항목은 탐색에 표시되지만 선택할 수 없습니다. 키보드로 탐색하는 경우 화살표 탐색 중에 이러한 항목을 건너뛰며 **Enter(Return)**&#x200B;을 사용하여 선택할 수 없습니다.
 
-![Experience Platform 왼쪽 탐색 중 사용자에 대해 사용할 수 없는 섹션을 선택할 수 없습니다.](images/left-navigation-sections-disabled.png)
+![Experience Platform 왼쪽 탐색 중 사용자가 사용할 수 없는 부분은 선택할 수 없습니다.](images/left-navigation-sections-disabled.png)
 
 ## 포함된 비디오 대화 상자
 
-키보드 탐색을 사용하여 사용 가능한 비디오 링크를 강조 표시하고 선택하여 Experience Platform 내에서 비디오를 볼 수 있습니다. 이렇게 하면 Platform UI 내에 포함된 비디오 대화 상자가 열립니다.
+키보드 탐색을 사용하여 사용 가능한 비디오 링크를 강조 표시하고 선택하여 Experience Platform 내에서 비디오를 볼 수 있습니다. Experience Platform UI 내에 포함된 비디오 대화 상자가 열립니다.
 
 ![포커스가 적용되었음을 나타내기 위해 선택한 요소 주위에 파란색 테두리가 표시됩니다.](images/profile-overview-tab.png)
 
@@ -61,7 +61,7 @@ Platform 내의 일부 기능은 모든 사용자에 대해 활성화되지 않�
 | 스크러버 | Tab<br/>왼쪽 화살표<br/>오른쪽 화살표 | 비디오가 재생될 때 **Tab**&#x200B;을(를) 사용하여 스크러버에 초점을 맞추십시오. 스크러버에 포커스를 설정한 상태에서 **왼쪽 및 오른쪽 화살표 키**&#x200B;는 각각 5초 앞과 뒤로 비디오 재생을 건너뜁니다. |
 | 음소거 | Tab<br/>스페이스바 | **Tab**&#x200B;을(를) 사용하여 음소거 볼륨 요소에 포커스를 맞춥니다. **스페이스바**&#x200B;를 사용하여 비디오 재생을 음소거 또는 음소거 해제하세요. |
 | 볼륨 | Tab<br/>왼쪽 화살표<br/>오른쪽 화살표 | **Tab**&#x200B;을(를) 사용하여 볼륨 요소에 집중합니다. **왼쪽 및 오른쪽 화살표 키** 볼륨을 각각 위아래로 이동합니다. |
-| [!UICONTROL 폐쇄 캡션](&quot;cc&quot;) | Tab<br/>Enter<br/>위쪽 화살표<br/>아래쪽 화살표 | **Tab** - [!UICONTROL 폐쇄 캡션](&quot;cc&quot;) 요소 메뉴를 열려면 **Enter**&#x200B;를 사용하고 캡션을 사용할 언어를 선택하려면 **위쪽 및 아래쪽 화살표 키**&#x200B;를 사용합니다. **Enter**&#x200B;를 눌러 선택을 확인합니다. |
+| [!UICONTROL 폐쇄 캡션]&#x200B;(&quot;cc&quot;) | Tab<br/>Enter<br/>위쪽 화살표<br/>아래쪽 화살표 | **Tab** - [!UICONTROL 폐쇄 캡션]&#x200B;(&quot;cc&quot;) 요소 메뉴를 열려면 **Enter**&#x200B;를 사용하고 캡션을 사용할 언어를 선택하려면 **위쪽 및 아래쪽 화살표 키**&#x200B;를 사용합니다. **Enter**&#x200B;를 눌러 선택을 확인합니다. |
 | [!UICONTROL 품질] | Tab<br/>Enter<br/>위쪽 화살표<br/>아래쪽 화살표 | **Tab**&#x200B;을(를) 사용하여 [!UICONTROL Quality] 요소에 초점을 맞추십시오. **Enter**&#x200B;를 사용하여 메뉴를 열고 **위쪽 및 아래쪽 화살표 키**&#x200B;를 사용하여 비디오 품질을 선택합니다. **Enter**&#x200B;를 눌러 선택을 확인합니다. |
 | 전체 화면 | Tab<br/>스페이스바 또는 Enter<br/>Esc | **Tab**&#x200B;을(를) 사용하여 전체 화면 요소에 포커스를 맞춥니다. **스페이스바 또는 Enter**&#x200B;을(를) 사용하여 전체 화면 보기를 활성화합니다. **Esc**(&quot;esc&quot;)이 전체 화면 모드를 종료합니다. |
 | 닫기 | Tab<br/>스페이스바 또는 Enter | **Tab**&#x200B;을(를) 사용하여 닫기 단추에 초점을 맞추십시오. **스페이스바 또는 Enter** 키를 사용하여 비디오 대화 상자를 종료합니다. |
@@ -74,7 +74,7 @@ Platform 내의 일부 기능은 모든 사용자에 대해 활성화되지 않�
 
 ## 파일 드래그 앤 드롭
 
-Experience Platform에서 모든 파일 선택 영역 드래그 앤 드롭 영역에 키보드로 액세스할 수 있습니다. **Tab**&#x200B;을 사용하여 **[!UICONTROL 파일 선택]**&#x200B;을 선택하고 **Enter 또는 스페이스바**&#x200B;를 사용하여 선택하면 운영 체제의 파일 선택 UI가 호출됩니다.
+Experience Platform에서 모든 파일 선택 드래그 앤 드롭 영역에 키보드로 액세스할 수 있습니다. **Tab**&#x200B;을 사용하여 **[!UICONTROL 파일 선택]**&#x200B;을 선택하고 **Enter 또는 스페이스바**&#x200B;를 사용하여 선택하면 운영 체제의 파일 선택 UI가 호출됩니다.
 
 파일이 업로드되면 삭제 아이콘을 키보드로 탐색하여 선택한 파일을 제거하고 새 파일을 업로드할 수 있습니다. 사용자는 **Tab**&#x200B;을 사용하여 삭제 아이콘에 초점을 맞추고 **Enter 또는 스페이스바**&#x200B;를 사용하여 선택할 수 있습니다. 파일이 제거되면 **[!UICONTROL 파일 선택]**&#x200B;에 자동으로 초점이 맞춰져 선택할 수 있습니다.
 
@@ -126,7 +126,7 @@ Experience Platform 사용자 인터페이스의 모든 표는 키보드로 액�
 
 ## 세그먼트 빌더 UI
 
-Segment Builder UI를 사용하여 Experience Platform 내에서 세그먼트를 만들고 편집하고 상호 작용하는 경우 다음 기능을 사용하여 접근성을 향상시킬 수 있습니다.
+세그먼트 빌더 UI를 사용하여 Experience Platform 내의 세그먼트를 만들고, 편집하고, 상호 작용할 때 다음 기능을 사용하면 접근성을 향상시킬 수 있습니다.
 
 * 세그먼트 빌더 UI는 키보드 탐색을 통해 액세스할 수 있습니다.
 * 화면 판독기는 제목에 대한 마크업 태그를 인식해야 하며 제목 수준과 함께 제목을 알릴 수 있습니다.

@@ -3,9 +3,9 @@ keywords: crm;CRM;CRM 대상;salesforce crm;salesforce crm 대상
 title: Salesforce CRM 연결
 description: Salesforce CRM 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce CRM 내에서 활성화할 수 있습니다.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: d9ff92138a5de774f011dd9b2e5f1cdc3371bacf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2821'
+source-wordcount: '2845'
 ht-degree: 1%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 1%
 
 이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) 위에서 설명한 두 유형의 프로필을 모두 지원하는 [[!DNL Salesforce composite API]](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_composite_sobjects_collections_update.htm)을(를) 활용합니다.
 
-[세그먼트를 활성화](#activate)할 때 리드 또는 연락처 중 하나를 선택하고 특성 및 대상 데이터를 [!DNL Salesforce CRM](으)로 업데이트할 수 있습니다.
+[세그먼트를 활성화](#activate)할 때 리드 또는 연락처 중 하나를 선택하고 특성 및 대상 데이터를 [!DNL Salesforce CRM]&#x200B;(으)로 업데이트할 수 있습니다.
 
 [!DNL Salesforce CRM]은(는) 암호 부여가 있는 OAuth 2를 인증 메커니즘으로 사용하여 Salesforce REST API와 통신합니다. [!DNL Salesforce CRM] 인스턴스에 대한 인증 지침은 [대상에 대한 인증](#authenticate) 섹션에서 아래에 더 나와 있습니다.
 
 ## 사용 사례 {#use-cases}
 
-마케터는 Adobe Experience Platform 프로필의 속성에 따라 개인화된 경험을 사용자에게 제공할 수 있습니다. 오프라인 데이터에서 대상을 작성하고 이 대상을 Salesforce CRM으로 보내어 Adobe Experience Platform에서 대상 및 프로필이 업데이트되는 즉시 CRM 멤버십을 업데이트할 수 있습니다.
+마케터는 Adobe Experience Platform 프로필의 속성에 따라 개인화된 경험을 사용자에게 제공할 수 있습니다. 오프라인 데이터에서 대상을 작성하고 이 대상을 Salesforce CRM으로 보내면 Adobe Experience Platform에서 대상 및 프로필이 업데이트되는 즉시 CRM 멤버십을 업데이트할 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -37,7 +37,7 @@ Salesforce CRM 대상으로 데이터를 활성화하기 전에 [!DNL Experience
 
 ### [!DNL Salesforce CRM]의 필수 구성 요소 {#prerequisites-destination}
 
-Platform에서 Salesforce 계정으로 데이터를 내보내려면 [!DNL Salesforce CRM]에서 다음 사전 요구 사항을 참고하십시오.
+Experience Platform에서 Salesforce 계정으로 데이터를 내보내려면 [!DNL Salesforce CRM]에서 다음 사전 요구 사항을 참고하십시오.
 
 #### [!DNL Salesforce] 계정이 있어야 합니다. {#prerequisites-account}
 
@@ -72,31 +72,31 @@ Platform에서 Salesforce 계정으로 데이터를 내보내려면 [!DNL Salesf
 
 대상을 [!DNL Salesforce CRM] 대상으로 활성화할 때 **[대상 일정](#schedule-segment-export-example)** 단계에서 활성화된 각 대상에 대해 **[!UICONTROL 매핑 ID]** 필드에 값을 입력해야 합니다.
 
-[!DNL Salesforce CRM]에서는 Experience Platform에서 들어오는 대상을 올바르게 읽고 해석하고 [!DNL Salesforce] 내의 대상 상태를 업데이트하려면 이 값이 필요합니다. 대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)에 대한 Experience Platform 설명서를 참조하세요.
+[!DNL Salesforce CRM]에서는 Experience Platform에서 들어오는 대상을 올바르게 읽고 해석하고 [!DNL Salesforce] 내에서 대상 상태를 업데이트하려면 이 값이 필요합니다. 대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)에 대한 Experience Platform 설명서를 참조하십시오.
 
-플랫폼에서 [!DNL Salesforce CRM](으)로 활성화하는 각 대상에 대해 [!DNL Salesforce] 내에 `Text Area (Long)` 유형의 사용자 지정 필드를 만들어야 합니다. 비즈니스 요구 사항에 따라 256~131,072자 사이의 모든 크기의 필드 문자 길이를 정의할 수 있습니다. 사용자 지정 필드 형식에 대한 자세한 내용은 [!DNL Salesforce] [사용자 지정 필드 형식](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5) 설명서 페이지를 참조하세요. 필드 만들기에 대한 지원이 필요한 경우 [!DNL Salesforce] 설명서를 참조하여 [사용자 지정 필드 만들기](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US)를 참조하십시오.
+Experience Platform에서 [!DNL Salesforce CRM]&#x200B;(으)로 활성화하는 각 대상에 대해 [!DNL Salesforce] 내에 `Text Area (Long)` 유형의 사용자 지정 필드를 만들어야 합니다. 비즈니스 요구 사항에 따라 256~131,072자 사이의 모든 크기의 필드 문자 길이를 정의할 수 있습니다. 사용자 지정 필드 형식에 대한 자세한 내용은 [!DNL Salesforce] [사용자 지정 필드 형식](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5) 설명서 페이지를 참조하세요. 필드 만들기에 대한 지원이 필요한 경우 [!DNL Salesforce] 설명서를 참조하여 [사용자 지정 필드 만들기](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US)를 참조하십시오.
 
 >[!IMPORTANT]
 >
 >필드 이름에 공백 문자를 포함하지 마십시오. 대신 밑줄 `(_)` 문자를 구분 기호로 사용하십시오.
->[!DNL Salesforce] 내에서 활성화된 각 플랫폼 세그먼트에 대해 **[!UICONTROL 매핑 ID]** 내에 지정된 값과 정확히 일치하는 **[!UICONTROL 필드 이름]**&#x200B;을(를) 가진 사용자 정의 필드를 만들어야 합니다. 예를 들어 아래 스크린샷에는 이름이 `crm_2_seg`인 사용자 지정 필드가 표시됩니다. 대상을 이 대상으로 활성화할 때 `crm_2_seg`을(를) **[!UICONTROL 매핑 ID]**(으)로 추가하여 Experience Platform의 대상 대상을 이 사용자 지정 필드에 채웁니다.
+>[!DNL Salesforce] 내에서 활성화된 각 Experience Platform 세그먼트에 대해 **[!UICONTROL 매핑 ID]** 내에 지정된 값과 정확히 일치하는 **[!UICONTROL 필드 이름]**&#x200B;을(를) 가진 사용자 정의 필드를 만들어야 합니다. 예를 들어 아래 스크린샷에는 이름이 `crm_2_seg`인 사용자 지정 필드가 표시됩니다. 대상을 이 대상으로 활성화할 때 `crm_2_seg`을(를) **[!UICONTROL 매핑 ID]**(으)로 추가하여 Experience Platform의 대상 대상을 이 사용자 정의 필드에 채웁니다.
 
 [!DNL Salesforce], *1단계 - 데이터 형식 선택*에서 사용자 지정 필드를 만드는 예는 다음과 같습니다.
-![사용자 지정 필드 만들기, 1단계 - 데이터 형식을 선택하는 방법을 보여 주는 Salesforce UI 스크린샷](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-1.png)
+![사용자 지정 필드 만들기, 1단계 - 데이터 형식 선택을 보여 주는 Salesforce UI 스크린샷](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-1.png)
 
 [!DNL Salesforce], *2단계 - 사용자 정의 필드에 대한 세부 정보를 입력*하는 사용자 정의 필드 생성의 예는 다음과 같습니다.
-![사용자 정의 필드 만들기, 2단계를 보여주는 Salesforce UI 스크린샷 - 사용자 정의 필드에 대한 세부 정보를 입력합니다.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-2.png)
+![사용자 지정 필드 만들기, 2단계를 보여주는 Salesforce UI 스크린샷 - 사용자 지정 필드에 대한 세부 정보를 입력합니다.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-2.png)
 
 >[!TIP]
 >
->* Platform 대상에 사용되는 사용자 정의 필드와 [!DNL Salesforce] 내의 다른 사용자 정의 필드를 구별하기 위해 사용자 정의 필드를 만들 때 인식 가능한 접두사 또는 접미사를 포함할 수 있습니다. 예를 들어 `test_segment` 대신 `Adobe_test_segment` 또는 `test_segment_Adobe`을(를) 사용합니다.
->* [!DNL Salesforce]에 이미 다른 사용자 정의 필드가 만들어져 있는 경우 플랫폼 세그먼트와 동일한 이름을 사용하여 [!DNL Salesforce]의 대상자를 쉽게 식별할 수 있습니다.
+>* Experience Platform 대상에 사용되는 사용자 정의 필드와 [!DNL Salesforce] 내의 다른 사용자 정의 필드를 구분하려면 사용자 정의 필드를 만들 때 인식 가능한 접두사 또는 접미사를 포함할 수 있습니다. 예를 들어 `test_segment` 대신 `Adobe_test_segment` 또는 `test_segment_Adobe`을(를) 사용합니다.
+>* [!DNL Salesforce]에 이미 다른 사용자 정의 필드가 만들어져 있는 경우 Experience Platform 세그먼트와 동일한 이름을 사용하여 [!DNL Salesforce]의 대상자를 쉽게 식별할 수 있습니다.
 
 >[!NOTE]
 >
->* Salesforce의 개체는 25개의 외부 필드로 제한됩니다. [사용자 지정 필드 특성](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5)을(를) 참조하십시오.
+>* Salesforce의 개체는 25개의 외부 필드로 제한됩니다. [사용자 지정 필드 특성](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5)을 참조하십시오.
 >* 이 제한은 언제든지 최대 25개의 Experience Platform 대상 멤버십을 활성화할 수 있음을 의미합니다.
->* Salesforce 내에서 이 제한에 도달한 경우 새 **[!UICONTROL 매핑 ID]**&#x200B;을(를) 사용하려면 먼저 Experience Platform 내에서 이전 대상자에 대한 대상 상태를 저장하는 데 사용된 Salesforce의 사용자 지정 특성을 제거해야 합니다.
+>* Salesforce 내에서 이 제한에 도달한 경우 새 **[!UICONTROL 매핑 ID]**&#x200B;을(를) 사용하기 전에 Experience Platform 내의 이전 대상에 대해 대상 상태를 저장하는 데 사용된 Salesforce에서 사용자 지정 특성을 제거해야 합니다.
 
 #### [!DNL Salesforce CRM] 자격 증명 수집 {#gather-credentials}
 
@@ -135,7 +135,7 @@ Platform에서 Salesforce 계정으로 데이터를 내보내려면 [!DNL Salesf
 
 | 항목 | 유형 | 참고 |
 |---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> [!DNL Salesforce CRM]의 각 대상 상태는 [대상 예약](#schedule-segment-export-example) 단계 동안 제공된 **[!UICONTROL 매핑 ID]** 값을 기반으로 플랫폼에서 해당 대상 상태로 업데이트됩니다.</li></ul> |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> [!DNL Salesforce CRM]의 각 대상 상태는 [대상 예약](#schedule-segment-export-example) 단계 동안 제공된 **[!UICONTROL 매핑 ID]** 값을 기반으로 Experience Platform의 해당 대상 상태로 업데이트됩니다.</li></ul> |
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | <ul><li>스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요.</li></ul> |
 
 {style="table-layout:auto"}
@@ -162,7 +162,7 @@ Platform에서 Salesforce 계정으로 데이터를 내보내려면 [!DNL Salesf
 | **[!UICONTROL 클라이언트 ID]** | [!DNL Salesforce]이(가) 앱 `Consumer Key`에 연결했습니다. |
 | **[!UICONTROL 클라이언트 암호]** | [!DNL Salesforce]이(가) 앱 `Consumer Secret`에 연결했습니다. |
 
-인증 방법을 보여 주는 ![플랫폼 UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
+인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
 제공된 세부 정보가 유효하면 UI에 녹색 확인 표시와 함께 **[!UICONTROL 연결됨]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
 
@@ -175,7 +175,7 @@ Platform에서 Salesforce 계정으로 데이터를 내보내려면 [!DNL Salesf
    * 내보내거나 업데이트하려는 ID가 *연락처* 유형인 경우 **[!UICONTROL 연락처]**&#x200B;을(를) 선택하십시오.
    * 내보내거나 업데이트하려는 ID가 *리드* 유형인 경우 **[!UICONTROL 리드]**&#x200B;를 선택하십시오.
 
-![대상 세부 정보를 표시하는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/destination-details.png)
+대상 세부 정보를 표시하는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/destination-details.png)
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -194,7 +194,7 @@ Platform에서 Salesforce 계정으로 데이터를 내보내려면 [!DNL Salesf
 
 ### 매핑 고려 사항 및 예제 {#mapping-considerations-example}
 
-대상 데이터를 Adobe Experience Platform에서 [!DNL Salesforce CRM] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 필드 간에 링크를 만드는 것으로 구성됩니다.
+대상 데이터를 Adobe Experience Platform에서 [!DNL Salesforce CRM] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Experience Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 스키마 필드 간에 링크를 작성하는 것으로 구성됩니다.
 
 **[!UICONTROL 대상 필드]**&#x200B;에 지정된 특성은 요청 본문을 형성하므로 특성 매핑 표에 설명된 대로 정확히 이름을 지정해야 합니다.
 
@@ -203,14 +203,14 @@ Platform에서 Salesforce 계정으로 데이터를 내보내려면 [!DNL Salesf
 XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑하려면 다음 단계를 따르십시오.
 
 1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**를 선택하면 화면에 새 매핑 행이 표시됩니다.
-   ![새 매핑 추가를 위한 플랫폼 UI 스크린샷 예](../../assets/catalog/crm/salesforce/add-new-mapping.png)
+   ![새 매핑 추가를 위한 Experience Platform UI 스크린샷 예](../../assets/catalog/crm/salesforce/add-new-mapping.png)
 1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 XDM 특성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을 선택하고 ID를 선택합니다.
 1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 ID를 선택하거나 **[!UICONTROL 사용자 지정 특성 선택]** 범주를 선택하고 필요에 따라 특성을 선택하거나 **[!UICONTROL 특성 이름]** 필드를 사용하여 특성을 정의합니다. 지원되는 특성에 대한 지침은 [[!DNL Salesforce CRM] 설명서](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5)를 참조하세요.
    * XDM 프로필 스키마와 [!DNL (API) Salesforce CRM] 사이에 다음 매핑을 추가하려면 다음 단계를 반복합니다.
 
    **연락처 작업**
 
-   * 세그먼트 내에서 *연락처*&#x200B;와 함께 작업하는 경우 [연락처](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm)에 대한 Salesforce의 개체 참조 를 참조하여 업데이트할 필드에 대한 매핑을 정의하십시오.
+   * 세그먼트 내에서 *연락처*&#x200B;와 함께 작업하는 경우 [연락처](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm)에 대한 Salesforce의 개체 참조를 참조하여 업데이트할 필드에 대한 매핑을 정의하십시오.
    * 위의 링크에서 필드 설명에 언급된 단어 *Required*&#x200B;을(를) 검색하여 필수 필드를 식별할 수 있습니다.
    * 내보내거나 업데이트할 필드에 따라 XDM 프로필 스키마와 [!DNL (API) Salesforce CRM] 사이에 매핑을 추가합니다.
 
@@ -222,11 +222,11 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
      | `xdm: personalEmail.address` | `Attribute: Email` | 연락처의 이메일 주소입니다. |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
-     ![Target 매핑을 보여 주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
+     ![Target 매핑을 보여 주는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
    **잠재 고객 작업**
 
-   * 세그먼트 내에서 *리드*&#x200B;를 사용하여 작업하는 경우 [리드](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm)에 대한 Salesforce의 개체 참조를 참조하여 업데이트할 필드에 대한 매핑을 정의하십시오.
+   * 세그먼트 내에서 *리드*&#x200B;로 작업하는 경우 [리드](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm)에 대한 Salesforce의 개체 참조를 참조하여 업데이트할 필드에 대한 매핑을 정의하십시오.
    * 위의 링크에서 필드 설명에 언급된 단어 *Required*&#x200B;을(를) 검색하여 필수 필드를 식별할 수 있습니다.
    * 내보내거나 업데이트할 필드에 따라 XDM 프로필 스키마와 [!DNL (API) Salesforce CRM] 사이에 매핑을 추가합니다.
 
@@ -238,13 +238,13 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
      | `xdm: personalEmail.address` | `Attribute: Email` | 잠재 고객의 이메일 주소입니다. |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
-     ![Target 매핑을 보여 주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/mappings-leads.png)
+     ![Target 매핑을 보여 주는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/mappings-leads.png)
 
 대상 연결에 대한 매핑을 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
 ### 대상자 내보내기 예약 및 예제 {#schedule-segment-export-example}
 
-[대상 내보내기 예약](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 단계를 수행할 때 플랫폼에서 활성화된 대상을 [!DNL Salesforce]의 해당 사용자 지정 필드에 수동으로 매핑해야 합니다.
+[대상 내보내기 예약](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 단계를 수행할 때 Experience Platform에서 활성화된 대상을 [!DNL Salesforce]의 해당 사용자 정의 필드에 수동으로 매핑해야 합니다.
 
 이렇게 하려면 각 세그먼트를 선택한 다음 [!DNL Salesforce CRM] **[!UICONTROL 매핑 ID]** 필드의 [!DNL Salesforce]에서 사용자 지정 필드 이름을 입력하십시오. [!DNL Salesforce]에서 사용자 지정 필드를 만드는 방법에 대한 지침 및 모범 사례를 보려면 [다음 섹션 내에서 사용자 지정 필드 만들기 [!DNL Salesforce]](#prerequisites-custom-field)를 참조하세요.
 
@@ -254,7 +254,7 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
 사용자 지정 필드를 표시하는 ![[!DNL Salesforce] UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
 [!DNL Salesforce CRM] **[!UICONTROL 매핑 ID]**의 위치를 나타내는 예는 다음과 같습니다.
-![대상자 내보내기 일정을 보여 주는 Platform UI 스크린샷 예](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
+![대상자 내보내기 일정을 보여 주는 Experience Platform UI 스크린샷 예](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
 위에 표시된 대로 [!DNL Salesforce] **[!UICONTROL 필드 이름]**&#x200B;은(는) [!DNL Salesforce CRM] **[!UICONTROL 매핑 ID]** 내에 지정된 값과 정확히 일치합니다.
 
@@ -265,41 +265,41 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
 | crm_1_seg | `crm_1_seg` | `crm_1_seg` |
 | crm_2_seg | `crm_2_seg` | `crm_2_seg` |
 
-활성화된 각 플랫폼 세그먼트에 대해 이 섹션을 반복합니다.
+활성화된 각 Experience Platform 세그먼트에 대해 이 섹션을 반복합니다.
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
 
 대상을 올바르게 설정했는지 확인하려면 아래 단계를 수행하십시오.
 
 1. 대상 목록으로 이동하려면 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**를 선택하십시오.
-   ![검색 대상을 표시하는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/browse-destinations.png)
+   ![찾아보기 대상을 표시하는 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/browse-destinations.png)
 
 1. 대상을 선택하고 상태가 **[!UICONTROL 활성화됨]**인지 확인하십시오.
-   ![대상 데이터 흐름이 실행되는 Platform UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
+   ![대상 데이터 흐름이 실행되는 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
 
 1. **[!UICONTROL 활성화 데이터]** 탭으로 전환한 다음 대상 이름을 선택합니다.
-   ![대상 활성화 데이터를 보여주는 플랫폼 UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/destinations-activation-data.png)
+   ![대상 활성화 데이터를 보여주는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/destinations-activation-data.png)
 
 1. 대상자 요약을 모니터링하고 프로필 수가 세그먼트 내에서 만든 수에 해당하는지 확인합니다.
-   ![세그먼트를 표시하는 플랫폼 UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/segment.png)
+   ![세그먼트를 표시하는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/segment.png)
 
 1. 마지막으로 Salesforce 웹 사이트에 로그인하여 대상자의 프로필이 추가 또는 업데이트되었는지 확인합니다.
 
    **연락처 작업**
 
-   * Platform 세그먼트 내에서 *연락처*&#x200B;를 선택한 경우 **[!DNL Apps]** > **[!DNL Contacts]** 페이지로 이동합니다.
+   * Experience Platform 세그먼트 내에서 *연락처*&#x200B;를 선택한 경우 **[!DNL Apps]** > **[!DNL Contacts]** 페이지로 이동합니다.
      ![세그먼트의 프로필이 있는 연락처 페이지를 표시하는 Salesforce CRM 스크린샷입니다.](../../assets/catalog/crm/salesforce/contacts.png)
 
-   * *연락처*&#x200B;를 선택하고 필드가 업데이트되었는지 확인하십시오. [대상 예약](#schedule-segment-export-example) 중에 제공된 **[!UICONTROL 매핑 ID]** 값을 기반으로 [!DNL Salesforce CRM]의 각 대상 상태가 플랫폼의 해당 대상 상태로 업데이트되었음을 확인할 수 있습니다.
+   * *연락처*&#x200B;를 선택하고 필드가 업데이트되었는지 확인하십시오. [대상 예약](#schedule-segment-export-example) 중에 제공된 **[!UICONTROL 매핑 ID]** 값을 기반으로 [!DNL Salesforce CRM]의 각 대상 상태가 Experience Platform의 해당 대상 상태로 업데이트되었음을 확인할 수 있습니다.
      ![대상자 상태가 업데이트된 연락처 세부 정보 페이지를 표시하는 Salesforce CRM 스크린샷](../../assets/catalog/crm/salesforce/contact-info.png)
 
    **잠재 고객 작업**
 
-   * Platform 세그먼트 내에서 *리드*&#x200B;를 선택한 경우 **[!DNL Apps]** > **[!DNL Leads]** 페이지로 이동합니다.
-     ![세그먼트의 프로필이 있는 리드 페이지를 표시하는 Salesforce CRM 스크린샷](../../assets/catalog/crm/salesforce/leads.png)
+   * Experience Platform 세그먼트 내에서 *리드*&#x200B;를 선택한 경우 **[!DNL Apps]** > **[!DNL Leads]** 페이지로 이동합니다.
+     ![세그먼트의 프로필이 있는 리드 페이지를 표시하는 Salesforce CRM 스크린샷입니다.](../../assets/catalog/crm/salesforce/leads.png)
 
-   * *잠재 고객*&#x200B;을 선택하고 필드가 업데이트되었는지 확인하십시오. [대상 예약](#schedule-segment-export-example) 중에 제공된 **[!UICONTROL 매핑 ID]** 값을 기반으로 [!DNL Salesforce CRM]의 각 대상 상태가 플랫폼의 해당 대상 상태로 업데이트되었음을 확인할 수 있습니다.
-     ![대상자 상태가 업데이트된 잠재 고객 세부 정보 페이지를 표시하는 Salesforce CRM 스크린샷](../../assets/catalog/crm/salesforce/lead-info.png)
+   * *잠재 고객*&#x200B;을 선택하고 필드가 업데이트되었는지 확인하십시오. [대상 예약](#schedule-segment-export-example) 중에 제공된 **[!UICONTROL 매핑 ID]** 값을 기반으로 [!DNL Salesforce CRM]의 각 대상 상태가 Experience Platform의 해당 대상 상태로 업데이트되었음을 확인할 수 있습니다.
+     대상 상태가 업데이트된 잠재 고객 세부 정보 페이지를 표시하는 ![Salesforce CRM 스크린샷입니다.](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
@@ -310,7 +310,7 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
 ### 이벤트를 대상으로 푸시하는 동안 알 수 없는 오류 발생 {#unknown-errors}
 
 * 데이터 흐름 실행을 확인할 때 다음 오류 메시지가 표시될 수 있습니다. `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
-  ![오류를 표시하는 플랫폼 UI 스크린샷.](../../assets/catalog/crm/salesforce/error.png)
+  ![오류를 표시하는 Experience Platform UI 스크린샷](../../assets/catalog/crm/salesforce/error.png)
 
    * 이 오류를 수정하려면 활성화 워크플로에서 [!DNL Salesforce CRM] 대상에 제공한 **[!UICONTROL 매핑 ID]**&#x200B;이(가) [!DNL Salesforce]에서 만든 사용자 지정 필드 형식의 값과 정확히 일치하는지 확인하십시오. 지침은  [!DNL Salesforce]](#prerequisites-custom-field) 섹션 내에서 [사용자 지정 필드 만들기를 참조하세요.
 

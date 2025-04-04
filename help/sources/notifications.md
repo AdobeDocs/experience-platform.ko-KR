@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;홈;인기 항목; 알림
-description: Adobe I/O 이벤트를 구독하면 웹후크를 사용하여 소스 연결의 흐름 실행 상태에 대한 알림을 받을 수 있습니다. 이러한 알림에는 플로우 실행의 성공 또는 실행 실패에 기여한 오류에 대한 정보가 포함됩니다.
+keywords: Experience Platform;홈;인기 있는 주제; 알림
+description: Adobe I/O Events을 구독하면 웹후크를 사용하여 소스 연결의 흐름 실행 상태에 대한 알림을 받을 수 있습니다. 이러한 알림에는 플로우 실행의 성공 또는 실행 실패에 기여한 오류에 대한 정보가 포함됩니다.
 solution: Experience Platform
 title: 플로우 실행 알림
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 1%
@@ -13,11 +13,11 @@ ht-degree: 1%
 
 # 플로우 실행 알림
 
-Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)은(는) [!DNL Platform] 내의 다양한 개별 소스에서 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결 가능한 사용자 인터페이스와 RESTful API를 제공합니다.
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)은(는) [!DNL Experience Platform] 내의 다양한 개별 소스에서 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결 가능한 사용자 인터페이스와 RESTful API를 제공합니다.
 
-Adobe I/O 이벤트를 사용하여 이벤트를 구독하고 웹후크를 사용하여 플로우 실행 상태에 대한 알림을 받을 수 있습니다. 이러한 알림에는 플로우 실행의 성공 또는 실행 실패에 기여한 오류에 대한 정보가 포함됩니다.
+Adobe I/O Events을 사용하면 이벤트를 구독하고 웹후크를 사용하여 플로우 실행 상태에 대한 알림을 받을 수 있습니다. 이러한 알림에는 플로우 실행의 성공 또는 실행 실패에 기여한 오류에 대한 정보가 포함됩니다.
 
 이 문서에서는 이벤트를 구독하고, 웹후크를 등록하고, 플로우 실행 상태에 대한 정보가 포함된 알림을 받는 방법에 대한 단계를 제공합니다.
 
@@ -37,8 +37,8 @@ Adobe I/O 이벤트를 사용하여 이벤트를 구독하고 웹후크를 사�
 >
 >구독 프로세스 중에 이벤트 공급자로 **[!UICONTROL 플랫폼 알림]**&#x200B;을(를) 선택하고 다음 이벤트 구독을 선택하십시오.
 >
->* **[!UICONTROL Source의 흐름 실행 Experience Platform]**
->* **[!UICONTROL Source의 흐름 실행 Experience Platform 실패]**
+>* **[!UICONTROL Experience Platform Source의 흐름 실행 성공]**
+>* **[!UICONTROL Experience Platform Source의 흐름 실행 실패]**
 
 ## 플로우 실행 알림 수신
 
@@ -323,9 +323,9 @@ Webhook이 연결되어 있고 이벤트 구독이 완료되면 Webhook 대시�
 
 ### 오류 메시지 이해 {#errors}
 
-소스에서 데이터를 복사하거나 복사된 데이터를 [!DNL Platform](으)로 처리하는 동안 수집 오류가 발생할 수 있습니다. 특정 오류에 대한 자세한 내용은 아래 표를 참조하십시오.
+소스에서 데이터를 복사하거나 복사된 데이터를 [!DNL Experience Platform]&#x200B;(으)로 처리하는 동안 수집 오류가 발생할 수 있습니다. 특정 오류에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 오류 | 설명 |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | 소스에서 데이터를 복사하는 동안 오류가 발생했습니다. |
-| `CONNECTOR-2001-500` | 복사된 데이터를 [!DNL Platform](으)로 처리하는 동안 오류가 발생했습니다. 이 오류는 구문 분석, 유효성 검사 또는 변환과 관련된 것일 수 있습니다. |
+| `CONNECTOR-2001-500` | 복사된 데이터를 [!DNL Experience Platform]&#x200B;(으)로 처리하는 동안 오류가 발생했습니다. 이 오류는 구문 분석, 유효성 검사 또는 변환과 관련된 것일 수 있습니다. |

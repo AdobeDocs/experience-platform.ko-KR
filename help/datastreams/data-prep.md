@@ -2,16 +2,16 @@
 title: 데이터 수집을 위한 데이터 준비
 description: Adobe Experience Platform Web 및 Mobile SDK용 데이터스트림 구성 시 데이터를 Experience Data Model(XDM) 이벤트 스키마에 매핑하는 방법에 대해 알아봅니다.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: e90bd5abe502a7638ae54fca5eb0f051a925a2d8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1199'
-ht-degree: 59%
+source-wordcount: '1203'
+ht-degree: 53%
 
 ---
 
 # 데이터 수집을 위한 데이터 준비
 
-데이터 준비는 [Experience Data Model(XDM)](../xdm/home.md)과의 데이터를 매핑, 변환 및 확인할 수 있는 Adobe Experience Platform 서비스입니다. Platform 지원 [데이터스트림](./overview.md)을 구성할 때 데이터 준비 기능을 사용하여 소스 데이터를 Platform Edge Network로 전송 시 XDM에 매핑할 수 있습니다.
+데이터 준비는 [Experience Data Model(XDM)](../xdm/home.md)과의 데이터를 매핑, 변환 및 확인할 수 있는 Adobe Experience Platform 서비스입니다. Experience Platform 지원 [데이터스트림](./overview.md)을 구성할 때 Experience Platform Edge Network에 전송할 때 데이터 준비 기능을 사용하여 소스 데이터를 XDM에 매핑할 수 있습니다.
 
 웹 페이지에서 전송된 모든 데이터는 Experience Platform에 XDM으로 도착해야 합니다. 3가지 방법으로 페이지 내 데이터 레이어의 데이터를 Experience Platform에서 허용하는 XDM으로 변환할 수 있습니다.
 
@@ -52,7 +52,7 @@ ht-degree: 59%
 
 ## [!UICONTROL 데이터 선택] {#select-data}
 
-데이터스트림에 대한 기본 구성을 완료한 후 **[!UICONTROL 매핑 저장 및 추가]**&#x200B;를 선택하면 **[!UICONTROL 데이터 선택]** 단계가 표시됩니다. 여기서 Platform으로 전송할 데이터의 구조를 나타내는 샘플 JSON 오브젝트를 제공해야 합니다.
+데이터스트림에 대한 기본 구성을 완료한 후 **[!UICONTROL 매핑 저장 및 추가]**&#x200B;를 선택하면 **[!UICONTROL 데이터 선택]** 단계가 표시됩니다. 여기에서 Experience Platform으로 전송할 예정인 데이터의 구조를 나타내는 샘플 JSON 개체를 제공해야 합니다.
 
 데이터 계층에서 바로 속성을 캡처하려면 JSON 오브젝트에는 단일 루트 속성이 있어야 합니다`data`. 그런 다음 캡처할 데이터 레이어 속성에 매핑되는 방식으로 `data` 개체의 하위 속성을 구성해야 합니다. 아래 섹션을 선택하여 `data` 루트로 형식이 제대로 지정된 JSON 오브젝트의 예제를 확인합니다.
 
@@ -162,7 +162,7 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 
 ## [!UICONTROL 매핑]
 
-**[!UICONTROL 매핑]** 단계가 표시되면 Platform에서 소스 데이터의 필드를 대상 이벤트 스키마의 필드에 매핑할 수 있습니다. 여기서 두 가지 방법으로 매핑을 구성할 수 있습니다.
+소스 데이터의 필드를 Experience Platform의 대상 이벤트 스키마의 필드에 매핑할 수 있는 **[!UICONTROL 매핑]** 단계가 나타납니다. 여기서 두 가지 방법으로 매핑을 구성할 수 있습니다.
 
 * 수동 프로세스를 통해 이 데이터 스트림에 대한 [매핑 규칙을 만듭니다](#create-mapping).
 * 기존 데이터스트림에서 [매핑 규칙을 가져옵니다](#import-mapping).

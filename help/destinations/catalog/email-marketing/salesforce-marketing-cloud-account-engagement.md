@@ -3,9 +3,9 @@ title: Salesforce Marketing Cloud 계정 참여
 description: Salesforce Marketing Cloud 계정 참여(이전의 Pardot) 대상을 사용하여 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce Marketing Cloud 계정 참여 내에서 활성화하는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1540'
 ht-degree: 2%
 
 ---
@@ -38,7 +38,7 @@ Experience Platform 및 [!DNL Salesforce]에서 설정해야 하는 필수 구�
 
 ### [!DNL Marketing Cloud Account Engagement]의 필수 구성 요소 {#prerequisites-destination}
 
-Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로 데이터를 내보내려면 다음 전제 조건을 참고하십시오.
+Experience Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로 데이터를 내보내려면 다음 전제 조건을 참고하십시오.
 
 #### [!DNL Marketing Cloud Account Engagement] 계정이 있어야 합니다. {#prerequisites-account}
 
@@ -86,7 +86,7 @@ Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로 데이터�
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> 플랫폼에서 선택한 각 대상에 대해 해당 [!DNL Salesforce Marketing Cloud Account Engagement] 세그먼트 상태가 Platform의 대상 상태로 업데이트됩니다.</li></ul> |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> Experience Platform에서 선택한 각 대상에 대해 해당 [!DNL Salesforce Marketing Cloud Account Engagement] 세그먼트 상태가 Experience Platform의 대상 상태로 업데이트됩니다.</li></ul> |
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
@@ -105,11 +105,11 @@ Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로 데이터�
 
 대상에 인증하려면 **[!UICONTROL 대상에 연결]**&#x200B;을 선택하세요. [!DNL Salesforce] 로그인 페이지로 이동합니다. [!DNL Marketing Cloud Account Engagement] 계정 자격 증명을 입력하고 [!DNL Log In]을(를) 선택하십시오.
 
-![Marketing Cloud 계정 참여를 인증하는 방법을 보여 주는 플랫폼 UI 스크린샷](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/authenticate-destination.png)
+![Marketing Cloud 계정 참여를 인증하는 방법을 보여 주는 Experience Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/authenticate-destination.png)
 
 그런 다음 후속 창에서 [!UICONTROL 허용]을(를) 선택하여 **Adobe Experience Platform** 앱에 [!DNL Salesforce Marketing Cloud Account Engagement] 계정에 액세스할 수 있는 권한을 부여합니다. *이 작업은 한 번만 수행해야 합니다*.
 
-![Experience Platform 앱에 Marketing Cloud 계정 참여에 대한 액세스 권한을 부여하는 Salesforce 앱 스크린샷 확인 팝업입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/allow-app.png)
+![Salesforce 앱 스크린샷 확인 팝업으로 Marketing Cloud 계정에 대한 Experience Platform 앱 액세스 권한을 부여합니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/allow-app.png)
 
 제공된 세부 정보가 유효하면 UI에 다음과 같은 메시지가 표시됩니다. *Salesforce Marketing Cloud 계정 참여 계정에 성공적으로 연결되었습니다* 메시지와 **[!UICONTROL 연결됨]** 상태를 녹색 확인 표시로 표시합니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
 
@@ -117,7 +117,7 @@ Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로 데이터�
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다. 자세한 내용은 [수집 [!DNL Marketing Cloud Account Engagement] 자격 증명](#gather-credentials) 섹션을 참조하십시오.
 
-![대상 세부 정보를 표시하는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/destination-details.png)
+대상 세부 정보를 표시하는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/destination-details.png)
 
 | 필드 | 설명 |
 | --- | --- |
@@ -144,7 +144,7 @@ Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로 데이터�
 
 ### 매핑 고려 사항 및 예제 {#mapping-considerations-example}
 
-대상 데이터를 Adobe Experience Platform에서 [!DNL Marketing Cloud Account Engagement] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 필드 간에 링크를 만드는 것으로 구성됩니다.
+대상 데이터를 Adobe Experience Platform에서 [!DNL Marketing Cloud Account Engagement] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Experience Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 스키마 필드 간에 링크를 작성하는 것으로 구성됩니다.
 
 XDM 필드를 [!DNL Marketing Cloud Account Engagement] 대상 필드에 올바르게 매핑하려면 아래 단계를 따르십시오.
 
@@ -161,7 +161,7 @@ XDM 필드를 [!DNL Marketing Cloud Account Engagement] 대상 필드에 올바�
      | `xdm: person.name.firstName` | `Attribute: firstName` | |
 
    * 위 매핑의 예가 아래에 나와 있습니다.
-     ![Target 매핑을 보여 주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
+     ![Target 매핑을 보여 주는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
 
 대상 연결에 대한 매핑을 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
@@ -170,13 +170,13 @@ XDM 필드를 [!DNL Marketing Cloud Account Engagement] 대상 필드에 올바�
 대상을 올바르게 설정했는지 확인하려면 아래 단계를 수행하십시오.
 
 1. 선택한 대상 중 하나로 이동합니다. **[!DNL Activation data]** 탭을 선택합니다. **[!UICONTROL 매핑 ID]** 열에 [!DNL Marketing Cloud Account Engagement Prospects] 페이지 내에서 생성된 사용자 지정 필드의 이름이 표시됩니다.
-   ![선택한 세그먼트에 대한 매핑 ID를 보여주는 플랫폼 UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
+   ![선택한 세그먼트에 대한 매핑 ID를 보여 주는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
 
 1. [[!DNL Salesforce]](https://login.salesforce.com/) 웹 사이트에 로그인합니다. 그런 다음 **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** 페이지로 이동하여 대상자의 잠재 고객이 추가/업데이트되었는지 확인합니다. 또는 [[!DNL Salesforce Pardot]](https://pi.pardot.com/)에 액세스하고 **[!DNL Prospects]** 페이지에 액세스할 수도 있습니다.
    ![잠재 고객 페이지를 보여주는 Salesforce UI 스크린샷입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)
 
 1. 잠재 고객이 업데이트되었는지 확인하려면 잠재 고객을 선택하고 사용자 지정 잠재 고객 필드가 Experience Platform 대상 상태로 업데이트되었는지 확인합니다.
-   ![선택한 Prospect 페이지를 표시하는 Salesforce UI 스크린샷, 사용자 지정 Prospect 필드가 대상자 상태로 업데이트됩니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
+   ![선택한 잠재 고객 페이지를 보여 주는 Salesforce UI 스크린샷입니다. 사용자 지정 잠재 고객 필드가 대상 상태로 업데이트됩니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

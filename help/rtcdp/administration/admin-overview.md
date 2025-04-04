@@ -1,17 +1,17 @@
 ---
 keywords: rtcdp 관리 개요;관리 개요
-title: Real-time Customer Data Platform 관리 개요
-description: 이 문서에서는 Adobe Experience Platform에서 제공하는 Adobe Real-time Customer Data Platform의 관리 기능에 대한 개요를 제공합니다.
+title: Real-Time Customer Data Platform 관리 개요
+description: 이 문서에서는 Adobe Experience Platform에서 제공하는 Adobe Real-Time Customer Data Platform의 관리 기능에 대한 개요를 제공합니다.
 feature: Access Control, Get Started, Sandboxes
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: a8c9543bb003a99dcd85712d202482511c0a5608
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform 관리 개요
+# Real-Time Customer Data Platform 관리 개요
 
 이 문서에서는 Adobe Experience Platform에서 제공하는 [!DNL Adobe Real-Time Customer Data Platform]의 관리 기능에 대한 개요를 제공합니다.
 
@@ -33,6 +33,6 @@ ht-degree: 0%
 
 Adobe Experience Platform(및 Real-Time CDP by extension)는 글로벌 규모로 디지털 경험 애플리케이션을 강화하기 위해 빌드되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하는 경우가 많으며, 운영 규정 준수를 보장하면서 이러한 애플리케이션의 개발, 테스트 및 배포에 맞추어야 합니다.
 
-이러한 요구를 해결하기 위해 Adobe Experience Platform에서는 *샌드박스*&#x200B;를 제공하므로 단일 [!DNL Platform] 인스턴스를 디지털 경험 애플리케이션을 개발하고 발전시키는 데 사용할 수 있는 별도의 가상 환경으로 분할할 수 있습니다. 샌드박스 도구 기능을 사용하여 샌드박스 간 구성 정확도를 높이고 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져올 수 있습니다. [샌드박스 도구 UI 안내서](../../sandboxes/ui/sandbox-tooling.md)에 제공된 단계를 따릅니다.
+이러한 요구를 해결하기 위해 Adobe Experience Platform에서는 *샌드박스*&#x200B;를 제공하므로 단일 [!DNL Experience Platform] 인스턴스를 디지털 경험 애플리케이션을 개발하고 발전시키는 데 사용할 수 있는 별도의 가상 환경으로 분할할 수 있습니다. 샌드박스 도구 기능을 사용하여 샌드박스 간 구성 정확도를 높이고 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져올 수 있습니다. [샌드박스 도구 UI 안내서](../../sandboxes/ui/sandbox-tooling.md)에 제공된 단계를 따릅니다.
 
 샌드박스에 대한 자세한 내용은 [!DNL Experience Platform] 설명서의 [샌드박스 개요](../../sandboxes/home.md)를 참조하십시오.

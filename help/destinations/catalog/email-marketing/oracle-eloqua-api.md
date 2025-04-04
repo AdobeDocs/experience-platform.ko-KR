@@ -3,9 +3,9 @@ title: (API) Oracle Eloqua 연결
 description: (API) Oracle Eloqua 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Oracle Eloqua 내에서 활성화할 수 있습니다.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2044'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # [!DNL (API) Oracle Eloqua] 연결
 
-[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/)을(를) 사용하면 마케터가 잠재 고객을 위해 개인화된 고객 경험을 제공하는 동안 캠페인을 계획하고 실행할 수 있습니다. 통합된 리드 관리와 손쉬운 캠페인 생성을 통해 마케터는 구매자의 여정에서 적시에 적절한 대상자를 참여시킬 수 있도록 지원하고 이메일, 디스플레이 검색, 비디오 및 모바일을 비롯한 다양한 채널에서 대상자에게 도달하도록 우아하게 확장할 수 있습니다. 영업 팀은 더 많은 거래를 더 빠른 속도로 마감할 수 있으므로 실시간 통찰력을 통해 마케팅 ROI를 높일 수 있습니다.
+[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/)을(를) 사용하면 마케터가 잠재 고객을 위해 개인화된 고객 경험을 제공하는 동안 캠페인을 계획하고 실행할 수 있습니다. 통합된 리드 관리와 손쉬운 캠페인 생성을 통해 마케터는 구매자의 여정에서 적시에 적절한 대상자를 참여시킬 수 있도록 지원하고 이메일, 디스플레이 검색, 비디오 및 모바일을 비롯한 다양한 채널에서 대상자에게 도달하도록 우아하게 확장할 수 있습니다. 영업 팀은 더 많은 거래를 더 빠른 속도로 마감할 수 있어 실시간 insight을 통해 마케팅 ROI가 향상됩니다.
 
 이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) [!DNL Oracle Eloqua] REST API의 [연락처 업데이트](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) 작업을 활용합니다. 이를 통해 대상 내의 ID를 **업데이트**&#x200B;할 수 있습니다. [!DNL Oracle Eloqua].
 
@@ -29,11 +29,11 @@ ht-degree: 4%
 
 [!DNL Oracle Eloqua] 대상에 대한 데이터를 활성화하기 전에 [!DNL Experience Platform]에서 만든 [스키마](/help/xdm/schema/composition.md), [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)가 있어야 합니다.
 
-대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)에 대한 Experience Platform 설명서를 참조하세요.
+대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)에 대한 Experience Platform 설명서를 참조하십시오.
 
 ### [!DNL Oracle Eloqua]개 필수 구성 요소 {#prerequisites-destination}
 
-플랫폼에서 [!DNL Oracle Eloqua] 계정으로 데이터를 내보내려면 [!DNL Oracle Eloqua] 계정이 있어야 합니다.
+Experience Platform에서 [!DNL Oracle Eloqua] 계정으로 데이터를 내보내려면 [!DNL Oracle Eloqua] 계정이 있어야 합니다.
 
 또한 [!DNL Oracle Eloqua] 인스턴스에 대해 최소한 *&quot;고급 사용자 - 마케팅 권한&quot;*&#x200B;이 필요합니다. 지침은 [보안 사용자 액세스](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) 페이지의 *&quot;보안 그룹&quot;* 섹션을 참조하십시오. [!DNL Oracle Eloqua] API를 호출할 때 프로그래밍 방식으로 [기본 URL을 확인](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html)하려면 대상에 액세스 권한이 필요합니다.
 
@@ -57,8 +57,8 @@ ht-degree: 4%
 >* [!DNL Oracle Eloqua] 사용자 지정 연락처 필드는 **[!UICONTROL 세그먼트 선택]** 단계에서 선택한 대상자의 이름을 사용하여 자동으로 만들어집니다.
 
 * [!DNL Oracle Eloqua]의 최대 사용자 지정 연락처 필드 수는 250개입니다.
-* 새 대상을 내보내기 전에 Platform 대상 수와 [!DNL Oracle Eloqua] 내의 기존 대상 수가 이 제한을 초과하지 않도록 하십시오.
-* 이 한도를 초과하면 Experience Platform 시 오류가 발생합니다. 이는 [!DNL Oracle Eloqua] API가 요청의 유효성을 검사하지 못하고 - *400: 유효성 검사 오류가 있습니다* - 문제를 설명하는 오류 메시지에 응답하기 때문입니다.
+* 새 대상을 내보내기 전에 Experience Platform 대상의 수와 [!DNL Oracle Eloqua] 내의 기존 대상의 수가 이 제한을 초과하지 않도록 하십시오.
+* 이 한도를 초과하면 Experience Platform에서 오류가 발생합니다. 이는 [!DNL Oracle Eloqua] API가 요청의 유효성을 검사하지 못하고 - *400: 유효성 검사 오류가 있습니다* - 문제를 설명하는 오류 메시지에 응답하기 때문입니다.
 * 위에서 지정한 제한에 도달한 경우 더 많은 세그먼트를 내보내려면 먼저 대상에서 기존 매핑을 제거하고 [!DNL Oracle Eloqua] 계정에서 해당 사용자 지정 연락처 필드를 삭제해야 합니다.
 
 * 추가 제한에 대한 자세한 내용은 [[!DNL Oracle Eloqua] 연락처 필드 만들기](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) 페이지를 참조하세요.
@@ -77,7 +77,7 @@ ht-degree: 4%
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> 플랫폼에서 선택한 각 대상에 대해 해당 [!DNL Oracle Eloqua] 세그먼트 상태가 Platform의 대상 상태로 업데이트됩니다.</li></ul> |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> Experience Platform에서 선택한 각 대상에 대해 해당 [!DNL Oracle Eloqua] 세그먼트 상태가 Experience Platform의 대상 상태로 업데이트됩니다.</li></ul> |
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | <ul><li>스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요.</li></ul> |
 
 {style="table-layout:auto"}
@@ -104,7 +104,7 @@ ht-degree: 4%
 * **[!UICONTROL 사용자 이름]**: [!DNL Oracle Eloqua] 회사 이름과 [!DNL Oracle Eloqua] 사용자 이름으로 구성된 연결된 문자열입니다.<br>연결된 값은 `{COMPANY_NAME}\{USERNAME}` 형식입니다.<br> 참고: 중괄호 또는 공백을 사용하지 말고 `\`을(를) 유지하십시오. <br>예를 들어 [!DNL Oracle Eloqua] 회사 이름이 `MyCompany`이고 [!DNL Oracle Eloqua] 사용자 이름이 `Username`인 경우 **[!UICONTROL 사용자 이름]** 필드에서 사용할 연결된 값은 `MyCompany\Username`입니다.
 
 대상에 인증하려면 **[!UICONTROL 대상에 연결]**을 선택하세요.
-인증 방법을 보여 주는 ![플랫폼 UI 스크린샷입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
+인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
 
 제공된 세부 정보가 유효하면 UI에 녹색 확인 표시와 함께 **[!UICONTROL 연결됨]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
 
@@ -118,7 +118,7 @@ ht-degree: 4%
 <!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
-![대상 세부 정보를 표시하는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
+대상 세부 정보를 표시하는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
@@ -141,7 +141,7 @@ ht-degree: 4%
 
 ### 매핑 고려 사항 및 예제 {#mapping-considerations-example}
 
-대상 데이터를 Adobe Experience Platform에서 [!DNL Oracle Eloqua] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 필드 간에 링크를 만드는 것으로 구성됩니다.
+대상 데이터를 Adobe Experience Platform에서 [!DNL Oracle Eloqua] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Experience Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 스키마 필드 간에 링크를 작성하는 것으로 구성됩니다.
 
 XDM 필드를 [!DNL Oracle Eloqua] 대상 필드에 매핑하려면 다음 단계를 수행하십시오.
 
@@ -165,7 +165,7 @@ XDM 필드를 [!DNL Oracle Eloqua] 대상 필드에 매핑하려면 다음 단�
      | `xdm: workAddress.city` | `Attribute: city` | |
 
    * 위 매핑의 예가 아래에 나와 있습니다.
-     특성 매핑이 있는 ![Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
+     특성 매핑이 있는 ![Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -193,7 +193,7 @@ XDM 필드를 [!DNL Oracle Eloqua] 대상 필드에 매핑하려면 다음 단�
 
 >[!NOTE]
 >
->대화 상대 필드 정보를 [!DNL Oracle Eloqua](으)로 보낼 때 대상은 각 실행 시 선택한 대상 이름에 자동으로 고유 식별자를 추가합니다. 이렇게 하면 대상자 이름에 해당하는 연락처 필드 이름이 겹치지 않습니다. 대상자 이름을 사용하여 만든 사용자 지정 연락처 필드가 있는 [!DNL Oracle Eloqua] 연락처 세부 정보 페이지의 [데이터 내보내기 유효성 검사](#exported-data) 섹션 스크린샷 예제를 참조하십시오.
+>대화 상대 필드 정보를 [!DNL Oracle Eloqua]&#x200B;(으)로 보낼 때 대상은 각 실행 시 선택한 대상 이름에 자동으로 고유 식별자를 추가합니다. 이렇게 하면 대상자 이름에 해당하는 연락처 필드 이름이 겹치지 않습니다. 대상자 이름을 사용하여 만든 사용자 지정 연락처 필드가 있는 [!DNL Oracle Eloqua] 연락처 세부 정보 페이지의 [데이터 내보내기 유효성 검사](#exported-data) 섹션 스크린샷 예제를 참조하십시오.
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
 
@@ -201,14 +201,14 @@ XDM 필드를 [!DNL Oracle Eloqua] 대상 필드에 매핑하려면 다음 단�
 
 1. **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**&#x200B;를 선택하고 대상 목록으로 이동합니다.
 1. 그런 다음 대상을 선택하고 **[!UICONTROL 활성화 데이터]** 탭으로 전환한 다음 대상 이름을 선택합니다.
-   ![대상 활성화 데이터를 보여주는 플랫폼 UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
+   ![대상 활성화 데이터를 보여주는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
 1. 대상자 요약을 모니터링하고 프로필 수가 세그먼트 내의 수와 일치하는지 확인합니다.
-   ![세그먼트를 표시하는 플랫폼 UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
+   ![세그먼트를 표시하는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
 1. [!DNL Oracle Eloqua] 웹 사이트에 로그인한 다음 **[!UICONTROL 연락처 개요]** 페이지로 이동하여 대상자의 프로필이 추가되었는지 확인합니다. 대상자 상태를 보려면 **[!UICONTROL 연락처 세부 정보]** 페이지로 드릴다운하여 선택한 대상자 이름을 접두사로 사용하는 연락처 필드를 만들었는지 확인하십시오.
 
-![대상자 이름으로 만든 사용자 지정 연락처 필드가 있는 연락처 세부 정보 페이지를 보여주는 Oracle Eloqua UI 스크린샷입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
+대상자 이름으로 만든 사용자 지정 연락처 필드가 있는 연락처 세부 정보 페이지를 보여 주는 ![Oracle Eloqua UI 스크린샷.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
@@ -217,7 +217,7 @@ XDM 필드를 [!DNL Oracle Eloqua] 대상 필드에 매핑하려면 다음 단�
 ## 오류 및 문제 해결 {#errors-and-troubleshooting}
 
 대상을 만들 때 `400: There was a validation error` 또는 `400 BAD_REQUEST` 오류 메시지 중 하나를 받을 수 있습니다. 이 문제는 [보호 기능](#guardrails) 섹션에 설명된 대로 사용자 지정 연락처 필드 제한인 250개를 초과할 때 발생합니다. 이 오류를 해결하려면 [!DNL Oracle Eloqua]에서 사용자 지정 연락처 필드 제한을 초과하지 않도록 하십시오.
-![오류를 표시하는 플랫폼 UI 스크린샷.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
+![오류를 표시하는 Experience Platform UI 스크린샷](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
 
 설명과 함께 상태 및 오류 코드의 전체 목록을 보려면 [[!DNL Oracle Eloqua] HTTP 상태 코드](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPStatusCodes.html) 및 [[!DNL Oracle Eloqua] 유효성 검사 오류](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPValidationErrors.html) 페이지를 참조하세요.
 

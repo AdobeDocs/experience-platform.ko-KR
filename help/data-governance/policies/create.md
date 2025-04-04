@@ -5,7 +5,7 @@ title: API에서 데이터 거버넌스 정책 만들기
 type: Tutorial
 description: Policy Service API를 사용하여 데이터 거버넌스 정책을 만드는 방법을 알아봅니다.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 2%
@@ -26,10 +26,10 @@ ht-degree: 2%
 
 이 자습서에서는 정책 생성 및 평가와 관련된 다음 주요 개념에 대한 작업 이해를 필요로 합니다.
 
-* [Adobe Experience Platform 데이터 거버넌스](../home.md): [!DNL Platform]에서 데이터 사용 규정 준수를 적용하는 프레임워크입니다.
+* [Adobe Experience Platform 데이터 거버넌스](../home.md): [!DNL Experience Platform]에서 데이터 사용 규정 준수를 적용하는 프레임워크입니다.
    * [데이터 사용 레이블](../labels/overview.md): 데이터 사용 레이블은 XDM 데이터 필드에 적용되며 데이터 액세스 방법에 대한 제한을 지정합니다.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-* [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 이 자습서를 시작하기 전에 필수 헤더와 예제 API 호출을 읽는 방법을 포함하여 [!DNL Policy Service] API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보는 [개발자 안내서](../api/getting-started.md)를 검토하십시오.
 
@@ -129,7 +129,7 @@ curl -X GET \
 
 ### 새 마케팅 액션 만들기 {#create-new}
 
-`/marketingActions/custom/` 끝점에 PUT 요청을 하고 요청 경로 끝에 마케팅 작업의 이름을 제공하여 새 마케팅 작업을 만들 수 있습니다.
+`/marketingActions/custom/` 끝점에 대한 PUT 요청을 만들고 요청 경로 끝에 마케팅 작업의 이름을 제공하여 새 마케팅 작업을 만들 수 있습니다.
 
 **API 형식**
 

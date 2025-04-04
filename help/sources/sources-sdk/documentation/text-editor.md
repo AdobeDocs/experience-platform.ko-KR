@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 로컬 환경에서 텍스트 편집기를 사용하여 소스 설명서 페이지를 만듭니다
 description: 이 문서는 로컬 환경을 사용하여 소스에 대한 설명서를 작성하고 가져오기 요청(PR)을 제출하는 방법에 대한 단계를 제공합니다.
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ![platform-repo](../assets/platform-repo.png)
 
-Platform GitHub 리포지토리의 기본 페이지에서 **포크**&#x200B;를 선택합니다.
+Experience Platform GitHub 리포지토리의 기본 페이지에서 **포크**&#x200B;를 선택합니다.
 
 ![포크](../assets/fork.png)
 
@@ -53,7 +53,7 @@ Platform GitHub 리포지토리의 기본 페이지에서 **포크**&#x200B;를 
 
 ![create-branch-vs](../assets/create-branch-vs.png)
 
-그런 다음 **Publish 분기**&#x200B;를 선택합니다.
+그런 다음 **분기 게시**&#x200B;를 선택합니다.
 
 ![publish-branch](../assets/publish-branch.png)
 
@@ -61,7 +61,7 @@ Platform GitHub 리포지토리의 기본 페이지에서 **포크**&#x200B;를 
 
 로컬 컴퓨터에 복제된 저장소와 새 분기가 생성되면 이제 [선택한 텍스트 편집기](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors)를 통해 새 소스에 대한 설명서 페이지 작성을 시작할 수 있습니다.
 
-Adobe은 [Visual Studio Code](https://code.visualstudio.com/)을 사용하고 Adobe Markdown 작성 확장을 설치하는 것을 권장합니다. 확장을 설치하려면 Visual Studio Code를 시작한 다음 왼쪽 탐색에서 **확장** 탭을 선택합니다.
+Adobe에서는 [Visual Studio Code](https://code.visualstudio.com/)을 사용하고 Adobe Markdown 작성 확장을 설치하는 것이 좋습니다. 확장을 설치하려면 Visual Studio Code를 시작한 다음 왼쪽 탐색에서 **확장** 탭을 선택합니다.
 
 ![확장](../assets/extension.png)
 
@@ -77,7 +77,7 @@ Adobe은 [Visual Studio Code](https://code.visualstudio.com/)을 사용하고 Ad
 
 ## 검토를 위해 설명서 제출
 
-끌어오기 요청(PR)을 만들고 검토할 문서를 제출하려면 먼저 [!DNL Visual Studio Code](또는 선택한 텍스트 편집기)에 작업을 저장하십시오. 그런 다음 GitHub Desktop을 사용하여 커밋 메시지를 입력하고 **Commit to create-source-documentation**&#x200B;을(를) 선택합니다.
+끌어오기 요청(PR)을 만들고 검토할 문서를 제출하려면 먼저 [!DNL Visual Studio Code]&#x200B;(또는 선택한 텍스트 편집기)에 작업을 저장하십시오. 그런 다음 GitHub Desktop을 사용하여 커밋 메시지를 입력하고 **Commit to create-source-documentation**&#x200B;을(를) 선택합니다.
 
 ![커밋 대](../assets/commit-vs.png)
 
@@ -89,7 +89,7 @@ Adobe은 [Visual Studio Code](https://code.visualstudio.com/)을 사용하고 Ad
 
 ![create-pr-vs](../assets/create-pr-vs.png)
 
-기준 및 비교 분기가 올바른지 확인합니다. PR에 업데이트를 설명하는 메모를 추가한 다음 **끌어오기 요청 만들기**&#x200B;를 선택합니다. 그러면 작업의 작업 분기를 Adobe 저장소의 마스터 분기로 병합하는 PR이 열립니다.
+기준 및 비교 분기가 올바른지 확인합니다. PR에 업데이트를 설명하는 메모를 추가한 다음 **끌어오기 요청 만들기**&#x200B;를 선택합니다. 이렇게 하면 작업의 작업 분기를 Adobe 저장소의 마스터 분기로 병합하기 위한 PR이 열립니다.
 
 >[!TIP]
 >

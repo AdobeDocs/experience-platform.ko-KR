@@ -1,23 +1,23 @@
 ---
 title: 데이터 신호를 추적하여 고객 생애 가치 생성
-description: 이 안내서에서는 Data Distiller 및 Real-time Customer Data Platform과 함께 사용자 정의 대시보드를 사용하여 고객 생애 가치를 측정하고 시각화하는 방법에 대한 전체적인 데모를 제공합니다.
+description: 이 안내서에서는 Data Distiller 및 Real-Time Customer Data Platform과 함께 사용자 정의 대시보드를 사용하여 고객 생애 가치를 측정하고 시각화하는 방법에 대한 전체적인 데모를 제공합니다.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1266'
 ht-degree: 0%
 
 ---
 
 # 데이터 신호를 추적하여 고객 생애 가치 생성
 
-Real-time Customer Data Platform을 사용하여 고객 생애 가치(CLV)를 추적하고 사용자 정의 대시보드를 사용하여 해당 지표를 시각화할 수 있습니다. Data Distiller 및 사용자 정의 대시보드를 사용하여 전체 관계에서 고객이 회사에 얼마나 중요한지 측정할 수 있습니다. CLV를 알면 기존 고객을 유지하고 이윤을 유지하면서 새로운 고객을 확보하기 위한 비즈니스 전략을 개발하는 데 도움이 될 수 있습니다.
+Real-Time Customer Data Platform을 사용하여 고객 생애 가치(CLV)를 추적하고 사용자 정의 대시보드를 사용하여 해당 지표를 시각화할 수 있습니다. Data Distiller 및 사용자 정의 대시보드를 사용하여 전체 관계에서 고객이 회사에 얼마나 중요한지 측정할 수 있습니다. CLV를 알면 기존 고객을 유지하고 이윤을 유지하면서 새로운 고객을 확보하기 위한 비즈니스 전략을 개발하는 데 도움이 될 수 있습니다.
 
 다음 인포그래픽은 마케팅 캠페인을 개선하기 위해 고성능 데이터를 생성하는 데이터 수집, 조작, 분석 및 작동 주기를 보여 줍니다.
 
 ![관찰에서 분석, 작업에 이르기까지 데이터의 왕복 인포그래픽입니다.](../images/use-cases/infographic-use-case-cycle.png)
 
-이 엔드 투 엔드 사용 사례는 고객 라이프타임 값 파생 특성을 계산하기 위해 데이터 신호를 캡처하고 수정하는 방법을 보여 줍니다. 그런 다음 이러한 파생된 데이터 세트를 Real-Time CDP 프로필 데이터에 적용하고 인사이트 분석을 위한 대시보드를 빌드하는 사용자 정의 대시보드와 함께 사용할 수 있습니다. Data Distiller을 통해 Real-Time CDP 인사이트 데이터 모델을 확장하고 CLV 파생 데이터 세트 및 대시보드 인사이트를 사용하여 새 대상을 구축하고 원하는 대상으로 활성화할 수 있습니다. 그런 다음 이러한 고성능 대상을 사용하여 다음 마케팅 캠페인을 강화할 수 있습니다.
+이 엔드 투 엔드 사용 사례는 고객 라이프타임 값 파생 특성을 계산하기 위해 데이터 신호를 캡처하고 수정하는 방법을 보여 줍니다. 이렇게 파생된 데이터 세트는 Real-Time CDP 프로필 데이터에 적용할 수 있으며, insight 분석을 위한 대시보드를 작성하는 사용자 정의 대시보드와 함께 사용할 수 있습니다. Data Distiller을 통해 Real-Time CDP 인사이트 데이터 모델을 확장하고 CLV 파생 데이터 세트 및 대시보드 인사이트를 사용하여 새 대상을 구축하고 원하는 대상으로 활성화할 수 있습니다. 그런 다음 이러한 고성능 대상을 사용하여 다음 마케팅 캠페인을 강화할 수 있습니다.
 
 이 안내서는 CLV를 구동하는 주요 접점에서 데이터 신호를 측정하여 고객 경험을 더 잘 이해하고 환경에서 유사한 사용 사례를 구현하는 데 도움이 되도록 설계되었습니다. 전체 프로세스는 아래 이미지에 요약되어 있습니다.
 
@@ -51,12 +51,12 @@ CLV를 설정하는 첫 번째 단계는 사용자 작업에서 캡처한 데이
 
 * Data Distiller을 사용하여 보고 통찰력에 대한 모델을 만듭니다.
 * 테이블, 관계를 만들고 데이터를 채웁니다.
-* 보고 인사이트 데이터 모델을 쿼리합니다.
+* 보고 insight 데이터 모델을 쿼리합니다.
 * Real-Time CDP 통찰력 데이터 모델을 사용하여 데이터 모델을 확장합니다.
 * 차원 테이블을 생성하여 보고 통찰력 모델을 확장합니다.
 * 확장 가속 저장소 보고 통찰력 데이터 모델 쿼리
 
-[SQL 쿼리 템플릿을 사용자 지정하여 마케팅 및 KPI(주요 성능 지표) 사용 사례에 대한 Real-Time CDP 보고서를 만드는 방법](../../dashboards/data-models/cdp-insights-data-model-b2c.md)을 알아보려면 Real-time Customer Data Platform 통찰력 데이터 모델 설명서를 참조하십시오.
+[SQL 쿼리 템플릿을 사용자 지정하여 마케팅 및 KPI(주요 성능 지표) 사용 사례에 대한 Real-Time CDP 보고서를 만드는 방법](../../dashboards/data-models/cdp-insights-data-model-b2c.md)을 알아보려면 Real-Time Customer Data Platform 통찰력 데이터 모델 설명서를 참조하십시오.
 
 정기적으로 사용자 지정 데이터 모델을 새로 고치도록 일정을 설정해야 합니다. 이렇게 하면 데이터가 필요에 따라 수집 파이프라인의 일부로 다시 들어오고 사용자 정의 대시보드가 채워집니다. 일정을 설정하는 방법은 [일정 쿼리 안내서](../ui/query-schedules.md#create-schedule)를 참조하세요.
 
@@ -73,7 +73,7 @@ CLV를 설정하는 첫 번째 단계는 사용자 작업에서 캡처한 데이
 
 ## 고성능 대상자 만들기 및 활성화 {#create-and-activate-audiences}
 
-다음 단계는 세그먼트 정의를 작성하고 실시간 고객 프로필 데이터에서 대상을 생성하는 것입니다. [플랫폼에서 대상을 만들고 활성화](../../segmentation/ui/segment-builder.md)하는 방법에 대해 알아보려면 세그먼트 빌더 UI 안내서를 참조하십시오. 이 안내서에서는 다음 방법에 대한 섹션을 제공합니다.
+다음 단계는 세그먼트 정의를 작성하고 실시간 고객 프로필 데이터에서 대상을 생성하는 것입니다. [Experience Platform에서 대상을 만들고 활성화](../../segmentation/ui/segment-builder.md)하는 방법에 대해 알아보려면 세그먼트 빌더 UI 안내서를 참조하십시오. 이 안내서에서는 다음 방법에 대한 섹션을 제공합니다.
 
 * 속성, 이벤트 및 기존 대상의 조합을 빌딩 블록으로 사용하여 세그먼트 정의를 만듭니다.
 * 규칙 빌더 캔버스 및 컨테이너를 사용하여 세그먼테이션 규칙이 실행되는 순서를 제어합니다.
@@ -85,7 +85,7 @@ CLV를 설정하는 첫 번째 단계는 사용자 작업에서 캡처한 데이
 
 ## 이메일 캠페인에 대한 대상자 활성화 {#activate-audience-for-campaign}
 
-대상을 빌드했으면 대상에 대해 활성화할 준비가 된 것입니다. Platform은 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있도록 해주는 다양한 이메일 서비스 공급자(ESP)를 지원합니다.
+대상을 빌드했으면 대상에 대해 활성화할 준비가 된 것입니다. Experience Platform은 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있도록 해주는 다양한 이메일 서비스 공급자(ESP)를 지원합니다.
 
 데이터를 내보내려는 지원되는 대상 목록(예: [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) 페이지)은 [이메일 마케팅 대상 개요](../../destinations/catalog/email-marketing/overview.md#connect-destination)를 확인하십시오.
 
@@ -107,11 +107,11 @@ CLV를 설정하는 첫 번째 단계는 사용자 작업에서 캡처한 데이
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 Real-time Customer Data Platform을 사용하여 고객 생애 가치(CLV) 지표를 추적하고 시각화하는 방법을 더 잘 이해할 수 있어야 합니다. 쿼리 서비스 및 Experience Platform을 통해 제공되는 다양한 비즈니스 사용 사례에 대해 자세히 알아보려면 다음 문서를 읽는 것이 좋습니다.
+이 문서를 읽은 후에는 Real-Time Customer Data Platform을 사용하여 고객 생애 가치(CLV) 지표를 추적하고 시각화하는 방법을 더 잘 이해할 수 있어야 합니다. 쿼리 서비스 및 Experience Platform을 통해 제공되는 다양한 비즈니스 사용 사례에 대해 자세히 알아보려면 다음 문서를 읽는 것이 좋습니다.
 
 * [쿼리 서비스의 다용성과 이점을 보여 주는 중단된 찾아보기 사용 사례의 전체적인 예입니다.](./abandoned-browse.md)
 * [쿼리 서비스 및 머신 러닝을 사용하여 정품 온라인 웹 사이트 방문자 트래픽에서 봇 활동을 결정하고 필터링하는 방법](./bot-filtering.md)
-* [선택한 문자열과 거의 일치하여 여러 데이터 세트의 결과를 결합하는 Platform 데이터에 대해 일치 작업을 수행하는 방법입니다.](./fuzzy-match.md)
+* [선택한 문자열과 거의 일치하여 여러 데이터 세트의 결과를 결합하는 Experience Platform 데이터에 대해 일치 작업을 수행하는 방법입니다.](./fuzzy-match.md)
 
 <!-- "Data signals are actions taken by consumers while online that offer clues about intent that can be acted upon. This includes anything from visiting a website to filling out a change of address or clicking an ad."  -->
 

@@ -1,10 +1,10 @@
 ---
 title: 구성된 대시보드 보기
-description: Experience Platform UI 내에서 조직에서 구성한 대시보드 목록을 봅니다.
+description: Experience Platform UI 내에서 조직에 구성된 대시보드 목록을 봅니다.
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '204'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 조직이 구성한 대시보드를 보려면 왼쪽 탐색에서 **[!UICONTROL 대시보드]**&#x200B;를 선택한 다음 **[!UICONTROL 찾아보기]** 탭을 선택하십시오.
 
-Platform 인스턴스에서 사용할 수 있는 모든 대시보드 목록이 [!UICONTROL 찾아보기] 탭 아래에 표시됩니다. 여기에는 서드파티 애플리케이션을 통해 구성된 조직에서 만든 통합 대시보드가 포함됩니다.
+Experience Platform 인스턴스에서 사용할 수 있는 모든 대시보드 목록이 [!UICONTROL 찾아보기] 탭 아래에 표시됩니다. 여기에는 서드파티 애플리케이션을 통해 구성된 조직에서 만든 통합 대시보드가 포함됩니다.
 
 ![UI의 대시보드 섹션 내에서 찾아보기 탭입니다.](./images/inventory/browse-tab.png)
 
@@ -23,7 +23,7 @@ Platform 인스턴스에서 사용할 수 있는 모든 대시보드 목록이 [
 
 ![대시보드 이름이 강조 표시된 찾아보기 탭입니다.](./images/inventory/dashboard-name.png)
 
-선택하면 대시보드가 Platform UI 또는 필요한 자격 증명을 사용하여 로그인해야 하는 완전히 통합된 애플리케이션 작업 영역에서 열립니다.
+선택하면 대시보드가 Experience Platform UI 또는 완전히 통합된 애플리케이션 작업 공간에서 열리고 필요한 자격 증명을 사용하여 로그인해야 합니다.
 
 ## 사용자 정의 대시보드 만들기
 

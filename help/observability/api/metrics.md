@@ -2,9 +2,9 @@
 keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: 지표 API 끝점
-description: Observability Insights API를 사용하여 Experience Platform에서 Observability 지표를 검색하는 방법에 대해 알아봅니다.
+description: Observability Insights API를 사용하여 Experience Platform에서 Observability 지표를 검색하는 방법을 알아봅니다.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: bd5018a2d867d0483f3f2f0c45e356ea69a01801
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 3%
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 # 지표 엔드포인트
 
-가시성 지표는 Adobe Experience Platform의 다양한 기능에 대한 사용 통계, 내역 트렌드 및 성능 지표에 대한 통찰력을 제공합니다. [!DNL Observability Insights API]의 `/metrics` 끝점을 사용하면 [!DNL Platform]에서 조직의 활동에 대한 지표 데이터를 프로그래밍 방식으로 검색할 수 있습니다.
+가시성 지표는 Adobe Experience Platform의 다양한 기능에 대한 사용 통계, 내역 트렌드 및 성능 지표에 대한 통찰력을 제공합니다. [!DNL Observability Insights API]의 `/metrics` 끝점을 사용하면 [!DNL Experience Platform]에서 조직의 활동에 대한 지표 데이터를 프로그래밍 방식으로 검색할 수 있습니다.
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ curl -X POST \
 | `metric` | 요청에 제공된 지표 중 하나의 이름입니다. |
 | `filters` | 지정된 지표에 대한 필터 구성입니다. |
 | `datapoints` | 객체가 지정된 지표 및 필터의 결과를 나타내는 배열입니다. 배열의 오브젝트 수는 요청에 제공된 필터 옵션에 따라 다릅니다. 필터를 제공하지 않은 경우 배열에는 모든 데이터 세트를 나타내는 단일 객체만 포함됩니다. |
-| `groupBy` | 지표에 대한 `filter` 속성에 여러 데이터 세트가 지정되고 요청에서 `groupBy` 옵션이 true로 설정된 경우 이 개체에는 해당 `dps` 속성이 적용되는 데이터 세트의 ID가 포함됩니다.<br><br>이 개체가 응답에 비어 있으면 해당 `dps` 속성이 `filters` 배열에 제공된 모든 데이터 세트(또는 필터가 제공되지 않은 경우 [!DNL Platform]의 모든 데이터 세트)에 적용됩니다. |
+| `groupBy` | 지표에 대한 `filter` 속성에 여러 데이터 세트가 지정되고 요청에서 `groupBy` 옵션이 true로 설정된 경우 이 개체에는 해당 `dps` 속성이 적용되는 데이터 세트의 ID가 포함됩니다.<br><br>이 개체가 응답에 비어 있으면 해당 `dps` 속성이 `filters` 배열에 제공된 모든 데이터 세트(또는 필터가 제공되지 않은 경우 [!DNL Experience Platform]의 모든 데이터 세트)에 적용됩니다. |
 | `dps` | 주어진 지표, 필터 및 시간 범위에 대해 반환된 데이터입니다. 이 개체의 각 키는 지정된 지표에 대한 해당 값이 있는 타임스탬프를 나타냅니다. 각 데이터 지점 사이의 기간은 요청에 지정된 `granularity` 값에 따라 다릅니다. |
 
 {style="table-layout:auto"}
@@ -186,7 +186,7 @@ curl -X POST \
 
 ### 사용 가능한 지표 {#available-metrics}
 
-다음 표에는 [!DNL Observability Insights]에 의해 노출되는 모든 지표가 [!DNL Platform] 서비스별로 분류되어 있습니다. 각 지표에는 설명 및 허용된 ID 쿼리 매개 변수가 포함되어 있습니다.
+다음 표에는 [!DNL Observability Insights]에 의해 노출되는 모든 지표가 [!DNL Experience Platform] 서비스별로 분류되어 있습니다. 각 지표에는 설명 및 허용된 ID 쿼리 매개 변수가 포함되어 있습니다.
 
 >[!NOTE]
 >
@@ -279,8 +279,8 @@ curl -X POST \
 | --- | --- | --- |
 | `INSGHT-1000-400` | 잘못된 요청 페이로드 | 요청 페이로드에 문제가 있습니다. 페이로드 형식이 [위](#v2)와(과) 정확히 일치하는지 확인하십시오. 가능한 원인 중 하나가 이 오류를 트리거할 수 있습니다.<ul><li>`aggregator`과(와) 같은 필수 필드 누락</li><li>잘못된 지표</li><li>요청에 잘못된 집계자가 포함되어 있습니다.</li><li>시작 일자는 종료 일자 이후입니다.</li></ul> |
 | `INSGHT-1001-400` | 지표 쿼리 실패 | 잘못된 요청이나 쿼리 자체를 구문 분석할 수 없기 때문에 지표 데이터베이스를 쿼리하는 동안 오류가 발생했습니다. 요청 형식이 제대로 지정되었는지 확인한 후 다시 시도하십시오. |
-| `INSGHT-1001-500` | 지표 쿼리 실패 | 서버 오류로 인해 지표 데이터베이스를 쿼리하는 동안 오류가 발생했습니다. 요청을 다시 시도하고 문제가 지속되면 Adobe 지원 센터에 문의하십시오. |
-| `INSGHT-1002-500` | 서비스 오류 | 내부 오류로 인해 요청을 처리할 수 없습니다. 요청을 다시 시도하고 문제가 지속되면 Adobe 지원 센터에 문의하십시오. |
+| `INSGHT-1001-500` | 지표 쿼리 실패 | 서버 오류로 인해 지표 데이터베이스를 쿼리하는 동안 오류가 발생했습니다. 요청을 다시 시도하고 문제가 지속되면 Adobe 지원에 문의하십시오. |
+| `INSGHT-1002-500` | 서비스 오류 | 내부 오류로 인해 요청을 처리할 수 없습니다. 요청을 다시 시도하고 문제가 지속되면 Adobe 지원에 문의하십시오. |
 | `INSGHT-1003-401` | 샌드박스 유효성 검사 오류 | 샌드박스 유효성 검사 오류로 인해 요청을 처리할 수 없습니다. `x-sandbox-name` 헤더에 입력한 샌드박스 이름이 조직에 대해 유효하고 활성화된 샌드박스를 나타내는지 확인한 후 요청을 다시 시도하십시오. |
 
 {style="table-layout:auto"}

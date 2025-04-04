@@ -1,22 +1,22 @@
 ---
 title: Ui에서 Shopify 스트리밍 연결 및 데이터 흐름 만들기
-description: Platform 사용자 인터페이스를 사용하여 Shopify 스트리밍 소스 연결 및 데이터 흐름을 만드는 방법을 알아봅니다
+description: Experience Platform 사용자 인터페이스를 사용하여 Shopify 스트리밍 소스 연결 및 데이터 흐름을 만드는 방법을 알아봅니다
 badge: Beta
 exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
 
 # UI를 사용하여 [!DNL Shopify Streaming] 데이터에 대한 소스 연결 및 데이터 흐름을 만듭니다.
 
-이 자습서에서는 Platform 사용자 인터페이스를 사용하여 [!DNL Shopify Streaming] 소스 연결 및 데이터 흐름을 만드는 단계를 제공합니다.
+이 자습서에서는 Experience Platform 사용자 인터페이스를 사용하여 [!DNL Shopify Streaming] 소스 연결 및 데이터 흐름을 만드는 단계를 제공합니다.
 
 ## 시작하기 {#getting-started}
 
-이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
@@ -29,17 +29,17 @@ ht-degree: 1%
 
 ## [!DNL Shopify Streaming] 계정 연결
 
-Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
 **eCommerce** 범주에서 [!DNL Shopify Streaming]을(를) 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
 
-![Experience Platform 원본 카탈로그](../../../../images/tutorials/create/shopify-streaming/catalog.png)
+![Experience Platform 소스 카탈로그](../../../../images/tutorials/create/shopify-streaming/catalog.png)
 
 ## 데이터 선택
 
-플랫폼으로 가져올 데이터를 선택할 수 있는 인터페이스를 제공하는 **[!UICONTROL 데이터 선택]** 단계가 나타납니다.
+Experience Platform으로 가져올 데이터를 선택할 수 있는 인터페이스를 제공하는 **[!UICONTROL 데이터 선택]** 단계가 나타납니다.
 
 * 인터페이스의 왼쪽 부분은 계정 내에서 사용 가능한 데이터 스트림을 볼 수 있는 브라우저입니다.
 * 인터페이스의 오른쪽 부분에서 JSON 파일에서 최대 100개의 데이터 행을 미리 볼 수 있습니다.
@@ -66,7 +66,7 @@ Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선
 
 소스 스키마의 소스 필드를 대상 스키마의 해당 대상 XDM 필드에 매핑할 수 있는 인터페이스를 제공하는 [!UICONTROL 매핑] 단계가 나타납니다.
 
-Platform은 사용자가 선택한 대상 스키마 또는 데이터 세트를 기반으로 자동 매핑된 필드에 대한 지능형 권장 사항을 제공합니다. 사용 사례에 맞게 매핑 규칙을 수동으로 조정할 수 있습니다. 필요에 따라 필드를 직접 매핑하도록 선택하거나 데이터 준비 함수를 사용하여 소스 데이터를 변환하여 계산된 값 또는 계산된 값을 파생할 수 있습니다. 매퍼 인터페이스 및 계산된 필드 사용에 대한 포괄적인 단계는 [데이터 준비 UI 안내서](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html)를 참조하십시오.
+Experience Platform은 사용자가 선택한 대상 스키마 또는 데이터 세트를 기반으로 자동 매핑된 필드에 대한 지능형 권장 사항을 제공합니다. 사용 사례에 맞게 매핑 규칙을 수동으로 조정할 수 있습니다. 필요에 따라 필드를 직접 매핑하도록 선택하거나 데이터 준비 함수를 사용하여 소스 데이터를 변환하여 계산된 값 또는 계산된 값을 파생할 수 있습니다. 매퍼 인터페이스 및 계산된 필드 사용에 대한 포괄적인 단계는 [데이터 준비 UI 안내서](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html)를 참조하십시오.
 
 원본 데이터가 성공적으로 매핑되면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
 

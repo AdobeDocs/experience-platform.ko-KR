@@ -2,10 +2,10 @@
 title: 확장 개발 개요
 description: Adobe Experience Platform에서 다양한 태그 확장 기능 유형의 주요 구성 요소와 확장 기능 개발 프로세스에 대해 알아봅니다.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 18%
+source-wordcount: '938'
+ht-degree: 23%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
 
-Adobe Experience Platform의 태그 주요 목표 중 하나는 Adobe 외부의 엔지니어가 웹 사이트 및 모바일 애플리케이션에서 추가 기능을 노출할 수 있는 개방형 에코시스템을 구축하는 것입니다. 이 작업은 태그 확장을 통해 수행됩니다. 태그 속성에 확장을 설치하면 해당 확장의 기능을 속성의 모든 사용자가 사용할 수 있게 됩니다.
+Adobe Experience Platform의 태그 주요 목표 중 하나는 Adobe 외부의 엔지니어가 웹 사이트 및 모바일 애플리케이션에서 추가 기능을 노출할 수 있는 개방형 에코시스템을 만드는 것입니다. 이 작업은 태그 확장을 통해 수행됩니다. 태그 속성에 확장을 설치하면 해당 확장의 기능을 속성의 모든 사용자가 사용할 수 있게 됩니다.
 
 이 문서에서는 확장의 기본 구성 요소에 대해 간략히 설명하고 확장 개발 프로세스를 안내하는 데 도움이 되는 추가 설명서에 대한 링크를 제공합니다.
 
@@ -37,13 +37,13 @@ Adobe Experience Platform의 태그 주요 목표 중 하나는 Adobe 외부의 
 
 ### 보기 횟수
 
-보기는 특히 Platform UI 및 데이터 수집 UI를 통해 태그 응용 프로그램 내의 [`iframe` 요소](https://developer.mozilla.org/ko-KR/docs/Web/HTML/Element/iframe)에 로드할 수 있는 HTML 파일입니다. 보기에는 확장에서 제공하는 스크립트가 포함되어야 하며, 애플리케이션과 통신하기 위해 작은 API를 따라야 합니다.
+보기는 특히 Experience Platform UI 및 데이터 수집 UI를 통해 태그 응용 프로그램 내의 [`iframe` 요소](https://developer.mozilla.org/ko-KR/docs/Web/HTML/Element/iframe)에 로드할 수 있는 HTML 파일입니다. 보기에는 확장에서 제공하는 스크립트가 포함되어야 하며, 애플리케이션과 통신하기 위해 작은 API를 따라야 합니다.
 
 확장에 대해 가장 중요한 보기 파일은 해당 구성입니다. 자세한 내용은 [확장 구성](#configuration)의 섹션을 참조하십시오.
 
-보기 내에서 사용되는 라이브러리에 대해서는 제한이 없습니다. 즉, jQuery, Underscore, React, Angular, Bootstrap 또는 기타 항목을 사용할 수 있습니다. 그러나 확장이 UI와 유사한 모양과 느낌을 갖도록 하는 것이 좋습니다.
+보기 내에서 사용되는 라이브러리에 대해서는 제한이 없습니다. 즉, jQuery, Underscore, React, Angular, Bootstrap 또는 기타 코드를 사용할 수 있습니다. 그러나 확장이 UI와 유사한 모양과 느낌을 갖도록 하는 것이 좋습니다.
 
-모든 보기 관련 파일(HTML, CSS, JavaScript)을 라이브러리 모듈 파일과 분리된 단일 하위 디렉터리에 배치하는 것이 좋습니다. `extension.json`에서 이 보기의 하위 디렉터리 위치를 설명할 수 있습니다. 그런 다음 Platform은 웹 서버에서 이 하위 디렉터리(및 이 하위 디렉터리만)를 처리합니다.
+모든 보기 관련 파일(HTML, CSS, JavaScript)을 라이브러리 모듈 파일과 분리된 단일 하위 디렉터리에 배치하는 것이 좋습니다. `extension.json`에서 이 보기의 하위 디렉터리 위치를 설명할 수 있습니다. 그런 다음 Experience Platform은 웹 서버에서 이 하위 디렉터리(및 이 하위 디렉터리만)를 처리합니다.
 
 ## 라이브러리 구성 요소 {#components}
 
@@ -93,4 +93,4 @@ Edge 확장에서 다음 라이브러리 구성 요소를 정의할 수 있습�
 
 ## 확장 제출
 
-확장 빌드를 완료하면 제출하여 Platform의 확장 카탈로그에 나열할 수 있습니다. 자세한 내용은 [확장 제출 프로세스 개요](./submit/overview.md)를 참조하십시오.
+확장 빌드를 완료하면 Experience Platform의 확장 카탈로그에 나열되도록 제출할 수 있습니다. 자세한 내용은 [확장 제출 프로세스 개요](./submit/overview.md)를 참조하십시오.

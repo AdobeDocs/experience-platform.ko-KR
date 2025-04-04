@@ -1,34 +1,34 @@
 ---
-title: Platform Web SDK의 A4T 데이터에 대한 클라이언트측 로깅
-description: Experience Platform Web SDK를 사용하여 Adobe Analytics for Target(A4T)에 대해 클라이언트측 로깅을 활성화하는 방법을 알아봅니다.
-seo-title: Client-side logging for A4T data in the Platform Web SDK
+title: Experience Platform Web SDK의 A4T 데이터에 대한 클라이언트측 로깅
+description: Experience Platform Web SDK을 사용하여 Adobe Analytics for Target(A4T)에 대해 클라이언트측 로깅을 활성화하는 방법에 대해 알아봅니다.
+seo-title: Client-side logging for A4T data in the Experience Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;a4t;로깅;web sdk;경험;플랫폼;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
 
-# Platform Web SDK의 A4T 데이터에 대한 클라이언트측 로깅
+# Experience Platform Web SDK의 A4T 데이터에 대한 클라이언트측 로깅
 
 ## 개요 {#overview}
 
-Adobe Experience Platform Web SDK를 사용하면 웹 애플리케이션의 클라이언트측에서 [Target용 Adobe Analytics(A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) 데이터를 수집할 수 있습니다.
+Adobe Experience Platform Web SDK을 사용하면 웹 애플리케이션의 클라이언트측에서 [Target용 Adobe Analytics(A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) 데이터를 수집할 수 있습니다.
 
 클라이언트측 로깅은 관련 [!DNL Target] 데이터가 클라이언트측에서 반환됨을 의미하며, 이를 수집하여 Analytics와 공유할 수 있도록 해줍니다. [데이터 삽입 API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html)를 사용하여 데이터를 Analytics에 수동으로 전송하려면 이 옵션을 활성화해야 합니다.
 
 >[!NOTE]
 >
->[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR)을(를) 사용하여 이 작업을 수행하는 메서드가 현재 개발 중이므로 가까운 미래에 사용할 수 있습니다.
+>[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR)을(를) 사용하여 이 작업을 수행하는 메서드가 현재 개발 중이며 가까운 미래에 제공될 예정입니다.
 
-이 문서에서는 Web SDK에 대한 클라이언트측 A4T 로깅을 설정하는 단계에 대해 설명하고 일반적인 사용 사례에 대한 몇 가지 구현 예를 제공합니다.
+이 문서에서는 웹 SDK에 대한 클라이언트측 A4T 로깅을 설정하는 단계에 대해 설명하고 일반적인 사용 사례에 대한 몇 가지 구현 예를 제공합니다.
 
 ## 전제 조건 {#prerequisites}
 
-이 자습서에서는 사용자가 개인화 목적으로 Web SDK를 사용하는 것과 관련된 기본 개념 및 프로세스를 잘 알고 있다고 가정합니다. 소개가 필요한 경우 다음 설명서를 검토하십시오.
+이 자습서에서는 사용자가 개인화 목적으로 웹 SDK을 사용하는 것과 관련된 기본 개념 및 프로세스를 잘 알고 있다고 가정합니다. 소개가 필요한 경우 다음 설명서를 검토하십시오.
 
 * [웹 SDK 구성](/help/web-sdk/commands/configure/overview.md)
 * [이벤트 보내기](/help/web-sdk/commands/sendevent/overview.md)
@@ -36,7 +36,7 @@ Adobe Experience Platform Web SDK를 사용하면 웹 애플리케이션의 클�
 
 ## Analytics 클라이언트측 로깅 설정 {#set-up-client-side-logging}
 
-다음 하위 섹션에서는 웹 SDK 구현을 위해 Analytics 클라이언트측 로깅을 활성화하는 방법을 간략하게 설명합니다.
+다음 하위 섹션에서는 웹 SDK 구현에 대해 Analytics 클라이언트측 로깅을 활성화하는 방법에 대해 설명합니다.
 
 ### Analytics 클라이언트측 로깅 활성화 {#enable-analytics-client-side-logging}
 
@@ -227,9 +227,9 @@ Target Edge에서 제안 응답을 계산하면 Analytics 클라이언트측 로
 
 ### 양식 기반 경험 작성기 활동 {#form-based-composer}
 
-Web SDK를 사용하여 [Adobe Target 양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 활동에서 제안 실행을 제어할 수 있습니다.
+웹 SDK을 사용하여 [Adobe Target 양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 활동의 제안 실행을 제어할 수 있습니다.
 
-특정 결정 범위에 대한 제안을 요청할 때 반환되는 제안에는 적절한 Analytics 토큰이 포함됩니다. 가장 좋은 방법은 Platform Web SDK `sendEvent` 명령을 체인한 다음 반환된 제안을 반복하여 실행하면서 Analytics 토큰을 동시에 수집하는 것입니다.
+특정 결정 범위에 대한 제안을 요청할 때 반환되는 제안에는 적절한 Analytics 토큰이 포함됩니다. 가장 좋은 방법은 Experience Platform Web SDK `sendEvent` 명령을 체인한 다음 반환된 제안을 반복하여 실행하면서 Analytics 토큰을 동시에 수집하는 것입니다.
 
 다음과 같이 양식 기반 경험 작성기 활동 범위에 대해 `sendEvent` 명령을 트리거할 수 있습니다.
 
@@ -421,7 +421,7 @@ function getClickAnalyticsPayload(proposition) {
 
 #### 구현 요약 {#implementation-summary}
 
-요약하면, Platform Web SDK에서 양식 기반 경험 작성기 활동을 적용할 때 다음 단계를 실행해야 합니다.
+요약하면, Experience Platform Web SDK에서 양식 기반 경험 작성기 활동을 적용할 때 다음 단계를 실행해야 합니다.
 
 1. 양식 기반 경험 작성기 활동 오퍼를 가져오는 이벤트 보내기
 1. 페이지에 콘텐츠 변경 사항을 적용합니다.
@@ -467,13 +467,13 @@ alloy("sendEvent", {
 
 ### 시각적 경험 작성기 활동 {#visual-experience-composer-acitivties}
 
-Web SDK를 사용하면 [VEC(시각적 경험 작성기)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)를 사용하여 작성된 오퍼를 처리할 수 있습니다.
+웹 SDK을 사용하면 [VEC(시각적 경험 작성기)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)를 사용하여 작성된 오퍼를 처리할 수 있습니다.
 
 >[!NOTE]
 >
 >이 사용 사례를 구현하는 단계는 [양식 기반 경험 작성기 활동](#form-based-composer)의 단계와 매우 유사합니다. 자세한 내용은 이전 섹션을 검토하십시오.
 
-자동 렌더링이 활성화되면 페이지에서 실행된 제안에서 Analytics 토큰을 수집할 수 있습니다. 가장 좋은 방법은 Platform Web SDK `sendEvent` 명령을 체인한 다음 반환된 제안을 반복하여 웹 SDK에서 렌더링하려고 한 제안을 필터링하는 것입니다.
+자동 렌더링이 활성화되면 페이지에서 실행된 제안에서 Analytics 토큰을 수집할 수 있습니다. 가장 좋은 방법은 Experience Platform Web SDK `sendEvent` 명령을 체인한 다음 반환된 제안을 반복하여 웹 SDK에서 렌더링하려고 한 제안을 필터링하는 것입니다.
 
 **예**
 
@@ -540,4 +540,4 @@ alloy("configure", {
 
 ## 다음 단계 {#next-steps}
 
-이 안내서에서는 Web SDK의 A4T 데이터에 대한 클라이언트측 로깅에 대해 다룹니다. Edge Network에서 A4T 데이터를 처리하는 방법에 대한 자세한 내용은 [서버측 로깅](server-side.md)에 대한 안내서를 참조하십시오.
+이 안내서에서는 웹 SDK의 A4T 데이터에 대한 클라이언트측 로깅을 다룹니다. Edge Network에서 A4T 데이터를 처리하는 방법에 대한 자세한 내용은 [서버측 로깅](server-side.md)에 대한 안내서를 참조하십시오.

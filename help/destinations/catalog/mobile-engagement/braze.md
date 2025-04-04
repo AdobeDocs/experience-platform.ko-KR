@@ -4,7 +4,7 @@ title: 브레이즈 연결
 description: Braze는 고객과 고객이 사랑하는 브랜드 간의 관련성 있고 기억에 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-[!DNL Braze] 대상은 프로필 데이터를 [!DNL Braze](으)로 전송하는 데 도움이 됩니다.
+[!DNL Braze] 대상은 프로필 데이터를 [!DNL Braze]&#x200B;(으)로 전송하는 데 도움이 됩니다.
 
 [!DNL Braze]은(는) 고객과 고객이 사랑하는 브랜드 간의 관련성 있고 기억에 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 [!DNL Braze] 대상에 해당하는 다음 세부 정보를 참고하십시오.
 
-* [!DNL Adobe Experience Platform]개의 대상을 `AdobeExperiencePlatformSegments` 특성 아래의 [!DNL Braze](으)로 내보냅니다.
+* [!DNL Adobe Experience Platform]개의 대상을 `AdobeExperiencePlatformSegments` 특성 아래의 [!DNL Braze]&#x200B;(으)로 내보냅니다.
 
 >[!NOTE]
 >
@@ -51,8 +51,8 @@ ht-degree: 2%
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ ht-degree: 2%
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 필드 매핑에 따라 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성) 및/또는 ID와 함께 세그먼트의 모든 멤버를 내보냅니다.[!DNL Adobe Experience Platform]개의 대상을 `AdobeExperiencePlatformSegments` 특성 아래의 [!DNL Braze](으)로 내보냅니다. |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 필드 매핑에 따라 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성) 및/또는 ID와 함께 세그먼트의 모든 멤버를 내보냅니다.[!DNL Adobe Experience Platform]개의 대상을 `AdobeExperiencePlatformSegments` 특성 아래의 [!DNL Braze]&#x200B;(으)로 내보냅니다. |
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
@@ -108,7 +108,7 @@ ht-degree: 2%
 
 대상 데이터를 [!DNL Adobe Experience Platform]에서 [!DNL Braze] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야 합니다.
 
-매핑은 [!DNL Platform] 계정의 [!DNL Experience Data Model](XDM) 스키마 필드와 대상 대상의 해당 필드 필드 사이에 링크를 만드는 것으로 구성됩니다.
+매핑은 [!DNL Experience Platform] 계정의 [!DNL Experience Data Model]&#x200B;(XDM) 스키마 필드와 대상 대상의 해당 필드 필드 사이에 링크를 만드는 것으로 구성됩니다.
 
 XDM 필드를 [!DNL Braze] 대상 필드에 올바르게 매핑하려면 다음 단계를 따르십시오.
 
@@ -125,7 +125,7 @@ XDM 필드를 [!DNL Braze] 대상 필드에 올바르게 매핑하려면 다음 
 
 ![대상 매핑 Source 특성 동기화](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL ID 네임스페이스 선택]: 이 옵션을 사용하여 [!DNL Platform] ID 네임스페이스를 [!DNL Braze] 네임스페이스에 매핑합니다.
+* [!UICONTROL ID 네임스페이스 선택]: 이 옵션을 사용하여 [!DNL Experience Platform] ID 네임스페이스를 [!DNL Braze] 네임스페이스에 매핑합니다.
 
 ![대상 매핑 Source 네임스페이스 동기화](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
@@ -136,8 +136,8 @@ XDM 필드를 [!DNL Braze] 대상 필드에 올바르게 매핑하려면 다음 
 ![대상 매핑 동기화](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
 [!UICONTROL 대상 필드 선택] 창에서 다음 두 범주의 대상 필드 중에서 선택할 수 있습니다.
-* [!UICONTROL ID 네임스페이스 선택]: 이 옵션을 사용하여 [!DNL Platform] ID 네임스페이스를 [!DNL Braze] ID 네임스페이스에 매핑합니다.
-* [!UICONTROL 사용자 지정 특성 선택]: 이 옵션을 사용하여 XDM 특성을 [!DNL Braze] 계정에 정의한 사용자 지정 [!DNL Braze] 특성에 매핑합니다. <br> 이 옵션을 사용하여 기존 XDM 특성의 이름을 [!DNL Braze](으)로 바꿀 수도 있습니다. 예를 들어 `lastName` XDM 특성을 [!DNL Braze]의 사용자 지정 `Last_Name` 특성에 매핑하면 [!DNL Braze]에 `Last_Name` 특성이 아직 존재하지 않는 경우 이 특성을 만들고 `lastName` XDM 특성을 매핑합니다.
+* [!UICONTROL ID 네임스페이스 선택]: 이 옵션을 사용하여 [!DNL Experience Platform] ID 네임스페이스를 [!DNL Braze] ID 네임스페이스에 매핑합니다.
+* [!UICONTROL 사용자 지정 특성 선택]: 이 옵션을 사용하여 XDM 특성을 [!DNL Braze] 계정에 정의한 사용자 지정 [!DNL Braze] 특성에 매핑합니다. <br> 이 옵션을 사용하여 기존 XDM 특성의 이름을 [!DNL Braze]&#x200B;(으)로 바꿀 수도 있습니다. 예를 들어 `lastName` XDM 특성을 [!DNL Braze]의 사용자 지정 `Last_Name` 특성에 매핑하면 [!DNL Braze]에 `Last_Name` 특성이 아직 존재하지 않는 경우 이 특성을 만들고 `lastName` XDM 특성을 매핑합니다.
 
 ![대상 매핑 필드 동기화](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
@@ -164,7 +164,7 @@ XDM 프로필 스키마와 [!DNL Braze] 인스턴스에 다음 특성과 ID가 �
 
 ## 내보낸 데이터 {#exported-data}
 
-데이터를 [!DNL Braze] 대상으로 내보냈는지 확인하려면 [!DNL Braze] 계정을 확인하세요. [!DNL Adobe Experience Platform]개의 대상을 `AdobeExperiencePlatformSegments` 특성 아래의 [!DNL Braze](으)로 내보냅니다.
+데이터를 [!DNL Braze] 대상으로 내보냈는지 확인하려면 [!DNL Braze] 계정을 확인하세요. [!DNL Adobe Experience Platform]개의 대상을 `AdobeExperiencePlatformSegments` 특성 아래의 [!DNL Braze]&#x200B;(으)로 내보냅니다.
 
 ## 문제 해결 {#troubleshooting}
 

@@ -2,9 +2,9 @@
 description: 이 페이지에서는 /testing/destinationInstance API 끝점을 사용하여 파일 기반 대상이 올바르게 구성되었는지 테스트하고 구성된 대상에 대한 데이터 흐름의 무결성을 확인하는 방법에 대해 설명합니다.
 title: 샘플 프로필을 사용하여 파일 기반 대상 테스트
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '831'
 ht-degree: 2%
 
 ---
@@ -28,8 +28,8 @@ ht-degree: 2%
 `/testing/destinationInstance` 끝점을 사용하기 전에 다음 조건을 충족하는지 확인하십시오.
 
 * Destination SDK을 통해 만든 기존 파일 기반 대상이 있으며 [대상 카탈로그](../../../ui/destinations-workspace.md)에서 볼 수 있습니다.
-* Experience Platform UI에서 대상에 대한 활성화 흐름을 하나 이상 만들었습니다.
-* API 요청을 성공적으로 수행하려면 테스트할 대상 인스턴스에 해당하는 대상 인스턴스 ID가 필요합니다. Platform UI에서 대상과의 연결을 검색할 때 API 호출에 사용해야 하는 대상 인스턴스 ID를 URL에서 가져옵니다.
+* Experience Platform UI에서 대상에 대한 활성화 플로우를 하나 이상 만들었습니다.
+* API 요청을 성공적으로 수행하려면 테스트할 대상 인스턴스에 해당하는 대상 인스턴스 ID가 필요합니다. Experience Platform UI에서 대상과의 연결을 검색할 때 API 호출에 사용해야 하는 대상 인스턴스 ID를 URL에서 가져옵니다.
 
   URL에서 대상 인스턴스 ID를 가져오는 방법을 보여 주는 ![UI 이미지.](../../assets/testing-api/get-destination-instance-id.png)
 * *선택 사항*: API 호출에 추가된 샘플 프로필로 대상 구성을 테스트하려면 [/sample-profiles](file-based-sample-profile-generation-api.md) 끝점을 사용하여 기존 소스 스키마를 기반으로 샘플 프로필을 생성합니다. 샘플 프로필을 제공하지 않는 경우 API가 샘플 프로필을 생성하고 응답에서 반환합니다.
@@ -238,7 +238,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 ## API 오류 처리 {#api-error-handling}
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계
 
@@ -246,4 +246,4 @@ Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오�
 
 유효한 API 응답을 받은 경우 대상이 올바르게 작동합니다. 활성화 흐름에 대한 자세한 정보를 보려면 [자세한 활성화 결과 보기](file-based-destination-results-api.md)에 대한 응답에서 `results` 속성을 사용할 수 있습니다.
 
-공개 대상을 만드는 경우 이제 [대상 구성을 제출](../../guides/submit-destination.md)하여 검토를 위해 Adobe에 액세스할 수 있습니다.
+공개 대상을 만드는 경우 이제 [대상 구성을 제출](../../guides/submit-destination.md)하여 검토할 수 있습니다. Adobe

@@ -1,12 +1,12 @@
 ---
 keywords: 모바일;모바일 참여 대상;LINE;LINE 모바일 참여 대상
 title: LINE 연결
-description: LINE 대상을 사용하면 Platform 대상자에 프로필을 추가하고 연결된 사용자에게 개인화된 경험을 전달할 수 있습니다.
+description: LINE 대상을 사용하면 Experience Platform 대상에 프로필을 추가하고 연결된 사용자에게 개인화된 경험을 전달할 수 있습니다.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1198'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 2%
 
 ### [!DNL LINE]개 필수 구성 요소 {#prerequisites-destination}
 
-플랫폼에서 [!DNL LINE] 계정으로 데이터를 내보내려면 [!DNL LINE]의 다음 필수 구성 요소를 참고하십시오.
+Experience Platform에서 [!DNL LINE] 계정으로 데이터를 내보내려면 [!DNL LINE]의 다음 필수 구성 요소를 참고하십시오.
 
 #### [!DNL LINE] 계정이 있어야 합니다. {#prerequisites-account}
 
@@ -40,7 +40,7 @@ ht-degree: 2%
 
 #### [!DNL LINE] 개발자 콘솔에서 [!DNL LINE channel access token (long-lived)] 수집 {#gather-credentials}
 
-플랫폼에서 [!DNL LINE] 리소스에 액세스할 수 있도록 하려면 원하는 [!DNL LINE] *메시징 API* 채널의 *[!DNL Channel access token (long-lived)]*&#x200B;이(가) 필요합니다.
+Experience Platform에서 [!DNL LINE] 리소스에 액세스할 수 있도록 하려면 원하는 [!DNL LINE] *메시징 API* 채널의 *[!DNL Channel access token (long-lived)]*&#x200B;이(가) 필요합니다.
 
 1. [!DNL LINE] 계정으로 [[!DNL LINE] 개발자 콘솔](https://developers.line.biz/console)에 로그인합니다.
 1. 그런 다음 *[!DNL Providers]* 목록에 액세스한 다음 관심 *[!DNL Provider]*&#x200B;을(를) 선택하고 마지막으로 *메시징 API* 채널을 선택하여 해당 설정에 액세스합니다. 개발자 콘솔에 처음 액세스하는 경우 [[!DNL LINE] 설명서](https://developers.line.biz/en/docs/messaging-api/getting-started/)를 따라 공급자를 만드는 데 필요한 단계를 완료하십시오.
@@ -85,7 +85,7 @@ ht-degree: 2%
 ### 대상으로 인증 {#authenticate}
 
 대상에 인증하려면 **[!UICONTROL 대상에 연결]**을 선택하세요.
-인증 방법을 보여 주는 ![플랫폼 UI 스크린샷입니다.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
+인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 아래의 필수 필드를 입력하십시오.
 * **[!UICONTROL 전달자 토큰]**: [!DNL LINE] 개발자 콘솔의 [!DNL LINE Channel access token (long-lived)]. [자격 증명 수집](#gather-credentials) 섹션을 참조하십시오.
@@ -95,7 +95,7 @@ ht-degree: 2%
 ### 대상 세부 정보 입력 {#destination-details}
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
-![대상 세부 정보를 표시하는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/mobile-engagement/line/destination-details.png)
+대상 세부 정보를 표시하는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
@@ -118,7 +118,7 @@ ht-degree: 2%
 
 ### 속성 및 ID 매핑 {#map}
 
-대상 데이터를 Adobe Experience Platform에서 [!DNL LINE] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 필드 간에 링크를 만드는 것으로 구성됩니다. XDM 필드를 [!DNL LINE] 대상 필드에 올바르게 매핑하려면 다음 단계를 따르십시오.
+대상 데이터를 Adobe Experience Platform에서 [!DNL LINE] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Experience Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 스키마 필드 간에 링크를 작성하는 것으로 구성됩니다. XDM 필드를 [!DNL LINE] 대상 필드에 올바르게 매핑하려면 다음 단계를 따르십시오.
 
 소스 ID에 따라 다음 대상 ID 네임스페이스를 매핑해야 합니다.
 
@@ -128,10 +128,10 @@ ht-degree: 2%
 | LINE 사용자 ID | `UserID` | `LineId` |
 
 대상 ID가 *LINE 사용자 ID*인 경우 다음이 필요합니다.
-![대상 ID에 대해 LINE 사용자 ID를 사용할 때 Target 매핑을 보여 주는 Platform UI 스크린샷 예](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
+![대상 ID에 대해 LINE 사용자 ID를 사용할 때 Target 매핑을 보여주는 Experience Platform UI 스크린샷 예](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
 
 대상 ID가 *IFA(광고주용 ID)*인 경우 다음이 필요합니다.
-![대상 ID에 대해 IFA(광고주)용 ID를 사용할 때 Target 매핑을 보여주는 Platform UI 스크린샷 예](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
+![대상 ID에 대해 IFA(광고주)용 ID를 사용할 때 Target 매핑을 보여주는 Experience Platform UI 스크린샷 예](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
 

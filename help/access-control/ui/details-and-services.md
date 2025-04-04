@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 제품 프로필에 대한 세부 정보 및 추가 서비스 관리
 description: 이 문서에서는 Adobe Admin Console의 제품 프로필에 대한 세부 사항 및 추가 서비스를 관리하는 데 필요한 단계를 다룹니다. 프로필 설정 메뉴에서 프로필의 세부 사항을 구성하고 추가 서비스에 액세스할 수 있습니다.
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 **[!UICONTROL 서비스 사용]** 페이지에 액세스하려면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
 
-**[!UICONTROL 서비스 사용]** 메뉴를 사용하면 프로필을 만들 때 처음 구성된 추가 [!DNL Platform] 서비스에 대한 프로필의 액세스 권한을 수정할 수 있습니다. [!DNL Platform] 구독에 따라 다음 서비스가 포함될 수 있습니다.
+**[!UICONTROL 서비스 사용]** 메뉴를 사용하면 프로필을 만들 때 처음 구성된 추가 [!DNL Experience Platform] 서비스에 대한 프로필의 액세스 권한을 수정할 수 있습니다. [!DNL Experience Platform] 구독에 따라 다음 서비스가 포함될 수 있습니다.
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]

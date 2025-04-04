@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법의 기본 사항에 대해 알아봅니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4072'
+source-wordcount: '4075'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->이 섹션에서는 UI에서 새 스키마를 수동으로 만드는 방법을 다룹니다. CSV 데이터를 플랫폼으로 수집하는 경우 ML(기계 학습) 알고리즘을 사용하여 **샘플 CSV 데이터에서 스키마를 생성**&#x200B;할 수 있습니다. 이 워크플로는 데이터 형식과 일치하며 CSV 파일의 구조 및 콘텐츠를 기반으로 새 스키마를 자동으로 만듭니다. 이 워크플로에 대한 자세한 내용은 [ML 지원 스키마 만들기 안내서](../ml-assisted-schema-creation.md)를 참조하십시오.
+>이 섹션에서는 UI에서 새 스키마를 수동으로 만드는 방법을 다룹니다. CSV 데이터를 Experience Platform으로 수집하는 경우 ML(기계 학습) 알고리즘을 사용하여 **샘플 CSV 데이터에서 스키마를 생성**&#x200B;할 수 있습니다. 이 워크플로는 데이터 형식과 일치하며 CSV 파일의 구조 및 콘텐츠를 기반으로 새 스키마를 자동으로 만듭니다. 이 워크플로에 대한 자세한 내용은 [ML 지원 스키마 만들기 안내서](../ml-assisted-schema-creation.md)를 참조하십시오.
 
 [!UICONTROL 스키마] 작업 영역의 오른쪽 상단에서 **[!UICONTROL 스키마 만들기]**&#x200B;를 선택합니다.
 
@@ -342,7 +342,7 @@ abstract="스키마가 프로필용으로 활성화되면 이 스키마에서 �
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-이제 실시간 고객 프로필에서 스키마를 사용할 수 있습니다. Platform이 이 스키마를 기반으로 데이터 세트에 데이터를 수집하면 해당 데이터가 통합 프로필 데이터에 통합됩니다.
+이제 실시간 고객 프로필에서 스키마를 사용할 수 있습니다. Experience Platform이 이 스키마를 기반으로 데이터 세트에 데이터를 수집하면 해당 데이터가 통합 프로필 데이터에 통합됩니다.
 
 ## 스키마 필드의 표시 이름 편집 {#display-names}
 
@@ -388,7 +388,7 @@ abstract="스키마가 프로필용으로 활성화되면 이 스키마에서 �
 
 ## 다음 단계 {#next-steps}
 
-이 문서에서는 Platform UI에서 스키마를 만들고 편집하는 기본 사항에 대해 설명합니다. [스키마 만들기 튜토리얼](../../tutorials/create-schema-ui.md)을 검토하여 사용자 지정 필드 그룹 및 데이터 형식을 만드는 등 UI에서 전체 스키마를 빌드하기 위한 포괄적인 워크플로를 수행하는 것이 좋습니다 for 고유한 사용 사례입니다.
+이 문서에서는 Experience Platform UI에서 스키마를 만들고 편집하는 기본 사항에 대해 설명합니다. [스키마 만들기 튜토리얼](../../tutorials/create-schema-ui.md)을 검토하여 사용자 지정 필드 그룹 및 데이터 형식을 만드는 등 UI에서 전체 스키마를 빌드하기 위한 포괄적인 워크플로를 수행하는 것이 좋습니다 for 고유한 사용 사례입니다.
 
 [!UICONTROL 스키마] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md)를 참조하십시오.
 

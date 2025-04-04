@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;홈;자주 찾는 항목;Azure Data Explorer;Azure 데이터 탐색기;데이터 탐색기;Data Explorer
+keywords: Experience Platform;홈;자주 찾는 항목;Azure Data Explorer;azure 데이터 탐색기;데이터 탐색기;Data Explorer
 solution: Experience Platform
 title: UI에서 Azure Data Explorer Source 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Azure Data Explorer 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 561bf948-fc92-4401-8631-e2a408667507
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # UI에서 [!DNL Azure Data Explorer] 소스 연결 만들기
 
-Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Platform] 사용자 인터페이스를 사용하여 [!DNL Azure Data Explorer](이하 &quot;[!DNL Data Explorer]&quot;) 소스 커넥터를 만드는 단계를 제공합니다.
+Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 [!DNL Azure Data Explorer]&#x200B;(이하 &quot;[!DNL Data Explorer]&quot;) 소스 커넥터를 만드는 단계를 제공합니다.
 
 ## 시작하기
 
@@ -29,7 +29,7 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ### 필요한 자격 증명 수집
 
-[!DNL Platform]에서 [!DNL Data Explorer] 계정에 액세스하려면 다음 값을 제공해야 합니다.
+[!DNL Experience Platform]에서 [!DNL Data Explorer] 계정에 액세스하려면 다음 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
@@ -43,13 +43,13 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ## [!DNL Azure Data Explorer] 계정 연결
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL Data Explorer] 계정을 [!DNL Platform]에 연결할 수 있습니다.
+필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL Data Explorer] 계정을 [!DNL Experience Platform]에 연결할 수 있습니다.
 
 [Adobe Experience Platform](https://platform.adobe.com)에 로그인한 다음 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 **[!UICONTROL 소스]** 작업 영역에 액세스합니다. **[!UICONTROL 카탈로그]** 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-**[!UICONTROL 데이터베이스]** 범주 아래에서 **[!UICONTROL Azure Data Explorer]**&#x200B;을 선택합니다. 이 커넥터를 처음 사용하는 경우 **[!UICONTROL 구성]**&#x200B;을 선택하세요. 그렇지 않으면 **[!UICONTROL 데이터 추가]**&#x200B;를 선택하여 새 Data Explorer 커넥터를 만드십시오.
+**[!UICONTROL 데이터베이스]** 범주에서 **[!UICONTROL Azure Data Explorer]**&#x200B;을(를) 선택합니다. 이 커넥터를 처음 사용하는 경우 **[!UICONTROL 구성]**&#x200B;을 선택하세요. 그렇지 않으면 **[!UICONTROL 데이터 추가]**&#x200B;를 선택하여 새 Data Explorer 커넥터를 만드십시오.
 
 ![카탈로그](../../../../images/tutorials/create/data-explorer/catalog.png)
 
@@ -69,4 +69,4 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL Data Explorer] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 가져올 데이터 흐름을 구성 [!DNL Platform]](../../dataflow/databases.md)할 수 있습니다.
+이 자습서에 따라 [!DNL Data Explorer] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 가져올 데이터 흐름을 구성 [!DNL Experience Platform]](../../dataflow/databases.md)할 수 있습니다.

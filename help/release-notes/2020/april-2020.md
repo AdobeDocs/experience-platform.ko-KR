@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: 릴리스 정보;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '985'
-ht-degree: 13%
+ht-degree: 27%
 
 ---
 
@@ -44,9 +44,9 @@ Adobe Experience Platform의 새로운 기능:
 
 [!DNL Intelligent Services] 및 제공 항목에 대한 자세한 내용은 [Intelligent Services 개요](../../intelligent-services/home.md)를 참조하십시오.
 
-## [!DNL Experience Data Model](XDM) 시스템 {#xdm}
+## [!DNL Experience Data Model]&#x200B;(XDM) 시스템 {#xdm}
 
-표준화 및 상호 운용성은 [!DNL Experience Platform]의 핵심 개념입니다. Adobe 기반의 [!DNL Experience Data Model](XDM)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 작업입니다.
+표준화 및 상호 운용성은 [!DNL Experience Platform]의 핵심 개념입니다. Adobe을 기반으로 하는 [!DNL Experience Data Model]&#x200B;(XDM)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 작업입니다.
 
 XDM은 디지털 경험의 성능을 개선하기 위해 설계된 공개적으로 문서화된 사양입니다. Adobe Experience Platform의 서비스와 통신하는 모든 애플리케이션에 대한 일반적인 구조와 정의를 제공합니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 일반적인 표현에 통합하여 더 빠르고 통합적인 방식으로 통찰력을 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
 
@@ -68,7 +68,7 @@ XDM은 디지털 경험의 성능을 개선하기 위해 설계된 공개적으�
 
 ## 데이터 거버넌스 {#governance}
 
-Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수하는 데 사용되는 일련의 전략 및 기술입니다. 카탈로그 작성, 데이터 계보, 데이터 사용 레이블 지정, 데이터 액세스 정책, 마케팅 작업을 위한 데이터에 대한 액세스 제어 등 다양한 수준에서 [!DNL Experience Platform] 내에서 중요한 역할을 합니다.
+Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수하는 데 사용되는 일련의 전략 및 기술입니다. 이 기능은 [!DNL Experience Platform] 내 카탈로그 작성, 데이터 계통 확인, 데이터 사용 라벨링, 데이터 액세스 정책, 마케팅 액션을 위한 데이터 액세스 제어 등 다양한 수준에서 주요 역할을 합니다.
 
 데이터 거버넌스를 시작하려면 고객 데이터에 적용되는 규정, 계약 의무 및 기업 정책을 철저히 이해해야 합니다. 거기에서 적절한 데이터 사용 레이블을 적용하여 데이터를 분류할 수 있으며, 데이터 사용 정책의 정의를 통해 그 사용을 제어할 수 있다.
 
@@ -89,7 +89,7 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 ## 대상 {#destinations}
 
-[Real-time Customer Data Platform](../../rtcdp/overview.md)에서 대상은 해당 파트너에게 데이터를 원활하게 활성화하는 대상 플랫폼과의 사전 빌드된 통합입니다.
+[Real-Time Customer Data Platform](../../rtcdp/overview.md)에서 대상은 해당 파트너에게 데이터를 원활하게 활성화하는 대상 플랫폼과의 사전 빌드된 통합입니다.
 
 **새로운 대상**
 
@@ -104,15 +104,15 @@ Real-Time CDP은 이제 50개 이상의 [!DNL Experience Cloud Launch]개 확장
 
 ## [!DNL Privacy Service] {#privacy}
 
-새로운 법률 및 조직 규정은 사용자가 요청 시 데이터 저장소에서 개인 데이터를 액세스하거나 삭제할 수 있는 권한을 제공합니다. Adobe Experience Platform [!DNL Privacy Service]은(는) 고객의 이러한 데이터 요청을 관리하는 데 도움이 되는 RESTful API 및 사용자 인터페이스를 제공합니다. [!DNL Privacy Service]을(를) 사용하면 Adobe Experience Cloud 애플리케이션에서 개인 또는 개인 고객 데이터에 액세스하고 삭제하는 요청을 제출할 수 있으므로 법적 및 조직의 개인 정보 보호 규정을 자동으로 준수할 수 있습니다.
+새로운 법률 및 조직 규정은 사용자가 요청 시 데이터 저장소에서 개인 데이터를 액세스하거나 삭제할 수 있는 권한을 제공합니다. Adobe Experience Platform [!DNL Privacy Service]는 고객의 이러한 데이터 요청을 관리하는 데 도움이 되는 RESTful API 및 사용자 인터페이스를 제공합니다. [!DNL Privacy Service]를 사용하면 Adobe Experience Cloud 애플리케이션에서 비공개 또는 개인 고객 데이터에 액세스하고 삭제하도록 요청할 수 있으므로, 법적 및 조직의 개인 정보 보호 규정을 자동으로 준수할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| PDPA 지원 | 이제 태국의 개인 정보 보호법(PDPA)에 따라 개인 정보 보호 요청을 만들고 추적할 수 있습니다. API에서 개인 정보 요청을 할 때 `regulation` 배열에서 &quot;pdpa_tha&quot; 값을 허용합니다. |
-| UI의 네임스페이스 유형 | 이제 [!DNL Privacy Service] UI의 요청 빌더에서 다른 네임스페이스 유형을 지정할 수 있습니다. 자세한 내용은 [사용 안내서](../../privacy-service/ui/user-guide.md)를 참조하세요. |
-| 이전 끝점 사용 중단 | 이전 API 끝점(`data/privacy/gdpr`)은 더 이상 사용되지 않습니다. |
+| PDPA 지원 | 이제 태국의 개인 정보 보호법(PDPA)에 따라 개인 정보 보호 요청을 만들고 추적할 수 있습니다. API에서 개인정보 보호 요청을 할 때 `regulation` 배열은 “pdpa_tha” 값을 허용합니다. |
+| UI의 네임스페이스 유형 | 이제 [!DNL Privacy Service] UI의 Request Builder에서 다양한 네임스페이스 유형을 지정할 수 있습니다. 자세한 내용은 [사용 안내서](../../privacy-service/ui/user-guide.md)를 확인하십시오. |
+| 이전 엔드포인트 사용 중단 | 이전 API 엔드포인트(`data/privacy/gdpr`)는 더 이상 사용되지 않습니다. |
 
 알려진 문제
 
@@ -122,7 +122,7 @@ Real-Time CDP은 이제 50개 이상의 [!DNL Experience Cloud Launch]개 확장
 
 ## 소스 {#sources}
 
-Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 [!DNL Platform] 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 [!DNL Experience Platform] 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 [!DNL Experience Platform]에서는 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
@@ -130,7 +130,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 데이터베이스에 대한 API 및 UI 지원 | [!DNL Apache Spark](HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage], [!DNL Hive](HDInsights) 및 [!DNL Phoenix]에 대한 새 소스 커넥터입니다. |
+| 데이터베이스에 대한 API 및 UI 지원 | [!DNL Apache Spark]&#x200B;(HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage], [!DNL Hive]&#x200B;(HDInsights) 및 [!DNL Phoenix]에 대한 새 소스 커넥터입니다. |
 | 결제 기반 애플리케이션에 대한 API 및 UI 지원 | [!DNL PayPal]에 대한 새 소스 커넥터입니다. |
 | 프로토콜 기반 애플리케이션에 대한 API 및 UI 지원 | [!DNL Generic OData]에 대한 새 소스 커넥터입니다. |
 

@@ -2,23 +2,23 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 서버를 만드는 데 사용되는 API 호출을 보여 줍니다.
 title: 대상 서버 구성 만들기
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2036'
+source-wordcount: '2040'
 ht-degree: 5%
 
 ---
 
 # 대상 서버 구성 만들기
 
-대상 서버를 만드는 것은 Destination SDK으로 고유한 대상을 만드는 첫 번째 단계입니다. 대상 서버에는 [서버](../../functionality/destination-server/server-specs.md) 및 [템플릿](../../functionality/destination-server/templating-specs.md) 사양, [메시지 형식](../../functionality/destination-server/message-format.md) 및 [파일 형식](../../functionality/destination-server/file-formatting.md) 옵션(파일 기반 대상의 경우)에 대한 구성 옵션이 포함되어 있습니다.
+대상 서버를 만드는 것은 Destination SDK을 사용하여 고유한 대상을 만드는 첫 번째 단계입니다. 대상 서버에는 [서버](../../functionality/destination-server/server-specs.md) 및 [템플릿](../../functionality/destination-server/templating-specs.md) 사양, [메시지 형식](../../functionality/destination-server/message-format.md) 및 [파일 형식](../../functionality/destination-server/file-formatting.md) 옵션(파일 기반 대상의 경우)에 대한 구성 옵션이 포함되어 있습니다.
 
 이 페이지는 `/authoring/destination-servers` API 끝점을 사용하여 고유한 대상 서버를 만드는 데 사용할 수 있는 API 요청 및 페이로드를 예시합니다.
 
 이 끝점을 통해 구성할 수 있는 기능에 대한 자세한 설명은 다음 문서를 참조하십시오.
 
-* [Destination SDK으로 생성된 대상의 서버 사양](../../../destination-sdk/functionality/destination-server/server-specs.md)
-* [Destination SDK으로 만든 대상에 대한 템플릿 사양](../../../destination-sdk/functionality/destination-server/templating-specs.md)
+* [Destination SDK으로 만든 대상의 서버 사양](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [Destination SDK으로 만든 대상에 대한 사양 템플릿](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [메시지 포맷](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [파일 서식 구성](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
@@ -94,13 +94,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 매개변수 | 유형 | 설명 |
 | -------- | ----------- | ----------- |
-| `name` | 문자열 | *필수.* Adobe에 대해서만 표시되는 서버의 이름을 나타냅니다. 이 이름은 파트너나 고객에게 표시되지 않습니다. 예 `Moviestar destination server`. |
+| `name` | 문자열 | *필수.* Adobe에만 표시되는 서버의 알기 쉬운 이름을 나타냅니다. 이 이름은 파트너나 고객에게 표시되지 않습니다. 예 `Moviestar destination server`. |
 | `destinationServerType` | 문자열 | *필수.실시간(스트리밍) 대상에 대해*&#x200B;을(를) `URL_BASED`(으)로 설정합니다. |
-| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe이 아래 `value` 필드의 URL을 변환해야 하는 경우 `PEBBLE_V1`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있고 고객 간에 `region` 부분이 다를 수 있는 경우 이 옵션을 사용합니다. 이 경우 [대상 구성](../destination-configuration/create-destination-configuration.md)에서 `region`을(를) [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md)(으)로 구성해야 합니다. </li><li> Adobe 측에서 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items` 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오.</li></ul> |
-| `urlBasedDestination.url.value` | 문자열 | *필수.* Experience Platform이 연결해야 하는 API 끝점의 주소를 입력합니다. |
-| `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe이 서버 호출에 사용할 메서드입니다. 옵션은 `GET`, `PUT`, `POST`, `DELETE`, `PATCH`입니다. |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe에서 아래 `value` 필드의 URL을 변환해야 하는 경우 `PEBBLE_V1`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있고 고객 간에 `region` 부분이 다를 수 있는 경우 이 옵션을 사용합니다. 이 경우 [대상 구성]&#x200B;(../destination-configuration/create-destination-configuration.md)에서 `region`을(를) [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md)(으)로 구성해야 합니다. </li><li> Adobe 측에 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items`과 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오.</li></ul> |
+| `urlBasedDestination.url.value` | 문자열 | *필수.* Experience Platform에서 연결할 API 끝점의 주소를 입력합니다. |
+| `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe에서 서버 호출에 사용할 메서드입니다. 옵션은 `GET`, `PUT`, `POST`, `DELETE`, `PATCH`입니다. |
 | `httpTemplate.requestBody.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
-| `httpTemplate.requestBody.value` | 문자열 | *필수.* 이 문자열은 플랫폼 고객의 데이터를 서비스에 필요한 형식으로 변환하는 문자 이스케이프 처리된 버전입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. </li><li> 간단한 변환의 예를 보려면 [프로필 특성](../../functionality/destination-server/message-format.md#attributes) 변환을 참조하십시오. </li></ul> |
+| `httpTemplate.requestBody.value` | 문자열 | *필수.* 이 문자열은 Experience Platform 고객의 데이터를 서비스에 필요한 형식으로 변환하는 문자 이스케이프 처리된 버전입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. </li><li> 간단한 변환의 예를 보려면 [프로필 특성](../../functionality/destination-server/message-format.md#attributes) 변환을 참조하십시오. </li></ul> |
 | `httpTemplate.contentType` | 문자열 | *필수.* 서버가 허용하는 콘텐츠 형식입니다. 이 값은 `application/json`일 수 있습니다. |
 
 {style="table-layout:auto"}
@@ -826,13 +826,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 매개변수 | 유형 | 설명 |
 | -------- | ----------- | ----------- |
-| `name` | 문자열 | *필수.* 동적 스키마 서버의 알기 쉬운 이름을 나타내며, Adobe 시에만 표시됩니다. |
+| `name` | 문자열 | *필수.* 동적 스키마 서버의 알기 쉬운 이름을 나타내며 Adobe에만 표시됩니다. |
 | `destinationServerType` | 문자열 | *필수.동적 스키마 서버에 대해*&#x200B;을(를) `URL_BASED`(으)로 설정합니다. |
-| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe이 아래 `value` 필드의 URL을 변환해야 하는 경우 `PEBBLE_V1`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있는 경우 이 옵션을 사용합니다. </li><li> Adobe 측에서 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items` 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오.</li></ul> |
-| `urlBasedDestination.url.value` | 문자열 | *필수.* 활성화 워크플로의 매핑 단계에서 Experience Platform이 연결할 API 끝점의 주소를 입력하고 스키마 필드를 검색하여 대상 필드로 채웁니다. |
-| `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe이 서버 호출에 사용할 메서드입니다. 동적 스키마 서버의 경우 `GET`을(를) 사용합니다. |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe에서 아래 `value` 필드의 URL을 변환해야 하는 경우 `PEBBLE_V1`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있는 경우 이 옵션을 사용합니다. </li><li> Adobe 측에 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items`과 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오.</li></ul> |
+| `urlBasedDestination.url.value` | 문자열 | *필수.* 활성화 워크플로의 매핑 단계에서 대상 필드로 채울 스키마 필드를 Experience Platform이 연결해야 하는 API 끝점의 주소를 입력합니다. |
+| `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe에서 서버 호출에 사용할 메서드입니다. 동적 스키마 서버의 경우 `GET`을(를) 사용합니다. |
 | `responseFields.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
-| `responseFields.value` | 문자열 | *필수.* 이 문자열은 파트너 API에서 받은 응답을 플랫폼 UI에 표시될 파트너 스키마로 변환하는 문자 이스케이프 변환 템플릿입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. </li><li> 간단한 변환의 예를 보려면 [프로필 특성](../../functionality/destination-server/message-format.md#attributes) 변환을 참조하십시오. </li></ul> |
+| `responseFields.value` | 문자열 | *필수.* 이 문자열은 파트너 API에서 받은 응답을 Experience Platform UI에 표시될 파트너 스키마로 변환하는 문자 이스케이프 변환 템플릿입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. </li><li> 간단한 변환의 예를 보려면 [프로필 특성](../../functionality/destination-server/message-format.md#attributes) 변환을 참조하십시오. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -923,14 +923,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 매개변수 | 유형 | 설명 |
 | -------- | ----------- | ----------- |
-| `name` | 문자열 | *필수.* 동적 드롭다운 서버의 알기 쉬운 이름을 나타내며, Adobe 사용자에게만 표시됩니다. |
+| `name` | 문자열 | *필수.* 동적 드롭다운 서버의 알기 쉬운 이름을 나타내며 Adobe에만 표시됩니다. |
 | `destinationServerType` | 문자열 | *필수.동적 드롭다운 서버에 대해*&#x200B;을(를) `URL_BASED`(으)로 설정합니다. |
-| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe이 아래 `value` 필드의 URL을 변환해야 하는 경우 `PEBBLE_V1`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있는 경우 이 옵션을 사용합니다. </li><li> Adobe 측에서 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items` 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe에서 아래 `value` 필드의 URL을 변환해야 하는 경우 `PEBBLE_V1`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있는 경우 이 옵션을 사용합니다. </li><li> Adobe 측에 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items`과 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오.</li></ul> |
 | `urlBasedDestination.url.value` | 문자열 | *필수.* Experience Platform이 연결할 API 끝점의 주소를 입력하고 드롭다운 값을 검색합니다. |
-| `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe이 서버 호출에 사용할 메서드입니다. 동적 드롭다운 서버의 경우 `GET`을(를) 사용합니다. |
+| `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe에서 서버 호출에 사용할 메서드입니다. 동적 드롭다운 서버의 경우 `GET`을(를) 사용합니다. |
 | `httpTemplate.headers` | 오브젝트 | *Optiona.l* 동적 드롭다운 서버에 연결하는 데 필요한 모든 헤더를 포함합니다. |
 | `responseFields.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
-| `responseFields.value` | 문자열 | *필수.* 이 문자열은 API에서 받은 응답을 플랫폼 UI에 표시될 값으로 변환하는 문자 이스케이프 변환 템플릿입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. |
+| `responseFields.value` | 문자열 | *필수.* 이 문자열은 API에서 받은 응답을 Experience Platform UI에 표시될 값으로 변환하는 문자 이스케이프 변환 템플릿입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. |
 
 {style="table-layout:auto"}
 
@@ -946,7 +946,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API 오류 처리 {#error-handling}
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 

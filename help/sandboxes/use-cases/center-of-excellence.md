@@ -1,15 +1,15 @@
 ---
-title: 샌드박스 툴링을 사용하여 전문가 중심 활성화
+title: 샌드박스 도구를 사용하여 Center of Excellence 활성화
 description: 여러 샌드박스 간에 모범 사례를 표준화하는 "골든 샌드박스" 패키지를 만들어 샌드박스 도구를 사용하여 모범 사례를 활성화합니다.
 exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 7%
+source-wordcount: '882'
+ht-degree: 8%
 
 ---
 
-# 샌드박스 툴링을 사용하여 전문가 중심 활성화
+# 샌드박스 도구를 사용하여 Center of Excellence 활성화
 
 여러 샌드박스 간에 모범 사례를 표준화하는 &quot;골든 샌드박스&quot; 패키지를 만들어 샌드박스 도구를 사용하여 모범 사례를 활성화합니다.
 
@@ -37,7 +37,7 @@ ht-degree: 7%
 - 골든 샌드박스로 설정할 모든 관련성 있고 검증된 구성을 사용하여 샌드박스를 만듭니다.
 - 필요한 경우 기준 표준에 대한 이해 당사자의 입력과 동의를 얻습니다.
 
-### 사용할 UI 기능, 플랫폼 구성 요소 및 Experience Cloud 제품 {#ui-functionality-and-elements}
+### 사용할 UI 기능, Experience Platform 구성 요소 및 Experience Cloud 제품 {#ui-functionality-and-elements}
 
 이 사용 사례를 성공적으로 구현하려면 Adobe Experience Platform의 여러 영역을 사용해야 합니다. 이러한 모든 영역에 필요한 [특성 기반 액세스 제어 권한](../../access-control/abac/overview.md)이 있는지 확인하거나 시스템 관리자에게 필요한 권한을 부여하도록 요청하십시오.
 
@@ -73,7 +73,7 @@ ht-degree: 7%
 
 ### 관련 샌드박스로 패키지 가져오기
 
-이제 패키지가 생성되었으므로 이 패키지를 관련 샌드박스로 가져올 수 있습니다. 가장 좋은 방법은 전체 샌드박스가 포함된 패키지를 빈 샌드박스로 가져오는 것입니다. 샌드박스 도구를 사용하면 Experience Platform 내에서 바로 샌드박스로 [전체 샌드박스 패키지를 가져오기](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package)할 수 있습니다.
+이제 패키지가 생성되었으므로 이 패키지를 관련 샌드박스로 가져올 수 있습니다. 가장 좋은 방법은 전체 샌드박스가 포함된 패키지를 빈 샌드박스로 가져오는 것입니다. 샌드박스 도구를 사용하면 Experience Platform 내에서 직접 샌드박스로 [전체 샌드박스 패키지를 가져오기](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package)할 수 있습니다.
 
 ### 조직 간 패키지 공유
 

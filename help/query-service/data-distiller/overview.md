@@ -2,16 +2,16 @@
 title: 데이터 Distiller 개요
 description: 라이선스 자격과 관련된 쿼리 서비스 데이터의 데이터 Distiller 사용 제한에 대한 요약입니다.
 exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
 
 # 데이터 Distiller 개요
 
-Data Distiller은 Adobe Experience Platform의 기능 하위 집합을 포함하는 패키지 오퍼링입니다. Data Distiller을 사용하면 쿼리 서비스에서 일괄 쿼리를 실행하여 실시간 고객 프로필 또는 분석 사용 사례에 대한 수집 후 데이터 준비(예: 청소, 셰이핑 및 조작)를 수행할 수 있습니다. Data Distiller의 사용은 플랫폼 기반 애플리케이션에 대한 권한 부여에 따라 달라집니다.
+Data Distiller은 Adobe Experience Platform의 기능 하위 집합을 포함하는 패키지 오퍼링입니다. Data Distiller을 사용하면 쿼리 서비스에서 일괄 쿼리를 실행하여 실시간 고객 프로필 또는 분석 사용 사례에 대한 수집 후 데이터 준비(예: 청소, 셰이핑 및 조작)를 수행할 수 있습니다. Data Distiller의 사용은 Experience Platform 기반 애플리케이션에 대한 권한 부여에 따라 달라집니다.
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}

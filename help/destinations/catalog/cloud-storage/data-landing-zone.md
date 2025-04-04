@@ -3,9 +3,9 @@ title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 대상자를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 5f932f3de2b875d77904582dfb320e0b6ce17afd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1978'
 ht-degree: 2%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-[!DNL Data Landing Zone]은(는) Adobe Experience Platform에서 프로비저닝한 클라우드 스토리지 인터페이스로, 플랫폼 밖으로 파일을 내보낼 수 있는 안전한 클라우드 기반 파일 스토리지 기능에 대한 액세스 권한을 부여합니다. 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너에 액세스할 수 있으며 모든 컨테이너의 총 데이터 볼륨은 Platform 제품 및 서비스 라이선스와 함께 제공되는 총 데이터로 제한됩니다. [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] 및 [!DNL Real-Time Customer Data Platform]과(와) 같은 플랫폼과 해당 애플리케이션의 모든 고객에게 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너가 제공됩니다.
+[!DNL Data Landing Zone]은(는) Adobe Experience Platform에서 프로비저닝한 클라우드 스토리지 인터페이스로, Experience Platform에서 파일을 내보낼 수 있는 안전한 클라우드 기반 파일 스토리지 기능에 대한 액세스 권한을 부여합니다. 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너에 액세스할 수 있으며 모든 컨테이너의 총 데이터 볼륨은 Experience Platform 제품 및 서비스 라이선스와 함께 제공되는 총 데이터로 제한됩니다. [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] 및 [!DNL Real-Time Customer Data Platform]과(와) 같은 Experience Platform 및 해당 애플리케이션의 모든 고객에게 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너가 제공됩니다.
 
-플랫폼은 [!DNL Data Landing Zone] 컨테이너에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을 적용합니다. 모든 파일은 7일 후에 삭제됩니다.
+Experience Platform에서는 [!DNL Data Landing Zone] 컨테이너에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을 적용합니다. 모든 파일은 7일 후에 삭제됩니다.
 
 [!DNL Data Landing Zone] 대상 커넥터는 Azure 또는 Amazon 웹 서비스 클라우드 지원을 사용하는 고객에게 제공됩니다. 인증 메커니즘은 대상이 프로비저닝된 클라우드에 따라 다르며, 대상 및 해당 사용 사례에 대한 다른 모든 것은 동일합니다. [Azure Blob에 제공된 데이터 랜딩 영역 인증](#authenticate-dlz-azure) 및 [AWS에 제공된 데이터 랜딩 영역 인증](#authenticate-dlz-aws) 섹션에서 두 가지 다른 인증 메커니즘에 대해 자세히 알아보십시오.
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 
 ## API 또는 UI를 통해 [!UICONTROL 데이터 랜딩 영역] 저장소에 연결합니다. {#connect-api-or-ui}
 
-* 플랫폼 사용자 인터페이스를 사용하여 [!UICONTROL 데이터 랜딩 영역] 저장소 위치에 연결하려면 아래의 [대상에 연결](#connect) 및 [이 대상에 대상 활성화](#activate) 섹션을 읽어 보십시오.
+* Experience Platform 사용자 인터페이스를 사용하여 [!UICONTROL 데이터 랜딩 영역] 저장소 위치에 연결하려면 아래의 [대상에 연결](#connect) 및 [이 대상에 대상 활성화](#activate) 섹션을 읽어 보십시오.
 * 프로그래밍 방식으로 [!UICONTROL 데이터 랜딩 영역] 저장소 위치에 연결하려면 흐름 서비스 API 자습서를 사용하여 [파일 기반 대상에 대상 활성화](../../api/activate-segments-file-based-destinations.md)를 읽어 보십시오.
 
 ## 지원되는 대상자 {#supported-audiences}
@@ -38,8 +38,8 @@ ht-degree: 2%
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -58,14 +58,14 @@ ht-degree: 2%
 
 이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기 설정 방법에 대한 자세한 내용은 튜토리얼을 참조하십시오.
 
-* [플랫폼 사용자 인터페이스를 사용하여 데이터 세트를 내보내는 방법](/help/destinations/ui/export-datasets.md).
+* [Experience Platform 사용자 인터페이스를 사용하여 데이터 세트를 내보내는 방법](/help/destinations/ui/export-datasets.md).
 * 흐름 서비스 API를 사용하여 프로그래밍 방식으로 데이터 세트를 [내보내는 방법](/help/destinations/api/export-datasets.md).
 
 ## 내보낸 데이터의 파일 형식 {#file-format}
 
-*대상 데이터*&#x200B;를 내보낼 때 Platform은 사용자가 제공한 저장소 위치에 `.csv`, `parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 대상 활성화 자습서에서 [내보내기에 지원되는 파일 형식](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) 섹션을 참조하십시오.
+*대상 데이터*&#x200B;를 내보낼 때 Experience Platform은 사용자가 제공한 저장소 위치에 `.csv`, `parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 대상 활성화 자습서에서 [내보내기에 지원되는 파일 형식](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) 섹션을 참조하십시오.
 
-*데이터 세트*&#x200B;를 내보낼 때 Platform은 사용자가 제공한 저장소 위치에 `.parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 데이터 세트 내보내기 자습서에서 [데이터 세트 내보내기에 성공했는지 확인](../../ui/export-datasets.md#verify) 섹션을 참조하십시오.
+*데이터 세트*&#x200B;를 내보낼 때 Experience Platform은 사용자가 제공한 저장소 위치에 `.parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 데이터 세트 내보내기 자습서에서 [데이터 세트 내보내기에 성공했는지 확인](../../ui/export-datasets.md#verify) 섹션을 참조하십시오.
 
 ## Azure Blob에 프로비저닝된 데이터 랜딩 영역 인증 {#authenticate-dlz-azure}
 
@@ -97,7 +97,7 @@ ht-degree: 2%
 
 ### [!DNL Data Landing Zone]에 대한 자격 증명을 검색합니다. {#retrieve-dlz-credentials}
 
-[!DNL Data Landing Zone] 자격 증명을 검색하려면 플랫폼 API를 사용해야 합니다. 자격 증명을 검색하기 위한 API 호출에 대해서는 아래에 설명되어 있습니다. 헤더에 필요한 값을 가져오는 방법에 대한 자세한 내용은 [Adobe Experience Platform API 시작하기](/help/landing/api-guide.md) 안내서를 참조하십시오.
+[!DNL Data Landing Zone] 자격 증명을 검색하려면 Experience Platform API를 사용해야 합니다. 자격 증명을 검색하기 위한 API 호출에 대해서는 아래에 설명되어 있습니다. 헤더에 필요한 값을 가져오는 방법에 대한 자세한 내용은 [Adobe Experience Platform API 시작하기](/help/landing/api-guide.md) 안내서를 참조하십시오.
 
 **API 형식**
 
@@ -148,7 +148,7 @@ curl -X GET \
 
 ### [!DNL Data Landing Zone] 자격 증명 업데이트 {#update-dlz-credentials}
 
-원할 경우 자격 증명을 새로 고칠 수도 있습니다. [!DNL Connectors] API의 `/credentials` 끝점에 POST 요청을 하여 `SASToken`을(를) 업데이트할 수 있습니다.
+원할 경우 자격 증명을 새로 고칠 수도 있습니다. [!DNL Connectors] API의 `/credentials` 끝점에 대한 POST 요청을 수행하여 `SASToken`을(를) 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -210,7 +210,7 @@ curl -X POST \
 
 >[!AVAILABILITY]
 >
->이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. 현재 AWS에서 실행 중인 Experience Platform은 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
+>이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
 
 AWS에서 프로비전된 [!DNL Data Landing Zone] 인스턴스에 대한 자격 증명을 가져오려면 아래 작업을 수행하십시오. 그런 다음 원하는 클라이언트를 사용하여 [!DNL Data Landing Zone] 인스턴스에 연결합니다.
 
@@ -218,7 +218,7 @@ AWS에서 프로비전된 [!DNL Data Landing Zone] 인스턴스에 대한 자격
 
 ### [!DNL Data Landing Zone]에 대한 자격 증명을 검색합니다. {#retrieve-dlz-credentials-aws}
 
-[!DNL Data Landing Zone] 자격 증명을 검색하려면 플랫폼 API를 사용해야 합니다. 자격 증명을 검색하기 위한 API 호출에 대해서는 아래에 설명되어 있습니다. 헤더에 필요한 값을 가져오는 방법에 대한 자세한 내용은 [Adobe Experience Platform API 시작하기](/help/landing/api-guide.md) 안내서를 참조하십시오.
+[!DNL Data Landing Zone] 자격 증명을 검색하려면 Experience Platform API를 사용해야 합니다. 자격 증명을 검색하기 위한 API 호출에 대해서는 아래에 설명되어 있습니다. 헤더에 필요한 값을 가져오는 방법에 대한 자세한 내용은 [Adobe Experience Platform API 시작하기](/help/landing/api-guide.md) 안내서를 참조하십시오.
 
 **API 형식**
 
@@ -286,7 +286,7 @@ curl --request GET \
 
 ### 대상으로 인증 {#authenticate}
 
-[필수 구성 요소](#prerequisites) 섹션에 설명된 대로 [!DNL Data Landing Zone] 컨테이너를 [!DNL Azure Storage Explorer]에 연결했는지 확인하십시오. [!DNL Data Landing Zone]은(는) Adobe이 프로비전된 저장소이므로 Experience Platform UI에서 대상을 인증하기 위해 더 이상 단계를 수행할 필요가 없습니다.
+[필수 구성 요소](#prerequisites) 섹션에 설명된 대로 [!DNL Data Landing Zone] 컨테이너를 [!DNL Azure Storage Explorer]에 연결했는지 확인하십시오. [!DNL Data Landing Zone]은(는) Adobe에서 프로비저닝한 스토리지이므로 대상에 인증하기 위해 Experience Platform UI에서 추가 단계를 수행할 필요가 없습니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -295,8 +295,8 @@ curl --request GET \
 * **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력하십시오.
 * **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력하십시오.
-* **[!UICONTROL 파일 형식]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택하십시오. [!UICONTROL CSV] 옵션을 선택할 때 [파일 서식 옵션을 구성](../../ui/batch-destinations-file-formatting-options.md)할 수도 있습니다.
-* Experience Platform **[!UICONTROL 압축 형식]**: 내보낸 파일에 사용할 압축 형식을 선택합니다.
+* **[!UICONTROL 파일 형식]**: 내보낸 파일에 Experience Platform에서 사용할 형식을 선택하십시오. [!UICONTROL CSV] 옵션을 선택할 때 [파일 서식 옵션을 구성](../../ui/batch-destinations-file-formatting-options.md)할 수도 있습니다.
+* **[!UICONTROL 압축 형식]**: Experience Platform에서 내보낸 파일에 사용할 압축 형식을 선택합니다.
 * **[!UICONTROL 매니페스트 파일 포함]**: 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함된 매니페스트 JSON 파일을 내보내기에 포함하려면 이 옵션을 켜십시오. 매니페스트의 이름은 `manifest-<<destinationId>>-<<dataflowRunId>>.json` 형식을 사용하여 지정합니다. [샘플 매니페스트 파일](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)을(를) 봅니다. 매니페스트 파일에는 다음 필드가 포함되어 있습니다.
    * `flowRunId`: 내보낸 파일을 생성한 [데이터 흐름 실행](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
    * `scheduledTime`: 파일을 내보낸 시간(UTC)입니다.

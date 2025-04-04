@@ -4,16 +4,16 @@ description: 감사 쿼리 API를 사용하여 Experience Platform에서 감사 
 role: Developer
 feature: Audits, API
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '477'
 ht-degree: 1%
 
 ---
 
 # 감사 이벤트 엔드포인트
 
-감사 로그는 다양한 서비스 및 기능에 대한 사용자 활동의 세부 정보를 제공하는 데 사용됩니다. 로그에 기록된 각 작업에는 작업 유형, 날짜 및 시간, 작업을 수행한 사용자의 이메일 ID 및 작업 유형과 관련된 추가 속성을 나타내는 메타데이터가 포함됩니다. [!DNL Audit Query] API의 `/audit/events` 끝점을 사용하면 [!DNL Platform]에서 조직의 활동에 대한 이벤트 데이터를 프로그래밍 방식으로 검색할 수 있습니다.
+감사 로그는 다양한 서비스 및 기능에 대한 사용자 활동의 세부 정보를 제공하는 데 사용됩니다. 로그에 기록된 각 작업에는 작업 유형, 날짜 및 시간, 작업을 수행한 사용자의 이메일 ID 및 작업 유형과 관련된 추가 속성을 나타내는 메타데이터가 포함됩니다. [!DNL Audit Query] API의 `/audit/events` 끝점을 사용하면 [!DNL Experience Platform]에서 조직의 활동에 대한 이벤트 데이터를 프로그래밍 방식으로 검색할 수 있습니다.
 
 ## 시작하기
 
@@ -152,9 +152,9 @@ curl -X POST \
 | `imsOrgId` | 이벤트가 발생한 조직의 ID입니다. |
 | `permissionResource` | 권한을 제공한 제품 또는 기능이 작업을 수행합니다. 리소스는 다음 중 하나일 수 있습니다. <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
 | `permissionType` | 작업과 관련된 권한 유형입니다. |
-| `assetType` | 작업이 수행된 플랫폼 리소스의 유형입니다. |
-| `assetId` | 작업이 수행된 Platform 리소스에 대한 고유 식별자입니다. |
-| `assetName` | 작업이 수행된 Platform 리소스의 이름입니다. |
+| `assetType` | 작업이 수행된 Experience Platform 리소스의 유형입니다. |
+| `assetId` | 작업이 수행된 Experience Platform 리소스에 대한 고유 식별자입니다. |
+| `assetName` | 작업이 수행된 Experience Platform 리소스의 이름입니다. |
 | `action` | 이벤트에 대해 기록된 작업 유형입니다. 작업은 다음 중 하나일 수 있습니다. <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
 | `status` | 작업의 상태입니다. 상태는 다음 중 하나일 수 있습니다. </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 

@@ -1,24 +1,24 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;cdp;rtcdp
-title: Real-time Customer Data Platform 시작하기
+keywords: RTCDP;CDP;Real-Time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;cdp;rtcdp
+title: Real-Time Customer Data Platform 시작하기
 description: Adobe Real-Time Customer Data Platform 구현을 설정할 때 이 샘플 시나리오를 예로 사용합니다.
 feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2325'
+source-wordcount: '2326'
 ht-degree: 1%
 
 ---
 
-# Real-time Customer Data Platform 시작하기
+# Real-Time Customer Data Platform 시작하기
 
-이 시작 안내서는 Real-time Customer Data Platform(Real-Time CDP)의 샘플 구현을 안내합니다. 자체 구현을 설정할 때 예로 사용할 수 있습니다. 이 안내서에서는 특정 예를 보여주지만, 설정을 만드는 동안 사용할 수 있는 추가 정보에 연결됩니다.
+이 시작 안내서는 Real-Time Customer Data Platform(Real-Time CDP)의 샘플 구현을 안내합니다. 자체 구현을 설정할 때 예로 사용할 수 있습니다. 이 안내서에서는 특정 예를 보여주지만, 설정을 만드는 동안 사용할 수 있는 추가 정보에 연결됩니다.
 
-이 예는 Adobe Experience Platform에서 제공하는 Real-time Customer Data Platform의 강력한 기능을 보여줍니다.
+이 예는 Adobe Experience Platform에서 제공하는 Real-Time Customer Data Platform의 강력한 기능을 보여줍니다.
 
 * 여러 소스에서 데이터 수집
-* 단일 [!DNL real-time customer profile](으)로 병합
+* 단일 [!DNL real-time customer profile]&#x200B;(으)로 병합
 * 장치 간에 일관되고 관련성이 있으며 개인화된 경험을 제공합니다.
 
 ## 활용 사례
@@ -76,7 +76,7 @@ Adobe Experience Platform에서 제공하는 Real-Time CDP을 통해 Luma의 마
 
 ![이미지](assets/luma-sweatshirts.png)
 
-고객이 이러한 제품에 대해 자세히 알아보려고 탐색할 때 이러한 제품 보기가 Adobe Analytics에서 수집되어 [!DNL Experience Platform](으)로 전송됩니다.
+고객이 이러한 제품에 대해 자세히 알아보려고 탐색할 때 이러한 제품 보기가 Adobe Analytics에서 수집되어 [!DNL Experience Platform]&#x200B;(으)로 전송됩니다.
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
@@ -119,7 +119,7 @@ Sarah는 Adobe Experience Platform에서 자신의 [!DNL Real-Time Customer Prof
 
 사라는 산만해져서 사이트를 떠나면서 세션이 끝납니다. Luma는 Adobe Experience Platform에서 자신의 데이터를 사용하여 사이트를 다시 가져올 수 있습니다.
 
-Adobe Experience Platform에서 제공하는 Real-time Customer Data Platform은 고객 경험 관리를 위해 빌드되었습니다. 이를 통해 조직은 다음과 같은 작업을 수행할 수 있습니다.
+Adobe Experience Platform에서 제공하는 Real-Time Customer Data Platform은 고객 경험 관리를 위해 빌드되었습니다. 이를 통해 조직은 다음과 같은 작업을 수행할 수 있습니다.
 
 * 데이터 통합 및 활성화 간소화
 * 알려진 데이터 및 알 수 없는 데이터 사용 관리
@@ -142,7 +142,7 @@ Luma의 팀은 모든 행동 및 고객 데이터를 한 곳에 보유하고 있
 
 ## 데이터 소스 구성
 
-[!DNL Real-Time Customer Data Platform]을(를) 사용하여 새로운 데이터 소스를 플랫폼으로 가져옵니다. Real-Time CDP에는 프로필에 빠르고 쉽게 추가할 수 있는 데이터 소스 카탈로그가 포함되어 있습니다.
+[!DNL Real-Time Customer Data Platform]을(를) 사용하여 새로운 데이터 소스를 Experience Platform으로 가져옵니다. Real-Time CDP에는 프로필에 빠르고 쉽게 추가할 수 있는 데이터 소스 카탈로그가 포함되어 있습니다.
 
 ![이미지](assets/luma-source-cat.png)
 
@@ -158,7 +158,7 @@ Luma의 팀은 모든 행동 및 고객 데이터를 한 곳에 보유하고 있
 
    예를 들어 **[!UICONTROL 연락처]**&#x200B;를 선택합니다. 연락처 데이터의 미리 보기가 자동으로 로드되므로 모든 것이 예상대로 보이는지 확인할 수 있습니다.
 
-   Real-Time CDP은 표준 필드를 [!DNL Experience Data Model](XDM) 프로필 스키마에 자동 매핑하여 이 프로세스에서 많은 수동 작업을 수행합니다.
+   Real-Time CDP은 표준 필드를 [!DNL Experience Data Model]&#x200B;(XDM) 프로필 스키마에 자동 매핑하여 이 프로세스에서 많은 수동 작업을 수행합니다.
 
 1. 필드 매핑을 검토합니다.
 
@@ -193,7 +193,7 @@ Luma가 Sarah에 대해 갖는 모든 프로필 정보입니다. 여기에는 �
 
 | 카테고리 | 설명 |
 |---|---|
-| ID | 채널 및 장치 전반에 걸쳐 Luma와 Sarah의 상호 작용에서 [!DNL Platform]에 함께 연결된 ID를 표시합니다. 웹 사이트의 ECID가 표시됩니다. 또한 ID에는 모바일 앱의 ECID, 이메일 ID, 최근에 추가된 [!DNL Microsoft Dynamics] 데이터 세트의 CRM ID 및 Luma 충성도 시스템에서 Adobe Experience Platform으로 전달된 충성도 ID가 포함됩니다. |
+| ID | 채널 및 장치 전반에 걸쳐 Luma와 Sarah의 상호 작용에서 [!DNL Experience Platform]에 함께 연결된 ID를 표시합니다. 웹 사이트의 ECID가 표시됩니다. 또한 ID에는 모바일 앱의 ECID, 이메일 ID, 최근에 추가된 [!DNL Microsoft Dynamics] 데이터 세트의 CRM ID 및 Luma 충성도 시스템에서 Adobe Experience Platform으로 전달된 충성도 ID가 포함됩니다. |
 | 이벤트 | Luma 브랜드와 Sarah의 모든 상호 작용 데이터를 표시합니다. 여기에는 방금 본 항목, 과거에 본 항목, 받은 이메일, 콜센터와의 상호 작용 및 이러한 상호 작용이 각각 발생한 채널과 장치가 포함됩니다. |
 
 Real-Time CDP 프로필은 Luma 마케팅 팀의 워크플로우를 몇 주에서 몇 분으로 줄이고, 이 360도 고객 보기를 기반으로 개인화에 대한 가능성을 잠금 해제합니다. 이 프로필은 Sarah가 로그인하기 전에 사이트를 탐색했을 때의 행동 데이터를 기존의 고객 프로필과 병합하여 Sarah에 대한 포괄적인 보기를 만듭니다.

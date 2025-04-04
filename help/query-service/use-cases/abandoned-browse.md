@@ -3,9 +3,9 @@ keywords: Experience Platform;쿼리 서비스;쿼리 서비스;쿼리
 title: Adobe Experience Platform 쿼리 서비스에 대한 사용 사례 예
 description: Adobe Experience Platform 쿼리 서비스의 다기능성과 이점을 보여주는 전체적인 예입니다.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ order by price desc)D;
 
 또한 [!DNL Query Service]은(는) 자동연장 또는 정적 조건을 충족하는 논리를 쿼리에 포함시켜 정교한 세분화를 가능하게 합니다.
 
-Adobe Experience Platform은 효율적이고 안정적인 방식으로 데이터를 활성화하는 데 필요한 데이터 저장소 및 도구를 제공합니다. 데이터를 플랫폼 내에 보관하면 다른 프로세스를 실행하는 동안 속성을 파생할 수 있으며 조작 및 처리를 위해 데이터를 타사 도구로 내보낼 필요가 없습니다. 이러한 처리 오버헤드는 수백 개의 속성 또는 캠페인을 처리할 때 프로젝트 타임라인에 큰 영향을 줄 수 있습니다. 이렇게 하면 마케터가 데이터에 액세스하고 캠페인을 구축할 수 있는 단일 위치뿐만 아니라 메시지를 세그먼트화하고 개인화할 수 있는 매우 동적인 수단을 제공합니다.
+Adobe Experience Platform은 효율적이고 안정적인 방식으로 데이터를 활성화하는 데 필요한 데이터 저장소 및 도구를 제공합니다. Experience Platform 내에 데이터를 유지하면 다른 프로세스를 실행하는 동안 속성을 파생할 수 있으며, 조작 및 처리를 위해 데이터를 서드파티 도구로 내보낼 필요가 없습니다. 이러한 처리 오버헤드는 수백 개의 속성 또는 캠페인을 처리할 때 프로젝트 타임라인에 큰 영향을 줄 수 있습니다. 이렇게 하면 마케터가 데이터에 액세스하고 캠페인을 구축할 수 있는 단일 위치뿐만 아니라 메시지를 세그먼트화하고 개인화할 수 있는 매우 동적인 수단을 제공합니다.
 
 ## 다음 단계
 

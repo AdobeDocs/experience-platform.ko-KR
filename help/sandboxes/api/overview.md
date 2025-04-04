@@ -5,9 +5,9 @@ title: 샌드박스 API 안내서
 description: Adobe Experience Platform의 샌드박스는 프로덕션 환경에 영향을 주지 않고 기능을 테스트하고 실험을 실행하며 사용자 지정 구성을 만들 수 있는 격리된 개발 환경을 제공합니다.
 role: Developer
 exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ## 샌드박스 유형
 
-현재 Experience Platform에서 지원되는 샌드박스 유형은 프로덕션 및 개발 샌드박스입니다. 기본 플랫폼 라이선스는 총 5개의 샌드박스를 부여하며, 이를 프로덕션 또는 개발로 분류할 수 있습니다. 추가 팩 10개, 최대 총 75개의 샌드박스에 대해 라이센스를 부여할 수 있습니다. API에서 조직에 대해 지원되는 샌드박스 유형을 보는 방법은 [샌드박스 유형 끝점 안내서](./types.md)를 참조하십시오.
+현재 Experience Platform에서 지원되는 샌드박스 유형은 프로덕션 및 개발 샌드박스입니다. 기본 Experience Platform 라이선스는 프로덕션 또는 개발로 분류할 수 있는 총 5개의 샌드박스를 부여합니다. 추가 팩 10개, 최대 총 75개의 샌드박스에 대해 라이센스를 부여할 수 있습니다. API에서 조직에 대해 지원되는 샌드박스 유형을 보는 방법은 [샌드박스 유형 끝점 안내서](./types.md)를 참조하십시오.
 
 ## 다음 단계
 
