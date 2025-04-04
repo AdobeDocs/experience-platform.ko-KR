@@ -2,9 +2,9 @@
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: c1f06b14cb33a0fc29a50a2851c1fb52ae82c45d
+source-git-commit: cfa8b24784ed24384131fe1248bb3f7dd41214c6
 workflow-type: tm+mt
-source-wordcount: '4356'
+source-wordcount: '4371'
 ht-degree: 3%
 
 ---
@@ -98,7 +98,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 | ----- | ----------- |
 | [!UICONTROL 이름] | 대상자의 이름입니다. |
 | [!UICONTROL 프로필 개수] | 대상자에 적합한 총 프로필 수입니다. |
-| [!UICONTROL Origin] | 대상의 기원입니다. 이는 대상자가 어디에서 오는지 설명합니다. 가능한 값에는 세그먼테이션 서비스, 사용자 지정 업로드, 대상 구성 및 Audience Manager이 포함됩니다. |
+| [!UICONTROL Origin] | 대상의 기원입니다. 이는 대상자가 어디에서 오는지 설명합니다. 가능한 값에는 [세그먼테이션 서비스](#segment-builder), [사용자 지정 업로드](#import-audience), [대상 구성](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [유사 대상](../types/lookalike-audiences.md), [페더레이션 대상 구성](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [데이터 Distiller](#data-distiller) 및 [AJO B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview)이 포함됩니다. |
 | [!UICONTROL 라이프사이클 상태] | 대상의 상태입니다. 이 필드에 사용할 수 있는 값은 `Draft`, `Inactive` 및 `Published`입니다. 다른 상태의 의미와 대상을 다른 라이프사이클 상태로 이동하는 방법 등 라이프사이클 상태에 대한 자세한 내용은 세분화 FAQ](../faq.md#lifecycle-status)의 [라이프사이클 상태 섹션을 참조하십시오. |
 | [!UICONTROL 업데이트 주기] | 대상자의 데이터가 업데이트되는 빈도를 나타내는 값입니다. 이 필드에 사용할 수 있는 값에는 [!UICONTROL 일괄 처리], [!UICONTROL 스트리밍], [!UICONTROL Edge] 및 [!UICONTROL 예약되지 않음]이 포함됩니다. |
 | [!UICONTROL 마지막으로 업데이트한 사람] | 대상자를 마지막으로 업데이트한 사람의 이름입니다. |
