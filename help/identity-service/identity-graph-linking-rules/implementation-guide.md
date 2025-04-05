@@ -2,9 +2,9 @@
 title: ID 그래프 연결 규칙에 대한 구현 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
+source-git-commit: 45fdce7dc50b237edc511047ec150ecdd6adce50
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1835'
 ht-degree: 6%
 
 ---
@@ -15,10 +15,13 @@ ht-degree: 6%
 >
 >ID 그래프 연결 규칙은 현재 제한적 가용성입니다. 개발 샌드박스의 기능에 액세스하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
 
+>[!IMPORTANT]
+>
+>이 문서에서는 데이터 없이 새 샌드박스에서 구현을 시작한다고 가정합니다.
+
 Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 때 참조할 수 있는 단계별 안내서는 이 문서를 참조하십시오.
 
 단계별 개요:
-
 
 1. [구현을 위한 전체 사전 요구 사항](#prerequisites-for-implementation)
 2. [필요한 ID 네임스페이스 만들기](#namespace)
@@ -42,13 +45,13 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 
 개인 식별자를 보여 주는 고유한 네임스페이스가 없으면 동일한 ECID에 서로 다른 개인 식별자에 연결되는 그래프가 표시될 수 있습니다. 이 예에서, B2BCRM 및 B2CCRM 둘 다는 동시에 동일한 ECID에 연결된다. 이 그래프는 Tom이 B2C 로그인 계정을 사용하여 Summer와 B2B 로그인 계정을 사용하여 장치를 공유했음을 나타냅니다. 그러나 시스템에서는 하나의 프로필임을 인식합니다(그래프 축소).
 
-![두 개인 식별자가 같은 ECID에 연결되어 있는 그래프 시나리오입니다.](../images/graph-examples/multi_namespaces.png)
+![두 개인 식별자가 동일한 ECID에 연결된 그래프 시나리오입니다.](../images/graph-examples/multi_namespaces.png)
 
 +++
 
 +++단일 개인 식별자 네임스페이스가 있는 그래프의 예를 보려면 선택
 
-고유한 네임스페이스(이 경우 서로 다른 두 네임스페이스 대신 CRMID)가 주어지면 Identity Service는 ECID와 마지막으로 연결된 개인 식별자를 식별할 수 있습니다. 이 예에서 고유한 CRMID가 존재하므로 ID 서비스는 두 엔티티가 동일한 디바이스를 공유하는 &quot;공유 디바이스&quot; 시나리오를 인식할 수 있습니다.
+고유한 네임스페이스(이 경우 두 개의 서로 다른 네임스페이스 대신 CRMID)가 지정된 경우 Identity Service는 ECID와 마지막으로 연결된 개인 식별자를 식별할 수 있습니다. 이 예에서는 고유한 CRMID가 존재하기 때문에 Identity Service는 두 엔티티가 동일한 디바이스를 공유하는 &quot;공유 디바이스&quot; 시나리오를 인식할 수 있습니다.
 
 ![두 사람 식별자가 같은 ECID에 연결되어 있지만 이전 링크가 제거되는 공유 장치 그래프 시나리오입니다.](../images/graph-examples/crmid_only_multi.png)
 
@@ -69,11 +72,11 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 
 * (권장) 한 개의 고유 개인 ID가 있는 인증된 이벤트입니다.
 * (권장되지 않음) 두 개의 고유한 개인 식별자가 있는 인증된 이벤트입니다. 고유 개인 식별자가 두 개 이상 있는 경우 원하지 않는 그래프 축소가 발생할 수 있습니다.
-* (권장되지 않음) 고유한 개인 식별자가 없는 인증된 이벤트입니다. 고유한 개인 식별자가 없는 경우 인증되지 않은 이벤트와 인증된 이벤트가 ECID에 대해 저장됩니다.
+* (권장되지 않음) 고유한 개인 식별자가 없는 인증된 이벤트입니다. 고유 사용자 식별자가 없는 경우 인증되지 않은 이벤트와 인증된 이벤트가 모두 ECID에 대해 저장됩니다.
 
 >[!BEGINTABS]
 
->[!TAB 한 명의 개인 ID가 있는 인증된 이벤트]
+>[!TAB 한 개인 식별자로 인증된 이벤트]
 
 ```json
 {
@@ -102,7 +105,7 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 }
 ```
 
->[!TAB 개인 식별자가 두 개인 ]인 인증된 이벤트
+>[!TAB 두 개의 개인 식별자가 있는 인증된 이벤트]
 
 시스템에서 2명의 개인 식별자를 전송하는 경우 구현이 1명의 개인 네임스페이스 요구 사항에 실패할 수 있습니다. 예를 들어 웹 SDK 구현의 identityMap에 CRMID, customerID 및 ECID 네임스페이스가 포함되어 있으면 모든 단일 이벤트에 CRMID와 customerID가 모두 포함될 수 있습니다.
 
@@ -181,10 +184,10 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 
 ID 서비스 구현 프로세스의 첫 번째 단계는 Experience Platform 계정이 필요한 권한으로 프로비저닝된 역할에 추가되도록 하는 것입니다. 관리자는 Adobe Experience Cloud의 권한 UI로 이동하여 계정에 대한 권한을 구성할 수 있습니다. 여기에서 계정은 다음 권한이 있는 역할에 추가되어야 합니다.
 
-* [!UICONTROL ID 설정 보기]: ID 네임스페이스 찾아보기 페이지에서 고유한 네임스페이스 및 네임스페이스 우선 순위를 볼 수 있도록 이 권한을 적용합니다.
-* [!UICONTROL ID 설정 편집]: ID 설정을 편집하고 저장하려면 이 권한을 적용하세요.
+* [!UICONTROL ID 설정] 보기: 이 권한을 적용하면 ID 네임스페이스 찾아보기 페이지에서 고유한 네임스페이스 및 네임스페이스 우선 순위를 볼 수 있습니다.
+* [!UICONTROL ID 설정] 편집: ID 설정을 편집하고 저장할 수 있도록 이 권한을 적용합니다.
 
-사용 권한에 대한 자세한 내용은 [사용 권한 안내서](../../access-control/abac/ui/permissions.md)를 참조하세요.
+사용 권한에 대한 자세한 내용은 사용 권한 안내서](../../access-control/abac/ui/permissions.md).[
 
 ## ID 네임스페이스 만들기 {#namespace}
 
@@ -226,9 +229,9 @@ ID 설정 UI를 사용하여 고유한 네임스페이스를 지정하고 우선
 
 * ID 서비스 기능에 액세스하는 데 필요한 권한입니다.
 * 데이터를 위한 네임스페이스.
-* 네임스페이스에 대해 지정된 고유한 네임스페이스와 구성된 우선 순위
-* 하나 이상의 XDM 스키마. (데이터와 특정 사용 사례에 따라 프로필과 경험 이벤트 스키마를 모두 만들어야 할 수 있습니다.)
-* 스키마를 기반으로 하는 데이터 세트입니다.
+* 지정된 고유 네임스페이스 및 네임스페이스에 대해 구성된 우선 순위.
+* 하나 이상의 XDM 스키마. (데이터 및 특정 사용 사례에 따라 프로필 및 경험 이벤트 스키마를 모두 만들어야 할 수 있습니다.)
+* 스키마를 기반으로 하는 데이터 세트.
 
 위에 나열된 모든 항목이 있으면 Experience Platform으로 데이터 수집을 시작할 수 있습니다. 여러 가지 다양한 방법을 통해 데이터 수집을 수행할 수 있습니다. 다음 서비스를 사용하여 데이터를 Experience Platform으로 가져올 수 있습니다.
 
@@ -248,15 +251,15 @@ ID 설정 UI를 사용하여 고유한 네임스페이스를 지정하고 우선
 
 자세한 정보를 확인하고 축소된 그래프가 없는지 확인하려면 줄임표(`...`)를 선택한 다음 **[!UICONTROL 자세히 보기]**&#x200B;를 선택하십시오.
 
-![ID 서비스 UI 작업 영역의 ID 대시보드입니다.](../images/implementation/identity_dashboard.png)
+![ID 서비스 UI 작업 영역 내의 ID 대시보드입니다.](../images/implementation/identity_dashboard.png)
 
-축소된 그래프에 대한 정보를 보려면 나타나는 창을 사용합니다. 이 예에서는 이메일과 전화기가 모두 고유 네임스페이스로 표시되므로 샌드박스에 축소된 그래프가 없습니다.
+축소된 그래프에 대한 정보를 보려면 나타나는 창을 사용합니다. 이 예제에서는 이메일과 전화가 모두 고유한 네임스페이스로 표시되므로 샌드박스에 축소된 그래프가 없습니다.
 
-![여러 ID가 있는 그래프의 팝업 창](../images/implementation/graphs.png)
+![여러 ID가 있는 그래프에 대한 팝업 창입니다.](../images/implementation/graphs.png)
 
 ## 부록 {#appendix}
 
-ID 설정 및 고유한 네임스페이스를 구현할 때 참조할 수 있는 추가 정보는 이 섹션 을 참조하십시오.
+ID 설정 및 고유 네임스페이스를 구현할 때 참조할 수 있는 추가 정보는 이 섹션을 참조하십시오.
 
 ### Dangling loginID 시나리오 {#dangling-loginid-scenario}
 
@@ -276,11 +279,11 @@ ID 설정 및 고유한 네임스페이스를 구현할 때 참조할 수 있는
 
 ![LoginID가 CRMID에 연결되어 있습니다.](../images/graph-examples/id_c_tom.png)
 
->[!TAB loginID가 다른 CRMID에 연결되어 있습니다]
+>[!TAB loginID가 다른 CRMID에 연결되어 있습니다.]
 
-이 예제에서는 `{loginID: ID_C}`이(가) `{CRMID: Summer}`에 연결되어 있습니다. 따라서 시스템은 이 loginID가 다른 개인 엔티티(이 경우 Summer)와 연관되어 있음을 식별할 수 있습니다.
+이 예 `{loginID: ID_C}` 에서 는 에 연결되어 있습니다 `{CRMID: Summer}`. 따라서 시스템은 이 loginID가 다른 개인 엔터티(이 경우 Summer)와 연결되어 있음을 식별할 수 있습니다.
 
-이 예는 Tom과 Summer가 `{ECID: 111}`(으)로 표현되는 장치를 공유하는 개별 엔터티를 구별하는 것을 보여 줍니다.
+이 예는 또한 Tom과 Summer가 로 표시되는 `{ECID: 111}`디바이스 공유 중인 서로 다른 개인 엔터티임을 보여줍니다.
 
 ![LoginID가 다른 CRMID에 연결되어 있습니다.](../images/graph-examples/id_c_summer.png)
 

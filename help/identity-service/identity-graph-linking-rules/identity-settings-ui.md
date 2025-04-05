@@ -2,10 +2,10 @@
 title: ID 설정 UI
 description: ID 설정 사용자 인터페이스를 사용하는 방법을 알아봅니다.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
+source-git-commit: 4c43813e234dd5d06c6b505652fca161b88971c9
 workflow-type: tm+mt
-source-wordcount: '641'
-ht-degree: 3%
+source-wordcount: '644'
+ht-degree: 4%
 
 ---
 
@@ -23,7 +23,7 @@ UI에서 ID 설정을 구성하는 방법을 배우려면 이 안내서를 참�
 
 ID 설정 작업을 시작하기 전에 다음 문서를 참조하십시오.
 
-* [ID 그래프 연결 규칙](./overview.md)
+* [아이덴티티 그래프 연결 규칙](./overview.md)
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
 * [구현 안내서](./implementation-guide.md)
 * [그래프 구성의 예](./example-configurations.md)
@@ -71,7 +71,13 @@ ID 설정 페이지는 [!UICONTROL 개인 네임스페이스] 및 [!UICONTROL �
 
 ![확인 창에서 &quot;확인&quot; 단추를 선택했습니다.](../images/rules/confirmation.png)
 
-마지막 단계는 설정을 저장한 후 그래프가 업데이트되는 경우에만 그래프 알고리즘 **의 영향을 받는 기존 그래프와 네임스페이스 우선 순위를 변경한 후에도 실시간 고객 프로필에 있는 이벤트 조각의 기본 ID가 업데이트되지 않는다는 다른 확인 메시지입니다.** 또한 새 설정 또는 업데이트된 설정이 적용되는 데 최대 **6시간**&#x200B;이 소요된다는 알림을 받습니다. 확인하려면 샌드박스 이름을 입력한 다음 **[!UICONTROL 확인]**&#x200B;을 선택하세요.
+### 설정 확인 {#confirm-your-settings}
+
+>[!IMPORTANT]
+>
+>* 마지막 단계는 설정을 저장한 후 그래프가 업데이트되는 경우에만 그래프 알고리즘 **의 영향을 받는 기존 그래프와 네임스페이스 우선 순위를 변경한 후에도 실시간 고객 프로필에 있는 이벤트 조각의 기본 ID가 업데이트되지 않는다는 다른 확인 메시지입니다.**
+>
+>* 또한 새 설정 또는 업데이트된 설정이 적용되는 데 최대 **6시간**&#x200B;이 소요된다는 알림을 받습니다. 확인하려면 샌드박스 이름을 입력한 다음 **[!UICONTROL 확인]**&#x200B;을 선택하세요.
 
 ![구성이 처리되기 전에 6시간 지연에 대한 경고를 표시하는 확인 창입니다.](../images/rules/complete.png)
 
@@ -79,7 +85,7 @@ ID 설정 페이지는 [!UICONTROL 개인 네임스페이스] 및 [!UICONTROL �
 
 ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
-* [ID 그래프 연결 규칙 개요](./overview.md)
+* [아이덴티티 그래프 연결 규칙 개요](./overview.md)
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
 * [구현 안내서](./implementation-guide.md)
 * [그래프 구성의 예](./example-configurations.md)
