@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Data Distiller으로 가치를 극대화하는 주요 팁 - OS656
 description: 실시간 고객 프로필 데이터를 보강하고 행동 통찰력을 사용하여 타깃팅된 대상자를 빌드하여 Adobe Experience Platform Data Distiller으로 가치를 극대화하는 방법에 대해 알아봅니다. 이 리소스에는 고객 세분화를 위해 최신성, 빈도, 통화(RFM) 모델을 적용하는 방법을 보여 주는 샘플 데이터 세트와 사례 연구가 포함되어 있습니다.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 30db967fc94d8f5b9ded22ce81da3d51001610af
+source-git-commit: 3a8c53a5c5e72231c195ccfab32109ed4971fa8b
 workflow-type: tm+mt
-source-wordcount: '3704'
+source-wordcount: '3743'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,10 @@ RFM 모델은 세 가지 주요 매개 변수를 사용하여 트랜잭션 행�
 그러나 RFM 모델링에는 한계가 있습니다. 최신성, 빈도 및 통화 가치에 따라 세그먼트 내의 일관성을 가정하므로 고객 행동이 지나치게 단순화될 수 있습니다. 또한 모델은 이러한 요소에 동일한 가중치를 부여하여 고객 가치를 잘못 나타낼 수 있습니다. 또한 제품별 특성이나 고객 선호도 등 컨텍스트를 고려하지 않아 구매 행동이 잘못 해석될 수 있습니다.
 
 ## 동적 RFM 점수 기반 SQL 대상자 작성 {#build-a-dynamic-rfm-audience}
+
+다음 인포그래픽에서는 이 자습서에서 설명한 RFM SQL 대상자 만들기 워크플로우에 대한 높은 수준의 개요를 제공합니다.
+
+![CSV 업로드, 데이터 탐색, RFM 점수 강화 및 대상 활성화의 네 가지 단계를 설명하는 &quot;RFM-점수 기반 SQL 대상&quot;이라는 인포그래픽입니다.](../images/data-distiller/top-tips-to-maximize-value/rfm-score-based-sql-audience.png)
 
 Luma 사례 연구를 시작하기 전에 샘플 데이터 세트를 수집해야 합니다. 먼저 [링크를 선택하여 `luma_web_data.zip` 데이터 집합을 로컬로 다운로드합니다](../resources/luma_web_data.zip). 샘플 데이터 세트는 사용 사례에 맞게 압축된 .zip 포맷의 csv 파일입니다. Adobe Acrobat 또는 운영 체제의 기본 제공 유틸리티와 같은 신뢰할 수 있는 파일 추출 도구를 사용하여 이 ZIP 파일의 압축을 해제합니다. 일반적으로 Adobe Analytics, Adobe Commerce 또는 Adobe 웹/모바일 SDK에서 데이터를 소스화합니다.
 
