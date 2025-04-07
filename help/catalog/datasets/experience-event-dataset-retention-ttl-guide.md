@@ -2,9 +2,9 @@
 title: TTL을 사용하여 데이터 레이크에서 경험 이벤트 데이터 세트 유지 관리
 description: Adobe Experience Platform API의 TTL(Time-To-Live) 구성을 사용하여 데이터 레이크에서 경험 이벤트 데이터 세트 보존을 평가, 설정 및 관리하는 방법을 알아봅니다. 이 안내서에서는 TTL 행 수준 만료가 데이터 보존 정책을 지원하고, 스토리지 효율성을 최적화하고, 효과적인 데이터 수명주기 관리를 보장하는 방법을 설명합니다. 또한 TTL을 효과적으로 적용하는 데 도움이 되는 사용 사례와 모범 사례를 제공합니다.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 767e9536862799e31d1ab5c77588d485f80c59e9
 workflow-type: tm+mt
-source-wordcount: '2341'
+source-wordcount: '2407'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,13 @@ TTL은 시간이 지남에 따라 관련성을 잃는 시간에 민감한 데이
 
 장기 분석 또는 비즈니스 운영을 위해 기록 기록이 필수인 경우 TTL이 올바른 접근 방식이 아닐 수 있습니다. 이러한 요인을 검토하면 데이터 가용성에 부정적인 영향을 주지 않고 TTL이 데이터 유지 요구 사항에 맞게 조정됩니다.
 
-## 쿼리 계획
+## 쿼리 계획 {#plan-queries}
 
-TTL을 적용하기 전에 쿼리를 사용하여 데이터 세트 크기와 관련성을 분석하십시오. 타깃팅된 쿼리를 실행하면 다양한 TTL 구성에서 유지하거나 제거할 데이터의 양을 결정하는 데 도움이 됩니다.
+TTL을 적용하기 전에 데이터 세트 크기와 데이터 관련성을 평가하고 기록 데이터를 얼마나 유지해야 하는지 평가하는 것이 중요합니다. 다음 시각화에서는 쿼리 계획부터 보존 효과 모니터링까지 TTL 구현 전체 프로세스를 간략하게 설명합니다.
 
-예를 들어 다음 SQL 쿼리는 지난 30일 이내에 생성된 레코드 수를 계산합니다.
+![경험 이벤트 데이터 세트에서 TTL을 구현하기 위한 시각적 워크플로우입니다. 데이터 수명 및 제거 영향을 평가하고, 쿼리를 통해 TTL 설정을 확인하고, 카탈로그 서비스 API를 통해 TTL을 구성하고, TTL 영향을 지속적으로 모니터링하고 조정하는 단계가 포함됩니다.](../images/datasets/dataset-retention-ttl-guide/manage-experience-event-dataset-retention-in-the-data-lake.png)
+
+타깃팅된 쿼리를 실행하면 다양한 TTL 구성에서 유지하거나 제거할 데이터의 양을 결정하는 데 도움이 됩니다. 예를 들어 다음 SQL 쿼리는 지난 30일 이내에 생성된 레코드 수를 계산합니다.
 
 ```sql
 SELECT COUNT(1) FROM [datasetName] WHERE timestamp > date_sub(now(), INTERVAL 30 DAY);
