@@ -2,9 +2,9 @@
 title: ID 그래프 연결 규칙 문제 해결 설명서
 description: ID 그래프 연결 규칙의 일반적인 문제를 해결하는 방법을 알아봅니다.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0e7911e21c546fb40cd51f03a5a6d6a2aa751dec
 workflow-type: tm+mt
-source-wordcount: '3286'
+source-wordcount: '3338'
 ht-degree: 0%
 
 ---
@@ -175,6 +175,10 @@ AAID는 기본적으로 차단됩니다. 따라서 [Adobe Analytics 소스 커�
 
 * 한 ID는 identityMap에서 전송되고 다른 ID는 ID 설명자에서 전송됩니다. **참고**: XDM(Experience Data Model) 스키마에서 ID 설명자는 ID로 표시된 필드입니다.
 * CRMID는 identityMap을 통해 전송됩니다. CRMID를 필드로 보내는 경우 WHERE 절에서 `key='Email'`을(를) 제거하십시오.
+
+>[!NOTE]
+>
+>**WebSDK 구현 및 ECID 중복에서**: ECID 필드가 identityMap 대신 identity(identity descriptor)로 표시되면 두 번째 ECID가 identityMap에 생성됩니다. 이렇게 중복하면 단일 이벤트에 두 개의 ECID가 있기 때문에 실시간 고객 프로필이 익명 이벤트를 저장하는 것을 방지할 수 있습니다.
 
 ## 그래프 동작 관련 문제 {#graph-behavior-related-issues}
 
