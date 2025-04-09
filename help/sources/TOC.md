@@ -5,10 +5,10 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 47f6251a190a12b86ec566e3ba72fa34a0bd028b
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 30%
+source-wordcount: '1070'
+ht-degree: 35%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 30%
 
 - [소스 개요](home.md)
 - 사용 가능한 소스 커넥터 {#connectors}
-   - Adobe 응용 프로그램 {#adobe-applications}
+   - Adobe 애플리케이션 {#adobe-applications}
       - [Analytics 분류 소스](connectors/adobe-applications/classifications.md)
       - [Analytics 소스](connectors/adobe-applications/analytics.md)
       - [Audience Manager 소스](connectors/adobe-applications/audience-manager.md)
@@ -43,7 +43,7 @@ ht-degree: 30%
       - [Mixpanel 커넥터](connectors/analytics/mixpanel.md)
       - [펜도](connectors/analytics/pendo-webhook.md)
       - [RainFocus](connectors/analytics/rainfocus.md)
-   - 클라우드 저장소 {#cloud-storage}
+   - 클라우드 스토리지 {#cloud-storage}
       - [Amazon Kinesis 커넥터](connectors/cloud-storage/kinesis.md)
       - [Amazon S3 커넥터](connectors/cloud-storage/s3.md)
       - [Apache HDFS 커넥터](connectors/cloud-storage/hdfs.md)
@@ -95,6 +95,7 @@ ht-degree: 30%
    - 데이터 및 ID 파트너 {#data-partner}
       - [Acxiom 데이터 수집](connectors/data-partners/acxiom-data-ingestion.md)
       - [Acxiom 예상 데이터 가져오기](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Algolia 사용자 프로필](connectors/data-partners/algolia-user-profiles.md)
       - [봄보라 의도](connectors/data-partners/bombora.md)
       - [Demandbase 의도](connectors/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
@@ -124,15 +125,15 @@ ht-degree: 30%
       - [일반 REST API 커넥터](connectors/protocols/generic-rest.md)
    - 스트리밍 {#streaming}
       - [HTTP API 커넥터](connectors/streaming/http.md)
-- API 튜토리얼 {#api-tutorials}
-   - 기본 연결 {#create} 만들기
+- API 자습서 {#api-tutorials}
+   - 기본 연결 만들기 {#create}
       - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
          - [Pinterest 광고](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
          - [펜도](tutorials/api/create/analytics/pendo-webhook.md)
-      - 클라우드 저장소 {#cloud-storage}
+      - 클라우드 스토리지 {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
@@ -217,7 +218,7 @@ ht-degree: 30%
       - [결제 데이터 탐색](tutorials/api/explore/payments.md)
       - [프로토콜 데이터 탐색](tutorials/api/explore/protocols.md)
       - [데이터 테이블 탐색](tutorials/api/explore/tabular.md)
-   - {#collect} 데이터 수집
+   - 데이터 수집 {#collect}
       - [광고 데이터 수집](tutorials/api/collect/advertising.md)
       - [클라우드 스토리지 데이터 수집](tutorials/api/collect/cloud-storage.md)
       - [CRM 데이터 수집](tutorials/api/collect/crm.md)
@@ -240,8 +241,8 @@ ht-degree: 30%
    - [데이터 흐름을 초안으로 저장](tutorials/api/draft.md)
    - [데이터 흐름에 액세스 레이블 적용](tutorials/api/labels.md)
 - UI 튜토리얼 {#ui-tutorials}
-   - 원본 연결 {#create} 만들기
-      - Adobe 응용 프로그램 {#adobe-applications}
+   - 소스 연결 만들기 {#create}
+      - Adobe 애플리케이션 {#adobe-applications}
          - [Adobe Analytics (보고서 세트 데이터)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (분류 데이터)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -256,7 +257,7 @@ ht-degree: 30%
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [펜도](tutorials/ui/create/analytics/pendo-webhook.md)
          - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
-      - 클라우드 저장소 {#cloud-storage}
+      - 클라우드 스토리지 {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
@@ -309,6 +310,7 @@ ht-degree: 30%
       - 데이터 및 ID 파트너 {#data-partner}
          - [Acxiom 데이터 수집](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Acxiom 예상 데이터 가져오기](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Algolia 사용자 프로필](tutorials/ui/create/data-partners/algolia-user-profiles.md)
          - [봄보라 의도](tutorials/ui/create/data-partners/bombora.md)
          - [Demandbase 의도](tutorials/ui/create/data-partners/demandbase.md)
          - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
@@ -339,7 +341,7 @@ ht-degree: 30%
          - [일반 OData](tutorials/ui/create/protocols/odata.md)
       - 스트리밍 {#streaming}
          - [HTTP API](tutorials/ui/create/streaming/http.md)
-   - 데이터 흐름 {#dataflow} 구성
+   - 데이터 흐름 구성 {#dataflow}
       - [Advertising 연결 데이터 흐름](tutorials/ui/dataflow/advertising.md)
       - [Analytics 연결 데이터 흐름](tutorials/ui/dataflow/analytics.md)
       - [일괄 클라우드 스토리지 연결 데이터 흐름](tutorials/ui/dataflow/batch/cloud-storage.md)
@@ -365,14 +367,14 @@ ht-degree: 30%
    - [소스 알림 구독](tutorials/ui/alerts.md)
    - [데이터 흐름을 초안으로 저장](tutorials/ui/draft.md)
    - [데이터 흐름에 액세스 레이블 적용](tutorials/ui/labels.md)
-- 셀프 서비스 소스(일괄 SDK) {#sdk}
+- 셀프서비스 소스(일괄 SDK) {#sdk}
    - [개요](sources-sdk/overview.md)
-   - 연결 사양 {#config} 구성
+   - 연결 사양 구성 {#config}
       - [구성 옵션](sources-sdk/config/config.md)
       - [인증 사양 구성](sources-sdk/config/authspec.md)
       - [소스 사양 구성](sources-sdk/config/sourcespec.md)
       - [탐색 사양 구성](sources-sdk/config/explorespec.md)
-   - 셀프 서비스 소스(일괄 SDK) API 안내서 {#self-serve-api}
+   - 셀프서비스 소스(일괄 SDK) API 안내서 {#self-serve-api}
       - [셀프서비스 소스(일괄 SDK) API 개요](sources-sdk/api/api-overview.md)
       - [시작하기](sources-sdk/api/getting-started.md)
       - [연결 사양 만들기](sources-sdk/api/create.md)
