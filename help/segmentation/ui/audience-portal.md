@@ -2,9 +2,9 @@
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: cfa8b24784ed24384131fe1248bb3f7dd41214c6
+source-git-commit: d80378d6ffc9598c21bc217c0577f611fe8671cc
 workflow-type: tm+mt
-source-wordcount: '4371'
+source-wordcount: '4413'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,9 @@ Audience Portal 은 대상을 보고, 관리하고, 만들 수 있는 Adobe Expe
 
 Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
-- [대상자 목록 보기](#audience-list)
+>[!BEGINSHADEBOX]
+
+- [대상자 목록 보기](#list)
    - [대상자에 대한 빠른 작업 사용](#quick-actions)
    - [대상자 목록에 표시되는 속성 사용자 지정](#customize)
    - [필터, 폴더 및 태그를 사용하여 대상자 구성](#manage-audiences)
@@ -28,6 +30,8 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
    - [기존 Data Warehouse의 데이터를 사용하여 대상을 만들려면 Federated Audience Composition을 사용하십시오](#fac)
    - [Data Distiller을 사용하여 대상자 만들기](#data-distiller)
 - [외부에서 생성된 대상자 가져오기](#import-audience)
+
+>[!ENDSHADEBOX]
 
 대상자 포털을 열려면 세분화 섹션 내에서 **[!UICONTROL 찾아보기]** 탭을 선택합니다.
 
@@ -64,7 +68,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 | [!UICONTROL 복사] | Segmentation Service | 선택한 대상자를 복제합니다. 이 함수에 대한 자세한 내용은 [세그먼테이션 FAQ](../faq.md#copy)에서 확인할 수 있습니다. |
 | [!UICONTROL 액세스 레이블 적용] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 대상에 속하는 액세스 레이블을 관리합니다. 액세스 레이블에 대한 자세한 내용은 [레이블 관리](../../access-control/abac/ui/labels.md)에 대한 설명서를 참조하십시오. |
 | [!UICONTROL 게시] | 사용자 정의 업로드, 세분화 서비스 | 선택한 대상자를 게시합니다. 라이프사이클 상태 관리에 대한 자세한 내용은 세분화 FAQ](../faq.md#lifecycle-states)의 [라이프사이클 상태 섹션을 참조하십시오. |
-| [!UICONTROL 비활성화] | 사용자 정의 업로드, 세분화 서비스 | 선택한 대상자를 비활성화합니다. 라이프사이클 상태 관리에 대한 자세한 내용은 세분화 FAQ](../faq.md#lifecycle-states)의 [라이프사이클 상태 섹션을 참조하십시오. |
+| [!UICONTROL 비활성화] | 사용자 정의 업로드, 세분화 서비스 | 선택한 대상자를 비활성화합니다. 대상을 비활성화하려면 **은(는)** any **대상(Experience Platform이 아닌 대상 포함)에서 활성화하거나** any **다른 대상에 속할 수**&#x200B;없습니다. 라이프사이클 상태 관리에 대한 자세한 내용은 세분화 FAQ](../faq.md#lifecycle-states)의 [라이프사이클 상태 섹션을 참조하십시오. |
 | [!UICONTROL 삭제] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 선택한 대상자를 삭제합니다. 다운스트림 대상에 사용되거나 다른 대상에 종속된 대상은 **삭제할 수 없습니다**. 대상자 삭제에 대한 자세한 내용은 [세그먼테이션 FAQ](../faq.md#lifecycle-states)를 참조하십시오. |
 | [!UICONTROL 패키지에 추가] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 샌드박스 간에 대상자를 이동합니다. 이 기능에 대한 자세한 내용은 [샌드박스 도구 가이드](../../sandboxes/ui/sandbox-tooling.md)를 참조하십시오. |
 
@@ -199,7 +203,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 | 필터 | 설명 |
 | ------ | ----------- |
-| [!UICONTROL Origin] | 대상자의 출처를 기준으로 필터링할 수 있습니다. 사용 가능한 옵션에는 세그멘테이션 서비스, 사용자 지정 업로드, 대상 구성 및 Audience Manager이 포함됩니다. |
+| [!UICONTROL Origin] | 대상자의 출처를 기준으로 필터링할 수 있습니다. 가능한 값에는 [세그먼테이션 서비스](#segment-builder), [사용자 지정 업로드](#import-audience), [대상 구성](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [유사 대상](../types/lookalike-audiences.md), [페더레이션 대상 구성](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [데이터 Distiller](#data-distiller) 및 [AJO B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview)이 포함됩니다. |
 | [!UICONTROL 임의 태그 있음] | 태그로 필터링할 수 있습니다. **[!UICONTROL 임의 태그 있음]**&#x200B;과 **[!UICONTROL 모든 태그 있음]** 중에서 선택할 수 있습니다. **[!UICONTROL 임의 태그 있음]**&#x200B;을 선택하면 필터링된 대상자에는 추가한 태그 중 **임의**&#x200B;이 포함됩니다. **[!UICONTROL 모든 태그 있음]**&#x200B;을 선택한 경우 필터링된 대상자에는 추가한 태그 중 **모두**&#x200B;을(를) 포함해야 합니다. |
 | [!UICONTROL 라이프사이클 상태] | 대상자의 라이프사이클 상태에 따라 필터링할 수 있습니다. 사용 가능한 옵션에는 [!UICONTROL 삭제됨], [!UICONTROL 초안], [!UICONTROL 비활성] 및 [!UICONTROL 게시됨]이 있습니다. |
 | [!UICONTROL 업데이트 주기] | 대상자의 업데이트 빈도(평가 방법)를 기준으로 필터링할 수 있습니다. 사용 가능한 옵션에는 [!UICONTROL 일괄 처리], [!UICONTROL 스트리밍] 및 [!UICONTROL Edge]이 있습니다. |
