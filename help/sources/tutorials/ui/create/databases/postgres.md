@@ -1,26 +1,23 @@
 ---
-keywords: Experience Platform;홈;인기 항목;[!DNL PostgreSQL];[!DNL PostgreSQL];PostgreSQL
-solution: Experience Platform
-title: UI에서 PostgreSQL Source 연결 만들기
-type: Tutorial
-description: Adobe Experience Platform UI를 사용하여 PostgreSQL 소스 연결을 만드는 방법을 알아봅니다.
+title: Ui를 사용하여 PostgreSQL을 Experience Platform에 연결
+description: Experience Platform 사용자 인터페이스의 소스 작업 영역을 사용하여 PostgreSQL 데이터베이스를 Experience Platform에 연결하는 방법에 대해 알아봅니다.
 exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 8cabf1cb86993fdde37d0b9d957f6c8ec23bb237
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 2%
+source-wordcount: '643'
+ht-degree: 0%
 
 ---
 
-# UI에서 [!DNL PostgreSQL] 소스 연결 만들기
+# UI를 사용하여 [!DNL PostgreSQL]을(를) Experience Platform에 연결
 
-Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 [!DNL PostgreSQL] 소스 커넥터를 만드는 단계를 제공합니다.
+Experience Platform 사용자 인터페이스의 소스 작업 영역을 사용하여 [!DNL PostgreSQL] 데이터베이스를 Adobe Experience Platform에 연결하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
 
 ## 시작하기
 
 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기 튜토리얼](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아봅니다.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
@@ -29,15 +26,9 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ### 필요한 자격 증명 수집
 
-[!DNL Experience Platform]에서 [!DNL PostgreSQL] 계정에 액세스하려면 다음 값을 제공해야 합니다.
+인증에 대한 자세한 내용은 [[!DNL PostgreSQL] 개요](../../../../connectors/databases/postgres.md)를 참조하세요.
 
-| 자격 증명 | 설명 |
-| ---------- | ----------- |
-| `connectionString` | [!DNL PostgreSQL] 계정과 연결된 연결 문자열입니다. [!DNL PostgreSQL] 연결 문자열 패턴은 `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`입니다. |
-
-시작에 대한 자세한 내용은 이 [[!DNL PostgreSQL] 문서](https://www.postgresql.org/docs/9.2/app-psql.html)를 참조하세요.
-
-#### 연결 문자열에 SSL 암호화 사용
+### 연결 문자열에 SSL 암호화 사용
 
 다음 속성을 사용하여 연결 문자열을 추가하여 [!DNL PostgreSQL] 연결 문자열에 SSL 암호화를 사용하도록 설정할 수 있습니다.
 
@@ -48,32 +39,62 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 다음은 SSL 암호화가 추가된 [!DNL PostgreSQL] 연결 문자열의 예입니다. `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD};EncryptionMethod=1;ValidateServerCertificate=1`.
 
-## [!DNL PostgreSQL] 계정 연결
+## 소스 카탈로그 탐색 {#navigate}
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL PostgreSQL] 계정을 [!DNL Experience Platform]에 연결할 수 있습니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 *[!UICONTROL 소스]* 작업 영역에 액세스합니다. *[!UICONTROL 범주]* 패널에서 적절한 범주를 선택합니다. 또는 검색 창을 사용하여 사용할 특정 소스로 이동합니다.
 
-[Adobe Experience Platform](https://platform.adobe.com)에 로그인한 다음 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 **[!UICONTROL 소스]** 작업 영역에 액세스합니다. **[!UICONTROL 카탈로그]** 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+[!DNL PostgreSQL]을(를) 사용하려면 *[!UICONTROL 데이터베이스]*&#x200B;에서 **[!UICONTROL PostgreSQL]** 원본 카드를 선택한 다음 **[!UICONTROL 설정]**&#x200B;을 선택하십시오.
 
-화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
+>[!TIP]
+>
+>지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL 설정]** 옵션이 표시됩니다. 인증된 계정을 만들면 이 옵션이 **[!UICONTROL 데이터 추가]**(으)로 변경됩니다.
 
-**[!UICONTROL 데이터베이스]** 범주에서 **[!UICONTROL PostgreSQL DB]**&#x200B;를 선택합니다. 이 커넥터를 처음 사용하는 경우 **[!UICONTROL 구성]**&#x200B;을 선택하세요. 그렇지 않으면 **[!UICONTROL 데이터 추가]**&#x200B;를 선택하여 새 [!DNL PostgreSQL] 커넥터를 만드십시오.
 
-![](../../../../images/tutorials/create/postgresql/catalog.png)
 
-**[!UICONTROL [!DNL PostgreSQL]]**&#x200B;에 연결 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
+## 기존 계정 사용 {#existing}
 
-### 새 계정
+기존 계정을 사용하려면 **[!UICONTROL 기존 계정]**&#x200B;을(를) 선택한 다음 사용할 [!DNL PostgreSQL] 계정을 선택하십시오.
 
-새 자격 증명을 사용하는 경우 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택하십시오. 표시되는 입력 양식에서 이름, 선택적 설명 및 [!DNL PostgreSQL] 자격 증명을 제공합니다. 완료되면 **[!UICONTROL 연결]**&#x200B;을 선택한 다음 새 연결을 설정할 시간을 허용합니다.
+![원본 워크플로의 기존 계정 인터페이스입니다.](../../../../images/tutorials/create/postgresql/catalog.png)
 
-![](../../../../images/tutorials/create/postgresql/new.png)
+## 새 계정 만들기 {#create}
 
-### 기존 계정
+기존 계정이 없는 경우 소스와 일치하는 필요한 인증 자격 증명을 제공하여 새 계정을 만들어야 합니다.
 
-기존 계정에 연결하려면 연결할 [!DNL PostgreSQL] 계정을 선택한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 계속하십시오.
+새 계정을 만들려면 **[!UICONTROL 새 계정]**&#x200B;을 선택한 다음 이름을 입력하고 필요에 따라 계정에 대한 설명을 추가하십시오.
 
-![](../../../../images/tutorials/create/postgresql/existing.png)
+![계정 이름과 선택적 설명을 제공하는 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/postgresql/existing.png)
 
-## 다음 단계
+### Azure에서 Experience Platform에 연결 {#azure}
 
-이 자습서에 따라 [!DNL PostgreSQL] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 가져올 데이터 흐름을 구성 [!DNL Experience Platform]](../../dataflow/databases.md)할 수 있습니다.
+계정 키 또는 기본 인증을 사용하여 [!DNL PostgreSQL] 계정을 Azure의 Experience Platform에 연결할 수 있습니다.
+
+>[!BEGINTABS]
+
+>[!TAB 계정 키 인증]
+
+계정 키 인증을 사용하려면 **[!UICONTROL 계정 키 인증]**&#x200B;을 선택하고 [연결 문자열](../../../../connectors/databases/postgres.md#azure)을 제공한 다음 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하십시오.
+
+![&quot;계정 키 인증&quot;이 선택된 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/postgresql/account-key.png)
+
+>[!TAB 기본 인증]
+
+기본 인증을 사용하려면 **[!UICONTROL 기본 인증]**&#x200B;을 선택하고 [인증 자격 증명](../../../../connectors/databases/postgres.md#azure)의 값을 제공한 다음 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하십시오.
+
+![기본 인증을 선택한 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/postgresql/basic-auth.png)
+
+>[!ENDTABS]
+
+### Amazon Web Services(AWS)에서 Experience Platform에 연결 {#aws}
+
+>[!AVAILABILITY]
+>
+>이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../../../landing/multi-cloud.md)를 참조하세요.
+
+새 [!DNL PostgreSQL] 계정을 만들고 AWS의 Experience Platform에 연결하려면 VA6 샌드박스에 있는지 확인한 다음 인증에 필요한 [자격 증명을 제공](../../../../connectors/databases/postgres.md#aws)합니다.
+
+![AWS에 연결할 소스 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/postgresql/basic-auth.png)
+
+## [!DNL PostgreSQL] 데이터에 대한 데이터 흐름 만들기
+
+이 자습서에 따라 [!DNL MariaDB] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 Experience Platform으로 가져오도록 데이터 흐름을 구성](../../dataflow/databases.md)할 수 있습니다.
