@@ -1,26 +1,23 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Maria DB;maria DB
-solution: Experience Platform
-title: UI에서 MariaDB Source 연결 만들기
-type: Tutorial
-description: Adobe Experience Platform UI를 사용하여 Maria DB 소스 연결을 만드는 방법을 알아봅니다.
+title: Ui를 사용하여 MariaDB를 Experience Platform에 연결
+description: Experience Platform 사용자 인터페이스의 소스 작업 영역을 사용하여 MariaDB 계정을 Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 2%
+source-wordcount: '590'
+ht-degree: 0%
 
 ---
 
-# UI에서 [!DNL MariaDB] 소스 연결 만들기
+# UI를 사용하여 [!DNL MariaDB]을(를) Experience Platform에 연결
 
-Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 Maria DB 소스 커넥터를 만드는 단계를 제공합니다.
+Experience Platform 사용자 인터페이스의 소스 작업 영역을 사용하여 [!DNL MariaDB] 계정을 Adobe Experience Platform에 연결하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
 
 ## 시작하기
 
-이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기 튜토리얼](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아봅니다.
 * [실시간 고객 프로필](../../../../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합된 실시간 고객 프로필을 제공합니다.
@@ -29,38 +26,64 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ### 필요한 자격 증명 수집
 
-[!DNL Experience Platform]에서 [!DNL MariaDB] 계정에 액세스하려면 다음 값을 제공해야 합니다.
+인증에 대한 자세한 내용은 [[!DNL MariaDB] 개요](../../../../connectors/databases/mariadb.md#prerequisites)를 읽어 보십시오.
 
-| 자격 증명 | 설명 |
-| ---------- | ----------- |
-| `connectionString` | MariaDB 인증과 연결된 연결 문자열입니다. [!DNL MariaDB] 연결 문자열 패턴은 `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`입니다. |
+## 소스 카탈로그 탐색
 
-시작에 대한 자세한 내용은 이 [[!DNL MariaDB] 문서](https://mariadb.com/kb/en/about-mariadb-connector-odbc/)를 참조하세요.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 *[!UICONTROL 소스]* 작업 영역에 액세스합니다. *[!UICONTROL 범주]* 패널에서 적절한 범주를 선택합니다. 또는 검색 창을 사용하여 사용할 특정 소스로 이동합니다.
 
-## [!DNL Maria DB] 계정 연결
+[!DNL MariaDB]을(를) 사용하려면 *[!UICONTROL 데이터베이스]*&#x200B;에서 **[!UICONTROL MariaDB]** 원본 카드를 선택한 다음 **[!UICONTROL 설정]**&#x200B;을 선택하십시오.
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL Maria DB] 계정을 [!DNL Experience Platform]에 연결할 수 있습니다.
+>[!TIP]
+>
+>지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL 설정]** 옵션이 표시됩니다. 인증된 계정을 만들면 이 옵션이 **[!UICONTROL 데이터 추가]**(으)로 변경됩니다.
 
-[Adobe Experience Platform](https://platform.adobe.com)에 로그인한 다음 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 **[!UICONTROL 소스]** 작업 영역에 액세스합니다. **[!UICONTROL 카탈로그]** 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+![MariaDB 카드가 선택된 UI의 소스 카탈로그입니다.](../../../../images/tutorials/create/maria-db/catalog.png)
 
-**[!UICONTROL 데이터베이스]** 범주에서 **[!UICONTROL Maria DB]**&#x200B;을(를) 선택합니다. 이 커넥터를 처음 사용하는 경우 **[!UICONTROL 구성]**&#x200B;을 선택하세요. 그렇지 않으면 **[!UICONTROL 데이터 추가]**&#x200B;를 선택하여 새 [!DNL Maria DB] 커넥터를 만드십시오.
+## 기존 계정 사용 {#existing}
 
-![](../../../../images/tutorials/create/maria-db/catalog.png)
+기존 계정을 사용하려면 **[!UICONTROL 기존 계정]**&#x200B;을(를) 선택한 다음 사용할 [!DNL MariaDB] 계정을 선택하십시오.
 
-**[!UICONTROL Maria DB에 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
+![&quot;기존 계정&quot;이 선택된 원본 워크플로의 기존 계정 인터페이스입니다.](../../../../images/tutorials/create/maria-db/existing.png)
 
-### 새 계정
+## 새 계정 만들기 {#create}
 
-새 자격 증명을 사용하는 경우 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택하십시오. 표시되는 입력 양식에서 이름, 선택적 설명 및 [!DNL MariaDB] 자격 증명을 제공합니다. 완료되면 **[!UICONTROL 연결]**&#x200B;을 선택한 다음 새 연결을 설정할 시간을 허용합니다.
+기존 계정이 없는 경우 소스와 일치하는 필요한 인증 자격 증명을 제공하여 새 계정을 만들어야 합니다.
 
-![](../../../../images/tutorials/create/maria-db/new.png)
+새 계정을 만들려면 **[!UICONTROL 새 계정]**&#x200B;을 선택한 다음 이름을 입력하고 필요에 따라 계정에 대한 설명을 추가하십시오.
 
-### 기존 계정
+![계정 이름과 선택적 설명을 제공하는 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/maria-db/new.png)
 
-기존 계정에 연결하려면 연결할 [!DNL MariaDB] 계정을 선택한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 계속하십시오.
+### Azure에서 Experience Platform에 연결 {#azure}
 
-![](../../../../images/tutorials/create/maria-db/existing.png)
+계정 키 또는 기본 인증을 사용하여 [!DNL MariaDB] 계정을 Azure의 Experience Platform에 연결할 수 있습니다.
+
+>[!BEGINTABS]
+
+>[!TAB 계정 키 인증]
+
+계정 키 인증을 사용하려면 **[!UICONTROL 계정 키 인증]**&#x200B;을 선택하고 [연결 문자열](../../../../connectors/databases/mariadb.md#azure)을 제공한 다음 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하십시오.
+
+![&quot;계정 키 인증&quot;이 선택된 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/maria-db/account-key.png)
+
+>[!TAB 기본 인증]
+
+기본 인증을 사용하려면 **[!UICONTROL 기본 인증]**&#x200B;을 선택하고 [인증 자격 증명](../../../../connectors/databases/mariadb.md#azure)의 값을 제공한 다음 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하십시오.
+
+![기본 인증을 선택한 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/maria-db/basic-auth.png)
+
+>[!ENDTABS]
+
+### Amazon Web Services(AWS)에서 Experience Platform에 연결 {#aws}
+
+>[!AVAILABILITY]
+>
+>이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../../../landing/multi-cloud.md)를 참조하세요.
+
+새 [!DNL MariaDB] 계정을 만들고 AWS의 Experience Platform에 연결하려면 VA6 샌드박스에 있는지 확인한 다음 인증에 필요한 [자격 증명을 제공](../../../../connectors/databases/mariadb.md#aws)합니다.
+
+![AWS에 연결할 소스 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL MariaDB] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 가져올 데이터 흐름을 구성 [!DNL Experience Platform]](../../dataflow/databases.md)할 수 있습니다.
+이 자습서에 따라 [!DNL MariaDB] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 Experience Platform으로 가져오도록 데이터 흐름을 구성](../../dataflow/databases.md)할 수 있습니다.
