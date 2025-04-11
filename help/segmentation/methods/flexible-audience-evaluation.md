@@ -3,9 +3,9 @@ title: 유연한 대상 평가 안내서
 description: 유연한 대상 평가를 사용하여 요청 시 일괄 처리 세분화 작업을 실행하는 방법에 대해 알아봅니다.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1063'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,8 @@ ht-degree: 5%
 >[!AVAILABILITY]
 >
 >유연한 대상 평가는 [!DNL Microsoft Azure]에서 실행 중인 Experience Platform 인스턴스에서 **만**&#x200B;할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../landing/multi-cloud.md)를 참조하세요.
+>
+>또한 유연한 대상 평가는 Real-Time CDP B2C Edition에서 사용할 수 있는 **전용**&#x200B;입니다.
 
 유연한 대상 평가를 통해 배치 세분화 작업을 온디맨드로 실행할 수 있습니다. 유연한 대상 평가를 통해 애드혹 캠페인 시작, 정시 커뮤니케이션 또는 기타 시간에 민감한 활동을 실행할 수 있습니다.
 
