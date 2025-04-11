@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f0879683629ba10ed1b799e52f0adf332f079daf
 workflow-type: tm+mt
 source-wordcount: '1250'
-ht-degree: 93%
+ht-degree: 98%
 
 ---
 
@@ -47,8 +47,8 @@ Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대
 
 | 대상 | 설명 |
 | --- | --- |
-| [Demandbase People 연결](/help/destinations/catalog/advertising/demandbase-people.md) | 대상 타기팅, 개인화 및 제외를 위해 Demandbase 캠페인에 대한 프로필을 활성화하려면 [!DNL Demandbase People] 연결을 사용하십시오. |
-| [Bombora 계정 연결](/help/destinations/catalog/advertising/bombora.md) | [계정 대상자](/help/segmentation/types/account-audiences.md)를 기반으로 대상자 타겟팅, 개인화 및 억제에 대한 Bombora 캠페인에 대한 프로필을 활성화하려면 [!DNL Bombora] 연결을 사용하십시오. |
+| [Demandbase People 연결](/help/destinations/catalog/advertising/demandbase-people.md) | [!DNL Demandbase People] 연결을 사용하면 대상자 타기팅, 개인화 및 금지를 위한 Demandbase 캠페인 프로필을 활성화할 수 있습니다. |
+| [Bombora 계정 연결](/help/destinations/catalog/advertising/bombora.md) | [!DNL Bombora] 연결을 사용하면 [계정 대상자](/help/segmentation/types/account-audiences.md)를 기반으로 대상자 타기팅, 개인화 및 금지를 위한 Bombora 캠페인 프로필을 활성화할 수 있습니다. |
 | [Airship 속성](/help/destinations/catalog/mobile-engagement/airship-attributes.md) 업그레이드 | 2025년 3월 25일부터 대상 카탈로그에 두 개의 **[!UICONTROL Airship 속성]** 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!UICONTROL Airship 속성]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) Airship 속성]**&#x200B;으로 변경되었으며, 이제 **[!UICONTROL Airship 속성]**&#x200B;이라는 이름의 새로운 카드가 제공됩니다. <br> 새로운 활성화 데이터 흐름을 위해 카탈로그의 **[!UICONTROL Airship 속성]** 연결을 사용하십시오. [!DNL (Deprecated) Airship Attributes] 대상으로의 활성 데이터 흐름이 있는 경우 해당 데이터 흐름은 자동으로 업데이트되므로 다른 조치가 필요하지 않습니다. <br> [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 생성하는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]를 다음 값으로 업데이트해야 합니다. <ul><li> 흐름 사양 ID: `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> 연결 사양 ID: `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
 
 {style="table-layout:auto"}
@@ -66,7 +66,7 @@ Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대
 
 ## 페더레이션된 대상자 구성 {#federated-audience-composition}
 
-Federated Audience Composition의 최신 업데이트에 대한 자세한 내용은 여기에서 [전용 릴리스 노트](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/release-notes)를 읽어 보십시오.
+페더레이션된 대상자 구성의 최신 업데이트에 대한 자세한 내용은 [전용 릴리스 정보](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/release-notes)를 참조하십시오.
 
 ## Segmentation Service {#segmentation-service}
 
