@@ -3,9 +3,9 @@ title: Adobe Experience Platform 릴리스 정보 2024년 8월
 description: Adobe Experience Platform의 2024년 8월 릴리스 정보.
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1565'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -29,9 +29,9 @@ Experience Platform의 기존 기능 및 설명서 업데이트:
 
 ## 속성 기반 액세스 제어 {#abac}
 
-속성 기반 액세스 제어는 개인 정보 보호를 중시하는 브랜드가 사용자 액세스를 더욱 유연하게 관리할 수 있도록 하는 Adobe Experience Platform의 기능입니다. 스키마 필드 및 세그먼트와 같은 개별 오브젝트를 사용자 역할에 할당할 수 있습니다. 이 기능을 사용하면 조직의 특정 Experience Platform 사용자에 대해 개별 객체에 대한 액세스 권한을 부여하거나 취소할 수 있습니다.
+속성 기반 액세스 제어는 개인 정보 보호를 중시하는 브랜드가 사용자 액세스를 더욱 유연하게 관리할 수 있도록 하는 Adobe Experience Platform의 기능입니다. 스키마 필드 및 세그먼트와 같은 개별 오브젝트를 사용자 역할에 할당할 수 있습니다. 이 기능을 통해 조직 내 특정 Experience Platform 사용자에게 개별 오브젝트에 대한 액세스 권한을 부여하거나 해지할 수 있습니다.
 
-속성 기반 액세스 제어를 통해 조직 관리자는 모든 Experience Platform 워크플로 및 리소스에서 중요한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 지정된 유형의 데이터에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 특정 필드에만 액세스할 수 있는 사용자 역할과 필드에 해당하는 데이터를 정의할 수 있습니다.
+조직의 관리자는 속성 기반 액세스 제어를 통해 모든 Experience Platform 워크플로와 리소스에서 민감한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 정의 유형의 데이터에 대한 액세스를 제어할 수 있습니다. 관리자는 특정 필드에만 액세스할 수 있는 사용자 역할과 필드에 해당하는 데이터를 정의할 수 있습니다.
 
 **새로운 기능**
 

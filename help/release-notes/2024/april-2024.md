@@ -3,9 +3,9 @@ title: Adobe Experience Platform 릴리스 정보 2024년 4월
 description: Adobe Experience Platform의 2024년 4월 릴리스 정보.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1899'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -55,7 +55,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | 데이터스트림 | [Edge Network 봇 탐지](../../datastreams/bot-detection.md) | 자동화된 프로그램, 웹 스크래퍼, 스파이더, 스크립트 스캐너 등 비인간 엔티티에서 발생하는 트래픽으로 인해 방문자로부터 발생하는 이벤트를 식별하기가 더 어려워질 수 있습니다. 이러한 유형의 트래픽은 중요한 비즈니스 지표에 부정적인 영향을 미쳐 잘못된 트래픽 보고로 이어질 수 있습니다. <br>봇 탐지 기능을 사용하면 [Web SDK](../../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) 및 [[!DNL Server API]](../../server-api/overview.md)에서 생성된 이벤트가 알려진 스파이더 및 봇에 의해 생성된 것으로 식별할 수 있습니다. 데이터스트림에 봇 탐지를 구성하면 봇 이벤트로 분류할 특정 IP 주소, IP 범위 및 요청 헤더를 식별할 수 있습니다. <br> 봇 트래픽을 식별하면 사이트 또는 모바일 애플리케이션에서 사용자 활동을 보다 정확하게 측정할 수 있습니다. |
 | Mobile SDK | 주요 버전 출시 | Mobile SDK의 새로운 주요 버전이 iOS Mobile Core 5.x 및 호환되는 iOS 확장 기능, Android Mobile Core 3.x 및 호환되는 Android 확장 기능, React Native Core 6.x 및 호환되는 React Native 확장 기능, Flutter Core 4.x 및 호환 Flutter 확장 기능 플랫폼용으로 출시되었습니다. 이 릴리스는 Jetpack Compose용 Android SDK 지원, Adobe Journey Optimizer 코드 기반 환경 지원, Flutter용 Adobe Journey Optimizer 메시지 확장 기능의 일반적인 가용성 등 몇 가지 새로운 기능과 향상된 기능을 제공합니다. 더 자세한 릴리스 정보를 보려면 [Mobile SDK 릴리스 정보](https://developer.adobe.com/client-sdks/home/release-notes/)를 참조하십시오. |
 | Mobile SDK | 개인 정보 보호 | Apple의 정책 업데이트로 인해 2024년 5월 1일부터 개발자는 App Store에 제출하기 위해 새로운 개인 정보 보호 기능을 구현해야 합니다. Mobile SDK를 사용하는 모든 Adobe 고객은 5월 1일 이후 App Store 승인을 받으려면 SDK 버전 5.x로 업그레이드해야 합니다. |
-| Roku SDK | Roku SDK | Experience Platform SDK용 스트리밍 미디어를 지원하는 Roku Edge Network의 첫 번째 주요 버전이 릴리스되었습니다. |
+| Roku SDK | Roku SDK | Experience Platform Edge Network용 스트리밍 미디어를 지원하는 Roku SDK의 첫 번째 주요 버전이 출시되었습니다. |
 | 태그 및 이벤트 전달 | 제품 내 지침 | Experience Platform [태그](../../tags/home.md) 및 [이벤트 전달](../../tags/ui/event-forwarding/overview.md)이 빠르게 시작하고 가치 실현 시간을 단축하는 데 도움이 되는 새로운 범위의 경험을 제공합니다. 이러한 경험에는 새로운 온보딩 화면, 제품 내 튜토리얼, 도구 설명이 포함됩니다. <br>![제품 내 지침이 강조 표시된 이벤트 전달.](../2024/assets/april/event-forwarding.png "유형 및 맵 값 유형 필드가 강조 표시된 스키마 편집기."){width="100" zoomable="yes"}<br> |
 | Web SDK | Audience Manager 고객을 위해 간소화된 Web SDK 도입 | 이제 여러 Web SDK 업데이트를 통해 Audience Manager, Analytics 및 Target과 같은 Experience Cloud 솔루션용 경험 데이터 모델(XDM)을 사용하지 않고도 Web SDK의 채택을 간소화할 수 있습니다. 다음 안내서에서 Audience Manager Web SDK 도입에 대해 자세히 알아보십시오. <ul><li><a href="https://experienceleague.adobe.com/ko/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">Audience Manager 태그 확장에서 Web SDK 태그 확장으로 Audience Manager용 데이터 수집 라이브러리 업데이트</li><li><a href="https://experienceleague.adobe.com/ko/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">AppMeasurement JavaScript 라이브러리에서 Web SDK JavaScript 라이브러리로 Audience Manager용 데이터 수집 라이브러리 업데이트</li></ul> |
 
@@ -130,7 +130,7 @@ Experience Platform UI의 모니터링 대시보드를 사용하여 소스, ID �
 
 ## 샌드박스 {#sandboxes}
 
-Adobe Experience Platform은 전 세계적으로 디지털 체험 애플리케이션을 풍부하게 제공하기 위해 구축되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하는 경우가 많으며, 운영 규정 준수를 보장하면서 이러한 애플리케이션의 개발, 테스트 및 배포를 처리해야 합니다. 이러한 요구 사항을 해결하기 위해 Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하는 샌드박스를 제공합니다.
+Adobe Experience Platform은 전 세계적으로 디지털 체험 애플리케이션을 풍부하게 제공하기 위해 구축되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하는 경우가 많으며, 운영 규정 준수를 보장하면서 이러한 애플리케이션의 개발, 테스트 및 배포를 처리해야 합니다. 이러한 요구 사항을 처리하기 위해 Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분류해 주는 샌드박스를 제공합니다.
 
 **새로운 기능 또는 업데이트된 기능**
 

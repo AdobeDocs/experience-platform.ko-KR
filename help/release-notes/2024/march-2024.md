@@ -3,9 +3,9 @@ title: Adobe Experience Platform 릴리스 정보 2024년 3월
 description: Adobe Experience Platform의 2024년 3월 릴리스 정보.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1192'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -98,7 +98,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 | 기능 | 설명 |
 | --- | --- |
-| Experience Platform UI 맵 데이터 유형 지원 | Experience Platform UI에서 맵 필드를 정의하여 XDM(Experience Data Model) 데이터 구조를 추가로 사용자 지정합니다. 이제 스키마 편집기에서 맵 필드를 만들어 유연한 데이터 구조를 모델링하거나 키-값 쌍을 효율적으로 저장할 수 있습니다. 하위 필드를 구성하고 필드 그룹에 할당할 새 필드를 정의할 때 유형 드롭다운에서 “맵”을 선택합니다. 지원되는 맵 값 유형은 문자열과 정수입니다.<br>![유형 및 맵 값 유형 필드가 강조 표시된 스키마 편집기.](../2024/assets/march/maps.png "유형 및 맵 값 유형 필드가 강조 표시된 스키마 편집기."){width="100" zoomable="yes"}<br> [UI에서 맵 필드를 정의](../../xdm/ui/fields/map.md)하는 방법을 알아보려면 UI 안내서를 참조하십시오. |
+| Experience Platform UI 맵 데이터 유형 지원 | Experience Platform UI에서 맵 필드를 정의하여 경험 데이터 모델(XDM) 데이터 구조를 더욱 세부적으로 사용자 정의할 수 있습니다. 이제 스키마 편집기에서 맵 필드를 만들어 유연한 데이터 구조를 모델링하거나 키-값 쌍을 효율적으로 저장할 수 있습니다. 하위 필드를 구성하고 필드 그룹에 할당할 새 필드를 정의할 때 유형 드롭다운에서 “맵”을 선택합니다. 지원되는 맵 값 유형은 문자열과 정수입니다.<br>![유형 및 맵 값 유형 필드가 강조 표시된 스키마 편집기.](../2024/assets/march/maps.png "유형 및 맵 값 유형 필드가 강조 표시된 스키마 편집기."){width="100" zoomable="yes"}<br> [UI에서 맵 필드를 정의](../../xdm/ui/fields/map.md)하는 방법을 알아보려면 UI 안내서를 참조하십시오. |
 
 {style="table-layout:auto"}
 
