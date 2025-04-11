@@ -1,25 +1,27 @@
 ---
 solution: Experience Platform
-title: 흐름 서비스 API를 사용하여 데이터 세트 내보내기
-description: 흐름 서비스 API를 사용하여 데이터 세트를 내보내기 하여 대상을 선택하는 방법을 알아봅니다.
+title: '플로우 서비스 API를 사용하여 데이터 세트 내보내기Export datasets by using the Flow: Service API'
+description: 플로우 서비스 API를 사용하여 데이터 세트를 선택한 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
 workflow-type: tm+mt
-source-wordcount: '5149'
+source-wordcount: '5151'
 ht-degree: 3%
 
 ---
 
-# [!DNL Flow Service API]을(를) 사용하여 데이터 세트 내보내기
+# 를 사용하여 데이터 세트 내보내기Export datasets by using [!DNL Flow Service API]
 
 >[!AVAILABILITY]
 >
->* 이 기능은 Real-Time CDP Prime 및 Ultimate 패키지, Adobe Journey Optimizer 또는 Customer Journey Analytics을 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
+>* 이 기능은 Real-Time CDP Prime 및 Ultimate 패키지, Adobe Systems Journey Optimizer 또는 Customer Journey Analytics를 구매한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 
 >[!IMPORTANT]
 >
->**작업 항목**: Experience Platform의 [2024년 9월 릴리스](/help/release-notes/latest/latest.md#destinations)에서는 데이터 세트 데이터 흐름 내보내기에 대한 `endTime` 날짜를 설정하는 옵션이 도입되었습니다. Adobe은 또한 9월 릴리스 *전에*&#x200B;생성된 모든 데이터 세트 내보내기 데이터 흐름에 대한 기본 종료 날짜를 2025년 5월 1일로 도입합니다. 이러한 데이터 흐름의 경우 종료 날짜 이전에 데이터 흐름의 종료 날짜를 수동으로 업데이트해야 합니다. 그렇지 않으면 해당 날짜의 내보내기를 중지해야 합니다. Experience Platform UI를 사용하여 5월 1일에 중지되도록 설정되는 데이터 흐름을 확인하십시오.
+>**작업 항목**: Experience Platform의 [2024년 9월 릴리스](/help/release-notes/latest/latest.md#destinations)에서는 데이터 세트 데이터 흐름 내보내기에 대한 `endTime` 날짜를 설정하는 옵션을 도입했습니다. Adobe은 또한 2024년 9월 릴리스 *전에*&#x200B;생성된 모든 데이터 세트 내보내기 데이터 흐름에 대한 기본 종료 날짜를 2025년 5월 1일로 도입했습니다.
+>
+>이러한 데이터 흐름의 경우 종료 날짜 이전에 데이터 흐름의 종료 날짜를 수동으로 업데이트해야 합니다. 그렇지 않으면 해당 날짜에서 내보내기가 중지됩니다. 2025년 5월 1일에 중지하도록 설정할 데이터 흐름을 보려면 Experience Platform UI를 사용하십시오.
 >
 >마찬가지로, `endTime` 날짜를 지정하지 않고 만든 데이터 흐름의 경우 이 값은 기본적으로 만든 시간으로부터 6개월 후의 종료 시간으로 설정됩니다.
 
@@ -70,18 +72,18 @@ ht-degree: 3%
 
 데이터 세트를 내보내려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 데이터 세트 보기]** 및 **[!UICONTROL 데이터 세트 대상 관리 및 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
-데이터 세트를 내보내는 데 필요한 권한이 있고 대상이 데이터 세트 내보내기를 지원하는지 확인하려면 대상 카탈로그를 확인하십시오. 대상에 **[!UICONTROL 활성화]** 또는 **[!UICONTROL 데이터 세트 내보내기]** 컨트롤이 있는 경우 적절한 권한이 있습니다.
+데이터 세트를 내보내는 데 필요한 권한이 있고 대상이 데이터 세트 내보내기를 지원하는지 확인하려면 대상 카탈로그를 찾아봅니다. 대상에 Activate ]**또는 Export datasets]** 컨트롤이 **[!UICONTROL **[!UICONTROL &#x200B;있는 경우 적절한 권한이 있는 것입니다.
 
 ### 샘플 API 호출 읽기 {#reading-sample-api-calls}
 
-이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request)에 대한 섹션을 참조하십시오.
+이 튜토리얼에서는 요청 형식을 포맷 지정하는 방법을 보여주는 API 호출 예를 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서에서 예제 API 호출](../../landing/troubleshooting.md#how-do-i-format-an-api-request) [!DNL Experience Platform] 을 읽는 방법에 대한 [섹션을 참조하세요.
 
 ### 필수 및 선택적 헤더에 대한 값 수집 {#gather-values-headers}
 
-[!DNL Experience Platform] API를 호출하려면 먼저 [Experience Platform 인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+API를 호출 [!DNL Experience Platform] 하려면 먼저 Experience Platform 인증 튜토리얼](https://www.adobe.com/go/platform-api-authentication-en) 을 [완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
-* 인증: 전달자 `{ACCESS_TOKEN}`
-* x-api 키: `{API_KEY}`
+* 권한 부여: 전달자 `{ACCESS_TOKEN}`
+* x-api-키: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
 [!DNL Experience Platform]의 리소스는 특정 가상 샌드박스로 격리될 수 있습니다. [!DNL Experience Platform] API에 대한 요청에서 작업을 수행할 샌드박스의 이름과 ID를 지정할 수 있습니다. 이러한 매개 변수는 선택 사항입니다.
@@ -120,7 +122,7 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-다양한 [!DNL Flow Service] 엔터티를 만들려면 이러한 ID가 필요합니다. [!DNL Flow Service APIs]에서 [!DNL Connection Spec]을(를) 검색할 수 있도록 특정 엔터티를 설정하려면 [!DNL Connection Spec] 자체의 일부를 참조해야 합니다. 표의 모든 대상에 대한 연결 사양을 검색하는 아래 예를 참조하십시오.
+다양한 [!DNL Flow Service] 엔티티를 구성하려면 이러한 ID가 필요합니다. 또한 from 을 [!DNL Connection Spec] 검색할 [!DNL Connection Spec] 수 있도록 특정 엔티티를 설정하기 위해 자체의 일부를 참조해야 합니다 [!DNL Flow Service APIs]. 표의 모든 대상에 대한 연결 사양을 검색하는 아래 예를 참조하십시오.
 
 >[!BEGINTABS]
 
@@ -162,7 +164,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++1}에 대해 [!DNL connection spec] 검색[!DNL Azure Blob Storage]
++++검색 [!DNL connection spec] 대상 [!DNL Azure Blob Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -330,13 +332,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-클라우드 스토리지 대상에 대한 데이터 세트 데이터 흐름을 설정하려면 아래 단계를 따르십시오. 일부 단계의 경우 요청 및 응답은 다양한 클라우드 스토리지 대상 간에 다릅니다. 이러한 경우 페이지의 탭을 사용하여 데이터 세트를 연결 및 내보내려는 대상에 대한 요청 및 응답을 검색합니다. 구성 중인 대상에 올바른 [!DNL connection spec] 및 [!DNL flow spec]을(를) 사용하십시오.
+아래 단계에 따라 클라우드 스토리지 대상에 대한 데이터 세트 데이터 흐름을 설정합니다. 일부 단계의 경우 요청 및 응답은 다양한 클라우드 스토리지 대상 간에 다릅니다. 이러한 경우 페이지 의 탭을 사용하여 데이터 세트를 연결하고 내보내려는 대상과 관련된 요청 및 응답을 검색합니다. 구성하고 있는 대상에 대해 올바른 [!DNL connection spec] AND [!DNL flow spec] 를 사용해야 합니다.
 
 ## 데이터 세트 목록 검색 {#retrieve-list-of-available-datasets}
 
-![데이터 세트 내보내기 워크플로의 1단계를 보여 주는 다이어그램](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
+![데이터 세트 내보내기 작업 과정의 1단계를 보여 주는 다이어그램](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
 
-활성화하기에 적합한 데이터 세트 목록을 검색하려면 먼저 아래 끝점에 대한 API 호출을 만듭니다.
+활성화할 수 있는 데이터 세트 목록을 검색하려면 먼저 아래 엔드포인트에 대한 API 호출을 수행합니다.
 
 >[!BEGINSHADEBOX]
 
@@ -508,7 +510,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * 이 단계에서 생성된 소스 연결은 해당 데이터 세트를 대상으로 활성화하기 위해 데이터 흐름에 연결되어야 합니다. 데이터 흐름에 원본 연결을 연결하는 방법에 대한 자세한 내용은 [데이터 흐름 만들기](#create-dataflow) 섹션을 참조하십시오.
 * 소스 연결의 데이터 세트 ID는 만든 후에 수정할 수 없습니다. 소스 연결에서 데이터 세트를 추가하거나 제거해야 하는 경우 새 소스 연결을 만들고 새 소스 연결의 ID를 데이터 흐름에 연결해야 합니다.
 
-## (대상) 기본 연결 만들기 {#create-base-connection}
+## (타겟) 기본 연결 만들기 {#create-base-connection}
 
 ![데이터 세트 내보내기 워크플로의 3단계를 보여 주는 다이어그램](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
 
@@ -518,9 +520,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Amazon S3]
 
-+++[!DNL Amazon S3] - [!DNL Connection spec] - [!DNL auth spec] 표시
++++[!DNL Amazon S3] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
-아래 [!DNL connection spec] 예제에서 인라인 메모가 있는 강조 표시된 줄을 참고하십시오. 이 줄은 [!DNL connection spec]에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다.
+아래 예에서 [!DNL connection spec] 인라인 댓글 처리가 강조 표시된 줄은 에서 인증 매개 변수를 [!DNL connection spec]찾을 위치에 대한 추가 정보를 제공합니다.
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -565,9 +567,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Azure Blob 저장소]
 
-+++[!DNL Azure Blob Storage] - [!DNL Connection spec] - [!DNL auth spec] 표시
++++[!DNL Azure Blob Storage] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
-아래 [!DNL connection spec] 예제에서 인라인 메모가 있는 강조 표시된 줄을 참고하십시오. 이 줄은 [!DNL connection spec]에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다.
+아래 예에서 [!DNL connection spec] 인라인 댓글 처리가 강조 표시된 줄은 에서 인증 매개 변수를 [!DNL connection spec]찾을 위치에 대한 추가 정보를 제공합니다.
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -1109,13 +1111,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++SSH 키가 있는 SFTP - 기본 연결 요청
++++SFTP(SSH 키 포함) - 기본 연결 요청
 
 >[!TIP]
 >
->필요한 인증 자격 증명을 얻는 방법에 대한 자세한 내용은 SFTP 대상 설명서 페이지의 [대상에 인증](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) 섹션을 참조하십시오.
+>필요한 인증 자격 증명을 얻는 방법에 대한 자세한 내용은 SFTP 대상 설명서 페이지 의 대상](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) 인증 섹션을 참조하십시오[.
 
-추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
+요청 예제에서 추가 정보를 제공하는 인라인 댓글이 있는 강조 표시된 줄을 확인합니다. 선택한 터미널에 요청 복사하여 붙여넣을 때 요청에서 인라인 댓글 제거합니다.
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1773,7 +1775,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB 데이터 랜딩 영역(DLZ)]
+>[!TAB 데이터 랜딩 존(DLZ)]
 
 **요청**
 
@@ -2458,21 +2460,21 @@ Experience Platform은 사용자가 지정한 저장 위치에 폴더 구조를 
 
 #### 압축된 데이터 세트 파일 {#compressed-dataset-files}
 
-[대상 연결을 만듭니다](#create-target-connection) 단계에서는 압축할 내보낸 데이터 세트 파일을 선택할 수 있습니다.
+타겟 연결을](#create-target-connection) 만드는 단계에서 [내보낼 데이터 세트 파일을 압축하도록 선택할 수 있습니다.
 
-압축할 때 두 파일 유형 간의 파일 형식 차이를 확인합니다.
+압축했을 때 두 파일 형식 간의 파일 포맷 차이에 유의하십시오.
 
-* 압축된 JSON 파일을 내보낼 때 내보낸 파일 형식은 `json.gz`입니다.
-* 압축된 Parquet 파일을 내보낼 때 내보낸 파일 형식은 `gz.parquet`입니다.
+* 압축된 JSON 파일을 내보낼 때 내보낸 파일 포맷 `json.gz`
+* 압축된 Parquet 파일을 내보낼 때 내보낸 파일 포맷 형식은 `gz.parquet`
 * JSON 파일은 압축 모드에서만 내보낼 수 있습니다.
 
 ## API 오류 처리 {#api-error-handling}
 
-이 자습서의 API 끝점은 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 오류 응답 해석에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+이 튜토리얼의 API 끝점은 일반적인 Experience Platform API 오류 메시지 원칙을 팔로우 따릅니다. 오류 응답 해석에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류를](/help/landing/troubleshooting.md#request-header-errors) 참조하십시오[.
 
 ## 알려진 제한 사항 {#known-limitations}
 
-데이터 집합 내보내기에 대한 [알려진 제한 사항](/help/destinations/ui/export-datasets.md#known-limitations)을 봅니다.
+[데이터 세트 내보내기에 대한 알려진 제한 사항](/help/destinations/ui/export-datasets.md#known-limitations) 보기.
 
 ## 자주 묻는 질문 {#faq}
 
