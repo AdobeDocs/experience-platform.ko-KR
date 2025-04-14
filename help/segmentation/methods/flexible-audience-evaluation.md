@@ -3,7 +3,7 @@ title: 유연한 대상 평가 안내서
 description: 유연한 대상 평가를 사용하여 요청 시 일괄 처리 세분화 작업을 실행하는 방법에 대해 알아봅니다.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
+source-git-commit: 7084b05d1ae142016cb2158fd22d07a240385190
 workflow-type: tm+mt
 source-wordcount: '1063'
 ht-degree: 5%
@@ -387,3 +387,4 @@ Experience Platform UI에서 유연한 대상 평가를 실행하려면 **[!UICO
 API 또는 UI 카운트를 사용하여 최대 한도에 대해 생성된 유연한 대상 평가 실행. 그러나 매일 밤 실행되는 일일 일괄 처리 세분화 작업 실행은 이 제한에 **영향을 주지**&#x200B;않습니다.
 
 +++
+
