@@ -6,9 +6,9 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7fe7bbf7f4566a567c08ef73b4b9b503ea140549
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '778'
 ht-degree: 36%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 36%
    * [자체 호스팅 라이브러리](./ui/publishing/hosts/self-hosting-libraries.md)
    * [라이브러리 다시 게시](./ui/publishing/republish.md)
    * [Experience Platform 태그(중국)](./ui/publishing/premium-cdn.md)
-* 클라이언트측 정보 {#client-side}
+* 클라이언트측 정보  {#client-side}
    * [개요](./ui/client-side/overview.md)
    * [비동기 배포](./ui/client-side/asynchronous-deployment.md)
    * [위성 개체 참조](./ui/client-side/satellite-object.md)
@@ -66,7 +66,7 @@ ht-degree: 36%
    * [사용자 권한](./ui/administration/user-permissions.md)
 * 확장 {#extensions}
    * [개요](./extensions/overview.md)
-   * 태그 확장(클라이언트측) {#client}
+   * 태그 확장 기능 (클라이언트측) {#client}
       * [개요](./extensions/client/overview.md)
       * [액세스 가능한 사이트 속도 지표](https://exchange.adobe.com/apps/ec/103053)
       * [Activity Map 사용자 지정 도구](https://exchange.adobe.com/apps/ec/101531)
@@ -92,7 +92,7 @@ ht-degree: 36%
          * [릴리스 정보](./extensions/client/client-data-layer/release-notes.md)
       * Adobe Content Analytics {#content-analytics}
          * [개요](./extensions/client/content-analytics/overview.md)
-      * Adobe ContextHub {#contexthub}
+      * Adobe Context허브 {#contexthub}
          * [개요](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
       * Adobe Experience Cloud ID 서비스 {#id-service}
@@ -213,11 +213,13 @@ ht-degree: 36%
       * [!DNL YouTube] 비디오 추적 {#youtube}
          * [개요](./extensions/client/youtube/overview.md)
          * [릴리스 정보](./extensions/client/youtube/release-notes.md)
-   * 이벤트 전달 확장(서버측) {#server}
+   * 이벤트 전달 확장 (서버측) {#server}
       * [개요](./extensions/server/overview.md)
       * Adobe Experience Platform 클라우드 커넥터 {#cloud-connector}
          * [개요](./extensions/server/cloud-connector/overview.md)
          * [릴리스 정보](./extensions/server/cloud-connector/release-notes.md)
+      * [!DNL Adform] {#adform}
+         * [개요](./extensions/server/adform/overview.md)
       * [!DNL AWS] {#aws}
          * [개요](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
@@ -226,9 +228,9 @@ ht-degree: 36%
       * 코어 {#core}
          * [개요](./extensions/server/core/overview.md)
       * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)
-      * Google Ads 고급 전환 {#google-ads-enhanced-conversions}
+      * Google Ads 향상된 전환 {#google-ads-enhanced-conversions}
          * [개요](./extensions/server/google-ads-enhanced-conversions/overview.md)
-      * Google Cloud Platform {#google-cloud-platform}
+      * Google Cloud 플랫폼 {#google-cloud-platform}
          * [개요](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
          * [개요](./extensions/server/linkedin/overview.md)
@@ -295,7 +297,7 @@ ht-degree: 36%
 * Reactor API {#api}
    * [개요](./api/overview.md)
    * [Reactor API 인증 및 액세스](./api/getting-started.md)
-   * 끝점 {#endpoints}
+   * 엔드포인트 {#endpoints}
       * [회사](./api/endpoints/companies.md)
       * [속성](./api/endpoints/properties.md)
       * [데이터 요소](./api/endpoints/data-elements.md)
@@ -315,7 +317,7 @@ ht-degree: 36%
       * [프로필](./api/endpoints/profile.md)
       * [검색](./api/endpoints/search.md)
       * [비밀](./api/endpoints/secrets.md)
-   * 안내서 {#guides}
+   * Guides {#guides}
       * [위임 설명자 ID](./api/guides/delegate-descriptor-ids.md)
       * [값 암호화](./api/guides/encrypting-values.md)
       * [오류 처리](./api/guides/error-handling.md)
