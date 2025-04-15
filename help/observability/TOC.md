@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: Observability Insights 안내서
-user-guide-description: Adobe Experience Platform Observability Insights의 통계 지표 및 이벤트 알림을 사용하여 Experience Platform 활동을 모니터링하는 방법을 알아봅니다.
+user-guide-description: Adobe Experience Platform Observability Insights의 통계 지표 및 이벤트 알림을 사용하여 Experience Platform 활동을 모니터하는 방법을 알아보십시오.
 feature: Observability
 role: Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3

@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f0879683629ba10ed1b799e52f0adf332f079daf
 workflow-type: tm+mt
 source-wordcount: '1250'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -43,7 +43,7 @@ Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대
 
 [!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-**새로운 대상 또는 업데이트된 대상** {#new-updated-destinations}
+**새 대상 또는 업데이트된 대상** {#new-updated-destinations}
 
 | 대상 | 설명 |
 | --- | --- |
