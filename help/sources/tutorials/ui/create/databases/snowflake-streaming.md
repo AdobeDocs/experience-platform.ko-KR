@@ -2,7 +2,7 @@
 title: UI를 사용하여 Snowflake 데이터베이스의 데이터를 Experience Platform으로 스트리밍
 description: Snwoflake 데이터베이스에서 Experience Platform으로 데이터를 스트리밍하는 방법에 대해 알아봅니다
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04a1cecbacdaf0b701d3ef18d03497973a8f3263
 workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 3%
@@ -86,7 +86,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 ![데이터베이스 테이블이 선택된 데이터 인터페이스를 선택하십시오.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
-그런 다음 테이블의 타임스탬프 열 유형을 선택합니다. 두 종류의 타임스탬프 열 `TIMESTAMP_NTZ` 또는 `TIMESTAMP_LTZ` 중에서 선택할 수 있습니다. `TIMESTAMP_NTZ`의 열 형식을 선택하는 경우 시간대도 제공해야 합니다. 열에는 null 아님 제약 조건이 있어야 합니다. 자세한 내용은 [제한 사항 및 FAQ]에 대한 섹션을 참조하십시오
+그런 다음 테이블의 타임스탬프 열 유형을 선택합니다. 두 종류의 타임스탬프 열 `TIMESTAMP_NTZ` 또는 `TIMESTAMP_LTZ` 중에서 선택할 수 있습니다. `TIMESTAMP_NTZ`의 열 형식을 선택하는 경우 시간대도 제공해야 합니다. 열에는 null 아님 제약 조건이 있어야 합니다. 자세한 내용은 [제한 사항 및 자주 묻는 질문](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions)에 대한 섹션을 참조하십시오.
 
 이 단계에서 채우기 설정을 구성할 수도 있습니다. 채우기 는 처음 수집되는 데이터를 결정합니다. 다시 채우기를 활성화하면 처음 예약된 수집 중에 지정된 경로의 모든 현재 파일이 수집됩니다. 그렇지 않으면 첫 번째 수집 실행과 시작 시간 사이에 로드된 파일만 수집됩니다. 시작 시간 이전에 로드된 파일은 수집되지 않습니다.
 
