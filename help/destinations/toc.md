@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 66ebff274a5fb9255e284a2a38db780d64b45f2e
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1290'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 5%
    * [대상에서 구성 및 공통 내보내기 설정](./how-destinations-work/destinations-configurations.md)
    * [다양한 대상 유형에 대한 프로필 내보내기 동작](./how-destinations-work/profile-export-behavior.md)
    * [대상 활성화 워크플로에서의 ID 처리](./how-destinations-work/identity-handling.md)
-* API 튜토리얼 {#api}
+* API 자습서 {#api}
    * [흐름 서비스 API를 사용하여 파일 기반 대상에 데이터 활성화](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [흐름 서비스 API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다](./api/streaming-destinations.md)
    * [파일 기반 이메일 마케팅 대상에 연결하고 플로우 서비스 API를 사용하여 데이터를 활성화합니다](./api/connect-activate-batch-destinations.md)
@@ -51,6 +51,7 @@ ht-degree: 5%
       * [(Beta) 새 Beta 클라우드 스토리지 대상에서 마지막 선별 시간 XDM 속성 사용](./ui/activate-last-qualification-time.md)
       * [배열, 맵 및 오브젝트 내보내기](/help/destinations/ui/export-arrays-maps-objects.md)
       * [클라우드 스토리지 대상으로 내보낸 데이터에 대한 변환 수행](/help/destinations/ui/data-transformations-calculated-fields.md)
+      * [데이터 세트 내보내기 데이터 흐름의 종료 일자 업데이트](/help/destinations/ui/update-end-date-export-dataflows.md)
    * [대상 세부 사항 보기](./ui/destination-details-page.md)
    * [대상 계정 업데이트](./ui/update-accounts.md)
    * [대상 계정 삭제](./ui/delete-destination-account.md)
@@ -131,7 +132,7 @@ ht-degree: 5%
       * [SessionCam 확장](./catalog/analytics/sessioncam.md)
       * [TMMData 확장](./catalog/analytics/tmmdata.md)
       * [Yext 전환 추적 확장](./catalog/analytics/yext.md)
-   * 클라우드 저장소 대상 {#cloud-storage}
+   * 클라우드 스토리지 대상 {#cloud-storage}
       * [클라우드 스토리지 대상 개요](./catalog/cloud-storage/overview.md)
       * [Amazon Kinesis 연결](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3 연결](./catalog/cloud-storage/amazon-s3.md)
@@ -158,9 +159,9 @@ ht-degree: 5%
       * [Acxiom 데이터 개선 사항](./catalog/data-partner/acxiom-data-enhancement.md)
       * [Merkury Enterprise 연결](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
       * [Merkury Enterprise ID](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md)
-   * 전자 상거래 대상 {#ecommerce}
+   * eCommerce 대상 {#ecommerce}
       * [SAP COMMERCE](./catalog/ecommerce/sap-commerce.md)
-   * 전자 메일 대상 {#email}
+   * 이메일 대상 {#email}
       * [Bizible 확장](./catalog/email/bizible.md)
       * [Marketo 확장](./catalog/email/marketo.md)
       * [Marketo Munchkin 확장 프로그램](./catalog/email/marketo-munchkin.md)
@@ -215,14 +216,14 @@ ht-degree: 5%
    * 스트리밍 대상 {#streaming}
       * [HTTP API 연결](./catalog/streaming/http-destination.md)
       * [허용 목록에 추가하다 스트리밍 대상의 IP 주소](./catalog/streaming/ip-address-allow-list.md)
-   * 설문 대상 {#survey}
+   * 설문 조사 대상 {#survey}
       * [Survey 대상 개요](./catalog/survey/overview.md)
       * [Qualtrics 자동화 대상](./catalog/survey/qualtrics-automations.md)
       * [Foresee 확장 대상](./catalog/survey/foresee.md)
       * [InMoment 확장](./catalog/survey/inmoment.md)
       * [Qualtrics 웹 사이트 피드백 확장](./catalog/survey/qualtrics.md)
       * [QuestionPro Intercept Surveys 확장](./catalog/survey/web-intercept-surveys.md)
-   * 고객 대상 {#voice}의 음성
+   * 고객 대상의 소리 {#voice}
       * [고객의 소리 대상 개요](./catalog/voice/overview.md)
       * [디지털 피드백 확장 확인](./catalog/voice/confirmit-digital-feedback.md)
       * [잘못된 태그 확장](./catalog/voice/invoca.md)
@@ -257,7 +258,7 @@ ht-degree: 5%
          * [과거 프로필 자격 요건](./destination-sdk/functionality/destination-configuration/historical-profile-qualifications.md)
       * [스트리밍 대상에 대한 속도 제한 및 다시 시도 정책](./destination-sdk/functionality/rate-limiting-retry-policy.md)
       * [대상자 메타데이터 관리](./destination-sdk/functionality/audience-metadata-management.md)
-   * 안내서 {#guides}
+   * Guides {#guides}
       * [Destination SDK을 사용하여 스트리밍 대상 구성](./destination-sdk/guides/configure-destination-instructions.md)
       * [Destination SDK을 사용하여 파일 기반 대상 구성](./destination-sdk/guides/configure-file-based-destination-instructions.md)
       * [Destination SDK에서 작성된 대상을 검토하기 위해 제출](./destination-sdk/guides/submit-destination.md)
@@ -309,7 +310,7 @@ ht-degree: 5%
    * 대상 게시 API 참조 {#publishing-api}
       * [대상 게시 요청 만들기](./destination-sdk/publishing-api/create-publishing-request.md)
       * [대상 게시 요청 검색](./destination-sdk/publishing-api/retrieve-publishing-request.md)
-   * 대상 {#document-destination} 문서화
+   * 대상 문서화 {#document-destination}
       * [Adobe Experience Platform에서 대상 문서화](./destination-sdk/docs-framework/documentation-instructions.md)
       * [GitHub 웹 인터페이스를 사용하여 대상 설명서 페이지를 만듭니다](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
       * [로컬 환경에서 텍스트 편집기를 사용하여 대상 설명서 페이지를 만듭니다](./destination-sdk/docs-framework/work-in-local-environment.md)
