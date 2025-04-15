@@ -2,14 +2,18 @@
 title: UI를 사용하여 Google 광고를 Experience Platform에 연결
 description: UI에서 Google 광고 계정을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '877'
 ht-degree: 0%
 
 ---
 
 # UI를 사용하여 [!DNL Google Ads]을(를) Experience Platform에 연결
+
+>[!WARNING]
+>
+>[!DNL Google Ads] 소스는 현재 UI에서 사용할 수 없습니다. API를 사용하여 [!DNL Google Ads] 데이터를 Experience Platform [에 계속 수집할 수 있습니다](../../../api/create/advertising/ads.md).
 
 >[!NOTE]
 >

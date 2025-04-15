@@ -3,9 +3,10 @@ title: UI를 사용하여 Algolia 사용자 프로필을 Experience Platform에 
 description: Algolia 사용자를 Experience Platform에 연결하는 방법에 대해 알아보기
 hide: true
 hidefromtoc: true
-source-git-commit: a55f0b37614bb43a66d7d2e9cf106484b4d6e8dc
+exl-id: d4c936a7-4983-4a12-a813-03b672116e44
+source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1137'
 ht-degree: 1%
 
 ---
@@ -53,13 +54,13 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 ## 인증
 
-### 기존 계정
+### 기존 계정 사용
 
 기존 계정을 사용하려면 **[!UICONTROL 기존 계정]**&#x200B;을(를) 선택한 다음 사용할 [!DNL Algolia User Profiles] 계정을 선택하십시오. 계속하려면 **[!UICONTROL 다음]**&#x200B;을 선택하세요.
 
 ![기존 계정 인터페이스](../../../../images/tutorials/create/algolia/user-profiles/existing-account.png)
 
-### 새 계정
+### 새 계정 만들기
 
 새 계정을 만드는 경우 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택한 다음 이름, 선택적 설명 및 [!DNL Algolia] 자격 증명을 제공합니다. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택한 다음 새 연결을 설정할 수 있는 시간을 허용하세요.
 
@@ -76,7 +77,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 ![워크플로의 데이터 선택 단계입니다.](../../../../images/tutorials/create/algolia/user-profiles/select-data.png)
 
-### 데이터 흐름 세부 정보 제공
+## 데이터 흐름 세부 정보 제공
 
 기존 데이터 집합을 사용하는 경우 [!DNL Algolia Profile] 필드 그룹을 사용하는 스키마와 연결된 데이터 집합을 선택하십시오.
 
@@ -86,13 +87,13 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 ![원본 워크플로의 새 데이터 집합 단계입니다.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
 
-### 데이터 필드를 XDM 스키마에 매핑
+## 데이터 필드를 XDM 스키마에 매핑
 
 Experience Platform으로 데이터를 수집하기 전에 매핑 인터페이스를 사용하여 소스 데이터를 적절한 스키마 필드에 매핑합니다.  자세한 내용은 UI의 [매핑 가이드](../../../../../data-prep/ui/mapping.md)를 참조하십시오.
 
 ![원본 워크플로의 매핑 단계입니다.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
 
-### 수집 실행 예약
+## 수집 실행 예약
 
 그런 다음 예약 인터페이스를 사용하여 데이터 흐름의 수집 일정을 정의합니다.
 
@@ -107,7 +108,7 @@ Experience Platform으로 데이터를 수집하기 전에 매핑 인터페이�
 | 시작 시간 | UTC 시간대로 표시되는 예상 실행의 타임스탬프입니다. |
 | 채우기 | 채우기 는 처음 수집되는 데이터를 결정합니다. 다시 채우기를 활성화하면 처음 예약된 수집 중에 지정된 경로의 모든 현재 파일이 수집됩니다. 다시 채우기를 비활성화하면 첫 번째 수집 실행과 시작 시간 사이에 로드된 파일만 수집됩니다. 시작 시간 이전에 로드된 파일은 수집되지 않습니다. |
 
-### 데이터 흐름 검토
+## 데이터 흐름 검토
 
 수집 전에 데이터 흐름에 대한 요약을 보려면 검토 페이지를 사용하십시오. 세부 정보는 다음 카테고리로 그룹화됩니다.
 
