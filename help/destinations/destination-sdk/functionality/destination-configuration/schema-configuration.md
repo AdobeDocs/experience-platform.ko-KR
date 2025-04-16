@@ -2,9 +2,9 @@
 description: Destination SDK으로 빌드된 대상에 대한 파트너 스키마를 구성하는 방법을 알아봅니다.
 title: 파트너 스키마 구성
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 30a237c7acf814722d384792366f95289dc3f34a
 workflow-type: tm+mt
-source-wordcount: '1949'
+source-wordcount: '1896'
 ht-degree: 3%
 
 ---
@@ -105,8 +105,8 @@ Destination SDK은 여러 스키마 구성을 지원합니다.
 | `profileRequired` | 부울 | 선택 사항입니다 | 사용자가 Experience Platform의 프로필 특성을 대상 플랫폼의 사용자 지정 특성에 매핑할 수 있어야 하는 경우 `true`을(를) 사용합니다. |
 | `segmentRequired` | 부울 | 필수 여부 | 이 매개 변수는 Destination SDK에 필요하며 항상 `true`(으)로 설정해야 합니다. |
 | `identityRequired` | 부울 | 필수 여부 | 사용자가 Experience Platform의 [ID 유형](identity-namespace-configuration.md)을(를) `profileFields` 배열에서 정의한 특성에 매핑할 수 있어야 하는 경우 `true`(으)로 설정합니다. |
-| `segmentNamespaceAllowList` | 배열 | 선택 사항입니다 | 사용자가 대상을 대상에 매핑할 수 있는 특정 대상 네임스페이스를 정의합니다. 이 매개 변수를 사용하여 Experience Platform 사용자가 배열에서 정의한 대상 네임스페이스에서만 대상을 내보내도록 제한합니다. 이 매개 변수는 `segmentNamespaceDenyList`.<br>과(와) 함께 사용할 수 없습니다 <br> 예: `"segmentNamespaceAllowList": ["AudienceManager"]`에서 사용자는 `AudienceManager` 네임스페이스의 대상자만 이 대상에 매핑할 수 있습니다. <br> <br> 사용자가 대상을 대상으로 내보낼 수 있도록 하려면 이 매개 변수를 무시할 수 있습니다. <br> <br> 구성에서 `segmentNamespaceAllowList`과(와) `segmentNamespaceDenyList`이(가) 모두 누락된 경우 사용자는 [세그먼테이션 서비스](../../../../segmentation/home.md)에서 시작된 대상만 내보낼 수 있습니다. |
-| `segmentNamespaceDenyList` | 배열 | 선택 사항입니다 | 사용자가 배열에 정의된 대상 네임스페이스에서 대상을 대상에 매핑하지 못하도록 제한합니다. `segmentNamespaceAllowed`과(와) 함께 사용할 수 없습니다. <br> <br> 예: `"segmentNamespaceDenyList": ["AudienceManager"]`은(는) `AudienceManager` 네임스페이스에서 이 대상으로 대상을 매핑하는 것을 차단합니다. <br> <br> 사용자가 대상을 대상으로 내보낼 수 있도록 하려면 이 매개 변수를 무시할 수 있습니다. <br> <br> 구성에서 `segmentNamespaceAllowed`과(와) `segmentNamespaceDenyList`이(가) 모두 누락된 경우 사용자는 [세그먼테이션 서비스](../../../../segmentation/home.md)에서 시작된 대상만 내보낼 수 있습니다. <br> <br> 원본에 관계없이 모든 대상을 내보내도록 허용하려면 `"segmentNamespaceDenyList":[]`을(를) 설정하십시오. |
+| `segmentNamespaceAllowList` | 배열 | 선택 사항입니다 | 사용자가 배열에 정의된 대상 네임스페이스의 대상자만 대상에 매핑할 수 있습니다. <br><br> 대부분의 경우 이 매개 변수를 사용하지 않습니다. 대신 `"segmentNamespaceDenyList":[]`을(를) 사용하여 모든 유형의 대상을 대상으로 내보낼 수 있습니다. <br><br> 구성에서 `segmentNamespaceAllowList`과(와) `segmentNamespaceDenyList`이(가) 모두 누락된 경우 사용자는 [세그먼테이션 서비스](../../../../segmentation/home.md)에서 시작된 대상만 내보낼 수 있습니다. <br><br>`segmentNamespaceAllowList`과(와) `segmentNamespaceDenyList`은(는) 함께 사용할 수 없습니다. |
+| `segmentNamespaceDenyList` | 배열 | 선택 사항입니다 | 사용자가 배열에 정의된 대상 네임스페이스의 대상을 대상에 매핑하지 못하도록 제한합니다. <br><br>Adobe에서는 `"segmentNamespaceDenyList":[]`을(를) 설정하여 원본에 관계없이 모든 대상을 내보내도록 할 것을 권장합니다. <br><br>구성에 `segmentNamespaceAllowed`과(와) `segmentNamespaceDenyList`이(가) 모두 없으면 사용자는 [세그먼테이션 서비스](../../../../segmentation/home.md)에서 시작된 대상만 내보낼 수 있습니다. <br><br>`segmentNamespaceAllowList`과(와) `segmentNamespaceDenyList`은(는) 함께 사용할 수 없습니다. |
 
 {style="table-layout:auto"}
 
