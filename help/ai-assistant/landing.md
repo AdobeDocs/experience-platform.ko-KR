@@ -3,9 +3,9 @@ title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant를 시작합니다.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: eb62627e81f361d21026cba368802ebace4a8dde
+source-git-commit: 40c5162801b95d73ce70587f3abd87ad44fa0f01
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,17 @@ AI Assistant는 Experience Platform, Real-Time CDP, Adobe Journey Optimizer 및 
     <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
+
+### AI Assistant를 통해 생산성을 높이는 실습 가이드
+
+>[!NOTE]
+>
+>이 통합 문서는 2025년 3월 31일에 마지막으로 업데이트되었습니다. 이후 일부 기능이 발전하거나 확장되었을 수 있다. 또한 이 안내서에서 참조하는 몇 가지 기능이 아직 초기 액세스 상태일 수 있습니다. 환경에서 아직 사용할 수 없는 문제가 발생했으며 이에 대한 탐색에 관심이 있는 경우 Adobe 계정 팀에 연락하여 조기 액세스를 요청하십시오.
+
+AI Assistant를 사용하여 생산성을 높이는 방법에 대한 실습 안내서는 다음 사항을 참조하십시오.
+
+* [AI Assistant를 사용하여 생산성을 높입니다.](./assets/landing/ai-assistant-lab-workbook.pdf)
+
 
 ## 새로운 기능
 
@@ -439,16 +450,6 @@ AI Assistant 사용 사례 예제는 다음을 참조하십시오.
 * [AI Assistant를 통해 운영 인사이트 잠금 해제](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
-
-### AI Assistant를 통해 생산성 향상
-
->[!NOTE]
->
->이 통합 문서는 2025년 3월 31일에 마지막으로 업데이트되었습니다. 이후 일부 기능이 발전하거나 확장되었을 수 있다. 또한 이 안내서에서 참조하는 몇 가지 기능이 아직 초기 액세스 상태일 수 있습니다. 환경에서 아직 사용할 수 없는 문제가 발생했으며 이에 대한 탐색에 관심이 있는 경우 Adobe 계정 팀에 연락하여 조기 액세스를 요청하십시오.
-
-AI Assistant를 사용하여 생산성을 높이는 방법에 대한 실습 안내서는 다음 사항을 참조하십시오.
-
-* [AI Assistant를 사용하여 생산성을 높입니다.](./assets/landing/ai-assistant-lab-workbook.pdf)
 
 ## 다음 단계
 
