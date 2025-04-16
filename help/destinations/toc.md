@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 66ebff274a5fb9255e284a2a38db780d64b45f2e
+source-git-commit: df047593a14ce6683dc04a6ba6518e6d0810c43d
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1282'
 ht-degree: 5%
 
 ---
@@ -51,7 +51,6 @@ ht-degree: 5%
       * [(Beta) 새 Beta 클라우드 스토리지 대상에서 마지막 선별 시간 XDM 속성 사용](./ui/activate-last-qualification-time.md)
       * [배열, 맵 및 오브젝트 내보내기](/help/destinations/ui/export-arrays-maps-objects.md)
       * [클라우드 스토리지 대상으로 내보낸 데이터에 대한 변환 수행](/help/destinations/ui/data-transformations-calculated-fields.md)
-      * [데이터 세트 내보내기 데이터 흐름의 종료 일자 업데이트](/help/destinations/ui/update-end-date-export-dataflows.md)
    * [대상 세부 사항 보기](./ui/destination-details-page.md)
    * [대상 계정 업데이트](./ui/update-accounts.md)
    * [대상 계정 삭제](./ui/delete-destination-account.md)
