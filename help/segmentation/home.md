@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
 source-wordcount: '1679'
-ht-degree: 9%
+ht-degree: 12%
 
 ---
 
@@ -61,7 +61,7 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="평가 방법"
->abstract="Experience Platform은 현재 스트리밍 세분화, 배치 세분화 및 에지 세분화라는 세 가지 대상자 평가 방법을 지원합니다."
+>abstract="현재 Experience Platform은 대상자를 평가하는 세 가지 방식(스트리밍 세분화, 배치 세분화, 에지 세분화)을 지원합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -69,7 +69,7 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >abstract="스트리밍 세분화는 사용자 활동에 대응하여 대상자를 업데이트하는 진행형 데이터 선택 프로세스입니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="스트리밍 세분화를 통해 거의 실시간으로 이벤트 평가"
 
-Experience Platform은 현재 스트리밍 세분화, 배치 세분화 및 에지 세분화라는 세 가지 대상자 평가 방법을 지원합니다.
+현재 Experience Platform은 대상자를 평가하는 세 가지 방식(스트리밍 세분화, 배치 세분화, 에지 세분화)을 지원합니다.
 
 ### 스트리밍 세분화 {#streaming}
 
@@ -93,7 +93,7 @@ Experience Platform은 현재 스트리밍 세분화, 배치 세분화 및 에�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="에지 평가"
->abstract="Edge 세그멘테이션은 Edge Network에서 Experience Platform의 세그먼트를 즉시 평가하는 기능으로, 동일한 페이지 및 다음 페이지 개인화 사용 사례를 가능하게 합니다."
+>abstract="에지 세분화는 Edge Network에서 Experience Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지의 개인화 사용 사례를 활성화하는 기능입니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="에지 세분화 안내서"
 
 Edge 세그멘테이션은 Experience Platform의 세그먼트를 Edge Network](../landing/edge-and-hub-comparison.md)에서 즉시 [평가하는 기능으로, 동일한 페이지와 다음 페이지 개인화 사용 사례를 가능하게 합니다.

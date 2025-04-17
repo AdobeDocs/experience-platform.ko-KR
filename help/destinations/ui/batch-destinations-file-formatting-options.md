@@ -30,9 +30,9 @@ Experience Platform UI를 사용하여 내보낸 파일에 대한 다양한 파�
 
 >[!IMPORTANT]
 >
->연결 중인 대상에 이러한 모든 옵션을 사용할 수 없을 수도 있습니다. 대상에서 지원할 파일 서식 옵션을 결정하는 것은 대상 개발자의 책임입니다. 대상 개발자는 대상에 연결할 때 사용할 수 있는 옵션을 결정할 수 있습니다. Experience Platform UI에서 필수 옵션이 별표로 표시됩니다.
+>연결 중인 대상에 이러한 모든 옵션을 사용할 수 없을 수도 있습니다. 대상에서 지원할 파일 서식 옵션을 결정하는 것은 대상 개발자의 책임입니다. 대상 개발자는 대상에 연결할 때 사용할 수 있는 옵션을 결정할 수 있습니다. Experience Platform UI에서 필수 옵션은 별표로 표시됩니다.
 > 
->Adobe이 빌드한 클라우드 스토리지 대상 - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - 현재 아래에 강조 표시된 6개의 CSV 옵션만 지원합니다.
+>Adobe에서 빌드한 클라우드 스토리지 대상 - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - 현재 아래에 강조 표시된 6개의 CSV 옵션만 지원합니다.
 
 ![사용 가능한 파일 서식 옵션을 보여 주는 이미지입니다.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -122,7 +122,7 @@ UI에서 선택한 각 내용이 포함된 내보낸 CSV 파일의 콘텐츠 아
 
 * **[!UICONTROL null]**&#x200B;이(가) 선택된 출력 예: `male,NULL,TestLastName`. 이 경우 Experience Platform은 빈 값을 null 값으로 변환합니다.
 * **&quot;&quot;**&#x200B;이(가) 선택된 출력 예: `male,"",TestLastName`. 이 경우 Experience Platform은 빈 값을 큰따옴표 쌍으로 변환합니다.
-* **[!UICONTROL 빈 문자열]**&#x200B;이 선택된 출력 예: `male,,TestLastName`. 이 경우 Experience Platform은 빈 값을 유지하고 큰 따옴표 없이 그대로 내보냅니다.
+* **[!UICONTROL 빈 문자열]**&#x200B;이 선택된 출력 예: `male,,TestLastName`. 이 경우 Experience Platform은 빈 값을 유지하고 큰따옴표 없이 그대로 내보냅니다.
 
 >[!TIP]
 >

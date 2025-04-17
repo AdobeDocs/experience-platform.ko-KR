@@ -66,7 +66,7 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 
 대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
 
-**암호가 포함된 SFTP 인증** {#sftp-password}
+**암호를 사용한 SFTP 인증** {#sftp-password}
 
 ![암호가 있는 SFTP를 사용하여 대상에 인증하는 방법을 보여 주는 샘플 스크린샷](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 

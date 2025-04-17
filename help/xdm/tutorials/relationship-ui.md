@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;홈;인기 주제;ui;UI;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 편집기;스키마;스키마;스키마;스키마;스키마;스키마;스키마;생성;관계;관계;참조;참조;
+keywords: Experience Platform;홈;인기 주제;ui;UI;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 편집기;스키마;스키마;스키마;스키마;스키마;스키마;스키마;만들기;관계;관계;참조;참조;
 solution: Experience Platform
 title: 스키마 편집기를 사용하여 두 스키마 간의 관계 정의
-description: 이 문서에서는 Experience Platform 사용자 인터페이스에서 스키마 편집기를 사용하여 두 스키마 간의 관계를 정의하는 자습서를 제공합니다.
+description: 이 문서에서는 Experience Platform 사용자 인터페이스의 스키마 편집기를 사용하여 두 스키마 간의 관계를 정의하는 자습서를 제공합니다.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
@@ -29,7 +29,7 @@ ht-degree: 9%
 >title="참조 ID 네임스페이스"
 >abstract="참조 스키마의 기본 ID 필드에 대한 네임스페이스(유형)입니다. 관계에 참여하려면 참조 스키마에 기본 ID 필드가 설정되어 있어야 합니다. 스키마 관계에 대한 자세한 내용은 설명서를 참조하십시오."
 
-Adobe Experience Platform에서는 다양한 채널에서 고객과 브랜드와의 상호 작용 간의 관계를 이해하는 기능이 중요합니다. [!DNL Experience Data Model](XDM) 스키마 구조 내에서 이러한 관계를 정의하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
+Adobe Experience Platform에서는 다양한 채널에서 고객과 브랜드와의 상호 작용 간의 관계를 이해하는 기능이 중요합니다. [!DNL Experience Data Model]&#x200B;(XDM) 스키마 구조 내에서 이러한 관계를 정의하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
 
 유니온 스키마와 [!DNL Real-Time Customer Profile]을(를) 사용하여 스키마 관계를 유추할 수 있지만 이는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 소스 스키마에 다른 관련 스키마의 ID를 참조하는 전용 관계 필드를 추가해야 합니다.
 
@@ -41,7 +41,7 @@ Adobe Experience Platform에서는 다양한 채널에서 고객과 브랜드와
 
 >[!NOTE]
 >
->Adobe Real-time Customer Data Platform B2B 에디션에서 다대일 관계를 만드는 방법에 대한 단계는 [B2B 관계 만들기](./relationship-b2b.md)에 대한 안내서를 참조하십시오.
+>Adobe Real-Time Customer Data Platform B2B edition에서 다대일 관계를 만드는 방법에 대한 단계는 [B2B 관계 만들기](./relationship-b2b.md)에 대한 안내서를 참조하십시오.
 
 ## 시작하기
 
@@ -119,7 +119,7 @@ Adobe Experience Platform에서는 다양한 채널에서 고객과 브랜드와
 
 >[!NOTE]
 >
->Real-Time CDP B2B 에디션에 액세스할 수 있는 경우 캔버스의 오른쪽 레일 컨트롤을 사용하여 관계 필드를 정의하고 [동일한 대화 상자](./relationship-b2b.md#relationship-field)를 사용하여 다대일 관계를 만들 수 있습니다.
+>Real-Time CDP B2B edition에 액세스할 수 있는 경우 캔버스의 오른쪽 레일 컨트롤을 사용하여 관계 필드를 정의하고 [동일한 대화 상자](./relationship-b2b.md#relationship-field)를 사용하여 다대일 관계를 만들 수 있습니다.
 
 ![관계 추가 대화 상자](../images/tutorials/relationship/add-relationship-dialog.png)
 

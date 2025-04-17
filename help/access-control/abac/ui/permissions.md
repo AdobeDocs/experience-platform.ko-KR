@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '1703'
-ht-degree: 12%
+ht-degree: 16%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 12%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="역할이란 무엇입니까?"
->abstract="역할은 관리자, 전문가 또는 최종 사용자가 조직 내 리소스에 접근할 수 있는 권한을 정의합니다. 이들은 Experience Platform 인스턴스와 상호 작용하는 사용자를 분류하며 액세스 제어 정책의 기본 구성단위입니다. 역할에는 주어진 권한 집합이 있으며 조직의 멤버들은 필요한 보기 또는 쓰기 액세스 범위에 따라 하나 이상의 역할에 할당될 수 있습니다."
+>abstract="역할은 관리자, 전문가 또는 최종 사용자가 조직 내 리소스에 접근할 수 있는 권한을 정의합니다. Experience Platform 인스턴스와 상호 작용하는 사용자를 분류하고 액세스 제어 정책의 구성 요소입니다. 역할에는 주어진 권한 집합이 있으며 조직의 멤버들은 필요한 보기 또는 쓰기 액세스 범위에 따라 하나 이상의 역할에 할당될 수 있습니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ko" text="역할 관리"
 
 >[!IMPORTANT]
@@ -123,7 +123,7 @@ UI의 역할에 사용할 수 있는 필터는 다음과 같습니다.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
 >title="API 자격 증명이란 무엇입니까?"
->abstract="API 자격 증명은 사용자 및 개발자에게 Experience Platform API에 대한 액세스 권한을 부여하는 역할에 할당됩니다. Experience Platform API를 사용하면 계산된 속성 구성, 데이터/엔티티 액세스, 데이터 내보내기, 불필요한 데이터 또는 배치 삭제 등과 같은 데이터에 대한 기본 CRUD(만들기, 읽기, 업데이트, 삭제) 작업을 프로그래밍 방식으로 수행할 수 있습니다."
+>abstract="API 자격 증명은 사용자와 개발자에게 Experience Platform API에 대한 액세스 권한을 부여하는 역할에 할당됩니다. Experience Platform API를 사용하면 계산된 속성 구성, 데이터/엔티티 액세스, 데이터 내보내기, 불필요한 데이터나 배치 삭제 등 데이터의 기본 CRUD(생성, 읽기, 업데이트, 삭제) 작업을 프로그래밍 방식으로 수행할 수 있습니다."
 >additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/landing/platform-apis/api-guide" text="Experience Platform API 안내서"
 
 >[!IMPORTANT]

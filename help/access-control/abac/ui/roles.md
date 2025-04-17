@@ -6,7 +6,7 @@ exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '619'
-ht-degree: 21%
+ht-degree: 23%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 21%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="새 역할 만들기"
->abstract="Experience Platform 인스턴스와 상호 작용하는 사용자를 더 잘 분류하는 새 역할을 만듭니다. 예를 들어 내부 마케팅 팀의 역할을 생성하고 규제 건강 데이터(RHD) 레이블을 해당 역할에 적용하여 내부 마케팅 팀이 개인건강정보(PHI)에 액세스할 수 있도록 할 수 있습니다. 또는 외부 에이전시에 대한 역할을 생성하고 해당 역할에 RHD 레이블을 적용하지 않음으로써 PHI 데이터에 대한 해당 역할의 액세스를 거부할 수도 있습니다."
+>abstract="Experience Platform 인스턴스와 상호 작용하는 사용자를 더 잘 분류하기 위해 새로운 역할을 만듭니다. 예를 들어 내부 마케팅 팀의 역할을 생성하고 규제 건강 데이터(RHD) 레이블을 해당 역할에 적용하여 내부 마케팅 팀이 개인건강정보(PHI)에 액세스할 수 있도록 할 수 있습니다. 또는 외부 에이전시에 대한 역할을 생성하고 해당 역할에 RHD 레이블을 적용하지 않음으로써 PHI 데이터에 대한 해당 역할의 액세스를 거부할 수도 있습니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="역할 관리"
 >additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="역할에 레이블 적용"
 

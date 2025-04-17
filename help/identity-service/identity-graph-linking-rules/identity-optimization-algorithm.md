@@ -5,7 +5,7 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '1560'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -165,7 +165,7 @@ ECID는 인증되지 않은(익명) 이벤트를 저장하는 반면 CRMID는 �
 
 ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
-* [ID 그래프 연결 규칙 개요](./overview.md)
+* [아이덴티티 그래프 연결 규칙 개요](./overview.md)
 * [구현 안내서](./implementation-guide.md)
 * [그래프 구성의 예](./example-configurations.md)
 * [문제 해결 및 FAQ](./troubleshooting.md)

@@ -182,7 +182,7 @@ Adobe Experience Platform UI에서 [!DNL Graph Simulation]에 액세스할 수 �
 
 이 문서를 읽으면 이제 [!DNL Graph Simulation] 도구를 사용하여 특정 규칙 및 구성 집합이 있는 경우 ID 데이터가 처리되는 방식을 더 잘 이해할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
-* [ID 그래프 연결 규칙 개요](./overview.md)
+* [아이덴티티 그래프 연결 규칙 개요](./overview.md)
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
 * [구현 안내서](./implementation-guide.md)
 * [문제 해결 및 FAQ](./troubleshooting.md)

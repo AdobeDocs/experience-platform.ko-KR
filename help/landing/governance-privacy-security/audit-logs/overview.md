@@ -7,7 +7,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 27%
+ht-degree: 32%
 
 ---
 
@@ -16,17 +16,17 @@ ht-degree: 27%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="상위 액션"
->abstract="이 위젯은 선택한 기간 내에 Experience Platform에서 수행된 상위 액션을 보여 줍니다. Experience Platform에서 기록된 작업의 전체 목록을 보려면 왼쪽 탐색에서 **감사**&#x200B;를 선택하십시오."
+>abstract="이 위젯은 선택한 기간 내에 Experience Platform에서 수행된 상위 액션을 보여 줍니다. Experience Platform에서 기록된 작업의 전체 목록을 보려면 왼쪽 탐색 영역에서 **감사**&#x200B;를 선택합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="상위 사용자"
->abstract="이 위젯은 선택한 기간 내에 Experience Platform에서 가장 많은 작업을 수행한 사용자를 보여 줍니다. Experience Platform에서 기록된 작업의 전체 목록을 보려면 왼쪽 탐색에서 **감사**&#x200B;를 선택하십시오."
+>abstract="이 위젯은 선택한 기간 내에 Experience Platform에서 가장 많은 작업을 수행한 사용자를 보여 줍니다. Experience Platform에서 기록된 작업의 전체 목록을 보려면 왼쪽 탐색 영역에서 **감사**&#x200B;를 선택합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
 >title="Experience Platform에서 사용자 활동 모니터링"
->abstract="<h2>설명</h2><p>감사 로그 형식으로 다양한 Experience Platform 서비스 및 기능에 대한 사용자 활동을 모니터링할 수 있습니다. 이들 로그는 <b>누가</b> <b>언제</b> <b>어떤</b> 작업을 수행했는지 기록하는 감사 추적을 형성합니다. 감사 로그는 Experience Platform의 문제를 해결하는 데 도움이 되며 기업이 기업 데이터 관리 정책 및 규제 요구 사항을 효과적으로 준수하는 데 도움이 됩니다.</p>"
+>abstract="<h2>설명</h2><p>감사 로그 형식으로 다양한 Experience Platform 서비스 및 기능에 대한 사용자 활동을 모니터링할 수 있습니다. 이들 로그는 <b>누가</b> <b>언제</b> <b>어떤</b> 작업을 수행했는지 기록하는 감사 추적을 형성합니다. 이들 로그는 Experience Platform의 문제 해결에 도움이 되며 기업 데이터 관리 정책 및 규제 요구 사항을 효과적으로 준수하는 데 도움이 됩니다.</p>"
 
 Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명성과 가시성을 높이기 위해 &quot;감사 로그&quot; 형식으로 다양한 서비스 및 기능에 대한 사용자 활동을 감사할 수 있습니다. 이러한 로그는 Experience Platform의 문제 해결에 도움이 될 수 있는 감사 추적을 형성하며, 기업이 기업 데이터 관리 정책 및 규제 요구 사항을 효과적으로 준수하는 데 도움이 됩니다.
 

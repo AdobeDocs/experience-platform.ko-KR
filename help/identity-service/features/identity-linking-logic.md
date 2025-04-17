@@ -5,7 +5,7 @@ exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '968'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -78,7 +78,7 @@ ID 서비스는 CRMID:60013ABC가 그래프 내에 이미 존재한다는 것을
 
 ## 고객 시나리오
 
-데이터 엔지니어이며 Experience Platform 대상으로 다음 CRM 데이터 세트(프로필 레코드)를 수집합니다.
+데이터 엔지니어이며 다음 CRM 데이터 세트(프로필 레코드)를 Experience Platform으로 수집합니다.
 
 | CRMID** | 전화* | 이메일* | 이름 | 성 |
 | --- | --- | --- | --- | --- |

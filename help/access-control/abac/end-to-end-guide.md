@@ -7,13 +7,13 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '1603'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
 # 속성 기반 액세스 제어 엔드투엔드 가이드
 
-Adobe Experience Platform에서 속성 기반 액세스 제어를 사용하여 개인 정보 보호를 중요하게 생각하는 자신과 다른 다중 브랜드 고객에게 사용자 액세스를 더 유연하게 관리할 수 있도록 합니다. 스키마 필드 및 대상자와 같은 개별 객체에 대한 액세스는 객체의 속성 및 역할에 따른 정책으로 부여될 수 있습니다. 이 기능을 사용하면 조직의 특정 Experience Platform 사용자에 대해 개별 객체에 대한 액세스 권한을 부여하거나 취소할 수 있습니다.
+Adobe Experience Platform에서 속성 기반 액세스 제어를 사용하여 개인 정보 보호를 중요하게 생각하는 자신과 다른 다중 브랜드 고객에게 사용자 액세스를 더 유연하게 관리할 수 있도록 합니다. 스키마 필드 및 대상자와 같은 개별 객체에 대한 액세스는 객체의 속성 및 역할에 따른 정책으로 부여될 수 있습니다. 이 기능을 통해 조직 내 특정 Experience Platform 사용자에게 개별 오브젝트에 대한 액세스 권한을 부여하거나 해지할 수 있습니다.
 
 이 기능을 사용하면 조직 또는 데이터 사용 범위를 정의하는 레이블을 사용하여 스키마 필드, 대상 등을 분류할 수 있습니다. Adobe Journey Optimizer의 여정, 오퍼 및 기타 개체에 동일한 레이블을 적용할 수 있습니다. 이와 동시에 관리자는 XDM(Experience Data Model) 스키마 필드를 둘러싼 액세스 정책을 정의하고 이러한 필드에 액세스할 수 있는 사용자 또는 그룹(내부, 외부 또는 타사 사용자)을 더 잘 관리할 수 있습니다.
 
@@ -66,7 +66,7 @@ Experience Platform UI에 대한 권한 작업 영역이 표시되어 **[!UICONT
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="레이블이란 무엇입니까?"
->abstract="레이블을 사용하면 해당 데이터에 적용되는 사용 및 액세스 정책에 따라 데이터 세트 및 필드를 분류할 수 있습니다. Adobe Experience Platform은 데이터 거버넌스에 적용할 수 있는 광범위한 일반적인 제한 사항을 포함하는 여러 Adobe 정의 <strong>core</strong> 데이터 사용 레이블을 제공합니다. 예를 들어 RHD(규제 건강 데이터)와 같은 중요한 <strong>S</strong> 레이블을 사용하면 PHI(개인건강정보)를 참조하는 데이터를 분류할 수 있습니다. 조직의 요구 사항에 맞는 고유한 사용자 정의 레이블을 정의할 수도 있습니다."
+>abstract="레이블을 사용하면 해당 데이터에 적용되는 사용 및 액세스 정책에 따라 데이터 세트 및 필드를 분류할 수 있습니다. Adobe Experience Platform은 데이터 거버넌스에 적용할 수 있는 다양한 공통 제한 사항을 다루는 Adobe에서 정의한 여러 <strong>핵심</strong> 데이터 사용 레이블을 제공합니다. 예를 들어 RHD(규제 건강 데이터)와 같은 중요한 <strong>S</strong> 레이블을 사용하면 PHI(개인건강정보)를 참조하는 데이터를 분류할 수 있습니다. 조직의 요구 사항에 맞는 고유한 사용자 정의 레이블을 정의할 수도 있습니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="데이터 사용 레이블 개요"
 
 역할은 Experience Platform 인스턴스와 상호 작용하는 사용자 유형을 분류하는 방법이며 액세스 제어 정책을 작성하는 빌딩 블록입니다. 역할에는 지정된 권한 집합이 있으며, 필요한 액세스 범위에 따라 조직 구성원을 하나 이상의 역할에 할당할 수 있습니다.

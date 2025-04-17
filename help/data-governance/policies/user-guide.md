@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1769'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 15%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
 >title="프로필 데이터에 고객 동의 통합 및 시행"
->abstract="<h2>설명</h2><p>Experience Platform을 사용하면 고객으로부터 수집한 동의 데이터를 각각의 프로필에 통합할 수 있습니다. 그런 다음 동의 정책을 설정하여 특정 대상에 대해 활성화된 세그먼트에 이 데이터를 포함할 수 있는지 여부를 결정할 수 있습니다.</p>"
+>abstract="<h2>설명</h2><p>Experience Platform을 사용하면 고객으로부터 수집한 동의 데이터를 해당 프로필에 통합할 수 있습니다. 그런 다음 동의 정책을 설정하여 특정 대상에 대해 활성화된 세그먼트에 이 데이터를 포함할 수 있는지 여부를 결정할 수 있습니다.</p>"
 
 이 문서에서는 Adobe Experience Platform UI에서 **[!UICONTROL 정책]** 작업 영역을 사용하여 데이터 사용 정책을 만들고 관리하는 방법을 다룹니다.
 

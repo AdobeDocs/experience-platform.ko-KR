@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;모델 게시;데이터 과학 Workspace;인기 항목;서비스 점수 매기기
+keywords: Experience Platform;모델 게시;Data Science Workspace;인기 주제;서비스 점수
 solution: Experience Platform
-title: 데이터 과학 Workspace UI의 Publish a Model as a Service
+title: 데이터 과학 Workspace UI에서 모델을 서비스로 게시
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace을 사용하면 교육되고 평가된 모델을 Service로 게시할 수 있으므로 조직 내의 사용자가 자체 모델을 만들 필요 없이 데이터에 점수를 매길 수 있습니다.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Data Science 작업 영역은(는) 더 이상 구매할 수 없습니다.
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
 >
 >이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
@@ -35,13 +35,13 @@ Adobe Experience Platform Data Science Workspace을 사용하면 교육되고 �
 
 Sensei 머신 러닝 API를 사용하여 모델을 게시하려면 [API 자습서](./publish-model-service-api.md)를 참조하십시오.
 
-## 모델 Publish {#publish-a-model}
+## 모델 게시 {#publish-a-model}
 
-Adobe Experience Platform에서 왼쪽 탐색 열에 있는 모델을&#x200B;]**선택한**[!UICONTROL &#x200B;다음 검색&#x200B;]**탭을 선택하여**[!UICONTROL &#x200B;기존의 모든 모델을 나열합니다. 서비스로 게시할 모델의 이름을 선택합니다.
+Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL 모델]**&#x200B;을(를) 선택한 다음 **[!UICONTROL 찾아보기]** 탭을 선택하여 기존 모델을 모두 나열합니다. 서비스로 게시하려는 모델의 이름을 선택합니다.
 
 ![](../images/models-recipes/publish-model/browse_model.png)
 
-모델 개요 페이지의 오른쪽 상단 근처에 있는 **[!UICONTROL Publish]**&#x200B;을(를) 선택하여 서비스 만들기 프로세스를 시작합니다.
+모델 개요 페이지의 오른쪽 상단 근처에 있는 **[!UICONTROL 게시]**&#x200B;를 선택하여 서비스 만들기 프로세스를 시작합니다.
 
 ![](../images/models-recipes/publish-model/view_training.png)
 
@@ -67,11 +67,11 @@ Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL 서비
 
 ![](../images/models-recipes/publish-model/score_service.png)
 
-채점 실행에 적합한 입력 데이터 세트를 선택한 후 **[!UICONTROL 다음]**&#x200B;을 선택합니다. 점수 매기기 데이터 세트 값에 대해 동일한 단계를 수행하라는 메시지가 표시됩니다. 입력 및 출력 데이터 세트 선택했으면 구성을 업데이트할 수 있습니다.
+채점 실행에 적합한 입력 데이터 세트를 선택한 후 **[!UICONTROL 다음]**&#x200B;을 선택합니다. 채점 데이터 세트에 대해 동일한 단계를 수행해야 합니다. 입력 및 출력 데이터 세트를 선택하면 구성을 업데이트할 수 있습니다.
 
 ![](../images/models-recipes/publish-model/select_datasets.png)
 
-서비스가 만들어지면 기본 점수 매기기 구성을 상속합니다. 이러한 구성을 검토하고 값을 두 번 클릭하여 필요에 따라 조정할 수 있습니다. 구성에 만족하면 **[!UICONTROL 완료]**&#x200B;를 선택하여 채점 실행을 시작합니다.
+서비스가 만들어지면 기본 채점 구성을 상속합니다. 이러한 구성을 검토하고 값을 두 번 클릭하여 필요에 따라 조정할 수 있습니다. 구성에 만족하면 **[!UICONTROL 완료]**&#x200B;를 선택하여 채점 실행을 시작합니다.
 
 ![](../images/models-recipes/publish-model/scoring_configs.png)
 

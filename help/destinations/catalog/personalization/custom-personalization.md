@@ -23,9 +23,9 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화를 위해 **[!UICONTROL Edge Network 지정 Personalization]** 대상을 구성할 때 [사용자 지정 서버 API](/help/server-api/overview.md)를 사용해야 합니다. 모든 서버 API 호출은 [인증된 컨텍스트](../../../server-api/authentication.md)에서 수행되어야 합니다.
+>프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화를 위해 **[!UICONTROL 사용자 지정 Personalization]** 대상을 구성할 때 [Edge Network Server API](/help/server-api/overview.md)를 사용해야 합니다. 모든 서버 API 호출은 [인증된 컨텍스트](../../../server-api/authentication.md)에서 수행되어야 합니다.
 >
-><br>웹 또는 Mobile SDK 구현에 이미 사용하고 있는 것과 동일한 데이터 스트림을 사용하는 서버측 통합을 추가하여 [Edge Network 서버 API](/help/server-api/overview.md)를 통해 프로필 특성을 검색할 수 있습니다.
+><br>웹 또는 Mobile SDK 구현에 이미 사용하고 있는 동일한 데이터 스트림을 사용하는 서버측 통합을 추가하여 [Edge Network Server API](/help/server-api/overview.md)를 통해 프로필 특성을 검색할 수 있습니다.
 >
 ><br>위의 요구 사항을 따르지 않는 경우 개인화는 대상자 멤버십만 기반으로 합니다.
 
@@ -39,11 +39,11 @@ ht-degree: 9%
 
 * 웹 사이트에서 데이터를 수집하려면 [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)를 사용하십시오.
 * 모바일 애플리케이션에서 데이터를 수집하려면 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)를 사용하십시오.
-* [Web SDK](/help/web-sdk/home.md) 또는 [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)를 사용하지 않거나 프로필 특성을 기반으로 Edge Network 환경을 개인화하려는 경우 [User Server API](../../../server-api/overview.md)를 사용하십시오.
+* [Web SDK](/help/web-sdk/home.md) 또는 [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)를 사용하지 않거나 프로필 특성을 기반으로 사용자 경험을 개인화하려는 경우 [Edge Network Server API](../../../server-api/overview.md)를 사용하십시오.
 
 >[!IMPORTANT]
 >
->사용자 지정 개인화 연결을 만들기 전에 [대상 데이터를 Edge 개인화 대상으로 활성화](../../ui/activate-edge-personalization-destinations.md)하는 방법에 대한 안내서를 읽어 보십시오. 이 안내서에서는 여러 Experience Platform 구성 요소에서 동일한 페이지 및 다음 페이지 개인화 사용 사례에 필요한 구성 단계를 안내합니다.
+>사용자 지정 개인화 연결을 만들기 전에 [대상 데이터를 Edge 개인화 대상으로 활성화](../../ui/activate-edge-personalization-destinations.md)하는 방법에 대한 안내서를 읽어 보십시오. 이 안내서는 여러 Experience Platform 구성 요소에서 동일한 페이지 및 다음 페이지 개인화 사용 사례에 필요한 구성 단계를 안내합니다.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -51,8 +51,8 @@ ht-degree: 9%
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ ht-degree: 9%
 
 ## 내보낸 데이터 {#exported-data}
 
-[Adobe Experience Platform의 태그](../../../tags/home.md)를 사용하여 Experience Platform Web SDK를 배포하는 경우 [완료 보내기](../../../tags/extensions/client/web-sdk/event-types.md) 기능을 사용하면 사용자 지정 코드 작업에 `event.destinations` 변수가 포함되며, 이 변수를 사용하여 내보낸 데이터를 볼 수 있습니다.
+[Adobe Experience Platform의 태그](../../../tags/home.md)를 사용하여 Experience Platform Web SDK을 배포하는 경우 [이벤트 완료 보내기](../../../tags/extensions/client/web-sdk/event-types.md) 기능을 사용하면 사용자 지정 코드 작업에 내보낸 데이터를 보는 데 사용할 수 있는 `event.destinations` 변수가 생깁니다.
 
 다음은 `event.destinations` 변수의 샘플 값입니다.
 
@@ -124,7 +124,7 @@ ht-degree: 9%
 ]
 ```
 
-[태그](/help/tags/home.md)를 사용하여 Experience Platform Web SDK를 배포하지 않는 경우 [명령 응답](/help/web-sdk/commands/command-responses.md)을 사용하여 내보낸 데이터를 봅니다.
+[태그](/help/tags/home.md)를 사용하여 Experience Platform Web SDK을 배포하지 않는 경우 [명령 응답](/help/web-sdk/commands/command-responses.md)을 사용하여 내보낸 데이터를 확인합니다.
 
 Adobe Experience Platform의 JSON 응답을 구문 분석하여 Adobe Experience Platform과 통합 중인 애플리케이션의 해당 통합 별칭을 찾을 수 있습니다. 대상 ID는 타깃팅 매개 변수로 애플리케이션의 코드에 전달될 수 있습니다. 다음은 대상 응답에만 적용되는 예제입니다.
 

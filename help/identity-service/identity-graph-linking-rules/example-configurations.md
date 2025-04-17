@@ -766,7 +766,7 @@ CRMID: Tom, ECID: 111
 
 ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
-* [ID 그래프 연결 규칙 개요](./overview.md)
+* [아이덴티티 그래프 연결 규칙 개요](./overview.md)
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
 * [구현 안내서](./implementation-guide.md)
 * [문제 해결 및 FAQ](./troubleshooting.md)

@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '5024'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -359,7 +359,7 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="병합 정책"
->abstract="병합 정책은 서로 다른 데이터 세트의 병합을 활성화하여 프로필을 형성합니다. Experience Platform에서 기본 병합 정책을 제공했거나 프로필에서 새 기본 병합 정책을 만들 수 있습니다. 이 대상자에 대해 마케팅 목적에 부합하는 병합 정책을 선택하십시오."
+>abstract="병합 정책은 서로 다른 데이터 세트의 병합을 활성화하여 프로필을 형성합니다. Experience Platform에서 제공한 기본 병합 정책을 사용하거나 [프로필]에서 새로운 기본 병합 정책을 만들 수 있습니다. 이 대상자에 대해 마케팅 목적에 부합하는 병합 정책을 선택하십시오."
 
 [!DNL Experience Platform]을(를) 사용하면 여러 소스에서 데이터를 모아 각 개별 고객에 대한 전체 보기를 볼 수 있도록 결합할 수 있습니다. 이 데이터를 함께 가져올 때 병합 정책은 [!DNL Experience Platform]이(가) 데이터 우선 순위 지정 방법과 어떤 데이터를 결합하여 프로필을 만들 것인지 결정하는 데 사용하는 규칙입니다.
 

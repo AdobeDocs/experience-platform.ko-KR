@@ -176,7 +176,7 @@ Google 계정에 대한 자격 증명을 입력할 수 있는 대화 상자가 �
 >
 >조직에 Google Cloud 애플리케이션에 대한 재인증 정책이 설정되어 있는 경우 인증이 만료된 후(정책 구성에 따라 1~24시간) 생성된 비밀이 성공적으로 새로 고쳐지지 않습니다.
 >
->이 문제를 해결하려면 Google Admin Console에 로그인하고 **[!DNL App access control]** 페이지로 이동하여 이벤트 전달 앱(Adobe Real-Time CDP 이벤트 전달)을 [!DNL Trusted](으)로 표시합니다. 자세한 내용은 [Google Cloud 서비스의 세션 길이 설정](https://support.google.com/a/answer/9368756)에 대한 Google 설명서를 참조하십시오.
+>이 문제를 해결하려면 Google Admin Console에 로그인하고 **[!DNL App access control]** 페이지로 이동하여 이벤트 전달 앱(Adobe Real-Time CDP 이벤트 전달)을 [!DNL Trusted]&#x200B;(으)로 표시합니다. 자세한 내용은 [Google Cloud 서비스의 세션 길이 설정](https://support.google.com/a/answer/9368756)에 대한 Google 설명서를 참조하십시오.
 
 ### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
 
