@@ -3,9 +3,9 @@ title: Adobe Experience Platform 릴리스 정보 2025년 3월
 description: Adobe Experience Platform의 2025년 3월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f0879683629ba10ed1b799e52f0adf332f079daf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1250'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대
 
 [!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-**새 대상 또는 업데이트된 대상** {#new-updated-destinations}
+**새로운 대상 또는 업데이트된 대상** {#new-updated-destinations}
 
 | 대상 | 설명 |
 | --- | --- |
@@ -89,8 +89,8 @@ Experience Platform의 소스를 사용하여 Adobe 애플리케이션 또는 �
 
 | 기능 | 설명 |
 | --- | --- |
-| [!DNL Bombora Intent] | 이제 소스 카탈로그에서 [!DNL Bombora Intent] 소스를 사용할 수 있습니다. 이 소스를 사용하면 다음 작업을 수행할 수 있습니다. <ul><li>Bombora의 Company Surge Intent 데이터를 통합하여 제품이나 서비스를 적극적으로 조사하는 계정을 식별할 수 있습니다.</li><li>시장 내 계정에 우선순위를 부여하여 정확한 세그먼트를 만들고 고도로 타기팅된 ABM 캠페인을 실행함으로써 전환 가능성이 가장 높은 계정에 마케팅 활동을 집중할 수 있습니다.</li><li>의도 중심 전략을 활용하여 광고 지출을 최적화하고, 참여를 확대하고, ROI를 극대화할 수 있습니다.</li></ul> 자세한 내용은 [ [!DNL Bombora] 계정을 Experience Platform으로 연결하기](../../sources/tutorials/ui/create/data-partners/bombora.md)에 대한 안내서를 참조하십시오. |
-| [!DNL Demandbase Intent] | 소스 카탈로그에서 [!DNL Demandbase Intent] 다시 소스를 사용할 수 있습니다. 이 소스를 사용하면 다음 작업을 수행할 수 있습니다. <ul><li>Demandbase의 Account Intent 데이터를 통합하여 실시간 참여를 기반으로 관심도가 높은 계정을 식별할 수 있습니다.</li><li>가장 강력한 의도 신호에 우선순위를 부여함으로써 정확한 세그먼트를 만들고 고도로 타기팅된 캠페인을 제공하여 전환 가능성이 가장 높은 계정에 마케팅 활동을 집중할 수 있습니다.</li><li>의도 중심 전략을 활성화하여 광고 지출을 최적화하고, 참여를 늘리고, ROI를 높일 수 있습니다.</li></ul> 자세한 내용은 [ [!DNL Demandbase] 계정을 Experience Platform으로 연결하기](../../sources/tutorials/ui/create/data-partners/demandbase.md)에 대한 안내서를 참조하십시오. |
+| [!DNL Bombora Intent] | 이제 [!DNL Bombora Intent] 소스를 소스 카탈로그에서 사용할 수 있습니다. 이 소스를 사용하면 다음 작업을 수행할 수 있습니다. <ul><li>Bombora의 Company Surge Intent 데이터를 통합하여 제품이나 서비스를 적극적으로 조사하는 계정을 식별할 수 있습니다.</li><li>시장 내 계정에 우선순위를 부여하여 정확한 세그먼트를 만들고 고도로 타기팅된 ABM 캠페인을 실행함으로써 전환 가능성이 가장 높은 계정에 마케팅 활동을 집중할 수 있습니다.</li><li>의도 중심 전략을 활용하여 광고 지출을 최적화하고, 참여를 확대하고, ROI를 극대화할 수 있습니다.</li></ul> 자세한 내용은 [ [!DNL Bombora] 계정을 Experience Platform으로 연결하기](../../sources/tutorials/ui/create/data-partners/bombora.md)에 대한 안내서를 참조하십시오. |
+| [!DNL Demandbase Intent] | 이제 [!DNL Demandbase Intent] 소스를 소스 카탈로그에서 사용할 수 있습니다. 이 소스를 사용하면 다음 작업을 수행할 수 있습니다. <ul><li>Demandbase의 Account Intent 데이터를 통합하여 실시간 참여를 기반으로 관심도가 높은 계정을 식별할 수 있습니다.</li><li>가장 강력한 의도 신호에 우선순위를 부여함으로써 정확한 세그먼트를 만들고 고도로 타기팅된 캠페인을 제공하여 전환 가능성이 가장 높은 계정에 마케팅 활동을 집중할 수 있습니다.</li><li>의도 중심 전략을 활성화하여 광고 지출을 최적화하고, 참여를 늘리고, ROI를 높일 수 있습니다.</li></ul> 자세한 내용은 [ [!DNL Demandbase] 계정을 Experience Platform으로 연결하기](../../sources/tutorials/ui/create/data-partners/demandbase.md)에 대한 안내서를 참조하십시오. |
 
 {style="table-layout:auto"}
 
