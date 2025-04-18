@@ -5,10 +5,10 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 22%
+source-wordcount: '404'
+ht-degree: 27%
 
 ---
 
@@ -18,18 +18,19 @@ ht-degree: 22%
 - [쿼리 서비스 개요](home.md)
 - [쿼리 서비스 패키징](packaging.md)
 - [쿼리 서비스 보호 기능](guardrails.md)
-- 시작 {#get-started}
+- 시작하기 {#get-started}
    - [전제 조건](get-started/prerequisites.md)
-- 데이터 Distiller {#data-distiller}
+- Data Distiller {#data-distiller}
    - [개요](data-distiller/overview.md)
    - [라이선스 사용](data-distiller/license-usage.md)
    - 파생 데이터 세트 {#derived-datasets}
       - [개요](data-distiller/derived-datasets/overview.md)
       - [SQL을 사용하여 파생 데이터 세트 만들기](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [십분위수 기반 파생 데이터 세트 만들기](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - 확장 앱 보고 {#sql-insights}에 대한 SQL Insights
+   - 확장된 앱 보고를 위한 SQL Insights {#sql-insights}
       - [개요](data-distiller/sql-insights/overview.md)
       - [쿼리 프로 모드](data-distiller/sql-insights/query-pro-mode.md)
+      - [가속화된 저장소 개요](data-distiller/sql-insights/accelerated-store-overview.md)
       - [가속화된 쿼리 보내기](data-distiller/sql-insights/send-accelerated-queries.md)
       - [Reporting insights 데이터 모델 안내서](data-distiller/sql-insights/reporting-insights-data-model.md)
    - AI/ML 기능 파이프라인 {#ml-feature-pipelines}
@@ -45,17 +46,17 @@ ht-degree: 22%
    - [기능 엔지니어링](advanced-statistics/feature-engineering.md)
    - [모델](advanced-statistics/models.md)
    - [기능 변환](advanced-statistics/feature-transformation.md)
-   - {#implement-models} 모델 구현
+   - 모델 구현 {#implement-models}
       - [모델 구현](advanced-statistics/implement-models/implement-models.md)
       - [회귀](advanced-statistics/implement-models/regression.md)
       - [분류](advanced-statistics/implement-models/classification.md)
       - [클러스터링](advanced-statistics/implement-models/clustering.md)
-   - 예 {#examples}
+   - 예시 {#examples}
       - [통계 및 머신 러닝을 사용한 보트 필터링](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [SQL 기반 로지스틱 회귀 분석을 사용하여 고객 이탈 예측](advanced-statistics/examples/predict-customer-churn.md)
 - 데이터 Distiller 대상 {#data-distiller-audiences}
    - [SQL을 사용하여 외부 대상 작성](data-distiller-audiences/overview.md)
-- 예 {#use-cases}
+- 예시 {#use-cases}
    - [개요](use-cases/overview.md)
    - [찾아보기 중단됨](use-cases/abandoned-browse.md)
    - [속성 분석](use-cases/attribution-analysis.md)
@@ -85,9 +86,9 @@ ht-degree: 22%
    - [데이터 중복 제거](key-concepts/deduplication.md)
    - [데이터 세트 샘플](key-concepts/dataset-samples.md)
    - [데이터 세트 통계 계산](key-concepts/dataset-statistics.md)
-- 데이터 Distiller Hypercubes {#hypercubes}
+- 데이터 Distiller 하이퍼큐브 {#hypercubes}
    - [하이퍼큐브를 통한 효율적인 빅 데이터 분석](hypercubes/overview.md)
-- 클라이언트를 쿼리 서비스 {#clients}에 연결
+- 클라이언트를 쿼리 서비스에 연결 {#clients}
    - [클라이언트 연결 개요](clients/overview.md)
    - [SSL 모드](./clients/ssl-modes.md)
    - [아쿠아 데이터 스튜디오](clients/aqua-data-studio.md)
@@ -119,7 +120,7 @@ ht-degree: 22%
    - [쿼리 템플릿](api/query-templates.md)
    - [가속화된 쿼리](api/accelerated-queries.md)
    - [경고 구독](api/alert-subscriptions.md)
-- Data Distiller 인증 API {#auth-api}
+- 데이터 Distiller 인증 API {#auth-api}
    - [개요](auth-api/overview.md)
    - [시작하기](auth-api/getting-started.md)
    - [액세스](auth-api/ip-access.md)
@@ -129,7 +130,7 @@ ht-degree: 22%
    - [감사 로그 안내서](data-governance/audit-log-guide.md)
    - [애드혹 스키마 데이터 세트의 ID](data-governance/ad-hoc-schema-identities.md)
    - [Ad Hoc 스키마에 대한 속성 기반 액세스 제어 지원](./data-governance/ad-hoc-schema-labels.md)
-- 권장사항 {#best-practices}
+- 모범 사례 {#best-practices}
    - [쿼리 실행](best-practices/writing-queries.md)
    - [데이터 자산 조직](./best-practices/organize-data-assets.md)
 - SQL 참조 {#sql}
