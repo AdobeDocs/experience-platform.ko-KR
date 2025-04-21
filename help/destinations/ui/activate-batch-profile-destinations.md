@@ -3,7 +3,7 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 500cad30178e6371c8d7431b032a67f6ed15a1d6
+source-git-commit: 11961e291188d509609a036f41084f4487cab584
 workflow-type: tm+mt
 source-wordcount: '4517'
 ht-degree: 11%
@@ -87,12 +87,12 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_weekly_messaging"
 >title="주별 내보내기"
->abstract="시작 날짜를 선택하면 선택한 종료 날짜까지 그 주의 해당 날짜에 후속 내보내기가 발생합니다."
+>abstract="<sup>*</sup> 시작 날짜를 선택하면 선택한 종료 날짜까지 그 주의 해당 날짜에 후속 내보내기가 수행됩니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_monthly_messaging"
 >title="월별 내보내기"
->abstract="시작 날짜를 선택하면 선택한 종료 날짜까지 그 달의 해당 날짜에 후속 내보내기가 발생합니다. 30일 또는 31일 미만인 달의 경우 해당 월의 마지막 날에 내보내기가 발생합니다."
+>abstract="<sup>*</sup> 시작 날짜를 선택하면 선택한 종료 날짜까지 해당 달의 해당 날짜에 후속 내보내기가 수행됩니다. 30일 또는 31일 미만인 달의 경우 해당 월의 마지막 날에 내보내기가 발생합니다."
 
 [!DNL Adobe Experience Platform]은(는) 전자 메일 마케팅 및 클라우드 저장소 대상에 대한 데이터를 [다른 파일 형식](#supported-file-formats-export)(으)로 내보냅니다. **[!UICONTROL 예약]** 페이지에서 내보내는 각 대상에 대해 일정 및 파일 이름을 구성할 수 있습니다.
 
