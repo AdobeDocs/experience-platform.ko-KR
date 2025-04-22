@@ -3,22 +3,14 @@ keywords: 비행선 속성;비행선 목적지
 title: 비행선 속성 연결
 description: Airship 내에서 타깃팅할 대상 속성으로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7377b2ffecf59fdb5ca5449daf1387ae1586bd63
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 3%
+source-wordcount: '1042'
+ht-degree: 2%
 
 ---
 
 # [!DNL Airship Attributes] 연결 {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->* 2025년 3월 25일부터 대상 카탈로그에서 두 개의 [!DNL Airship Attributes] 카드를 나란히 볼 수 있습니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 [!DNL Airship Attributes] 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) 비행선 특성]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL 비행선 특성]**&#x200B;인 새 카드를 사용할 수 있습니다.
->* 새 활성화 데이터 흐름을 보려면 카탈로그의 **[!UICONTROL 비행선 특성]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않는) 비행선 특성]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 조치가 필요하지 않습니다.
->* [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다.
->   * 흐름 사양 ID: `a862e0be-966e-4e5a-80d3-1bb566461986`
->   * 연결 사양 ID: `594bc002-4a47-49b7-8a98-ac0d21045502`
 
 ## 개요 {#overview}
 
