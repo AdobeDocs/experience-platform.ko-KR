@@ -2,14 +2,14 @@
 title: ID 그래프 연결 규칙
 description: ID 서비스의 ID 그래프 연결 규칙에 대해 알아봅니다.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 8%
+source-wordcount: '1497'
+ht-degree: 6%
 
 ---
 
-# 아이덴티티 그래프 연결 규칙 개요 {#identity-graph-linking-rules-overview}
+# [!DNL Identity Graph Linking Rules] 개요 {#identity-graph-linking-rules-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
@@ -18,17 +18,21 @@ ht-degree: 8%
 
 >[!AVAILABILITY]
 >
->ID 그래프 연결 규칙은 현재 제한적 가용성입니다. 개발 샌드박스의 기능에 액세스하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+>ID 그래프 연결 규칙은 현재 제한된 가용성에 있으며 개발 샌드박스에서 모든 고객이 액세스할 수 있습니다.
+>
+>* **활성화 요구 사항**: 이 기능은 [!DNL Identity Settings]을(를) 구성하고 저장할 때까지 비활성 상태로 유지됩니다. 이 구성이 없으면 시스템이 동작을 변경하지 않고 계속 정상적으로 작동합니다.
+>* **중요 정보**: 이 제한된 가용성 단계에서 Edge 세그먼테이션을 수행하면 예기치 않은 세그먼트 멤버십 결과가 발생할 수 있습니다. 하지만 스트리밍 및 배치 세분화는 예상대로 작동합니다.
+>* **다음 단계**: 프로덕션 샌드박스에서 이 기능을 활성화하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
 
-Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용하면 데이터가 완벽하게 수집되고 병합된 모든 프로필이 CRMID와 같은 개인 식별자를 통해 단일 개별 사용자를 나타낸다고 쉽게 가정할 수 있습니다. 그러나 특정 데이터가 서로 다른 여러 프로필을 하나의 프로필로 병합하려고 할 수 있는 시나리오가 있습니다(&quot;그래프 축소&quot;). 이러한 원치 않는 병합을 방지하려면 아이덴티티 그래프 연결 규칙을 통해 제공되는 구성을 사용하여 사용자에게 정확한 개인화를 제공할 수 있습니다.
+Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용하면 데이터가 완벽하게 수집되고 병합된 모든 프로필이 CRMID와 같은 개인 식별자를 통해 단일 개별 사용자를 나타낸다고 쉽게 가정할 수 있습니다. 그러나 특정 데이터가 서로 다른 여러 프로필을 하나의 프로필로 병합하려고 할 수 있는 시나리오가 있습니다(&quot;그래프 축소&quot;). 이러한 원치 않는 병합을 방지하기 위해 [!DNL Identity Graph Linking Rules]을(를) 통해 제공된 구성을 사용하고 사용자에게 정확한 개인화를 허용할 수 있습니다.
 
-ID 그래프 연결 규칙 사용에 대한 자세한 내용은 다음 비디오를 시청하십시오.
+[!DNL Identity Graph Linking Rules] 사용에 대한 추가 정보는 다음 비디오를 시청하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
 
 ## 시작하기
 
-다음 문서는 ID 그래프 연결 규칙을 이해하는 데 필수적입니다.
+다음 문서는 [!DNL Identity Graph Linking Rules]을(를) 이해하는 데 필수적입니다.
 
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
 * [구현 안내서](./implementation-guide.md)
@@ -45,7 +49,7 @@ ID 그래프 연결 규칙 사용에 대한 자세한 내용은 다음 비디오
 >title="그래프 축소 시나리오"
 >abstract="그래프가 “축소”되거나 여러 개인을 표현하는 데에는 다양한 이유가 있습니다."
 
-이 섹션에서는 ID 그래프 연결 규칙을 구성할 때 고려할 수 있는 예제 시나리오를 간략하게 설명합니다.
+이 섹션에서는 [!DNL Identity Graph Linking Rules]을(를) 구성할 때 고려할 수 있는 예제 시나리오를 간략하게 설명합니다.
 
 ### 공유 디바이스
 
@@ -61,7 +65,7 @@ ID 그래프 연결 규칙 사용에 대한 자세한 내용은 다음 비디오
 
 이러한 경우 제한이 활성화되지 않은 그래프 측면에서 단일 ECID가 여러 CRMID에 연결됩니다.
 
-ID 그래프 연결 규칙을 사용하여 다음을 수행할 수 있습니다.
+[!DNL Identity Graph Linking Rules]을(를) 사용하여 다음을 수행할 수 있습니다.
 
 * 로그인에 사용되는 ID를 고유 식별자로 구성합니다. 예를 들어 CRMID 네임스페이스가 있는 하나의 ID만 저장하도록 그래프를 제한하여 해당 CRMID를 공유 장치의 고유 식별자로 정의할 수 있습니다.
    * 이렇게 하면 CRMID가 ECID에 의해 병합되지 않도록 할 수 있습니다.
@@ -72,7 +76,7 @@ ID 그래프 연결 규칙을 사용하여 다음을 수행할 수 있습니다.
 
 ![잘못된 전자 메일 또는 전화 시나리오를 나타내는 다이어그램입니다.](../images/identity-settings/invalid-email-phone.png)
 
-ID 그래프 연결 규칙을 사용하여 다음을 수행할 수 있습니다.
+[!DNL Identity Graph Linking Rules]을(를) 사용하여 다음을 수행할 수 있습니다.
 
 * CRMID, 전화 번호 또는 이메일 주소를 고유 식별자로 구성하여 한 사람을 계정과 연결된 하나의 CRMID, 전화 번호 및/또는 이메일 주소로 제한합니다.
 
@@ -89,11 +93,11 @@ ID 그래프 연결 규칙을 사용하여 다음을 수행할 수 있습니다.
 
 ![ID 값이 잘못되었거나 잘못된 ID 데이터의 그래프 예입니다.](../images/identity-settings/bad-data.png)
 
-ID 그래프 연결 규칙을 사용하면 이러한 유형의 데이터로 인해 원하지 않는 프로필이 축소되는 것을 방지하기 위해 CRMID를 고유 식별자로 구성할 수 있습니다.
+[!DNL Identity Graph Linking Rules]을(를) 사용하면 이 유형의 데이터로 인해 원치 않는 프로필이 축소되는 것을 방지하기 위해 CRMID를 고유 식별자로 구성할 수 있습니다.
 
-## 아이덴티티 그래프 연결 규칙 {#identity-graph-linking-rules}
+## [!DNL Identity Graph Linking Rules] {#identity-graph-linking-rules}
 
-ID 그래프 연결 규칙을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
+[!DNL Identity Graph Linking Rules]을(를) 사용하여 다음을 수행할 수 있습니다.
 
 * 고유한 네임스페이스를 구성하여 각 사용자에 대해 단일 ID 그래프/병합된 프로필을 만듭니다. 이렇게 하면 서로 다른 두 개인 식별자가 하나의 ID 그래프로 병합되지 않습니다.
 * 우선 순위를 구성하여 온라인에서 인증된 이벤트를 사용자에게 연결
@@ -151,7 +155,7 @@ CRMID가 고유한 네임스페이스로 구성된 경우 ID 최적화 알고리
 
 ## 다음 단계
 
-ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참조하십시오.
+[!DNL Identity Graph Linking Rules]에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
 * [구현 안내서](./implementation-guide.md)

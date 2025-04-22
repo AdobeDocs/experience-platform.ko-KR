@@ -2,9 +2,9 @@
 title: 그래프 시뮬레이션 UI 안내서
 description: ID 서비스 UI에서 그래프 시뮬레이션을 사용하는 방법을 알아봅니다.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1563'
 ht-degree: 3%
 
 ---
@@ -18,8 +18,11 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* ID 그래프 연결 규칙은 현재 제한적 가용성입니다. 개발 샌드박스의 기능에 액세스하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+>ID 그래프 연결 규칙은 현재 제한된 가용성에 있으며 개발 샌드박스에서 모든 고객이 액세스할 수 있습니다.
 >
+>* **활성화 요구 사항**: 이 기능은 [!DNL Identity Settings]을(를) 구성하고 저장할 때까지 비활성 상태로 유지됩니다. 이 구성이 없으면 시스템이 동작을 변경하지 않고 계속 정상적으로 작동합니다.
+>* **중요 정보**: 이 제한된 가용성 단계에서 Edge 세그먼테이션을 수행하면 예기치 않은 세그먼트 멤버십 결과가 발생할 수 있습니다. 하지만 스트리밍 및 배치 세분화는 예상대로 작동합니다.
+>* **다음 단계**: 프로덕션 샌드박스에서 이 기능을 활성화하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
 >* [!DNL Graph Simulation] 도구에 액세스하려면 계정에 **ID 그래프 보기** 권한이 있어야 합니다. 자세한 내용은 특성 기반 액세스 제어의 사용 권한에 대한 [안내서](../../access-control/abac/ui/permissions.md)를 참조하십시오.
 
 [!DNL Graph Simulation]은(는) 특정 조합의 ID가 지정된 ID에서 ID 그래프가 작동하는 방식과 [ID 최적화 알고리즘](./identity-optimization-algorithm.md)을 구성하는 방법을 시뮬레이션하는 데 사용할 수 있는 ID 서비스 UI의 도구입니다.
@@ -182,7 +185,7 @@ Adobe Experience Platform UI에서 [!DNL Graph Simulation]에 액세스할 수 �
 
 이 문서를 읽으면 이제 [!DNL Graph Simulation] 도구를 사용하여 특정 규칙 및 구성 집합이 있는 경우 ID 데이터가 처리되는 방식을 더 잘 이해할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
-* [아이덴티티 그래프 연결 규칙 개요](./overview.md)
+* [[!DNL Identity Graph Linking Rules] 개요](./overview.md)
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
 * [구현 안내서](./implementation-guide.md)
 * [문제 해결 및 FAQ](./troubleshooting.md)

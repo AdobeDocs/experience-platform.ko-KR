@@ -2,20 +2,24 @@
 title: ID 그래프 연결 규칙 문제 해결 설명서
 description: ID 그래프 연결 규칙의 일반적인 문제를 해결하는 방법을 알아봅니다.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 0e7911e21c546fb40cd51f03a5a6d6a2aa751dec
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '3338'
+source-wordcount: '3375'
 ht-degree: 0%
 
 ---
 
-# ID 그래프 연결 규칙에 대한 문제 해결 안내서
+# [!DNL Identity Graph Linking Rules]에 대한 문제 해결 안내서
 
 >[!AVAILABILITY]
 >
->ID 그래프 연결 규칙은 현재 제한적 가용성입니다. 개발 샌드박스의 기능에 액세스하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+>ID 그래프 연결 규칙은 현재 제한된 가용성에 있으며 개발 샌드박스에서 모든 고객이 액세스할 수 있습니다.
+>
+>* **활성화 요구 사항**: 이 기능은 [!DNL Identity Settings]을(를) 구성하고 저장할 때까지 비활성 상태로 유지됩니다. 이 구성이 없으면 시스템이 동작을 변경하지 않고 계속 정상적으로 작동합니다.
+>* **중요 정보**: 이 제한된 가용성 단계에서 Edge 세그먼테이션을 수행하면 예기치 않은 세그먼트 멤버십 결과가 발생할 수 있습니다. 하지만 스트리밍 및 배치 세분화는 예상대로 작동합니다.
+>* **다음 단계**: 프로덕션 샌드박스에서 이 기능을 활성화하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
 
-ID 그래프 연결 규칙을 테스트하고 유효성을 검사할 때 데이터 수집 및 그래프 비헤이비어와 관련된 몇 가지 문제가 발생할 수 있습니다. ID 그래프 연결 규칙을 사용하여 작업할 때 발생할 수 있는 몇 가지 일반적인 문제를 해결하는 방법을 배우려면 이 문서를 참조하십시오.
+[!DNL Identity Graph Linking Rules]을(를) 테스트하고 유효성을 검사할 때 데이터 수집 및 그래프 동작과 관련된 문제가 발생할 수 있습니다. [!DNL Identity Graph Linking Rules]&#x200B;(으)로 작업할 때 발생할 수 있는 몇 가지 일반적인 문제를 해결하는 방법에 대해 알아보려면 이 문서를 참조하십시오.
 
 ## 데이터 수집 흐름 개요 {#data-ingestion-flow-overview}
 
@@ -55,7 +59,7 @@ ID 그래프 연결 규칙을 테스트하고 유효성을 검사할 때 데이�
 * 기본적으로 [AAID는 수집되지 않도록 차단됩니다](../guardrails.md#identity-namespace-ingestion).
 * [시스템 보호](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated) 때문에 ID가 제거되었습니다.
 
-ID 그래프 연결 규칙의 컨텍스트 내에서, 들어오는 이벤트에 고유 네임스페이스는 같지만 ID 값이 다른 두 개 이상의 ID가 있으므로 ID 서비스에서 레코드가 거부될 수 있습니다. 이 시나리오는 일반적으로 구현 오류로 인해 발생합니다.
+[!DNL Identity Graph Linking Rules]의 컨텍스트 내에서 들어오는 이벤트에 고유 네임스페이스는 같지만 ID 값이 다른 두 개 이상의 ID가 있으므로 ID 서비스에서 레코드가 거부될 수 있습니다. 이 시나리오는 일반적으로 구현 오류로 인해 발생합니다.
 
 두 가지 가정을 사용하여 다음 이벤트를 고려하십시오.
 
@@ -318,11 +322,11 @@ ID 및 그래프 수 등 ID 그래프의 상태에 대한 통찰력에 ID 대시
 
 >[!TIP]
 >
->위에 나열된 두 쿼리는 샌드박스가 공유 디바이스 중간 접근 방식에 대해 활성화되지 않은 경우 예상 결과를 산출하며 ID 그래프 연결 규칙과 다르게 동작합니다.
+>위에 나열된 두 쿼리는 샌드박스가 공유 장치 중간 접근 방식에 대해 활성화되지 않고 [!DNL Identity Graph Linking Rules]과(와) 다르게 동작하면 예상 결과를 산출합니다.
 
 ## 자주 묻는 질문 {#faq}
 
-이 섹션에서는 ID 그래프 연결 규칙에 대한 FAQ 응답 목록을 간략하게 설명합니다.
+이 섹션에서는 [!DNL Identity Graph Linking Rules]에 대한 FAQ 응답 목록을 간략하게 설명합니다.
 
 ## ID 최적화 알고리즘 {#identity-optimization-algorithm}
 
@@ -389,7 +393,7 @@ ID 및 그래프 수 등 ID 그래프의 상태에 대한 통찰력에 ID 대시
 
 ## 테스트
 
-ID 그래프 연결 규칙의 테스트 및 디버깅 기능에 대한 FAQ에 대한 답변을 보려면 이 섹션을 참조하십시오.
+[!DNL Identity Graph Linking Rules]의 테스트 및 디버깅 기능에 대한 FAQ에 대한 답변을 보려면 이 섹션을 참조하십시오.
 
 ### 개발 샌드박스 환경에서 테스트해야 하는 시나리오 중 일부는 무엇입니까?
 

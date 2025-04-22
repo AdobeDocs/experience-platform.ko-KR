@@ -2,9 +2,9 @@
 title: ID 그래프 연결 규칙에 대한 구현 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 45fdce7dc50b237edc511047ec150ecdd6adce50
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1835'
+source-wordcount: '1888'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,11 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->ID 그래프 연결 규칙은 현재 제한적 가용성입니다. 개발 샌드박스의 기능에 액세스하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+>ID 그래프 연결 규칙은 현재 제한된 가용성에 있으며 개발 샌드박스에서 모든 고객이 액세스할 수 있습니다.
+>
+>* **활성화 요구 사항**: 이 기능은 [!DNL Identity Settings]을(를) 구성하고 저장할 때까지 비활성 상태로 유지됩니다. 이 구성이 없으면 시스템이 동작을 변경하지 않고 계속 정상적으로 작동합니다.
+>* **중요 정보**: 이 제한된 가용성 단계에서 Edge 세그먼테이션을 수행하면 예기치 않은 세그먼트 멤버십 결과가 발생할 수 있습니다. 하지만 스트리밍 및 배치 세분화는 예상대로 작동합니다.
+>* **다음 단계**: 프로덕션 샌드박스에서 이 기능을 활성화하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
 
 >[!IMPORTANT]
 >
@@ -33,7 +37,7 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 
 ## 구현을 위한 사전 요구 사항 {#prerequisites-for-implementation}
 
-이 섹션에서는 데이터에 대한 ID 그래프 연결 규칙을 구현하기 전에 완료해야 하는 사전 요구 사항에 대해 설명합니다.
+이 단원에서는 데이터에 [!DNL Identity Graph Linking Rules]을(를) 구현하기 전에 완료해야 하는 필수 조건 단계를 간략하게 설명합니다.
 
 ### 고유한 네임스페이스
 
@@ -291,9 +295,9 @@ ID 설정 및 고유한 네임스페이스를 구현할 때 참조할 수 있는
 
 ## 다음 단계
 
-ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참조하십시오.
+[!DNL Identity Graph Linking Rules]에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
-* [아이덴티티 그래프 연결 규칙 개요](./overview.md)
+* [[!DNL Identity Graph Linking Rules] 개요](./overview.md)
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
 * [그래프 구성의 예](./example-configurations.md)
 * [문제 해결 및 FAQ](./troubleshooting.md)

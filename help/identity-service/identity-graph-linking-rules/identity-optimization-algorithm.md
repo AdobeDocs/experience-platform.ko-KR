@@ -2,10 +2,10 @@
 title: ID 최적화 알고리즘
 description: ID 서비스의 ID 최적화 알고리즘에 대해 알아봅니다.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 5%
+source-wordcount: '1617'
+ht-degree: 4%
 
 ---
 
@@ -18,7 +18,11 @@ ht-degree: 5%
 
 >[!AVAILABILITY]
 >
->ID 그래프 연결 규칙은 현재 제한적 가용성입니다. 개발 샌드박스의 기능에 액세스하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+>ID 그래프 연결 규칙은 현재 제한된 가용성에 있으며 개발 샌드박스에서 모든 고객이 액세스할 수 있습니다.
+>
+>* **활성화 요구 사항**: 이 기능은 [!DNL Identity Settings]을(를) 구성하고 저장할 때까지 비활성 상태로 유지됩니다. 이 구성이 없으면 시스템이 동작을 변경하지 않고 계속 정상적으로 작동합니다.
+>* **중요 정보**: 이 제한된 가용성 단계에서 Edge 세그먼테이션을 수행하면 예기치 않은 세그먼트 멤버십 결과가 발생할 수 있습니다. 하지만 스트리밍 및 배치 세분화는 예상대로 작동합니다.
+>* **다음 단계**: 프로덕션 샌드박스에서 이 기능을 활성화하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
 
 ID 최적화 알고리즘은 ID 그래프가 단일 사용자를 나타내도록 도와주는 ID 서비스에 대한 그래프 알고리즘으로, 실시간 고객 프로필에서 원치 않는 ID 병합을 방지합니다.
 
@@ -163,9 +167,9 @@ ECID는 인증되지 않은(익명) 이벤트를 저장하는 반면 CRMID는 �
 
 ## 다음 단계
 
-ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참조하십시오.
+[!DNL Identity Graph Linking Rules]에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
-* [아이덴티티 그래프 연결 규칙 개요](./overview.md)
+* [[!DNL Identity Graph Linking Rules] 개요](./overview.md)
 * [구현 안내서](./implementation-guide.md)
 * [그래프 구성의 예](./example-configurations.md)
 * [문제 해결 및 FAQ](./troubleshooting.md)

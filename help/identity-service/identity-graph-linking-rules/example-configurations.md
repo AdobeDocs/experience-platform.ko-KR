@@ -2,9 +2,9 @@
 title: 그래프 구성의 예
 description: ID 그래프 연결 규칙 및 ID 데이터 작업 시 발생할 수 있는 일반적인 그래프 시나리오에 대해 알아봅니다.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '2796'
+source-wordcount: '2849'
 ht-degree: 6%
 
 ---
@@ -18,14 +18,18 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->ID 그래프 연결 규칙은 현재 제한적 가용성입니다. 개발 샌드박스의 기능에 액세스하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+>ID 그래프 연결 규칙은 현재 제한된 가용성에 있으며 개발 샌드박스에서 모든 고객이 액세스할 수 있습니다.
+>
+>* **활성화 요구 사항**: 이 기능은 [!DNL Identity Settings]을(를) 구성하고 저장할 때까지 비활성 상태로 유지됩니다. 이 구성이 없으면 시스템이 동작을 변경하지 않고 계속 정상적으로 작동합니다.
+>* **중요 정보**: 이 제한된 가용성 단계에서 Edge 세그먼테이션을 수행하면 예기치 않은 세그먼트 멤버십 결과가 발생할 수 있습니다. 하지만 스트리밍 및 배치 세분화는 예상대로 작동합니다.
+>* **다음 단계**: 프로덕션 샌드박스에서 이 기능을 활성화하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
 
 >[!NOTE]
 >
 >* &quot;CRMID&quot; 및 &quot;loginID&quot;는 사용자 정의 네임스페이스입니다. 이 문서에서 &quot;CRMID&quot;는 개인 식별자이고 &quot;loginID&quot;는 지정된 사용자와 연관된 로그인 식별자입니다.
 >* 이 문서에 설명된 예제 그래프 시나리오를 시뮬레이션하려면 먼저 ID 기호가 &quot;CRMID&quot;인 네임스페이스와 ID 기호가 &quot;loginID&quot;인 네임스페이스를 두 개 사용자 정의 생성해야 합니다. ID 기호는 대/소문자를 구분합니다.
 
-이 문서에서는 ID 그래프 연결 규칙 및 ID 데이터 작업 시 발생할 수 있는 일반적인 시나리오의 그래프 구성 예제에 대해 간략히 설명합니다.
+이 문서에서는 [!DNL Identity Graph Linking Rules] 및 ID 데이터로 작업할 때 발생할 수 있는 일반적인 시나리오의 그래프 구성 예제에 대해 간략히 설명합니다.
 
 ## CRMID만
 
@@ -764,9 +768,9 @@ CRMID: Tom, ECID: 111
 
 ## 다음 단계
 
-ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참조하십시오.
+[!DNL Identity Graph Linking Rules]에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
-* [아이덴티티 그래프 연결 규칙 개요](./overview.md)
+* [[!DNL Identity Graph Linking Rules] 개요](./overview.md)
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
 * [구현 안내서](./implementation-guide.md)
 * [문제 해결 및 FAQ](./troubleshooting.md)
