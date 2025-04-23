@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: df047593a14ce6683dc04a6ba6518e6d0810c43d
+source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1286'
 ht-degree: 5%
 
 ---
@@ -243,6 +243,7 @@ ht-degree: 5%
          * [지원되는 변환 함수](./destination-sdk/functionality/destination-server/supported-functions.md)
          * [파일 서식 구성](./destination-sdk/functionality/destination-server/file-formatting.md)
       * 대상 구성 구성 요소 {#destination-configuration}
+         * [대상 데이터 유형 구성](./destination-sdk/functionality/destination-configuration/audience-data-type.md)
          * [고객 인증 구성](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
          * [OAuth2 인증](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [고객 데이터 필드](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
