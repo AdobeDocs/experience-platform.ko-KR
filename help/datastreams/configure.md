@@ -2,7 +2,7 @@
 title: 데이터스트림 만들기 및 구성
 description: 클라이언트측 Web SDK 통합 기능을 다른 Adobe 제품 및 서드파티 대상과 연결하는 방법에 대해 알아봅니다.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 637f7d68c0de93ede5ee808b68a0066f6abe52c9
 workflow-type: tm+mt
 source-wordcount: '2822'
 ht-degree: 48%
@@ -81,7 +81,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 웹 SDK�
 
 또한 원하는 각 XDM 필드가 스키마에 있는지 확인합니다. 그렇지 않으면 Adobe에서 제공한 `Environment Details` 필드 그룹을 스키마에 추가할 수 있습니다.
 
-### 고급 옵션 구성 {#@advanced-options}
+### 고급 옵션 구성 {#advanced-options}
 
 고급 구성 옵션을 표시하려면 **[!UICONTROL 고급 옵션]**&#x200B;을 선택합니다. 여기에서 IP 난독화, 자사 ID 쿠키 등과 같은 추가 데이터스트림 설정을 구성할 수 있습니다.
 

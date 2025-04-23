@@ -1,18 +1,18 @@
 ---
-title: Web SDK의 자사 디바이스 ID
+title: 웹 SDK에서 자사 디바이스 ID 사용
 description: Adobe Experience Platform Web SDK에서 자사 디바이스 ID(FPID)를 구성하는 방법에 대해 알아봅니다.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c7be2fff2cd94677b745e6ed095454bc46f8a37b
 workflow-type: tm+mt
-source-wordcount: '2058'
+source-wordcount: '2181'
 ht-degree: 0%
 
 ---
 
 
-# Web SDK의 자사 디바이스 ID
+# 웹 SDK에서 자사 디바이스 ID 사용
 
-Adobe Experience Platform Web SDK은 쿠키를 사용하여 웹 사이트 방문자에게 [Adobe Experience Cloud ID(ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html)를 할당하여 사용자 행동을 추적합니다. 쿠키 수명에 대한 브라우저 제한 사항을 고려하기 위해 대신 고유한 장치 식별자를 설정하고 관리하도록 선택할 수 있습니다. 이를 자사 장치 ID(`FPIDs`)라고 합니다.
+Adobe Experience Platform Web SDK은 쿠키를 사용하여 웹 사이트 방문자에게 [Adobe Experience Cloud ID(ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html)를 할당하여 사용자 행동을 추적합니다. 쿠키 수명에 대한 브라우저 제한을 해결하기 위해 자사 디바이스 ID(FPID)라고 하는 디바이스 식별자를 설정하고 관리할 수 있습니다.
 
 >[!NOTE]
 >
@@ -20,65 +20,30 @@ Adobe Experience Platform Web SDK은 쿠키를 사용하여 웹 사이트 방문
 
 >[!IMPORTANT]
 >
->자사 장치 ID는 Web SDK의 [타사 쿠키](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) 기능과 호환되지 않습니다.
->자사 디바이스 ID를 사용하거나 서드파티 쿠키를 사용할 수 있지만 두 기능을 동시에 사용할 수는 없습니다.
+>자사 장치 ID는 Web SDK의 [타사 쿠키](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) 기능과 호환되지 않습니다. 자사 디바이스 ID 또는 타사 쿠키를 동시에 사용할 수는 없습니다.
 
-이 문서에서는 웹 SDK 구현에 대한 자사 장치 ID를 구성하는 방법을 설명합니다.
+## 전제 조건 {#prerequisites}
 
-## 전제 조건
+시작하기 전에 ECID 및 `identityMap`을(를) 포함하여 웹 SDK에서 ID 데이터가 작동하는 방식을 잘 알고 있는지 확인하십시오. 자세한 내용은 웹 SDK의 [ID 데이터에 대한 개요](./overview.md)를 참조하십시오.
 
-이 안내서에서는 사용자가 ECID 및 `identityMap`의 역할을 포함하여 Experience Platform 웹 SDK에서 ID 데이터가 작동하는 방식을 잘 알고 있다고 가정합니다. 자세한 내용은 웹 SDK의 [ID 데이터에 대한 개요](./overview.md)를 참조하십시오.
+## 자사 디바이스 ID 형식 요구 사항 {#formatting-requirements}
 
-## 자사 디바이스 ID(FPID) 사용 {#using-fpid}
+Edge Network은 [UUIDv4 형식](https://datatracker.ietf.org/doc/html/rfc4122)을 준수하는 ID만 허용합니다. UUIDv4 형식이 아닌 장치 ID는 거부됩니다.
 
-자사 장치 ID([!DNL FPIDs])는 자사 쿠키를 사용하여 방문자를 추적합니다. 자사 쿠키는 DNS [!DNL CNAME] 또는 [!DNL JavaScript] 코드와 반대로 DNS [A 레코드](https://datatracker.ietf.org/doc/html/rfc1035)&#x200B;(IPv4의 경우) 또는 [AAAA 레코드](https://datatracker.ietf.org/doc/html/rfc3596)&#x200B;(IPv6의 경우)을 사용하는 서버를 사용하여 설정할 때 가장 효과적입니다.
+* [!DNL UUIDs]은(는) 고유하고 임의적이며 충돌 가능성이 거의 없습니다.
+* IP 주소 또는 기타 PII(개인 식별 정보)를 사용하여 [!DNL UUIDv4]을(를) 시드할 수 없습니다.
+* [!DNL UUIDs]을(를) 생성할 라이브러리는 모든 프로그래밍 언어에 사용할 수 있습니다.
 
->[!IMPORTANT]
->
->[!DNL A] 또는 [!DNL AAAA] 레코드는 쿠키 설정 및 추적에 대해서만 지원됩니다. 데이터 수집을 위한 기본 메서드는 [!DNL DNS] [!DNL CNAME]을(를) 통해 수행됩니다. 즉, [!DNL FPIDs]은(는) [!DNL A] 레코드 또는 [!DNL AAAA] 레코드를 사용하여 설정된 다음 [!DNL CNAME]을(를) 사용하여 Adobe으로 전송됩니다.
->
->[Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program)도 여전히 자사 데이터 수집에 대해 지원됩니다.
+## 고유한 서버를 사용하여 [!DNL FPID] 쿠키 설정 {#set-cookie-server}
 
-[!DNL FPID] 쿠키가 설정되면 해당 값을 가져와 이벤트 데이터가 수집될 때 Adobe으로 보낼 수 있습니다. 수집된 [!DNL FPIDs]은(는) 시드로 사용되어 [!DNL ECIDs]을(를) 생성합니다. 이 식별자는 Adobe Experience Cloud 애플리케이션에서 계속 기본 식별자입니다.
-
-웹 사이트 방문자의 [!DNL FPID]을(를) Edge Network으로 보내려면 해당 방문자의 `identityMap`에 [!DNL FPID]을(를) 포함해야 합니다. 자세한 내용은 이 문서의 아래쪽에서 `identityMap`](#identityMap)에서 FPID 사용 [에 대한 섹션을 참조하십시오.
-
-### 자사 디바이스 ID 형식 요구 사항 {#formatting-requirements}
-
-Edge Network에서는 [UUIDv4 형식](https://datatracker.ietf.org/doc/html/rfc4122)을(를) 준수하는 [!DNL IDs]만 허용합니다. [!DNL UUIDv4] 형식이 아닌 장치 ID가 거부됩니다.
-
-[!DNL UUID]을(를) 생성하면 거의 항상 고유한 임의 ID가 생성되며 충돌이 발생할 가능성은 거의 없습니다. IP 주소 또는 기타 개인 식별 정보([!DNL PII])를 사용하여 [!DNL UUIDv4]을(를) 시드할 수 없습니다. [!DNL UUIDs]은(는) 어디서나 사용할 수 있으며, 대부분의 프로그래밍 언어에서 라이브러리를 생성할 수 있습니다.
-
-## 데이터스트림 UI에서 자사 ID 쿠키 설정 {#setting-cookie-datastreams}
-
-쿠키 값을 읽고 ID 맵에 [!DNL FPID]을(를) 포함하는 대신 [!DNL FPID]이(가) 있을 수 있는 Datastreams 사용자 인터페이스에서 쿠키 이름을 지정할 수 있습니다.
-
->[!IMPORTANT]
->
->이 기능을 사용하려면 [자사 데이터 수집](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en)을 사용하도록 설정해야 합니다.
-
-데이터 스트림을 구성하는 방법에 대한 자세한 내용은 [데이터 스트림 설명서](../../datastreams/configure.md)를 참조하십시오.
-
-데이터 스트림을 구성할 때 **[!UICONTROL 자사 ID 쿠키]** 옵션을 사용하도록 설정하십시오. 이 설정은 Edge Network에 [ID 맵](#identityMap)에서 이 값을 조회하는 대신 자사 장치 ID를 조회할 때 지정된 쿠키를 참조하도록 합니다.
-
-Adobe Experience Cloud 사용 방법에 대한 자세한 내용은 [자사 쿠키](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ko-KR)에 대한 설명서를 참조하십시오.
-
-![자사 ID 쿠키 설정을 강조 표시하는 데이터스트림 구성을 표시하는 Experience Platform UI 이미지](../assets/first-party-id-datastreams.png)
-
-이 설정을 활성화할 때 ID가 저장될 쿠키의 이름을 제공해야 합니다.
-
-자사 ID를 사용하는 경우 타사 ID 동기화를 수행할 수 없습니다. 타사 ID 동기화는 [!DNL Visitor ID] 서비스와 해당 서비스에서 생성한 `UUID`을(를) 사용합니다. 자사 ID 기능을 사용하는 경우 [!DNL Visitor ID] 서비스를 사용하지 않고 [!DNL ECID]이(가) 생성되므로 타사 ID를 동기화할 수 없습니다.
-
-자사 ID를 사용하는 경우 Audience Manager 파트너 ID 동기화가 대부분 `UUIDs` 또는 `DIDs`을(를) 기반으로 하는 경우 파트너 플랫폼에서 활성화되도록 타깃팅된 [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager) 기능이 지원되지 않습니다. 자사 ID에서 파생된 [!DNL ECID]이(가) `UUID`에 연결되어 있지 않으므로 주소를 지정할 수 없습니다.
-
-## 자체 서버를 사용하여 쿠키 설정 {#set-cookie-server}
-
-소유한 서버를 사용하여 쿠키를 설정할 때 브라우저 정책으로 인해 쿠키가 제한되지 않도록 다양한 방법을 사용할 수 있습니다.
+자체 서버를 통해 쿠키를 설정할 때 브라우저 정책으로 인해 쿠키가 제한되지 않도록 다양한 방법을 사용할 수 있습니다.
 
 * 서버측 스크립팅 언어를 사용하여 쿠키 생성
 * 사이트의 하위 도메인 또는 다른 끝점에 대한 API 요청에 대한 응답으로 쿠키를 설정합니다.
 * [!DNL CMS]을(를) 사용하여 쿠키 생성
 * [!DNL CDN]을(를) 사용하여 쿠키 생성
+
+또한 항상 도메인의 `A` 레코드 아래에 FPID 쿠키를 설정해야 합니다.
 
 >[!IMPORTANT]
 >
@@ -126,7 +91,101 @@ Edge Network에서 [!DNL FPID] 쿠키의 값을 읽도록 선택하는 경우 `H
 
 `SameSite` 특성이 지정되지 않은 경우 일부 브라우저의 기본 설정은 이제 `SameSite=Lax`입니다.
 
-## `identityMap`에서 FPID 사용 {#identityMap}
+## 계층 {#id-hierarchy}
+
+[!DNL ECID]과(와) [!DNL FPID]이(가) 모두 있으면 [!DNL ECID]이(가) 사용자를 식별하는 우선 순위를 갖습니다. 이렇게 하면 기존 [!DNL ECID]이(가) 브라우저 쿠키 저장소에 있는 경우 기본 식별자로 유지되며 기존 방문자 수가 영향을 받지 않습니다. 기존 사용자의 경우 [!DNL ECID]이(가) 만료되거나 브라우저 정책 또는 수동 프로세스의 결과로 삭제될 때까지 [!DNL FPID]이(가) 기본 ID가 되지 않습니다.
+
+ID는 다음 순서로 우선 순위가 지정됩니다.
+
+1. `identityMap`에 포함된 [!DNL ECID]
+1. [!DNL ECID]이(가) 쿠키에 저장됨
+1. `identityMap`에 포함된 [!DNL FPID]
+1. [!DNL FPID]이(가) 쿠키에 저장됨
+
+
+## 자사 디바이스 ID로 마이그레이션 {#migrating-to-fpid}
+
+이전 구현에서 자사 디바이스 ID로 마이그레이션하는 경우 낮은 수준에서 전환이 어떻게 보이는지 시각화하기 어려울 수 있습니다.
+
+이 프로세스를 설명하는 데 도움이 되도록 이전에 사이트를 방문한 고객이 포함된 시나리오와 [!DNL FPID] 마이그레이션이 Adobe 솔루션에서 해당 고객을 식별하는 방법에 미칠 영향을 고려하십시오.
+
+![FPID로 마이그레이션한 후 방문 간에 고객의 ID 값이 어떻게 업데이트되는지 보여 주는 다이어그램](../assets/identity/tracking/visits.png)
+
+>[!IMPORTANT]
+>
+>`ECID` 쿠키는 항상 `FPID`보다 우선 순위가 지정됩니다.
+
+| ‍ | 설명 |
+| --- | --- |
+| 첫 방문 | [!DNL FPID] 쿠키 설정을 아직 시작하지 않았다고 가정해 보십시오. [AMCV 쿠키](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8)에 포함된 [!DNL ECID]은(는) 방문자를 식별하는 데 사용되는 식별자입니다. |
+| 두 번째 방문 | [!DNL FPID] 솔루션의 롤아웃이 시작되었습니다. 기존 [!DNL ECID]이(가) 여전히 있으며 방문자 식별을 위한 기본 식별자로 유지됩니다. |
+| 세 번째 방문 | 두 번째와 세 번째 방문 사이에 브라우저 정책으로 인해 [!DNL ECID]이(가) 삭제될 만큼 충분한 시간이 경과되었습니다. 그러나 [!DNL FPID]이(가) [!DNL DNS] [!DNL A] 레코드를 사용하여 설정되었으므로 [!DNL FPID]이(가) 유지됩니다. [!DNL FPID]은(는) 이제 기본 ID로 간주되며 최종 사용자 장치에 기록된 [!DNL ECID]을(를) 시드하는 데 사용됩니다. 이제 사용자는 Adobe Experience Platform 및 Experience Cloud 솔루션의 새 방문자로 간주됩니다. |
+| 네 번째 방문 | 세 번째와 네 번째 방문 사이에 브라우저 정책으로 인해 [!DNL ECID]이(가) 삭제될 만큼 충분한 시간이 경과되었습니다. 이전 방문과 마찬가지로 [!DNL FPID]은(는) 설정된 방식으로 인해 유지됩니다. 이번에는 이전 방문과 동일한 [!DNL ECID]이(가) 생성됩니다. 사용자는 Experience Platform 및 Experience Cloud 솔루션 전체에서 이전 방문과 동일한 사용자로 표시됩니다. |
+| 다섯 번째 방문 | 네 번째와 다섯 번째 방문 사이에 최종 사용자는 브라우저의 모든 쿠키를 지웠습니다. 새 [!DNL FPID]이(가) 생성되고 새 [!DNL ECID] 만들기를 시드하는 데 사용됩니다. 이제 사용자는 Adobe Experience Platform 및 Experience Cloud 솔루션의 새 방문자로 간주됩니다. |
+
+{style="table-layout:auto"}
+
+## 자사 디바이스 ID(FPID) 사용 {#using-fpid}
+
+자사 장치 ID([!DNL FPIDs])는 자사 쿠키를 사용하여 방문자를 추적합니다. 자사 쿠키는 DNS [!DNL CNAME] 또는 [!DNL JavaScript] 코드와 반대로 DNS [A 레코드](https://datatracker.ietf.org/doc/html/rfc1035)&#x200B;(IPv4의 경우) 또는 [AAAA 레코드](https://datatracker.ietf.org/doc/html/rfc3596)&#x200B;(IPv6의 경우)을 사용하는 서버를 사용하여 설정할 때 가장 효과적입니다.
+
+>[!IMPORTANT]
+>
+>[!DNL A] 또는 [!DNL AAAA] 레코드는 쿠키 설정 및 추적에 대해서만 지원됩니다. 데이터 수집을 위한 기본 메서드는 [!DNL DNS CNAME]을(를) 통해 수행됩니다. [!DNL FPIDs]은(는) [!DNL A] 또는 [!DNL AAAA] 레코드를 사용하여 설정되었으며 [!DNL CNAME]을(를) 사용하여 Adobe으로 전송됩니다.
+>
+>[Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program)도 자사 데이터 수집에 대해 지원됩니다.
+
+[!DNL FPID] 쿠키가 설정되면 해당 값을 가져와 이벤트 데이터가 수집될 때 Adobe으로 보낼 수 있습니다. 수집된 [!DNL FPIDs]은(는) Adobe Experience Cloud 애플리케이션에서 기본 식별자인 [!DNL ECIDs]을(를) 생성하는 데 사용됩니다.
+
+다음 두 가지 방법으로 [!DNL FPIDs]을(를) 사용할 수 있습니다.
+
+* **[메서드 1](#setting-cookie-datastreams)**: 웹 SDK 호출에 대해 [!DNL CNAME]을(를) 구성하고 데이터 스트림 구성에 [!DNL FPID] 쿠키의 이름을 포함하십시오.
+* **[메서드 2](#identityMap)**: ID 맵에 [!DNL FPID]을(를) 포함합니다. 자세한 내용은 이 문서의 아래쪽에서 `identityMap`](#identityMap)에서 FPID 사용 [에 대한 섹션을 참조하십시오.
+
+### 방법 1: 웹 SDK 호출에 대한 CNAME을 구성하고 데이터 스트림에서 자사 ID 쿠키를 설정합니다 {#setting-cookie-datastreams}
+
+도메인에서 [!DNL FPID] 쿠키를 설정하려면 웹 SDK 호출에 대해 고유한 [!DNL CNAME]&#x200B;(표준 이름)을 구성한 다음 데이터 스트림 구성에서 [!DNL First Party ID Cookie] 기능을 활성화해야 합니다.
+
+**1단계. 웹 SDK 배포 도메인에 대한 CNAME 구성**
+
+DNS의 [!DNL CNAME] 레코드를 사용하면 한 도메인 이름에서 다른 도메인 이름으로 별칭을 만들 수 있습니다. 이렇게 하면 서드파티 서비스가 사용자 도메인의 일부인 것처럼 표시되어 쿠키를 자사 쿠키처럼 보이게 할 수 있습니다.
+
+**예**
+
+웹 사이트 `mywebsite.com`에서 Web SDK을 구현하는 것이 좋습니다. 웹 SDK이 데이터를 Edge Network으로 `edge.adobedc.net` 도메인으로 보냅니다.
+
+| [!DNL CNAME] 없이 | [!DNL CNAME] 사용 |
+|---------|----------|
+| <ul><li>웹 사이트 `mywebsite.com`은(는) 웹 SDK 도메인 `edge.adobedc.net`을(를) 사용하여 Edge Network에 데이터를 보냅니다.</li><li>`edge.adobedc.net`에서 설정한 쿠키는 `mywebsite.com` 도메인에서 가져오지 않으므로 타사 쿠키로 간주됩니다. 사용자 브라우저에 따라 서드파티 쿠키가 차단될 수 있으며, 귀하의 데이터가 Edge Network에 도달하지 않습니다.</li></ul> | <ul><li>`metrics.mywebsite.com`과(와) 같이 웹 SDK을 배포하는 하위 도메인을 만듭니다.</li><li>`metrics.mywebsite.com`이(가) `edge.adobedc.net`을(를) 가리키도록 DNS 시스템에서 [!DNL CNAME] 레코드를 설정했습니다.</li><li>웹 사이트에서 `metrics.mywebsite.com`을(를) 통해 브라우저에 쿠키를 설정하면 `edge.adobedc.net`(타사) 대신 `mywebsite.com`(자사)에서 쿠키가 제공되는 것으로 표시됩니다. 이렇게 하면 자사 ID 쿠키가 차단될 가능성이 줄어들어 보다 정확한 데이터 수집이 보장됩니다.</li></ul> |
+
+[!DNL CNAME]을(를) 사용하여 자사 데이터 수집을 사용하도록 설정하면 데이터 수집 끝점에 대한 요청 시 도메인에 대한 모든 쿠키가 전송됩니다.
+
+이 기능을 사용하려면 특정 하위 도메인 대신 도메인의 최상위 수준에서 [!DNL FPID] 쿠키를 설정해야 합니다. 하위 도메인에서 설정하면 쿠키 값이 Edge Network으로 전송되지 않으며 [!DNL FPID] 솔루션이 의도한 대로 작동하지 않습니다.
+
+>[!IMPORTANT]
+>
+>이 기능을 사용하려면 [자사 데이터 수집](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en)을 사용하도록 설정해야 합니다.
+
+**2단계. 데이터 스트림에 대해**[!UICONTROL &#x200B;자사 ID 쿠키&#x200B;]**기능을 사용하도록 설정**
+
+CNAME을 구성한 후에는 데이터 스트림에 대해 **[!UICONTROL 자사 ID 쿠키]** 옵션을 활성화해야 합니다. 이 설정은 Edge Network에 [ID 맵](#identityMap)에서 이 값을 조회하는 대신 자사 장치 ID를 조회할 때 지정된 쿠키를 참조하도록 지시합니다.
+
+데이터스트림을 설정하는 방법에 대한 자세한 내용은 [데이터스트림 구성 설명서](../../datastreams/configure.md#advanced-options)를 참조하세요.
+
+Adobe Experience Cloud 사용 방법에 대한 자세한 내용은 [자사 쿠키](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ko-KR)에 대한 설명서를 참조하십시오.
+
+![자사 ID 쿠키 설정을 강조 표시하는 데이터 스트림 구성을 표시하는 플랫폼 UI 이미지](../assets/first-party-id-datastreams.png)
+
+이 설정을 활성화할 때 [!DNL FPID]이(가) 저장될 쿠키의 이름을 제공해야 합니다.
+
+>[!NOTE]
+>
+>자사 ID를 사용하는 경우 타사 ID 동기화를 수행할 수 없습니다. 타사 ID 동기화는 [!DNL Visitor ID] 서비스와 해당 서비스에서 생성한 `UUID`을(를) 사용합니다. 자사 ID 기능을 사용하는 경우 [!DNL Visitor ID] 서비스를 사용하지 않고 [!DNL ECID]이(가) 생성되므로 타사 ID를 동기화할 수 없습니다.
+><br> 자사 ID를 사용하는 경우 Audience Manager 파트너 ID 동기화가 대부분 `UUIDs` 또는 `DIDs`을(를) 기반으로 하는 경우 파트너 플랫폼에서 활성화되도록 타깃팅된 [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager) 기능이 지원되지 않습니다. 자사 ID에서 파생된 [!DNL ECID]이(가) `UUID`에 연결되어 있지 않으므로 주소를 지정할 수 없습니다.
+
+## 방법 2: `identityMap`에서 FPID 사용 {#identityMap}
+
+[!DNL FPID]을(를) 자신의 쿠키에 저장하는 대신 ID 맵을 통해 [!DNL FPID]을(를) Edge Network으로 보낼 수 있습니다.
 
 다음은 `identityMap`에서 [!DNL FPID]을(를) 설정하는 방법의 예입니다.
 
@@ -220,49 +279,6 @@ Edge Network에서 [!DNL FPID] 쿠키의 값을 읽도록 선택하는 경우 `H
 }
 ```
 
-## 자체 도메인에서 FPID 설정 {#setting-fpid-domain}
-
-ID 맵에서 [!DNL FPID]을(를) 설정하는 것 외에도 자사 데이터 컬렉션 [!DNL CNAME]이(가) 구성되어 있는 경우 자체 도메인에 [!DNL FPID] 쿠키를 설정할 수 있습니다.
-
-[!DNL CNAME]을(를) 사용하여 자사 데이터 수집을 사용하도록 설정하면 데이터 수집 끝점에 대한 요청 시 도메인에 대한 모든 쿠키가 전송됩니다.
-
-Adobe의 데이터 수집 목적과 관련이 없는 모든 쿠키가 삭제됩니다. [!DNL FPID]의 경우 데이터 스트림 구성에서 [!DNL FPID] 쿠키의 이름을 지정할 수 있습니다. 이렇게 하면 Edge Network이 ID 맵에서 [!DNL FPID]을(를) 찾는 대신 [!DNL FPID] 쿠키의 내용을 읽게 됩니다.
-
-이 기능을 사용하려면 특정 하위 도메인 대신 도메인의 최상위 수준에서 [!DNL FPID]을(를) 설정해야 합니다. 하위 도메인에서 설정하면 쿠키 값이 Edge Network으로 전송되지 않으며 [!DNL FPID] 솔루션이 의도한 대로 작동하지 않습니다.
-
-## 계층 {#id-hierarchy}
-
-[!DNL ECID]과(와) [!DNL FPID]이(가) 모두 있으면 [!DNL ECID]이(가) 사용자를 식별하는 우선 순위를 갖습니다. 이렇게 하면 기존 [!DNL ECID]이(가) 브라우저 쿠키 저장소에 있는 경우 기본 식별자로 유지되며 기존 방문자 수가 영향을 받지 않습니다. 기존 사용자의 경우 [!DNL ECID]이(가) 만료되거나 브라우저 정책 또는 수동 프로세스의 결과로 삭제될 때까지 [!DNL FPID]이(가) 기본 ID가 되지 않습니다.
-
-ID는 다음 순서로 우선 순위가 지정됩니다.
-
-1. `identityMap`에 포함된 [!DNL ECID]
-1. [!DNL ECID]이(가) 쿠키에 저장됨
-1. `identityMap`에 포함된 [!DNL FPID]
-1. [!DNL FPID]이(가) 쿠키에 저장됨
-
-## 자사 디바이스 ID로 마이그레이션 {#migrating-to-fpid}
-
-이전 구현에서 자사 디바이스 ID로 마이그레이션하는 경우 낮은 수준에서 전환이 어떻게 보이는지 시각화하기 어려울 수 있습니다.
-
-이 프로세스를 설명하는 데 도움이 되도록 이전에 사이트를 방문한 고객이 포함된 시나리오와 [!DNL FPID] 마이그레이션이 Adobe 솔루션에서 해당 고객을 식별하는 방법에 미칠 영향을 고려하십시오.
-
-![FPID로 마이그레이션한 후 방문 간에 고객의 ID 값이 어떻게 업데이트되는지 보여 주는 다이어그램](../assets/identity/tracking/visits.png)
-
->[!IMPORTANT]
->
->`ECID` 쿠키는 항상 `FPID`보다 우선 순위가 지정됩니다.
-
-| ‍ | 설명 |
-| --- | --- |
-| 첫 방문 | [!DNL FPID] 쿠키 설정을 아직 시작하지 않았다고 가정해 보십시오. [AMCV 쿠키](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8)에 포함된 [!DNL ECID]은(는) 방문자를 식별하는 데 사용되는 식별자입니다. |
-| 두 번째 방문 | [!DNL FPID] 솔루션의 롤아웃이 시작되었습니다. 기존 [!DNL ECID]이(가) 여전히 있으며 방문자 식별을 위한 기본 식별자로 유지됩니다. |
-| 세 번째 방문 | 두 번째와 세 번째 방문 사이에 브라우저 정책으로 인해 [!DNL ECID]이(가) 삭제될 만큼 충분한 시간이 경과되었습니다. 그러나 [!DNL FPID]이(가) [!DNL DNS] [!DNL A] 레코드를 사용하여 설정되었으므로 [!DNL FPID]이(가) 유지됩니다. [!DNL FPID]은(는) 이제 기본 ID로 간주되며 최종 사용자 장치에 기록된 [!DNL ECID]을(를) 시드하는 데 사용됩니다. 이제 사용자는 Adobe Experience Platform 및 Experience Cloud 솔루션의 새 방문자로 간주됩니다. |
-| 네 번째 방문 | 세 번째와 네 번째 방문 사이에 브라우저 정책으로 인해 [!DNL ECID]이(가) 삭제될 만큼 충분한 시간이 경과되었습니다. 이전 방문과 마찬가지로 [!DNL FPID]은(는) 설정된 방식으로 인해 유지됩니다. 이번에는 이전 방문과 동일한 [!DNL ECID]이(가) 생성됩니다. 사용자는 Experience Platform 및 Experience Cloud 솔루션 전체에서 이전 방문과 동일한 사용자로 표시됩니다. |
-| 다섯 번째 방문 | 네 번째와 다섯 번째 방문 사이에 최종 사용자는 브라우저의 모든 쿠키를 지웠습니다. 새 [!DNL FPID]이(가) 생성되고 새 [!DNL ECID] 만들기를 시드하는 데 사용됩니다. 이제 사용자는 Adobe Experience Platform 및 Experience Cloud 솔루션의 새 방문자로 간주됩니다. |
-
-{style="table-layout:auto"}
-
 ## FAQ {#faq}
 
 다음은 자사 디바이스 ID에 대한 FAQ 응답 목록입니다.
@@ -279,6 +295,6 @@ ID는 다음 순서로 우선 순위가 지정됩니다.
 
 현재 Web SDK만 자사 디바이스 ID를 지원합니다.
 
-### 자사 디바이스 ID가 Experience Platform 또는 Experience Cloud 솔루션에 저장됩니까?
+### 자사 디바이스 ID가 플랫폼 또는 Experience Cloud 솔루션에 저장됩니까?
 
 [!DNL FPID]을(를) 사용하여 [!DNL ECID]을(를) 시드하면 `identityMap`에서 삭제되고 생성된 [!DNL ECID]&#x200B;(으)로 대체됩니다. [!DNL FPID]이(가) Adobe Experience Platform 또는 Experience Cloud 솔루션에 저장되지 않았습니다.
