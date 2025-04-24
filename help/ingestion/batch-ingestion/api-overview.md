@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 일괄 처리 수집 API 안내서
 description: 이 문서에서는 Adobe Experience Platform용 일괄 처리 수집 API를 사용하는 개발자를 위한 포괄적인 안내서를 제공합니다.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0e484dffa38d454561f9d67c6bea92f426d3515d
 workflow-type: tm+mt
-source-wordcount: '2383'
-ht-degree: 5%
+source-wordcount: '2435'
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,9 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->다음 단계는 작은 파일(256MB 이하)에 적용할 수 있습니다. 게이트웨이 시간 초과 또는 요청 본문 크기 오류가 있는 경우 대용량 파일 업로드로 전환해야 합니다.
+>- 다음 단계는 작은 파일(256MB 이하)에 적용할 수 있습니다. 게이트웨이 시간 초과 또는 요청 본문 크기 오류가 있는 경우 대용량 파일 업로드로 전환해야 합니다.
+>
+>- 일괄 처리 수집을 위한 입력으로 다중 라인 JSON 대신 단일 라인 JSON을 사용합니다. 한 줄 JSON을 사용하면 시스템에서 하나의 입력 파일을 여러 청크로 분할하여 병렬로 처리할 수 있으므로 성능이 향상되지만 여러 줄 JSON은 분할할 수 없습니다. 이를 통해 데이터 처리 비용을 크게 줄이고 일괄 처리 지연 시간을 개선할 수 있습니다.
 
 ### 일괄 처리 만들기
 
@@ -915,11 +917,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## 부록
 
-다음 섹션에서는 일괄 처리 수집을 사용하여 Experience Platform에서 데이터를 수집하기 위한 추가 정보를 제공합니다.
+다음 섹션에는 일괄 처리 수집을 사용하여 Experience Platform에서 데이터를 수집하기 위한 추가 정보가 포함되어 있습니다.
 
 ### 일괄 처리 수집을 위한 데이터 변환
 
-데이터 파일을 [!DNL Experience Platform](으)로 수집하려면 파일의 계층 구조가 업로드할 데이터 세트와 연결된 [XDM(Experience Data Model)](../../xdm/home.md) 스키마를 준수해야 합니다.
+데이터 파일을 [!DNL Experience Platform]&#x200B;(으)로 수집하려면 파일의 계층 구조가 업로드할 데이터 세트와 연결된 [XDM(Experience Data Model)](../../xdm/home.md) 스키마를 준수해야 합니다.
 
 XDM 스키마를 준수하도록 CSV 파일을 매핑하는 방법에 대한 정보는 올바른 형식의 JSON 데이터 파일의 예제와 함께 [샘플 변형](../../etl/transformations.md) 문서에서 확인할 수 있습니다. 문서에 제공된 샘플 파일은 여기에서 찾을 수 있습니다.
 
