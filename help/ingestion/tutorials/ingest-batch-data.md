@@ -5,7 +5,7 @@ title: Experience Platform에 데이터 수집
 type: Tutorial
 description: Adobe Experience Platform을 사용하면 데이터를 Parquet 파일 또는 알려진 XDM(Experience Data Model) 스키마를 준수하는 데이터의 형태로 배치 파일로 쉽게 가져올 수 있습니다.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Adobe Experience Platform을 사용하면 데이터를 [!DNL Experience Platform
 
 ![데이터 집합 활동](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## [!DNL Real-Time Customer Profile]에 대한 데이터 집합 사용
+## [!DNL Real-Time Customer Profile]에 대한 데이터 집합 사용 {#enable-for-profile}
 
 데이터 세트는 데이터를 [!DNL Experience Platform]&#x200B;(으)로 수집하는 데 사용되며, 이 데이터는 궁극적으로 개인을 식별하고 여러 소스에서 가져온 정보를 결합하는 데 사용됩니다. 결합된 정보를 [!DNL Real-Time Customer Profile]이라고 합니다. [!DNL Experience Platform]이(가) [!DNL Real-Time Profile]에 포함해야 하는 정보를 알 수 있도록 **[!UICONTROL 프로필]** 전환을 사용하여 데이터 세트를 포함용으로 표시할 수 있습니다.
 

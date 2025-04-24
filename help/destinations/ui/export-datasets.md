@@ -3,9 +3,9 @@ title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
-source-wordcount: '2703'
+source-wordcount: '2732'
 ht-degree: 7%
 
 ---
@@ -104,7 +104,10 @@ Experience Platform 카탈로그의 일부 파일 기반 대상은 대상 활성
 
 ## 전제 조건 {#prerequisites}
 
-데이터 세트를 클라우드 저장소 대상으로 내보내려면 대상에 성공적으로 [연결](./connect-destination.md)해야 합니다. 아직 수행하지 않았다면 [대상 카탈로그](../catalog/overview.md)(으)로 이동하여 지원되는 대상을 탐색하고 사용할 대상을 구성합니다.
+데이터 세트를 내보내려면 다음 전제 조건을 참고하십시오.
+
+* 데이터 세트를 클라우드 저장소 대상으로 내보내려면 대상에 성공적으로 [연결](./connect-destination.md)해야 합니다. 아직 수행하지 않았다면 [대상 카탈로그](../catalog/overview.md)(으)로 이동하여 지원되는 대상을 탐색하고 사용할 대상을 구성합니다.
+* 실시간 고객 프로필에서 사용하려면 프로필 데이터 세트를 활성화해야 합니다. 이 옵션을 사용하도록 설정하는 방법에 대해 [자세히 읽어보세요](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile).
 
 ### 필요한 권한 {#permissions}
 
