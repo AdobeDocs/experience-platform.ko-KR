@@ -3,9 +3,9 @@ title: 이벤트 전달 시작
 description: Adobe Experience Platform에서 이벤트 전달 사용을 시작하려면 이 단계별 자습서를 따르십시오.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '892'
 ht-degree: 25%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform에서 이벤트 전달을 사용하려면 다음 세 �
 
 * [Adobe Experience Platform 웹 SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [Edge Network Server API](/help/server-api/overview.md)
+* [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)
 
 >[!NOTE]
 >Experience Platform Web SDK 및 Experience Platform Mobile SDK에서는 Adobe Experience Platform의 태그를 통해 배포할 필요가 없습니다. 그러나 태그를 사용하여 이러한 SDK를 배포하는 것이 좋습니다.
@@ -35,7 +35,7 @@ Edge 네트워크로 데이터를 전송하면 Adobe 솔루션을 전환하여 �
 
 * Adobe Real-Time CDP Connections, Prime 또는 Ultimate(가격 책정은 Adobe 계정 팀에 문의)
 * Adobe Experience Platform의 이벤트 전달
-* Edge Network으로 데이터를 전송하도록 구성된 Adobe Experience Platform Web SDK, Mobile SDK 또는 Edge Network Server API
+* Adobe Experience Platform Web SDK, Mobile SDK 또는 Edge Network으로 데이터를 전송하도록 구성된 Edge Network API
 * XDM(Experience Data Model)에 데이터 매핑 (태그를 사용하여 이 매핑을 수행할 수 있음)
 
 ## XDM 스키마 만들기

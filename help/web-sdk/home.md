@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 소프트웨어 개발 키트(SDK) 개요
 description: Adobe Experience Platform Web SDK을 사용하여 Experience Platform 기능을 웹 사이트에 통합하는 방법에 대해 알아봅니다.
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '602'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Experience Platform 웹 SDK은 Adobe Experience Platform Edge Network의 일부�
 
 * **[Experience Platform Web SDK](#overview)**: Adobe 기술 배포를 단순화하기 위한 JavaScript 라이브러리 및 태그 확장입니다.
 * **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/)**: 새로운 배포 방법에 대한 v5 Mobile SDK의 확장입니다.
-* **[Edge Network API](../server-api/overview.md)**: 데이터 수집, 개인화, 광고 및 마케팅 사용 사례를 위한 서버측 API입니다. 서버, IoT 디바이스, 셋톱 박스 및 기타 디바이스에서 사용할 수 있습니다.
+* **[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)**: 데이터 수집, 개인화, 광고 및 마케팅 사용 사례를 위한 서버측 API입니다. 서버, IoT 디바이스, 셋톱 박스 및 기타 디바이스에서 사용할 수 있습니다.
 
 Edge Network은 모든 지정 가능한 채널에서 지연 시간이 짧은 데이터 수집, 플러그형 컴퓨팅 및 신속한 데이터 활성화를 제공합니다. 웹, 모바일 및 서버측 채널을 위한 단일 통합 SDK을 제공하여 데이터를 공통 Adobe 도메인(`adobedc.net`)으로 전송하고 데이터 및 경험 전달을 위한 단일 페이로드를 받습니다.
 

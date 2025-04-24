@@ -3,7 +3,7 @@ title: Adobe TikTok 웹 이벤트 API 확장 통합
 description: 이 Adobe Experience Platform 웹 이벤트 API를 사용하면 TikTok과 웹 사이트 상호 작용을 직접 공유할 수 있습니다.
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 2%
@@ -12,13 +12,13 @@ ht-degree: 2%
 
 # [!DNL TikTok] 웹 이벤트 API 확장 개요
 
-[!DNL TikTok] Edge Network API는 웹 사이트에서 사용자 작업에 대한 정보를 [!DNL TikTok]과(와) 직접 공유할 수 있는 보안 [이벤트 서버 API](/help/server-api/overview.md) 인터페이스입니다. 이벤트 전달 규칙을 사용하여 [!DNL TikTok] 웹 이벤트 API 확장을 사용하여 [!DNL Adobe Experience Platform Edge Network]에서 [!DNL TikTok](으)로 데이터를 보낼 수 있습니다.
+[!DNL TikTok] 이벤트 API는 웹 사이트에서 사용자 작업에 대한 정보를 [!DNL TikTok]과(와) 직접 공유할 수 있는 보안 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) 인터페이스입니다. 이벤트 전달 규칙을 사용하여 [!DNL TikTok] 웹 이벤트 API 확장을 사용하여 [!DNL Adobe Experience Platform Edge Network]에서 [!DNL TikTok]&#x200B;(으)로 데이터를 보낼 수 있습니다.
 
 ## [!DNL TikTok]개 필수 구성 요소 {#prerequisites}
 
 [!DNL TikTok] 이벤트 API를 사용하도록 [!DNL TikTok] 웹 이벤트 API를 구성하려면 [!DNL TikTok] 픽셀 코드와 액세스 토큰을 생성해야 합니다.
 
-파트너 설정을 사용하여 [!DNL TikTok]픽셀을 만들려면 비즈니스 계정에 대해 올바른 [!DNL TikTok]이(가) 있어야 합니다. 아직 계정이 없는 경우 등록하고 계정을 만들려면 [[!DNL TikTok] 비즈니스 등록 페이지](https://www.tiktok.com/business/en-US/solutions/business-account)(으)로 이동하십시오.
+파트너 설정을 사용하여 [!DNL TikTok]픽셀을 만들려면 비즈니스 계정에 대해 올바른 [!DNL TikTok]이(가) 있어야 합니다. 아직 계정이 없는 경우 등록하고 계정을 만들려면 [[!DNL TikTok] 비즈니스 등록 페이지](https://www.tiktok.com/business/en-US/solutions/business-account)&#x200B;(으)로 이동하십시오.
 
 파트너 설정을 사용하여 [!DNL TikTok]픽셀을 설정하려면 비즈니스 계정에 로그인해야 합니다. 이렇게 하려면 아래 단계를 수행합니다.
 
@@ -82,7 +82,7 @@ ht-degree: 2%
 | 사용자 에이전트 | 사용자 디바이스에서 해시되지 않은 사용자 에이전트. |
 | 이메일 | 전환 이벤트와 연계된 연락처의 이메일 주소. |
 | 휴대폰 | 해싱하기 전에 전화번호는 E164 형식 [+][국가 코드][지역 코드][local phone number]여야 합니다. |
-| 쿠키 ID | Pixel SDK를 사용하는 경우 쿠키가 활성화되면 `_ttp` 쿠키에 고유 식별자가 자동으로 저장됩니다. 이 필드에 대해 `_ttp` 값을 추출하여 사용할 수 있습니다. |
+| 쿠키 ID | Pixel SDK을 사용하는 경우 쿠키가 활성화되면 `_ttp` 쿠키에 고유 식별자가 자동으로 저장됩니다. 이 필드에 대해 `_ttp` 값을 추출하여 사용할 수 있습니다. |
 | 외부 ID | 사용자 ID, 외부 쿠키 ID 등과 같은 모든 고유 식별자는 SHA256으로 해시해야 합니다. |
 | TikTok 클릭 ID | [!DNL TikTok]에서 광고를 선택할 때마다 랜딩 페이지의 URL에 추가되는 `ttclid`입니다. |
 | 페이지 URL | 이벤트 시 페이지 URL입니다. |
@@ -116,9 +116,9 @@ ht-degree: 2%
 
 ## 이벤트 중복 제거 {#deduplication}
 
-[!DNL TikTok]픽셀 SDK와 [!DNL TikTok] 웹 이벤트 API 확장을 모두 사용하여 동일한 이벤트를 [!DNL TikTok]에 보내는 경우 중복 제거에 대해 [!DNL TikTok]픽셀을 설정해야 합니다.
+[!DNL TikTok]픽셀 SDK과 [!DNL TikTok]개의 웹 이벤트 API 확장을 모두 사용하여 동일한 이벤트를 [!DNL TikTok]에 보내는 경우 중복 제거에 대해 [!DNL TikTok]픽셀을 설정해야 합니다.
 
-클라이언트 및 서버에서 중복되지 않고 개별 이벤트 유형을 보내는 경우에는 중복 제거가 필요하지 않습니다. 보고에 부정적인 영향을 주지 않도록 하려면 [!DNL TikTok] 픽셀 SDK 및 [!DNL TikTok] 웹 이벤트 API 확장에서 공유하는 단일 이벤트가 중복 제거되었는지 확인해야 합니다.
+클라이언트 및 서버에서 중복되지 않고 개별 이벤트 유형을 보내는 경우에는 중복 제거가 필요하지 않습니다. 보고에 부정적인 영향을 주지 않도록 [!DNL TikTok] 픽셀 SDK 및 [!DNL TikTok] 웹 이벤트 API 확장에서 공유하는 단일 이벤트가 중복 제거되었는지 확인해야 합니다.
 
 공유 이벤트를 보낼 때 모든 이벤트에 픽셀 ID, 이벤트 ID 및 이름이 포함되어 있는지 확인하십시오. 서로 5분 이내에 도착하는 중복 이벤트는 병합됩니다. 데이터 필드가 첫 번째 이벤트에 없으면 후속 이벤트와 결합됩니다. 48시간 이내에 수신되는 중복 이벤트는 모두 제거됩니다.
 

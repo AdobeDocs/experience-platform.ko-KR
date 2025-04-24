@@ -1,17 +1,17 @@
 ---
 title: 데이터스트림 재정의 구성
-description: 데이터스트림 UI에서 데이터스트림 재정의를 구성하고 Web SDK 또는 Mobile SDK를 통해 활성화하는 방법에 대해 알아봅니다.
+description: 데이터스트림 UI에서 데이터스트림 재정의를 구성하고 웹 SDK 또는 모바일 SDK을 통해 활성화하는 방법에 대해 알아봅니다.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 17ed5f3c14d4787352f72d3d7721cbb6416d533e
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1083'
 ht-degree: 57%
 
 ---
 
 # 데이터스트림 재정의 구성
 
-데이터 스트림 재정의를 사용하면 웹 SDK 또는 Mobile SDK를 통해 Edge Network에 전달되는 데이터 스트림에 대한 추가 구성을 정의할 수 있습니다.
+데이터 스트림 재정의를 사용하면 웹 SDK 또는 모바일 SDK을 통해 Edge Network에 전달되는 데이터 스트림에 대한 추가 구성을 정의할 수 있습니다.
 
 이렇게 하면 데이터 스트림을 만들거나 기존 설정을 수정하지 않고도 기본 데이터 스트림 비헤이비어와 다른 데이터 스트림 비헤이비어를 트리거할 수 있습니다.
 
@@ -19,15 +19,15 @@ ht-degree: 57%
 
 1. 먼저 [데이터 스트림 구성 페이지](configure.md)에서 데이터 스트림 구성 재정의를 정의해야 합니다.
 2. 그런 다음 다음 방법 중 하나로 Edge Network에 재정의를 전송해야 합니다.
-   * `sendEvent` 또는 `configure` [Web SDK](#send-overrides) 명령을 통해.
-   * 웹 SDK를 통해 [태그 확장](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+   * `sendEvent` 또는 `configure` [웹 SDK](#send-overrides) 명령을 통해.
+   * 웹 SDK [태그 확장](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)을 통해.
    * Mobile SDK [sendEvent](#send-overrides) API를 사용하거나 [규칙](#send-overrides)을(를) 사용합니다.
 
 이 문서에서는 지원되는 모든 재정의에 대한 전반적인 데이터스트림 구성 재정의 프로세스를 설명합니다.
 
 >[!IMPORTANT]
 >
->데이터 스트림 재정의는 [Web SDK](../web-sdk/home.md) 및 [Mobile SDK](https://developer.adobe.com/client-sdks/home/) 통합에만 지원됩니다. [Server API](../server-api/overview.md) 통합은 현재 데이터 스트림 재정의를 지원하지 않습니다.
+>데이터 스트림 재정의는 [Web SDK](../web-sdk/home.md) 및 [Mobile SDK](https://developer.adobe.com/client-sdks/home/) 통합에만 지원됩니다. [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) 통합은 현재 데이터 스트림 재정의를 지원하지 않습니다.
 ><br>
 >데이터스트림 재정의는 다른 데이터스트림으로 전송되는 다른 데이터가 필요할 때 사용해야 합니다. 개인화 사용 사례 또는 동의 데이터에 데이터스트림 재정의를 사용하지 마십시오.
 
@@ -45,7 +45,7 @@ ht-degree: 57%
 
 **다양한 사업부의 프로필 및 ID 차별화**
 
-여러 사업부를 가진 회사는 여러 Experience Platform 샌드박스를 사용하여 각 사업부와 관련된 데이터를 저장하려고 합니다.
+여러 사업부를 보유한 회사는 여러 Experience Platform 샌드박스를 사용하여 각 사업부와 관련된 데이터를 저장하려고 합니다.
 
 회사는 데이터를 기본 데이터스트림으로 보내는 대신 데이터스트림 재정의를 사용하여 각 사업부가 데이터를 수신할 자체 데이터스트림을 보유하도록 할 수 있습니다.
 
@@ -68,7 +68,7 @@ Adobe Target 데이터스트림에 대한 데이터스트림 재정의를 구성
 
 원하는 재정의가 추가되면 데이터스트림 설정을 저장합니다.
 
-이제 Adobe Target 데이터스트림 재정의를 구성해야 합니다. 이제 [Web SDK 또는 Mobile SDK를 통해 Edge Network에 재정의를 보낼 수 있습니다](#send-overrides).
+이제 Adobe Target 데이터스트림 재정의를 구성해야 합니다. 이제 [웹 SDK 또는 모바일 SDK을 통해 Edge Network에 재정의를 보낼 수 있습니다](#send-overrides).
 
 ### Adobe Analytics에 대한 데이터스트림 재정의 {#analytics-overrides}
 
@@ -82,7 +82,7 @@ Adobe Analytics 데이터스트림에 대한 데이터스트림 재정의를 구
 
 원하는 재정의가 추가되면 데이터스트림 설정을 저장합니다.
 
-이제 Adobe Analytics 데이터스트림 재정의를 구성해야 합니다. 이제 [Web SDK 또는 Mobile SDK를 통해 Edge Network에 재정의를 보낼 수 있습니다](#send-overrides).
+이제 Adobe Analytics 데이터스트림 재정의를 구성해야 합니다. 이제 [웹 SDK 또는 모바일 SDK을 통해 Edge Network에 재정의를 보낼 수 있습니다](#send-overrides).
 
 ### Experience Platform 이벤트 데이터 세트에 대한 데이터스트림 재정의 {#event-dataset-overrides}
 
@@ -94,7 +94,7 @@ Experience Platform 이벤트 데이터 세트에 대한 데이터스트림 재�
 
 원하는 재정의가 추가되면 데이터스트림 설정을 저장합니다.
 
-이제 Adobe Experience Platform 데이터스트림 재정의를 구성해야 합니다. 이제 [Web SDK 또는 Mobile SDK를 통해 Edge Network에 재정의를 보낼 수 있습니다](#send-overrides).
+이제 Adobe Experience Platform 데이터스트림 재정의를 구성해야 합니다. 이제 [웹 SDK 또는 모바일 SDK을 통해 Edge Network에 재정의를 보낼 수 있습니다](#send-overrides).
 
 ### 서드파티 ID 동기화 컨테이너에 대한 데이터스트림 재정의 {#container-overrides}
 
@@ -112,14 +112,14 @@ Experience Platform 이벤트 데이터 세트에 대한 데이터스트림 재�
 
 원하는 재정의가 추가되면 데이터스트림 설정을 저장합니다.
 
-이제 ID 동기화 컨테이너 재정의를 구성해야 합니다. 이제 [Web SDK 또는 Mobile SDK를 통해 Edge Network에 재정의를 보낼 수 있습니다](#send-overrides).
+이제 ID 동기화 컨테이너 재정의를 구성해야 합니다. 이제 [웹 SDK 또는 모바일 SDK을 통해 Edge Network에 재정의를 보낼 수 있습니다](#send-overrides).
 
 ## Edge Network에 재정의 보내기 {#send-overrides}
 
-데이터 수집 UI에서 데이터스트림 재정의를 구성한 후 웹 SDK 또는 Mobile SDK를 통해 Edge Network에게 재정의를 전송할 수 있습니다.
+데이터 수집 UI에서 데이터스트림 재정의를 구성한 후 재정의를 웹 SDK 또는 모바일 SDK을 통해 Edge Network으로 보낼 수 있습니다.
 
-* **Web SDK**: 태그 확장 지침 및 JavaScript 라이브러리 코드 예제는 [데이터스트림 구성 재정의](../web-sdk/commands/datastream-overrides.md#library)를 참조하십시오.
-* **Mobile SDK**: [sendEvent API](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/)를 사용하거나 [규칙](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/)을 사용하여 데이터 스트림 ID 재정의를 보낼 수 있습니다.
+* **웹 SDK**: 태그 확장 지침 및 JavaScript 라이브러리 코드 예제는 [데이터스트림 구성 재정의](../web-sdk/commands/datastream-overrides.md#library)를 참조하십시오.
+* **Mobile SDK**: [sendEvent API](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/)를 사용하거나 [규칙](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/)을 사용하여 데이터스트림 ID 재정의를 보낼 수 있습니다.
 
 ## 페이로드 예제 {#payload-example}
 

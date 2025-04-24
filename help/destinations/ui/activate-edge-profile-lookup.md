@@ -3,9 +3,9 @@ title: 실시간으로 에지 프로필 속성 조회
 description: 사용자 지정 Personalization 대상 및 Edge Network API를 사용하여 실시간으로 에지 프로필 속성을 조회하는 방법을 알아봅니다
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1911'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform은 [실시간 고객 프로필](../../profile/home.md)
 * [데이터스트림](../../datastreams/overview.md): 데이터스트림은 Web SDK에서 들어오는 이벤트 데이터를 수신하고 에지 프로필 데이터로 응답합니다.
 * [병합 정책](../../segmentation/ui/segment-builder.md#merge-policies): Edge 프로필에서 올바른 프로필 데이터를 사용하도록 [!UICONTROL Active-On-Edge] 병합 정책을 만듭니다.
 * [사용자 지정 Personalization 연결](../catalog/personalization/custom-personalization.md): 프로필 특성을 Edge Network에 전송하는 새 사용자 지정 개인화 연결을 구성합니다.
-* [Edge Network API](../../server-api/overview.md): Edge Network API [대화형 데이터 수집](../../server-api/interactive-data-collection.md) 기능을 사용하여 Edge 프로필에서 프로필 특성을 빠르게 검색합니다.
+* [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/): Edge Network API [대화형 데이터 수집](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) 기능을 사용하여 Edge 프로필에서 프로필 특성을 빠르게 검색합니다.
 
 ## 성능 가드레일 {#guardrails}
 
@@ -166,7 +166,7 @@ Edge에서 프로필 속성을 조회하려면 Edge 평가를 위해 대상을 �
 
 >[!IMPORTANT]
 >
->프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 [Edge Network API](../../server-api/overview.md)를 통해 프로필 특성을 검색해야 합니다. 또한 API 호출을 인증하려면 Edge Network API [대화형 데이터 수집 끝점](../../server-api/interactive-data-collection.md)을 통해 프로필 특성을 검색해야 합니다.
+>프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/)를 통해 프로필 특성을 검색해야 합니다. 또한 API 호출을 인증하려면 Edge Network API [대화형 데이터 수집 끝점](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/)을 통해 프로필 특성을 검색해야 합니다.
 ><br>위의 요구 사항을 따르지 않는 경우 개인화는 대상 멤버십만을 기반으로 하며 프로필 속성을 사용할 수 없습니다.
 
 [단계 1](#create-datastream)에서 구성한 데이터 스트림이 이제 들어오는 이벤트 데이터를 수락하고 Edge 프로필 정보로 응답할 준비가 되었습니다.

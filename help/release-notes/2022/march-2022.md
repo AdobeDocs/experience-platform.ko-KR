@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 3월
 description: Adobe Experience Platform의 2022년 3월 릴리스 정보.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1182'
-ht-degree: 15%
+source-wordcount: '1183'
+ht-degree: 19%
 
 ---
 
@@ -59,7 +59,7 @@ Real-Time CDP B2B edition에 대한 자세한 내용은 [개요](../../rtcdp/ove
 
 ## 경고 {#alerts}
 
-Experience Platform을 사용하면 다양한 Experience Platform 활동에 대한 이벤트 기반 경고를 구독할 수 있습니다. Experience Platform 사용자 인터페이스의 [!UICONTROL 경고] 탭을 통해 다양한 경고 규칙을 구독할 수 있으며 UI 자체 내에서 또는 이메일 알림을 통해 경고 메시지를 수신하도록 선택할 수 있습니다.
+Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이벤트 기반 알림을 구독할 수 있습니다. Experience Platform 사용자 인터페이스의 [!UICONTROL 경고] 탭을 통해 다양한 경고 규칙을 구독할 수 있으며, 원하는 경우 UI 자체 또는 이메일 알림을 통해 알림 메시지를 수신할 수 있습니다.
 
 **업데이트된 기능**
 
@@ -115,7 +115,7 @@ Experience Platform은 클라이언트측 고객 경험 데이터를 수집하�
 | 기능 | 설명 |
 | --- | --- |
 | 전역 데이터 스트림 설정 | 이제 데이터스트림을 구성할 때 지리적 위치, 자사 ID 쿠키 및 타사 ID 동기화와 같은 몇 가지 새로운 전역 설정을 구성할 수 있습니다. 자세한 내용은 데이터스트림 UI 안내서의 [데이터스트림 구성](../../datastreams/overview.md#create)에 대한 섹션을 참조하십시오. |
-| [Edge Network 서버 API](../../server-api/overview.md) | Server API를 사용하면 고객이 새로운 인증된 엔드포인트를 사용하여 Experience Platform Edge Network과 상호 작용하여 다양한 데이터 수집, 개인화, 광고 및 마케팅 사용 사례를 강화할 수 있습니다. |
+| [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | Edge Network API를 사용하면 고객이 새로운 인증된 엔드포인트를 사용하여 Experience Platform Edge Network과 상호 작용하여 다양한 데이터 수집, 개인화, 광고 및 마케팅 사용 사례를 강화할 수 있습니다. |
 
 Experience Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md)를 참조하십시오.
 

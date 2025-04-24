@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 8월
 description: Adobe Experience Platform에 대한 2022년 8월 릴리스 정보입니다.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2014'
 ht-degree: 26%
 
 ---
@@ -94,7 +94,7 @@ Adobe Experience Platform에서는 매일 스냅숏 중에 캡처된 조직 데�
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| (Beta) 개인화 대상에 대한 속성 기반 개인화 지원 | 특성 기반 개인화의 베타 릴리스에서는 [대상 카탈로그](../../destinations/catalog/overview.md)에 두 개의 새 카드가 표시됩니다. <ul><li>**[!UICONTROL Adobe Target V2]**: 이 커넥터는 현재 Beta 버전이며 일부 고객만 사용할 수 있습니다. Adobe Target V1 카드에서 제공하는 기능 외에도 Target V2 커넥터는 활성화 워크플로에 [매핑 단계](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes)를 추가합니다. 이를 통해 프로필 속성을 Adobe Target에 매핑할 수 있으므로 속성 기반의 동일 페이지 및 다음 페이지 개인화를 수행할 수 있습니다.</li><li>**[!UICONTROL 특성이 있는 사용자 지정 Personalization]**: 이 커넥터는 현재 Beta 상태이며 일부 고객만 사용할 수 있습니다. **[!UICONTROL 사용자 지정 Personalization]**&#x200B;에서 제공하는 기능 외에 **[!UICONTROL 특성을 가진 사용자 지정 Personalization]** 커넥터는 활성화 워크플로에 선택적 [매핑 단계](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes)를 추가합니다. 이를 통해 프로필 특성을 사용자 지정 개인화 대상에 매핑하여 특성을 기반으로 한 동일 페이지 및 다음 페이지 개인화를 활성화할 수 있습니다.</li></ul> <br> 프로필 특성에 중요한 데이터가 포함되어 있을 수 있습니다. 이 데이터를 보호하려면 **[!UICONTROL 특성을 가진 사용자 지정 Personalization]** 대상을 사용하려면 데이터 수집에 [Edge Network Server API](../../server-api/overview.md)를 사용해야 합니다. 또한 모든 서버 API 호출은 [인증된 컨텍스트](../../server-api/authentication.md)에서 수행되어야 합니다. |
+| (Beta) 개인화 대상에 대한 속성 기반 개인화 지원 | 특성 기반 개인화의 베타 릴리스에서는 [대상 카탈로그](../../destinations/catalog/overview.md)에 두 개의 새 카드가 표시됩니다. <ul><li>**[!UICONTROL Adobe Target V2]**: 이 커넥터는 현재 Beta 버전이며 일부 고객만 사용할 수 있습니다. Adobe Target V1 카드에서 제공하는 기능 외에도 Target V2 커넥터는 활성화 워크플로에 [매핑 단계](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes)를 추가합니다. 이를 통해 프로필 속성을 Adobe Target에 매핑할 수 있으므로 속성 기반의 동일 페이지 및 다음 페이지 개인화를 수행할 수 있습니다.</li><li>**[!UICONTROL 특성이 있는 사용자 지정 Personalization]**: 이 커넥터는 현재 Beta 상태이며 일부 고객만 사용할 수 있습니다. **[!UICONTROL 사용자 지정 Personalization]**&#x200B;에서 제공하는 기능 외에 **[!UICONTROL 특성을 가진 사용자 지정 Personalization]** 커넥터는 활성화 워크플로에 선택적 [매핑 단계](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes)를 추가합니다. 이를 통해 프로필 특성을 사용자 지정 개인화 대상에 매핑하여 특성을 기반으로 한 동일 페이지 및 다음 페이지 개인화를 활성화할 수 있습니다.</li></ul> <br> 프로필 특성에 중요한 데이터가 포함되어 있을 수 있습니다. 이 데이터를 보호하려면 **[!UICONTROL 특성을 가진 사용자 지정 Personalization]** 대상을 사용하려면 데이터 수집에 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/)를 사용해야 합니다. 또한 모든 Edge Network API 호출은 [인증된 컨텍스트](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)에서 수행되어야 합니다. |
 
 {style="table-layout:auto"}
 

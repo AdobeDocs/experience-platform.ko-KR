@@ -1,23 +1,23 @@
 ---
 title: FPID를 통한 방문자 식별
-description: FPID를 사용하여 서버 API를 통해 방문자를 일관되게 식별하는 방법을 알아봅니다
-seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
+description: FPID를 사용하여 Edge Network API를 통해 방문자를 일관되게 식별하는 방법을 알아봅니다
+seo-description: Learn how to consistently identify visitors via the Edge Network API, by using the FPID
 keywords: 에지 네트워크;게이트웨이;api;방문자;식별;fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
 
 # FPID를 통한 방문자 식별
 
-[!DNL First-party IDs](`FPIDs`)은(는) 고객이 생성, 관리 및 저장하는 장치 ID입니다. 이를 통해 고객은 사용자 장치를 식별할 수 있습니다. `FPIDs`을(를) 보냄으로써, Edge Network은 새 `ECID`을(를) 포함하지 않는 요청에 대해 생성하지 않습니다.
+[!DNL First-party IDs]&#x200B;(`FPIDs`)은(는) 고객이 생성, 관리 및 저장하는 장치 ID입니다. 이를 통해 고객은 사용자 장치를 식별할 수 있습니다. `FPIDs`을(를) 보냄으로써 Edge Network은 새 `ECID`이(가) 포함되지 않은 요청에 대해 생성하지 않습니다.
 
 `FPID`은(는) `identityMap`의 일부로 API 요청 본문에 포함되거나 쿠키로 전송될 수 있습니다.
 
-`FPID`은(는) Edge Network이 `ECID`(으)로 결정적으로 변환할 수 있으므로 `FPID` ID는 Experience Cloud 솔루션과 완전히 호환됩니다. 특정 `FPID`에서 `ECID`을(를) 가져오면 항상 동일한 결과가 생성되므로 사용자는 일관된 경험을 갖게 됩니다.
+`FPID`은(는) Edge Network에서 `ECID`(으)로 결정적으로 변환할 수 있으므로 `FPID` ID는 Experience Cloud 솔루션과 완전히 호환됩니다. 특정 `FPID`에서 `ECID`을(를) 가져오면 항상 동일한 결과가 생성되므로 사용자는 일관된 경험을 갖게 됩니다.
 
 이 방법으로 얻은 `ECID`은(는) `identity.fetch` 쿼리를 통해 검색할 수 있습니다.
 
@@ -33,9 +33,9 @@ ht-degree: 0%
 }
 ```
 
-`FPID`과(와) `ECID`이(가) 모두 포함된 요청의 경우, 요청에 이미 있는 `ECID`이(가) `FPID`에서 생성할 수 있는 요청보다 우선합니다. 즉, Edge Network이 이미 제공된 `ECID`을(를) 사용하고 `FPID`은(는) 무시됩니다. 새 `ECID`은(는) `FPID`이(가) 단독으로 제공되는 경우에만 생성됩니다.
+`FPID`과(와) `ECID`이(가) 모두 포함된 요청의 경우, 요청에 이미 있는 `ECID`이(가) `FPID`에서 생성할 수 있는 요청보다 우선합니다. 즉, Edge Network에서 이미 제공된 `ECID`을(를) 사용하고 `FPID`은(는) 무시됩니다. 새 `ECID`은(는) `FPID`이(가) 단독으로 제공되는 경우에만 생성됩니다.
 
-장치 ID 측면에서 `server` 데이터 스트림은 `FPID`을(를) 장치 ID로 사용해야 합니다. 다른 ID(즉, `EMAIL`)도 요청 본문 내에 제공할 수 있지만, Edge Network을 사용하려면 기본 ID를 명시적으로 제공해야 합니다. 기본 ID는 프로필 데이터가 저장될 기본 ID입니다.
+장치 ID 측면에서 `server` 데이터 스트림은 `FPID`을(를) 장치 ID로 사용해야 합니다. 다른 ID(즉, `EMAIL`)도 요청 본문 내에서 제공할 수 있지만, Edge Network에서는 기본 ID를 명시적으로 제공해야 합니다. 기본 ID는 프로필 데이터가 저장될 기본 ID입니다.
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ ht-degree: 0%
 }
 ```
 
-이 경우 Edge Network이 반환하는 오류 응답은 다음과 비슷합니다.
+이 경우 Edge Network에서 반환하는 오류 응답은 다음과 같습니다.
 
 ```json
 {
@@ -102,7 +102,7 @@ ht-degree: 0%
 
 ## `FPID`을(를) 사용한 방문자 식별
 
-`FPID`을(를) 통해 Edge Network을 식별하려면 사용자에게 요청하기 전에 `FPID` 쿠키가 전송되었는지 확인하십시오. `FPID`은(는) 쿠키를 통해 또는 요청 본문에서 `identityMap`의 일부로 전달될 수 있습니다.
+`FPID`을(를) 통해 사용자를 식별하려면 Edge Network에 요청하기 전에 `FPID` 쿠키가 전송되었는지 확인하십시오. `FPID`은(는) 쿠키를 통해 또는 요청 본문에서 `identityMap`의 일부로 전달될 수 있습니다.
 
 <!--
 

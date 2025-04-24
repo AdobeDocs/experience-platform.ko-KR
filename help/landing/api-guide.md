@@ -6,9 +6,9 @@ description: Adobe Experience Platform은 서로 밀접하게 연결된 API 서�
 role: Developer
 feature: API
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
@@ -127,7 +127,7 @@ curl -X GET \
 | [[!DNL Data Access] API 안내서](.././data-access/api.md) | [!DNL Data Access] API를 통해 개발자는 Experience Platform 내에서 수집된 데이터 세트에 대한 정보를 검색할 수 있습니다. 여기에는 데이터 세트 파일 액세스 및 다운로드, 헤더 정보 검색, 실패 및 성공한 배치 나열, 미리보기 CSV/Parquet 파일 다운로드 등이 포함됩니다. |
 | [[!DNL Dataset Service] API 안내서](.././data-governance/labels/dataset-api.md) | 데이터 세트 서비스 API를 사용하면 데이터 세트에 대한 사용 레이블을 적용하고 편집할 수 있습니다. Adobe Experience Platform의 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 카탈로그 서비스 API와 별개입니다. |
 | [[!DNL Data Hygiene API guide]](../hygiene/api/overview.md) | [!DNL Data Hygiene] API를 사용하면 Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제할 수 있으며 데이터 세트의 만료 날짜를 예약할 수 있습니다. |
-| [[!DNL Edge Network Server] API 안내서](../server-api/overview.md) | [!DNL Edge Network Server API]은(는) 다양한 데이터 수집, 개인화, 광고 및 마케팅 사용 사례에 사용할 수 있습니다. [!DNL Server API]은(는) 서버, 장치 [!DNL IoT]개, 셋톱 박스 및 다양한 다른 장치에서 사용할 수 있습니다. |
+| [[!DNL Edge Network] API 안내서](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | [!DNL Edge Network API]은(는) 다양한 데이터 수집, 개인화, 광고 및 마케팅 사용 사례에 사용할 수 있습니다. [!DNL Edge Network API]은(는) 서버, 장치 [!DNL IoT]개, 셋톱 박스 및 다양한 다른 장치에서 사용할 수 있습니다. |
 | [[!DNL Identity Service] API 안내서](.././identity-service/api/getting-started.md) | [!DNL Identity Service] API를 통해 개발자는 Adobe Experience Platform의 ID 그래프를 사용하여 크로스 디바이스, 크로스 채널 및 거의 실시간으로 고객을 식별할 수 있습니다. |
 | [[!DNL MTLS Service API guide]](../data-governance/mtls-api/overview.md) | [!DNL MTLS Service] API를 사용하면 조직의 Adobe에서 발급한 공개 인증서를 안전하게 검색할 수 있습니다. |
 | [[!DNL Observability Insights] API 안내서](.././observability/api/overview.md) | [!DNL Observability Insights]은(는) 개발자가 Adobe Experience Platform의 주요 가시성 지표를 표시할 수 있도록 하는 RESTful API입니다. 이러한 지표는 Experience Platform 사용 통계, Experience Platform 서비스에 대한 상태 점검, 내역 트렌드 및 다양한 Experience Platform 기능에 대한 성능 지표에 대한 통찰력을 제공합니다. |

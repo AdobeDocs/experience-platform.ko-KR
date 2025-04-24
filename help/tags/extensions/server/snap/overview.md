@@ -3,7 +3,7 @@ title: Snapchat Conversions API 확장 개요
 description: Snapchat 변환을 사용하여 서버측 이벤트 데이터를 Snap으로 전송합니다.
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # [!DNL Snapchat] 전환 API 확장 개요
 
-[!DNL Snap] 전환 API 확장은 웹 사이트에서 사용자 작업에 대한 정보를 [!DNL Snapchat]과(와) 직접 공유할 수 있는 보안 [Edge Network 서버 API](/help/server-api/overview.md) 인터페이스입니다. 이벤트 전달 규칙을 활용하여 **[!DNL Snap]** 전환 API 확장을 사용하여 **[!DNL Adobe Experience Platform Edge Network]**&#x200B;에서 **[!DNL Snapchat]**(으)로 데이터를 보낼 수 있습니다.
+[!DNL Snap] 전환 API 확장은 웹 사이트에서 사용자 작업에 대한 정보를 [!DNL Snapchat]과(와) 직접 공유할 수 있는 보안 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/) 인터페이스입니다. 이벤트 전달 규칙을 활용하여 **[!DNL Snap]** 전환 API 확장을 사용하여 **[!DNL Adobe Experience Platform Edge Network]**&#x200B;에서 **[!DNL Snapchat]**(으)로 데이터를 보낼 수 있습니다.
 
 ## [!DNL Snapchat]개 필수 구성 요소 {#prerequisites}
 

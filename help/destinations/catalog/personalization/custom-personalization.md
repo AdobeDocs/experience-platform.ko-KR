@@ -3,9 +3,9 @@ keywords: 사용자 정의 개인화; 대상; experience platform 사용자 정�
 title: 사용자 지정 개인화 연결
 description: 이 대상은 Adobe Experience Platform에서 대상 정보를 검색할 수 있는 방법을 통해 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필 대상 멤버십을 기반으로 실시간 개인화를 제공합니다.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 0f70e072402bca055b96195ded91816810759fc2
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '964'
 ht-degree: 9%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화를 위해 **[!UICONTROL 사용자 지정 Personalization]** 대상을 구성할 때 [Edge Network Server API](/help/server-api/overview.md)를 사용해야 합니다. 모든 서버 API 호출은 [인증된 컨텍스트](../../../server-api/authentication.md)에서 수행되어야 합니다.
+>프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화를 위해 **[!UICONTROL 사용자 지정 Personalization]** 대상을 구성할 때 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)를 사용해야 합니다. 모든 Edge Network API 호출은 [인증된 컨텍스트](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)에서 수행되어야 합니다.
 >
-><br>웹 또는 Mobile SDK 구현에 이미 사용하고 있는 동일한 데이터 스트림을 사용하는 서버측 통합을 추가하여 [Edge Network Server API](/help/server-api/overview.md)를 통해 프로필 특성을 검색할 수 있습니다.
+><br>웹 또는 Mobile SDK 구현에 이미 사용하고 있는 동일한 데이터 스트림을 사용하는 서버측 통합을 추가하여 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)를 통해 프로필 특성을 검색할 수 있습니다.
 >
 ><br>위의 요구 사항을 따르지 않는 경우 개인화는 대상자 멤버십만 기반으로 합니다.
 
@@ -39,7 +39,7 @@ ht-degree: 9%
 
 * 웹 사이트에서 데이터를 수집하려면 [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)를 사용하십시오.
 * 모바일 애플리케이션에서 데이터를 수집하려면 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)를 사용하십시오.
-* [Web SDK](/help/web-sdk/home.md) 또는 [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)를 사용하지 않거나 프로필 특성을 기반으로 사용자 경험을 개인화하려는 경우 [Edge Network Server API](../../../server-api/overview.md)를 사용하십시오.
+* [Web SDK](/help/web-sdk/home.md) 또는 [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)을 사용하지 않거나 프로필 특성을 기반으로 사용자 경험을 개인화하려는 경우 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)를 사용하십시오.
 
 >[!IMPORTANT]
 >

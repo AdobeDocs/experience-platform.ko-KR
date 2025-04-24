@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이들 프로필에서 대상자를 생성하며, 이들 대상자를 서드파티 대상으로 활성화할 수 있습니다.
 role: Admin
-source-git-commit: 3b2645927e4760114298295e920e07a20df3fcbd
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 63%
@@ -47,7 +47,7 @@ ht-degree: 63%
 * 가드레일 {#guardrails}
    * [Real-Time CDP 보호 개요](guardrails/overview.md)
    * [데이터 수집을 위한 보호](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
-   *  [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}에 대한 [보호 기능
+   *  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}에 대한 [보호 기능
    * [데이터 및 세분화에 대한 보호 [!DNL Real-Time Customer Profile] 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ko){target="_blank"}
    * [데이터 [!DNL Identity Service] 보호 기능](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
    * [다음에 대한 보호 기능 [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}

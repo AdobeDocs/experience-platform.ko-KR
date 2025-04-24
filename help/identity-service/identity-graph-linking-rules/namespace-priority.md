@@ -2,9 +2,9 @@
 title: 네임스페이스 우선순위
 description: ID 서비스의 네임스페이스 우선 순위에 대해 알아봅니다.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1865'
 ht-degree: 2%
 
 ---
@@ -86,7 +86,7 @@ ID는 실제 개체를 나타냅니다. ID 그래프에 표시되는 객체는 �
 * 지정된 샌드박스에 대한 ID 설정을 구성하면 경험 이벤트에 대한 기본 ID가 구성에서 가장 높은 네임스페이스 우선 순위에 따라 결정됩니다.
    * 이는 체험 행사가 그 자체로 역동적이기 때문이다. ID 맵에는 3개 이상의 ID가 포함될 수 있으며 네임스페이스 우선 순위는 가장 중요한 네임스페이스가 경험 이벤트에 연결되어 있도록 합니다.
 * 따라서 다음 구성 **은(는) 더 이상 실시간 고객 프로필에서 사용되지 않습니다**:
-   * 웹 SDK, Mobile SDK 또는 Edge Network Server API를 사용하여 identityMap에서 ID를 전송할 때 기본 ID 구성(`primary=true`)이 사용됩니다(ID 네임스페이스 및 ID 값은 프로필에서 계속 사용됨). **참고**: 데이터 레이크 저장소 또는 Adobe Target과 같은 실시간 고객 프로필 외부의 서비스는 기본 ID 구성(`primary=true`)을 계속 사용합니다.
+   * 웹 SDK, Mobile SDK 또는 Edge Network API를 사용하여 identityMap에서 ID를 전송할 때 기본 ID 구성(`primary=true`)이 사용됩니다(ID 네임스페이스 및 ID 값은 프로필에서 계속 사용됨). **참고**: 데이터 레이크 저장소 또는 Adobe Target과 같은 실시간 고객 프로필 외부의 서비스는 기본 ID 구성(`primary=true`)을 계속 사용합니다.
    * XDM 경험 이벤트 클래스 스키마에서 기본 ID로 표시된 모든 필드.
    * Adobe Analytics 소스 커넥터(ECID 또는 AAID)의 기본 기본 ID 설정.
 * 반면 **네임스페이스 우선 순위는 프로필 레코드의 기본 ID를 결정하지 않습니다**.

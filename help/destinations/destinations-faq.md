@@ -3,9 +3,9 @@ keywords: 대상; 질문; faq; faq; 대상 faq
 title: 자주 묻는 질문
 description: Adobe Experience Platform 대상에 대해 가장 자주 묻는 질문에 대한 답변
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1673'
 ht-degree: 0%
 
 ---
@@ -201,7 +201,7 @@ ID 일치 요구 사항에 대한 자세한 설명은 [ID 일치 요구 사항](
 
 그러나 Web SDK 대신 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html)을(를) 사용하면 다음 세션 개인화만 지원됩니다.
 
-[동일 페이지 및 다음 페이지 개인화](ui/activate-edge-personalization-destinations.md) 사용 사례의 경우 [Web SDK](../web-sdk/home.md) 또는 [Edge Network Server API](../server-api/overview.md)를 사용해야 합니다. 자세한 구현 정보는 [Edge 대상으로 대상 활성화](ui/activate-edge-personalization-destinations.md)에 대한 설명서를 참조하십시오.
+[동일 페이지 및 다음 페이지 개인화](ui/activate-edge-personalization-destinations.md) 사용 사례의 경우 [Web SDK](../web-sdk/home.md) 또는 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)를 사용해야 합니다. 자세한 구현 정보는 [Edge 대상으로 대상 활성화](ui/activate-edge-personalization-destinations.md)에 대한 설명서를 참조하십시오.
 +++
 
 ### Real-time Customer Data Platform에서 Adobe Target 또는 사용자 지정 Personalization 대상으로 보낼 수 있는 속성 수에 제한이 있습니까?
@@ -244,10 +244,10 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 대상을 삭제하면 대상 아래에 매핑된 모든 대상 및 특성이 Adobe Target에서 삭제되며, Edge Network에서도 제거됩니다.
 +++
 
-### 통합은 Edge Network Server API를 사용하여 작동합니까?
+### 통합은 Edge Network API를 사용하여 작동합니까?
 
 +++답변
-예. Edge Network 서버 API는 사용자 지정 Personalization 대상에서 작동합니다. 프로필 속성에 중요한 데이터가 포함될 수 있으므로 이 데이터를 보호하려면 사용자 지정 Personalization 대상에서 데이터 수집을 위해 Edge Network Server API를 사용해야 합니다. 또한 모든 API 호출은 [인증된 컨텍스트](../server-api/authentication.md)에서 수행되어야 합니다.
+예. Edge Network API는 사용자 지정 Personalization 대상에서 작동합니다. 프로필 속성에 중요한 데이터가 포함될 수 있으므로 이 데이터를 보호하려면 사용자 지정 Personalization 대상에 데이터 수집을 위해 Edge Network API를 사용해야 합니다. 또한 모든 API 호출은 [인증된 컨텍스트](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/)에서 수행되어야 합니다.
 +++
 
 ### 에지 상에서 활성 상태인 병합 정책을 하나만 가질 수 있습니다. 다른 병합 정책을 사용하는 대상을 작성하고 이를 스트리밍 대상으로 Adobe Target에 보낼 수 있습니까?

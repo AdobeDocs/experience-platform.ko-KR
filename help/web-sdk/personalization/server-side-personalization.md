@@ -1,22 +1,22 @@
 ---
-title: Edge Network 서버 API를 사용한 서버측 개인화
-description: 이 문서에서는 Edge Network 서버 API를 사용하여 웹 속성에 서버측 개인화를 배포하는 방법을 보여 줍니다.
+title: Edge Network API를 사용한 서버측 개인화
+description: 이 문서에서는 Edge Network API를 사용하여 웹 속성에 서버측 개인화를 배포하는 방법을 보여 줍니다.
 keywords: 개인화, 서버 api, edge network, 서버측
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '559'
 ht-degree: 2%
 
 ---
 
 
-# Edge Network 서버 API를 사용한 서버측 개인화
+# Edge Network API를 사용한 서버측 개인화
 
 ## 개요 {#overview}
 
-서버측 개인화에는 [Edge Network 서버 API](../../server-api/overview.md)를 사용하여 웹 자산에서 고객 경험을 개인화하는 작업이 포함됩니다.
+서버측 개인화에는 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/)를 사용하여 웹 자산에서 고객 경험을 개인화하는 작업이 포함됩니다.
 
-이 문서에 설명된 예에서 개인화 콘텐츠는 서버 API를 사용하여 서버측에서 검색됩니다. 그런 다음 검색된 개인화 콘텐츠에 따라 HTML이 서버측에서 렌더링됩니다.
+이 문서에 설명된 예에서 개인화 콘텐츠는 Edge Network API를 사용하여 서버측에서 검색됩니다. 그러면 HTML이 검색된 개인화 콘텐츠를 기반으로 서버측에서 렌더링됩니다.
 
 아래 표는 개인화된 컨텐츠와 개인화되지 않은 컨텐츠의 예를 보여 줍니다.
 
@@ -37,12 +37,12 @@ ht-degree: 2%
 
 ### 배치 요청 {#request-placement}
 
-제안을 가져오고 디스플레이 알림을 보내려면 Personalization 요청이 필요합니다. 서버측 구현을 사용하는 경우 애플리케이션 서버는 Edge Network 서버 API에 이러한 요청을 수행합니다.
+제안을 가져오고 디스플레이 알림을 보내려면 Personalization 요청이 필요합니다. 서버측 구현을 사용하는 경우 애플리케이션 서버는 Edge Network API에 이러한 요청을 수행합니다.
 
 | 요청 | 만든 사람 |
 |---|---|
-| 제안 검색에 대한 상호 작용 요청 | Edge Network 서버 API를 호출하는 애플리케이션 서버입니다. |
-| 디스플레이 알림 전송을 위한 상호 작용 요청 | Edge Network 서버 API를 호출하는 애플리케이션 서버입니다. |
+| 제안 검색에 대한 상호 작용 요청 | Edge Network API를 호출하는 애플리케이션 서버입니다. |
+| 디스플레이 알림 전송을 위한 상호 작용 요청 | Edge Network API를 호출하는 애플리케이션 서버입니다. |
 
 ## 샘플 애플리케이션 {#sample-app}
 
@@ -68,7 +68,7 @@ ht-degree: 2%
 
 1. [Express](https://expressjs.com/)은(는) 린 서버측 구현에 사용됩니다. 기본 서버 요청 및 라우팅을 처리합니다.
 2. 브라우저가 웹 페이지를 요청합니다. 브라우저에서 이전에 저장한 쿠키(`kndctr_` 접두사)가 포함됩니다.
-3. 앱 서버에서 페이지를 요청하면 [대화형 데이터 수집 끝점](../../../server-api/interactive-data-collection.md)으로 이벤트를 전송하여 개인화 콘텐츠를 가져옵니다. 샘플 앱은 도우미 메서드를 사용하여 API에 대한 요청 빌드 및 전송을 단순화합니다([aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js) 참조). `POST` 요청에 `event` 및 `query`이(가) 포함되어 있습니다. 사용 가능한 경우 이전 단계의 쿠키가 `meta>state>entries` 배열에 포함됩니다.
+3. 앱 서버에서 페이지를 요청하면 [대화형 데이터 수집 끝점](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/)으로 이벤트를 전송하여 개인화 콘텐츠를 가져옵니다. 샘플 앱은 도우미 메서드를 사용하여 API에 대한 요청 빌드 및 전송을 단순화합니다([aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js) 참조). `POST` 요청에 `event` 및 `query`이(가) 포함되어 있습니다. 사용 가능한 경우 이전 단계의 쿠키가 `meta>state>entries` 배열에 포함됩니다.
 
    ```js
    fetch(
@@ -196,5 +196,5 @@ ht-degree: 2%
    }
    ```
 
-6. [!DNL Visual Experience Composer (VEC)] 오퍼는 웹 SDK를 통해서만 렌더링할 수 있으므로 무시됩니다.
+6. [!DNL Visual Experience Composer (VEC)]개의 오퍼는 웹 SDK을 통해서만 렌더링할 수 있으므로 무시됩니다.
 7. HTML 응답이 반환되면 ID 및 클러스터 쿠키가 애플리케이션 서버에 의한 응답에 설정됩니다.

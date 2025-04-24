@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 데이터 수집 개요
 description: Adobe Experience Platform에서 고객 경험에 대한 데이터를 수집하는 것과 관련된 다양한 기술에 대해 알아봅니다.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '479'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Experience Platform은 클라이언트측 소스에서 고객 경험 데�
 * [이벤트 전달](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform 웹 SDK](../web-sdk/home.md)
 * [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)
-* [Edge Network Server API](../server-api/overview.md)
+* [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
 * [Experience Platform Assurance](../assurance/home.md)
 

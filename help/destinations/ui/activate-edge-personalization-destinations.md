@@ -3,9 +3,9 @@ title: Edge 개인화 대상에 대한 대상자 활성화
 description: 동일 페이지 및 다음 페이지 개인화 사용 사례를 위해 Adobe Experience Platform에서 Edge 개인화 대상으로 대상을 활성화하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1964'
 ht-degree: 2%
 
 ---
@@ -150,9 +150,9 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 
 >[!IMPORTANT]
 >
->프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화를 위해 대상을 구성할 때 **[!UICONTROL 사용자 지정 Personalization]** 대상을 사용하려면 [Edge Network Server API](../../server-api/overview.md)를 사용해야 합니다. 모든 서버 API 호출은 [인증된 컨텍스트](../../server-api/authentication.md)에서 수행되어야 합니다.
+>프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화를 위해 대상을 구성할 때 **[!UICONTROL 사용자 지정 Personalization]** 대상을 사용하려면 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)를 사용해야 합니다. 모든 Edge Network API 호출은 [인증된 컨텍스트](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/)에서 수행되어야 합니다.
 >
-><br>통합에 Web SDK 또는 Mobile SDK을 이미 사용하고 있는 경우 서버측 통합을 추가하여 Server API를 통해 특성을 검색할 수 있습니다.
+><br>통합에 Web SDK 또는 Mobile SDK을 이미 사용하고 있는 경우 서버측 통합을 추가하여 Edge Network API를 통해 특성을 검색할 수 있습니다.
 >
 ><br>위의 요구 사항을 따르지 않는 경우 개인화는 대상자 멤버십만 기반으로 합니다.
 

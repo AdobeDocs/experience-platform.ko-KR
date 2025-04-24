@@ -2,9 +2,9 @@
 title: DNL The Weather Channel의 날씨 데이터로 데이터 수집 향상
 description: DNL The Weather Channel의 날씨 데이터로 데이터스트림을 통해 수집하는 데이터를 향상시킵니다.
 exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
-source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '676'
 ht-degree: 68%
 
 ---
@@ -28,7 +28,7 @@ Adobe는 데이터스트림을 통해 수집한 데이터에 미국 날씨에 �
 날씨 데이터를 사용하기 전에 다음 전제 조건을 충족하는지 확인합니다.
 
 * [!DNL The Weather Channel]에서 사용할 날씨 데이터에 라이선스를 부여해야 합니다. 그러면 계정에서 활성화됩니다.
-* 날씨 데이터는 데이터스트림을 통해서만 사용할 수 있습니다. 날씨 데이터를 사용하려면 [!DNL Web SDK], [!DNL Mobile Edge Extension] 또는 [Server API](../../server-api/overview.md)를 사용하여 이 데이터를 포함해야 합니다.
+* 날씨 데이터는 데이터스트림을 통해서만 사용할 수 있습니다. 날씨 데이터를 사용하려면 [!DNL Web SDK], [!DNL Mobile Edge Extension] 또는 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)를 사용하여 이 데이터를 포함해야 합니다.
 * 데이터스트림에서 [[!UICONTROL 지리적 위치]](../configure.md#advanced-options)를 활성화해야 합니다.
 * 사용 중인 스키마에 [날씨 필드 그룹](#schema-configuration)을(를) 추가합니다.
 
@@ -66,11 +66,11 @@ Adobe는 데이터스트림을 통해 수집한 데이터에 미국 날씨에 �
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-날씨 데이터는 대상자에서 사용할 수 있도록 [Real-time Customer Data Platform](../../rtcdp/overview.md)에서 사용할 수 있습니다. 날씨 데이터는 이벤트에 첨부됩니다.
+날씨 데이터는 대상자에서 사용할 수 있도록 [Real-Time Customer Data Platform](../../rtcdp/overview.md)에서 사용할 수 있습니다. 날씨 데이터는 이벤트에 첨부됩니다.
 
 ![날씨 이벤트를 표시하는 세그먼트 빌더](../assets/data-enrichment/weather/schema-builder.png)
 
-Adobe 기상 조건은 자주 변경되므로 위의 예제와 같이 대상에 대해 시간 제한을 설정하는 것이 좋습니다. 6개월 전 추운 날씨보다는 전날 또는 이틀 전 추운 날씨에 의해 휠씬 더 큰 영향을 받을 수 있습니다.
+Adobe 기상 조건은 자주 변경되므로 위의 예에서 보듯이 대상에 대해 시간 제한을 설정하는 것이 좋습니다. 6개월 전 추운 날씨보다는 전날 또는 이틀 전 추운 날씨에 의해 휠씬 더 큰 영향을 받을 수 있습니다.
 
 사용 가능한 필드는 [날씨 참조](weather-reference.md)를 참조하십시오.
 
