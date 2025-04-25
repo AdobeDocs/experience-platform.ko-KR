@@ -1,15 +1,16 @@
 ---
-title: 인증되지 않은 방문자에 대한 오프사이트 재타겟팅
+title: 인증되지 않은 서버측 재타겟팅
 description: ECID를 사용하여 인증되지 않은 사용자를 다시 타겟팅하는 방법에 대해 알아봅니다
 feature: Use Cases, Customer Acquisition
-source-git-commit: 672b15b0c36efbf3b7d62ec616f254fffe3dbb81
+exl-id: 008f4534-29e7-49b9-b0be-9e0c3962ee21
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# 인증되지 않은 재타겟팅 {#unauthenticated-retargeting}
+# 인증되지 않은 서버측 재타겟팅 {#unauthenticated-retargeting}
 
 서드파티 쿠키의 효과가 떨어짐에 따라 기업은 개인화된 참여 및 재타겟팅을 위해 쿠키가 없는 솔루션으로 전환하고 있습니다. 오프사이트 리타기팅을 통해 기업은 클라이언트측 JavaScript에 의존하지 않고도 이전 상호 작용을 기반으로 고의도의 사용자에게 접근할 수 있습니다.
 

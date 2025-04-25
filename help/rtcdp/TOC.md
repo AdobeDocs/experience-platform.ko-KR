@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이들 프로필에서 대상자를 생성하며, 이들 대상자를 서드파티 대상으로 활성화할 수 있습니다.
 role: Admin
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '305'
 ht-degree: 63%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 63%
       * [서드파티 쿠키에 의존하지 않고 새 고객 참여 및 확보](/help/rtcdp/partner-data/prospecting.md)
       * [파트너 지원 방문자 인식을 사용하여 알 수 없는 방문자에 대한 온사이트 경험 개인화](/help/rtcdp/partner-data/onsite-personalization.md)
       * [인증되지 않은 사용자에 대한 오프사이트 재타겟팅](./partner-data/offsite-retargeting.md)
-      * [인증되지 않은 사용자에 대한 오프사이트 재타겟팅](./partner-data/unauthenticated-retargeting.md)
+      * [인증되지 않은 서버측 재타겟팅](./partner-data/unauthenticated-retargeting.md)
    * 프로필 보강 {#profile-enrichment}
       * [파트너가 제공한 속성으로 자사 프로필 보완](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
    * 개인화된 인사이트 및 참여 {#personalization-insights-engagement}
