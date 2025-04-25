@@ -7,7 +7,7 @@ exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -22,17 +22,17 @@ Adobe Experience Platform 위에 구축된 [!DNL Adobe Real-Time Customer Data P
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showfullxdmschema"
 >title="전체 XDM 스키마 표시"
->abstract="기본적으로 데이터가 포함된 필드만 표시됩니다. XDM 스키마의 모든 필드를 표시하려면 이 옵션을 활성화합니다."
+>abstract="기본적으로 데이터가 포함된 필드만 표시됩니다. 이 옵션을 활성화하면 XDM 스키마의 모든 필드가 표시됩니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showrelationselectors"
 >title="관계 선택기 표시"
->abstract="기본적으로 조직의 표준 관계가 사용됩니다. 사용된 관계 선택기를 표시하려면 이 옵션을 활성화합니다."
+>abstract="기본적으로 조직의 표준 관계가 사용됩니다. 이 옵션을 활성화하면 사용된 관계 선택기가 표시됩니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showconstrainedfields"
 >title="제한된 필드 표시"
->abstract="기본적으로 필드에 제한이 없는 필드만 표시됩니다. 제한이 있는 필드를 표시하려면 이 옵션을 활성화하십시오."
+>abstract="기본적으로 제한이 없는 필드만 표시됩니다. 이 옵션을 활성화하면 제한이 있는 필드가 표시됩니다."
 
 계정에 대해 대상 빌더를 사용할 때 계정 속성이나 기존 대상을 대상의 필드로 사용할 수 있습니다.
 

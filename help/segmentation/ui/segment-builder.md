@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '5024'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -30,12 +30,12 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_showfullxdmschema"
 >title="전체 XDM 스키마 표시"
->abstract="기본적으로 데이터가 포함된 필드만 표시됩니다. XDM 스키마의 모든 필드를 표시하려면 이 옵션을 활성화합니다."
+>abstract="기본적으로 데이터가 포함된 필드만 표시됩니다. 이 옵션을 활성화하면 XDM 스키마의 모든 필드가 표시됩니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_showdeprecatedfields"
 >title="사용되지 않는 필드 표시"
->abstract="기본적으로 더 이상 사용되지 않는 XDM 필드는 표시되지 않습니다. 더 이상 사용되지 않는 XDM 필드를 표시하려면 이 옵션을 활성화하십시오."
+>abstract="기본적으로 사용되지 않는 XDM 필드는 표시되지 않습니다. 사용되지 않는 XDM 필드를 표시하려면 이 옵션을 활성화합니다."
 
 세그먼트 정의의 기본 구성 요소는 속성 및 이벤트입니다. 또한 기존 대상자에 포함된 속성 및 이벤트를 새 정의의 구성 요소로 사용할 수 있습니다.
 

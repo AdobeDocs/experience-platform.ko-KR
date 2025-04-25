@@ -1,12 +1,12 @@
 ---
 title: 이벤트 전달 개요
-description: Experience Platform Edge Network을 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있는 Adobe Experience Platform의 이벤트 전달에 대해 알아봅니다.
+description: Experience Platform Edge Network를 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있도록 Adobe Experience Platform의 이벤트 게재에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1190'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
