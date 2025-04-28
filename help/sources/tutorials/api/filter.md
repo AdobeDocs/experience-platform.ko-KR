@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 Source에 대한 행 수준 데이터 필터링
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 소스 수준에서 데이터를 필터링하는 방법에 대한 단계를 다룹니다
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67abd5cda9cff1da8757ef691ebbf27e9a5550c5
 workflow-type: tm+mt
-source-wordcount: '1823'
+source-wordcount: '1825'
 ht-degree: 4%
 
 ---
@@ -15,11 +15,12 @@ ht-degree: 4%
 >
 >행 수준 데이터 필터링에 대한 지원은 현재 다음 소스에서만 사용할 수 있습니다.
 >
+>* [[Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
+>* [[!DNL Marketo Engage] 표준 활동](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
 >* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
->* [[!DNL Marketo Engage] 표준 활동](../../connectors/adobe-applications/marketo/marketo.md)
 
 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 소스에 대한 행 수준 데이터를 필터링하는 방법에 대한 단계는 이 안내서를 참조하십시오.
 
