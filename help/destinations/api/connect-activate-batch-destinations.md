@@ -5,7 +5,7 @@ title: 흐름 서비스 API를 사용하여 배치 대상에 연결하고 데이
 description: 플로우 서비스 API를 사용하여 Experience Platform에서 일괄 클라우드 스토리지 또는 이메일 마케팅 대상을 만들고 데이터를 활성화하는 단계별 지침
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 81641f707dbd9fb2952589506bc42c3dd6cd83b3
 workflow-type: tm+mt
 source-wordcount: '3416'
 ht-degree: 2%
@@ -1039,7 +1039,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `filenameTemplate` | 이 필드는 대상으로 내보내는 파일의 파일 이름 형식을 결정합니다. <br> 다음 옵션을 사용할 수 있습니다. <br> <ul><li>`%DESTINATION_NAME%`: 필수입니다. 내보낸 파일에는 대상 이름이 포함되어 있습니다.</li><li>`%SEGMENT_ID%`: 필수입니다. 내보낸 파일에는 내보낸 대상자의 ID가 들어 있습니다.</li><li>`%SEGMENT_NAME%`: 선택 사항입니다. 내보낸 파일에는 내보낸 대상자의 이름이 포함됩니다.</li><li>`DATETIME(YYYYMMdd_HHmmss)` 또는 `%TIMESTAMP%`: 선택 사항입니다. Experience Platform에서 생성한 시간을 파일에 포함하려면 다음 두 옵션 중 하나를 선택합니다.</li><li>`custom-text`: 선택 사항입니다. 이 자리 표시자를 파일 이름 끝에 추가할 사용자 지정 텍스트로 바꿉니다.</li></ul> <br> 파일 이름 구성에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서의 [파일 이름 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 섹션을 참조하십시오. |
 | `exportMode` | 필수. `"DAILY_FULL_EXPORT"` 또는 `"FIRST_FULL_THEN_INCREMENTAL"`을(를) 선택하십시오. 두 옵션에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서에서 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)를 참조하십시오. |
 | `startDate` | 대상자가 대상으로 프로필 내보내기를 시작할 날짜를 선택합니다. |
-| `frequency` | 필수. <br> <ul><li>`"DAILY_FULL_EXPORT"` 내보내기 모드의 경우 `ONCE` 또는 `DAILY`을(를) 선택할 수 있습니다.</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` 내보내기 모드의 경우 `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`을(를) 선택할 수 있습니다.</li></ul> |
+| `frequency` | 필수. <br> <ul><li>`"DAILY_FULL_EXPORT"` 내보내기 모드의 경우 `ONCE`, `DAILY`, `WEEKLY` 또는 `MONTHLY`을(를) 선택할 수 있습니다.</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` 내보내기 모드의 경우 `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`을(를) 선택할 수 있습니다.</li></ul> |
 | `triggerType` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 `frequency` 선택기에서 `"DAILY_FULL_EXPORT"` 모드를 선택하는 경우에만 필요합니다. <br>은(는) 필수입니다. <br> <ul><li>매일 Experience Platform 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행하려면 `"AFTER_SEGMENT_EVAL"`을(를) 선택하십시오. 이렇게 하면 활성화 작업이 실행될 때 가장 최신 프로필을 대상으로 내보냅니다.</li><li>고정된 시간에 활성화 작업을 실행하려면 `"SCHEDULED"`을(를) 선택하십시오. 이렇게 하면 Experience Platform 프로필 데이터를 매일 동시에 내보낼 수 있지만 활성화 작업이 시작되기 전에 배치 세분화 작업이 완료되었는지 여부에 따라 내보내는 프로필이 최신 프로필이 아닐 수 있습니다. 이 옵션을 선택할 때는 일별 내보내기가 발생하는 시간을 UTC로 나타내려면 `startTime`도 추가해야 합니다.</li></ul> |
 | `endDate` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. `"exportMode":"DAILY_FULL_EXPORT"` 및 `"frequency":"ONCE"`을(를) 선택할 때는 <br>을(를) 적용할 수 없습니다. <br> 대상 구성원의 대상 내보내기를 중지할 날짜를 설정합니다. |
 | `startTime` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br>은(는) 필수입니다. 대상자의 멤버가 포함된 파일을 생성하여 대상으로 내보내야 하는 시간을 선택합니다. |

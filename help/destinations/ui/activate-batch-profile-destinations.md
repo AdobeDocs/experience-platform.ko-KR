@@ -3,9 +3,9 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 11961e291188d509609a036f41084f4487cab584
+source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
 workflow-type: tm+mt
-source-wordcount: '4517'
+source-wordcount: '4596'
 ht-degree: 11%
 
 ---
@@ -125,7 +125,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="대상자 평가 후 활성화"
->abstract="일별 세분화 작업이 완료되면 활성화가 실행됩니다. 이렇게 하면 최신 프로필을 내보낼 수 있습니다."
+>abstract="<p>일별 세분화 작업이 완료되면 활성화가 실행됩니다. 이렇게 하면 최신 프로필을 내보낼 수 있습니다.</p><p>대상 평가 후 프로필을 내보내는 옵션은 주별 및 월별 내보내기 주기에 <i>사용할 수 없음</i>입니다.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -140,6 +140,8 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
    * **[!UICONTROL 한 번]**: 온디맨드 전체 파일 내보내기를 한 번 예약합니다.
    * **[!UICONTROL 매일]**: 지정한 시간에 매일 한 번씩 전체 파일 내보내기를 예약합니다.
+   * **[!UICONTROL 주별]**: 시작 날짜를 선택하면 선택한 종료 날짜까지 그 주의 해당 날짜에 후속 내보내기가 발생합니다.
+   * **[!UICONTROL 월별]**: 시작 날짜를 선택하면 선택한 종료 날짜까지 그 달의 해당 날짜에 후속 내보내기가 수행됩니다. 30일 또는 31일 미만인 달의 경우 해당 월의 마지막 날에 내보내기가 발생합니다.
 
 2. **[!UICONTROL 시간]** 토글을 사용하여 대상 평가 직후에 내보내기를 수행할지 또는 지정된 시간에 예약된 일정에 따라 내보내기를 수행할지 여부를 선택합니다. **[!UICONTROL 예약됨]** 옵션을 선택할 때 선택기를 사용하여 내보내기를 수행할 시간을 [!DNL UTC] 형식으로 선택할 수 있습니다.
 
@@ -187,6 +189,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
    * **[!UICONTROL 매일]**: 매일 지정한 시간에 매일 한 번씩 증분 파일 내보내기를 예약합니다.
    * **[!UICONTROL 시간별]**: 3, 6, 8 또는 12시간마다 증분 파일 내보내기를 예약합니다.
+
 
 2. 내보내기를 수행할 시간을 **[!UICONTROL 시간]** 선택기에서 [!DNL UTC] 형식으로 선택합니다.
 
