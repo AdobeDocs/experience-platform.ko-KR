@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문에 대해 자세히 설명합니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 654a8b6a3f961514ef96eaec879697cde36f8b1b
+source-git-commit: 5adc587a232e77f1136410f52ec207631b6715e3
 workflow-type: tm+mt
-source-wordcount: '4265'
-ht-degree: 2%
+source-wordcount: '4623'
+ht-degree: 1%
 
 ---
 
@@ -192,32 +192,141 @@ SELECT statement 2
 
 ### 선택 항목으로 표 만들기 {#create-table-as-select}
 
-다음 구문은 `CREATE TABLE AS SELECT`(CTAS) 쿼리를 정의합니다.
+`CREATE TABLE AS SELECT`(CTAS) 명령을 사용하여 `SELECT` 쿼리의 결과를 새 테이블로 구체화합니다. 이 기능은 모델에서 사용하기 전에 변환된 데이터 세트를 만들거나, 합계를 수행하거나, 기능이 엔지니어링된 데이터를 미리 보는 데 유용합니다.
+
+변형된 기능을 사용하여 모델을 교육할 준비가 되었으면 [모델 설명서](../advanced-statistics/models.md)에서 `TRANSFORM` 절을 사용한 `CREATE MODEL` 사용에 대한 지침을 참조하십시오.
+
+선택적으로 `TRANSFORM` 절을 포함하여 CTAS 문 내에서 직접 하나 이상의 기능 엔지니어링 함수를 적용할 수 있습니다. 모델 교육 전에 `TRANSFORM`을(를) 사용하여 변환 논리의 결과를 검사하십시오.
+
+이 구문은 영구 테이블과 임시 테이블 모두에 적용됩니다.
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE') ] AS (select_query)
+CREATE TABLE table_name 
+  [WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE')] 
+  [TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)]
+AS (select_query)
 ```
 
-| 매개 변수 | 설명 |
+```sql
+CREATE TEMP TABLE table_name 
+  [WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE')] 
+  [TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)]
+AS (select_query)
+```
+
+| 매개변수 | 설명 |
 | ----- | ----- |
-| `schema` | XDM 스키마의 제목입니다. CTAS 쿼리로 만든 새 데이터 세트에 기존 XDM 스키마를 사용하려는 경우에만 이 절을 사용합니다. |
-| `rowvalidation` | (선택 사항) 사용자가 새로 만든 데이터 세트에 대해 수집된 모든 새 일괄 처리의 행 수준 유효성 검사를 원하는지 여부를 지정합니다. 기본값은 `true`입니다. |
-| `label` | CTAS 쿼리로 데이터 세트를 만들 때 값이 `profile`인 이 레이블을 사용하여 데이터 세트에 프로필이 활성화되도록 레이블을 지정합니다. 즉, 데이터 세트가 생성될 때 프로필에 대해 자동으로 표시됩니다. `label` 사용에 대한 자세한 내용은 파생 특성 확장 문서를 참조하십시오. |
-| `select_query` | `SELECT` 문입니다. `SELECT` 쿼리의 구문은 [SELECT 쿼리 섹션](#select-queries)에 있습니다. |
-
-**예**
-
-```sql
-CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
-
-CREATE TABLE Chairs WITH (schema='target schema title', label='PROFILE') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
-
-CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
-```
+| `schema` | XDM 스키마의 제목입니다. 새 테이블을 기존 XDM 스키마와 연결하려는 경우에만 이 절을 사용합니다. |
+| `rowvalidation` | (선택 사항) 데이터 세트에 수집된 각 배치에 대해 행 수준 유효성 검사를 활성화합니다. 기본값은 true입니다. |
+| `label` | (선택 사항) 값 `PROFILE`을(를) 사용하여 프로필 수집에 대해 활성화된 데이터 집합에 레이블을 지정합니다. |
+| `transform` | (선택 사항) 데이터 세트를 구체화하기 전에 기능 엔지니어링 변환(예: 문자열 색인화, 핫형 인코딩 또는 TF-IDF)을 적용합니다. 이 절은 변환된 피쳐를 미리 보는 데 사용됩니다. 자세한 내용은 [`TRANSFORM` 절 설명서](#transform)를 참조하세요. |
+| `select_query` | 데이터 집합을 정의하는 표준 `SELECT` 문입니다. 자세한 내용은 [`SELECT` 쿼리 섹션](#select-queries)을(를) 참조하십시오. |
 
 >[!NOTE]
 >
->`SELECT` 문에는 `COUNT`, `SUM`, `MIN` 등의 집계 함수에 대한 별칭이 있어야 합니다. 또한 `SELECT` 문에는 괄호()를 사용하거나 사용하지 않을 수 있습니다. 대상 테이블에 증분 델타를 읽을 수 있는 `SNAPSHOT` 절을 제공할 수 있습니다.
+>`SELECT` 문에는 `COUNT`, `SUM` 또는 `MIN`과(와) 같은 집계 함수에 대한 별칭이 포함되어야 합니다. `SELECT` 쿼리에 괄호를 사용하거나 사용하지 않을 수 있습니다. 이는 `TRANSFORM` 절을 사용하는지 여부에 따라 적용됩니다.
+
+**예**
+
+`TRANSFORM`절을 사용하여 몇 가지 엔지니어링된 기능을 미리 보는 기본적인 예입니다.
+
+```sql
+CREATE TABLE ctas_transform_table_vp14 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments
+)
+AS SELECT * FROM movie_review_e2e_DND;
+```
+
+여러 변환 단계를 포함하는 고급 예:
+
+```sql
+CREATE TABLE ctas_transform_table 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
+AS SELECT * FROM movie_review;
+```
+
+임시 테이블 예:
+
+```sql
+CREATE TEMP TABLE ctas_transform_table 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
+AS SELECT * FROM movie_review;
+```
+
+#### 제한 사항 및 동작 {#limitations-and-behavior}
+
+`CREATE TABLE` 또는 `CREATE TEMP TABLE`에 `TRANSFORM` 절을 사용할 때는 다음 제한 사항을 염두에 두십시오.
+
+- 변환 함수가 벡터 출력을 생성하면 자동으로 배열로 변환됩니다.
+- 따라서 `TRANSFORM`을(를) 사용하여 만든 테이블은 `CREATE MODEL` 문에서 바로 사용할 수 없습니다. 적절한 피쳐 벡터를 생성하려면 모델을 생성하는 동안 변환 논리를 재정의해야 합니다.
+- 변형은 테이블 생성 중에만 적용됩니다. `INSERT INTO`이(가) 있는 테이블에 삽입된 새 데이터는 **자동으로 변환되지 않습니다**. 새 데이터에 변환을 적용하려면 `TRANSFORM` 절을 사용하여 `CREATE TABLE AS SELECT`을(를) 사용하여 테이블을 다시 만들어야 합니다.
+- 이 방법은 재사용 가능한 변환 파이프라인을 구축하기 위한 것이 아니라 특정 시점의 변환을 미리 보고 검증하기 위한 것입니다.
+
+>[!NOTE]
+>
+>사용 가능한 변환 함수 및 출력 형식에 대한 자세한 내용은 [기능 변환 출력 데이터 형식](../advanced-statistics/feature-transformation.md#available-transformations)을 참조하십시오.
+
+
+### TRANSFORM 절 {#transform}
+
+모델 교육이나 테이블을 만들기 전에 데이터 집합에 하나 이상의 기능 엔지니어링 함수를 적용하려면 `TRANSFORM` 절을 사용하십시오. 이 절을 사용하면 입력 기능의 정확한 모양을 미리 보거나, 검증하거나, 정의할 수 있습니다.
+
+`TRANSFORM` 절은 다음 문에서 사용할 수 있습니다.
+
+- `CREATE MODEL`
+- `CREATE TABLE`
+- `CREATE TEMP TABLE`
+
+변형을 정의하고, 모델 옵션을 설정하고, 교육 데이터를 구성하는 방법을 포함하여 CREATE MODEL 사용에 대한 자세한 지침은 [모델 설명서](../advanced-statistics/models.md)를 참조하세요.
+
+`CREATE TABLE`에서 사용하려면 [CREATE TABLE AS SELECT 섹션](#create-table-as-select)을 참조하십시오.
+
+#### 모델 만들기 예제
+
+```sql
+CREATE MODEL review_model
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) AS ohe_add_comments,
+  tokenizer(comments) AS token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) AS stp_token,
+  ngram(stp_token, 3) AS ngram_token,
+  tf_idf(ngram_token, 20) AS ngram_idf,
+  count_vectorizer(stp_token, 13) AS cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) AS cmts_idf,
+  vector_assembler(array(cmts_idf, viewsgot, ohe_add_comments, ngram_idf, cnt_vec_comments)) AS features
+)
+OPTIONS(MODEL_TYPE='logistic_reg', LABEL='reviews')
+AS SELECT * FROM movie_review_e2e_DND;
+```
+
+#### 제한 사항 {#limitations}
+
+`TRANSFORM`을(를) `CREATE TABLE`과(와) 함께 사용하는 경우 다음 제한이 적용됩니다. 변환된 데이터가 저장되는 방법, 벡터 출력을 처리하는 방법 및 모델 교육 워크플로우에서 결과를 직접 재사용할 수 없는 이유에 대한 자세한 설명은 `CREATE TABLE AS SELECT` 제한 및 동작 섹션을 참조하십시오.
+
+- 벡터 출력은 자동으로 배열로 변환되며, 이 배열은 `CREATE MODEL`에서 직접 사용할 수 없습니다.
+- 변환 로직은 메타데이터로 유지되지 않으며 배치 간에 재사용할 수 없습니다.
 
 ## 에 삽입
 
@@ -756,7 +865,7 @@ ANALYZE TABLE <original_table_name>
 
 #### 데이터 레이크의 통계 계산 {#compute-statistics-data-lake}
 
-이제 `COMPUTE STATISTICS` SQL 명령을 사용하여 [!DNL Azure Data Lake Storage](ADLS) 데이터 세트에 대한 열 수준 통계를 계산할 수 있습니다. 전체 데이터 세트, 데이터 세트의 하위 집합, 모든 열 또는 열의 하위 집합에 대한 열 통계를 계산합니다.
+이제 `COMPUTE STATISTICS` SQL 명령을 사용하여 [!DNL Azure Data Lake Storage]&#x200B;(ADLS) 데이터 세트에 대한 열 수준 통계를 계산할 수 있습니다. 전체 데이터 세트, 데이터 세트의 하위 집합, 모든 열 또는 열의 하위 집합에 대한 열 통계를 계산합니다.
 
 `COMPUTE STATISTICS`이(가) `ANALYZE TABLE` 명령을 확장합니다. 그러나 `COMPUTE STATISTICS`, `FILTERCONTEXT` 및 `FOR COLUMNS` 명령은 가속화된 저장소 테이블에서 지원되지 않습니다. `ANALYZE TABLE` 명령에 대한 이러한 확장은 현재 ADLS 테이블에서만 지원됩니다.
 
@@ -812,7 +921,7 @@ Adobe Experience Platform 쿼리 서비스는 대략적인 쿼리 처리 기능�
 
 데이터 집합 샘플은 데이터 집합에 대한 집계 작업에 대해 정확한 답변이 필요하지 않을 때 사용하는 것이 가장 좋습니다. 대략적인 답변을 반환하기 위해 대략적인 쿼리를 발행하여 큰 데이터 세트에 대해 보다 효율적인 탐색 쿼리를 수행하려면 `TABLESAMPLE` 기능을 사용하십시오.
 
-샘플 데이터 세트는 원본의 레코드 비율만 사용하여 기존 [!DNL Azure Data Lake Storage](ADLS) 데이터 세트의 균일한 무작위 샘플로 만들어집니다. 데이터 집합 샘플 기능이 `ANALYZE TABLE` 명령을 `TABLESAMPLE` 및 `SAMPLERATE` SQL 명령으로 확장합니다.
+샘플 데이터 세트는 원본의 레코드 비율만 사용하여 기존 [!DNL Azure Data Lake Storage]&#x200B;(ADLS) 데이터 세트의 균일한 무작위 샘플로 만들어집니다. 데이터 집합 샘플 기능이 `ANALYZE TABLE` 명령을 `TABLESAMPLE` 및 `SAMPLERATE` SQL 명령으로 확장합니다.
 
 아래 예에서 1행은 표의 5% 샘플을 계산하는 방법을 보여줍니다. 두 번째 행은 표 내의 데이터에 대한 필터링된 보기에서 5% 샘플을 계산하는 방법을 보여 줍니다.
 
@@ -1139,7 +1248,7 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 
 ##### 지원되는 데이터 유형
 
-다음 표는 Azure SQL에서 [!DNL Postgres SQL], XDM 및 [!DNL Accelerated Database Recovery](ADR)이 있는 테이블에 열을 추가하는 데 허용되는 데이터 형식을 나열합니다.
+다음 표는 Azure SQL에서 [!DNL Postgres SQL], XDM 및 [!DNL Accelerated Database Recovery]&#x200B;(ADR)이 있는 테이블에 열을 추가하는 데 허용되는 데이터 형식을 나열합니다.
 
 | — | PSQL 클라이언트 | XDM | ADR | 설명 |
 |---|---|---|---|---|
