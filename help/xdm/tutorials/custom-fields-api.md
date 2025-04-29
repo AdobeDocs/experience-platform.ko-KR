@@ -2,9 +2,9 @@
 title: 스키마 레지스트리 API에서 XDM 필드 정의
 description: 스키마 레지스트리 API에서 사용자 지정 XDM(경험 데이터 모델) 리소스를 만들 때 다양한 필드를 정의하는 방법을 알아봅니다.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1197'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 다음 추가 속성을 통해 문자열에 입력할 수 있는 값 종류를 선택적으로 제한할 수 있습니다.
 
 * `pattern`: 제한할 정규 표현식 패턴입니다.
-* `minLength`: 문자열의 최소 길이입니다.
+* `minLength`: 문자열의 최소 길이입니다. 문자열은 기본적으로 최소값 `1`을(를) 받습니다.
 * `maxLength`: 문자열의 최대 길이입니다.
 
 ```json
