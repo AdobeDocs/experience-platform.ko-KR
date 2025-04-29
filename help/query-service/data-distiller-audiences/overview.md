@@ -2,10 +2,10 @@
 title: SQL을 사용하여 대상 작성
 description: Adobe Experience Platform의 Data Distiller에서 SQL 대상 확장을 사용하여 SQL 명령을 사용하여 대상을 만들고, 관리하고, 게시하는 방법에 대해 알아봅니다. 이 안내서에서는 프로필 만들기, 업데이트 및 삭제, 데이터 기반 대상 정의 사용 등 대상 라이프사이클의 모든 측면을 다룹니다.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9e16282f9f10733fac9f66022c521684f8267167
 workflow-type: tm+mt
-source-wordcount: '1485'
-ht-degree: 1%
+source-wordcount: '1833'
+ht-degree: 2%
 
 ---
 
@@ -100,6 +100,97 @@ SELECT select_query
 INSERT INTO Audience aud_test
 SELECT userId, orders, total_revenue, recency, frequency, monetization FROM customer_ds;
 ```
+
+### 대상 데이터 바꾸기(삽입: 덮어쓰기) {#replace-audience}
+
+`INSERT OVERWRITE INTO` 명령을 사용하여 대상에 있는 모든 기존 프로필을 새 SQL 쿼리 결과로 바꿉니다. 이 명령은 한 단계에서 대상자의 콘텐츠를 완전히 새로 고칠 수 있도록 하여 동적 대상자 세그먼트를 관리하는 데 유용합니다.
+
+>[!AVAILABILITY]
+>
+>`INSERT OVERWRITE INTO` 명령은 Data Distiller 고객만 사용할 수 있습니다. Data Distiller 추가 기능에 대한 자세한 내용은 Adobe 담당자에게 문의하십시오.
+
+현재 대상자에 추가하는 [`INSERT INTO`](#add-profiles-to-audience)과(와) 달리 `INSERT OVERWRITE INTO`은(는) 기존 대상자 멤버를 모두 제거하고 쿼리에서 반환된 멤버만 삽입합니다. 이를 통해 자주 업데이트하거나 전체 업데이트가 필요한 대상자를 관리할 때 제어 기능과 유연성을 높일 수 있습니다.
+
+다음 구문 템플릿을 사용하여 대상자를 새 프로필 세트로 덮어씁니다.
+
+```sql
+INSERT OVERWRITE INTO audience_name
+SELECT select_query
+```
+
+**매개 변수**
+
+아래 표에서는 `INSERT OVERWRITE INTO` 명령에 필요한 매개 변수에 대해 설명합니다.
+
+| 매개변수 | 설명 |
+|-----------|-------------|
+| `audience_name` | `CREATE AUDIENCE` 명령을 사용하여 만든 대상자의 이름입니다. |
+| `select_query` | 대상자에 포함할 프로필을 정의하는 `SELECT` 문입니다. |
+
+**예:**
+
+이 예제에서는 `audience_monthly_refresh` 대상자를 쿼리 결과로 완전히 덮어씁니다. 쿼리에서 반환되지 않은 모든 프로필은 대상에서 제거됩니다.
+
+>[!NOTE]
+>
+>덮어쓰기 작업이 올바르게 작동하려면 대상과 연결된 일괄 업로드 하나만 있어야 합니다.
+
+```sql
+INSERT OVERWRITE INTO audience_monthly_refresh
+SELECT user_id FROM latest_transaction_summary WHERE total_spend > 100;
+```
+
+#### 실시간 고객 프로필의 대상 덮어쓰기 동작
+
+대상을 덮어쓰는 경우 실시간 고객 프로필은 다음 논리를 적용하여 프로필 멤버십을 업데이트합니다.
+
+- 새 배치에만 나타나는 프로필은 입력된 것으로 표시됩니다.
+- 이전 배치에만 있던 프로필은 종료됨으로 표시됩니다.
+- 두 배치에 있는 프로필은 변경되지 않은 상태로 유지됩니다(아무 작업도 수행되지 않음).
+
+이렇게 하면 대상 업데이트가 다운스트림 시스템 및 워크플로에 정확하게 반영됩니다.
+
+**예제 시나리오**
+
+대상 `A1`에 원래 다음이 포함된 경우:
+
+| ID | 이름 |
+|----|------|
+| A | 잭 |
+| B | John |
+| C | 마사 |
+
+그러면 덮어쓰기 쿼리는 다음을 반환합니다.
+
+| ID | 이름 |
+|----|------|
+| A | 스튜어트 |
+| C | 마사 |
+
+그러면 업데이트된 대상자에 다음이 포함됩니다.
+
+| ID | 이름 |
+|----|------|
+| A | 스튜어트 |
+| C | 마사 |
+
+프로필 B가 제거되고 프로필 A가 업데이트되며 프로필 C는 변경되지 않은 상태로 유지됩니다.
+
+덮어쓰기 쿼리에 새 프로필이 포함된 경우:
+
+| ID | 이름 |
+|----|------|
+| A | 스튜어트 |
+| C | 마사 |
+| D | 크리스 |
+
+그러면 최종 대상자는 다음과 같습니다.
+
+| ID | 이름 |
+|----|------|
+| A | 스튜어트 |
+| C | 마사 |
+| D | 크리스 |
 
 ### RFM 모델 대상 예 {#rfm-model-audience-example}
 
