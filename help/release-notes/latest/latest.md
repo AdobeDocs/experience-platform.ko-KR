@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 4월
 description: Adobe Experience Platform에 대한 2025년 4월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d2ee1adb031af83569f7b226a8881297423fc257
+source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
 workflow-type: tm+mt
-source-wordcount: '1663'
-ht-degree: 29%
+source-wordcount: '1706'
+ht-degree: 28%
 
 ---
 
@@ -51,6 +51,7 @@ Experience League은 Adobe 제품을 통해 기술을 향상시킬 수 있도록
 | 대상 | 설명 |
 | --- | --- |
 | [Marketo Engage 사용자 동기화](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe은 id 맵에 여러 전자 메일이 있을 때 고객에게 영향을 미치는 문제를 해결하기 위해 [!DNL Marketo Engage Person Sync] 대상을 업데이트했습니다. |
+| [(V2) 페가 CDH 실시간 대상 연결](/help/destinations/catalog/personalization/pega-v2.md) | Adobe Experience Platform Pega 계정에 여러 개의 Pega 고객 결정 허브 응용 프로그램이 구성되어 있는 경우, 프로필 속성 및 대상자 멤버십 데이터를 Pega 고객 결정 허브로 보내어 차선책을 결정하십시오.[!DNL (V2) Pega Customer Decision Hub Realtime Audience] |
 
 **새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
 
