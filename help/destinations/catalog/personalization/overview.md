@@ -3,10 +3,10 @@ keywords: 개인화;Personalization
 title: Personalization 대상 개요
 description: Personalization 플랫폼은 개별 행동에서 데이터와 통찰력을 수집합니다. 이러한 플랫폼은 마케터가 익명 데이터를 탐색하고, 이전 활동을 기반으로 또는 유사한 습관을 가진 대상의 일부로 잠재 고객에게 오퍼 또는 광고를 제공하는 데 도움이 될 수 있습니다.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cc18f5c9445e5d08565cd5ac4bcbdb11ccbc1a31
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 9%
+source-wordcount: '157'
+ht-degree: 8%
 
 ---
 
@@ -26,6 +26,7 @@ Personalization 플랫폼은 개별 행동에서 데이터와 통찰력을 수�
 * [Adobe Commerce](adobe-commerce.md)
 * [사용자 지정 개인화 연결](custom-personalization.md)
 * [Pega 고객 의사 결정 허브 연결](pega.md)
+* [(V2) Pega 고객 의사 결정 허브 연결](pega.md)
 * [Pega 프로필 연결](pega-profile.md)
 
 **확장 기능**
