@@ -1,19 +1,17 @@
 ---
 title: UI를 사용하여 Algolia 사용자 프로필을 Experience Platform에 연결
 description: Algolia 사용자를 Experience Platform에 연결하는 방법에 대해 알아보기
-hide: true
-hidefromtoc: true
 exl-id: d4c936a7-4983-4a12-a813-03b672116e44
-source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
+source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1136'
 ht-degree: 1%
 
 ---
 
 # UI를 사용하여 [!DNL Algolia User Profiles] 데이터를 Experience Platform으로 수집
 
-사용자 인터페이스를 사용하여 [!DNL Algolia User Profiles] 계정에서 Adobe Experience Platform으로 결제 데이터를 수집하는 방법에 대해 알아보려면 이 자습서를 읽어 보십시오.
+사용자 인터페이스를 사용하여 [!DNL Algolia User Profiles] 계정의 데이터를 Adobe Experience Platform으로 수집하는 방법에 대해 알아보려면 이 자습서를 참조하십시오.
 
 ## 시작하기
 

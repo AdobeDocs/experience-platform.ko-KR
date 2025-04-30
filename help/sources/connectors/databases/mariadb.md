@@ -1,8 +1,9 @@
 ---
 title: MariaDB Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 MariaDB를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
-source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
+source-git-commit: 04634c6edc13d8b8da01a01077161866235c61b1
 workflow-type: tm+mt
 source-wordcount: '601'
 ht-degree: 0%
