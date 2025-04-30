@@ -4,9 +4,9 @@ title: AI Assistant를 사용하여 나만의 플레이북을 작성하고 공�
 description: 사용 사례 플레이북을 만들고 공유하는 방법
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: aa1e155fb8d71497958d0de1f6c10cf47e58dbf0
+source-git-commit: a910c922e9a51b60e276b0aac7e81e35d0a378fd
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1665'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform의 AI Assistant에서 제공하는 [!DNL Playbook Auth
 
 프레임워크는 다음 3단계 프로세스를 따릅니다.
 
-1. **메타데이터 캡처**: AI Assistant 또는 [webform]을(를) 사용하여 플레이북 메타데이터를 캡처합니다.
+1. **메타데이터 캡처**: AI Assistant 또는 웹 양식을 사용하여 플레이북 메타데이터를 캡처합니다.
 
 2. **기술 연결**: 플레이북에 여정 또는 대상과 같은 특정 기술 자산을 추가합니다. 개발 샌드박스 내에서 플레이북 생성 프로세스를 완벽하게 제어하여 스키마 및 기타 고유한 데이터 구조와 정렬되도록 합니다.
 
@@ -26,7 +26,7 @@ Adobe Experience Platform의 AI Assistant에서 제공하는 [!DNL Playbook Auth
 
 ## 플레이북 만들기
 
-AI Assistant를 사용하거나 수동으로 두 가지 방법으로 플레이북을 만들 수 있습니다. 다음 섹션을 읽고 방법을 알아보십시오.
+AI Assistant를 사용하거나 수동으로 두 가지 방법으로 플레이북을 만들 수 있습니다. 다음 섹션을 읽고 AI Assistant를 사용하여 플레이북을 만드는 방법을 알아보십시오.
 
 ### 플레이북 개요
 
@@ -40,9 +40,9 @@ UI의 왼쪽 탐색 창에 강조 표시된 ![&quot;플레이북&quot;.](/help/u
 
 ![&quot;AI Assistant를 사용하여 플레이북 생성&quot;이 선택된 플레이북 인터페이스입니다.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
-프롬프트 필드에서 사용 사례를 설명합니다.
+프롬프트 필드를 사용하여 사용 사례를 설명합니다. 예:
 
-**예**: &quot;운동화를 열람했지만 구입을 완료하지 않은 ACME 고객을 참여시키십시오.&quot;
+&quot;러닝화를 검색했지만 구매를 완료하지 않은 ACME 고객을 참여하십시오.&quot;
 
 ![Webform 영역이 강조 표시된 플레이북 인터페이스입니다.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
@@ -114,7 +114,7 @@ AI 비서가 불필요한 정보를 걸러내면서 다양한 프롬프트 구�
 
 &quot;매출과 CLV를 늘리기 위해 &quot;룩을 완성하기&quot;라는 캠페인을 만듭니다. 이 캠페인에서는 주방용품이나 가구를 구매한 고객이 개별 추천과 구매 관련 오퍼를 통해 보완적으로 구매하도록 유도합니다. 고객에게 제품 추천을 알리는 메시지를 먼저 보냅니다. 7일 이내에 구매하지 않을 경우 제품 추천 및 오퍼와 함께 두 번째 메시지를 받게 됩니다. 푸시 알림 및 이메일을 사용하여 고객에게 연락합니다. 주방용품 또는 가구 범주에서 지난 7일 동안 구입한 고객으로 최근 30일 동안 대상이 되지 않은 고객을 대상으로 합니다. 캠페인의 일부로, 클릭 수(이메일, 앱, SMS, 푸시), CTR, E-Wallet CTR, AOV Conversion.CLV 매출, 총 구매 이벤트(매장 내, 디지털, 콜센터) 등의 KPI를 측정하려고 합니다.&quot;
 
-![예제 1 프롬프트](/help/use-case-playbooks/assets/playbooks/authoring/example-prompt.png)
+![텍스트 입력란에 긴 프롬프트를 표시하는 예제](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
 
 **예 2:**
 
@@ -126,20 +126,20 @@ AI 비서가 불필요한 정보를 걸러내면서 다양한 프롬프트 구�
 타겟 대상: ACME 패션 뉴스레터 커뮤니케이션을 구독한 고객.
 타겟 KPI/참여 지표/ROI: 1. 제품 수익 증대 2. 고객 충성도를 높입니다.&quot;
 
-![예제 2 프롬프트](/help/use-case-playbooks/assets/playbooks/authoring/example-2-prompt.png)
+![텍스트 입력란에 구성된 프롬프트를 표시하는 예제](/help/use-case-playbooks/assets/playbooks/authoring/organized-list-prompt.png)
 
 **예 3:**
 
 &quot;지속적인 제품 홍보 캠페인 동안 쇼핑객이 제품을 구입하도록 유도합니다.
 이메일, SMS 또는 푸시 알림을 통해 적절한 커뮤니케이션을 전송하여 제품을 구매함으로써 지속적인 프로모션을 통해 쇼핑객과 소통할 수 있습니다. 24시간 동안 프로모션에 참여하지 않은 경우 알림 이메일을 보내십시오.&quot;
 
-![예제 3 프롬프트](/help/use-case-playbooks/assets/playbooks/authoring/example-3-prompt.png)
+![텍스트 입력란에 간결한 프롬프트를 표시하는 예제](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
 
 **예 4:**
 
 &quot;고등학교 선수들에게 신발을 팔아라.&quot;
 
-![예제 4 프롬프트](/help/use-case-playbooks/assets/playbooks/authoring/example-4-prompt.png)
+![한 줄 프롬프트를 보여 주는 예제](/help/use-case-playbooks/assets/playbooks/authoring/one-liner-prompt.png)
 
 AI 어시스턴트는 &#39;프로젝트 이름&#39;이나 &#39;배경&#39;과 같은 불필요한 세부 정보를 모두 제거한다. 대상&quot;, &quot;캠페인 목표&quot; 및 &quot;마케팅 채널&quot;과 같은 주요 요소를 추출하고 모든 입력 스타일에서 작동합니다.
 
@@ -157,6 +157,85 @@ AI 어시스턴트는 &#39;프로젝트 이름&#39;이나 &#39;배경&#39;과 �
 
 플레이북이 부적절하거나 불쾌한 콘텐츠로 플래그가 지정된 경우 검토를 위해 Adobe에 자동으로 보고됩니다. 그런 다음 Adobe에서 플래그가 지정된 콘텐츠를 검토하고 부적절하다고 판단되면 고객에게 알림이 전송되고 플레이북이 제거됩니다.
 
+## 샌드박스 간 플레이북 공유 {#sharing-playbooks-sandboxes}
+
+조직에 여러 개의 샌드박스가 포함되어 있는 경우 여러 샌드박스 간에 플레이북을 수동으로 공유할 필요가 없습니다. 한 샌드박스에서 플레이북을 만들어 게시하면 해당 조직 내의 모든 샌드박스에서 사용할 수 있습니다. 그런 다음 다른 샌드박스에서 해당 플레이북의 인스턴스를 만들 수 있습니다.
+
+플레이북이 다른 샌드박스의 결합 스키마에서 사용할 수 없는 필드를 참조하는 경우 인스턴스를 생성하려고 하면 오류 메시지가 표시될 수 있습니다. 해당 메시지는 누락된 필드를 호출하므로 필요에 따라 스키마를 업데이트할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>전이적 플레이북 공유는 지원되지 않습니다. 한 조직에서 다른 조직으로 플레이북을 공유한 다음 가져오는 경우 받는 조직에서 다른 조직으로 다시 공유할 수 없습니다.
+
+## 조직 간 플레이북 공유 {#sharing-playbooks-organizations}
+
+한 조직에서 다른 조직으로 플레이북을 공유하려면 다음 단계를 수행합니다.
+
+* **소스 조직에 로그인**: 만든 플레이북이 포함된 조직으로 이동하여 **[!UICONTROL 플레이북의]** 탭에서 공유합니다.
+* **플레이북 게시**: 플레이북이 아직 게시되지 않은 경우 공유하기 전에 먼저 게시해야 합니다.
+
+>[!NOTE]
+>
+>플레이북 공유를 활성화하려면 소스 조직과 대상 조직 간에 파트너십을 구축해야 합니다. [조직 파트너 관계 요청을 만드는 방법](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs)을 알아보세요.
+
+* **공유 시작**: 플레이북이 게시되고 파트너 관계가 설정되면 **[!UICONTROL 플레이북 공유]**&#x200B;를 선택합니다.
+* **대상 조직 선택**: 메시지가 표시되면 플레이북을 공유할 조직을 선택합니다.
+* **확인 및 공유**: 선택 내용을 확인합니다. 성공적인 공유를 나타내는 확인 메시지를 받게 됩니다.
+* ***대상 조직 확인**: 대상 조직에 로그인하여 플레이북을 사용할 수 있는지 확인합니다.
+* **플레이북 가져오기**: **[!UICONTROL 가져오기]**&#x200B;를 선택하여 플레이북을 대상 조직으로 가져옵니다. **플레이북** 탭에서 볼 수 있습니다.
+
+유니온 스키마에서 누락된 필드가 있으면 가져오는 동안 대화 상자가 해당 필드를 강조 표시합니다.
+
+![가져오기 프로세스 중에 나열된 유니온 스키마에서 필드가 누락됨](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
+
+플레이북이 나타나지 않으면 게시되었는지, 조직 파트너십이 활성화되어 있는지 확인합니다.
+
+## 필요한 권한
+
+샌드박스에 액세스하여 이 기능을 사용하려면 다음 권한이 필요합니다.
+
+* **샌드박스 권한**:
+
+기능이 있는 샌드박스 환경에 액세스하려면 다음 항목이 필요합니다.
+
+* **샌드박스 관리**
+* **샌드박스 보기**
+
+* **패키지 공유 권한**:
+
+내부 공유 기능에는 다음 권한이 필요합니다.
+
+* [**패키지 관리**](/help/sandboxes/ui/sandbox-tooling.md)
+* [**패키지 공유**](/help/sandboxes/ui/sharing-packages-across-orgs.md)
+
+이러한 권한을 사용하여 다음을 수행할 수 있습니다.
+
+* 샌드박스 환경 입력
+* 샌드박스 내의 기능에 액세스
+* 필요에 따라 패키지 관리 및 공유
+
+이러한 권한은 권한 목록의 **[!UICONTROL 샌드박스]** 섹션에 있습니다.
+
+![관련 사용 권한이 강조 표시된 사용 권한 목록입니다.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
+
+### 여정 및 관련 개체 - 권한
+
+플레이북을 사용하는 여정을 작성할 때 **채널**, **대상** 및 기타 엔터티와 같은 다른 개체를 참조할 수 있습니다. 이러한 각 세트에는 고유한 권한 세트가 있습니다.
+
+다음은 여정 관련 작업에 대한 주요 권한입니다. 예:
+
+* **여정 보기**
+* **여정 관리**
+* 대상 및 채널과 같은 오브젝트 관련 권한
+
+또한 다음 대상 권한이 필요합니다.
+
+* **세그먼트 읽기**
+* **프로필 읽기**
+* **데이터 세트 읽기**
+
+여정은 유연성이 높고 상호 연결된 여러 개체가 포함될 수 있으므로 해당 [전체 권한](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions)은 별도로 문서화되며 특정 사용 사례에 따라 달라질 수 있습니다.
+
 ## 다음 단계
 
-이제 AI Assistant를 사용하여 플레이북을 만들고 게시하는 방법에 대해 알아보았으므로, 사용 가능한 플레이북을 시작하고 [플레이북 목록](/help/use-case-playbooks/playbooks/choose.md)에서 사용 사례에 적합한 플레이북을 선택하는 방법에 대해 알아보십시오.
+이제 AI Assistant를 사용하여 플레이북을 만들고, 게시하고, 공유하는 방법에 대해 알아보았으므로, 사용 가능한 플레이북을 시작하고 [플레이북 목록](/help/use-case-playbooks/playbooks/choose.md)에서 사용 사례에 적합한 플레이북을 선택하는 방법에 대해 알아보십시오.
