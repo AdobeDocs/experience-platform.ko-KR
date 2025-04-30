@@ -2,9 +2,9 @@
 title: 샌드박스 도구
 description: 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져옵니다.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 480785dc17ab27df5544524cf08baa9150fe426f
+source-git-commit: 654a1c696d88d9e1748787402a1a50c8e232df57
 workflow-type: tm+mt
-source-wordcount: '2486'
+source-wordcount: '2513'
 ht-degree: 7%
 
 ---
@@ -49,18 +49,18 @@ ht-degree: 7%
 
 아래 표에는 현재 샌드박스 도구 및 제한 사항에 지원되는 [!DNL Adobe Journey Optimizer]개 개체가 나열되어 있습니다.
 
-| 플랫폼 | 오브젝트 | 세부 사항 |
-| --- | --- | --- |
-| [!DNL Adobe Journey Optimizer] | Audience | 대상자는 여정 객체의 종속 객체로 복사할 수 있습니다. 타겟 샌드박스에서 새 대상 만들기 를 선택하거나 기존 대상을 재사용할 수 있습니다. |
-| [!DNL Adobe Journey Optimizer] | 스키마 | 여정에 사용된 스키마는 종속 객체로 복사할 수 있습니다. 대상 샌드박스에서 새 스키마 만들기 를 선택하거나 기존 스키마를 재사용할 수 있습니다. |
-| [!DNL Adobe Journey Optimizer] | 병합 정책 | 여정에 사용된 병합 정책을 종속 객체로 복사할 수 있습니다. 대상 샌드박스에서 **새 병합 정책을 만들 수 없습니다**. 이미 존재하는 병합 정책만 활용할 수 있습니다. |
-| [!DNL Adobe Journey Optimizer] | 여정 - 캔버스 세부 정보 | 캔버스에서 여정의 표현에는 복사되는 조건, 작업, 이벤트, 대상자 읽기 등과 같은 여정의 오브젝트가 포함됩니다. 이동 활동이 복사본에서 제외됩니다. |
-| [!DNL Adobe Journey Optimizer] | 이벤트 | 여정에 사용된 이벤트 및 이벤트 세부 사항이 복사됩니다. 대상 샌드박스에서 항상 새 버전이 생성됩니다. |
-| [!DNL Adobe Journey Optimizer] | 작업 | 여정에 사용된 이메일 및 푸시 메시지는 종속 오브젝트로 복사할 수 있습니다. 여정 필드에 사용된 채널 작업 활동으로, 메시지의 개인화에 사용되며 완성도가 확인되지 않습니다. 콘텐츠 블록은 복사되지 않습니다.<br><br>여정에 사용된 프로필 업데이트 작업을 복사할 수 있습니다. 여정에 사용된 사용자 지정 작업 및 작업 세부 정보도 복사됩니다. 대상 샌드박스에서 항상 새 버전이 생성됩니다. |
-| [!DNL Adobe Journey Optimizer] | 여정 | 전체 여정을 패키지에 추가하면 대상, 스키마, 이벤트, 작업 등 여정이 종속된 대부분의 오브젝트가 복사됩니다. |
-| [!DNL Adobe Journey Optimizer] | 콘텐츠 템플릿 | 컨텐츠 템플릿은 여정 객체의 종속 객체로 복사할 수 있습니다. 독립형 템플릿을 사용하면 Journey Optimizer 캠페인 및 여정 전반에서 사용자 정의 콘텐츠를 쉽게 재사용할 수 있습니다. |
-| [!DNL Adobe Journey Optimizer] | 조각 | 조각을 여정 개체의 종속 개체로 복사할 수 있습니다. 조각은 Journey Optimizer 캠페인 및 여정 간 하나 이상의 이메일에서 참조할 수 있는 재사용 가능한 구성 요소입니다. |
-| [!DNL Adobe Journey Optimizer] | 캠페인 | 프로필, 대상자, 스키마, 인라인 메시지 및 종속 오브젝트와 관련된 모든 항목과 함께 캠페인을 복사할 수 있습니다. 의사 결정 항목, 데이터 사용 레이블 및 언어 설정과 같은 일부 항목은 복사되지 않습니다. 복사할 수 없는 전체 개체 목록은 [다른 샌드박스로 개체 내보내기](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) 안내서를 참조하십시오. |
+| 플랫폼 | 오브젝트 | 지원되는 종속 개체 | 세부 사항 |
+| --- | --- | --- | --- |
+| [!DNL Adobe Journey Optimizer] | Audience | | 대상자는 여정 객체의 종속 객체로 복사할 수 있습니다. 타겟 샌드박스에서 새 대상 만들기 를 선택하거나 기존 대상을 재사용할 수 있습니다. |
+| [!DNL Adobe Journey Optimizer] | 스키마 | | 여정에 사용된 스키마는 종속 객체로 복사할 수 있습니다. 대상 샌드박스에서 새 스키마 만들기 를 선택하거나 기존 스키마를 재사용할 수 있습니다. |
+| [!DNL Adobe Journey Optimizer] | 병합 정책 | | 여정에 사용된 병합 정책을 종속 객체로 복사할 수 있습니다. 대상 샌드박스에서 **새 병합 정책을 만들 수 없음**. 기존 병합 정책만 사용할 수 있습니다. |
+| [!DNL Adobe Journey Optimizer] | 여정 | 여정에 사용된 다음 객체는 종속 객체로 복사됩니다. 가져오기 작업 과정에서 각각에 대해 **[!UICONTROL 새로 만들기]** 또는 **[!UICONTROL 기존 항목 사용]**&#x200B;을 선택할 수 있습니다. <ul><li>대상자</li><li>스키마</li><li>사용자 정의 액션</li><li>이벤트</li><li>조각</li><li>콘텐츠 템플릿</li><li>캔버스 세부 정보</li></ul> | <ul><li>**[!UICONTROL 사용자 지정 작업]**: 다른 샌드박스에 여정을 복사할 때 가져오기 프로세스 중에 **[!UICONTROL 기존 사용]**&#x200B;을 선택할 때 **반드시**&#x200B;선택하는 기존 사용자 지정 작업은 원본 사용자 지정 작업과 동일합니다. 동일하지 않은 경우 새 여정에 해결할 수 없는 오류가 발생합니다.</li><li>여정에 사용된 이벤트 및 이벤트 세부 사항이 복사됩니다. 대상 샌드박스에서 항상 새 버전이 생성됩니다.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 작업 | | 여정에 사용된 이메일 및 푸시 메시지는 종속 오브젝트로 복사할 수 있습니다. 여정 필드에 사용된 채널 작업 활동으로, 메시지의 개인화에 사용되며 완성도가 확인되지 않습니다. 콘텐츠 블록은 복사되지 않습니다.<br><br>여정에 사용된 프로필 업데이트 작업을 복사할 수 있습니다. 사용자 지정 작업은 패키지에 개별적으로 추가할 수 있습니다. 여정에 사용된 작업 세부 정보도 복사됩니다. 대상 샌드박스에서 항상 새 버전이 생성됩니다. |
+| [!DNL Adobe Journey Optimizer] | 콘텐츠 템플릿 | | 컨텐츠 템플릿은 여정 객체의 종속 객체로 복사할 수 있습니다. 독립형 템플릿을 사용하면 Journey Optimizer 캠페인 및 여정 전반에서 사용자 정의 콘텐츠를 쉽게 재사용할 수 있습니다. |
+| [!DNL Adobe Journey Optimizer] | 조각 | 모든 중첩된 조각. | 조각을 여정 개체의 종속 개체로 복사할 수 있습니다. 조각은 Journey Optimizer 캠페인 및 여정 간 하나 이상의 이메일에서 참조할 수 있는 재사용 가능한 구성 요소입니다. |
+| [!DNL Adobe Journey Optimizer] | 캠페인 | | 프로필, 대상자, 스키마, 인라인 메시지 및 종속 오브젝트와 관련된 모든 항목과 함께 캠페인을 복사할 수 있습니다. 결정 항목, 데이터 사용 레이블, 언어 설정과 같은 일부 항목은 복사되지 않습니다. 복사할 수 없는 전체 개체 목록은 [다른 샌드박스로 개체 내보내기]를 참조하십시오. |
+
+<!-- | [!DNL Adobe Journey Optimizer] | Campaigns | The following objects used in the campaign are copied as dependent objects: <ul><li>Campaigns</li><li>Audiences</li><li>Schemas</li><li>Content templates</li><li>Fragments</li><li>Message/Content</li><li>Channel configuration</li><li>Unified decision objects</li><li>Experiment settings/variants</li></ul>| Campaigns can be copied along with all items related to the profile, audience, schema, inline messages, and dependent objects. Some items are not copied, such as decision items, data usage labels, and language settings. For a complete list of objects that cannot be copied, refer the [exporting objects to another sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) guide. | -->
 
 서피스(예: 사전 설정)는 복사되지 않습니다. 시스템은 메시지 유형 및 표면 이름을 기반으로 대상 샌드박스에서 가장 가까운 일치 항목을 자동으로 선택합니다. 대상 샌드박스에 서피스가 없는 경우 서피스 복사가 실패하여 메시지에 설정할 수 있는 서피스가 필요하므로 메시지 복사가 실패합니다. 이 경우 복사가 작동하려면 메시지의 오른쪽 채널에 대해 적어도 하나의 서피스를 만들어야 합니다.
 
