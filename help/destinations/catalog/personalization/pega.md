@@ -1,19 +1,23 @@
 ---
-title: Pega 고객 의사 결정 허브 연결
-description: Adobe Experience Platform의 Pega Customer Decision Hub 대상을 사용하여 프로필 속성 및 대상자 멤버십 데이터를 Pega Customer Decision Hub로 전송하여 다음 모범 조치 결정을 내릴 수 있습니다.
+title: (V1) 페가 CDH 실시간 대상 연결
+description: Adobe Experience Platform의 Pega Customer Decision Hub 실시간 대상 을 사용하여 프로필 속성 및 대상 멤버십 데이터를 Pega Customer Decision Hub로 전송하여 차후 최상의 조치를 취할 수 있습니다.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 71de5b0d3e9c4413caa911fbe174e74c0e409d89
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1075'
 ht-degree: 3%
 
 ---
 
-# Pega 고객 의사 결정 허브 연결
+# 페가 CDH 실시간 대상 연결
+
+>[!IMPORTANT]
+>
+>이 버전의 Pega 고객 의사 결정 허브 실시간 대상 은 단일 Pega 고객 의사 결정 애플리케이션만 지원합니다. Pega 고객 의사 결정 허브 응용 프로그램을 여러 개 구성한 경우 [(V2) Pega CDH 실시간 대상 커넥터](./pega-v2.md)를 사용해야 합니다.
 
 ## 개요 {#overview}
 
-Adobe Experience Platform의 [!DNL Pega Customer Decision Hub] 대상을 사용하여 프로필 특성 및 대상자 멤버십 데이터를 [!DNL Pega Customer Decision Hub](으)로 보내 다음 모범 사례를 결정하십시오.
+Adobe Experience Platform의 [!DNL Pega Customer Decision Hub] 실시간 대상 대상을 사용하여 프로필 특성 및 대상 멤버십 데이터를 [!DNL Pega Customer Decision Hub]&#x200B;(으)로 보내 다음 모범 사례를 결정하십시오.
 
 Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer Decision Hub]에 로드되면 적응형 모델의 예측 변수로 사용할 수 있으며, 최적의 다음 작업 결정을 위해 올바른 컨텍스트 및 행동 데이터를 제공하는 데 도움이 됩니다.
 
@@ -27,19 +31,19 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 ### 통신
 
-마케터는 고객 참여를 위해 [!DNL Pega Customer Decision Hub]이(가) 제공한 데이터 과학 모델 기반 다음 모범 사례의 인사이트를 활용하려고 합니다. [!DNL Pega Customer Decision Hub]은(는) 고객의 의도에 크게 의존합니다(예: &quot;Interest_In_5G&quot;, &quot;Interest_in_Unlimited_Dataplan&quot; 또는 &quot;Interest_in_iPhone_accessories&quot;).
+마케터는 고객 참여를 위해 [!DNL Pega Customer Decision Hub]이(가) 제공한 데이터 과학 모델 기반의 차선책을 통해 얻은 통찰력을 활용하려고 합니다. [!DNL Pega Customer Decision Hub]은(는) 고객의 의도에 크게 의존합니다(예: &quot;Interest_In_5G&quot;, &quot;Interest_in_Unlimited_Dataplan&quot; 또는 &quot;Interest_in_iPhone_accessories&quot;).
 
 ### 금융 서비스
 
-마케터는 연금 제도 또는 퇴직 연금 제도 뉴스레터를 구독하거나 구독 취소한 고객을 위해 오퍼를 최적화하려고 합니다. 금융 서비스 회사는 자체 CRM에서 여러 고객 ID를 Adobe Experience Platform으로 수집하고, 자체 오프라인 데이터에서 대상을 작성하고, 대상을 입력하거나 종료하는 프로필을 [!DNL Pega Customer Decision Hub](으)로 전송하여 아웃바운드 채널에서 다음 최적 작업(NBA) 결정을 내릴 수 있습니다.
+마케터는 연금 제도 또는 퇴직 연금 제도 뉴스레터를 구독하거나 구독 취소한 고객을 위해 오퍼를 최적화하려고 합니다. 금융 서비스 회사는 자체 CRM에서 여러 CustomerID를 Adobe Experience Platform으로 수집하고, 자체 오프라인 데이터에서 대상을 작성하고, 대상을 입력하거나 종료하는 프로필을 [!DNL Pega Customer Decision Hub]&#x200B;(으)로 전송하여 아웃바운드 채널에서 NBA(Next Best Action) 의사 결정을 내릴 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
 이 대상을 사용하여 Adobe Experience Platform에서 데이터를 내보내려면 먼저 [!DNL Pega Customer Decision Hub]에서 다음 사전 요구 사항을 완료하십시오.
 
-* [!DNL Pega Customer Decision Hub] 인스턴스에서 [Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component)를 구성합니다.
-* [!DNL Pega Customer Decision Hub] 인스턴스에서 클라이언트 자격 증명을 사용하여 OAuth 2.0 [클라이언트 등록](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) 부여 유형을 구성합니다.
-* [!DNL Pega Customer Decision Hub] 인스턴스에서 Adobe 대상 멤버십 데이터 흐름에 대해 [실시간 실행 데이터 흐름](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows)을 구성하십시오.
+* [!DNL Pega Customer Decision Hub] 인스턴스에서 [Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)를 구성합니다.
+* [!DNL Pega Customer Decision Hub] 인스턴스에서 클라이언트 자격 증명을 사용하여 OAuth 2.0 [클라이언트 등록](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html) 부여 유형을 구성합니다.
+* [!DNL Pega Customer Decision Hub] 인스턴스에서 Adobe 대상 멤버십 데이터 흐름에 대한 [실시간 실행 데이터 흐름](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)을 구성하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -57,8 +61,8 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 식별자(*CustomerID*), 특성(성, 이름, 위치 등)을 사용하여 대상의 모든 구성원을 내보냅니다. 및 대상 멤버십 데이터입니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 항상 API 기반 연결입니다. Experience Platform에서 대상 평가를 기반으로 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용은 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)을 참조하세요. |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 식별자(*CustomerID*), 특성(성, 이름, 위치 등) 및 대상 멤버십 데이터를 사용하여 대상의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 항상 API 기반 연결입니다. 대상 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용은 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)을 참조하세요. |
 
 {style="table-layout:auto"}
 
@@ -70,7 +74,7 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 #### OAuth 2 클라이언트 자격 증명 인증 {#oauth-2-client-credentials-authentication}
 
-![클라이언트 자격 증명 인증이 있는 OAuth 2를 사용하여 페가 CDH 대상에 연결할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
+![클라이언트 자격 증명 인증과 함께 OAuth 2를 사용하여 페가 CDH 대상에 연결할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
 
 아래 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
 
@@ -88,7 +92,7 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 호스트 이름]**: 프로필을 json 데이터로 내보내는 Pega 고객 의사 결정 허브 호스트 이름입니다.
+* **[!UICONTROL Pega CDH 호스트 이름]**: 프로필을 JSON 데이터로 내보내는 Pega 고객 의사 결정 허브 호스트 이름입니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
@@ -101,11 +105,11 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 ### 대상 속성 {#attributes}
 
-Adobe [[!UICONTROL 특성 선택]](../../ui/activate-streaming-profile-destinations.md#select-attributes) 단계에서 [공용 구조체 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다.
+Adobe [[!UICONTROL 특성 선택]](../../ui/activate-streaming-profile-destinations.md#select-attributes) 단계에서는 [유니온 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다.
 
 ### 매핑 예: [!DNL Pega Customer Decision Hub]에서 프로필 업데이트 활성화 {#mapping-example}
 
-다음은 프로필을 [!DNL Pega Customer Decision Hub](으)로 내보낼 때 올바른 ID 매핑의 예입니다.
+다음은 프로필을 [!DNL Pega Customer Decision Hub]&#x200B;(으)로 내보낼 때 올바른 ID 매핑의 예입니다.
 
 소스 필드 선택:
 
@@ -124,19 +128,19 @@ Adobe [[!UICONTROL 특성 선택]](../../ui/activate-streaming-profile-destinati
 프로필에 대한 대상 멤버십을 성공적으로 업데이트하면 페가 마케팅 대상 멤버십 데이터 저장소에 대상 식별자, 이름 및 상태가 삽입됩니다. 멤버 자격 데이터는 아래와 같이 [!DNL Pega Customer Decision Hub]에서 Customer Profile Designer을 사용하는 고객과 연결되어 있습니다.
 ![고객 프로필 Designer을 사용하여 Adobe 대상 멤버십 데이터를 고객에 연결할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-대상 멤버십 데이터는 아래와 같이 다음으로 가장 적합한 작업을 결정하기 위해 Pega 다음으로 적합한 작업 Designer 참여 정책에서 사용됩니다.
-![Pega Next-Best-Action Designer의 참여 정책에 조건으로 대상 멤버십 필드를 추가할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+대상 멤버십 데이터는 아래와 같이 다음으로 가장 적합한 작업을 결정하기 위해 페가 다음으로 적합한 작업 Designer 참여 정책에 사용됩니다.
+![Pega Next-Best-Action Designer의 참여 정책에 조건으로 대상 멤버십 필드를 추가할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-engagement.png)
 
 고객 대상 멤버십 데이터 필드는 아래와 같이 적응형 모델에 예측 변수로 추가됩니다.
-![Prediction Studio를 사용하여 대상 멤버십 필드를 응용 모델에서 예측자로 추가할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
+![Prediction Studio를 사용하여 대상 멤버십 필드를 적응형 모델의 예측자로 추가할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## 추가 리소스 {#additional-resources}
 
-[!DNL Pega Customer Decision Hub]에서 [OAuth 2.0 클라이언트 등록 설정](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration)을 참조하십시오.
+자세한 내용은 다음 [!DNL Pega] 설명서 리소스를 참조하십시오.
 
-[!DNL Pega Customer Decision Hub]에서 [데이터 흐름에 대한 실시간 실행 만들기](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows)를 참조하십시오.
-
-[고객 프로필 Designer에서 고객 레코드 관리](https://docs.pega.com/whats-new-pega-platform/manage-customer-records-customer-profile-designer-86)를 참조하십시오.
+* [OAuth 2.0 클라이언트 등록 설정](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
+* [데이터 흐름에 대한 실시간 실행 만들기](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
+* [고객 프로필 Designer에서 고객 레코드 관리](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

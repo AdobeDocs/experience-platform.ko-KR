@@ -1,7 +1,7 @@
 ---
 title: (V2) 페가 CDH 실시간 대상 연결
 description: Adobe Experience Platform의 Pega Customer Decision Hub 실시간 대상 을 사용하여 프로필 속성 및 대상 멤버십 데이터를 Pega Customer Decision Hub로 전송하여 차후 최상의 조치를 취할 수 있습니다.
-source-git-commit: cc18f5c9445e5d08565cd5ac4bcbdb11ccbc1a31
+source-git-commit: a51f6bd189bc25018cf25e69fe23bc9f6b3372dd
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 3%
@@ -115,17 +115,21 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 ## 내보낸 데이터/데이터 내보내기 유효성 검사 {#exported-data}
 
 프로필에 대한 대상 멤버십을 성공적으로 업데이트하면 페가 마케팅 대상 멤버십 데이터 저장소에 대상 식별자, 이름 및 상태가 삽입됩니다. 멤버 자격 데이터는 아래와 같이 [!DNL Pega Customer Decision Hub]에서 Customer Profile Designer을 사용하는 고객과 연결되어 있습니다.
+
 ![고객 프로필 Designer을 사용하여 Adobe 대상 멤버십 데이터를 고객에 연결할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
 대상 멤버십 데이터는 아래와 같이 다음으로 가장 적합한 작업을 결정하기 위해 Pega 다음으로 적합한 작업 Designer 참여 정책에서 사용됩니다.
-![Pega Next-Best-Action Designer의 참여 정책에 조건으로 대상 멤버십 필드를 추가할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+
+![Pega Next-Best-Action Designer의 참여 정책에 조건으로 대상 멤버십 필드를 추가할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-engagement.png)
 
 고객 대상 멤버십 데이터 필드는 아래와 같이 적응형 모델에 예측 변수로 추가됩니다.
+
 ![Prediction Studio를 사용하여 대상 멤버십 필드를 응용 모델에서 예측자로 추가할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## 추가 리소스 {#additional-resources}
 
 자세한 내용은 다음 [!DNL Pega] 설명서를 참조하십시오.
+
 * [OAuth 2.0 클라이언트 등록 설정](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
 * [데이터 흐름에 대한 실시간 실행 만들기](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
 * [고객 프로필 Designer에서 고객 레코드 관리](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)

@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
+source-git-commit: 8a9320ae00fdb611e4fd0fdc9ba80e922273359e
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1292'
 ht-degree: 5%
 
 ---
@@ -203,7 +203,8 @@ ht-degree: 5%
       * [Gainsight 확장](./catalog/personalization/gainsight.md)
       * [KickFire 확장](./catalog/personalization/kickfire.md)
       * [Marketo 웹 Personalization 확장](./catalog/personalization/marketo-web-personalization.md)
-      * [Pega 고객 의사 결정 허브 연결](./catalog/personalization/pega.md)
+      * [페가 CDH 실시간 대상 연결](./catalog/personalization/pega.md)
+      * [(V2) 페가 CDH 실시간 대상 연결](./catalog/personalization/pega-v2.md)
       * [Pega 프로필 연결](./catalog/personalization/pega-profile.md)
    * 소셜 대상{#social}
       * [소셜 대상 개요](./catalog/social/overview.md)
