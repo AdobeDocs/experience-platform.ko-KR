@@ -2,9 +2,9 @@
 title: 모니터링 대시보드 개요
 description: Adobe Experience Platform UI에서 모니터링 대시보드를 사용하는 방법을 알아봅니다
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cca405c58551a52a044ac513921298637974e88e
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
@@ -63,12 +63,6 @@ Experience Platform UI의 왼쪽 탐색에서 [!UICONTROL 데이터 관리]의 *
 
 ![모니터링 데이터 형식이 &quot;고객 및 계정&quot;으로 설정되어 있습니다.](../assets/ui/monitor-overview/customer-account.png)
 
->[!TAB 잠재 고객]
-
-**[!UICONTROL 잠재 고객]**&#x200B;을(를) 선택하여 대시보드를 업데이트하고 지정된 기간 동안 Experience Platform에 수집된 잠재 고객 데이터에 대한 지표를 표시합니다. **참고**: [잠재 고객 데이터를 사용할 수 있는 자격](../../rtcdp/partner-data/prospecting.md)이 있는 경우에만 잠재 고객 데이터 유형 활동을 볼 수 있습니다.
-
-![모니터링 데이터 형식이 &quot;잠재 고객&quot;으로 설정되어 있습니다.](../assets/ui/monitor-overview/prospect.png)
-
 >[!TAB 계정 프로필 보강]
 
 **[!UICONTROL 계정 프로필 보강]**&#x200B;을 선택하여 대시보드를 업데이트하고 프로필 보강 데이터에 지표를 표시합니다. **참고**: [B2B 데이터](../../rtcdp/b2b-tutorial.md)에 대한 권한이 있는 경우에만 계정 프로필 보강 지표를 볼 수 있습니다.
@@ -81,11 +75,11 @@ Experience Platform UI의 왼쪽 탐색에서 [!UICONTROL 데이터 관리]의 *
 
 >[!BEGINTABS]
 
->[!TAB 소스]
+>[!TAB 데이터 레이크]
 
-소스 수집 속도에 대한 지표를 보려면 **[!UICONTROL 소스]**&#x200B;를 선택하십시오. 자세한 내용은 [소스 데이터 모니터링](monitor-sources.md)에 대한 안내서를 참조하십시오.
+데이터 레이크 수집 속도에 대한 지표를 보려면 **[!UICONTROL 데이터 레이크]**&#x200B;를 선택하십시오. 자세한 내용은 [데이터 레이크 수집 모니터링](monitor-sources.md)에 대한 안내서를 참조하십시오.
 
-![소스 카드가 선택된 UI의 모니터링 대시보드입니다.](../assets/ui/monitor-overview/sources.png)
+![UI에서 데이터 레이크 카드를 선택한 모니터링 대시보드입니다.](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB ID]
 
@@ -133,8 +127,12 @@ ID 데이터의 처리 성공률을 보려면 **[!UICONTROL ID]**&#x200B;을(를
 
 이제 이 문서를 읽고 UI의 모니터링 대시보드를 탐색할 수 있습니다. 특정 Experience Platform 서비스의 데이터를 모니터링하는 방법에 대한 자세한 내용은 아래 설명서를 참조하십시오.
 
-* [소스 데이터 모니터링](monitor-sources.md).
+* [데이터 레이크 수집 모니터링](monitor-sources.md).
 * [ID 데이터 모니터링](monitor-identities.md).
 * [프로필 데이터 모니터링](monitor-profiles.md).
 * [대상 데이터 모니터링](monitor-audiences.md).
 * [대상 데이터 모니터링](monitor-destinations.md).
+
+<!-- >[!TAB Prospect]
+
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->

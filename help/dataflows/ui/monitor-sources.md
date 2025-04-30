@@ -1,21 +1,21 @@
 ---
-description: 모니터링 대시보드를 사용하여 소스에서 수집된 데이터를 모니터링하는 방법에 대해 알아봅니다.
-title: UI에서 소스에 대한 데이터 흐름 모니터링
+description: 모니터링 대시보드를 사용하여 데이터 레이크에 수집된 데이터를 모니터링하는 방법에 대해 알아봅니다.
+title: 데이터 레이크 수집 모니터링
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 11%
+source-wordcount: '1303'
+ht-degree: 10%
 
 ---
 
-# UI에서 소스의 데이터 흐름 모니터링
+# 데이터 레이크 수집 모니터링
 
 >[!IMPORTANT]
 >
 >[HTTP API 원본](../../sources/connectors/streaming/http.md)과 같은 스트리밍 원본은 현재 모니터링 대시보드에서 지원되지 않습니다. 현재는 대시보드만 사용하여 배치 소스를 모니터링할 수 있습니다.
 
-모니터링 대시보드를 사용하여 Experience Platform UI에서 소스 데이터 흐름을 모니터링하는 방법을 배우려면 이 문서를 참조하십시오.
+모니터링 대시보드를 사용하여 Experience Platform UI에서 데이터 레이크 수집을 모니터링하는 방법에 대해 알아보려면 이 문서 를 참조하십시오.
 
 ## 시작하기 {#get-started}
 
@@ -28,7 +28,7 @@ ht-degree: 11%
 * [실시간 고객 프로필](../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합된 실시간 고객 프로필을 제공합니다.
 * [샌드박스](../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-## 모니터링 대시보드를 사용하여 소스 데이터 모니터링
+## 데이터 레이크 수집에 모니터링 대시보드 사용
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -42,13 +42,9 @@ ht-degree: 11%
 >abstract="소스 처리에는 레코드 수집과 레코드 실패 등 데이터 레이크 서비스의 데이터 활동 상태와 지표에 대한 정보가 포함됩니다. 지표와 그래프에 대해 자세한 내용은 지표 정의 안내서를 검토하십시오."
 >text="Learn more in documentation"
 
-<!-- In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+데이터 레이크 수집 비율을 보려면 모니터링 대시보드의 기본 헤더에서 **[!UICONTROL 데이터 레이크]**&#x200B;를 선택하십시오.
 
-At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
-
-모니터링 대시보드의 기본 헤더에서 [!UICONTROL 소스]를 선택하여 소스 데이터 흐름 수집 비율 표시로 대시보드를 업데이트합니다.
-
-![소스 카드가 있는 모니터링 대시보드를 선택했습니다.](../assets/ui/monitor-sources/sources.png)
+![소스 카드가 있는 모니터링 대시보드를 선택했습니다.](../assets/ui/monitor-sources/data-lake.png)
 
 [!UICONTROL 수집 속도] 그래프는 구성된 시간대에 따라 데이터 수집 속도를 표시합니다. 기본적으로 모니터링 대시보드에는 지난 24시간 동안의 수집 비율이 표시됩니다. 시간대를 구성하는 방법에 대한 단계는 [모니터링 시간대를 구성](monitor.md#configure-monitoring-time-frame)하는 방법에 대한 안내서를 참조하십시오.
 
@@ -132,11 +128,9 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 >
 >소스 연결 생성 프로세스 중에 기능이 활성화된 경우에만 오류 진단을 사용할 수 있습니다.
 
-![데이터 흐름 실행 오류 패널입니다.](../assets/ui/monitor-sources/errors.png)
-
 ## 다음 단계 {#next-steps}
 
-이 자습서에 따라 **[!UICONTROL 모니터링]** 대시보드를 사용하여 소스 수준에서 수집 데이터 흐름을 모니터링했습니다. 또한 수집 프로세스 중에 데이터 흐름 실패의 원인이 되는 오류를 정상적으로 식별했습니다. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서를 따라 **[!UICONTROL 모니터링]** 대시보드를 사용하여 데이터 레이크 수집 속도를 모니터링하는 방법을 배웠습니다. 또한 수집 중에 데이터 흐름 실패를 유발하는 오류를 식별하는 방법에 대해 알아보았습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
 * [ID 데이터 모니터링](./monitor-identities.md).
 * [프로필 데이터 모니터링](./monitor-profiles.md).
