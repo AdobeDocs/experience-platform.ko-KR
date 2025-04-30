@@ -3,10 +3,10 @@ title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
+source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
 workflow-type: tm+mt
 source-wordcount: '2732'
-ht-degree: 7%
+ht-degree: 6%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->**작업 항목**: Experience Platform의 [2024년 9월 릴리스](/help/release-notes/latest/latest.md#destinations)에서는 데이터 세트 데이터 흐름 내보내기에 대한 `endTime` 날짜를 설정하는 옵션을 도입했습니다. Adobe은 또한 2024년 9월 릴리스 *전에*&#x200B;생성된 모든 데이터 세트 내보내기 데이터 흐름에 대한 기본 종료 날짜를 2025년 5월 1일로 도입했습니다.
+>**작업 항목**: Experience Platform의 [2024년 9월 릴리스](/help/release-notes/latest/latest.md#destinations)에서는 데이터 세트 데이터 흐름 내보내기에 대한 `endTime` 날짜를 설정하는 옵션을 도입했습니다. Adobe은 또한 2024년 9월 릴리스 *전에*&#x200B;생성된 모든 데이터 세트 내보내기 데이터 흐름에 대해 기본 종료 날짜를 2025년 9월 1일로 도입했습니다.
 >
->이러한 데이터 흐름의 경우 종료 날짜 이전에 데이터 흐름의 종료 날짜를 수동으로 업데이트해야 합니다. 그렇지 않으면 해당 날짜에서 내보내기가 중지됩니다. 2025년 5월 1일에 중지하도록 설정할 데이터 흐름을 보려면 Experience Platform UI를 사용하십시오.
+>이러한 데이터 흐름의 경우 종료 날짜 이전에 데이터 흐름의 종료 날짜를 수동으로 업데이트해야 합니다. 그렇지 않으면 해당 날짜에서 내보내기가 중지됩니다. 2025년 9월 1일에 중지하도록 설정할 데이터 흐름을 보려면 Experience Platform UI를 사용하십시오.
 >
 >데이터 집합 내보내기 데이터 흐름의 종료 날짜를 편집하는 방법에 대한 자세한 내용은 [예약 섹션](#scheduling)을 참조하세요.
 
@@ -158,7 +158,7 @@ Experience Platform 카탈로그의 일부 파일 기반 대상은 대상 활성
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="이 데이터 흐름 본문의 종료 일자 업데이트"
->abstract="최근 이 대상에 대한 업데이트로 인해 이제 데이터 흐름에 종료 일자가 필요합니다. Adobe는 기본 종료 일자를 2025년 5월 1일로 설정했습니다. 원하는 종료 일자로 업데이트하지 않으면 기본 일자에 데이터 내보내기가 중단됩니다."
+>abstract="최근 이 대상에 대한 업데이트로 인해 이제 데이터 흐름에 종료 일자가 필요합니다. Adobe은 기본 종료 날짜를 2025년 9월 1일로 설정했습니다. 원하는 종료 날짜로 업데이트하십시오. 그렇지 않으면 기본 날짜에 데이터 내보내기가 중지됩니다."
 
 **[!UICONTROL 예약]** 단계를 사용하여 다음을 수행합니다.
 

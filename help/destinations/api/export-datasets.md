@@ -4,7 +4,7 @@ title: 흐름 서비스 API를 사용하여 데이터 세트 내보내기
 description: 흐름 서비스 API를 사용하여 데이터 세트를 내보내기 하여 대상을 선택하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
+source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
 workflow-type: tm+mt
 source-wordcount: '5220'
 ht-degree: 3%
@@ -19,9 +19,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->**작업 항목**: Experience Platform의 [2024년 9월 릴리스](/help/release-notes/latest/latest.md#destinations)에서는 데이터 세트 데이터 흐름 내보내기에 대한 `endTime` 날짜를 설정하는 옵션을 도입했습니다. Adobe은 또한 2024년 9월 릴리스 *전에*&#x200B;생성된 모든 데이터 세트 내보내기 데이터 흐름에 대한 기본 종료 날짜를 2025년 5월 1일로 도입했습니다.
+>**작업 항목**: Experience Platform의 [2024년 9월 릴리스](/help/release-notes/latest/latest.md#destinations)에서는 데이터 세트 데이터 흐름 내보내기에 대한 `endTime` 날짜를 설정하는 옵션을 도입했습니다. Adobe은 또한 2024년 9월 릴리스 *전에*&#x200B;생성된 모든 데이터 세트 내보내기 데이터 흐름에 대해 기본 종료 날짜를 2025년 9월 1일로 도입했습니다.
 >
->이러한 데이터 흐름의 경우 종료 날짜 이전에 데이터 흐름의 종료 날짜를 수동으로 업데이트해야 합니다. 그렇지 않으면 해당 날짜에서 내보내기가 중지됩니다. 2025년 5월 1일에 중지하도록 설정할 데이터 흐름을 보려면 Experience Platform UI를 사용하십시오.
+>이러한 데이터 흐름의 경우 종료 날짜 이전에 데이터 흐름의 종료 날짜를 수동으로 업데이트해야 합니다. 그렇지 않으면 해당 날짜에서 내보내기가 중지됩니다. 2025년 9월 1일에 중지하도록 설정할 데이터 흐름을 보려면 Experience Platform UI를 사용하십시오.
 >
 >마찬가지로, `endTime` 날짜를 지정하지 않고 만든 데이터 흐름의 경우 이 값은 기본적으로 만든 시간으로부터 6개월 후의 종료 시간으로 설정됩니다.
 
