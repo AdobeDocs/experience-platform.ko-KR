@@ -2,7 +2,7 @@
 title: ID 최적화 알고리즘
 description: ID 서비스의 ID 최적화 알고리즘에 대해 알아봅니다.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: df89afb7131c57b9400788ce30c420b9830c022e
 workflow-type: tm+mt
 source-wordcount: '1617'
 ht-degree: 4%
@@ -147,7 +147,7 @@ ID 최적화 알고리즘을 사용하면 잘못된 이메일 또는 전화번�
 
 ![잘못된 전자 메일](../images/identity-settings/bad-email.png)
 
-### 익명 이벤트 연결
+## 익명 이벤트 연결
 
 ECID는 인증되지 않은(익명) 이벤트를 저장하는 반면 CRMID는 인증된 이벤트를 저장합니다. 공유 장치의 경우 ECID(인증되지 않은 이벤트의 전달자)가 **마지막으로 인증된 사용자**&#x200B;와 연결됩니다.
 
