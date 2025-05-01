@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 4월
 description: Adobe Experience Platform에 대한 2025년 4월 릴리스 정보입니다.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
+source-git-commit: 52f6995beeff05948958bc7349242e2744e2fb05
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '2040'
 ht-degree: 28%
 
 ---
@@ -30,7 +30,9 @@ Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 - [ID 서비스](#identity)
 - [쿼리 서비스](#query-service)
 - [실시간 고객 프로필](#profile)
+- [샌드박스](#sandboxes)
 - [소스](#sources)
+- [사용 사례 플레이북](#use-case-playbooks)
 
 ## Experience League {#experience-league}
 
@@ -126,6 +128,20 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 
 실시간 고객 프로필에 대해 자세히 알아보려면 [프로필 개요](../../profile/home.md)를 참조하십시오.
 
+## 샌드박스 {#sandboxes}
+
+Adobe Experience Platform은 전 세계적으로 디지털 체험 애플리케이션을 풍부하게 제공하기 위해 구축되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하는 경우가 많으며, 운영 규정 준수를 보장하면서 이러한 애플리케이션의 개발, 테스트 및 배포를 처리해야 합니다. 이러한 요구 사항을 처리하기 위해 Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분류해 주는 샌드박스를 제공합니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 샌드박스 도구 플러그인 지원 확장 | 이제 샌드박스 툴에서 사용자 지정 작업을 여정 개체를 복제할 때 종속 개체로 복사할 수 있습니다. 또한 대상 샌드박스에서 재사용할 기존 작업을 선택할 수 있습니다. 패키지에 개별적으로 추가할 수도 있습니다. 지원되는 Adobe Journey Optimizer 개체에 대한 자세한 내용은 [샌드박스 도구](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects) 안내서를 참조하십시오. |
+
+{style="table-layout:auto"}
+
+샌드박스에 대한 자세한 내용은 [샌드박스 개요](../../sandboxes/home.md)를 참조하십시오.
+
 ## 소스 {#sources}
 
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
@@ -152,3 +168,21 @@ Experience Platform의 소스를 사용하여 Adobe 애플리케이션 또는 �
 {style="table-layout:auto"}
 
 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하십시오.
+
+## 사용 사례 플레이북 {#use-case-playbooks}
+
+사용 사례 플레이북은 원래 Real-Time Customer Data Platform 또는 Adobe Journey Optimizer을 시작할 때 문제를 해결하는 데 도움이 되도록 설계되었습니다. 이러한 기능은 지속적으로 발전하고 있으며, 이제 주요 마케팅 사용 사례를 점프하고 테스트하고 프로덕션으로 이동할 수 있는 영감과 사전 구축된 에셋을 제공할 수 있습니다.
+
+사용 사례 플레이북이 검색 도구에서 공동 작업 프레임워크로 전환되었습니다. 이제 다양한 조직에서 나만의 플레이북을 만들고, 관리하고, 공유할 수 있도록 지원합니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} 플레이북을 작성하고 공유합니다. | 새로운 플레이북 작성 프레임워크를 사용하여 고유한 사용 사례 플레이북을 만들고, 관리하고, 공유할 수 있습니다. 여기에는 주요 메타데이터 캡처, 여정 맵 편집 및 관련 기술 에셋 연결에 대한 지원이 포함됩니다. 조직 간에 플레이북을 공유하여 마케팅 접근 방식을 표준화하고 일관성을 유지할 수 있습니다. |
+
+{style="table-layout:auto"}
+
+플레이북을 직접 작성하고 공유하는 방법에 대해 알아보려면 [작성자 및 공유하기](/help/use-case-playbooks/playbooks/author.md) 문서를 읽어보세요.
+
+자세한 내용은 인스턴스를 만들고 생성된 에셋을 다른 샌드박스 환경으로 가져오는 방법을 포함하여 플레이북의 기능, 용도 및 엔드투엔드 데모에 대한 개요를 제공하는 [사용 사례 플레이북 개요](/help/use-case-playbooks/playbooks/overview.md)를 읽어 보십시오.

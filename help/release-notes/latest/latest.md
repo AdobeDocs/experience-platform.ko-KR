@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 4월
 description: Adobe Experience Platform에 대한 2025년 4월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b7904761e4120170664b1b21482d3077ff5df57b
+source-git-commit: 3836b369d609448146a273fc6cf29061fd1ea422
 workflow-type: tm+mt
-source-wordcount: '1899'
-ht-degree: 26%
+source-wordcount: '2040'
+ht-degree: 28%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 26%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/releases/latest)
->- [실시간 CDP 협업](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **릴리스 일자: 2025년 4월 29일 수요일**
 
@@ -30,6 +30,7 @@ Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 - [ID 서비스](#identity)
 - [쿼리 서비스](#query-service)
 - [실시간 고객 프로필](#profile)
+- [샌드박스](#sandboxes)
 - [소스](#sources)
 - [사용 사례 플레이북](#use-case-playbooks)
 
@@ -52,7 +53,7 @@ Experience League은 Adobe 제품을 통해 기술을 향상시킬 수 있도록
 | 대상 | 설명 |
 | --- | --- |
 | [Marketo Engage 사용자 동기화](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe은 id 맵에 여러 전자 메일이 있을 때 고객에게 영향을 미치는 문제를 해결하기 위해 [!DNL Marketo Engage Person Sync] 대상을 업데이트했습니다. |
-| [(2대) Pega CDH 실시간 잠재고객 연결](/help/destinations/catalog/personalization/pega-v2.md) | Pega 계정에 여러 Pega Customer Decision Hub 응용 프로그램이 구성되어 있는 경우 Adobe Experience Platform의 대상을 [!DNL (V2) Pega Customer Decision Hub Realtime Audience] 사용하여 프로필 속성 및 대상자 멤버십 데이터를 Pega Customer Decision Hub로 전송하여 차선책을 결정할 수 있습니다. |
+| [(V2) 페가 CDH 실시간 대상 연결](/help/destinations/catalog/personalization/pega-v2.md) | Adobe Experience Platform Pega 계정에 여러 개의 Pega 고객 결정 허브 응용 프로그램이 구성되어 있는 경우, 프로필 속성 및 대상자 멤버십 데이터를 Pega 고객 결정 허브로 보내어 차선책을 결정하십시오.[!DNL (V2) Pega Customer Decision Hub Realtime Audience] |
 
 **새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
 
@@ -93,7 +94,7 @@ Adobe Experience Platform ID 서비스를 사용하여 여러 디바이스 및 �
 
 | 기능 | 설명 |
 | --- | --- |
-| [!BADGE 제한된 가용성]{type=Informative} [!DNL Identity Graph Linking Rules] | ID 그래프 연결 규칙은 이제 제한적으로 제공되며 개발 샌드박스의 모든 고객이 액세스할 수 있습니다. <ul><li>**Activation 요구 사항**: 이 기능은 을(를) 구성하고 저장할 때까지 비활성 상태로 [!DNL Identity Settings]유지됩니다. 이 구성이 없으면 시스템은 동작 변경 없이 계속 정상적으로 작동합니다.</li><li>**중요 참고 사항**: 이 제한된 가용성 단계에서 Edge 세분화로 인해 예기치 않은 세그먼트 멤버십 결과가 생성될 수 있습니다. 그러나 스트리밍 및 배치 세분화 기능은 예상대로 작동합니다.</li><li>**다음 단계**: 프로덕션 샌드박스에서 이 기능을 활성화하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.</li></ul> |
+| [!BADGE 제한된 가용성]{type=Informative} [!DNL Identity Graph Linking Rules] | ID 그래프 연결 규칙은 이제 제한된 가용성에 있으며 개발 샌드박스에서 모든 고객이 액세스할 수 있습니다. <ul><li>**활성화 요구 사항**: 이 기능은 [!DNL Identity Settings]을(를) 구성하고 저장할 때까지 비활성 상태로 유지됩니다. 이 구성이 없으면 시스템이 동작을 변경하지 않고 계속 정상적으로 작동합니다.</li><li>**중요 정보**: 이 제한된 가용성 단계에서 Edge 세그먼테이션을 수행하면 예기치 않은 세그먼트 멤버십 결과가 발생할 수 있습니다. 하지만 스트리밍 및 배치 세분화는 예상대로 작동합니다.</li><li>**다음 단계**: 프로덕션 샌드박스에서 이 기능을 활성화하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -127,6 +128,20 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 
 실시간 고객 프로필에 대해 자세히 알아보려면 [프로필 개요](../../profile/home.md)를 참조하십시오.
 
+## 샌드박스 {#sandboxes}
+
+Adobe Experience Platform은 전 세계적으로 디지털 체험 애플리케이션을 풍부하게 제공하기 위해 구축되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하는 경우가 많으며, 운영 규정 준수를 보장하면서 이러한 애플리케이션의 개발, 테스트 및 배포를 처리해야 합니다. 이러한 요구 사항을 처리하기 위해 Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분류해 주는 샌드박스를 제공합니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 샌드박스 도구 플러그인 지원 확장 | 이제 샌드박스 툴에서 사용자 지정 작업을 여정 개체를 복제할 때 종속 개체로 복사할 수 있습니다. 또한 대상 샌드박스에서 재사용할 기존 작업을 선택할 수 있습니다. 패키지에 개별적으로 추가할 수도 있습니다. 지원되는 Adobe Journey Optimizer 개체에 대한 자세한 내용은 [샌드박스 도구](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects) 안내서를 참조하십시오. |
+
+{style="table-layout:auto"}
+
+샌드박스에 대한 자세한 내용은 [샌드박스 개요](../../sandboxes/home.md)를 참조하십시오.
+
 ## 소스 {#sources}
 
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
@@ -138,7 +153,7 @@ Experience Platform의 소스를 사용하여 Adobe 애플리케이션 또는 �
 | 기능 | 설명 |
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | 이제 [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) 원본을 사용할 수 있습니다. 이 소스를 사용하여 [!DNL Algolia] 사용자 프로필 관심도 데이터를 Experience Platform으로 가져옵니다. 그런 다음 이 데이터를 사용하여 웹 사이트, 전자 상거래 플랫폼 및 애플리케이션에 대한 고성능 검색 솔루션을 제공함으로써 사용자 참여, 전환율 및 전반적인 고객 경험을 향상시킬 수 있습니다. 자세한 내용은 Experience Platform에 데이터를 [수집 [!DNL Algolia User Profiles] 하는 방법](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md)에 대한 안내서를 참조하십시오. |
-| [!DNL Azure Databricks]에 대한 [!BADGE Beta]{type=Informative} API 지원 | [!DNL Azure Databricks] 이제 API에서 소스를 사용할 수 있습니다. [!DNL Flow Service] API를 사용하여 [!DNL Databricks] 계정을 연결하고 [!DNL Databricks] 데이터를 Experience Platform으로 가져옵니다. 자세한 내용은 [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md)의 설명서를 참조하십시오. |
+| [!DNL Azure Databricks]에 대한 [!BADGE Beta]{type=Informative} API 지원 | 이제 API에서 [!DNL Azure Databricks] 소스를 사용할 수 있습니다. [!DNL Flow Service] API를 사용하여 [!DNL Databricks] 계정을 연결하고 [!DNL Databricks] 데이터를 Experience Platform으로 가져옵니다. 자세한 내용은 [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md)의 설명서를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -146,9 +161,9 @@ Experience Platform의 소스를 사용하여 Adobe 애플리케이션 또는 �
 
 | 기능 | 설명 |
 | --- | --- |
-| 스트리밍 미디어 데이터를 Experience Platform으로 수집하기 위한 XDM 필드가 업데이트되었습니다. | 이제 새 XDM 필드 그룹 `mediaReporting`인 을 사용하여 Adobe Analytics 소스를 통해 스트리밍 미디어 데이터를 Experience Platform 으로 수집 할 수 있습니다. 이 필드는 필드를 대체합니다 `media.mediaTimed` .</br> <br>3개월의 전환 기간 동안 필드에 대한 `media.mediaTimed` 데이터 수집이 계속됩니다. 그러나 2025년 7월 말에 필드는 `media.mediaTimed` 완전히 더 이상 사용되지 않으며 더 이상 Experience Platform 스키마 UI에 표시되지 않으며 데이터는 필드를 사용 `mediaReporting` 해서만 전송됩니다.</br><br>2025년 4월 22일 이전에 스트리밍 미디어 데이터를 Platform 수집하도록 Analytics 소스를 구현한 경우 새 필드 그룹을 사용하여 데이터를 전송하도록 기존 구성을 마이그레이션해야 합니다. 이 마이그레이션은 2025년 7월 말까지 완료해야 합니다. Adobe 계정 팀에 문의하여 마이그레이션 지원을 받으십시오. |
-| [!DNL MariaDB] 및 [!DNL PostgreSQL]에 대한 새 인증 유형 | 이제 기본 인증을 사용하여 Experience Platform 에서 사용자 [!DNL MariaDB] 및 [!DNL PostgreSQL] 소스를 인증할 수 있습니다. 자세한 내용은 다음 설명서를 참조하십시오. <ul><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL PostgreSQL]](../../sources/connectors/databases/postgres.md) |
-| 다음에 대한 행 수준 필터링 지원 [!DNL Amazon Redshift] | Experience Platform 데이터에 행 수준 필터링 기능을 사용할 수 있습니다 [!DNL Amazon Redshift] . 자세한 내용은 API](../../sources/tutorials/api/filter.md)에서 소스에 대한 행 수준 데이터 필터링에 대한 [안내서 를 읽어보세요. |
+| 스트리밍 미디어 데이터를 Experience Platform으로 수집하기 위한 XDM 필드가 업데이트되었습니다. | 이제 새로운 XDM 필드 그룹 `mediaReporting`을(를) 사용하여 Adobe Analytics 소스를 통해 Experience Platform으로 스트리밍 미디어 데이터를 수집할 수 있습니다. 이 필드는 `media.mediaTimed` 필드를 대체합니다.</br> <br>3개월의 전환 기간 동안 `media.mediaTimed` 필드에 대한 데이터 수집이 계속됩니다. 그러나 2025년 7월 말부터 `media.mediaTimed` 필드는 완전히 사용되지 않으며 더 이상 Experience Platform 스키마 UI에 표시되지 않으며, 데이터는 `mediaReporting` 필드를 사용해서만 전송됩니다.</br><br>2025년 4월 22일 이전에 스트리밍 미디어 데이터를 플랫폼으로 수집하도록 Analytics 소스를 구현한 경우 새 필드 그룹을 사용하여 데이터를 보내려면 기존 구성을 마이그레이션해야 합니다. 이 마이그레이션은 2025년 7월 말까지 완료해야 합니다. Adobe 계정 팀에 문의하여 마이그레이션 지원을 받으십시오. |
+| [!DNL MariaDB] 및 [!DNL PostgreSQL]에 대한 새 인증 유형 | 이제 기본 인증을 사용하여 Experience Platform에서 [!DNL MariaDB] 및 [!DNL PostgreSQL] 소스를 인증할 수 있습니다. 자세한 내용은 다음 설명서를 참조하십시오. <ul><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL PostgreSQL]](../../sources/connectors/databases/postgres.md) |
+| [!DNL Amazon Redshift]에 대한 행 수준 필터링 지원 | Experience Platform에서 [!DNL Amazon Redshift] 데이터에 행 수준 필터링 기능을 사용할 수 있습니다. 자세한 내용은 [API의 소스에 대한 행 수준 데이터 필터링](../../sources/tutorials/api/filter.md)에 대한 안내서를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -164,10 +179,10 @@ Experience Platform의 소스를 사용하여 Adobe 애플리케이션 또는 �
 
 | 기능 | 설명 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} 플레이북을 작성하고 공유합니다. | 새로운 플레이북 작성 프레임워크를 사용하면 고유한 사용 사례 플레이북을 생성, 관리 및 공유할 수 있습니다. 여기에는 주요 메타데이터 캡처, 여정 맵 편집 및 관련 기술 자산 연결에 대한 지원이 포함됩니다. 조직 간에 플레이북을 공유하여 마케팅 접근 방식을 표준화하고 일관성을 유지할 수 있습니다. |
+| [!BADGE Beta]{type=Informative} 플레이북을 작성하고 공유합니다. | 새로운 플레이북 작성 프레임워크를 사용하여 고유한 사용 사례 플레이북을 만들고, 관리하고, 공유할 수 있습니다. 여기에는 주요 메타데이터 캡처, 여정 맵 편집 및 관련 기술 에셋 연결에 대한 지원이 포함됩니다. 조직 간에 플레이북을 공유하여 마케팅 접근 방식을 표준화하고 일관성을 유지할 수 있습니다. |
 
 {style="table-layout:auto"}
 
-자신의 플레이북을 [작성하고 공유하는 방법을 알아보려면 작성자 및 자신의 플레이북](/help/use-case-playbooks/playbooks/author.md) 문서를 공유하십시오.
+플레이북을 직접 작성하고 공유하는 방법에 대해 알아보려면 [작성자 및 공유하기](/help/use-case-playbooks/playbooks/author.md) 문서를 읽어보세요.
 
 자세한 내용은 인스턴스를 만들고 생성된 에셋을 다른 샌드박스 환경으로 가져오는 방법을 포함하여 플레이북의 기능, 용도 및 엔드투엔드 데모에 대한 개요를 제공하는 [사용 사례 플레이북 개요](/help/use-case-playbooks/playbooks/overview.md)를 읽어 보십시오.
