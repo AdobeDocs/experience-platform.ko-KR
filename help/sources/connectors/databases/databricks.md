@@ -5,9 +5,9 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
+source-git-commit: 30f1c16084b3049fae45e26db0eed03888d35516
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '591'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 [!DNL Azure Databricks]은(는) 데이터 분석, 머신 러닝 및 AI용으로 설계된 클라우드 기반 플랫폼입니다. [!DNL Databricks]을(를) 사용하여 [!DNL Azure]과(와) 통합하고 규모에 맞게 데이터 솔루션을 구축, 배포 및 관리할 수 있는 포괄적인 환경을 제공할 수 있습니다.
 
-[!DNL Databricks] 원본을 사용하여 계정을 연결하고 [!DNL Databricks] 데이터를 Adobe Experience Platform으로 수집할 수 있습니다.
+[!DNL Databricks] 원본을 사용하여 계정을 연결하고 [!DNL Databricks] 데이터를 Adobe Experience Platform으로 수집하십시오.
 
 ## 전제 조건
 
