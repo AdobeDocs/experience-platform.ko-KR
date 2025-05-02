@@ -1,16 +1,22 @@
 ---
 title: Azure Databricks
 description: Azure Databricks를 Experience Platform에 연결하는 데 필요한 사전 요구 사항에 대해 알아봅니다.
+badgeUltimate: label="Ultimate" type="Positive"
+badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 16de2879f5f5da533ce640d93871571f03aa74c2
+source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '593'
 ht-degree: 2%
 
 ---
 
 # [!DNL Azure Databricks]
+
+>[!IMPORTANT]
+>
+>[!DNL Azure Databricks] 소스는 Real-Time CDP Ultimate을 구매한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
 
 [!DNL Azure Databricks]은(는) 데이터 분석, 머신 러닝 및 AI용으로 설계된 클라우드 기반 플랫폼입니다. [!DNL Databricks]을(를) 사용하여 [!DNL Azure]과(와) 통합하고 규모에 맞게 데이터 솔루션을 구축, 배포 및 관리할 수 있는 포괄적인 환경을 제공할 수 있습니다.
 

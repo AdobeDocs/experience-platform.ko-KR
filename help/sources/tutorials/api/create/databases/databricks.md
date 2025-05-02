@@ -1,14 +1,21 @@
 ---
 title: 흐름 서비스 API를 사용하여 Azure 데이터베이스를 Experience Platform에 연결
 description: API를 사용하여 Azure Databricks를 Experience Platform에 연결하는 방법을 알아봅니다.
-source-git-commit: 22cdbb1cbdeafced17dcd6bec243173723c8e483
+badgeUltimate: label="Ultimate" type="Positive"
+badgeBeta: label="Beta" type="Informative"
+exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
+source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '507'
 ht-degree: 2%
 
 ---
 
 # [!DNL Flow Service] API를 사용하여 [!DNL Azure Databricks]을(를) Experience Platform에 연결
+
+>[!IMPORTANT]
+>
+>[!DNL Azure Databricks] 소스는 Real-Time CDP Ultimate을 구매한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
 
 [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Azure Databricks] 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
 
