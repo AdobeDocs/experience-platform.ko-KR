@@ -4,7 +4,7 @@ description: Adobe Experience Platform Debugger에 대한 최신 릴리스 정�
 keywords: Debugger;experience Platform Debugger 확장 기능;chrome;확장 기능;릴리스 정보
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: f32c4bbf48fce2ada7cf7b75efc82e28d1ec26ff
+source-git-commit: a5af5c194bc6b3bf9a6e119a2f147efa85f263f0
 workflow-type: tm+mt
 source-wordcount: '850'
 ht-degree: 93%
@@ -17,15 +17,15 @@ ht-degree: 93%
 
 ### 수정 사항 및 개선 사항
 
-* 디버거로 인해 DTM 및 Launch 기능이 작동하지 않는 문제가 해결되었습니다.
-* Post 처리된 히트Analytics 로그에 표시되지 않는 문제가 해결되었습니다.
-* ASCII 이외의 언어(예: 일본어 좋아요)로 된 데이터가 로그에 올바르게 표시되지 않던 문제를 수정했습니다.
+* 디버거가 DTM 및 Tags 함수가 작동하지 않는 문제를 해결했습니다.
+* Analytics 사후 처리 히트가 로그에 표시되지 않는 문제를 해결했습니다.
+* 일본어와 같이 ASCII가 아닌 언어의 데이터가 로그에 올바르게 표시되지 않는 문제를 해결했습니다.
 
 ## 버전 1.6.2 - 2024년 10월 1일 수요일
 
 ### 수정 사항 및 개선 사항
 
-* 디버거가 모든 CSP 오류에 너무 민감했던 문제를 해결했습니다.
+* 디버거가 모든 CSP 오류에 너무 민감한 문제를 해결했습니다
 
 ## 버전 1.6.1 - 2024년 7월 25일
 
