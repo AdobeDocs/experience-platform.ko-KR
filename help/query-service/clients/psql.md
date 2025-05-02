@@ -4,7 +4,7 @@ solution: Experience Platform
 title: PSQL을 쿼리 서비스에 연결
 description: 지원되는 PostgreSQL 버전 및 설치 지침을 포함하여 PSQL 클라이언트를 Adobe Experience Platform 쿼리 서비스에 연결하는 방법에 대해 알아봅니다.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 74f4ac5a3ca4c06e81111ef453ae0effd21b3f16
+source-git-commit: f75ea97e8631984dcd1d4a7f8aff3c10cba7b11f
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 0%
@@ -29,7 +29,7 @@ PSQL이 설치되면 쿼리 서비스에 연결할 수 있습니다. Experience 
 
 **[!UICONTROL PSQL 명령]** 섹션에서 **[!UICONTROL 클립보드에 복사]** 아이콘(![복사 아이콘](/help/images/icons/copy.png))을 선택하여 명령 문자열을 복사합니다.
 
-![복사 아이콘이 강조 표시된 쿼리 대시보드 자격 증명 탭입니다.](../images/clients/psql/connect-bi.png)
+![복사 아이콘이 강조 표시된 쿼리 대시보드 자격 증명 탭입니다.](../images/clients/psql/copy-credentials.png)
 
 명령 문자열을 터미널에 붙여 넣고 키보드에서 **Enter**&#x200B;를 누릅니다.
 

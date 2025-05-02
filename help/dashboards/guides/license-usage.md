@@ -4,10 +4,10 @@ title: 라이선스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
 workflow-type: tm+mt
-source-wordcount: '3398'
-ht-degree: 39%
+source-wordcount: '3442'
+ht-degree: 38%
 
 ---
 
@@ -307,7 +307,7 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/prof
 | [!UICONTROL Pack의 프로필 풍부성 아니요] | 추가 프로필 풍부도 팩당 프로필당 승인된 총 데이터 용량이 25KB씩 증가합니다. |
 | [!UICONTROL 쿼리 서비스 계산 시간] | 배치 쿼리 실행 시 쿼리 서비스 엔진이 데이터를 읽고, 처리하고, 데이터 레이크로 다시 쓰는 데 걸리는 시간을 측정한 값입니다. |
 | [!UICONTROL 팩 중 스트리밍 세분화 없음] | 팩은 스트리밍 흐름을 통해 새 데이터가 세분화 서비스에 입력됨에 따라 사용자 프로필에 대한 세그먼트 멤버십을 업데이트해 줍니다. 세그먼트 멤버십은 이전 행동을 고려하지 않으면서 현재 사용자 프로필 속성과 현재의 이벤트의 값을 기준으로 평가됩니다. 스트리밍 세분화는 공유 기능입니다. |
-| [!UICONTROL 총 데이터 볼륨] | 실시간 고객 프로필이 참여 워크플로우에서 사용할 수 있는 총 데이터 양입니다. 자세한 내용은 총 데이터 볼륨에 대한 [자주 묻는 질문](../../landing/license-usage-and-guardrails/total-data-volume.md)을 참조하세요. |
+| [!UICONTROL 총 데이터 볼륨] | 실시간 고객 프로필이 참여 워크플로우에서 사용할 수 있는 총 데이터 양입니다. 총 데이터 볼륨은 **총 데이터 볼륨 = 대응 가능 대상 × 평균 프로필 풍부도** 공식을 사용하여 계산됩니다. 이 지표는 프로필 저장소에만 저장된 데이터를 반영하며 데이터 레이크 저장소는 제외합니다. 프로필 기반 참여와 관련된 데이터에 대해 보다 집중적인 보기를 제공합니다. 자세한 내용은 총 데이터 볼륨에 대한 [자주 묻는 질문](../../landing/license-usage-and-guardrails/total-data-volume.md)을 참조하세요. |
 | [!UICONTROL 총 데이터 이그레스 볼륨] | Adobe Experience Platform에서 서드파티 데이터 웨어하우스로 내보낸 연간 누적 데이터 양입니다. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->

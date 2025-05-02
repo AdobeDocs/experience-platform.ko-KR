@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문에 대해 자세히 설명합니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5adc587a232e77f1136410f52ec207631b6715e3
+source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
 workflow-type: tm+mt
-source-wordcount: '4623'
+source-wordcount: '4649'
 ht-degree: 1%
 
 ---
@@ -110,17 +110,21 @@ SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
 SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN 'HEAD' AND start_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND 'TAIL';
 
-SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id) C;
 
 (SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
   INNER JOIN 
 (SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
   ON a.id = b.id;
 ```
+
+>[!NOTE]
+>
+>`SNAPSHOT` 절에 `HEAD` 또는 `TAIL`을(를) 사용하는 경우 작은 따옴표(예: &#39;HEAD&#39;, &#39;TAIL&#39;)로 묶어야 합니다. 따옴표 없이 이 기호를 사용하면 구문 오류가 발생합니다.
 
 아래 표에서는 SNAPSHOT 절 내의 각 구문 옵션의 의미를 설명합니다.
 
@@ -130,7 +134,7 @@ SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND 
 | `AS OF end_snapshot_id` | 지정된 스냅샷 ID(포함)에 있는 그대로 데이터를 읽습니다. |
 | `BETWEEN start_snapshot_id AND end_snapshot_id` | 지정된 시작 및 끝 스냅숏 ID 사이에서 데이터를 읽습니다. `start_snapshot_id`을(를) 제외하고 `end_snapshot_id`을(를) 포함합니다. |
 | `BETWEEN HEAD AND start_snapshot_id` | 첫 번째 스냅숏 앞의 데이터를 지정된 시작 스냅숏 ID(포함)로 읽습니다. 참고: `start_snapshot_id`에 있는 행만 반환합니다. |
-| `BETWEEN end_snapshot_id AND TAIL` | 지정된 `end-snapshot_id` 바로 뒤에서 데이터 집합 끝(스냅숏 ID 제외)까지 데이터를 읽습니다. 즉, `end_snapshot_id`이(가) 데이터 집합의 마지막 스냅숏인 경우 마지막 스냅숏 이후에 스냅숏이 없으므로 쿼리에서 0개의 행을 반환합니다. |
+| `BETWEEN end_snapshot_id AND TAIL` | 지정된 `end_snapshot_id` 바로 뒤에서 데이터 집합 끝(스냅숏 ID 제외)까지 데이터를 읽습니다. 즉, `end_snapshot_id`이(가) 데이터 집합의 마지막 스냅숏인 경우 마지막 스냅숏 이후에 스냅숏이 없으므로 쿼리에서 0개의 행을 반환합니다. |
 | `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | `table_to_be_queried`에서 지정한 스냅숏 ID로 시작하는 데이터를 읽고 `your_chosen_snapshot_id`에서와 같이 `table_to_be_joined`의 데이터와 결합합니다. 조인은 조인되는 두 테이블의 ID 열에서 일치하는 ID를 기반으로 합니다. |
 
 `SNAPSHOT` 절은 테이블 또는 테이블 별칭과 함께 작동하지만 하위 쿼리 또는 뷰 위에서는 작동하지 않습니다. `SNAPSHOT` 절은 테이블의 `SELECT` 쿼리를 적용할 수 있는 모든 위치에서 작동합니다.
@@ -141,7 +145,7 @@ SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND 
 >
 >두 스냅숏 ID 간에 쿼리하는 경우 시작 스냅숏이 만료되고 선택적 대체 동작 플래그(`resolve_fallback_snapshot_on_failure`)가 설정된 경우 다음 두 가지 시나리오가 발생할 수 있습니다.
 >
->- 선택적 대체 동작 플래그를 설정하면 쿼리 서비스가 사용 가능한 가장 이른 스냅샷을 선택하고 이를 시작 스냅샷으로 설정한 다음 가장 이른 스냅샷과 지정된 종료 스냅샷 사이에 데이터를 반환합니다. 이 데이터는 사용 가능한 가장 빠른 스냅숏의 **포함**&#x200B;입니다.
+>- 선택적 대체 동작 플래그를 설정하면 쿼리 서비스가 사용 가능한 가장 이른 스냅숏을 선택하고 시작 스냅숏으로 설정하며 사용 가능한 가장 이른 스냅숏과 지정된 끝 스냅숏 사이에 데이터를 반환합니다. 이 데이터는 사용 가능한 가장 빠른 스냅숏의 **포함**&#x200B;입니다.
 
 ### WHERE 절
 
