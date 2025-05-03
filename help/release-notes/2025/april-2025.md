@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 4월
 description: Adobe Experience Platform에 대한 2025년 4월 릴리스 정보입니다.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 52f6995beeff05948958bc7349242e2744e2fb05
+source-git-commit: be9e1a995e62fa5a437be82aa15187815bbc5a9d
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 28%
+source-wordcount: '2147'
+ht-degree: 29%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 28%
 Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 
 - [Experience League](#experience-league)
+- [데이터 수집](#data-collection)
 - [대상](#destinations)
 - [경험 데이터 모델](#xdm)
 - [ID 서비스](#identity)
@@ -41,6 +42,18 @@ Experience League은 Adobe 제품을 통해 기술을 향상시킬 수 있도록
 | 기능 | 설명 |
 | --- | --- |
 | 개인화된 홈 페이지 | [Experience League](https://experienceleague.adobe.com/en/home#)에서 개인 맞춤화된 홈 페이지에 액세스하고 사용자 지정하세요. Adobe 자격 증명으로 로그인한 다음 상단 메뉴에서 **[!UICONTROL Experience League]**&#x200B;을(를) 선택하여 학습 환경을 최적화합니다. <ul><li>**책갈피**: [!UICONTROL 책갈피] 기능을 사용하여 좋아하는 리소스를 한 곳에 저장하고 수집합니다. 플레이리스트, 문서 및 튜토리얼을 비롯한 다양한 콘텐츠를 저장할 수 있습니다.</li><li>**학습 사용자 지정**: 사용자의 요구 사항에 가장 적합한 역할, 업계, 제품 및 경험 수준으로 Experience League 프로필을 업데이트하여 학습 환경을 향상시킵니다.</li><li>**권장 사항**: 최근 활동에 따라 권장되는 학습 콘텐츠를 봅니다.</li><li>**최근에 본 항목**: [!UICONTROL 최근에 본 항목] 섹션을 사용하여 문서 및 비디오와 같은 최근에 본 콘텐츠로 빠르게 다시 이동합니다.</li><li>**학습 리소스**: [!UICONTROL 모든 학습 리소스] 패널을 사용하여 튜토리얼, 설명서, 커뮤니티, 이벤트 및 인증으로 이동합니다.</li><li>**새로운 기능**: Experience League의 최신 콘텐츠 스트림에 대한 [!UICONTROL 새로운 기능] 섹션을 봅니다.</li><li>**필요 시 이전 이벤트 보기**: [!UICONTROL 필요 시 이전 이벤트 보기] 섹션에서 제품 스포트라이트, 사용 사례 및 튜토리얼에 대해 이전에 기록된 실시간 스트림을 봅니다.</li></ul><br> Experience League에서 ![개인 설정된 홈 페이지입니다.](../2025/assets/april/personalized-home-page.png "Experience League에서 개인 맞춤화된 홈 페이지입니다."){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+## 데이터 수집 {#data-collection}
+
+Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe 또는 비 Adobe 대상으로 보강, 변환 및 배포가 가능한 Adobe Experience Platform Edge Network로 보낼 수 있는 기술 제품군을 제공합니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| [!DNL Amazon] 웹 이벤트 API 확장 | [!DNL Amazon] 전환 API 확장을 사용하면 광고주가 웹 사이트 상호 작용을 [!DNL Amazon]과(와) 직접 공유할 수 있으므로 향상된 속성, 데이터 안정성 및 캠페인 최적화를 제공합니다. 이 확장은 이벤트 전달을 지원하므로 정확한 보고를 위해 적절한 중복 제거를 보장하는 동시에 구매, 장바구니 추가 등과 같은 전환 이벤트를 전송할 수 있습니다. 자세한 내용은 [Amazon 확장 개요](/help/tags/extensions/server/amazon/overview.md)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
