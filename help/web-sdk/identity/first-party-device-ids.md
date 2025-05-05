@@ -140,7 +140,7 @@ ID는 다음 순서로 우선 순위가 지정됩니다.
 다음 두 가지 방법으로 [!DNL FPIDs]을(를) 사용할 수 있습니다.
 
 * **[메서드 1](#setting-cookie-datastreams)**: 웹 SDK 호출에 대해 [!DNL CNAME]을(를) 구성하고 데이터 스트림 구성에 [!DNL FPID] 쿠키의 이름을 포함하십시오.
-* **[메서드 2](#identityMap)**: ID 맵에 [!DNL FPID]을(를) 포함합니다. 자세한 내용은 이 문서의 아래쪽에서 `identityMap`](#identityMap)에서 FPID 사용 [에 대한 섹션을 참조하십시오.
+* **[메서드 2](#identityMap)**: ID 맵에 [!DNL FPID]을(를) 포함합니다. 자세한 내용은 이 문서의 아래쪽에서 `identityMap`[&#128279;](#identityMap)에서 FPID 사용 에 대한 섹션을 참조하십시오.
 
 ### 방법 1: 웹 SDK 호출에 대한 CNAME을 구성하고 데이터 스트림에서 자사 ID 쿠키를 설정합니다 {#setting-cookie-datastreams}
 
@@ -166,7 +166,7 @@ DNS의 [!DNL CNAME] 레코드를 사용하면 한 도메인 이름에서 다른 
 >
 >이 기능을 사용하려면 [자사 데이터 수집](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en)을 사용하도록 설정해야 합니다.
 
-**2단계. 데이터 스트림에 대해**[!UICONTROL &#x200B;자사 ID 쿠키&#x200B;]**기능을 사용하도록 설정**
+**2단계. 데이터 스트림에 대해**&#x200B;[!UICONTROL &#x200B;자사 ID 쿠키&#x200B;]&#x200B;**기능을 사용하도록 설정**
 
 CNAME을 구성한 후에는 데이터 스트림에 대해 **[!UICONTROL 자사 ID 쿠키]** 옵션을 활성화해야 합니다. 이 설정은 Edge Network에 [ID 맵](#identityMap)에서 이 값을 조회하는 대신 자사 장치 ID를 조회할 때 지정된 쿠키를 참조하도록 지시합니다.
 

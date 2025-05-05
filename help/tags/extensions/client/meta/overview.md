@@ -33,7 +33,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->데이터 요소를 사용하면 빌드 환경과 같은 다른 요소에 따라 사용되는 [!DNL Pixel] ID를 동적으로 변경할 수 있는 옵션이 제공됩니다. 자세한 내용은 [다른 환경에 대해 다른 ID 사용 [!DNL Pixel] 2}에 대한 부록 섹션을 참조하십시오.](#id-data-element)
+>데이터 요소를 사용하면 빌드 환경과 같은 다른 요소에 따라 사용되는 [!DNL Pixel] ID를 동적으로 변경할 수 있는 옵션이 제공됩니다. 자세한 내용은 [다른 환경에 대해 다른 ID 사용 [!DNL Pixel] 2&rbrace;에 대한 부록 섹션을 참조하십시오.](#id-data-element)
 
 선택적으로 확장과 연결할 이벤트 ID를 제공할 수도 있습니다. [!DNL Meta Pixel]과(와) [!DNL Meta Conversions API] 사이의 동일한 이벤트를 중복 제거하는 데 사용됩니다. 자세한 내용은 [!DNL Conversions API] 확장에 대한 개요에서 [이벤트 중복 제거](../../server/meta/overview.md#event-deduplication)에 대한 섹션을 참조하십시오.
 

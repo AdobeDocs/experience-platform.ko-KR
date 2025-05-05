@@ -33,7 +33,7 @@ ht-degree: 2%
    - x-gw-ims-org-id: `{ORG_ID}`
    - 클라이언트 암호: `{CLIENT_SECRET}`
    - 클라이언트 인증서: `{PRIVATE_KEY}`
-- Retail Sales Recipe](../pre-built-recipes/retail-sales.md)에 대한 샘플 데이터 및 소스 파일.[ 이 자습서 및 기타 [!DNL Data Science Workspace] 자습서에 필요한 자산을 Adobe Systems 공용 Git 저장소](https://github.com/adobe/experience-platform-dsw-reference/)에서 [다운로드하십시오.
+- Retail Sales Recipe[&#128279;](../pre-built-recipes/retail-sales.md)에 대한 샘플 데이터 및 소스 파일.[ 이 자습서 및 기타 [!DNL Data Science Workspace] 자습서에 필요한 자산을 Adobe Systems 공용 Git 저장소](https://github.com/adobe/experience-platform-dsw-reference/)에서 다운로드하십시오.
 - [Python >= 2.7](https://www.python.org/downloads/) 및 다음 [!DNL Python] 패키지:
    - [핍](https://pypi.org/project/pip/)
    - [파이YAML](https://pyyaml.org/)

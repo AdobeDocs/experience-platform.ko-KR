@@ -15,7 +15,7 @@ ht-degree: 0%
 
 이 문서에서는 일반적인 오류에 대한 문제 해결 안내서를 포함하여 Adobe Experience Platform의 [!DNL Experience Data Model]&#x200B;(XDM) 및 XDM 시스템에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 다른 Experience Platform 서비스와 관련된 질문 및 문제 해결은 [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
 
-**[!DNL Experience Data Model](XDM)**&#x200B;은(는) 고객 경험 관리를 위한 표준화된 스키마를 정의하는 오픈 소스 사양입니다. [!DNL Experience Platform]이(가) 빌드된 방법론인 **XDM 시스템**&#x200B;은(는) [!DNL Experience Platform] 서비스에서 사용할 [!DNL Experience Data Model] 스키마를 운영합니다. **[!DNL Schema Registry]**&#x200B;은(는) [!DNL Experience Platform] 내에서 **[!DNL Schema Library]**&#x200B;에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 자세한 내용은 [XDM 설명서](home.md)를 참조하세요.
+**[!DNL Experience Data Model] (XDM)**&#x200B;은(는) 고객 경험 관리를 위한 표준화된 스키마를 정의하는 오픈 소스 사양입니다. [!DNL Experience Platform]이(가) 빌드된 방법론인 **XDM 시스템**&#x200B;은(는) [!DNL Experience Platform] 서비스에서 사용할 [!DNL Experience Data Model] 스키마를 운영합니다. **[!DNL Schema Registry]**&#x200B;은(는) [!DNL Experience Platform] 내에서 **[!DNL Schema Library]**&#x200B;에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 자세한 내용은 [XDM 설명서](home.md)를 참조하세요.
 
 ## FAQ
 

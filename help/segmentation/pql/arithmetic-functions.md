@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # 산술 함수
 
-산술 함수는 [!DNL Profile Query Language](PQL)의 값에 대한 기본 계산을 수행하는 데 사용됩니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
+산술 함수는 [!DNL Profile Query Language] (PQL)의 값에 대한 기본 계산을 수행하는 데 사용됩니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
 
 ## 이벤트가 복제되지 않도록 하면서 현재 이벤트 변수에
 

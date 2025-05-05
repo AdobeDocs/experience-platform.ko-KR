@@ -47,7 +47,7 @@ Azure 호스팅 구현의 경우 다음 설정으로 [!DNL Azure] Key Vault를 �
 
 - [제거 보호 사용](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 - [일시 삭제 사용](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-- [역할 기반 액세스 제어를 사용하여 액세스 구성 [!DNL Azure] 2}](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+- [역할 기반 액세스 제어를 사용하여 액세스 구성 [!DNL Azure] 2&rbrace;](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
 ### AWS 관련 사전 요구 사항
 

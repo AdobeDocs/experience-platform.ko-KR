@@ -204,6 +204,6 @@ Edge Network을 [!DNL Braze]에 연결하려면 다음 입력이 필요합니다
 
 ## 다음 단계
 
-이 안내서에서는 이벤트 전달을 사용하여 전환 이벤트를 [!DNL Braze]에 보내는 방법에 대해 설명합니다. [!DNL Braze](으)로 전송된 이벤트 데이터의 다운스트림 응용 프로그램에 대한 자세한 내용은 [공식 설명서](https://www.braze.com/docs)를 참조하세요.
+이 안내서에서는 이벤트 전달을 사용하여 전환 이벤트를 [!DNL Braze]에 보내는 방법에 대해 설명합니다. [!DNL Braze] (으)로 전송된 이벤트 데이터의 다운스트림 응용 프로그램에 대한 자세한 내용은 [공식 설명서](https://www.braze.com/docs)를 참조하세요.
 
 Experience Platform의 이벤트 전달 기능에 대한 자세한 내용은 [이벤트 전달 개요](../../../ui/event-forwarding/overview.md)를 참조하세요.

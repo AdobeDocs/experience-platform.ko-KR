@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ## 레시피 만들기
 
-레시피 생성은 아카이브 파일을 빌드 소스 파일을 패키징하는 것으로 시작됩니다. 소스 파일은 당면한 특정 문제 문제를 해결하는 데 사용되는 기계 학습 논리 및 알고리즘을 정의하며 , R, PySpark 또는 Scala로 [!DNL Python]작성됩니다. 빌드된 아카이브 파일은 Docker 이미지 형식을 취합니다. 빌드가 완료되면 패키지된 아카이브 파일을 UI](./import-packaged-recipe-ui.md) [또는 API](./import-packaged-recipe-api.md)를 사용하여 레서피 [생성하기 위해 가져옵니다[!DNL Data Science Workspace].
+레시피 생성은 아카이브 파일을 빌드 소스 파일을 패키징하는 것으로 시작됩니다. 소스 파일은 당면한 특정 문제 문제를 해결하는 데 사용되는 기계 학습 논리 및 알고리즘을 정의하며 , R, PySpark 또는 Scala로 [!DNL Python]작성됩니다. 빌드된 아카이브 파일은 Docker 이미지 형식을 취합니다. 빌드가 완료되면 패키지된 아카이브 파일을 UI[&#128279;](./import-packaged-recipe-ui.md) [또는 API](./import-packaged-recipe-api.md)를 사용하여 레서피 생성하기 위해 가져옵니다[!DNL Data Science Workspace].
 
 ### Docker 기반 모델 작성 {#docker-based-model-authoring}
 
@@ -48,7 +48,7 @@ Azure Container Registry 자격 증명을 얻으려면 [Adobe Experience Platfor
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-**[!UICONTROL 구성]** 페이지 가 열립니다. 적절한 **[!UICONTROL 레서피 이름]**(예: &quot;소매 판매 레서피&quot;)을 제공하고 선택적으로 설명 또는 설명서 URL을 제공합니다. 완료되면 다음(Next)]**을 클릭합니다**[!UICONTROL .
+**[!UICONTROL 구성]** 페이지 가 열립니다. 적절한 **[!UICONTROL 레서피 이름]**(예: &quot;소매 판매 레서피&quot;)을 제공하고 선택적으로 설명 또는 설명서 URL을 제공합니다. 완료되면 다음(Next)**을 클릭합니다**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
@@ -63,7 +63,7 @@ Azure Container Registry 자격 증명을 얻으려면 [Adobe Experience Platfor
 >- [!DNL Python] 레시피의 경우 **[!UICONTROL Python]** 런타임을 선택하십시오.
 >- R 레시피의 경우 **[!UICONTROL R]** 런타임을 선택하십시오.
 >- PySpark 레시피의 경우 **[!UICONTROL PySpark]** 런타임을 선택하십시오. 아티팩트 유형이 자동으로 채워집니다.
->- Scala 레시피의 경우 Spark ]**런타임을**[!UICONTROL &#x200B;선택합니다. 아티팩트 유형이 자동으로 채워집니다.
+>- Scala 레시피의 경우 Spark **런타임을**&#x200B;선택합니다. 아티팩트 유형이 자동으로 채워집니다.
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
@@ -90,7 +90,7 @@ Docker 호스트, username 및 암호에 대한 값을 기록해 둡니다. 이�
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-디렉토리 `experience-platform-dsw-reference/recipes/python/retail`로 이동합니다. 여기에서 스크립트를 `login.sh` 찾을 수 있으며 `build.sh` Docker에 로그인하고 이미지를 빌드 [!DNL Python Docker] 하는 데 사용됩니다. Docker 자격 증명](#docker-based-model-authoring)이 [준비되었으면 다음 명령을 순서대로 입력합니다.
+디렉토리 `experience-platform-dsw-reference/recipes/python/retail`로 이동합니다. 여기에서 스크립트를 `login.sh` 찾을 수 있으며 `build.sh` Docker에 로그인하고 이미지를 빌드 [!DNL Python Docker] 하는 데 사용됩니다. Docker 자격 증명[&#128279;](#docker-based-model-authoring)이 준비되었으면 다음 명령을 순서대로 입력합니다.
 
 ```BASH
 # for logging in to Docker
@@ -109,7 +109,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 {DOCKER_HOST}/ml-retailsales-python:{VERSION_TAG}
 ```
 
-이 URL을 복사하고 다음 단계로](#next-steps) 이동합니다[.
+이 URL을 복사하고 다음 단계로[&#128279;](#next-steps) 이동합니다.
 
 ### R [!DNL Docker] 이미지 빌드 {#r-docker}
 
@@ -119,7 +119,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-복제된 저장소 내의 디렉토리 `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` 로 이동합니다. 여기에서 Docker에 로그인 하고 R Docker 이미지를 빌드 하는 데 사용할 파일과 `login.sh` `build.sh` 파일을 찾을 수 있습니다. Docker 자격 증명](#docker-based-model-authoring)이 [준비되었으면 다음 명령을 순서대로 입력합니다.
+복제된 저장소 내의 디렉토리 `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` 로 이동합니다. 여기에서 Docker에 로그인 하고 R Docker 이미지를 빌드 하는 데 사용할 파일과 `login.sh` `build.sh` 파일을 찾을 수 있습니다. Docker 자격 증명[&#128279;](#docker-based-model-authoring)이 준비되었으면 다음 명령을 순서대로 입력합니다.
 
 ```BASH
 # for logging in to Docker
@@ -148,7 +148,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-디렉토리 `experience-platform-dsw-reference/recipes/pyspark/retail`로 이동합니다. 스크립트 `login.sh` `build.sh` 는 여기에 있으며 Docker에 로그인 하고 Docker 이미지를 빌드 하는 데 사용됩니다. Docker 자격 증명](#docker-based-model-authoring)이 [준비되었으면 다음 명령을 순서대로 입력합니다.
+디렉토리 `experience-platform-dsw-reference/recipes/pyspark/retail`로 이동합니다. 스크립트 `login.sh` `build.sh` 는 여기에 있으며 Docker에 로그인 하고 Docker 이미지를 빌드 하는 데 사용됩니다. Docker 자격 증명[&#128279;](#docker-based-model-authoring)이 준비되었으면 다음 명령을 순서대로 입력합니다.
 
 ```BASH
 # for logging in to Docker
@@ -177,7 +177,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-다음, 스크립트를 `login.sh` 찾을 수 있는 디렉토리 `experience-platform-dsw-reference/recipes/scala` 로 이동하고 `build.sh`. 이러한 스크립트는 Docker에 로그인 하고 Docker 이미지를 빌드 하는 데 사용됩니다. Docker 자격 증명](#docker-based-model-authoring)이 [준비되었으면 터미널에 다음 명령을 순서대로 입력합니다.
+다음, 스크립트를 `login.sh` 찾을 수 있는 디렉토리 `experience-platform-dsw-reference/recipes/scala` 로 이동하고 `build.sh`. 이러한 스크립트는 Docker에 로그인 하고 Docker 이미지를 빌드 하는 데 사용됩니다. Docker 자격 증명[&#128279;](#docker-based-model-authoring)이 준비되었으면 터미널에 다음 명령을 순서대로 입력합니다.
 
 ```BASH
 # for logging in to Docker
@@ -200,7 +200,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 {DOCKER_HOST}/ml-retailsales-spark:{VERSION_TAG}
 ```
 
-이 URL을 복사하고 다음 단계로](#next-steps) 이동합니다[.
+이 URL을 복사하고 다음 단계로[&#128279;](#next-steps) 이동합니다.
 
 ## 다음 단계 {#next-steps}
 

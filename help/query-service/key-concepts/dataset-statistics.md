@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 데이터 세트 통계 계산
 
-이제 `COMPUTE STATISTICS` SQL 명령을 사용하여 [!DNL Azure Data Lake Storage](ADLS) 데이터 세트에 대한 열 수준 통계를 계산할 수 있습니다. 데이터 집합 통계를 계산하는 SQL 명령은 `ANALYZE TABLE` 명령의 확장입니다. `ANALYZE TABLE` 명령에 대한 전체 세부 정보는 [SQL 참조 설명서](../sql/syntax.md#analyze-table)에서 찾을 수 있습니다.
+이제 `COMPUTE STATISTICS` SQL 명령을 사용하여 [!DNL Azure Data Lake Storage] (ADLS) 데이터 세트에 대한 열 수준 통계를 계산할 수 있습니다. 데이터 집합 통계를 계산하는 SQL 명령은 `ANALYZE TABLE` 명령의 확장입니다. `ANALYZE TABLE` 명령에 대한 전체 세부 정보는 [SQL 참조 설명서](../sql/syntax.md#analyze-table)에서 찾을 수 있습니다.
 
 >[!NOTE]
 >

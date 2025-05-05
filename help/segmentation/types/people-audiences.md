@@ -47,7 +47,7 @@ Adobe Experience Platform에서 사용자 기반 대상을 사용하면 마케�
 
 ![대상 세부 정보 페이지가 표시되어 사람 대상에 대한 정보를 표시합니다.](../images/types/people/audience-details.png)
 
-대상 세부 정보 페이지에 대한 자세한 내용은 Audience Portal 개요](../ui/audience-portal.md#audience-details)의 [대상 세부 정보 섹션을 참조하십시오.
+대상 세부 정보 페이지에 대한 자세한 내용은 Audience Portal 개요[&#128279;](../ui/audience-portal.md#audience-details)의 대상 세부 정보 섹션을 참조하십시오.
 
 ## 대상자 만들기 {#create}
 

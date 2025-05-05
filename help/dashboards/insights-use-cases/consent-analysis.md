@@ -26,7 +26,7 @@ ht-degree: 0%
 
 동의 대시보드를 작성하려면 먼저 연락하는 데 동의한 모든 프로필의 대상자를 만들어야 합니다. Real-Time Customer Data Platform 세그먼트 빌더로 이동하려면 Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 대상]**&#x200B;을 선택합니다. [!UICONTROL 대상] 대시보드의 [!UICONTROL 고객] 탭에서 보기의 오른쪽 상단에 있는 **[!UICONTROL 대상 만들기]**&#x200B;를 선택한 다음 **[!UICONTROL 규칙 작성]**&#x200B;을 선택합니다.
 
-[!UICONTROL 고객], [!UICONTROL 대상자] 및 [!UICONTROL 세그먼트 만들기]가 강조 표시된 [!UICONTROL 대상자] 대시보드.](../images/insights-use-cases/consent-analysis/create-audience.png)![
+[!UICONTROL 고객], [!UICONTROL 대상자] 및 [!UICONTROL 세그먼트 만들기]가 강조 표시된 [!UICONTROL 대상자] 대시보드.![&#128279;](../images/insights-use-cases/consent-analysis/create-audience.png)
 
 세그먼트 빌더 가 나타납니다. 사용 가능한 옵션에서 **[!UICONTROL XDM 개별 프로필]**&#x200B;을(를) 선택하십시오. [규칙 빌더 캔버스](../../segmentation/ui/segment-builder.md#rule-builder-canvas)에 대한 자세한 내용은 설명서를 참조하세요.
 

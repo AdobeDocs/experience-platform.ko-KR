@@ -85,9 +85,9 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 | 구성 요소 유형 | 이름 | 설명 |
 | --- | --- | --- |
 | 필드 그룹 | [!UICONTROL 빈도 상한 설정 제한] | [반복 및 사용자 정의 이벤트를 지원](https://github.com/adobe/xdm/pull/1641/files)하도록 [!UICONTROL 빈도 상한 설정 제한] 필드 그룹이 업데이트되었습니다 |
-| 데이터 유형 | [!UICONTROL 웹 레퍼러] | `xdm:linkName` 및 `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files)을 포함하도록 웹 레퍼러 속성이 [업데이트되었습니다. 각각 이전 페이지에서 선택한 HTML 요소의 이름 및 영역입니다. |
+| 데이터 유형 | [!UICONTROL 웹 레퍼러] | `xdm:linkName` 및 `xdm:linkRegion`[&#128279;](https://github.com/adobe/xdm/pull/1666/files)을 포함하도록 웹 레퍼러 속성이 업데이트되었습니다. 각각 이전 페이지에서 선택한 HTML 요소의 이름 및 영역입니다. |
 | 필드 그룹 | [!UICONTROL Adobe CJM ExperienceEvent - 메시지 상호 작용 세부 사항] | [[!UICONTROL 추적기 URL] 필드가 [!UICONTROL Adobe CJM ExperienceEvent]에 ](https://github.com/adobe/xdm/pull/1665/files)추가되었습니다. 이 추적기는 사용자가 선택한 URL을 제공합니다. |
-| 필드 그룹 | [!UICONTROL Adobe CJM ExperienceEvent - 메시지 상호 작용 세부 사항] | [](https://github.com/adobe/xdm/pull/1668/files)URL [!UICONTROL 추적 유형] 필드에서 비어 있는 `meta:enum` 속성이 제거되었습니다. |
+| 필드 그룹 | [!UICONTROL Adobe CJM ExperienceEvent - 메시지 상호 작용 세부 사항] | [&#128279;](https://github.com/adobe/xdm/pull/1668/files)URL [!UICONTROL 추적 유형] 필드에서 비어 있는 `meta:enum` 속성이 제거되었습니다. |
 | 데이터 유형 | [!UICONTROL 미디어 정보] | [[!UICONTROL 미디어 정보] 데이터 유형의 `videoSegment` 속성에서 정규 표현식 패턴이 제거](https://github.com/adobe/xdm/pull/1667/files)되었습니다 |
 
 {style="table-layout:auto"}

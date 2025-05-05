@@ -286,7 +286,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
 
 ### 데이터 미리 보기
 
-ETL 애플리케이션은 데이터를 미리 보는 기능을 제공할 수 있습니다(](./workflow.md) ETL 워크플로우의 [&quot;그림 8&quot;). 데이터 액세스 API는 데이터를 미리 볼 수 있는 몇 가지 옵션을 제공합니다.
+ETL 애플리케이션은 데이터를 미리 보는 기능을 제공할 수 있습니다([&#128279;](./workflow.md) ETL 워크플로우의 &quot;그림 8&quot;). 데이터 액세스 API는 데이터를 미리 볼 수 있는 몇 가지 옵션을 제공합니다.
 
 데이터 액세스 API를 사용하여 데이터를 미리 보는 단계별 지침을 비롯한 추가 정보는 [데이터 액세스 자습서](../data-access/tutorials/dataset-data.md)에서 확인할 수 있습니다.
 
@@ -454,7 +454,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac031
 
 ### 데이터 세트에서 &quot;fileDescription&quot; 가져오기
 
-대상 구성 요소를 변환된 데이터의 출력으로, 데이터 엔지니어는 출력 데이터 세트(](workflow.md) ETL 워크플로우의 [&quot;그림 12&quot;)를 선택합니다. XDM 스키마는 출력 데이터 세트와 연결됩니다. 기록할 데이터는 데이터 검색 API에서 데이터 세트 엔티티의 &quot;fileDescription&quot; 속성으로 식별됩니다. 데이터 세트 ID(`{DATASET_ID}`)를 사용하여 이 정보를 가져올 수 있습니다. JSON 응답의 &quot;fileDescription&quot; 속성은 요청된 정보를 제공합니다.
+대상 구성 요소를 변환된 데이터의 출력으로, 데이터 엔지니어는 출력 데이터 세트([&#128279;](workflow.md) ETL 워크플로우의 &quot;그림 12&quot;)를 선택합니다. XDM 스키마는 출력 데이터 세트와 연결됩니다. 기록할 데이터는 데이터 검색 API에서 데이터 세트 엔티티의 &quot;fileDescription&quot; 속성으로 식별됩니다. 데이터 세트 ID(`{DATASET_ID}`)를 사용하여 이 정보를 가져올 수 있습니다. JSON 응답의 &quot;fileDescription&quot; 속성은 요청된 정보를 제공합니다.
 
 **API 형식**
 

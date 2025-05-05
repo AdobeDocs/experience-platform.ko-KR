@@ -33,7 +33,7 @@ ht-degree: 3%
 
 이 확장을 사용하려면 올바른 [!DNL Pinterest] [비즈니스 계정](https://help.pinterest.com/en/business/article/get-a-business-account)이 있어야 합니다. 아직 계정이 없는 경우 [[!DNL Pinterest] 등록 페이지](https://www.pinterest.com/business/create/)(으)로 이동하여 등록하고 계정을 만드십시오.
 
-[!DNL Pinterest] 비즈니스 계정과 연결되어야 하는 [!DNL Pinterest] 개발자 계정도 필요합니다. 개발자 계정을 비즈니스 계정에 연결하려면 [[!DNL Pinterest ] 개발자 계정](https://developers.pinterest.com/account-setup/)을 참조하세요.
+[!DNL Pinterest] 비즈니스 계정과 연결되어야 하는 [!DNL Pinterest] 개발자 계정도 필요합니다. 개발자 계정을 비즈니스 계정에 연결하려면 [[!DNL Pinterest &#x200B;] 개발자 계정](https://developers.pinterest.com/account-setup/)을 참조하세요.
 
 ### 필요한 구성 세부 정보 수집 {#configuration-details}
 
@@ -58,7 +58,7 @@ Experience Platform을 [!DNL Pinterest]에 연결하려면 다음 입력이 필�
 >
 >구현 요구 사항에 따라 확장을 구성하기 전에 스키마, 데이터 요소 및 데이터 세트를 만들어야 할 수 있습니다. 사용 사례에 대해 설정해야 하는 엔터티를 결정하려면 시작하기 전에 모든 구성 단계를 검토하십시오.
 
-왼쪽 탐색에서 **[!UICONTROL 확장]**&#x200B;을 선택합니다. [!UICONTROL 설치됨] 탭의 [!DNL Pinterest] 확장 카드에서 **[!UICONTROL 구성]****을 선택합니다.
+왼쪽 탐색에서 **[!UICONTROL 확장]**&#x200B;을 선택합니다. [!UICONTROL 설치됨] 탭의 [!DNL Pinterest] 확장 카드에서 **[!UICONTROL 구성]**&#x200B;**을 선택합니다.
 
 [!UICONTROL 구성]이 강조 표시된 [!UICONTROL 설치] 탭에 표시되는 ![[!DNL Pinterest] 확장.](../../../images/extensions/server/pinterest/configure.png)
 

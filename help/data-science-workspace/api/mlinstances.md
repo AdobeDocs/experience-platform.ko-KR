@@ -26,7 +26,7 @@ MLInstance는 기존 [엔진](./engines.md) 과 교육 매개 변수, 점수 매
 
 유효한 엔진 ID(`{ENGINE_ID}`)와 적절한 기본 구성 집합으로 구성된 요청 페이로드를 제공하면서 POST 요청을 수행하여 MLInstance를 만들 수 있습니다.
 
-엔진 ID가 PySpark 또는 Spark 엔진을 참조하는 경우 코어 수 또는 메모리 양과 같은 계산 리소스의 양을 구성할 수 있습니다. Python 엔진이 참조되는 경우 교육 및 채점 목적으로 CPU 또는 GPU 사용 중에서 선택할 수 있습니다. 자세한 내용은 PySpark 및 Spark 리소스 구성](./appendix.md#resource-config)과 [Python CPU 및 GPU 구성](./appendix.md#cpu-gpu-config)에 대한 [부록 섹션을 참조하세요.
+엔진 ID가 PySpark 또는 Spark 엔진을 참조하는 경우 코어 수 또는 메모리 양과 같은 계산 리소스의 양을 구성할 수 있습니다. Python 엔진이 참조되는 경우 교육 및 채점 목적으로 CPU 또는 GPU 사용 중에서 선택할 수 있습니다. 자세한 내용은 PySpark 및 Spark 리소스 구성[&#128279;](./appendix.md#resource-config)과 [Python CPU 및 GPU 구성](./appendix.md#cpu-gpu-config)에 대한 부록 섹션을 참조하세요.
 
 **API 형식**
 
@@ -136,7 +136,7 @@ curl -X POST \
 
 ## MLInstance 목록 검색
 
-단일 GET 요청 수행을 수행하여 MLInstance 목록을 검색할 수 있습니다. 결과를 필터링하는 데 도움이 되도록 요청 경로에서 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 목록은 자산 검색을](./appendix.md#query) 위한 쿼리 매개 변수에 대한 [부록 섹션을 참조하십시오.
+단일 GET 요청 수행을 수행하여 MLInstance 목록을 검색할 수 있습니다. 결과를 필터링하는 데 도움이 되도록 요청 경로에서 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 목록은 자산 검색을[&#128279;](./appendix.md#query) 위한 쿼리 매개 변수에 대한 부록 섹션을 참조하십시오.
 
 **API 형식**
 
@@ -148,7 +148,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{QUERY_PARAMETER}` | 결과를 필터링하는 데 사용할 수 있는 쿼리 매개 변수](./appendix.md#query) 중 [하나입니다. |
+| `{QUERY_PARAMETER}` | 결과를 필터링하는 데 사용할 수 있는 쿼리 매개 변수[&#128279;](./appendix.md#query) 중 하나입니다. |
 | `{VALUE}` | 이전 쿼리 매개 변수의 값입니다. |
 
 **요청**

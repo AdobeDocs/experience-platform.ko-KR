@@ -107,10 +107,10 @@ Experience Platform에서 [!DNL Hubspot] 계정으로 데이터를 내보내려�
 
 ### 대상으로 인증 {#authenticate}
 
-아래의 필수 필드를 입력하십시오. 자세한 내용은 [개인 앱 액세스 토큰 수집 [!DNL HubSpot] 2} 섹션을 참조하십시오.](#gather-credentials)
+아래의 필수 필드를 입력하십시오. 자세한 내용은 [개인 앱 액세스 토큰 수집 [!DNL HubSpot] 2&rbrace; 섹션을 참조하십시오.](#gather-credentials)
 * **[!UICONTROL 전달자 토큰]**: [!DNL HubSpot] 개인 앱에 대한 액세스 토큰입니다.
 
-대상에 인증하려면 **[!UICONTROL 대상에 연결]**을 선택하세요.
+대상에 인증하려면 **[!UICONTROL 대상에 연결]**&#x200B;을 선택하세요.
 인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/authenticate-destination.png)
 
 제공된 세부 정보가 유효하면 UI에 녹색 확인 표시와 함께 **[!UICONTROL 연결됨]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
@@ -146,9 +146,9 @@ XDM 필드를 [!DNL HubSpot] 대상 필드에 올바르게 매핑하려면 아�
 #### `Email` ID 매핑
 
 `Email` ID는 이 대상에 대한 필수 매핑입니다. 매핑하려면 아래 단계를 따르십시오.
-1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**를 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
+1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
    ![새 매핑 추가 단추가 강조 표시된 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
-1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**을(를) 선택하고 ID를 선택합니다.
+1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 ID를 선택합니다.
    ![ID로 매핑할 소스 특성으로 이메일을 선택하는 Experience Platform UI 스크린샷](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
 1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL 특성 선택]**&#x200B;을(를) 선택하고 `email`을(를) 선택합니다.
    ![ID로 매핑할 대상 특성으로 이메일을 선택하는 Experience Platform UI 스크린샷](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
@@ -163,7 +163,7 @@ XDM 필드를 [!DNL HubSpot] 대상 필드에 올바르게 매핑하려면 아�
 #### **선택적** 특성 매핑
 
 XDM 프로필 스키마와 [!DNL HubSpot] 계정 사이에 업데이트할 다른 특성을 추가하려면 아래 단계를 반복합니다.
-1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**를 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
+1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
    ![새 매핑 추가 단추가 강조 표시된 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 XDM 특성을 선택합니다.
    ![이름을 소스 특성으로 선택하는 Experience Platform UI 스크린샷](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)

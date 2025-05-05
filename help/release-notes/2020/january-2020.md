@@ -54,7 +54,7 @@ XDM은 디지털 경험의 성능을 개선하기 위해 설계된 공개적으�
 | 새로운 API 엔드포인트 | [!DNL Privacy Service] API의 기본 경로가 `/data/privacy/gdpr`에서 `/data/core/privacy/jobs`(으)로 업데이트되었습니다. |
 | 새로운 필수 `regulation` 속성 | [!DNL Privacy Service] API에서 새로운 작업을 만들 때 요청 페이로드에 작업을 추적할 규정을 나타내는 `regulation` 속성을 제공해야 합니다. 허용되는 값은 `gdpr` 및 `ccpa`입니다. |
 | [!DNL Adobe Primetime Authentication] 지원 | [!DNL Privacy Service]이(가) 이제 `primetimeAuthentication`을(를) 제품 값으로 사용하여 Adobe [!DNL Primetime Authentication]의 액세스/삭제 요청을 수락합니다. |
-| Privacy Service UI 개선 사항 | GDPR 및 CCPA 규정에 대한 별도의 작업 추적 페이지입니다. GDPR 및 CCPA에 대한 추적 데이터 간을 전환하는 새로운 **규정 유형**드롭다운. |
+| Privacy Service UI 개선 사항 | GDPR 및 CCPA 규정에 대한 별도의 작업 추적 페이지입니다. GDPR 및 CCPA에 대한 추적 데이터 간을 전환하는 새로운 **규정 유형**&#x200B;드롭다운. |
 
 **알려진 문제**
 

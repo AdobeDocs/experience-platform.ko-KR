@@ -22,7 +22,7 @@ ht-degree: 2%
 
 MLService는 이전에 개발된 모델에 액세스하고 재사용할 수 있는 기능을 조직에 제공하는 게시된 교육된 모델입니다. MLSservices의 주요 기능은 일정에 따라 교육 및 채점을 자동화하는 기능입니다. 예약된 교육 실행은 모델의 효율성과 정확성을 유지하는 데 도움이 될 수 있으며, 예약된 채점 실행은 새로운 통찰력이 일관되게 생성되도록 할 수 있습니다.
 
-자동화된 교육 및 채점 일정은 시작 타임스탬프, 종료 타임스탬프 및 cron 표현식](https://en.wikipedia.org/wiki/Cron)으로 표시되는 빈도 로 정의됩니다[. 일정은 MLService를 만들 때 [정의하거나 기존 MLService](#create-an-mlservice)](#update-an-mlservice)를 업데이트하여 [적용할 수 있습니다.
+자동화된 교육 및 채점 일정은 시작 타임스탬프, 종료 타임스탬프 및 cron 표현식[&#128279;](https://en.wikipedia.org/wiki/Cron)으로 표시되는 빈도 로 정의됩니다[&#128279;](#update-an-mlservice). 일정은 MLService를 만들 때 [정의하거나 기존 MLService](#create-an-mlservice)를 업데이트하여 적용할 수 있습니다.
 
 ## MLService 만들기 {#create-an-mlservice}
 

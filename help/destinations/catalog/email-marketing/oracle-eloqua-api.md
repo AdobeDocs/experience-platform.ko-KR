@@ -103,7 +103,7 @@ Experience Platform에서 [!DNL Oracle Eloqua] 계정으로 데이터를 내보�
 * **[!UICONTROL 암호]**: [!DNL Oracle Eloqua] 계정의 암호입니다.
 * **[!UICONTROL 사용자 이름]**: [!DNL Oracle Eloqua] 회사 이름과 [!DNL Oracle Eloqua] 사용자 이름으로 구성된 연결된 문자열입니다.<br>연결된 값은 `{COMPANY_NAME}\{USERNAME}` 형식입니다.<br> 참고: 중괄호 또는 공백을 사용하지 말고 `\`을(를) 유지하십시오. <br>예를 들어 [!DNL Oracle Eloqua] 회사 이름이 `MyCompany`이고 [!DNL Oracle Eloqua] 사용자 이름이 `Username`인 경우 **[!UICONTROL 사용자 이름]** 필드에서 사용할 연결된 값은 `MyCompany\Username`입니다.
 
-대상에 인증하려면 **[!UICONTROL 대상에 연결]**을 선택하세요.
+대상에 인증하려면 **[!UICONTROL 대상에 연결]**&#x200B;을 선택하세요.
 인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
 
 제공된 세부 정보가 유효하면 UI에 녹색 확인 표시와 함께 **[!UICONTROL 연결됨]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
@@ -165,6 +165,7 @@ XDM 필드를 [!DNL Oracle Eloqua] 대상 필드에 매핑하려면 다음 단�
      | `xdm: workAddress.city` | `Attribute: city` | |
 
    * 위 매핑의 예가 아래에 나와 있습니다.
+
      특성 매핑이 있는 ![Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]

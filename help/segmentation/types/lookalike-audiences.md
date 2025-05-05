@@ -151,11 +151,11 @@ y축은 x축의 일치 값에 해당하는 유사성 백분율과 함께 예상 
 
 대상 세부 정보 페이지에서 **[!UICONTROL 유사 대상 만들기]**&#x200B;를 선택하여 유사 대상을 만드는 프로세스를 시작합니다.
 
-![유사 대상 만들기] 단추가 강조 표시되어 있습니다.](../images/types/lookalike/create-look-alike-audience.png)[!UICONTROL 
+![유사 대상 만들기] 단추가 강조 표시되어 있습니다.(../images/types/lookalike/create-look-alike-audience.png)
 
 **[!UICONTROL 유사 대상 만들기]** 팝오버가 나타납니다. 이 페이지에서 유사 대상의 유사성 백분율을 설정할 수 있습니다.
 
-![유사 대상자 만들기] 팝오버가 표시됩니다.](../images/types/lookalike/create-audience.png)[!UICONTROL 
+![유사 대상자 만들기] 팝오버가 표시됩니다.(../images/types/lookalike/create-audience.png)
 
 다음 세 가지 방법으로 이 유사성 백분율을 설정할 수 있습니다.
 

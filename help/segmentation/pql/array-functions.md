@@ -12,7 +12,7 @@ ht-degree: 4%
 
 # 배열, 목록 및 집합 함수
 
-[!DNL Profile Query Language](PQL)에서는 배열, 목록 및 문자열과 보다 쉽게 상호 작용할 수 있도록 함수를 제공합니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
+[!DNL Profile Query Language] (PQL)에서는 배열, 목록 및 문자열과 보다 쉽게 상호 작용할 수 있도록 함수를 제공합니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
 
 ## 안에 있음
 

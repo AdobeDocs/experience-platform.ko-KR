@@ -77,7 +77,7 @@ SQL을 사용하여 교육에 사용되는 데이터 세트를 참조합니다.
 
 >[!TIP]
 >
->`CREATE MODEL`과(와) `CREATE TABLE` 모두에서 지원되는 함수 및 사용을 포함하여 `TRANSFORM` 절에 대한 전체 참조는 SQL 구문 설명서](../sql/syntax.md#transform)에서 [`TRANSFORM` 절을 참조하십시오.
+>`CREATE MODEL`과(와) `CREATE TABLE` 모두에서 지원되는 함수 및 사용을 포함하여 `TRANSFORM` 절에 대한 전체 참조는 SQL 구문 설명서[&#128279;](../sql/syntax.md#transform)에서 `TRANSFORM` 절을 참조하십시오.
 
 ## 모델 업데이트 {#update}
 

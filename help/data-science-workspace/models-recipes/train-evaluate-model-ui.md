@@ -32,17 +32,17 @@ Adobe Experience Platform Data Science 작업 영역에서 기계 학습 모델�
 
 ## 모델 만들기
 
-Experience Platform에서 왼쪽 탐색에 있는 **[!UICONTROL 모델]** 탭을 선택한 다음 찾아보기 탭을 선택하여 기존 모델을 봅니다. 페이지 오른쪽 상단 근처에 있는 모델&#x200B;]**만들기를 선택하여**[!UICONTROL &#x200B;모델 생성 프로세스를 시작합니다.
+Experience Platform에서 왼쪽 탐색에 있는 **[!UICONTROL 모델]** 탭을 선택한 다음 찾아보기 탭을 선택하여 기존 모델을 봅니다. 페이지 오른쪽 상단 근처에 있는 모델&#x200B;**만들기를 선택하여**&#x200B;모델 생성 프로세스를 시작합니다.
 
 ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-기존 레서피 목록을 검색하고, 모델을 만드는 데 사용할 레서피를 찾아 선택한 다음, 다음(Next ]**)을 선택합니다**[!UICONTROL .![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
+기존 레서피 목록을 검색하고, 모델을 만드는 데 사용할 레서피를 찾아 선택한 다음, 다음(Next **)을 선택합니다**.![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-적절한 입력 데이터 세트 를 선택하고 다음&#x200B;]**을 선택합니다**[!UICONTROL . 이렇게 하면 모델에 대한 기본 입력 교육 데이터 세트 설정됩니다.![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
+적절한 입력 데이터 세트 를 선택하고 다음&#x200B;**을 선택합니다**. 이렇게 하면 모델에 대한 기본 입력 교육 데이터 세트 설정됩니다.![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 모델의 이름을 입력하고 기본 모델 구성을 검토합니다. 레서피 생성 중에 기본 구성이 적용되었으며, 값을 두 번 클릭하여 구성 값을 검토하고 수정합니다.
 
-새 구성 집합을 제공하려면 새로 만들기 구성&#x200B;]**업로드를 선택하고**[!UICONTROL &#x200B;모델 구성이 포함된 JSON 파일을 브라우저 창 창으로 드래그합니다. 마침&#x200B;]**을 선택하여**[!UICONTROL &#x200B;모델을 만듭니다.
+새 구성 집합을 제공하려면 새로 만들기 구성&#x200B;**업로드를 선택하고**&#x200B;[!UICONTROL &#x200B;모델 구성이 포함된 JSON 파일을 브라우저 창 창으로 드래그합니다. 마침&#x200B;]&#x200B;**을 선택하여**&#x200B;모델을 만듭니다.
 
 >[!NOTE]
 >
@@ -58,15 +58,15 @@ Experience Platform에서 왼쪽 탐색에 있는 **[!UICONTROL 모델]** 탭을
 
 현재 교육 상태의 기존 교육 실행이 모두 나열됩니다. 사용자 인터페이스를 사용하여 [!DNL Data Science Workspace] 생성된 모델의 경우 교육 실행이 자동으로 생성되고 기본 구성 및 입력 교육 데이터 세트 사용하여 실행됩니다.
 
-모델 개요 페이지의 오른쪽 위에 있는 학습&#x200B;]**을 선택하여**[!UICONTROL &#x200B;새 교육 실행을 만들기.
+모델 개요 페이지의 오른쪽 위에 있는 학습&#x200B;**을 선택하여**&#x200B;새 교육 실행을 만들기.
 
 ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-교육 실행에 대한 교육 입력 데이터 세트 선택한 다음, 다음&#x200B;]**선택합니다**[!UICONTROL .
+교육 실행에 대한 교육 입력 데이터 세트 선택한 다음, 다음&#x200B;**선택합니다**.
 
 ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-모델을 만드는 동안 제공된 기본 구성이 표시되며, 값을 두 번 클릭하여 적절하게 변경하고 수정합니다. 마침&#x200B;]**을 선택하여**[!UICONTROL &#x200B;교육 실행을 만들고 실행합니다.
+모델을 만드는 동안 제공된 기본 구성이 표시되며, 값을 두 번 클릭하여 적절하게 변경하고 수정합니다. 마침&#x200B;**을 선택하여**&#x200B;교육 실행을 만들고 실행합니다.
 
 >[!NOTE]
 >
@@ -77,7 +77,7 @@ Experience Platform에서 왼쪽 탐색에 있는 **[!UICONTROL 모델]** 탭을
 
 ## 모델 평가
 
-Experience Platform에서 왼쪽 탐색에 있는 모델&#x200B;]**탭 선택한**[!UICONTROL &#x200B;다음 찾아보기 탭 선택하여 기존 모델을 봅니다. 평가하려는 모델 이름에 첨부된 하이퍼링크를 찾아 선택합니다.
+Experience Platform에서 왼쪽 탐색에 있는 모델&#x200B;**탭 선택한**&#x200B;다음 찾아보기 탭 선택하여 기존 모델을 봅니다. 평가하려는 모델 이름에 첨부된 하이퍼링크를 찾아 선택합니다.
 
 ![모델 선택](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 

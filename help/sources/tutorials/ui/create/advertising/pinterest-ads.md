@@ -109,7 +109,7 @@ API에 전달되는 정보를 입력하여 원하는 데이터를 Experience Pla
 | `Day` | 1 |
 | `Hour` | 24 |
 
-[!DNL Pinterest Ads] 데이터 흐름 예약에 대한 자세한 내용은  [!DNL Pinterest Ads] 개요](../../../../connectors/advertising/pinterest-ads.md#guardrails)의 [보호 기능을 참조하십시오.
+[!DNL Pinterest Ads] 데이터 흐름 예약에 대한 자세한 내용은  [!DNL Pinterest Ads] 개요[&#128279;](../../../../connectors/advertising/pinterest-ads.md#guardrails)의 보호 기능을 참조하십시오.
 
 일정에 대한 값을 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 

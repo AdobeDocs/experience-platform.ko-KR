@@ -1,5 +1,5 @@
 ---
-description: '`/authoring/destination-servers'' 엔드포인트를 통해 Adobe Experience Platform Destination SDK에서 대상 서버 사양을 구성하는 방법을 알아봅니다.'
+description: '&grave;/authoring/destination-servers'' 엔드포인트를 통해 Adobe Experience Platform Destination SDK에서 대상 서버 사양을 구성하는 방법을 알아봅니다.'
 title: Destination SDK으로 만든 대상의 서버 사양
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3

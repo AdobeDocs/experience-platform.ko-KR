@@ -13,7 +13,7 @@ ht-degree: 3%
 
 # Adobe 개인 정보 보호 JavaScript 라이브러리 개요
 
-Adobe은 데이터 처리자로서 귀사의 허가 및 지침에 따라 개인 데이터를 처리합니다. 귀하는 데이터 관리자로서 Adobe이 귀하를 대신하여 처리하고 저장하는 개인 데이터를 결정합니다. Adobe Experience Cloud 솔루션을 통해 보내도록 선택한 정보에 따라 Adobe은 [!DNL General Data Protection Regulation](GDPR) 및 [!DNL California Consumer Privacy Act](CCPA)과 같은 개인 정보 보호 규정에 적용할 수 있는 개인 정보를 저장할 수 있습니다. Experience Cloud 솔루션에서 개인 데이터를 수집하는 방법에 대한 자세한 내용은 [Adobe Experience Cloud의 개인 정보](https://www.adobe.com/kr/privacy/marketing-cloud.html)에 대한 문서를 참조하십시오.
+Adobe은 데이터 처리자로서 귀사의 허가 및 지침에 따라 개인 데이터를 처리합니다. 귀하는 데이터 관리자로서 Adobe이 귀하를 대신하여 처리하고 저장하는 개인 데이터를 결정합니다. Adobe Experience Cloud 솔루션을 통해 보내도록 선택한 정보에 따라 Adobe은 [!DNL General Data Protection Regulation] (GDPR) 및 [!DNL California Consumer Privacy Act] (CCPA)과 같은 개인 정보 보호 규정에 적용할 수 있는 개인 정보를 저장할 수 있습니다. Experience Cloud 솔루션에서 개인 데이터를 수집하는 방법에 대한 자세한 내용은 [Adobe Experience Cloud의 개인 정보](https://www.adobe.com/kr/privacy/marketing-cloud.html)에 대한 문서를 참조하십시오.
 
 **Adobe 개인 정보 보호 JavaScript 라이브러리**&#x200B;를 통해 데이터 컨트롤러는 특정 도메인에 대한 [!DNL Experience Cloud] 솔루션에서 생성된 모든 데이터 주체 ID의 검색을 자동화할 수 있습니다. 그런 다음 [Adobe Experience Platform Privacy Service](home.md)에서 제공하는 API를 사용하여 해당 데이터 주체에 속하는 개인 데이터에 대한 액세스 및 삭제 요청을 만드는 데 사용할 수 있습니다.
 

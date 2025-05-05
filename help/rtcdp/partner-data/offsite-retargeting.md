@@ -85,11 +85,11 @@ Web SDK를 사용하여 Real-Time CDP으로 데이터를 가져오는 방법에 
 
 대상을 만들려면 **[!UICONTROL 대상]**&#x200B;을 선택한 후 **[!UICONTROL 대상 만들기]**&#x200B;를 선택하십시오.
 
-![대상자 만들기] 단추가 강조 표시되어 있습니다.](../assets/offsite-retargeting/create-audience.png)[!UICONTROL 
+![대상자 만들기] 단추가 강조 표시되어 있습니다.(../assets/offsite-retargeting/create-audience.png)
 
 [!UICONTROL 대상자 작성]과(와) [!UICONTROL 규칙 작성] 중 하나를 선택하라는 대화 상자가 나타납니다. **[!UICONTROL 규칙 빌드]**, **[!UICONTROL 만들기]**&#x200B;를 차례로 선택합니다.
 
-![빌드 규칙] 단추가 강조 표시되어 있습니다.](../assets/offsite-retargeting/select-build-rule.png)[!UICONTROL 
+![빌드 규칙] 단추가 강조 표시되어 있습니다.(../assets/offsite-retargeting/select-build-rule.png)
 
 세그먼트 빌더 페이지가 나타납니다. 이 페이지에서는 구성 요소를 사용하여 대상을 구축할 수 있습니다.
 
@@ -143,7 +143,7 @@ Web SDK를 사용하여 Real-Time CDP으로 데이터를 가져오는 방법에 
 
 **[!UICONTROL 예약]** 페이지가 나타납니다. 이 페이지에서 대상을 활성화할 빈도를 결정하는 일정을 만들 수 있습니다. 대상자 활성화를 위한 일정을 만들려면 **[!UICONTROL 일정 만들기]**&#x200B;를 선택하십시오.
 
-![일정 만들기] 단추가 강조 표시되어 있습니다.](../assets/offsite-retargeting/select-create-schedule.png)[!UICONTROL 
+![일정 만들기] 단추가 강조 표시되어 있습니다.(../assets/offsite-retargeting/select-create-schedule.png)
 
 [!UICONTROL 예약] 팝오버가 나타납니다. 이 페이지에서 대상자 활성화 일정을 만들 수 있습니다. 일정을 구성한 후 계속하려면 **[!UICONTROL 만들기]**&#x200B;를 선택하십시오.
 
@@ -155,7 +155,7 @@ Web SDK를 사용하여 Real-Time CDP으로 데이터를 가져오는 방법에 
 
 **[!UICONTROL 특성 선택]** 페이지가 나타납니다. 이 페이지에서는 활성화된 대상과 함께 내보낼 속성을 선택할 수 있습니다. 이 경우 재타겟팅하려는 방문자를 식별할 수 있으므로 최소한 파트너 ID를 포함해야 합니다. **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택하고 계산된 특성을 검색합니다. 필요한 특성을 추가한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택합니다.
 
-![새 매핑 추가] 단추와 계산된 특성이 모두 강조 표시됩니다.](../assets/offsite-retargeting/add-new-mapping.png)[!UICONTROL 
+![새 매핑 추가] 단추와 계산된 특성이 모두 강조 표시됩니다.(../assets/offsite-retargeting/add-new-mapping.png)
 
 **[!UICONTROL 검토]** 페이지가 나타납니다. 이 페이지에서 대상자 활성화에 대한 세부 사항을 검토할 수 있습니다. 제공된 세부 정보가 만족스러우면 **[!UICONTROL 마침]**&#x200B;을 선택하세요.
 

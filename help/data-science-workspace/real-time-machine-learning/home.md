@@ -41,7 +41,7 @@ ht-degree: 1%
 
 ### 데이터 수집 및 준비
 
-데이터는 Adobe Experience Platform에서 (XDM)을 [!DNL Experience Data Model] 사용하여 수집 및 변환됩니다. 이 데이터는 모델 교육 교육에 사용됩니다. XDM에 대해 자세히 알아보려면 XDM 개요를](../../xdm/home.md) 방문[.
+데이터는 Adobe Experience Platform에서 (XDM)을 [!DNL Experience Data Model] 사용하여 수집 및 변환됩니다. 이 데이터는 모델 교육 교육에 사용됩니다. XDM에 대해 자세히 알아보려면 XDM 개요를[&#128279;](../../xdm/home.md) 방문.
 
 ### 작성
 
@@ -49,7 +49,7 @@ ht-degree: 1%
 
 ### 전개
 
-모델을 [!DNL Edge Network] 에 배포하여 Prediction API 엔드포인트를 사용하여 서비스 갤러리]에서 Real-time Machine Learning Service를 [!UICONTROL 만듭니다.
+모델을 [!DNL Edge Network] 에 배포하여 Prediction API 엔드포인트를 사용하여 서비스 갤러리에서 Real-time Machine Learning Service를 만듭니다.
 
 ### 추론
 
@@ -83,4 +83,4 @@ ht-degree: 1%
 
 ## 다음 단계
 
-시작하기](./getting-started.md) 안내서에 [따라 시작할 수 있습니다. 이 안내서 는 실시간 기계 학습 모델을 생성하는 데 필요한 모든 전제 조건을 설정하는 과정을 안내합니다.
+시작하기[&#128279;](./getting-started.md) 안내서에 따라 시작할 수 있습니다. 이 안내서 는 실시간 기계 학습 모델을 생성하는 데 필요한 모든 전제 조건을 설정하는 과정을 안내합니다.

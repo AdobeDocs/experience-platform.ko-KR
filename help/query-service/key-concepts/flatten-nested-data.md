@@ -54,7 +54,7 @@ prod:all?FLATTEN
 
 ## 예 {#example}
 
-이 안내서에 사용된 예제 스키마는 표준 필드 그룹 [!UICONTROL Commerce 세부 정보]를 사용합니다. 이 스키마는 `commerce` 개체 구조 및 `productListItems` 배열을 사용합니다. [!UICONTROL Commerce 세부 정보] 필드 그룹](../../xdm/field-groups/event/commerce-details.md)에 대한 [자세한 내용은 XDM 설명서를 참조하세요. 스키마 구조의 표현은 아래 이미지에서 볼 수 있습니다.
+이 안내서에 사용된 예제 스키마는 표준 필드 그룹 [!UICONTROL Commerce 세부 정보]를 사용합니다. 이 스키마는 `commerce` 개체 구조 및 `productListItems` 배열을 사용합니다. [!UICONTROL Commerce 세부 정보] 필드 그룹[&#128279;](../../xdm/field-groups/event/commerce-details.md)에 대한 자세한 내용은 XDM 설명서를 참조하세요. 스키마 구조의 표현은 아래 이미지에서 볼 수 있습니다.
 
 ![`commerce` 및 `productListItems` 구조를 포함하는 Commerce 세부 정보 필드 그룹의 스키마 다이어그램입니다.](../images/key-concepts/commerce-details.png)
 

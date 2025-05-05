@@ -86,7 +86,7 @@ SendGrid를 사용하는 마케팅 팀은 SendGrid 내에서 메일링 목록을
 1. **카탈로그** 탭을 선택하고 *SendGrid*&#x200B;을(를) 검색합니다. 그런 다음 **설정**&#x200B;을 선택합니다. 대상에 대한 연결을 설정한 후 UI 레이블이 **세그먼트 활성화**(으)로 변경됩니다.
    ![](../../assets/catalog/email-marketing/sendgrid/02-catalog.jpg)
 
-1. SendGrid 대상을 구성하는 데 도움이 되는 마법사가 표시됩니다. **새 대상 구성**을 선택하여 새 대상을 만듭니다.
+1. SendGrid 대상을 구성하는 데 도움이 되는 마법사가 표시됩니다. **새 대상 구성**&#x200B;을 선택하여 새 대상을 만듭니다.
    ![](../../assets/catalog/email-marketing/sendgrid/03.jpg)
 
 1. **새 계정** 옵션을 선택하고 **전달자 토큰** 값을 입력하십시오. 이 값은 이전에 [필수 구성 요소 섹션](#prerequisites)에서 언급한 SendGrid *API 키*입니다.
@@ -135,10 +135,10 @@ SendGrid를 사용하는 마케팅 팀은 SendGrid 내에서 메일링 목록을
    ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
-1. 매핑을 완료한 후 **[!UICONTROL 다음]**을(를) 선택하여 검토 화면으로 이동합니다.
+1. 매핑을 완료한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 검토 화면으로 이동합니다.
    ![](../../assets/catalog/email-marketing/sendgrid/22.png)
 
-1. **[!UICONTROL 완료]**를 선택하여 설치를 완료합니다.
+1. **[!UICONTROL 완료]**&#x200B;를 선택하여 설치를 완료합니다.
    ![](../../assets/catalog/email-marketing/sendgrid/23.jpg)
 
 [SendGrid Marketing 연락처 > 연락처 API 추가 또는 업데이트](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact)에 설정할 수 있는 지원되는 특성 매핑의 전체 목록은 다음과 같습니다.
@@ -160,10 +160,10 @@ SendGrid를 사용하는 마케팅 팀은 SendGrid 내에서 메일링 목록을
 
 대상을 올바르게 설정했는지 확인하려면 아래 단계를 수행하십시오.
 
-1. 대상 목록으로 이동하려면 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**를 선택하십시오.
+1. 대상 목록으로 이동하려면 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**&#x200B;를 선택하십시오.
    ![](../../assets/catalog/email-marketing/sendgrid/25.jpg)
 
-1. 대상을 선택하고 상태가 **[!UICONTROL 활성화됨]**인지 확인하십시오.
+1. 대상을 선택하고 상태가 **[!UICONTROL 활성화됨]**&#x200B;인지 확인하십시오.
    ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
 1. **[!DNL Activation data]** 탭으로 전환한 다음 대상 이름을 선택합니다.

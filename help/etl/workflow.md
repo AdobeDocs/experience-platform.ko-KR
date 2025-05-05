@@ -57,7 +57,7 @@ ht-degree: 0%
 
 ![](images/image10.png)
 
-### 그림 10 - [!DNL Experience Data Model](XDM) 대상 데이터 세트 정의:
+### 그림 10 - [!DNL Experience Data Model] (XDM) 대상 데이터 세트 정의:
 
 ![](images/image11.png)
 

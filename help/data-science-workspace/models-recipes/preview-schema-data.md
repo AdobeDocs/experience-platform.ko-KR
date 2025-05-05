@@ -42,4 +42,4 @@ ht-degree: 3%
 - [Jupyter Notebooks를 사용하여 데이터 분석](../jupyterlab/analyze-your-data.md)
    - [!DNL Data Science Workspace]의 Jupyter Notebooks를 사용하여 데이터에 액세스하고, 탐색하고, 시각화하고, 이해할 수 있습니다.
 - [소스 파일을 레시피에 패키징](./package-source-files-recipe.md)
-   - 가져오기 가능한 레시피 파일에 소스 파일을 패키지하여 자신의 모델을 [!DNL Data Science Workspace](으)로 가져오는 방법을 알아보려면 이 자습서를 따르십시오.
+   - 가져오기 가능한 레시피 파일에 소스 파일을 패키지하여 자신의 모델을 [!DNL Data Science Workspace] (으)로 가져오는 방법을 알아보려면 이 자습서를 따르십시오.

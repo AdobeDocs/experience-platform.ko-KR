@@ -69,7 +69,7 @@ Adobe Campaign에 데이터를 보내는 기본 메서드는 [!DNL Amazon S3] �
 
 * **[!UICONTROL Amazon S3]** 연결의 경우 [!UICONTROL 액세스 키 ID] 및 [!UICONTROL 비밀 액세스 키]를 제공해야 합니다.
 * **[!UICONTROL 암호가 있는 SFTP]** 연결의 경우 [!UICONTROL 도메인], [!UICONTROL 포트], [!UICONTROL 사용자 이름] 및 [!UICONTROL 암호]를 제공해야 합니다.
-* SSH 키&#x200B;]**가 있는**[!UICONTROL  SFTP의 경우 [!UICONTROL 도메인], [!UICONTROL 포트], [!UICONTROL 사용자 이름] 및 [!UICONTROL SSH 키]를 제공해야 합니다.
+* SSH 키&#x200B;**가 있는** SFTP의 경우 [!UICONTROL 도메인], [!UICONTROL 포트], [!UICONTROL 사용자 이름] 및 [!UICONTROL SSH 키]를 제공해야 합니다.
 * **[!UICONTROL Azure Blob]** 연결의 경우 연결 문자열을 제공해야 합니다.
 * 필요한 경우 RSA 형식의 공개 키를 연결하여 **[!UICONTROL 키]** 섹션 아래에서 내보낸 파일에 PGP/GPG를 사용한 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64] 인코딩된 문자열로 작성되어야 합니다.
 * **[!UICONTROL 이름]**: 대상의 관련 이름을 선택하십시오.

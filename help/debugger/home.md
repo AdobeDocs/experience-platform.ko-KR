@@ -20,7 +20,7 @@ ht-degree: 5%
 Experience Platform Debugger를 다른 Adobe 활성화 솔루션과 함께 사용하여 다음을 수행할 수 있습니다.
 
 1. [태그](../tags/home.md)을(를) 사용하여 페이지에서 [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ko-KR) 제품을 활성화하는 코드를 삽입합니다.
-1. Experience Platform Debugger의 [**[!UICONTROL Auditor ]**탭](./auditor/overview.md)을 사용하여 구현을 테스트하십시오.
+1. Experience Platform Debugger의 [**[!UICONTROL Auditor &#x200B;]**&#x200B;탭](./auditor/overview.md)을 사용하여 구현을 테스트하십시오.
 1. Experience Platform Debugger의 이벤트 기반 및 솔루션별 도구를 사용하여 감사에서 발견한 문제를 디버깅하거나 구현에 대한 다른 정보를 검사합니다.
 
 >[!NOTE]

@@ -41,7 +41,7 @@ ht-degree: 28%
 * Experience Platform 설명서 {#documentation}
    * [개요](documentation/overview.md)
    * [언어 지원](documentation/language-support.md)
-* Experience Platform {#ecosystem}에 빌드된 응용 프로그램
+* Experience Platform에 빌드된 응용 프로그램 {#ecosystem}
    * [개요](application-services.md)
    * [Adobe Real-Time Customer Data Platform(모든 버전)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Application and Intelligent Services(비디오)](video/application-intelligent-services.md)

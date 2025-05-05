@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # LiveRamp 식별자를 기반으로 조정된 대상에 대상 활성화
 
-[!DNL LiveRamp]과(와) Adobe Real-Time CDP 통합을 사용하여 아래 나열된 대상과 같이 연결된 TV 및 오디오 대상을 포함하여 활성화를 위해 [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html)을(를) 사용하는 선별된 대상 목록에 대상을 활성화합니다.
+[!DNL LiveRamp]과(와) Adobe Real-Time CDP 통합을 사용하여 아래 나열된 대상과 같이 연결된 TV 및 오디오 대상을 포함하여 활성화를 위해 [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html)을(를) 사용하는 선별된 대상 목록에 대상을 활성화합니다.
 
 >[!IMPORTANT]
 >

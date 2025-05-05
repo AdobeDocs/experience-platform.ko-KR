@@ -15,8 +15,8 @@ ECID 매핑을 [!DNL Marketo Engage Person] 데이터 세트에서 [!DNL Activit
 
 | 문제 | 솔루션 |
 | --- | --- |
-| [!DNL Marketo Person] 데이터 집합에 여러 ECID에 대한 링크가 있는 경우 XDM(Experience Data Model) 레코드의 [총 ID 수가 20](../../../../identity-service/guardrails.md)개를 초과하면 데이터 수집이 실패합니다. | ECID 필드 매핑을 [!DNL Activity](으)로 마이그레이션하면 [!DNL Marketo Person] 데이터 흐름의 ID 수가 한도 내에 머물러 데이터 수집이 성공하도록 할 수 있습니다. |
-| [!DNL Marketo Person] 데이터 집합이 ECID로 수집될 때마다 [!DNL Marketo Person] 데이터 집합의 모든 ECID에 대한 타임스탬프가 개인 레코드의 마지막으로 업데이트된 타임스탬프로 업데이트됩니다. 이로 인해 [ID 그래프에서 최근 ID가 잘못 삭제](../../../../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated)될 수 있습니다. | ECID 필드 매핑을 [!DNL Activity](으)로 마이그레이션하면 Identity Service에서 ECID의 타임스탬프를 올바르게 반영할 수 있으며 Identity Service의 &quot;선입, 선출&quot; 메커니즘이 보다 안정적인 동작을 제공합니다. |
+| [!DNL Marketo Person] 데이터 집합에 여러 ECID에 대한 링크가 있는 경우 XDM(Experience Data Model) 레코드의 [총 ID 수가 20](../../../../identity-service/guardrails.md)개를 초과하면 데이터 수집이 실패합니다. | ECID 필드 매핑을 [!DNL Activity] (으)로 마이그레이션하면 [!DNL Marketo Person] 데이터 흐름의 ID 수가 한도 내에 머물러 데이터 수집이 성공하도록 할 수 있습니다. |
+| [!DNL Marketo Person] 데이터 집합이 ECID로 수집될 때마다 [!DNL Marketo Person] 데이터 집합의 모든 ECID에 대한 타임스탬프가 개인 레코드의 마지막으로 업데이트된 타임스탬프로 업데이트됩니다. 이로 인해 [ID 그래프에서 최근 ID가 잘못 삭제](../../../../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated)될 수 있습니다. | ECID 필드 매핑을 [!DNL Activity] (으)로 마이그레이션하면 Identity Service에서 ECID의 타임스탬프를 올바르게 반영할 수 있으며 Identity Service의 &quot;선입, 선출&quot; 메커니즘이 보다 안정적인 동작을 제공합니다. |
 | ECID가 [!DNL Marketo Person] 데이터 흐름을 통해 수집되는 경우 [!DNL Marketo]에 [!DNL Person] 레코드에 대한 업데이트가 없으면 새로 추가된 ECID가 Experience Platform에 수집되지 않습니다. | 새 ECID가 [!DNL Marketo]의 [!DNL Person] 레코드에 연결되면 [!DNL Marketo Activity] 데이터 흐름을 통해 해당 ECID 데이터를 수집한 다음 Experience Platform 시 즉시 ID 그래프를 업데이트하라는 메시지를 표시할 수 있습니다. |
 
 기본적으로 다음을 수행해야 합니다.

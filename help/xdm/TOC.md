@@ -149,7 +149,7 @@ ht-degree: 45%
       * [제품 범주](./field-groups/product/product-category.md)
    * 공급자 {#provider}
       * [의료 기관](./field-groups/provider/healthcare-provider.md)
-   * {#shared} 공유됨
+   * 공유됨{#shared}
       * [외부 소스 시스템 감사 세부 정보](./field-groups/shared/external-source-system-audit-details.md)
    * [필드 그룹 이름 업데이트](./field-groups/name-updates.md)
 * 데이터 형식 {#data-types}
@@ -233,12 +233,12 @@ ht-degree: 45%
 * [!UICONTROL 스키마] UI {#ui}
    * [개요](./ui/overview.md)
    * [XDM 리소스 살펴보기](./ui/explore.md)
-   * 리소스 {#resources} 만들기 및 편집
+   * 리소스 만들기 및 편집 {#resources}
       * [스키마](./ui/resources/schemas.md)
       * [클래스](./ui/resources/classes.md)
       * [필드 그룹](./ui/resources/field-groups.md)
       * [데이터 유형](./ui/resources/data-types.md)
-   * 필드 {#fields} 정의
+   * 필드 정의 {#fields}
       * [개요](./ui/fields/overview.md)
       * [배열 필드](./ui/fields/array.md)
       * [열거형 필드](./ui/fields/enum.md)

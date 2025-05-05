@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >이 설명서는 데이터 과학 작업 영역 이전에 사용 권한이 있는 기존 고객을 대상으로 합니다.
 
-다음 문서에는 데이터 과학 작업 영역 에서 사용하기 위해 Spark를 사용하여 데이터에 액세스하는 방법에 대한 예가 포함되어 있습니다. JupiterLab 노트북을 사용한 데이터 액세스에 대한 자세한 내용은 JupiterLab 노트북 데이터 액세스](../jupyterlab/access-notebook-data.md) 설명서를 방문 참조하십시오[.
+다음 문서에는 데이터 과학 작업 영역 에서 사용하기 위해 Spark를 사용하여 데이터에 액세스하는 방법에 대한 예가 포함되어 있습니다. JupiterLab 노트북을 사용한 데이터 액세스에 대한 자세한 내용은 JupiterLab 노트북 데이터 액세스[&#128279;](../jupyterlab/access-notebook-data.md) 설명서를 방문 참조하십시오.
 
 ## 시작하기
 
@@ -175,4 +175,4 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
 
 ## 다음 단계
 
-Adobe Experience Platform Data Science 작업 영역는 위의 코드 샘플을 사용하여 데이터를 읽고 쓰는 Scala(Spark) 레서피 샘플을 제공합니다. Spark를 사용하여 데이터에 액세스하는 방법에 대해 자세히 알아보려면 Data Science 작업 영역 Scala GitHub 리포지토리](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala)를 [검토하세요.
+Adobe Experience Platform Data Science 작업 영역는 위의 코드 샘플을 사용하여 데이터를 읽고 쓰는 Scala(Spark) 레서피 샘플을 제공합니다. Spark를 사용하여 데이터에 액세스하는 방법에 대해 자세히 알아보려면 Data Science 작업 영역 Scala GitHub 리포지토리[&#128279;](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala)를 검토하세요.

@@ -79,7 +79,7 @@ Query Service의 개념과 기능에 대한 자세한 내용은 [Query Service �
 여러 개의 쿼리를 작성했지만 하나의 쿼리만 실행해야 하는 경우 선택한 쿼리를 강조 표시하고
 [!UICONTROL 선택한 쿼리 실행] 아이콘. 편집기 내에서 쿼리 구문을 선택할 때까지 이 아이콘이 기본적으로 비활성화됩니다.
 
-![선택한 쿼리 실행] 아이콘이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/run-selected-query.png)[!UICONTROL 
+![선택한 쿼리 실행] 아이콘이 강조 표시된 쿼리 편집기.(../images/ui/query-editor/run-selected-query.png)
 
 ### 쿼리 편집기 세션 취소 {#cancel-query}
 

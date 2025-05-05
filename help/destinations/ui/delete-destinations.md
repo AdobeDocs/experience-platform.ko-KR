@@ -36,7 +36,7 @@ Adobe Experience Platform 사용자 인터페이스에서 대상에 대한 기�
 
    ![대상 필터링](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. 기존 대상 연결을 제거하려면 이름 열에서 ![추가 단추](/help/images/icons/more.png) 단추를 선택한 다음 ![삭제 단추](/help/images/icons/delete.png) **[!UICONTROL 삭제]**를 선택하십시오.
+3. 기존 대상 연결을 제거하려면 이름 열에서 ![추가 단추](/help/images/icons/more.png) 단추를 선택한 다음 ![삭제 단추](/help/images/icons/delete.png) **[!UICONTROL 삭제]**&#x200B;를 선택하십시오.
    ![대상 삭제](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. 대상 연결 제거를 확인하려면 **[!UICONTROL 삭제]**&#x200B;를 선택하십시오.

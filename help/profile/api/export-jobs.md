@@ -36,7 +36,7 @@ ht-degree: 2%
 
 [!DNL Profile] 데이터를 내보낼 때 먼저 대상 데이터 세트를 만들어야 합니다. 내보내기가 성공하도록 데이터 세트를 올바르게 구성해야 합니다.
 
-주요 고려 사항 중 하나는 데이터 집합의 기반이 되는 스키마(아래 API 샘플 요청의 `schemaRef.id`)입니다. 프로필 데이터를 내보내려면 데이터 집합이 [!DNL XDM Individual Profile] 유니온 스키마(`https://ns.adobe.com/xdm/context/profile__union`)를 기반으로 해야 합니다. 유니온 스키마는 동일한 클래스를 공유하는 스키마의 필드를 집계하는 시스템 생성 읽기 전용 스키마입니다. 이 경우 [!DNL XDM Individual Profile] 클래스입니다. 유니온 보기 스키마에 대한 자세한 내용은 스키마 컴포지션 기본 사항 안내서](../../xdm/schema/composition.md#union)의 [유니온 섹션을 참조하십시오.
+주요 고려 사항 중 하나는 데이터 집합의 기반이 되는 스키마(아래 API 샘플 요청의 `schemaRef.id`)입니다. 프로필 데이터를 내보내려면 데이터 집합이 [!DNL XDM Individual Profile] 유니온 스키마(`https://ns.adobe.com/xdm/context/profile__union`)를 기반으로 해야 합니다. 유니온 스키마는 동일한 클래스를 공유하는 스키마의 필드를 집계하는 시스템 생성 읽기 전용 스키마입니다. 이 경우 [!DNL XDM Individual Profile] 클래스입니다. 유니온 보기 스키마에 대한 자세한 내용은 스키마 컴포지션 기본 사항 안내서[&#128279;](../../xdm/schema/composition.md#union)의 유니온 섹션을 참조하십시오.
 
 이 자습서의 다음 단계에서는 [!DNL Catalog] API를 사용하여 [!DNL XDM Individual Profile] 공용 구조체 스키마를 참조하는 데이터 집합을 만드는 방법에 대해 설명합니다. [!DNL Experience Platform] 사용자 인터페이스를 사용하여 유니온 스키마를 참조하는 데이터 집합을 만들 수도 있습니다. UI 사용 단계는 [대상자 내보내기를 위한 이 UI 자습서](../../segmentation/tutorials/create-dataset-export-segment.md)에 요약되어 있지만 여기에서도 적용할 수 있습니다. 완료되면 이 자습서로 돌아가 [새 내보내기 작업을 시작](#initiate)하는 단계를 진행할 수 있습니다.
 

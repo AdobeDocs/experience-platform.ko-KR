@@ -13,7 +13,7 @@ ht-degree: 0%
 
 `eventType` 속성을 사용하면 웹 SDK를 사용하여 보내는 이벤트 유형을 정의할 수 있습니다. 이 필드는 궁극적으로 `xdm.eventType` 필드를 채웁니다. Adobe에 보내는 이벤트 유형을 구분하려는 경우 유용합니다.
 
-Adobe은 사용할 수 있는 사전 정의된 이벤트 유형을 제공합니다. 미리 정의된 값의 전체 목록은 XDM 사용 안내서의 `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype)에 대해 사용 가능한 [값을 참조하십시오. 원하는 경우 고유한 값을 사용할 수도 있습니다.
+Adobe은 사용할 수 있는 사전 정의된 이벤트 유형을 제공합니다. 미리 정의된 값의 전체 목록은 XDM 사용 안내서의 `eventType`[&#128279;](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype)에 대해 사용 가능한 값을 참조하십시오. 원하는 경우 고유한 값을 사용할 수도 있습니다.
 
 여기에서 `type`을(를) 설정하고 [`xdm`](xdm.md) 개체에서 `xdm.eventType`을(를) 모두 설정하는 경우 이 필드의 값이 우선합니다.
 

@@ -59,7 +59,7 @@ Edge Network에 대한 요청이 보트 감지 규칙과 일치하는 경우, XD
 
 [보트 탐지 규칙] 페이지에서 다음 기능을 사용하여 보트 탐지를 구성할 수 있습니다.
 
-* [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) 사용 중.
+* [[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) 사용 중.
 * 보트 감지 규칙을 만듭니다.
 
 ### IAB/ABC International Spiders and Bots List 사용 {#iab-list}

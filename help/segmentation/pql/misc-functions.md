@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # 기타 함수
 
-다음 함수는 [!DNL Profile Query Language](PQL)에 대한 기타 함수입니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
+다음 함수는 [!DNL Profile Query Language] (PQL)에 대한 기타 함수입니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
 
 ## Let
 

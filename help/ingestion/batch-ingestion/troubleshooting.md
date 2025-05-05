@@ -252,8 +252,8 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | ------ | ----------- |
 | 입력 바이트 크기 | 처리할 [!DNL Data Ingestion Services]에 대해 준비된 총 바이트 수입니다. |
 | 입력 레코드 크기 | 처리할 [!DNL Data Ingestion Services]의 준비된 총 행 수입니다. |
-| 출력 바이트 크기 | [!DNL Data Ingestion Services]에서 [!DNL Data Lake](으)로 출력한 총 바이트 수입니다. |
-| 출력 레코드 크기 | [!DNL Data Ingestion Services]에서 [!DNL Data Lake](으)로 출력하는 총 행 수입니다. |
+| 출력 바이트 크기 | [!DNL Data Ingestion Services]에서 [!DNL Data Lake] (으)로 출력한 총 바이트 수입니다. |
+| 출력 레코드 크기 | [!DNL Data Ingestion Services]에서 [!DNL Data Lake] (으)로 출력하는 총 행 수입니다. |
 | partitionCount | [!DNL Data Lake]에 기록된 총 파티션 수입니다. |
 
 ### 일부 배치에서 지표를 사용할 수 없는 이유는 무엇입니까?

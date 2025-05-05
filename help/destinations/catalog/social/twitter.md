@@ -74,7 +74,7 @@ Twitter에서 기존 팔로워와 고객을 타겟팅하고 Twitter에서 [!DNL 
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 [!DNL Twitter Custom Audiences] 대상을 찾은 다음 **[!UICONTROL 설정]**&#x200B;을 선택합니다.
-2. **[!UICONTROL 대상에 연결]**을 선택합니다.
+2. **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다.
    ![LinkedIn 인증](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
 3. Twitter 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 

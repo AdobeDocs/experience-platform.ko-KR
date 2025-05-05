@@ -531,8 +531,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `name` | 배치 대상에 대한 기본 연결의 이름을 입력합니다. |
 | `description` | 선택적으로 기본 연결에 대한 설명을 제공할 수 있습니다. |
 | `connectionSpec.id` | 원하는 배치 대상에 대해 연결 사양 ID를 사용합니다. [사용 가능한 대상 목록 가져오기](#get-the-list-of-available-destinations) 단계에서 이 ID를 얻었습니다. |
-| `auth.specname` | 대상의 인증 형식을 나타냅니다. 대상의 specName을 확인하려면 연결 사양 엔드포인트](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)에 대해 [GET 호출을 수행하여 원하는 대상의 연결 사양을 제공하십시오. 응답에서 매개 변수 `authSpec.name`을(를) 찾습니다. <br> 예를 들어 Adobe Campaign 대상의 경우 `S3`, `SFTP with Password` 또는 `SFTP with SSH Key` 중 하나를 사용할 수 있습니다. |
-| `params` | 연결 중인 대상에 따라 서로 다른 필수 인증 매개 변수를 제공해야 합니다. Amazon S3 연결의 경우 Amazon S3 저장소 위치에 액세스 ID와 비밀 키를 제공해야 합니다. <br> 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 끝점](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)에 대한 [GET 호출을 수행하여 원하는 대상의 연결 사양을 제공합니다. 응답에서 매개 변수 `authSpec.spec.required`을(를) 찾습니다. |
+| `auth.specname` | 대상의 인증 형식을 나타냅니다. 대상의 specName을 확인하려면 연결 사양 엔드포인트[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)에 대해 GET 호출을 수행하여 원하는 대상의 연결 사양을 제공하십시오. 응답에서 매개 변수 `authSpec.name`을(를) 찾습니다. <br> 예를 들어 Adobe Campaign 대상의 경우 `S3`, `SFTP with Password` 또는 `SFTP with SSH Key` 중 하나를 사용할 수 있습니다. |
+| `params` | 연결 중인 대상에 따라 서로 다른 필수 인증 매개 변수를 제공해야 합니다. Amazon S3 연결의 경우 Amazon S3 저장소 위치에 액세스 ID와 비밀 키를 제공해야 합니다. <br> 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 끝점[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)에 대한 GET 호출을 수행하여 원하는 대상의 연결 사양을 제공합니다. 응답에서 매개 변수 `authSpec.spec.required`을(를) 찾습니다. |
 
 {style="table-layout:auto"}
 
@@ -845,8 +845,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `description` | 필요한 경우 대상 연결에 대한 설명을 제공할 수 있습니다. |
 | `baseConnectionId` | 위의 단계에서 생성한 기본 연결의 ID를 사용하십시오. |
 | `connectionSpec.id` | 원하는 배치 대상에 대해 연결 사양 ID를 사용합니다. [사용 가능한 대상 목록 가져오기](#get-the-list-of-available-destinations) 단계에서 이 ID를 얻었습니다. |
-| `params` | 연결할 대상에 따라 저장소 위치에 다른 필수 매개 변수를 제공해야 합니다. Amazon S3 연결의 경우 Amazon S3 저장소 위치에 액세스 ID와 비밀 키를 제공해야 합니다. <br> 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 끝점](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)에 대한 [GET 호출을 수행하여 원하는 대상의 연결 사양을 제공합니다. 응답에서 매개 변수 `targetSpec.spec.required`을(를) 찾습니다. |
-| `params.mode` | 대상에 대해 지원되는 모드에 따라 여기에 다른 값을 제공해야 합니다. 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 엔드포인트](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)에 대해 [GET 호출을 수행하여 원하는 대상의 연결 사양을 제공하십시오. 응답에서 매개 변수 `targetSpec.spec.properties.mode.enum`을(를) 찾아 원하는 모드를 선택하십시오. |
+| `params` | 연결할 대상에 따라 저장소 위치에 다른 필수 매개 변수를 제공해야 합니다. Amazon S3 연결의 경우 Amazon S3 저장소 위치에 액세스 ID와 비밀 키를 제공해야 합니다. <br> 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 끝점[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)에 대한 GET 호출을 수행하여 원하는 대상의 연결 사양을 제공합니다. 응답에서 매개 변수 `targetSpec.spec.required`을(를) 찾습니다. |
+| `params.mode` | 대상에 대해 지원되는 모드에 따라 여기에 다른 값을 제공해야 합니다. 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 엔드포인트[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)에 대해 GET 호출을 수행하여 원하는 대상의 연결 사양을 제공하십시오. 응답에서 매개 변수 `targetSpec.spec.properties.mode.enum`을(를) 찾아 원하는 모드를 선택하십시오. |
 | `params.bucketName` | S3 연결의 경우 파일을 내보낼 버킷의 이름을 입력합니다. |
 | `params.path` | S3 연결의 경우 파일을 내보낼 저장소 위치의 파일 경로를 제공합니다. |
 | `params.format` | `CSV`은(는) 현재 지원되는 유일한 파일 내보내기 유형입니다. |

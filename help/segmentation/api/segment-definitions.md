@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # 세그먼트 정의 엔드포인트
 
-Adobe Experience Platform을 사용하면 프로필 그룹에서 특정 속성이나 동작 그룹을 정의하는 세그먼트 정의를 만들 수 있습니다. 세그먼트 정의는 [!DNL Profile Query Language](PQL)로 작성된 쿼리를 캡슐화하는 개체입니다. 세그먼트 정의는 프로필에 적용되어 대상자를 만듭니다. 이 개체(세그먼트 정의)는 PQL 술어라고도 합니다. PQL 조건자는 [!DNL Real-Time Customer Profile]에 제공한 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트 정의에 대한 규칙을 정의합니다. PQL 쿼리 작성에 대한 자세한 내용은 [PQL 안내서](../pql/overview.md)를 참조하십시오.
+Adobe Experience Platform을 사용하면 프로필 그룹에서 특정 속성이나 동작 그룹을 정의하는 세그먼트 정의를 만들 수 있습니다. 세그먼트 정의는 [!DNL Profile Query Language] (PQL)로 작성된 쿼리를 캡슐화하는 개체입니다. 세그먼트 정의는 프로필에 적용되어 대상자를 만듭니다. 이 개체(세그먼트 정의)는 PQL 술어라고도 합니다. PQL 조건자는 [!DNL Real-Time Customer Profile]에 제공한 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트 정의에 대한 규칙을 정의합니다. PQL 쿼리 작성에 대한 자세한 내용은 [PQL 안내서](../pql/overview.md)를 참조하십시오.
 
 이 안내서에서는 세그먼트 정의를 더 잘 이해하는 데 도움이 되는 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 

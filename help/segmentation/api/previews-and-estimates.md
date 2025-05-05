@@ -84,7 +84,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | 데이터를 쿼리할 PQL 표현식. |
 | `predicateType` | `predicateExpression` 아래의 쿼리 식에 대한 조건자 형식입니다. 현재 이 속성에 허용되는 유일한 값은 `pql/text`입니다. |
-| `predicateModel` | 프로필 데이터의 기반이 되는 [!DNL Experience Data Model](XDM) 스키마 클래스의 이름입니다. |
+| `predicateModel` | 프로필 데이터의 기반이 되는 [!DNL Experience Data Model] (XDM) 스키마 클래스의 이름입니다. |
 | `graphType` | 클러스터를 가져올 그래프 유형입니다. 지원되는 값은 `none`(ID 결합을 수행하지 않음) 및 `pdg`(개인 ID 그래프를 기반으로 ID 결합을 수행)입니다. |
 
 +++

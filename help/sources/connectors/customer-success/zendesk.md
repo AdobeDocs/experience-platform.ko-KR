@@ -45,5 +45,5 @@ Experience Platform은 타사 고객 성공 애플리케이션에서 데이터�
 
 ## UI를 사용하여 [!DNL Zendesk]을(를) Experience Platform에 연결
 
-* [UI에서  [!DNL Zendesk ]소스 연결 만들기](../../tutorials/ui/create/customer-success/zendesk.md)
+* [UI에서  [!DNL Zendesk &#x200B;]소스 연결 만들기](../../tutorials/ui/create/customer-success/zendesk.md)
 * [UI에서 고객 성공 소스 연결에 대한 데이터 흐름 만들기](../../tutorials/ui/dataflow/customer-success.md)

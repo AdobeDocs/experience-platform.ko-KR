@@ -15,119 +15,119 @@ ht-degree: 38%
 
 >[!CONTEXTUALHELP]
 >
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_core"
-title="핵심 제품 테이블"
-abstract="테이블에 나열된 핵심 제품에는 샌드박스 수준의 자체 지표, 사용 추적 및 드릴스루 보기가 있습니다. 이러한 핵심 제품은 추적에 대한 주요 지표를 제공하며, 모든 추가 기능은 이러한 지표에 포함됩니다."
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_core"
+>title="핵심 제품 테이블"
+>abstract="테이블에 나열된 핵심 제품에는 샌드박스 수준의 자체 지표, 사용 추적 및 드릴스루 보기가 있습니다. 이러한 핵심 제품은 추적에 대한 주요 지표를 제공하며, 모든 추가 기능은 이러한 지표에 포함됩니다."
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_addons"
-title="추가 기능 테이블"
-abstract="추가 기능 테이블에는 라이선스 금액이 핵심 제품에서 지원하는 지표와 결합된 제품이 나열되어 있습니다. 이러한 추가 기능에는 별도의 지표가 없지만 연결된 핵심 제품의 사용 추적을 향상시킵니다."
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_addons"
+>title="추가 기능 테이블"
+>abstract="추가 기능 테이블에는 라이선스 금액이 핵심 제품에서 지원하는 지표와 결합된 제품이 나열되어 있습니다. 이러한 추가 기능에는 별도의 지표가 없지만 연결된 핵심 제품의 사용 추적을 향상시킵니다."
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseUsage"
-title="라이선스 사용 대시보드"
-abstract="라이선스 사용 대시보드는 구매한 Adobe Experience Platform 제품에 대한 인사이트를 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 계약된 라이선스 금액 등 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="자동화된 데이터 세트 만료 일정"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage"
+>title="라이선스 사용 대시보드"
+>abstract="라이선스 사용 대시보드는 구매한 Adobe Experience Platform 제품에 대한 인사이트를 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 계약된 라이선스 금액 등 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="자동화된 데이터 세트 만료 일정"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_licenseusage"
-title="라이선스 사용 대시보드"
-abstract="라이선스 사용 대시보드는 구매한 Adobe Experience Platform 제품에 대한 인사이트를 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 계약된 라이선스 금액 등 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="자동화된 데이터 세트 만료 일정"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_licenseusage"
+>title="라이선스 사용 대시보드"
+>abstract="라이선스 사용 대시보드는 구매한 Adobe Experience Platform 제품에 대한 인사이트를 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 계약된 라이선스 금액 등 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="자동화된 데이터 세트 만료 일정"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_predictedusage_computehours"
-title="예상 컴퓨팅 시간"
-abstract="컴퓨팅 시간은 배치 쿼리를 실행할 때 쿼리 서비스 엔진이 데이터를 읽고, 처리하고, 쓰는 데 소요되는 시간을 측정합니다.<br>사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 측정하거나 줄이려면 쿼리 > 로그로 이동하여 쿼리 기록을 검토하십시오. 쿼리 작업 영역에 액세스할 수 있는 권한이 없다면 귀사의 관리자에게 문의하십시오."
-additional-url="https://experience.adobe.com/#/platform/query/log.html" text="로그 작업 영역 쿼리"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_computehours"
+>title="예상 컴퓨팅 시간"
+>abstract="컴퓨팅 시간은 배치 쿼리를 실행할 때 쿼리 서비스 엔진이 데이터를 읽고, 처리하고, 쓰는 데 소요되는 시간을 측정합니다.<br>사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 측정하거나 줄이려면 쿼리 > 로그로 이동하여 쿼리 기록을 검토하십시오. 쿼리 작업 영역에 액세스할 수 있는 권한이 없다면 귀사의 관리자에게 문의하십시오."
+>additional-url="https://experience.adobe.com/#/platform/query/log.html" text="로그 작업 영역 쿼리"
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
-title="주소 지정 가능한 예상 대상자"
-abstract="주소 지정 가능한 예상 대상자란 조직에서 실시간 고객 프로필을 통해 참여시킬 수 있는 개인 프로필 집합입니다. 이 지표에는 직접 식별 가능한 프로필과 익명 프로필이 모두 포함됩니다.<br>사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
+>title="주소 지정 가능한 예상 대상자"
+>abstract="주소 지정 가능한 예상 대상자란 조직에서 실시간 고객 프로필을 통해 참여시킬 수 있는 개인 프로필 집합입니다. 이 지표에는 직접 식별 가능한 프로필과 익명 프로필이 모두 포함됩니다.<br>사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
-title="예측된 참여 가능한 프로필"
-abstract="참여 가능한 프로필은 조직에서 지난 12개월 동안 Journey Optimizer를 통해 참여를 시도한 실시간 고객 프로필의 개인 프로필입니다.<br>사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
+>title="예측된 참여 가능한 프로필"
+>abstract="참여 가능한 프로필은 조직에서 지난 12개월 동안 Journey Optimizer를 통해 참여를 시도한 실시간 고객 프로필의 개인 프로필입니다.<br>사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
-title="예측된 비즈니스 개인 프로필"
-abstract="비즈니스 개인 프로필은 B2B 컨텍스트에서 개인을 나타내는 실시간 고객 프로필 내의 기록입니다.<br>사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
+>title="예측된 비즈니스 개인 프로필"
+>abstract="비즈니스 개인 프로필은 B2B 컨텍스트에서 개인을 나타내는 실시간 고객 프로필 내의 기록입니다.<br>사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_predictedusage_corehours"
-title="예상 코어 시간"
-abstract="코어 시간은 Experience Platform 서비스에서 소모된 처리 시간을 나타냅니다.<br>사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_corehours"
+>title="예상 코어 시간"
+>abstract="코어 시간은 Experience Platform 서비스에서 소모된 처리 시간을 나타냅니다.<br>사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
-title="예측된 총 데이터 양"
-abstract="데이터 양은 참여 및 개인화 워크플로에 실시간 고객 프로필을 사용하여 사용되는 데이터의 총량을 나타냅니다.<br>사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
+>title="예측된 총 데이터 양"
+>abstract="데이터 양은 참여 및 개인화 워크플로에 실시간 고객 프로필을 사용하여 사용되는 데이터의 총량을 나타냅니다.<br>사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
-title="예측된 사용 가능한 CJA 행"
-abstract="CJA 행은 Customer Journey Analytics 내에서 분석에 사용할 수 있는 데이터의 일일 평균 행을 의미합니다.<br>사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
+>title="예측된 사용 가능한 CJA 행"
+>abstract="CJA 행은 Customer Journey Analytics 내에서 분석에 사용할 수 있는 데이터의 일일 평균 행을 의미합니다.<br>사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_exceededusage_addressableaudience"
-title="주소 지정 가능한 예상 대상자"
-abstract="주소 지정 가능한 예상 대상자란 조직에서 실시간 고객 프로필을 통해 참여시킬 수 있는 개인 프로필 집합입니다. 여기에는 직접 식별 가능한 프로필과 익명 프로필이 모두 포함됩니다.<br>사용량이 사용 허가된 양을 초과했습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_addressableaudience"
+>title="주소 지정 가능한 예상 대상자"
+>abstract="주소 지정 가능한 예상 대상자란 조직에서 실시간 고객 프로필을 통해 참여시킬 수 있는 개인 프로필 집합입니다. 여기에는 직접 식별 가능한 프로필과 익명 프로필이 모두 포함됩니다.<br>사용량이 사용 허가된 양을 초과했습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_exceededusage_engageableprofiles"
-title="예측된 참여 가능한 프로필"
-abstract="참여 가능한 프로필은 조직에서 지난 12개월 동안 Journey Optimizer를 통해 참여를 시도한 실시간 고객 프로필의 개인 프로필입니다.<br>사용량이 사용 허가된 양을 초과했습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_engageableprofiles"
+>title="예측된 참여 가능한 프로필"
+>abstract="참여 가능한 프로필은 조직에서 지난 12개월 동안 Journey Optimizer를 통해 참여를 시도한 실시간 고객 프로필의 개인 프로필입니다.<br>사용량이 사용 허가된 양을 초과했습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_exceededusage_businesspersonprofile"
-title="예측된 비즈니스 개인 프로필"
-abstract="비즈니스 개인 프로필은 B2B 컨텍스트에서 개인을 나타내는 실시간 고객 프로필 내의 기록입니다.<br>사용량이 사용 허가된 양을 초과했습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_businesspersonprofile"
+>title="예측된 비즈니스 개인 프로필"
+>abstract="비즈니스 개인 프로필은 B2B 컨텍스트에서 개인을 나타내는 실시간 고객 프로필 내의 기록입니다.<br>사용량이 사용 허가된 양을 초과했습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_exceededusage_corehours"
-title="예상 코어 시간"
-abstract="코어 시간은 Experience Platform 서비스에서 소모된 처리 시간을 나타냅니다.<br>사용량이 사용 허가된 양을 초과했습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_corehours"
+>title="예상 코어 시간"
+>abstract="코어 시간은 Experience Platform 서비스에서 소모된 처리 시간을 나타냅니다.<br>사용량이 사용 허가된 양을 초과했습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_exceededusage_totaldatavolume"
-title="예측된 총 데이터 양"
-abstract="데이터 양은 참여 및 개인화 워크플로에 실시간 고객 프로필을 사용하여 사용되는 데이터의 총량을 나타냅니다.<br>사용량이 사용 허가된 양을 초과했습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_totaldatavolume"
+>title="예측된 총 데이터 양"
+>abstract="데이터 양은 참여 및 개인화 워크플로에 실시간 고객 프로필을 사용하여 사용되는 데이터의 총량을 나타냅니다.<br>사용량이 사용 허가된 양을 초과했습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseusage_exceededusage_cjaRowsAvailable"
-title="예측된 사용 가능한 CJA 행"
-abstract="CJA 행은 Customer Journey Analytics 내에서 분석에 사용할 수 있는 데이터의 일일 평균 행을 의미합니다.<br>사용량이 사용 허가된 양을 초과했습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_cjaRowsAvailable"
+>title="예측된 사용 가능한 CJA 행"
+>abstract="CJA 행은 Customer Journey Analytics 내에서 분석에 사용할 수 있는 데이터의 일일 평균 행을 의미합니다.<br>사용량이 사용 허가된 양을 초과했습니다. 사용량을 줄이려면 데이터 세트 또는 가명 프로필의 데이터 만료 설정을 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="경험 이벤트 만료"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
 Adobe Experience Platform [!UICONTROL 라이선스 사용] 대시보드를 통해 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있습니다. 여기에 표시되는 정보는 Experience Platform 인스턴스의 일별 스냅샷 중에 캡처됩니다.
 
@@ -145,7 +145,7 @@ Experience Platform UI에 대한 일반적인 개요는 [Experience Platform UI 
 
 >[!NOTE]
 >
-대시보드의 지표 대부분은 Experience Platform 인스턴스의 스냅샷을 기반으로 매일 업데이트됩니다. [!UICONTROL 사용 가능한 CJA 행]은(는) 예외이며 매월 업데이트됩니다. [!UICONTROL Adhoc Query Service 사용자 팩], [!UICONTROL Profile Richness No of Packs], [!UICONTROL Streaming Segmentation No of Packs]와 같이 &quot;팩&quot;으로 레이블이 지정된 지표는 추가 기능 오퍼에 대한 라이선스 권한을 반영하며 지속적인 사용을 추적하지 않습니다. 스냅샷 이후에 변경한 내용은 다음 스냅샷을 생성할 때까지 표시되지 않습니다.
+>대시보드의 지표 대부분은 Experience Platform 인스턴스의 스냅샷을 기반으로 매일 업데이트됩니다. [!UICONTROL 사용 가능한 CJA 행]은(는) 예외이며 매월 업데이트됩니다. [!UICONTROL Adhoc Query Service 사용자 팩], [!UICONTROL Profile Richness No of Packs], [!UICONTROL Streaming Segmentation No of Packs]와 같이 &quot;팩&quot;으로 레이블이 지정된 지표는 추가 기능 오퍼에 대한 라이선스 권한을 반영하며 지속적인 사용을 추적하지 않습니다. 스냅샷 이후에 변경한 내용은 다음 스냅샷을 생성할 때까지 표시되지 않습니다.
 
 ## 라이선스 사용 대시보드 살펴보기 {#explore}
 
@@ -153,7 +153,7 @@ Experience Platform UI 내의 라이선스 사용 대시보드로 이동하려�
 
 >[!NOTE]
 >
-라이선스 사용 대시보드는 기본적으로 활성화되어 있지 않습니다. 대시보드를 보려면 사용자에게 &quot;라이선스 사용 대시보드 보기&quot; 권한이 부여되어야 합니다. 액세스 권한을 부여하는 단계는 [대시보드 권한 안내서](../permissions.md)를 참조하십시오.
+>라이선스 사용 대시보드는 기본적으로 활성화되어 있지 않습니다. 대시보드를 보려면 사용자에게 &quot;라이선스 사용 대시보드 보기&quot; 권한이 부여되어야 합니다. 액세스 권한을 부여하는 단계는 [대시보드 권한 안내서](../permissions.md)를 참조하십시오.
 
 ## [!UICONTROL 지표] 탭 {#metrics-tab}
 
@@ -173,17 +173,17 @@ Experience Platform UI 내의 라이선스 사용 대시보드로 이동하려�
 
 >[!NOTE]
 >
-소비 보고는 샌드박스 유형별로 누적됩니다. [!UICONTROL 프로덕션] 또는 [!UICONTROL 개발]을 선택하면 해당 형식의 모든 샌드박스에서 결합된 사용량이 표시됩니다.
+>소비 보고는 샌드박스 유형별로 누적됩니다. [!UICONTROL 프로덕션] 또는 [!UICONTROL 개발]을 선택하면 해당 형식의 모든 샌드박스에서 결합된 사용량이 표시됩니다.
 
 ![지표, 라이선스 금액 및 사용 데이터 목록을 표시하는 라이선스 사용 대시보드 지표 탭입니다.](../images/license-usage/metrics-tab.png)
 
 >[!WARNING]
 >
-라이선스 사용 대시보드를 볼 수 있는 권한은 샌드박스 수준에서 지정해야 합니다. 각 개별 샌드박스에 권한을 추가하여 대시보드 내에서 볼 수 있습니다. 이 제한은 향후 릴리스에서 해결될 예정입니다. 당분간은 다음 해결 방법을 사용할 수 있습니다.
+>라이선스 사용 대시보드를 볼 수 있는 권한은 샌드박스 수준에서 지정해야 합니다. 각 개별 샌드박스에 권한을 추가하여 대시보드 내에서 볼 수 있습니다. 이 제한은 향후 릴리스에서 해결될 예정입니다. 당분간은 다음 해결 방법을 사용할 수 있습니다.
 >
-1. Adobe Admin Console에서 제품 프로필을 만듭니다.
-2. 샌드박스 범주의 권한 아래에 라이선스 사용 대시보드에서 보려는 모든 샌드박스를 추가합니다.
-3. 사용자 대시보드 권한 범주 아래에 &quot;라이선스 사용량 대시보드 보기&quot; 권한을 추가합니다.
+>1. Adobe Admin Console에서 제품 프로필을 만듭니다.
+>2. 샌드박스 범주의 권한 아래에 라이선스 사용 대시보드에서 보려는 모든 샌드박스를 추가합니다.
+>3. 사용자 대시보드 권한 범주 아래에 &quot;라이선스 사용량 대시보드 보기&quot; 권한을 추가합니다.
 
 ### 지표 세부 사항 보기 {#view-metric-details}
 
@@ -227,31 +227,31 @@ Experience Platform UI 내의 라이선스 사용 대시보드로 이동하려�
 
 >[!NOTE]
 >
-추가 기능에 대한 [!UICONTROL 라이선스 금액]은(는) 핵심 제품의 총 라이선스 금액에 포함됩니다. 추가 기능은 별도로 추적되지 않지만 관련 제품의 기능을 향상시킵니다. 예를 들어, 추가 기능으로 샌드박스 5개 팩 1개를 구매하면 기본 제품 금액에 금액이 추가됩니다. 추가 기능 테이블에는 추가 기능에 해당하는 [!UICONTROL 라이선스 양]이 표시되지만 실제 사용량은 기본 제품을 통해 추적됩니다.
+>추가 기능에 대한 [!UICONTROL 라이선스 금액]은(는) 핵심 제품의 총 라이선스 금액에 포함됩니다. 추가 기능은 별도로 추적되지 않지만 관련 제품의 기능을 향상시킵니다. 예를 들어, 추가 기능으로 샌드박스 5개 팩 1개를 구매하면 기본 제품 금액에 금액이 추가됩니다. 추가 기능 테이블에는 추가 기능에 해당하는 [!UICONTROL 라이선스 양]이 표시되지만 실제 사용량은 기본 제품을 통해 추적됩니다.
 
 ![핵심 제품 및 추가 기능에 대한 표가 있는 라이선스 사용 대시보드 제품 탭입니다.](../images/license-usage/products-tab.png)
 
 ### 예상 사용량 {#predicted-usage}
 
-[!CONTEXTUALHELP]
-id="platform_dashboards_licenseUsage_prediction"
-title="예상 사용량"
-abstract="예측은 지난 6~7개월 동안의 사용량을 기반으로 하며 매주 금요일에 생성됩니다. 라이선스 사용량 예측은 과거 사용량을 기반으로 한 추정치입니다. 귀하는 조직의 실제 사용량을 파악하고 사용량이 Adobe와 조직의 라이선스 범위를 벗어나지 않도록 할 책임이 있습니다. 사용량을 줄이려면 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성하십시오."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="자동화된 데이터 세트 만료 일정"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_prediction"
+>title="예상 사용량"
+>abstract="예측은 지난 6~7개월 동안의 사용량을 기반으로 하며 매주 금요일에 생성됩니다. 라이선스 사용량 예측은 과거 사용량을 기반으로 한 추정치입니다. 귀하는 조직의 실제 사용량을 파악하고 사용량이 Adobe와 조직의 라이선스 범위를 벗어나지 않도록 할 책임이 있습니다. 사용량을 줄이려면 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="자동화된 데이터 세트 만료 일정"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_licenseusage_prediction"
-title="예상 사용량"
-abstract="예측은 지난 6~7개월 동안의 사용량을 기반으로 하며 매월 15일에 생성됩니다. 라이선스 사용량 예측은 과거 사용량을 기반으로 한 추정치입니다. 귀하는 조직의 실제 사용량을 파악하고 사용량이 Adobe와 조직의 라이선스 범위를 벗어나지 않도록 할 책임이 있습니다. 사용량을 줄이려면 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성하십시오."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="자동화된 데이터 세트 만료 일정"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>[!CONTEXTUALHELP]
+>id="platform_licenseusage_prediction"
+>title="예상 사용량"
+>abstract="예측은 지난 6~7개월 동안의 사용량을 기반으로 하며 매월 15일에 생성됩니다. 라이선스 사용량 예측은 과거 사용량을 기반으로 한 추정치입니다. 귀하는 조직의 실제 사용량을 파악하고 사용량이 Adobe와 조직의 라이선스 범위를 벗어나지 않도록 할 책임이 있습니다. 사용량을 줄이려면 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="자동화된 데이터 세트 만료 일정"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
 정확한 최신 사용 예측을 통해 라이센스 리소스를 사전 예방적으로 관리하고 최적화할 수 있습니다. [!UICONTROL 예상 사용량] 열은 구입한 모든 제품에 대한 모든 프로덕션 및 개발 샌드박스에서 샌드박스 수준에서 향후 라이선스 사용량을 예측합니다. 이제 예측은 매주 업데이트되며, 최신 사용 데이터를 기반으로 6주 간의 예측을 제공합니다. 각 예측은 정보에 입각한 계획을 지원하기 위한 하한 및 상한을 모두 포함한다.
 
 >[!IMPORTANT]
 >
-예측은 매주 금요일에 갱신된다. 새로 고침 날짜가 정보 아이콘(![이 정보 아이콘)에 포함되어 있습니다.열 제목 위에 ](../images/license-usage/info-icon.png)) 있습니다.
+>예측은 매주 금요일에 갱신된다. 새로 고침 날짜가 정보 아이콘(![이 정보 아이콘)에 포함되어 있습니다.열 제목 위에 ](../images/license-usage/info-icon.png)) 있습니다.
 
 [!UICONTROL 핵심 제품] 테이블의 [!UICONTROL 제품] 탭에서 제품의 권한 사용 요약을 봅니다.
 
@@ -259,7 +259,7 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/prof
 
 >[!NOTE]
 >
-라이선스 사용량 예측은 과거 사용량을 기반으로 한 추정치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe을 사용한 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다.
+>라이선스 사용량 예측은 과거 사용량을 기반으로 한 추정치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe을 사용한 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다.
 
 예측된 사용의 비율은 다음과 같이 결정됩니다.
 
@@ -269,7 +269,7 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/prof
 
 >[!NOTE]
 >
-이 컨텍스트에서 &quot;거의 같음&quot;은 값이 소수점 이하 두 자리로 통계적으로 중요함을 의미합니다(예: 하한 0.342와 상한 0.344는 모두 34%로 반올림됨).
+>이 컨텍스트에서 &quot;거의 같음&quot;은 값이 소수점 이하 두 자리로 통계적으로 중요함을 의미합니다(예: 하한 0.342와 상한 0.344는 모두 34%로 반올림됨).
 
 예측된 사용 기능은 다음 지표를 지원합니다.
 
@@ -284,7 +284,7 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/prof
 
 >[!IMPORTANT]
 >
-8월 20일부터 &#39;[!UICONTROL 평균 프로필 풍부도]&#39; 및 &#39;[!UICONTROL 총 저장소]&#39;에 대한 사용 권한이 있는 고객은 라이선스 사용 대시보드에서 &#39;[!UICONTROL 총 데이터 볼륨]&#39;을(를) 대신 보았습니다. 고객 권한은 변경되지 않았으며 추적 지표의 단순화만 있었습니다. [!UICONTROL 총 데이터 볼륨]은(는) 참여 및 개인화 워크플로에 대한 실시간 고객 프로필에서 사용할 수 있는 데이터를 나타냅니다. 이 간소화된 지표는 실시간 고객 프로필 사용에 대한 관리 및 측정을 개선했습니다. 고객은 이 변경에 대한 자세한 내용을 확인하기 위해 Adobe 담당자에게 문의하는 것이 좋습니다.
+>8월 20일부터 &#39;[!UICONTROL 평균 프로필 풍부도]&#39; 및 &#39;[!UICONTROL 총 저장소]&#39;에 대한 사용 권한이 있는 고객은 라이선스 사용 대시보드에서 &#39;[!UICONTROL 총 데이터 볼륨]&#39;을(를) 대신 보았습니다. 고객 권한은 변경되지 않았으며 추적 지표의 단순화만 있었습니다. [!UICONTROL 총 데이터 볼륨]은(는) 참여 및 개인화 워크플로에 대한 실시간 고객 프로필에서 사용할 수 있는 데이터를 나타냅니다. 이 간소화된 지표는 실시간 고객 프로필 사용에 대한 관리 및 측정을 개선했습니다. 고객은 이 변경에 대한 자세한 내용을 확인하기 위해 Adobe 담당자에게 문의하는 것이 좋습니다.
 
 라이선스 사용 대시보드는 조직의 여러 제품에 적용할 수 있는 몇 가지 고유한 지표에 대해 보고합니다. 사용 가능한 지표는 다음과 같습니다.
 
@@ -314,7 +314,7 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/prof
 
 >[!TIP]
 >
-판매 주문에서 라이선스 권한을 확인하여 &#39;스토리지 허용량&#39;과 같은 지표를 계산할 수 있습니다.<br>예:<ul><li>저장 허용 = 계약에 포함된 &quot;승인된 프로필&quot; 수 X 평균 프로필 풍부도</li></ul>
+>판매 주문에서 라이선스 권한을 확인하여 &#39;스토리지 허용량&#39;과 같은 지표를 계산할 수 있습니다.<br>예:<ul><li>저장 허용 = 계약에 포함된 &quot;승인된 프로필&quot; 수 X 평균 프로필 풍부도</li></ul>
 
 이러한 지표의 사용 가능 여부 및 이러한 각 지표의 특정 정의는 조직이 구입한 라이선스에 따라 다릅니다. 각 지표에 대한 자세한 정의는 해당 제품 설명 설명서를 참조하십시오.
 
@@ -329,7 +329,7 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/prof
 
 >[!WARNING]
 >
-라이선스 사용 대시보드는 조직에 대해 프로비저닝된 최신 라이선스에 대해서만 보고합니다. 조직에 대해 프로비저닝된 최신 라이센스가 위의 표에 표시되지 않으면 라이센스 사용 대시보드가 제대로 표시되지 않을 수 있습니다. 향후 릴리스를 위해 단일 조직에서 추가 라이선스 및 여러 라이선스를 지원할 예정입니다.
+>라이선스 사용 대시보드는 조직에 대해 프로비저닝된 최신 라이선스에 대해서만 보고합니다. 조직에 대해 프로비저닝된 최신 라이센스가 위의 표에 표시되지 않으면 라이센스 사용 대시보드가 제대로 표시되지 않을 수 있습니다. 향후 릴리스를 위해 단일 조직에서 추가 라이선스 및 여러 라이선스를 지원할 예정입니다.
 
 ## 다음 단계
 

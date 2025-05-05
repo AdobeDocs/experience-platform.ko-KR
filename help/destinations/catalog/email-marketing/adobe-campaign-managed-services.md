@@ -159,7 +159,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
    ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
-1. 매핑이 수행되면 대상 구성을 검토하고 완료하여 **[!DNL Campaign]**에 데이터를 보낼 수 있습니다.
+1. 매핑이 수행되면 대상 구성을 검토하고 완료하여 **[!DNL Campaign]**&#x200B;에 데이터를 보낼 수 있습니다.
    [대상 구성을 검토하고 완료하는 방법을 알아보세요](/help/destinations/destination-types.md#review).
 
 ## 내보낸 데이터/데이터 내보내기 유효성 검사 {#exported-data}

@@ -143,7 +143,7 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 ![Amazon DSP 대상 만들기 유효성 검사](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
-[!DNL Amazon Marketing Cloud]**의**
+[!DNL Amazon Marketing Cloud]&#x200B;**의**
 
 왼쪽 스키마 브라우저에서 **[!UICONTROL Advertiser Uploaded]** > **[!UICONTROL aep_audiences]**&#x200B;에서 대상을 찾습니다. 그런 다음 AMC SQL 편집기에서 다음 절을 사용하여 대상자를 쿼리할 수 있습니다.
 

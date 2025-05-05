@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # API에서 데이터 세트 만들기
 
-[!DNL Catalog] API를 사용하여 데이터 세트를 만들려면 데이터 세트가 기반으로 사용될 [!DNL Experience Data Model](XDM) 스키마의 `$id` 값을 알고 있어야 합니다. 스키마 ID가 있으면 [!DNL Catalog] API의 `/datasets` 끝점에 POST 요청을 하여 데이터 집합을 만들 수 있습니다.
+[!DNL Catalog] API를 사용하여 데이터 세트를 만들려면 데이터 세트가 기반으로 사용될 [!DNL Experience Data Model] (XDM) 스키마의 `$id` 값을 알고 있어야 합니다. 스키마 ID가 있으면 [!DNL Catalog] API의 `/datasets` 끝점에 POST 요청을 하여 데이터 집합을 만들 수 있습니다.
 
 >[!NOTE]
 >

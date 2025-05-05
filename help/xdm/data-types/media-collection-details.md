@@ -18,7 +18,7 @@ ht-degree: 1%
 >미디어 컬렉션 필드는 데이터를 캡처하여 추가 처리를 위해 다른 Adobe 서비스로 보냅니다. 미디어 보고 필드는 Adobe 서비스에서 사용자가 보낸 미디어 컬렉션 필드를 분석하는 데 사용됩니다. 이 데이터는 다른 특정 사용자 지표와 함께 계산되고 보고됩니다.
 
 +++[!UICONTROL 미디어 컬렉션 세부 정보] 데이터 형식의 다이어그램을 표시하려면 선택하십시오.
-![미디어 컬렉션 세부 정보] 데이터 형식의 다이어그램](../images/data-types/media-collection-details.png)[!UICONTROL 
+![미디어 컬렉션 세부 정보] 데이터 형식의 다이어그램(../images/data-types/media-collection-details.png)
 +++
 
 | 표시 이름 | 속성 | 다음에 필요한 이벤트 | 데이터 유형 | 설명 |

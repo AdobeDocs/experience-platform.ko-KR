@@ -23,7 +23,7 @@ Adobe Experience Platform의 각 태그 속성을 사용하려면 확장 화면�
 * Experience Cloud Visitor ID 서비스
 * 코어 확장
 
-비디오 플레이어를 렌더링할 각 웹 페이지의 HTML에 있는 Google 개발자 문서에서 \&lt;iframe\> 태그&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) 코드 조각을 사용하여 [&quot;플레이어 포함&quot;을 사용하십시오.
+비디오 플레이어를 렌더링할 각 웹 페이지의 HTML에 있는 Google 개발자 문서에서 \&lt;iframe\> 태그&quot;[&#128279;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) 코드 조각을 사용하여 &quot;플레이어 포함&quot;을 사용하십시오.
 
 이 확장 버전 2.0.1은 iframe 스크립트 태그에 고유한 값이 있는 `id` 특성을 삽입하고 아직 포함되지 않은 경우 `src` 특성 값의 끝에 `enablejsapi=1` 및 `rel=0`을(를) 추가하여 단일 웹 페이지에 하나 이상의 YouTube 비디오를 포함하도록 지원합니다. 예:
 

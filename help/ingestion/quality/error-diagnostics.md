@@ -284,7 +284,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 >
 >오류 진단을 사용할 수 없는 경우 대신 다음 오류 메시지가 나타납니다.
 >
-```json
+>```json
 >{
 >       "errors": [{
 >               "code": "INGEST-1211-400",

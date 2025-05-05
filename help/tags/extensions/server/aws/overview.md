@@ -18,11 +18,11 @@ ht-degree: 0%
 
 [[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/)은(는) CRM(고객 관계 관리) 및 ERP(전사적 자원 관리)를 위한 분산 컴퓨팅, 데이터베이스 스토리지, 콘텐츠 전달 및 SaaS(Software-as-a-Service) 통합 서비스 등 다양한 서비스를 제공하는 클라우드 컴퓨팅 플랫폼입니다.
 
-[!DNL AWS] [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장은 [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)을(를) 활용하여 추가 처리를 위해 Adobe Experience Platform Edge Network에서 [!DNL AWS](으)로 이벤트를 보냅니다. 이 안내서에서는 이벤트 전달 규칙에서 확장을 설치하고 기능을 사용하는 방법을 다룹니다.
+[!DNL AWS] [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장은 [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)을(를) 활용하여 추가 처리를 위해 Adobe Experience Platform Edge Network에서 [!DNL AWS] (으)로 이벤트를 보냅니다. 이 안내서에서는 이벤트 전달 규칙에서 확장을 설치하고 기능을 사용하는 방법을 다룹니다.
 
 ## 전제 조건
 
-이 확장을 사용하려면 기존 [!DNL Kinesis] 데이터 스트림을 가진 [!DNL AWS] 계정이 있어야 합니다. 기존 데이터 스트림이 없는 경우 [관리 콘솔을 사용하여 새 데이터 스트림 만들기 [!DNL AWS] 3}에 대한 [!DNL AWS] 설명서를 참조하십시오.](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html)
+이 확장을 사용하려면 기존 [!DNL Kinesis] 데이터 스트림을 가진 [!DNL AWS] 계정이 있어야 합니다. 기존 데이터 스트림이 없는 경우 [관리 콘솔을 사용하여 새 데이터 스트림 만들기 [!DNL AWS] 3&rbrace;에 대한 [!DNL AWS] 설명서를 참조하십시오.](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html)
 
 ## 확장 설치 {#install}
 

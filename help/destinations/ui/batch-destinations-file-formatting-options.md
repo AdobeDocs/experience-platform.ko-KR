@@ -15,7 +15,7 @@ ht-degree: 17%
 > 
 >이 문서에 설명된 파일 서식 옵션은 현재 CSV 파일에만 사용할 수 있습니다.
 
-내보낸 파일에 대한 다양한 파일 서식 옵션을 구성하는 옵션은 [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) 또는 [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect)와 같은 파일 기반 대상에 연결](/help/destinations/ui/connect-destination.md)할 때 사용할 수 있습니다.[
+내보낸 파일에 대한 다양한 파일 서식 옵션을 구성하는 옵션은 [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) 또는 [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect)와 같은 파일 기반 대상에 연결[&#128279;](/help/destinations/ui/connect-destination.md)할 때 사용할 수 있습니다.
 
 Experience Platform UI를 사용하여 내보낸 파일에 대한 다양한 파일 서식 옵션을 구성할 수 있습니다. Experience Platform에서 받은 파일을 최적으로 읽고 해석하기 위해 내보낸 파일의 여러 속성을 사용자 측의 파일 수신 시스템의 요구 사항과 일치하도록 수정할 수 있습니다.
 

@@ -127,12 +127,12 @@ msg6 = model_train.process(msg5)
 
 | 값 | 설명 |
 | --- | --- |
-| 기능 | 모델에 피처를 입력합니다(문자열 목록). <br>예: `browser`, `device`, `login_page`, `product_page``search_page` |
+| 기능 | 모델에 피처를 입력합니다(문자열 목록). <br>예: `browser`, `device`, `login_page`, `product_page` `search_page` |
 | 레이블 | Target 열 이름(문자열)입니다. |
 | 모드 | 교육/테스트(문자열). |
 | model_path | onnx 형식으로 로컬에 저장된 모델의 경로. |
 | params.model | 모델에 대한 절대 가져오기 경로(문자열) 예: `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | 모델 하이퍼 매개 변수에 대한 자세한 내용은 sklearn API ( map / dict )](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) 설명서를 참조하십시오 [. |
+| params.model_params | 모델 하이퍼 매개 변수에 대한 자세한 내용은 sklearn API ( map / dict ) [&#128279;](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) 설명서를 참조하십시오 . |
 | 노드_인스턴스.process(데이터_메시지_from_previous_노드) | 이 메서드 `process()` 는 이전 노드 DataMsg를 가져와서 변환을 적용합니다. 이는 현재 사용 중인 노드 유형에 따라 다릅니다. |
 
 ### 분할
@@ -146,4 +146,4 @@ msg5 = splitter.process(msg4)
 
 ## 다음 단계
 
-다음 단계는 실시간 기계 학습 모델을 채점하는 데 사용할 노드를 만드는 것입니다. 자세한 내용은 실시간 기계 학습 노트북 사용자 안내서](./rtml-authoring-notebook.md) 방문[.
+다음 단계는 실시간 기계 학습 모델을 채점하는 데 사용할 노드를 만드는 것입니다. 자세한 내용은 실시간 기계 학습 노트북 사용자 안내서[&#128279;](./rtml-authoring-notebook.md) 방문.

@@ -46,7 +46,7 @@ Destination SDK은 대상에 대한 여러 인증 방법을 지원합니다. 이
 
 >[!IMPORTANT]
 >
->시스템에 Adobe Experience Platform에 대한 리디렉션/콜백 URL을 등록하는 단계는 인증 코드](#authorization-code) 부여 유형이 있는 [OAuth 2에만 필요합니다. 지원되는 다른 두 권한 유형(암호 및 클라이언트 자격 증명)의 경우 이 단계를 건너뛸 수 있습니다.
+>시스템에 Adobe Experience Platform에 대한 리디렉션/콜백 URL을 등록하는 단계는 인증 코드[&#128279;](#authorization-code) 부여 유형이 있는 OAuth 2에만 필요합니다. 지원되는 다른 두 권한 유형(암호 및 클라이언트 자격 증명)의 경우 이 단계를 건너뛸 수 있습니다.
 
 이 단계를 마치면 다음과 같은 작업을 수행할 수 있습니다.
 * 클라이언트 ID;

@@ -65,7 +65,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;
 
 사용 가능한 데이터 유형의 목록은 클래스의 생성 방법에 따라 사전에 필터링됩니다. 라디오 단추를 선택하여 [!UICONTROL 표준]과(와) [!UICONTROL 사용자 지정] 옵션 중에서 선택하십시오. [!UICONTROL 표준] 옵션은 Adobe에서 만든 엔터티를 표시하고 [!UICONTROL 사용자 지정] 옵션은 조직 내에서 만든 엔터티를 표시합니다.
 
-[!UICONTROL Standard] 및 [!UICONTROL Custom]이 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 데이터 형식] 탭입니다.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)![
+[!UICONTROL Standard] 및 [!UICONTROL Custom]이 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 데이터 형식] 탭입니다.![&#128279;](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
 
 ### 기존 데이터 유형 편집 {#edit}
 

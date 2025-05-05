@@ -14,7 +14,7 @@ ht-degree: 1%
 
 [[!DNL Google Cloud Platform]](https://cloud.google.com/)은(는) CRM(고객 관계 관리) 및 ERP(전사적 자원 관리)를 위한 분산 컴퓨팅, 데이터베이스 스토리지, 컨텐츠 전달 및 SaaS(Software-as-a-Service) 통합 서비스와 같은 다양한 서비스를 제공하는 클라우드 컴퓨팅 플랫폼입니다.
 
-[!DNL Google Cloud Platform] [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장은 [[!DNL Cloud Pub/Sub]](https://cloud.google.com/pubsub)을(를) 활용하여 추가 처리를 위해 Adobe Experience Platform Edge Network에서 [!DNL Google Cloud Platform](으)로 이벤트를 보냅니다. 이 안내서에서는 이벤트 전달 규칙에서 확장을 설치하고 기능을 사용하는 방법을 다룹니다.
+[!DNL Google Cloud Platform] [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장은 [[!DNL Cloud Pub/Sub]](https://cloud.google.com/pubsub)을(를) 활용하여 추가 처리를 위해 Adobe Experience Platform Edge Network에서 [!DNL Google Cloud Platform] (으)로 이벤트를 보냅니다. 이 안내서에서는 이벤트 전달 규칙에서 확장을 설치하고 기능을 사용하는 방법을 다룹니다.
 
 ## 전제 조건
 

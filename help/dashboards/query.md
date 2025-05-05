@@ -47,7 +47,7 @@ Adobe Experience Platform [!DNL Query Service]은(는) 표준 SQL을 사용하�
 
 이러한 데이터 세트의 명명 규칙은 **Profile-Snapshot-Export**&#x200B;이며 그 뒤에는 시스템에서 생성한 임의의 영숫자 값이 옵니다. 예: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
 
-각 프로필 스냅숏 내보내기 데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어](../catalog/datasets/user-guide.md)를 사용하여 데이터 세트 [을(를) 미리 보고 탐색할 수 있습니다.
+각 프로필 스냅숏 내보내기 데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어[&#128279;](../catalog/datasets/user-guide.md)를 사용하여 데이터 세트 을(를) 미리 보고 탐색할 수 있습니다.
 
 ![Profile-Snapshot-Export 데이터 집합의 미리 보기입니다.](images/query/profile-attribute.png)
 
@@ -70,7 +70,7 @@ Adobe Experience Platform [!DNL Query Service]은(는) 표준 SQL을 사용하�
 
 이 데이터 집합의 명명 규칙은 **Segmentdefinition-Snapshot-Export**&#x200B;이며 그 뒤에 영숫자 값이 옵니다. 예: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-각 세그먼트 정의 스냅숏 내보내기 데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어](../catalog/datasets/user-guide.md)를 사용하여 데이터 세트 [을(를) 미리 보고 탐색할 수 있습니다.
+각 세그먼트 정의 스냅숏 내보내기 데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어[&#128279;](../catalog/datasets/user-guide.md)를 사용하여 데이터 세트 을(를) 미리 보고 탐색할 수 있습니다.
 
 ### 대상 메타데이터 데이터 세트
 
@@ -78,7 +78,7 @@ Adobe Experience Platform [!DNL Query Service]은(는) 표준 SQL을 사용하�
 
 이 데이터 집합의 명명 규칙은 **DIM_Destination**&#x200B;입니다.
 
-DIM 대상 데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어](../catalog/datasets/user-guide.md)를 사용하여 데이터 세트 [을(를) 미리 보고 탐색할 수 있습니다.
+DIM 대상 데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어[&#128279;](../catalog/datasets/user-guide.md)를 사용하여 데이터 세트 을(를) 미리 보고 탐색할 수 있습니다.
 
 ![DIM_Destination 데이터 집합의 미리 보기입니다.](images/query/destinations-metadata.png)
 

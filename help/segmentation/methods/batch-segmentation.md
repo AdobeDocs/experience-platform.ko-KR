@@ -289,4 +289,4 @@ Experience Platform에서 대상자를 보는 방법에 대한 자세한 내용�
 
 Experience Platform 사용자 인터페이스 사용에 대한 자세한 내용은 [세그먼테이션 사용 안내서](../ui/overview.md)를 참조하세요.
 
-일괄 처리 세분화에 대한 FAQ는 FAQ](../faq.md#batch-segmentation)의 [일괄 처리 세분화 섹션을 참조하십시오.
+일괄 처리 세분화에 대한 FAQ는 FAQ[&#128279;](../faq.md#batch-segmentation)의 일괄 처리 세분화 섹션을 참조하십시오.

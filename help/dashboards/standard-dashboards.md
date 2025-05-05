@@ -120,7 +120,7 @@ Data Distiller SKU를 구매한 사용자에게는 사용자 지정 SQL 쿼리�
 
 위젯에서 생성된 인사이트에서 내역 데이터를 필터링하려면 `date_key` 특성을 필터로 추가하고 **[!UICONTROL 최근 날짜]**, **[!UICONTROL 적용]**&#x200B;을 선택합니다. 이 필터는 인사이트를 도출하는 데 사용되는 데이터를 최신 시스템 스냅샷에서 가져옵니다.
 
-![필터: date_key] 대화 상자에 [!UICONTROL 최근 날짜] 및 [!UICONTROL 적용]이 강조 표시되어 있습니다.](./images/standard-dashboards/recent-date.png)[!UICONTROL 
+![필터: date_key] 대화 상자에 [!UICONTROL 최근 날짜] 및 [!UICONTROL 적용]이 강조 표시되어 있습니다.(./images/standard-dashboards/recent-date.png)
 
 또는 사용자 지정 기간을 만들어 데이터를 필터링 기준으로 사용할 수 있습니다. 사용 가능한 날짜 목록으로 대화 상자를 확장하려면 **[!UICONTROL 날짜 선택]**&#x200B;을 선택하세요. **[!UICONTROL 모두 선택]** 확인란을 사용하여 사용 가능한 모든 옵션을 활성화하거나 비활성화하거나 각 날짜의 확인란을 개별적으로 선택하십시오. 마지막으로 **[!UICONTROL 적용]**&#x200B;을 선택하여 선택 항목을 확인합니다.
 

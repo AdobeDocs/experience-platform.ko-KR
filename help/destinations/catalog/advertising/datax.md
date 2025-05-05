@@ -131,4 +131,4 @@ Experience Platform UI의 ![Yahoo DataX 대상 카드](/help/destinations/assets
 
 ## 추가 리소스 {#additional-resources}
 
-자세한 내용은  [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/)의 [!DNL Yahoo/Verizon Media] [설명서를 참조하십시오.
+자세한 내용은  [!DNL DataX][&#128279;](https://developer.verizonmedia.com/datax/guide/)의 [!DNL Yahoo/Verizon Media] 설명서를 참조하십시오.

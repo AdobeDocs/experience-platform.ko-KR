@@ -415,4 +415,4 @@ XDM 클래스에 대한 자세한 내용은 [XDM 개별 프로필 개요](../../
 
 ## 다음 단계
 
-이 문서를 읽고 [!DNL Marketo] 데이터 세트와 해당 XDM 필드 간의 매핑 관계에 대한 insight을 얻었습니다. [!DNL Marketo] 데이터 흐름을 완료하려면 [원본 연결 만들기 [!DNL Marketo] 2}에 대한 자습서를 참조하십시오.](../../../tutorials/ui/create/adobe-applications/marketo.md)
+이 문서를 읽고 [!DNL Marketo] 데이터 세트와 해당 XDM 필드 간의 매핑 관계에 대한 insight을 얻었습니다. [!DNL Marketo] 데이터 흐름을 완료하려면 [원본 연결 만들기 [!DNL Marketo] 2&rbrace;에 대한 자습서를 참조하십시오.](../../../tutorials/ui/create/adobe-applications/marketo.md)

@@ -12,7 +12,7 @@ ht-degree: 8%
 
 # 개체 함수
 
-[!DNL Profile Query Language](PQL)에서는 개체와의 상호 작용을 더 간단하게 하는 기능을 제공합니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
+[!DNL Profile Query Language] (PQL)에서는 개체와의 상호 작용을 더 간단하게 하는 기능을 제공합니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
 
 ## null임
 

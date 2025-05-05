@@ -175,7 +175,7 @@ Adobe Experience Platform은 UI를 통해 모든 쿼리 작업의 상태에 대�
 
 | 열 이름 | 설명 |
 |---|---|
-| **[!UICONTROL 쿼리 실행 ID]** | 일별 실행에 대한 쿼리 실행 ID입니다. **[!UICONTROL 쿼리 실행 ID]**&#x200B;를 선택하여 [!UICONTROL 쿼리 실행 개요](으)로 이동합니다. |
+| **[!UICONTROL 쿼리 실행 ID]** | 일별 실행에 대한 쿼리 실행 ID입니다. **[!UICONTROL 쿼리 실행 ID]**&#x200B;를 선택하여 [!UICONTROL 쿼리 실행 개요] (으)로 이동합니다. |
 | **[!UICONTROL 쿼리 실행 시작]** | 쿼리가 실행된 타임스탬프. 타임스탬프는 UTC 형식입니다. |
 | **[!UICONTROL 쿼리 실행 완료]** | 쿼리가 완료된 타임스탬프. 타임스탬프는 UTC 형식입니다. |
 | **[!UICONTROL 상태]** | 가장 최근 쿼리 실행의 상태입니다. 상태 값은 `Success`, `Failed`, `In progress` 또는 `Quarantined`입니다. |

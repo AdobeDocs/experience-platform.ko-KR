@@ -26,7 +26,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->Docker URL가 없는 경우 Docker 호스트 URL 만드는 방법에 대한 단계별 연습을 위해 패키지 원본 파일을 레서피](../models-recipes/package-source-files-recipe.md) 튜토리얼로 방문[.
+>Docker URL가 없는 경우 Docker 호스트 URL 만드는 방법에 대한 단계별 연습을 위해 패키지 원본 파일을 레서피[&#128279;](../models-recipes/package-source-files-recipe.md) 튜토리얼로 방문.
 
 Docker 호스트 URL, 사용자 이름 및 암호를 포함하여 패키지된 레서피 파일을 업로드하려면 Docker 레지스트리 자격 증명이 필요합니다. 다음 GET 요청을 수행하여 이 정보를 조회할 수 있습니다.
 

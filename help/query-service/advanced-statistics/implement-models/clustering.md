@@ -107,9 +107,9 @@ Create MODEL modelname OPTIONS(
   select col1, col2, col3 from training-dataset
 ```
 
-## [!DNL Latent Dirichlet Allocation](LDA) {#latent-dirichlet-allocation}
+## [!DNL Latent Dirichlet Allocation] (LDA) {#latent-dirichlet-allocation}
 
-[!DNL Latent Dirichlet Allocation](LDA)은 문서 컬렉션에서 기본 주제 구조를 캡처하는 확률론적 모델입니다. 단어, 주제, 문서 레이어가 있는 3단계 위계적인 베이지안 모형이다. LDA는 관찰된 문서와 함께 이러한 레이어를 사용하여 잠재적 주제 구조를 구축합니다.
+[!DNL Latent Dirichlet Allocation] (LDA)은 문서 컬렉션에서 기본 주제 구조를 캡처하는 확률론적 모델입니다. 단어, 주제, 문서 레이어가 있는 3단계 위계적인 베이지안 모형이다. LDA는 관찰된 문서와 함께 이러한 레이어를 사용하여 잠재적 주제 구조를 구축합니다.
 
 **매개 변수**
 

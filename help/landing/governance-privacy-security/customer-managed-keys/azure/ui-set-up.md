@@ -27,7 +27,7 @@ CMK를 사용하려면 다음 설정으로 [[!DNL Azure] Key Vault를 구성](./
 
 * [제거 보호 사용](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [일시 삭제 사용](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [역할 기반 액세스 제어를 사용하여 액세스 구성 [!DNL Azure] 2}](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+* [역할 기반 액세스 제어를 사용하여 액세스 구성 [!DNL Azure] 2&rbrace;](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 * [ [!DNL Azure] Key Vault 구성](./azure-key-vault-config.md)
 
 ## CMK 앱 설정 {#register-app}
@@ -80,7 +80,7 @@ CMK를 사용하려면 다음 설정으로 [[!DNL Azure] Key Vault를 구성](./
 
 [!UICONTROL 고객 관리 키 구성] 보기에 제공된 [!UICONTROL 응용 프로그램 ID]와 [!DNL Microsoft Azure] 응용 프로그램 개요에 제공된 [!DNL Application ID]을(를) 비교하여 응용 프로그램을 확인할 수 있습니다.
 
-![응용 프로그램 ID [!UICONTROL 이(가) 강조 표시된 [!UICONTROL 고객 관리 키 구성] 보기.](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)]
+![응용 프로그램 ID [[!UICONTROL 이(가) 강조 표시된 [!UICONTROL 고객 관리 키 구성] 보기.]](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)]
 
 Azure 도구를 확인하는 데 필요한 모든 세부 정보가 Experience Platform UI에 포함되어 있습니다. 이 수준의 세부 기간은 다른 Azure 도구를 사용하여 이러한 응용 프로그램의 주요 자격 증명 모음에 대한 액세스를 모니터링하고 기록하는 기능을 향상시키려는 사용자의 요구에 따라 제공됩니다. 이러한 식별자를 이해하는 것은 해당 목적 및 Adobe 서비스가 키에 액세스할 수 있도록 하는 데 매우 중요합니다.
 
@@ -106,7 +106,7 @@ Azure 도구를 확인하는 데 필요한 모든 세부 정보가 Experience Pl
 
 [!UICONTROL 암호화 구성 대시보드]로 돌아갔습니다. [!UICONTROL 고객 관리 키] 구성의 상태가 [!UICONTROL 처리 중]으로 표시됩니다.
 
-![암호화 구성] 대시보드([!UICONTROL 처리 중])가 [!UICONTROL 고객 관리 키] 카드에 강조 표시되어 있습니다.](../../../images/governance-privacy-security/customer-managed-keys/processing.png)[!UICONTROL 
+![암호화 구성] 대시보드([!UICONTROL 처리 중])가 [!UICONTROL 고객 관리 키] 카드에 강조 표시되어 있습니다.(../../../images/governance-privacy-security/customer-managed-keys/processing.png)
 
 ## 구성 상태 확인 {#check-status}
 

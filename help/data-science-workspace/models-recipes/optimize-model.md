@@ -37,7 +37,7 @@ ht-degree: 0%
 - [파이썬/텐서플로우](#pythontensorflow)
 - [R](#r)
 
-레서피에 대한 샘플 코드는 아래의 `recipes`경험-플랫폼-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) 저장소에서 찾을 [수 있습니다. 이 저장소의 특정 파일은 이 튜토리얼 전체에서 참조됩니다.
+레서피에 대한 샘플 코드는 아래의 `recipes`경험-플랫폼-dsw-reference[&#128279;](https://github.com/adobe/experience-platform-dsw-reference) 저장소에서 찾을 수 있습니다. 이 저장소의 특정 파일은 이 튜토리얼 전체에서 참조됩니다.
 
 ### 스칼라 {#scala}
 
@@ -53,7 +53,7 @@ ht-degree: 0%
 | DefaultMultiClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator` |
 | RecommendationsEvaluator | `com.adobe.platform.ml.impl.RecommendationsEvaluator` |
 
-평가기는 폴더의 애플리케이션.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) 파일에 `recipe` 있는 [레서피에 정의할 수 있습니다. 를 활성화하는 `DefaultBinaryClassificationEvaluator` 샘플 코드는 다음과 같습니다.
+평가기는 폴더의 애플리케이션.properties[&#128279;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) 파일에 `recipe` 있는 레서피에 정의할 수 있습니다. 를 활성화하는 `DefaultBinaryClassificationEvaluator` 샘플 코드는 다음과 같습니다.
 
 ```scala
 evaluation.class=com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator
@@ -83,7 +83,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 | `evaluator.class` | 기본 지표 | `evaluation.metric` |
 | --- | --- | --- |
 | `DefaultBinaryClassificationEvaluator` | -Precision <br>-Recall <br>-Conversation Matrix <br>-F-Score <br>-Accuracy <br>-Receiver 작동 특성 <br>-Area 수신기 작동 특성 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
-| `DefaultMultiClassificationEvaluator` | -정밀도 <br>-리콜 <br>-혼동 매트릭스 <br>-F-점수 <br>-정확도 <br>-수신기 작동 특성 <br>-수신기 작동 특성 아래 영역 | -`PRECISION` <br>-`RECALL` <br>- - <br>`CONFUSION_MATRIX` - -`ROC` <br><br>`ACCURACY``FSCORE` <br>`AUROC` |
+| `DefaultMultiClassificationEvaluator` | -정밀도 <br>-리콜 <br>-혼동 매트릭스 <br>-F-점수 <br>-정확도 <br>-수신기 작동 특성 <br>-수신기 작동 특성 아래 영역 | -`PRECISION` <br>-`RECALL` <br>- - <br>`CONFUSION_MATRIX` - -`ROC` <br><br>`ACCURACY` `FSCORE` <br>`AUROC` |
 | `RecommendationsEvaluator` | 평균 평균 정밀도(MAP) <br> 정규화 할인된 누적 이익 <br>-평균 역수 순위 <br>-지표 K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
 
 
@@ -158,7 +158,7 @@ class Evaluator(AbstractEvaluator):
 - 데이터 준비/기능 엔지니어링
 - 저장된 모델 검색 및 평가
 
-데이터는 먼저 retail.config.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/retail.config.json)에 [정의된 소스에서 데이터 세트로 로드됩니다. 여기에서 데이터는 기계 학습 모델에 맞게 정리되고 엔지니어링됩니다. 마지막으로, 모델은 데이터 세트 를 사용하여 예측하는 데 사용되며 예측 값과 실제 값에서 메트릭이 계산됩니다. 이 경우 MAPE, MAE 및 RMSE가 정의되고 개체에 반환됩니다 `metrics` .
+데이터는 먼저 retail.config.json[&#128279;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/retail.config.json)에 정의된 소스에서 데이터 세트로 로드됩니다. 여기에서 데이터는 기계 학습 모델에 맞게 정리되고 엔지니어링됩니다. 마지막으로, 모델은 데이터 세트 를 사용하여 예측하는 데 사용되며 예측 값과 실제 값에서 메트릭이 계산됩니다. 이 경우 MAPE, MAE 및 RMSE가 정의되고 개체에 반환됩니다 `metrics` .
 
 ## 사전 설치 지표 및 시각화 차트 사용
 

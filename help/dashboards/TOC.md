@@ -47,7 +47,7 @@ ht-degree: 44%
    * [대상자](insights/audiences.md)
    * [대상](insights/destinations.md)
    * [계정 프로필](insights/account-profiles.md)
-* 대시보드 {#customize} 사용자 지정
+* 대시보드 사용자 지정 {#customize}
    * [사용자 지정 개요](customize/overview.md)
    * [대시보드 수정](customize/modify.md)
    * [위젯 라이브러리](customize/widget-library.md)

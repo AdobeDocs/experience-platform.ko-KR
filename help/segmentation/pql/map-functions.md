@@ -12,7 +12,7 @@ ht-degree: 5%
 
 # 맵 함수
 
-[!DNL Profile Query Language](PQL)은(는) 맵과의 상호 작용을 더 쉽게 하는 함수를 제공합니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
+[!DNL Profile Query Language] (PQL)은(는) 맵과의 상호 작용을 더 쉽게 하는 함수를 제공합니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
 
 ## 다운로드
 

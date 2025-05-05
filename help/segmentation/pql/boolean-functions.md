@@ -12,7 +12,7 @@ ht-degree: 4%
 
 # 부울 함수
 
-부울 함수를 사용하여 [!DNL Profile Query Language](PQL)의 다른 요소에 대해 부울 논리를 수행합니다.  다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
+부울 함수를 사용하여 [!DNL Profile Query Language] (PQL)의 다른 요소에 대해 부울 논리를 수행합니다.  다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
 
 ## 및
 

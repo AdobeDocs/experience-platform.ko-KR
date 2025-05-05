@@ -60,7 +60,7 @@ Adobe Experience Platform 대상자를 [!DNL Airship]&#x200B;(으)로 보내려�
 
 ## 태그 그룹
 
-Adobe Experience Platform의 대상자 개념은 Airship의 [Tags](https://docs.airship.com/guides/audience/tags/)와 유사하며 구현에 약간의 차이가 있습니다. 이 통합은 Experience Platform 세그먼트 ](../../../xdm/field-groups/profile/segmentation.md)에서 사용자의 [멤버십 상태를 [!DNL Airship] 태그의 존재 여부에 매핑합니다. 예를 들어 `xdm:status`이(가) `realized`(으)로 변경되는 Experience Platform 대상에서는 태그가 [!DNL Airship] 채널 또는 이 프로필이 매핑된 명명된 사용자에 추가됩니다. `xdm:status`이(가) `exited`(으)로 변경되면 태그가 제거됩니다.
+Adobe Experience Platform의 대상자 개념은 Airship의 [Tags](https://docs.airship.com/guides/audience/tags/)와 유사하며 구현에 약간의 차이가 있습니다. 이 통합은 Experience Platform 세그먼트 [&#128279;](../../../xdm/field-groups/profile/segmentation.md)에서 사용자의 멤버십 상태를 [!DNL Airship] 태그의 존재 여부에 매핑합니다. 예를 들어 `xdm:status`이(가) `realized`(으)로 변경되는 Experience Platform 대상에서는 태그가 [!DNL Airship] 채널 또는 이 프로필이 매핑된 명명된 사용자에 추가됩니다. `xdm:status`이(가) `exited`(으)로 변경되면 태그가 제거됩니다.
 
 이 통합을 사용하려면 [!DNL Airship]&#x200B;(이름: `adobe-segments`)에 *태그 그룹*&#x200B;을(를) 만드십시오.
 

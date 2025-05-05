@@ -13,7 +13,7 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-Adobe Advertising Cloud [!DNL Demand-Side Platform](DSP) 대상을 사용하면 DSP과의 캠페인 활성화를 위해 인증된 자사 대상을 승인된 광고주 및 사용자와 공유할 수 있습니다. DSP과의 Real-Time CDP 통합에 대한 자세한 내용은 [Audience Sources에서 인증된 대상 활성화 정보](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html)를 참조하세요.
+Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) 대상을 사용하면 DSP과의 캠페인 활성화를 위해 인증된 자사 대상을 승인된 광고주 및 사용자와 공유할 수 있습니다. DSP과의 Real-Time CDP 통합에 대한 자세한 내용은 [Audience Sources에서 인증된 대상 활성화 정보](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html)를 참조하세요.
 
 >[!IMPORTANT]
 >
@@ -25,7 +25,7 @@ Advertising Cloud DSP 대상을 사용하는 방법과 시기를 더 잘 이해�
 
 ### 브랜드 광고 사용 사례
 
-온라인 소매업체는 타깃팅에 쿠키를 사용하지 않고 디스플레이 캠페인을 통해 가치가 높은 고객을 다시 타깃팅하려고 합니다. 소매업체는 자사 Adobe Real-time Customer Data Platform(Real-Time CDP) 계정에서 DSP 계정으로 고가치 고객의 해시된 이메일 ID로 구성된 대상을 공유합니다. 그런 다음 DSP은 DSP과 LiveRamp 간의 파트너십을 통해 해시된 전자 메일 ID를 인증된 [!DNL RampIDs](으)로 변환합니다. 결과 [!DNL RampIDs]은(는) 디스플레이 캠페인에서 대상자를 타겟팅하는 데 사용할 수 있습니다.
+온라인 소매업체는 타깃팅에 쿠키를 사용하지 않고 디스플레이 캠페인을 통해 가치가 높은 고객을 다시 타깃팅하려고 합니다. 소매업체는 자사 Adobe Real-time Customer Data Platform(Real-Time CDP) 계정에서 DSP 계정으로 고가치 고객의 해시된 이메일 ID로 구성된 대상을 공유합니다. 그런 다음 DSP은 DSP과 LiveRamp 간의 파트너십을 통해 해시된 전자 메일 ID를 인증된 [!DNL RampIDs] (으)로 변환합니다. 결과 [!DNL RampIDs]은(는) 디스플레이 캠페인에서 대상자를 타겟팅하는 데 사용할 수 있습니다.
 
 ### 에이전시 사용 사례
 
@@ -33,7 +33,7 @@ DSP 계정이 있는 미디어 에이전시는 호스피탈리티 업계의 상�
 
 ## 전제 조건 {#prerequisites}
 
-* [!DNL LiveRamp RampID]과(와) 대상을 공유할 수 있도록 DSP 계정 수준 및 캠페인 수준 설정을 사용하면 고객 데이터가 [!DNL RampIDs](으)로 변환되어 타깃팅 가능한 세그먼트를 만들 수 있습니다. DSP 계정 팀이 이 구성을 수행합니다. [!DNL RampID]은(는) DSP과 [!DNL LiveRamp] 간의 파트너십을 통해 사용할 수 있으며, [!DNL LiveRamp] 멤버십이 없어도 사용할 수 있습니다.
+* [!DNL LiveRamp RampID]과(와) 대상을 공유할 수 있도록 DSP 계정 수준 및 캠페인 수준 설정을 사용하면 고객 데이터가 [!DNL RampIDs] (으)로 변환되어 타깃팅 가능한 세그먼트를 만들 수 있습니다. DSP 계정 팀이 이 구성을 수행합니다. [!DNL RampID]은(는) DSP과 [!DNL LiveRamp] 간의 파트너십을 통해 사용할 수 있으며, [!DNL LiveRamp] 멤버십이 없어도 사용할 수 있습니다.
 * Experience Platform 계정용 Experience Cloud 조직 ID입니다. ID는 [!DNL Real-Time CDP] 사용자 프로필 페이지에서 찾을 수 있습니다.
 * 캠페인 활성화를 위한 대상을 받을 [[!DNL Real-Time CDP] DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)의 소스. DSP 계정 팀은 Experience Cloud 조직 ID를 사용하여 소스를 만듭니다.
 * [[!DNL Real-Time CDP] 소스가 DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)에서 만들어질 때 생성되는 DSP 계정 또는 광고주의 소스 키. DSP 계정 팀이 이 키를 공유합니다. 아래 [설명](#authenticate)처럼 Experience Platform 내에서 Advertising Cloud DSP 대상에 대한 대상 연결을 만드는 데 사용합니다.

@@ -19,7 +19,7 @@ ht-degree: 1%
 
 이 안내서를 사용하려면 이미 [!DNL DbVisualizer] 데스크톱 앱에 액세스할 수 있어야 하며 해당 인터페이스를 탐색하는 방법에 익숙해야 합니다. [!DNL DbVisualizer] 데스크톱 앱을 다운로드하거나 자세한 내용은 [공식 [!DNL DbVisualizer] 설명서](https://www.dbvis.com/download/)를 참조하세요.
 
-[!DNL  DbVisualizer]을(를) Experience Platform에 연결하는 데 필요한 자격 증명을 획득하려면 Experience Platform UI에서 쿼리 작업 영역에 액세스할 수 있어야 합니다. 현재 쿼리 작업 영역에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
+[!DNL &#x200B; DbVisualizer]을(를) Experience Platform에 연결하는 데 필요한 자격 증명을 획득하려면 Experience Platform UI에서 쿼리 작업 영역에 액세스할 수 있어야 합니다. 현재 쿼리 작업 영역에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
 
 ## 데이터베이스 연결 만들기 {#connect-database}
 

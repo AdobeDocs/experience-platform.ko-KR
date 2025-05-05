@@ -43,4 +43,4 @@ Adobe Experience Cloud [!DNL Identity Service]은(는) [!DNL Experience Cloud]�
 
 ## 다음 단계
 
-이 문서에서는 개인 정보 보호 요청에 사용할 고객 ID 데이터를 검색하는 데 관련된 주요 개념에 대한 간단한 개요를 제공했습니다. 이러한 개념 및 서비스에 대한 자세한 내용은 각 섹션에 제공된 설명서 링크를 검토하는 것이 좋습니다. 액세스, 삭제 또는 판매 중지 요청을 만들기 위해 검색된 ID를 [!DNL Privacy Service](으)로 보내는 방법에 대한 단계는 [Privacy Service API 안내서](api/overview.md)를 참조하십시오.
+이 문서에서는 개인 정보 보호 요청에 사용할 고객 ID 데이터를 검색하는 데 관련된 주요 개념에 대한 간단한 개요를 제공했습니다. 이러한 개념 및 서비스에 대한 자세한 내용은 각 섹션에 제공된 설명서 링크를 검토하는 것이 좋습니다. 액세스, 삭제 또는 판매 중지 요청을 만들기 위해 검색된 ID를 [!DNL Privacy Service] (으)로 보내는 방법에 대한 단계는 [Privacy Service API 안내서](api/overview.md)를 참조하십시오.

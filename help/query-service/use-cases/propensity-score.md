@@ -185,7 +185,9 @@ SELECT FLOAT(purchase_num) * FLOAT(w4) AS f4,
 ```sql
 SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 THEN 1 ELSE 0 END AS Prediction;
 ```
+
  
+
 ### 전체적인 예
 
 두 개의 열(`c1` 및 `c2`)이 있는 경우 `c1`에 두 개의 범주가 있으면 [!DNL Logistic Regression] 알고리즘이 다음 함수로 학습됩니다.
@@ -194,6 +196,7 @@ SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 T
 ```python
 y = 0.1 * "c1=category 1"+ 0.2 * "c1=category 2" +0.3 * c2+0.4
 ```
+
  
 SQL에서 이와 동일한 기능은 다음과 같습니다.
 
@@ -209,6 +212,7 @@ FROM
     FROM TABLE
   )
 ```
+
  
 번역 프로세스를 자동화하는 [!DNL Python] 코드는 다음과 같습니다.
 

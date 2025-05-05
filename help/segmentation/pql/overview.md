@@ -10,9 +10,9 @@ ht-degree: 3%
 
 ---
 
-# [!DNL Profile Query Language](PQL) 개요
+# [!DNL Profile Query Language] (PQL) 개요
 
-[!DNL Profile Query Language](PQL)은(는) [!DNL Real-Time Customer Profile] 데이터에 대한 세분화 쿼리의 정의 및 실행을 지원하도록 설계된 [!DNL Experience Data Model](XDM) 호환 쿼리 언어입니다.
+[!DNL Profile Query Language] (PQL)은(는) [!DNL Real-Time Customer Profile] 데이터에 대한 세분화 쿼리의 정의 및 실행을 지원하도록 설계된 [!DNL Experience Data Model] (XDM) 호환 쿼리 언어입니다.
 
 이 안내서에서는 서식 지정 지침에 대해 설명하고 PQL 표현식의 예를 제공하는 PQL에 대한 일반적인 개요를 제공합니다.
 

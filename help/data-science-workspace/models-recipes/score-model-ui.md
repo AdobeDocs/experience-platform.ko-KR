@@ -46,7 +46,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] 의 점수 매기기는 
 
 ![](../images/models-recipes/score/scoring_input.png)
 
-출력 채점 데이터 세트를 선택합니다. 이는 채점 결과가 저장되는 전용 출력 데이터 세트입니다. 선택을 확인하고 다음&#x200B;]**선택을 선택합니다**[!UICONTROL .
+출력 채점 데이터 세트를 선택합니다. 이는 채점 결과가 저장되는 전용 출력 데이터 세트입니다. 선택을 확인하고 다음&#x200B;**선택을 선택합니다**.
 
 ![](../images/models-recipes/score/scoring_results.png)
 
@@ -81,11 +81,11 @@ Adobe Experience Platform [!DNL Data Science Workspace] 의 점수 매기기는 
 
 ![실행 세부 정보](../images/models-recipes/score/view_details.png)
 
-선택한 채점 실행의 상태가 &quot;완료&quot; 또는 &quot;실패&quot;이면 **[!UICONTROL 활동 로그 보기]** 링크를 사용할 수 있습니다. 채점 실행이 실패할 경우 실행 로그는 실패 이유를 확인하는 데 유용한 정보를 제공할 수 있습니다. 실행 로그를 다운로드하려면 활동 로그&#x200B;]**보기 를 선택합니다**[!UICONTROL .
+선택한 채점 실행의 상태가 &quot;완료&quot; 또는 &quot;실패&quot;이면 **[!UICONTROL 활동 로그 보기]** 링크를 사용할 수 있습니다. 채점 실행이 실패할 경우 실행 로그는 실패 이유를 확인하는 데 유용한 정보를 제공할 수 있습니다. 실행 로그를 다운로드하려면 활동 로그&#x200B;**보기 를 선택합니다**.
 
 ![로그 보기 선택](../images/models-recipes/score/view_logs.png)
 
-활동 로그&#x200B;]**보기 팝오버가**[!UICONTROL &#x200B;나타납니다. 연결된 로그를 자동으로 다운로드할 URL을 선택합니다.
+활동 로그&#x200B;**보기 팝오버가**&#x200B;나타납니다. 연결된 로그를 자동으로 다운로드할 URL을 선택합니다.
 
 ![](../images/models-recipes/score/activity_logs.png)
 

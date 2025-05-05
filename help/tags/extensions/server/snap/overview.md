@@ -25,7 +25,7 @@ ht-degree: 2%
 
 전환 API를 사용하려면 **[!DNL Snapchat]** [비즈니스 관리자](https://business.snapchat.com/) 계정이 필요합니다. Business Manager는 광고주가 비즈니스 및 외부 파트너와 **[!DNL Snapchat]**&#x200B;의 마케팅 활동을 통합할 수 있도록 지원합니다. Business Manager 계정이 없는 경우 계정 만들기에 대한 **[!DNL Snapchat]** [도움말 센터 문서](https://businesshelp.snapchat.com/s/article/get-started?language=en_US)를 참조하십시오.
 
-Snapchat Ads 관리자에서 [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US)을(를) 설정해야 하며 `Pixel ID`을(를) 볼 수 있는 액세스 권한이 있어야 합니다. `Pixel ID`은(는) [!UICONTROL [이벤트 관리자]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) 섹션에서 찾을 수 있습니다.
+Snapchat Ads 관리자에서 [[!DNL [Snap Pixel]]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US)을(를) 설정해야 하며 `Pixel ID`을(를) 볼 수 있는 액세스 권한이 있어야 합니다. `Pixel ID`은(는) [[!UICONTROL [이벤트 관리자]]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) 섹션에서 찾을 수 있습니다.
 
 오래 지속되는 정적 API 토큰이 필요합니다. 이 토큰을 얻으려면 [[!DNL Snapchat] 전환 API 설명서](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token)를 참조하십시오.
 

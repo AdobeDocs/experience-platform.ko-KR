@@ -34,7 +34,7 @@ ht-degree: 1%
 
 다음 화면에서는 `Access Token` 필드에 이전에 만든 데이터 요소 암호를 입력합니다. 데이터 요소 암호에 [!DNL LinkedIn] OAuth 2 토큰이 포함됩니다. 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
-![액세스 토큰] 필드와 [!UICONTROL 저장]이 강조 표시된 [!DNL LinkedIn] 확장 구성 페이지입니다.](../../../images/extensions/server/linkedin/configure-extension.png)[!UICONTROL 
+![액세스 토큰] 필드와 [!UICONTROL 저장]이 강조 표시된 [!DNL LinkedIn] 확장 구성 페이지입니다.(../../../images/extensions/server/linkedin/configure-extension.png)
 
 ## [!DNL Send Conversion] 규칙 만들기 {#tracking-rule}
 

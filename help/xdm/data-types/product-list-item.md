@@ -28,7 +28,7 @@ ht-degree: 20%
 | `discountAmount` | [!UICONTROL 이중] | 상품을 할인한 경우, 이는 상품에 대한 정가와 특별가의 차이를 나타낸다. |
 | `name` | [!UICONTROL 문자열] | 해당 제품 조회를 위해 사용자에게 제시된 제품별 디스플레이 이름. |
 | `priceTotal` | [!UICONTROL 이중] | 제품 라인 항목의 전체 가격. |
-| `product` | [!UICONTROL 문자열](URI) | 제품 자체의 XDM 식별자. |
+| `product` | [!UICONTROL 문자열] (URI) | 제품 자체의 XDM 식별자. |
 | `productAddMethod` | [!UICONTROL 문자열] | 방문자가 목록에 제품 항목을 추가하는 데 사용한 메서드입니다. |
 | `productImageUrl` | [!UICONTROL 문자열] | 제품의 기본 이미지에 대한 URL. |
 | `quantity` | [!UICONTROL 정수] | 제품이 필요하다고 고객이 표시한 단위 수. |

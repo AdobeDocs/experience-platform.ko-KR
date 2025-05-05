@@ -21,7 +21,7 @@ ht-degree: 1%
 여기에서 시작하여 아래 링크를 따라 Real-Time CDP의 다양한 서비스 및 영역에서 발생하는 모든 보호 기능에 대해 알아보십시오.
 
 * [데이터 수집 보호](/help/ingestion/guardrails.md)
-*  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)에 대한 [보호 기능
+* [!DNL Edge Network API][&#128279;](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)에 대한 보호 기능
 * [ [!DNL Real-Time Customer Profile] 데이터 및 세분화에 대한 보호 기능](/help/profile/guardrails.md)
 * [ [!DNL Identity Service] 데이터 보호 기능](/help/identity-service/guardrails.md)
 * [ [!DNL Query Service]에 대한 보호 기능](/help/query-service/guardrails.md)

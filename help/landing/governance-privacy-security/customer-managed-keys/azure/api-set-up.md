@@ -27,7 +27,7 @@ Azure에서 호스팅하는 Experience Platform 인스턴스에 대해 CMK를 �
 
 * [제거 보호 사용](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [일시 삭제 사용](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [역할 기반 액세스 제어를 사용하여 액세스 구성 [!DNL Azure] 2}](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+* [역할 기반 액세스 제어를 사용하여 액세스 구성 [!DNL Azure] 2&rbrace;](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 * [ [!DNL Azure] Key Vault 구성](./azure-key-vault-config.md)
 
 ## CMK 앱 설정 {#register-app}

@@ -84,7 +84,7 @@ Experience Platform에서 [!DNL LINE] 리소스에 액세스할 수 있도록 �
 
 ### 대상으로 인증 {#authenticate}
 
-대상에 인증하려면 **[!UICONTROL 대상에 연결]**을 선택하세요.
+대상에 인증하려면 **[!UICONTROL 대상에 연결]**&#x200B;을 선택하세요.
 인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 아래의 필수 필드를 입력하십시오.

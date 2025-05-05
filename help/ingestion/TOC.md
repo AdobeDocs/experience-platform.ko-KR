@@ -27,7 +27,7 @@ ht-degree: 21%
    - [부분 일괄 처리 수집](batch-ingestion/partial.md)
    - [문제 해결](batch-ingestion/troubleshooting.md)
 - 튜토리얼 {#tutorials}
-   - XDM {#map-csv}에 CSV 파일 매핑
+   - XDM에 CSV 파일 매핑 {#map-csv}
       - [개요](./tutorials/map-csv/overview.md)
       - [CSV 파일을 기존 스키마에 매핑](./tutorials/map-csv/existing-schema.md)
       - [AI가 생성한 권장 사항을 사용하여 CSV 파일 매핑](./tutorials/map-csv/recommendations.md)

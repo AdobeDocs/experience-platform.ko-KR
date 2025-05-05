@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Adobe Experience Platform용 [!DNL Kafka] 커넥터
 
-Adobe Experience Platform용 스트림 커넥터는 [!DNL Apache Kafka Connect]을(를) 기반으로 합니다. 이 라이브러리를 사용하여 데이터 센터의 [!DNL Kafka] 항목에서 [!DNL Experience Platform](으)로 JSON 이벤트를 실시간으로 직접 스트리밍할 수 있습니다.
+Adobe Experience Platform용 스트림 커넥터는 [!DNL Apache Kafka Connect]을(를) 기반으로 합니다. 이 라이브러리를 사용하여 데이터 센터의 [!DNL Kafka] 항목에서 [!DNL Experience Platform] (으)로 JSON 이벤트를 실시간으로 직접 스트리밍할 수 있습니다.
 
 스트림 커넥터는 싱크(단방향) 커넥터로 [!DNL Kafka] 항목에서 [!DNL Experience Platform]에 등록된 끝점으로 데이터를 전달합니다. 이 커넥터를 사용하려면 라이브러리를 다운로드하여 기존 [!DNL Kafka] 배포에 추가하고 Adobe 스트리밍 HTTP URL에 [!DNL Kafka] 주제를 구성해야 합니다. 추가 코드는 **필요 없음**&#x200B;입니다. 커넥터는 다음 기능을 지원합니다.
 

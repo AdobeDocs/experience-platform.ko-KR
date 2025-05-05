@@ -107,7 +107,7 @@ ht-degree: 3%
 
 ### API 참조 설명서 {#api-reference-documentation}
 
-이 자습서에서 모든 API 작업에 대한 참조 설명서를 함께 찾을 수 있습니다. Adobe Developer 웹 사이트](https://developer.adobe.com/experience-platform-apis/references/destinations/)에서 [[!DNL Flow Service] - 대상 API 설명서를 참조하십시오. 이 자습서와 API 참조 설명서를 동시에 사용하는 것이 좋습니다.
+이 자습서에서 모든 API 작업에 대한 참조 설명서를 함께 찾을 수 있습니다. Adobe Developer 웹 사이트[&#128279;](https://developer.adobe.com/experience-platform-apis/references/destinations/)에서 [!DNL Flow Service] - 대상 API 설명서를 참조하십시오. 이 자습서와 API 참조 설명서를 동시에 사용하는 것이 좋습니다.
 
 ### 용어집 {#glossary}
 
@@ -137,7 +137,7 @@ ht-degree: 3%
 
 **요청**
 
-+++1}에 대해 [!DNL connection spec] 검색[!DNL Amazon S3]
++++1&rbrace;에 대해 [!DNL connection spec] 검색[!DNL Amazon S3]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -171,7 +171,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++1}에 대해 [!DNL connection spec] 검색[!DNL Azure Blob Storage]
++++1&rbrace;에 대해 [!DNL connection spec] 검색[!DNL Azure Blob Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -239,7 +239,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++1}에 대해 [!DNL connection spec] 검색[!DNL Data Landing Zone(DLZ)]
++++1&rbrace;에 대해 [!DNL connection spec] 검색[!DNL Data Landing Zone(DLZ)]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -273,7 +273,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++1}에 대해 [!DNL connection spec] 검색[!DNL Google Cloud Storage]
++++1&rbrace;에 대해 [!DNL connection spec] 검색[!DNL Google Cloud Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \

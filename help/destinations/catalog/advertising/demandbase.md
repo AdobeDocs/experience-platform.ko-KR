@@ -16,7 +16,7 @@ ht-degree: 17%
 
 >[!AVAILABILITY]
 >
->>Real-Time Customer Data Platform의 [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) 에디션을 구매하는 회사는 Demandbase 대상에 대한 계정 대상을 활성화할 수 있습니다.
+>&#x200B;>Real-Time Customer Data Platform의 [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) 에디션을 구매하는 회사는 Demandbase 대상에 대한 계정 대상을 활성화할 수 있습니다.
 
 [계정 대상자](/help/segmentation/types/account-audiences.md)를 기반으로 대상자 타깃팅, 개인화 및 제외를 위한 Demandbase 캠페인에 대한 프로필을 활성화합니다.
 

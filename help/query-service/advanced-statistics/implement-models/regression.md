@@ -248,7 +248,7 @@ CREATE MODEL modelname OPTIONS(
 
 ## [!DNL Survival Regression] {#survival-regression}
 
-[!DNL Survival Regression]은(는) [!DNL Weibull distribution]을(를) 기반으로 하는 [!DNL Accelerated Failure Time](AFT) 모델이라고 하는 매개 변수 생존 회귀 모델에 맞는 데 사용됩니다. 향상된 성능을 위해 인스턴스를 블록으로 스택할 수 있습니다.
+[!DNL Survival Regression]은(는) [!DNL Weibull distribution]을(를) 기반으로 하는 [!DNL Accelerated Failure Time] (AFT) 모델이라고 하는 매개 변수 생존 회귀 모델에 맞는 데 사용됩니다. 향상된 성능을 위해 인스턴스를 블록으로 스택할 수 있습니다.
 
 **매개 변수**
 

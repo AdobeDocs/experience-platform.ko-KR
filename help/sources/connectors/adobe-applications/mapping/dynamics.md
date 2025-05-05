@@ -265,4 +265,4 @@ ht-degree: 8%
 >
 >위의 작업의 중첩 반복은 `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`과(와) 비슷합니다.
 
-자세한 내용은  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)의 논리 연산자에 대한 [문서를 참조하십시오
+자세한 내용은  [!DNL Data Prep][&#128279;](../../../../data-prep/functions.md##logical-operators)의 논리 연산자에 대한 문서를 참조하십시오

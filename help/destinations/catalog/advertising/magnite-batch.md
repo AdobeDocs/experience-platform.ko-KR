@@ -149,10 +149,10 @@ Adobe 경험 카탈로그에서 Magnite: 배치 대상을 찾습니다. 추가 �
 
 ### 속성 및 ID 매핑 {#map}
 
-**[!UICONTROL Source 필드]**에서 장치에 대한 특성이나 ID를 선택할 수 있습니다. 이 예제에서는 &quot;DeviceId&quot;라는 사용자 지정 IdentityMap을 선택했습니다
+**[!UICONTROL Source 필드]**&#x200B;에서 장치에 대한 특성이나 ID를 선택할 수 있습니다. 이 예제에서는 &quot;DeviceId&quot;라는 사용자 지정 IdentityMap을 선택했습니다
 ![원하는 데이터 필드를 device_id 필드에 매핑](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
-**[!UICONTROL 대상 필드]**에서:
+**[!UICONTROL 대상 필드]**&#x200B;에서:
 ![적절한 장치 유형 대상 ID를 선택합니다](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) 자세한 내용은 [지원되는 ID](#supported-identities)를 참조하십시오.
 이 예제에서는 **[!UICONTROL Source 필드]**&#x200B;이(가) 사용자 지정 IdentityMap: DeviceID로 정의되어 있으므로 **[!UICONTROL Target 필드]**: magnite_deviceId_CUSTOM을 선택했습니다.
 

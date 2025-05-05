@@ -118,7 +118,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 **요청**
 
-+++1}에 대해 [!DNL connection spec] 검색[!DNL Amazon S3]
++++1&rbrace;에 대해 [!DNL connection spec] 검색[!DNL Amazon S3]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -152,7 +152,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++1}에 대해 [!DNL connection spec] 검색[!DNL Azure Blob Storage]
++++1&rbrace;에 대해 [!DNL connection spec] 검색[!DNL Azure Blob Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -220,7 +220,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++1}에 대해 [!DNL connection spec] 검색[!DNL Data Landing Zone(DLZ)]
++++1&rbrace;에 대해 [!DNL connection spec] 검색[!DNL Data Landing Zone(DLZ)]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -254,7 +254,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++1}에 대해 [!DNL connection spec] 검색[!DNL Google Cloud Storage]
++++1&rbrace;에 대해 [!DNL connection spec] 검색[!DNL Google Cloud Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \

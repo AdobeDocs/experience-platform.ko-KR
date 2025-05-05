@@ -473,7 +473,7 @@ SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아�
 
 +++
 
-+++1} 인증에 대한 레거시 [!DNL base connection] 보기[!DNL SFTP - SSH key]
++++1&rbrace; 인증에 대한 레거시 [!DNL base connection] 보기[!DNL SFTP - SSH key]
 
 ```json {line-numbers="true" start-line="1" highlight="5,15"}
 {
@@ -674,7 +674,7 @@ SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아�
 
 기존 예제의 `profileSelectors` 개체가 새 `profileMapping` 개체로 어떻게 바뀌는지 확인합니다.
 
-데이터를 클라우드 저장소 대상으로 내보내기](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)하기 위한 [API 자습서에서 `profileMapping` 개체 설정에 대한 전체 정보를 확인하십시오.
+데이터를 클라우드 저장소 대상으로 내보내기[&#128279;](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)하기 위한 API 자습서에서 `profileMapping` 개체 설정에 대한 전체 정보를 확인하십시오.
 
 >[!BEGINTABS]
 

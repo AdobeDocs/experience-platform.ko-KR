@@ -126,7 +126,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 날짜 | 날짜 문자열을 ZonedDateTime 개체로 변환합니다(ISO 8601 형식). | <ul><li>날짜: **필수** 날짜를 나타내는 문자열입니다.</li><li>형식: **필수** 원본 날짜의 형식을 나타내는 문자열입니다.**참고:** 날짜 문자열을 변환할 형식을 **그렇지 않습니다**. </li><li>DEFAULT_DATE: **필수** 제공된 날짜가 null인 경우 기본 날짜가 반환됩니다.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
 | 날짜 | 날짜 문자열을 ZonedDateTime 개체로 변환합니다(ISO 8601 형식). | <ul><li>날짜: **필수** 날짜를 나타내는 문자열입니다.</li><li>형식: **필수** 원본 날짜의 형식을 나타내는 문자열입니다.**참고:** 날짜 문자열을 변환할 형식을 **그렇지 않습니다**. </li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | `2019-10-23T11:24:00Z` |
 | 날짜 | 날짜 문자열을 ZonedDateTime 개체로 변환합니다(ISO 8601 형식). | <ul><li>날짜: **필수** 날짜를 나타내는 문자열입니다.</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
-| date_part | 날짜의 일부를 검색합니다. 지원되는 구성 요소 값은 다음과 같습니다. <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh12}&quot;<br>&quot;7}분&quot;25}&quot;m<br><br><br><br><br><br><br><br><br><br><br><br> | <ul><li>구성 요소: **필수** 날짜의 일부를 나타내는 문자열입니다. </li><li>날짜: **필수** 표준 형식의 날짜입니다.</li></ul> | date_&#x200B;part(COMPONENT, DATE) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12&quot;)) | 10 |
+| date_part | 날짜의 일부를 검색합니다. 지원되는 구성 요소 값은 다음과 같습니다. <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh12&rbrace;&quot;<br>&quot;7&rbrace;분&quot;25&rbrace;&quot;m<br><br><br><br><br><br><br><br><br><br><br><br> | <ul><li>구성 요소: **필수** 날짜의 일부를 나타내는 문자열입니다. </li><li>날짜: **필수** 표준 형식의 날짜입니다.</li></ul> | date_&#x200B;part(COMPONENT, DATE) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12&quot;)) | 10 |
 | set_date_part | 지정된 날짜의 구성 요소를 대체합니다. 다음 구성 요소가 허용됩니다. <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>구성 요소: **필수** 날짜의 일부를 나타내는 문자열입니다. </li><li>값: **필수** 지정된 날짜에 구성 요소에 대해 설정할 값입니다.</li><li>날짜: **필수** 표준 형식의 날짜입니다.</li></ul> | set_date_&#x200B;part(COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44Z&quot; |
 | make_date_time | 부품에서 날짜를 생성합니다. 이 함수는 make_timestamp를 사용하여 유도할 수도 있습니다. | <ul><li>연도: **필수** 4자리 숫자로 작성된 연도입니다.</li><li>월: **필수** 월 허용되는 값은 1-12입니다.</li><li>일: **필수**&#x200B;일. 허용되는 값은 1~31입니다.</li><li>시간: **필수** 시간. 허용되는 값은 0~23입니다.</li><li>분: **필수** 분. 허용되는 값은 0~59입니다.</li><li>NANOSECOND: **필수** 나노초 값. 허용되는 값은 0에서 999999999까지입니다.</li><li>시간대: **필수** 날짜 시간에 대한 시간대입니다.</li></ul> | make_date_&#x200B;time(YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, NANOSECOND, TIMEZONE) | make_date_time&#x200B;(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | 모든 시간대의 날짜를 UTC 형식의 날짜로 변환합니다. | <ul><li>날짜: **필수** 변환하려는 날짜입니다.</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
@@ -181,7 +181,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | [!BADGE 대상만]{type=Informative} array_to_string | 지정된 구분 기호를 사용하여 배열에 있는 요소의 문자열 표현을 조인합니다. 배열이 다차원이면 결합되기 전에 평면화됩니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-maps-objects.md)를 참조하세요. | <ul><li>구분 기호: **필수** 배열에서 요소를 연결하는 데 사용되는 구분 기호입니다.</li><li>배열: **필수** 병합할 배열입니다(병합한 후).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | &quot;Hello;world&quot; |
 | [!BADGE 대상만]{type=Informative} filterArray* | 술어를 기반으로 해당 배열을 필터링합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-maps-objects.md)를 참조하세요. | <ul><li>배열: **필수** 필터링할 배열</li><li>조건자: **필수** 특정 배열의 각 요소에 적용할 조건자입니다. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7] |
 | [!BADGE 대상만]{type=Informative} transformArray* | 조건자를 기반으로 특정 배열을 변환합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-maps-objects.md)를 참조하세요. | <ul><li>배열: **필수** 변환할 배열입니다.</li><li>조건자: **필수** 특정 배열의 각 요소에 적용할 조건자입니다. | transformArray(ARRAY, PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
-| [!BADGE 대상만]{type=Informative} flattenArray* | 지정된 (다차원) 배열을 1차원 배열로 병합합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-maps-objects.md)를 참조하세요. | <ul><li>배열: **필수** 병합할 배열입니다.</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
+| [!BADGE 대상만]{type=Informative} flattenArray* | 지정된 (다차원) 배열을 1차원 배열로 병합합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-maps-objects.md)를 참조하세요. | <ul><li>배열: **필수** 병합할 배열입니다.</li></ul> | flattenArray(ARRAY) | flattenArray(&lbrack;[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 
@@ -387,11 +387,11 @@ address.line1 -> addr.addrLine1
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| [ | %5B |
+| &lbrack; | %5B |
 | | | %5C |
-| ] | %5D |
+| &rbrack; | %5D |
 | ^ | %5E |
-| ` | %60 |
+| &grave; | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}

@@ -139,8 +139,8 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 | 필드 그룹 | (다수) | [[!UICONTROL 미디어 보고]](https://github.com/adobe/xdm/pull/1670/files)에 대한 여러 XDM 이벤트 유형이 추가되었습니다. |
 | 필드 그룹 | [!UICONTROL Workfront 변경 이벤트] | `Full Record` 및 `Accessor Employee Ids` 필드 그룹이 추가되었습니다. |
 | 데이터 유형 | [[!UICONTROL 제품 목록 항목]](https://github.com/adobe/xdm/pull/1685/files) | 품목의 환불 금액을 표시하기 위해(해당하는 경우) [!UICONTROL 환불 금액]이 추가되었습니다. |
-| 데이터 유형 | [[!UICONTROL 주문 ]](https://github.com/adobe/xdm/pull/1685/files) | 이 주문에 대한 환불 목록에 [!UICONTROL 환불 목록]이 추가되었습니다. |
-| 데이터 유형 | [[!UICONTROL 제품 목록 항목 ]](https://github.com/adobe/xdm/pull/1677/files) | 이 제품의 카테고리 데이터 목록에 제품 카테고리가 추가되었습니다. |
+| 데이터 유형 | [[!UICONTROL 주문 &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | 이 주문에 대한 환불 목록에 [!UICONTROL 환불 목록]이 추가되었습니다. |
+| 데이터 유형 | [[!UICONTROL 제품 목록 항목 &#x200B;]](https://github.com/adobe/xdm/pull/1677/files) | 이 제품의 카테고리 데이터 목록에 제품 카테고리가 추가되었습니다. |
 | 데이터 유형 | [!UICONTROL 세션 세부 정보] | [보고에 사용되는 미디어 스트림 유형을 나타내는](https://github.com/adobe/xdm/pull/1676/files) `pev3` 문자열 필드가 추가되었습니다. 또한 `pccr` 속성이 추가되어 리디렉션이 발생했는지 여부를 나타냅니다. |
 | 데이터 유형 | [!UICONTROL 요청 목록] | [요청 목록 속성](https://github.com/adobe/xdm/pull/1675/files)을 제공합니다. 여기에는 이름, ID 및 설명이 포함됩니다. |
 | 데이터 유형 | [!UICONTROL 상거래] | `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` 및 `requisitionList`를 포함하도록 [상거래 데이터 유형이 업데이트](https://github.com/adobe/xdm/pull/1675/files)되었습니다. |

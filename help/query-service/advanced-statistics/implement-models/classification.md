@@ -128,9 +128,9 @@ Create MODEL modelname OPTIONS(
   select col1, col2, col3 from training-dataset
 ```
 
-## [!DNL Linear Support Vector Classifier](LinearSVC) {#linear-support-vector-classifier}
+## [!DNL Linear Support Vector Classifier] (LinearSVC) {#linear-support-vector-classifier}
 
-[!DNL Linear Support Vector Classifier](LinearSVC)은 고차원 공간에서 데이터를 분류하기 위한 초평면을 구성합니다. 클래스 간의 여백을 최대화하여 분류 오류를 최소화할 수 있습니다.
+[!DNL Linear Support Vector Classifier] (LinearSVC)은 고차원 공간에서 데이터를 분류하기 위한 초평면을 구성합니다. 클래스 간의 여백을 최대화하여 분류 오류를 최소화할 수 있습니다.
 
 **매개 변수**
 
@@ -187,7 +187,7 @@ Create MODEL modelname OPTIONS(
 
 ## [!DNL Multilayer Perceptron Classifier] {#multilayer-perceptron-classifier}
 
-[!DNL Multilayer Perceptron Classifier](MLPC)는 피드포워드 인공 신경망 분류자입니다. 이는 완전히 연결된 여러 노드의 레이어로 구성되며, 각 노드는 입력의 가중 선형 조합과 활성화 함수를 적용합니다. MLPC는 비선형 결정 경계가 필요한 복잡한 분류 작업에 사용됩니다.
+[!DNL Multilayer Perceptron Classifier] (MLPC)는 피드포워드 인공 신경망 분류자입니다. 이는 완전히 연결된 여러 노드의 레이어로 구성되며, 각 노드는 입력의 가중 선형 조합과 활성화 함수를 적용합니다. MLPC는 비선형 결정 경계가 필요한 복잡한 분류 작업에 사용됩니다.
 
 **매개 변수**
 

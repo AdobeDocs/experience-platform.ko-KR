@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 >[!DNL Anaconda Navigator]은(는) 데스크톱 GUI(그래픽 사용자 인터페이스)로, [!DNL Jupyter Notebook]과(와) 같은 일반적인 [!DNL Python] 프로그램을 쉽게 설치하고 시작할 수 있습니다. 또한 명령줄 명령을 사용하지 않고도 패키지, 환경 및 채널을 관리할 수 있습니다.
 >웹 사이트에서 안내식 설치 프로세스를 따라 [선호하는 응용 프로그램 버전을 설치](https://docs.anaconda.com/anaconda/install/)하십시오.
->Anaconda Navigator 홈 화면의 지원되는 응용 프로그램 목록에서 **[!DNL Jupyter Notebook]**을(를) 선택하여 프로그램을 시작합니다.
+>Anaconda Navigator 홈 화면의 지원되는 응용 프로그램 목록에서 **[!DNL Jupyter Notebook]**&#x200B;을(를) 선택하여 프로그램을 시작합니다.
 >자세한 내용은 [공식 Anaconda 설명서](https://docs.anaconda.com/anaconda/navigator/)에서 확인할 수 있습니다.
 
 공식 Jupyter 설명서는 [명령줄 인터페이스에서 전자 필기장을 실행](https://docs.jupyter.org/en/latest/running.html#how-do-i-open-a-specific-notebook)&#x200B;(CLI)하는 방법에 대한 지침을 제공합니다.

@@ -22,7 +22,7 @@ ht-degree: 1%
 
 1. **[!UICONTROL 대상 선택]**: 분석할 대상 세그먼트를 선택합니다(예: **캐나다 - 앨버타**).
 2. **[!UICONTROL 병합 정책 지정]**: 선택한 대상 간에 ID가 결합되는 방식을 나타내는 병합 정책을 정의합니다(예제 스크린샷에서는 **기본 시간 기반** 정책이 선택됨).
-3. 비교할 **[!UICONTROL ID A]** 및 **[!UICONTROL ID B]** 선택**: 비교할 두 ID 유형을 선택하십시오. 이 예제에서 **ID A**&#x200B;은(는) &quot;crmId&quot;로 선택되고 **ID B**&#x200B;은(는) &quot;email&quot;로 선택됩니다.
+3. 비교할 **[!UICONTROL ID A]** 및 **[!UICONTROL ID B]** 선택&#x200B;**: 비교할 두 ID 유형을 선택하십시오. 이 예제에서 &#x200B;** ID A&#x200B;**&#x200B;은(는) &quot;crmId&quot;로 선택되고 &#x200B;** ID B**&#x200B;은(는) &quot;email&quot;로 선택됩니다.
 4. **날짜 범위 설정**: &quot;오늘&quot;과 같은 미리 정의된 범위를 선택하거나 일정 필드를 사용하여 시작 날짜와 종료 날짜를 수동으로 설정합니다.
 
 ![대상 ID 중복 대시보드의 필터 대화 상자.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filters-dialog.png)

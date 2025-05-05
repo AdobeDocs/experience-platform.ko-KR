@@ -161,6 +161,7 @@ XDM 필드를 [!DNL Marketing Cloud Account Engagement] 대상 필드에 올바�
      | `xdm: person.name.firstName` | `Attribute: firstName` | |
 
    * 위 매핑의 예가 아래에 나와 있습니다.
+
      ![Target 매핑을 보여 주는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
 
 대상 연결에 대한 매핑을 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.

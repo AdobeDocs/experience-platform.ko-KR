@@ -14,13 +14,13 @@ ht-degree: 2%
 
 # 임시 스키마 만들기
 
-특정 상황에서는 단일 데이터 집합에서만 사용할 수 있도록 네임스페이스가 지정된 필드가 있는 [!DNL Experience Data Model](XDM) 스키마를 만들어야 할 수 있습니다. 이를 &quot;임시&quot; 스키마라고 합니다. 임시 스키마는 CSV 파일 수집 및 특정 종류의 소스 연결 생성을 포함하여 [!DNL Experience Platform]의 다양한 데이터 수집 워크플로우에서 사용됩니다.
+특정 상황에서는 단일 데이터 집합에서만 사용할 수 있도록 네임스페이스가 지정된 필드가 있는 [!DNL Experience Data Model] (XDM) 스키마를 만들어야 할 수 있습니다. 이를 &quot;임시&quot; 스키마라고 합니다. 임시 스키마는 CSV 파일 수집 및 특정 종류의 소스 연결 생성을 포함하여 [!DNL Experience Platform]의 다양한 데이터 수집 워크플로우에서 사용됩니다.
 
 이 문서에서는 [스키마 레지스트리 API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)를 사용하여 임시 스키마를 만드는 일반적인 단계를 제공합니다. 임시 스키마를 워크플로의 일부로 만들어야 하는 다른 [!DNL Experience Platform] 튜토리얼과 함께 사용됩니다. 이러한 각 문서에서는 특정 사용 사례에 맞게 임시 스키마를 올바르게 구성하는 방법에 대한 자세한 정보를 제공합니다.
 
 ## 시작하기
 
-이 자습서에서는 [!DNL Experience Data Model](XDM) 시스템에 대한 작업 이해가 필요합니다. 이 자습서를 시작하기 전에 다음 XDM 설명서를 검토하십시오.
+이 자습서에서는 [!DNL Experience Data Model] (XDM) 시스템에 대한 작업 이해가 필요합니다. 이 자습서를 시작하기 전에 다음 XDM 설명서를 검토하십시오.
 
 - [XDM 시스템 개요](../home.md): [!DNL Experience Platform]의 XDM 및 해당 구현에 대한 높은 수준의 개요입니다.
 - [스키마 컴포지션의 기본 사항](../schema/composition.md): XDM 스키마의 기본 구성 요소에 대한 개요입니다.

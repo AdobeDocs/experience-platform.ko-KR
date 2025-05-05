@@ -212,7 +212,7 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에 올바르
 >
 > * [!DNL Salesforce Marketing Cloud] API와의 통합에는 Experience Platform이 Salesforce에서 검색할 수 있는 특성 수에 대한 페이지 매김 제한이 적용됩니다. 즉, **[!UICONTROL 매핑]** 단계 동안 대상 필드 스키마에 Salesforce 계정의 최대 2000개의 특성이 표시될 수 있습니다.
 
-1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**를 선택합니다. 화면에 새 매핑 행이 표시됩니다.
+1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다. 화면에 새 매핑 행이 표시됩니다.
    ![새 매핑 추가를 위한 Experience Platform UI 스크린샷 예](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 XDM 특성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을 선택하고 ID를 선택합니다.
 1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 ID를 선택하거나 **[!UICONTROL 특성 선택]** 범주를 선택하고 필요에 따라 표시되는 데이터 확장에서 특성을 선택합니다. [!DNL (API) Salesforce Marketing Cloud] 대상은 [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html)를 사용하여 [!DNL Salesforce Marketing Cloud] 내에 정의된 데이터 확장과 연결된 특성을 동적으로 검색합니다. [대상 활성화 워크플로](#activate)에서 [매핑](#mapping-considerations-example)을(를) 설정할 때 **[!UICONTROL 대상 필드]** 팝업에 표시됩니다.
@@ -226,6 +226,7 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에 올바르
      | `xdm: person.name.firstName` | 원하는 [!DNL Salesforce Marketing Cloud] 데이터 확장의 `Attribute: First Name`. | - |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
+
      ![Target 매핑을 보여 주는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
 
 대상 연결에 대한 매핑을 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
@@ -260,10 +261,10 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에 올바르
 
 대상을 올바르게 설정했는지 확인하려면 아래 단계를 수행하십시오.
 
-1. 대상 목록으로 이동하려면 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**를 선택하십시오.
+1. 대상 목록으로 이동하려면 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**&#x200B;를 선택하십시오.
    ![찾아보기 대상을 표시하는 Experience Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/browse-destinations.png)
 
-1. 대상을 선택하고 상태가 **[!UICONTROL 활성화됨]**인지 확인하십시오.
+1. 대상을 선택하고 상태가 **[!UICONTROL 활성화됨]**&#x200B;인지 확인하십시오.
    ![대상 데이터 흐름이 실행되는 Experience Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-dataflow-run.png)
 
 1. **[!DNL Activation data]** 탭으로 전환한 다음 대상 이름을 선택합니다.
@@ -289,7 +290,7 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에 올바르
 * 데이터 흐름 실행을 확인할 때 다음 오류 메시지가 표시될 수 있습니다. `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
   ![오류를 표시하는 Experience Platform UI 스크린샷](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
 
-   * 이 오류를 수정하려면 활성화 워크플로에서 [!DNL (API) Salesforce Marketing Cloud] 대상에 제공한 **[!UICONTROL 매핑 ID]**&#x200B;이(가) [!DNL Salesforce Marketing Cloud]에서 만든 특성의 이름과 정확히 일치하는지 확인하십시오. 자세한 내용은  [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) 섹션 내의 [특성 만들기를 참조하세요.
+   * 이 오류를 수정하려면 활성화 워크플로에서 [!DNL (API) Salesforce Marketing Cloud] 대상에 제공한 **[!UICONTROL 매핑 ID]**&#x200B;이(가) [!DNL Salesforce Marketing Cloud]에서 만든 특성의 이름과 정확히 일치하는지 확인하십시오. 자세한 내용은  [!DNL Salesforce Marketing Cloud][&#128279;](#prerequisites-custom-field) 섹션 내의 특성 만들기를 참조하세요.
 
 * 세그먼트를 활성화할 때 다음 오류 메시지가 표시될 수 있습니다. `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
    * 이 오류를 해결하려면 [!DNL Salesforce Marketing Cloud] 계정 관리자에게 문의하여 [!DNL Salesforce Marketing Cloud] 계정의 신뢰할 수 있는 IP 범위에 [Experience Platform IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md)를 추가하십시오. 추가 지침이 필요한 경우 [!DNL Salesforce Marketing Cloud] [Marketing Cloud의 허용 목록에 포함할 IP 주소](https://help.salesforce.com/s/articleView?id=sf.mc_es_ip_addresses_for_inclusion.htm&amp;type=5) 설명서를 참조하십시오.
@@ -307,11 +308,11 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에 올바르
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
-| 2023년 10월 | 설명서 업데이트 | <ul><li>(API) Salesforce Marketing Cloud](#prerequisites-destination)의 [필수 구성 요소 섹션을 업데이트했으며 일반적으로 문서에서 특성 그룹에 대한 불필요한 참조를 제거했습니다.</li> <li>대상 상태에 대한 특성을 [!DNL Email Demographics] 데이터 확장 내의 [!DNL Salesforce Marketing Cloud] 내에서만 만들어야 함을 나타내도록 설명서를 업데이트했습니다.</li> <li>[매핑 고려 사항 및 예제](#mapping-considerations-example) 섹션 내의 매핑 테이블을 업데이트했습니다. `Email Addresses` 데이터 확장 내의 `Email Address` 특성에 대한 매핑은 필수로 표시되어 있습니다. 이 요구 사항은 중요로 표시된 호출에서 언급되었지만 테이블에서 생략되었습니다.</li></ul> |
+| 2023년 10월 | 설명서 업데이트 | <ul><li>(API) Salesforce Marketing Cloud[&#128279;](#prerequisites-destination)의 필수 구성 요소 섹션을 업데이트했으며 일반적으로 문서에서 특성 그룹에 대한 불필요한 참조를 제거했습니다.</li> <li>대상 상태에 대한 특성을 [!DNL Email Demographics] 데이터 확장 내의 [!DNL Salesforce Marketing Cloud] 내에서만 만들어야 함을 나타내도록 설명서를 업데이트했습니다.</li> <li>[매핑 고려 사항 및 예제](#mapping-considerations-example) 섹션 내의 매핑 테이블을 업데이트했습니다. `Email Addresses` 데이터 확장 내의 `Email Address` 특성에 대한 매핑은 필수로 표시되어 있습니다. 이 요구 사항은 중요로 표시된 호출에서 언급되었지만 테이블에서 생략되었습니다.</li></ul> |
 | 2023년 4월 | 설명서 업데이트 | <ul><li>[!DNL Salesforce Marketing Cloud Engagement]이(가) 이 대상을 사용하기 위한 필수 구독임을 호출하기 위해 [API(Salesforce Marketing Cloud)의 필수 구성 요소](#prerequisites-destination) 섹션의 문 및 참조 링크를 수정했습니다. 계속하려면 사용자가 Marketing Cloud **Account** Engagement에 대한 구독이 필요하다는 섹션이 잘못 호출되었습니다.</li> <li>[역할 및 권한](#prerequisites-roles-permissions)을(를) [필수 구성 요소](#prerequisites) 아래에 이 대상의 [!DNL Salesforce] 사용자에게 할당할 섹션을 추가했습니다. (PLATIR-26299)</li></ul> |
-| 2023년 2월 | 설명서 업데이트 | [!DNL Salesforce Marketing Cloud Engagement]이(가) 이 대상을 사용하기 위한 필수 구독임을 호출하는 참조 링크를 포함하도록 (API) Salesforce Marketing Cloud](#prerequisites-destination)의 [필수 구성 요소 섹션을 업데이트했습니다. |
+| 2023년 2월 | 설명서 업데이트 | [!DNL Salesforce Marketing Cloud Engagement]이(가) 이 대상을 사용하기 위한 필수 구독임을 호출하는 참조 링크를 포함하도록 (API) Salesforce Marketing Cloud[&#128279;](#prerequisites-destination)의 필수 구성 요소 섹션을 업데이트했습니다. |
 | 2023년 2월 | 기능 업데이트 | 대상에서 잘못된 구성으로 인해 잘못된 포맷의 JSON이 Salesforce으로 전송되는 문제가 해결되었습니다. 이로 인해 일부 사용자는 활성화 시 많은 ID가 실패했음을 보게 되었습니다. (PLATIR-26299) |
-| 2023년 1월 | 설명서 업데이트 | <ul><li>[!DNL Salesforce]측에서 특성을 만들어야 함을 호출하기 위해  [!DNL Salesforce]](#prerequisites-destination)의 [필수 구성 요소 섹션을 업데이트했습니다. 이제 이 섹션에는 [!DNL Salesforce]에서 특성 이름을 지정하는 방법에 대한 자세한 지침과 모범 사례가 포함되어 있습니다. (PLATIR-25602)</li><li>[대상 예약](#schedule-segment-export-example) 단계에서 활성화된 각 대상에 대해 매핑 ID를 사용하는 방법에 대한 명확한 지침을 추가했습니다. (PLATIR-25602)</li></ul> |
+| 2023년 1월 | 설명서 업데이트 | <ul><li>[!DNL Salesforce]측에서 특성을 만들어야 함을 호출하기 위해  [!DNL Salesforce][&#128279;](#prerequisites-destination)의 필수 구성 요소 섹션을 업데이트했습니다. 이제 이 섹션에는 [!DNL Salesforce]에서 특성 이름을 지정하는 방법에 대한 자세한 지침과 모범 사례가 포함되어 있습니다. (PLATIR-25602)</li><li>[대상 예약](#schedule-segment-export-example) 단계에서 활성화된 각 대상에 대해 매핑 ID를 사용하는 방법에 대한 명확한 지침을 추가했습니다. (PLATIR-25602)</li></ul> |
 | 2022년 10월 | 초기 릴리스 | 초기 대상 릴리스 및 설명서 게시. |
 
 {style="table-layout:auto"}

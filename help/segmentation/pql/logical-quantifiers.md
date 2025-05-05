@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # 논리적 수량자 함수
 
-논리 한정자는 [!DNL Profile Query Language](PQL)의 배열로 조건을 어설션하는 데 사용할 수 있습니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
+논리 한정자는 [!DNL Profile Query Language] (PQL)의 배열로 조건을 어설션하는 데 사용할 수 있습니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
 
 ## 존재함
 

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/)을(를) 사용하면 광고 타깃팅을 최적화하고, 작업당 비용을 줄이고, 결과를 측정하기 위해 서버측 마케팅 데이터를 [!DNL Meta] 기술에 연결할 수 있습니다. 이벤트는 [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) ID에 연결되어 있으며 클라이언트측 이벤트와 유사한 방식으로 처리됩니다.
 
-[!DNL Meta Conversions API] 확장을 사용하면 [이벤트 전달](../../../ui/event-forwarding/overview.md) Edge Network에서 API의 기능을 활용하여 Adobe Experience Platform 규칙에서 [!DNL Meta](으)로 데이터를 보낼 수 있습니다. 이 문서에서는 이벤트 전달 [규칙](../../../ui/managing-resources/rules.md)에서 확장을 설치하고 기능을 사용하는 방법을 다룹니다.
+[!DNL Meta Conversions API] 확장을 사용하면 [이벤트 전달](../../../ui/event-forwarding/overview.md) Edge Network에서 API의 기능을 활용하여 Adobe Experience Platform 규칙에서 [!DNL Meta] (으)로 데이터를 보낼 수 있습니다. 이 문서에서는 이벤트 전달 [규칙](../../../ui/managing-resources/rules.md)에서 확장을 설치하고 기능을 사용하는 방법을 다룹니다.
 
 ## 데모
 
@@ -89,7 +89,7 @@ facebook 및 Instagram에서 인증하라는 대화 상자 프롬프트가 이�
 
 ![데이터 수집 UI에서 규칙에 대해 [!UICONTROL 페이지 보기 보내기] 작업 유형을 선택하고 있습니다.](../../../images/extensions/server/meta/select-action.png)
 
-[!DNL Conversions API]을(를) 통해 [!DNL Meta](으)로 전송되는 이벤트 데이터를 구성할 수 있는 컨트롤이 나타납니다. 이러한 옵션은 제공된 입력에 직접 입력할 수도 있고, 대신 값을 나타낼 기존 데이터 요소를 선택할 수도 있습니다. 구성 옵션은 아래에 설명된 대로 4개의 기본 섹션으로 나뉘어 있습니다.
+[!DNL Conversions API]을(를) 통해 [!DNL Meta] (으)로 전송되는 이벤트 데이터를 구성할 수 있는 컨트롤이 나타납니다. 이러한 옵션은 제공된 입력에 직접 입력할 수도 있고, 대신 값을 나타낼 기존 데이터 요소를 선택할 수도 있습니다. 구성 옵션은 아래에 설명된 대로 4개의 기본 섹션으로 나뉘어 있습니다.
 
 | 구성 섹션 | 설명 |
 | --- | --- |

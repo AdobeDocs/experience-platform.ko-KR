@@ -179,7 +179,7 @@ Experience Platform UI의 드릴스루에 대한 자세한 내용은 [드릴스�
 
 ![매출 위젯별 새로운 기회](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### 상태 및 단계 {#opportunities-by-status-&-stage}별 새 기회
+### 상태 및 단계별 새 기회 {#opportunities-by-status-&-stage}
 
 이 위젯은 막대 차트를 사용하여 마케팅/판매 단계의 모든 단계에서 열리거나 종료되는 기회의 수를 보여 줍니다. 위젯은 색상을 사용하여 기회의 단계를 구분합니다. 색상으로 구분된 키는 영업 기회에 사용할 수 있는 단계를 나타냅니다.
 
@@ -231,7 +231,7 @@ Experience Platform UI의 드릴스루에 대한 자세한 내용은 [드릴스�
 
 ## 데이터를 로드할 수 없음 오류 {#errors}
 
-위젯에 *[!UICONTROL 이(가) 표시되는 경우 로드할 수 없습니다. 다시 시도하십시오.]* B2B 엔터티에 사용할 수 있는 데이터가 없기 때문입니다. 예를 들어 [!UICONTROL 개인 역할별 새 기회] 아래에 표시된 위젯에는 &quot;[!UICONTROL 로드할 수 없습니다&quot;라는 메시지가 표시됩니다. 다시 시도하십시오.이 샌드박스에는 사용 가능한 영업 기회 데이터가 없으므로 ]&quot;을(를) 입력하십시오.
+위젯에 *[!UICONTROL 이(가) 표시되는 경우 로드할 수 없습니다. 다시 시도하십시오.]* B2B 엔터티에 사용할 수 있는 데이터가 없기 때문입니다. 예를 들어 [!UICONTROL 개인 역할별 새 기회] 아래에 표시된 위젯에는 &quot;[!UICONTROL 로드할 수 없습니다&quot;라는 메시지가 표시됩니다. 다시 시도하십시오.이 샌드박스에는 사용 가능한 영업 기회 데이터가 없으므로 &#x200B;]&quot;을(를) 입력하십시오.
 
 ![insight 오류를 로드할 수 없습니다.](../images/account-profiles/unable-to-load.png)
 

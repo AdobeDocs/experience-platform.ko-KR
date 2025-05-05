@@ -11,7 +11,7 @@ ht-degree: 68%
 
 # [!DNL The Weather Channel]의 날씨 데이터로 데이터 수집 향상
 
-Adobe는 데이터스트림을 통해 수집한 데이터에 미국 날씨에 대한 컨텍스트를 추가 제공하기 위해 [!DNL [The Weather Company]](https://www.ibm.com/weather)와(과) 파트너 관계를 맺고 있습니다. Experience Platform에서 분석, 타기팅 및 대상자 생성에 이 데이터를 사용할 수 있습니다.
+Adobe는 데이터스트림을 통해 수집한 데이터에 미국 날씨에 대한 컨텍스트를 추가 제공하기 위해 [[!DNL [The Weather Company]]](https://www.ibm.com/weather)와(과) 파트너 관계를 맺고 있습니다. Experience Platform에서 분석, 타기팅 및 대상자 생성에 이 데이터를 사용할 수 있습니다.
 
 [!DNL The Weather Channel]에서 사용할 수 있는 데이터 유형은 다음 세 가지입니다.
 

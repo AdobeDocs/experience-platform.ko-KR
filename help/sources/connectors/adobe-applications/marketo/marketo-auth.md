@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!DNL Marketo Engage] 원본 커넥터 인증
 
-[!DNL Marketo Engage](이하 &quot;[!DNL Marketo]&quot;) 원본 커넥터를 만들려면 먼저 [!DNL Marketo] 인터페이스를 통해 사용자 지정 서비스를 설정하고 Munchkin ID, 클라이언트 ID 및 클라이언트 암호에 대한 값을 검색해야 합니다.
+[!DNL Marketo Engage] (이하 &quot;[!DNL Marketo]&quot;) 원본 커넥터를 만들려면 먼저 [!DNL Marketo] 인터페이스를 통해 사용자 지정 서비스를 설정하고 Munchkin ID, 클라이언트 ID 및 클라이언트 암호에 대한 값을 검색해야 합니다.
 
 아래 설명서에서는 [!DNL Marketo] 소스 커넥터를 만들기 위해 인증 자격 증명을 얻는 방법에 대한 단계를 제공합니다.
 

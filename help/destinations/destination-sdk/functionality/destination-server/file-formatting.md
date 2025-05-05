@@ -1,5 +1,5 @@
 ---
-description: '`/destination-servers'' 끝점을 통해 Adobe Experience Platform Destination SDK으로 빌드된 파일 기반 대상의 파일 형식 옵션을 구성하는 방법을 알아봅니다.'
+description: '&grave;/destination-servers'' 끝점을 통해 Adobe Experience Platform Destination SDK으로 빌드된 파일 기반 대상의 파일 형식 옵션을 구성하는 방법을 알아봅니다.'
 title: 파일 서식 구성
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c

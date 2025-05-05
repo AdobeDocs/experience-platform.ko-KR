@@ -23,4 +23,4 @@ XDM(Experience Data Model)에서 [!UICONTROL Medicine] 클래스는 의학적 �
 
 {style="table-layout:auto"}
 
-[[!UICONTROL 의료 서비스 ] 필드 그룹](../field-groups/medication/healthcare-medication.md)을 사용하여 클래스를 확장하여 해당 약이나 약물에 대한 자세한 내용을 설명할 수 있습니다.
+[[!UICONTROL 의료 서비스 &#x200B;] 필드 그룹](../field-groups/medication/healthcare-medication.md)을 사용하여 클래스를 확장하여 해당 약이나 약물에 대한 자세한 내용을 설명할 수 있습니다.

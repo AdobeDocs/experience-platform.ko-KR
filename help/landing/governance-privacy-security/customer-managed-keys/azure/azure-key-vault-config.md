@@ -29,7 +29,7 @@ ht-degree: 0%
 
 서비스를 선택하면 **[!DNL Key vaults]** 페이지가 나타납니다. 여기에서 **[!DNL Create]**&#x200B;을(를) 선택합니다.
 
-[!DNL Create]이(가) 강조 표시된 [!DNL Microsoft Azure]의 [!DNL Key vaults] 대시보드입니다.](../../../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)![
+[!DNL Create]이(가) 강조 표시된 [!DNL Microsoft Azure]의 [!DNL Key vaults] 대시보드입니다.![&#128279;](../../../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)
 
 제공된 양식을 사용하여 이름 및 할당된 리소스 그룹을 포함하여 Key Vault에 대한 기본 세부 정보를 입력합니다.
 

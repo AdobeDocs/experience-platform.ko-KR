@@ -61,7 +61,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 프로필]**&#x200B;
 
 새 연산 속성을 만들려면 **[!UICONTROL 연산 속성 만들기]**&#x200B;를 선택하여 새 연산 속성 워크플로우를 입력합니다.
 
-![계산된 특성 만들기] 단추가 강조 표시되어 사용자가 계산된 특성 만들기 페이지에 도달하는 방법을 보여 줍니다.](./images/ui/create.png)[!UICONTROL 
+![계산된 특성 만들기] 단추가 강조 표시되어 사용자가 계산된 특성 만들기 페이지에 도달하는 방법을 보여 줍니다.(./images/ui/create.png)
 
 **[!UICONTROL 계산된 특성 만들기]** 페이지가 나타납니다. 이 페이지에서는 생성하려는 계산된 속성에 대한 기본 정보를 추가할 수 있습니다.
 
@@ -110,7 +110,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 프로필]**&#x200B;
 
 집계 함수를 적용하는 동안 전환 확인 기간이 1주보다 큰 경우 빠른 새로 고침을 활성화할 수 있습니다.
 
-![빠른 새로 고침] 확인란이 강조 표시되어 있습니다.](./images/ui/enable-fast-refresh.png)[!UICONTROL 
+![빠른 새로 고침] 확인란이 강조 표시되어 있습니다.(./images/ui/enable-fast-refresh.png)
 
 빠른 새로 고침을 사용하면 속성을 최신 상태로 유지할 수 있습니다. 이 옵션을 활성화하면 더 긴 전환 확인 기간에도 계산된 속성을 매일 새로 고칠 수 있으므로 사용자 활동에 빠르게 반응할 수 있습니다.
 
@@ -118,7 +118,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 프로필]**&#x200B;
 
 이러한 단계를 완료하면 이제 이 계산된 속성을 초안으로 저장하거나 즉시 게시하도록 선택할 수 있습니다.
 
-![초안으로 저장] 및 [!UICONTROL 게시] 단추가 강조 표시되어 있습니다.](./images/ui/draft-or-publish.png)[!UICONTROL 
+![초안으로 저장] 및 [!UICONTROL 게시] 단추가 강조 표시되어 있습니다.(./images/ui/draft-or-publish.png)
 
 ## 계산된 속성의 세부 정보 보기 {#view-details}
 

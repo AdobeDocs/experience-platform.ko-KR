@@ -12,7 +12,7 @@ ht-degree: 5%
 
 # 집계 함수
 
-집계 함수는 [!DNL Profile Query Language](PQL) 배열 내에서 여러 값을 함께 그룹화하여 단일 요약 값을 구성하는 데 사용됩니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
+집계 함수는 [!DNL Profile Query Language] (PQL) 배열 내에서 여러 값을 함께 그룹화하여 단일 요약 값을 구성하는 데 사용됩니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
 
 ## 횟수
 

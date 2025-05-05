@@ -68,7 +68,7 @@ ht-degree: 5%
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 [!DNL (Companies) LinkedIn Matched Audiences] 대상을 찾은 다음 **[!UICONTROL 설정]**&#x200B;을 선택합니다.
-2. **[!UICONTROL 대상에 연결]**을 선택합니다.
+2. **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다.
    ![LinkedIn 인증](/help/destinations/assets/catalog/social/linkedin-b2b/authenticate-linkedin-destination.png)
 3. LinkedIn 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 

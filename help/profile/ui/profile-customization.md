@@ -50,7 +50,7 @@ Adobe Experience Platform 사용자 인터페이스에서 [!DNL Real-Time Custom
 
 ![기본 특성 카드에 특성 추가 단추가 강조 표시됩니다.](../images/profile-customization/add-attributes.png)
 
-**[!UICONTROL 유니온 스키마 필드 선택]** 대화 상자가 열리면 대화 상자의 왼쪽에 전체 [!UICONTROL XDM 개별 프로필] 유니온 스키마가 표시되고 아래에 필드가 중첩됩니다. 유니온 스키마에 대한 자세한 내용은  [!DNL Profile] 사용 안내서](user-guide.md#union-schema)의 [유니온 스키마 섹션을 참조하십시오.
+**[!UICONTROL 유니온 스키마 필드 선택]** 대화 상자가 열리면 대화 상자의 왼쪽에 전체 [!UICONTROL XDM 개별 프로필] 유니온 스키마가 표시되고 아래에 필드가 중첩됩니다. 유니온 스키마에 대한 자세한 내용은  [!DNL Profile] 사용 안내서[&#128279;](user-guide.md#union-schema)의 유니온 스키마 섹션을 참조하십시오.
 
 대화 상자 오른쪽의 **[!UICONTROL 선택한 특성]** 섹션에는 편집 중인 카드에 현재 포함된 특성이 표시됩니다. 여기에서 속성을 제거하고 순서를 변경할 수도 있습니다. 선택된 총 속성 수와 단일 카드에 추가할 수 있는 최대 속성 수(20개)가 표시됩니다.
 

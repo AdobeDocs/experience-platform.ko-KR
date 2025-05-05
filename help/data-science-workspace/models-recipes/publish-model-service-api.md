@@ -346,7 +346,7 @@ curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!NOTE]
 >
->다른 ML 서비스를 검색하면 키-값 쌍이 더 많거나 적은 응답이 반환될 수 있습니다. 위의 응답은 예약된 교육 및 채점 실험 실행 ](#ml-service-with-scheduled-experiments-for-training-and-scoring)이(가) 모두 있는 [ML 서비스를 나타냅니다.
+>다른 ML 서비스를 검색하면 키-값 쌍이 더 많거나 적은 응답이 반환될 수 있습니다. 위의 응답은 예약된 교육 및 채점 실험 실행 [&#128279;](#ml-service-with-scheduled-experiments-for-training-and-scoring)이(가) 모두 있는 ML 서비스를 나타냅니다.
 
 
 ## 교육 또는 채점 예약

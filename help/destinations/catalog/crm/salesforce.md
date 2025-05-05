@@ -202,7 +202,7 @@ Experience Platform에서 [!DNL Salesforce CRM]&#x200B;(으)로 활성화하는 
 
 XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑하려면 다음 단계를 따르십시오.
 
-1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**를 선택하면 화면에 새 매핑 행이 표시됩니다.
+1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택하면 화면에 새 매핑 행이 표시됩니다.
    ![새 매핑 추가를 위한 Experience Platform UI 스크린샷 예](../../assets/catalog/crm/salesforce/add-new-mapping.png)
 1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 XDM 특성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을 선택하고 ID를 선택합니다.
 1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 ID를 선택하거나 **[!UICONTROL 사용자 지정 특성 선택]** 범주를 선택하고 필요에 따라 특성을 선택하거나 **[!UICONTROL 특성 이름]** 필드를 사용하여 특성을 정의합니다. 지원되는 특성에 대한 지침은 [[!DNL Salesforce CRM] 설명서](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5)를 참조하세요.
@@ -222,6 +222,7 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
      | `xdm: personalEmail.address` | `Attribute: Email` | 연락처의 이메일 주소입니다. |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
+
      ![Target 매핑을 보여 주는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
    **잠재 고객 작업**
@@ -238,6 +239,7 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
      | `xdm: personalEmail.address` | `Attribute: Email` | 잠재 고객의 이메일 주소입니다. |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
+
      ![Target 매핑을 보여 주는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/mappings-leads.png)
 
 대상 연결에 대한 매핑을 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
@@ -253,7 +255,7 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
 [!DNL Salesforce]의 사용자 지정 필드 예가 아래에 표시되어 있습니다.
 사용자 지정 필드를 표시하는 ![[!DNL Salesforce] UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
-[!DNL Salesforce CRM] **[!UICONTROL 매핑 ID]**의 위치를 나타내는 예는 다음과 같습니다.
+[!DNL Salesforce CRM] **[!UICONTROL 매핑 ID]**&#x200B;의 위치를 나타내는 예는 다음과 같습니다.
 ![대상자 내보내기 일정을 보여 주는 Experience Platform UI 스크린샷 예](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
 위에 표시된 대로 [!DNL Salesforce] **[!UICONTROL 필드 이름]**&#x200B;은(는) [!DNL Salesforce CRM] **[!UICONTROL 매핑 ID]** 내에 지정된 값과 정확히 일치합니다.
@@ -271,10 +273,10 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
 
 대상을 올바르게 설정했는지 확인하려면 아래 단계를 수행하십시오.
 
-1. 대상 목록으로 이동하려면 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**를 선택하십시오.
+1. 대상 목록으로 이동하려면 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**&#x200B;를 선택하십시오.
    ![찾아보기 대상을 표시하는 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/browse-destinations.png)
 
-1. 대상을 선택하고 상태가 **[!UICONTROL 활성화됨]**인지 확인하십시오.
+1. 대상을 선택하고 상태가 **[!UICONTROL 활성화됨]**&#x200B;인지 확인하십시오.
    ![대상 데이터 흐름이 실행되는 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
 
 1. **[!UICONTROL 활성화 데이터]** 탭으로 전환한 다음 대상 이름을 선택합니다.
@@ -288,17 +290,21 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
    **연락처 작업**
 
    * Experience Platform 세그먼트 내에서 *연락처*&#x200B;를 선택한 경우 **[!DNL Apps]** > **[!DNL Contacts]** 페이지로 이동합니다.
+
      ![세그먼트의 프로필이 있는 연락처 페이지를 표시하는 Salesforce CRM 스크린샷입니다.](../../assets/catalog/crm/salesforce/contacts.png)
 
    * *연락처*&#x200B;를 선택하고 필드가 업데이트되었는지 확인하십시오. [대상 예약](#schedule-segment-export-example) 중에 제공된 **[!UICONTROL 매핑 ID]** 값을 기반으로 [!DNL Salesforce CRM]의 각 대상 상태가 Experience Platform의 해당 대상 상태로 업데이트되었음을 확인할 수 있습니다.
+
      ![대상자 상태가 업데이트된 연락처 세부 정보 페이지를 표시하는 Salesforce CRM 스크린샷](../../assets/catalog/crm/salesforce/contact-info.png)
 
    **잠재 고객 작업**
 
    * Experience Platform 세그먼트 내에서 *리드*&#x200B;를 선택한 경우 **[!DNL Apps]** > **[!DNL Leads]** 페이지로 이동합니다.
+
      ![세그먼트의 프로필이 있는 리드 페이지를 표시하는 Salesforce CRM 스크린샷입니다.](../../assets/catalog/crm/salesforce/leads.png)
 
    * *잠재 고객*&#x200B;을 선택하고 필드가 업데이트되었는지 확인하십시오. [대상 예약](#schedule-segment-export-example) 중에 제공된 **[!UICONTROL 매핑 ID]** 값을 기반으로 [!DNL Salesforce CRM]의 각 대상 상태가 Experience Platform의 해당 대상 상태로 업데이트되었음을 확인할 수 있습니다.
+
      대상 상태가 업데이트된 잠재 고객 세부 정보 페이지를 표시하는 ![Salesforce CRM 스크린샷입니다.](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
@@ -312,7 +318,7 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
 * 데이터 흐름 실행을 확인할 때 다음 오류 메시지가 표시될 수 있습니다. `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
   ![오류를 표시하는 Experience Platform UI 스크린샷](../../assets/catalog/crm/salesforce/error.png)
 
-   * 이 오류를 수정하려면 활성화 워크플로에서 [!DNL Salesforce CRM] 대상에 제공한 **[!UICONTROL 매핑 ID]**&#x200B;이(가) [!DNL Salesforce]에서 만든 사용자 지정 필드 형식의 값과 정확히 일치하는지 확인하십시오. 지침은  [!DNL Salesforce]](#prerequisites-custom-field) 섹션 내에서 [사용자 지정 필드 만들기를 참조하세요.
+   * 이 오류를 수정하려면 활성화 워크플로에서 [!DNL Salesforce CRM] 대상에 제공한 **[!UICONTROL 매핑 ID]**&#x200B;이(가) [!DNL Salesforce]에서 만든 사용자 지정 필드 형식의 값과 정확히 일치하는지 확인하십시오. 지침은  [!DNL Salesforce][&#128279;](#prerequisites-custom-field) 섹션 내에서 사용자 지정 필드 만들기를 참조하세요.
 
 * 세그먼트를 활성화할 때 다음 오류 메시지가 표시될 수 있습니다. `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
    * 이 오류를 해결하려면 [!DNL Salesforce] 계정 관리자에게 문의하여 [!DNL Salesforce] 계정의 신뢰할 수 있는 IP 범위에 [Experience Platform IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md)를 추가하십시오. 추가 지침이 필요한 경우 [!DNL Salesforce] [연결된 앱에 대한 신뢰할 수 있는 IP 범위에 대한 액세스 제한](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) 설명서를 참조하십시오.

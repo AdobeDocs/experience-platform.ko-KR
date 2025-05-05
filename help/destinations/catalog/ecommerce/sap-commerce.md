@@ -83,7 +83,7 @@ Experience Platform에서 [!DNL SAP Commerce] 계정으로 데이터를 내보�
 
 사용자 지정 참조를 만들려면 [!DNL SAP Subscription Billing] 계정에 로그인하고 **[기본 데이터 및 구성]** > **[사용자 지정 참조]** 페이지로 이동하십시오. 그런 다음 **[!UICONTROL 만들기]**&#x200B;를 선택하여 Experience Platform에서 선택한 각 대상에 대한 새 참조를 추가합니다. 후속 [대상 내보내기 예약 및 예제](#schedule-segment-export-example) 단계에서 이러한 참조 필드 이름이 필요합니다.
 
-[!DNL SAP Subscription Billing] 내에서 사용자 지정 **[!UICONTROL 참조 형식]**을(를) 만드는 방법의 예는 다음과 같습니다.
+[!DNL SAP Subscription Billing] 내에서 사용자 지정 **[!UICONTROL 참조 형식]**&#x200B;을(를) 만드는 방법의 예는 다음과 같습니다.
 ![SAP 구독 청구에서 사용자 지정 참조를 만들 위치를 보여 주는 이미지입니다.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
 추가 지침은 [!DNL SAP Subscription Billing] [사용자 지정 참조](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27) 설명서를 참조하십시오.
@@ -158,7 +158,7 @@ Experience Platform에서 [!DNL SAP Commerce] 계정으로 데이터를 내보�
 | **[!UICONTROL 끝점]** | 서비스 키의 `url` 값은 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`과(와) 비슷합니다. |
 | **[!UICONTROL 지역]** | 데이터 센터 위치. 영역이 `url`에 있으며 `eu10` 또는 `us10`과(와) 유사한 값을 갖습니다. 예를 들어 `url`이(가) `https://eu10.revenue.cloud.sap/api`이면 `eu10`이(가) 필요합니다. |
 
-대상에 인증하려면 **[!UICONTROL 대상에 연결]**을 선택하세요.
+대상에 인증하려면 **[!UICONTROL 대상에 연결]**&#x200B;을 선택하세요.
 ![대상에 인증하는 방법을 보여 주는 Experience Platform UI의 이미지입니다.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
 
 제공된 세부 정보가 유효하면 UI에 녹색 확인 표시와 함께 **[!UICONTROL 연결됨]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
@@ -195,7 +195,7 @@ Experience Platform에서 [!DNL SAP Commerce] 계정으로 데이터를 내보�
 
 `customerNumberSAP` ID는 이 대상에 대한 필수 매핑입니다. 매핑하려면 아래 단계를 따르십시오.
 
-1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**를 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
+1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
    ![새 매핑 추가 단추가 강조 표시된 Experience Platform UI 스크린샷입니다.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 `customerNumberSAP`을(를) 선택합니다.
    ![ID로 매핑할 소스 특성으로 이메일을 선택하는 Experience Platform UI 스크린샷](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
@@ -213,7 +213,7 @@ Experience Platform에서 [!DNL SAP Commerce] 계정으로 데이터를 내보�
 
 XDM 프로필 스키마와 [!DNL SAP Subscription Billing] 계정 사이에 업데이트할 다른 특성을 추가하려면 아래 단계를 반복합니다.
 
-1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**를 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
+1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
    ![새 매핑 추가 단추가 강조 표시된 Experience Platform UI 스크린샷입니다.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 XDM 특성을 선택합니다.
    ![성을 소스 특성으로 선택하는 Experience Platform UI 스크린샷](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
@@ -296,7 +296,7 @@ XDM 프로필 스키마와 [!DNL SAP Subscription Billing] 계정 사이에 업�
 [!DNL SAP Subscription Billing]의 **[!UICONTROL 참조 형식]** 예는 다음과 같습니다.
 ![SAP 구독 청구에서 사용자 지정 참조를 만들 위치를 보여 주는 이미지입니다.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
-대상을 선택하고 해당 [!DNL SAP Commerce] **[!UICONTROL 매핑 ID]**가 강조 표시된 대상 내보내기 예약 단계의 예는 다음과 같습니다.
+대상을 선택하고 해당 [!DNL SAP Commerce] **[!UICONTROL 매핑 ID]**&#x200B;가 강조 표시된 대상 내보내기 예약 단계의 예는 다음과 같습니다.
 ![매핑 ID가 채워진 대상자 내보내기 일정을 표시하는 Experience Platform의 이미지.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
 
 표시된 대로 **[!UICONTROL 매핑 ID]** 필드 내의 값은 [!DNL SAP Subscription Billing] **[!UICONTROL 참조 형식]** 값과 정확히 일치해야 합니다.

@@ -25,7 +25,7 @@ ht-degree: 22%
    * [NPM 패키지를 사용하여 웹 SDK 설치](install/npm.md)
    * [NPM 패키지를 사용하여 사용자 지정 웹 SDK 빌드 만들기](install/create-custom-build.md)
 * 명령 {#commands}
-   * {#configure} 구성
+   * 구성{#configure}
       * [개요](commands/configure/overview.md)
       * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [클릭콜렉션활성화됨](commands/configure/clickcollectionenabled.md)

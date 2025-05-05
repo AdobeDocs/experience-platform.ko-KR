@@ -110,7 +110,7 @@ API 추가 옵션이 강조 표시된 ![Developer Console 화면.](./images/api-
 
 >[!IMPORTANT]
 >
-Experience Platform의 특정 기능에 액세스하려면 필요한 속성 기반 액세스 제어 권한을 부여하는 시스템 관리자도 필요합니다. [필요한 특성 기반 액세스 제어 권한 얻기](#get-abac-permissions) 섹션에서 자세히 알아보세요.
+>Experience Platform의 특정 기능에 액세스하려면 필요한 속성 기반 액세스 제어 권한을 부여하는 시스템 관리자도 필요합니다. [필요한 특성 기반 액세스 제어 권한 얻기](#get-abac-permissions) 섹션에서 자세히 알아보세요.
 
 ![통합할 제품 프로필을 선택하십시오.](./images/api-authentication/select-product-profiles.png)
 
@@ -149,7 +149,7 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 >[!TIP]
 >
-Postman 환경 및 컬렉션을 사용하여 액세스 토큰을 생성할 수도 있습니다. 자세한 내용은 [Postman을 사용하여 API 호출 인증 및 테스트](#use-postman)에 대한 섹션을 참조하십시오.
+>Postman 환경 및 컬렉션을 사용하여 액세스 토큰을 생성할 수도 있습니다. 자세한 내용은 [Postman을 사용하여 API 호출 인증 및 테스트](#use-postman)에 대한 섹션을 참조하십시오.
 
 ## API 참조 설명서에서 직접 인증 자격 증명을 만들고 검색합니다. {#get-credentials-functionality}
 
@@ -169,17 +169,17 @@ Experience Platform API를 호출하기 위한 자격 증명을 가져오려면 
 
 >[!TIP]
 >
-Experience Platform API 참조 설명서에서 다른 엔드포인트 페이지 사이를 이동할 때 페이지 상단 자격 증명 블록이 계속 표시됩니다.
+>Experience Platform API 참조 설명서에서 다른 엔드포인트 페이지 사이를 이동할 때 페이지 상단 자격 증명 블록이 계속 표시됩니다.
 
 ## [!BADGE 사용되지 않음]{type=negative} JSON 웹 토큰(JWT) 생성 {#jwt}
 
 >[!WARNING]
 >
-액세스 토큰을 생성하기 위한 JWT 메서드가 더 이상 사용되지 않습니다. 모든 새 통합은 [OAuth 서버 간 인증 방법](#select-oauth-server-to-server)을 사용하여 만들어야 합니다. Adobe에서도 통합을 계속 사용하려면 2025년 6월 30일까지 기존 통합을 OAuth 메서드로 마이그레이션해야 합니다. 다음 중요한 설명서를 참조하십시오.
+>액세스 토큰을 생성하기 위한 JWT 메서드가 더 이상 사용되지 않습니다. 모든 새 통합은 [OAuth 서버 간 인증 방법](#select-oauth-server-to-server)을 사용하여 만들어야 합니다. Adobe에서도 통합을 계속 사용하려면 2025년 6월 30일까지 기존 통합을 OAuth 메서드로 마이그레이션해야 합니다. 다음 중요한 설명서를 참조하십시오.
 > 
-* [JWT에서 OAuth로의 응용 프로그램 마이그레이션 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
-* [OAuth를 사용하는 새 응용 프로그램과 이전 응용 프로그램에 대한 구현 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
-* [OAuth 서버 간 자격 증명 메서드를 사용할 때의 이점](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
+>* [JWT에서 OAuth로의 응용 프로그램 마이그레이션 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+>* [OAuth를 사용하는 새 응용 프로그램과 이전 응용 프로그램에 대한 구현 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+>* [OAuth 서버 간 자격 증명 메서드를 사용할 때의 이점](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ 더 이상 사용되지 않는 정보 보기
 
@@ -187,9 +187,9 @@ Experience Platform API 참조 설명서에서 다른 엔드포인트 페이지 
 
 >[!IMPORTANT]
 >
-이 자습서의 목적을 위해 아래 단계에서는 Developer Console 내에서 JWT를 생성하는 방법을 간략히 설명합니다. 하지만 이 생성 방법은 테스트 및 평가 목적으로만 사용해야 합니다.
+>이 자습서의 목적을 위해 아래 단계에서는 Developer Console 내에서 JWT를 생성하는 방법을 간략히 설명합니다. 하지만 이 생성 방법은 테스트 및 평가 목적으로만 사용해야 합니다.
 >
-일반 사용을 위해 JWT를 자동으로 생성해야 합니다. 프로그래밍 방식으로 JWT를 생성하는 방법에 대한 자세한 내용은 Adobe Developer의 [서비스 계정 인증 안내서](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/)를 참조하십시오.
+>일반 사용을 위해 JWT를 자동으로 생성해야 합니다. 프로그래밍 방식으로 JWT를 생성하는 방법에 대한 자세한 내용은 Adobe Developer의 [서비스 계정 인증 안내서](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/)를 참조하십시오.
 
 왼쪽 탐색에서 **[!UICONTROL 서비스 계정(JWT)]**&#x200B;을 선택한 다음 **[!UICONTROL JWT 생성]**&#x200B;을 선택합니다.
 
@@ -227,7 +227,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 >[!NOTE]
 >
-동일한 API 키, 클라이언트 암호 및 JWT를 사용하여 각 세션에 대한 새 액세스 토큰을 생성할 수 있습니다. 이를 통해 애플리케이션에서 액세스 토큰 생성을 자동화할 수 있습니다.
+>동일한 API 키, 클라이언트 암호 및 JWT를 사용하여 각 세션에 대한 새 액세스 토큰을 생성할 수 있습니다. 이를 통해 애플리케이션에서 액세스 토큰 생성을 자동화할 수 있습니다.
 
 **응답**
 
@@ -290,7 +290,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 >[!IMPORTANT]
 >
-위의 호출로 액세스 자격 증명을 테스트할 수 있지만, 올바른 속성 기반 액세스 제어 권한을 보유하지 않으면 여러 리소스에 액세스하거나 수정할 수 없습니다. 아래의 **필요한 특성 기반 액세스 제어 권한 가져오기** 섹션에서 자세히 알아보세요.
+>위의 호출로 액세스 자격 증명을 테스트할 수 있지만, 올바른 속성 기반 액세스 제어 권한을 보유하지 않으면 여러 리소스에 액세스하거나 수정할 수 없습니다. 아래의 **필요한 특성 기반 액세스 제어 권한 가져오기** 섹션에서 자세히 알아보세요.
 
 ## 필요한 속성 기반 액세스 제어 권한 얻기 {#get-abac-permissions}
 
@@ -330,7 +330,7 @@ Adobe Developer Console에서 통합을 만들려면 먼저 계정에 Experience
 
 >[!NOTE]
 >
-시스템 관리자만 권한에서 API 자격 증명을 보고 관리할 수 있습니다.
+>시스템 관리자만 권한에서 API 자격 증명을 보고 관리할 수 있습니다.
 
 ### 제품 프로필에 개발자 추가 {#add-developers-to-product-profile}
 
@@ -360,7 +360,7 @@ Adobe Developer Console에서 통합을 만들려면 먼저 계정에 Experience
 
 >[!NOTE]
 >
-시스템 관리자만 Experience Platform UI의 역할에 API를 할당할 수 있습니다.
+>시스템 관리자만 Experience Platform UI의 역할에 API를 할당할 수 있습니다.
 
 Experience Platform API를 사용하고 작업을 수행하려면 시스템 관리자가 역할에 지정된 권한 집합 외에 API 자격 증명을 추가해야 합니다. [역할에 대한 API 자격 증명 관리](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role)에 대한 섹션에서 자세한 정보를 확인하세요.
 

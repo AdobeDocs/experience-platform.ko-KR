@@ -142,7 +142,7 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 **[!UICONTROL 자동 포함 사용]** 대화 상자가 나타나 선택 내용을 확인할 수 있습니다. 구성 설정을 완료하려면 **[!UICONTROL 사용]**&#x200B;을 선택하세요.
 
-![자동 포함 사용] 대화 상자 강조 표시 [!UICONTROL 사용].](../../images/flac-ui/abac-policies-auto-include-enable.png)[!UICONTROL 
+![자동 포함 사용] 대화 상자 강조 표시 [!UICONTROL 사용].(../../images/flac-ui/abac-policies-auto-include-enable.png)
 
 >[!SUCCESS]
 >

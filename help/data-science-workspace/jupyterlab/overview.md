@@ -34,7 +34,7 @@ Experience Platform의 JupyterLab 통합은 아키텍처 변경 사항, 디자�
 | **커널** | 커널은 전자 필기장과 다른 [!DNL JupyterLab] 프런트 엔드에서 다양한 프로그래밍 언어로 코드를 실행하고 검사하는 기능을 제공합니다. [!DNL Experience Platform]은(는) [!DNL Python], R, PySpark 및 [!DNL Spark]에서 개발을 지원하는 추가 커널을 제공합니다. 자세한 내용은 [커널](#kernels) 섹션을 참조하십시오. |
 | **데이터 액세스** | 읽기 및 쓰기 기능을 완벽하게 지원하므로 [!DNL JupyterLab] 내에서 기존 데이터 세트에 직접 액세스할 수 있습니다. |
 | **[!DNL Experience Platform]서비스 통합** | 기본 제공 통합을 사용하면 [!DNL JupyterLab] 내에서 직접 다른 [!DNL Experience Platform] 서비스를 활용할 수 있습니다. 지원되는 통합의 전체 목록은 [다른 Experience Platform 서비스와 통합](#service-integration) 섹션에 나와 있습니다. |
-| **인증** | <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab의 기본 제공 보안 모델</a> 외에도 Experience Platform 서비스 간 통신을 포함하여 애플리케이션과 Experience Platform 간의 모든 상호 작용은 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System](IMS)</a>을(를) 통해 암호화되고 인증됩니다. |
+| **인증** | <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab의 기본 제공 보안 모델</a> 외에도 Experience Platform 서비스 간 통신을 포함하여 애플리케이션과 Experience Platform 간의 모든 상호 작용은 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>을(를) 통해 암호화되고 인증됩니다. |
 | **개발 라이브러리** | [!DNL Experience Platform]에서 [!DNL JupyterLab]은(는) [!DNL Python], R 및 PySpark에 사전 설치된 라이브러리를 제공합니다. 지원되는 라이브러리의 전체 목록은 [부록](#supported-libraries)을 참조하십시오. |
 | **라이브러리 컨트롤러** | 미리 설치된 라이브러리가 사용자의 요구 사항에 맞지 않으면 Python 및 R용으로 추가 라이브러리를 설치할 수 있으며, [!DNL Experience Platform]의 무결성을 유지하고 데이터를 안전하게 유지하기 위해 격리된 컨테이너에 임시로 저장됩니다. 자세한 내용은 [커널](#kernels) 섹션을 참조하십시오. |
 

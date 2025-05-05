@@ -11,9 +11,9 @@ ht-degree: 2%
 
 # [!DNL The Trade Desk Real-Time Conversions API] 확장 개요
 
-[이벤트 전달](../../../ui/event-forwarding/overview.md) Edge Network에서 API의 기능을 사용하여 [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) 확장을 사용하여 Adobe Experience Platform 규칙에서 [!DNL The Trade Desk](으)로 데이터를 보낼 수 있습니다.
+[이벤트 전달](../../../ui/event-forwarding/overview.md) Edge Network에서 API의 기능을 사용하여 [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) 확장을 사용하여 Adobe Experience Platform 규칙에서 [!DNL The Trade Desk] (으)로 데이터를 보낼 수 있습니다.
 
-[!DNL The Trade Desk Real-Time Conversions API] 확장을 사용하면 [이벤트 전달](../../../ui/event-forwarding/overview.md) Edge Network에서 API의 기능을 활용하여 Adobe Experience Platform 규칙에서 [!DNL The Trade Desk](으)로 데이터를 보낼 수 있습니다.
+[!DNL The Trade Desk Real-Time Conversions API] 확장을 사용하면 [이벤트 전달](../../../ui/event-forwarding/overview.md) Edge Network에서 API의 기능을 활용하여 Adobe Experience Platform 규칙에서 [!DNL The Trade Desk] (으)로 데이터를 보낼 수 있습니다.
 
 확장을 설치하고 이벤트 전달 [규칙](../../../ui/managing-resources/rules.md)에서 해당 기능을 사용하는 방법을 알아보려면 이 문서를 참조하십시오.
 
@@ -59,7 +59,7 @@ ht-degree: 2%
 
 ![이벤트 전달 규칙 작업 구성을 추가하는 데 필요한 필드가 강조 표시된 이벤트 전달 속성 규칙 보기입니다.](../../../images/extensions/server/tradedesk/tradedesk-event-action.png)
 
-선택 후 [!DNL The Trade Desk](으)로 전송할 이벤트 데이터를 추가로 구성하기 위한 추가 컨트롤이 나타납니다. **[!UICONTROL 변경 내용 유지]**&#x200B;를 선택하여 규칙을 저장합니다.
+선택 후 [!DNL The Trade Desk] (으)로 전송할 이벤트 데이터를 추가로 구성하기 위한 추가 컨트롤이 나타납니다. **[!UICONTROL 변경 내용 유지]**&#x200B;를 선택하여 규칙을 저장합니다.
 
 구성 옵션은 아래에 설명된 대로 세 개의 기본 섹션으로 나뉩니다.
 

@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # 날짜 및 시간 함수
 
-날짜 및 시간 함수는 [!DNL Profile Query Language](PQL) 내의 값에 대한 날짜 및 시간 작업을 수행하는 데 사용됩니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
+날짜 및 시간 함수는 [!DNL Profile Query Language] (PQL) 내의 값에 대한 날짜 및 시간 작업을 수행하는 데 사용됩니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
 
 ## 이번 달
 

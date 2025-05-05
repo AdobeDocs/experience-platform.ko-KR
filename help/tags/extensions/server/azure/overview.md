@@ -18,7 +18,7 @@ ht-degree: 1%
 
 [!DNL Microsoft Azure]에서 [[!DNL Event Hubs]](https://azure.microsoft.com/en-us/products/event-hubs/#overview)은(는) 연결된 장치 및 응용 프로그램에서 생성되는 대량의 데이터를 처리하고 분석할 수 있도록 해주는 확장성이 뛰어난 실시간 데이터 수신 서비스입니다. 이벤트 허브에 데이터가 수집되면 실시간 분석 공급자나 일괄 처리/스토리지 어댑터를 사용하여 데이터를 변환하고 저장할 수 있습니다.
 
-[!DNL Microsoft Azure] [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장은 [!DNL Event Hubs]을(를) 활용하여 추가 처리를 위해 Adobe Experience Platform Edge Network에서 [!DNL Azure](으)로 이벤트를 보냅니다. 이 안내서에서는 이벤트 전달 규칙에서 확장을 설치하고 기능을 사용하는 방법을 다룹니다.
+[!DNL Microsoft Azure] [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장은 [!DNL Event Hubs]을(를) 활용하여 추가 처리를 위해 Adobe Experience Platform Edge Network에서 [!DNL Azure] (으)로 이벤트를 보냅니다. 이 안내서에서는 이벤트 전달 규칙에서 확장을 설치하고 기능을 사용하는 방법을 다룹니다.
 
 ## 전제 조건
 
@@ -60,7 +60,7 @@ Microsoft [!DNL Azure] 확장을 설치하려면 데이터 수집 UI 또는 Expe
 
 | 입력 | 설명 |
 | --- | --- |
-| [!UICONTROL 페이로드] | 이 필드에는 [!DNL Event Hubs](으)로 전달될 데이터가 포함되어 있습니다. 데이터는 JSON 개체, 문자열 또는 데이터 요소일 수 있습니다. |
+| [!UICONTROL 페이로드] | 이 필드에는 [!DNL Event Hubs] (으)로 전달될 데이터가 포함되어 있습니다. 데이터는 JSON 개체, 문자열 또는 데이터 요소일 수 있습니다. |
 
 {style="table-layout:auto"}
 

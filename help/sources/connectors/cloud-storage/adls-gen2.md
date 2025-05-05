@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]과(와) 같은 클라우드 공급업체에 기본 연결을 제공하므로 이러한 시스템에서 데이터를 가져올 수 있습니다.
 
-클라우드 스토리지 소스는 Experience Platform, 포맷 또는 업로드 없이도 자신의 데이터를 다운로드로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. Experience Platform을 사용하면 일괄 처리를 통해 [!DNL Azure Data Lake Storage Gen2](ADLS Gen2)의 데이터를 가져올 수 있습니다.
+클라우드 스토리지 소스는 Experience Platform, 포맷 또는 업로드 없이도 자신의 데이터를 다운로드로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. Experience Platform을 사용하면 일괄 처리를 통해 [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2)의 데이터를 가져올 수 있습니다.
 
 ## IP 주소 허용 목록
 

@@ -119,7 +119,7 @@ Experience Platform에서 [!DNL Dynamics 365] 내의 대상 상태를 업데이�
 
 ### 대상으로 인증 {#authenticate}
 
-대상에 인증하려면 **[!UICONTROL 대상에 연결]**을 선택하세요.
+대상에 인증하려면 **[!UICONTROL 대상에 연결]**&#x200B;을 선택하세요.
 인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
 
 아래의 필수 필드를 입력하십시오. 자세한 내용은 [Dynamics 365 자격 증명 수집](#gather-credentials) 섹션을 참조하십시오.
@@ -159,7 +159,7 @@ Experience Platform에서 [!DNL Dynamics 365] 내의 대상 상태를 업데이�
 
 대상 데이터를 Adobe Experience Platform에서 [!DNL Dynamics 365] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Experience Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 스키마 필드 간에 링크를 작성하는 것으로 구성됩니다. XDM 필드를 [!DNL Dynamics 365] 대상 필드에 올바르게 매핑하려면 다음 단계를 따르십시오.
 
-1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**를 선택합니다. 화면에 새 매핑 행이 표시됩니다.
+1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다. 화면에 새 매핑 행이 표시됩니다.
    ![새 매핑 추가를 위한 Experience Platform UI 스크린샷 예](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
 1. **[!UICONTROL 원본 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]** 범주를 선택하고 `contactid`을(를) 선택합니다.
@@ -167,6 +167,7 @@ Experience Platform에서 [!DNL Dynamics 365] 내의 대상 상태를 업데이�
 
 1. **[!UICONTROL 대상 필드 선택]** 창에서 원본 필드를 매핑할 대상 필드 유형을 선택합니다.
    * **[!UICONTROL ID 네임스페이스 선택]**: 소스 필드를 목록의 ID 네임스페이스에 매핑하려면 이 옵션을 선택하십시오.
+
      ![contactid에 대한 Target 매핑을 보여 주는 Experience Platform UI 스크린샷](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * XDM 프로필 스키마와 [!DNL Dynamics 365] 인스턴스 간에 다음 매핑을 추가합니다.
@@ -176,6 +177,7 @@ Experience Platform에서 [!DNL Dynamics 365] 내의 대상 상태를 업데이�
      | `contactid` | `contactid` | 예 |
 
    * **[!UICONTROL 사용자 지정 특성 선택]**: 소스 필드를 **[!UICONTROL 특성 이름]** 필드에 정의한 사용자 지정 특성에 매핑하려면 이 옵션을 선택하십시오. 지원되는 특성의 전체 목록은 [[!DNL Dynamics 365] 설명서](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties)를 참조하세요.
+
      ![이메일에 대한 Target 매핑을 보여 주는 Experience Platform UI 스크린샷](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
@@ -212,10 +214,10 @@ Experience Platform에서 [!DNL Dynamics 365] 내의 대상 상태를 업데이�
 
 대상을 올바르게 설정했는지 확인하려면 아래 단계를 수행하십시오.
 
-1. 대상 목록으로 이동하려면 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**를 선택하십시오.
+1. 대상 목록으로 이동하려면 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**&#x200B;를 선택하십시오.
    ![찾아보기 대상을 표시하는 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)
 
-1. 대상을 선택하고 상태가 **[!UICONTROL 활성화됨]**인지 확인하십시오.
+1. 대상을 선택하고 상태가 **[!UICONTROL 활성화됨]**&#x200B;인지 확인하십시오.
    ![대상 데이터 흐름이 실행되는 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
 
 1. **[!DNL Activation data]** 탭으로 전환한 다음 대상 이름을 선택합니다.

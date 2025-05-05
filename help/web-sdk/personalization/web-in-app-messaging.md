@@ -71,7 +71,7 @@ CSP 구성에 대한 자세한 내용은 [전용 설명서](../use-cases/configu
 
 그런 다음 만든 규칙에 작업을 추가해야 합니다.
 
-1. [!DNL Actions] 섹션에서 **[!UICONTROL 추가]**를 선택합니다.
+1. [!DNL Actions] 섹션에서 **[!UICONTROL 추가]**&#x200B;를 선택합니다.
    ![규칙 편집 화면을 표시하는 이미지입니다.](assets/web-in-app-messaging/add-action.png)
 
 2. 다음 **[!UICONTROL 작업]** 설정을 사용하십시오.
@@ -112,7 +112,7 @@ CSP 구성에 대한 자세한 내용은 [전용 설명서](../use-cases/configu
 
 그런 다음 만든 규칙에 작업을 추가해야 합니다.
 
-1. [!DNL Actions] 섹션에서 **[!UICONTROL 추가]**를 선택합니다.
+1. [!DNL Actions] 섹션에서 **[!UICONTROL 추가]**&#x200B;를 선택합니다.
    ![규칙 편집 화면을 표시하는 이미지입니다.](assets/web-in-app-messaging/add-action.png)
 
 2. 다음 **[!UICONTROL 작업]** 설정을 사용하십시오.

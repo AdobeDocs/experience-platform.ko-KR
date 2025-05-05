@@ -22,7 +22,7 @@ CSV 데이터를 [!DNL Adobe Experience Platform]&#x200B;(으)로 수집하려�
 이 자습서에서는 [!DNL Experience Platform]의 다음 구성 요소를 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-   * 최소한 XDM](../../../xdm/home.md#data-behaviors)의 [동작 개념을 이해해야 하므로 데이터를 [!UICONTROL Profile] 클래스(레코드 동작)에 매핑할지 [!UICONTROL ExperienceEvent] 클래스(시계열 동작)에 매핑할지 여부를 결정할 수 있습니다.
+   * 최소한 XDM[&#128279;](../../../xdm/home.md#data-behaviors)의 동작 개념을 이해해야 하므로 데이터를 [!UICONTROL Profile] 클래스(레코드 동작)에 매핑할지 [!UICONTROL ExperienceEvent] 클래스(시계열 동작)에 매핑할지 여부를 결정할 수 있습니다.
 * [일괄 처리 수집](../../batch-ingestion/overview.md): [!DNL Experience Platform]이(가) 사용자 제공 데이터 파일에서 데이터를 수집하는 방법입니다.
 * [Adobe Experience Platform 데이터 준비](../../batch-ingestion/overview.md): 수집된 데이터를 XDM 스키마에 맞게 매핑하고 변형할 수 있는 기능 모음입니다. [데이터 준비 기능](../../../data-prep/functions.md)에 대한 설명서는 스키마 매핑과 관련이 있습니다.
 
@@ -54,13 +54,13 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 데이터 흐름 구성을 마치면 **[!UICONTROL 다음]**&#x200B;을(를) 선택합니다.
 
-![데이터 흐름 세부 정보] 섹션이 완료되었습니다.](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)[!UICONTROL 
+![데이터 흐름 세부 정보] 섹션이 완료되었습니다.(../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
 
 ## 데이터 선택
 
 **[!UICONTROL 데이터 선택]** 단계에서 왼쪽 열을 사용하여 CSV 파일을 업로드하십시오. **[!UICONTROL 파일 선택]**&#x200B;을 선택하여 파일을 선택할 수 있는 파일 탐색기 대화 상자를 열거나 파일을 열로 직접 끌어다 놓을 수 있습니다.
 
-![파일 선택] 단추와 끌어서 놓기 영역이 [!UICONTROL 데이터 선택] 단계에서 강조 표시됩니다.](../../images/tutorials/map-csv-recommendations/upload-files.png)[!UICONTROL 
+![파일 선택] 단추와 끌어서 놓기 영역이 [!UICONTROL 데이터 선택] 단계에서 강조 표시됩니다.(../../images/tutorials/map-csv-recommendations/upload-files.png)
 
 파일을 업로드한 후 수신된 데이터가 올바르게 업로드되었는지 확인할 수 있도록 데이터의 처음 10개 행을 보여 주는 샘플 데이터 섹션이 나타납니다. 계속하려면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 

@@ -178,7 +178,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하는 데 사용할 �
 
 조각 및 병합된 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md)를 참조하세요.
 
-![대상 크기] 위젯이 강조 표시된 [!UICONTROL 대상] 대시보드 개요.](../images/audiences/audience-size.png)[!UICONTROL 
+![대상 크기] 위젯이 강조 표시된 [!UICONTROL 대상] 대시보드 개요.(../images/audiences/audience-size.png)
 
 ### [!UICONTROL 대상자 크기 트렌드] {#audience-size-trend}
 
@@ -191,7 +191,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하는 데 사용할 �
 
 이 위젯에는 머신 러닝 모델이 차트 및 대상 데이터를 분석하고 캡션을 자동으로 생성하여 주요 트렌드 및 중요 이벤트를 설명하는 자동 [!UICONTROL 캡션] 기능도 포함됩니다. **[!UICONTROL 캡션]**&#x200B;을 선택하여 자동 캡션 대화 상자를 엽니다.
 
-![대상] 개요에 대상 크기 트렌드 위젯이 표시됩니다.](../images/audiences/audience-size-trend-captions.png)[!UICONTROL 
+![대상] 개요에 대상 크기 트렌드 위젯이 표시됩니다.(../images/audiences/audience-size-trend-captions.png)
 
 데이터에 대한 통찰력을 제공하는 자동 캡션 대화 상자가 열립니다.
 
