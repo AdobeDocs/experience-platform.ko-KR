@@ -22,7 +22,7 @@ ht-degree: 0%
 
 이 문서에서는 Adobe Experience Platform Data Science Workspace 과정의 예상 학습 결과에 대해 설명합니다. 과정을 보려면 Adobe ID을 사용하여 Experience League에 로그인해야 합니다.
 
-[데이터 과학자를 위한 데이터 과학 Workspace 시작하기](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) 과정은 통찰력을 얻고 데이터를 쿼리하기 위해 JupyterLab Notebooks를 사용하고, 프로필이 활성화된 데이터 세트를 만들고, 자동화된 머신 러닝 모델을 게시하고, Adobe 및 비Adobe 애플리케이션에서 머신 러닝을 통한 통찰력을 활성화하는 방법에 대해 알아보고자 하는 데이터 과학자를 위해 설계되었습니다.
+[데이터 과학자를 위한 데이터 과학 Workspace 시작하기](https://experienceleague.adobe.com/?lang=ko&recommended=ExperiencePlatform-U-1-2021.1.dsw) 과정은 통찰력을 얻고 데이터를 쿼리하기 위해 JupyterLab Notebooks를 사용하고, 프로필이 활성화된 데이터 세트를 만들고, 자동화된 머신 러닝 모델을 게시하고, Adobe 및 비Adobe 애플리케이션에서 머신 러닝을 통한 통찰력을 활성화하는 방법에 대해 알아보고자 하는 데이터 과학자를 위해 설계되었습니다.
 
 ## 강의 전제 조건
 

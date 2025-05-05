@@ -26,7 +26,7 @@ Adobe Analytics에서 사용자 정의 제품 수준 데이터는 머천다이�
 
 이러한 변수를 제품 구문 머천다이징 변수라고 합니다. 이렇게 하면 고객의 검색 결과에 있는 제품별 &quot;할인 금액&quot; 또는 제품의 &quot;페이지 내 위치&quot;에 대한 정보와 같은 정보를 수집할 수 있습니다.
 
-제품 구문 사용에 대한 자세한 내용은 [제품 구문을 사용하여 eVar 구현](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax)에 대한 Adobe Analytics 설명서를 참조하십시오.
+제품 구문 사용에 대한 자세한 내용은 [제품 구문을 사용하여 eVar 구현](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=ko#implement-using-product-syntax)에 대한 Adobe Analytics 설명서를 참조하십시오.
 
 아래 섹션에서는 [!DNL Analytics] 데이터 세트의 머천다이징 변수에 액세스하는 데 필요한 XDM 필드에 대해 간략히 설명합니다.
 
@@ -127,7 +127,7 @@ Adobe Analytics에 있는 다른 유형의 머천다이징 변수는 전환 변�
 | 내부 검색:여름 셔츠 | 19.99 | 1 | 1 | 1 |
 | 내부 검색:winter hat | 12.99 | 1 | 1 | 1 |
 
-전환 변수 구문 사용에 대한 자세한 내용은 [전환 변수 구문을 사용하여 eVar 구현](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax)에 대한 Adobe Analytics 설명서를 참조하십시오.
+전환 변수 구문 사용에 대한 자세한 내용은 [전환 변수 구문을 사용하여 eVar 구현](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=ko#implement-using-conversion-variable-syntax)에 대한 Adobe Analytics 설명서를 참조하십시오.
 
 다음은 [!DNL Analytics] 데이터 집합에서 전환 변수 구문을 생성하는 XDM 필드입니다.
 

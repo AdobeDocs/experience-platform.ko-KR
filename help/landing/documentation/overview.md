@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >Adobe Experience Platform 설명서가 최근에 이동되었습니다. 잠시 새 탐색을 검토하고 기존 책갈피를 업데이트하십시오.
 
-Adobe Experience Platform 설명서는 다양한 Experience Platform 기능 및 서비스에 사용할 수 있습니다. Experience Platform 설명서에 액세스하려면 [설명서 랜딩 페이지](https://experienceleague.adobe.com/docs/experience-platform.html)&#x200B;(으)로 돌아가서 보려는 안내서를 선택하십시오.
+Adobe Experience Platform 설명서는 다양한 Experience Platform 기능 및 서비스에 사용할 수 있습니다. Experience Platform 설명서에 액세스하려면 [설명서 랜딩 페이지](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ko)&#x200B;(으)로 돌아가서 보려는 안내서를 선택하십시오.
 
 ## Experience Platform 설명서 유형
 

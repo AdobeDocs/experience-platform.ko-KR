@@ -31,8 +31,8 @@ ECID를 사용하여 다음을 수행할 수 있습니다.
 
 다음 설명서는 다양한 Experience Platform 및 Experience Cloud 애플리케이션에서 ECID를 이해하는 방법에 대한 추가 리소스를 제공합니다.
 
-* 웹 사이트 구현에 ECID를 사용하려면 [Experience Cloud ID 서비스](https://experienceleague.adobe.com/docs/id-service/using/home.html)에 대한 설명서를 참조하십시오.
-* ECID를 앱 및 모바일 웹 콘텐츠와 함께 사용하는 방법을 보려면 [앱과 모바일 웹 간 방문자 추적](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios)에 대한 설명서를 참조하십시오.
+* 웹 사이트 구현에 ECID를 사용하려면 [Experience Cloud ID 서비스](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko)에 대한 설명서를 참조하십시오.
+* ECID를 앱 및 모바일 웹 콘텐츠와 함께 사용하는 방법을 보려면 [앱과 모바일 웹 간 방문자 추적](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=ko#sdk-reference-ios)에 대한 설명서를 참조하십시오.
 * [태그](../../tags/home.md)를 사용하는 경우 이러한 도구를 배포하는 것이 간단하고 쉽게 관리할 수 있습니다.
 * GDPR과 같은 개인 정보 보호 규정을 쉽게 준수하도록 ECID를 사용하는 방법에 대한 자세한 내용은 [Privacy Service 설명서](../../privacy-service/identity-data.md)를 참조하십시오.
 * Experience Platform 컨텍스트가 있는 ECID에 대한 자세한 내용은 [ID 서비스 개요](../home.md) 및 [ID 네임스페이스 개요](./namespaces.md)를 참조하십시오.

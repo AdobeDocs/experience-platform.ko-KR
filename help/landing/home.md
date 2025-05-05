@@ -30,7 +30,7 @@ RESTful API를 기반으로 구축된 [!DNL Experience Platform]은(는) 시스�
 
 [!DNL Experience Platform] 설명서는 다양한 기능 및 응용 프로그램에 대해 여러 형식으로 제공됩니다. 사용 가능한 설명서 유형에 대한 자세한 내용은 [Experience Platform 설명서 개요](documentation/overview.md)를 참조하세요.
 
-특정 [!DNL Experience Platform] 서비스에 대해 자세히 알아보려면 [설명서 랜딩 페이지](https://experienceleague.adobe.com/docs/experience-platform.html)&#x200B;(으)로 돌아가 적절한 안내서를 선택하십시오.
+특정 [!DNL Experience Platform] 서비스에 대해 자세히 알아보려면 [설명서 랜딩 페이지](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ko)&#x200B;(으)로 돌아가 적절한 안내서를 선택하십시오.
 
 ### [!DNL Experience Platform]에 빌드된 응용 프로그램 설명서
 
@@ -40,8 +40,8 @@ Adobe은 Experience Platform 위에 여러 애플리케이션을 빌드했습니
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ko)
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ko-KR)
-* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=ko)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=ko)
 
 아래 비디오에서는 Experience Platform 위에 구축된 각 애플리케이션의 사용 사례를 설명합니다.
 

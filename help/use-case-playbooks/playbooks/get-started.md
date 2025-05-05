@@ -89,13 +89,13 @@ Experience Platform UI에서 사용 사례 플레이북의 다양한 갤러리�
 
 ## Journey Optimizer에서 샌드박스 및 채널 표면 구성 {#configure-channel-surfaces}
 
-조직에서 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ko-KR)에 대한 라이선스를 보유하고 있으며 Journey Optimizer용으로 설계된 플레이북을 사용하려는 경우 샌드박스에서 메시지에 필요한 기술 매개 변수를 정의하는 채널 사전 설정을 구성해야 합니다. [Adobe Journey Optimizer에서 채널 표면을 설정하는 방법에 대해 알아봅니다](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
+조직에서 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ko-KR)에 대한 라이선스를 보유하고 있으며 Journey Optimizer용으로 설계된 플레이북을 사용하려는 경우 샌드박스에서 메시지에 필요한 기술 매개 변수를 정의하는 채널 사전 설정을 구성해야 합니다. [Adobe Journey Optimizer에서 채널 표면을 설정하는 방법에 대해 알아봅니다](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=ko).
 
 Journey Optimizer에서 플레이북의 인스턴스를 생성하려면 이메일, 푸시 및 SMS 알림에 대한 채널 표면을 구성해야 합니다.
 
 ### 전자 메일 채널 표면
 
-Journey Optimizer 인터페이스의 `Channels`(으)로 이동합니다. 아직 구성되지 않은 경우 마케팅 이메일 및 트랜잭션 메시지를 위한 별도의 하위 도메인 및 IP 풀을 구성합니다. 다음은 주문 확인 이메일과 같은 트랜잭션 메시지가 고객에게 전달되도록 하는 모범 사례입니다. 이름, 이메일 주소 및 추가 설정을 입력합니다. 페이지 오른쪽 상단에서 **제출**&#x200B;을 선택하여 마케팅 채널 표면을 만듭니다. [전자 메일 채널 표면을 설정하는 방법](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html)에 대한 설명서를 읽어 보십시오.
+Journey Optimizer 인터페이스의 `Channels`(으)로 이동합니다. 아직 구성되지 않은 경우 마케팅 이메일 및 트랜잭션 메시지를 위한 별도의 하위 도메인 및 IP 풀을 구성합니다. 다음은 주문 확인 이메일과 같은 트랜잭션 메시지가 고객에게 전달되도록 하는 모범 사례입니다. 이름, 이메일 주소 및 추가 설정을 입력합니다. 페이지 오른쪽 상단에서 **제출**&#x200B;을 선택하여 마케팅 채널 표면을 만듭니다. [전자 메일 채널 표면을 설정하는 방법](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=ko)에 대한 설명서를 읽어 보십시오.
 
 ### SMS 채널 표면
 
@@ -111,7 +111,7 @@ SMS 채널 표면을 만들려면 먼저 SMS API 자격 증명을 만들고 기�
 
 그런 다음 채널 구성에서 확인한 채널, 플랫폼 및 앱을 선택합니다. 푸시 채널 표면을 만들려면 **제출**&#x200B;을 선택합니다.
 
-[푸시 채널 표면을 설정하는 방법](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html)에 대한 설명서를 읽어 보십시오.
+[푸시 채널 표면을 설정하는 방법](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=ko)에 대한 설명서를 읽어 보십시오.
 
 ## 다음 단계 {#next-steps}
 

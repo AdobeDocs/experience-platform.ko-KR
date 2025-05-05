@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # Audience Manager 확장 활성화
 
-Adobe Experience Platform을 기반으로 구축된 Audience Manager 확장 활성화는 기존 [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home) 사용자가 대상을 Real-Time CDP의 [소셜](../destinations/catalog/social/overview.md) 및 [광고](../destinations/catalog/advertising/overview.md) 대상 플랫폼(예: [Facebook](../destinations/catalog/social/facebook.md), [Google 광고](../destinations/catalog/advertising/google-ads-destination.md) 등)으로 활성화하도록 지원합니다.
+Adobe Experience Platform을 기반으로 구축된 Audience Manager 확장 활성화는 기존 [Audience Manager](https://experienceleague.adobe.com/ko/docs/audience-manager/user-guide/aam-home) 사용자가 대상을 Real-Time CDP의 [소셜](../destinations/catalog/social/overview.md) 및 [광고](../destinations/catalog/advertising/overview.md) 대상 플랫폼(예: [Facebook](../destinations/catalog/social/facebook.md), [Google 광고](../destinations/catalog/advertising/google-ads-destination.md) 등)으로 활성화하도록 지원합니다.
 
 >[!IMPORTANT]
 >
@@ -37,8 +37,8 @@ Audience Manager Expanded Activation은 Adobe Experience Platform의 개념 및 
 
 [!DNL Expanded Activation]을(를) 통해 대상자를 활성화하려면 Audience Manager 대상자가 **해시된 이메일 주소**&#x200B;를 기반으로 하는지 확인하십시오. Audience Manager 사용을 기반으로 두 가지 방법으로 이를 확인할 수 있습니다.
 
-* [Audience Manager 사용자 기반 대상](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview) 기능을 사용하는 경우 Audience Manager에서 이미 해시된 이메일 주소를 섭취하는 것입니다. 이 경우 수행해야 하는 추가 단계는 없습니다. [확장된 활성화를 통해 대상자 활성화](activate-audiences.md)(으)로 건너뛸 수 있습니다.
-* [Audience Manager 사용자 기반 대상](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview) 기능을 사용하는 _not_&#x200B;인 경우 Audience Manager에서 새 데이터 원본을 만들고 이를 사용하여 해시된 전자 메일 주소를 저장해야 합니다. 이 작업을 수행하는 방법에 대해 알아보려면 [해시된 이메일 워크플로우에 대한 데이터 소스 구성](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/data-sources/create-data-source-hashed-emails)에 대한 설명서를 참조하십시오. Audience Manager 데이터 소스에서 해시된 이메일 주소를 수집했으면 [확장된 활성화를 통해 대상 활성화](activate-audiences.md)에 대한 설명서를 읽어 보십시오.
+* [Audience Manager 사용자 기반 대상](https://experienceleague.adobe.com/ko/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview) 기능을 사용하는 경우 Audience Manager에서 이미 해시된 이메일 주소를 섭취하는 것입니다. 이 경우 수행해야 하는 추가 단계는 없습니다. [확장된 활성화를 통해 대상자 활성화](activate-audiences.md)(으)로 건너뛸 수 있습니다.
+* [Audience Manager 사용자 기반 대상](https://experienceleague.adobe.com/ko/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview) 기능을 사용하는 _not_&#x200B;인 경우 Audience Manager에서 새 데이터 원본을 만들고 이를 사용하여 해시된 전자 메일 주소를 저장해야 합니다. 이 작업을 수행하는 방법에 대해 알아보려면 [해시된 이메일 워크플로우에 대한 데이터 소스 구성](https://experienceleague.adobe.com/ko/docs/audience-manager/user-guide/features/data-sources/create-data-source-hashed-emails)에 대한 설명서를 참조하십시오. Audience Manager 데이터 소스에서 해시된 이메일 주소를 수집했으면 [확장된 활성화를 통해 대상 활성화](activate-audiences.md)에 대한 설명서를 읽어 보십시오.
 
 ## 다음 단계 {#next-steps}
 

@@ -46,13 +46,13 @@ AI Assistant를 사용할 수 있는 법적 자격이 없는 조직을 사용하
 
 AI Assistant에 대한 액세스는 다음 매개 변수에 의해 제어됩니다.
 
-* **응용 프로그램에 액세스:** Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer 및 [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant)에서 AI Assistant에 액세스할 수 있습니다.
+* **응용 프로그램에 액세스:** Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer 및 [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/ai-assistant)에서 AI Assistant에 액세스할 수 있습니다.
 <!-- * **Contractual access:** Your company must agree to certain [!DNL GenAI]-related legal terms before your organization can use AI Assistant. Contact your organization's administrator or your Adobe Account Team if you are not able to access AI Assistant.  -->
 * **권한:** [권한 UI](../access-control/abac/ui/permissions.md)를 사용하여 조직의 AI Assistant에 대한 액세스 권한을 부여하거나 취소할 수 있습니다. AI Assistant를 사용하려면 지정된 사용자가 **AI Assistant 활성화** 및 **Operational Insights 보기** 권한으로 프로비저닝된 역할에 속해야 합니다.
    * 관리자는 해당 역할에 **AI Assistant 사용**&#x200B;을 추가하고 해당 역할에 사용자를 추가하여 조직의 AI Assistant에 액세스할 수 있도록 할 수 있습니다. **참고**: 이 권한은 해당 사용자가 AI Assistant에 액세스할 수 있도록 허용하며, 다른 사용자에게 AI Assistant에 대한 액세스 권한을 부여할 수 있는 관리 기능은 부여하지 않습니다.
    * 관리자는 해당 역할에 **View Operational Insights**&#x200B;를 추가하고 해당 역할에 사용자를 추가하여 AI Assistant의 Operational Insights 기능을 사용할 수 있습니다. Operational Insights 는 현재 Beta 버전입니다.
 
-[권한 UI](../access-control/abac/ui/roles.md)를 사용하여 Experience Platform 및 Journey Optimizer에서 AI Assistant를 사용할 수 있는 권한을 부여합니다. Customer Journey Analytics에서 AI Assistant에 액세스하는 방법에 대한 자세한 내용 [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant)에서 설명서를 읽어 보십시오.
+[권한 UI](../access-control/abac/ui/roles.md)를 사용하여 Experience Platform 및 Journey Optimizer에서 AI Assistant를 사용할 수 있는 권한을 부여합니다. Customer Journey Analytics에서 AI Assistant에 액세스하는 방법에 대한 자세한 내용 [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/ai-assistant)에서 설명서를 읽어 보십시오.
 
 ![지정된 역할에 포함된 AI Assistant 사용 및 Operational Insights 보기 권한이 있는 권한 UI 페이지입니다.](./images/access/access-permissions.png)
 

@@ -16,7 +16,7 @@ Adobe Experience Platform Web SDK는 [Adobe Target](https://business.adobe.com/p
 
 또한 Web SDK는 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화 연결](../../destinations/catalog/personalization/custom-personalization.md)과 같은 Adobe Experience Platform 개인화 대상을 통해 동일한 페이지 및 다음 페이지 개인화 기능을 지원합니다. 동일 페이지 및 다음 페이지 개인화에 대한 Experience Platform을 구성하는 방법에 대해 알아보려면 [전용 안내서](../../destinations/ui/activate-edge-personalization-destinations.md)를 참조하세요.
 
-Adobe Target의 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 및 Adobe Journey Optimizer의 [웹 캠페인 UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 내에서 만든 콘텐츠를 SDK에서 자동으로 검색하고 렌더링할 수 있습니다. Adobe Target의 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), Adobe Journey Optimizer의 [코드 기반 경험 채널](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) 또는 Offer decisioning 내에서 만들어진 콘텐츠는 SDK에서 자동으로 렌더링할 수 없습니다. 대신 SDK를 사용하여 이 콘텐츠를 요청한 다음 직접 콘텐츠를 수동으로 렌더링해야 합니다.
+Adobe Target의 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ko) 및 Adobe Journey Optimizer의 [웹 캠페인 UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ko) 내에서 만든 콘텐츠를 SDK에서 자동으로 검색하고 렌더링할 수 있습니다. Adobe Target의 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ko), Adobe Journey Optimizer의 [코드 기반 경험 채널](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/code-based-experience/get-started-code-based) 또는 Offer decisioning 내에서 만들어진 콘텐츠는 SDK에서 자동으로 렌더링할 수 없습니다. 대신 SDK를 사용하여 이 콘텐츠를 요청한 다음 직접 콘텐츠를 수동으로 렌더링해야 합니다.
 
 ## 자동으로 콘텐츠 렌더링 {#automatic}
 
@@ -341,7 +341,7 @@ alloy("applyPropositions", {
 
 ### 사용 사례 2: 선택기가 없는 제안 렌더링
 
-이 사용 사례는 [!DNL Target Form-based Experience Composer] 또는 Adobe Journey Optimizer의 [코드 기반 경험 채널](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based)을 사용하여 작성된 경험에 적용됩니다.
+이 사용 사례는 [!DNL Target Form-based Experience Composer] 또는 Adobe Journey Optimizer의 [코드 기반 경험 채널](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/code-based-experience/get-started-code-based)을 사용하여 작성된 경험에 적용됩니다.
 
 `applyPropositions` 호출에 선택기, 작업 및 범위를 제공해야 합니다.
 

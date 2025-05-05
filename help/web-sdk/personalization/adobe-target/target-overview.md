@@ -11,25 +11,25 @@ ht-degree: 1%
 
 # 개인화에 [!DNL Adobe Target] 및 [!DNL Web SDK] 사용
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK]은(는) [!DNL Adobe Target]에서 관리되는 개인화된 경험을 웹 채널에 전달하고 렌더링할 수 있습니다. VEC([시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html))라고 하는 WYSIWYG 편집기 또는 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html))를 사용하여 활동 및 개인화 경험을 만들고, 활성화하고, 전달할 수 있습니다.
+[!DNL Adobe Experience Platform] [!DNL Web SDK]은(는) [!DNL Adobe Target]에서 관리되는 개인화된 경험을 웹 채널에 전달하고 렌더링할 수 있습니다. VEC([시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ko))라고 하는 WYSIWYG 편집기 또는 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ko))를 사용하여 활동 및 개인화 경험을 만들고, 활성화하고, 전달할 수 있습니다.
 
 >[!IMPORTANT]
 >
->[at.js 2.x에서 Experience Platform Web SDK으로 Target 마이그레이션](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) 자습서를 사용하여 Target 구현을 Experience Platform Web SDK으로 마이그레이션하는 방법을 알아봅니다.
+>[at.js 2.x에서 Experience Platform Web SDK으로 Target 마이그레이션](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=ko) 자습서를 사용하여 Target 구현을 Experience Platform Web SDK으로 마이그레이션하는 방법을 알아봅니다.
 >
->[Web SDK에서 Adobe Experience Cloud 구현](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ko-KR) 자습서를 사용하여 Target을 처음 구현하는 방법을 알아봅니다. Target에 대한 자세한 내용은 [Experience Platform Web SDK으로 Target 설정](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html)이라는 자습서 섹션을 참조하십시오.
+>[Web SDK에서 Adobe Experience Cloud 구현](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ko-KR) 자습서를 사용하여 Target을 처음 구현하는 방법을 알아봅니다. Target에 대한 자세한 내용은 [Experience Platform Web SDK으로 Target 설정](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=ko)이라는 자습서 섹션을 참조하십시오.
 
 
 다음 기능이 테스트되었으며 현재 [!DNL Target]에서 지원됩니다.
 
-* [A/B 테스트](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [A4T 노출 및 전환 보고](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
-* [Automated Personalization 활동](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [경험 타깃팅 활동](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [MVT(다변량 테스트)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
-* [권장 사항 활동](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
-* [기본 대상 노출 및 전환 보고](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
-* [VEC 지원](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
+* [A/B 테스트](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=ko)
+* [A4T 노출 및 전환 보고](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ko)
+* [Automated Personalization 활동](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ko)
+* [경험 타깃팅 활동](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ko)
+* [MVT(다변량 테스트)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=ko)
+* [권장 사항 활동](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=ko)
+* [기본 대상 노출 및 전환 보고](https://experienceleague.adobe.com/docs/target/using/reports/reports.html?lang=ko)
+* [VEC 지원](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ko)
 
 ## [!DNL Web SDK] 시스템 다이어그램
 
@@ -64,7 +64,7 @@ ht-degree: 1%
 
 VEC를 [!DNL Web SDK] 구현과 함께 사용하려면 [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) 또는 [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper 확장 프로그램을 설치하고 활성화하십시오.
 
-자세한 내용은 *Adobe Target 안내서*&#x200B;에서 [시각적 경험 작성기 Helper 확장 기능](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html)을 참조하십시오.
+자세한 내용은 *Adobe Target 안내서*&#x200B;에서 [시각적 경험 작성기 Helper 확장 기능](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=ko)을 참조하십시오.
 
 ## 개인화된 콘텐츠 렌더링
 
@@ -85,7 +85,7 @@ VEC를 [!DNL Web SDK] 구현과 함께 사용하려면 [Firefox](https://addons.
 * 트래픽 소스
 * 시간대
 
-자세한 내용은 *Adobe Target 안내서*&#x200B;의 [대상 범주](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html)를 참조하십시오.
+자세한 내용은 *Adobe Target 안내서*&#x200B;의 [대상 범주](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=ko)를 참조하십시오.
 
 ### 응답 토큰
 

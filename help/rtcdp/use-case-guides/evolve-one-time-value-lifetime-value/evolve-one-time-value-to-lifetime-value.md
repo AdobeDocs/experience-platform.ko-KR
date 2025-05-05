@@ -33,22 +33,22 @@ ht-degree: 25%
 
 내부적으로 브랜드 충성도를 높이기 위한 비즈니스 목표 및 목표를 정의했습니다. 이는 고객 참여 및 충성도를 높이기 위한 사용 사례 실행으로 번역할 수 있습니다.
 
-이를 위해 필요한 기술은 두 개의 Experience Platform 앱 [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ko)으로 구성됩니다. 아래 목록은 사용 사례를 구현할 때 사용할 두 앱의 다양한 기능과 UI 요소입니다.
+이를 위해 필요한 기술은 두 개의 Experience Platform 앱 [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ko)으로 구성됩니다. 아래 목록은 사용 사례를 구현할 때 사용할 두 앱의 다양한 기능과 UI 요소입니다.
 
 >[!TIP]
 >
 >이러한 모든 영역에 대해 필요한 [속성 기반의 액세스 제어 권한](/help/access-control/abac/end-to-end-guide.md)이 있는지 확인하거나, 시스템 관리자에게 필요한 권한 부여를 요청하십시오.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html): 데이터 원본 간에 데이터를 통합하여 캠페인을 실행합니다. 그런 다음 이 데이터를 사용하여 이메일 및 웹 프로모션 타일에 사용되는 표면 맞춤형 데이터 요소(예: 이름 또는 계정 관련 정보) 및 캠페인 대상자를 만듭니다. 마지막으로 Real-Time CDP은 유료 미디어 대상에 대한 대상을 활성화하는 데에도 사용됩니다.
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=ko): 데이터 원본 간에 데이터를 통합하여 캠페인을 실행합니다. 그런 다음 이 데이터를 사용하여 이메일 및 웹 프로모션 타일에 사용되는 표면 맞춤형 데이터 요소(예: 이름 또는 계정 관련 정보) 및 캠페인 대상자를 만듭니다. 마지막으로 Real-Time CDP은 유료 미디어 대상에 대한 대상을 활성화하는 데에도 사용됩니다.
    * [스키마](/help/xdm/home.md)
    * [프로필](/help/profile/home.md)
    * [데이터 세트](/help/catalog/datasets/overview.md)
    * [대상자](/help/segmentation/home.md)
    * [대상](/help/destinations/home.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): 여정을 디자인하고, 트리거를 설정하고, 방문자에게 알맞은 메시지를 만듭니다.
-   * [이벤트 또는 대상자 트리거](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
-   * [대상 및 이벤트](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
-   * [여정](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ko): 여정을 디자인하고, 트리거를 설정하고, 방문자에게 알맞은 메시지를 만듭니다.
+   * [이벤트 또는 대상자 트리거](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=ko)
+   * [대상 및 이벤트](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=ko)
+   * [여정](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ko)
 
 ## Real-Time CDP 및 Journey Optimizer 아키텍처
 
@@ -268,9 +268,9 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 >[!IMPORTANT]
 >
->고객에게 브랜드로부터 커뮤니케이션 수신을 거부할 수 있는 기능을 제공하고 이러한 선택이 존중되도록 하는 것은 법적 요구 사항입니다. [개인 정보 보호 규정 개요](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html)에서 해당 법률에 대해 자세히 알아보세요.
+>고객에게 브랜드로부터 커뮤니케이션 수신을 거부할 수 있는 기능을 제공하고 이러한 선택이 존중되도록 하는 것은 법적 요구 사항입니다. [개인 정보 보호 규정 개요](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=ko)에서 해당 법률에 대해 자세히 알아보세요.
 
-연락하기 전에 다음 [동의 정책](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html)을 구현하고 방문자에게 동의를 요청하십시오.
+연락하기 전에 다음 [동의 정책](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=ko)을 구현하고 방문자에게 동의를 요청하십시오.
 
 * `consents.marketing.email.val = "Y"`인 경우, 이메일 전송 가능
 * `consents.marketing.sms.val = "Y"`인 경우, SMS 전송 가능
@@ -298,7 +298,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 이 사용 사례에서는 두 명의 대상을 만들어 프로필 저장소의 프로필 하위 집합에서 공유하는 특정 속성이나 동작을 정의하여 마케팅 가능한 사람 그룹을 구별해야 합니다. Adobe Experience Platform에서 여러 가지 방법으로 대상을 만들 수 있습니다.
 
-* 대상을 만드는 방법에 대한 자세한 내용은 [대상 서비스 UI 안내서](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience)를 참조하세요.
+* 대상을 만드는 방법에 대한 자세한 내용은 [대상 서비스 UI 안내서](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=ko#create-audience)를 참조하세요.
 * [대상](/help/segmentation/home.md)을 구성하는 방법에 대한 자세한 내용은 [대상 구성 UI 안내서](/help/segmentation/ui/audience-composition.md)를 참조하십시오.
 * Experience Platform에서 파생된 세그먼트 정의를 통해 대상자를 만드는 방법에 대한 자세한 내용은 [대상자 빌더 UI 안내서](/help/segmentation/ui/segment-builder.md)를 참조하십시오.
 
@@ -344,7 +344,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 >
 >[!DNL Adobe Journey Optimizer]는 다이어그램에 표시된 모든 항목을 포함하지 않습니다. 모든 [유료 미디어 광고](/help/destinations/catalog/social/overview.md)가 [!UICONTROL 대상] [작업 영역](/help/destinations/ui/destinations-workspace.md)에서 만들어집니다.
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)는 고객에게 연관성 있고 상황에 맞는 개인화된 경험을 제공할 수 있도록 해 줍니다. 고객 여정은 고객이 브랜드와 상호 작용하는 전체 프로세스입니다. 각 사용 사례 여정에 특정 정보가 필요합니다.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ko)는 고객에게 연관성 있고 상황에 맞는 개인화된 경험을 제공할 수 있도록 해 줍니다. 고객 여정은 고객이 브랜드와 상호 작용하는 전체 프로세스입니다. 각 사용 사례 여정에 특정 정보가 필요합니다.
 
 이 사용 사례를 달성하려면 두 개의 별도 여정을 만들어야 합니다.
 
@@ -367,15 +367,15 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 위에 표시된 여정은 다음 논리를 따릅니다.
 
-1. 대상자 읽기: 위의 대상자 섹션에서 만든 첫 번째 대상자에 대해 [대상자 읽기 활동](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en)을 사용하십시오.
+1. 대상자 읽기: 위의 대상자 섹션에서 만든 첫 번째 대상자에 대해 [대상자 읽기 활동](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=ko)을 사용하십시오.
 
-2. 조건 - 기본 채널: [조건 활동](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html)을 사용하여 이메일, SMS 또는 푸시 알림을 통해 고객에게 연락하는 방법을 결정합니다. 세 가지 작업 활동을 사용하여 세 개의 분기를 만듭니다.
+2. 조건 - 기본 채널: [조건 활동](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html?lang=ko)을 사용하여 이메일, SMS 또는 푸시 알림을 통해 고객에게 연락하는 방법을 결정합니다. 세 가지 작업 활동을 사용하여 세 개의 분기를 만듭니다.
 
-3. 대기: [대기 활동](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html)을 사용하여 구매를 수신할 때까지 기다립니다.
+3. 대기: [대기 활동](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=ko)을 사용하여 구매를 수신할 때까지 기다립니다.
 
 4. 조건 - 지난 7일 동안 구매한 구독: 조건 활동을 사용하여 지난 7일 동안의 제품 구매를 수신합니다.
 
-5. JourneyStepEventTracker - 구독을 구매하지 않음: 메시지를 수신했지만 아직 구독을 구매하지 않은 방문자를 위해 [사용자 지정 작업](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html)을 사용합니다. 여정 종료 시 사용자 지정 조건의 일부로 `journey.feedback` 이벤트를 만들고 [!UICONTROL 여정 단계 이벤트] 스키마를 기준으로 데이터 집합에 추가합니다. 이 이벤트를 사용하여 구독을 구매하지 않은 대상과 유료 미디어 광고를 통해 타깃팅할 수 있는 대상을 세그먼트화할 수 있습니다.
+5. JourneyStepEventTracker - 구독을 구매하지 않음: 메시지를 수신했지만 아직 구독을 구매하지 않은 방문자를 위해 [사용자 지정 작업](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html?lang=ko)을 사용합니다. 여정 종료 시 사용자 지정 조건의 일부로 `journey.feedback` 이벤트를 만들고 [!UICONTROL 여정 단계 이벤트] 스키마를 기준으로 데이터 집합에 추가합니다. 이 이벤트를 사용하여 구독을 구매하지 않은 대상과 유료 미디어 광고를 통해 타깃팅할 수 있는 대상을 세그먼트화할 수 있습니다.
 
 +++
 
@@ -436,7 +436,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 >[!ENDTABS]
 
-[!DNL Adobe Journey Optimizer]에서 여정을 만드는 방법에 대한 자세한 내용은 [여정 시작](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) 안내서를 참조하십시오.
+[!DNL Adobe Journey Optimizer]에서 여정을 만드는 방법에 대한 자세한 내용은 [여정 시작](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ko) 안내서를 참조하십시오.
 
 ### 유료 미디어 광고를 표시할 대상 설정 {#paid-media-ads}
 

@@ -23,9 +23,9 @@ ht-degree: 6%
 
 | 표시 이름 | 속성 | 데이터 유형 | 필수 여부 | 설명 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|-----------|-----------|---------------------------------------------------------------------------------------|
-| [[!UICONTROL 비트율]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#average-bitrate) | `bitrate` | 정수 | 아니요 | 비트율 값(kbps)입니다. |
-| [[!UICONTROL 삭제된 프레임]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#dropped-frames) | `droppedFrames` | 정수 | 아니요 | 재생 도중 드롭된 총 프레임 수입니다. |
-| [[!UICONTROL 초당 프레임]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#frames-per-second) | `framesPerSecond` | 정수 | 아니요 | 현재 스트림 프레임 속도(초당 프레임 수)입니다. |
-| [[!UICONTROL 시작 시간]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#time-to-start-1) | `timeToStart` | 정수 | 아니요 | 비디오 로드와 시작 사이의 기간(초)입니다. |
+| [[!UICONTROL 비트율]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=ko#average-bitrate) | `bitrate` | 정수 | 아니요 | 비트율 값(kbps)입니다. |
+| [[!UICONTROL 삭제된 프레임]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=ko#dropped-frames) | `droppedFrames` | 정수 | 아니요 | 재생 도중 드롭된 총 프레임 수입니다. |
+| [[!UICONTROL 초당 프레임]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=ko#frames-per-second) | `framesPerSecond` | 정수 | 아니요 | 현재 스트림 프레임 속도(초당 프레임 수)입니다. |
+| [[!UICONTROL 시작 시간]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=ko#time-to-start-1) | `timeToStart` | 정수 | 아니요 | 비디오 로드와 시작 사이의 기간(초)입니다. |
 
 {style="table-layout:auto"}

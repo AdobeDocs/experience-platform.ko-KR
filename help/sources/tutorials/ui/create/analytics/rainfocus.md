@@ -127,4 +127,4 @@ Experience Platform은 선택한 대상 스키마 또는 데이터 세트를 기
 * [Adobe Developer 포털에서 JWT(Adobe 서비스 계정) 만들기](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
 * [API에서 스키마 만들기](../../../../../xdm/tutorials/create-schema-api.md)
 * [UI에서 스키마 만들기](../../../../../xdm/tutorials/create-schema-ui.md)
-* [UI에서 ID 필드 정의](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+* [UI에서 ID 필드 정의](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=ko)

@@ -25,17 +25,17 @@ Adobe Experience Platform 웹 SDK 화면에서는 Adobe Experience Platform 웹 
 
 ## [!UICONTROL Analytics] {#section-f71dfcc22bb44c86bec328491606a482}
 
-[!UICONTROL Analytics] 탭은 [Adobe Analytics 구현](https://experienceleague.adobe.com/docs/analytics/implementation/home.html)에 대한 정보를 제공합니다.
+[!UICONTROL Analytics] 탭은 [Adobe Analytics 구현](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=ko)에 대한 정보를 제공합니다.
 
 ## [!UICONTROL Target] {#section-988873ba5ede4317953193bd7ac5474c}
 
-[!UICONTROL Target] 화면을 사용하여 [Adobe Target](https://experienceleague.adobe.com/docs/target/using/target-home.html) 요청 또는 [mboxTrace](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html#section_256FCF7C14BB435BA2C68049EF0BA99E) 응답 세부 정보를 봅니다.
+[!UICONTROL Target] 화면을 사용하여 [Adobe Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ko) 요청 또는 [mboxTrace](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html?lang=ko#section_256FCF7C14BB435BA2C68049EF0BA99E) 응답 세부 정보를 봅니다.
 
 자세한 내용은 [Target 구현에 디버거 사용](./target.md)에 대한 안내서를 참조하십시오.
 
 ## [!UICONTROL Audience Manager] {#section-1d4484f8b46f457f859ba88039a9a585}
 
-[[!UICONTROL Audience Manager]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 탭을 사용하여 Adobe Audience Manager에서 [이벤트](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-event-calls/dcs-event-calls.html)에 대한 세부 정보를 볼 수 있습니다. 확장할 조직을 선택하고 정보를 표시합니다.
+[[!UICONTROL Audience Manager]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ko) 탭을 사용하여 Adobe Audience Manager에서 [이벤트](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-event-calls/dcs-event-calls.html?lang=ko)에 대한 세부 정보를 볼 수 있습니다. 확장할 조직을 선택하고 정보를 표시합니다.
 
 ## [!UICONTROL Adobe Experience Platform 태그] {#section-ee80a9c509f2462c89c1e5bd8d05d7c8}
 
@@ -43,7 +43,7 @@ Adobe Experience Platform 웹 SDK 화면에서는 Adobe Experience Platform 웹 
 
 ## [!UICONTROL Experience Cloud ID] {#section-a96c32f8e63a4991abb296f6e8ea01cf}
 
-[!UICONTROL Experience Cloud ID] 탭을 사용하여 [Experience Cloud ID 서비스](https://experienceleague.adobe.com/docs/id-service/using/home.html) 요청을 봅니다.
+[!UICONTROL Experience Cloud ID] 탭을 사용하여 [Experience Cloud ID 서비스](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko) 요청을 봅니다.
 
 ## [!UICONTROL Dynamic Tag Management]
 

@@ -47,7 +47,7 @@ Adform을 Adobe과 통합하기 전에 다음 전제 조건이 충족되는지 �
 2. **CDP 또는 연결 SKU**: 원활한 클라이언트측 및 서버측 통신을 사용하려면 Adobe CDP(고객 데이터 플랫폼) Prime 또는 Ultimate SKU 또는 연결 SKU가 있어야 합니다.
 
 3. **Adobe Experience Platform Edge Network 구성**:
-   * Edge Network이 오프사이트 재타겟팅을 위해 실시간 이벤트 전달을 지원하도록 구성되어 있는지 확인합니다. 자세한 내용은 Adobe의 [이벤트 전달 시작 안내서](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started)를 참조하십시오.
+   * Edge Network이 오프사이트 재타겟팅을 위해 실시간 이벤트 전달을 지원하도록 구성되어 있는지 확인합니다. 자세한 내용은 Adobe의 [이벤트 전달 시작 안내서](https://experienceleague.adobe.com/ko/docs/experience-platform/tags/event-forwarding/getting-started)를 참조하십시오.
    * 이 단계는 Adform의 서버측 끝점에 데이터를 효율적으로 전송하는 데 중요합니다.
 
 이러한 필수 구성 요소가 준비되면 [!DNL Adform] 확장을 계속 구성하고 배포할 수 있습니다.

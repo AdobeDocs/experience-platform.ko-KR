@@ -17,7 +17,7 @@ Adobe Experience Platform에 저장된 데이터는 시스템 수준 키를 사�
 
 >[!AVAILABILITY]
 >
->Adobe Experience Platform은 Microsoft Azure 및 Amazon Web Services(AWS) 모두에 대해 CMK(Customer Managed Keys)를 지원합니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. AWS에서 구현이 실행되는 경우 Experience Platform 데이터 암호화에 KMS(키 관리 서비스)를 사용할 수 있습니다. 지원되는 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하십시오.
+>Adobe Experience Platform은 Microsoft Azure 및 Amazon Web Services(AWS) 모두에 대해 CMK(Customer Managed Keys)를 지원합니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. AWS에서 구현이 실행되는 경우 Experience Platform 데이터 암호화에 KMS(키 관리 서비스)를 사용할 수 있습니다. 지원되는 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/landing/multi-cloud)를 참조하십시오.
 >
 >AWS KMS의 암호화 키 생성 및 관리에 대한 자세한 내용은 [AWS KMS 데이터 암호화 안내서](./aws/configure-kms.md)를 참조하세요. Azure 구현의 경우 [Azure Key Vault 구성 가이드](./azure/azure-key-vault-config.md)를 참조하세요.
 
@@ -39,7 +39,7 @@ CMK를 사용하려면 플랫폼의 호스팅 환경([!DNL Azure] 또는 AWS)이
 
 Adobe Experience Platform에서 [!UICONTROL 암호화] 섹션을 보고 액세스하려면 역할을 만들고 해당 역할에 [!UICONTROL 고객 관리 키 관리] 권한을 할당해야 합니다.  [!UICONTROL 고객 관리 키 관리] 권한이 있는 모든 사용자는 조직에 대해 CMK를 사용할 수 있습니다.
 
-Experience Platform에서 역할 및 권한을 할당하는 방법에 대한 자세한 내용은 [권한 구성 설명서](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html)를 참조하세요.
+Experience Platform에서 역할 및 권한을 할당하는 방법에 대한 자세한 내용은 [권한 구성 설명서](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=ko)를 참조하세요.
 
 ### Azure 관련 사전 요구 사항
 
@@ -109,7 +109,7 @@ Azure의 Key Vault, 키, CMK 앱 또는 AWS의 암호화 키에 대한 액세스
 
 >[!TIP]
 >
->기본이 아닌(캐시된/임시) 데이터에 대한 7일 데이터 세트 만료에 대한 두 가지 사용 사례별 예외가 있습니다. 이러한 기능에 대한 자세한 내용은 해당 설명서 를 참조하십시오.<ul><li>[Adobe Journey Optimizer URL 단축기](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[Edge 예측](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>기본이 아닌(캐시된/임시) 데이터에 대한 7일 데이터 세트 만료에 대한 두 가지 사용 사례별 예외가 있습니다. 이러한 기능에 대한 자세한 내용은 해당 설명서 를 참조하십시오.<ul><li>[Adobe Journey Optimizer URL 단축기](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=ko#message-preset-sms)</li><li>[Edge 예측](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=ko#edge-projections)</li></ul>
 
 ## 다음 단계
 

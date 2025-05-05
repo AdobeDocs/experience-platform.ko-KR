@@ -40,7 +40,7 @@ ht-degree: 4%
 - [데이터 세트](../../catalog/datasets/overview.md)
 - [스키마](../../xdm//home.md)
 - [대상자](../../segmentation/home.md)
-- Adobe Journey Optimizer의 [여정](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- Adobe Journey Optimizer의 [여정](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## 사용 사례를 달성하는 방법: 높은 수준의 개요 {#achieve-the-use-case-high-level}
 

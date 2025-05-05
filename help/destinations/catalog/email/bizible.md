@@ -16,7 +16,7 @@ ht-degree: 4%
 
 [!DNL Bizible]은(는) 데이터에 대한 탁월한 가시성을 제공하는 업계 최고의 B2B 속성 솔루션입니다. 따라서 증가하는 데이터를 효과적으로 결정할 수 있습니다.
 
-[!DNL Bizible]은(는) Adobe Experience Platform의 이메일 확장입니다. Bizible에 대한 자세한 내용은 Bizible 개요 리소스에서 [마케팅 속성](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html)을 참조하십시오.
+[!DNL Bizible]은(는) Adobe Experience Platform의 이메일 확장입니다. Bizible에 대한 자세한 내용은 Bizible 개요 리소스에서 [마케팅 속성](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=ko)을 참조하십시오.
 
 이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방식에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 

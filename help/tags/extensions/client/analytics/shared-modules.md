@@ -19,7 +19,7 @@ ht-degree: 70%
 
 ## [!DNL get-tracker]
 
-Adobe Analytics에서 비콘을 전송하기 전에 추적기 개체를 초기화해야 합니다. 초기화 프로세스는 추적기 개체를 만들면 발생하는 [AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html)를 로드한 후 시작합니다.
+Adobe Analytics에서 비콘을 전송하기 전에 추적기 개체를 초기화해야 합니다. 초기화 프로세스는 추적기 개체를 만들면 발생하는 [AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko)를 로드한 후 시작합니다.
 
 다음과 같이 `get-tracker` 공유 모듈을 사용하여 추적기 개체가 완전히 초기화된 후 추적기 개체에 액세스할 수 있습니다.
 

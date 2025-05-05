@@ -27,7 +27,7 @@ ht-degree: 9%
 >id="platform_sandboxes_sandboxtypes"
 >title="샌드박스 유형"
 >abstract="샌드박스 유형은 프로덕션인지 또는 개발 샌드박스인지 여부를 나타냅니다. 프로덕션 샌드박스에는 라이브 데이터가 포함되고 개발 샌드박스는 테스트와 개발 목적으로 사용됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="UI에서 샌드박스 만들기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html?lang=ko#create" text="UI에서 샌드박스 만들기"
 
 Experience Platform에서는 두 가지 샌드박스 유형을 사용할 수 있습니다.
 
@@ -53,7 +53,7 @@ Experience Platform 인스턴스는 각 샌드박스가 Experience Platform 리�
 
 기본 Experience Platform 라이선스는 프로덕션 또는 개발로 분류할 수 있는 총 5개의 샌드박스를 부여합니다. 추가 팩 10개, 최대 총 75개의 샌드박스에 대해 라이센스를 부여할 수 있습니다.
 
-프로덕션 샌드박스를 재설정하거나 삭제할 수 있습니다. 단, Adobe Analytics에서 [CDA(Cross Device Analytics)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 기능을 위해 사용 중이거나, ID 그래프 내에서 호스팅되는 경우 [PBD(People Based Destinations)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) 기능을 위해 Adobe Audience Manager에서 사용됩니다.
+프로덕션 샌드박스를 재설정하거나 삭제할 수 있습니다. 단, Adobe Analytics에서 [CDA(Cross Device Analytics)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=ko) 기능을 위해 사용 중이거나, ID 그래프 내에서 호스팅되는 경우 [PBD(People Based Destinations)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=ko) 기능을 위해 Adobe Audience Manager에서 사용됩니다.
 
 프로덕션 샌드박스의 제목을 업데이트할 수 있습니다. 단, 프로덕션 샌드박스의 이름은 변경할 수 없습니다.
 

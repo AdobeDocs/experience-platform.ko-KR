@@ -14,7 +14,7 @@ ht-degree: 77%
 
 >[!AVAILABILITY]
 >
->* 이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate에 라이선스를 부여한 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
+>* 이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate에 라이선스를 부여한 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
 
 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선합니다.
 
@@ -41,7 +41,7 @@ Adobe은 한 가지 방법으로 모든 요구 사항을 충족할 수 있는 �
 
 >[!WARNING]
 >
->Real-Time CDP에 수집된 추가 파트너 제공 특성은 *총 데이터 볼륨*&#x200B;에 영향을 줍니다. 총 데이터 볼륨에 대한 자세한 내용은 [Real-time Customer Data Platform 제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html)을 참조하세요.
+>Real-Time CDP에 수집된 추가 파트너 제공 특성은 *총 데이터 볼륨*&#x200B;에 영향을 줍니다. 총 데이터 볼륨에 대한 자세한 내용은 [Real-time Customer Data Platform 제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html)을 참조하세요.
 
 ## 비디오 워크스루 {#video-walkthrough}
 

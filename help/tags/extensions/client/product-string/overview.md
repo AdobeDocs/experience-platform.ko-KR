@@ -27,7 +27,7 @@ ht-degree: 85%
 Category;Product;Quantity;Price;eventN=X|eventN2=X2;eVarN=merch_category|eVarN2=merch_category2
 ```
 
-전체 문서를 보려면 [제품](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html)을 참조하십시오.
+전체 문서를 보려면 [제품](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html?lang=ko)을 참조하십시오.
 
 ## 확장 지침
 

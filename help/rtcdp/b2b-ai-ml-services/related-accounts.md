@@ -3,7 +3,7 @@ title: Real-Time CDP B2B 에디션의 관련 계정
 type: Documentation
 description: Real-Time CDP B2B Experience Platform의 관련 계정 기능에 대한 개요 및 추가 정보입니다.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
 source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt

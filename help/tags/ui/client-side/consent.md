@@ -38,13 +38,13 @@ Adobe Experience Platform에서 [!DNL Advertising Cloud]을(를) 자동으로 �
 
 이러한 설정을 선택하지 않으면 Experience Platform에서 [!DNL Adobe Analytics]을(를) 자동으로 실행하지 않습니다. [!DNL Analytics]는 규칙 작업에 명시적으로 지시한 경우에만 실행됩니다. 규칙 조건을 사용하여 언제 및 무엇을 실행할지 결정합니다. 예를 들어 쿠키를 사용하여 옵트인 상태를 결정하려면 데이터 요소를 설정하여 해당 쿠키를 읽은 후 규칙의 조건으로 사용하여 비콘 보내기 작업을 언제 실행할지 결정합니다.
 
-별도로 동의 관리 플랫폼과 함께 [Adobe 옵트인 개체](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html)를 사용하여 이 태그의 실행을 제어할 수 있습니다.
+별도로 동의 관리 플랫폼과 함께 [Adobe 옵트인 개체](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=ko)를 사용하여 이 태그의 실행을 제어할 수 있습니다.
 
 동의 관리자(예: OneTrust)와 통합하면 고객에 대한 동의 쿠키를 설정 및 추적할 수 있으며, 이를 규칙 빌더에서 사용할 수 있습니다.
 
 ## Audience Manager
 
-현재 DIL은 고객 페이지에 배치되면 자동으로 실행되도록 설정되어 있습니다. 동의 관리 플랫폼과 함께 [Adobe 옵트인 개체](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html)를 사용하여 이 태그의 실행을 제어하십시오.
+현재 DIL은 고객 페이지에 배치되면 자동으로 실행되도록 설정되어 있습니다. 동의 관리 플랫폼과 함께 [Adobe 옵트인 개체](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=ko)를 사용하여 이 태그의 실행을 제어하십시오.
 
 [!DNL Adobe]는 [!DNL Analytics] 내에서 서버측 전달을 사용할 것을 권장합니다.
 
@@ -52,12 +52,12 @@ Adobe Experience Platform에서 [!DNL Advertising Cloud]을(를) 자동으로 �
 
 현재 [!DNL Experience Cloud ID]는 고객 페이지에 배치되면 자동으로 실행됩니다. 
 
-동의 관리 플랫폼과 함께 [Adobe 옵트인 개체](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html)를 사용하여 이 태그의 실행을 제어하십시오.
+동의 관리 플랫폼과 함께 [Adobe 옵트인 개체](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=ko)를 사용하여 이 태그의 실행을 제어하십시오.
 
 ## Target
 
 Adobe Experience Platform에서 [!DNL Target]을(를) 자동으로 실행하지 않습니다. [!DNL Target]는 규칙 작업에 명시적으로 지시한 경우에만 실행됩니다. 규칙 조건을 사용하여 언제 및 무엇을 실행할지 결정합니다. 예를 들어 쿠키를 사용하여 옵트인 상태를 결정하려면 데이터 요소를 설정하여 해당 쿠키를 읽은 후 규칙의 조건으로 사용하여 [!DNL Target] 로드 작업을 언제 실행할지 결정합니다.
 
-별도로 동의 관리 플랫폼과 함께 [Adobe 옵트인 개체](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html)를 사용하여 이 태그의 실행을 제어할 수 있습니다.
+별도로 동의 관리 플랫폼과 함께 [Adobe 옵트인 개체](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=ko)를 사용하여 이 태그의 실행을 제어할 수 있습니다.
 
 동의 관리자(예: OneTrust)와 통합하면 고객에 대한 동의 쿠키를 설정 및 추적할 수 있으며, 이를 규칙 빌더에서 사용할 수 있습니다.

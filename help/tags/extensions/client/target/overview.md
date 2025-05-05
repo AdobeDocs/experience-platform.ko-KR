@@ -68,7 +68,7 @@ Target이 브라우저에서 쿠키를 설정하는 위치를 결정합니다.
 
 정의한 기간 내에 Target에서 응답을 받지 못하면 요청 시간이 초과되고 기본 콘텐츠가 표시됩니다. 방문자 세션 중에 추가 요청을 계속 시도합니다. 기본값은 3000ms이며, 이 값은 Target 사용자 인터페이스에 구성된 시간 초과와 다를 수 있습니다.
 
-시간 초과 설정 작동 방식에 대한 자세한 내용은 [Adobe Target 도움말](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html)을 참조하십시오.
+시간 초과 설정 작동 방식에 대한 자세한 내용은 [Adobe Target 도움말](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=ko)을 참조하십시오.
 
 #### Target 사용자 인터페이스에서 사용할 수 있는 기타 at.js 설정
 
@@ -115,7 +115,7 @@ Target 확장은 규칙의 Then 부분에서 다음 작업을 제공합니다.
 * **Body Hiding:** 이 설정을 활성화하거나 비활성화할 수 있습니다. 기본값은 Enabled로, HTML BODY가 숨겨짐을 의미합니다.
 * **Body Hidden Style:** 기본값은 `body{opacity:0}`입니다. 이 값은 `body{display:none}`과 같은 다른 값으로 변경될 수 있습니다.
 
-자세한 내용은 [Target 온라인 도움말 설명서](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html)를 참조하십시오.
+자세한 내용은 [Target 온라인 도움말 설명서](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=ko)를 참조하십시오.
 
 ## Adobe Target 기본 배포
 

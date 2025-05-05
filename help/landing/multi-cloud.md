@@ -72,7 +72,7 @@ Adobe은 다음과 같이 Experience Platform에서 실행되는 모든 애플�
 
 * [Real-Time Customer Data Platform](../rtcdp/home.md)
 * [Adobe Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/ajo-home)
-* [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-landing)
+* [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/cja-landing)
 
 그러나 Azure와 AWS 구현에는 일부 기능이 다를 수 있습니다. 이러한 차이점은 아래 섹션과 해당되는 경우 제품 설명서의 다른 부분에 요약되어 있습니다.
 

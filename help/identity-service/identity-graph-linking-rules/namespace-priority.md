@@ -73,7 +73,7 @@ ID는 실제 개체를 나타냅니다. ID 그래프에 표시되는 객체는 �
 
 ## 네임스페이스 우선 순위 사용
 
-현재 네임스페이스 우선 순위는 실시간 고객 프로필의 시스템 동작에 영향을 줍니다. 아래 다이어그램은 이 개념을 보여 줍니다. 자세한 내용은 [Adobe Experience Platform 및 응용 프로그램 아키텍처 다이어그램](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications)에 대한 안내서를 참조하십시오.
+현재 네임스페이스 우선 순위는 실시간 고객 프로필의 시스템 동작에 영향을 줍니다. 아래 다이어그램은 이 개념을 보여 줍니다. 자세한 내용은 [Adobe Experience Platform 및 응용 프로그램 아키텍처 다이어그램](https://experienceleague.adobe.com/ko/docs/blueprints-learn/architecture/architecture-overview/platform-applications)에 대한 안내서를 참조하십시오.
 
 ![네임스페이스 우선 순위 응용 프로그램 범위의 다이어그램](../images/namespace-priority/application-scope.png)
 

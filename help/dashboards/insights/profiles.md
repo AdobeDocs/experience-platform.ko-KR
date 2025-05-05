@@ -481,7 +481,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-이 insight의 모양 및 기능에 대한 전체 정보는 [프로필 개수 위젯 안내서](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count)에서 확인할 수 있습니다.
+이 insight의 모양 및 기능에 대한 전체 정보는 [프로필 개수 위젯 안내서](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=ko#profile-count)에서 확인할 수 있습니다.
 
 이 insight의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 위젯 설명서](../guides/profiles.md#profile-count)를 참조하세요.
 

@@ -52,7 +52,7 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 
 ### 개발자 액세스 권한 얻기 {#gain-developer-access}
 
-조직의 Admin Console 관리자에게 문의하여 Experience Platform 제품 프로필에 개발자로 추가하십시오. [제품 프로필에 대한 개발자 액세스를 관리](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)하는 방법에 대한 특정 지침은 Admin Console 설명서를 참조하십시오.
+조직의 Admin Console 관리자에게 문의하여 Experience Platform 제품 프로필에 개발자로 추가하십시오. [제품 프로필에 대한 개발자 액세스를 관리](https://helpx.adobe.com/kr/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)하는 방법에 대한 특정 지침은 Admin Console 설명서를 참조하십시오.
 
 개발자로 할당되면 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)에서 통합 만들기를 시작할 수 있습니다. 이러한 통합은 외부 앱 및 서비스에서 Adobe API로의 파이프라인입니다.
 
@@ -60,7 +60,7 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 
 Admin Console 관리자도 귀하를 동일한 제품 프로필에 사용자로 추가해야 합니다. 사용자 액세스를 사용하면 UI에서 사용자가 수행하는 API 작업의 결과를 볼 수 있습니다.
 
-자세한 내용은 [Admin Console에서 사용자 그룹 관리](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html)에 대한 안내서를 참조하십시오.
+자세한 내용은 [Admin Console에서 사용자 그룹 관리](https://helpx.adobe.com/kr/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html)에 대한 안내서를 참조하십시오.
 
 ## API 키(클라이언트 ID) 및 조직 ID 생성 {#generate-credentials}
 

@@ -99,4 +99,4 @@ Adobe Experience Platform에서 계산된 속성은 이벤트 수준 데이터�
 
 ## Adobe Journey Optimizer에서 계산된 속성을 사용하는 방법은 무엇입니까?
 
-여정에서 계산된 특성을 사용하려면 `SystemComputedAttributes` 필드 그룹을 Experience Platform 데이터 원본에 추가해야 합니다. Experience Platform 데이터 원본 구성에 대한 자세한 내용은 [Adobe Experience Platform 데이터 원본 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html)를 참조하십시오.
+여정에서 계산된 특성을 사용하려면 `SystemComputedAttributes` 필드 그룹을 Experience Platform 데이터 원본에 추가해야 합니다. Experience Platform 데이터 원본 구성에 대한 자세한 내용은 [Adobe Experience Platform 데이터 원본 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=ko)를 참조하십시오.

@@ -13,13 +13,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->이 문서는 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
+>이 문서는 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/landing/multi-cloud)를 참조하세요.
 >
 >AWS의 [고객 관리 키](../overview.md)(CMK)는 Privacy 및 Security Shield에서 지원되지만 Healthcare Shield에서는 사용할 수 없습니다. Azure의 CMK는 Healthcare Shield뿐만 아니라 Privacy 및 Security Shield 모두에서 지원됩니다.
 
 이 안내서를 사용하여 Adobe Experience Platform에 대한 암호화 키를 생성, 관리 및 제어하여 Amazon Web Services(AWS) KMS(키 관리 서비스)로 데이터를 보호합니다. 이러한 통합을 통해 규정 준수를 간소화하고 자동화를 통해 운영을 간소화하며 자체 주요 관리 인프라를 유지 관리할 필요가 없어집니다.
 
-Customer Journey Analytics 관련 지침은 [Customer Journey Analytics CMK 설명서](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)를 참조하세요.
+Customer Journey Analytics 관련 지침은 [Customer Journey Analytics CMK 설명서](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/cja-privacy/cmk)를 참조하세요.
 
 >[!IMPORTANT]
 >

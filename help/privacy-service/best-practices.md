@@ -77,7 +77,7 @@ Privacy Service API 설명서에는 [사용 가능한 쿼리 매개 변수 필�
 
 ## 액세스 요청 데이터 {#access-request-data}
 
-데이터 주체 정보가 요청되면 각 서비스는 해당 데이터를 저장하고 사용하는 방식과 일치하는 형식으로 데이터를 반환합니다. 모든 서비스가 요청을 완료하면 이 데이터를 다운로드할 수 있도록 작업 세부 사항에 .ZIP 아카이브 파일 URL이 제공됩니다. [개인 정보 작업 결과를 다운로드하는 방법](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=en#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F)에 대한 자세한 내용은 문제 해결 안내서를 참조하십시오.
+데이터 주체 정보가 요청되면 각 서비스는 해당 데이터를 저장하고 사용하는 방식과 일치하는 형식으로 데이터를 반환합니다. 모든 서비스가 요청을 완료하면 이 데이터를 다운로드할 수 있도록 작업 세부 사항에 .ZIP 아카이브 파일 URL이 제공됩니다. [개인 정보 작업 결과를 다운로드하는 방법](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=ko#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F)에 대한 자세한 내용은 문제 해결 안내서를 참조하십시오.
 
 다음은 데이터 아카이브 관리와 관련된 주요 참고 항목입니다.
 

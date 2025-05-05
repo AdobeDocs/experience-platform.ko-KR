@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-Adobe Experience Platform Web SDK을 사용하면 웹 애플리케이션의 클라이언트측에서 [Target용 Adobe Analytics(A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) 데이터를 수집할 수 있습니다.
+Adobe Experience Platform Web SDK을 사용하면 웹 애플리케이션의 클라이언트측에서 [Target용 Adobe Analytics(A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ko) 데이터를 수집할 수 있습니다.
 
-클라이언트측 로깅은 관련 [!DNL Target] 데이터가 클라이언트측에서 반환됨을 의미하며, 이를 수집하여 Analytics와 공유할 수 있도록 해줍니다. [데이터 삽입 API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html)를 사용하여 데이터를 Analytics에 수동으로 전송하려면 이 옵션을 활성화해야 합니다.
+클라이언트측 로깅은 관련 [!DNL Target] 데이터가 클라이언트측에서 반환됨을 의미하며, 이를 수집하여 Analytics와 공유할 수 있도록 해줍니다. [데이터 삽입 API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=ko)를 사용하여 데이터를 Analytics에 수동으로 전송하려면 이 옵션을 활성화해야 합니다.
 
 >[!NOTE]
 >
@@ -227,7 +227,7 @@ Target Edge에서 제안 응답을 계산하면 Analytics 클라이언트측 로
 
 ### 양식 기반 경험 작성기 활동 {#form-based-composer}
 
-웹 SDK을 사용하여 [Adobe Target 양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 활동의 제안 실행을 제어할 수 있습니다.
+웹 SDK을 사용하여 [Adobe Target 양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ko) 활동의 제안 실행을 제어할 수 있습니다.
 
 특정 결정 범위에 대한 제안을 요청할 때 반환되는 제안에는 적절한 Analytics 토큰이 포함됩니다. 가장 좋은 방법은 Experience Platform Web SDK `sendEvent` 명령을 체인한 다음 반환된 제안을 반복하여 실행하면서 Analytics 토큰을 동시에 수집하는 것입니다.
 
@@ -467,7 +467,7 @@ alloy("sendEvent", {
 
 ### 시각적 경험 작성기 활동 {#visual-experience-composer-acitivties}
 
-웹 SDK을 사용하면 [VEC(시각적 경험 작성기)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)를 사용하여 작성된 오퍼를 처리할 수 있습니다.
+웹 SDK을 사용하면 [VEC(시각적 경험 작성기)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ko)를 사용하여 작성된 오퍼를 처리할 수 있습니다.
 
 >[!NOTE]
 >

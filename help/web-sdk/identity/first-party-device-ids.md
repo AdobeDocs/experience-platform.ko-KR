@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 웹 SDK에서 자사 디바이스 ID 사용
 
-Adobe Experience Platform Web SDK은 쿠키를 사용하여 웹 사이트 방문자에게 [Adobe Experience Cloud ID(ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html)를 할당하여 사용자 행동을 추적합니다. 쿠키 수명에 대한 브라우저 제한을 해결하기 위해 자사 디바이스 ID(FPID)라고 하는 디바이스 식별자를 설정하고 관리할 수 있습니다.
+Adobe Experience Platform Web SDK은 쿠키를 사용하여 웹 사이트 방문자에게 [Adobe Experience Cloud ID(ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=ko)를 할당하여 사용자 행동을 추적합니다. 쿠키 수명에 대한 브라우저 제한을 해결하기 위해 자사 디바이스 ID(FPID)라고 하는 디바이스 식별자를 설정하고 관리할 수 있습니다.
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ ID는 다음 순서로 우선 순위가 지정됩니다.
 
 | ‍ | 설명 |
 | --- | --- |
-| 첫 방문 | [!DNL FPID] 쿠키 설정을 아직 시작하지 않았다고 가정해 보십시오. [AMCV 쿠키](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8)에 포함된 [!DNL ECID]은(는) 방문자를 식별하는 데 사용되는 식별자입니다. |
+| 첫 방문 | [!DNL FPID] 쿠키 설정을 아직 시작하지 않았다고 가정해 보십시오. [AMCV 쿠키](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=ko#section-c55af54828dc4cce89f6118655d694c8)에 포함된 [!DNL ECID]은(는) 방문자를 식별하는 데 사용되는 식별자입니다. |
 | 두 번째 방문 | [!DNL FPID] 솔루션의 롤아웃이 시작되었습니다. 기존 [!DNL ECID]이(가) 여전히 있으며 방문자 식별을 위한 기본 식별자로 유지됩니다. |
 | 세 번째 방문 | 두 번째와 세 번째 방문 사이에 브라우저 정책으로 인해 [!DNL ECID]이(가) 삭제될 만큼 충분한 시간이 경과되었습니다. 그러나 [!DNL FPID]이(가) [!DNL DNS] [!DNL A] 레코드를 사용하여 설정되었으므로 [!DNL FPID]이(가) 유지됩니다. [!DNL FPID]은(는) 이제 기본 ID로 간주되며 최종 사용자 장치에 기록된 [!DNL ECID]을(를) 시드하는 데 사용됩니다. 이제 사용자는 Adobe Experience Platform 및 Experience Cloud 솔루션의 새 방문자로 간주됩니다. |
 | 네 번째 방문 | 세 번째와 네 번째 방문 사이에 브라우저 정책으로 인해 [!DNL ECID]이(가) 삭제될 만큼 충분한 시간이 경과되었습니다. 이전 방문과 마찬가지로 [!DNL FPID]은(는) 설정된 방식으로 인해 유지됩니다. 이번에는 이전 방문과 동일한 [!DNL ECID]이(가) 생성됩니다. 사용자는 Experience Platform 및 Experience Cloud 솔루션 전체에서 이전 방문과 동일한 사용자로 표시됩니다. |
@@ -133,7 +133,7 @@ ID는 다음 순서로 우선 순위가 지정됩니다.
 >
 >[!DNL A] 또는 [!DNL AAAA] 레코드는 쿠키 설정 및 추적에 대해서만 지원됩니다. 데이터 수집을 위한 기본 메서드는 [!DNL DNS CNAME]을(를) 통해 수행됩니다. [!DNL FPIDs]은(는) [!DNL A] 또는 [!DNL AAAA] 레코드를 사용하여 설정되었으며 [!DNL CNAME]을(를) 사용하여 Adobe으로 전송됩니다.
 >
->[Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program)도 자사 데이터 수집에 대해 지원됩니다.
+>[Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ko#adobe-managed-certificate-program)도 자사 데이터 수집에 대해 지원됩니다.
 
 [!DNL FPID] 쿠키가 설정되면 해당 값을 가져와 이벤트 데이터가 수집될 때 Adobe으로 보낼 수 있습니다. 수집된 [!DNL FPIDs]은(는) Adobe Experience Cloud 애플리케이션에서 기본 식별자인 [!DNL ECIDs]을(를) 생성하는 데 사용됩니다.
 
@@ -164,7 +164,7 @@ DNS의 [!DNL CNAME] 레코드를 사용하면 한 도메인 이름에서 다른 
 
 >[!IMPORTANT]
 >
->이 기능을 사용하려면 [자사 데이터 수집](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en)을 사용하도록 설정해야 합니다.
+>이 기능을 사용하려면 [자사 데이터 수집](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ko)을 사용하도록 설정해야 합니다.
 
 **2단계. 데이터 스트림에 대해**&#x200B;[!UICONTROL &#x200B;자사 ID 쿠키&#x200B;]&#x200B;**기능을 사용하도록 설정**
 
@@ -181,7 +181,7 @@ Adobe Experience Cloud 사용 방법에 대한 자세한 내용은 [자사 쿠�
 >[!NOTE]
 >
 >자사 ID를 사용하는 경우 타사 ID 동기화를 수행할 수 없습니다. 타사 ID 동기화는 [!DNL Visitor ID] 서비스와 해당 서비스에서 생성한 `UUID`을(를) 사용합니다. 자사 ID 기능을 사용하는 경우 [!DNL Visitor ID] 서비스를 사용하지 않고 [!DNL ECID]이(가) 생성되므로 타사 ID를 동기화할 수 없습니다.
-><br> 자사 ID를 사용하는 경우 Audience Manager 파트너 ID 동기화가 대부분 `UUIDs` 또는 `DIDs`을(를) 기반으로 하는 경우 파트너 플랫폼에서 활성화되도록 타깃팅된 [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager) 기능이 지원되지 않습니다. 자사 ID에서 파생된 [!DNL ECID]이(가) `UUID`에 연결되어 있지 않으므로 주소를 지정할 수 없습니다.
+><br> 자사 ID를 사용하는 경우 Audience Manager 파트너 ID 동기화가 대부분 `UUIDs` 또는 `DIDs`을(를) 기반으로 하는 경우 파트너 플랫폼에서 활성화되도록 타깃팅된 [Audience Manager](https://experienceleague.adobe.com/ko/docs/audience-manager) 기능이 지원되지 않습니다. 자사 ID에서 파생된 [!DNL ECID]이(가) `UUID`에 연결되어 있지 않으므로 주소를 지정할 수 없습니다.
 
 ## 방법 2: `identityMap`에서 FPID 사용 {#identityMap}
 

@@ -23,7 +23,7 @@ Adobe Experience Platform은 클라이언트측 소스에서 고객 경험 데�
 
 데이터 수집은 다음을 포함하여 수집된 데이터 세트의 검색 가능성과 액세스 가능성에 중점을 둡니다.
 
-* [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
+* [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=ko)
 * [태그](../tags/home.md)
 * [데이터스트림](../datastreams/overview.md)
 * [이벤트 전달](../tags/ui/event-forwarding/overview.md)

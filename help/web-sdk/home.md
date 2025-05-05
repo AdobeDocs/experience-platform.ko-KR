@@ -81,7 +81,7 @@ Adobe은 [기존 라이브러리](#sdks)에서 Web SDK으로 마이그레이션�
 >
 >다음 Target 기능은 `at.js`에서 Web SDK으로 마이그레이션할 때 지원되지 않습니다.
 >
->* [오퍼 리디렉션](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html)
->* [CNAME 및 도메인 간 지원](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/atjs-cookies.html)
+>* [오퍼 리디렉션](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=ko)
+>* [CNAME 및 도메인 간 지원](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/atjs-cookies.html?lang=ko)
 
 `AT.js`에서 웹 SDK으로 마이그레이션한 후 구성에서 `targetMigrationEnabled` 옵션을 제거하십시오.

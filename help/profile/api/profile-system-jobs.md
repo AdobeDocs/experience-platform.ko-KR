@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->다음 엔드포인트는 Microsoft Azure 및 Amazon Web Services(AWS)에서 실행되는 Adobe Experience Platform 구현마다 다를 수 있습니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
+>다음 엔드포인트는 Microsoft Azure 및 Amazon Web Services(AWS)에서 실행되는 Adobe Experience Platform 구현마다 다를 수 있습니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/landing/multi-cloud)를 참조하세요.
 
 Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 수집하고 개별 고객을 위한 강력한 프로필을 구축할 수 있습니다. [!DNL Experience Platform]에 수집된 데이터는 [!DNL Data Lake]에 저장되며, 프로필에 대해 데이터 세트를 사용하도록 설정한 경우 해당 데이터도 [!DNL Real-Time Customer Profile] 데이터 저장소에 저장됩니다. 더 이상 필요하지 않거나 오류로 추가된 데이터를 제거하기 위해 프로필 저장소에서 데이터 세트와 연결된 프로필 데이터를 삭제해야 하는 경우가 있습니다. [!DNL Real-Time Customer Profile] API를 사용하여 [!DNL Profile] 시스템 작업 또는 &quot;삭제 요청&quot;을 만들어야 합니다.
 

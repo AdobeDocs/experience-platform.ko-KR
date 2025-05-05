@@ -199,7 +199,7 @@ ID 일치 요구 사항에 대한 자세한 설명은 [ID 일치 요구 사항](
 +++답변
 아니요. [웹 SDK](../web-sdk/home.md)은(는) 대상자를 [Adobe Target](catalog/personalization/adobe-target-connection.md)에 활성화하기 위해 필요하지 않습니다.
 
-그러나 Web SDK 대신 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html)을(를) 사용하면 다음 세션 개인화만 지원됩니다.
+그러나 Web SDK 대신 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=ko)을(를) 사용하면 다음 세션 개인화만 지원됩니다.
 
 [동일 페이지 및 다음 페이지 개인화](ui/activate-edge-personalization-destinations.md) 사용 사례의 경우 [Web SDK](../web-sdk/home.md) 또는 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)를 사용해야 합니다. 자세한 구현 정보는 [Edge 대상으로 대상 활성화](ui/activate-edge-personalization-destinations.md)에 대한 설명서를 참조하십시오.
 +++
@@ -229,7 +229,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### Adobe Target에서 활성화된 속성은 어디에서 볼 수 있습니까?
 
 +++답변
-[JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) 및 [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) 오퍼의 Target에서 특성을 사용할 수 있습니다.
+[JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=ko) 및 [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=ko) 오퍼의 Target에서 특성을 사용할 수 있습니다.
 +++
 
 ### 데이터스트림 없이 대상을 만든 다음 나중에 동일한 대상에 데이터스트림을 추가할 수 있습니까?

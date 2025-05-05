@@ -23,7 +23,7 @@ ht-degree: 65%
 
 **기능**:
 
-* 사용자가 [변수 설정 작업](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables)의 JSON 버전을 보고 편집할 수 있는 새 기능이 추가되었습니다. Adobe 웹 SDK 확장 기능에는 JSON을 제공하여 [분석 변수를 채우기](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types)하는 작업도 포함됩니다. 마이그레이션 중인 고객은 AA 확장에서 웹 SDK 확장으로 JSON 데이터를 복사함으로써 각 변수를 수동으로 추가하는 대신 여러 설정을 한 번에 쉽게 전송할 수 있습니다.
+* 사용자가 [변수 설정 작업](https://experienceleague.adobe.com/ko/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables)의 JSON 버전을 보고 편집할 수 있는 새 기능이 추가되었습니다. Adobe 웹 SDK 확장 기능에는 JSON을 제공하여 [분석 변수를 채우기](https://experienceleague.adobe.com/ko/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types)하는 작업도 포함됩니다. 마이그레이션 중인 고객은 AA 확장에서 웹 SDK 확장으로 JSON 데이터를 복사함으로써 각 변수를 수동으로 추가하는 대신 여러 설정을 한 번에 쉽게 전송할 수 있습니다.
 
 ## 2024년 8월 12일
 
@@ -61,7 +61,7 @@ ht-degree: 65%
 
 **버그 수정**:
 
-* 높은 엔트로피 [사용자 에이전트 클라이언트 힌트](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API가 잘못된 브라우저에 대한 추가 오류 처리를 추가했습니다.
+* 높은 엔트로피 [사용자 에이전트 클라이언트 힌트](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=ko) API가 잘못된 브라우저에 대한 추가 오류 처리를 추가했습니다.
 * 기본적으로 `x-www-form-urlencoded`을(를) 사용하도록 [POST](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Methods/POST) Content-Type 헤더를 변경했습니다.
 
 ## 2022년 9월 23일
@@ -218,7 +218,7 @@ ht-degree: 65%
 
 * Audience Manager용 DIL 9.2를 지원하도록 Adobe Analytics 확장이 업데이트됨
 
-* [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)을 지원하도록 확장이 업데이트
+* [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ko#version-2.15.0)을 지원하도록 확장이 업데이트
 * 더 이상 지원되지 않으므로 다음 확인란이 제거됨: &quot;DOM 또는 화재 대상에 대상 게시 IFRAME을 첨부하지 않음&quot;
 
 ## 2019년 6월 4일
@@ -227,7 +227,7 @@ ht-degree: 65%
 
 **기능**:
 
-* 알려진 clearVars 문제에 대한 수정이 포함된 [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0)으로 Adobe Analytics 확장이 업데이트됨
+* 알려진 clearVars 문제에 대한 수정이 포함된 [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ko#version-2.14.0)으로 Adobe Analytics 확장이 업데이트됨
 * 확장에 Exchange 링크가 추가됨. 드롭다운을 선택하고 &quot;extension info&quot;를 선택하면 Exchange 목록을 확인할 수 있음
 
 **버그 수정**:

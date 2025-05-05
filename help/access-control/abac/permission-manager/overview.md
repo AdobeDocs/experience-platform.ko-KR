@@ -24,7 +24,7 @@ ht-degree: 1%
 
 특정 리소스, 작업 및 샌드박스를 선택하여 검색 범위를 좁힐 수 있습니다.
 
-[!DNL Experience Platform]의 [!UICONTROL 권한 관리자]에 액세스하려면 Experience Platform에 대한 액세스 권한이 있는 조직의 관리자여야 합니다. Adobe에서는 조직 내에서 사용자 지정 가능한 관리자 계층을 사용할 수 있지만 [!DNL Adobe Experience Platform]의 제품 관리자여야 합니다. 자세한 내용은 [관리 역할](https://helpx.adobe.com/enterprise/using/admin-roles.html)에 대한 Adobe 도움말 센터 문서를 참조하십시오.
+[!DNL Experience Platform]의 [!UICONTROL 권한 관리자]에 액세스하려면 Experience Platform에 대한 액세스 권한이 있는 조직의 관리자여야 합니다. Adobe에서는 조직 내에서 사용자 지정 가능한 관리자 계층을 사용할 수 있지만 [!DNL Adobe Experience Platform]의 제품 관리자여야 합니다. 자세한 내용은 [관리 역할](https://helpx.adobe.com/kr/enterprise/using/admin-roles.html)에 대한 Adobe 도움말 센터 문서를 참조하십시오.
 
 [!DNL Adobe] 자격 증명을 사용하여 [Adobe Experience Platform](https://experience.adobe.com/)에 로그인합니다.  로그인하면 조직의 **[!UICONTROL 개요]** 페이지가 표시됩니다. 이 페이지에는 조직이 구독한 제품이 표시됩니다. 플랫폼 통합을 위해 특성 기반 액세스 제어 작업 영역을 시작하려면 **[!UICONTROL 권한]**&#x200B;을 선택하세요.
 

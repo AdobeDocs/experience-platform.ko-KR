@@ -100,7 +100,7 @@ Adobe Experience Platform의 각 태그 속성에는 확장 화면에 다음과 
 
 >[!TIP]
 >
->각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 제공하기를 원하지 않는 사용자의 경우, 데이터 요소 값이 대체 방법으로 연결됩니다. 그런 다음 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석합니다. 자세한 내용은 [분류 규칙 빌더 도구](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) 설명서를 참조하십시오. 마지막으로 Analysis Workspace에서 세그먼트로 적용됩니다.
+>각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 제공하기를 원하지 않는 사용자의 경우, 데이터 요소 값이 대체 방법으로 연결됩니다. 그런 다음 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석합니다. 자세한 내용은 [분류 규칙 빌더 도구](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ko) 설명서를 참조하십시오. 마지막으로 Analysis Workspace에서 세그먼트로 적용됩니다.
 >
 >이렇게 하려면 &quot;비디오 메타데이터&quot;와 같은 새로운 데이터 요소를 만들고 이를 프로그래밍하여 모든 비디오 데이터 요소(위에 나열됨)를 가져와서 함께 연결합니다.
 

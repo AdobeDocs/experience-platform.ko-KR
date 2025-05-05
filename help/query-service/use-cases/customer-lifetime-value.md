@@ -81,7 +81,7 @@ CLV를 설정하는 첫 번째 단계는 사용자 작업에서 캡처한 데이
 * 예약된 세분화에 대해 모든 세그먼트 정의를 활성화합니다.
 * 스트리밍 세분화에 대해 지정된 세그먼트 정의를 활성화합니다.
 
-또는 추가 정보를 볼 수 있는 [세그먼트 빌더 비디오 튜토리얼](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html)도 있습니다.
+또는 추가 정보를 볼 수 있는 [세그먼트 빌더 비디오 튜토리얼](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html?lang=ko)도 있습니다.
 
 ## 이메일 캠페인에 대한 대상자 활성화 {#activate-audience-for-campaign}
 

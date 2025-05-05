@@ -3,7 +3,7 @@ title: Real-Time CDP B2B에서 예측 리드 및 계정 점수 관리
 type: Documentation
 description: 이 문서에서는 Experience Platform CDP B2B의 예측 리드 및 계정 점수 기능을 관리하는 방법에 대한 정보를 제공합니다.
 feature: Profiles, B2B
-badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt

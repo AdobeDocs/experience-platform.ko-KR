@@ -34,7 +34,7 @@ SendGrid는 API 전달자 토큰을 인증 메커니즘으로 사용하여 SendG
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-SendGrid 대상으로 데이터를 활성화하기 전에 [!DNL Experience Platform]에서 만든 [스키마](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko-KR), [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)가 있어야 합니다. 이 페이지의 아래 [제한](#limits) 섹션도 참조하세요.
+SendGrid 대상으로 데이터를 활성화하기 전에 [!DNL Experience Platform]에서 만든 [스키마](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko-KR), [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ko) 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ko)가 있어야 합니다. 이 페이지의 아래 [제한](#limits) 섹션도 참조하세요.
 
 >[!IMPORTANT]
 >
@@ -98,7 +98,7 @@ SendGrid를 사용하는 마케팅 팀은 SendGrid 내에서 메일링 목록을
 
 ### 대상 세부 정보 입력 {#destination-details}
 
-[이 대상을 설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)하는 동안 다음 정보를 제공해야 합니다.
+[이 대상을 설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ko)하는 동안 다음 정보를 제공해야 합니다.
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 선택적 설명입니다.

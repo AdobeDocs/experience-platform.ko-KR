@@ -61,7 +61,7 @@ Adobe Journey Optimizer에서 XDM 보기를 활용하여 마케터가 Journey Op
 
 이 경우 일회용 개발자 설정을 완료하려면 다음 단계를 수행해야 합니다.
 
-1. [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md)를 설치하고 [웹 채널 필수 구성 요소](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html) 페이지를 확인하십시오.
+1. [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md)를 설치하고 [웹 채널 필수 구성 요소](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html?lang=ko) 페이지를 확인하십시오.
 
 2. 개인화할 단일 페이지 애플리케이션에서 모든 XDM 보기를 확인합니다.
 

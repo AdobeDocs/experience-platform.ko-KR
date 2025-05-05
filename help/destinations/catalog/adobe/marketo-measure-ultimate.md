@@ -78,7 +78,7 @@ Marketo Measure 대상에 대한 다음 사전 요구 사항을 참조하십시�
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
 
-데이터 세트 내보내기가 성공했는지 확인하려면 데이터 세트가 [Snowflake 데이터 웨어하우스](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html)에 성공적으로 연결되었는지 확인할 수 있습니다.
+데이터 세트 내보내기가 성공했는지 확인하려면 데이터 세트가 [Snowflake 데이터 웨어하우스](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=ko)에 성공적으로 연결되었는지 확인할 수 있습니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

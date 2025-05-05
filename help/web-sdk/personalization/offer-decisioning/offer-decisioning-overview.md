@@ -22,7 +22,7 @@ Adobe Experience Platform [!DNL Web SDK]은(는) Offer Decisioning에서 관리�
 
 ## 용어
 
-Offer Decisioning을 사용하여 작업할 때는 다음 용어를 이해하는 것이 중요합니다. 자세한 내용을 알고 추가 약관을 보려면 [Offer Decisioning 용어집](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)을 참조하세요.
+Offer Decisioning을 사용하여 작업할 때는 다음 용어를 이해하는 것이 중요합니다. 자세한 내용을 알고 추가 약관을 보려면 [Offer Decisioning 용어집](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=ko)을 참조하세요.
 
 * **결정 범위:** Offer Decisioning의 경우 결정 범위는 Offer Decisioning 서비스에서 오퍼를 제안하는 데 사용할 활동 및 배치 ID가 포함된 JSON의 Base64로 인코딩된 문자열입니다.
 
@@ -81,7 +81,7 @@ Offer Decisioning을 활성화하려면 다음 단계를 수행하십시오.
    * 태그를 통해 SDK 설치
 
       1. [태그 속성 만들기](/help/tags/ui/administration/companies-and-properties.md)
-      1. [포함 코드 추가](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [포함 코드 추가](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html?lang=ko)
       1. &quot;데이터스트림&quot; 드롭다운에서 구성을 선택하여 생성한 데이터스트림으로 Experience Platform Web SDK 확장 프로그램을 설치하고 구성합니다. [확장](/help/tags/ui/managing-resources/extensions/overview.md)에 대한 설명서를 참조하세요.
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
@@ -328,4 +328,4 @@ Offer Decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
 ## 제한 사항
 
-일부 오퍼 제한 사항은 현재 모바일 Edge Network 워크플로에서 지원되지 않습니다(예: 한도). 한도 필드 값은 모든 사용자에게 오퍼를 제공할 수 있는 횟수를 지정합니다. 자세한 내용은 [오퍼 자격 규칙 및 제약 조건 설명서](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)를 참조하세요.
+일부 오퍼 제한 사항은 현재 모바일 Edge Network 워크플로에서 지원되지 않습니다(예: 한도). 한도 필드 값은 모든 사용자에게 오퍼를 제공할 수 있는 횟수를 지정합니다. 자세한 내용은 [오퍼 자격 규칙 및 제약 조건 설명서](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html?lang=ko#eligibility)를 참조하세요.

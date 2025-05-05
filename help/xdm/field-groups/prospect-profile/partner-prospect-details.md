@@ -13,7 +13,7 @@ ht-degree: 11%
 
 [!UICONTROL 파트너 잠재 고객 세부 정보(샘플)]은(는) [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)에 대한 표준 스키마 필드 그룹입니다. [!UICONTROL Partner Prospect Details(샘플)]은(는) Prospect의 프로필과 관련된 다양한 세부 정보에 대한 샘플 프레임워크를 제공합니다. 이 프레임워크를 통해 다양한 잠재 고객 관련 정보를 구성하고 관리하는 프로세스를 간소화할 수 있습니다.
 
-이 필드 그룹은 [개별 잠재 고객 프로필 클래스](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html)를 파트너의 컨텍스트에서 확장합니다.
+이 필드 그룹은 [개별 잠재 고객 프로필 클래스](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html?lang=ko)를 파트너의 컨텍스트에서 확장합니다.
 
 ![[!UICONTROL 파트너 잠재 고객 세부 정보(샘플)] 필드 그룹의 다이어그램입니다.](../../images/field-groups/partner/partner-prospect-details-sample.png)
 

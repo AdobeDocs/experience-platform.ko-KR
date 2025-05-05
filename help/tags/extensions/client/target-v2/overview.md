@@ -49,13 +49,13 @@ Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음, *
 
 #### GDPR Opt-In
 
-활성화된 경우 Adobe Target은 동의 관리 전략을 지원하는 데 도움이 되는 옵트인 기능을 제공합니다. 선택 기능을 통해 고객이 Target 태그를 실행하는 방법과 시기를 제어할 수 있습니다.  Adobe 옵트인에 대한 자세한 내용은 [GDPR(개인 정보 및 일반 데이터 보호 규정)](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)을 참조하십시오.
+활성화된 경우 Adobe Target은 동의 관리 전략을 지원하는 데 도움이 되는 옵트인 기능을 제공합니다. 선택 기능을 통해 고객이 Target 태그를 실행하는 방법과 시기를 제어할 수 있습니다.  Adobe 옵트인에 대한 자세한 내용은 [GDPR(개인 정보 및 일반 데이터 보호 규정)](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=ko)을 참조하십시오.
 
 #### Timeout (ms)
 
 정의한 기간 내에 Target에서 응답을 받지 못하면 요청 시간이 초과되고 기본 콘텐츠가 표시됩니다. 방문자 세션 중에 추가 요청을 계속 시도합니다. 기본값은 3000ms이며, 이 값은 Target 사용자 인터페이스에 구성된 시간 초과와 다를 수 있습니다.
 
-시간 초과 설정 작동 방식에 대한 자세한 내용은 [Adobe Target 도움말](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html)을 참조하십시오.
+시간 초과 설정 작동 방식에 대한 자세한 내용은 [Adobe Target 도움말](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=ko)을 참조하십시오.
 
 ## Target 확장 작업 유형
 
@@ -71,7 +71,7 @@ Target 확장은 규칙의 Then 부분에서 다음 작업을 제공합니다.
 
 ### 온디바이스 의사 결정으로 Target 로드
 
-규칙 컨텍스트에서 [온디바이스 의사 결정](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html)을 사용하도록 설정한 Target을 로드하는 것이 적절할 수 있는 태그 규칙에 이 작업을 추가합니다. 온디바이스 의사 결정이 활성화된 at.js 라이브러리가 페이지에 로드됩니다. 대부분의 구현에서 사이트의 모든 페이지에 Target을 로드해야 합니다. Adobe Target 호출 앞에 가 있는 경우에만 디바이스에서 의사 결정 작업과 함께 Target 로드를 사용하는 것이 좋습니다. 그렇지 않으면 Analytics 호출이 지연되는 것과 같은 문제가 발생할 수 있습니다.
+규칙 컨텍스트에서 [온디바이스 의사 결정](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=ko)을 사용하도록 설정한 Target을 로드하는 것이 적절할 수 있는 태그 규칙에 이 작업을 추가합니다. 온디바이스 의사 결정이 활성화된 at.js 라이브러리가 페이지에 로드됩니다. 대부분의 구현에서 사이트의 모든 페이지에 Target을 로드해야 합니다. Adobe Target 호출 앞에 가 있는 경우에만 디바이스에서 의사 결정 작업과 함께 Target 로드를 사용하는 것이 좋습니다. 그렇지 않으면 Analytics 호출이 지연되는 것과 같은 문제가 발생할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -100,7 +100,7 @@ Target 확장은 규칙의 Then 부분에서 다음 작업을 제공합니다.
 * **Body Hiding:** 이 설정을 활성화하거나 비활성화할 수 있습니다. 기본값은 Enabled로, HTML BODY가 숨겨짐을 의미합니다.
 * **Body Hidden Style:** 기본값은 body{opacity:0}입니다. 이 값은 body{display:none}과 같은 다른 값으로 변경될 수 있습니다.
 
-자세한 내용은 [Target 온라인 도움말 설명서](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html)를 참조하십시오.
+자세한 내용은 [Target 온라인 도움말 설명서](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=ko)를 참조하십시오.
 
 ### 트리거 보기
 
@@ -109,7 +109,7 @@ Target 확장은 규칙의 Then 부분에서 다음 작업을 제공합니다.
 1. 트리거해야 하는 보기 이름을 지정합니다.
 1. Page 확인란을 선택하여 보기 트리거가 보고할 노출에 도움을 주는지 여부를 지정합니다. 보기가 다시 렌더링되고 보고할 노출에 도움을 주지 않는 구성 요소와 관련이 있는 경우 Page 확인란을 선택 취소합니다.
 
-보기 트리거에 대한 자세한 내용은 [`triggerView()` 도움말 설명서](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/adobe-target-triggerview-atjs-2.html)를 참조하십시오.
+보기 트리거에 대한 자세한 내용은 [`triggerView()` 도움말 설명서](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/adobe-target-triggerview-atjs-2.html?lang=ko)를 참조하십시오.
 
 ## Adobe Target 기본 배포
 

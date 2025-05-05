@@ -23,7 +23,7 @@ ht-degree: 2%
 * [샌드박스](./sandboxes.md)
 * [사용자](./users.md)
 
-[!DNL Adobe Experience Platform]에 대한 특성 기반 액세스 제어 권한에 액세스하려면 [!DNL Adobe Experience Platform]에 대한 구독이 있는 조직의 관리자여야 합니다. Adobe은 조직에 대해 유연한 관리자 계층을 지원하지만 권한을 구성하려면 [!DNL Adobe Experience Platform]의 제품 관리자여야 합니다. 자세한 내용은 [관리 역할](https://helpx.adobe.com/enterprise/using/admin-roles.html)에 대한 Adobe 도움말 센터 문서를 참조하십시오.
+[!DNL Adobe Experience Platform]에 대한 특성 기반 액세스 제어 권한에 액세스하려면 [!DNL Adobe Experience Platform]에 대한 구독이 있는 조직의 관리자여야 합니다. Adobe은 조직에 대해 유연한 관리자 계층을 지원하지만 권한을 구성하려면 [!DNL Adobe Experience Platform]의 제품 관리자여야 합니다. 자세한 내용은 [관리 역할](https://helpx.adobe.com/kr/enterprise/using/admin-roles.html)에 대한 Adobe 도움말 센터 문서를 참조하십시오.
 
 관리자 권한이 없는 경우 시스템 관리자에게 문의하여 액세스 권한을 받으십시오.
 
@@ -41,7 +41,7 @@ Experience Platform의 특성 기반 액세스 제어 작업 영역이 **[!UICON
 
 ![flac-select-roles](../../images/flac-ui/flac-select-roles.png)
 
-이 사용 안내서는 [!DNL Adobe Experience Platform]을(를) 사용하여 Experience Platform에 대한 액세스 권한을 할당하는 방법에 중점을 둡니다. [!DNL Admin Console]을(를) 탐색하는 방법에 대한 자세한 내용은 [Admin Console 사용 안내서](https://helpx.adobe.com/enterprise/using/admin-console.html)를 참조하십시오.
+이 사용 안내서는 [!DNL Adobe Experience Platform]을(를) 사용하여 Experience Platform에 대한 액세스 권한을 할당하는 방법에 중점을 둡니다. [!DNL Admin Console]을(를) 탐색하는 방법에 대한 자세한 내용은 [Admin Console 사용 안내서](https://helpx.adobe.com/kr/enterprise/using/admin-console.html)를 참조하십시오.
 
 ## 다음 단계
 

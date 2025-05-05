@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Experience Platform Web SDK에서 A4T(Adobe Analytics for Target) 로깅
 
-개인화에 Adobe Target을 사용할 때 성과 측정에 사용할 시스템을 선택할 수 있습니다. 각 [Target 활동](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)에서는 Target 보고와 Adobe Analytics 보고 중에서 선택할 수 있습니다.
+개인화에 Adobe Target을 사용할 때 성과 측정에 사용할 시스템을 선택할 수 있습니다. 각 [Target 활동](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=ko)에서는 Target 보고와 Adobe Analytics 보고 중에서 선택할 수 있습니다.
 
 Analytics 보고를 사용하는 경우 Adobe Target은 다음을 Analytics에 전달해야 합니다.
 
@@ -27,7 +27,7 @@ Adobe Experience Platform Web SDK은 Analytics for Target(A4T) 사용 사례에�
 | 로깅 방법 | 설명 |
 | --- | --- |
 | 서버측 분석 로깅 | Edge Network을 통해 전송된 모든 Analytics 히트는 히트 결합 프로세스를 거치지 않고 서버측에서 Target 세부 사항으로 보강됩니다. |
-| 클라이언트 측 분석 로깅 | Target 데이터가 클라이언트측에서 반환되므로 [데이터 삽입 API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html)를 사용하여 데이터를 수동으로 늘리고 Analytics로 보낼 수 있습니다. |
+| 클라이언트 측 분석 로깅 | Target 데이터가 클라이언트측에서 반환되므로 [데이터 삽입 API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=ko)를 사용하여 데이터를 수동으로 늘리고 Analytics로 보낼 수 있습니다. |
 
 로깅 방법은 구성된 [데이터 스트림](../../../../datastreams/overview.md)에서 Adobe Analytics을 활성화했는지 여부에 따라 결정됩니다.
 

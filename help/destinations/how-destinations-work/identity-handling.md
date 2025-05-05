@@ -88,7 +88,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->이러한 광고 대상의 대부분은 Audience Manager에서 지원됩니다(이러한 대상 유형은 Audience Manager에서 장치 기반 대상으로 알려져 있음). [Audience Manager에서 지원되는 모든 장치 기반 대상 목록](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)을 참조하세요. 몇 개만 Experience Platform에 나열되어 있습니다. Experience Platform과 Audience Manager 간의 데이터 공유에 대한 자세한 내용은 [Experience Platform에서 Audience Manager으로 데이터 공유 활성화](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data)에 대한 섹션을 참조하십시오. 현재 더 많은 타사 쿠키 대상을 지원할 계획이 없습니다.
+>이러한 광고 대상의 대부분은 Audience Manager에서 지원됩니다(이러한 대상 유형은 Audience Manager에서 장치 기반 대상으로 알려져 있음). [Audience Manager에서 지원되는 모든 장치 기반 대상 목록](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=ko)을 참조하세요. 몇 개만 Experience Platform에 나열되어 있습니다. Experience Platform과 Audience Manager 간의 데이터 공유에 대한 자세한 내용은 [Experience Platform에서 Audience Manager으로 데이터 공유 활성화](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ko#enable-aep-to-aam-data)에 대한 섹션을 참조하십시오. 현재 더 많은 타사 쿠키 대상을 지원할 계획이 없습니다.
 
 ## Enterprise 대상 {#enterprise-destinations}
 

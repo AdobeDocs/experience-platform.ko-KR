@@ -21,9 +21,9 @@ ht-degree: 95%
 
 ## 시작하기
 
-Privacy Service에 대한 액세스 제어를 구성하려면 Adobe Experience Platform Privacy Service와 제품 통합이 있는 조직에 대한 관리자 권한이 있어야 합니다. 권한을 부여하거나 철회할 수 있는 최소 역할은 **제품 프로필 관리자**&#x200B;입니다. 권한을 관리할 수 있는 다른 관리자 역할은 **제품 관리자**(제품 내의 모든 프로필을 관리할 수 있음) 및 **시스템 관리자**(제한 없음)입니다. 자세한 내용은 Adobe 엔터프라이즈 관리 안내서의 [관리자 역할](https://helpx.adobe.com/enterprise/using/admin-roles.html)에 관한 기사를 참조하십시오.
+Privacy Service에 대한 액세스 제어를 구성하려면 Adobe Experience Platform Privacy Service와 제품 통합이 있는 조직에 대한 관리자 권한이 있어야 합니다. 권한을 부여하거나 철회할 수 있는 최소 역할은 **제품 프로필 관리자**&#x200B;입니다. 권한을 관리할 수 있는 다른 관리자 역할은 **제품 관리자**(제품 내의 모든 프로필을 관리할 수 있음) 및 **시스템 관리자**(제한 없음)입니다. 자세한 내용은 Adobe 엔터프라이즈 관리 안내서의 [관리자 역할](https://helpx.adobe.com/kr/enterprise/using/admin-roles.html)에 관한 기사를 참조하십시오.
 
-이 안내서에서는 귀하가 제품 프로필과 같은 기본 Admin Console 개념과 개별 사용자 및 그룹에 제품 권한을 부여하는 방법에 익숙하다고 가정합니다. 자세한 내용은 [Admin Console 사용 안내서](https://helpx.adobe.com/enterprise/using/admin-console.html)를 참조하십시오.
+이 안내서에서는 귀하가 제품 프로필과 같은 기본 Admin Console 개념과 개별 사용자 및 그룹에 제품 권한을 부여하는 방법에 익숙하다고 가정합니다. 자세한 내용은 [Admin Console 사용 안내서](https://helpx.adobe.com/kr/enterprise/using/admin-console.html)를 참조하십시오.
 
 ## 사용 가능한 권한
 
@@ -85,7 +85,7 @@ Privacy Service 권한을 관리하려면 [Admin Console](https://adminconsole.a
 
 ![Admin Console의 제품 프로필에 대한 사용자 탭](./images/permissions/manage-users.png)
 
-제품 프로필에 대한 사용자 관리에 대한 자세한 내용은 [Admin Console 설명서](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html)를 참조하십시오.
+제품 프로필에 대한 사용자 관리에 대한 자세한 내용은 [Admin Console 설명서](https://helpx.adobe.com/kr/enterprise/using/manage-product-profiles.html)를 참조하십시오.
 
 ### 기존 API 자격 증명을 프로필로 마이그레이션 {#migrate-tech-accounts}
 

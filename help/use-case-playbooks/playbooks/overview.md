@@ -52,7 +52,7 @@ ht-degree: 30%
 
 ## 가용성 {#availability}
 
-일부 [!UICONTROL 사용 사례 플레이북]은(는) Real-Time CDP 사용 사례에 맞게 조정되지만 다른 플레이북은 Journey Optimizer 사용 고객에게 가장 적합합니다. 카탈로그를 탐색하여 제품 및 사용 사례에 가장 적합한 플레이북을 찾습니다. [제품 설명 Adobe](https://helpx.adobe.com/legal/product-descriptions.html)에서 Real-Time CDP 및 Journey Optimizer에 대해 자세히 알아보세요.
+일부 [!UICONTROL 사용 사례 플레이북]은(는) Real-Time CDP 사용 사례에 맞게 조정되지만 다른 플레이북은 Journey Optimizer 사용 고객에게 가장 적합합니다. 카탈로그를 탐색하여 제품 및 사용 사례에 가장 적합한 플레이북을 찾습니다. [제품 설명 Adobe](https://helpx.adobe.com/kr/legal/product-descriptions.html)에서 Real-Time CDP 및 Journey Optimizer에 대해 자세히 알아보세요.
 
 ## UI 안내서 {#ui-guides}
 

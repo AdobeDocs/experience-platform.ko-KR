@@ -21,7 +21,7 @@ API를 사용하여 Azure 호스팅 Experience Platform 인스턴스에 대해 �
 
 Adobe Experience Platform에서 [!UICONTROL 암호화] 섹션을 보고 방문하려면 역할을 만들고 해당 역할에 [!UICONTROL 고객 관리 키 관리] 권한을 할당해야 합니다. [!UICONTROL 고객 관리 키 관리] 권한이 있는 모든 사용자는 해당 조직에 대해 CMK를 사용할 수 있습니다.
 
-Experience Platform에서 역할 및 권한을 할당하는 방법에 대한 자세한 내용은 [권한 구성 설명서](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html)를 참조하세요.
+Experience Platform에서 역할 및 권한을 할당하는 방법에 대한 자세한 내용은 [권한 구성 설명서](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=ko)를 참조하세요.
 
 CMK를 사용하려면 다음 설정으로 [[!DNL Azure] Key Vault를 구성](./azure-key-vault-config.md)해야 합니다.
 

@@ -48,4 +48,4 @@ alloy("sendEvent", {
 
 ## Adobe Analytics에서 `data` 개체 사용 {#analytics}
 
-Adobe Analytics에서 `data` 개체를 사용하여 XDM 스키마 없이 보고서 세트로 데이터를 보낼 수 있습니다. [!DNL AppMeasurement] 변수와 동일한 구문을 사용하도록 변수를 구성하여 웹 SDK에 대한 업그레이드 프로세스를 단순화합니다. 자세한 내용은 Adobe Analytics 구현 안내서의 [Adobe Analytics에 대한 데이터 개체 변수 매핑](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping)을 참조하십시오.
+Adobe Analytics에서 `data` 개체를 사용하여 XDM 스키마 없이 보고서 세트로 데이터를 보낼 수 있습니다. [!DNL AppMeasurement] 변수와 동일한 구문을 사용하도록 변수를 구성하여 웹 SDK에 대한 업그레이드 프로세스를 단순화합니다. 자세한 내용은 Adobe Analytics 구현 안내서의 [Adobe Analytics에 대한 데이터 개체 변수 매핑](https://experienceleague.adobe.com/ko/docs/analytics/implementation/aep-edge/data-var-mapping)을 참조하십시오.

@@ -236,7 +236,7 @@ AI 어시스턴트는 &#39;프로젝트 이름&#39;이나 &#39;배경&#39;과 �
 * **프로필 읽기**
 * **데이터 세트 읽기**
 
-여정은 유연성이 높고 상호 연결된 여러 개체가 포함될 수 있으므로 해당 [전체 권한](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions)은 별도로 문서화되며 특정 사용 사례에 따라 달라질 수 있습니다.
+여정은 유연성이 높고 상호 연결된 여러 개체가 포함될 수 있으므로 해당 [전체 권한](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/access-control/privacy/high-low-permissions)은 별도로 문서화되며 특정 사용 사례에 따라 달라질 수 있습니다.
 
 ## 다음 단계
 

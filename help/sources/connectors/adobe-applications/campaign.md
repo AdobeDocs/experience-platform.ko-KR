@@ -30,7 +30,7 @@ Adobe Campaign Managed Cloud Services 소스를 사용하면 Adobe Campaign v8 �
 
 >[!IMPORTANT]
 >
->Campaign에서 로그 데이터를 보려면 Adobe Campaign v8 클라이언트 콘솔에 대한 액세스 권한이 있어야 합니다. 클라이언트 콘솔을 다운로드하고 설치하는 방법에 대한 자세한 내용은 [Campaign v8 설명서](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html)를 참조하십시오.
+>Campaign에서 로그 데이터를 보려면 Adobe Campaign v8 클라이언트 콘솔에 대한 액세스 권한이 있어야 합니다. 클라이언트 콘솔을 다운로드하고 설치하는 방법에 대한 자세한 내용은 [Campaign v8 설명서](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=ko)를 참조하십시오.
 
 클라이언트 콘솔을 통해 Campaign v8 인스턴스에 로그인합니다. [!DNL Explorer] 탭에서 [!DNL Administration]을(를) 선택한 다음 [!DNL Configuration]을(를) 선택합니다. [!DNL Data schemas]을(를) 선택한 다음 이름 또는 레이블에 대한 `broadLog` 필터를 적용합니다. 표시되는 목록에서 이름이 `broadLogRcp`인 수신자 게재 로그 원본 스키마를 선택합니다.
 

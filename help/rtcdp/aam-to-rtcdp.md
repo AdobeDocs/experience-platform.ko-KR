@@ -17,7 +17,7 @@ ht-degree: 86%
 
 ## 1. Audience Manager 내에서 데이터 아키텍처 고려
 
-Audience Manager에서 Real-Time CDP로의 발전을 고려할 때 지금이 바로 [Audience Manager 세그먼트](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html)를 분석하고 이러한 세그먼트를 구성하는 [신호](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html), [특성](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html) 및 [규칙](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section)이 무엇인지 확인해야 할 중요한 시기입니다.
+Audience Manager에서 Real-Time CDP로의 발전을 고려할 때 지금이 바로 [Audience Manager 세그먼트](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=ko)를 분석하고 이러한 세그먼트를 구성하는 [신호](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=ko), [특성](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=ko) 및 [규칙](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=ko#segment-builder-section)이 무엇인지 확인해야 할 중요한 시기입니다.
 
 또한 현재 Audience Manager에서 사용하는 데이터 소스에 대해 생각해 보십시오.
 
@@ -41,7 +41,7 @@ Real-Time CDP에서 지원되지만 Audience Manager에 대한 활성화 종속�
 
 ## 4. 현재 Audience Manager에서 Real-Time CDP로의 전환을 시작할 수 있는 대상은 무엇입니까?
 
-Adobe는 Audience Manager에서 [사람 기반 대상](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)으로 활성화된 세그먼트를 [!UICONTROL Audience Manager 소스 커넥터]를 통해 Real-Time CDP로 푸시한 다음, Real-Time CDP를 통해 활성화할 것을 권장합니다.
+Adobe는 Audience Manager에서 [사람 기반 대상](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=ko)으로 활성화된 세그먼트를 [!UICONTROL Audience Manager 소스 커넥터]를 통해 Real-Time CDP로 푸시한 다음, Real-Time CDP를 통해 활성화할 것을 권장합니다.
 
 Audience Manager에서 사용할 수 있는 모든 사람 기반 대상은 Real-Time CDP에서도 사용할 수 있습니다([Facebook](/help/destinations/catalog/social/facebook.md), [[!UICONTROL Google 고객 일치 타겟팅]](/help/destinations/catalog/advertising/google-customer-match.md), [LinkedIn](/help/destinations/catalog/social/linkedin.md)).
 

@@ -21,6 +21,6 @@ ht-degree: 38%
 
 | 테스트 | 두께 | 기준 | 권장 사항 |
 | --- | --- | --- | --- |
-| Adobe Analytics - 일관된 코드 버전 | 5 | 둘 이상의 Analytics 코드 버전을 찾았습니다. | Analytics의 모든 인스턴스를 현재 버전으로 바꿉니다.<br><br>[추가 정보](https://experienceleague.adobe.com/docs/analytics/implementation/home.html) |
+| Adobe Analytics - 일관된 코드 버전 | 5 | 둘 이상의 Analytics 코드 버전을 찾았습니다. | Analytics의 모든 인스턴스를 현재 버전으로 바꿉니다.<br><br>[추가 정보](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=ko) |
 
 {style="table-layout:auto"}

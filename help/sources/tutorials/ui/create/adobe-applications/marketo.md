@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Marketo Engage] 소스 연결 및 데이터 흐름을 만들기 전에 먼저 [!DNL Marketo]에서 [Adobe 조직 ID를 매핑](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html)했는지 확인해야 합니다. 또한 소스 연결 및 데이터 흐름을 만들기 전에 [B [!DNL Marketo] B2B 네임스페이스와 스키마 ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) 자동 채우기를 완료했는지 확인해야 합니다.
+>[!DNL Marketo Engage] 소스 연결 및 데이터 흐름을 만들기 전에 먼저 [!DNL Marketo]에서 [Adobe 조직 ID를 매핑](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=ko)했는지 확인해야 합니다. 또한 소스 연결 및 데이터 흐름을 만들기 전에 [B [!DNL Marketo] B2B 네임스페이스와 스키마 ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) 자동 채우기를 완료했는지 확인해야 합니다.
 
 이 자습서에서는 B2B 데이터를 Adobe Experience Platform으로 가져오기 위해 UI에서 [!DNL Marketo Engage]&#x200B;(이하 &quot;[!DNL Marketo]&quot;) 소스 커넥터를 만드는 단계를 제공합니다.
 

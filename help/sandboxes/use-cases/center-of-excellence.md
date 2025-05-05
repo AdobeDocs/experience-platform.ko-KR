@@ -46,7 +46,7 @@ ht-degree: 8%
 - [데이터 세트](../../catalog/datasets/overview.md)
 - [스키마](../../xdm//home.md)
 - [대상자](../../segmentation/home.md)
-- Adobe Journey Optimizer의 [여정](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- Adobe Journey Optimizer의 [여정](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## 사용 사례를 달성하는 방법: 높은 수준의 개요 {#achieve-the-use-case-high-level}
 
@@ -89,7 +89,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
-> 위의 단계는 Experience Platform 사용자 인터페이스의 프로세스를 따릅니다. 다양한 끝점을 통해 API를 사용하여 동일한 단계를 따를 수 있습니다. API를 통해 각 요청을 수행하는 방법에 대한 자세한 내용은 `sandboxes` [끝점 안내서](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) 및 `packages` [끝점 안내서](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages)를 참조하십시오.
+> 위의 단계는 Experience Platform 사용자 인터페이스의 프로세스를 따릅니다. 다양한 끝점을 통해 API를 사용하여 동일한 단계를 따를 수 있습니다. API를 통해 각 요청을 수행하는 방법에 대한 자세한 내용은 `sandboxes` [끝점 안내서](https://experienceleague.adobe.com/ko/docs/experience-platform/sandbox/api/sandboxes#create) 및 `packages` [끝점 안내서](https://experienceleague.adobe.com/ko/docs/experience-platform/sandbox/sandbox-tooling-api/packages)를 참조하십시오.
 
 ## 파트너 데이터 지원을 통해 달성한 기타 사용 사례 {#other-use-cases}
 

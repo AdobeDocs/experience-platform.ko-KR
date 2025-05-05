@@ -71,4 +71,4 @@ ht-degree: 68%
 
 >[!NOTE]
 >
->위의 플러그인에 대한 자세한 내용은 [Analytics 설명서](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html)를 참조하십시오.
+>위의 플러그인에 대한 자세한 내용은 [Analytics 설명서](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=ko)를 참조하십시오.

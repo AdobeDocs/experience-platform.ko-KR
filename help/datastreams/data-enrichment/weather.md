@@ -62,7 +62,7 @@ Adobe는 데이터스트림을 통해 수집한 데이터에 미국 날씨에 �
 
 ### Adobe Customer Journey Analytics {#cja}
 
-데이터스트림에 지정된 데이터 세트의 [!DNL Adobe Customer Journey Analytics]에서 날씨 데이터를 사용할 수 있습니다. 날씨 특성이 [스키마에 추가됨](#prerequisites-prerequisites)이면 [!DNL Customer Journey Analytics]의 [데이터 보기에 추가](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html)할 수 있습니다.
+데이터스트림에 지정된 데이터 세트의 [!DNL Adobe Customer Journey Analytics]에서 날씨 데이터를 사용할 수 있습니다. 날씨 특성이 [스키마에 추가됨](#prerequisites-prerequisites)이면 [!DNL Customer Journey Analytics]의 [데이터 보기에 추가](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=ko)할 수 있습니다.
 
 ### Real-Time Customer Data Platform {#rtcdp}
 

@@ -174,7 +174,7 @@ MA 확장은 `get-instance` 및 `media-heartbeat` 공유 모듈을 다른 확장
    ...
    ```
 
-1. 미디어 하트비트 인스턴스를 사용하여 [미디어 SDK JS 설명서](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) 및 [JS API 설명서](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html)에 따라 미디어 추적을 구현합니다.
+1. 미디어 하트비트 인스턴스를 사용하여 [미디어 SDK JS 설명서](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html?lang=ko) 및 [JS API 설명서](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html)에 따라 미디어 추적을 구현합니다.
 
 >[!NOTE]
 >

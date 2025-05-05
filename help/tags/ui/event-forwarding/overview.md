@@ -30,7 +30,7 @@ Adobe Experience Platform의 이벤트 전달을 사용하면 수집된 이벤�
 >
 >이벤트 전달이 Experience Platform의 데이터 수집 생태계에 어떻게 적합한지에 대한 자세한 내용은 [데이터 수집 개요](../../../collection/home.md)를 참조하십시오.
 
-Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) 및 [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html)와 결합된 이벤트 전달은 다음과 같은 이점을 제공합니다.
+Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) 및 [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=ko)와 결합된 이벤트 전달은 다음과 같은 이점을 제공합니다.
 
 **성능**:
 

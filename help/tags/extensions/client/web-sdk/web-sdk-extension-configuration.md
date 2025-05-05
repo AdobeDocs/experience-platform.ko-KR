@@ -19,7 +19,7 @@ ht-degree: 4%
 
 ## 웹 SDK 태그 확장 설치 {#install}
 
-웹 SDK 태그 확장 기능이에 속성을 설치해야 합니다. 아직 작성하지 않았다면 [태그 속성 만들기](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)에 대한 설명서를 참조하십시오.
+웹 SDK 태그 확장 기능이에 속성을 설치해야 합니다. 아직 작성하지 않았다면 [태그 속성 만들기](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=ko)에 대한 설명서를 참조하십시오.
 
 속성을 만든 후 속성을 열고 왼쪽 막대에서 **[!UICONTROL 확장]** 탭을 선택합니다.
 

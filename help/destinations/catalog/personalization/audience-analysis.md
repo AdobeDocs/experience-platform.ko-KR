@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # 대상 분석 대상
 
-[!UICONTROL 대상 분석] 대상을 사용하면 Adobe Experience Platform 대상 데이터를 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko)에 보강할 수 있습니다. 보강된 결과 데이터에 포함할 대상을 선택할 수 있습니다. 그런 다음 대상 자격은 [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) 보고에서 차원으로 사용할 수 있습니다.
+[!UICONTROL 대상 분석] 대상을 사용하면 Adobe Experience Platform 대상 데이터를 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko)에 보강할 수 있습니다. 보강된 결과 데이터에 포함할 대상을 선택할 수 있습니다. 그런 다음 대상 자격은 [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=ko) 보고에서 차원으로 사용할 수 있습니다.
 
 >[!AVAILABILITY]
 >

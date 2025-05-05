@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 응답 토큰 액세스
 
-Adobe Target에서 반환된 Personalization 콘텐츠에는 활동, 오퍼, 경험, 사용자 프로필, 지역 정보 등에 대한 세부 정보인 [응답 토큰](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)이 포함됩니다. 이러한 세부 정보는 서드파티 도구와 공유하거나 디버깅에 사용할 수 있습니다. Adobe Target 사용자 인터페이스에서 응답 토큰을 구성할 수 있습니다.
+Adobe Target에서 반환된 Personalization 콘텐츠에는 활동, 오퍼, 경험, 사용자 프로필, 지역 정보 등에 대한 세부 정보인 [응답 토큰](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ko)이 포함됩니다. 이러한 세부 정보는 서드파티 도구와 공유하거나 디버깅에 사용할 수 있습니다. Adobe Target 사용자 인터페이스에서 응답 토큰을 구성할 수 있습니다.
 
 개인화 콘텐츠에 액세스하려면 이벤트를 전송할 때 콜백 함수를 제공하십시오. 이 콜백은 SDK가 서버로부터 성공적인 응답을 받은 후에 호출됩니다. 콜백에는 반환된 개인화 콘텐츠가 포함된 `propositions` 속성이 포함될 수 있는 `result` 개체가 제공됩니다. 다음은 콜백 함수를 제공하는 예입니다.
 

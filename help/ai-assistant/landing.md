@@ -31,14 +31,14 @@ AI Assistant는 Experience Platform, Real-Time CDP, Adobe Journey Optimizer 및 
     <div><strong>학습 향상</strong><br/>워크플로를 중단하지 않고 제품 지식을 검색, 문제 해결 및 이해도를 높이십시오.</div>
     </td>
     <td>
-    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
+    <a href="https://experienceleague.adobe.com/ko/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
     <div><strong>AI Assistant 비디오 재생 목록 방문</strong><br/>AI Assistant를 통해 해결할 수 있는 다양한 어려움과 사용 사례에 대해 알아봅니다.</div>
     </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://experienceleague.adobe.com/ko/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -435,11 +435,11 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 
 AI Assistant 사용 사례 예제는 다음을 참조하십시오.
 
-* [팀의 새 구성원에 대한 온보딩 시간 단축](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
-* [대상자를 정리하고 마케팅 작업을 최적화합니다](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
-* [종속성 확인 및 데이터 업데이트 중 위험 최소화](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
-* [새로운 기능을 더 빨리 검색하고 배포하세요](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
-* [AI Assistant를 통해 고객 지원 혁신](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
+* [팀의 새 구성원에 대한 온보딩 시간 단축](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153?profile.language=ko)
+* [대상자를 정리하고 마케팅 작업을 최적화합니다](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002?profile.language=ko)
+* [종속성 확인 및 데이터 업데이트 중 위험 최소화](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364?profile.language=ko)
+* [새로운 기능을 더 빨리 검색하고 배포하세요](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125?profile.language=ko)
+* [AI Assistant를 통해 고객 지원 혁신](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416?profile.language=ko)
 
 >[!TAB 추가 비디오 콘텐츠]
 
@@ -460,9 +460,9 @@ AI Assistant 사용 사례 예제는 다음을 참조하십시오.
 <a href="./home.md" target="_blank">설명서</a> - <a href="./ui-guide.md" target="_blank">UI 안내서</a> - <a href="./access.md" target="_blank">AI Assistant 액세스</a> - <a href="./privacy.md" target="_blank">개인 정보, 보안 및 거버넌스</a> - <a href="./faq.md" target="_blank">FAQ</a>
 </td>
 <td><strong>Adobe Journey Optimizer</strong><br/>
-<a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank">설명서</a>
+<a href="https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank">설명서</a>
 </td>
 <td><strong>Customer Journey Analytics</strong><br/>
-<a href="https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant" target="_blank">설명서</a>
+<a href="https://experienceleague.adobe.com/ko/docs/analytics-platform/using/ai-assistant" target="_blank">설명서</a>
 </td>
 </tr></table>

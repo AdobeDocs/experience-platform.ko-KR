@@ -21,11 +21,11 @@ ht-degree: 8%
 
 | 표시 이름 | 속성 | 데이터 유형 | 설명 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|--------------------------------------------------------------|
-| [[!UICONTROL 챕터 완료됨]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-complete) | `isCompleted` | 부울 | 챕터의 완료 여부. |
-| [[!UICONTROL 챕터 ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter) | `ID` | 문자열 | 자동으로 생성된 챕터의 ID입니다. |
-| [[!UICONTROL 챕터 길이 또는 기간]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length) | `length` | 정수 | 챕터 길이(단위: 초). |
-| [[!UICONTROL 챕터 이름]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name) | `friendlyName` | 문자열 | 챕터 및/또는 세그먼트의 이름입니다. |
-| [[!UICONTROL 챕터 오프셋]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-offset) | `offset` | 정수 | 처음부터 콘텐츠 내에 있는 챕터의 오프셋(초)입니다. |
-| [[!UICONTROL 챕터 위치]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-position) | `index` | 정수 | 콘텐츠 내에서 챕터의 위치(색인, 정수)입니다. |
-| [[!UICONTROL 챕터 시작됨]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-start) | `isStarted` | 부울 | 챕터가 시작되었는지 여부. |
-| [[!UICONTROL 챕터 재생 시간]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-time-spent) | `timePlayed` | 정수 | 챕터에서 보낸 시간(초)입니다. |
+| [[!UICONTROL 챕터 완료됨]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ko#chapter-complete) | `isCompleted` | 부울 | 챕터의 완료 여부. |
+| [[!UICONTROL 챕터 ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ko#chapter) | `ID` | 문자열 | 자동으로 생성된 챕터의 ID입니다. |
+| [[!UICONTROL 챕터 길이 또는 기간]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ko#chapter-length) | `length` | 정수 | 챕터 길이(단위: 초). |
+| [[!UICONTROL 챕터 이름]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ko#chapter-name) | `friendlyName` | 문자열 | 챕터 및/또는 세그먼트의 이름입니다. |
+| [[!UICONTROL 챕터 오프셋]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ko#chapter-offset) | `offset` | 정수 | 처음부터 콘텐츠 내에 있는 챕터의 오프셋(초)입니다. |
+| [[!UICONTROL 챕터 위치]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ko#chapter-position) | `index` | 정수 | 콘텐츠 내에서 챕터의 위치(색인, 정수)입니다. |
+| [[!UICONTROL 챕터 시작됨]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ko#chapter-start) | `isStarted` | 부울 | 챕터가 시작되었는지 여부. |
+| [[!UICONTROL 챕터 재생 시간]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=ko#chapter-time-spent) | `timePlayed` | 정수 | 챕터에서 보낸 시간(초)입니다. |

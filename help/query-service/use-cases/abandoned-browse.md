@@ -25,8 +25,8 @@ ht-degree: 0%
 이 워크플로우 데모는 여러 Adobe Experience Platform 서비스를 사용합니다. 계속 사용하려면 다음 기능 및 서비스를 잘 이해하는 것이 좋습니다.
 
 * XDM(경험 데이터 모델) 스키마 컴포지션의 [기본 사항](../../xdm/schema/composition.md)
-* [데이터 집합을 만들고 데이터를 수집하는 방법](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
-* Adobe Analytics 소스 커넥터를 사용하여 데이터를 [수집하는 방법](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
+* [데이터 집합을 만들고 데이터를 수집하는 방법](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ko)
+* Adobe Analytics 소스 커넥터를 사용하여 데이터를 [수집하는 방법](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=ko)
 * [세그먼테이션](../../segmentation/home.md)
 * [대상](../../destinations/home.md)
 

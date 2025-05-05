@@ -14,7 +14,7 @@ ht-degree: 1%
 
 조직에 Adobe Experience Platform이 제공되면 관리자가 [!DNL Query Service]에 대한 액세스 권한을 부여할 수 있습니다. 그러나 [!DNL Query Service]에서 제공하는 모든 기능을 사용하려면 먼저 데이터를 Adobe Experience Platform으로 수집해야 합니다.
 
-이 [데이터 수집 자습서 비디오](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)에서는 데이터 집합을 만들고, 데이터 집합을 스키마에 매핑하고, 데이터 집합에 데이터를 추가하고, 데이터 집합 수집을 확인하는 방법에 대한 개요를 제공합니다. [수집 개요 설명서](../../ingestion/home.md)는 이를 보완하며 보다 자세한 정보와 다른 학습 리소스에 대한 링크를 제공합니다.
+이 [데이터 수집 자습서 비디오](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ko)에서는 데이터 집합을 만들고, 데이터 집합을 스키마에 매핑하고, 데이터 집합에 데이터를 추가하고, 데이터 집합 수집을 확인하는 방법에 대한 개요를 제공합니다. [수집 개요 설명서](../../ingestion/home.md)는 이를 보완하며 보다 자세한 정보와 다른 학습 리소스에 대한 링크를 제공합니다.
 
 데이터를 Adobe Experience Platform에 수집하면 [[!DNL Query Editor] Experience Platform UI의 ](../ui/user-guide.md) 또는 [[!DNL Query Service] API](../api/getting-started.md)를 사용하여 [!DNL Query Service] 작업을 시작할 수 있습니다. 이러한 각 도구를 사용하는 방법에 대한 전체 설명서는 해당 섹션에서 찾을 수 있습니다.
 

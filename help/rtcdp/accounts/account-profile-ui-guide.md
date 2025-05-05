@@ -2,7 +2,7 @@
 keywords: rtcdp 프로필;프로필 rtcdp;rtcdp id;rtcdp 병합 정책;실시간 고객 프로필
 title: 계정 프로필 UI 안내서
 description: Adobe Real-Time Customer Data Platform B2B edition을 사용하면 계정 프로필을 사용하여 여러 소스에서 계정 정보를 통합할 수 있습니다. 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스에서 계정 프로필과 상호 작용하는 방법에 대한 세부 정보를 제공합니다.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3

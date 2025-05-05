@@ -15,10 +15,10 @@ ht-degree: 1%
 Adobe은 Experience Platform 위에 여러 애플리케이션을 빌드했습니다. 아래 링크를 사용하여 이러한 애플리케이션에 대한 설명서를 찾을 수 있습니다.
 
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ko-KR)
-* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=ko)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ko)
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
-* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html?lang=ko)
 
 아래 비디오에서는 Experience Platform 위에 구축된 각 애플리케이션의 사용 사례를 설명합니다.
 

@@ -68,7 +68,7 @@ Experience Platform의 속성을 조직이 Marketo에서 액세스할 수 있는
 
 >[!IMPORTANT]
 >
->대상을 설정하는 사용자는 Marketo 인스턴스 및 파티션에서 [사용자 편집](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) 권한이 있어야 합니다.
+>대상을 설정하는 사용자는 Marketo 인스턴스 및 파티션에서 [사용자 편집](https://experienceleague.adobe.com/ko/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) 권한이 있어야 합니다.
 
 ![대상에 연결](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -79,7 +79,7 @@ Experience Platform의 속성을 조직이 Marketo에서 액세스할 수 있는
 * **[!UICONTROL 첫 번째 검색 가능한 필드]**: 중복을 제거할 필드입니다. 필드는 입력의 각 리드 레코드에 있어야 합니다. 기본값은 이메일입니다
 * **[!UICONTROL 첫 번째 검색 가능한 필드]**: 중복을 제거할 보조 필드입니다. 필드는 입력의 각 리드 레코드에 있어야 합니다. 선택 사항입니다
 
-인스턴스를 선택한 후에는 구성을 통합할 Lead Partition도 선택해야 합니다. [리드 파티션](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)은(는) 브랜드나 영업 지역과 같은 비즈니스 관심사별로 리드 레코드를 구분하는 데 사용되는 Marketo Engage의 개념입니다. Marketo 구독에 작업 공간 및 파티션 기능이 없거나 구독에 추가 파티션이 만들어지지 않은 경우 기본 파티션만 사용할 수 있습니다. 단일 구성은 구성된 파티션에 있는 리드 레코드만 업데이트할 수 있습니다.
+인스턴스를 선택한 후에는 구성을 통합할 Lead Partition도 선택해야 합니다. [리드 파티션](https://experienceleague.adobe.com/ko/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)은(는) 브랜드나 영업 지역과 같은 비즈니스 관심사별로 리드 레코드를 구분하는 데 사용되는 Marketo Engage의 개념입니다. Marketo 구독에 작업 공간 및 파티션 기능이 없거나 구독에 추가 파티션이 만들어지지 않은 경우 기본 파티션만 사용할 수 있습니다. 단일 구성은 구성된 파티션에 있는 리드 레코드만 업데이트할 수 있습니다.
 
 >[!IMPORTANT]
 > 

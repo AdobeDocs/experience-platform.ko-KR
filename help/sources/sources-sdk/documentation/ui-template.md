@@ -79,7 +79,7 @@ Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x2
 
 데이터 흐름을 만드는 나머지 단계에 대한 *워크플로가 모듈화되었습니다. 소스에 대해 수행할 특정 콜아웃이 있는 경우 아래의 추가 리소스 섹션을 참조하십시오.*
 
-이 자습서를 따라 *YOURSOURCE* 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 Experience Platform으로 가져오도록 데이터 흐름을 구성](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html)할 수 있습니다.
+이 자습서를 따라 *YOURSOURCE* 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 Experience Platform으로 가져오도록 데이터 흐름을 구성](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=ko)할 수 있습니다.
 
 ## 추가 리소스
 

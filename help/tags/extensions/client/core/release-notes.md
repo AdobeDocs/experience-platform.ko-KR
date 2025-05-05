@@ -123,7 +123,7 @@ v2.0.4
 
 * 다양한 필드에 대한 데이터 요소 지원이 추가되었습니다. &#39;Time on Page&#39;, &#39;Enters Viewport&#39;, &#39;Hover&#39; 및 &#39;Media Time Played&#39; 이벤트에 데이터 요소 지원이 추가되었습니다. 조건: &#39;사이트에서 보낸 시간&#39; 및 &#39;값 비교&#39;
 * 링크 지연을 사용할 때 ctrl/cmd+클릭 및 마우스 가운데 버튼을 클릭할 수 있는 기본 동작에 대한 지원을 추가합니다.
-* **클릭 이벤트에 대한 링크 지연을 &quot;더 이상 지원되지 않음&quot;으로 표시했습니다.** - 자세한 내용은 Adobe Experience Platform의 [데이터 수집 블로그](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403)에서 확인할 수 있습니다.
+* **클릭 이벤트에 대한 링크 지연을 &quot;더 이상 지원되지 않음&quot;으로 표시했습니다.** - 자세한 내용은 Adobe Experience Platform의 [데이터 수집 블로그](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=ko)에서 확인할 수 있습니다.
 
 ## 2021년 1월 6일
 

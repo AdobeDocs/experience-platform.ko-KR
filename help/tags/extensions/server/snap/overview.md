@@ -53,7 +53,7 @@ Snapchat Ads 관리자에서 [[!DNL [Snap Pixel]]](https://businesshelp.snapchat
 
 ## 데이터 요소 만들기 {#create-data-elements}
 
-데이터를 [!DNL Snapchat] 전환 API 확장으로 보내려면 각 데이터 매개 변수에 대해 [데이터 요소](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element)를 만드십시오. 다음 단계를 수행하십시오.
+데이터를 [!DNL Snapchat] 전환 API 확장으로 보내려면 각 데이터 매개 변수에 대해 [데이터 요소](https://experienceleague.adobe.com/ko/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element)를 만드십시오. 다음 단계를 수행하십시오.
 
 1. 속성의 **[!UICONTROL 속성 정보]** 화면에서 **[!UICONTROL 작성]**>**[!UICONTROL 데이터 요소]**(으)로 이동한 다음 **[!UICONTROL 데이터 요소 추가]**&#x200B;를 선택합니다.
 
@@ -79,7 +79,7 @@ Snapchat Ads 관리자에서 [[!DNL [Snap Pixel]]](https://businesshelp.snapchat
 
 ## 변환 이벤트를 스냅으로 보내는 규칙 만들기 {#create-snap-rules}
 
-[규칙](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule)은(는) Experience Platform에서 확장을 트리거하는 데 사용됩니다. 이 섹션에서는 이벤트 전달 속성 내에 규칙을 만들어 전환 API 확장을 사용하여 스냅에 전환 이벤트를 보내는 방법에 대해 설명합니다.
+[규칙](https://experienceleague.adobe.com/ko/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule)은(는) Experience Platform에서 확장을 트리거하는 데 사용됩니다. 이 섹션에서는 이벤트 전달 속성 내에 규칙을 만들어 전환 API 확장을 사용하여 스냅에 전환 이벤트를 보내는 방법에 대해 설명합니다.
 
 ### 새 규칙 만들기
 

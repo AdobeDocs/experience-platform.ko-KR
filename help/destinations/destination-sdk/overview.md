@@ -32,7 +32,7 @@ Destination SDK을 통해 대상 구성 및 제출을 빠르게 시작하려면 
                 <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">모든 구성 옵션 설명</a></li>
                 <li> 대상 서버 구성 - <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">서버 사양</a> 및 <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">템플릿 사양</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">고객 데이터 필드 및 기타 대상 구성 요소</a></li>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">템플릿 및 매크로</a></li>
+                <li><a href="https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">템플릿 및 매크로</a></li>
             </ul>
         </td>
         <td>
@@ -68,7 +68,7 @@ Destination SDK을 통해 대상 구성 및 제출을 빠르게 시작하려면 
                 <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">스트리밍 대상 전체 안내서 구성</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">자갈 템플릿을 통한 데이터 변환 이해</a> 및 <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">지원되는 템플릿 함수 보기</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">데이터 수집 정책 이해</a></li>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">라이브 구성 예</a></li>
+                <li><a href="https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">라이브 구성 예</a></li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">스트리밍 대상 테스트</a></li>
             </ul>
         </td>
@@ -103,7 +103,7 @@ Destination SDK을 통해 대상 구성 및 제출을 빠르게 시작하려면 
 
 >[!IMPORTANT]
 >
-> 개인 사용자 지정 대상을 만드는 이 기능은 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 개인 사용자 지정 대상을 만드는 이 기능은 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 Destination SDK 파트너는 [Experience Platform 카탈로그](../catalog/overview.md)에 제품화된 대상을 추가할 수 있습니다.
 
@@ -144,7 +144,7 @@ Destination SDK 액세스 권한은 Real-Time CDP 고객인 파트너 또는 Exp
 ---------|----------|
 | ISV(Independent Software Vendor) | [Adobe 기술 파트너 프로그램](https://partners.adobe.com/technologyprogram/experiencecloud.html)에 참여하고 Destination SDK에 액세스할 수 있도록 프로비저닝된 Experience Platform 샌드박스를 가져오도록 요청하십시오. |
 | 시스템 통합자(SI) | Experience Platform 샌드박스를 프로비저닝하고 Destination SDK에 액세스하려면 [Adobe 솔루션 파트너 프로그램](https://solutionpartners.adobe.com/home.html)에서 Gold 또는 Platinum 수준이어야 합니다. |
-| [Real-Time CDP Ultimate 패키지](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html)에서 고객 Experience Platform | 기본적으로 Experience Platform 샌드박스 및 Destination SDK에 액세스하여 조직의 개인 대상을 구축할 수 있습니다. |
+| [Real-Time CDP Ultimate 패키지](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html)에서 고객 Experience Platform | 기본적으로 Experience Platform 샌드박스 및 Destination SDK에 액세스하여 조직의 개인 대상을 구축할 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -152,7 +152,7 @@ Destination SDK 액세스 권한은 Real-Time CDP 고객인 파트너 또는 Exp
 
 Experience Platform에서 대상을 구성하는 프로세스는 아래에 요약되어 있습니다.
 
-1. ISV 또는 SI인 경우 위의 섹션에서 [액세스 가져오기](#get-access) 정보를 참조하십시오. [Real-Time CDP Ultimate 패키지](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객은 이 단계를 건너뛸 수 있습니다.
+1. ISV 또는 SI인 경우 위의 섹션에서 [액세스 가져오기](#get-access) 정보를 참조하십시오. [Real-Time CDP Ultimate 패키지](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객은 이 단계를 건너뛸 수 있습니다.
 2. [Experience Platform 샌드박스를 프로비저닝하고 대상 작성 권한을 사용하도록 요청](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support)합니다.
 3. 통합을 빌드합니다. [스트리밍 대상](guides/configure-destination-instructions.md) 또는 [파일 기반 대상](guides/configure-file-based-destination-instructions.md)을 구성하려면 제품 설명서의 지침을 따르십시오.
 4. 통합을 테스트합니다. [스트리밍 대상](testing-api/streaming-destinations/streaming-destination-testing-overview.md) 또는 [파일 기반 대상](testing-api/batch-destinations/file-based-destination-testing-overview.md)을 테스트하려면 제품 설명서의 지침을 따르십시오.

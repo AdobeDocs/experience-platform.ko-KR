@@ -118,7 +118,7 @@ y축은 x축의 일치 값에 해당하는 유사성 백분율과 함께 예상 
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="영향력 있는 요소"
 >abstract="영향력 있는 요소는 프로필의 유사성을 기본 대상자 멤버에게 설명하는 데 중요한 속성, 이벤트 및 대상자 멤버십입니다. 데이터 사용 레이블 및 정책을 사용하여 유사 모델에서 특정 데이터가 영향력 있는 요소로 간주되지 않도록 제외할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html#exclude" text="데이터 제외"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html?lang=ko#exclude" text="데이터 제외"
 
 영향 요인 섹션에는 선택한 기본 대상의 유사 모델에 영향을 주는 상위 100개 요인이 표시됩니다. 이러한 영향력 있는 요소는 기본 대상의 유사성을 설명하는 데 가장 중요한 프로필 속성, 경험 이벤트 및 대상 멤버십입니다. 가장 영향력 있는 주요 요인을 이해하면 이 대상자 및 이 대상자를 통해 생성하는 유사 대상자에 대한 마케팅 콘텐츠를 더 잘 개인화할 수 있습니다. 유사 모델에 영향을 미치는 모든 영향 요소가 표시되지는 않음에 유의하시기 바랍니다.
 

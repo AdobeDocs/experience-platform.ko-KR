@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Adobe 기여 안내서의 다음 문서를 사용하여 설명서 프로세스를 추가로 지원할 수 있습니다. <ul><li>[Git 및 Markdown 작성 도구 설치](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[로컬에서 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[주요 변경 사항에 대한 GitHub 기여 워크플로](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Adobe 기여 안내서의 다음 문서를 사용하여 설명서 프로세스를 추가로 지원할 수 있습니다. <ul><li>[Git 및 Markdown 작성 도구 설치](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ko)</li><li>[로컬에서 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ko)</li><li>[주요 변경 사항에 대한 GitHub 기여 워크플로](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=ko)</li></ul>
 
 ## 전제 조건
 
@@ -37,7 +37,7 @@ Experience Platform GitHub 리포지토리의 기본 페이지에서 **포크**&
 
 >[!TIP]
 >
->자세한 내용은 [로컬에서 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository)에 대한 자습서를 참조하십시오.
+>자세한 내용은 [로컬에서 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ko#create-a-local-clone-of-the-repository)에 대한 자습서를 참조하십시오.
 
 ![git-desktop 열기](../assets/open-git-desktop.png)
 
@@ -59,7 +59,7 @@ Experience Platform GitHub 리포지토리의 기본 페이지에서 **포크**&
 
 ## 소스에 대한 설명서 페이지 작성
 
-로컬 컴퓨터에 복제된 저장소와 새 분기가 생성되면 이제 [선택한 텍스트 편집기](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors)를 통해 새 소스에 대한 설명서 페이지 작성을 시작할 수 있습니다.
+로컬 컴퓨터에 복제된 저장소와 새 분기가 생성되면 이제 [선택한 텍스트 편집기](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ko#understand-markdown-editors)를 통해 새 소스에 대한 설명서 페이지 작성을 시작할 수 있습니다.
 
 Adobe에서는 [Visual Studio Code](https://code.visualstudio.com/)을 사용하고 Adobe Markdown 작성 확장을 설치하는 것이 좋습니다. 확장을 설치하려면 Visual Studio Code를 시작한 다음 왼쪽 탐색에서 **확장** 탭을 선택합니다.
 

@@ -156,11 +156,11 @@ Adobe Real-Time CDP의 4가지 핵심 축이 엔터프라이즈 사용 사례를
 <table style="margin-top: 0 !important">
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html?lang=ko">
       <img alt="Adobe Experience Cloud 비디오의 일부인 Real-Time CDP" src="/help/rtcdp/assets/platform-apps-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html?lang=ko">
     <strong>Adobe Experience Cloud의 일부인 Real-Time CDP</strong>
     </a>
     </div>
@@ -169,11 +169,11 @@ Adobe Real-Time CDP의 4가지 핵심 축이 엔터프라이즈 사용 사례를
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html?lang=ko">
       <img alt="Adobe Experience Platform 비디오의 &apos;기본 아키텍처&apos;에 대한 썸네일 이미지" src="/help/rtcdp/assets/platform-architecture-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html?lang=ko">
     <strong>Adobe Experience Platform의 기본 아키텍처</strong>
     </a>
     </div>
@@ -182,11 +182,11 @@ Adobe Real-Time CDP의 4가지 핵심 축이 엔터프라이즈 사용 사례를
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=en">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=ko">
       <img alt="&apos;Adobe Experience Platform 인터페이스 둘러보기&apos; 비디오의 썸네일 이미지" src="/help/rtcdp/assets/rtcdp-ui-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=en">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=ko">
     <strong>Adobe Experience Platform 인터페이스 둘러보기</strong>
     </a>
     </div>
@@ -203,12 +203,12 @@ Adobe Real-Time CDP의 4가지 핵심 축이 엔터프라이즈 사용 사례를
 
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=en" target="_blank">자습서</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">제품 설명 Real-Time CDP B2C 에디션</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">보안 개요(PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=ko-KR" target="_blank">구현 블루프린트</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html" target="_blank">용어집</a>
+<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ko" target="_blank">자습서</a> - <a href="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">제품 설명 Real-Time CDP B2C 에디션</a> - <a href="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">보안 개요(PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=ko-KR" target="_blank">구현 블루프린트</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ko" target="_blank">용어집</a>
 </td>
 <td><strong>Adobe Experience Platform</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=ko" target="_blank">설명서</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API 참조 - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank">강의: Experience Platform 소개</a></a>
+<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=ko" target="_blank">설명서</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API 참조 - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html?lang=ko" target="_blank">강의: Experience Platform 소개</a></a>
 </td>
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>최신 정보를 얻고, 커뮤니티에 기여하고, Adobe Real-Time CDP 환경을 개선하세요!</b><br/>Real-Time Customer Data Platform 커뮤니티에서 동료 실무자와 기능을 논의하십시오. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">지금 커뮤니티에 가입하세요!</a></td></tr></table>
+<b>최신 정보를 얻고, 커뮤니티에 기여하고, Adobe Real-Time CDP 환경을 개선하세요!</b><br/>Real-Time Customer Data Platform 커뮤니티에서 동료 실무자와 기능을 논의하십시오. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP?profile.language=ko">지금 커뮤니티에 가입하세요!</a></td></tr></table>

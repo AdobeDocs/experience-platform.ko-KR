@@ -99,19 +99,19 @@ Experience Platform 내의 모든 조직에서 사용할 수 있도록 다음 �
 | 표시 이름 | 설명 |
 | ------------ | ----------- |
 | AdCloud | Adobe AdCloud를 나타내는 네임스페이스입니다. |
-| Adobe Analytics (기존 ID) | Adobe Analytics을 나타내는 네임스페이스입니다. 자세한 내용은 [Adobe Analytics 네임스페이스](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces)에서 다음 문서를 참조하십시오. |
+| Adobe Analytics (기존 ID) | Adobe Analytics을 나타내는 네임스페이스입니다. 자세한 내용은 [Adobe Analytics 네임스페이스](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=ko#namespaces)에서 다음 문서를 참조하십시오. |
 | Apple IDFA (광고주용 ID) | 광고주용 Apple ID를 나타내는 네임스페이스입니다. 자세한 내용은 [관심 기반 광고](https://support.apple.com/en-us/HT202074)에 대한 다음 문서를 참조하십시오. |
 | Apple 푸시 알림 서비스 | Apple 푸시 알림 서비스를 사용하여 수집된 ID를 나타내는 네임스페이스입니다. 자세한 내용은 [Apple 푸시 알림 서비스](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)에 대한 다음 문서를 참조하십시오. |
 | ECID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 자세한 내용은 [ECID](./ecid.md)에서 다음 문서를 참조하십시오. |
 | 이메일 | 이메일 주소를 나타내는 네임스페이스입니다. 이러한 유형의 네임스페이스는 종종 단일 사용자와 연결되므로 여러 채널에서 해당 사용자를 식별하는 데 사용할 수 있습니다. |
-| 이메일(SHA256, 소문자) | 사전 해시된 이메일 주소를 위한 네임스페이스입니다. 이 네임스페이스에 제공된 값은 SHA256으로 해싱하기 전에 소문자로 변환됩니다. 전자 메일 주소가 정규화되기 전에 선행 및 후행 공백을 잘라내야 합니다. 이 설정은 소급하여 변경할 수 없습니다. 자세한 내용은 [SHA256 해시 지원](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support)에 대한 다음 문서를 참조하십시오. |
+| 이메일(SHA256, 소문자) | 사전 해시된 이메일 주소를 위한 네임스페이스입니다. 이 네임스페이스에 제공된 값은 SHA256으로 해싱하기 전에 소문자로 변환됩니다. 전자 메일 주소가 정규화되기 전에 선행 및 후행 공백을 잘라내야 합니다. 이 설정은 소급하여 변경할 수 없습니다. 자세한 내용은 [SHA256 해시 지원](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=ko#hashing-support)에 대한 다음 문서를 참조하십시오. |
 | Firebase 클라우드 메시징 | 푸시 알림용 Google Firebase Cloud Messaging을 사용하여 수집된 ID를 나타내는 네임스페이스입니다. 자세한 내용은 [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging)에 대한 다음 문서를 참조하십시오. |
 | Google 광고 ID (GAID) | Google Advertising ID를 나타내는 네임스페이스입니다. 자세한 내용은 [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en)에 대한 다음 문서를 참조하십시오. |
 | 휴대폰 | 전화 번호를 나타내는 네임스페이스입니다. 이러한 유형의 네임스페이스는 종종 단일 사용자와 연결되므로 여러 채널에서 해당 사용자를 식별하는 데 사용할 수 있습니다. |
 | 전화(E.164) | E.164 형식으로 해시해야 하는 원시 전화 번호를 나타내는 네임스페이스입니다. E.164 형식에는 더하기 기호(`+`), 국제 국가 호출 코드, 지역 번호 및 전화 번호가 포함됩니다. 예: `(+)(country code)(area code)(phone number)`. |
 | 휴대폰 (SHA256) | SHA256을 사용하여 해시해야 하는 전화 번호를 나타내는 네임스페이스입니다. 기호, 문자 및 앞에 오는 0을 제거해야 합니다. 국가 호출 코드도 접두사로 추가해야 합니다. |
 | 전화(SHA256_E.164) | SHA256과 E.164 포맷을 모두 사용하여 해시해야 하는 원시 전화번호를 나타내는 네임스페이스입니다. |
-| TNTID | Adobe Target을 나타내는 네임스페이스입니다. 자세한 내용은 [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html)에 대한 다음 문서를 참조하십시오. |
+| TNTID | Adobe Target을 나타내는 네임스페이스입니다. 자세한 내용은 [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ko)에 대한 다음 문서를 참조하십시오. |
 | Windows AID | Windows Advertising ID를 나타내는 네임스페이스입니다. 자세한 내용은 [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041)에서 다음 문서를 참조하십시오. |
 
 ### ID 네임스페이스 보기 {#view-identity-namespaces}

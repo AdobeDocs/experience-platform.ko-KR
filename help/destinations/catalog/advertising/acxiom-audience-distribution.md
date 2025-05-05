@@ -33,7 +33,7 @@ ht-degree: 6%
 ## 전제 조건 {#prerequisites}
 
 * **사용 약관 확인:** 새 [!DNL Acxiom Audience Distribution] 대상을 구성하려면 [!DNL Acxiom's] 사용 약관 계약을 읽고 서명해야 합니다. 실행된 판매 주문이 완료되면 계약 링크를 받게 됩니다. 계약에 서명할 때까지 Experience Platform 대상 카탈로그에 [!DNL Acxiom Audience Distribution] 대상 카드가 표시되지 않습니다. 계약에 동의하고 서명하면 [!DNL Adobe]이(가) 온보딩 프로세스를 완료하고 [!DNL Acxiom Audience Distribution] 대상 카드가 표시됩니다.
-* **Adobe 조직 ID를 알고 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [조직 ID를 보는 방법](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)에 대한 자세한 내용은 [!DNL Adobe's] *Experience Cloud의 조직* 항목을 참조하십시오.
+* **Adobe 조직 ID를 알고 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [조직 ID를 보는 방법](https://experienceleague.adobe.com/ko/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)에 대한 자세한 내용은 [!DNL Adobe's] *Experience Cloud의 조직* 항목을 참조하십시오.
 
 ## 지원되는 대상 {#supported-destinations}
 
@@ -127,6 +127,6 @@ ht-degree: 6%
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
-데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)를 참조하십시오.
+데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/data-governance/home)를 참조하십시오.
 
 

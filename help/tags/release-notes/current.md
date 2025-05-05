@@ -13,29 +13,29 @@ ht-degree: 93%
 
 >[!IMPORTANT]
 >
->앞으로 태그 및 이벤트 전달 릴리스 정보는 더 이상 이 페이지에 제공되지 않습니다. 태그 및 이벤트 전달 업데이트에 대한 자세한 내용은 [Adobe Experience Platform 릴리스 정보](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection)를 참조하십시오.
+>앞으로 태그 및 이벤트 전달 릴리스 정보는 더 이상 이 페이지에 제공되지 않습니다. 태그 및 이벤트 전달 업데이트에 대한 자세한 내용은 [Adobe Experience Platform 릴리스 정보](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=ko#data-collection)를 참조하십시오.
 
 ## 2023년 4월 26일
 
-* **OAuth JWT Secret**: 고객은 [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html)을 사용하여 Adobe 및 Google Service 토큰으로 이벤트 전달에서 서버 간 상호 작용을 지원할 수 있습니다.
+* **OAuth JWT Secret**: 고객은 [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=ko)을 사용하여 Adobe 및 Google Service 토큰으로 이벤트 전달에서 서버 간 상호 작용을 지원할 수 있습니다.
 
 새로 출시된 확장 기능은 다음과 같습니다.
 
-* **[!DNL Pinterest Conversions API]extension**: [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) 이벤트 전달 확장 기능을 사용하면 Adobe Experience Platform Edge Network에서 캡처된 데이터를 활용하여 [!DNL Pinterest Conversions API]를 통해 서버측 이벤트의 형태로 [!DNL Pinterest]로 전송할 수 있습니다
+* **[!DNL Pinterest Conversions API]extension**: [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=ko) 이벤트 전달 확장 기능을 사용하면 Adobe Experience Platform Edge Network에서 캡처된 데이터를 활용하여 [!DNL Pinterest Conversions API]를 통해 서버측 이벤트의 형태로 [!DNL Pinterest]로 전송할 수 있습니다
 
 ## 2023년 3월 29일
 
 **빠른 시작 워크플로 (Beta)**
 
 데이터 수집 홈 화면의 “시작하기” 아래에 있는 새로운 빠른 시작 워크플로에 액세스할 수 있습니다. 다음 워크플로는 현재 공개 Beta 버전으로 고객에게 제공됩니다.
-* **[Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**: 이벤트 전달 고객은 Meta Conversions API를 위한 이벤트 데이터를 신속하게 수집하여 단 몇 번의 간단한 단계로 광고 전환을 위해 서버측에서 Meta로 전달할 수 있습니다.
+* **[Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=ko#quick-start)**: 이벤트 전달 고객은 Meta Conversions API를 위한 이벤트 데이터를 신속하게 수집하여 단 몇 번의 간단한 단계로 광고 전환을 위해 서버측에서 Meta로 전달할 수 있습니다.
 * **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: 고객은 몇 번의 간단한 단계로 Mobile SDK를 신속하게 구현하고 기본 모바일 이벤트의 유효성을 검사할 수 있습니다.
 
 새로운 확장 기능이 출시되었습니다.
 
-* **[!DNL Braze]이벤트 전달 확장 기능**: [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 이벤트 전달 확장 기능을 사용하면 Adobe Experience Platform Edge Network에서 캡처된 데이터를 활용하여 [!DNL Braze] 사용자 추적 API를 통해 서버측 이벤트의 형태로 [!DNL Braze]로 전송할 수 있습니다
-* **[Epsilon 이벤트 API] 이벤트 전달 확장 기능**: [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 확장 기능을 사용하면 이벤트 전달을 통해 Adobe Experience Platform Edge Network의 이벤트 정보를 캡처하고 [!DNL Epsilon] 이벤트 API를 통해 [!DNL Epsilon]으로 전송할 수 있습니다
-* **[!DNL Mixpanel]이벤트 전달 확장 기능**: [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 확장 기능을 사용하면 이벤트 전달을 통해 Adobe Experience Platform Edge Network의 이벤트 정보를 캡처하고 추적 이벤트 API를 통해 [!DNL Mixpanel]로 전송할 수 있습니다.
+* **[!DNL Braze]이벤트 전달 확장 기능**: [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ko) 이벤트 전달 확장 기능을 사용하면 Adobe Experience Platform Edge Network에서 캡처된 데이터를 활용하여 [!DNL Braze] 사용자 추적 API를 통해 서버측 이벤트의 형태로 [!DNL Braze]로 전송할 수 있습니다
+* **[Epsilon 이벤트 API] 이벤트 전달 확장 기능**: [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ko) 확장 기능을 사용하면 이벤트 전달을 통해 Adobe Experience Platform Edge Network의 이벤트 정보를 캡처하고 [!DNL Epsilon] 이벤트 API를 통해 [!DNL Epsilon]으로 전송할 수 있습니다
+* **[!DNL Mixpanel]이벤트 전달 확장 기능**: [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=ko) 확장 기능을 사용하면 이벤트 전달을 통해 Adobe Experience Platform Edge Network의 이벤트 정보를 캡처하고 추적 이벤트 API를 통해 [!DNL Mixpanel]로 전송할 수 있습니다.
 
 ## 2023년 1월 25일
 

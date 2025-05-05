@@ -22,7 +22,7 @@ Customer AI와 Adobe Experience Platform 데이터 거버넌스 간의 통합을
 
 Experience Platform에서 사용하는 데이터 세트에 생성된 데이터 사용 레이블 및 정책은 Customer AI 구성 워크플로에 표시될 수 있습니다. 이러한 레이블은 레이블이 지정된 필드를 사용하는 사용자를 중지하거나 경고합니다.
 
-이러한 통합을 통해 규정 준수를 보다 효율적으로 관리할 수 있습니다. 조직의 데이터 관리자는 사용을 제한하는 정책을 설정할 수 있습니다. 따라서 데이터 관리자에 의해 정의된 정책을 준수하는 데이터를 사용할 수 있습니다. 자세한 내용은 [레이블 및 정책](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html)에 대한 설명서를 읽어 보십시오.
+이러한 통합을 통해 규정 준수를 보다 효율적으로 관리할 수 있습니다. 조직의 데이터 관리자는 사용을 제한하는 정책을 설정할 수 있습니다. 따라서 데이터 관리자에 의해 정의된 정책을 준수하는 데이터를 사용할 수 있습니다. 자세한 내용은 [레이블 및 정책](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=ko)에 대한 설명서를 읽어 보십시오.
 
 ## 동의 정책 {#consent-policy}
 
@@ -31,5 +31,5 @@ Experience Platform에서 사용하는 데이터 세트에 생성된 데이터 �
 이 기능에 대한 자세한 내용은 다음 페이지를 참조하십시오.
 
 [Customer AI에서 시작](../../customer-ai/getting-started.md)
-[Adobe Experience Platform 및 응용 프로그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
+[Adobe Experience Platform 및 응용 프로그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=ko)
 [Adobe Experience Cloud 아키텍처 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=ko-KR)

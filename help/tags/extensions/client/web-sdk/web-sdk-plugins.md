@@ -50,7 +50,7 @@ ht-degree: 0%
 >
 >이 데이터 요소는 쿠키를 설정하고, 쿠키에 사용자 생성 값을 저장할 수 있도록 합니다. 자세한 내용은 플러그인 특정 설명서 를 참조하십시오.
 
-[`getAndPersistValue` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getandpersistvalue.html)을 설정하고 구성할 수 있습니다. `getAndPersistValue` 데이터 요소는 방문 중에 나중에 검색할 수 있는 쿠키에 값을 저장합니다.
+[`getAndPersistValue` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getandpersistvalue.html?lang=ko)을 설정하고 구성할 수 있습니다. `getAndPersistValue` 데이터 요소는 방문 중에 나중에 검색할 수 있는 쿠키에 값을 저장합니다.
 
 `getAndPersistValue` 데이터 요소는 다음 인수를 제공합니다.
 
@@ -66,7 +66,7 @@ ht-degree: 0%
 >
 >이 플러그인은 클라이언트에서 위치 액세스가 필요하지만, 이를 얻지 못할 경우 예외를 throw하지 않습니다.
 
-[`getGeoCoordinates` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getgeocoordinates.html)을 설정하고 구성할 수 있습니다. `getGeoCoordinates` 데이터 요소는 방문자 장치의 위도와 경도를 캡처합니다.
+[`getGeoCoordinates` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getgeocoordinates.html?lang=ko)을 설정하고 구성할 수 있습니다. `getGeoCoordinates` 데이터 요소는 방문자 장치의 위도와 경도를 캡처합니다.
 
 `getGeoCoordinates` 데이터 요소는 인수를 사용하지 않습니다. 다음 값 중 하나를 반환합니다.
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 >
 >이 데이터 요소는 쿠키를 설정합니다. 자세한 내용은 플러그인 특정 설명서 를 참조하십시오.
 
-[`getNewRepeat` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getnewrepeat.html)을 설정하고 구성할 수 있습니다. `getNewRepeat` 데이터 요소는 원하는 일 수 내에 사이트 방문자가 새 방문자인지 반복 방문자인지를 결정합니다.
+[`getNewRepeat` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getnewrepeat.html?lang=ko)을 설정하고 구성할 수 있습니다. `getNewRepeat` 데이터 요소는 원하는 일 수 내에 사이트 방문자가 새 방문자인지 반복 방문자인지를 결정합니다.
 
 `getNewRepeat` 데이터 요소는 다음 인수를 사용합니다.
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
 ### `getPageName`
 
-[`getPageName` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpagename.html)을 설정하고 구성할 수 있습니다. `getPageName` 데이터 요소는 현재 URL의 읽기 쉽고 친숙한 형식의 버전을 만듭니다.
+[`getPageName` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpagename.html?lang=ko)을 설정하고 구성할 수 있습니다. `getPageName` 데이터 요소는 현재 URL의 읽기 쉽고 친숙한 형식의 버전을 만듭니다.
 
 `getPageName` 데이터 요소는 다음 인수를 사용합니다.
 
@@ -107,7 +107,7 @@ ht-degree: 0%
 >
 >이 데이터 요소는 쿠키를 설정하고, 쿠키에 사용자 생성 값을 저장할 수 있도록 합니다. 자세한 내용은 플러그인 특정 설명서 를 참조하십시오.
 
-[`getPreviousValue` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html)을 설정하고 구성할 수 있습니다. `getPreviousValue` 데이터 요소는 변수를 이전 히트에 설정된 값으로 설정합니다.
+[`getPreviousValue` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html?lang=ko)을 설정하고 구성할 수 있습니다. `getPreviousValue` 데이터 요소는 변수를 이전 히트에 설정된 값으로 설정합니다.
 
 `getPreviousValue` 데이터 요소는 다음 인수를 사용합니다.
 
@@ -118,7 +118,7 @@ ht-degree: 0%
 
 ### `getQueryParam`
 
-[`getQueryParam` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getqueryparam.html)을 설정하고 구성할 수 있습니다. `getQueryParam` 데이터 요소는 URL에 포함된 모든 쿼리 문자열 매개 변수의 값을 추출합니다. 이 플러그인은 랜딩 페이지 URL에서 내부 및 외부의 캠페인 코드를 모두 추출하는 데 유용합니다. 검색어 또는 기타 쿼리 문자열 매개 변수를 추출할 때에도 유용합니다. 이 데이터 요소는 여러 쿼리 문자열 매개 변수를 포함하는 해시 및 URL을 포함하여 복잡한 URL을 구문 분석하는 데 강력한 기능을 제공합니다.
+[`getQueryParam` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getqueryparam.html?lang=ko)을 설정하고 구성할 수 있습니다. `getQueryParam` 데이터 요소는 URL에 포함된 모든 쿼리 문자열 매개 변수의 값을 추출합니다. 이 플러그인은 랜딩 페이지 URL에서 내부 및 외부의 캠페인 코드를 모두 추출하는 데 유용합니다. 검색어 또는 기타 쿼리 문자열 매개 변수를 추출할 때에도 유용합니다. 이 데이터 요소는 여러 쿼리 문자열 매개 변수를 포함하는 해시 및 URL을 포함하여 복잡한 URL을 구문 분석하는 데 강력한 기능을 제공합니다.
 
 `getQueryParam` 데이터 요소는 다음 인수를 사용합니다.
 
@@ -135,7 +135,7 @@ ht-degree: 0%
 
 ### `getTimeParting`
 
-[`getTimeParting` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html)을 설정하고 구성할 수 있습니다. `getTimeParting` 데이터 요소는 사이트에서 측정 가능한 활동이 발생하는 시간을 캡처합니다. 이 데이터 요소는 주어진 날짜 범위에서 반복 가능한 시간 분할로 지표를 분류하려는 경우 유용합니다. 예를 들어 모든 일요일과 모든 목요일 등 두 가지 서로 다른 요일 간의 전환율을 비교할 수 있습니다. 또한 아침과 저녁과 같은 하루 동안의 시간을 비교할 수 있습니다.
+[`getTimeParting` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html?lang=ko)을 설정하고 구성할 수 있습니다. `getTimeParting` 데이터 요소는 사이트에서 측정 가능한 활동이 발생하는 시간을 캡처합니다. 이 데이터 요소는 주어진 날짜 범위에서 반복 가능한 시간 분할로 지표를 분류하려는 경우 유용합니다. 예를 들어 모든 일요일과 모든 목요일 등 두 가지 서로 다른 요일 간의 전환율을 비교할 수 있습니다. 또한 아침과 저녁과 같은 하루 동안의 시간을 비교할 수 있습니다.
 
 `getTimeParting` 데이터 요소는 다음 인수를 사용합니다.
 
@@ -162,7 +162,7 @@ ht-degree: 0%
 >
 >이 데이터 요소는 쿠키를 설정합니다. 자세한 내용은 플러그인 특정 설명서 를 참조하십시오.
 
-[`getTimeSinceLastVisit` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimesincelastvisit.html)을 설정하고 구성할 수 있습니다. `getTimeSinceLastVisit` 데이터 요소는 방문자가 마지막 방문 후 사이트를 다시 방문하는 시간을 추적합니다.
+[`getTimeSinceLastVisit` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimesincelastvisit.html?lang=ko)을 설정하고 구성할 수 있습니다. `getTimeSinceLastVisit` 데이터 요소는 방문자가 마지막 방문 후 사이트를 다시 방문하는 시간을 추적합니다.
 
 `getTimeSinceLastVisit` 데이터 요소는 인수를 사용하지 않습니다. 이 메서드는 방문자가 마지막으로 사이트를 방문한 이후 경과된 시간을 반환합니다(다음 형식으로 변환됨).
 
@@ -177,7 +177,7 @@ ht-degree: 0%
 >
 >이 데이터 요소는 쿠키를 설정하고, 쿠키에 사용자 생성 값을 저장할 수 있도록 합니다. 자세한 내용은 플러그인 특정 설명서 를 참조하십시오.
 
-[`getValOnce` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html)을 설정하고 구성할 수 있습니다. `getValOnce` 데이터 요소를 사용하면 변수가 동일한 값에 두 번 이상 설정되지 않습니다.
+[`getValOnce` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html?lang=ko)을 설정하고 구성할 수 있습니다. `getValOnce` 데이터 요소를 사용하면 변수가 동일한 값에 두 번 이상 설정되지 않습니다.
 
 `getValOnce` 데이터 요소는 다음 인수를 사용합니다.
 
@@ -194,7 +194,7 @@ ht-degree: 0%
 >
 >이 데이터 요소는 쿠키를 설정합니다. 자세한 내용은 플러그인 특정 설명서 를 참조하십시오.
 
-[`getVisitDuration` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html)을 설정하고 구성할 수 있습니다. `getVisitDuration` 데이터 요소는 방문자가 해당 시점까지 사이트에 있었던 시간(분)을 추적합니다.
+[`getVisitDuration` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html?lang=ko)을 설정하고 구성할 수 있습니다. `getVisitDuration` 데이터 요소는 방문자가 해당 시점까지 사이트에 있었던 시간(분)을 추적합니다.
 
 `getVisitDuration` 데이터 요소는 인수를 사용하지 않습니다. 다음 값 중 하나를 반환합니다.
 
@@ -209,7 +209,7 @@ ht-degree: 0%
 >
 >이 데이터 요소는 쿠키를 설정합니다. 자세한 내용은 플러그인 특정 설명서 를 참조하십시오.
 
-[`getVisitNum` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitnum.html)을 설정하고 구성할 수 있습니다. `getVisitNum` 데이터 요소는 원하는 일 수 내에 사이트를 방문하는 모든 방문자에 대한 방문 횟수를 반환합니다.
+[`getVisitNum` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitnum.html?lang=ko)을 설정하고 구성할 수 있습니다. `getVisitNum` 데이터 요소는 원하는 일 수 내에 사이트를 방문하는 모든 방문자에 대한 방문 횟수를 반환합니다.
 
 `getVisitNum` 데이터 요소는 다음 인수를 사용합니다.
 
@@ -223,7 +223,7 @@ ht-degree: 0%
 
 ### `p_fo`(첫 번째 페이지만)
 
-[`p_fo` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/p-fo.html)을 설정하고 구성할 수 있습니다. `p_fo` 데이터 요소는 특정 JavaScript 개체가 있는지 확인하는 유틸리티입니다. 개체가 없으면 플러그인이 개체를 만들고 `true`을(를) 반환합니다. JavaScript 개체가 페이지에 이미 있으면 `false`을(를) 반환합니다. 이 데이터 요소는 페이지에서 코드를 정확히 한 번 실행하는 데 유용합니다.
+[`p_fo` Analytics 플러그인](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/p-fo.html?lang=ko)을 설정하고 구성할 수 있습니다. `p_fo` 데이터 요소는 특정 JavaScript 개체가 있는지 확인하는 유틸리티입니다. 개체가 없으면 플러그인이 개체를 만들고 `true`을(를) 반환합니다. JavaScript 개체가 페이지에 이미 있으면 `false`을(를) 반환합니다. 이 데이터 요소는 페이지에서 코드를 정확히 한 번 실행하는 데 유용합니다.
 
 `p_fo` 데이터 요소는 다음 인수를 사용합니다.
 

@@ -16,14 +16,14 @@ ht-degree: 0%
 >[!TIP]
 >
 >Adobe의 기여자 안내서에서 지원 설명서를 참조하십시오.
->* [Git 및 Markdown 작성 도구 설치](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* [로컬에서 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
->* [주요 변경 사항에 대한 GitHub 기여 워크플로](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
+>* [Git 및 Markdown 작성 도구 설치](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ko)
+>* [로컬에서 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ko)
+>* [주요 변경 사항에 대한 GitHub 기여 워크플로](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=ko).
 
 ## GitHub 작성 환경 설정 {#set-up-environment}
 
 1. 브라우저에서 `https://github.com/AdobeDocs/experience-platform.en`(으)로 이동합니다.
-2. 리포지토리를 [포크](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository)하려면 아래 표시된 대로 **포크**&#x200B;를 클릭하십시오. 이렇게 하면 고유한 GitHub 계정에 Experience Platform 리포지토리의 사본이 만들어집니다.
+2. 리포지토리를 [포크](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ko#fork-the-repository)하려면 아래 표시된 대로 **포크**&#x200B;를 클릭하십시오. 이렇게 하면 고유한 GitHub 계정에 Experience Platform 리포지토리의 사본이 만들어집니다.
 
    ![Adobe 문서 리포지토리 포크](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -46,7 +46,7 @@ ht-degree: 0%
    >
    >언제든지 브라우저 창을 닫고 나중에 다시 열 수 있습니다. 작업이 자동으로 저장되며 브라우저를 다시 열 때 기다리고 있습니다.
 3. Markdown 편집기의 콘텐츠를 GitHub의 새 파일에 복사합니다.
-4. 사용할 스크린샷이나 이미지의 경우 GitHub 인터페이스를 사용하여 `experience-platform.en/help/destinations/assets/catalog/[...]`에 파일을 업로드하십시오. 여기서 `[...]`은(는) 대상에 대해 원하는 범주입니다. 예를 들어 Experience Platform에 개인화 대상을 추가하는 경우 `personalization` 범주를 선택합니다. 작성 중인 페이지의 이미지에 연결해야 합니다. [이미지에 연결하는 방법 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images)을 참조하세요.
+4. 사용할 스크린샷이나 이미지의 경우 GitHub 인터페이스를 사용하여 `experience-platform.en/help/destinations/assets/catalog/[...]`에 파일을 업로드하십시오. 여기서 `[...]`은(는) 대상에 대해 원하는 범주입니다. 예를 들어 Experience Platform에 개인화 대상을 추가하는 경우 `personalization` 범주를 선택합니다. 작성 중인 페이지의 이미지에 연결해야 합니다. [이미지에 연결하는 방법 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=ko#link-to-images)을 참조하세요.
 
    ![GitHub에 이미지 업로드](../assets/docs-framework/upload-image.gif)
 
@@ -82,4 +82,4 @@ ht-degree: 0%
 
 >[!TIP]
 >
->설명서에 이미지 및 링크를 추가하고 Markdown에 대한 기타 질문이 있는 경우 Adobe의 공동 작성 안내서에서 [Markdown 사용](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)을 읽어 보십시오.
+>설명서에 이미지 및 링크를 추가하고 Markdown에 대한 기타 질문이 있는 경우 Adobe의 공동 작성 안내서에서 [Markdown 사용](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ko)을 읽어 보십시오.

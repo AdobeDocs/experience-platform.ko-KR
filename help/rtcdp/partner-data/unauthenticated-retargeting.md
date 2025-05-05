@@ -76,7 +76,7 @@ Adobe Web SDK이 웹 사이트에 제대로 통합되었는지 확인합니다. 
 
 오프사이트 재타겟팅 확장이 Adobe Experience Platform 데이터 수집에서 유효한 이벤트 규칙에 연결되어 있는지 확인합니다. 일반적으로 `page load` 또는 특정 사용자 상호 작용과 같은 주요 작업 시 실행되도록 전역 규칙을 만들어야 합니다.
 
-확장 구성에 대한 자세한 내용은 [이벤트 전달](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) 설명서를 참조하십시오.
+확장 구성에 대한 자세한 내용은 [이벤트 전달](https://experienceleague.adobe.com/ko/docs/experience-platform/tags/event-forwarding/getting-started) 설명서를 참조하십시오.
 
 ## 기타 사용 사례 {#other-use-cases}
 

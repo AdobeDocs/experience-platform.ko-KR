@@ -23,7 +23,7 @@ Experience Platform 대상으로 내보내기 동작을 고려할 때 구성이 
 
 ## 대상 유형 간의 공통 내보내기 설정 {#common-settings-across-destination-types}
 
-대상 내보내기 동작은 대상 내보내기를 트리거하는 *항목* 및 *대상 내보내기에 포함되는 항목*&#x200B;과 관련하여 대상 유형에 속하는 대상 간에 일관됩니다. 대상 내보내기는 대상 서비스가 [업스트림 실시간 고객 프로필 서비스](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram)에서 받은 알림에 의해 트리거됩니다.
+대상 내보내기 동작은 대상 내보내기를 트리거하는 *항목* 및 *대상 내보내기에 포함되는 항목*&#x200B;과 관련하여 대상 유형에 속하는 대상 간에 일관됩니다. 대상 내보내기는 대상 서비스가 [업스트림 실시간 고객 프로필 서비스](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=ko#adobe-experience-platform-%26-applications-detailed-architecture-diagram)에서 받은 알림에 의해 트리거됩니다.
 
 대상 내보내기에 포함된 내용은 대상 유형 간에 약간 다릅니다. 대상 유형별 [일반적인 내보내기 동작 패턴](/help/destinations/how-destinations-work/profile-export-behavior.md)에 대해 자세히 알아보세요. 대상 개발자 또는 Real-Time CDP 사용자는 이러한 설정을 편집할 수 없습니다.
 

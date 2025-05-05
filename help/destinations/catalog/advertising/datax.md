@@ -67,7 +67,7 @@ Taxonomy 리소스는 기본 [!DNL DataX] 메타데이터 구조를 통해 확�
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Verizon Media]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)에 대해 자세히 알아보세요.
+[!DNL Verizon Media]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko#getting-started)에 대해 자세히 알아보세요.
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|

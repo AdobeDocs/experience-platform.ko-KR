@@ -53,7 +53,7 @@ Edge Network 모바일 구현의 경우, 이 기능은 버전 1.1.0(iOS 및 Andr
 
 Mobile-to-web ID 공유에서는 `adobe_mc` 매개 변수를 사용합니다. `adobe_mc` 매개 변수가 있고 유효하면 쿼리 문자열의 `ECID`이(가) Edge Network에 수행된 첫 번째 요청에서 ID 맵에 자동으로 추가됩니다. 모든 후속 Edge Network 상호 작용에서는 해당 `ECID`을(를) 사용합니다.
 
-모바일 앱에서 WebView로 방문자 ID를 전달하는 방법에 대한 자세한 내용은 [WebViews 처리](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation)에 대한 설명서를 참조하십시오.
+모바일 앱에서 WebView로 방문자 ID를 전달하는 방법에 대한 자세한 내용은 [WebViews 처리](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=ko#implementation)에 대한 설명서를 참조하십시오.
 
 ## 도메인 간 ID 공유 구현 {#cross-domain-sharing}
 

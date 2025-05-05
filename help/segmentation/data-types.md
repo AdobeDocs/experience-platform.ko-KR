@@ -52,7 +52,7 @@ ht-degree: 3%
 
 외부 대상은 새 세그먼트 정의에 해당 속성 규칙을 추가하여 새 세그먼트 정의의 구성 요소로 사용할 수도 있습니다.
 
-현재 Adobe Audience Manager만 외부 대상으로 지원되며 향후 추가 소스가 활성화됩니다. Experience Platform과 함께 Adobe Audience Manager 대상 사용에 대한 자세한 내용은 Adobe Audience Manager 설명서의 [대상 공유 안내서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)에서 확인할 수 있습니다.
+현재 Adobe Audience Manager만 외부 대상으로 지원되며 향후 추가 소스가 활성화됩니다. Experience Platform과 함께 Adobe Audience Manager 대상 사용에 대한 자세한 내용은 Adobe Audience Manager 설명서의 [대상 공유 안내서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ko)에서 확인할 수 있습니다.
 
 ### 세그먼트 정의 공유
 

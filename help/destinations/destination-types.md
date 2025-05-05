@@ -41,7 +41,7 @@ Adobe Experience Platform의 **[!UICONTROL 프로필 내보내기]**, **[!UICONT
 
 >[!IMPORTANT]
 >
->고급 엔터프라이즈 대상 또는 스트리밍 프로필 내보내기 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객만 사용할 수 있습니다.
+>고급 엔터프라이즈 대상 또는 스트리밍 프로필 내보내기 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객만 사용할 수 있습니다.
 
 고급 엔터프라이즈 대상 Data Connectors를 사용하여 데이터 동기화, 분석 및 추가적인 프로필 보강 사용 사례를 위해 Adobe Real-Time Customer Data Platform 프로필을 거의 실시간으로 내부 시스템이나 다른 서드파티 시스템에 전달합니다.
 

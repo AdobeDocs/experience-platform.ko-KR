@@ -46,8 +46,8 @@ Adobe XDM 소스 스키마(대상을 테스트할 때 사용) 또는 대상에�
 
 >[!IMPORTANT]
 >
->* 이 API를 사용하려면 Experience Platform UI에 대상에 대한 기존 연결이 있어야 합니다. 자세한 내용은 [대상에 연결](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 및 [대상에 프로필 및 대상자 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html)를 참조하십시오.
-> * 대상에 대한 연결을 설정한 후 [대상과의 연결을 탐색](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html)할 때 이 끝점에 대한 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다.
+>* 이 API를 사용하려면 Experience Platform UI에 대상에 대한 기존 연결이 있어야 합니다. 자세한 내용은 [대상에 연결](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ko) 및 [대상에 프로필 및 대상자 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=ko)를 참조하십시오.
+> * 대상에 대한 연결을 설정한 후 [대상과의 연결을 탐색](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=ko)할 때 이 끝점에 대한 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다.
 >![대상 인스턴스 ID](../../assets/testing-api/get-destination-instance-id.png)을(를) 가져오는 방법 UI 이미지
 
 **API 형식**
@@ -180,10 +180,10 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `segmentMembership` | 개인의 대상 멤버십을 설명하는 맵 개체입니다. `segmentMembership`에 대한 자세한 내용은 [대상 멤버십 세부 정보](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html)를 참조하세요. |
+| `segmentMembership` | 개인의 대상 멤버십을 설명하는 맵 개체입니다. `segmentMembership`에 대한 자세한 내용은 [대상 멤버십 세부 정보](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=ko)를 참조하세요. |
 | `lastQualificationTime` | 이 프로필이 세그먼트에 대해 마지막으로 적격한 타임스탬프입니다. |
 | `xdm:status` | 대상자 멤버십이 현재 요청의 일부로 실현되었는지 여부를 나타내는 문자열 필드입니다. 다음 값이 허용됩니다. <ul><li>`realized`: 프로필이 세그먼트에 속합니다.</li><li>`exited`: 프로필이 현재 요청의 일부로 대상을 종료합니다.</li></ul> |
-| `identityMap` | 연관된 네임스페이스와 함께 개인에 대한 다양한 ID 값을 설명하는 맵 유형 필드입니다. `identityMap`에 대한 자세한 내용은 [스키마 컴퍼지션의 기준](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap)을 참조하세요. |
+| `identityMap` | 연관된 네임스페이스와 함께 개인에 대한 다양한 ID 값을 설명하는 맵 유형 필드입니다. `identityMap`에 대한 자세한 내용은 [스키마 컴퍼지션의 기준](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko#identityMap)을 참조하세요. |
 
 {style="table-layout:auto"}
 

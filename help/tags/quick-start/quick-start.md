@@ -134,6 +134,6 @@ Experience Platform의 태그를 고유하게 만드는 것은 이러한 확장�
 
 태그에 대한 자세한 내용은 다음 리소스를 참조하십시오.
 
-* **[데이터 수집 커뮤니티](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: 질문 및 답변하고, 아이디어를 제출하고, 다른 사람의 아이디어를 투표할 수 있습니다. Adobe ID으로 로그인합니다.
+* **[데이터 수집 커뮤니티](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community?profile.language=ko)**: 질문 및 답변하고, 아이디어를 제출하고, 다른 사람의 아이디어를 투표할 수 있습니다. Adobe ID으로 로그인합니다.
 * **[개발자 문서](../api/overview.md)**: 태그 개발자 커뮤니티에 참여하여 확장을 빌드하거나 태그 API를 사용합니다
-* **[자습서 개요](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**: 이 문서에서는 Android 앱의 이벤트 전달 및 모바일 SDK을 포함한 태그 개념을 소개합니다.
+* **[자습서 개요](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=ko)**: 이 문서에서는 Android 앱의 이벤트 전달 및 모바일 SDK을 포함한 태그 개념을 소개합니다.

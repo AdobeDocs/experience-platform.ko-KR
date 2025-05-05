@@ -23,5 +23,5 @@ Adobe Experience Platform Web SDK를 사용하는 세 가지 지원되는 방법
 웹 SDK를 사용하거나 설치하기 전에 다음 요구 사항을 충족해야 합니다.
 
 * Adobe Experience Platform의 아키텍처를 먼저 구성해야 합니다. 이러한 설정에는 필요한 스키마, ID 및 데이터스트림이 포함됩니다.
-* 적절한 도구에 액세스하려면 적절한 권한이 구성되어 있어야 합니다. 예를 들어 조직에서 태그 확장을 사용하려는 경우 데이터 수집 UI에 액세스할 수 있는 올바른 권한이 있어야 합니다. 자세한 내용은 [데이터 수집 권한 관리](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html)를 참조하십시오.
+* 적절한 도구에 액세스하려면 적절한 권한이 구성되어 있어야 합니다. 예를 들어 조직에서 태그 확장을 사용하려는 경우 데이터 수집 UI에 액세스할 수 있는 올바른 권한이 있어야 합니다. 자세한 내용은 [데이터 수집 권한 관리](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=ko)를 참조하십시오.
 * 자사 도메인(CNAME)을 사용하는 것이 좋습니다. Adobe Analytics용 CNAME이 이미 있는 경우 해당 CNAME을 사용할 수 있습니다. Adobe 개발의 테스트는 CNAME 없이 작동하지만 프로덕션에 게시하기 전에 테스트하는 것이 좋습니다. 자세한 내용은 [자사 장치 ID](../identity/first-party-device-ids.md)를 참조하십시오.

@@ -26,9 +26,9 @@ ht-degree: 3%
 이 문서 전체에서 사용되는 다음 주요 용어를 이해하는 것이 중요합니다.
 
 * **표준 특성**: 표준 특성은 Adobe에서 미리 정의한 특성입니다. 모든 고객에 대해 동일한 의미를 포함하고 [!DNL Analytics] 원본 데이터 및 [!DNL Analytics] 스키마 필드 그룹에서 사용할 수 있습니다.
-* **사용자 지정 특성**: 사용자 지정 특성은 [!DNL Analytics]의 사용자 지정 변수 계층 구조에 있는 모든 특성입니다. 사용자 지정 속성은 Adobe Analytics 구현 내에서 특정 정보를 보고서 세트에 캡처하는 데 사용되며 보고서 세트마다 용도가 다를 수 있습니다. 사용자 지정 속성에는 eVar, prop 및 목록이 포함됩니다. eVar에 대한 자세한 내용은 다음 [[!DNL Analytics] 전환 변수에 대한 설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)를 참조하십시오.
+* **사용자 지정 특성**: 사용자 지정 특성은 [!DNL Analytics]의 사용자 지정 변수 계층 구조에 있는 모든 특성입니다. 사용자 지정 속성은 Adobe Analytics 구현 내에서 특정 정보를 보고서 세트에 캡처하는 데 사용되며 보고서 세트마다 용도가 다를 수 있습니다. 사용자 지정 속성에는 eVar, prop 및 목록이 포함됩니다. eVar에 대한 자세한 내용은 다음 [[!DNL Analytics] 전환 변수에 대한 설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=ko)를 참조하십시오.
 * **사용자 지정 필드 그룹의 모든 특성**: 고객이 만든 필드 그룹에서 시작된 특성은 모두 사용자 정의이며 표준 특성이나 사용자 지정 특성이 아닙니다.
-* **친숙한 이름**: 친숙한 이름은 [!DNL Analytics] 구현에서 사용자 지정 변수에 대해 사용자가 제공한 레이블입니다. 알기 쉬운 이름에 대한 자세한 내용은 다음 [[!DNL Analytics] 전환 변수에 대한 설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)를 참조하십시오.
+* **친숙한 이름**: 친숙한 이름은 [!DNL Analytics] 구현에서 사용자 지정 변수에 대해 사용자가 제공한 레이블입니다. 알기 쉬운 이름에 대한 자세한 내용은 다음 [[!DNL Analytics] 전환 변수에 대한 설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=ko)를 참조하십시오.
 
 ## Adobe Analytics과의 소스 연결 만들기
 

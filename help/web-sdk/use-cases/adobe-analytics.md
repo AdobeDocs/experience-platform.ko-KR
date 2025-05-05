@@ -16,7 +16,7 @@ Experience Platform Web SDK는 Experience Platform Edge Network을 통해 Adobe 
 
 * [**[!UICONTROL Adobe Analytics ExperienceEvent 필드 그룹]**](../../xdm/field-groups/event/analytics-full-extension.md)을 스키마에 추가한 다음 [`XDM` 개체를 사용합니다](../commands/sendevent/xdm.md).
 * [`data` 개체](../commands/sendevent/data.md)을(를) 사용하여 XDM 스키마 없이 Adobe Analytics으로 데이터를 보냅니다.
-* 자동으로 생성된 [컨텍스트 데이터 변수](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata) 및 [처리 규칙](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about)을 사용합니다.
+* 자동으로 생성된 [컨텍스트 데이터 변수](https://experienceleague.adobe.com/ko/docs/analytics/implementation/vars/page-vars/contextdata) 및 [처리 규칙](https://experienceleague.adobe.com/ko/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about)을 사용합니다.
 
 ## `XDM` 개체 사용 {#use-xdm-object}
 
@@ -24,10 +24,10 @@ Adobe Analytics과 관련된 사전 정의된 스키마를 사용하려면 [Adob
 
 Web SDK를 통해 Adobe Analytics으로 데이터를 전송하는 방법에는 두 가지가 있습니다.
 
-* [Web SDK 태그 확장을 사용하여 Adobe Analytics에 데이터 보내기](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-tag-extension)
-* [Web SDK JavaScript 라이브러리를 사용하여 Adobe Analytics에 데이터 보내기](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-javascript-library)
+* [Web SDK 태그 확장을 사용하여 Adobe Analytics에 데이터 보내기](https://experienceleague.adobe.com/ko/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-tag-extension)
+* [Web SDK JavaScript 라이브러리를 사용하여 Adobe Analytics에 데이터 보내기](https://experienceleague.adobe.com/ko/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-javascript-library)
 
-XDM 필드 및 Analytics 변수에 매핑되는 방법에 대한 전체 참조는 Adobe Analytics 구현 안내서의 [Adobe Analytics에 XDM 개체 변수 매핑](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping)을 참조하십시오.
+XDM 필드 및 Analytics 변수에 매핑되는 방법에 대한 전체 참조는 Adobe Analytics 구현 안내서의 [Adobe Analytics에 XDM 개체 변수 매핑](https://experienceleague.adobe.com/ko/docs/analytics/implementation/aep-edge/xdm-var-mapping)을 참조하십시오.
 
 ## `data` 개체 사용 {#use-data-object}
 
@@ -35,14 +35,14 @@ XDM 개체를 사용하는 대신 데이터 개체를 사용할 수 있습니다
 
 AppMeasurement 또는 Analytics 태그 확장을 사용하는지에 따라 Web SDK로 마이그레이션하는 방법에 대한 자세한 내용은 다음 안내서를 참조하십시오.
 
-* [Adobe Analytics 태그 확장에서 웹 SDK 태그 확장으로 마이그레이션](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/analytics-extension-to-web-sdk)
-* [AppMeasurement에서 웹 SDK로 마이그레이션](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk)
+* [Adobe Analytics 태그 확장에서 웹 SDK 태그 확장으로 마이그레이션](https://experienceleague.adobe.com/ko/docs/analytics/implementation/aep-edge/web-sdk/analytics-extension-to-web-sdk)
+* [AppMeasurement에서 웹 SDK로 마이그레이션](https://experienceleague.adobe.com/ko/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk)
 
-데이터 개체 필드에 대한 전체 참조 및 Adobe Analytics 변수에 매핑하는 방법은 Adobe Analytics 구현 안내서의 [Analytics에 대한 데이터 개체 변수 매핑](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping)에 대한 설명서를 참조하십시오.
+데이터 개체 필드에 대한 전체 참조 및 Adobe Analytics 변수에 매핑하는 방법은 Adobe Analytics 구현 안내서의 [Analytics에 대한 데이터 개체 변수 매핑](https://experienceleague.adobe.com/ko/docs/analytics/implementation/aep-edge/data-var-mapping)에 대한 설명서를 참조하십시오.
 
 ## 컨텍스트 데이터 변수 사용 {#use-context-data-variables}
 
-자동으로 매핑되지 않은 모든 변수는 [컨텍스트 데이터 변수](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata)(으)로 사용할 수 있습니다. 그런 다음 [처리 규칙](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about)을 사용하여 컨텍스트 데이터 변수를 Analytics 변수에 매핑할 수 있습니다. 예를 들어 다음과 같은 사용자 지정 XDM 스키마가 있는 경우:
+자동으로 매핑되지 않은 모든 변수는 [컨텍스트 데이터 변수](https://experienceleague.adobe.com/ko/docs/analytics/implementation/vars/page-vars/contextdata)(으)로 사용할 수 있습니다. 그런 다음 [처리 규칙](https://experienceleague.adobe.com/ko/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about)을 사용하여 컨텍스트 데이터 변수를 Analytics 변수에 매핑할 수 있습니다. 예를 들어 다음과 같은 사용자 지정 XDM 스키마가 있는 경우:
 
 ```json
 {
@@ -84,7 +84,7 @@ a.x.objectarray.2.ad3 //600x50
 
 +++웹 SDK에서 페이지 보기 호출을 링크 추적 호출과 어떻게 구별합니까?
 
-Adobe Analytics의 AppMeasurement은 페이지 보기([`t()` 메서드](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/t-method))와 링크 추적 호출([`tl()` 메서드](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method))에 대해 별도의 메서드 호출을 사용합니다. Web SDK는 대신 페이지 보기와 링크 추적을 모두 전송하기 위한 [`sendEvent`](../commands/sendevent/overview.md) 명령만 제공합니다. 이벤트에 포함하는 데이터는 Adobe Analytics의 [페이지 보기](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-views) 또는 [페이지 이벤트](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-events)인지 결정합니다.
+Adobe Analytics의 AppMeasurement은 페이지 보기([`t()` 메서드](https://experienceleague.adobe.com/ko/docs/analytics/implementation/vars/functions/t-method))와 링크 추적 호출([`tl()` 메서드](https://experienceleague.adobe.com/ko/docs/analytics/implementation/vars/functions/tl-method))에 대해 별도의 메서드 호출을 사용합니다. Web SDK는 대신 페이지 보기와 링크 추적을 모두 전송하기 위한 [`sendEvent`](../commands/sendevent/overview.md) 명령만 제공합니다. 이벤트에 포함하는 데이터는 Adobe Analytics의 [페이지 보기](https://experienceleague.adobe.com/ko/docs/analytics/components/metrics/page-views) 또는 [페이지 이벤트](https://experienceleague.adobe.com/ko/docs/analytics/components/metrics/page-events)인지 결정합니다.
 
 기본적으로 모든 이벤트는 Adobe Analytics의 페이지 보기로 간주됩니다. 웹 SDK 이벤트를 Adobe Analytics 링크 추적 호출로 설정하려면 다음 필드를 설정하십시오.
 
@@ -92,7 +92,7 @@ Adobe Analytics의 AppMeasurement은 페이지 보기([`t()` 메서드](https://
 * **데이터 개체**: `data.__adobe.analytics.linkName`, `data.__adobe.analytics.linkType` 및 `data.__adobe.analytics.linkURL`
 * **컨텍스트 데이터**: 지원되지 않음
 
-자세한 내용은 Adobe Analytics 구현 안내서의 [`tl()` 메서드](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method)을(를) 참조하십시오.
+자세한 내용은 Adobe Analytics 구현 안내서의 [`tl()` 메서드](https://experienceleague.adobe.com/ko/docs/analytics/implementation/vars/functions/tl-method)을(를) 참조하십시오.
 
 `configure` 명령에서 [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md)을(를) 사용하면 이러한 필드가 자동으로 채워집니다.
 

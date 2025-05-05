@@ -24,7 +24,7 @@ ML 스키마 생성을 사용하면 새로운 데이터 소스를 빠르게 통�
 
 이 튜토리얼에서는 스키마 만들기 요구 사항에 대한 작업 이해를 필요로 합니다. 이 안내서를 계속하기 전에 스키마 만들기 및 편집에 대한 [UI 안내서](./resources/schemas.md)를 읽어야 합니다.
 
-이 안내서에서는 머신 러닝(ML) 알고리즘을 사용하여 샘플 데이터에서 스키마를 생성하는 방법을 설명합니다. 스키마 만들기 프로세스에 대한 이해를 높이기 위해 스키마 편집기에서 [&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/field-based-workflows)필드 기반 워크플로우에 대한 문서 또는 스키마 만들기에 대한 정보는 [수동 스키마 만들기 워크플로우 안내서](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups)를 참조하십시오.
+이 안내서에서는 머신 러닝(ML) 알고리즘을 사용하여 샘플 데이터에서 스키마를 생성하는 방법을 설명합니다. 스키마 만들기 프로세스에 대한 이해를 높이기 위해 스키마 편집기에서 [&#128279;](https://experienceleague.adobe.com/ko/docs/experience-platform/xdm/ui/field-based-workflows)필드 기반 워크플로우에 대한 문서 또는 스키마 만들기에 대한 정보는 [수동 스키마 만들기 워크플로우 안내서](https://experienceleague.adobe.com/ko/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups)를 참조하십시오.
 
 >[!NOTE]
 >
@@ -125,4 +125,4 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]** 작업 
 
 스키마를 만든 후 필요한 경우 스키마 편집기를 사용하여 추가로 수정할 수 있습니다. 이제 새 스키마를 데이터 소스와 통합하여 데이터 분석에 사용할 준비가 되었습니다.
 
-스키마 편집기 사용에 대한 자세한 내용은 [기존 스키마 안내서 편집](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit)을 참조하십시오.
+스키마 편집기 사용에 대한 자세한 내용은 [기존 스키마 안내서 편집](https://experienceleague.adobe.com/ko/docs/experience-platform/xdm/ui/resources/schemas#edit)을 참조하십시오.

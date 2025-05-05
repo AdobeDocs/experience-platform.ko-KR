@@ -1114,7 +1114,7 @@ curl -X PATCH \
 
 스키마는 데이터를 [!DNL Experience Platform]&#x200B;(으)로 수집하는 데 사용됩니다. 이 데이터는 궁극적으로 여러 서비스에 걸쳐 사용되어 개인에 대한 통합된 단일 보기를 만듭니다. 이 프로세스를 지원하기 위해 주요 필드를 &quot;ID&quot;로 표시할 수 있으며 데이터 수집 시 해당 필드의 데이터가 해당 개인의 &quot;ID 그래프&quot;에 삽입됩니다. 그런 다음 [[!DNL Real-Time Customer Profile]](../../profile/home.md) 및 기타 [!DNL Experience Platform] 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 결합된 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;ID&quot;로 표시되는 필드에는 전자 메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유 ID 필드가 포함됩니다. 좋은 ID 필드일 수도 있으므로 조직 고유의 식별자를 고려하십시오.
+일반적으로 &quot;ID&quot;로 표시되는 필드에는 전자 메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko), CRM ID 또는 기타 고유 ID 필드가 포함됩니다. 좋은 ID 필드일 수도 있으므로 조직 고유의 식별자를 고려하십시오.
 
 ID 설명자는 `sourceSchema`의 `sourceProperty`이(가) ID로 간주해야 하는 고유 식별자라는 신호를 보냅니다.
 

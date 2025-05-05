@@ -19,7 +19,7 @@ ht-degree: 6%
 
 ## 전제 조건
 
-[!DNL Experience Platform]에 대한 액세스 제어를 구성하려면 [!DNL Experience Platform] 제품 통합이 있는 조직에 대한 관리자 권한이 있어야 합니다. 자세한 내용은 [관리 역할](https://helpx.adobe.com/enterprise/using/admin-roles.html)에 대한 Adobe 도움말 센터 문서를 참조하십시오.
+[!DNL Experience Platform]에 대한 액세스 제어를 구성하려면 [!DNL Experience Platform] 제품 통합이 있는 조직에 대한 관리자 권한이 있어야 합니다. 자세한 내용은 [관리 역할](https://helpx.adobe.com/kr/enterprise/using/admin-roles.html)에 대한 Adobe 도움말 센터 문서를 참조하십시오.
 
 ## 사용 가능한 대시보드 권한 {#available-permissions}
 

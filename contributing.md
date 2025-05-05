@@ -48,4 +48,4 @@ Adobe는 커뮤니티의 기여를 환영합니다. 콘텐츠 작가를 넘어 �
 
 ## 보안 문제
 
-보안 문제는 이 문제 추적기에서 보고할 수 없습니다. 대신, [보안 전문가에게 문제를 제기하십시오.](https://helpx.adobe.com/security/alertus.html)에 로그인되어 있는지 확인하십시오.
+보안 문제는 이 문제 추적기에서 보고할 수 없습니다. 대신, [보안 전문가에게 문제를 제기하십시오.](https://helpx.adobe.com/kr/security/alertus.html)에 로그인되어 있는지 확인하십시오.

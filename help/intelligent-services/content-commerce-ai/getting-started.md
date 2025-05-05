@@ -67,6 +67,6 @@ Postman을 사용하여 Adobe I/O API를 사용하는 방법에 대한 자세한
 
 모든 자격 증명을 획득하면 [!DNL Content tagging]에 대한 사용자 지정 작업자를 설정할 수 있습니다. 다음 문서는 확장성 프레임워크 및 환경 설정을 이해하는 데 도움이 됩니다.
 
-Extensibility Framework에 대해 자세히 알아보려면 먼저 [Extensibility 소개](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) 문서를 읽으십시오. 이 문서에서는 사전 요구 사항 및 프로비저닝 요구 사항을 간략하게 설명합니다.
+Extensibility Framework에 대해 자세히 알아보려면 먼저 [Extensibility 소개](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=ko) 문서를 읽으십시오. 이 문서에서는 사전 요구 사항 및 프로비저닝 요구 사항을 간략하게 설명합니다.
 
-[!DNL Content tagging]에 대한 환경 설정에 대해 자세히 알아보려면 [개발자 환경 설정](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html)에 대한 안내서를 읽어 보십시오. 이 문서에서는 Asset compute 서비스에 대해 개발할 수 있는 설정 지침을 제공합니다.
+[!DNL Content tagging]에 대한 환경 설정에 대해 자세히 알아보려면 [개발자 환경 설정](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html?lang=ko)에 대한 안내서를 읽어 보십시오. 이 문서에서는 Asset compute 서비스에 대해 개발할 수 있는 설정 지침을 제공합니다.

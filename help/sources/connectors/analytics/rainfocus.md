@@ -98,7 +98,7 @@ Experience Platform에서 [!DNL RainFocus] 통합을 활성화하려면 먼저 �
 >[!IMPORTANT]
 >
 >* 스키마는 **XDM ExperienceEvent 클래스를 확장해야 합니다.**
->* 스키마에 **기본 ID**&#x200B;이(가) 포함되어 있고 **프로필에 대해 활성화됨**&#x200B;인지 확인해야 합니다. 자세한 내용은 [UI에서 ID 필드 정의](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)에 대한 안내서를 참조하십시오.
+>* 스키마에 **기본 ID**&#x200B;이(가) 포함되어 있고 **프로필에 대해 활성화됨**&#x200B;인지 확인해야 합니다. 자세한 내용은 [UI에서 ID 필드 정의](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=ko)에 대한 안내서를 참조하십시오.
 >* sha256 이메일 또는 ECID와 같은 다른 적절한 식별자로 예제 ID(이메일)를 대체할 수 있습니다.
 
 ### RainFocus에서 통합 프로필 만들기 {#create-an-integration-profile-in-rainfocus}
@@ -122,7 +122,7 @@ Experience Platform에서 [!DNL RainFocus] 통합을 활성화하려면 먼저 �
 
 자격 증명을 제공한 후 **[!DNL Save]**&#x200B;을(를) 선택하십시오. 이제 [!DNL RainFocus] 대시보드에 새 [!DNL Integration Profile]이(가) 표시됩니다.
 
-미리 정의된 **푸시 형식** 목록을 이미 구성한 경우 지금 만든 [!DNL Integration Profile]을(를) 선택하십시오. 이러한 이벤트가 발생할 때 Experience Platform에게 전송되는 [경험 이벤트](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)입니다.
+미리 정의된 **푸시 형식** 목록을 이미 구성한 경우 지금 만든 [!DNL Integration Profile]을(를) 선택하십시오. 이러한 이벤트가 발생할 때 Experience Platform에게 전송되는 [경험 이벤트](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=ko)입니다.
 
 ![RainFocus 대시보드에 미리 정의된 푸시 형식 목록입니다.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-setup.png)
 

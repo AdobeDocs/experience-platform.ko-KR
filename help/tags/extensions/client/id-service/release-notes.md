@@ -15,7 +15,7 @@ ht-degree: 61%
 >
 >Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
-이 문서에서는 Adobe Experience Cloud Identity 서비스 태그 확장에 대한 릴리스 정보를 다룹니다. Experience Cloud ID 서비스 자체에 대한 릴리스 노트는 [ID 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html)를 참조하십시오.
+이 문서에서는 Adobe Experience Cloud Identity 서비스 태그 확장에 대한 릴리스 정보를 다룹니다. Experience Cloud ID 서비스 자체에 대한 릴리스 노트는 [ID 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ko)를 참조하십시오.
 
 ## 2022년 10월 17일
 

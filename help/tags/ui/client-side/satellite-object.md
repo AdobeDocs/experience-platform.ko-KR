@@ -100,7 +100,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-[!DNL Adobe Experience Cloud ID] 확장이 속성에 설치된 경우 이 메서드는 방문자 ID 인스턴스를 반환합니다. 자세한 내용은 [Experience Cloud ID 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/home.html)를 참조하십시오.
+[!DNL Adobe Experience Cloud ID] 확장이 속성에 설치된 경우 이 메서드는 방문자 ID 인스턴스를 반환합니다. 자세한 내용은 [Experience Cloud ID 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko)를 참조하십시오.
 
 ## `logger`
 

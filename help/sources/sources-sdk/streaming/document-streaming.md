@@ -22,8 +22,8 @@ Adobe Experience Platform에서 새 소스를 라이브로 설정하기 전 마�
 
 * 새 소스에 대한 설명서 페이지를 만들기 위해 참조할 수 있는 튜토리얼
 * 새 소스에 대해 작성할 설명서 템플릿
-* [기술 설명서 작성을 위해 Markdown을 사용하는 방법에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
-* [Adobe Markdown 버전 이해에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
+* [기술 설명서 작성을 위해 Markdown을 사용하는 방법에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ko);
+* [Adobe Markdown 버전 이해에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ko#custom-markdown-extensions).
 
 ## 전제 조건
 

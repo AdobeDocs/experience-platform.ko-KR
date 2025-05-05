@@ -404,7 +404,7 @@ curl -X PUT \
 }
 ```
 
-Adobe Analytics Adobe Audience Manager 기본 프로덕션 샌드박스와 사용자가 만든 모든 프로덕션 샌드박스는 ID 그래프 내에서 호스팅되는 것이 [CDA(Cross Device Analytics)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 기능에도 사용되는 경우 또는 ID 그래프 내에서 호스팅되는 것이 [PBD(People Based Destinations)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) 기능에도 사용되는 경우 재설정할 수 없습니다.
+Adobe Analytics Adobe Audience Manager 기본 프로덕션 샌드박스와 사용자가 만든 모든 프로덕션 샌드박스는 ID 그래프 내에서 호스팅되는 것이 [CDA(Cross Device Analytics)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=ko) 기능에도 사용되는 경우 또는 ID 그래프 내에서 호스팅되는 것이 [PBD(People Based Destinations)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=ko) 기능에도 사용되는 경우 재설정할 수 없습니다.
 
 다음은 샌드박스가 재설정되지 않도록 할 수 있는 가능한 예외 목록입니다.
 

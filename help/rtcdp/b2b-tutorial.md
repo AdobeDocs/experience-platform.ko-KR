@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Real-Time Customer Data Platform B2B edition 시작하기
 description: Adobe Real-Time Customer Data Platform B2B edition 구현을 설정할 때 이 샘플 시나리오를 예로 사용하십시오.
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -100,9 +100,9 @@ Experience Platform UI의 [!UICONTROL 세그먼트] 작업 영역에서 Bodea �
 
 >[!NOTE]
 > 
->이를 수행하는 방법에 대한 포괄적인 단계를 보려면 [대상자를 대상으로 활성화](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html)에 대한 자습서를 참조하십시오.
+>이를 수행하는 방법에 대한 포괄적인 단계를 보려면 [대상자를 대상으로 활성화](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=ko)에 대한 자습서를 참조하십시오.
 
-Bodea 마케터는 대상을 Marketo 대상으로 활성화하여 대상 데이터를 정적 목록의 형태로 Experience Platform에서 Marketo Engage으로 푸시할 수 있습니다. 자세한 내용은 [Marketo 대상](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html)의 안내서를 참조하십시오.
+Bodea 마케터는 대상을 Marketo 대상으로 활성화하여 대상 데이터를 정적 목록의 형태로 Experience Platform에서 Marketo Engage으로 푸시할 수 있습니다. 자세한 내용은 [Marketo 대상](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=ko)의 안내서를 참조하십시오.
 
 ## 다음 단계
 

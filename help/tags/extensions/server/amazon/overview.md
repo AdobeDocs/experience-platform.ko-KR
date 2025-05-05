@@ -113,4 +113,4 @@ ht-degree: 1%
 
 이 안내서에서는 [!DNL Amazon] 전환 API 확장을 사용하여 전환 이벤트를 구성하고 [!DNL Amazon]에 보내는 방법을 다룹니다. [!DNL Adobe Experience Platform]의 이벤트 전달 기능에 대한 자세한 내용은 [이벤트 전달 개요](../../../ui/event-forwarding/overview.md)를 참조하세요.
 
-Experience Platform Debugger 및 이벤트 전달 모니터링 도구를 사용하여 구현을 디버깅하는 방법에 대한 자세한 내용은 이벤트 전달의 [Adobe Experience Platform Debugger 개요](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home) 및 [활동 모니터링](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/monitoring)을 참조하십시오.
+Experience Platform Debugger 및 이벤트 전달 모니터링 도구를 사용하여 구현을 디버깅하는 방법에 대한 자세한 내용은 이벤트 전달의 [Adobe Experience Platform Debugger 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/debugger/home) 및 [활동 모니터링](https://experienceleague.adobe.com/ko/docs/experience-platform/tags/event-forwarding/monitoring)을 참조하십시오.

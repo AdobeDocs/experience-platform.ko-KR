@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Adobe Livefyre를 사용하면 사용자가 생성한 콘텐츠의 지속적인 흐름을 웹 사이트에서 검색, 구성 및 게시하여 진실하고 고도로 개인화된 경험을 만들 수 있습니다.
 
-Adobe Livefyre는 Adobe Experience Platform의 소셜 확장입니다. Adobe Livefyre에 대한 자세한 내용은 [Livefyre 구현 안내서](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html)를 참조하십시오.
+Adobe Livefyre는 Adobe Experience Platform의 소셜 확장입니다. Adobe Livefyre에 대한 자세한 내용은 [Livefyre 구현 안내서](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=ko)를 참조하십시오.
 
 이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방식에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 

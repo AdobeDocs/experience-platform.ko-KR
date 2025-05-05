@@ -31,7 +31,7 @@ Adobe Experience Platform Identity Service는 전역적으로 정의되고 사�
 
 Adobe Experience Cloud [!DNL Identity Service]은(는) [!DNL Experience Cloud]의 공통 ID 프레임워크 역할을 하며 각 사이트 방문자에게 고유한 영구 ID를 할당합니다. [!DNL Experience Cloud] ID(ECID)는 자사 쿠키를 사용하여 고객의 활동을 추적하고, 여러 응용 프로그램에서 장치를 고유하게 식별할 수 있으며, 서로 다른 [!DNL Experience Cloud] 응용 프로그램에서 동일한 사이트 방문자와 해당 데이터를 식별할 수 있도록 해 줍니다. 자세한 내용은 [Experience Cloud ID 서비스 개요](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ko-KR)를 참조하십시오.
 
-[!DNL Experience Cloud Identity Service]의 확장인 옵트인 서비스를 사용하면 방문자가 방문자의 장치 또는 브라우저에서 쿠키를 설정할 수 있는지 여부를 결정할 수 있도록 애플리케이션에 프로토콜을 설정할 수 있습니다. 응용 프로그램에 대한 서비스 설정 방법을 포함하여 옵트인 서비스에 대한 자세한 내용은 [옵트인 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html)를 참조하세요.
+[!DNL Experience Cloud Identity Service]의 확장인 옵트인 서비스를 사용하면 방문자가 방문자의 장치 또는 브라우저에서 쿠키를 설정할 수 있는지 여부를 결정할 수 있도록 애플리케이션에 프로토콜을 설정할 수 있습니다. 응용 프로그램에 대한 서비스 설정 방법을 포함하여 옵트인 서비스에 대한 자세한 내용은 [옵트인 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=ko)를 참조하세요.
 
 사이트 방문자에게 ECID가 할당되면 다음 섹션에 설명된 대로 [!DNL Privacy JavaScript Library] Adobe을 사용하여 개인 정보 보호 요청에 사용할 ID를 검색할 수 있습니다.
 

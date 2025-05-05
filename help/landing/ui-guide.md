@@ -159,12 +159,12 @@ Experience Platform UI의 상단 탐색 모음에는 현재 로그인한 조직�
 
 ### [!UICONTROL 페더레이션 데이터]
 
-**[!UICONTROL 모델]** 섹션에서 데이터의 구조, 관계 및 제약 조건을 정의하는 데이터 모델 및 스키마를 디자인하고 만들 수 있습니다. 데이터 모델 및 스키마에 대한 자세한 내용은 [Federated Audience Composition 사용 안내서](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas)를 참조하세요.
+**[!UICONTROL 모델]** 섹션에서 데이터의 구조, 관계 및 제약 조건을 정의하는 데이터 모델 및 스키마를 디자인하고 만들 수 있습니다. 데이터 모델 및 스키마에 대한 자세한 내용은 [Federated Audience Composition 사용 안내서](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/config/datamodel/schemas)를 참조하세요.
 
 **[!UICONTROL 감사 추적]** 섹션은 실시간으로 환경에 수행된 모든 작업 및 이벤트에 대한 상세한 시간 기록을 제공합니다. 감사 추적에 대한 자세한 내용은 [Federated Audience Composition 사용 안내서](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail)를 참조하십시오.
 
 
-**[!UICONTROL 통합 데이터베이스]** 섹션을 통해 Adobe Experience Platform을 Enterprise Data Warehouse에 연결할 수 있습니다. [Federated Audience Composition 사용 안내서](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db)에서 Federated 데이터베이스에 대한 연결에 대한 자세한 내용을 찾을 수 있습니다.
+**[!UICONTROL 통합 데이터베이스]** 섹션을 통해 Adobe Experience Platform을 Enterprise Data Warehouse에 연결할 수 있습니다. [Federated Audience Composition 사용 안내서](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/config/federated-db)에서 Federated 데이터베이스에 대한 연결에 대한 자세한 내용을 찾을 수 있습니다.
 
 ### [!UICONTROL Decisioning]
 

@@ -34,7 +34,7 @@ RESTful API도 유사한 경험을 제공합니다. 쿼리 서비스 API를 사�
 
 ## 쿼리 서비스 및 Experience Platform 서비스 {#experience-platform-services}
 
-쿼리 서비스는 상호 작용하며 여러 Experience Platform 서비스와 함께 사용할 수 있습니다. Query Service의 기능을 최대한 활용하려면 이러한 서비스와 이 서비스가 Query Service와 상호 작용하는 방법에 익숙해져야 합니다. [Experience Platform 설명서 랜딩 페이지](https://experienceleague.adobe.com/docs/experience-platform.html)에서는 플랫폼 기능에 대한 요약 및 링크를 제공합니다.
+쿼리 서비스는 상호 작용하며 여러 Experience Platform 서비스와 함께 사용할 수 있습니다. Query Service의 기능을 최대한 활용하려면 이러한 서비스와 이 서비스가 Query Service와 상호 작용하는 방법에 익숙해져야 합니다. [Experience Platform 설명서 랜딩 페이지](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ko)에서는 플랫폼 기능에 대한 요약 및 링크를 제공합니다.
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 

@@ -13,7 +13,7 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) 대상을 사용하면 DSP과의 캠페인 활성화를 위해 인증된 자사 대상을 승인된 광고주 및 사용자와 공유할 수 있습니다. DSP과의 Real-Time CDP 통합에 대한 자세한 내용은 [Audience Sources에서 인증된 대상 활성화 정보](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html)를 참조하세요.
+Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) 대상을 사용하면 DSP과의 캠페인 활성화를 위해 인증된 자사 대상을 승인된 광고주 및 사용자와 공유할 수 있습니다. DSP과의 Real-Time CDP 통합에 대한 자세한 내용은 [Audience Sources에서 인증된 대상 활성화 정보](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html?lang=ko)를 참조하세요.
 
 >[!IMPORTANT]
 >
@@ -35,8 +35,8 @@ DSP 계정이 있는 미디어 에이전시는 호스피탈리티 업계의 상�
 
 * [!DNL LiveRamp RampID]과(와) 대상을 공유할 수 있도록 DSP 계정 수준 및 캠페인 수준 설정을 사용하면 고객 데이터가 [!DNL RampIDs] (으)로 변환되어 타깃팅 가능한 세그먼트를 만들 수 있습니다. DSP 계정 팀이 이 구성을 수행합니다. [!DNL RampID]은(는) DSP과 [!DNL LiveRamp] 간의 파트너십을 통해 사용할 수 있으며, [!DNL LiveRamp] 멤버십이 없어도 사용할 수 있습니다.
 * Experience Platform 계정용 Experience Cloud 조직 ID입니다. ID는 [!DNL Real-Time CDP] 사용자 프로필 페이지에서 찾을 수 있습니다.
-* 캠페인 활성화를 위한 대상을 받을 [[!DNL Real-Time CDP] DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)의 소스. DSP 계정 팀은 Experience Cloud 조직 ID를 사용하여 소스를 만듭니다.
-* [[!DNL Real-Time CDP] 소스가 DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)에서 만들어질 때 생성되는 DSP 계정 또는 광고주의 소스 키. DSP 계정 팀이 이 키를 공유합니다. 아래 [설명](#authenticate)처럼 Experience Platform 내에서 Advertising Cloud DSP 대상에 대한 대상 연결을 만드는 데 사용합니다.
+* 캠페인 활성화를 위한 대상을 받을 [[!DNL Real-Time CDP] DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=ko)의 소스. DSP 계정 팀은 Experience Cloud 조직 ID를 사용하여 소스를 만듭니다.
+* [[!DNL Real-Time CDP] 소스가 DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=ko)에서 만들어질 때 생성되는 DSP 계정 또는 광고주의 소스 키. DSP 계정 팀이 이 키를 공유합니다. 아래 [설명](#authenticate)처럼 Experience Platform 내에서 Advertising Cloud DSP 대상에 대한 대상 연결을 만드는 데 사용합니다.
 * 이메일 또는 해시된 이메일로 구성된 고객 데이터.
 
 ## 지원되는 ID {#supported-identities}
@@ -72,7 +72,7 @@ Adobe Advertising Cloud DSP 대상은 아래 표에 설명된 ID 활성화를 �
 
 대상에 연결하려면 [!UICONTROL 연결 형식] 섹션에서 다음 매개 변수를 제공한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을 선택하십시오.
 
-* **[!UICONTROL 계정 또는 광고주 키]**: 이 [!UICONTROL Source 키]은(는) DSP 사용자 인터페이스에 [[!DNL Real-Time CDP] 소스가 만들어지면](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)생성됩니다. DSP 계정 팀은 소스를 만든 후 이 키를 사용자와 공유합니다.
+* **[!UICONTROL 계정 또는 광고주 키]**: 이 [!UICONTROL Source 키]은(는) DSP 사용자 인터페이스에 [[!DNL Real-Time CDP] 소스가 만들어지면](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=ko)생성됩니다. DSP 계정 팀은 소스를 만든 후 이 키를 사용자와 공유합니다.
 
 ![연결 유형 필드](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 

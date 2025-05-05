@@ -31,7 +31,7 @@ Query Service에서 보안 데이터 액세스 제한을 사용하려면 **[!UIC
 
 >[!NOTE]
 >
->시스템 관리자는 Adobe [Admin Console](https://adminconsole.adobe.com/)에서 사용자 권한을 설정할 수 있습니다. 자세한 내용은 [Admin Console 사용 안내서](https://helpx.adobe.com/enterprise/using/admin-console.html)를 참조하십시오.
+>시스템 관리자는 Adobe [Admin Console](https://adminconsole.adobe.com/)에서 사용자 권한을 설정할 수 있습니다. 자세한 내용은 [Admin Console 사용 안내서](https://helpx.adobe.com/kr/enterprise/using/admin-console.html)를 참조하십시오.
 
 **[!UICONTROL 허용 목록 관리]** 권한으로 다음 기능을 사용할 수 있습니다.
 

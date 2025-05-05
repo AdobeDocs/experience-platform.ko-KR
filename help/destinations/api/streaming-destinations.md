@@ -563,7 +563,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
-> [새 대상으로 데이터 활성화](#activate-data) 단계의 프로필 특성 및 대상 외에 [!DNL AWS Kinesis] 및 [!DNL Azure Event Hubs]에서 내보낸 데이터에는 ID 맵에 대한 정보도 포함됩니다. 내보낸 프로필의 ID(예: [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), 모바일 ID, Google ID, 이메일 주소 등)를 나타냅니다. 아래 예를 참조하십시오.
+> [새 대상으로 데이터 활성화](#activate-data) 단계의 프로필 특성 및 대상 외에 [!DNL AWS Kinesis] 및 [!DNL Azure Event Hubs]에서 내보낸 데이터에는 ID 맵에 대한 정보도 포함됩니다. 내보낸 프로필의 ID(예: [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=ko), 모바일 ID, Google ID, 이메일 주소 등)를 나타냅니다. 아래 예를 참조하십시오.
 
 ```json
 {

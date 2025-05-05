@@ -29,7 +29,7 @@ ht-degree: 24%
 >id="platform_permissions_labels_about_create"
 >title="새 레이블 만들기"
 >abstract="조직의 요구 사항에 맞게 고유한 사용자 정의 레이블을 만들 수 있습니다. 사용자 정의 레이블을 사용하여 데이터 거버넌스와 액세스 제어 구성을 모두 데이터에 적용할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="사용자 정의 레이블 관리"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ko#manage-labels" text="사용자 정의 레이블 관리"
 
 >[!NOTE]
 >

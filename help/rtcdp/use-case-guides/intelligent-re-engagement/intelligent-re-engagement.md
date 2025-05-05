@@ -36,18 +36,18 @@ ht-degree: 47%
 
 사용 사례를 구현하는 단계를 완료하면 다음 Real-Time CDP 및 Adobe Journey Optimizer 기능(사용할 순서로 나열됨)을 사용하게 됩니다. 이러한 모든 영역에 대해 필요한 [속성 기반의 액세스 제어 권한](/help/access-control/home.md)이 있는지 확인하거나, 시스템 관리자에게 필요한 권한 부여를 요청하십시오.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - 데이터 소스 전체에서 데이터를 통합하여 캠페인을 촉진합니다. 그런 다음 이 데이터를 사용하여 이메일 및 웹 프로모션 타일에 사용되는 표면 맞춤형 데이터 요소(예: 이름 또는 계정 관련 정보) 및 캠페인 대상자를 만듭니다. CDP를 사용하여 이메일 및 웹([!DNL Adobe Target]을 통해)에서 대상자를 활성화합니다.
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=ko) - 데이터 소스 전체에서 데이터를 통합하여 캠페인을 촉진합니다. 그런 다음 이 데이터를 사용하여 이메일 및 웹 프로모션 타일에 사용되는 표면 맞춤형 데이터 요소(예: 이름 또는 계정 관련 정보) 및 캠페인 대상자를 만듭니다. CDP를 사용하여 이메일 및 웹([!DNL Adobe Target]을 통해)에서 대상자를 활성화합니다.
    * [스키마](/help/xdm/home.md)
    * [프로필](/help/profile/home.md)
    * [데이터 세트](/help/catalog/datasets/overview.md)
    * [대상자](/help/segmentation/home.md)
-   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ko)
    * [대상](/help/destinations/home.md)
 
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=ko) - 고객에게 연관성 있고 상황에 맞는 개인화된 경험을 제공할 수 있습니다.
-   * [이벤트 또는 대상자 트리거](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
-   * [대상자/이벤트](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
-   * [여정 작업](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [이벤트 또는 대상자 트리거](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=ko)
+   * [대상자/이벤트](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=ko)
+   * [여정 작업](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ko)
 
 ## 사용 사례를 달성하는 방법 {#achieve-use-case-instruction}
 
@@ -97,7 +97,7 @@ ht-degree: 47%
 
 Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UICONTROL 스키마] 작업 영역에서 관리됩니다. [!DNL Adobe]에서 제공하는 핵심 리소스(예: 필드 그룹)를 보고 탐색하며, 조직에 대한 사용자 지정 리소스 및 스키마를 만들 수 있습니다.
 
-[스키마](/help/xdm/home.md)을 만드는 방법에 대한 자세한 내용은 [스키마 만들기 자습서를 참조하십시오.](/help/xdm/tutorials/create-schema-ui.md) 및 [XDM으로 고객 경험 데이터 모델링](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
+[스키마](/help/xdm/home.md)을 만드는 방법에 대한 자세한 내용은 [스키마 만들기 자습서를 참조하십시오.](/help/xdm/tutorials/create-schema-ui.md) 및 [XDM으로 고객 경험 데이터 모델링](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html?lang=ko).
 
 재참여 여정 사용 사례에 사용되는 네 가지 스키마 디자인이 있습니다. 각 스키마에는 특정 필드를 설정해야 합니다. 실시간 고객 프로필에 포함할 스키마를 활성화해야 합니다. 실시간 고객 프로필에 사용할 스키마를 활성화하는 방법에 대한 자세한 내용은 [실시간 고객 프로필에 스키마 활성화](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile)를 참조하십시오.
 
@@ -141,7 +141,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++프로필 테스트 세부 정보(필드 그룹)
 
-이 필드 그룹에서는 테스트 프로필을 사용하여 여정을 게시하기 전에 테스트할 수 있습니다. 여정 프로필 만들기에 대한 자세한 내용은 [테스트 프로필 만들기 자습서](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) 및 [테스트 자습서 테스트](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html)를 참조하십시오.
+이 필드 그룹에서는 테스트 프로필을 사용하여 여정을 게시하기 전에 테스트할 수 있습니다. 여정 프로필 만들기에 대한 자세한 내용은 [테스트 프로필 만들기 자습서](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html?lang=ko) 및 [테스트 자습서 테스트](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=ko)를 참조하십시오.
 
 +++
 
@@ -314,11 +314,11 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 >[!IMPORTANT]
 >
->고객에게 브랜드로부터 커뮤니케이션 수신을 거부할 수 있는 기능을 제공하고 이러한 선택이 존중되도록 하는 것은 법적 요구 사항입니다. [개인 정보 보호 규정 개요](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html)에서 해당 법률에 대해 자세히 알아보세요.
+>고객에게 브랜드로부터 커뮤니케이션 수신을 거부할 수 있는 기능을 제공하고 이러한 선택이 존중되도록 하는 것은 법적 요구 사항입니다. [개인 정보 보호 규정 개요](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=ko)에서 해당 법률에 대해 자세히 알아보세요.
 
 #### 동의 정책
 
-재참여 경로를 만들 때 다음 [동의 정책](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html)을 추가해 보십시오.
+재참여 경로를 만들 때 다음 [동의 정책](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=ko)을 추가해 보십시오.
 
 * `consents.marketing.email.val = "Y"`인 경우, 이메일 전송 가능
 * `consents.marketing.sms.val = "Y"`인 경우, SMS 전송 가능
@@ -346,7 +346,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 재참여 시나리오는 대상자를 사용하여 프로필 스토어의 프로필 하위 집합이 공유하는 특정 속성이나 동작을 정의하여 마케팅 가능한 사용자 그룹과 고객 기반을 구분합니다. 대상자는 [!DNL Adobe Experience Platform]에서 여러 가지 방법으로 만들 수 있습니다.
 
-대상을 만드는 방법에 대한 자세한 내용은 [대상 서비스 UI 안내서](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience)를 참조하세요.
+대상을 만드는 방법에 대한 자세한 내용은 [대상 서비스 UI 안내서](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=ko#create-audience)를 참조하세요.
 
 직접 [대상자](/help/segmentation/home.md)를 구성하는 방법에 대한 자세한 내용은 [대상자 구성 UI 안내서](/help/segmentation/ui/audience-composition.md)를 참조하십시오.
 
@@ -436,7 +436,7 @@ Experience Platform에서 파생된 대상 정의를 통해 대상을 만드는 
 >
 >[!DNL Adobe Journey Optimizer]는 다이어그램에 표시된 모든 항목을 포함하지 않습니다. 모든 [유료 미디어 광고](/help/destinations/catalog/social/overview.md)가 [!UICONTROL 대상]에 만들어집니다.
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)는 고객에게 연관성 있고 상황에 맞는 개인화된 경험을 제공할 수 있도록 해 줍니다. 고객 여정은 고객이 브랜드와 상호 작용하는 전체 프로세스입니다. 각 사용 사례 여정에는 특정 정보가 필요합니다. 다음은 각 여정에 필요한 정확한 데이터입니다.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ko)는 고객에게 연관성 있고 상황에 맞는 개인화된 경험을 제공할 수 있도록 해 줍니다. 고객 여정은 고객이 브랜드와 상호 작용하는 전체 프로세스입니다. 각 사용 사례 여정에는 특정 정보가 필요합니다. 다음은 각 여정에 필요한 정확한 데이터입니다.
 
 >[!BEGINTABS]
 
@@ -446,7 +446,7 @@ Experience Platform에서 파생된 대상 정의를 통해 대상을 만드는 
 
 +++이벤트
 
-이벤트를 사용하면 여정을 통합적으로 트리거하여 여정에 참여하는 개인에게 실시간으로 메시지를 보낼 수 있습니다. 이벤트에 대한 자세한 내용은 [일반 이벤트 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html)를 참조하세요.
+이벤트를 사용하면 여정을 통합적으로 트리거하여 여정에 참여하는 개인에게 실시간으로 메시지를 보낼 수 있습니다. 이벤트에 대한 자세한 내용은 [일반 이벤트 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=ko)를 참조하세요.
 
 * 이벤트 1: 제품 보기
    * 스키마: 고객 디지털 트랜잭션
@@ -571,7 +571,7 @@ Experience Platform에서 파생된 대상 정의를 통해 대상을 만드는 
 
 +++이벤트
 
-이벤트를 사용하면 여정을 통합적으로 트리거하여 여정에 참여하는 개인에게 실시간으로 메시지를 보낼 수 있습니다. 이벤트에 대한 자세한 내용은 [일반 이벤트 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html)를 참조하세요.
+이벤트를 사용하면 여정을 통합적으로 트리거하여 여정에 참여하는 개인에게 실시간으로 메시지를 보낼 수 있습니다. 이벤트에 대한 자세한 내용은 [일반 이벤트 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=ko)를 참조하세요.
 
 * 이벤트 2: 장바구니에 추가
    * 스키마: 고객 디지털 트랜잭션
@@ -704,7 +704,7 @@ Experience Platform에서 파생된 대상 정의를 통해 대상을 만드는 
 
 +++이벤트
 
-이벤트를 사용하면 여정을 통합적으로 트리거하여 여정에 참여하는 개인에게 실시간으로 메시지를 보낼 수 있습니다. 이벤트에 대한 자세한 내용은 [일반 이벤트 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html)를 참조하세요.
+이벤트를 사용하면 여정을 통합적으로 트리거하여 여정에 참여하는 개인에게 실시간으로 메시지를 보낼 수 있습니다. 이벤트에 대한 자세한 내용은 [일반 이벤트 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=ko)를 참조하세요.
 
 * 이벤트 4: 온라인 구매
    * 스키마: 고객 디지털 트랜잭션
@@ -755,7 +755,7 @@ Experience Platform에서 파생된 대상 정의를 통해 대상을 만드는 
 
 >[!ENDTABS]
 
-[!DNL Adobe Journey Optimizer]의 여정 생성에 대한 자세한 내용은 [여정 시작 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)를 참조하십시오.
+[!DNL Adobe Journey Optimizer]의 여정 생성에 대한 자세한 내용은 [여정 시작 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ko)를 참조하십시오.
 
 ### 대상에서 유료 미디어 광고 설정 {#paid-media-ads}
 

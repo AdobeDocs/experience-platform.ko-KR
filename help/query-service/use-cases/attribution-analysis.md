@@ -19,8 +19,8 @@ ht-degree: 0%
 
 * [보고서 세트 데이터 개요용 Adobe Analytics 소스 커넥터](../../sources/connectors/adobe-applications/mapping/analytics.md).
 * [Analytics 필드 매핑 설명서](../../sources/connectors/adobe-applications/mapping/analytics.md)에서 쿼리 서비스에 사용할 분석 데이터를 수집 및 매핑하는 방법에 대한 자세한 정보를 제공합니다.
-* [Attribution IQ 개요](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
-* [Adobe Analytics 속성 패널 안내서](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
+* [Attribution IQ 개요](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ko)
+* [Adobe Analytics 속성 패널 안내서](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=ko).
 
 `OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](../sql/adobe-defined-functions.md#window-functions)에 있습니다. [Adobe 마케팅 및 Commerce 용어 용어집](https://business.adobe.com/glossary/index.html)도 사용할 수 있습니다.
 

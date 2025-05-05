@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # [!DNL Experience Platform Web SDK]에 [!DNL Adobe Journey Optimizer] 사용 중
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK]은(는) [!DNL Adobe Journey Optimizer]에서 관리되는 개인화된 경험을 웹 채널에 전달하고 렌더링할 수 있습니다. WYSIWYG 편집기, [!DNL Adobe Journey Optimizer] [웹 채널](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 또는 [코드 기반 경험 채널](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based)인 비시각적 인터페이스를 사용하여 [!DNL Journey Optimizer Web] 캠페인 및 개인화 경험을 만들고 활성화하고 제공할 수 있습니다.
+[!DNL Adobe Experience Platform] [!DNL Web SDK]은(는) [!DNL Adobe Journey Optimizer]에서 관리되는 개인화된 경험을 웹 채널에 전달하고 렌더링할 수 있습니다. WYSIWYG 편집기, [!DNL Adobe Journey Optimizer] [웹 채널](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ko) 또는 [코드 기반 경험 채널](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/code-based-experience/get-started-code-based)인 비시각적 인터페이스를 사용하여 [!DNL Journey Optimizer Web] 캠페인 및 개인화 경험을 만들고 활성화하고 제공할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 [!DNL Adobe Journey Optimizer]을(를) 사용하려면 아래 단계를 따르십시오.
 
-1. [!DNL Adobe Journey Optimizer] [웹 경험 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)에서 [필수 구성 요소](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites)를 살펴보십시오. 구체적으로 다음과 같습니다.
+1. [!DNL Adobe Journey Optimizer] [웹 경험 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ko)에서 [필수 구성 요소](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ko#prerequesites)를 살펴보십시오. 구체적으로 다음과 같습니다.
    * [!DNL Adobe Experience Cloud Visual Editing Helper]을(를) 설정합니다.
    * [데이터스트림](../../../datastreams/overview.md)에서 [!DNL Adobe Journey Optimizer]을(를) 사용하도록 설정합니다.
    * [!UICONTROL Active-On-Edge 병합 정책] 옵션을 사용하도록 설정합니다.
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 ## Adobe Journey Optimizer 웹 경험 만들기 {#create-ajo-web-experiences}
 
-[!DNL Journey Optimizer Web]개의 캠페인 및 경험을 만들려면 [!DNL Adobe Journey Optimizer] [웹 경험 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)의 [웹 캠페인 작성](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) 지침을 따르십시오.
+[!DNL Journey Optimizer Web]개의 캠페인 및 경험을 만들려면 [!DNL Adobe Journey Optimizer] [웹 경험 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ko)의 [웹 캠페인 작성](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ko#create-web-campaign) 지침을 따르십시오.
 
 ## 개인화된 콘텐츠 렌더링 {#rendering-personalized-content}
 

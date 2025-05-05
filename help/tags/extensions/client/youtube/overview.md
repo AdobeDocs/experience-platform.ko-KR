@@ -98,7 +98,7 @@ document.onreadystatechange = function () {
 
 >[!TIP]
 > 
->각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 사용할 수 없는 구현의 경우, 데이터 요소 값을 Experience Platform 내에서 연결하고, 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석한 다음, [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)에 설명된 대로 Analysis Workspace에서 세그먼트로 적용할 수 있습니다.
+>각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 사용할 수 없는 구현의 경우, 데이터 요소 값을 Experience Platform 내에서 연결하고, 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석한 다음, [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ko](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ko)에 설명된 대로 Analysis Workspace에서 세그먼트로 적용할 수 있습니다.
 
 비디오 정보 값을 연결하려면 &quot;비디오 메타데이터&quot;라는 새 데이터 요소를 만들고 이를 프로그래밍하여 모든 비디오 데이터 요소(위에 나열됨)를 가져와서 함께 조합합니다. 예:
 

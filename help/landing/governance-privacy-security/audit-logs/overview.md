@@ -167,7 +167,7 @@ UI에서 수행할 수 있는 모든 작업은 API 호출을 사용하여 수행
 
 ## Adobe Admin Console에 대한 감사 로그 관리
 
-Adobe Admin Console의 활동에 대한 감사 로그를 관리하는 방법에 대해 알아보려면 다음 [문서](https://helpx.adobe.com/enterprise/using/audit-logs.html)를 참조하세요.
+Adobe Admin Console의 활동에 대한 감사 로그를 관리하는 방법에 대해 알아보려면 다음 [문서](https://helpx.adobe.com/kr/enterprise/using/audit-logs.html)를 참조하세요.
 
 ## 다음 단계 및 추가 리소스
 

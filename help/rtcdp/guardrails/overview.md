@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을(를) 확인하십시오.
+>이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)을(를) 확인하십시오.
 
 여기에서 시작하여 아래 링크를 따라 Real-Time CDP의 다양한 서비스 및 영역에서 발생하는 모든 보호 기능에 대해 알아보십시오.
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->또한 다양한 Experience Platform 서비스에 대한 [엔드 투 엔드 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)과 같은 추가 정보를 보려면 [디지털 경험 블루프린트](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html)를 방문하십시오.
+>또한 다양한 Experience Platform 서비스에 대한 [엔드 투 엔드 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ko#end-to-end-latency-diagrams)과 같은 추가 정보를 보려면 [디지털 경험 블루프린트](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ko)를 방문하십시오.
 
 ## 보호 유형 {#guardrail-types}
 
@@ -47,17 +47,17 @@ ht-degree: 1%
 
 또한 구입한 Real-Time CDP 버전 및 계층을 기반으로 하는 라이선스 및 자격 정보는 아래 제품 설명 링크를 참조하십시오.
 
-* [모든 Adobe 제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)
-* [Real-Time Customer Data Platform(B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2P 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2B edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [모든 Adobe 제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)
+* [Real-Time Customer Data Platform(B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2P 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2B edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 
 ## 기타 Experience Platform 애플리케이션의 보호 기능  {#guardrails-other-aep-apps}
 
 다른 Experience Platform 애플리케이션에도 유사한 보호 기능이 있습니다. 자세한 내용은 아래 링크를 참조하십시오.
 
-* [Adobe Journey Optimizer 보호](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
-* [Customer Journey Analytics 보호](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+* [Adobe Journey Optimizer 보호](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=ko)
+* [Customer Journey Analytics 보호](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=ko)
 
 ## 다음 단계
 

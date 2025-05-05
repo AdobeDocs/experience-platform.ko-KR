@@ -158,4 +158,4 @@ RainFocus 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있�
 
 ## 추가 리소스 {#additional-resources}
 
-* [RainFocus 스트리밍 Source 커넥터](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [RainFocus 스트리밍 Source 커넥터](https://experienceleague.adobe.com/ko/docs/experience-platform/sources/connectors/analytics/rainfocus)

@@ -51,7 +51,7 @@ URL이 정규 표현식인 경우 Regex를 활성화합니다.
 
 #### Use DIL Site Catalyst Module
 
-[SiteCatalyst 모듈](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_sc_init.html)은 DIL을 사용하여 Analytics 태그 요소를 Audience Manager로 보냅니다.
+[SiteCatalyst 모듈](https://experiencecloud.adobe.com/resources/help/ko_KR/aam/r_dil_sc_init.html)은 DIL을 사용하여 Analytics 태그 요소를 Audience Manager로 보냅니다.
 
 siteCatalyst.init 파일을 구성하려면 코드 편집기를 사용합니다.
 
@@ -59,15 +59,15 @@ siteCatalyst.init 파일을 구성하려면 코드 편집기를 사용합니다.
 
 #### Use DIL Google Analytics Module
 
-[Google Analytics 모듈](https://experiencecloud.adobe.com/resources/help/en_US/aam/dil-google-universal-analytics.html)을 활성화합니다.
+[Google Analytics 모듈](https://experiencecloud.adobe.com/resources/help/ko_KR/aam/dil-google-universal-analytics.html)을 활성화합니다.
 
 #### DIL.create Initialization Properties
 
-[DIL.create](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html)에서 사용되는 초기화 속성과 [visitorService 개체](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_visitor_service.html)의 네임스페이스 하위 속성을 추가합니다. 두 개의 샘플 사용 사례는 코드 편집기에서 코드 주석에 포함되어 있습니다.
+[DIL.create](https://experiencecloud.adobe.com/resources/help/ko_KR/aam/r_dil_create.html)에서 사용되는 초기화 속성과 [visitorService 개체](https://experiencecloud.adobe.com/resources/help/ko_KR/aam/r_dil_visitor_service.html)의 네임스페이스 하위 속성을 추가합니다. 두 개의 샘플 사용 사례는 코드 편집기에서 코드 주석에 포함되어 있습니다.
 
 속성을 더 추가하려면 **[!UICONTROL 항목 선택]**&#x200B;을 선택하십시오.
 
-i 아이콘을 마우스로 가리키면 각 속성이 수행하는 작업을 확인할 수 있습니다. [Audience Manager DIL 설명서](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html)에서 속성에 대한 자세한 내용을 찾을 수 있습니다.
+i 아이콘을 마우스로 가리키면 각 속성이 수행하는 작업을 확인할 수 있습니다. [Audience Manager DIL 설명서](https://experiencecloud.adobe.com/resources/help/ko_KR/aam/r_dil_create.html)에서 속성에 대한 자세한 내용을 찾을 수 있습니다.
 
 확장 구성을 마치면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 

@@ -16,18 +16,18 @@ ht-degree: 0%
 >[!TIP]
 >
 >Adobe의 기여자 안내서에서 지원 설명서를 참조하십시오.
->* [Git 및 Markdown 작성 도구 설치](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* [로컬에서 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
->* [주요 변경 사항에 대한 GitHub 기여 워크플로](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
+>* [Git 및 Markdown 작성 도구 설치](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ko)
+>* [로컬에서 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ko)
+>* [주요 변경 사항에 대한 GitHub 기여 워크플로](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=ko).
 
 ## GitHub에 연결하고 로컬 작성 환경 설정 {#set-up-environment}
 
 1. 브라우저에서 `https://github.com/AdobeDocs/experience-platform.en`(으)로 이동합니다.
-2. 리포지토리를 [포크](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository)하려면 아래 표시된 대로 **포크**&#x200B;를 클릭하십시오. 이렇게 하면 자체 GitHub 계정에 Experience Platform 저장소의 복사본이 만들어집니다.
+2. 리포지토리를 [포크](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ko#fork-the-repository)하려면 아래 표시된 대로 **포크**&#x200B;를 클릭하십시오. 이렇게 하면 자체 GitHub 계정에 Experience Platform 저장소의 복사본이 만들어집니다.
 
    ![Adobe 문서 리포지토리 포크](../assets/docs-framework/ssd-fork-repository.gif)
 
-3. 로컬 컴퓨터에 저장소를 복제합니다. 아래와 같이 **코드 > HTTPS > GitHub Desktop으로 열기**&#x200B;를 선택합니다. [GitHub Desktop](https://desktop.github.com/)이 설치되어 있는지 확인하십시오. 자세한 내용은 Adobe 기여자 안내서에서 [저장소의 로컬 복제 만들기](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository)를 참조하십시오.
+3. 로컬 컴퓨터에 저장소를 복제합니다. 아래와 같이 **코드 > HTTPS > GitHub Desktop으로 열기**&#x200B;를 선택합니다. [GitHub Desktop](https://desktop.github.com/)이 설치되어 있는지 확인하십시오. 자세한 내용은 Adobe 기여자 안내서에서 [저장소의 로컬 복제 만들기](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ko#create-a-local-clone-of-the-repository)를 참조하십시오.
 
    ![로컬 환경에 Adobe 설명서 리포지토리 복제](../assets/docs-framework/clone-local.png)
 
@@ -36,10 +36,10 @@ ht-degree: 0%
 ## 대상의 설명서 페이지 작성 {#author-documentation}
 
 1. 설명서 페이지는 [셀프서비스 대상 템플릿](../docs-framework/self-service-template.md)을(를) 기반으로 합니다. [대상 템플릿](../assets/docs-framework/yourdestination-template.zip)을(를) 다운로드합니다. 압축을 풀고 위의 4단계에서 언급된 디렉터리에 `yourdestination-template.md` 파일을 추출합니다.  `YOURDESTINATION.md` 파일의 이름을 바꾸십시오. 여기서 YOURDESTINATION은 Adobe Experience Platform의 대상 이름입니다. 예를 들어 회사의 이름이 Moviestar이면 파일 이름을 `moviestar.md`로 지정합니다.
-2. [선택한 텍스트 편집기](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors)에서 새 파일을 엽니다. Adobe에서는 [Visual Studio Code](https://code.visualstudio.com/)을 사용하고 Adobe Markdown 작성 확장을 설치하는 것이 좋습니다. 확장을 설치하려면 Visual Studio Code를 열고 화면 왼쪽의 **[!DNL Extensions]** 탭을 선택한 다음 `adobe markdown authoring`을(를) 검색합니다. 확장을 선택하고 **[!DNL Install]**&#x200B;을(를) 클릭합니다.
+2. [선택한 텍스트 편집기](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ko#understand-markdown-editors)에서 새 파일을 엽니다. Adobe에서는 [Visual Studio Code](https://code.visualstudio.com/)을 사용하고 Adobe Markdown 작성 확장을 설치하는 것이 좋습니다. 확장을 설치하려면 Visual Studio Code를 열고 화면 왼쪽의 **[!DNL Extensions]** 탭을 선택한 다음 `adobe markdown authoring`을(를) 검색합니다. 확장을 선택하고 **[!DNL Install]**&#x200B;을(를) 클릭합니다.
    ![Adobe Markdown 작성 확장 설치](../assets/docs-framework/install-adobe-markdown-extension.gif)
 3. 대상에 대한 관련 정보로 템플릿을 편집합니다. 템플릿의 지침을 따릅니다.
-4. 설명서에 추가할 스크린샷이나 이미지를 보려면 `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`(으)로 이동하십시오. 여기서 `[...]`은(는) 대상에 대해 원하는 범주입니다. 예를 들어 Experience Platform에 개인화 대상을 추가하는 경우 `personalization` 폴더를 선택합니다. 대상에 대한 새 폴더를 만들고 여기에 이미지를 저장합니다. 작성 중인 페이지에서 해당 페이지에 연결해야 합니다. [이미지에 연결하는 방법 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images)을 참조하세요.
+4. 설명서에 추가할 스크린샷이나 이미지를 보려면 `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`(으)로 이동하십시오. 여기서 `[...]`은(는) 대상에 대해 원하는 범주입니다. 예를 들어 Experience Platform에 개인화 대상을 추가하는 경우 `personalization` 폴더를 선택합니다. 대상에 대한 새 폴더를 만들고 여기에 이미지를 저장합니다. 작성 중인 페이지에서 해당 페이지에 연결해야 합니다. [이미지에 연결하는 방법 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=ko#link-to-images)을 참조하세요.
 5. 준비가 되면 작업 중인 파일을 저장합니다.
 
 ## 검토를 위해 설명서 제출 {#submit-review}
@@ -82,4 +82,4 @@ ht-degree: 0%
 
 >[!TIP]
 >
->설명서에 이미지와 링크를 추가하고 Markdown에 대한 기타 질문이 있는 경우 Adobe의 공동 작업 쓰기 안내서에서 [Markdown 사용](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)을 읽어 보십시오.
+>설명서에 이미지와 링크를 추가하고 Markdown에 대한 기타 질문이 있는 경우 Adobe의 공동 작업 쓰기 안내서에서 [Markdown 사용](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ko)을 읽어 보십시오.

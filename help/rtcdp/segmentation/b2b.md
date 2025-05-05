@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform B2B 에디션의 세그멘테이션 사용 사례
 description: 사용 가능한 다양한 Adobe Real-time Customer Data Platform B2B 에디션 사용 사례에 대한 개요입니다.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
 source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
