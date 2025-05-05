@@ -39,4 +39,4 @@ Experience Platform Debugger에서 수집한 정보를 사용하여 Experience C
 
 ## 비디오 튜토리얼
 
->[!VIDEO](https://video.tv.adobe.com/v/32156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36114?quality=12&learn=on&captions=kor)

@@ -487,4 +487,4 @@ LIMIT 10
 
 다음 비디오는 Adobe Experience Platform 인터페이스 및 PSQL 클라이언트에서 쿼리를 실행하는 방법을 보여 줍니다. 또한 이 비디오에서는 Adobe 정의 함수 사용 및 CREATE TABLE AS SELECT(CTAS) 사용 시 XDM 개체의 개별 속성과 관련된 예제를 사용합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32942?quality=12&learn=on&captions=kor)

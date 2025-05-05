@@ -23,4 +23,4 @@ ht-degree: 8%
 * 게재 및 크로스 채널 경험
 * 고객 경험 애플리케이션 개발
 
->[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430458?quality=12&learn=on&captions=kor)

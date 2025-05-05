@@ -48,7 +48,7 @@ ht-degree: 53%
 
 데이터 수집 프로세스에 대한 데이터 준비 데모를 빠르게 보려면 다음 비디오를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345567?quality=12&enable10seconds=on&speedcontrol=on&captions=kor)
 
 ## [!UICONTROL 데이터 선택] {#select-data}
 

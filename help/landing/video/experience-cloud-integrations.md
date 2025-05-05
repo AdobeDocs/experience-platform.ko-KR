@@ -18,4 +18,4 @@ ht-degree: 0%
 
 이 비디오에서는 Adobe Experience Platform이 Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, 고객 속성, 대상 라이브러리 및 태그와 같은 Adobe Experience Cloud 애플리케이션 및 기능과 통합하는 방법에 대한 개요를 제공합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430386?quality=12&learn=on&captions=kor)

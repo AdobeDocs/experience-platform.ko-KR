@@ -64,7 +64,7 @@ ht-degree: 89%
 
 알 수 없는 방문자를 위해 온사이트 경험을 개인화하는 방법에 대한 연습은 아래 비디오 튜토리얼을 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449259/?learn=on&captions=kor)
 
 ## 사용 사례를 달성하는 방법: 높은 수준의 개요 {#achieve-the-use-case-high-level}
 

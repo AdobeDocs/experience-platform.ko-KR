@@ -44,7 +44,7 @@ Intelligent Services의 일부인 고객 AI는 마케터에게 설명을 통해 
 
 다음 비디오는 고객 AI에 대한 이해를 돕기 위해 설계되었습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36519?learn=on&quality=12&captions=kor)
 
 ## 작동 방식
 

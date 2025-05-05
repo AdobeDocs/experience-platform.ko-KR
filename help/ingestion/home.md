@@ -304,4 +304,4 @@ Experience Platform 소스에 연결하여 데이터를 수집할 수도 있습�
 >
 >다음 비디오에 사용된 &quot;통합 프로필&quot;이라는 용어가 최신 상태가 아닙니다. [!DNL "Profile"] 또는 [!DNL "Real-Time Customer Profile"] 용어는 [!DNL Experience Platform] 설명서에 사용된 올바른 용어입니다. 최신 기능은 설명서 를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346834?quality=12&learn=on&captions=kor)

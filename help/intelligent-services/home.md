@@ -22,7 +22,7 @@ ht-degree: 2%
 
 다음 비디오는 Intelligent Services에 대한 이해를 돕기 위해 설계되었습니다. 이 비디오에서는 예제 비즈니스 사용 사례를 통해 높은 수준의 워크플로를 설명하고 Attribution AI와 고객 AI의 기능을 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36615?learn=on&quality=12&captions=kor)
 
 ## 인텔리전트 서비스의 이점
 

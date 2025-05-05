@@ -199,4 +199,4 @@ Adobe Experience Platform의 모든 데이터는 표준화된 XDM 스키마를 �
 
 다음 비디오는 [!DNL Data Science Workspace]에 대한 이해를 돕기 위해 제작되었습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412914?quality=12&amp;enable10seconds=on&amp;speedcontrol=on&captions=kor)

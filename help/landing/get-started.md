@@ -15,4 +15,4 @@ ht-degree: 0%
 
 이 비디오에서는 [!DNL Experience Platform]에 대해 간략하게 소개하고 해결하는 몇 가지 비즈니스 문제를 간략하게 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428497?quality=12&learn=on&captions=kor)

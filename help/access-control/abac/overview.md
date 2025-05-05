@@ -24,7 +24,7 @@ ht-degree: 13%
 
 다음 비디오에서는 속성 기반 액세스 제어에 대한 이해를 돕기 위해 역할, 리소스 및 정책을 구성하는 방법에 대해 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451845?learn=on&captions=kor)
 
 ## 속성 기반 액세스 제어 용어
 

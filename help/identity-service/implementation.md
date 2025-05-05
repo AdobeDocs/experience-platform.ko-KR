@@ -64,4 +64,4 @@ ID 서비스는 [일괄 처리 수집](../ingestion/batch-ingestion/overview.md)
 >
 >다음 비디오에 표시된 Experience Platform UI가 최신 상태가 아닙니다. 최신 UI 스크린샷 및 기능은 설명서 를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31707?quality=12&learn=on&captions=kor)

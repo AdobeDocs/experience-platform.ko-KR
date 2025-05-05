@@ -45,7 +45,7 @@ Edge Network를 통해 전송 중인 모든 데이터는 [HTTPS TLS 1.2](https:/
 
 다음 비디오는 UI에서 데이터스트림의 데이터 사용 제한이 구성 및 적용되는 방법에 대한 간략한 개요를 제공합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413105/?quality=12&learn=on&speedcontrol=on&captions=kor)
 
 조직에서 민감하다고 판단되는 스키마와 필드에 Experience Platform의 [민감한 데이터 사용 레이블](../data-governance/labels/reference.md#sensitive)을 적용할 수 있습니다. 예를 들어 `RHD` 레이블은 개인건강정보(PHI)를 나타내는 데 사용되고 `S1` 레이블은 지리적 위치 데이터를 나타냅니다.
 

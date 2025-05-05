@@ -29,7 +29,7 @@ Attribution AI은 알고리즘 및 규칙 기반의 두 가지 범주의 점수�
 
 다음 비디오는 Attribution AI에 대한 이해를 돕기 위해 설계되었습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36606?learn=on&quality=12&captions=kor)
 
 ## 비즈니스 사용 사례의 예
 

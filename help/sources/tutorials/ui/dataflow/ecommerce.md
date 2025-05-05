@@ -149,5 +149,5 @@ Experience Platform은 선택한 대상 스키마 또는 데이터 세트를 기
 >
 > 다음 비디오에 표시된 Experience Platform UI가 최신 상태가 아닙니다. 최신 UI 스크린샷 및 기능은 위의 설명서를 참조하십시오.
 >
->[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32138?quality=12&learn=on&captions=kor)
 

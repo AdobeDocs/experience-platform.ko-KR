@@ -39,7 +39,7 @@ ht-degree: 1%
 
 다음 비디오는 [!DNL Enhanced Conversions] 확장을 소개하고 구현 단계를 높은 수준으로 안내합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416065?quality=12&learn=on&captions=kor)
 
 ## 태그를 사용하여 변환 보내기
 

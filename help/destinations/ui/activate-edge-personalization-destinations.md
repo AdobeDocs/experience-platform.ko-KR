@@ -39,11 +39,11 @@ Edge 개인화를 위해 Adobe Target 연결을 구성하는 방법에 대한 �
 >
 >Experience Platform 사용자 인터페이스는 자주 업데이트되며, 이 비디오 녹화 이후 변경되었을 수 있습니다. 최신 정보는 아래 섹션에 설명된 구성 단계를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449800/?quality=12&learn=on&captions=kor)
 
 Adobe Target 및 사용자 지정 개인화 대상에 대상 및 프로필 속성을 공유하는 방법에 대한 간략한 개요는 아래 비디오를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447362/?quality=12&learn=on&captions=kor)
 
 ## 사용 사례 {#use-cases}
 

@@ -18,4 +18,4 @@ ht-degree: 8%
 
 Experience Platform에서 고객의 관점에서 볼 수 있듯이 Experience Platform으로 구축된 가상 경험을 따르는 이 비디오를 통해 고객을 위해 풍부하고, 관련성이 있으며, 실시간 경험을 생성하는 방법을 살펴보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35392?quality=12&learn=on&captions=kor)

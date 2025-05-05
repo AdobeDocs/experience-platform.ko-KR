@@ -273,4 +273,4 @@ Attribution AI의 마지막 페이지는 교육 및 채점을 설정하는 데 �
 
 다음 비디오에서는 Attribution AI에서 새 인스턴스를 만들기 위한 전체적인 워크플로우에 대해 간략하게 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36612?learn=on&quality=12&captions=kor)

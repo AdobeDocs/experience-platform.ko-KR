@@ -64,7 +64,7 @@ Experience Platform 경고는 한 번 전송하거나 해결할 때까지 사전
 
 Experience Platform UI를 통해 수신된 경고를 보고 경고 규칙을 관리할 수 있습니다. 다음 비디오에서는 이러한 기능에 대해 소개합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423921?quality=12&learn=on&captions=kor)
 
 Experience Platform UI에서 경고를 사용하여 작업하려면 Adobe Admin Console을 통해 다음 액세스 제어 권한을 활성화해야 합니다.
 

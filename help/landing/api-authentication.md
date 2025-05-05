@@ -118,7 +118,7 @@ API 추가 옵션이 강조 표시된 ![Developer Console 화면.](./images/api-
 
 Experience Platform API와의 통합을 설정하는 위에서 설명한 단계에 대한 연습은 아래 비디오 튜토리얼에서도 사용할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31705/?learn=on&captions=kor)
 
 ### 자격 증명 수집 {#gather-credentials}
 
@@ -298,7 +298,7 @@ Experience Platform 내의 여러 리소스에 액세스하거나 수정하려�
 
 시스템 관리자가 API를 통해 Experience Platform 리소스에 액세스하는 데 필요한 권한을 부여하는 방법에 대한 자세한 내용은 아래 비디오 튜토리얼에서도 확인할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=159)
+>[!VIDEO](https://video.tv.adobe.com/v/31705/?learn=on&t=159&captions=kor)
 
 ## Postman을 사용하여 API 호출 인증 및 테스트 {#use-postman}
 
@@ -308,17 +308,17 @@ Experience Platform 컬렉션 및 환경에서 Postman 사용에 대한 자세�
 
 **Experience Platform API에 사용할 Postman 환경을 다운로드하여 가져오기**
 
->[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=106)
+>[!VIDEO](https://video.tv.adobe.com/v/31705/?learn=on&t=106&captions=kor)
 
 **Postman 컬렉션을 사용하여 액세스 토큰을 생성합니다**
 
 [Identity Management 서비스 Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims)을 다운로드하고 아래 비디오를 시청하여 액세스 토큰을 생성하는 방법을 알아보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32728/?learn=on&captions=kor)
 
 **Experience Platform API Postman 컬렉션을 다운로드하고 API와 상호 작용**
 
->[!VIDEO](https://video.tv.adobe.com/v/29704/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32722/?learn=on&captions=kor)
 
 <!--
 This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Experience Platform APIs.
@@ -366,7 +366,7 @@ Experience Platform API를 사용하고 작업을 수행하려면 시스템 관�
 
 제품 프로필에 개발자를 추가하고 API를 역할에 할당하기 위해 위에서 설명한 단계에 대한 연습은 아래 비디오 튜토리얼에서도 사용할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446405/?learn=on&captions=kor)
 
 ## 추가 리소스 {#additional-resources}
 

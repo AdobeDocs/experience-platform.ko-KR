@@ -28,7 +28,7 @@ ht-degree: 0%
 
 모니터링 기능에 대한 높은 수준의 개요는 다음 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411270?quality=12&learn=on&captions=kor)
 
 ## 속성 및 환경 선택
 

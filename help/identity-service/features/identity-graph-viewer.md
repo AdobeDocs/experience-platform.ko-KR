@@ -21,7 +21,7 @@ Experience Platform 사용자 인터페이스의 ID 그래프 뷰어를 사용�
 
 다음 비디오는 ID 그래프 뷰어에 대한 이해를 돕기 위한 것입니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345657/?quality=12&learn=on&captions=kor)
 
 ## 시작하기
 

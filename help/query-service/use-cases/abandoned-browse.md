@@ -59,7 +59,7 @@ order by price desc)D;
 
 아래에 표시된 비디오 프레젠테이션은 [!DNL Query Service] 및 Adobe 분석 통합에 중점을 둔 Experience Platform 데이터에 대한 전체적인 실제 사용 사례를 제공합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454951?quality=12&learn=on&captions=kor)
 
 ## [!DNL Query Service]의 이점 {#benefits}
 

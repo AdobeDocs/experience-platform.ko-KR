@@ -20,4 +20,4 @@ ht-degree: 0%
 
 자세한 내용은 [Experience Platform 개요](../home.md)를 참조하세요.
 
->[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428497?quality=12&learn=on&captions=kor)

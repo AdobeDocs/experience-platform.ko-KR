@@ -62,7 +62,7 @@ ht-degree: 0%
 
 이 페이지에 설명된 워크플로에 대한 전체적인 설명은 아래 비디오를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425367)
+>[!VIDEO](https://video.tv.adobe.com/v/3452664?captions=kor)
 
 ### 1단계: [!DNL LiveRamp - Onboarding] 대상을 통해 대상을 Experience Platform에서 LiveRamp로 보내기 {#onboarding}
 

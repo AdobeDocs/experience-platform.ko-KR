@@ -24,4 +24,4 @@ ht-degree: 0%
 1. 실시간 경험의 전달 및 개인화 개선
 1. 거버넌스, 보안 및 개인 정보 보호 제어 기능에 대한 신뢰 확보
 
->[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428509?quality=12&learn=on&captions=kor)

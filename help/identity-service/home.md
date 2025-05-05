@@ -101,7 +101,7 @@ ID 그래프는 서로 다른 ID 네임스페이스 간의 관계 맵으로, 고
 
 다음 비디오는 ID 및 ID 그래프에 대한 이해를 돕기 위한 것입니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422775?quality=12&learn=on&captions=kor)
 
 ## Experience Platform 인프라 내에서 ID 서비스의 역할 이해
 

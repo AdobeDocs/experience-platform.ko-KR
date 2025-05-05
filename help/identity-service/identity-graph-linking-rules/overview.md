@@ -28,7 +28,7 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
 
 [!DNL Identity Graph Linking Rules] 사용에 대한 추가 정보는 다음 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3448279/?learn=on&enablevpops&captions=kor)
 
 ## 시작하기
 

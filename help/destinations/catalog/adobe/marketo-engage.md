@@ -93,7 +93,7 @@ Experience Platform의 속성을 조직이 Marketo에서 액세스할 수 있는
 >* 비디오에서 호출된 두 가지 제한 사항은 더 이상 적용되지 않습니다. 이제 비디오가 기록될 때 지원된 대상 멤버십 정보 외에도 다른 많은 프로필 속성 필드를 매핑할 수 있습니다. 아직 Marketo 정적 목록에 없는 Marketo으로 대상 구성원을 내보낼 수도 있으며 이러한 구성원이 목록에 추가됩니다.
 >* 활성화 워크플로의 **[!UICONTROL 대상 예약 단계]**&#x200B;에서 Marketo V1에서는 데이터를 Marketo으로 내보내려면 **[!UICONTROL 매핑 ID]**&#x200B;를 수동으로 추가해야 합니다. Marketo V2에서는 이 수동 단계가 더 이상 필요하지 않습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3440165?quality=12&captions=kor)
 
 ## 대상 모니터링 {#monitor-destination}
 

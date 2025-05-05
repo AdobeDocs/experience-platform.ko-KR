@@ -71,7 +71,7 @@ Experience Platform의 Edge 개인화 대상에는 [Adobe Target](/help/destinat
 
 아래 비디오에서는 두 가지 유형의 대상에 대한 자세한 내용을 소개합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/32149?quality=12&captions=kor)
 
 ## 내보낸 대상자 유형 {#exported-audiences-types}
 

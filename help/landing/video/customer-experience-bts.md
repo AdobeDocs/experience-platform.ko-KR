@@ -18,4 +18,4 @@ ht-degree: 0%
 
 [Experience Platform에서 제공하는 고객 경험](customer-experience.md)을 보여주는 비디오를 시청한 후 화면 뒤로 이동하여 Adobe Experience Platform이 이 경험을 제공하는 데 어떻게 사용되었는지 확인하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36314?quality=12&learn=on&captions=kor)

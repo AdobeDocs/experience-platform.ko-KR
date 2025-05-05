@@ -116,7 +116,7 @@ UI의 역할에 사용할 수 있는 필터는 다음과 같습니다.
 
 다음 비디오는 새 역할을 만들고 해당 역할에 대한 사용자를 관리하는 방법에 대한 이해를 돕기 위한 것입니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423941/?learn=on&captions=kor)
 
 ## 역할에 대한 API 자격 증명 관리 {#manage-api-credentials-for-role}
 

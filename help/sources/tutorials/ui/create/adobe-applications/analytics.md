@@ -335,4 +335,4 @@ Analytics 데이터 흐름을 삭제하려면 소스 작업 영역의 상단 헤
 >
 > 다음 비디오에 표시된 [!DNL Experience Platform] UI가 최신 상태가 아닙니다. 최신 UI 스크린샷 및 기능은 위의 설명서를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430256?quality=12&learn=on&captions=kor)

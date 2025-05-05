@@ -48,7 +48,7 @@ Real-Time Customer Data Platform에 포함된 고객 AI는 설명이 포함된 �
 
 Customer AI에 대한 자세한 내용은 [Customer AI 개요](../../intelligent-services/customer-ai/overview.md)를 참조하세요. 또한 다음 비디오에서는 고객 AI가 AI 기반 성향으로 고객 프로필을 강화하고 고객 세분화 및 타기팅 노력을 강화하는 방법을 보여줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328479/?quality=12&learn=on&captions=kor)
 
 
 ## 다음 단계

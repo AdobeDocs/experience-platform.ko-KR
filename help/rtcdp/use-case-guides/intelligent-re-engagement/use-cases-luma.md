@@ -16,12 +16,12 @@ Adobe이 데이터 설계자 및 데이터 엔지니어 자습서와 Experience 
 
 ## 구현
 
->[!VIDEO](https://video.tv.adobe.com/v/3425184/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454280/?quality=12&learn=on&captions=kor)
 
 ## 여정 구성
 
->[!VIDEO](https://video.tv.adobe.com/v/3427101/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453968/?quality=12&learn=on&captions=kor)
 
 ## 대상 및 대상 구성
 
->[!VIDEO](https://video.tv.adobe.com/v/3427451/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452916/?quality=12&learn=on&captions=kor)

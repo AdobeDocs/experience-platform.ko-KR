@@ -21,7 +21,7 @@ Postman은 사전 설정된 변수로 환경을 설정하고, API 컬렉션을 �
 
 다음 비디오 안내서에서는 Postman 환경 만들기 및 설정에 대해 간략하게 설명합니다. Postman 환경에는 아래에 제공된 다양한 컬렉션에 대한 API를 호출하는 데 필요한 모든 필수 헤더가 포함되어 있습니다. 설정이 완료되면 값이 만료될 때마다(예: `ACCESS_TOKEN`) 환경의 현재 값을 업데이트할 수 있으며 이 새 값은 모든 컬렉션에서 사용됩니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/28832)
+>[!VIDEO](https://video.tv.adobe.com/v/31705?captions=kor)
 
 ## Postman 컬렉션 {#collections}
 
@@ -57,7 +57,7 @@ Postman UI 및 사용 가능한 기능에 대한 자세한 내용은 [Postman �
 
 아래 비디오는 공개 GitHub 저장소에서 다운로드할 수 있는 [Identity Management 서비스(IMS) Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json)을 사용합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32728/?quality=12&learn=on&captions=kor)
 
 ## 다음 단계
 

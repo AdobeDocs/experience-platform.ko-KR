@@ -18,4 +18,4 @@ ht-degree: 0%
 
 이 비디오에서는 성공적인 Adobe Experience Platform 프로젝트와 관련된 역할, 단계 및 주요 결과에 대한 개요를 제공합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32807?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430453?quality=12&learn=on&captions=kor)

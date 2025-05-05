@@ -326,7 +326,7 @@ Experience Platform UI에서 유연한 대상 평가를 실행하려면 **[!UICO
 
 다음 비디오에서는 Experience Platform에서 유연한 대상 평가에 액세스하고 사용하는 방법을 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453640?)
+>[!VIDEO](https://video.tv.adobe.com/v/3453647?&captions=kor)
 
 ## 자주 묻는 질문 {#faq}
 

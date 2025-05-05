@@ -29,7 +29,7 @@ ht-degree: 0%
 
 다음 비디오에서는 제품 프로필의 관리 관리자에 대한 이해를 돕기 위한 것입니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/333860/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423936/?learn=on&captions=kor)
 
 ## 다음 단계
 

@@ -35,4 +35,4 @@ ht-degree: 1%
 
 자세한 내용은 아래 비디오를 통해 스키마 필드 그룹을 만드십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/27013/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413604/?learn=on&captions=kor)

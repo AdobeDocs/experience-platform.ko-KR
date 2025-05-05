@@ -27,4 +27,4 @@ Segmentation API를 사용하여 세그먼트를 만들려면 [세그먼트 API 
 >
 >Experience Platform 사용자 인터페이스는 자주 업데이트되며, 이 비디오 녹화 이후에 변경되었을 수 있습니다. 최신 정보는 [세그먼트 빌더 안내서](../ui/segment-builder.md)를 참조하세요.
 
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31708?quality=12&learn=on&captions=kor)

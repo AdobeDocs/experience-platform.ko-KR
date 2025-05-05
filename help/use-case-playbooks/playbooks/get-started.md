@@ -26,7 +26,7 @@ Experience Platform UI에서 사용 사례 플레이북의 다양한 갤러리�
 
 이 비디오를 통해 Journey Optimizer에서 샌드박스를 만들고, 권한을 구성하고, 이메일, 푸시 및 SMS 알림에 대한 채널 표면을 구성하는 데 필요한 단계에 대해 알아보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449833?learn=on&captions=kor)
 
 ## 개발 샌드박스 만들기 {#create-development-sandbox}
 

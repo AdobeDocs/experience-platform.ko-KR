@@ -259,6 +259,6 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 >
 > 다음 비디오는 최신 버전이 아닙니다. 최신 정보는 설명서를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36614?learn=on&quality=12&captions=kor)
 
 <!-- comment -->

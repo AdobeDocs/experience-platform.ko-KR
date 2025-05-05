@@ -55,7 +55,7 @@ Adobe Real-Time Customer Data Platform은 브랜드가 데이터 관리 플랫�
 
 잠재 고객에게 도달하고 참여시키는 방법에 대한 연습은 아래 비디오 튜토리얼을 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452864/?learn=on&captions=kor)
 
 ## 사용 사례 달성 방법: 단계별 지침 {#step-by-step-instructions}
 

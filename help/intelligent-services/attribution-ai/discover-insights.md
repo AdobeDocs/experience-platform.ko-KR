@@ -195,4 +195,4 @@ Attribution AI에서 새 인스턴스를 만들 때 필수 필드 중 하나는 
 
 다음 비디오는 Attribution AI 통찰력 페이지를 사용하여 마케팅 채널 및 캠페인의 ROI를 파악하는 방법을 학습하는 데 도움이 되도록 설계되었습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/345103?learn=on&quality=12&captions=kor)

@@ -69,7 +69,7 @@ ht-degree: 0%
 
 다음 비디오 튜토리얼에서는 Luma 성향 모델 전자 필기장을 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/333570)
+>[!VIDEO](https://video.tv.adobe.com/v/3452499?captions=kor)
 
 ### 요구 사항 파일 {#requirements-file}
 

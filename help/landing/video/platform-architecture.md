@@ -18,4 +18,4 @@ ht-degree: 0%
 
 이 비디오에서는 Experience Platform의 기본 구성 요소를 설명하는 높은 수준의 아키텍처 다이어그램을 소개합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422784?quality=12&learn=on&captions=kor)

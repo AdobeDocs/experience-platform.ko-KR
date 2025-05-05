@@ -147,4 +147,4 @@ Experience Platform에서 사용할 스키마를 작성하기 위한 디자인 �
 
 Experience Platform의 [!DNL XDM System]에 대한 이해를 높이려면 다음 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38515?quality=12&learn=on&captions=kor)

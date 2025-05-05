@@ -25,4 +25,4 @@ ht-degree: 0%
 >
 >Experience Platform 사용자 인터페이스는 자주 업데이트되며, 이 비디오 녹화 이후 변경되었을 수 있습니다. 최신 정보는 [유니온 스키마 UI 안내서](../ui/union-schema.md)를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/329940?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/342825?quality=12&learn=on&captions=kor)

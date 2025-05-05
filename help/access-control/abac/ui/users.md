@@ -42,7 +42,7 @@ Adobe Experience Platform 권한으로 전환에는 이전에 역할에 의존�
 
 다음 비디오는 개발자 및 API 자격 증명에 대한 이해를 지원하기 위한 것입니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446405/?learn=on&captions=kor)
 
 ## 다음 단계
 

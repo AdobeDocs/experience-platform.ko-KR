@@ -47,7 +47,7 @@ Edge Network은 모든 지정 가능한 채널에서 지연 시간이 짧은 데
 
 Adobe Experience Platform [!DNL Web SDK] 및 [!DNL Edge Network]에 대한 개요를 보려면 아래 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37266?quality=12&learn=on&captions=kor)
 
 ## 라이브러리가 웹 SDK으로 대체됨 {#sdks}
 
@@ -64,7 +64,7 @@ Adobe Experience Platform [!DNL Web SDK] 및 [!DNL Edge Network]에 대한 개�
 
 한 번의 호출로 [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager] 및 [!DNL Target]&#x200B;(으)로 데이터를 전송하여 아래 비디오를 통해 Adobe Experience Platform [!DNL Web SDK] 및 [!DNL Edge Network]의 작동 방식을 확인하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/34148)
+>[!VIDEO](https://video.tv.adobe.com/v/3413668?captions=kor)
 
 ## 기존 라이브러리에서 Web SDK으로 마이그레이션 {#migrating-to-web-sdk}
 

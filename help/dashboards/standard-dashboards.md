@@ -182,4 +182,4 @@ Adobe Real-Time Customer Data Platform 인사이트 대시보드에 대한 각 �
 
 Experience Platform의 대시보드에 대한 이해를 강화하려면 다음 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413784?quality=12&learn=on&captions=kor)

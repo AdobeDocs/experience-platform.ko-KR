@@ -59,5 +59,5 @@ ht-degree: 0%
 
 자세한 내용은 다음 비디오를 통해 고객 지원용 AI Assistant를 사용하여 워크플로를 종료하지 않고 문제를 해결하는 방법에 대해 알아보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443190?learn=on&captions=kor)
 

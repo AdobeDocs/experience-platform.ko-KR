@@ -90,7 +90,7 @@ AI Assistant 제품 지식에 대한 추가 정보는 다음 비디오를 시청
 
 AI Assistant 작동 인사이트에 대한 추가 정보는 다음 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444039?learn=on&enablevpops&captions=kor)
 
 ### 기능 범위 {#feature-scope}
 

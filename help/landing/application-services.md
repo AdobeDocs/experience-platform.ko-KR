@@ -22,4 +22,4 @@ Adobe은 Experience Platform 위에 여러 애플리케이션을 빌드했습니
 
 아래 비디오에서는 Experience Platform 위에 구축된 각 애플리케이션의 사용 사례를 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428520/?learn=on&captions=kor)
