@@ -3,17 +3,17 @@ title: 세분화 자격 기준 업데이트
 description: 스트리밍 및 에지 세분화를 사용하여 평가할 수 있는 대상 유형에 영향을 주는 세분화 자격 기준 업데이트에 대해 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
+exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
+source-git-commit: e6deed1fe52a0a852f521100171323f0de23295b
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
 
 ---
 
-
 # 세분화 자격 기준 업데이트
 
-2024년 9월 24일부터 세그멘테이션 자격에 영향을 주는 두 가지 업데이트가 수행됩니다.
+2025년 5월 23일부터 세그멘테이션 자격에 영향을 주는 두 가지 업데이트가 이루어집니다.
 
 1. 스트리밍 및 에지 세분화 쿼리 유형
 2. 스트리밍 및 에지 세분화 병합 정책
