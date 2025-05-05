@@ -2,7 +2,7 @@
 title: Reactor API 인증 및 액세스
 description: 필요한 액세스 자격 증명을 생성하는 단계를 포함하여 Reactor API를 시작하는 방법에 대해 알아봅니다.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 31e52dce23c558aaba822fe27d2e58ed6a7ce18d
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 3%
@@ -16,6 +16,8 @@ ht-degree: 3%
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
+* `Accept: application/vnd.api+json;revision=1`
+* `Content-Type: application/vnd.api+json`
 
 이 안내서에서는 Reactor API를 호출할 수 있도록 Adobe Developer Console을 사용하여 이러한 각 헤더에 대한 값을 수집하는 방법을 다룹니다.
 
@@ -51,7 +53,7 @@ Adobe Developer Console을 사용하여 다음 세 가지 액세스 자격 증�
 
 >[!IMPORTANT]
 >
->**[!UICONTROL OAuth Server-to-Server]** 메서드를 선택하십시오. 이 메서드는 앞으로 지원되는 유일한 메서드입니다. **[!UICONTROL 서비스 계정(JWT)]** 메서드가 더 이상 사용되지 않습니다. JWT 인증 방법을 사용하는 통합은 2025년 1월 1일까지 계속 작동하지만, Adobe에서는 해당 날짜 이전에 기존 통합을 새로운 OAuth 서버 간 방법으로 마이그레이션할 것을 강력히 권장합니다. [!BADGE 사용되지 않음] 섹션에서 자세한 정보를 확인하세요.{type=negative}Experience Platform API 인증 자습서에서 [JSON 웹 토큰(JWT) 생성](/help/landing/api-authentication.md#jwt).
+>**[!UICONTROL OAuth Server-to-Server]** 메서드를 선택하십시오. 이 메서드는 앞으로 지원되는 유일한 메서드입니다. **[!UICONTROL 서비스 계정(JWT)]** 메서드가 더 이상 사용되지 않습니다. JWT 인증 방법을 사용하는 통합은 2025년 1월 1일까지 계속 작동하지만, Adobe에서는 해당 날짜 이전에 기존 통합을 새로운 OAuth 서버 간 방법으로 마이그레이션할 것을 강력히 권장합니다. Experience Platform API 인증 자습서에서 [!BADGE 사용되지 않음]{type=negative} [JSON 웹 토큰(JWT) 생성](/help/landing/api-authentication.md#jwt) 섹션에 대한 자세한 내용을 확인하십시오.
 
 계속하려면 **다음**&#x200B;을 선택합니다.
 
