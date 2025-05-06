@@ -4,14 +4,20 @@ description: Adobe Experience Platform Debugger에 대한 최신 릴리스 정�
 keywords: Debugger;experience Platform Debugger 확장 기능;chrome;확장 기능;릴리스 정보
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a5af5c194bc6b3bf9a6e119a2f147efa85f263f0
+source-git-commit: c4048b83c916f4b3b4b5acb3cccb957b65ee25c8
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 93%
+source-wordcount: '864'
+ht-degree: 92%
 
 ---
 
 # Adobe Experience Platform Debugger 릴리스 정보
+
+## 버전 1.6.4 - 2025년 5월 6일 수요일
+
+### 수정 사항 및 개선 사항
+
+* 로그인을 사용할 수 없었던 문제가 해결되었습니다.
 
 ## 버전 1.6.3 - 2025년 4월 30일
 
