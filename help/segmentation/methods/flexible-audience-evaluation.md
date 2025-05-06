@@ -3,9 +3,9 @@ title: 유연한 대상 평가 안내서
 description: 유연한 대상 평가를 사용하여 요청 시 일괄 처리 세분화 작업을 실행하는 방법에 대해 알아봅니다.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 7084b05d1ae142016cb2158fd22d07a240385190
+source-git-commit: 9aa638903eaf9bf29ce1da3d62f8e69c15ffe50a
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1084'
 ht-degree: 5%
 
 ---
@@ -326,7 +326,7 @@ Experience Platform UI에서 유연한 대상 평가를 실행하려면 **[!UICO
 
 다음 비디오에서는 Experience Platform에서 유연한 대상 평가에 액세스하고 사용하는 방법을 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453647?&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## 자주 묻는 질문 {#faq}
 
@@ -337,6 +337,14 @@ Experience Platform UI에서 유연한 대상 평가를 실행하려면 **[!UICO
 +++ 답변
 
 대상을 만든 후 즉시 유연한 대상 평가를 사용하여 대상을 활성화할 수 있습니다.
+
++++
+
+### 유연한 대상 평가는 얼마나 걸립니까?
+
++++ 답변
+
+유연한 대상 평가 작업은 완료하는 데 최대 4시간이 걸릴 수 있습니다.
 
 +++
 
