@@ -15,7 +15,7 @@ Reddit는 다양한 사용자 기반을 갖춘 소셜 미디어 플랫폼으로 
 
 [[!DNL Reddit] 전환 API 확장](https://ads-api.reddit.com/docs/v2/#tag/Conversions-API)을(를) 사용하여 Adobe Experience Platform Edge Network에서 캡처한 사용자 상호 작용 이벤트를 [!DNL Reddit Ads]&#x200B;(으)로 보냅니다. 이 확장 프로그램을 사용하여 귀하의 브랜드가 3억 7,900만 명이 넘는 주간 활성 사용자의 대상에 도달하고 사용자 행동을 더 잘 이해하며 타깃팅된 광고를 실행할 수 있도록 지원하십시오.
 
-이벤트 전달 [규칙](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules)에서 [!DNL Reddit] 전환 API 확장을 설치, 구성 및 사용하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
+이벤트 전달 [규칙](https://experienceleague.adobe.com/ko/docs/experience-platform/tags/ui/rules)에서 [!DNL Reddit] 전환 API 확장을 설치, 구성 및 사용하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
 
 ## 주요 이점 {#benefits}
 
@@ -42,7 +42,7 @@ Experience Platform을 [!DNL Reddit]에 연결하려면 다음 입력이 필요�
 
 [!DNL Reddit] 전환 API 확장을 설치하고 구성하려면 다음 단계를 따르십시오.
 
-1. Experience Platform 데이터 수집 UI의 왼쪽 탐색에서 [!UICONTROL 확장]을(를) 선택하여 [!UICONTROL 확장] 카탈로그에 액세스합니다. 그런 다음 [새 이벤트 전달 속성을 만들거나](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview#properties) 기존 속성을 선택하십시오.
+1. Experience Platform 데이터 수집 UI의 왼쪽 탐색에서 [!UICONTROL 확장]을(를) 선택하여 [!UICONTROL 확장] 카탈로그에 액세스합니다. 그런 다음 [새 이벤트 전달 속성을 만들거나](https://experienceleague.adobe.com/ko/docs/experience-platform/tags/event-forwarding/overview#properties) 기존 속성을 선택하십시오.
 2. 왼쪽 탐색 패널에서 **[!UICONTROL 확장]**(으)로 이동합니다. **[!UICONTROL 카탈로그]**&#x200B;를 선택한 다음 **[!DNL Reddit]** 확장을 선택하십시오.
    ![Reddit 확장이 강조 표시된 Adobe Experience Platform 확장 카탈로그입니다.](../../../images/extensions/server/reddit/reddit-extension.png)
 3. 다음 구성 세부 정보를 제공합니다.
@@ -55,7 +55,7 @@ Experience Platform을 [!DNL Reddit]에 연결하려면 다음 입력이 필요�
 
 데이터 요소를 설정한 후 이벤트 전달 규칙을 만들어 이벤트가 [!DNL Reddit Ads]&#x200B;(으)로 전송되는 시기와 방법을 결정합니다.
 
-1. 이벤트 전달 속성의 **규칙**(으)로 이동하여 새 [규칙](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules)을 만듭니다.
+1. 이벤트 전달 속성의 **규칙**(으)로 이동하여 새 [규칙](https://experienceleague.adobe.com/ko/docs/experience-platform/tags/ui/rules)을 만듭니다.
 2. **작업**&#x200B;에서 새 작업을 추가하고 확장을 **[!DNL Reddit CAPI]**(으)로 설정합니다.
 3. **작업 유형**&#x200B;을(를) **이벤트 보내기**(으)로 설정합니다.
    ![확장 및 작업 유형 필드가 강조 표시된 Reddit 전환 API 확장에 대한 이벤트 전달 규칙 구성 인터페이스입니다.](../../../images/extensions/server/reddit/reddit-rule.png)
