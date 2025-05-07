@@ -5,9 +5,9 @@ title: 일정 끝점
 description: 다음 섹션에서는 쿼리 서비스 API를 사용하여 예약된 쿼리에 대해 수행할 수 있는 다양한 API 호출을 안내합니다.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: a39fae1b72533261fb43e0acc95e50e5a6acd8df
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1224'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ GET /schedules?{QUERY_PARAMETERS}
 | `orderby` | 결과를 정렬하는 데 사용할 필드를 지정합니다. 지원되는 필드는 `created` 및 `updated`입니다. 예를 들어 `orderby=created`은(는) 만들어진 항목별로 오름차순으로 결과를 정렬합니다. 만들기 전에 `-`을(를) 추가하면(`orderby=-created`) 내림차순으로 만들어진 항목별로 정렬됩니다. |
 | `limit` | 페이지에 포함된 결과 수를 제어할 페이지 크기 제한을 지정합니다. (*기본값: 20*) |
 | `start` | ISO 형식 타임스탬프를 지정하여 결과 순서를 지정합니다. 시작 날짜가 지정되지 않은 경우 API 호출은 가장 오래 전에 생성된 예약 쿼리를 먼저 반환한 다음 더 최근 결과를 계속 나열합니다.<br> ISO 타임스탬프를 사용하면 날짜 및 시간에 서로 다른 수준의 세부기간을 사용할 수 있습니다. 기본 ISO 타임스탬프는 `2020-09-07` 형식을 사용하여 2020년 9월 7일의 날짜를 나타냅니다. 보다 복잡한 예제는 `2022-11-05T08:15:30-05:00`(으)로 작성되며 2022년 11월 5일 오전 8:15:30(미국 동부 표준시)에 해당합니다. 시간대는 UTC 오프셋을 사용하여 제공될 수 있으며 접미사 &quot;Z&quot;(`2020-01-01T01:01:01Z`)로 표시됩니다. 시간대가 제공되지 않으면 기본값은 0입니다. |
-| `property` | 필드를 기반으로 결과를 필터링합니다. **must** 필터는 HTML 이스케이프해야 합니다. 쉼표는 여러 필터 세트를 결합하는 데 사용됩니다. 지원되는 필드는 `created`, `templateId` 및 `userId`입니다. 지원되는 연산자 목록은 `>`(보다 큼), `<`(보다 작음) 및 `==`(과 같음)입니다. 예를 들어 `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec`은(는) 사용자 ID가 지정된 대로 지정된 모든 예약된 쿼리를 반환합니다. |
+| `property` | 필드를 기반으로 결과를 필터링합니다. **must** 필터는 HTML 이스케이프되어야 합니다. 쉼표는 여러 필터 세트를 결합하는 데 사용됩니다. 지원되는 필드는 `created`, `templateId` 및 `userId`입니다. 지원되는 연산자 목록은 `>`(보다 큼), `<`(보다 작음) 및 `==`(과 같음)입니다. 예를 들어 `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec`은(는) 사용자 ID가 지정된 대로 지정된 모든 예약된 쿼리를 반환합니다. |
 
 **요청**
 
@@ -158,10 +158,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `query.dbName` | 예약된 쿼리를 만드는 데이터베이스의 이름입니다. |
-| `query.sql` | 만들려는 SQL 쿼리입니다. |
+| `query.dbName` | 예약된 쿼리가 실행될 데이터베이스의 이름입니다. |
+| `query.sql` | 정의된 일정에 따라 실행할 SQL 쿼리입니다. |
 | `query.name` | 예약된 쿼리의 이름입니다. |
-| `schedule.schedule` | 쿼리에 대한 cron 일정. cron 일정에 대한 자세한 내용은 [cron 식 형식](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 설명서를 참조하십시오. 이 예에서 &quot;30 * * * *&quot;는 쿼리가 매 시간마다 30분 표시에 실행됨을 의미합니다.<br><br>또는 다음 축약 표현식을 사용할 수 있습니다.<ul><li>`@once`: 쿼리가 한 번만 실행됩니다.</li><li>`@hourly`: 쿼리가 매시간 시작 시간에 실행됩니다. 크론 식 `0 * * * *`과(와) 같습니다.</li><li>`@daily`: 쿼리가 매일 자정에 한 번 실행됩니다. 크론 식 `0 0 * * *`과(와) 같습니다.</li><li>`@weekly`: 쿼리가 일주일에 한 번, 일요일 자정에 실행됩니다. 크론 식 `0 0 * * 0`과(와) 같습니다.</li><li>`@monthly`: 쿼리가 한 달에 한 번, 그 달의 첫째 날 자정에 실행됩니다. 크론 식 `0 0 1 * *`과(와) 같습니다.</li><li>`@yearly`: 쿼리가 1년에 한 번 1월 1일 자정에 실행됩니다. 크론 식 `1 0 0 1 1 *`과(와) 같습니다. |
+| `query.description` | 예약된 쿼리에 대한 선택적 설명입니다. |
+| `schedule.schedule` | 쿼리에 대한 cron 일정. cron 표현식을 만들고, 확인하고, 이해하는 대화형 방법은 [Crontab.guru](https://crontab.guru/)을 참조하세요. 이 예에서 &quot;30 * * * *&quot;는 쿼리가 매 시간마다 30분 표시에 실행됨을 의미합니다.<br><br>또는 다음 축약 표현식을 사용할 수 있습니다.<ul><li>`@once`: 쿼리가 한 번만 실행됩니다.</li><li>`@hourly`: 쿼리가 매시간 시작 시간에 실행됩니다. 크론 식 `0 * * * *`과(와) 같습니다.</li><li>`@daily`: 쿼리가 매일 자정에 한 번 실행됩니다. 크론 식 `0 0 * * *`과(와) 같습니다.</li><li>`@weekly`: 쿼리가 일주일에 한 번, 일요일 자정에 실행됩니다. 크론 식 `0 0 * * 0`과(와) 같습니다.</li><li>`@monthly`: 쿼리가 한 달에 한 번, 그 달의 첫째 날 자정에 실행됩니다. 크론 식 `0 0 1 * *`과(와) 같습니다.</li><li>`@yearly`: 쿼리가 1년에 한 번 1월 1일 자정에 실행됩니다. 크론 식 `0 0 1 1 *`과(와) 같습니다. |
 | `schedule.startDate` | UTC 타임스탬프로 작성된 예약된 쿼리의 시작 날짜입니다. |
 
 **응답**
@@ -322,7 +323,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | PATCH 할 예약된 쿼리의 `id` 값입니다. |
+| `{SCHEDULE_ID}` | PATCH에 추가할 예약된 쿼리의 `id` 값입니다. |
 
 
 **요청**
@@ -375,7 +376,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | PATCH 할 예약된 쿼리의 `id` 값입니다. |
+| `{SCHEDULE_ID}` | PATCH에 추가할 예약된 쿼리의 `id` 값입니다. |
 
 **요청**
 
@@ -417,7 +418,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### 지정된 예약된 쿼리 삭제
 
-`/schedules` 끝점에 대한 DELETE 요청을 만들고 요청 경로에 삭제할 예약된 쿼리의 ID를 제공하여 지정된 예약된 쿼리를 삭제할 수 있습니다.
+`/schedules` 끝점에 DELETE을 요청하고 요청 경로에 삭제할 예약된 쿼리의 ID를 제공하여 지정된 예약된 쿼리를 삭제할 수 있습니다.
 
 >[!NOTE]
 >
@@ -431,7 +432,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | DELETE 할 예약된 쿼리의 `id` 값입니다. |
+| `{SCHEDULE_ID}` | DELETE에 추가할 예약된 쿼리의 `id` 값입니다. |
 
 **요청**
 
