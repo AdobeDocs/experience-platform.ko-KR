@@ -47,7 +47,8 @@ Experience Platform을 [!DNL Reddit]에 연결하려면 다음 입력이 필요�
    ![Reddit 확장이 강조 표시된 Adobe Experience Platform 확장 카탈로그입니다.](../../../images/extensions/server/reddit/reddit-extension.png)
 3. 다음 구성 세부 정보를 제공합니다.
    - **픽셀 ID**: [!DNL Reddit Ads] 픽셀 ID를 입력하십시오.
-   - **전환 액세스 토큰**: [!DNL Reddit Ads] 계정에서 생성된 토큰을 입력하고 완료되면 **[!UICONTROL 저장]**을 선택합니다.
+   - **전환 액세스 토큰**: [!DNL Reddit Ads] 계정에서 생성된 토큰을 입력하고 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+
      ![Pixel ID 및 전환 액세스 토큰에 대한 필드를 포함하여 Reddit Conversions API 확장에 대한 구성 세부 정보입니다.](../../../images/extensions/server/reddit/reddit-capi-details.png)
 
 ## 이벤트 전달 규칙 구성 {#config-rule}
