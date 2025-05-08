@@ -2,10 +2,10 @@
 title: 코어 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 코어 확장에 대한 최신 릴리스 정보입니다.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1ce579fc1f8548d1eb5c01d63e9fa4e8b32e2a4f
+source-git-commit: 1342461c95fa096496739fc14c92a7edd5aa6b57
 workflow-type: tm+mt
-source-wordcount: '1651'
-ht-degree: 48%
+source-wordcount: '1693'
+ht-degree: 47%
 
 ---
 
@@ -14,6 +14,14 @@ ht-degree: 48%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## 2025년 5월 8일
+
+v3.4.3
+
+* **데이터 요소** > **Javascript 도구** > **단순 바꾸기**&#x200B;에 **모두 바꾸기**&#x200B;에 대한 확인란이 표시되지만 확인란이 활성화된 상태로 규칙을 저장하려고 하면 오류가 발생하는 문제가 수정되었습니다.
+* @adobe/react-spectrum을 v3.41.0으로 업그레이드합니다.
+* @adobe/reactor-sandbox를 v13.2.1로 업그레이드합니다.
 
 ## 2024년 10월 23일
 
@@ -94,7 +102,7 @@ v3.0.0
 
 * PDCL-6153: 캐시된 사용자 지정 코드 작업에 대해 정규화된 URL을 안정적으로 가져올 수 있는 지원을 추가합니다.
 
-코어 확장의 v3.0.0은 Turbine 웹 런타임[&#128279;](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)의 v27.2.0의 변경 사항과 함께 적용되므로 사용자의 회사에서 Premium CDN을 지원하는 경우 많은 Adobe 관리 호스팅 영역 간에 라이브러리를 로드할 수 있습니다.
+코어 확장의 v3.0.0은 Turbine 웹 런타임](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)의 [v27.2.0의 변경 사항과 함께 적용되므로 사용자의 회사에서 Premium CDN을 지원하는 경우 많은 Adobe 관리 호스팅 영역 간에 라이브러리를 로드할 수 있습니다.
 
 이 업그레이드는 Premium CDN이 없는 사용자에 대해 선택 사항이며 이전 버전과 호환됩니다. 회사에서 Premium CDN이 활성화된 고객은 필수입니다.
 
@@ -123,7 +131,7 @@ v2.0.4
 
 * 다양한 필드에 대한 데이터 요소 지원이 추가되었습니다. &#39;Time on Page&#39;, &#39;Enters Viewport&#39;, &#39;Hover&#39; 및 &#39;Media Time Played&#39; 이벤트에 데이터 요소 지원이 추가되었습니다. 조건: &#39;사이트에서 보낸 시간&#39; 및 &#39;값 비교&#39;
 * 링크 지연을 사용할 때 ctrl/cmd+클릭 및 마우스 가운데 버튼을 클릭할 수 있는 기본 동작에 대한 지원을 추가합니다.
-* **클릭 이벤트에 대한 링크 지연을 &quot;더 이상 지원되지 않음&quot;으로 표시했습니다.** - 자세한 내용은 Adobe Experience Platform의 [데이터 수집 블로그](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=ko)에서 확인할 수 있습니다.
+* **클릭 이벤트에 대한 링크 지연을 &quot;더 이상 지원되지 않음&quot;으로 표시했습니다.** - 자세한 내용은 Adobe Experience Platform의 [데이터 수집 블로그](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403)에서 확인할 수 있습니다.
 
 ## 2021년 1월 6일
 
