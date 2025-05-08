@@ -102,7 +102,7 @@ v3.0.0
 
 * PDCL-6153: 캐시된 사용자 지정 코드 작업에 대해 정규화된 URL을 안정적으로 가져올 수 있는 지원을 추가합니다.
 
-코어 확장의 v3.0.0은 Turbine 웹 런타임](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)의 [v27.2.0의 변경 사항과 함께 적용되므로 사용자의 회사에서 Premium CDN을 지원하는 경우 많은 Adobe 관리 호스팅 영역 간에 라이브러리를 로드할 수 있습니다.
+코어 확장의 v3.0.0은 Turbine 웹 런타임[&#128279;](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)의 v27.2.0의 변경 사항과 함께 적용되므로 사용자의 회사에서 Premium CDN을 지원하는 경우 많은 Adobe 관리 호스팅 영역 간에 라이브러리를 로드할 수 있습니다.
 
 이 업그레이드는 Premium CDN이 없는 사용자에 대해 선택 사항이며 이전 버전과 호환됩니다. 회사에서 Premium CDN이 활성화된 고객은 필수입니다.
 
