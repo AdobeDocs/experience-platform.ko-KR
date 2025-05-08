@@ -2,9 +2,9 @@
 title: ID 그래프 연결 규칙에 대한 구현 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: d0380844eb8dd98bd7c349beb035cce4c7ccb44f
+source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
 workflow-type: tm+mt
-source-wordcount: '1886'
+source-wordcount: '1958'
 ht-degree: 6%
 
 ---
@@ -109,7 +109,7 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 }
 ```
 
->[!TAB 개인 식별자가 두 개인 인 인증된 이벤트]
+>[!TAB 개인 식별자가 두 개인 ]인 인증된 이벤트
 
 시스템에서 2명의 개인 식별자를 전송하는 경우 구현이 1명의 개인 네임스페이스 요구 사항에 실패할 수 있습니다. 예를 들어 웹 SDK 구현의 identityMap에 CRMID, customerID 및 ECID 네임스페이스가 포함되어 있으면 모든 단일 이벤트에 CRMID와 customerID가 모두 포함될 수 있습니다.
 
@@ -160,6 +160,8 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 ![예제 그래프가 있는 그래프 시뮬레이션 UI입니다.](../images/implementation/example-graph.png)
 
 >[!TAB 개인 식별자가 없는 인증된 이벤트]
+
+이 예에서는 John(최종 사용자)이 인증된 상태에서 웹 사이트를 검색하는 동안 다음 이벤트가 Experience Platform으로 전송되었다고 가정할 수 있습니다. 하지만 인증되었음에도 불구하고 Experience Platform은 이벤트에 개인 식별자가 없어 John을 식별할 수 없습니다. 따라서 이 이벤트는 John과 관련된 온라인 활동으로 인식하지 않고, Adobe 비즈니스 웹 사이트를 탐색하는 익명의 사용자로 해석됩니다.
 
 ```json
 {
