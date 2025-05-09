@@ -129,7 +129,7 @@ ht-degree: 16%
 
 ![제외 옵션을 선택했습니다.](../images/ui/audience-composition/add-exclude-block.png)
 
-**[!UICONTROL Exclude]** 블록이 추가되었습니다. 이 블록을 선택하면 제외에 대한 세부 정보가 오른쪽 레일에 표시됩니다. 여기에는 블록의 레이블 및 제외 유형이 포함됩니다. 대상별로 [또는 특성별로 [을(를) 제외할 수 있습니다](#exclude-attribute).](#exclude-audience)
+**[!UICONTROL Exclude]** 블록이 추가되었습니다. 이 블록을 선택하면 제외에 대한 세부 정보가 오른쪽 레일에 표시됩니다. 여기에는 블록의 레이블 및 제외 유형이 포함됩니다. 대상별로 [&#128279;](#exclude-audience)또는 특성별로 [을(를) 제외할 수 있습니다](#exclude-attribute).
 
 ![사용 가능한 두 가지 제외 유형을 강조 표시하는 제외 블록입니다.](../images/ui/audience-composition/exclude.png)
 
@@ -218,7 +218,7 @@ ht-degree: 16%
 
 이제 **[!UICONTROL 데이터 보강 기준]** 섹션이 오른쪽 레일에 나타납니다. 이 섹션에서는 **[!UICONTROL Source 조인 키]** 및 **[!UICONTROL 데이터 보강 데이터 세트 조인 키]**&#x200B;를 선택하여 데이터 보강 데이터 세트를 만들려는 대상자와 연결할 수 있습니다.
 
-![데이터 보강 기준] 영역이 강조 표시되어 있습니다.](../images/ui/audience-composition/enrichment-criteria.png)[!UICONTROL 
+![데이터 보강 기준] 영역이 강조 표시되어 있습니다.(../images/ui/audience-composition/enrichment-criteria.png)
 
 **[!UICONTROL Source 가입 키]**&#x200B;를 선택하려면 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택하십시오.
 
