@@ -116,7 +116,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude"
 >title="블록 제외"
->abstract="블록 제외를 사용하면 지정된 대상자 또는 속성을 구성에서 제외할 수 있습니다."
+>abstract="블록 제외를 사용하면 지정된 대상자 또는 속성을 컴포지션에서 제외할 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude_type"
@@ -129,7 +129,7 @@ ht-degree: 16%
 
 ![제외 옵션을 선택했습니다.](../images/ui/audience-composition/add-exclude-block.png)
 
-**[!UICONTROL Exclude]** 블록이 추가되었습니다. 이 블록을 선택하면 제외에 대한 세부 정보가 오른쪽 레일에 표시됩니다. 여기에는 블록의 레이블 및 제외 유형이 포함됩니다. 대상별로 [&#128279;](#exclude-audience)또는 특성별로 [을(를) 제외할 수 있습니다](#exclude-attribute).
+**[!UICONTROL Exclude]** 블록이 추가되었습니다. 이 블록을 선택하면 제외에 대한 세부 정보가 오른쪽 레일에 표시됩니다. 여기에는 블록의 레이블 및 제외 유형이 포함됩니다. 대상별로 [또는 특성별로 [을(를) 제외할 수 있습니다](#exclude-attribute).](#exclude-audience)
 
 ![사용 가능한 두 가지 제외 유형을 강조 표시하는 제외 블록입니다.](../images/ui/audience-composition/exclude.png)
 
@@ -176,7 +176,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_dataset"
 >title="보강 데이터 세트"
->abstract="보강 데이터 세트에는 구성과 연관시키려는 데이터가 포함되어 있습니다."
+>abstract="보강 데이터 세트에는 컴포지션과 연관시키려는 데이터가 포함되어 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich_criteria"
@@ -186,7 +186,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich_attributes"
 >title="보강 속성"
->abstract="보강 속성은 구성과 연관시키고자 하는 속성입니다."
+>abstract="보강 속성은 컴포지션과 연관시키고자 하는 속성입니다."
 
 >[!IMPORTANT]
 >
@@ -218,7 +218,7 @@ ht-degree: 16%
 
 이제 **[!UICONTROL 데이터 보강 기준]** 섹션이 오른쪽 레일에 나타납니다. 이 섹션에서는 **[!UICONTROL Source 조인 키]** 및 **[!UICONTROL 데이터 보강 데이터 세트 조인 키]**&#x200B;를 선택하여 데이터 보강 데이터 세트를 만들려는 대상자와 연결할 수 있습니다.
 
-![데이터 보강 기준] 영역이 강조 표시되어 있습니다.(../images/ui/audience-composition/enrichment-criteria.png)
+![데이터 보강 기준] 영역이 강조 표시되어 있습니다.](../images/ui/audience-composition/enrichment-criteria.png)[!UICONTROL 
 
 **[!UICONTROL Source 가입 키]**&#x200B;를 선택하려면 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택하십시오.
 
@@ -263,7 +263,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_ranking"
 >title="블록 순위"
->abstract="블록 순위를 통해 특정 속성을 기반으로 프로필의 순위를 지정하고 구성에 포함할 수 있습니다."
+>abstract="블록 순위를 통해 특정 속성을 기반으로 프로필의 순위를 지정하고 컴포지션에 포함할 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_rank_profilelimit_text"
@@ -299,12 +299,12 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split"
 >title="분할 블록"
->abstract="분할 블록을 사용하면 구성을 여러 경로로 나눌 수 있습니다."
+>abstract="분할 블록을 사용하면 컴포지션을 여러 경로로 나눌 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_type"
 >title="분할 유형"
->abstract="구성을 백분율 분할이나 속성 분할로 나눌 수 있습니다. 백분율 분할은 프로필을 여러 경로로 임의 분할합니다. 속성 분할을 사용하면 지정된 속성을 기준으로 프로필을 분할할 수 있습니다."
+>abstract="컴포지션을 백분율 분할이나 속성 분할로 나눌 수 있습니다. 백분율 분할은 프로필을 여러 경로로 임의 분할합니다. 속성 분할을 사용하면 지정된 속성을 기준으로 프로필을 분할할 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_otherprofiles_text"
