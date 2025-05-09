@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 사용 레이블 개요
 description: Adobe Experience Platform에서 데이터 거버넌스 규정 준수를 적용하는 데 데이터 사용 레이블을 사용하는 방법을 알아봅니다.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 916eb01ea7878366620b859c1d6a667a88b850c9
 workflow-type: tm+mt
 source-wordcount: '789'
 ht-degree: 16%
@@ -44,7 +44,7 @@ Experience Platform에서 자동 적용이 작동하는 방법에 대한 자세�
 
 [!DNL Experience Platform]은(는) Adobe Audience Manager과 세그먼트를 공유할 수 있습니다. Audience Manager 세그먼트에 적용된 모든 데이터 내보내기 컨트롤은 [!DNL Experience Platform] 데이터 거버넌스에서 인식하는 동등한 레이블 및 마케팅 작업으로 변환됩니다.
 
-특정 데이터 내보내기 컨트롤이 [!DNL Experience Platform]의 데이터 사용 레이블에 매핑되는 방법에 대한 참조는 [Audience Manager 설명서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ko#aam-data-export-control-in-aep)를 참조하십시오.
+특정 데이터 내보내기 컨트롤이 [!DNL Experience Platform]의 데이터 사용 레이블에 매핑되는 방법에 대한 참조는 [Audience Manager 설명서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)를 참조하십시오.
 
 ## [!DNL Experience Platform]에서 데이터 사용 레이블 관리 {#manage-labels}
 
@@ -57,7 +57,7 @@ Experience Platform에서 자동 적용이 작동하는 방법에 대한 자세�
 
 ### UI 사용
 
-[!DNL Experience Platform] UI의 **[!UICONTROL 정책]** 작업 영역에서 조직의 핵심 및 사용자 지정 레이블을 보고 관리할 수 있습니다. **[!UICONTROL 스키마]** 작업 영역을 사용하여 [XDM(Experience Data Model) 스키마에 레이블을 적용](../../xdm/tutorials/labels.md)하거나, 데이터 사용 레이블 사용 안내서를 대신 읽고 [**[!UICONTROL 정책] UI에서 사용자 지정 레이블을 만들고 관리](./user-guide.md)하는 방법을 배울 수 있습니다.
+[!DNL Experience Platform] UI의 **[!UICONTROL 정책]** 작업 영역에서 조직의 핵심 및 사용자 지정 레이블을 보고 관리할 수 있습니다. **[!UICONTROL 스키마]** 작업 영역을 사용하여 [XDM(Experience Data Model) 스키마에 레이블을 적용](../../xdm/tutorials/labels.md)하거나, 데이터 사용 레이블 사용 안내서를 대신 읽고 [정책&#x200B;]**UI에서 사용자 지정 레이블을 만들고 관리](./user-guide.md)하는 방법을 배울 수 있습니다.**[!UICONTROL 
 
 >[!IMPORTANT]
 >
