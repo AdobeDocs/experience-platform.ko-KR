@@ -3,9 +3,9 @@ keywords: google 고객 일치;Google 고객 일치;Google 고객 일치
 title: Google Customer Match 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑 및 Gmail과 같이 Google이 소유하고 운영하는 속성에서 고객에게 연락하고 다시 연결할 수 있습니다.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 98d83e8d09b6e469daf515063e2887bfbf9b8be6
 workflow-type: tm+mt
-source-wordcount: '2046'
+source-wordcount: '2360'
 ht-degree: 2%
 
 ---
@@ -58,11 +58,15 @@ Experience Platform의 일부 대상에는 대상 플랫폼으로 보내거나 �
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 이 대상 ID를 선택합니다. |
-| IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 이 대상 ID를 선택합니다. |
-| phone_sha256_e.164 | SHA256 알고리즘으로 해시된 E164 형식의 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따르고 일반 텍스트와 해시된 전화 번호에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
-| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침에 따라 일반 텍스트와 해시된 이메일 주소에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
-| user_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+| `GAID` | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+| `IDFA` | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+| `phone_sha256_e.164` | SHA256 알고리즘으로 해시된 E164 형식의 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따르고 일반 텍스트와 해시된 전화 번호에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| `email_lc_sha256` | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침에 따라 일반 텍스트와 해시된 이메일 주소에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| `user_id` | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+| `address_info_first_name` | 사용자의 이름 | 이 대상 ID는 메일 주소 데이터를 대상으로 보낼 때 `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`과(와) 함께 사용됩니다. <br><br>Google이 주소와 일치하는지 확인하려면 네 개의 주소 필드(`address_info_first_name`, `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`)를 모두 매핑하고 내보낸 프로필에 데이터가 없는지 확인해야 합니다. <br> 필드가 매핑되지 않았거나 누락된 데이터를 포함하는 경우 Google이 주소와 일치하지 않습니다. |
+| `address_info_last_name` | 사용자의 성 | 이 대상 ID는 메일 주소 데이터를 대상으로 보낼 때 `address_info_first_name`, `address_info_country_code` 및 `address_info_postal_code`과(와) 함께 사용됩니다. <br><br>Google이 주소와 일치하는지 확인하려면 네 개의 주소 필드(`address_info_first_name`, `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`)를 모두 매핑하고 내보낸 프로필에 데이터가 없는지 확인해야 합니다. <br> 필드가 매핑되지 않았거나 누락된 데이터를 포함하는 경우 Google이 주소와 일치하지 않습니다. |
+| `address_info_country_code` | 사용자 주소 국가 코드 | 이 대상 ID는 메일 주소 데이터를 대상으로 보낼 때 `address_info_first_name`, `address_info_last_name` 및 `address_info_postal_code`과(와) 함께 사용됩니다. <br><br>Google이 주소와 일치하는지 확인하려면 네 개의 주소 필드(`address_info_first_name`, `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`)를 모두 매핑하고 내보낸 프로필에 데이터가 없는지 확인해야 합니다. <br> 필드가 매핑되지 않았거나 누락된 데이터를 포함하는 경우 Google이 주소와 일치하지 않습니다. <br><br>허용되는 형식: [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 형식의 소문자, 두 글자로 된 국가 코드입니다. |
+| `address_info_postal_code` | 사용자 주소 우편 번호 | 이 대상 ID는 메일 주소 데이터를 대상으로 보낼 때 `address_info_first_name`, `address_info_last_name` 및 `address_info_country_code`과(와) 함께 사용됩니다. <br><br>Google이 주소와 일치하는지 확인하려면 네 개의 주소 필드(`address_info_first_name`, `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`)를 모두 매핑하고 내보낸 프로필에 데이터가 없는지 확인해야 합니다. <br> 필드가 매핑되지 않았거나 누락된 데이터를 포함하는 경우 Google이 주소와 일치하지 않습니다. |
 
 {style="table-layout:auto"}
 
@@ -146,13 +150,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## 비디오 개요 {#video-overview}
 
 아래 비디오를 통해 혜택과 Google Customer Match에 대한 데이터 활성화 방법에 대해 알아보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/326488?captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## 대상에 연결 {#connect}
 
@@ -227,6 +231,10 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 ## 대상 모니터링 {#monitor-destination}
 
 대상에 연결하고 대상 데이터 흐름을 설정한 후 Real-Time CDP의 [모니터링 기능](/help/dataflows/ui/monitor-destinations.md)을 사용하여 각 데이터 흐름 실행에서 대상에 활성화된 프로필 레코드에 대한 광범위한 정보를 얻을 수 있습니다.
+
+>[!IMPORTANT]
+>
+>네 개의 주소 관련 대상 ID(`address_info_first_name`, `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`)를 매핑하면 데이터 흐름 모니터링 페이지에서 각 프로필에 대한 개별 ID로 계산됩니다.
 
 ## 대상자 활성화가 성공했는지 확인 {#verify-activation}
 
