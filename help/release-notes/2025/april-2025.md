@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 4월
 description: Adobe Experience Platform에 대한 2025년 4월 릴리스 정보입니다.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: b0ed9e38dbc3b4a4f4f7cde5751c2edd35355b59
+source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2192'
 ht-degree: 28%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 28%
 >다른 Adobe Experience Platform 애플리케이션의 릴리스 노트는 다음 설명서를 참조하십시오.
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/releases/latest)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **릴리스 일자: 2025년 4월 29일 수요일**
 
@@ -41,7 +41,7 @@ Experience League은 Adobe 제품을 통해 기술을 향상시킬 수 있도록
 
 | 기능 | 설명 |
 | --- | --- |
-| 개인화된 홈 페이지 | [Experience League](https://experienceleague.adobe.com/ko/home#)에서 개인 맞춤화된 홈 페이지에 액세스하고 사용자 지정하세요. Adobe 자격 증명으로 로그인한 다음 상단 메뉴에서 **[!UICONTROL Experience League]**&#x200B;을(를) 선택하여 학습 환경을 최적화합니다. <ul><li>**책갈피**: [!UICONTROL 책갈피] 기능을 사용하여 좋아하는 리소스를 한 곳에 저장하고 수집합니다. 플레이리스트, 문서 및 튜토리얼을 비롯한 다양한 콘텐츠를 저장할 수 있습니다.</li><li>**학습 사용자 지정**: 사용자의 요구 사항에 가장 적합한 역할, 업계, 제품 및 경험 수준으로 Experience League 프로필을 업데이트하여 학습 환경을 향상시킵니다.</li><li>**권장 사항**: 최근 활동에 따라 권장되는 학습 콘텐츠를 봅니다.</li><li>**최근에 본 항목**: [!UICONTROL 최근에 본 항목] 섹션을 사용하여 문서 및 비디오와 같은 최근에 본 콘텐츠로 빠르게 다시 이동합니다.</li><li>**학습 리소스**: [!UICONTROL 모든 학습 리소스] 패널을 사용하여 튜토리얼, 설명서, 커뮤니티, 이벤트 및 인증으로 이동합니다.</li><li>**새로운 기능**: Experience League의 최신 콘텐츠 스트림에 대한 [!UICONTROL 새로운 기능] 섹션을 봅니다.</li><li>**필요 시 이전 이벤트 보기**: [!UICONTROL 필요 시 이전 이벤트 보기] 섹션에서 제품 스포트라이트, 사용 사례 및 튜토리얼에 대해 이전에 기록된 실시간 스트림을 봅니다.</li></ul><br> Experience League에서 ![개인 설정된 홈 페이지입니다.](../2025/assets/april/personalized-home-page.png "Experience League에서 개인 맞춤화된 홈 페이지입니다."){width="250" align="center" zoomable="yes"} |
+| 개인화된 홈 페이지 | [Experience League](https://experienceleague.adobe.com/en/home#)에서 개인 맞춤화된 홈 페이지에 액세스하고 사용자 지정하세요. Adobe 자격 증명으로 로그인한 다음 상단 메뉴에서 **[!UICONTROL Experience League]**&#x200B;을(를) 선택하여 학습 환경을 최적화합니다. <ul><li>**책갈피**: [!UICONTROL 책갈피] 기능을 사용하여 좋아하는 리소스를 한 곳에 저장하고 수집합니다. 플레이리스트, 문서 및 튜토리얼을 비롯한 다양한 콘텐츠를 저장할 수 있습니다.</li><li>**학습 사용자 지정**: 사용자의 요구 사항에 가장 적합한 역할, 업계, 제품 및 경험 수준으로 Experience League 프로필을 업데이트하여 학습 환경을 향상시킵니다.</li><li>**권장 사항**: 최근 활동에 따라 권장되는 학습 콘텐츠를 봅니다.</li><li>**최근에 본 항목**: [!UICONTROL 최근에 본 항목] 섹션을 사용하여 문서 및 비디오와 같은 최근에 본 콘텐츠로 빠르게 다시 이동합니다.</li><li>**학습 리소스**: [!UICONTROL 모든 학습 리소스] 패널을 사용하여 튜토리얼, 설명서, 커뮤니티, 이벤트 및 인증으로 이동합니다.</li><li>**새로운 기능**: Experience League의 최신 콘텐츠 스트림에 대한 [!UICONTROL 새로운 기능] 섹션을 봅니다.</li><li>**필요 시 이전 이벤트 보기**: [!UICONTROL 필요 시 이전 이벤트 보기] 섹션에서 제품 스포트라이트, 사용 사례 및 튜토리얼에 대해 이전에 기록된 실시간 스트림을 봅니다.</li></ul><br> Experience League에서 ![개인 설정된 홈 페이지입니다.](../2025/assets/april/personalized-home-page.png "Experience League에서 개인 맞춤화된 홈 페이지입니다."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -108,7 +108,7 @@ Adobe Experience Platform ID 서비스를 사용하여 여러 디바이스 및 �
 
 | 기능 | 설명 |
 | --- | --- |
-| [!BADGE 제한된 가용성]{type=Informative} [!DNL Identity Graph Linking Rules] | ID 그래프 연결 규칙은 이제 제한된 가용성에 있으며 개발 샌드박스에서 모든 고객이 액세스할 수 있습니다. <ul><li>**활성화 요구 사항**: 이 기능은 [!DNL Identity Settings]을(를) 구성하고 저장할 때까지 비활성 상태로 유지됩니다. 이 구성이 없으면 시스템이 동작을 변경하지 않고 계속 정상적으로 작동합니다.</li><li>**중요 정보**: 이 제한된 가용성 단계에서 Edge 세그먼테이션을 수행하면 예기치 않은 세그먼트 멤버십 결과가 발생할 수 있습니다. 하지만 스트리밍 및 배치 세분화는 예상대로 작동합니다.</li><li>**다음 단계**: 프로덕션 샌드박스에서 이 기능을 활성화하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.</li></ul> |
+| [!BADGE 제한된 가용성]{type=Informative} [!DNL Identity Graph Linking Rules] | 이제 개발 샌드박스에서 ID 그래프 연결 규칙에 모든 고객이 액세스할 수 있습니다. <ul><li>**활성화 요구 사항**: 이 기능은 [!DNL Identity Settings]을(를) 구성하고 저장할 때까지 비활성 상태로 유지됩니다. 이 구성이 없으면 시스템이 동작을 변경하지 않고 계속 정상적으로 작동합니다.</li><li>**중요 정보**: 이 제한된 가용성 단계에서 Edge 세그먼테이션을 수행하면 예기치 않은 세그먼트 멤버십 결과가 발생할 수 있습니다. 하지만 스트리밍 및 배치 세분화는 예상대로 작동합니다.</li><li>**다음 단계**: 프로덕션 샌드박스에서 이 기능을 활성화하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.</li></ul> |
 
 {style="table-layout:auto"}
 
