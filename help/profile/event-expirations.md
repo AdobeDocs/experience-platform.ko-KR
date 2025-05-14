@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 경험 이벤트 만료
 description: 이 문서에서는 Adobe Experience Platform 데이터 세트 내의 개별 경험 이벤트에 대한 만료 시간 구성에 대한 일반적인 지침을 제공합니다.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 71634a1dd0e0cd3f731272a179b4f1fe221eb046
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,10 @@ Experience Platform UI 또는 API를 통해 경험 이벤트 만료를 구성할
 ## 자주 묻는 질문 {#faq}
 
 다음 섹션에는 경험 이벤트 데이터 만료와 관련된 FAQ가 나열되어 있습니다.
+
+### 경험 이벤트 데이터 만료를 설정할 수 있는 최소 기간은 얼마입니까?
+
+경험 이벤트 데이터 만료의 최소 기간은 **하루**&#x200B;입니다.
 
 ### 경험 이벤트 데이터 만료는 익명 프로필 데이터 만료와 어떻게 다릅니까?
 
