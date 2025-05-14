@@ -4,9 +4,9 @@ title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 서드파티 HTTP 끝점으로 전송하여 자체 분석을 실행하거나 Experience Platform에서 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
+source-git-commit: d78b7a06318dabff5dac763068ca7c21a5a86633
 workflow-type: tm+mt
-source-wordcount: '2701'
+source-wordcount: '2692'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 HTTP API 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 [!DNL Adobe Experience Platform] 스트리밍 대상입니다.
 
@@ -71,13 +71,11 @@ HTTP API 대상을 사용하여 Experience Platform에서 데이터를 내보내
 
 [!DNL HTTP API] 대상에 [!DNL mTLS]을(를) 사용하려면 [대상 세부 정보](#destination-details) 페이지에 입력한 서버 주소에 [!DNL TLS] 프로토콜이 비활성화되어 있어야 하며 [!DNL mTLS]만 활성화되어야 합니다. 끝점에서 [!DNL TLS] 1.2 프로토콜이 여전히 활성화되어 있으면 클라이언트 인증을 위한 인증서가 전송되지 않습니다. 즉, [!DNL HTTP API] 대상에 [!DNL mTLS]을(를) 사용하려면 &quot;받는 중&quot; 서버 끝점이 [!DNL mTLS] 전용 연결 끝점이어야 합니다.
 
-### 인증서 다운로드 {#certificate}
+### 인증서 세부 정보 검색 및 검사 {#certificate}
 
-[!DNL Common Name]&#x200B;(CN) 및 [!DNL Subject Alternative Names]&#x200B;(SAN)을 확인하여 추가 타사 유효성 검사를 수행하려면 아래 인증서를 다운로드할 수 있습니다.
+추가 타사 유효성 검사를 위해 [!DNL Common Name]&#x200B;(CN) 및 [!DNL Subject Alternative Names]&#x200B;(SAN)과 같은 인증서 세부 정보를 검사하려면 API를 사용하여 인증서를 검색하고 응답에서 해당 필드를 추출하십시오.
 
-* [HTTP API mTLS 공개 인증서](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
-
-MTLS 끝점에 GET 요청을 하여 공개 인증서를 안전하게 검색할 수도 있습니다. 자세한 내용은 [공개 인증서 끝점 설명서](../../../data-governance/mtls-api/public-certificate-endpoint.md)를 참조하세요.
+자세한 내용은 [공개 인증서 끝점 설명서](../../../data-governance/mtls-api/public-certificate-endpoint.md)를 참조하세요.
 
 ## 허용 목록에 추가하다 IP 주소 {#ip-address-allowlist}
 

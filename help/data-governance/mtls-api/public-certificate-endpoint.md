@@ -3,20 +3,24 @@ title: 공개 인증서 끝점
 description: MTLS 서비스 API의 /public-certificate 종단점을 사용하여 공개 인증서를 검색하는 방법을 알아봅니다.
 role: Developer
 exl-id: 8369c783-e595-476f-9546-801cf4f10f71
-source-git-commit: 754044621cdaf1445f809bceaa3e865261eb16f0
+source-git-commit: d74353e70e992150c031397009d0c8add3df5e7b
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '471'
 ht-degree: 2%
 
 ---
 
 # 공개 인증서 끝점
 
+>[!NOTE]
+>
+>Adobe은 더 이상 공개 mTLS 인증서의 정적 다운로드를 지원하지 않습니다. 이 API를 사용하여 통합에 대한 유효한 인증서를 검색합니다. 이제 서비스 중단을 방지하기 위해 자동 검색이 필요합니다.
+
 이 안내서에서는 공개 인증서 끝점을 사용하여 조직의 Adobe 애플리케이션에 대한 공개 인증서를 안전하게 검색하는 방법을 설명합니다. 여기에는 개발자가 데이터 교환을 인증하고 확인하는 데 도움이 되는 샘플 API 호출 및 세부 지침이 포함되어 있습니다.
 
 ## 시작하기
 
-계속하기 전에 [시작 안내서](./getting-started.md)에서 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
+계속하기 전에 [시작 안내서](./getting-started.md)에서 필수 헤더와 예제 API 호출을 해석하는 방법에 대한 중요한 세부 정보를 검토하십시오.
 
 ## API 경로 {#paths}
 
@@ -28,7 +32,7 @@ ht-degree: 2%
 
 ## 공개 인증서 검색 {#list}
 
-`/v1/certificate/public-certificate` 끝점에 대한 GET 요청을 통해 조직의 Adobe 응용 프로그램에 대한 공개 인증서를 검색할 수 있습니다.
+조직의 Adobe 응용 프로그램에 대한 공개 인증서를 검색하도록 `/v1/certificate/public-certificate` 끝점에 GET 요청을 만듭니다.
 
 **API 형식**
 
@@ -38,7 +42,7 @@ GET /v1/certificate/public-certificate
 
 공개 인증서를 검색할 때 다음의 선택적 쿼리 매개 변수를 사용할 수 있습니다.
 
-| 쿼리 매개 변수 | 설명 | 예 |
+| 쿼리 매개변수 | 설명 | 예 |
 | --------------- | ----------- | ------- |
 | `page` | 요청 결과가 시작될 페이지를 지정합니다. | `page=5` |
 | `limit` | 페이지당 검색할 최대 공개 인증서 수입니다. | `limit=20` |
@@ -105,10 +109,19 @@ curl -X GET https://platform.adobe.io/data/core/mtls/v1/certificate/public-certi
 
 +++
 
+## 인증서 라이프사이클 자동화 {#certificate-lifecycle-automation}
+
+Adobe은 공개 mTLS 인증서의 라이프사이클을 자동화하여 연속성을 보장하고 서비스 중단을 줄입니다.
+
+- 인증서는 만료 60일 전에 재발급됩니다.
+- 인증서는 만료 30일 전에 해지됩니다.
+
+>[!NOTE]
+>
+>이러한 타임라인은 인증서 수명을 최대 47일로 줄이는 것을 목표로 하는 [CA/B 포럼 지침](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days)에 맞춰 시간이 지남에 따라 단축됩니다.
+
+API를 통해 자동 검색을 지원하려면 통합을 업데이트해야 합니다. 수동 인증서 다운로드나 정적 복사본을 사용하면 인증서가 만료되거나 해지될 수 있으므로 사용하지 마십시오.
+
 ## 다음 단계
 
-이제 이 안내서를 읽고 Adobe Experience Platform API를 사용하여 공개 인증서를 검색하는 방법을 이해합니다. 규정 및 조직 정책을 준수하도록 고객 데이터를 관리하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](../home.md)를 참조하세요.
-
-<!-- To test this API call, navigate to the [MTLS API reference page]() to interact with the Experience Platform API endpoints. -->
-
-<!-- Add link after developer page is live -->
+API를 사용하여 공개 인증서를 검색한 후 인증서가 만료되기 전에 통합을 업데이트하여 이 끝점을 정기적으로 호출합니다. 이 호출을 대화식으로 테스트하려면 [MTLS API 참조 페이지](https://developer.adobe.com/experience-platform-apis/references/mtls-service/)를 방문하세요. 인증서 기반 통합에 대한 자세한 지침은 [Adobe Experience Platform의 데이터 암호화 개요](../../landing/governance-privacy-security/encryption.md) 또는 [데이터 거버넌스 개요](../home.md)를 참조하십시오.

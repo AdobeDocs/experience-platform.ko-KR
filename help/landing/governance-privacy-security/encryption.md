@@ -2,9 +2,9 @@
 title: Adobe Experience Platform의 데이터 암호화
 description: Adobe Experience Platform에서 전송 중 및 유휴 상태의 데이터를 암호화하는 방법에 대해 알아봅니다.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f6eaba4c0622318ba713c562ba0a4c20bba02338
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -48,14 +48,22 @@ Experience Platform과 외부 구성 요소 간에 전송되는 모든 데이터
 
 >[!NOTE]
 >
->공개 인증서를 최신 상태로 유지하는 것은 사용자의 책임입니다. 특히 만료일이 다가올 때 인증서를 정기적으로 검토하십시오. 환경에서 최신 복사본을 유지 관리하려면 이 페이지를 책갈피로 지정해야 합니다.
+>시스템에서 유효한 공개 인증서를 사용하도록 할 책임이 있습니다. 특히 만료일이 다가오면 정기적으로 인증서를 검토하십시오. API를 사용하여 인증서가 만료되기 전에 인증서를 검색하고 업데이트합니다.
 
-CN 또는 SAN을 확인하여 추가 타사 유효성 검사를 수행하려면 여기에서 관련 인증서를 다운로드할 수 있습니다.
+공개 mTLS 인증서에 대한 직접 다운로드 링크는 더 이상 제공되지 않습니다. 대신 [공개 인증서 끝점](../../data-governance/mtls-api/public-certificate-endpoint.md)을 사용하여 인증서를 검색합니다. 현재 공개 인증서에 액세스하는 데 지원되는 유일한 방법입니다. 이를 통해 통합에 대해 항상 유효한 최신 인증서를 받을 수 있습니다.
 
-- [Adobe Journey Optimizer 공개 인증서](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
-- [대상 서비스 공개 인증서](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
+인증서 기반 암호화에 의존하는 통합은 API를 사용한 자동화된 인증서 검색을 지원하도록 워크플로우를 업데이트해야 합니다. 정적 링크 또는 수동 업데이트에 의존하면 만료되거나 해지된 인증서가 사용되어 통합이 실패할 수 있습니다.
 
-MTLS 끝점에 GET 요청을 하여 공개 인증서를 안전하게 검색할 수도 있습니다. 자세한 내용은 [공개 인증서 끝점 설명서](../../data-governance/mtls-api/public-certificate-endpoint.md)를 참조하세요.
+#### 인증서 라이프사이클 자동화 {#certificate-lifecycle-automation}
+
+이제 Adobe은 mTLS 통합을 위한 인증서 라이프사이클을 자동화하여 신뢰성을 향상시키고 서비스 중단을 방지합니다. 공개 인증서는 다음과 같습니다.
+
+- 만료 60일 전에 다시 발급되었습니다.
+- 만료 30일 전에 해지되었습니다.
+
+이러한 간격은 인증서 수명을 최대 47일로 줄이는 것을 목표로 하는 [진화하는 CA/B 포럼 지침](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days)에 따라 계속 짧아집니다.
+
+이전에 이 페이지에서 링크를 사용하여 인증서를 다운로드한 경우 API를 통해 독점적으로 검색하도록 프로세스를 업데이트합니다.
 
 ## 유휴 상태 데이터 {#at-rest}
 
