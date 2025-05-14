@@ -40,7 +40,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;
 
 클래스 목록은 클래스 생성 방법에 따라 자동으로 필터링됩니다. 기본 설정은 Adobe에서 정의한 클래스를 표시합니다. 목록을 필터링하여 조직에서 만든 목록을 표시할 수도 있습니다. 라디오 단추를 선택하여 [!UICONTROL 표준]과(와) [!UICONTROL 사용자 지정] 옵션 중에서 선택하십시오. [!UICONTROL 표준] 옵션은 Adobe에서 만든 엔터티를 표시하고 [!UICONTROL 사용자 지정] 옵션은 조직 내에서 만든 엔터티를 표시합니다.
 
-[!UICONTROL Standard] 및 [!UICONTROL Custom]이 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭입니다.](../../images/ui/resources/classes/standard-and-custom-classes.png)![
+[!UICONTROL Standard] 및 [!UICONTROL Custom]이 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭입니다.![&#128279;](../../images/ui/resources/classes/standard-and-custom-classes.png)
 
 >[!TIP]
 >
@@ -54,7 +54,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;
 
 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭에서 **[!UICONTROL 클래스 만들기]**&#x200B;를 선택합니다.
 
-[!UICONTROL 클래스 만들기]가 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭](../../images/ui/resources/classes/create-class.png)![
+[!UICONTROL 클래스 만들기]가 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭![&#128279;](../../images/ui/resources/classes/create-class.png)
 
 [!UICONTROL 클래스 만들기] 대화 상자가 나타납니다. 클래스의 [!UICONTROL 표시 이름] 및 [!UICONTROL 설명]을 입력하고 라디오 단추로 클래스의 동작을 선택하십시오. 클래스는 [!UICONTROL 레코드] 또는 [!UICONTROL 시계열] 형식일 수 있습니다. **[!UICONTROL 만들기]**&#x200B;를 선택하여 선택 항목을 확인하고 [!UICONTROL 클래스] 탭으로 돌아갑니다.
 
@@ -62,13 +62,13 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;
 
 만든 클래스를 사용할 수 있으며 [!UICONTROL 클래스] 보기에 나열됩니다.
 
-최근에 만든 클래스가 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭입니다.](../../images/ui/resources/classes/new-class-listing.png)![
+최근에 만든 클래스가 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭입니다.![&#128279;](../../images/ui/resources/classes/new-class-listing.png)
 
 ### 스키마 만들기
 
 또는 수동으로 스키마를 생성하여 클래스를 만들 수 있습니다. [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭에서 **[!UICONTROL 스키마 만들기]**&#x200B;를 선택합니다.
 
-[!UICONTROL 스키마 만들기]가 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭](../../images/ui/resources/classes/create-schema.png)![
+[!UICONTROL 스키마 만들기]가 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭![&#128279;](../../images/ui/resources/classes/create-schema.png)
 
 표시되는 [!UICONTROL 스키마 만들기] 대화 상자에서 **[!UICONTROL 수동]**&#x200B;을 선택합니다.
 
@@ -94,7 +94,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;
 
 텍스트 필드에 사용자에게 친숙한 [!UICONTROL 스키마 표시 이름]을(를) 입력하십시오. 그런 다음 스키마를 식별하는 데 도움이 되는 적절한 설명을 입력합니다. 스키마 구조를 검토하고 설정이 마음에 들면 **[!UICONTROL 완료]**&#x200B;를 선택하여 스키마를 만듭니다.
 
-[!UICONTROL 스키마 표시 이름], [!UICONTROL 설명] 및 [!UICONTROL 마침]이 강조 표시된 [!UICONTROL 스키마 만들기] 워크플로의 [!UICONTROL 이름 및 검토] 섹션.](../../images/ui/resources/classes/schema-details.png)![
+[!UICONTROL 스키마 표시 이름], [!UICONTROL 설명] 및 [!UICONTROL 마침]이 강조 표시된 [!UICONTROL 스키마 만들기] 워크플로의 [!UICONTROL 이름 및 검토] 섹션.![&#128279;](../../images/ui/resources/classes/schema-details.png)
 
 ## 클래스에 필드 추가 {#add-fields}
 
