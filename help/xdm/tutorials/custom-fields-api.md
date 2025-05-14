@@ -2,7 +2,7 @@
 title: 스키마 레지스트리 API에서 XDM 필드 정의
 description: 스키마 레지스트리 API에서 사용자 지정 XDM(경험 데이터 모델) 리소스를 만들 때 다양한 필드를 정의하는 방법을 알아봅니다.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
+source-git-commit: 6c6104a6aa0a80c886f4f02486a7645eb95da781
 workflow-type: tm+mt
 source-wordcount: '1197'
 ht-degree: 0%
@@ -188,7 +188,7 @@ ht-degree: 0%
 
 ## [!UICONTROL 짧음] {#short}
 
-스키마 빌더 UI를 통해 만든 [!UICONTROL Short] 필드에 해당하는 값은 특정 `minimum` 및 `maximum` 값(`-32768` 및 `32768`)을 가진 [`integer` 형식 필드](#integer)입니다.
+스키마 빌더 UI를 통해 만든 [!UICONTROL Short] 필드에 해당하는 값은 특정 `minimum` 및 `maximum` 값(`-32768` 및 `32767`)을 가진 [`integer` 형식 필드](#integer)입니다.
 
 ```json
 "sampleField": {
@@ -196,13 +196,13 @@ ht-degree: 0%
   "description": "An example short field.",
   "type": "integer",
   "minimum": -32768,
-  "maximum": 32768
+  "maximum": 32767
 }
 ```
 
 ## [!UICONTROL 바이트] {#byte}
 
-스키마 빌더 UI를 통해 만든 [!UICONTROL 바이트] 필드에 해당하는 값은 특정 `minimum` 및 `maximum` 값(`-128` 및 `128`)을 가진 [`integer` 형식 필드](#integer)입니다.
+스키마 빌더 UI를 통해 만든 [!UICONTROL 바이트] 필드에 해당하는 값은 특정 `minimum` 및 `maximum` 값(`-128` 및 `127`)을 가진 [`integer` 형식 필드](#integer)입니다.
 
 ```json
 "sampleField": {
@@ -210,7 +210,7 @@ ht-degree: 0%
   "description": "An example byte field.",
   "type": "integer",
   "minimum": -128,
-  "maximum": 128
+  "maximum": 127
 }
 ```
 
