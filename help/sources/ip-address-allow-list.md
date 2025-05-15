@@ -2,9 +2,9 @@
 description: Adobe Experience Platform 소스를 성공적으로 사용하기 위해 허용 목록에 추가하다에 추가해야 하는 IP 주소에 대해 알아봅니다.
 title: 허용 목록에 추가하다 소스에 대한 IP 주소
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: e2403b235b4cfee37761ebd683a1fb8662061406
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -290,6 +290,10 @@ ht-degree: 0%
 
 ## [!DNL Amazon Web Services]의 Experience Platform에 대한 소스 연결을 위한 IP 주소 허용 목록(AWS) {#aws}
 
-AWS의 Experience에 소스를 연결하려면 다음 허용 목록에 추가하다에 IP 주소를 추가해야 합니다.
+소스를 AWS의 경험에 연결하려면 다음 IP 주소를 허용 목록에 추가하다에 추가해야 합니다.
 
-- `66.117.18.0/24`
+### VA6
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
