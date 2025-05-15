@@ -16,7 +16,7 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="계산된 필드 추가"
 >abstract="<p>**계산된 필드 추가** 컨트롤을 사용하여 클라우드 스토리지 대상으로 내보낸 데이터에 다양한 데이터 변환을 수행합니다. 예를 들어 데이터에 해싱을 적용하고 배열을 문자열로 연결하는 등의 작업이 가능합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html?lang=ko#examples" text="예시"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="예시"
 
 >[!AVAILABILITY]
 >
@@ -72,7 +72,7 @@ ht-degree: 8%
 
 워크플로우의 매핑 단계로 돌아가서 내보낸 파일의 이 필드에 사용할 열 머리글 값으로 **[!UICONTROL 대상 필드]**&#x200B;을(를) 채웁니다.
 
-대상 필드가 강조 표시된 매핑 단계 ![1&rbrace;](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+대상 필드가 강조 표시된 매핑 단계 ![1}](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![대상 필드 선택](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
@@ -229,7 +229,7 @@ johndoe@acme.org,"5"
 
 >[!IMPORTANT]
 >
->이 페이지에 설명된 다른 함수와 달리 배열의 개별 요소를 내보내려면 *UI에서&#x200B;**[!UICONTROL 계산된 필드]**&#x200B;컨트롤을 사용할 필요가 없습니다*.
+>이 페이지에 설명된 다른 함수와 달리 배열의 개별 요소를 내보내려면 *UI에서&#x200B;**[!UICONTROL 계산된 필드]**컨트롤을 사용할 필요가 없습니다*.
 
 배열의 인덱스에 액세스하여 배열에서 단일 항목을 내보낼 수 있습니다. 예를 들어, `size_of` 함수에 대한 위의 예제와 유사하게 고객이 특정 제품을 처음 구매한 경우에만 액세스하고 내보내려고 하는 경우 `purchaseTime[0]`을(를) 사용하여 타임스탬프의 첫 번째 요소를 내보내고, `purchaseTime[1]`을(를) 사용하여 타임스탬프의 두 번째 요소를 내보내고, `purchaseTime[2]`을(를) 사용하여 타임스탬프의 세 번째 요소를 내보낼 수 있습니다.
 
