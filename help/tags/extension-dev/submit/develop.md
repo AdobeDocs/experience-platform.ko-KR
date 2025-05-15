@@ -2,10 +2,10 @@
 title: 확장 개발
 description: 이 문서에서는 태그 확장 개발 프로세스에 대한 일반적인 개요를 제공하고, 보다 자세한 프로세스를 안내하는 추가 설명서에 대한 링크를 제공합니다.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: cfcc70d66a34fa51bf0e21525539ba88de7fc367
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 21%
+source-wordcount: '462'
+ht-degree: 31%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 태그 확장은 자체 요구 사항이 있는 (소규모) 제품으로 간주해야 합니다. Adobe Experience Platform 사용자가 확장을 사용할 방법을 결정하면 확장에서 제공해야 하는 이벤트 유형, 조건 유형, 작업 유형 및 데이터 요소 유형으로 기능을 정렬할 수 있습니다.
 
@@ -24,7 +24,7 @@ ht-degree: 21%
 적합한 플랜을 통해 확장 개발 프로세스를 이해하는 데 도움이 됩니다.
 
 * 왼쪽 탐색 메뉴의 **확장 개발**&#x200B;에 있는 [시작 안내서](../getting-started.md) 및 기타 문서는 확장을 이해하는 데 유용한 참조 자료입니다. 여기에는 확장의 기능, 확장과 Adobe Experience Platform 간에 사용자 정보가 저장 및 전달되는 방법, 코드가 라이브러리에 번들로 제공되는 방법, 브라우저에서 런타임 시 확장 코드가 해석 및 사용되는 방법에 대한 세부 정보가 포함됩니다.
-* [확장 튜토리얼 비디오](https://youtu.be/rxjtC9o4rl0)를 시작하는 것이 좋습니다.
+<!-- * The [extension tutorial video](https://youtu.be/rxjtC9o4rl0) is a great place to start. -->
 * [확장 소개](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) YouTube 재생 목록은 확장 패키지를 개발하기 위한 프로세스를 안내합니다.
 * [JSON 스키마 아티클 이해](https://spacetelescope.github.io/understanding-json-schema/index.html#).
 * [JSON Lint/유효성 검사기](https://jsonlint.com/).
@@ -53,6 +53,6 @@ GitHub에는 시작 프로젝트로 검토하거나 사용할 수 있는 다음�
 
 ## Slack 작업 영역
 
-이 [요청 양식](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform)을 사용하여 확장 작성자가 서로 지원할 수 있는 Slack 커뮤니티 작업 영역에 대한 액세스를 요청할 수 있습니다.
+확장 작성자가 이 [요청 양식](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform)을 사용하여 서로 지원할 수 있는 Slack 커뮤니티 작업 영역에 대한 액세스를 요청할 수 있습니다.
 
-**참고**: 이 Slack 작업 영역에 Adobe 구성원이 있지만 Adobe이 후원 또는 중재하지 않는 커뮤니티 리소스입니다.
+**참고**: 이 Slack 작업 영역에 Adobe 멤버가 있지만 Adobe이 후원 또는 중재하지 않는 커뮤니티 리소스입니다.
