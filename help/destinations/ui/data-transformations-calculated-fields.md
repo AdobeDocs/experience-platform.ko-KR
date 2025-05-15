@@ -3,9 +3,9 @@ title: 계산된 필드를 사용하여 클라우드 스토리지 대상으로 �
 type: Tutorial
 description: 계산된 필드 기능을 사용하여 클라우드 스토리지 대상으로 내보낸 데이터에 대한 변환을 수행하는 방법을 이해합니다
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
+source-git-commit: bd9efc1bcf6058827cc5c603b9976c9e42c7ec9e
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1625'
 ht-degree: 8%
 
 ---
@@ -16,15 +16,7 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="계산된 필드 추가"
 >abstract="<p>**계산된 필드 추가** 컨트롤을 사용하여 클라우드 스토리지 대상으로 내보낸 데이터에 다양한 데이터 변환을 수행합니다. 예를 들어 데이터에 해싱을 적용하고 배열을 문자열로 연결하는 등의 작업이 가능합니다."
-
-<!--
-
-disable additional URLs for a while
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html?lang=ko#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html?lang=ko#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="예시"
 
 >[!AVAILABILITY]
 >
@@ -54,6 +46,10 @@ disable additional URLs for a while
 >title="계산된 필드 추가 비활성화됨"
 >abstract="이 대상 연결을 설정할 때 **배열, 맵, 오브젝트 내보내기**&#x200B;를 *켜짐*&#x200B;으로 토글했기 때문에 이 제어가 비활성화됩니다. 계산된 필드와 내부에서 사용할 수 있는 함수를 사용하려면 **배열, 맵, 오브젝트 내보내기**&#x200B;를 *꺼짐*&#x200B;으로 토글하여 새 대상 연결을 설정합니다."
 
+>[!IMPORTANT]
+>
+>계산된 필드를 사용하여 작업할 때마다 적용하는 데이터 변환 함수 외에 `array_to_string` 함수를 사용하여 필드를 문자열로 연결해야 합니다.
+
 클라우드 저장소 대상에 대한 활성화 워크플로의 매핑 단계에서 **[!UICONTROL 계산된 필드 추가]**&#x200B;를 선택합니다.
 
 >[!TIP]
@@ -76,7 +72,7 @@ disable additional URLs for a while
 
 워크플로우의 매핑 단계로 돌아가서 내보낸 파일의 이 필드에 사용할 열 머리글 값으로 **[!UICONTROL 대상 필드]**&#x200B;을(를) 채웁니다.
 
-대상 필드가 강조 표시된 매핑 단계 ![1&rbrace;](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+대상 필드가 강조 표시된 매핑 단계 ![1}](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![대상 필드 선택](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
@@ -233,7 +229,7 @@ johndoe@acme.org,"5"
 
 >[!IMPORTANT]
 >
->이 페이지에 설명된 다른 함수와 달리 배열의 개별 요소를 내보내려면 *UI에서&#x200B;**[!UICONTROL 계산된 필드]**&#x200B;컨트롤을 사용할 필요가 없습니다*.
+>이 페이지에 설명된 다른 함수와 달리 배열의 개별 요소를 내보내려면 *UI에서&#x200B;**[!UICONTROL 계산된 필드]**컨트롤을 사용할 필요가 없습니다*.
 
 배열의 인덱스에 액세스하여 배열에서 단일 항목을 내보낼 수 있습니다. 예를 들어, `size_of` 함수에 대한 위의 예제와 유사하게 고객이 특정 제품을 처음 구매한 경우에만 액세스하고 내보내려고 하는 경우 `purchaseTime[0]`을(를) 사용하여 타임스탬프의 첫 번째 요소를 내보내고, `purchaseTime[1]`을(를) 사용하여 타임스탬프의 두 번째 요소를 내보내고, `purchaseTime[2]`을(를) 사용하여 타임스탬프의 세 번째 요소를 내보낼 수 있습니다.
 
