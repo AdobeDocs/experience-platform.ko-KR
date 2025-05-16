@@ -3,9 +3,9 @@ keywords: google 고객 일치;Google 고객 일치;Google 고객 일치
 title: Google Customer Match 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑 및 Gmail과 같이 Google이 소유하고 운영하는 속성에서 고객에게 연락하고 다시 연결할 수 있습니다.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 98d83e8d09b6e469daf515063e2887bfbf9b8be6
+source-git-commit: ce205622260f4252d1a7db7c5011366fb2ed4d3c
 workflow-type: tm+mt
-source-wordcount: '2360'
+source-wordcount: '2410'
 ht-degree: 2%
 
 ---
@@ -137,6 +137,12 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 이메일 주소를 해시하도록 선택하는 경우 위의 링크에 설명된 Google 요구 사항을 준수해야 합니다.
 
+### 필드 해싱 요구 사항 해결 {#address-field-hashing}
+
+주소 관련 필드를 [!DNL Google Customer Match]에 매핑할 때 Experience Platform은 `address_info_first_name` 및 `address_info_last_name` 값을 Google에 보내기 전에 **자동으로 해싱**&#x200B;합니다. 이 자동 해싱은 Google의 보안 및 개인 정보 보호 요구 사항을 준수하는 데 필요합니다.
+
+**not**&#x200B;에서 `address_info_first_name` 또는 `address_info_last_name`에 대해 사전 해시된 값을 제공하지 마십시오. 이미 해시된 값을 제공하면 일치 프로세스가 실패합니다.
+
 ### 사용자 정의 네임스페이스 사용 {#custom-namespaces}
 
 `User_ID` 네임스페이스를 사용하여 Google으로 데이터를 보내려면 먼저 [!DNL gTag]을(를) 사용하여 자체 식별자를 동기화해야 합니다. 자세한 내용은 [Google 공식 설명서](https://support.google.com/google-ads/answer/9199250)를 참조하세요.
@@ -150,13 +156,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## 비디오 개요 {#video-overview}
 
 아래 비디오를 통해 혜택과 Google Customer Match에 대한 데이터 활성화 방법에 대해 알아보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/326488?captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## 대상에 연결 {#connect}
 
