@@ -3,9 +3,9 @@ title: Real-Time CDP에서 배열, 맵 및 개체 내보내기
 type: Tutorial
 description: Real-Time CDP에서 클라우드 스토리지 대상으로 배열, 맵 및 개체를 내보내는 방법에 대해 알아봅니다.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1077'
 ht-degree: 13%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 13%
 >
 >배열 및 기타 복잡한 개체를 클라우드 저장소 대상으로 내보내는 기능은 일반적으로 [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md) 대상에 사용할 수 있습니다.
 >
->또한 맵 유형 필드를 [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 대상으로 내보낼 수 있습니다.
+>또한 맵 유형 필드를 [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) 대상으로 내보낼 수 있습니다.
 
 
 Real-Time CDP에서 [클라우드 저장소 대상](/help/destinations/catalog/cloud-storage/overview.md)(으)로 배열, 맵 및 개체를 내보내는 방법에 대해 알아봅니다. 또한 맵 유형 필드를 [엔터프라이즈 대상](/help/destinations/destination-types.md#advanced-enterprise-destinations) 및 제한된 [에지 개인화 대상](/help/destinations/destination-types.md#edge-personalization-destinations)(으)로 내보낼 수 있습니다. 내보내기 워크플로우, 이 기능에서 활성화된 사용 사례 및 알려진 제한 사항을 이해하려면 이 문서 를 참조하십시오. 대상 유형별로 사용할 수 있는 기능을 이해하려면 아래 표를 참조하십시오.
@@ -28,7 +28,7 @@ Real-Time CDP에서 [클라우드 저장소 대상](/help/destinations/catalog/c
 | 기존 사용자 지정 파트너가 빌드한 클라우드 스토리지 대상(Destination SDK을 통해 빌드한 사용자 지정 파일 기반 대상) | 아니요 |
 | 엔터프라이즈 대상(Amazon Kinesis, Azure Event Hubs, HTTP API) | 부분적으로요 활성화 워크플로의 매핑 단계에서 맵 유형 개체를 선택하고 내보낼 수 있습니다. |
 | 스트리밍 대상(예: Facebook, Braze, Google Customer Match 등) | 아니요 |
-| Edge 개인화 대상(Adobe Target) | 부분적으로요 활성화 워크플로의 매핑 단계에서 맵 유형 개체를 선택하고 내보낼 수 있습니다. |
+| Edge 개인화 대상 | 아니요 |
 
 {style="table-layout:auto"}
 
