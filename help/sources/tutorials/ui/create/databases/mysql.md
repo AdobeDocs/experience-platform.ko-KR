@@ -1,20 +1,17 @@
 ---
-keywords: Experience Platform;홈;인기 항목;mysql;MySQL
-solution: Experience Platform
-title: UI에서 MySQL Source 연결 만들기
-type: Tutorial
-description: Adobe Experience Platform UI를 사용하여 MySQL 소스 연결을 만드는 방법을 알아봅니다.
+title: Ui를 사용하여 MySQL을 Experience Platform에 연결
+description: UI를 사용하여 MySQL 데이터베이스를 Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 2%
+source-wordcount: '540'
+ht-degree: 0%
 
 ---
 
 # UI에서 [!DNL MySQL] 소스 연결 만들기
 
-Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 Adobe Experience Platform UI를 사용하여 [!DNL MySQL] 소스 연결을 만드는 단계를 제공합니다.
+Experience Platform 사용자 인터페이스의 소스 작업 영역을 사용하여 [!DNL MySQL] 데이터베이스를 Adobe Experience Platform에 연결하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
 
 ## 시작하기
 
@@ -29,36 +26,62 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ### 필요한 자격 증명 수집
 
-[!DNL Experience Platform]에서 [!DNL MySQL] 계정에 액세스하려면 다음 값을 제공해야 합니다.
+인증에 대한 자세한 내용은 [[!DNL MySQL] 개요](../../../../connectors/databases/mysql.md#prerequisites)를 읽어 보십시오.
 
-| 자격 증명 | 설명 |
-| ---------- | ----------- |
-| `connectionString` | 계정과 연결된 [!DNL MySQL] 연결 문자열입니다. [!DNL MySQL] 연결 문자열 패턴은 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`입니다. [[!DNL MySQL] document](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)를 읽고 연결 문자열과 연결 문자열을 얻는 방법에 대해 자세히 알아볼 수 있습니다. |
+## 소스 카탈로그 탐색
 
-## [!DNL MySQL] 계정 연결
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 *[!UICONTROL 소스]* 작업 영역에 액세스합니다. 카테고리를 선택하거나 검색 창을 사용하여 소스를 찾습니다.
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL MySQL] 계정을 [!DNL Experience Platform]에 연결할 수 있습니다.
+[!DNL MySQL]에 연결하려면 *[!UICONTROL 데이터베이스]* 범주로 이동하여 **[!UICONTROL MySQL]** 원본 카드를 선택한 다음 **[!UICONTROL 설정]**&#x200B;을 선택하십시오.
 
-[Adobe Experience Platform](https://platform.adobe.com)에 로그인한 다음 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 **[!UICONTROL 소스]** 작업 영역에 액세스합니다. **[!UICONTROL 카탈로그]** 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+>[!TIP]
+>
+>지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL 설정]** 옵션이 표시됩니다. 인증된 계정을 만들면 이 옵션이 **[!UICONTROL 데이터 추가]**(으)로 변경됩니다.
 
-**[!UICONTROL 데이터베이스]** 범주에서 **[!UICONTROL MySQL]**&#x200B;을(를) 선택합니다. 이 커넥터를 처음 사용하는 경우 **[!UICONTROL 구성]**&#x200B;을 선택하세요. 그렇지 않으면 **[!UICONTROL 데이터 추가]**&#x200B;를 선택하여 새 [!DNL MySQL] 커넥터를 만드십시오.
+![MySQL 원본 카드가 선택된 원본 카탈로그입니다.](../../../../images/tutorials/create/my-sql/catalog.png)
 
-![](../../../../images/tutorials/create/my-sql/catalog.png)
+## 기존 계정 사용 {#existing}
 
-**[!UICONTROL MySQL에 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
+기존 계정을 사용하려면 **[!UICONTROL 기존 계정]**&#x200B;을(를) 선택한 다음 사용할 [!DNL MySQL] 계정을 선택하십시오.
 
-### 새 계정
+![&quot;기존 계정&quot;이 선택된 원본 워크플로의 기존 계정 인터페이스입니다.](../../../../images/tutorials/create/my-sql/existing.png)
 
-새 자격 증명을 사용하는 경우 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택하십시오. 표시되는 입력 양식에서 이름, 선택적 설명 및 [!DNL MySQL] 자격 증명을 제공합니다. 완료되면 **[!UICONTROL 연결]**&#x200B;을 선택한 다음 새 연결을 설정할 시간을 허용합니다.
+## 새 계정 만들기 {#new}
 
-![](../../../../images/tutorials/create/my-sql/new.png)
+새 계정을 만들려면 **[!UICONTROL 새 계정]**&#x200B;을 선택한 다음 이름을 입력하고 필요에 따라 계정에 대한 설명을 추가하십시오.
 
-### 기존 계정
+![계정 이름과 선택적 설명을 제공하는 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/my-sql/new.png)
 
-기존 계정에 연결하려면 연결할 [!DNL MySQL] 계정을 선택한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 계속하십시오.
+### Azure에서 Experience Platform에 연결 {#azure}
 
-![](../../../../images/tutorials/create/my-sql/existing.png)
+계정 키 또는 기본 인증을 사용하여 [!DNL MySQL] 데이터베이스를 Azure의 Experience Platform에 연결할 수 있습니다.
 
-## 다음 단계
+>[!BEGINTABS]
 
-이 자습서를 따라 MySQL 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 가져올 데이터 흐름을 구성 [!DNL Experience Platform]](../../dataflow/databases.md)할 수 있습니다.
+>[!TAB 계정 키 인증]
+
+계정 키 인증을 사용하려면 **[!UICONTROL 계정 키 인증]**&#x200B;을 선택하고 [연결 문자열](../../../../connectors/databases/mysql.md#azure)을 제공한 다음 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하십시오.
+
+![&quot;계정 키 인증&quot;이 선택된 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/my-sql/account-key.png)
+
+>[!TAB 기본 인증]
+
+기본 인증을 사용하려면 **[!UICONTROL 기본 인증]**&#x200B;을 선택하고 [인증 자격 증명](../../../../connectors/databases/mysql.md#azure)의 값을 제공한 다음 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하십시오.
+
+![기본 인증을 선택한 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/my-sql/basic-auth.png)
+
+>[!ENDTABS]
+
+### Amazon Web Services(AWS)에서 Experience Platform에 연결 {#aws}
+
+>[!AVAILABILITY]
+>
+>이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../../../landing/multi-cloud.md)를 참조하세요.
+
+새 [!DNL MySQL] 계정을 만들고 AWS의 Experience Platform에 연결하려면 VA6 샌드박스에 있는지 확인한 다음 인증에 필요한 [자격 증명을 제공](../../../../connectors/databases/mysql.md#aws)합니다.
+
+![AWS에 연결할 소스 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/my-sql/aws.png)
+
+## [!DNL MySQL] 데이터에 대한 데이터 흐름 만들기
+
+[!DNL MySQL] 데이터베이스를 연결했으므로 이제 [데이터 흐름을 만들고 데이터베이스에서 Experience Platform으로 데이터를 수집](../../dataflow/databases.md)할 수 있습니다.
