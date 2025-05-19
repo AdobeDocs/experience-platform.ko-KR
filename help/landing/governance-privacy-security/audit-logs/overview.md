@@ -175,4 +175,4 @@ Adobe Admin Console의 활동에 대한 감사 로그를 관리하는 방법에 
 
 Experience Platform의 감사 로그에 대한 이해를 강화하려면 다음 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/344652?quality=12&learn=on&captions=kor)

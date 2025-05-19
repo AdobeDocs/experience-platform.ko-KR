@@ -223,4 +223,4 @@ ht-degree: 16%
 
 다음 비디오에서는 [!DNL Experience Platform] UI에서 사용 정책으로 작업하는 방법에 대해 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37138?quality=12&learn=on&captions=kor)
