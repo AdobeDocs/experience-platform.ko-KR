@@ -139,7 +139,7 @@ UI의 감사 이벤트에 사용할 수 있는 필터는 다음과 같습니다.
 >
 >과거 365일까지 90일 간격으로 로그를 요청할 수 있습니다. 단, 단일 내보내기 중에 반환할 수 있는 최대 로그 양은 10,000개입니다.
 
-![다운로드 로그]가 강조 표시된 감사 대시보드입니다.(../../images/audit-logs/download.png)
+![다운로드 로그]가 강조 표시된 감사 대시보드입니다.](../../images/audit-logs/download.png)[!UICONTROL 
 
 표시되는 대화 상자에서 원하는 형식(**[!UICONTROL CSV]** 또는 **[!UICONTROL JSON]**)을 선택한 다음 **[!UICONTROL 다운로드]**&#x200B;를 선택합니다. 브라우저가 생성된 파일을 다운로드하여 시스템에 저장합니다.
 
@@ -167,7 +167,7 @@ UI에서 수행할 수 있는 모든 작업은 API 호출을 사용하여 수행
 
 ## Adobe Admin Console에 대한 감사 로그 관리
 
-Adobe Admin Console의 활동에 대한 감사 로그를 관리하는 방법에 대해 알아보려면 다음 [문서](https://helpx.adobe.com/kr/enterprise/using/audit-logs.html)를 참조하세요.
+Adobe Admin Console의 활동에 대한 감사 로그를 관리하는 방법에 대해 알아보려면 다음 [문서](https://helpx.adobe.com/enterprise/using/audit-logs.html)를 참조하세요.
 
 ## 다음 단계 및 추가 리소스
 
@@ -175,4 +175,4 @@ Adobe Admin Console의 활동에 대한 감사 로그를 관리하는 방법에 
 
 Experience Platform의 감사 로그에 대한 이해를 강화하려면 다음 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/344652?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

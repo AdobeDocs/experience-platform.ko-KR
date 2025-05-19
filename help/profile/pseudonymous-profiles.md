@@ -7,7 +7,7 @@ exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
 source-wordcount: '1264'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platform에서는 익명 프로필에 대한 데이터 만료 �
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
 >title="익명 프로필 데이터 만료"
->abstract="익명 프로필 데이터 만료는 익명 프로필이 제거되기 전 Adobe Experience Platform에 남아 있는 일 수를 나타냅니다. 이 값은 1 이상으로 설정해야 합니다. 익명 프로필이 제거되기까지는 최대 3일이 소요될 수 있습니다."
+>abstract="익명 프로필 데이터 만료는 익명 프로필이 제거되기 전까지 Adobe Experience Platform에 남아 있는 일수를 나타냅니다. 이 값은 최소 1로 설정해야 합니다. 익명 프로필이 삭제되는 데 최대 3일 정도 소요될 수 있습니다."
 
 프로필은 다음 조건을 충족하는 경우 익명 데이터 만료로 간주됩니다.
 

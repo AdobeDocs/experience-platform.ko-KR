@@ -132,8 +132,8 @@ Adobe Experience Platform 데이터 거버넌스를 통해 고객 데이터를 �
 
 다음 비디오는 데이터 거버넌스 프레임워크에 대한 이해를 지원하기 위한 것입니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32135?quality=12&enable10seconds=on&speedcontrol=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
 다음 비디오에서는 데이터 사용 레이블을 스키마 또는 Experience Platform의 데이터 세트 전체에 적용하는 방법에 대한 지침을 제공합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422792/?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)

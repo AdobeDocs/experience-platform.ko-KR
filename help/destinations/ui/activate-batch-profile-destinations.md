@@ -120,12 +120,12 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 >id="platform_destinations_activate_exportoptions"
 >title="파일 내보내기 옵션"
 >abstract="**전체 파일 내보내기**&#x200B;를 선택하여 대상자 조건에 적합한 모든 프로필의 전체 스냅샷을 내보냅니다. **증분 파일 내보내기**&#x200B;를 선택하여 마지막 내보내기 이후 대상자 조건에 적합한 프로필만 내보냅니다. <br>첫 번째 증분 파일 내보내기에는 채우기 역할을 하는 대상자에 적합한 모든 프로필이 포함됩니다. 향후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 대상자 조건에 적합한 프로필만 포함됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko#export-incremental-files" text="증분 파일 내보내기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="증분 파일 내보내기"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="대상자 평가 후 활성화"
->abstract="<p>일별 세분화 작업이 완료되면 활성화가 실행됩니다. 이렇게 하면 최신 프로필을 내보낼 수 있습니다.</p><p>대상 평가 후 프로필을 내보내는 옵션은 주별 및 월별 내보내기 주기에 <i>사용할 수 없음</i>입니다.</p>"
+>abstract="<p>일별 세분화 작업이 완료되면 활성화가 실행됩니다. 이렇게 하면 최신 프로필을 내보낼 수 있습니다.</p><p>주간 및 월간 내보내기 빈도에 대해서는 대상자 평가 후 프로필을 내보낼 수 있는 옵션이 제공되지 <i>않습니다</i>.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -450,7 +450,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 ### 타임스탬프가 동일한 프로필에 대한 중복 제거 동작 {#deduplication-same-timestamp}
 
-프로필을 파일 기반 대상으로 내보낼 때 중복 제거는 여러 프로필이 동일한 중복 제거 키와 동일한 참조 타임스탬프를 공유하는 경우 단 하나의 프로필만 내보내도록 할 수 있습니다. 이 타임스탬프는 프로필의 대상 멤버십 또는 ID 그래프가 마지막으로 업데이트된 순간을 나타냅니다. 프로필을 업데이트하고 내보내는 방법에 대한 자세한 내용은 [프로필 내보내기 동작](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) 문서를 참조하십시오.
+프로필을 파일 기반 대상으로 내보낼 때 중복 제거는 여러 프로필이 동일한 중복 제거 키와 동일한 참조 타임스탬프를 공유하는 경우 단 하나의 프로필만 내보내도록 할 수 있습니다. 이 타임스탬프는 프로필의 대상 멤버십 또는 ID 그래프가 마지막으로 업데이트된 순간을 나타냅니다. 프로필을 업데이트하고 내보내는 방법에 대한 자세한 내용은 [프로필 내보내기 동작](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) 문서를 참조하십시오.
 
 #### 주요 고려 사항
 
@@ -578,7 +578,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 각 외부 대상에 대한 데이터 보강 속성을 선택하려면 아래 단계를 따르십시오.
 
 1. **[!UICONTROL 데이터 보강 특성]** 열에서 ![편집 단추](/help/images/icons/edit.png)(편집) 단추를 선택합니다.
-1. **[!UICONTROL 데이터 보강 특성 추가]**&#x200B;를 선택합니다. 새 빈 스키마 필드가 표시됩니다.
+1. **[!UICONTROL 데이터 보강 특성 추가]**를 선택합니다. 새 빈 스키마 필드가 표시됩니다.
    데이터 보강 특성 모달 화면을 표시하는 ![UI 이미지입니다.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
 1. 빈 필드 오른쪽의 버튼을 선택하여 필드 선택 화면을 엽니다.
 1. 대상자를 위해 내보낼 속성을 선택합니다.

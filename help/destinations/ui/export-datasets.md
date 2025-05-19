@@ -6,7 +6,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
 workflow-type: tm+mt
 source-wordcount: '2732'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -50,16 +50,16 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 만들어진 프로필 및 경험 이벤트 데이터 세트입니다.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=ko#profile-attribute-datasets">시스템 생성 프로필 스냅숏 데이터 집합</a>.</li></td>
+    <td><ul><li>소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 만들어진 프로필 및 경험 이벤트 데이터 세트입니다.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">시스템 생성 프로필 스냅숏 데이터 집합</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ko#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ko#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
 
 이 페이지에 설명된 워크플로에 대한 전체적인 설명, 데이터 세트 내보내기 기능을 사용할 때의 이점 및 몇 가지 제안된 사용 사례를 확인하려면 아래 비디오를 보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448825?captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## 지원되는 대상 {#supported-destinations}
 
@@ -158,7 +158,7 @@ Experience Platform 카탈로그의 일부 파일 기반 대상은 대상 활성
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="이 데이터 흐름 본문의 종료 일자 업데이트"
->abstract="최근 이 대상에 대한 업데이트로 인해 이제 데이터 흐름에 종료 일자가 필요합니다. Adobe은 기본 종료 날짜를 2025년 9월 1일로 설정했습니다. 원하는 종료 날짜로 업데이트하십시오. 그렇지 않으면 기본 날짜에 데이터 내보내기가 중지됩니다."
+>abstract="최근 이 대상에 대한 업데이트로 인해 이제 데이터 흐름에 종료 일자가 필요합니다. Adobe는 기본 종료 일자를 2025년 9월 1일로 설정했습니다. 원하는 종료 일자로 업데이트하지 않으면 기본 일자에 데이터 내보내기가 중단됩니다."
 
 **[!UICONTROL 예약]** 단계를 사용하여 다음을 수행합니다.
 
@@ -280,7 +280,7 @@ JSON 파일로 내보내기는 압축 모드에서 *지원됩니다*. Parquet �
 
 ## 데이터 세트 내보내기 권한 {#licensing-entitlement}
 
-연간 각 Experience Platform 애플리케이션에 대해 내보낼 수 있는 데이터의 양을 파악하려면 제품 설명 문서를 참조하십시오. 예를 들어 Real-Time CDP 제품 설명 [여기](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)를 볼 수 있습니다.
+연간 각 Experience Platform 애플리케이션에 대해 내보낼 수 있는 데이터의 양을 파악하려면 제품 설명 문서를 참조하십시오. 예를 들어 Real-Time CDP 제품 설명 [여기](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)를 볼 수 있습니다.
 
 다른 애플리케이션에 대한 데이터 내보내기 권한은 가산되지 않습니다. 예를 들어 Real-Time CDP Ultimate 및 Adobe Journey Optimizer Ultimate을 구매하는 경우 제품 설명에 따라 프로필 내보내기 권한이 두 권한 중 더 커지게 됩니다. 볼륨 권한은 라이선스가 부여된 총 프로필 수를 계산하고 Real-Time CDP Prime의 경우 500KB 또는 Real-Time CDP Ultimate의 경우 700KB를 곱하여 권한이 부여된 데이터의 양을 결정합니다.
 

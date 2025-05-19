@@ -28,7 +28,7 @@ ht-degree: 10%
 * [실시간 고객 프로필](../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합된 실시간 고객 프로필을 제공합니다.
 * [샌드박스](../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-## 데이터 레이크 수집에 모니터링 대시보드 사용
+## 데이터 레이크 수집을 위한 모니터링 대시보드 사용
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
