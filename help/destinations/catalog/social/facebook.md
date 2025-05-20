@@ -3,9 +3,9 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 한 대상자 타겟팅, 개인화 및 억제에 대한 Facebook 캠페인을 위한 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2137'
 ht-degree: 6%
 
 ---
@@ -142,7 +142,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 아래 비디오에서는 [!DNL Facebook] 대상을 구성하고 대상을 활성화하는 단계도 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -151,20 +151,28 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 Facebook 대상을 찾고 **[!UICONTROL 설정]**&#x200B;을 선택합니다.
-2. **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다.
+2. **[!UICONTROL 대상에 연결]**을 선택합니다.
    ![활성화 워크플로에 표시된 Facebook 인증 단계입니다.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Facebook 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 
 ### 인증 자격 증명 새로 고침 {#refresh-authentication-credentials}
 
-Facebook 토큰은 60일마다 만료됩니다. 토큰이 만료되면 대상으로의 데이터 내보내기가 더 이상 작동하지 않습니다. 이러한 상황을 방지하려면 다음 단계를 수행하여 다시 인증하십시오.
+Facebook 인증 토큰은 60일마다 만료됩니다. 토큰이 만료되면 대상으로의 데이터 내보내기가 더 이상 작동하지 않습니다.
+
+**[!UICONTROL 계정]** 또는 **[!UICONTROL 찾아보기]** 탭의 **[!UICONTROL 계정 만료 날짜]** 열에서 토큰 만료 날짜를 모니터링할 수 있습니다.
+
+![찾아보기 탭의 Facebook 계정 토큰 만료 날짜 열](../../assets/catalog/social/facebook/account-expiration-browse.png)
+
+![계정 탭의 Facebook 계정 토큰 만료 날짜 열](../../assets/catalog/social/facebook/account-expiration-accounts.png)
+
+토큰 만료로 인해 활성화 데이터 흐름이 중단되지 않도록 하려면 다음 단계를 수행하여 다시 인증하십시오.
 
 1. **[!UICONTROL 대상]** > **[!UICONTROL 계정]**(으)로 이동
 2. (선택 사항) 페이지에서 사용할 수 있는 필터를 사용하여 Facebook 계정만 표시합니다.
    ![Facebook 계정만 표시하도록 필터링](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
-3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**&#x200B;을 선택합니다.
+3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**을 선택합니다.
    ![세부 정보 편집 컨트롤 선택](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**&#x200B;을 선택하고 Facebook 자격 증명으로 다시 인증합니다.
+4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**을 선택하고 Facebook 자격 증명으로 다시 인증합니다.
    ![다시 연결 OAuth 옵션이 있는 모달 창](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
