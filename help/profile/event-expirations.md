@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 경험 이벤트 만료
 description: 이 문서에서는 Adobe Experience Platform 데이터 세트 내의 개별 경험 이벤트에 대한 만료 시간 구성에 대한 일반적인 지침을 제공합니다.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 71634a1dd0e0cd3f731272a179b4f1fe221eb046
+source-git-commit: 05479dcfd1a375b3589ce212168f324aa72af4ba
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Platform에서는 [실시간 고객 프로필](./home.md)에 대해 활성화된 데이터 세트에 수집되는 모든 경험 이벤트에 대한 만료 시간을 구성할 수 있습니다. 이렇게 하면 사용 사례에 더 이상 유효하지 않거나 유용하지 않은 데이터를 프로필 저장소에서 자동으로 제거할 수 있습니다.
 
-Experience Platform UI 또는 API를 통해 경험 이벤트 만료를 구성할 수 없습니다. 대신, 필요한 데이터 세트에 대한 경험 이벤트 만료를 활성화하려면 지원팀에 문의해야 합니다.
+데이터 세트에서 경험 이벤트 만료를 관리하는 방법을 알아보려면 [데이터 세트 UI 안내서](../catalog/datasets/user-guide.md#data-retention-policy)를 읽어 보십시오.
 
 >[!IMPORTANT]
 >
