@@ -5,10 +5,10 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
+source-git-commit: 8b33d9231aeebd454fd614a81b356a9e971b757c
 workflow-type: tm+mt
-source-wordcount: '404'
-ht-degree: 27%
+source-wordcount: '409'
+ht-degree: 26%
 
 ---
 
@@ -110,6 +110,7 @@ ht-degree: 27%
    - [쿼리 로그](ui/query-logs.md)
    - [예약된 쿼리 모니터링](ui/monitor-queries.md)
    - [자격 증명 안내서](ui/credentials.md)
+   - [JWT를 OAuth 자격 증명으로 마이그레이션](ui/migrate-jwt-to-oauth.md)
    - [쿼리 결과에서 출력 데이터 세트 생성](ui/create-datasets.md)
 - 쿼리 서비스 API {#api}
    - [시작하기](api/getting-started.md)
