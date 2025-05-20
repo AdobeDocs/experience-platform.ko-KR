@@ -101,7 +101,7 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 }
 ```
 
->[!TAB 개인 식별자가 두 개인 ]인 인증된 이벤트
+>[!TAB 개인 식별자가 두 개인 인 인증된 이벤트]
 
 시스템에서 2명의 개인 식별자를 전송하는 경우 구현이 1명의 개인 네임스페이스 요구 사항에 실패할 수 있습니다. 예를 들어 웹 SDK 구현의 identityMap에 CRMID, customerID 및 ECID 네임스페이스가 포함되어 있으면 모든 단일 이벤트에 CRMID와 customerID가 모두 포함될 수 있습니다.
 
