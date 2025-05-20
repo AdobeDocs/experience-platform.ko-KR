@@ -5,9 +5,9 @@ title: 실시간 고객 프로필에서 개인 정보 보호 요청 처리
 type: Documentation
 description: Adobe Experience Platform Privacy Service은 수많은 개인 정보 보호 규정에 명시된 대로 개인 데이터에 액세스하거나, 판매를 거부하거나, 삭제하기 위한 고객 요청을 처리합니다. 이 문서에서는 실시간 고객 프로필에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 6eaa384feb1b84e6081f03cb4de9687ad26f437d
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1757'
 ht-degree: 1%
 
 ---
@@ -200,10 +200,10 @@ UI에서 작업 요청을 만들 때 데이터 레이크 또는 [!DNL Real-Time 
 
 | 포함된 제품 | 효과 |
 | --- | --- |
-| `ProfileService`만 | Experience Platform이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필이 즉시 삭제됩니다. 그러나 프로필의 ID 그래프는 여전히 남아 있으며 동일한 ID를 가진 새 데이터가 수집되면 프로필을 다시 구성할 수 있습니다. 프로필과 연결된 데이터도 데이터 레이크에 유지됩니다. |
-| `ProfileService` 및 `identity` | Experience Platform이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필 및 관련 ID 그래프가 즉시 삭제됩니다. 프로필과 연결된 데이터는 데이터 레이크에 유지됩니다. |
-| `ProfileService` 및 `aepDataLake` | Experience Platform이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필이 즉시 삭제됩니다. 그러나 프로필의 ID 그래프는 여전히 남아 있으며 동일한 ID를 가진 새 데이터가 수집되면 프로필을 다시 구성할 수 있습니다.<br><br>Data Lake 제품이 요청을 받았으며 현재 처리 중이라는 응답을 보내면 프로필과 연결된 데이터가 일시 삭제되므로 [!DNL Experience Platform] 서비스에서 액세스할 수 없습니다. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
-| `ProfileService`, `identity` 및 `aepDataLake` | Experience Platform이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필 및 관련 ID 그래프가 즉시 삭제됩니다.<br><br>Data Lake 제품이 요청을 받았으며 현재 처리 중이라는 응답을 보내면 프로필과 연결된 데이터가 일시 삭제되므로 [!DNL Experience Platform] 서비스에서 액세스할 수 없습니다. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
+| `ProfileService`만 | Privacy Service이 삭제 요청이 완료되었다는 확인을 전송하는 즉시 프로필이 삭제된 것으로 간주됩니다. 그러나 프로필의 ID 그래프는 여전히 남아 있으며 동일한 ID를 가진 새 데이터가 수집되면 프로필을 다시 구성할 수 있습니다. 프로필과 연결된 개인 식별되지 않는 데이터도 데이터 레이크에 남아 있습니다. |
+| `ProfileService` 및 `identity` | Privacy Service에서 삭제 요청이 완료되었다는 확인을 전송하는 즉시 프로필 및 관련 ID 그래프가 즉시 삭제됩니다. 프로필과 연결된 개인 식별되지 않는 데이터도 데이터 레이크에 남아 있습니다. |
+| `ProfileService` 및 `aepDataLake` | Privacy Service에서 삭제 요청이 완료되었다는 확인을 전송하는 즉시 프로필이 즉시 삭제됩니다. 그러나 프로필의 ID 그래프는 여전히 남아 있으며 동일한 ID를 가진 새 데이터가 수집되면 프로필을 다시 구성할 수 있습니다.<br><br>Data Lake 제품이 요청을 받았으며 현재 처리 중이라는 응답을 보내면 프로필과 연결된 데이터가 일시 삭제되므로 [!DNL Experience Platform] 서비스에서 액세스할 수 없습니다. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
+| `ProfileService`, `identity` 및 `aepDataLake` | Privacy Service에서 삭제 요청이 완료되었다는 확인을 전송하는 즉시 프로필 및 관련 ID 그래프가 즉시 삭제됩니다.<br><br>Data Lake 제품이 요청을 받았으며 현재 처리 중이라는 응답을 보내면 프로필과 연결된 데이터가 일시 삭제되므로 [!DNL Experience Platform] 서비스에서 액세스할 수 없습니다. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
 
 작업 상태 추적에 대한 자세한 내용은 [[!DNL Privacy Service] 설명서](../privacy-service/home.md#monitor)를 참조하세요.
 

@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 기능의 최적 사용을 보장하기 위해 프로필 데이터 및 세분화에 대한 성능 및 시스템 적용 가드레일에 대해 알아봅니다.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cfc221250a9c8f91b16aa1d4572263ecaf4eeccc
 workflow-type: tm+mt
-source-wordcount: '2617'
+source-wordcount: '2622'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 
 >[!IMPORTANT]
 >
->이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)을(를) 확인하십시오.
+>이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을(를) 확인하십시오.
 
 이 문서는 최적의 시스템 성능을 위해 프로필 데이터를 모델링하는 데 도움이 되는 기본 사용 및 속도 제한을 제공합니다. 다음 가드레일을 검토할 때 데이터를 올바르게 모델링했다고 가정합니다. 데이터 모델링 방법에 대한 질문이 있는 경우 고객 서비스 담당자에게 문의하십시오.
 
@@ -98,7 +98,7 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 | 최대 프로필 조각 크기 | 50MB | 시스템 강제 보호 | **단일 프로필 조각의 최대 크기는 50MB입니다.50MB보다 큰 [프로필 조각](#profile-fragments)에 대해** 세분화, 내보내기 및 조회가 실패할 수 있습니다. |
 | 최대 프로필 스토리지 크기 | 50MB | 성능 보호 | **저장된 프로필의 최대 크기는 50MB입니다.** 50MB가 넘는 프로필에 새 [프로필 조각](#profile-fragments)을 추가하는 것은 시스템 성능에 영향을 줍니다. 예를 들어 프로필에는 50MB인 단일 조각이 포함되거나 결합된 총 크기가 50MB인 여러 데이터 세트에 여러 조각을 포함할 수 있습니다. 단일 조각이 50MB보다 크거나 총 조각이 50MB를 초과하는 여러 조각을 사용하여 프로필을 저장하려고 하면 시스템 성능에 영향을 줍니다. |
 | 하루에 수집된 프로필 또는 ExperienceEvent 배치 수 | 90 | 성능 보호 | **하루에 수집할 수 있는 프로필 또는 ExperienceEvent 일괄 처리의 최대 수는 90개입니다.** 이는 매일 수집된 프로필 및 ExperienceEvent 배치의 합계가 90개를 초과할 수 없음을 의미합니다. 추가 배치를 수집하면 시스템 성능에 영향을 줍니다. |
-| 프로필 레코드당 ExperienceEvents 수 | 5000 | 성능 보호 | **프로필 레코드당 최대 ExperienceEvents 수는 5000개입니다.ExperienceEvents가 5000개가 넘는**&#x200B;개의 프로필은 세그멘테이션으로 간주되지 **않습니다**. |
+| 프로필 레코드당 ExperienceEvents 수 | 5000 | 성능 보호 | **프로필 레코드당 최대 ExperienceEvents 수는 5000개입니다.ExperienceEvents가 5000개가 넘는** 프로필은 세그먼테이션과 함께 사용할 때 **최신** 5000 ExperienceEvents만 사용합니다. |
 
 {style="table-layout:auto"}
 
@@ -188,7 +188,7 @@ Dimension 엔티티는 다중 엔티티 세그먼트 정의를 지원 및 간소
 Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보호, 종단 간 지연 정보 및 라이선스 정보에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
-* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ko#end-to-end-latency-diagrams).
-* [Real-Time Customer Data Platform(B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams).
+* [Real-Time Customer Data Platform(B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
