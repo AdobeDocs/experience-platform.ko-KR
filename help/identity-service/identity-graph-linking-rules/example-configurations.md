@@ -1,10 +1,10 @@
 ---
 title: 그래프 구성의 예
-description: ID 그래프 연결 규칙 및 ID 데이터 작업 시 발생할 수 있는 일반적인 그래프 시나리오에 대해 알아봅니다.
+description: ID 그래프 연결 규칙 및 ID 데이터를 사용하여 작업할 때 발생할 수 있는 일반적인 그래프 시나리오에 대해 알아봅니다.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '2849'
+source-wordcount: '2759'
 ht-degree: 6%
 
 ---
@@ -15,14 +15,6 @@ ht-degree: 6%
 >id="platform_identities_algorithmconfiguration"
 >title="알고리즘 구성"
 >abstract="수집한 ID에 맞게 고유한 네임스페이스와 네임스페이스 우선순위를 구성하십시오."
-
->[!AVAILABILITY]
->
->ID 그래프 연결 규칙은 현재 제한된 가용성에 있으며 개발 샌드박스에서 모든 고객이 액세스할 수 있습니다.
->
->* **활성화 요구 사항**: 이 기능은 [!DNL Identity Settings]을(를) 구성하고 저장할 때까지 비활성 상태로 유지됩니다. 이 구성이 없으면 시스템이 동작을 변경하지 않고 계속 정상적으로 작동합니다.
->* **중요 정보**: 이 제한된 가용성 단계에서 Edge 세그먼테이션을 수행하면 예기치 않은 세그먼트 멤버십 결과가 발생할 수 있습니다. 하지만 스트리밍 및 배치 세분화는 예상대로 작동합니다.
->* **다음 단계**: 프로덕션 샌드박스에서 이 기능을 활성화하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
 
 >[!NOTE]
 >

@@ -1,23 +1,15 @@
 ---
-title: ID 그래프 연결 규칙에 대한 구현 안내서
+title: Id 그래프 연결 규칙에 대한 구현 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1958'
+source-wordcount: '1864'
 ht-degree: 6%
 
 ---
 
-# ID 그래프 연결 규칙에 대한 구현 안내서
-
->[!AVAILABILITY]
->
->ID 그래프 연결 규칙은 현재 제한된 가용성에 있으며 개발 샌드박스에서 모든 고객이 액세스할 수 있습니다.
->
->* **활성화 요구 사항**: 이 기능은 [!DNL Identity Settings]을(를) 구성하고 저장할 때까지 비활성 상태로 유지됩니다. 이 구성이 없으면 시스템이 동작을 변경하지 않고 계속 정상적으로 작동합니다.
->* **중요 정보**: 이 제한된 가용성 단계에서 Edge 세그먼테이션을 수행하면 예기치 않은 세그먼트 멤버십 결과가 발생할 수 있습니다. 하지만 스트리밍 및 배치 세분화는 예상대로 작동합니다.
->* **다음 단계**: 프로덕션 샌드박스에서 이 기능을 활성화하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+# [!DNL Identity Graph Linking Rules]에 대한 구현 안내서
 
 >[!IMPORTANT]
 >
@@ -109,7 +101,7 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 }
 ```
 
->[!TAB 개인 식별자가 두 개인 인 인증된 이벤트]
+>[!TAB 개인 식별자가 두 개인 ]인 인증된 이벤트
 
 시스템에서 2명의 개인 식별자를 전송하는 경우 구현이 1명의 개인 네임스페이스 요구 사항에 실패할 수 있습니다. 예를 들어 웹 SDK 구현의 identityMap에 CRMID, customerID 및 ECID 네임스페이스가 포함되어 있으면 모든 단일 이벤트에 CRMID와 customerID가 모두 포함될 수 있습니다.
 

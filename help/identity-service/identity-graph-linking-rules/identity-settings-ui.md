@@ -2,22 +2,18 @@
 title: ID 설정 UI
 description: ID 설정 사용자 인터페이스를 사용하는 방법을 알아봅니다.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 44457b95b354e20808c1218ca3c8e698071f0528
+source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 3%
+source-wordcount: '627'
+ht-degree: 2%
 
 ---
 
 # ID 설정 UI
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->ID 그래프 연결 규칙은 현재 제한된 가용성에 있으며 개발 샌드박스에서 모든 고객이 액세스할 수 있습니다.
->
->* **활성화 요구 사항**: 이 기능은 [!DNL Identity Settings]을(를) 구성하고 저장할 때까지 비활성 상태로 유지됩니다. 이 구성이 없으면 시스템이 동작을 변경하지 않고 계속 정상적으로 작동합니다.
->* **중요 정보**: 이 제한된 가용성 단계에서 Edge 세그먼테이션을 수행하면 예기치 않은 세그먼트 멤버십 결과가 발생할 수 있습니다. 하지만 스트리밍 및 배치 세분화는 예상대로 작동합니다.
->* **다음 단계**: 프로덕션 샌드박스에서 이 기능을 활성화하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+>ID 설정을 활성화한 후 축소된 그래프의 축소 취소(&quot;고정&quot;)를 요구하는 기존 샌드박스가 있는 경우 Adobe 계정 팀에 문의하십시오.
 
 ID 설정은 고유한 네임스페이스를 지정하고 네임스페이스 우선 순위를 구성하는 데 사용할 수 있는 Adobe Experience Platform ID 서비스 UI의 기능입니다.
 

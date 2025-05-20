@@ -1,11 +1,11 @@
 ---
 title: ID 그래프 연결 규칙
-description: ID 서비스의 ID 그래프 연결 규칙에 대해 알아봅니다.
+description: Identity Service의 Identity Graph 연결 규칙에 대해 알아봅니다.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 6%
+source-wordcount: '1547'
+ht-degree: 4%
 
 ---
 
@@ -14,21 +14,13 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
 >title="아이덴티티 그래프 연결 규칙"
->abstract="이러한 원치 않는 병합을 방지하려면 아이덴티티 그래프 연결 규칙을 통해 제공되는 구성을 사용하여 사용자에게 정확한 개인화를 제공할 수 있습니다."
+>abstract="이러한 원치 않는 병합을 방지하기 위해 ID 그래프 연결 규칙을 통해 제공된 구성을 사용하여 사용자를 정확하게 개인화할 수 있습니다."
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->ID 그래프 연결 규칙은 현재 제한된 가용성에 있으며 개발 샌드박스에서 모든 고객이 액세스할 수 있습니다.
->
->* **활성화 요구 사항**: 이 기능은 [!DNL Identity Settings]을(를) 구성하고 저장할 때까지 비활성 상태로 유지됩니다. 이 구성이 없으면 시스템이 동작을 변경하지 않고 계속 정상적으로 작동합니다.
->* **중요 정보**: 이 제한된 가용성 단계에서 Edge 세그먼테이션을 수행하면 예기치 않은 세그먼트 멤버십 결과가 발생할 수 있습니다. 하지만 스트리밍 및 배치 세분화는 예상대로 작동합니다.
->* **다음 단계**: 프로덕션 샌드박스에서 이 기능을 활성화하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+>ID 설정을 활성화한 후 축소된 그래프의 축소 취소(&quot;고정&quot;)를 요구하는 기존 샌드박스가 있는 경우 Adobe 계정 팀에 문의하십시오.
 
 Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용하면 데이터가 완벽하게 수집되고 병합된 모든 프로필이 CRMID와 같은 개인 식별자를 통해 단일 개별 사용자를 나타낸다고 쉽게 가정할 수 있습니다. 그러나 특정 데이터가 서로 다른 여러 프로필을 하나의 프로필로 병합하려고 할 수 있는 시나리오가 있습니다(&quot;그래프 축소&quot;). 이러한 원치 않는 병합을 방지하기 위해 [!DNL Identity Graph Linking Rules]을(를) 통해 제공된 구성을 사용하고 사용자에게 정확한 개인화를 허용할 수 있습니다.
-
-[!DNL Identity Graph Linking Rules] 사용에 대한 추가 정보는 다음 비디오를 시청하십시오.
-
->[!VIDEO](https://video.tv.adobe.com/v/3448279/?learn=on&enablevpops&captions=kor)
 
 ## 시작하기
 
@@ -41,6 +33,70 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
 * [네임스페이스 우선순위](./namespace-priority.md)
 * [그래프 시뮬레이션 UI](./graph-simulation.md)
 * [ID 설정 UI](./identity-settings-ui.md)
+
+## 비디오 라이브러리
+
+다음 비디오를 통해 ID 그래프 연결 규칙의 몇 가지 기본 측면에 대해 알아보십시오.
+
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Overview">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" title="ID 그래프 연결 규칙: 개요" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="ID 그래프 연결 규칙: 개요"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" title="ID 그래프 연결 규칙: 개요">ID 그래프 연결 규칙: 개요</a>
+                    </p>
+                    <p class="is-size-6">ID 그래프 연결 규칙에 대한 개요를 보려면 이 비디오를 시청한 후 이 기능을 사용하여 그래프 축소를 방지하는 방법에 대해 알아보십시오.</p>
+                </div>
+                <div style="display: flex; flex-direction; row;">
+                  <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
+                  </a>
+                  <a href="./overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">읽기</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Identity Settings">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" title="ID 그래프 연결 규칙: ID 설정" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="ID 그래프 연결 규칙: ID 설정"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" title="ID 그래프 연결 규칙: ID 설정">ID 그래프 연결 규칙: ID 설정</a>
+                    </p>
+                    <p class="is-size-6">이 비디오를 통해 Real-Time CDP, Adobe Journey Optimizer 및 Customer Journey Analytics과 같은 Adobe Experience Platform 애플리케이션에 대한 ID 설정을 구성하고 고품질 ID 그래프 및 고객 프로필을 작성하는 방법에 대해 알아보십시오.</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
+                  </a>
+                  <a href="identity-settings-ui.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">읽기</span>
+                  </a>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
 
 ## 그래프 축소 시나리오 {#graph-collapse-scenarios}
 
@@ -59,7 +115,7 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
 | --- | --- |
 | 패밀리 컴퓨터 및 태블릿 | 남편과 아내 모두 각자의 은행 계좌에 로그인합니다. |
 | 공용 키오스크 | 공항 여행객이 수하물을 체크인하고 탑승권을 인쇄하는 데 고객 충성도 ID를 사용하여 로그온합니다. |
-| 콜 센터 | 콜센터 직원은 고객 지원 센터에 문의하는 고객을 대신하여 단일 디바이스에 로그인하여 문제를 해결합니다. |
+| 콜센터 | 콜센터 직원은 고객 지원 센터에 문의하는 고객을 대신하여 단일 디바이스에 로그인하여 문제를 해결합니다. |
 
 ![일부 공통 공유 장치의 다이어그램입니다.](../images/identity-settings/shared-devices.png)
 
@@ -108,7 +164,7 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
 | --- | --- |
 | 고유한 네임스페이스 | 고유 네임스페이스는 ID 그래프의 컨텍스트 내에서 구별되도록 설정된 ID 네임스페이스입니다. UI를 사용하여 네임스페이스를 고유하도록 구성할 수 있습니다. 네임스페이스가 고유 ID로 정의되면 그래프에는 해당 네임스페이스를 포함하는 ID가 하나만 있을 수 있습니다. |
 | 네임스페이스 우선순위 | 네임스페이스 우선 순위는 네임스페이스 간의 상대적 중요도를 나타냅니다. 네임스페이스 우선 순위는 UI를 통해 구성할 수 있습니다. 주어진 ID 그래프에서 네임스페이스의 등급을 지정할 수 있습니다. 활성화되면 ID 최적화 알고리즘에 대한 입력 및 경험 이벤트 조각에 대한 기본 ID 결정과 같은 다양한 시나리오에서 이름 우선 순위가 사용됩니다. |
-| ID 최적화 알고리즘 | ID 최적화 알고리즘을 사용하면 고유한 네임스페이스 및 네임스페이스 우선 순위를 구성하여 만든 지침이 주어진 ID 그래프에 적용됩니다. |
+| ID 최적화 알고리즘 | ID 최적화 알고리즘을 사용하면 고유한 네임스페이스 및 네임스페이스 우선 순위를 구성하여 만든 지침이 주어진 ID 그래프에 적용되도록 할 수 있습니다. |
 
 ### 고유한 네임스페이스 {#unique-namespace}
 
@@ -129,7 +185,7 @@ CRMID가 고유한 네임스페이스로 구성된 경우 ID 최적화 알고리
 
 고유한 네임스페이스를 구성하지 않으면 CRMID 네임스페이스가 동일하지만 ID 값이 다른 두 ID와 같이 원치 않는 그래프 병합이 발생할 수 있습니다(이러한 시나리오는 동일한 그래프에서 두 개의 서로 다른 개인 엔티티를 나타내는 경우가 많음).
 
-지정된 ID 그래프에 수집되는 ID 데이터에 제한을 적용하려면 ID 최적화 알고리즘을 알리기 위해 고유한 네임스페이스를 구성해야 합니다.
+지정된 ID 그래프에 수집되는 ID 데이터에 제한을 적용하려면 ID 최적화 알고리즘에 알리도록 고유한 네임스페이스를 구성해야 합니다.
 
 ### 네임스페이스 우선순위 {#namespace-priority}
 
