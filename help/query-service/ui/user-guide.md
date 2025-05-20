@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 편집기 UI 안내서
 description: 쿼리 편집기는 Adobe Experience Platform Query Service에서 제공하는 대화형 도구로서, Experience Platform 사용자 인터페이스에서 고객 경험 데이터에 대한 쿼리를 작성하고, 유효성을 검사하고, 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 이를 통해 개발 목적으로 대화형 쿼리를 실행하고 비대화형 쿼리를 실행하여 Experience Platform의 데이터 세트를 채울 수 있습니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: bf9de8c5358f1ab90dd5d70b0607dcfba7d1e2f5
 workflow-type: tm+mt
-source-wordcount: '2683'
+source-wordcount: '3360'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Query Service의 개념과 기능에 대한 자세한 내용은 [Query Service �
 여러 개의 쿼리를 작성했지만 하나의 쿼리만 실행해야 하는 경우 선택한 쿼리를 강조 표시하고
 [!UICONTROL 선택한 쿼리 실행] 아이콘. 편집기 내에서 쿼리 구문을 선택할 때까지 이 아이콘이 기본적으로 비활성화됩니다.
 
-![선택한 쿼리 실행] 아이콘이 강조 표시된 쿼리 편집기.(../images/ui/query-editor/run-selected-query.png)
+![선택한 쿼리 실행] 아이콘이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/run-selected-query.png)[!UICONTROL 
 
 ### 쿼리 편집기 세션 취소 {#cancel-query}
 
@@ -234,11 +234,69 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >콘솔에는 쿼리 실행으로 인해 발생한 오류만 표시됩니다. 쿼리가 실행되기 전에 발생하는 쿼리 유효성 검사 오류는 표시되지 않습니다.
 
-### 쿼리 결과 {#query-results}
+## 쿼리 결과 {#query-results}
 
 쿼리가 완료되면 결과가 **[!UICONTROL 콘솔]** 탭 옆의 **[!UICONTROL 결과]** 탭에 표시됩니다. 이 보기는 쿼리의 테이블 형식 출력을 보여주며 선택한 [결과 개수](#result-count)에 따라 50~1000개의 결과 행을 표시합니다. 이 보기를 통해 쿼리가 예상 출력을 생성하는지 확인할 수 있습니다. 쿼리를 사용하여 데이터 집합을 생성하려면 반환된 행에 대한 제한을 제거하고 `CREATE TABLE tablename AS SELECT`(으)로 쿼리를 실행하여 출력이 포함된 데이터 집합을 생성합니다. 쿼리 편집기의 쿼리 결과에서 데이터 집합을 생성하는 방법에 대한 지침은 [데이터 집합 생성 자습서](./create-datasets.md)를 참조하십시오.
 
 ![쿼리 편집기 콘솔의 결과 탭에 쿼리 실행 결과가 표시됩니다.](../images/ui/query-editor/query-results.png)
+
+### 쿼리 결과 다운로드 {#download-query-results}
+
+>[!AVAILABILITY]
+>
+>다운로드 기능은 데이터 Distiller 추가 기능이 있는 고객만 사용할 수 있습니다. Data Distiller에 대해 자세히 알아보려면 Adobe 담당자에게 문의하십시오.
+
+성공적인 쿼리를 실행한 후 결과를 CSV, XLSX 또는 JSON 형식으로 다운로드하여 오프라인 분석, 보고 또는 스프레드시트 워크플로우에서 사용합니다. 이 기능을 사용하면 오프라인 분석, 보고 및 Excel 기반 프로세스에 대한 쿼리 결과에 즉시 액세스할 수 있으므로 마케팅 및 분석 팀의 워크플로를 간소화합니다.
+
+쿼리 결과를 다운로드하려면 쿼리 편집기 **[!UICONTROL 결과]** 탭의 오른쪽 상단 모서리에서 **[!UICONTROL 다운로드]**&#x200B;를 선택하십시오. 그런 다음 드롭다운 메뉴에서 **[!UICONTROL CSV]**, **[!UICONTROL XLSX]** 또는 **[!UICONTROL JSON]**&#x200B;을(를) 선택합니다. 파일은 로컬 컴퓨터에 자동으로 다운로드됩니다. 사용 사례에 맞는 포맷을 선택하십시오. 가벼운 내보내기의 경우 CSV를 선택하고, 형식이 지정된 스프레드시트의 경우 XLSX를 선택하고, 구조화된 데이터의 경우 JSON을 선택하십시오.
+
+>[!NOTE]
+>
+>**[!UICONTROL 다운로드]** 단추가 없으면 쿼리 결과를 확인하십시오. 레코드가 반환될 때만 단추가 표시됩니다. 반환된 레코드가 없으면 **[!UICONTROL 결과]** 탭에 &#39;결과 없음&#39; 메시지가 표시되고 다운로드 옵션이 비활성화됩니다.
+
+![다운로드 및 드롭다운 메뉴가 강조 표시된 쿼리 편집기의 결과 탭입니다.](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>Excel에서 CSV 파일을 열 때 다음 경고가 표시될 수 있습니다. <br>&quot;데이터 손실이 발생할 수 있습니다. 이 통합 문서를 쉼표로 구분된(.csv) 형식으로 저장하면 일부 기능이 손실될 수 있습니다. 이러한 기능을 유지하려면 Excel 파일 형식으로 저장하십시오.&quot;<br>또한 파일 형식에따라 날짜 및 시간 형식이 다를 수 있습니다. CSV 파일은 쿼리 결과에 표시된 형식을 유지하는 반면, XLSX 파일은 Excel에서 현지화된 형식을 자동으로 적용할 수 있습니다. 이 경고가 나타나면 안전하게 작업을 계속할 수 있습니다. Excel별 서식을 유지하려면 파일을 대신 XLSX로 저장하십시오.
+
+### 전체 화면으로 결과 보기 {#view-results}
+
+쿼리를 성공적으로 실행한 후 **[!UICONTROL 결과]** 탭에서 **[!UICONTROL 결과 보기]**&#x200B;를 선택하여 전체 화면으로 표시되는 테이블 보기를 엽니다.
+
+전체 화면 미리 보기를 사용하여 가로 스크롤 없이 넓은 테이블을 쉽게 스캔하고 행 수준 세부 정보를 검사할 수 있습니다. 전체 화면 보기는 크기를 조정할 수 있는 그리드에 출력을 표시하므로 큰 데이터 세트를 쉽게 검토하고 열을 스캔할 수 있습니다.
+
+>[!NOTE]
+>
+>미리보기는 읽기 전용이며 쿼리 또는 데이터 세트를 수정하지 않습니다.
+
+![결과 보기가 선택된 전체 화면 미리 보기 대화 상자입니다.](../images/ui/overview/view-results-fullscreen.png)
+
+### 결과 복사 {#copy-results}
+
+쿼리 편집기의 향상된 복사 기능을 사용하여 쿼리 결과를 쉼표로 구분된 값(CSV)으로 복사하고, 즉시 유효성 검사나 보고를 위해 Excel과 같은 스프레드시트 도구에 붙여넣으십시오. 이 기능은 가독성을 높이고 서식을 유지하며 서드파티 도구에 의존하지 않고 워크플로를 간소화합니다.
+
+[!UICONTROL 결과] 탭 또는 전체 화면 결과 미리 보기에서 쿼리 결과를 복사할 수 있습니다. **[!UICONTROL 결과]** 탭에서 복사 아이콘(![복사 아이콘)을 선택합니다.](../../images/icons/copy.png))을 클릭하여 모든 쿼리 결과를 클립보드에 복사합니다. 복사 아이콘을 활성화하려면 먼저 행을 선택합니다. 개별 행을 선택하거나 맨 위의 확인란을 사용하여 모든 행을 한 번에 선택할 수 있습니다.
+
+![복사 아이콘이 강조 표시된 쿼리 편집기의 결과 탭](../images/ui/overview/query-editor-copy-icon.png)
+
+또는 **[!UICONTROL 결과 보기]**&#x200B;를 선택하여 전체 화면 미리 보기를 엽니다. 이 대화 상자에서 개별 행을 선택하거나 왼쪽 상단 모서리의 확인란을 사용하여 모든 행을 선택한 다음 복사 아이콘(![복사 아이콘)을 선택합니다.](../../images/icons/copy.png))을(를) 클릭하여 선택한 데이터를 복사합니다.
+
+![결과 행이 선택되고 복사 아이콘이 강조 표시된 전체 화면 미리 보기 대화 상자.](../images/ui/overview/results-copy.png)
+
+### 기존 결과 테이블(제한된 가용성) {#legacy-results-table}
+
+>[!AVAILABILITY]
+>
+>기존 결과 테이블은 기능 플래그를 통해 사용자를 선택하는 데만 사용할 수 있으며 현재 쿼리 편집기 경험에 표시되지 않을 수 있습니다. 팀이 드래그하여 선택 워크플로우를 사용하는 경우 Adobe 담당자에게 문의하여 액세스 권한을 요청하십시오.
+
+쿼리 편집기의 레거시 버전은 QA 또는 스프레드시트 기반 검토와 같은 유연하고 수동적인 데이터 워크플로에 의존하는 사용자를 위한 것입니다.
+
+기본 브라우저 기반 드래그 선택을 지원하므로 표준 선택 동작을 사용하여 개별 셀이나 블록을 포함하여 출력의 모든 부분을 강조 표시하고 복사할 수 있습니다. 구조화된 행 선택 및 전용 복사 작업을 사용하는 향상된 테이블과 대조됩니다.
+
+복사한 데이터는 탭으로 구분되므로 Excel과 같은 도구에 붙여넣으면 열이 정렬되고 읽을 수 있습니다. 열 머리글은 머리글 행에서 드래그하여 선택할 때도 포함됩니다.
+
+![기존 편집기에서 결과를 표시하고 간단한 드래그하여 선택 결과를 강조 표시합니다.](../images/ui/query-editor/legacy-results-table.png)
 
 ## 예시 {#examples}
 
@@ -254,7 +312,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >비디오에 표시된 UI는 오래되었지만 워크플로우에 사용된 로직은 그대로 유지됩니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32942?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## 다음 단계
 
