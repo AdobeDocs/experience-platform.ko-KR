@@ -2,10 +2,10 @@
 title: SFTP 연결
 description: SFTP 서버에 대한 실시간 아웃바운드 연결을 생성하여 구분된 데이터 파일을 정기적으로 Adobe Experience Platform에서 내보냅니다.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 45f22addbff9ec81d64e9e756e4c27e8af4b477d
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 8%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -69,6 +69,18 @@ SFTP 서버에 대한 실시간 아웃바운드 연결을 생성하여 구분된
 *대상 데이터*&#x200B;를 내보낼 때 Experience Platform은 사용자가 제공한 저장소 위치에 `.csv`, `parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 대상 활성화 자습서에서 [내보내기에 지원되는 파일 형식](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) 섹션을 참조하십시오.
 
 *데이터 세트*&#x200B;를 내보낼 때 Experience Platform은 사용자가 제공한 저장소 위치에 `.parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 데이터 세트 내보내기 자습서에서 [데이터 세트 내보내기에 성공했는지 확인](../../ui/export-datasets.md#verify) 섹션을 참조하십시오.
+
+## SFTP 서버 연결 요구 사항 {#sftp-connection-requirements}
+
+데이터를 성공적으로 내보내려면 충분한 수의 동시 연결을 허용하도록 대상 SFTP 서버를 구성해야 합니다. SFTP 서버가 동시 연결 수를 제한하면 특히 여러 대상 또는 데이터 세트를 동시에 내보낼 때 내보내기 작업이 실패할 수 있습니다.
+
+**권장 사항**
+최적의 성능을 위해 SFTP 서버는 내보내는 각 대상 또는 데이터 세트에 대해 하나 이상의 동시 연결을 허용해야 합니다. 최소한 서버는 동시에 내보내기로 예약된 대상 또는 데이터 세트 총 수의 30% 이상을 지원해야 합니다.
+
+**예**\
+100개의 대상 또는 데이터 세트에 대한 내보내기를 동시에 예약하는 경우 SFTP 서버는 최소 30개의 동시 연결을 허용해야 합니다.
+
+SFTP 서버의 연결 제한을 올바르게 구성하면 내보내기 실패를 방지하고 Adobe Experience Platform의 안정적인 데이터 전달을 보장할 수 있습니다.
 
 ## 대상에 연결 {#connect}
 
