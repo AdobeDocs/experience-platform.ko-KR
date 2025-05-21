@@ -2,14 +2,14 @@
 title: 흐름 서비스 API를 사용하여 PostgreSQL을 Experience Platform에 연결
 description: API를 사용하여  [!DNL PostgreSQL] 데이터베이스를 Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
-source-git-commit: 5348158f6de9fea1a9fe186a14409afb7e7a376e
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '749'
 ht-degree: 2%
 
 ---
 
-# [!DNL Flow Service] API를 사용하여 [!DNL PostgreSQL] 기본 연결 만들기
+# [!DNL Flow Service] API를 사용하여 [!DNL PostgreSQL]을(를) Experience Platform에 연결
 
 [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL PostgreSQL] 데이터베이스를 Adobe Experience Platform에 연결하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
 
@@ -135,12 +135,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "port": "{PORT}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSL_MODE}"
+              "server": "localhost",
+              "port": "3306",
+              "database": "postgresql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "Allow"
           }
       },
       "connectionSpec": {
@@ -217,12 +217,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "port": "{PORT}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSL_MODE}"
+              "server": "localhost",
+              "port": "3306",
+              "database": "postgresql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "false"
           }
       },
       "connectionSpec": {
@@ -239,7 +239,7 @@ curl -X POST \
 | `auth.params.database` | [!DNL PostgreSQL] 데이터베이스의 이름입니다. |
 | `auth.params.username` | [!DNL PostgreSQL] 데이터베이스 인증과 연결된 사용자 이름입니다. |
 | `auth.params.password` | [!DNL PostgreSQL] 데이터베이스 인증과 연결된 암호입니다. |
-| `auth.params.sslMode` | 데이터를 전송하는 동안 데이터를 암호화하는 방법입니다. 사용 가능한 값은 `Disable`, `Allow`, `Prefer`, `Verify Ca` 및 `Verify Full`입니다. |
+| `sslMode` | 서버 지원에 따라 SSL의 적용 여부를 제어하는 부울 값입니다. 이 구성은 기본적으로 `false`입니다. |
 | `connectionSpec.id` | [!DNL PostgreSQL] 연결 사양 ID: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 +++

@@ -2,9 +2,9 @@
 title: Ui를 사용하여 MariaDB를 Experience Platform에 연결
 description: Experience Platform 사용자 인터페이스의 소스 작업 영역을 사용하여 MariaDB 계정을 Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
+source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -54,9 +54,9 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 ![계정 이름과 선택적 설명을 제공하는 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/maria-db/new.png)
 
-### Azure에서 Experience Platform에 연결 {#azure}
+### Experience Platform에 연결
 
-계정 키 또는 기본 인증을 사용하여 [!DNL MariaDB] 계정을 Azure의 Experience Platform에 연결할 수 있습니다.
+계정 키 또는 기본 인증을 사용하여 [!DNL MariaDB] 계정을 Experience Platform에 연결할 수 있습니다.
 
 >[!BEGINTABS]
 
@@ -73,17 +73,5 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 ![기본 인증을 선택한 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
 >[!ENDTABS]
-
-### Amazon Web Services(AWS)에서 Experience Platform에 연결 {#aws}
-
->[!AVAILABILITY]
->
->이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../../../landing/multi-cloud.md)를 참조하세요.
-
-새 [!DNL MariaDB] 계정을 만들고 AWS의 Experience Platform에 연결하려면 VA6 샌드박스에 있는지 확인한 다음 인증에 필요한 [자격 증명을 제공](../../../../connectors/databases/mariadb.md#aws)합니다.
-
-![AWS에 연결할 소스 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/maria-db/basic-auth.png)
-
-## 다음 단계
 
 이 자습서에 따라 [!DNL MariaDB] 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 Experience Platform으로 가져오도록 데이터 흐름을 구성](../../dataflow/databases.md)할 수 있습니다.

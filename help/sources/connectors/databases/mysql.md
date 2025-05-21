@@ -1,11 +1,11 @@
 ---
 title: MySQL Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 MySQL을 Adobe Experience Platform에 연결하는 방법에 대해 알아봅니다.
-last-substantial-update: 2025-05-17T00:00:00Z
+last-substantial-update: 2025-05-20T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: f758479c37b72752bbb8a371de88bf653b2e6030
+source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '625'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ AWS에서 Experience Platform에 [!DNL MySQL]을(를) 연결하려면 다음 자
 | `username` | 데이터베이스의 이름입니다. |
 | `password` | 데이터베이스에 해당하는 사용자 이름입니다. |
 | `database` | 데이터베이스에 해당하는 암호입니다. |
-| `sslMode` | 연결에 적용할 [!DNL Secure Sockets Layer]&#x200B;(SSL) 방법입니다. 사용 가능한 값은 다음과 같습니다. <ul><li>`DISABLED`: SSL을 비활성화하려면 이 옵션을 사용합니다. 서버에 SSL 구성이 필요한 경우 연결이 실패합니다</li><li>`PREFERRED`: 서버에서 지원하는 SSL 연결을 선호하려면 이 옵션을 사용합니다. 이 옵션을 사용하면 SSL이 아닌 연결도 허용됩니다.</li><li>`REQUIRED`: SSL 연결을 필수로 설정하려면 이 옵션을 사용합니다. 서버가 SSL을 지원하지 않으면 연결이 실패합니다.</li><li>`Verify-Ca`: 서버에서 SSL을 지원하지 않는 경우 연결 실패 시 서버 인증서를 확인하려면 이 옵션을 사용합니다.</li><li>`Verify Identity`: 서버에서 SSL을 지원하지 않는 경우 연결 실패 시 이 옵션을 사용하여 호스트 이름이 있는 서버 인증서를 확인합니다.</li></ul> |
+| `sslMode` | 서버 지원에 따라 SSL의 적용 여부를 제어하는 부울 값입니다. 이 구성은 기본적으로 `false`입니다. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL MySQL]의 연결 사양 ID는 `26d738e0-8963-47ea-aadf-c60de735468a`입니다. **참고**: 이 자격 증명은 [!DNL Flow Service] API를 통해 연결할 때만 필요합니다. |
 
 ## API를 사용하여 [!DNL MySQL]을(를) Experience Platform에 연결

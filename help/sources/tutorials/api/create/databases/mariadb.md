@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 MariaDB를 Experience Platform에 연결
 description: API를 사용하여 MariaDB 계정을 Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
-source-git-commit: d5d47f9ca3c01424660fe33f8310586a70a32875
+source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '474'
 ht-degree: 2%
 
 ---
@@ -30,11 +30,11 @@ ht-degree: 2%
 
 Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작하기](../../../../../landing/api-guide.md)의 안내서를 참조하십시오.
 
-## Azure에서 [!DNL MariaDB]을(를) Experience Platform에 연결 {#azure}
+## Experience Platform에 [!DNL MariaDB] 연결
 
-[!DNL MariaDB] 계정을 Azure의 Experience Platform에 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하세요.
+[!DNL MariaDB] 계정을 Experience Platform에 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하세요.
 
-### Azure의 Experience Platform에서 [!DNL MariaDB]에 대한 기본 연결 만들기 {#azure-base}
+### [!DNL MariaDB]에 대한 기본 연결 만들기
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 Experience Platform 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
@@ -165,82 +165,6 @@ curl -X POST \
 +++
 
 >[!ENDTABS]
-
-## Amazon Web Services에서 [!DNL MariaDB]을(를) Experience Platform에 연결 {#aws}
-
->[!AVAILABILITY]
->
->이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../../../landing/multi-cloud.md)를 참조하세요.
-
-[!DNL MariaDB] 계정을 AWS의 Experience Platform에 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하십시오.
-
-### AWS의 Experience Platform에서 [!DNL MariaDB]에 대한 기본 연결 만들기 {#aws-base}
-
-**API 형식**
-
-```https
-POST /connections
-```
-
-**요청**
-
-다음 요청은 [!DNL MariaDB]이(가) AWS의 Experience Platform에 연결할 수 있는 기본 연결을 만듭니다.
-
-+++요청 보기 예
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "MariaDB on Experience Platform AWS",
-      "description": "MariaDB on Experience Platform AWS",
-      "auth": {
-          "specName": "Basic Authentication",
-          "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
-          }
-      },
-      "connectionSpec": {
-          "id": "3000eb99-cd47-43f3-827c-43caf170f015",
-          "version": "1.0"
-      }
-  }'
-```
-
-| 속성 | 설명 |
-| --- | --- |
-| `auth.params.server` | [!DNL MariaDB] 데이터베이스의 이름 또는 IP. |
-| `auth.params.database` | 데이터베이스의 이름입니다. |
-| `auth.params.username` | 데이터베이스에 해당하는 사용자 이름입니다. |
-| `auth.params.password` | 데이터베이스에 해당하는 암호입니다. |
-| `auth.params.sslMode` | 데이터를 전송하는 동안 데이터를 암호화하는 방법입니다. |
-| `connectionSpec.id` | [!DNL MariaDB] 연결 사양 ID: `3000eb99-cd47-43f3-827c-43caf170f015`. |
-
-+++
-
-**응답**
-
-성공한 응답은 고유 식별자(`id`)를 포함하여 새로 만든 기본 연결의 세부 정보를 반환합니다.
-
-+++응답 보기 예
-
-```json
-{
-    "id": "f847950c-1c12-4568-a550-d5312b16fdb8",
-    "etag": "\"0c0099f4-0000-0200-0000-67da91710000\""
-}
-```
-
-+++
 
 
 ## 다음 단계

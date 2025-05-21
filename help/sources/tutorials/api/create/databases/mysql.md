@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 MySQL을 Experience Platform에 연결
 description: API를 사용하여 MySQL 데이터베이스를 Experience Platform에 연결하는 방법에 대해 알아봅니다.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
-source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
+source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '607'
 ht-degree: 4%
 
 ---
@@ -124,11 +124,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "DISABLED"
           }
       },
       "connectionSpec": {
@@ -202,11 +203,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "false"
           }
       },
       "connectionSpec": {
@@ -222,7 +224,7 @@ curl -X POST \
 | `auth.params.database` | 데이터베이스의 이름입니다. |
 | `auth.params.username` | 데이터베이스에 해당하는 사용자 이름입니다. |
 | `auth.params.password` | 데이터베이스에 해당하는 암호입니다. |
-| `auth.params.sslMode` | 데이터를 전송하는 동안 데이터를 암호화하는 방법입니다. |
+| `auth.params.sslMode` | 서버 지원에 따라 SSL의 적용 여부를 제어하는 부울 값입니다. 이 구성은 기본적으로 `false`입니다. |
 | `connectionSpec.id` | [!DNL MySQL] 연결 사양 ID: `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 +++

@@ -2,9 +2,9 @@
 title: Ui를 사용하여 PostgreSQL을 Experience Platform에 연결
 description: Experience Platform 사용자 인터페이스의 소스 작업 영역을 사용하여 PostgreSQL 데이터베이스를 Experience Platform에 연결하는 방법에 대해 알아봅니다.
 exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
-source-git-commit: 8cabf1cb86993fdde37d0b9d957f6c8ec23bb237
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -43,19 +43,20 @@ Experience Platform 사용자 인터페이스의 소스 작업 영역을 사용�
 
 Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 *[!UICONTROL 소스]* 작업 영역에 액세스합니다. *[!UICONTROL 범주]* 패널에서 적절한 범주를 선택합니다. 또는 검색 창을 사용하여 사용할 특정 소스로 이동합니다.
 
-[!DNL PostgreSQL]을(를) 사용하려면 *[!UICONTROL 데이터베이스]*&#x200B;에서 **[!UICONTROL PostgreSQL]** 원본 카드를 선택한 다음 **[!UICONTROL 설정]**&#x200B;을 선택하십시오.
+[!DNL PostgreSQL]을(를) 사용하려면 *[!UICONTROL 데이터베이스]*&#x200B;에서 **[!UICONTROL PostgreSQL DB]** 원본 카드를 선택한 다음 **[!UICONTROL 설정]**&#x200B;을 선택하십시오.
 
 >[!TIP]
 >
 >지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL 설정]** 옵션이 표시됩니다. 인증된 계정을 만들면 이 옵션이 **[!UICONTROL 데이터 추가]**(으)로 변경됩니다.
 
+![PostgreSQL 원본 카드가 선택된 원본 카탈로그입니다.](../../../../images/tutorials/create/postgresql/catalog.png)
 
 
 ## 기존 계정 사용 {#existing}
 
 기존 계정을 사용하려면 **[!UICONTROL 기존 계정]**&#x200B;을(를) 선택한 다음 사용할 [!DNL PostgreSQL] 계정을 선택하십시오.
 
-![원본 워크플로의 기존 계정 인터페이스입니다.](../../../../images/tutorials/create/postgresql/catalog.png)
+![원본 워크플로의 기존 계정 인터페이스입니다.](../../../../images/tutorials/create/postgresql/existing.png)
 
 ## 새 계정 만들기 {#create}
 
@@ -63,7 +64,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 새 계정을 만들려면 **[!UICONTROL 새 계정]**&#x200B;을 선택한 다음 이름을 입력하고 필요에 따라 계정에 대한 설명을 추가하십시오.
 
-![계정 이름과 선택적 설명을 제공하는 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/postgresql/existing.png)
+![계정 이름과 선택적 설명을 제공하는 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/postgresql/new.png)
 
 ### Azure에서 Experience Platform에 연결 {#azure}
 
@@ -93,7 +94,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 새 [!DNL PostgreSQL] 계정을 만들고 AWS의 Experience Platform에 연결하려면 VA6 샌드박스에 있는지 확인한 다음 인증에 필요한 [자격 증명을 제공](../../../../connectors/databases/postgres.md#aws)합니다.
 
-![AWS에 연결할 소스 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/postgresql/basic-auth.png)
+![AWS에 연결할 소스 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/postgresql/aws.png)
 
 ## [!DNL PostgreSQL] 데이터에 대한 데이터 흐름 만들기
 
