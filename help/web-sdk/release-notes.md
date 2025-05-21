@@ -155,7 +155,7 @@ ht-degree: 5%
 
 **새로운 기능**
 
-- 데이터 스트림 ID](../datastreams/overrides.md)의 명령당 [재정의에 대한 지원을 추가했습니다.
+- 데이터 스트림 ID[&#128279;](../datastreams/overrides.md)의 명령당 재정의에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
