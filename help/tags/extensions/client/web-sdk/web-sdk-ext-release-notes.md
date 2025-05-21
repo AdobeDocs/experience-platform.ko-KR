@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
 workflow-type: tm+mt
-source-wordcount: '2583'
+source-wordcount: '2652'
 ht-degree: 24%
 
 ---
@@ -12,6 +12,24 @@ ht-degree: 24%
 # Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform Web SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Experience Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md)를 참조하십시오.
+
+## 버전 2.30.0 - 2025년 5월 21일 목요일
+
+**새로운 기능**
+
+- 이제 서드파티 쿠키를 활성화할 때 데이터 요소를 지정할 수 있습니다.
+- 코드 필드에 지우기 단추가 추가되었습니다.
+- Adobe Experience Platform Web SDK의 [버전 2.27.0](../../../../web-sdk/release-notes.md#2-27-0)을 포함합니다.
+
+**수정 사항 및 개선 사항**
+
+- 이벤트 그룹화가 활성화된 경우 `onBeforeLinkClickSend` 설정을 방지하는 유효성 검사가 추가되었습니다.
+
+## 버전 2.29.1 - 2025년 5월 8일 금요일
+
+**수정 사항 및 개선 사항**
+
+- 편집 후 즉시 &quot;저장&quot;을 클릭할 때 설정이 저장되지 않던 문제를 수정했습니다.
 
 ## 버전 2.29.0 - 2025년 3월 5일
 
@@ -161,7 +179,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
 **새로운 기능**
 
-- 데이터 스트림 ID[&#128279;](../../../../datastreams/overrides.md)의 명령당 재정의에 대한 지원을 추가했습니다.
+- 데이터 스트림 ID](../../../../datastreams/overrides.md)의 명령당 [재정의에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
@@ -366,7 +384,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 - `Get Decisions` 관련 변경 사항:
    - `getDecisions` 명령이 제거되었습니다.
    - `scopes` 옵션이 `sendEvent` 명령에 추가되었습니다. 결정은 `sendEvent`에서 확인된 약속에서 반환됩니다.
-   - 페이지/보기 전체 오퍼를 반환하는 내장 `__view__` 범위가 추가되었습니다. (예: Target의 VEC 오퍼)
+   - 페이지/보기 전체 오퍼를 반환하는 기본 제공 `__view__` 범위가 추가되었습니다. (예: Target의 VEC 오퍼)
 `renderDecisions`이(가) false로 설정된 경우에만 `sendEvent` 명령에서 이러한 결과가 반환됩니다.
    - 결정을 사용할 수 있을 때 발생하는 `Decisions Received` 이벤트가 추가되었습니다.
 - 단일 서버 호출에 여러 개인화 알림이 결합되었습니다.

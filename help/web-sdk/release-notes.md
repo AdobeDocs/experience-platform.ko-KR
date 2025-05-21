@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
 workflow-type: tm+mt
-source-wordcount: '2288'
+source-wordcount: '2355'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,15 @@ ht-degree: 5%
 
 이 문서에서는 Adobe Experience Platform Web SDK의 릴리스 정보를 다룹니다.
 웹 SDK 태그 확장에 대한 최신 릴리스 노트는 [웹 SDK 태그 확장 릴리스 노트](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)를 참조하십시오.
+
+## 버전 2.27.0 - 2025년 5월 20일 수요일
+
+**수정 사항 및 개선 사항**
+
+- 사용자 지정 스타일이 올바르게 적용되지 않는 인앱 메시지 문제를 수정했습니다.
+- 이벤트 내역의 형식을 변경했습니다. 이렇게 하면 이전 내역 데이터가 삭제될 때 인앱 메시지 및 콘텐츠 카드가 다시 표시됩니다.
+- SPA 사용 사례에서 제안이 다시 적용되는 문제가 해결되었습니다.
+- 그림자 DOM 요소에서 클릭 추적 문제를 해결했습니다.
 
 ## 버전 2.26.0 - 2025년 3월 5일
 
@@ -146,7 +155,7 @@ ht-degree: 5%
 
 **새로운 기능**
 
-- 데이터 스트림 ID[&#128279;](../datastreams/overrides.md)의 명령당 재정의에 대한 지원을 추가했습니다.
+- 데이터 스트림 ID](../datastreams/overrides.md)의 명령당 [재정의에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
