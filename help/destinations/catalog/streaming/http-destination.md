@@ -4,9 +4,9 @@ title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 서드파티 HTTP 끝점으로 전송하여 자체 분석을 실행하거나 Experience Platform에서 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: d78b7a06318dabff5dac763068ca7c21a5a86633
+source-git-commit: 678f80445212edc1edd3f4799999990ddcc2a039
 workflow-type: tm+mt
-source-wordcount: '2692'
+source-wordcount: '2690'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 HTTP API 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 [!DNL Adobe Experience Platform] 스트리밍 대상입니다.
 
@@ -244,7 +244,7 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 | 대상 내보내기를 결정하는 사항 | 대상 내보내기에 포함된 사항 |
 |---------|----------|
-| <ul><li>매핑된 속성 및 대상은 대상 내보내기에 대한 큐 역할을 합니다. 즉, 매핑된 대상이 상태를 `null`에서 `realized`(으)로 또는 `realized`에서 `exiting`(으)로 변경하거나 매핑된 특성을 업데이트하면 대상 내보내기가 시작됩니다.</li><li>ID는 현재 HTTP API 대상에 매핑될 수 없으므로 주어진 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>`segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 대상이 포함되어 있습니다. 이 경우 자격 또는 대상 종료 이벤트 후 프로필의 상태가 변경되었습니다. 프로필이 자격을 갖춘 매핑되지 않은 다른 대상자가 활성화 데이터 흐름에서 매핑된 대상자와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 대상 내보내기의 일부가 될 수 있습니다. </li><li>`identityMap` 개체의 모든 ID도 포함됩니다. 현재 Experience Platform에서는 HTTP API 대상에서 ID 매핑을 지원하지 않습니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
+| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기에 대한 큐 역할을 합니다. 즉, 프로필의 `segmentMembership` 상태가 `realized` 또는 `exiting`(으)로 변경되거나 매핑된 특성이 업데이트되면 대상 내보내기가 시작됩니다.</li><li>ID는 현재 HTTP API 대상에 매핑될 수 없으므로 주어진 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>`segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 세그먼트가 포함되어 있습니다. 이 경우 자격 또는 세그먼트 종료 이벤트 후 프로필의 상태가 변경되었습니다. 활성화 데이터 흐름에서 매핑된 세그먼트와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 프로필이 자격을 갖춘 매핑되지 않은 다른 세그먼트는 대상 내보내기의 일부가 될 수 있습니다. </li><li>`identityMap` 개체의 모든 ID도 포함됩니다. 현재 Experience Platform에서는 HTTP API 대상에서 ID 매핑을 지원하지 않습니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
 
 {style="table-layout:fixed"}
 

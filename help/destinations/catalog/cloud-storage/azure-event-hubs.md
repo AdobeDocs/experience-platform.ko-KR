@@ -4,9 +4,9 @@ title: Azure 이벤트 허브 연결
 description: ' [!DNL Azure Event Hubs] 저장소에 대한 실시간 아웃바운드 연결을 생성하여 Experience Platform에서 데이터를 스트리밍합니다.'
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 678f80445212edc1edd3f4799999990ddcc2a039
 workflow-type: tm+mt
-source-wordcount: '2088'
+source-wordcount: '2084'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 [!DNL Azure Event Hubs]은(는) 빅 데이터 스트리밍 플랫폼 및 이벤트 수집 서비스입니다. 초당 수백만 개의 이벤트를 수신하고 처리할 수 있습니다. 이벤트 허브로 전송된 데이터는 모든 실시간 분석 공급자나 일괄 처리/저장소 어댑터를 사용하여 변환하거나 저장할 수 있습니다.
 
@@ -147,7 +147,7 @@ Experience Platform은 대상 자격 조건 또는 기타 중요한 이벤트 �
 
 | 대상 내보내기를 결정하는 사항 | 대상 내보내기에 포함된 사항 |
 |---------|----------|
-| <ul><li>매핑된 속성 및 대상은 대상 내보내기에 대한 큐 역할을 합니다. 즉, 매핑된 대상이 상태를 `null`에서 `realized`(으)로 또는 `realized`에서 `exiting`(으)로 변경하거나 매핑된 특성을 업데이트하면 대상 내보내기가 시작됩니다.</li><li>현재 ID를 [!DNL Azure Event Hubs] 대상에 매핑할 수 없으므로 지정된 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>`segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 대상이 포함되어 있습니다. 이 경우 자격 또는 대상 종료 이벤트 후 프로필의 상태가 변경되었습니다. 프로필이 자격을 갖춘 매핑되지 않은 다른 대상자가 활성화 데이터 흐름에서 매핑된 대상자와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 대상 내보내기의 일부가 될 수 있습니다. </li><li>`identityMap` 개체의 모든 ID도 포함됩니다. Experience Platform은 현재 [!DNL Azure Event Hubs] 대상에서 ID 매핑을 지원하지 않습니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
+| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기에 대한 큐 역할을 합니다. 즉, 프로필의 `segmentMembership` 상태가 `realized` 또는 `exiting`(으)로 변경되거나 매핑된 특성이 업데이트되면 대상 내보내기가 시작됩니다.</li><li>현재 ID를 [!DNL Azure Event Hubs] 대상에 매핑할 수 없으므로 지정된 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>`segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 세그먼트가 포함되어 있습니다. 이 경우 자격 또는 세그먼트 종료 이벤트 후 프로필의 상태가 변경되었습니다. 활성화 데이터 흐름에서 매핑된 세그먼트와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 프로필이 자격을 갖춘 매핑되지 않은 다른 세그먼트는 대상 내보내기의 일부가 될 수 있습니다. </li><li>`identityMap` 개체의 모든 ID도 포함됩니다. Experience Platform은 현재 [!DNL Azure Event Hubs] 대상에서 ID 매핑을 지원하지 않습니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
 
 {style="table-layout:fixed"}
 
