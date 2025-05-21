@@ -6,9 +6,9 @@ title: Customer AI의 데이터 요구 사항
 topic-legacy: Getting started
 description: 고객 AI가 활용하는 필수 이벤트, 입력 및 출력에 대해 자세히 알아봅니다.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2551'
+source-wordcount: '2552'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 2. 사용 사례 우선 순위 지정: 비즈니스에 가장 높은 우선 순위는 무엇입니까?
 
-3. Customer AI에서 모델 구축: 이 [빠른 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html?lang=ko)를 시청하고 모델을 구축하는 단계별 프로세스는 [UI 안내서](../customer-ai/user-guide/configure.md)를 참조하십시오.
+3. Customer AI에서 모델 구축: 이 [빠른 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html)를 시청하고 모델을 구축하는 단계별 프로세스는 [UI 안내서](../customer-ai/user-guide/configure.md)를 참조하십시오.
 
 4. 모델 결과를 사용하여 [세그먼트 작성](../customer-ai/user-guide/create-segment.md).
 
@@ -49,8 +49,8 @@ ht-degree: 1%
 
 - [Analytics 소스 커넥터](../../sources/tutorials/ui/create/adobe-applications/analytics.md)를 사용하는 Adobe Analytics 데이터
 - [Audience Manager 소스 커넥터](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)를 사용하는 Adobe Audience Manager 데이터
-- [경험 이벤트 데이터 세트](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=ko)
-- [고객 경험 이벤트 데이터 세트](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=ko#cee-schema)
+- [경험 이벤트 데이터 세트](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
+- [고객 경험 이벤트 데이터 세트](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
 각 데이터 세트가 ECID와 같은 동일한 ID 유형(네임스페이스)을 공유하는 경우 서로 다른 소스에서 여러 데이터 세트를 추가할 수 있습니다. 여러 데이터 세트를 추가하는 방법에 대한 자세한 내용은 [Customer AI 사용 안내서](../customer-ai/user-guide/configure.md)를 참조하십시오.
 
@@ -213,7 +213,7 @@ Experience Platform UI에서 필드 그룹을 보려면 왼쪽 레일에서 **[!
 
 Experience Platform **데이터 세트** 작업 영역에서 출력 데이터 세트를 찾을 수 있습니다. 모든 Customer AI 출력 데이터 세트는 이름 **Customer AI 스코어 - NAME_OF_APP**(으)로 시작합니다. 마찬가지로 모든 Customer AI 출력 스키마는 **Customer AI 스키마 - Name_of_app**(으)로 시작합니다.
 
-![Customer AI의 출력 데이터 세트 이름](./images/user-guide/cai-schema-name-of-app.png)
+![Customer AI의 출력 데이터 세트에 대한 명명 규칙입니다.](./images/user-guide/cai-schema-name-of-app.png)
 
 아래 표는 고객 AI의 출력에 있는 다양한 속성에 대해 설명합니다.
 

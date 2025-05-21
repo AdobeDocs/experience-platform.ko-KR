@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;점수 다운로드;고객 ai;인기 주제;내보내기;내보내기;고객 ai 다운로드;고객 ai 점수
+keywords: Experience Platform;점수 다운로드;고객 ai;인기 주제;내보내기;고객 ai 다운로드;고객 ai 점수
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Customer AI에서 점수 다운로드
 description: 고객 AI를 사용하면 Parquet 파일 형식으로 점수를 다운로드할 수 있습니다.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '987'
 ht-degree: 2%
 
 ---
@@ -31,11 +31,11 @@ ht-degree: 2%
 
 Customer AI 인사이트에 대한 서비스 인스턴스 내에서 오른쪽 상단 탐색에서 *추가 작업* 드롭다운을 클릭한 다음 **[!UICONTROL 점수 액세스]**&#x200B;를 선택합니다.
 
-![추가 작업](../images/insights/more-actions.png)
+![점수 액세스 옵션을 표시하는 추가 작업 드롭다운 메뉴.](../images/insights/more-actions.png)
 
 점수 다운로드 설명서에 대한 링크와 현재 인스턴스의 데이터 세트 ID가 포함된 새 대화 상자가 나타납니다. 데이터 세트 ID를 클립보드에 복사하고 다음 단계로 진행합니다.
 
-![데이터 세트 ID](../images/download-scores/access-scores.png)
+![현재 인스턴스의 데이터 세트 ID를 표시하는 점수 대화 상자에 액세스합니다.](../images/download-scores/access-scores.png)
 
 ## 배치 ID 검색 {#retrieve-your-batch-id}
 
@@ -234,14 +234,13 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
-| `_links.self.href` | 디렉터리에서 파일을 다운로드하는 데 사용되는 GET 요청 URL입니다. |
-
+| `_links.self.href` | 디렉토리에서 파일을 다운로드하는 데 사용되는 GET 요청 URL입니다. |
 
 `data` 배열의 모든 파일 개체에 대한 `href` 값을 복사한 후 다음 단계를 진행하십시오.
 
 ## 파일 데이터 다운로드
 
-파일 데이터를 다운로드하려면 이전 단계 [내 파일 검색](#retrieving-your-files)에서 복사한 `"href"` 값에 GET 요청을 합니다.
+파일 데이터를 다운로드하려면 이전 단계 [파일 검색](#retrieving-your-files)에서 복사한 `"href"` 값에 GET 요청을 합니다.
 
 >[!NOTE]
 >
@@ -271,13 +270,13 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->GET 요청을 수행하기 전에 파일을 저장할 올바른 디렉터리 또는 폴더에 있는지 확인하십시오.
+>GET 요청을 수행하기 전에 파일을 저장할 올바른 디렉터리나 폴더에 있는지 확인하십시오.
 
 **응답**
 
 응답에서 요청한 파일을 현재 디렉토리에 다운로드합니다. 이 예에서 파일 이름은 &quot;filename.parquet&quot;입니다.
 
-![터미널](../images/download-scores/response.png)
+![성공적인 API 호출을 보여 주는 터미널 응답의 예입니다.](../images/download-scores/response.png)
 
 ## Customer AI로 구성된 세그먼트 다운로드 {#segment}
 

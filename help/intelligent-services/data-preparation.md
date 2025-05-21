@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Intelligent Services에서 사용할 데이터 준비
 description: 인텔리전트 서비스가 마케팅 이벤트 데이터에서 통찰력을 발견하려면 데이터를 의미론적으로 보강하고 표준 구조로 유지 관리해야 합니다. Intelligent Services는 이를 위해 XDM(Experience Data Model) 스키마를 사용합니다.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2951'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ CEE 스키마는 모든 XDM ExperienceEvent 스키마와 마찬가지로 시점 
 
 [!DNL Intelligent Services]은(는) 이 스키마 내의 여러 키 필드를 활용하여 마케팅 이벤트 데이터에서 통찰력을 생성합니다. 이러한 통찰력은 모두 루트 수준에서 찾을 수 있으며, 필요한 하위 필드를 표시하도록 확장됩니다.
 
-![](./images/data-preparation/schema-expansion.gif)
+![탐색 및 하위 필드 세부 정보를 표시하는 Adobe Experience Platform UI의 스키마 확장 데모](./images/data-preparation/schema-expansion.gif)
 
 모든 XDM 스키마와 마찬가지로 CEE 스키마 필드 그룹은 확장 가능합니다. 즉, CEE 필드 그룹에 추가 필드를 추가할 수 있고, 필요한 경우 다른 변형을 여러 스키마에 포함할 수 있습니다.
 
@@ -134,19 +134,19 @@ CEE 필드 그룹 내에는 [!DNL Intelligent Services]에서 유용한 통찰�
 
 기본 ID를 설정하려면 **[!UICONTROL 스키마]** 탭에서 스키마로 이동한 후 스키마 이름 하이퍼링크를 선택하여 **[!DNL Schema Editor]**&#x200B;을(를) 엽니다.
 
-![스키마로 이동](./images/data-preparation/navigate_schema.png)
+![Adobe Experience Platform UI에서 스키마로 이동](./images/data-preparation/navigate_schema.png)
 
 다음으로 기본 ID로 사용할 필드로 이동하여 선택합니다. 해당 필드에 대한 **[!UICONTROL 필드 속성]** 메뉴가 열립니다.
 
-![필드 선택](./images/data-preparation/find_field.png)
+![Adobe Experience Platform UI에서 원하는 필드를 선택하는 프로세스입니다.](./images/data-preparation/find_field.png)
 
 **[!UICONTROL 필드 속성]** 메뉴에서 **[!UICONTROL ID]** 확인란이 발견될 때까지 아래로 스크롤합니다. 확인란을 선택하면 선택한 ID를 **[!UICONTROL 기본 ID]**(으)로 설정하는 옵션이 나타납니다. 이 상자도 선택하십시오.
 
-![확인란 선택](./images/data-preparation/set_primary_identity.png)
+![Adobe Experience Platform UI에서 기본 ID를 설정하는 확인란](./images/data-preparation/set_primary_identity.png)
 
 그런 다음 드롭다운의 미리 정의된 네임스페이스 목록에서 **[!UICONTROL ID 네임스페이스]**&#x200B;를 제공해야 합니다. 이 예제에서는 Adobe Audience Manager ID `mcid.id`이(가) 사용되고 있으므로 ECID 네임스페이스가 선택됩니다. **[!UICONTROL 적용]**&#x200B;을 선택하여 업데이트를 확인한 다음 오른쪽 상단에서 **[!UICONTROL 저장]**&#x200B;을 선택하여 스키마에 변경 내용을 저장합니다.
 
-![변경 내용 저장](./images/data-preparation/select_namespace.png)
+![Adobe Experience Platform UI에서 ECID 네임스페이스 선택을 보여 주는 드롭다운 메뉴.](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
@@ -160,7 +160,7 @@ CEE 필드 그룹 내에는 [!DNL Intelligent Services]에서 유용한 통찰�
 
 이 필드는 ExperienceEvent 와 관련된 마케팅 채널을 나타냅니다. 필드에는 채널 유형, 미디어 유형 및 위치 유형에 대한 정보가 포함됩니다.
 
-![](./images/data-preparation/channel.png)
+![type, mediaType 및 mediaAction과 같은 하위 필드를 포함하여 xdm:channel 필드의 구조를 보여 주는 다이어그램입니다.](./images/data-preparation/channel.png)
 
 **예제 스키마**
 
@@ -198,7 +198,7 @@ CEE 필드 그룹 내에는 [!DNL Intelligent Services]에서 유용한 통찰�
 
 이 필드는 제품 SKU, 이름, 가격 및 수량을 포함하여 고객이 선택한 제품을 나타내는 항목 배열입니다.
 
-![](./images/data-preparation/productListItems.png)
+![SKU, 이름, currencyCode, 수량 및 priceTotal과 같은 하위 필드가 포함된 xdm:productListItems 필드.](./images/data-preparation/productListItems.png)
 
 **예제 스키마**
 
@@ -227,7 +227,7 @@ CEE 필드 그룹 내에는 [!DNL Intelligent Services]에서 유용한 통찰�
 
 이 필드에는 구매 주문 번호 및 결제 정보를 포함하여 ExperienceEvent에 대한 상거래 관련 정보가 포함됩니다.
 
-![](./images/data-preparation/commerce.png)
+![주문, 구매, 결제 등의 하위 필드가 포함된 xdm:commerce 필드의 구조입니다.](./images/data-preparation/commerce.png)
 
 **예제 스키마**
 
@@ -265,7 +265,7 @@ CEE 필드 그룹 내에는 [!DNL Intelligent Services]에서 유용한 통찰�
 
 이 필드는 상호 작용, 페이지 세부 사항 및 레퍼러 등 ExperienceEvent와 관련된 웹 세부 사항을 나타냅니다.
 
-![](./images/data-preparation/web.png)
+![webPageDetails 및 webReferrer와 같은 하위 필드를 포함하는 xdm:web 필드](./images/data-preparation/web.png)
 
 **예제 스키마**
 
@@ -295,7 +295,7 @@ CEE 필드 그룹 내에는 [!DNL Intelligent Services]에서 유용한 통찰�
 
 이 필드에는 터치포인트로 활성 상태인 마케팅 활동과 관련된 정보가 포함됩니다.
 
-![](./images/data-preparation/marketing.png)
+![trackingCode, campaignGroup 및 campaignName과 같은 하위 필드를 포함하는 xdm:marketing 필드의 구조입니다.](./images/data-preparation/marketing.png)
 
 **예제 스키마**
 

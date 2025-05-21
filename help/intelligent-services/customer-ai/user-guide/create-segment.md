@@ -5,9 +5,9 @@ feature: Customer AI
 title: 예측된 점수로 고객 세그먼트 생성
 description: 예측 실행이 완료되면 예측된 성향 점수가 프로필에서 자동으로 사용됩니다. 고객 AI 점수로 프로필을 보강하면 고객 세그먼트를 만들어 성향 점수에 따라 대상자를 찾을 수 있습니다. 이 섹션에서는 세그먼트 빌더를 사용하여 세그먼트를 만드는 단계를 설명합니다.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Experience Platform UI에서 왼쪽 탐색에서 **[!UICONTROL 세그먼트]**&#x200B;를 클릭한 다음 **[!UICONTROL 세그먼트 만들기]**&#x200B;를 클릭합니다.
 
-![](../images/user-guide/segments_new.png)
+![새 세그먼트를 만드는 옵션을 보여 주는 Experience Platform UI의 세그먼트 페이지 스크린샷입니다.](../images/user-guide/segments_new.png)
 
 **세그먼트 빌더**&#x200B;가 나타납니다. 왼쪽 **[!UICONTROL 필드]** 열과 **[!UICONTROL 특성]** 탭에서 **[!UICONTROL XDM 개인 프로필]**&#x200B;이라는 폴더를 클릭한 다음 조직의 네임스페이스가 있는 폴더를 클릭합니다. **[!UICONTROL Customer AI]** 폴더에 예측 실행 결과가 포함되어 있으며 점수가 속한 인스턴스의 이름을 따서 명명됩니다. 원하는 인스턴스의 결과에 액세스하려면 인스턴스 폴더를 클릭합니다.
 

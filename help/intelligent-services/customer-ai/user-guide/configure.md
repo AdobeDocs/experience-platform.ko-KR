@@ -5,9 +5,9 @@ feature: Customer AI
 title: Customer AI 인스턴스 구성
 description: AI/ML 서비스는 다양한 사용 사례에 맞게 구성할 수 있는 사용하기 쉬운 Adobe Sensei 서비스로 고객 AI를 제공합니다. 다음 섹션에서는 고객 AI의 인스턴스를 구성하는 단계를 제공합니다.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2829'
+source-wordcount: '3092'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ AI/ML 서비스는 다양한 사용 사례에 맞게 구성할 수 있는 사용
 
 Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 서비스]**&#x200B;를 선택합니다. **[!UICONTROL 서비스]** 브라우저가 나타나고 사용자가 원하는 대로 사용 가능한 모든 서비스를 표시합니다. Customer AI용 컨테이너에서 **[!UICONTROL 열기]**&#x200B;를 선택합니다.
 
-![](../images/user-guide/navigate-to-service.png)
+![Experience Platform UI에서 Customer AI 서비스로 이동합니다.](../images/user-guide/navigate-to-service.png)
 
 **Customer AI** UI가 나타나고 모든 서비스 인스턴스를 표시합니다.
 
 - **[!UICONTROL 인스턴스 만들기]** 컨테이너의 오른쪽 하단에 있는 **[!UICONTROL 채점된 총 프로필]** 지표를 찾을 수 있습니다. 이 지표는 모든 샌드박스 환경 및 삭제된 서비스 인스턴스를 포함하여 현재 연도 동안 Customer AI가 채점한 총 프로필 수를 추적합니다.
 
-![](../images/user-guide/total-profiles.png)
+![Customer AI에서 채점된 총 프로필 지표](../images/user-guide/total-profiles.png)
 
 서비스 인스턴스는 UI의 오른쪽에 있는 컨트롤을 사용하여 편집, 복제 및 삭제할 수 있습니다. 이러한 컨트롤을 표시하려면 기존 **[!UICONTROL 서비스 인스턴스]**&#x200B;에서 인스턴스를 선택하십시오. 컨트롤에는 다음 항목이 포함됩니다.
 
@@ -40,11 +40,11 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 서비스]**&#x200B;
 - **[!UICONTROL 마지막 실행 세부 정보]**: 실행이 실패할 때만 표시됩니다. 오류 코드 등 실행이 실패한 이유에 대한 정보가 여기에 표시됩니다.
 - **[!UICONTROL 점수 정의]**: 이 인스턴스에 대해 구성한 목표에 대한 빠른 개요입니다.
 
-![](../images/user-guide/service-instance-panel.png)
+Customer AI의 ![서비스 인스턴스 패널.](../images/user-guide/service-instance-panel.png)
 
 새 인스턴스를 만들려면 **[!UICONTROL 인스턴스 만들기]**&#x200B;를 선택하십시오.
 
-![](../images/user-guide/dashboard.png)
+![서비스 인스턴스 및 해당 상태의 개요를 보여 주는 Customer AI 대시보드](../images/user-guide/dashboard.png)
 
 ## 설정
 
@@ -52,13 +52,13 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 서비스]**&#x200B;
 
 다음은 인스턴스에 제공해야 하는 값에 대한 중요한 정보입니다.
 
-- **[!UICONTROL 이름]:** 인스턴스 이름은 Customer AI 점수가 표시되는 모든 위치에서 사용됩니다. 따라서 이름은 예측 점수가 무엇을 나타내는지 설명해야 합니다. 예를 들어, &quot;잡지 구독을 취소할 가능성&quot;
+-**[!UICONTROL 이름]:** 인스턴스 이름은 Customer AI 점수가 표시되는 모든 위치에 사용됩니다. 따라서 이름은 예측 점수가 무엇을 나타내는지 설명해야 합니다. 예를 들어, &quot;잡지 구독을 취소할 가능성&quot;
 
-- **[!UICONTROL 설명]:** 예측하려는 내용을 나타내는 설명입니다.
+-**[!UICONTROL 설명]:** 예측하려는 내용을 나타내는 설명입니다.
 
-- **[!UICONTROL 성향 유형]:** 성향 유형은 점수 및 지표 극성의 의도를 결정합니다. **[!UICONTROL 이탈]** 또는 **[!UICONTROL 전환]**&#x200B;을 선택할 수 있습니다. 성향 유형이 인스턴스에 미치는 영향에 대한 자세한 내용은 검색 인사이트 문서의 [점수 요약](./discover-insights.md#scoring-summary) 아래에 있는 메모를 참조하십시오.
+-**[!UICONTROL 성향 유형]:** 성향 유형은 점수 및 지표 극성의 의도를 결정합니다. **[!UICONTROL 이탈]** 또는 **[!UICONTROL 전환]**&#x200B;을 선택할 수 있습니다. 성향 유형이 인스턴스에 미치는 영향에 대한 자세한 내용은 검색 인사이트 문서의 [점수 요약](./discover-insights.md#scoring-summary) 아래에 있는 메모를 참조하십시오.
 
-![설치 화면](../images/user-guide/create-instance.png)
+![Customer AI의 인스턴스 만들기 워크플로를 표시하는 설정 화면](../images/user-guide/create-instance.png)
 
 필요한 값을 입력한 다음 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 계속하십시오.
 
@@ -66,15 +66,15 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 서비스]**&#x200B;
 
 설계별로 보면 고객 AI는 Adobe Analytics, Adobe Audience Manager, 일반적인 경험 이벤트 및 소비자 경험 이벤트 데이터를 사용하여 성향 점수를 계산합니다. 데이터 세트를 선택하면 Customer AI와 호환되는 데이터 세트만 나열됩니다. 데이터 세트를 선택하려면 데이터 세트 이름 옆의 (**+**) 기호를 선택하거나 확인란을 선택하여 여러 데이터 세트를 한 번에 추가합니다. 검색 옵션을 사용하여 관심 있는 데이터 세트를 빠르게 찾을 수 있습니다.
 
-![데이터 세트 선택 및 검색](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
+![검색 창 및 저장 옵션이 강조 표시된 데이터 집합 선택 화면입니다.](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
 사용할 데이터 세트를 선택한 후 **[!UICONTROL 추가]** 버튼을 선택하여 데이터 세트 미리 보기 창에 데이터 세트를 추가합니다.
 
-![데이터 세트 선택](../images/user-guide/select-datasets.png)
+![미리 보기 창에서 선택한 데이터 집합을 표시하는 데이터 집합 선택 화면입니다.](../images/user-guide/select-datasets.png)
 
 데이터 집합 옆에 있는 정보 아이콘 ![정보 아이콘](/help/images/icons/info.png)을 선택하면 데이터 집합 미리 보기 팝오버가 열립니다.
 
-![데이터 세트 선택 및 검색](../images/user-guide/dataset-info.png)
+![검색 창과 데이터 집합 정보를 보여주는 데이터 집합 선택 화면입니다.](../images/user-guide/dataset-info.png)
 
 데이터 세트 미리 보기에는 마지막 업데이트 시간, 소스 스키마 및 처음 10개 열의 미리 보기와 같은 데이터가 포함됩니다.
 
@@ -90,13 +90,13 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 서비스]**&#x200B;
 >
 >데이터 세트 완전성은 고객 AI에 대한 최대 교육 기간(1년)을 사용하여 계산됩니다. 즉, 데이터 세트 완성도 값을 표시할 때 1년 이상 된 데이터는 고려되지 않습니다.
 
-![데이터 집합 완전성](../images/user-guide/dataset-info-2.png)
+![데이터 세트 완성도 - 완성도 비율이 강조 표시된 데이터 세트 미리 보기를 표시합니다.](../images/user-guide/dataset-info-2.png)
 
 ### ID 선택 {#identity}
 
 이제 ID 맵(필드)을 기반으로 여러 데이터 세트를 서로 결합할 수 있습니다. ID 유형(&quot;ID 네임스페이스&quot;라고도 함)과 해당 네임스페이스 내의 ID 값을 선택해야 합니다. 동일한 네임스페이스에 있는 스키마 내에 ID로 두 개 이상의 필드를 할당한 경우 `EMAIL (personalEmail.address)` 또는 `EMAIL (workEmail.address)`과(와) 같이 네임스페이스가 앞에 있는 ID 드롭다운에 할당된 모든 ID 값이 표시됩니다.
 
-[동일한 네임스페이스 선택](../images/user-guide/cai-identity-map.png)
+![여러 데이터 세트에 대해 동일한 네임스페이스를 표시하는 ID 맵 선택 화면입니다.](../images/user-guide/cai-identity-map.png)
 
 >[!IMPORTANT]
 >
@@ -104,12 +104,11 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 서비스]**&#x200B;
 
 ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. ID 선택 팝오버가 나타납니다.
 
-<!-- ![select same namespace](../images/user-guide/identity-type.png) -->
-[동일한 네임스페이스 선택](../images/user-guide/cai-identity-namespace.png)
+![여러 데이터 세트에 대해 동일한 네임스페이스를 표시하는 ID 맵 선택 화면입니다.](../images/user-guide/cai-identity-namespace.png)
 
 네임스페이스 내에서 두 개 이상의 ID를 사용할 수 있는 경우 사용 사례에 맞는 올바른 ID 필드를 선택해야 합니다. 예를 들어 이메일 네임스페이스 내에서 두 개의 이메일 ID인 회사 및 개인 이메일을 사용할 수 있습니다. 사용 사례에 따라 개인 이메일은 작성될 가능성이 높고 개별 예측에 더 유용합니다. 즉, `EMAIL (personalEmail.address)`이(가) ID로 선택됩니다.
 
-![데이터 집합 키가 선택되지 않음](../images/user-guide/select-identity.png)
+![ID 맵 선택 화면에서 데이터 집합 키가 선택되지 않은 예입니다.](../images/user-guide/select-identity.png)
 
 >[!NOTE]
 >
@@ -117,14 +116,11 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 
 ## 목표 정의 {#define-a-goal}
 
-<!-- https://www.adobe.com/go/cai-define-a-goal -->
-
 **[!UICONTROL 목표 정의]** 단계가 나타나고 예측 목표를 시각적으로 정의할 수 있는 대화형 환경을 제공합니다. 목표는 하나 이상의 이벤트로 구성되며, 각 이벤트의 발생은 이벤트가 보유한 조건을 기반으로 합니다. 고객 AI 인스턴스의 목표는 주어진 기간 내에 목표를 달성할 가능성을 결정하는 것입니다.
 
 목표를 만들려면 **[!UICONTROL 필드 이름 입력]**&#x200B;을 선택한 후 드롭다운 목록에서 필드를 선택하십시오. 두 번째 입력인 이벤트 조건에 대한 절을 선택한 다음 선택적으로 이벤트를 완료할 대상 값을 제공합니다. **[!UICONTROL 이벤트 추가]**&#x200B;를 선택하여 추가 이벤트를 구성할 수 있습니다. 마지막으로 예측 시간대를 일 수로 적용하여 목표를 완료한 다음 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
-<!-- ![](../images/user-guide/define-a-goal.png) -->
-![](../images/user-guide/cai-define-a-goal.png)
+![예측 목표를 정의하기 위한 대화형 환경을 표시하는 Customer AI의 목표 단계를 정의합니다.](../images/user-guide/cai-define-a-goal.png)
 
 ### 다음이 발생하고 다음이 발생하지 않습니다.
 
@@ -133,13 +129,13 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 예를 들어 고객이 구매할지 여부를 예측하기 위해 앱을 설정하려면 **[!UICONTROL 발생할 예정]**, **[!UICONTROL 모두]**&#x200B;를 선택한 다음 **commerce.purchases.id**(또는 유사한 필드)와 **[!UICONTROL 존재함]**&#x200B;을 연산자로 입력할 수 있습니다.
 
 <!-- ![will occur](../images/user-guide/occur.png) -->
-![예정](../images/user-guide/cai-will-occur.png)
+![이벤트가 발생할 목표의 구성을 보여 주는 예입니다.](../images/user-guide/cai-will-occur.png)
 
 다만, 일정 시간대에 어떤 사건이 일어나지 않는지 예측하고자 하는 경우가 있을 수 있다. 이 옵션을 사용하여 목표를 구성하려면 최상위 드롭다운에서 **[!UICONTROL 발생하지 않습니다]**&#x200B;을(를) 선택합니다.
 
 예를 들어, 어느 고객의 참여가 줄어들어 다음 달에 계정 로그인 페이지를 방문하지 않는지 예측하려는 경우. **[!UICONTROL 다음이 발생하지 않습니다]**, **[!UICONTROL 모두]**&#x200B;를 선택한 다음 **web.webInteraction.URL**(또는 유사한 필드)을 입력하고 **[!UICONTROL equals]**&#x200B;을(를) 연산자로 사용하고 **account-login**&#x200B;을(를) 값으로 사용합니다.
 
-![발생하지 않습니다](../images/user-guide/not-occur.png)
+![이벤트가 발생하지 않는 목표의 구성을 보여 주는 예입니다.](../images/user-guide/not-occur.png)
 
 ### 모두 및 모두
 
@@ -147,19 +143,19 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 
 예를 들어, 고객이 특정 제품을 구매하는지 여부를 예측할 수 있습니다. 이 예측 목표는 두 가지 조건으로 정의됩니다. `commerce.order.purchaseID` **존재함** 및 `productListItems.SKU` **일부 특정 값과 같음**.
 
-![모든 예제](../images/user-guide/all-of.png)
+![모든 조건이 충족되어야 하는 목표의 구성을 보여 주는 예입니다.](../images/user-guide/all-of.png)
 
 고객에게 특정 집합의 이벤트가 있는지 예측하기 위해 **[!UICONTROL 다음 중 하나]** 옵션을 사용할 수 있습니다.
 
 예를 들어 고객이 특정 URL을 방문하는지 또는 특정 이름을 가진 웹 페이지를 방문하는지 여부를 예측할 수 있습니다. 이 예측 목표는 두 가지 조건으로 정의됩니다. `web.webPageDetails.URL` **특정 값으로 시작**&#x200B;하고 `web.webPageDetails.name` **특정 값으로 시작**.
 
-![예 중 하나](../images/user-guide/any-of.png)
+![조건을 충족할 수 있는 목표의 구성을 보여 주는 예입니다.](../images/user-guide/any-of.png)
 
 ### 적격 모집단 *(선택 사항)*
 
 기본적으로 적격 모집단을 지정하지 않는 한 모든 프로필에 대해 성향 점수가 생성됩니다. 이벤트를 기반으로 프로필을 포함하거나 제외하는 조건을 정의하여 적격 모집단을 지정할 수 있습니다.
 
-![적격 모집단](../images/user-guide/eligible-population.png)
+![Customer AI의 적격 모집단 구성을 보여 주는 예입니다.](../images/user-guide/eligible-population.png)
 
 ### 사용자 지정 이벤트(*선택 사항*) {#custom-events}
 
@@ -169,19 +165,19 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 >
 > 사용자 지정 이벤트가 Customer AI 점수 책정 결과에 미치는 영향에 대한 자세한 설명은 [사용자 지정 이벤트 예](#custom-event) 섹션을 참조하십시오.
 
-![이벤트 기능](../images/user-guide/event-feature.png)
+![Customer AI의 이벤트 기능 구성을 보여 주는 예입니다.](../images/user-guide/event-feature.png)
 
 사용자 지정 이벤트를 추가하려면 **[!UICONTROL 사용자 지정 이벤트 추가]**&#x200B;를 선택하십시오. 그런 다음 사용자 지정 이벤트 이름을 입력한 다음 스키마의 이벤트 필드에 매핑합니다. 영향력 있는 요인 및 기타 통찰력을 확인할 때 필드 값 대신 사용자 지정 이벤트 이름이 표시됩니다. 즉, 이벤트의 ID/값 대신 사용자 지정 이벤트 이름이 사용됩니다. 사용자 지정 이벤트 표시 방법에 대한 자세한 내용은 [사용자 지정 이벤트 예제 섹션](#custom-event)을 참조하십시오. 이러한 추가적인 사용자 지정 이벤트는 고객 AI가 모델의 품질을 향상시키고 보다 정확한 결과를 제공하는 데 사용됩니다.
 
-![사용자 지정 이벤트 필드](../images/user-guide/custom-event.png)
+![Customer AI의 사용자 지정 이벤트 필드 구성을 보여 주는 예입니다.](../images/user-guide/custom-event.png)
 
 그런 다음 사용 가능한 연산자 드롭다운에서 사용할 연산자를 선택합니다. 이벤트와 호환되는 연산자만 나열됩니다.
 
-![사용자 지정 이벤트 연산자](../images/user-guide/custom-operator.png)
+![Customer AI에서 사용자 지정 이벤트를 구성하는 데 사용할 수 있는 연산자를 보여 주는 예입니다.](../images/user-guide/custom-operator.png)
 
 마지막으로, 선택한 연산자에 1개가 필요한 경우 필드 값을 입력합니다. 이 예제에서는 호텔 또는 레스토랑 예약이 있는지 여부만 확인하면 됩니다. 그러나 보다 정확하게 하려면 equals 연산자를 사용하고 값 프롬프트에 정확한 값을 입력할 수 있습니다.
 
-![사용자 지정 이벤트 필드 값](../images/user-guide/custom-value.png)
+![Customer AI에서 사용자 지정 이벤트 필드 값의 구성을 보여 주는 예입니다.](../images/user-guide/custom-value.png)
 
 완료되면 오른쪽 상단에서 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 계속합니다.
 
@@ -193,7 +189,7 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 >
 >사용자 지정 프로필 속성을 추가하는 것은 사용자 지정 이벤트를 추가하는 것과 동일한 워크플로우를 따릅니다. 사용자 지정 이벤트와 유사한 사용자 지정 프로필 속성은 동일한 방식으로 모델 채점에 영향을 줍니다. 자세한 설명은 [사용자 지정 이벤트 예제](#custom-event) 섹션을 참조하십시오.
 
-![사용자 지정 프로필 특성 추가](../images/user-guide/profile-attributes.png)
+![Customer AI에서 사용자 지정 프로필 특성의 구성을 보여주는 예입니다.](../images/user-guide/profile-attributes.png)
 
 #### 프로필 스냅샷 내보내기에서 프로필 속성 선택
 
@@ -209,7 +205,7 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 
 고객 AI는 **구매 보기**&#x200B;와 같은 사용자 지정 이벤트에 대해 &quot;다음 이후 일수&quot; 또는 &quot;카운트 수&quot;와 같은 기능 생성을 자동으로 적용합니다. 이 이벤트가 고객의 성향이 높거나 중간 또는 낮은 이유에 영향을 주는 요소로 간주되면 고객 AI는 이 이벤트를 `Days since prd1013 purchase` 또는 `Count of prd1013 purchase`(으)로 표시합니다. 이 이벤트를 사용자 지정 이벤트로 만들면 이벤트에 새 이름을 지정하여 결과를 보다 쉽게 읽을 수 있습니다. 예, `Days since Watch purchase`. 또한 Customer AI는 이벤트가 표준 이벤트가 아닌 경우에도 이 이벤트를 교육 및 점수에 사용합니다. 즉, 영향력이 있다고 판단되는 여러 이벤트를 추가하고, 예약, 방문자 로그 및 기타 이벤트와 같은 데이터를 포함하여 모델을 추가로 사용자 지정할 수 있습니다. 이러한 데이터 포인트를 추가하면 고객 AI 모델의 정확도와 정밀도가 더욱 높아집니다.
 
-![사용자 지정 이벤트의 예](../images/user-guide/custom-event-name.png)
+![Customer AI에서 사용자 정의 이름이 있는 사용자 지정 이벤트의 구성을 보여 주는 예입니다.](../images/user-guide/custom-event-name.png)
 
 ## 옵션 설정
 
@@ -219,7 +215,7 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 
 채점 일정을 설정하려면 먼저 **[!UICONTROL 채점 빈도]**&#x200B;를 구성하세요. 자동화된 예측 실행은 매주 또는 매월 실행되도록 예약할 수 있습니다.
 
-![](../images/user-guide/schedule.png)
+![고객 AI의 채점 일정 구성 옵션을 보여 주는 예입니다.](../images/user-guide/schedule.png)
 
 ### 예측 제외 *(선택 사항)*
 
@@ -227,7 +223,7 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 
 이벤트를 제외하려면 **[!UICONTROL 제외 추가]**&#x200B;를 선택하고 이벤트를 정의합니다. 제외를 제거하려면 이벤트 컨테이너의 오른쪽 상단에서 줄임표(**[!UICONTROL ...]**)를 선택한 다음 **[!UICONTROL 컨테이너 제거]**&#x200B;를 선택합니다.
 
-![](../images/user-guide/exclusion.png)
+![고객 AI에서 예측 제외의 구성을 보여 주는 예입니다.](../images/user-guide/exclusion.png)
 
 ### 프로필 전환
 
@@ -235,7 +231,7 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 
 고객 AI를 처음 사용하는 경우 모델 출력 결과가 만족스러울 때까지 이 기능을 끌 수 있습니다. 이렇게 하면 모델을 미세 조정하면서 여러 채점 데이터 세트를 고객 프로필에 업로드할 수 없습니다. 모델 보정을 마치면 **서비스 인스턴스** 페이지에서 [복제 옵션](#set-up-your-instance)을 사용하여 모델을 복제할 수 있습니다. 이렇게 하면 모델의 복사본을 만들고 프로필을 전환할 수 있습니다.
 
-![프로필 전환](../images/user-guide/advanced-workflow-save.png)
+![Customer AI 고급 워크플로의 프로필 전환 옵션을 보여 주는 예입니다.](../images/user-guide/advanced-workflow-save.png)
 
 채점 일정, 예측 제외가 포함되며 원하는 프로필 전환이 설정되면 오른쪽 상단에서 **[!UICONTROL 완료]**&#x200B;를 선택하여 Customer AI 인스턴스를 만듭니다.
 
@@ -259,6 +255,4 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 >
 > 다음 비디오는 최신 버전이 아닙니다. 최신 정보는 설명서를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/36614?learn=on&quality=12&captions=kor)
-
-<!-- comment -->
+>[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)

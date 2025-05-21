@@ -6,9 +6,9 @@ title: 고객 AI 오류 문제 해결
 description: 고객 AI에서 일반적인 오류에 대한 답변을 찾아보십시오.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 32c1affecb4cf58412eb91fd90e1a13f4bc43541
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1780'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 모델 교육, 채점 및 구성이 실패하면 고객 AI에 오류가 표시됩니다. **[!UICONTROL 서비스 인스턴스]** 섹션에서 **[!UICONTROL 마지막 실행 상태]**&#x200B;에 대한 열에 **[!UICONTROL 성공]**, **[!UICONTROL 교육 문제]** 및 **[!UICONTROL 실패]** 메시지 중 하나가 표시됩니다.
 
-![마지막 실행 상태](./images/errors/last-run-status.png)
+![성공, 교육 문제 또는 실패를 보여 주는 마지막 실행 상태입니다.](./images/errors/last-run-status.png)
 
 **[!UICONTROL 실패]** 또는 **[!UICONTROL 교육 문제]**&#x200B;가 표시되는 경우 실행 상태를 선택하여 사이드 패널을 열 수 있습니다. 사이드 패널에는 **[!UICONTROL 마지막 실행 상태]** 및 **[!UICONTROL 마지막 실행 세부 정보]**&#x200B;가 있습니다. **[!UICONTROL 마지막 실행 세부 정보]**&#x200B;에는 실행이 실패한 이유에 대한 정보가 포함되어 있습니다. 고객 AI가 오류에 대한 세부 정보를 제공할 수 없는 경우 제공된 오류 코드로 지원 센터에 문의하십시오.
 
@@ -27,17 +27,17 @@ ht-degree: 1%
 
 Google Chrome의 시크릿 모드 보안 설정의 업데이트로 인해 Google Chrome의 시크릿 모드에서 로드 오류가 발생합니다. experience.adobe.com 을 신뢰할 수 있는 도메인으로 만들기 위해 Chrome과 함께 문제가 활발하게 진행되고 있습니다.
 
-![오류 이미지](./images/errors/error.PNG){width=500}
+![고객 AI 오류 메시지의 예를 보여 주는 오류 이미지입니다.](./images/errors/error.PNG){width=500}
 
 ### 권장 수정 사항
 
 이 문제를 해결하려면 experience.adobe.com 을 항상 쿠키를 사용할 수 있는 사이트로 추가해야 합니다. **chrome://settings/cookies**(으)로 이동하여 시작하십시오. 그런 다음 **사용자 지정된 동작** 섹션까지 아래로 스크롤한 다음 &quot;항상 쿠키를 사용할 수 있는 사이트&quot; 옆에 있는 **추가** 단추를 선택합니다. 표시되는 팝오버에서 `[*.]experience.adobe.com`을(를) 복사하여 붙여 넣은 다음 **이 사이트에 타사 쿠키 포함** 확인란을 선택합니다. 완료되면 **추가**&#x200B;를 선택하고 시크릿으로 고객 AI를 다시 로드합니다.
 
-![권장 수정](./images/errors/cookies2.gif)
+![Chrome 설정에서 쿠키를 항상 사용할 수 있는 사이트로 experience.adobe.com을 추가하는 단계를 보여주는 애니메이션.](./images/errors/cookies2.gif)
 
 ## 모델 품질이 좋지 않습니다.
 
-오류 &quot;[!UICONTROL 모델 품질이 좋지 않습니다. 수정된 구성 &#x200B;]&quot;을(를) 사용하여 새 앱을 만드는 것이 좋습니다. 아래의 권장 단계에 따라 문제를 해결하십시오.
+오류 &quot;[!UICONTROL 모델 품질이 좋지 않습니다. 수정된 구성 ]&quot;을(를) 사용하여 새 앱을 만드는 것이 좋습니다. 아래의 권장 단계에 따라 문제를 해결하십시오.
 
 ![](./images/errors/model-quality.png){width=300}
 
