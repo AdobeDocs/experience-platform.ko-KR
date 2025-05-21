@@ -3,9 +3,9 @@ title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
+source-git-commit: b423e51e3e048a5dd7c2c15f80c8c1fcf5c2657b
 workflow-type: tm+mt
-source-wordcount: '2732'
+source-wordcount: '2722'
 ht-degree: 7%
 
 ---
@@ -50,16 +50,16 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 만들어진 프로필 및 경험 이벤트 데이터 세트입니다.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=ko#profile-attribute-datasets">시스템 생성 프로필 스냅숏 데이터 집합</a>.</li></td>
+    <td><ul><li>소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 만들어진 프로필 및 경험 이벤트 데이터 세트입니다.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">시스템 생성 프로필 스냅숏 데이터 집합</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ko#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ko#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
 
 이 페이지에 설명된 워크플로에 대한 전체적인 설명, 데이터 세트 내보내기 기능을 사용할 때의 이점 및 몇 가지 제안된 사용 사례를 확인하려면 아래 비디오를 보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448825?captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## 지원되는 대상 {#supported-destinations}
 
@@ -280,7 +280,7 @@ JSON 파일로 내보내기는 압축 모드에서 *지원됩니다*. Parquet �
 
 ## 데이터 세트 내보내기 권한 {#licensing-entitlement}
 
-연간 각 Experience Platform 애플리케이션에 대해 내보낼 수 있는 데이터의 양을 파악하려면 제품 설명 문서를 참조하십시오. 예를 들어 Real-Time CDP 제품 설명 [여기](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)를 볼 수 있습니다.
+연간 각 Experience Platform 애플리케이션에 대해 내보낼 수 있는 데이터의 양을 파악하려면 제품 설명 문서를 참조하십시오. 예를 들어 Real-Time CDP 제품 설명 [여기](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)를 볼 수 있습니다.
 
 다른 애플리케이션에 대한 데이터 내보내기 권한은 가산되지 않습니다. 예를 들어 Real-Time CDP Ultimate 및 Adobe Journey Optimizer Ultimate을 구매하는 경우 제품 설명에 따라 프로필 내보내기 권한이 두 권한 중 더 커지게 됩니다. 볼륨 권한은 라이선스가 부여된 총 프로필 수를 계산하고 Real-Time CDP Prime의 경우 500KB 또는 Real-Time CDP Ultimate의 경우 700KB를 곱하여 권한이 부여된 데이터의 양을 결정합니다.
 
@@ -294,7 +294,6 @@ JSON 파일로 내보내기는 압축 모드에서 *지원됩니다*. Parquet �
 
 * Experience Platform은 작은 데이터 세트의 경우에도 여러 파일을 내보낼 수 있습니다. 데이터 세트 내보내기는 시스템 간 통합을 위해 설계되었으며 성능에 최적화되었기 때문에 내보낸 파일 수를 사용자 지정할 수 없습니다.
 * 내보낸 파일 이름은 현재 사용자 지정할 수 없습니다.
-* API를 통해 생성된 데이터 세트는 현재 내보내기에 사용할 수 없습니다.
 * 현재 UI가 대상으로 내보내는 데이터 세트를 삭제할 수 있도록 차단하지 않습니다. 대상으로 내보내는 데이터 세트는 삭제하지 마십시오. 데이터 집합을 삭제하기 전에 대상 데이터 흐름에서 [데이터 집합을 제거](#remove-dataset)합니다.
 * 데이터 세트 내보내기에 대한 모니터링 지표는 현재 프로필 내보내기에 대한 숫자와 혼합되므로 실제 내보내기 숫자를 반영하지 않습니다.
 * 타임스탬프가 365일보다 오래된 데이터는 데이터 세트 내보내기에서 제외됩니다. 자세한 내용은 예약된 데이터 세트 내보내기에 대한 [보호 기능](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)을 참조하십시오.
