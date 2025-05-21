@@ -2,10 +2,10 @@
 title: ID 그래프 연결 규칙
 description: Identity Service의 Identity Graph 연결 규칙에 대해 알아봅니다.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
+source-git-commit: 6efd9c8fd1acce08027905f2e3c005a88a429a12
 workflow-type: tm+mt
-source-wordcount: '1547'
-ht-degree: 4%
+source-wordcount: '1570'
+ht-degree: 7%
 
 ---
 
@@ -38,14 +38,24 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
 
 다음 비디오를 통해 ID 그래프 연결 규칙의 몇 가지 기본 측면에 대해 알아보십시오.
 
+<!-- CARDS
+{target = _blank}
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+
+    {description = Learn how to use the graph simulator to test out identity graph linking rules.}
+
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+    {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
+-->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Overview">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity graph linking rules overview">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3448279/?learn=on&enablevpops&captions=kor" title="ID 그래프 연결 규칙: 개요" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="ID 그래프 연결 규칙: 개요"
+                    <a href="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="아이덴티티 그래프 연결 규칙 개요" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="아이덴티티 그래프 연결 규칙 개요"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -53,27 +63,22 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3448279/?learn=on&enablevpops&captions=kor" target="_blank" rel="referrer" title="ID 그래프 연결 규칙: 개요">ID 그래프 연결 규칙: 개요</a>
+                        <a href="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" title="아이덴티티 그래프 연결 규칙 개요">아이덴티티 그래프 연결 규칙 개요</a>
                     </p>
-                    <p class="is-size-6">ID 그래프 연결 규칙에 대한 개요를 보려면 이 비디오를 시청한 후 이 기능을 사용하여 그래프 축소를 방지하는 방법에 대해 알아보십시오.</p>
+                    <p class="is-size-6">데이터 설계자가 ID 그래프 연결 규칙을 활용하여 정확한 고객 프로필을 유지하고 그래프 붕괴를 방지하는 방법에 대한 개요를 살펴봅니다.</p>
                 </div>
-                <div style="display: flex; flex-direction; row;">
-                  <a href="https://video.tv.adobe.com/v/3448279/?learn=on&enablevpops&captions=kor" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
-                  </a>
-                  <a href="./overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
-                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">읽기</span>
-                  </a>
-                </div>
+                <a href="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
+                </a>
             </div>
         </div>
     </div>
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Identity Settings">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity graph linking rules - Graph Simulation">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" title="ID 그래프 연결 규칙: ID 설정" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441087/?format=jpeg&nocache=1732633205785&captions=kor" alt="ID 그래프 연결 규칙: ID 설정"
+                    <a href="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="ID 그래프 연결 규칙 - 그래프 시뮬레이션" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="ID 그래프 연결 규칙 - 그래프 시뮬레이션"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -81,22 +86,42 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" title="ID 그래프 연결 규칙: ID 설정">ID 그래프 연결 규칙: ID 설정</a>
+                        <a href="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" title="ID 그래프 연결 규칙 - 그래프 시뮬레이션">아이덴티티 그래프 연결 규칙 - 그래프 시뮬레이션</a>
                     </p>
-                    <p class="is-size-6">이 비디오를 통해 Real-Time CDP, Adobe Journey Optimizer 및 Customer Journey Analytics과 같은 Adobe Experience Platform 애플리케이션에 대한 ID 설정을 구성하고 고품질 ID 그래프 및 고객 프로필을 작성하는 방법에 대해 알아보십시오.</p>
+                    <p class="is-size-6">그래프 시뮬레이터를 사용하여 ID 그래프 연결 규칙을 테스트하는 방법을 알아봅니다.</p>
                 </div>
-                <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
-                  </a>
-                  <a href="identity-settings-ui.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
-                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">읽기</span>
-                  </a>
-                </div>            
+                <a href="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity graph linking rules - Identity settings">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="ID 그래프 연결 규칙 - ID 설정" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="ID 그래프 연결 규칙 - ID 설정"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="ID 그래프 연결 규칙 - ID 설정">ID 그래프 연결 규칙 - ID 설정</a>
+                    </p>
+                    <p class="is-size-6">ID 그래프 연결 규칙을 활성화하고 구성하여 정확한 고객 프로필을 작성하는 방법을 알아봅니다</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
+                </a>
             </div>
         </div>
     </div>
 </div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
 
 ## 그래프 축소 시나리오 {#graph-collapse-scenarios}
 
