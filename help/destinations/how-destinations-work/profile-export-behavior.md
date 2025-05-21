@@ -42,7 +42,7 @@ Experience Platform 대상은 데이터를 HTTPS 호출로 API 기반 통합에 
 
 >[!IMPORTANT]
 >
-> Enterprise 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객만 사용할 수 있습니다.
+> Enterprise 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객만 사용할 수 있습니다.
 
 Experience Platform의 [엔터프라이즈 대상](/help/destinations/destination-types.md#advanced-enterprise-destinations)은(는) Amazon Kinesis, Azure Event Hubs 및 HTTP API입니다.
 
