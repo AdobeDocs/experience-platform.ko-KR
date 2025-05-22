@@ -1,17 +1,17 @@
 ---
-title: NPM 패키지를 사용하여 Web SDK 설치
-description: NPM 패키지를 사용하여 Web SDK 라이브러리를 설치하고 참조합니다.
+title: NPM 패키지를 사용하여 웹 SDK 설치
+description: NPM 패키지를 사용하여 웹 SDK 라이브러리를 설치하고 참조합니다.
 exl-id: 4c70ec5d-33fd-4ef7-ba9e-5b92ff6c3e86
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 8b6c958613923127880263679ce00ce359151300
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
-# NPM 패키지를 사용하여 Web SDK 설치
+# NPM 패키지를 사용하여 웹 SDK 설치
 
-Adobe Experience Platform Web SDK는 [NPM 패키지](https://www.npmjs.com)(으)로 사용할 수 있습니다. NPM 패키지를 설치하면 Adobe Experience Platform Web SDK JavaScript 라이브러리의 빌드 프로세스를 제어할 수 있습니다. NPM 패키지는 브라우저에서 실행되도록 지정된 EcmaScript 버전 5 모듈 또는 EcmaScript 버전 2015(ES6) 모듈을 노출합니다.
+Adobe Experience Platform Web SDK은 [NPM 패키지](https://www.npmjs.com)&#x200B;(으)로 사용할 수 있습니다. NPM 패키지를 설치하면 Adobe Experience Platform Web SDK JavaScript 라이브러리의 빌드 프로세스를 제어할 수 있습니다. NPM 패키지는 브라우저에서 실행되도록 지정된 EcmaScript 버전 5 모듈 또는 EcmaScript 버전 2015(ES6) 모듈을 노출합니다.
 
 ```bash
 npm install @adobe/alloy
@@ -24,7 +24,7 @@ Adobe Experience Platform Web SDK의 NPM 패키지는 `createInstance` 함수를
 ```js
 import { createInstance } from "@adobe/alloy";
 const alloy = createInstance({ name: "alloy" });
-alloy("config", { ... });
+alloy("configure", { ... });
 alloy("sendEvent", { ... });
 ```
 
@@ -37,6 +37,6 @@ alloy("sendEvent", { ... });
 ```js
 var alloyLibrary = require("@adobe/alloy");
 var alloy = alloyLibrary.createInstance({ name: "alloy" });
-alloy("config", { ... });
+alloy("configure", { ... });
 alloy("sendEvent", { ... });
 ```
