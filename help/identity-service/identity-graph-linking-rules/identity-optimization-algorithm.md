@@ -2,9 +2,9 @@
 title: ID 최적화 알고리즘
 description: ID 서비스의 ID 최적화 알고리즘에 대해 알아봅니다.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1580'
 ht-degree: 4%
 
 ---
@@ -49,7 +49,7 @@ ID 서비스의 네임스페이스에는 암시적 상대적 중요도 순서가
 
 네임스페이스 우선 순위와 전체 기능 및 사용에 대한 자세한 내용은 [네임스페이스 우선 순위 가이드](./namespace-priority.md)를 참조하십시오.
 
-![그래프 레이어 및 네임스페이스 우선 순위](../images/namespace-priority/graph-layers.png)
+![그래프 레이어 및 네임스페이스 우선 순위입니다.](../images/namespace-priority/graph-layers.png "그래프 레이어 및 네임스페이스 우선 순위입니다."){zoomable="yes"}
 
 ## 프로세스 {#process}
 
@@ -68,7 +68,7 @@ ID 서비스의 네임스페이스에는 암시적 상대적 중요도 순서가
 * 위 순서에 따라 그래프가 다시 설정됩니다. 링크를 추가하는 것이 제한 제한을 위반하는 경우(예: 그래프에 고유한 네임스페이스가 있는 두 개 이상의 ID가 포함됨) 링크가 제거됩니다.
 * 그러면 결과 그래프는 사용자가 구성한 고유한 네임스페이스 제약 조건을 준수합니다.
 
-![ID 최적화 알고리즘을 시각화하는 다이어그램입니다.](../images/ido_algorithm.png)
+![ID 최적화 알고리즘을 시각화하는 다이어그램입니다.](../images/ido_algorithm.png "ID 최적화 알고리즘을 시각화하는 다이어그램입니다."){zoomable="yes"}
 
 ## ID 최적화 알고리즘에 대한 예제 시나리오
 
@@ -95,7 +95,7 @@ ID 서비스의 네임스페이스에는 암시적 상대적 중요도 순서가
 * 그러나 그래프당 최대 하나의 CRMID 네임스페이스와 하나의 이메일 네임스페이스를 설정하는 고유한 네임스페이스 구성으로 인해 ID 최적화 알고리즘은 그래프를 두 개로 분할합니다.
    * 마지막으로 John은 인증된 마지막 사용자이므로 노트북을 나타내는 ECID가 Jane이 아닌 자신의 그래프에 연결된 상태로 유지됩니다.
 
-![공유된 장치 사례 하나](../images/identity-settings/shared-device-case-one.png)
+![공유 장치 중 하나 사례.](../images/identity-settings/shared-device-case-one.png "공유 장치 중 하나의 사례."){zoomable="yes"}
 
 >[!TAB 예제 2]
 
@@ -112,7 +112,7 @@ ID 서비스의 네임스페이스에는 암시적 상대적 중요도 순서가
    * 따라서 ID 최적화 알고리즘에서는 이전 링크를 제거합니다. 이 경우 이 링크는 `timestamp=1`에 연결된 Jane의 CRMID입니다.
    * 그러나 Jane의 CRMID는 더 이상 ID 서비스에 대한 그래프로 존재하지 않지만 실시간 고객 프로필에는 프로필로 유지됩니다. ID 그래프에는 최소 2개의 연결된 ID가 포함되어야 하며 링크가 제거됨에 따라 Jane의 CRMID에 더 이상 연결할 다른 ID가 없기 때문입니다.
 
-![shared-device-case-2](../images/identity-settings/shared-device-case-two.png)
+![공유 장치의 사례 2입니다.](../images/identity-settings/shared-device-case-two.png "공유 장치의 사례 2입니다."){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -137,7 +137,7 @@ ID 서비스의 네임스페이스에는 암시적 상대적 중요도 순서가
 
 ID 최적화 알고리즘을 사용하면 잘못된 이메일 또는 전화번호와 같은 잘못된 ID 값이 여러 다른 ID 그래프에 전파되지 않습니다.
 
-![잘못된 전자 메일](../images/identity-settings/bad-email.png)
+![잘못된 전자 메일 수집 다이어그램입니다.](../images/identity-settings/bad-email.png "잘못된 전자 메일 수집 다이어그램입니다."){zoomable="yes"}
 
 ## 익명 이벤트 연결
 
@@ -154,7 +154,7 @@ ECID는 인증되지 않은(익명) 이벤트를 저장하는 반면 CRMID는 �
       * `timestamp=1` 이전에 처음 로그인하기 전
       * 케빈의 첫 번째 로그인과 두 번째 로그인 사이에 익명으로 탐색하는 동안 그와 노라가 했던 모든 활동.
 
-![anon-event-association](../images/identity-settings/anon-event-association.png)
+![익명 이벤트 연결의 다이어그램입니다.](../images/identity-settings/anon-event-association.png "익명 이벤트 연결의 다이어그램입니다."){zoomable="yes"}
 
 
 ## 다음 단계

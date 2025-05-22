@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 5월
 description: Adobe Experience Platform의 2025년 5월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8f1538efc96c8dc47a505511ec7f064b07f124c8
+source-git-commit: ad9ec9c3177c25e2207b67b4c939c3f6fa97883f
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1171'
 ht-degree: 48%
 
 ---
@@ -16,10 +16,10 @@ ht-degree: 48%
 >다른 Adobe Experience Platform 애플리케이션의 릴리스 노트는 다음 설명서를 참조하십시오.
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/releases/latest)
 >- [페더레이션된 대상자 컴포지션](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **릴리스 일자: 2025년 5월 20일 수요일**
 
@@ -84,7 +84,7 @@ Adobe Experience Platform ID 서비스를 사용하여 여러 디바이스 및 �
 
 | 기능 | 설명 |
 | --- | --- |
-| [!DNL Identity Graph Linking Rules] 소개 | [!DNL Identity Graph Linking Rules]은(는) 그래프 축소를 방지하여 개인화된 마케팅을 위해 정확한 고객 프로필을 유지할 수 있도록 설계되었습니다.<ul><li>[그래프 시뮬레이션 도구](../../identity-service/identity-graph-linking-rules/graph-simulation.md)를 사용하여 구성을 테스트하고 확인하십시오.</li><li>조직의 그래프 축소 인스턴스를 모니터링하려면 [ID 대시보드](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs)를 참조하세요.</li><li>시작하려면 [[!DNL Identity Graph Linking Rules] 구현 가이드](../../identity-service/identity-graph-linking-rules/implementation-guide.md)를 읽어 보세요.</li></ul> **참고**: ID 설정을 수동으로 구성할 때까지 데이터가 변경됩니다. |
+| [!DNL Identity Graph Linking Rules] | [!DNL Identity Graph Linking Rules]은(는) 이제 일반적으로 사용할 수 있습니다. [!DNL Identity Graph Linking Rules]은(는) &quot;그래프 축소&quot;를 방지하여 Experience Platform 및 응용 프로그램 전반에서 개인화된 마케팅을 위한 명확하고 정확한 고객 프로필을 보장합니다. 주요 기능은 다음과 같습니다.<ul><li>[그래프 시뮬레이션 도구](../../identity-service/identity-graph-linking-rules/graph-simulation.md): 알고리즘을 탐색하고 ID 설정 구성을 테스트합니다.</li><li> [ID 설정](../../identity-service/identity-graph-linking-rules/identity-settings-ui.md): 고유한 네임스페이스를 구성하고 우선 순위를 설정합니다.</li><li>[ID 대시보드](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs): 그래프를 모니터링하고 ID 설정의 유효성을 검사합니다.</li></ul> **참고**: ID 설정을 수동으로 구성할 때까지 데이터가 변경되지 않습니다. |
 
 {style="table-layout:auto"}
 

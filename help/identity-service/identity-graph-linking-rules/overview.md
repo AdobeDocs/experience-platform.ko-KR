@@ -2,9 +2,9 @@
 title: ID 그래프 연결 규칙
 description: Identity Service의 Identity Graph 연결 규칙에 대해 알아봅니다.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 6efd9c8fd1acce08027905f2e3c005a88a429a12
+source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1600'
 ht-degree: 7%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->ID 설정을 활성화한 후 축소된 그래프의 축소 취소(&quot;고정&quot;)를 요구하는 기존 샌드박스가 있는 경우 Adobe 계정 팀에 문의하십시오.
+>[!DNL Identity Graph Linking Rules]은(는) 이제 일반적으로 사용할 수 있습니다. ID 설정을 활성화한 후 축소된 그래프의 축소 취소(&quot;고정&quot;)를 요구하는 기존 샌드박스가 있는 경우 Adobe 지원 센터에 문의하십시오.
 
 Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용하면 데이터가 완벽하게 수집되고 병합된 모든 프로필이 CRMID와 같은 개인 식별자를 통해 단일 개별 사용자를 나타낸다고 쉽게 가정할 수 있습니다. 그러나 특정 데이터가 서로 다른 여러 프로필을 하나의 프로필로 병합하려고 할 수 있는 시나리오가 있습니다(&quot;그래프 축소&quot;). 이러한 원치 않는 병합을 방지하기 위해 [!DNL Identity Graph Linking Rules]을(를) 통해 제공된 구성을 사용하고 사용자에게 정확한 개인화를 허용할 수 있습니다.
 
@@ -40,12 +40,12 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
 
 <!-- CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -55,7 +55,7 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="아이덴티티 그래프 연결 규칙 개요" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448279/?format=jpeg&nocache=1747851655227&captions=kor" alt="아이덴티티 그래프 연결 규칙 개요"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="아이덴티티 그래프 연결 규칙 개요"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +78,7 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="ID 그래프 연결 규칙 - 그래프 시뮬레이션" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444050/?format=jpeg&nocache=1747851655237&captions=kor" alt="ID 그래프 연결 규칙 - 그래프 시뮬레이션"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="ID 그래프 연결 규칙 - 그래프 시뮬레이션"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -100,7 +100,7 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="ID 그래프 연결 규칙 - ID 설정" target="_blank" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="ID 그래프 연결 규칙 - ID 설정" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="ID 그래프 연결 규칙 - ID 설정"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -109,11 +109,11 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="ID 그래프 연결 규칙 - ID 설정">ID 그래프 연결 규칙 - ID 설정</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="ID 그래프 연결 규칙 - ID 설정">ID 그래프 연결 규칙 - ID 설정</a>
                     </p>
                     <p class="is-size-6">ID 그래프 연결 규칙을 활성화하고 구성하여 정확한 고객 프로필을 작성하는 방법을 알아봅니다</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
                 </a>
             </div>
@@ -142,7 +142,7 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
 | 공용 키오스크 | 공항 여행객이 수하물을 체크인하고 탑승권을 인쇄하는 데 고객 충성도 ID를 사용하여 로그온합니다. |
 | 콜센터 | 콜센터 직원은 고객 지원 센터에 문의하는 고객을 대신하여 단일 디바이스에 로그인하여 문제를 해결합니다. |
 
-![일부 공통 공유 장치의 다이어그램입니다.](../images/identity-settings/shared-devices.png)
+![일부 공통 공유 장치의 다이어그램입니다.](../images/identity-settings/shared-devices.png "일부 공통 공유 장치의 다이어그램입니다."){zoomable="yes"}
 
 이러한 경우 제한이 활성화되지 않은 그래프 측면에서 단일 ECID가 여러 CRMID에 연결됩니다.
 
@@ -155,7 +155,7 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
 
 등록할 때 전화번호 및/또는 이메일 주소로 가짜 값을 제공하는 사용자의 경우도 있습니다. 이러한 경우 제한이 활성화되지 않으면 전화/이메일 관련 ID가 여러 다른 CRMID에 연결됩니다.
 
-![잘못된 전자 메일 또는 전화 시나리오를 나타내는 다이어그램입니다.](../images/identity-settings/invalid-email-phone.png)
+![잘못된 전자 메일 또는 전화 시나리오를 나타내는 다이어그램입니다.](../images/identity-settings/invalid-email-phone.png "잘못된 전자 메일 또는 전화 시나리오를 나타내는 다이어그램입니다."){zoomable="yes"}
 
 [!DNL Identity Graph Linking Rules]을(를) 사용하여 다음을 수행할 수 있습니다.
 
@@ -172,7 +172,7 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
 
 이러한 ID를 사용하면 여러 CRMID가 &#39;잘못된&#39; ID와 함께 병합되는 다음과 같은 그래프가 생성될 수 있습니다.
 
-![ID 값이 잘못되었거나 잘못된 ID 데이터의 그래프 예입니다.](../images/identity-settings/bad-data.png)
+![ID 값이 잘못되었거나 잘못된 ID 데이터의 그래프 예입니다.](../images/identity-settings/bad-data.png "ID 값이 잘못되었거나 잘못된 ID 데이터의 그래프 예입니다."){zoomable="yes"}
 
 [!DNL Identity Graph Linking Rules]을(를) 사용하면 이 유형의 데이터로 인해 원치 않는 프로필이 축소되는 것을 방지하기 위해 CRMID를 고유 식별자로 구성할 수 있습니다.
 

@@ -2,9 +2,9 @@
 title: ID 그래프 연결 규칙 문제 해결 설명서
 description: ID 그래프 연결 규칙의 일반적인 문제를 해결하는 방법에 대해 알아봅니다.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
-source-wordcount: '3285'
+source-wordcount: '3295'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 다음 다이어그램은 데이터가 Adobe Experience Platform 및 애플리케이션으로 유입되는 방식을 단순하게 보여 줍니다. 이 페이지의 내용을 더 잘 이해하려면 이 다이어그램을 참조로 사용하십시오.
 
-![ID 서비스에서 데이터 수집이 어떻게 진행되는지 보여 주는 다이어그램입니다.](../images/troubleshooting/dataflow_in_identity.png)
+![ID 서비스에서 데이터 수집이 흐르는 방식에 대한 다이어그램입니다.](../images/troubleshooting/dataflow_in_identity.png "ID 서비스에서 데이터 수집이 어떻게 진행되는지 보여 주는 다이어그램입니다."){zoomable="yes"}
 
 다음 요인에 유의해야 합니다.
 

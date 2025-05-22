@@ -2,9 +2,9 @@
 title: ID 설정 UI
 description: ID 설정 사용자 인터페이스를 사용하는 방법을 알아봅니다.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 6efd9c8fd1acce08027905f2e3c005a88a429a12
+source-git-commit: 808562ac7b3bf91c4d133bc1d2106cfc3b0c9c84
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '646'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->ID 설정을 활성화한 후 축소된 그래프의 축소 취소(&quot;고정&quot;)를 요구하는 기존 샌드박스가 있는 경우 Adobe 계정 팀에 문의하십시오.
+>[!DNL Identity Graph Linking Rules]은(는) 이제 일반적으로 사용할 수 있습니다. ID 설정을 활성화한 후 축소된 그래프의 축소 취소(&quot;고정&quot;)를 요구하는 기존 샌드박스가 있는 경우 Adobe 지원 센터에 문의하십시오.
 
 ID 설정은 고유한 네임스페이스를 지정하고 네임스페이스 우선 순위를 구성하는 데 사용할 수 있는 Adobe Experience Platform ID 서비스 UI의 기능입니다.
 
