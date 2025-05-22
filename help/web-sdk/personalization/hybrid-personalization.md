@@ -39,7 +39,7 @@ Adobe Target, Adobe Journey Optimizer 또는 Offer Decisioning과 같은 개인�
 1. Edge Network API는 개인화 콘텐츠를 애플리케이션 서버에 반환합니다.
 1. 응용 프로그램 서버가 클라이언트 브라우저에 [ID 및 클러스터 쿠키](#cookies)를 포함하는 HTML 응답을 반환합니다.
 1. 클라이언트 페이지에서 [!DNL Web SDK] `applyResponse` 명령이 호출되어 이전 단계의 [!UICONTROL Edge Network API] 응답의 헤더와 본문을 전달합니다.
-1. `renderDecisions` 플래그가 `true`(으)로 설정되어 있으므로 [!DNL Web SDK]에서 Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 오퍼 및 Journey Optimizer 웹 채널 항목을 자동으로 렌더링합니다.
+1. `renderDecisions` 플래그가 `true`(으)로 설정되어 있으므로 [!DNL Web SDK]에서 Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ko) 오퍼 및 Journey Optimizer 웹 채널 항목을 자동으로 렌더링합니다.
 1. Target 양식 기반 [!DNL HTML]/[!DNL JSON] 오퍼 및 Journey Optimizer 코드 기반 경험은 `applyProposition` 메서드를 통해 수동으로 적용되어 제안의 개인화 콘텐츠를 기반으로 [!DNL DOM]을(를) 업데이트합니다.
 1. Target 양식 기반 [!DNL HTML]/[!DNL JSON] 오퍼 및 Journey Optimizer 코드 기반 경험의 경우 반환된 콘텐츠가 표시된 시기를 나타내기 위해 표시 이벤트를 수동으로 보내야 합니다. 이 작업은 `sendEvent` 명령을 통해 수행됩니다.
 
