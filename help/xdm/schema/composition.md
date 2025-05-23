@@ -59,7 +59,7 @@ Experience Platform에서 사용하기 위한 데이터는 다음 두 가지 동
 
 이 프로세스를 지원하기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터를 수집하면 해당 필드의 데이터가 해당 개인의 &quot;[!UICONTROL ID 그래프]&quot;에 삽입됩니다. 그런 다음 [[!DNL Real-Time Customer Profile]](../../profile/home.md) 및 기타 Experience Platform 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 결합 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;[!UICONTROL ID]&quot;(으)로 표시되는 필드에는 전자 메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유 ID 필드가 포함됩니다. 조직에 고유한 식별자를 고려하십시오. 이러한 식별자는 좋은 &quot;[!UICONTROL ID]&quot; 필드일 수도 있습니다.
+일반적으로 &quot;[!UICONTROL ID]&quot;(으)로 표시되는 필드에는 전자 메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko), CRM ID 또는 기타 고유 ID 필드가 포함됩니다. 조직에 고유한 식별자를 고려하십시오. 이러한 식별자는 좋은 &quot;[!UICONTROL ID]&quot; 필드일 수도 있습니다.
 
 ID 정보를 통해 디지털 환경을 고객에게 제공하는 방법에 대한 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md)를 참조하세요. 스키마를 만들 때 ID 사용에 대한 [팁은 데이터 모델링 모범 사례 문서를 참조하십시오](./best-practices.md#data-validation-fields).
 
