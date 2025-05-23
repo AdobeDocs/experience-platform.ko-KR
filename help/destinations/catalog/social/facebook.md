@@ -165,7 +165,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 아래 비디오에서는 [!DNL Facebook] 대상을 구성하고 대상을 활성화하는 단계도 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor)
 
 >[!NOTE]
 >
