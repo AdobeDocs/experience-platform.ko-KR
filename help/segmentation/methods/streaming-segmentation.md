@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 스트리밍 세분화 안내서
 description: 정의, 스트리밍 세그먼테이션을 사용하여 평가된 대상을 만드는 방법, 스트리밍 세그먼테이션을 사용하여 만든 대상을 보는 방법 등을 포함하여 스트리밍 세그먼테이션에 대해 알아봅니다.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: cd22213be0dbc2e5a076927e560f1b23b467b306
+source-git-commit: 8523ba35eab80a7496e17cb0ceb3e46a78dd6058
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2022'
 ht-degree: 2%
 
 ---
@@ -140,6 +140,8 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 
 일괄 처리와 스트리밍 소스 모두의 데이터를 결합하려면 일괄 처리와 스트리밍 구성 요소를 별도의 대상으로 분리해야 합니다.
 
+### 프로필 속성 및 경험 이벤트 {#profile-and-event}
+
 예를 들어 다음 두 개의 샘플 대상을 고려해 보겠습니다.
 
 | Audience | 스키마 | Source 유형 | 쿼리 정의 | 대상자 ID |
@@ -159,7 +161,9 @@ WHEN(<= 24 hours before now)])
 
 결과 대상 *will*&#x200B;은(는) 일괄 처리 대상 구성 요소를 참조하여 일괄 처리 대상 멤버십을 활용하므로 스트리밍 세그먼테이션을 사용하여 평가됩니다.
 
-하지만 두 대상을 이벤트 데이터로 결합하려면 **할 수 없습니다** 두 이벤트를 결합하면 됩니다. 두 대상을 모두 만든 다음 `inSegment`을(를) 사용하여 이 두 대상을 모두 참조하는 다른 대상을 만들어야 합니다.
+### 여러 경험 이벤트 {#two-events}
+
+여러 대상을 이벤트 데이터와 결합하려면 **이벤트를 결합할 수 없습니다**. 각 이벤트에 대한 대상을 만든 다음 `inSegment`을(를) 사용하여 모든 대상을 참조하는 다른 대상을 만들어야 합니다.
 
 예를 들어 두 대상에 경험 이벤트 스키마 데이터를 모두 포함하는 두 대상이 있다고 가정해 보겠습니다.
 
@@ -463,4 +467,4 @@ Audience Portal에서 대상을 선택하면 대상 세부 사항 페이지가 �
 
 Adobe Experience Platform 사용자 인터페이스 사용에 대한 자세한 내용은 [세그먼테이션 사용 안내서](./overview.md)를 참조하세요.
 
-스트리밍 세분화에 대한 FAQ는 FAQ[&#128279;](../faq.md#streaming-segmentation)의 스트리밍 세분화 섹션을 참조하십시오.
+스트리밍 세분화에 대한 FAQ는 FAQ](../faq.md#streaming-segmentation)의 [스트리밍 세분화 섹션을 참조하십시오.
