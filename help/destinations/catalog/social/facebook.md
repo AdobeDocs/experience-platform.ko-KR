@@ -3,16 +3,24 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 한 대상자 타겟팅, 개인화 및 억제에 대한 Facebook 캠페인을 위한 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
+source-git-commit: 09146fac0719b62c6c2ec1b6c3aa66cb80c1698a
 workflow-type: tm+mt
-source-wordcount: '2137'
-ht-degree: 6%
+source-wordcount: '2843'
+ht-degree: 5%
 
 ---
 
 # [!DNL Facebook] 연결
 
 ## 개요 {#overview}
+
+>[!IMPORTANT]
+>
+>* 2025년 5월 23일부터 2025년 6월 동안 최대 몇 시간 동안 대상 카탈로그에 **[!DNL Facebook Custom Audience]** 대상 카드 두 개가 일시적으로 표시될 수 있습니다. 이는 대상 서비스에 대한 내부 업그레이드 때문이며 Facebook 속성에서 개선된 타겟팅 및 프로필과의 일치를 위해 새 필드를 지원하기 위한 것입니다. 새 주소 관련 필드에 대한 자세한 내용은 [지원되는 ID](#supported-identities) 섹션을 참조하십시오.
+>* 레이블이 **[!UICONTROL (새) Facebook 사용자 지정 대상]**(으)로 지정된 카드가 있는 경우, 새 활성화 데이터 흐름에 이 카드를 사용하십시오. 기존 데이터 흐름은 자동으로 업데이트되므로 별도의 작업이 필요하지 않습니다. 이 기간 동안 기존 데이터 흐름에 수행한 모든 변경 사항은 업그레이드 후에도 유지됩니다. 업그레이드가 완료되면 **[!UICONTROL (새) Facebook 사용자 지정 대상자]** 대상 카드의 이름이 **[!DNL Facebook Custom Audience]**(으)로 바뀝니다.
+>* [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 사용하여 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다.
+>   * 흐름 사양 ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`
+>   * 연결 사양 ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`
 
 해시된 이메일을 기반으로 한 대상자 타겟팅, 개인화 및 제외를 위해 [!DNL Facebook] 캠페인에 대한 프로필을 활성화합니다.
 
@@ -42,11 +50,20 @@ ht-degree: 6%
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
-| IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
-| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따르고 일반 텍스트와 해시된 전화 번호에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
-| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침에 따라 일반 텍스트와 해시된 이메일 주소에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
-| extern_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+| `GAID` | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
+| `IDFA` | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
+| `phone_sha256` | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따르고 일반 텍스트와 해시된 전화 번호에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| `email_lc_sha256` | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침에 따라 일반 텍스트와 해시된 이메일 주소에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| `extern_id` | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+| `gender` | 성별 | 허용된 값: <ul><li>남성의 경우 `m`</li><li>여성용 `f`개</li></ul> Experience Platform으로 보내기 전에 이 값을 **자동으로 해싱**&#x200B;합니다. 이 자동 해싱은 Facebook의 보안 및 개인정보 보호 요구 사항을 준수하는 데 필요합니다. **not**&#x200B;은(는) 이 필드에 사전 해시된 값을 제공하지 마십시오. 그러면 일치 프로세스가 실패합니다. |
+| `date_of_birth` | 생년월일 | 허용되는 형식: `yyyy-MM-DD`. <br>Experience Platform **이 값을 Facebook으로 보내기 전에 자동으로 해시합니다**. 이 자동 해싱은 Facebook의 보안 및 개인정보 보호 요구 사항을 준수하는 데 필요합니다. **not**&#x200B;은(는) 이 필드에 사전 해시된 값을 제공하지 마십시오. 그러면 일치 프로세스가 실패합니다. |
+| `last_name` | 성 | 허용되는 형식: 소문자, `a-z`자만 허용되며 구두점이 없습니다. 특수 문자에는 UTF-8 인코딩을 사용하십시오.  <br>Experience Platform **이 값을 Facebook으로 보내기 전에 자동으로 해시합니다**. 이 자동 해싱은 Facebook의 보안 및 개인정보 보호 요구 사항을 준수하는 데 필요합니다. **not**&#x200B;은(는) 이 필드에 사전 해시된 값을 제공하지 마십시오. 그러면 일치 프로세스가 실패합니다. |
+| `first_name` | 이름 | 허용되는 형식: 소문자, `a-z`자만, 구두점 없음, 공백 없음. 특수 문자에는 UTF-8 인코딩을 사용하십시오.  <br>Experience Platform **이 값을 Facebook으로 보내기 전에 자동으로 해시합니다**. 이 자동 해싱은 Facebook의 보안 및 개인정보 보호 요구 사항을 준수하는 데 필요합니다. **not**&#x200B;은(는) 이 필드에 사전 해시된 값을 제공하지 마십시오. 그러면 일치 프로세스가 실패합니다. |
+| `first_name_initial` | 이름 이니셜 | 허용되는 형식: 소문자, `a-z`자만. 특수 문자에는 UTF-8 인코딩을 사용하십시오.  <br>Experience Platform **이 값을 Facebook으로 보내기 전에 자동으로 해시합니다**. 이 자동 해싱은 Facebook의 보안 및 개인정보 보호 요구 사항을 준수하는 데 필요합니다. **not**&#x200B;은(는) 이 필드에 사전 해시된 값을 제공하지 마십시오. 그러면 일치 프로세스가 실패합니다. |
+| `state` | 주/도 | 소문자로 [2자 ANSI 약어 코드](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code)을(를) 사용하십시오. 미국 이외의 주에서는 소문자, 구두점 없음, 특수 문자 및 공백을 사용하지 마십시오.  <br>Experience Platform **이 값을 Facebook으로 보내기 전에 자동으로 해시합니다**. 이 자동 해싱은 Facebook의 보안 및 개인정보 보호 요구 사항을 준수하는 데 필요합니다. **not**&#x200B;은(는) 이 필드에 사전 해시된 값을 제공하지 마십시오. 그러면 일치 프로세스가 실패합니다. |
+| `city` | 구/군/시 | 허용되는 형식: 소문자, `a-z`자만, 구두점 없음, 특수 문자 없음, 공백 없음.  <br>Experience Platform **이 값을 Facebook으로 보내기 전에 자동으로 해시합니다**. 이 자동 해싱은 Facebook의 보안 및 개인정보 보호 요구 사항을 준수하는 데 필요합니다. **not**&#x200B;은(는) 이 필드에 사전 해시된 값을 제공하지 마십시오. 그러면 일치 프로세스가 실패합니다. |
+| `zip` | 우편 번호 | 허용된 형식: 소문자, 공백 없음. 미국 우편번호의 경우 처음 5자리만 사용하십시오. 영국에서는 `Area/District/Sector` 형식을 사용합니다.  <br>Experience Platform **이 값을 Facebook으로 보내기 전에 자동으로 해시합니다**. 이 자동 해싱은 Facebook의 보안 및 개인정보 보호 요구 사항을 준수하는 데 필요합니다. **not**&#x200B;은(는) 이 필드에 사전 해시된 값을 제공하지 마십시오. 그러면 일치 프로세스가 실패합니다. |
+| `country` | 국가 | 허용되는 형식: [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 형식의 소문자, 두 글자로 된 국가 코드입니다.  <br>Experience Platform **이 값을 Facebook으로 보내기 전에 자동으로 해시합니다**. 이 자동 해싱은 Facebook의 보안 및 개인정보 보호 요구 사항을 준수하는 데 필요합니다. **not**&#x200B;은(는) 이 필드에 사전 해시된 값을 제공하지 마십시오. 그러면 일치 프로세스가 실패합니다. |
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -93,6 +110,12 @@ ht-degree: 6%
 [!DNL Facebook]을(를) 사용하려면 PII(개인 식별 정보)를 명확하게 보내지 않아야 합니다. 따라서 [!DNL Facebook]에 대해 활성화된 대상은 이메일 주소 또는 전화 번호와 같은 *hashed* 식별자에서 벗어날 수 있습니다.
 
 Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사항을 준수해야 합니다.
+
+## 대상자 일치율 최대화 {#match-rates}
+
+[!DNL Facebook]에서 가장 높은 대상 일치율을 달성하려면 `phone_sha256` 및 `email_lc_sha256` 대상 ID를 사용하는 것이 좋습니다.
+
+이러한 식별자는 [!DNL Facebook]이(가) 플랫폼 간 대상을 일치시키기 위해 사용하는 기본 식별자입니다. 소스 데이터가 이러한 대상 ID에 올바르게 매핑되고 [!DNL Facebook's] 해시 요구 사항을 준수하는지 확인하십시오.
 
 ## 전화번호 해시 요구 사항 {#phone-number-hashing-requirements}
 
@@ -142,7 +165,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 아래 비디오에서는 [!DNL Facebook] 대상을 구성하고 대상을 활성화하는 단계도 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -151,7 +174,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 Facebook 대상을 찾고 **[!UICONTROL 설정]**&#x200B;을 선택합니다.
-2. **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다.
+2. **[!UICONTROL 대상에 연결]**을 선택합니다.
    ![활성화 워크플로에 표시된 Facebook 인증 단계입니다.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Facebook 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 
@@ -170,9 +193,9 @@ Facebook 인증 토큰은 60일마다 만료됩니다. 토큰이 만료되면 �
 1. **[!UICONTROL 대상]** > **[!UICONTROL 계정]**(으)로 이동
 2. (선택 사항) 페이지에서 사용할 수 있는 필터를 사용하여 Facebook 계정만 표시합니다.
    ![Facebook 계정만 표시하도록 필터링](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
-3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**&#x200B;을 선택합니다.
+3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**을 선택합니다.
    ![세부 정보 편집 컨트롤 선택](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**&#x200B;을 선택하고 Facebook 자격 증명으로 다시 인증합니다.
+4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**을 선택하고 Facebook 자격 증명으로 다시 인증합니다.
    ![다시 연결 OAuth 옵션이 있는 모달 창](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
