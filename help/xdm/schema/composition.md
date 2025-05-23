@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스키마 컴포지션 기본 사항
 description: XDM(Experience Data Model) 스키마와 Adobe Experience Platform에서 스키마를 구성하기 위한 빌딩 블록, 원칙 및 모범 사례에 대해 알아봅니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
 workflow-type: tm+mt
-source-wordcount: '4373'
+source-wordcount: '4350'
 ht-degree: 8%
 
 ---
@@ -55,24 +55,24 @@ Experience Platform에서 사용하기 위한 데이터는 다음 두 가지 동
 >title="스키마의 ID"
 >abstract="ID는 이메일 주소 또는 마케팅 ID와 같은 주제를 식별하는 데 사용할 수 있는 스키마 내의 핵심 필드입니다. 이들 필드는 각 개인의 ID 그래프를 구성하고 고객 프로필을 만드는 데 사용됩니다. 스키마의 ID에 대한 자세한 내용은 설명서를 참조하십시오."
 
-스키마는 Experience Platform으로 데이터를 수집하는 데 사용됩니다. 이 데이터는 여러 서비스에 걸쳐 개별 엔터티의 단일 통합 보기를 만드는 데 사용할 수 있습니다. 따라서 고객 ID용 스키마를 디자인할 때는 데이터의 출처와 관계없이 주제를 식별하는 데 사용할 수 있는 필드를 고려하는 것이 중요합니다.
+스키마는 Experience Platform에 수집된 데이터의 구조를 정의합니다. 이 데이터는 플랫폼 내에서 여러 서비스를 지원하며 각 개인에 대한 통합된 단일 보기를 만드는 데 도움이 됩니다. 따라서 스키마를 디자인할 때 ID로 표시할 필드를 신중하게 생각하십시오. 이러한 필드는 데이터 세트에서 프로필이 결합하는 방법을 제어합니다.
 
 이 프로세스를 지원하기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터를 수집하면 해당 필드의 데이터가 해당 개인의 &quot;[!UICONTROL ID 그래프]&quot;에 삽입됩니다. 그런 다음 [[!DNL Real-Time Customer Profile]](../../profile/home.md) 및 기타 Experience Platform 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 결합 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;[!UICONTROL ID]&quot;(으)로 표시되는 필드에는 전자 메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko), CRM ID 또는 기타 고유 ID 필드가 포함됩니다. 조직에 고유한 식별자를 고려하십시오. 이러한 식별자는 좋은 &quot;[!UICONTROL ID]&quot; 필드일 수도 있습니다.
+일반적으로 &quot;[!UICONTROL ID]&quot;(으)로 표시되는 필드에는 전자 메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유 ID 필드가 포함됩니다. 조직에 고유한 식별자를 고려하십시오. 이러한 식별자는 좋은 &quot;[!UICONTROL ID]&quot; 필드일 수도 있습니다.
 
-가능한 한 가장 강력한 프로필을 구축하기 위해 데이터를 통합하는 데 도움이 되는 스키마 계획 단계 동안 고객 ID에 대해 고려하는 것이 중요합니다. ID 정보를 통해 디지털 환경을 고객에게 제공하는 방법에 대한 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md)를 참조하세요. 스키마를 만들 때 ID 사용에 대한 [팁은 데이터 모델링 모범 사례 문서를 참조하십시오](./best-practices.md#data-validation-fields).
+ID 정보를 통해 디지털 환경을 고객에게 제공하는 방법에 대한 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md)를 참조하세요. 스키마를 만들 때 ID 사용에 대한 [팁은 데이터 모델링 모범 사례 문서를 참조하십시오](./best-practices.md#data-validation-fields).
 
 ID 데이터를 Experience Platform으로 전송하는 방법에는 두 가지가 있습니다.
 
 1. [스키마 편집기 UI](../ui/fields/identity.md)를 통해 또는 [스키마 레지스트리 API](../api/descriptors.md#create)를 사용하여 ID 설명자를 개별 필드에 추가하는 중
-1. [`identityMap` 필드 사용](#identityMap)
+2. [`identityMap` 필드 사용](#identityMap)
 
 #### `identityMap` {#identityMap}
 
 `identityMap`은(는) 연결된 네임스페이스와 함께 개인의 다양한 id 값을 설명하는 맵 형식 필드입니다. 이 필드는 스키마 자체의 구조 내에서 ID 값을 정의하는 대신 스키마에 ID 정보를 제공하는 데 사용할 수 있습니다.
 
-`identityMap`을(를) 사용할 때 발생하는 주요 단점은 ID가 데이터에 임베드되고 그 결과 더 이상 표시되지 않는다는 것입니다. 원시 데이터를 수집하는 경우 실제 스키마 구조 내에서 개별 ID 필드를 대신 정의해야 합니다.
+`identityMap`을(를) 사용할 때의 주된 단점은 ID 값이 중첩되어 있으며 세그먼트 빌더 또는 일부 타사 통합과 같은 최상위 수준 ID 필드를 예상하는 도구에서 작업하기 어려울 수 있다는 것입니다.
 
 >[!NOTE]
 >
@@ -129,13 +129,13 @@ ID 데이터를 Experience Platform으로 전송하는 방법에는 두 가지�
 
 | 지원되는 변경 사항 | 주요 변경 사항(지원되지 않음) |
 | --- | --- |
-| <ul><li>리소스에 새 필드 추가</li><li>필수 필드를 선택 사항으로 설정</li><li>새로운 필수 필드 소개*</li><li>리소스의 표시 이름 및 설명 변경</li><li>프로필에 참여할 스키마 활성화</li></ul> | <ul><li>이전에 정의한 필드 제거</li><li>기존 필드 이름 변경 또는 재정의</li><li>이전에 지원되는 필드 값 제거 또는 제한</li><li>기존 필드를 트리의 다른 위치로 이동</li><li>스키마 삭제</li><li>프로필에 참여하지 못하도록 스키마 비활성화</li></ul> |
+| <ul><li>리소스에 새 필드 추가</li><li>필수 필드를 선택 사항으로 설정</li><li>새로운 필수 필드 소개*</li><li>리소스의 표시 이름 및 설명 변경</li><li>프로필에 참여할 스키마 활성화</li></ul> | <ul><li>이전에 정의한 필드 제거</li><li>기존 필드 이름 변경 또는 재정의</li><li>이전에 지원되는 필드 값 제거 또는 제한</li><li>기존 필드를 트리의 다른 위치로 이동</li><li>스키마 삭제</li><li>프로필에 참여하지 못하도록 스키마 비활성화</li><li>프로필이 활성화되고 데이터를 수집한 스키마의 기본 ID 필드 변경</li></ul> |
 
 \**아래 섹션을 참조하여 [새 필수 필드 설정](#post-ingestion-required-fields)에 대한 중요 고려 사항을 확인하십시오.*
 
 ### 필수 필드
 
-개별 스키마 필드는 [필요에 따라 표시](../ui/fields/required.md)할 수 있습니다. 즉, 수집된 모든 레코드에는 유효성 검사를 통과하기 위해 해당 필드의 데이터가 포함되어야 합니다. 예를 들어, 스키마의 기본 ID 필드를 필요에 따라 설정하면 수집된 모든 레코드가 실시간 고객 프로필에 참여하게 될 수 있습니다. 마찬가지로 타임스탬프 필드를 필요에 따라 설정하면 모든 시계열 이벤트가 시간순으로 보존됩니다.
+개별 스키마 필드는 [필요에 따라 표시](../ui/fields/required.md)할 수 있습니다. 즉, 수집된 모든 레코드에는 유효성 검사를 통과하기 위해 해당 필드의 데이터가 포함되어야 합니다. 예를 들어, 스키마의 기본 ID 필드를 필요에 따라 설정하면 수집된 모든 레코드가 실시간 고객 프로필에 참여하게 될 수 있습니다. 마찬가지로 타임스탬프 필드를 필수 로 설정하면 모든 시계열 이벤트가 시간순으로 보존됩니다.
 
 >[!IMPORTANT]
 >
@@ -161,9 +161,9 @@ Experience Platform에서는 표준 빌딩 블록이 결합되어 스키마를 �
 
 스키마는 다음 공식을 사용하여 구성됩니다.
 
-**클래스 + 스키마 필드 그룹&ast; = XDM 스키마**
+**클래스 + 스키마 필드 그룹&amp;ast; = XDM 스키마**
 
-&ast;스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. 즉, 필드 그룹을 전혀 사용하지 않고 데이터 세트 스키마를 구성할 수 있습니다.
+&amp;ast;스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. 즉, 필드 그룹을 전혀 사용하지 않고 데이터 세트 스키마를 구성할 수 있습니다.
 
 ### 클래스 {#class}
 

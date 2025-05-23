@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 ID 필드 정의
 description: Experience Platform 사용자 인터페이스에서 ID 필드를 정의하는 방법을 알아봅니다.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3570197ca6cff95368b4facb034386e793033fe2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '665'
 ht-degree: 6%
 
 ---
@@ -46,7 +46,7 @@ ID 필드는 Experience Platform에서 고객 ID 그래프를 구성하는 방�
 
 >[!IMPORTANT]
 >
->기본 ID 필드가 이미 설정된 경우 위의 단계에 따라 스키마의 기본 ID 필드를 변경할 수 있습니다. 그러나 변경 사항을 적용하려면 프로필에서 연결된 데이터 세트를 비활성화한 다음 다시 활성화해야 합니다.
+>실시간 고객 프로필에서 사용할 수 있도록 스키마를 사용하도록 설정하고 데이터를 수집하면 **기본 ID 필드를 변경할 수 없습니다**. 그렇게 하면 유효성 검사 오류가 발생합니다. 다른 기본 ID를 사용해야 하는 경우 업데이트된 ID 구성으로 새 스키마 및 새 데이터 세트를 만들어야 합니다.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
@@ -63,4 +63,3 @@ ID 필드는 Experience Platform에서 고객 ID 그래프를 구성하는 방�
 이 안내서에서는 UI에서 ID 필드를 정의하는 방법을 다룹니다. 이 스키마를 사용하여 데이터가 수집되면 고객 ID 그래프가 스키마의 ID 필드를 반영하도록 업데이트됩니다. UI에서 조직의 개인 그래프를 살펴보려면 [ID 그래프 뷰어](../../../identity-service/features/identity-graph-viewer.md)의 안내서를 참조하십시오.
 
 [!DNL Schema Editor]에서 다른 XDM 필드 유형을 정의하는 방법을 알아보려면 [UI의 필드 정의](./overview.md#special)에 대한 개요를 참조하십시오.
-
