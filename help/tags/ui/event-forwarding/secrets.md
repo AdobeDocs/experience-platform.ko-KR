@@ -2,10 +2,10 @@
 title: 이벤트 전달 시 암호 구성
 description: 이벤트 전달 속성에 사용되는 엔드포인트를 인증하도록 UI에서 보안을 구성하는 방법에 대해 알아봅니다.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
+source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
-source-wordcount: '2426'
-ht-degree: 3%
+source-wordcount: '2577'
+ht-degree: 2%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 3%
 
 | 암호 유형 | 설명 |
 | --- | --- |
+| [!UICONTROL Amazon OAuth 2] | [!DNL Amazon] 서비스를 사용하여 보안 인증을 사용하도록 설정합니다. 시스템은 토큰을 안전하게 저장하고 지정된 간격으로 갱신을 처리합니다. |
 | [!UICONTROL Google OAuth 2] | [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) 및 [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)에서 사용할 [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 인증 사양을 지원하는 몇 가지 특성이 포함되어 있습니다. 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
 | [!UICONTROL HTTP] | 사용자 이름과 암호에 대해 각각 두 개의 문자열 속성을 포함합니다. |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
@@ -44,7 +45,7 @@ ht-degree: 3%
 >id="platform_eventforwarding_secrets_environments"
 >title="시크릿 환경"
 >abstract="시크릿을 이벤트 전달에 사용하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성에 환경이 생성되지 않은 경우 계속하기 전에 환경을 구성해야 합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ko" text="환경 개요"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="환경 개요"
 
 암호를 만들려면 왼쪽 탐색에서 **[!UICONTROL 이벤트 전달]**&#x200B;을 선택한 다음 암호를 추가할 이벤트 전달 속성을 엽니다. 그런 다음 왼쪽 탐색에서 **[!UICONTROL 암호]**&#x200B;를 선택한 다음 **[!UICONTROL 새 암호 만들기]**&#x200B;를 선택합니다.
 
@@ -78,6 +79,7 @@ ht-degree: 3%
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 * [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
+* [[!UICONTROL [!DNL Amazon] OAuth 2]](#amazon-oauth2)
 
 ### [!UICONTROL 토큰] {#token}
 
@@ -186,7 +188,7 @@ Google 계정에 대한 자격 증명을 입력할 수 있는 대화 상자가 �
 
 [!DNL LinkedIn]을(를) 통해 암호를 수동으로 승인해야 함을 알리는 팝오버가 나타납니다. 계속하려면 **[!UICONTROL [!DNL LinkedIn]]**&#x200B;을(를) 사용하여 암호 만들기 및 권한 부여를 선택하십시오.
 
-![[!DNL LinkedIn] 권한 부여 팝오버가 [!UICONTROL 암호를 만들고 승인하는 방법 [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+![LinkedIn 권한 부여 팝오버에서 &quot;LinkedIn으로 암호 만들기 및 승인&quot; 단추를 강조 표시합니다.](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 [!DNL LinkedIn] 자격 증명을 입력하라는 대화 상자가 나타납니다. 화면의 지침에 따라 데이터에 이벤트 전달 액세스 권한을 부여합니다.
 
@@ -209,6 +211,22 @@ Google 계정에 대한 자격 증명을 입력할 수 있는 대화 상자가 �
 ![[!UICONTROL 암호] 탭에서 [!DNL LinkedIn] 암호에 대해 [!UICONTROL 인증 필요]를 강조 표시합니다.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 [!DNL LinkedIn] 자격 증명을 입력하라는 대화 상자가 나타납니다. 화면의 지침에 따라 암호를 다시 인증합니다.
+
+### [!UICONTROL [!DNL Amazon] OAuth 2] {#amazon-oauth2}
+
+[!DNL Amazon] OAuth 2 암호를 만들려면 **[!UICONTROL Type]** 드롭다운에서 **[!UICONTROL [!DNL Amazon]OAuth 2]**&#x200B;을(를) 선택합니다. **[!UICONTROL 암호 만들기]**&#x200B;를 선택합니다.
+
+![[!UICONTROL Type] 필드가 강조 표시된 [!UICONTROL 암호 만들기] 탭.](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
+
+[!DNL Amazon]을(를) 통해 암호를 수동으로 승인해야 함을 알리는 팝오버가 나타납니다. 계속하려면 **[!UICONTROL [!DNL Amazon]]**&#x200B;을(를) 사용하여 암호 만들기 및 권한 부여를 선택하십시오.
+
+![Amazon 인증 팝오버에서 &quot;Amazon으로 암호 만들기 및 승인&quot; 단추를 강조 표시합니다.](../../images/ui/event-forwarding/secrets/amazon-authorization.png)
+
+[!DNL Amazon] 자격 증명을 입력하라는 대화 상자가 나타납니다. 화면의 지침에 따라 데이터에 이벤트 전달 액세스 권한을 부여합니다.
+
+인증 프로세스가 완료되면 새로 만든 암호를 볼 수 있는 **[!UICONTROL 암호]** 탭으로 돌아갑니다. 여기에서 암호의 상태와 만료일을 볼 수 있습니다.
+
+![새로 만든 암호를 강조 표시하는 [!UICONTROL 암호] 탭](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
 
 ## 암호 편집
 

@@ -1,10 +1,10 @@
 ---
 keywords: 이벤트 전달 확장;twitter;twitter 이벤트 전달 확장
 title: Twitter 이벤트 전달 확장
-description: 이 Adobe Experience Platform 이벤트 전달 확장을 사용하면 비즈니스 요구 사항에 맞게 이벤트를 Twitter으로 수집할 수 있습니다.
+description: 이 Adobe Experience Platform 이벤트 전달 확장을 사용하면 비즈니스 요구 사항을 위해 이벤트를 Twitter에 수집할 수 있습니다.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
 source-wordcount: '1048'
 ht-degree: 3%
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 # [!DNL Twitter] 이벤트 전달 확장 기능
 
-[[!DNL Twitter]](https://twitter.com/i/flow/login)은(는) 사용자가 트윗이라고 하는 280자 길이의 메시지를 게시하고 상호 작용하는 온라인 소셜 미디어 및 소셜 네트워킹 서비스입니다. 사용자는 브라우저, 모바일 프론트엔드 소프트웨어를 사용하거나 [API](https://developer.twitter.com/en/docs/twitter-api)를 통해 프로그래밍 방식으로 Twitter과 상호 작용할 수 있습니다
+[[!DNL Twitter]](https://twitter.com/i/flow/login)은(는) 사용자가 트윗이라고 하는 280자 길이의 메시지를 게시하고 상호 작용하는 온라인 소셜 미디어 및 소셜 네트워킹 서비스입니다. 사용자는 브라우저, 모바일 프론트엔드 소프트웨어를 사용하거나 [API](https://developer.twitter.com/en/docs/twitter-api)를 통해 프로그래밍 방식으로 Twitter와 상호 작용할 수 있습니다
 
 [!DNL Twitter] 웹 전환 API [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장을 사용하면 Adobe Experience Platform Edge Network에서 캡처한 데이터를 활용하여 [!DNL Twitter]에 보낼 수 있습니다. 이 문서에서는 확장의 사용 사례, 설치 방법 및 해당 기능을 이벤트 전달 [규칙](../../../ui/managing-resources/rules.md)에 통합하는 방법에 대해 설명합니다.
 
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 ## 사용 사례
 
-[!DNL Twitter]에 있는 Edge Network의 데이터를 사용하여 고객 분석 및 타깃팅 기능을 이용하려면 이 확장을 사용해야 합니다.
+[!DNL Twitter]의 Edge Network 데이터를 사용하여 고객 분석 및 타깃팅 기능을 활용하려는 경우 이 확장 기능을 사용해야 합니다.
 
 예를 들어 조직의 마케팅 팀을 생각해 보십시오. 팀은 웹 사이트의 사용자 인터랙션 이벤트 데이터를 웹 사이트의 이벤트 데이터로 캡처하고 이 이벤트 전달 확장을 사용하여 [!DNL Twitter]에 로드합니다.
 
@@ -31,7 +31,7 @@ ht-degree: 3%
 
 ## [!DNL Twitter]개의 필수 구성 요소 및 보호 기능 {#prerequisites}
 
-이 확장을 사용하려면 올바른 [!DNL Twitter] 계정이 있어야 합니다. 아직 계정이 없는 경우 [[!DNL Twitter] 등록 페이지](https://help.twitter.com/en/using-twitter/create-twitter-account)(으)로 이동하여 등록하고 계정을 만드십시오.
+이 확장을 사용하려면 올바른 [!DNL Twitter] 계정이 있어야 합니다. 아직 계정이 없는 경우 [[!DNL Twitter] 등록 페이지](https://help.twitter.com/en/using-twitter/create-twitter-account)&#x200B;(으)로 이동하여 등록하고 계정을 만드십시오.
 
 계정을 [!DNL Twitter] 개발자 계정으로 설정해야 합니다. 개발자로 등록하는 방법은 [[!DNL Twitter] 개발자 계정](https://developer.twitter.com/en/support/twitter-api/developer-account1)을 참조하세요.
 
@@ -45,7 +45,7 @@ Experience Platform을 [!DNL Twitter]에 연결하려면 다음 입력이 필요
 
 | 키 유형 | 설명 |
 | --- | --- |
-| 소비자 키 | {&#x200B;0} API에 액세스하기 위한 앱의 API 키. [!DNL Twitter] 지침은 [api 키 및 암호](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret)의 [!DNL Twitter] 설명서를 참조하십시오. | |
+| 소비자 키 | {&#x200B;0} API에 액세스하기 위한 앱의 API 키. [!DNL Twitter] 지침은 [api 키 및 암호](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret)의 [!DNL Twitter] 설명서를 참조하십시오. |
 | 소비자 암호 | API 암호를 사용하면 앱이 [!DNL Twitter] API에 액세스할 수 있습니다. 지침은 [api 키 및 암호](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret)의 [!DNL Twitter] 설명서를 참조하십시오. |
 | 토큰 암호 | OAuth를 통해 [!DNL Twitter] API에 인증하는 데 사용되는 앱의 만료되지 않는 토큰 암호입니다. 지침은 [사용 액세스 토큰 가져오기](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)에 대한 [!DNL Twitter] 설명서를 참조하세요. |
 | 액세스 토큰 | OAuth를 통해 [!DNL Twitter] API 인증에 사용되는 앱의 만료되지 않는 액세스 토큰입니다. 지침은 [사용 액세스 토큰 가져오기](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)에 대한 [!DNL Twitter] 설명서를 참조하세요. |
