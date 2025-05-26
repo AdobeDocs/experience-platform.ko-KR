@@ -45,7 +45,7 @@ ht-degree: 2%
 >id="platform_eventforwarding_secrets_environments"
 >title="시크릿 환경"
 >abstract="시크릿을 이벤트 전달에 사용하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성에 환경이 생성되지 않은 경우 계속하기 전에 환경을 구성해야 합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="환경 개요"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ko" text="환경 개요"
 
 암호를 만들려면 왼쪽 탐색에서 **[!UICONTROL 이벤트 전달]**&#x200B;을 선택한 다음 암호를 추가할 이벤트 전달 속성을 엽니다. 그런 다음 왼쪽 탐색에서 **[!UICONTROL 암호]**&#x200B;를 선택한 다음 **[!UICONTROL 새 암호 만들기]**&#x200B;를 선택합니다.
 
