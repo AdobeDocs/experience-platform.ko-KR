@@ -6,9 +6,9 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 28eb48ec9fb7c9c5a5927c8582960cbd99199613
+source-git-commit: a2d93b5c13194707e8a87d633e47d0446b9afabd
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '782'
 ht-degree: 36%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 36%
 # 태그 {#tags}
 
 * [태그 개요](./home.md)
-* 시작하기 {#get-started}
+* 시작 {#get-started}
    * [빠른 시작 안내서](./quick-start/quick-start.md)
    * [구현 안내서](./quick-start/implementation-guides.md)
 * UI 안내서 {#ui}
@@ -41,7 +41,7 @@ ht-degree: 36%
       * [SFTP 호스트](./ui/publishing/hosts/sftp-host.md)
    * 환경 {#environments}
       * [개요](./ui/publishing/environments.md)
-      * [Adobe Experience Platform Debugger를 사용하여 포함 코드 테스트](./ui/publishing/embed-code-testing.md)
+      * [Adobe Experience Platform Debugger를 사용하여 임베드 코드 테스트](./ui/publishing/embed-code-testing.md)
    * [빌드](./ui/publishing/builds.md)
    * [라이브러리](./ui/publishing/libraries.md)
    * [자체 호스팅 라이브러리](./ui/publishing/hosts/self-hosting-libraries.md)
@@ -152,7 +152,7 @@ ht-degree: 36%
          * [릴리스 정보](./extensions/client/plugins/release-notes.md)
       * [연결](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
-      * [Usercentrics CMP v2의 쿠키 동의 관리](https://exchange.adobe.com/apps/ec/107037)
+      * Usercentrics CMP v2의 [쿠키 동의 관리](https://exchange.adobe.com/apps/ec/107037)
       * 코어 {#core}
          * [개요](./extensions/client/core/overview.md)
          * [릴리스 정보](./extensions/client/core/release-notes.md)
@@ -187,7 +187,7 @@ ht-degree: 36%
          * [개요](./extensions/client/meta/overview.md)
       * [모니터](https://exchange.adobe.com/apps/ec/106544)
       * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
-      * [쿠키에 대한 OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)
+      * 쿠키에 대한 [OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)
       * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)
       * [Persado 연결](https://exchange.adobe.com/apps/ec/103745)
       * [Pinterest 전환 추적](https://exchange.adobe.com/apps/ec/100523)
@@ -217,6 +217,7 @@ ht-degree: 36%
       * [개요](./extensions/server/overview.md)
       * Adobe Experience Platform 클라우드 커넥터 {#cloud-connector}
          * [개요](./extensions/server/cloud-connector/overview.md)
+         * [mTLS 인증서](./extensions/server/cloud-connector/mtls.md)
          * [릴리스 정보](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL Adform] {#adform}
          * [개요](./extensions/server/adform/overview.md)
@@ -226,7 +227,7 @@ ht-degree: 36%
          * [개요](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [개요](./extensions/server/braze/overview.md)
-      * [Google Analytics용 Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
+      * Google Analytics용 [Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
       * 코어 {#core}
          * [개요](./extensions/server/core/overview.md)
       * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)
