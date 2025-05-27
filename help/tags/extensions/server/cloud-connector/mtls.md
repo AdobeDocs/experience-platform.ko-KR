@@ -32,7 +32,7 @@ ht-degree: 1%
 | 스테이징 | 스테이징 환경은 선택 사항이며 승인된 팀 구성원이 라이브러리를 게시하기 전에 테스트하고 승인할 수 있습니다. |
 | 프로덕션 | 프로덕션 환경은 라이브 프로덕션 데이터에 사용됩니다. |
 
-![환경 선택 화면에서 [!UICONTROL 개발을 위해 ]을(를) 강조 표시합니다.](../../../images/extensions/server/cloud-connector/select-environment.png)
+![환경 선택 화면에서 [!UICONTROL 개발을 위해 &#x200B;]을(를) 강조 표시합니다.](../../../images/extensions/server/cloud-connector/select-environment.png)
 
 **[!UICONTROL 환경 만들기]** 페이지에서 **[!UICONTROL 이름]**&#x200B;을 입력하고 **[!UICONTROL 호스트 선택]** 드롭다운 메뉴에서 ***Adobe 관리***&#x200B;를 선택합니다. **[!UICONTROL 인증서]**&#x200B;이(가) ***자동으로 추가됨***&#x200B;입니다. 마지막으로 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
