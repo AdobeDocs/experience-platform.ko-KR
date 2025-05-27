@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 7b1dbec504ba11983958c3452878cf410b2a490c
+source-git-commit: dbcfd7bfbf2f2d8268d3d8b5748f75ec9f186597
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1078'
 ht-degree: 35%
 
 ---
@@ -242,6 +242,7 @@ ht-degree: 35%
    - [암호화된 데이터 수집](tutorials/api/encrypt-data.md)
    - [데이터 흐름을 초안으로 저장](tutorials/api/draft.md)
    - [데이터 흐름에 액세스 레이블 적용](tutorials/api/labels.md)
+   - [비공개 엔드포인트 사용](tutorials/api/private-link.md)
 - UI 튜토리얼 {#ui-tutorials}
    - 소스 연결 만들기 {#create}
       - Adobe 애플리케이션 {#adobe-applications}
@@ -378,7 +379,7 @@ ht-degree: 35%
       - [탐색 사양 구성](sources-sdk/config/explorespec.md)
    - 셀프서비스 소스(일괄 SDK) API 안내서 {#self-serve-api}
       - [셀프서비스 소스(일괄 SDK) API 개요](sources-sdk/api/api-overview.md)
-      - [시작하기](sources-sdk/api/getting-started.md)
+      - [시작](sources-sdk/api/getting-started.md)
       - [연결 사양 만들기](sources-sdk/api/create.md)
       - [연결 사양 업데이트](sources-sdk/api/update-connection-specs.md)
       - [플로우 사양 업데이트](sources-sdk/api/update-flow-specs.md)
