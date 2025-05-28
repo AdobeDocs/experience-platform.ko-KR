@@ -1,14 +1,15 @@
 ---
 title: mTLS(상호 전송 계층 보안) 개요
 description: mTLS를 사용하여 이벤트 전달을 위해 Adobe에서 발급한 공개 인증서를 안전하게 검색하는 방법에 대해 알아봅니다.
-source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
+exl-id: e8ee8655-213d-4d2a-93d4-d62824b53b1d
+source-git-commit: ab16cc3f70ec54460c7c4834e665c828d75d4d9e
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 1%
+source-wordcount: '638'
+ht-degree: 2%
 
 ---
 
-# 상호 전송 계층 보안 [!DNL mTLS] 개요
+# 상호 전송 계층 보안([!DNL mTLS]) 개요
 
 [!UICONTROL 환경 UI]에서 상호 전송 계층 보안([!DNL mTLS]) 인증서를 바인딩하여 확장의 보안을 제어하십시오. [!DNL mTLS] 인증서는 보안 통신에서 서버 또는 클라이언트의 ID를 증명하는 디지털 자격 증명입니다. [!DNL mTLS] 서비스 API를 사용하는 경우 이러한 인증서를 통해 Adobe Experience Platform 이벤트 전달과의 상호 작용을 확인하고 암호화할 수 있습니다. 이 프로세스는 데이터를 보호할 뿐만 아니라 모든 연결이 신뢰할 수 있는 파트너로부터 연결되는지 확인합니다.
 
@@ -32,7 +33,7 @@ ht-degree: 1%
 | 스테이징 | 스테이징 환경은 선택 사항이며 승인된 팀 구성원이 라이브러리를 게시하기 전에 테스트하고 승인할 수 있습니다. |
 | 프로덕션 | 프로덕션 환경은 라이브 프로덕션 데이터에 사용됩니다. |
 
-![환경 선택 화면에서 [!UICONTROL 개발을 위해 &#x200B;]을(를) 강조 표시합니다.](../../../images/extensions/server/cloud-connector/select-environment.png)
+![환경 선택 화면에서 [!UICONTROL 개발을 위해 ]을(를) 강조 표시합니다.](../../../images/extensions/server/cloud-connector/select-environment.png)
 
 **[!UICONTROL 환경 만들기]** 페이지에서 **[!UICONTROL 이름]**&#x200B;을 입력하고 **[!UICONTROL 호스트 선택]** 드롭다운 메뉴에서 ***Adobe 관리***&#x200B;를 선택합니다. **[!UICONTROL 인증서]**&#x200B;이(가) ***자동으로 추가됨***&#x200B;입니다. 마지막으로 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
@@ -48,14 +49,14 @@ ht-degree: 1%
 
 다음 인증서 세부 정보가 표시됩니다.
 
-| 환경 | 설명 |
+| 필드 이름 | 설명 |
 | --- | --- |
 | 인증서 | 다음을 포함한 인증서 세부 정보:<ul><li>**이름**: 인증서의 이름입니다.</li><li>**만든 날짜**: 인증서가 만들어진 날짜입니다.</li><li>**상태**: 인증서의 현재 상태:<ul><li>**현재**: 인증서가 현재 사용 중입니다.</li><li>**사용되지 않음**: 인증서가 사용 중이지 아직 만료되지 않았습니다. 계속 사용하도록 선택할 수 있습니다.</li><li>**만료됨**: 인증서가 만료되었으며 회색으로 표시되어 더 이상 사용할 수 없습니다.</li></ul></ul> |
 | 만료 | 인증서 만료 날짜. |
 | Variable Name | 인증서의 변수 이름입니다. |
 | 상태 | 인증서의 현재 상태:<ul><li>**배포됨**: 인증서가 배포되었으며 활성 상태입니다.</li><li>**배포**: 인증서를 배포하는 중입니다.</li><li>**배포가 필요합니다**: 이 상태는 사용되지 않는 인증서를 선택할 때 나타납니다.</li></ul> |
 
-![개발 환경 편집 페이지에서 [!UICONTROL 인증서] 세부 정보를 강조 표시합니다.](../../../images/extensions/server/cloud-connector/create-environment.png)
+![개발 환경 편집 페이지에서 [!UICONTROL 인증서] 세부 정보를 강조 표시합니다.](../../../images/extensions/server/cloud-connector/certificate-details.png)
 
 ### 오래된 인증서 선택 및 배포 {#deploy-obsolete-certificate}
 

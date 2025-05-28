@@ -2,9 +2,9 @@
 title: Cloud Connector 확장 개요
 description: Adobe Experience Platform의 Cloud Connector 이벤트 전달 확장에 대해 알아봅니다.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
+source-git-commit: e832694fed5dbb86b5ed544473d6a79e500a6222
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1716'
 ht-degree: 68%
 
 ---
@@ -126,7 +126,7 @@ arc.ruleStash.[EXTENSION-NAME-HERE].responses.[RESPONSE-KEY-HERE]
 arc.ruleStash.adobe-cloud-connector.reponses.productDetails 
 ```
 
-## 이벤트 전달 규칙에서 상호 전송 계층 보안 [!DNL mTLS] 사용 {#mtls-rules}
+## 이벤트 전달 라이브러리에 상호 전송 계층 보안([!DNL mTLS]) 규칙 추가 {#mtls-rules}
 
 [!DNL mTLS] 인증서는 보안 통신에서 서버 또는 클라이언트의 ID를 증명하는 디지털 자격 증명입니다. [!DNL mTLS] 서비스 API를 사용하는 경우 이러한 인증서를 통해 Adobe Experience Platform 이벤트 전달과의 상호 작용을 확인하고 암호화할 수 있습니다. 이 프로세스는 데이터를 보호할 뿐만 아니라 모든 연결이 신뢰할 수 있는 파트너로부터 연결되는지 확인합니다.
 
@@ -134,7 +134,7 @@ arc.ruleStash.adobe-cloud-connector.reponses.productDetails
 
 확장을 설치하려면 [이벤트 전달 속성을 만들거나](../../../ui/event-forwarding/overview.md#properties) 대신 편집할 기존 속성을 선택하십시오.
 
-왼쪽 패널에서 **[!UICONTROL 확장]**&#x200B;을 선택합니다. **[!UICONTROL 카탈로그]** 탭에서 **[!UICONTROL Adobe Cloud 커넥터]** 실시간 전환 API 카드를 선택한 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
+왼쪽 패널에서 **[!UICONTROL 확장]**&#x200B;을 선택합니다. **[!UICONTROL 카탈로그]** 탭에서 **[!UICONTROL Adobe Cloud Connector]** 카드를 선택한 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
 
 ![설치를 강조 표시하는 [!DNL Adobe Cloud Connector] 확장 카드를 표시하는 확장 카탈로그입니다.](../../../images/extensions/server/cloud-connector/install-extension.png)
 
@@ -142,7 +142,7 @@ arc.ruleStash.adobe-cloud-connector.reponses.productDetails
 
 >[!NOTE]
 >
->[!DNL mTLS]을(를) 사용하도록 규칙을 구성하려면 Adobe Cloud Connector 버전 1.2.4 이상이 있어야 합니다.
+>[!DNL mTLS]을(를) 사용하도록 규칙을 구성하려면 Adobe Cloud Connector 버전 1.2.4 이상이 설치되어 있어야 합니다.
 
 확장을 설치한 후 [!DNL mTLS]을(를) 사용하는 이벤트 전달 규칙을 만들어 라이브러리에 추가할 수 있습니다.
 
@@ -150,7 +150,7 @@ arc.ruleStash.adobe-cloud-connector.reponses.productDetails
 
 ![이벤트 전달 규칙 작업 구성을 추가하는 데 필요한 필드가 강조 표시된 이벤트 전달 속성 규칙 보기입니다.](../../../images/extensions/server/cloud-connector/event-action.png)
 
-선택한 후 [!DNL mTLS] 요청에 대한 방법 및 대상을 구성하는 추가 컨트롤이 나타납니다. 환경에서 활성 인증서 사용을 활성화하려면 **[!UICONTROL [!DNL mTLS]]**&#x200B;에서 활성화를 선택한 다음 **[!UICONTROL 변경 내용 유지]**&#x200B;를 선택하여 규칙을 저장합니다.
+선택한 후 [!DNL mTLS] 요청에 대한 메서드 및 대상을 구성하는 추가 컨트롤이 나타납니다. 환경에서 활성 인증서 사용을 활성화하려면 **[!UICONTROL [!DNL mTLS]]**&#x200B;에서 활성화를 선택한 다음 **[!UICONTROL 변경 내용 유지]**&#x200B;를 선택하여 규칙을 저장합니다.
 
 ![이벤트 전달 속성 규칙 보기(추가 제어 필드 및 변경 내용 강조 표시 포함)](../../../images/extensions/server/cloud-connector/save-rule.png)
 
@@ -160,6 +160,6 @@ arc.ruleStash.adobe-cloud-connector.reponses.productDetails
 
 ## 다음 단계
 
-이 안내서에서는 이벤트 전달에서 mTLS 규칙을 설정하는 방법을 다룹니다. 환경에 대한 mTLS 설정에 대한 자세한 내용은 [상호 전송 계층 보안 [!DNL mTLS] 안내서](../cloud-connector/mtls.md)를 참조하십시오.
+이 안내서에서는 이벤트 전달에서 mTLS 규칙을 설정하는 방법을 다룹니다. 환경에 대한 mTLS 설정에 대한 자세한 내용은 [상호 전송 계층 보안([!DNL mTLS]) 안내서](../cloud-connector/mtls.md)를 참조하십시오.
 
 Experience Platform의 이벤트 전달 기능에 대한 자세한 내용은 [이벤트 전달 개요](../../../ui/event-forwarding/overview.md)를 참조하세요.
