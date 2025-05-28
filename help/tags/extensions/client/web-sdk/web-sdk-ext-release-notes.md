@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+source-git-commit: 03cc702eced26453b5923bb63739c0cb739e8c8f
 workflow-type: tm+mt
-source-wordcount: '2652'
+source-wordcount: '2677'
 ht-degree: 24%
 
 ---
@@ -12,6 +12,13 @@ ht-degree: 24%
 # Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform Web SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Experience Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md)를 참조하십시오.
+
+
+## 버전 2.30.1 - 2025년 5월 27일 수요일
+
+**수정 사항 및 개선 사항**
+
+- 조직에 기본 샌드박스가 설정되지 않은 경우 업데이트 변수 보기가 충돌하는 문제가 해결되었습니다.
 
 ## 버전 2.30.0 - 2025년 5월 21일 목요일
 
@@ -179,7 +186,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
 **새로운 기능**
 
-- 데이터 스트림 ID[&#128279;](../../../../datastreams/overrides.md)의 명령당 재정의에 대한 지원을 추가했습니다.
+- 데이터 스트림 ID](../../../../datastreams/overrides.md)의 명령당 [재정의에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
