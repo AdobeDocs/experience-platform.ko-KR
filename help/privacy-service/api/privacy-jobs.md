@@ -5,14 +5,20 @@ title: 개인 정보 작업 API 엔드포인트
 description: Privacy Service API를 사용하여 Experience Cloud 애플리케이션에 대한 개인 정보 작업을 관리하는 방법을 알아봅니다.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 26a50f21c1ebebf485eaf62712bd02de3406cceb
+source-git-commit: ec99b2a8f772e77d0a3957fc35b8cea112b91cba
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1861'
 ht-degree: 1%
 
 ---
 
 # 개인 정보 작업 엔드포인트
+
+>[!IMPORTANT]
+>
+>미국 주 개인 정보 보호법의 수가 증가하는 것을 지원하기 위해 Privacy Service에서 `regulation_type` 값을 변경하고 있습니다. **12 June 2025**&#x200B;부터 상태 약어(예: `ucpa_ut_usa`)를 포함하는 새 값을 사용하십시오. 이전 값(예: `ucpa_usa`)은 **28 July 2025** 이후에 작동을 중지합니다.
+>
+>이 기한 전에 통합을 업데이트하여 요청 실패를 방지하십시오.
 
 이 문서에서는 API 호출을 사용하여 개인 정보 작업을 사용하는 방법을 다룹니다. 특히 [!DNL Privacy Service] API에서 `/job` 끝점을 사용하는 경우를 다룹니다. 이 안내서를 읽기 전에 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 할 중요한 정보는 [시작 안내서](./getting-started.md)를 참조하십시오.
 
@@ -42,7 +48,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{REGULATION}` | 쿼리할 규정 유형. 허용되는 값은 다음과 같습니다. <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`dpdpa`</li><li>`fdbr_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_usa`</li><li>`mhmda_usa`</li><li>`ndpa_usa`</li><li>`nhpa_usa`</li><li>`njdpa_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>위의 값이 나타내는 개인 정보 보호 규정에 대한 자세한 내용은 [지원되는 규정에 대한 개요를 참조하십시오](../regulations/overview.md). |
+| `{REGULATION}` | 쿼리할 규정 유형. 허용되는 값은 다음과 같습니다. <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>위의 값이 나타내는 개인 정보 보호 규정에 대한 자세한 내용은 [지원되는 규정에 대한 개요를 참조하십시오](../regulations/overview.md). |
 | `{PAGE}` | 0 기반 번호 매기기를 사용하여 표시할 데이터 페이지입니다. 기본값은 `0`입니다. |
 | `{SIZE}` | 각 페이지에 표시할 결과 수. 기본값은 `100`이고 최대값은 `1000`입니다. 최대값을 초과하면 API가 400 코드 오류를 반환합니다. |
 | `{status}` | 기본 동작은 모든 상태를 포함하는 것입니다. 상태 유형을 지정하면 요청은 해당 상태 유형과 일치하는 개인 정보 작업만 반환합니다. 허용되는 값은 다음과 같습니다. <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -76,9 +82,9 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->Privacy Service은 데이터 주체 및 소비자 권한 요청용으로만 사용됩니다. 데이터 정리 또는 유지 관리를 위한 다른 Privacy Service 사용은 지원되지 않거나 허용되지 않습니다. Adobe은 적시에 이를 이행할 법적 의무가 있다. 따라서 프로덕션 전용 환경이며 유효한 개인 정보 보호 요청에 대한 불필요한 백로그를 만들기 때문에 Privacy Service에 대한 로드 테스트는 허용되지 않습니다.
+>Privacy Service은 데이터 주체 및 소비자 권한 요청만을 위한 것입니다. 데이터 정리 또는 유지 관리를 위한 다른 Privacy Service 사용은 지원되지 않거나 허용되지 않습니다. Adobe은 적시에 이를 이행할 법적 의무가 있습니다. 따라서 Privacy Service은 프로덕션 전용 환경이며 유효한 개인 정보 보호 요청에 대한 불필요한 백로그를 만들기 때문에 에 대한 로드 테스트가 허용되지 않습니다.
 >
->이제 서비스 남용을 방지하기 위해 엄격한 일일 업로드 제한이 적용됩니다. 시스템을 남용하는 것으로 확인된 사용자는 서비스에 액세스할 수 없게 됩니다. 그런 다음 후속 회의가 그들과 함께 개최되어 그들의 행동에 대해 이야기하고 Privacy Service에 허용되는 사용에 대해 논의합니다.
+>이제 서비스 남용을 방지하기 위해 엄격한 일일 업로드 제한이 적용됩니다. 시스템을 남용하는 것으로 확인된 사용자는 서비스에 액세스할 수 없게 됩니다. 그런 다음 후속 회의가 그들과 함께 개최되어 그들의 행동에 대해 이야기하고 Privacy Service의 허용 가능한 사용에 대해 논의합니다.
 
 새 Job 요청을 작성하기 전에 먼저 데이터에 액세스하거나, 삭제하거나, 판매를 거부하려는 데이터 주체에 대한 식별 정보를 수집해야 합니다. 필요한 데이터가 있으면 `/jobs` 끝점에 대한 POST 요청의 페이로드에 제공해야 합니다.
 
@@ -168,9 +174,9 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `companyContexts` **(필수)** | 조직의 인증 정보가 포함된 배열입니다. 나열된 각 식별자에는 다음 속성이 포함됩니다. <ul><li>`namespace`: 식별자의 네임스페이스입니다.</li><li>`value`: 식별자의 값입니다.</li></ul>식별자 중 하나에서 `imsOrgId`을(를) `namespace`(으)로 사용하고 `value`에 조직의 고유 ID가 포함된 것은 **필수**&#x200B;입니다. <br/><br/>추가 식별자는 제품별 회사 한정자(예: `Campaign`)일 수 있으며, 조직에 속한 Adobe 응용 프로그램과의 통합을 식별합니다. 잠재적 값에는 계정 이름, 클라이언트 코드, 테넌트 ID 또는 기타 애플리케이션 식별자가 포함됩니다. |
+| `companyContexts` **(필수)** | 조직의 인증 정보가 포함된 배열입니다. 나열된 각 식별자에는 다음 속성이 포함됩니다. <ul><li>`namespace`: 식별자의 네임스페이스입니다.</li><li>`value`: 식별자의 값입니다.</li></ul>식별자 중 하나에서 `imsOrgId`을(를) `namespace`(으)로 사용하고 `value`에 조직의 고유 ID가 포함된 것은 **필수**&#x200B;입니다. <br/><br/>추가 식별자는 제품별 회사 한정자(예: `Campaign`)일 수 있으며, 조직에 속한 Adobe 애플리케이션과의 통합을 식별합니다. 잠재적 값에는 계정 이름, 클라이언트 코드, 테넌트 ID 또는 기타 애플리케이션 식별자가 포함됩니다. |
 | `users` **(필수)** | 액세스하거나 삭제하려는 정보를 가진 하나 이상의 사용자 컬렉션이 포함된 배열입니다. 단일 요청으로 최대 1000명의 사용자를 제공할 수 있습니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`: 응답 데이터에서 개별 작업 ID를 구분하는 데 사용되는 사용자의 식별자입니다. 이 값을 쉽게 참조하거나 나중에 조회할 수 있도록 고유하고 쉽게 식별 가능한 문자열을 선택하는 것이 좋습니다.</li><li>`action`: 사용자 데이터에 대해 수행할 작업을 나열하는 배열입니다. 수행하려는 작업에 따라 이 배열에는 `access`, `delete` 또는 두 가지가 모두 포함되어야 합니다.</li><li>`userIDs`: 사용자의 ID 컬렉션입니다. 단일 사용자가 가질 수 있는 ID의 수는 9개로 제한됩니다. 각 ID는 `namespace`, `value` 및 네임스페이스 한정자(`type`)로 구성됩니다. 이러한 필수 속성에 대한 자세한 내용은 [부록](appendix.md)을 참조하십시오.</li></ul> `users` 및 `userIDs`에 대한 자세한 내용은 [문제 해결 안내서](../troubleshooting-guide.md#user-ids)를 참조하십시오. |
-| `include` **(필수)** | 처리에 포함할 Adobe 제품의 배열입니다. 이 값이 없거나 비어 있으면 요청이 거부됩니다. 조직이 통합한 제품만 포함합니다. 자세한 내용은 부록의 [수락된 제품 값](appendix.md)에 대한 섹션을 참조하십시오. |
+| `include` **(필수)** | 처리에 포함할 Adobe 제품 배열. 이 값이 없거나 비어 있으면 요청이 거부됩니다. 조직이 통합한 제품만 포함합니다. 자세한 내용은 부록의 [수락된 제품 값](appendix.md)에 대한 섹션을 참조하십시오. |
 | `expandIDs` | `true`(으)로 설정된 경우 응용 프로그램에서 ID를 처리하기 위한 최적화를 나타내는 선택적 속성입니다(현재 [!DNL Analytics]에서만 지원됨). 생략하면 이 값의 기본값은 `false`입니다. |
 | `priority` | 요청 처리에 대한 우선 순위를 설정하는 Adobe Analytics에서 사용하는 선택적 속성입니다. 허용되는 값은 `normal` 및 `low`입니다. `priority`을(를) 생략하면 기본 동작은 `normal`입니다. |
 | `mergePolicyId` | 실시간 고객 프로필(`profileService`)에 대한 개인 정보 보호 요청을 할 때 선택적으로 ID 결합에 사용할 특정 [병합 정책](../../profile/merge-policies/overview.md)의 ID를 제공할 수 있습니다. 병합 정책을 지정하여 개인 정보 보호 요청은 고객에 대한 데이터를 반환할 때 대상 정보를 포함할 수 있습니다. 요청당 하나의 병합 정책만 지정할 수 있습니다. 병합 정책이 제공되지 않으면 세그멘테이션 정보가 응답에 포함되지 않습니다. |
