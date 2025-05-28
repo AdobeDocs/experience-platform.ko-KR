@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 5월
 description: Adobe Experience Platform의 2025년 5월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: cf88ed1082085fac28553dcc7c7be27c517adb22
+source-git-commit: 6ab9302a40547349c8d0390baafd8591ed6859e1
 workflow-type: tm+mt
-source-wordcount: '1368'
-ht-degree: 41%
+source-wordcount: '1530'
+ht-degree: 42%
 
 ---
 
@@ -19,12 +19,13 @@ ht-degree: 41%
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/releases/latest)
 >- [페더레이션된 대상자 컴포지션](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **릴리스 일자: 2025년 5월 20일 수요일**
 
 Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 
+- [AI 어시스턴트](#ai-assistant)
 - [카탈로그 서비스](#catalog-service)
 - [데이터 준비](#data-prep)
 - [대상](#destinations)
@@ -33,6 +34,18 @@ Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 - [샌드박스](#sandboxes)
 - [Segmentation Service](#segmentation-service)
 - [소스](#sources)
+
+## AI 어시스턴트 {#ai-assistant}
+
+Adobe Experience Platform의 AI 어시스턴트는 Adobe 애플리케이션에서 워크플로를 가속화하는 데 사용할 수 있는 대화형 환경입니다. AI 어시스턴트를 사용하여 제품 지식을 더 잘 이해하고, 문제를 해결하거나, 정보를 검색하여 운영 인사이트를 얻을 수 있습니다. AI 어시스턴트는 Experience Platform, Real-Time CDP, Adobe Journey Optimizer 및 Customer Journey Analytics를 지원합니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 제품 지원 에이전트의 일반 공급 | 이제 AI Assistant의 제품 지원 에이전트를 사용하여 워크플로를 종료하지 않고도 문제를 원활하게 해결할 수 있습니다. 조직의 지원 관리자는 이제 제품 지원 에이전트를 사용하여 고객 지원 티켓을 만들 수 있으며, AI Assistant와의 상호 작용에 대한 컨텍스트 및 세션 세부 사항을 포함하여 이 작업을 완료할 수 있습니다. <br><br>2025년 11월 30일까지 제품 지원 에이전트에 액세스할 수 있습니다. Adobe 계정 담당자에게 문의하여 제품 지원 에이전트에 라이선스를 부여한 다음 이 날짜 이후에도 이 기능을 계속 사용해야 합니다. 자세한 내용은 [제품 지원 에이전트 설명서](../../ai-assistant/new-features/customer-support.md)를 참조하세요. |
+
+자세한 내용은 [AI 어시스턴트 개요](../../ai-assistant/landing.md)를 참조하십시오.
 
 ## 카탈로그 서비스 {#catalog-service}
 
@@ -68,7 +81,7 @@ Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 
 | 기능 | 설명 |
 | --- | --- |
-| [Facebook 사용자 지정 대상](../../destinations/catalog/social/facebook.md) 업그레이드 및 주소 관련 식별자 지원 | 2025년 5월 23일부터 2025년 6월 동안 최대 몇 시간 동안 대상 카탈로그에 **[!DNL Facebook Custom Audience]** 대상 카드 두 개가 일시적으로 표시될 수 있습니다. 이는 대상 서비스에 대한 내부 업그레이드 때문이며 Facebook 속성에서 개선된 타겟팅 및 프로필과의 일치를 위해 새 필드를 지원하기 위한 것입니다. 새 주소 관련 필드에 대한 자세한 내용은 [지원되는 ID](#supported-identities) 섹션을 참조하십시오. <br><br>레이블이 **[!UICONTROL (새) Facebook 사용자 지정 대상]**(으)로 지정된 카드가 있는 경우, 새 활성화 데이터 흐름에 이 카드를 사용하십시오. 기존 데이터 흐름은 자동으로 업데이트되므로 별도의 작업이 필요하지 않습니다. 이 기간 동안 기존 데이터 흐름에 수행한 모든 변경 사항은 업그레이드 후에도 유지됩니다. 업그레이드가 완료되면 **[!UICONTROL (새) Facebook 사용자 지정 대상자]** 대상 카드의 이름이 **[!DNL Facebook Custom Audience]**(으)로 바뀝니다. <br><br>흐름 서비스 API[&#128279;](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 사용하여 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다. <ul><li>흐름 사양 ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`</li><li>연결 사양 ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`</li></ul> |
+| [Facebook 사용자 지정 대상](../../destinations/catalog/social/facebook.md) 업그레이드 및 주소 관련 식별자 지원 | 2025년 5월 23일부터 2025년 6월 동안 최대 몇 시간 동안 대상 카탈로그에 **[!DNL Facebook Custom Audience]** 대상 카드 두 개가 일시적으로 표시될 수 있습니다. 이는 대상 서비스에 대한 내부 업그레이드 때문이며 Facebook 속성에서 개선된 타겟팅 및 프로필과의 일치를 위해 새 필드를 지원하기 위한 것입니다. 새 주소 관련 필드에 대한 자세한 내용은 [지원되는 ID](#supported-identities) 섹션을 참조하십시오. <br><br>레이블이 **[!UICONTROL (새) Facebook 사용자 지정 대상]**(으)로 지정된 카드가 있는 경우, 새 활성화 데이터 흐름에 이 카드를 사용하십시오. 기존 데이터 흐름은 자동으로 업데이트되므로 별도의 작업이 필요하지 않습니다. 이 기간 동안 기존 데이터 흐름에 수행한 모든 변경 사항은 업그레이드 후에도 유지됩니다. 업그레이드가 완료되면 **[!UICONTROL (새) Facebook 사용자 지정 대상자]** 대상 카드의 이름이 **[!DNL Facebook Custom Audience]**(으)로 바뀝니다. <br><br>흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 사용하여 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다.[ <ul><li>흐름 사양 ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`</li><li>연결 사양 ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`</li></ul> |
 | [Google Customer Match + Display &amp; Video 360](../../destinations/catalog/advertising/google-customer-match-dv360.md#supported-identities) 대상에 대한 모바일 광고 ID 지원 | 이제 [!DNL GAID] 및 [!DNL IDFA]과(와) 같은 모바일 광고 ID를 기반으로 [Google Customer Match + Display &amp; Video 360](../../destinations/catalog/advertising/google-customer-match-dv360.md#supported-identities) 대상에 대한 대상을 활성화할 수 있습니다. |
 | [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md)에 대한 추가 식별자 지원 | 이제 Google 고객 일치 대상은 Google 플랫폼의 향상된 일치율을 위해 주소 관련 필드 매핑을 지원합니다. <br><br>Google이 주소와 일치하는지 확인하려면 네 개의 주소 필드(`address_info_first_name`, `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`)를 모두 매핑하고 내보낸 프로필에 데이터가 없는지 확인해야 합니다. <br> 필드가 매핑되지 않았거나 누락된 데이터를 포함하는 경우 Google이 주소와 일치하지 않습니다. |
 | [Facebook](../../destinations/catalog/social/facebook.md) 연결에 대한 계정 만료 열 | 이제 [찾아보기](../../destinations/ui/destinations-workspace.md#browse) 및 [계정](../../destinations/ui/destinations-workspace.md#accounts) 탭에서 Facebook 계정 토큰 만료 날짜를 확인할 수 있습니다. |

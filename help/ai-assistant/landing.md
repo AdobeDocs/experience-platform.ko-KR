@@ -3,9 +3,9 @@ title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant를 시작합니다.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 40c5162801b95d73ce70587f3abd87ad44fa0f01
+source-git-commit: fc70615e77a7f4029a1b1b09a84f0661e3bed0ee
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Adobe Experience Platform의 AI Assistant는 Experience Platform 애플리케이
 
 AI Assistant는 Experience Platform, Real-Time CDP, Adobe Journey Optimizer 및 Customer Journey Analytics을 지원합니다.
 
-## 시작하기
+## 시작
 
 아래 링크의 자료를 읽고 AI Assistant의 개념 및 기능을 숙지하십시오.
 
@@ -31,14 +31,14 @@ AI Assistant는 Experience Platform, Real-Time CDP, Adobe Journey Optimizer 및 
     <div><strong>학습 향상</strong><br/>워크플로를 중단하지 않고 제품 지식을 검색, 문제 해결 및 이해도를 높이십시오.</div>
     </td>
     <td>
-    <a href="https://experienceleague.adobe.com/ko/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
+    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
     <div><strong>AI Assistant 비디오 재생 목록 방문</strong><br/>AI Assistant를 통해 해결할 수 있는 다양한 어려움과 사용 사례에 대해 알아봅니다.</div>
     </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="https://experienceleague.adobe.com/ko/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -83,11 +83,11 @@ AI Assistant를 사용하여 Experience Platform 내에서 타겟 대상을 생�
 
 [![이미지](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
 
->[!TAB 고객 지원을 위한 AI 지원]
+>[!TAB 제품 지원 에이전트]
 
-### 고객 지원을 위한 AI Assistant
+### 제품 지원 에이전트
 
-고객 지원용 AI Assistant를 사용하면 워크플로를 종료하지 않고도 문제를 원활하게 해결할 수 있습니다. 이제 필요한 경우 지원 관리자는 고객 지원용 AI Assistant를 사용하여 AI Assistant와의 상호 작용에 대한 컨텍스트 및 세션 세부 사항과 함께 고객 지원 티켓을 생성할 수 있습니다.
+AI Assistant의 제품 지원 에이전트를 사용하면 워크플로를 종료하지 않고도 문제를 원활하게 해결할 수 있습니다. 이제 필요한 경우 지원 관리자는 제품 지원 에이전트를 사용하여 고객 지원 티켓을 만들 수 있으며, AI Assistant와의 상호 작용에 대한 컨텍스트 및 세션 세부 사항을 포함하여 이 작업을 완료할 수 있습니다.
 
 [![이미지](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
@@ -98,7 +98,7 @@ AI Assistant를 사용하여 Experience Platform 내에서 타겟 대상을 생�
 
 Watch the following video for more information on the security features of AI Assistant:
 
->[!VIDEO](https://video.tv.adobe.com/v/3441087/?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 >[!BEGINSHADEBOX]
 
@@ -146,8 +146,8 @@ For more information about AI Assistant, read the [security fact sheet for AI As
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441087/?learn=on&captions=kor" title="AI Assistant 보안 개요" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441087/?format=jpeg&nocache=1732633205785&captions=kor" alt="AI Assistant 보안 개요"
+                    <a href="https://video.tv.adobe.com/v/3441066/?learn=on" title="AI Assistant 보안 개요" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="AI Assistant 보안 개요"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -155,12 +155,12 @@ For more information about AI Assistant, read the [security fact sheet for AI As
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441087/?learn=on&captions=kor" target="_blank" rel="referrer" title="AI Assistant 보안 개요">AI Assistant 보안 개요</a>
+                        <a href="https://video.tv.adobe.com/v/3441066/?learn=on" target="_blank" rel="referrer" title="AI Assistant 보안 개요">AI Assistant 보안 개요</a>
                     </p>
                     <p class="is-size-6">이 비디오를 통해 AI Assistant의 보안 기능 및 프로세스에 대한 포괄적인 개요를 살펴보십시오. 또한 AI Assistant 보안 아키텍처에 대한 자세한 내용은 AI Assistant 보안 팩트시트 를 참조하십시오.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3441087/?learn=on&captions=kor" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3441066/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
                   </a>
                   <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -176,8 +176,8 @@ For more information about AI Assistant, read the [security fact sheet for AI As
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441031?learn=on&captions=kor" title="AI Assistant 제품 지식" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441031/?format=jpeg&nocache=1732633205780&captions=kor" alt="AI Assistant 제품 지식"
+                    <a href="https://video.tv.adobe.com/v/3441024?learn=on" title="AI Assistant 제품 지식" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441024/?format=jpeg&nocache=1732633205780" alt="AI Assistant 제품 지식"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -185,12 +185,12 @@ For more information about AI Assistant, read the [security fact sheet for AI As
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441031?learn=on&captions=kor" target="_blank" rel="referrer" title="AI Assistant 제품 지식">AI Assistant 제품 지식</a>
+                        <a href="https://video.tv.adobe.com/v/3441024?learn=on" target="_blank" rel="referrer" title="AI Assistant 제품 지식">AI Assistant 제품 지식</a>
                     </p>
                     <p class="is-size-6">AI Assistant에서 제품 지식은 Experience League 설명서에 기반을 둔 개념과 주제를 나타냅니다. 이 비디오를 통해 AI Assistant 제품 지식을 사용하여 워크플로를 종료하지 않고 작업을 안내하는 방법에 대해 알아보십시오. </p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3441031?learn=on&captions=kor" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3441024?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
                   </a>
                     <a href="home.md#product-knowledge" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -204,8 +204,8 @@ For more information about AI Assistant, read the [security fact sheet for AI As
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3444039?learn=on&enablevpops&captions=kor" title="AI Assistant 작동 인사이트" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444039/?format=jpeg&nocache=1732633205785&captions=kor" alt="AI Assistant 작동 인사이트"
+                    <a href="https://video.tv.adobe.com/v/3444031?learn=on&enablevpops" title="AI Assistant 작동 인사이트" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444031/?format=jpeg&nocache=1732633205785" alt="AI Assistant 작동 인사이트"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -213,12 +213,12 @@ For more information about AI Assistant, read the [security fact sheet for AI As
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3444039/?learn=on&captions=kor" target="_blank" rel="referrer" title="AI Assistant 작동 인사이트">AI Assistant 작동 인사이트</a>
+                        <a href="https://video.tv.adobe.com/v/3444031/?learn=on" target="_blank" rel="referrer" title="AI Assistant 작동 인사이트">AI Assistant 작동 인사이트</a>
                     </p>
                     <p class="is-size-6">작동 인사이트는 개체의 메타데이터에 대해 쿼리할 때 AI Assistant가 생성하는 답변을 말합니다. 이 비디오를 통해 운영 인사이트를 사용하여 조직의 데이터 오브젝트에서 사용, 계보 및 위생 인사이트를 검색하는 방법에 대해 알아보십시오.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3444039/?learn=on&captions=kor" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3444031/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
                   </a>
                   <a href="./ui-guide.md#operational-insights" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -294,8 +294,8 @@ For more information about AI Assistant, read the [security fact sheet for AI As
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441994?learn=on&captions=kor" title="대상자 정리 해제" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441994/?format=jpeg&nocache=1732633205785&captions=kor" alt="대상자 정리 해제"
+                    <a href="https://video.tv.adobe.com/v/3435532?learn=on" title="대상자 정리 해제" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435532/?format=jpeg&nocache=1732633205785" alt="대상자 정리 해제"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -303,11 +303,11 @@ For more information about AI Assistant, read the [security fact sheet for AI As
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441994?learn=on&captions=kor" target="_blank" rel="referrer" title="대상자 정리 해제">대상자를 정리하지 않음</a>
+                        <a href="https://video.tv.adobe.com/v/3435532?learn=on" target="_blank" rel="referrer" title="대상자 정리 해제">대상자를 정리하지 않음</a>
                     </p>
                     <p class="is-size-6">이 비디오를 통해 AI Assistant를 사용하여 대상자를 깔끔하게 정리하고 마케팅 작업을 최적화하는 방법에 대해 알아보십시오.</p>
                 </div>
-                  <a href="https://video.tv.adobe.com/v/3441994?learn=on&captions=kor" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3435532?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
                   </a>  
             </div>
@@ -319,8 +319,8 @@ For more information about AI Assistant, read the [security fact sheet for AI As
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3440969/?learn=on&captions=kor" title="검색 기능 패널을 사용하여 시작" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440969/?format=jpeg&nocache=1732633205780&captions=kor" alt="검색 기능 패널을 사용하여 시작"
+                    <a href="https://video.tv.adobe.com/v/3440962/?learn=on" title="검색 기능 패널을 사용하여 시작" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440962/?format=jpeg&nocache=1732633205780" alt="검색 기능 패널을 사용하여 시작"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -328,12 +328,12 @@ For more information about AI Assistant, read the [security fact sheet for AI As
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3440969/?learn=on&captions=kor" target="_blank" rel="referrer" title="검색 기능 패널을 사용하여 시작">검색 기능 패널을 사용하여 시작</a>
+                        <a href="https://video.tv.adobe.com/v/3440962/?learn=on" target="_blank" rel="referrer" title="검색 기능 패널을 사용하여 시작">검색 기능 패널을 사용하여 시작</a>
                     </p>
                     <p class="is-size-6">이 비디오를 통해 AI Assistant의 검색 기능 패널과 이를 사용하여 AI Assistant를 시작하는 방법에 대해 알아보십시오.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3440969/?learn=on&captions=kor" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3440962/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
                   </a>
                   <a href="./ui-guide.md#use-discoverability" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -347,8 +347,8 @@ For more information about AI Assistant, read the [security fact sheet for AI As
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441746/?learn=on&captions=kor" title="AI 응답 확인 및 유효성 검사" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441746/?format=jpeg&nocache=1732633205785&captions=kor" alt="AI 응답 확인 및 유효성 검사"
+                    <a href="https://video.tv.adobe.com/v/3441738/?learn=on" title="AI 응답 확인 및 유효성 검사" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441738/?format=jpeg&nocache=1732633205785" alt="AI 응답 확인 및 유효성 검사"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -356,12 +356,12 @@ For more information about AI Assistant, read the [security fact sheet for AI As
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441746/?learn=on&captions=kor" target="_blank" rel="referrer" title="AI 응답 확인 및 유효성 검사">AI 응답 확인 및 유효성 검사</a>
+                        <a href="https://video.tv.adobe.com/v/3441738/?learn=on" target="_blank" rel="referrer" title="AI 응답 확인 및 유효성 검사">AI 응답 확인 및 유효성 검사</a>
                     </p>
                     <p class="is-size-6">이 비디오를 통해 AI Assistant를 사용하여 응답을 확인하고 검증하는 방법에 대해 알아보십시오.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3441746/?learn=on&captions=kor" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3441738/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
                   </a>
                   <a href="./ui-guide.md#verify-operational-insights-responses" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -377,8 +377,8 @@ For more information about AI Assistant, read the [security fact sheet for AI As
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441687/?learn=on&captions=kor" title="보다 효과적인 계보 및 영향 분석 실행" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441687/?format=jpeg&nocache=1732633205780&captions=kor" alt="보다 효과적인 계보 및 영향 분석 실행"
+                    <a href="https://video.tv.adobe.com/v/3441680/?learn=on" title="보다 효과적인 계보 및 영향 분석 실행" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441680/?format=jpeg&nocache=1732633205780" alt="보다 효과적인 계보 및 영향 분석 실행"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -386,22 +386,22 @@ For more information about AI Assistant, read the [security fact sheet for AI As
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441687/?learn=on&captions=kor" target="_blank" rel="referrer" title="보다 효과적인 계보 및 영향 분석 실행">보다 효과적인 계보 및 영향 분석 실행</a>
+                        <a href="https://video.tv.adobe.com/v/3441680/?learn=on" target="_blank" rel="referrer" title="보다 효과적인 계보 및 영향 분석 실행">보다 효과적인 계보 및 영향 분석 실행</a>
                     </p>
                     <p class="is-size-6">이 비디오를 통해 데이터 개체가 변경되기 전에 AI Assistant를 사용하여 보다 효과적인 영향 분석을 실행하는 방법에 대해 알아보십시오.</p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3441687/?learn=on&captions=kor" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://video.tv.adobe.com/v/3441680/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
                 </a>
             </div>
         </div>
     </div>
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Use AI Assistant for customer support">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Product Support Agent">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3443190?learn=on&captions=kor" title="고객 지원을 위해 AI Assistant 사용" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443190/?format=jpeg&nocache=1732633205785&captions=kor" alt="고객 지원을 위해 AI Assistant 사용"
+                    <a href="https://video.tv.adobe.com/v/3443183?learn=on" title="AI Assistant에서 제품 지원 에이전트 사용" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443183/?format=jpeg&nocache=1732633205785" alt="AI Assistant에서 제품 지원 에이전트 사용"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -409,12 +409,12 @@ For more information about AI Assistant, read the [security fact sheet for AI As
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3443190?learn=on&captions=kor" target="_blank" rel="referrer" title="고객 지원을 위해 AI Assistant 사용">고객 지원을 위해 AI Assistant 사용</a>
+                        <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" title="AI Assistant에서 제품 지원 에이전트 사용">AI Assistant에서 제품 지원 에이전트 사용</a>
                     </p>
-                    <p class="is-size-6">이 비디오를 통해 고객 지원에서 AI Assistant를 사용하여 워크플로를 종료하지 않고 문제를 해결하는 방법에 대해 알아보십시오.</p>
+                    <p class="is-size-6">이 비디오를 통해 제품 지원 에이전트를 사용하여 워크플로를 종료하지 않고 문제를 원활하게 해결하는 방법에 대해 알아보십시오.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3443190?learn=on&captions=kor" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">시청</span>
                   </a>
                   <a href="./new-features/customer-support.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -435,11 +435,11 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 
 AI Assistant 사용 사례 예제는 다음을 참조하십시오.
 
-* [팀의 새 구성원에 대한 온보딩 시간 단축](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153?profile.language=ko)
-* [대상자를 정리하고 마케팅 작업을 최적화합니다](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002?profile.language=ko)
-* [종속성 확인 및 데이터 업데이트 중 위험 최소화](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364?profile.language=ko)
-* [새로운 기능을 더 빨리 검색하고 배포하세요](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125?profile.language=ko)
-* [AI Assistant를 통해 고객 지원 혁신](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416?profile.language=ko)
+* [팀의 새 구성원에 대한 온보딩 시간 단축](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
+* [대상자를 정리하고 마케팅 작업을 최적화합니다](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
+* [종속성 확인 및 데이터 업데이트 중 위험 최소화](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [새로운 기능을 더 빨리 검색하고 배포하세요](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
+* [AI Assistant를 통해 고객 지원 혁신](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
 
 >[!TAB 추가 비디오 콘텐츠]
 
@@ -460,9 +460,9 @@ AI Assistant 사용 사례 예제는 다음을 참조하십시오.
 <a href="./home.md" target="_blank">설명서</a> - <a href="./ui-guide.md" target="_blank">UI 안내서</a> - <a href="./access.md" target="_blank">AI Assistant 액세스</a> - <a href="./privacy.md" target="_blank">개인 정보, 보안 및 거버넌스</a> - <a href="./faq.md" target="_blank">FAQ</a>
 </td>
 <td><strong>Adobe Journey Optimizer</strong><br/>
-<a href="https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank">설명서</a>
+<a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank">설명서</a>
 </td>
 <td><strong>Customer Journey Analytics</strong><br/>
-<a href="https://experienceleague.adobe.com/ko/docs/analytics-platform/using/ai-assistant" target="_blank">설명서</a>
+<a href="https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant" target="_blank">설명서</a>
 </td>
 </tr></table>
