@@ -171,5 +171,5 @@ Experience Platform Debugger 및 이벤트 전달 모니터링 도구를 사용�
 
 - [[!DNL Algolia] Insights API 설명서](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia] 이벤트 설명서](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform] 이벤트 전달 설명서](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
+- [[!DNL Adobe Experience Platform] 이벤트 전달 설명서](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=ko)
 - [[!DNL Algolia] AI 기능 개요](https://www.algolia.com/products/ai-search/)
