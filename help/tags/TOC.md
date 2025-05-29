@@ -6,9 +6,9 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: a2d93b5c13194707e8a87d633e47d0446b9afabd
+source-git-commit: 3434fd13ba4ca58f27834e75b045af079c18c64c
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '783'
 ht-degree: 36%
 
 ---
@@ -152,7 +152,7 @@ ht-degree: 36%
          * [릴리스 정보](./extensions/client/plugins/release-notes.md)
       * [연결](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
-      * [Usercentrics CMP v2의 쿠키 동의 관리](https://exchange.adobe.com/apps/ec/107037)
+      * Usercentrics CMP v2의 [쿠키 동의 관리](https://exchange.adobe.com/apps/ec/107037)
       * 코어 {#core}
          * [개요](./extensions/client/core/overview.md)
          * [릴리스 정보](./extensions/client/core/release-notes.md)
@@ -187,7 +187,7 @@ ht-degree: 36%
          * [개요](./extensions/client/meta/overview.md)
       * [모니터](https://exchange.adobe.com/apps/ec/106544)
       * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
-      * [쿠키에 대한 OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)
+      * 쿠키에 대한 [OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)
       * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)
       * [Persado 연결](https://exchange.adobe.com/apps/ec/103745)
       * [Pinterest 전환 추적](https://exchange.adobe.com/apps/ec/100523)
@@ -221,13 +221,15 @@ ht-degree: 36%
          * [릴리스 정보](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL Adform] {#adform}
          * [개요](./extensions/server/adform/overview.md)
+      * [!DNL Algolia] {#algolia}
+         * [개요](./extensions/server/algolia/overview.md)
       * [!DNL Amazon] {#amazon}
          * [개요](./extensions/server/amazon/overview.md)
       * [!DNL AWS] {#aws}
          * [개요](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [개요](./extensions/server/braze/overview.md)
-      * [Google Analytics용 Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
+      * Google Analytics용 [Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
       * 코어 {#core}
          * [개요](./extensions/server/core/overview.md)
       * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)
