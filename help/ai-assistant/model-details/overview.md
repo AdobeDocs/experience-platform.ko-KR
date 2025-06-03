@@ -1,29 +1,29 @@
 ---
-title: Adobe Experience Platform의 AI 모델 투명성을 위한 모델 카드
-description: Adobe Experience Platform의 모델 카드에 대해 알아봅니다.
+title: Adobe Experience Platform의 AI 모델 투명성을 위한 모델 세부 정보
+description: Adobe Experience Platform의 모델 세부 정보에 대해 알아봅니다.
 hide: true
 hidefromtoc: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
-source-git-commit: dddd699f231d54ee44b33f86a5c9e59c0aedc30c
+source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
 workflow-type: tm+mt
 source-wordcount: '3171'
 ht-degree: 0%
 
 ---
 
-# Adobe Experience Platform의 AI 모델 투명성을 위한 모델 카드
+# Adobe Experience Platform의 AI 모델 투명도에 대한 모델 세부 정보
 
-AI 모델 카드는 AI 모델 투명도가 전달되는 표준 형식입니다. 모델 카드는 특정 AI 도구가 구축된 기본 모델에 대한 포괄적인 정보를 제공합니다. 모델 카드에는 AI 도구의 목적, 교육 데이터, 성능 지표, 제한 사항 및 윤리적 고려 사항 등의 정보가 포함됩니다. 모델 카드가 제공하는 투명성을 사용하여 모델의 기능과 한계를 더 잘 이해하고, AI의 책임감 있고 공정한 사용을 더 잘 촉진할 수 있습니다.
+AI 모델 세부 정보는 AI 모델 투명성이 전달되는 표준 형식입니다. 모델 세부 정보는 해당 AI 도구가 구축된 기본 모델에 대한 포괄적인 정보를 제공합니다. 모델 세부 정보에는 AI 도구의 목적, 교육 데이터, 성능 지표, 제한 사항 및 윤리적 고려 사항 등의 정보가 포함됩니다. 모델 세부 정보가 제공하는 투명성을 사용하여 모델의 기능과 제한 사항을 더 잘 이해하고, AI의 책임감 있고 공정한 사용을 더 잘 촉진할 수 있습니다.
 
-모델 카드는 공용이며 Adobe이 사용하는 AI 모델에 대한 기존 및 잠재 고객 이해를 모두 개선하기 위한 것입니다. 모델 카드는 일반적으로 정적입니다. 그러나 AI 모델에는 계보, 편향, 기타 투명성 속성 등 시간이 지남에 따라 변할 수 있는 측면이 몇 가지 있다.
+모델 세부 정보는 공개적이며 Adobe이 사용하는 AI 모델에 대한 기존 및 예상 고객 이해를 모두 개선하기 위한 것입니다. 모델 세부 사항은 일반적으로 정적입니다. 그러나 AI 모델에는 계보, 편향, 기타 투명성 속성 등 시간이 지남에 따라 변할 수 있는 측면이 몇 가지 있다.
 
-Adobe Experience Platform의 모델 카드에 대해 알아보려면 이 문서를 참조하십시오.
+Adobe Experience Platform의 모델 세부 사항에 대해 알아보려면 이 문서 를 참조하십시오.
 
-## 모델 카드 섹션 {#model-card-sections}
+## 모델 세부 사항 섹션 {#model-detail-sections}
 
-모델 카드는 다양한 섹션으로 구성되며, 각 섹션은 AI 모델의 특정 측면에 중점을 둡니다.
+모델 세부 사항은 다양한 서로 다른 섹션으로 구성되며, 각각은 AI 모델의 특정 측면에 중점을 둡니다.
 
-모델 카드의 여러 섹션에 대해 설명하고 질문에 대한 정보를 얻으려면 다음을 참조하십시오.
+모델 세부 정보의 여러 섹션에 대해 설명할 때 해당 질문에 대한 정보를 포함하여 자세한 내용은 다음을 참조하십시오.
 
 ### 모델 개요 {#model-overview}
 
