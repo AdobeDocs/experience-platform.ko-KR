@@ -329,5 +329,5 @@ Edge 사용 대상의 경우 **[!UICONTROL 시간 경과에 따른 프로필]** 
 
 Experience Platform 사용자 인터페이스 사용에 대한 자세한 내용은 [세그먼테이션 사용 안내서](./overview.md)를 참조하세요.
 
-에지 세분화에 대한 FAQ는 FAQ](../faq.md#edge-segmentation)의 [에지 세분화 섹션을 참조하십시오.
+에지 세분화에 대한 FAQ는 FAQ[&#128279;](../faq.md#edge-segmentation)의 에지 세분화 섹션을 참조하십시오.
 
