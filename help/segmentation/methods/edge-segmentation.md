@@ -2,9 +2,9 @@
 title: Edge 세그멘테이션 안내서
 description: 에지 세분화를 사용하여 에지에서 즉시 Experience Platform의 대상을 평가하여 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화하는 방법에 대해 알아봅니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: a741fdb4393863dbc011c03c733e27572da0ae6c
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1116'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,6 @@ Edge 세그멘테이션은 Adobe Experience Platform의 세그먼트 정의를 �
 | 프로필만 | 프로필 속성만 참조하는 모든 세그먼트 정의. | `homeAddress.country.equals("US", false)` | ![프로필 특성의 예제가 표시됩니다.](../images/methods/edge/profile-attribute.png) |
 | 24시간 미만의 상대 시간 창 내에 프로필 속성이 있는 단일 이벤트 | 하나 이상의 프로필 속성을 가진 단일 수신 이벤트를 참조하고 24시간 미만의 상대 시간 창 내에서 발생하는 모든 세그먼트 정의입니다. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![상대 기간 내에 프로필 특성이 있는 단일 이벤트의 예가 표시됩니다.](../images/methods/edge/single-event-with-profile-attribute.png) |
 | 세그먼트 | 하나 이상의 배치 또는 모서리 세그먼트를 포함하는 모든 세그먼트 정의입니다. **참고:** 세그먼트의 세그먼트가 사용되는 경우 **24시간마다**&#x200B;프로필의 자격이 상실됩니다. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![세그먼트 예제가 표시됩니다.](../images/methods/edge/segment-of-segments.png) |
-| 프로필 속성이 있는 여러 이벤트 | 지난 24시간 내에 **여러 이벤트를 참조하고**(선택 사항) 하나 이상의 프로필 특성이 있는 세그먼트 정의입니다. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![프로필 특성이 있는 여러 이벤트의 예가 표시됩니다.](../images/methods/edge/multiple-events-with-profile-attribute.png) |
 
 또한 세그먼트 정의 **must**&#x200B;은(는) Edge에서 활성 상태인 병합 정책에 연결됩니다. 병합 정책에 대한 자세한 내용은 [병합 정책 안내서](../../profile/api/merge-policies.md)를 참조하십시오.
 
@@ -330,5 +329,5 @@ Edge 사용 대상의 경우 **[!UICONTROL 시간 경과에 따른 프로필]** 
 
 Experience Platform 사용자 인터페이스 사용에 대한 자세한 내용은 [세그먼테이션 사용 안내서](./overview.md)를 참조하세요.
 
-에지 세분화에 대한 FAQ는 FAQ[&#128279;](../faq.md#edge-segmentation)의 에지 세분화 섹션을 참조하십시오.
+에지 세분화에 대한 FAQ는 FAQ](../faq.md#edge-segmentation)의 [에지 세분화 섹션을 참조하십시오.
 
