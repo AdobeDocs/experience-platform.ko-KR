@@ -4,7 +4,7 @@ description: 스트리밍 및 에지 세분화를 사용하여 평가할 수 있
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: eafb7337edacc5d2b2aa9c38540aff946c8d39c0
+source-git-commit: 2af73be351cb818862006adc8d0f1a33f95d93cf
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 3%
@@ -68,13 +68,13 @@ WHEN(<= 24 hours before now)])
 
 | Audience | 스키마 | Source 유형 | 쿼리 정의 | 대상자 ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| 최근 포기 | 경험 이벤트 | 배치 | 지난 24시간 동안 하나 이상의 중단 이벤트가 있음 | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| 최근 포기 | 경험 이벤트 | 배치 | 지난 24시간 동안 하나 이상의 중단 이벤트가 있음 | `7deb246a-49b4-4687-95f9-6316df049948` |
 | 최근 체크아웃 | 경험 이벤트 | 스트리밍 | 지난 24시간 동안 체크아웃이 하나 이상 있음 | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 이 경우 다음과 같이 세 번째 대상을 만들어야 합니다.
 
 ```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+inSegment("7deb246a-49b4-4687-95f9-6316df049948") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
 ```
 
 >[!IMPORTANT]
