@@ -2,7 +2,7 @@
 title: 네임스페이스 우선순위
 description: ID 서비스의 네임스페이스 우선 순위에 대해 알아봅니다.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
+source-git-commit: 7df0d0c7eb97760190ac8b20d1b74472b87e8b6a
 workflow-type: tm+mt
 source-wordcount: '2120'
 ht-degree: 2%
@@ -49,7 +49,7 @@ ID는 실제 개체를 나타냅니다. ID 그래프에 표시되는 객체는 �
 
 개인 네임스페이스는 웹 브라우저에 비해 상대적으로 변경이 불가능한 하드웨어 장치(예: IDFA, GAID)에 비해 상대적으로 변경이 불가능합니다. 기본적으로 사용자(사용자)는 항상 단일 엔티티이며, 여러 하드웨어 장치(전화, 노트북, 태블릿 등)를 사용하고 여러 브라우저(Google Chrome, Safari, FireFox 등)를 사용할 수 있습니다.
 
-이 주제에 접근하는 또 다른 방법은 카디널리티를 통해서이다. 주어진 개인에 대해 몇 개의 ID가 만들어집니까? 대부분의 경우 한 사람은 CRMID, 소수의 하드웨어 장치 식별자(IDFA/GAID 재설정은 자주 발생하지 않아야 함) 및 훨씬 더 많은 쿠키(개인이 여러 장치에서 탐색하거나 시크릿 모드를 사용하거나 지정된 시간에 쿠키를 재설정할 수 있음)를 갖게 됩니다. 일반적으로 **낮은 카디널리티는 더 높은 값을 가진 네임스페이스를 나타냅니다**.
+이 주제에 접근하는 또 다른 방법은 카디널리티를 통해서이다. 주어진 개인에 대해 몇 개의 ID가 만들어집니까? 대부분의 경우 한 사람은 CRMID, 소수의 하드웨어 장치 식별자(IDFA/GAID 재설정은 자주 발생하지 않아야 함) 및 훨씬 더 많은 쿠키(개인이 여러 장치에서 탐색하거나 시크릿 모드를 사용하거나 지정된 시간에 쿠키를 재설정할 수 있음)를 갖게 됩니다. 일반적으로 **낮은 카디널리티는 우선 순위가 높은 네임스페이스를 나타냅니다**.
 
 ## 네임스페이스 우선 순위 설정 유효성 검사
 
@@ -65,7 +65,7 @@ ID는 실제 개체를 나타냅니다. ID 그래프에 표시되는 객체는 �
 
 ## 네임스페이스 우선 순위 사용
 
-현재 네임스페이스 우선 순위는 실시간 고객 프로필의 시스템 동작에 영향을 줍니다. 아래 다이어그램은 이 개념을 보여 줍니다. 자세한 내용은 [Adobe Experience Platform 및 응용 프로그램 아키텍처 다이어그램](https://experienceleague.adobe.com/ko/docs/blueprints-learn/architecture/architecture-overview/platform-applications)에 대한 안내서를 참조하십시오.
+현재 네임스페이스 우선 순위는 실시간 고객 프로필의 시스템 동작에 영향을 줍니다. 아래 다이어그램은 이 개념을 보여 줍니다. 자세한 내용은 [Adobe Experience Platform 및 응용 프로그램 아키텍처 다이어그램](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications)에 대한 안내서를 참조하십시오.
 
 ![네임스페이스 우선 순위 응용 프로그램 범위의 다이어그램입니다.](../images/namespace-priority/application-scope.png "네임스페이스 우선 순위 응용 프로그램 범위의 다이어그램입니다."){zoomable="yes"}
 
@@ -208,13 +208,13 @@ XDM 스키마에 대한 자세한 내용은 [스키마 개요](../../xdm/home.md
 
 * **이벤트 적용 가능성**: 이 동작은 Edge Network(예: WebSDK 및 Mobile SDK)로 직접 전송된 이벤트에만 적용됩니다. HTTP API 소스, 기타 스트리밍 소스 및 일괄 처리 소스와 함께 수집된 이벤트와 같이 [Experience Platform 허브](../../landing/edge-and-hub-comparison.md)에서 수집된 이벤트에는 이 제한이 적용되지 않습니다.
 * **Edge 세그멘테이션 특성**: 이 동작은 가장자리 세그멘테이션에만 적용됩니다. 배치 및 스트리밍 세분화는 허브에서 평가되는 별도의 서비스이며 동일한 프로세스를 따르지 않습니다. 자세한 내용은 [Edge 세그멘테이션 안내서](../../segmentation/methods/edge-segmentation.md)를 참조하십시오.
-* 자세한 내용은 [Adobe Experience Platform 및 응용 프로그램 아키텍처 다이어그램](https://experienceleague.adobe.com/ko/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) 및 [Edge Network 및 허브 비교](../../landing/edge-and-hub-comparison.md) 페이지를 참조하십시오.
+* 자세한 내용은 [Adobe Experience Platform 및 응용 프로그램 아키텍처 다이어그램](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) 및 [Edge Network 및 허브 비교](../../landing/edge-and-hub-comparison.md) 페이지를 참조하십시오.
 
 #### Edge Network 애플리케이션
 
 Edge Network의 응용 프로그램이 지체 없이 Edge 프로필에 액세스할 수 있도록 하려면 이벤트에 CRMID의 `primary=true`이(가) 포함되어 있는지 확인하십시오. 이렇게 하면 허브에서 ID 그래프 업데이트를 기다리지 않고 즉시 사용할 수 있습니다.
 
 * Adobe Target, Offer Decisioning 및 사용자 지정 Personalization 대상 등 Edge Network의 애플리케이션은 계속해서 이벤트의 기본 ID를 사용하여 Edge 프로필의 프로필에 액세스합니다.
-* Edge Network 동작에 대한 자세한 내용은 [Experience Platform 웹 SDK 및 Edge Network 아키텍처 다이어그램](https://experienceleague.adobe.com/ko/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment)을 참조하세요.
+* Edge Network 동작에 대한 자세한 내용은 [Experience Platform 웹 SDK 및 Edge Network 아키텍처 다이어그램](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment)을 참조하세요.
 * Web SDK에서 기본 ID를 구성하는 방법에 대한 자세한 내용은 [데이터 요소 유형](../../tags/extensions/client/web-sdk/data-element-types.md) 및 [Web SDK의 ID 데이터](../../web-sdk/identity/overview.md)에 대한 설명서를 참조하십시오.
 * ECID가 경험 이벤트에 포함되어 있는지 확인합니다. ECID가 누락된 경우 `primary=true`이(가) 있는 이벤트 페이로드에 추가되므로 예기치 않은 결과가 발생할 수 있습니다.
