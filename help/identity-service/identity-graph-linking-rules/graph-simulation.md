@@ -20,7 +20,7 @@ ht-degree: 3%
 
 ID 서비스 UI 작업 영역에서 [!DNL Graph Simulation] 인터페이스를 사용하는 방법에 대한 자세한 내용은 다음 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444050/?learn=on&enablevpops&captions=kor)
 
 ID 그래프 동작 및 그래프 알고리즘의 작동 방식을 더 잘 이해하기 위해 [!DNL Graph Simulation]을(를) 사용하는 방법에 대해 알아보려면 이 문서를 참조하십시오.
 
