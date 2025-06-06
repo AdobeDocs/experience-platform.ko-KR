@@ -4,9 +4,9 @@ description: AI Assistant 자연어 - SQL AI 모델에 대해 알아봅니다.
 hide: true
 hidefromtoc: true
 exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
-source-git-commit: a8cc7c6f202cdd2786a69e548810b3957d69fdb3
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,13 @@ WHERE
 
 ## 모델 평가 {#model-evaluation}
 
-* **평가 지표 및 절차**: 정확도를 사용하여 모델을 평가합니다. 예를 들어 모든 [!DNL NL2SQL]개의 요청 중에서 올바른 SQL 결과를 생성하는 요청의 수는 몇 개입니까? 평가 프로세스는 규칙 기반 일치(SQL 표준화 후 직접 SQL 문자열 일치), LLM 기반 SQL 해 찾기 및 사람 평가의 조합입니다.
+* **평가 지표 및 프로시저**: [!DNL NL2SQL] 요청을 보고 올바른 SQL 결과를 생성하는 요청 수를 평가하여 모델을 평가합니다. 평가 프로세스는 규칙 기반 일치(SQL 표준화 후 직접 SQL 문자열 일치), LLM 기반 SQL 해 찾기 및 사람 평가의 조합입니다.
 * **평가 데이터 및 사전 처리**: 회귀 테스트를 위해 오픈 세트를 사용하며, 샘플링된 실제 고객 트래픽을 통해 모델의 성능을 모니터링하는 주별 주석 프로젝트도 있습니다.
 
 ## 모델 배포 {#model-deployment}
 
 * **모델 모니터링**: 기본 모델은 [!DNL Azure]에 의해 호스팅됩니다.
-* **모델 업데이트**: 모델은 질문 은행 확장을 통해 매주 정기적으로 업데이트됩니다. 필요할 때 새로운 프롬프트 전략 및 지침을 통해 모델을 업데이트하기도 합니다.
+* **모델 업데이트**: Adobe Experience Platform AI Assistant Operational Insights Natural Language to SQL Model은 물음표 확장을 통해 정기적으로(매주) 업데이트됩니다. 필요할 때 새로운 프롬프트 전략 및 지침을 통해 모델을 업데이트하기도 합니다.
 
 ## 공정성과 편견 {#fairness-and-bias}
 
