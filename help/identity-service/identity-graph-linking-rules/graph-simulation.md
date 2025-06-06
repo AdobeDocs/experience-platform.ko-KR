@@ -5,7 +5,7 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
 source-wordcount: '1446'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
 >title="그래프 시뮬레이션"
->abstract="그래프를 시뮬레이션하여 Identity Service가 ID를 연결하는 방법과 ID 최적화 알고리즘이 작동하는 방법을 이해합니다."
+>abstract="그래프를 시뮬레이션하여 ID 서비스가 ID를 연결하는 방식과 ID 최적화 알고리즘이 작동하는 방식을 파악하십시오."
 
 [!DNL Graph Simulation]은(는) 특정 조합의 ID가 지정된 ID에서 ID 그래프가 작동하는 방식과 [ID 최적화 알고리즘](./identity-optimization-algorithm.md)을 구성하는 방법을 시뮬레이션하는 데 사용할 수 있는 ID 서비스 UI의 도구입니다.
 
 ID 서비스 UI 작업 영역에서 [!DNL Graph Simulation] 인터페이스를 사용하는 방법에 대한 자세한 내용은 다음 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3444050/?learn=on&enablevpops&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 ID 그래프 동작 및 그래프 알고리즘의 작동 방식을 더 잘 이해하기 위해 [!DNL Graph Simulation]을(를) 사용하는 방법에 대해 알아보려면 이 문서를 참조하십시오.
 
@@ -78,7 +78,7 @@ Adobe Experience Platform UI에서 [!DNL Graph Simulation]에 액세스할 수 �
 
 [!UICONTROL 이벤트] 인터페이스가 업데이트되어 첫 번째 이벤트가 표시됩니다. 이 경우 `{Email: tom@acme.com, ECID: 111}`입니다.
 
-![업데이트된 이벤트 인터페이스(이메일: tom@acme.com, ECID: 111&rbrace;.](../images/graph-simulation/add-second-event.png))
+![업데이트된 이벤트 인터페이스(이메일: tom@acme.com, ECID: 111}.](../images/graph-simulation/add-second-event.png))
 
 그런 다음 동일한 단계를 반복하여 두 번째 이벤트를 추가합니다. 이벤트 #2의 경우 `{Email: summer@acme.com}`을(를) 첫 번째 ID로 추가한 다음 같은 `{ECID: 111}`을(를) 두 번째 ID로 추가하여 `{Email: summer@acme.com}, {ECID: 111}`의 두 번째 이벤트를 만듭니다. 완료되면 `{Email: tom@acme.com, ECID: 111}`에 대한 이벤트와 `{Email: summer@acme.com}, {ECID: 111}`에 대한 이벤트가 두 개 있어야 합니다.
 
