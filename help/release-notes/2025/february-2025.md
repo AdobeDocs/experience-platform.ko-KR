@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2025년 2월
 description: Adobe Experience Platform의 2025년 2월 릴리스 정보.
 exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: c8fe5f05b7dcef7db2ae44d5b6575e123cbd014d
 workflow-type: tm+mt
-source-wordcount: '1645'
-ht-degree: 97%
+source-wordcount: '1677'
+ht-degree: 96%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!TIP]
 >
->이번 릴리스에는 페더레이션된 대상자 구성 추가 기능이 개선된 상태로 포함되어 있습니다. 자세한 내용은 [페더레이션된 대상자 구성 릴리스 정보](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/release-notes)를 참조하십시오.
+>이번 릴리스에는 페더레이션된 대상자 컴포지션 추가 기능이 개선된 상태로 포함되어 있습니다. 자세한 내용은 [페더레이션된 대상자 컴포지션 릴리스 정보](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/release-notes)를 참조하십시오.
 
 **릴리스 일자: 2025년 2월 18일**
 
@@ -54,7 +54,7 @@ Adobe Experience Platform의 AI 어시스턴트는 Adobe 애플리케이션에�
 
 | 기능 | 설명 |
 | --- | --- |
-| 새로운 API 엔드포인트 | 새로운 [카탈로그 서비스 API /v2/dataSets/{DATASET_ID} 엔드포인트](../../catalog/api/update-object.md#patch-v2-notation)를 사용하여 Adobe Experience Platform 데이터 세트 메타데이터를 더 효율적으로 관리할 수 있습니다. 누락된 경로 수준을 시스템이 자동으로 생성하여 시간을 절약하고, 수동 단계를 줄이고, 오류를 최소화하므로 복잡하고 깊이 중첩된 데이터 세트 속성을 쉽게 업데이트할 수 있습니다. |
+| 새로운 API 엔드포인트 | 새 [카탈로그 서비스 API /v2/dataSets/{DATASET_ID} 끝점](../../catalog/api/update-object.md#patch-v2-notation)을 사용하여 Adobe Experience Platform 데이터 세트 메타데이터를 보다 효율적으로 관리합니다. 누락된 경로 수준을 시스템이 자동으로 생성하여 시간을 절약하고, 수동 단계를 줄이고, 오류를 최소화하므로 복잡하고 깊이 중첩된 데이터 세트 속성을 쉽게 업데이트할 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -78,7 +78,7 @@ Adobe Experience Platform의 AI 어시스턴트는 Adobe 애플리케이션에�
 
 [!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-**새로운 대상 또는 업데이트된 대상** {#new-updated-destinations}
+**새 대상 또는 업데이트된 대상** {#new-updated-destinations}
 
 | 대상 | 설명 |
 | --- | --- |
@@ -96,7 +96,7 @@ Adobe Experience Platform의 AI 어시스턴트는 Adobe 애플리케이션에�
 | --- | --- |
 | 액세스 레이블을 사용하여 대상 데이터 흐름에 대한 사용자 액세스를 관리할 수 있습니다. | 이제 실시간 CDP의 [[!UICONTROL 속성 기반 액세스 제어]](/help/access-control/abac/overview.md) 기능의 일부로 [대상 데이터 흐름](/help/dataflows/ui/monitor-destinations.md)에 액세스 레이블을 적용할 수 있습니다. 이렇게 하면 조직 내 일부 사용자에게만 특정 대상 데이터 흐름에 대한 액세스 권한을 부여할 수 있습니다. <br> **중요**: Experience Platform 사용자 인터페이스 상단의 검색 상자를 사용하여 대상 데이터 흐름을 검색할 경우, 사용자 액세스 레이블로 인해 볼 수 없는 대상 데이터 흐름이 결과에 포함될 수 있습니다. 이 문제는 향후 업데이트에서 수정될 예정입니다. |
 | [Marketo Engage 연결](/help/destinations/catalog/adobe/marketo-engage.md)을 위한 [대상자 수준 보고](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) | 이제 이 대상에 해당하는 데이터 흐름에 속하는 각 대상자의 활성화된 ID, 제외된 ID 또는 실패한 ID에 대한 [정보](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations)를 대상자 수준에서 세분화하여 볼 수 있습니다. |
-| [TikTok](/help/destinations/catalog/social/tiktok.md) 및 [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) 연결을 위한 외부 대상자 지원 | [사용자 정의 업로드](../../segmentation/ui/audience-portal.md#import-audience) 및 [페더레이션된 대상자 구성](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/start/audiences)을 통해 외부 대상자를 이러한 대상으로 활성화할 수 있습니다. |
+| [TikTok](/help/destinations/catalog/social/tiktok.md) 및 [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) 연결을 위한 외부 대상자 지원 | [사용자 정의 업로드](../../segmentation/ui/audience-portal.md#import-audience) 및 [페더레이션된 대상자 컴포지션](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/start/audiences)을 통해 외부 대상자를 이러한 대상으로 활성화할 수 있습니다. |
 | 배열, 맵 및 오브젝트를 클라우드 스토리지 대상으로 내보내기 | 클라우드 스토리지 대상에 연결할 때 새로운 **[!UICONTROL 배열, 맵, 오브젝트 내보내기]** 토글을 사용하면 복잡한 오브젝트를 선택한 대상으로 내보낼 수 있습니다. 기능에 대해 [자세히 알아보십시오](/help/destinations/ui/export-arrays-maps-objects.md). |
 
 {style="table-layout:auto"}
@@ -117,7 +117,7 @@ Adobe Experience Platform의 AI 어시스턴트는 Adobe 애플리케이션에�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 영구 분할 | 이제 대상자 작성에서 영구 분할을 지원합니다. ID 네임스페이스를 분할 블록에 추가하여 프로필로 분할할 때 분할 대상이 일정하게 유지되도록 할 수 있습니다. 이 기능에 대한 자세한 내용은 [대상자 구성 설명서](../../segmentation/ui/audience-composition.md)를 참조하세요. |
+| 분할 지속 | 이제 대상자 컴포지션에서 분할 지속이 지원됩니다. 프로필별 분할 시 분할 블록에 ID 네임스페이스를 추가하여 분할된 대상자 그룹을 일정하게 유지할 수 있습니다. 이 기능에 대한 자세한 내용은 [대상자 컴포지션 설명서](../../segmentation/ui/audience-composition.md)에서 확인할 수 있습니다. |
 
 [!DNL Segmentation Service]에 대한 자세한 내용은 [세분화 개요](../../segmentation/home.md)를 참조하십시오.
 
@@ -132,6 +132,7 @@ Experience Platform의 소스를 사용하여 Adobe 애플리케이션 또는 �
 | 기능 | 설명 |
 | --- | --- |
 | [!DNL Microsoft Dynamics]의 보기 지원 | 이제 [!DNL Microsoft Dynamics]를 사용할 때 `"entityType": "view"`를 수집할 수 있습니다. 자세한 내용은 [ [!DNL Microsoft Dynamics] 소스를 Experience Platform으로 연결하기](../../sources/tutorials/api/create/crm/ms-dynamics.md)에 대한 안내서를 참조하십시오. |
+| 새로운 IP 주소 허용 목록 | Experience Platform 소스를 성공적으로 사용하려면 다음 IP 주소를 허용 목록에 추가해야 합니다.<br></br>**VA7**<ul><li>`48.211.4.136/29`</li><li>`48.211.4.144/28`</li><li>`48.211.4.160/29`</li><li>`40.84.85.144/28`</li><li>`40.84.85.192/28`</li></ul>**AUS5**<ul><li>`20.213.194.144/29`</li><li>`20.227.120.32/27`</li></ul> 허용 목록에 추가하다 <br></br>자세한 내용은 [원본 IP 주소 가이드](../../sources/ip-address-allow-list.md)를 참조하세요. |
 
 {style="table-layout:auto"}
 
