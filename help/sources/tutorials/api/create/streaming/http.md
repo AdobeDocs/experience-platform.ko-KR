@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 주제;스트리밍 연결;스트리밍
 title: 흐름 서비스 API를 사용하여 HTTP API 스트리밍 연결 만들기
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 원시 데이터와 XDM 데이터 모두에 대해 HTTP API 소스를 사용하여 스트리밍 연결을 만드는 방법에 대한 단계를 제공합니다
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1656'
+source-wordcount: '1684'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Flow Service] API를 사용하여 스트리밍 연결을 만드는 단계를 안내합니다.
 
-## 시작하기
+## 시작
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
@@ -457,6 +457,10 @@ curl -X POST \
 ```
 
 ## 데이터 흐름 만들기
+
+>[!NOTE]
+>
+>스트리밍 데이터 흐름을 만들거나 업데이트한 후 데이터 손실 또는 데이터 감소의 잠재적 인스턴스를 방지하기 위해 데이터 수집에서 5분 정도의 짧은 일시 중지가 필요합니다.
 
 이제 소스 및 타겟 연결이 만들어지면 데이터 흐름을 만들 수 있습니다. 데이터 흐름은 소스에서 데이터를 예약하고 수집합니다. `/flows` 끝점에 대한 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.
 

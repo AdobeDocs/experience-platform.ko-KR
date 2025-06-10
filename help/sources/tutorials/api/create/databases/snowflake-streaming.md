@@ -3,9 +3,9 @@ title: Snowflake 스트리밍 계정을 Adobe Experience Platform에 연결
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Snowflake 스트리밍에 연결하는 방법에 대해 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '880'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 이 자습서에서는 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>)를 사용하여 [!DNL Snowflake] 계정의 데이터를 Adobe Experience Platform에 연결하고 스트리밍하는 방법에 대한 단계를 제공합니다.
 
-## 시작하기
+## 시작
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
@@ -212,6 +212,10 @@ curl -X POST \
 ```
 
 ## 데이터 흐름 만들기
+
+>[!NOTE]
+>
+>스트리밍 데이터 흐름을 만들거나 업데이트한 후 데이터 손실 또는 데이터 감소의 잠재적 인스턴스를 방지하기 위해 데이터 수집에서 5분 정도의 짧은 일시 중지가 필요합니다.
 
 데이터 흐름을 만들어 투어 [!DNL Snowflake] 계정에서 Experience Platform으로 데이터를 스트리밍하려면 다음 값을 제공하는 동안 `/flows` 끝점에 대한 POST 요청을 수행해야 합니다.
 

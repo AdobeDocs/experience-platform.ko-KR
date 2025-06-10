@@ -3,9 +3,9 @@ title: Azure Event Hubs Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Azure Event Hubs를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -122,6 +122,10 @@ Experience Platform 서브넷의 다른 영역에 대해서는 아래 목록을 
 네트워크 규칙 집합에 대한 자세한 내용은 다음 [[!DNL Event Hubs] 문서](https://learn.microsoft.com/en-us/azure/event-hubs/network-security)를 참조하십시오.
 
 ## Experience Platform에 [!DNL Event Hubs] 연결
+
+>[!NOTE]
+>
+>스트리밍 데이터 흐름을 만들거나 업데이트한 후 데이터 손실 또는 데이터 감소의 잠재적 인스턴스를 방지하기 위해 데이터 수집에서 5분 정도의 짧은 일시 중지가 필요합니다.
 
 아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Event Hubs]을(를) Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
 

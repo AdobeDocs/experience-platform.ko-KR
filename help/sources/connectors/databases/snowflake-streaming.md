@@ -4,9 +4,9 @@ description: 소스 연결 및 데이터 흐름을 만들어 Snowflake 인스턴
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '841'
 ht-degree: 1%
 
 ---
@@ -86,6 +86,10 @@ Experience Platform에서는 [!DNL Snowflake] 데이터베이스에서 데이터
       * `TIMESTAMP_TZ`은(는) 타임스탬프 열 또는 매핑에서 사용할 수 없습니다.
 
 ## 다음 단계
+
+>[!NOTE]
+>
+>스트리밍 데이터 흐름을 만들거나 업데이트한 후 데이터 손실 또는 데이터 감소의 잠재적 인스턴스를 방지하기 위해 데이터 수집에서 5분 정도의 짧은 일시 중지가 필요합니다.
 
 다음 자습서에서는 API를 사용하여 [!DNL Snowflake] 스트리밍 소스를 Experience Platform에 연결하는 방법에 대한 단계를 제공합니다.
 

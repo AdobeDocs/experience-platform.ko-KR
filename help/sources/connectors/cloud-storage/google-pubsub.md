@@ -3,9 +3,9 @@ title: Google PubSub Source 개요
 description: API 또는 사용자 인터페이스를 사용하여 Google PubSub를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,10 @@ Adobe Experience Platform은 [!DNL AWS], [!DNL Google Cloud Platform] 및 [!DNL 
 >[!DNL Google PubSub] 구독당 하나의 원본 데이터 흐름만 만들 수 있습니다. 샌드박스에서 구독을 재사용하면 데이터가 손실됩니다.
 
 ## Experience Platform에 [!DNL Google PubSub] 연결
+
+>[!NOTE]
+>
+>스트리밍 데이터 흐름을 만들거나 업데이트한 후 데이터 손실 또는 데이터 감소의 잠재적 인스턴스를 방지하기 위해 데이터 수집에서 5분 정도의 짧은 일시 중지가 필요합니다.
 
 아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Google PubSub]을(를) Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
 

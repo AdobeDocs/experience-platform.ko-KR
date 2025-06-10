@@ -3,9 +3,9 @@ title: 흐름 서비스 API를 사용하여 Azure Event Hubs Source 연결 만�
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Azure Event Hubs 계정에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1524'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)을(를) 사용하여 [!DNL Azure Event Hubs]&#x200B;(이하 &quot;[!DNL Event Hubs]&quot;)을(를) Experience Platform에 연결하는 방법을 알아보려면 이 자습서를 읽어 보십시오.
 
-## 시작하기
+## 시작
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
@@ -384,6 +384,10 @@ curl -X POST \
 | `params.dataType` | 이 매개 변수는 수집되는 데이터의 유형을 정의합니다. 지원되는 데이터 형식은 `raw` 및 `xdm`입니다. |
 | `params.reset` | 이 매개 변수는 데이터를 읽는 방법을 정의합니다. `latest`을(를) 사용하여 가장 최근 데이터에서 읽기를 시작하고 `earliest`을(를) 사용하여 스트림에서 사용 가능한 첫 번째 데이터에서 읽기를 시작합니다. 이 매개 변수는 선택 사항이며 지정하지 않은 경우 기본값은 `earliest`입니다. |
 | `params.consumerGroup` | [!DNL Event Hubs]에 사용할 게시 또는 구독 메커니즘입니다. 이 매개 변수는 선택 사항이며 지정하지 않은 경우 기본값은 `$Default`입니다. 자세한 내용은 이 [[!DNL Event Hubs] 이벤트 소비자 가이드](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers)를 참조하세요. **참고**: [!DNL Event Hubs] 소비자 그룹은 지정된 시간에 단일 흐름에만 사용할 수 있습니다. |
+
+>[!NOTE]
+>
+>스트리밍 데이터 흐름을 만들거나 업데이트한 후 데이터 손실 또는 데이터 감소의 잠재적 인스턴스를 방지하기 위해 데이터 수집에서 5분 정도의 짧은 일시 중지가 필요합니다.
 
 ## 다음 단계
 

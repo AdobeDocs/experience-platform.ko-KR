@@ -4,9 +4,9 @@ solution: Experience Platform
 title: HTTP API Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Adobe Experience Platform에 연결하기 위한 스트리밍 커넥터를 만드는 방법을 알아봅니다.
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 0%
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 [!DNL HTTP API] 소스 커넥터를 사용하여 데이터를 Experience Platform으로 스트리밍할 수 있습니다. [!DNL HTTP API] 원본은 [!DNL Data Prep] 함수에 의해 지원되므로 XDM 규격이 아닌 데이터를 XDM 규격 데이터 집합에 매핑할 수 있습니다.
+
+>[!NOTE]
+>
+>스트리밍 데이터 흐름을 만들거나 업데이트한 후 데이터 손실 또는 데이터 감소의 잠재적 인스턴스를 방지하기 위해 데이터 수집에서 5분 정도의 짧은 일시 중지가 필요합니다.
 
 아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Experience Platform]과(와) 연결할 HTTP API 스트리밍 커넥터를 만드는 방법에 대한 정보를 제공합니다.
 
