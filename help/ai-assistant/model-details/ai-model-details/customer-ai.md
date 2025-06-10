@@ -4,7 +4,7 @@ description: 고객 AI에 사용되는 AI 모델에 대해 알아봅니다.
 hide: true
 hidefromtoc: true
 exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
-source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
+source-git-commit: 8230c71c9b7896dfb71506632754d48583d0dc21
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 0%
@@ -53,7 +53,7 @@ ht-degree: 0%
 * **교육 데이터 및 사전 처리**: 각 고객의 교육 데이터 세트는 Adobe Experience Platform 내의 자체 데이터에서 직접 가져온 것입니다. 여기에는 Adobe Experience Platform 인스턴스에 수집 및 저장된 고객의 과거 상호 작용, 트랜잭션 레코드, 행동 참여 로그 및 인구 통계학적 정보가 포함됩니다. 데이터 세트는 선택한 기간 동안 고객별 데이터를 활용하여 고유한 시즌 트렌드와 참여 패턴을 캡처합니다. 사용하기 전에 각 고객의 데이터 세트는 특정 사용 사례에 최적의 품질과 유용성을 보장하기 위해 누락 값 처리, 범주별 인코딩, 기능 확장, 이상 값 감지 및 기능 엔지니어링을 포함하여 데이터 특성에 맞는 사전 처리를 거칩니다.
    * 교육에 사용되는 소비자 데이터는 고객 간에 사용되지 않습니다.
 * **교육 사양**: 모델은 구조화된 데이터에 최적화된 [!DNL GBM]을(를) 사용하여 [!DNL LightGBM]을(를) 활용합니다. 예측 행동 패턴을 식별하도록 이전 고객 이벤트 시퀀스에 대해 교육됩니다.
-* **교육 프레임워크**: 모델은 [!DNL LightGBM] 및 [!DNL scikit-learn]을(를) 사용하여 개발되었으며 Adobe AI 클라우드 인프라에서 교육됩니다.
+* **교육 프레임워크**: 모델이 [!DNL LightGBM] 및 [!DNL scikit-learn]을(를) 사용하여 개발되었으며 Adobe AI 클라우드 인프라에서 호스팅됩니다.
 * **교육 인프라**: [!DNL Databricks] 클러스터.
 
 ## 모델 평가 {#model-evaluation}
