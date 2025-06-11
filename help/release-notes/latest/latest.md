@@ -3,9 +3,9 @@ title: Adobe Experience Platform 릴리스 정보 2025년 5월
 description: Adobe Experience Platform의 2025년 5월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 6ab9302a40547349c8d0390baafd8591ed6859e1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1530'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ Adobe Experience Platform의 AI 어시스턴트는 Adobe 애플리케이션에�
 
 | 기능 | 설명 |
 | --- | --- |
-| 제품 지원 에이전트의 일반 공급 | 이제 AI Assistant의 제품 지원 에이전트를 사용하여 워크플로를 종료하지 않고도 문제를 원활하게 해결할 수 있습니다. 조직의 지원 관리자는 이제 제품 지원 에이전트를 사용하여 고객 지원 티켓을 만들 수 있으며, AI Assistant와의 상호 작용에 대한 컨텍스트 및 세션 세부 사항을 포함하여 이 작업을 완료할 수 있습니다. <br><br>2025년 11월 30일까지 제품 지원 에이전트에 액세스할 수 있습니다. Adobe 계정 담당자에게 문의하여 제품 지원 에이전트에 라이선스를 부여한 다음 이 날짜 이후에도 이 기능을 계속 사용해야 합니다. 자세한 내용은 [제품 지원 에이전트 설명서](../../ai-assistant/new-features/customer-support.md)를 참조하세요. |
+| 제품 지원 에이전트의 일반 가용성 | 이제 AI 어시스턴트의 제품 지원 에이전트를 사용하여 워크플로를 벗어나지 않고도 원활하게 문제를 해결할 수 있습니다. 이제 조직의 지원 관리자는 제품 지원 에이전트를 사용하여 AI 어시스턴트와의 상호 작용에서 얻은 컨텍스트와 세션 세부 정보를 포함하는 고객 지원 티켓을 만들 수 있습니다. <br><br>제품 지원 에이전트에 대한 액세스는 2025년 11월 30일까지 제공됩니다. 이 날짜 이후에도 제품 지원 에이전트에 라이선스를 부여하고 해당 기능을 계속 사용하려면 Adobe 계정 담당자에게 문의해야 합니다. 자세한 내용은 [제품 지원 에이전트 설명서](../../ai-assistant/new-features/customer-support.md)를 참조하십시오. |
 
 자세한 내용은 [AI 어시스턴트 개요](../../ai-assistant/landing.md)를 참조하십시오.
 
