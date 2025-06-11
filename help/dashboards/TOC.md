@@ -5,10 +5,10 @@ breadcrumb-title: 대시보드 안내서
 user-guide-description: 맞춤화가 가능한 대시보드를 통해 Experience Platform에서 데이터를 시각화하는 방법을 알아봅니다.
 feature: Dashboards
 role: Developer,User
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3582ce4f73887f03bbb9da72f96aab1be9b99614
 workflow-type: tm+mt
 source-wordcount: '143'
-ht-degree: 44%
+ht-degree: 46%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 44%
 * [대시보드 인벤토리](inventory.md)
 * [표준 대시보드](standard-dashboards.md)
 * [PDF에 대시보드 다운로드](download.md)
-* SQL Insights: 쿼리 pro 모드 {#sql-insights-query-pro-mode}
+* SQL Insights: 쿼리 프로 모드 {#sql-insights-query-pro-mode}
    * [개요](sql-insights-query-pro-mode/overview.md)
-   * 데이터 Distiller 템플릿 {#templates}
+   * Data Distiller 템플릿 {#templates}
       * [개요](sql-insights-query-pro-mode/templates/overview.md)
       * [고급 대상자 오버랩](sql-insights-query-pro-mode/templates/overlaps.md)
       * [대상자 비교](sql-insights-query-pro-mode/templates/comparison.md)
@@ -34,7 +34,7 @@ ht-degree: 44%
    * [드릴스루](sql-insights-query-pro-mode/drill-through.md)
    * [더 보기](sql-insights-query-pro-mode/view-more.md)
    * [SQL 보기](sql-insights-query-pro-mode/view-sql.md)
-   * [CSV로 다운로드](sql-insights-query-pro-mode/download-csv.md)
+   * [CSV로 내보내기](sql-insights-query-pro-mode/download-csv.md)
    * [PDF으로 내보내기](sql-insights-query-pro-mode/export-pdf.md)
 * 사용 가능한 대시보드 {#guides}
    * [프로필](guides/profiles.md)
@@ -47,7 +47,7 @@ ht-degree: 44%
    * [대상자](insights/audiences.md)
    * [대상](insights/destinations.md)
    * [계정 프로필](insights/account-profiles.md)
-* 대시보드 사용자 지정 {#customize}
+* 대시보드 맞춤화 {#customize}
    * [사용자 지정 개요](customize/overview.md)
    * [대시보드 수정](customize/modify.md)
    * [위젯 라이브러리](customize/widget-library.md)
@@ -59,7 +59,7 @@ ht-degree: 44%
 * 사용 가능한 데이터 모델 {#data-models}
    * [Real-Time Customer Data Platform Insights 데이터 모델 B2B edition](data-models/cdp-insights-data-model-b2b.md)
    * [Real-Time Customer Data Platform Insights 데이터 모델 B2C 에디션](data-models/cdp-insights-data-model-b2c.md)
-* 응용 프로그램 통합 {#integrations}
+* 애플리케이션 통합 {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [쿼리 대시보드 데이터 세트](query.md)
 * [insight SQL 보기](view-sql.md)

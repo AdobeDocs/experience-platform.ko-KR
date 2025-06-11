@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 6a466770495b226f890ab67b21c5cb027fd46e02
 workflow-type: tm+mt
-source-wordcount: '3818'
+source-wordcount: '3851'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform에 대한 액세스 제어는 [Adobe Experience Cloud]
 
 ## 액세스 제어 계층 및 워크플로
 
-Experience Platform에 대한 액세스 제어를 구성하려면 Experience Platform 제품이 있는 조직에 대한 시스템 또는 제품 관리자 권한이 있어야 합니다. 권한을 부여하거나 철회할 수 있는 최소 역할은 제품 관리자입니다. 권한을 관리할 수 있는 다른 관리자 역할은 시스템 관리자(제한 없음)입니다. 자세한 내용은 [관리 역할](https://helpx.adobe.com/kr/enterprise/using/admin-roles.html)에 대한 Adobe 도움말 센터 문서를 참조하십시오.
+Experience Platform에 대한 액세스 제어를 구성하려면 Experience Platform 제품이 있는 조직에 대한 시스템 또는 제품 관리자 권한이 있어야 합니다. 권한을 부여하거나 철회할 수 있는 최소 역할은 제품 관리자입니다. 권한을 관리할 수 있는 다른 관리자 역할은 시스템 관리자(제한 없음)입니다. 자세한 내용은 [관리 역할](https://helpx.adobe.com/enterprise/using/admin-roles.html)에 대한 Adobe 도움말 센터 문서를 참조하십시오.
 
 >[!NOTE]
 >
@@ -131,7 +131,7 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler 모델 구성 보기] | 모델 구성에 대한 읽기 전용 액세스 권한. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler 모델 계획 구성 관리] | 계획 구성을 보고 수정하는 기능입니다. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler 모델 계획 구성 보기] | 계획 구성에 대한 읽기 전용 액세스 권한. |
-| [!DNL AI Assistant] | [!UICONTROL AI Assistant 사용] | [[!DNL [AI assistant]]](../ai-assistant/access.md)개의 질문을 할 수 있습니다. |
+| [!DNL AI Assistant] | [!UICONTROL AI Assistant 사용] | [!DNL [AI assistant]](../ai-assistant/access.md)개의 질문을 할 수 있습니다. |
 | [!DNL AI Assistant] | [!UICONTROL Operational Insights 보기] | [operational insights](../ai-assistant/home.md##operational-insights) 쿼리에 대한 응답을 얻을 수 있는 액세스 권한. |
 | [!DNL AI Assistant] | [!UICONTROL 콘텐츠 생성] | 사용자가 [!DNL AI Assistant]을(를) 사용하여 콘텐츠를 생성할 수 있도록 설정하십시오. |
 | [!DNL AI Assistant] | [!UICONTROL 브랜드 키트 관리] | 사용자가 [!DNL AI Assistant]을(를) 사용하여 브랜드 지침을 만들 수 있도록 합니다. |
@@ -193,10 +193,11 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Customer Managed Keys] | [!UICONTROL 고객 관리 키 관리] | 고객 관리 키를 보고 구성하는 데 액세스합니다. |
 | [!DNL Dashboards] | [!UICONTROL 라이선스 사용 대시보드 보기] | 라이선스 사용 대시보드를 보려면 읽기 전용 권한입니다. |
 | [!DNL Dashboards] | [!UICONTROL 표준 대시보드 관리] | Data Warehouse에 아직 없는 사용자 지정 특성을 추가합니다. |
-| [!DNL Dashboards] | [!UICONTROL 표준 대시보드 보기] | 라이선스 사용 대시보드를 보려면 읽기 전용 권한입니다. |
+| [!DNL Dashboards] | [!UICONTROL 표준 대시보드 보기] | 프로필, 대상 및 세그먼트 대시보드에 대한 읽기 전용 액세스 권한입니다. 또한 왼쪽 탐색 및 대시보드 인벤토리 및 통합 탭에서 대시보드에 액세스할 수 있습니다. |
 | [!DNL Dashboards] | [!UICONTROL 사용자 지정 대시보드 관리] | 대시보드를 만들거나 편집할 수 있는 액세스 권한. |
 | [!DNL Dashboards] | [!UICONTROL 사용자 지정 대시보드 보기] | 사용자 정의 대시보드에 대한 읽기 전용 액세스 권한. |
 | [!DNL Dashboards] | [!UICONTROL 보고서 일정 관리] | 일정을 만들 수 있습니다. |
+| [!DNL Dashboards] | [!UICONTROL 대시보드 데이터 내보내기] | Query pro 모드 대시보드에서 표 형식 데이터를 내보내는 사용자 기능을 제어합니다. |
 | [!DNL Data Collection] | [!UICONTROL 데이터 스트림 관리] | 데이터 스트림을 읽고, 만들고, 편집할 수 있는 액세스 권한. |
 | [!DNL Data Collection] | [!UICONTROL 데이터스트림 보기] | 데이터스트림에 대한 읽기 전용 액세스 권한. |
 | [!DNL Data Governance] | [!UICONTROL 사용 레이블 관리] | 사용 레이블을 읽고, 만들고, 삭제할 수 있는 액세스 권한. |
