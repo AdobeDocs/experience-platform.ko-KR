@@ -131,7 +131,7 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler 모델 구성 보기] | 모델 구성에 대한 읽기 전용 액세스 권한. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler 모델 계획 구성 관리] | 계획 구성을 보고 수정하는 기능입니다. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Adobe Mix Modeler 모델 계획 구성 보기] | 계획 구성에 대한 읽기 전용 액세스 권한. |
-| [!DNL AI Assistant] | [!UICONTROL AI Assistant 사용] | [!DNL [AI assistant]](../ai-assistant/access.md)개의 질문을 할 수 있습니다. |
+| [!DNL AI Assistant] | [!UICONTROL AI Assistant 사용] | [[!DNL [AI assistant]]](../ai-assistant/access.md)개의 질문을 할 수 있습니다. |
 | [!DNL AI Assistant] | [!UICONTROL Operational Insights 보기] | [operational insights](../ai-assistant/home.md##operational-insights) 쿼리에 대한 응답을 얻을 수 있는 액세스 권한. |
 | [!DNL AI Assistant] | [!UICONTROL 콘텐츠 생성] | 사용자가 [!DNL AI Assistant]을(를) 사용하여 콘텐츠를 생성할 수 있도록 설정하십시오. |
 | [!DNL AI Assistant] | [!UICONTROL 브랜드 키트 관리] | 사용자가 [!DNL AI Assistant]을(를) 사용하여 브랜드 지침을 만들 수 있도록 합니다. |
