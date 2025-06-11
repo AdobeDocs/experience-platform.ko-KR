@@ -5,10 +5,10 @@ breadcrumb-title: Experience Platform ID 서비스 안내서
 user-guide-description: 다양한 디바이스와 시스템에서 고객 ID를 연결하여 개인화된 디지털 경험을 전달할 수 있습니다.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 6690854048324567f9a8a1f000bd10f45d7c8340
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 33%
+source-wordcount: '144'
+ht-degree: 36%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 33%
       - [기능 개요](./identity-graph-linking-rules/overview.md)
       - [ID 최적화 알고리즘](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [ID 그래프 연결 규칙에 대한 구현 안내서](./identity-graph-linking-rules/implementation-guide.md)
-      - [그래프 구성 예](./identity-graph-linking-rules/example-configurations.md)
+      - [Configurations 안내서](./identity-graph-linking-rules/example-configurations.md)
       - [ID 그래프 연결 규칙 문제 해결](./identity-graph-linking-rules/troubleshooting.md)
       - [네임스페이스 우선순위](./identity-graph-linking-rules/namespace-priority.md)
       - [그래프 시뮬레이션 UI](./identity-graph-linking-rules/graph-simulation.md)

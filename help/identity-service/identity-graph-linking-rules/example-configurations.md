@@ -1,15 +1,17 @@
 ---
-title: 그래프 구성의 예
-description: ID 그래프 연결 규칙 및 ID 데이터를 사용하여 작업할 때 발생할 수 있는 일반적인 그래프 시나리오에 대해 알아봅니다.
+title: Id 그래프 연결 규칙 구성 안내서
+description: ID 그래프 연결 규칙을 사용하여 구성할 수 있는 다양한 구현 유형에 대해 알아봅니다.
+hide: true
+hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: cd9104e253cda4ce9a004f7931b9c38907874941
+source-git-commit: b65a5e8e9727da47729191e56c1a32838ec2c6c4
 workflow-type: tm+mt
-source-wordcount: '3316'
-ht-degree: 5%
+source-wordcount: '1934'
+ht-degree: 7%
 
 ---
 
-# 그래프 구성의 예 {#examples-of-graph-configurations}
+# [!DNL Identity Graph Linking Rules] 구성 안내서 {#configurations-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"
@@ -21,740 +23,547 @@ ht-degree: 5%
 >* &quot;CRMID&quot; 및 &quot;loginID&quot;는 사용자 정의 네임스페이스입니다. 이 문서에서 &quot;CRMID&quot;는 개인 식별자이고 &quot;loginID&quot;는 지정된 사용자와 연관된 로그인 식별자입니다.
 >* 이 문서에 설명된 예제 그래프 시나리오를 시뮬레이션하려면 먼저 ID 기호가 &quot;CRMID&quot;인 네임스페이스와 ID 기호가 &quot;loginID&quot;인 네임스페이스를 두 개 사용자 정의 생성해야 합니다. ID 기호는 대/소문자를 구분합니다.
 
-이 문서에서는 [!DNL Identity Graph Linking Rules] 및 ID 데이터로 작업할 때 발생할 수 있는 일반적인 시나리오의 그래프 구성 예제에 대해 간략히 설명합니다.
+[!DNL Identity Graph Linking Rules]을(를) 사용하여 구성할 수 있는 다양한 구현 유형에 대해 알아보려면 이 문서를 참조하십시오.
 
-## CRMID만
+고객 그래프 시나리오는 세 가지 다른 카테고리로 그룹화할 수 있습니다.
 
-이는 온라인 이벤트(CRMID 및 ECID)가 수집되고 오프라인 이벤트(프로필 레코드)가 CRMID에 대해서만 저장되는 간단한 구현 시나리오의 예입니다.
+* **기본**: [기본 구현](#basic-implementations)에는 간단한 구현을 가장 많이 포함하는 그래프가 포함되어 있습니다. 이러한 구현은 단일 크로스 디바이스 네임스페이스(예: CRMID)를 중심으로 돌아가는 경향이 있습니다. 기본 구현은 매우 간단하지만 **공유 장치** 시나리오로 인해 그래프 축소가 발생할 수 있습니다.
+* **중간**: [중간 구현](#intermediate-implementations)에는 **여러 장치 간 네임스페이스**, **고유하지 않은 ID** 및 **여러 고유 네임스페이스**&#x200B;와 같은 여러 변수가 포함되어 있습니다.
+* **고급**: [고급 구현](#advanced-implementations)에는 복잡하고 여러 계층으로 구성된 그래프 시나리오가 포함됩니다. 고급 구현의 경우 적절한 링크가 제거되어 그래프 축소가 발생하지 않도록 하려면 올바른 네임스페이스 우선 순위 지정을 반드시 수행해야 합니다.
 
-**구현:**
+## 시작
 
-| 사용된 네임스페이스 | 웹 동작 수집 방법 |
-| --- | --- |
-| CRMID, ECID | Web SDK |
+다음 문서로 이동하기 전에 Identity Service 및 [!DNL Identity Graph Linking Rules]에 대한 몇 가지 중요한 개념을 숙지하십시오.
 
-**이벤트:**
+* [ID 서비스 개요](../home.md)
+* [[!DNL Identity Graph Linking Rules] 개요](../identity-graph-linking-rules/namespace-priority.md)
+* [네임스페이스 우선순위](namespace-priority.md)
+* [고유한 네임스페이스](overview.md#unique-namespace)
+* [그래프 시뮬레이션](graph-simulation.md)
 
-다음 이벤트를 텍스트 모드에 복사하여 그래프 시뮬레이션에서 이 시나리오를 생성할 수 있습니다.
+## 기본 구현 {#basic-implementations}
 
-```shell
-CRMID: Tom, ECID: 111
+[!DNL Identity Graph Linking Rules]의 기본 구현을 보려면 이 섹션을 읽어 보십시오.
+
+### 사용 사례: 하나의 크로스 디바이스 네임스페이스를 사용하는 간단한 구현
+
+일반적으로 Adobe 고객은 웹, 모바일 및 애플리케이션을 비롯한 모든 속성에서 사용되는 단일 크로스 디바이스 네임스페이스를 갖습니다. 소매, 통신 및 금융 서비스의 고객이 이러한 유형의 구현을 사용하므로 이 시스템은 업계 및 지리적으로 불가지론적입니다.
+
+일반적으로 최종 사용자는 크로스 디바이스 네임스페이스(종종 CRMID)로 표시되므로 CRMID는 고유한 네임스페이스로 분류되어야 합니다. 컴퓨터와 [!DNL iPhone]을(를) 소유하고 장치를 공유하지 않는 최종 사용자는 다음과 같은 ID 그래프를 가질 수 있습니다.
+
+전자 상거래 회사 **ACME**&#x200B;의 데이터 설계자라고 가정합니다. 존과 제인은 당신의 고객입니다. California의 San Jose에 함께 거주하는 최종 사용자입니다. 데스크톱 컴퓨터를 공유하고 이 컴퓨터를 사용하여 웹 사이트를 탐색합니다. 마찬가지로 John과 Jane도 [!DNL iPad]을(를) 공유하고 이 [!DNL iPad]을(를) 사용하여 웹 사이트를 비롯한 인터넷을 탐색합니다.
+
+**텍스트 모드**
+
+```json
+CRMID: John, ECID: 123
+CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-**알고리즘 구성:**
+**알고리즘 구성(ID 설정)**
 
-알고리즘 구성에 대해 다음 설정을 구성하여 그래프 시뮬레이션에서 이 시나리오를 생성할 수 있습니다.
+그래프를 시뮬레이션하기 전에 그래프 시뮬레이션 인터페이스에서 다음 설정을 구성합니다.
 
-| 우선 순위 | 표시 이름 | ID 유형 | 그래프별로 고유 |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | 예 |
-| 2 | ECID | 쿠키 | 아니요 |
+| 표시 이름 | ID 심볼 | ID 유형 | 그래프별로 고유 | 네임스페이스 우선순위 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| ECID | ECID | 쿠키 | | 2 |
+| IDFA | IDFA | 장치 | | 3 |
 
-**실시간 고객 프로필에 대한 기본 ID 선택:**
+**시뮬레이션된 그래프**
 
-이 구성의 컨텍스트 내에서 기본 ID는 다음과 같이 정의됩니다.
++++시뮬레이션된 그래프를 보려면 선택
 
-| 인증 상태 | 이벤트의 네임스페이스 | 기본 ID |
-| --- | --- | --- |
-| Authenticated | CRMID, ECID | CRMID |
-| 인증되지 않음 | ECID | ECID |
+이 그래프에서 John(최종 사용자)은 CRMID로 표시됩니다. {ECID: 123}은(는) John이 전자 상거래 플랫폼을 방문하기 위해 개인 컴퓨터에서 사용한 웹 브라우저를 나타냅니다. {ECID: 999}은(는) [!DNL iPhone]에서 사용한 브라우저를 나타내고 {IDFA: a-b-c}은(는) [!DNL iPhone]을(를) 나타냅니다.
 
-**그래프 예**
+![장치 간 네임스페이스가 하나인 간단한 구현입니다.](../images/configs/basic/simple-implementation.png)
+
++++
+
+### 운동
+
+그래프 시뮬레이션에서 다음 구성을 시뮬레이션하십시오. 이벤트를 직접 만들거나 텍스트 모드를 사용하여 복사하여 붙여넣을 수 있습니다.
 
 >[!BEGINTABS]
 
->[!TAB 이상적인 1인 그래프]
+>[!TAB PC(공유 장치)]
 
-다음은 CRMID가 고유하고 우선 순위가 가장 높은 이상적인 1인 그래프의 예입니다.
+**PC(공유 장치)**
 
-![CRMID가 고유하고 우선 순위가 가장 높은 이상적인 1인 그래프의 시뮬레이션된 예입니다.](../images/graph-examples/crmid_only_single.png "CRMID가 고유하고 우선 순위가 가장 높은 이상적인 1인 그래프의 시뮬레이션된 예입니다."){zoomable="yes"}
+**텍스트 모드:**
 
->[!TAB 여러 사용자 그래프]
-
-다음은 다인용 그래프의 예입니다. 이 예에서는 &quot;공유 장치&quot; 시나리오를 표시합니다. 여기서 두 개의 CRMID가 있고 이전 링크가 설정된 CRMID가 제거됩니다.
-
-![사람 그래프의 시뮬레이션된 예입니다. 이 예는 두 개의 CRMID가 있고, 이전에 설정된 링크가 제거되는 공유 장치 시나리오를 표시합니다.](../images/graph-examples/crmid_only_multi.png "사람 그래프의 시뮬레이션된 예입니다. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다."){zoomable="yes"}
-
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-CRMID: Tom, ECID: 111
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
+
+**시뮬레이션된 그래프**
+
++++시뮬레이션된 그래프를 보려면 선택
+
+이 그래프에서 John과 Jane은 각각 CRMID로 표시됩니다.
+
+* {CRMID: John}
+* {CRMID: Jane}
+
+전자 상거래 플랫폼을 방문하는 데 사용하는 데스크톱 컴퓨터의 브라우저는 {ECID: 111}(으)로 표시됩니다. 이 그래프 시나리오에서 Jane은 마지막으로 인증된 최종 사용자이므로 {ECID: 111}과(와) {CRMID: John} 사이의 연결이 제거됩니다.
+
+![공유 장치(PC)에 대한 시뮬레이션된 그래프입니다.](../images/configs/basic/shared-device-pc.png)
+
++++
+
+>[!TAB 공유 장치(모바일)]
+
+**공유 장치(모바일)**
+
+**텍스트 모드:**
+
+```json
+CRMID: John, ECID: 111, IDFA: a-b-c
+CRMID: Jane, ECID: 111, IDFA: a-b-c
+```
+
+**시뮬레이션된 그래프**
+
++++시뮬레이션된 그래프를 보려면 선택
+
+이 그래프에서 John과 Jane은 모두 고유한 CRMID로 표시됩니다. 사용하는 브라우저는 {ECID: 111}(으)로 표시되고 공유하는 [!DNL iPad]은(는) {IDFA: a-b-c}(으)로 표시됩니다. 이 그래프 시나리오에서는 Jane이 마지막으로 인증된 최종 사용자이므로 {ECID: 111} 및 {IDFA: a-b-c}에서 {CRMID: John}까지의 링크가 제거됩니다.
+
+![공유 장치(모바일)에 대한 시뮬레이션된 그래프입니다.](../images/configs/basic/shared-device-mobile.png)
+
++++
 
 >[!ENDTABS]
 
-## 해시된 이메일이 포함된 CRMID
+## 중간 구현 {#intermediate-implementations}
 
-이 시나리오에서 CRMID는 수집되며 온라인(경험 이벤트) 및 오프라인(프로필 레코드) 데이터를 모두 나타냅니다. 이 시나리오에는 CRMID와 함께 CRM 레코드 데이터 세트에서 전송된 다른 네임스페이스를 나타내는 해시된 이메일의 수집도 포함됩니다.
+[!DNL Identity Graph Linking Rules]의 중간 구현은 이 섹션을 참조하십시오.
 
->[!IMPORTANT]
+### 사용 사례: 데이터에 고유하지 않은 ID가 포함됨
+
+>[!TIP]
 >
->**모든 사용자에 대해 CRMID가 항상 전송되어야 합니다**. 이렇게 하지 않으면 단일 개인 엔티티가 다른 사용자와 디바이스를 공유하는 것으로 간주되는 &quot;댕글링&quot; 로그인 ID 시나리오가 발생할 수 있습니다.
+>* **고유하지 않은 ID**&#x200B;은(는) 고유하지 않은 네임스페이스와 연결된 ID입니다.
+>
+>* 아래 예에서 `CChash`은(는) 해시된 신용 카드 번호를 나타내는 사용자 지정 네임스페이스입니다.
 
-**구현:**
+당신은 신용카드를 발급하는 상업은행에 근무하고 있는 데이터 설계자입니다. 마케팅 팀이 프로필에 이전 신용 카드 거래 내역을 포함하기를 원한다고 표시했습니다. 이 ID 그래프는 다음과 같을 수 있습니다.
 
-| 사용된 네임스페이스 | 웹 동작 수집 방법 |
-| --- | --- |
-| CRMID, Email_LC_SHA256, ECID | Web SDK |
+**텍스트 모드:**
 
-**이벤트:**
-
-다음 이벤트를 텍스트 모드에 복사하여 그래프 시뮬레이션에서 이 시나리오를 생성할 수 있습니다.
-
-```shell
-CRMID: Tom, Email_LC_SHA256: tom<span>@acme.com
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: summer<span>@acme.com
-CRMID: Summer, ECID: 222
+```json
+CRMID: John, CChash: 1111-2222 
+CRMID: John, CChash: 3333-4444 
+CRMID: John, ECID: 123 
+CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-**알고리즘 구성:**
+**알고리즘 구성(ID 설정)**
 
-알고리즘 구성에 대해 다음 설정을 구성하여 그래프 시뮬레이션에서 이 시나리오를 생성할 수 있습니다.
+그래프를 시뮬레이션하기 전에 그래프 시뮬레이션 인터페이스에서 다음 설정을 구성합니다.
 
-| 우선 순위 | 표시 이름 | ID 유형 | 그래프별로 고유 |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | 예 |
-| 2 | 이메일(SHA256, 소문자) | 이메일 | 아니요 |
-| 3 | ECID | 쿠키 | 아니요 |
+| 표시 이름 | ID 심볼 | ID 유형 | 그래프별로 고유 | 네임스페이스 우선순위 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| 해시 | 해시 | CROSS_DEVICE | | 2 |
+| ECID | ECID | 쿠키 | | 3 |
+| IDFA | IDFA | 장치 | | 4 |
 
-**프로필에 대한 기본 ID 선택:**
+**시뮬레이션된 그래프**
 
-이 구성의 컨텍스트 내에서 기본 ID는 다음과 같이 정의됩니다.
++++시뮬레이션된 그래프를 보려면 선택
 
-| 인증 상태 | 이벤트의 네임스페이스 | 기본 ID |
-| --- | --- | --- |
-| Authenticated | CRMID, ECID | CRMID |
-| 인증되지 않음 | ECID | ECID |
+![시뮬레이션된 그래프의 이미지](../images/configs/basic/simple-implementation-non-unique.png)
 
-**그래프 예**
++++
+
+이러한 신용 카드 번호 또는 고유하지 않은 다른 네임스페이스가 항상 단일 최종 사용자 한 명에게 연결된다는 보장은 없습니다. 두 명의 최종 사용자가 동일한 신용 카드에 등록할 수 있으며, 잘못 수집된 고유하지 않은 자리 표시자 값이 있을 수 있습니다. 간단히 말해, 고유하지 않은 네임스페이스로 인해 그래프가 축소되지 않는다는 보장이 없습니다.
+
+이 문제를 해결하기 위해 ID 서비스는 가장 오래된 링크를 제거하고 가장 최근 링크를 유지합니다. 이렇게 하면 그래프에 CRMID가 하나만 있으므로 그래프 축소를 방지할 수 있습니다.
+
+### 운동
+
+그래프 시뮬레이션에서 다음 구성을 시뮬레이션하십시오. 이벤트를 직접 만들거나 텍스트 모드를 사용하여 복사하여 붙여넣을 수 있습니다.
 
 >[!BEGINTABS]
 
->[!TAB 이상적인 1인 그래프]
+>[!TAB 동일한 신용 카드를 가진 최종 사용자 두 명]
 
-다음은 각 CRMID가 해시된 이메일 네임스페이스 및 ECID와 연결된 이상적인 1인 그래프 쌍의 예입니다.
+동일한 신용 카드로 전자 상거래 웹 사이트에 두 명의 다른 최종 사용자가 등록합니다. 마케팅 팀은 신용 카드가 하나의 프로필에만 연결되어 있는지 확인하여 그래프 축소를 방지하려고 합니다.
 
-![이 예제에서는 각각 1인 엔터티를 나타내는 두 개의 그래프가 생성됩니다.](../images/graph-examples/crmid_hashed_single.png "사람 그래프의 시뮬레이션된 예입니다. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다."){zoomable="yes"}
+**텍스트 모드:**
 
->[!TAB 여러 사용자 그래프: 공유된 장치]
-
-다음은 두 사람이 디바이스를 공유하는 여러 사용자 그래프 시나리오의 예입니다.
-
-![이 예제에서는 Tom과 Summer가 모두 같은 ECID에 연결되어 있으므로 시뮬레이션된 그래프에 &quot;공유 장치&quot; 시나리오가 표시됩니다.](../images/graph-examples/crmid_hashed_shared_device.png "사람 그래프의 시뮬레이션된 예입니다. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다."){zoomable="yes"}
-
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff
-CRMID: Summer, ECID: 222
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, CChash: 1111-2222
+CRMID: Jane, CChash: 1111-2222
+CRMID: John, ECID: 123
+CRMID: Jane, ECID:456
 ```
 
->[!TAB 여러 사용자 그래프: 고유하지 않은 전자 메일]
+**시뮬레이션된 그래프**
 
-다음은 이메일이 고유하지 않고 두 개의 다른 CRMID와 연결된 다인 그래프 시나리오의 예입니다.
++++시뮬레이션된 그래프를 보려면 선택
 
-![이 시나리오는 &quot;공유 장치&quot; 시나리오와 유사합니다. 그러나 개인 엔티티가 ECID를 공유하게 하는 대신 동일한 이메일 계정과 연결됩니다. &quot;사람 그래프의 시뮬레이션된 예. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다.&quot;](../images/graph-examples/crmid_hashed_nonunique_email.png){zoomable="yes"}
+![두 최종 사용자가 같은 신용 카드로 등록하는 그래프입니다.](../images/configs/intermediate/graph-with-same-credit-card.png)
 
-**그래프 시뮬레이션 이벤트 입력**
++++
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff
-CRMID: Summer, ECID: 222
-CRMID: Summer, Email_LC_SHA256: aabbcc
+>[!TAB 잘못된 신용 카드 번호]
+
+잘못된 데이터로 인해 잘못된 신용 카드 번호가 Experience Platform에 수집됩니다.
+
+**텍스트 모드:**
+
+```json
+CRMID: John, CChash: undefined
+CRMID: Jane, CChash: undefined
+CRMID: Jack, CChash: undefined
+CRMID: Jill, CChash: undefined
 ```
+
+**시뮬레이션된 그래프**
+
++++시뮬레이션된 그래프를 보려면 선택
+
+![해싱 문제로 인해 신용 카드가 잘못된 그래프입니다.](../images/configs/intermediate/graph-with-invalid-credit-card.png)
+
++++
 
 >[!ENDTABS]
 
-## 해시된 이메일, 해시된 휴대폰, GAID 및 IDFA가 포함된 CRMID
+### 사용 사례: 데이터에 해시된 CRMID와 해시되지 않은 CRMID가 모두 포함됩니다
 
-이 시나리오는 이전 시나리오와 유사합니다. 그러나 이 시나리오에서는 해시된 이메일과 전화기가 [[!DNL Segment Match]](../../segmentation/ui/segment-match/overview.md)에서 사용할 ID로 표시됩니다.
+해시되지 않은(오프라인) CRMID와 해시된(온라인) CRMID를 모두 섭취하는 중입니다. 이들은 해시된 CRMID와 해시된 CRMID 간에 직접적인 관계를 기대한다. 최종 사용자가 인증된 계정을 사용하여 탐색할 때 해시된 CRMID가 장치 ID(ID 서비스에 ECID로 표시됨)와 함께 전송됩니다.
 
->[!IMPORTANT]
->
->**모든 사용자에 대해 CRMID가 항상 전송되어야 합니다**. 이렇게 하지 않으면 단일 개인 엔티티가 다른 사용자와 디바이스를 공유하는 것으로 간주되는 &quot;댕글링&quot; 로그인 ID 시나리오가 발생할 수 있습니다.
+**알고리즘 구성(ID 설정)**
 
-**구현:**
+그래프를 시뮬레이션하기 전에 그래프 시뮬레이션 인터페이스에서 다음 설정을 구성합니다.
 
-| 사용된 네임스페이스 | 웹 동작 수집 방법 |
-| --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, GAID, IDFA, ECID | Web SDK |
+| 표시 이름 | ID 심볼 | ID 유형 | 그래프별로 고유 | 네임스페이스 우선순위 |
+| --- | --- | --- | --- | --- | 
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
+| ECID | ECID | 쿠키 | | 3 |
 
-**이벤트:**
 
-다음 이벤트를 텍스트 모드에 복사하여 그래프 시뮬레이션에서 이 시나리오를 생성할 수 있습니다.
+**연습**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID:B-B-B
-```
-
-**알고리즘 구성:**
-
-알고리즘 구성에 대해 다음 설정을 구성하여 그래프 시뮬레이션에서 이 시나리오를 생성할 수 있습니다.
-
-| 우선 순위 | 표시 이름 | ID 유형 | 그래프별로 고유 |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | 예 |
-| 2 | 이메일(SHA256, 소문자) | 이메일 | 아니요 |
-| 3 | 휴대폰 (SHA256) | 휴대폰 | 아니요 |
-| 4 | Google 광고 ID (GAID) | 장치 | 아니요 |
-| 5 | Apple IDFA (Apple의 ID) | 장치 | 아니요 |
-| 6 | ECID | 쿠키 | 아니요 |
-
-**프로필에 대한 기본 ID 선택:**
-
-이 구성의 컨텍스트 내에서 기본 ID는 다음과 같이 정의됩니다.
-
-| 인증 상태 | 이벤트의 네임스페이스 | 기본 ID |
-| --- | --- | --- |
-| Authenticated | CRMID, IDFA, ECID | CRMID |
-| Authenticated | CRMID, GAID, ECID | CRMID |
-| Authenticated | CRMID, ECID | CRMID |
-| 인증되지 않음 | GAID, ECID | GAID |
-| 인증되지 않음 | IDFA, ECID | IDFA |
-| 인증되지 않음 | ECID | ECID |
-
-**그래프 예**
+그래프 시뮬레이션에서 다음 구성을 시뮬레이션하십시오. 이벤트를 직접 만들거나 텍스트 모드를 사용하여 복사하여 붙여넣을 수 있습니다.
 
 >[!BEGINTABS]
 
->[!TAB 이상적인 1인 그래프]
+>[!TAB 시나리오 1: 공유된 장치]
 
-다음은 해시된 전자 메일과 해시된 전화기가 [!DNL Segment Match]에서 사용할 ID로 표시되는 이상적인 1인 그래프 시나리오입니다. 이 시나리오에서는 그래프가 두 개로 나뉘어 서로 다른 개인 엔티티를 나타냅니다.
+존과 제인은 장치를 공유합니다.
 
-![이상적인 1인 그래프 시나리오입니다.](../images/graph-examples/crmid_hashed_single_seg_match.png "사람 그래프의 시뮬레이션된 예입니다. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다."){zoomable="yes"}
+**텍스트 모드:**
 
->[!TAB 여러 사용자 그래프: 공유 장치, 공유 컴퓨터]
-
-다음은 장치(컴퓨터)를 두 사람이 공유하는 여러 사람 그래프 시나리오입니다. 이 시나리오에서 공유 컴퓨터는 `{ECID: 111}`(으)로 표시되며 `{CRMID: Summer}`에 연결됩니다. 해당 링크는 가장 최근에 설정된 링크이기 때문입니다. `{CRMID: Tom}`과(와) `{ECID: 111}` 사이의 연결이 오래되었으며 CRMID가 이 구성에서 지정된 고유 네임스페이스이므로 `{CRMID: Tom}`이(가) 제거되었습니다.
-
-![두 사용자가 컴퓨터를 공유하는 여러 사용자 그래프 시나리오입니다.](../images/graph-examples/shared_device_shared_computer.png "사람 그래프의 시뮬레이션된 예입니다. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다."){zoomable="yes"}
-
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID:B-B-B
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, CRMIDhash: John
+CRMID: Jane, CRMIDhash: Jane
+CRMIDhash: John, ECID: 111 
+CRMIDhash: Jane, ECID: 111
 ```
 
->[!TAB 여러 사용자 그래프: 공유 장치, android 모바일 장치]
+![자리 표시자](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
-다음은 Android 장치를 두 사람이 공유하는 다인 그래프 시나리오입니다. 이 시나리오에서는 CRMID가 고유한 네임스페이스로 구성되므로 `{CRMID: Tom, GAID: B-B-B, ECID:444}`의 최신 링크가 이전 `{CRMID: Summer, GAID: B-B-B, ECID:444}`보다 우선합니다.
+>[!TAB 시나리오 2: 잘못된 데이터]
 
-![두 사용자가 Android 모바일 장치를 공유하는 다인 그래프 시나리오입니다.](../images/graph-examples/shared_device_android.png "사람 그래프의 시뮬레이션된 예입니다. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다."){zoomable="yes"}
+해시 프로세스의 오류로 인해 고유하지 않은 해시된 CRMID가 생성되어 ID 서비스로 전송됩니다.
 
-**그래프 시뮬레이션 이벤트 입력**
+**텍스트 모드:**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Tom, ECID: 444, GAID: B-B-B
+```json
+CRMID: John, CRMIDhash: aaaa
+CRMID: Jane, CRMIDhash: aaaa
 ```
 
->[!TAB 여러 사용자 그래프: 공유 장치, apple 모바일 장치, ECID 재설정 안 함]
+![해시 프로세스에 오류가 발생하여 고유한 해시된 CRMID가 아닌 CRMID로 이어지는 공유된 Device Graph입니다.](../images/configs/intermediate/hashing-error.png)
 
-다음은 두 사람이 Apple 장치를 공유하는 여러 사람 그래프 시나리오입니다. 이 시나리오에서는 IDFA가 공유되지만 ECID는 재설정되지 않습니다.
+>[!ENDTABS]
+<!-- 
+### Use case: You are using Real-Time CDP and Adobe Commerce
 
-![두 사용자가 Apple 모바일 장치를 공유하는 다인 그래프 시나리오입니다.](../images/graph-examples/shared_device_apple_no_reset.png "사람 그래프의 시뮬레이션된 예입니다. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다."){zoomable="yes"}
+You have two types of end-users:
 
-**그래프 시뮬레이션 이벤트 입력**
+* **Members**: An end-user who is assigned a CRMID and has an email account registered to your system.
+* **Guests**: An end-user who is not a member. They do not have an assigned CRMID and their email accounts are not registered to your system.
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, ECID: 222, IDFA: A-A-A
+In this scenario, your customers are sending data from Adobe Commerce to Real-Time CDP.
+
+**Exercise**
+
+Simulate the following configurations in the graph simulation tool. You can either create your own events, or copy and paste using text mode.
+
+>[!BEGINTABS]
+
+>[!TAB Shared device between two members]
+
+In this scenario, two members share the same device to browse an e-commerce website.
+
+**Text mode**
+
+```json
+CRMID: John, Email: john@g
+CRMID: Jane, Email: jane@g
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
 
->[!TAB 여러 사용자 그래프: 공유 장치, apple, ECID 재설정]
+![A graph that displays two authenticated members who share a device.](../images/configs/intermediate/shared-device-two-members.png)
 
-다음은 두 사람이 Apple 장치를 공유하는 여러 사람 그래프 시나리오입니다. 이 시나리오에서는 ECID가 재설정되지만 IDFA는 동일하게 유지됩니다.
+>[!TAB Shared device between two guests]
 
-![두 사용자가 Apple 모바일 장치를 공유하지만 ECID가 다시 설정되는 여러 사용자 그래프 시나리오입니다.](../images/graph-examples/shared_device_apple_with_reset.png "사람 그래프의 시뮬레이션된 예입니다. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다."){zoomable="yes"}
+In this scenario, two guests share the same device to browse an e-commerce website.
 
-**그래프 시뮬레이션 이벤트 입력**
+**Text mode**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, ECID: 555, IDFA: A-A-A
+```json
+Email: john@g, ECID: 111
+Email: jane@g, ECID: 111
 ```
 
->[!TAB 여러 사용자 그래프: 고유하지 않은 전화]
+![A graph that displays two guests who share a device.](../images/configs/intermediate/shared-device-two-guests.png)
 
-다음은 두 사람이 동일한 전화 번호를 공유하는 여러 사람 그래프 시나리오입니다.
+>[!TAB Shared device between a member and a guest]
 
-![전화 네임스페이스가 고유하지 않은 여러 사용자 그래프 시나리오입니다.](../images/graph-examples/non_unique_phone.png "사람 그래프의 시뮬레이션된 예입니다. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다."){zoomable="yes"}
+In this scenario, a member and a guest share the same device to browse an e-commerce website.
 
-**그래프 시뮬레이션 이벤트 입력**
+**Text mode**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, Phone_SHA256: 123-4567
+```json
+CRMID: John, Email: john@g
+CRMID: John, ECID: 111
+Email: jane@g, ECID: 111
 ```
 
-이 예제에서 `{Phone_SHA256}`은(는) 고유한 네임스페이스로 표시됩니다. 따라서 그래프는 `{Phone_SHA256}` 네임스페이스를 가진 ID를 두 개 이상 가질 수 없습니다. 이 시나리오에서는 `{Phone_SHA256: 765-4321}`이(가) 이전 링크이므로 `{CRMID: Summer}` 및 `{Email_LC_SHA256: ddeeff}`에서 연결 해제됩니다.
+![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
-![Phone_SHA256이 고유한 사람 그래프 시나리오입니다.](../images/graph-examples/unique_phone.png "사람 그래프의 시뮬레이션된 예입니다. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다."){zoomable="yes"}
+>[!ENDTABS] -->
 
->[!TAB 여러 사용자 그래프: 고유하지 않은 전자 메일]
+### 사용 사례: 데이터에는 세 개의 고유한 네임스페이스가 포함됩니다
 
-다음은 두 사람이 이메일을 공유하는 여러 사용자 그래프 시나리오입니다.
+고객은 다음과 같이 1인 엔티티를 정의합니다.
 
-![전자 메일이 고유하지 않은 여러 사용자 그래프 시나리오](../images/graph-examples/non_unique_email.png "여러 사용자 그래프의 시뮬레이션된 예입니다. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다."){zoomable="yes"}
+* CRMID가 할당된 최종 사용자.
+* 해시된 전자 메일을 지원하는 대상으로 프로필을 활성화할 수 있도록 해시된 전자 메일 주소에 연결된 최종 사용자(예: [!DNL Facebook]).
+* 지원 담당자가 해당 이메일 주소를 사용하여 Real-Time CDP에서 프로필을 조회할 수 있도록 이메일 주소와 연결된 최종 사용자입니다.
 
-**그래프 시뮬레이션 이벤트 입력**
+| 표시 이름 | ID 심볼 | ID 유형 | 그래프별로 고유 | 네임스페이스 우선순위 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| 이메일 | 이메일 | 이메일 | ✔️ | 2 |
+| Email_LC_SHA256 | Email_LC_SHA256 | 이메일 | ✔️ | 3 |
+| ECID | ECID | 쿠키 | | 4 |
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, Email_LC_SHA256: aabbcc
+그래프 시뮬레이션 도구에서 다음 구성을 시뮬레이션합니다. 이벤트를 직접 만들거나 텍스트 모드를 사용하여 복사하여 붙여넣을 수 있습니다.
+
+>[!BEGINTABS]
+
+>[!TAB 두 명의 최종 사용자가 로그인함]
+
+이 시나리오에서 John과 Jane은 둘 다 전자 상거래 웹 사이트에 로그인합니다.
+
+**텍스트 모드**
+
+```json
+CRMID: John, Email: john@g, Email_LC_SHA256: john_hash 
+CRMID: Jane, Email: jane@g, Email_LC_SHA256: jane_hash 
+CRMID: John, ECID: 111 
+CRMID: Jane, ECID: 111
 ```
+
+![동일한 장치를 사용하여 웹 사이트에 로그인하는 두 명의 최종 사용자를 표시하는 그래프입니다.](../images/configs/intermediate/two-end-users-log-ing.png)
+
+>[!TAB 최종 사용자가 전자 메일을 변경합니다]
+
+**텍스트 모드**
+
+```json
+CRMID: John, Email: john@g, Email_LC_SHA256: john_hash
+CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
+```
+
+![전자 메일을 변경한 최종 사용자를 표시하는 그래프입니다.](../images/configs/intermediate/end-user-changes-email.png)
 
 >[!ENDTABS]
 
-## 여러 로그인 ID가 있는 단일 CRMID(단순 버전)
+## 고급 구현 {#advanced-implementations}
 
-이 시나리오에는 개인 엔티티를 나타내는 단일 CRMID가 있습니다. 단, 개인 엔티티에는 여러 로그인 식별자가 있을 수 있습니다.
+고급 구현에는 복잡하고 여러 계층이 있는 그래프 시나리오가 포함됩니다. 이러한 구현 유형에는 그래프 축소를 방지하기 위해 제거해야 하는 올바른 링크를 식별하기 위한 **네임스페이스 우선 순위**&#x200B;의 사용이 포함됩니다.
 
-* 지정된 개인 엔티티는 서로 다른 계정 유형(개인 및 비즈니스, 주별 계정, 브랜드별 계정 등)을 가질 수 있습니다.
-* 특정 개인 엔티티는 계정 수에 관계없이 다른 이메일 주소를 사용할 수 있습니다.
+**네임스페이스 우선 순위**&#x200B;은(는) 중요도별로 네임스페이스의 등급을 지정하는 메타데이터입니다. 그래프에 각각 다른 고유한 네임스페이스를 가진 두 개의 ID가 포함된 경우 ID 서비스는 네임스페이스 우선 순위를 사용하여 제거할 링크를 결정합니다. 자세한 내용은 네임스페이스 우선 순위에 대한 [설명서를 읽어보세요](../identity-graph-linking-rules/namespace-priority.md).
 
->[!IMPORTANT]
->
->**모든 사용자에 대해 CRMID가 항상 전송되어야 합니다**. 이렇게 하지 않으면 단일 개인 엔티티가 다른 사용자와 디바이스를 공유하는 것으로 간주되는 &quot;댕글링&quot; 로그인 ID 시나리오가 발생할 수 있습니다.
+네임스페이스 우선 순위는 복잡한 그래프 시나리오에서 중요한 역할을 합니다. 그래프는 여러 계층을 가질 수 있습니다. 최종 사용자는 여러 로그인 ID와 연결될 수 있으며 이러한 로그인 ID는 해시될 수 있습니다. 또한 서로 다른 ECID를 서로 다른 로그인 ID에 연결할 수 있습니다. 올바른 링크를 제거하려면 오른쪽 레이어에서 네임스페이스 우선 순위 구성이 올바른지 확인해야 합니다.
 
-**구현:**
+[!DNL Identity Graph Linking Rules]의 고급 구현을 보려면 이 섹션을 읽어 보십시오.
 
-| 사용된 네임스페이스 | 웹 동작 수집 방법 |
-| --- | --- |
-| CRMID, loginID, ECID | Web SDK |
+### 사용 사례: 여러 비즈니스 라인에 대한 지원이 필요합니다.
 
-**이벤트:**
+최종 사용자에게는 개인 계정과 비즈니스 계정, 이렇게 두 개의 다른 계정이 있습니다. 각 계정은 다른 ID로 식별됩니다. 이 시나리오에서 일반적인 그래프는 다음과 같습니다.
 
-다음 이벤트를 텍스트 모드에 복사하여 그래프 시뮬레이션에서 이 시나리오를 생성할 수 있습니다.
+**텍스트 모드***
 
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JohnPersonal, ECID: 222
+loginID: JohnBusiness, ECID: 222
 ```
 
-**알고리즘 구성:**
+**알고리즘 구성(ID 설정)**
 
-알고리즘 구성에 대해 다음 설정을 구성하여 그래프 시뮬레이션에서 이 시나리오를 생성할 수 있습니다.
+그래프를 시뮬레이션하기 전에 그래프 시뮬레이션 인터페이스에서 다음 설정을 구성합니다.
 
-| 우선 순위 | 표시 이름 | ID 유형 | 그래프별로 고유 |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | 예 |
-| 2 | loginID | CROSS_DEVICE | 아니요 |
-| 3 | ECID | 쿠키 | 아니요 |
+| 표시 이름 | ID 심볼 | ID 유형 | 그래프별로 고유 | 네임스페이스 우선순위 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| loginID | loginID | CROSS_DEVICE | | 2 |
+| ECID | ECID | 쿠키 | | 3 |
 
-**프로필에 대한 기본 ID 선택:**
+**시뮬레이션된 그래프**
 
-이 구성의 컨텍스트 내에서 기본 ID는 다음과 같이 정의됩니다.
++++시뮬레이션된 그래프를 보려면 선택
 
-| 인증 상태 | 이벤트의 네임스페이스 | 기본 ID |
-| --- | --- | --- |
-| Authenticated | loginID, ECID | loginID |
-| Authenticated | loginID, ECID | loginID |
-| Authenticated | CRMID, loginID, ECID | CRMID |
-| Authenticated | CRMID, ECID | CRMID |
-| 인증되지 않음 | ECID | ECID |
+![회사 및 개인 전자 메일이 있는 최종 사용자의 ID 그래프입니다.](../images/configs/advanced/advanced.png)
 
-**그래프 예**
++++
+
+
+**연습**
+
+그래프 시뮬레이션에서 다음 구성을 시뮬레이션하십시오. 이벤트를 직접 만들거나 텍스트 모드를 사용하여 복사하여 붙여넣을 수 있습니다.
 
 >[!BEGINTABS]
 
->[!TAB 이상적인 1인 시나리오]
+>[!TAB 공유된 장치]
 
-다음은 단일 CRMID와 여러 로그인 ID를 사용하는 1인 그래프 시나리오입니다.
+**텍스트 모드**
 
-![단일 CRMID와 여러 로그인 ID를 포함하는 그래프 시나리오입니다.](../images/graph-examples/single_crmid.png "사람 그래프의 시뮬레이션된 예입니다. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다."){zoomable="yes"}
-
->[!TAB 여러 사용자 그래프 시나리오: 공유 장치]
-
-다음은 두 사람이 디바이스를 공유하는 여러 사용자 그래프 시나리오입니다. 이 시나리오에서 `{ECID:111}`은(는) `{loginID:ID_A}` 및 `{loginID:ID_C}`과(와) 모두 연결되어 있으며 `{ECID:111, loginID:ID_A}`의 이전 설정된 링크가 제거됩니다.
-
-![여러 사용자가 공유하는 장치 시나리오입니다.](../images/graph-examples/single_crmid_shared_device.png "사람 그래프의 시뮬레이션된 예입니다. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다."){zoomable="yes"}
-
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-loginID: ID_C, ECID: 111
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+CRMID: Jane, loginID: JanePersonal
+CRMID: Jane, loginID: JaneBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JanePersonal, ECID: 111
 ```
 
->[!TAB 여러 사용자 그래프 시나리오: 잘못된 데이터]
+![고급 공유 장치의 그래프입니다.](../images/configs/advanced/advanced-shared-device.png)
 
-다음은 잘못된 데이터를 포함하는 여러 사용자 그래프 시나리오입니다. 이 시나리오에서는 `{loginID:ID_D}`이(가) 서로 다른 두 사용자에게 잘못 연결되어 있으며, 더 최근에 설정된 링크를 위해 이전 타임스탬프가 있는 링크가 삭제됩니다.
+>[!TAB 잘못된 데이터가 Real-Time CDP으로 전송됨]
 
-![잘못된 데이터가 있는 여러 사용자 그래프 시나리오입니다.](../images/graph-examples/single_crmid_bad_data.png "사람 그래프의 시뮬레이션된 예입니다. 이 예제에서는 두 개의 CRMID가 있고 이전에 설정한 링크가 제거되는 공유 장치 시나리오를 표시합니다."){zoomable="yes"}
-
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, loginID: ID_D
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: error
+CRMID: Jane, loginID: JanePersonal
+CRMID: Jane, loginID: error
+loginID: JohnPersonal, ECID: 111
+loginID: JanePersonal, ECID: 222
 ```
 
->[!TAB &#39;Dangling&#39; loginID]
-
-다음 그래프는 &quot;댕글링&quot; loginID 시나리오를 시뮬레이션합니다. 이 예에서는 두 개의 서로 다른 loginID가 동일한 ECID에 바인딩됩니다. 그러나 `{loginID:ID_C}`은(는) CRMID에 연결되어 있지 않습니다. 따라서 Identity Service에서는 이 두 로그인 ID가 서로 다른 두 엔티티를 나타내는지 감지할 수 없습니다.
-
-![대기 중인 loginID 시나리오입니다.](../images/graph-examples/dangling_example.png "대기 중인 loginID 시나리오입니다."){zoomable="yes"}
-
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-loginID: ID_C, ECID: 111
-```
+![잘못된 데이터가 Real-Time CDP으로 전송되는 시나리오를 표시하는 그래프입니다.](../images/configs/advanced/advanced-bad-data.png)
 
 >[!ENDTABS]
 
-## 여러 로그인 ID가 있는 단일 CRMID(복잡한 버전)
+### 사용 사례: 여러 네임스페이스가 필요한 복잡한 구현이 있습니다
 
-이 시나리오에는 개인 엔티티를 나타내는 단일 CRMID가 있습니다. 단, 개인 엔티티에는 여러 로그인 식별자가 있을 수 있습니다.
+미디어 및 엔터테인먼트 회사이며 최종 사용자에게는 다음과 같은 사항이 있습니다.
+* CRMID
+* 충성도 ID
+또한 최종 사용자는 전자 상거래 웹 사이트에서 구매할 수 있으며 이 데이터는 이메일 주소에 연결되어 있습니다. 또한 사용자 데이터는 서드파티 데이터베이스 공급자에 의해 보강되어 Experience Platform으로 일괄적으로 전송됩니다.
 
-* 지정된 개인 엔티티는 서로 다른 계정 유형(개인 및 비즈니스, 주별 계정, 브랜드별 계정 등)을 가질 수 있습니다.
-* 특정 개인 엔티티는 계정 수에 관계없이 다른 이메일 주소를 사용할 수 있습니다.
+**텍스트 모드**
 
->[!IMPORTANT]
->
->**모든 사용자에 대해 CRMID가 항상 전송되어야 합니다**. 이렇게 하지 않으면 단일 개인 엔티티가 다른 사용자와 디바이스를 공유하는 것으로 간주되는 &quot;댕글링&quot; 로그인 ID 시나리오가 발생할 수 있습니다.
-
-**구현:**
-
-| 사용된 네임스페이스 | 웹 동작 수집 방법 |
-| --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics 소스 커넥터. <br> **참고:** 기본적으로 AAID는 ID 서비스에서 차단되므로 Analytics 원본을 사용할 때 ECID에 AAID보다 우선 순위를 높여야 합니다. 자세한 내용은 [구현 가이드](./implementation-guide.md#ingest-your-data)를 참조하십시오.</br> |
-
-**이벤트:**
-
-다음 이벤트를 텍스트 모드에 복사하여 그래프 시뮬레이션에서 이 시나리오를 생성할 수 있습니다.
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+Email: john@g, orderID: aaa
+CRMID: John, thirdPartyID: xyz
+CRMID: John, ECID: 111
 ```
 
-**알고리즘 구성:**
+**알고리즘 구성(ID 설정)**
 
-알고리즘 구성에 대해 다음 설정을 구성하여 그래프 시뮬레이션에서 이 시나리오를 생성할 수 있습니다.
+그래프를 시뮬레이션하기 전에 그래프 시뮬레이션 인터페이스에서 다음 설정을 구성합니다.
 
-| 우선 순위 | 표시 이름 | ID 유형 | 그래프별로 고유 |
-| ---| --- | --- | --- | 
-| 1 | CRMID | CROSS_DEVICE | 예 |
-| 2 | Email_LC_SHA256 | 이메일 | 아니요 |
-| 3 | Phone_SHA256 | 휴대폰 | 아니요 |
-| 4 | loginID | CROSS_DEVICE | 아니요 |
-| 5 | ECID | 쿠키 | 아니요 |
-| 6 | AAID | 쿠키 | 아니요 |
+| 표시 이름 | ID 심볼 | ID 유형 | 그래프별로 고유 | 네임스페이스 우선순위 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| loyaltyID | loyaltyID | CROSS_DEVICE | | 2 |
+| 이메일 | 이메일 | 이메일 | | 3 |
+| 타사 ID | 타사 ID | CROSS_DEVICE | | 4 |
+| orderID | orderID | CROSS_DEVICE | | 5 |
+| ECID | ECID | 쿠키 | | 6 |
 
-**프로필에 대한 기본 ID 선택:**
+**연습**
 
-이 구성의 컨텍스트 내에서 기본 ID는 다음과 같이 정의됩니다.
-
-| 인증 상태 | 이벤트의 네임스페이스 | 기본 ID |
-| --- | --- | --- |
-| Authenticated | loginID, ECID | loginID |
-| Authenticated | loginID, ECID | loginID |
-| Authenticated | CRMID, loginID, ECID | CRMID |
-| Authenticated | CRMID, ECID | CRMID |
-| 인증되지 않음 | ECID | ECID |
-
-**그래프 예**
+그래프 시뮬레이션에서 다음 구성을 시뮬레이션하십시오. 이벤트를 직접 만들거나 텍스트 모드를 사용하여 복사하여 붙여넣을 수 있습니다.
 
 >[!BEGINTABS]
 
->[!TAB 이상적인 1인 그래프]
+>[!TAB 공유된 장치]
 
-다음은 각각 CRMID와 여러 로그인 ID가 있는 두 개의 1인 그래프의 예입니다.
+**텍스트 모드**
 
-![CRMID와 여러 로그인 ID가 포함된 1인 그래프입니다.](../images/graph-examples/complex_single_person.png "CRMID와 여러 로그인 ID가 포함된 1인 그래프입니다."){zoomable="yes"}
-
->[!TAB 여러 사용자 그래프: 공유 장치 1]
-
-다음은 `{ECID:111}`이(가) `{loginID:ID_A}`과(와) `{loginID:ID_C}`에 모두 연결되어 있는 다중 사용자 공유 장치 시나리오입니다. 이 경우, 이전에 설정된 링크는 최근에 설정된 링크를 위해 제거됩니다.
-
-![여러 사용자 공유 장치 그래프 시나리오입니다.](../images/graph-examples/complex_shared_device_one.png "여러 사용자 공유 장치 그래프 시나리오입니다."){zoomable="yes"}
-
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-loginID: ID_C, ECID: 111
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+Email: john@g, orderID: aaa 
+CRMID: John, thirdPartyID: xyz 
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
 
->[!TAB 여러 사용자 그래프: 공유 장치 2]
+![공유 장치의 복잡한 그래프 예입니다.](../images/configs/advanced/complex-shared-device.png)
 
-이 시나리오에서는 loginID만 보내는 대신 loginID와 CRMID가 모두 경험 이벤트로 전송됩니다.
+>[!TAB 최종 사용자가 전자 메일 주소를 변경합니다]
 
-![로그인 ID와 CRMID가 모두 경험 이벤트로 전송되는 여러 사용자 공유 장치 그래프 시나리오입니다.](../images/graph-examples/complex_shared_device_two.png "로그인 ID와 CRMID가 모두 경험 이벤트로 전송되는 여러 사용자 공유 장치 그래프 시나리오입니다."){zoomable="yes"}
+**텍스트 모드**
 
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Summer, loginID: ID_C, ECID: 111
-loginID: ID_A, ECID: 111
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: John, loyaltyID: John, Email: john@y
 ```
 
->[!TAB 여러 사용자 그래프: 잘못된 loginID 데이터]
+![전자 메일 변경 시 ID 동작을 표시하는 그래프입니다.](../images/configs/advanced/complex-email-change.png)
 
-이 시나리오에서 `{loginID:ID_C}`은(는) `{CRMID:Tom}` 및 `{CRMID:Summer}`에 모두 연결되어 있으므로 이상적인 그래프 시나리오가 동일한 loginID를 서로 다른 두 사용자에게 연결해서는 안 되므로 잘못된 데이터입니다. 이 경우, 이전에 설정된 링크는 최근에 설정된 링크를 위해 제거됩니다.
+>[!TAB thirdPartyID 연결 변경]
 
-![잘못된 로그인 데이터를 포함하는 여러 사용자 그래프 시나리오입니다.](../images/graph-examples/complex_bad_data.png "잘못된 로그인 데이터를 포함하는 여러 사용자 그래프 시나리오입니다."){zoomable="yes"}
+**텍스트 모드**
 
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, loginID: ID_C
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+CRMID: John, thirdPartyID: xyz
+CRMID: Jane, thirdPartyID: xyz
 ```
 
->[!TAB 여러 사용자 그래프: 고유하지 않은 전자 메일]
+![타사 ID 연결이 변경되었을 때 ID 동작을 표시하는 그래프입니다.](../images/configs/advanced/complex-third-party-change.png)
 
-이 시나리오에서 고유하지 않은 이메일이 두 개의 다른 CRMID와 연결되어 있으므로 보다 최근에 설정된 링크를 위해 이전에 설정된 링크가 제거됩니다.
+>[!TAB 고유하지 않은 orderID]
 
-![고유하지 않은 전자 메일이 포함된 여러 사용자 그래프 시나리오입니다.](../images/graph-examples/complex_non_unique_email.png "고유하지 않은 전자 메일을 포함하는 여러 사용자 그래프 시나리오입니다."){zoomable="yes"}
+**텍스트 모드**
 
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Summer, Email_LC_SHA256: aabbcc
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+Email: john@g, orderID: aaa
+Email: jane@g, orderID: aaa
 ```
 
->[!TAB 여러 사용자 그래프: 고유하지 않은 전화]
+![고유 순서 ID가 아닌 ID 동작을 표시하는 그래프입니다.](../images/configs/advanced/complex-non-unique.png)
 
-이 시나리오에서 고유하지 않은 전화 번호가 두 개의 다른 CRMID와 연결되고 있으므로, 보다 최근에 설정된 링크를 위해 이전에 설정된 링크가 제거됩니다.
+>[!TAB 잘못된 loyaltyID]
 
-![고유하지 않은 전화 번호를 포함하는 여러 사용자 그래프 시나리오입니다.](../images/graph-examples/complex_non_unique_phone.png "고유하지 않은 전화 번호를 포함하는 여러 사용자 그래프 시나리오입니다."){zoomable="yes"}
+**텍스트 모드**
 
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, Phone_SHA256: 111-1111
-CRMID: Summer, Phone_SHA256: 111-1111
+```json
+CRMID: John, loyaltyID: aaa, Email: john@g
+CRMID: Jane, loyaltyID: aaa, Email: jane@g
 ```
 
->[!ENDTABS]
-
-## 다른 Adobe Commerce에서의 사용
-
-이 섹션의 그래프 구성 예는 Adobe Commerce의 사용 사례를 요약합니다. 아래 예제는 두 가지 사용자 유형을 사용하는 소매 고객을 대상으로 합니다.
-
-* 등록된 사용자(계정을 만든 사용자)
-* 게스트 사용자(이메일 주소만 있는 사용자)
-
->[!IMPORTANT]
->
->**모든 사용자에 대해 CRMID가 항상 전송되어야 합니다**. 이렇게 하지 않으면 단일 개인 엔티티가 다른 사용자와 디바이스를 공유하는 것으로 간주되는 &quot;댕글링&quot; 로그인 ID 시나리오가 발생할 수 있습니다.
-
-**구현:**
-
-| 사용된 네임스페이스 | 웹 동작 수집 방법 |
-| --- | --- |
-| CRMID, 이메일, ECID | Web SDK |
-
-**이벤트:**
-
-다음 이벤트를 텍스트 모드에 복사하여 그래프 시뮬레이션에서 이 시나리오를 생성할 수 있습니다.
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Tom, ECID: 111
-```
-
-**알고리즘 구성:**
-
-알고리즘 구성에 대해 다음 설정을 구성하여 그래프 시뮬레이션에서 이 시나리오를 생성할 수 있습니다.
-
-| 우선 순위 | 표시 이름 | ID 유형 | 그래프별로 고유 |
-| ---| --- | --- | --- | 
-| 1 | CRMID | CROSS_DEVICE | 예 |
-| 2 | 이메일 | 이메일 | 예 |
-| 5 | ECID | 쿠키 | 아니요 |
-
-**프로필에 대한 기본 ID 선택:**
-
-이 구성의 컨텍스트 내에서 기본 ID는 다음과 같이 정의됩니다.
-
-| 사용자 활동 | 이벤트의 네임스페이스 | 기본 ID |
-| --- | --- | --- |
-| 인증된 브라우징 | CRMID, ECID | CRMID |
-| 게스트 체크아웃 | 이메일, ECID | 이메일 |
-| 인증되지 않은 검색 | ECID | ECID |
-
->[!WARNING]
->
->등록된 사용자는 다음 그래프 시나리오가 작동하려면 프로필에 CRMID와 이메일을 모두 입력해야 합니다.
-
-**그래프 예**
-
->[!BEGINTABS]
-
->[!TAB 이상적인 1인 그래프]
-
-다음은 이상적인 1인 그래프의 예입니다.
-
-![하나의 전자 메일 네임스페이스가 있는 이상적인 1인 그래프의 예입니다.](../images/graph-examples/single_person_email.png "하나의 전자 메일 네임스페이스를 가진 이상적인 1인 그래프의 예입니다."){zoomable="yes"}
-
->[!TAB 여러 사용자 그래프]
-
-다음은 두 명의 등록된 사용자가 동일한 디바이스를 사용하여 탐색하는 다인 그래프의 예입니다.
-
-![등록된 두 사용자가 같은 장치를 사용하여 탐색하는 여러 사용자 그래프 시나리오입니다.](../images/graph-examples/two_registered_users.png "두 명의 등록된 사용자가 동일한 장치를 사용하여 탐색하는 여러 사용자 그래프 시나리오입니다."){zoomable="yes"}
-
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Summer, Email: summer@acme.com
-CRMID: Tom, ECID: 111
-CRMID: Summer, ECID: 111
-```
-
-이 시나리오에서는 등록된 사용자와 게스트 사용자가 동일한 장치를 공유합니다.
-
-![등록된 사용자와 게스트가 동일한 장치를 공유하는 다인 그래프 예입니다.](../images/graph-examples/one_guest.png "등록된 사용자와 게스트가 동일한 장치를 공유하는 다인 그래프 예"){zoomable="yes"}
-
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Tom, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-이 시나리오에서는 등록된 사용자와 게스트 사용자가 장치를 공유합니다. 그러나 CRMID에 해당 이메일 네임스페이스가 포함되어 있지 않아 구현 오류가 발생합니다. 이 시나리오에서는 Tom이 등록 사용자이고 Summer가 게스트 사용자입니다. 앞의 시나리오와 달리 두 개인 엔티티에는 공통 이메일 네임스페이스가 없으므로 두 엔티티가 병합됩니다.
-
-![등록된 사용자와 게스트가 동일한 장치를 공유하는 여러 사용자 그래프의 예이지만 CRMID에 전자 메일 네임스페이스가 없으므로 구현 오류가 발생합니다.](../images/graph-examples/no_email_namespace_in_crmid.png "등록된 사용자와 게스트가 동일한 장치를 공유하는 여러 사용자 그래프의 예이지만 CRMID에 전자 메일 네임스페이스가 없으므로 구현 오류가 발생합니다."){zoomable="yes"}
-
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-CRMID: Tom, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-이 시나리오에서는 두 명의 게스트 사용자가 동일한 디바이스를 공유합니다.
-
-![두 게스트 사용자가 동일한 장치를 공유하는 여러 사용자 그래프 시나리오입니다.](../images/graph-examples/two_guests.png){zoomable="yes"}
-
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-Email: tom@acme.com, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-이 시나리오에서는 게스트 사용자가 항목을 체크아웃한 다음 동일한 장치를 사용하여 등록합니다.
-
-![게스트 사용자가 항목을 구입하고 계정에 등록하는 그래프 시나리오입니다.](../images/graph-examples/guest_purchase.png "게스트 사용자가 항목을 구입하고 계정에 등록하는 그래프 시나리오입니다."){zoomable="yes"}
-
-**그래프 시뮬레이션 이벤트 입력**
-
-```shell
-Email: tom@acme.com, ECID: 111
-Email: tom@acme.com, CRMID: Tom
-CRMID: Tom, ECID: 111
-```
+![잘못된 충성도 ID가 지정된 ID 동작을 표시하는 그래프입니다.](../images/configs/advanced/complex-error.png)
 
 >[!ENDTABS]
 
