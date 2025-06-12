@@ -2,9 +2,9 @@
 title: Salesforce Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 1665c15c39667521bb74cca216694cf6b46bf26b
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1635'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >이제 Amazon Web Services(AWS)에서 Adobe Experience Platform을 실행할 때 [!DNL Salesforce] 소스를 사용할 수 있습니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../landing/multi-cloud.md)를 참조하세요.
+
+>[!WARNING]
+>
+>[!DNL Salesforce] 원본에 대한 기본 인증은 2026년 1월에 더 이상 사용되지 않습니다. 소스를 계속 사용하고 [!DNL Salesforce] 계정의 데이터를 Experience Platform으로 수집하려면 OAuth 2 클라이언트 자격 증명 인증으로 이동해야 합니다.
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
@@ -249,7 +253,7 @@ Azure에서 Experience Platform에 대한 [!DNL Salesforce] 계정을 설정하�
 | `TENANT_ID` | 만든 리소스의 이름 간격이 제대로 지정되고 조직 내에 포함되어 있는지 확인하는 데 사용되는 ID입니다. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | API 호출을 수행하는 URL 엔드포인트. 이 값은 고정되어 있으며 항상 `http://platform.adobe.io/`(으)로 설정됩니다. | `http://platform.adobe.io/` |
 | `munchkinId` | [!DNL Marketo] 계정의 고유 ID입니다. `munchkinId`을(를) 검색하는 방법에 대한 자세한 내용은 [인스턴스 인증 [!DNL Marketo] 에 대한 자습서를 참조하십시오.](../adobe-applications/marketo/marketo-auth.md) | `123-ABC-456` |
-| `sfdc_org_id` | [!DNL Salesforce] 계정의 조직 ID입니다. [!DNL Salesforce] 조직 ID를 가져오는 방법에 대한 자세한 내용은 다음 [[!DNL Salesforce] 안내서](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1)를 참조하십시오. | `00D4W000000FgYJUA0` |
+| `sfdc_org_id` | [!DNL Salesforce] 계정의 조직 ID입니다. [!DNL Salesforce] 조직 ID를 가져오는 방법에 대한 자세한 내용은 다음 [[!DNL Salesforce] 안내서](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1)를 참조하십시오. | `00D4W000000FgYJUA0` |
 | `has_abm` | [!DNL Marketo Account-Based Marketing]을(를) 구독하는지 여부를 나타내는 부울 값입니다. | `false` |
 | `has_msi` | [!DNL Marketo Sales Insight]을(를) 구독하는지 여부를 나타내는 부울 값입니다. | `false` |
 

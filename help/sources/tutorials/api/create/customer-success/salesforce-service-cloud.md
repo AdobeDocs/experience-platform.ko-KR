@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 Salesforce 서비스 Cloud Source 연결 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Salesforce 서비스 클라우드에 연결하는 방법을 알아봅니다.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '818'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Salesforce Service Cloud]에 대한 기본 연결을 만드는 방법을 알아보려면 이 자습서를 읽어 보십시오.
 
-## 시작하기
+## 시작
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
@@ -25,6 +25,10 @@ ht-degree: 3%
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL Salesforce Service Cloud]에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### 필요한 자격 증명 수집
+
+>[!WARNING]
+>
+>[!DNL Salesforce Service Cloud] 원본에 대한 기본 인증은 2026년 1월에 더 이상 사용되지 않습니다. 소스를 계속 사용하고 [!DNL Salesforce Service Cloud] 계정의 데이터를 Experience Platform으로 수집하려면 OAuth 2 클라이언트 자격 증명 인증으로 이동해야 합니다.
 
 [!DNL Salesforce Service Cloud] 원본은 기본 인증과 OAuth2 클라이언트 자격 증명을 지원합니다.
 
@@ -57,7 +61,7 @@ OAuth 2 클라이언트 자격 증명을 사용하여 [!DNL Salesforce Service C
 | `apiVersion` | 사용 중인 [!DNL Salesforce Service Cloud] 인스턴스의 REST API 버전입니다. API 버전의 값은 십진수로 형식을 지정해야 합니다. 예를 들어 API 버전 `52`을(를) 사용하는 경우 값을 `52.0`(으)로 입력해야 합니다. 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. 이 값은 OAuth2 클라이언트 자격 증명 인증에 필수입니다. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL Salesforce Service Cloud]의 연결 사양 ID는 `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`입니다. |
 
-[!DNL Salesforce Service Cloud]에 대한 OAuth 사용에 대한 자세한 내용은 OAuth 인증 흐름에 대한 [[!DNL Salesforce Service Cloud] 안내서](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5)를 참조하십시오.
+[!DNL Salesforce Service Cloud]에 대한 OAuth 사용에 대한 자세한 내용은 OAuth 인증 흐름에 대한 [[!DNL Salesforce Service Cloud] 안내서](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)를 참조하십시오.
 
 >[!ENDTABS]
 
