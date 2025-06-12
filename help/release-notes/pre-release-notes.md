@@ -3,10 +3,10 @@ title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
 hide: true
 hidefromtoc: true
-source-git-commit: c34c41d384fbc4f309dffa8bba97a0f6f3468efc
+source-git-commit: c716bac1db556fe7a47462e38ee64d7b46bbefcc
 workflow-type: tm+mt
-source-wordcount: '1480'
-ht-degree: 42%
+source-wordcount: '1299'
+ht-degree: 45%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 42%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/releases/latest)
->- [페더레이션된 대상자 구성](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [페더레이션된 대상자 구성](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/latest)
 
 **릴리스 일자: 2025년 6월 18일 목요일**
@@ -38,7 +38,6 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 - [대상](#destinations)
 - [페더레이션된 대상자 컴포지션](#fac)
 - [Privacy Service](#privacy-service)
-- [쿼리 서비스](#query-service)
 - [샌드박스](#sandboxes)
 - [소스](#sources)
 
@@ -120,7 +119,7 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 | 새로운 기능 | 설명 |
 | ----------- | ----------- |
-| HIPAA 준비 | Federated Audience Composition은 이제 HIPAA를 준수합니다. Federated Audience Composition의 개인 정보 및 보안 조치에 대한 자세한 내용은 Federated Audience Composition 개요[&#128279;](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/start/privacy-security)의 개인 정보 및 보안을 참조하십시오. 일반적으로 Experience Platform 제품에 대한 HIPAA 준수에 대한 자세한 내용은 [HIPAA 및 Adobe 제품 및 서비스 개요](https://www.adobe.com/trust/compliance/hipaa-ready.html)를 참조하십시오. |
+| HIPAA 준비 | Federated Audience Composition은 이제 HIPAA를 준수합니다. Federated Audience Composition의 개인 정보 및 보안 조치에 대한 자세한 내용은 Federated Audience Composition 개요](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security)의 [개인 정보 및 보안을 참조하십시오. 일반적으로 Experience Platform 제품에 대한 HIPAA 준수에 대한 자세한 내용은 [HIPAA 및 Adobe 제품 및 서비스 개요](https://www.adobe.com/trust/compliance/hipaa-ready.html)를 참조하십시오. |
 
 자세한 내용은 [페더레이션된 대상자 컴포지션 설명서](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)를 참조하십시오.
 
@@ -132,30 +131,9 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 | 기능 | 설명 |
 |--- | ---|
-| 테네시 및 미네소타 개인 정보 보호 법 지원 | Privacy Service은 이제 테네시 정보 보호법(`tipa_tn_usa`) 및 미네소타 소비자 데이터 개인정보 보호법(`mcdpa_mn_usa`)을 지원합니다. 이러한 새로운 주 수준 규정을 준수하여 액세스 및 삭제 요청을 처리할 수 있습니다. 자세한 내용은 [규정 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/privacy/regulations/overview)를 참조하세요. |
+| 테네시 및 미네소타 개인 정보 보호 법 지원 | Privacy Service은 이제 테네시 정보 보호법(`tipa_tn_usa`) 및 미네소타 소비자 데이터 개인정보 보호법(`mcdpa_mn_usa`)을 지원합니다. 이러한 새로운 주 수준 규정을 준수하여 액세스 및 삭제 요청을 처리할 수 있습니다. 자세한 내용은 [규정 개요](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview)를 참조하세요. |
 
 서비스에 대한 자세한 내용은 [Privacy Service 개요](../privacy-service/home.md)를 참조하십시오.
-
-## 쿼리 서비스 {#query-service}
-
-쿼리 서비스가 포함된 표준 SQL을 사용하여 Adobe Experience Platform 데이터 레이크에서 데이터를 쿼리합니다. 데이터 세트를 매끄럽게 결합하고 쿼리 결과에서 새 데이터 세트를 생성하여 보고를 향상하거나, 데이터 과학 워크플로를 활성화하거나, 실시간 고객 프로필로 수집을 용이하게 합니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 고급 통계 함수 | **세타 스케치 교차**: 대략적인 개별 계산 및 집합 작업에 대해 세타 스케치를 사용하여 집합 교차를 계산하는 새로운 함수입니다. **KLL 히스토그램**: 분위수 추정 및 분포 분석을 위해 KLL(K번째 가장 작은 항목, L번째 가장 큰 항목) 스케치를 사용하여 히스토그램 기능이 향상되었습니다. 이러한 기능은 Data Distiller 고객이 사용할 수 있습니다. |
-| SQL 템플릿 라이브러리 | 이제 일반적인 사용 사례를 위한 포괄적인 SQL 템플릿 라이브러리를 사용할 수 있습니다. 이 기능은 빈번한 분석 패턴에 대한 모범 사례 템플릿을 제공하여 쿼리 개발을 가속화하므로 데이터 Distiller 고객이 복잡한 분석을 보다 효율적으로 구현할 수 있습니다. |
-
-**업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| RFM 모델링 예 | Data Distiller 고객을 위한 포괄적인 최신성, 빈도, 통화(RFM) 모델링 예를 추가했습니다. 여기에는 RFM 기법을 사용한 고객 세분화 및 가치 분석을 위한 자세한 설명서 및 구현 안내서가 포함되어 있습니다. |
-
-{style="table-layout:auto"}
-
-[!DNL Query Service]에 대한 자세한 내용은 [[!DNL Query Service] 개요](../query-service/home.md)를 참조하십시오.
 
 ## 샌드박스 {#sandboxes}
 
