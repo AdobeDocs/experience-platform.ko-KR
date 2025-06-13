@@ -4,9 +4,9 @@ description: ID 그래프 연결 규칙을 사용하여 구성할 수 있는 다
 hide: true
 hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: b65a5e8e9727da47729191e56c1a32838ec2c6c4
+source-git-commit: f793dbda0520366b3ee69b3aa0f912b005957561
 workflow-type: tm+mt
-source-wordcount: '1934'
+source-wordcount: '1999'
 ht-degree: 7%
 
 ---
@@ -43,6 +43,10 @@ ht-degree: 7%
 
 ## 기본 구현 {#basic-implementations}
 
+>[!TIP]
+>
+>아래의 기본 구현 연습을 완료하려면 &quot;CRMID&quot;에 대한 사용자 지정 교차 장치 네임스페이스를 만들어야 합니다.
+
 [!DNL Identity Graph Linking Rules]의 기본 구현을 보려면 이 섹션을 읽어 보십시오.
 
 ### 사용 사례: 하나의 크로스 디바이스 네임스페이스를 사용하는 간단한 구현
@@ -72,15 +76,11 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 **시뮬레이션된 그래프**
 
-+++시뮬레이션된 그래프를 보려면 선택
-
-이 그래프에서 John(최종 사용자)은 CRMID로 표시됩니다. {ECID: 123}은(는) John이 전자 상거래 플랫폼을 방문하기 위해 개인 컴퓨터에서 사용한 웹 브라우저를 나타냅니다. {ECID: 999}은(는) [!DNL iPhone]에서 사용한 브라우저를 나타내고 {IDFA: a-b-c}은(는) [!DNL iPhone]을(를) 나타냅니다.
+이 그래프에서 John(최종 사용자)은 CRMID로 표시됩니다. `{ECID: 123}`은(는) John이 전자 상거래 플랫폼을 방문하기 위해 개인 컴퓨터에서 사용한 웹 브라우저를 나타냅니다. `{ECID: 999}`은(는) [!DNL iPhone]에서 사용한 브라우저를 나타내고 `{IDFA: a-b-c}`은(는) [!DNL iPhone]을(를) 나타냅니다.
 
 ![장치 간 네임스페이스가 하나인 간단한 구현입니다.](../images/configs/basic/simple-implementation.png)
 
-+++
-
-### 운동
+**연습**
 
 그래프 시뮬레이션에서 다음 구성을 시뮬레이션하십시오. 이벤트를 직접 만들거나 텍스트 모드를 사용하여 복사하여 붙여넣을 수 있습니다.
 
@@ -99,18 +99,14 @@ CRMID: Jane, ECID: 111
 
 **시뮬레이션된 그래프**
 
-+++시뮬레이션된 그래프를 보려면 선택
-
 이 그래프에서 John과 Jane은 각각 CRMID로 표시됩니다.
 
-* {CRMID: John}
-* {CRMID: Jane}
+* `{CRMID: John}`
+* `{CRMID: Jane}`
 
-전자 상거래 플랫폼을 방문하는 데 사용하는 데스크톱 컴퓨터의 브라우저는 {ECID: 111}(으)로 표시됩니다. 이 그래프 시나리오에서 Jane은 마지막으로 인증된 최종 사용자이므로 {ECID: 111}과(와) {CRMID: John} 사이의 연결이 제거됩니다.
+전자 상거래 플랫폼을 방문하는 데 사용하는 데스크톱 컴퓨터의 브라우저는 `{ECID: 111}`(으)로 표시됩니다. 이 그래프 시나리오에서는 Jane이 마지막으로 인증된 최종 사용자이므로 `{ECID: 111}`과(와) `{CRMID: John}` 사이의 연결이 제거됩니다.
 
 ![공유 장치(PC)에 대한 시뮬레이션된 그래프입니다.](../images/configs/basic/shared-device-pc.png)
-
-+++
 
 >[!TAB 공유 장치(모바일)]
 
@@ -125,13 +121,9 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 **시뮬레이션된 그래프**
 
-+++시뮬레이션된 그래프를 보려면 선택
-
-이 그래프에서 John과 Jane은 모두 고유한 CRMID로 표시됩니다. 사용하는 브라우저는 {ECID: 111}(으)로 표시되고 공유하는 [!DNL iPad]은(는) {IDFA: a-b-c}(으)로 표시됩니다. 이 그래프 시나리오에서는 Jane이 마지막으로 인증된 최종 사용자이므로 {ECID: 111} 및 {IDFA: a-b-c}에서 {CRMID: John}까지의 링크가 제거됩니다.
+이 그래프에서 John과 Jane은 모두 고유한 CRMID로 표시됩니다. 사용하는 브라우저는 `{ECID: 111}`(으)로 표시되고 공유하는 [!DNL iPad]은(는) `{IDFA: a-b-c}`(으)로 표시됩니다. 이 그래프 시나리오에서는 Jane이 마지막으로 인증된 최종 사용자이므로 `{ECID: 111}` 및 `{IDFA: a-b-c}`에서 `{CRMID: John}`까지의 링크가 제거됩니다.
 
 ![공유 장치(모바일)에 대한 시뮬레이션된 그래프입니다.](../images/configs/basic/shared-device-mobile.png)
-
-+++
 
 >[!ENDTABS]
 
@@ -145,9 +137,9 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 >
 >* **고유하지 않은 ID**&#x200B;은(는) 고유하지 않은 네임스페이스와 연결된 ID입니다.
 >
->* 아래 예에서 `CChash`은(는) 해시된 신용 카드 번호를 나타내는 사용자 지정 네임스페이스입니다.
+>* 아래 중간 구현 연습을 완료하려면 &quot;CRMID&quot; 및 &quot;CChash&quot;에 대한 사용자 지정 교차 장치 네임스페이스를 만들어야 합니다. &quot;CCHash&quot;는 해시된 신용 카드 번호를 나타내는 사용자 정의 네임스페이스입니다.
 
-당신은 신용카드를 발급하는 상업은행에 근무하고 있는 데이터 설계자입니다. 마케팅 팀이 프로필에 이전 신용 카드 거래 내역을 포함하기를 원한다고 표시했습니다. 이 ID 그래프는 다음과 같을 수 있습니다.
+여러분이 신용카드를 발급하는 상업은행에서 일하는 데이터 설계자라고 상상해 보세요. 마케팅 팀이 프로필에 이전 신용 카드 거래 내역을 포함하기를 원한다고 표시했습니다. 이 ID 그래프는 다음과 같을 수 있습니다.
 
 **텍스트 모드:**
 
@@ -171,21 +163,32 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 **시뮬레이션된 그래프**
 
-+++시뮬레이션된 그래프를 보려면 선택
-
 ![시뮬레이션된 그래프의 이미지](../images/configs/basic/simple-implementation-non-unique.png)
-
-+++
 
 이러한 신용 카드 번호 또는 고유하지 않은 다른 네임스페이스가 항상 단일 최종 사용자 한 명에게 연결된다는 보장은 없습니다. 두 명의 최종 사용자가 동일한 신용 카드에 등록할 수 있으며, 잘못 수집된 고유하지 않은 자리 표시자 값이 있을 수 있습니다. 간단히 말해, 고유하지 않은 네임스페이스로 인해 그래프가 축소되지 않는다는 보장이 없습니다.
 
 이 문제를 해결하기 위해 ID 서비스는 가장 오래된 링크를 제거하고 가장 최근 링크를 유지합니다. 이렇게 하면 그래프에 CRMID가 하나만 있으므로 그래프 축소를 방지할 수 있습니다.
 
-### 운동
+**연습**
 
 그래프 시뮬레이션에서 다음 구성을 시뮬레이션하십시오. 이벤트를 직접 만들거나 텍스트 모드를 사용하여 복사하여 붙여넣을 수 있습니다.
 
 >[!BEGINTABS]
+
+>[!TAB 공유된 장치]
+
+**텍스트 모드:**
+
+```json
+CRMID: John, CChash: 1111-2222
+CRMID: Jane, CChash: 3333-4444
+CRMID: John, ECID: 123
+CRMID: Jane, ECID:123
+```
+
+**시뮬레이션된 그래프**
+
+![해시가 있는 중간 공유 장치 그래프입니다.](../images/configs/intermediate/intermediate-shared-device.png)
 
 >[!TAB 동일한 신용 카드를 가진 최종 사용자 두 명]
 
@@ -202,11 +205,7 @@ CRMID: Jane, ECID:456
 
 **시뮬레이션된 그래프**
 
-+++시뮬레이션된 그래프를 보려면 선택
-
 ![두 최종 사용자가 같은 신용 카드로 등록하는 그래프입니다.](../images/configs/intermediate/graph-with-same-credit-card.png)
-
-+++
 
 >[!TAB 잘못된 신용 카드 번호]
 
@@ -223,17 +222,17 @@ CRMID: Jill, CChash: undefined
 
 **시뮬레이션된 그래프**
 
-+++시뮬레이션된 그래프를 보려면 선택
-
 ![해싱 문제로 인해 신용 카드가 잘못된 그래프입니다.](../images/configs/intermediate/graph-with-invalid-credit-card.png)
-
-+++
 
 >[!ENDTABS]
 
 ### 사용 사례: 데이터에 해시된 CRMID와 해시되지 않은 CRMID가 모두 포함됩니다
 
-해시되지 않은(오프라인) CRMID와 해시된(온라인) CRMID를 모두 섭취하는 중입니다. 이들은 해시된 CRMID와 해시된 CRMID 간에 직접적인 관계를 기대한다. 최종 사용자가 인증된 계정을 사용하여 탐색할 때 해시된 CRMID가 장치 ID(ID 서비스에 ECID로 표시됨)와 함께 전송됩니다.
+>[!TIP]
+>
+>아래의 중간 구현 연습을 완료하려면 &quot;CRMID&quot; 및 &quot;CRMIDhash&quot;에 대한 사용자 지정 교차 장치 네임스페이스를 만들어야 합니다.
+
+해시되지 않은(오프라인) CRMID와 해시된(온라인) CRMID를 모두 섭취합니다. 해시된 CRMID와 해시된 CRMID 모두 직접적인 관계가 있을 것이라는 기대다. 최종 사용자가 인증된 계정을 사용하여 탐색할 때 해시된 CRMID가 장치 ID(ID 서비스에 ECID로 표시됨)와 함께 전송됩니다.
 
 **알고리즘 구성(ID 설정)**
 
@@ -252,7 +251,7 @@ CRMID: Jill, CChash: undefined
 
 >[!BEGINTABS]
 
->[!TAB 시나리오 1: 공유된 장치]
+>[!TAB 공유된 장치]
 
 존과 제인은 장치를 공유합니다.
 
@@ -265,9 +264,9 @@ CRMIDhash: John, ECID: 111
 CRMIDhash: Jane, ECID: 111
 ```
 
-![자리 표시자](../images/configs/intermediate/shared-device-hashed-crmid.png)
+![해시된 CRMID가 있는 공유된 장치 그래프](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
->[!TAB 시나리오 2: 잘못된 데이터]
+>[!TAB 잘못된 데이터]
 
 해시 프로세스의 오류로 인해 고유하지 않은 해시된 CRMID가 생성되어 ID 서비스로 전송됩니다.
 
@@ -360,7 +359,7 @@ Email: jane@g, ECID: 111
 
 >[!BEGINTABS]
 
->[!TAB 두 명의 최종 사용자가 로그인함]
+>[!TAB 공유된 장치]
 
 이 시나리오에서 John과 Jane은 둘 다 전자 상거래 웹 사이트에 로그인합니다.
 
@@ -399,6 +398,10 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 [!DNL Identity Graph Linking Rules]의 고급 구현을 보려면 이 섹션을 읽어 보십시오.
 
 ### 사용 사례: 여러 비즈니스 라인에 대한 지원이 필요합니다.
+
+>[!TIP]
+>
+>아래의 고급 구현 연습을 완료하려면 &quot;CRMID&quot; 및 &quot;loginID&quot;에 대한 사용자 정의 교차 장치 네임스페이스를 만들어야 합니다.
 
 최종 사용자에게는 개인 계정과 비즈니스 계정, 이렇게 두 개의 다른 계정이 있습니다. 각 계정은 다른 ID로 식별됩니다. 이 시나리오에서 일반적인 그래프는 다음과 같습니다.
 
@@ -469,9 +472,15 @@ loginID: JanePersonal, ECID: 222
 
 ### 사용 사례: 여러 네임스페이스가 필요한 복잡한 구현이 있습니다
 
+>[!TIP]
+>
+>아래의 고급 구현 연습을 완료하려면 &quot;CRMID&quot;, &quot;loyaltyID&quot;, &quot;thirdPartyID&quot; 및 &quot;orderID&quot;에 대한 사용자 지정 교차 장치 네임스페이스를 만들어야 합니다.
+
 미디어 및 엔터테인먼트 회사이며 최종 사용자에게는 다음과 같은 사항이 있습니다.
+
 * CRMID
 * 충성도 ID
+
 또한 최종 사용자는 전자 상거래 웹 사이트에서 구매할 수 있으며 이 데이터는 이메일 주소에 연결되어 있습니다. 또한 사용자 데이터는 서드파티 데이터베이스 공급자에 의해 보강되어 Experience Platform으로 일괄적으로 전송됩니다.
 
 **텍스트 모드**
