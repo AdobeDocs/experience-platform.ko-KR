@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 스트리밍 세분화 안내서
 description: 정의, 스트리밍 세그먼테이션을 사용하여 평가된 대상을 만드는 방법, 스트리밍 세그먼테이션을 사용하여 만든 대상을 보는 방법 등을 포함하여 스트리밍 세그먼테이션에 대해 알아봅니다.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 4a8d509286c92a76a897be663a68709bb3b71391
+source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 2%
@@ -169,7 +169,7 @@ WHEN(<= 24 hours before now)])
 
 | Audience | 스키마 | Source 유형 | 쿼리 정의 | 대상자 ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| 최근 포기 | 경험 이벤트 | 배치 | 지난 24시간 동안 하나 이상의 중단 이벤트가 있음 | `7deb246a-49b4-4687-95f9-6316df049948` |
+| 최근 포기 | 경험 이벤트 | 배치 | 지난 48시간 동안 하나 이상의 중단 이벤트가 있음 | `7deb246a-49b4-4687-95f9-6316df049948` |
 | 최근 체크아웃 | 경험 이벤트 | 스트리밍 | 지난 24시간 동안 체크아웃이 하나 이상 있음 | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 이 경우 다음과 같이 세 번째 대상을 만들어야 합니다.
@@ -467,4 +467,4 @@ Audience Portal에서 대상을 선택하면 대상 세부 사항 페이지가 �
 
 Adobe Experience Platform 사용자 인터페이스 사용에 대한 자세한 내용은 [세그먼테이션 사용 안내서](./overview.md)를 참조하세요.
 
-스트리밍 세분화에 대한 FAQ는 FAQ[&#128279;](../faq.md#streaming-segmentation)의 스트리밍 세분화 섹션을 참조하십시오.
+스트리밍 세분화에 대한 FAQ는 FAQ](../faq.md#streaming-segmentation)의 [스트리밍 세분화 섹션을 참조하십시오.
