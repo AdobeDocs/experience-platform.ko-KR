@@ -4,10 +4,10 @@ description: API를 사용하여 Azure Databricks를 Experience Platform에 연�
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
+source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 2%
+source-wordcount: '534'
+ht-degree: 3%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Azure Databricks] 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
 
-## 시작하기
+## 시작
 
 이 안내서를 사용하려면 Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
@@ -47,6 +47,8 @@ Experience Platform API를 성공적으로 호출하는 방법에 대한 자세�
 | `accessToken` | [!DNL Databricks] 계정을 인증하는 액세스 토큰입니다. [!DNL Databricks] 작업 영역을 사용하여 액세스 토큰을 생성할 수 있습니다. |
 | `database` | 델타 레이크에 있는 데이터베이스의 이름입니다. |
 | `connectionSpec.Id` | 연결 사양 ID는 기본 및 소스 연결 생성과 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL Databricks]의 연결 사양 ID는 `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`입니다. |
+
+자세한 내용은 [[!DNL Azure Databricks] 개요](../../../../connectors/databases/databricks.md)를 참조하십시오.
 
 ## 기본 연결 만들기
 

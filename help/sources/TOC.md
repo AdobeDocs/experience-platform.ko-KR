@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: dbcfd7bfbf2f2d8268d3d8b5748f75ec9f186597
+source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1080'
 ht-degree: 35%
 
 ---
@@ -293,6 +293,7 @@ ht-degree: 35%
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsights의 Apache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsights의 Apache Spark](tutorials/ui/create/databases/spark.md)
+         - [Azure Databricks](tutorials/ui/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure 테이블 스토리지](tutorials/ui/create/databases/ats.md)

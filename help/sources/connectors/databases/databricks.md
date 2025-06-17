@@ -3,11 +3,11 @@ title: Azure Databricks
 description: Azure Databricks를 Experience Platform에 연결하는 데 필요한 사전 요구 사항에 대해 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
-last-substantial-update: 2025-04-29T00:00:00Z
+last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: c466c30bddf4e67117c88072bea00818d755e408
+source-git-commit: 11ec772f2b877ceac820f2b8a06ac27377e9b2e9
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '616'
 ht-degree: 2%
 
 ---
@@ -161,6 +161,9 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 
 ![Azure의 Databricks UI입니다.](../../images/tutorials/create/databricks/databricks-ui.png)
 
-## API를 사용하여 [!DNL Databricks]을(를) Experience Platform에 연결
+## Experience Platform에 [!DNL Databricks] 연결
 
-전제 조건 단계를 완료했으므로 이제 [API를 사용하여  [!DNL Databricks] 계정을 Experience Platform에 연결](../../tutorials/api/create/databases/databricks.md)에 대한 안내서로 진행할 수 있습니다.
+필수 구성 요소 단계를 완료했으므로 이제 [!DNL Databricks] 계정을 Experience Platform에 연결할 수 있습니다.
+
+* [API를 통해 연결](../../tutorials/api/create/databases/databricks.md)
+* [UI에서 소스 작업 영역을 통해 연결](../../tutorials/ui/create/databases/databricks.md)
