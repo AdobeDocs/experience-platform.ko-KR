@@ -4,9 +4,9 @@ description: ID 그래프 연결 규칙을 사용하여 구성할 수 있는 다
 hide: true
 hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: f793dbda0520366b3ee69b3aa0f912b005957561
+source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '1951'
 ht-degree: 7%
 
 ---
@@ -17,11 +17,6 @@ ht-degree: 7%
 >id="platform_identities_algorithmconfiguration"
 >title="알고리즘 구성"
 >abstract="수집한 ID에 맞게 고유한 네임스페이스와 네임스페이스 우선순위를 구성하십시오."
-
->[!NOTE]
->
->* &quot;CRMID&quot; 및 &quot;loginID&quot;는 사용자 정의 네임스페이스입니다. 이 문서에서 &quot;CRMID&quot;는 개인 식별자이고 &quot;loginID&quot;는 지정된 사용자와 연관된 로그인 식별자입니다.
->* 이 문서에 설명된 예제 그래프 시나리오를 시뮬레이션하려면 먼저 ID 기호가 &quot;CRMID&quot;인 네임스페이스와 ID 기호가 &quot;loginID&quot;인 네임스페이스를 두 개 사용자 정의 생성해야 합니다. ID 기호는 대/소문자를 구분합니다.
 
 [!DNL Identity Graph Linking Rules]을(를) 사용하여 구성할 수 있는 다양한 구현 유형에 대해 알아보려면 이 문서를 참조하십시오.
 
@@ -43,9 +38,9 @@ ht-degree: 7%
 
 ## 기본 구현 {#basic-implementations}
 
->[!TIP]
+>[!NOTE]
 >
->아래의 기본 구현 연습을 완료하려면 &quot;CRMID&quot;에 대한 사용자 지정 교차 장치 네임스페이스를 만들어야 합니다.
+>아래 구현을 완료하려면 ID 기호(대/소문자 구분)가 `CRMID`인 사용자 지정 네임스페이스를 만들어야 합니다.
 
 [!DNL Identity Graph Linking Rules]의 기본 구현을 보려면 이 섹션을 읽어 보십시오.
 
@@ -90,7 +85,7 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 **PC(공유 장치)**
 
-**텍스트 모드:**
+**텍스트 모드**
 
 ```json
 CRMID: John, ECID: 111
@@ -112,7 +107,7 @@ CRMID: Jane, ECID: 111
 
 **공유 장치(모바일)**
 
-**텍스트 모드:**
+**텍스트 모드**
 
 ```json
 CRMID: John, ECID: 111, IDFA: a-b-c
@@ -129,19 +124,23 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 ## 중간 구현 {#intermediate-implementations}
 
+>[!TIP]
+>
+>**고유하지 않은 ID**&#x200B;은(는) 고유하지 않은 네임스페이스와 연결된 ID입니다.
+
 [!DNL Identity Graph Linking Rules]의 중간 구현은 이 섹션을 참조하십시오.
 
 ### 사용 사례: 데이터에 고유하지 않은 ID가 포함됨
 
->[!TIP]
+>[!NOTE]
 >
->* **고유하지 않은 ID**&#x200B;은(는) 고유하지 않은 네임스페이스와 연결된 ID입니다.
->
->* 아래 중간 구현 연습을 완료하려면 &quot;CRMID&quot; 및 &quot;CChash&quot;에 대한 사용자 지정 교차 장치 네임스페이스를 만들어야 합니다. &quot;CCHash&quot;는 해시된 신용 카드 번호를 나타내는 사용자 정의 네임스페이스입니다.
+>아래 구현을 완료하려면 의 ID 기호(대/소문자 구분)를 사용하여 다음과 같은 사용자 지정 네임스페이스를 만들어야 합니다.
+>* `CRMID`
+>* `CCHash`(해시된 신용 카드 번호를 나타내는 사용자 지정 네임스페이스입니다.)
 
 여러분이 신용카드를 발급하는 상업은행에서 일하는 데이터 설계자라고 상상해 보세요. 마케팅 팀이 프로필에 이전 신용 카드 거래 내역을 포함하기를 원한다고 표시했습니다. 이 ID 그래프는 다음과 같을 수 있습니다.
 
-**텍스트 모드:**
+**텍스트 모드**
 
 ```json
 CRMID: John, CChash: 1111-2222 
@@ -177,7 +176,7 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 >[!TAB 공유된 장치]
 
-**텍스트 모드:**
+**텍스트 모드**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -194,7 +193,7 @@ CRMID: Jane, ECID:123
 
 동일한 신용 카드로 전자 상거래 웹 사이트에 두 명의 다른 최종 사용자가 등록합니다. 마케팅 팀은 신용 카드가 하나의 프로필에만 연결되어 있는지 확인하여 그래프 축소를 방지하려고 합니다.
 
-**텍스트 모드:**
+**텍스트 모드**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -211,7 +210,7 @@ CRMID: Jane, ECID:456
 
 잘못된 데이터로 인해 잘못된 신용 카드 번호가 Experience Platform에 수집됩니다.
 
-**텍스트 모드:**
+**텍스트 모드**
 
 ```json
 CRMID: John, CChash: undefined
@@ -228,9 +227,11 @@ CRMID: Jill, CChash: undefined
 
 ### 사용 사례: 데이터에 해시된 CRMID와 해시되지 않은 CRMID가 모두 포함됩니다
 
->[!TIP]
+>[!NOTE]
 >
->아래의 중간 구현 연습을 완료하려면 &quot;CRMID&quot; 및 &quot;CRMIDhash&quot;에 대한 사용자 지정 교차 장치 네임스페이스를 만들어야 합니다.
+>아래 구현을 완료하려면 다음의 ID 기호(대/소문자 구분)를 사용하여 사용자 지정 네임스페이스를 만들어야 합니다.
+>* `CRMID`
+>* `CRMIDhash`
 
 해시되지 않은(오프라인) CRMID와 해시된(온라인) CRMID를 모두 섭취합니다. 해시된 CRMID와 해시된 CRMID 모두 직접적인 관계가 있을 것이라는 기대다. 최종 사용자가 인증된 계정을 사용하여 탐색할 때 해시된 CRMID가 장치 ID(ID 서비스에 ECID로 표시됨)와 함께 전송됩니다.
 
@@ -255,7 +256,7 @@ CRMID: Jill, CChash: undefined
 
 존과 제인은 장치를 공유합니다.
 
-**텍스트 모드:**
+**텍스트 모드**
 
 ```json
 CRMID: John, CRMIDhash: John
@@ -270,7 +271,7 @@ CRMIDhash: Jane, ECID: 111
 
 해시 프로세스의 오류로 인해 고유하지 않은 해시된 CRMID가 생성되어 ID 서비스로 전송됩니다.
 
-**텍스트 모드:**
+**텍스트 모드**
 
 ```json
 CRMID: John, CRMIDhash: aaaa
@@ -342,6 +343,10 @@ Email: jane@g, ECID: 111
 
 ### 사용 사례: 데이터에는 세 개의 고유한 네임스페이스가 포함됩니다
 
+>[!NOTE]
+>
+>아래 구현을 완료하려면 ID 기호(대/소문자 구분)가 `CRMID`인 사용자 지정 네임스페이스를 만들어야 합니다.
+
 고객은 다음과 같이 1인 엔티티를 정의합니다.
 
 * CRMID가 할당된 최종 사용자.
@@ -399,13 +404,15 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 
 ### 사용 사례: 여러 비즈니스 라인에 대한 지원이 필요합니다.
 
->[!TIP]
+>[!NOTE]
 >
->아래의 고급 구현 연습을 완료하려면 &quot;CRMID&quot; 및 &quot;loginID&quot;에 대한 사용자 정의 교차 장치 네임스페이스를 만들어야 합니다.
+>아래 구현을 완료하려면 다음의 ID 기호(대/소문자 구분)를 사용하여 사용자 지정 네임스페이스를 만들어야 합니다.
+>* `CRMID`
+>* `loginID`
 
 최종 사용자에게는 개인 계정과 비즈니스 계정, 이렇게 두 개의 다른 계정이 있습니다. 각 계정은 다른 ID로 식별됩니다. 이 시나리오에서 일반적인 그래프는 다음과 같습니다.
 
-**텍스트 모드***
+**텍스트 모드**
 
 ```json
 CRMID: John, loginID: JohnPersonal
@@ -427,12 +434,7 @@ loginID: JohnBusiness, ECID: 222
 
 **시뮬레이션된 그래프**
 
-+++시뮬레이션된 그래프를 보려면 선택
-
 ![회사 및 개인 전자 메일이 있는 최종 사용자의 ID 그래프입니다.](../images/configs/advanced/advanced.png)
-
-+++
-
 
 **연습**
 
@@ -457,6 +459,8 @@ loginID: JanePersonal, ECID: 111
 
 >[!TAB 잘못된 데이터가 Real-Time CDP으로 전송됨]
 
+**텍스트 모드**
+
 ```json
 CRMID: John, loginID: JohnPersonal
 CRMID: John, loginID: error
@@ -472,9 +476,12 @@ loginID: JanePersonal, ECID: 222
 
 ### 사용 사례: 여러 네임스페이스가 필요한 복잡한 구현이 있습니다
 
->[!TIP]
+>[!NOTE]
 >
->아래의 고급 구현 연습을 완료하려면 &quot;CRMID&quot;, &quot;loyaltyID&quot;, &quot;thirdPartyID&quot; 및 &quot;orderID&quot;에 대한 사용자 지정 교차 장치 네임스페이스를 만들어야 합니다.
+>아래 구현을 완료하려면 다음의 ID 기호(대/소문자 구분)를 사용하여 사용자 지정 네임스페이스를 만들어야 합니다.
+>* `CRMID`
+>* `loyaltyID`
+>* `thirdPartyID`
 
 미디어 및 엔터테인먼트 회사이며 최종 사용자에게는 다음과 같은 사항이 있습니다.
 
@@ -499,8 +506,8 @@ CRMID: John, ECID: 111
 | 표시 이름 | ID 심볼 | ID 유형 | 그래프별로 고유 | 네임스페이스 우선순위 |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
-| loyaltyID | loyaltyID | CROSS_DEVICE | | 2 |
-| 이메일 | 이메일 | 이메일 | | 3 |
+| loyaltyID | loyaltyID | CROSS_DEVICE | ✔️ | 2 |
+| 이메일 | 이메일 | 이메일 | ✔️ | 3 |
 | 타사 ID | 타사 ID | CROSS_DEVICE | | 4 |
 | orderID | orderID | CROSS_DEVICE | | 5 |
 | ECID | ECID | 쿠키 | | 6 |
