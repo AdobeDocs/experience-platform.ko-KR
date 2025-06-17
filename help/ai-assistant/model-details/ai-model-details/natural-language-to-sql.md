@@ -1,17 +1,19 @@
 ---
 title: AI Assistant 자연어 - SQL 모델 세부 정보
 description: AI Assistant 자연어 - SQL AI 모델에 대해 알아봅니다.
-hide: true
-hidefromtoc: true
 exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
-source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
+source-git-commit: 3d870c367317d73bba8b75b38f7b2a93ab6b5bbd
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
 
 # AI Assistant Operational Insights 자연어 - SQL 모델 세부 정보
+
+>[!IMPORTANT]
+>
+>Adobe은 더 많은 모델 세부 정보를 게시하고 있습니다. 사용 가능한 추가 설명서가 Experience League에 추가됩니다.
 
 ## 모델 개요 {#model-overview}
 
