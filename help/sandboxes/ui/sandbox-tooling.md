@@ -345,7 +345,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 다음 비디오에서는 샌드박스 도구에 대한 이해를 돕기 위해 새 패키지를 만들고, 패키지를 게시하고, 패키지를 가져오는 방법을 간략하게 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446093/?learn=on&captions=kor)
 
 ## 다음 단계
 
