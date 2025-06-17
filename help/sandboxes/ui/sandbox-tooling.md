@@ -2,10 +2,10 @@
 title: 샌드박스 도구
 description: 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져옵니다.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 208c9c47b4bde211506867cf59b8743556db7fc8
+source-git-commit: b5330e10dc8b395d1ef299073182c836f5c3af7f
 workflow-type: tm+mt
-source-wordcount: '2678'
-ht-degree: 7%
+source-wordcount: '3414'
+ht-degree: 5%
 
 ---
 
@@ -59,7 +59,7 @@ ht-degree: 7%
 | [!DNL Adobe Journey Optimizer] | 사용자 지정 작업 |  | 사용자 지정 작업은 패키지에 개별적으로 추가할 수 있습니다. 사용자 지정 작업이 여정에 할당되면 더 이상 편집할 수 없습니다. 사용자 지정 작업을 업데이트하려면 다음을 수행해야 합니다. <ul><li>여정 마이그레이션 전에 사용자 지정 작업 이동</li><li>마이그레이션 후 사용자 지정 작업에 대한 구성(예: 요청 헤더, 쿼리 매개 변수 및 인증) 업데이트</li><li>첫 번째 단계에서 추가한 사용자 지정 작업으로 여정 개체 마이그레이션</li></ul> |
 | [!DNL Adobe Journey Optimizer] | 콘텐츠 템플릿 | | 컨텐츠 템플릿은 여정 객체의 종속 객체로 복사할 수 있습니다. 독립형 템플릿을 사용하면 Journey Optimizer 캠페인 및 여정 전반에서 사용자 정의 콘텐츠를 쉽게 재사용할 수 있습니다. |
 | [!DNL Adobe Journey Optimizer] | 조각 | 모든 중첩된 조각. | 조각을 여정 개체의 종속 개체로 복사할 수 있습니다. 조각은 Journey Optimizer 캠페인 및 여정 간 하나 이상의 이메일에서 참조할 수 있는 재사용 가능한 구성 요소입니다. |
-| [!DNL Adobe Journey Optimizer] | 캠페인 | 캠페인에 사용된 다음 객체는 종속 객체로 복사됩니다. <ul><li>캠페인</li><li>대상자</li><li>스키마</li><li>콘텐츠 템플릿</li><li>조각</li><li>메시지/컨텐츠</li><li>채널 구성</li><li>통합 의사 결정 개체</li><li>실험 설정/변형</li></ul> | <ul><li>프로필, 대상자, 스키마, 인라인 메시지 및 종속 오브젝트와 관련된 모든 항목과 함께 캠페인을 복사할 수 있습니다. 데이터 사용 레이블 및 언어 설정과 같은 일부 항목은 복사되지 않습니다. 복사할 수 없는 전체 개체 목록은 [다른 샌드박스로 개체 내보내기](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) 안내서를 참조하십시오.</li><li>시스템은 동일한 구성이 존재하는 경우 타겟 샌드박스에서 기존 채널 구성 객체를 자동으로 감지하고 재사용합니다. 일치하는 구성을 찾을 수 없으면 가져오는 동안 채널 구성을 건너뛰며 사용자가 이 여정에 대한 대상 샌드박스의 채널 설정을 수동으로 업데이트해야 합니다.</li><li>사용자는 Target 샌드박스의 기존 실험 및 대상을 선택한 캠페인의 종속 오브젝트로 재사용할 수 있습니다.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 캠페인 | 캠페인에 사용된 다음 객체는 종속 객체로 복사됩니다. <ul><li>캠페인</li><li>대상자</li><li>스키마</li><li>콘텐츠 템플릿</li><li>조각</li><li>메시지/컨텐츠</li><li>채널 구성</li><li>통합 의사 결정 개체</li><li>실험 설정/변형</li></ul> | <ul><li>프로필, 대상자, 스키마, 인라인 메시지 및 종속 오브젝트와 관련된 모든 항목과 함께 캠페인을 복사할 수 있습니다. 데이터 사용 레이블 및 언어 설정과 같은 일부 항목은 복사되지 않습니다. 복사할 수 없는 전체 개체 목록은 [다른 샌드박스로 개체 내보내기](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) 안내서를 참조하십시오.</li><li>시스템은 동일한 구성이 존재하는 경우 타겟 샌드박스에서 기존 채널 구성 객체를 자동으로 감지하고 재사용합니다. 일치하는 구성을 찾을 수 없으면 가져오는 동안 채널 구성을 건너뛰며 사용자가 이 여정에 대한 대상 샌드박스의 채널 설정을 수동으로 업데이트해야 합니다.</li><li>사용자는 Target 샌드박스의 기존 실험 및 대상을 선택한 캠페인의 종속 오브젝트로 재사용할 수 있습니다.</li></ul> |
 
 서피스(예: 사전 설정)는 복사되지 않습니다. 시스템은 메시지 유형 및 표면 이름을 기반으로 대상 샌드박스에서 가장 가까운 일치 항목을 자동으로 선택합니다. 대상 샌드박스에 서피스가 없는 경우 서피스 복사가 실패하여 메시지에 설정할 수 있는 서피스가 필요하므로 메시지 복사가 실패합니다. 이 경우 복사가 작동하려면 메시지의 오른쪽 채널에 대해 적어도 하나의 서피스를 만들어야 합니다.
 
@@ -100,7 +100,7 @@ ht-degree: 7%
 
 **[!UICONTROL 패키지에 추가]** 대화 상자에서 **[!UICONTROL 새 패키지 만들기]** 옵션을 선택합니다. 패키지의 [!UICONTROL 이름]과(와) 선택적 [!UICONTROL 설명]을(를) 입력한 다음 **[!UICONTROL 추가]**&#x200B;를 선택하십시오.
 
-![패키지에 추가] 대화 상자([!UICONTROL 새 패키지 만들기] 선택 및 강조 표시 [!UICONTROL 추가].(../images/ui/sandbox-tooling/create-new-package.png))
+![패키지에 추가] 대화 상자([!UICONTROL 새 패키지 만들기] 선택 및 강조 표시 [!UICONTROL 추가].](../images/ui/sandbox-tooling/create-new-package.png))[!UICONTROL 
 
 **[!UICONTROL 스키마]** 환경으로 돌아갔습니다. 이제 아래 나열된 다음 단계를 수행하여 만든 패키지에 개체를 추가할 수 있습니다.
 
@@ -156,7 +156,7 @@ ht-degree: 7%
 
 기존 개체를 사용하려면 종속 개체 옆에 있는 연필 아이콘을 선택합니다.
 
-![패키지 개체 및 종속성] 페이지에 패키지에 포함된 에셋 목록이 표시됩니다.(../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![패키지 개체 및 종속성] 페이지에 패키지에 포함된 에셋 목록이 표시됩니다.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)[!UICONTROL 
 
 새로 만들거나 기존 항목을 사용하는 옵션이 표시됩니다. **[!UICONTROL 기존 사용]**&#x200B;을 선택합니다.
 
@@ -164,11 +164,11 @@ ht-degree: 7%
 
 **[!UICONTROL 필드 그룹]** 대화 상자에 개체에 사용할 수 있는 필드 그룹 목록이 표시됩니다. 필요한 필드 그룹을 선택한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
-![필드 그룹] 대화 상자에 표시된 필드 목록으로서 [!UICONTROL 저장] 선택 항목을 강조 표시합니다. (../images/ui/sandbox-tooling/field-group-list.png)
+![필드 그룹] 대화 상자에 표시된 필드 목록으로서 [!UICONTROL 저장] 선택 항목을 강조 표시합니다. ](../images/ui/sandbox-tooling/field-group-list.png)[!UICONTROL 
 
 [!UICONTROL 패키지 개체 및 종속성] 페이지로 돌아왔습니다. 여기에서 **[!UICONTROL 완료]**&#x200B;를 선택하여 패키지 가져오기를 완료합니다.
 
-![패키지 개체 및 종속성] 페이지에 패키지에 포함된 에셋 목록이 표시되며 [!UICONTROL 완료].(../images/ui/sandbox-tooling/finish-object-dependencies.png)
+![패키지 개체 및 종속성] 페이지에 패키지에 포함된 에셋 목록이 표시되며 [!UICONTROL 완료].](../images/ui/sandbox-tooling/finish-object-dependencies.png)[!UICONTROL 
 
 ## 전체 샌드박스 내보내기 및 가져오기
 
@@ -185,7 +185,7 @@ ht-degree: 7%
 
 전체 샌드박스를 내보내려면 [!UICONTROL 샌드박스] **[!UICONTROL 패키지]** 탭으로 이동하여 **[!UICONTROL 패키지 만들기]**&#x200B;를 선택합니다.
 
-![샌드박스] **[!UICONTROL 패키지]** 탭 강조 표시 [!UICONTROL 패키지 만들기].(../images/ui/sandbox-tooling/create-sandbox-package.png)
+![샌드박스] **[!UICONTROL 패키지]** 탭 강조 표시 [!UICONTROL 패키지 만들기].](../images/ui/sandbox-tooling/create-sandbox-package.png)[!UICONTROL 
 
 [!UICONTROL 패키지 만들기] 대화 상자에서 [!UICONTROL 패키지 유형]에 대한 **[!UICONTROL 전체 샌드박스]**&#x200B;를 선택합니다. 새 패키지에 [!UICONTROL 패키지 이름]을 제공하고 드롭다운에서 **[!UICONTROL 샌드박스]**&#x200B;를 선택합니다. 마지막으로 **[!UICONTROL 만들기]**&#x200B;를 선택하여 항목을 확인합니다.
 
@@ -249,15 +249,103 @@ Use the arrows to expand objects to view the full list of fields that have been 
 >
 >특정 인벤토리 페이지로 이동하여 개체 목록을 볼 수 있습니다.
 
-![가져오기 세부 정보] 대화 상자에서 가져오기의 세부 정보를 확인할 수 있습니다.(../images/ui/sandbox-tooling/import-details.png)
+![가져오기 세부 정보] 대화 상자에서 가져오기의 세부 정보를 확인할 수 있습니다.](../images/ui/sandbox-tooling/import-details.png)[!UICONTROL 
 
 가져오기가 완료되면 Experience Platform UI에서 알림이 수신됩니다. 경고 아이콘에서 이러한 알림에 액세스할 수 있습니다. 작업이 실패한 경우 여기에서 문제 해결로 이동할 수 있습니다.
+
+## 샌드박스 도구 를 통해 샌드박스 간에 반복적인 오브젝트 구성 업데이트 전송 {#move-configs}
+
+샌드박스 도구 를 사용하여 다른 샌드박스 간에 개체 구성을 전송할 수 있습니다. 이전에는 개체(예: 스키마, 필드 그룹 및 데이터 유형)에 대한 구성 업데이트를 수동으로 다시 만들거나 다시 가져와야 다른 샌드박스로 전송할 수 있었습니다. 이 기능을 사용하면 샌드박스 도구 를 사용하여 여러 샌드박스 간에 구성 업데이트를 원활하게 전송하여 워크플로를 가속화하고 잠재적인 오류를 줄일 수 있습니다.
+
+![샌드박스에서 업데이트를 이동하는 방법을 표시하는 다이어그램입니다.](../images/ui/sandbox-tooling/move-updates-diagram.png)
+
+>[!TIP]
+>
+> 다른 샌드박스에서 개체 구성을 전송하기 전에 다음 전제 조건을 충족하는지 확인하십시오.
+>
+>- 샌드박스 도구에 액세스하기 위한 적절한 권한.
+>- 소스 샌드박스에서 새로 생성되거나 업데이트된 객체(예: 스키마)입니다.
+
+>[!BEGINSHADEBOX]
+
+### 업데이트 작업에 지원되는 개체 유형
+
+다음은 업데이트에 지원되는 개체 유형입니다.
+
+- 스키마
+- 필드 그룹
+- 데이터 유형
+
+| 지원되는 업데이트 | 지원되지 않는 업데이트 |
+| --- | --- |
+| <ul><li>리소스에 새 필드/필드 그룹 추가.</li><li>필수 필드를 선택 사항으로 설정.</li><li>새 필수 필드를 도입합니다.</li><li>새 관계 필드 소개.</li><li>새 ID 필드를 도입합니다.</li><li>리소스의 표시 이름 및 설명 변경.</li></ul> | <ul><li>이전에 정의한 필드를 제거하는 중입니다.</li><li>실시간 고객 프로필에 대해 스키마가 활성화된 경우 기존 필드를 재정의합니다.</li><li>이전에 지원되는 필드 값을 제거하거나 제한합니다.</li><li>기존 필드를 스키마 트리의 다른 위치로 이동 - 대상 샌드박스에 새 필드가 생성되지만 이전 필드는 제거되지 않습니다.</li><li>프로필에 참여할 스키마를 활성화하거나 비활성화합니다. 비교 시 이 작업은 건너뜁니다.</li><li>액세스 제어 레이블.</li></ul> |
+
+>[!ENDSHADEBOX]
+
+샌드박스 도구를 사용하여 다양한 샌드박스 간에 개체 구성을 전송하는 방법을 배우려면 아래 단계를 따르십시오.
+
+### 이전에 가져온 오브젝트
+
+사용 사례에 구성 업데이트가 필요한 소스 샌드박스의 기존 오브젝트가 포함되어 있는 경우, 이미 다른 샌드박스로 패키지화되어 가져온 다음 다음 단계를 따릅니다.
+
+먼저 소스 샌드박스에서 객체를 업데이트합니다. 예를 들어 **[!UICONTROL 스키마]** 작업 영역으로 이동하여 스키마를 선택하고 새 필드 그룹을 추가합니다.
+
+![업데이트된 스키마가 있는 스키마 작업 영역입니다.](../images/ui/sandbox-tooling/update-schema.png)
+
+스키마를 업데이트했으면 **[!UICONTROL 샌드박스]**(으)로 이동하여 **[!UICONTROL 패키지]**&#x200B;를 선택한 다음 기존 패키지를 찾습니다.
+
+![패키지가 선택된 샌드박스 도구 인터페이스](../images/ui/sandbox-tooling/select-package.png)
+
+패키지 인터페이스를 사용하여 변경 사항을 확인합니다. 패키지에 있는 아티팩트에 대한 변경 내용을 보려면 **[!UICONTROL 업데이트 확인]**&#x200B;을 선택하세요. 그런 다음 **[!UICONTROL 차이점 보기]**&#x200B;를 선택하여 아티팩트에 대해 수행된 모든 변경 내용에 대한 자세한 요약을 받습니다.
+
+![비교 보기 단추가 선택된 패키지 인터페이스입니다.](../images/ui/sandbox-tooling/view-diff.png)
+
+[!UICONTROL 차이점 보기] 인터페이스가 나타납니다. 소스 및 타겟 아티팩트에 대한 정보와 해당 아티팩트에 적용할 변경 사항에 대해서는 이 요금을 참조하십시오.
+
+![변경 사항의 요약입니다.](../images/ui/sandbox-tooling/summary-of-changes.png)
+
+이 단계에서는 모든 변경 사항에 대한 단계별 요약을 위해 [!UICONTROL AI로 요약]을 선택할 수도 있습니다.
+
+![AI가 활성화된 요약입니다.](../images/ui/sandbox-tooling/ai-summary.png)
+
+준비가 되면 **[!UICONTROL 패키지 업데이트]**&#x200B;를 선택한 다음 표시되는 팝업 창에서 **[!UICONTROL 확인]**&#x200B;을 선택합니다. 작업이 완료되면 페이지를 새로 고치고 **[!UICONTROL 내역 보기]**&#x200B;를 선택하여 패키지 버전을 확인할 수 있습니다.
+
+![확인 창.](../images/ui/sandbox-tooling/confirm-changes.png)
+
+변경 사항을 가져오려면 [!UICONTROL 패키지] 디렉터리로 돌아가서 패키지 옆의 생략 부호(`...`)를 선택한 다음 **[!UICONTROL 패키지 가져오기]**&#x200B;를 선택합니다. Experience Platform이 [!UICONTROL 기존 개체 업데이트]를 자동으로 선택합니다. 변경 내용을 확인한 다음 **[!UICONTROL 마침]**&#x200B;을 선택합니다.
+
+>[!NOTE]
+>
+>모든 종속 오브젝트는 이 워크플로의 일부로 대상 샌드박스에서 자동으로 업데이트됩니다.
+
+![가져오기 목표 인터페이스입니다.](../images/ui/sandbox-tooling/import-objective.png)
+
+가져오기 프로세스의 유효성을 추가로 검사하려면 대상 샌드박스로 이동하고 해당 샌드박스 내에서 업데이트된 개체를 수동으로 확인합니다.
+
+### Target 샌드박스에서 수동으로 생성된 오브젝트
+
+사용 사례에 별도의 샌드박스에서 수동으로 만든 객체에 구성 변경 사항을 적용하는 것이 포함된 경우 다음 단계를 수행합니다.
+
+먼저 업데이트된 오브젝트로 새 패키지를 만들어 게시합니다.
+
+그런 다음 업데이트하려는 개체가 포함된 대상 샌드박스로 패키지를 가져옵니다. 가져오기 프로세스 중에 **[!UICONTROL 기존 개체 업데이트]**&#x200B;를 선택한 다음 개체 탐색기를 사용하여 업데이트를 적용할 대상 개체를 수동으로 선택합니다.
+
+>[!NOTE]
+>
+>- 종속 객체에 대해 다른 샌드박스에서 대상 매핑을 선택하는 것은 선택 사항입니다. 아무 것도 선택하지 않으면 새 항목이 만들어집니다.
+>- ID 네임스페이스의 경우 시스템은 기존 ID를 대상 샌드박스에서 재사용해야 하는 경우 새 ID를 만들어야 하는지 자동으로 감지합니다.
+
+![업데이트할 대상 개체에 대한 자리 표시자가 있는 가져오기 목표 인터페이스입니다.](../images/ui/sandbox-tooling/update-existing-objects.png)
+
+업데이트할 대상 개체를 식별했으면 **[!UICONTROL 마침]**&#x200B;을 선택합니다.
+
+![대상 개체가 선택되었습니다.](../images/ui/sandbox-tooling/add-updated-objects.png)
 
 ## 비디오 튜토리얼
 
 다음 비디오에서는 샌드박스 도구에 대한 이해를 돕기 위해 새 패키지를 만들고, 패키지를 게시하고, 패키지를 가져오는 방법을 간략하게 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446093/?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## 다음 단계
 
