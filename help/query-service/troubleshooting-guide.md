@@ -91,7 +91,7 @@ FAQ에 대한 다음 답변 목록은 다음 카테고리로 구분됩니다.
 +++답변
 쿼리 제한 시간이 초과된 경우 다음 솔루션 중 하나 이상을 사용하는 것이 좋습니다.
 
-- [쿼리를 CTAS 쿼리로 변환](./sql/syntax.md#create-table-as-select)하고 실행을 예약합니다. 실행 예약은 UI를 통해 [하거나 [API](./api/scheduled-queries.md#create)를 통해 수행할 수 있습니다.](./ui/user-guide.md#scheduled-queries)
+- [쿼리를 CTAS 쿼리로 변환](./sql/syntax.md#create-table-as-select)하고 실행을 예약합니다. 실행 예약은 UI를 통해 [&#128279;](./ui/user-guide.md#scheduled-queries)하거나 [API](./api/scheduled-queries.md#create)를 통해 수행할 수 있습니다.
 - 추가 [필터 조건](https://spark.apache.org/docs/latest/api/sql/index.html#filter)을 적용하여 더 작은 데이터 청크에서 쿼리를 실행하십시오.
 - 자세한 내용을 수집하려면 [EXPLAIN 명령을 실행](./sql/syntax.md#explain)하십시오.
 - 데이터 세트 내의 데이터 통계를 검토합니다.
@@ -160,7 +160,7 @@ FAQ에 대한 다음 답변 목록은 다음 카테고리로 구분됩니다.
 
 ![도움말 및 지원, 엔터프라이즈 지원 및 문의하기 등이 강조 표시된 상단 탐색 모음 드롭다운 메뉴.](./images/troubleshooting/help-and-support.png)
 
-[!UICONTROL 도움말 및 지원] 섹션이 포함된 드롭다운 배너가 나타납니다. **[!UICONTROL 문의하기]**&#x200B;를 선택하여 Adobe 고객 지원 가상 도우미를 열거나, 대규모 조직을 위한 전용 도움말에 대해 **[!UICONTROL 엔터프라이즈 지원]**을 선택하십시오.
+[!UICONTROL 도움말 및 지원] 섹션이 포함된 드롭다운 배너가 나타납니다. **[!UICONTROL 문의하기]**&#x200B;를 선택하여 Adobe 고객 지원 가상 도우미를 열거나, 대규모 조직을 위한 전용 도움말에 대해 **[!UICONTROL 엔터프라이즈 지원]**&#x200B;을 선택하십시오.
 +++
 
 ### 이전 작업이 성공적으로 완료되지 않은 경우 후속 작업을 실행하지 않고 순차적 일련의 작업을 구현하려면 어떻게 해야 합니까?
