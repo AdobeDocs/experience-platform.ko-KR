@@ -65,7 +65,7 @@ FAQ에 대한 다음 답변 목록은 다음 카테고리로 구분됩니다.
 ### 쿼리 서비스 API에 [!DNL Postman]을(를) 사용할 수 있습니까?
 
 +++답변
-예. [!DNL Postman]&#x200B;(무료 타사 애플리케이션)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. Adobe Developer Console에서 프로젝트를 설정하고 [!DNL Postman]에서 사용하는 데 필요한 모든 자격 증명을 얻는 방법에 대한 단계별 지침은 [[!DNL Postman] 설치 가이드](https://video.tv.adobe.com/v/28832)를 참조하세요. [시작, 실행 및 공유에 대한 지침 [!DNL Postman] 컬렉션](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)에 대해서는 공식 설명서를 참조하세요.
+예. [!DNL Postman]&#x200B;(무료 타사 애플리케이션)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. Adobe Developer Console에서 프로젝트를 설정하고 [!DNL Postman]에서 사용하는 데 필요한 모든 자격 증명을 얻는 방법에 대한 단계별 지침은 [[!DNL Postman] 설치 가이드](https://video.tv.adobe.com/v/31705?captions=kor)를 참조하세요. [시작, 실행 및 공유에 대한 지침 [!DNL Postman] 컬렉션](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)에 대해서는 공식 설명서를 참조하세요.
 +++
 
 ### UI를 통해 쿼리에서 반환되는 최대 행 수에 제한이 있습니까?
