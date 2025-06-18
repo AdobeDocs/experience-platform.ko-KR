@@ -3,18 +3,26 @@ solution: Experience Platform
 title: 유사 대상
 description: 유사 대상을 사용하여 Adobe Experience Platform에서 새로운 고부가가치 대상을 타깃팅하는 방법에 대해 알아봅니다.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2299'
 ht-degree: 9%
 
 ---
 
 # 유사 대상 안내서
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 >유사 인사이트 및 유사 대상은 **B2C 에디션**&#x200B;에서만 사용할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>사용량이 적은 환경에 대해 유사 인사이트 및 유사 대상이 자동으로 비활성화됩니다. 낮은 사용량은 지난 3개월 동안 유사 인사이트를 보지 못하거나 지난 6개월 동안 새로운 유사 대상을 만들지 않은 것으로 정의됩니다.
+>
+>환경에 대해 유사 인사이트 기능이 비활성화된 경우 조직 ID 및 메시지에 있는 환경 세부 정보를 포함하여 Adobe 고객 지원 팀으로 이메일을 보내 액세스를 요청할 수 있습니다.
+>
+>Adobe 고객 지원 센터에서 확인을 받으면 환경의 모든 샌드박스에서 유사 인사이트 및 대상이 활성화됩니다.
 
 Adobe Experience Platform에서 유사 대상은 각 대상에 대한 지능적인 통찰력을 제공하며, 머신 러닝 기반 통찰력을 활용하여 마케팅 캠페인을 통해 고부가가치 고객을 식별하고 타깃팅합니다.
 
@@ -75,7 +83,9 @@ Adobe Experience Platform에서 유사 모델은 세 가지 서로 다른 유형
 
 나중에 사용할 수 있는 추가 기능 팩은 프로덕션 샌드박스에 대한 권한을 팩당 20개의 유사 대상자로 늘립니다.
 
-유사 대상에 대한 액세스 권한이 있는지 확인하려면 Adobe 담당자에게 문의하십시오.
+## 액세스 {#access}
+
+유사 대상에 대한 액세스 권한이 있는지 확인하려면 대상 포털 내에서 대상을 선택하고 **[!UICONTROL 유사 인사이트]** 탭이 표시되는지 확인하십시오.
 
 ## 유사 인사이트 보기 {#view}
 
@@ -118,7 +128,7 @@ y축은 x축의 일치 값에 해당하는 유사성 백분율과 함께 예상 
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="영향력 있는 요소"
 >abstract="영향력 있는 요소는 프로필의 유사성을 기본 대상자 멤버에게 설명하는 데 중요한 속성, 이벤트 및 대상자 멤버십입니다. 데이터 사용 레이블 및 정책을 사용하여 유사 모델에서 특정 데이터가 영향력 있는 요소로 간주되지 않도록 제외할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html?lang=ko#exclude" text="데이터 제외"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html#exclude" text="데이터 제외"
 
 영향 요인 섹션에는 선택한 기본 대상의 유사 모델에 영향을 주는 상위 100개 요인이 표시됩니다. 이러한 영향력 있는 요소는 기본 대상의 유사성을 설명하는 데 가장 중요한 프로필 속성, 경험 이벤트 및 대상 멤버십입니다. 가장 영향력 있는 주요 요인을 이해하면 이 대상자 및 이 대상자를 통해 생성하는 유사 대상자에 대한 마케팅 콘텐츠를 더 잘 개인화할 수 있습니다. 유사 모델에 영향을 미치는 모든 영향 요소가 표시되지는 않음에 유의하시기 바랍니다.
 
@@ -151,11 +161,11 @@ y축은 x축의 일치 값에 해당하는 유사성 백분율과 함께 예상 
 
 대상 세부 정보 페이지에서 **[!UICONTROL 유사 대상 만들기]**&#x200B;를 선택하여 유사 대상을 만드는 프로세스를 시작합니다.
 
-![유사 대상 만들기] 단추가 강조 표시되어 있습니다.(../images/types/lookalike/create-look-alike-audience.png)
+![유사 대상 만들기] 단추가 강조 표시되어 있습니다.](../images/types/lookalike/create-look-alike-audience.png)[!UICONTROL 
 
 **[!UICONTROL 유사 대상 만들기]** 팝오버가 나타납니다. 이 페이지에서 유사 대상의 유사성 백분율을 설정할 수 있습니다.
 
-![유사 대상자 만들기] 팝오버가 표시됩니다.(../images/types/lookalike/create-audience.png)
+![유사 대상자 만들기] 팝오버가 표시됩니다.](../images/types/lookalike/create-audience.png)[!UICONTROL 
 
 다음 세 가지 방법으로 이 유사성 백분율을 설정할 수 있습니다.
 
