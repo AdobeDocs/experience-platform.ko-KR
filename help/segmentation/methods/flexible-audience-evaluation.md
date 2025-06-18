@@ -3,9 +3,9 @@ title: 유연한 대상 평가 안내서
 description: 유연한 대상 평가를 사용하여 요청 시 일괄 처리 세분화 작업을 실행하는 방법에 대해 알아봅니다.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 9aa638903eaf9bf29ce1da3d62f8e69c15ffe50a
+source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1140'
 ht-degree: 5%
 
 ---
@@ -326,7 +326,7 @@ Experience Platform UI에서 유연한 대상 평가를 실행하려면 **[!UICO
 
 다음 비디오에서는 Experience Platform에서 유연한 대상 평가에 액세스하고 사용하는 방법을 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453647?&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## 자주 묻는 질문 {#faq}
 
@@ -396,3 +396,10 @@ API 또는 UI 카운트를 사용하여 최대 한도에 대해 생성된 유연
 
 +++
 
+### 유연한 대상 평가로 기본 대상을 평가할 때 모든 종속 대상을 평가해야 합니까?
+
++++ 답변
+
+아니요. 유연한 대상 평가는 모든 종속 대상을 자동으로 평가합니다. 예를 들어 대상 A가 대상 B에 종속되는 경우 대상 B만 평가하면 됩니다. 유연한 대상 평가는 대상 A를 평가한 후 대상 B를 자동으로 평가합니다.
+
++++
