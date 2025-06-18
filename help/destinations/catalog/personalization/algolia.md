@@ -1,7 +1,7 @@
 ---
 title: 알골리아
 description: 이 커넥터를 사용하여 Algolia에 대한 대상자를 활성화하여 개인화하고 검색 및 권장 사항 전반에서 사용할 수 있습니다. 그런 다음 Algolia 사용자 프로필 소스 커넥터를 사용하여 프로필을 Real-Time CDP으로 가져와 리치 대상자를 구축할 수 있습니다.
-source-git-commit: 2205ba48a6c17b8f34c4796c1777bfc53a6a7fe5
+source-git-commit: 01e8739952ce2f56eaafcbb0731fb88d5961b21d
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->[!DNL Algolia] 대상 커넥터 및 문서 페이지는 Algolia Integration Services 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 [adobe-algolia-solutions@algolia.com](adobe-algolia-solutions@algolia.com)로 문의하십시오.
+>[!DNL Algolia] 대상 커넥터 및 문서 페이지는 Algolia Integration Services 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 [adobe-algolia-solutions@algolia.com](mailto:adobe-algolia-solutions@algolia.com)로 문의하십시오.
 
 [!DNL Algolia] 대상 연결을 사용하여 Adobe Experience Platform 대상자를 Algolia로 보내 개인화된 검색 및 추천을 받으십시오. [!DNL Algolia] 대상 커넥터를 사용하려면 먼저 [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) 원본 커넥터를 설정해야 합니다. 소스 커넥터 설정 자습서 중에 Algolia 사용자 토큰 ID를 만듭니다. 이 ID는 대상 커넥터를 구성할 때 매핑에 필요합니다.
 
@@ -119,9 +119,9 @@ ht-degree: 3%
 >[!IMPORTANT]
 > 
 >* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* ID를 내보내려면 ID 그래프 보기 [액세스 제어 권한](https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/home#permissions)이 필요합니다.
+>* ID를 내보내려면 ID 그래프 보기 [액세스 제어 권한](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)이 필요합니다.
 
-이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)를 참조하십시오.
+이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)를 참조하십시오.
 
 ### 속성 및 ID 매핑 {#mapping-attributes-identities}
 

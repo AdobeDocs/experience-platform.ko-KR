@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 8a9320ae00fdb611e4fd0fdc9ba80e922273359e
+source-git-commit: 5f23cb06a4c0bcd988bfcf981e473094ef7b0064
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1294'
 ht-degree: 5%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 5%
    * [대상 계정 삭제](./api/delete-destination-account.md)
    * [대상 데이터 흐름 삭제](./api/delete-destination-dataflow.md)
    * [데이터 세트 내보내기](/help/destinations/api/export-datasets.md)
-   * [대상에 대한 API 응답 정렬 및 필터링](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=ko#use-cases)
+   * [대상에 대한 API 응답 정렬 및 필터링](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI 안내서 {#ui}
    * [대상 작업 영역](./ui/destinations-workspace.md)
    * [새 대상 연결 만들기](./ui/connect-destination.md)
@@ -67,7 +67,7 @@ ht-degree: 5%
       * [Marketo Engage 연결](./catalog/adobe/marketo-engage.md)
       * [(Beta) Marketo Engage 사용자 동기화 연결](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate 연결](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform 대상 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ko)
+      * [Experience Platform 대상 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [페더레이션 대상 컴포지션 연결](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising 대상{#advertising}
       * [(Beta) Acxiom 대상 배포](./catalog/advertising/acxiom-audience-distribution.md)
@@ -196,6 +196,7 @@ ht-degree: 5%
       * [Adobe Target 연결](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 확장](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 확장](./catalog/personalization/adobe-target-v2.md)
+      * [알골리아 연결](./catalog/personalization/algolia.md)
       * [빔 확장](./catalog/personalization/beemray.md)
       * [사용자 지정 개인화 연결](./catalog/personalization/custom-personalization.md)
       * [D&amp;B Visitor Intelligence 확장](./catalog/personalization/dnb.md)
