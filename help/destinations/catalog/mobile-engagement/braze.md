@@ -4,14 +4,23 @@ title: 브레이즈 연결
 description: Braze는 고객과 고객이 사랑하는 브랜드 간의 관련성 있고 기억에 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 37e78035f2656a3693a771ab5a9622f5446a4c9d
 workflow-type: tm+mt
-source-wordcount: '1125'
-ht-degree: 2%
+source-wordcount: '1230'
+ht-degree: 3%
 
 ---
 
 # [!DNL Braze] 연결
+
+>[!IMPORTANT]
+>
+>* 2025년 6월 19일부터 대상 카탈로그에서 두 개의 **[!DNL Braze]** 카드를 나란히 볼 수 있습니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 [!DNL Braze] 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) 동기화]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL 동기화]**&#x200B;인 새 카드를 사용할 수 있습니다.
+>* 새 활성화 데이터 흐름에 대해 카탈로그의 **[!UICONTROL 중단]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않음) 중단]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다.
+>* [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다.
+>   * 흐름 사양 ID: `cb7919bd-69aa-462d-bcc0-db7cdc7fdf51`
+>   * 연결 사양 ID: `ab957205-5a78-4393-b901-b930ed548220`
+
 
 ## 개요 {#overview}
 
