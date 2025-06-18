@@ -5,7 +5,7 @@ title: 개인 정보 작업 API 엔드포인트
 description: Privacy Service API를 사용하여 Experience Cloud 애플리케이션에 대한 개인 정보 작업을 관리하는 방법을 알아봅니다.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: ec99b2a8f772e77d0a3957fc35b8cea112b91cba
+source-git-commit: c2394035dd6bd4fe6dbb443e4db13934a27066a6
 workflow-type: tm+mt
 source-wordcount: '1861'
 ht-degree: 1%
@@ -48,7 +48,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{REGULATION}` | 쿼리할 규정 유형. 허용되는 값은 다음과 같습니다. <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>위의 값이 나타내는 개인 정보 보호 규정에 대한 자세한 내용은 [지원되는 규정에 대한 개요를 참조하십시오](../regulations/overview.md). |
+| `{REGULATION}` | 쿼리할 규정 유형. 허용되는 값은 다음과 같습니다. <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa_de_usa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25_qc_can`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>위의 값이 나타내는 개인 정보 보호 규정에 대한 자세한 내용은 [지원되는 규정에 대한 개요를 참조하십시오](../regulations/overview.md). |
 | `{PAGE}` | 0 기반 번호 매기기를 사용하여 표시할 데이터 페이지입니다. 기본값은 `0`입니다. |
 | `{SIZE}` | 각 페이지에 표시할 결과 수. 기본값은 `100`이고 최대값은 `1000`입니다. 최대값을 초과하면 API가 400 코드 오류를 반환합니다. |
 | `{status}` | 기본 동작은 모든 상태를 포함하는 것입니다. 상태 유형을 지정하면 요청은 해당 상태 유형과 일치하는 개인 정보 작업만 반환합니다. 허용되는 값은 다음과 같습니다. <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Service 및 Data Distiller FAQ
 description: 이 문서에는 쿼리 서비스 및 Data Distiller과 관련된 일반적인 질문과 대답이 포함되어 있습니다. 주제에는 데이터 내보내기, 서드파티 도구 및 PSQL 오류가 포함됩니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
 workflow-type: tm+mt
-source-wordcount: '5029'
+source-wordcount: '5055'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ FAQ에 대한 다음 답변 목록은 다음 카테고리로 구분됩니다.
 ### 쿼리 서비스 API에 [!DNL Postman]을(를) 사용할 수 있습니까?
 
 +++답변
-예. [!DNL Postman]&#x200B;(무료 타사 애플리케이션)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. Adobe Developer Console에서 프로젝트를 설정하고 [!DNL Postman]에서 사용하는 데 필요한 모든 자격 증명을 얻는 방법에 대한 단계별 지침은 [[!DNL Postman] 설치 가이드](https://video.tv.adobe.com/v/31705?captions=kor)를 참조하세요. [시작, 실행 및 공유에 대한 지침 [!DNL Postman] 컬렉션](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)에 대해서는 공식 설명서를 참조하세요.
+예. [!DNL Postman]&#x200B;(무료 타사 애플리케이션)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. Adobe Developer Console에서 프로젝트를 설정하고 [!DNL Postman]에서 사용하는 데 필요한 모든 자격 증명을 얻는 방법에 대한 단계별 지침은 [[!DNL Postman] 설치 가이드](https://video.tv.adobe.com/v/28832)를 참조하세요. [시작, 실행 및 공유에 대한 지침 [!DNL Postman] 컬렉션](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)에 대해서는 공식 설명서를 참조하세요.
 +++
 
 ### UI를 통해 쿼리에서 반환되는 최대 행 수에 제한이 있습니까?
@@ -91,7 +91,7 @@ FAQ에 대한 다음 답변 목록은 다음 카테고리로 구분됩니다.
 +++답변
 쿼리 제한 시간이 초과된 경우 다음 솔루션 중 하나 이상을 사용하는 것이 좋습니다.
 
-- [쿼리를 CTAS 쿼리로 변환](./sql/syntax.md#create-table-as-select)하고 실행을 예약합니다. 실행 예약은 UI를 통해 [&#128279;](./ui/user-guide.md#scheduled-queries)하거나 [API](./api/scheduled-queries.md#create)를 통해 수행할 수 있습니다.
+- [쿼리를 CTAS 쿼리로 변환](./sql/syntax.md#create-table-as-select)하고 실행을 예약합니다. 실행 예약은 UI를 통해 [하거나 [API](./api/scheduled-queries.md#create)를 통해 수행할 수 있습니다.](./ui/user-guide.md#scheduled-queries)
 - 추가 [필터 조건](https://spark.apache.org/docs/latest/api/sql/index.html#filter)을 적용하여 더 작은 데이터 청크에서 쿼리를 실행하십시오.
 - 자세한 내용을 수집하려면 [EXPLAIN 명령을 실행](./sql/syntax.md#explain)하십시오.
 - 데이터 세트 내의 데이터 통계를 검토합니다.
@@ -160,7 +160,7 @@ FAQ에 대한 다음 답변 목록은 다음 카테고리로 구분됩니다.
 
 ![도움말 및 지원, 엔터프라이즈 지원 및 문의하기 등이 강조 표시된 상단 탐색 모음 드롭다운 메뉴.](./images/troubleshooting/help-and-support.png)
 
-[!UICONTROL 도움말 및 지원] 섹션이 포함된 드롭다운 배너가 나타납니다. **[!UICONTROL 문의하기]**&#x200B;를 선택하여 Adobe 고객 지원 가상 도우미를 열거나, 대규모 조직을 위한 전용 도움말에 대해 **[!UICONTROL 엔터프라이즈 지원]**&#x200B;을 선택하십시오.
+[!UICONTROL 도움말 및 지원] 섹션이 포함된 드롭다운 배너가 나타납니다. **[!UICONTROL 문의하기]**&#x200B;를 선택하여 Adobe 고객 지원 가상 도우미를 열거나, 대규모 조직을 위한 전용 도움말에 대해 **[!UICONTROL 엔터프라이즈 지원]**을 선택하십시오.
 +++
 
 ### 이전 작업이 성공적으로 완료되지 않은 경우 후속 작업을 실행하지 않고 순차적 일련의 작업을 구현하려면 어떻게 해야 합니까?
@@ -717,12 +717,18 @@ and timestamp < to_timestamp('2022-07-23');
 SQL로 병합 구성은 Data Distiller 또는 쿼리 서비스에서 지원되지 않습니다.
 +++
 
-## ITAS 쿼리
+## ITAS 쿼리 {#itas-queries}
 
 ### ITAS 쿼리란?
 
 +++답변
 INSERT INTO QUERIES를 ITAS 쿼리라고 합니다. CREATE TABLE 쿼리를 CTAS 쿼리라고 합니다.
++++
+
+### Query Service에서 업데이트 및 삭제 작업을 지원합니까?
+
++++답변
+아니요. 쿼리 서비스는 업데이트 또는 삭제 작업을 지원하지 않습니다. ITAS를 사용하는 첨부 전용 작업만 지원합니다.
 +++
 
 ## 타사 도구 {#third-party-tools}

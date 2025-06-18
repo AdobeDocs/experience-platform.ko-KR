@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문에 대해 자세히 설명합니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
+source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
 workflow-type: tm+mt
-source-wordcount: '4649'
+source-wordcount: '4686'
 ht-degree: 1%
 
 ---
@@ -336,11 +336,15 @@ AS SELECT * FROM movie_review_e2e_DND;
 
 `INSERT INTO` 명령은 다음과 같이 정의됩니다.
 
+>[!IMPORTANT]
+>
+>쿼리 서비스는 ITAS 엔진을 사용하여 **추가 전용 작업**&#x200B;을 지원합니다. `INSERT INTO`은(는) 유일하게 지원되는 데이터 조작 명령입니다. **update** 및 **delete** 작업은 사용할 수 없습니다. 데이터의 변경 사항을 반영하려면 원하는 상태를 나타내는 새 레코드를 삽입합니다.
+
 ```sql
 INSERT INTO table_name select_query
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ----- | ----- |
 | `table_name` | 쿼리를 삽입할 테이블의 이름입니다. |
 | `select_query` | `SELECT` 문입니다. `SELECT` 쿼리의 구문은 [SELECT 쿼리 섹션](#select-queries)에 있습니다. |
@@ -387,7 +391,7 @@ INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCi
 DROP TABLE [IF EXISTS] [db_name.]table_name
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `IF EXISTS` | 이 항목을 지정하면 테이블이 **not**&#x200B;인 경우 예외가 throw되지 않습니다. |
 
@@ -407,7 +411,7 @@ CREATE DATABASE [IF NOT EXISTS] db_name
 DROP DATABASE [IF EXISTS] db_name
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `IF EXISTS` | 이 항목을 지정하면 데이터베이스가 **not**&#x200B;인 경우 예외가 throw되지 않습니다. |
 
@@ -419,7 +423,7 @@ DROP DATABASE [IF EXISTS] db_name
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `IF EXISTS` | 이 매개 변수를 지정하고 스키마가 **not**&#x200B;인 경우 예외가 throw되지 않습니다. |
 | `RESTRICT` | 모드의 기본값입니다. 지정하면 스키마에 테이블이 포함되지 않은 **경우**&#x200B;에만 스키마가 삭제됩니다. |
@@ -435,7 +439,7 @@ SQL 보기는 SQL 문의 결과 집합을 기반으로 하는 가상 테이블�
 CREATE VIEW view_name AS select_query
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `view_name` | 생성할 보기의 이름입니다. |
 | `select_query` | `SELECT` 문입니다. `SELECT` 쿼리의 구문은 [SELECT 쿼리 섹션](#select-queries)에 있습니다. |
@@ -457,7 +461,7 @@ CREATE VIEW db_name.schema_name.view_name AS select_query
 CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `db_name` | 데이터베이스의 이름입니다. |
 | `schema_name` | 스키마의 이름입니다. |
@@ -496,7 +500,7 @@ SHOW VIEWS;
 DROP VIEW [IF EXISTS] view_name
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `IF EXISTS` | 이 항목을 지정하면 보기가 **not**&#x200B;인 경우 예외가 throw되지 않습니다. |
 | `view_name` | 삭제할 보기의 이름입니다. |
@@ -828,7 +832,7 @@ select inline(productListItems) from source_dataset limit 10;
 SET property_key = property_value
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `property_key` | 나열하거나 변경할 속성의 이름입니다. |
 | `property_value` | 속성을 설정할 값입니다. |
@@ -978,7 +982,7 @@ DEALLOCATE ALL
 DECLARE name CURSOR FOR query
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `name` | 생성할 커서의 이름입니다. |
 | `query` | 커서가 반환할 행을 제공하는 `SELECT` 또는 `VALUES` 명령입니다. |
@@ -993,7 +997,7 @@ DECLARE name CURSOR FOR query
 EXECUTE name [ ( parameter ) ]
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `name` | 실행할 준비된 문의 이름입니다. |
 | `parameter` | 준비된 문에 대한 매개 변수의 실제 값. 준비된 문이 생성될 때 결정된 대로 이 매개 변수의 데이터 유형과 호환되는 값을 산출하는 표현식이어야 합니다. 준비된 문에 여러 매개 변수가 있는 경우 쉼표로 구분됩니다. |
@@ -1012,7 +1016,7 @@ EXPLAIN statement
 EXPLAIN FORMAT { TEXT | JSON } statement
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `FORMAT` | `FORMAT` 명령을 사용하여 출력 형식을 지정하십시오. 사용 가능한 옵션은 `TEXT` 또는 `JSON`입니다. 텍스트가 아닌 출력에는 텍스트 출력 형식과 동일한 정보가 포함되어 있지만 프로그램이 더 쉽게 구문 분석할 수 있습니다. 이 매개 변수의 기본값은 `TEXT`입니다. |
 | `statement` | 실행 계획을 보려는 모든 `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS` 또는 `CREATE MATERIALIZED VIEW AS` 문입니다. |
@@ -1044,7 +1048,7 @@ EXPLAIN SELECT * FROM foo;
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `num_of_rows` | 가져올 행 수입니다. |
 | `cursor_name` | 정보를 검색하는 커서의 이름입니다. |
@@ -1061,7 +1065,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `name` | 준비된 문의 이름입니다. |
 | `data_type` | 준비된 문 매개 변수의 데이터 형식입니다. 매개 변수의 데이터 유형이 나열되지 않으면 해당 유형을 컨텍스트에서 유추할 수 있습니다. 여러 데이터 유형을 추가해야 하는 경우 쉼표로 구분된 목록으로 추가할 수 있습니다. |
@@ -1099,7 +1103,7 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 표준 SELECT 쿼리 매개 변수에 대한 자세한 내용은 [SELECT 쿼리 섹션](#select-queries)에 있습니다. 이 섹션에는 `SELECT INTO` 명령에 배타적인 매개 변수만 나열됩니다.
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `TEMPORARY` 또는 `TEMP` | 선택적 매개 변수. 매개변수를 지정하면 생성된 테이블이 임시 테이블이 됩니다. |
 | `UNLOGGED` | 선택적 매개 변수. 매개 변수를 지정하면 작성된 테이블이 기록되지 않은 테이블입니다. 기록되지 않은 테이블에 대한 자세한 내용은 [[!DNL PostgreSQL] 설명서](https://www.postgresql.org/docs/current/sql-createtable.html)를 참조하세요. |
@@ -1122,7 +1126,7 @@ SHOW name
 SHOW ALL
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `name` | 정보를 보려는 런타임 매개 변수의 이름입니다. 런타임 매개 변수에 사용할 수 있는 값에는 다음 값이 포함됩니다. <br>`SERVER_VERSION`: 이 매개 변수는 서버의 버전 번호를 표시합니다.<br>`SERVER_ENCODING`: 이 매개 변수는 서버측 문자 집합 인코딩을 보여 줍니다.<br>`LC_COLLATE`: 이 매개 변수는 데이터 정렬(텍스트 순서 지정)에 대한 데이터베이스의 로캘 설정을 보여 줍니다.<br>`LC_CTYPE`: 이 매개 변수는 문자 분류에 대한 데이터베이스의 로케일 설정을 보여 줍니다.<br>`IS_SUPERUSER`: 이 매개 변수는 현재 역할에 수퍼유저 권한이 있는지 여부를 표시합니다. |
 | `ALL` | 모든 구성 매개 변수의 값을 설명과 함께 표시합니다. |
@@ -1152,7 +1156,7 @@ COPY query
     [  WITH FORMAT 'format_name']
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `query` | 복사할 쿼리입니다. |
 | `format_name` | 쿼리를 복사할 형식입니다. `format_name`은(는) `parquet`, `csv` 또는 `json` 중 하나일 수 있습니다. 기본적으로 값은 `parquet`입니다. |
@@ -1209,7 +1213,7 @@ ALTER TABLE table_name DROP CONSTRAINT PRIMARY IDENTITY ( column_name )
 ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `table_name` | 편집 중인 테이블의 이름입니다. |
 | `column_name` | 제약 조건을 추가할 열의 이름입니다. |
@@ -1295,7 +1299,7 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 
 **매개 변수**
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ------ | ------ |
 | `table_name` | 편집 중인 테이블의 이름입니다. |
 | `column_name` | 추가할 열의 이름입니다. |
