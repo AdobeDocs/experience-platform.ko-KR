@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 6%
+source-wordcount: '1054'
+ht-degree: 4%
 
 ---
 
@@ -20,7 +20,27 @@ ht-degree: 6%
 
 ## 개요 {#overview}
 
-비공개 목록을 사용하여 Snowflake 계정으로 데이터를 내보냅니다.
+Snowflake 대상 커넥터를 사용하여 Adobe의 Snowflake 인스턴스로 데이터를 내보낸 다음 [개인 목록](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about)을 통해 인스턴스와 공유합니다.
+
+Snowflake 대상의 작동 방식과 Adobe과 Snowflake 간에 데이터가 전송되는 방법을 이해하려면 다음 섹션을 참조하십시오.
+
+### Snowflake 데이터 공유 작동 방식 {#data-sharing}
+
+이 대상은 [!DNL Snowflake] 데이터 공유를 사용합니다. 즉, 물리적으로 내보낸 데이터나 자신의 Snowflake 인스턴스로 전송된 데이터가 없습니다. 대신 Adobe은 Adobe의 Snowflake 환경 내에서 호스팅되는 라이브 테이블에 대한 읽기 전용 액세스 권한을 부여합니다. Snowflake 계정에서 직접 이 공유 테이블을 쿼리할 수 있지만 테이블을 소유하지는 않으며 지정된 보존 기간 이후에 수정하거나 유지할 수 없습니다. Adobe은 공유 테이블의 수명 주기와 구조를 완전히 관리합니다.
+
+Adobe의 Snowflake 인스턴스에서 소유의 인스턴스로 데이터를 처음 공유할 때 Adobe의 비공개 목록을 수락하라는 메시지가 표시됩니다.
+
+### 데이터 유지 및 TTL(Time-to-Live) {#ttl}
+
+이 통합을 통해 공유되는 모든 데이터의 고정 TTL(Time-to-Live)은 7일입니다. 마지막 내보내기 후 7일이 지나면 데이터 흐름이 여전히 활성 상태인지 여부에 관계없이 공유 테이블이 자동으로 만료되어 액세스할 수 없게 됩니다. 7일 이상 데이터를 유지해야 하는 경우 TTL이 만료되기 전에 콘텐츠를 자체 Snowflake 인스턴스에서 소유한 테이블로 복사해야 합니다.
+
+### 대상자 업데이트 동작 {#audience-update-behavior}
+
+대상을 [일괄 처리 모드](../../../segmentation/methods/batch-segmentation.md)에서 평가하면 공유 테이블의 데이터가 24시간마다 새로 고쳐집니다. 즉, 대상 멤버십의 변경 사항과 이러한 변경 사항이 공유 테이블에 반영되는 시간 사이에 최대 24시간이 지연될 수 있습니다.
+
+### 증분 내보내기 논리 {#incremental-export}
+
+대상에 대해 데이터 흐름이 처음 실행되면 다시 채우기를 수행하고 현재 자격이 있는 모든 프로필을 공유합니다. 이 초기 채우기 이후에는 증분 업데이트만 공유 테이블에 반영됩니다. 즉, 대상자에 추가되거나 대상에서 제거된 프로필입니다. 이 접근 방식을 사용하면 효율적인 업데이트가 보장되고 공유 테이블이 최신 상태로 유지됩니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -67,13 +87,20 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 
 ### 대상 세부 정보 입력 {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_snowflake_accountID"
+>title="Snowflake 계정 ID 입력"
+>abstract="계정이 조직에 연결되어 있는 경우 다음 형식을 사용하십시오. `OrganizationName.AccountName`<br><br> 계정이 조직에 연결되어 있지 않은 경우 다음 형식을 사용하십시오.`AccountName`"
+
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
 ![대상에 대한 세부 정보를 채우는 방법을 보여 주는 샘플 스크린샷](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL Snowflake 계정 ID]**: Snowflake 계정 ID. 예: `adobe-123456`.
+* **[!UICONTROL Snowflake 계정 ID]**: Snowflake 계정 ID. 계정이 조직에 연결되어 있는지 여부에 따라 다음 계정 ID 형식을 사용하십시오.
+   * 계정이 조직에 연결되어 있는 경우: `OrganizationName.AccountName`.
+   * 계정이 조직에 연결되어 있지 않은 경우: `AccountName`.
 * **[!UICONTROL 계정 승인]**: Snowflake 계정 ID 승인을 전환하여 계정 ID가 올바르고 사용자가 소유하고 있는지 확인합니다.
 
 >[!IMPORTANT]
