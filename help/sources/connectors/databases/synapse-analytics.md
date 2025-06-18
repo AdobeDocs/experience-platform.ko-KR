@@ -79,7 +79,7 @@ GRANT SELECT ON SCHEMA::dbo TO {APP_ID};
 | 서비스 주체 키 | 서비스 주체와 연계된 클라이언트 암호. |
 | 연결 사양 ID | **연결 사양**&#x200B;은(는) 데이터 원본의 커넥터 속성을 제공합니다. 여기에는 **기본** 및 **소스** 연결을 모두 만들기 위한 인증 사양 및 요구 사항과 같은 세부 정보가 포함됩니다. [!DNL Azure Synapse Analytics]의 경우 연결 사양 ID는 `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`입니다. **참고:** 이 자격 증명은 API를 통해 연결할 때만 필요합니다. |
 
-자세한 내용은  [!DNL Azure Synapse Analytics]](https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-service-identity)에 대한 ID 관리에 대한 [[!DNL Azure] 설명서를 참조하십시오.
+자세한 내용은  [!DNL Azure Synapse Analytics][&#128279;](https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-service-identity)에 대한 ID 관리에 대한 [!DNL Azure] 설명서를 참조하십시오.
 
 >[!ENDTABS]
 
