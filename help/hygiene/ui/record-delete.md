@@ -120,7 +120,7 @@ JSON 파일의 형식은 개체 배열로 지정해야 하며 각 개체는 ID�
 
 ID를 수동으로 입력하려면 **[!UICONTROL ID 추가]**&#x200B;를 선택하십시오.
 
-![ID 추가] 옵션이 강조 표시된 요청 생성 워크플로우입니다.](../images/ui/record-delete/add-identity.png)[!UICONTROL 
+![ID 추가] 옵션이 강조 표시된 요청 생성 워크플로우입니다.(../images/ui/record-delete/add-identity.png)
 
 ID를 한 번에 하나씩 입력할 수 있는 컨트롤이 나타납니다. **[!UICONTROL ID 네임스페이스]**&#x200B;에서 드롭다운 메뉴를 사용하여 ID 유형을 선택합니다. **[!UICONTROL 기본 ID 값]**&#x200B;에서 레코드에 대한 ID 네임스페이스 값을 제공합니다.
 
