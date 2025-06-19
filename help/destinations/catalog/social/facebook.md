@@ -3,7 +3,7 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 한 대상자 타겟팅, 개인화 및 억제에 대한 Facebook 캠페인을 위한 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: dd725b4d383bbcd93e68c81d4fe5182d6086e9be
+source-git-commit: 6ca3687d067044c3fcb9455ec287863c4ffaafd2
 workflow-type: tm+mt
 source-wordcount: '2690'
 ht-degree: 5%
@@ -47,7 +47,7 @@ ht-degree: 5%
 | `phone_sha256` | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따르고 일반 텍스트와 해시된 전화 번호에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
 | `email_lc_sha256` | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침에 따라 일반 텍스트와 해시된 이메일 주소에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
 | `extern_id` | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
-| `gender` | 성별 | 허용된 값: <ul><li>남성의 경우 `m`</li><li>여성용 `f`개</li></ul> Experience Platform으로 보내기 전에 이 값을 **자동으로 해싱**&#x200B;합니다. 이 자동 해싱은 Facebook의 보안 및 개인정보 보호 요구 사항을 준수하는 데 필요합니다. **not**&#x200B;은(는) 이 필드에 사전 해시된 값을 제공하지 마십시오. 그러면 일치 프로세스가 실패합니다. |
+| `gender` | 성별 | 허용된 값: <ul><li>남성의 경우 `m`</li><li>여성용 `f`</li></ul> Experience Platform으로 보내기 전에 이 값을 **자동으로 해싱**&#x200B;합니다. 이 자동 해싱은 Facebook의 보안 및 개인정보 보호 요구 사항을 준수하는 데 필요합니다. **not**&#x200B;은(는) 이 필드에 사전 해시된 값을 제공하지 마십시오. 그러면 일치 프로세스가 실패합니다. |
 | `date_of_birth` | 생년월일 | 허용되는 형식: `yyyy-MM-DD`. <br>Experience Platform **이 값을 Facebook으로 보내기 전에 자동으로 해시합니다**. 이 자동 해싱은 Facebook의 보안 및 개인정보 보호 요구 사항을 준수하는 데 필요합니다. **not**&#x200B;은(는) 이 필드에 사전 해시된 값을 제공하지 마십시오. 그러면 일치 프로세스가 실패합니다. |
 | `last_name` | 성 | 허용되는 형식: 소문자, `a-z`자만 허용되며 구두점이 없습니다. 특수 문자에는 UTF-8 인코딩을 사용하십시오.  <br>Experience Platform **이 값을 Facebook으로 보내기 전에 자동으로 해시합니다**. 이 자동 해싱은 Facebook의 보안 및 개인정보 보호 요구 사항을 준수하는 데 필요합니다. **not**&#x200B;은(는) 이 필드에 사전 해시된 값을 제공하지 마십시오. 그러면 일치 프로세스가 실패합니다. |
 | `first_name` | 이름 | 허용되는 형식: 소문자, `a-z`자만, 구두점 없음, 공백 없음. 특수 문자에는 UTF-8 인코딩을 사용하십시오.  <br>Experience Platform **이 값을 Facebook으로 보내기 전에 자동으로 해시합니다**. 이 자동 해싱은 Facebook의 보안 및 개인정보 보호 요구 사항을 준수하는 데 필요합니다. **not**&#x200B;은(는) 이 필드에 사전 해시된 값을 제공하지 마십시오. 그러면 일치 프로세스가 실패합니다. |
@@ -138,8 +138,8 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 >[!NOTE]
 >
 >해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Experience Platform]에 의해 자동으로 해시됩니다.
->&#x200B;> 속성 소스 데이터는 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오.
->&#x200B;> **[!UICONTROL 변환 적용]** 옵션은 특성을 소스 필드로 선택하는 경우에만 표시됩니다. 네임스페이스를 선택하면 표시되지 않습니다.
+>> 속성 소스 데이터는 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오.
+>> **[!UICONTROL 변환 적용]** 옵션은 특성을 소스 필드로 선택하는 경우에만 표시됩니다. 네임스페이스를 선택하면 표시되지 않습니다.
 
 ![매핑 단계에서 강조 표시된 변환 컨트롤을 적용합니다.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -157,7 +157,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 아래 비디오에서는 [!DNL Facebook] 대상을 구성하고 대상을 활성화하는 단계도 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -166,7 +166,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 Facebook 대상을 찾고 **[!UICONTROL 설정]**&#x200B;을 선택합니다.
-2. **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다.
+2. **[!UICONTROL 대상에 연결]**을 선택합니다.
    ![활성화 워크플로에 표시된 Facebook 인증 단계입니다.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Facebook 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 
@@ -185,9 +185,9 @@ Facebook 인증 토큰은 60일마다 만료됩니다. 토큰이 만료되면 �
 1. **[!UICONTROL 대상]** > **[!UICONTROL 계정]**(으)로 이동
 2. (선택 사항) 페이지에서 사용할 수 있는 필터를 사용하여 Facebook 계정만 표시합니다.
    ![Facebook 계정만 표시하도록 필터링](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
-3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**&#x200B;을 선택합니다.
+3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**을 선택합니다.
    ![세부 정보 편집 컨트롤 선택](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**&#x200B;을 선택하고 Facebook 자격 증명으로 다시 인증합니다.
+4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**을 선택하고 Facebook 자격 증명으로 다시 인증합니다.
    ![다시 연결 OAuth 옵션이 있는 모달 창](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
