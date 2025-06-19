@@ -4,9 +4,9 @@ description: Azure를 사용하여 새 엔터프라이즈 계정을 만들거나
 role: Developer
 feature: Privacy
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: f4100506947da7584de5b9fb42946ac877c8c102
+source-git-commit: c920f78363ee5f040964dbd3a0d0815474094b07
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 서비스를 선택하면 **[!DNL Key vaults]** 페이지가 나타납니다. 여기에서 **[!DNL Create]**&#x200B;을(를) 선택합니다.
 
-[!DNL Create]이(가) 강조 표시된 [!DNL Microsoft Azure]의 [!DNL Key vaults] 대시보드입니다.![&#128279;](../../../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)
+[!DNL Create]이(가) 강조 표시된 [!DNL Microsoft Azure]의 [!DNL Key vaults] 대시보드입니다.](../../../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)![
 
 제공된 양식을 사용하여 이름 및 할당된 리소스 그룹을 포함하여 Key Vault에 대한 기본 세부 정보를 입력합니다.
 
@@ -56,6 +56,14 @@ ht-degree: 0%
 특정 가상 네트워크에 대한 공개 액세스를 제한하거나 공개 액세스를 완전히 사용하지 않도록 Key Vault가 구성된 경우 [!DNL Microsoft]에 방화벽 예외를 부여해야 합니다.
 
 왼쪽 탐색에서 **[!DNL Networking]**&#x200B;을(를) 선택합니다. **[!DNL Firewalls and virtual networks]**&#x200B;에서 **[!DNL Allow trusted Microsoft services to bypass this firewall]** 확인란을 선택한 다음 **[!DNL Apply]**&#x200B;을(를) 선택합니다.
+
+>[!NOTE]
+>
+>Adobe 키 자격 증명 모음에서 제한된 네트워크 액세스를 사용하는 경우 고정 IP 주소 `20.88.123.53`을(를) 추가하는 것이 좋습니다. 이 IP 주소를 추가하면 Adobe 서비스가 연결을 보다 효과적으로 모니터링하고 액세스 문제가 감지될 때 플랫폼 내 알림을 제공할 수 있습니다.
+>
+>Adobe의 IP 주소 허용 목록 시기, 경고 작동 방식 및 주요 액세스 오류 알림에 응답하는 방법에 대한 자세한 내용은 [Azure CMK에 대한 경고 및 IP 액세스 구성](./alerts-and-ip-access.md)을 참조하세요.
+>
+>공개 네트워크 액세스를 허용하도록 키 저장소가 이미 구성된 경우 추가 작업이 필요하지 않습니다.
 
 ![[!DNL Networking] 및 [!DNL Allow trusted Microsoft surfaces to bypass this firewall] 예외가 강조 표시된 [!DNL Microsoft Azure]의 [!DNL Networking] 탭입니다.](../../../images/governance-privacy-security/customer-managed-keys/networking.png)
 
