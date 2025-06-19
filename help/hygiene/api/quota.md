@@ -3,9 +3,9 @@ title: 할당량 API 끝점
 description: 데이터 위생 API의 /quota 끝점을 사용하면 각 작업 유형에 대한 조직의 월별 할당량 제한에 대해 고급 데이터 수명 주기 관리 사용을 모니터링할 수 있습니다.
 role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 48a83e2b615fc9116a93611a5e6a8e7f78cb4dee
+source-git-commit: 4d34ae1885f8c4b05c7bb4ff9de9c0c0e26154bd
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '492'
 ht-degree: 1%
 
 ---
@@ -14,18 +14,23 @@ ht-degree: 1%
 
 데이터 위생 API의 `/quota` 끝점을 사용하면 각 작업 유형에 대한 조직의 할당량 제한에 대해 고급 데이터 수명 주기 관리 사용을 모니터링할 수 있습니다.
 
-할당량은 다음과 같은 방법으로 각 데이터 라이프사이클 작업 유형에 적용됩니다.
+각 데이터 라이프사이클 작업 유형에 대해 할당량 사용량이 추적됩니다. 실제 할당량 제한은 조직의 권한에 따라 다르며 정기적으로 검토할 수 있습니다. 데이터 세트 만료에는 동시 활성 작업 수에 대한 엄격한 제한이 적용됩니다.
 
-* 레코드 삭제 및 업데이트는 매월 특정 수의 요청으로 제한됩니다.
-* 데이터 세트 만료에는 만료를 실행할 시기에 관계없이 동시에 활성 상태인 작업 수에 대한 일정한 제한이 있습니다.
-
-## 시작하기
+## 시작
 
 이 안내서에 사용된 끝점은 데이터 위생 API의 일부입니다. 계속하기 전에 [개요](./overview.md)에서 다음 정보를 검토하십시오.
 
 * 관련 설명서 링크
 * 이 문서의 샘플 API 호출 읽기에 대한 안내서
-* 모든 Experience Platform API를 호출하는 데 필요한 필수 헤더와 관련된 중요 정보
+* Experience Platform API를 호출하는 데 필요한 필수 헤더와 관련된 중요 정보
+
+## 할당량 및 처리 타임라인 {#quotas}
+
+레코드 삭제 요청은 라이선스 자격에 따라 할당량 및 서비스 수준 예상치를 따릅니다. 이러한 제한은 UI 및 API 기반 삭제 요청 모두에 적용됩니다.
+
+>[!TIP]
+> 
+>이 문서에서는 자격 기반 제한에 대해 사용량을 쿼리하는 방법을 보여 줍니다. 할당량 계층, 레코드 삭제 권한 및 SLA 동작에 대한 자세한 설명은 [UI 기반 레코드 삭제](../ui/record-delete.md#quotas) 또는[API 기반 레코드 삭제](./workorder.md#quotas) 문서를 참조하십시오.
 
 ## 할당량 나열 {#list}
 
@@ -70,13 +75,13 @@ curl -X GET \
       "name": "dailyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for today.",
       "consumed": 0,
-      "quota": 600000
+      "quota": 1000000
     },
     {
       "name": "monthlyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for this month.",
       "consumed": 841,
-      "quota": 600000
+      "quota": 2000000
     },
     {
       "name": "monthlyUpdatedFieldIdentitiesQuota",
@@ -89,7 +94,5 @@ curl -X GET \
 ```
 
 | 속성 | 설명 |
-| --- | --- |
+| -------- | ------- |
 | `quotas` | 각 데이터 라이프사이클 작업 유형에 대한 할당량 정보를 나열합니다. 각 할당량 개체에는 다음 속성이 포함되어 있습니다.<ul><li>`name`: 데이터 주기 작업 유형:<ul><li>`expirationDatasetQuota`: 데이터 세트 만료</li><li>`deleteIdentityWorkOrderDatasetQuota`: 레코드 삭제</li></ul></li><li>`description`: 데이터 수명 주기 작업 유형에 대한 설명입니다.</li><li>`consumed`: 현재 기간에 실행된 이 형식의 작업 수입니다. 객체 이름은 할당량 기간을 나타냅니다.</li><li>`quota`: 조직의 이 작업 유형에 대한 할당입니다. 레코드 삭제 및 업데이트의 경우 할당량은 각 월별 기간에 대해 실행할 수 있는 작업 수를 나타냅니다. 데이터 세트 만료의 경우 할당량은 지정된 시간에 동시에 활성화할 수 있는 작업 수를 나타냅니다.</li></ul> |
-
-{style="table-layout:auto"}

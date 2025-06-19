@@ -1,38 +1,80 @@
 ---
-title: 작업 주문 API 끝점
+title: 삭제 요청 기록(작업 주문 끝점)
 description: 데이터 위생 API의 /workorder 끝점을 사용하면 ID에 대한 삭제 작업을 프로그래밍 방식으로 관리할 수 있습니다.
-badgeBeta: label="Beta" type="Informative"
 role: Developer
-badge: Beta
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: bf819d506b0ee6f3aba6850f598ee46f16695dfa
+source-git-commit: d569b1d04fa76e0a0e48364a586e8a1a773b9bf2
 workflow-type: tm+mt
-source-wordcount: '1278'
-ht-degree: 1%
+source-wordcount: '1505'
+ht-degree: 2%
 
 ---
 
-# 작업 주문 끝점 {#work-order-endpoint}
+# 삭제 요청 기록(Workorder 끝점) {#work-order-endpoint}
 
 데이터 위생 API의 `/workorder` 끝점을 사용하면 Adobe Experience Platform에서 레코드 삭제 요청을 프로그래밍 방식으로 관리할 수 있습니다.
 
 >[!IMPORTANT]
 > 
->레코드 삭제 기능은 현재 Beta에 있으며 **제한된 릴리스**&#x200B;에서만 사용할 수 있습니다. 모든 고객이 이용할 수 있는 것은 아닙니다. 레코드 삭제 요청은 제한된 릴리스의 조직에만 사용할 수 있습니다.
->
 >레코드 삭제는 데이터 정리, 익명 데이터 제거 또는 데이터 최소화에 사용됩니다. GDPR(일반 데이터 보호 규정)과 같은 개인 정보 보호 규정과 관련된 데이터 주체 권한 요청(준수)에 사용할 **not**&#x200B;입니다. 모든 규정 준수 사용 사례의 경우 대신 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md)을(를) 사용하십시오.
 
-## 시작하기
+## 시작
 
 이 안내서에 사용된 끝점은 데이터 위생 API의 일부입니다. 계속하기 전에 [개요](./overview.md)에서 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
+
+## 할당량 및 처리 타임라인 {#quotas}
+
+레코드 삭제 요청은 조직의 라이선스 자격에 따라 결정되는 일별 및 월별 식별자 제출 제한을 따릅니다. 이러한 제한은 UI 및 API 기반 삭제 요청 모두에 적용됩니다.
+
+>[!NOTE]
+>
+>하루에 최대 **1,000,000개의 식별자를 제출할 수 있습니다**. 단, 남은 월별 할당량이 허용하는 경우에만 제출합니다. 월별 상한이 100만 개 미만인 경우 일일 제출액은 해당 상한을 초과할 수 없습니다.
+
+### 제품별 월별 제출 권한 {#quota-limits}
+
+아래 표에는 제품 및 자격 수준별 식별자 제출 제한이 나와 있습니다. 각 제품에 대해 월간 상한은 고정 식별자 천장이나 사용 허가된 데이터 볼륨에 연결된 백분율 기반 임계값의 두 값 중 적은 값입니다.
+
+| 제품 | 권한 설명 | 월별 상한(둘 중 더 작은 값) |
+|----------|-------------------------|---------------------------------|
+| Real-Time CDP 또는 Adobe Journey Optimizer | Privacy and Security Shield 또는 Healthcare Shield 추가 기능 없음 | 식별자 2,000,000개 또는 대응 가능 대상의 5% |
+| Real-Time CDP 또는 Adobe Journey Optimizer | Privacy and Security Shield 또는 Healthcare Shield 추가 기능 포함 | 식별자 15,000,000개 또는 대응 가능 대상의 10% |
+| Customer Journey Analytics | Privacy and Security Shield 또는 Healthcare Shield 추가 기능 없음 | 2,000,000개의 식별자 또는 100개의 식별자/백만 CJA 권한 행당 |
+| Customer Journey Analytics | Privacy and Security Shield 또는 Healthcare Shield 추가 기능 포함 | 15,000,000개의 식별자 또는 100만 개의 CJA 권한 행당 200개의 식별자 |
+
+>[!NOTE]
+>
+> 대부분의 조직에서는 실제 대응 가능 대상 또는 CJA 행 권한에 따라 월별 제한이 내려집니다.
+
+할당량은 매월 1일에 재설정됩니다. 사용되지 않은 할당량은 **이월되지 않습니다**.
+
+>[!NOTE]
+>
+>할당량은 **제출된 식별자**&#x200B;에 대한 조직의 라이선스가 부여된 월별 권한을 기반으로 합니다. 이러한 기능은 시스템 가드레일에 의해 적용되지 않지만 모니터링 및 검토 할 수 있습니다.
+>
+>레코드 삭제는 **공유 서비스**&#x200B;입니다. 월간 캡은 Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics 및 적용 가능한 모든 Shield 추가 기능에 걸쳐 가장 높은 권한을 반영합니다.
+
+### 식별자 제출을 위한 처리 타임라인 {#sla-processing-timelines}
+
+제출 후 레코드 삭제 요청은 자격 수준에 따라 큐에 추가되고 처리됩니다.
+
+| 제품 및 자격 설명 | 대기열 기간 | 최대 처리 시간(SLA) |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| Privacy and Security Shield 또는 Healthcare Shield 추가 기능 없음 | 최대 15일 | 30일 |
+| Privacy and Security Shield 또는 Healthcare Shield 추가 기능 포함 | 일반적으로 24시간 | 15일 |
+
+조직에서 더 높은 제한을 필요로 하는 경우 Adobe 담당자에게 권한 검토를 문의하십시오.
+
+>[!TIP]
+>
+>현재 할당량 사용 또는 권한 계층을 확인하려면 [할당량 참조 안내서](../api/quota.md)를 참조하세요.
 
 ## 레코드 삭제 요청 만들기 {#create}
 
 `/workorder` 끝점에 대한 POST 요청을 만들어 단일 데이터 세트 또는 모든 데이터 세트에서 하나 이상의 ID를 삭제할 수 있습니다.
 
->[!IMPORTANT]
-> 
->매월 제출할 수 있는 총 고유 ID 레코드 삭제 횟수에는 제한이 있습니다. 이러한 제한은 라이선스 계약을 기반으로 합니다. Adobe Real-time Customer Data Platform 및 Adobe Journey Optimizer의 모든 에디션을 구입한 조직은 매월 최대 10만 건의 ID 레코드 삭제를 제출할 수 있습니다. **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;을(를) 구매한 조직은 매월 최대 60만 개의 ID 레코드 삭제를 제출할 수 있습니다.<br>UI를 통한 단일 [레코드 삭제 요청](../ui/record-delete.md)을 통해 한 번에 10,000개의 ID를 제출할 수 있습니다. 레코드를 삭제하는 API 메서드를 사용하면 100,000개의 ID를 한 번에 제출할 수 있습니다.<br>가능한 한 많은 ID를 요청당 ID 한도까지 제출하는 것이 좋습니다. 많은 양의 ID를 삭제하려는 경우 낮은 볼륨 또는 레코드당 하나의 ID 삭제 요청을 제출하지 않아야 합니다.
+>[!TIP]
+>
+>API를 통해 제출된 각 레코드 삭제 요청에는 최대 **100,000개의 ID**&#x200B;가 포함될 수 있습니다. 효율성을 극대화하려면 요청당 가능한 한 많은 ID를 제출하고 단일 ID 작업 주문과 같은 대량 제출을 피하십시오.
 
 **API 형식**
 

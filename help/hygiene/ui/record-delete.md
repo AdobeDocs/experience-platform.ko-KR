@@ -1,24 +1,20 @@
 ---
-title: 레코드 삭제
+title: 삭제 요청 기록(UI 워크플로)
 description: Adobe Experience Platform UI에서 레코드를 삭제하는 방법을 알아봅니다.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 07e09cfe2e2c3ff785caf0b310cbe2f2cc381c17
 workflow-type: tm+mt
-source-wordcount: '1574'
-ht-degree: 8%
+source-wordcount: '1797'
+ht-degree: 7%
 
 ---
 
-# 레코드 삭제 {#record-delete}
+# 삭제 요청 기록(UI 워크플로) {#record-delete}
 
 [[!UICONTROL 데이터 주기] 작업 영역](./overview.md)을(를) 사용하여 기본 ID를 기반으로 Adobe Experience Platform에서 레코드를 삭제합니다. 이러한 레코드는 개별 소비자 또는 ID 그래프에 포함된 다른 엔티티에 연결할 수 있습니다.
 
 >[!IMPORTANT]
-> 
->레코드 삭제 기능은 현재 Beta에 있으며 **제한된 릴리스**&#x200B;에서만 사용할 수 있습니다. 모든 고객이 이용할 수 있는 것은 아닙니다. 레코드 삭제 요청은 제한된 릴리스의 조직에만 사용할 수 있습니다.
-> 
-> 
+>
 >레코드 삭제는 데이터 정리, 익명 데이터 제거 또는 데이터 최소화에 사용됩니다. GDPR(일반 데이터 보호 규정)과 같은 개인 정보 보호 규정과 관련된 데이터 주체 권한 요청(준수)에 사용할 **not**&#x200B;입니다. 모든 규정 준수 사용 사례의 경우 대신 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md)을(를) 사용하십시오.
 
 ## 전제 조건 {#prerequisites}
@@ -124,7 +120,7 @@ JSON 파일의 형식은 개체 배열로 지정해야 하며 각 개체는 ID�
 
 ID를 수동으로 입력하려면 **[!UICONTROL ID 추가]**&#x200B;를 선택하십시오.
 
-![ID 추가] 옵션이 강조 표시된 요청 생성 워크플로우입니다.(../images/ui/record-delete/add-identity.png)
+![ID 추가] 옵션이 강조 표시된 요청 생성 워크플로우입니다.](../images/ui/record-delete/add-identity.png)[!UICONTROL 
 
 ID를 한 번에 하나씩 입력할 수 있는 컨트롤이 나타납니다. **[!UICONTROL ID 네임스페이스]**&#x200B;에서 드롭다운 메뉴를 사용하여 ID 유형을 선택합니다. **[!UICONTROL 기본 ID 값]**&#x200B;에서 레코드에 대한 ID 네임스페이스 값을 제공합니다.
 
@@ -134,13 +130,59 @@ ID를 한 번에 하나씩 입력할 수 있는 컨트롤이 나타납니다. **
 
 ![더하기 아이콘과 ID 추가 아이콘이 강조 표시된 요청 생성 워크플로우입니다.](../images/ui/record-delete/more-identities.png)
 
+## 할당량 및 처리 타임라인 {#quotas}
+
+레코드 삭제 요청은 조직의 라이선스 자격에 따라 결정되는 일별 및 월별 식별자 제출 제한을 따릅니다. 이러한 제한은 UI 및 API 기반 삭제 요청 모두에 적용됩니다.
+
+>[!NOTE]
+>
+>하루에 최대 **1,000,000개의 식별자를 제출할 수 있습니다**. 단, 남은 월별 할당량이 허용하는 경우에만 제출합니다. 월별 상한이 100만 개 미만인 경우 일일 제출액은 해당 상한을 초과할 수 없습니다.
+
+### 제품별 월별 제출 권한 {#quota-limits}
+
+아래 표에는 제품 및 자격 수준별 식별자 제출 제한이 나와 있습니다. 각 제품에 대해 월간 상한은 고정 식별자 천장이나 사용 허가된 데이터 볼륨에 연결된 백분율 기반 임계값의 두 값 중 적은 값입니다.
+
+| 제품 | 권한 설명 | 월별 상한(둘 중 더 작은 값) |
+|----------|-------------------------|---------------------------------|
+| Real-Time CDP 또는 Adobe Journey Optimizer | Privacy and Security Shield 또는 Healthcare Shield 추가 기능 없음 | 식별자 2,000,000개 또는 대응 가능 대상의 5% |
+| Real-Time CDP 또는 Adobe Journey Optimizer | Privacy and Security Shield 또는 Healthcare Shield 추가 기능 포함 | 식별자 15,000,000개 또는 대응 가능 대상의 10% |
+| Customer Journey Analytics | Privacy and Security Shield 또는 Healthcare Shield 추가 기능 없음 | 2,000,000개의 식별자 또는 100개의 식별자/백만 CJA 권한 행당 |
+| Customer Journey Analytics | Privacy and Security Shield 또는 Healthcare Shield 추가 기능 포함 | 15,000,000개의 식별자 또는 100만 개의 CJA 권한 행당 200개의 식별자 |
+
+>[!NOTE]
+>
+> 대부분의 조직에서는 실제 대응 가능 대상 또는 CJA 행 권한에 따라 월별 제한이 내려집니다.
+
+할당량은 매월 1일에 재설정됩니다. 사용되지 않은 할당량은 **이월되지 않습니다**.
+
+>[!NOTE]
+>
+>할당량은 **제출된 식별자**&#x200B;에 대한 조직의 라이선스가 부여된 월별 권한을 기반으로 합니다. 이러한 기능은 시스템 가드레일에 의해 적용되지 않지만 모니터링 및 검토 할 수 있습니다.
+>
+>레코드 삭제는 **공유 서비스**&#x200B;입니다. 월간 캡은 Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics 및 적용 가능한 모든 Shield 추가 기능에 걸쳐 가장 높은 권한을 반영합니다.
+
+### 식별자 제출을 위한 처리 타임라인 {#sla-processing-timelines}
+
+제출 후 레코드 삭제 요청은 자격 수준에 따라 큐에 추가되고 처리됩니다.
+
+| 제품 및 자격 설명 | 대기열 기간 | 최대 처리 시간(SLA) |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| Privacy and Security Shield 또는 Healthcare Shield 추가 기능 없음 | 최대 15일 | 30일 |
+| Privacy and Security Shield 또는 Healthcare Shield 추가 기능 포함 | 일반적으로 24시간 | 15일 |
+
+조직에서 더 높은 제한을 필요로 하는 경우 Adobe 담당자에게 권한 검토를 문의하십시오.
+
+>[!TIP]
+>
+>현재 할당량 사용 또는 권한 계층을 확인하려면 [할당량 참조 안내서](../api/quota.md)를 참조하세요.
+
 ## 요청 제출 {#submit}
 
 요청에 ID를 추가했으면 **[!UICONTROL 요청 설정]**&#x200B;에서 **[!UICONTROL 제출]**&#x200B;을 선택하기 전에 요청에 대한 이름과 선택적 설명을 제공하십시오.
 
->[!IMPORTANT]
-> 
->매월 제출할 수 있는 총 고유 ID 레코드 삭제 횟수에는 제한이 있습니다. 이러한 제한은 라이선스 계약을 기반으로 합니다. Adobe Real-Time Customer Data Platform 또는 Adobe Journey Optimizer의 모든 에디션을 구입한 조직은 매월 최대 10만 건의 ID 레코드 삭제를 제출할 수 있습니다. **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;을(를) 구매한 조직은 매월 최대 60만 개의 ID 레코드 삭제를 제출할 수 있습니다.<br>UI를 통한 단일 레코드 삭제 요청으로 한 번에 10,000개의 ID를 제출할 수 있습니다. [레코드를 삭제하는 API 메서드](../api/workorder.md#create)을(를) 사용하면 한 번에 100,000개의 ID를 제출할 수 있습니다.<br>가능한 한 많은 ID를 요청당 ID 한도까지 제출하는 것이 좋습니다. 많은 양의 ID를 삭제하려는 경우 낮은 볼륨 또는 레코드당 하나의 ID 삭제 요청을 제출하지 않아야 합니다.
+>[!TIP]
+>
+>UI를 통해 요청당 최대 10,000개의 ID를 제출할 수 있습니다. 더 큰 볼륨(요청당 최대 100,000개의 ID)을 제출하려면 [API 메서드](../api/workorder.md#create)를 사용하십시오.
 
 ![요청 설정의 [!UICONTROL 이름] 및 [!UICONTROL 설명] 필드에 [!UICONTROL 제출]이 강조 표시되어 있습니다.](../images/ui/record-delete/submit.png)
 
