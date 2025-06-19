@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 6월
 description: Adobe Experience Platform의 2025년 6월 릴리스 노트.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ebc0422aec1f23442328462e478f1eea72cf4b31
+source-git-commit: b39de456b40acda77c67d25ebeba2c8a41c5d3f6
 workflow-type: tm+mt
-source-wordcount: '1599'
-ht-degree: 46%
+source-wordcount: '1632'
+ht-degree: 45%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 46%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/releases/pre-release-notes)
->- [페더레이션된 대상자 구성](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/e-release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [페더레이션된 대상자 구성](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/latest)
 
 **릴리스 일자: 2025년 6월 18일 목요일**
@@ -113,14 +113,13 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 | 기능 | 설명 |
 | --- | --- |
-| [Facebook](../../destinations/catalog/social/facebook.md#supported-identities) 대상에 대한 추가 식별자 지원 | [!DNL Facebook] 대상은 이제 개선된 타깃팅 및 Facebook 속성의 프로필과 일치하기 위해 새 주소 관련 필드의 매핑을 지원합니다. 새 주소 관련 필드에 대한 자세한 내용은 [지원되는 ID](../../destinations/catalog/social/facebook.md#supported-identities) 섹션을 참조하십시오. |
+| 스트리밍 대상에 대한 [대상 수준 모니터링](../../dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) | 이제 다음 대상에 대해 대상자 수준 모니터링을 사용할 수 있습니다. <ul><li>[[!DNL (API) Oracle Eloqua] 연결](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)</li><li>[[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)</li><li>[[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)</li><li>[[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)</li><li>[[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)</li><li>[[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)</li><li>[[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)</li><li>[[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)</li><li>[[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)</li><li>[[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)</li><li>[[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)</li><li>[[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)</li><li>[[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)</li><li>[[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)</li><li>[[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)</li><li>[[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)</li><li>[[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)</li><li>[[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)</li><li>[[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)</li><li>[[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)</li><li>[[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)</li></ul> |
+| [Facebook](../../destinations/catalog/social/facebook.md#supported-identities) 대상에 대한 추가 식별자 지원 | [!DNL Facebook] 대상은 이제 개선된 타깃팅 및 Facebook 속성의 프로필과 일치하기 위해 새 주소 관련 필드의 매핑을 지원합니다. 새 주소 관련 필드에 대한 자세한 내용은 [지원되는 ID](../../destinations/catalog/social/facebook.md#supported-identities) 섹션을 참조하십시오. <br> Facebook의 추가 필드를 표시하는 ![플랫폼 UI 이미지입니다.](../2025/assets/june/facebook-destination-fields.png "Facebook에 대한 추가 필드를 표시하는 플랫폼 UI 이미지입니다."){width="200" align="center" zoomable="yes"} |
 | [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) 대상 업그레이드 | 2025년 6월 19일부터 대상 카탈로그에서 두 개의 **[!DNL Braze]** 카드를 나란히 볼 수 있습니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 [!DNL Braze] 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) 동기화]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL 동기화]**&#x200B;인 새 카드를 사용할 수 있습니다. <br> 카탈로그에서 **[!UICONTROL 중단]** 연결을 사용하여 새 활성화 데이터 흐름을 만드십시오. **[!UICONTROL (더 이상 사용되지 않음) 중단]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다. <br> [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 생성하는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]를 다음 값으로 업데이트해야 합니다. <ul><li>흐름 사양 ID: `cb7919bd-69aa-462d-bcc0-db7cdc7fdf51`</li><li>연결 사양 ID: `ab957205-5a78-4393-b901-b930ed548220`</li></ul> |
 
 {style="table-layout:auto"}
 
 <!-- | [Google Customer Match + DV360](../../destinations/catalog/advertising/google-customer-match-dv360.md) general availability | The Google Customer Match + DV360 destination is now available for all Experience Platform users. The documentation now includes detailed guidance for [account linking](../../destinations/catalog/advertising/google-customer-match-dv360.md#linking) between [!DNL Adobe] and [!DNL Google] advertising accounts. | -->
-
-<!-- | [Audience-level monitoring](../../dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) for streaming destinations | Audience-level monitoring is now available for the following destinations: <ul><li>[[!DNL (API) Oracle Eloqua] connection](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)</li><li>[[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)</li><li>[[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)</li><li>[[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)</li><li>[[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)</li><li>[[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)</li><li>[[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)</li><li>[[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)</li><li>[[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)</li><li>[[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)</li><li>[[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)</li><li>[[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)</li><li>[[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)</li><li>[[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)</li><li>[[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)</li><li>[[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)</li><li>[[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)</li><li>[[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)</li><li>[[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)</li><li>[[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)</li><li>[[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)</li></ul>| -->
 
 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
@@ -130,7 +129,7 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 | 새로운 기능 | 설명 |
 | ----------- | ----------- |
-| Adobe Healthcare Shield 고객을 위한 일반 가용성 | 연합 대상 구성은 Adobe Healthcare Shield 고객이 6월 말까지 대상 생성, 강화 및 프로필 강화 사용 사례를 사용할 수 있습니다. Federated Audience Composition의 개인 정보 및 보안 조치에 대한 자세한 내용은 Federated Audience Composition 개요[&#128279;](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/start/privacy-security)의 개인 정보 및 보안을 참조하십시오. 일반적으로 Experience Platform 제품에 대한 HIPAA 준수에 대한 자세한 내용은 [HIPAA 및 Adobe 제품 및 서비스 개요](https://www.adobe.com/trust/compliance/hipaa-ready.html)를 참조하십시오. |
+| Adobe Healthcare Shield 고객을 위한 일반 가용성 | 연합 대상 구성은 Adobe Healthcare Shield 고객이 6월 말까지 대상 생성, 강화 및 프로필 강화 사용 사례를 사용할 수 있습니다. Federated Audience Composition의 개인 정보 및 보안 조치에 대한 자세한 내용은 Federated Audience Composition 개요](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security)의 [개인 정보 및 보안을 참조하십시오. 일반적으로 Experience Platform 제품에 대한 HIPAA 준수에 대한 자세한 내용은 [HIPAA 및 Adobe 제품 및 서비스 개요](https://www.adobe.com/trust/compliance/hipaa-ready.html)를 참조하십시오. |
 
 자세한 내용은 [페더레이션된 대상자 컴포지션 설명서](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)를 참조하십시오.
 
@@ -142,7 +141,7 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 | 기능 | 설명 |
 | --- | ---|
-| 테네시 및 미네소타 개인 정보 보호 법 지원 | Privacy Service은 이제 테네시 정보 보호법(`tipa_tn_usa`) 및 미네소타 소비자 데이터 개인정보 보호법(`mcdpa_mn_usa`)을 지원합니다. 이러한 새로운 주 수준 규정을 준수하여 액세스 및 삭제 요청을 처리할 수 있습니다. 자세한 내용은 [규정 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/privacy/regulations/overview)를 참조하세요. |
+| 테네시 및 미네소타 개인 정보 보호 법 지원 | Privacy Service은 이제 테네시 정보 보호법(`tipa_tn_usa`) 및 미네소타 소비자 데이터 개인정보 보호법(`mcdpa_mn_usa`)을 지원합니다. 이러한 새로운 주 수준 규정을 준수하여 액세스 및 삭제 요청을 처리할 수 있습니다. 자세한 내용은 [규정 개요](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview)를 참조하세요. |
 
 서비스에 대한 자세한 내용은 [Privacy Service 개요](../../privacy-service/home.md)를 참조하십시오.
 
