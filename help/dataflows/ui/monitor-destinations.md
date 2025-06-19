@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 대상에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fa7cfea74c5b76dd5643aaa2e9dd7447e9b9ef42
 workflow-type: tm+mt
-source-wordcount: '3626'
+source-wordcount: '3621'
 ht-degree: 10%
 
 ---
@@ -19,7 +19,7 @@ Experience Platform 카탈로그의 다양한 대상을 사용하여 Experience 
 
 이 자습서에서는 대상 작업 영역에서 데이터 흐름을 직접 모니터링하거나 모니터링 대시보드를 사용하여 Experience Platform 사용자 인터페이스를 사용하여 대상의 데이터 흐름을 모니터링하는 방법에 대한 지침을 제공합니다.
 
-## 시작하기 {#getting-started}
+## 시작 {#getting-started}
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
@@ -119,14 +119,33 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 ![오류 메시지가 강조 표시된 스트리밍 대상의 데이터 흐름 레코드입니다.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-#### (Beta) 스트리밍 대상에 대한 대상 수준 데이터 흐름 실행 모니터링 {#audience-level-dataflow-runs-for-streaming-destinations}
+#### [!BADGE Beta]{type=Informative} 스트리밍 대상에 대한 대상 수준 데이터 흐름 실행 모니터링 {#audience-level-dataflow-runs-for-streaming-destinations}
 
 데이터 흐름의 일부인 각 대상에 대해 대상 수준에서 분류된 활성화, 제외 또는 실패한 ID에 대한 정보를 볼 수 있습니다.
 
 스트리밍 대상에 대한 대상 수준 모니터링은 현재 다음 대상에 대해서만 사용할 수 있습니다.
 
-- [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
-- [[!DNL Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
+- [[!DNL (API) Oracle Eloqua] 연결](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+- [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
+- [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
+- [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
+- [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)
+- [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)
+- [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)
+- [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)
+- [[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)
+- [[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)
+- [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)
+- [[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)
+- [[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)
+- [[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)
+- [[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)
+- [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
+- [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
+- [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+- [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
+- [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
+- [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 
 ![스트리밍 대상에 대한 대상 수준 모니터링](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
@@ -140,7 +159,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="데이터 흐름 실행 세부 정보"
 >abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 대상자의 활성화 상태 및 지표에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 검토하십시오."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=ko#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -305,7 +324,16 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >[!IMPORTANT]
 >
 >대상 수준 지표와 관련된 현재 제한 사항을 참고하십시오.
->- 현재 대상 수준 보기는 일괄 처리(파일 기반) 대상 및 [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) 스트리밍 대상에만 사용할 수 있습니다. 추가 스트리밍 대상에 대한 롤아웃이 계획되어 있습니다.
+>
+>- 대상자 수준 보기는 현재 아래에 나열된 대상에 사용할 수 있습니다. 추가 스트리밍 대상에 대한 롤아웃이 계획되어 있습니다.
+>
+>   - [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+>   - [[!DNL (V2) Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
+>   - [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)
+>   - [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
+>   - [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - 배치(파일 기반) 대상
+> 
 >- 배치 대상의 경우, 현재 대상자 수준 지표는 성공적인 데이터 흐름 실행에 대해서만 기록됩니다. 실패한 데이터 흐름 실행 및 제외된 레코드에 대해서는 기록되지 않습니다. 스트리밍 대상으로 데이터 흐름이 실행되는 경우 활성화 및 제외된 레코드에 대해 지표가 캡처되고 표시됩니다.
 
 ![데이터 흐름 패널에서 강조 표시된 대상.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
