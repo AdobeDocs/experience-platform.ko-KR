@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
+source-git-commit: 7be3e6c143d792113a0d623e2d12d6710a3be70c
 workflow-type: tm+mt
-source-wordcount: '5024'
-ht-degree: 9%
+source-wordcount: '5195'
+ht-degree: 8%
 
 ---
 
@@ -281,7 +281,7 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 | 다음 이후 | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트는 선택한 날짜 이후에 발생합니다. 선택한 날짜는 선택한 사용자 지정 날짜이거나 일, 주, 월 또는 년 전 중에서 선택할 수 있습니다. | 예 | ![사용 중인 &quot;After&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
 | 롤링 범위 | 비교되는 특성 또는 이벤트는 두 상대적 날짜 사이에 발생해야 합니다. 날짜는 초, 분, 시간, 일, 주, 월 또는 년 단위로 표시될 수 있습니다. | 아니요 | ![사용되는 &quot;롤링 범위&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
 | 다음에서 | 비교되는 속성 또는 이벤트는 선택한 다음 기간 내에 발생해야 합니다. 선택한 기간에는 분, 시간, 일, 주, 월 및 년이 포함됩니다. | 아니요 | ![사용 중인 &quot;다음 시간 내&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
-| 존재함 | 속성이 존재합니다. | 아니요 | ![사용 중인 &quot;존재&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| 존재 | 속성이 존재합니다. | 아니요 | ![사용 중인 &quot;존재&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
 | 존재하지 않음 | 속성이 존재하지 않습니다. | 아니요 | ![사용 중인 &quot;존재하지 않음&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
 
 +++
@@ -324,7 +324,7 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 >[!NOTE]
 >
 >&quot;After&quot; 시간 제한을 사용할 때 후자의 이벤트는 시간 제한 내에 나열된 시간보다 많이 발생할 수 있습니다. >
->예를 들어, 페이지 보기 이벤트와 체크아웃 이벤트가 있고, 이 두 이벤트 사이에 &quot;1시간 후&quot; 시간 제한을 두는 경우, 페이지 보기 이벤트 2시간 후에 체크아웃 이벤트가 있는 세그먼트 정의가 유효합니다.
+>>예를 들어, 페이지 보기 이벤트와 체크아웃 이벤트가 있고, 이 두 이벤트 사이에 &quot;1시간 후&quot; 시간 제한을 두는 경우, 페이지 보기 이벤트 2시간 후에 체크아웃 이벤트가 있는 세그먼트 정의가 유효합니다.
 >
 >추가로, 이 두 시간 제약들은 서로 협력하여 사용될 수 있다.
 >
@@ -380,7 +380,17 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="예상치 새로 고침"
 >abstract="세그먼트 대상의 예상치를 새로 고쳐 제안된 세그먼트 대상에 적합한 프로필 개수를 미리 볼 수 있습니다. 당일 샘플 데이터의 샘플 크기를 사용하여 대상자 예상치를 생성합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=ko#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
+>title="적격 프로필"
+>abstract="적격 프로필은 세그먼트 정의의 규칙과 일치하는 실제 프로필 수를 나타냅니다. 이 숫자는 세그먼트 평가 작업이 실행된 후 24시간마다 업데이트됩니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
+>title="예상 프로필"
+>abstract="예상 프로필은 샘플 작업을 기반으로 세그먼트 정의의 규칙에 적합한 프로필의 대략적인 수를 나타냅니다. 이는 샘플 데이터가 더 큰 프로필 세트에 투영되어 실제 적격 프로필 수와 다를 수 있는 예상 수가 생성됨을 의미합니다. 추정된 프로필 샘플은 95% 신뢰 구간이 있다. <br><br>샘플 작업이 업데이트될 때 이 숫자가 업데이트됩니다. 이 숫자는 고객 데이터가 5% 이상 변경되었거나 마지막 샘플 작업이 7일 이전일 때 발생합니다."
 
 세그먼트 정의를 작성할 때 작업 영역의 오른쪽에 있는 **[!UICONTROL 대상 속성]** 섹션에 결과 세그먼트 정의의 크기 예상치가 표시되므로 대상 자체를 작성하기 전에 필요에 따라 세그먼트 정의를 조정할 수 있습니다.
 
@@ -388,7 +398,11 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 
 정규화된 프로필의 타임스탬프는 가장 최근의 **일괄 처리** 세그먼트 평가 작업을 나타내며 스트리밍 또는 에지 세분화를 사용하여 평가된 세그먼트 정의에 대해 **표시되지 않음**&#x200B;입니다. 세그먼트 정의를 편집하면 다음 세그먼트 평가 작업이 실행될 때까지 자격을 갖춘 프로필 수가 동일하게 유지됩니다.
 
-**[!UICONTROL 예상 프로필]**&#x200B;은(는) **샘플 작업**&#x200B;을(를) 기반으로 프로필의 **근사** 수를 나타냅니다. 새 규칙이나 조건을 추가하고 **[!UICONTROL 예상 새로 고침]**&#x200B;을 선택하면 이 값의 업데이트된 버전을 볼 수 있습니다. 정보 버블을 선택하면 오류 임계값과 가장 최근 샘플 작업 시간이 제공됩니다.
+**[!UICONTROL 예상 프로필]**&#x200B;은(는) **샘플 작업**&#x200B;을(를) 기반으로 하여 **대략적인** 프로필 수를 나타냅니다. 이는 샘플 데이터가 더 큰 프로필 세트에 투영되어 실제 적격 프로필 수와 다를 수 있는 예상 수가 생성됨을 의미합니다. 추정된 프로필 샘플은 95% 신뢰 구간이 있다.
+
+이 숫자는 샘플 작업이 업데이트될 때 업데이트되며, 고객 데이터가 5% 이상 변경되었거나 마지막 샘플 작업이 7일 이상 오래된 경우 발생합니다.&quot;
+
+정보 버블을 선택하면 오류 임계값과 가장 최근 샘플 작업 시간이 제공됩니다.
 
 ![Audience 속성 섹션 내에서 정규화된 프로필 및 예상 프로필이 강조 표시됩니다.](../images/ui/segment-builder/audience-estimates.png)
 
