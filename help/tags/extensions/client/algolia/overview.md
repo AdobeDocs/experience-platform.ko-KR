@@ -1,9 +1,10 @@
 ---
 title: Algolia 태그 확장 개요
 description: Adobe Experience Platform의 Algolia 태그 확장에 대해 알아봅니다.
-source-git-commit: 5b488a596472fe61b487f75ad62d741237caa820
+exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
+source-git-commit: 605f89a09f58568c2ec2492f788bedbe610292ae
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1635'
 ht-degree: 2%
 
 ---
@@ -79,9 +80,18 @@ ht-degree: 2%
 | 속성 | 설명 |
 | --- | --- |
 | [!UICONTROL 이벤트 이름] | 이 클릭 이벤트를 세분화하는 데 사용할 수 있는 이벤트 이름입니다. |
-| 이벤트 세부 정보 데이터 요소 | `indexName`, `objectIDs` 및 선택적으로 `queryID`, `position`을(를) 포함하여 이벤트 세부 정보를 검색하는 데이터 요소입니다. `queryID`과(와) `position`이(가) 모두 포함된 경우 이벤트는 *검색 후 클릭한 개체 ID*(으)로 분류됩니다. 그렇지 않으면 이벤트는 *클릭한 개체 ID* 이벤트로 처리됩니다. 데이터 요소가 색인 이름 을 제공하지 않는 경우 이벤트를 전송할 때 기본 색인 이름 이 사용됩니다. |
+| 이벤트 세부 정보 데이터 요소 | 데이터 요소는 다음을 포함한 이벤트 세부 정보를 반환합니다. <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID`(선택 사항)</li><li>`position`(선택 사항)</li></ul> |
+
+>[!NOTE]
+>
+>`queryID`과(와) `position`이(가) 모두 포함된 경우 이벤트는 **검색 후 클릭한 개체 ID**(으)로 분류됩니다. 그렇지 않으면 **클릭한 개체 ID** 이벤트로 클래스화됩니다.
+>><br><br>
+>>데이터 요소가 `indexName`을(를) 제공하지 않으면 이벤트를 보낼 때 **기본 인덱스 이름**&#x200B;이(가) 사용됩니다.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
+
+이벤트 범주에 대한 자세한 내용은 [검색 후 클릭한 개체 ID](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids-after-search/)를 참조하십시오.
+및 [클릭한 개체 ID](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids/) 안내서입니다.
 
 ### 전환됨 {#converted}
 
@@ -90,9 +100,17 @@ ht-degree: 2%
 | 속성 | 설명 |
 | --- | --- |
 | 이벤트 이름 | 이 **convert** 이벤트를 세분화하는 데 사용할 이벤트 이름입니다. |
-| 이벤트 세부 정보 데이터 요소 | `indexName`, `objectId` 및 선택적으로 `queryId`을(를) 포함한 이벤트 세부 정보를 검색하는 데이터 요소입니다. 데이터 요소에 `queryId`이(가) 포함된 경우 이벤트는 *검색 후 전환됨*(으)로 분류되며, 그렇지 않으면 *전환됨* 이벤트 클래스로 간주됩니다. 데이터 요소가 색인 이름 을 제공하지 않는 경우 이벤트를 전송할 때 기본 색인 이름 이 사용됩니다. |
+| 이벤트 세부 정보 데이터 요소 | 데이터 요소는 다음을 포함한 이벤트 세부 정보를 반환합니다. <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID`(선택 사항)</li></ul> |
+
+>[!NOTE]
+>
+>데이터 요소에 `queryId`이(가) 포함된 경우 이벤트는 **검색 후 변환됨**(으)로 분류됩니다. 그렇지 않으면 **변환** 이벤트로 분류됩니다.
+>><br><br>
+>>데이터 요소가 `indexName`을(를) 제공하지 않으면 이벤트를 보낼 때 **기본 인덱스 이름**&#x200B;이(가) 사용됩니다.
 
 ![](../../../images/extensions/client/algolia/converted.png)
+
+이벤트 범주에 대한 자세한 내용은 [검색 후 변환된 개체 ID](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids-after-search/) 및 [변환된 개체 ID](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids/) 안내서를 참조하십시오.
 
 ### 장바구니에 추가됨 {#added-to-cart}
 
@@ -101,32 +119,60 @@ ht-degree: 2%
 | 속성 | 설명 |
 | --- | --- |
 | 이벤트 이름 | 이 **convert** 이벤트를 세분화하는 데 사용할 이벤트 이름입니다. |
-| 이벤트 세부 정보 데이터 요소 | `indexName`, `objectId` 및 선택적으로 `queryId`, `objectData`을(를) 포함하여 이벤트 세부 정보를 검색하는 데이터 요소입니다. 데이터 요소에 `queryId`이(가) 포함된 경우 이벤트는 *검색 후 장바구니 개체 ID에 추가됨*(으)로 분류되며, 그렇지 않으면 *장바구니 개체 ID에 추가됨* 이벤트 클래스로 간주됩니다. 데이터 요소가 색인 이름 을 제공하지 않는 경우 이벤트를 전송할 때 기본 색인 이름 이 사용됩니다. |
+| 이벤트 세부 정보 데이터 요소 | 데이터 요소는 다음을 포함한 이벤트 세부 정보를 반환합니다. <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID`(선택 사항)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID`(선택 사항)</li></ul>. |
 | 통화 | 통화 유형을 지정합니다(예: `USD`). |
+
+>[!NOTE]
+>
+>데이터 요소에 `queryId`이(가) 포함된 경우 이벤트는 **검색 후 장바구니 개체 ID에 추가됨**(으)로 분류됩니다. 그렇지 않으면 **장바구니 개체 ID에 추가됨** 이벤트로 분류됩니다.
+>><br><br>
+>>데이터 요소가 `indexName`을(를) 제공하지 않으면 이벤트를 보낼 때 **기본 인덱스 이름**이(가) 사용됩니다.
+>><br><br>
+>>기본 데이터 요소가 요구 사항을 충족하지 않는 경우 사용자 지정 데이터 요소를 만들어 원하는 이벤트 세부 정보를 반환할 수 있습니다.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
+이벤트 범주에 대한 자세한 내용은 [검색 후 장바구니 개체 ID에 추가됨](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids-after-search/) 및 [장바구니 개체 ID에 추가됨](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids/) 안내서를 참조하십시오.
+
 ### 구매됨 {#purchased}
 
-**[!UICONTROL 장바구니에 추가]** 작업을 태그 규칙에 추가하여 구매한 이벤트를 [!DNL Algolia]&#x200B;(으)로 보냅니다. 새 태그 규칙을 만들거나 기존 태그 규칙을 엽니다. 요구 사항에 따라 조건을 정의한 다음 [!UICONTROL 확장]으로 **[!UICONTROL Algolia]**&#x200B;을(를) 선택하고 [!UICONTROL 작업 유형]으로 **[!UICONTROL 구매]**&#x200B;을(를) 선택합니다.
+**[!UICONTROL 구매한]** 작업을 태그 규칙에 추가하여 구매한 이벤트를 [!DNL Algolia]&#x200B;(으)로 보냅니다. 새 태그 규칙을 만들거나 기존 태그 규칙을 엽니다. 요구 사항에 따라 조건을 정의한 다음 [!UICONTROL 확장]으로 **[!UICONTROL Algolia]**&#x200B;을(를) 선택하고 [!UICONTROL 작업 유형]으로 **[!UICONTROL 구매]**&#x200B;을(를) 선택합니다.
 
 | 속성 | 설명 |
 | --- | --- |
 | 이벤트 이름 | 이 **구매** 이벤트를 세분화하는 데 사용할 이벤트 이름. |
-| 이벤트 세부 정보 데이터 요소 | `indexName`, `objectId` 및 선택적으로 `queryId`을(를) 포함한 이벤트 세부 정보를 검색하는 데이터 요소입니다. 데이터 요소에 `queryId`이(가) 포함된 경우 이벤트는 *검색 후 구매한 개체 ID로 분류*&#x200B;됩니다. 그렇지 않으면 *구매한 개체 ID* 이벤트 클래스로 간주됩니다. 데이터 요소가 색인 이름 을 제공하지 않는 경우 이벤트를 전송할 때 기본 색인 이름 이 사용됩니다. |
+| 이벤트 세부 정보 데이터 요소 | 데이터 요소는 다음을 포함한 이벤트 세부 정보를 반환합니다. <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID`(선택 사항)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID`(선택 사항)</li></ul>. |
+| 통화 | 통화 유형을 지정합니다(예: `USD`). |
+
+>[!NOTE]
+>
+>데이터 요소에 `queryId`이(가) 포함된 경우 이벤트는 **검색 후 구매한 개체 ID**(으)로 분류됩니다. 그렇지 않으면 **구매한 개체 ID** 이벤트로 분류됩니다.
+>><br><br>
+>>데이터 요소가 `indexName`을(를) 제공하지 않으면 이벤트를 보낼 때 **기본 인덱스 이름**이(가) 사용됩니다.
+>><br><br>
+>>기본 데이터 요소가 요구 사항을 충족하지 않는 경우 사용자 지정 데이터 요소를 만들어 원하는 이벤트 세부 정보를 반환할 수 있습니다.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
+이벤트 범주에 대한 자세한 내용은 [검색 후 구매한 개체 ID](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids-after-search/)를 참조하십시오.
+및 [구매한 개체 ID](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids/) 가이드가 있습니다.
+
 ### 조회함 {#viewed}
 
-**[!UICONTROL 장바구니에 추가]** 작업을 태그 규칙에 추가하여 구매한 이벤트를 [!DNL Algolia]&#x200B;(으)로 보냅니다. 새 태그 규칙을 만들거나 기존 태그 규칙을 엽니다. 요구 사항에 따라 조건을 정의한 다음 **[!UICONTROL Algolia]**&#x200B;을(를) [!UICONTROL Extension]&#x200B;(으)로 선택하고 **[!UICONTROL 조회함]**&#x200B;을(를) [!UICONTROL 작업 유형]&#x200B;(으)로 선택합니다.
-
-![](../../../images/extensions/client/algolia/viewed.png)
+**[!UICONTROL 조회함]** 작업을 태그 규칙에 추가하여 구매한 이벤트를 [!DNL Algolia]&#x200B;(으)로 보냅니다. 새 태그 규칙을 만들거나 기존 태그 규칙을 엽니다. 요구 사항에 따라 조건을 정의한 다음 **[!UICONTROL Algolia]**&#x200B;을(를) [!UICONTROL Extension]&#x200B;(으)로 선택하고 **[!UICONTROL 조회함]**&#x200B;을(를) [!UICONTROL 작업 유형]&#x200B;(으)로 선택합니다.
 
 | 속성 | 설명 |
 | --- | --- |
 | 이벤트 이름 | 이 **보기** 이벤트를 세분화하는 데 사용할 이벤트 이름입니다. |
-| 이벤트 세부 정보 데이터 요소 | `indexName` 및 `objectId`을(를) 포함한 이벤트 세부 정보를 검색할 데이터 요소입니다. `indexName`을(를) 사용할 수 없는 경우 이벤트를 보낼 때 기본 색인 이름이 사용됩니다. |
+| 이벤트 세부 정보 데이터 요소 | 데이터 요소는 다음을 포함한 이벤트 세부 정보를 반환합니다. <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
+
+>[!NOTE]
+>
+>데이터 요소가 `indexName`을(를) 제공하지 않으면 이벤트를 보낼 때 **기본 인덱스 이름**&#x200B;이(가) 사용됩니다.
+
+![](../../../images/extensions/client/algolia/viewed.png)
+
+보기 이벤트에 대한 자세한 내용은 [본 개체 ID](https://www.algolia.com/doc/api-reference/api-methods/viewed-object-ids/) 안내서를 참조하십시오.
 
 ## [!DNL Algolia] Insights 확장 데이터 요소 {#data-elements}
 
@@ -148,10 +194,10 @@ DataSet Data Element는 HTML 요소와 관련된 데이터를 검색하여 [!DNL
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs,
-    positions
+  queryID,
+  indexName,
+  objectIDs,
+  positions
 }
 ```
 
@@ -186,9 +232,9 @@ DataSet Data Element는 HTML 요소와 관련된 데이터를 검색하여 [!DNL
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs
+  queryID,
+  indexName,
+  objectIDs
 }
 ```
 
@@ -211,9 +257,9 @@ Storage Data 요소는 [!DNL Algolia] 작업에 사용할 데이터를 세션 �
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs
+  queryID,
+  indexName,
+  objectIDs
 }
 ```
 
@@ -224,10 +270,11 @@ Storage Data 요소는 [!DNL Algolia] 작업에 사용할 데이터를 세션 �
 * [자동 완성에 대한 인사이트 설정](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-insights)
 * [InstantSearch.js에 대한 인사이트 설정](https://www.algolia.com/doc/guides/building-search-ui/events/js/#set-the-insights-option-to-true)
 * [클릭 및 전환 이벤트 시작](https://www.algolia.com/doc/guides/sending-events/implementing/how-to/sending-events-backend/)
-* [Insights 이벤트 보내기 [!DNL Algolia] 2&rbrace;](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
+* [Insights 이벤트 보내기 [!DNL Algolia] 2}](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
 * [[!DNL Algolia] Launch 확장 GitHub 저장소](https://github.com/algolia/algolia-launch-extension)
 * [InstantSearch.js 설명서](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
 * [[!DNL Algolia] Insights API 설명서](https://www.algolia.com/doc/rest-api/insights/)
+* [Algolia Launch 확장 코드 리포지토리](https://github.com/algolia/algolia-launch-extension)
 
 ## 다음 단계 {#next-steps}
 
