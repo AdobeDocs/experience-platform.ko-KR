@@ -18,9 +18,9 @@ ht-degree: 95%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
->- [페더레이션된 대상자 구성](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/releases/pre-release-notes)
+>- [페더레이션된 대상자 구성](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/latest)
 
 **릴리스 일자: 2025년 6월 18일 목요일**
 
@@ -128,9 +128,9 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 | 새로운 기능 | 설명 |
 | ----------- | ----------- |
-| Adobe Healthcare Shield 고객을 위한 일반 사용 | 페더레이션된 대상자 컴포지션은 6월 말까지 Adobe Healthcare Shield 고객이 대상자 생성, 강화 및 프로필 강화 사용 사례를 사용할 수 있게 됩니다. 페더레이션된 대상자 컴포지션의 개인정보 보호 및 보안 조치에 대한 자세한 내용은 [페더레이션된 대상자 컴포지션 개요의 개인정보 보호 및 보안](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security)을 참조하십시오. Experience Platform 제품의 HIPAA 규정 준수에 대한 자세한 내용은 [HIPAA 및 Adobe 제품 및 서비스 개요](https://www.adobe.com/kr/trust/compliance/hipaa-ready.html)를 참조하십시오. |
+| Adobe Healthcare Shield 고객을 위한 일반 사용 | 페더레이션된 대상자 컴포지션은 6월 말까지 Adobe Healthcare Shield 고객이 대상자 생성, 강화 및 프로필 강화 사용 사례를 사용할 수 있게 됩니다. 페더레이션된 대상자 컴포지션의 개인정보 보호 및 보안 조치에 대한 자세한 내용은 [페더레이션된 대상자 컴포지션 개요의 개인정보 보호 및 보안](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/start/privacy-security)을 참조하십시오. Experience Platform 제품의 HIPAA 규정 준수에 대한 자세한 내용은 [HIPAA 및 Adobe 제품 및 서비스 개요](https://www.adobe.com/kr/trust/compliance/hipaa-ready.html)를 참조하십시오. |
 
-자세한 내용은 [페더레이션된 대상자 컴포지션 설명서](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)를 참조하십시오.
+자세한 내용은 [페더레이션된 대상자 컴포지션 설명서](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)를 참조하십시오.
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -140,7 +140,7 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 | 기능 | 설명 |
 | --- | ---|
-| 테네시 및 미네소타 개인정보 보호법 지원 | Privacy Service가 이제 테네시 정보 보호법(`tipa_tn_usa`) 및 미네소타 소비자 데이터 개인정보 보호법(`mcdpa_mn_usa`)을 지원합니다. 이러한 새로운 주 차원의 규정을 준수하여 액세스 및 삭제 요청을 처리할 수 있습니다. 자세한 내용은 [규정 개요](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview)를 참조하십시오. |
+| 테네시 및 미네소타 개인정보 보호법 지원 | Privacy Service가 이제 테네시 정보 보호법(`tipa_tn_usa`) 및 미네소타 소비자 데이터 개인정보 보호법(`mcdpa_mn_usa`)을 지원합니다. 이러한 새로운 주 차원의 규정을 준수하여 액세스 및 삭제 요청을 처리할 수 있습니다. 자세한 내용은 [규정 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/privacy/regulations/overview)를 참조하십시오. |
 
 서비스에 대한 자세한 내용은 [Privacy Service 개요](../../privacy-service/home.md)를 참조하십시오.
 
