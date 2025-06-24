@@ -2,12 +2,12 @@
 title: Demandbase 의도
 description: Experience Platform의 Demandbase Intent 소스에 대해 알아봅니다.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
-badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
+source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1480'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Experience Platform의 [!DNL Demandbase]은(는) [!DNL Google Cloud Storage]에 
 | 버킷 이름 | 데이터를 가져올 [!DNL Demandbase] 버킷. |
 | 폴더 경로 | 액세스 권한을 제공할 폴더의 경로입니다. |
 
-이러한 자격 증명에 대한 자세한 내용은 [[!DNL Google Cloud Storage] HMAC 키 안내서](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)를 참조하십시오. 액세스 키를 생성하는 방법에 대한 단계는  [!DNL Google Cloud Storage] 소스 개요[&#128279;](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)의 사전 요구 사항 안내서를 참조하십시오.
+이러한 자격 증명에 대한 자세한 내용은 [[!DNL Google Cloud Storage] HMAC 키 안내서](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)를 참조하십시오. 액세스 키를 생성하는 방법에 대한 단계는  [!DNL Google Cloud Storage] 소스 개요](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)의 [사전 요구 사항 안내서를 참조하십시오.
 
 ## [!DNL Demandbase] 스키마
 
@@ -71,6 +71,7 @@ Experience Platform의 [!DNL Demandbase]은(는) [!DNL Google Cloud Storage]에 
 | `duration_type` | 문자열 | 참 | 예 | 기간 유형. 일반적으로 이 값은 선택한 롤업 기간에 따라 일별, 주별 또는 월별일 수 있습니다. 이 데이터 샘플의 경우 이 값은 `week`입니다. |
 | `keyword_set_id` | 문자열 | 참 | 예 | 키워드 집합 ID입니다. 지정된 고객마다 고유합니다. |
 | `keyword_set` | 문자열 | 참 | 예 | 키워드 집합 이름입니다. |
+| `keyword` | 문자열 | 참 | | 의도 키워드. |
 | `is_trending` | 문자열 | 참 | | 지정된 트렌드의 현재 상태입니다. 트렌드 상태는 이전 7주 동안의 평균과 비교하여 지난 주에 의도 활동의 버스트로 측정됩니다. |
 | `intent_strength` | ENUM[STRING] | 참 | | 의도 강도에 대한 정량화된 측정입니다. 허용되는 값은 `HIGH`, `MED` 및 `LOW`입니다. |
 | `num_people_researching` | 정수 | 참 | | 지난 7일 동안 키워드를 조사하는 `company_id`에 속한 사람의 수입니다. |
