@@ -2,9 +2,9 @@
 title: UI에서 SFTP Source 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 SFTP 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '662'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 이 자습서에서는 Adobe Experience Platform UI를 사용하여 [!DNL SFTP] 소스 연결을 만드는 단계를 제공합니다.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
@@ -56,7 +56,7 @@ Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x2
 >
 >* 만든 후에는 [!DNL SFTP] 기본 연결의 인증 유형을 변경할 수 없습니다. 인증 유형을 변경하려면 새 기본 연결을 만들어야 합니다.
 >
->* SFTP는 RSA 또는 DSA 유형 OpenSSH 키를 지원합니다. 키 파일 내용이 `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`(으)로 시작되고 `"-----END [RSA/DSA] PRIVATE KEY-----"`(으)로 끝나는지 확인하십시오. 개인 키 파일이 PPK 형식 파일인 경우 PuTTY 도구를 사용하여 PPK에서 OpenSSH 형식으로 변환합니다.
+>* SFTP는 `ed25519`, `RSA` 또는 `DSA` 형식의 OpenSSH 키를 지원합니다. 키 파일 내용이 `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`(으)로 시작되고 `"-----END [RSA/DSA] PRIVATE KEY-----"`(으)로 끝나는지 확인하십시오. 개인 키 파일이 PPK 형식 파일인 경우 PuTTY 도구를 사용하여 PPK에서 OpenSSH 형식으로 변환합니다.
 
 새 계정을 만드는 경우 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택한 다음 새 [!DNL SFTP] 계정에 대한 이름과 선택적 설명을 입력하십시오.
 

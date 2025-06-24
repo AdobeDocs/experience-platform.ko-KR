@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 SFTP 기본 연결 만들기
 description: Flow Service API를 사용하여 Adobe Experience Platform을 SFTP(Secure File Transfer Protocol) 서버에 연결하는 방법에 대해 알아봅니다.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '751'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL SFTP]&#x200B;(Secure File Transfer Protocol)에 대한 기본 연결을 만드는 단계를 안내합니다.
 
-## 시작하기
+## 시작
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
@@ -50,7 +50,7 @@ Experience Platform API를 성공적으로 호출하는 방법에 대한 자세�
 
 >[!IMPORTANT]
 >
->[!DNL SFTP] 커넥터가 RSA 또는 DSA 유형 OpenSSH 키를 지원합니다. 키 파일 내용이 `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`(으)로 시작되고 `"-----END [RSA/DSA] PRIVATE KEY-----"`(으)로 끝나는지 확인하십시오. 개인 키 파일이 PPK 형식 파일인 경우 PuTTY 도구를 사용하여 PPK에서 OpenSSH 형식으로 변환합니다.
+>[!DNL SFTP] 커넥터가 `ed25519`, `RSA` 또는 `DSA` 유형의 OpenSSH 키를 지원합니다. 키 파일 내용이 `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`(으)로 시작되고 `"-----END [RSA/DSA] PRIVATE KEY-----"`(으)로 끝나는지 확인하십시오. 개인 키 파일이 PPK 형식 파일인 경우 PuTTY 도구를 사용하여 PPK에서 OpenSSH 형식으로 변환합니다.
 
 **API 형식**
 
@@ -160,7 +160,7 @@ curl -X POST \
 | `auth.params.host` | [!DNL SFTP] 서버의 호스트 이름입니다. |
 | `auth.params.port` | SFTP 서버의 포트입니다. 이 정수 값은 기본적으로 22입니다. |
 | `auth.params.username` | [!DNL SFTP] 서버와 연결된 사용자 이름입니다. |
-| `auth.params.privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류되어야 합니다. |
+| `auth.params.privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. 지원되는 OpenSSH 키 유형은 `ed25519`, `RSA` 및 `DSA`입니다. |
 | `auth.params.passPhrase` | 키 파일 또는 키 콘텐츠가 암호로 보호되어 있는 경우 개인 키를 해독하기 위한 암호나 암호입니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수는 PrivateKeyContent의 암호와 함께 값으로 사용해야 합니다. |
 | `auth.params.maxConcurrentConnections` | Experience Platform을 SFTP에 연결할 때 지정된 최대 동시 연결 수입니다. 활성화된 경우 이 값을 1 이상으로 설정해야 합니다. |
 | `auth.params.folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. |

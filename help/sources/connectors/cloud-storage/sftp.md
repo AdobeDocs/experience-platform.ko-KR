@@ -2,9 +2,9 @@
 title: SFTP Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 SFTP 서버를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1215'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수�
 
 [!DNL SFTP] 원본을 Experience Platform에 연결하기 위해 완료해야 하는 필수 구성 요소 단계는 이 섹션을 참조하십시오.
 
-### IP 주소 허용 목록
+### 허용 목록에 추가하다 IP 주소
 
-소스 커넥터로 작업하려면 먼저 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지를 참조하세요.
+소스 커넥터를 사용하기 전에 IP 주소 목록을 허용 목록에 추가하다에 추가해야 합니다. 영역별 IP 주소를 허용 목록에 추가하다에 추가하지 않으면 소스를 사용할 때 오류나 성능이 저하될 수 있습니다. 허용 목록에 추가하다 자세한 내용은 [IP 주소](../../ip-address-allow-list.md) 페이지를 참조하십시오.
 
 ### 파일 및 디렉터리에 대한 이름 지정 제약 조건
 
@@ -183,7 +183,7 @@ SSH 공개 키 인증을 사용하여 [!DNL SFTP] 서버를 인증하려면 다�
 | `port` | 연결 중인 [!DNL SFTP] 서버 포트입니다. 지정하지 않으면 기본값은 `22`입니다. |
 | `username` | [!DNL SFTP] 서버에 액세스할 수 있는 사용자 이름입니다. |
 | `password` | [!DNL SFTP] 서버의 암호입니다. |
-| `privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류되어야 합니다. |
+| `privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. 지원되는 OpenSSH 키 유형은 `ed25519`, `RSA` 및 `DSA`입니다. |
 | `passPhrase` | 키 파일 또는 키 콘텐츠가 암호로 보호되어 있는 경우 개인 키를 해독하기 위한 암호나 암호입니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수는 PrivateKeyContent의 암호와 함께 값으로 사용해야 합니다. |
 | `maxConcurrentConnections` | 이 매개 변수를 사용하면 SFTP 서버에 연결할 때 Experience Platform에서 만드는 동시 연결 수의 최대 제한을 지정할 수 있습니다. 이 값을 SFTP에서 설정한 제한보다 작게 설정해야 합니다. **참고**: 기존 SFTP 계정에 대해 이 설정을 사용하면 향후 데이터 흐름에만 영향을 주고 기존 데이터 흐름에는 영향을 주지 않습니다. |
 | `folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. [!DNL SFTP] 원본, 폴더 경로를 제공하여 선택한 하위 폴더에 대한 사용자 액세스를 지정할 수 있습니다. |
