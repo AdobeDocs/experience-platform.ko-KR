@@ -1,10 +1,8 @@
 ---
 title: Id 그래프 연결 규칙 구성 안내서
 description: ID 그래프 연결 규칙을 사용하여 구성할 수 있는 다양한 구현 유형에 대해 알아봅니다.
-hide: true
-hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
+source-git-commit: 54a50cd3e122df7f653c06232e0598fa878eeac5
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -136,7 +134,7 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 >
 >아래 구현을 완료하려면 의 ID 기호(대/소문자 구분)를 사용하여 다음과 같은 사용자 지정 네임스페이스를 만들어야 합니다.
 >* `CRMID`
->* `CCHash`(해시된 신용 카드 번호를 나타내는 사용자 지정 네임스페이스입니다.)
+>* `CChash`(해시된 신용 카드 번호를 나타내는 사용자 지정 네임스페이스입니다.)
 
 여러분이 신용카드를 발급하는 상업은행에서 일하는 데이터 설계자라고 상상해 보세요. 마케팅 팀이 프로필에 이전 신용 카드 거래 내역을 포함하기를 원한다고 표시했습니다. 이 ID 그래프는 다음과 같을 수 있습니다.
 
@@ -482,6 +480,7 @@ loginID: JanePersonal, ECID: 222
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`
+>* `orderID`
 
 미디어 및 엔터테인먼트 회사이며 최종 사용자에게는 다음과 같은 사항이 있습니다.
 
