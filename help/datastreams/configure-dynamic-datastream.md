@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: c193a6aa45d179acdf655a70987875bf0da51b2b
+source-git-commit: 8ce5b6718861d01731b9aab9f81645f2aeb2970f
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1160'
 ht-degree: 3%
 
 ---
@@ -38,6 +38,7 @@ ht-degree: 3%
 | 가드레일 | 제한 | 제한 유형 |
 |---------|------------|------|
 | Experience Platform 서비스의 데이터스트림당 최대 동적 데이터스트림 구성 수 | 5 | 성능 보호 |
+| 이벤트 전달을 위한 데이터스트림당 최대 동적 데이터스트림 구성 수 | 5 | 성능 보호 |
 | Adobe Analytics에 대한 데이터스트림당 최대 동적 데이터스트림 구성 수 | 5 | 성능 보호 |
 | Adobe Target에 대한 데이터스트림당 최대 동적 데이터스트림 구성 수 | 5 | 성능 보호 |
 | Adobe Audience Manager에 대한 데이터스트림당 최대 동적 데이터스트림 구성 수 | 5 | 성능 보호 |
