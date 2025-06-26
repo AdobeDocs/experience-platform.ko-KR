@@ -8,7 +8,7 @@ exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
 workflow-type: tm+mt
 source-wordcount: '1054'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -90,7 +90,7 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_accountID"
 >title="Snowflake 계정 ID 입력"
->abstract="계정이 조직에 연결되어 있는 경우 다음 형식을 사용하십시오. `OrganizationName.AccountName`<br><br> 계정이 조직에 연결되어 있지 않은 경우 다음 형식을 사용하십시오.`AccountName`"
+>abstract="계정이 조직에 연결되어 있는 경우 다음 형식을 사용합니다. `OrganizationName.AccountName`<br><br> 계정이 조직에 연결되어 있지 않은 경우 다음 형식을 사용합니다. `AccountName`"
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 

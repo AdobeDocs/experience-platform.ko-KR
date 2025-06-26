@@ -9,7 +9,7 @@ ht-degree: 12%
 
 ---
 
-# Real-Time Customer Data Platform B2B Edition에서 두 스키마 간의 다대일 관계 정의 {#relationship-b2b}
+# Real-Time Customer Data Platform B2B 에디션에서 두 스키마 간의 다대일 관계 정의 {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
@@ -32,7 +32,7 @@ Adobe Real-Time Customer Data Platform B2B edition은 [계정](../classes/b2b/bu
 >
 >이 자습서에서는 Experience Platform UI에서 B2B 스키마 간의 관계를 수동으로 설정하는 방법에 중점을 둡니다. B2B 소스 연결에서 데이터를 가져오는 경우 자동 생성 유틸리티를 사용하여 대신 필요한 스키마, ID 및 관계를 만들 수 있습니다. [자동 생성 유틸리티 사용](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md)에 대한 자세한 내용은 B2B 네임스페이스 및 스키마에 대한 소스 설명서를 참조하십시오.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 [!DNL Experience Platform] UI의 [!DNL XDM System] 및 스키마 편집기에 대한 작업 이해를 필요로 합니다. 이 자습서를 시작하기 전에 다음 설명서를 검토하십시오.
 
@@ -136,7 +136,7 @@ Adobe Real-Time Customer Data Platform B2B edition은 [계정](../classes/b2b/bu
 >[!NOTE]
 >
 >연결된 관계를 모두 보려면 참조 스키마에서 기본 ID 필드를 선택한 다음 [!UICONTROL 관계 보기]를 선택하십시오.
->![관계 필드가 선택되고 관계 보기가 강조 표시된 스키마 편집기.](../images/tutorials/relationship-b2b/view-relationships.png "관계 필드가 선택되어 있고 관계 보기가 강조 표시된 스키마 편집기입니다."){width="100" zoomable="yes"}
+>>![관계 필드가 선택되고 관계 보기가 강조 표시된 스키마 편집기.](../images/tutorials/relationship-b2b/view-relationships.png "관계 필드가 선택되어 있고 관계 보기가 강조 표시된 스키마 편집기입니다."){width="100" zoomable="yes"}
 
 ![관계 필드와 관계 편집이 강조 표시된 스키마 편집기입니다.](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
 
