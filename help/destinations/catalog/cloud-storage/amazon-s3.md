@@ -2,10 +2,10 @@
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 CSV 데이터 파일을 정기적으로 자체 S3 버킷으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7aff8d9eafb699133e90d3af8ef24f3135f3cade
 workflow-type: tm+mt
-source-wordcount: '1503'
-ht-degree: 16%
+source-wordcount: '1818'
+ht-degree: 13%
 
 ---
 
@@ -87,7 +87,7 @@ ht-degree: 16%
 * 액세스 키 및 비밀 키 인증
 * 가정된 역할 인증
 
-#### 액세스 키 및 비밀 키 인증
+#### S3 액세스 키 및 비밀 키를 사용한 인증
 
 Amazon S3 액세스 키와 비밀 키를 입력하여 Experience Platform에서 데이터를 Amazon S3 속성으로 내보낼 수 있도록 하려는 경우 이 인증 방법을 사용합니다.
 
@@ -98,21 +98,103 @@ Amazon S3 액세스 키와 비밀 키를 입력하여 Experience Platform에서 
 
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지입니다.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### 가정된 역할 {#assumed-role-authentication}
+#### S3이(가) 역할을 가정한 인증 {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
 >title="가정된 역할 인증"
 >abstract="Adobe와 계정 키 및 시크릿 키를 공유하지 않으려면 이 인증 유형을 사용합니다. 대신 Experience Platform은 역할 기반 액세스를 사용하여 Amazon S3 위치에 연결됩니다. Adobe 사용자를 위해 AWS에서 생성한 역할의 ARN을 붙여넣습니다. 패턴은 `arn:aws:iam::800873819705:role/destinations-role-customer`와 유사합니다. "
 
-![가정된 역할 인증을 선택할 때 필요한 필드의 이미지](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
-
 Adobe와 계정 키 및 시크릿 키를 공유하지 않으려면 이 인증 유형을 사용합니다. 대신 Experience Platform은 역할 기반 액세스를 사용하여 Amazon S3 위치에 연결합니다.
 
-이렇게 하려면 AWS 콘솔에서 Amazon S3 버킷에 쓸 수 있는 [올바른 필수 권한](#minimum-permissions-iam-user)이 있는 Adobe의 가정 사용자를 만들어야 합니다. Adobe 계정 **[!UICONTROL 670664943635]**&#x200B;을(를) 사용하여 AWS에서 **[!UICONTROL 신뢰할 수 있는 엔터티]**&#x200B;를 만듭니다. 자세한 내용은 [역할 만들기에 대한 AWS 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html)를 참조하세요.
+![가정된 역할 인증을 선택할 때 필요한 필드의 이미지](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-* **[!DNL Role]**: Adobe 사용자를 위해 AWS에서 만든 역할의 ARN을 붙여 넣습니다. 패턴은 `arn:aws:iam::800873819705:role/destinations-role-customer`과(와) 유사합니다.
+* **[!DNL Role]**: Adobe 사용자를 위해 AWS에서 만든 역할의 ARN을 붙여 넣습니다. 패턴은 `arn:aws:iam::800873819705:role/destinations-role-customer`과(와) 유사합니다. S3 액세스를 올바르게 구성하는 방법에 대한 자세한 지침은 아래 단계를 참조하십시오.
 * **[!UICONTROL 암호화 키]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
+
+이렇게 하려면 AWS 콘솔에서 Amazon S3 버킷에 쓸 수 있는 [올바른 필수 권한](#minimum-permissions-iam-user)이 있는 Adobe의 가정 역할을 만들어야 합니다.
+
+**필요한 권한으로 정책 만들기**
+
+1. AWS 콘솔을 열고 IAM > 정책 > 정책 생성으로 이동합니다.
+2. 정책 편집기 > JSON 을 선택하고 아래에 권한을 추가합니다.
+
+   ```json
+   {
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Sid": "VisualEditor0",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:PutObject",
+                   "s3:GetObject",
+                   "s3:DeleteObject",
+                   "s3:GetBucketLocation",
+                   "s3:ListMultipartUploadParts"
+               ],
+               "Resource": "arn:aws:s3:::bucket/folder/*"
+           },
+           {
+               "Sid": "VisualEditor1",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:ListBucket"
+               ],
+               "Resource": "arn:aws:s3:::bucket"
+           }
+       ]
+   }
+   ```
+
+3. 다음 페이지에서 정책 이름을 입력하고 참조를 위해 저장합니다. 다음 단계에서 역할을 만들 때 이 정책 이름이 필요합니다.
+
+**S3 고객 계정에서 사용자 역할 만들기**
+
+1. AWS 콘솔을 열고 IAM > 역할 > 새 역할 만들기 로 이동합니다.
+2. **신뢰할 수 있는 엔터티 형식** > **AWS 계정** 선택
+3. **AWS 계정** > **다른 AWS 계정**&#x200B;을(를) 선택하고 Adobe 계정 ID를 입력하십시오. `670664943635`
+4. 이전에 만든 정책을 사용하여 권한 추가
+5. 역할 이름(예: `destinations-role-customer`)을 입력하십시오. 역할 이름은 암호와 마찬가지로 기밀로 취급되어야 합니다. 최대 64자까지 사용할 수 있으며 영숫자와 다음 특수 문자를 포함할 수 있습니다. `+=,.@-_`. 그런 다음 다음을 확인합니다.
+   * Adobe 계정 ID `670664943635`이(가) **[!UICONTROL 신뢰할 수 있는 엔터티 선택]** 섹션에 있습니다.
+   * 이전에 만든 정책이 **[!UICONTROL 권한 정책 요약]**&#x200B;에 있습니다.
+
+**Adobe에서 가정할 역할을 제공하십시오**
+
+AWS에서 역할을 만든 후 Adobe에 ARN 역할을 제공해야 합니다. ARN은 다음 패턴을 따릅니다. `arn:aws:iam::800873819705:role/destinations-role-customer`
+
+AWS 콘솔에서 역할을 만든 후 기본 페이지에서 ARN을 찾을 수 있습니다. 대상을 만들 때 이 ARN을 사용합니다.
+
+**역할 권한 및 트러스트 관계 확인**
+
+역할에 다음 구성이 있는지 확인합니다.
+
+* **권한**: 역할에는 S3에 액세스할 수 있는 권한이 있어야 합니다(전체 액세스 권한 또는 **필요한 권한으로 정책 만들기** 단계 위의).
+* **트러스트 관계**: 역할의 트러스트 관계에 루트 Adobe 계정(`670664943635`)이 있어야 합니다
+
+**대체 요소: 특정 Adobe 사용자로 제한(선택 사항)**
+
+전체 Adobe 계정을 허용하지 않으려는 경우 특정 Adobe 사용자에게만 액세스를 제한할 수 있습니다. 이렇게 하려면 다음 구성으로 트러스트 정책을 편집합니다.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::670664943635:user/destinations-adobe-user"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {}
+        }
+    ]
+}
+```
+
+자세한 내용은 [역할 만들기에 대한 AWS 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html)를 참조하세요.
+
+
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -125,7 +207,7 @@ Adobe와 계정 키 및 시크릿 키를 공유하지 않으려면 이 인증 �
 >id="platform_destinations_connect_s3_folderpath"
 >title="폴더 경로"
 >abstract="A-Z, a-z, 0-9 문자만 포함해야 하며 특수 문자(예: `/!-_.'()"^[]+$%.*"`)를 포함할 수 있습니다. 대상자 파일별로 폴더를 만들려면 매크로(예: `/%SEGMENT_NAME%` 또는 `/%SEGMENT_ID%` 또는 `/%SEGMENT_NAME%/%SEGMENT_ID%`)를 텍스트 필드에 삽입합니다. 매크로는 폴더 경로 끝에만 삽입할 수 있습니다. 설명서의 매크로 예 보기"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=ko#use-macros" text="매크로를 사용하여 스토리지 위치에 폴더 만들기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="매크로를 사용하여 스토리지 위치에 폴더 만들기"
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
