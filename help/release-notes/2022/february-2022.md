@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 2월
 description: Adobe Experience Platform의 2022년 2월 릴리스 정보.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 16%
@@ -33,7 +33,7 @@ Adobe Experience Platform에서는 매일 스냅숏 중에 캡처된 조직 데�
 
 | 기능 | 설명 |
 | --- | --- |
-| 새로운 표준 대상 위젯 | 다음 표준 위젯을 사용하여 대상과 관련된 다양한 지표를 시각화할 수 있습니다.<ul><li>대상별로 최근에 활성화된 세그먼트입니다. 이 위젯은 선택한 대상에 따라 가장 최근에 활성화된 상위 5개의 세그먼트를 내림차순으로 표시합니다.</li><li>대상자 크기 트렌드입니다. 이 위젯은 해당 대상 계정에 매핑된 세그먼트의 기간 동안의 프로필 수 관계를 보여 줍니다.</li><li>ID별로 매핑되지 않은 세그먼트. 이 위젯은 주어진 대상 및 ID에 대한 ID 수를 내림차순으로 하여 순위가 매겨진 매핑되지 않은 상위 5개의 세그먼트를 나열합니다.</li><li>ID별로 매핑된 세그먼트. 이 위젯은 매핑된 상위 5개의 세그먼트를 나열합니다. 세그먼트는 위젯의 드롭다운 메뉴에서 선택한 대상 ID와 일치하는 소스 ID의 각 수에 따라 높음에서 낮음 순으로 정렬됩니다.</li><li>일반 대상자. 이 위젯은 페이지 상단에서 선택한 대상 계정 전체에 걸쳐 활성화된 상위 5개 세그먼트 목록과 위젯 드롭다운에서 선택한 대상을 제공합니다.</li></ul> 사용 가능한 표준 위젯에 대한 자세한 내용은 [대상 대시보드 설명서](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=ko#standard-widgets)를 참조하십시오. |
+| 새로운 표준 대상 위젯 | 다음 표준 위젯을 사용하여 대상과 관련된 다양한 지표를 시각화할 수 있습니다.<ul><li>대상별로 최근에 활성화된 세그먼트입니다. 이 위젯은 선택한 대상에 따라 가장 최근에 활성화된 상위 5개의 세그먼트를 내림차순으로 표시합니다.</li><li>대상자 크기 트렌드입니다. 이 위젯은 해당 대상 계정에 매핑된 세그먼트의 기간 동안의 프로필 수 관계를 보여 줍니다.</li><li>ID별로 매핑되지 않은 세그먼트. 이 위젯은 주어진 대상 및 ID에 대한 ID 수를 내림차순으로 하여 순위가 매겨진 매핑되지 않은 상위 5개의 세그먼트를 나열합니다.</li><li>ID별로 매핑된 세그먼트. 이 위젯은 매핑된 상위 5개의 세그먼트를 나열합니다. 세그먼트는 위젯의 드롭다운 메뉴에서 선택한 대상 ID와 일치하는 소스 ID의 각 수에 따라 높음에서 낮음 순으로 정렬됩니다.</li><li>일반 대상자. 이 위젯은 페이지 상단에서 선택한 대상 계정 전체에 걸쳐 활성화된 상위 5개 세그먼트 목록과 위젯 드롭다운에서 선택한 대상을 제공합니다.</li></ul> 사용 가능한 표준 위젯에 대한 자세한 내용은 [대상 대시보드 설명서](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#standard-widgets)를 참조하십시오. |
 
 [!DNL Dashboards]에 대한 자세한 내용은 [[!DNL Dashboards] 개요](../../dashboards/home.md)를 참조하십시오.
 
@@ -85,6 +85,6 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| GA로 이동하는 Beta 소스 | 다음 소스가 Beta에서 GA로 승격되었습니다. <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Zoho CRM]](../../sources/connectors/crm/zoho.md)</li></ul> |
+| GA로 이동하는 Beta 소스 | 다음 소스가 Beta에서 GA로 승격되었습니다. <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li></ul> |
 
 소스에 대한 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하세요.

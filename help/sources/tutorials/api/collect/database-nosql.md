@@ -5,7 +5,7 @@ title: 흐름 서비스 API를 사용하여 데이터베이스 소스에 대한 
 type: Tutorial
 description: 이 자습서에서는 데이터베이스에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Experience Platform으로 수집하는 단계를 다룹니다.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
 source-wordcount: '1428'
 ht-degree: 2%
@@ -21,7 +21,7 @@ ht-degree: 2%
 >* 데이터 흐름을 만들려면 데이터베이스 원본의 올바른 기본 연결 ID가 이미 있어야 합니다. 이 ID가 없으면 [소스 개요](../../../home.md#database)에서 기본 연결을 만들 수 있는 데이터베이스 소스 목록을 참조하십시오.
 >* Experience Platform이 데이터를 수집하려면 모든 테이블 기반 배치 소스의 시간대를 UTC로 구성해야 합니다. [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md)에 대해 지원되는 타임스탬프는 UTC 시간이 있는 TIMESTAMP_NTZ뿐입니다.
 
-## 시작하기
+## 시작
 
 이 자습서를 사용하려면 Adobe Experience Platform의 다음 구성 요소를 잘 알고 있어야 합니다.
 
@@ -707,7 +707,6 @@ curl -X POST \
 | [!DNL Azure Data Explorer] | `0479cc14-7651-4354-b233-7480606c2ac3` |
 | [!DNL Azure Synapse Analytics] | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 | [!DNL Azure Table Storage] | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
-| [!DNL Couchbase] | `1fe283f6-9bec-11ea-bb37-0242ac130002` |
 | [!DNL Google BigQuery] | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
 | [!DNL Greenplum] | `37b6bf40-d318-4655-90be-5cd6f65d334b` |
 | [!DNL IBM DB2] | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
@@ -715,5 +714,4 @@ curl -X POST \
 | [!DNL Microsoft SQL Server] | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |
 | [!DNL MySQL] | `26d738e0-8963-47ea-aadf-c60de735468a` |
 | [!DNL Oracle] | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
-| [!DNL Phoenix] | `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
 | [!DNL PostgreSQL] | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |

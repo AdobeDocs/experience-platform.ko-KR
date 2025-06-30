@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 11월
 description: Adobe Experience Platform에 대한 2022년 11월 릴리스 정보입니다.
 exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 55%
+source-wordcount: '312'
+ht-degree: 58%
 
 ---
 
@@ -46,17 +46,3 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 {style="table-layout:auto"}
 
 Experience Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
-
-## 소스 {#sources}
-
-Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 Experience Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
-
-Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
-
-**업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- | 
-| Oracle Service Cloud Source의 Beta 가용성 | Oracle Service Cloud 소스를 사용하여 Oracle Service Cloud 계정의 데이터를 Experience Platform으로 수집합니다. 자세한 내용은 [Oracle 서비스 클라우드 원본](../../sources/connectors/customer-success/oracle-service-cloud.md)에 대한 설명서를 참조하세요. |
-
-소스에 대해 자세히 알아보려면 [소스 개요 ](../../sources/home.md)를 참조하십시오.

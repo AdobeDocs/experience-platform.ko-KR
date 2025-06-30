@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2023년 4월
 description: Adobe Experience Platform의 2023년 4월 릴리스 정보입니다.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 97%
+source-wordcount: '2010'
+ht-degree: 96%
 
 ---
 
@@ -68,14 +68,14 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | --- | --- |
 | 데이터스트림에 대한 IP 주소 난독화 | 이제 [데이터스트림 구성 UI](../../datastreams/configure.md)에서 부분 또는 전체의 데이터스트림 수준 IP 난독화 옵션을 정의할 수 있습니다. <br><br>데이터스트림 수준의 IP 난독화 설정은 Adobe Target 및 Audience Manager에서 구성된 모든 IP 난독화보다 우선합니다. <br><br>Adobe Analytics로 전송된 데이터는 데이터스트림 수준의 [!UICONTROL IP 난독화] 설정의 영향을 받지 않습니다. Adobe Analytics는 현재 난독화되지 않은 IP 주소를 수신합니다. Analytics가 난독화된 IP 주소를 수신하려면 Adobe Analytics에서 별도로 IP 난독화를 구성해야 합니다. 이 동작은 향후 릴리스에서 업데이트될 예정입니다.<br><br> IP 난독화 및 구성 방법에 대한 자세한 내용은 [데이터스트림 구성 설명서](../../datastreams/configure.md#advanced-options)를 참조하십시오. |
 | [데이터스트림 구성 재정의](../../datastreams/overrides.md) | 이제 이벤트 데이터 세트, Target 속성 토큰, ID 동기화 컨테이너 및 Analytics 보고서 세트와 같은 특정 설정을 재정의하는 데 사용할 수 있는 데이터스트림에 대한 추가 구성 옵션을 정의할 수 있습니다. <br><br>데이터스트림 구성 재정의는 2단계 프로세스입니다. <ol><li>먼저 [데이터스트림 구성 페이지](../../datastreams/configure.md)에서 데이터스트림 구성 재정의를 정의해야 합니다.</li><li>그런 다음 Web SDK 명령 또는 Web SDK [태그 확장 기능](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)을 사용하여 Edge Network에 해당 재정의를 보내야 합니다.</li></ol> |
-| OAuth JWT Secret | 고객은 [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=ko)을 사용하여 Adobe 및 Google Service 토큰으로 이벤트 전달에서 서버 간 상호 작용을 지원할 수 있습니다. |
-| [!DNL Pinterest Conversions API] 확장 기능 | [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=ko) 이벤트 전달 확장 기능을 사용하면 Adobe Experience Platform Edge Network에서 캡처된 데이터를 활용하여 [!DNL Pinterest Conversions API]을 통해 서버측 이벤트의 형태로 [!DNL Pinterest]로 전송할 수 있습니다 |
+| OAuth JWT Secret | 고객은 [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html)을 사용하여 Adobe 및 Google Service 토큰으로 이벤트 전달에서 서버 간 상호 작용을 지원할 수 있습니다. |
+| [!DNL Pinterest Conversions API] 확장 기능 | [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) 이벤트 전달 확장 기능을 사용하면 Adobe Experience Platform Edge Network에서 캡처된 데이터를 활용하여 [!DNL Pinterest Conversions API]을 통해 서버측 이벤트의 형태로 [!DNL Pinterest]로 전송할 수 있습니다 |
 
 {style="table-layout:auto"}
 
 ## 대상 {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 대상** {#new-destinations}
 
@@ -115,7 +115,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 | 기능 | 설명 |
 | --- | --- |
-| 표시 이름 전환 | 이제 스키마 편집기는 원래 필드 이름과 사람이 읽을 수 있는 표시 이름 간에 변경할 수 있는 전환 기능을 제공합니다.<br>![표시 이름 전환 기능이 강조 표시된 스키마 편집기.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "스키마 편집기 표시 이름 전환"){width="100" zoomable="yes"}<br>이러한 유연성을 통해 필드 검색 및 스키마 편집 기능이 향상됩니다. 표준 필드 그룹의 표시 이름은 시스템에서 생성되지만, 필요한 경우 UI를 통해 사용자 정의할 수도 있습니다. 자세한 내용은 [표시 이름 전환 설명서](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=ko#display-name-toggle)를 참조하십시오. |
+| 표시 이름 전환 | 이제 스키마 편집기는 원래 필드 이름과 사람이 읽을 수 있는 표시 이름 간에 변경할 수 있는 전환 기능을 제공합니다.<br>![표시 이름 전환 기능이 강조 표시된 스키마 편집기.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "스키마 편집기 표시 이름 전환"){width="100" zoomable="yes"}<br>이러한 유연성을 통해 필드 검색 및 스키마 편집 기능이 향상됩니다. 표준 필드 그룹의 표시 이름은 시스템에서 생성되지만, 필요한 경우 UI를 통해 사용자 정의할 수도 있습니다. 자세한 내용은 [표시 이름 전환 설명서](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -193,7 +193,6 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | Salesforce CRM 소스에 대한 행 수준의 데이터 필터링을 위한 API 지원. | 논리 및 비교 연산자를 사용하여 Salesforce CRM 소스의 행 수준 데이터를 필터링합니다. 자세한 내용은 [API를 사용하여 소스의 데이터를 필터링](../../sources/tutorials/api/filter.md)하는 방법에 관한 안내서를 참조하십시오. |
 | Shopify Streaming의 Beta 가용성 | 현재 [Shopify Streaming 소스](../../sources/connectors/ecommerce/shopify-streaming.md)는 베타 버전으로 제공됩니다. Shopify Streaming 소스를 사용하여 Shopify 파트너 계정에서 Experience Platform으로 데이터를 스트리밍합니다. |
 | OneTrust 통합의 일반 가용성 | 현재 [OneTrust 통합 소스](../../sources/connectors/consent-and-preferences/onetrust.md)는 GA 버전입니다. OneTrust 통합 소스를 사용하여 OneTrust 통합 계정에서 Experience Platform으로 동의 및 환경 설정 데이터를 가져옵니다. |
-| Oracle 서비스 클라우드의 일반 가용성 | 현재 [Oracle 서비스 클라우드 소스](../../sources/connectors/customer-success/oracle-service-cloud.md)는 GA 버전입니다. Oracle 서비스 클라우드 소스를 사용하여 Oracle 서비스 클라우드 데이터를 Experience Platform으로 가져옵니다. |
 
 {style="table-layout:auto"}
 

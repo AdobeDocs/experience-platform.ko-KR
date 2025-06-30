@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
+source-git-commit: 079c1d7ac790fb7df72a6127a980080bdaa49518
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1045'
 ht-degree: 35%
 
 ---
@@ -65,9 +65,7 @@ ht-degree: 35%
       - [Salesforce 커넥터](connectors/crm/salesforce.md)
       - [SugarCRM 커넥터](connectors/crm/sugarcrm.md)
       - [Veeva CRM 커넥터](connectors/crm/veeva.md)
-      - [Zoho CRM 커넥터](connectors/crm/zoho.md)
    - 고객 성공 {#customer-success}
-      - [Oracle 서비스 클라우드](connectors/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud 커넥터](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow 커넥터](connectors/customer-success/servicenow.md)
       - [Zendesk 커넥터](connectors/customer-success/zendesk.md)
@@ -79,7 +77,6 @@ ht-degree: 35%
       - [Azure Data Explorer 커넥터](connectors/databases/data-explorer.md)
       - [Azure Synapse Analytics 커넥터](connectors/databases/synapse-analytics.md)
       - [Azure 테이블 스토리지 커넥터](connectors/databases/ats.md)
-      - [Couchbase 커넥터](connectors/databases/couchbase.md)
       - [Google BigQuery 커넥터](connectors/databases/bigquery.md)
       - [GreenPlum 커넥터](connectors/databases/greenplum.md)
       - [HP Vertica 커넥터](connectors/databases/hp-vertica.md)
@@ -88,7 +85,6 @@ ht-degree: 35%
       - [Microsoft SQL Server 커넥터](connectors/databases/sql-server.md)
       - [MySQL 커넥터](connectors/databases/mysql.md)
       - [Oracle 커넥터](connectors/databases/oracle.md)
-      - [Phoenix 커넥터](connectors/databases/phoenix.md)
       - [PostgreSQL 커넥터](connectors/databases/postgres.md)
       - [Snowflake 스트리밍 커넥터](connectors/databases/snowflake-streaming.md)
       - [Snowflake 커넥터](connectors/databases/snowflake.md)
@@ -114,11 +110,9 @@ ht-degree: 35%
       - [Mailchimp 커넥터](connectors/marketing-automation/mailchimp.md)
       - [Oracle Eloqua 커넥터](connectors/marketing-automation/oracle-eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
-      - [Oracle Responsys 커넥터](connectors/marketing-automation/oracle-responsys.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 결제 {#payments}
-      - [PayPal 커넥터](connectors/payments/paypal.md)
       - [정사각형 커넥터](connectors/payments/square.md)
       - [Stripe 커넥터](connectors/payments/stripe.md)
    - 프로토콜 {#protocols}
@@ -156,9 +150,7 @@ ht-degree: 35%
          - [SugarCRM 계정 및 연락처](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM 이벤트](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
-         - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - 고객 성공 {#customer-success}
-         - [Oracle 서비스 클라우드](tutorials/api/create/customer-success/oracle-service-cloud.md)
          - [Salesforce 서비스 클라우드](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
@@ -170,7 +162,6 @@ ht-degree: 35%
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure 테이블 스토리지](tutorials/api/create/databases/ats.md)
-         - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
@@ -178,7 +169,6 @@ ht-degree: 35%
          - [마리아DB](tutorials/api/create/databases/mariadb.md)
          - [MySQL](tutorials/api/create/databases/mysql.md)
          - [Oracle](tutorials/api/create/databases/oracle.md)
-         - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Snowflake 스트리밍](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
@@ -197,11 +187,9 @@ ht-degree: 35%
          - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
          - [Oracle NetSuite 활동](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite 엔티티](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
-         - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
          - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 결제 {#payments}
-         - [PayPal](tutorials/api/create/payments/paypal.md)
          - [정사각형](tutorials/api/create/payments/square.md)
          - [Stripe](tutorials/api/create/payments/stripe.md)
       - 프로토콜 {#protocols}
@@ -283,9 +271,7 @@ ht-degree: 35%
          - [SugarCRM 계정 및 연락처](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM 이벤트](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
-         - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - 고객 성공 {#customer-success}
-         - [Oracle 서비스 클라우드](tutorials/ui/create/customer-success/oracle-service-cloud.md)
          - [Salesforce 서비스 클라우드](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
@@ -297,7 +283,6 @@ ht-degree: 35%
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure 테이블 스토리지](tutorials/ui/create/databases/ats.md)
-         - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
@@ -306,7 +291,6 @@ ht-degree: 35%
          - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [MySQL](tutorials/ui/create/databases/mysql.md)
          - [Oracle](tutorials/ui/create/databases/oracle.md)
-         - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Snowflake 스트리밍](tutorials/ui/create/databases/snowflake-streaming.md)
@@ -334,11 +318,9 @@ ht-degree: 35%
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
          - [Oracle NetSuite 활동](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite 엔티티](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
-         - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 결제 {#payments}
-         - [PayPal](tutorials/ui/create/payments/paypal.md)
          - [정사각형](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)
       - 프로토콜 {#protocols}

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2021년 10월
 description: Adobe Experience Platform의 2021년 10월 릴리스 정보.
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 22%
+source-wordcount: '433'
+ht-degree: 24%
 
 ---
 
@@ -59,6 +59,5 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | --- | --- |
 | [!DNL Amazon S3] 소스 개선 사항 | 이제 `s3SessionToken` 매개 변수를 사용하여 임시 보안 자격 증명을 사용하여 [!DNL Amazon S3] 계정을 Experience Platform에 연결할 수 있습니다. 이 토큰을 사용하면 신뢰할 수 없는 환경의 사용자에게 [!DNL Amazon S3] 리소스에 대한 단기 임시 액세스를 제공할 수 있습니다. 자세한 내용은 [[!DNL Amazon S3] 설명서](../../sources/connectors/cloud-storage/s3.md#prerequisites)를 참조하십시오. |
 | [!DNL Generic REST API]&#x200B;(Beta) | 이제 [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md)를 사용하여 [!DNL Generic REST API] 원본 연결을 만들어 일반 REST 응용 프로그램에서 Experience Platform으로 데이터를 가져올 수 있습니다. 자세한 내용은 [[!DNL Generic REST API] 개요](../../sources/connectors/protocols/generic-rest.md)를 참조하세요. |
-| [!DNL Zoho CRM]&#x200B;(Beta) | 이제 [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) 또는 [사용자 인터페이스](../../sources/tutorials/ui/create/crm/zoho.md)를 사용하여 [!DNL Zoho CRM] 원본 연결을 만들어 [!DNL Zoho CRM] 계정의 데이터를 Experience Platform으로 가져올 수 있습니다. 자세한 내용은 [[!DNL Zoho CRM] 개요](../../sources/connectors/crm/zoho.md)를 참조하세요. |
 
 소스에 대한 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하세요.

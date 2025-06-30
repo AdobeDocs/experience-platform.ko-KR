@@ -5,7 +5,7 @@ title: 흐름 서비스 API를 사용하여 결제 소스에 대한 데이터 �
 type: Tutorial
 description: 이 자습서에서는 결제 애플리케이션에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Experience Platform으로 수집하는 단계를 다룹니다.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 2%
@@ -21,7 +21,7 @@ ht-degree: 2%
 >* 데이터 흐름을 만들려면 이미 결제 출처가 있는 유효한 기본 연결 ID가 있어야 합니다. 이 ID가 없으면 기본 연결을 만들 수 있는 결제 원본 목록을 보려면 [원본 개요](../../../home.md#payments)를 참조하세요.
 >* Experience Platform이 데이터를 수집하려면 모든 테이블 기반 배치 소스의 시간대를 UTC로 구성해야 합니다.
 
-## 시작하기
+## 시작
 
 이 자습서를 사용하려면 Adobe Experience Platform의 다음 구성 요소를 잘 알고 있어야 합니다.
 
@@ -69,15 +69,15 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "PayPal source connection",
+        "name": "Stripe source connection",
         "baseConnectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
-        "description": "PayPal source connection",
+        "description": "Stripe source connection",
         "data": {
             "format": "tabular",
             }
         },
         "params": {
-            "tableName": "PayPal.Catalog_Products",
+            "tableName": "Stripe.Catalog_Products",
             "columns": [
                 {
                     "name": "Product_Id",

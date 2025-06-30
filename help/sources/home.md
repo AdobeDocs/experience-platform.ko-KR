@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Source 커넥터 개요
 description: Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
+source-git-commit: 2e4df13bae9f4afa24f761e650790704da44da90
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1554'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ Experience Platform을 사용하면 다양한 소스에서 수집한 데이터�
 
 ## 고급 엔터프라이즈 소스 {#advanced-enterprise-sources}
 
-다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
+다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE 스트리밍]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE 일괄 처리]{type=Informative}
@@ -112,13 +112,11 @@ CRM 시스템은 고객 관계를 구축하고 충성도를 창출하며 고객 
 - [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Zoho CRM]](connectors/crm/zoho.md) [!BADGE 일괄 처리]{type=Informative}
 
 ### 고객 성공 {#customer-success}
 
 Experience Platform은 타사 고객 성공 애플리케이션에서 데이터를 수집하는 데 대한 지원을 제공합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE 일괄 처리]{type=Informative}
@@ -131,7 +129,6 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하는
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE 일괄 처리]{type=Informative}
@@ -139,7 +136,6 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하는
 - [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE 일괄 처리]{type=Informative}
 
@@ -181,15 +177,11 @@ Experience Platform은 서드파티 마케팅 자동화 시스템에서 데이�
 - [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE 일괄 처리]{type=Informative}
-<!-- 
-- [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
--->
 
 ### 결제 {#payments}
 
 Experience Platform은 서드파티 결제 시스템에서 데이터를 수집할 수 있도록 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Square]](connectors/payments/square.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE 일괄 처리]{type=Informative}
 

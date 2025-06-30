@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: 릴리스 정보;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '972'
 ht-degree: 27%
 
 ---
@@ -36,7 +36,7 @@ Adobe Experience Platform의 새로운 기능:
 | 기능 | 설명 |
 |---|---|
 | [!DNL Customer AI] | [!DNL Customer AI]은(는) 마케터에게 설명을 통해 개별 수준에서 고객 예측을 생성할 수 있는 권한을 제공합니다. 영향력 있는 요소를 통해 [!DNL Customer AI]은(는) 고객이 무엇을 할 수 있고 왜 하는지 알려 줄 수 있습니다. 또한 마케터는 [!DNL Customer AI] 예측 및 통찰력을 활용하여 가장 적절한 오퍼와 메시지를 제공함으로써 고객 경험을 개인화할 수 있습니다. |
-| [!DNL Attribution AI] | [!DNL Attribution AI]은(는) 지정된 결과에 대한 고객 상호 작용의 영향 및 점진적 영향을 계산하는 멀티채널 알고리즘 속성 서비스입니다. [!DNL Attribution AI]을(를) 통해 마케터는 고객 여정의 각 단계에서 개별 고객과의 인터랙션이 미치는 영향을 파악하여 마케팅 및 광고 지출을 측정하고 최적화할 수 있습니다. |
+| [!DNL Attribution AI] | [!DNL Attribution AI]은(는) 지정된 결과에 대한 고객 상호 작용의 영향 및 점진적 영향을 계산하는 멀티채널 알고리즘 속성 서비스입니다. [!DNL Attribution AI]을(를) 통해 마케터는 고객 여정의 각 단계에서 개별 고객 상호 작용의 영향을 이해하여 마케팅 및 광고 지출을 측정하고 최적화할 수 있습니다. |
 
 **알려진 문제**
 
@@ -130,8 +130,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 데이터베이스에 대한 API 및 UI 지원 | [!DNL Apache Spark]&#x200B;(HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage], [!DNL Hive]&#x200B;(HDInsights) 및 [!DNL Phoenix]에 대한 새 소스 커넥터입니다. |
-| 결제 기반 애플리케이션에 대한 API 및 UI 지원 | [!DNL PayPal]에 대한 새 소스 커넥터입니다. |
+| 데이터베이스에 대한 API 및 UI 지원 | HDInsights의 [!DNL Apache Spark], [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage] 및 [!DNL Hive]에 대한 새 소스 커넥터입니다. |
 | 프로토콜 기반 애플리케이션에 대한 API 및 UI 지원 | [!DNL Generic OData]에 대한 새 소스 커넥터입니다. |
 
 **알려진 문제**

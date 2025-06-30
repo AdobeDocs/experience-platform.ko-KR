@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 결제 시스템 살펴보기
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 결제 애플리케이션을 살펴봅니다.
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '567'
 ht-degree: 12%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 12%
 
 이 자습서에서는 [!DNL Flow Service] API를 사용하여 결제 애플리케이션을 살펴봅니다.
 
-## 시작하기
+## 시작
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
@@ -28,7 +28,10 @@ ht-degree: 12%
 
 ### 필요한 자격 증명 수집
 
-이 자습서에서는 데이터를 수집하려는 서드파티 결제 애플리케이션과 올바르게 연결되어야 합니다. 유효한 연결에는 애플리케이션의 연결 사양 ID와 연결 ID가 포함됩니다. 결제 연결을 만들고 이러한 값을 검색하는 방법에 대한 자세한 내용은 [결제 원본을 Experience Platform에 연결](../../api/create/payments/paypal.md) 자습서에서 확인할 수 있습니다.
+출처의 파일 및 파일 구조를 살펴보려면 결제 애플리케이션과 활성 연결이 있어야 합니다. 자세한 내용은 다음 문서를 참조하십시오.
+
+* [[!DNL Square]](../create/payments/square.md)
+* [[!DNL Stripe]](../create/payments/stripe.md)
 
 ### 샘플 API 호출 읽기
 
@@ -83,29 +86,29 @@ curl -X GET \
 [
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans",
-        "path": "PayPal.Billing_Plans",
+        "name": "Stripe.Billing_Plans",
+        "path": "Stripe.Billing_Plans",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans_Payment_Definition",
-        "path": "PayPal.Billing_Plans_Payment_Definition",
+        "name": "Stripe.Billing_Plans_Payment_Definition",
+        "path": "Stripe.Billing_Plans_Payment_Definition",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
-        "path": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
+        "name": "Stripe.Billing_Plans_Payment_Definition_Charge_Models",
+        "path": "Stripe.Billing_Plans_Payment_Definition_Charge_Models",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Catalog_Products",
-        "path": "PayPal.Catalog_Products",
+        "name": "Stripe.Catalog_Products",
+        "path": "Stripe.Catalog_Products",
         "canPreview": true,
         "canFetchSchema": true
     }
