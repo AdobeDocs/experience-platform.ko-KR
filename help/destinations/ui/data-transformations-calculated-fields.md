@@ -16,7 +16,7 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="계산된 필드 추가"
 >abstract="<p>**계산된 필드 추가** 컨트롤을 사용하여 클라우드 스토리지 대상으로 내보낸 데이터에 다양한 데이터 변환을 수행합니다. 예를 들어 데이터에 해싱을 적용하고 배열을 문자열로 연결하는 등의 작업이 가능합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html?lang=ko#examples" text="예시"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="예시"
 
 >[!AVAILABILITY]
 >
@@ -62,7 +62,7 @@ ht-degree: 8%
 
 ![아직 함수가 선택되지 않은 계산된 필드 기능의 모달 창.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
-예를 들어 아래 표시된 대로 `organizations` 필드에서 `array_to_string` 함수를 사용하여 조직 배열을 CSV 파일의 문자열로 내보냅니다. [이 예제와 다른 예제에 대한 자세한 내용은 아래에서 ](#array-to-string-function-export-arrays)을(를) 참조하십시오.
+예를 들어 아래 표시된 대로 `array_to_string` 필드에서 `organizations` 함수를 사용하여 조직 배열을 CSV 파일의 문자열로 내보냅니다. [이 예제와 다른 예제에 대한 자세한 내용은 아래에서 ](#array-to-string-function-export-arrays)을(를) 참조하십시오.
 
 ![배열-문자열 함수가 선택된 계산된 필드 기능의 모달 창입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
@@ -72,7 +72,7 @@ ht-degree: 8%
 
 워크플로우의 매핑 단계로 돌아가서 내보낸 파일의 이 필드에 사용할 열 머리글 값으로 **[!UICONTROL 대상 필드]**&#x200B;을(를) 채웁니다.
 
-대상 필드가 강조 표시된 매핑 단계 ![1&rbrace;](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+대상 필드가 강조 표시된 매핑 단계 ![1}](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![대상 필드 선택](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
@@ -191,7 +191,7 @@ John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 
 `coalesce` 함수를 사용하여 배열의 null이 아닌 첫 번째 요소에 액세스하고 문자열로 내보냅니다.
 
-예를 들어 `coalesce(subscriptions.hasPromotion)` 구문을 사용하여 아래 매핑 스크린샷에 표시된 대로 다음 XDM 필드를 결합하여 배열에서 `false`의 첫 번째 `true` 값을 반환할 수 있습니다.
+예를 들어 `coalesce(subscriptions.hasPromotion)` 구문을 사용하여 아래 매핑 스크린샷에 표시된 대로 다음 XDM 필드를 결합하여 배열에서 `true`의 첫 번째 `false` 값을 반환할 수 있습니다.
 
 * `"subscriptions.hasPromotion": [null, true, null, false, true]` 배열
 * `person.name.firstName` 문자열
@@ -229,7 +229,7 @@ johndoe@acme.org,"5"
 
 >[!IMPORTANT]
 >
->이 페이지에 설명된 다른 함수와 달리 배열의 개별 요소를 내보내려면 *UI에서&#x200B;**[!UICONTROL 계산된 필드]**&#x200B;컨트롤을 사용할 필요가 없습니다*.
+>이 페이지에 설명된 다른 함수와 달리 배열의 개별 요소를 내보내려면 *UI에서*&#x200B;계산된 필드&#x200B;**[!UICONTROL 컨트롤을 사용할 필요가 없습니다]**.
 
 배열의 인덱스에 액세스하여 배열에서 단일 항목을 내보낼 수 있습니다. 예를 들어, `size_of` 함수에 대한 위의 예제와 유사하게 고객이 특정 제품을 처음 구매한 경우에만 액세스하고 내보내려고 하는 경우 `purchaseTime[0]`을(를) 사용하여 타임스탬프의 첫 번째 요소를 내보내고, `purchaseTime[1]`을(를) 사용하여 타임스탬프의 두 번째 요소를 내보내고, `purchaseTime[2]`을(를) 사용하여 타임스탬프의 세 번째 요소를 내보낼 수 있습니다.
 

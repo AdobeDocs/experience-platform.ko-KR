@@ -16,7 +16,7 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class_filter"
 >title="표준 또는 사용자 정의 클래스 필터"
->abstract="사용 가능한 클래스의 목록은 클래스의 생성 방법에 따라 사전에 필터링됩니다. 표준과 사용자 정의 옵션 중에서 선택하려면 라디오 버튼을 선택하십시오. 표준 옵션은 Adobe에서 생성한 엔티티를 표시하며 XDM 개별 프로필 및 XDM 경험 이벤트 클래스를 모두 포함합니다. 사용자 정의 옵션은 내 조직 내에서 생성된 엔티티를 표시합니다. 클래스의 생성 및 편집에 대한 자세한 내용은 설명서를 참조하시기 바랍니다."
+>abstract="사용 가능한 클래스의 목록은 클래스의 생성 방법에 따라 사전에 필터링됩니다. 표준과 사용자 정의 옵션 중에서 선택하려면 라디오 버튼을 선택하십시오. 표준 옵션은 Adobe에서 생성한 엔티티를 표시하며 XDM 개별 프로필 및 XDM 경험 이벤트 클래스를 모두 포함합니다. 사용자 정의 옵션은 내 조직 내에서 생성된 엔티티를 표시합니다. 클래스의 생성 및 편집에 대한 자세한 내용은 설명서를 참조하십시오."
 
 Adobe Experience Platform에서 스키마의 클래스는 스키마에 포함될 데이터의 동작 측면(레코드 또는 시계열)을 정의합니다. 이 외에도 클래스는 해당 클래스를 기반으로 하는 모든 스키마가 포함해야 하는 가장 적은 수의 공통 속성을 설명하고 여러 호환되는 데이터 세트가 병합될 수 있는 방법을 제공합니다.
 
@@ -26,11 +26,11 @@ Adobe은 [XDM 개별 프로필](../../classes/individual-profile.md) 및 [XDM Ex
 
 ## 전제 조건 {#prerequisites}
 
-이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. Experience Platform 에코시스템 내에서 XDM의 역할에 대한 소개와 스키마 컴포지션의 [기본 사항](../../schema/composition.md)을(를) 참조하여 클래스가 XDM 스키마에 기여하는 방법을 알아보십시오. [XDM 개요](../../home.md).
+이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. Experience Platform 에코시스템 내에서 XDM의 역할에 대한 소개와 스키마 컴포지션의 [기본 사항](../../home.md)을(를) 참조하여 클래스가 XDM 스키마에 기여하는 방법을 알아보십시오. [XDM 개요](../../schema/composition.md).
 
 이 안내서에서는 필요하지 않지만, [UI에서 스키마 작성](../../tutorials/create-schema-ui.md)에 대한 자습서를 따라 스키마 편집기의 다양한 기능을 숙지하는 것이 좋습니다.
 
-## 시작하기 {#getting-started}
+## 시작 {#getting-started}
 
 Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택하여 [!UICONTROL 스키마] 작업 영역을 연 다음 **[!UICONTROL 클래스]** 탭을 선택합니다. 사용 가능한 클래스 목록이 표시됩니다.
 
@@ -40,7 +40,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;
 
 클래스 목록은 클래스 생성 방법에 따라 자동으로 필터링됩니다. 기본 설정은 Adobe에서 정의한 클래스를 표시합니다. 목록을 필터링하여 조직에서 만든 목록을 표시할 수도 있습니다. 라디오 단추를 선택하여 [!UICONTROL 표준]과(와) [!UICONTROL 사용자 지정] 옵션 중에서 선택하십시오. [!UICONTROL 표준] 옵션은 Adobe에서 만든 엔터티를 표시하고 [!UICONTROL 사용자 지정] 옵션은 조직 내에서 만든 엔터티를 표시합니다.
 
-[!UICONTROL Standard] 및 [!UICONTROL Custom]이 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭입니다.![&#128279;](../../images/ui/resources/classes/standard-and-custom-classes.png)
+![Standard[!UICONTROL  및 ]Custom[!UICONTROL 이 강조 표시된 ]스키마[!UICONTROL  작업 영역의 ]클래스[!UICONTROL  탭입니다.]](../../images/ui/resources/classes/standard-and-custom-classes.png)
 
 >[!TIP]
 >
@@ -52,9 +52,9 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;
 
 ### 클래스 만들기
 
-[!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭에서 **[!UICONTROL 클래스 만들기]**&#x200B;를 선택합니다.
+**[!UICONTROL 스키마]** 작업 영역의 [!UICONTROL 클래스] 탭에서 [!UICONTROL 클래스 만들기]를 선택합니다.
 
-[!UICONTROL 클래스 만들기]가 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭![&#128279;](../../images/ui/resources/classes/create-class.png)
+![클래스 만들기[!UICONTROL 가 강조 표시된 ]스키마[!UICONTROL  작업 영역의 ]클래스[!UICONTROL  탭]](../../images/ui/resources/classes/create-class.png)
 
 [!UICONTROL 클래스 만들기] 대화 상자가 나타납니다. 클래스의 [!UICONTROL 표시 이름] 및 [!UICONTROL 설명]을 입력하고 라디오 단추로 클래스의 동작을 선택하십시오. 클래스는 [!UICONTROL 레코드] 또는 [!UICONTROL 시계열] 형식일 수 있습니다. **[!UICONTROL 만들기]**&#x200B;를 선택하여 선택 항목을 확인하고 [!UICONTROL 클래스] 탭으로 돌아갑니다.
 
@@ -62,15 +62,15 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;
 
 만든 클래스를 사용할 수 있으며 [!UICONTROL 클래스] 보기에 나열됩니다.
 
-최근에 만든 클래스가 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭입니다.![&#128279;](../../images/ui/resources/classes/new-class-listing.png)
+최근에 만든 클래스가 강조 표시된 ![스키마[!UICONTROL  작업 영역의 ]클래스[!UICONTROL  탭입니다.]](../../images/ui/resources/classes/new-class-listing.png)
 
 ### 스키마 만들기
 
-또는 수동으로 스키마를 생성하여 클래스를 만들 수 있습니다. [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭에서 **[!UICONTROL 스키마 만들기]**&#x200B;를 선택합니다.
+또는 수동으로 스키마를 생성하여 클래스를 만들 수 있습니다. **[!UICONTROL 스키마]** 작업 영역의 [!UICONTROL 클래스] 탭에서 [!UICONTROL 스키마 만들기]를 선택합니다.
 
-[!UICONTROL 스키마 만들기]가 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 클래스] 탭![&#128279;](../../images/ui/resources/classes/create-schema.png)
+![스키마 만들기[!UICONTROL 가 강조 표시된 ]스키마[!UICONTROL  작업 영역의 ]클래스[!UICONTROL  탭]](../../images/ui/resources/classes/create-schema.png)
 
-표시되는 [!UICONTROL 스키마 만들기] 대화 상자에서 **[!UICONTROL 수동]**&#x200B;을 선택합니다.
+표시되는 **[!UICONTROL 스키마 만들기]** 대화 상자에서 [!UICONTROL 수동]을 선택합니다.
 
 >[!NOTE]
 >
@@ -94,7 +94,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;
 
 텍스트 필드에 사용자에게 친숙한 [!UICONTROL 스키마 표시 이름]을(를) 입력하십시오. 그런 다음 스키마를 식별하는 데 도움이 되는 적절한 설명을 입력합니다. 스키마 구조를 검토하고 설정이 마음에 들면 **[!UICONTROL 완료]**&#x200B;를 선택하여 스키마를 만듭니다.
 
-[!UICONTROL 스키마 표시 이름], [!UICONTROL 설명] 및 [!UICONTROL 마침]이 강조 표시된 [!UICONTROL 스키마 만들기] 워크플로의 [!UICONTROL 이름 및 검토] 섹션.![&#128279;](../../images/ui/resources/classes/schema-details.png)
+![스키마 표시 이름[!UICONTROL , ]설명[!UICONTROL  및 ]마침[!UICONTROL 이 강조 표시된 ]스키마 만들기[!UICONTROL  워크플로의 ]이름 및 검토[!UICONTROL  섹션.]](../../images/ui/resources/classes/schema-details.png)
 
 ## 클래스에 필드 추가 {#add-fields}
 

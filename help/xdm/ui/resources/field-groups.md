@@ -16,7 +16,7 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_filter"
 >title="표준 또는 사용자 정의 필드 그룹 필터"
->abstract="사용할 수 있는 필드 그룹의 목록은 생성 방법에 따라 사전에 필터링됩니다. 표준과 사용자 정의 옵션 중에서 선택하려면 라디오 버튼을 선택하십시오. 표준 옵션은 Adobe에서 생성한 엔티티를 표시하며 사용자 정의 옵션은 내 조직 내에서 생성된 엔티티를 표시합니다. 필드 그룹의 생성 및 편집에 대한 자세한 내용은 설명서를 참조하시기 바랍니다."
+>abstract="사용할 수 있는 필드 그룹의 목록은 생성 방법에 따라 사전에 필터링됩니다. 표준과 사용자 정의 옵션 중에서 선택하려면 라디오 버튼을 선택하십시오. 표준 옵션은 Adobe에서 생성한 엔티티를 표시하며 사용자 정의 옵션은 내 조직 내에서 생성된 엔티티를 표시합니다. 필드 그룹의 생성 및 편집에 대한 자세한 내용은 설명서를 참조하십시오."
 
 XDM(Experience Data Model)에서 스키마 필드 그룹은 개인 세부 정보, 호텔 환경 설정 또는 주소와 같은 특정 기능을 구현하는 하나 이상의 필드를 정의하는 재사용 가능한 구성 요소입니다. 필드 그룹은 호환 가능한 클래스를 구현하는 스키마의 일부로 포함하기 위한 것입니다.
 
@@ -34,7 +34,7 @@ Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 �
 
 새 필드 그룹을 만들려면 먼저 필드 그룹을 추가할 스키마를 선택해야 합니다. [새 스키마를 만들거나](./schemas.md#create) [편집할 기존 스키마를 선택](./schemas.md#edit)할 수 있습니다.
 
-[!DNL Schema Editor]에서 스키마를 열면 왼쪽 레일의 [!UICONTROL 필드 그룹] 섹션 옆에 있는 **[!UICONTROL 추가]**&#x200B;를 선택합니다.
+[!DNL Schema Editor]에서 스키마를 열면 왼쪽 레일의 **[!UICONTROL 필드 그룹]** 섹션 옆에 있는 [!UICONTROL 추가]를 선택합니다.
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
@@ -50,7 +50,7 @@ Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 �
 
 사용할 수 있는 필드 그룹의 목록은 생성 방법에 따라 사전에 필터링됩니다. 기본 설정은 Adobe에서 정의한 필드 그룹을 표시합니다. 그러나 목록을 필터링하여 조직에서 만든 목록을 표시할 수도 있습니다. 라디오 단추를 선택하여 [!UICONTROL 표준]과(와) [!UICONTROL 사용자 지정] 옵션 중에서 선택하십시오. [!UICONTROL 표준] 옵션은 Adobe에서 만든 엔터티를 표시하고 [!UICONTROL 사용자 지정] 옵션은 조직 내에서 만든 엔터티를 표시합니다.
 
-[!UICONTROL Standard] 및 [!UICONTROL Custom]이 강조 표시된 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 필드 그룹] 탭![&#128279;](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+![Standard[!UICONTROL  및 ]Custom[!UICONTROL 이 강조 표시된 ]스키마[!UICONTROL  작업 영역의 ]필드 그룹[!UICONTROL  탭]](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## 기존 필드 그룹 편집 {#edit}
 

@@ -4,8 +4,8 @@ description: Amazon Web Services(AWS) S3 스토리지에 대한 실시간 아웃
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: 7aff8d9eafb699133e90d3af8ef24f3135f3cade
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1818'
+ht-degree: 14%
 
 ---
 
@@ -98,7 +98,7 @@ Amazon S3 액세스 키와 비밀 키를 입력하여 Experience Platform에서 
 
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지입니다.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### S3이(가) 역할을 가정한 인증 {#assumed-role-authentication}
+#### S3 가정된 역할을 통한 인증 {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
@@ -207,7 +207,7 @@ AWS 콘솔에서 역할을 만든 후 기본 페이지에서 ARN을 찾을 수 �
 >id="platform_destinations_connect_s3_folderpath"
 >title="폴더 경로"
 >abstract="A-Z, a-z, 0-9 문자만 포함해야 하며 특수 문자(예: `/!-_.'()"^[]+$%.*"`)를 포함할 수 있습니다. 대상자 파일별로 폴더를 만들려면 매크로(예: `/%SEGMENT_NAME%` 또는 `/%SEGMENT_ID%` 또는 `/%SEGMENT_NAME%/%SEGMENT_ID%`)를 텍스트 필드에 삽입합니다. 매크로는 폴더 경로 끝에만 삽입할 수 있습니다. 설명서의 매크로 예 보기"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=ko#use-macros" text="매크로를 사용하여 스토리지 위치에 폴더 만들기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="매크로를 사용하여 스토리지 위치에 폴더 만들기"
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
@@ -236,7 +236,7 @@ AWS 콘솔에서 역할을 만든 후 기본 페이지에서 ARN을 찾을 수 �
 
 ### 필요한 [!DNL Amazon S3] 권한 {#required-s3-permission}
 
-데이터를 [!DNL Amazon S3] 저장소 위치에 연결하고 내보내려면 [!DNL Amazon S3]에서 [!DNL Experience Platform]에 대한 IAM(Identity and Access Management) 사용자를 만들고 다음 작업에 대한 권한을 할당하십시오.
+데이터를 [!DNL Amazon S3] 저장소 위치에 연결하고 내보내려면 [!DNL Experience Platform]에서 [!DNL Amazon S3]에 대한 IAM(Identity and Access Management) 사용자를 만들고 다음 작업에 대한 권한을 할당하십시오.
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
