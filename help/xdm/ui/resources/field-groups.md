@@ -50,7 +50,7 @@ Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 �
 
 사용할 수 있는 필드 그룹의 목록은 생성 방법에 따라 사전에 필터링됩니다. 기본 설정은 Adobe에서 정의한 필드 그룹을 표시합니다. 그러나 목록을 필터링하여 조직에서 만든 목록을 표시할 수도 있습니다. 라디오 단추를 선택하여 [!UICONTROL 표준]과(와) [!UICONTROL 사용자 지정] 옵션 중에서 선택하십시오. [!UICONTROL 표준] 옵션은 Adobe에서 만든 엔터티를 표시하고 [!UICONTROL 사용자 지정] 옵션은 조직 내에서 만든 엔터티를 표시합니다.
 
-![Standard[!UICONTROL  및 ]Custom[!UICONTROL 이 강조 표시된 ]스키마[!UICONTROL  작업 영역의 ]필드 그룹[!UICONTROL  탭]](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+![Standard[!UICONTROL &#x200B; 및 &#x200B;]Custom[!UICONTROL 이 강조 표시된 &#x200B;]스키마[!UICONTROL &#x200B; 작업 영역의 &#x200B;]필드 그룹[!UICONTROL &#x200B; 탭]](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## 기존 필드 그룹 편집 {#edit}
 
