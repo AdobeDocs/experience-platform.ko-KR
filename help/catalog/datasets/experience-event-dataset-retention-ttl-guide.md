@@ -2,9 +2,9 @@
 title: TTL을 사용하여 데이터 레이크에서 경험 이벤트 데이터 세트 유지 관리
 description: Adobe Experience Platform API의 TTL(Time-To-Live) 구성을 사용하여 데이터 레이크에서 경험 이벤트 데이터 세트 보존을 평가, 설정 및 관리하는 방법을 알아봅니다. 이 안내서에서는 TTL 행 수준 만료가 데이터 보존 정책을 지원하고, 스토리지 효율성을 최적화하고, 효과적인 데이터 수명주기 관리를 보장하는 방법을 설명합니다. 또한 TTL을 효과적으로 적용하는 데 도움이 되는 사용 사례와 모범 사례를 제공합니다.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
+source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
 workflow-type: tm+mt
-source-wordcount: '2452'
+source-wordcount: '2458'
 ht-degree: 0%
 
 ---
@@ -178,7 +178,7 @@ curl -X GET \
 GET /dataSets/{DATASET_ID}
 ```
 
-이 호출은 `extensions.adobe_lakeHouse.rowExpiration` 섹션의 현재 `ttlValue`(설정된 경우)을(를) 반환합니다.
+이 호출은 `ttlValue` 섹션의 현재 `extensions.adobe_lakeHouse.rowExpiration`(설정된 경우)을(를) 반환합니다.
 
 **요청**
 
@@ -333,7 +333,7 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### 데이터 레이크 및 프로필 서비스에 대해 서로 다른 보존 정책을 설정할 수 있습니까?
 
 +++답변
-예. 데이터 레이크 및 프로필 서비스에 대해 서로 다른 보존 정책을 설정할 수 있습니다. 단, 프로필의 보존 기간은 데이터 레이크에 설정된 기간보다 짧으면 안 됩니다.
+예. 데이터 레이크 및 프로필 서비스에 대해 서로 다른 보존 정책을 설정할 수 있습니다. 조직의 필요에 따라 프로필 스토어의 보존 기간은 데이터 레이크 보존 기간보다 짧거나 길 수 있습니다.
 +++
 
 ### 현재 데이터 세트 사용을 확인하려면 어떻게 해야 합니까?
