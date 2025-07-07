@@ -3,9 +3,9 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
+source-git-commit: 13adf42a23458d10e217d216d8fe79e8ce33376d
 workflow-type: tm+mt
-source-wordcount: '4596'
+source-wordcount: '4595'
 ht-degree: 13%
 
 ---
@@ -120,7 +120,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 >id="platform_destinations_activate_exportoptions"
 >title="파일 내보내기 옵션"
 >abstract="**전체 파일 내보내기**&#x200B;를 선택하여 대상자 조건에 적합한 모든 프로필의 전체 스냅샷을 내보냅니다. **증분 파일 내보내기**&#x200B;를 선택하여 마지막 내보내기 이후 대상자 조건에 적합한 프로필만 내보냅니다. <br>첫 번째 증분 파일 내보내기에는 채우기 역할을 하는 대상자에 적합한 모든 프로필이 포함됩니다. 향후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 대상자 조건에 적합한 프로필만 포함됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko#export-incremental-files" text="증분 파일 내보내기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="증분 파일 내보내기"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
@@ -348,7 +348,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_1@example.com"
+        "id": "johndoe@example.com"
       },
       {
         "id": "doejohn_1@example.com"
@@ -382,7 +382,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_2@example.com"
+        "id": "johndoe@example.com"
       },
       {
         "id": "doejohn_2@example.com"
@@ -425,7 +425,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
 | 이메일* | personalEmail | 이름 | 성 |
 |---|---|---|---|
-| johndoe_2@example.com | johndoe@example.com | John | D |
+| johndoe@example.com | johndoe@example.com | John | D |
 | doejohn_2@example.com | johndoe@example.com | John | D |
 
 ### 중복 제거 사용 사례 3: 단일 프로필 속성에 따른 중복 제거 {#deduplication-use-case-3}
@@ -450,7 +450,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 ### 타임스탬프가 동일한 프로필에 대한 중복 제거 동작 {#deduplication-same-timestamp}
 
-프로필을 파일 기반 대상으로 내보낼 때 중복 제거는 여러 프로필이 동일한 중복 제거 키와 동일한 참조 타임스탬프를 공유하는 경우 단 하나의 프로필만 내보내도록 할 수 있습니다. 이 타임스탬프는 프로필의 대상 멤버십 또는 ID 그래프가 마지막으로 업데이트된 순간을 나타냅니다. 프로필을 업데이트하고 내보내는 방법에 대한 자세한 내용은 [프로필 내보내기 동작](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) 문서를 참조하십시오.
+프로필을 파일 기반 대상으로 내보낼 때 중복 제거는 여러 프로필이 동일한 중복 제거 키와 동일한 참조 타임스탬프를 공유하는 경우 단 하나의 프로필만 내보내도록 할 수 있습니다. 이 타임스탬프는 프로필의 대상 멤버십 또는 ID 그래프가 마지막으로 업데이트된 순간을 나타냅니다. 프로필을 업데이트하고 내보내는 방법에 대한 자세한 내용은 [프로필 내보내기 동작](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) 문서를 참조하십시오.
 
 #### 주요 고려 사항
 
@@ -524,7 +524,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 >[!IMPORTANT]
 > 
->카탈로그의 모든 클라우드 저장소 대상은 이 섹션에 설명된 **[!UICONTROL 특성 선택]** 단계를 대체하는 개선된 [[!UICONTROL 매핑] 단계](#mapping)를 볼 수 있습니다.
+>카탈로그의 모든 클라우드 저장소 대상은 이 섹션에 설명된 [[!UICONTROL 특성 선택] 단계를 대체하는 개선된 ](#mapping)매핑&#x200B;**[!UICONTROL 단계]**&#x200B;를 볼 수 있습니다.
 >
 >이 **[!UICONTROL 특성 선택]** 단계는 Adobe Campaign, Oracle Responsys, Oracle Eloqua 및 Salesforce Marketing Cloud 이메일 마케팅 대상에 대해 계속 표시됩니다.
 
@@ -554,9 +554,10 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 >
 >알려진 제한으로 인해 현재 **[!UICONTROL 필드 선택]** 창을 사용하여 `segmentMembership.seg_namespace.seg_id.status`을(를) 파일 내보내기에 추가할 수 없습니다. 대신 아래와 같이 `xdm: segmentMembership.seg_namespace.seg_id.status` 값을 스키마 필드에 수동으로 붙여넣어야 합니다.
 >
->![활성화 워크플로의 매핑 단계에서 대상 멤버십 해결 방법을 보여 주는 화면 기록입니다.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![활성화 워크플로의 매핑 단계에서 대상 멤버십 해결 방법을 보여 주는 화면 기록입니다.](../assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 파일 내보내기는 `segmentMembership.seg_namespace.seg_id.status`의 선택 여부에 따라 다음과 같이 달라집니다.
+
 * `segmentMembership.seg_namespace.seg_id.status` 필드를 선택하면 내보낸 파일에는 초기 전체 스냅숏에 **[!UICONTROL Active]** 구성원이 포함되고 후속 증분 내보내기에 **[!UICONTROL Active]** 및 **[!UICONTROL Expired]** 구성원이 포함됩니다.
 * `segmentMembership.seg_namespace.seg_id.status` 필드를 선택하지 않으면 내보낸 파일에는 초기 전체 스냅숏과 이후 증분 내보내기에서 **[!UICONTROL Active]** 멤버만 포함됩니다.
 
@@ -569,7 +570,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 >[!IMPORTANT]
 >
->이 단계는 [대상자 선택](#select-audiences) 단계 동안 **[!UICONTROL 사용자 지정 업로드]**&#x200B;대상자를 선택한 경우에만 표시됩니다.
+>이 단계는 **[!UICONTROL 대상자 선택]** 단계 동안 [사용자 지정 업로드](#select-audiences)대상자를 선택한 경우에만 표시됩니다.
 
 데이터 보강 속성은 **[!UICONTROL 사용자 지정 업로드]**(으)로 Experience Platform에서 수집된 사용자 지정 업로드된 대상에 해당합니다. 이 단계에서는 선택한 각 외부 대상에 대해 대상으로 내보낼 속성을 선택할 수 있습니다.
 
@@ -578,7 +579,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 각 외부 대상에 대한 데이터 보강 속성을 선택하려면 아래 단계를 따르십시오.
 
 1. **[!UICONTROL 데이터 보강 특성]** 열에서 ![편집 단추](/help/images/icons/edit.png)(편집) 단추를 선택합니다.
-1. **[!UICONTROL 데이터 보강 특성 추가]**&#x200B;를 선택합니다. 새 빈 스키마 필드가 표시됩니다.
+1. **[!UICONTROL 데이터 보강 특성 추가]**를 선택합니다. 새 빈 스키마 필드가 표시됩니다.
    데이터 보강 특성 모달 화면을 표시하는 ![UI 이미지입니다.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
 1. 빈 필드 오른쪽의 버튼을 선택하여 필드 선택 화면을 엽니다.
 1. 대상자를 위해 내보낼 속성을 선택합니다.
@@ -632,7 +633,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 ## 대상자 활성화 확인 {#verify}
 
-대상을 클라우드 저장소 대상으로 내보낼 때 Adobe Experience Platform은 사용자가 제공한 저장소 위치에 `.csv`, `.json` 또는 `.parquet` 파일을 만듭니다. 워크플로우에서 설정한 일정에 따라 스토리지 위치에 새 파일이 생성됩니다. 기본 파일 형식은 아래에 표시되어 있지만 [파일 이름의 구성 요소를 편집](#file-names)할 수 있습니다.
+대상을 클라우드 저장소 대상으로 내보낼 때 Adobe Experience Platform은 사용자가 제공한 저장소 위치에 `.csv`, `.json` 또는 `.parquet` 파일을 만듭니다. 워크플로우에서 설정한 일정에 따라 스토리지 위치에 새 파일이 생성됩니다. 기본 파일 형식은 아래에 표시되어 있지만 [파일 이름의 구성 요소를 편집](#configure-file-names)할 수 있습니다.
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 예를 들어 일별 내보내기 빈도를 선택한 경우 연속 3일에 받게 되는 파일은 다음과 같습니다.
