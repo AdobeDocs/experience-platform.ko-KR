@@ -1,9 +1,10 @@
 ---
 title: CMK 경고 해결 참조
 description: Adobe Experience Platform에서 CMK(Customer Managed Key) 잘못된 구성으로 트리거되는 일반적인 경고를 식별, 문제 해결 및 해결합니다. 이 안내서를 사용하여 명확한 단계별 지침을 따르고 보안 키 액세스를 복원하십시오.
-source-git-commit: 0d9cc046956dd380bb8816f0d8bf497bbad6140b
+exl-id: ffe2eadc-dfb5-418b-a201-2c20dcc9cfe4
+source-git-commit: e8cfed9ebd50cf50f03e232755eddef1cb8c0d3b
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
@@ -22,11 +23,7 @@ ht-degree: 0%
 
 ## 키 액세스 사용 안 함 {#key-access-disabled}
 
-이 경고는 키가 비활성화되었거나 관련 키 구성 문제로 인해 액세스할 수 없게 되었기 때문에 Adobe Experience Platform이 구성된 CMK에 액세스할 수 없음을 나타냅니다.
-
->[!IMPORTANT]
->
->이 경우 Adobe CMK는 액세스 실패를 목적 제거로 취급하며 SLA을 기반으로 조직과 연관된 모든 데이터를 제거합니다.
+이 경고는 구성으로 인해 키가 비활성화되거나 액세스할 수 없기 때문에 Adobe Experience Platform이 구성된 CMK에 액세스할 수 없음을 나타냅니다. 이러한 경우에, 시스템은 키 액세스의 의도적인 제거로서 조건을 취급한다.
 
 ### 발생 시
 
