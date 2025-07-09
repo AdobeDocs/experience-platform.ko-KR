@@ -5,18 +5,32 @@ title: 일정 끝점
 description: 다음 섹션에서는 쿼리 서비스 API를 사용하여 예약된 쿼리에 대해 수행할 수 있는 다양한 API 호출을 안내합니다.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: a39fae1b72533261fb43e0acc95e50e5a6acd8df
+source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1410'
 ht-degree: 2%
 
 ---
 
 # 일정 끝점
 
+자세한 정보 및 예제를 사용하여 쿼리 서비스 예약 API를 사용하여 프로그래밍 방식으로 예약된 쿼리를 만들고, 관리하고, 모니터링하는 방법에 대해 알아봅니다.
+
+## 요구 사항 및 사전 요구 사항
+
+기술 계정(OAuth 서버 간 자격 증명을 통해 인증됨) 또는 개인 사용자 계정(사용자 토큰)을 사용하여 예약된 쿼리를 만들 수 있습니다. 그러나 Adobe에서는 특히 장기 또는 프로덕션 워크로드에 대해 예약된 쿼리를 중단 없이 안전하게 실행할 수 있도록 기술 계정을 사용하는 것이 좋습니다.
+
+개인 사용자 계정으로 만든 쿼리는 해당 사용자의 액세스가 취소되거나 계정이 비활성화된 경우 실패합니다. 기술 계정은 개별 사용자의 고용 상태나 액세스 권한에 연결되지 않으므로 보다 큰 안정성을 제공합니다.
+
+>[!IMPORTANT]
+>
+>예약된 쿼리를 관리할 때 고려해야 할 중요한 사항:<ul><li>예약된 쿼리를 만드는 데 사용된 계정(기술 또는 사용자)에 액세스나 권한이 없으면 예약된 쿼리가 실패합니다.</li><li>API 또는 UI를 통해 삭제하기 전에 예약된 쿼리를 비활성화해야 합니다.</li><li>종료 날짜 없이 무기한 예약은 지원되지 않습니다. 종료 날짜는 항상 지정해야 합니다.</li></ul>
+
+계정 요구 사항, 권한 설정 및 예약된 쿼리 관리에 대한 자세한 지침은 [쿼리 일정 설명서](../ui/query-schedules.md#technical-account-user-requirements)를 참조하세요. 기술 계정 만들기 및 구성에 대한 단계별 지침은 [Developer Console 설정](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) 및 [전체 기술 계정 설정](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup)을 참조하세요.
+
 ## 샘플 API 호출
 
-사용할 헤더를 이해했으므로 [!DNL Query Service] API를 호출할 준비가 되었습니다. 다음 섹션에서는 [!DNL Query Service] API를 사용하여 수행할 수 있는 다양한 API 호출을 살펴봅니다. 각 호출에는 일반 API 형식, 필요한 헤더를 보여주는 샘플 요청 및 샘플 응답이 포함됩니다.
+필요한 인증 헤더를 구성했으면([API 인증 안내서](../../landing/api-authentication.md) 참조) [!DNL Query Service] API를 호출할 수 있습니다. 다음 섹션에서는 일반 형식, 필수 헤더를 포함한 요청 예 및 샘플 응답을 사용하는 다양한 API 호출을 보여줍니다.
 
 ### 예약된 쿼리 목록 검색
 

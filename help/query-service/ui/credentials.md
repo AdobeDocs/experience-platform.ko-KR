@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스 자격 증명 안내서
 description: Adobe Experience Platform Query Service는 쿼리를 작성하여 실행하고, 이전에 실행한 쿼리를 보고, 조직 내에서 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 264d3b12d8fd3bd100018513af1576b3de1cbb33
+source-git-commit: 60b9fd250ba1a3e2da374681b78f0375f75dc87e
 workflow-type: tm+mt
-source-wordcount: '1955'
+source-wordcount: '1959'
 ht-degree: 5%
 
 ---
@@ -46,11 +46,11 @@ Adobe Experience Platform Query Service를 사용하면 외부 클라이언트�
 >
 >![개인 정보 및 보안, 인증 설정 및 최대 세션 수명이 강조 표시된 Admin Console 설정 탭입니다.](../images/ui/credentials/max-session-life.png)
 >
->Admin Console에서 제공하는 [고급 설정](https://helpx.adobe.com/kr/enterprise/using/authentication-settings.html#advanced-settings)에 대한 자세한 내용은 Adobe 도움말 설명서를 참조하십시오.
+>Admin Console에서 제공하는 [고급 설정](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings)에 대한 자세한 내용은 Adobe 도움말 설명서를 참조하십시오.
 
 ### 쿼리 세션 내의 Customer Journey Analytics 데이터에 연결 {#connect-to-customer-journey-analytics}
 
-Power BI 또는 Tableau와 함께 Customer Journey Analytics BI 확장 기능을 사용하여 SQL로 Customer Journey Analytics [데이터 보기](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/cja-dataviews/data-views)에 액세스합니다. Query Service를 BI 확장과 통합하여 Query Service 세션 내에서 직접 데이터 보기에 액세스할 수 있습니다. 이 통합은 쿼리 서비스를 PostgreSQL 인터페이스로 사용하는 BI 도구의 기능을 간소화합니다. 이 기능을 사용하면 BI 도구에서 데이터 보기를 복제할 필요가 없고, 플랫폼 간에 일관된 보고를 보장하며, Customer Journey Analytics 데이터를 BI 플랫폼의 다른 소스와 통합하는 작업을 단순화합니다.
+Power BI 또는 Tableau와 함께 Customer Journey Analytics BI 확장 기능을 사용하여 SQL로 Customer Journey Analytics [데이터 보기](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views)에 액세스합니다. Query Service를 BI 확장과 통합하여 Query Service 세션 내에서 직접 데이터 보기에 액세스할 수 있습니다. 이 통합은 쿼리 서비스를 PostgreSQL 인터페이스로 사용하는 BI 도구의 기능을 간소화합니다. 이 기능을 사용하면 BI 도구에서 데이터 보기를 복제할 필요가 없고, 플랫폼 간에 일관된 보고를 보장하며, Customer Journey Analytics 데이터를 BI 플랫폼의 다른 소스와 통합하는 작업을 단순화합니다.
 
 [쿼리 서비스를 다양한 데스크톱 클라이언트 응용 프로그램에 연결](../clients/overview.md)([Power BI](../clients/power-bi.md) 또는 [Tableau](../clients/tableau.md))하는 방법에 대해 알아보려면 설명서를 참조하세요.
 
@@ -68,7 +68,7 @@ Power BI 또는 Tableau에서 Customer Journey Analytics 데이터에 액세스�
 
 쿼리 편집기 또는 Postgres CLI에서 직접 Customer Journey Analytics 데이터에 액세스할 수도 있습니다. 이렇게 하려면 쿼리를 작성할 때 `cja` 데이터베이스를 참조하십시오. 쿼리 작성, 실행 및 저장 방법에 대한 자세한 내용은 쿼리 편집기 [쿼리 작성 안내서](./user-guide.md#query-authoring)를 참조하십시오.
 
-SQL을 사용하여 Customer Journey Analytics 데이터 보기에 액세스하는 방법에 대한 자세한 지침은 [BI 확장 안내서](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/cja-dataviews/bi-extension)를 참조하십시오.
+SQL을 사용하여 Customer Journey Analytics 데이터 보기에 액세스하는 방법에 대한 자세한 지침은 [BI 확장 안내서](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension)를 참조하십시오.
 
 ## 만료되지 않는 자격 증명 {#non-expiring-credentials}
 
@@ -95,12 +95,12 @@ SQL을 사용하여 Customer Journey Analytics 데이터 보기에 액세스하�
 2. [제품 프로필을 선택합니다.](../../access-control/ui/browse.md)
 3. [제품 프로필에 대해 **샌드박스** 및 **쿼리 서비스 통합 관리** 권한을 모두 구성](../../access-control/ui/permissions.md)합니다.
 4. [새 사용자를 제품 프로필에 추가](../../access-control/ui/users.md)하여 구성된 사용 권한을 부여합니다.
-5. [사용자를 제품 프로필 관리자로 추가](https://helpx.adobe.com/kr/enterprise/using/manage-product-profiles.html)하여 활성 제품 프로필에 대한 계정 만들기를 허용합니다.
+5. [사용자를 제품 프로필 관리자로 추가](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html)하여 활성 제품 프로필에 대한 계정 만들기를 허용합니다.
 6. [통합을 만들려면 사용자를 제품 프로필 개발자로 추가](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html)하십시오.
 
-권한을 할당하는 방법에 대한 자세한 내용은 [액세스 제어](../../access-control/home.md)에 대한 설명서를 참조하십시오.
+이러한 단계를 수행한 후 [Adobe Developer Console](https://developer.adobe.com/console/)에서 OAuth 서버 간 자격 증명을 생성하고 만료 또는 만료되지 않는 자격 증명 기능을 사용하는 데 필요한 권한이 구성됩니다.
 
-이제 사용자가 만료되는 자격 증명 기능을 사용할 수 있도록 Adobe Developer Console에 필요한 모든 권한이 구성됩니다.
+권한 할당에 대한 자세한 내용은 [액세스 제어 설명서](../../access-control/home.md)를 참조하세요.
 
 ### 자격 증명 생성 {#generate-credentials}
 
@@ -172,15 +172,15 @@ SQL을 사용하여 Customer Journey Analytics 데이터 보기에 액세스하�
 >[!NOTE]
 >
 >만료되지 않는 자격 증명을 사용하여 호스트에 연결할 때 암호와 사용자 이름을 제외하고 [!UICONTROL 만료되는 자격 증명] 섹션에 나열된 모든 매개 변수를 사용해야 합니다.
->사용자 이름과 암호를 입력하는 형식은 이 예제 `username:{your_username}` 및 `password:{password_string}`과(와) 같이 콜론으로 구분된 값을 사용합니다.
+>>사용자 이름과 암호를 입력하는 형식은 이 예제 `username:{your_username}` 및 `password:{password_string}`과(와) 같이 콜론으로 구분된 값을 사용합니다.
 
 | 매개변수 | 설명 | 예 |
 |---|---|---|
-| **서버/호스트** | 접속 중인 서버/호스트의 이름입니다. <ul><li>이 값은 만료 중인 자격 증명과 만료되지 않는 자격 증명 모두에 사용되며 `server.adobe.io` 형식을 사용합니다. [!UICONTROL 만료 자격 증명] 섹션의 **[!UICONTROL 호스트]**&#x200B;에서 값을 찾았습니다.</ul></li> | `acme.platform.adobe.io` |
-| **포트** | 연결 중인 서버/호스트의 포트입니다. <ul><li>이 값은 만료되는 자격 증명과 만료되지 않는 자격 증명 모두에 사용되며 [!UICONTROL 만료되는 자격 증명] 섹션의 **[!UICONTROL 포트]**&#x200B;에서 찾을 수 있습니다.</ul></li> | `80` |
-| **데이터베이스** | 연결 중인 데이터베이스입니다. <ul><li>이 값은 만료되는 자격 증명과 만료되지 않는 자격 증명 모두에 사용되며 [!UICONTROL 만료되는 자격 증명] 섹션의 **[!UICONTROL 데이터베이스]**&#x200B;에 있습니다. </ul></li> | `prod:all` |
+| **서버/호스트** | 접속 중인 서버/호스트의 이름입니다. <ul><li>이 값은 만료 중인 자격 증명과 만료되지 않는 자격 증명 모두에 사용되며 `server.adobe.io` 형식을 사용합니다. **[!UICONTROL 만료 자격 증명]** 섹션의 [!UICONTROL 호스트]에서 값을 찾았습니다.</ul></li> | `acme.platform.adobe.io` |
+| **포트** | 연결 중인 서버/호스트의 포트입니다. <ul><li>이 값은 만료되는 자격 증명과 만료되지 않는 자격 증명 모두에 사용되며 **[!UICONTROL 만료되는 자격 증명]** 섹션의 [!UICONTROL 포트]에서 찾을 수 있습니다.</ul></li> | `80` |
+| **데이터베이스** | 연결 중인 데이터베이스입니다. <ul><li>이 값은 만료되는 자격 증명과 만료되지 않는 자격 증명 모두에 사용되며 **[!UICONTROL 만료되는 자격 증명]** 섹션의 [!UICONTROL 데이터베이스]에 있습니다. </ul></li> | `prod:all` |
 | **사용자 이름** | 외부 클라이언트에 연결하는 사용자의 사용자 이름입니다. <ul><li>이 값은 만료되는 자격 증명과 만료되지 않는 자격 증명 모두에 사용됩니다. `@AdobeOrg` 앞에 영숫자 문자열 형식을 사용합니다. 이 값은 **[!UICONTROL 사용자 이름]**&#x200B;에 있습니다.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
-| **암호** | 외부 클라이언트에 연결하는 사용자의 암호입니다. <ul><li>만료되는 자격 증명을 사용하는 경우 [!UICONTROL 만료되는 자격 증명] 섹션의 **[!UICONTROL 암호]**&#x200B;에서 찾을 수 있습니다.</li><li>만료되지 않는 자격 증명을 사용하는 경우 이 값은 technicalAccountID의 연결된 인수와 구성 JSON 파일에서 가져온 자격 증명입니다. 암호 값은 `{technicalAccountId}:{credential}` 형식을 사용합니다.</li></ul> | <ul><li>만료될 자격 증명 암호는 1,000자 이상의 영숫자 문자열입니다. 예시는 제공되지 않을 것입니다.</li><li>만료되지 않는 자격 증명 암호는 다음과 같습니다. <br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+| **암호** | 외부 클라이언트에 연결하는 사용자의 암호입니다. <ul><li>만료되는 자격 증명을 사용하는 경우 **[!UICONTROL 만료되는 자격 증명]** 섹션의 [!UICONTROL 암호]에서 찾을 수 있습니다.</li><li>만료되지 않는 자격 증명을 사용하는 경우 이 값은 technicalAccountID의 연결된 인수와 구성 JSON 파일에서 가져온 자격 증명입니다. 암호 값은 `{technicalAccountId}:{credential}` 형식을 사용합니다.</li></ul> | <ul><li>만료될 자격 증명 암호는 1,000자 이상의 영숫자 문자열입니다. 예시는 제공되지 않을 것입니다.</li><li>만료되지 않는 자격 증명 암호는 다음과 같습니다. <br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
 
 {style="table-layout:auto"}
 

@@ -2,9 +2,9 @@
 title: 쿼리 일정
 description: Adobe Experience Platform UI를 통해 예약된 쿼리 실행을 자동화하고, 쿼리 일정을 삭제 또는 비활성화하고, 사용 가능한 예약 옵션을 활용하는 방법을 알아봅니다.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04b804b81b605040c74db040bc5118e0392ddd32
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2181'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,24 @@ ht-degree: 0%
 >
 >이미 생성되어 저장된 질의에만 스케줄을 추가할 수 있습니다.
 
-예약된 쿼리가 [!UICONTROL 예약된 쿼리] 탭의 목록에 추가됩니다. 해당 작업 영역에서 UI를 통해 예약된 모든 쿼리 작업의 상태를 모니터링할 수 있습니다. [!UICONTROL 예약된 쿼리] 탭에서 쿼리 실행에 대한 중요한 정보를 찾아 경고를 구독할 수 있습니다. 실행 실패 시 사용 가능한 정보에는 상태, 일정 세부 정보 및 오류 메시지/코드가 포함됩니다. 자세한 내용은 [예약된 쿼리 모니터링 문서](./monitor-queries.md)를 참조하십시오.
+## 예약된 쿼리에 대한 계정 요구 사항 {#technical-account-user-requirements}
 
-이 워크플로우는 쿼리 서비스 UI의 예약 프로세스를 다룹니다. API를 사용하여 일정을 추가하는 방법에 대해 알아보려면 [예약된 쿼리 끝점 안내서](../api/scheduled-queries.md)를 읽어 보십시오.
+예약된 쿼리가 안정적으로 실행될 수 있도록 Adobe에서는 관리자가 예약된 쿼리를 만들기 위해 기술 계정(OAuth 서버 간 자격 증명 사용)을 프로비저닝할 것을 권장합니다. 예약된 쿼리는 개인 사용자 계정으로 만들 수도 있지만, 이 방법으로 만든 쿼리는 해당 사용자의 액세스가 제거되거나 비활성화되면 실행이 중지됩니다.
+
+기술 계정 설정 및 필수 권한 할당에 대한 자세한 내용은 [자격 증명 가이드 사전 요구 사항](./credentials.md#prerequisites) 및 [API 인증](../../landing/api-authentication.md)을 참조하십시오.
+
+기술 계정 만들기 및 구성에 대한 추가 지침은 다음을 참조하십시오.
+
+- [Developer Console 설정](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Adobe Developer Console을 구성하고 OAuth 자격 증명을 얻는 방법에 대한 단계별 지침입니다.
+- [전체 기술 계정 설정](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup): Adobe Experience Platform에서 기술 계정을 만들고 구성하기 위한 포괄적인 연습입니다.
+
+쿼리 서비스 UI만 사용하는 경우 필요한 권한이 있는지 확인하거나 기술 계정을 관리하는 관리자와 협력하십시오. 예약된 쿼리가 [!UICONTROL 예약된 쿼리] 탭의 목록에 추가되어 모든 예약된 쿼리 작업의 상태, 일정 세부 정보 및 오류 메시지를 모니터링하고 경고를 구독할 수 있습니다. 쿼리 모니터링 및 관리에 대한 자세한 내용은 [예약된 쿼리 모니터링 문서](./monitor-queries.md)를 참조하십시오.
+
+이 워크플로우는 쿼리 서비스 UI의 예약 프로세스를 다룹니다. API를 사용하여 일정을 추가하는 방법에 대해 알아보려면 [예약된 쿼리 끝점 안내서](../api/scheduled-queries.md)를 참조하세요.
+
+>[!NOTE]
+>
+>기술 계정을 사용하여 사용자가 조직을 떠나거나 역할이 변경된 경우에도 예약된 쿼리가 계속 실행되도록 합니다. 중단 없는 쿼리 자동화를 위해 가능한 한 기술 계정을 선택하십시오.
 
 ## 쿼리 일정 만들기 {#create-schedule}
 
@@ -163,7 +178,6 @@ CTAS/ITAS 일괄 처리 쿼리에 대해 쿼리 실행 수준에서 소비된 �
 >[!NOTE]
 >
 >시간 계산 데이터는 2024/08/15부터 사용할 수 있습니다. 이 날짜 이전의 데이터는 &#39;사용할 수 없음&#39;으로 표시됩니다.
-
 
 UI를 통해 모든 쿼리 작업의 상태를 모니터링하는 방법에 대한 자세한 내용은 [예약된 쿼리 모니터링 안내서](./monitor-queries.md#inline-actions)를 참조하십시오.
 
