@@ -25,8 +25,8 @@ ht-degree: 0%
 
 기술 계정 만들기 및 구성에 대한 추가 지침은 다음을 참조하십시오.
 
-- [Developer Console 설정](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Adobe Developer Console을 구성하고 OAuth 자격 증명을 얻는 방법에 대한 단계별 지침입니다.
-- [전체 기술 계정 설정](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup): Adobe Experience Platform에서 기술 계정을 만들고 구성하기 위한 포괄적인 연습입니다.
+- [Developer Console 설정](https://experienceleague.adobe.com/ko/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Adobe Developer Console을 구성하고 OAuth 자격 증명을 얻는 방법에 대한 단계별 지침입니다.
+- [전체 기술 계정 설정](https://experienceleague.adobe.com/ko/docs/platform-learn/tutorial-comprehensive-technical/setup): Adobe Experience Platform에서 기술 계정을 만들고 구성하기 위한 포괄적인 연습입니다.
 
 쿼리 서비스 UI만 사용하는 경우 필요한 권한이 있는지 확인하거나 기술 계정을 관리하는 관리자와 협력하십시오. 예약된 쿼리가 [!UICONTROL 예약된 쿼리] 탭의 목록에 추가되어 모든 예약된 쿼리 작업의 상태, 일정 세부 정보 및 오류 메시지를 모니터링하고 경고를 구독할 수 있습니다. 쿼리 모니터링 및 관리에 대한 자세한 내용은 [예약된 쿼리 모니터링 문서](./monitor-queries.md)를 참조하십시오.
 
