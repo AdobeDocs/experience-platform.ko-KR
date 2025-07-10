@@ -3,9 +3,9 @@ title: Adobe Experience Platform 릴리스 정보 2025년 6월
 description: Adobe Experience Platform의 2025년 6월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: c78dc0e83976499403e066b314a0889df803c976
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1665'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
