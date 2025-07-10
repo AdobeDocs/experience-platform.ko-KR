@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 7be3e6c143d792113a0d623e2d12d6710a3be70c
+source-git-commit: 152ec3ca36a69bea79b8ed3c33dd21bd9479171f
 workflow-type: tm+mt
-source-wordcount: '5195'
-ht-degree: 11%
+source-wordcount: '5128'
+ht-degree: 10%
 
 ---
 
@@ -50,15 +50,15 @@ ht-degree: 11%
 >
 >요약 데이터는 속성이 다음 기준을 충족하면 나타납니다. 속성의 모든 값은 100자 이하이며 속성에 대한 고유 값은 3000자 이하여야 합니다.
 >
->그러나 관계를 통해 프로필에 연결된 다중 엔터티 데이터인 경우 특성에는 요약 데이터가 **없습니다**. 예를 들어 사용자 지정 스키마 `Vehicle`이(가) 있는 경우 `Vehicle` 스키마 내의 **속성**&#x200B;에 요약 데이터가 **없음**&#x200B;됩니다.
+>그러나 관계를 통해 프로필에 연결된 다중 엔터티 데이터인 경우 특성에는 요약 데이터가 **없습니다**. 예를 들어 사용자 지정 스키마 `Vehicle`이(가) 있는 경우 **스키마 내의**&#x200B;속성`Vehicle`에 요약 데이터가 **없음**&#x200B;됩니다.
 
-이러한 기본 구성표는 [!DNL Segment Builder] 작업 영역의 왼쪽에 있는 **[!UICONTROL 필드]** 섹션에서 확인할 수 있습니다. **[!UICONTROL 필드]**&#x200B;에는 각 기본 빌딩 블록에 대한 탭이 있습니다. &quot;[!UICONTROL 특성]&quot;, &quot;[!UICONTROL 이벤트]&quot; 및 &quot;[!UICONTROL 대상]&quot;.
+이러한 기본 구성표는 **[!UICONTROL 작업 영역의 왼쪽에 있는]**&#x200B;필드[!DNL Segment Builder] 섹션에서 확인할 수 있습니다. **[!UICONTROL 필드]**&#x200B;에는 각 기본 빌딩 블록에 대한 탭이 있습니다. &quot;[!UICONTROL 특성]&quot;, &quot;[!UICONTROL 이벤트]&quot; 및 &quot;[!UICONTROL 대상]&quot;.
 
 ![세그먼트 빌더의 필드 섹션이 강조 표시됩니다.](../images/ui/segment-builder/segment-fields.png)
 
 ### 속성
 
-**[!UICONTROL 특성]** 탭에서 [!DNL XDM Individual Profile] 클래스에 속하는 [!DNL Profile] 특성을 찾아볼 수 있습니다. 각 폴더를 확장하여 추가 속성을 표시할 수 있습니다. 여기서 각 속성은 작업 영역 중앙의 규칙 빌더 캔버스로 드래그할 수 있는 타일입니다. [규칙 빌더 캔버스](#rule-builder-canvas)에 대해서는 이 안내서의 뒷부분에서 자세히 설명합니다.
+**[!UICONTROL 특성]** 탭에서 [!DNL Profile] 클래스에 속하는 [!DNL XDM Individual Profile] 특성을 찾아볼 수 있습니다. 각 폴더를 확장하여 추가 속성을 표시할 수 있습니다. 여기서 각 속성은 작업 영역 중앙의 규칙 빌더 캔버스로 드래그할 수 있는 타일입니다. [규칙 빌더 캔버스](#rule-builder-canvas)에 대해서는 이 안내서의 뒷부분에서 자세히 설명합니다.
 
 ![세그먼트 빌더 필드의 특성 섹션이 강조 표시됩니다.](../images/ui/segment-builder/attributes.png)
 
@@ -66,7 +66,7 @@ ht-degree: 11%
 
 **[!UICONTROL 이벤트]** 탭에서는 [!DNL XDM ExperienceEvent] 데이터 요소를 사용하여 발생한 이벤트 또는 작업을 기반으로 대상을 만들 수 있습니다. **[!UICONTROL 이벤트]** 탭에서도 이벤트 유형을 찾을 수 있습니다. 이벤트 유형은 세그먼트 정의를 더 빨리 만들 수 있도록 일반적으로 사용되는 이벤트의 컬렉션입니다.
 
-[!DNL ExperienceEvent] 요소를 검색할 수 있을 뿐만 아니라 이벤트 유형을 검색할 수도 있습니다. 이벤트 유형은 올바른 이벤트를 찾기 위해 [!DNL XDM ExperienceEvent] 클래스를 검색하지 않고도 [!DNL ExperienceEvents]과(와) 동일한 코딩 논리를 사용합니다. 예를 들어 검색 창을 사용하여 &quot;장바구니&quot;를 검색하면 이벤트 유형 &quot;[!UICONTROL AddCart]&quot; 및 &quot;[!UICONTROL RemoveCart]&quot;이 반환됩니다. 이 유형은 세그먼트 정의를 작성할 때 매우 일반적으로 사용되는 두 가지 장바구니 작업입니다.
+[!DNL ExperienceEvent] 요소를 검색할 수 있을 뿐만 아니라 이벤트 유형을 검색할 수도 있습니다. 이벤트 유형은 올바른 이벤트를 찾기 위해 [!DNL ExperienceEvents] 클래스를 검색하지 않고도 [!DNL XDM ExperienceEvent]과(와) 동일한 코딩 논리를 사용합니다. 예를 들어 검색 창을 사용하여 &quot;장바구니&quot;를 검색하면 이벤트 유형 &quot;[!UICONTROL AddCart]&quot; 및 &quot;[!UICONTROL RemoveCart]&quot;이 반환됩니다. 이 유형은 세그먼트 정의를 작성할 때 매우 일반적으로 사용되는 두 가지 장바구니 작업입니다.
 
 [Lucene의 검색 구문](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)을 사용하는 검색 창에 구성 요소의 이름을 입력하여 모든 유형의 구성 요소를 검색할 수 있습니다. 전체 단어를 입력하면 검색 결과가 채워지기 시작합니다. 예를 들어 XDM 필드 `ExperienceEvent.commerce.productViews`을(를) 기반으로 규칙을 만들려면 검색 필드에 &quot;제품 보기&quot;를 입력하십시오. &quot;product&quot;라는 단어를 입력한 후에는 검색 결과가 나타나기 시작합니다. 각 결과에는 해당 결과가 속한 객체 계층 구조가 포함됩니다.
 
@@ -78,7 +78,7 @@ ht-degree: 11%
 
 ![세그먼트 빌더 UI의 이벤트 섹션이 강조 표시됩니다.](../images/ui/segment-builder/events.png)
 
-기본적으로 데이터 저장소에서 채워진 스키마 필드만 표시됩니다. 여기에는 &quot;[!UICONTROL 이벤트 유형]&quot;이(가) 포함됩니다. &quot;[!UICONTROL 이벤트 유형]&quot; 목록이 표시되지 않거나 &quot;[!UICONTROL 모두]&quot;을(를) &quot;[!UICONTROL 이벤트 유형]&quot;(으)로만 선택할 수 있는 경우 **[!UICONTROL 필드]** 옆의 **톱니바퀴 아이콘**&#x200B;을(를) 선택한 다음 **[!UICONTROL 사용 가능한 필드]**&#x200B;에서 **[!UICONTROL 전체 XDM 스키마 표시]**&#x200B;를 선택합니다. **톱니바퀴 아이콘**&#x200B;을 다시 선택하여 **[!UICONTROL 필드]** 탭으로 돌아가십시오. 이제 데이터 포함 여부에 관계없이 여러 &quot;[!UICONTROL 이벤트 유형]&quot; 및 스키마 필드를 볼 수 있습니다.
+기본적으로 데이터 저장소에서 채워진 스키마 필드만 표시됩니다. 여기에는 &quot;[!UICONTROL 이벤트 유형]&quot;이(가) 포함됩니다. &quot;[!UICONTROL 이벤트 유형]&quot; 목록이 표시되지 않거나 &quot;[!UICONTROL 모두]&quot;을(를) &quot;[!UICONTROL 이벤트 유형]&quot;(으)로만 선택할 수 있는 경우 **필드** 옆의 **[!UICONTROL 톱니바퀴 아이콘]**&#x200B;을(를) 선택한 다음 **[!UICONTROL 사용 가능한 필드]**&#x200B;에서 **[!UICONTROL 전체 XDM 스키마 표시]**&#x200B;를 선택합니다. **톱니바퀴 아이콘**&#x200B;을 다시 선택하여 **[!UICONTROL 필드]** 탭으로 돌아가십시오. 이제 데이터 포함 여부에 관계없이 여러 &quot;[!UICONTROL 이벤트 유형]&quot; 및 스키마 필드를 볼 수 있습니다.
 
 ![데이터가 있는 필드만 표시하거나 모든 XDM 필드를 표시할 수 있는 라디오 단추가 강조 표시됩니다.](../images/ui/segment-builder/show-populated.png)
 
@@ -192,7 +192,7 @@ ht-degree: 11%
 
 **[!UICONTROL 대상]** 탭에서 대상을 규칙 빌더 캔버스로 끌어다 놓아 새 세그먼트 정의에서 대상 멤버십을 참조할 수 있습니다. 이렇게 하면 새 세그먼트 정의 규칙에 속성으로 대상 멤버십을 포함하거나 제외할 수 있습니다.
 
-[!DNL Segment Builder]을(를) 사용하여 만든 [!DNL Experience Platform]개의 대상에 대해 해당 대상에 대한 세그먼트 정의에 사용된 규칙 세트로 대상을 변환할 수 있는 옵션이 제공됩니다. 이 변환은 규칙 논리의 사본을 만들어 원본 세그먼트 정의에 영향을 주지 않고 수정할 수 있습니다. 세그먼트 정의를 규칙 논리로 변환하기 전에 최근 변경 사항을 저장했는지 확인하십시오.
+[!DNL Experience Platform]을(를) 사용하여 만든 [!DNL Segment Builder]개의 대상에 대해 해당 대상에 대한 세그먼트 정의에 사용된 규칙 세트로 대상을 변환할 수 있는 옵션이 제공됩니다. 이 변환은 규칙 논리의 사본을 만들어 원본 세그먼트 정의에 영향을 주지 않고 수정할 수 있습니다. 세그먼트 정의를 규칙 논리로 변환하기 전에 최근 변경 사항을 저장했는지 확인하십시오.
 
 >[!NOTE]
 >
@@ -324,7 +324,7 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 >[!NOTE]
 >
 >&quot;After&quot; 시간 제한을 사용할 때 후자의 이벤트는 시간 제한 내에 나열된 시간보다 많이 발생할 수 있습니다. >
->&#x200B;>예를 들어, 페이지 보기 이벤트와 체크아웃 이벤트가 있고, 이 두 이벤트 사이에 &quot;1시간 후&quot; 시간 제한을 두는 경우, 페이지 보기 이벤트 2시간 후에 체크아웃 이벤트가 있는 세그먼트 정의가 유효합니다.
+>>예를 들어, 페이지 보기 이벤트와 체크아웃 이벤트가 있고, 이 두 이벤트 사이에 &quot;1시간 후&quot; 시간 제한을 두는 경우, 페이지 보기 이벤트 2시간 후에 체크아웃 이벤트가 있는 세그먼트 정의가 유효합니다.
 >
 >추가로, 이 두 시간 제약들은 서로 협력하여 사용될 수 있다.
 >
@@ -340,7 +340,7 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 
 ![컨테이너 추가 단추가 강조 표시되어 컨테이너를 첫 번째 컨테이너의 자식으로 추가할 수 있습니다.](../images/ui/segment-builder/add-container.png)
 
-새 컨테이너가 첫 번째 컨테이너의 하위 컨테이너로 표시되지만 컨테이너를 드래그 앤 이동하여 계층을 조정할 수 있습니다. 컨테이너의 기본 동작은 제공된 특성, 이벤트 또는 대상자를 &quot;[!UICONTROL 포함]&quot;하는 것입니다. 타일의 왼쪽 상단 모서리에서 **[!UICONTROL 포함]**&#x200B;을(를) 선택하고 &quot;[!UICONTROL 제외]&quot;을(를) 선택하여 컨테이너 기준과 일치하는 &quot;[!UICONTROL 제외]&quot; 프로필로 규칙을 설정할 수 있습니다.
+새 컨테이너가 첫 번째 컨테이너의 하위 컨테이너로 표시되지만 컨테이너를 드래그 앤 이동하여 계층을 조정할 수 있습니다. 컨테이너의 기본 동작은 제공된 특성, 이벤트 또는 대상자를 &quot;[!UICONTROL 포함]&quot;하는 것입니다. 타일의 왼쪽 상단 모서리에서 [!UICONTROL 포함]을(를) 선택하고 &quot;**[!UICONTROL 제외]**&quot;을(를) 선택하여 컨테이너 기준과 일치하는 &quot;[!UICONTROL 제외]&quot; 프로필로 규칙을 설정할 수 있습니다.
 
 하위 컨테이너에서 &quot;컨테이너 래핑 해제&quot;를 선택하여 하위 컨테이너를 추출하여 상위 컨테이너에 인라인으로 추가할 수도 있습니다. 이 옵션에 액세스하려면 하위 컨테이너의 오른쪽 위 모서리에서 생략 부호(...)를 선택합니다.
 
@@ -380,7 +380,7 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="예상치 새로 고침"
 >abstract="세그먼트 대상의 예상치를 새로 고쳐 제안된 세그먼트 대상에 적합한 프로필 개수를 미리 볼 수 있습니다. 당일 샘플 데이터의 샘플 크기를 사용하여 대상자 예상치를 생성합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=ko#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
@@ -390,7 +390,7 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="예상 프로필"
->abstract="예상 프로필은 세그먼트 정의 규칙에 적합한 샘플 작업을 기반으로 한 프로필의 대략적인 수를 나타냅니다. 즉, 샘플 데이터는 더 큰 프로필 집합에 투영되므로 실제 적격 프로필 수와 다를 수 있는 추정 수치가 도출됩니다. 예상 프로필 샘플의 신뢰 구간은 95%입니다. <br><br>이 숫자는 샘플 작업이 업데이트될 때 업데이트되는데, 이는 고객 데이터에 5%를 초과하는 변경 사항이 있거나 마지막 샘플 작업이 7일 이전에 수행된 경우입니다."
+>abstract="예상 프로필은 샘플 작업을 기반으로 세그먼트 정의의 규칙에 적합한 프로필의 대략적인 수를 나타냅니다."
 
 세그먼트 정의를 작성할 때 작업 영역의 오른쪽에 있는 **[!UICONTROL 대상 속성]** 섹션에 결과 세그먼트 정의의 크기 예상치가 표시되므로 대상 자체를 작성하기 전에 필요에 따라 세그먼트 정의를 조정할 수 있습니다.
 
@@ -400,7 +400,10 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 
 **[!UICONTROL 예상 프로필]**&#x200B;은(는) **샘플 작업**&#x200B;을(를) 기반으로 하여 **대략적인** 프로필 수를 나타냅니다. 즉, 샘플 데이터는 더 큰 프로필 집합에 투영되므로 실제 적격 프로필 수와 다를 수 있는 추정 수치가 도출됩니다. 추정된 프로필 샘플은 95% 신뢰 구간이 있다.
 
-이 숫자는 샘플 작업이 업데이트될 때 업데이트되며, 고객 데이터가 5% 이상 변경되었거나 마지막 샘플 작업이 7일 이상 오래된 경우 발생합니다.&quot;
+이 숫자는 다음 두 가지 시나리오에서 업데이트됩니다.
+
+1. 고객 데이터가 5% 이상 변경되었거나 마지막 샘플 작업이 7일 이상 지났습니다.
+2. 대상자의 규칙이 수정되거나 제거되었습니다.
 
 정보 버블을 선택하면 오류 임계값과 가장 최근 샘플 작업 시간이 제공됩니다.
 
@@ -424,7 +427,7 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 
 [!UICONTROL 평가 메서드 적격성] 팝오버가 나타납니다. 이 팝오버에는 사용 가능한 평가 방법인 일괄 처리, 스트리밍 및 에지가 표시됩니다. 팝오버는 적격 및 부적격 평가 방법을 보여 줍니다. 세그먼트 정의에 사용한 매개 변수에 따라 특정 평가 방법에 적합하지 않을 수 있습니다. 각 평가 방법의 요구 사항에 대한 자세한 내용은 [스트리밍 세분화](../methods/streaming-segmentation.md#query-types) 또는 [에지 세분화](../methods/edge-segmentation.md#query-types) 개요를 참조하십시오.
 
-세그먼트 정의를 작성한 후 세그먼트 정의의 평가 방법을 변경할 수도 있습니다. 평가 방법을 Edge 또는 스트리밍에서 일괄 처리로 변경하면 **다시 Edge 또는 스트리밍으로 변경할 수 없습니다**. 평가 메서드에 대한 변경 내용은 팝오버에서 **[!UICONTROL 저장]**&#x200B;을(를) 선택하면 **만**&#x200B;적용됩니다. 대화 상자를 취소하면 원래 평가 메서드가 **유지**&#x200B;됩니다.
+세그먼트 정의를 작성한 후 세그먼트 정의의 평가 방법을 변경할 수도 있습니다. 평가 방법을 Edge 또는 스트리밍에서 일괄 처리로 변경하면 **다시 Edge 또는 스트리밍으로 변경할 수 없습니다**. 평가 메서드에 대한 변경 내용은 팝오버에서 **저장**&#x200B;을(를) 선택하면 **[!UICONTROL 만]**&#x200B;적용됩니다. 대화 상자를 취소하면 원래 평가 메서드가 **유지**&#x200B;됩니다.
 
 ![평가 방법 자격 팝업이 나타납니다. 세그먼트 정의에 적합한 평가 방법과 적합하지 않은 방법이 표시됩니다.](../images/ui/segment-builder/select-evaluation-method.png)
 
