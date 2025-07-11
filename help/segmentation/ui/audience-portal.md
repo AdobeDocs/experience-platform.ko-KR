@@ -5,7 +5,7 @@ exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
 source-git-commit: c8befc7379da491f6de78a89c9f14a0b123b3fb8
 workflow-type: tm+mt
 source-wordcount: '4494'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -102,7 +102,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 | ----- | ----------- |
 | [!UICONTROL 이름] | 대상자의 이름입니다. |
 | [!UICONTROL 프로필 개수] | 대상자에 적합한 총 프로필 수입니다. |
-| [!UICONTROL Origin] | 대상의 기원입니다. 이는 대상자가 어디에서 오는지 설명합니다. 가능한 값에는 [세그먼테이션 서비스](#segment-builder), [사용자 지정 업로드](#import-audience), [대상 구성](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/ko/docs/audience-manager/user-guide/aam-home), [유사 대상](../types/lookalike-audiences.md), [페더레이션 대상 구성](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/cja-overview/cja-overview), [데이터 Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview) 및 [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)이 포함됩니다. |
+| [!UICONTROL Origin] | 대상의 기원입니다. 이는 대상자가 어디에서 오는지 설명합니다. 가능한 값에는 [세그먼테이션 서비스](#segment-builder), [사용자 지정 업로드](#import-audience), [대상 구성](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [유사 대상](../types/lookalike-audiences.md), [페더레이션 대상 구성](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [데이터 Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview) 및 [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)이 포함됩니다. |
 | [!UICONTROL 라이프사이클 상태] | 대상의 상태입니다. 이 필드에 사용할 수 있는 값은 `Draft`, `Inactive` 및 `Published`입니다. 다른 상태의 의미와 대상을 다른 라이프사이클 상태로 이동하는 방법 등 라이프사이클 상태에 대한 자세한 내용은 세분화 FAQ[의 ](../faq.md#lifecycle-status)라이프사이클 상태 섹션을 참조하십시오. |
 | [!UICONTROL 업데이트 주기] | 대상자의 데이터가 업데이트되는 빈도를 나타내는 값입니다. 이 필드에 사용할 수 있는 값에는 [!UICONTROL 일괄 처리], [!UICONTROL 스트리밍], [!UICONTROL Edge] 및 [!UICONTROL 예약되지 않음]이 포함됩니다. |
 | [!UICONTROL 마지막으로 업데이트한 사람] | 대상자를 마지막으로 업데이트한 사람의 이름입니다. |
@@ -138,7 +138,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 ![검색 창이 강조 표시되어 있습니다.](../images/ui/audience-portal/browse-audience-search.png)
 
-지원되는 기능을 포함하여 [!DNL Unified Search]에 대한 자세한 내용은 [통합 검색 설명서](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html?lang=ko)를 참조하십시오.
+지원되는 기능을 포함하여 [!DNL Unified Search]에 대한 자세한 내용은 [통합 검색 설명서](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html)를 참조하십시오.
 
 #### 태그 {#tags}
 
@@ -155,7 +155,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 | 분류됨 | 조직의 관리자가 만들고 관리하는 태그입니다. |
 | 미분류 | [!UICONTROL 태그 관리] 팝오버 내에 만들어진 태그입니다. 누구나 이러한 유형의 태그를 만들거나 관리할 수 있습니다. |
 
-![태그 관리[!UICONTROL &#x200B; 팝오버가 표시됩니다. &#x200B;] 범주화되거나 분류되지 않은 항목을 선택하는 옵션이 강조 표시됩니다.](../images/ui/audience-portal/create-tag.png)
+![태그 관리[!UICONTROL  팝오버가 표시됩니다. ] 범주화되거나 분류되지 않은 항목을 선택하는 옵션이 강조 표시됩니다.](../images/ui/audience-portal/create-tag.png)
 
 대상자에 첨부할 태그를 모두 추가한 후 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
@@ -203,7 +203,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 | 필터 | 설명 |
 | ------ | ----------- |
-| [!UICONTROL Origin] | 대상자의 출처를 기준으로 필터링할 수 있습니다. 가능한 값에는 [세그먼테이션 서비스](#segment-builder), [사용자 지정 업로드](#import-audience), [대상 구성](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/ko/docs/audience-manager/user-guide/aam-home), [유사 대상](../types/lookalike-audiences.md), [페더레이션 대상 구성](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/cja-overview/cja-overview), [데이터 Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview) 및 [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)이 포함됩니다. |
+| [!UICONTROL Origin] | 대상자의 출처를 기준으로 필터링할 수 있습니다. 가능한 값에는 [세그먼테이션 서비스](#segment-builder), [사용자 지정 업로드](#import-audience), [대상 구성](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [유사 대상](../types/lookalike-audiences.md), [페더레이션 대상 구성](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [데이터 Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview) 및 [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)이 포함됩니다. |
 | [!UICONTROL 임의 태그 있음] | 태그로 필터링할 수 있습니다. **[!UICONTROL 임의 태그 있음]**&#x200B;과 **[!UICONTROL 모든 태그 있음]** 중에서 선택할 수 있습니다. **[!UICONTROL 임의 태그 있음]**&#x200B;을 선택하면 필터링된 대상자에는 추가한 태그 중 **임의**&#x200B;이 포함됩니다. **[!UICONTROL 모든 태그 있음]**&#x200B;을 선택한 경우 필터링된 대상자에는 추가한 태그 중 **모두**&#x200B;을(를) 포함해야 합니다. |
 | [!UICONTROL 라이프사이클 상태] | 대상자의 라이프사이클 상태에 따라 필터링할 수 있습니다. 사용 가능한 옵션에는 [!UICONTROL 삭제됨], [!UICONTROL 초안], [!UICONTROL 비활성] 및 [!UICONTROL 게시됨]이 있습니다. |
 | [!UICONTROL 업데이트 주기] | 대상자의 업데이트 빈도(평가 방법)를 기준으로 필터링할 수 있습니다. 사용 가능한 옵션에는 [!UICONTROL 일괄 처리], [!UICONTROL 스트리밍] 및 [!UICONTROL Edge]이 있습니다. |
@@ -407,7 +407,7 @@ Data Distiller에 대한 자세한 내용은 [SQL 안내서를 사용하여 대�
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_importaudience_dataexpiration"
 >title="데이터 만료"
->abstract="대상자 멤버십이 만료되는 일 수입니다. 이 값은 1일에서 180일까지 설정할 수 있습니다."
+>abstract="대상자 멤버십이 만료되는 기간(일)입니다. 이 값은 1일부터 180일까지 설정할 수 있습니다."
 
 >[!IMPORTANT]
 >
@@ -419,7 +419,7 @@ Data Distiller에 대한 자세한 내용은 [SQL 안내서를 사용하여 대�
 
 **[!UICONTROL 대상 CSV 가져오기]** 워크플로가 나타납니다. 외부에서 생성된 대상자로 가져올 CSV 파일을 선택할 수 있습니다.
 
-![대상 CSV 가져오기[!UICONTROL &#x200B; 워크플로우에서 &#x200B;]파일 드래그 앤 드롭[!UICONTROL &#x200B; 상자가 강조 표시되어 외부에서 생성된 대상을 업로드할 수 있는 위치를 표시합니다.]](../images/ui/audience-portal/import-audience-csv.png)
+![대상 CSV 가져오기[!UICONTROL  워크플로우에서 ]파일 드래그 앤 드롭[!UICONTROL  상자가 강조 표시되어 외부에서 생성된 대상을 업로드할 수 있는 위치를 표시합니다.]](../images/ui/audience-portal/import-audience-csv.png)
 
 >[!NOTE]
 >
@@ -437,7 +437,7 @@ Data Distiller에 대한 자세한 내용은 [SQL 안내서를 사용하여 대�
 
 외부에서 생성된 대상자를 가져올 때 열 중 하나를 기본 ID 필드로 선택하고 네임스페이스 값을 지정해야 합니다. 나머지 필드는 모두 **페이로드 특성**(으)로 간주됩니다. 이러한 특성은 개인화를 위해 이 대상자와 연결되어야 하므로 **비지속적**&#x200B;으로 간주되며 프로필에 **연결되지 않음**&#x200B;입니다.
 
-![대상자 세부 정보[!UICONTROL &#x200B; 페이지가 표시됩니다.]](../images/ui/audience-portal/import-audience-audience-details.png)
+![대상자 세부 정보[!UICONTROL  페이지가 표시됩니다.]](../images/ui/audience-portal/import-audience-audience-details.png)
 
 외부 ID 제공, 병합 정책 정의, 열 데이터 유형 편집 또는 사용자 지정 데이터 만료 적용 등 선택적으로 외부에서 생성된 대상자에 추가 세부 정보를 추가할 수도 있습니다.
 
@@ -458,7 +458,7 @@ Data Distiller에 대한 자세한 내용은 [SQL 안내서를 사용하여 대�
 
 대상자 세부 정보를 입력한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
 
-![다음[!UICONTROL &#x200B; 단추가 &#x200B;]대상자 세부 정보[!UICONTROL &#x200B; 페이지에서 강조 표시됩니다.]](../images/ui/audience-portal/import-audience-filled-details.png)
+![다음[!UICONTROL  단추가 ]대상자 세부 정보[!UICONTROL  페이지에서 강조 표시됩니다.]](../images/ui/audience-portal/import-audience-filled-details.png)
 
 **[!UICONTROL 검토]** 페이지가 표시됩니다. 새로 가져온 외부 생성 대상자의 세부 사항을 검토할 수 있습니다.
 
