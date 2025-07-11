@@ -1,9 +1,9 @@
 ---
 keywords: RTCDP;CDP;Real-Time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;cdp;rtcdp
 title: Real-Time Customer Data Platform B2B edition의 사용 사례 예
-description: 이 샘플 시나리오는 Adobe Real-Time Customer Data Platform B2B 에디션 구현 구성에 대한 예제를 제공합니다.
+description: 이 샘플 시나리오는 Adobe Real-Time Customer Data Platform B2B Edition 구현 구성에 대한 예제를 제공합니다.
 feature: Get Started, Use Cases, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -20,7 +20,7 @@ Real-Time Customer Data Platform B2B edition은 기존 Real-Time CDP 및 Adobe E
 - 관련 엔티티의 속성을 기반으로 대상을 세그먼트화합니다. 여기에는 계정, 영업 기회, 캠페인 및 마케팅 목록이 포함됩니다. 대상은 더 이상 개인 속성 및 경험 이벤트에만 국한되지 않습니다. B2B 관련 대상을 만드는 방법에 대한 자세한 예는 [B2B 세그멘테이션 설명서](./segmentation/b2b.md)를 참조하십시오.
 - 여러 계정과 관련된 한 사람의 사용 사례를 기본적으로 지원합니다.
 
-## 활용 사례
+## 사용 사례
 
 기술기업 보데아는 신제품을 보유하고 있으며 이메일과 링크드인 광고 캠페인으로 동시에 고객을 공략하고자 한다. Bodea는 마케팅 캠페인의 효율성을 극대화하기 위해 이전에 자사 제품에 100만 달러 이상을 소비하고 지난 달 새 제품 페이지를 방문한 기존 계정과 관련된 사람들을 타겟팅하려고 합니다.
 
