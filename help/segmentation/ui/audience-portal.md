@@ -155,7 +155,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 | 분류됨 | 조직의 관리자가 만들고 관리하는 태그입니다. |
 | 미분류 | [!UICONTROL 태그 관리] 팝오버 내에 만들어진 태그입니다. 누구나 이러한 유형의 태그를 만들거나 관리할 수 있습니다. |
 
-![태그 관리[!UICONTROL  팝오버가 표시됩니다. ] 범주화되거나 분류되지 않은 항목을 선택하는 옵션이 강조 표시됩니다.](../images/ui/audience-portal/create-tag.png)
+![태그 관리[!UICONTROL &#x200B; 팝오버가 표시됩니다. &#x200B;] 범주화되거나 분류되지 않은 항목을 선택하는 옵션이 강조 표시됩니다.](../images/ui/audience-portal/create-tag.png)
 
 대상자에 첨부할 태그를 모두 추가한 후 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
@@ -419,7 +419,7 @@ Data Distiller에 대한 자세한 내용은 [SQL 안내서를 사용하여 대�
 
 **[!UICONTROL 대상 CSV 가져오기]** 워크플로가 나타납니다. 외부에서 생성된 대상자로 가져올 CSV 파일을 선택할 수 있습니다.
 
-![대상 CSV 가져오기[!UICONTROL  워크플로우에서 ]파일 드래그 앤 드롭[!UICONTROL  상자가 강조 표시되어 외부에서 생성된 대상을 업로드할 수 있는 위치를 표시합니다.]](../images/ui/audience-portal/import-audience-csv.png)
+![대상 CSV 가져오기[!UICONTROL &#x200B; 워크플로우에서 &#x200B;]파일 드래그 앤 드롭[!UICONTROL &#x200B; 상자가 강조 표시되어 외부에서 생성된 대상을 업로드할 수 있는 위치를 표시합니다.]](../images/ui/audience-portal/import-audience-csv.png)
 
 >[!NOTE]
 >
@@ -437,7 +437,7 @@ Data Distiller에 대한 자세한 내용은 [SQL 안내서를 사용하여 대�
 
 외부에서 생성된 대상자를 가져올 때 열 중 하나를 기본 ID 필드로 선택하고 네임스페이스 값을 지정해야 합니다. 나머지 필드는 모두 **페이로드 특성**(으)로 간주됩니다. 이러한 특성은 개인화를 위해 이 대상자와 연결되어야 하므로 **비지속적**&#x200B;으로 간주되며 프로필에 **연결되지 않음**&#x200B;입니다.
 
-![대상자 세부 정보[!UICONTROL  페이지가 표시됩니다.]](../images/ui/audience-portal/import-audience-audience-details.png)
+![대상자 세부 정보[!UICONTROL &#x200B; 페이지가 표시됩니다.]](../images/ui/audience-portal/import-audience-audience-details.png)
 
 외부 ID 제공, 병합 정책 정의, 열 데이터 유형 편집 또는 사용자 지정 데이터 만료 적용 등 선택적으로 외부에서 생성된 대상자에 추가 세부 정보를 추가할 수도 있습니다.
 
@@ -458,7 +458,7 @@ Data Distiller에 대한 자세한 내용은 [SQL 안내서를 사용하여 대�
 
 대상자 세부 정보를 입력한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
 
-![다음[!UICONTROL  단추가 ]대상자 세부 정보[!UICONTROL  페이지에서 강조 표시됩니다.]](../images/ui/audience-portal/import-audience-filled-details.png)
+![다음[!UICONTROL &#x200B; 단추가 &#x200B;]대상자 세부 정보[!UICONTROL &#x200B; 페이지에서 강조 표시됩니다.]](../images/ui/audience-portal/import-audience-filled-details.png)
 
 **[!UICONTROL 검토]** 페이지가 표시됩니다. 새로 가져온 외부 생성 대상자의 세부 사항을 검토할 수 있습니다.
 
