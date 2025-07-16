@@ -4,10 +4,10 @@ title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 서드파티 HTTP 끝점으로 전송하여 자체 분석을 실행하거나 Experience Platform에서 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 678f80445212edc1edd3f4799999990ddcc2a039
+source-git-commit: b757f61a46930f08fe05be4c0f701113597567a4
 workflow-type: tm+mt
-source-wordcount: '2690'
-ht-degree: 8%
+source-wordcount: '2746'
+ht-degree: 7%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 HTTP API 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 [!DNL Adobe Experience Platform] 스트리밍 대상입니다.
 
-프로필 데이터를 HTTP 끝점으로 보내려면 먼저 [!DNL Adobe Experience Platform]에서 [대상에 연결](#connect-destination)해야 합니다.
+프로필 데이터를 HTTP 끝점으로 보내려면 먼저 [에서 ](#connect-destination)대상에 연결[!DNL Adobe Experience Platform]해야 합니다.
 
 ## 사용 사례 {#use-cases}
 
@@ -45,7 +45,7 @@ HTTP 끝점은 고객의 자체 시스템 또는 타사 솔루션이 될 수 있
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
+| ---------|----------|---------|
 | 내보내기 유형 | **[!UICONTROL 프로필 기반]** | [대상 활성화 워크플로](../../ui/activate-segment-streaming-destinations.md#mapping)의 매핑 화면에서 선택한 대로 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성)와 함께 세그먼트의 모든 구성원을 내보냅니다. |
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
@@ -58,6 +58,7 @@ HTTP API 대상을 사용하여 Experience Platform에서 데이터를 내보내
 * REST API를 지원하는 HTTP 끝점이 있어야 합니다.
 * HTTP 끝점은 Experience Platform 프로필 스키마를 지원해야 합니다. HTTP API 대상에서는 서드파티 페이로드 스키마로의 변환이 지원되지 않습니다. Experience Platform 출력 스키마의 예는 [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
 * HTTP 끝점은 헤더를 지원해야 합니다.
+* 적절한 데이터 처리를 보장하고 시간 초과 오류를 방지하기 위해 HTTP 끝점이 2초 이내에 응답해야 합니다.
 
 >[!TIP]
 >
@@ -69,7 +70,7 @@ HTTP API 대상을 사용하여 Experience Platform에서 데이터를 내보내
 
 [!DNL mTLS]은(는) 정보를 공유하는 두 당사자가 데이터를 공유하기 전에 자신의 소유자임을 확인하는 상호 인증을 위한 종단간 보안 방법입니다. [!DNL mTLS]은(는) [!DNL TLS]과(와) 비교하여 추가 단계를 포함합니다. 이 단계에서 서버는 클라이언트의 인증서를 요청하고 마지막에 확인합니다.
 
-[!DNL HTTP API] 대상에 [!DNL mTLS]을(를) 사용하려면 [대상 세부 정보](#destination-details) 페이지에 입력한 서버 주소에 [!DNL TLS] 프로토콜이 비활성화되어 있어야 하며 [!DNL mTLS]만 활성화되어야 합니다. 끝점에서 [!DNL TLS] 1.2 프로토콜이 여전히 활성화되어 있으면 클라이언트 인증을 위한 인증서가 전송되지 않습니다. 즉, [!DNL HTTP API] 대상에 [!DNL mTLS]을(를) 사용하려면 &quot;받는 중&quot; 서버 끝점이 [!DNL mTLS] 전용 연결 끝점이어야 합니다.
+[!DNL mTLS] 대상에 [!DNL HTTP API]을(를) 사용하려면 [대상 세부 정보](#destination-details) 페이지에 입력한 서버 주소에 [!DNL TLS] 프로토콜이 비활성화되어 있어야 하며 [!DNL mTLS]만 활성화되어야 합니다. 끝점에서 [!DNL TLS] 1.2 프로토콜이 여전히 활성화되어 있으면 클라이언트 인증을 위한 인증서가 전송되지 않습니다. 즉, [!DNL mTLS] 대상에 [!DNL HTTP API]을(를) 사용하려면 &quot;받는 중&quot; 서버 끝점이 [!DNL mTLS] 전용 연결 끝점이어야 합니다.
 
 ### 인증서 세부 정보 검색 및 검사 {#certificate}
 
@@ -87,7 +88,7 @@ HTTP API 대상은 HTTP 끝점에 대한 여러 인증 유형을 지원합니다
 
 * 인증이 없는 HTTP 끝점;
 * 전달자 토큰 인증;
-* 아래 예와 같이 HTTP 요청의 본문에 [!DNL client ID], [!DNL client secret] 및 [!DNL grant type]이(가) 있는 본문 형식의 [OAuth 2.0 클라이언트 자격 증명](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 인증.
+* 아래 예와 같이 HTTP 요청의 본문에 [, ](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 및 [!DNL client ID]이(가) 있는 본문 형식의 [!DNL client secret]OAuth 2.0 클라이언트 자격 증명[!DNL grant type] 인증.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -97,7 +98,7 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-* URL로 인코딩된 [!DNL client ID] 및 [!DNL client secret]이(가) 포함된 권한 부여 헤더가 있는 기본 권한 부여가 있는 [OAuth 2.0 클라이언트 자격 증명](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/).
+* URL로 인코딩된 [ 및 ](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)이(가) 포함된 권한 부여 헤더가 있는 기본 권한 부여가 있는 [!DNL client ID]OAuth 2.0 클라이언트 자격 증명[!DNL client secret].
 
 ```shell
 curl --location --request POST 'https://some-api.com/token' \
@@ -166,7 +167,7 @@ HTTP 끝점에 연결할 **[!UICONTROL OAuth 2 클라이언트 자격 증명]** 
 * **[!UICONTROL 클라이언트 암호]**: 시스템이 Adobe Experience Platform에 할당하는 [!DNL client secret].
 * **[!UICONTROL 클라이언트 자격 증명 유형]**: 끝점에서 지원하는 OAuth2 클라이언트 자격 증명 부여 유형을 선택하십시오.
    * **[!UICONTROL 본문이 인코딩됨]**: 이 경우 [!DNL client ID] 및 [!DNL client secret]은(는) 대상으로 전송된 *요청의 본문에 포함됨*. 예를들어 [지원되는 인증 형식](#supported-authentication-types) 섹션을 참조하십시오.
-   * **[!UICONTROL 기본 권한 부여]**: 이 경우 [!DNL client ID] 및 [!DNL client secret]은(는) base64로 인코딩되어 대상으로 전송된 후 `Authorization` 헤더에 *포함됩니다*. 예를들어 [지원되는 인증 형식](#supported-authentication-types) 섹션을 참조하십시오.
+   * **[!UICONTROL 기본 권한 부여]**: 이 경우 [!DNL client ID] 및 [!DNL client secret]은(는) base64로 인코딩되어 대상으로 전송된 후 *헤더에 `Authorization`포함됩니다*. 예를들어 [지원되는 인증 형식](#supported-authentication-types) 섹션을 참조하십시오.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -252,7 +253,7 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 ![HTTP API 대상 데이터 흐름의 예](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-대상으로의 프로필 내보내기는 *3개의 매핑된 세그먼트 중 하나를 사용하거나 종료하는 프로필에 의해 결정됩니다*. 그러나 데이터 내보내기에서 `segmentMembership` 개체(아래 [내보낸 데이터](#exported-data) 섹션 참조)에 매핑되지 않은 다른 대상이 나타날 수 있습니다. 해당 프로필이 해당 대상의 구성원이고 이러한 대상이 내보내기를 트리거한 대상과 동일한 병합 정책을 공유하는 경우. 프로필이 **Customer with DeLorean Cars** 세그먼트에 적합하지만 **Watched &quot;Back to the Future&quot;** movie 및 **Science fans** 세그먼트에 속하는 경우 **Customer with DeLorean Cars** 세그먼트와 동일한 병합 정책을 공유하는 경우 데이터 흐름에서 매핑되지 않았더라도 이 두 대상이 데이터 내보내기의 `segmentMembership` 개체에도 표시됩니다.
+대상으로의 프로필 내보내기는 *3개의 매핑된 세그먼트 중 하나를 사용하거나 종료하는 프로필에 의해 결정됩니다*. 그러나 데이터 내보내기에서 `segmentMembership` 개체(아래 [내보낸 데이터](#exported-data) 섹션 참조)에 매핑되지 않은 다른 대상이 나타날 수 있습니다. 해당 프로필이 해당 대상의 구성원이고 이러한 대상이 내보내기를 트리거한 대상과 동일한 병합 정책을 공유하는 경우. 프로필이 **Customer with DeLorean Cars** 세그먼트에 적합하지만 **Watched &quot;Back to the Future&quot;** movie 및 **Science fans** 세그먼트에 속하는 경우 `segmentMembership`Customer with DeLorean Cars **세그먼트와 동일한 병합 정책을 공유하는 경우 데이터 흐름에서 매핑되지 않았더라도 이 두 대상이 데이터 내보내기의** 개체에도 표시됩니다.
 
 프로필 속성 관점에서 위에 매핑된 네 개의 속성에 대한 변경 사항은 대상 내보내기를 결정하고 프로필에 있는 네 개의 매핑된 속성 중 하나는 데이터 내보내기에 표시됩니다.
 
@@ -363,3 +364,7 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 그 중 95% 동안 Experience Platform은 HTTP 대상에 대한 각 데이터 흐름의 초당 요청 수가 10,000개 미만인 상태로 성공적으로 전송된 메시지에 대해 10분 미만의 처리량 지연 시간을 제공하려고 합니다.
 
 HTTP API 대상에 대한 요청이 실패한 경우 Experience Platform은 실패한 요청을 저장하고 두 번 재시도하여 요청을 엔드포인트에 전송합니다.
+
+## 문제 해결 {#troubleshooting}
+
+신뢰할 수 있는 데이터 전달을 보장하고 시간 초과 문제를 방지하려면 HTTP 끝점이 [필수 구성 요소](#prerequisites) 섹션에 지정된 대로 Experience Platform 요청에 2초 이내에 응답하는지 확인하십시오. 시간이 오래 걸리는 응답은 시간 초과 오류를 발생시킵니다.
