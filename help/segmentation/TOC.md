@@ -5,9 +5,9 @@ breadcrumb-title: Segmentation Service 안내서
 user-guide-description: Adobe Experience Platform에서 생성한 세그먼트 정의 또는 외부 소스를 사용하여 실시간 고객 프로필 데이터에서 대상자를 빌드합니다.
 feature: Segments
 role: User
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '208'
 ht-degree: 40%
 
 ---
@@ -17,12 +17,14 @@ ht-degree: 40%
 
 - [세그먼테이션 서비스 개요](home.md)
 - [세분화 데이터 유형](data-types.md)
-- [세그먼테이션 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ko#segmentation-guardrails)
-- 세분화 API {#api}
+- [세그먼테이션 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- 세그먼테이션 API {#api}
    - [개요](api/overview.md)
    - [시작하기](api/getting-started.md)
+   - [대상 메타데이터 만들기](api/create-audience.md)
    - [대상자](api/audiences.md)
    - [내보내기 작업](api/export-jobs.md)
+   - [외부 대상](api/external-audiences.md)
    - [미리 보기 및 예상](api/previews-and-estimates.md)
    - [예약](api/schedules.md)
    - [세그먼트 정의](api/segment-definitions.md)
@@ -32,7 +34,7 @@ ht-degree: 40%
    - [개요](ui/overview.md)
    - [대상 대시보드](ui/audience-dashboard.md)
    - [대상자 포털](ui/audience-portal.md)
-   - [대상자 구성](ui/audience-composition.md)
+   - [대상자 컴포지션](ui/audience-composition.md)
    - [세그먼트 빌더](ui/segment-builder.md)
    - [페더레이션된 대상자 구성](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)
    - [연도 제한 무시 업데이트](ui/ignore-year.md)
@@ -40,13 +42,13 @@ ht-degree: 40%
    - 세그먼트 일치 {#segment-match}
       - [세그먼트 일치 개요](ui/segment-match/overview.md)
       - [문제 해결](ui/segment-match/troubleshooting.md)
-- 세분화 메서드 {#methods}
+- 세그먼테이션 메서드 {#methods}
    - [개요](methods/overview.md)
    - [배치 세분화](methods/batch-segmentation.md)
    - [스트리밍 세분화](methods/streaming-segmentation.md)
    - [에지 세분화](methods/edge-segmentation.md)
    - [유연한 대상 평가](methods/flexible-audience-evaluation.md)
-- 대상 유형 {#types}
+- 대상자 유형 {#types}
    - [개요](types/overview.md)
    - [사용자 대상](types/people-audiences.md)
    - [잠재 고객 대상자](types/prospect-audiences.md)
