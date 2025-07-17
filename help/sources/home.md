@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Source 커넥터 개요
 description: Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 2e4df13bae9f4afa24f761e650790704da44da90
+source-git-commit: 952fc2fac819c545304aca4505208fe59841097f
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 3%
+source-wordcount: '1640'
+ht-degree: 8%
 
 ---
 
@@ -26,19 +26,7 @@ Experience Platform을 사용하면 다양한 소스에서 수집한 데이터�
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-## 고급 엔터프라이즈 소스 {#advanced-enterprise-sources}
-
-다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
-
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE 스트리밍]{type=Positive}
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE 스트리밍]{type=Positive}
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE 스트리밍]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE 스트리밍]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE 일괄 처리]{type=Informative}
+>[!BEGINSHADEBOX]
 
 ## Adobe이 빌드하고 파트너가 빌드한 소스 {#adobe-and-partner-built-sources}
 
@@ -46,157 +34,239 @@ Experience Platform 소스 카탈로그의 일부 커넥터는 Adobe에서 빌�
 
 파트너가 작성 및 유지 관리하는 커넥터의 경우 파트너 팀이 커넥터 문제를 해결해야 할 수 있습니다(설명서 페이지의 메모에 제공된 연락 방법). Adobe 작성 및 유지 관리 커넥터와 관련된 문제는 Adobe 담당자 또는 고객 지원 센터에 문의하십시오.
 
-## 소스 카테고리
+>[!ENDSHADEBOX]
 
-Experience Platform의 소스는 다음 카테고리로 그룹화됩니다.
+## 소스 카탈로그
+
+소스 카탈로그에서 사용할 수 있는 모든 소스 목록은 다음 섹션을 참조하십시오.
 
 ### Adobe 애플리케이션 {#adobe-applications}
 
 Experience Platform을 사용하면 Adobe Analytics 및 Adobe Audience Manager을 포함한 다른 Adobe 애플리케이션에서 데이터를 수집할 수 있습니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [Adobe Audience Manager 소스 개요](connectors/adobe-applications/audience-manager.md)
+- [Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
    - [UI에서 Adobe Audience Manager 소스 연결 만들기](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Adobe Analytics 분류 데이터 소스 개요](connectors/adobe-applications/classifications.md)
+- [Adobe Analytics 분류 데이터](connectors/adobe-applications/classifications.md)
    - [UI에서 Adobe Analytics 분류 데이터 소스 연결 만들기](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Adobe Analytics 보고서 세트 데이터 소스 개요](connectors/adobe-applications/analytics.md)
+- [Adobe Analytics 보고서 세트 데이터](connectors/adobe-applications/analytics.md)
    - [UI에서 Adobe Analytics 소스 연결 만들기](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Adobe Campaign Managed Cloud Services 소스 개요](connectors/adobe-applications/campaign.md)
+- [Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
    - [UI에서 Adobe Campaign Managed Cloud Services 소스 연결 만들기](./tutorials/ui/create/adobe-applications/campaign.md)
-- [Adobe Commerce 소스 개요](connectors/adobe-applications/commerce.md)
-- [Adobe 데이터 수집 소스 개요](connectors/adobe-applications/data-collection.md)
+- [Adobe Commerce](connectors/adobe-applications/commerce.md)
+- [Adobe 데이터 수집](connectors/adobe-applications/data-collection.md)
    - [UI에서 고객 속성 소스 연결 만들기](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [[!DNL Marketo Engage] 소스 개요](connectors/adobe-applications/marketo/marketo.md)
+- [[!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
    - [UI에서  [!DNL Marketo Engage] 소스 연결 만들기](./tutorials/ui/create/adobe-applications/marketo.md)
    - [사용자 지정 활동 데이터에 대한  [!DNL Marketo Engage] 소스 연결 및 데이터 흐름 만들기](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 
+### 고급 엔터프라이즈 소스 {#advanced-enterprise-sources}
+
+다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
+
+| 소스 | 카테고리 | 수집 유형 | 클라우드 |
+| --- | --- | --- | --- |
+| [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) | 클라우드 스토리지 | 스트리밍 | Azure, AWS |
+| [[!DNL Amazon Redshift]](connectors/databases/redshift.md) | 데이터베이스 | 배치 | Azure, AWS |
+| [[!DNL Azure Databricks]](connectors/databases/databricks.md) | 데이터베이스 | 배치 | Azure |
+| [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | 클라우드 스토리지 | 스트리밍 | Azure, AWS |
+| [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | 데이터베이스 | 배치 | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | 데이터베이스 | 배치 | Azure |
+| [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | 클라우드 스토리지 | 스트리밍 | Azure |
+| [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | 데이터베이스 | 스트리밍 | Azure, AWS |
+| [[!DNL Snowflake]](connectors/databases/snowflake.md) | 데이터베이스 | 배치 | Azure, AWS |
+
+{style="table-layout:auto"}
+
 ### Advertising {#advertising}
 
-Experience Platform은 서드파티 광고 시스템에서 데이터를 수집하는 기능을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+다음 소스를 사용하여 광고 데이터를 Experience Platform으로 수집할 수 있습니다.
 
-- [Google 광고](connectors/advertising/ads.md) [!BADGE 일괄 처리]{type=Informative}
+| 소스 | 수집 유형 | 클라우드 |
+| --- | --- | --- |
+| [Google 광고](connectors/advertising/ads.md) | 배치 | Azure |
+
+{style="table-layout:auto"}
 
 ### Analytics {#analytics}
 
-Experience Platform은 타사 분석 플랫폼에서 데이터를 수집하는 기능을 지원합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
+다음 소스를 사용하여 분석 데이터를 Experience Platform으로 수집할 수 있습니다.
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE 스트리밍]{type=Positive}
-- [[!DNL RainFocus]](connectors/analytics/rainfocus.md) [!BADGE 스트리밍]{type=Positive}
+| 소스 | 수집 유형 | 클라우드 |
+| --- | --- | --- |
+| [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) | 배치 | Azure |
+| [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) | 스트리밍 | Azure |
+| [[!DNL RainFocus]](connectors/analytics/rainfocus.md) | 스트리밍 | Azure |
+
+{style="table-layout:auto"}
 
 ### 클라우드 스토리지 {#cloud-storage}
 
 클라우드 스토리지 소스는 다운로드, 포맷 또는 업로드 없이도 자신의 데이터를 Experience Platform으로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 사용자 인터페이스를 사용하여 소스 워크플로우에 통합됩니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE 일괄 처리]{type=Informative}
+다음 소스를 사용하여 클라우드 스토리지 데이터를 Experience Platform으로 수집할 수 있습니다.
+
+| 소스 | 수집 유형 | 클라우드 |
+| --- | --- | --- |
+| [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | 배치 | Azure |
+| [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) | 배치 | Azure |
+| [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | 배치 | Azure, AWS |
+| [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) | 배치 | Azure |
+| [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) | 배치 | Azure |
+| [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) | 배치 | Azure, AWS |
+| [[!DNL FTP]](connectors/cloud-storage/ftp.md) | 배치 | Azure |
+| [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) | 배치 | Azure |
+| [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) | 배치 | Azure |
+| [[!DNL SFTP]](connectors/cloud-storage/sftp.md) | 배치 | Azure |
+
+{style="table-layout:auto"}
 
 ### 동의 및 환경 설정 {#consent}
 
-Experience Platform은 서드파티 동의 및 환경 설정 관리 플랫폼에서 데이터를 수집할 수 있도록 지원합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
+다음 소스를 사용하여 Experience Platform에 동의 및 환경 설정 데이터를 수집할 수 있습니다.
 
-- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) [!BADGE 일괄 처리]{type=Informative}
+| 소스 | 수집 유형 | 클라우드 |
+| --- | --- | --- |
+| [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | 배치 | Azure |
+
+{style="table-layout:auto"}
 
 ### CRM(고객 관계 관리) {#customer-relationship-management}
 
 CRM 시스템은 고객 관계를 구축하고 충성도를 창출하며 고객 유지를 촉진하는 데 도움이 되는 데이터를 제공합니다. Experience Platform에서는 [!DNL Microsoft Dynamics 365] 및 [!DNL Salesforce]에서 CRM 데이터를 수집할 수 있습니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE 일괄 처리]{type=Informative}
+다음 소스를 사용하여 CRM 데이터를 Experience Platform으로 수집할 수 있습니다.
+
+| 소스 | 수집 유형 | 클라우드 |
+| --- | --- | --- |
+| [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) | 배치 | Azure |
+| [[!DNL Salesforce]](connectors/crm/salesforce.md) | 배치 | Azure, AWS |
+| [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) | 배치 | Azure |
+| [[!DNL Veeva CRM]](connectors/crm/veeva.md) | 배치 | Azure |
+
+{style="table-layout:auto"}
 
 ### 고객 성공 {#customer-success}
 
-Experience Platform은 타사 고객 성공 애플리케이션에서 데이터를 수집하는 데 대한 지원을 제공합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
+다음 소스를 사용하여 고객 성공 데이터를 Experience Platform으로 수집할 수 있습니다.
 
-- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE 일괄 처리]{type=Informative}
+| 소스 | 수집 유형 | 클라우드 |
+| --- | --- | --- |
+| [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) | 배치 | Azure |
+| [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) | 배치 | Azure |
+| [[!DNL Zendesk]](connectors/customer-success/zendesk.md) | 배치 | Azure |
+
+{style="table-layout:auto"}
 
 ### 데이터베이스 {#database}
 
 Experience Platform은 타사 데이터베이스에서 데이터를 수집하는 기능을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL MariaDB]](connectors/databases/mariadb.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE 일괄 처리]{type=Informative}
+다음 소스를 사용하여 데이터베이스의 데이터를 Experience Platform으로 수집할 수 있습니다.
+
+| 소스 | 수집 유형 | 클라우드 |
+| --- | --- | --- |
+| [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) | 배치 | Azure |
+| [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) | 배치 | Azure |
+| [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) | 배치 | Azure |
+| [[!DNL Azure Table Storage]](connectors/databases/ats.md) | 배치 | Azure |
+| [[!DNL GreenPlum]](connectors/databases/greenplum.md) | 배치 | Azure |
+| [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) | 배치 | Azure |
+| [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) | 배치 | Azure |
+| [[!DNL MariaDB]](connectors/databases/mariadb.md) | 배치 | Azure |
+| [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | 배치 | Azure |
+| [[!DNL MySQL]](connectors/databases/mysql.md) | 배치 | Azure, AWS |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | 배치 | Azure |
+| [[!DNL PostgreSQL]](connectors/databases/postgres.md) | 배치 | Azure, AWS |
+| [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | 배치 | Azure |
+
+{style="table-layout:auto"}
 
 ### 데이터 및 ID 파트너 {#data-partner}
 
-Experience Platform은 데이터 및 id 파트너로부터 데이터 수집을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+다음 소스를 사용하여 데이터 및 ID 파트너 데이터를 Experience Platform으로 수집할 수 있습니다.
 
-- [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE 일괄 처리]{type=Informative}
+| 소스 | 수집 유형 | 클라우드 |
+| --- | --- | --- |
+| [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) | 배치 | Azure |
+| [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) | 배치 | Azure |
+| [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) | 배치 | Azure |
+| [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) | 배치 | Azure |
+| [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) | 배치 | Azure |
+| [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) | 배치 | Azure |
+
+{style="table-layout:auto"}
 
 ### 전자 상거래 {#ecommerce}
 
-Experience Platform은 서드파티 eCommerce 시스템에서 데이터 수집을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+다음 소스를 사용하여 전자 상거래 데이터를 Experience Platform으로 수집할 수 있습니다.
 
-- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) [!BADGE 스트리밍]{type=Positive}
+| 소스 | 수집 유형 | 클라우드 |
+| --- | --- | --- |
+| [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) | 배치 | Azure |
+| [[!DNL Shopify]](connectors/ecommerce/shopify.md) | 배치 | Azure |
+| [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) | 스트리밍 | Azure |
+
+{style="table-layout:auto"}
 
 ### 로컬 시스템 {#local-system}
 
-Experience Platform은 로컬 시스템에서 데이터 수집을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+다음 소스를 사용하여 로컬 시스템에서 Experience Platform으로 데이터를 수집할 수 있습니다.
 
-- [로컬 파일 업로드](connectors/local-system/local-file-upload.md)
+| 소스 | 수집 유형 | 클라우드 |
+| --- | --- | --- |
+| [로컬 파일 업로드](connectors/local-system/local-file-upload.md) | 배치 | Azure |
+
+{style="table-layout:auto"}
 
 ### 마케팅 자동화 {#marketing-automation}
 
-Experience Platform은 서드파티 마케팅 자동화 시스템에서 데이터 수집을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+다음 소스를 사용하여 마케팅 자동화 데이터를 Experience Platform으로 수집할 수 있습니다.
 
-- [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE 스트리밍]{type=Positive}
-- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE 스트리밍]{type=Positive}
-- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE 스트리밍]{type=Positive}
-- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE 일괄 처리]{type=Informative}
+| 소스 | 수집 유형 | 클라우드 |
+| --- | --- | --- |
+| [[!DNL Braze]](connectors/marketing-automation/braze.md) | 스트리밍 | Azure |
+| [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) | 스트리밍 | Azure |
+| [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | 스트리밍 | Azure |
+| [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | 배치 | Azure |
+| [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | 배치 | Azure |
+| [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | 배치 | Azure |
+| [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | 배치 | Azure |
+| [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | 배치 | Azure |
+| [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | 배치 | Azure, AWS |
+
+{style="table-layout:auto"}
 
 ### 결제 {#payments}
 
-Experience Platform은 서드파티 결제 시스템에서 데이터를 수집할 수 있도록 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+다음 소스를 사용하여 결제 데이터를 Experience Platform으로 수집할 수 있습니다.
 
-- [[!DNL Square]](connectors/payments/square.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE 일괄 처리]{type=Informative}
+| 소스 | 수집 유형 | 클라우드 |
+| --- | --- | --- |
+| [[!DNL Square]](connectors/payments/square.md) | 배치 | Azure |
+| [[!DNL Stripe]](connectors/payments/stripe.md) | 배치 | Azure |
+
+{style="table-layout:auto"}
 
 ### 스트리밍 {#streaming}
 
-Experience Platform은 스트리밍 소스에서 데이터 수집을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+다음 소스를 사용하여 데이터를 Experience Platform으로 스트리밍할 수 있습니다.
 
-- [[!DNL HTTP API]](connectors/streaming/http.md) [!BADGE 스트리밍]{type=Positive}
+| 소스 | 수집 유형 | 클라우드 지원 |
+| --- | --- | --- |
+| [[!DNL HTTP API]](connectors/streaming/http.md) | 스트리밍 | Azure, AWS |
+
+{style="table-layout:auto"}
 
 ### 프로토콜 {#protocols}
 
-Experience Platform은 서드파티 프로토콜 시스템에서 데이터 수집을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+다음 소스를 사용하여 프로토콜 데이터를 Experience Platform으로 수집할 수 있습니다.
 
-- [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE 일괄 처리]{type=Informative}
+| 소스 | 수집 유형 | 클라우드 지원 |
+| --- | --- | --- |
+| [[!DNL Generic OData]](connectors/protocols/odata.md) | 배치 | Azure |
+| [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) | 배치 | Azure |
+
+{style="table-layout:auto"}
 
 ## 데이터 수집에서 소스에 대한 액세스 제어
 
