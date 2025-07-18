@@ -3,13 +3,13 @@ title: 외부 대상 API 엔드포인트
 description: 외부 대상 API를 사용하여 Adobe Experience Platform에서 외부 대상을 만들고, 업데이트하고, 활성화하고, 삭제하는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
+source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
 workflow-type: tm+mt
-source-wordcount: '2312'
+source-wordcount: '2405'
 ht-degree: 4%
 
 ---
-
 
 # 외부 대상 엔드포인트
 
@@ -381,7 +381,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ais/external-audience/60ccea95
 **API 형식**
 
 ```http
-POST /external-audience/{AUDIENCE_ID}/run
+POST /external-audience/{AUDIENCE_ID}/runs
 ```
 
 **요청**
@@ -391,7 +391,7 @@ POST /external-audience/{AUDIENCE_ID}/run
 +++ 대상자 수집을 시작하는 샘플 요청입니다.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/run \
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -442,6 +442,10 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 +++
 
 ## 특정 대상자 수집 상태 검색 {#retrieve-ingestion-status}
+
+>[!NOTE]
+>
+>다음 끝점을 사용하려면 외부 대상의 `audienceId`과(와) 수집 실행 ID의 `runId`이(가) 모두 있어야 합니다. `audienceId` 끝점에 대한 성공적인 호출에서 `GET /external-audiences/operations/{OPERATION_ID}`을(를) 가져올 수 있으며 `runId` 끝점에 대한 이전의 성공적인 호출에서 `POST /external-audience/{AUDIENCE_ID}/runs`을(를) 가져올 수 있습니다.
 
 대상과 실행 ID를 모두 제공하면서 다음 끝점에 GET 요청을 하여 대상 수집 상태를 검색할 수 있습니다.
 
@@ -514,9 +518,13 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 +++
 
-## 대상자 수집 상태 나열 {#list-ingestion-statuses}
+## 대상자 수집 실행 나열 {#list-ingestion-runs}
 
-대상 ID를 제공하는 동안 다음 끝점에 GET 요청을 하여 선택한 외부 대상에 대한 모든 수집 상태를 검색할 수 있습니다. 여러 매개 변수를 포함할 수 있으며 앰퍼샌드(`&`)로 구분됩니다.
+>[!NOTE]
+>
+>다음 끝점을 사용하려면 외부 대상의 `audienceId`이(가) 있어야 합니다. `audienceId` 끝점에 대한 성공적인 호출에서 `GET /external-audiences/operations/{OPERATION_ID}`을(를) 가져올 수 있습니다.
+
+대상 ID를 제공하는 동안 다음 엔드포인트에 GET 요청을 하여 선택한 외부 대상에 대한 모든 수집 실행을 검색할 수 있습니다. 여러 매개 변수를 포함할 수 있으며 앰퍼샌드(`&`)로 구분됩니다.
 
 **API 형식**
 
@@ -534,16 +542,16 @@ GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 | 매개변수 | 설명 | 예 |
 | --------- | ----------- | ------- |
 | `limit` | 응답에서 반환되는 최대 항목 수입니다. 이 값의 범위는 1에서 40까지입니다. 기본적으로 제한은 20으로 설정됩니다. | `limit=30` |
-| `sortBy` | 반환된 항목이 정렬되는 순서입니다. `name` 또는 `ingestionTime`별로 정렬할 수 있습니다. 또한 `-` 기호를 추가하여 **오름차순** 순서 대신 **내림차순** 순서로 정렬할 수 있습니다. 기본적으로 항목은 `ingestionTime`을(를) 기준으로 내림차순으로 정렬됩니다. | `sortBy=name` |
-| `property` | 표시되는 대상자 수집 실행을 결정하는 필터입니다. 다음 속성을 필터링할 수 있습니다. <ul><li>`name`: 대상 이름별로 필터링할 수 있습니다. 이 속성을 사용하는 경우 `=`, `!=`, `=contains` 또는 `!=contains`을(를) 사용하여 비교할 수 있습니다. </li><li>`ingestionTime`: 수집 시간별로 필터링할 수 있습니다. 이 속성을 사용하는 경우 `>=` 또는 `<=`을(를) 사용하여 비교할 수 있습니다.</li><li>`status`: 수집 실행 상태를 기준으로 필터링할 수 있습니다. 이 속성을 사용하는 경우 `=`, `!=`, `=contains` 또는 `!=contains`을(를) 사용하여 비교할 수 있습니다. </li></ul> | `property=ingestionTime<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `sortBy` | 반환된 항목이 정렬되는 순서입니다. `name` 또는 `createdAt`별로 정렬할 수 있습니다. 또한 `-` 기호를 추가하여 **오름차순** 순서 대신 **내림차순** 순서로 정렬할 수 있습니다. 기본적으로 항목은 `createdAt`을(를) 기준으로 내림차순으로 정렬됩니다. | `sortBy=name` |
+| `property` | 표시되는 대상자 수집 실행을 결정하는 필터입니다. 다음 속성을 필터링할 수 있습니다. <ul><li>`name`: 대상 이름별로 필터링할 수 있습니다. 이 속성을 사용하는 경우 `=`, `!=`, `=contains` 또는 `!=contains`을(를) 사용하여 비교할 수 있습니다. </li><li>`createdAt`: 수집 시간별로 필터링할 수 있습니다. 이 속성을 사용하는 경우 `>=` 또는 `<=`을(를) 사용하여 비교할 수 있습니다.</li><li>`status`: 수집 실행 상태를 기준으로 필터링할 수 있습니다. 이 속성을 사용하는 경우 `=`, `!=`, `=contains` 또는 `!=contains`을(를) 사용하여 비교할 수 있습니다. </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
 +++
 
 **요청**
 
-다음 요청은 외부 대상에 대한 모든 수집 상태를 검색합니다.
+다음 요청은 외부 대상에 대한 모든 수집 실행을 검색합니다.
 
-+++ 대상자 수집 상태 목록을 가져올 샘플 요청입니다.
++++ 대상자 수집 실행 목록을 가져오는 샘플 요청.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
@@ -557,9 +565,9 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **응답**
 
-성공적인 응답은 지정된 외부 대상에 대한 수집 상태 목록과 함께 HTTP 상태 200을 반환합니다.
+성공적인 응답은 지정된 외부 대상에 대한 수집 실행 목록과 함께 HTTP 상태 200을 반환합니다.
 
-+++ 대상자 수집 상태 목록을 검색할 때의 샘플 응답입니다.
++++ 대상자 목록을 검색할 때 샘플 응답이 실행됩니다.
 
 ```json
 {
@@ -573,19 +581,7 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1785678909,
-            "createdBy": "{USER_NAME}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_NAME}"
         },
         {
             "audienceName": "Sample external audience 2",
@@ -596,19 +592,7 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1749324248,
-            "createdBy": "{USER_ID}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_ID}"
         }
     ],
     "_page": {
@@ -627,6 +611,10 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 +++
 
 ## 외부 대상 삭제 {#delete-audience}
+
+>[!NOTE]
+>
+>다음 끝점을 사용하려면 외부 대상의 `audienceId`이(가) 있어야 합니다. `audienceId` 끝점에 대한 성공적인 호출에서 `GET /external-audiences/operations/{OPERATION_ID}`을(를) 가져올 수 있습니다.
 
 대상 ID를 제공하는 동안 다음 엔드포인트에 DELETE 요청을 하여 외부 대상을 삭제할 수 있습니다.
 
