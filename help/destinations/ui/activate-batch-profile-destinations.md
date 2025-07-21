@@ -595,7 +595,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 각 외부 대상에 대한 데이터 보강 속성을 선택하려면 아래 단계를 따르십시오.
 
 1. **[!UICONTROL 데이터 보강 특성]** 열에서 ![편집 단추](/help/images/icons/edit.png)(편집) 단추를 선택합니다.
-1. **[!UICONTROL 데이터 보강 특성 추가]**를 선택합니다. 새 빈 스키마 필드가 표시됩니다.
+1. **[!UICONTROL 데이터 보강 특성 추가]**&#x200B;를 선택합니다. 새 빈 스키마 필드가 표시됩니다.
    데이터 보강 특성 모달 화면을 표시하는 ![UI 이미지입니다.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
 1. 빈 필드 오른쪽의 버튼을 선택하여 필드 선택 화면을 엽니다.
 1. 대상자를 위해 내보낼 속성을 선택합니다.
