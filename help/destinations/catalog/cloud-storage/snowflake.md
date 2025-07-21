@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
+source-git-commit: dca3762169d2a469948ee7e877213697f4c444b6
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1126'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 6%
 
 ## 개요 {#overview}
 
-Snowflake 대상 커넥터를 사용하여 Adobe의 Snowflake 인스턴스로 데이터를 내보낸 다음 [개인 목록](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about)을 통해 인스턴스와 공유합니다.
+Snowflake 대상 커넥터를 사용하여 Adobe의 Snowflake 인스턴스로 데이터를 내보낸 다음 Adobe이 [개인 목록](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about)을 통해 인스턴스와 공유합니다.
 
 Snowflake 대상의 작동 방식과 Adobe과 Snowflake 간에 데이터가 전송되는 방법을 이해하려면 다음 섹션을 참조하십시오.
 
@@ -29,6 +29,8 @@ Snowflake 대상의 작동 방식과 Adobe과 Snowflake 간에 데이터가 전�
 이 대상은 [!DNL Snowflake] 데이터 공유를 사용합니다. 즉, 물리적으로 내보낸 데이터나 자신의 Snowflake 인스턴스로 전송된 데이터가 없습니다. 대신 Adobe은 Adobe의 Snowflake 환경 내에서 호스팅되는 라이브 테이블에 대한 읽기 전용 액세스 권한을 부여합니다. Snowflake 계정에서 직접 이 공유 테이블을 쿼리할 수 있지만 테이블을 소유하지는 않으며 지정된 보존 기간 이후에 수정하거나 유지할 수 없습니다. Adobe은 공유 테이블의 수명 주기와 구조를 완전히 관리합니다.
 
 Adobe의 Snowflake 인스턴스에서 소유의 인스턴스로 데이터를 처음 공유할 때 Adobe의 비공개 목록을 수락하라는 메시지가 표시됩니다.
+
+![Snowflake 개인 목록 수락 화면을 보여 주는 스크린샷](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
 
 ### 데이터 유지 및 TTL(Time-to-Live) {#ttl}
 
@@ -51,12 +53,12 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 
 ## 지원되는 대상자 {#supported-audiences}
 
-이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
+이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다. 아래 두 표는 이 커넥터가 지원하는 대상을 _대상 원본_ 및 _대상에 포함된 프로필 유형_&#x200B;별로 나타냅니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| 기타 모든 대상 원본 | ✓ | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
