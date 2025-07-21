@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 65a3b5b904a9dfc6a2fbc09ab869e5642e088363
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2362'
 ht-degree: 16%
 
 ---
@@ -129,7 +129,7 @@ ht-degree: 16%
 
 ![제외 옵션을 선택했습니다.](../images/ui/audience-composition/add-exclude-block.png)
 
-**[!UICONTROL Exclude]** 블록이 추가되었습니다. 이 블록을 선택하면 제외에 대한 세부 정보가 오른쪽 레일에 표시됩니다. 여기에는 블록의 레이블 및 제외 유형이 포함됩니다. 대상별로 [&#128279;](#exclude-audience)또는 특성별로 [을(를) 제외할 수 있습니다](#exclude-attribute).
+**[!UICONTROL Exclude]** 블록이 추가되었습니다. 이 블록을 선택하면 제외에 대한 세부 정보가 오른쪽 레일에 표시됩니다. 여기에는 블록의 레이블 및 제외 유형이 포함됩니다. 대상별로 [또는 특성별로 ](#exclude-audience)을(를) 제외할 수 있습니다[.](#exclude-attribute)
 
 ![사용 가능한 두 가지 제외 유형을 강조 표시하는 제외 블록입니다.](../images/ui/audience-composition/exclude.png)
 
@@ -154,7 +154,7 @@ ht-degree: 16%
 >title="속성별 제외"
 >abstract="속성별로 제외하면 선택한 속성에 따라 특정 프로필이 컴포지션에 나타나지 않도록 제외할 수 있습니다."
 
-특성별로 제외하는 경우 **[!UICONTROL 제외 규칙]** 섹션 내에서 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택하여 제외할 특성을 선택할 수 있습니다. 속성을 제외하면 이 속성을 포함하는 모든 프로필을 결과 대상자에서 제외할 수 있습니다.
+특성별로 제외하는 경우 ![제외 규칙](/help/images/icons/project-edit.png) 섹션 내에서 **[!UICONTROL 필터]** 아이콘을 선택하여 제외할 특성을 선택할 수 있습니다. 속성을 제외하면 이 속성을 포함하는 모든 프로필을 결과 대상자에서 제외할 수 있습니다.
 
 ![특성 섹션이 강조 표시되어 제외할 특성을 선택할 위치를 표시합니다.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -218,7 +218,7 @@ ht-degree: 16%
 
 이제 **[!UICONTROL 데이터 보강 기준]** 섹션이 오른쪽 레일에 나타납니다. 이 섹션에서는 **[!UICONTROL Source 조인 키]** 및 **[!UICONTROL 데이터 보강 데이터 세트 조인 키]**&#x200B;를 선택하여 데이터 보강 데이터 세트를 만들려는 대상자와 연결할 수 있습니다.
 
-![데이터 보강 기준] 영역이 강조 표시되어 있습니다.(../images/ui/audience-composition/enrichment-criteria.png)
+![데이터 보강 기준[!UICONTROL  영역이 강조 표시되어 있습니다.]](../images/ui/audience-composition/enrichment-criteria.png)
 
 **[!UICONTROL Source 가입 키]**&#x200B;를 선택하려면 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택하십시오.
 
@@ -310,6 +310,10 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="기타 프로필"
 >abstract="기타 프로필 토글을 사용하면 다른 경로의 지정된 조건과 일치하지 않는 나머지 프로필을 사용하여 추가 경로를 만들 수 있습니다."
+
+>[!NOTE]
+>
+>**[!UICONTROL 분할]** 블록을 사용하려면 **대상에 프로필이 10개 이상 있어야**&#x200B;합니다.
 
 **[!UICONTROL 분할]** 블록 형식을 사용하면 새 대상을 다양한 하위 대상으로 분할할 수 있습니다. 백분율이나 속성에 따라 이 대상을 분할할 수 있습니다.
 
