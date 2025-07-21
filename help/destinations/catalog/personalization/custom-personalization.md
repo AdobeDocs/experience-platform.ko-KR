@@ -69,7 +69,7 @@ ht-degree: 9%
 >id="platform_destinations_custom_personalization_datastream"
 >title="데이터스트림 정보"
 >abstract="이 옵션은 페이지에 대한 응답으로 대상자에 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에 대상 구성이 활성화된 데이터스트림만 표시됩니다. 대상을 구성하려면 먼저 데이터스트림을 구성해야 합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="데이터스트림을 구성하는 방법에 대해 알아보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=ko" text="데이터스트림을 구성하는 방법에 대해 알아보기"
 
 >[!IMPORTANT]
 > 
