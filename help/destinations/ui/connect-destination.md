@@ -3,9 +3,9 @@ title: 새 대상 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform에서 대상에 연결하고, 경고를 활성화하고, 연결된 대상에 대한 마케팅 작업을 설정하는 방법을 알아봅니다.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1176'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,11 @@ ht-degree: 0%
 
 ## 대상으로 인증 {#authenticate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_account_name"
+>title="계정 이름"
+>abstract="나중에 이 대상 계정을 쉽게 식별하는 데 도움이 되는 이름을 입력하십시오. 이 기능은 동일한 대상 유형에 대해 여러 개의 연결이 있는 경우 특히 유용합니다."
+
 대상에 연결하는 첫 번째 단계는 대상 플랫폼에 인증하는 것입니다.
 
 연결 중인 대상에 따라 대상 파트너의 페이지로 이동하여 인증하거나 Experience Platform 워크플로에서 직접 인증 자격 증명을 입력하라는 메시지가 표시될 수 있습니다. 다음은 [!DNL Amazon S3] 대상을 인증하는 데 필요한 입력의 예입니다. 필요한 입력에 대한 자세한 지침은 각 대상 설명서 페이지에 제공됩니다(예: [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) 및 [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)의 인증 섹션 참조).
@@ -67,7 +72,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->아래 이미지는 설명 목적으로만 사용됩니다. 대상 연결 세부 사항은 대상마다 다릅니다. 대상의 연결 세부 정보에 대한 자세한 내용을 보려면 각 [대상 카탈로그](../catalog/overview.md) 페이지의 **대상에 연결** 섹션(예: [[!DNL Google Customer Match]](../catalog/advertising/google-customer-match.md#connect), [[!DNL Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md#connect) 또는 [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details))을 읽어 보십시오.
+>아래 이미지는 설명 목적으로만 사용됩니다. 대상 연결 세부 사항은 대상마다 다릅니다. 대상의 연결 세부 정보에 대한 자세한 내용을 보려면 각 **대상 카탈로그** 페이지의 [대상에 연결](../catalog/overview.md) 섹션(예: [[!DNL Google Customer Match]](../catalog/advertising/google-customer-match.md#connect), [[!DNL Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md#connect) 또는 [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details))을 읽어 보십시오.
 
 필수 및 선택적 입력 매개 변수 **[!DNL Amazon S3]개**
 
@@ -109,7 +114,7 @@ ht-degree: 0%
 
    ![사용 가능한 마케팅 작업이 강조 표시된 새 대상 구성 대화 상자 대상에 연결 워크플로를 완료하는 데 사용할 수 있는 컨트롤도 강조 표시됩니다.](../assets/ui/connect-destinations/governance.png)
 
-2. 대상 구성을 저장하려면 **[!UICONTROL 저장 및 종료]**&#x200B;를 선택하고 대상 데이터 [활성화 흐름](activation-overview.md)으로 진행하려면 **[!UICONTROL 다음]**&#x200B;을 선택하십시오.
+2. 대상 구성을 저장하려면 **[!UICONTROL 저장 및 종료]**&#x200B;를 선택하고 대상 데이터 **[!UICONTROL 활성화 흐름]**&#x200B;으로 진행하려면 [다음](activation-overview.md)을 선택하십시오.
 
 ## 다음 단계 {#next-steps}
 
