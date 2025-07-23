@@ -4,9 +4,9 @@ title: 활성화 데이터 흐름 편집
 type: Tutorial
 description: 이 문서의 단계에 따라 Adobe Experience Platform에서 기존 활성화 데이터 흐름을 편집합니다.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: b8f3443c1e574505f7fd0ca8a5ae91801da4cbef
+source-git-commit: 24951f7680f134beb64c7679a94bac9b18042af1
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,8 @@ Adobe Experience Platform에서 다음과 같이 대상에 대한 기존 활성�
 * [매핑된 속성 및 ID 편집](#edit-mapped-attributes)
 * [활성화 일정 및 내보내기 빈도 편집](#edit-schedule-frequency)
 * 활성화 워크플로에 [추가 데이터 세트 추가](#add-datasets)
+* 내보낸 데이터에 [액세스 레이블 적용](#apply-access-labels)
 * 활성화 데이터 흐름의 [이름 및 설명 편집](#edit-names-descriptions)
-
-<!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
 ## 활성화 데이터 흐름 찾아보기 {#browse-activation-dataflows}
 
@@ -100,8 +99,6 @@ Adobe Experience Platform에서 다음과 같이 대상에 대한 기존 활성�
 * [프로필 내보내기 대상을 일괄 활성화하려면 대상을 활성화하십시오](./activate-batch-profile-destinations.md)(예: Amazon S3 또는 Oracle Eloqua);
 * [스트리밍 프로필 내보내기 대상에 대상 활성화](./activate-streaming-profile-destinations.md)(예: HTTP API 또는 Amazon Kinesis).
 
-
-
 ## 활성화 데이터 흐름에 데이터 세트 추가 {#add-datasets}
 
 대상으로 내보낼 추가 데이터 세트를 선택하려면 오른쪽 레일에서 **[!UICONTROL 데이터 세트 내보내기]**&#x200B;를 선택하십시오. 이 옵션을 사용하면 [데이터 집합 내보내기 워크플로](export-datasets.md)로 이동합니다.
@@ -112,13 +109,11 @@ Adobe Experience Platform에서 다음과 같이 대상에 대한 기존 활성�
 
 ![데이터 세트 데이터 흐름 내보내기 실행 옵션을 보여 주는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/export-datasets.png)
 
+## 액세스 레이블 적용 {#apply-access-labels}
 
+내보낸 데이터의 데이터 사용 레이블을 편집하려면 **[!UICONTROL 액세스 레이블 적용]**&#x200B;을 선택하십시오. 자세한 내용은 [데이터 사용 레이블 설명서](../../data-governance/labels/overview.md)를 참조하세요.
 
-<!-- ## Apply access labels {#apply-access-labels}
-
-Select **[!UICONTROL Apply access labels]** to edit the data usage labels for the exported data. See the [data usage labels documentation](../../data-governance/labels/overview.md) to learn more.
-
-![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png) -->
+![데이터 세트 데이터 흐름 내보내기 실행 옵션을 보여 주는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/apply-access-labels.png)
 
 ## 활성화 데이터 흐름 이름 및 설명 편집 {#edit-names-descriptions}
 
