@@ -3,9 +3,9 @@ title: Google Customer Match + Display & Video 360 연결
 description: Google Customer Match + Display & Video 360 대상 커넥터를 사용하면 Experience Platform의 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail 및 YouTube과 같은 Google의 소유 및 운영 속성에서 고객에게 연락하고 다시 연결할 수 있습니다.
 badge: 제한 공개
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: efdec64dee4c5857d0df008c2d1242674f9d0b49
+source-git-commit: 16192df76b618ed1d516b78f9c3191027140b8d3
 workflow-type: tm+mt
-source-wordcount: '2348'
+source-wordcount: '2384'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->**Google Customer Match + DV360 커넥터의 제한된 가용성**<br> Google과의 통합으로 완성되는 전체 수명 주기가 진행됨에 따라 더 넓게 채택되기 전에 수정해야 하는 구현의 취약점을 가리키는 데이터가 보입니다. 이러한 우려를 감안하여 Adobe은 제한된 고객 수로 이 대상의 가시성을 줄였습니다. 제품 경험을 개선하기 위해 Google과 활발하게 대화를 나누고 있습니다. 이 소식은 실망스러운 소식일 수 있지만 고객에게 고품질의 신뢰할 수 있는 경험을 제공하기 위한 책임감 있는 접근 방법이라고 생각합니다.</br>
+>**Google Customer Match + Display &amp; Video 360 커넥터의 제한된 가용성**<br> Google과의 통합으로 완성도가 전체 주기를 거치면서 더 넓은 채택이 일어나기 전에 수정해야 하는 구현 취약점을 가리키는 데이터가 발견되고 있습니다. 이러한 우려를 감안하여 Adobe은 제한된 고객 수로 이 대상의 가시성을 줄였습니다. 제품 경험을 개선하기 위해 Google과 활발하게 대화를 나누고 있습니다. 이 소식은 실망스러운 소식일 수 있지만 고객에게 고품질의 신뢰할 수 있는 경험을 제공하기 위한 책임감 있는 접근 방법이라고 생각합니다.</br>
 
 이 대상을 사용하여 자사 PII 기반 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) 목록을 [!DNL Google Display & Video 360], [!DNL Search], [!DNL YouTube] 및 [!DNL Gmail]과(와) 같은 [!DNL Google Display Network] 속성에 직접 활성화합니다.
 
@@ -29,12 +29,12 @@ Adobe Real-Time CDP과 같은 특정 Google 통합 서드파티는 [!DNL Google 
 >[!IMPORTANT]
 >
 > Google은 유럽 연합([EU 사용자 동의 정책](https://developers.google.com/google-ads/api/docs/start))의 [디지털 시장법](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)&#x200B;(DMA)에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/display-video/api/guides/getting-started/overview), [고객 일치](https://digital-markets-act.ec.europa.eu/index_en) 및 [디스플레이 및 비디오 360 API](https://www.google.com/about/company/user-consent-policy/)에 대한 변경 사항을 출시합니다. 동의 요구 사항에 대한 이러한 변경 사항의 시행은 2024년 3월 6일부터 시작됩니다.
-> &#x200B;><br/>
-> &#x200B;>EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
-> &#x200B;><br/>
-> &#x200B;>Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
-> &#x200B;><br/>
-> &#x200B;>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/home.md#segment-definitions) 내의 [세그먼트 정의](../../../segmentation/ui/segment-builder.md) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
+> ><br/>
+> >EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
+> ><br/>
+> >Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
+> ><br/>
+> >Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/home.md#segment-definitions) 내의 [세그먼트 정의](../../../segmentation/ui/segment-builder.md) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
 
 ## 이 대상을 사용해야 하는 경우
 
@@ -107,16 +107,16 @@ Google 계정이 Adobe의 계정 ID에 제대로 연결되어 있지 않으면 �
 
 >[!NOTE]
 >
->Adobe에서 Google 파트너 계정 ID를 `6219889373`에서 `4641108541`(으)로 업데이트했습니다.
+>이 커넥터의 Beta 프로그램에 포함되었던 고객의 경우: Adobe에서 Google 파트너 계정 ID를 `6219889373`에서 `4641108541`(으)로 업데이트했습니다.
 >
->**Google 계정이 현재 이전 Adobe 파트너 계정 ID(`6219889373`)에 연결되어 있는 경우 아래 단계를 수행하십시오.**
+>**Google Customer Match + Display &amp; Video 360 커넥터에 대한 Beta 프로그램에 속해 있고 Google 계정이 현재 이전 Adobe 파트너 계정 ID(`6219889373`)에 연결되어 있는 경우 아래 단계를 따르십시오.**
 >
 >1. 이전 Adobe 파트너 계정 ID(`6219889373`)에서 Google 계정 연결 해제
 >2. Google 계정을 새 Adobe 파트너 계정 ID(`4641108541`)에 연결합니다.
 >3. 기존 데이터 흐름에서 모든 대상 제거
 >4. 새 데이터 흐름 만들기 및 대상자 매핑
 >
->Google 계정이 이미 새 Adobe 파트너 계정 ID(`4641108541`)에 연결되어 있는 경우 사용자의 작업이 필요하지 않습니다.
+>Google 계정이 이미 새 Adobe 파트너 계정 ID(`4641108541`)에 연결되어 있는 경우 이 커넥터를 사용하기 위해 사용자의 작업이 필요하지 않습니다.
 
 **관리자 계정이 있는 조직의 경우:**
 
@@ -176,7 +176,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## 대상에 연결 {#connect}
 
