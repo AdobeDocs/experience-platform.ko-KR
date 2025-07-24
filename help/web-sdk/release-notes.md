@@ -3,18 +3,31 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2355'
+source-wordcount: '2438'
 ht-degree: 5%
 
 ---
 
 
-# 릴리스 정보
+# 웹 SDK 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform Web SDK의 릴리스 정보를 다룹니다.
 웹 SDK 태그 확장에 대한 최신 릴리스 노트는 [웹 SDK 태그 확장 릴리스 노트](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)를 참조하십시오.
+
+## 버전 2.28.0 - 2025년 7월 24일 금요일
+
+**새로운 기능**
+
+- Adobe Journey Optimizer 결격 규칙에 대한 지원이 추가되었습니다.
+
+**수정 사항 및 개선 사항**
+
+- 미디어 개체의 [ 속성이 잘못된 데이터 형식을 잘못 받아들인 ](commands/getmediaanalyticstracker.md)Media Analytics 추적기`length`의 오류를 수정했습니다.
+- ID 조회가 실패할 때 약속 거부를 제대로 처리하기 위해 [ID 관리](identity/overview.md) 오류 처리가 개선되었습니다.
+- 누락된 [과(와) 관련된 오류로 인해 HTML 콘텐츠 항목이 있는 ](personalization/rendering-personalization-content.md)개인화 콘텐츠`renderStatusHandler`을(를) 렌더링하지 못하던 문제를 해결했습니다.
+- Activity Map [URL 컬렉션](commands/configure/clickcollectionenabled.md)이 HTTP가 아닌 URL을 올바르게 처리하도록 수정되었습니다.
 
 ## 버전 2.27.0 - 2025년 5월 20일 수요일
 
@@ -30,11 +43,11 @@ ht-degree: 5%
 **새로운 기능**
 
 - 이제 웹 SDK NPM 패키지를 사용하여 사용자 지정 웹 SDK 빌드를 만들고 필요한 라이브러리 구성 요소만 선택할 수 있습니다. 이로 인해 라이브러리 크기가 줄어들고 로드 시간이 최적화됩니다. [NPM 패키지를 사용하여 사용자 지정 웹 SDK 빌드를 만드는 방법](install/create-custom-build.md)에 대한 설명서를 참조하십시오.
-- 이제 [`getIdentity`](commands/getidentity.md) 명령이 `kndctr` ID 쿠키에서 직접 ECID를 자동으로 읽습니다. `ECID` 네임스페이스로 `getIdentity`을(를) 호출하고 ID 쿠키가 이미 있는 경우 Web SDK에서 더 이상 Edge Network에 ID 가져오기 요청을 하지 않습니다. 이제 쿠키에서 ID를 읽습니다.
+- 이제 [`getIdentity`](commands/getidentity.md) 명령이 `kndctr` ID 쿠키에서 직접 ECID를 자동으로 읽습니다. `getIdentity` 네임스페이스로 `ECID`을(를) 호출하고 ID 쿠키가 이미 있는 경우 Web SDK에서 더 이상 Edge Network에 ID 가져오기 요청을 하지 않습니다. 이제 쿠키에서 ID를 읽습니다.
 
 **수정 사항 및 개선 사항**
 
-- `collect` 호출이 전송된 후 `getIdentity` 명령이 ID를 반환하지 않는 문제가 해결되었습니다.
+- `getIdentity` 호출이 전송된 후 `collect` 명령이 ID를 반환하지 않는 문제가 해결되었습니다.
 - 개인화 리디렉션으로 인해 리디렉션이 발생하기 전에 콘텐츠가 깜박거리는 문제가 해결되었습니다.
 
 ## 버전 2.25.0 - 2025년 1월 23일 금요일
@@ -73,13 +86,13 @@ ht-degree: 5%
    - `Privacy` 이름이 `Consent`(으)로 바뀌었습니다.
 - 기본 콘텐츠 항목이 [`applyPropositions`](../web-sdk/commands/applypropositions.md)을(를) 통해 렌더링될 때 발생하는 오류를 해결했습니다.
 - Adobe Target 이동 및 크기 조정 작업의 CSS 오류를 수정했습니다.
-- [`sendEvent`](../web-sdk/commands/sendevent/overview.md) 응답에서 `machineLearning` 키를 제거했습니다.
+- `machineLearning` 응답에서 [`sendEvent`](../web-sdk/commands/sendevent/overview.md) 키를 제거했습니다.
 
 ## 버전 2.23.0 - 2024년 9월 19일
 
 **새로운 기능**
 
-- [getIdentity](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library) 명령에서 [CORE ID](identity/overview.md#tracking-coreid-web-sdk) 요청에 대한 지원을 추가했습니다.
+- [getIdentity](identity/overview.md#tracking-coreid-web-sdk) 명령에서 [CORE ID](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library) 요청에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
@@ -155,12 +168,12 @@ ht-degree: 5%
 
 **새로운 기능**
 
-- 데이터 스트림 ID[&#128279;](../datastreams/overrides.md)의 명령당 재정의에 대한 지원을 추가했습니다.
+- 데이터 스트림 ID[의 명령당 ](../datastreams/overrides.md)재정의에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
 - 도메인이 쿼리의 일부로 인해 종료 링크를 분류하지 못하는 문제가 해결되었습니다.
-- 웹 SDK 구성에서 `datastreamId`을(를) 위해 더 이상 사용되지 않는 `edgeConfigId`입니다.
+- 웹 SDK 구성에서 `edgeConfigId`을(를) 위해 더 이상 사용되지 않는 `datastreamId`입니다.
 
 ## 버전 2.17.0 - 2023년 5월 17일 목요일
 
@@ -234,7 +247,7 @@ ht-degree: 5%
 
 **수정 사항 및 개선 사항**
 
-- [!DNL HTTPS] 페이지에서 `sameSite="none"` 및 `secure` 플래그를 사용하도록 쿠키 설정을 업데이트했습니다.
+- `sameSite="none"` 페이지에서 `secure` 및 [!DNL HTTPS] 플래그를 사용하도록 쿠키 설정을 업데이트했습니다.
 - `eq` 의사 선택기를 사용할 때 개인화된 콘텐츠가 올바르게 적용되지 않던 문제를 해결했습니다.
 - `localTimezoneOffset`이(가) Experience Platform 유효성 검사에 실패할 수 있는 문제를 해결했습니다.
 
@@ -252,7 +265,7 @@ ht-degree: 5%
 - [!DNL control (default)] Adobe Target 경험 추적에 대한 지원이 추가되었습니다.
 - 단일 페이지 애플리케이션에 대한 보기 변경 이벤트를 최적화했습니다. 이제 개인화된 경험이 렌더링될 때 표시 알림이 보기 변경 이벤트에 포함됩니다.
 - `eventType`이(가) 없는 경우 콘솔 경고가 제거되었습니다.
-- 캐시에서 경험을 요청하거나 검색할 때 `sendEvent` 명령에서만 `propositions` 속성이 반환되던 문제를 해결했습니다. 이제 `propositions` 속성이 항상 배열로 정의됩니다.
+- 캐시에서 경험을 요청하거나 검색할 때 `propositions` 명령에서만 `sendEvent` 속성이 반환되던 문제를 해결했습니다. 이제 `propositions` 속성이 항상 배열로 정의됩니다.
 - Edge Network에서 오류가 반환되었을 때 숨겨진 컨테이너가 표시되지 않던 문제를 수정했습니다.
 - Adobe Target에서 상호 작용 이벤트가 계산되지 않던 문제를 수정했습니다. 이 문제는 web.webPageDetails.viewName에서 보기 이름을 XDM에 추가하여 해결되었습니다.
 - 콘솔 메시지에서 끊어진 설명서 링크를 수정합니다.
@@ -265,7 +278,7 @@ ht-degree: 5%
 
 ## 버전 2.7.0 - 2021년 10월 26일 수요일
 
-- `inferences` 및 `destinations`을(를) 포함하여 `sendEvent`의 반환 값에 Edge Network의 추가 정보를 노출합니다. 이러한 기능은 현재 Beta의 일부로 롤아웃되고 있으므로 이러한 속성의 형식이 변경될 수 있습니다.
+- `sendEvent` 및 `inferences`을(를) 포함하여 `destinations`의 반환 값에 Edge Network의 추가 정보를 노출합니다. 이러한 기능은 현재 Beta의 일부로 롤아웃되고 있으므로 이러한 속성의 형식이 변경될 수 있습니다.
 
 ## 버전 2.6.4 - 2021년 9월 7일
 
@@ -291,13 +304,13 @@ ht-degree: 5%
 
 - 리디렉션 개인화 오퍼에 대한 지원이 추가되었습니다.
 - 자동으로 수집된 뷰포트 너비 및 높이가 음수 값으로 더 이상 서버에 전송되지 않습니다.
-- `onBeforeEventSend` 콜백에서 `false`을(를) 반환하여 이벤트가 취소되면 이제 메시지가 기록됩니다.
+- `false` 콜백에서 `onBeforeEventSend`을(를) 반환하여 이벤트가 취소되면 이제 메시지가 기록됩니다.
 - 단일 이벤트용으로 설계된 특정 XDM 데이터가 여러 이벤트에 포함된 문제가 해결되었습니다.
 
 ## 버전 2.4.0 - 2021년 3월
 
 - 이제 SDK을 [NPM 패키지](/help/web-sdk/install/npm.md)(으)로 설치할 수 있습니다.
-- [기본 동의를 구성](/help/web-sdk/commands/configure/defaultconsent.md)할 때 `out` 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
+- `out`기본 동의를 구성[할 때 ](/help/web-sdk/commands/configure/defaultconsent.md) 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
 - 이제 [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) 콜백을 사용하여 이벤트가 전송되지 않도록 할 수 있습니다.
 - 이제 렌더링하거나 클릭하는 개인화된 콘텐츠에 대한 이벤트를 보낼 때 `meta.personalization` 대신 XDM 스키마 필드 그룹을 사용합니다.
 - 이제 [`getIdentity`](/help/web-sdk/commands/getidentity.md) 명령이 ID와 함께 에지 영역 ID를 반환합니다.
@@ -313,7 +326,7 @@ ht-degree: 5%
 - 더 엄격한 콘텐츠 보안 정책을 허용하도록 nonce 지원이 추가되었습니다.
 - 단일 페이지 애플리케이션에 대한 개인화 지원이 추가되었습니다.
 - `window.console` API를 덮어쓸 수 있는 다른 페이지 내 JavaScript 코드와의 호환성을 개선했습니다.
-- 버그 수정: `documentUnloading`이(가) `true`(으)로 설정되었거나 링크 클릭이 자동으로 추적되는 경우 `sendBeacon`이(가) 사용되지 않습니다.
+- 버그 수정: `sendBeacon`이(가) `documentUnloading`(으)로 설정되었거나 링크 클릭이 자동으로 추적되는 경우 `true`이(가) 사용되지 않습니다.
 - 버그 수정: 앵커 요소에 HTML 콘텐츠가 포함되어 있으면 링크가 자동으로 추적되지 않습니다.
 - 버그 수정: 읽기 전용 `message` 속성이 포함된 특정 브라우저 오류가 적절하게 처리되지 않아 다른 오류가 고객에게 노출되었습니다.
 - 버그 수정: iframe의 SDK 페이지가 상위 창의 HTML 페이지와 다른 하위 도메인에서 온 경우 iframe 내에서 HTML을 실행하면 오류가 발생합니다.
@@ -328,6 +341,6 @@ ht-degree: 5%
 - `syncIdentity` 명령을 제거하고 `sendEvent` 명령에서 해당 ID를 전달할 수 있도록 지원합니다.
 - IAB 2.0 동의 표준을 지원합니다.
 - `setConsent` 명령에서 추가 ID 전달을 지원합니다.
-- `sendEvent` 명령에서 `datasetId` 재정의를 지원합니다.
+- `datasetId` 명령에서 `sendEvent` 재정의를 지원합니다.
 - 모니터링 후크 지원([자세한 내용](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
 - 구현 세부 정보 컨텍스트 데이터에 `environment: browser`을(를) 전달합니다.

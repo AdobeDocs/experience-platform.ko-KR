@@ -2,17 +2,29 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 03cc702eced26453b5923bb63739c0cb739e8c8f
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2677'
+source-wordcount: '2733'
 ht-degree: 24%
 
 ---
 
-# Adobe Experience Platform 웹 SDK 확장 릴리스 노트
+
+# 웹 SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform Web SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Experience Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md)를 참조하십시오.
 
+## 버전 2.31.0 - 2025년 7월 24일 금요일
+
+**새로운 기능**
+
+- Adobe Experience Platform Web SDK의 [버전 2.28.0](../../../../web-sdk/release-notes.md#2-28-0)을 포함합니다.
+
+**수정 사항 및 개선 사항**
+
+- 데이터 요소를 통해 데이터 스트림 재정의가 활성화되면 오류가 발생하는 문제를 해결했습니다.
+- 빈 `idSyncContainerId` 재정의에서 오류가 발생하는 문제가 해결되었습니다.
+- 이제 미디어 데이터 요소를 해결할 때 이벤트 개체가 포함됩니다.
 
 ## 버전 2.30.1 - 2025년 5월 27일 수요일
 
@@ -120,15 +132,15 @@ Adobe Experience Platform Web SDK 버전 2.20.0을 포함합니다.
 **새로운 기능**
 
 - 확장 구성에 [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) 구성 요소에 대한 지원을 추가했습니다.
-- [!DNL Streaming Media Collection] 기능에 대한 [`Send Media Event`](action-types.md#send-media-event) 작업을 추가했습니다.
-- [!DNL Streaming Media Collection] 기능에 대한 [`Media: Quality of Experience`](data-element-types.md#quality-experience) 데이터 요소를 추가했습니다.
+- [`Send Media Event`](action-types.md#send-media-event) 기능에 대한 [!DNL Streaming Media Collection] 작업을 추가했습니다.
+- [`Media: Quality of Experience`](data-element-types.md#quality-experience) 기능에 대한 [!DNL Streaming Media Collection] 데이터 요소를 추가했습니다.
 
 Adobe Experience Platform Web SDK 버전 2.20.0을 포함합니다.
 
 **수정 사항 및 개선 사항**
 
 - [변수 업데이트](action-types.md#update-variable) 작업에서 데이터 요소를 검색할 때 발생하는 오류를 수정했습니다.
-- `sendEvent` 작업에 사용하도록 권장된 이벤트 유형에서 [!UICONTROL Media] 이벤트 유형을 제거했습니다.
+- [!UICONTROL  작업에 사용하도록 권장된 이벤트 유형에서 ]Media`sendEvent` 이벤트 유형을 제거했습니다.
 
 ## 버전 2.22.0 - 2024년 5월 3일 토요일
 
@@ -186,11 +198,11 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
 **새로운 기능**
 
-- 데이터 스트림 ID[&#128279;](../../../../datastreams/overrides.md)의 명령당 재정의에 대한 지원을 추가했습니다.
+- 데이터 스트림 ID[의 명령당 ](../../../../datastreams/overrides.md)재정의에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
-- SDK 구성에서 `datastreamId`을(를) 위해 더 이상 사용되지 않는 `edgeConfigId`입니다.
+- SDK 구성에서 `edgeConfigId`을(를) 위해 더 이상 사용되지 않는 `datastreamId`입니다.
 - 데이터 스트림 구성에 대한 여러 사용자 경험 개선 사항이 사용자 인터페이스를 무시합니다.
 
 ## 버전 2.19.0 - 2023년 6월 21일 목요일
@@ -207,7 +219,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
 - Adobe Experience Platform Web SDK 버전 2.16.0을 포함합니다.
 - [데이터 스트림 구성 재정의](/help/datastreams/overrides.md)에 대한 지원이 추가되었습니다.
-- `sendEvent` 명령의 `datasetId` 옵션에 사용 중단 알림을 추가합니다.
+- `datasetId` 명령의 `sendEvent` 옵션에 사용 중단 알림을 추가합니다.
 
 **수정 사항 및 개선 사항**
 
@@ -346,7 +358,7 @@ Adobe Experience Platform Web SDK 라이브러리의 버전 2.5.0을 포함합�
 Adobe Experience Platform Web SDK 라이브러리의 버전 2.4.0을 포함합니다.
 
 - 이벤트 작업 UI 보내기에 [&quot;문서 언로딩&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) 확인란이 추가되었습니다.
-- [기본 동의를 구성](/help/web-sdk/commands/configure/defaultconsent.md)할 때 `out` 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
+- `out`기본 동의를 구성[할 때 ](/help/web-sdk/commands/configure/defaultconsent.md) 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
 - 기본 동의 필드에 도구 설명을 추가했습니다.
 - [`setConsent`](/help/web-sdk/commands/setconsent.md) 명령을 사용할 때 Adobe의 Consent 2.0 표준에 대한 지원이 추가되었습니다.
 - 사용자의 액세스 토큰이 잘못되었거나 잘못 제공된 경우 XDM 개체 데이터 요소 UI에 더 나은 오류가 표시됩니다.
@@ -392,7 +404,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
    - `getDecisions` 명령이 제거되었습니다.
    - `scopes` 옵션이 `sendEvent` 명령에 추가되었습니다. 결정은 `sendEvent`에서 확인된 약속에서 반환됩니다.
    - 페이지/보기 전체 오퍼를 반환하는 기본 제공 `__view__` 범위가 추가되었습니다. (예: Target의 VEC 오퍼)
-`renderDecisions`이(가) false로 설정된 경우에만 `sendEvent` 명령에서 이러한 결과가 반환됩니다.
+`sendEvent`이(가) false로 설정된 경우에만 `renderDecisions` 명령에서 이러한 결과가 반환됩니다.
    - 결정을 사용할 수 있을 때 발생하는 `Decisions Received` 이벤트가 추가되었습니다.
 - 단일 서버 호출에 여러 개인화 알림이 결합되었습니다.
 - 데이터 요소가 참조될 때마다 재설정되는 이벤트 병합 ID의 문제가 해결되었습니다.
