@@ -1,7 +1,7 @@
 ---
 title: Real-Time CDP B2B edition으로 아키텍처 업그레이드
 description: Real-Time CDP B2B edition으로의 포괄적인 아키텍처 업그레이드에 대해 알아보려면 이 문서 를 참조하십시오.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 hide: true
 hidefromtoc: true
 source-git-commit: 78444555178773a8305ba27aaaf7998fe279a71d
