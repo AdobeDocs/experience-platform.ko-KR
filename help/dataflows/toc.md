@@ -4,10 +4,10 @@ user-guide-title: 데이터 흐름 안내서
 user-guide-description: 데이터 흐름이란 무엇이며 다양한 서비스에서 이들 데이터 흐름을 구성하는 방법에 대해 알아봅니다.
 feature: Dataflows
 role: Developer
-source-git-commit: d4c1c9fce7ef5445c8f043d1f766603235b9bd88
+source-git-commit: 2f78b70761ef676fe4ab61b89b6cbb261c99e9ca
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 26%
+source-wordcount: '66'
+ht-degree: 24%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 26%
    - [프로필의 데이터 흐름 모니터링](./ui/monitor-profiles.md)
    - [대상의 데이터 흐름 모니터링](./ui/monitor-audiences.md)
    - [대상의 데이터 흐름 모니터링](./ui/monitor-destinations.md)
+   - [스트리밍 프로필 수집을 위한 데이터 흐름 모니터링](./ui/monitor-streaming-profile.md)
    - B2B 모니터링 {#b2b}
       - [프로필 보강 작업 모니터링](./ui/b2b/monitor-profile-enrichment.md)
 - [흐름 서비스 API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
