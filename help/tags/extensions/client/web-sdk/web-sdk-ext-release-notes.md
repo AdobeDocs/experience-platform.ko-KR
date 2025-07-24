@@ -140,7 +140,7 @@ Adobe Experience Platform Web SDK 버전 2.20.0을 포함합니다.
 **수정 사항 및 개선 사항**
 
 - [변수 업데이트](action-types.md#update-variable) 작업에서 데이터 요소를 검색할 때 발생하는 오류를 수정했습니다.
-- [!UICONTROL  작업에 사용하도록 권장된 이벤트 유형에서 ]Media`sendEvent` 이벤트 유형을 제거했습니다.
+- [!UICONTROL &#x200B; 작업에 사용하도록 권장된 이벤트 유형에서 &#x200B;]Media`sendEvent` 이벤트 유형을 제거했습니다.
 
 ## 버전 2.22.0 - 2024년 5월 3일 토요일
 
