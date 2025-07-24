@@ -3,9 +3,9 @@ title: TikTok 연결
 description: 광고 캠페인으로 타깃팅할 데이터를 사용하여 TikTok에서 사용자 지정 대상을 작성합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 대상을 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: c1f54e02bbc4affb775b3dc9e95f3852dc5a8e39
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1144'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 3%
 
 TikTok 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객을 위한 샘플 사용 사례를 소개합니다.
 
-### 활용 사례 {#use-case-1}
+### 사용 사례 {#use-case-1}
 
 한 스포츠 의류 브랜드는 자신의 소셜 미디어 계정을 통해 기존 고객에게 도달하기를 원합니다. 의류 브랜드는 자체 CRM에서 Adobe Experience Platform으로 이메일 주소를 수집하고, 자체 오프라인 데이터에서 대상을 만들고, 이러한 대상을 TikTok으로 보내 고객의 소셜 미디어 피드에 광고를 표시할 수 있습니다.
 
@@ -40,8 +40,8 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. [ID](/help/id
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
-| IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
+| GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. 일반 텍스트와 SHA256 해시 GAID 값은 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. 일반 텍스트와 SHA256 해시 IDFA 값은 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
 | 전화번호 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원되며 E.164 형식이어야 합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
 | 이메일 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
 
@@ -117,7 +117,7 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. [ID](/help/id
 
 소스 필드 선택:
 
-* Adobe Experience Platform 및 [!DNL TikTok Ads Manager]에서 프로필을 고유하게 식별하는 원본 ID로 식별자(예: ` Email_LC_SHA256`)를 선택하십시오.
+* Adobe Experience Platform 및 ` Email_LC_SHA256`에서 프로필을 고유하게 식별하는 원본 ID로 식별자(예: [!DNL TikTok Ads Manager])를 선택하십시오.
 
 대상 필드 선택:
 
