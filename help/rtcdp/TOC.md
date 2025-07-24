@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이들 프로필에서 대상자를 생성하며, 이들 대상자를 서드파티 대상으로 활성화할 수 있습니다.
 role: Admin
-source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
+source-git-commit: 74a73b568c850f8e749afea039afd2821858bd69
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 63%
+source-wordcount: '311'
+ht-degree: 62%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 63%
 # Real-Time Customer Data Platform 도움말 {#rtcdp}
 
 * [Real-Time CDP 설명서](home.md)
-* 시작하기 {#intro}
+* 시작 {#intro}
    * Real-Time CDP {#rtcdp-intro}
       * [Real-Time CDP 개요](overview.md)
       * [Real-Time CDP 시작하기](get-started.md)
@@ -26,6 +26,7 @@ ht-degree: 63%
       * [예제 사용 사례](./b2b-use-case.md)
       * [전체 튜토리얼](./b2b-tutorial.md)
       * [Real-Time CDP B2B 에디션 가드레일](b2b-guardrails.md)
+      * [Real-Time CDP B2B edition 아키텍처 업그레이드](b2b-architecture-upgrade.md)
 * Audience Manager 및 Real-Time CDP {#evolution}
    * [Audience Manager의 발전](aam-to-rtcdp.md)
 * 계정 프로필 {#account}
@@ -46,12 +47,12 @@ ht-degree: 63%
    * [Real-Time CDP B2B 에디션의 대상](destinations/b2b.md)
 * 가드레일 {#guardrails}
    * [Real-Time CDP 보호 개요](guardrails/overview.md)
-   * [데이터 수집을 위한 보호](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=ko){target="_blank"}
-   * [[!DNL Edge Network API]에 대한 보호 기능](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
+   * [데이터 수집을 위한 보호](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [ [!DNL Edge Network API]에 대한 ](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}보호 기능
    * [데이터 및 세분화에 대한 보호 [!DNL Real-Time Customer Profile] 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ko){target="_blank"}
-   * [데이터 [!DNL Identity Service] 보호 기능](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=ko){target="_blank"}
-   * [다음에 대한 보호 기능 [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=ko){target="_blank"}
-   * [대상을 통한 데이터 활성화를 위한 보호 기능](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=ko){target="_blank"}
+   * [데이터 [!DNL Identity Service] 보호 기능](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [다음에 대한 보호 기능 [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [대상을 통한 데이터 활성화를 위한 보호 기능](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * ID {#identity}
    * [ID 및 ID 네임스페이스](profile/identities-overview.md)
 * 병합 정책 {#merge-policies}
