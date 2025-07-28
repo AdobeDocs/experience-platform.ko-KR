@@ -21,7 +21,7 @@ Adobe Experience Platform에서 속성 기반 액세스 제어를 사용하여 �
 >
 >이 문서는 액세스 제어 정책의 사용 사례를 중점적으로 다룹니다. Experience Platform 사용자가 액세스할 수 있는 데이터가 아닌 **사용**&#x200B;을 제어하는 정책을 설정하는 경우 대신 [데이터 거버넌스](../../data-governance/e2e.md)에 대한 전체 안내서를 참조하십시오.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
 
@@ -67,7 +67,7 @@ Experience Platform UI에 대한 권한 작업 영역이 표시되어 **[!UICONT
 >id="platform_permissions_labels_about"
 >title="레이블이란 무엇입니까?"
 >abstract="레이블을 사용하면 해당 데이터에 적용되는 사용 및 액세스 정책에 따라 데이터 세트 및 필드를 분류할 수 있습니다. Adobe Experience Platform은 데이터 거버넌스에 적용할 수 있는 다양한 공통 제한 사항을 다루는 Adobe에서 정의한 여러 <strong>핵심</strong> 데이터 사용 레이블을 제공합니다. 예를 들어 RHD(규제 건강 데이터)와 같은 중요한 <strong>S</strong> 레이블을 사용하면 PHI(개인건강정보)를 참조하는 데이터를 분류할 수 있습니다. 조직의 요구 사항에 맞는 고유한 사용자 정의 레이블을 정의할 수도 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ko#understanding-data-usage-labels" text="데이터 사용 레이블 개요"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="데이터 사용 레이블 개요"
 
 역할은 Experience Platform 인스턴스와 상호 작용하는 사용자 유형을 분류하는 방법이며 액세스 제어 정책을 작성하는 빌딩 블록입니다. 역할에는 지정된 권한 집합이 있으며, 필요한 액세스 범위에 따라 조직 구성원을 하나 이상의 역할에 할당할 수 있습니다.
 
@@ -91,7 +91,7 @@ Experience Platform UI에 대한 권한 작업 영역이 표시되어 **[!UICONT
 
 [!UICONTROL RHD] 레이블로 사용자 역할을 구성했으므로 다음 단계에서는 해당 역할에 대해 제어할 리소스에 동일한 레이블을 추가합니다.
 
-위쪽 탐색에서 ![응용 프로그램 전환기](/help/images/icons/apps.png) 아이콘으로 표시되는 **응용 프로그램 전환기**&#x200B;를 선택한 다음 **[!UICONTROL Experience Platform]**&#x200B;을 선택합니다.
+위쪽 탐색에서 **응용 프로그램 전환기** 아이콘으로 표시되는 ![응용 프로그램 전환기](/help/images/icons/apps.png)를 선택한 다음 **[!UICONTROL Experience Platform]**&#x200B;을 선택합니다.
 
 ![응용 프로그램 전환기의 드롭다운 메뉴에서 Experience Platform을 표시하는 이미지](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
@@ -140,7 +140,7 @@ Experience Platform UI에 대한 권한 작업 영역이 표시되어 **[!UICONT
 
 >[!NOTE]
 >
-> [개체 수준 액세스 제어](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/access-control/object-based-access)를 사용하여 [!UICONTROL 권한] 작업 영역에서 만든 레이블(예: 위의 세그먼트 레이블)을 Adobe Journey Optimizer의 다양한 개체에 할당합니다.&quot;
+> [!UICONTROL 개체 수준 액세스 제어]를 사용하여 [권한](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access) 작업 영역에서 만든 레이블(예: 위의 세그먼트 레이블)을 Adobe Journey Optimizer의 다양한 개체에 할당합니다.&quot;
 
 ## 액세스 제어 정책 활성화 {#policy}
 
@@ -150,7 +150,7 @@ Experience Platform UI에 대한 권한 작업 영역이 표시되어 **[!UICONT
 
 ![표시된 정책 목록](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-**[!UICONTROL 기본 필드 수준 액세스 제어 정책]** 옆에 있는 줄임표(`...`)를 선택하면 드롭다운에 역할을 편집, 활성화, 삭제 또는 복제하는 컨트롤이 표시됩니다. 드롭다운에서 **[!UICONTROL 활성화]**&#x200B;를 선택합니다.
+`...`기본 필드 수준 액세스 제어 정책&#x200B;**[!UICONTROL 옆에 있는 줄임표(]**)를 선택하면 드롭다운에 역할을 편집, 활성화, 삭제 또는 복제하는 컨트롤이 표시됩니다. 드롭다운에서 **[!UICONTROL 활성화]**&#x200B;를 선택합니다.
 
 정책을 활성화하기 위한 ![드롭다운](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
@@ -168,19 +168,19 @@ Experience Platform UI에 대한 권한 작업 영역이 표시되어 **[!UICONT
 >id="platform_permissions_policies_about"
 >title="What are policies?"
 >abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=ko" text="Manage policies"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html" text="Manage policies"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
 >title="Create a policy"
 >abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=ko#create-a-new-policy" text="Create a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
 >abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=ko#edit-a-policy" text="Edit a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
@@ -247,4 +247,4 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 다음 비디오에서는 속성 기반 액세스 제어에 대한 이해를 돕기 위해 역할, 리소스 및 정책을 구성하는 방법에 대해 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3451845?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
