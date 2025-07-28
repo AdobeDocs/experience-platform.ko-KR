@@ -1,13 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;데이터베이스 데이터베이스;타사 데이터베이스
-solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 데이터베이스 소스에 대한 데이터 흐름 만들기
 type: Tutorial
 description: 이 자습서에서는 데이터베이스에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Experience Platform으로 수집하는 단계를 다룹니다.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
+source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1453'
 ht-degree: 2%
 
 ---
@@ -62,58 +60,60 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Database source connection",
-        "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
-        "description": "Database source connection",
-        "data": {
-            "format": "tabular"
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Database source connection",
+    "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "description": "Database source connection",
+    "data": {
+      "format": "tabular"
+    },
+    "params": {
+      "tableName": "test1.Mytable",
+      "columns": [
+        {
+          "name": "TestID",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
         },
-        "params": {
-            "tableName": "test1.Mytable",
-            "columns": [
-                {
-                    "name": "TestID",
-                    "type": "string",
-                    "xdm": {
-                        "type": "string"
-                    }
-                },
-                {
-                    "name": "Name",
-                    "type": "string",
-                    "xdm": {
-                        "type": "string"
-                    }
-                },
-                {
-                    "name": "Datefield",
-                    "type": "string",
-                    "meta:xdmType": "date-time",
-                    "xdm": {
-                        "type": "string",
-                        "format": "date-time"
-                    }
-                }
-            ]
+        {
+          "name": "Name",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
         },
-        "connectionSpec": {
-            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
-            "version": "1.0"
+        {
+          "name": "Datefield",
+          "type": "string",
+          "meta:xdmType": "date-time",
+          "xdm": {
+            "type": "string",
+            "format": "date-time"
+          }
         }
-    }'
+      ],
+      "cdcEnabled": true
+    },
+    "connectionSpec": {
+      "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+      "version": "1.0"
+    }
+  }'
 ```
 
 | 속성 | 설명 |
 | -------- | ----------- |
 | `baseConnectionId` | 데이터베이스 소스의 연결 ID입니다. |
-| `params.path` | 소스 파일의 경로입니다. |
+| `params.tableName` | 소스 파일의 경로입니다. |
+| `params.cdcEnabled` | 변경 내역 캡처를 사용할지 여부를 나타내는 부울 값입니다. 이 속성은 다음 데이터베이스 소스에서 지원됩니다. <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> 자세한 내용은 [소스에서 데이터 캡처 변경](../change-data-capture.md)을 사용하는 방법에 대한 안내서를 참조하십시오. |
 | `connectionSpec.id` | 데이터베이스 소스의 연결 사양 ID입니다. 데이터베이스 사양 ID 목록은 [부록](#appendix)을 참조하십시오. |
 
 **응답**
@@ -204,7 +204,7 @@ curl -X POST \
 
 소스 데이터를 타겟 데이터 세트에 수집하려면 먼저 타겟 데이터 세트가 준수하는 타겟 스키마에 매핑해야 합니다.
 
-매핑 세트를 만들려면 대상 XDM 스키마 `$id`과(와) 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)의 `mappingSets` 끝점에 대한 POST 요청을 수행하십시오.
+매핑 세트를 만들려면 대상 XDM 스키마 `mappingSets`과(와) 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)의 `$id` 끝점에 대한 POST 요청을 수행하십시오.
 
 **API 형식**
 
@@ -702,8 +702,8 @@ curl -X POST \
 | 커넥터 이름 | 연결 사양 ID |
 | -------------- | --------------- |
 | [!DNL Amazon Redshift] | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
-| [!DNL Azure HDInsights]의 [!DNL Apache Hive] | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
-| [!DNL Azure HDInsights]의 [!DNL Apache Spark] | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| [!DNL Apache Hive]의 [!DNL Azure HDInsights] | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| [!DNL Apache Spark]의 [!DNL Azure HDInsights] | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
 | [!DNL Azure Data Explorer] | `0479cc14-7651-4354-b233-7480606c2ac3` |
 | [!DNL Azure Synapse Analytics] | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 | [!DNL Azure Table Storage] | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
