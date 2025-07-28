@@ -5,10 +5,10 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 079c1d7ac790fb7df72a6127a980080bdaa49518
+source-git-commit: 44c01678e96f2649dbf731dd4531004c1df28058
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 35%
+source-wordcount: '1047'
+ht-degree: 34%
 
 ---
 
@@ -59,6 +59,7 @@ ht-degree: 35%
       - [SFTP 커넥터](connectors/cloud-storage/sftp.md)
       - [Amazon S3 및 Azure Blob 커넥터](connectors/cloud-storage/blob-s3.md)
    - 동의 및 환경 설정 {#consent}
+      - [디도미](connectors/consent-and-preferences/didomi.md)
       - [OneTrust 통합](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics 커넥터](connectors/crm/ms-dynamics.md)
@@ -264,6 +265,7 @@ ht-degree: 35%
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 및 Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - 동의 및 환경 설정 {#consent}
+         - [디도미](tutorials/ui/create/consent-and-preferences/didomi.md)
          - [OneTrust 통합](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
