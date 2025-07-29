@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
+source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
 workflow-type: tm+mt
-source-wordcount: '2733'
-ht-degree: 24%
+source-wordcount: '2801'
+ht-degree: 23%
 
 ---
 
@@ -25,6 +25,11 @@ ht-degree: 24%
 - 데이터 요소를 통해 데이터 스트림 재정의가 활성화되면 오류가 발생하는 문제를 해결했습니다.
 - 빈 `idSyncContainerId` 재정의에서 오류가 발생하는 문제가 해결되었습니다.
 - 이제 미디어 데이터 요소를 해결할 때 이벤트 개체가 포함됩니다.
+
+**알려진 문제**
+
+- v2.31.0이 릴리스된 후 [사용자 지정 구성 요소 빌드](/help/web-sdk/install/create-custom-build.md) 프로세스에서 문제가 발견되었습니다. 사용자 지정 빌드는 계속 작동하는 동안 모든 구성 요소가 현재 빌드에 포함되어 구성 요소 선택에 관계없이 전체 크기의 패키지가 됩니다. 이 문제에 대한 수정 사항이 개발 중입니다. 사용자 지정 구성 요소 선택을 사용하여 빌드 크기를 최소화하는 경우 향후 릴리스를 기다리는 것이 좋습니다.
+
 
 ## 버전 2.30.1 - 2025년 5월 27일 수요일
 
@@ -140,7 +145,7 @@ Adobe Experience Platform Web SDK 버전 2.20.0을 포함합니다.
 **수정 사항 및 개선 사항**
 
 - [변수 업데이트](action-types.md#update-variable) 작업에서 데이터 요소를 검색할 때 발생하는 오류를 수정했습니다.
-- [!UICONTROL &#x200B; 작업에 사용하도록 권장된 이벤트 유형에서 &#x200B;]Media`sendEvent` 이벤트 유형을 제거했습니다.
+- [!UICONTROL  작업에 사용하도록 권장된 이벤트 유형에서 ]Media`sendEvent` 이벤트 유형을 제거했습니다.
 
 ## 버전 2.22.0 - 2024년 5월 3일 토요일
 

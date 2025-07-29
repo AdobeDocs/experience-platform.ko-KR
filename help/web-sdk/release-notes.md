@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
+source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
 workflow-type: tm+mt
-source-wordcount: '2438'
+source-wordcount: '2486'
 ht-degree: 5%
 
 ---
@@ -28,6 +28,10 @@ ht-degree: 5%
 - ID 조회가 실패할 때 약속 거부를 제대로 처리하기 위해 [ID 관리](identity/overview.md) 오류 처리가 개선되었습니다.
 - 누락된 [과(와) 관련된 오류로 인해 HTML 콘텐츠 항목이 있는 ](personalization/rendering-personalization-content.md)개인화 콘텐츠`renderStatusHandler`을(를) 렌더링하지 못하던 문제를 해결했습니다.
 - Activity Map [URL 컬렉션](commands/configure/clickcollectionenabled.md)이 HTTP가 아닌 URL을 올바르게 처리하도록 수정되었습니다.
+
+**알려진 문제**
+
+- [을(를) 사용하는 ](/help/web-sdk/install/create-custom-build.md)사용자 지정 빌드`npx @adobe/alloy` 프로세스가 현재 버전 2.28.0에서 예상대로 작동하지 않습니다. 선택한 모듈에 관계없이 모든 구성 요소가 생성된 빌드에 포함됩니다. 이 문제는 CDN에서 사용할 수 있는 표준 JavaScript 파일에는 영향을 주지 않습니다. 수정 작업이 진행 중입니다.
 
 ## 버전 2.27.0 - 2025년 5월 20일 수요일
 
