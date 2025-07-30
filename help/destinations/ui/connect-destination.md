@@ -6,7 +6,7 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="계정 이름"
->abstract="나중에 이 대상 계정을 쉽게 식별하는 데 도움이 되는 이름을 입력하십시오. 이 기능은 동일한 대상 유형에 대해 여러 개의 연결이 있는 경우 특히 유용합니다."
+>abstract="향후에 이 대상 계정을 쉽게 식별하는 데 도움이 되는 이름을 입력하십시오. 이 기능은 동일한 대상 유형에 대한 연결이 여러 개 있는 경우에 특히 유용합니다."
 
 대상에 연결하는 첫 번째 단계는 대상 플랫폼에 인증하는 것입니다.
 

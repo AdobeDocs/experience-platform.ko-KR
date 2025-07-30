@@ -1,13 +1,13 @@
 ---
 title: 계정 대상자
 description: 계정 대상자를 만들고 사용하여 다운스트림 대상의 계정 프로필을 타겟팅하는 방법을 알아봅니다.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1495'
-ht-degree: 21%
+source-wordcount: '1528'
+ht-degree: 20%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 21%
 Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 기반 대상에서 계정 기반 대상으로의 마케팅 세분화 경험을 전체적으로 쉽고 정교하게 만들 수 있습니다.
 
 계정 대상은 계정 기반 대상에 대한 입력으로 사용할 수 있으며, 이를 통해 다운스트림 서비스의 해당 계정 내에서 사용자를 타겟팅할 수 있습니다. 예를 들어 계정 기반 대상을 사용하여 **COO(최고 운영 책임자) 또는 CMO(최고 마케팅 책임자)라는 직함을 가진 모든 사용자에 대한 연락처 정보가 있는 모든 계정의 레코드를 검색할 수 있습니다.**
+
+>[!NOTE]
+>
+>B2B 아키텍처 업그레이드의 일부로, 이제 B2B 엔티티가 있는 대상에 대한 대상 크기 예상치가 정확한 정밀도로 계산됩니다. 이러한 예상치는 미리보기 중에 사용할 수 있으며, 복잡한 B2B 관계를 포함하는 대상자에게 보다 정확하고 신뢰할 수 있는 통찰력을 제공합니다. <br>자세한 내용은 [Real-Time CDP B2B edition 아키텍처 업그레이드 개요](../../rtcdp/b2b-architecture-upgrade.md)를 참조하세요.
 
 ## 용어 {#terminology}
 
@@ -49,7 +53,7 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 >
 >계정 대상은 **일괄 처리** 세그먼테이션을 사용하여 평가되며, 24시간마다 평가됩니다.
 
-계정 대상을 만들려면 [!UICONTROL 찾아보기] 페이지에서 **[!UICONTROL 대상 만들기]**&#x200B;를 선택하십시오.
+계정 대상을 만들려면 **[!UICONTROL 찾아보기]** 페이지에서 [!UICONTROL 대상 만들기]를 선택하십시오.
 
 ![계정 대상자 찾아보기 페이지에서 [!UICONTROL 대상자 만들기] 단추가 강조 표시됩니다.](../images/types/account/select-create-audience.png)
 
@@ -87,7 +91,7 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 
 | 옵션 | 설명 |
 | ------ | ----------- |
-| 직접 관계 | 계정과 사용자 간의 직접 연결. 개인 스키마의 `personComponents` 배열에서 `accountID` 값의 배열을 통해 각 사용자가 연결되는 계정을 지정합니다. 이 경로가 가장 자주 사용됩니다. |
+| 직접 관계 | 계정과 사용자 간의 직접 연결. 개인 스키마의 `accountID` 배열에서 `personComponents` 값의 배열을 통해 각 사용자가 연결되는 계정을 지정합니다. 이 경로가 가장 자주 사용됩니다. |
 | 계정-사용자 관계 | `accountPersonRelation` 개체로 정의된 계정과 사용자 간의 관계입니다. 이 경로를 사용하면 각 사용자가 여러 계정에 연결할 수도 있습니다. 조직이 소스 데이터에서 명시적 관계 테이블을 정의한 경우 사용됩니다. |
 | 영업 기회-사용자 관계 | `opportunityPersonRelation` 개체로 정의된 영업 기회와 사용자 간의 관계입니다. 이는 기회-개인에서 기회로 이동하여 사용자와 계정을 연결합니다. 여기에서 개인이 기회에 연결된 회사를 설명할 수 있습니다. |
 
@@ -126,8 +130,8 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
->title="최대 전환 확인 기간 오류"
->abstract="경험 이벤트의 최대 전환 확인 기간은 30일입니다."
+>title="전환 확인 기간"
+>abstract="전환 확인 기간을 사용하여 개인 수준 이벤트의 전체 내역을 조회합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
@@ -196,18 +200,19 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 
 계정 대상을 사용할 때 대상 **은(는) 다음 제한을 준수해야**&#x200B;합니다.
 
-- 경험 이벤트에 대한 최대 전환 확인 기간은 **30일**&#x200B;입니다.
 - 중첩된 컨테이너의 최대 깊이는 **5**&#x200B;입니다.
    - 이는 대상자를 생성할 때 다섯 개를 초과하는 중첩된 컨테이너를 **가질 수 없다**&#x200B;는 것을 의미합니다.
 - 단일 컨테이너 내의 최대 규칙 수는 **5**&#x200B;입니다.
    - 즉, 대상 **은(는) 대상을 구성하는 규칙을 5개 이상 가질 수 없습니다**.
 - 사용할 수 있는 최대 교차 엔터티 수는 **5**&#x200B;입니다.
    - 크로스 엔티티는 대상자 내에서 서로 다른 엔티티 간에 변경하는 경우입니다. 예를 들어 계정에서 사용자, 마케팅 목록으로 이동합니다.
-- 사용자 지정 엔터티 **사용할 수 없음**.
 - 단일 필드에 대해 확인할 수 있는 최대 값 수는 **50**&#x200B;입니다.
    - 예를 들어 &quot;도시 이름&quot; 필드가 있는 경우 50개의 도시 이름에 대해 해당 값을 확인할 수 있습니다.
-- 계정 대상자 **은(는) `inSegment`개의 이벤트를 사용할 수**&#x200B;없습니다.
 - 계정 대상자 **은(는) 순차적 이벤트를 사용할 수 없습니다**.
 - 계정 대상자 **은(는) 맵을 사용할 수 없습니다**.
 - 중첩된 배열의 최대 깊이는 **5**&#x200B;입니다.
 - 중첩된 개체의 최대 수는 **10**&#x200B;입니다.
+
+<!-- - The maximum lookback window for Experience Events is **30 days**. -->
+<!-- - Account audiences **cannot** use `inSegment` events. -->
+<!-- - Custom entities **cannot** be used. -->
