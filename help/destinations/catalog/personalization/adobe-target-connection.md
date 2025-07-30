@@ -72,8 +72,8 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 >[!IMPORTANT]
 >
 >동일한 페이지 및 다음 페이지 개인화 사용 사례&#x200B;*에 대해* Edge 대상을 활성화할 때 대상 *필수*&#x200B;이(가) [Active-On-Edge 병합 정책](../../../segmentation/ui/segment-builder.md#merge-policies)을(를) 사용합니다. [!DNL active-on-edge] 병합 정책을 사용하면 대상이 [Edge](../../../segmentation/methods/edge-segmentation.md)에서 지속적으로 평가되고 실시간 및 다음 페이지 개인화 사용 사례에 사용할 수 있습니다.  구현 유형에 따라 [사용 가능한 모든 사용 사례](#parameter)를 읽어 보십시오.
->>다른 병합 정책을 사용하는 Edge 대상을 Adobe Target 대상에 매핑하면 실시간 및 다음 페이지 사용 사례에 대해 해당 대상이 평가되지 않습니다.
->>[병합 정책 만들기](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)에 대한 지침을 따르고 **[!UICONTROL Active-On-Edge 병합 정책]** 전환을 사용하도록 설정해야 합니다.
+>&#x200B;>다른 병합 정책을 사용하는 Edge 대상을 Adobe Target 대상에 매핑하면 실시간 및 다음 페이지 사용 사례에 대해 해당 대상이 평가되지 않습니다.
+>&#x200B;>[병합 정책 만들기](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)에 대한 지침을 따르고 **[!UICONTROL Active-On-Edge 병합 정책]** 전환을 사용하도록 설정해야 합니다.
 
 
 | 대상자 원본 | 지원됨 | 설명 |
@@ -140,8 +140,8 @@ Adobe Experience Platform은 자동으로 회사의 Adobe Target 인스턴스에
 >[!NOTE]
 >
 >[특성이 있는 동일 페이지 및 다음 페이지 개인화를 위해 사용자 지정 Target 작업 영역](../../ui/activate-edge-personalization-destinations.md)을 사용하는 경우 [선택한 대상](../../ui/activate-edge-personalization-destinations.md#select-audiences)만 선택한 Target 작업 영역으로 전송됩니다. [매핑된 특성](../../ui/activate-edge-personalization-destinations.md#mapping)이(가) 기본 Target 작업 영역으로 전송됩니다.
->><br>
->>이 동작은 향후 업데이트에서 변경됩니다.
+>&#x200B;><br>
+>&#x200B;>이 동작은 향후 업데이트에서 변경됩니다.
 
 ### 경고 활성화 {#enable-alerts}
 
