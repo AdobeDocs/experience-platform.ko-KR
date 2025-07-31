@@ -1,14 +1,12 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2025년 7월
 description: Adobe Experience Platform의 2025년 7월 릴리스 정보.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2553b8f016a20678550eed50671e3549ec42aae7
+source-git-commit: fff6318e7f70176aee5fafe2e024c71922496aff
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1573'
 ht-degree: 22%
 
 ---
-
 
 # Adobe Experience Platform 릴리스 정보
 
@@ -34,6 +32,7 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 - [Segmentation Service](#segmentation-service)
 - [소스](#sources)
 
+
 ## 용량 {#capacity}
 
 >[!AVAILABILITY]
@@ -53,6 +52,7 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 | 대상 | 설명 |
 | --- | --- |
 | [Google Customer Match + Display &amp; Video 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) 연결의 제한된 가용성 | 6월에 모든 고객이 잠시 이용할 수 있게 된 후 Adobe은 이 통합을 제한된 가용성으로 반환했습니다. 현재 이 대상에 대한 액세스는 이미 활성화된 고객으로 제한되며, Adobe 및 Google은 구현 문제를 해결하기 위해 노력하고 있습니다. 광범위한 롤아웃이 재개된 후 이 통합을 사용하려면 Adobe 담당자에게 문의하여 의도를 나타내십시오. |
+| [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) 내부 업그레이드 | 2025년 7월 31일 금요일부터 대상 카탈로그에 두 개의 [!DNL The Trade Desk] 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. <br><br>기존 [!DNL The Trade Desk] 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음)로 변경되었으며, 이름이]** The Trade Desk **[!UICONTROL 인 새 카드를 사용할 수 있습니다.]** 새 활성화 데이터 흐름을 보려면 카탈로그에서 새 **[!UICONTROL Trade Desk]** 연결을 사용하십시오. <br><br>**[!UICONTROL (사용되지 않음) Trade Desk]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다. <br><br>흐름 서비스 API[를 통해 데이터 흐름을 만드는 경우 ](https://developer.adobe.com/experience-platform-apis/references/destinations/) 및 [!DNL flow spec ID]을(를) 다음 값으로 업데이트해야 합니다.[!DNL connection spec ID]<ul><li>흐름 사양 ID: `86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>연결 사양 ID: `1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
 
 **새로운 기능 또는 업데이트된 기능**
 
@@ -144,3 +144,4 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | [!DNL Salesforce]에서 레코드의 소프트 삭제 지원 | 이제 [!DNL Salesforce] 원본은 선택적 `includeDeletedObjects` 매개 변수를 통해 일시 삭제된 레코드를 포함할 수 있습니다. true로 설정하면 고객은 일시 삭제된 레코드를 [!DNL Salesforce] 쿼리에 포함하고 이러한 레코드를 Experience Platform으로 가져올 수 있습니다. 자세한 내용은 [[!DNL Salesforce] 소스 설명서](../../sources/connectors/crm/salesforce.md)를 참조하십시오. |
 
 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하십시오.
+
