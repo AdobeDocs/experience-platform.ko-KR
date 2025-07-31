@@ -119,11 +119,11 @@ Adobe Experience Cloud 솔루션은 다양한 방식으로 사용자 에이전�
 
 ### Adobe Analytics은 높은 엔트로피 클라이언트 힌트에 의존하여 보고서를 보고합니다 {#analytics}
 
-[운영 체제](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) 차원에는 높은 엔트로피 클라이언트 힌트로 저장된 운영 체제 버전이 포함됩니다. 높은 엔트로피 클라이언트 힌트가 활성화되지 않으면 Chromium 브라우저에서 수집한 히트에 대해 운영 체제 버전이 정확하지 않을 수 있습니다.
+[운영 체제](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=ko) 차원에는 높은 엔트로피 클라이언트 힌트로 저장된 운영 체제 버전이 포함됩니다. 높은 엔트로피 클라이언트 힌트가 활성화되지 않으면 Chromium 브라우저에서 수집한 히트에 대해 운영 체제 버전이 정확하지 않을 수 있습니다.
 
 ### 높은 엔트로피 클라이언트 힌트에 의존하는 Audience Manager 트레이트 {#aam}
 
-[!DNL Google]이(가) [!DNL Chrome] 헤더를 통해 수집된 정보를 최소화하도록 `User-Agent` 브라우저 기능을 업데이트했습니다. 따라서 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ko-KR)을(를) 사용하는 Audience Manager 고객은 더 이상 [플랫폼 수준 키](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html)를 기반으로 하는 트레이트에 대한 신뢰할 수 있는 정보를 받지 않게 됩니다.
+[!DNL Google]이(가) [!DNL Chrome] 헤더를 통해 수집된 정보를 최소화하도록 `User-Agent` 브라우저 기능을 업데이트했습니다. 따라서 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ko-KR)을(를) 사용하는 Audience Manager 고객은 더 이상 [플랫폼 수준 키](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=ko)를 기반으로 하는 트레이트에 대한 신뢰할 수 있는 정보를 받지 않게 됩니다.
 
 타깃팅에 플랫폼 수준 키를 사용하는 Audience Manager 고객은 [DIL](/help/web-sdk/home.md) 대신 [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ko-KR)&#x200B;(으)로 전환하고 [높은 엔트로피 클라이언트 힌트](#enabling-high-entropy-client-hints)를 활성화하여 신뢰할 수 있는 트레이트 데이터를 계속 받아야 합니다.
 

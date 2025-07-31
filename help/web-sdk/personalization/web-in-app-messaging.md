@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >Web In-App Messaging은 Web SDK을 사용하여 개인화된 콘텐츠를 제공하는 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ko) 기능입니다.
 >
->웹 인앱 메시지 캠페인을 구성하는 방법에 대한 자세한 지침은 [Adobe Journey Optimizer 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html)를 참조하세요.
+>웹 인앱 메시지 캠페인을 구성하는 방법에 대한 자세한 지침은 [Adobe Journey Optimizer 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=ko)를 참조하세요.
 
 
 ## 전제 조건 {#prerequisites}
@@ -184,5 +184,5 @@ Adobe Journey Optimizer에서 보내는 웹 인앱 메시지를 두 가지 방�
 
 [웹 SDK 구성](../commands/configure/overview.md)에서 필요에 따라 `personalizationStorageEnabled` 옵션을 설정합니다.
 
-* `personalizationStorageEnabled: true`은(는) [Adobe Journey Optimizer 캠페인](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp)에서 정의한 빈도로 인앱 메시지를 트리거합니다.
+* `personalizationStorageEnabled: true`은(는) [Adobe Journey Optimizer 캠페인](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=ko#configure-inapp)에서 정의한 빈도로 인앱 메시지를 트리거합니다.
 * `personalizationStorageEnabled: false`은(는) 페이지를 로드할 때마다 인앱 메시지를 트리거합니다.
