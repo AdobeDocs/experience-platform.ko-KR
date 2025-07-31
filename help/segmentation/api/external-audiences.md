@@ -2,9 +2,9 @@
 title: 외부 대상 API 엔드포인트
 description: 외부 대상 API를 사용하여 Adobe Experience Platform에서 외부 대상을 만들고, 업데이트하고, 활성화하고, 삭제하는 방법을 알아봅니다.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
+source-git-commit: bc74f86dca62a62dde39ad2e167e66b511d59086
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2189'
 ht-degree: 4%
 
 ---
@@ -78,10 +78,12 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
         },
         "ttlInDays": "40",
         "labels": ["core/C1"],
@@ -95,8 +97,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `name` | 문자열 | 외부 대상의 이름입니다. |
 | `description` | 문자열 | 외부 대상자에 대한 선택적 설명입니다. |
 | `customAudienceId` | 문자열 | 외부 대상자에 대한 선택적 식별자입니다. |
-| `fields` | 오브젝트 배열 | 필드 및 해당 데이터 유형 목록. 필드 목록을 만들 때 다음 항목을 추가할 수 있습니다. <ul><li>`name`: **필수** 외부 대상 지정에 속하는 필드의 이름입니다.</li><li>`type`: **필수** 필드에 들어가는 데이터 형식입니다. 지원되는 값은 `string`, `number`, `long`, `integer`, `date`(`2025-05-13`), `datetime`(`2025-05-23T20:19:00+00:00`) 및 `boolean`입니다.</li>`identityNs`: **ID 필드에 필요** ID 필드에서 사용하는 네임스페이스입니다. 지원되는 값에는 `ECID` 또는 `email`.li>과 같이 유효한 모든 네임스페이스가 포함됩니다.<li>`labels`: *선택 사항* 필드에 대한 액세스 제어 레이블의 배열입니다. 사용 가능한 액세스 제어 레이블에 대한 자세한 내용은 [데이터 사용 레이블 용어집](/help/data-governance/labels/reference.md)에 있습니다. </li></ul> |
-| `sourceSpec` | 오브젝트 | 외부 대상자가 있는 정보가 포함된 객체입니다. 이 개체를 사용할 때 **다음 정보를 포함해야** 합니다. <ul><li>`path`: **필수**: 외부 대상 또는 소스 내의 외부 대상이 포함된 폴더의 위치입니다.</li><li>`type`: **필수** 원본에서 검색 중인 개체의 형식입니다. 이 값은 `file` 또는 `folder`일 수 있습니다.</li><li>`sourceType`: *선택 사항* 검색 중인 원본 유형입니다. 현재 지원되는 값은 `Cloud Storage`뿐입니다.</li><li>`cloudType`: *선택 사항* 원본 유형에 따른 클라우드 저장소 유형입니다. 지원되는 값은 `S3`, `DLZ`, `GCS` 및 `SFTP`입니다.</li><li>`baseConnectionId`: 기본 연결의 ID이며 원본 공급자에서 제공됩니다. **,** 또는 `cloudType`의 `S3` 값을 사용하는 경우 이 값은 `GCS`required`SFTP`입니다. 자세한 내용은 [소스 커넥터 개요](../../sources/home.md)li>를 참조하십시오.</ul> |
+| `fields` | 오브젝트 배열 | 필드 및 해당 데이터 유형 목록. 필드 목록을 만들 때 다음 항목을 추가할 수 있습니다. <ul><li>`name`: **필수** 외부 대상 지정에 속하는 필드의 이름입니다.</li><li>`type`: **필수** 필드에 들어가는 데이터 형식입니다. 지원되는 값은 `string`, `number`, `long`, `integer`, `date`(`2025-05-13`), `datetime`(`2025-05-23T20:19:00+00:00`) 및 `boolean`입니다.</li><li>`identityNs`: **ID 필드에 필요** ID 필드에서 사용하는 네임스페이스입니다. 지원되는 값에는 `ECID` 또는 `email`과(와) 같이 유효한 모든 네임스페이스가 포함됩니다.</li><li>`labels`: *선택 사항* 필드에 대한 액세스 제어 레이블의 배열입니다. 사용 가능한 액세스 제어 레이블에 대한 자세한 내용은 [데이터 사용 레이블 용어집](/help/data-governance/labels/reference.md)에 있습니다. </li></ul> |
+| `sourceSpec` | 오브젝트 | 외부 대상자가 있는 정보가 포함된 객체입니다. 이 개체를 사용할 때 **다음 정보를 포함해야** 합니다. <ul><li>`path`: **필수**: 외부 대상 또는 소스 내의 외부 대상이 포함된 폴더의 위치입니다.</li><li>`type`: **필수** 원본에서 검색 중인 개체의 형식입니다. 이 값은 `file` 또는 `folder`일 수 있습니다.</li><li>`sourceType`: *선택 사항* 검색 중인 원본 유형입니다. 현재 지원되는 값은 `Cloud Storage`뿐입니다.</li><li>`cloudType`: *선택 사항* 원본 유형에 따른 클라우드 저장소 유형입니다. 지원되는 값은 `S3`, `DLZ`, `GCS` 및 `SFTP`입니다.</li><li>`baseConnectionId`: 기본 연결의 ID이며 원본 공급자에서 제공됩니다. **,** 또는 `cloudType`의 `S3` 값을 사용하는 경우 이 값은 `GCS`required`SFTP`입니다. 자세한 내용은 [소스 커넥터 개요](../../sources/home.md)를 참조하십시오.</li></ul> |
 | `ttlInDays` | 정수 | 외부 대상에 대한 데이터 만료(일 단위). 이 값은 1부터 90까지 설정할 수 있습니다. 기본적으로 데이터 만료는 30일로 설정됩니다. |
 | `audienceType` | 문자열 | 외부 대상의 대상 유형입니다. 현재 `people`만 지원됩니다. |
 | `originName` | 문자열 | **필수** 대상자의 원본입니다. 이는 대상자가 어디에서 오는지 설명합니다. 외부 대상의 경우 `CUSTOM_UPLOAD`을(를) 사용해야 합니다. |
@@ -139,11 +141,13 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -231,11 +235,13 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/operations
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -276,6 +282,7 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/operations
 - 대상자 설명
 - 필드 수준 액세스 제어 레이블
 - 대상자 수준 액세스 제어 레이블
+- 대상자의 데이터 만료
 
 이 끝점을 사용하여 필드를 업데이트하면 요청한 필드의 내용이 **대체**&#x200B;됩니다.
 
@@ -403,7 +410,6 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 | -------- | ---- | ----------- |
 | `dataFilterStartTime` | Epoch 타임스탬프 | **필수** 처리할 파일을 선택하기 위해 흐름을 실행할 시작 시간을 지정하는 범위입니다. |
 | `dataFilterEndTime` | Epoch 타임스탬프 | 처리할 파일을 선택하기 위해 플로우를 실행할 종료 시간을 지정하는 범위입니다. |
-| `differentialIngestion` | 부울 | 마지막 수집 이후의 차이 또는 전체 대상 수집에 따라 수집이 부분 수집인지 여부를 결정하는 필드입니다. 기본적으로 이 값은 `true`입니다. |
 
 +++
 
