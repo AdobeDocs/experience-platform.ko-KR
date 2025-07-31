@@ -1,12 +1,10 @@
 ---
 title: 외부 대상 API 엔드포인트
 description: 외부 대상 API를 사용하여 Adobe Experience Platform에서 외부 대상을 만들고, 업데이트하고, 활성화하고, 삭제하는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
+source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
 workflow-type: tm+mt
-source-wordcount: '2405'
+source-wordcount: '2219'
 ht-degree: 4%
 
 ---
@@ -528,24 +526,23 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **API 형식**
 
-다음 끝점은 결과를 필터링하는 데 도움이 되는 몇 가지 쿼리 매개 변수를 지원합니다. 이러한 매개 변수는 선택 사항이지만 결과에 초점을 맞추는 데 도움이 되도록 사용하는 것이 좋습니다.
+<!-- The following endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help focus your results. -->
 
 ```http
 GET /external-audience/{AUDIENCE_ID}/runs
-GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 ```
 
-**쿼리 매개 변수**
+<!-- **Query parameters**
 
-+++ 사용 가능한 쿼리 매개 변수 목록입니다.
++++ A list of available query parameters. 
 
-| 매개변수 | 설명 | 예 |
+| Parameter | Description | Example |
 | --------- | ----------- | ------- |
-| `limit` | 응답에서 반환되는 최대 항목 수입니다. 이 값의 범위는 1에서 40까지입니다. 기본적으로 제한은 20으로 설정됩니다. | `limit=30` |
-| `sortBy` | 반환된 항목이 정렬되는 순서입니다. `name` 또는 `createdAt`별로 정렬할 수 있습니다. 또한 `-` 기호를 추가하여 **오름차순** 순서 대신 **내림차순** 순서로 정렬할 수 있습니다. 기본적으로 항목은 `createdAt`을(를) 기준으로 내림차순으로 정렬됩니다. | `sortBy=name` |
-| `property` | 표시되는 대상자 수집 실행을 결정하는 필터입니다. 다음 속성을 필터링할 수 있습니다. <ul><li>`name`: 대상 이름별로 필터링할 수 있습니다. 이 속성을 사용하는 경우 `=`, `!=`, `=contains` 또는 `!=contains`을(를) 사용하여 비교할 수 있습니다. </li><li>`createdAt`: 수집 시간별로 필터링할 수 있습니다. 이 속성을 사용하는 경우 `>=` 또는 `<=`을(를) 사용하여 비교할 수 있습니다.</li><li>`status`: 수집 실행 상태를 기준으로 필터링할 수 있습니다. 이 속성을 사용하는 경우 `=`, `!=`, `=contains` 또는 `!=contains`을(를) 사용하여 비교할 수 있습니다. </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `limit` | The maximum number of items returned in the response. This value can range from 1 to 40. By default, the limit is set to 20. | `limit=30` |
+| `sortBy` | The order in which the returned items are sorted. You can sort by either `name` or by `createdAt`. Additionally, you can add a `-` sign to sort by **descending** order instead of **ascending** order. By default, the items are sorted by `createdAt` in descending order. | `sortBy=name` |
+| `property` | A filter to determine which audience ingestion runs are displayed. You can filter on the following properties: <ul><li>`name`: Lets you filter by the audience name. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li><li>`createdAt`: Lets you filter by the ingestion time. If using this property, you can compare by using `>=` or `<=`.</li><li>`status`: Lets you filter by the ingestion run's status. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li></ul>  | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
-+++
++++ -->
 
 **요청**
 
@@ -594,19 +591,23 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
             "createdAt": 1749324248,
             "createdBy": "{USER_ID}"
         }
-    ],
+    ]
+}
+```
+
+<!-- ,
     "_page": {
         "limit": 20,
         "count": 2,
         "totalCount": 2
     }
-}
-```
+    
+| `_page` | Object | An object that contains the pagination information about the list of results. |
+     -->
 
 | 속성 | 유형 | 설명 |
 | -------- | ---- | ----------- |
 | `runs` | 오브젝트 | 수집 목록이 포함된 개체는 대상에 속하며 실행됩니다. 이 개체에 대한 자세한 내용은 [수집 상태 검색 섹션](#retrieve-ingestion-status)을 참조하십시오. |
-| `_page` | 오브젝트 | 결과 목록에 대한 페이지 매김 정보가 포함된 객체입니다. |
 
 +++
 
