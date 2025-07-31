@@ -4,10 +4,10 @@ title: 흐름 서비스 API를 사용하여 대상 연결 편집
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 대상 연결의 다양한 구성 요소를 편집하는 방법에 대해 알아봅니다.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
 workflow-type: tm+mt
-source-wordcount: '1609'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 5%
 
 >[!NOTE]
 >
-> 이 자습서에 설명된 편집 작업은 현재 흐름 서비스 API를 통해서만 지원됩니다.
+> 이 자습서에 설명된 편집 작업은 Experience Platform UI에서도 지원됩니다. 자세한 내용은 UI에서 대상을 [편집](/help/destinations/ui/edit-destination.md)하는 방법에 대한 자습서를 참조하십시오.
 
-## 시작하기 {#get-started}
+## 시작 {#get-started}
 
 이 자습서에서는 유효한 데이터 흐름 ID가 있어야 합니다. 유효한 데이터 흐름 ID가 없는 경우 [대상 카탈로그](../catalog/overview.md)에서 선택한 대상을 선택하고 [대상에 연결](../ui/connect-destination.md) 및 [데이터 활성화](../ui/activation-overview.md)에 설명된 단계를 따라 이 자습서를 시작하십시오.
 
@@ -177,15 +177,15 @@ curl -X GET \
 
 대상 연결의 구성 요소는 대상마다 다릅니다. 예를 들어 [!DNL Amazon S3] 대상의 경우 파일을 내보내는 버킷 및 경로를 업데이트할 수 있습니다. [!DNL Pinterest] 대상의 경우 [!DNL Pinterest Advertiser ID]을(를) 업데이트할 수 있으며 [!DNL Google Customer Match]의 경우 [!DNL Pinterest Account ID]을(를) 업데이트할 수 있습니다.
 
-대상 연결의 구성 요소를 업데이트하려면 대상 연결 ID, 버전 및 사용할 새 값을 제공하는 동안 `/targetConnections/{TARGET_CONNECTION_ID}` 끝점에 대해 `PATCH` 요청을 수행합니다. 이전 단계에서 원하는 대상에 대한 기존 데이터 흐름을 검사했을 때 대상 연결 ID를 얻었다는 것을 기억하십시오.
+대상 연결의 구성 요소를 업데이트하려면 대상 연결 ID, 버전 및 사용할 새 값을 제공하는 동안 `PATCH` 끝점에 대해 `/targetConnections/{TARGET_CONNECTION_ID}` 요청을 수행합니다. 이전 단계에서 원하는 대상에 대한 기존 데이터 흐름을 검사했을 때 대상 연결 ID를 얻었다는 것을 기억하십시오.
 
 >[!IMPORTANT]
 >
->`PATCH`을(를) 요청할 때 `If-Match` 헤더가 필요합니다. 이 헤더 값은 업데이트하려는 대상 연결의 고유한 버전입니다. 데이터 흐름, 대상 연결 등 플로우 엔티티를 성공적으로 업데이트할 때마다 etag 값이 업데이트됩니다.
+>`If-Match`을(를) 요청할 때 `PATCH` 헤더가 필요합니다. 이 헤더 값은 업데이트하려는 대상 연결의 고유한 버전입니다. 데이터 흐름, 대상 연결 등 플로우 엔티티를 성공적으로 업데이트할 때마다 etag 값이 업데이트됩니다.
 >
 > 최신 버전의 etag 값을 가져오려면 `/targetConnections/{TARGET_CONNECTION_ID}` 끝점에 대한 GET 요청을 수행합니다. 여기서 `{TARGET_CONNECTION_ID}`은(는) 업데이트하려는 대상 연결 ID입니다.
 >
-> `PATCH`개의 요청을 할 때는 아래 예제와 같이 `If-Match` 헤더의 값을 큰따옴표로 묶어야 합니다.
+> `If-Match`개의 요청을 할 때는 아래 예제와 같이 `PATCH` 헤더의 값을 큰따옴표로 묶어야 합니다.
 
 다음은 다양한 대상 유형에 대한 대상 연결 사양의 매개 변수를 업데이트하는 몇 가지 예입니다. 그러나 모든 대상에 대한 매개 변수를 업데이트하는 일반 규칙은 다음과 같습니다.
 
@@ -205,7 +205,7 @@ PATCH /targetConnections/{TARGET_CONNECTION_ID}
 
 **요청**
 
-다음 요청은 [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 대상 연결의 `bucketName` 및 `path` 매개 변수를 업데이트합니다.
+다음 요청은 `bucketName` 대상 연결의 `path` 및 [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 매개 변수를 업데이트합니다.
 
 ```shell
 curl -X PATCH \
@@ -288,7 +288,7 @@ curl -X PATCH \
 
 **요청**
 
-다음 요청은 [[!DNL Pinterest] 대상 연결](/help/destinations/catalog/advertising/pinterest.md#parameters)의 `advertiserId` 매개 변수를 업데이트합니다.
+다음 요청은 `advertiserId`대상 연결[[!DNL Pinterest] 의 ](/help/destinations/catalog/advertising/pinterest.md#parameters) 매개 변수를 업데이트합니다.
 
 ```shell
 curl -X PATCH \
@@ -334,17 +334,17 @@ curl -X PATCH \
 
 대상의 자격 증명을 업데이트하려면 기본 연결을 편집합니다. 기본 연결의 구성 요소는 대상마다 다릅니다. 예를 들어 [!DNL Amazon S3] 대상의 경우 [!DNL Amazon S3] 위치에 액세스 키와 비밀 키를 업데이트할 수 있습니다.
 
-기본 연결의 구성 요소를 업데이트하려면 기본 연결 ID, 버전 및 사용할 새 값을 제공하는 동안 `/connections` 끝점에 대해 `PATCH` 요청을 수행합니다.
+기본 연결의 구성 요소를 업데이트하려면 기본 연결 ID, 버전 및 사용할 새 값을 제공하는 동안 `PATCH` 끝점에 대해 `/connections` 요청을 수행합니다.
 
-매개 변수 `baseConnection`에 대해 원하는 대상으로 기존 데이터 흐름을 검사했을 때 [이전 단계](#look-up-dataflow-details)에서 기본 연결 ID를 얻었습니다.
+매개 변수 [에 대해 원하는 대상으로 기존 데이터 흐름을 검사했을 때 ](#look-up-dataflow-details)이전 단계`baseConnection`에서 기본 연결 ID를 얻었습니다.
 
 >[!IMPORTANT]
 >
->`PATCH`을(를) 요청할 때 `If-Match` 헤더가 필요합니다. 이 헤더의 값은 업데이트하려는 기본 연결의 고유 버전입니다. 데이터 흐름, 기본 연결 등 흐름 엔티티가 성공적으로 업데이트될 때마다 etag 값이 업데이트됩니다.
+>`If-Match`을(를) 요청할 때 `PATCH` 헤더가 필요합니다. 이 헤더의 값은 업데이트하려는 기본 연결의 고유 버전입니다. 데이터 흐름, 기본 연결 등 흐름 엔티티가 성공적으로 업데이트될 때마다 etag 값이 업데이트됩니다.
 >
 > 최신 버전의 Etag 값을 가져오려면 `/connections/{BASE_CONNECTION_ID}` 끝점에 대한 GET 요청을 수행합니다. 여기서 `{BASE_CONNECTION_ID}`은(는) 업데이트하려는 기본 연결 ID입니다.
 >
-> `PATCH`개의 요청을 할 때는 아래 예제와 같이 `If-Match` 헤더의 값을 큰따옴표로 묶어야 합니다.
+> `If-Match`개의 요청을 할 때는 아래 예제와 같이 `PATCH` 헤더의 값을 큰따옴표로 묶어야 합니다.
 
 다음은 다양한 유형의 대상에 대해 기본 연결 사양의 매개 변수를 업데이트하는 몇 가지 예입니다. 그러나 모든 대상에 대한 매개 변수를 업데이트하는 일반 규칙은 다음과 같습니다.
 
@@ -364,7 +364,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 **요청**
 
-다음 요청은 [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 대상 연결의 `accessId` 및 `secretKey` 매개 변수를 업데이트합니다.
+다음 요청은 `accessId` 대상 연결의 `secretKey` 및 [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 매개 변수를 업데이트합니다.
 
 ```shell
 curl -X PATCH \
