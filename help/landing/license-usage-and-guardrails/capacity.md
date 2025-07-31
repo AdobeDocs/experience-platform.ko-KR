@@ -1,15 +1,13 @@
 ---
 title: 라이선스 사용 및 용량
 description: Adobe Experience Platform 내의 라이선스 사용 및 용량 제한에 대해 알아봅니다.
-hide: true
-hidefromtoc: true
-source-git-commit: b3b0792a1a1dd5270dec697539ed58d895814fc8
+exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
+source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '577'
 ht-degree: 6%
 
 ---
-
 
 # 라이센스 사용 및 용량
 
@@ -43,7 +41,7 @@ Experience Platform의 보호 기능에 대한 자세한 내용은 [Real-Time CD
 
 - 스트리밍 대상의 최대 수는 500개입니다.
    - 이러한 500개의 스트리밍 대상 중 최대 Edge 대상 수는 150개입니다
-- 스트리밍 세분화를 위한 최대 통합 처리량은 초당 레코드 1500개(rps)입니다.
+- 스트리밍 세분화를 위한 최대 결합 처리량은 초당 레코드 1500개(rps)입니다
 
 대상자 수용작업량은 **샌드박스** 수준입니다. 즉, 조직에 있는 모든 샌드박스에 500개의 스트리밍 대상을 가질 수 있으며, 이 중 150개는 에지 대상이 될 수 있습니다.
 
