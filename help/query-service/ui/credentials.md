@@ -176,7 +176,7 @@ SQL을 사용하여 Customer Journey Analytics 데이터 보기에 액세스하�
 >[!NOTE]
 >
 >만료되지 않는 자격 증명을 사용하여 호스트에 연결할 때 암호와 사용자 이름을 제외하고 [!UICONTROL 만료되는 자격 증명] 섹션에 나열된 모든 매개 변수를 사용해야 합니다.
->>사용자 이름과 암호를 입력하는 형식은 이 예제 `username:{your_username}` 및 `password:{password_string}`과(와) 같이 콜론으로 구분된 값을 사용합니다.
+>&#x200B;>사용자 이름과 암호를 입력하는 형식은 이 예제 `username:{your_username}` 및 `password:{password_string}`과(와) 같이 콜론으로 구분된 값을 사용합니다.
 
 | 매개변수 | 설명 | 예 |
 |---|---|---|
