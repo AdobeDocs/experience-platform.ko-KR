@@ -2,9 +2,9 @@
 title: 샌드박스 도구 패키지 API 끝점
 description: 샌드박스 도구 API의 /packages 끝점을 사용하면 Adobe Experience Platform에서 패키지를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 47e4616e5465ec97512647b9280f461c6971aa42
+source-git-commit: 1d8c29178927c7ee3aceb0b68f97baeaefd9f695
 workflow-type: tm+mt
-source-wordcount: '2547'
+source-wordcount: '2933'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 ## 패키지 만들기 {#create}
 
-패키지 이름 및 패키지 유형에 대한 값을 제공하는 동안 `/packages` 끝점에 POST 요청을 하여 다중 아티팩트 패키지를 만들 수 있습니다.
+패키지 이름 및 패키지 유형에 대한 값을 제공하는 동안 `/packages` 끝점에 대한 POST 요청을 수행하여 다중 아티팩트 패키지를 만들 수 있습니다.
 
 **API 형식**
 
@@ -60,7 +60,7 @@ curl -X POST \
 | `packageType` | 패키지에 특정 아티팩트를 포함하고 있음을 나타내는 패키지 형식은 **PARTIAL**&#x200B;입니다. | 문자열 | 예 |
 | `sourceSandbox` | 패키지의 소스 샌드박스. | 오브젝트 | 아니요 |
 | `expiry` | 패키지의 만료 날짜를 정의하는 타임스탬프. 기본값은 생성일로부터 90일입니다. 응답 만료 필드는 epoch UTC 시간이 됩니다. | 문자열(UTC 타임스탬프 형식) | 아니요 |
-| `artifacts` | 패키지로 내보낼 아티팩트 목록입니다. `packageType`이(가) `FULL`인 경우 `artifacts` 값은 **null** 또는 **empty**&#x200B;여야 합니다. | 배열 | 아니요 |
+| `artifacts` | 패키지로 내보낼 아티팩트 목록입니다. `artifacts`이(가) **인 경우** 값은 **null** 또는 `packageType`empty`FULL`여야 합니다. | 배열 | 아니요 |
 
 **응답**
 
@@ -100,11 +100,11 @@ curl -X POST \
 
 ## 패키지 업데이트 {#update}
 
-`/packages` 끝점에 대한 PUT 요청을 수행하여 패키지를 업데이트할 수 있습니다.
+샌드박스 도구 API에서 `/packages` 끝점을 사용하여 패키지를 업데이트합니다.
 
 ### 패키지에 아티팩트 추가 {#add-artifacts}
 
-패키지에 아티팩트를 추가하려면 `id`을(를) 제공하고 `action`에 대해 **ADD**&#x200B;을(를) 포함해야 합니다.
+패키지에 아티팩트를 추가하려면 `id`을(를) 제공하고 **에 대해** ADD`action`을(를) 포함해야 합니다.
 
 **API 형식**
 
@@ -198,7 +198,7 @@ curl -X PUT \
 
 ### 패키지에서 아티팩트 삭제 {#delete-artifacts}
 
-패키지에서 아티팩트를 삭제하려면 `id`을(를) 제공하고 `action`에 대한 **DELETE**&#x200B;을(를) 포함해야 합니다.
+패키지에서 아티팩트를 삭제하려면 `id`을(를) 제공하고 **에 대한** DELETE`action`을(를) 포함해야 합니다.
 
 **API 형식**
 
@@ -273,7 +273,7 @@ curl -X PUT \
 >
 >**UPDATE** 작업은 패키지의 패키지 메타데이터 필드를 업데이트하는 데 사용되며 **UNABLE**&#x200B;은(는) 패키지에 아티팩트를 추가/삭제하는 데 사용됩니다.
 
-패키지의 메타데이터 필드를 업데이트하려면 `id`을(를) 제공하고 `action`에 대해 **UPDATE**&#x200B;을(를) 포함해야 합니다.
+패키지의 메타데이터 필드를 업데이트하려면 `id`을(를) 제공하고 **에 대해** UPDATE`action`을(를) 포함해야 합니다.
 
 **API 형식**
 
@@ -345,7 +345,7 @@ curl -X PUT \
 
 ## 패키지 삭제 {#delete}
 
-패키지를 삭제하려면 `/packages` 끝점에 DELETE 요청을 하고 삭제할 패키지의 ID를 지정하십시오.
+패키지를 삭제하려면 `/packages` 끝점에 대한 DELETE 요청을 만들고 삭제할 패키지의 ID를 지정하십시오.
 
 **API 형식**
 
@@ -380,7 +380,7 @@ curl -X DELETE \
 }
 ```
 
-## 패키지 Publish {#publish}
+## 패키지 게시 {#publish}
 
 패키지를 샌드박스로 가져오려면 게시해야 합니다. 게시할 패키지의 ID를 지정하는 동안 `/packages` 끝점에 GET 요청을 만듭니다.
 
@@ -900,7 +900,7 @@ curl -X POST \
 
 ## 모든 패키지 아티팩트를 가져오려면 역할 기반 권한 확인 {#role-based-permissions}
 
-패키지 ID 및 대상 샌드박스 이름을 지정하는 동안 `/packages` 끝점에 대한 GET 요청을 수행하여 패키지 아티팩트를 가져올 수 있는 권한이 있는지 확인할 수 있습니다.
+패키지의 ID와 대상 샌드박스 이름을 지정하는 동안 `/packages` 끝점에 대한 GET 요청을 수행하여 패키지 아티팩트를 가져올 수 있는 권한이 있는지 확인할 수 있습니다.
 
 **API 형식**
 
@@ -1165,7 +1165,7 @@ curl -X GET \
 
 ### 공유 요청 보내기 {#send-request}
 
-`/handshake/bulkCreate` 끝점에 POST 요청을 하여 공유 승인을 위한 요청을 대상 파트너 조직에 보냅니다. 비공개 패키지를 공유하려면 먼저 이 작업이 필요합니다.
+`/handshake/bulkCreate` 끝점에 POST 요청을 하여 공유 승인을 위해 대상 파트너 조직에 요청을 보냅니다. 비공개 패키지를 공유하려면 먼저 이 작업이 필요합니다.
 
 **API 형식**
 
@@ -1223,7 +1223,7 @@ curl -X POST \
             "modifiedByName": "{MODIFIED_BY}",
             "modifiedByIMSOrgId": "{ORG_ID}",
             "statusHistory": "[{\"actionTakenBy\":\"acme@98ff67fa661fdf6549420b.e\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724938816885}]",
-            "linkingId": "{LINKIND_ID}"
+            "linkingId": "{LINKING_ID}"
         }
     },
     "failedRequests": {}
@@ -1374,7 +1374,7 @@ curl -X GET \
 
 ### 새 공유 요청 {#share-request}
 
-패키지 ID 및 대상 조직의 ID를 제공하는 동안 `/transfer` 끝점에 대한 POST 요청을 만들어 게시된 원본 조직의 패키지를 가져와 대상 조직과 공유합니다.
+패키지 ID와 대상 조직의 ID를 제공하는 동안 `/transfer` 끝점에 대한 POST 요청을 만들어 게시된 원본 조직의 패키지를 가져와 대상 조직과 공유합니다.
 
 **API 형식**
 
@@ -1975,5 +1975,497 @@ curl -X GET \
 {
     "imsOrgId": "{ORG_ID}",
     "packageId": "{PACKAGE_ID}"
+}
+```
+
+## 개체 구성 업데이트 마이그레이션
+
+샌드박스 도구 API의 /packages 끝점을 사용하여 개체 구성 업데이트를 마이그레이션합니다.
+
+### 업데이트 작업(#update-operations)
+
+패키지 스냅숏의 지정된 버전 또는 최신 버전을 패키지 ID를 제공하여 `/packages/{packageId}/version/compare` 끝점에 POST 요청을 수행하여 패키지를 가져온 원본 샌드박스 또는 이전에 사용된 대상 샌드박스의 현재 상태와 비교합니다.
+
+***API 형식***
+
+```http
+PATCH /packages/{packageId}/version/compare
+```
+
+| 속성 | 설명 | 유형 | 필수 여부 |
+| --- | --- | --- | --- |
+| `packageId` | 패키지의 ID입니다. | 문자열 | 예 |
+
+**요청**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/compare/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "triggerNew": true,
+      "targetSandbox": "{SANDBOX_NAME}"
+  }'
+```
+
+| 속성 | 설명 | 유형 | 필수 여부 |
+| --- | --- | --- | --- |
+| `triggerNew` | 활성 작업이나 완료된 작업이 이미 있는 경우에도 새 비교 계산 작업을 트리거하는 플래그입니다. | 부울 | 아니요 |
+| `targetSandbox` | 차이를 계산할 대상 샌드박스의 이름을 나타냅니다. 지정하지 않으면 소스 샌드박스가 대상 샌드박스로 사용됩니다. | 문자열 | 아니요 |
+
+**응답**
+
+이전에 완료된 작업에 대한 성공적인 응답은 이전에 계산된 비교 결과와 함께 작업 개체를 반환합니다. 새로 완료된 작업은 작업 ID를 반환합니다.
+
++++응답 보기(제출된 작업)
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "c4b7d07ae4c646279e2070a31c50bd5c",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "SUCCESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "deltaPackageVersion": {
+            "packageId": "{PACKAGE_ID}",
+            "currentVersion": 0,
+            "validated": false,
+            "rootArtifacts": [
+                {
+                    "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de",
+                    "type": "REGISTRY_SCHEMA",
+                    "found": false,
+                    "count": 0
+                }
+            ],
+            "eximGraphDelta": {
+                "vertices": [],
+                "pluginDeltas": [
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 2_1738766274074",
+                                "newValue": "Custom FieldGroup 2"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    },
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 4_1738766274074",
+                                "newValue": "Custom FieldGroup 4"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "importReplacementMap": {
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+            "5a45f8cd309d5ed5797be9a0af65e89152a51d57a6c74b52": "4ae041fa182d6faf2e7c56463399170d913138a7c5712909",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/b2b7705e770a35341b8bc5ec5e3644d9c7387266777fe4ba": "https://ns.adobe.com/sandboxtoolingstage/schemas/838c4e21ad81543ac14238ac1756012f7f98f0e0bec6b425",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de": "https://ns.adobe.com/sandboxtoolingstage/schemas/9a55692d527169d0239e126137a694ed9db2406c9bcbd06a",
+            "8f45c79235c91e7f0c09af676a77d170a34b5ee0ad5de72c": "65d755cc3300674c3cfcec620c59876af07f046884afd359",
+            "f04b8e461396ff426f8ba8dc5544f799bf287baa8e0fa5c": "b6fa821ada8cb97cac384f0b0354bbe74209ec97fb6a83a3",
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+            "c8304f3cb7986e8c9b613cd8d832125bd867fb4a5aedf67a": "4d21e9bf89ce0042b52d7d41ff177a7697d695e2617d1fc1"
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
++++응답 보기(새로 제출된 작업)
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "aa5cfacf35a8478c8cf44a675fab1c30 ",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "IN_PROGRESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
+### 패키지 버전 업데이트(#package-versioning)
+
+패키지 ID를 제공하여 `/packages/{packageId}/version/save` 끝점에 GET 요청을 수행하여 각 개체에 대해 소스 샌드박스의 최신 스냅숏을 사용하여 패키지를 새 버전으로 업그레이드합니다.
+
+***API 형식***
+
+```http
+PATCH /packages/{packageId}/version/save
+```
+
+| 속성 | 설명 | 유형 | 필수 여부 |
+| --- | --- | --- | --- |
+| `packageId` | 패키지의 ID입니다. | 문자열 | 예 |
+
+**요청**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/save/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**응답**
+
+성공적인 응답은 버전 업그레이드에 대한 작업 상태를 반환합니다.
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Version Job Package: {JOB_ID}",
+    "description": null,
+    "visibility": "TENANT",
+    "requestType": "VERSION",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPGRADE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### 패키지 버전 내역 검색(#package-version-history)
+
+`/packages/{packageId}/history` 끝점에 GET 요청을 하고 패키지 ID를 제공하여 타임스탬프 및 수정자를 포함한 패키지의 버전 관리 기록을 검색합니다.
+
+***API 형식***
+
+```http
+PATCH /packages/{packageId}/history
+```
+
+| 속성 | 설명 | 유형 | 필수 여부 |
+| --- | --- | --- | --- |
+| `packageId` | 패키지의 ID입니다. | 문자열 | 예 |
+
+**요청**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/history/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**응답**
+
+성공적인 응답은 패키지의 버전 내역을 반환합니다.
+
+```json
+[
+    {
+        "id": "cb68591a1ed941e191e7f52e33637a26",
+        "version": 0,
+        "createdDate": 1739516784000,
+        "modifiedDate": 1739516784000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 3
+    },
+    {
+        "id": "e26189e6e4df476bb66c3fc3e66a1499",
+        "version": 0,
+        "createdDate": 1739343268000,
+        "modifiedDate": 1739343268000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 2
+    },
+    {
+        "id": "11af34c0eee449ac84ef28c66d9383e3",
+        "version": 0,
+        "createdDate": 1739343073000,
+        "modifiedDate": 1739343073000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 1
+    }
+]
+```
+
+### 업데이트 작업 제출(#submit-update)
+
+패키지 ID를 제공하여 `/packages/{packageId}/import` 끝점에 대한 PATCH 요청을 수행하여 새 업데이트를 대상 샌드박스 개체에 푸시합니다.
+
+***API 형식***
+
+```http
+PATCH /packages/{packageId}/import
+```
+
+| 속성 | 설명 | 유형 | 필수 여부 |
+| --- | --- | --- | --- |
+| `packageId` | 패키지의 ID입니다. | 문자열 | 예 |
+
+**요청**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "id": "50fd94f8072b4f248737a2b57b41058f",
+      "name": "Test Update",
+      "destinationSandbox": {
+        "name": "test-sandbox-sbt",
+        "imsOrgId": "{ORG_ID}"
+      },
+      "overwriteMappings": {
+        "https://ns.adobe.com/sandboxtoolingstage/schemas/327a48c83a5359f8160420a00d5a07f0ba8631a1fd466f9e" : {
+            "id" : "https://ns.adobe.com/sandboxtoolingstage/schemas/e346bb2cd7b26576cb51920d214aebbd42940a9bf94a75cd",
+            "type" : "REGISTRY_SCHEMA"
+        }
+      }
+  }'
+```
+
+**응답**
+
+성공적인 응답은 업데이트에 대한 작업 ID를 반환합니다.
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Update Job Name",
+    "description": "Update Job Description",
+    "visibility": "TENANT",
+    "requestType": "IMPORT",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPDATE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "amanda-1",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### 업데이트 및 패키지 재정의 비활성화(#disable-update)
+
+패키지 ID를 제공하여 `/packages/{packageId}/?{QUERY_PARAMS}` 끝점에 대한 GET 요청을 수행하여 업데이트가 지원되지 않는 패키지에 대한 업데이트 및 재정의를 비활성화합니다.
+
+***API 형식***
+
+```http
+PATCH /packages/{packageId}?{QUERY_PARAMS}
+```
+
+| 속성 | 설명 | 유형 | 필수 여부 |
+| --- | --- | --- | --- |
+| `packageId` | 패키지의 ID입니다. | 문자열 | 예 |
+| {QUERY_PARAM} | getCapabilites 쿼리 매개 변수. `true` 또는 `false`(으)로 설정해야 합니다. | 부울 | 예 |
+
+**요청**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}?getCapabilities=true'/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**응답**
+
+성공적인 응답은 패키지의 기능 목록을 반환합니다.
+
+```json
+{
+    "id": "80230dde96574a828191144709bb9b51",
+    "version": 3,
+    "createdDate": 1749808582000,
+    "modifiedDate": 1749808648000,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "name": "Ankit_Primary_Descriptor_Test",
+    "description": "RestPackage",
+    "imsOrgId": "{ORG_ID}",
+    "clientId": "usecasebuilder",
+    "packageType": "PARTIAL",
+    "expiry": 1757584598000,
+    "publishDate": 1749808648000,
+    "status": "PUBLISHED",
+    "packageVisibility": "PRIVATE",
+    "latestPackageVersion": 0,
+    "packageAccessType": "TENANT",
+    "artifactsList": [
+        {
+            "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/1c767056056de64d8030380d1b9f570d26bc15501a1e0e95",
+            "altId": null,
+            "type": "REGISTRY_SCHEMA",
+            "found": false,
+            "count": 0
+        }
+    ],
+    "schemaMapping": {},
+    "sourceSandbox": {
+        "name": "atul-sandbox",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "packageCapabilities": {
+        "capabilities": [
+            "VERSIONABLE"
+        ]
+    }
 }
 ```
