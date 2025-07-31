@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목; 경고;대상
 description: 데이터 흐름을 만들 때 경고에 가입하여 흐름 실행의 상태, 성공 또는 실패와 관련된 경고 메시지를 받을 수 있습니다.
 title: 컨텍스트 내 대상 경고 구독
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 8%
@@ -18,7 +18,7 @@ Adobe Experience Platform을 사용하면 Adobe Experience Platform 활동과 �
 
 이 문서에서는 대상 데이터 흐름에 대한 알림 메시지 수신을 구독하는 방법에 대한 단계를 설명합니다.
 
-## 시작하기
+## 시작
 
 이 문서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 잘 알고 있어야 합니다.
 
@@ -38,7 +38,7 @@ Adobe Experience Platform을 사용하면 Adobe Experience Platform 활동과 �
 >
 >데이터 흐름에 대한 이메일 기반 경고 알림을 수신하려면 Experience Platform 계정에 대해 이메일 인스턴트 알림을 활성화해야 합니다.
 
-[대상 연결](connect-destination.md) 워크플로의 [!UICONTROL 새 대상 구성] 단계 동안 데이터 흐름에 대한 경고를 사용하도록 설정할 수 있습니다.
+[!UICONTROL 대상 연결] 워크플로의 [새 대상 구성](connect-destination.md) 단계 동안 데이터 흐름에 대한 경고를 사용하도록 설정할 수 있습니다.
 
 대상 경고 섹션을 표시하는 ![UI 이미지입니다.](../assets/ui/alerts/destination-alerts.png)
 

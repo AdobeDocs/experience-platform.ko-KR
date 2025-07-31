@@ -1,19 +1,19 @@
 ---
-title: Adobe Experience Platform Web SDK용 후크 모니터링
-description: Adobe Experience Platform Web SDK에서 제공하는 모니터링 후크를 사용하여 구현을 디버깅하고 Web SDK 로그를 캡처하는 방법을 알아봅니다.
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+title: Adobe Experience Platform Web SDK에 대한 후크 모니터링
+description: Adobe Experience Platform Web SDK에서 제공하는 모니터링 후크를 사용하여 구현을 디버깅하고 웹 SDK 로그를 캡처하는 방법을 알아봅니다.
+exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 6%
 
 ---
 
+# 웹 SDK에 대한 후크 모니터링
 
-# Web SDK용 후크 모니터링
+Adobe Experience Platform Web SDK에는 다양한 시스템 이벤트를 모니터링하는 데 사용할 수 있는 모니터링 후크가 포함되어 있습니다. 이러한 도구는 자체 디버깅 도구를 개발하고 Web SDK 로그를 캡처하는 데 유용합니다.
 
-Adobe Experience Platform Web SDK에는 다양한 시스템 이벤트를 모니터링하는 데 사용할 수 있는 모니터링 후크가 포함되어 있습니다. 이러한 도구는 고유한 디버깅 도구를 개발하고 Web SDK 로그를 캡처하는 데 유용합니다.
-
-Web SDK는 [디버깅](commands/configure/debugenabled.md)을 사용했는지 여부에 관계없이 모니터링 함수를 트리거합니다.
+웹 SDK은 [디버깅](commands/configure/debugenabled.md)을 사용했는지 여부에 관계없이 모니터링 함수를 트리거합니다.
 
 ## `onInstanceCreated` {#onInstanceCreated}
 
@@ -49,7 +49,7 @@ onInstanceCreated(data) {
 
 ## `onBeforeCommand` {#onBeforeCommand}
 
-이 콜백 함수는 다른 명령이 실행되기 전에 Web SDK에 의해 트리거됩니다. 이 함수를 사용하여 특정 명령의 구성 옵션을 검색할 수 있습니다. 함수 매개 변수에 대한 자세한 내용은 아래 샘플을 참조하십시오.
+이 콜백 함수는 다른 명령이 실행되기 전에 웹 SDK에 의해 트리거됩니다. 이 함수를 사용하여 특정 명령의 구성 옵션을 검색할 수 있습니다. 함수 매개 변수에 대한 자세한 내용은 아래 샘플을 참조하십시오.
 
 ```js
 onBeforeCommand(data) {
@@ -121,7 +121,7 @@ onBeforeNetworkRequest(data) {
 | 매개변수 | 유형 | 설명 |
 |---------|----------|----------|
 | `data.instanceName` | 문자열 | 웹 SDK 인스턴스가 저장된 전역 변수의 이름입니다. |
-| `data.requestId` | 문자열 | 디버깅을 사용할 수 있도록 Web SDK에서 생성한 `requestId`입니다. |
+| `data.requestId` | 문자열 | 디버깅을 활성화하기 위해 웹 SDK에서 생성한 `requestId`입니다. |
 | `data.url` | 문자열 | 요청한 URL입니다. |
 | `data.payload` | 오브젝트 | `POST` 메서드를 통해 JSON 형식으로 변환되고 요청 본문으로 전송되는 네트워크 요청 페이로드 개체입니다. |
 
@@ -145,7 +145,7 @@ onNetworkResponse(data) {
 | 매개변수 | 유형 | 설명 |
 |---------|----------|----------|
 | `data.instanceName` | 문자열 | 웹 SDK 인스턴스가 저장된 전역 변수의 이름입니다. |
-| `data.requestId` | 문자열 | 디버깅을 사용할 수 있도록 Web SDK에서 생성한 `requestId`입니다. |
+| `data.requestId` | 문자열 | 디버깅을 활성화하기 위해 웹 SDK에서 생성한 `requestId`입니다. |
 | `data.url` | 문자열 | 요청한 URL입니다. |
 | `data.payload` | 오브젝트 | `POST` 메서드를 통해 JSON 형식으로 변환되고 요청 본문으로 전송되는 페이로드 개체입니다. |
 | `data.body` | 문자열 | 문자열 형식의 응답 본문. |
@@ -170,14 +170,14 @@ onNetworkError(data) {
 | 매개변수 | 유형 | 설명 |
 |---------|----------|----------|
 | `data.instanceName` | 문자열 | 웹 SDK 인스턴스가 저장된 전역 변수의 이름입니다. |
-| `data.requestId` | 문자열 | 디버깅을 사용할 수 있도록 Web SDK에서 생성한 `requestId`입니다. |
+| `data.requestId` | 문자열 | 디버깅을 활성화하기 위해 웹 SDK에서 생성한 `requestId`입니다. |
 | `data.url` | 문자열 | 요청한 URL입니다. |
 | `data.payload` | 오브젝트 | `POST` 메서드를 통해 JSON 형식으로 변환되고 요청 본문으로 전송되는 페이로드 개체입니다. |
 | `data.error` | 오브젝트 | 명령이 거부된 이유와 함께 브라우저의 네트워크 호출에서 반환된 오류 메시지가 포함된 개체(대부분의 경우 `fetch`)입니다. |
 
 ## `onBeforeLog` {#onBeforeLog}
 
-이 콜백 함수는 웹 SDK가 콘솔에 모든 항목을 기록하기 전에 트리거됩니다. 함수 매개 변수에 대한 자세한 내용은 아래 샘플을 참조하십시오.
+이 콜백 함수는 웹 SDK이 콘솔에 모든 것을 기록하기 전에 트리거됩니다. 함수 매개 변수에 대한 자세한 내용은 아래 샘플을 참조하십시오.
 
 ```js
 onBeforeLog(data) {
@@ -214,7 +214,7 @@ onBeforeLog(data) {
 | `data.instanceName` | 문자열 | 웹 SDK 인스턴스가 저장된 전역 변수의 이름입니다. |
 | `data.componentName` | 문자열 | 로그 메시지를 생성한 구성 요소의 이름입니다. |
 | `data.payload` | 오브젝트 | `POST` 메서드를 통해 JSON 형식으로 변환되고 요청 본문으로 전송되는 페이로드 개체입니다. |
-| `data.status` | 문자열 | `personalization` 구성 요소가 렌더링 상태를 Web SDK에 알립니다.  지원되는 값: <ul><li>`rendering-started`: 웹 SDK에서 제안을 렌더링하려고 함을 나타냅니다. Web SDK에서 결정 범위나 보기를 렌더링하기 전에 `data` 개체에서 `personalization` 구성 요소와 범위 이름으로 렌더링하려는 제안을 볼 수 있습니다.</li><li>`no-offers`: 요청된 매개 변수에 대해 페이로드가 수신되지 않았음을 나타냅니다.</li> <li>`rendering-failed`: 웹 SDK에서 제안을 렌더링하지 못했음을 나타냅니다.</li><li>`rendering-succeeded`: 결정 범위에 대한 렌더링이 완료되었음을 나타냅니다.</li> <li>`rendering-redirect`: 웹 SDK에서 리디렉션 제안을 렌더링함을 나타냅니다.</li></ul> |
+| `data.status` | 문자열 | `personalization` 구성 요소가 렌더링 상태를 웹 SDK에 알립니다.  지원되는 값: <ul><li>`rendering-started`: 웹 SDK에서 제안을 렌더링하려고 함을 나타냅니다. 웹 SDK에서 결정 범위 또는 보기를 렌더링하기 전에 `data` 개체에서 `personalization` 구성 요소와 범위 이름으로 렌더링하려는 제안을 볼 수 있습니다.</li><li>`no-offers`: 요청된 매개 변수에 대해 페이로드가 수신되지 않았음을 나타냅니다.</li> <li>`rendering-failed`: 웹 SDK에서 제안을 렌더링하지 못했음을 나타냅니다.</li><li>`rendering-succeeded`: 결정 범위에 대한 렌더링이 완료되었음을 나타냅니다.</li> <li>`rendering-redirect`: 웹 SDK에서 리디렉션 제안을 렌더링함을 나타냅니다.</li></ul> |
 
 ## `onContentHiding` {#onContentHiding}
 
@@ -232,11 +232,11 @@ onContentHiding(data) {
 |---------|----------|----------|
 | `data.instanceName` | 문자열 | 웹 SDK 인스턴스가 저장된 전역 변수의 이름입니다. |
 | `data.componentName` | 문자열 | 로그 메시지를 생성한 구성 요소의 이름입니다. |
-| `data.status` | 문자열 | `personalization` 구성 요소가 렌더링 상태를 Web SDK에 알립니다. 지원되는 값: <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
+| `data.status` | 문자열 | `personalization` 구성 요소가 렌더링 상태를 웹 SDK에 알립니다. 지원되는 값: <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
 
-## NPM 패키지를 사용할 때 모니터링 후크를 지정하는 방법 {#specify-monitoris-npm}
+## NPM 패키지를 사용할 때 모니터링 후크를 지정하는 방법 {#specify-monitoring-npm}
 
-[NPM 패키지](install/npm.md)를 통해 Web SDK를 사용하는 경우 아래와 같이 `createInstasnce` 함수에 모니터링 후크를 지정할 수 있습니다.
+[NPM 패키지](install/npm.md)를 통해 웹 SDK을 사용하는 경우 아래와 같이 `createInstance` 함수에 모니터링 후크를 지정할 수 있습니다.
 
 ```js
 var monitor = {
@@ -253,11 +253,11 @@ alloy("sendEvent", { ... });
 
 ## 예 {#example}
 
-Web SDK는 전역 변수 `__alloyMonitors`에서 개체 배열을 찾습니다.
+웹 SDK에서 전역 변수 `__alloyMonitors`에서 개체 배열을 찾습니다.
 
-모든 웹 SDK 이벤트를 캡처하려면 페이지에서 웹 SDK 코드가 로드되기 전에 모니터링 후크를 정의해야 합니다. 각 모니터링 메서드는 웹 SDK 이벤트를 캡처합니다.
+모든 Web SDK 이벤트를 캡처하려면 페이지에 Web SDK 코드가 로드되기 전에 모니터링 후크를 정의해야 합니다. 각 모니터링 메서드는 웹 SDK 이벤트를 캡처합니다.
 
-페이지에 웹 SDK 코드가 로드되는 모니터링 후크를 *후*&#x200B;에 정의할 수 있지만 페이지 로드 전에 트리거된 모든 후크는 캡처되지 *않습니다*.
+페이지에 웹 SDK 코드 로드가 *후*&#x200B;인 모니터링 후크를 정의할 수 있지만 페이지 로드 전에 트리거된 모든 후크는 *캡처되지 않습니다*.
 
 모니터링 후크 개체를 정의할 때 특수 논리를 정의할 메서드만 정의하면 됩니다.
 예를 들어 `onContentRendering`에만 신경쓰는 경우 해당 메서드를 정의할 수 있습니다. 한 번에 모든 모니터링 후크를 사용할 필요는 없습니다.

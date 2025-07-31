@@ -5,7 +5,7 @@ description: Experience Platform 웹 SDK에 대한 CSP를 구성하는 방법을
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: 구성;구성;SDK;edge;Web SDK;구성;컨텍스트;웹;장치;환경;웹 SDK 설정;컨텐츠 보안 정책;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
@@ -59,7 +59,7 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->Adobe에서는 CSP의 이점을 제한하는 모든 스크립트를 페이지에서 실행할 수 있으므로 `unsafe-inline`을(를) 지정하는 것이 **not**&#x200B;좋습니다.
+>Adobe에서는 CSP의 이점을 제한하는 모든 스크립트를 페이지에서 실행할 수 있으므로 **을(를) 지정하는 것이** not`unsafe-inline`좋습니다.
 
 ## 인앱 메시지에 대한 CSP 구성 {#in-app-messaging}
 

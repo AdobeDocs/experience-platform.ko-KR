@@ -3,7 +3,7 @@ title: 웹 SDK 및 Edge Network API를 사용한 하이브리드 개인화
 description: 이 문서에서는 웹 SDK과 Edge Network API를 함께 사용하여 웹 속성에 하이브리드 개인화를 배포하는 방법을 보여 줍니다.
 keywords: 개인화, 하이브리드, 서버 api, 서버측, 하이브리드 구현,
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 7b91f4f486db67d4673877477a6be8287693533a
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-Hybdrid 개인화는 개인화 콘텐츠 서버측을 검색하고, [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)를 사용하고, [Web SDK](../home.md)를 사용하여 클라이언트측을 렌더링하는 프로세스를 설명합니다.
+하이브리드 개인화는 개인화 콘텐츠 서버측을 검색하고 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)를 사용하며 [Web SDK](../home.md)를 사용하여 클라이언트측을 렌더링하는 프로세스를 설명합니다.
 
 Adobe Target, Adobe Journey Optimizer 또는 Offer Decisioning과 같은 개인화 솔루션에서 하이브리드 개인화를 사용할 수 있습니다. 차이점은 [!UICONTROL Edge Network API] 페이로드의 콘텐츠입니다.
 
@@ -35,11 +35,11 @@ Adobe Target, Adobe Journey Optimizer 또는 Offer Decisioning과 같은 개인�
 
 1. 브라우저에서 이전에 저장한 기존 쿠키(접두사가 `kndctr_`인)는 브라우저 요청에 포함됩니다.
 1. 클라이언트 웹 브라우저는 애플리케이션 서버에서 웹 페이지를 요청합니다.
-1. 응용 프로그램 서버가 페이지 요청을 받으면 [Edge Network API 대화형 데이터 수집 끝점](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/)에 `POST` 요청을 하여 개인화 콘텐츠를 가져옵니다. `POST` 요청에 `event` 및 `query`이(가) 포함되어 있습니다. 사용 가능한 경우 이전 단계의 쿠키가 `meta>state>entries` 배열에 포함됩니다.
+1. 응용 프로그램 서버가 페이지 요청을 받으면 `POST`Edge Network API 대화형 데이터 수집 끝점[에 ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) 요청을 하여 개인화 콘텐츠를 가져옵니다. `POST` 요청에 `event` 및 `query`이(가) 포함되어 있습니다. 사용 가능한 경우 이전 단계의 쿠키가 `meta>state>entries` 배열에 포함됩니다.
 1. Edge Network API는 개인화 콘텐츠를 애플리케이션 서버에 반환합니다.
 1. 응용 프로그램 서버가 클라이언트 브라우저에 [ID 및 클러스터 쿠키](#cookies)를 포함하는 HTML 응답을 반환합니다.
 1. 클라이언트 페이지에서 [!DNL Web SDK] `applyResponse` 명령이 호출되어 이전 단계의 [!UICONTROL Edge Network API] 응답의 헤더와 본문을 전달합니다.
-1. `renderDecisions` 플래그가 `true`(으)로 설정되어 있으므로 [!DNL Web SDK]에서 Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ko) 오퍼 및 Journey Optimizer 웹 채널 항목을 자동으로 렌더링합니다.
+1. [!DNL Web SDK] 플래그가 [[!DNL Visual Experience Composer (VEC)]&#x200B;(으)로 설정되어 있으므로 ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)에서 Target `renderDecisions``true` 오퍼 및 Journey Optimizer 웹 채널 항목을 자동으로 렌더링합니다.
 1. Target 양식 기반 [!DNL HTML]/[!DNL JSON] 오퍼 및 Journey Optimizer 코드 기반 경험은 `applyProposition` 메서드를 통해 수동으로 적용되어 제안의 개인화 콘텐츠를 기반으로 [!DNL DOM]을(를) 업데이트합니다.
 1. Target 양식 기반 [!DNL HTML]/[!DNL JSON] 오퍼 및 Journey Optimizer 코드 기반 경험의 경우 반환된 콘텐츠가 표시된 시기를 나타내기 위해 표시 이벤트를 수동으로 보내야 합니다. 이 작업은 `sendEvent` 명령을 통해 수행됩니다.
 
@@ -92,7 +92,7 @@ Edge Network 지역 호스트는 `<location_hint>.server.adobedc.net` 형식을 
 
 >[!TIP]
 >
->가장 좋은 방법은 허용된 위치 목록을 사용하는 것입니다. 이렇게 하면 클라이언트측 쿠키를 통해 제공되므로 위치 힌트가 로 강화되지 않습니다.
+>가장 좋은 방법은 허용된 위치 목록을 사용하는 것입니다. 이렇게 하면 클라이언트측 쿠키를 통해 제공되므로 위치 힌트가 훼손되지 않습니다.
 
 ## Analytics 영향 {#analytics}
 
@@ -234,7 +234,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 ### 서버측 응답 {#server-response}
 
-Edge Network 응답에는 `Set-Cookie` 헤더에서 변환해야 하는 `state:store` 명령이 포함됩니다. 브라우저에 저장되고 웹 SDK 구현에서 사용할 수 있습니다.
+Edge Network 응답에는 `state:store` 헤더에서 변환해야 하는 `Set-Cookie` 명령이 포함됩니다. 브라우저에 저장되고 웹 SDK 구현에서 사용할 수 있습니다.
 
 쿠키는 클라이언트 쿠키뿐만 아니라 서버 구현에 대한 요청과 함께 전송되도록 최상위 도메인에서 설정해야 합니다. (또는 적어도 두 구현에서 모두 사용하는 공통 하위 도메인)
 

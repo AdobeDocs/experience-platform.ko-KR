@@ -2,7 +2,7 @@
 title: 웹 SDK에서 웹 인앱 메시지 지원 구성
 description: 웹 인앱 메시지를 지원하도록 웹 SDK 태그 확장을 구성하는 방법을 알아봅니다.
 exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '969'
 ht-degree: 0%
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Web In-App Messaging은 Web SDK을 사용하여 개인화된 콘텐츠를 제공하는 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ko-KR) 기능입니다.
+>Web In-App Messaging은 Web SDK을 사용하여 개인화된 콘텐츠를 제공하는 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ko) 기능입니다.
 >
->웹 인앱 메시지 캠페인을 구성하는 방법에 대한 자세한 지침은 [Adobe Journey Optimizer 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=ko)를 참조하세요.
+>웹 인앱 메시지 캠페인을 구성하는 방법에 대한 자세한 지침은 [Adobe Journey Optimizer 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html)를 참조하세요.
 
 
 ## 전제 조건 {#prerequisites}
@@ -71,7 +71,7 @@ CSP 구성에 대한 자세한 내용은 [전용 설명서](../use-cases/configu
 
 그런 다음 만든 규칙에 작업을 추가해야 합니다.
 
-1. [!DNL Actions] 섹션에서 **[!UICONTROL 추가]**&#x200B;를 선택합니다.
+1. [!DNL Actions] 섹션에서 **[!UICONTROL 추가]**를 선택합니다.
    ![규칙 편집 화면을 표시하는 이미지입니다.](assets/web-in-app-messaging/add-action.png)
 
 2. 다음 **[!UICONTROL 작업]** 설정을 사용하십시오.
@@ -105,14 +105,14 @@ CSP 구성에 대한 자세한 내용은 [전용 설명서](../use-cases/configu
 
 1. **[!UICONTROL 확장]**: [!UICONTROL 코어]
 2. **[!UICONTROL 이벤트 유형]**: [!UICONTROL 클릭]
-3. 선택한 CSS 선택기에 의한 식별자인 페이지의 특정 요소에 대한 트리거를 설정합니다.
+3. 선택한 CSS 선택기로 식별되는, 페이지의 특정 요소에 대한 트리거를 설정합니다.
 
    ![이벤트 구성 화면을 표시하는 이미지입니다.](assets/web-in-app-messaging/event-configuration-manual.png)
 
 
 그런 다음 만든 규칙에 작업을 추가해야 합니다.
 
-1. [!DNL Actions] 섹션에서 **[!UICONTROL 추가]**&#x200B;를 선택합니다.
+1. [!DNL Actions] 섹션에서 **[!UICONTROL 추가]**를 선택합니다.
    ![규칙 편집 화면을 표시하는 이미지입니다.](assets/web-in-app-messaging/add-action.png)
 
 2. 다음 **[!UICONTROL 작업]** 설정을 사용하십시오.
@@ -184,5 +184,5 @@ Adobe Journey Optimizer에서 보내는 웹 인앱 메시지를 두 가지 방�
 
 [웹 SDK 구성](../commands/configure/overview.md)에서 필요에 따라 `personalizationStorageEnabled` 옵션을 설정합니다.
 
-* `personalizationStorageEnabled: true`은(는) [Adobe Journey Optimizer 캠페인](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=ko#configure-inapp)에서 정의한 빈도로 인앱 메시지를 트리거합니다.
+* `personalizationStorageEnabled: true`은(는) [Adobe Journey Optimizer 캠페인](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp)에서 정의한 빈도로 인앱 메시지를 트리거합니다.
 * `personalizationStorageEnabled: false`은(는) 페이지를 로드할 때마다 인앱 메시지를 트리거합니다.

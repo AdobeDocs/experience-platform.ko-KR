@@ -2,9 +2,9 @@
 title: Pinterest 고객 목록 연결
 description: 고객 목록, 사이트를 방문한 사람 또는 Pinterest에서 콘텐츠와 이미 상호 작용한 사람에서 대상을 만듭니다.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '808'
 ht-degree: 3%
 
 ---
@@ -26,14 +26,14 @@ ht-degree: 3%
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Pinterest Customer List] 대상은 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko#getting-started)에 대해 자세히 알아보세요.
+[!DNL Pinterest Customer List] 대상은 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)에 대해 자세히 알아보세요.
 
 대상 활성화 워크플로의 [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)에서 원하는 ID를 대상 필드 *pinterest_audience*&#x200B;에 매핑합니다. ID는 Pinterest으로 데이터를 수집할 때 구분되고 해결됩니다.
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | *GAID* 소스 ID 네임스페이스를 대상 ID 필드 *pinterest_audience*&#x200B;에 매핑합니다. ID는 Pinterest으로 데이터를 수집할 때 구분되고 해결됩니다. |
-| IDFA | [!DNL Apple ID for Advertisers] | *IDFA* 소스 ID 네임스페이스를 대상 ID 필드 *pinterest_audience*&#x200B;에 매핑합니다. ID는 Pinterest으로 데이터를 수집할 때 구분되고 해결됩니다. |
+| GAID | [!DNL Google Advertising ID] | *GAID* 소스 ID 네임스페이스를 대상 ID 필드 *pinterest_audience*&#x200B;에 매핑합니다. |
+| IDFA | [!DNL Apple ID for Advertisers] | *IDFA* 원본 ID 네임스페이스를 대상 ID 필드 *pinterest_audience*&#x200B;에 매핑합니다. |
 | EMAIL | 이메일 주소(텍스트 지우기 또는 SHA256 알고리즘으로 해시됨) | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. <br> *Email* 또는 *Email_LC_SHA256* 소스 ID 네임스페이스를 대상 ID 필드 *pinterest_audience*&#x200B;에 매핑합니다. |
 
 {style="table-layout:auto"}
@@ -44,7 +44,7 @@ ht-degree: 3%
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | pinterest 고객 목록 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보냅니다. |
+| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | Pinterest 고객 목록 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보냅니다. |
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
@@ -80,9 +80,9 @@ Pinterest 토큰은 30일마다 만료됩니다. 토큰이 만료되면 대상�
 1. **[!UICONTROL 대상]** > **[!UICONTROL 계정]**(으)로 이동
 2. (선택 사항) 페이지에서 사용할 수 있는 필터를 사용하여 Pinterest 계정만 표시합니다.
    ![Pinterest 계정만 표시하도록 필터링](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
-3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**&#x200B;을 선택합니다.
+3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**을 선택합니다.
    ![세부 정보 편집 컨트롤 선택](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
-4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**&#x200B;을 선택하고 Pinterest 자격 증명으로 다시 인증합니다.
+4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**을 선택하고 Pinterest 자격 증명으로 다시 인증합니다.
    ![다시 연결 OAuth 옵션이 있는 모달 창](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
 
 >[!SUCCESS]

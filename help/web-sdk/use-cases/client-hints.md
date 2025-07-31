@@ -1,11 +1,11 @@
 ---
 title: 사용자 에이전트 클라이언트 힌트
-description: 사용자 에이전트 클라이언트 힌트가 Web SDK에서 작동하는 방식을 알아봅니다. 클라이언트 힌트를 사용하면 웹 사이트 소유자가 사용자 에이전트 문자열에서 사용할 수 있는 동일한 정보의 대부분에 액세스할 수 있지만 보다 개인정보 보호에 특화되었습니다.
+description: 사용자 에이전트 클라이언트 힌트가 웹 SDK에서 작동하는 방식을 알아봅니다. 클라이언트 힌트를 사용하면 웹 사이트 소유자가 사용자 에이전트 문자열에서 사용할 수 있는 동일한 정보의 대부분에 액세스할 수 있지만 보다 개인정보 보호에 특화되었습니다.
 keywords: 사용자 에이전트;클라이언트 힌트; 문자열; 사용자 에이전트 문자열; 낮은 엔트로피; 높은 엔트로피
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 3%
 
 ---
@@ -75,7 +75,7 @@ Adobe Experience Cloud 솔루션은 다양한 방식으로 사용자 에이전�
 * [!DNL Opera for Android]
 * [!DNL Samsung Internet]
 
-## 범주 {#categories}
+## 카테고리 {#categories}
 
 사용자 에이전트 클라이언트 힌트에는 두 가지 범주가 있습니다.
 
@@ -86,7 +86,7 @@ Adobe Experience Cloud 솔루션은 다양한 방식으로 사용자 에이전�
 
 낮은 엔트로피 클라이언트 힌트에는 사용자를 지문화하는 데 사용할 수 없는 기본 정보가 포함되어 있습니다. 브라우저 브랜드, 플랫폼 및 모바일 디바이스에서 요청이 오는지 여부 등의 정보입니다.
 
-낮은 엔트로피 클라이언트 힌트는 Web SDK에서 기본적으로 활성화되어 있으며 모든 요청에서 전달됩니다.
+낮은 엔트로피 클라이언트 힌트는 웹 SDK에서 기본적으로 활성화되어 있으며 모든 요청에서 전달됩니다.
 
 | HTTP 헤더 | JavaScript | 기본적으로 사용자 에이전트에 포함됨 | 기본적으로 클라이언트 힌트에 포함됨 |
 |---|---|---|---|
@@ -109,7 +109,7 @@ Adobe Experience Cloud 솔루션은 다양한 방식으로 사용자 에이전�
 | 브라우저 버전 | 브라우저의 중요 버전입니다. 낮은 엔트로피 힌트 `Sec-CH-UA`도 이 요소를 수집합니다. 정확한 브라우저 버전은 자동으로 수집되지 않습니다. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | 예 | 아니요 |
 
 
-높은 엔트로피 클라이언트 힌트는 Web SDK에서 기본적으로 비활성화되어 있습니다. 이를 활성화하려면 높은 엔트로피 클라이언트 힌트를 요청하도록 Web SDK를 수동으로 구성해야 합니다.
+웹 SDK에서는 높은 엔트로피 클라이언트 힌트가 기본적으로 비활성화되어 있습니다. 이를 활성화하려면 높은 엔트로피 클라이언트 힌트를 요청하도록 웹 SDK을 수동으로 구성해야 합니다.
 
 ## 높은 엔트로피 클라이언트 힌트는 Experience Cloud 솔루션에 영향을 미칩니다. {#impact-in-experience-cloud-solutions}
 
@@ -119,17 +119,17 @@ Adobe Experience Cloud 솔루션은 다양한 방식으로 사용자 에이전�
 
 ### Adobe Analytics은 높은 엔트로피 클라이언트 힌트에 의존하여 보고서를 보고합니다 {#analytics}
 
-[운영 체제](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=ko) 차원에는 높은 엔트로피 클라이언트 힌트로 저장된 운영 체제 버전이 포함되어 있습니다. 높은 엔트로피 클라이언트 힌트가 활성화되지 않으면 Chromium 브라우저에서 수집한 히트에 대해 운영 체제 버전이 정확하지 않을 수 있습니다.
+[운영 체제](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) 차원에는 높은 엔트로피 클라이언트 힌트로 저장된 운영 체제 버전이 포함됩니다. 높은 엔트로피 클라이언트 힌트가 활성화되지 않으면 Chromium 브라우저에서 수집한 히트에 대해 운영 체제 버전이 정확하지 않을 수 있습니다.
 
 ### 높은 엔트로피 클라이언트 힌트에 의존하는 Audience Manager 트레이트 {#aam}
 
-[!DNL Google]이(가) `User-Agent` 헤더를 통해 수집된 정보를 최소화하도록 [!DNL Chrome] 브라우저 기능을 업데이트했습니다. 따라서 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ko-KR)을 사용하는 Audience Manager 고객은 더 이상 [플랫폼 수준 키](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=ko)를 기반으로 하는 트레이트에 대한 신뢰할 수 있는 정보를 받지 못하게 됩니다.
+[!DNL Google]이(가) [!DNL Chrome] 헤더를 통해 수집된 정보를 최소화하도록 `User-Agent` 브라우저 기능을 업데이트했습니다. 따라서 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ko-KR)을(를) 사용하는 Audience Manager 고객은 더 이상 [플랫폼 수준 키](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html)를 기반으로 하는 트레이트에 대한 신뢰할 수 있는 정보를 받지 않게 됩니다.
 
-타깃팅에 플랫폼 수준 키를 사용하는 Audience Manager 고객은 [Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ko-KR) 대신 [DIL Web SDK](/help/web-sdk/home.md)(으)로 전환하고 [높은 엔트로피 클라이언트 힌트](#enabling-high-entropy-client-hints)를 활성화하여 신뢰할 수 있는 트레이트 데이터를 계속 받아야 합니다.
+타깃팅에 플랫폼 수준 키를 사용하는 Audience Manager 고객은 [DIL](/help/web-sdk/home.md) 대신 [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ko-KR)&#x200B;(으)로 전환하고 [높은 엔트로피 클라이언트 힌트](#enabling-high-entropy-client-hints)를 활성화하여 신뢰할 수 있는 트레이트 데이터를 계속 받아야 합니다.
 
 ## 높은 엔트로피 클라이언트 힌트 활성화 {#enabling-high-entropy-client-hints}
 
-웹 SDK 배포에서 높은 엔트로피 클라이언트 힌트를 활성화하려면 [`context`](/help/web-sdk/commands/configure/context.md) 필드에 추가 `highEntropyUserAgentHints` 컨텍스트 옵션을 포함해야 합니다.
+웹 SDK 배포에서 높은 엔트로피 클라이언트 힌트를 활성화하려면 `highEntropyUserAgentHints` 필드에 추가 [`context`](/help/web-sdk/commands/configure/context.md) 컨텍스트 옵션을 포함해야 합니다.
 
 예를 들어 웹 속성에서 높은 엔트로피 클라이언트 힌트를 검색하려면 다음과 같이 구성하십시오.
 

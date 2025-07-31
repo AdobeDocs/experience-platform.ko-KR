@@ -1,9 +1,9 @@
 ---
-title: Adobe Experience Platform Web SDK를 사용하여 개인화된 콘텐츠 렌더링
-description: Adobe Experience Platform Web SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다.
+title: Adobe Experience Platform Web SDK을 사용하여 개인화된 콘텐츠 렌더링
+description: Adobe Experience Platform 웹 SDK을 사용하여 개인화된 콘텐츠를 렌더링하는 방법을 알아봅니다.
 keywords: 개인화;renderDecisions;sendEvent;의사 결정 범위;제안;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # 개인화된 콘텐츠 렌더링
 
-Adobe Experience Platform Web SDK는 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html), [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ko)을(를) 포함하여 Adobe 개인화 솔루션에서 개인화된 콘텐츠를 검색할 수 있도록 지원합니다.
+Adobe Experience Platform Web SDK은 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html), [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ko)을(를) 포함하여 Adobe 개인화 솔루션에서 개인화된 콘텐츠 검색을 지원합니다.
 
-또한 Web SDK는 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화 연결](../../destinations/catalog/personalization/custom-personalization.md)과 같은 Adobe Experience Platform 개인화 대상을 통해 동일한 페이지 및 다음 페이지 개인화 기능을 지원합니다. 동일 페이지 및 다음 페이지 개인화에 대한 Experience Platform을 구성하는 방법에 대해 알아보려면 [전용 안내서](../../destinations/ui/activate-edge-personalization-destinations.md)를 참조하세요.
+또한 웹 SDK은 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화 연결](../../destinations/catalog/personalization/custom-personalization.md)과 같은 Adobe Experience Platform 개인화 대상을 통해 동일 페이지 및 다음 페이지 개인화 기능을 지원합니다. 동일 페이지 및 다음 페이지 개인화를 위해 Experience Platform을 구성하는 방법에 대해 알아보려면 [전용 안내서](../../destinations/ui/activate-edge-personalization-destinations.md)를 참조하십시오.
 
-Adobe Target의 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ko) 및 Adobe Journey Optimizer의 [웹 캠페인 UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ko) 내에서 만든 콘텐츠를 SDK에서 자동으로 검색하고 렌더링할 수 있습니다. Adobe Target의 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ko), Adobe Journey Optimizer의 [코드 기반 경험 채널](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/code-based-experience/get-started-code-based) 또는 Offer decisioning 내에서 만들어진 콘텐츠는 SDK에서 자동으로 렌더링할 수 없습니다. 대신 SDK를 사용하여 이 콘텐츠를 요청한 다음 직접 콘텐츠를 수동으로 렌더링해야 합니다.
+Adobe Target의 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 및 Adobe Journey Optimizer의 [웹 캠페인 UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 내에서 만든 콘텐츠는 SDK에서 자동으로 검색하고 렌더링할 수 있습니다. Adobe Target의 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), Adobe Journey Optimizer의 [코드 기반 경험 채널](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) 또는 Offer Decisioning 내에서 만들어진 콘텐츠는 SDK에서 자동으로 렌더링할 수 없습니다. 대신 SDK을 사용하여 이 콘텐츠를 요청한 다음 콘텐츠를 직접 수동으로 렌더링해야 합니다.
 
 ## 자동으로 콘텐츠 렌더링 {#automatic}
 
-서버에 이벤트를 보낼 때 `renderDecisions` 옵션을 `true`(으)로 설정할 수 있습니다. 이렇게 하면 SDK가 자동 렌더링에 적합한 개인화된 콘텐츠를 자동으로 렌더링합니다.
+서버에 이벤트를 보낼 때 `renderDecisions` 옵션을 `true`(으)로 설정할 수 있습니다. 이렇게 하면 SDK에서 자동 렌더링에 적합한 개인화된 콘텐츠를 자동으로 렌더링하도록 할 수 있습니다.
 
 ```javascript
 alloy("sendEvent", {
@@ -42,7 +42,7 @@ alloy("sendEvent", {
 
 ## 수동으로 컨텐츠 렌더링 {#manual}
 
-개인화 콘텐츠에 액세스하려면 SDK가 서버로부터 성공적인 응답을 받은 후에 호출되는 콜백 함수를 제공할 수 있습니다. 콜백에는 반환된 개인화 콘텐츠가 포함된 `propositions` 속성이 포함될 수 있는 `result` 개체가 제공됩니다. 다음은 이벤트를 전송할 때 콜백 함수를 제공하는 방법의 예입니다.
+개인화 콘텐츠에 액세스하려면 SDK이 서버로부터 성공적인 응답을 받은 후에 호출되는 콜백 함수를 제공할 수 있습니다. 콜백에는 반환된 개인화 콘텐츠가 포함된 `result` 속성이 포함될 수 있는 `propositions` 개체가 제공됩니다. 다음은 이벤트를 전송할 때 콜백 함수를 제공하는 방법의 예입니다.
 
 ```javascript
 alloy("sendEvent", {
@@ -103,11 +103,11 @@ alloy("sendEvent", {
 ]
 ```
 
-이 예제에서 `sendEvent` 명령을 실행할 때 `renderDecisions` 옵션이 `true`(으)로 설정되지 않았으므로 SDK에서 콘텐츠를 자동으로 렌더링하지 않았습니다. 그러나 SDK는 자동 렌더링에 적합한 콘텐츠를 계속 자동으로 검색했으며, 원하는 경우 수동으로 렌더링하도록 제공했습니다. 각 제안 개체의 `renderAttempted` 속성이 `false`(으)로 설정되어 있습니다.
+이 예제에서 `renderDecisions` 명령을 실행할 때 `true` 옵션이 `sendEvent`(으)로 설정되지 않았으므로 SDK은 자동으로 콘텐츠를 렌더링하지 않았습니다. 그러나 SDK은 자동 렌더링에 적합한 콘텐츠를 여전히 자동으로 검색했으며, 원하는 경우 수동으로 렌더링하도록 제공했습니다. 각 제안 개체의 `renderAttempted` 속성이 `false`(으)로 설정되어 있습니다.
 
 이벤트를 보낼 때 대신 `renderDecisions` 옵션을 `true`(으)로 설정했다면 SDK에서 자동 렌더링에 적합한 제안을 렌더링하려고 시도했을 것입니다(앞에서 설명한 대로). 따라서 각 제안 객체의 `renderAttempted` 속성은 `true`(으)로 설정됩니다. 이 경우 이러한 제안을 수동으로 렌더링할 필요가 없습니다.
 
-지금까지 자동 렌더링에 적합한 개인화 콘텐츠(즉, Adobe Target의 시각적 경험 작성기 또는 Adobe Journey Optimizer의 웹 캠페인 UI에서 만들어진 모든 콘텐츠)에 대해서만 논의했습니다. 자동 렌더링에 적합하지 않은 _개인화 콘텐츠를 검색하려면 이벤트를 전송할 때 `decisionScopes` 옵션을 채워 콘텐츠를 요청해야 합니다._ 범위는 서버에서 검색할 특정 제안을 식별하는 문자열입니다.
+지금까지 자동 렌더링에 적합한 개인화 콘텐츠(즉, Adobe Target의 시각적 경험 작성기 또는 Adobe Journey Optimizer의 웹 캠페인 UI에서 만들어진 모든 콘텐츠)에 대해서만 논의했습니다. 자동 렌더링에 적합하지 않은 _개인화 콘텐츠를 검색하려면 이벤트를 전송할 때_ 옵션을 채워 콘텐츠를 요청해야 합니다. `decisionScopes` 범위는 서버에서 검색할 특정 제안을 식별하는 문자열입니다.
 
 다음은 한 예입니다.
 
@@ -122,7 +122,7 @@ alloy("sendEvent", {
   });
 ```
 
-이 예제에서 `salutation` 또는 `discount` 범위와 일치하는 서버에 제안이 있으면 반환되어 `result.propositions` 배열에 포함됩니다. `renderDecisions` 또는 `decisionScopes` 옵션을 구성하는 방법에 관계없이 자동 렌더링에 적합한 제안이 `propositions` 배열에 계속 포함됩니다. 이 경우 `propositions` 배열은 다음 예제와 비슷합니다.
+이 예제에서 `salutation` 또는 `discount` 범위와 일치하는 서버에 제안이 있으면 반환되어 `result.propositions` 배열에 포함됩니다. `propositions` 또는 `renderDecisions` 옵션을 구성하는 방법에 관계없이 자동 렌더링에 적합한 제안이 `decisionScopes` 배열에 계속 포함됩니다. 이 경우 `propositions` 배열은 다음 예제와 비슷합니다.
 
 ```json
 [
@@ -220,12 +220,12 @@ alloy("sendEvent", {
 ]
 ```
 
-이 시점에서 맞춤법이 보이는 대로 제안 콘텐츠를 렌더링할 수 있습니다. 이 예에서 `discount` 범위와 일치하는 HTML은 Adobe Target의 양식 기반 경험 작성기를 사용하여 작성된 경험 제안입니다. 페이지에 ID가 `daily-special`인 요소가 있고 `discount` 제안의 콘텐츠를 `daily-special` 요소로 렌더링하려는 경우 다음을 수행하십시오.
+이 시점에서 맞춤법이 보이는 대로 제안 콘텐츠를 렌더링할 수 있습니다. 이 예에서 `discount` 범위와 일치하는 제안은 Adobe Target의 양식 기반 경험 작성기를 사용하여 빌드된 HTML 제안입니다. 페이지에 ID가 `daily-special`인 요소가 있고 `discount` 제안의 콘텐츠를 `daily-special` 요소로 렌더링하려는 경우 다음을 수행하십시오.
 
 1. `result` 개체에서 제안을 추출합니다.
 1. `discount` 범위의 제안을 찾아 각 제안을 반복합니다.
-1. 명제를 찾으면 명제의 각 항목을 반복하여 HTML 콘텐츠인 항목을 찾습니다. (가정하는 것보다 확인하는 것이 좋습니다.)
-1. HTML 콘텐츠가 들어 있는 항목을 찾으면 페이지에서 `daily-special` 요소를 찾아 해당 HTML을 개인화된 콘텐츠로 바꾸십시오.
+1. 제안을 찾으면 제안의 각 항목을 반복하여 HTML 콘텐츠인 항목을 찾습니다. (가정하는 것보다 확인하는 것이 좋습니다.)
+1. HTML 콘텐츠가 포함된 항목을 찾으면 페이지에서 `daily-special` 요소를 찾아 해당 HTML을 개인화된 콘텐츠로 바꾸십시오.
 1. 콘텐츠가 렌더링되면 `display` 이벤트를 보냅니다.
 
 코드는 다음과 같습니다.
@@ -252,7 +252,7 @@ alloy("sendEvent", {
   var discountHtml;
   if (discountProposition) {
     // Find the item from proposition that should be rendered.
-    // Rather than assuming there a single item that has HTML
+    // Rather than assuming there is a single item that has HTML
     // content, find the first item whose schema indicates
     // it contains HTML content.
     for (var j = 0; j < discountProposition.items.length; j++) {
@@ -263,7 +263,7 @@ alloy("sendEvent", {
         var dailySpecialElement = document.getElementById("daily-special");
         dailySpecialElement.innerHTML = discountHtml;
         
-        // For this example, we assume there is only a signle place to update in the HTML.
+        // For this example, we assume there is only a single place to update in the HTML.
         break;  
       }
     }
@@ -298,15 +298,15 @@ alloy("sendEvent", {
 
 ### 플리커 관리
 
-SDK는 개인화 프로세스 중에 [깜박임을 관리](../personalization/manage-flicker.md)할 수 있는 기능을 제공합니다.
+SDK은 개인화 프로세스 동안 [깜박임을 관리](../personalization/manage-flicker.md)할 기능을 제공합니다.
 
 ## 지표를 증가시키지 않고 단일 페이지 애플리케이션에서 제안 렌더링 {#applypropositions}
 
-`applyPropositions` 명령을 사용하면 [!DNL Analytics] 및 [!DNL Target] 지표를 증가시키지 않고 [!DNL Target] 또는 Adobe Journey Optimizer의 제안 배열을 단일 페이지 애플리케이션으로 렌더링하거나 실행할 수 있습니다. 이렇게 하면 보고 정확도가 높아집니다.
+`applyPropositions` 명령을 사용하면 [!DNL Target] 및 [!DNL Analytics] 지표를 증가시키지 않고 [!DNL Target] 또는 Adobe Journey Optimizer의 제안 배열을 단일 페이지 애플리케이션으로 렌더링하거나 실행할 수 있습니다. 이렇게 하면 보고 정확도가 높아집니다.
 
 >[!IMPORTANT]
 >
->페이지 로드 시 `__view__` 범위(또는 웹 표면)에 대한 제안이 렌더링되면 해당 `renderAttempted` 플래그가 `true`(으)로 설정됩니다. `applyPropositions` 명령은 `renderAttempted: true` 플래그가 있는 `__view__` 범위(또는 웹 표면) 제안을 다시 렌더링하지 않습니다.
+>페이지 로드 시 `__view__` 범위(또는 웹 표면)에 대한 제안이 렌더링되면 해당 `renderAttempted` 플래그가 `true`(으)로 설정됩니다. `applyPropositions` 명령은 `__view__` 플래그가 있는 `renderAttempted: true` 범위(또는 웹 표면) 제안을 다시 렌더링하지 않습니다.
 
 ### 사용 사례 1: 단일 페이지 애플리케이션 뷰 제안 다시 렌더링
 
@@ -314,7 +314,7 @@ SDK는 개인화 프로세스 중에 [깜박임을 관리](../personalization/ma
 
 아래 예에서 `sendEvent` 명령은 보기 변경 시 트리거되고 결과 개체를 상수에 저장합니다.
 
-그런 다음 보기 또는 구성 요소가 업데이트되면 이전 `sendEvent` 명령의 제안을 사용하여 `applyPropositions` 명령을 호출하여 보기 제안을 다시 렌더링합니다.
+그런 다음 보기 또는 구성 요소가 업데이트되면 이전 `applyPropositions` 명령의 제안을 사용하여 `sendEvent` 명령을 호출하여 보기 제안을 다시 렌더링합니다.
 
 ```js
 var cartPropositions = alloy("sendEvent", {
@@ -341,7 +341,7 @@ alloy("applyPropositions", {
 
 ### 사용 사례 2: 선택기가 없는 제안 렌더링
 
-이 사용 사례는 [!DNL Target Form-based Experience Composer] 또는 Adobe Journey Optimizer의 [코드 기반 경험 채널](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/code-based-experience/get-started-code-based)을 사용하여 작성된 경험에 적용됩니다.
+이 사용 사례는 [!DNL Target Form-based Experience Composer] 또는 Adobe Journey Optimizer의 [코드 기반 경험 채널](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based)을 사용하여 작성된 경험에 적용됩니다.
 
 `applyPropositions` 호출에 선택기, 작업 및 범위를 제공해야 합니다.
 

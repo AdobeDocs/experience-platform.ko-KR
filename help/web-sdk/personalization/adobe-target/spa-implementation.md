@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK에 대한 단일 페이지 애플리케
 description: Adobe Target을 사용하여 Adobe Experience Platform Web SDK의 단일 페이지 애플리케이션(SPA) 구현을 만드는 방법에 대해 알아봅니다.
 keywords: target;adobe target;xdm 보기;보기;단일 페이지 애플리케이션;SPA;SPA 라이프사이클;클라이언트측;AB 테스트;AB;경험 타깃팅;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 0%
@@ -53,7 +53,7 @@ SPA용 Adobe Target VEC는 &quot;보기&quot;라는 개념을 이용합니다. �
 
 고객은 사이트에서 몇 가지 제품을 구매하기로 하고 체크아웃 화면으로 진행합니다. 체크아웃 사이트에서는 고객에게 일반 배달 또는 빠른 배달을 선택할 수 있는 옵션이 제공됩니다. &quot;보기&quot;는 사이트에서 임의의 시각적 요소 그룹일 수 있으므로 게재 환경 설정에 대해 보기를 만들고 &quot;게재 환경 설정&quot;이라고 할 수 있습니다.
 
-![브라우저 창의 한 페이지 응용 프로그램 체크 아웃 페이지에 대한 샘플 이미지입니다.](assets/example-check-out.png)
+![브라우저 창의 단일 페이지 응용 프로그램 체크 아웃 페이지에 대한 샘플 이미지입니다.](assets/example-check-out.png)
 
 &quot;보기&quot; 개념은 이보다 훨씬 더 확장될 수 있습니다. 다음은 사이트에서 정의할 수 있는 &quot;보기&quot;의 몇 가지 예입니다.
 
@@ -63,7 +63,7 @@ Adobe Target에서 XDM 보기 를 활용하여 마케터가 시각적 경험 작
 
 1. [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) 설치
 2. 개인화할 단일 페이지 애플리케이션에서 모든 XDM 보기를 확인합니다.
-3. XDM 보기를 정의한 후 AB 또는 XT VEC 활동을 전달하려면 단일 페이지 애플리케이션에서 `renderDecisions`을(를) `true`(으)로 설정하고 해당 XDM 보기를 사용하여 `sendEvent()` 함수를 구현하십시오. XDM 보기를 `xdm.web.webPageDetails.viewName`에 전달해야 합니다. 이 단계를 통해 마케터는 시각적 경험 작성기를 활용하여 해당 XDM에 대한 A/B 및 XT 테스트를 시작할 수 있습니다.
+3. XDM 보기를 정의한 후 AB 또는 XT VEC 활동을 전달하려면 단일 페이지 애플리케이션에서 `sendEvent()`을(를) `renderDecisions`(으)로 설정하고 해당 XDM 보기를 사용하여 `true` 함수를 구현하십시오. XDM 보기를 `xdm.web.webPageDetails.viewName`에 전달해야 합니다. 이 단계를 통해 마케터는 시각적 경험 작성기를 활용하여 해당 XDM에 대한 A/B 및 XT 테스트를 시작할 수 있습니다.
 
    ```javascript
    alloy("sendEvent", { 
@@ -92,7 +92,7 @@ Adobe Target에서 XDM 보기 를 활용하여 마케터가 시각적 경험 작
 
 ![브라우저 창에서 단일 페이지 응용 프로그램의 샘플 이미지입니다.](assets/use-case-1.png)
 
-전체 홈 사이트에서 A/B 테스트를 실행하려면 XDM `viewName`을(를) `home`(으)로 설정하여 `sendEvent()`을(를) 호출해야 합니다.
+전체 홈 사이트에서 A/B 테스트를 실행하려면 XDM `sendEvent()`을(를) `viewName`(으)로 설정하여 `home`을(를) 호출해야 합니다.
 
 ```jsx
 function onViewChange() { 
@@ -288,6 +288,6 @@ VEC에서 이러한 업데이트를 수행하려면 다음 단계를 수행해�
 
 >[!NOTE]
 >
->**빠른 배달** 라디오 단추를 선택할 때까지 &quot;checkout-express&quot; 보기가 수정 패널에 표시되지 않습니다. 이는 **빠른 배달** 라디오 단추가 선택되어 있으면 `sendEvent()` 함수가 실행되므로 라디오 단추를 선택할 때까지 VEC가 &quot;checkout-express&quot; 보기를 인식하지 않기 때문입니다.
+>**빠른 배달** 라디오 단추를 선택할 때까지 &quot;checkout-express&quot; 보기가 수정 패널에 표시되지 않습니다. 이는 `sendEvent()`빠른 배달&#x200B;**라디오 단추가 선택되어 있으면** 함수가 실행되므로 라디오 단추를 선택할 때까지 VEC가 &quot;checkout-express&quot; 보기를 인식하지 않기 때문입니다.
 
 ![시각적 경험 작성기에서 게재 환경 설정 선택기를 표시합니다.](assets/vec-delivery-preference.png)

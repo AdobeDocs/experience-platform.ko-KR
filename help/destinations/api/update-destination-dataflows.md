@@ -5,7 +5,7 @@ title: 흐름 서비스 API를 사용하여 대상 데이터 흐름 업데이트
 type: Tutorial
 description: 이 튜토리얼에서는 대상 데이터 흐름을 업데이트하는 단계를 설명합니다. 흐름 서비스 API를 사용하여 데이터 흐름을 활성화 또는 비활성화하거나, 기본 정보를 업데이트하거나, 대상 및 속성을 추가 및 제거하는 방법을 알아봅니다.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '2410'
 ht-degree: 3%
@@ -16,13 +16,13 @@ ht-degree: 3%
 
 이 튜토리얼에서는 대상 데이터 흐름을 업데이트하는 단계를 설명합니다. [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 데이터 흐름을 활성화 또는 비활성화하거나, 기본 정보를 업데이트하거나, 대상 및 특성을 추가 및 제거하는 방법에 대해 알아봅니다. Experience Platform UI를 사용하여 대상 데이터 흐름을 편집하는 방법에 대한 자세한 내용은 [활성화 흐름 편집](/help/destinations/ui/edit-activation.md)을 참조하십시오.
 
-## 시작하기 {#get-started}
+## 시작 {#get-started}
 
 이 자습서를 사용하려면 유효한 흐름 ID가 있어야 합니다. 유효한 흐름 ID가 없는 경우 [대상 카탈로그](../catalog/overview.md)에서 선택한 대상을 선택하고 [대상에 연결](../ui/connect-destination.md) 및 [데이터 활성화](../ui/activation-overview.md)에 설명된 단계를 따라 이 자습서를 시작하십시오.
 
 >[!NOTE]
 >
-> 이 자습서에서는 용어 *흐름*&#x200B;과(와) *데이터 흐름*&#x200B;을(를) 교환하여 사용합니다. 이 자습서의 컨텍스트에서 은 동일한 의미를 갖습니다.
+> 이 자습서에서는 용어 *흐름*&#x200B;과(와) *데이터 흐름*&#x200B;을(를) 교환하여 사용합니다. 이 자습서의 컨텍스트에서 동일한 의미를 갖습니다.
 
 또한 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
@@ -503,8 +503,8 @@ curl -X PATCH \
 | `exportMode` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br>은(는) 필수입니다. `"DAILY_FULL_EXPORT"` 또는 `"FIRST_FULL_THEN_INCREMENTAL"`을(를) 선택하십시오. 두 옵션에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서에서 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)를 참조하십시오. |
 | `startDate` | 대상자가 대상으로 프로필 내보내기를 시작할 날짜를 선택합니다. |
 | `frequency` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br>은(는) 필수입니다. <br> <ul><li>`"DAILY_FULL_EXPORT"` 내보내기 모드의 경우 `ONCE` 또는 `DAILY`을(를) 선택할 수 있습니다.</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` 내보내기 모드의 경우 `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`을(를) 선택할 수 있습니다.</li></ul> |
-| `triggerType` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 `frequency` 선택기에서 `"DAILY_FULL_EXPORT"` 모드를 선택하는 경우에만 필요합니다. <br>은(는) 필수입니다. <br> <ul><li>매일 Experience Platform 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행하려면 `"AFTER_SEGMENT_EVAL"`을(를) 선택하십시오. 이렇게 하면 활성화 작업이 실행될 때 가장 최신 프로필을 대상으로 내보냅니다.</li><li>고정된 시간에 활성화 작업을 실행하려면 `"SCHEDULED"`을(를) 선택하십시오. 이렇게 하면 Experience Platform 프로필 데이터를 매일 동시에 내보낼 수 있지만 활성화 작업이 시작되기 전에 배치 세분화 작업이 완료되었는지 여부에 따라 내보내는 프로필이 최신 프로필이 아닐 수 있습니다. 이 옵션을 선택할 때는 일별 내보내기가 발생하는 시간을 UTC로 나타내려면 `startTime`도 추가해야 합니다.</li></ul> |
-| `endDate` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. `"exportMode":"DAILY_FULL_EXPORT"` 및 `"frequency":"ONCE"`을(를) 선택할 때는 <br>을(를) 적용할 수 없습니다. <br> 대상 구성원의 대상 내보내기를 중지할 날짜를 설정합니다. |
+| `triggerType` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 `"DAILY_FULL_EXPORT"` 선택기에서 `frequency` 모드를 선택하는 경우에만 필요합니다. <br>은(는) 필수입니다. <br> <ul><li>매일 Experience Platform 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행하려면 `"AFTER_SEGMENT_EVAL"`을(를) 선택하십시오. 이렇게 하면 활성화 작업이 실행될 때 가장 최신 프로필을 대상으로 내보냅니다.</li><li>고정된 시간에 활성화 작업을 실행하려면 `"SCHEDULED"`을(를) 선택하십시오. 이렇게 하면 Experience Platform 프로필 데이터를 매일 동시에 내보낼 수 있지만 활성화 작업이 시작되기 전에 배치 세분화 작업이 완료되었는지 여부에 따라 내보내는 프로필이 최신 프로필이 아닐 수 있습니다. 이 옵션을 선택할 때는 일별 내보내기가 발생하는 시간을 UTC로 나타내려면 `startTime`도 추가해야 합니다.</li></ul> |
+| `endDate` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br> 및 `"exportMode":"DAILY_FULL_EXPORT"`을(를) 선택할 때는 `"frequency":"ONCE"`을(를) 적용할 수 없습니다. <br> 대상 구성원의 대상 내보내기를 중지할 날짜를 설정합니다. |
 | `startTime` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br>은(는) 필수입니다. 대상자의 멤버가 포함된 파일을 생성하여 대상으로 내보내야 하는 시간을 선택합니다. |
 
 **응답**
@@ -646,7 +646,7 @@ curl -X PATCH \
 
 +++ 대상 내보내기가 Experience Platform 배치 세분화 작업이 완료된 후 지정된 시간에 매일 활성화됨에서 매일 활성화됨으로 업데이트되는 예를 보려면 클릭하십시오.
 
-대상은 매일 16:00 UTC에 내보내집니다.
+대상은 매일 16:00 UTC로 내보내집니다.
 
 ```json
 {

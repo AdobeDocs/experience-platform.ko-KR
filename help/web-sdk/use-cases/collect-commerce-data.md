@@ -1,8 +1,8 @@
 ---
-title: Adobe Experience Platform Web SDK를 사용하여 상거래, 제품 및 주문 정보 수집
-description: Adobe Experience Platform Web SDK를 사용하여 제품 또는 장바구니와 관련된 데이터를 추가하는 방법에 대해 알아봅니다.
+title: Adobe Experience Platform Web SDK을 사용하여 상거래, 제품 및 주문 정보 수집
+description: Adobe Experience Platform Web SDK을 사용하여 제품 또는 장바구니와 관련된 데이터를 추가하는 방법을 알아봅니다.
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 2%
@@ -53,7 +53,7 @@ ht-degree: 2%
 
 +++`productViews`
 
-`productViews` 필드를 `1`(으)로 설정하는 기본 웹 SDK `sendEvent` 호출:
+`sendEvent` 필드를 `productViews`(으)로 설정하는 기본 웹 SDK `1` 호출:
 
 ```javascript
 alloy("sendEvent", {
@@ -89,11 +89,11 @@ alloy("sendEvent", {
 
 ### Order 객체 예
 
-`commerce` 개체를 사용한 웹 SDK 명령의 예를 보려면 아래 섹션을 확장하세요.
+`commerce` 개체를 사용한 웹 SDK 명령의 예를 보려면 아래 섹션을 확장하십시오.
 
 +++`Order` 개체 예
 
-`productListItems` 배열의 여러 제품에 적용되는 `order` 개체를 설정하는 웹 SDK `sendEvent` 호출:
+`sendEvent` 배열의 여러 제품에 적용되는 `order` 개체를 설정하는 웹 SDK `productListItems` 호출:
 
 ```javascript
 alloy("sendEvent",{
@@ -140,7 +140,7 @@ alloy("sendEvent",{
 | 필드 | 권장 사항 | 설명 |
 |---|---|---|
 | [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmcurrencycode) | 선택 사항입니다 | 제품에 대한 [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 통화입니다. 이 필드는 일반적으로 제품 목록에 다른 통화 코드가 있는 제품이 여러 개 있는 경우에만 적용됩니다. |
-| [`priceTotal`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmpricetotal) | 적극 권장 | 해당되는 경우에만 이 필드를 설정하십시오. 예를 들어 `productListAdds` 이벤트가 아닌 다른 제품 변형의 가격이 다를 수 있으므로 `productView` 이벤트에 설정하지 못할 수 있습니다. |
+| [`priceTotal`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmpricetotal) | 적극 권장 | 해당되는 경우에만 이 필드를 설정하십시오. 예를 들어 `productView` 이벤트가 아닌 다른 제품 변형의 가격이 다를 수 있으므로 `productListAdds` 이벤트에 설정하지 못할 수 있습니다. |
 | [`product`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmproduct) | 적극 권장 | 제품에 대한 XDM ID. |
 | [`productAddMethod`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmproductaddmethod) | 적극 권장 | 방문자가 목록에 제품 항목을 추가하는 데 사용한 메서드입니다. `productListAdds` 측정값으로 설정되며 제품이 목록에 추가되는 경우에만 사용됩니다. `add to cart button`, `quick add` 및 `upsell`을(를) 예로 들 수 있습니다. |
 | [`productName`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmname) | 적극 권장 | 제품의 표시 이름 또는 사람이 인식할 수 있는 이름. |
@@ -149,11 +149,11 @@ alloy("sendEvent",{
 
 ### 제품 목록 예
 
-`productListItems` 개체를 사용한 웹 SDK 명령의 예를 보려면 아래 섹션을 확장하십시오.
+아래 섹션을 확장하여 `productListItems` 개체를 사용한 웹 SDK 명령의 예를 봅니다.
 
 +++`productListItems` 예
 
-`productListItems` 배열의 여러 제품에 대해 `productViews`을(를) 설정하는 웹 SDK `sendEvent` 호출:
+웹 SDK `sendEvent` 호출에서 `productViews` 배열의 여러 제품에 대해 `productListItems`을(를) 설정하는 중:
 
 ```javascript
 alloy("sendEvent",{
@@ -179,9 +179,9 @@ alloy("sendEvent",{
 
 +++
 
-+++`productListAdds`개 예제
++++`productListAdds` 예
 
-`productListItems` 배열의 여러 제품에 대해 `productListAdds` 이벤트를 설정하는 웹 SDK `sendEvent` 호출:
+웹 SDK `sendEvent` 호출에서 `productListAdds` 배열의 여러 제품에 대해 `productListItems` 이벤트를 설정합니다.
 
 ```javascript
 alloy("sendEvent",{
@@ -215,7 +215,7 @@ alloy("sendEvent",{
 
 +++`checkouts` 예
 
-`productListItems` 배열의 여러 제품에 대해 `checkouts` 이벤트를 설정하는 웹 SDK `sendEvent` 호출:
+웹 SDK `sendEvent` 호출에서 `checkouts` 배열의 여러 제품에 대해 `productListItems` 이벤트를 설정합니다.
 
 ```javascript
 alloy("sendEvent",{
