@@ -2,16 +2,16 @@
 title: Experience Platform 사용자 인터페이스를 사용하여 Salesforce 계정 연결
 description: 사용자 인터페이스를 사용하여 Salesforce 계정을 연결하고 CRM 데이터를 Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '1003'
 ht-degree: 2%
 
 ---
 
 # UI를 사용하여 [!DNL Salesforce] 계정을 Experience Platform에 연결
 
-이 자습서에서는 Experience Platform 사용자 인터페이스를 사용하여 [!DNL Salesforce] 계정을 연결하고 CRM 데이터를 Adobe Experience Platform으로 가져오는 방법에 대한 단계를 제공합니다.
+Experience Platform 사용자 인터페이스를 사용하여 [!DNL Salesforce] 계정을 연결하고 CRM 데이터를 Adobe Experience Platform으로 가져오는 방법을 배우려면 이 안내서를 참조하십시오.
 
 ## 시작
 
@@ -58,6 +58,7 @@ OAuth2 클라이언트 자격 증명을 사용하여 [!DNL Salesforce] 계정에
 | 클라이언트 ID | 클라이언트 ID는 OAuth2 인증의 일부로 클라이언트 암호와 함께 사용됩니다. 클라이언트 ID와 클라이언트 암호를 사용하면 응용 프로그램을 [!DNL Salesforce]에 식별하여 응용 프로그램이 계정을 대신하여 작동할 수 있습니다. |
 | 클라이언트 암호 | 클라이언트 암호는 OAuth2 인증의 일부로 클라이언트 ID와 함께 사용됩니다. 클라이언트 ID와 클라이언트 암호를 사용하면 응용 프로그램을 [!DNL Salesforce]에 식별하여 응용 프로그램이 계정을 대신하여 작동할 수 있습니다. |
 | API 버전 | 사용 중인 [!DNL Salesforce] 인스턴스의 REST API 버전입니다. API 버전의 값은 십진수로 형식을 지정해야 합니다. 예를 들어 API 버전 `52`을(를) 사용하는 경우 값을 `52.0`(으)로 입력해야 합니다. 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. |
+| 삭제된 오브젝트 포함 | 일시 삭제된 레코드를 포함할지 여부를 결정하는 데 사용되는 부울 값입니다. true로 설정하면 소프트 삭제된 레코드가 [!DNL Salesforce] 쿼리에 포함되고 계정에서 Experience Platform으로 수집됩니다. 구성을 지정하지 않으면 이 값은 기본적으로 `false`입니다. |
 
 [!DNL Salesforce]에 대한 OAuth 사용에 대한 자세한 내용은 OAuth 인증 흐름에 대한 [[!DNL Salesforce] 안내서](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)를 참조하십시오.
 
@@ -67,13 +68,13 @@ OAuth2 클라이언트 자격 증명을 사용하여 [!DNL Salesforce] 계정에
 
 ## [!DNL Salesforce] 계정 연결
 
-Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
+Experience Platform UI의 왼쪽 메뉴에서 **[!UICONTROL 소스]**(으)로 이동하여 [!UICONTROL 소스] 작업 영역을 엽니다. 왼쪽의 카탈로그를 사용하여 범주를 찾아보거나 검색 창을 사용하여 연결할 소스를 빠르게 찾을 수 있습니다.
 
-*[!UICONTROL CRM]* 범주에서 **[!DNL Salesforce]**&#x200B;을(를) 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
+**[!DNL Salesforce]** CRM *[!UICONTROL 범주에서]*&#x200B;을(를) 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
 
 >[!TIP]
 >
->지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL 설정]** 옵션이 표시됩니다. 인증된 계정이 있으면 이 옵션이 **[!UICONTROL 데이터 추가]**(으)로 변경됩니다.
+>소스 카탈로그에는 계정이 연결되어 있지 않은 경우 **[!UICONTROL 설정]**&#x200B;이 표시되고, 계정이 이미 인증된 경우 **[!UICONTROL 데이터 추가]**&#x200B;가 표시됩니다.
 
 ![Salesforce 소스 카드가 선택된 Experience Platform UI의 소스 카탈로그입니다.](../../../../images/tutorials/create/salesforce/catalog.png)
 
@@ -116,10 +117,11 @@ OAuth2 클라이언트 자격 증명의 경우 **[!UICONTROL OAuth2 클라이언
 * 클라이언트 ID
 * 클라이언트 암호
 * API 버전
+* 삭제 개체 포함
 
 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택합니다.
 
-![Salesforce 계정 생성을 위한 OAuth 인터페이스입니다.](../../../../images/tutorials/create/salesforce/oauth2.png)
+![Salesforce 계정 생성을 위한 OAuth 인터페이스입니다.](../../../../images/tutorials/create/salesforce/oauth.png)
 
 >[!ENDTABS]
 

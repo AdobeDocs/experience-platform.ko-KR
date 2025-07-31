@@ -2,16 +2,16 @@
 title: 흐름 서비스 API를 사용하여 Salesforce을 Experience Platform에 연결
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Salesforce 계정에 연결하는 방법을 알아봅니다.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1175'
 ht-degree: 2%
 
 ---
 
-# [!DNL Flow Service] API를 사용하여 [!DNL Salesforce]을(를) Experience Platform에 연결
+# [!DNL Salesforce] API를 사용하여 [!DNL Flow Service]을(를) Experience Platform에 연결
 
-[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Salesforce] 소스 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
+[!DNL Salesforce]API[[!DNL Flow Service] 를 사용하여 ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) 소스 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
 
 ## 시작
 
@@ -24,9 +24,9 @@ ht-degree: 2%
 
 Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
-## [!DNL Azure]에서 [!DNL Salesforce]을(를) Experience Platform에 연결 {#azure}
+## [!DNL Salesforce]에서 [!DNL Azure]을(를) Experience Platform에 연결 {#azure}
 
-[!DNL Azure]에서 [!DNL Salesforce] 소스를 Experience Platform에 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하십시오.
+[!DNL Salesforce]에서 [!DNL Azure] 소스를 Experience Platform에 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하십시오.
 
 ### 필요한 자격 증명 수집
 
@@ -63,13 +63,14 @@ OAuth 2 클라이언트 자격 증명을 사용하여 [!DNL Salesforce] 계정�
 | `clientId` | 클라이언트 ID는 OAuth2 인증의 일부로 클라이언트 암호와 함께 사용됩니다. 클라이언트 ID와 클라이언트 암호를 사용하면 응용 프로그램을 [!DNL Salesforce]에 식별하여 응용 프로그램이 계정을 대신하여 작동할 수 있습니다. |
 | `clientSecret` | 클라이언트 암호는 OAuth2 인증의 일부로 클라이언트 ID와 함께 사용됩니다. 클라이언트 ID와 클라이언트 암호를 사용하면 응용 프로그램을 [!DNL Salesforce]에 식별하여 응용 프로그램이 계정을 대신하여 작동할 수 있습니다. |
 | `apiVersion` | 사용 중인 [!DNL Salesforce] 인스턴스의 REST API 버전입니다. API 버전의 값은 십진수로 형식을 지정해야 합니다. 예를 들어 API 버전 `52`을(를) 사용하는 경우 값을 `52.0`(으)로 입력해야 합니다. 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. 이 값은 OAuth2 클라이언트 자격 증명 인증에 필수입니다. |
+| `includeDeletedObjects` | 일시 삭제된 레코드를 포함할지 여부를 결정하는 데 사용되는 부울 값입니다. true로 설정하면 일시 삭제된 레코드를 [!DNL Salesforce] 쿼리에 포함하고 계정에서 Experience Platform으로 수집할 수 있습니다. 구성을 지정하지 않으면 기본값은 `false`입니다. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL Salesforce]의 연결 사양 ID는 `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`입니다. |
 
 [!DNL Salesforce]에 대한 OAuth 사용에 대한 자세한 내용은 OAuth 인증 흐름에 대한 [[!DNL Salesforce] 안내서](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)를 참조하십시오.
 
 >[!ENDTABS]
 
-### [!DNL Azure]의 Experience Platform에서 [!DNL Salesforce]에 대한 기본 연결 만들기
+### [!DNL Salesforce]의 Experience Platform에서 [!DNL Azure]에 대한 기본 연결 만들기
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 Experience Platform 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
@@ -162,7 +163,8 @@ curl -X POST \
             "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
             "clientId": "xxxx",
             "clientSecret": "xxxx",
-            "apiVersion": "60.0"
+            "apiVersion": "60.0",
+            "includeDeletedObjects": true
         }
       },
       "connectionSpec": {
@@ -178,6 +180,7 @@ curl -X POST \
 | `auth.params.clientId` | [!DNL Salesforce] 계정과 연결된 클라이언트 ID입니다. |
 | `auth.params.clientSecret` | [!DNL Salesforce] 계정과 연결된 클라이언트 암호입니다. |
 | `auth.params.apiVersion` | 사용 중인 [!DNL Salesforce] 인스턴스의 REST API 버전입니다. |
+| `auth.params.includeDeletedObjects` | 일시 삭제된 레코드를 포함할지 여부를 결정하는 데 사용되는 부울 값입니다. |
 | `connectionSpec.id` | [!DNL Salesforce] 연결 사양 ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 +++
@@ -306,7 +309,7 @@ curl -X GET \
 
 +++응답 예를 보려면 선택
 
-다음 응답은 `initializing` 상태에 있는 동안 기본 연결 ID `3e908d3f-c390-482b-9f44-43d3d4f2eb82`에 대한 정보를 표시합니다.
+다음 응답은 `3e908d3f-c390-482b-9f44-43d3d4f2eb82` 상태에 있는 동안 기본 연결 ID `initializing`에 대한 정보를 표시합니다.
 
 ```json
 {
@@ -349,7 +352,7 @@ curl -X GET \
 
 +++응답 예를 보려면 선택
 
-다음 응답은 `enabled` 상태에 있는 동안 기본 연결 ID `3e908d3f-c390-482b-9f44-43d3d4f2eb82`에 대한 정보를 표시합니다.
+다음 응답은 `3e908d3f-c390-482b-9f44-43d3d4f2eb82` 상태에 있는 동안 기본 연결 ID `enabled`에 대한 정보를 표시합니다.
 
 ```json
 {
@@ -395,7 +398,7 @@ curl -X GET \
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL Flow Service] API를 사용하여 [!DNL Salesforce] 기본 연결을 만들었습니다. 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다.
+이 자습서에 따라 [!DNL Salesforce] API를 사용하여 [!DNL Flow Service] 기본 연결을 만들었습니다. 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다.
 
 * [ [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
 * [ [!DNL Flow Service] API를 사용하여 CRM 데이터를 Experience Platform으로 가져오는 데이터 흐름을 만듭니다.](../../collect/crm.md)
