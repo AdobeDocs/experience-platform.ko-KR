@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Service 및 Data Distiller FAQ
 description: 이 문서에는 쿼리 서비스 및 Data Distiller과 관련된 일반적인 질문과 대답이 포함되어 있습니다. 주제에는 데이터 내보내기, 서드파티 도구 및 PSQL 오류가 포함됩니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
+source-git-commit: f0656fcde077fc6c983a7a2d8dc21d2548fa7605
 workflow-type: tm+mt
-source-wordcount: '5055'
+source-wordcount: '5186'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ FAQ에 대한 다음 답변 목록은 다음 카테고리로 구분됩니다.
 ### 쿼리 서비스 API에 [!DNL Postman]을(를) 사용할 수 있습니까?
 
 +++답변
-예. [!DNL Postman]&#x200B;(무료 타사 애플리케이션)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. Adobe Developer Console에서 프로젝트를 설정하고 [!DNL Postman]에서 사용하는 데 필요한 모든 자격 증명을 얻는 방법에 대한 단계별 지침은 [[!DNL Postman] 설치 가이드](https://video.tv.adobe.com/v/31705?captions=kor)를 참조하세요. [시작, 실행 및 공유에 대한 지침 [!DNL Postman] 컬렉션](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)에 대해서는 공식 설명서를 참조하세요.
+예. [!DNL Postman]&#x200B;(무료 타사 애플리케이션)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. Adobe Developer Console에서 프로젝트를 설정하고 [[!DNL Postman] 에서 사용하는 데 필요한 모든 자격 증명을 얻는 방법에 대한 단계별 지침은 ](https://video.tv.adobe.com/v/28832)설치 가이드[!DNL Postman]를 참조하세요. [시작, 실행 및 공유에 대한 지침 [!DNL Postman] 컬렉션](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)에 대해서는 공식 설명서를 참조하세요.
 +++
 
 ### UI를 통해 쿼리에서 반환되는 최대 행 수에 제한이 있습니까?
@@ -91,7 +91,7 @@ FAQ에 대한 다음 답변 목록은 다음 카테고리로 구분됩니다.
 +++답변
 쿼리 제한 시간이 초과된 경우 다음 솔루션 중 하나 이상을 사용하는 것이 좋습니다.
 
-- [쿼리를 CTAS 쿼리로 변환](./sql/syntax.md#create-table-as-select)하고 실행을 예약합니다. 실행 예약은 UI를 통해 [&#128279;](./ui/user-guide.md#scheduled-queries)하거나 [API](./api/scheduled-queries.md#create)를 통해 수행할 수 있습니다.
+- [쿼리를 CTAS 쿼리로 변환](./sql/syntax.md#create-table-as-select)하고 실행을 예약합니다. 실행 예약은 UI를 통해 [하거나 ](./ui/user-guide.md#scheduled-queries)API[를 통해 수행할 수 있습니다.](./api/scheduled-queries.md#create)
 - 추가 [필터 조건](https://spark.apache.org/docs/latest/api/sql/index.html#filter)을 적용하여 더 작은 데이터 청크에서 쿼리를 실행하십시오.
 - 자세한 내용을 수집하려면 [EXPLAIN 명령을 실행](./sql/syntax.md#explain)하십시오.
 - 데이터 세트 내의 데이터 통계를 검토합니다.
@@ -160,7 +160,7 @@ FAQ에 대한 다음 답변 목록은 다음 카테고리로 구분됩니다.
 
 ![도움말 및 지원, 엔터프라이즈 지원 및 문의하기 등이 강조 표시된 상단 탐색 모음 드롭다운 메뉴.](./images/troubleshooting/help-and-support.png)
 
-[!UICONTROL 도움말 및 지원] 섹션이 포함된 드롭다운 배너가 나타납니다. **[!UICONTROL 문의하기]**&#x200B;를 선택하여 Adobe 고객 지원 가상 도우미를 열거나, 대규모 조직을 위한 전용 도움말에 대해 **[!UICONTROL 엔터프라이즈 지원]**&#x200B;을 선택하십시오.
+[!UICONTROL 도움말 및 지원] 섹션이 포함된 드롭다운 배너가 나타납니다. **[!UICONTROL 문의하기]**&#x200B;를 선택하여 Adobe 고객 지원 가상 도우미를 열거나, 대규모 조직을 위한 전용 도움말에 대해 **[!UICONTROL 엔터프라이즈 지원]**을 선택하십시오.
 +++
 
 ### 이전 작업이 성공적으로 완료되지 않은 경우 후속 작업을 실행하지 않고 순차적 일련의 작업을 구현하려면 어떻게 해야 합니까?
@@ -396,7 +396,7 @@ SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
 2021-08-30 15:00:00
 ```
 
-다른 예로, 지정된 타임스탬프가 `Asia/Seoul` 시간대에 대해 `2021-07-14 12:40:00.0`인 경우 반환된 UTC 타임스탬프는 `2021-07-14 03:40:00.0`입니다.
+다른 예로, 지정된 타임스탬프가 `2021-07-14 12:40:00.0` 시간대에 대해 `Asia/Seoul`인 경우 반환된 UTC 타임스탬프는 `2021-07-14 03:40:00.0`입니다.
 
 쿼리 서비스 UI에서 제공되는 콘솔 출력은 사람이 인식할 수 있는 형식입니다.
 
@@ -406,7 +406,7 @@ SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
 
 #### UTC 타임스탬프에서 변환
 
-`from_utc_timestamp()` 메서드는 로컬 표준 시간대의 타임스탬프&#x200B;**에서 지정된 매개 변수**&#x200B;을(를) 해석하고 원하는 지역의 동등한 타임스탬프를 UTC 형식으로 제공합니다. 아래 예에서 시간은 사용자의 현지 시간대에서 오후 2시 40분입니다. 변수로 통과한 서울 시간대가 현지 시간대보다 9시간 앞선다.
+`from_utc_timestamp()` 메서드는 로컬 표준 시간대의 타임스탬프&#x200B;**에서 지정된 매개 변수**&#x200B;을(를) 해석하고 원하는 지역의 동등한 타임스탬프를 UTC 형식으로 제공합니다. 아래 예에서 시간은 사용자의 로컬 시간대에서 2:40PM입니다. 변수로 통과한 서울 시간대가 현지 시간대보다 9시간 앞선다.
 
 ```SQL
 SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
@@ -425,7 +425,7 @@ SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
 
 >[!NOTE]
 >
-> 날짜 문자열 **은(는) `yyyy-mm-ddTHH24:MM:SS` 형식이어야 합니다**.
+> 날짜 문자열 **은(는)** 형식이어야 합니다`yyyy-mm-ddTHH24:MM:SS`.
 
 타임스탬프 필터를 사용하는 예는 아래에서 볼 수 있습니다.
 
@@ -647,6 +647,14 @@ Data Distiller 컴퓨터 사용 시간에 대한 라이선스 사용 대시보�
 백엔드 인프라는 컴퓨팅 시간 활용도와 처리 시간을 최적화하기 위해 지속적으로 개선됩니다. 그 결과, 성능 개선이 구현될 때 시간이 지남에 따라 변경되는 것을 볼 수 있습니다.
 +++
 
+### 개발 및 프로덕션 샌드박스와 데이터 Distiller 성능이 다릅니까?
+
++++답변
+개발 및 프로덕션 샌드박스 모두에서 쿼리를 실행할 때 비슷한 성능을 기대할 수 있습니다. 두 환경 모두 동일한 수준의 처리 기능을 제공하도록 설계되었습니다. 그러나 처리하는 데이터의 양과 쿼리를 실행할 때의 전체 시스템 활동에 따라 컴퓨팅 시간에 차이가 발생할 수 있습니다.
+
+Experience Platform UI의 [라이선스 사용 대시보드](../dashboards/guides/license-usage.md)에서 계산 시간 사용을 추적합니다.
++++
+
 ## 쿼리 UI
 
 ### 쿼리 서비스에 연결을 시도할 때 &quot;연결 초기화 중...&quot;이 중단되었습니다. 문제를 해결하려면 어떻게 합니까?
@@ -752,6 +760,12 @@ INSERT INTO QUERIES를 ITAS 쿼리라고 합니다. CREATE TABLE 쿼리를 CTAS 
 +++답변
 만료되지 않는 자격 증명의 값은 구성 JSON 파일에서 가져온 `technicalAccountID` 및 `credential`의 연결된 인수입니다. 암호 값은 `{{technicalAccountId}:{credential}}` 형식을 사용합니다.
 자격 증명을 사용하여 [외부 클라이언트에 연결](./ui/credentials.md#using-credentials-to-connect-to-external-clients)하는 방법에 대한 자세한 내용은 설명서를 참조하세요.
++++
+
+### 만료되지 않는 자격 증명 암호에 특수 문자에 대한 제한 사항이 있습니까?
+
++++답변
+예. 만료되지 않는 자격 증명에 대한 암호를 설정할 때는 최소 하나의 숫자, 하나의 소문자, 하나의 대문자 및 하나의 특수 문자를 포함해야 합니다. 달러 기호($)는 지원되지 않습니다. 대신 !, @, #, ^ 또는 &amp; 등의 특수 문자를 사용하십시오.
 +++
 
 ### 쿼리 서비스 편집기에 연결할 수 있는 타사 SQL 편집기 종류

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 7월
 description: Adobe Experience Platform의 2025년 7월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2a8d5576ea937cdda70f10218b5eec35613fd264
+source-git-commit: 2553b8f016a20678550eed50671e3549ec42aae7
 workflow-type: tm+mt
-source-wordcount: '1623'
-ht-degree: 24%
+source-wordcount: '1457'
+ht-degree: 22%
 
 ---
 
@@ -29,7 +29,6 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 - [용량](#capacity)
 - [대상](#destinations)
 - [데이터 수집](#data-ingestion)
-- [쿼리 서비스]&#x200B;(#query-service
 - [Real-Time CDP B2B 에디션](#b2b)
 - [샌드박스](#sandboxes)
 - [Segmentation Service](#segmentation-service)
@@ -84,19 +83,6 @@ Experience Platform은 다양한 소스에서 일괄 데이터 수집과 스트�
 | 스트리밍 프로필 수집 모니터링 지원 | 이제 스트리밍 프로필 수집에 대한 실시간 모니터링을 사용할 수 있으므로 처리량, 지연 시간 및 데이터 품질 지표에 대한 투명성을 제공합니다. 사전 예방적 경고 및 조치 가능한 통찰력을 지원하여 데이터 엔지니어가 용량 위반 및 수집 문제를 식별하는 데 도움이 됩니다. 자세한 내용은 [스트리밍 프로필 수집 모니터링](../../dataflows/ui/monitor-streaming-profile.md)에 대한 안내서를 참조하십시오. |
 
 자세한 내용은 [데이터 수집 개요](../../ingestion/home.md)를 참조하십시오.
-
-## 쿼리 서비스 {#query-service}
-
-쿼리 서비스가 포함된 표준 SQL을 사용하여 Adobe Experience Platform 데이터 레이크에서 데이터를 쿼리합니다. 데이터 세트를 원활하게 결합하고 쿼리 결과에서 새로운 데이터 세트를 생성하여 보고를 강화하고, 데이터 과학 워크플로를 활성화하거나, 실시간 고객 프로필로 수집할 수 있습니다. 예를 들어 고객 거래 데이터와 행동 데이터를 병합하여 타기팅된 마케팅 캠페인의 가치가 높은 대상자를 파악할 수 있습니다.
-
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-|--------|-------------|
-| 만료되지 않는 자격 증명 암호 문자 제한 지원 | 이제 Data Distiller에서 [특정 문자 제한이 있는 만료되지 않는 자격 증명](../../query-service/ui/credentials.md#non-expiring-credentials)을 지원합니다. 암호에는 최소 하나의 숫자, 하나의 소문자, 하나의 대문자 및 하나의 특수 문자가 필요하지만, 달러 기호($)는 지원되지 않습니다. 권장 특수 문자에는 `!, @, #, ^, or &`이(가) 포함됩니다. |
-| 환경 전반에 걸쳐 성능 일관성 향상 | 이제 Data Distiller [성능이 개발 및 프로덕션 샌드박스](../../query-service/troubleshooting-guide.md#data-distiller) 간에 일관되고 두 환경 모두에서 유사한 백엔드 리소스를 사용할 수 있습니다. 사용되는 계산 시간은 데이터 볼륨 및 처리 시 사용 가능한 백엔드 계산 리소스에 따라 달라질 수 있습니다. |
-
-[!DNL Query Service]에 대한 자세한 내용은 [[!DNL Query Service] 개요](../../query-service/home.md)를 참조하십시오.
 
 ## Real-Time CDP B2B 에디션 {#b2b}
 
