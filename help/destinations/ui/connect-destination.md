@@ -3,10 +3,10 @@ title: 새 대상 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform에서 대상에 연결하고, 경고를 활성화하고, 연결된 대상에 대한 마케팅 작업을 설정하는 방법을 알아봅니다.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
+source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 3%
+source-wordcount: '1280'
+ht-degree: 2%
 
 ---
 
@@ -54,15 +54,24 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="계정 이름"
->abstract="향후에 이 대상 계정을 쉽게 식별하는 데 도움이 되는 이름을 입력하십시오. 이 기능은 동일한 대상 유형에 대한 연결이 여러 개 있는 경우에 특히 유용합니다."
+>abstract="향후에 이 대상 계정을 쉽게 식별하는 데 도움이 되는 이름을 입력하십시오. 이 기능은 동일한 대상에 대해 여러 개의 연결이 있는 경우 특히 유용합니다."
 
 대상에 연결하는 첫 번째 단계는 대상 플랫폼에 인증하는 것입니다.
 
-연결 중인 대상에 따라 대상 파트너의 페이지로 이동하여 인증하거나 Experience Platform 워크플로에서 직접 인증 자격 증명을 입력하라는 메시지가 표시될 수 있습니다. 다음은 [!DNL Amazon S3] 대상을 인증하는 데 필요한 입력의 예입니다. 필요한 입력에 대한 자세한 지침은 각 대상 설명서 페이지에 제공됩니다(예: [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) 및 [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)의 인증 섹션 참조).
+연결 중인 대상에 따라 대상 파트너의 페이지로 이동하여 인증하거나 Experience Platform 워크플로에서 직접 인증 자격 증명을 입력하라는 메시지가 표시될 수 있습니다.
+
+새 대상 연결을 설정할 때 **[!UICONTROL 계정 이름]** 및 선택적으로 **[!UICONTROL 설명]**&#x200B;을 제공해야 합니다. 이러한 필드는 모든 대상에 사용할 수 있습니다.
+
+* **[!UICONTROL 계정 이름]**: 나중에 이 대상 계정을 쉽게 식별할 수 있는 이름을 입력하십시오. 이 기능은 동일한 대상에 대해 여러 개의 연결이 있는 경우 특히 유용합니다.
+* **[!UICONTROL 설명]**(선택 사항): 연결의 목적 또는 관련 비즈니스 컨텍스트와 같이 사용자 또는 팀이 계정을 구분하는 데 도움이 되는 추가 세부 정보를 추가합니다.
+
+이러한 필드에 명확하고 설명적인 정보를 제공하면 대상자를 활성화할 때 올바른 대상 계정을 보다 쉽게 관리하고 선택할 수 있습니다.
+
+다음은 [!DNL Amazon S3] 대상을 인증하는 데 필요한 입력의 예입니다. 필요한 입력에 대한 자세한 지침은 각 대상 설명서 페이지에 제공됩니다(예: [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) 및 [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)의 인증 섹션 참조).
 
 필수 및 선택적 인증 매개 변수 **[!DNL Amazon S3]개**
 
-![Amazon S3 대상에 인증할 때 필수 입력 매개 변수와 선택적 입력 매개 변수를 보여 주는 이미지입니다.](../assets/ui/connect-destinations/authenticate-amazon-s3-example.png)
+![Amazon S3 대상에 인증할 때 필수 입력 매개 변수와 선택적 입력 매개 변수를 보여 주는 이미지입니다.](../assets/ui/connect-destinations/s3-new-acc.png)
 
 ## 연결 매개 변수 설정 {#set-up-connection-parameters}
 
