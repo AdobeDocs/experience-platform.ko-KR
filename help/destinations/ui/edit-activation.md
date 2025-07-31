@@ -4,9 +4,9 @@ title: 활성화 데이터 흐름 편집
 type: Tutorial
 description: 이 문서의 단계에 따라 Adobe Experience Platform에서 기존 활성화 데이터 흐름을 편집합니다.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 24951f7680f134beb64c7679a94bac9b18042af1
+source-git-commit: ec87cb1c8755f52233a5725aa3bb0c80a135d60c
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,7 @@ Adobe Experience Platform에서 다음과 같이 대상에 대한 기존 활성�
 * [매핑된 속성 및 ID 편집](#edit-mapped-attributes)
 * [활성화 일정 및 내보내기 빈도 편집](#edit-schedule-frequency)
 * 활성화 워크플로에 [추가 데이터 세트 추가](#add-datasets)
+* 활성화 데이터 흐름에 대한 [마케팅 작업 편집](#edit-marketing-actions)
 * 내보낸 데이터에 [액세스 레이블 적용](#apply-access-labels)
 * 활성화 데이터 흐름의 [이름 및 설명 편집](#edit-names-descriptions)
 
@@ -108,6 +109,23 @@ Adobe Experience Platform에서 다음과 같이 대상에 대한 기존 활성�
 >이 옵션은 데이터 집합 내보내기를 지원하는 [대상](export-datasets.md#supported-destinations)에만 표시됩니다.
 
 ![데이터 세트 데이터 흐름 내보내기 실행 옵션을 보여 주는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/export-datasets.png)
+
+## [!BADGE Beta]{type=Informative} 마케팅 작업 편집 {#edit-marketing-actions}
+
+>[!NOTE]
+>
+>이 기능은 현재 **베타**&#x200B;에 있습니다. 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
+
+대상에 처음 연결할 때 설정한 마케팅 작업을 추가하거나 제거할 수 있습니다.
+
+오른쪽 레일에서 **[!UICONTROL 마케팅 작업 편집]**&#x200B;을 선택하여 마케팅 작업 선택 화면을 엽니다.
+
+![마케팅 작업 편집 옵션을 표시하는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/edit-marketing-actions.png)
+
+적용 가능한 마케팅 작업을 선택한 다음 **[!UICONTROL 저장]**&#x200B;을 선택하여 변경 내용을 적용합니다.
+
+![마케팅 작업 편집 화면을 표시하는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/edit-marketing-actions-screen.png)
+
 
 ## 액세스 레이블 적용 {#apply-access-labels}
 
