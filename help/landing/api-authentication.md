@@ -221,7 +221,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | 속성 | 설명 |
 | --- | --- |
-| `{API_KEY}` | `{API_KEY}`이전 단계[!UICONTROL 에서 검색한 ]&#x200B;([클라이언트 ID](#api-ims-secret)). |
+| `{API_KEY}` | `{API_KEY}`이전 단계[!UICONTROL 에서 검색한 &#x200B;]&#x200B;([클라이언트 ID](#api-ims-secret)). |
 | `{SECRET}` | [이전 단계](#api-ims-secret)에서 검색한 클라이언트 암호입니다. |
 | `{JWT}` | [이전 단계](#jwt)에서 생성한 JWT. |
 
