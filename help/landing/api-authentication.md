@@ -8,7 +8,7 @@ feature: API
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2508'
+source-wordcount: '2507'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,7 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 
 ### 개발자 액세스 권한 얻기 {#gain-developer-access}
 
-조직의 Admin Console 관리자에게 문의하여 Experience Platform 제품 프로필에 개발자로 추가하십시오. [제품 프로필에 대한 개발자 액세스를 관리](https://helpx.adobe.com/kr/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)하는 방법에 대한 특정 지침은 Admin Console 설명서를 참조하십시오.
+조직의 Admin Console 관리자에게 문의하여 Experience Platform 제품 프로필에 개발자로 추가하십시오. [제품 프로필에 대한 개발자 액세스를 관리](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)하는 방법에 대한 특정 지침은 Admin Console 설명서를 참조하십시오.
 
 개발자로 할당되면 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)에서 통합 만들기를 시작할 수 있습니다. 이러한 통합은 외부 앱 및 서비스에서 Adobe API로의 파이프라인입니다.
 
@@ -60,7 +60,7 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 
 Admin Console 관리자도 귀하를 동일한 제품 프로필에 사용자로 추가해야 합니다. 사용자 액세스를 사용하면 UI에서 사용자가 수행하는 API 작업의 결과를 볼 수 있습니다.
 
-자세한 내용은 [Admin Console에서 사용자 그룹 관리](https://helpx.adobe.com/kr/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html)에 대한 안내서를 참조하십시오.
+자세한 내용은 [Admin Console에서 사용자 그룹 관리](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html)에 대한 안내서를 참조하십시오.
 
 ## API 키(클라이언트 ID) 및 조직 ID 생성 {#generate-credentials}
 
@@ -100,7 +100,7 @@ API 추가 옵션이 강조 표시된 ![Developer Console 화면.](./images/api-
 
 >[!IMPORTANT]
 >
->**[!UICONTROL OAuth 서버 간]** 메서드는 앞으로 지원되는 유일한 토큰 생성 메서드입니다. 이전에 지원된 **[!UICONTROL 서비스 계정(JWT)]** 메서드는 더 이상 사용되지 않으며 새 통합에 대해 선택할 수 없습니다. JWT 인증 방법을 사용하는 기존 통합은 2025년 6월 30일까지 계속 작동하지만, Adobe에서는 해당 날짜 이전에 기존 통합을 새 [!UICONTROL OAuth 서버 간] 방법으로 마이그레이션할 것을 강력히 권장합니다. [!BADGE 사용되지 않음] 섹션에서 자세한 정보를 확인하세요.{type=negative}[JSON 웹 토큰(JWT) 생성](#jwt).
+>**[!UICONTROL OAuth 서버 간]** 메서드는 앞으로 지원되는 유일한 토큰 생성 메서드입니다. 이전에 지원된 **[!UICONTROL 서비스 계정(JWT)]** 메서드는 더 이상 사용되지 않으며 새 통합에 대해 선택할 수 없습니다. JWT 인증 방법을 사용하는 기존 통합은 2025년 6월 30일까지 계속 작동하지만, Adobe에서는 해당 날짜 이전에 기존 통합을 새 [!UICONTROL OAuth 서버 간] 방법으로 마이그레이션할 것을 강력히 권장합니다. [!BADGE 사용하지 않음]{type=negative} [JSON 웹 토큰(JWT) 생성](#jwt) 섹션에서 자세한 정보를 얻으십시오.
 
 ![Experience Platform API에 대한 OAuth 서버 간 인증 방법을 선택하십시오.](./images/api-authentication/oauth-authentication-method.png)
 
@@ -118,7 +118,7 @@ API 추가 옵션이 강조 표시된 ![Developer Console 화면.](./images/api-
 
 Experience Platform API와의 통합을 설정하는 위에서 설명한 단계에 대한 연습은 아래 비디오 튜토리얼에서도 사용할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/31705/?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on)
 
 ### 자격 증명 수집 {#gather-credentials}
 
@@ -177,9 +177,9 @@ Experience Platform API를 호출하기 위한 자격 증명을 가져오려면 
 >
 >액세스 토큰을 생성하기 위한 JWT 메서드가 더 이상 사용되지 않습니다. 모든 새 통합은 [OAuth 서버 간 인증 방법](#select-oauth-server-to-server)을 사용하여 만들어야 합니다. Adobe에서도 통합을 계속 사용하려면 2025년 6월 30일까지 기존 통합을 OAuth 메서드로 마이그레이션해야 합니다. 다음 중요한 설명서를 참조하십시오.
 > 
->* [JWT에서 OAuth로의 응용 프로그램 마이그레이션 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
->* [OAuth를 사용하는 새 응용 프로그램과 이전 응용 프로그램에 대한 구현 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
->* [OAuth 서버 간 자격 증명 메서드를 사용할 때의 이점](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
+> * [JWT에서 OAuth로의 응용 프로그램 마이그레이션 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+> * [OAuth를 사용하는 새 응용 프로그램과 이전 응용 프로그램에 대한 구현 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+> * [OAuth 서버 간 자격 증명 메서드를 사용할 때의 이점](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ 더 이상 사용되지 않는 정보 보기
 
@@ -209,7 +209,7 @@ JWT를 생성했으면 API 호출에서 사용하여 `{ACCESS_TOKEN}`을(를) �
 
 **요청**
 
-다음 요청은 페이로드에 제공된 자격 증명을 기반으로 새 `{ACCESS_TOKEN}`을(를) 생성합니다. 이 끝점은 양식 데이터만 페이로드로 허용하므로 `multipart/form-data`의 `Content-Type` 헤더를 지정해야 합니다.
+다음 요청은 페이로드에 제공된 자격 증명을 기반으로 새 `{ACCESS_TOKEN}`을(를) 생성합니다. 이 끝점은 양식 데이터만 페이로드로 허용하므로 `Content-Type`의 `multipart/form-data` 헤더를 지정해야 합니다.
 
 ```shell
 curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
@@ -221,7 +221,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | 속성 | 설명 |
 | --- | --- |
-| `{API_KEY}` | [이전 단계](#api-ims-secret)에서 검색한 `{API_KEY}`([!UICONTROL 클라이언트 ID]). |
+| `{API_KEY}` | `{API_KEY}`이전 단계[!UICONTROL 에서 검색한 ]&#x200B;([클라이언트 ID](#api-ims-secret)). |
 | `{SECRET}` | [이전 단계](#api-ims-secret)에서 검색한 클라이언트 암호입니다. |
 | `{JWT}` | [이전 단계](#jwt)에서 생성한 JWT. |
 
@@ -241,7 +241,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | 속성 | 설명 |
 | --- | --- |
-| `token_type` | 유형 of 토큰이 반환되고 있습니다. 액세스 토큰의 경우 이 값은 항상 `bearer`입니다. |
+| `token_type` | 반환되는 토큰의 유형입니다. 액세스 토큰의 경우 이 값은 항상 `bearer`입니다. |
 | `access_token` | 생성된 `{ACCESS_TOKEN}`. 접두사가 `Bearer`인 이 값은 모든 Experience Platform API 호출에 대한 `Authentication` 헤더로 필요합니다. |
 | `expires_in` | 액세스 토큰이 만료될 때까지 남은 시간(밀리초)입니다. 이 값이 0에 도달하면 새 액세스 토큰을 생성해야 Experience Platform API를 계속 사용할 수 있습니다. |
 
@@ -298,7 +298,7 @@ Experience Platform 내의 여러 리소스에 액세스하거나 수정하려�
 
 시스템 관리자가 API를 통해 Experience Platform 리소스에 액세스하는 데 필요한 권한을 부여하는 방법에 대한 자세한 내용은 아래 비디오 튜토리얼에서도 확인할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/31705/?learn=on&t=159&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=159)
 
 ## Postman을 사용하여 API 호출 인증 및 테스트 {#use-postman}
 
@@ -308,17 +308,17 @@ Experience Platform 컬렉션 및 환경에서 Postman 사용에 대한 자세�
 
 **Experience Platform API에 사용할 Postman 환경을 다운로드하여 가져오기**
 
->[!VIDEO](https://video.tv.adobe.com/v/31705/?learn=on&t=106&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=106)
 
 **Postman 컬렉션을 사용하여 액세스 토큰을 생성합니다**
 
 [Identity Management 서비스 Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims)을 다운로드하고 아래 비디오를 시청하여 액세스 토큰을 생성하는 방법을 알아보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/32728/?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
 
 **Experience Platform API Postman 컬렉션을 다운로드하고 API와 상호 작용**
 
->[!VIDEO](https://video.tv.adobe.com/v/32722/?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/29704/?learn=on)
 
 <!--
 This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Experience Platform APIs.
@@ -360,13 +360,13 @@ Adobe Developer Console에서 통합을 만들려면 먼저 계정에 Experience
 
 >[!NOTE]
 >
->시스템 관리자만 Experience Platform UI의 역할에 API를 할당할 수 있습니다.
+> 시스템 관리자만 Experience Platform UI의 역할에 API를 할당할 수 있습니다.
 
 Experience Platform API를 사용하고 작업을 수행하려면 시스템 관리자가 역할에 지정된 권한 집합 외에 API 자격 증명을 추가해야 합니다. [역할에 대한 API 자격 증명 관리](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role)에 대한 섹션에서 자세한 정보를 확인하세요.
 
 제품 프로필에 개발자를 추가하고 API를 역할에 할당하기 위해 위에서 설명한 단계에 대한 연습은 아래 비디오 튜토리얼에서도 사용할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446405/?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 
 ## 추가 리소스 {#additional-resources}
 
