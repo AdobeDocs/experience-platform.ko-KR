@@ -1,7 +1,8 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2025년 7월
 description: Adobe Experience Platform의 2025년 7월 릴리스 정보.
-source-git-commit: fff6318e7f70176aee5fafe2e024c71922496aff
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: ba475df04342424dc0b22cb1d3d429d12701dbd1
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 22%
@@ -144,4 +145,3 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | [!DNL Salesforce]에서 레코드의 소프트 삭제 지원 | 이제 [!DNL Salesforce] 원본은 선택적 `includeDeletedObjects` 매개 변수를 통해 일시 삭제된 레코드를 포함할 수 있습니다. true로 설정하면 고객은 일시 삭제된 레코드를 [!DNL Salesforce] 쿼리에 포함하고 이러한 레코드를 Experience Platform으로 가져올 수 있습니다. 자세한 내용은 [[!DNL Salesforce] 소스 설명서](../../sources/connectors/crm/salesforce.md)를 참조하십시오. |
 
 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하십시오.
-

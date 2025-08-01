@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 릴리스 정보
 breadcrumb-title: Experience Platform 릴리스 정보
 user-guide-description: Adobe Experience Platform에 대한 월별 릴리스 정보를 살펴보십시오.
-source-git-commit: e073f40b31c388dc9afaab730ea660459abe5a32
+source-git-commit: 41300b39889fca41fff41b1212bf910e6fbc0cee
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 93%
+source-wordcount: '172'
+ht-degree: 94%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 93%
 * [현재 Experience Platform 릴리스 노트](latest/latest.md)
 * [Experience Platform 프리릴리스 노트](./pre-release-notes.md)
 * 2025 {#2025}
+   * [2025년 7월](2025/july-2025.md)
    * [2025년 6월](2025/june-2025.md)
    * [2025년 5월](2025/may-2025.md)
    * [2025년 4월](2025/april-2025.md)

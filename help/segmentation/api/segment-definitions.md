@@ -4,20 +4,24 @@ title: 세그먼트 정의 API 엔드포인트
 description: Adobe Experience Platform Segmentation Service API의 세그먼트 정의 엔드포인트를 사용하면 조직의 세그먼트 정의를 프로그래밍 방식으로 관리할 수 있습니다.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
+source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1558'
 ht-degree: 2%
 
 ---
 
 # 세그먼트 정의 엔드포인트
 
-Adobe Experience Platform을 사용하면 프로필 그룹에서 특정 속성이나 동작 그룹을 정의하는 세그먼트 정의를 만들 수 있습니다. 세그먼트 정의는 [!DNL Profile Query Language] (PQL)로 작성된 쿼리를 캡슐화하는 개체입니다. 세그먼트 정의는 프로필에 적용되어 대상자를 만듭니다. 이 개체(세그먼트 정의)는 PQL 술어라고도 합니다. PQL 조건자는 [!DNL Real-Time Customer Profile]에 제공한 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트 정의에 대한 규칙을 정의합니다. PQL 쿼리 작성에 대한 자세한 내용은 [PQL 안내서](../pql/overview.md)를 참조하십시오.
+>[!WARNING]
+>
+>Segmentation Service API를 사용하여 B2B 엔터티를 사용하는 대상자 만들기는 더 이상 사용되지 않습니다. 계정, 계정-사용자 관계, 캠페인, 캠페인 멤버, 마케팅 목록, 마케팅 목록 멤버, 영업 기회 및 영업 기회-사용자 관계와 같은 B2B 엔티티를 더 이상 사용하여 대상을 만들 수 없습니다.
+
+Adobe Experience Platform을 사용하면 프로필 그룹에서 특정 속성이나 동작 그룹을 정의하는 세그먼트 정의를 만들 수 있습니다. 세그먼트 정의는 [!DNL Profile Query Language]&#x200B;(PQL)로 작성된 쿼리를 캡슐화하는 개체입니다. 세그먼트 정의는 프로필에 적용되어 대상자를 만듭니다. 이 개체(세그먼트 정의)는 PQL 술어라고도 합니다. PQL 조건자는 [!DNL Real-Time Customer Profile]에 제공한 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트 정의에 대한 규칙을 정의합니다. PQL 쿼리 작성에 대한 자세한 내용은 [PQL 안내서](../pql/overview.md)를 참조하십시오.
 
 이 안내서에서는 세그먼트 정의를 더 잘 이해하는 데 도움이 되는 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 
-## 시작하기
+## 시작
 
 이 가이드에 사용된 끝점은 [!DNL Adobe Experience Platform Segmentation Service] API의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
 
@@ -338,7 +342,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 ## 특정 세그먼트 정의 검색 {#get}
 
-`/segment/definitions` 끝점에 대한 GET 요청을 만들고 요청 경로에서 검색하려는 세그먼트 정의의 ID를 제공하여 특정 세그먼트 정의에 대한 자세한 정보를 검색할 수 있습니다.
+`/segment/definitions` 끝점에 대한 GET 요청을 만들고 요청 경로에 검색할 세그먼트 정의의 ID를 제공하여 특정 세그먼트 정의에 대한 자세한 정보를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -570,7 +574,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 
 ## 특정 세그먼트 정의 삭제 {#delete}
 
-`/segment/definitions` 끝점에 대한 DELETE 요청을 만들고 요청 경로에 삭제할 세그먼트 정의의 ID를 제공하여 특정 세그먼트 정의의 삭제를 요청할 수 있습니다.
+`/segment/definitions` 끝점에 DELETE 요청을 하고 요청 경로에 삭제할 세그먼트 정의의 ID를 제공하여 특정 세그먼트 정의의 삭제를 요청할 수 있습니다.
 
 >[!NOTE]
 >
@@ -709,7 +713,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 
 ## 세그먼트 정의 변환
 
-`/segment/conversion` 끝점에 POST 요청을 하여 `pql/text`에서 `pql/json` 또는 `pql/json` 사이의 세그먼트 정의를 `pql/text`(으)로 변환할 수 있습니다.
+`pql/text` 끝점에 대한 POST 요청을 수행하여 `pql/json`에서 `pql/json` 또는 `pql/text` 사이의 세그먼트 정의를 `/segment/conversion`(으)로 변환할 수 있습니다.
 
 **API 형식**
 

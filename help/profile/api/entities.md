@@ -5,10 +5,10 @@ type: Documentation
 description: Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터에 액세스할 수 있습니다. 이 안내서에서는 프로필 API를 사용하여 "프로필"로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 3%
+source-wordcount: '1933'
+ht-degree: 2%
 
 ---
 
@@ -20,9 +20,28 @@ ht-degree: 3%
 
 Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 [!DNL Real-Time Customer Profile] 데이터에 액세스할 수 있습니다. 이 안내서에서는 API를 사용하여 &quot;프로필&quot;로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다. [!DNL Experience Platform] UI를 사용하여 프로필에 액세스하는 방법에 대한 자세한 내용은 [프로필 사용 안내서](../ui/user-guide.md)를 참조하십시오.
 
-## 시작하기
+## 시작
 
 이 가이드에 사용된 API 끝점은 [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)의 일부입니다. 계속하기 전에 [시작 안내서](getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 [!DNL Experience Platform] API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
+
+>[!BEGINSHADEBOX]
+
+## 엔티티 해결
+
+아키텍처 업그레이드의 일부로, Adobe은 최신 데이터를 기반으로 한 결정론적 ID 일치를 사용하여 계정 및 기회에 대한 엔티티 해결을 도입합니다. 엔티티 해결 작업은 B2B 속성을 사용하여 다중 엔티티 대상을 평가하기 전에 일괄 처리 세분화 동안 매일 실행됩니다.
+
+이 향상된 기능을 통해 Experience Platform은 동일한 엔티티를 나타내는 여러 레코드를 식별하고 통합할 수 있으므로 데이터 일관성이 향상되고 보다 정확한 대상 세그멘테이션을 수행할 수 있습니다.
+
+이전에는 계정 및 영업 기회가 모든 과거 수집을 포함하여 ID를 연결하는 ID 그래프 기반 확인에 의존했습니다. 새로운 엔티티 해결 접근 방식에서는 ID가 최신 데이터만 기반으로 연결됩니다
+
+### 엔티티 해결은 어떻게 작동합니까?
+
+- **이전**: DUNS(Data Universal Numbering System) 번호를 추가 ID로 사용하고 계정의 DUNS 번호가 CRM과 같은 소스 시스템에서 업데이트된 경우 계정 ID는 이전 및 새 DUNS 번호에 모두 연결됩니다.
+- **이후**: DUNS 번호를 추가 ID로 사용하고 계정의 DUNS 번호가 CRM과 같은 소스 시스템에서 업데이트된 경우 계정 ID는 새 DUNS 번호에만 연결되므로 현재 계정 상태를 보다 정확하게 반영합니다.
+
+이 업데이트로 인해 엔터티 확인 작업 주기가 완료된 후 [!DNL Profile Access] API에 최신 병합 프로필 보기가 반영됩니다. 또한 일관된 데이터는 데이터 정확도와 일관성이 향상된 세그멘테이션, 활성화 및 분석과 같은 사용 사례를 제공합니다.
+
+>[!ENDSHADEBOX]
 
 ## 엔티티 검색 {#retrieve-entity}
 

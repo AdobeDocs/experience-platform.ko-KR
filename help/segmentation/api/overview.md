@@ -3,9 +3,9 @@ title: 세그먼테이션 서비스 API 안내서
 description: 개발자는 세그멘테이션 서비스 API를 사용하여 Adobe Experience Platform의 세그멘테이션 작업을 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아봅니다.
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: af79493c831c401c0bf14e391eb36a8175b4a2dd
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '614'
 ht-degree: 3%
 
 ---
@@ -29,6 +29,12 @@ Adobe Experience Platform [!DNL Segmentation Service]을(를) 사용하면 [!DNL
 내보내기 작업은 대상 세그먼트 구성원을 데이터 세트로 지속하는 데 사용되는 비동기 프로세스입니다. `/export/jobs` 끝점을 사용하여 모든 내보내기 작업을 검색하거나, 새 내보내기 작업을 만들거나, 특정 내보내기 작업의 세부 정보를 검색하거나, 특정 내보내기 작업을 취소할 수 있습니다.
 
 이 끝점 사용에 대한 자세한 내용은 [내보내기 작업 끝점 안내서](./export-jobs.md)를 참조하십시오.
+
+## 외부 대상
+
+`/core/ais/external-audiences` 끝점을 사용하여 외부 대상을 Experience Platform으로 가져오고, 대상의 만들기 상태를 검색하고, 외부 대상을 업데이트하고, 대상 수집 실행을 시작하고, 외부 대상 수집 상태를 검색하고, 대상 수집 실행을 나열하고, 외부 대상을 삭제할 수 있습니다.
+
+이 끝점 사용에 대한 자세한 내용은 [외부 대상 끝점 안내서](./external-audiences.md)를 참조하십시오.
 
 ## 미리 보기 및 예상
 

@@ -2,9 +2,9 @@
 title: 샌드박스 도구
 description: 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져옵니다.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: b5330e10dc8b395d1ef299073182c836f5c3af7f
+source-git-commit: a3db2b69400a43abe399f90036041aaeaf0bd0a0
 workflow-type: tm+mt
-source-wordcount: '3414'
+source-wordcount: '3496'
 ht-degree: 5%
 
 ---
@@ -24,6 +24,17 @@ ht-degree: 5%
 샌드박스 도구 기능을 사용하면 [!DNL Adobe Real-Time Customer Data Platform] 및 [!DNL Adobe Journey Optimizer] 개체를 패키지로 내보낼 수 있습니다.
 
 ### 실시간 고객 데이터 플랫폼 개체 {#real-time-cdp-objects}
+
+>[!BEGINSHADEBOX]
+
+### 다중 엔티티 대상 가져오기 변경 사항
+
+[B2B 아키텍처 업그레이드](../../rtcdp/b2b-architecture-upgrade.md)를 통해 B2B 특성 및 Experience 이벤트를 사용하는 다중 엔터티 대상자를 업그레이드 전에 이러한 대상자를 포함한 패키지가 게시되면 더 이상 가져올 수 없습니다. 이러한 대상은 가져오지 못하며 자동으로 새 아키텍처로 변환될 수 없습니다.
+
+이 제한을 해결하려면 업데이트된 대상으로 새 패키지를 만든 다음 샌드박스 도구를 사용하여 해당 대상 샌드박스로 가져와야 합니다.
+
+
+>[!ENDSHADEBOX]
 
 아래 표에는 현재 샌드박스 도구에 지원되는 [!DNL Adobe Real-Time Customer Data Platform]개 개체가 나열되어 있습니다.
 
@@ -51,15 +62,15 @@ ht-degree: 5%
 
 | 플랫폼 | 오브젝트 | 지원되는 종속 개체 | 세부 사항 |
 | --- | --- | --- | --- |
-| [!DNL Adobe Journey Optimizer] | Audience | | 대상자는 여정 객체의 종속 객체로 복사할 수 있습니다. 타겟 샌드박스에서 새 대상 만들기 를 선택하거나 기존 대상을 재사용할 수 있습니다. |
+| [!DNL Adobe Journey Optimizer] | 대상자 | | 대상자는 여정 객체의 종속 객체로 복사할 수 있습니다. 타겟 샌드박스에서 새 대상 만들기 를 선택하거나 기존 대상을 재사용할 수 있습니다. |
 | [!DNL Adobe Journey Optimizer] | 스키마 | | 여정에 사용된 스키마는 종속 객체로 복사할 수 있습니다. 대상 샌드박스에서 새 스키마 만들기 를 선택하거나 기존 스키마를 재사용할 수 있습니다. |
 | [!DNL Adobe Journey Optimizer] | 병합 정책 | | 여정에 사용된 병합 정책을 종속 객체로 복사할 수 있습니다. 대상 샌드박스에서 **새 병합 정책을 만들 수 없음**. 기존 병합 정책만 사용할 수 있습니다. |
-| [!DNL Adobe Journey Optimizer] | 여정 | 여정에 사용된 다음 객체는 종속 객체로 복사됩니다. 가져오기 작업 과정에서 각각에 대해 **[!UICONTROL 새로 만들기]** 또는 **[!UICONTROL 기존 항목 사용]**&#x200B;을 선택할 수 있습니다. <ul><li>대상자</li><li>스키마</li><li>사용자 정의 액션</li><li>이벤트</li><li>조각</li><li>콘텐츠 템플릿</li><li>캔버스 세부 정보</li></ul> | <ul><li>**[!UICONTROL 사용자 지정 작업]**: 다른 샌드박스에 여정을 복사할 때 가져오기 프로세스 중에 **[!UICONTROL 기존 사용]**&#x200B;을 선택할 때 **반드시**&#x200B;선택하는 기존 사용자 지정 작업은 원본 사용자 지정 작업과 동일합니다. 동일하지 않은 경우 새 여정에 해결할 수 없는 오류가 발생합니다.</li><li>여정에 사용된 이벤트 및 이벤트 세부 사항이 복사됩니다. 대상 샌드박스에서 항상 새 버전이 생성됩니다.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 여정 | 여정에 사용된 다음 객체는 종속 객체로 복사됩니다. 가져오기 작업 과정에서 각각에 대해 **[!UICONTROL 새로 만들기]** 또는 **[!UICONTROL 기존 항목 사용]**&#x200B;을 선택할 수 있습니다. <ul><li>대상자</li><li>캔버스 세부 정보</li><li>콘텐츠 템플릿</li><li>사용자 정의 액션</li><li>데이터 소스</li><li>이벤트</li><li>필드 그룹</li><li>조각</li><li>스키마</li></ul> | 가져오기 프로세스 중에 여정을 다른 샌드박스로 복사하기 위해 **[!UICONTROL 기존 항목 사용]**&#x200B;을 선택한 경우 **필수**&#x200B;을(를) 선택한 기존 사용자 지정 작업은 원본 사용자 지정 작업과 정확히 일치해야 합니다. 일치하지 않으면 새 여정에서 해결할 수 없는 오류가 발생합니다.<br>여정에 사용된 이벤트와 이벤트 세부 정보를 복사하고 대상 샌드박스에 새 버전을 만듭니다. |
 | [!DNL Adobe Journey Optimizer] | 작업 | | 여정에 사용된 이메일 및 푸시 메시지는 종속 오브젝트로 복사할 수 있습니다. 여정 필드에 사용된 채널 작업 활동으로, 메시지의 개인화에 사용되며 완성도가 확인되지 않습니다. 콘텐츠 블록은 복사되지 않습니다.<br><br>여정에 사용된 프로필 업데이트 작업을 복사할 수 있습니다. 사용자 지정 작업은 패키지에 개별적으로 추가할 수 있습니다. 여정에 사용된 작업 세부 정보도 복사됩니다. 대상 샌드박스에서 항상 새 버전이 생성됩니다. |
 | [!DNL Adobe Journey Optimizer] | 사용자 지정 작업 |  | 사용자 지정 작업은 패키지에 개별적으로 추가할 수 있습니다. 사용자 지정 작업이 여정에 할당되면 더 이상 편집할 수 없습니다. 사용자 지정 작업을 업데이트하려면 다음을 수행해야 합니다. <ul><li>여정 마이그레이션 전에 사용자 지정 작업 이동</li><li>마이그레이션 후 사용자 지정 작업에 대한 구성(예: 요청 헤더, 쿼리 매개 변수 및 인증) 업데이트</li><li>첫 번째 단계에서 추가한 사용자 지정 작업으로 여정 개체 마이그레이션</li></ul> |
 | [!DNL Adobe Journey Optimizer] | 콘텐츠 템플릿 | | 컨텐츠 템플릿은 여정 객체의 종속 객체로 복사할 수 있습니다. 독립형 템플릿을 사용하면 Journey Optimizer 캠페인 및 여정 전반에서 사용자 정의 콘텐츠를 쉽게 재사용할 수 있습니다. |
 | [!DNL Adobe Journey Optimizer] | 조각 | 모든 중첩된 조각. | 조각을 여정 개체의 종속 개체로 복사할 수 있습니다. 조각은 Journey Optimizer 캠페인 및 여정 간 하나 이상의 이메일에서 참조할 수 있는 재사용 가능한 구성 요소입니다. |
-| [!DNL Adobe Journey Optimizer] | 캠페인 | 캠페인에 사용된 다음 객체는 종속 객체로 복사됩니다. <ul><li>캠페인</li><li>대상자</li><li>스키마</li><li>콘텐츠 템플릿</li><li>조각</li><li>메시지/컨텐츠</li><li>채널 구성</li><li>통합 의사 결정 개체</li><li>실험 설정/변형</li></ul> | <ul><li>프로필, 대상자, 스키마, 인라인 메시지 및 종속 오브젝트와 관련된 모든 항목과 함께 캠페인을 복사할 수 있습니다. 데이터 사용 레이블 및 언어 설정과 같은 일부 항목은 복사되지 않습니다. 복사할 수 없는 전체 개체 목록은 [다른 샌드박스로 개체 내보내기](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) 안내서를 참조하십시오.</li><li>시스템은 동일한 구성이 존재하는 경우 타겟 샌드박스에서 기존 채널 구성 객체를 자동으로 감지하고 재사용합니다. 일치하는 구성을 찾을 수 없으면 가져오는 동안 채널 구성을 건너뛰며 사용자가 이 여정에 대한 대상 샌드박스의 채널 설정을 수동으로 업데이트해야 합니다.</li><li>사용자는 Target 샌드박스의 기존 실험 및 대상을 선택한 캠페인의 종속 오브젝트로 재사용할 수 있습니다.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 캠페인 | 캠페인에 사용된 다음 객체는 종속 객체로 복사됩니다. <ul><li>캠페인</li><li>대상자</li><li>스키마</li><li>콘텐츠 템플릿</li><li>조각</li><li>메시지/컨텐츠</li><li>채널 구성</li><li>통합 의사 결정 개체</li><li>실험 설정/변형</li></ul> | <ul><li>프로필, 대상자, 스키마, 인라인 메시지 및 종속 오브젝트와 관련된 모든 항목과 함께 캠페인을 복사할 수 있습니다. 데이터 사용 레이블 및 언어 설정과 같은 일부 항목은 복사되지 않습니다. 복사할 수 없는 전체 개체 목록은 [다른 샌드박스로 개체 내보내기](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) 안내서를 참조하십시오.</li><li>시스템은 동일한 구성이 존재하는 경우 타겟 샌드박스에서 기존 채널 구성 객체를 자동으로 감지하고 재사용합니다. 일치하는 구성을 찾을 수 없으면 가져오는 동안 채널 구성을 건너뛰며 사용자가 이 여정에 대한 대상 샌드박스의 채널 설정을 수동으로 업데이트해야 합니다.</li><li>사용자는 Target 샌드박스의 기존 실험 및 대상을 선택한 캠페인의 종속 오브젝트로 재사용할 수 있습니다.</li></ul> |
 
 서피스(예: 사전 설정)는 복사되지 않습니다. 시스템은 메시지 유형 및 표면 이름을 기반으로 대상 샌드박스에서 가장 가까운 일치 항목을 자동으로 선택합니다. 대상 샌드박스에 서피스가 없는 경우 서피스 복사가 실패하여 메시지에 설정할 수 있는 서피스가 필요하므로 메시지 복사가 실패합니다. 이 경우 복사가 작동하려면 메시지의 오른쪽 채널에 대해 적어도 하나의 서피스를 만들어야 합니다.
 
@@ -96,11 +107,11 @@ ht-degree: 5%
 
 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;을(를) 선택한 다음 사용 가능한 스키마를 나열하는 **[!UICONTROL 찾아보기]** 탭을 선택합니다. 선택한 스키마 옆의 생략 부호(`...`)를 선택하면 드롭다운에 컨트롤이 표시됩니다. 드롭다운에서 **[!UICONTROL 패키지에 추가]**&#x200B;를 선택합니다.
 
-![패키지에 추가] 컨트롤을 강조 표시하는 드롭다운 메뉴를 표시하는 스키마 목록(../images/ui/sandbox-tooling/add-to-package.png)
+![패키지에 추가[!UICONTROL  컨트롤을 강조 표시하는 드롭다운 메뉴를 표시하는 스키마 목록]](../images/ui/sandbox-tooling/add-to-package.png)
 
 **[!UICONTROL 패키지에 추가]** 대화 상자에서 **[!UICONTROL 새 패키지 만들기]** 옵션을 선택합니다. 패키지의 [!UICONTROL 이름]과(와) 선택적 [!UICONTROL 설명]을(를) 입력한 다음 **[!UICONTROL 추가]**&#x200B;를 선택하십시오.
 
-![패키지에 추가] 대화 상자([!UICONTROL 새 패키지 만들기] 선택 및 강조 표시 [!UICONTROL 추가].(../images/ui/sandbox-tooling/create-new-package.png))
+![패키지에 추가[!UICONTROL  대화 상자(]새 패키지 만들기[!UICONTROL  선택 및 강조 표시 ]추가[!UICONTROL .])](../images/ui/sandbox-tooling/create-new-package.png)
 
 **[!UICONTROL 스키마]** 환경으로 돌아갔습니다. 이제 아래 나열된 다음 단계를 수행하여 만든 패키지에 개체를 추가할 수 있습니다.
 
@@ -108,7 +119,7 @@ ht-degree: 5%
 
 사용 가능한 스키마 목록을 보려면 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;을(를) 선택한 다음 **[!UICONTROL 찾아보기]** 탭을 선택하십시오. 그런 다음 선택한 스키마 옆의 생략 부호(`...`)를 선택하여 드롭다운 메뉴에서 제어 옵션을 확인합니다. 드롭다운에서 **[!UICONTROL 패키지에 추가]**&#x200B;를 선택합니다.
 
-![패키지에 추가] 컨트롤을 강조 표시하는 드롭다운 메뉴를 표시하는 스키마 목록(../images/ui/sandbox-tooling/add-to-package.png)
+![패키지에 추가[!UICONTROL  컨트롤을 강조 표시하는 드롭다운 메뉴를 표시하는 스키마 목록]](../images/ui/sandbox-tooling/add-to-package.png)
 
 **[!UICONTROL 패키지에 추가]** 대화 상자가 나타납니다. **[!UICONTROL 기존 패키지]** 옵션을 선택한 다음 **[!UICONTROL 패키지 이름]** 드롭다운을 선택하고 필요한 패키지를 선택합니다. 마지막으로 **[!UICONTROL 추가]**&#x200B;를 선택하여 선택 항목을 확인합니다.
 
@@ -126,7 +137,7 @@ ht-degree: 5%
 >
 >게시되면 패키지의 콘텐츠를 변경할 수 없습니다. 호환성 문제를 방지하려면 필요한 모든 에셋을 선택했는지 확인하십시오. 변경해야 하는 경우 새 패키지를 만들어야 합니다.
 
-[!UICONTROL 샌드박스] 환경의 **[!UICONTROL 패키지]** 탭으로 돌아가서 새로 게시된 패키지를 볼 수 있습니다.
+**[!UICONTROL 샌드박스]** 환경의 [!UICONTROL 패키지] 탭으로 돌아가서 새로 게시된 패키지를 볼 수 있습니다.
 
 ![새로 게시된 패키지를 강조 표시하는 샌드박스 패키지 목록.](../images/ui/sandbox-tooling/published-packages.png)
 
@@ -156,7 +167,7 @@ ht-degree: 5%
 
 기존 개체를 사용하려면 종속 개체 옆에 있는 연필 아이콘을 선택합니다.
 
-![패키지 개체 및 종속성] 페이지에 패키지에 포함된 에셋 목록이 표시됩니다.(../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![패키지 개체 및 종속성[!UICONTROL  페이지에 패키지에 포함된 에셋 목록이 표시됩니다.]](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
 
 새로 만들거나 기존 항목을 사용하는 옵션이 표시됩니다. **[!UICONTROL 기존 사용]**&#x200B;을 선택합니다.
 
@@ -164,11 +175,11 @@ ht-degree: 5%
 
 **[!UICONTROL 필드 그룹]** 대화 상자에 개체에 사용할 수 있는 필드 그룹 목록이 표시됩니다. 필요한 필드 그룹을 선택한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
-![필드 그룹] 대화 상자에 표시된 필드 목록으로서 [!UICONTROL 저장] 선택 항목을 강조 표시합니다. (../images/ui/sandbox-tooling/field-group-list.png)
+![필드 그룹[!UICONTROL  대화 상자에 표시된 필드 목록으로서 ]저장[!UICONTROL  선택 항목을 강조 표시합니다. ]](../images/ui/sandbox-tooling/field-group-list.png)
 
 [!UICONTROL 패키지 개체 및 종속성] 페이지로 돌아왔습니다. 여기에서 **[!UICONTROL 완료]**&#x200B;를 선택하여 패키지 가져오기를 완료합니다.
 
-![패키지 개체 및 종속성] 페이지에 패키지에 포함된 에셋 목록이 표시되며 [!UICONTROL 완료].(../images/ui/sandbox-tooling/finish-object-dependencies.png)
+![패키지 개체 및 종속성[!UICONTROL  페이지에 패키지에 포함된 에셋 목록이 표시되며 ]완료[!UICONTROL .]](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
 ## 전체 샌드박스 내보내기 및 가져오기
 
@@ -185,9 +196,9 @@ ht-degree: 5%
 
 전체 샌드박스를 내보내려면 [!UICONTROL 샌드박스] **[!UICONTROL 패키지]** 탭으로 이동하여 **[!UICONTROL 패키지 만들기]**&#x200B;를 선택합니다.
 
-![샌드박스] **[!UICONTROL 패키지]** 탭 강조 표시 [!UICONTROL 패키지 만들기].(../images/ui/sandbox-tooling/create-sandbox-package.png)
+![샌드박스패키지&#x200B;**[!UICONTROL 탭 강조 표시]**&#x200B;패키지 만들기[!UICONTROL .]](../images/ui/sandbox-tooling/create-sandbox-package.png)
 
-[!UICONTROL 패키지 만들기] 대화 상자에서 [!UICONTROL 패키지 유형]에 대한 **[!UICONTROL 전체 샌드박스]**&#x200B;를 선택합니다. 새 패키지에 [!UICONTROL 패키지 이름]을 제공하고 드롭다운에서 **[!UICONTROL 샌드박스]**&#x200B;를 선택합니다. 마지막으로 **[!UICONTROL 만들기]**&#x200B;를 선택하여 항목을 확인합니다.
+**[!UICONTROL 패키지 만들기]** 대화 상자에서 [!UICONTROL 패키지 유형]에 대한 [!UICONTROL 전체 샌드박스]를 선택합니다. 새 패키지에 [!UICONTROL 패키지 이름]을 제공하고 드롭다운에서 **[!UICONTROL 샌드박스]**&#x200B;를 선택합니다. 마지막으로 **[!UICONTROL 만들기]**&#x200B;를 선택하여 항목을 확인합니다.
 
 ![완료된 필드를 표시하고 [!UICONTROL 만들기]를 강조 표시하는 [!UICONTROL 패키지 만들기] 대화 상자.](../images/ui/sandbox-tooling/create-package-dialog.png)
 
@@ -195,7 +206,7 @@ ht-degree: 5%
 
 ![새로 게시된 패키지를 강조 표시하는 샌드박스 패키지 목록.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
-[!UICONTROL 샌드박스] 환경의 **[!UICONTROL 패키지]** 탭으로 돌아가서 새로 게시된 패키지를 볼 수 있습니다.
+**[!UICONTROL 샌드박스]** 환경의 [!UICONTROL 패키지] 탭으로 돌아가서 새로 게시된 패키지를 볼 수 있습니다.
 
 ### 전체 샌드박스 패키지 가져오기 {#import-entire-sandbox-package}
 
@@ -249,7 +260,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 >
 >특정 인벤토리 페이지로 이동하여 개체 목록을 볼 수 있습니다.
 
-![가져오기 세부 정보] 대화 상자에서 가져오기의 세부 정보를 확인할 수 있습니다.(../images/ui/sandbox-tooling/import-details.png)
+![가져오기 세부 정보[!UICONTROL  대화 상자에서 가져오기의 세부 정보를 확인할 수 있습니다.]](../images/ui/sandbox-tooling/import-details.png)
 
 가져오기가 완료되면 Experience Platform UI에서 알림이 수신됩니다. 경고 아이콘에서 이러한 알림에 액세스할 수 있습니다. 작업이 실패한 경우 여기에서 문제 해결로 이동할 수 있습니다.
 
@@ -345,7 +356,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 다음 비디오에서는 샌드박스 도구에 대한 이해를 돕기 위해 새 패키지를 만들고, 패키지를 게시하고, 패키지를 가져오는 방법을 간략하게 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446093/?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## 다음 단계
 

@@ -2,7 +2,7 @@
 title: Id 그래프 연결 규칙에 대한 구현 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '1956'
 ht-degree: 6%
@@ -101,7 +101,7 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 }
 ```
 
->[!TAB 개인 식별자가 두 개인 인 인증된 이벤트]
+>[!TAB 개인 식별자가 두 개인 ]인 인증된 이벤트
 
 시스템에서 2명의 개인 식별자를 전송하는 경우 구현이 1명의 개인 네임스페이스 요구 사항에 실패할 수 있습니다. 예를 들어 웹 SDK 구현의 identityMap에 CRMID, customerID 및 ECID 네임스페이스가 포함되어 있으면 모든 단일 이벤트에 CRMID와 customerID가 모두 포함될 수 있습니다.
 
@@ -203,7 +203,11 @@ ID 서비스 구현 프로세스의 첫 번째 단계는 Experience Platform 계
 
 ![설정 단추가 강조 표시된 ID 찾아보기 페이지입니다.](../images/implementation/settings.png "설정 단추가 강조 표시된 ID 찾아보기 페이지입니다."){zoomable="yes"}
 
-ID 설정 UI를 사용하여 고유한 네임스페이스를 지정하고 우선 순위별로 네임스페이스를 구성합니다. 설정 적용이 끝나면 새 설정이 ID 서비스에 반영되기까지 최소 6시간이 걸리기 때문에 데이터 수집을 진행하려면 최소 6시간 이상 기다려야 합니다.
+ID 설정 UI를 사용하여 고유한 네임스페이스를 지정하고 우선 순위별로 네임스페이스를 구성합니다.
+
+>[!IMPORTANT]
+>
+>설정 적용이 완료되면 새 설정이 ID 서비스에 반영되기까지 최소 24시간이 소요되므로 데이터 수집을 계속하려면 최소 24시간을 기다려야 합니다.
 
 자세한 내용은 [ID 설정 UI 안내서](./identity-settings-ui.md)를 참조하십시오.
 
