@@ -2,16 +2,20 @@
 title: Didomi Source 개요
 description: 사용자 인터페이스를 사용하여 Didomi를 Adobe Experience Platform에 연결하는 방법에 대해 알아봅니다.
 last-substantial-update: 2025-07-29T00:00:00Z
+badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
-source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
+source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '911'
 ht-degree: 1%
 
 ---
 
 # [!DNL Didomi]
 
+>[!AVAILABILITY]
+>
+>[!DNL Didomi] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 소스 개요에서 [약관](../../home.md#terms-and-conditions)을 참조하십시오.
 
 [!DNL Didomi]은(는) 조직이 웹 사이트, 앱 및 내부 도구의 개인 데이터에 대한 사용자 선택 사항을 수집, 관리 및 적용할 수 있도록 지원하는 동의 및 환경 설정 관리 플랫폼입니다.
 

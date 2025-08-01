@@ -2,15 +2,20 @@
 title: Didomi를 Experience Platform에 연결
 description: UI를 사용하여 Didomi 계정을 Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2025-07-29T00:00:00Z
+badge: Beta
 exl-id: 1374574f-c8ba-4cf5-bad0-94a884f5c0a6
-source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
+source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1164'
 ht-degree: 3%
 
 ---
 
 # Experience Platform에 [!DNL Didomi] 연결
+
+>[!AVAILABILITY]
+>
+>[!DNL Didomi] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 소스 개요에서 [약관](../../../../home.md#terms-and-conditions)을 참조하십시오.
 
 UI의 소스 작업 영역을 사용하여 [!DNL Didomi] 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
 
