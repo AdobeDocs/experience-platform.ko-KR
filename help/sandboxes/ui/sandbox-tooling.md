@@ -107,11 +107,11 @@ ht-degree: 5%
 
 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;을(를) 선택한 다음 사용 가능한 스키마를 나열하는 **[!UICONTROL 찾아보기]** 탭을 선택합니다. 선택한 스키마 옆의 생략 부호(`...`)를 선택하면 드롭다운에 컨트롤이 표시됩니다. 드롭다운에서 **[!UICONTROL 패키지에 추가]**&#x200B;를 선택합니다.
 
-![패키지에 추가[!UICONTROL  컨트롤을 강조 표시하는 드롭다운 메뉴를 표시하는 스키마 목록]](../images/ui/sandbox-tooling/add-to-package.png)
+![패키지에 추가[!UICONTROL &#x200B; 컨트롤을 강조 표시하는 드롭다운 메뉴를 표시하는 스키마 목록]](../images/ui/sandbox-tooling/add-to-package.png)
 
 **[!UICONTROL 패키지에 추가]** 대화 상자에서 **[!UICONTROL 새 패키지 만들기]** 옵션을 선택합니다. 패키지의 [!UICONTROL 이름]과(와) 선택적 [!UICONTROL 설명]을(를) 입력한 다음 **[!UICONTROL 추가]**&#x200B;를 선택하십시오.
 
-![패키지에 추가[!UICONTROL  대화 상자(]새 패키지 만들기[!UICONTROL  선택 및 강조 표시 ]추가[!UICONTROL .])](../images/ui/sandbox-tooling/create-new-package.png)
+![패키지에 추가[!UICONTROL &#x200B; 대화 상자(]새 패키지 만들기[!UICONTROL &#x200B; 선택 및 강조 표시 &#x200B;]추가[!UICONTROL .])](../images/ui/sandbox-tooling/create-new-package.png)
 
 **[!UICONTROL 스키마]** 환경으로 돌아갔습니다. 이제 아래 나열된 다음 단계를 수행하여 만든 패키지에 개체를 추가할 수 있습니다.
 
@@ -119,7 +119,7 @@ ht-degree: 5%
 
 사용 가능한 스키마 목록을 보려면 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;을(를) 선택한 다음 **[!UICONTROL 찾아보기]** 탭을 선택하십시오. 그런 다음 선택한 스키마 옆의 생략 부호(`...`)를 선택하여 드롭다운 메뉴에서 제어 옵션을 확인합니다. 드롭다운에서 **[!UICONTROL 패키지에 추가]**&#x200B;를 선택합니다.
 
-![패키지에 추가[!UICONTROL  컨트롤을 강조 표시하는 드롭다운 메뉴를 표시하는 스키마 목록]](../images/ui/sandbox-tooling/add-to-package.png)
+![패키지에 추가[!UICONTROL &#x200B; 컨트롤을 강조 표시하는 드롭다운 메뉴를 표시하는 스키마 목록]](../images/ui/sandbox-tooling/add-to-package.png)
 
 **[!UICONTROL 패키지에 추가]** 대화 상자가 나타납니다. **[!UICONTROL 기존 패키지]** 옵션을 선택한 다음 **[!UICONTROL 패키지 이름]** 드롭다운을 선택하고 필요한 패키지를 선택합니다. 마지막으로 **[!UICONTROL 추가]**&#x200B;를 선택하여 선택 항목을 확인합니다.
 
@@ -167,7 +167,7 @@ ht-degree: 5%
 
 기존 개체를 사용하려면 종속 개체 옆에 있는 연필 아이콘을 선택합니다.
 
-![패키지 개체 및 종속성[!UICONTROL  페이지에 패키지에 포함된 에셋 목록이 표시됩니다.]](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![패키지 개체 및 종속성[!UICONTROL &#x200B; 페이지에 패키지에 포함된 에셋 목록이 표시됩니다.]](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
 
 새로 만들거나 기존 항목을 사용하는 옵션이 표시됩니다. **[!UICONTROL 기존 사용]**&#x200B;을 선택합니다.
 
@@ -175,11 +175,11 @@ ht-degree: 5%
 
 **[!UICONTROL 필드 그룹]** 대화 상자에 개체에 사용할 수 있는 필드 그룹 목록이 표시됩니다. 필요한 필드 그룹을 선택한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
-![필드 그룹[!UICONTROL  대화 상자에 표시된 필드 목록으로서 ]저장[!UICONTROL  선택 항목을 강조 표시합니다. ]](../images/ui/sandbox-tooling/field-group-list.png)
+![필드 그룹[!UICONTROL &#x200B; 대화 상자에 표시된 필드 목록으로서 &#x200B;]저장[!UICONTROL &#x200B; 선택 항목을 강조 표시합니다. &#x200B;]](../images/ui/sandbox-tooling/field-group-list.png)
 
 [!UICONTROL 패키지 개체 및 종속성] 페이지로 돌아왔습니다. 여기에서 **[!UICONTROL 완료]**&#x200B;를 선택하여 패키지 가져오기를 완료합니다.
 
-![패키지 개체 및 종속성[!UICONTROL  페이지에 패키지에 포함된 에셋 목록이 표시되며 ]완료[!UICONTROL .]](../images/ui/sandbox-tooling/finish-object-dependencies.png)
+![패키지 개체 및 종속성[!UICONTROL &#x200B; 페이지에 패키지에 포함된 에셋 목록이 표시되며 &#x200B;]완료[!UICONTROL .]](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
 ## 전체 샌드박스 내보내기 및 가져오기
 
@@ -260,7 +260,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 >
 >특정 인벤토리 페이지로 이동하여 개체 목록을 볼 수 있습니다.
 
-![가져오기 세부 정보[!UICONTROL  대화 상자에서 가져오기의 세부 정보를 확인할 수 있습니다.]](../images/ui/sandbox-tooling/import-details.png)
+![가져오기 세부 정보[!UICONTROL &#x200B; 대화 상자에서 가져오기의 세부 정보를 확인할 수 있습니다.]](../images/ui/sandbox-tooling/import-details.png)
 
 가져오기가 완료되면 Experience Platform UI에서 알림이 수신됩니다. 경고 아이콘에서 이러한 알림에 액세스할 수 있습니다. 작업이 실패한 경우 여기에서 문제 해결로 이동할 수 있습니다.
 
