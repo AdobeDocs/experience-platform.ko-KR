@@ -15,9 +15,9 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 
 이 문서에서는 [!UICONTROL 계정 프로필] 대시보드의 기능에 대한 개요를 제공하고 사용 가능한 표준 인사이트에 대해 자세히 설명합니다. 사용 가능한 기능에 대한 자세한 내용은 [[!UICONTROL 계정 프로필] UI 안내서](../../rtcdp/accounts/account-profile-ui-guide.md)를 참조하십시오.
 
-## 시작하기
+## 시작
 
-B2B [!UICONTROL 계정 프로필] 대시보드에 액세스하려면 [Adobe Real-Time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md)에 대한 권한이 있어야 합니다.
+B2B [계정 프로필](../../rtcdp/b2b-overview.md) 대시보드에 액세스하려면 [!UICONTROL Adobe Real-Time Customer Data Platform B2B edition]에 대한 권한이 있어야 합니다.
 
 ## 계정 프로필 데이터 {#data}
 
@@ -31,7 +31,7 @@ B2B [!UICONTROL 계정 프로필] 대시보드에 액세스하려면 [Adobe Real
 
 ## [!UICONTROL 계정 프로필] 대시보드 탐색 {#explore}
 
-Experience Platform UI에서 [!UICONTROL 계정 프로필] 대시보드로 이동하려면 왼쪽 탐색 패널의 [!UICONTROL 계정]에서 **[!UICONTROL 프로필]**&#x200B;을 선택합니다.
+Experience Platform UI에서 [!UICONTROL 계정 프로필] 대시보드로 이동하려면 왼쪽 탐색 패널의 **[!UICONTROL 계정]**&#x200B;에서 [!UICONTROL 프로필]을 선택합니다.
 
 ![왼쪽 탐색에 계정 프로필이 있는 Experience Platform UI가 강조 표시되고 개요 탭이 표시됩니다.](../images/account-profiles/account-profiles-dashboard.png)
 
@@ -49,7 +49,7 @@ Experience Platform UI에서 [!UICONTROL 계정 프로필] 대시보드로 이�
 
 ### 리드-계정 일치 서비스 구성 {#lead-to-account-matching-service}
 
-[!UICONTROL 계정 설정] 대화 상자에서 계정 일치 서비스에 대한 리드를 구성하려면 **[!UICONTROL 설정]**&#x200B;을 선택하십시오. 리드-계정 일치를 구성하는 방법에 대한 자세한 내용은 [UI 안내서](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching)를 참조하십시오. 리드-계정 일치에 대한 자세한 내용은 Real-Time CDP B2B 설명서의 [리드-계정 일치](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)를 참조하십시오.
+**[!UICONTROL 계정 설정]** 대화 상자에서 계정 일치 서비스에 대한 리드를 구성하려면 [!UICONTROL 설정]을 선택하십시오. 리드-계정 일치를 구성하는 방법에 대한 자세한 내용은 [UI 안내서](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching)를 참조하십시오. 리드-계정 일치에 대한 자세한 내용은 Real-Time CDP B2B 설명서의 [리드-계정 일치](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)를 참조하십시오.
 
 ![설정이 강조 표시된 계정 프로필 대시보드입니다.](../images/account-profiles/settings.png)
 
@@ -68,7 +68,7 @@ Experience Platform UI에서 [!UICONTROL 계정 프로필] 대시보드로 이�
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_accountprofiles_customersperaccountoverview"
 >title="계정당 고객 개요"
->abstract="이 드릴스루 위젯은 B2B 데이터의 구조에 대한 통찰력을 제공합니다. 이는 연결된 고객 프로필이 없거나 연결된 고객 프로필이 하나 이상인 계정 프로필의 수를 파악하는 데 도움이 됩니다.<ul><li>직접 고객: `personComponents` 경로를 통해 계정에 직접 연결된 고객 프로필입니다.</li><li>간접 고객: `Account-Person` 경로를 통해 계정에 연결된 고객 프로필입니다.</li></ul>"
+>abstract="이 드릴스루 위젯은 B2B 데이터의 구조에 대한 인사이트를 제공합니다. 이는 연결된 고객 프로필이 없거나 연결된 고객 프로필이 하나 이상인 계정 프로필의 수를 파악하는 데 도움이 됩니다.<ul><li>직접 고객: `personComponents` 경로를 통해 계정에 직접 연결된 고객 프로필입니다.</li><li>간접 고객: `Account-Person` 경로를 통해 계정에 연결된 고객 프로필입니다.</li></ul>"
 
 Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 사용할 수 있는 표준 위젯을 제공합니다.
 
@@ -113,7 +113,7 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 
 ![계정당 고객 개요 위젯.](../images/account-profiles/customers-per-account-overview-widget.png)
 
-자세한 인사이트에 액세스하려면 [!UICONTROL 계정당 고객 개요] 차트에서 타원(**..**)을 선택하고 드롭다운 메뉴에서 **[!UICONTROL 드릴스루]**&#x200B;를 선택하십시오.
+자세한 인사이트에 액세스하려면 **계정당 고객 개요** 차트에서 타원([!UICONTROL ..])을 선택하고 드롭다운 메뉴에서 **[!UICONTROL 드릴스루]**&#x200B;를 선택하십시오.
 
 ![타원 드롭다운 메뉴와 드릴스루가 강조 표시된 계정당 고객 개요 위젯.](../images/account-profiles/customers-per-account-overview-dropdown.png)
 
@@ -179,7 +179,7 @@ Experience Platform UI의 드릴스루에 대한 자세한 내용은 [드릴스�
 
 ![매출 위젯별 새로운 기회](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### 상태 및 단계별 새 기회 {#opportunities-by-status-&-stage}
+### 상태 및 단계별 새로운 기회 {#opportunities-by-status-&-stage}
 
 이 위젯은 막대 차트를 사용하여 마케팅/판매 단계의 모든 단계에서 열리거나 종료되는 기회의 수를 보여 줍니다. 위젯은 색상을 사용하여 기회의 단계를 구분합니다. 색상으로 구분된 키는 영업 기회에 사용할 수 있는 단계를 나타냅니다.
 
@@ -231,7 +231,7 @@ Experience Platform UI의 드릴스루에 대한 자세한 내용은 [드릴스�
 
 ## 데이터를 로드할 수 없음 오류 {#errors}
 
-위젯에 *[!UICONTROL 이(가) 표시되는 경우 로드할 수 없습니다. 다시 시도하십시오.]* B2B 엔터티에 사용할 수 있는 데이터가 없기 때문입니다. 예를 들어 [!UICONTROL 개인 역할별 새 기회] 아래에 표시된 위젯에는 &quot;[!UICONTROL 로드할 수 없습니다&quot;라는 메시지가 표시됩니다. 다시 시도하십시오.이 샌드박스에는 사용 가능한 영업 기회 데이터가 없으므로 &#x200B;]&quot;을(를) 입력하십시오.
+위젯에 *[!UICONTROL 이(가) 표시되는 경우 로드할 수 없습니다. 다시 시도하십시오.]* B2B 엔터티에 사용할 수 있는 데이터가 없기 때문입니다. 예를 들어 [!UICONTROL 개인 역할별 새 기회] 아래에 표시된 위젯에는 &quot;[!UICONTROL 로드할 수 없습니다&quot;라는 메시지가 표시됩니다. 다시 시도하십시오.이 샌드박스에는 사용 가능한 영업 기회 데이터가 없으므로 ]&quot;을(를) 입력하십시오.
 
 ![insight 오류를 로드할 수 없습니다.](../images/account-profiles/unable-to-load.png)
 
