@@ -2,7 +2,7 @@
 title: Real-Time Customer Data Platform B2B edition의 스키마
 description: Adobe Real-Time Customer Data Platform B2B edition의 XDM(Experience Data Model) 스키마 역할에 대한 개요입니다.
 feature: Get Started, Data Management, Schemas
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 source-git-commit: 09f671af0d04251ab7b0a71528cb4b9745594b1c
 workflow-type: tm+mt
@@ -17,7 +17,7 @@ Adobe Real-Time Customer Data Platform B2B edition은 계정, 기회, 캠페인 
 
 >[!IMPORTANT]
 >
->B2B 스키마는 Experience Platform 응용 프로그램(예: [Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition))에서 사용할 수 있습니다. <br/>그러나 (의 프로필) B2B 스키마가 [실시간 고객 프로필](../../profile/home.md)에 참여하려면 Real-Time CDP B2B edition에 액세스할 수 있어야 합니다.
+>B2B 스키마는 Experience Platform 응용 프로그램(예: [Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition))에서 사용할 수 있습니다. <br/>그러나 (의 프로필) B2B 스키마가 [실시간 고객 프로필](../../profile/home.md)에 참여하려면 Real-Time CDP B2B edition에 액세스할 수 있어야 합니다.
 
 Real-Time CDP B2B edition에는 다음과 같은 표준 클래스가 제공됩니다.
 
