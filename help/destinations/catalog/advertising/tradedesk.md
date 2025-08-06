@@ -3,24 +3,16 @@ keywords: 광고, 무역데스크, 광고 무역데스크
 title: 트레이드 데스크 연결
 description: Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에 걸쳐 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있는 셀프서비스 플랫폼입니다.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 0954b5f22d609b0b12352de70f6c618cc88757c8
+source-git-commit: 92ba27aeb35685741151a618e64c78b4c8318865
 workflow-type: tm+mt
-source-wordcount: '1026'
-ht-degree: 5%
+source-wordcount: '910'
+ht-degree: 3%
 
 ---
 
 # [!DNL The Trade Desk] 연결
 
 ## 개요 {#overview}
-
->[!IMPORTANT]
->
->* 2025년 7월 31일 금요일부터 대상 카탈로그에 두 개의 **[!DNL The Trade Desk]** 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!DNL The Trade Desk]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음)로 변경되었으며 이름이]** The Trade Desk **[!UICONTROL 인 새 카드를 사용할 수 있습니다.]**
->* 새 활성화 데이터 흐름을 보려면 카탈로그에서 새 **[!UICONTROL Trade Desk]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않음) Trade Desk]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다.
->* [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다.
->   * 흐름 사양 ID: `86134ea1-b014-49e8-8bd3-689f4ce70578`
->   * 연결 사양 ID: `1029798b-a97f-4c21-81b2-e0301471166e`
 
 이 대상 커넥터를 사용하여 [!DNL The Trade Desk]&#x200B;(으)로 프로필 데이터를 보냅니다. 이 커넥터는 [!DNL The Trade Desk] 자사 끝점으로 데이터를 보냅니다. Adobe Experience Platform과 [!DNL The Trade Desk] 간의 통합은 [!DNL The Trade Desk] 타사 끝점으로 데이터 내보내기를 지원하지 않습니다.
 
@@ -75,7 +67,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->[!DNL The Trade Desk]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/ko/docs/id-service/using/id-service-api/methods/idsync)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
+>[!DNL The Trade Desk]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
 
 ## 대상에 연결 {#connect}
 
