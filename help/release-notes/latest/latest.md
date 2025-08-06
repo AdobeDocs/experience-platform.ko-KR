@@ -135,7 +135,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 소스 | 설명 |
 | --- | --- |
-| [!BADGE 에 대한 ]{type=Informative}Beta[!DNL Didomi] 지원(스트리밍 SDK) | [!DNL Didomi] 소스를 사용하여 [!DNL Didomi]에서 동의 및 기본 설정 관리 데이터를 수집하여 개인 정보 보호 규정 및 동의 기반 마케팅 전략을 준수할 수 있습니다. 설정하는 방법에 대한 자세한 내용은 [[!DNL Didomi] 소스 개요](../../sources/connectors/consent-and-preferences/didomi.md)를 참조하십시오. 소스 연결을 생성하는 단계는 [[!DNL Didomi] 소스 연결 안내서](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md)를 참조하십시오. |
+| [!BADGE 에 대한 &#x200B;]{type=Informative}Beta[!DNL Didomi] 지원(스트리밍 SDK) | [!DNL Didomi] 소스를 사용하여 [!DNL Didomi]에서 동의 및 기본 설정 관리 데이터를 수집하여 개인 정보 보호 규정 및 동의 기반 마케팅 전략을 준수할 수 있습니다. 설정하는 방법에 대한 자세한 내용은 [[!DNL Didomi] 소스 개요](../../sources/connectors/consent-and-preferences/didomi.md)를 참조하십시오. 소스 연결을 생성하는 단계는 [[!DNL Didomi] 소스 연결 안내서](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md)를 참조하십시오. |
 
 **새로운 기능 또는 업데이트된 기능**
 
