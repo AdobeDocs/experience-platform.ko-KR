@@ -2,7 +2,7 @@
 description: Destination SDK으로 빌드된 대상에 대한 파일 내보내기 설정을 구성하는 방법에 대해 알아봅니다.
 title: 일괄 처리 구성
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: a149e0b96b68c8ac61e355cf8605742feb4eec41
+source-git-commit: 8e7356bdc5692678e46a61b538d4b6748792a423
 workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 2%
@@ -95,7 +95,7 @@ Destination SDK을 통해 파일 기반 대상을 만들 때 기본 파일 이�
 | `defaultExportMode` | 열거형 | 기본 파일 내보내기 모드를 정의합니다. 지원되는 값:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> 기본값은 `DAILY_FULL_EXPORT`입니다. 파일 내보내기 예약에 대한 자세한 내용은 [일괄 활성화 설명서](../../../ui/activate-batch-profile-destinations.md#scheduling)를 참조하세요. |
 | `allowedExportModes` | 목록 | 고객이 사용할 수 있는 파일 내보내기 모드를 정의합니다. 지원되는 값:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
 | `allowedScheduleFrequency` | 목록 | 고객이 사용할 수 있는 파일 내보내기 빈도를 정의합니다. 지원되는 값:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> |
-| `defaultFrequency` | 열거형 | 기본 파일 내보내기 빈도를 정의합니다.지원되는 값:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> 기본값은 `DAILY`입니다. |
+| `defaultFrequency` | 열거형 | 기본 파일 내보내기 빈도를 정의합니다.지원되는 값:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> 기본값은 `DAILY`입니다. |
 | `defaultStartTime` | 문자열 | 파일 내보내기의 기본 시작 시간을 정의합니다. 24시간 파일 형식을 사용합니다. 기본값은 &quot;00:00&quot;입니다. |
 | `filenameConfig.allowedFilenameAppendOptions` | 문자열 | *필수*. 사용자가 선택할 수 있는 사용 가능한 파일 이름 매크로 목록입니다. 내보낸 파일 이름(대상 ID, 조직 이름, 내보내기 날짜 및 시간 등)에 추가될 항목을 결정합니다. `defaultFilename`을(를) 설정할 때 매크로를 복제하지 않도록 하십시오. <br><br>지원되는 값: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>매크로를 정의하는 순서에 관계없이 Experience Platform UI에 항상 여기에 표시된 순서대로 표시됩니다. <br><br> `defaultFilename`이(가) 비어 있으면 `allowedFilenameAppendOptions` 목록에 하나 이상의 매크로가 있어야 합니다. |
 | `filenameConfig.defaultFilenameAppendOptions` | 문자열 | *필수*. 사용자가 선택 취소할 수 있는 기본 파일 이름 매크로가 미리 선택되었습니다.<br><br> 이 목록에 있는 매크로는 `allowedFilenameAppendOptions`에 정의된 매크로의 하위 집합입니다. |
