@@ -3,9 +3,9 @@ keywords: 광고, 무역데스크, 광고 무역데스크
 title: 트레이드 데스크 연결
 description: Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에 걸쳐 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있는 셀프서비스 플랫폼입니다.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 92ba27aeb35685741151a618e64c78b4c8318865
+source-git-commit: 564ee7fbd45677c35057c56de049158f3282d7ad
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '1017'
 ht-degree: 3%
 
 ---
@@ -13,6 +13,23 @@ ht-degree: 3%
 # [!DNL The Trade Desk] 연결
 
 ## 개요 {#overview}
+
+
+>[!IMPORTANT]
+>
+> 2025년 7월부터 대상 서비스로 [내부 업그레이드](../../../release-notes/2025/july-2025.md#destinations)한 후 데이터 흐름에서 **활성화된 프로필 수가 감소**&#x200B;되어 [!DNL The Trade Desk]될 수 있습니다.
+> > 이 삭제는 이 대상 플랫폼에 대한 모든 활성화에 대한 **ECID 매핑 요구 사항**&#x200B;의 도입으로 인해 발생합니다. 자세한 내용은 이 페이지의 [필수 매핑](#mandatory-mappings) 섹션을 참조하십시오.
+>
+>**변경 사항:**
+>
+>* 이제 모든 프로필 활성화에서 ECID(Experience Cloud ID) 매핑이 **필수**&#x200B;입니다.
+>* ECID 매핑이 없는 프로필은 기존 활성화 데이터 흐름에서 **삭제**&#x200B;됩니다.
+>
+>**수행할 작업:**
+>
+>* 대상자 데이터를 검토하여 프로필에 유효한 ECID 값이 있는지 확인하십시오.
+>* 활성화 지표를 모니터링하여 예상 프로필 수를 확인합니다.
+
 
 이 대상 커넥터를 사용하여 [!DNL The Trade Desk]&#x200B;(으)로 프로필 데이터를 보냅니다. 이 커넥터는 [!DNL The Trade Desk] 자사 끝점으로 데이터를 보냅니다. Adobe Experience Platform과 [!DNL The Trade Desk] 간의 통합은 [!DNL The Trade Desk] 타사 끝점으로 데이터 내보내기를 지원하지 않습니다.
 
@@ -67,7 +84,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->[!DNL The Trade Desk]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/ko/docs/id-service/using/id-service-api/methods/idsync)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
+>[!DNL The Trade Desk]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
 
 ## 대상에 연결 {#connect}
 
@@ -121,7 +138,7 @@ ht-degree: 3%
 * **ECID**(Experience Cloud ID)
 * **거래 데스크 ID**
 
-필요한 모든 ID를 매핑하지 않으면 대상자를 [!DNL The Trade Desk]에 성공적으로 활성화하지 못합니다. 각 ID는 통합에서 특정 용도로 사용되며 대상이 올바르게 작동하려면 모두 필요합니다.
+필요한 모든 ID를 매핑하지 못하면 활성화 워크플로우를 완료할 수 없습니다. 각 ID는 통합에서 특정 용도로 사용되며 대상이 올바르게 작동하려면 모두 필요합니다.
 
 ![필수 매핑을 보여 주는 스크린샷](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
