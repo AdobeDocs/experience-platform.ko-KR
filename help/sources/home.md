@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Source 커넥터 개요
 description: Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집하는 동시에 Experience Platform 서비스를 사용하여 수신 데이터를 구조화하고 레이블을 지정하며 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 79d614ddddde2ca1b982c66f4916d3255d6cffa4
+source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
 workflow-type: tm+mt
-source-wordcount: '1643'
+source-wordcount: '1644'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform을 사용하면 Adobe Analytics 및 Adobe Audience Manager�
 
 ### 고급 엔터프라이즈 소스 {#advanced-enterprise-sources}
 
-다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
+다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
 
 | 소스 | 카테고리 | 수집 유형 | 클라우드 |
 | --- | --- | --- | --- |
@@ -70,7 +70,7 @@ Experience Platform을 사용하면 Adobe Analytics 및 Adobe Audience Manager�
 | [[!DNL Azure Databricks]](connectors/databases/databricks.md) | 데이터베이스 | 배치 | Azure |
 | [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | 클라우드 스토리지 | 스트리밍 | Azure, AWS |
 | [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | 데이터베이스 | 배치 | Azure |
-| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | 데이터베이스 | 배치 | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | 데이터베이스 | 배치 | Azure, AWS |
 | [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | 클라우드 스토리지 | 스트리밍 | Azure |
 | [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | 데이터베이스 | 스트리밍 | Azure, AWS |
 | [[!DNL Snowflake]](connectors/databases/snowflake.md) | 데이터베이스 | 배치 | Azure, AWS |

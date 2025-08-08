@@ -1,26 +1,21 @@
 ---
 title: 소스 UI Workspace에서 암호화된 데이터 수집
 description: 소스 UI 작업 영역에서 암호화된 데이터를 수집하는 방법을 알아봅니다.
-badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1436'
 ht-degree: 6%
 
 ---
 
 # 소스 UI에서 암호화된 데이터 수집
 
->[!AVAILABILITY]
->
->소스 UI에서 암호화된 데이터 수집에 대한 지원은 베타 버전입니다. 기능 및 설명서는 변경될 수 있습니다.
-
 클라우드 스토리지 배치 소스를 사용하여 암호화된 데이터 파일 및 폴더를 Adobe Experience Platform으로 수집할 수 있습니다. 암호화된 데이터 수집을 통해 비대칭 암호화 메커니즘을 활용하여 배치 데이터를 Experience Platform으로 안전하게 전송할 수 있습니다. 지원되는 비대칭 암호화 메커니즘은 PGP 및 GPG입니다.
 
 UI를 사용하여 클라우드 스토리지 일괄 처리 소스로 암호화된 데이터를 수집하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
 
-## 시작하기
+## 시작
 
 이 자습서를 계속하기 전에 다음 문서를 읽고 다음 Experience Platform 기능 및 개념을 이해하십시오.
 
@@ -165,4 +160,4 @@ Experience Platform UI에서 소스 작업 영역으로 이동한 다음 상단 
 
 ## 다음 단계
 
-이제 이 문서를 검토하여 클라우드 스토리지 배치 소스에서 Experience Platform으로 암호화된 데이터를 수집할 수 있습니다. API를 사용하여 암호화된 데이터를 수집하는 방법에 대한 자세한 내용은 [API를 사용하여 암호화된 데이터 수집](../api/encrypt-data.md)에 대한 안내서를 참조하십시오.  [!DNL Flow Service]  Experience Platform의 소스에 대한 일반적인 정보는 [소스 개요](../../home.md)를 참조하십시오.
+이제 이 문서를 검토하여 클라우드 스토리지 배치 소스에서 Experience Platform으로 암호화된 데이터를 수집할 수 있습니다. API를 사용하여 암호화된 데이터를 수집하는 방법에 대한 자세한 내용은 [API를 사용하여 암호화된 데이터 수집 [!DNL Flow Service] 에 대한 안내서를 참조하십시오. ](../api/encrypt-data.md) Experience Platform의 소스에 대한 일반적인 정보는 [소스 개요](../../home.md)를 참조하십시오.
