@@ -5,7 +5,7 @@ exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
 source-wordcount: '577'
-ht-degree: 6%
+ht-degree: 11%
 
 ---
 
@@ -20,16 +20,16 @@ Experience Platform의 보호 기능에 대한 자세한 내용은 [Real-Time CD
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="스트리밍 처리량"
->abstract="스트리밍 처리량 값은 프로덕션 및 개발 샌드박스에서 프로필 서비스로 수집을 스트리밍하기 위한 초당 결합된 최대 인바운드 이벤트를 측정합니다."
+>abstract="스트리밍 처리량 값은 프로덕션 및 개발 샌드박스 전반에 걸쳐 프로필 서비스에 스트리밍을 도입할 때 초당 최대 인바운드 이벤트 수를 합산하여 측정합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
 >title="스트리밍 대상자 수"
->abstract="샌드박스당 최대 스트리밍 대상자 수입니다. 이 숫자는 샌드박스의 에지 대상자 수를 포함합니다."
+>abstract="샌드박스당 최대 스트리밍 대상자 수입니다. 이 숫자에는 샌드박스에 있는 에지 대상자의 수가 포함됩니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"
->title="Edge 대상"
+>title="에지 대상자"
 >abstract="샌드박스당 최대 에지 대상자 수입니다."
 
 현재 용량은 다음 서비스를 지원합니다.
