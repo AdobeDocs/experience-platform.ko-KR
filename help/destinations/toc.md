@@ -5,10 +5,10 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: bef5176048bad269c9e32e56d1e331a93eb80e13
+source-git-commit: b5f28a2df411d3aa99bc2714a4e2bb569c16dda1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1300'
+ht-degree: 5%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 0%
    * [대상 계정 삭제](./api/delete-destination-account.md)
    * [대상 데이터 흐름 삭제](./api/delete-destination-dataflow.md)
    * [데이터 세트 내보내기](/help/destinations/api/export-datasets.md)
-   * [대상에 대한 API 응답 정렬 및 필터링](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=ko#use-cases)
+   * [대상에 대한 API 응답 정렬 및 필터링](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI 안내서 {#ui}
    * [대상 작업 영역](./ui/destinations-workspace.md)
    * [새 대상 연결 만들기](./ui/connect-destination.md)
@@ -68,7 +68,7 @@ ht-degree: 0%
       * [Marketo Engage 연결](./catalog/adobe/marketo-engage.md)
       * [(Beta) Marketo Engage 사용자 동기화 연결](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate 연결](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform 대상 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ko)
+      * [Experience Platform 대상 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [페더레이션 대상 컴포지션 연결](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising 대상{#advertising}
       * [(Beta) Acxiom 대상 배포](./catalog/advertising/acxiom-audience-distribution.md)
@@ -142,7 +142,7 @@ ht-degree: 0%
       * [데이터 랜딩 구역](./catalog/cloud-storage/data-landing-zone.md)
       * [Google 클라우드 스토리지](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 연결](./catalog/cloud-storage/sftp.md)
-      * [Snowflake 연결](./catalog/cloud-storage/snowflake.md)
+      * [(Beta) Snowflake 스트리밍 연결](./catalog/cloud-storage/snowflake.md)
       * [허용 목록에 추가하다 파일 기반 클라우드용 IP 주소 스토리지 대상](./catalog/cloud-storage/ip-address-allow-list.md)
    * CRM(고객 관계 관리) 대상 {#crm}
       * [Hubspot 연결](./catalog/crm/hubspot.md)

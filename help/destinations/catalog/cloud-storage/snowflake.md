@@ -1,18 +1,16 @@
 ---
-title: Snowflake 연결
+title: Snowflake 스트리밍 연결
 description: 비공개 목록을 사용하여 Snowflake 계정으로 데이터를 내보냅니다.
-hide: true
-hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: dca3762169d2a469948ee7e877213697f4c444b6
+source-git-commit: b5f28a2df411d3aa99bc2714a4e2bb569c16dda1
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1128'
 ht-degree: 6%
 
 ---
 
-# Snowflake 연결 {#snowflake-destination}
+# Snowflake 스트리밍 연결 {#snowflake-destination}
 
 >[!IMPORTANT]
 >
