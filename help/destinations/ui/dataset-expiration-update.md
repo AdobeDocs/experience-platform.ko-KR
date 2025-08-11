@@ -59,7 +59,7 @@ Experience Platform의 [2024년 9월 릴리스](/help/release-notes/2024/septemb
 
 3. 데이터 세트 내보내기가 있는 데이터 흐름만 표시하려면 **[!UICONTROL 데이터 세트]** 데이터 형식을 선택하십시오.
    데이터 유형별로 데이터 흐름을 필터링하는 방법을 보여 주는 ![스크린샷입니다.](/help/destinations/assets/ui/export-datasets/dataset-type.png)
-4. **[!UICONTROL 생성됨]** 열 헤더를 선택하고 **[!UICONTROL 오름차순 정렬]**을 선택하여 이전 데이터 흐름을 확인하십시오.
+4. **[!UICONTROL 생성됨]** 열 헤더를 선택하고 **[!UICONTROL 오름차순 정렬]**&#x200B;을 선택하여 이전 데이터 흐름을 확인하십시오.
    ![데이터 흐름을 오름차순으로 정렬하는 방법을 보여 주는 스크린샷입니다.](/help/destinations/assets/ui/export-datasets/sort-ascending.png)
 5. 2024년 11월 이전에 생성된 데이터 흐름 중 유지할 데이터 흐름을 식별합니다.
 
@@ -78,9 +78,9 @@ Experience Platform의 [2024년 9월 릴리스](/help/release-notes/2024/septemb
 
 이제 2025년 9월 1일 이후로 내보내기 일정을 수정할 수 있습니다.
 
-1. **[!UICONTROL 일정 편집]**을 선택하세요.
+1. **[!UICONTROL 일정 편집]**&#x200B;을 선택하세요.
    ![일정 편집 단추를 표시하는 예약 단계의 스크린샷입니다.](/help/destinations/assets/ui/export-datasets/edit-schedule.png)
-2. 새 내보내기 일정을 선택한 다음 **[!UICONTROL 저장]**을 선택합니다.
+2. 새 내보내기 일정을 선택한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
    예약 옵션을 표시하는 예약 단계의 ![스크린샷입니다.](/help/destinations/assets/ui/export-datasets/edit-schedule-calendar.png)
 
    >[!TIP]
