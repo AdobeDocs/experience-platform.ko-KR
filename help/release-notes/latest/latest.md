@@ -3,9 +3,9 @@ title: Adobe Experience Platform 릴리스 정보 2025년 7월
 description: Adobe Experience Platform의 2025년 7월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1574'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 | 대상 | 설명 |
 | --- | --- |
 | [Google 고객 일치 타기팅 + 디스플레이 및 비디오 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) 연결 제한적 제공 | Adobe는 6월에 모든 고객에게 잠시 제공되었던 이 통합 기능을 다시 제한적으로 제공합니다. 현재 이 대상에 대한 액세스는 이미 활성화된 고객으로 제한되어 있으며, Adobe와 Google는 구현 문제를 해결하기 위해 노력하고 있습니다. 더 광범위한 출시가 재개된 후 이 통합을 사용하고 싶다면 Adobe 담당자에게 연락하여 의사를 전달해 주시기 바랍니다. |
-| [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) 내부 업그레이드 | 2025년 7월 31일 금요일부터 대상 카탈로그에 두 개의 [!DNL The Trade Desk] 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. <br><br>기존 [!DNL The Trade Desk] 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음)로 변경되었으며, 이름이]** The Trade Desk **[!UICONTROL 인 새 카드를 사용할 수 있습니다.]** 새 활성화 데이터 흐름을 보려면 카탈로그에서 새 **[!UICONTROL Trade Desk]** 연결을 사용하십시오. <br><br>**[!UICONTROL (사용되지 않음) Trade Desk]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다. <br><br>흐름 서비스 API[를 통해 데이터 흐름을 만드는 경우 ](https://developer.adobe.com/experience-platform-apis/references/destinations/) 및 [!DNL flow spec ID]을(를) 다음 값으로 업데이트해야 합니다.[!DNL connection spec ID]<ul><li>흐름 사양 ID: `86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>연결 사양 ID: `1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
+| [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) 내부 업그레이드 | 2025년 7월 31일부터 대상 카탈로그에 두 개의 [!DNL The Trade Desk] 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. <br><br>기존 [!DNL The Trade Desk] 대상 커넥터는 **[!UICONTROL (더 이상 사용되지 않는) The Trade Desk]**&#x200B;로 이름이 변경되었으며, 이제 **[!UICONTROL The Trade Desk]**&#x200B;라는 이름의 새 카드를 사용할 수 있습니다. 카탈로그의 새로운 **[!UICONTROL The Trade Desk]** 연결을 사용하여 새로운 활성화 데이터 흐름을 확인하십시오. <br><br>**[!UICONTROL (더 이상 사용되지 않는) The Trade Desk]** 대상으로의 활성 데이터 흐름이 있는 경우 해당 데이터 흐름은 자동으로 업데이트되므로 다른 액션이 필요하지 않습니다. <br><br> [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 생성하는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]를 다음 값으로 업데이트해야 합니다.<ul><li>흐름 사양 ID: `86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>연결 사양 ID: `1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
 
 **새로운 기능 또는 업데이트된 기능**
 
@@ -62,8 +62,8 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 | 대상 연결에 대한 계정 이름 및 설명 | 이제 대상에 연결할 때 [계정 이름과 설명](/help/destinations/ui/connect-destination.md)을 추가할 수 있으므로 여러 계정이 있는 대상을 더 효과적으로 관리할 수 있습니다. |
 | 에지 대상에 대한 향상된 데이터스트림 정보 | [Adobe Target](/help/destinations/catalog/personalization/adobe-target-v2.md) 및 [사용자 정의 개인화](/help/destinations/catalog/personalization/custom-personalization.md) 대상에 대한 오른쪽 레일 정보가 데이터스트림 이름을 표시하도록 개선되어 관련 데이터스트림 구성을 더 명확하게 파악하고 기존 데이터 흐름을 검토할 때 혼동을 줄일 수 있습니다. 대상 구성 화면의 **[!UICONTROL 데이터스트림 ID]** 선택기가 사용자 인터페이스의 명확성 향상을 위해 **[!UICONTROL 데이터스트림]**&#x200B;으로 업데이트되었습니다. |
 | 대상 선택 시 마케팅 액션 가시성 | 이제 마케팅 활동이 대상 작업 공간의 **[[!UICONTROL 찾아보기]](/help/destinations/ui/destinations-workspace.md#browse)** 탭 오른쪽 레일과 **[[!UICONTROL 데이터 흐름 실행]](/help/dataflows/ui/monitor-destinations.md)** 페이지에 표시되어 보기 페이지로 이동할 필요 없이 마케팅 액션 변경 사항을 즉시 확인할 수 있습니다. 이 개선 사항은 대상 설정 중에 마케팅 액션 구성을 더 쉽게 확인할 수 있도록 하여 사용자 경험을 향상시킵니다. |
-| [!BADGE 제한적 Beta]{type=Informative} 대상에 대한 마케팅 액션 편집 | 이제 기존 대상에 대해 [마케팅 작업을 편집](/help/destinations/ui/edit-activation.md#edit-marketing-actions)할 수 있습니다. 이 기능은 현재 제한적 Beta 버전으로 제공됩니다. 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
-| [!BADGE 제한적 Beta]{type=Informative} 대상 편집 | 이제 대상 구성을 만든 후 [편집](/help/destinations/ui/edit-destination.md)할 수 있습니다. 이 기능은 현재 제한적 Beta 버전으로 제공됩니다. 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
+| [!BADGE 제한적 Beta]{type=Informative} 대상에 대한 마케팅 액션 편집 | 이제 기존 대상에 대한 [마케팅 액션을 편집](/help/destinations/ui/edit-activation.md#edit-marketing-actions)을 할 수 있습니다. 이 기능은 현재 제한적 Beta 버전으로 제공됩니다. 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
+| [!BADGE 제한적 Beta]{type=Informative} 대상 편집 | 이제 [대상 구성이 생성된 후 편집](/help/destinations/ui/edit-destination.md)할 수 있습니다. 이 기능은 현재 제한적 Beta 버전으로 제공됩니다. 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
 
 **수정 사항**
 
@@ -135,13 +135,13 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 소스 | 설명 |
 | --- | --- |
-| [!BADGE 에 대한 &#x200B;]{type=Informative}Beta[!DNL Didomi] 지원(스트리밍 SDK) | [!DNL Didomi] 소스를 사용하여 [!DNL Didomi]에서 동의 및 기본 설정 관리 데이터를 수집하여 개인 정보 보호 규정 및 동의 기반 마케팅 전략을 준수할 수 있습니다. 설정하는 방법에 대한 자세한 내용은 [[!DNL Didomi] 소스 개요](../../sources/connectors/consent-and-preferences/didomi.md)를 참조하십시오. 소스 연결을 생성하는 단계는 [[!DNL Didomi] 소스 연결 안내서](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md)를 참조하십시오. |
+| [!BADGE Beta]{type=Informative} [!DNL Didomi] (스트리밍 SDK) 지원 | [!DNL Didomi] 소스를 사용하여 [!DNL Didomi]에서 동의 및 기본 설정 관리 데이터를 수집하여 개인 정보 보호 규정 및 동의 기반 마케팅 전략을 준수할 수 있습니다. 설정하는 방법에 대한 자세한 내용은 [[!DNL Didomi] 소스 개요](../../sources/connectors/consent-and-preferences/didomi.md)를 참조하십시오. 소스 연결을 생성하는 단계는 [[!DNL Didomi] 소스 연결 안내서](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md)를 참조하십시오. |
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
 | [!DNL Flow Service] API를 사용하는 일부 소스에서 변경 데이터 캡처 지원 | 이제 소스 커넥터를 사용하여 증분 수집을 위한 변경 데이터 캡처를 활성화하는 데이터 흐름을 생성할 수 있습니다. 이 기능을 통해 고객은 증분 수집을 위해 변경 데이터 유형을 가져와 데이터 신선도를 높이고 처리 오버헤드를 줄일 수 있습니다. 자세한 내용은 [소스에 대한 변경 데이터 캡처 사용](../../sources/tutorials/api/change-data-capture.md)에 관한 설명서를 참조하십시오. |
-| [!DNL Salesforce]에서 레코드의 소프트 삭제 지원 | 이제 [!DNL Salesforce] 원본은 선택적 `includeDeletedObjects` 매개 변수를 통해 일시 삭제된 레코드를 포함할 수 있습니다. true로 설정하면 고객은 일시 삭제된 레코드를 [!DNL Salesforce] 쿼리에 포함하고 이러한 레코드를 Experience Platform으로 가져올 수 있습니다. 자세한 내용은 [[!DNL Salesforce] 소스 설명서](../../sources/connectors/crm/salesforce.md)를 참조하십시오. |
+| [!DNL Salesforce]에서 레코드의 소프트 삭제 지원 | [!DNL Salesforce] 소스가 이제 선택적 `includeDeletedObjects` 매개변수를 통해 소프트 삭제된 레코드를 포함하는 것을 지원합니다. True로 설정하면 고객은 소프트 삭제된 레코드를 자신의 [!DNL Salesforce] 쿼리에 포함하고 이 레코드를 Experience Platform으로 가져올 수 있습니다.  자세한 내용은 [[!DNL Salesforce] 소스 설명서](../../sources/connectors/crm/salesforce.md)를 참조하십시오. |
 
 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하십시오.
