@@ -4,10 +4,10 @@ description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 7e91181f71b84fdaf04a39e003cbbd415827e282
+source-git-commit: a26ad18b1e44b3198db9e8a36ad3749ed8a0afa2
 workflow-type: tm+mt
-source-wordcount: '1387'
-ht-degree: 22%
+source-wordcount: '1116'
+ht-degree: 34%
 
 ---
 
@@ -24,105 +24,72 @@ ht-degree: 22%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/releases/pre-release-notes)
->- [페더레이션된 대상자 구성](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/e-release-notes)
+>- [페더레이션된 대상자 컴포지션](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/latest)
 
-**릴리스 일자: 2025년 7월 29일 수요일**
+**릴리스 날짜: 2025년 8월**
 
 Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 
+- [경고](#alerts)
 - [대상](#destinations)
-- [데이터 수집](#ingestion)
-- [쿼리 서비스](#query-service)
-- [Real-Time CDP B2B 에디션](#b2b)
-- [샌드박스](#sandboxes)
-- [Segmentation Service](#segmentation)
+- [경험 데이터 모델 (XDM)](#xdm)
+- [Segmentation Service](#segmentation-service)
 - [소스](#sources)
 
-## 대상 {#destinations}
+## 경고 {#alerts}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
-
-**업데이트된 대상**
-
-| 대상 | 설명 |
-| --- | --- |
-| Marketo 대상 카드 통합 | Marketo V2 및 Marketo Engage Person Sync 대상 카드가 통합된 단일 대상 카드로 통합되었습니다. 이러한 통합은 대상 선택 프로세스를 단순화하고 Marketo 통합을 위한 보다 간소화된 환경을 제공합니다. |
-
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 에지 대상에 대한 데이터 스트림 정보 개선 | 이제 Adobe Target 및 사용자 지정 Personalization 대상에 대한 개선된 오른쪽 레일 정보에 데이터스트림 이름이 표시되므로 연관된 데이터스트림 구성을 보다 명확하게 파악할 수 있고 기존 데이터 흐름을 검토할 때 혼동을 줄일 수 있습니다. 사용자 인터페이스의 명확성을 개선하기 위해 대상 구성 화면의 **[!UICONTROL 데이터 스트림 ID]** 선택기가 **[!UICONTROL 데이터 스트림]**(으)로 업데이트되었습니다. |
-| 대상 선택에서의 마케팅 작업 가시성 | 이제 마케팅 작업이 대상 **[!UICONTROL 찾아보기]** 탭의 오른쪽 레일과 **[!UICONTROL 데이터 흐름 실행]** 페이지에 표시되므로 보기 페이지를 탐색하지 않고도 마케팅 작업 변경 사항을 즉시 볼 수 있습니다. 이 개선 사항은 대상 설정 중에 마케팅 작업 구성을 보다 쉽게 확인할 수 있도록 하여 사용자 경험을 향상시킵니다. |
-| (제한된 Beta) 대상에 대한 마케팅 작업 편집 | 이제 기존 대상에 대한 마케팅 작업을 편집할 수 있습니다. 이 기능은 제한된 베타 버전입니다. 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
-| (제한된 베타) 대상 편집 | 이제 대상 구성을 만든 후 편집할 수 있습니다. 이 기능은 제한된 베타 버전입니다. 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
-| 대상 연결에 대한 계정 이름 및 설명 | 이제 대상에 연결할 때 계정 이름과 설명을 추가할 수 있으므로 여러 계정이 있는 대상을 보다 효율적으로 관리할 수 있습니다. |
-
-**수정 사항**
-
-| 문제 | 설명 |
-| --- | --- |
-| 범주 스크롤 기능 | 대상 및 소스 카탈로그의 카테고리 사이드 메뉴가 마우스오버에서 제대로 스크롤되지 않던 문제를 수정하여 대상 카테고리를 탐색하는 사용자의 탐색 유용성을 개선했습니다. |
-
-자세한 내용은 [대상 개요](../destinations/home.md)를 참조하십시오.
-
-## 데이터 수집 {#ingestion}
-
-Experience Platform은 다양한 소스에서 일괄 데이터 수집과 스트리밍 데이터 수집을 모두 지원하는 포괄적인 데이터 수집 프레임워크를 제공합니다.
+Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이벤트 기반 알림을 구독할 수 있습니다. Experience Platform 사용자 인터페이스의 [!UICONTROL 경고] 탭을 통해 다양한 경고 규칙을 구독할 수 있으며, 원하는 경우 UI 자체 또는 이메일 알림을 통해 알림 메시지를 수신할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 스트리밍 프로필 수집 모니터링 지원 | 이제 스트리밍 프로필 수집에 대한 실시간 모니터링을 사용할 수 있으므로 처리량, 지연 시간 및 데이터 품질 지표에 대한 투명성을 제공합니다. 사전 예방적 경고 및 조치 가능한 통찰력을 지원하여 데이터 엔지니어가 용량 위반 및 수집 문제를 식별하는 데 도움이 됩니다. |
+| 스트리밍 처리량 용량 경고 | 세 가지 새로운 경고를 통해 사용자는 경고를 구독하고 구성하여 스트리밍 처리량 용량의 성능을 사전 예방적으로 관리 및 모니터링할 수 있습니다. 새로운 경고에는 스트리밍 처리량이 80%, 90%에 도달하거나 용량 제한을 초과하는 경우가 포함됩니다. 자세한 내용은 [용량 경고 규칙](../observability/alerts/rules.md#capacity) 안내서를 참조하십시오. |
 
-자세한 내용은 [데이터 수집 개요](../ingestion/home.md)를 참조하십시오.
+경고에 대한 자세한 내용은 [[!DNL Observability Insights] 개요](../observability/home.md)를 참조하십시오.
 
-## 쿼리 서비스 {#query-service}
+## 대상 {#destinations}
 
-Adobe Experience Platform Query Service는 플랫폼 전체에서 데이터 분석 및 탐색을 위한 강력한 SQL 인터페이스를 제공합니다.
+[!DNL Destinations]은(는) Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-**새로운 기능 또는 업데이트된 기능**
+**새로운 대상**
 
-| 기능 | 설명 |
-| ------- | ----------- |
-| 향상된 세션 관리 | 이제 Data Distiller에 향상된 세션 관리 기능이 포함되어 사용자 세션을 더 잘 제어하고 개발 및 프로덕션 환경 전반에서 향상된 성능 모니터링을 제공합니다. |
-| 만료되지 않는 자격 증명 암호 문자 제한 지원 | 이제 Data Distiller에서 특정 문자 제한이 있는 만료되지 않는 자격 증명을 지원합니다. 암호에는 최소 하나의 숫자, 하나의 소문자, 하나의 대문자 및 하나의 특수 문자가 필요하지만, 달러 기호($)는 지원되지 않습니다. 권장 특수 문자에는 `!, @, #, ^, or &`이(가) 포함됩니다. |
-| 환경 전반에 걸쳐 성능 일관성 향상 | 이제 Data Distiller 성능은 개발 및 프로덕션 샌드박스 간에 일관되며 두 환경 모두에서 유사한 백엔드 리소스를 사용할 수 있습니다. 사용되는 계산 시간은 데이터 볼륨 및 처리 시간에 사용 가능한 백엔드 계산 리소스에 따라 달라질 수 있습니다. |
+| 대상 | 설명 |
+| --- | --- |
+| [!DNL Acxiom Real ID Audience] 대상 | [!DNL Acxiom Real ID Audience Connection] 대상을 사용하여 [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/) 기술로 대상을 향상하고 [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등과 같은 여러 플랫폼으로 대상을 활성화하십시오. |
 
-자세한 내용은 [쿼리 서비스 개요](../query-service/home.md)를 참조하세요.
 
-## Real-Time CDP B2B 에디션 {#b2b}
+**업데이트된 대상**
 
-Real-Time CDP B2B edition은 포괄적인 B2B 고객 데이터 관리 기능을 제공하므로, 조직은 통합된 고객 프로필을 구축하고, 정교한 B2B 대상을 만들고, 다양한 마케팅 채널에서 데이터를 활성화할 수 있습니다.
-
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| B2B 아키텍처 업그레이드 | Experience Platform은 B2B 속성을 사용하는 다중 엔티티 대상을 크게 개선하는 새 B2B 아키텍처로 업그레이드하고 있습니다. 이 업그레이드는 병합 정책 지원을 통합하고, 대상자 수의 정확성을 개선하고, 엔티티 해결 기능을 향상시킵니다. |
-| 다중 엔티티 대상을 위한 병합 정책 통합 | B2B 속성을 사용하는 다중 엔티티 대상은 이제 여러 병합 정책을 지원하는 대신 단일 병합 정책(기본 병합 정책)만 지원합니다. 이 변경 사항은 일관된 대상 구성을 보장하고 병합 논리 관리를 단순화합니다. |
-| 계정 대상자 제한 업데이트 | 계정 대상에는 경험 이벤트에 대한 30일 전환 확인 기간의 이전 제한, 사용자 지정 엔터티 제한 또는 `inSegment` 이벤트 사용에 대한 제한 사항이 더 이상 없습니다. 이러한 업데이트는 복잡한 B2B 대상 정의를 생성하는 데 더 많은 유연성을 제공합니다. |
-| B2B 엔티티에 대한 향상된 대상 수 | 계정 및 기회와 같은 B2B 엔티티가 있는 대상에 대한 대상 크기 예상치는 이제 실시간 세분화 결과를 기반으로 정확하게 계산됩니다. 이러한 개선은 복잡한 B2B 관계를 포함하는 대상자에 대해 보다 정확하고 신뢰할 수 있는 추정치를 제공한다. |
-| 대상자 멤버십에 대한 계정 스냅샷 | 이제 스냅샷 내보내기의 계정 엔티티에 대한 대상 멤버십 세부 정보가 포함되어 계정 수준 대상 상태, 타임스탬프 및 멤버십 지표에 액세스할 수 있습니다. 프로필(개인) 및 계정 세분화 모델 간의 기능 패리티를 제공합니다. |
-| 다중 엔티티 대상의 샌드박스 도구 변경 사항 | B2B 엔티티와 마이그레이션 전에 내보낸 경험 이벤트를 사용하여 다중 엔티티 대상을 가져오는 기능은 더 이상 지원되지 않습니다. 이러한 대상은 가져오기 유효성 검사에 실패하며 자동으로 새 아키텍처로 변환할 수 없습니다. 대상 샌드박스로 가져오기 전에 마이그레이션 후 대상을 다시 내보내야 합니다. |
-| B2B 엔티티 API 사용 중단 | B2B 엔티티용 API를 통한 대상 만들기(계정, 영업 기회, 계정-사용자 관계, 영업 기회-사용자 관계, 캠페인, 캠페인 멤버, 마케팅 목록 및 마케팅 목록 멤버)는 이제 더 이상 사용되지 않습니다. 또한 이러한 B2B 엔터티에 대한 프로필 액세스 API 조회 및 삭제 작업도 더 이상 사용되지 않습니다. |
-| 엔티티 확인을 위한 ID 네임스페이스 업데이트 | 이제 계정 및 영업 기회 엔터티는 특정 ID 네임스페이스와 시간 우선 순위 기반 병합을 사용합니다(계정의 경우 `b2b_account`, 영업 기회의 경우 `b2b_opportunity`). 다른 모든 엔티티는 시간 우선 순위 기반 병합을 사용하여 기본 ID가 겹치게 병합됩니다. |
-
-자세한 내용은 [Real-Time CDP B2B edition 개요](../rtcdp/b2b-overview.md)를 참조하세요.
-
-## 샌드박스 {#sandboxes}
-
-Experience Platform은 글로벌 규모로 디지털 경험 애플리케이션을 강화하기 위해 빌드되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하는 경우가 많으며, 운영 규정 준수를 보장하면서 이러한 애플리케이션의 개발, 테스트 및 배포를 처리해야 합니다.
+| 대상 | 설명 |
+| --- | --- |
+| [!DNL LinkedIn] 대상에 대한 인증 만료 세부 정보 | 만료된 자격 증명에 대해 다시 걱정하지 마십시오. 이제 계정 만료 정보가 Experience Platform 인터페이스에 바로 표시되므로 [!DNL LinkedIn] 인증이 만료되고 갱신되어 데이터 흐름이 중단됩니다. |
+| [!DNL Data Landing Zone] 대상에 대한 암호화 지원 | 암호화를 사용하여 내보낸 데이터를 보호합니다. 이제 RSA 형식의 공개 키를 연결하여 내보낸 파일을 암호화할 수 있으므로 다른 클라우드 스토리지 대상이 중요한 정보를 제공하는 것과 동일한 수준의 보안을 제공합니다. |
+| [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) 내부 업그레이드 | 2025년 8월 11일 화요일부터 대상 카탈로그에 두 개의 **[!DNL Microsoft Bing]** 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!DNL Microsoft Bing]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) Microsoft Bing]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL Microsoft Bing]**&#x200B;인 새 카드를 사용할 수 있습니다. 새 활성화 데이터 흐름에 대해 카탈로그의 새 **[!UICONTROL Microsoft Bing]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않는) Microsoft Bing]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다. <br><br> [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 생성하는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]를 다음 값으로 업데이트해야 합니다.<ul><li>흐름 사양 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>연결 사양 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 이 업그레이드 후에는 **데이터 흐름에서**&#x200B;활성화된 프로필 수[!DNL Microsoft Bing]이(가) 감소할 수 있습니다. 이 삭제는 이 대상 플랫폼에 대한 모든 활성화에 대한 **ECID 매핑 요구 사항**&#x200B;의 도입으로 인해 발생합니다. |
+| [!DNL Amazon Ads]개 대상에 대한 추가 식별자 | 이제 Amazon 광고 대상에서 새 ID(`firstName`, `lastName`, `street`, `city`, `state`, `zip`, `country`)를 지원합니다. 이러한 필드는 대상자 일치율을 향상시키기 위한 것이며 선택적 SHA256 해시로 일반 텍스트로 전달됩니다. |
+| 대상 카드 통합 [!DNL Marketo]개 | 통합 대상 카드를 사용하여 [!DNL Marketo] 대상 설정을 단순화합니다. [!DNL Marketo]개의 V2 및 V3 카드를 하나의 간소화된 옵션으로 통합했기 때문에 올바른 대상을 쉽게 선택하고 빠르게 시작할 수 있습니다. |
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 다중 엔티티 대상 가져오기 변경 사항 | 샌드박스 툴이 새로운 B2B 아키텍처 업그레이드를 지원하도록 업데이트되었습니다. B2B 엔티티 및 경험 이벤트가 포함된 다중 엔티티 대상은 아키텍처 업그레이드 후 샌드박스 도구를 통해 Target 샌드박스로 가져오기 전에 다시 내보내야 합니다. 업그레이드 전 버전을 가져오면 유효성 검사가 실패합니다. |
+| 2024년 11월 이전에 생성된 데이터 흐름에 대한 데이터 세트 내보내기 일정 확장 | 조직에 2024년 11월 이전에 생성된 데이터 세트 내보내기 데이터 흐름이 있는 경우 이러한 데이터 흐름은 2025년 9월 1일에 작동을 중지합니다. 2025년 9월 1일 이후에도 데이터 흐름을 계속 내보내려면 [이 안내서](../destinations/ui/dataset-expiration-update.md)의 단계를 따라 데이터 세트를 내보내는 각 대상에 대한 일정을 확장해야 합니다. |
+| 대상에 대한 검색, 필터링 및 태그 지정 기능 향상 | 찾아보기 및 계정 탭에서 향상된 검색, 필터링 및 태그 지정 기능을 통해 대상 관리 워크플로를 개선합니다. 이제 이름별로 특정 데이터 흐름 및 계정을 검색하고, 대상 플랫폼, 상태 및 날짜를 포함한 다양한 기준으로 필터링하고, 사용자 지정 태그를 만들어 대상을 구성할 수 있습니다. 마지막 데이터 흐름 실행 시간과 같은 주요 필드에도 열 정렬을 사용할 수 있으므로 대상 연결을 보다 쉽게 식별하고 관리할 수 있습니다. |
 
-샌드박스에 대한 자세한 내용은 [샌드박스 개요](../sandboxes/home.md)를 참조하십시오.
+자세한 내용은 [대상 개요](../destinations/home.md)를 참조하십시오.
+
+## 경험 데이터 모델 (XDM) {#xdm}
+
+XDM은 Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 모델 기반 스키마 | 모델 기반 스키마를 사용하여 데이터 모델링을 단순화합니다. 이제 포괄적인 사용 방법 예제와 지침을 통해 스키마를 보다 쉽게 만들 수 있습니다. 이 기능은 현재 Campaign Orchestration 라이선스 소유자가 사용할 수 있으며 GA 시점에 데이터 Distiller 고객으로 확장되어 데이터 모델링에 더 쉽게 액세스하고 효율적으로 작업할 수 있습니다. |
+
+자세한 내용은 [XDM 개요](../xdm/home.md)를 참조하십시오.
 
 ## Segmentation Service {#segmentation-service}
 
@@ -132,23 +99,49 @@ Experience Platform은 글로벌 규모로 디지털 경험 애플리케이션�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 외부 대상 API | 외부 대상 API를 사용하여 외부에서 생성된 대상을 프로그래밍 방식으로 Adobe Experience Platform으로 가져올 수 있습니다. |
+| 대상자 예상 | 이제 대상자 예상 값이 세그먼트 빌더 내에서 자동으로 생성됩니다. 이 값은 대상자를 수정할 때마다 업데이트되며 항상 최신 대상자 규칙을 반영합니다. |
+
+자세한 내용은 [[!DNL Segmentation Service] 개요](../segmentation/home.md)를 참조하십시오.
 
 ## 소스 {#sources}
 
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
-**새로운 소스**
-
-| 소스 | 설명 |
-| --- | --- |
-| [!DNL Didomi] 지원(스트리밍 SDK) | [!DNL Didomi] 소스 커넥터를 사용하면 [!DNL Didomi]의 플랫폼에서 동의 관리 데이터를 수집하여 개인 정보 보호 규정 준수 및 동의 기반 마케팅 전략을 지원할 수 있습니다. |
-
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 소스 선택에서 변경 데이터 캡처 지원 | 이제 소스 커넥터를 사용하여 증분 수집을 위한 변경 데이터 캡처를 활성화하는 데이터 흐름을 만들 수 있습니다. 이 기능을 통해 고객은 증분 수집을 위해 데이터 유형을 변경할 수 있으므로 데이터의 안정성을 높이고 처리 오버헤드를 줄일 수 있습니다. |
-| [!DNL Salesforce]에서 레코드의 소프트 삭제 지원 | 이제 [!DNL Salesforce] 원본은 선택적 `includeDeletedObjects` 매개 변수를 통해 일시 삭제된 레코드를 포함할 수 있습니다. true로 설정하면 고객은 일시 삭제된 레코드를 [!DNL Salesforce] 쿼리에 포함하고 이러한 레코드를 Experience Platform으로 가져올 수 있습니다. |
+| UI에서 [!BADGE Beta]{type=Informative} Azure 개인 링크 지원 | 개인 네트워크 연결을 통해 데이터를 안전하게 보호합니다. 이제 개인 끝점을 만들고 공용 인터넷을 우회하는 데이터 흐름을 설정하여 중요한 데이터에 대한 보안 및 네트워크 격리를 강화할 수 있습니다. |
+| [!DNL Marketo] 소스 설명서 업데이트 | Experience Platform에 들어갈 때 [!DNL Marketo] 데이터가 변환되는 방식을 완벽하게 파악할 수 있습니다. 이제 모든 필드 매핑에 데이터 변환에 대한 자세한 설명이 포함되어 있으므로 `PersonID`이(가) `leadID`이(가) 되고 `eventType`이(가) `activityType`이(가) 되는 방식을 정확하게 이해할 수 있습니다. |
+| [!DNL Azure Blob Storage]에 대한 서비스 사용자 인증 지원 | 이제 서비스 사용자 인증을 사용하여 [!DNL Azure Blob Storage] 계정을 Experience Platform에 연결할 수 있습니다. |
 
 자세한 내용은 [소스 개요](../sources/home.md)를 참조하십시오.
+
+<!--
+
+## Query Service {#query-service}
+
+Adobe Experience Platform Query Service provides a robust SQL interface for data analysis and exploration across the platform.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Data Distiller Session Management | Take control of your data analysis sessions with enhanced session management. You can now monitor and manage your sessions more effectively across development and production environments, giving you better visibility into your query performance and resource usage. |
+
+For more information, read the [Query Service overview](../query-service/home.md).
+
+## B2B CDP {#b2b-cdp}
+
+Real-Time CDP B2B Edition provides comprehensive B2B customer data management capabilities, enabling organizations to build unified customer profiles, create sophisticated B2B audiences, and activate data across various marketing channels.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Lookup Support for B2B Classes Only | Streamline your B2B data access with focused lookup support. You can now look up Person (Profile), Experience Events, Account, and Opportunity entities directly through the Entities API. This simplified approach helps you access the most important B2B data more efficiently while reducing complexity. |
+| B2B Namespace and Schema Updates | Experience a cleaner, more streamlined B2B data model. We've simplified the B2B namespace and schema structure by removing complex relationship mappings and non-primary identity support for certain B2B classes. This makes your B2B data easier to work with and understand. |
+
+For more information, read the [Real-Time CDP B2B Edition overview](../rtcdp/b2b-overview.md).
+
+-->
