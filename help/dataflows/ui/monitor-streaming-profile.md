@@ -2,10 +2,10 @@
 title: 스트리밍 프로필 수집 모니터
 description: 모니터링 대시보드를 사용하여 스트리밍 프로필 수집을 모니터링하는 방법에 대해 알아봅니다
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: 75e0231aa9a040226584aeb05f10756b6db8bb62
+source-git-commit: 75ccdfdff4ded0a13213089d1c7dcc4d8f14e0f8
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 20%
+source-wordcount: '1967'
+ht-degree: 19%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platform UI의 모니터링 대시보드를 사용하여 조직
 
 >[!NOTE]
 >
->스트리밍 처리량 용량은 초당 최대 1500개의 인바운드 이벤트를 지원합니다. 추가 스트리밍 세분화를 구매하여 초당 최대 13,500개의 추가 인바운드 이벤트를 지원할 수 있습니다&#x200B;. 자세한 내용은 [Real-Time CDP B2C Edition - Prime 및 Ultimate 패키지 제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)을 참조하세요.
+>스트리밍 처리량 용량은 초당 최대 1500개의 인바운드 이벤트를 지원합니다. 추가 스트리밍 세분화를 구매하여 초당 최대 13,500개의 추가 인바운드 이벤트를 지원할 수 있습니다&#x200B;. 자세한 내용은 [Real-Time CDP B2C Edition - Prime 및 Ultimate 패키지 제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)을 참조하세요.
 
 ## 스트리밍 프로필 수집을 위한 모니터링 지표 {#streaming-profile-metrics}
 
@@ -197,6 +197,28 @@ Experience Platform에서 데이터 흐름을 가장 잘 관리하고 데이터 
 | 불필요한 데이터 수집 | 개인화에 필요하지 않은 데이터를 수집하면 가치를 추가하지 않고 처리량이 증가하여 리소스를 낭비할 수 있습니다. 예를 들어 관련성에 관계없이 모든 분석 트래픽을 프로필로 수집합니다. | 관련 없는 데이터가 너무 많으면 노이즈가 발생하여 영향을 미치는 데이터 포인트를 식별하기가 더 어려워집니다. 또한 대상자 및 프로필을 정의하고 관리할 때 마찰이 발생할 수 있습니다. | 사용 사례에 필요한 데이터만 수집합니다. 불필요한 데이터를 필터링해야 합니다.<ul><li>**Adobe Analytics**: [행 수준 필터링](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)을 사용하여 데이터 섭취를 최적화합니다.</li><li>**소스**: [[!DNL Flow Service] API를 사용하여 ](../../sources/tutorials/api/filter.md) 및 [!DNL Snowflake]과(와) 같은 지원되는 소스에 대해 행 수준 데이터를 필터링[!DNL Google BigQuery]합니다.</li></li>**Edge 데이터스트림**: WebSDK에서 들어오는 트래픽의 행 수준 필터링을 수행하려면 [동적 데이터스트림](../../datastreams/configure-dynamic-datastream.md)을 구성하십시오.</li></ul> |
 
 {style="table-layout:auto"}
+
+### 자주 묻는 질문 {#faq}
+
+스트리밍 프로필 수집 모니터링에 대한 FAQ에 대한 답변은 이 섹션을 참조하십시오.
+
+#### 요청 처리량에 대한 용량 및 모니터링 대시보드의 지표가 다른 이유는 무엇입니까?
+
++++답변
+
+[!UICONTROL 모니터링] 대시보드에는 수집 및 처리에 대한 실시간 지표가 표시됩니다. 이 숫자는 활동 시 기록된 정확한 지표입니다. 반대로 [!UICONTROL 용량] 대시보드에서는 처리량 용량 계산을 위해 평활 메커니즘을 사용합니다. 이 메커니즘은 단기 스파이크를 즉시 위반 횟수로 분류하지 않도록 도와주며, 용량 경고가 일시적인 폭발보다는 지속적인 트렌드에 집중할 수 있도록 해줍니다.
+
+평활 메커니즘으로 인해 다음과 같은 사실을 알 수 있습니다.
+
+* [!UICONTROL 용량]에 나타나지 않는 [!UICONTROL 모니터링]의 작은 스파이크입니다.
+* 동일한 타임스탬프에서 [!UICONTROL 모니터링]과(와) 비교하여 [!UICONTROL 용량]의 값이 약간 낮습니다.
+
+두 대시보드는 정확하지만 다양한 용도로 디자인되었습니다.
+
+* [!UICONTROL 모니터링]: 상세한 단계별 작동 가시성.
+* [!UICONTROL 용량]: 사용 및 위반 패턴을 식별하는 전략 보기.
+
++++
 
 ## 다음 단계 {#next-steps}
 
