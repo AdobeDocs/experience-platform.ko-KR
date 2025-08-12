@@ -3,9 +3,9 @@ keywords: 광고; bing;
 title: Microsoft Bing 연결
 description: Microsoft Bing 연결 대상을 사용하면 디스플레이 광고, 검색 및 네이티브를 포함하여 전체 Microsoft Advertising 네트워크에서 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있습니다.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c52cdd0f2a3aff506bff31ec0775420c66bea11f
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '981'
 ht-degree: 10%
 
 ---
@@ -14,9 +14,31 @@ ht-degree: 10%
 
 ## 개요 {#overview}
 
-[!DNL Microsoft Bing] 대상을 사용하여 [!DNL Display Advertising], [!DNL Search] 및 [!DNL Native]을(를) 포함하여 전체 [!DNL Microsoft Advertising Network]에 프로필 데이터를 보냅니다.
 
-[!DNL Microsoft Bing] 대상은 Microsoft에서 *[!DNL Custom Audiences]*&#x200B;을(를) 만듭니다. [Microsoft Advertising 설명서](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500)에 나열된 대로 [!DNL Microsoft Search Network] 및 [!DNL Audience Network]&#x200B;([!DNL Native] /[!DNL Display] /[!DNL Programmatic])에서 모두 사용할 수 있습니다.
+>[!IMPORTANT]
+>
+>* 2025년 8월 11일 화요일부터 대상 카탈로그에 두 개의 **[!DNL Microsoft Bing]** 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!DNL Microsoft Bing]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) Microsoft Bing]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL Microsoft Bing]**&#x200B;인 새 카드를 사용할 수 있습니다.
+>* 새 활성화 데이터 흐름에 대해 카탈로그의 새 **[!UICONTROL Microsoft Bing]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않는) Microsoft Bing]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다.
+>* [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다.
+>   * 흐름 사양 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`
+>   * 연결 사양 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`
+>
+> 이 업그레이드 후에는 **데이터 흐름에서**&#x200B;활성화된 프로필 수[!DNL Microsoft Bing]이(가) 감소할 수 있습니다.
+> > 이 삭제는 이 대상 플랫폼에 대한 모든 활성화에 대한 **ECID 매핑 요구 사항**&#x200B;의 도입으로 인해 발생합니다. 자세한 내용은 이 페이지의 [필수 매핑](#mandatory-mappings) 섹션을 참조하십시오.
+>
+>**변경 사항:**
+>
+>* 이제 모든 프로필 활성화에서 ECID(Experience Cloud ID) 매핑이 **필수**&#x200B;입니다.
+>* ECID 매핑이 없는 프로필은 기존 활성화 데이터 흐름에서 **삭제**&#x200B;됩니다.
+>
+>**수행할 작업:**
+>
+>* 대상자 데이터를 검토하여 프로필에 유효한 ECID 값이 있는지 확인하십시오.
+>* 활성화 지표를 모니터링하여 예상 프로필 수를 확인합니다.
+
+[!DNL Microsoft Bing] 대상을 사용하여 [!DNL Microsoft Advertising Network], [!DNL Display Advertising] 및 [!DNL Search]을(를) 포함하여 전체 [!DNL Native]에 프로필 데이터를 보냅니다.
+
+[!DNL Microsoft Bing] 대상은 Microsoft에서 *[!DNL Custom Audiences]*&#x200B;을(를) 만듭니다. [!DNL Microsoft Search Network]Microsoft Advertising 설명서[!DNL Audience Network]에 나열된 대로 [!DNL Native] 및 [!DNL Display]&#x200B;([!DNL Programmatic] /[ /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500))에서 모두 사용할 수 있습니다.
 
 [!DNL Microsoft Bing]에 프로필 데이터를 보내려면 먼저 대상에 연결해야 합니다.
 
@@ -31,6 +53,7 @@ ht-degree: 10%
 | ID | 설명 |
 |---|---|
 | 하녀 | MICROSOFT ADVERTISING ID |
+| ECID | Experience Cloud ID. 이 ID는 통합이 올바르게 작동하기 위해 필수이지만 대상 활성화에 사용되지 않습니다. |
 
 {style="table-layout:auto"}
 
@@ -62,7 +85,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->[!DNL Microsoft Bing]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ko)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Microsoft Bing] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
+>[!DNL Microsoft Bing]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Microsoft Bing] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
 
 대상을 구성할 때는 다음 정보를 제공해야 합니다.
 
@@ -106,6 +129,15 @@ ht-degree: 10%
 [대상 일정](../../ui/activate-segment-streaming-destinations.md#scheduling) 단계에서는 [!UICONTROL 매핑 ID] 필드에 대상 이름을 수동으로 매핑해야 합니다. 이렇게 하면 대상 메타데이터가 [!DNL Bing]에 올바르게 전달됩니다.
 
 대상 이름을 Bing 매핑 ID에 매핑하는 방법에 대한 예와 함께 대상 일정 화면을 표시하는 ![UI 이미지.](../../assets/catalog/advertising/bing/mapping-id.png)
+
+### 필수 매핑 {#mandatory-mappings}
+
+[지원되는 ID](#supported-identities) 섹션에 설명된 모든 대상 ID는 필수이며 대상 활성화 프로세스 중에 매핑해야 합니다. 여기에는 다음 항목이 포함되어 있습니다.
+
+* **MAID**(Microsoft Advertising ID)
+* **ECID**(Experience Cloud ID)
+
+필요한 모든 ID를 매핑하지 못하면 활성화 워크플로우를 완료할 수 없습니다. 각 ID는 통합에서 특정 용도로 사용되며 대상이 올바르게 작동하려면 모두 필요합니다.
 
 ## 내보낸 데이터 {#exported-data}
 
