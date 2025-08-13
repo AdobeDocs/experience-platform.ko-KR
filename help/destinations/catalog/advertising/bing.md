@@ -3,10 +3,10 @@ keywords: 광고; bing;
 title: Microsoft Bing 연결
 description: Microsoft Bing 연결 대상을 사용하면 디스플레이 광고, 검색 및 네이티브를 포함하여 전체 Microsoft Advertising 네트워크에서 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있습니다.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: c52cdd0f2a3aff506bff31ec0775420c66bea11f
+source-git-commit: 34520b42554a4ff72b05e9254bd923173629d611
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 10%
+source-wordcount: '877'
+ht-degree: 8%
 
 ---
 
@@ -17,14 +17,9 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->* 2025년 8월 11일 화요일부터 대상 카탈로그에 두 개의 **[!DNL Microsoft Bing]** 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!DNL Microsoft Bing]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) Microsoft Bing]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL Microsoft Bing]**&#x200B;인 새 카드를 사용할 수 있습니다.
->* 새 활성화 데이터 흐름에 대해 카탈로그의 새 **[!UICONTROL Microsoft Bing]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않는) Microsoft Bing]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다.
->* [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다.
->   * 흐름 사양 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`
->   * 연결 사양 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`
+>2025년 8월부터 대상 서비스로 내부 업그레이드한 후 데이터 흐름에서 **활성화된 프로필 수가**&#x200B;개 감소[!DNL Microsoft Bing]될 수 있습니다.
 >
-> 이 업그레이드 후에는 **데이터 흐름에서**&#x200B;활성화된 프로필 수[!DNL Microsoft Bing]이(가) 감소할 수 있습니다.
-> &#x200B;> 이 삭제는 이 대상 플랫폼에 대한 모든 활성화에 대한 **ECID 매핑 요구 사항**&#x200B;의 도입으로 인해 발생합니다. 자세한 내용은 이 페이지의 [필수 매핑](#mandatory-mappings) 섹션을 참조하십시오.
+> 이 삭제는 이 대상 플랫폼에 대한 모든 활성화에 대한 **ECID 매핑 요구 사항**&#x200B;의 도입으로 인해 발생합니다. 자세한 내용은 이 페이지의 [필수 매핑](#mandatory-mappings) 섹션을 참조하십시오.
 >
 >**변경 사항:**
 >
@@ -85,7 +80,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->[!DNL Microsoft Bing]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ko)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Microsoft Bing] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
+>[!DNL Microsoft Bing]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Microsoft Bing] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
 
 대상을 구성할 때는 다음 정보를 제공해야 합니다.
 
