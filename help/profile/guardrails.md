@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 기능의 최적 사용을 보장하기 위해 프로필 데이터 및 세분화에 대한 성능 및 시스템 적용 가드레일에 대해 알아봅니다.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1536201961211aeb747e418794196c146d86e869
+source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
 workflow-type: tm+mt
-source-wordcount: '2636'
+source-wordcount: '2649'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 
 >[!IMPORTANT]
 >
->이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)을(를) 확인하십시오.
+>이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을(를) 확인하십시오.
 
 이 문서는 최적의 시스템 성능을 위해 프로필 데이터를 모델링하는 데 도움이 되는 기본 사용 및 속도 제한을 제공합니다. 다음 가드레일을 검토할 때 데이터를 올바르게 모델링했다고 가정합니다. 데이터 모델링 방법에 대한 질문이 있는 경우 고객 서비스 담당자에게 문의하십시오.
 
@@ -125,7 +125,7 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 | 모든 샌드박스에서 스트리밍 처리량 | 1500RPS | 성능 보호 | 스트리밍 세그멘테이션은 프로덕션 및 개발 샌드박스에서 초당 1500개의 인바운드 이벤트의 결합된 최대 값을 지원합니다. 스트리밍 세분화는 프로필 멤버십에 자격을 부여하는 데 최대 5분이 걸릴 수 있습니다. [스트리밍 대상](/help/segmentation/methods/streaming-segmentation.md)에 대해 자세히 알아보세요. |
 | 샌드박스당 배치 대상 | 4000 | 성능 보호 | 샌드박스당 최대 4000개의 **활성** 일괄 처리 대상을 가질 수 있습니다. 각 **개별** 샌드박스에 4000개 미만의 배치 대상이 있는 한 조직당 4000개 이상의 배치 대상이 있을 수 있습니다. 추가 배치 대상을 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. |
 | 샌드박스당 계정 대상자 | 50 | 시스템 강제 보호 | 샌드박스에서 최대 50개의 계정 대상을 만들 수 있습니다. 샌드박스에서 대상 50개에 도달하면 새 계정 대상을 만들 때 **[!UICONTROL 대상 만들기]** 컨트롤이 비활성화됩니다. [계정 대상자](/help/segmentation/types/account-audiences.md)에 대해 자세히 알아보세요. |
-| 샌드박스당 게시된 컴포지션 | 10 | 성능 보호 | 샌드박스에 최대 10개의 컴포지션이 게시될 수 있습니다. UI 가이드의 [대상 구성에 대해 자세히 알아보세요](/help/segmentation/ui/audience-composition.md). |
+| 샌드박스당 게시된 컴포지션 | 10 | 성능 보호 | 샌드박스에 최대 10개의 컴포지션이 게시될 수 있습니다. UI 가이드의 [대상 구성에 대해 자세히 알아보세요](/help/segmentation/ui/audience-composition.md). **참고**: Federated Audience Composition으로 만든 컴포지션은 이 가드레일로 계산되지 **않습니다**. |
 | 최대 대상자 크기 | 30% | 성능 보호 | 대상자의 권장 최대 멤버십은 시스템 총 프로필 수의 30%입니다. 프로필의 30% 이상이 멤버이거나 큰 대상이 여러 개인 대상을 만드는 것은 가능하지만 시스템 성능에 영향을 줍니다. |
 | 유연한 대상 평가 실행 | 연간 50개(프로덕션 샌드박스)<br/>연간 100개(개발 샌드박스) | 시스템 강제 보호 | **프로덕션** 샌드박스당 연간 최대 50개의 유연한 대상 평가 실행이 있습니다. **개발** 샌드박스당 연간 최대 100개의 유연한 대상 평가 실행이 있습니다. |
 | 유연한 대상 평가 실행 | 일별 2개 | 시스템 강제 보호 | 샌드박스당 하루에 최대 2회의 실행이 있습니다. |
@@ -188,7 +188,7 @@ Dimension 엔티티는 다중 엔티티 세그먼트 정의를 지원 및 간소
 Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보호, 종단 간 지연 정보 및 라이선스 정보에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
-* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ko#end-to-end-latency-diagrams).
-* [Real-Time Customer Data Platform(B2C Edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams).
+* [Real-Time Customer Data Platform(B2C Edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

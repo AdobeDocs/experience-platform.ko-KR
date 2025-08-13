@@ -2,9 +2,9 @@
 title: 대상 FAQ
 description: 대상자 및 기타 세분화 관련 개념에 대한 FAQ에 대한 답변을 살펴보십시오.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b7bf7a2b7628f61231321205e2a6b9d675afce8b
+source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
 workflow-type: tm+mt
-source-wordcount: '4828'
+source-wordcount: '4849'
 ht-degree: 2%
 
 ---
@@ -112,7 +112,7 @@ Audience Portal 및 Audience Composition은 다음 두 가지 방법으로 파�
 
 ### 대상자에 추가 속성을 사용하려면 어떻게 해야 합니까?
 
-대상자를 사용하면 **페이로드(상황별) 특성과 데이터 보강 특성 등 추가할 수 있는 &lbrace;2** 유형의 추가 특성이 있습니다.
+대상자를 사용하면 **페이로드(상황별) 특성과 데이터 보강 특성 등 추가할 수 있는 {2** 유형의 추가 특성이 있습니다.
 
 페이로드 속성은 외부에서 생성된 대상자를 CSV 업로드하는 과정에서 수집되는 속성입니다. 이러한 특성은 실시간 고객 프로필에 수집되지 **않지만** 다운스트림 대상의 일부로 사용할 수 있습니다.
 
@@ -293,6 +293,10 @@ Audience Portal에서 빠른 작업 메뉴를 열고 &quot;[!UICONTROL 비활성
 예! Adobe Journey Optimizer 캠페인, Real-Time CDP 대상 및 Adobe Journey Optimizer 여정의 대상 구성에서 대상을 사용할 수 있습니다.
 
 ### 작곡 수에는 가드레일이 있나요?
+
+>[!IMPORTANT]
+>
+>이 가드레일은 대상 컴포지션으로 만든 컴포지션에만 적용되며 **Not**&#x200B;은(는) 페더레이션 대상 컴포지션으로 만든 컴포지션에는 적용되지 않습니다.
 
 현재 샌드박스당 **10**&#x200B;개의 게시된 컴포지션만 사용할 수 있습니다. 이 가드레일은 향후 릴리스에서 증가할 예정입니다.
 

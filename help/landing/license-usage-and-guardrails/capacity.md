@@ -2,7 +2,7 @@
 title: 라이선스 사용 및 용량
 description: Adobe Experience Platform 내의 라이선스 사용 및 용량 제한에 대해 알아봅니다.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: b65765d8e93b13fbb3c2a3e44f47725b936223eb
+source-git-commit: 1bde1f2c1bd33756bd20a2524b50d5a2b4bc464e
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 6%
@@ -59,7 +59,7 @@ Experience Platform의 보호 기능에 대한 자세한 내용은 [Real-Time CD
 
 대상자 수용작업량은 **샌드박스** 수준입니다. 즉, 조직에 있는 모든 샌드박스에 500개의 스트리밍 대상을 가질 수 있으며, 이 중 150개는 에지 대상이 될 수 있습니다.
 
-처리량 용량은 **조직** 수준이며 개별 샌드박스로 배포할 수 있습니다. 예를 들어 스트리밍 세그먼테이션 처리량을 위한 1500rps를 사용하면 프로덕션 샌드박스를 1500rps로 설정하고 개발 샌드박스를 150rps로 설정할 수 있습니다.
+처리량 용량은 **조직** 수준이며 개별 샌드박스로 배포할 수 있습니다. 예를 들어 스트리밍 세그먼테이션 처리량을 위한 1500rps를 사용하면 프로덕션 샌드박스를 1350rps로 설정하고 개발 샌드박스를 150rps로 설정할 수 있습니다.
 
 Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을 계산합니다. 이 처리량은 실시간으로 측정되며 데이터는 60초마다 새로 고쳐집니다.
 
