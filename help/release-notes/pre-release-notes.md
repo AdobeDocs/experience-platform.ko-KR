@@ -4,10 +4,10 @@ description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: a26ad18b1e44b3198db9e8a36ad3749ed8a0afa2
+source-git-commit: bcf3045fbbf4f9673e954a5ebf95d1225d4cdcd7
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 34%
+source-wordcount: '1074'
+ht-degree: 35%
 
 ---
 
@@ -53,28 +53,31 @@ Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이
 
 [!DNL Destinations]은(는) Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
+>[!IMPORTANT]
+>
+>**데이터 집합 내보내기 일정 확장**
+>
+>조직에 2024년 11월 이전에 만들어진 데이터 세트 내보내기 데이터 흐름이 있는 경우 이러한 데이터 흐름은 **2025년 9월 1일**&#x200B;에 작동을 중지합니다. 2025년 9월 1일 이후에도 데이터 흐름을 계속 내보내려면 [이 안내서](../destinations/ui/dataset-expiration-update.md)의 단계를 따라 데이터 세트를 내보내는 각 대상에 대한 일정을 확장해야 합니다.
+
 **새로운 대상**
 
 | 대상 | 설명 |
 | --- | --- |
 | [!DNL Acxiom Real ID Audience] 대상 | [!DNL Acxiom Real ID Audience Connection] 대상을 사용하여 [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/) 기술로 대상을 향상하고 [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등과 같은 여러 플랫폼으로 대상을 활성화하십시오. |
 
-
 **업데이트된 대상**
 
 | 대상 | 설명 |
 | --- | --- |
-| [!DNL LinkedIn] 대상에 대한 인증 만료 세부 정보 | 만료된 자격 증명에 대해 다시 걱정하지 마십시오. 이제 계정 만료 정보가 Experience Platform 인터페이스에 바로 표시되므로 [!DNL LinkedIn] 인증이 만료되고 갱신되어 데이터 흐름이 중단됩니다. |
+| [!DNL LinkedIn] 및 [!DNL Pinterest] 대상에 대한 인증 만료 세부 정보 | 이제 계정 만료 정보가 Experience Platform 인터페이스에 바로 표시되므로 [!DNL LinkedIn] 및 [!DNL Pinterest] 인증이 만료되고 갱신되어 데이터 흐름이 중단되기 전에 이를 확인할 수 있습니다. |
 | [!DNL Data Landing Zone] 대상에 대한 암호화 지원 | 암호화를 사용하여 내보낸 데이터를 보호합니다. 이제 RSA 형식의 공개 키를 연결하여 내보낸 파일을 암호화할 수 있으므로 다른 클라우드 스토리지 대상이 중요한 정보를 제공하는 것과 동일한 수준의 보안을 제공합니다. |
 | [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) 내부 업그레이드 | 2025년 8월 11일 화요일부터 대상 카탈로그에 두 개의 **[!DNL Microsoft Bing]** 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!DNL Microsoft Bing]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) Microsoft Bing]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL Microsoft Bing]**&#x200B;인 새 카드를 사용할 수 있습니다. 새 활성화 데이터 흐름에 대해 카탈로그의 새 **[!UICONTROL Microsoft Bing]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않는) Microsoft Bing]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다. <br><br> [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 생성하는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]를 다음 값으로 업데이트해야 합니다.<ul><li>흐름 사양 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>연결 사양 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 이 업그레이드 후에는 **데이터 흐름에서**&#x200B;활성화된 프로필 수[!DNL Microsoft Bing]이(가) 감소할 수 있습니다. 이 삭제는 이 대상 플랫폼에 대한 모든 활성화에 대한 **ECID 매핑 요구 사항**&#x200B;의 도입으로 인해 발생합니다. |
-| [!DNL Amazon Ads]개 대상에 대한 추가 식별자 | 이제 Amazon 광고 대상에서 새 ID(`firstName`, `lastName`, `street`, `city`, `state`, `zip`, `country`)를 지원합니다. 이러한 필드는 대상자 일치율을 향상시키기 위한 것이며 선택적 SHA256 해시로 일반 텍스트로 전달됩니다. |
 | 대상 카드 통합 [!DNL Marketo]개 | 통합 대상 카드를 사용하여 [!DNL Marketo] 대상 설정을 단순화합니다. [!DNL Marketo]개의 V2 및 V3 카드를 하나의 간소화된 옵션으로 통합했기 때문에 올바른 대상을 쉽게 선택하고 빠르게 시작할 수 있습니다. |
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 2024년 11월 이전에 생성된 데이터 흐름에 대한 데이터 세트 내보내기 일정 확장 | 조직에 2024년 11월 이전에 생성된 데이터 세트 내보내기 데이터 흐름이 있는 경우 이러한 데이터 흐름은 2025년 9월 1일에 작동을 중지합니다. 2025년 9월 1일 이후에도 데이터 흐름을 계속 내보내려면 [이 안내서](../destinations/ui/dataset-expiration-update.md)의 단계를 따라 데이터 세트를 내보내는 각 대상에 대한 일정을 확장해야 합니다. |
 | 대상에 대한 검색, 필터링 및 태그 지정 기능 향상 | 찾아보기 및 계정 탭에서 향상된 검색, 필터링 및 태그 지정 기능을 통해 대상 관리 워크플로를 개선합니다. 이제 이름별로 특정 데이터 흐름 및 계정을 검색하고, 대상 플랫폼, 상태 및 날짜를 포함한 다양한 기준으로 필터링하고, 사용자 지정 태그를 만들어 대상을 구성할 수 있습니다. 마지막 데이터 흐름 실행 시간과 같은 주요 필드에도 열 정렬을 사용할 수 있으므로 대상 연결을 보다 쉽게 식별하고 관리할 수 있습니다. |
 
 자세한 내용은 [대상 개요](../destinations/home.md)를 참조하십시오.
