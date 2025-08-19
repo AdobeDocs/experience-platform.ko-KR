@@ -1,8 +1,7 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2025년 8월
 description: Adobe Experience Platform에 대한 2025년 8월 릴리스 정보입니다.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8b67b2b33b37d631f73d9ea13786cae0e0db59ce
+source-git-commit: 6b99f9f0bef18b8a4d04a18f817e300cc4c5d9a3
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 38%
@@ -22,6 +21,7 @@ ht-degree: 38%
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/latest)
 
 **릴리스 일자: 2025년 8월 19일 수요일**
+
 
 Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 
@@ -104,6 +104,7 @@ Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이
 | --- | --- |
 | [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 내부 업그레이드 | 2025년 8월 11일 화요일부터 대상 카탈로그에 두 개의 **[!DNL Microsoft Bing]** 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!DNL Microsoft Bing]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) Microsoft Bing]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL Microsoft Bing]**&#x200B;인 새 카드를 사용할 수 있습니다. 새 활성화 데이터 흐름에 대해 카탈로그의 새 **[!UICONTROL Microsoft Bing]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않는) Microsoft Bing]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다. <br><br> [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 생성하는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]를 다음 값으로 업데이트해야 합니다.<ul><li>흐름 사양 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>연결 사양 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 이 업그레이드 후에는 **데이터 흐름에서**&#x200B;활성화된 프로필 수[!DNL Microsoft Bing]이(가) 감소할 수 있습니다. 이 삭제는 이 대상 플랫폼에 대한 모든 활성화에 대한 **ECID 매핑 요구 사항**&#x200B;의 도입으로 인해 발생합니다. |
 
+
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
@@ -171,3 +172,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | [!DNL Azure Blob Storage]에 대한 향상된 인증 | 이제 서비스 사용자 기반 인증을 사용하여 [!DNL Azure Blob Storage] 원본을 Experience Platform에 연결할 수 있습니다. 향상된 보안, 보다 쉬운 자격 증명 순환 및 계정에 대한 보다 세분화된 액세스 제어를 위해 서비스 사용자 기반 인증을 사용하십시오. 자세한 내용은 [[!DNL Azure Blob Storage] 개요](../../sources/connectors/cloud-storage/blob.md)를 참조하십시오. |
 
 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하십시오.
+
+<!--
+| [!DNL Marketo] source documentation updates | Get complete visibility into how your [!DNL Marketo] data is transformed when it enters Experience Platform. All field mappings now include detailed explanations of data transformations, so you can understand exactly how your `PersonID` becomes `leadID` and `eventType` becomes `activityType`. |
+-->
