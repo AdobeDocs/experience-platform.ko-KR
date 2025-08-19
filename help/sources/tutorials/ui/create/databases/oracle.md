@@ -2,14 +2,14 @@
 title: Ui를 사용하여 Oracle DB를 Experience Platform에 연결
 description: UI를 사용하여 Oracle DB 인스턴스를 Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: aa5496be968ee6f117649a6fff2c9e83a4ed7681
+source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 0%
 
 ---
 
-# UI에서 [!DNL Oracle DB] 소스 연결 만들기
+# UI를 사용하여 [!DNL Oracle DB]을(를) Experience Platform에 연결
 
 Experience Platform 사용자 인터페이스의 소스 작업 영역을 사용하여 [!DNL Oracle DB] 인스턴스를 Adobe Experience Platform에 연결하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
 
