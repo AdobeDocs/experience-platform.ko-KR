@@ -2,9 +2,9 @@
 title: TTL을 사용하여 데이터 레이크에서 경험 이벤트 데이터 세트 유지 관리
 description: Adobe Experience Platform API의 TTL(Time-To-Live) 구성을 사용하여 데이터 레이크에서 경험 이벤트 데이터 세트 보존을 평가, 설정 및 관리하는 방법을 알아봅니다. 이 안내서에서는 TTL 행 수준 만료가 데이터 보존 정책을 지원하고, 스토리지 효율성을 최적화하고, 효과적인 데이터 수명주기 관리를 보장하는 방법을 설명합니다. 또한 TTL을 효과적으로 적용하는 데 도움이 되는 사용 사례와 모범 사례를 제공합니다.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
+source-git-commit: a4662d1042122fa9c3260c0e53c50bd78935cf31
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2472'
 ht-degree: 0%
 
 ---
@@ -333,7 +333,13 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### 데이터 레이크 및 프로필 서비스에 대해 서로 다른 보존 정책을 설정할 수 있습니까?
 
 +++답변
+
+>[!NOTE]
+>
+>Profile Service의 보존 기간은 30일에 한 번만 업데이트할 수 있습니다.
+
 예. 데이터 레이크 및 프로필 서비스에 대해 서로 다른 보존 정책을 설정할 수 있습니다. 조직의 필요에 따라 프로필 스토어의 보존 기간은 데이터 레이크 보존 기간보다 짧거나 길 수 있습니다.
+
 +++
 
 ### 현재 데이터 세트 사용을 확인하려면 어떻게 해야 합니까?
@@ -366,13 +372,13 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 
 ### 데이터 레이크 경험 이벤트 데이터 세트에서 구성할 수 있는 최소 TTL은 얼마입니까?
 
-+++답변
++++답변 
 데이터 레이크 경험 이벤트 데이터 세트의 최소 TTL은 30일입니다. 데이터 레이크는 초기 수집 및 처리 중 처리 백업 및 복구 시스템으로서 작동합니다. 따라서 데이터는 수집 후 최소 30일 동안 데이터 레이크에 남아 있어야 만료될 수 있습니다.
 +++
 
 ### TTL 정책이 허용하는 것보다 더 오래 일부 데이터 레이크 필드를 유지해야 하는 경우 어떻게 합니까?
 
-+++답변
++++답변 
 활용률 제한 내에 있는 동안 데이터 세트의 TTL 이상의 특정 필드를 유지하려면 Data Distiller 를 사용하십시오. 파생된 데이터 세트에 필요한 필드만 정기적으로 작성하는 작업을 만듭니다. 이 워크플로우를 통해 중요한 데이터를 장기간 보존하면서 TTL을 단축하고 규정을 준수할 수 있습니다.
 
 자세한 내용은 [SQL 안내서로 파생 데이터 집합 만들기](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md)를 참조하세요.
