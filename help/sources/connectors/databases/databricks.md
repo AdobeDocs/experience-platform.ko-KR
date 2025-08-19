@@ -5,9 +5,9 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 11ec772f2b877ceac820f2b8a06ac27377e9b2e9
+source-git-commit: e5ece120329a550204174b7bf588f06cdff45846
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '631'
 ht-degree: 2%
 
 ---
@@ -30,9 +30,9 @@ ht-degree: 2%
 
 ### 컨테이너 자격 증명 가져오기
 
-[!DNL Databricks] 계정이 나중에 액세스할 수 있도록 하려면 Experience Platform [!DNL Azure Blob Storage] 자격 증명을 검색하십시오.
+[!DNL Azure Blob Storage] 계정이 나중에 액세스할 수 있도록 하려면 Experience Platform [!DNL Databricks] 자격 증명을 검색하십시오.
 
-자격 증명을 검색하려면 [!DNL Connectors] API의 `/credentials` 끝점에 대한 GET 요청을 만드십시오.
+자격 증명을 검색하려면 `/credentials` API의 [!DNL Connectors] 끝점에 대한 GET 요청을 만드십시오.
 
 **API 형식**
 
@@ -44,7 +44,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sour
 
 다음 요청은 Experience Platform [!DNL Azure Blob Storage]에 대한 자격 증명을 검색합니다.
 
-+++요청 보기 예
++++요청 예 보기
 
 ```shell
 curl -X GET \
@@ -60,9 +60,9 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 나중에 [!DNL Databricks]에 대한 [!DNL Apache Spark] 구성에서 사용할 자격 증명(`containerName`, `SASToken`, `storageAccountName`)을 제공합니다.
+성공적인 응답은 나중에 `containerName`에 대한 `SASToken` 구성에서 사용할 자격 증명(`storageAccountName`, [!DNL Apache Spark], [!DNL Databricks])을 제공합니다.
 
-+++응답 보기 예
++++응답 예 보기
 
 ```json
 {
@@ -76,7 +76,7 @@ curl -X GET \
 
 | 속성 | 설명 |
 | --- | --- |
-| `containerName` | [!DNL Azure Blob Storage] 컨테이너의 이름입니다. 나중에 [!DNL Databricks]에 대한 [!DNL Apache Spark] 구성을 완료할 때 이 값을 사용합니다. |
+| `containerName` | [!DNL Azure Blob Storage] 컨테이너의 이름입니다. 나중에 [!DNL Apache Spark]에 대한 [!DNL Databricks] 구성을 완료할 때 이 값을 사용합니다. |
 | `SASToken` | [!DNL Azure Blob Storage]에 대한 공유 액세스 서명 토큰입니다. 이 문자열에는 요청을 승인하는 데 필요한 모든 정보가 포함되어 있습니다. |
 | `storageAccountName` | 저장소 계정의 이름입니다. |
 | `SASUri` | [!DNL Azure Blob Storage]에 대한 공유 액세스 서명 URI입니다. 이 문자열은 인증 중인 [!DNL Azure Blob Storage]에 대한 URI와 해당 SAS 토큰의 조합입니다. |
@@ -102,7 +102,7 @@ POST /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sou
 
 다음 요청은 [!DNL Azure Blob Storage]에 대한 자격 증명을 새로 고칩니다.
 
-+++요청 보기 예
++++요청 예 보기
 
 ```shell
 curl -X POST \
@@ -120,7 +120,7 @@ curl -X POST \
 
 성공적인 응답은 새 자격 증명을 반환합니다.
 
-+++응답 보기 예
++++응답 예 보기
 
 ```json
 {
@@ -145,7 +145,7 @@ curl -X POST \
 
 다음으로, [!DNL Databricks] 클러스터가 Experience Platform [!DNL Azure Blob Storage] 계정에 액세스할 수 있는지 확인해야 합니다. 이렇게 하면 [!DNL Azure Blob Storage]을(를) [!DNL delta lake] 테이블 데이터를 쓰는 중간 위치로 사용할 수 있습니다.
 
-액세스를 제공하려면 [!DNL Apache Spark] 구성의 일부로 [!DNL Databricks] 클러스터에 SAS 토큰을 구성해야 합니다.
+액세스를 제공하려면 [!DNL Databricks] 구성의 일부로 [!DNL Apache Spark] 클러스터에 SAS 토큰을 구성해야 합니다.
 
 [!DNL Databricks] 인터페이스에서 **[!DNL Advanced options]**&#x200B;을(를) 선택한 다음 [!DNL Spark config] 입력 상자에 다음을 입력합니다.
 
@@ -160,6 +160,12 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | SAS 토큰 | [!DNL Azure Blob Storage]에 대한 공유 액세스 서명 토큰입니다. [!DNL Azure Blob Storage] 자격 증명을 검색하여 이 값을 가져올 수 있습니다. |
 
 ![Azure의 Databricks UI입니다.](../../images/tutorials/create/databricks/databricks-ui.png)
+
+제공되지 않으면 흐름 실행에서 복사 활동이 실패하고 다음 오류를 반환합니다.
+
+```shell
+Unable to access container '{CONTAINER_NAME}' in account '{STORAGE_ACCOUNT}.blob.core.windows.net' using anonymous credentials. No credentials found in the configuration. Public access is not permitted on this storage account.
+```
 
 ## Experience Platform에 [!DNL Databricks] 연결
 
