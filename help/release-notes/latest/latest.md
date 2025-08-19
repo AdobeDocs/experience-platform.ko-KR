@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 8월
 description: Adobe Experience Platform에 대한 2025년 8월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8b67b2b33b37d631f73d9ea13786cae0e0db59ce
+source-git-commit: af669d58ac4031354e477954a8a733cf0bd7a64b
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 38%
@@ -41,7 +41,7 @@ Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이
 **새로운 기능**
 
 | 기능 | 설명 |
-| ------- | ----------- |
+| --- | --- |
 | 스트리밍 처리량 용량 경고 | 세 가지 새로운 경고를 통해 사용자는 경고를 구독하고 구성하여 스트리밍 처리량 용량의 성능을 사전 예방적으로 관리 및 모니터링할 수 있습니다. 새로운 경고에는 스트리밍 처리량이 80%, 90%에 도달하거나 용량 제한을 초과하는 경우가 포함됩니다. 자세한 내용은 [용량 경고 규칙](../../observability/alerts/rules.md#capacity) 안내서를 참조하십시오. |
 
 경고에 대한 자세한 내용은 [[!DNL Observability Insights] 개요](../../observability/home.md)를 참조하십시오.
@@ -167,7 +167,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| UI에서 [!BADGE 에 대한 &#x200B;]{type=Informative}Beta[!DNL Azure Private Links] 지원 | 이제 UI에서 선택한 소스 그룹에 [!DNL Azure Private Links]을(를) 사용할 수 있습니다. 이 기능을 사용하여 소스가 연결할 수 있는 개인 엔드포인트를 만듭니다. 비공개 엔드포인트를 사용하면 공용 인터넷을 우회하는 연결 및 데이터 흐름을 설정할 수 있으므로 민감한 데이터에 대한 향상된 보안 및 네트워크 격리를 제공합니다. [!DNL Azure Private Links]에 대한 지원은 다음 소스에서 사용할 수 있습니다. <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> 자세한 내용은 [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md)의 안내서를 참조하십시오. |
+| UI에서 [!BADGE 에 대한 ]{type=Informative}Beta[!DNL Azure Private Links] 지원 | 이제 UI에서 선택한 소스 그룹에 [!DNL Azure Private Links]을(를) 사용할 수 있습니다. 이 기능을 사용하여 소스가 연결할 수 있는 개인 엔드포인트를 만듭니다. 비공개 엔드포인트를 사용하면 공용 인터넷을 우회하는 연결 및 데이터 흐름을 설정할 수 있으므로 민감한 데이터에 대한 향상된 보안 및 네트워크 격리를 제공합니다. [!DNL Azure Private Links]에 대한 지원은 다음 소스에서 사용할 수 있습니다. <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> 자세한 내용은 [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md)의 안내서를 참조하십시오. |
 | [!DNL Azure Blob Storage]에 대한 향상된 인증 | 이제 서비스 사용자 기반 인증을 사용하여 [!DNL Azure Blob Storage] 원본을 Experience Platform에 연결할 수 있습니다. 향상된 보안, 보다 쉬운 자격 증명 순환 및 계정에 대한 보다 세분화된 액세스 제어를 위해 서비스 사용자 기반 인증을 사용하십시오. 자세한 내용은 [[!DNL Azure Blob Storage] 개요](../../sources/connectors/cloud-storage/blob.md)를 참조하십시오. |
 
 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하십시오.
