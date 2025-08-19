@@ -4,35 +4,51 @@ title: 허용 목록에 추가하다 스트리밍 대상의 IP 주소
 type: Documentation
 description: 이 페이지에서는 Experience Platform에서 HTTP REST API 끝점, Amazon Kinesis 또는 Azure Event Hubs 인스턴스로 데이터를 안전하게 내보내도록 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 5c67466f5321038e75d22e216a8be2e745adac49
+source-git-commit: 851565b4c40452d102eff134533c9d44ea19ca76
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
 
-# 허용 목록에 추가하다 스트리밍 대상의 IP 주소 {#ip-address-allowlist}
+
+# 허용 목록에 추가하다 스트리밍 API 기반 대상을 위한 IP 주소 기반 {#ip-address-allowlist}
 
 >[!IMPORTANT]
 >
 > * Adobe은 이 페이지에 책갈피를 지정하고 3개월마다 다시 방문하여 최신 IP 주소를 확인하는 것을 권장합니다. Adobe은 새 IP 범위에 대한 알림을 제공하지 않습니다.
-> * 여기에 문서화된 IP 목록 *은(는)*&#x200B;을(를) 사용하여 빌드하는 대상에 적용되지 않습니다[[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
 
 ## 개요 {#overview}
 
-여기에 설명된 IP 범위는 다음 대상에 적용됩니다.
+이 페이지에 설명된 IP 범위는 다음 대상에 적용됩니다.
 
-* [HTTP API 대상](./http-destination.md)
-* [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
-* [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [고급 엔터프라이즈 대상](../../destination-types.md#advanced-enterprise-destinations): [HTTP API 대상](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Pega CDH 실시간 대상](../../destination-types.md#streaming-destinations), [Salesforce Marketing Cloud](/help/destinations/catalog/personalization/pega-v2.md) 및 [Oracle Eloqua](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)와(과) API 기반 통합 같은 [스트리밍 대상 내보내기 대상](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
+* [Destination SDK](../../destination-sdk/getting-started.md)을(를) 통해 빌드된 공개 또는 개인 대상
 
 Experience Platform에서 이러한 대상으로의 아웃바운드 트래픽은 항상 이 페이지에 나열된 IP를 통해 이동합니다.
 
-이 페이지에서는 Experience Platform에서 HTTP 끝점, [!DNL Amazon Kinesis] 또는 [!DNL Azure Event Hubs] 인스턴스로 데이터를 안전하게 내보내기 위해 허용 목록에 추가하다에 추가할 수 있는 IP 범위를 제공합니다. 이 기능은 HTTP 끝점이 엔터프라이즈 방화벽 뒤에 있거나 회사 보안 및 규정 준수 표준에서 IP 범위 목록을 허용 목록에추가된으로 유지해야 하는 경우에 특히 유용합니다.
+이 페이지에서는 Experience Platform에서 위에 나열된 대상으로 데이터를 안전하게 내보내기 위해 허용 목록에 추가하다에 추가할 수 있는 IP 범위를 제공합니다. 이 기능은 HTTP 끝점이 엔터프라이즈 방화벽 뒤에 있거나 회사 보안 및 규정 준수 표준에서 IP 범위 목록을 허용 목록에추가된으로 유지해야 하는 경우에 특히 유용합니다.
 
 네트워크 방화벽을 통해 네트워크 액세스 제어를 정의할 수 있습니다. 적절한 IP 범위를 지정하여 데이터 전송 서비스에 트래픽을 허용할 수 있습니다.
 
-Adobe은 이 페이지에서 위에 언급된 대상으로 작업하기 전에 다음 IP 범위를 허용 목록에 추가하다에 추가할 것을 권장합니다. 지역에 따른 IP 범위를 허용 목록에 추가하다에 추가하지 않으면 이러한 스트리밍 대상을 사용할 때 오류나 성능이 저하될 수 있습니다.
+## 이 페이지에서 IP를 허용 목록 하는 경우 {#when-to-allowlist}
+
+조직 정책에서 들어오는 트래픽에 대한 IP를 허용 목록에 추가하다해야 하는 경우 이 페이지에서 대상으로 작업하기 전에 다음 범주의 IP 범위를 허용 목록에 추가하다에 추가해야 합니다.
+
+1. 모든 [글로벌 IP 주소](#global)
+2. 글로벌 IP 주소 외에도, 페이지 아래쪽의 목록에서 프로비저닝된 지역에 해당하는 IP 주소를 추가합니다. 지역에 따른 IP 범위를 허용 목록에 추가하다에 추가하지 않으면 이러한 스트리밍 대상을 사용할 때 오류나 성능이 저하될 수 있습니다.
+
+## 글로벌 IP 주소 {#global}
+
+* `3.209.222.108`
+* `3.211.230.204`
+* `35.169.227.49`
+* `66.117.18.133`
+* `66.117.18.134`
+* `66.117.18.135`
+
+이러한 글로벌 IP 주소 외에도 아래 목록에서 조직이 프로비저닝된 지역의 IP 주소를 허용 목록에 추가하다해야 합니다.
 
 ## VA7: 미국 및 아메리카 고객 {#us-americas}
 
@@ -209,3 +225,4 @@ Adobe은 이 페이지에서 위에 언급된 대상으로 작업하기 전에 �
 * `20.244.79.192/28`
 * `20.244.79.208/28`
 * `20.244.79.224/28`
+
