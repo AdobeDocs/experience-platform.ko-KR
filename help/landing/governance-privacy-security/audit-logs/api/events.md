@@ -4,7 +4,7 @@ description: 감사 쿼리 API를 사용하여 Experience Platform에서 감사 
 role: Developer
 feature: Audits, API
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dec895e3ea625fb86d1891bad713185d39c47c81
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 1%
@@ -13,9 +13,9 @@ ht-degree: 1%
 
 # 감사 이벤트 엔드포인트
 
-감사 로그는 다양한 서비스 및 기능에 대한 사용자 활동의 세부 정보를 제공하는 데 사용됩니다. 로그에 기록된 각 작업에는 작업 유형, 날짜 및 시간, 작업을 수행한 사용자의 이메일 ID 및 작업 유형과 관련된 추가 속성을 나타내는 메타데이터가 포함됩니다. [!DNL Audit Query] API의 `/audit/events` 끝점을 사용하면 [!DNL Experience Platform]에서 조직의 활동에 대한 이벤트 데이터를 프로그래밍 방식으로 검색할 수 있습니다.
+감사 로그는 다양한 서비스 및 기능에 대한 사용자 활동의 세부 정보를 제공하는 데 사용됩니다. 로그에 기록된 각 작업에는 작업 유형, 날짜 및 시간, 작업을 수행한 사용자의 이메일 ID 및 작업 유형과 관련된 추가 속성을 나타내는 메타데이터가 포함됩니다. `/audit/events` API의 [!DNL Audit Query] 끝점을 사용하면 [!DNL Experience Platform]에서 조직의 활동에 대한 이벤트 데이터를 프로그래밍 방식으로 검색할 수 있습니다.
 
-## 시작하기
+## 시작
 
 이 가이드에 사용된 API 끝점은 [[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-apis/references/audit-query/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 [!DNL Experience Platform] API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
@@ -55,98 +55,71 @@ curl -X POST \
 
 ```json
 {
-   "_embedded": {
-     "customerAuditLogList": [
-       {
-         "userEmail": "{USER_ID}",
-         "userIpAddresses": [ ],
-         "eventType": "Core",
-         "id": "32b72208-3035-4bc6-b434-39e34401a864",
-         "version": "1.0",
-         "imsOrgId": "{ORGANIZATION_ID}",
-         "sandboxName": "prod",
-         "region": "VA7",
-         "requestId": "5NphpgUQdQnjTWOcS9DSMs2wD1EUMlYG",
-         "authId": "96715f98-d100-4575-8491-ebbcea654eb9",
-         "permissionResource": "Sandbox",
-         "permissionType": "RESET",
-         "assetType": "Sandbox",
-         "assetId": "prod",
-         "assetName": "prod",
-         "action": "Reset",
-         "status": "Allow",
-         "failureCode": "",
-         "timestamp": "2021-08-04T21:58:09.745+0000"
-       },
-       {
-         "userEmail": "{USER_ID}",
-         "userIpAddresses": [ ],
-         "eventType": "Core",
-         "id": "a178736a-8fa1-47da-bac5-b0d9e741e414",
-         "version": "1.0",
-         "imsOrgId": "{ORGANIZATION_ID}",
-         "sandboxName": "prod",
-         "region": "VA7",
-         "requestId": "7AlGIAhWvaEzYWHLzvuf26AAFAkqSyKg",
-         "authId": "60fc1077-4aef-4e1f-a5ff-f64183e060f4",
-         "permissionResource": "Sandbox",
-         "permissionType": "RESET",
-         "assetType": "Sandbox",
-         "assetId": "prod",
-         "assetName": "prod",
-         "action": "Reset",
-         "status": "Allow",
-         "failureCode": "",
-         "timestamp": "2021-08-04T21:28:00.301+0000"
-       },
-       {
-         "userEmail": "{USER_ID}",
-         "userIpAddresses": [ ],
-         "eventType": "Core",
-         "id": "ccfe8c77-9b93-481d-a561-0b2edf3b77dc",
-         "version": "1.0",
-         "imsOrgId": "{ORGANIZATION_ID}",
-         "sandboxName": "prod",
-         "region": "VA7",
-         "requestId": "hArqS4CAa8wfRPnKuxV4yaA82atxwzYu",
-         "authId": "80b7d887-9338-4cd5-9d79-2483b03f0160",
-         "permissionResource": "Sandbox",
-         "permissionType": "RESET",
-         "assetType": "Sandbox",
-         "assetId": "prod",
-         "assetName": "prod",
-         "action": "Reset",
-         "status": "Allow",
-         "failureCode": "",
-         "timestamp": "2021-08-04T20:58:07.750+0000"
-       }
-     ]    
-   },
-   "_links": {
-     "self": {
-       "href": "https://platform.adobe.io/data/foundation/audit/events?limit=10&start=0&property=type%253D%253Dcore"
-     },
-     "next": {
-       "href": "https://platform.adobe.io/data/foundation/audit/events?queryId=cXVlcnlJZD0xYjA4MDM4MV81ZWNkXzRjNTZfYTM2N18zYWExOWI5YzNhNTlfMTYyODExNDY5MTg1NSZ0b3RhbEVsZW1lbnRzPTI2&start=10&limit=10"
-     },
-     "page": {
-       "href": "https://platform.adobe.io/data/foundation/audit/events?queryId=cXVlcnlJZD0xYjA4MDM4MV81ZWNkXzRjNTZfYTM2N18zYWExOWI5YzNhNTlfMTYyODExNDY5MTg1NSZ0b3RhbEVsZW1lbnRzPTI2&limit=10{&start}",
-       "templated": true
-     }
+  "_embedded": {
+    "events": [
+      {
+        "id": "6ecc125d-da03-4882-a944-88c707ddc3f7",
+        "requestId": "5YGdpTX5PvRrdqCfrCT8p8lWphZPzxl8",
+        "permissionResource": "Dataset",
+        "permissionType": "WRITE",
+        "assetType": "Dataset",
+        "action": "Create",
+        "status": "Allow",
+        "failureCode": "",
+        "timestamp": "2025-06-24T16:50:28.318+0000",
+        "version": "1.0",
+        "imsOrgId": "{ORGANIZATION_ID}",
+        "region": "VA7",
+        "authId": "e6b46821-e2b4-4729-952f-2e4afd713b31",
+        "assetId": "685ad754fb1abe2b263df4b3",
+        "assetName": "my-dataset",
+        "sandboxName": "prod",
+        "sandboxId": "{SANDBOX_ID}",
+        "userEmail": "{USER_EMAIL}",
+        "userIpAddresses": [
+          "130.*.*.*",
+          "10.*.*.*"
+        ],
+        "enhancedEvents": [
+          {
+            "id": "0ee91e42-ac46-4f35-a01a-f74a1569c404",
+            "requestId": "5YGdpTX5PvRrdqCfrCT8p8lWphZPzxl8",
+            "permissionResource": "Dataset",
+            "permissionType": "Write",
+            "assetType": "Dataset",
+            "action": "Create",
+            "status": "Success",
+            "failureCode": "",
+            "timestamp": "2025-06-24T16:50:28.883+0000",
+            "assetId": "685ad754fb1abe2b263df4b3",
+            "assetName": "my-dataset"
+          }
+        ]
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io/data/foundation/audit/events?property=user%253D%253Ddraghici%2540adobe.com"
+    },
+    "page": {
+      "href": "https://platform.adobe.io/data/foundation/audit/events?queryId=b3JkZXJCeVJ1bGVzPSZwcm9wZXJ0eT11c2VyPT1kcmFnaGljaUBhZG9iZS5jb20mdGltZXN0YW1wSW5kZXg9MTc1MDc4MzgyODMxOCZ0b3RhbEVsZW1lbnRzPTE3&limit=50{&start}",
+      "templated": true
+    }
   },
   "page": {
-    "size": 10,
-    "totalElements": 3,
+    "size": 1,
+    "totalElements": 1,
     "totalPages": 1,
     "number": 1
   },
-  "queryId": "cXVlcnlJZD0xYjA4MDM4MV81ZWNkXzRjNTZfYTM2N18zYWExOWI5YzNhNTlfMTYyODExNDY5MTg1NSZ0b3RhbEVsZW1lbnRzPTI2"
+  "queryId": "b3JkZXJCeVJ1bGVzPSZwcm9wZXJ0eT11c2VyPT1kcmFnaGljaUBhZG9iZS5jb20mdGltZXN0YW1wSW5kZXg9MTc1MDc4MzgyODMxOCZ0b3RhbEVsZW1lbnRzPTE3"
 }
 ```
 
 | 속성 | 설명 |
 | --- | --- |
-| `customerAuditLogList` | 개체가 요청에 지정된 각 이벤트를 나타내는 배열입니다. 각 개체에는 필터 구성 및 반환된 이벤트 데이터에 대한 정보가 들어 있습니다. |
+| `events` | 개체가 요청에 지정된 각 이벤트를 나타내는 배열입니다. 각 개체에는 필터 구성 및 반환된 이벤트 데이터에 대한 정보가 들어 있습니다. |
 | `userEmail` | 이벤트를 수행한 사용자의 이메일입니다. |
 | `eventType` | 이벤트 유형. 이벤트 유형에는 `Core` 및 `Enhanced`이(가) 포함됩니다. |
 | `imsOrgId` | 이벤트가 발생한 조직의 ID입니다. |

@@ -4,10 +4,10 @@ description: 감사 쿼리 API를 사용하여 Experience Platform에서 감사 
 role: Developer
 feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 3%
+source-wordcount: '168'
+ht-degree: 2%
 
 ---
 
@@ -43,4 +43,4 @@ curl -X POST \
 
 **응답**
 
-내보내기를 위해 결과가 CSV 파일로 생성됩니다. 성공적인 응답은 응답 본문이 없는 HTTP 307을 반환합니다. 내보내기 파일에 대한 링크는 `Location` 응답 헤더에 제공됩니다.
+결과는 내보내기를 위해 CSV 파일로 생성되며 각 항목은 핵심 또는 향상된 감사 이벤트를 나타냅니다. 성공적인 응답은 응답 본문이 없는 HTTP 307을 반환합니다. 내보내기 파일에 대한 링크는 `Location` 응답 헤더에 제공됩니다.
