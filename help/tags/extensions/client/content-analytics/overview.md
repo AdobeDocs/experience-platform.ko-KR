@@ -19,14 +19,14 @@ ht-degree: 0%
 
 ## Adobe Content Analytics 태그 확장 설치 {#install}
 
-Adobe Content Analytics 태그 확장은 [Content Analytics 안내 구성 마법사](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided)를 사용할 때 자동으로 만들어지는 태그 속성의 일부로 자동으로 설치됩니다.
+Adobe Content Analytics 태그 확장은 [Content Analytics 안내 구성 마법사](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/content-analytics/configuration/guided)를 사용할 때 자동으로 만들어지는 태그 속성의 일부로 자동으로 설치됩니다.
 
 <!--
 ### Manual installation
 
-In case of a manual configuration, the Adobe Content Analytics tag extension needs a property to be installed on. If you have not done so already, see the documentation on [creating a tag property](https://experienceleague.adobe.com/en/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
+In case of a manual configuration, the Adobe Content Analytics tag extension needs a property to be installed on. If you have not done so already, see the documentation on [creating a tag property](https://experienceleague.adobe.com/ko/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
 
-After you have created a property or when you select the property created using the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided), open the property and select the **[!UICONTROL Extensions]** tab on the left side bar.
+After you have created a property or when you select the property created using the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/content-analytics/configuration/guided), open the property and select the **[!UICONTROL Extensions]** tab on the left side bar.
 
 Select the **[!UICONTROL Catalog]** tab. From the list of available extensions, find the **[!DNL Adobe Content Analytics]** extension and select **[!UICONTROL Install]**.
 
@@ -38,7 +38,7 @@ After selecting **[!UICONTROL Install]**, you must configure the Adobe Content A
 <!--
 ## Configure schema
 
-The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
+The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
 
 ![Image that shows the Schema configuration of the Adobe Content Analytics tag extension in the Tags UI](assets/aca-tag-schema.png)
 
@@ -50,7 +50,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## 데이터스트림 구성
 
-[Content Analytics 안내 구성 마법사](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided)가 **[!UICONTROL 샌드박스]** 및 **[!UICONTROL 프로덕션 데이터스트림]**&#x200B;에 대한 적절한 값을 자동으로 선택합니다. 필요에 따라 추가 **[!UICONTROL 스테이징 데이터스트림]** 및 **[!UICONTROL 개발 데이터스트림]**&#x200B;을 구성할 수 있습니다.
+[Content Analytics 안내 구성 마법사](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/content-analytics/configuration/guided)가 **[!UICONTROL 샌드박스]** 및 **[!UICONTROL 프로덕션 데이터스트림]**&#x200B;에 대한 적절한 값을 자동으로 선택합니다. 필요에 따라 추가 **[!UICONTROL 스테이징 데이터스트림]** 및 **[!UICONTROL 개발 데이터스트림]**&#x200B;을 구성할 수 있습니다.
 
 ![Tags UI에서 Adobe Content Analytics 태그 확장의 데이터스트림 구성을 보여 주는 이미지](assets/aca-tag-datastreams.png)
 
@@ -81,7 +81,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## 이벤트 필터링 구성
 
-**[!UICONTROL 이벤트 필터링]** 섹션에서 Content Analytics에 대한 데이터를 수집할 때 **[!UICONTROL 페이지 URL]** 및 **[!UICONTROL Assets URL]**&#x200B;을(를) 필터링하도록 정규식을 수정할 수 있습니다. [Content Analytics 안내 구성 마법사](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided)에서 정의한 정규식이 자동으로 채워집니다.
+**[!UICONTROL 이벤트 필터링]** 섹션에서 Content Analytics에 대한 데이터를 수집할 때 **[!UICONTROL 페이지 URL]** 및 **[!UICONTROL Assets URL]**&#x200B;을(를) 필터링하도록 정규식을 수정할 수 있습니다. [Content Analytics 안내 구성 마법사](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/content-analytics/configuration/guided)에서 정의한 정규식이 자동으로 채워집니다.
 
 ![Tags UI에서 Adobe Content Analytics 태그 확장의 이벤트 필터링 설정을 보여 주는 이미지](assets/aca-tag-eventfiltering.png)
 
