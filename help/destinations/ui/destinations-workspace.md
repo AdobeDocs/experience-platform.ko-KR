@@ -78,13 +78,13 @@ Adobe Experience Platform의 왼쪽 탐색 모음에서 **[!UICONTROL 대상]**&
 >
 > ![탭 찾아보기](../assets/ui/workspace/browse-tab.png)
 > 
-> * `...`이름[!UICONTROL  열에서 줄임표(])를 선택하고 ![대상 활성화 컨트롤](/help/images/icons/data-add.png) **[!UICONTROL 대상 활성화]** 컨트롤을 사용하여 대상 또는 데이터 세트를 해당 대상으로 내보냅니다.
-> * `...`이름[!UICONTROL  열에서 줄임표(])를 선택하고 ![대상 컨트롤 편집](/help/images/icons/edit.png)**[!UICONTROL 대상 편집&#x200B;]**컨트롤을 사용하여 기존 대상 연결을 편집합니다. 자세한 내용은 [대상 편집](/help/destinations/ui/edit-destination.md)에 대한 자습서를 참조하십시오.
-> * `...`이름[!UICONTROL  열에서 줄임표(])를 선택하고 ![마케팅 작업 편집 컨트롤](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL 마케팅 작업 편집]** 컨트롤을 [마케팅 작업 변경](/help/destinations/ui/edit-activation.md#edit-marketing-actions)(으)로 사용합니다.
-> * `...`이름[!UICONTROL  열에서 줄임표(])를 선택하고 ![삭제 컨트롤](/help/images/icons/delete.png) **[!UICONTROL 삭제]** 컨트롤을 사용하여 대상에 대한 기존 연결을 [제거](delete-destinations.md)합니다.
-> * `...`이름[!UICONTROL  열에서 줄임표(])를 선택하고 ![모니터링 제어에서 보기](/help/images/icons/monitoring.png) **[!UICONTROL 모니터링에서 보기]** 제어를 사용하여 [모니터링 대시보드](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)에서 이 대상에 대한 활성화 정보를 봅니다.
-> * `...`이름[!UICONTROL  열에서 줄임표(])를 선택하고 ![경고 구독 ](/help/images/icons/alert-add.png) **[!UICONTROL 경고 구독]** 컨트롤을 사용하여 대상 데이터 흐름 경고를 구독합니다. 경고를 구독하면 플로우 실행의 상태, 성공 또는 실패와 관련된 메시지를 받을 수 있습니다. 대상 데이터 흐름 경고에 대한 자세한 내용은 [컨텍스트 내 대상 경고 구독](alerts.md)을 참조하십시오.
-> * `...`이름[!UICONTROL  열에서 줄임표(])를 선택하고 ![태그 관리](/help/images/icons/manage-tags.png) **[!UICONTROL 태그 관리]** 컨트롤을 사용하여 대상에 태그를 추가하거나 제거합니다. 태그 사용에 대한 자세한 내용은 [대상 태그 관리](#manage-tags) 섹션을 참조하십시오.
+> * `...`이름[!UICONTROL &#x200B; 열에서 줄임표(])를 선택하고 ![대상 활성화 컨트롤](/help/images/icons/data-add.png) **[!UICONTROL 대상 활성화]** 컨트롤을 사용하여 대상 또는 데이터 세트를 해당 대상으로 내보냅니다.
+> * `...`이름[!UICONTROL &#x200B; 열에서 줄임표(])를 선택하고 ![대상 컨트롤 편집](/help/images/icons/edit.png)**[!UICONTROL 대상 편집&#x200B;]**&#x200B;컨트롤을 사용하여 기존 대상 연결을 편집합니다. 자세한 내용은 [대상 편집](/help/destinations/ui/edit-destination.md)에 대한 자습서를 참조하십시오.
+> * `...`이름[!UICONTROL &#x200B; 열에서 줄임표(])를 선택하고 ![마케팅 작업 편집 컨트롤](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL 마케팅 작업 편집]** 컨트롤을 [마케팅 작업 변경](/help/destinations/ui/edit-activation.md#edit-marketing-actions)(으)로 사용합니다.
+> * `...`이름[!UICONTROL &#x200B; 열에서 줄임표(])를 선택하고 ![삭제 컨트롤](/help/images/icons/delete.png) **[!UICONTROL 삭제]** 컨트롤을 사용하여 대상에 대한 기존 연결을 [제거](delete-destinations.md)합니다.
+> * `...`이름[!UICONTROL &#x200B; 열에서 줄임표(])를 선택하고 ![모니터링 제어에서 보기](/help/images/icons/monitoring.png) **[!UICONTROL 모니터링에서 보기]** 제어를 사용하여 [모니터링 대시보드](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)에서 이 대상에 대한 활성화 정보를 봅니다.
+> * `...`이름[!UICONTROL &#x200B; 열에서 줄임표(])를 선택하고 ![경고 구독 ](/help/images/icons/alert-add.png) **[!UICONTROL 경고 구독]** 컨트롤을 사용하여 대상 데이터 흐름 경고를 구독합니다. 경고를 구독하면 플로우 실행의 상태, 성공 또는 실패와 관련된 메시지를 받을 수 있습니다. 대상 데이터 흐름 경고에 대한 자세한 내용은 [컨텍스트 내 대상 경고 구독](alerts.md)을 참조하십시오.
+> * `...`이름[!UICONTROL &#x200B; 열에서 줄임표(])를 선택하고 ![태그 관리](/help/images/icons/manage-tags.png) **[!UICONTROL 태그 관리]** 컨트롤을 사용하여 대상에 태그를 추가하거나 제거합니다. 태그 사용에 대한 자세한 내용은 [대상 태그 관리](#manage-tags) 섹션을 참조하십시오.
 
 [!UICONTROL 찾아보기] 탭에서 각 대상에 대해 제공된 모든 정보를 보려면 아래 표를 참조하십시오.
 
@@ -161,7 +161,7 @@ Adobe Experience Platform의 왼쪽 탐색 모음에서 **[!UICONTROL 대상]**&
 
 태그를 사용하면 쉽게 관리할 수 있도록 대상 데이터 흐름을 구성하고 분류할 수 있습니다. 개별 데이터 흐름에서 태그를 추가 및 제거하여 비즈니스 요구 사항에 따라 그룹화할 수 있습니다.
 
-데이터 흐름에 태그를 추가하려면 `...`이름&#x200B;**[!UICONTROL 열에서 줄임표(]**)를 선택하고 컨텍스트 메뉴에서 **[!UICONTROL 태그 관리]**를 선택합니다.
+데이터 흐름에 태그를 추가하려면 `...`이름&#x200B;**[!UICONTROL 열에서 줄임표(]**)를 선택하고 컨텍스트 메뉴에서 **[!UICONTROL 태그 관리]**&#x200B;를 선택합니다.
 **[!UICONTROL 태그]** 필드에 새 태그 이름을 입력하고 **[!UICONTROL 저장]**&#x200B;을 선택하여 변경 내용을 적용합니다.
 
 ![태그 선택 및 만들기 옵션을 표시하는 태그 관리 대화 상자](../assets/ui/workspace/tags.gif)
@@ -183,9 +183,9 @@ Adobe Experience Platform의 왼쪽 탐색 모음에서 **[!UICONTROL 대상]**&
 
 >[!TIP]
 >
-> * `...`Platform[!UICONTROL  열에서 줄임표(])를 선택하고 ![컨트롤 활성화](/help/images/icons/data-add.png)**[!UICONTROL 활성화&#x200B;]**/**[!UICONTROL &#x200B;대상 활성화&#x200B;]**/**[!UICONTROL &#x200B;데이터 세트 내보내기&#x200B;]**컨트롤을 사용하여 대상 또는 데이터 세트를 해당 대상으로 내보냅니다.
-> * `...`플랫폼[!UICONTROL  열에서 줄임표(])를 선택하고 ![세부 정보 편집 컨트롤](/help/images/icons/edit.png)**[!UICONTROL 세부 정보 편집&#x200B;]**컨트롤을 사용하여 기존 대상 계정의 세부 정보를 [업데이트](update-accounts.md)합니다.
-> * `...`Platform[!UICONTROL  열에서 줄임표(])를 선택하고 ![Delete 컨트롤](/help/images/icons/delete.png)**[!UICONTROL Delete ]**컨트롤을 사용하여 기존 대상 계정을 [삭제](delete-destination-account.md)합니다.
+> * `...`Platform[!UICONTROL &#x200B; 열에서 줄임표(])를 선택하고 ![컨트롤 활성화](/help/images/icons/data-add.png)**[!UICONTROL 활성화&#x200B;]**/**[!UICONTROL &#x200B;대상 활성화&#x200B;]**/**[!UICONTROL &#x200B;데이터 세트 내보내기&#x200B;]**&#x200B;컨트롤을 사용하여 대상 또는 데이터 세트를 해당 대상으로 내보냅니다.
+> * `...`플랫폼[!UICONTROL &#x200B; 열에서 줄임표(])를 선택하고 ![세부 정보 편집 컨트롤](/help/images/icons/edit.png)**[!UICONTROL 세부 정보 편집&#x200B;]**&#x200B;컨트롤을 사용하여 기존 대상 계정의 세부 정보를 [업데이트](update-accounts.md)합니다.
+> * `...`Platform[!UICONTROL &#x200B; 열에서 줄임표(])를 선택하고 ![Delete 컨트롤](/help/images/icons/delete.png)**[!UICONTROL Delete &#x200B;]**&#x200B;컨트롤을 사용하여 기존 대상 계정을 [삭제](delete-destination-account.md)합니다.
 
 ![계정 탭](../assets/ui/workspace/accounts-tab.png)
 
