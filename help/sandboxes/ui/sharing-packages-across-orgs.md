@@ -1,9 +1,10 @@
 ---
 title: 샌드박스 도구를 사용하여 조직 간 패키지 공유
 description: Adobe Experience Platform에서 샌드박스 도구 를 사용하여 여러 조직 간에 패키지를 공유하는 방법을 알아봅니다.
-source-git-commit: 77994c1cdd185cc8a2963c5aa2eb345c8702fe02
+exl-id: 02826a8d-f01d-44cb-9ae0-0fcde24de83e
+source-git-commit: 3183d265eda36df9b08d920ba731bd9e63d150cc
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '1051'
 ht-degree: 0%
 
 ---
@@ -42,7 +43,7 @@ ht-degree: 0%
 
 ![조직 ID 입력, 선택한 조직 ID 및 확인 강조 표시된 패키지 파트너 조직 대화 상자입니다.](../images/ui/sandbox-tooling/private-enter-org-id.png)
 
-공유 요청이 파트너 조직으로 전송되었으며 **[!UICONTROL 보내는 요청]**&#x200B;을 표시하는 [!UICONTROL 샌드박스] **[!UICONTROL 파트너 조직]** 탭으로 돌아갑니다.
+공유 요청이 파트너 조직으로 전송되었으며 [!UICONTROL 보내는 요청]을 표시하는 **[!UICONTROL 샌드박스]** **[!UICONTROL 파트너 조직]** 탭으로 돌아갑니다.
 
 ![보내는 요청이 강조 표시된 파트너 조직 탭입니다.](../images/ui/sandbox-tooling/private-outgoing-request.png)
 
@@ -72,17 +73,34 @@ ht-degree: 0%
 >
 >상태가 **게시됨**&#x200B;인 패키지만 공유할 수 있습니다.
 
-승인된 파트너 조직에 패키지를 공유하려면 [!UICONTROL 샌드박스] **[!UICONTROL 패키지]** 탭으로 이동합니다. 그런 다음 패키지 옆에 있는 줄임표(`...`)를 선택한 다음 드롭다운 메뉴에서 **[!UICONTROL 패키지 공유]**&#x200B;를 선택합니다.
+#### 다중 오브젝트 패키지 공유 {#multi-object-packages}
+
+승인된 파트너 조직에 다중 개체 패키지를 공유하려면 [!UICONTROL 샌드박스] **[!UICONTROL 패키지]** 탭으로 이동합니다. 그런 다음 패키지 옆에 있는 줄임표(`...`)를 선택한 다음 드롭다운 메뉴에서 **[!UICONTROL 패키지 공유]**&#x200B;를 선택합니다.
 
 ![패키지 공유가 강조 표시된 드롭다운 메뉴를 표시하는 패키지 목록.](../images/ui/sandbox-tooling/private-share-package.png)
 
-**[!UICONTROL 패키지 공유]** 대화 상자의 **[!UICONTROL 설정 공유]** 드롭다운에서 공유할 패키지를 선택한 다음 **[!UICONTROL 확인]**&#x200B;을 선택합니다.
+**[!UICONTROL 패키지 공유]** 대화 상자에서 **[!UICONTROL 설정 공유]** 드롭다운에서 패키지를 공유할 조직을 선택한 다음 **[!UICONTROL 확인]**&#x200B;을 선택합니다.
 
 >[!TIP]
 >
 >두 개 이상의 조직을 선택할 수 있습니다. 선택한 조직이 [!UICONTROL 설정 공유] 드롭다운 아래에 표시됩니다.
 
 ![공유 설정이 있는 패키지 공유 대화 상자 및 확인 강조 표시.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+#### 전체 샌드박스 패키지 공유 {#entire-sandbox-packages}
+
+전체 샌드박스 패키지를 승인된 파트너 조직에 공유하려면 [!UICONTROL 샌드박스] **[!UICONTROL 패키지]** 탭으로 이동합니다. 그런 다음 패키지 옆에 있는 줄임표(`...`)를 선택한 다음 드롭다운 메뉴에서 **[!UICONTROL 패키지 공유]**&#x200B;를 선택합니다.
+
+![패키지 목록을 표시하는 패키지 탭, 드롭다운 메뉴 표시.](../images/ui/sandbox-tooling/private-share-entire-sandbox.png)
+
+**[!UICONTROL 패키지 공유]** 대화 상자에서 **[!UICONTROL 설정 공유]** 드롭다운에서 패키지를 공유할 조직을 선택한 다음 **[!UICONTROL 확인]**&#x200B;을 선택합니다.
+
+>[!TIP]
+>
+>두 개 이상의 조직을 선택할 수 있습니다. 선택한 조직이 [!UICONTROL 설정 공유] 드롭다운 아래에 표시됩니다.
+
+![공유 설정이 있는 패키지 공유 대화 상자 및 확인 강조 표시.](../images/ui/sandbox-tooling/private-share-entire-sandbox-confirm.png)
+
 
 ## 공개 패키지 {#public-packages}
 
@@ -134,4 +152,4 @@ ht-degree: 0%
 
 이 문서에서는 샌드박스 도구 기능을 사용하여 여러 조직 간에 패키지를 공유하는 방법을 보여 줍니다. 자세한 내용은 [샌드박스 도구 가이드](../ui/sandbox-tooling.md)를 참조하세요.
 
-샌드박스 API를 사용하여 다양한 작업을 수행하는 방법에 대해 알아보려면 [샌드박스 개발자 안내서](../api/getting-started.md)를 참조하십시오. Experience Platform의 샌드박스에 대한 높은 수준의 개요는 [개요 설명서](../home.md)를 참조하세요.
+샌드박스 API를 사용하여 다양한 작업을 수행하는 방법에 대해 알아보려면 [샌드박스 개발자 안내서](../api/getting-started.md)를 참조하십시오. Experience Platform의 샌드박스에 대한 높은 수준의 개요는 [개요 설명서](../home.md)를 참조하십시오.
