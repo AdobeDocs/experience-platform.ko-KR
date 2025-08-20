@@ -6,9 +6,9 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: f038927d6a19db5e0187ccefd76d9ecc9df91b6a
+source-git-commit: 24ff17af89bc882f08ec0f331ebae53b61f35d78
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '787'
 ht-degree: 36%
 
 ---
@@ -92,6 +92,7 @@ ht-degree: 36%
          * [릴리스 정보](./extensions/client/client-data-layer/release-notes.md)
       * Adobe Content Analytics {#content-analytics}
          * [개요](./extensions/client/content-analytics/overview.md)
+         * [릴리스 정보](./extensions/client/content-analytics/release-notes.md)
       * Adobe Context허브 {#contexthub}
          * [개요](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
@@ -154,7 +155,7 @@ ht-degree: 36%
          * [릴리스 정보](./extensions/client/plugins/release-notes.md)
       * [연결](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
-      * [Usercentrics CMP v2의 쿠키 동의 관리](https://exchange.adobe.com/apps/ec/107037)
+      * Usercentrics CMP v2의 [쿠키 동의 관리](https://exchange.adobe.com/apps/ec/107037)
       * 코어 {#core}
          * [개요](./extensions/client/core/overview.md)
          * [릴리스 정보](./extensions/client/core/release-notes.md)
@@ -189,7 +190,7 @@ ht-degree: 36%
          * [개요](./extensions/client/meta/overview.md)
       * [모니터](https://exchange.adobe.com/apps/ec/106544)
       * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
-      * [쿠키에 대한 OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)
+      * 쿠키에 대한 [OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)
       * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)
       * [Persado 연결](https://exchange.adobe.com/apps/ec/103745)
       * [Pinterest 전환 추적](https://exchange.adobe.com/apps/ec/100523)
@@ -231,7 +232,7 @@ ht-degree: 36%
          * [개요](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [개요](./extensions/server/braze/overview.md)
-      * [Google Analytics용 Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
+      * Google Analytics용 [Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
       * 코어 {#core}
          * [개요](./extensions/server/core/overview.md)
       * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)
