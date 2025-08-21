@@ -2,9 +2,10 @@
 title: Acxiom Real ID&trade; Audience Connection
 description: ' [!DNL Acxiom Real ID&trade; Audience Connection] 대상을 사용하여 [!DNL Acxiom''s Real ID] 기술로 대상을 향상하고  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등의 여러 플랫폼에 대상을 활성화합니다.'
 badge: label="Beta" type="Informative"
-source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
+exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
+source-git-commit: 1013487e2c38aeb1e2b0388f0c317afdcf02ba62
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '939'
 ht-degree: 3%
 
 ---
@@ -33,8 +34,8 @@ ht-degree: 3%
 ## 전제 조건 {#prerequisites}
 
 * **사용 약관 확인:** 새 [!DNL Acxiom Real ID Audience Connection] 대상을 구성하려면 [!DNL Acxiom's] 사용 약관 계약을 읽고 서명해야 합니다. 실행된 판매 주문이 완료되면 계약 링크를 받게 됩니다. 계약에 서명할 때까지 Experience Platform 대상 카탈로그에 [!DNL Acxiom Real ID Audience Connection] 대상 카드가 표시되지 않습니다. 계약에 동의하고 서명하면 [!DNL Adobe]이(가) 온보딩 프로세스를 완료하고 [!DNL Acxiom Real ID Audience Connection] 대상 카드가 표시됩니다.
-* **Adobe 조직 ID를 알고 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [!DNL Adobe's]조직 ID를 보는 방법&#x200B;*에 대한 자세한 내용은* [Experience Cloud의 조직](https://experienceleague.adobe.com/ko/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) 항목을 참조하십시오.
-* **[!DNL Acxiom's Real ID] 제품에 대한 라이선스 가져오기:** 라이선스를 얻으면 Real-Time CDP 내에서 Acxiom의 Real ID를 사용할 수 있도록 합니다. 자세한 내용은 [Acxiom 데이터 개선 사항](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)을 참조하십시오.
+* **Adobe 조직 ID를 알고 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [!DNL Adobe's]조직 ID를 보는 방법&#x200B;*에 대한 자세한 내용은* [Experience Cloud의 조직](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) 항목을 참조하십시오.
+* **[!DNL Acxiom's Real ID] 제품에 대한 라이선스 가져오기:** 라이선스를 얻으면 Real-Time CDP 내에서 Acxiom의 Real ID를 사용할 수 있도록 합니다. 자세한 내용은 [Acxiom 데이터 개선 사항](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)을 참조하십시오.
 
 
 ## 지원되는 ID {#supported-identities}
@@ -53,7 +54,7 @@ ht-degree: 3%
 | 대상자 원본 | 지원됨 | 설명 |
 |---------------|----------------|----------------|
 | Segmentation Service | ✓ | Experience Platform [세그먼테이션 서비스](https://experienceleague.adobe.com/ko/docs/experience-platform/segmentation/home)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](https://experienceleague.adobe.com/ko/docs/experience-platform/segmentation/ui/audience-portal#import-audience). |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#import-audience). |
 
 
 ## 지원되는 대상 {#supported-destinations}
@@ -88,11 +89,13 @@ ht-degree: 3%
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
->
->* 데이터를 활성화하려면 **대상 보기**, **대상 활성화**, **프로필 보기** 및 **세그먼트 보기** ![액세스 제어 권한](https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/home#permissions)이 필요합니다. ![액세스 제어 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/ui/overview)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* ID를 내보내려면 **ID 그래프 보기** ![액세스 제어 권한](https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/home#permissions)이 필요합니다.
+> 
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
-이 대상으로 대상을 활성화하는 방법에 대한 지침은 ![대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)를 참조하십시오.
+
+
+이 대상으로 대상을 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)를 참조하십시오.
 
 >[!NOTE]
 >
@@ -111,7 +114,7 @@ ht-degree: 3%
 
 
 
-**[!UICONTROL Source 필드]** 열에 해당 대상 필드에 매핑할 원본 특성의 이름을 입력하거나 화살표 아이콘을 선택하여 **[!UICONTROL 원본 필드 선택]** 화면을 엽니다. 그런 다음 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+**[!UICONTROL Source 필드]** 열에 해당 대상 필드에 매핑할 원본 특성의 이름을 입력하거나 화살표 아이콘을 선택하여 **[!UICONTROL 원본 필드 선택]** 화면을 엽니다. 그런 다음 **[!UICONTROL 다음]**을 선택합니다.
 ![매핑 화면](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 
@@ -129,7 +132,7 @@ ht-degree: 3%
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
-데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/data-governance/home)를 참조하십시오.
+데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)를 참조하십시오.
 
 ## 문제 해결 {#troubleshooting}
 
@@ -145,9 +148,3 @@ ht-degree: 3%
 ## 다음 단계 {#next-steps}
 
 이 자습서에 따라 선택한 대상 플랫폼에 대한 대상을 성공적으로 활성화했습니다. 그런 다음 대상 플랫폼 담당자에게 문의하여 캠페인 설정을 시작합니다.
-
-
-
-
-
-
