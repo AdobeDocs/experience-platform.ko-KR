@@ -114,7 +114,7 @@ ht-degree: 3%
 
 
 
-**[!UICONTROL Source 필드]** 열에 해당 대상 필드에 매핑할 원본 특성의 이름을 입력하거나 화살표 아이콘을 선택하여 **[!UICONTROL 원본 필드 선택]** 화면을 엽니다. 그런 다음 **[!UICONTROL 다음]**을 선택합니다.
+**[!UICONTROL Source 필드]** 열에 해당 대상 필드에 매핑할 원본 특성의 이름을 입력하거나 화살표 아이콘을 선택하여 **[!UICONTROL 원본 필드 선택]** 화면을 엽니다. 그런 다음 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 ![매핑 화면](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 
