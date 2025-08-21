@@ -2,10 +2,10 @@
 title: 확장 개발
 description: 이 문서에서는 태그 확장 개발 프로세스에 대한 일반적인 개요를 제공하고, 보다 자세한 프로세스를 안내하는 추가 설명서에 대한 링크를 제공합니다.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: cfcc70d66a34fa51bf0e21525539ba88de7fc367
+source-git-commit: 73452d0735c6a040ddd25b4cd00cec4b91eaf7ae
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 31%
+source-wordcount: '447'
+ht-degree: 29%
 
 ---
 
@@ -23,9 +23,7 @@ ht-degree: 31%
 
 적합한 플랜을 통해 확장 개발 프로세스를 이해하는 데 도움이 됩니다.
 
-* 왼쪽 탐색 메뉴의 **확장 개발**&#x200B;에 있는 [시작 안내서](../getting-started.md) 및 기타 문서는 확장을 이해하는 데 유용한 참조 자료입니다. 여기에는 확장의 기능, 확장과 Adobe Experience Platform 간에 사용자 정보가 저장 및 전달되는 방법, 코드가 라이브러리에 번들로 제공되는 방법, 브라우저에서 런타임 시 확장 코드가 해석 및 사용되는 방법에 대한 세부 정보가 포함됩니다.
-<!-- * The [extension tutorial video](https://youtu.be/rxjtC9o4rl0) is a great place to start. -->
-* [확장 소개](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) YouTube 재생 목록은 확장 패키지를 개발하기 위한 프로세스를 안내합니다.
+* 왼쪽 탐색 메뉴의 [확장 개발](../getting-started.md)에 있는 **시작 안내서** 및 기타 문서는 확장을 이해하는 데 유용한 참조 자료입니다. 여기에는 확장의 기능, 확장과 Adobe Experience Platform 간에 사용자 정보가 저장 및 전달되는 방법, 코드가 라이브러리에 번들로 제공되는 방법, 브라우저에서 런타임 시 확장 코드가 해석 및 사용되는 방법에 대한 세부 정보가 포함됩니다.
 * [JSON 스키마 아티클 이해](https://spacetelescope.github.io/understanding-json-schema/index.html#).
 * [JSON Lint/유효성 검사기](https://jsonlint.com/).
 * JSON 및 JSONP를 강조 및 인쇄하는 [JSON 뷰어](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) Chrome 확장.
