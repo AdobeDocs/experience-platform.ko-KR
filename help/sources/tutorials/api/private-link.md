@@ -3,9 +3,9 @@ title: API의 소스에 대해 Azure 개인 링크 사용
 description: Adobe Experience Platform 소스에 대한 개인 링크를 만들고 사용하는 방법을 알아봅니다
 badge: Beta
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 52365851aef0e0e0ad532ca19a8e0ddccacf7af7
+source-git-commit: 65063d3b81d7082fc7780949c6ebd2ce09461b88
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1657'
 ht-degree: 3%
 
 ---
@@ -398,9 +398,13 @@ curl -X GET \
 
 +++
 
-## 대화형 작성 활성화 {#enable-interactive-authoring}
+## [!DNL Interactive Authoring] 사용 {#enable-interactive-authoring}
 
-대화형 작성은 연결 또는 계정을 탐색하고 데이터를 미리 보는 것과 같은 기능에 사용됩니다. 대화형 작성을 활성화하려면 `/privateEndpoints/interactiveAuthoring`에 POST를 요청하고 쿼리 매개 변수에 `enable`을(를) 연산자로 지정하십시오.
+>[!IMPORTANT]
+>
+>흐름을 만들거나 업데이트하기 전과 연결을 만들거나 업데이트하거나 탐색하기 전에 [!DNL Interactive Authoring]을(를) 사용하도록 설정해야 합니다.
+
+[!DNL Interactive Authoring]은(는) 연결 또는 계정을 탐색하고 데이터를 미리 보는 것과 같은 기능에 사용됩니다. [!DNL Interactive Authoring]을(를) 사용하려면 `/privateEndpoints/interactiveAuthoring`에 POST를 요청하고 쿼리 매개 변수에 `enable`을(를) 연산자로 지정하십시오.
 
 **API 형식**
 
@@ -410,11 +414,11 @@ POST /privateEndpoints/interactiveAuthoring?op=enable
 
 | 쿼리 매개변수 | 설명 |
 | --- | --- |
-| `op` | 수행할 작업입니다. 대화형 작성을 사용하려면 `op` 값을 `enable`(으)로 설정하십시오. |
+| `op` | 수행할 작업입니다. [!DNL Interactive Authoring]을(를) 사용하려면 `op` 값을 `enable`(으)로 설정하십시오. |
 
 **요청**
 
-다음 요청은 비공개 엔드포인트에 대한 대화형 작성을 활성화하고 TTL을 60분으로 설정합니다.
+다음 요청은 개인 끝점에 대해 [!DNL Interactive Authoring]을(를) 활성화하고 TTL을 60분으로 설정합니다.
 
 +++요청 예제를 보려면 선택
 
@@ -433,7 +437,7 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `autoTerminationMinutes` | 대화형 작성 TTL(time-to-live)(분)입니다. 대화형 작성은 연결 또는 계정을 탐색하고 데이터를 미리 보는 것과 같은 기능에 사용됩니다. 최대 TTL은 120분으로 설정할 수 있습니다. 기본 TTL은 60분입니다. |
+| `autoTerminationMinutes` | [!DNL Interactive Authoring] TTL(time-to-live)(분)입니다. [!DNL Interactive Authoring]은(는) 연결 또는 계정을 탐색하고 데이터를 미리 보는 것과 같은 기능에 사용됩니다. 최대 TTL은 120분으로 설정할 수 있습니다. 기본 TTL은 60분입니다. |
 
 +++
 
@@ -441,9 +445,9 @@ curl -X POST \
 
 성공적인 응답은 HTTP 상태 202(허용됨)를 반환합니다.
 
-## 대화형 작성 상태 검색 {#retrieve-interactive-authoring-status}
+## [!DNL Interactive Authoring] 상태 검색 {#retrieve-interactive-authoring-status}
 
-개인 끝점에 대한 대화형 작성의 현재 상태를 보려면 `/privateEndpoints/interactiveAuthoring`에 GET을 요청하십시오.
+개인 끝점에 대한 [!DNL Interactive Authoring]의 현재 상태를 보려면 `/privateEndpoints/interactiveAuthoring`에 GET 요청을 하십시오.
 
 **API 형식**
 
@@ -453,7 +457,7 @@ GET /privateEndpoints/interactiveAuthoring
 
 **요청**
 
-다음 요청은 대화형 작성 상태를 검색합니다.
+다음 요청은 [!DNL Interactive Authoring]의 상태를 검색합니다.
 
 +++요청 예제를 보려면 선택
 
@@ -481,7 +485,7 @@ curl -X GET \
 
 | 속성 | 설명 |
 | --- | --- |
-| `status` | 대화형 작성 상태입니다. 유효한 값은 `disabled`, `enabling`, `enabled`입니다. |
+| `status` | [!DNL Interactive Authoring]의 상태입니다. 유효한 값은 `disabled`, `enabling`, `enabled`입니다. |
 
 +++
 
@@ -819,3 +823,124 @@ curl -X GET \
 ```
 
 +++
+
+## 부록
+
+API에서 [!DNL Azure] 개인 링크를 사용하는 방법에 대한 자세한 내용은 이 섹션을 참조하십시오.
+
+### 개인 링크에 연결하도록 [!DNL Snowflake] 계정 구성
+
+전용 링크에서 [!DNL Snowflake] 원본을 사용하려면 다음 필수 구성 요소 단계를 완료해야 합니다.
+
+먼저 [!DNL Snowflake]에서 지원 티켓을 발생시키고 **계정의** 영역의 [!DNL Azure]끝점 서비스 리소스 ID[!DNL Snowflake]를 요청해야 합니다. [!DNL Snowflake] 티켓을 높이려면 아래 단계를 따르십시오.
+
+1. [[!DNL Snowflake] UI](https://app.snowflake.com)&#x200B;(으)로 이동하여 전자 메일 계정으로 로그인합니다. 이 단계에서는 프로필 설정에서 이메일이 확인되었는지 확인해야 합니다.
+2. **사용자 메뉴**&#x200B;를 선택한 다음 **지원**&#x200B;을 선택하여 [!DNL Snowflake] 지원에 액세스하세요.
+3. 지원 사례를 만들려면 **[!DNL + Support Case]**&#x200B;을(를) 선택하십시오. 그런 다음 관련 세부 사항을 작성하여 필요한 파일을 첨부합니다.
+4. 완료되면 사례를 제출합니다.
+
+끝점 리소스 ID의 형식은 다음과 같습니다.
+
+```shell
+subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-az{REGION}
+```
+
++++예를 보려면 선택
+
+```shell
+/subscriptions/4575fb04-6859-4781-8948-7f3a92dc06a3/resourceGroups/azwestus2-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-azwestus2
+```
+
++++
+
+| 매개변수 | 설명 | 예 |
+| --- | --- | --- |
+| `{SUBSCRIPTION_ID}` | [!DNL Azure] 구독을 식별하는 고유 ID입니다. | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
+| `{REGION}` | [!DNL Azure] 계정의 [!DNL Snowflake] 영역입니다. | `azwestus2` |
+
+### 개인 링크 구성 세부 정보 검색
+
+개인 링크 구성 세부 정보를 검색하려면 [!DNL Snowflake]에서 다음 명령을 실행해야 합니다.
+
+```sql
+USE ROLE accountadmin;
+SELECT key, value::varchar
+FROM TABLE(FLATTEN(input => PARSE_JSON(SYSTEM$GET_PRIVATELINK_CONFIG())));
+```
+
+그런 다음 다음 다음 속성에 대한 값을 검색합니다.
+
+* `privatelink-account-url`
+* `regionless-privatelink-account-url`
+* `privatelink_ocsp-url`
+
+값을 검색하면 다음 호출을 수행하여 [!DNL Snowflake]에 대한 개인 링크를 만들 수 있습니다.
+
+**요청**
+
+다음 요청은 [!DNL Snowflake]에 대한 개인 끝점을 만듭니다.
+
+>[!BEGINTABS]
+
+>[!TAB 템플릿]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints/' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "{ENDPOINT_NAME}",
+    "subscriptionId": "{AZURE_SUBSCRIPTION_ID}",
+    "resourceGroupName": "{RESOURCE_GROUP_NAME}",
+    "resourceName": "{SNOWFLAKE_ENDPOINT_SERVICE_NAME}",
+    "fqdns": [
+      "{PRIVATELINK_ACCOUNT_URL}",
+      "{REGIONLESS_PRIVATELINK_ACCOUNT_URL}",
+      "{PRIVATELINK_OCSP_URL}"
+    ],
+    "connectionSpec": {
+      "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+      "version": "1.0"
+    }
+  }'
+```
+
+>[!TAB 예]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints/' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "TEST_Snowflake_PE",
+    "subscriptionId": "4575fb04-6859-4781-8948-7f3a92dc06a3",
+    "resourceGroupName": "azwestus2-privatelink",
+    "resourceName": "sf-pvlinksvc-azwestus2",
+    "fqdns": [
+      "hf06619.west-us-2.privatelink.snowflakecomputing.com",
+      "adobe-segmentationdbint.privatelink.snowflakecomputing.com",
+      "ocsp.hf06619.west-us-2.privatelink.snowflakecomputing.com"
+    ],
+    "connectionSpec": {
+      "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+      "version": "1.0"
+    }
+  }'
+```
+
+
+>[!ENDTABS]
+
+### [!DNL Azure Blob] 및 [!DNL Azure Data Lake Gen2]에 대한 비공개 끝점 승인
+
+[!DNL Azure Blob] 및 [!DNL Azure Data Lake Gen2] 소스에 대한 비공개 끝점 요청을 승인하려면 [!DNL Azure Portal]에 로그인합니다. 왼쪽 탐색에서 **[!DNL Data storage]**&#x200B;을(를) 선택한 다음 **[!DNL Security + networking]** 탭으로 이동하여 **[!DNL Networking]**&#x200B;을(를) 선택합니다. **[!DNL Private endpoints]**&#x200B;을(를) 선택하여 계정과 연결된 개인 끝점 목록과 현재 연결 상태를 확인합니다. 보류 중인 요청을 승인하려면 원하는 끝점을 선택하고 **[!DNL Approve]**&#x200B;을(를) 클릭합니다.
+
+![보류 중인 개인 끝점 목록이 있는 Azure 포털입니다.](../../images/tutorials/private-links/azure.png)
