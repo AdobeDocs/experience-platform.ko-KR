@@ -2,7 +2,7 @@
 title: 라이선스 사용 및 용량
 description: Adobe Experience Platform 내의 라이선스 사용 및 용량 제한에 대해 알아봅니다.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 1bde1f2c1bd33756bd20a2524b50d5a2b4bc464e
+source-git-commit: d0b54e15f132d85964d6458da0769548d231a9c4
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 6%
@@ -103,7 +103,7 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 
 #### 스트리밍 처리량 {#streaming-throughput}
 
-스트리밍 처리량 섹션에는 조직의 샌드박스 전체에서 스트리밍 처리량에 대한 정보가 표시됩니다. 스트리밍 처리량 값은 프로필 서비스로 스트리밍 수집하기 위한 초당 결합된 최대 인바운드 이벤트를 측정합니다.
+스트리밍 처리량 섹션에는 조직 샌드박스 내의 스트리밍 처리량에 대한 정보가 표시됩니다. 스트리밍 처리량 값은 프로필 서비스로 스트리밍 수집하기 위한 초당 결합된 최대 인바운드 이벤트를 측정합니다.
 
 ![용량 세부 정보 페이지에 스트리밍 처리량 섹션이 표시됩니다.](/help/landing/images/capacity/streaming-throughput-section.png)
 
