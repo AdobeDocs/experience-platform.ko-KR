@@ -1,17 +1,16 @@
 ---
-title: 소스의 비공개 링크 지원
+title: API의 소스에 대해 Azure 개인 링크 사용
 description: Adobe Experience Platform 소스에 대한 개인 링크를 만들고 사용하는 방법을 알아봅니다
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: 4c91ffc60a2537fcc76ce935bf3b163984fdc5e4
+exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
+source-git-commit: 52365851aef0e0e0ad532ca19a8e0ddccacf7af7
 workflow-type: tm+mt
-source-wordcount: '1326'
-ht-degree: 5%
+source-wordcount: '1380'
+ht-degree: 3%
 
 ---
 
-# 소스의 비공개 링크 지원
+# API의 소스에 [!DNL Azure Private Link] 사용
 
 >[!AVAILABILITY]
 >
@@ -22,11 +21,13 @@ ht-degree: 5%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-비공개 링크를 통해 Azure 기반 소스에 비공개 끝점 연결을 설정하고 데이터에 대한 보다 안전한 전송 메커니즘을 허용하는 방법에 대해 알아보려면 이 안내서를 읽어 보십시오.
+[!DNL Azure Private Link] 기능을 사용하여 연결할 Adobe Experience Platform 소스의 개인 끝점을 만들 수 있습니다. 비공개 IP 주소를 사용하여 가상 네트워크에 원본을 안전하게 연결하여 공용 IP를 사용하지 않아도 되며 공격 표면을 줄일 수 있습니다.복잡한 방화벽 또는 네트워크 주소 변환 구성을 사용하지 않고 데이터 트래픽이 승인된 서비스에만 도달하도록 하여 네트워크 설정을 단순화합니다.
+
+API를 사용하여 개인 엔드포인트를 만들고 사용하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
 
 ## 시작
 
-이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
+이 안내서를 사용하려면 Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [소스](../../home.md): Experience Platform을 사용하면 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
 * [샌드박스](../../../sandboxes/home.md): Experience Platform은 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
@@ -75,9 +76,9 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `name` | 비공개 엔드포인트의 이름. |
-| `subscriptionId` | [!DNL Azure] 구독과 연계된 ID. 자세한 내용은 [구독 및 테넌트 ID 검색 [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id)에 대한 [!DNL Azure] 가이드를 참조하십시오. |
-| `resourceGroupName` | [!DNL Azure]에 있는 리소스 그룹의 이름입니다. 리소스 그룹에 [!DNL Azure] 솔루션에 대한 관련 리소스가 포함되어 있습니다. 자세한 내용은 [리소스 그룹 관리](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)에 대한 [!DNL Azure] 안내서를 참조하십시오. |
-| `resourceName` | 리소스의 이름입니다. [!DNL Azure]에서 리소스는 가상 컴퓨터, 웹 앱 및 데이터베이스와 같은 인스턴스를 참조합니다. 자세한 내용은 [리소스 관리자 이해 [!DNL Azure] 에 대한 [!DNL Azure] 안내서를 참조하십시오.](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) |
+| `subscriptionId` | [!DNL Azure] 구독과 연계된 ID. 자세한 내용은 [!DNL Azure]구독 및 테넌트 ID 검색[ [!DNL Azure Portal]에 대한 ](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) 가이드를 참조하십시오. |
+| `resourceGroupName` | [!DNL Azure]에 있는 리소스 그룹의 이름입니다. 리소스 그룹에 [!DNL Azure] 솔루션에 대한 관련 리소스가 포함되어 있습니다. 자세한 내용은 [!DNL Azure]리소스 그룹 관리[에 대한 ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) 안내서를 참조하십시오. |
+| `resourceName` | 리소스의 이름입니다. [!DNL Azure]에서 리소스는 가상 컴퓨터, 웹 앱 및 데이터베이스와 같은 인스턴스를 참조합니다. 자세한 내용은 [!DNL Azure]리소스 관리자 이해[에 대한  [!DNL Azure]  안내서를 참조하십시오.](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) |
 | `fqdns` | 소스에 대해 정규화된 도메인 이름. 이 속성은 [!DNL Snowflake] 원본을 사용하는 경우에만 필요합니다. |
 | `connectionSpec.id` | 사용 중인 소스의 연결 사양 ID입니다. |
 | `connectionSpec.version` | 사용 중인 연결 사양 ID의 버전입니다. |
@@ -110,9 +111,9 @@ curl -X POST \
 | --- | --- |
 | `id` | 새로 만든 비공개 엔드포인트의 ID입니다. |
 | `name` | 비공개 엔드포인트의 이름. |
-| `subscriptionId` | [!DNL Azure] 구독과 연계된 ID. 자세한 내용은 [구독 및 테넌트 ID 검색 [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id)에 대한 [!DNL Azure] 가이드를 참조하십시오. |
-| `resourceGroupName` | [!DNL Azure]에 있는 리소스 그룹의 이름입니다. 리소스 그룹에 [!DNL Azure] 솔루션에 대한 관련 리소스가 포함되어 있습니다. 자세한 내용은 [리소스 그룹 관리](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)에 대한 [!DNL Azure] 안내서를 참조하십시오. |
-| `resourceName` | 리소스의 이름입니다. [!DNL Azure]에서 리소스는 가상 컴퓨터, 웹 앱 및 데이터베이스와 같은 인스턴스를 참조합니다. 자세한 내용은 [리소스 관리자 이해 [!DNL Azure] 에 대한 [!DNL Azure] 안내서를 참조하십시오.](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) |
+| `subscriptionId` | [!DNL Azure] 구독과 연계된 ID. 자세한 내용은 [!DNL Azure]구독 및 테넌트 ID 검색[ [!DNL Azure Portal]에 대한 ](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) 가이드를 참조하십시오. |
+| `resourceGroupName` | [!DNL Azure]에 있는 리소스 그룹의 이름입니다. 리소스 그룹에 [!DNL Azure] 솔루션에 대한 관련 리소스가 포함되어 있습니다. 자세한 내용은 [!DNL Azure]리소스 그룹 관리[에 대한 ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) 안내서를 참조하십시오. |
+| `resourceName` | 리소스의 이름입니다. [!DNL Azure]에서 리소스는 가상 컴퓨터, 웹 앱 및 데이터베이스와 같은 인스턴스를 참조합니다. 자세한 내용은 [!DNL Azure]리소스 관리자 이해[에 대한  [!DNL Azure]  안내서를 참조하십시오.](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) |
 | `fqdns` | 소스에 대해 정규화된 도메인 이름. 이 속성은 [!DNL Snowflake] 원본을 사용하는 경우에만 필요합니다. |
 | `connectionSpec.id` | 사용 중인 소스의 연결 사양 ID입니다. |
 | `connectionSpec.version` | 사용 중인 연결 사양 ID의 버전입니다. |
@@ -526,7 +527,7 @@ curl -X DELETE \
 
 ### 개인 끝점으로 연결 만들기 {#create-base-connection}
 
-Experience Platform에서 개인 끝점으로 연결을 만들려면 [!DNL Flow Service] API의 `/connections` 끝점에 대한 POST 요청을 만듭니다.
+Experience Platform에서 개인 끝점으로 연결을 만들려면 `/connections` API의 [!DNL Flow Service] 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 

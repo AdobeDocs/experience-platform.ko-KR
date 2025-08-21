@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 Azure Blob 저장소를 Experience Platform에 연결
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Azure Blob에 연결하는 방법을 알아봅니다.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
+source-git-commit: 8e932a25026bef2b785cfddfb8b668b1dd47eb0d
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '657'
 ht-degree: 3%
 
 ---
@@ -169,7 +169,7 @@ curl -X POST \
 | `serviceEndpoint` | [!DNL Azure Blob Storage] 계정의 끝점 URL입니다. 일반적으로 형식은 `https://{ACCOUNT_NAME}.blob.core.windows.net`입니다. |
 | `servicePrincipalId` | 인증에 사용되는 Azure Active Directory(AAD) 서비스 사용자의 클라이언트/응용 프로그램 ID입니다. |
 | `servicePrincipalKey` | Azure 서비스 주체와 연결된 클라이언트 암호 또는 암호입니다. |
-| `accountKind` | [!DNL Azure Blob Storage] 계정의 형식입니다. 일반적인 값은 `StorageV2`, `BlobStorage` 또는 `Storage`입니다. |
+| `accountKind` | [!DNL Azure Blob Storage] 계정의 형식입니다. 일반적인 값에는 `Storage`(일반 목적 V1), `StorageV2`(일반 목적 V2), `BlobStorage` 및 `BlockBlobStorage`이(가) 포함됩니다. |
 | `tenant` | 서비스 주체가 등록된 Azure Active Directory(AAD) 테넌트 ID입니다. |
 | `container` | 데이터 파일이 저장된 [!DNL Azure Blob Storage] 컨테이너의 이름입니다. |
 | `folderPath` | 파일이 있는 지정된 컨테이너 내의 경로입니다. |

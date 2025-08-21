@@ -2,9 +2,9 @@
 title: Azure Blob Source 커넥터 개요
 description: Azure Blob 계정을 Experience Platform에 연결하는 방법 알아보기
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: f659d78eebc1c5e74021f9a41a2a489389a6588e
+source-git-commit: 8e932a25026bef2b785cfddfb8b668b1dd47eb0d
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 0%
 | 자격 증명 | 설명 |
 | --- | --- |
 | `serviceEndpoint` | [!DNL Azure Blob Storage] 계정의 끝점 URL입니다. 일반적으로 형식은 `https://{ACCOUNT_NAME}.blob.core.windows.net`입니다. |
-| `accountKind` | [!DNL Azure Blob Storage] 계정의 형식입니다. 일반적인 값은 `StorageV2`, `BlobStorage` 또는 `Storage`입니다. |
+| `accountKind` | [!DNL Azure Blob Storage] 계정의 형식입니다. 일반적인 값에는 `Storage`(일반 목적 V1), `StorageV2`(일반 목적 V2), `BlobStorage` 및 `BlockBlobStorage`이(가) 포함됩니다. |
 | `servicePrincipalId` | 인증에 사용되는 Azure Active Directory(AAD) 서비스 사용자의 클라이언트/응용 프로그램 ID입니다. |
 | `servicePrincipalKey` | Azure 서비스 주체와 연결된 클라이언트 암호 또는 암호입니다. |
 | `tenant` | 서비스 주체가 등록된 Azure Active Directory(AAD) 테넌트 ID입니다. |
