@@ -21,7 +21,7 @@ Adobe Experience Platform을 사용하면 각 개별 고객에 대해 [!DNL Real
 
 다음 비디오에서는 스트리밍 수집에 대한 이해를 돕기 위해 제작되었으며 위의 개념에 대해 간략히 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31706?quality=12&learn=on&captions=kor)
 
 ### 프로필 레코드 및 [!DNL ExperienceEvents] 스트리밍
 
