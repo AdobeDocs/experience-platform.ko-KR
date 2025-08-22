@@ -3,10 +3,10 @@ keywords: 비행선 태그;비행선 목적지
 title: 비행선 태그 연결
 description: Airship 내에서 타깃팅할 대상 태그로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5619424024eff81fca21408288494402e2a4d4ff
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 2%
+source-wordcount: '1082'
+ht-degree: 5%
 
 ---
 
@@ -14,9 +14,17 @@ ht-degree: 2%
 
 ## 개요
 
+>[!IMPORTANT]
+>
+>* 2025년 8월 21일 금요일부터 대상 카탈로그에 두 개의 **[!DNL Airship Tags]** 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!DNL Airship Tags]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) 비행선 태그]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL 비행선 태그]**&#x200B;인 새 카드를 사용할 수 있습니다.
+>* 새 활성화 데이터 흐름을 위해 카탈로그의 새 **[!UICONTROL 비행선 태그]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않는) 비행선 태그]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 조치가 필요하지 않습니다.
+>* [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다.
+>   * 흐름 사양 ID: `0c7e71c8-4d60-4685-a216-77f57e37b04a`
+>   * 연결 사양 ID: `aec13e22-8226-4b5d-9961-6baa35b251d2`
+
 [!DNL Airship]은(는) 선도적인 고객 참여 플랫폼으로, 고객 라이프사이클의 모든 단계에서 사용자에게 의미 있고 개인화된 옴니채널 메시지를 제공할 수 있습니다.
 
-이 통합은 타깃팅 또는 트리거를 위해 Adobe Experience Platform 대상 데이터를 [태그](https://docs.airship.com/guides/audience/tags/)&#x200B;(으)로 [!DNL Airship]에 전달합니다.
+이 통합은 타깃팅 또는 트리거를 위해 Adobe Experience Platform 대상 데이터를 [!DNL Airship]태그[(으)로 ](https://docs.airship.com/guides/audience/tags/)에 전달합니다.
 
 [!DNL Airship]에 대한 자세한 내용은 [비행선 문서](https://docs.airship.com)를 참조하세요.
 
@@ -34,7 +42,7 @@ Adobe Experience Platform 대상자를 [!DNL Airship]&#x200B;(으)로 보내려�
 
 >[!TIP]
 > 
->아직 만들지 않은 경우 [이 등록 링크](https://go.airship.eu/accounts/register/plan/starter/)를 통해 [!DNL Airship] 계정을 만드십시오.
+>아직 만들지 않은 경우 [!DNL Airship]이 등록 링크[를 통해 ](https://go.airship.eu/accounts/register/plan/starter/) 계정을 만드십시오.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -60,19 +68,19 @@ Adobe Experience Platform 대상자를 [!DNL Airship]&#x200B;(으)로 보내려�
 
 ## 태그 그룹
 
-Adobe Experience Platform의 대상자 개념은 Airship의 [Tags](https://docs.airship.com/guides/audience/tags/)와 유사하며 구현에 약간의 차이가 있습니다. 이 통합은 Experience Platform 세그먼트 [&#128279;](../../../xdm/field-groups/profile/segmentation.md)에서 사용자의 멤버십 상태를 [!DNL Airship] 태그의 존재 여부에 매핑합니다. 예를 들어 `xdm:status`이(가) `realized`(으)로 변경되는 Experience Platform 대상에서는 태그가 [!DNL Airship] 채널 또는 이 프로필이 매핑된 명명된 사용자에 추가됩니다. `xdm:status`이(가) `exited`(으)로 변경되면 태그가 제거됩니다.
+Adobe Experience Platform의 대상자 개념은 Airship의 [Tags](https://docs.airship.com/guides/audience/tags/)와 유사하며 구현에 약간의 차이가 있습니다. 이 통합은 Experience Platform 세그먼트 [에서 사용자의 ](../../../xdm/field-groups/profile/segmentation.md)멤버십 상태를 [!DNL Airship] 태그의 존재 여부에 매핑합니다. 예를 들어 `xdm:status`이(가) `realized`(으)로 변경되는 Experience Platform 대상에서는 태그가 [!DNL Airship] 채널 또는 이 프로필이 매핑된 명명된 사용자에 추가됩니다. `xdm:status`이(가) `exited`(으)로 변경되면 태그가 제거됩니다.
 
-이 통합을 사용하려면 [!DNL Airship]&#x200B;(이름: `adobe-segments`)에 *태그 그룹*&#x200B;을(를) 만드십시오.
+이 통합을 사용하려면 *(이름:*)에 [!DNL Airship]태그 그룹`adobe-segments`을(를) 만드십시오.
 
 >[!IMPORTANT]
 >
->새 태그 그룹을 만들 때 **라디오 단추(&quot;[!DNL Allow these tags to be set only from your server]&quot;)를 확인하지 마십시오**. 이렇게 하면 Adobe 태그 통합이 실패합니다.
+>새 태그 그룹을 만들 때 **라디오 단추(&quot;**&quot;)를 확인하지 마십시오[!DNL Allow these tags to be set only from your server]. 이렇게 하면 Adobe 태그 통합이 실패합니다.
 
 태그 그룹 만들기에 대한 지침은 [태그 그룹 관리](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups)를 참조하십시오.
 
 ## 전달자 토큰 생성
 
-[비행선 대시보드](https://go.airship.com)의 **[!UICONTROL 설정]**&quot; **[!UICONTROL API 및 통합]**(으)로 이동한 다음 왼쪽 메뉴에서 **[!UICONTROL 토큰]**&#x200B;을(를) 선택하십시오.
+**[!UICONTROL 비행선 대시보드]**&#x200B;의 **[!UICONTROL 설정]**&quot; [API 및 통합](https://go.airship.com)&#x200B;(으)로 이동한 다음 왼쪽 메뉴에서 **[!UICONTROL 토큰]**&#x200B;을(를) 선택하십시오.
 
 **[!UICONTROL 토큰 만들기]**&#x200B;를 클릭합니다.
 
@@ -132,7 +140,7 @@ Adobe Experience Platform의 대상자 개념은 Airship의 [Tags](https://docs.
 
 ## 매핑 고려 사항 {#mapping-considerations}
 
-[!DNL Airship] 태그는 장치 인스턴스(예: iPhone)를 나타내는 채널 또는 사용자의 모든 장치를 고객 ID와 같은 공통 식별자에 매핑하는 명명된 사용자에 설정할 수 있습니다. 스키마에 기본 ID로 일반 텍스트(해시되지 않은) 이메일 주소가 있는 경우 **[!UICONTROL Source 특성]**&#x200B;에서 이메일 필드를 선택하고 아래와 같이 **[!UICONTROL Target ID]** 아래의 오른쪽 열에 있는 [!DNL Airship] 명명된 사용자에게 매핑합니다.
+[!DNL Airship] 태그는 장치 인스턴스(예: iPhone)를 나타내는 채널 또는 사용자의 모든 장치를 고객 ID와 같은 공통 식별자에 매핑하는 명명된 사용자에 설정할 수 있습니다. 스키마에 기본 ID로 일반 텍스트(해시되지 않은) 이메일 주소가 있는 경우 **[!UICONTROL Source 특성]**&#x200B;에서 이메일 필드를 선택하고 아래와 같이 [!DNL Airship]Target ID **[!UICONTROL 아래의 오른쪽 열에 있는]** 명명된 사용자에게 매핑합니다.
 
 ![명명된 사용자 매핑](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
