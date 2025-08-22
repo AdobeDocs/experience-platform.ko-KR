@@ -3,7 +3,7 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 한 대상자 타겟팅, 개인화 및 억제에 대한 Facebook 캠페인을 위한 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 6ca3687d067044c3fcb9455ec287863c4ffaafd2
+source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
 workflow-type: tm+mt
 source-wordcount: '2690'
 ht-degree: 5%
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 해시된 이메일을 기반으로 한 대상자 타겟팅, 개인화 및 제외를 위해 [!DNL Facebook] 캠페인에 대한 프로필을 활성화합니다.
 
-[!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] 및 [!DNL Messenger]을(를) 포함하여 [!DNL Custom Audiences]에서 지원하는 [!DNL Facebook's] 앱 제품군의 대상 타깃팅에 이 대상을 사용할 수 있습니다. 캠페인을 실행할 앱의 선택은 [!DNL Facebook Ads Manager]의 배치 수준에서 표시됩니다.
+[!DNL Facebook's], [!DNL Custom Audiences], [!DNL Facebook] 및 [!DNL Instagram]을(를) 포함하여 [!DNL Audience Network]에서 지원하는 [!DNL Messenger] 앱 제품군의 대상 타깃팅에 이 대상을 사용할 수 있습니다. 캠페인을 실행할 앱의 선택은 [!DNL Facebook Ads Manager]의 배치 수준에서 표시됩니다.
 
 ![Adobe Experience Platform UI의 Facebook 대상입니다.](../../assets/catalog/social/facebook/catalog.png)
 
@@ -128,7 +128,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 이메일 주소를 직접 해시하도록 선택하는 경우 다음 요구 사항을 준수해야 합니다.
 
-* 전자 메일 문자열에서 선행 및 후행 공백을 모두 트리밍합니다. 예: `<space>johndoe@example.com<space>`이(가) 아닌 `johndoe@example.com`;
+* 전자 메일 문자열에서 선행 및 후행 공백을 모두 트리밍합니다. 예: `johndoe@example.com`이(가) 아닌 `<space>johndoe@example.com<space>`;
 * 이메일 문자열을 해시할 때는 소문자 문자열을 해시해야 합니다.
    * 예: `example@email.com`, `EXAMPLE@EMAIL.COM` 아님;
 * 해시된 문자열이 모두 소문자인지 확인합니다.
@@ -138,8 +138,8 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 >[!NOTE]
 >
 >해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Experience Platform]에 의해 자동으로 해시됩니다.
->&#x200B;> 속성 소스 데이터는 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오.
->&#x200B;> **[!UICONTROL 변환 적용]** 옵션은 특성을 소스 필드로 선택하는 경우에만 표시됩니다. 네임스페이스를 선택하면 표시되지 않습니다.
+>> 속성 소스 데이터는 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오.
+>> **[!UICONTROL 변환 적용]** 옵션은 특성을 소스 필드로 선택하는 경우에만 표시됩니다. 네임스페이스를 선택하면 표시되지 않습니다.
 
 ![매핑 단계에서 강조 표시된 변환 컨트롤을 적용합니다.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -157,7 +157,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 아래 비디오에서는 [!DNL Facebook] 대상을 구성하고 대상을 활성화하는 단계도 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -166,7 +166,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 Facebook 대상을 찾고 **[!UICONTROL 설정]**&#x200B;을 선택합니다.
-2. **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다.
+2. **[!UICONTROL 대상에 연결]**을 선택합니다.
    ![활성화 워크플로에 표시된 Facebook 인증 단계입니다.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Facebook 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 
@@ -174,7 +174,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 Facebook 인증 토큰은 60일마다 만료됩니다. 토큰이 만료되면 대상으로의 데이터 내보내기가 더 이상 작동하지 않습니다.
 
-**[!UICONTROL 계정]** 또는 **[!UICONTROL 찾아보기]** 탭의 **[!UICONTROL 계정 만료 날짜]** 열에서 토큰 만료 날짜를 모니터링할 수 있습니다.
+**[!UICONTROL 계정]** 또는 **[[!UICONTROL 찾아보기]](../../ui/destinations-workspace.md#accounts)** 탭의 **[[!UICONTROL 계정 만료 날짜]](../../ui/destinations-workspace.md#browse)** 열에서 토큰 만료 날짜를 모니터링할 수 있습니다.
 
 ![찾아보기 탭의 Facebook 계정 토큰 만료 날짜 열](../../assets/catalog/social/facebook/account-expiration-browse.png)
 
@@ -185,9 +185,9 @@ Facebook 인증 토큰은 60일마다 만료됩니다. 토큰이 만료되면 �
 1. **[!UICONTROL 대상]** > **[!UICONTROL 계정]**(으)로 이동
 2. (선택 사항) 페이지에서 사용할 수 있는 필터를 사용하여 Facebook 계정만 표시합니다.
    ![Facebook 계정만 표시하도록 필터링](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
-3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**&#x200B;을 선택합니다.
+3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**을 선택합니다.
    ![세부 정보 편집 컨트롤 선택](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**&#x200B;을 선택하고 Facebook 자격 증명으로 다시 인증합니다.
+4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**을 선택하고 Facebook 자격 증명으로 다시 인증합니다.
    ![다시 연결 OAuth 옵션이 있는 모달 창](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
@@ -242,7 +242,7 @@ Facebook 인증 토큰은 60일마다 만료됩니다. 토큰이 만료되면 �
 
 이 대상에 대한 대상 활성화에 대한 지침은 [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
-**[!UICONTROL 세그먼트 일정]** 단계에서는 [!DNL Facebook Custom Audiences]에 대상자를 보낼 때 [!UICONTROL 대상자 원본]을 제공해야 합니다.
+**[!UICONTROL 세그먼트 일정]** 단계에서는 [!UICONTROL 에 대상자를 보낼 때 ]대상자 원본[!DNL Facebook Custom Audiences]을 제공해야 합니다.
 
 ![Facebook 활성화 단계에 표시된 대상자 원본 드롭다운입니다.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
@@ -253,17 +253,17 @@ Facebook 인증 토큰은 60일마다 만료됩니다. 토큰이 만료되면 �
 소스 필드 선택:
 
 * 사용 중인 전자 메일 주소가 해시되지 않은 경우 `Email` 네임스페이스를 원본 ID로 선택하십시오.
-* [!DNL Facebook] [전자 메일 해시 요구 사항](#email-hashing-requirements)에 따라 데이터 수집 시 고객 전자 메일 주소를 [!DNL Experience Platform]&#x200B;(으)로 해시했다면 `Email_LC_SHA256` 네임스페이스를 원본 ID로 선택하십시오.
+* `Email_LC_SHA256` [!DNL Experience Platform]전자 메일 해시 요구 사항[!DNL Facebook]에 따라 데이터 수집 시 고객 전자 메일 주소를 [(으)로 해시했다면 ](#email-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 해시되지 않은 전화 번호로 구성된 경우 `PHONE_E.164` 네임스페이스를 원본 ID로 선택하십시오. [!DNL Experience Platform]이(가) [!DNL Facebook] 요구 사항을 준수하기 위해 전화 번호를 해시합니다.
-* [!DNL Facebook] [전화 번호 해시 요구 사항](#phone-number-hashing-requirements)에 따라 데이터 수집 시 전화 번호를 [!DNL Experience Platform]&#x200B;(으)로 해시했다면 `Phone_SHA256` 네임스페이스를 원본 ID로 선택하십시오.
-* 데이터가 [!DNL Apple] 장치 ID로 구성된 경우 `IDFA` 네임스페이스를 원본 ID로 선택하십시오.
-* 데이터가 [!DNL Android] 장치 ID로 구성된 경우 `GAID` 네임스페이스를 원본 ID로 선택하십시오.
+* `Phone_SHA256` [!DNL Experience Platform]전화 번호 해시 요구 사항[!DNL Facebook]에 따라 데이터 수집 시 전화 번호를 [(으)로 해시했다면 ](#phone-number-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
+* 데이터가 `IDFA` 장치 ID로 구성된 경우 [!DNL Apple] 네임스페이스를 원본 ID로 선택하십시오.
+* 데이터가 `GAID` 장치 ID로 구성된 경우 [!DNL Android] 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 다른 유형의 식별자로 구성된 경우 `Custom` 네임스페이스를 소스 ID로 선택하십시오.
 
 대상 필드 선택:
 
-* 원본 네임스페이스가 `Email` 또는 `Email_LC_SHA256`인 경우 `Email_LC_SHA256` 네임스페이스를 대상 ID로 선택하십시오.
-* 원본 네임스페이스가 `PHONE_E.164` 또는 `Phone_SHA256`인 경우 `Phone_SHA256` 네임스페이스를 대상 ID로 선택하십시오.
+* 원본 네임스페이스가 `Email_LC_SHA256` 또는 `Email`인 경우 `Email_LC_SHA256` 네임스페이스를 대상 ID로 선택하십시오.
+* 원본 네임스페이스가 `Phone_SHA256` 또는 `PHONE_E.164`인 경우 `Phone_SHA256` 네임스페이스를 대상 ID로 선택하십시오.
 * 원본 네임스페이스가 `IDFA` 또는 `GAID`인 경우 `IDFA` 또는 `GAID` 네임스페이스를 대상 ID로 선택하십시오.
 * 소스 네임스페이스가 사용자 지정 네임스페이스인 경우 `Extern_ID` 네임스페이스를 대상 ID로 선택하십시오.
 
@@ -295,8 +295,8 @@ Facebook 인증 토큰은 60일마다 만료됩니다. 토큰이 만료되면 �
 
 >[!IMPORTANT]
 >
->[계정 필수 구성 요소](#facebook-account-prerequisites) 섹션의 URL 템플릿에 표시된 대로 `business ID 206617933627973`에서 [!DNL Facebook Custom Audience Terms of Service]을(를) 수락해야 합니다.
+>[!DNL Facebook Custom Audience Terms of Service]계정 필수 구성 요소`business ID 206617933627973` 섹션의 URL 템플릿에 표시된 대로 [에서 ](#facebook-account-prerequisites)을(를) 수락해야 합니다.
 
-[Facebook 계정 필수 구성 요소](#facebook-account-prerequisites)의 단계를 수행한 후 `400 Bad Request` 오류 메시지가 표시되면 [!DNL Facebook] 권한이 적용될 수 있는 기간을 며칠으로 허용하십시오.
+`400 Bad Request`Facebook 계정 필수 구성 요소[의 단계를 수행한 후 ](#facebook-account-prerequisites) 오류 메시지가 표시되면 [!DNL Facebook] 권한이 적용될 수 있는 기간을 며칠으로 허용하십시오.
 
 
