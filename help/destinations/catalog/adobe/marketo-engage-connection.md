@@ -45,7 +45,7 @@ Marketo Engage에서 대상을 활성화하고 **[!UICONTROL 기존 잠재 고�
 
 ## 전제 조건 {#prerequisites}
 
-대상을 설정하는 사용자는 Marketo 인스턴스 및 파티션에 [사용자 편집](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) 권한이 있어야 합니다.
+대상을 설정하는 사용자는 Marketo 인스턴스 및 파티션에 [사용자 편집](https://experienceleague.adobe.com/ko/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) 권한이 있어야 합니다.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -144,7 +144,7 @@ Marketo은 Experience Platform 프로필을 기존 Marketo 리드와 일치시�
    * **[!UICONTROL 프로필만]**: Experience Platform의 최신 정보를 사용하여 Marketo 잠재 고객 프로필을 최신 상태로 유지하려면 이 옵션을 선택하십시오.
    * **[!UICONTROL 대상자만]**: 프로필 정보를 업데이트하지 않고 Marketo 목록에 대상자를 추가하려면 이 옵션을 선택하십시오.
 * **[!UICONTROL 파티션]**: *파티션 선택은&#x200B;**[!UICONTROL 프로필만]**&#x200B;또는&#x200B;**[!UICONTROL 대상 및 프로필]**&#x200B;동기화 유형*&#x200B;을 선택하는 경우에만 사용할 수 있습니다. 선택한 작업 영역과 연결된 Marketo 파티션 ID를 선택합니다. 내보낸 데이터를 받을 Marketo의 리드 파티션을 지정할 수 있습니다. 특정 파티션을 선택하지 않으면 데이터가 Marketo의 **[!UICONTROL 기본]** 파티션으로 전송됩니다.
-* **[!UICONTROL Marketo 중복 제거 필드]**: 기존 Marketo 리드를 업데이트할 때 사용할 Marketo 중복 제거 필드를 선택합니다. 이 선택기는 Marketo에서 중복 제거 필드로 표시한 필드를 표시합니다. Marketo의 특정 필드가 중복 제거 필드로 표시되도록 하려면 Marketo에서 필드를 [검색 가능한 필드](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database)&#x200B;(으)로 표시해야 합니다.
+* **[!UICONTROL Marketo 중복 제거 필드]**: 기존 Marketo 리드를 업데이트할 때 사용할 Marketo 중복 제거 필드를 선택합니다. 이 선택기는 Marketo에서 중복 제거 필드로 표시한 필드를 표시합니다. Marketo의 특정 필드가 중복 제거 필드로 표시되도록 하려면 Marketo에서 필드를 [검색 가능한 필드](https://experienceleague.adobe.com/ko/docs/marketo-developer/marketo/rest/lead-database/lead-database)&#x200B;(으)로 표시해야 합니다.
 
   >[!NOTE]
   >
