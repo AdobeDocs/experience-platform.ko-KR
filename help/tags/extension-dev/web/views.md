@@ -2,10 +2,10 @@
 title: 웹 확장의 보기
 description: Adobe Experience Platform 웹 확장에서 라이브러리 모듈의 보기를 정의하는 방법을 알아봅니다.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
 workflow-type: tm+mt
-source-wordcount: '2063'
-ht-degree: 73%
+source-wordcount: '2148'
+ht-degree: 70%
 
 ---
 
@@ -68,15 +68,22 @@ window.extensionBridge.register({
 `init` 메서드는 보기가 iframe에 로드되는 즉시 태그에 의해 호출됩니다. 그러면 다음 속성을 포함하는 객체인 단일 인수(`info`)가 전달됩니다.
 
 | 속성 | 설명 |
-| --- | --- |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `settings` | 이 보기에서 이전에 저장한 설정이 포함된 객체입니다. `settings`가 `null`인 경우 사용자가 저장된 버전을 로드하지 않고 초기 설정을 개발 중임을 나타냅니다. `settings`가 객체인 경우에는 사용자가 이전의 지속형 설정을 편집하도록 선택했으므로 이 객체를 사용하여 뷰를 채워야 합니다. |
 | `extensionSettings` | 확장 구성 보기에서 설정이 저장되었습니다. 확장 구성 보기가 아닌 보기의 확장 설정에 액세스하는 데 유용합니다. 현재 보기가 확장 구성 보기인 경우 `settings`을(를) 사용합니다. |
 | `propertySettings` | 속성에 대한 설정이 포함된 객체입니다. 이 객체에 포함된 사항에 대한 자세한 내용은 [터빈 객체 안내서](../turbine.md#property-settings)를 참조하십시오. |
 | `tokens` | API 토큰이 포함된 객체입니다. 보기 내에서 Adobe API에 액세스하려면 일반적으로 `tokens.imsAccess` 아래의 IMS 토큰을 사용해야 합니다. 이 토큰은 Adobe에서 개발한 확장에만 사용할 수 있습니다. Adobe에서 개발한 확장을 제공하는 Adobe 직원의 경우 [데이터 수집 엔지니어링 팀에 전자 메일을 보내](mailto:reactor@adobe.com)하고 허용 목록에 추가할 수 있도록 확장 이름을 제공하십시오. |
-| `company` | 단일 속성 `orgId`을(를) 포함하는 개체로, Adobe Experience Cloud ID(24자 영숫자 문자열)를 나타냅니다. |
+| `company` | `orgId`(24자 Adobe Experience Cloud ID), `id`(Reactor API 내 회사의 고유 식별자) 및 `tenantId`(Adobe Identity Management 시스템 내의 조직에 대한 고유 식별자)이 포함된 개체입니다. |
 | `schema` | [JSON 스키마](https://json-schema.org/) 형식의 객체입니다. 이 객체는 [확장 매니페스트](../manifest.md)에서 가져오며 양식 유효성 검사에 도움이 될 수 있습니다. |
+| `apiEndpoints` | Reactor API의 웹 주소에 대한 참조가 포함된 `reactor`이(가) 포함된 개체입니다. |
+| `userConsentPermissions` | Adobe의 [제품 사용 데이터](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data)에서 동의 플래그를 포함하는 개체입니다. 확장에서 `globalDataCollectionAndUsage`any *고객 데이터를 수집할 수 있는지 확인하려면* 플래그에 저장된 을(를) 사용하십시오. |
+| `preferredLanguages` | 언어 문자열의 배열입니다. |
 
 이 정보를 사용하여 양식을 렌더링하고 관리해야 합니다. `info.settings`만 처리하면 되지만, 필요한 경우 다른 정보가 제공됩니다.
+
+>[!IMPORTANT]
+>
+>확장 GDPR을 준수하려면 `userConsentPermissions.globalDataCollectionAndUsage` 플래그를 사용하여 확장에서 사용자에 대한 데이터를 수집할 수 있는지 확인하십시오.
 
 ### [!DNL validate]
 
@@ -115,7 +122,7 @@ window.extensionBridge.openCodeEditor().then(function(code) {
 | 속성 | 설명 |
 | --- | --- |
 | `code` | 편집기에 표시되어야 하는 코드입니다. 일반적으로 사용자가 기존 코드를 편집할 때 제공됩니다. 이 값을 제공하지 않는 경우 코드 편집기를 열면 비어 있게 됩니다. |
-| `language` | 편집할 코드의 언어입니다. 유효한 옵션은 `javascript`, `html` `css`, `json` 및 `plaintext`입니다. 이 값을 제공하지 않으면 이 `javascript`를 가정합니다. |
+| `language` | 편집할 코드의 언어입니다. 유효한 옵션은 `javascript`, `html``css`, `json` 및 `plaintext`입니다. 이 값을 제공하지 않으면 이 `javascript`를 가정합니다. |
 
 ### [!DNL openRegexTester]
 
@@ -172,7 +179,7 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 
 >[!NOTE]
 >
->적절한 아이콘을 다운로드하려면 Adobe Spectrum[&#128279;](https://spectrum.adobe.com/page/icons/)의 아이콘 페이지로 이동하여 &quot;[!DNL Data]&quot;을(를) 검색합니다.
+>적절한 아이콘을 다운로드하려면 Adobe Spectrum[의 ](https://spectrum.adobe.com/page/icons/)아이콘 페이지로 이동하여 &quot;[!DNL Data]&quot;을(를) 검색합니다.
 
 텍스트 필드 옆에 있는 버튼을 사용자가 선택하면 `window.extensionBridge.openDataElementSelector`위의 설명[과 같이 ](#open-data-element)가 호출됩니다. 이름 및 유형 퍼센트 기호를 기억하도록 하는 대신 사용자가 선택할 수 있는 사용자 데이터 요소 목록이 표시됩니다. 사용자가 데이터 요소를 선택하면 퍼센트 기호로 둘러싸인 선택한 데이터 요소의 이름이 전달됩니다(`tokenize` 옵션을 `false`로 설정한 경우 제외). 그런 다음 텍스트 필드를 결과로 채우는 것이 좋습니다.
 
