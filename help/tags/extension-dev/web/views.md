@@ -122,7 +122,7 @@ window.extensionBridge.openCodeEditor().then(function(code) {
 | 속성 | 설명 |
 | --- | --- |
 | `code` | 편집기에 표시되어야 하는 코드입니다. 일반적으로 사용자가 기존 코드를 편집할 때 제공됩니다. 이 값을 제공하지 않는 경우 코드 편집기를 열면 비어 있게 됩니다. |
-| `language` | 편집할 코드의 언어입니다. 유효한 옵션은 `javascript`, `html``css`, `json` 및 `plaintext`입니다. 이 값을 제공하지 않으면 이 `javascript`를 가정합니다. |
+| `language` | 편집할 코드의 언어입니다. 유효한 옵션은 `javascript`, `html` `css`, `json` 및 `plaintext`입니다. 이 값을 제공하지 않으면 이 `javascript`를 가정합니다. |
 
 ### [!DNL openRegexTester]
 
