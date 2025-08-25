@@ -2,9 +2,9 @@
 description: Destination SDK으로 빌드된 대상에 대한 파트너 스키마를 구성하는 방법을 알아봅니다.
 title: 파트너 스키마 구성
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 3c772e99e7f0417672e60d56ace962abda2b7d76
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '1910'
+source-wordcount: '1924'
 ht-degree: 3%
 
 ---
@@ -148,7 +148,7 @@ Destination SDK은 동적 파트너 스키마 생성을 지원합니다. 정적 
 
 | 매개변수 | 유형 | 필수/선택 사항 | 설명 |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | 문자열 | 필수 여부 | [!DNL Experience Platform]명의 고객이 대상에 연결하는 방법을 나타냅니다. 허용되는 값은 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`입니다. <br> <ul><li>Experience Platform 고객이 `CUSTOMER_AUTHENTICATION`여기[에 설명된 인증 방법을 통해 시스템에 로그인하는 경우 ](customer-authentication.md)을(를) 사용합니다. </li><li> Adobe과 대상 사이에 글로벌 인증 시스템이 있고 `PLATFORM_AUTHENTICATION` 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우 [!DNL Experience Platform]을(를) 사용합니다. 이 경우 자격 증명 API를 사용하여 [자격 증명 개체를 만들어야](../../credentials-api/create-credential-configuration.md) 합니다. </li><li>대상 플랫폼으로 데이터를 보내는 데 인증이 필요하지 않은 경우 `NONE`을(를) 사용합니다. </li></ul> |
+| `dynamicEnum.authenticationRule` | 문자열 | 필수 여부 | [!DNL Experience Platform]명의 고객이 대상에 연결하는 방법을 나타냅니다. 허용되는 값은 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`입니다. <br> <ul><li>Experience Platform 고객이 `CUSTOMER_AUTHENTICATION`여기[에 설명된 인증 방법을 통해 시스템에 로그인하는 경우 ](customer-authentication.md)을(를) 사용합니다. </li><li> Adobe과 대상 사이에 글로벌 인증 시스템이 있고 `PLATFORM_AUTHENTICATION` 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우 [!DNL Experience Platform]을(를) 사용합니다. 이 경우 자격 증명 API를 사용하여 자격 증명 개체를 [만들고](../../credentials-api/create-credential-configuration.md)자격 증명 개체의 ID를 `authenticationId`대상 배달[ 구성의 ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 전달해야 합니다. </li><li>대상 플랫폼으로 데이터를 보내는 데 인증이 필요하지 않은 경우 `NONE`을(를) 사용합니다. </li></ul> |
 | `dynamicEnum.destinationServerId` | 문자열 | 필수 여부 | 동적 스키마 서버의 `instanceId`입니다. 이 대상 서버에는 Experience Platform이 동적 스키마를 검색하기 위해 호출할 API 끝점이 포함됩니다. |
 | `dynamicEnum.value` | 문자열 | 필수 여부 | 동적 스키마 서버 구성에 정의된 동적 스키마의 이름입니다. |
 | `dynamicEnum.responseFormat` | 문자열 | 필수 여부 | 동적 스키마를 정의할 때는 항상 `SCHEMA`(으)로 설정하십시오. |

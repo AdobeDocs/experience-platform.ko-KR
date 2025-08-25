@@ -2,10 +2,10 @@
 description: 이 페이지는 자격 증명 구성 Adobe Experience Platform Destination SDK을 만드는 데 사용되는 API 호출을 예시합니다.
 title: 자격 증명 구성 만들기
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 5%
+source-wordcount: '586'
+ht-degree: 6%
 
 ---
 
@@ -21,13 +21,13 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->대부분의 경우 ***API 끝점 `/credentials`을(를) 사용하지***&#x200B;할 필요가 없습니다. 대신 `/destinations` 끝점의 `customerAuthenticationConfigurations` 매개 변수를 통해 대상에 대한 인증 정보를 구성할 수 있습니다.
+>대부분의 경우 ***API 끝점***&#x200B;을(를) 사용하지 `/credentials`할 필요가 없습니다. 대신 `customerAuthenticationConfigurations` 끝점의 `/destinations` 매개 변수를 통해 대상에 대한 인증 정보를 구성할 수 있습니다.
 > 
 >지원되는 인증 유형에 대한 자세한 내용은 [고객 인증 구성](../functionality/destination-configuration/customer-authentication.md)을 참조하십시오.
 
 Adobe과 대상 플랫폼 사이에 글로벌 인증 시스템이 있고 [!DNL Experience Platform] 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우에만 이 API 끝점을 사용하여 자격 증명 구성을 만드십시오. 이 경우 `/credentials` API 끝점을 사용하여 자격 증명 구성을 만들어야 합니다.
 
-글로벌 인증 시스템을 사용하는 경우 [새 대상 구성을 만드는 경우](../authoring-api/destination-configuration/create-destination-configuration.md)에 [대상 게재](../functionality/destination-configuration/destination-delivery.md) 구성에서 `"authenticationRule":"PLATFORM_AUTHENTICATION"`을(를) 설정해야 합니다.
+글로벌 인증 시스템을 사용하는 경우 `"authenticationRule":"PLATFORM_AUTHENTICATION"`새 대상 구성을 만드는 경우[에 ](../functionality/destination-configuration/destination-delivery.md)대상 게재[ 구성에서 ](../authoring-api/destination-configuration/create-destination-configuration.md)을(를) 설정해야 합니다. 그런 다음 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을 만들고 `authenticationId`대상 게재[ 구성의 ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
 
 >[!IMPORTANT]
 >
@@ -39,7 +39,7 @@ Adobe과 대상 플랫폼 사이에 글로벌 인증 시스템이 있고 [!DNL E
 
 ## 자격 증명 구성 만들기 {#create}
 
-`/authoring/credentials` 끝점에 대한 `POST` 요청을 수행하여 새 자격 증명 구성을 만들 수 있습니다.
+`POST` 끝점에 대한 `/authoring/credentials` 요청을 수행하여 새 자격 증명 구성을 만들 수 있습니다.
 
 **API 형식**
 
