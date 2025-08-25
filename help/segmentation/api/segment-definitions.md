@@ -4,9 +4,9 @@ title: 세그먼트 정의 API 엔드포인트
 description: Adobe Experience Platform Segmentation Service API의 세그먼트 정의 엔드포인트를 사용하면 조직의 세그먼트 정의를 프로그래밍 방식으로 관리할 수 있습니다.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
+source-git-commit: 5f19bd0601770115cae859fd6dc85bd9c9f6e92c
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1571'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 >[!WARNING]
 >
->Segmentation Service API를 사용하여 B2B 엔터티를 사용하는 대상자 만들기는 더 이상 사용되지 않습니다. 계정, 계정-사용자 관계, 캠페인, 캠페인 멤버, 마케팅 목록, 마케팅 목록 멤버, 영업 기회 및 영업 기회-사용자 관계와 같은 B2B 엔티티를 더 이상 사용하여 대상을 만들 수 없습니다.
+>Segmentation Service API를 사용하여 B2B 엔터티를 사용하는 대상자 만들기는 더 이상 사용되지 않습니다. 계정, 계정-사용자 관계, 캠페인, 캠페인 멤버, 마케팅 목록, 마케팅 목록 멤버, 영업 기회 및 영업 기회-사용자 관계와 같은 B2B 엔티티를 더 이상 사용하여 대상을 만들 수 없습니다. 자세한 내용은 [Real-Time CDP B2B edition 아키텍처 업그레이드](../../rtcdp/b2b-architecture-upgrade.md)에 대한 안내서를 참조하십시오.
 
 Adobe Experience Platform을 사용하면 프로필 그룹에서 특정 속성이나 동작 그룹을 정의하는 세그먼트 정의를 만들 수 있습니다. 세그먼트 정의는 [!DNL Profile Query Language]&#x200B;(PQL)로 작성된 쿼리를 캡슐화하는 개체입니다. 세그먼트 정의는 프로필에 적용되어 대상자를 만듭니다. 이 개체(세그먼트 정의)는 PQL 술어라고도 합니다. PQL 조건자는 [!DNL Real-Time Customer Profile]에 제공한 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트 정의에 대한 규칙을 정의합니다. PQL 쿼리 작성에 대한 자세한 내용은 [PQL 안내서](../pql/overview.md)를 참조하십시오.
 
