@@ -5,18 +5,14 @@ type: Documentation
 description: Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터에 액세스할 수 있습니다. 이 안내서에서는 프로필 API를 사용하여 "프로필"로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1981'
 ht-degree: 2%
 
 ---
 
 # 엔티티 끝점(프로필 액세스)
-
->[!IMPORTANT]
->
->프로필 액세스 API를 사용한 ExperienceEvent 조회는 더 이상 사용되지 않습니다. ExperienceEvents 조회가 필요한 사용 사례에 대해 계산된 속성과 같은 기능을 사용하십시오. 이 변경 사항에 대한 자세한 내용은 Adobe 고객 지원 센터에 문의하십시오.
 
 Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 [!DNL Real-Time Customer Profile] 데이터에 액세스할 수 있습니다. 이 안내서에서는 API를 사용하여 &quot;프로필&quot;로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다. [!DNL Experience Platform] UI를 사용하여 프로필에 액세스하는 방법에 대한 자세한 내용은 [프로필 사용 안내서](../ui/user-guide.md)를 참조하십시오.
 
@@ -44,6 +40,12 @@ Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페
 >[!ENDSHADEBOX]
 
 ## 엔티티 검색 {#retrieve-entity}
+
+>[!IMPORTANT]
+>
+>B2B 엔터티 **계정-사용자 관계, 영업 기회-사용자 관계, 캠페인, 캠페인 멤버, 마케팅 목록 및 마케팅 목록 멤버**&#x200B;은(는) API를 통한 조회 요청에 더 이상 지원되지 않습니다.
+>
+>이러한 엔티티에 대한 지원은 더 이상 사용되지 않습니다. 이러한 엔티티에 액세스하는 데 의존하는 기존 통합 또는 워크플로가 있는 경우 지원되는 엔티티 유형을 사용하도록 업데이트하여 계속 사용할 수 있도록 하십시오.
 
 필요한 쿼리 매개 변수와 함께 `/access/entities` 끝점에 대한 GET 요청을 만들어 프로필 엔터티를 검색할 수 있습니다.
 
@@ -1202,6 +1204,19 @@ curl -X GET \
 +++
 
 ## 엔티티 삭제 {#delete-entity}
+
+>[!IMPORTANT]
+>
+>다음 B2B 엔티티에 대한 삭제 요청은 더 이상 사용되지 않습니다.
+>
+>- 계정
+>- 계정-사용자 관계
+>- 기회
+>- 영업 기회-사용자 관계
+>- Campaign
+>- 캠페인 멤버
+>- 마케팅 목록
+>- 마케팅 목록 구성원
 
 필요한 쿼리 매개 변수와 함께 `/access/entities` 끝점에 대한 DELETE 요청을 만들어 프로필 저장소에서 엔터티를 삭제할 수 있습니다.
 
