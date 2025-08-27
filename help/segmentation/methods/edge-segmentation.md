@@ -2,9 +2,9 @@
 title: Edge 세그멘테이션 안내서
 description: 에지 세분화를 사용하여 에지에서 즉시 Experience Platform의 대상을 평가하여 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화하는 방법에 대해 알아봅니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: a741fdb4393863dbc011c03c733e27572da0ae6c
+source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1148'
 ht-degree: 1%
 
 ---
@@ -26,6 +26,8 @@ Edge 세그멘테이션은 Adobe Experience Platform의 세그먼트 정의를 �
 >[!NOTE]
 >
 >쿼리가 다음 표의 쿼리 유형과 일치하는 경우, 가장자리 세분화를 사용하여 자동으로 평가됩니다. 시스템은 쿼리 표현식을 기반으로 이 기능을 자동으로 결정합니다.
+>
+>또한 대상 **only**&#x200B;에 프로필 특성이 포함되어 있으면 매일 평가됩니다. 대상을 실시간으로 평가하려면 대상에 이벤트 데이터를 추가해야 합니다.
 
 | 쿼리 유형 | 세부 사항 | 쿼리 | 예 |
 | ---------- | ------- | ----- | ------- |
@@ -329,5 +331,5 @@ Edge 사용 대상의 경우 **[!UICONTROL 시간 경과에 따른 프로필]** 
 
 Experience Platform 사용자 인터페이스 사용에 대한 자세한 내용은 [세그먼테이션 사용 안내서](./overview.md)를 참조하세요.
 
-에지 세분화에 대한 FAQ는 FAQ[&#128279;](../faq.md#edge-segmentation)의 에지 세분화 섹션을 참조하십시오.
+에지 세분화에 대한 FAQ는 FAQ[의 ](../faq.md#edge-segmentation)에지 세분화 섹션을 참조하십시오.
 
