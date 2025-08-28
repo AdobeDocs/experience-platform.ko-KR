@@ -1,22 +1,22 @@
 ---
 title: 흐름 서비스 API를 사용하여 데이터베이스 소스에 대한 데이터 흐름 만들기
 type: Tutorial
-description: 이 자습서에서는 데이터베이스에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Experience Platform으로 수집하는 단계를 다룹니다.
+description: 흐름 서비스 API를 사용하여 데이터 흐름을 만들고 데이터베이스에서 Experience Platform으로 데이터를 수집하는 방법을 알아봅니다.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
+source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
 workflow-type: tm+mt
-source-wordcount: '1453'
+source-wordcount: '1455'
 ht-degree: 2%
 
 ---
 
 # [!DNL Flow Service] API를 사용하여 데이터베이스 원본에 대한 데이터 흐름 만들기
 
-이 자습서에서는 데이터베이스 원본에서 데이터를 검색하고 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 Experience Platform으로 가져오는 단계를 다룹니다.
+데이터 흐름을 만들고 [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)를 사용하여 데이터베이스에서 Adobe Experience Platform으로 데이터를 수집하는 방법을 알아보려면 이 자습서를 참조하십시오.
 
 >[!NOTE]
 >
->* 데이터 흐름을 만들려면 데이터베이스 원본의 올바른 기본 연결 ID가 이미 있어야 합니다. 이 ID가 없으면 [소스 개요](../../../home.md#database)에서 기본 연결을 만들 수 있는 데이터베이스 소스 목록을 참조하십시오.
+>* 데이터 흐름을 만들려면 데이터베이스 원본의 올바른 기본 연결 ID가 이미 있어야 합니다. 이 ID가 없는 경우 [소스 카탈로그](../../../home.md#database)를 방문하여 기본 연결을 만들 수 있는 데이터베이스 소스 목록을 확인하십시오.
 >* Experience Platform이 데이터를 수집하려면 모든 테이블 기반 배치 소스의 시간대를 UTC로 구성해야 합니다. [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md)에 대해 지원되는 타임스탬프는 UTC 시간이 있는 TIMESTAMP_NTZ뿐입니다.
 
 ## 시작

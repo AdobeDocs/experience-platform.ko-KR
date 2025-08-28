@@ -1,15 +1,16 @@
 ---
-title: CRM의 데이터를 Experience Platform으로 수집하는 데이터 흐름을 만듭니다.
+title: Source 데이터를 Experience Platform에 수집하는 데이터 흐름 만들기
 description: 흐름 서비스 API를 사용하여 데이터 흐름을 만들고 소스 데이터를 Experience Platform으로 수집하는 방법을 알아봅니다.
-exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fe310a326f423a32b278b8179578933295de3a87
+hide: true
+hidefromtoc: true
+source-git-commit: 4e9448170a6c3eb378e003bcd7520cb0e573e408
 workflow-type: tm+mt
-source-wordcount: '2105'
+source-wordcount: '2137'
 ht-degree: 2%
 
 ---
 
-# CRM에서 Experience Platform으로 데이터를 수집하는 데이터 흐름을 만듭니다.
+# 소스에서 데이터를 수집할 데이터 흐름 만들기
 
 데이터 흐름을 만들고 [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)를 사용하여 Adobe Experience Platform으로 데이터를 수집하는 방법을 알아보려면 이 안내서를 참조하십시오.
 
@@ -29,9 +30,9 @@ ht-degree: 2%
 
 Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
-### 기본 연결 만들기 {#base}
+### 기본 연결 만들기
 
-소스에 대한 데이터 흐름을 성공적으로 만들려면 완전히 인증된 소스 계정과 해당 기본 연결 ID가 필요합니다. 이 ID가 없는 경우 [소스 카탈로그](../../../home.md)를 방문하여 기본 연결을 만들 수 있는 소스 목록을 찾으십시오.
+소스에 대한 데이터 흐름을 성공적으로 만들려면 완전히 인증된 소스 계정이 있어야 하며 해당 기본 연결 ID입니다. 이 ID가 없는 경우 [소스 카탈로그](../../../home.md)를 방문하여 기본 연결을 만들 수 있는 소스 목록을 확인하십시오.
 
 ### 대상 XDM 스키마 만들기 {#target-schema}
 
@@ -106,7 +107,7 @@ curl -X POST \
 
 +++
 
-## 소스 연결 만들기 {#source}
+## 소스 연결 만들기
 
 소스 연결은 외부 소스에서 Experience Platform으로 데이터를 가져오는 방법을 정의합니다. 소스 시스템과 들어오는 데이터의 형식을 모두 지정하며 인증 세부 정보를 포함하는 기본 연결을 참조합니다. 각 소스 연결은 조직에 고유합니다.
 
@@ -133,8 +134,8 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "ACME source connection",
-    "description": "A source connection for ACME contact data",
     "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "description": "A source connection for ACME contact data",
     "data": {
       "format": "tabular"
     },
@@ -164,7 +165,8 @@ curl -X POST \
             "format": "date-time"
           }
         }
-      ]
+      ],
+      "cdcEnabled": true
     },
     "connectionSpec": {
       "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -181,6 +183,7 @@ curl -X POST \
 | `data.format` | 데이터의 형식입니다. 테이블 기반 원본(예: 데이터베이스, CRM 및 마케팅 자동화 공급자)에 대해 이 값을 `tabular`(으)로 설정하십시오. |
 | `params.tableName` | Experience Platform으로 수집할 소스 계정의 테이블 이름입니다. |
 | `params.columns` | Experience Platform으로 수집할 데이터의 특정 테이블 열입니다. |
+| `params.cdcEnabled` | 변경 내역 캡처를 사용할지 여부를 나타내는 부울 값입니다. 이 속성은 다음 데이터베이스 소스에서 지원됩니다. <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> 자세한 내용은 [소스에서 데이터 캡처 변경](../change-data-capture.md)을 사용하는 방법에 대한 안내서를 참조하십시오. |
 | `connectionSpec.id` | 사용 중인 소스의 연결 사양 ID입니다. |
 
 **응답**
@@ -194,7 +197,7 @@ curl -X POST \
 }
 ```
 
-## 대상 연결 만들기 {#target}
+## 대상 연결 만들기 {#target-connection}
 
 대상 연결은 수집된 데이터가 들어오는 대상에 대한 연결을 나타냅니다. 대상 연결을 만들려면 데이터 레이크와 연결된 고정 연결 사양 ID를 제공해야 합니다. 이 연결 사양 ID는 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`입니다.
 
@@ -314,7 +317,7 @@ curl -X POST \
 }
 ```
 
-## 데이터 흐름 사양 검색 {#flow-specs}
+## 데이터 흐름 사양 검색
 
 데이터 흐름을 만들려면 먼저 소스에 해당하는 데이터 흐름 사양을 검색해야 합니다. 이 정보를 검색하려면 `/flowSpecs` API의 [!DNL Flow Service] 끝점에 대한 GET 요청을 만드십시오.
 
@@ -631,16 +634,16 @@ curl -X GET \
 
 +++
 
-## 데이터 흐름 만들기 {#dataflow}
+## 데이터 흐름 만들기
 
 데이터 흐름은 Experience Platform 서비스 간에 데이터를 전송하는 구성된 파이프라인입니다. 데이터가 외부 소스(예: 데이터베이스, 클라우드 스토리지 또는 API)에서 수집되고, 처리되고, 대상 데이터 세트로 라우팅되는 방법을 정의합니다. 그런 다음 활성화 및 분석을 위해 ID 서비스, 실시간 고객 프로필 및 대상 과 같은 서비스에서 이러한 데이터 세트를 사용합니다.
 
 데이터 흐름을 만들려면 다음 항목에 대한 값이 있어야 합니다.
 
-* [Source 연결 ID](#source)
-* [대상 연결 ID](#target)
-* [ID 매핑](#mapping)
-* [데이터 흐름 사양 ID](#flow-specs)
+* Source 연결 ID
+* 대상 연결 ID
+* ID 매핑
+* 데이터 흐름 사양 ID
 
 이 단계에서는 `scheduleParams`에서 다음 매개 변수를 사용하여 데이터 흐름에 대한 수집 일정을 구성할 수 있습니다.
 
@@ -739,7 +742,7 @@ curl -X POST \
 }
 ```
 
-### UI를 사용하여 API 워크플로의 유효성을 검사합니다 {#validate-in-ui}
+### UI를 사용하여 API 워크플로의 유효성을 검사합니다
 
 Experience Platform 사용자 인터페이스를 사용하여 데이터 흐름 생성의 유효성을 검사할 수 있습니다. Experience Platform UI에서 *[!UICONTROL 소스]* 카탈로그로 이동한 다음 헤더 탭에서 **[!UICONTROL 데이터 흐름]**&#x200B;을 선택합니다. 그런 다음 [!UICONTROL 데이터 흐름 이름] 열을 사용하고 [!DNL Flow Service] API를 사용하여 만든 데이터 흐름을 찾습니다.
 
