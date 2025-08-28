@@ -2,16 +2,20 @@
 title: Real-Time Customer Data Platform B2B edition에 대한 세그멘테이션 사용 사례
 description: 사용 가능한 다양한 Adobe Real-Time Customer Data Platform B2B edition 사용 사례에 대한 개요입니다.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: d819a7e72e873ef3a47f9bb7946e242cb5fb7a8a
+source-git-commit: d1f48140922b4c98f75b4c9af9e1706a402319a4
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1668'
 ht-degree: 0%
 
 ---
 
 # Real-Time Customer Data Platform B2B edition에 대한 세그멘테이션 사용 사례
+
+>[!IMPORTANT]
+>
+>B2B 엔티티를 참조하는 경험 이벤트를 포함하는 대상(예: 캠페인 및 마케팅 목록)은 더 이상 지원되지 않습니다. 자세한 내용은 [Real-Time CDP B2B edition 아키텍처 업그레이드 개요](../../rtcdp/b2b-architecture-upgrade.md)를 참조하세요.
 
 이 문서에서는 Adobe Real-Time Customer Data Platform B2B edition의 세그먼트 정의의 예제와 일반적인 B2B 사용 사례에 대해 다양한 유형의 속성을 결합하는 방법을 제공합니다. 대상이 B2B 워크플로우에 어떻게 적합한지 이해하려면 [전체 튜토리얼](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data)을 참조하세요.
 
