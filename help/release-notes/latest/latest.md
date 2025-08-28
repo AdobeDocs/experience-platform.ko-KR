@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2025년 8월
 description: Adobe Experience Platform의 2025년 8월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: bbeab81e64a86a59a1f85ca139935abf220ef361
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 80%
+source-wordcount: '1448'
+ht-degree: 78%
 
 ---
 
@@ -29,7 +29,6 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 - [카탈로그 서비스](#catalog-service)
 - [대상](#destinations)
 - [경험 데이터 모델 (XDM)](#xdm)
-- [실시간 고객 프로필](#profile)
 - [샌드박스](#sandboxes)
 - [Segmentation Service](#segmentation-service)
 - [소스](#sources)
@@ -125,17 +124,21 @@ XDM은 Experience Platform에 가져온 데이터에 대한 공통 구조와 정
 
 자세한 내용은 [XDM 개요](../../xdm/home.md)를 참조하십시오.
 
-## 실시간 고객 프로필 {#profile}
+<!--
 
-실시간 고객 프로필은 모든 채널의 데이터를 단일 프로필로 통합하여 각 고객에 대한 통합적이고 실행 가능한 보기를 제공합니다.
+## Real-Time Customer Profile {#profile}
 
-**새로운 기능 또는 업데이트된 기능**
+Real-Time Customer Profile provides a unified, actionable view of each customer by consolidating data from all channels into a single profile.
 
-| 기능 | 설명 |
+**New or updated features**
+
+| Feature | Description |
 | --- | --- |
-| 엔티티 API의 향상된 조회 기능 | 엔티티 API는 이제 다음을 지원합니다. <ul><li>개인 (프로필)</li><li>경험 이벤트</li><li>계정</li><li>기회</li></ul> 이 업데이트는 API 사용을 간소화하고 최적의 성능과 안정성을 보장하는 데 도움이 됩니다. 이전에 조인 테이블 및 사용자 정의 다중 엔티티 유형을 포함한 다른 엔티티 유형에 대한 조회를 사용했다면, 바로 지금이 API 사용을 검토하고 개선된 경험을 활용할 좋은 기회입니다. 자세한 내용은 [Real-Time CDB B2B Edition 아키텍처 업그레이드 안내서](../../rtcdp/b2b-architecture-upgrade.md)를 참조하십시오. |
+| Enhanced lookup functionality in the Entities API | The Entities API now supports the following: <ul><li>Person (Profile)</li><li>Experience Events</li><li>Account</li><li>Opportunity</li></ul> This update simplifies API usage and helps ensure optimal performance and reliability. If you previously used lookups for other entity types—including join tables and custom Multi-Entity types—now is a great opportunity to review your API usage and take advantage of the improved experience. For more information, read the [Real-Time CDB B2B Edition architecture upgrade guide](../../rtcdp/b2b-architecture-upgrade.md). |
 
-실시간 고객 프로필에 대해 자세히 알아보려면 [프로필 개요](../../profile/home.md)를 참조하십시오.
+For more information on Real-Time Customer Profile, read the [Profile overview](../../profile/home.md).
+
+-->
 
 ## 샌드박스 {#sandboxes}
 
