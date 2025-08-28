@@ -4,7 +4,7 @@ title: API 끝점 미리 보기 및 예상
 description: 세그먼트 정의가 개발되면 Adobe Experience Platform 내의 예상 및 미리 보기 도구를 사용하여 요약 수준 정보를 보고 예상 대상을 격리할 수 있습니다.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 >
 >특정 네임스페이스 또는 프로필 데이터 저장소 전체에서 프로필 조각 및 병합된 프로필의 총 수와 같은 실시간 고객 프로필 데이터와 관련된 유사한 지표에 액세스하려면 프로필 API 개발자 가이드의 일부인 [프로필 미리 보기(미리보기 샘플 상태) 끝점 안내서](../../profile/api/preview-sample-status.md)를 참조하십시오.
 
-## 시작하기
+## 시작
 
 이 가이드에 사용된 끝점은 [!DNL Adobe Experience Platform Segmentation Service] API의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
 
@@ -31,8 +31,8 @@ ht-degree: 2%
 
 프로필 스토어로 레코드를 수집하면 총 프로필 수가 5% 이상 증가하거나 감소하면 샘플링 작업이 트리거되어 수를 업데이트합니다. 데이터 샘플링이 트리거되는 방식은 수집 방법에 따라 다릅니다.
 
-* **일괄 처리 수집:** 일괄 처리 수집의 경우, 일괄 처리를 Profile Store에 성공적으로 수집한 후 15분 이내에 5% 증가 또는 감소 임계값이 충족되면 카운트를 업데이트하는 작업이 실행됩니다.
-* **스트리밍 수집:** 스트리밍 데이터 워크플로의 경우 5% 증가 또는 감소 임계값이 충족되었는지 확인하기 위해 시간별로 검사를 수행합니다. 이 경우 카운트를 업데이트하기 위해 작업이 자동으로 트리거됩니다.
+* **일괄 처리 수집:** 일괄 처리 수집의 경우, 일괄 처리를 Profile Store로 수집한 후 15분 이내에 일괄 처리를 수집하며, 3% 증가 또는 감소 임계값이 충족되면 카운트를 업데이트하는 작업이 실행됩니다.
+* **스트리밍 수집:** 스트리밍 데이터 워크플로의 경우 3% 증가 또는 감소 임계값이 충족되었는지 확인하기 위해 시간별로 검사를 수행합니다. 이 경우 카운트를 업데이트하기 위해 작업이 자동으로 트리거됩니다.
 
 검사의 샘플 크기는 프로필 스토어에 있는 전체 엔티티 수에 따라 다릅니다. 이러한 샘플 크기는 다음 표에 나와 있습니다.
 
@@ -84,7 +84,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | 데이터를 쿼리할 PQL 표현식. |
 | `predicateType` | `predicateExpression` 아래의 쿼리 식에 대한 조건자 형식입니다. 현재 이 속성에 허용되는 유일한 값은 `pql/text`입니다. |
-| `predicateModel` | 프로필 데이터의 기반이 되는 [!DNL Experience Data Model] (XDM) 스키마 클래스의 이름입니다. |
+| `predicateModel` | 프로필 데이터의 기반이 되는 [!DNL Experience Data Model]&#x200B;(XDM) 스키마 클래스의 이름입니다. |
 | `graphType` | 클러스터를 가져올 그래프 유형입니다. 지원되는 값은 `none`(ID 결합을 수행하지 않음) 및 `pdg`(개인 ID 그래프를 기반으로 ID 결합을 수행)입니다. |
 
 +++
@@ -199,7 +199,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 ## 특정 예상 작업의 결과 검색 {#get-estimate}
 
-미리 보기 작업을 만든 후에는 `/estimate` 끝점에 대한 GET 요청 경로에서 `previewId`을(를) 사용하여 예상 대상 크기, 신뢰 구간 및 오류 표준 편차를 포함한 세그먼트 정의에 대한 통계 정보를 볼 수 있습니다.
+미리 보기 작업을 만든 후에는 `previewId` 끝점에 대한 GET 요청 경로에서 `/estimate`을(를) 사용하여 예상 대상 크기, 신뢰 구간 및 오류 표준 편차를 포함한 세그먼트 정의에 대한 통계 정보를 볼 수 있습니다.
 
 **API 형식**
 
