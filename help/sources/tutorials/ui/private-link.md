@@ -1,16 +1,18 @@
 ---
-title: UI의 소스에 대해 Azure 개인 링크 사용
+title: Ui의 소스에 대한 비공개 링크 지원
 description: Experience Platform UI에서 소스에 대한 Azure 개인 링크를 사용하는 방법을 알아봅니다.
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: b88cf63e907b3f127f83304aa95f82300b47ce0b
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
 
-# UI의 소스에 [!DNL Azure Private Link] 사용
+# UI의 소스에 대한 비공개 링크 지원
 
 >[!AVAILABILITY]
 >
@@ -21,13 +23,13 @@ ht-degree: 0%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-[!DNL Azure Private Link] 기능을 사용하여 연결할 Adobe Experience Platform 소스의 개인 끝점을 만들 수 있습니다. 비공개 IP 주소를 사용하여 가상 네트워크에 원본을 안전하게 연결하여 공용 IP를 사용하지 않아도 되며 공격 표면을 줄일 수 있습니다.복잡한 방화벽 또는 네트워크 주소 변환 구성을 사용하지 않고 데이터 트래픽이 승인된 서비스에만 도달하도록 하여 네트워크 설정을 단순화합니다.
+비공개 링크 기능을 사용하여 연결할 Adobe Experience Platform 소스에 대한 비공개 끝점을 만들 수 있습니다. 비공개 IP 주소를 사용하여 소스를 가상 네트워크에 안전하게 연결하여 공용 IP가 필요하지 않도록 하고 공격 표면을 줄일 수 있습니다. 데이터 트래픽이 승인된 서비스에만 도달하도록 하면서도 복잡한 방화벽 또는 네트워크 주소 변환 구성이 필요하지 않으므로 네트워크 설정을 단순화합니다.
 
 Experience Platform UI에서 소스 작업 영역을 사용하여 개인 끝점을 만들고 사용하는 방법을 알아보려면 이 안내서를 참조하십시오.
 
 ## 비공개 엔드포인트 만들기
 
-[!DNL Azure Private Link]을(를) 시작하려면 Experience Platform UI의 *[!UICONTROL 소스]* 카탈로그로 이동하고 소스 작업 영역의 탭 메뉴에서 **[!UICONTROL 비공개 끝점]**&#x200B;을(를) 선택합니다.
+비공개 링크를 시작하려면 Experience Platform UI의 *[!UICONTROL 소스]* 카탈로그로 이동하고 소스 작업 영역의 탭 메뉴에서 **[!UICONTROL 비공개 끝점]**&#x200B;을 선택합니다.
 
 ![개인 끝점이 있는 소스 카탈로그.](../../images/tutorials/private-links/catalog.png)
 
@@ -73,7 +75,7 @@ Experience Platform UI에서 소스 작업 영역을 사용하여 개인 끝점�
 
 ![원본 워크플로의 기존 계정 인터페이스는 개인 끝점 연결에 대해 활성화된 필터링된 계정만 표시합니다.](../../images/tutorials/private-links/existing-private-endpoints.png)
 
-사용할 계정을 선택한 다음 **[!UICONTROL 대화형 작성]**&#x200B;을 사용하도록 설정합니다. 이 토글을 사용하면 연결을 테스트하고, 폴더 목록을 찾아보고, 데이터를 미리 볼 수 있는 [!UICONTROL &#x200B; 기능인 &#x200B;]대화형 작성[!DNL Azure]이 활성화됩니다. 개인 끝점 연결에는 [!UICONTROL 대화형 작성]을 사용하도록 설정해야 합니다. 이 토글을 수동으로 끌 수 없습니다. 60분 후에는 자동으로 비활성화됩니다.
+사용할 계정을 선택한 다음 **[!UICONTROL 대화형 작성]**&#x200B;을 사용하도록 설정합니다. 이 토글을 사용하면 연결을 테스트하고, 폴더 목록을 찾아보고, 데이터를 미리 볼 수 있는 [!UICONTROL  기능인 ]대화형 작성[!DNL Azure]이 활성화됩니다. 개인 끝점 연결에는 [!UICONTROL 대화형 작성]을 사용하도록 설정해야 합니다. 이 토글을 수동으로 끌 수 없습니다. 60분 후에는 자동으로 비활성화됩니다.
 
 [!UICONTROL 대화형 작성]을 사용하도록 설정하는 데 몇 분이 걸립니다. 설정이 활성화되면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 다음 단계로 진행하고 수집할 데이터를 선택합니다.
 

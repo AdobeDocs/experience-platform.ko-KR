@@ -1,16 +1,18 @@
 ---
-title: API의 소스에 대해 Azure 개인 링크 사용
+title: Api의 소스에 대한 비공개 링크 지원
 description: Adobe Experience Platform 소스에 대한 개인 링크를 만들고 사용하는 방법을 알아봅니다
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 65063d3b81d7082fc7780949c6ebd2ce09461b88
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1661'
 ht-degree: 3%
 
 ---
 
-# API의 소스에 [!DNL Azure Private Link] 사용
+# API의 소스에 대한 비공개 링크 지원
 
 >[!AVAILABILITY]
 >
@@ -21,7 +23,7 @@ ht-degree: 3%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-[!DNL Azure Private Link] 기능을 사용하여 연결할 Adobe Experience Platform 소스의 개인 끝점을 만들 수 있습니다. 비공개 IP 주소를 사용하여 가상 네트워크에 원본을 안전하게 연결하여 공용 IP를 사용하지 않아도 되며 공격 표면을 줄일 수 있습니다.복잡한 방화벽 또는 네트워크 주소 변환 구성을 사용하지 않고 데이터 트래픽이 승인된 서비스에만 도달하도록 하여 네트워크 설정을 단순화합니다.
+비공개 링크 기능을 사용하여 연결할 Adobe Experience Platform 소스에 대한 비공개 끝점을 만들 수 있습니다. 비공개 IP 주소를 사용하여 소스를 가상 네트워크에 안전하게 연결하여 공용 IP가 필요하지 않도록 하고 공격 표면을 줄일 수 있습니다. 데이터 트래픽이 승인된 서비스에만 도달하도록 하면서도 복잡한 방화벽 또는 네트워크 주소 변환 구성이 필요하지 않으므로 네트워크 설정을 단순화합니다.
 
 API를 사용하여 개인 엔드포인트를 만들고 사용하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
 
