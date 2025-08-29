@@ -1,9 +1,10 @@
 ---
 title: Marketo Engage 대상
 description: Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 엔드 투 엔드 CXM(Customer Experience Management) 솔루션입니다. CRM 리드 관리 및 고객 참여에서 계정 기반 마케팅 및 매출 기여도 분석에 이르기까지 활동을 자동화하고 관리할 수 있습니다.
-source-git-commit: 47d808b4dd1736f3444ddb479c3a460c289d09f8
+exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
+source-git-commit: 891484b279d2521115c6b1edc58f45c594a55382
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '874'
 ht-degree: 1%
 
 ---
@@ -12,14 +13,17 @@ ht-degree: 1%
 
 ## 대상 변경 로그 {#changelog}
 
+<!--
 >[!IMPORTANT]
 >
->**[!UICONTROL (레거시)(V2) Marketo Engage]**&#x200B;은(는) **2026년 3월**&#x200B;에 더 이상 사용되지 않습니다.
+>The **[!UICONTROL (Legacy) (V2) Marketo Engage]** will be deprecated in **March 2026**.
 >
->새 **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** 대상으로 원활하게 전환하려면 다음 주요 사항과 필요한 작업을 검토하십시오.
+>To ensure a smooth transition to the new **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** destination, review the following key points and required actions:
 >
->* 기존 **[!UICONTROL (기존)(V2) Marketo Engage]**&#x200B;의 모든 사용자는 2026년 3월까지 새 **[!UICONTROL Marketo Engage]** 대상으로 마이그레이션해야 합니다.
->* **기존 데이터 흐름은 자동으로 마이그레이션되지 않습니다.** 새 [Marketo Engage](../../ui/connect-destination.md) 대상에 대해 **[!UICONTROL 새 연결을 설정]**&#x200B;하고 대상자를 활성화해야 합니다.
+>* All users of the existing **[!UICONTROL (Legacy) (V2) Marketo Engage]** must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.
+>* **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.
+
+-->
 
 ![나란히 표시된 두 Marketo 대상 카드의 이미지](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
@@ -82,7 +86,7 @@ Experience Platform의 속성을 조직이 Marketo에서 액세스할 수 있는
 >* 대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
 >* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
-대상을 설정하고 대상을 활성화하는 방법에 대한 자세한 지침은 Marketo 설명서에서 [Adobe Experience Platform 대상을 Marketo 정적 목록으로 푸시](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=ko)를 참조하십시오.
+대상을 설정하고 대상을 활성화하는 방법에 대한 자세한 지침은 Marketo 설명서에서 [Adobe Experience Platform 대상을 Marketo 정적 목록으로 푸시](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html)를 참조하십시오.
 
 아래 비디오에서는 Marketo 대상을 구성하고 대상을 활성화하는 단계도 보여 줍니다.
 
@@ -95,7 +99,7 @@ Experience Platform의 속성을 조직이 Marketo에서 액세스할 수 있는
 >* 비디오에서 호출된 두 가지 제한 사항은 더 이상 적용되지 않습니다. 이제 비디오가 기록될 때 지원된 대상 멤버십 정보 외에도 다른 많은 프로필 속성 필드를 매핑할 수 있습니다. 아직 Marketo 정적 목록에 없는 Marketo으로 대상 구성원을 내보낼 수도 있으며 이러한 구성원이 목록에 추가됩니다.
 >* 활성화 워크플로의 **[!UICONTROL 대상 예약 단계]**&#x200B;에서 Marketo V1에서는 데이터를 Marketo으로 내보내려면 **[!UICONTROL 매핑 ID]**&#x200B;를 수동으로 추가해야 합니다. Marketo V2에서는 이 수동 단계가 더 이상 필요하지 않습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440165?quality=12&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## 대상 모니터링 {#monitor-destination}
 
