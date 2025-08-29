@@ -2,12 +2,12 @@
 title: Demandbase 의도
 description: Experience Platform의 Demandbase Intent 소스에 대해 알아봅니다.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
-badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 ### Experience Platform에 대한 권한 구성
 
-[!DNL Demandbase] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/abac/ui/permissions.md)를 참조하십시오.
+**[!UICONTROL 계정을 Experience Platform에 연결하려면 계정에 대해]**&#x200B;소스 보기&#x200B;**[!UICONTROL 및]**&#x200B;소스 관리[!DNL Demandbase] 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/abac/ui/permissions.md)를 참조하십시오.
 
 ### 파일 및 디렉터리에 대한 이름 지정 제약 조건
 
@@ -54,31 +54,39 @@ Experience Platform의 [!DNL Demandbase]은(는) [!DNL Google Cloud Storage]에 
 | 버킷 이름 | 데이터를 가져올 [!DNL Demandbase] 버킷. |
 | 폴더 경로 | 액세스 권한을 제공할 폴더의 경로입니다. |
 
-이러한 자격 증명에 대한 자세한 내용은 [[!DNL Google Cloud Storage] HMAC 키 안내서](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)를 참조하십시오. 액세스 키를 생성하는 방법에 대한 단계는  [!DNL Google Cloud Storage] 소스 개요[&#128279;](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)의 사전 요구 사항 안내서를 참조하십시오.
+이러한 자격 증명에 대한 자세한 내용은 [[!DNL Google Cloud Storage] HMAC 키 안내서](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)를 참조하십시오. 액세스 키를 생성하는 방법에 대한 단계는 [소스 개요 [!DNL Google Cloud Storage] 의 ](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)사전 요구 사항 안내서를 참조하십시오.
 
 ## [!DNL Demandbase] 스키마
 
 [!DNL Demandbase] 스키마 및 데이터 구조에 대한 자세한 내용은 이 섹션을 참조하십시오.
 
-[!DNL Demandbase] 스키마를 **Company Intent Weekly**&#x200B;라고 합니다. 지정된 계정 및 키워드에 대한 주간 의도 정보 (익명 B2B 구매자 연구 및 콘텐츠 소비)입니다. 데이터는 Parquet 형식입니다.
+[!DNL Demandbase] 스키마를 **B2B Demandbase 계정 의도**&#x200B;라고 합니다. 지정된 계정 및 키워드에 대한 주간 의도 정보 (익명 B2B 구매자 연구 및 콘텐츠 소비)입니다. 데이터는 Parquet 형식입니다.
 
-| 필드 이름 | 데이터 유형 | 필수 여부 | 비즈니스 키 | 참고 |
-| --- | --- | --- | --- | --- |
-| `company_id` | 문자열 | 참 | 예 | 정식 회사 ID입니다. |
-| `domain` | 문자열 | 참 | 예 | 의도를 표시하는 계정의 식별된 도메인입니다. |
-| `start_date` | 날짜 | 참 | 예 | 기간 중 의도 활동이 발생한 시작 날짜입니다. |
-| `end_date` | 날짜 | 참 | 예 | 기간 중 의도 활동이 발생한 종료 날짜입니다. |
-| `duration_type` | 문자열 | 참 | 예 | 기간 유형. 일반적으로 이 값은 선택한 롤업 기간에 따라 일별, 주별 또는 월별일 수 있습니다. 이 데이터 샘플의 경우 이 값은 `week`입니다. |
-| `keyword_set_id` | 문자열 | 참 | 예 | 키워드 집합 ID입니다. 지정된 고객마다 고유합니다. |
-| `keyword_set` | 문자열 | 참 | 예 | 키워드 집합 이름입니다. |
-| `keyword` | 문자열 | 참 | | 의도 키워드. |
-| `is_trending` | 문자열 | 참 | | 지정된 트렌드의 현재 상태입니다. 트렌드 상태는 이전 7주 동안의 평균과 비교하여 지난 주에 의도 활동의 버스트로 측정됩니다. |
-| `intent_strength` | ENUM[STRING] | 참 | | 의도 강도에 대한 정량화된 측정입니다. 허용되는 값은 `HIGH`, `MED` 및 `LOW`입니다. |
-| `num_people_researching` | 정수 | 참 | | 지난 7일 동안 키워드를 조사하는 `company_id`에 속한 사람의 수입니다. |
-| `num_trending_days` | 정수 | 참 | | 지정된 기간 동안 키워드가 트렌드한 일 수입니다. |
-| `trending_score` | 정수 | 참 | | 트렌드 점수. |
-| `record_id` | 문자열 | 참 | | 고유한 기본 레코드 ID입니다. |
-| `partition_date` | 날짜 | 참 | | 스냅샷의 캘린더 날짜입니다. 이 작업은 매주, 주말이 끝날 때 수행됩니다. |
+* 클래스 - XDM [!DNL Demandbase Account Intent]
+* 네임스페이스 - B2B [!DNL Demandbase Account Intent]
+* 기본 ID - `intentID`
+* 관계 - B2B 계정
+
+| 필드 이름 | 데이터 유형 | 설명 |
+|--------------------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | 오브젝트 | 이 필드에는 외부 소스의 시스템 감사 정보가 포함됩니다. |
+| `_id` | 문자열 | 레코드에 대한 고유 시스템 식별자입니다. |
+| `accountDomain` | 문자열 | 이 필드에는 계정 도메인이 포함됩니다. |
+| `accountID` | 문자열 | 해당 의도 레코드와 연결된 B2B 계정 ID입니다. |
+| `demandbaseAccountID` | 문자열 | [!DNL Demandbase]에 있는 회사 ID입니다. |
+| `durationType` | 문자열 | 이 필드는 의도 유효성 기간 유형(예: &quot;주&quot;)을 지정합니다. |
+| `endDate` | 날짜 | 의도 유효 기간의 종료 일자입니다. |
+| `intentID` | 문자열 | 의도 레코드에 대한 시스템에서 생성한 고유 값입니다. |
+| `intentStrength` | 문자열 | 이 필드는 &quot;DAY&quot;, &quot;WEEK&quot; 또는 &quot;MONTH&quot;와 같은 의도 유효성 기간 유형을 지정합니다. |
+| `isTrending` | 부울 | 이 필드는 가능한 값이 Low, Medium 또는 High인 키워드가 트렌드인지 여부를 나타냅니다. |
+| `keyword` | 문자열 | 이 필드에는 [!DNL Demandbase]의 의도를 나타내는 키워드 또는 구가 포함되어 있습니다. |
+| `keywordSetID` | 문자열 | 키워드 집합에 대한 식별자입니다. |
+| `keywordSetName` | 문자열 | 키워드 집합의 이름입니다. |
+| `numTrendingDays` | 정수 | 이 필드는 키워드가 트렌드한 일 수를 나타냅니다. |
+| `partitionDate` | 날짜 | 레코드에 대한 분할 날짜입니다. |
+| `peopleResearchingCount` | 정수 | 이 필드는 키워드를 조사하는 사람의 수를 나타냅니다. |
+| `startDate` | 날짜 | 의도 유효 기간의 시작일입니다. |
+| `trendingScore` | 정수 | 이 필드에는 키워드에 대한 트렌드 점수가 포함됩니다. |
 
 {style="table-layout:auto"}
 

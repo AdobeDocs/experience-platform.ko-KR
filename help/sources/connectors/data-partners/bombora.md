@@ -2,12 +2,12 @@
 title: 봄보라 의도
 description: Experience Platform의 Bombora Intent 소스에 대해 알아봅니다.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
-badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 9ab2c4725d2188f772bde1f7a89db2bb47c7a46b
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1607'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ B2B 마케터는 Real-Time CDP에서 계정 목록을 만들어 높은 의도를
 
 ### Experience Platform에 대한 권한 구성
 
-[!DNL Bombora] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/abac/ui/permissions.md)를 참조하십시오.
+**[!UICONTROL 계정을 Experience Platform에 연결하려면 계정에 대해]**&#x200B;소스 보기&#x200B;**[!UICONTROL 및]**&#x200B;소스 관리[!DNL Bombora] 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/abac/ui/permissions.md)를 참조하십시오.
 
 ### 파일 및 디렉터리에 대한 이름 지정 제약 조건
 
@@ -71,24 +71,33 @@ Experience Platform의 [!DNL Bombora]은(는) [!DNL Google Cloud Storage]에 의
 | 비밀 액세스 키 | [!DNL Bombora] 비밀 액세스 키입니다. Experience Platform 계정을 인증하는 데 필요한 40자의 Base64로 인코딩된 문자열입니다. |
 | 버킷 이름 | 데이터를 가져올 [!DNL Bombora] 버킷. |
 
-이러한 자격 증명에 대한 자세한 내용은 [[!DNL Google Cloud Storage] HMAC 키 안내서](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)를 참조하십시오. 액세스 키를 생성하는 방법에 대한 단계는  [!DNL Google Cloud Storage] 소스 개요[&#128279;](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)의 사전 요구 사항 안내서를 참조하십시오.
+이러한 자격 증명에 대한 자세한 내용은 [[!DNL Google Cloud Storage] HMAC 키 안내서](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)를 참조하십시오. 액세스 키를 생성하는 방법에 대한 단계는 [소스 개요 [!DNL Google Cloud Storage] 의 ](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)사전 요구 사항 안내서를 참조하십시오.
 
 ## [!DNL Bombora] 스키마 {#schema}
 
 [!DNL Bombora] 스키마 및 데이터 구조에 대한 자세한 내용은 이 섹션을 참조하십시오.
 
-[!DNL Bombora] 스키마를 **계정 의도 주별**&#x200B;이라고 합니다. 지정된 계정 및 주제에 대한 주간 의도 정보(익명 B2B 구매자 연구 및 콘텐츠 소비)입니다. 데이터는 Parquet 형식입니다.
+[!DNL Bombora] 스키마를 **B2B Bombora 계정 의도**&#x200B;라고 합니다. 지정된 계정 및 주제에 대한 주간 의도 정보(익명 B2B 구매자 연구 및 콘텐츠 소비)입니다. 데이터는 Parquet 형식입니다.
 
-| 필드 이름 | 데이터 유형 | 필수 여부 | 비즈니스 키 | 참고 |
-| --- | --- | --- | --- | --- |
-| `Account_Name` | 문자열 | 참 | 예 | 회사의 정식 이름. |
-| `Domain` | 문자열 | 참 | 예 | 의도를 표시하는 식별된 계정의 도메인입니다. |
-| `Topic_Id` | 문자열 | 참 | 예 | [!DNL Bombora] 주제 ID입니다. |
-| `Topic_Name` | 문자열 | 참 | | [!DNL Bombora] 주제 이름입니다. |
-| `Cluster_Name` | 문자열 | 참 | | [!DNL Bombora]에서 지정한 항목에 대한 클러스터 이름입니다. |
-| `Cluster_Id` | 문자열 | 참 | | 특정 주제와 연결된 클러스터 ID입니다. |
-| `Composite_Score` | 정수 | 참 | | 복합 점수는 지정된 기간 동안 주어진 주제에 대한 도메인의 소비 패턴을 나타냅니다. 복합 점수는 0과 100 사이에서 측정되며, 여기서 100은 가장 높은 가능한 점수를 나타내고 0은 가장 낮은 가능한 점수를 나타냅니다. 복합 점수가 60점 이상인 경우 특정 주제에 대한 관심도가 도메인에 의해 증가함을 나타낸다. 이를 &quot;급증&quot;이라고도 합니다. |
-| `Partition_Date` | 날짜 | 참 | | 스냅샷의 캘린더 날짜입니다. 이 작업은 매주, 주말이 끝날 때 `mm/dd/yyyy` 형식으로 수행됩니다. |
+* 클래스 - XDM [!DNL Bombora Account Intent]
+* 네임스페이스 - B2B [!DNL Bombora Account Intent]
+* 기본 ID - `intentID`
+* 관계 - B2B 계정
+
+| 필드 이름 | 데이터 유형 | 설명 |
+|------------------------|-----------|----------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | 오브젝트 | 이 필드는 시스템에서 소스 시스템 감사에 사용됩니다. |
+| `_id` | 문자열 | 이 필드는 시스템에서 고유 식별자로 사용됩니다. |
+| `accountDomain` | 문자열 | 이 필드에는 계정 도메인이 포함됩니다. |
+| `accountID` | 문자열 | 이 필드에는 해당 의도 레코드와 연결된 B2B 계정 ID가 포함됩니다. |
+| `bomboraAccountName` | 문자열 | 이 필드에는 Bombora에 있는 회사 ID가 포함됩니다. |
+| `clusterID` | 문자열 | 이 필드에는 클러스터 ID가 포함되어 있습니다. |
+| `clusterName` | 문자열 | 이 필드에는 클러스터 이름이 포함됩니다. |
+| `compositeScore` | 정수 | 이 필드에는 복합 의도 점수가 포함됩니다. |
+| `intentID` | 문자열 | 이 필드에는 시스템에서 생성한 고유 값이 포함됩니다. |
+| `partitionDate` | 날짜 | 이 필드에는 파티션 날짜가 들어 있습니다. 이 작업은 매주, 주말이 끝날 때 `mm/dd/yyyy` 형식으로 수행됩니다. |
+| `topicID` | 문자열 | 이 필드에는 Bombora의 의도 항목 ID가 포함되어 있습니다. |
+| `topicName` | 문자열 | 이 필드에는 Bombora의 의도 주제 이름이 포함되어 있습니다. |
 
 {style="table-layout:auto"}
 
