@@ -3,7 +3,7 @@ title: 대상 API 엔드포인트
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 대상 끝점을 사용하여 프로그래밍 방식으로 조직의 대상을 만들고, 관리하고, 업데이트합니다.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
+source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 대상자는 유사한 행동 및/또는 특성을 공유하는 사람들의 컬렉션입니다. 이러한 사람 컬렉션은 Adobe Experience Platform을 사용하거나 외부 소스에서 생성할 수 있습니다. Segmentation API에서 대상을 프로그래밍 방식으로 검색, 만들기, 업데이트 및 삭제할 수 있는 `/audiences` 끝점을 사용할 수 있습니다.
 
-## 시작하기
+## 시작
 
 이 가이드에 사용된 끝점은 [!DNL Adobe Experience Platform Segmentation Service] API의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
 
@@ -37,7 +37,7 @@ GET /audiences?{QUERY_PARAMETERS}
 
 대상자 목록을 검색할 때 다음 쿼리 매개 변수를 사용할 수 있습니다.
 
-| 쿼리 매개 변수 | 설명 | 예 |
+| 쿼리 매개변수 | 설명 | 예 |
 | --------------- | ----------- | ------- |
 | `start` | 반환된 대상의 시작 오프셋을 지정합니다. | `start=5` |
 | `limit` | 페이지당 반환되는 최대 대상자 수를 지정합니다. | `limit=10` |
@@ -67,7 +67,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
 
 성공적인 응답은 조직에서 JSON으로 생성된 대상자 목록과 함께 HTTP 상태 200을 반환합니다.
 
-+++조직에 속한 마지막 두 명의 대상을 만든 샘플 응답
++++조직에 속한 마지막 두 명의 생성된 대상자를 포함하는 샘플 응답
 
 ```json
 {
@@ -166,7 +166,12 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
     ],
     "_page":{
       "totalCount": 111,
-      "pageSize": 2,
+      "totalPages": 21,
+      "sortField": "name",
+      "sort": "asc", 
+      "pageSize": 5,
+      "limit": 5,
+      "start": "0",
       "next": "1"
    },
    "_links":{
@@ -335,7 +340,7 @@ GET /audiences/{AUDIENCE_ID}
 
 | 매개변수 | 설명 |
 | --------- | ----------- | 
-| `{AUDIENCE_ID}` | 검색하려는 대상자의 ID입니다. 이 필드는 `id` 필드이며 `audienceId` 필드는 **이(가) 아닙니다**. |
+| `{AUDIENCE_ID}` | 검색하려는 대상자의 ID입니다. 이 필드는 `id` 필드이며 **필드는**&#x200B;이(가) 아닙니다`audienceId`. |
 
 **요청**
 
@@ -434,11 +439,11 @@ PUT /audiences/{AUDIENCE_ID}
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | 업데이트할 대상자의 ID입니다. 이 필드는 `id` 필드이며 `audienceId` 필드는 **이(가) 아닙니다**. |
+| `{AUDIENCE_ID}` | 업데이트할 대상자의 ID입니다. 이 필드는 `id` 필드이며 **필드는**&#x200B;이(가) 아닙니다`audienceId`. |
 
 **요청**
 
-+++전체 대상 업데이트에 대한 샘플 요청입니다.
++++전체 대상을 업데이트하기 위한 샘플 요청입니다.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -526,7 +531,7 @@ PATCH /audiences/{AUDIENCE_ID}
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | 업데이트할 대상자의 ID입니다. 이 필드는 `id` 필드이며 `audienceId` 필드는 **이(가) 아닙니다**. |
+| `{AUDIENCE_ID}` | 업데이트할 대상자의 ID입니다. 이 필드는 `id` 필드이며 **필드는**&#x200B;이(가) 아닙니다`audienceId`. |
 
 **요청**
 
@@ -559,7 +564,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-41
 
 성공적인 응답은 업데이트된 대상이 있는 HTTP 상태 200을 반환합니다.
 
-+++대상의 필드를 패치할 때 샘플 응답.
++++대상의 필드를 패치할 때의 샘플 응답입니다.
 
 ```json
 {
@@ -601,7 +606,7 @@ DELETE /audiences/{AUDIENCE_ID}
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | 삭제할 대상자의 ID입니다. 이 필드는 `id` 필드이며 `audienceId` 필드는 **이(가) 아닙니다**. |
+| `{AUDIENCE_ID}` | 삭제할 대상자의 ID입니다. 이 필드는 `id` 필드이며 **필드는**&#x200B;이(가) 아닙니다`audienceId`. |
 
 **요청**
 
