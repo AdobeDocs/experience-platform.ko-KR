@@ -103,8 +103,8 @@ conversionDetails 개체는 추적 코드, ID 및 전환 속성을 포함한 광
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `trackingCode` | 문자열 | 이벤트에 대한 전환 추적 코드입니다. 가능한 형식 목록은 [AMO ID 형식](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats)을 참조하십시오. |
-| `trackingIdentities` | 문자열 | 이벤트에 대한 EF ID 또는 추적 ID 세부 정보. 가능한 형식 목록은 [EF ID 형식](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats)을 참조하십시오. |
+| `trackingCode` | 문자열 | 이벤트에 대한 전환 추적 코드입니다. 가능한 형식 목록은 [AMO ID 형식](https://experienceleague.adobe.com/ko/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats)을 참조하십시오. |
+| `trackingIdentities` | 문자열 | 이벤트에 대한 EF ID 또는 추적 ID 세부 정보. 가능한 형식 목록은 [EF ID 형식](https://experienceleague.adobe.com/ko/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats)을 참조하십시오. |
 | `conversionProperties` | 오브젝트 | 키-값 쌍 문자열의 배열로 표시되는 전환 속성 맵(예: `subscriptions=253`). |
 
 ## `fees` {#fees}
