@@ -91,8 +91,8 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 >[!NOTE]
 >
 >대상 이름을 지정할 때 Adobe에서는 다음 형식을 따르는 것이 좋습니다. `LiveRamp - Downstream Destination Name`. 이 이름 지정 패턴을 통해 대상 작업 영역의 [찾아보기](../../ui/destinations-workspace.md#browse) 탭에서 대상을 빠르게 식별할 수 있습니다.
->&#x200B;><br>
->&#x200B;>예: `LiveRamp - Roku`.
+>><br>
+>>예: `LiveRamp - Roku`.
 
 * **[!UICONTROL 설명]**: 대상에 대한 설명을 입력하십시오. 이 대상의 목적을 쉽게 식별하는 데 도움이 되는 설명을 사용하십시오.
 * **[!UICONTROL 대상]**: 드롭다운 메뉴를 사용하여 대상을 활성화할 대상을 선택합니다. 여기서 선택한 대상은 [대상별 설정](#destination-settings) 화면에 표시되는 내용에 직접 영향을 줍니다.
@@ -275,7 +275,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_contactemail"
 >title="연락처 이메일"
->abstract="Nexxen이 데이터 약정 세부 정보를 보내는 데 사용할 이메일 주소를 입력합니다. 이는 대체로 귀하의 이메일 주소지만 이메일 별칭일 수도 있습니다. 수신자가 여러 명인 경우 쉼표를 사용하여 구분합니다(`email1@domain.com`, `email2@domain.com` 등)."
+>abstract="Nexxen이 데이터 약정 세부 정보를 보내는 데 사용할 이메일 주소를 입력합니다. 이는 대체로 귀하의 이메일 주소지만 이메일 별칭일 수도 있습니다. 수신자가 여러 명인 경우 쉼표를 사용하여 구분합니다(`email1@domain.com`,`email2@domain.com` 등)."
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
