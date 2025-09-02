@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Microsoft Dynamics Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Microsoft Dynamics을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 3%
+source-wordcount: '284'
+ht-degree: 2%
 
 ---
 
-# Microsoft Dynamics 커넥터
+# [!DNL Microsoft Dynamics] 원본
 
-Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+[!DNL Microsoft Dynamics]은(는) 작업을 보다 효과적으로 관리하는 데 사용할 수 있는 비즈니스 응용 프로그램 세트입니다. 고객 관계, 재무, 공급망 등을 감독하는 경우 [!DNL Microsoft Dynamics]은(는) 워크플로를 간소화하고 보다 현명한 결정을 내릴 수 있는 도구를 제공합니다. 이 플랫폼은 엔터프라이즈 리소스 계획 및 CRM(고객 관계 관리)을 모두 지원하도록 구축되어 비즈니스 프로세스를 하나의 통합 시스템으로 통합할 수 있습니다.
 
-[!DNL Experience Platform]은(는) 타사 CRM 시스템에서 데이터 수집을 지원합니다. CRM 공급자에 대한 지원에는 [!DNL Microsoft Dynamics]이(가) 포함됩니다.
+[!DNL Microsoft Dynamics] 소스를 사용하여 [!DNL Microsoft Dynamics] 계정의 데이터를 Adobe Experience Platform으로 수집할 수 있습니다.
 
-## IP 주소 허용 목록
+## 허용 목록에 추가하다 IP 주소
 
-소스 커넥터로 작업하려면 먼저 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지를 참조하세요.
+소스를 Experience Platform에 연결하기 전에 지역별 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 자세한 내용은 [Experience Platform에 연결하기 위한 IP 주소 허용 목록에 추가](../../ip-address-allow-list.md)에 대한 안내서를 참조하십시오.
 
 ## [!DNL Microsoft Dynamics]에서 XDM으로 필드 매핑
 
