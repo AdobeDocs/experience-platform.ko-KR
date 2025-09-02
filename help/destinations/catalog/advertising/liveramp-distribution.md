@@ -91,8 +91,8 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 >[!NOTE]
 >
 >대상 이름을 지정할 때 Adobe에서는 다음 형식을 따르는 것이 좋습니다. `LiveRamp - Downstream Destination Name`. 이 이름 지정 패턴을 통해 대상 작업 영역의 [찾아보기](../../ui/destinations-workspace.md#browse) 탭에서 대상을 빠르게 식별할 수 있습니다.
->><br>
->>예: `LiveRamp - Roku`.
+>&#x200B;><br>
+>&#x200B;>예: `LiveRamp - Roku`.
 
 * **[!UICONTROL 설명]**: 대상에 대한 설명을 입력하십시오. 이 대상의 목적을 쉽게 식별하는 데 도움이 되는 설명을 사용하십시오.
 * **[!UICONTROL 대상]**: 드롭다운 메뉴를 사용하여 대상을 활성화할 대상을 선택합니다. 여기서 선택한 대상은 [대상별 설정](#destination-settings) 화면에 표시되는 내용에 직접 영향을 줍니다.
