@@ -1,43 +1,43 @@
 ---
-title: Acxiom 대상 배포
-description: ' [!DNL Acxiom Audience Distribution] 대상을 사용하여 [!DNL Acxiom''s Real ID] 기술로 대상을 향상하고  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등의 여러 플랫폼에 대상을 활성화합니다.'
+title: Acxiom 대상 연결
+description: ' [!DNL Acxiom Audience Connection] 대상을 사용하여 [!DNL Acxiom''s Real ID] 기술로 대상을 향상하고  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등의 여러 플랫폼에 대상을 활성화합니다.'
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
+source-git-commit: 70a1cdcfd99ae006f02289ab5a20ced624b51ccc
 workflow-type: tm+mt
 source-wordcount: '927'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# [!DNL Acxiom Audience Distribution] 대상
+# [!DNL Acxiom Audience Connection] 대상
 
 >[!NOTE]
 >
->[!DNL Acxiom Audience Distribution] 대상이 Beta 상태입니다. 이 대상 커넥터 및 설명서 페이지는 [!DNL Acxiom] 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 Acxiom에 직접 [여기](mailto:acxiom-adobe-help@acxiom.com)로 문의하십시오.
+>[!DNL Acxiom Audience Connection] 대상이 Beta 상태입니다. 이 대상 커넥터 및 설명서 페이지는 [!DNL Acxiom] 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 Acxiom에 직접 [여기](mailto:acxiom-adobe-help@acxiom.com)로 문의하십시오.
 
-[!DNL Acxiom Audience Distribution] 대상을 사용하여 [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/) 기술로 대상을 향상하고 [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등과 같은 여러 플랫폼으로 대상을 활성화하십시오.
+[!DNL Acxiom Audience Connection] 대상을 사용하여 [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/) 기술로 대상을 향상하고 [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등과 같은 여러 플랫폼으로 대상을 활성화하십시오.
 
-이 자습서에서는 [!DNL Acxiom Audience Distribution] 사용자 인터페이스를 사용하여 [!DNL Adobe Experience Platform] 대상 커넥터를 만드는 지침을 제공합니다. 이 커넥터를 사용하여 대상자를 빌드하고 선택한 대상에 배포합니다.
+이 자습서에서는 [!DNL Acxiom Audience Connection] 사용자 인터페이스를 사용하여 [!DNL Adobe Experience Platform] 대상 커넥터를 만드는 지침을 제공합니다. 이 커넥터를 사용하여 대상자를 빌드하고 선택한 대상에 배포합니다.
 
 ## 사용 사례 {#use-cases}
 
-[!DNL Acxiom Audience Distribution] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 [!DNL Adobe Experience Platform] 고객이 이 커넥터를 사용하여 해결할 수 있는 사용 사례 예제를 소개합니다.
+[!DNL Acxiom Audience Connection] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 [!DNL Adobe Experience Platform] 고객이 이 커넥터를 사용하여 해결할 수 있는 사용 사례 예제를 소개합니다.
 
 ### Experience Platform에서 Acxiom 계정으로 대상자 보내기 {#send-audiences}
 
 채널 간 획득을 위해 대상을 [!DNL Experience Platform]에서 [!DNL Acxiom] 계정으로 보내려는 마케팅 전문가인 경우 이 대상 커넥터를 사용하십시오.
 
-예를 들어 글로벌 금융 서비스 브랜드의 마케팅 운영 부서에서는 여러 광고 플랫폼을 통한 크로스 채널 고객 확보에 관심이 있습니다. [!DNL Acxiom Audience Distribution] 대상 커넥터를 사용하여 대상을 [!DNL Experience Platform]에서 [!DNL Acxiom]&#x200B;(으)로 보내고, [!DNL Acxiom's Real ID] 기술로 대상을 향상시키며, [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등과 같은 여러 플랫폼에 대상을 활성화할 수 있습니다.
+예를 들어 글로벌 금융 서비스 브랜드의 마케팅 운영 부서에서는 여러 광고 플랫폼을 통한 크로스 채널 고객 확보에 관심이 있습니다. [!DNL Acxiom Audience Connection] 대상 커넥터를 사용하여 대상을 [!DNL Experience Platform]에서 [!DNL Acxiom]&#x200B;(으)로 보내고, [!DNL Acxiom's Real ID] 기술로 대상을 향상시키며, [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등과 같은 여러 플랫폼에 대상을 활성화할 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
-* **사용 약관 확인:** 새 [!DNL Acxiom Audience Distribution] 대상을 구성하려면 [!DNL Acxiom's] 사용 약관 계약을 읽고 서명해야 합니다. 실행된 판매 주문이 완료되면 계약 링크를 받게 됩니다. 계약에 서명할 때까지 Experience Platform 대상 카탈로그에 [!DNL Acxiom Audience Distribution] 대상 카드가 표시되지 않습니다. 계약에 동의하고 서명하면 [!DNL Adobe]이(가) 온보딩 프로세스를 완료하고 [!DNL Acxiom Audience Distribution] 대상 카드가 표시됩니다.
-* **Adobe 조직 ID를 알고 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [!DNL Adobe's]조직 ID를 보는 방법&#x200B;*에 대한 자세한 내용은* [Experience Cloud의 조직](https://experienceleague.adobe.com/ko/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) 항목을 참조하십시오.
+* **사용 약관 확인:** 새 [!DNL Acxiom Audience Connection] 대상을 구성하려면 [!DNL Acxiom's] 사용 약관 계약을 읽고 서명해야 합니다. 실행된 판매 주문이 완료되면 계약 링크를 받게 됩니다. 계약에 서명할 때까지 Experience Platform 대상 카탈로그에 [!DNL Acxiom Audience Connection] 대상 카드가 표시되지 않습니다. 계약에 동의하고 서명하면 [!DNL Adobe]이(가) 온보딩 프로세스를 완료하고 [!DNL Acxiom Audience Connection] 대상 카드가 표시됩니다.
+* **Adobe 조직 ID를 알고 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [!DNL Adobe's]조직 ID를 보는 방법&#x200B;*에 대한 자세한 내용은* [Experience Cloud의 조직](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) 항목을 참조하십시오.
 
 ## 지원되는 대상 {#supported-destinations}
 
-[!DNL Acxiom Audience Distribution] 대상은 현재 다음 플랫폼에 대한 대상 활성화를 지원합니다.<br>
+[!DNL Acxiom Audience Connection] 대상은 현재 다음 플랫폼에 대한 대상 활성화를 지원합니다.<br>
 
 * [!DNL Altice]
 * [!DNL Ampersand]
@@ -49,11 +49,11 @@ ht-degree: 6%
 
 ## 대상에 연결 {#connect}
 
-[!DNL Acxiom's Audience Distribution] 대상에 대한 인증은 사용자 편의를 위해 백그라운드에서 자동으로 처리됩니다.
+[!DNL Acxiom's Audience Connection] 대상에 대한 인증은 사용자 편의를 위해 백그라운드에서 자동으로 처리됩니다.
 
 ## 대상별 설정 {#destination-settings}
 
-일부 [!DNL Acxiom Audience Distribution] 대상에 추가 정보가 필요합니다. 아래 섹션에서는 이러한 옵션을 구성하는 방법에 대한 자세한 지침을 제공합니다.
+일부 [!DNL Acxiom Audience Connection] 대상에 추가 정보가 필요합니다. 아래 섹션에서는 이러한 옵션을 구성하는 방법에 대한 자세한 지침을 제공합니다.
 
 ### [!DNL LG Ads] {#lg-ads}
 
@@ -74,13 +74,13 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->[!DNL Acxiom Audience Distribution] 대상은 전체 파일 내보내기만 지원합니다.
+>[!DNL Acxiom Audience Connection] 대상은 전체 파일 내보내기만 지원합니다.
 
 ### 속성 및 ID 매핑 {#map}
 
-[!DNL Acxiom Audience Distribution] 대상이 대상 데이터를 올바르게 수신하려면 Experience Platform의 소스 필드를 올바른 [!DNL Acxiom Audience Distribution] 대상 필드에 매핑해야 합니다.
+[!DNL Acxiom Audience Connection] 대상이 대상 데이터를 올바르게 수신하려면 Experience Platform의 소스 필드를 올바른 [!DNL Acxiom Audience Connection] 대상 필드에 매핑해야 합니다.
 
-[!DNL Acxiom Audience Distribution]에서는 다음 대상 필드에 대한 매핑만 허용합니다. 아래 표에 설명된 대상 필드는 아래 표시된 순서대로 매핑해야 합니다.
+[!DNL Acxiom Audience Connection]에서는 다음 대상 필드에 대한 매핑만 허용합니다. 아래 표에 설명된 대상 필드는 아래 표시된 순서대로 매핑해야 합니다.
 
 | 필드 이름 | 설명 | 필수 여부 | 필드 순서 | 최대 길이 |
 |---|---|---|---|---|          
@@ -105,7 +105,7 @@ ht-degree: 6%
 
 ### 검토 {#review}
 
-위의 모든 단계를 완료하면 대상 연결 상태 및 대상 세부 사항을 검토한 후 활성화(배포)할 수 있습니다. 선택한 대상이 목록의 맨 아래에 표시됩니다. 각 대상자는 [!DNL Acxiom Audience Distribution] API에 대한 별도의 호출이 됩니다.
+위의 모든 단계를 완료하면 대상 연결 상태 및 대상 세부 사항을 검토한 후 활성화(배포)할 수 있습니다. 선택한 대상이 목록의 맨 아래에 표시됩니다. 각 대상자는 [!DNL Acxiom Audience Connection] API에 대한 별도의 호출이 됩니다.
 
 결과에 만족하면 **[!UICONTROL 완료]**&#x200B;를 선택하여 대상을 활성화하세요.
 
@@ -128,4 +128,4 @@ ht-degree: 6%
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
-데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/data-governance/home)를 참조하십시오.
+데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)를 참조하십시오.
