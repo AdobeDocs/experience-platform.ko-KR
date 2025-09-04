@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2025년 8월
 description: Adobe Experience Platform의 2025년 8월 릴리스 정보입니다.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 35c3933f5debbba04c885f6000b908e292613395
+source-git-commit: 76acf488ad06ec7b3fe818cf34c86ea76dc614f4
 workflow-type: tm+mt
-source-wordcount: '1339'
-ht-degree: 85%
+source-wordcount: '1321'
+ht-degree: 97%
 
 ---
 
@@ -85,7 +85,7 @@ Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이
 >66.117.18.135
 >```
 >
->**이 변경 사항은 다음 목적지 유형에 적용됩니다.**
+>**이 변경 사항은 다음 대상 유형에 적용됩니다.**
 >
 >- [스트리밍 대상자 내보내기 대상](../../destinations/destination-types.md#streaming-destinations) ([Pega CDH 실시간 대상자](/help/destinations/catalog/personalization/pega-v2.md), [Salesforce Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) 및 [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)와의 API 기반 통합)
 >- [Destination SDK](../../destinations/destination-sdk/getting-started.md)를 통해 빌드된 공개 또는 비공개 대상
@@ -102,14 +102,14 @@ Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이
 
 | 대상 | 설명 |
 | --- | --- |
-| [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 내부 업그레이드 | 2025년 8월 11일부터 잠시 동안 대상 카탈로그에서 두 개의 **[!DNL Microsoft Bing]** 카드가 나란히 표시되었을 수 있습니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!DNL Microsoft Bing]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않는) Microsoft Bing]**&#x200B;으로 변경되었으며, 이제 **[!UICONTROL Microsoft Bing]**&#x200B;이라는 이름의 새 카드를 사용할 수 있습니다. <br> 업그레이드가 완료되었으며 더 이상 사용되지 않는 카드가 대상 카탈로그에서 제거되었습니다. 새 활성화 데이터 흐름은 카탈로그의 **[!UICONTROL Microsoft Bing]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않는) Microsoft Bing]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다. <br><br> [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 생성하는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]를 다음 값으로 업데이트해야 합니다.<ul><li>흐름 사양 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>연결 사양 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 이 업그레이드를 적용하면 [!DNL Microsoft Bing]에 대한 데이터 흐름에서 **활성화된 프로필 수가 감소**&#x200B;할 수 있습니다. 이러한 감소는 이 대상 플랫폼에 대한 모든 활성화의 **ECID 매핑 요구 사항** 도입으로 인해 발생합니다. |
-| [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) 및 [LinkedIn 일치하는 대상](../../destinations/catalog/social/linkedin-b2b.md) 대상에 대한 인증 만료 세부 정보 | [!DNL LinkedIn] 대상에 대한 인증 만료 정보가 이제 Experience Platform 인터페이스에 바로 표시되므로 인증 만료 시기를 확인하고 갱신하여 데이터 흐름에 중단을 줄 수 있습니다. **[!UICONTROL 계정]** 또는 **[[!UICONTROL 찾아보기]](../../destinations/ui/destinations-workspace.md#accounts)** 탭의 **[[!UICONTROL 계정 만료 날짜]](../../destinations/ui/destinations-workspace.md#browse)** 열에서 토큰 만료 날짜를 모니터링할 수 있습니다. |
+| [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 내부 업그레이드 | 2025년 8월 11일부터 짧은 기간 동안 대상 카탈로그에서 두 장의 **[!DNL Microsoft Bing]** 카드가 나란히 표시되었습니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!DNL Microsoft Bing]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않는) Microsoft Bing]**&#x200B;으로 변경되었으며, 이제 **[!UICONTROL Microsoft Bing]**&#x200B;이라는 이름의 새 카드를 사용할 수 있습니다. <br> 업그레이드가 완료되었으며, 더 이상 사용되지 않는 카드는 대상 카탈로그에서 제거되었습니다. 카탈로그의 새로운 **[!UICONTROL Microsoft Bing]** 연결을 사용하여 새 활성화 데이터 흐름을 확인하십시오. **[!UICONTROL (더 이상 사용되지 않는) Microsoft Bing]** 대상으로의 활성 데이터 흐름이 있는 경우 해당 데이터 흐름은 자동으로 업데이트되므로 다른 액션이 필요하지 않습니다. <br><br>[Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 생성하는 경우 [!DNL flow spec ID]및 [!DNL connection spec ID]를 다음 값으로 업데이트해야 합니다.<ul><li>흐름 사양 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>연결 사양 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 이 업그레이드를 적용하면 [!DNL Microsoft Bing]에 대한 데이터 흐름에서 **활성화된 프로필 수가 감소**&#x200B;할 수 있습니다. 이러한 감소는 이 대상 플랫폼에 대한 모든 활성화의 **ECID 매핑 요구 사항** 도입으로 인해 발생합니다. |
+| [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) 및 [LinkedIn 일치 대상자](../../destinations/catalog/social/linkedin-b2b.md) 대상에 대한 인증 만료 세부 정보 | [!DNL LinkedIn] 대상에 대한 인증 만료 정보가 이제 Experience Platform 인터페이스에 직접 표시되므로 데이터 흐름이 중단되기 전에 인증이 만료되고 갱신되는 시점을 확인할 수 있습니다. **[[!UICONTROL 계정]](../../destinations/ui/destinations-workspace.md#accounts)** 또는 **[[!UICONTROL 찾아보기]](../../destinations/ui/destinations-workspace.md#browse)** 탭의 **[!UICONTROL 계정 만료 일자]** 열에서 토큰 만료 일자를 모니터링할 수 있습니다. |
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 대상에 대한 향상된 검색, 필터링 및 태그 지정 기능 | [찾아보기](../../destinations/ui/destinations-workspace.md#browse) 및 [계정](../../destinations/ui/destinations-workspace.md#accounts) 탭에서 향상된 검색, 필터링 및 태그 지정 기능으로 대상 관리 워크플로를 개선하십시오. <br> 이제 이름별로 특정 데이터 흐름 및 계정을 검색하고 대상 플랫폼, 상태 및 날짜를 포함한 다양한 기준으로 필터링하고 사용자 지정 태그를 만들어 대상을 구성할 수 있습니다. 마지막 데이터 흐름 실행 시간과 같은 주요 필드에도 열 정렬을 사용할 수 있으므로 대상 연결을 보다 쉽게 식별하고 관리할 수 있습니다. <br> ![찾아보기 탭에서 대상 데이터 흐름을 검색하는 애니메이션 데모](../../destinations/assets/ui/workspace/search.gif) |
+| 대상에 대한 향상된 검색, 필터링 및 태그 지정 기능 | [찾아보기](../../destinations/ui/destinations-workspace.md#browse) 및 [계정](../../destinations/ui/destinations-workspace.md#accounts) 탭에서 향상된 검색, 필터링 및 태그 지정 기능으로 대상 관리 워크플로를 개선하십시오. <br>이제 이름으로 특정 데이터 흐름과 계정을 검색하고, 대상 플랫폼, 상태, 날짜를 포함한 다양한 기준으로 필터링하고, 대상을 정리하기 위한 사용자 정의 태그를 만들 수 있습니다. 마지막 데이터 흐름 런타임과 같은 주요 필드에 대해서도 열 정렬 기능을 사용할 수 있으므로 대상 연결을 더 쉽게 식별하고 관리할 수 있습니다.<br> ![찾아보기 탭에서 대상 데이터 흐름을 검색하는 애니메이션 데모](../../destinations/assets/ui/workspace/search.gif) |
 
 ## 경험 데이터 모델 (XDM) {#xdm}
 
@@ -159,7 +159,7 @@ Experience Platform은 전 세계적으로 디지털 체험 애플리케이션�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 대상자 예상치 | 이제 세그먼트 빌더에서 대상자 예상치가 자동으로 생성됩니다. 이 값은 대상자를 수정할 때마다 업데이트되며, 항상 최신 대상자 규칙을 반영합니다. 또한 추정치는 이제 샘플링 데이터의 신뢰 구간을 기반으로 하는 **범위**&#x200B;로 표시됩니다. |
+| 대상자 예상치 | 이제 대상자 예상 값이 샘플링 데이터의 신뢰 구간을 기반으로 하는 **범위**(으)로 표시됩니다. 예상 값에 대한 자세한 내용은 [세그먼트 빌더 안내서](/help/segmentation/ui/segment-builder.md#audience-properties)를 참조하세요. |
 
 자세한 내용은 [[!DNL Segmentation Service] 개요](../../segmentation/home.md)를 참조하십시오.
 

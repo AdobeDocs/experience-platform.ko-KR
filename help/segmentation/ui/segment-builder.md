@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
+source-git-commit: 8fe725ee41472d49cbc8411a0d2db665ac3c1814
 workflow-type: tm+mt
-source-wordcount: '5174'
+source-wordcount: '5200'
 ht-degree: 11%
 
 ---
@@ -330,7 +330,7 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 >[!NOTE]
 >
 >&quot;After&quot; 시간 제한을 사용할 때 후자의 이벤트는 시간 제한 내에 나열된 시간보다 많이 발생할 수 있습니다. >
->&#x200B;>예를 들어, 페이지 보기 이벤트와 체크아웃 이벤트가 있고, 이 두 이벤트 사이에 &quot;1시간 후&quot; 시간 제한을 두는 경우, 페이지 보기 이벤트 2시간 후에 체크아웃 이벤트가 있는 세그먼트 정의가 유효합니다.
+>>예를 들어, 페이지 보기 이벤트와 체크아웃 이벤트가 있고, 이 두 이벤트 사이에 &quot;1시간 후&quot; 시간 제한을 두는 경우, 페이지 보기 이벤트 2시간 후에 체크아웃 이벤트가 있는 세그먼트 정의가 유효합니다.
 >
 >추가로, 이 두 시간 제약들은 서로 협력하여 사용될 수 있다.
 >
@@ -386,7 +386,7 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="예상치 새로 고침"
 >abstract="세그먼트 대상의 예상치를 새로 고쳐 제안된 세그먼트 대상에 적합한 프로필 개수를 미리 볼 수 있습니다. 당일 샘플 데이터의 샘플 크기를 사용하여 대상자 예상치를 생성합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=ko#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
@@ -406,10 +406,7 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 
 **[!UICONTROL 예상 프로필]**&#x200B;은(는) **샘플 작업**&#x200B;을(를) 기반으로 프로필의 **근사 범위**&#x200B;을(를) 나타냅니다. 즉, 샘플 데이터는 더 큰 프로필 집합에 투영되므로 실제 적격 프로필 수와 다를 수 있는 추정 수치가 도출됩니다. 추정된 프로필 샘플은 95% 신뢰 구간이 있다.
 
-이 숫자는 다음 두 가지 시나리오에서 업데이트됩니다.
-
-1. 고객 데이터가 3% 이상 변경되었거나 마지막 샘플 작업이 3일 이상 지났습니다.
-2. 대상자의 규칙이 수정되거나 제거되었습니다.
+대상자의 규칙을 변경할 때 **[!UICONTROL 예상 새로 고침]** 버튼을 선택하여 업데이트된 예상 프로필 수를 볼 수 있습니다. 그러나 이 숫자는 여전히 이전 샘플 작업을 기반으로 합니다. 고객 데이터가 3% 이상 변경되었거나 마지막 샘플 작업이 3일 이상 지난 경우 샘플 작업이 업데이트됩니다.
 
 정보 버블을 선택하면 마지막 샘플 작업이 실행된 날짜와 시간이 표시됩니다.
 
