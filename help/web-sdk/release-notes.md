@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 21140a6ff4f34db213032dd600d4099a5459e31d
+source-git-commit: 05b9893e17db0caeab1175f35f939cb6a1dd0291
 workflow-type: tm+mt
-source-wordcount: '2502'
+source-wordcount: '2573'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,19 @@ ht-degree: 5%
 
 이 문서에서는 Adobe Experience Platform Web SDK의 릴리스 정보를 다룹니다.
 웹 SDK 태그 확장에 대한 최신 릴리스 노트는 [웹 SDK 태그 확장 릴리스 노트](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)를 참조하십시오.
+
+## 버전 2.29.0 - 2025년 9월 4일
+
+**새로운 기능**
+
+- Adobe 여정 Analytics에 대한 Adobe 광고 데이터 수집에 대한 지원이 추가되었습니다
+- 사용자 프로필에 푸시 구독 세부 정보를 기록할 수 있는 지원이 추가되었습니다.
+
+**수정 사항 및 개선 사항**
+
+- 구성 재정의 섹션이 대체되지 않고 병합되는 문제가 해결되었습니다.
+- 링크 컬렉션이 전체 문서 콘텐츠를 링크 이름으로 보내는 경우를 수정했습니다.
+- 특정 제안을 다시 렌더링할 수 없는 문제를 해결했습니다.
 
 ## 버전 2.28.1 - 2025년 7월 31일 금요일
 

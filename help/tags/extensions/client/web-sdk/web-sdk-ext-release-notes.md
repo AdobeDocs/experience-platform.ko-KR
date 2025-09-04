@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 54c609ec995ac8e48c1c6441390b205bfb5a01cc
+source-git-commit: 1cc62ee8c87ff2c1c1d55db2e462d485289120ed
 workflow-type: tm+mt
-source-wordcount: '2825'
-ht-degree: 23%
+source-wordcount: '2947'
+ht-degree: 22%
 
 ---
 
@@ -13,6 +13,18 @@ ht-degree: 23%
 # 웹 SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform Web SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Experience Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md)를 참조하십시오.
+
+## 버전 2.32.0 - 2025년 9월 4일
+
+**새로운 기능**
+
+- Adobe Experience Platform Web SDK의 [버전 2.29.0](../../../../web-sdk/release-notes.md#2-29-0)을 포함합니다.
+- 새로운 사용자 지정 빌드 구성 요소로서 Adobe Advertising에 대한 지원이 추가되었습니다. 확장 구성 및 이벤트 호출 전송에서 를 구성합니다.
+- 프로필에 푸시 구독 세부 정보를 기록할 수 있는 지원이 추가되었습니다. 이는 새 작업, &quot;구독 세부 정보 푸시&quot;를 통한 것입니다.
+
+**수정 사항 및 개선 사항**
+
+- 스키마 또는 샌드박스를 사용할 수 없는 경우 XDM 데이터 요소 편집이 개선되었습니다. 이제 참조된 스키마를 찾을 수 없거나 샌드박스에 액세스할 수 없는 경우에도 XDM 개체 및 변수 데이터 요소를 편집할 수 있습니다. 이렇게 하면 조직이 새 데이터 센터로 마이그레이션하는 동안 일반적으로 발생하는 문제가 해결됩니다. 스키마 ID가 변경되고 이전에 편집 인터페이스에 오류가 표시되고 이 인터페이스를 사용할 수 없게 되는 문제가 해결됩니다.
 
 ## 버전 2.31.1 - 2025년 7월 31일 금요일
 
@@ -34,7 +46,6 @@ ht-degree: 23%
 **알려진 문제**
 
 - v2.31.0이 릴리스된 후 [사용자 지정 구성 요소 빌드](/help/web-sdk/install/create-custom-build.md) 프로세스에서 문제가 발견되었습니다. 사용자 지정 빌드는 계속 작동하는 동안 모든 구성 요소가 현재 빌드에 포함되어 구성 요소 선택에 관계없이 전체 크기의 패키지가 됩니다. 이 문제에 대한 수정 사항이 개발 중입니다. 사용자 지정 구성 요소 선택을 사용하여 빌드 크기를 최소화하는 경우 향후 릴리스를 기다리는 것이 좋습니다.
-
 
 ## 버전 2.30.1 - 2025년 5월 27일 수요일
 
@@ -150,7 +161,7 @@ Adobe Experience Platform Web SDK 버전 2.20.0을 포함합니다.
 **수정 사항 및 개선 사항**
 
 - [변수 업데이트](action-types.md#update-variable) 작업에서 데이터 요소를 검색할 때 발생하는 오류를 수정했습니다.
-- [!UICONTROL &#x200B; 작업에 사용하도록 권장된 이벤트 유형에서 &#x200B;]Media`sendEvent` 이벤트 유형을 제거했습니다.
+- [!UICONTROL  작업에 사용하도록 권장된 이벤트 유형에서 ]Media`sendEvent` 이벤트 유형을 제거했습니다.
 
 ## 버전 2.22.0 - 2024년 5월 3일 토요일
 
