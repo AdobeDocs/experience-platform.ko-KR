@@ -1,11 +1,10 @@
 ---
 title: UI를 통해 PathFactory 계정을 Experience Platform에 연결
 description: UI를 통해 PathFactory 계정을 Experience Platform에 연결하는 방법을 알아봅니다.
-badge: Beta
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '571'
 ht-degree: 2%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 2%
 
 이 자습서에서는 UI를 통해 [!DNL PathFactory] 방문자, 세션 및 페이지 보기 수를 Adobe Experience Platform에 연결하는 방법에 대한 단계를 제공합니다.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 

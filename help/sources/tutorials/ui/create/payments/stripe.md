@@ -3,22 +3,18 @@ title: 사용자 인터페이스를 사용하여 Stripe 계정의 결제 데이�
 description: 사용자 인터페이스를 사용하여 Stripe 계정의 결제 데이터를 Experience Platform으로 수집하는 방법에 대해 알아봅니다.
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1637'
 ht-degree: 3%
 
 ---
 
 # 사용자 인터페이스를 사용하여 [!DNL Stripe] 계정의 결제 데이터를 Experience Platform으로 수집
 
->[!NOTE]
->
->[!DNL Stripe] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 소스 개요에서 [약관](../../../../home.md#terms-and-conditions)을 참조하십시오.
-
 사용자 인터페이스를 사용하여 [!DNL Stripe] 계정에서 Adobe Experience Platform으로 결제 데이터를 수집하는 방법에 대해 알아보려면 다음 자습서를 읽어 보십시오.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 

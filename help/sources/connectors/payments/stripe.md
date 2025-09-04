@@ -1,20 +1,15 @@
 ---
 title: Stripe
 description: Stripe 계정에서 Adobe Experience Platform으로 결제 데이터를 수집하는 방법에 대해 알아봅니다
-badge: Beta
 exl-id: 191d217e-036d-491a-b7dd-abcad74625ba
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '791'
 ht-degree: 1%
 
 ---
 
 # [!DNL Stripe]
-
->[!NOTE]
->
->[!DNL Stripe] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions)를 참조하십시오.
 
 규모에 관계없이 수천 개의 비즈니스가 온라인과 직접 [!DNL Stripe]을(를) 활용하여 결제를 수락하고 새로운 매출원을 창출하며 Adobe Experience Platform, Adobe Commerce 및 [!DNL Magento Open Source]의 도움을 받아 전 세계적으로 확장하고 있습니다.
 
@@ -22,11 +17,11 @@ Experience Platform의 [!DNL Stripe] 소스를 사용하여 고객이 구매 플
 
 >[!TIP]
 >
->Experience Platform의 [!DNL Stripe] 소스에 대한 질문이 있으면 adobe-partnership<span>@stripe.com에서 [!DNL Stripe]에게 문의하십시오.
+>Experience Platform의 [!DNL Stripe] 소스에 대한 질문이 있는 경우 [!DNL Stripe]&#x200B;(adobe-partnership<span>@stripe.com)에 문의하십시오.
 
 >[!BEGINSHADEBOX]
 
-[!DNL Stripe] 소스에 대한 **샘플 사용 사례**
+**소스에 대한 [!DNL Stripe]샘플 사용 사례**
 
 귀하의 비즈니스에서 고객은 온라인 스토어에서 항목을 구매할 수 있습니다(**지금 구매** 및 **나중에 결제** 옵션([!DNL Klarna], [!DNL Afterpay], [!DNL Affirm] 또는 [!DNL Zip] 사용).
 
@@ -38,14 +33,14 @@ Experience Platform의 [!DNL Stripe] 소스를 사용하여 고객이 구매 플
 
 ## 전제 조건 {#prerequisites}
 
-다음 섹션에서는 [!DNL Stripe] 계정을 Experience Platform에 연결하기 전에 완료해야 하는 필수 구성 요소 설정에 대한 정보를 제공합니다.
+다음 단원에서는 [!DNL Stripe] 계정을 Experience Platform에 연결하기 전에 완료해야 하는 필수 구성 요소 설정에 대한 정보를 제공합니다.
 
 ### 액세스 토큰 검색
 
-* [!DNL Stripe] 전자 메일 주소와 암호를 사용하여 [[!DNL Stripe] 대시보드](https://dashboard.stripe.com/login)에 로그인합니다.
+* [[!DNL Stripe]  전자 메일 주소와 암호를 사용하여 ](https://dashboard.stripe.com/login)대시보드[!DNL Stripe]에 로그인합니다.
 * [!DNL Developers] 대시보드에서 **[!DNL API keys for developers]**&#x200B;을(를) 선택합니다.
 * **API 키** 탭에서 **[!DNL Reveal test key]**&#x200B;을(를) 선택하여 액세스 토큰을 표시합니다.
-* 이제 [!DNL Flow Service] API 또는 Experience Platform UI를 사용하여 [!DNL Stripe] 계정을 Experience Platform에 연결할 때 이 토큰을 액세스 토큰으로 사용할 수 있습니다.
+* 이제 [!DNL Stripe] API 또는 Experience Platform UI를 사용하여 [!DNL Flow Service] 계정을 Experience Platform에 연결할 때 이 토큰을 액세스 토큰으로 사용할 수 있습니다.
 
 ### 필요한 자격 증명 수집
 
@@ -55,7 +50,7 @@ Experience Platform의 [!DNL Stripe] 소스를 사용하여 고객이 구매 플
 
 >[!TAB API]
 
-[!DNL Flow Service] API를 사용하여 [!DNL Stripe] 계정에 연결할 때 다음 자격 증명을 제공해야 합니다.
+[!DNL Stripe] API를 사용하여 [!DNL Flow Service] 계정에 연결할 때 다음 자격 증명을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | --- | --- |
@@ -85,15 +80,15 @@ Experience Platform 사용자 인터페이스를 사용하여 [!DNL Stripe] 계�
 * 고객
 * 가격
 
-[!DNL Stripe]에서 Experience Platform으로 보낼 필드 및 데이터 형식을 저장할 수 있는 데이터 집합을 설명하는 XDM 스키마를 만들어야 합니다.
+[!DNL Stripe]에서 Experience Platform으로 전송될 필드 및 데이터 형식을 저장할 수 있는 데이터 집합을 설명하는 XDM 스키마를 만들어야 합니다.
 
 >[!BEGINTABS]
 
 >[!TAB 청구]
 
-[!DNL Stripe]에서 **청구**&#x200B;는 [!DNL Stripe] (으)로 돈을 이동하려는 시도를 나타냅니다. 특정 요금 특성에 대한 자세한 내용은 [[!DNL Stripe] 요금 관련 API 안내서](https://docs.stripe.com/api/charges)를 참조하십시오.
+[!DNL Stripe]에서 **청구**&#x200B;는 [!DNL Stripe]&#x200B;(으)로 돈을 이동하려는 시도를 나타냅니다. 특정 요금 특성에 대한 자세한 내용은 [[!DNL Stripe] 요금 관련 API 안내서](https://docs.stripe.com/api/charges)를 참조하십시오.
 
-+++Stripe 비용 객체를 보려면 선택
++++Stripe 요금 오브젝트를 보려면 선택  
 
 ```json
 {
@@ -188,7 +183,7 @@ Experience Platform 사용자 인터페이스를 사용하여 [!DNL Stripe] 계�
 
 [!DNL Stripe]에서 **구독**&#x200B;을 사용하여 정기적으로 고객에게 요금을 청구할 수 있습니다. 특정 구독 특성에 대한 자세한 내용은 [[!DNL Stripe] 구독에 대한 API 안내서](https://docs.stripe.com/api/subscriptions)를 참조하십시오.
 
-+++Stripe 가입 개체를 보려면 선택
++++Stripe 구독 개체를 보려면 선택
 
 ```json
 {
@@ -394,7 +389,7 @@ Experience Platform 사용자 인터페이스를 사용하여 [!DNL Stripe] 계�
 
 [!DNL Stripe]에서 **customers**&#x200B;은(는) 비즈니스의 특정 고객을 나타냅니다. 특정 고객 특성에 대한 자세한 내용은 [[!DNL Stripe] 고객에 대한 API 안내서](https://docs.stripe.com/api/customers)를 참조하십시오.
 
-+++Stripe 고객 개체를 보려면 선택
++++Stripe 고객 개체를 보려면 선택하십시오.
 
 ```json
 {
@@ -434,7 +429,7 @@ Experience Platform 사용자 인터페이스를 사용하여 [!DNL Stripe] 계�
 
 [!DNL Stripe]에서 **가격**&#x200B;은(는) 제품의 반복 구매와 일회성 구매 모두에 대한 단가, 통화 및 선택적 청구 주기를 나타냅니다. 특정 가격 특성에 대한 자세한 내용은 [[!DNL Stripe] 가격에 대한 API 안내서](https://docs.stripe.com/api/prices)를 참조하십시오.
 
-+++Stripe 가격 객체를 보려면 선택
++++Stripe 가격 개체를 보려면 선택
 
 ```json
 {
@@ -477,11 +472,11 @@ Experience Platform 사용자 인터페이스를 사용하여 [!DNL Stripe] 계�
 
 ### Experience Platform에 대한 권한 구성
 
-[!DNL Stripe] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 사용 권한이 모두 활성화되어 있어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/ui/overview.md)를 참조하십시오.
+**[!UICONTROL 계정을 Experience Platform에 연결하려면 계정에 대해]**&#x200B;소스 보기&#x200B;**[!UICONTROL 및]**&#x200B;소스 관리[!DNL Stripe] 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/ui/overview.md)를 참조하십시오.
 
 ## 다음 단계
 
-필수 구성 요소 설정을 완료하면 연결을 계속 진행하고 [!DNL Stripe] 데이터를 Experience Platform으로 수집할 수 있습니다. API 또는 Experience Platform 인터페이스를 사용하여 [!DNL Stripe] 결제 데이터를 사용자에게 수집하는 방법에 대해 알아보려면 다음 안내서를 읽어 보십시오.
+필수 구성 요소 설정을 완료하면 연결을 계속 진행하고 [!DNL Stripe] 데이터를 Experience Platform에 수집할 수 있습니다. API 또는 사용자 인터페이스를 사용하여 [!DNL Stripe] 결제 데이터를 Experience Platform으로 수집하는 방법에 대해 알아보려면 다음 안내서를 읽어 보십시오.
 
 * [흐름 서비스 API를 사용하여 Stripe 계정에서 Experience Platform으로 결제 데이터를 수집합니다](../../tutorials/api/create/payments/stripe.md).
 * [사용자 인터페이스를 사용하여 Stripe 계정에서 Experience Platform으로 결제 데이터를 수집합니다](../../tutorials/ui/create/payments/stripe.md).

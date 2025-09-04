@@ -3,22 +3,18 @@ title: API를 사용하여  [!DNL Stripe] 계정의 결제 데이터를 Experien
 description: 플로우 서비스 API를 사용하여 Stripe 계정에서 Experience Platform으로 결제 데이터를 수집하는 방법에 대해 알아봅니다
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2006'
 ht-degree: 1%
 
 ---
 
 # API를 사용하여 [!DNL Stripe] 계정에서 Experience Platform으로 결제 데이터 수집
 
->[!NOTE]
->
->[!DNL Stripe] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 소스 개요에서 [약관](../../../../home.md#terms-and-conditions)을 참조하십시오.
+[!DNL Stripe]API[[!DNL Flow Service] 를 사용하여 ](https://www.adobe.io/experience-platform-apis/references/flow-service/)에서 Adobe Experience Platform으로 결제 데이터를 수집하는 방법에 대해 알아보려면 다음 자습서를 읽어 보십시오.
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Stripe]에서 Adobe Experience Platform으로 결제 데이터를 수집하는 방법에 대해 알아보려면 다음 자습서를 읽어 보십시오.
-
-## 시작하기
+## 시작
 
 이 안내서를 사용하려면 Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
@@ -41,7 +37,7 @@ Experience Platform API를 성공적으로 호출하는 방법에 대한 자세�
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 Experience Platform 간에 정보를 유지합니다. 기본 연결 ID를 사용하여 소스 내에서 파일을 탐색하고 탐색할 수 있습니다. 또한 해당 항목의 데이터 유형 및 형식에 대한 세부 정보를 포함하여 수집하려는 특정 항목을 식별할 수 있습니다.
 
-기본 연결 ID를 만들려면 [!DNL Stripe] 인증 자격 증명을 요청 본문의 일부로 제공하는 동안 `/connections` 끝점에 대한 POST 요청을 만듭니다.
+기본 연결 ID를 만들려면 `/connections` 인증 자격 증명을 요청 본문의 일부로 제공하는 동안 [!DNL Stripe] 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -117,7 +113,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 | `{OBJECT}` | 이 매개 변수는 특정 디렉터리를 볼 때만 필요합니다. 해당 값은 탐색하려는 디렉터리의 경로를 나타냅니다. 이 원본의 값은 `json`입니다. |
 | `fileType=json` | Experience Platform으로 가져올 파일의 파일 유형입니다. 현재 지원되는 파일 형식은 `json`뿐입니다. |
 | `{PREVIEW}` | 연결 콘텐츠가 미리 보기를 지원하는지 여부를 정의하는 부울 값. |
-| `{SOURCE_PARAMS}` | 탐색할 리소스 경로를 가리키는 [!DNL Base64-]인코딩된 문자열입니다. `{SOURCE_PARAMS}`에 대해 승인된 형식을 가져오려면 리소스 경로를 [!DNL Base64]로 인코딩해야 합니다. 예를 들어 `{"resourcePath":"charges"}`은(는) `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D`(으)로 인코딩됩니다. 사용 가능한 리소스 경로 목록은 다음과 같습니다. <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
+| `{SOURCE_PARAMS}` | 탐색할 리소스 경로를 가리키는 [!DNL Base64-]인코딩된 문자열입니다. [!DNL Base64]에 대해 승인된 형식을 가져오려면 리소스 경로를 `{SOURCE_PARAMS}`로 인코딩해야 합니다. 예를 들어 `{"resourcePath":"charges"}`은(는) `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D`(으)로 인코딩됩니다. 사용 가능한 리소스 경로 목록은 다음과 같습니다. <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
 
 ```shell
 curl -X GET \
@@ -407,7 +403,7 @@ curl -X GET \
 
 ### 소스 연결 만들기 {#source-connection}
 
-[!DNL Flow Service] API의 `/sourceConnections` 끝점에 대한 POST 요청을 수행하여 소스 연결을 만들 수 있습니다. 소스 연결은 연결 ID, 소스 데이터 파일에 대한 경로 및 연결 사양 ID로 구성됩니다.
+`/sourceConnections` API의 [!DNL Flow Service] 끝점에 대한 POST 요청을 수행하여 소스 연결을 만들 수 있습니다. 소스 연결은 연결 ID, 소스 데이터 파일에 대한 경로 및 연결 사양 ID로 구성됩니다.
 
 **API 형식**
 
@@ -880,7 +876,7 @@ curl -X POST \
 | `transformations.params.mappingId` | 이전 단계에서 생성된 [매핑 ID](#mapping)입니다. |
 | `transformations.params.mappingVersion` | 매핑 ID의 해당 버전. 이 값은 기본적으로 `0`입니다. |
 | `scheduleParams.startTime` | 데이터 흐름이 시작되는 시간입니다. Unix 타임스탬프 형식으로 시작 시간 값을 제공해야 합니다. |
-| `scheduleParams.frequency` | 데이터 흐름이 데이터를 수집하는 빈도입니다. 수집 빈도를 다음과 같이 구성할 수 있습니다.  <ul><li>**한 번**: 빈도를 `once`(으)로 설정하여 일회성 수집을 만듭니다. 일회성 수집 데이터 흐름을 만들 때는 간격 및 채우기 구성을 사용할 수 없습니다. 기본적으로 예약 빈도는 한 번으로 설정됩니다.</li><li>**분**: 분 단위로 데이터를 수집하도록 데이터 흐름을 예약하려면 빈도를 `minute`(으)로 설정하십시오.</li><li>**시간**: 빈도를 `hour`(으)로 설정하여 시간당 기준으로 데이터를 수집하도록 데이터 흐름을 예약합니다.</li><li>**일**: 빈도를 `day`(으)로 설정하여 하루 단위로 데이터를 수집하도록 데이터 흐름을 예약합니다.</li><li>**주**: 주별로 데이터를 수집하도록 데이터 흐름을 예약하려면 빈도를 `week`(으)로 설정하십시오.</li></ul> |
+| `scheduleParams.frequency` | 데이터 흐름이 데이터를 수집하는 빈도입니다. 수집 빈도를 다음과 같이 구성할 수 있습니다.  <ul><li>**한 번**: 빈도를 `once`(으)로 설정하여 일회성 수집을 만듭니다. 일회성 수집 데이터 흐름을 만들 때는 간격 및 채우기 구성을 사용할 수 없습니다. 기본적으로 예약 빈도는 한 번으로 설정됩니다.</li><li>**분**: 분 단위로 데이터를 수집하도록 데이터 흐름을 예약하려면 빈도를 `minute`(으)로 설정하십시오.</li><li>**시간**:Set 빈도를 `hour`(으)로 설정하여 시간당 기준으로 데이터를 수집하도록 데이터 흐름을 예약합니다.</li><li>**일**: 빈도를 `day`(으)로 설정하여 하루 단위로 데이터를 수집하도록 데이터 흐름을 예약합니다.</li><li>**주**: 주별로 데이터를 수집하도록 데이터 흐름을 예약하려면 빈도를 `week`(으)로 설정하십시오.</li></ul> |
 | `scheduleParams.interval` | 간격은 두 개의 연속 흐름 실행 사이의 기간을 지정합니다. 예를 들어 빈도를 일로 설정하고 간격을 15로 구성한 경우 데이터 흐름이 15일마다 실행됩니다. 간격 값은 0이 아닌 정수여야 합니다. 각 주파수에 대해 허용되는 최소 간격 값은 다음과 같습니다.<ul><li>**한 번**: 해당 없음</li><li>**분**: 15</li><li>**시간**: 1</li><li>**일**: 1</li><li>**주**: 1</li></ul> |
 
 **응답**
@@ -904,11 +900,11 @@ curl -X POST \
 
 ### 데이터 흐름 업데이트
 
-데이터 흐름의 ID를 제공하는 동안 [!DNL Flow Service] API의 /flows 끝점에 PATCH 요청을 만들어 데이터 흐름의 이름, 설명, 실행 일정 및 관련 매핑 세트와 같은 데이터 흐름의 세부 정보를 업데이트합니다. PATCH 요청을 할 때는 `If-Match` 헤더에 데이터 흐름의 고유한 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름을 업데이트하는 방법](../../update-dataflows.md)에 대한 안내서를 참조하십시오.
+데이터 흐름의 ID를 제공하는 동안 [!DNL Flow Service] API의 /flows 끝점에 PATCH 요청을 만들어 데이터 흐름의 이름, 설명, 실행 일정 및 관련 매핑 세트와 같은 데이터 흐름의 세부 정보를 업데이트합니다. PATCH 요청을 할 때는 `etag` 헤더에 데이터 흐름의 고유한 `If-Match`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름을 업데이트하는 방법](../../update-dataflows.md)에 대한 안내서를 참조하십시오.
 
 ### 계정 업데이트
 
-기본 연결 ID를 쿼리 매개 변수로 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. PATCH을 요청할 때 `If-Match` 헤더에 소스 계정의 고유 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 계정을 업데이트하는 방법](../../update.md)에 대한 안내서를 참조하십시오.
+기본 연결 ID를 쿼리 매개 변수로 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. PATCH을 요청할 때 `etag` 헤더에 소스 계정의 고유 `If-Match`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 계정을 업데이트하는 방법](../../update.md)에 대한 안내서를 참조하십시오.
 
 ### 데이터 흐름 삭제
 

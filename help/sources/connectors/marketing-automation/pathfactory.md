@@ -2,20 +2,15 @@
 title: PathFactory Source 개요
 description: API 또는 사용자 인터페이스를 사용하여 PathFactory를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2024-04-30T00:00:00Z
-badge: Beta
 exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '449'
 ht-degree: 3%
 
 ---
 
 # [!DNL PathFactory]
-
->[!NOTE]
->
->[!DNL PathFactory] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions)를 참조하십시오.
 
 [[!DNL PathFactory]](https://www.pathfactory.com/)은(는) 비즈니스가 지능형 콘텐츠 인사이트를 통해 콘텐츠 여정을 관리하고 참여를 유도하는 데 도움이 되는 클라우드 기반 플랫폼을 제공합니다. 이 안내서에서는 최적의 데이터 수집을 위해 PathFactory의 커넥터를 활용하여 PathFactory의 데이터를 Experience Platform에 통합하는 방법에 대해 자세히 설명합니다.
 
@@ -37,7 +32,7 @@ ht-degree: 3%
 
 * **[PathFactory 계정]**&#x200B;입니다.
    * 올바른 계정이 아직 없는 경우 [[!DNL PathFactory]](https://www.pathfactory.com/portal/company/contactus.shtml)에 문의하세요.
-* [!DNL PathFactory] 제품에 대한 **활성 구독**.
+* **제품에 대한**&#x200B;활성 구독[!DNL PathFactory].
 * **사용자 이름, 암호 및 도메인**.
    * [!DNL PathFactory] 계정 및 해당 데이터에 액세스하려면 이러한 자격 증명이 필요합니다.
 * **액세스 토큰** 및 **API 끝점**.
@@ -61,7 +56,7 @@ ht-degree: 3%
 
 ### Experience Platform에 대한 권한 구성
 
-[!DNL PathFactory] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/ui/overview.md)를 참조하십시오.
+**[!UICONTROL 계정을 Experience Platform에 연결하려면 계정에 대해]**&#x200B;소스 보기&#x200B;**[!UICONTROL 및]**&#x200B;소스 관리[!DNL PathFactory] 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/ui/overview.md)를 참조하십시오.
 
 ## Experience Platform에 [!DNL PathFactory] 연결 {#pathfactory-connect}
 

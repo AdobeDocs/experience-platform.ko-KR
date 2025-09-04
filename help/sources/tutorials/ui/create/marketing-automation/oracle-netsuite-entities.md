@@ -1,26 +1,19 @@
 ---
 title: UI에서  [!DNL Oracle NetSuite Entities] 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Oracle NetSuite Entities 소스 연결을 만드는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '689'
 ht-degree: 2%
 
 ---
 
 # UI에서 [!DNL Oracle NetSuite Entities] 소스 연결 만들기
 
->[!NOTE]
->
->[!DNL Oracle NetSuite Entities] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
-
 다음 자습서를 참조하여 [!DNL Oracle NetSuite Entities] 계정의 연락처 및 고객 데이터를 UI의 Adobe Experience Platform으로 가져오는 방법을 알아보십시오.
 
-## 시작하기 {#getting-started}
+## 시작 {#getting-started}
 
 이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
@@ -98,7 +91,7 @@ Experience Platform은 선택한 대상 스키마 또는 데이터 세트를 기
 >
 >표시되는 필드는 [!DNL Oracle NetSuite] 계정이 액세스할 수 있는 구독에 따라 다릅니다. 예를 들어 청구에 대한 액세스 권한이 없는 경우 청구 관련 필드가 표시되지 않습니다.
 
-### 일정 조정 {#scheduling}
+### 예약 {#scheduling}
 
 수집을 위해 [!DNL Oracle NetSuite Entities] 데이터 흐름을 예약할 때 다음 빈도 및 간격 구성을 선택해야 합니다.
 

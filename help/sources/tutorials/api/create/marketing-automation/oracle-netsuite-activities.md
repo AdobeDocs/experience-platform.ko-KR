@@ -1,33 +1,26 @@
 ---
 title: 흐름 서비스 API를 사용하여 Oracle NetSuite 활동에 대한 소스 연결 및 데이터 흐름 만들기
 description: 흐름 서비스 API를 사용하여 Oracle NetSuite 이벤트 데이터를 Experience Platform으로 가져오기 위해 소스 연결 및 데이터 흐름을 만드는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1957'
 ht-degree: 1%
 
 ---
 
 # 흐름 서비스 API를 사용하여 [!DNL Oracle NetSuite Activities]에 대한 소스 연결 및 데이터 흐름을 만듭니다.
 
->[!NOTE]
->
->[!DNL Oracle NetSuite Activities] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
+[!DNL Oracle NetSuite Activities]API[[!DNL Flow Service] 를 사용하여 ](https://www.adobe.io/experience-platform-apis/references/flow-service/) 계정의 이벤트 데이터를 Adobe Experience Platform으로 가져오는 방법에 대해 알아보려면 다음 자습서를 참조하십시오.
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Oracle NetSuite Activities] 계정의 이벤트 데이터를 Adobe Experience Platform으로 가져오는 방법에 대해 알아보려면 다음 자습서를 참조하십시오.
-
-## 시작하기
+## 시작
 
 이 안내서를 사용하려면 Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [소스](../../../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
 * [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL Oracle NetSuite Activities]에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Oracle NetSuite Activities] API를 사용하여 [!DNL Flow Service]에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### 인증
 
@@ -37,7 +30,7 @@ ht-degree: 1%
 
 Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
-## [!DNL Flow Service] API를 사용하여 [!DNL Oracle NetSuite Activities]을(를) Experience Platform에 연결
+## [!DNL Oracle NetSuite Activities] API를 사용하여 [!DNL Flow Service]을(를) Experience Platform에 연결
 
 [!DNL Oracle NetSuite Activities] 소스를 인증하고, 소스 연결을 만들고, 데이터 흐름을 만들어 이벤트 데이터를 Experience Platform으로 가져오는 방법을 알아보려면 아래 안내서를 따르십시오.
 
@@ -45,7 +38,7 @@ Experience Platform API를 성공적으로 호출하는 방법에 대한 자세�
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 Experience Platform 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-기본 연결 ID를 만들려면 [!DNL Oracle NetSuite Activities] 인증 자격 증명을 요청 본문의 일부로 제공하는 동안 `/connections` 끝점에 대한 POST 요청을 만듭니다.
+기본 연결 ID를 만들려면 `/connections` 인증 자격 증명을 요청 본문의 일부로 제공하는 동안 [!DNL Oracle NetSuite Activities] 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -93,7 +86,7 @@ curl -X POST \
 | `auth.params.clientId` | 통합 레코드를 만들 때 클라이언트 ID 값입니다. 대화형 레코드를 만드는 프로세스를 [여기](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981)에서 찾을 수 있습니다. 값은 `7fce.....b42f`과(와) 유사한 64자 문자열입니다. |
 | `auth.params.clientSecret` | 통합 레코드를 만들 때 클라이언트 ID 값입니다. 대화형 레코드를 만드는 프로세스를 [여기](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981)에서 찾을 수 있습니다. 값은 `5c98.....1b46`과(와) 유사한 64자 문자열입니다. |
 | `auth.params.accessTokenUrl` | ACCOUNT_ID를 [!DNL NetSuite] 계정 ID로 바꾸는 `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token`과(와) 유사한 [!DNL NetSuite] 액세스 토큰 URL. |
-| `auth.params.accessToken` | 액세스 토큰 값이 [OAuth 2.0 인증 코드 부여 흐름](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) 자습서의 [2단계](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint)의 끝에 생성됩니다. 액세스 토큰 만료는 60분 동안만 유효합니다. 값은 `eyJr......f4V0`과(와) 유사한 JSON 웹 토큰(JWT) 형식의 1024자 문자열입니다. |
+| `auth.params.accessToken` | 액세스 토큰 값이 [OAuth 2.0 인증 코드 부여 흐름](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) 자습서의 [2단계](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow)의 끝에 생성됩니다. 액세스 토큰 만료는 60분 동안만 유효합니다. 값은 `eyJr......f4V0`과(와) 유사한 JSON 웹 토큰(JWT) 형식의 1024자 문자열입니다. |
 
 **응답**
 
@@ -331,7 +324,7 @@ curl -X GET \
 
 ### 소스 연결 만들기 {#source-connection}
 
-[!DNL Flow Service] API의 `/sourceConnections` 끝점에 대한 POST 요청을 수행하여 소스 연결을 만들 수 있습니다. 소스 연결은 연결 ID, 소스 데이터 파일에 대한 경로 및 연결 사양 ID로 구성됩니다.
+`/sourceConnections` API의 [!DNL Flow Service] 끝점에 대한 POST 요청을 수행하여 소스 연결을 만들 수 있습니다. 소스 연결은 연결 ID, 소스 데이터 파일에 대한 경로 및 연결 사양 ID로 구성됩니다.
 
 **API 형식**
 
@@ -639,11 +632,11 @@ curl -X POST \
 
 ### 데이터 흐름 업데이트
 
-데이터 흐름의 ID를 제공하면서 [!DNL Flow Service] API의 `/flows` 끝점에 PATCH 요청을 수행하여 데이터 흐름의 이름, 설명, 실행 일정 및 관련 매핑 세트와 같은 데이터 흐름의 세부 정보를 업데이트합니다. PATCH 요청을 할 때는 `If-Match` 헤더에 데이터 흐름의 고유한 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름을 업데이트하는 방법](../../update-dataflows.md)에 대한 안내서를 참조하십시오.
+데이터 흐름의 ID를 제공하면서 `/flows` API의 [!DNL Flow Service] 끝점에 PATCH 요청을 수행하여 데이터 흐름의 이름, 설명, 실행 일정 및 관련 매핑 세트와 같은 데이터 흐름의 세부 정보를 업데이트합니다. PATCH 요청을 할 때는 `etag` 헤더에 데이터 흐름의 고유한 `If-Match`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름을 업데이트하는 방법](../../update-dataflows.md)에 대한 안내서를 참조하십시오.
 
 ### 계정 업데이트
 
-기본 연결 ID를 쿼리 매개 변수로 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. PATCH을 요청할 때 `If-Match` 헤더에 소스 계정의 고유 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 계정을 업데이트하는 방법](../../update.md)에 대한 안내서를 참조하십시오.
+기본 연결 ID를 쿼리 매개 변수로 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. PATCH을 요청할 때 `etag` 헤더에 소스 계정의 고유 `If-Match`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 계정을 업데이트하는 방법](../../update.md)에 대한 안내서를 참조하십시오.
 
 ### 데이터 흐름 삭제
 
