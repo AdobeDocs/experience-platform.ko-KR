@@ -3,9 +3,9 @@ title: 2024년 11월 이전에 생성된 데이터 흐름에 대한 데이터 �
 description: 2025년 9월 1일에 중지되는 2024년 11월 이전에 생성된 데이터 세트 내보내기 데이터 흐름에 대한 내보내기 일정을 확장하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
-source-git-commit: 6f8b906729ec31cc0c4847ccd0ae0f89f63a1627
+source-git-commit: 0da592dd2846ed0f1eeb31102842c8895cac6952
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Experience Platform의 [2024년 9월 릴리스](/help/release-notes/2024/septemb
 
 3. 데이터 세트 내보내기가 있는 데이터 흐름만 표시하려면 **[!UICONTROL 데이터 세트]** 데이터 형식을 선택하십시오.
    데이터 유형별로 데이터 흐름을 필터링하는 방법을 보여 주는 ![스크린샷입니다.](/help/destinations/assets/ui/export-datasets/dataset-type.png)
-4. **[!UICONTROL 생성됨]** 열 헤더를 선택하고 **[!UICONTROL 오름차순 정렬]**&#x200B;을 선택하여 이전 데이터 흐름을 확인하십시오.
+4. **[!UICONTROL 생성됨]** 열 헤더를 선택하고 **[!UICONTROL 오름차순 정렬]**을 선택하여 이전 데이터 흐름을 확인하십시오.
    ![데이터 흐름을 오름차순으로 정렬하는 방법을 보여 주는 스크린샷입니다.](/help/destinations/assets/ui/export-datasets/sort-ascending.png)
 5. 2024년 11월 이전에 생성된 데이터 흐름 중 유지할 데이터 흐름을 식별합니다.
 
@@ -76,9 +76,9 @@ Experience Platform의 [2024년 9월 릴리스](/help/release-notes/2024/septemb
 
 이제 2025년 9월 1일 이후로 내보내기 일정을 수정할 수 있습니다.
 
-1. **[!UICONTROL 일정 편집]**&#x200B;을 선택하세요.
+1. **[!UICONTROL 일정 편집]**을 선택하세요.
    ![일정 편집 단추를 표시하는 예약 단계의 스크린샷입니다.](/help/destinations/assets/ui/export-datasets/edit-schedule.png)
-2. 새 내보내기 일정을 선택한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+2. 새 내보내기 일정을 선택한 다음 **[!UICONTROL 저장]**을 선택합니다.
    예약 옵션을 표시하는 예약 단계의 ![스크린샷입니다.](/help/destinations/assets/ui/export-datasets/edit-schedule-calendar.png)
 
    >[!TIP]
@@ -87,8 +87,6 @@ Experience Platform의 [2024년 9월 릴리스](/help/release-notes/2024/septemb
 
 ## 2025년 9월 1일 마감일을 놓치면 어떻게 됩니까? {#missed-deadline}
 
-데이터 세트 내보내기 데이터 흐름이 2025년 9월 1일에 만료되고 일정을 연장하지 않은 경우 Adobe에 연락하여 데이터 손실 없이 데이터 흐름을 다시 활성화할 수 있는 **30일 유예 기간**&#x200B;이 있습니다. 여기에는 9월 1일부터 Adobe에 연락한 날짜 사이에 내보내지 않은 데이터가 포함됩니다.
+데이터 세트 내보내기 데이터 흐름이 2025년 9월 1일에 만료되었지만 계속 연장하려는 경우 위의 섹션에 있는 단계에 따라 일정을 연장하십시오.
 
->[!IMPORTANT]
->
->Adobe에서는 이 유예 기간을 제공하지만 중단 없는 데이터 내보내기를 보장하고 잠재적인 서비스 중단을 방지하기 위해 2025년 9월 1일 마감 전까지 일정을 연장하는 것이 좋습니다.
+내보내기 일정을 30일 이내로 연장한 경우(또는 내보낸 데이터 세트의 [TTL(time-to-live) 집합](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md)이 30일 미만인 경우), 9월 1일부터 내보내기를 다시 사용하도록 설정한 날짜 사이에 내보내지 못한 데이터의 채우기를 계속 사용할 수 있습니다. 새 종료 시간을 설정할 때 먼저 전체 파일 내보내기가 *없음*&#x200B;됩니다. 대신, 수출은 9월 1일 그들이 멈춘 곳으로부터 점진적으로 계속될 것입니다.
