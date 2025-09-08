@@ -4,10 +4,10 @@ description: Marketo Engage Person Sync 커넥터를 사용하여 개인 대상�
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: 88864353d4872d62258914d6490b90331692fa96
+source-git-commit: 7d9f06f77f2265f3ae62542fd7fc1bd09d34d078
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 5%
+source-wordcount: '1127'
+ht-degree: 9%
 
 ---
 
@@ -19,12 +19,12 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->**[!UICONTROL Marketo Engage Person 동기화]** 대상 카드는 **2026년 3월**&#x200B;에 더 이상 사용되지 않습니다.
+>**[!UICONTROL Marketo Engage Person 동기화]** 대상 카드는 **2025년 10월**&#x200B;에 더 이상 사용되지 않습니다.
 >
->새 **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** 대상으로 원활하게 전환하려면 다음 주요 사항과 필요한 작업을 검토하십시오.
+>새로운 **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** 대상으로의 원활한 전환을 보장하려면 다음 핵심 사항과 필요한 조치를 검토합니다.
 >
->* **[!UICONTROL Marketo Engage Person 동기화]** 대상의 모든 사용자는 2026년 3월까지 새 **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** 대상으로 마이그레이션해야 합니다.
->* **기존 데이터 흐름은 자동으로 마이그레이션되지 않습니다.** 새 [Marketo Engage](marketo-engage-connection.md#connect-to-the-destination) 대상에 대해 **[!UICONTROL 새 연결을 설정]**&#x200B;하고 대상자를 활성화해야 합니다.
+>* 모든 사용자는 2025년 10월까지 Marketo Engage Person 동기화 대상 사용을 **중지하고**&#x200B;새 **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** 대상으로 마이그레이션해야 합니다.
+>* **기존 데이터 흐름은 자동으로 마이그레이션되지 않습니다.** 새로운 **[!UICONTROL Marketo Engage]** 대상지에 대한 [새로운 연결](marketo-engage-connection.md#connect-to-the-destination)을 설정하고 해당 대상자를 활성화해야 합니다.
 
 
 ## 개요 {#overview}
@@ -78,7 +78,7 @@ Experience Platform의 속성을 조직이 Marketo에서 액세스할 수 있는
 
 >[!IMPORTANT]
 >
->대상을 설정하는 사용자는 Marketo 인스턴스 및 파티션에서 [사용자 편집](https://experienceleague.adobe.com/ko/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) 권한이 있어야 합니다.
+>대상을 설정하는 사용자는 Marketo 인스턴스 및 파티션에서 [사용자 편집](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) 권한이 있어야 합니다.
 
 ![대상에 연결](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -89,7 +89,7 @@ Experience Platform의 속성을 조직이 Marketo에서 액세스할 수 있는
 * **[!UICONTROL 첫 번째 검색 가능한 필드]**: 중복을 제거할 필드입니다. 필드는 입력의 각 리드 레코드에 있어야 합니다. 기본값은 이메일입니다
 * **[!UICONTROL 첫 번째 검색 가능한 필드]**: 중복을 제거할 보조 필드입니다. 필드는 입력의 각 리드 레코드에 있어야 합니다. 선택 사항입니다
 
-인스턴스를 선택한 후에는 구성을 통합할 Lead Partition도 선택해야 합니다. [리드 파티션](https://experienceleague.adobe.com/ko/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)은(는) 브랜드 또는 영업 지역과 같은 비즈니스 관심사별로 리드 레코드를 구분하는 데 사용되는 Marketo Engage의 개념입니다. Marketo 구독에 작업 공간 및 파티션 기능이 없거나 구독에 추가 파티션이 만들어지지 않은 경우 기본 파티션만 사용할 수 있습니다. 단일 구성은 구성된 파티션에 있는 리드 레코드만 업데이트할 수 있습니다.
+인스턴스를 선택한 후에는 구성을 통합할 Lead Partition도 선택해야 합니다. [리드 파티션](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)은(는) 브랜드 또는 영업 지역과 같은 비즈니스 관심사별로 리드 레코드를 구분하는 데 사용되는 Marketo Engage의 개념입니다. Marketo 구독에 작업 공간 및 파티션 기능이 없거나 구독에 추가 파티션이 만들어지지 않은 경우 기본 파티션만 사용할 수 있습니다. 단일 구성은 구성된 파티션에 있는 리드 레코드만 업데이트할 수 있습니다.
 
 >[!IMPORTANT]
 > 
