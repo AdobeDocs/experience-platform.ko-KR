@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 대상에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fa7cfea74c5b76dd5643aaa2e9dd7447e9b9ef42
+source-git-commit: 9d92999df8e35ac6223986ece8a98af72ab6ace8
 workflow-type: tm+mt
-source-wordcount: '3621'
+source-wordcount: '3623'
 ht-degree: 10%
 
 ---
@@ -86,10 +86,10 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 각 개별 데이터 흐름 실행에는 다음 세부 사항이 표시됩니다.
 
-- **[!UICONTROL 데이터 흐름 실행 시작]**: 데이터 흐름 실행이 시작된 시간입니다. 스트리밍 데이터 흐름 실행의 경우, Experience Platform은 데이터 흐름 실행 시작을 기반으로 한 지표를 시간별 지표 형태로 캡처합니다. 즉, 스트리밍 데이터 흐름 실행의 경우 데이터 흐름 실행이 예를 들어 오후 10시 30분에 시작된 경우 지표는 UI에서 시작 시간을 오후 10시로 표시합니다.
+- **[!UICONTROL 데이터 흐름 실행 시작]**: 데이터 흐름 실행이 시작된 시간입니다. 스트리밍 데이터 흐름 실행의 경우, Experience Platform은 데이터 흐름 실행 시작을 기반으로 한 지표를 시간별 지표 형태로 캡처합니다. 즉, 스트리밍 데이터 흐름 실행의 경우 데이터 흐름 실행이 예를 들어 10:30PM에 시작된 경우 지표는 UI에서 시작 시간을 오후 10:00으로 표시합니다.
 - **[!UICONTROL 처리 시간]**: 데이터 흐름 실행을 처리하는 데 걸린 시간입니다.
    - **[!UICONTROL 완료됨]** 실행의 경우 처리 시간 지표는 항상 1시간을 표시합니다.
-   - 아직 **[!UICONTROL 처리 중]** 상태인 데이터 흐름 실행의 경우 모든 지표를 캡처하는 창이 1시간 이상 열려 있어 데이터 흐름 실행에 해당하는 모든 지표를 처리합니다. 예를 들어 오전 9시 30분에 시작된 데이터 흐름 실행은 모든 지표를 캡처하고 처리하기 위해 1시간 30분 동안 처리 상태를 유지할 수 있습니다. 그런 다음 처리 창이 닫히고 데이터 흐름 실행 상태가 **완료됨**(으)로 업데이트되면 표시된 처리 시간이 1시간으로 변경됩니다.
+   - 아직 **[!UICONTROL 처리 중]** 상태인 데이터 흐름 실행의 경우 모든 지표를 캡처하는 창이 1시간 이상 열려 있어 데이터 흐름 실행에 해당하는 모든 지표를 처리합니다. 예를 들어 오전 9시:30에 시작된 데이터 흐름 실행은 모든 지표를 캡처하고 처리하기 위해 1시간 30분 동안 처리 상태를 유지할 수 있습니다. 그런 다음 처리 창이 닫히고 데이터 흐름 실행 상태가 **완료됨**(으)로 업데이트되면 표시된 처리 시간이 1시간으로 변경됩니다.
 - **[!UICONTROL 받은 프로필]**: 데이터 흐름에서 받은 총 프로필 수입니다.
 - **[!UICONTROL 활성화된 ID]**: 데이터 흐름 실행의 일부로 선택한 대상에 성공적으로 활성화된 총 프로필 ID 수입니다. 이 지표에는 내보낸 대상자에서 생성, 업데이트 및 제거된 ID가 포함됩니다.
 - **[!UICONTROL 제외된 ID]**: 누락된 특성 및 동의 위반에 따라 활성화에서 제외된 총 프로필 ID 수입니다.
@@ -159,7 +159,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="데이터 흐름 실행 세부 정보"
 >abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 대상자의 활성화 상태 및 지표에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 검토하십시오."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=ko#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -229,7 +229,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 >[!NOTE]
 >
->대상 모니터링 기능은 현재 Experience Platform의 모든 대상에 대해 지원됩니다. [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화](/help/destinations/catalog/personalization/custom-personalization.md) 대상 제외&#x200B;*.*
+>대상 모니터링 기능은 현재 Experience Platform의 모든 대상에 대해 지원됩니다. *Adobe Target* 및 [사용자 지정 개인화](/help/destinations/catalog/personalization/adobe-target-connection.md) 대상 제외[.](/help/destinations/catalog/personalization/custom-personalization.md)
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
@@ -327,11 +327,27 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >
 >- 대상자 수준 보기는 현재 아래에 나열된 대상에 사용할 수 있습니다. 추가 스트리밍 대상에 대한 롤아웃이 계획되어 있습니다.
 >
->   - [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
->   - [[!DNL (V2) Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
->   - [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)
->   - [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
->   - [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL (API) Oracle Eloqua] 연결](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+>   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
+>   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
+>   - [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
+>   - [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)
+>   - [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)
+>   - [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)
+>   - [[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)
+>   - [[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)
+>   - [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)
+>   - [[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)
+>   - [[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)
+>   - [[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
+>   - [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
+>   - [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+>   - [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
+>   - [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
+>   - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 >   - 배치(파일 기반) 대상
 > 
 >- 배치 대상의 경우, 현재 대상자 수준 지표는 성공적인 데이터 흐름 실행에 대해서만 기록됩니다. 실패한 데이터 흐름 실행 및 제외된 레코드에 대해서는 기록되지 않습니다. 스트리밍 대상으로 데이터 흐름이 실행되는 경우 활성화 및 제외된 레코드에 대해 지표가 캡처되고 표시됩니다.
