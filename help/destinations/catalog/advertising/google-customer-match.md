@@ -3,10 +3,10 @@ keywords: google 고객 일치;Google 고객 일치;Google 고객 일치
 title: Google Customer Match 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑 및 Gmail과 같이 Google이 소유하고 운영하는 속성에서 고객에게 연락하고 다시 연결할 수 있습니다.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: ce205622260f4252d1a7db7c5011366fb2ed4d3c
+source-git-commit: 4541e812ac1f44b5374b81685c1e41cb7f00993f
 workflow-type: tm+mt
-source-wordcount: '2410'
-ht-degree: 2%
+source-wordcount: '2451'
+ht-degree: 8%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
-> Google은 유럽 연합([EU 사용자 동의 정책](https://www.google.com/about/company/user-consent-policy/))의 [디지털 시장법](https://digital-markets-act.ec.europa.eu/index_en)&#x200B;(DMA)에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [고객 일치](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) 및 [디스플레이 및 비디오 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)에 대한 변경 사항을 출시합니다. 동의 요구 사항에 대한 이러한 변경 사항의 시행은 2024년 3월 6일부터 시작됩니다.
-><br/>
->EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
-><br/>
->Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
-><br/>
->Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/ui/segment-builder.md) 내의 [세그먼트 정의](../../../segmentation/home.md#segment-definitions) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
+> Google은 유럽 연합([EU 사용자 동의 정책](https://developers.google.com/google-ads/api/docs/start))의 [디지털 시장법](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)&#x200B;(DMA)에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/display-video/api/guides/getting-started/overview), [고객 일치](https://digital-markets-act.ec.europa.eu/index_en) 및 [디스플레이 및 비디오 360 API](https://www.google.com/about/company/user-consent-policy/)에 대한 변경 사항을 출시합니다. 동의 요구 사항에 대한 이러한 변경 사항의 시행은 2024년 3월 6일부터 시작됩니다.
+> ><br/>
+> >EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
+> ><br/>
+> >Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
+> ><br/>
+> >Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/home.md#segment-definitions) 내의 [세그먼트 정의](../../../segmentation/ui/segment-builder.md) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en)을(를) 사용하면 온라인 및 오프라인 데이터를 사용하여 [!DNL Search], [!DNL Shopping] 및 [!DNL Gmail]과(와) 같은 Google의 소유 및 운영되는 속성에서 고객에게 연락하고 고객과 다시 연결할 수 있습니다.
 
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 ### 사용 사례 #1
 
-운동복 브랜드는 [!DNL Google Search] 및 [!DNL Google Shopping]을(를) 통해 기존 고객에게 연락하여 과거 구매 및 검색 기록을 기반으로 오퍼와 항목을 개인화하려고 합니다. 의류 브랜드는 자체 CRM에서 Experience Platform으로 이메일 주소를 수집하고 자체 오프라인 데이터에서 대상을 구축할 수 있습니다. 그런 다음 이 대상자를 [!DNL Search] 및 [!DNL Shopping]에서 사용할 [!DNL Google Customer Match]&#x200B;(으)로 보내 광고 지출을 최적화할 수 있습니다.
+운동복 브랜드는 [!DNL Google Search] 및 [!DNL Google Shopping]을(를) 통해 기존 고객에게 연락하여 과거 구매 및 검색 기록을 기반으로 오퍼와 항목을 개인화하려고 합니다. 의류 브랜드는 자체 CRM에서 Experience Platform으로 이메일 주소를 수집하고 자체 오프라인 데이터에서 대상을 구축할 수 있습니다. 그런 다음 이 대상자를 [!DNL Google Customer Match] 및 [!DNL Search]에서 사용할 [!DNL Shopping]&#x200B;(으)로 보내 광고 지출을 최적화할 수 있습니다.
 
 ### 사용 사례 #2
 
@@ -63,10 +63,10 @@ Experience Platform의 일부 대상에는 대상 플랫폼으로 보내거나 �
 | `phone_sha256_e.164` | SHA256 알고리즘으로 해시된 E164 형식의 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따르고 일반 텍스트와 해시된 전화 번호에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
 | `email_lc_sha256` | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침에 따라 일반 텍스트와 해시된 이메일 주소에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
 | `user_id` | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
-| `address_info_first_name` | 사용자의 이름 | 이 대상 ID는 메일 주소 데이터를 대상으로 보낼 때 `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`과(와) 함께 사용됩니다. <br><br>Google이 주소와 일치하는지 확인하려면 네 개의 주소 필드(`address_info_first_name`, `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`)를 모두 매핑하고 내보낸 프로필에 데이터가 없는지 확인해야 합니다. <br> 필드가 매핑되지 않았거나 누락된 데이터를 포함하는 경우 Google이 주소와 일치하지 않습니다. |
-| `address_info_last_name` | 사용자의 성 | 이 대상 ID는 메일 주소 데이터를 대상으로 보낼 때 `address_info_first_name`, `address_info_country_code` 및 `address_info_postal_code`과(와) 함께 사용됩니다. <br><br>Google이 주소와 일치하는지 확인하려면 네 개의 주소 필드(`address_info_first_name`, `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`)를 모두 매핑하고 내보낸 프로필에 데이터가 없는지 확인해야 합니다. <br> 필드가 매핑되지 않았거나 누락된 데이터를 포함하는 경우 Google이 주소와 일치하지 않습니다. |
-| `address_info_country_code` | 사용자 주소 국가 코드 | 이 대상 ID는 메일 주소 데이터를 대상으로 보낼 때 `address_info_first_name`, `address_info_last_name` 및 `address_info_postal_code`과(와) 함께 사용됩니다. <br><br>Google이 주소와 일치하는지 확인하려면 네 개의 주소 필드(`address_info_first_name`, `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`)를 모두 매핑하고 내보낸 프로필에 데이터가 없는지 확인해야 합니다. <br> 필드가 매핑되지 않았거나 누락된 데이터를 포함하는 경우 Google이 주소와 일치하지 않습니다. <br><br>허용되는 형식: [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 형식의 소문자, 두 글자로 된 국가 코드입니다. |
-| `address_info_postal_code` | 사용자 주소 우편 번호 | 이 대상 ID는 메일 주소 데이터를 대상으로 보낼 때 `address_info_first_name`, `address_info_last_name` 및 `address_info_country_code`과(와) 함께 사용됩니다. <br><br>Google이 주소와 일치하는지 확인하려면 네 개의 주소 필드(`address_info_first_name`, `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`)를 모두 매핑하고 내보낸 프로필에 데이터가 없는지 확인해야 합니다. <br> 필드가 매핑되지 않았거나 누락된 데이터를 포함하는 경우 Google이 주소와 일치하지 않습니다. |
+| `address_info_first_name` | 사용자의 이름 | 이 대상 ID는 메일 주소 데이터를 대상으로 보낼 때 `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`과(와) 함께 사용됩니다. <br><br>Google에서 주소를 일치시키도록 하려면 네 개의 주소 필드(`address_info_first_name`, `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`)를 모두 매핑하고 내보낸 프로필에서 이러한 필드에 누락된 데이터가 없는지 확인해야 합니다. <br> 필드가 매핑되지 않았거나 누락된 데이터가 포함된 경우 Google은 해당 주소를 일치시키지 않습니다. |
+| `address_info_last_name` | 사용자의 성 | 이 대상 ID는 메일 주소 데이터를 대상으로 보낼 때 `address_info_first_name`, `address_info_country_code` 및 `address_info_postal_code`과(와) 함께 사용됩니다. <br><br>Google에서 주소를 일치시키도록 하려면 네 개의 주소 필드(`address_info_first_name`, `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`)를 모두 매핑하고 내보낸 프로필에서 이러한 필드에 누락된 데이터가 없는지 확인해야 합니다. <br> 필드가 매핑되지 않았거나 누락된 데이터가 포함된 경우 Google은 해당 주소를 일치시키지 않습니다. |
+| `address_info_country_code` | 사용자 주소 국가 코드 | 이 대상 ID는 메일 주소 데이터를 대상으로 보낼 때 `address_info_first_name`, `address_info_last_name` 및 `address_info_postal_code`과(와) 함께 사용됩니다. <br><br>Google에서 주소를 일치시키도록 하려면 네 개의 주소 필드(`address_info_first_name`, `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`)를 모두 매핑하고 내보낸 프로필에서 이러한 필드에 누락된 데이터가 없는지 확인해야 합니다. <br> 필드가 매핑되지 않았거나 누락된 데이터를 포함하는 경우 Google이 주소와 일치하지 않습니다. <br><br>허용되는 형식: [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 형식의 소문자, 두 글자로 된 국가 코드입니다. |
+| `address_info_postal_code` | 사용자 주소 우편 번호 | 이 대상 ID는 메일 주소 데이터를 대상으로 보낼 때 `address_info_first_name`, `address_info_last_name` 및 `address_info_country_code`과(와) 함께 사용됩니다. <br><br>Google에서 주소를 일치시키도록 하려면 네 개의 주소 필드(`address_info_first_name`, `address_info_last_name`, `address_info_country_code` 및 `address_info_postal_code`)를 모두 매핑하고 내보낸 프로필에서 이러한 필드에 누락된 데이터가 없는지 확인해야 합니다. <br> 필드가 매핑되지 않았거나 누락된 데이터가 포함된 경우 Google은 해당 주소를 일치시키지 않습니다. |
 
 {style="table-layout:auto"}
 
@@ -94,9 +94,9 @@ Experience Platform의 일부 대상에는 대상 플랫폼으로 보내거나 �
 
 ## [!DNL Google Customer Match] 계정 필수 구성 요소 {#google-account-prerequisites}
 
-Experience Platform에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [Google 지원 설명서](https://support.google.com/google-ads/answer/6299717)에 설명된 [!DNL Customer Match] 사용에 대한 Google 정책을 읽고 준수하는지 확인하십시오.
+Experience Platform에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [!DNL Customer Match]Google 지원 설명서[에 설명된 ](https://support.google.com/google-ads/answer/6299717) 사용에 대한 Google 정책을 읽고 준수하는지 확인하십시오.
 
-그런 다음 [!DNL Google] 계정이 [!DNL Standard] 이상의 권한 수준에 대해 구성되어 있는지 확인하십시오. 자세한 내용은 [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)를 참조하세요.
+그런 다음 [!DNL Google] 계정이 [!DNL Standard] 이상의 권한 수준에 대해 구성되어 있는지 확인하십시오. 자세한 내용은 [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1)를 참조하세요.
 
 ### 허용 목록 {#allowlist}
 
@@ -139,7 +139,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 ### 필드 해싱 요구 사항 해결 {#address-field-hashing}
 
-주소 관련 필드를 [!DNL Google Customer Match]에 매핑할 때 Experience Platform은 `address_info_first_name` 및 `address_info_last_name` 값을 Google에 보내기 전에 **자동으로 해싱**&#x200B;합니다. 이 자동 해싱은 Google의 보안 및 개인 정보 보호 요구 사항을 준수하는 데 필요합니다.
+주소 관련 필드를 [!DNL Google Customer Match]에 매핑할 때 Experience Platform은 **및** 값을 Google에 보내기 전에 `address_info_first_name`자동으로 해싱`address_info_last_name`합니다. 이 자동 해싱은 Google의 보안 및 개인 정보 보호 요구 사항을 준수하는 데 필요합니다.
 
 **not**&#x200B;에서 `address_info_first_name` 또는 `address_info_last_name`에 대해 사전 해시된 값을 제공하지 마십시오. 이미 해시된 값을 제공하면 일치 프로세스가 실패합니다.
 
@@ -156,13 +156,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## 비디오 개요 {#video-overview}
 
 아래 비디오를 통해 혜택과 Google Customer Match에 대한 데이터 활성화 방법에 대해 알아보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/326488?captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## 대상에 연결 {#connect}
 
@@ -180,9 +180,13 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 * **[!UICONTROL 설명]**: 이 대상 연결에 대한 설명을 입력하십시오.
 * **[!UICONTROL 계정 ID]**: [Google 광고 고객 ID](https://support.google.com/google-ads/answer/1704344?hl=en). ID 형식은 xxx-xxx-xxxx 입니다. [!DNL Google Ads Manager Account (My Client Center)]을(를) 사용하는 경우 관리자 계정 ID를 사용하지 마십시오. 대신 [Google Ads 고객 ID](https://support.google.com/google-ads/answer/1704344?hl=en)를 사용하십시오.
 
+>[!NOTE]
+>
+>OAuth2 연결 프로세스 중에 &quot;Marketo 테스트&quot;가 Google OAuth 프로젝트 이름으로 표시될 수 있습니다. Adobe은 Google Customer Match 통합에 이 프로젝트 이름을 사용하므로 이는 일반적인 비헤이비어입니다. 대상 구성에는 영향을 주지 않습니다.
+
 >[!IMPORTANT]
 >
-> * [!DNL Google Customer Match] 대상에 대해 기본적으로 **[!UICONTROL PII와 결합]** 마케팅 작업이 선택되어 있으며 제거할 수 없습니다.
+> * **[!UICONTROL 대상에 대해 기본적으로]** PII와 결합[!DNL Google Customer Match] 마케팅 작업이 선택되어 있으며 제거할 수 없습니다.
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -199,7 +203,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 이 대상에 대한 대상 활성화에 대한 지침은 [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
-**[!UICONTROL 세그먼트 일정]** 단계에서 [!DNL Google Customer Match]에 [!DNL IDFA] 또는 [!DNL GAID] 대상자를 보낼 때 [!UICONTROL 앱 ID]을(를) 제공해야 합니다.
+**[!UICONTROL 세그먼트 일정]** 단계에서 [!UICONTROL 에 ] 또는 [!DNL IDFA] 대상자를 보낼 때 [!DNL GAID]앱 ID[!DNL Google Customer Match]을(를) 제공해야 합니다.
 
 ![활성화 워크플로의 세그먼트 예약 단계에서 강조 표시된 Google Customer Match App ID 필드입니다.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -212,17 +216,17 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 소스 필드 선택:
 
 * 사용 중인 전자 메일 주소가 해시되지 않은 경우 `Email` 네임스페이스를 원본 ID로 선택하십시오.
-* [!DNL Google Customer Match] [전자 메일 해시 요구 사항](#hashing-requirements)에 따라 데이터 수집 시 고객 전자 메일 주소를 [!DNL Experience Platform]&#x200B;(으)로 해시했다면 `Email_LC_SHA256` 네임스페이스를 원본 ID로 선택하십시오.
+* `Email_LC_SHA256` [!DNL Experience Platform]전자 메일 해시 요구 사항[!DNL Google Customer Match]에 따라 데이터 수집 시 고객 전자 메일 주소를 [(으)로 해시했다면 ](#hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 해시되지 않은 전화 번호로 구성된 경우 `PHONE_E.164` 네임스페이스를 원본 ID로 선택하십시오. [!DNL Experience Platform]이(가) [!DNL Google Customer Match] 요구 사항을 준수하기 위해 전화 번호를 해시합니다.
-* [!DNL Facebook] [전화 번호 해시 요구 사항](#phone-number-hashing-requirements)에 따라 데이터 수집 시 전화 번호를 [!DNL Experience Platform]&#x200B;(으)로 해시했다면 `Phone_SHA256_E.164` 네임스페이스를 원본 ID로 선택하십시오.
-* 데이터가 [!DNL Apple] 장치 ID로 구성된 경우 `IDFA` 네임스페이스를 원본 ID로 선택하십시오.
-* 데이터가 [!DNL Android] 장치 ID로 구성된 경우 `GAID` 네임스페이스를 원본 ID로 선택하십시오.
+* `Phone_SHA256_E.164` [!DNL Experience Platform]전화 번호 해시 요구 사항[!DNL Facebook]에 따라 데이터 수집 시 전화 번호를 [(으)로 해시했다면 ](#phone-number-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
+* 데이터가 `IDFA` 장치 ID로 구성된 경우 [!DNL Apple] 네임스페이스를 원본 ID로 선택하십시오.
+* 데이터가 `GAID` 장치 ID로 구성된 경우 [!DNL Android] 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 다른 유형의 식별자로 구성된 경우 `Custom` 네임스페이스를 소스 ID로 선택하십시오.
 
 대상 필드 선택:
 
-* 원본 네임스페이스가 `Email` 또는 `Email_LC_SHA256`인 경우 `Email_LC_SHA256` 네임스페이스를 대상 ID로 선택하십시오.
-* 원본 네임스페이스가 `PHONE_E.164` 또는 `Phone_SHA256_E.164`인 경우 `Phone_SHA256_E.164` 네임스페이스를 대상 ID로 선택하십시오.
+* 원본 네임스페이스가 `Email_LC_SHA256` 또는 `Email`인 경우 `Email_LC_SHA256` 네임스페이스를 대상 ID로 선택하십시오.
+* 원본 네임스페이스가 `Phone_SHA256_E.164` 또는 `PHONE_E.164`인 경우 `Phone_SHA256_E.164` 네임스페이스를 대상 ID로 선택하십시오.
 * 원본 네임스페이스가 `IDFA` 또는 `GAID`인 경우 `IDFA` 또는 `GAID` 네임스페이스를 대상 ID로 선택하십시오.
 * 소스 네임스페이스가 사용자 지정 네임스페이스인 경우 `User_ID` 네임스페이스를 대상 ID로 선택하십시오.
 
@@ -256,4 +260,4 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-이 오류는 고객 계정이 [필수 구성 요소](#google-account-prerequisites)를 준수하지 않을 때 발생합니다. 이 문제를 해결하려면 Google에 문의하고 계정이 허용 목록에 있으며 [!DNL Standard] 이상의 권한 수준에 대해 구성되어 있는지 확인하십시오. 자세한 내용은 [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)를 참조하세요.
+이 오류는 고객 계정이 [필수 구성 요소](#google-account-prerequisites)를 준수하지 않을 때 발생합니다. 이 문제를 해결하려면 Google에 문의하고 계정이 허용 목록에 있으며 [!DNL Standard] 이상의 권한 수준에 대해 구성되어 있는지 확인하십시오. 자세한 내용은 [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1)를 참조하세요.
