@@ -4,9 +4,9 @@ title: 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로
 description: 흐름 서비스 API를 사용하여 적격 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eb7d1b9c167839db39cbb28bf497edac706c0b6c
 workflow-type: tm+mt
-source-wordcount: '4763'
+source-wordcount: '4911'
 ht-degree: 3%
 
 ---
@@ -43,14 +43,14 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 -->
 
-## 시작하기 {#get-started}
+## 시작 {#get-started}
 
 ![사용자가 켜져 있는 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service]을(를) 사용하면 대상을 빌드하고 [!DNL Real-Time Customer Profile] 데이터에서 [!DNL Adobe Experience Platform]의 대상을 생성할 수 있습니다.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service]을(를) 사용하면 대상을 빌드하고 [!DNL Adobe Experience Platform] 데이터에서 [!DNL Real-Time Customer Profile]의 대상을 생성할 수 있습니다.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform]은(는) 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 Experience Platform의 파일 기반 대상에 데이터를 활성화하기 위해 알아야 하는 추가 정보를 제공합니다.
@@ -63,7 +63,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ### 샘플 API 호출 읽기 {#reading-sample-api-calls}
 
-이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request)에 대한 섹션을 참조하십시오.
+이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [ 문제 해결 안내서의 ](../../landing/troubleshooting.md#how-do-i-format-an-api-request)예제 API 호출을 읽는 방법[!DNL Experience Platform]에 대한 섹션을 참조하십시오.
 
 ### 필수 및 선택적 헤더에 대한 값 수집 {#gather-values-headers}
 
@@ -118,7 +118,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 **요청**
 
-+++1&rbrace;에 대해 [!DNL connection spec] 검색[!DNL Amazon S3]
++++[!DNL connection spec]에 대해 [!DNL Amazon S3] 검색
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -152,7 +152,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++1&rbrace;에 대해 [!DNL connection spec] 검색[!DNL Azure Blob Storage]
++++[!DNL connection spec]에 대해 [!DNL Azure Blob Storage] 검색
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -186,7 +186,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2]에 대해 [!DNL connection spec] 검색)
++++[!DNL connection spec]에 대해 [!DNL Azure Data Lake Gen 2(ADLS Gen2] 검색)
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -220,7 +220,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++1&rbrace;에 대해 [!DNL connection spec] 검색[!DNL Data Landing Zone(DLZ)]
++++[!DNL connection spec]에 대해 [!DNL Data Landing Zone(DLZ)] 검색
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -254,7 +254,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++1&rbrace;에 대해 [!DNL connection spec] 검색[!DNL Google Cloud Storage]
++++[!DNL connection spec]에 대해 [!DNL Google Cloud Storage] 검색
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
@@ -376,7 +376,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![사용자가 켜져 있는 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
-[기본 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)은(는) 대상에 자격 증명을 안전하게 저장합니다. 대상 유형에 따라 해당 대상에 대해 인증하는 데 필요한 자격 증명이 달라질 수 있습니다. 이러한 인증 매개 변수를 찾으려면 먼저 [대상을 내보낼 대상 선택](#select-destination) 섹션에 설명된 대로 원하는 대상에 대해 `connection spec`을(를) 검색한 다음 응답의 `authSpec`을(를) 살펴보십시오. 지원되는 모든 대상의 `authSpec` 속성을 보려면 아래 탭을 참조하십시오.
+[기본 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)은(는) 대상에 자격 증명을 안전하게 저장합니다. 대상 유형에 따라 해당 대상에 대해 인증하는 데 필요한 자격 증명이 달라질 수 있습니다. 이러한 인증 매개 변수를 찾으려면 먼저 `connection spec`대상을 내보낼 대상 선택[ 섹션에 설명된 대로 원하는 대상에 대해 ](#select-destination)을(를) 검색한 다음 응답의 `authSpec`을(를) 살펴보십시오. 지원되는 모든 대상의 `authSpec` 속성을 보려면 아래 탭을 참조하십시오.
 
 >[!BEGINTABS]
 
@@ -1033,7 +1033,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++SSH 키가 있는 SFTP - 기본 연결 요청
++++SSH 키가 포함된 SFTP - 기본 연결 요청
 
 >[!TIP]
 >
@@ -1137,7 +1137,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
             ]
 ```
 
-+++
++++ 
 
 **요청**
 
@@ -1202,7 +1202,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 그런 다음 타겟 연결을 만들어야 합니다. [Target 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)은(는) 내보낸 대상에 대한 내보내기 매개 변수를 저장합니다. 내보내기 매개 변수에는 내보내기 위치, 파일 형식, 압축 및 기타 세부 사항이 포함됩니다. 예를 들어 CSV 파일의 경우 몇 가지 내보내기 옵션을 선택할 수 있습니다. [파일 형식 구성 페이지](/help/destinations/ui/batch-destinations-file-formatting-options.md)에서 지원되는 모든 CSV 내보내기 옵션에 대한 광범위한 정보를 확인하십시오.
 
-각 대상 유형에 대해 지원되는 속성을 이해하려면 대상의 `connection spec`에 제공된 `targetSpec` 속성을 참조하십시오. 지원되는 모든 대상의 `targetSpec` 속성을 보려면 아래 탭을 참조하십시오.
+각 대상 유형에 대해 지원되는 속성을 이해하려면 대상의 `targetSpec`에 제공된 `connection spec` 속성을 참조하십시오. 지원되는 모든 대상의 `targetSpec` 속성을 보려면 아래 탭을 참조하십시오.
 
 >[!BEGINTABS]
 
@@ -2402,7 +2402,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [!DNL Amazon S3] 대상 설명서 페이지의 [대상 세부 정보 채우기](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)대상 세부 정보 채우기[!DNL Amazon S3] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2422,7 +2422,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "4fce964d-3f37-408f-9778-e597338a21ee", // Amazon S3 connection spec id
@@ -2456,6 +2457,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2494,7 +2496,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [!DNL Azure Blob Storage] 대상 설명서 페이지의 [대상 세부 정보 채우기](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details)대상 세부 정보 채우기[!DNL Azure Blob Storage] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2514,7 +2516,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "container": "your-container-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2", // Azure Blob Storage connection spec id
@@ -2548,6 +2551,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2586,7 +2590,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 가져오는 방법에 대한 자세한 내용은 Azure [!DNL Data Lake Gen 2(ADLS Gen2)] 대상 설명서 페이지의 [대상 세부 정보를 채우기](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) 섹션을 참조하세요.
+>필요한 대상 매개 변수를 가져오는 방법에 대한 자세한 내용은 Azure [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details)대상 세부 정보를 채우기[!DNL Data Lake Gen 2(ADLS Gen2)] 섹션을 참조하세요.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2605,7 +2609,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "be2c3209-53bc-47e7-ab25-145db8b873e1", // Azure Data Lake Gen 2(ADLS Gen2) connection spec id
@@ -2639,6 +2644,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2677,7 +2683,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [!DNL Data Landing Zone] 대상 설명서 페이지의 [대상 세부 정보 채우기](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details)대상 세부 정보 채우기[!DNL Data Landing Zone] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2696,7 +2702,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "10440537-2a7b-4583-ac39-ed38d4b848e8", // Data Landing Zone connection spec id
@@ -2730,6 +2737,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2768,7 +2776,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [!DNL Google Cloud Storage] 대상 설명서 페이지의 [대상 세부 정보 채우기](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)대상 세부 정보 채우기[!DNL Google Cloud Storage] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2788,7 +2796,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "c5d93acb-ea8b-4b14-8f53-02138444ae99", // Google Cloud Storage connection spec id
@@ -2822,6 +2831,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2879,7 +2889,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "remotePath": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec id
@@ -2890,7 +2901,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++SFTP - CSV 옵션이 있는 Target 연결 요청
++++SFTP - CSV 옵션을 사용하여 Target 연결 요청
 
 >[!TIP]
 >
@@ -2913,6 +2924,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2961,7 +2973,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++[!DNL Amazon S3] 대상에 대상 내보내기 데이터 흐름 만들기 - 요청
++++[!DNL Amazon S3] 대상에 대한 대상 내보내기 데이터 흐름 만들기 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -3009,7 +3021,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++[!DNL Azure Blob Storage] 대상에 대상 내보내기 데이터 흐름 만들기 - 요청
++++[!DNL Azure Blob Storage] 대상에 대한 대상 내보내기 데이터 흐름 만들기 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -3069,7 +3081,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] 대상에 대상 내보내기 데이터 흐름 만들기 - 요청
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] 대상에 대한 대상 내보내기 데이터 흐름 만들기 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -3117,7 +3129,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++[!DNL Data Landing Zone] 대상에 대상 내보내기 데이터 흐름 만들기 - 요청
++++[!DNL Data Landing Zone] 대상에 대한 대상 내보내기 데이터 흐름 만들기 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -3165,7 +3177,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++[!DNL Google Cloud Storage] 대상에 대상 내보내기 데이터 흐름 만들기 - 요청
++++[!DNL Google Cloud Storage] 대상에 대한 대상 내보내기 데이터 흐름 만들기 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -3292,7 +3304,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **특성 가져오기 요청**
 
-+++공용 구조체 스키마에서 사용 가능한 속성 가져오기 - 요청
++++유니온 스키마에서 사용 가능한 속성 가져오기 - 요청
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/entityTypes/_xdm.context.profile?property=fullSchema==true&property=includeRelationshipDescriptors==true' \ 
@@ -3726,7 +3738,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **요청**
 
-+++출력 스키마에 대한 파트너 스키마를 가져오도록 요청
++++출력 스키마에 대한 파트너 스키마 가져오기 요청
 
 아래 예제에서는 Amazon S3용 `connection spec ID`을(를) 사용합니다. 이 값을 대상에 대한 연결 사양 ID로 바꾸십시오.
 
@@ -4504,7 +4516,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ![사용자가 켜져 있는 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-데이터 흐름을 업데이트하려면 `PATCH` 작업을 사용하십시오. 예를 들어 데이터 흐름에 마케팅 작업을 추가할 수 있습니다. 또는 데이터 흐름을 업데이트하여 필드를 필수 키 또는 중복 제거 키로 선택할 수 있습니다.
+데이터 흐름을 업데이트하려면 `PATCH` 작업을 사용하십시오. 예를 들어 데이터 흐름에 마케팅 작업을 추가하거나, 데이터 흐름을 업데이트하여 필드를 필수 키 또는 중복 제거 키로 선택하거나, 파일 매니페스트 생성을 기존 대상에 추가할 수 있습니다.
 
 ### 마케팅 액션 추가 {#add-marketing-action}
 
@@ -4512,11 +4524,11 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
->`PATCH`을(를) 요청할 때 `If-Match` 헤더가 필요합니다. 이 헤더의 값은 업데이트하려는 데이터 흐름의 고유 버전입니다. 데이터 흐름, 대상 연결 등 플로우 엔티티를 성공적으로 업데이트할 때마다 etag 값이 업데이트됩니다.
+>`If-Match`을(를) 요청할 때 `PATCH` 헤더가 필요합니다. 이 헤더의 값은 업데이트하려는 데이터 흐름의 고유 버전입니다. 데이터 흐름, 대상 연결 등 플로우 엔티티를 성공적으로 업데이트할 때마다 etag 값이 업데이트됩니다.
 >
 > 최신 버전의 etag 값을 가져오려면 `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` 끝점에 대한 GET 요청을 수행합니다. 여기서 `{ID}`은(는) 업데이트하려는 데이터 흐름 ID입니다.
 >
-> `PATCH`개의 요청을 할 때는 아래 예제와 같이 `If-Match` 헤더의 값을 큰따옴표로 묶어야 합니다.
+> `If-Match`개의 요청을 할 때는 아래 예제와 같이 `PATCH` 헤더의 값을 큰따옴표로 묶어야 합니다.
 
 >[!BEGINSHADEBOX]
 
@@ -4560,7 +4572,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **응답**
 
-+++마케팅 작업 추가 - 응답
++++마케팅 액션 추가 - 응답
 
 성공한 응답은 업데이트된 데이터 흐름 및 업데이트된 eTag의 ID와 함께 응답 코드 `200`을(를) 반환합니다.
 
@@ -4581,11 +4593,11 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
->`PATCH`을(를) 요청할 때 `If-Match` 헤더가 필요합니다. 이 헤더의 값은 업데이트하려는 데이터 흐름의 고유 버전입니다. 데이터 흐름, 대상 연결 등 플로우 엔티티를 성공적으로 업데이트할 때마다 etag 값이 업데이트됩니다.
+>`If-Match`을(를) 요청할 때 `PATCH` 헤더가 필요합니다. 이 헤더의 값은 업데이트하려는 데이터 흐름의 고유 버전입니다. 데이터 흐름, 대상 연결 등 플로우 엔티티를 성공적으로 업데이트할 때마다 etag 값이 업데이트됩니다.
 >
 > 최신 버전의 etag 값을 가져오려면 `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` 끝점에 대한 GET 요청을 수행합니다. 여기서 `{ID}`은(는) 업데이트하려는 데이터 흐름 ID입니다.
 >
-> `PATCH`개의 요청을 할 때는 아래 예제와 같이 `If-Match` 헤더의 값을 큰따옴표로 묶어야 합니다.
+> `If-Match`개의 요청을 할 때는 아래 예제와 같이 `PATCH` 헤더의 값을 큰따옴표로 묶어야 합니다.
 
 >[!BEGINSHADEBOX]
 
@@ -4660,17 +4672,17 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
->`PATCH`을(를) 요청할 때 `If-Match` 헤더가 필요합니다. 이 헤더의 값은 업데이트하려는 데이터 흐름의 고유 버전입니다. 데이터 흐름, 대상 연결 등 플로우 엔티티를 성공적으로 업데이트할 때마다 etag 값이 업데이트됩니다.
+>`If-Match`을(를) 요청할 때 `PATCH` 헤더가 필요합니다. 이 헤더의 값은 업데이트하려는 데이터 흐름의 고유 버전입니다. 데이터 흐름, 대상 연결 등 플로우 엔티티를 성공적으로 업데이트할 때마다 etag 값이 업데이트됩니다.
 >
 > 최신 버전의 etag 값을 가져오려면 `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` 끝점에 대한 GET 요청을 수행합니다. 여기서 `{ID}`은(는) 업데이트하려는 데이터 흐름 ID입니다.
 >
-> `PATCH`개의 요청을 할 때는 아래 예제와 같이 `If-Match` 헤더의 값을 큰따옴표로 묶어야 합니다.
+> `If-Match`개의 요청을 할 때는 아래 예제와 같이 `PATCH` 헤더의 값을 큰따옴표로 묶어야 합니다.
 
 >[!BEGINSHADEBOX]
 
 **요청**
 
-+++ID를 중복 제거 키로 추가 - 요청
++++중복 제거 키로 ID 추가 - 요청
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
@@ -4736,6 +4748,44 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ```
 
 +++
+
+>[!ENDSHADEBOX]
+
+### 기존 대상에 파일 매니페스트 생성 추가 {#add-file-manifest}
+
+기존 대상에 파일 매니페스트 생성을 추가하려면 `PATCH` 작업을 사용하여 대상 연결 매개 변수를 업데이트해야 합니다. 이렇게 하면 내보낸 파일에 대한 메타데이터를 제공하는 대상에 대한 매니페스트 파일을 생성할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>`If-Match`을(를) 요청할 때 `PATCH` 헤더가 필요합니다. 이 헤더 값은 업데이트하려는 대상 연결의 고유한 버전입니다. 데이터 흐름, 대상 연결 등 플로우 엔티티를 성공적으로 업데이트할 때마다 etag 값이 업데이트됩니다.
+>
+> 최신 버전의 etag 값을 가져오려면 `https://platform.adobe.io/data/foundation/flowservice/targetConnections/{ID}` 끝점에 대한 GET 요청을 수행합니다. 여기서 `{ID}`은(는) 업데이트하려는 대상 연결 ID입니다.
+>
+> `If-Match`개의 요청을 할 때는 아래 예제와 같이 `PATCH` 헤더의 값을 큰따옴표로 묶어야 합니다.
+
+>[!BEGINSHADEBOX]
+
+**요청**
+
++++기존 대상 연결에 파일 매니페스트 추가 - 요청
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+  {
+    "op": "add",
+    "path": "/params/includeFileManifest",
+    "value": true
+  }
+]'
+```
 
 >[!ENDSHADEBOX]
 
