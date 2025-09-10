@@ -2,7 +2,7 @@
 title: Edge 세그멘테이션 안내서
 description: 에지 세분화를 사용하여 에지에서 즉시 Experience Platform의 대상을 평가하여 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화하는 방법에 대해 알아봅니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
+source-git-commit: 1b69fa4ecadb1f6b8575358ca4a81549221430e1
 workflow-type: tm+mt
 source-wordcount: '1148'
 ht-degree: 1%
@@ -31,10 +31,10 @@ Edge 세그멘테이션은 Adobe Experience Platform의 세그먼트 정의를 �
 
 | 쿼리 유형 | 세부 사항 | 쿼리 | 예 |
 | ---------- | ------- | ----- | ------- |
-| 24시간 미만의 기간 내 단일 이벤트 | 24시간 미만의 기간 내에 들어오는 단일 이벤트를 참조하는 모든 세그먼트 정의. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![상대 시간 범위 내의 단일 이벤트의 예가 표시됩니다.](../images/methods/edge/single-event.png) |
-| 프로필만 | 프로필 속성만 참조하는 모든 세그먼트 정의. | `homeAddress.country.equals("US", false)` | ![프로필 특성의 예제가 표시됩니다.](../images/methods/edge/profile-attribute.png) |
-| 24시간 미만의 상대 시간 창 내에 프로필 속성이 있는 단일 이벤트 | 하나 이상의 프로필 속성을 가진 단일 수신 이벤트를 참조하고 24시간 미만의 상대 시간 창 내에서 발생하는 모든 세그먼트 정의입니다. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![상대 기간 내에 프로필 특성이 있는 단일 이벤트의 예가 표시됩니다.](../images/methods/edge/single-event-with-profile-attribute.png) |
-| 세그먼트 | 하나 이상의 배치 또는 모서리 세그먼트를 포함하는 모든 세그먼트 정의입니다. **참고:** 세그먼트의 세그먼트가 사용되는 경우 **24시간마다**&#x200B;프로필의 자격이 상실됩니다. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![세그먼트 예제가 표시됩니다.](../images/methods/edge/segment-of-segments.png) |
+| 24시간 미만의 기간 내 단일 이벤트 | 24시간 미만의 기간 내에 들어오는 단일 이벤트를 참조하는 모든 세그먼트 정의. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![상대 시간 범위 내의 단일 이벤트의 예가 표시됩니다.](../images/methods/edge/single-event.png){zoomable="yes"} |
+| 프로필만 | 프로필 속성만 참조하는 모든 세그먼트 정의. | `homeAddress.country.equals("US", false)` | ![프로필 특성의 예제가 표시됩니다.](../images/methods/edge/profile-attribute.png){zoomable="yes"} |
+| 24시간 미만의 상대 시간 창 내에 프로필 속성이 있는 단일 이벤트 | 하나 이상의 프로필 속성을 가진 단일 수신 이벤트를 참조하고 24시간 미만의 상대 시간 창 내에서 발생하는 모든 세그먼트 정의입니다. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![상대 기간 내에 프로필 특성이 있는 단일 이벤트의 예가 표시됩니다.](../images/methods/edge/single-event-with-profile-attribute.png){zoomable="yes"} |
+| 세그먼트 | 하나 이상의 배치 또는 모서리 세그먼트를 포함하는 모든 세그먼트 정의입니다. **참고:** 세그먼트의 세그먼트가 사용되는 경우 **24시간마다**&#x200B;프로필의 자격이 상실됩니다. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![세그먼트 예제가 표시됩니다.](../images/methods/edge/segment-of-segments.png){zoomable="yes"} |
 
 또한 세그먼트 정의 **must**&#x200B;은(는) Edge에서 활성 상태인 병합 정책에 연결됩니다. 병합 정책에 대한 자세한 내용은 [병합 정책 안내서](../../profile/api/merge-policies.md)를 참조하십시오.
 
@@ -153,15 +153,15 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 대상 포털에서 **[!UICONTROL 대상 만들기]**&#x200B;를 선택합니다.
 
-![대상자 만들기 단추가 대상자 포털에서 강조 표시됩니다.](../images/methods/edge/select-create-audience.png)
+![대상자 만들기 단추가 대상자 포털에서 강조 표시됩니다.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
 팝오버가 나타납니다. 세그먼트 빌더를 입력하려면 **[!UICONTROL 규칙 작성]**&#x200B;을 선택하십시오.
 
-![대상 만들기 팝오버에서 빌드 규칙 단추가 강조 표시됩니다.](../images/methods/edge/select-build-rules.png)
+![대상 만들기 팝오버에서 빌드 규칙 단추가 강조 표시됩니다.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
 세그먼트 빌더 내에서 [적격 쿼리 유형](#eligible-query-types) 중 하나와 일치하는 세그먼트 정의를 만듭니다. 세그먼트 정의가 Edge 세그멘테이션에 적합하면 **[!UICONTROL Edge]**&#x200B;을(를) **[!UICONTROL 평가 메서드]**(으)로 선택할 수 있습니다.
 
-![세그먼트 정의가 표시됩니다. 평가 유형이 강조 표시되어 가장자리 세분화를 사용하여 세그먼트 정의를 평가할 수 있음을 보여 줍니다.](../images/methods/edge/edge-evaluation-method.png)
+![세그먼트 정의가 표시됩니다. 평가 유형이 강조 표시되어 가장자리 세분화를 사용하여 세그먼트 정의를 평가할 수 있음을 보여 줍니다.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
 세그먼트 정의 만들기에 대한 자세한 내용은 [세그먼트 빌더 안내서](../ui/segment-builder.md)를 참조하세요.
 
@@ -297,11 +297,11 @@ curl -X GET \
 
 Audience Portal의 필터를 사용하여 조직 내에서 에지 세분화에 대해 활성화된 모든 대상을 검색할 수 있습니다. 필터 목록을 표시하려면 ![필터 아이콘](../../images/icons/filter.png) 아이콘을 선택하십시오.
 
-![Audience Portal에서 필터 아이콘이 강조 표시되어 있습니다.](../images/methods/filter-audiences.png)
+![Audience Portal에서 필터 아이콘이 강조 표시되어 있습니다.](../images/methods/filter-audiences.png){zoomable="yes"}
 
 사용 가능한 필터 내에서 **빈도 업데이트**(으)로 이동하여 &quot;Edge&quot;을(를) 선택합니다. 이 필터를 사용하면 에지 세분화를 사용하여 평가되는 조직의 모든 대상이 표시됩니다.
 
-![에지 세분화를 사용하여 평가되는 조직의 모든 대상을 표시하는 Edge 업데이트 빈도를 선택했습니다.](../images/methods/edge/filter-edge.png)
+![에지 세분화를 사용하여 평가되는 조직의 모든 대상을 표시하는 Edge 업데이트 빈도를 선택했습니다.](../images/methods/edge/filter-edge.png){zoomable="yes"}
 
 Experience Platform에서 대상자를 보는 방법에 대한 자세한 내용은 [대상자 포털 안내서](../ui/audience-portal.md)를 참조하십시오.
 
@@ -321,7 +321,7 @@ Edge 사용 대상의 경우 **[!UICONTROL 시간 경과에 따른 프로필]** 
 
 **[!UICONTROL 새로 업데이트된 대상]** 지표는 가장자리 세분화를 통해 대상 크기의 변화를 보여 주는 선 그래프로 표시됩니다. 드롭다운을 조정하여 지난 24시간, 지난 주 또는 지난 30일을 표시할 수 있습니다.
 
-![시간 경과에 따른 프로필 카드가 강조 표시됩니다.](../images/methods/edge/profiles-over-time.png)
+![시간 경과에 따른 프로필 카드가 강조 표시됩니다.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
 대상자 세부 정보에 대한 자세한 내용은 [대상자 포털 개요](../ui/audience-portal.md#audience-details)를 참조하십시오.
 
