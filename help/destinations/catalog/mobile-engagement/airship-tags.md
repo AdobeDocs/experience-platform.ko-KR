@@ -3,24 +3,16 @@ keywords: 비행선 태그;비행선 목적지
 title: 비행선 태그 연결
 description: Airship 내에서 타깃팅할 대상 태그로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 5619424024eff81fca21408288494402e2a4d4ff
+source-git-commit: 5a2f1c87381c39d6d15f569523cfb3b00d02b34b
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 5%
+source-wordcount: '970'
+ht-degree: 2%
 
 ---
 
 # [!DNL Airship Tags] 연결 {#airship-tags-destination}
 
 ## 개요
-
->[!IMPORTANT]
->
->* 2025년 8월 21일 금요일부터 대상 카탈로그에 두 개의 **[!DNL Airship Tags]** 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!DNL Airship Tags]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) 비행선 태그]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL 비행선 태그]**&#x200B;인 새 카드를 사용할 수 있습니다.
->* 새 활성화 데이터 흐름을 위해 카탈로그의 새 **[!UICONTROL 비행선 태그]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않는) 비행선 태그]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 조치가 필요하지 않습니다.
->* [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다.
->   * 흐름 사양 ID: `0c7e71c8-4d60-4685-a216-77f57e37b04a`
->   * 연결 사양 ID: `aec13e22-8226-4b5d-9961-6baa35b251d2`
 
 [!DNL Airship]은(는) 선도적인 고객 참여 플랫폼으로, 고객 라이프사이클의 모든 단계에서 사용자에게 의미 있고 개인화된 옴니채널 메시지를 제공할 수 있습니다.
 
