@@ -2,10 +2,10 @@
 title: 확장 매니페스트
 description: Adobe Experience Platform에 확장을 올바르게 사용하는 방법을 알려 주는 JSON 매니페스트 파일을 구성하는 방법에 대해 알아봅니다.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a7c66b9172421510510b6acf3466334c33cdaa3d
 workflow-type: tm+mt
-source-wordcount: '2606'
-ht-degree: 67%
+source-wordcount: '2652'
+ht-degree: 66%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 67%
 확장 매니페스트는 다음과 같이 구성되어야 합니다.
 
 | 속성 | 설명 |
-| --- | --- |
+|--------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name` | 확장의 이름. 다른 모든 확장에서 고유해야 하며 [명명 규칙](#naming-rules)을 준수해야 합니다. **태그에서 식별자로 사용되며 확장을 게시한 후에는 변경할 수 없습니다.** |
 | `platform` | 확장을 위한 플랫폼. 현재 허용되는 유일한 값은 `web`입니다. |
 | `version` | 확장의 버전. 버전은 [semver](https://semver.org/) 버전 관리 형식을 준수해야 합니다. 그리고 [npm 버전 필드](https://docs.npmjs.com/files/package.json#version)와 일치합니다. |
@@ -30,6 +30,7 @@ ht-degree: 67%
 | `description` | 확장에 대한 설명. Experience Platform 사용자에게 표시됩니다. 사용자가 웹 사이트에서 제품을 구현할 수 있도록 확장을 지원하는 경우 제품의 기능을 설명하십시오. 태그 또는 &quot;확장&quot;을 언급할 필요가 없습니다. 사용자는 이미 태그 확장을 보고 있음을 알 수 있습니다. |
 | `iconPath` *(선택 사항)* | 확장에 대해 표시될 아이콘의 상대 경로입니다. 슬래시로 시작하지 않아야 합니다. 확장자가 `.svg`인 SVG 파일을 참조해야 합니다. SVG은 사각형이어야 하며 Experience Platform에 의해 크기가 조정될 수 있습니다. |
 | `author` | author는 다음과 같이 구조화해야 하는 객체입니다. <ul><li>`name`: 확장 작성자의 이름입니다. 아니면 여기에서 회사 이름을 사용할 수도 있습니다.</li><li>`url` *(선택 사항)*: 확장 작성자에 대한 자세한 정보를 확인할 수 있는 URL입니다.</li><li>`email` *(선택 사항)*: 확장 작성자의 이메일 주소입니다.</li></ul>이는 [npm 작성자 필드](https://docs.npmjs.com/files/package.json#people-fields-author-contributors) 규칙과 일치합니다. |
+| `releaseNotesUrl` *(선택 사항)* | 이 정보를 게시할 위치가 있는 경우 확장 릴리스 노트의 URL입니다. 이 URL은 Adobe Tags UI 내에서 확장 설치 및 업그레이드 중에 이 링크를 표시하는 데 사용됩니다. 이 속성은 Web 및 Edge 확장 기능에서만 지원됩니다. |
 | `exchangeUrl` *(공개 확장의 경우 필수)* | Adobe Exchange에서 확장 목록에 대한 URL입니다. `https://www.adobeexchange.com/experiencecloud.details.######.html` 패턴과 일치해야 합니다. |
 | `viewBasePath` | 모든 보기 및 보기 관련 리소스(HTML, JavaScript, CSS, 이미지)를 포함하는 하위 디렉터리에 대한 상대 경로. Experience Platform은 웹 서버에서 이 디렉터리를 호스팅하고 이 디렉터리에서 iframe 컨텐츠를 로드합니다. 필수 필드이므로 슬래시로 시작하지 않아야 합니다. 예를 들어, 모든 보기가 `src/view/`에 포함된 경우 `viewBasePath`의 값은 `src/view/`가 됩니다. |
 | `hostedLibFiles` *(선택 사항)* | 많은 사용자가 자체 서버에서 모든 태그 관련 파일을 호스팅하는 것을 선호합니다. 이를 통해 런타임 시 파일 가용성에 대한 확실성 수준을 높이고, 보안 취약점에 대한 코드를 쉽게 스캔할 수 있습니다. 확장의 라이브러리 부분이 런타임에 JavaScript 파일을 로드해야 하는 경우 이 속성을 사용하여 해당 파일을 나열하는 것이 좋습니다. 나열된 파일은 태그 런타임 라이브러리와 함께 호스팅됩니다. 그런 다음 [getHostedLibFileUrl](./turbine.md#get-hosted-lib-file) 메서드를 사용하여 검색한 URL을 통해 파일을 로드할 수 있습니다.<br><br>이 옵션에는 호스팅해야 하는 타사 라이브러리 파일의 상대 경로가 포함된 배열이 포함되어 있습니다. |
@@ -74,20 +75,20 @@ ht-degree: 67%
       <td><code>schema</code></td>
       <td>확장 구성 보기에서 저장되는 유효한 객체의 형식을 설명하는 <a href="https://json-schema.org/">JSON 스키마</a> 객체입니다. 저장된 설정 객체가 이 스키마와 일치하도록 하는 것은 구성 보기 개발자의 책임입니다. 이 스키마는 사용자가 Experience Platform 서비스를 사용하여 데이터를 저장하려고 할 때도 유효성 검사에 사용됩니다.<br><br>예제 스키마 객체는 다음과 같습니다.
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       <a href="https://www.jsonschemavalidator.net/">JSON 스키마 유효성 검사기</a>와 같은 툴을 사용하여 스키마를 수동으로 테스트하는 것이 좋습니다.</td>
     </tr>
@@ -134,20 +135,20 @@ ht-degree: 67%
       <td><code>schema</code></td>
       <td>사용자가 저장할 수 있는 유효한 설정 객체의 형식을 설명하는 <a href="https://json-schema.org/">JSON 스키마</a> 객체입니다. 설정은 일반적으로 데이터 수집 사용자 인터페이스를 사용하여 사용자가 구성 및 저장합니다. 이러한 경우 확장의 보기에서 사용자가 제공한 설정을 확인하는 데 필요한 단계를 수행할 수 있습니다. 반면, 일부 사용자는 사용자 인터페이스의 지원 없이 태그 API를 직접 사용하도록 선택합니다. 이 스키마의 목적은 Experience Platform이 사용자 인터페이스의 사용 여부와 관계없이 사용자가 저장한 설정 객체가 런타임 시 설정 객체에 적용되는 라이브러리 모듈과 호환되는 형식으로 되어 있는지 확인하기 위한 것입니다.<br><br>예제 스키마 객체는 다음과 같습니다.<br>
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       <a href="https://www.jsonschemavalidator.net/">JSON 스키마 유효성 검사기</a>와 같은 툴을 사용하여 스키마를 수동으로 테스트하는 것이 좋습니다.</td>
     </tr>
