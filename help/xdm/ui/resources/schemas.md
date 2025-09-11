@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법의 기본 사항에 대해 알아봅니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 0b03a8873f828faef78e5bf0b66c9773fc693206
 workflow-type: tm+mt
-source-wordcount: '4078'
-ht-degree: 1%
+source-wordcount: '4178'
+ht-degree: 2%
 
 ---
 
@@ -73,7 +73,7 @@ ML 알고리즘을 사용하여 csv 파일을 기반으로 스키마 구조를 �
 
 텍스트 필드에 사용자에게 친숙한 [!UICONTROL 스키마 표시 이름]을(를) 입력하십시오. 그런 다음 스키마를 식별하는 데 도움이 되는 적절한 설명을 입력합니다. 스키마 구조를 검토하고 설정이 마음에 들면 **[!UICONTROL 완료]**&#x200B;를 선택하여 스키마를 만듭니다.
 
-[!UICONTROL 스키마 표시 이름], [!UICONTROL 설명] 및 [!UICONTROL 마침]이 강조 표시된 [!UICONTROL 스키마 만들기] 워크플로의 [!UICONTROL 이름 및 검토] 섹션.![&#128279;](../../images/ui/resources/schemas/name-and-review.png)
+![스키마 표시 이름[!UICONTROL , ]설명[!UICONTROL  및 ]마침[!UICONTROL 이 강조 표시된 ]스키마 만들기[!UICONTROL  워크플로의 ]이름 및 검토[!UICONTROL  섹션.]](../../images/ui/resources/schemas/name-and-review.png)
 
 스키마 구조가 캔버스에 표시된 스키마 편집기가 나타납니다. 원하는 경우 이제 [클래스에 필드를 추가](../../ui/resources/classes.md#add-fields)할 수 있습니다.
 
@@ -111,7 +111,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 >
 >필드 이름에서 표시 이름으로의 변경은 순전히 외형적이며 다운스트림 리소스를 변경하지 않습니다.
 
-[필드 표시 이름 표시]가 강조 표시된 스키마 편집기 ![[!UICONTROL 입니다.]](../../images/ui/resources/schemas/display-name-toggle.png)
+![필드 표시 이름 표시[!UICONTROL 가 강조 표시된 스키마 편집기 ]입니다.](../../images/ui/resources/schemas/display-name-toggle.png)
 
 표준 필드 그룹의 표시 이름은 시스템에서 생성되지만 [표시 이름](#display-names) 섹션에 설명된 대로 사용자 지정할 수 있습니다. 표시 이름은 매핑 및 데이터 세트 미리보기를 비롯한 여러 UI 보기에 반영됩니다. 기본 설정은 꺼져 있으며 필드 이름을 원래 값으로 표시합니다.
 
@@ -123,7 +123,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 [!DNL Schema Editor] 내에서 스키마를 열면 필드 그룹을 사용하여 스키마에 필드를 추가할 수 있습니다. 시작하려면 왼쪽 레일에서 **[!UICONTROL 필드 그룹]** 옆에 있는 **[!UICONTROL 추가]**&#x200B;를 선택하십시오.
 
-![필드 그룹] 섹션의 [!UICONTROL 추가]가 강조 표시된 스키마 편집기.(../../images/ui/resources/schemas/add-field-group-button.png)
+![필드 그룹[!UICONTROL  섹션의 ]추가[!UICONTROL 가 강조 표시된 스키마 편집기.]](../../images/ui/resources/schemas/add-field-group-button.png)
 
 스키마에 대해 선택할 수 있는 필드 그룹 목록을 표시하는 대화 상자가 나타납니다. 필드 그룹은 하나의 클래스와만 호환되므로 스키마의 선택한 클래스와 연결된 필드 그룹만 나열됩니다. 기본적으로 나열된 필드 그룹은 조직 내에서 사용 인기에 따라 정렬됩니다.
 
@@ -131,7 +131,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 추가할 필드의 일반 활동 또는 비즈니스 영역을 알고 있는 경우 왼쪽 레일에서 하나 이상의 수직 범주를 선택하여 표시된 필드 그룹 목록을 필터링합니다.
 
-![필드 그룹 추가] 대화 상자는 [!UICONTROL 산업] 필터 및 [!UICONTROL 산업] 열을 강조 표시하며 강조 표시되었습니다.(../../images/ui/resources/schemas/industry-filter.png)
+![필드 그룹 추가[!UICONTROL  대화 상자는 ]산업[!UICONTROL  필터 및 ]산업[!UICONTROL  열을 강조 표시하며 강조 표시되었습니다.]](../../images/ui/resources/schemas/industry-filter.png)
 
 >[!NOTE]
 >
@@ -139,7 +139,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 검색 창을 사용하여 원하는 필드 그룹을 찾을 수도 있습니다. 쿼리와 이름이 일치하는 필드 그룹이 목록 맨 위에 나타납니다. **[!UICONTROL 표준 필드]** 아래에 원하는 데이터 특성을 설명하는 필드가 포함된 필드 그룹이 표시됩니다.
 
-![필드 그룹 추가] 대화 상자에 [!UICONTROL 표준 필드] 검색 기능이 강조 표시되어 있습니다.(../../images/ui/resources/schemas/field-group-search.png)
+![필드 그룹 추가[!UICONTROL  대화 상자에 ]표준 필드[!UICONTROL  검색 기능이 강조 표시되어 있습니다.]](../../images/ui/resources/schemas/field-group-search.png)
 
 스키마에 추가하려는 필드 그룹의 이름 옆에 있는 확인란을 선택합니다. 목록에서 여러 필드 그룹을 선택할 수 있으며, 선택한 각 필드 그룹이 오른쪽 레일에 표시됩니다.
 
@@ -167,27 +167,43 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 ### 필드 그룹에서 추가된 필드 제거 {#remove-fields}
 
-스키마에 필드 그룹을 추가한 후에는 필요하지 않은 모든 필드를 제거할 수 있습니다.
+스키마에 필드 그룹을 추가한 후에는 필드 그룹에서 필드를 전체적으로 제거하거나 현재 스키마에서 로컬로 숨길 수 있습니다. 의도하지 않은 스키마 변경을 방지하려면 이러한 작업 간의 차이점을 이해하는 것이 중요합니다.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->필드 그룹에서 필드를 제거하면 작업 중인 스키마에만 영향을 주고 필드 그룹 자체에는 영향을 주지 않습니다. 한 스키마에서 필드를 제거하면 동일한 필드 그룹을 사용하는 다른 모든 스키마에서 해당 필드를 계속 사용할 수 있습니다.
+>**[!UICONTROL 제거]**&#x200B;를 선택하면 필드 그룹 자체에서 필드가 삭제되어 해당 필드 그룹을 사용하는 *모든* 스키마에 영향을 줍니다.
+>>**필드 그룹을 포함하는 모든 스키마에서 필드를 제거**&#x200B;하려는 경우가 아니면 이 옵션을 사용하지 마십시오.
 
-다음 예제에서는 표준 필드 그룹 **[!UICONTROL 인구 통계 세부 정보]**&#x200B;을(를) 스키마에 추가했습니다. `taxId`과(와) 같은 단일 필드를 제거하려면 캔버스에서 필드를 선택한 다음 오른쪽 레일에서 **[!UICONTROL 제거]**&#x200B;를 선택하십시오.
+필드 그룹에서 필드를 삭제하려면 캔버스에서 필드를 선택하고 오른쪽 레일에서 **[!UICONTROL 제거]**&#x200B;를 선택합니다. 이 예제에서는 `taxId`인구 통계 세부 정보&#x200B;**[!UICONTROL 그룹의]** 필드를 보여줍니다.
 
-![강조 표시된 [!UICONTROL 제거]의 [!DNL Schema Editor]. 이 작업은 단일 필드를 제거합니다.](../../images/ui/resources/schemas/remove-single-field.png)
+![강조 표시된 [!DNL Schema Editor]제거[!UICONTROL 의 ]. 이 작업은 단일 필드를 제거합니다.](../../images/ui/resources/schemas/remove-single-field.png)
 
-제거할 필드가 여러 개인 경우 필드 그룹을 전체적으로 관리할 수 있습니다. 캔버스에서 그룹에 속하는 필드를 선택한 다음 오른쪽 레일에서 **[!UICONTROL 관련 필드 관리]**&#x200B;를 선택합니다.
+필드 그룹 자체에서 제거하지 않고 스키마에서 여러 필드를 숨기려면 **[!UICONTROL 관련 필드 관리]** 옵션을 사용합니다. 캔버스의 그룹에서 필드를 선택한 다음 오른쪽 레일에서 **[!UICONTROL 관련 필드 관리]**&#x200B;를 선택합니다.
 
-![관련 필드 관리]이(가) 강조 표시된 [!DNL Schema Editor]입니다.(../../images/ui/resources/schemas/manage-related-fields.png)
+![관련 필드 관리[!DNL Schema Editor]이(가) 강조 표시된 [!UICONTROL 입니다.]](../../images/ui/resources/schemas/manage-related-fields.png)
 
-해당 필드 그룹의 구조를 보여 주는 대화 상자가 나타납니다. 여기에서 제공된 확인란을 사용하여 필요한 필드를 선택하거나 선택 취소할 수 있습니다. 만족하면 **[!UICONTROL 확인]**&#x200B;을 선택하세요.
+필드 그룹의 구조를 보여 주는 대화 상자가 나타납니다. 확인란을 사용하여 포함할 필드를 선택하거나 선택 취소합니다.
 
 ![선택한 필드와 [!UICONTROL 확인]이 강조 표시된 [!UICONTROL 관련 필드 관리] 대화 상자.](../../images/ui/resources/schemas/select-fields.png)
 
-스키마 구조에 선택한 필드만 있는 캔버스가 다시 나타납니다.
+캔버스를 업데이트하고 선택한 필드를 반영하려면 **[!UICONTROL 확인]**&#x200B;을(를) 선택하십시오.
+
 
 ![필드 추가됨](../../images/ui/resources/schemas/fields-added.png)
+
+### 필드를 제거하거나 사용하지 않을 때의 필드 동작 {#field-removal-deprecation-behavior}
+
+아래 표를 사용하여 각 작업의 범위를 이해합니다.
+
+| 작업 | 현재 스키마에만 적용됩니다. | 필드 그룹 수정 | 다른 스키마에 영향 | 설명 |
+|--------------------------|--------------------------------|----------------------|-----------------------|-------------|
+| **필드 제거** | 아니요 | 예 | 예 | 필드 그룹에서 필드를 삭제합니다. 이렇게 하면 해당 그룹을 사용하는 모든 스키마에서 제거됩니다. |
+| **관련 필드 관리** | 예 | 아니요 | 아니요 | 현재 스키마에서만 필드를 숨깁니다. 필드 그룹은 변경되지 않습니다. |
+| **필드 사용 안 함** | 아니요 | 예 | 예 | 필드를 필드 그룹에서 더 이상 사용되지 않는 것으로 표시합니다. 스키마에서 더 이상 사용할 수 없습니다. |
+
+>[!NOTE]
+>
+>이 동작은 레코드 기반 및 이벤트 기반 스키마 모두에서 일관됩니다.
 
 ### 필드 그룹에 사용자 정의 필드 추가 {#add-fields}
 
