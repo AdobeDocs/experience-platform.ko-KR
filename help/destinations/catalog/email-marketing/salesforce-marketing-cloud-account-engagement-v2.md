@@ -4,7 +4,7 @@ description: (V2) Salesforce Marketing Cloud 계정 참여(이전의 Pardot) 대
 badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 21ca268d3ade99cf46b6c511360084297e8163d3
+source-git-commit: d1405237698271607fa672ccae1ac731d66df263
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 3%
@@ -22,9 +22,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 > 
-> [Salesforce Marketing Cloud 계정 참여](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) 대상의 V2 버전입니다. 이 버전은 이전 대상을 대체하며 현재 Alpha 릴리스에 있습니다.
-> &#x200B;> <br>
-> &#x200B;> 현재 이전 버전의 [Salesforce Marketing Cloud 계정 참여](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) 대상을 사용하는 경우 **2026년 1월** 전에 이 V2 버전으로 마이그레이션해야 합니다. 2026년 1월 이후 Adobe은 이전 버전을 중단하고 더 이상 사용할 수 없습니다.
+> [Salesforce Marketing Cloud 계정 참여](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) 대상의 V2 버전입니다. 이 버전은 이전 대상을 대체하며 현재 Alpha 릴리스에 있습니다.
+> > <br>
+> > 현재 이전 버전의 [Salesforce Marketing Cloud 계정 참여](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) 대상을 사용하는 경우 **2026년 1월** 전에 이 V2 버전으로 마이그레이션해야 합니다. 2026년 1월 이후 Adobe은 이전 버전을 중단하고 더 이상 사용할 수 없습니다.
 
 
 ## 사용 사례 {#use-cases}

@@ -4,9 +4,9 @@ title: 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로
 description: 흐름 서비스 API를 사용하여 적격 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: eb7d1b9c167839db39cbb28bf497edac706c0b6c
+source-git-commit: 833e38559f7150c579840c69fa2658761fc9472c
 workflow-type: tm+mt
-source-wordcount: '4911'
+source-wordcount: '4986'
 ht-degree: 3%
 
 ---
@@ -4752,6 +4752,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 >[!ENDSHADEBOX]
 
 ### 기존 대상에 파일 매니페스트 생성 추가 {#add-file-manifest}
+
+매니페스트 JSON 파일에는 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함되어 있습니다. 매니페스트의 이름은 `manifest-<<destinationId>>-<<dataflowRunId>>.json` 형식을 사용하여 지정합니다. [샘플 매니페스트 파일](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)을(를) 봅니다. 매니페스트 파일에는 다음 필드가 포함되어 있습니다.
+
+* `flowRunId`: 내보낸 파일을 생성한 [데이터 흐름 실행](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
+* `scheduledTime`: 파일을 내보낸 시간(UTC)입니다.
+* `exportResults.sinkPath`: 내보낸 파일이 저장된 저장소 위치의 경로입니다.
+* `exportResults.name`: 내보낸 파일의 이름입니다.
+* `size`: 내보낸 파일의 크기(바이트)입니다.
 
 기존 대상에 파일 매니페스트 생성을 추가하려면 `PATCH` 작업을 사용하여 대상 연결 매개 변수를 업데이트해야 합니다. 이렇게 하면 내보낸 파일에 대한 메타데이터를 제공하는 대상에 대한 매니페스트 파일을 생성할 수 있습니다.
 

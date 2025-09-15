@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 배치 대상에 연결하고 데이
 description: 플로우 서비스 API를 사용하여 Experience Platform에서 일괄 클라우드 스토리지 또는 이메일 마케팅 대상을 만들고 데이터를 활성화하는 단계별 지침
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 81641f707dbd9fb2952589506bc42c3dd6cd83b3
+source-git-commit: 833e38559f7150c579840c69fa2658761fc9472c
 workflow-type: tm+mt
-source-wordcount: '3416'
+source-wordcount: '3450'
 ht-degree: 2%
 
 ---
@@ -36,12 +36,12 @@ ht-degree: 2%
 
 Experience Platform 사용자 인터페이스를 사용하여 대상에 연결하고 데이터를 활성화하려면 [대상 연결](../ui/connect-destination.md) 및 [대상 데이터를 프로필 내보내기 대상 일괄 처리에 활성화](../ui/activate-batch-profile-destinations.md) 튜토리얼을 참조하십시오.
 
-## 시작하기 {#get-started}
+## 시작 {#get-started}
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service]을(를) 사용하면 [!DNL Real-Time Customer Profile] 데이터에서 [!DNL Adobe Experience Platform]의 대상을 작성할 수 있습니다.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service]을(를) 사용하면 [!DNL Adobe Experience Platform] 데이터에서 [!DNL Real-Time Customer Profile]의 대상을 작성할 수 있습니다.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform]은(는) 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 Experience Platform의 배치 대상에 데이터를 활성화하기 위해 알아야 하는 추가 정보를 제공합니다.
@@ -51,17 +51,17 @@ Experience Platform 사용자 인터페이스를 사용하여 대상에 연결�
 이 자습서의 단계를 완료하려면 대상을 연결하고 활성화하는 대상 유형에 따라 다음 자격 증명을 준비해야 합니다.
 
 * [!DNL Amazon S3] 연결: `accessId`, `secretKey`
-* [!DNL Adobe Campaign]에 대한 [!DNL Amazon S3] 연결: `accessId`, `secretKey`
+* [!DNL Amazon S3]에 대한 [!DNL Adobe Campaign] 연결: `accessId`, `secretKey`
 * SFTP 연결의 경우: `domain`, `port`, `username`, `password` 또는 `sshKey`(FTP 위치에 대한 연결 메서드에 따라 다름)
 * [!DNL Azure Blob]개 연결의 경우: `connectionString`
 
 >[!NOTE]
 >
->[!DNL Amazon S3] 연결에 대한 자격 증명 `accessId`, `secretKey`과(와) [!DNL Adobe Campaign]에 대한 [!DNL Amazon S3] 연결에 대한 `accessId`, `secretKey`이(가) 동일합니다.
+>`accessId` 연결에 대한 자격 증명 `secretKey`, [!DNL Amazon S3]과(와) `accessId`에 대한 `secretKey` 연결에 대한 [!DNL Amazon S3], [!DNL Adobe Campaign]이(가) 동일합니다.
 
 ### 샘플 API 호출 읽기 {#reading-sample-api-calls}
 
-이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request)에 대한 섹션을 참조하십시오.
+이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [ 문제 해결 안내서의 ](../../landing/troubleshooting.md#how-do-i-format-an-api-request)예제 API 호출을 읽는 방법[!DNL Experience Platform]에 대한 섹션을 참조하십시오.
 
 ### 필수 및 선택적 헤더에 대한 값 수집 {#gather-values-headers}
 
@@ -142,7 +142,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 그런 다음 [!DNL Experience Platform] 데이터에 연결해야 프로필 데이터를 내보내고 원하는 대상에서 활성화할 수 있습니다. 이 단계는 아래에 설명된 두 개의 하위 단계로 구성됩니다.
 
 1. 먼저 기본 연결을 설정하여 [!DNL Experience Platform]의 데이터에 대한 액세스 권한을 부여하는 호출을 수행해야 합니다.
-2. 그런 다음 기본 연결 ID를 사용하여 [!DNL Experience Platform] 데이터에 대한 연결을 설정하는 *소스 연결*&#x200B;을 만드는 다른 호출을 수행합니다.
+2. 그런 다음 기본 연결 ID를 사용하여 *데이터에 대한 연결을 설정하는*&#x200B;소스 연결[!DNL Experience Platform]을 만드는 다른 호출을 수행합니다.
 
 ### [!DNL Experience Platform]의 데이터에 대한 액세스 권한 부여
 
@@ -234,7 +234,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **응답**
 
-성공한 응답은 [!DNL Profile store]에 새로 만든 원본 연결에 대한 고유 식별자(`id`)를 반환합니다. 이를 통해 [!DNL Experience Platform] 데이터에 성공적으로 연결되었음을 확인할 수 있습니다. 이 값은 이후 단계에서 필요한 대로 저장하십시오.
+성공한 응답은 `id`에 새로 만든 원본 연결에 대한 고유 식별자([!DNL Profile store])를 반환합니다. 이를 통해 [!DNL Experience Platform] 데이터에 성공적으로 연결되었음을 확인할 수 있습니다. 이 값은 이후 단계에서 필요한 대로 저장하십시오.
 
 ```json
 {
@@ -531,8 +531,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `name` | 배치 대상에 대한 기본 연결의 이름을 입력합니다. |
 | `description` | 선택적으로 기본 연결에 대한 설명을 제공할 수 있습니다. |
 | `connectionSpec.id` | 원하는 배치 대상에 대해 연결 사양 ID를 사용합니다. [사용 가능한 대상 목록 가져오기](#get-the-list-of-available-destinations) 단계에서 이 ID를 얻었습니다. |
-| `auth.specname` | 대상의 인증 형식을 나타냅니다. 대상의 specName을 확인하려면 연결 사양 엔드포인트[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)에 대해 GET 호출을 수행하여 원하는 대상의 연결 사양을 제공하십시오. 응답에서 매개 변수 `authSpec.name`을(를) 찾습니다. <br> 예를 들어 Adobe Campaign 대상의 경우 `S3`, `SFTP with Password` 또는 `SFTP with SSH Key` 중 하나를 사용할 수 있습니다. |
-| `params` | 연결 중인 대상에 따라 서로 다른 필수 인증 매개 변수를 제공해야 합니다. Amazon S3 연결의 경우 Amazon S3 저장소 위치에 액세스 ID와 비밀 키를 제공해야 합니다. <br> 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 끝점[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)에 대한 GET 호출을 수행하여 원하는 대상의 연결 사양을 제공합니다. 응답에서 매개 변수 `authSpec.spec.required`을(를) 찾습니다. |
+| `auth.specname` | 대상의 인증 형식을 나타냅니다. 대상의 specName을 확인하려면 연결 사양 엔드포인트[에 대해 ](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET 호출을 수행하여 원하는 대상의 연결 사양을 제공하십시오. 응답에서 매개 변수 `authSpec.name`을(를) 찾습니다. <br> 예를 들어 Adobe Campaign 대상의 경우 `S3`, `SFTP with Password` 또는 `SFTP with SSH Key` 중 하나를 사용할 수 있습니다. |
+| `params` | 연결 중인 대상에 따라 서로 다른 필수 인증 매개 변수를 제공해야 합니다. Amazon S3 연결의 경우 Amazon S3 저장소 위치에 액세스 ID와 비밀 키를 제공해야 합니다. <br> 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 끝점[에 대한 ](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET 호출을 수행하여 원하는 대상의 연결 사양을 제공합니다. 응답에서 매개 변수 `authSpec.spec.required`을(를) 찾습니다. |
 
 {style="table-layout:auto"}
 
@@ -591,18 +591,21 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "AZURE_BLOB",
         "container": "{CONTAINER}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -638,7 +641,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -674,7 +678,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "AZURE_BLOB",
         "container": "{CONTAINER}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -710,12 +715,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -751,12 +758,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -792,12 +801,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -832,6 +843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -845,11 +857,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `description` | 필요한 경우 대상 연결에 대한 설명을 제공할 수 있습니다. |
 | `baseConnectionId` | 위의 단계에서 생성한 기본 연결의 ID를 사용하십시오. |
 | `connectionSpec.id` | 원하는 배치 대상에 대해 연결 사양 ID를 사용합니다. [사용 가능한 대상 목록 가져오기](#get-the-list-of-available-destinations) 단계에서 이 ID를 얻었습니다. |
-| `params` | 연결할 대상에 따라 저장소 위치에 다른 필수 매개 변수를 제공해야 합니다. Amazon S3 연결의 경우 Amazon S3 저장소 위치에 액세스 ID와 비밀 키를 제공해야 합니다. <br> 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 끝점[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)에 대한 GET 호출을 수행하여 원하는 대상의 연결 사양을 제공합니다. 응답에서 매개 변수 `targetSpec.spec.required`을(를) 찾습니다. |
-| `params.mode` | 대상에 대해 지원되는 모드에 따라 여기에 다른 값을 제공해야 합니다. 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 엔드포인트[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)에 대해 GET 호출을 수행하여 원하는 대상의 연결 사양을 제공하십시오. 응답에서 매개 변수 `targetSpec.spec.properties.mode.enum`을(를) 찾아 원하는 모드를 선택하십시오. |
+| `params` | 연결할 대상에 따라 저장소 위치에 다른 필수 매개 변수를 제공해야 합니다. Amazon S3 연결의 경우 Amazon S3 저장소 위치에 액세스 ID와 비밀 키를 제공해야 합니다. <br> 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 끝점[에 대한 ](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET 호출을 수행하여 원하는 대상의 연결 사양을 제공합니다. 응답에서 매개 변수 `targetSpec.spec.required`을(를) 찾습니다. |
+| `params.mode` | 대상에 대해 지원되는 모드에 따라 여기에 다른 값을 제공해야 합니다. 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 엔드포인트[에 대해 ](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET 호출을 수행하여 원하는 대상의 연결 사양을 제공하십시오. 응답에서 매개 변수 `targetSpec.spec.properties.mode.enum`을(를) 찾아 원하는 모드를 선택하십시오. |
 | `params.bucketName` | S3 연결의 경우 파일을 내보낼 버킷의 이름을 입력합니다. |
 | `params.path` | S3 연결의 경우 파일을 내보낼 저장소 위치의 파일 경로를 제공합니다. |
 | `params.format` | `CSV`은(는) 현재 지원되는 유일한 파일 내보내기 유형입니다. |
+| `params.includeFileManifest` | *선택 사항*. 대상에 대해 매니페스트 파일 생성을 사용하도록 설정하려면 `true`(으)로 설정하십시오. 활성화되면 내보낸 데이터 파일과 함께 매니페스트 파일이 만들어져 내보낸 파일에 대한 메타데이터를 제공합니다. [샘플 매니페스트 파일](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)을(를) 봅니다. |
 
 {style="table-layout:auto"}
 
@@ -921,7 +934,7 @@ curl -X POST \
 | --------- | ----------- |
 | `name` | 생성 중인 데이터 흐름의 이름을 입력합니다. |
 | `description` | 선택적으로 데이터 흐름에 대한 설명을 제공할 수 있습니다. |
-| `flowSpec.Id` | 연결할 배치 대상에 대해 흐름 사양 ID를 사용합니다. 흐름 사양 ID를 검색하려면 [흐름 사양 API 참조 설명서](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec)에 표시된 대로 `flowspecs` 끝점에서 GET 작업을 수행하십시오. 응답에서 `upsTo`을(를) 찾아 연결할 배치 대상의 해당 ID를 복사합니다. 예를 들어 Adobe Campaign의 경우 `upsToCampaign`을(를) 찾아 `id` 매개 변수를 복사합니다. |
+| `flowSpec.Id` | 연결할 배치 대상에 대해 흐름 사양 ID를 사용합니다. 흐름 사양 ID를 검색하려면 `flowspecs`흐름 사양 API 참조 설명서[에 표시된 대로 ](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec) 끝점에서 GET 작업을 수행하십시오. 응답에서 `upsTo`을(를) 찾아 연결할 배치 대상의 해당 ID를 복사합니다. 예를 들어 Adobe Campaign의 경우 `upsToCampaign`을(를) 찾아 `id` 매개 변수를 복사합니다. |
 | `sourceConnectionIds` | [Experience Platform 데이터에 연결](#connect-to-your-experience-platform-data) 단계에서 얻은 소스 연결 ID를 사용합니다. |
 | `targetConnectionIds` | [일괄 처리 대상에 연결](#connect-to-batch-destination) 단계에서 얻은 대상 연결 ID를 사용하십시오. |
 | `transformations` | 다음 단계에서는 이 섹션을 활성화할 대상 및 프로필 속성으로 채웁니다. |
@@ -1040,8 +1053,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `exportMode` | 필수. `"DAILY_FULL_EXPORT"` 또는 `"FIRST_FULL_THEN_INCREMENTAL"`을(를) 선택하십시오. 두 옵션에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서에서 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)를 참조하십시오. |
 | `startDate` | 대상자가 대상으로 프로필 내보내기를 시작할 날짜를 선택합니다. |
 | `frequency` | 필수. <br> <ul><li>`"DAILY_FULL_EXPORT"` 내보내기 모드의 경우 `ONCE`, `DAILY`, `WEEKLY` 또는 `MONTHLY`을(를) 선택할 수 있습니다.</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` 내보내기 모드의 경우 `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`을(를) 선택할 수 있습니다.</li></ul> |
-| `triggerType` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 `frequency` 선택기에서 `"DAILY_FULL_EXPORT"` 모드를 선택하는 경우에만 필요합니다. <br>은(는) 필수입니다. <br> <ul><li>매일 Experience Platform 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행하려면 `"AFTER_SEGMENT_EVAL"`을(를) 선택하십시오. 이렇게 하면 활성화 작업이 실행될 때 가장 최신 프로필을 대상으로 내보냅니다.</li><li>고정된 시간에 활성화 작업을 실행하려면 `"SCHEDULED"`을(를) 선택하십시오. 이렇게 하면 Experience Platform 프로필 데이터를 매일 동시에 내보낼 수 있지만 활성화 작업이 시작되기 전에 배치 세분화 작업이 완료되었는지 여부에 따라 내보내는 프로필이 최신 프로필이 아닐 수 있습니다. 이 옵션을 선택할 때는 일별 내보내기가 발생하는 시간을 UTC로 나타내려면 `startTime`도 추가해야 합니다.</li></ul> |
-| `endDate` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. `"exportMode":"DAILY_FULL_EXPORT"` 및 `"frequency":"ONCE"`을(를) 선택할 때는 <br>을(를) 적용할 수 없습니다. <br> 대상 구성원의 대상 내보내기를 중지할 날짜를 설정합니다. |
+| `triggerType` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 `"DAILY_FULL_EXPORT"` 선택기에서 `frequency` 모드를 선택하는 경우에만 필요합니다. <br>은(는) 필수입니다. <br> <ul><li>매일 Experience Platform 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행하려면 `"AFTER_SEGMENT_EVAL"`을(를) 선택하십시오. 이렇게 하면 활성화 작업이 실행될 때 가장 최신 프로필을 대상으로 내보냅니다.</li><li>고정된 시간에 활성화 작업을 실행하려면 `"SCHEDULED"`을(를) 선택하십시오. 이렇게 하면 Experience Platform 프로필 데이터를 매일 동시에 내보낼 수 있지만 활성화 작업이 시작되기 전에 배치 세분화 작업이 완료되었는지 여부에 따라 내보내는 프로필이 최신 프로필이 아닐 수 있습니다. 이 옵션을 선택할 때는 일별 내보내기가 발생하는 시간을 UTC로 나타내려면 `startTime`도 추가해야 합니다.</li></ul> |
+| `endDate` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br> 및 `"exportMode":"DAILY_FULL_EXPORT"`을(를) 선택할 때는 `"frequency":"ONCE"`을(를) 적용할 수 없습니다. <br> 대상 구성원의 대상 내보내기를 중지할 날짜를 설정합니다. |
 | `startTime` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br>은(는) 필수입니다. 대상자의 멤버가 포함된 파일을 생성하여 대상으로 내보내야 하는 시간을 선택합니다. |
 
 {style="table-layout:auto"}
