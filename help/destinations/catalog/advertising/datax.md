@@ -2,7 +2,7 @@
 title: Verizon MediaYahoo DataX 연결
 description: DataX는 Verizon Media/Yahoo가 안전하고 자동화된 확장 가능한 방식으로 외부 파트너와 데이터를 교환할 수 있도록 하는 다양한 구성 요소를 호스팅하는 Verizon Media/Yahoo 인프라의 집합체입니다.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 65809628e8535027edb08e54e84b308777036ab2
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 3%
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->이 대상 커넥터 및 설명서 페이지는 [!DNL Verizon Media/Yahoo]의 [!DNL DataX] 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)로 직접 연락하십시오.
+>이 대상 커넥터 및 설명서 페이지는 [!DNL Verizon Media/Yahoo]의 [!DNL DataX] 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 [dataoperations@yahooinc.com](mailto:dataoperations@yahooinc.com)로 직접 연락하십시오.
 
 ## 전제 조건 {#prerequisites}
 
@@ -48,7 +48,7 @@ Taxonomy 리소스는 기본 [!DNL DataX] 메타데이터 구조를 통해 확�
 }
 ```
 
-[!DNL DataX] 개발자 설명서에서 [분류 메타데이터](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/)에 대해 자세히 알아보십시오.
+[ 개발자 설명서에서 ](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/)분류 메타데이터[!DNL DataX]에 대해 자세히 알아보십시오.
 
 ## 등급 제한 및 보호 {#rate-limits-guardrails}
 
@@ -67,7 +67,7 @@ Taxonomy 리소스는 기본 [!DNL DataX] 메타데이터 구조를 통해 확�
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Verizon Media]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko#getting-started)에 대해 자세히 알아보세요.
+[!DNL Verizon Media]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)에 대해 자세히 알아보세요.
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
@@ -131,4 +131,4 @@ Experience Platform UI의 ![Yahoo DataX 대상 카드](/help/destinations/assets
 
 ## 추가 리소스 {#additional-resources}
 
-자세한 내용은  [!DNL DataX][&#128279;](https://developer.verizonmedia.com/datax/guide/)의 [!DNL Yahoo/Verizon Media] 설명서를 참조하십시오.
+자세한 내용은 [!DNL Yahoo/Verizon Media][의  [!DNL DataX] ](https://developer.verizonmedia.com/datax/guide/)설명서를 참조하십시오.
