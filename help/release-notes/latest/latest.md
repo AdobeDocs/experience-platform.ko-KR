@@ -3,9 +3,9 @@ title: Adobe Experience Platform 릴리스 정보 2025년 8월
 description: Adobe Experience Platform의 2025년 8월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1432'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -160,7 +160,7 @@ Experience Platform은 전 세계적으로 디지털 체험 애플리케이션�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 대상자 예상치 | 이제 대상자 예상 값이 샘플링 데이터의 신뢰 구간을 기반으로 하는 **범위**(으)로 표시됩니다. 예상 값에 대한 자세한 내용은 [세그먼트 빌더 안내서](/help/segmentation/ui/segment-builder.md#audience-properties)를 참조하세요. |
+| 대상자 예상치 | 대상자 예상치는 이제 샘플링 데이터의 신뢰 구간을 기반으로 하는 **범위**&#x200B;로 표시됩니다. 예상치에 대한 자세한 내용은 [세그먼트 빌더 안내서](/help/segmentation/ui/segment-builder.md#audience-properties)를 참조하십시오. |
 
 자세한 내용은 [[!DNL Segmentation Service] 개요](../../segmentation/home.md)를 참조하십시오.
 
@@ -172,9 +172,9 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| [!DNL Oracle NetSuite] 소스의 일반 가용성 | 이제 [!DNL Oracle NetSuite] 원본을 일반적으로 사용할 수 있습니다. 이제 [!DNL Oracle NetSuite] 계정을 Experience Platform에 연결하여 통합 분석 및 활성화를 위해 활동 및 엔터티 데이터를 수집할 수 있습니다. 자세한 내용은 [[!DNL Oracle NetSuite] 개요](../../sources/connectors/marketing-automation/oracle-netsuite.md)를 참조하십시오. |
-| [!DNL PathFactory] 소스의 일반 가용성 | 이제 [!DNL PathFactory] 원본을 일반적으로 사용할 수 있습니다. [!DNL PathFactory] 계정을 Experience Platform에 연결하여 통합 분석 및 활성화를 위해 방문자, 세션 및 페이지 보기 데이터를 수집할 수 있습니다. 자세한 내용은 [[!DNL PathFactory] 개요](../../sources/connectors/marketing-automation/pathfactory.md)를 참조하십시오. |
-| [!DNL Stripe] 소스의 일반 가용성 | 이제 [!DNL Stripe] 원본을 일반적으로 사용할 수 있습니다. [!DNL Stripe] 계정을 Experience Platform에 연결하여 통합 분석 및 활성화를 위해 결제 및 거래 데이터를 수집할 수 있습니다. 자세한 내용은 [[!DNL Stripe] 개요](../../sources/connectors/payments/stripe.md)를 참조하십시오. |
+| [!DNL Oracle NetSuite] 소스의 일반 가용성 | 이제 [!DNL Oracle NetSuite] 소스를 일반적으로 사용할 수 있습니다. 이제 [!DNL Oracle NetSuite] 계정을 Experience Platform에 연결하여 활동 및 엔티티 데이터를 수집하고 통합 분석 및 활성화를 수행할 수 있습니다. 자세한 내용은 [[!DNL Oracle NetSuite] 개요](../../sources/connectors/marketing-automation/oracle-netsuite.md)를 참조하십시오. |
+| [!DNL PathFactory] 소스의 일반 가용성 | 이제 [!DNL PathFactory] 소스를 일반적으로 사용할 수 있습니다. 통합 분석 및 활성화를 위해 [!DNL PathFactory] 계정을 Experience Platform에 연결하여 방문자, 세션 및 페이지 조회수 데이터를 수집할 수 있습니다. 자세한 내용은 [[!DNL PathFactory] 개요](../../sources/connectors/marketing-automation/pathfactory.md)를 참조하십시오. |
+| [!DNL Stripe] 소스의 일반 가용성 | 이제 [!DNL Stripe] 소스를 일반적으로 사용할 수 있습니다. [!DNL Stripe] 계정을 Experience Platform에 연결하여 결제 및 트랜잭션 데이터를 수집하고 통합 분석 및 활성화를 수행할 수 있습니다. 자세한 내용은 [[!DNL Stripe] 개요](../../sources/connectors/payments/stripe.md)를 참조하십시오. |
 | [!DNL Azure Blob Storage]에 대해 향상된 인증 | 이제 서비스 주체 기반 인증을 사용하여 [!DNL Azure Blob Storage] 소스를 Experience Platform에 연결할 수 있습니다. 서비스 주체 기반 인증을 사용하면 보안을 강화하고 자격 증명 순환을 쉽게 하며 계정에 대한 액세스 제어를 보다 세부적으로 제어할 수 있습니다. 자세한 내용은 [[!DNL Azure Blob Storage] 개요](../../sources/connectors/cloud-storage/blob.md)를 참조하십시오. |
 
 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하십시오.
