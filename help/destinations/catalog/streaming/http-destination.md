@@ -4,9 +4,9 @@ title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 서드파티 HTTP 끝점으로 전송하여 자체 분석을 실행하거나 Experience Platform에서 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: b757f61a46930f08fe05be4c0f701113597567a4
+source-git-commit: 6d8386b4d9ed64128c8d9a9537610f0fd07d74cd
 workflow-type: tm+mt
-source-wordcount: '2746'
+source-wordcount: '2852'
 ht-degree: 7%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 HTTP API 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 [!DNL Adobe Experience Platform] 스트리밍 대상입니다.
 
@@ -205,7 +205,7 @@ HTTP 끝점에 연결할 **[!UICONTROL OAuth 2 클라이언트 자격 증명]** 
 * **[!UICONTROL 헤더]**: 대상 호출에 포함할 사용자 지정 헤더를 다음 형식으로 입력하십시오. `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL HTTP 끝점]**: 프로필 데이터를 보낼 HTTP 끝점의 URL.
 * **[!UICONTROL 쿼리 매개 변수]**: HTTP 끝점 URL에 쿼리 매개 변수를 추가할 수 있습니다(선택 사항). 사용하는 쿼리 매개변수 형식(예: `parameter1=value&parameter2=value`)을 지정합니다.
-* **[!UICONTROL 세그먼트 이름 포함]**: 내보내는 대상의 이름을 데이터 내보내기에 포함하려면 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 아래의 [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
+* **[!UICONTROL 세그먼트 이름 포함]**: 내보내는 대상의 이름을 데이터 내보내기에 포함하려면 전환합니다. **참고**: 세그먼트 이름은 대상에 매핑된 세그먼트의 경우에만 포함됩니다. 내보내기에 나타나는 매핑되지 않은 세그먼트에는 `name` 필드가 포함되지 않습니다. 이 옵션을 선택한 데이터 내보내기의 예는 아래의 [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
 * **[!UICONTROL 세그먼트 타임스탬프 포함]**: 대상을 만들고 업데이트할 때 데이터 내보내기에 UNIX 타임스탬프와 활성화를 위해 대상을 대상에 매핑할 때 UNIX 타임스탬프를 포함하도록 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 아래의 [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
 
 ### 경고 활성화 {#enable-alerts}
@@ -245,7 +245,7 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 | 대상 내보내기를 결정하는 사항 | 대상 내보내기에 포함된 사항 |
 |---------|----------|
-| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기에 대한 큐 역할을 합니다. 즉, 프로필의 `segmentMembership` 상태가 `realized` 또는 `exiting`(으)로 변경되거나 매핑된 특성이 업데이트되면 대상 내보내기가 시작됩니다.</li><li>ID는 현재 HTTP API 대상에 매핑될 수 없으므로 주어진 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>`segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 세그먼트가 포함되어 있습니다. 이 경우 자격 또는 세그먼트 종료 이벤트 후 프로필의 상태가 변경되었습니다. 활성화 데이터 흐름에서 매핑된 세그먼트와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 프로필이 자격을 갖춘 매핑되지 않은 다른 세그먼트는 대상 내보내기의 일부가 될 수 있습니다. </li><li>`identityMap` 개체의 모든 ID도 포함됩니다. 현재 Experience Platform에서는 HTTP API 대상에서 ID 매핑을 지원하지 않습니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
+| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기에 대한 큐 역할을 합니다. 즉, 프로필의 `segmentMembership` 상태가 `realized` 또는 `exiting`(으)로 변경되거나 매핑된 특성이 업데이트되면 대상 내보내기가 시작됩니다.</li><li>ID는 현재 HTTP API 대상에 매핑될 수 없으므로 주어진 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>`segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 세그먼트가 포함되어 있습니다. 이 경우 자격 또는 세그먼트 종료 이벤트 후 프로필의 상태가 변경되었습니다. 활성화 데이터 흐름에서 매핑된 세그먼트와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 프로필이 자격을 갖춘 매핑되지 않은 다른 세그먼트는 대상 내보내기의 일부가 될 수 있습니다. <br> **중요**: **[!UICONTROL 세그먼트 이름 포함]** 옵션을 사용하면 대상에 매핑된 세그먼트에 대해서만 세그먼트 이름이 포함됩니다. 옵션이 활성화된 경우에도 내보내기에 나타나는 매핑되지 않은 세그먼트에는 `name` 필드가 포함되지 않습니다. </li><li>`identityMap` 개체의 모든 ID도 포함됩니다. 현재 Experience Platform에서는 HTTP API 대상에서 ID 매핑을 지원하지 않습니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -333,10 +333,16 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
             "mappingCreatedAt": 1649856570000,
             "mappingUpdatedAt": 1649856570000,
             "name": "First name equals John"
+          },
+          "354e086f-2e11-49a2-9e39-e5d9a76be683": {
+            "lastQualificationTime": "2020-04-15T02:41:50+0000",
+            "status": "realized"
           }
         }
       }
 ```
+
+**참고**: 이 예제에서 첫 번째 세그먼트(`5b998cb9-9488-4ec3-8d95-fa8338ced490`)는 대상에 매핑되고 `name` 필드를 포함합니다. `354e086f-2e11-49a2-9e39-e5d9a76be683`세그먼트 이름 포함`name` 옵션이 활성화되어 있어도 두 번째 세그먼트(**[!UICONTROL )가 대상에 매핑되지 않고]** 필드를 포함하지 않습니다.
 
 +++
 
