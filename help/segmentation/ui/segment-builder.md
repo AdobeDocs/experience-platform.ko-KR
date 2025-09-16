@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 2c62ab01fe94e71095df33e24615fa7e596e84d3
 workflow-type: tm+mt
 source-wordcount: '5248'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -130,7 +130,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="외부 대상자"
->abstract="대상자 탭을 통해 가져온 대상자는 이제 대상자 포털을 통해 자동으로 표시됩니다. 여기에는 Audience Manager, Customer Journey Analytics, 세그먼트 일치 및 기타 사용자 지정 통합에서 수집된 대상자가 포함됩니다.<br/><br/>2025년 9월 말까지 대상은 통합 검색을 통해서만 검색되며 이전 워크플로는 더 이상 지원되지 않습니다. 세그먼트 일치는 서비스를 전환하는 동안 지정된 소수의 고객에게만 제공됩니다. 서비스가 완전히 중단되기 전에 요청 시 새 세그먼트 일치 고객에 대한 액세스를 계속 활성화할 수 있습니다.<br/><br/>지속적인 데이터 공동 작업 사용 사례를 보려면 Adobe에서 장기 지원 솔루션인 Collaboration으로 이동하는 것이 좋습니다."
+>abstract="대상자 탭을 통해 가져온 대상자는 이제 대상자 포털을 통해 자동으로 표시됩니다. 여기에는 Audience Manager, Customer Journey Analytics, Segment Match 및 기타 사용자 정의 통합에서 수집된 대상자가 포함됩니다.<br/><br/>2025년 9월 말까지 대상자는 통합 검색을 통해서만 검색되며 이전 워크플로는 더 이상 지원되지 않습니다. 서비스를 전환하는 동안 세그먼트 일치는 소수의 지정된 고객만 계속 사용할 수 있습니다. 서비스가 완전히 중단되기 전에는 요청 시 신규 세그먼트 일치 고객에 대한 액세스가 계속 활성화될 수 있습니다.<br/><br/>지속적인 데이터 협업 사용 사례의 경우, Adobe는 장기 지원 솔루션인 Collaboration으로 전환할 것을 권장합니다."
 >additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/segmentation/ui/audience-portal#list" text="대상자 포털"
 
 >[!NOTE]
@@ -330,7 +330,7 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 >[!NOTE]
 >
 >&quot;After&quot; 시간 제한을 사용할 때 후자의 이벤트는 시간 제한 내에 나열된 시간보다 많이 발생할 수 있습니다. >
->&#x200B;>예를 들어, 페이지 보기 이벤트와 체크아웃 이벤트가 있고, 이 두 이벤트 사이에 &quot;1시간 후&quot; 시간 제한을 두는 경우, 페이지 보기 이벤트 2시간 후에 체크아웃 이벤트가 있는 세그먼트 정의가 유효합니다.
+>>예를 들어, 페이지 보기 이벤트와 체크아웃 이벤트가 있고, 이 두 이벤트 사이에 &quot;1시간 후&quot; 시간 제한을 두는 경우, 페이지 보기 이벤트 2시간 후에 체크아웃 이벤트가 있는 세그먼트 정의가 유효합니다.
 >
 >추가로, 이 두 시간 제약들은 서로 협력하여 사용될 수 있다.
 >
@@ -386,7 +386,7 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="예상치 새로 고침"
 >abstract="세그먼트 대상의 예상치를 새로 고쳐 제안된 세그먼트 대상에 적합한 프로필 개수를 미리 볼 수 있습니다. 당일 샘플 데이터의 샘플 크기를 사용하여 대상자 예상치를 생성합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=ko#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
