@@ -1,13 +1,11 @@
 ---
 title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
-hide: true
-hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: bcf3045fbbf4f9673e954a5ebf95d1225d4cdcd7
+source-git-commit: 491e0881167e3fb383a5a611924bd0d1df07b441
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 35%
+source-wordcount: '1271'
+ht-degree: 43%
 
 ---
 
@@ -27,15 +25,32 @@ ht-degree: 35%
 >- [페더레이션된 대상자 컴포지션](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/latest)
 
-**릴리스 날짜: 2025년 8월**
+**릴리스 날짜: 2025년 9월**
 
 Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 
+- [AI 어시스턴트](#ai-assistant)
 - [경고](#alerts)
 - [대상](#destinations)
 - [경험 데이터 모델 (XDM)](#xdm)
+- [쿼리 서비스](#query-service)
+- [실시간 고객 프로필](#profile)
 - [Segmentation Service](#segmentation-service)
 - [소스](#sources)
+
+## AI 어시스턴트 {#ai-assistant}
+
+Adobe Experience Platform AI Assistant는 Adobe Experience Cloud 애플리케이션 전반에서 워크플로를 가속화하고 최적화하는 데 사용할 수 있는 대화형 경험입니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator은 Experience Cloud 애플리케이션을 위한 인텔리전트 어시스턴트입니다. 질문을 하거나 도움을 요청하면 Agent Orchestrator이 전문 에이전트에게 자동으로 연락하여 올바른 답변을 제공합니다. Agent Orchestrator은 대화 기록을 기억하여, 맥락을 반복하지 않고 자연스럽게 이전 질문을 기반으로 할 수 있으며, 여러 에이전트의 통찰력을 결합하여 명확하고 통합된 응답을 제공합니다. AI Assistant 대화 인터페이스를 통해 Agent Orchestrator 기능을 사용할 수 있습니다. |
+| Audience Agent | Audience Agent을 사용하면 중요한 대상 크기 변경 감지, 중복 대상 감지, 대상 인벤토리 탐색 및 대상 크기 검색을 포함하여 대상에 대한 인사이트를 볼 수 있습니다. |
+| 필드 검색 에이전트 | Field Discovery Agent 는 사용자가 스키마 및 데이터 세트 내의 데이터 필드를 자동으로 검색하고 이해할 수 있도록 지원합니다. 이 지능형 에이전트는 데이터 구조를 분석하고 최적화를 위한 필드 사용, 관계 및 권장 사항에 대한 통찰력을 제공합니다. |
+
+자세한 내용은 [AI 어시스턴트 개요](../ai-assistant/home.md)를 참조하십시오.
 
 ## 경고 {#alerts}
 
@@ -44,55 +59,57 @@ Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이
 **새로운 기능**
 
 | 기능 | 설명 |
-| ------- | ----------- |
-| 스트리밍 처리량 용량 경고 | 세 가지 새로운 경고를 통해 사용자는 경고를 구독하고 구성하여 스트리밍 처리량 용량의 성능을 사전 예방적으로 관리 및 모니터링할 수 있습니다. 새로운 경고에는 스트리밍 처리량이 80%, 90%에 도달하거나 용량 제한을 초과하는 경우가 포함됩니다. 자세한 내용은 [용량 경고 규칙](../observability/alerts/rules.md#capacity) 안내서를 참조하십시오. |
+| --- | --- |
+| 프로필 수집 경고 스트리밍 | 이제 데이터 흐름 수준에서 스트리밍 수집을 위한 두 개의 새 경고를 구독할 수 있습니다. <ul><li>스트리밍 수집 실패율 초과</li><li>스트리밍 수집 건너뛰기 비율 초과</li></ul> 플랫폼 내 또는 이메일 경고는 기본 임계값 또는 사용자가 정의한 사용자 지정 임계값에 대한 임계값이 초과되면 알려줍니다. 자세한 내용은 [프로필 경고](../observability/alerts/rules.md#profile) 안내서를 참조하십시오. |
+
+{style="table-layout:auto"}
 
 경고에 대한 자세한 내용은 [[!DNL Observability Insights] 개요](../observability/home.md)를 참조하십시오.
 
 ## 대상 {#destinations}
 
-[!DNL Destinations]은(는) Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 대상 플랫폼과의 사전 빌드된 통합을 통해 Experience Platform의 데이터를 원활하게 활성화할 수 있습니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
->[!IMPORTANT]
->
->**데이터 집합 내보내기 일정 확장**
->
->조직에 2024년 11월 이전에 만들어진 데이터 세트 내보내기 데이터 흐름이 있는 경우 이러한 데이터 흐름은 **2025년 9월 1일**&#x200B;에 작동을 중지합니다. 2025년 9월 1일 이후에도 데이터 흐름을 계속 내보내려면 [이 안내서](../destinations/ui/dataset-expiration-update.md)의 단계를 따라 데이터 세트를 내보내는 각 대상에 대한 일정을 확장해야 합니다.
-
-**새로운 대상**
+**새 대상 또는 업데이트된 대상**
 
 | 대상 | 설명 |
 | --- | --- |
-| [!DNL Acxiom Real ID Audience] 대상 | [!DNL Acxiom Real ID Audience Connection] 대상을 사용하여 [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/) 기술로 대상을 향상하고 [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등과 같은 여러 플랫폼으로 대상을 활성화하십시오. |
-
-**업데이트된 대상**
-
-| 대상 | 설명 |
-| --- | --- |
-| [!DNL LinkedIn] 및 [!DNL Pinterest] 대상에 대한 인증 만료 세부 정보 | 이제 계정 만료 정보가 Experience Platform 인터페이스에 바로 표시되므로 [!DNL LinkedIn] 및 [!DNL Pinterest] 인증이 만료되고 갱신되어 데이터 흐름이 중단되기 전에 이를 확인할 수 있습니다. |
-| [!DNL Data Landing Zone] 대상에 대한 암호화 지원 | 암호화를 사용하여 내보낸 데이터를 보호합니다. 이제 RSA 형식의 공개 키를 연결하여 내보낸 파일을 암호화할 수 있으므로 다른 클라우드 스토리지 대상이 중요한 정보를 제공하는 것과 동일한 수준의 보안을 제공합니다. |
-| [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) 내부 업그레이드 | 2025년 8월 11일 화요일부터 대상 카탈로그에 두 개의 **[!DNL Microsoft Bing]** 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!DNL Microsoft Bing]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) Microsoft Bing]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL Microsoft Bing]**&#x200B;인 새 카드를 사용할 수 있습니다. 새 활성화 데이터 흐름에 대해 카탈로그의 새 **[!UICONTROL Microsoft Bing]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않는) Microsoft Bing]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다. <br><br> [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 생성하는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]를 다음 값으로 업데이트해야 합니다.<ul><li>흐름 사양 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>연결 사양 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 이 업그레이드 후에는 **데이터 흐름에서**&#x200B;활성화된 프로필 수[!DNL Microsoft Bing]이(가) 감소할 수 있습니다. 이 삭제는 이 대상 플랫폼에 대한 모든 활성화에 대한 **ECID 매핑 요구 사항**&#x200B;의 도입으로 인해 발생합니다. |
-| 대상 카드 통합 [!DNL Marketo]개 | 통합 대상 카드를 사용하여 [!DNL Marketo] 대상 설정을 단순화합니다. [!DNL Marketo]개의 V2 및 V3 카드를 하나의 간소화된 옵션으로 통합했기 때문에 올바른 대상을 쉽게 선택하고 빠르게 시작할 수 있습니다. |
+| [!BADGE Beta]{type=Informative} [!DNL Snowflake Batch] 커넥터 | 이제 새로운 [!DNL Snowflake Batch] 커넥터를 사용할 수 있으며, 특정 사용 사례에 대해 스트리밍 커넥터에 대한 대안을 제공합니다. |
+| [!DNL Adform] 대상 | [!DNL Adform]은(는) 프로그래밍 방식 미디어 구매 및 판매 솔루션을 제공하는 최고의 공급업체입니다. Adform을 Adobe Experience Platform에 연결하면 ECID(Experience Cloud ID)를 기반으로 하는 Adform을 통해 자사 대상을 활성화할 수 있습니다. |
+| [!DNL Data Landing Zone] 암호화 지원 | 이제 RSA 형식의 공개 키를 연결하여 내보낸 파일을 암호화할 수 있으므로 다른 클라우드 스토리지 대상이 중요한 정보를 제공하는 것과 동일한 수준의 보안을 제공합니다. |
+| [!DNL Pinterest] 대상에 대한 인증 만료 세부 정보 | [!DNL Pinterest] 대상에 대한 인증 만료 정보가 이제 Experience Platform 인터페이스에 직접 표시되므로 데이터 흐름이 중단되기 전에 인증이 만료되고 갱신되는 시점을 확인할 수 있습니다. **[[!UICONTROL 계정]](../destinations/ui/destinations-workspace.md#accounts)** 또는 **[[!UICONTROL 찾아보기]](../destinations/ui/destinations-workspace.md#browse)** 탭의 **[!UICONTROL 계정 만료 일자]** 열에서 토큰 만료 일자를 모니터링할 수 있습니다. |
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 대상에 대한 검색, 필터링 및 태그 지정 기능 향상 | 찾아보기 및 계정 탭에서 향상된 검색, 필터링 및 태그 지정 기능을 통해 대상 관리 워크플로를 개선합니다. 이제 이름별로 특정 데이터 흐름 및 계정을 검색하고, 대상 플랫폼, 상태 및 날짜를 포함한 다양한 기준으로 필터링하고, 사용자 지정 태그를 만들어 대상을 구성할 수 있습니다. 마지막 데이터 흐름 실행 시간과 같은 주요 필드에도 열 정렬을 사용할 수 있으므로 대상 연결을 보다 쉽게 식별하고 관리할 수 있습니다. |
+| Experience Platform UI의 향상된 대상 관리 기능 | [[!UICONTROL 찾아보기]](../destinations/ui/destinations-workspace.md#browse) 및 [[!UICONTROL 계정]](../destinations/ui/destinations-workspace.md#accounts) 탭에서 새로운 정렬 기능을 사용하여 대상 관리 워크플로를 개선합니다. 이제 계정 인증이 곧 만료될 때 시각적 표시기도 볼 수 있습니다. |
 
 자세한 내용은 [대상 개요](../destinations/home.md)를 참조하십시오.
 
 ## 경험 데이터 모델 (XDM) {#xdm}
 
-XDM은 Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
+XDM은 Experience Platform에 가져온 데이터에 대한 공통 구조와 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 모델 기반 스키마 | 모델 기반 스키마를 사용하여 데이터 모델링을 단순화합니다. 이제 포괄적인 사용 방법 예제와 지침을 통해 스키마를 보다 쉽게 만들 수 있습니다. 이 기능은 현재 Campaign Orchestration 라이선스 소유자가 사용할 수 있으며 GA 시점에 데이터 Distiller 고객으로 확장되어 데이터 모델링에 더 쉽게 액세스하고 효율적으로 작업할 수 있습니다. |
+| 모델 기반 스키마 | 모델 기반 스키마를 사용하여 데이터 모델링을 간소화하십시오. 이제 포괄적인 방법 예제와 지침을 통해 스키마를 더 쉽게 만들 수 있습니다. 이 기능은 현재 Campaign Orchestration 라이선스 소유자가 사용할 수 있으며 GA 시점에 데이터 Distiller 고객으로 확장되어 데이터 모델링에 더 쉽게 액세스하고 효율적으로 작업할 수 있습니다. 이 기능에는 시계열 데이터 및 변경 데이터 캡처 기능에 대한 지원이 포함됩니다. |
 
 자세한 내용은 [XDM 개요](../xdm/home.md)를 참조하십시오.
+
+## 실시간 고객 프로필 {#profile}
+
+Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드와 상호 작용하는지에 관계없이 고객을 위한 조직화되고 일관되며 관련성 높은 경험을 제공할 수 있습니다. 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 여러 채널의 데이터를 결합하여 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. 프로필을 사용하면 모든 고객의 상호 작용에 대해 실행 가능한 타임스탬프가 지정된 계정을 제공하는 통합 보기로 고객 데이터를 통합할 수 있습니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 프로필 뷰어 개선 사항 | 2025년 9월 릴리스에는 프로필 뷰어에 대한 다음과 같은 개선 사항이 포함됩니다. <ul><li>**보기 결합**: 특성, 이벤트 및 인사이트가 단일 보기로 결합되었습니다.</li><li>**AI 생성 인사이트**: 이제 프로필 세부 정보 페이지에 AI 생성 인사이트가 표시되어 프로필에서 생성된 세부 정보를 알 수 있습니다. 이러한 통찰력에는 성향 점수 및 트렌드 분석과 같은 정보가 포함될 수 있습니다.</li><li>**스타일 업데이트**: 프로필 세부 정보 페이지가 시각적으로 새로 고쳐졌습니다.</li><li>**찾아보기**: 이제 검색 및 사용자 지정이 포함된 대화형 카드 기반 캐러셀을 통해 프로필을 탐색할 수 있습니다.</li></ul> |
+
+자세한 내용은 [실시간 고객 프로필 개요](../profile/home.md)를 참조하세요.
 
 ## Segmentation Service {#segmentation-service}
 
@@ -102,7 +119,13 @@ XDM은 Experience Platform으로 가져온 데이터에 대한 일반적인 구�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 대상자 예상 | 이제 대상자 예상 값이 세그먼트 빌더 내에서 자동으로 생성됩니다. 이 값은 대상자를 수정할 때마다 업데이트되며 항상 최신 대상자 규칙을 반영합니다. |
+| 경험 이벤트 사용 중단이 있는 계정 대상자 | B2B 아키텍처 업그레이드 이후 경험 이벤트가 있는 계정 대상은 더 이상 지원되지 않습니다. 대신, 새로운 세그먼트 세그먼트 접근 방식을 사용하십시오. 경험 이벤트로 사람 대상을 만든 다음, 계정 대상을 만들 때 해당 사람 대상을 참조하십시오. 이렇게 하면 B2B 대상 만들기에 대한 보다 유연하고 유지 관리할 수 있는 접근 방식이 제공됩니다. |
+
+**중요 업데이트**
+
+| 업데이트 | 설명 |
+| ------- | ----------- |
+| 대상자 예상 자동 새로 고침 되돌리기 | 대상자 추정에 대한 자동 새로 고침 개선 사항이 되돌려졌습니다. 대상자 예상은 세그먼트 빌더 내에서 계속 생성되지만 자동 새로 고침 기능은 제거되었습니다. |
 
 자세한 내용은 [[!DNL Segmentation Service] 개요](../segmentation/home.md)를 참조하십시오.
 
@@ -114,37 +137,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| UI에서 [!BADGE Beta]{type=Informative} Azure 개인 링크 지원 | 개인 네트워크 연결을 통해 데이터를 안전하게 보호합니다. 이제 개인 끝점을 만들고 공용 인터넷을 우회하는 데이터 흐름을 설정하여 중요한 데이터에 대한 보안 및 네트워크 격리를 강화할 수 있습니다. |
-| [!DNL Marketo] 소스 설명서 업데이트 | Experience Platform에 들어갈 때 [!DNL Marketo] 데이터가 변환되는 방식을 완벽하게 파악할 수 있습니다. 이제 모든 필드 매핑에 데이터 변환에 대한 자세한 설명이 포함되어 있으므로 `PersonID`이(가) `leadID`이(가) 되고 `eventType`이(가) `activityType`이(가) 되는 방식을 정확하게 이해할 수 있습니다. |
-| [!DNL Azure Blob Storage]에 대한 서비스 사용자 인증 지원 | 이제 서비스 사용자 인증을 사용하여 [!DNL Azure Blob Storage] 계정을 Experience Platform에 연결할 수 있습니다. |
+| 일반 가용성의 새로운 소스 | 이제 다음 소스가 GA에 포함되었습니다. 여러 소스 커넥터가 Beta에서 GA로 업데이트되었습니다. <ul><li>[Acxiom 데이터 수집](../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acxiom 잠재 고객 데이터 수집](../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. 이러한 소스는 이제 완전히 지원되며 프로덕션 용도로 사용할 수 있습니다. |
+| [!DNL Snowflake] 키 쌍 인증 지원 | 키 쌍 인증을 지원하여 Snowflake 연결에 대한 보안을 개선했습니다. 기본 인증(사용자 이름/암호)은 2025년 11월까지 더 이상 사용되지 않으므로, 고객은 개선된 보안을 위해 키 쌍 인증으로 마이그레이션하는 것이 좋습니다. |
 
 자세한 내용은 [소스 개요](../sources/home.md)를 참조하십시오.
-
-<!--
-
-## Query Service {#query-service}
-
-Adobe Experience Platform Query Service provides a robust SQL interface for data analysis and exploration across the platform.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Data Distiller Session Management | Take control of your data analysis sessions with enhanced session management. You can now monitor and manage your sessions more effectively across development and production environments, giving you better visibility into your query performance and resource usage. |
-
-For more information, read the [Query Service overview](../query-service/home.md).
-
-## B2B CDP {#b2b-cdp}
-
-Real-Time CDP B2B Edition provides comprehensive B2B customer data management capabilities, enabling organizations to build unified customer profiles, create sophisticated B2B audiences, and activate data across various marketing channels.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Lookup Support for B2B Classes Only | Streamline your B2B data access with focused lookup support. You can now look up Person (Profile), Experience Events, Account, and Opportunity entities directly through the Entities API. This simplified approach helps you access the most important B2B data more efficiently while reducing complexity. |
-| B2B Namespace and Schema Updates | Experience a cleaner, more streamlined B2B data model. We've simplified the B2B namespace and schema structure by removing complex relationship mappings and non-primary identity support for certain B2B classes. This makes your B2B data easier to work with and understand. |
-
-For more information, read the [Real-Time CDP B2B Edition overview](../rtcdp/b2b-overview.md).
-
--->
