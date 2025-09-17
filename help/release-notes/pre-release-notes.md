@@ -2,10 +2,10 @@
 title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 491e0881167e3fb383a5a611924bd0d1df07b441
+source-git-commit: c592d007932835f5263d7f78b2e8155790313840
 workflow-type: tm+mt
-source-wordcount: '1271'
-ht-degree: 43%
+source-wordcount: '1217'
+ht-degree: 45%
 
 ---
 
@@ -46,9 +46,8 @@ Adobe Experience Platform AI Assistant는 Adobe Experience Cloud 애플리케이
 
 | 기능 | 설명 |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator은 Experience Cloud 애플리케이션을 위한 인텔리전트 어시스턴트입니다. 질문을 하거나 도움을 요청하면 Agent Orchestrator이 전문 에이전트에게 자동으로 연락하여 올바른 답변을 제공합니다. Agent Orchestrator은 대화 기록을 기억하여, 맥락을 반복하지 않고 자연스럽게 이전 질문을 기반으로 할 수 있으며, 여러 에이전트의 통찰력을 결합하여 명확하고 통합된 응답을 제공합니다. AI Assistant 대화 인터페이스를 통해 Agent Orchestrator 기능을 사용할 수 있습니다. |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator은 AI Assistant를 구동하는 지능형 계층입니다. 질문을 하거나 도움을 요청하면 Agent Orchestrator이 전문 에이전트에게 자동으로 연락하여 올바른 답변을 제공합니다. Agent Orchestrator은 대화 기록을 기억하여, 맥락을 반복하지 않고 자연스럽게 이전 질문을 기반으로 할 수 있으며, 여러 에이전트의 통찰력을 결합하여 명확하고 통합된 응답을 제공합니다. |
 | Audience Agent | Audience Agent을 사용하면 중요한 대상 크기 변경 감지, 중복 대상 감지, 대상 인벤토리 탐색 및 대상 크기 검색을 포함하여 대상에 대한 인사이트를 볼 수 있습니다. |
-| 필드 검색 에이전트 | Field Discovery Agent 는 사용자가 스키마 및 데이터 세트 내의 데이터 필드를 자동으로 검색하고 이해할 수 있도록 지원합니다. 이 지능형 에이전트는 데이터 구조를 분석하고 최적화를 위한 필드 사용, 관계 및 권장 사항에 대한 통찰력을 제공합니다. |
 
 자세한 내용은 [AI 어시스턴트 개요](../ai-assistant/home.md)를 참조하십시오.
 
