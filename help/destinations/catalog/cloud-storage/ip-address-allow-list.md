@@ -3,9 +3,9 @@ title: 파일 기반 클라우드 스토리지 대상에 대한 IP 주소 허용
 type: Documentation
 description: 이 페이지에서는 Experience Platform에서 클라우드 스토리지 대상으로 데이터를 안전하게 내보내기 위해 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
+source-git-commit: 4ae7ff58d02b46f1b213bd382d3e98b3f63819e8
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '305'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->이 페이지에 문서화된 IP 범위는 파일 기반 클라우드 저장소 대상 [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] 및 [!UICONTROL 데이터 랜딩 영역]에 대해 *지원되지 않음*&#x200B;입니다.
+>이 페이지에 설명된 IP 범위는 파일 기반 클라우드 스토리지 대상 *Azure Blob*, [!UICONTROL Azure Data Lake Storage Gen2], [!UICONTROL 데이터 랜딩 영역] 및 Microsoft Azure에서 호스팅되는 SFTP 서버에 대해 [!UICONTROL 지원되지 않음]입니다.
 
 ## 개요 {#overview}
 
