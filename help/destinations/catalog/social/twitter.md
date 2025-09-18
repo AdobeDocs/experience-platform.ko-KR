@@ -2,24 +2,16 @@
 title: Twitter 사용자 지정 대상 연결
 description: Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience Platform 내에 구축된 대상을 활성화하여 관련 리마케팅 캠페인을 만듭니다
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 5b529a1af62c2745c3226029de1a1ff508bddfc7
+source-git-commit: ee7e85afd48f7b1c40f0152ad76c8c718b8f1432
 workflow-type: tm+mt
-source-wordcount: '971'
-ht-degree: 7%
+source-wordcount: '855'
+ht-degree: 5%
 
 ---
 
 # [!DNL Twitter Custom Audiences] 연결
 
 ## 개요 {#overview}
-
->[!IMPORTANT]
->
->* 2025년 9월 9일 수요일부터 대상 카탈로그에 두 개의 **[!DNL Twitter Custom Audiences]** 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!DNL Twitter Custom Audiences]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) Twitter 사용자 지정 대상]**(으)로 변경되었으며 **[!UICONTROL Twitter 사용자 지정 대상]**(이)라는 이름의 새 카드를 사용할 수 있습니다.
->* 새 활성화 데이터 흐름을 위해 카탈로그에서 새 **[!UICONTROL Twitter 사용자 지정 대상]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않는) Twitter 사용자 지정 대상]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다.
->* [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다.
->   * 흐름 사양 ID: `903da9e4-7cf5-442a-9498-a237e4f064f9`
->   * 연결 사양 ID: `9eb18875-a095-4b89-854e-39b9e29ccd41`
 
 Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience Platform 내에 구축된 대상을 활성화하여 관련 리마케팅 캠페인을 만듭니다.
 
@@ -32,7 +24,7 @@ Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Twitter Custom Audiences]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko#getting-started)에 대해 자세히 알아보세요.
+[!DNL Twitter Custom Audiences]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)에 대해 자세히 알아보세요.
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
@@ -82,7 +74,7 @@ Twitter에서 기존 팔로워와 고객을 타겟팅하고 Twitter에서 [!DNL 
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 [!DNL Twitter Custom Audiences] 대상을 찾은 다음 **[!UICONTROL 설정]**&#x200B;을 선택합니다.
-2. **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다.
+2. **[!UICONTROL 대상에 연결]**을 선택합니다.
    ![LinkedIn 인증](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
 3. Twitter 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 

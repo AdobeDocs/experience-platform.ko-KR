@@ -3,25 +3,16 @@ keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin;
 title: Linkedin 일치하는 대상 연결
 description: 해시된 이메일을 기반으로 대상자 타겟팅, 개인화 및 억제에 대한 LinkedIn 캠페인에 대한 프로필을 활성화합니다.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 13b95db846d70c36233cf8ded491d19e1c93e4c0
+source-git-commit: 653f43ac6afb25445fe8ef3c2832be8f1c4723fe
 workflow-type: tm+mt
-source-wordcount: '1329'
-ht-degree: 7%
+source-wordcount: '1234'
+ht-degree: 5%
 
 ---
 
 # [!DNL LinkedIn Matched Audiences] 연결
 
 ## 개요 {#overview}
-
->[!IMPORTANT]
->
->* 2025년 9월 9일 수요일부터 대상 카탈로그에 두 개의 **[!DNL LinkedIn Matched Audiences]** 카드가 나란히 표시됩니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!DNL LinkedIn Matched Audiences]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) LinkedIn Matched Audiences]**(으)로 변경되었으며 **[!UICONTROL LinkedIn Matched Audiences]**(이)라는 이름의 새 카드를 사용할 수 있습니다.
->* 새 활성화 데이터 흐름에 대해 카탈로그에서 새 **[!UICONTROL LinkedIn 일치 대상]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않는) LinkedIn Matched Audiences]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다.
->* 새 **[!UICONTROL LinkedIn 일치하는 대상]** 연결은 더 이상 [!DNL IDFA] ID를 지원하지 않습니다.
->* [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다.
->   * 흐름 사양 ID: `963604d1-811d-4ce4-ac66-1fc78bde7c42`
->   * 연결 사양 ID: `393a7ce1-e527-4fdb-8d99-0b11dc910279`
 
 해시된 이메일과 모바일 ID를 기반으로 대상자 타겟팅, 개인화 및 제외를 위해 [!DNL LinkedIn] 캠페인에 대한 프로필을 활성화합니다.
 
@@ -36,6 +27,11 @@ Adobe Experience Platform UI의 ![LinkedIn 대상](../../assets/catalog/social/l
 ## 지원되는 ID {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/identity-service/features/namespaces.md)에 대해 자세히 알아보세요.
+
+>[!IMPORTANT]
+>
+>2025년 9월부터 [!DNL LinkedIn Matched Audiences] 대상은 더 이상 [!DNL IDFA]&#x200B;(광고주용 식별자) ID를 지원하지 않습니다.  이 변경은 LinkedIn의 요구 사항에 기인하며, Experience Platform 대상 서비스 업그레이드와는 관련이 없습니다.
+
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
@@ -96,7 +92,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 >[!NOTE]
 >
 >해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Experience Platform]에 의해 자동으로 해시됩니다.
->&#x200B;> 속성 소스 데이터는 자동으로 해시되지 않습니다.
+>> 속성 소스 데이터는 자동으로 해시되지 않습니다.
 > 
 > [ID 매핑](../../ui/activate-segment-streaming-destinations.md#mapping) 단계 동안 소스 필드에 해시되지 않은 특성이 포함되어 있으면 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다.
 > 
@@ -114,7 +110,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 아래 비디오에서는 [!DNL LinkedIn Matched Audiences] 대상을 구성하고 대상을 활성화하는 단계도 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -123,7 +119,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 [!DNL LinkedIn Matched Audiences] 대상을 찾은 다음 **[!UICONTROL 설정]**&#x200B;을 선택합니다.
-2. **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다.
+2. **[!UICONTROL 대상에 연결]**을 선택합니다.
    ![LinkedIn 인증](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. LinkedIn 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 
@@ -136,9 +132,9 @@ LinkedIn 토큰은 60일마다 만료됩니다. **[[!UICONTROL 계정]](../../ui
 1. **[!UICONTROL 대상]** > **[!UICONTROL 계정]**(으)로 이동
 2. (선택 사항) 페이지에서 사용할 수 있는 필터를 사용하여 LinkedIn 계정만 표시합니다.
    ![LinkedIn 계정만 표시하도록 필터링](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
-3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**&#x200B;을 선택합니다.
+3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**을 선택합니다.
    ![세부 정보 편집 컨트롤 선택](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
-4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**&#x200B;을 선택하고 LinkedIn 자격 증명으로 다시 인증합니다.
+4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**을 선택하고 LinkedIn 자격 증명으로 다시 인증합니다.
    ![다시 연결 OAuth 옵션이 있는 모달 창](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
