@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;csv 매핑;csv 파일 매핑;xdm
 title: 데이터 준비 UI 안내서
 description: Experience Platform UI에서 데이터 준비 기능을 사용하여 CSV 파일을 XDM 스키마에 매핑하는 방법을 알아봅니다.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c9638cdca887f439c57f1dc01f93d63016869b29
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1505'
 ht-degree: 0%
 
 ---
@@ -151,6 +151,10 @@ Adobe Experience Platform 사용자 인터페이스에서 [데이터 준비](../
 >[!ENDTABS]
 
 이제 매핑이 완료되면 **[!UICONTROL 완료]**&#x200B;를 선택하고 다음 단계로 진행하여 데이터 흐름을 완료할 수 있습니다.
+
+>[!TIP]
+>
+>매핑 생성이 끝나면 데이터 수집을 시작하기 전에 최대 10분 정도 기다립니다. 이 대기 기간을 사용하면 새 매핑을 완전히 저장하고 시스템에서 사용할 수 있습니다.
 
 ![전체 매핑 집합이 있는 매핑 인터페이스입니다.](../images/ui/mapping/completed_mappings.png)
 
