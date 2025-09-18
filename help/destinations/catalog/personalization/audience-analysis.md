@@ -3,16 +3,18 @@ title: 대상 분석 대상
 description: 고객이 Customer Journey Analytics에서 사용할 수 있는 대상을 봅니다.
 badgeLimitedAvailability: label="제한된 가용성" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+hide: true
+hidefromtoc: true
+source-git-commit: 4bd94c292a13a80405a3d726295ebd6eaf86aaaa
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '799'
 ht-degree: 3%
 
 ---
 
 # 대상 분석 대상
 
-[!UICONTROL 대상 분석] 대상을 사용하면 Adobe Experience Platform 대상 데이터를 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko)에 보강할 수 있습니다. 보강된 결과 데이터에 포함할 대상을 선택할 수 있습니다. 그런 다음 대상 자격은 [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=ko) 보고에서 차원으로 사용할 수 있습니다.
+[!UICONTROL 대상 분석] 대상을 사용하면 Adobe Experience Platform 대상 데이터를 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko)에 보강할 수 있습니다. 보강된 결과 데이터에 포함할 대상을 선택할 수 있습니다. 그런 다음 대상 자격은 [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) 보고에서 차원으로 사용할 수 있습니다.
 
 >[!AVAILABILITY]
 >
