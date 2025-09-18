@@ -64,7 +64,7 @@ ht-degree: 6%
 >이 단계는 일부 대상 스트리밍 대상에만 적용됩니다. 대상에 **[!UICONTROL 매핑]** 단계가 없는 경우 [대상 예약](#scheduling)(으)로 건너뛰십시오.
 >
 >대상을 스트리밍 대상으로 활성화할 때 대상 프로필 특성 외에 *하나 이상의 대상 ID 네임스페이스*도 매핑해야 합니다. 그렇지 않으면 대상자가 대상 플랫폼에 활성화되지 않습니다.
->> ![필수 ID 네임스페이스 매핑을 보여 주는 매핑 단계의 이미지입니다.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+>&#x200B;> ![필수 ID 네임스페이스 매핑을 보여 주는 매핑 단계의 이미지입니다.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
 
 
 일부 대상 스트리밍 대상에서는 소스 속성이나 ID 네임스페이스를 선택하여 대상의 타겟 ID로 매핑해야 합니다.
