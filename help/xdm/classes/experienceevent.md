@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent 클래스
 description: XDM ExperienceEvent 클래스와 이벤트 데이터 모델링을 위한 모범 사례에 대해 알아봅니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f00b195567c22f69c05909e76906c8770da4b9d0
 workflow-type: tm+mt
-source-wordcount: '2766'
+source-wordcount: '2777'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 | 속성 | 설명 |
 | --- | --- |
-| `_id`<br>**(필수)** | 경험 이벤트 클래스 `_id` 필드는 Adobe Experience Platform에 수집되는 개별 이벤트를 고유하게 식별합니다. 이 필드는 개별 이벤트의 고유성을 추적하고, 데이터 중복을 방지하고, 다운스트림 서비스에서 해당 이벤트를 조회하는 데 사용됩니다.<br><br>중복 이벤트가 검색되면 Experience Platform 응용 프로그램 및 서비스에서 중복을 다르게 처리할 수 있습니다. 예를 들어 동일한 `_id`을(를) 가진 이벤트가 프로필 저장소에 이미 있는 경우 프로필 서비스의 중복 이벤트가 삭제됩니다.<br><br>경우에 따라 `_id`은(는) [UUID(Universally Unique Identifier)](https://datatracker.ietf.org/doc/html/rfc4122) 또는 [GUID(Globally Unique Identifier)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)일 수 있습니다.<br><br>소스 연결에서 데이터를 스트리밍하거나 Parquet 파일에서 직접 수집하는 경우, 이벤트를 고유하게 만드는 특정 필드 조합을 연결하여 이 값을 생성해야 합니다. 연결할 수 있는 이벤트의 예로는 기본 ID, 타임스탬프, 이벤트 유형 등이 있습니다. 연결된 값은 `uri-reference` 형식의 문자열이어야 합니다. 즉, 콜론 문자는 모두 제거해야 합니다. 그런 다음 연결된 값을 SHA-256 또는 선택한 다른 알고리즘을 사용하여 해시해야 합니다.<br><br>이 필드가 개별 사용자와 관련된 ID를 나타내는 것이 아니라 데이터 기록 자체를 나타내는 것임을 구별하는 것이 중요합니다&#x200B;**.** 사용자와 관련된 ID 데이터는 대신 호환 가능한 필드 그룹에서 제공하는 [ID 필드](../schema/composition.md#identity)(으)로 수준을 내려야 합니다. |
+| `_id`<br>**(필수)** | 경험 이벤트 클래스 `_id` 필드는 Adobe Experience Platform에 수집되는 개별 이벤트를 고유하게 식별합니다. 이 필드는 개별 이벤트의 고유성을 추적하고, 데이터 중복을 방지하고, 다운스트림 서비스에서 해당 이벤트를 조회하는 데 사용됩니다.<br><br>중복 이벤트가 검색되면 Experience Platform 응용 프로그램 및 서비스에서 중복을 다르게 처리할 수 있습니다. 예를 들어 동일한 `_id`을(를) 가진 이벤트가 프로필 저장소에 이미 있는 경우 프로필 서비스의 중복 이벤트가 삭제됩니다. 그러나 이러한 이벤트는 여전히 데이터 레이크에 기록됩니다.<br><br>경우에 따라 `_id`은(는) [UUID(Universally Unique Identifier)](https://datatracker.ietf.org/doc/html/rfc4122) 또는 [GUID(Globally Unique Identifier)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)일 수 있습니다.<br><br>소스 연결에서 데이터를 스트리밍하거나 Parquet 파일에서 직접 수집하는 경우, 이벤트를 고유하게 만드는 특정 필드 조합을 연결하여 이 값을 생성해야 합니다. 연결할 수 있는 이벤트의 예로는 기본 ID, 타임스탬프, 이벤트 유형 등이 있습니다. 연결된 값은 `uri-reference` 형식의 문자열이어야 합니다. 즉, 콜론 문자는 모두 제거해야 합니다. 그런 다음 연결된 값을 SHA-256 또는 선택한 다른 알고리즘을 사용하여 해시해야 합니다.<br><br>이 필드가 개별 사용자와 관련된 ID를 나타내는 것이 아니라 데이터 기록 자체를 나타내는 것임을 구별하는 것이 중요합니다&#x200B;**.** 사용자와 관련된 ID 데이터는 대신 호환 가능한 필드 그룹에서 제공하는 [ID 필드](../schema/composition.md#identity)(으)로 수준을 내려야 합니다. |
 | `eventMergeId` | [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)을(를) 사용하여 데이터를 수집하는 경우, 레코드가 생성되도록 한 수집된 일괄 처리의 ID를 나타냅니다. 이 필드는 데이터 수집 시 시스템에서 자동으로 채워집니다. 웹 SDK 구현의 컨텍스트 외부에서 이 필드를 사용하는 것은 지원되지 않습니다. |
 | `eventType` | 이벤트의 유형 또는 범주를 나타내는 문자열입니다. 이 필드는 제품 보기 이벤트를 소매 회사에 대한 장바구니에 추가 이벤트와 구분하는 것처럼 동일한 스키마 및 데이터 세트 내에서 다른 이벤트 유형을 구분하려는 경우 사용할 수 있습니다.<br><br>이 속성의 표준 값은 의도한 사용 사례에 대한 설명을 포함하여 [부록 섹션](#eventType)에 제공됩니다. 이 필드는 확장 가능한 열거형입니다. 즉, 고유한 이벤트 유형 문자열을 사용하여 추적 중인 이벤트를 분류할 수도 있습니다.<br><br>`eventType`은(는) 응용 프로그램에서 히트당 하나의 이벤트만 사용하도록 제한하므로 시스템에서 가장 중요한 이벤트를 알려주기 위해 계산된 필드를 사용해야 합니다. 자세한 내용은 [계산된 필드에 대한 모범 사례](#calculated)의 섹션을 참조하십시오. |
 | `producedBy` | 이벤트의 생성자 또는 출처를 설명하는 문자열 값입니다. 이 필드는 세분화 목적으로 필요한 경우 특정 이벤트 제작자를 필터링하는 데 사용할 수 있습니다.<br><br>이 속성에 대해 제안된 일부 값은 [부록 섹션](#producedBy)에 제공됩니다. 이 필드는 확장 가능한 열거형입니다. 즉, 고유한 문자열을 사용하여 다른 이벤트 생성자를 나타낼 수도 있습니다. |
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 ### 계산된 필드 사용 {#calculated}
 
-경험 애플리케이션의 특정 상호 작용으로 인해 동일한 이벤트 타임스탬프를 기술적으로 공유하는 여러 관련 이벤트가 발생할 수 있으므로 단일 이벤트 레코드로 나타낼 수 있습니다. 예를 들어 고객이 웹 사이트에서 제품을 보는 경우 &quot;제품 보기&quot; 이벤트(`commerce.productViews`) 또는 일반 &quot;페이지 보기&quot; 이벤트(`web.webpagedetails.pageViews`)의 두 가지 가능한 `eventType` 값이 있는 이벤트 레코드가 발생할 수 있습니다. 이러한 경우 단일 히트에서 여러 이벤트가 캡처될 때 계산된 필드를 사용하여 가장 중요한 속성을 캡처할 수 있습니다.
+경험 애플리케이션의 특정 상호 작용으로 인해 동일한 이벤트 타임스탬프를 기술적으로 공유하는 여러 관련 이벤트가 발생할 수 있으므로 단일 이벤트 레코드로 나타낼 수 있습니다. 예를 들어 고객이 웹 사이트에서 제품을 보는 경우 &quot;제품 보기&quot; 이벤트(`eventType`) 또는 일반 &quot;페이지 보기&quot; 이벤트(`commerce.productViews`)의 두 가지 가능한 `web.webpagedetails.pageViews` 값이 있는 이벤트 레코드가 발생할 수 있습니다. 이러한 경우 단일 히트에서 여러 이벤트가 캡처될 때 계산된 필드를 사용하여 가장 중요한 속성을 캡처할 수 있습니다.
 
 [Adobe Experience Platform 데이터 준비](../../data-prep/home.md)를 사용하여 XDM과 데이터를 매핑, 변환 및 확인합니다. 서비스에서 제공하는 사용 가능한 [매핑 함수](../../data-prep/functions.md)를 사용하여 Experience Platform으로 수집될 때 여러 이벤트 레코드의 데이터를 우선 순위 지정, 변환 및/또는 통합하기 위해 논리 연산자를 호출할 수 있습니다. 위의 예에서 `eventType`을(를) 계산된 필드로 지정하여 둘 다 발생할 때마다 &quot;페이지 보기&quot;보다 &quot;제품 보기&quot;의 우선 순위를 지정할 수 있습니다.
 
@@ -155,7 +155,7 @@ Adobe에서는 [!DNL XDM ExperienceEvent] 클래스와 함께 사용할 수 있�
 | `media.adSkip` | 이 이벤트는 광고를 건너뛸 때 신호를 보냅니다. |
 | `media.adStart` | 이 이벤트는 광고를 시작한다는 신호를 보냅니다. |
 | `media.bitrateChange` | 이 이벤트는 비트 전송률이 변경되면 신호를 보냅니다. |
-| `media.bufferStart` | 버퍼링이 시작되면 `media.bufferStart` 이벤트 유형이 전송됩니다. 특정 `bufferResume` 이벤트 유형이 없습니다. `bufferStart` 이벤트 다음에 `play` 이벤트가 전송될 때 버퍼링이 다시 시작된 것으로 간주됩니다. |
+| `media.bufferStart` | 버퍼링이 시작되면 `media.bufferStart` 이벤트 유형이 전송됩니다. 특정 `bufferResume` 이벤트 유형이 없습니다. `play` 이벤트 다음에 `bufferStart` 이벤트가 전송될 때 버퍼링이 다시 시작된 것으로 간주됩니다. |
 | `media.chapterComplete` | 이 이벤트는 챕터를 완료한다는 신호를 보냅니다. |
 | `media.chapterSkip` | 이 이벤트는 사용자가 다른 섹션이나 챕터로 앞이나 뒤로 건너뛸 때 트리거됩니다. |
 | `media.chapterStart` | 이 이벤트는 챕터를 시작한다는 신호를 보냅니다. |
@@ -163,7 +163,7 @@ Adobe에서는 [!DNL XDM ExperienceEvent] 클래스와 함께 사용할 수 있�
 | `media.error` | 이 이벤트는 미디어 재생 중에 오류가 발생하면 신호를 보냅니다. |
 | `media.pauseStart` | 이 이벤트는 `pauseStart` 이벤트가 발생하면 추적합니다. 이 이벤트는 사용자가 미디어 재생에서 일시 중지를 시작할 때 트리거됩니다. 다시 시작 이벤트 유형이 없습니다. 다시 시작은 재생 이벤트를 `pauseStart` 뒤에 보낼 때 추론됩니다. |
 | `media.ping` | `media.ping` 이벤트 유형은 진행 중인 재생 상태를 나타내는 데 사용됩니다. 기본 콘텐츠의 경우, 이 이벤트는 재생 중에 10초마다 전송되어야 하며 재생이 시작된 후 10초부터 시작됩니다. 광고 콘텐츠의 경우 광고 추적 중에 매초마다 전송되어야 합니다. Ping 이벤트는 요청 본문에 매개 변수 맵을 포함하지 않아야 합니다. |
-| `media.play` | `media.play` 이벤트 유형은 플레이어가 다른 상태(예: `buffering,` `paused`(사용자가 다시 시작할 때) 또는 `error`(복구될 때)에서 `playing` 상태로 전환될 때 전송됩니다. 여기에는 자동 재생과 같은 시나리오도 포함됩니다. 이 이벤트는 플레이어의 `on('Playing')` 콜백에 의해 트리거됩니다. |
+| `media.play` | `media.play` 이벤트 유형은 플레이어가 다른 상태(예: `playing` `buffering,`(사용자가 다시 시작할 때) 또는 `paused`(복구될 때)에서 `error` 상태로 전환될 때 전송됩니다. 여기에는 자동 재생과 같은 시나리오도 포함됩니다. 이 이벤트는 플레이어의 `on('Playing')` 콜백에 의해 트리거됩니다. |
 | `media.sessionComplete` | 이 이벤트는 기본 콘텐츠의 끝에 도달하면 전송됩니다. |
 | `media.sessionEnd` | `media.sessionEnd` 이벤트 유형은 사용자가 보기를 중단하여 반환할 가능성이 낮은 경우 세션을 즉시 닫도록 Media Analytics 백엔드에 알립니다. 이 이벤트가 전송되지 않으면, 10분 동안 활동이 없거나 플레이헤드 이동 없이 30분 후에 세션이 시간 초과됩니다. 해당 세션 ID를 사용하는 후속 미디어 호출은 무시됩니다. |
 | `media.sessionStart` | `media.sessionStart` 이벤트 유형이 세션 시작 호출과 함께 전송됩니다. 응답을 받으면 위치 헤더에서 세션 ID가 추출되고 수집 서버에 대한 모든 후속 이벤트 호출에 사용됩니다. |
