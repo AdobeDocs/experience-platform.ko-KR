@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2025년 8월
 description: Adobe Experience Platform의 2025년 8월 릴리스 정보입니다.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
+source-git-commit: 6b3b830f822cc02c78d6f593c0a949d3e19ada37
 workflow-type: tm+mt
-source-wordcount: '1432'
-ht-degree: 92%
+source-wordcount: '1485'
+ht-degree: 96%
 
 ---
 
@@ -104,6 +104,7 @@ Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이
 | --- | --- |
 | [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 내부 업그레이드 | 2025년 8월 11일부터 짧은 기간 동안 대상 카탈로그에서 두 장의 **[!DNL Microsoft Bing]** 카드가 나란히 표시되었습니다. 이는 대상 서비스의 내부 업그레이드로 인한 변경 사항입니다. 기존 **[!DNL Microsoft Bing]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않는) Microsoft Bing]**&#x200B;으로 변경되었으며, 이제 **[!UICONTROL Microsoft Bing]**&#x200B;이라는 이름의 새 카드를 사용할 수 있습니다. <br> 업그레이드가 완료되었으며, 더 이상 사용되지 않는 카드는 대상 카탈로그에서 제거되었습니다. 카탈로그의 새로운 **[!UICONTROL Microsoft Bing]** 연결을 사용하여 새 활성화 데이터 흐름을 확인하십시오. **[!UICONTROL (더 이상 사용되지 않는) Microsoft Bing]** 대상으로의 활성 데이터 흐름이 있는 경우 해당 데이터 흐름은 자동으로 업데이트되므로 다른 액션이 필요하지 않습니다. <br><br>[Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 생성하는 경우 [!DNL flow spec ID]및 [!DNL connection spec ID]를 다음 값으로 업데이트해야 합니다.<ul><li>흐름 사양 ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>연결 사양 ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 이 업그레이드를 적용하면 [!DNL Microsoft Bing]에 대한 데이터 흐름에서 **활성화된 프로필 수가 감소**&#x200B;할 수 있습니다. 이러한 감소는 이 대상 플랫폼에 대한 모든 활성화의 **ECID 매핑 요구 사항** 도입으로 인해 발생합니다. |
 | [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) 및 [LinkedIn 일치 대상자](../../destinations/catalog/social/linkedin-b2b.md) 대상에 대한 인증 만료 세부 정보 | [!DNL LinkedIn] 대상에 대한 인증 만료 정보가 이제 Experience Platform 인터페이스에 직접 표시되므로 데이터 흐름이 중단되기 전에 인증이 만료되고 갱신되는 시점을 확인할 수 있습니다. **[[!UICONTROL 계정]](../../destinations/ui/destinations-workspace.md#accounts)** 또는 **[[!UICONTROL 찾아보기]](../../destinations/ui/destinations-workspace.md#browse)** 탭의 **[!UICONTROL 계정 만료 일자]** 열에서 토큰 만료 일자를 모니터링할 수 있습니다. |
+| [일치하는 대상](../../destinations/catalog/social/linkedin-b2b.md) [!DNL IDFA] ID 지원 제거 | [!DNL IDFA]은(는) [!DNL IDFA] 대상에서 더 이상 지원되지 않으므로 2025년 9월부터는 [!DNL LinkedIn Matched Audiences]을(를) 대상 ID로 매핑할 수 없습니다. 자세한 내용은 [!DNL LinkedIn Matched Audiences] 통합 [설명서](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes)를 참조하세요. 이 변경은 LinkedIn의 요구 사항에 기인하며, Experience Platform 대상 서비스 업그레이드와는 관련이 없습니다. |
 
 **새로운 기능 또는 업데이트된 기능**
 
@@ -159,7 +160,7 @@ Experience Platform은 전 세계적으로 디지털 체험 애플리케이션�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 대상자 예상치 | 이제 대상자 예상 값이 샘플링 데이터의 신뢰 구간을 기반으로 하는 **범위**(으)로 표시됩니다. 예상 값에 대한 자세한 내용은 [세그먼트 빌더 안내서](/help/segmentation/ui/segment-builder.md#audience-properties)를 참조하세요. |
+| 대상자 예상치 | 대상자 예상치는 이제 샘플링 데이터의 신뢰 구간을 기반으로 하는 **범위**&#x200B;로 표시됩니다. 예상치에 대한 자세한 내용은 [세그먼트 빌더 안내서](/help/segmentation/ui/segment-builder.md#audience-properties)를 참조하십시오. |
 
 자세한 내용은 [[!DNL Segmentation Service] 개요](../../segmentation/home.md)를 참조하십시오.
 
@@ -171,9 +172,9 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| [!DNL Oracle NetSuite] 소스의 일반 가용성 | 이제 [!DNL Oracle NetSuite] 원본을 일반적으로 사용할 수 있습니다. 이제 [!DNL Oracle NetSuite] 계정을 Experience Platform에 연결하여 통합 분석 및 활성화를 위해 활동 및 엔터티 데이터를 수집할 수 있습니다. 자세한 내용은 [[!DNL Oracle NetSuite] 개요](../../sources/connectors/marketing-automation/oracle-netsuite.md)를 참조하십시오. |
-| [!DNL PathFactory] 소스의 일반 가용성 | 이제 [!DNL PathFactory] 원본을 일반적으로 사용할 수 있습니다. [!DNL PathFactory] 계정을 Experience Platform에 연결하여 통합 분석 및 활성화를 위해 방문자, 세션 및 페이지 보기 데이터를 수집할 수 있습니다. 자세한 내용은 [[!DNL PathFactory] 개요](../../sources/connectors/marketing-automation/pathfactory.md)를 참조하십시오. |
-| [!DNL Stripe] 소스의 일반 가용성 | 이제 [!DNL Stripe] 원본을 일반적으로 사용할 수 있습니다. [!DNL Stripe] 계정을 Experience Platform에 연결하여 통합 분석 및 활성화를 위해 결제 및 거래 데이터를 수집할 수 있습니다. 자세한 내용은 [[!DNL Stripe] 개요](../../sources/connectors/payments/stripe.md)를 참조하십시오. |
+| [!DNL Oracle NetSuite] 소스의 일반 가용성 | 이제 [!DNL Oracle NetSuite] 소스를 일반적으로 사용할 수 있습니다. 이제 [!DNL Oracle NetSuite] 계정을 Experience Platform에 연결하여 활동 및 엔티티 데이터를 수집하고 통합 분석 및 활성화를 수행할 수 있습니다. 자세한 내용은 [[!DNL Oracle NetSuite] 개요](../../sources/connectors/marketing-automation/oracle-netsuite.md)를 참조하십시오. |
+| [!DNL PathFactory] 소스의 일반 가용성 | 이제 [!DNL PathFactory] 소스를 일반적으로 사용할 수 있습니다. 통합 분석 및 활성화를 위해 [!DNL PathFactory] 계정을 Experience Platform에 연결하여 방문자, 세션 및 페이지 조회수 데이터를 수집할 수 있습니다. 자세한 내용은 [[!DNL PathFactory] 개요](../../sources/connectors/marketing-automation/pathfactory.md)를 참조하십시오. |
+| [!DNL Stripe] 소스의 일반 가용성 | 이제 [!DNL Stripe] 소스를 일반적으로 사용할 수 있습니다. [!DNL Stripe] 계정을 Experience Platform에 연결하여 결제 및 트랜잭션 데이터를 수집하고 통합 분석 및 활성화를 수행할 수 있습니다. 자세한 내용은 [[!DNL Stripe] 개요](../../sources/connectors/payments/stripe.md)를 참조하십시오. |
 | [!DNL Azure Blob Storage]에 대해 향상된 인증 | 이제 서비스 주체 기반 인증을 사용하여 [!DNL Azure Blob Storage] 소스를 Experience Platform에 연결할 수 있습니다. 서비스 주체 기반 인증을 사용하면 보안을 강화하고 자격 증명 순환을 쉽게 하며 계정에 대한 액세스 제어를 보다 세부적으로 제어할 수 있습니다. 자세한 내용은 [[!DNL Azure Blob Storage] 개요](../../sources/connectors/cloud-storage/blob.md)를 참조하십시오. |
 
 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하십시오.
