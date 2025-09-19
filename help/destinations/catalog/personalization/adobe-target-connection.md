@@ -33,7 +33,7 @@ Adobe Target은 Adobe Experience Platform 대상 카탈로그의 개인화 연�
 
 Experience Platform에서 Adobe Target 연결을 구성하는 방법에 대한 간략한 개요는 아래 비디오를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449800/?quality=12&learn=on&captions=kor)
 
 ## 구현 유형에 따라 지원되는 사용 사례 {#supported-use-cases}
 
