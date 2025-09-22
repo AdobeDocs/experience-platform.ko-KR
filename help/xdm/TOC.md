@@ -5,10 +5,10 @@ breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: Experience Platform 내의 경험 데이터 모델(XDM) 시스템 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법을 알아봅니다.
 feature: Schemas
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1385f91694f9b6dfe96b9d424af0da6f2a1443c2
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 45%
+source-wordcount: '703'
+ht-degree: 48%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 45%
          * [환자](./schema/healthcare/field-groups/patient.md)
          * [실무자](./schema/healthcare/field-groups/practioner.md)
          * [일정](./schema/healthcare/field-groups/schedule.md)
-      * 데이터 형식 {#data-types}
+      * 데이터 유형 {#data-types}
          * [주소](./schema/healthcare/data-types/address.md)
          * [주석](./schema/healthcare/data-types/annotation.md)
          * [가용성](./schema/healthcare/data-types/availability.md)
@@ -112,6 +112,7 @@ ht-degree: 45%
       * [파트너 잠재 고객 세부 정보 (샘플)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics 전체 확장](./field-groups/event/analytics-full-extension.md)
+      * [Adobe Advertising Cloud 전체 확장](./field-groups/event/advertising-full-extension.md)
       * [광고 세보 정보](./field-groups/event/advertising-details.md)
       * [애플리케이션 세부 정보](./field-groups/event/application-details.md)
       * [잔고 이체](./field-groups/event/balance-transfers.md)
@@ -149,10 +150,10 @@ ht-degree: 45%
       * [제품 범주](./field-groups/product/product-category.md)
    * 공급자 {#provider}
       * [의료 기관](./field-groups/provider/healthcare-provider.md)
-   * 공유됨{#shared}
+   * 공유됨 {#shared}
       * [외부 소스 시스템 감사 세부 정보](./field-groups/shared/external-source-system-audit-details.md)
    * [필드 그룹 이름 업데이트](./field-groups/name-updates.md)
-* 데이터 형식 {#data-types}
+* 데이터 유형 {#data-types}
    * [계정 세부 정보](./data-types/account-details.md)
    * [광고 브레이크](./data-types/ad-break.md)
    * [주소](./data-types/address.md)
@@ -255,7 +256,7 @@ ht-degree: 45%
    * [개요](api/overview.md)
    * [시작하기](api/getting-started.md)
    * [스키마](api/schemas.md)
-   * [비헤이비어](api/behaviors.md)
+   * [행동](api/behaviors.md)
    * [클래스](api/classes.md)
    * [스키마 필드 그룹](api/field-groups.md)
    * [데이터 유형](api/data-types.md)
