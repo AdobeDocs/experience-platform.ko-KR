@@ -1,21 +1,15 @@
 ---
 title: Acxiom 예상 데이터 가져오기
 description: UI를 사용하여 Acxiom 예상 데이터를 Adobe Experience Platform 및 Adobe Real-Time Customer Data Platform에 연결하는 방법에 대해 알아보십시오.
-last-substantial-update: 2024-02-21T00:00:00Z
-badge: Beta
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1844'
 ht-degree: 5%
 
 ---
 
 # UI에서 [!DNL Acxiom Prospecting Data Import] 소스 연결 및 데이터 흐름 만들기
-
->[!NOTE]
->
->[!DNL Acxiom Prospecting Data Import] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
 
 [!DNL Acxiom]의 Adobe Real-Time Customer Data Platform에 대한 잠재 고객 데이터 가져오기 전망은 가능한 한 가장 생산적인 잠재 고객을 제공하기 위한 프로세스입니다. [!DNL Acxiom]은(는) 보안 내보내기를 통해 Real-Time CDP 자사 데이터를 가져오고 수상 경력에 빛나는 위생 및 ID 해결 시스템을 통해 해당 데이터를 실행합니다. 이렇게 하면 제외 목록으로 사용할 데이터 파일이 생성됩니다. 그런 다음 이 데이터 파일을 Acxiom 글로벌 데이터베이스에 대해 대응시켜 잠재 고객 목록을 가져오기에 맞게 조정할 수 있습니다.
 
@@ -46,7 +40,7 @@ Experience Platform에서 버킷에 액세스하려면 다음 자격 증명에 �
 
 >[!IMPORTANT]
 >
->[!DNL Acxiom] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../../../access-control/ui/overview.md)를 참조하십시오.
+>**[!UICONTROL 계정을 Experience Platform에 연결하려면 계정에 대해]**&#x200B;소스 보기&#x200B;**[!UICONTROL 및]**&#x200B;소스 관리[!DNL Acxiom] 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../../../access-control/ui/overview.md)를 참조하십시오.
 
 ## [!DNL Acxiom] 계정 연결
 

@@ -1,25 +1,19 @@
 ---
 title: Merkury Enterprise Id 해상도 Source 개요
 description: 사용자 인터페이스를 사용하여 Merkury Enterprise Identity Resolution을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
-last-substantial-update: 2023-12-12T00:00:00Z
-badge: Beta
 exl-id: c5eaa561-d620-4c82-bce1-972d0a422c3f
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
 # [!DNL Merkury Enterprise Identity Resolution]
 
->[!NOTE]
->
->[!DNL Merkury Enterprise Identity Resolution] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions)를 참조하십시오.
-
 Adobe Experience Platform은 데이터 파트너 애플리케이션에서 데이터를 수집할 수 있도록 지원합니다. 데이터 파트너에 대한 지원에는 [!DNL Merkury Enterprise Identity Resolution]이(가) 포함됩니다.
 
-[!DNL Merkle]의 [!DNL Merkury]을(를) 사용하여 쿠키를 사용하지 않더라도 더 많은 디지털 방문자를 인식하고 고객에게 필요한 연관성 있고 개인화된 경험을 제공할 수 있습니다.
+[!DNL Merkury]의 [!DNL Merkle]을(를) 사용하여 쿠키를 사용하지 않더라도 더 많은 디지털 방문자를 인식하고 고객에게 필요한 연관성 있고 개인화된 경험을 제공할 수 있습니다.
 
 **개인 ID**&#x200B;을(를) [!DNL Merkury] 소스의 일부로 활용하여 조직에서 개인에 대해 알고 있는 모든 내용을 하나의 포괄적인 프로필로 결합할 수 있습니다. 이러한 세부 사항은 다음과 같습니다.
 
@@ -31,9 +25,9 @@ Adobe Experience Platform은 데이터 파트너 애플리케이션에서 데이
 
 ![Merkury 원본에 대한 데이터 처리 워크플로의 일러스트레이션입니다.](../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/architecture.png)
 
-## IP 주소 허용 목록
+## 허용 목록에 추가하다 IP 주소
 
-소스 커넥터로 작업하려면 먼저 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지를 참조하세요.
+소스 커넥터를 사용하려면 먼저 지역에 필요한 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 이러한 IP 주소를 추가하지 않으면 소스 커넥터가 제대로 작동하지 않거나 오류가 발생할 수 있습니다. 허용 목록에 추가하다 허용할 IP 주소 목록 및 자세한 지침은 [IP 주소](../../ip-address-allow-list.md) 페이지를 참조하십시오.
 
 ## 파일 및 디렉터리에 대한 이름 지정 제약 조건
 
@@ -59,4 +53,4 @@ Adobe Experience Platform은 데이터 파트너 애플리케이션에서 데이
 
 ## 다음 단계
 
-이 문서를 읽고 [!DNL Merkury] 계정의 데이터를 Experience Platform 상태로 만드는 데 필요한 필수 구성 요소 설정을 완료했습니다. 이제 사용자 인터페이스를 사용하여 [연결 [!DNL Merkury] Experience Platform에 연결](../../tutorials/ui/create/data-partners/merkury.md)에 대한 안내서로 진행할 수 있습니다.
+이 문서를 읽고 [!DNL Merkury] 계정에서 Experience Platform으로 데이터를 가져오는 데 필요한 필수 구성 요소 설정을 완료했습니다. 이제 사용자 인터페이스를 사용하여 [Experience Platform에 연결 [!DNL Merkury] 하기](../../tutorials/ui/create/data-partners/merkury.md)에 대한 안내서로 진행할 수 있습니다.

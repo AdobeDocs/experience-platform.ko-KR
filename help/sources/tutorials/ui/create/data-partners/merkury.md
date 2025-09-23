@@ -1,21 +1,15 @@
 ---
 title: UI에서 Merkury Enterprise ID 확인 Source 연결 및 데이터 흐름 만들기
 description: Adobe Experience Platform UI를 사용하여 Merkury Enterprise ID 확인 소스 연결을 만드는 방법을 알아봅니다.
-last-substantial-update: 2023-12=12
-badge: Beta
 exl-id: 2af48c18-76f9-4615-8e76-8f030a312a8f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '2146'
+source-wordcount: '2128'
 ht-degree: 1%
 
 ---
 
 # UI에서 [!DNL Merkury Enterprise Identity Resolution] 소스 연결 및 데이터 흐름 만들기
-
->[!NOTE]
->
->[!DNL Merkury Enterprise Identity Resolution] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
 
 이 자습서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 [!DNL Merkury Enterprise Identity Resolution] 소스 연결 및 데이터 흐름을 만드는 단계를 제공합니다.
 
@@ -145,7 +139,7 @@ Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x2
 
 ### 프로필 및 오류 진단 활성화
 
-+++오류 진단 및 프로필 수집을 활성화하는 단계를 보려면 선택
++++오류 진단 및 프로필 수집을 활성화하는 단계를 보려면 선택하십시오.
 
 그런 다음 **[!UICONTROL 프로필 데이터 세트]** 전환을 선택하여 실시간 고객 프로필에 대한 데이터 세트를 사용하도록 설정합니다. 이를 통해 엔티티의 속성 및 동작을 전체적으로 볼 수 있습니다. 모든 프로필 활성화 데이터 세트의 데이터는 프로필에 포함되며 데이터 흐름을 저장할 때 변경 사항이 적용됩니다.
 

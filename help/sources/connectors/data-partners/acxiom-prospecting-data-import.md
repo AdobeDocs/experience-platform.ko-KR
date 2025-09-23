@@ -1,26 +1,21 @@
 ---
 title: Acxiom 예상 데이터 가져오기
 description: UI를 사용하여 Acxiom 예상 데이터를 Adobe Experience Platform 및 Adobe Real-Time Customer Data Platform에 연결하는 방법에 대해 알아보십시오.
-badge: Beta
 exl-id: 6df674d9-c14b-42ea-a287-5377484e567d
-source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '544'
 ht-degree: 5%
 
 ---
 
 # [!DNL Acxiom Prospecting Data Import]
 
->[!NOTE]
->
->[!DNL Acxiom Prospecting Data Import] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions)를 참조하십시오.
-
 Adobe Experience Platform은 데이터 파트너 애플리케이션에서 데이터를 수집할 수 있도록 지원합니다. 데이터 및 ID 파트너 지원에는 [!DNL Acxiom Prospecting Data Import]이(가) 포함됩니다.
 
-[!DNL Acxiom]의 Adobe Real-time Customer Data Platform에 대한 잠재 고객 데이터 가져오기 전망은 가능한 한 가장 생산적인 잠재 고객을 제공하기 위한 프로세스입니다. [!DNL Acxiom]은(는) 보안 내보내기를 통해 Real-Time CDP 자사 데이터를 가져오고 수상 경력에 빛나는 위생 및 ID 해결 시스템을 통해 해당 데이터를 실행합니다. 비표시 목록으로 활용할 수 있는 데이터 파일이 생성됩니다. 그러면 이 데이터 파일이 [!DNL Acxiom Global] 데이터베이스에 대해 일치하여 가져오기를 위해 잠재 고객 목록을 사용자 지정할 수 있습니다.
+[!DNL Acxiom]의 Adobe Real-Time Customer Data Platform에 대한 잠재 고객 데이터 가져오기 전망은 가능한 한 가장 생산적인 잠재 고객을 제공하기 위한 프로세스입니다. [!DNL Acxiom]은(는) 보안 내보내기를 통해 Real-Time CDP 자사 데이터를 가져오고 수상 경력에 빛나는 위생 및 ID 해결 시스템을 통해 해당 데이터를 실행합니다. 비표시 목록으로 활용할 수 있는 데이터 파일이 생성됩니다. 그러면 이 데이터 파일이 [!DNL Acxiom Global] 데이터베이스에 대해 일치하여 가져오기를 위해 잠재 고객 목록을 사용자 지정할 수 있습니다.
 
-[!DNL Amazon S3]을(를) 드롭 포인트로 사용하여 [!DNL Acxiom] 소스를 사용하여 [!DNL Acxiom] 잠재 고객 서비스에서 응답을 검색하고 매핑할 수 있습니다.
+[!DNL Acxiom]을(를) 드롭 포인트로 사용하여 [!DNL Acxiom] 소스를 사용하여 [!DNL Amazon S3] 잠재 고객 서비스에서 응답을 검색하고 매핑할 수 있습니다.
 
 ![acxiom-prospecting-workflow](../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/acxiom-prospecting.png)
 
@@ -28,7 +23,7 @@ Adobe Experience Platform은 데이터 파트너 애플리케이션에서 데이
 
 ## 전제 조건
 
-Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대한 유효한 값을 제공해야 합니다.
+Experience Platform에서 버킷에 액세스하려면 다음 자격 증명에 대한 유효한 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | --- | --- |
@@ -37,13 +32,13 @@ Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대
 | [!DNL Amazon S3] 비밀 키 | 버킷의 비밀 키 ID. [!DNL Acxiom] 팀에서 이 값을 검색할 수 있습니다. |
 | 버킷 이름 | 파일을 공유할 버킷입니다. [!DNL Acxiom] 팀에서 이 값을 검색할 수 있습니다. |
 
-## IP 주소 허용 목록
+## 허용 목록에 추가하다 IP 주소
 
-소스 커넥터로 작업하려면 먼저 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지를 참조하세요.
+소스 커넥터를 사용하려면 먼저 지역에 필요한 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 이러한 IP 주소를 추가하지 않으면 소스 커넥터가 제대로 작동하지 않거나 오류가 발생할 수 있습니다. 허용 목록에 추가하다 허용할 IP 주소 목록 및 자세한 지침은 [IP 주소](../../ip-address-allow-list.md) 페이지를 참조하십시오.
 
 ### Experience Platform에 대한 권한 구성
 
-[!DNL Acxiom Prospecting Data Import] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 사용 권한이 모두 활성화되어 있어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/abac/ui/permissions.md)를 참조하십시오.
+**[!UICONTROL 계정을 Experience Platform에 연결하려면 계정에 대해]**&#x200B;소스 보기&#x200B;**[!UICONTROL 및]**&#x200B;소스 관리[!DNL Acxiom Prospecting Data Import] 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/abac/ui/permissions.md)를 참조하십시오.
 
 ## 파일 및 디렉터리에 대한 이름 지정 제약 조건
 
@@ -58,4 +53,4 @@ Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대
 
 ## 다음 단계
 
-이 문서를 읽고 [!DNL Acxiom] 계정의 데이터를 Experience Platform 상태로 만드는 데 필요한 필수 구성 요소 설정을 완료했습니다. 이제 사용자 인터페이스를 사용하여 [연결 [!DNL Acxiom Prospecting Data Import] Experience Platform에 연결](../../tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)에 대한 안내서로 진행할 수 있습니다.
+이 문서를 읽고 [!DNL Acxiom] 계정에서 Experience Platform으로 데이터를 가져오는 데 필요한 필수 구성 요소 설정을 완료했습니다. 이제 사용자 인터페이스를 사용하여 [Experience Platform에 연결 [!DNL Acxiom Prospecting Data Import] 하기](../../tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)에 대한 안내서로 진행할 수 있습니다.

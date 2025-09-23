@@ -1,24 +1,19 @@
 ---
 title: UI에서 SAP Commerce 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 SAP Commerce 소스 연결을 만드는 방법을 알아봅니다.
-badge: Beta
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '959'
 ht-degree: 2%
 
 ---
 
 # UI에서 [!DNL SAP Commerce] 소스 연결 만들기
 
->[!NOTE]
->
->[!DNL SAP Commerce] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
+다음 자습서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 [!DNL SAP Commerce]구독 청구[[!DNL SAP]  연락처 및 고객 데이터를 가져오기 위해 ](https://www.sap.com/products/financial-management/subscription-billing.html) 소스 연결을 만드는 단계를 안내합니다.
 
-다음 자습서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 [[!DNL SAP] 구독 청구](https://www.sap.com/products/financial-management/subscription-billing.html) 연락처 및 고객 데이터를 가져오기 위해 [!DNL SAP Commerce] 소스 연결을 만드는 단계를 안내합니다.
-
-## 시작하기 {#getting-started}
+## 시작 {#getting-started}
 
 이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
@@ -208,7 +203,7 @@ Experience Platform은 선택한 대상 스키마 또는 데이터 세트를 기
 
 >[!TAB 고객]
 
-고객 데이터의 경우 [!DNL SAP Commerce]은(는) [!DNL SAP Business Partners] API의 [고객](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) 및 [고객 연락처 관계](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) 끝점을 사용하여 데이터를 검색합니다
+고객 데이터의 경우 [!DNL SAP Commerce]은(는) [ API의 ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)고객[ 및 ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts)고객 연락처 관계[!DNL SAP Business Partners] 끝점을 사용하여 데이터를 검색합니다
 
 다음은 고객 데이터에 대한 [!DNL SAP Commerce] 데이터 흐름에 대한 매핑 구성의 예입니다.
 
@@ -232,7 +227,7 @@ Experience Platform은 선택한 대상 스키마 또는 데이터 세트를 기
 
 >[!TAB 연락처]
 
-연락처 데이터의 경우 [!DNL SAP Commerce]은(는) [!DNL SAP Business Partners] API의 [연락처](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts) 끝점을 사용하여 데이터를 검색합니다.
+연락처 데이터의 경우 [!DNL SAP Commerce]은(는) [ API의 ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)연락처[!DNL SAP Business Partners] 끝점을 사용하여 데이터를 검색합니다.
 
 다음은 연락처 데이터에 대한 [!DNL SAP Commerce] 데이터 흐름에 대한 매핑 구성의 예입니다.
 

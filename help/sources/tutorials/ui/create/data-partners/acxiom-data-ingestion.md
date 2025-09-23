@@ -1,21 +1,15 @@
 ---
 title: Acxiom 데이터 수집
 description: Acxiom 데이터 섭취 를 사용하여 Acxiom 데이터를 Real-Time CDP으로 수집하고 자사 프로필을 보강합니다. Acxiom이 보강된 자사 프로필을 사용하여 대상자를 개선하고 마케팅 채널 전반에서 활성화합니다.
-last-substantial-update: 2024-03-19T00:00:00Z
-badge: Beta
 exl-id: a0a080ef-4603-437f-8a68-11dbf530ac90
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1817'
 ht-degree: 3%
 
 ---
 
 # UI에서 [!DNL Acxiom Data Ingestion] 소스 연결 및 데이터 흐름 만들기
-
->[!NOTE]
->
->[!DNL Acxiom Data Ingestion] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 소스 개요에서 [약관](../../../../home.md#terms-and-conditions)을 참조하십시오.
 
 [!DNL Acxiom Data Ingestion] 소스를 사용하여 [!DNL Acxiom] 데이터를 Real-Time Customer Data Platform으로 수집하고 자사 프로필을 보강합니다. 그런 다음 [!DNL Acxiom]이(가) 보강된 자사 프로필을 사용하여 대상자를 개선하고 마케팅 채널 전반에서 활성화할 수 있습니다.
 
@@ -43,7 +37,7 @@ Experience Platform에서 버킷에 액세스하려면 다음 자격 증명에 �
 
 >[!IMPORTANT]
 >
->[!DNL Acxiom] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../../../access-control/ui/overview.md)를 참조하십시오.
+>**[!UICONTROL 계정을 Experience Platform에 연결하려면 계정에 대해]**&#x200B;소스 보기&#x200B;**[!UICONTROL 및]**&#x200B;소스 관리[!DNL Acxiom] 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../../../access-control/ui/overview.md)를 참조하십시오.
 
 ## [!DNL Acxiom] 계정 연결
 
