@@ -1,0 +1,102 @@
+---
+title: UI를 사용하여 Capillary를 Experience Platform에 연결
+description: UI를 사용하여 Capillary를 Experience Platform에 연결하는 방법을 알아봅니다
+hide: true
+hidefromtoc: true
+source-git-commit: 7b733831932c48240340b0a2136e15f5d2144635
+workflow-type: tm+mt
+source-wordcount: '781'
+ht-degree: 5%
+
+---
+
+# UI를 사용하여 [!DNL Capillary]을(를) Experience Platform에 연결
+
+Experience Platform 사용자 인터페이스의 소스 작업 영역을 사용하여 [!DNL Capillary] 데이터베이스를 Adobe Experience Platform에 연결하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
+
+## 시작
+
+이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
+
+* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+   * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
+   * [스키마 편집기 튜토리얼](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아봅니다.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+
+## 소스 카탈로그 탐색
+
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 *[!UICONTROL 소스]* 작업 영역에 액세스합니다. *[!UICONTROL 범주]* 패널에서 적절한 범주를 선택합니다. 또는 검색 창을 사용하여 사용할 특정 소스로 이동합니다.
+
+[!DNL Capillary]을(를) 사용하려면 **[!UICONTROL 충성도]**&#x200B;에서 *[!UICONTROL 모세관 스트리밍 이벤트]* 소스 카드를 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택하십시오.
+
+>[!TIP]
+>
+>지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL 설정]** 옵션이 표시됩니다. 인증된 계정을 만들면 이 옵션이 **[!UICONTROL 데이터 추가]**(으)로 변경됩니다.
+
+![Capillary Streaming Events 카드가 선택된 UI의 소스 카탈로그입니다.](../../../../images/tutorials/create/capillary/catalog.png)
+
+## 데이터 선택
+
+그런 다음 *[!UICONTROL 데이터 선택]* 인터페이스를 사용하여 샘플 JSON 파일을 업로드하여 소스 스키마를 정의합니다. 이 단계에서 미리보기 인터페이스를 사용하여 페이로드의 파일 구조를 볼 수 있습니다. 완료되면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+
+![원본 워크플로의 데이터 선택 단계](../../../../images/tutorials/create/capillary/select-data.png)
+
+## 데이터 흐름 세부 정보
+
+그런 다음 데이터 세트 및 데이터 흐름에 대한 정보를 제공해야 합니다.
+
+### 데이터 세트 세부 정보
+
+데이터 세트는 스키마(열) 및 필드(행)를 포함하는 데이터 수집을 위한 저장소 및 관리 구조입니다. Experience Platform에 성공적으로 수집된 데이터는 데이터 세트로 데이터 레이크 내에 유지됩니다.
+
+이 단계에서는 기존 데이터 세트를 사용하거나 새 데이터 세트를 만들 수 있습니다.
+
+>[!NOTE]
+>
+>기존 데이터 집합을 사용하는지 또는 새 데이터 집합을 만드는지 여부에 관계없이 데이터 집합이 **프로필** 수집에 대해 활성화되었는지 확인해야 합니다.
+
++++프로필 수집, 오류 진단 및 부분 수집을 활성화하는 단계를 선택합니다.
+
+Real-Time Customer Profile에 대해 데이터 세트를 사용하도록 설정한 경우 이 단계에서 **[!UICONTROL 프로필 데이터 세트]**&#x200B;를 전환하여 프로필 수집을 위해 데이터를 사용하도록 설정할 수 있습니다. 이 단계를 사용하여 **[!UICONTROL 오류 진단]** 및 **[!UICONTROL 부분 수집]**&#x200B;을 사용하도록 설정할 수도 있습니다.
+
+* **[!UICONTROL 오류 진단]**: **[!UICONTROL 오류 진단]**&#x200B;을 선택하여 데이터 집합 활동 및 데이터 흐름 상태를 모니터링할 때 나중에 참조할 수 있는 오류 진단을 생성하도록 소스에 지시합니다.
+* **[!UICONTROL 부분 수집]**: 부분 일괄 처리 수집은 구성 가능한 특정 임계값까지 오류가 포함된 데이터를 수집하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Experience Platform에 성공적으로 수집할 수 있으며 잘못된 데이터는 모두 잘못된 이유에 대한 정보로 별도로 배치됩니다.
+
++++
+
+### 데이터 흐름 세부 정보
+
+데이터 세트가 구성되면 이름, 선택적 설명 및 경고 구성을 포함하여 데이터 흐름에 대한 세부 정보를 제공해야 합니다.
+
+![데이터 흐름 세부 정보 인터페이스](../../../../images/tutorials/create/capillary/dataflow-detail.png)
+
+| 데이터 흐름 구성 | 설명 |
+| --- | --- |
+| 데이터 흐름 이름 | 데이터 흐름의 이름입니다.  기본적으로 가져올 파일의 이름이 사용됩니다. |
+| 설명 | (선택 사항) 데이터 흐름에 대한 간략한 설명입니다. |
+| 경고 | Experience Platform은 사용자가 구독할 수 있는 이벤트 기반 경고를 생성할 수 있습니다. 이러한 옵션은 모두 실행 중인 데이터 흐름으로 이러한 경고를 트리거합니다.  자세한 내용은 [경고 개요](../../alerts.md)를 참조하세요. <ul><li>**원본 데이터 흐름 실행 시작**: 데이터 흐름 실행이 시작될 때 알림을 받으려면 이 경고를 선택하십시오.</li><li>**소스 데이터 흐름 실행 성공**: 데이터 흐름이 오류 없이 종료될 경우 알림을 받으려면 이 경고를 선택하십시오.</li><li>**원본 데이터 흐름 실행 실패**: 데이터 흐름 실행이 오류로 인해 종료되는 경우 알림을 받으려면 이 경고를 선택하십시오.</li></ul> |
+
+{style="table-layout:auto"}
+
+## 매핑
+
+Experience Platform으로 데이터를 수집하기 전에 매핑 인터페이스를 사용하여 소스 데이터를 적절한 스키마 필드에 매핑합니다.  자세한 내용은 UI의 [매핑 가이드](../../../../../data-prep/ui/mapping.md)를 참조하십시오.
+
+![모세관에 대한 매핑 인터페이스입니다.](../../../../images/tutorials/create/capillary/mappings.png)
+
+## 검토
+
+*[!UICONTROL 검토]* 단계가 표시되어 데이터 흐름을 만들기 전에 세부 사항을 검토할 수 있습니다. 세부 사항은 다음 범주 내에서 그룹화됩니다.
+
+* **[!UICONTROL 연결]**: 계정 이름, 원본 플랫폼 및 원본 이름을 표시합니다.
+* **[!UICONTROL 데이터 집합 및 맵 필드 할당]**: 대상 데이터 집합과 데이터 집합이 준수하는 스키마를 표시합니다.
+
+세부 정보가 올바른지 확인한 후 **[!UICONTROL 마침]**&#x200B;을 선택합니다.
+
+![소스 워크플로의 검토 단계입니다.](../../../../images/tutorials/create/capillary/review.png)
+
+## 스트리밍 끝점 URL 검색
+
+연결이 생성되면 소스 세부 정보 페이지가 나타납니다. 이 페이지에는 이전에 실행한 데이터 흐름, ID 및 스트리밍 끝점 URL을 포함하여 새로 생성된 연결의 세부 정보가 표시됩니다.
+
+![스트리밍 끝점 URL입니다.](../../../../images/tutorials/create/capillary/endpoint-url.png)
