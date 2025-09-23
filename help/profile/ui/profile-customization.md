@@ -3,9 +3,9 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;사용자 인
 title: UI의 프로필 세부 정보 사용자 정의
 description: 이 안내서는 Adobe Experience Platform UI 내에서 실시간 고객 프로필 데이터가 표시되는 방식을 맞춤화하기 위한 단계별 지침을 제공합니다.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e253be0c4e02b82bfc8926ac4531589782b9c8fe
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1368'
 ht-degree: 0%
 
 ---
@@ -28,8 +28,6 @@ Adobe Experience Platform 사용자 인터페이스에서 [!DNL Real-Time Custom
 
 선택한 카드가 원하는 크기로 조정되고 주변 카드가 동적으로 재배치됩니다. 이로 인해 일부 카드가 추가 행으로 이동되어 모든 카드를 보려면 아래로 스크롤해야 할 수 있습니다. 예를 들어 &quot;[!UICONTROL 기본 특성]&quot; 카드 크기가 조정되면 &quot;[!UICONTROL 연결된 ID]&quot; 카드는 더 이상 맨 위 행에 표시되지 않고 이제 프로필 내의 새 두 번째 행에 표시됩니다(표시되지 않음). 맨 위 행에 &quot;[!UICONTROL 연결된 ID]&quot; 카드를 반환하려면 &quot;[!UICONTROL 채널 환경 설정]&quot; 카드의 현재 위치로 끌어다 놓을 수 있습니다.
 
-![크기가 조정된 카드가 강조 표시되어 있습니다.](../images/profile-customization/resized.png)
-
 ## 카드 편집 및 제거
 
 카드 크기 조정 및 재정렬 외에도 특정 카드의 내용을 편집하고 대시보드에서 일부 카드를 완전히 제거할 수 있습니다. 카드의 오른쪽 상단 모서리에서 줄임표(`...`)를 선택하여 편집하거나 제거합니다. 그러면 선택한 카드의 속성에 따라 카드를 편집하거나 제거할 수 있는 옵션이 있는 드롭다운이 열립니다.
@@ -50,7 +48,7 @@ Adobe Experience Platform 사용자 인터페이스에서 [!DNL Real-Time Custom
 
 ![기본 특성 카드에 특성 추가 단추가 강조 표시됩니다.](../images/profile-customization/add-attributes.png)
 
-**[!UICONTROL 유니온 스키마 필드 선택]** 대화 상자가 열리면 대화 상자의 왼쪽에 전체 [!UICONTROL XDM 개별 프로필] 유니온 스키마가 표시되고 아래에 필드가 중첩됩니다. 유니온 스키마에 대한 자세한 내용은  [!DNL Profile] 사용 안내서[&#128279;](user-guide.md#union-schema)의 유니온 스키마 섹션을 참조하십시오.
+**[!UICONTROL 유니온 스키마 필드 선택]** 대화 상자가 열리면 대화 상자의 왼쪽에 전체 [!UICONTROL XDM 개별 프로필] 유니온 스키마가 표시되고 아래에 필드가 중첩됩니다. 유니온 스키마에 대한 자세한 내용은 [사용 안내서 [!DNL Profile] 의 ](user-guide.md#union-schema)유니온 스키마 섹션을 참조하십시오.
 
 대화 상자 오른쪽의 **[!UICONTROL 선택한 특성]** 섹션에는 편집 중인 카드에 현재 포함된 특성이 표시됩니다. 여기에서 속성을 제거하고 순서를 변경할 수도 있습니다. 선택된 총 속성 수와 단일 카드에 추가할 수 있는 최대 속성 수(20개)가 표시됩니다.
 
@@ -69,8 +67,6 @@ Adobe Experience Platform 사용자 인터페이스에서 [!DNL Real-Time Custom
 ![새로 추가된 특성이 편집된 카드에 표시됩니다.](../images/profile-customization/new-attributes.png)
 
 저장한 후 업데이트된 카드 및 특성이 표시되는 **[!UICONTROL 세부 정보]** 탭으로 돌아갑니다.
-
-![새로 추가된 특성이 프로필 대시보드 내 카드에 표시됩니다.](../images/profile-customization/added-attributes.png)
 
 ## 새 카드 추가 {#add-a-new-card}
 
@@ -99,8 +95,6 @@ Experience Platform 내의 프로필 모양을 추가로 사용자 정의하려�
 ![위젯 편집 화면에서 새 위젯을 미리 봅니다.](../images/profile-customization/new-widget.png)
 
 저장한 후 새 카드 및 특성이 표시되는 **[!UICONTROL 세부 정보]** 탭으로 돌아갑니다.
-
-![새 위젯이 프로필 대시보드에 추가되었습니다.](../images/profile-customization/added-widget.png)
 
 ## 기본 카드 복원
 
