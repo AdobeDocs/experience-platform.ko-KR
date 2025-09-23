@@ -4,10 +4,10 @@ title: 경고 UI 안내서
 description: Experience Platform 사용자 인터페이스에서 경고를 관리하는 방법을 알아봅니다.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 57261ca37bf10e394f47ea4bb3c01856a18b197d
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 7%
+source-wordcount: '814'
+ht-degree: 8%
 
 ---
 
@@ -96,10 +96,12 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 Adobe Experi
 | 대상 플로우 실행 지연 | 지연 임계값 |
 | ID 서비스 흐름 실행 지연 | 지연 임계값 |
 | 프로필 흐름 실행 지연 | 지연 임계값 |
+| 프로필 스트리밍 수집 실패율 초과됨 | 오류 임계값 |
+| 프로필 스트리밍 수집 건너뛰기 비율 초과 | 오류 임계값 |
 | 소스 흐름 실행 지연 | 지연 임계값 |
+| 소스 수집 오류율 초과됨 | 오류 임계값 |
 | 쿼리 실행 지연 | 지연 임계값 |
 | 활성화 건너뛰기 비율 초과됨 | 오류 임계값 |
-| 소스 수집 오류율 초과됨 | 오류 임계값 |
 
 규칙 이름 옆의 생략 부호(**...**)를 선택하면 드롭다운에 컨트롤이 표시됩니다. **[!UICONTROL 편집]**&#x200B;을 선택합니다.
 
