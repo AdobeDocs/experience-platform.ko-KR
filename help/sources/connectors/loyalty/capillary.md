@@ -1,16 +1,21 @@
 ---
 title: 모세관 스트리밍 이벤트 개요
 description: Capillary에서 Experience Platform으로 데이터를 스트리밍하는 방법에 대해 알아봅니다.
-hide: true
-hidefromtoc: true
-source-git-commit: 7b733831932c48240340b0a2136e15f5d2144635
+last-substantial-update: 2025-09-23T00:00:00Z
+badge: Beta
+exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '295'
 ht-degree: 4%
 
 ---
 
 # [!DNL Capillary Streaming Events]
+
+>[!AVAILABILITY]
+>
+>[!DNL Capillary Streaming Events] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 소스 개요에서 [약관](../../home.md#terms-and-conditions)을 참조하십시오.
 
 [!DNL Capillary Technologies]은(는) 전 세계 300개 이상의 브랜드에서 신뢰하는 선도적인 충성도 및 참여 플랫폼입니다. 비즈니스에서 [!DNL Capillary Streaming Events]의 고객 프로필, 충성도 데이터 및 트랜잭션 이벤트를 Adobe Experience Platform으로 원활하게 스트리밍할 수 있도록 하려면 [!DNL Capillary] 소스를 사용하십시오. [!DNL Capillary] 소스를 연결하여 실시간 개인화, 고급 대상자 세분화 및 옴니채널 캠페인 오케스트레이션을 사용할 수 있습니다.
 

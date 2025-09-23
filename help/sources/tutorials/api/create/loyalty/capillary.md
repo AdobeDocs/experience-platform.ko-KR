@@ -1,16 +1,20 @@
 ---
 title: 흐름 서비스 API를 사용하여 Capillary를 Experience Platform에 연결
 description: API를 사용하여 Capillary를 Experience Platform에 연결하는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
-source-git-commit: 7119ca51e0a4db09c8adb68bcde41ab3837439d1
+badge: Beta
+exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 1%
+source-wordcount: '1150'
+ht-degree: 2%
 
 ---
 
 # [!DNL Capillary Streaming Events] API를 사용하여 [!DNL Flow Service]을(를) Experience Platform에 연결
+
+>[!AVAILABILITY]
+>
+>[!DNL Capillary Streaming Events] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 소스 개요에서 [약관](../../../../home.md#terms-and-conditions)을 참조하십시오.
 
 [!DNL Capillary Streaming Events] 및 [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Capillary] 계정의 데이터를 Adobe Experience Platform으로 스트리밍하는 방법에 대해 알아보려면 이 안내서를 읽어 보십시오.
 
@@ -230,9 +234,9 @@ curl -X POST \
 
 >[!ENDTABS]
 
-### 지원되는 이벤트
+<!--### Supported Events
 
-[!DNL Capillary] 원본은 다음 이벤트를 지원합니다.
+The [!DNL Capillary] source supports the following events:
 
 * `pointsIssued`
 * `tierDowngraded`
@@ -247,8 +251,7 @@ curl -X POST \
 * `pointsRedeemed`
 * `transactionAdded`
 * `tierRenewed`
-* `customerUpdated`
-
+* `customerUpdated`-->
 
 ### 이전 데이터 마이그레이션
 
@@ -319,11 +322,15 @@ curl -X POST \
 
 | 소스 스키마 | 대상 스키마 |
 |------------------------------|-------------------------------|
-| `identityMap.email.id` | `xdm:identityMap.email` |
-| `loyalty.points` | `xdm:loyaltyPoints` |
-| `loyalty.tier` | `xdm:loyaltyTier` |
+| `identityMap.email.id` | `xdm:identityMap.email[0].id` |
+| `loyalty.points` | `xdm:loyalty.points` |
+| `loyalty.tier` | `xdm:loyalty.tier` |
 | `commerce.order.priceTotal` | `xdm:commerce.order.priceTotal` |
 | `productLineItems.SKU` | `xdm:productListItems.SKU` |
+
+>[!TIP]
+>
+>데이터를 매핑할 준비가 되면 [ 및 ](../../../../images/tutorials/create/capillary/mappings.zip)데이터 준비로 파일 가져오기[!DNL Capillary]에 대한 [이벤트 및 프로필 매핑](../../../../../data-prep/ui/mapping.md#import-mapping)을 다운로드할 수 있습니다.
 
 ### 데이터 흐름 만들기 {#flow}
 
