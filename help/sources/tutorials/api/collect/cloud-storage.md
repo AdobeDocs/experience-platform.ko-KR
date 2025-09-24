@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 클라우드 스토리지 소스에 
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 서드파티 클라우드 스토리지에서 데이터를 검색하고 Experience Platform으로 가져오는 단계를 다룹니다.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1834'
 ht-degree: 2%
 
 ---
@@ -101,7 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | (선택 사항) 수집을 위한 압축 파일 유형을 정의하는 속성입니다. 지원되는 압축 파일 형식은 `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` 및 `tar`입니다. **참고**: `compressionType` 속성은 구분된 파일 또는 JSON 파일을 수집할 때만 사용할 수 있습니다. |
 | `params.path` | 액세스 중인 소스 파일의 경로입니다. 이 매개 변수는 개별 파일 또는 전체 폴더를 가리킵니다.  **참고**: 파일 이름 대신 별표를 사용하여 전체 폴더의 수집을 지정할 수 있습니다. 예를 들어 `/acme/summerCampaign/*.csv`은(는) 전체 `/acme/summerCampaign/` 폴더를 수집합니다. |
 | `params.type` | 수집 중인 소스 데이터 파일의 파일 유형입니다. `file` 형식을 사용하여 개별 파일을 수집하고 `folder` 형식을 사용하여 전체 폴더를 수집합니다. |
-| `params.cdcEnabled` | 변경 내역 캡처를 사용할지 여부를 나타내는 부울 값입니다. 이 속성은 다음 클라우드 스토리지 소스에서 지원됩니다. <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul> 자세한 내용은 [소스에서 데이터 캡처 변경](../change-data-capture.md)을 사용하는 방법에 대한 안내서를 참조하십시오. |
+| `params.cdcEnabled` | 변경 내역 캡처를 사용할지 여부를 나타내는 부울 값입니다. 모델 기반 스키마와 함께 사용하는 경우 변경 데이터 캡처는 수집 중에 평가되지만 대상 스키마에 저장되지 않는 `_change_request_type` 제어 열(`u` — 업데이트, `d` — 삭제)을 사용합니다. 이 속성은 다음 클라우드 스토리지 소스에서 지원됩니다. <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>이 기능에 대한 개요는 [Data Mirror 개요](../../../../xdm/data-mirror/overview.md)를 참조하십시오. 구현 세부 정보는 [소스에서 데이터 캡처 변경](../change-data-capture.md) 사용 및 [모델 기반 스키마 기술 참조](../../../../xdm/schema/model-based.md)에 대한 안내서를 참조하십시오. |
 | `connectionSpec.id` | 특정 클라우드 스토리지 소스와 연결된 연결 사양 ID입니다. 연결 사양 ID 목록은 [부록](#appendix)을 참조하십시오. |
 
 **응답**

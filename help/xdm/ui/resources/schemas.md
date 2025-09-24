@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법의 기본 사항에 대해 알아봅니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0b03a8873f828faef78e5bf0b66c9773fc693206
+source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
 workflow-type: tm+mt
-source-wordcount: '4178'
-ht-degree: 2%
+source-wordcount: '4873'
+ht-degree: 1%
 
 ---
 
@@ -27,15 +27,96 @@ ht-degree: 2%
 
 ## 새 스키마 만들기 {#create}
 
+[!UICONTROL 스키마] 작업 영역의 오른쪽 상단에서 **[!UICONTROL 스키마 만들기]**&#x200B;를 선택합니다. &#39;스키마 유형 선택&#39; 드롭다운 메뉴가 [!UICONTROL 표준] 또는 [!UICONTROL 모델 기반] 스키마에 대한 옵션과 함께 표시됩니다.
+
+![스키마 작업 영역 [!UICONTROL 스키마 만들기]가 강조 표시되고 &#39;스키마 유형 선택&#39; 드롭다운이 표시됨](../../images/ui/resources/schemas/create-schema.png).
+
+## 모델 기반 스키마 만들기 {#create-model-based-schema}
+
+>[!AVAILABILITY]
+>
+>Adobe Journey Optimizer **오케스트레이션된 캠페인** 라이선스 소유자는 Data Mirror 및 모델 기반 스키마를 사용할 수 있습니다. 또한 라이선스 및 기능 활성화에 따라 Customer Journey Analytics 사용자를 위한 **제한된 릴리스**(으)로도 사용할 수 있습니다. 액세스하려면 Adobe 담당자에게 문의하십시오.
+
+**[!UICONTROL 모델 기반]**&#x200B;을(를) 선택하여 레코드에 대한 세분화된 제어를 사용하는 구조화된 모델 기반 스타일 스키마를 정의합니다. 모델 기반 스키마는 기본 키 적용, 레코드 수준 버전 관리 및 기본 키와 외래 키를 통한 스키마 수준 관계를 지원합니다. 또한 변경 데이터 캡처를 사용하는 증분 수집에 최적화되어 있으며 Campaign Orchestration, Data Distiller 및 B2B 구현에 사용되는 여러 데이터 모델을 지원합니다.
+
+자세한 내용은 [Data Mirror](../../data-mirror/overview.md) 또는 [모델 기반 스키마](../../schema/model-based.md) 개요를 참조하십시오.
+
+### 수동으로 생성 {#create-manually}
+
+>[!AVAILABILITY]
+>
+>DDL 파일 업로드는 Adobe Journey Optimizer Orchestrated 캠페인 라이선스 소유자만 사용할 수 있습니다. UI가 다르게 표시될 수 있습니다.
+
+**[!UICONTROL 모델 기반 스키마 만들기]** 대화 상자가 나타납니다. **[!UICONTROL 수동으로 만들기]** 또는 [**[!UICONTROL DDL 파일 업로드]**](#upload-ddl-file)를 선택하여 스키마 구조를 정의할 수 있습니다.
+
+**[!UICONTROL 모델 기반 스키마 만들기]** 대화 상자에서 **[!UICONTROL 수동으로 만들기]**&#x200B;를 선택한 후 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+
+![모델 기반 스키마 만들기 대화 상자에서 [수동으로 만들기]를 선택하고 [다음]을 선택합니다.](../../images/ui/resources/schemas/relational-dialog.png)
+
+**[!UICONTROL 모델 기반 스키마 세부 정보]** 페이지가 나타납니다. 스키마 표시 이름과 선택적 설명을 입력한 다음 **[!UICONTROL 완료]**&#x200B;를 선택하여 스키마를 만듭니다.
+
+![[!UICONTROL 스키마 표시 이름], [!UICONTROL 설명] 및 [!UICONTROL 마침]이 강조 표시된 모델 기반 스키마 세부 정보 보기입니다.](../../images/ui/resources/schemas/relational-details.png)
+
+스키마 편집기가 열리고 스키마 구조를 정의하기 위한 빈 캔버스가 표시됩니다. 평소대로 필드를 추가할 수 있습니다.
+
+#### 버전 식별자 필드 추가 {#add-version-identifier}
+
+버전 추적을 활성화하고 변경 데이터 캡처를 지원하려면 스키마에 버전 식별자 필드를 지정해야 합니다. 스키마 편집기에서 더하기(![A 더하기 아이콘)를 선택합니다.](/help/images/icons/plus.png)) 아이콘을 사용하여 스키마 이름 옆에 새 필드를 추가할 수 있습니다.
+
+`updateSequence`과(와) 같은 필드 이름을 입력하고 **[!UICONTROL DateTime]** 또는 **[!UICONTROL Number]**&#x200B;의 데이터 형식을 선택하십시오.
+
+오른쪽 레일에서 **[!UICONTROL 버전 식별자]** 확인란을 활성화한 다음 **[!UICONTROL 적용]**&#x200B;을 선택하여 필드를 확인합니다.
+
+![이름이 `updateSequence`인 DateTime 필드가 추가되고 버전 식별자 확인란이 선택된 스키마 편집기.](../../images/ui/resources/schemas/add-version-identifier.png)
+
+>[!IMPORTANT]
+>
+>모델 기반 스키마에는 레코드 수준 업데이트를 지원하고 데이터 캡처 수집을 변경하려면 버전 식별자 필드가 포함되어야 합니다.
+
+관계를 정의하려면 스키마 편집기에서 **[!UICONTROL 관계 추가]**&#x200B;를 선택하여 스키마 수준 기본/외래 키 관계를 만듭니다. 자세한 내용은 [스키마 수준 관계 추가](../../tutorials/relationship-ui.md#relationship-field)에 대한 자습서를 참조하십시오.
+
+그런 다음 [기본 키를 정의](../fields/identity.md#define-a-identity-field)하고 필요에 따라 [추가 필드를 추가](#add-field-groups)합니다. Experience Platform 소스에서 변경 데이터 캡처를 활성화하는 방법에 대한 지침은 [변경 데이터 캡처 수집 안내서](../../../sources/tutorials/api/change-data-capture.md)를 참조하십시오.
+
 >[!NOTE]
 >
->이 섹션에서는 UI에서 새 스키마를 수동으로 만드는 방법을 다룹니다. CSV 데이터를 Experience Platform으로 수집하는 경우 ML(기계 학습) 알고리즘을 사용하여 **샘플 CSV 데이터에서 스키마를 생성**&#x200B;할 수 있습니다. 이 워크플로는 데이터 형식과 일치하며 CSV 파일의 구조 및 콘텐츠를 기반으로 새 스키마를 자동으로 만듭니다. 이 워크플로에 대한 자세한 내용은 [ML 지원 스키마 만들기 안내서](../ml-assisted-schema-creation.md)를 참조하십시오.
+>저장되면 [!UICONTROL  스키마 속성] 사이드바의 [!UICONTROL Type] 필드가 [!UICONTROL 모델 기반] 스키마임을 나타냅니다. 스키마 인벤토리 보기의 세부 정보 사이드바에도 표시됩니다.
+>>![모델 기반 형식이 강조 표시된 빈 모델 기반 스키마 구조를 보여 주는 스키마 편집기 캔버스입니다.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
-[!UICONTROL 스키마] 작업 영역의 오른쪽 상단에서 **[!UICONTROL 스키마 만들기]**&#x200B;를 선택합니다.
+### DDL 파일 업로드 {#upload-ddl-file}
 
-![[!UICONTROL 스키마 만들기]가 강조 표시된 스키마 작업 영역](../../images/ui/resources/schemas/create-schema.png)
+>[!AVAILABILITY]
+>
+>DDL 파일 업로드는 Adobe Journey Optimizer Orchestrated 캠페인 라이선스 소유자만 사용할 수 있습니다.
 
-[!UICONTROL 스키마 만들기] 대화 상자가 나타납니다. 이 대화 상자에서 필드와 필드 그룹을 추가하여 스키마를 수동으로 만들도록 선택하거나 CSV 파일을 업로드하고 ML 알고리즘을 사용하여 스키마를 생성할 수 있습니다. 대화 상자에서 스키마 생성 워크플로우를 선택합니다.
+이 워크플로우를 사용하여 DDL 파일을 업로드하여 스키마를 정의합니다. **[!UICONTROL 모델 기반 스키마 만들기]** 대화 상자에서 **[!UICONTROL DDL 파일 업로드]**&#x200B;를 선택한 다음 시스템에서 로컬 DDL 파일을 끌어 놓거나 **[!UICONTROL 파일 선택]**&#x200B;을 선택합니다. Experience Platform은 스키마를 확인하고 파일 업로드가 성공하면 녹색 확인 표시를 표시합니다. 업로드를 확인하려면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+
+![모델 기반 스키마 만들기 대화 상자에서 [!UICONTROL DDL 파일 업로드]를 선택하고 [!UICONTROL 다음]을 강조 표시했습니다.](../../images/ui/resources/schemas/upload-ddl-file.png)
+
+스키마를 미리 볼 수 있는 [!UICONTROL 가져올 엔터티 및 필드 선택] 대화 상자가 나타납니다. 스키마 구조를 검토하고 라디오 버튼과 확인란을 사용하여 각 엔티티에 지정된 기본 키와 버전 식별자가 있는지 확인합니다.
+
+>[!IMPORTANT]
+>
+>테이블 구조에는 **기본 키** 및 **버전 식별자**&#x200B;이(가) 있어야 합니다(예: datetime 또는 number 유형의 `updateSequence` 필드).
+>
+>변경 데이터 캡처 수집의 경우 증분 처리를 사용하려면 String 유형의 이름이 `_change_request_type`인 특수 열도 필요합니다. 이 필드는 데이터 변경 유형을 나타냅니다(예: `u`(업데이트) 또는 `d`(삭제)).
+
+수집 중에 필요하지만 `_change_request_type`과(와) 같은 컨트롤 열은 스키마에 저장되지 않으며 최종 스키마 구조에 나타나지 않습니다. 모든 항목이 올바르게 표시되면 **[!UICONTROL 완료]**&#x200B;를 선택하여 스키마를 만드십시오.
+
+>[!NOTE]
+>
+>DDL 업로드에 지원되는 최대 파일 크기는 10MB입니다.
+
+![가져온 필드가 표시되고 [!UICONTROL 마침]이 강조 표시된 모델 기반 스키마 검토 보기입니다.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
+
+스키마는 스키마 편집기에서 열리며, 저장하기 전에 구조를 조정할 수 있습니다.
+
+그런 다음 필요에 따라 [추가 필드를 추가](#add-field-groups)하고 [스키마 수준 관계를 추가](../../tutorials/relationship-ui.md#relationship-field)합니다.
+
+Experience Platform 소스에서 변경 데이터 캡처를 활성화하는 방법에 대한 지침은 [변경 데이터 캡처 수집 안내서](../../../sources/tutorials/api/change-data-capture.md)를 참조하십시오.
+
+## 표준 스키마 생성 {#standard-based-creation}
+
+&#39;스키마 유형 선택&#39; 드롭다운 메뉴에서 &#39;표준 스키마 유형&#39;을 선택하면 [!UICONTROL 스키마 만들기] 대화 상자가 나타납니다. 이 대화 상자에서 필드와 필드 그룹을 추가하여 스키마를 수동으로 만들도록 선택하거나 CSV 파일을 업로드하고 ML 알고리즘을 사용하여 스키마를 생성할 수 있습니다. 대화 상자에서 스키마 생성 워크플로우를 선택합니다.
 
 ![워크플로 옵션이 있는 스키마 만들기 대화 상자 및 강조 표시된 항목을 선택합니다.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
@@ -73,7 +154,7 @@ ML 알고리즘을 사용하여 csv 파일을 기반으로 스키마 구조를 �
 
 텍스트 필드에 사용자에게 친숙한 [!UICONTROL 스키마 표시 이름]을(를) 입력하십시오. 그런 다음 스키마를 식별하는 데 도움이 되는 적절한 설명을 입력합니다. 스키마 구조를 검토하고 설정이 마음에 들면 **[!UICONTROL 완료]**&#x200B;를 선택하여 스키마를 만듭니다.
 
-![스키마 표시 이름[!UICONTROL , &#x200B;]설명[!UICONTROL &#x200B; 및 &#x200B;]마침[!UICONTROL 이 강조 표시된 &#x200B;]스키마 만들기[!UICONTROL &#x200B; 워크플로의 &#x200B;]이름 및 검토[!UICONTROL &#x200B; 섹션.]](../../images/ui/resources/schemas/name-and-review.png)
+![스키마 표시 이름[!UICONTROL , ]설명[!UICONTROL  및 ]마침[!UICONTROL 이 강조 표시된 ]스키마 만들기[!UICONTROL  워크플로의 ]이름 및 검토[!UICONTROL  섹션.]](../../images/ui/resources/schemas/name-and-review.png)
 
 스키마 구조가 캔버스에 표시된 스키마 편집기가 나타납니다. 원하는 경우 이제 [클래스에 필드를 추가](../../ui/resources/classes.md#add-fields)할 수 있습니다.
 
@@ -111,7 +192,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 >
 >필드 이름에서 표시 이름으로의 변경은 순전히 외형적이며 다운스트림 리소스를 변경하지 않습니다.
 
-![필드 표시 이름 표시[!UICONTROL 가 강조 표시된 스키마 편집기 &#x200B;]입니다.](../../images/ui/resources/schemas/display-name-toggle.png)
+![필드 표시 이름 표시[!UICONTROL 가 강조 표시된 스키마 편집기 ]입니다.](../../images/ui/resources/schemas/display-name-toggle.png)
 
 표준 필드 그룹의 표시 이름은 시스템에서 생성되지만 [표시 이름](#display-names) 섹션에 설명된 대로 사용자 지정할 수 있습니다. 표시 이름은 매핑 및 데이터 세트 미리보기를 비롯한 여러 UI 보기에 반영됩니다. 기본 설정은 꺼져 있으며 필드 이름을 원래 값으로 표시합니다.
 
@@ -123,7 +204,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 [!DNL Schema Editor] 내에서 스키마를 열면 필드 그룹을 사용하여 스키마에 필드를 추가할 수 있습니다. 시작하려면 왼쪽 레일에서 **[!UICONTROL 필드 그룹]** 옆에 있는 **[!UICONTROL 추가]**&#x200B;를 선택하십시오.
 
-![필드 그룹[!UICONTROL &#x200B; 섹션의 &#x200B;]추가[!UICONTROL 가 강조 표시된 스키마 편집기.]](../../images/ui/resources/schemas/add-field-group-button.png)
+![필드 그룹[!UICONTROL  섹션의 ]추가[!UICONTROL 가 강조 표시된 스키마 편집기.]](../../images/ui/resources/schemas/add-field-group-button.png)
 
 스키마에 대해 선택할 수 있는 필드 그룹 목록을 표시하는 대화 상자가 나타납니다. 필드 그룹은 하나의 클래스와만 호환되므로 스키마의 선택한 클래스와 연결된 필드 그룹만 나열됩니다. 기본적으로 나열된 필드 그룹은 조직 내에서 사용 인기에 따라 정렬됩니다.
 
@@ -131,7 +212,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 추가할 필드의 일반 활동 또는 비즈니스 영역을 알고 있는 경우 왼쪽 레일에서 하나 이상의 수직 범주를 선택하여 표시된 필드 그룹 목록을 필터링합니다.
 
-![필드 그룹 추가[!UICONTROL &#x200B; 대화 상자는 &#x200B;]산업[!UICONTROL &#x200B; 필터 및 &#x200B;]산업[!UICONTROL &#x200B; 열을 강조 표시하며 강조 표시되었습니다.]](../../images/ui/resources/schemas/industry-filter.png)
+![필드 그룹 추가[!UICONTROL  대화 상자는 ]산업[!UICONTROL  필터 및 ]산업[!UICONTROL  열을 강조 표시하며 강조 표시되었습니다.]](../../images/ui/resources/schemas/industry-filter.png)
 
 >[!NOTE]
 >
@@ -139,7 +220,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 검색 창을 사용하여 원하는 필드 그룹을 찾을 수도 있습니다. 쿼리와 이름이 일치하는 필드 그룹이 목록 맨 위에 나타납니다. **[!UICONTROL 표준 필드]** 아래에 원하는 데이터 특성을 설명하는 필드가 포함된 필드 그룹이 표시됩니다.
 
-![필드 그룹 추가[!UICONTROL &#x200B; 대화 상자에 &#x200B;]표준 필드[!UICONTROL &#x200B; 검색 기능이 강조 표시되어 있습니다.]](../../images/ui/resources/schemas/field-group-search.png)
+![필드 그룹 추가[!UICONTROL  대화 상자에 ]표준 필드[!UICONTROL  검색 기능이 강조 표시되어 있습니다.]](../../images/ui/resources/schemas/field-group-search.png)
 
 스키마에 추가하려는 필드 그룹의 이름 옆에 있는 확인란을 선택합니다. 목록에서 여러 필드 그룹을 선택할 수 있으며, 선택한 각 필드 그룹이 오른쪽 레일에 표시됩니다.
 
@@ -172,11 +253,11 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 >[!IMPORTANT]
 >
 >**[!UICONTROL 제거]**&#x200B;를 선택하면 필드 그룹 자체에서 필드가 삭제되어 해당 필드 그룹을 사용하는 *모든* 스키마에 영향을 줍니다.
->&#x200B;>**필드 그룹을 포함하는 모든 스키마에서 필드를 제거**&#x200B;하려는 경우가 아니면 이 옵션을 사용하지 마십시오.
+>>**필드 그룹을 포함하는 모든 스키마에서 필드를 제거**&#x200B;하려는 경우가 아니면 이 옵션을 사용하지 마십시오.
 
 필드 그룹에서 필드를 삭제하려면 캔버스에서 필드를 선택하고 오른쪽 레일에서 **[!UICONTROL 제거]**&#x200B;를 선택합니다. 이 예제에서는 `taxId`인구 통계 세부 정보&#x200B;**[!UICONTROL 그룹의]** 필드를 보여줍니다.
 
-![강조 표시된 [!DNL Schema Editor]제거[!UICONTROL 의 &#x200B;]. 이 작업은 단일 필드를 제거합니다.](../../images/ui/resources/schemas/remove-single-field.png)
+![강조 표시된 [!DNL Schema Editor]제거[!UICONTROL 의 ]. 이 작업은 단일 필드를 제거합니다.](../../images/ui/resources/schemas/remove-single-field.png)
 
 필드 그룹 자체에서 제거하지 않고 스키마에서 여러 필드를 숨기려면 **[!UICONTROL 관련 필드 관리]** 옵션을 사용합니다. 캔버스의 그룹에서 필드를 선택한 다음 오른쪽 레일에서 **[!UICONTROL 관련 필드 관리]**&#x200B;를 선택합니다.
 

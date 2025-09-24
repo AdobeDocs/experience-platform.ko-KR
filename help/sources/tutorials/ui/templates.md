@@ -3,9 +3,9 @@ description: Adobe Experience Platform UI에서 템플릿을 사용하여 B2B �
 title: UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '2250'
+source-wordcount: '2314'
 ht-degree: 10%
 
 ---
@@ -51,7 +51,7 @@ Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 �
 >id="platform_sources_templates_accounttype"
 >title="비즈니스 유형 선택"
 >abstract="사용 사례에 적합한 비즈니스 유형을 선택합니다. 액세스 권한은 Real-Time Customer Data Platform 구독 계정에 따라 달라질 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko" text="Real-Time CDP 개요"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP 개요"
 
 Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스하고 Experience Platform에서 사용할 수 있는 소스 카탈로그를 확인합니다.
 
@@ -65,6 +65,12 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 * **템플릿 찾아보기**: 소스 템플릿은 매핑 규칙을 사용하여 스키마, ID, 데이터 세트 및 데이터 흐름을 자동으로 만듭니다. 필요에 따라 이러한 에셋을 사용자 정의할 수 있습니다.
 * **기존 에셋 사용**: 생성한 기존 데이터 세트와 스키마를 사용하여 데이터를 수집합니다. 필요한 경우 새 데이터 세트와 스키마를 만들 수도 있습니다.
+
+>[!NOTE]
+>
+>변경 데이터 캡처 워크플로우가 필요하거나 여러 데이터 모델을 지원하는 소스로 작업할 때 템플릿에서 모델 기반 스키마를 자동으로 생성할 수 있습니다. 이러한 스키마를 사용하면 실시간 데이터 동기화를 위한 Data Mirror 기능을 사용할 수 있습니다.\
+>모델 기반 스키마와 함께 템플릿을 사용하는 경우 자동 생성된 에셋에 필수 기본 키, 버전 식별자 및 타임스탬프 식별자 필드가 포함됩니다.\
+>자세한 내용은 [Data Mirror 개요](../../../xdm/data-mirror/overview.md) 및 [모델 기반 스키마 기술 참조](../../../xdm/schema/model-based.md)를 참조하십시오.
 
 자동 생성된 에셋을 사용하려면 **[!UICONTROL 템플릿 찾아보기]**&#x200B;를 선택한 다음 **[!UICONTROL 선택]**&#x200B;을 선택하십시오.
 

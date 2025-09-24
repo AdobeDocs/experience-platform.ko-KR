@@ -4,26 +4,41 @@ solution: Experience Platform
 title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 끝점을 사용하면 경험 애플리케이션 내에서 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: d6015125e3e29bdd6a6c505b5f5ad555bd17a0e0
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2888'
 ht-degree: 1%
 
 ---
 
 # 설명자 엔드포인트
 
-스키마는 데이터 엔티티의 정적 보기를 정의하지만 이러한 스키마를 기반으로 하는 데이터(예: 데이터 세트)가 서로 관련될 수 있는 방법에 대한 특정 세부 정보는 제공하지 않습니다. Adobe Experience Platform에서는 설명자를 사용하여 스키마에 대한 이러한 관계와 기타 해석적인 메타데이터를 설명할 수 있습니다.
+스키마는 데이터 엔티티의 구조를 정의하지만 이러한 스키마에서 생성된 데이터 세트가 서로 관련되는 방식은 지정하지 않습니다. Adobe Experience Platform에서는 설명자를 사용하여 이러한 관계를 설명하고 해석적 메타데이터를 스키마에 추가할 수 있습니다.
 
-스키마 설명자는 테넌트 수준의 메타데이터입니다. 즉, 조직에 고유하며 모든 설명자 작업이 테넌트 컨테이너에서 수행됩니다.
+설명자는 Adobe Experience Platform의 스키마에 적용되는 테넌트 수준의 메타데이터 개체입니다. 또한 구조적 관계, 키 및 데이터 유효성 검사, 결합 또는 해석 다운스트림에 영향을 주는 동작 필드(예: 타임스탬프 또는 버전 관리)를 정의합니다.
 
-각 스키마에는 하나 이상의 스키마 설명자 엔티티가 적용될 수 있습니다. 각 스키마 설명자 엔터티에는 설명자 `@type` 및 이 설명자가 적용되는 `sourceSchema`이(가) 포함되어 있습니다. 이 설명자가 적용되면 스키마를 사용하여 만든 모든 데이터 세트에 적용됩니다.
+스키마에는 하나 이상의 설명자가 있을 수 있습니다. 각 설명자는 `@type`과(와) 적용되는 `sourceSchema`을(를) 정의합니다. 설명자는 해당 스키마에서 생성된 모든 데이터 세트에 자동으로 적용됩니다.
 
-[!DNL Schema Registry] API의 `/descriptors` 끝점을 사용하면 경험 응용 프로그램 내의 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
+Adobe Experience Platform에서 설명자는 스키마에 동작 규칙 또는 구조적 의미를 추가하는 메타데이터입니다.
+설명자에는 다음과 같은 여러 유형이 있습니다.
 
-## 시작하기
+- [ID 설명자](#identity-descriptor) - 필드를 ID로 표시합니다.
+- [기본 키 설명자](#primary-key-descriptor) - 고유성을 적용합니다.
+- [관계 설명자](#relationship-descriptor) - 외래 키 조인 정의
+- [대체 표시 정보 설명자](#friendly-name) - UI의 필드 이름을 바꿀 수 있습니다.
+- [버전](#version-descriptor) 및 [타임스탬프](#timestamp-descriptor) 설명자 - 이벤트 순서 추적 및 변경 내용 검색
+
+`/descriptors` API의 [!DNL Schema Registry] 끝점을 사용하면 경험 응용 프로그램 내의 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
+
+## 시작
 
 이 가이드에 사용된 끝점은 [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
+
+[!DNL Schema Registry]은(는) 표준 설명자 외에도 모델 기반 스키마에 대한 설명자 형식(예: **기본 키**, **버전** 및 **타임스탬프**)을 지원합니다. 이러한 기능은 고유성을 적용하고 버전 관리를 제어하며 스키마 수준에서 시계열 필드를 정의합니다. 모델 기반 스키마에 익숙하지 않은 경우 계속하기 전에 [Data Mirror 개요](../data-mirror/overview.md) 및 [모델 기반 스키마 기술 참조](../schema/model-based.md)를 검토하십시오.
+
+>[!IMPORTANT]
+>
+>모든 설명자 유형에 대한 자세한 내용은 [부록](#defining-descriptors)을 참조하십시오.
 
 ## 설명자 목록 검색 {#list}
 
@@ -47,11 +62,11 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-응답 형식은 요청에서 보낸 `Accept` 헤더에 따라 다릅니다. `/descriptors` 끝점은 [!DNL Schema Registry] API의 다른 모든 끝점과 다른 `Accept` 헤더를 사용합니다.
+응답 형식은 요청에서 보낸 `Accept` 헤더에 따라 다릅니다. `/descriptors` 끝점은 `Accept` API의 다른 모든 끝점과 다른 [!DNL Schema Registry] 헤더를 사용합니다.
 
 >[!IMPORTANT]
 >
->설명자에는 `xed`을(를) `xdm`(으)로 바꾸고 설명자에 고유한 `link` 옵션을 제공하는 고유한 `Accept` 헤더가 필요합니다. 아래 예제 호출에 적절한 `Accept` 헤더가 포함되었지만 설명자로 작업할 때 올바른 헤더가 사용되고 있는지 각별히 주의하십시오.
+>설명자에는 `Accept`을(를) `xed`(으)로 바꾸고 설명자에 고유한 `xdm` 옵션을 제공하는 고유한 `link` 헤더가 필요합니다. 아래 예제 호출에 적절한 `Accept` 헤더가 포함되었지만 설명자로 작업할 때 올바른 헤더가 사용되고 있는지 각별히 주의하십시오.
 
 | `Accept` 헤더 | 설명 |
 | -------|------------ |
@@ -86,7 +101,7 @@ curl -X GET \
 
 ## 설명자 조회 {#lookup}
 
-특정 설명자에 대한 세부 정보를 보려면 해당 `@id`을(를) 사용하여 개별 설명자를 조회(GET)할 수 있습니다.
+특정 설명자의 세부 정보를 보려면 해당 `@id`을(를) 사용하여 GET 요청을 전송하십시오.
 
 **API 형식**
 
@@ -281,9 +296,9 @@ curl -X DELETE \
 
 성공적인 응답은 HTTP 상태 204(콘텐츠 없음) 및 빈 본문을 반환합니다.
 
-설명자가 삭제되었는지 확인하기 위해 설명자 `@id`에 대해 [조회 요청](#lookup)을 수행할 수 있습니다. 설명자가 [!DNL Schema Registry]에서 제거되었으므로 응답에서 HTTP 상태 404(찾을 수 없음)를 반환합니다.
+설명자가 삭제되었는지 확인하기 위해 설명자 [에 대해 ](#lookup)조회 요청`@id`을 수행할 수 있습니다. 설명자가 [!DNL Schema Registry]에서 제거되었으므로 응답에서 HTTP 상태 404(찾을 수 없음)를 반환합니다.
 
-## 부록
+## 부록 {#appendix}
 
 다음 섹션에서는 [!DNL Schema Registry] API의 설명자 작업에 대한 추가 정보를 제공합니다.
 
@@ -299,9 +314,9 @@ curl -X DELETE \
 >
 >시스템이 해당 샌드박스의 모든 사용자 정의 필드에 해당 레이블을 적용하므로 테넌트 네임스페이스 개체에 레이블을 지정할 수 없습니다. 대신 레이블을 지정해야 하는 개체 아래에 리프 노드를 지정해야 합니다.
 
-#### ID 설명자
+#### ID 설명자 {#identity-descriptor}
 
-ID 설명자는 &quot;[!UICONTROL sourceSchema]&quot;의 &quot;[!UICONTROL sourceProperty]&quot;이(가) [Adobe Experience Platform Identity Service](../../identity-service/home.md)에 설명된 [!DNL Identity] 필드임을 알립니다.
+ID 설명자는 &quot;[!UICONTROL sourceSchema]&quot;의 &quot;[!UICONTROL sourceProperty]&quot;이(가) [!DNL Identity]Experience Platform Identity Service[에 설명된 ](../../identity-service/home.md) 필드임을 알립니다.
 
 ```json
 {
@@ -323,7 +338,7 @@ ID 설명자는 &quot;[!UICONTROL sourceSchema]&quot;의 &quot;[!UICONTROL sourc
 | `xdm:sourceVersion` | 소스 스키마의 주 버전. |
 | `xdm:sourceProperty` | ID가 될 특정 속성에 대한 경로입니다. 경로는 &quot;/&quot;로 시작하고 1로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot; 사용). |
 | `xdm:namespace` | ID 네임스페이스의 `id` 또는 `code` 값입니다. [[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service)을(를) 사용하여 네임스페이스 목록을 찾을 수 있습니다. |
-| `xdm:property` | 사용된 `xdm:namespace`에 따라 `xdm:id` 또는 `xdm:code`입니다. |
+| `xdm:property` | 사용된 `xdm:id`에 따라 `xdm:code` 또는 `xdm:namespace`입니다. |
 | `xdm:isPrimary` | 선택적 부울 값입니다. true인 경우 는 필드를 기본 ID로 나타냅니다. 스키마에는 기본 ID가 하나만 포함될 수 있습니다. |
 
 {style="table-layout:auto"}
@@ -361,7 +376,7 @@ ID 설명자는 &quot;[!UICONTROL sourceSchema]&quot;의 &quot;[!UICONTROL sourc
 | `@type` | 정의 중인 설명자 유형. 알기 쉬운 이름 설명자의 경우 이 값을 `xdm:alternateDisplayInfo`(으)로 설정해야 합니다. |
 | `xdm:sourceSchema` | 설명자가 정의되는 스키마의 `$id` URI입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 주 버전. |
-| `xdm:sourceProperty` | 세부 정보를 수정할 특정 속성의 경로입니다. 경로는 슬래시(`/`)로 시작하고 슬래시로 끝나지 않아야 합니다. 경로에 `properties`을(를) 포함하지 마십시오(예: `/properties/personalEmail/properties/address` 대신 `/personalEmail/address` 사용). |
+| `xdm:sourceProperty` | 세부 정보를 수정할 특정 속성의 경로입니다. 경로는 슬래시(`/`)로 시작하고 슬래시로 끝나지 않아야 합니다. 경로에 `properties`을(를) 포함하지 마십시오(예: `/personalEmail/address` 대신 `/properties/personalEmail/properties/address` 사용). |
 | `xdm:title` | 이 필드에 표시할 새 제목(제목 대/소문자로 작성됨)입니다. |
 | `xdm:description` | 제목과 함께 선택적 설명을 추가할 수 있습니다. |
 | `meta:enum` | `xdm:sourceProperty`에 표시된 필드가 문자열 필드인 경우 `meta:enum`을(를) 사용하여 세분화 UI에서 필드에 대해 제안된 값을 추가할 수 있습니다. `meta:enum`은(는) 열거형을 선언하거나 XDM 필드에 대한 데이터 유효성 검사를 제공하지 않습니다.<br><br>Adobe에서 정의한 코어 XDM 필드에만 사용해야 합니다. 소스 속성이 조직에서 정의한 사용자 지정 필드인 경우 대신 필드의 상위 리소스에 대한 PATCH 요청을 통해 직접 필드의 `meta:enum` 속성을 편집해야 합니다. |
@@ -371,21 +386,36 @@ ID 설명자는 &quot;[!UICONTROL sourceSchema]&quot;의 &quot;[!UICONTROL sourc
 
 #### 관계 설명자 {#relationship-descriptor}
 
-관계 설명자는 `sourceProperty` 및 `destinationProperty`에 설명된 속성을 기준으로 서로 다른 두 스키마 간의 관계를 설명합니다. 자세한 내용은 [두 스키마 간의 관계 정의](../tutorials/relationship-api.md)에 대한 자습서를 참조하십시오.
+관계 설명자는 `xdm:sourceProperty` 및 `xdm:destinationProperty`에 설명된 속성을 기준으로 서로 다른 두 스키마 간의 관계를 설명합니다. 자세한 내용은 [두 스키마 간의 관계 정의](../tutorials/relationship-api.md)에 대한 자습서를 참조하십시오.
+
+이러한 속성을 사용하여 원본 필드(외래 키)가 대상 필드([기본 키](#primary-key-descriptor) 또는 후보 키)와 관련되는 방식을 선언합니다.
+
+>[!TIP]
+>
+>**외래 키**&#x200B;은(는) 다른 스키마의 키 필드를 참조하는 원본 스키마(`xdm:sourceProperty`에 의해 정의됨)의 필드입니다. **후보 키**&#x200B;은(는) 레코드를 고유하게 식별하는 대상 스키마의 모든 필드(또는 필드 집합)이며 기본 키 대신 사용할 수 있습니다.
+
+API는 다음 두 가지 패턴을 지원합니다.
+
+- `xdm:descriptorOneToOne`: 표준 1:1 관계.
+- `xdm:descriptorRelationship`: 새 작업 및 모델 기반 스키마에 대한 일반 패턴(카디널리티, 이름 지정 및 기본 키 이외의 대상 지원).
+
+##### 일대일 관계(표준 스키마)
+
+이미 `xdm:descriptorOneToOne`에 의존하는 기존 표준 스키마 통합을 유지 관리할 때 사용합니다.
 
 ```json
 {
   "@type": "xdm:descriptorOneToOne",
-  "xdm:sourceSchema":
-    "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
   "xdm:sourceVersion": 1,
   "xdm:sourceProperty": "/parentField/subField",
-  "xdm:destinationSchema": 
-    "https://ns.adobe.com/{TENANT_ID}/schemas/78bab6346b9c5102b60591e15e75d254",
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
   "xdm:destinationVersion": 1,
   "xdm:destinationProperty": "/parentField/subField"
 }
 ```
+
+다음 표에서는 일대일 관계 설명자를 정의하는 데 필요한 필드를 설명합니다.
 
 | 속성 | 설명 |
 | --- | --- |
@@ -397,7 +427,143 @@ ID 설명자는 &quot;[!UICONTROL sourceSchema]&quot;의 &quot;[!UICONTROL sourc
 | `xdm:destinationVersion` | 참조 스키마의 주 버전. |
 | `xdm:destinationProperty` | (선택 사항) 참조 스키마 내의 대상 필드 경로입니다. 이 속성을 생략하면 일치하는 참조 ID 설명자가 포함된 모든 필드에서 대상 필드를 유추합니다(아래 참조). |
 
-{style="table-layout:auto"}
+##### 일반 관계(모델 기반 스키마 및 새 프로젝트에 권장)
+
+모든 새 구현 및 모델 기반 스키마에 이 설명자를 사용합니다. 이를 통해 관계의 카디널리티를 정의하고(일대일 또는 다대일 등), 관계 이름을 지정하고, 기본 키가 아닌 대상 필드에 연결할 수 있습니다(기본 키가 아님).
+
+다음 예는 일반적인 관계 설명자를 정의하는 방법을 보여줍니다.
+
+**최소 예:**
+
+이 최소 예에는 두 스키마 간의 다대일 관계를 정의하는 데 필요한 필드만 포함됩니다.
+
+```json
+{
+  "@type": "xdm:descriptorRelationship",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
+  "xdm:sourceProperty": "/customer_ref",
+  "xdm:sourceVersion": 1,
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
+  "xdm:cardinality": "M:1"
+}
+```
+
+**모든 선택적 필드가 있는 예제:**
+
+이 예에는 관계 이름, 표시 제목 및 명시적 기본이 아닌 키 대상 필드와 같은 모든 선택적 필드가 포함되어 있습니다.
+
+```json
+{
+  "@type": "xdm:descriptorRelationship",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/customer_ref",
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
+  "xdm:destinationProperty": "/customer_id",
+  "xdm:sourceToDestinationName": "CampaignToCustomer",
+  "xdm:destinationToSourceName": "CustomerToCampaign",
+  "xdm:sourceToDestinationTitle": "Customer campaigns",
+  "xdm:destinationToSourceTitle": "Campaign customers",
+  "xdm:cardinality": "M:1"
+}
+```
+
+##### 관계 설명자 선택
+
+적용할 관계 설명자를 결정하려면 다음 지침을 따르십시오.
+
+| 상황 | 사용할 설명자 |
+| --------------------------------------------------------------------- | ----------------------------------------- |
+| 새 작업 또는 모델 기반 스키마 | `xdm:descriptorRelationship` |
+| 표준 스키마의 기존 1:1 매핑 | `xdm:descriptorOneToOne`에서만 지원되는 기능이 필요한 경우가 아니면 `xdm:descriptorRelationship`을(를) 계속 사용하십시오. |
+| 다대일 또는 선택적 카디널리티(`1:1`, `1:0`, `M:1`, `M:0`)가 필요합니다. | `xdm:descriptorRelationship` |
+| UI/다운스트림 가독성을 위해 관계 이름 또는 제목 필요 | `xdm:descriptorRelationship` |
+| ID가 아닌 대상 대상 필요 | `xdm:descriptorRelationship` |
+
+>[!NOTE]
+>
+>표준 스키마의 기존 `xdm:descriptorOneToOne` 설명자의 경우 기본 ID 대상이 아닌 대상, 사용자 지정 이름 지정 또는 확장된 카디널리티 옵션과 같은 기능이 필요하지 않는 한 계속 사용하십시오.
+
+##### 기능 비교
+
+다음 표에서는 두 설명자 유형의 기능을 비교합니다.
+
+| 기능 | `xdm:descriptorOneToOne` | `xdm:descriptorRelationship` |
+| ------------------ | ------------------------ | ------------------------------------------------------------------------ |
+| 카디널리티 | 1:1 | 1:1, 1:0, M:1, M:0(정보 제공) |
+| 대상 대상 대상 | ID/명시적 필드 | 기본적으로 기본 키 또는 `xdm:destinationProperty`을(를) 통한 비기본 키 |
+| 이름 지정 필드 | 지원되지 않음 | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName` 및 제목 |
+| 관계 맞춤 | 제한적 | 모델 기반 스키마에 대한 기본 패턴 |
+
+##### 제한 및 유효성 검사
+
+일반적인 관계 설명자를 정의할 때 다음 요구 사항 및 권장 사항을 따르십시오.
+
+- 모델 기반 스키마의 경우 루트 수준에 소스 필드(외래 키)를 배치합니다. 이는 단순한 모범 사례 권장 사항이 아닌 수집을 위한 현재 기술적 제한입니다.
+- 소스 및 대상 필드의 데이터 형식(숫자, 날짜, 부울, 문자열)이 호환되는지 확인합니다.
+- 카디널리티는 정보 제공용이며 스토리지는 이를 적용하지 않습니다. 카디널리티를 `<source>:<destination>` 형식으로 지정하십시오. 허용되는 값은 `1:1`, `1:0`, `M:1` 또는 `M:0`입니다.
+
+#### 기본 키 설명자 {#primary-key-descriptor}
+
+기본 키 설명자(`xdm:descriptorPrimaryKey`)는 스키마에 있는 하나 이상의 필드에 고유성 및 null이 아닌 제약 조건을 적용합니다.
+
+```json
+{
+  "@type": "xdm:descriptorPrimaryKey",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": ["/orderId", "/orderLineId"]
+}
+```
+
+| 속성 | 설명 |
+| -------------------- | ----------------------------------------------------------------------------- |
+| `@type` | `xdm:descriptorPrimaryKey`이어야 합니다. |
+| `xdm:sourceSchema` | 스키마의 `$id` URI입니다. |
+| `xdm:sourceProperty` | 기본 키 필드에 대한 JSON 포인터. 복합 키에 배열을 사용합니다. 시계열 스키마의 경우, 복합 키는 이벤트 레코드에서 고유성을 보장하기 위해 타임스탬프 필드를 포함해야 합니다. |
+
+#### 버전 설명자 {#version-descriptor}
+
+>[!NOTE]
+>
+>UI 스키마 편집기에서 버전 설명자가 &quot;[!UICOTRNOL 버전 식별자]&quot;(으)로 나타납니다.
+
+버전 설명자(`xdm:descriptorVersion`)는 잘못된 변경 이벤트에서 충돌을 감지하고 방지하는 필드를 지정합니다.
+
+```json
+{
+  "@type": "xdm:descriptorVersion",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": "/versionNumber"
+}
+```
+
+| 속성 | 설명 |
+| -------------------- | ------------------------------------------------------------- |
+| `@type` | `xdm:descriptorVersion`이어야 합니다. |
+| `xdm:sourceSchema` | 스키마의 `$id` URI입니다. |
+| `xdm:sourceProperty` | 버전 필드에 대한 JSON 포인터. `required`(으)로 표시되어야 합니다. |
+
+#### 타임스탬프 설명자 {#timestamp-descriptor}
+
+>[!NOTE]
+>
+>UI 스키마 편집기에서 타임스탬프 설명자가 &quot;[!UICOTRNOL 타임스탬프 식별자]&quot;(으)로 나타납니다.
+
+타임스탬프 설명자(`xdm:descriptorTimestamp`)는 `"meta:behaviorType": "time-series"`이(가) 있는 스키마의 타임스탬프로 날짜-시간 필드를 지정합니다.
+
+```json
+{
+  "@type": "xdm:descriptorTimestamp",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": "/eventTime"
+}
+```
+
+| 속성 | 설명 |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| `@type` | `xdm:descriptorTimestamp`이어야 합니다. |
+| `xdm:sourceSchema` | 스키마의 `$id` URI입니다. |
+| `xdm:sourceProperty` | 타임스탬프 필드에 대한 JSON 포인터. `required`(으)로 표시되어야 하며 `date-time` 형식이어야 합니다. |
 
 ##### B2B 관계 설명자 {#B2B-relationship-descriptor}
 
@@ -427,7 +593,7 @@ Real-Time CDP B2B edition에서는 다대일 관계를 허용하는 스키마 �
 | `xdm:sourceProperty` | 관계가 정의되는 소스 스키마의 필드 경로. &quot;/&quot;로 시작하고 &quot;/&quot;로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;). |
 | `xdm:destinationSchema` | 이 설명자가 관계를 정의하는 참조 스키마의 `$id` URI입니다. |
 | `xdm:destinationVersion` | 참조 스키마의 주 버전. |
-| `xdm:destinationProperty` | (선택 사항) 참조 스키마 내의 대상 필드에 대한 경로로, 스키마의 기본 ID여야 합니다. 이 속성을 생략하면 일치하는 참조 ID 설명자가 포함된 모든 필드에서 대상 필드를 유추합니다(아래 참조). |
+| `xdm:destinationProperty` | (선택 사항) 참조 스키마 내의 대상 필드 경로입니다. 스키마의 기본 ID나 `xdm:sourceProperty`과(와) 호환되는 데이터 형식의 다른 필드로 확인되어야 합니다. 생략하면 관계가 예상대로 작동하지 않을 수 있습니다. |
 | `xdm:destinationNamespace` | 참조 스키마에서 기본 ID의 네임스페이스입니다. |
 | `xdm:destinationToSourceTitle` | 참조 스키마에서 소스 스키마로의 관계 표시 이름. |
 | `xdm:sourceToDestinationTitle` | 소스 스키마에서 참조 스키마로의 관계 표시 이름. |
@@ -454,14 +620,14 @@ Real-Time CDP B2B edition에서는 다대일 관계를 허용하는 스키마 �
 | `@type` | 정의 중인 설명자 유형. 참조 ID 설명자의 경우 이 값을 `xdm:descriptorReferenceIdentity`(으)로 설정해야 합니다. |
 | `xdm:sourceSchema` | 설명자가 정의되는 스키마의 `$id` URI입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 주 버전. |
-| `xdm:sourceProperty` | 참조 스키마를 참조하는 데 사용할 소스 스키마의 필드 경로입니다. &quot;/&quot;로 시작하고 1로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: `/properties/personalEmail/properties/address` 대신 `/personalEmail/address`). |
+| `xdm:sourceProperty` | 참조 스키마를 참조하는 데 사용할 소스 스키마의 필드 경로입니다. &quot;/&quot;로 시작하고 1로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: `/personalEmail/address` 대신 `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | 소스 속성에 대한 ID 네임스페이스 코드. |
 
 {style="table-layout:auto"}
 
 #### 사용되지 않는 필드 설명자
 
-해당 필드에 `deprecated`(으)로 설정된 `meta:status` 특성을 추가하여 사용자 지정 XDM 리소스 내의 필드를 [사용하지 않을 수 있습니다](../tutorials/field-deprecation-api.md#custom). 그러나 스키마의 표준 XDM 리소스에서 제공하는 필드를 사용하지 않으려면 해당 스키마에 더 이상 사용되지 않는 필드 설명자를 할당하여 동일한 효과를 얻을 수 있습니다. [올바른 `Accept` 헤더](../tutorials/field-deprecation-api.md#verify-deprecation)를 사용하면 API에서 조회할 때 스키마에 대해 더 이상 사용되지 않는 표준 필드를 볼 수 있습니다.
+해당 필드에 [(으)로 설정된 ](../tutorials/field-deprecation-api.md#custom) 특성을 추가하여 사용자 지정 XDM 리소스 내의 필드를 `meta:status`사용하지 않을 수 있습니다`deprecated`. 그러나 스키마의 표준 XDM 리소스에서 제공하는 필드를 사용하지 않으려면 해당 스키마에 더 이상 사용되지 않는 필드 설명자를 할당하여 동일한 효과를 얻을 수 있습니다. [올바른 `Accept` 헤더](../tutorials/field-deprecation-api.md#verify-deprecation)를 사용하면 API에서 조회할 때 스키마에 대해 더 이상 사용되지 않는 표준 필드를 볼 수 있습니다.
 
 ```json
 {

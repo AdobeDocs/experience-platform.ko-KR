@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Source 커넥터 개요
 description: Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집하는 동시에 Experience Platform 서비스를 사용하여 수신 데이터를 구조화하고 레이블을 지정하며 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
+source-git-commit: f424c5c7e436a7f4c45d37c004096d3924247158
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1696'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform을 사용하면 Adobe Analytics 및 Adobe Audience Manager�
 
 ### 고급 엔터프라이즈 소스 {#advanced-enterprise-sources}
 
-다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
+다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
 
 | 소스 | 카테고리 | 수집 유형 | 클라우드 |
 | --- | --- | --- | --- |
@@ -306,7 +306,11 @@ Adobe Experience Platform의 속성 기반 액세스 제어를 통해 관리자�
 
 - 조직의 특정 스키마 필드에 대한 액세스를 정의하기 위해 스키마 필드에 레이블을 적용합니다. 특정 스키마 필드에 대한 액세스가 설정되면 사용자는 액세스 권한이 있는 필드에 대한 매핑만 만들 수 있습니다.
 - 적절한 역할이 없는 사용자는 액세스할 수 없는 스키마 필드가 포함된 매핑으로 데이터 흐름을 만들거나 업데이트할 수 없습니다. 또한 권한이 없는 사용자는 액세스할 수 없는 스키마 필드로 기존 데이터 흐름을 업데이트, 삭제, 활성화 또는 비활성화할 수 없습니다.
-- 또한 데이터 흐름의 매핑, 대상 데이터 세트 및 대상 연결에서 스키마 ID와 버전이 정확히 동일해야 합니다.
+- 또한 데이터 흐름의 매핑, 대상 데이터 세트 및 대상 연결에서 스키마 ID와 버전이 정확히 동일해야 합니다. 이는 표준 XDM 스키마와 모델 기반 스키마 모두에 적용됩니다.
+
+>[!NOTE]
+>
+>모델 기반 스키마에는 기본 키 및 버전 식별자 필드를 포함한 추가 요구 사항이 있습니다. 자세한 내용은 [모델 기반 스키마 개요](../xdm/schema/model-based.md)를 참조하십시오.
 
 특성 기반 액세스 제어에 대한 자세한 내용은 [특성 기반 액세스 제어 개요](../access-control/abac/overview.md)를 참조하십시오.
 

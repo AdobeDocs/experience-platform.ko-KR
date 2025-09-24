@@ -5,9 +5,9 @@ breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: Experience Platform 내의 경험 데이터 모델(XDM) 시스템 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법을 알아봅니다.
 feature: Schemas
 role: Developer
-source-git-commit: 1385f91694f9b6dfe96b9d424af0da6f2a1443c2
+source-git-commit: f6e63f3fe390c1e47347015e873282719508a0ec
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '708'
 ht-degree: 48%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 48%
    * [데이터 모델링을 위한 모범 사례](schema/best-practices.md)
    * [중요한 개인 데이터](./schema/sensitive-and-personal-data.md)
    * [XDM 필드 유형 제약 조건](schema/field-constraints.md)
+   * [모델 기반 스키마](./schema/model-based.md)
    * [XDM의 이름 간격](./schema/namespaces.md)
    * 업계 데이터 모델 {#industries}
       * [개요](./schema/industries/overview.md)
@@ -73,6 +74,8 @@ ht-degree: 48%
          * [시간](./schema/healthcare/data-types/timing.md)
          * [가상 서비스](./schema/healthcare/data-types/virtual-service-detail.md)
    * [XDM 필드 사전](schema/field-dictionary.md)
+* Data Mirror {#data-mirror}
+   * [개요](./data-mirror/overview.md)
 * 클래스 {#classes}
    * [XDM 개별 프로필](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
