@@ -42,7 +42,7 @@ Adobe Experience Platform Agent Orchestrator은 Adobe Experience Platform의 새
 | 기능 | 설명 |
 | --- | --- |
 | Agent Orchestrator | Adobe Experience Platform Agent Orchestrator은 Adobe Experience Platform의 새로운 에이전트 계층입니다. 플랫폼의 풍부한 데이터와 고객 지식을 활용하도록 설계된 Experience Platform Agent Orchestrator은 특별히 설계된 전문 Adobe Experience Platform 에이전트 뒤에 숨겨진 정보와 추론을 강화하여 복잡한 의사 결정 및 문제 해결 작업을 사람의 감독 하에 신속하고 규모에 맞게 실행할 수 있도록 합니다. AI 어시스턴트와 같은 대화 인터페이스에서 자연어를 통해 질문을 하거나 도움을 요청하면 Agent Orchestrator이 전문 에이전트에게 자동으로 전화를 걸어 정확한 답변을 얻을 수 있다. Agent Orchestrator은 대화 기록을 기억하여, 맥락을 반복하지 않고 자연스럽게 이전 질문을 기반으로 할 수 있으며, 여러 에이전트의 통찰력을 결합하여 명확하고 통합된 응답을 제공합니다. 자세한 내용은 [Agent Orchestrator 설명서](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator)를 참조하세요. |
-| Audience Agent | Audience Agent을 사용하면 중요한 대상 크기 변경 감지, 중복 대상 감지, 대상 인벤토리 탐색 및 대상 크기 검색을 포함하여 대상에 대한 인사이트를 볼 수 있습니다. 자세한 내용은 [Audience Agent 설명서](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience)를 참조하세요. |
+| Audience Agent | Audience Agent을 사용하면 중요한 대상 크기 변경 감지, 중복 대상 감지, 대상 인벤토리 탐색 및 대상 크기 검색을 포함하여 대상에 대한 인사이트를 볼 수 있습니다. 자세한 내용은 [Audience Agent 설명서](https://experienceleague.adobe.com/ko/docs/experience-cloud-ai/experience-cloud-ai/agents/audience)를 참조하세요. |
 
 자세한 내용은 [Agent Orchestrator 설명서](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home)를 참조하세요.
 
