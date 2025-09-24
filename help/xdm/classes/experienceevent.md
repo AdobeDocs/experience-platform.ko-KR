@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent 클래스
 description: XDM ExperienceEvent 클래스와 이벤트 데이터 모델링을 위한 모범 사례에 대해 알아봅니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f00b195567c22f69c05909e76906c8770da4b9d0
+source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
 workflow-type: tm+mt
-source-wordcount: '2777'
+source-wordcount: '2783'
 ht-degree: 0%
 
 ---
@@ -65,6 +65,7 @@ UI를 통해 수동으로 Experience Platform에 데이터를 수집하는 경�
 Adobe에서는 [!DNL XDM ExperienceEvent] 클래스와 함께 사용할 수 있는 여러 표준 필드 그룹을 제공합니다. 다음은 클래스에서 일반적으로 사용되는 몇 가지 필드 그룹 목록입니다.
 
 * [[!UICONTROL Adobe Analytics ExperienceEvent 전체 확장]](../field-groups/event/analytics-full-extension.md)
+* [[!UICONTROL Adobe Advertising Cloud ExperienceEvent 전체 확장]](../field-groups/event/advertising-full-extension.md)
 * [[!UICONTROL 잔고 전송]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL 캠페인 마케팅 세부 정보]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL 카드 동작]](../field-groups/event/card-actions.md)

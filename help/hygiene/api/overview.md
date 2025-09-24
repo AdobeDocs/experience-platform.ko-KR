@@ -3,9 +3,9 @@ title: 데이터 위생 API 안내서
 description: Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제하는 방법을 알아봅니다.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '432'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 데이터 위생 API를 사용하면 Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제할 수 있을 뿐만 아니라 데이터 세트의 만료 날짜를 예약할 수 있습니다. 이 안내서에서는 API 사용에 대한 사전 요구 사항을 다루고 더 많은 끝점별 설명서에 대한 링크를 제공합니다.
 
-## 시작하기
+## 시작
 
 다음 루트 경로를 통해 데이터 위생 API에 액세스할 수 있습니다. `https://platform.adobe.io/data/core/hygiene/`
 
@@ -43,9 +43,6 @@ ht-degree: 6%
 ## 레코드 삭제
 
 >[!IMPORTANT]
->
->레코드 삭제 요청은 **Adobe Healthcare Shield**&#x200B;를 구입한 조직에서만 사용할 수 있습니다.
->
 >
 >레코드 삭제는 데이터 정리, 익명 데이터 제거 또는 데이터 최소화에 사용됩니다. GDPR(일반 데이터 보호 규정)과 같은 개인 정보 보호 규정과 관련된 데이터 주체 권한 요청(준수)에 사용할 **not**&#x200B;입니다. 모든 규정 준수 사용 사례의 경우 대신 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md)을(를) 사용하십시오.
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 끝점을 사용하면 경험 애플리케이션 내에서 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 1%
@@ -525,7 +525,7 @@ API는 다음 두 가지 패턴을 지원합니다.
 
 >[!NOTE]
 >
->UI 스키마 편집기에서 버전 설명자가 &quot;[ !UICOTRNOL 버전 식별자]&quot;(으)로 나타납니다.
+>UI 스키마 편집기에서 버전 설명자가 &quot;[!UICONTROL 버전 식별자]&quot;(으)로 나타납니다.
 
 버전 설명자(`xdm:descriptorVersion`)는 잘못된 변경 이벤트에서 충돌을 감지하고 방지하는 필드를 지정합니다.
 
@@ -547,7 +547,7 @@ API는 다음 두 가지 패턴을 지원합니다.
 
 >[!NOTE]
 >
->UI 스키마 편집기에서 타임스탬프 설명자가 &quot;[ !UICOTRNOL 타임스탬프 식별자]&quot;(으)로 나타납니다.
+>UI 스키마 편집기에서 타임스탬프 설명자가 &quot;[!UICONTROL 타임스탬프 식별자]&quot;(으)로 나타납니다.
 
 타임스탬프 설명자(`xdm:descriptorTimestamp`)는 `"meta:behaviorType": "time-series"`이(가) 있는 스키마의 타임스탬프로 날짜-시간 필드를 지정합니다.
 

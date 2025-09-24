@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스키마 API 엔드포인트
 description: 스키마 레지스트리 API의 /schemas 끝점을 사용하면 experience 애플리케이션 내에서 XDM 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2095'
 ht-degree: 3%
@@ -302,7 +302,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->UI 스키마 편집기에서 버전 설명자 및 타임스탬프 설명자는 각각 &quot;[ !UICOTRNOL 버전 식별자]&quot; 및 &quot;[ !UICOTRNOL 타임스탬프 식별자]&quot;으로 표시됩니다.
+>UI 스키마 편집기에서 버전 설명자 및 타임스탬프 설명자는 각각 &quot;[!UICONTROL 버전 식별자]&quot; 및 &quot;[!UICONTROL 타임스탬프 식별자]&quot;으로 표시됩니다.
 
 <!-- >[!AVAILABILITY]
 >
