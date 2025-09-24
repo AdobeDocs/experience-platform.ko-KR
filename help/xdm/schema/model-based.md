@@ -71,7 +71,7 @@ Experience Platform의 표준 XDM 스키마는 레코드, 시계열 또는 임�
 
 >[!NOTE]
 >
->UI 스키마 편집기에서 버전 설명자 및 타임스탬프 설명자는 각각 &quot;[!UICOTRNOL 버전 식별자]&quot; 및 &quot;[!UICOTRNOL 타임스탬프 식별자]&quot;으로 표시됩니다.
+>UI 스키마 편집기에서 버전 설명자 및 타임스탬프 설명자는 각각 &quot;[ !UICOTRNOL 버전 식별자]&quot; 및 &quot;[ !UICOTRNOL 타임스탬프 식별자]&quot;으로 표시됩니다.
 
 **예(단일 필드):**
 

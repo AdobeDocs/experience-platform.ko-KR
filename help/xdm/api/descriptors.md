@@ -525,7 +525,7 @@ API는 다음 두 가지 패턴을 지원합니다.
 
 >[!NOTE]
 >
->UI 스키마 편집기에서 버전 설명자가 &quot;[!UICOTRNOL 버전 식별자]&quot;(으)로 나타납니다.
+>UI 스키마 편집기에서 버전 설명자가 &quot;[ !UICOTRNOL 버전 식별자]&quot;(으)로 나타납니다.
 
 버전 설명자(`xdm:descriptorVersion`)는 잘못된 변경 이벤트에서 충돌을 감지하고 방지하는 필드를 지정합니다.
 
@@ -547,7 +547,7 @@ API는 다음 두 가지 패턴을 지원합니다.
 
 >[!NOTE]
 >
->UI 스키마 편집기에서 타임스탬프 설명자가 &quot;[!UICOTRNOL 타임스탬프 식별자]&quot;(으)로 나타납니다.
+>UI 스키마 편집기에서 타임스탬프 설명자가 &quot;[ !UICOTRNOL 타임스탬프 식별자]&quot;(으)로 나타납니다.
 
 타임스탬프 설명자(`xdm:descriptorTimestamp`)는 `"meta:behaviorType": "time-series"`이(가) 있는 스키마의 타임스탬프로 날짜-시간 필드를 지정합니다.
 
