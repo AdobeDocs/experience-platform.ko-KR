@@ -3,9 +3,9 @@ title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 대상자를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4eef1804d6974fd54f5e74e0efe62257190f408b
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '2019'
 ht-degree: 2%
 
 ---
@@ -71,7 +71,7 @@ Experience Platform에서는 [!DNL Data Landing Zone] 컨테이너에 업로드�
 
 >[!AVAILABILITY]
 >
->이 섹션은 Microsoft Azure에서 실행되는 Experience Platform 구현에 적용됩니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/landing/multi-cloud)를 참조하세요.
+>이 섹션은 Microsoft Azure에서 실행되는 Experience Platform 구현에 적용됩니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
 
 [!DNL Azure Storage Explorer] 또는 명령줄 인터페이스를 통해 컨테이너에 파일을 읽고 쓸 수 있습니다.
 
@@ -83,7 +83,7 @@ Experience Platform에서는 [!DNL Data Landing Zone] 컨테이너에 업로드�
 
 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/)을(를) 사용하여 [!DNL Data Landing Zone] 컨테이너의 콘텐츠를 관리할 수 있습니다. [!DNL Data Landing Zone]을(를) 사용하려면 먼저 자격 증명을 검색하고 [!DNL Azure Storage Explorer]에 입력한 다음 [!DNL Data Landing Zone] 컨테이너를 [!DNL Azure Storage Explorer]에 연결해야 합니다.
 
-[!DNL Azure Storage Explorer] UI의 왼쪽 탐색 막대에서 연결 아이콘을 선택합니다. 연결할 수 있는 옵션을 제공하는 **리소스 선택** 창이 나타납니다. [!DNL Data Landing Zone] 저장소에 연결하려면 **[!DNL Blob container]**&#x200B;을(를) 선택하십시오.
+[!DNL Azure Storage Explorer] UI의 왼쪽 탐색 막대에서 연결 아이콘을 선택합니다. 연결할 수 있는 옵션을 제공하는 **리소스 선택** 창이 나타납니다. **[!DNL Blob container]** 저장소에 연결하려면 [!DNL Data Landing Zone]을(를) 선택하십시오.
 
 ![Azure UI에서 강조 표시된 리소스를 선택하십시오.](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
@@ -91,7 +91,7 @@ Experience Platform에서는 [!DNL Data Landing Zone] 컨테이너에 업로드�
 
 ![Azure UI에서 강조 표시된 연결 방법을 선택하십시오.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
-연결 방법을 선택한 후 [!DNL Data Landing Zone] 컨테이너에 해당하는 **표시 이름** 및 **[!DNL Blob]컨테이너 SAS URL**&#x200B;을(를) 제공해야 합니다.
+연결 방법을 선택한 후 **컨테이너에 해당하는**&#x200B;표시 이름&#x200B;**[!DNL Blob]및** 컨테이너 SAS URL[!DNL Data Landing Zone]을(를) 제공해야 합니다.
 
 >[!BEGINSHADEBOX]
 
@@ -148,7 +148,7 @@ curl -X GET \
 
 ### [!DNL Data Landing Zone] 자격 증명 업데이트 {#update-dlz-credentials}
 
-원할 경우 자격 증명을 새로 고칠 수도 있습니다. [!DNL Connectors] API의 `/credentials` 끝점에 대한 POST 요청을 수행하여 `SASToken`을(를) 업데이트할 수 있습니다.
+원할 경우 자격 증명을 새로 고칠 수도 있습니다. `SASToken` API의 `/credentials` 끝점에 대한 POST 요청을 수행하여 [!DNL Connectors]을(를) 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -196,7 +196,7 @@ curl -X POST \
 
 ![Azure UI에서 강조 표시된 연결 정보를 입력하세요.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
-[!DNL Blob] 끝점 및 사용 권한에 대한 정보를 포함하여 설정에 대한 개요를 제공하는 **요약** 창이 나타납니다. 준비가 되면 **연결**&#x200B;을 선택합니다.
+**끝점 및 사용 권한에 대한 정보를 포함하여 설정에 대한 개요를 제공하는**&#x200B;요약[!DNL Blob] 창이 나타납니다. 준비가 되면 **연결**&#x200B;을 선택합니다.
 
 ![Azure UI에 표시된 설정 요약입니다.](/help/sources/images/tutorials/create/dlz/summary.png)
 
@@ -210,7 +210,7 @@ curl -X POST \
 
 >[!AVAILABILITY]
 >
->이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/landing/multi-cloud)를 참조하세요.
+>이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
 
 AWS에서 프로비전된 [!DNL Data Landing Zone] 인스턴스에 대한 자격 증명을 가져오려면 아래 작업을 수행하십시오. 그런 다음 원하는 클라이언트를 사용하여 [!DNL Data Landing Zone] 인스턴스에 연결합니다.
 
@@ -282,16 +282,18 @@ curl --request GET \
 > 
 >대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
-이 대상에 연결하려면 [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ko)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
+이 대상에 연결하려면 [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상으로 인증 {#authenticate}
 
-[필수 구성 요소](#prerequisites) 섹션에 설명된 대로 [!DNL Data Landing Zone] 컨테이너를 [!DNL Azure Storage Explorer]에 연결했는지 확인하십시오. [!DNL Data Landing Zone]은(는) Adobe에서 프로비저닝한 스토리지이므로 대상에 인증하기 위해 Experience Platform UI에서 추가 단계를 수행할 필요가 없습니다.
+[!DNL Data Landing Zone]필수 구성 요소[!DNL Azure Storage Explorer] 섹션에 설명된 대로 [ 컨테이너를 ](#prerequisites)에 연결했는지 확인하십시오. [!DNL Data Landing Zone]은(는) Adobe에서 프로비저닝한 스토리지이므로 대상에 인증하기 위해 Experience Platform UI에서 추가 단계를 수행할 필요가 없습니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
+* **[!UICONTROL 암호화 키]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
+  ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지입니다.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 * **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력하십시오.
 * **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력하십시오.
@@ -319,9 +321,9 @@ curl --request GET \
 
 이 대상에 대한 대상자 활성화에 대한 지침은 [대상자 데이터를 일괄 프로필 내보내기 대상으로 활성화](../../ui/activate-batch-profile-destinations.md)를 참조하십시오.
 
-### 일정 조정
+### 예약
 
-**[!UICONTROL 예약]** 단계에서 [!DNL Data Landing Zone] 대상에 대해 [내보내기 일정을 설정](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)할 수 있으며 [내보낸 파일의 이름을 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)할 수도 있습니다.
+**[!UICONTROL 예약]** 단계에서 [ 대상에 대해 ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)내보내기 일정을 설정[!DNL Data Landing Zone]할 수 있으며 [내보낸 파일의 이름을 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)할 수도 있습니다.
 
 ### 속성 및 ID 매핑 {#map}
 
