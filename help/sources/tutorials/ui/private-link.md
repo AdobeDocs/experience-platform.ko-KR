@@ -1,13 +1,10 @@
 ---
 title: Ui의 소스에 대한 비공개 링크 지원
 description: Experience Platform UI에서 소스에 대한 Azure 개인 링크를 사용하는 방법을 알아봅니다.
-badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '814'
 ht-degree: 0%
 
 ---
@@ -16,16 +13,29 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->이 기능은 베타 버전이며 현재 다음 소스에 대해서만 지원됩니다.
+>이 기능은 다음 소스에서 지원됩니다.
 >
 >* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
 >* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>비공개 링크 지원은 현재 Adobe Healthcare Shield 또는 Adobe Privacy &amp; Security Shield를 구입한 조직에서만 사용할 수 있습니다.
 
 비공개 링크 기능을 사용하여 연결할 Adobe Experience Platform 소스에 대한 비공개 끝점을 만들 수 있습니다. 비공개 IP 주소를 사용하여 소스를 가상 네트워크에 안전하게 연결하여 공용 IP가 필요하지 않도록 하고 공격 표면을 줄일 수 있습니다. 데이터 트래픽이 승인된 서비스에만 도달하도록 하면서도 복잡한 방화벽 또는 네트워크 주소 변환 구성이 필요하지 않으므로 네트워크 설정을 단순화합니다.
 
 Experience Platform UI에서 소스 작업 영역을 사용하여 개인 끝점을 만들고 사용하는 방법을 알아보려면 이 안내서를 참조하십시오.
+
+>[!BEGINSHADEBOX]
+
+## 개인 링크 지원에 대한 라이선스 사용 권한
+
+소스의 비공개 링크 지원에 대한 라이선스 사용 권한 지표는 다음과 같습니다.
+
+* 고객은 모든 샌드박스 및 조직에서 지원되는 소스([!DNL Azure Blob Storage], [!DNL ADLS Gen2] 및 [!DNL Azure File Storage])를 통해 연간 최대 2TB의 데이터를 전송할 수 있습니다.
+* 각 조직은 모든 프로덕션 샌드박스에 대해 최대 10개의 끝점을 가질 수 있습니다.
+* 각 조직은 모든 개발 샌드박스에 대해 최대 1개의 끝점을 가질 수 있습니다.
+
+>[!ENDSHADEBOX]
 
 ## 비공개 엔드포인트 만들기
 
@@ -45,7 +55,6 @@ Experience Platform UI에서 소스 작업 영역을 사용하여 개인 끝점�
 | `subscriptionId` | [!DNL Azure] 구독과 연계된 ID. 자세한 내용은 [!DNL Azure]구독 및 테넌트 ID 검색[ [!DNL Azure Portal]에 대한 ](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id) 가이드를 참조하십시오. |
 | `resourceGroupName` | [!DNL Azure]에 있는 리소스 그룹의 이름입니다. 리소스 그룹에 [!DNL Azure] 솔루션에 대한 관련 리소스가 포함되어 있습니다. 자세한 내용은 [!DNL Azure]리소스 그룹 관리[에 대한 ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) 안내서를 참조하십시오. |
 | `resourceGroup` | 리소스의 이름입니다. [!DNL Azure]에서 리소스는 가상 컴퓨터, 웹 앱 및 데이터베이스와 같은 인스턴스를 참조합니다. 자세한 내용은 [!DNL Azure]리소스 관리자 이해[에 대한  [!DNL Azure]  안내서를 참조하십시오.](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) |
-| `fqdns` | 소스에 대해 정규화된 도메인 이름. **참고**: 이 속성은 [!DNL Snowflake] 원본을 사용하는 경우에만 필요합니다. |
 
 {style="table-layout:auto"}
 
@@ -75,7 +84,7 @@ Experience Platform UI에서 소스 작업 영역을 사용하여 개인 끝점�
 
 ![원본 워크플로의 기존 계정 인터페이스는 개인 끝점 연결에 대해 활성화된 필터링된 계정만 표시합니다.](../../images/tutorials/private-links/existing-private-endpoints.png)
 
-사용할 계정을 선택한 다음 **[!UICONTROL 대화형 작성]**&#x200B;을 사용하도록 설정합니다. 이 토글을 사용하면 연결을 테스트하고, 폴더 목록을 찾아보고, 데이터를 미리 볼 수 있는 [!UICONTROL &#x200B; 기능인 &#x200B;]대화형 작성[!DNL Azure]이 활성화됩니다. 개인 끝점 연결에는 [!UICONTROL 대화형 작성]을 사용하도록 설정해야 합니다. 이 토글을 수동으로 끌 수 없습니다. 60분 후에는 자동으로 비활성화됩니다.
+사용할 계정을 선택한 다음 **[!UICONTROL 대화형 작성]**&#x200B;을 사용하도록 설정합니다. 이 토글을 사용하면 연결을 테스트하고, 폴더 목록을 찾아보고, 데이터를 미리 볼 수 있는 [!UICONTROL  기능인 ]대화형 작성[!DNL Azure]이 활성화됩니다. 개인 끝점 연결에는 [!UICONTROL 대화형 작성]을 사용하도록 설정해야 합니다. 이 토글을 수동으로 끌 수 없습니다. 60분 후에는 자동으로 비활성화됩니다.
 
 [!UICONTROL 대화형 작성]을 사용하도록 설정하는 데 몇 분이 걸립니다. 설정이 활성화되면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 다음 단계로 진행하고 수집할 데이터를 선택합니다.
 
