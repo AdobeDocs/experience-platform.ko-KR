@@ -1,9 +1,11 @@
 ---
 title: 흐름 서비스 API를 사용하여 Capillary를 Experience Platform에 연결
 description: API를 사용하여 Capillary를 Experience Platform에 연결하는 방법을 알아봅니다.
+hide: true
+hidefromtoc: true
 badge: Beta
 exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
-source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
+source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 2%

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2025년 8월
 description: Adobe Experience Platform의 2025년 8월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e21381f2683070fdbf24c473fa6794b89160864b
+source-git-commit: ac180f045dd3cc7e8ad9de702a3672630d668ee5
 workflow-type: tm+mt
-source-wordcount: '1402'
-ht-degree: 42%
+source-wordcount: '1480'
+ht-degree: 40%
 
 ---
 
@@ -90,12 +90,9 @@ XDM은 Experience Platform에 가져온 데이터에 대한 공통 구조와 정
 | 기능 | 설명 |
 | ------- | ----------- |
 | 모델 기반 스키마 | 모델 기반 스키마를 사용하여 데이터 모델링을 간소화하십시오. 이제 포괄적인 방법 예제와 지침을 통해 스키마를 더 쉽게 만들 수 있습니다. 이 기능은 현재 Campaign Orchestration 라이선스 소유자가 사용할 수 있으며 GA 시점에 데이터 Distiller 고객으로 확장되어 데이터 모델링에 더 쉽게 액세스하고 효율적으로 작업할 수 있습니다. 이 기능에는 시계열 데이터 및 변경 데이터 캡처 기능에 대한 지원이 포함됩니다. |
+| Data Mirror | 모델 기반 스키마를 사용하여 클라우드 데이터 웨어하우스(예: Snowflake, Databricks, BigQuery)의 행 수준 변경 사항을 Adobe Experience Platform으로 수집합니다. Data Mirror은 기존 데이터베이스 구조를 데이터 레이크에 직접 미러링하여 업스트림 ETL을 제거하고 관계, 버전 관리 및 삭제를 유지합니다. 변경 데이터 캡처 기능이 있는 시계열 및 레코드 이벤트 스키마 동작이 모두 지원됩니다. 이 기능은 현재 Campaign Orchestration 라이선스 소유자에 대해 사용할 수 있으며 Customer Journey Analytics 고객을 포함하여 이번 제한된 릴리스를 통해 확장될 예정입니다. 자세한 내용은 [Data Mirror 설명서](../../xdm/data-mirror/overview.md)를 참조하세요. 액세스하려면 Adobe 담당자에게 문의하십시오. |
 
 자세한 내용은 [XDM 개요](../../xdm/home.md)를 참조하십시오.
-<!--
-
-| Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using model-based schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
--->
 
 ## 실시간 고객 프로필 {#profile}
 
@@ -138,7 +135,10 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | --- | --- |
 | 일반 가용성의 새로운 소스 | 이제 다음 소스가 GA에 포함되었습니다. 여러 소스 커넥터가 Beta에서 GA로 업데이트되었습니다. <ul><li>[Acxiom 데이터 수집](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acxiom 잠재 고객 데이터 수집](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. 이러한 소스는 이제 완전히 지원되며 프로덕션 용도로 사용할 수 있습니다. |
 | [!DNL Snowflake] 키 쌍 인증 지원 | 키 쌍 인증을 지원하여 Snowflake 연결에 대한 보안을 개선했습니다. 기본 인증(사용자 이름/암호)은 2025년 11월까지 더 이상 사용되지 않으므로, 고객은 개선된 보안을 위해 키 쌍 인증으로 마이그레이션하는 것이 좋습니다. 자세한 내용은 [[!DNL Snowflake] 설명서](../../sources/connectors/databases/snowflake.md)를 참조하세요. |
-| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | [[!DNL Capillary Streaming Events] 소스](../../sources/connectors/loyalty/capillary.md)를 사용하여 [!DNL Capillary] 계정의 충성도 데이터를 Experience Platform으로 스트리밍합니다. |
 | 소스에서의 비공개 링크 지원 일반 가용성 | 이제 선택한 소스 그룹에 **개인 링크**&#x200B;를 사용할 수 있습니다. 이 기능을 사용하면 소스가 연결할 수 있는 비공개 엔드포인트를 만들 수 있습니다. 비공개 엔드포인트를 사용하면 공용 인터넷을 우회하는 연결과 데이터 흐름을 설정하여 중요한 데이터에 대한 보안을 강화하고 네트워크를 격리할 수 있습니다. 비공개 링크에 대한 지원은 다음 소스에서 사용할 수 있습니다. <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. 자세한 내용은 API에서 [개인 링크 만들기](../../sources/tutorials/api/private-link.md) 및 UI에서 [개인 링크 만들기](../../sources/tutorials/ui/private-link.md)에 대한 안내서를 참조하십시오. |
 
 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하십시오.
+
+<!--
+| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Use the [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) to stream loyalty data from your [!DNL Capillary] account to Experience Platform. |
+-->

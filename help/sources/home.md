@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Source 커넥터 개요
 description: Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집하는 동시에 Experience Platform 서비스를 사용하여 수신 데이터를 구조화하고 레이블을 지정하며 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f424c5c7e436a7f4c45d37c004096d3924247158
+source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 12%
+source-wordcount: '1674'
+ht-degree: 11%
 
 ---
 
@@ -61,7 +61,7 @@ Experience Platform을 사용하면 Adobe Analytics 및 Adobe Audience Manager�
 
 ### 고급 엔터프라이즈 소스 {#advanced-enterprise-sources}
 
-다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
+다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
 
 | 소스 | 카테고리 | 수집 유형 | 클라우드 |
 | --- | --- | --- | --- |
@@ -219,13 +219,18 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하는
 
 {style="table-layout:auto"}
 
-### 충성도 {#loyalty}
+<!--
+### Loyalty {#loyalty}
 
-다음 소스를 사용하여 Experience Platform에 대한 데이터 충성도를 수집할 수 있습니다.
+You can use the following sources to ingest data loyalty to Experience Platform.
 
-| 소스 | 수집 유형 | 클라우드 |
+| Source | Ingestion type | Cloud |
 | --- | --- | --- |
-| [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | 스트리밍 | Azure |
+| [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
+
+| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
+
+-->
 
 ### 마케팅 자동화 {#marketing-automation}
 
@@ -241,7 +246,6 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하는
 | [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | 배치 | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | 배치 | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | 배치 | Azure |
-| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | 스트리밍 | Azure |
 | [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | 배치 | Azure, AWS |
 
 {style="table-layout:auto"}
