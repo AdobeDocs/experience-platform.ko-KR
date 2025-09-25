@@ -2,9 +2,9 @@
 title: 웹 SDK 태그 확장 구성
 description: 태그 UI에서 Experience Platform Web SDK 태그 확장 기능을 구성하는 방법을 알아봅니다.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 7d5896a4427af54d3a6323744d726bf0b0c3137a
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '3095'
+source-wordcount: '3107'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 ## 웹 SDK 태그 확장 설치 {#install}
 
-웹 SDK 태그 확장 기능이에 속성을 설치해야 합니다. 아직 작성하지 않았다면 [태그 속성 만들기](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=ko)에 대한 설명서를 참조하십시오.
+웹 SDK 태그 확장 기능이에 속성을 설치해야 합니다. 아직 작성하지 않았다면 [태그 속성 만들기](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)에 대한 설명서를 참조하십시오.
 
 속성을 만든 후 속성을 열고 왼쪽 막대에서 **[!UICONTROL 확장]** 탭을 선택합니다.
 
@@ -42,7 +42,7 @@ ht-degree: 3%
 >[!IMPORTANT]
 >
 >웹 SDK 구성 요소를 비활성화하면 기존 구현이 중단될 수 있습니다. 구성 요소를 비활성화할 때마다 구현을 철저히 테스트하여 필요한 모든 기능이 예상대로 작동하는지 확인하십시오.
->&#x200B;>구성 요소를 비활성화하면 해당 구성 요소의 설정을 더 이상 편집할 수 없습니다.
+>>구성 요소를 비활성화하면 해당 구성 요소의 설정을 더 이상 편집할 수 없습니다.
 
 Web SDK 태그 확장을 사용하여 사용자 지정 웹 SDK 빌드를 만들려면 아래 단계를 수행합니다.
 
@@ -60,7 +60,8 @@ Web SDK 태그 확장을 사용하여 사용자 지정 웹 SDK 빌드를 만들�
    * **[!UICONTROL Media Analytics 브리지]**: 이 구성 요소는 Media Analytics 인터페이스를 사용하여 Edge Network 스트리밍 미디어를 사용하도록 설정합니다. 이 구성 요소를 비활성화하면 다음 요소가 비활성화됩니다.
       * [Media Analytics 추적기 가져오기](action-types.md#get-media-analytics-tracker) 작업 유형
    * **[!UICONTROL Personalization]**: 이 구성 요소를 사용하여 Adobe Target 및 Adobe Journey Optimizer 통합을 수행할 수 있습니다. 이 구성 요소를 비활성화하면 다음 요소가 비활성화됩니다.
-      * [제안 작업 적용](action-types.md) 유형
+      * [제안 적용](action-types.md#apply-propositions)작업 유형
+   * **[!UICONTROL 푸시 알림]**: 이 구성 요소는 Adobe Journey Optimizer에서 웹 푸시 알림을 사용하도록 설정합니다.
    * **[!UICONTROL 규칙 엔진]**: 이 구성 요소를 통해 Adobe Journey Optimizer 온디바이스 의사 결정을 사용할 수 있습니다. 이 구성 요소를 비활성화하면 다음 요소가 비활성화됩니다.
       * [규칙 집합 평가](action-types.md#evaluate-rulesets) 작업 유형
       * [규칙 집합 항목 구독](event-types.md#subscribe-ruleset-items) 이벤트 유형
@@ -123,10 +124,9 @@ Edge Network에 요청을 전송하면 데이터 스트림 ID가 서버측 구�
 * **[!UICONTROL 타사 쿠키 사용]**: 이 옵션이 활성화되면 Web SDK은 사용자 식별자를 타사 쿠키에 저장하려고 합니다. 성공하면 사용자는 각 도메인에서 별도의 사용자로 식별되지 않고 여러 도메인을 탐색할 때 단일 사용자로 식별됩니다. 이 옵션이 활성화된 경우, 브라우저가 서드파티 쿠키를 지원하지 않거나 사용자가 서드파티 쿠키를 허용하지 않도록 구성한 경우 SDK은 여전히 사용자 식별자를 서드파티 쿠키에 저장하지 못할 수 있습니다. 이 경우 SDK은 식별자를 자사 도메인에만 저장합니다.
 
   >[!IMPORTANT]
-  >&#x200B;>타사 쿠키는 Web SDK의 [자사 장치 ID](../../../../web-sdk/identity/first-party-device-ids.md) 기능과 호환되지 않습니다.
-  >&#x200B;>자사 디바이스 ID를 사용하거나 서드파티 쿠키를 사용할 수 있지만 두 기능을 동시에 사용할 수는 없습니다.
+  >>타사 쿠키는 Web SDK의 [자사 장치 ID](../../../../web-sdk/identity/first-party-device-ids.md) 기능과 호환되지 않습니다.
+  >>자사 디바이스 ID를 사용하거나 서드파티 쿠키를 사용할 수 있지만 두 기능을 동시에 사용할 수는 없습니다.
   >
-
 ## 개인화 설정 구성 {#personalization}
 
 이 섹션에서는 개인화된 콘텐츠가 로드되는 동안 페이지의 특정 부분을 숨기는 방법을 구성할 수 있습니다. 이렇게 하면 방문자에게만 개인화된 페이지가 표시됩니다.
@@ -168,7 +168,7 @@ Edge Network에 요청을 전송하면 데이터 스트림 ID가 서버측 구�
 * **[!UICONTROL 외부 링크 클릭 수 수집]**: 외부 링크 수집을 활성화하는 확인란입니다.
 * **[!UICONTROL 다운로드 링크 클릭 수 수집]**: 다운로드 링크를 수집할 수 있는 확인란입니다.
 * **[!UICONTROL 다운로드 링크 한정자]**: 링크 URL을 다운로드 링크로 규정하는 정규 표현식입니다.
-* **[!UICONTROL 클릭 속성 필터링]**: 컬렉션 전에 클릭 관련 속성을 평가하고 수정하는 콜백 함수입니다. 이 함수는 [!UICONTROL 이벤트 보내기 전 &#x200B;] 전에 실행됩니다.
+* **[!UICONTROL 클릭 속성 필터링]**: 컬렉션 전에 클릭 관련 속성을 평가하고 수정하는 콜백 함수입니다. 이 함수는 [!UICONTROL 이벤트 보내기 전 ] 전에 실행됩니다.
 * **컨텍스트 설정**: 특정 XDM 필드를 채우는 방문자 정보를 자동으로 수집합니다. **[!UICONTROL 모든 기본 컨텍스트 정보]** 또는 **[!UICONTROL 특정 컨텍스트 정보]**&#x200B;를 선택할 수 있습니다. JavaScript 라이브러리의 [`context`](/help/web-sdk/commands/configure/context.md)에 해당하는 태그입니다.
    * **[!UICONTROL Web]**: 현재 페이지에 대한 정보를 수집합니다.
    * **[!UICONTROL 장치]**: 사용자의 장치에 대한 정보를 수집합니다.

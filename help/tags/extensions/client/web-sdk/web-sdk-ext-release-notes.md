@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 1cc62ee8c87ff2c1c1d55db2e462d485289120ed
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '2947'
+source-wordcount: '2970'
 ht-degree: 22%
 
 ---
@@ -13,6 +13,13 @@ ht-degree: 22%
 # 웹 SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform Web SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Experience Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md)를 참조하십시오.
+
+## 버전 2.33.0 - 2025년 9월 24일
+
+**새로운 기능**
+
+- 푸시 알림 표시에 대한 지원을 추가했습니다.
+- Adobe Experience Platform Web SDK의 [버전 2.30.0](../../../../web-sdk/release-notes.md#2-30-0)을 포함합니다.
 
 ## 버전 2.32.0 - 2025년 9월 4일
 
@@ -161,7 +168,7 @@ Adobe Experience Platform Web SDK 버전 2.20.0을 포함합니다.
 **수정 사항 및 개선 사항**
 
 - [변수 업데이트](action-types.md#update-variable) 작업에서 데이터 요소를 검색할 때 발생하는 오류를 수정했습니다.
-- [!UICONTROL &#x200B; 작업에 사용하도록 권장된 이벤트 유형에서 &#x200B;]Media`sendEvent` 이벤트 유형을 제거했습니다.
+- [!UICONTROL  작업에 사용하도록 권장된 이벤트 유형에서 ]Media`sendEvent` 이벤트 유형을 제거했습니다.
 
 ## 버전 2.22.0 - 2024년 5월 3일 토요일
 

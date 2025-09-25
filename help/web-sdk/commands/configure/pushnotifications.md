@@ -1,9 +1,9 @@
 ---
 title: 푸시 알림
 description: 웹 SDK에 대한 푸시 알림을 구성하여 브라우저 기반 푸시 메시지를 활성화합니다.
-source-git-commit: 9c3f19cc2b32ab70869584b620f5a55d5b808751
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '536'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 >
 > 웹 SDK에 대한 푸시 알림이 현재 **베타**&#x200B;에 있습니다. 기능 및 설명서는 변경될 수 있습니다.
 
-`pushNotifications` 속성을 사용하면 웹 응용 프로그램에 대한 푸시 알림을 구성할 수 있습니다. 이 기능을 사용하면 웹 사이트가 현재 브라우저에 로드되지 않았거나 브라우저가 실행되고 있지 않은 경우에도 웹 앱이 서버에서 푸시된 메시지를 받을 수 있습니다.
+`pushNotifications` 속성을 사용하면 웹 응용 프로그램에 대한 푸시 알림을 구성할 수 있습니다. 이 기능을 사용하면 웹 사이트가 현재 브라우저에 로드되지 않은 경우에도 웹 앱이 서버에서 푸시된 메시지를 받을 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -24,6 +24,8 @@ ht-degree: 2%
 1. **사용자 권한**: 사용자는 알림에 대한 권한을 명시적으로 부여해야 합니다.
 2. **서비스 작업자**: 푸시 알림이 작동하려면 등록된 서비스 작업자가 필요합니다
 3. **VAPID 키**: 보안 통신을 위한 VAPID(Democratic Application Server Identification) 키 생성
+4. **응용 프로그램 ID**: Adobe Journey Optimizer -> 채널 -> 푸시 설정 -> 푸시 자격 증명 내에 VAPID 키를 저장할 때 사용되는 앱 ID입니다.
+5. **추적 데이터 세트 ID**: 이름이 &quot;AJO 푸시 추적 경험 이벤트 데이터 세트&quot;인 시스템 데이터 세트의 ID입니다. Adobe Journey Optimizer -> 데이터 세트에서 다운로드
 
 ## VAPID 키 생성 {#generate-vapid-keys}
 
@@ -36,6 +38,21 @@ web-push generate-vapid-keys
 
 공개 및 개인 키 쌍을 생성합니다. 웹 SDK 구성에서 공개 키를 사용하고 Adobe Journey Optimizer 푸시 알림 채널 내에 개인 키를 저장합니다.
 
+## 서비스 작업자 JavaScript 설치
+
+서비스 작업자 코드는 웹 사이트와 동일한 도메인에서 제공되어야 합니다. Adobe의 CDN에서 서비스 작업자 코드를 다운로드한 다음 자체 서버에서 JavaScript 파일을 호스팅합니다. 웹 SDK 서비스 작업자 코드는 다음 URL 구조를 사용하여 사용할 수 있습니다.
+
+- **축소됨**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloyServiceWorker.min.js`
+- **전체**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloyServiceWorker.js`
+
+다음은 서비스 작업자를 설치하는 방법의 예입니다.
+
+```html
+<script>
+  navigator.serviceWorker.register("/alloyServiceWorker.js", { scope: "/" });
+</script>
+```
+
 ## 웹 SDK 태그 확장을 사용하여 푸시 알림 구성 {#configure-push-notifications-tag-extension}
 
 푸시 알림을 활성화하고 구성하려면 다음 단계를 따르십시오.
@@ -44,9 +61,11 @@ web-push generate-vapid-keys
 1. **[!UICONTROL 데이터 수집]** > **[!UICONTROL 태그]**(으)로 이동합니다.
 1. 원하는 태그 속성을 선택합니다.
 1. **[!UICONTROL 확장]**(으)로 이동한 다음 **[!UICONTROL Adobe Experience Platform Web SDK]** 카드에서 [!UICONTROL 구성]을 클릭합니다.
-1. &quot;사용자 지정 빌드 구성 요소&quot; 섹션에서 **푸시 알림 사용**.
+1. **[!UICONTROL 사용자 지정 빌드 구성 요소]** 섹션에서 **[!UICONTROL 푸시 알림]**&#x200B;을 사용하도록 설정합니다.
 1. 아래로 스크롤하여 [!UICONTROL 푸시 알림] 섹션을 찾습니다.
 1. **[!UICONTROL VAPID 공개 키]** 필드에 VAPID 공개 키를 입력합니다.
+1. **[!UICONTROL 응용 프로그램 ID]** 필드에 응용 프로그램 ID를 입력합니다.
+1. **[!UICONTROL 추적 데이터 세트 ID]** 필드에 추적 데이터 세트 ID를 입력합니다.
 1. **[!UICONTROL 저장]**&#x200B;을 클릭한 다음 변경 내용을 게시합니다.
 
 >[!NOTE]
@@ -64,6 +83,8 @@ alloy("configure", {
   pushNotifications: {
     vapidPublicKey:
       "BEl62iUYgUivElbkzaBgNL3r3vOAhvJyFXjS6FjjRRojYD4NElJkLBJKZvS3xAAh4_gE3WnMaZNu_KGP4jAQlJz",
+    applicationId: "my-app-id",
+    trackingDatasetId: "4dc19305cdd27e03dd9a6bbe",
   },
 });
 ```
@@ -71,8 +92,10 @@ alloy("configure", {
 ## 속성 {#properties}
 
 | 속성 | 유형 | 필수 여부 | 설명 |
-| ------ | ------ | -------- | ----- |
+|---------|----|---------|-----------|
 | `vapidPublicKey` | 문자열 | 예 | 푸시 구독에 사용되는 VAPID 공개 키입니다. Base64로 인코딩된 문자열이어야 합니다. |
+| `applicationId` | 문자열 | 예 | 해당 VAPID 공개 키와 연결된 애플리케이션 ID. |
+| `trackingDatasetId` | 문자열 | 예 | 푸시 알림 추적에 사용되는 시스템 데이터 세트 ID. |
 
 ## 중요한 고려 사항 {#important-considerations}
 
