@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;ID;ID;XDM 그래프;ID 서비스;ID 서비스
 solution: Experience Platform
-title: Identity Service 개요
+title: ID 서비스 개요
 description: Adobe Experience Platform Identity Service를 사용하면 디바이스와 시스템 간에 ID를 연결하여 고객과 고객의 행동을 더 잘 볼 수 있으므로 효과적인 개인 디지털 경험을 실시간으로 제공할 수 있습니다.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f791940300036159ceaad11ff725eecfaa8332f4
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1574'
 ht-degree: 2%
 
 ---
@@ -74,6 +74,10 @@ Identity Service는 임무 달성을 위해 다음과 같은 작업을 제공합
 
 ## ID 서비스에서 ID를 연결하는 방법
 
+>[!IMPORTANT]
+>
+>ID 서비스는 대/소문자를 구분합니다. 예를 들어 **abc<span>@gmail.com** 및 **ABC<span>@GMAIL.COM**&#x200B;은(는) 두 개의 개별 전자 메일 ID로 처리됩니다.
+
 ID 네임스페이스와 ID 값이 일치하면 두 ID 간의 링크가 설정됩니다.
 
 일반적인 로그인 이벤트 **은(는) Experience Platform으로 두 개의 ID를 전송**&#x200B;합니다.
@@ -89,7 +93,7 @@ ID 네임스페이스와 ID 값이 일치하면 두 ID 간의 링크가 설정�
    * CRMID: ABC 는 인증된 사용자로서 사용자를 나타내는 네임스페이스 및 값입니다.
    * ECID: 123은 랩톱에서 웹 브라우저 사용을 나타내는 네임스페이스와 값입니다.
 * 다음으로, 동일한 전자 상거래 웹 사이트에 동일한 자격 증명으로 로그인하지만 랩톱의 웹 브라우저 대신 휴대폰의 웹 브라우저를 사용하는 경우 새 ECID가 ID 서비스에 등록됩니다.
-* 백그라운드에서 ID 서비스는 이 새 이벤트를 `{CRM_ID:ABC, ECID:456}`(으)로 처리합니다. 여기서 CRM_ID: ABC는 인증된 고객 ID를 나타내고 ECID:456은 모바일 장치의 웹 브라우저를 나타냅니다.
+* 백그라운드에서 ID 서비스는 이 새 이벤트를 `{CRM_ID:ABC, ECID:456}`(으)로 처리합니다. 여기서 CRM_ID: ABC는 인증된 고객 ID를 나타내고 ECID:456은(는) 모바일 장치의 웹 브라우저를 나타냅니다.
 
 위의 시나리오를 고려하여 ID 서비스는 `{CRM_ID:ABC, ECID:123}`과(와) `{CRM_ID:ABC, ECID:456}` 사이의 링크를 설정합니다. 그러면 ID 그래프에서 세 개의 ID를 &quot;소유&quot;할 수 있습니다. 하나는 개인 식별자(CRMID)에 해당하고 다른 하나는 쿠키 식별자(ECID)에 해당합니다.
 
@@ -101,7 +105,7 @@ ID 그래프는 서로 다른 ID 네임스페이스 간의 관계 맵으로, 고
 
 다음 비디오는 ID 및 ID 그래프에 대한 이해를 돕기 위한 것입니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422775?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Experience Platform 인프라 내에서 ID 서비스의 역할 이해
 

@@ -2,7 +2,7 @@
 title: Id 그래프 연결 규칙 구성 안내서
 description: ID 그래프 연결 규칙을 사용하여 구성할 수 있는 다양한 구현 유형에 대해 알아봅니다.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 54a50cd3e122df7f653c06232e0598fa878eeac5
+source-git-commit: 6af5f87c9c32212568e84edbed9f043a766870be
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -24,7 +24,7 @@ ht-degree: 7%
 * **중간**: [중간 구현](#intermediate-implementations)에는 **여러 장치 간 네임스페이스**, **고유하지 않은 ID** 및 **여러 고유 네임스페이스**&#x200B;와 같은 여러 변수가 포함되어 있습니다.
 * **고급**: [고급 구현](#advanced-implementations)에는 복잡하고 여러 계층으로 구성된 그래프 시나리오가 포함됩니다. 고급 구현의 경우 적절한 링크가 제거되어 그래프 축소가 발생하지 않도록 하려면 올바른 네임스페이스 우선 순위 지정을 반드시 수행해야 합니다.
 
-## 시작
+## 시작하기
 
 다음 문서로 이동하기 전에 Identity Service 및 [!DNL Identity Graph Linking Rules]에 대한 몇 가지 중요한 개념을 숙지하십시오.
 
@@ -133,6 +133,7 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 >[!NOTE]
 >
 >아래 구현을 완료하려면 의 ID 기호(대/소문자 구분)를 사용하여 다음과 같은 사용자 지정 네임스페이스를 만들어야 합니다.
+>
 >* `CRMID`
 >* `CChash`(해시된 신용 카드 번호를 나타내는 사용자 지정 네임스페이스입니다.)
 
@@ -228,6 +229,7 @@ CRMID: Jill, CChash: undefined
 >[!NOTE]
 >
 >아래 구현을 완료하려면 다음의 ID 기호(대/소문자 구분)를 사용하여 사용자 지정 네임스페이스를 만들어야 합니다.
+>
 >* `CRMID`
 >* `CRMIDhash`
 
@@ -477,6 +479,7 @@ loginID: JanePersonal, ECID: 222
 >[!NOTE]
 >
 >아래 구현을 완료하려면 다음의 ID 기호(대/소문자 구분)를 사용하여 사용자 지정 네임스페이스를 만들어야 합니다.
+>
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`
