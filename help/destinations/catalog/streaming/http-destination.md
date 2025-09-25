@@ -4,9 +4,9 @@ title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 서드파티 HTTP 끝점으로 전송하여 자체 분석을 실행하거나 Experience Platform에서 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 6d8386b4d9ed64128c8d9a9537610f0fd07d74cd
+source-git-commit: d0ee4b30716734b8fce3509a6f3661dfa572cc9f
 workflow-type: tm+mt
-source-wordcount: '2852'
+source-wordcount: '2977'
 ht-degree: 7%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 HTTP API 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 [!DNL Adobe Experience Platform] 스트리밍 대상입니다.
 
@@ -245,7 +245,7 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 | 대상 내보내기를 결정하는 사항 | 대상 내보내기에 포함된 사항 |
 |---------|----------|
-| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기에 대한 큐 역할을 합니다. 즉, 프로필의 `segmentMembership` 상태가 `realized` 또는 `exiting`(으)로 변경되거나 매핑된 특성이 업데이트되면 대상 내보내기가 시작됩니다.</li><li>ID는 현재 HTTP API 대상에 매핑될 수 없으므로 주어진 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>`segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 세그먼트가 포함되어 있습니다. 이 경우 자격 또는 세그먼트 종료 이벤트 후 프로필의 상태가 변경되었습니다. 활성화 데이터 흐름에서 매핑된 세그먼트와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 프로필이 자격을 갖춘 매핑되지 않은 다른 세그먼트는 대상 내보내기의 일부가 될 수 있습니다. <br> **중요**: **[!UICONTROL 세그먼트 이름 포함]** 옵션을 사용하면 대상에 매핑된 세그먼트에 대해서만 세그먼트 이름이 포함됩니다. 옵션이 활성화된 경우에도 내보내기에 나타나는 매핑되지 않은 세그먼트에는 `name` 필드가 포함되지 않습니다. </li><li>`identityMap` 개체의 모든 ID도 포함됩니다. 현재 Experience Platform에서는 HTTP API 대상에서 ID 매핑을 지원하지 않습니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
+| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기에 대한 큐 역할을 합니다. 즉, 프로필의 `segmentMembership` 상태가 `realized` 또는 `exiting`(으)로 변경되거나 매핑된 특성이 업데이트되면 대상 내보내기가 시작됩니다.</li><li>ID는 현재 HTTP API 대상에 매핑될 수 없으므로 주어진 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>**참고**: HTTP API 대상에 대한 내보내기 동작이 2025년 9월 릴리스로 업데이트되었습니다. 아래에 강조 표시된 새 동작은 현재 이 릴리스 이후에 생성된 새 HTTP API 대상에만 적용됩니다. 기존 HTTP API 대상의 경우, 이전 내보내기 동작을 계속 사용하거나 Adobe에 문의하여 매핑된 대상자만 내보내는 새 동작으로 마이그레이션할 수 있습니다. 모든 조직이 2026년에 새 동작으로 점진적으로 마이그레이션됩니다. <br><br> <span class="preview"> **새 내보내기 동작**: 대상에 매핑되고 변경된 세그먼트는 segmentMembership 개체에 포함됩니다. 일부 시나리오에서는 여러 호출을 사용하여 내보낼 수 있습니다. 또한 일부 시나리오에서는 변경되지 않은 일부 세그먼트가 호출에 포함될 수도 있습니다. 어떤 경우든 데이터 흐름에서 매핑된 세그먼트만 내보냅니다.</span></li><br>**이전 동작**: `segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 세그먼트가 포함되어 있습니다. 이 경우 자격 또는 세그먼트 종료 이벤트 후 프로필의 상태가 변경되었습니다. 활성화 데이터 흐름에서 매핑된 세그먼트와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 정규화된 프로필에 대한 다른 매핑되지 않은 세그먼트는 대상 내보내기의 일부가 될 수 있습니다. <br> **중요**: **[!UICONTROL 세그먼트 이름 포함]** 옵션을 사용하면 대상에 매핑된 세그먼트에 대해서만 세그먼트 이름이 포함됩니다. 옵션이 활성화된 경우에도 내보내기에 나타나는 매핑되지 않은 세그먼트에는 `name` 필드가 포함되지 않습니다. <li>`identityMap` 개체의 모든 ID도 포함됩니다. 현재 Experience Platform에서는 HTTP API 대상에서 ID 매핑을 지원하지 않습니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -253,9 +253,11 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 ![HTTP API 대상 데이터 흐름의 예](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-대상으로의 프로필 내보내기는 *3개의 매핑된 세그먼트 중 하나를 사용하거나 종료하는 프로필에 의해 결정됩니다*. 그러나 데이터 내보내기에서 `segmentMembership` 개체(아래 [내보낸 데이터](#exported-data) 섹션 참조)에 매핑되지 않은 다른 대상이 나타날 수 있습니다. 해당 프로필이 해당 대상의 구성원이고 이러한 대상이 내보내기를 트리거한 대상과 동일한 병합 정책을 공유하는 경우. 프로필이 **Customer with DeLorean Cars** 세그먼트에 적합하지만 **Watched &quot;Back to the Future&quot;** movie 및 **Science fans** 세그먼트에 속하는 경우 `segmentMembership`Customer with DeLorean Cars **세그먼트와 동일한 병합 정책을 공유하는 경우 데이터 흐름에서 매핑되지 않았더라도 이 두 대상이 데이터 내보내기의** 개체에도 표시됩니다.
+대상으로의 프로필 내보내기는 *3개의 매핑된 세그먼트 중 하나를 사용하거나 종료하는 프로필에 의해 결정됩니다*. 데이터 내보내기에서 `segmentMembership` 개체(아래 [내보낸 데이터](#exported-data) 섹션 참조)에 다른 매핑된 대상자가 나타날 수 있습니다. 해당 프로필이 해당 대상자의 구성원이고 이 대상자가 내보내기를 트리거한 대상자와 동일한 병합 정책을 공유하는 경우. 프로필이 **Customer with DeLorean Cars** 세그먼트에 적합하고 **Basic Site Active and City - Dallas** 세그먼트에 속하는 경우 이 두 대상자는 `segmentMembership`Customer with DeLorean Cars **세그먼트와 동일한 병합 정책을 공유하는 경우 데이터 흐름에서 매핑되므로 데이터 내보내기의** 개체에도 표시됩니다.
 
 프로필 속성 관점에서 위에 매핑된 네 개의 속성에 대한 변경 사항은 대상 내보내기를 결정하고 프로필에 있는 네 개의 매핑된 속성 중 하나는 데이터 내보내기에 표시됩니다.
+
+>[!ENDSHADEBOX]
 
 ## 내역 데이터 채우기 {#historical-data-backfill}
 

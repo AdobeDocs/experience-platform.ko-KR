@@ -4,9 +4,9 @@ title: Azure 이벤트 허브 연결
 description: ' [!DNL Azure Event Hubs] 저장소에 대한 실시간 아웃바운드 연결을 생성하여 Experience Platform에서 데이터를 스트리밍합니다.'
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 678f80445212edc1edd3f4799999990ddcc2a039
+source-git-commit: d0ee4b30716734b8fce3509a6f3661dfa572cc9f
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2212'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 [!DNL Azure Event Hubs]은(는) 빅 데이터 스트리밍 플랫폼 및 이벤트 수집 서비스입니다. 초당 수백만 개의 이벤트를 수신하고 처리할 수 있습니다. 이벤트 허브로 전송된 데이터는 모든 실시간 분석 공급자나 일괄 처리/저장소 어댑터를 사용하여 변환하거나 저장할 수 있습니다.
 
@@ -78,8 +78,8 @@ UI의 ![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 HTTP 끝점에 연결할 **[!UICONTROL 표준 인증]** 유형을 선택한 경우 아래 필드를 입력하고 **[!UICONTROL 대상에 연결]**&#x200B;을 선택하십시오.
 
 * **[!UICONTROL SAS 키 이름]**: SAS 키 이름이라고도 하는 인증 규칙의 이름입니다.
-* **[!UICONTROL SAS 키]**: 이벤트 허브 네임스페이스의 기본 키입니다. 이벤트 허브 목록을 채우려면 `sasKey`에 해당하는 `sasPolicy`에 **관리** 권한이 구성되어 있어야 합니다. [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에서 SAS 키를 사용하여 [!DNL Azure Event Hubs]에 인증하는 방법에 대해 알아봅니다.
-* **[!UICONTROL 네임스페이스]**: [!DNL Azure Event Hubs] 네임스페이스를 채웁니다. [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)에서 [!DNL Azure Event Hubs] 네임스페이스에 대해 알아봅니다.
+* **[!UICONTROL SAS 키]**: 이벤트 허브 네임스페이스의 기본 키입니다. 이벤트 허브 목록을 채우려면 `sasPolicy`에 해당하는 `sasKey`에 **관리** 권한이 구성되어 있어야 합니다. [!DNL Azure Event Hubs]Microsoft 설명서[에서 SAS 키를 사용하여 ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에 인증하는 방법에 대해 알아봅니다.
+* **[!UICONTROL 네임스페이스]**: [!DNL Azure Event Hubs] 네임스페이스를 채웁니다. [!DNL Azure Event Hubs]Microsoft 설명서[에서 ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) 네임스페이스에 대해 알아봅니다.
 
 #### SAS(공유 액세스 서명) 인증 {#sas-authentication}
 
@@ -88,9 +88,9 @@ HTTP 끝점에 연결할 **[!UICONTROL 표준 인증]** 유형을 선택한 경�
 HTTP 끝점에 연결할 **[!UICONTROL 표준 인증]** 유형을 선택한 경우 아래 필드를 입력하고 **[!UICONTROL 대상에 연결]**&#x200B;을 선택하십시오.
 
 * **[!UICONTROL SAS 키 이름]**: SAS 키 이름이라고도 하는 인증 규칙의 이름입니다.
-* **[!UICONTROL SAS 키]**: 이벤트 허브 네임스페이스의 기본 키입니다. 이벤트 허브 목록을 채우려면 `sasKey`에 해당하는 `sasPolicy`에 **관리** 권한이 구성되어 있어야 합니다. [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에서 SAS 키를 사용하여 [!DNL Azure Event Hubs]에 인증하는 방법에 대해 알아봅니다.
-* **[!UICONTROL 네임스페이스]**: [!DNL Azure Event Hubs] 네임스페이스를 채웁니다. [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)에서 [!DNL Azure Event Hubs] 네임스페이스에 대해 알아봅니다.
-* **[!UICONTROL 이벤트 허브 이름]**: [!DNL Azure Event Hub] 이름을 입력하십시오. [Microsoft 설명서](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)에서 [!DNL Azure Event Hubs] 이름에 대해 알아보세요.
+* **[!UICONTROL SAS 키]**: 이벤트 허브 네임스페이스의 기본 키입니다. 이벤트 허브 목록을 채우려면 `sasPolicy`에 해당하는 `sasKey`에 **관리** 권한이 구성되어 있어야 합니다. [!DNL Azure Event Hubs]Microsoft 설명서[에서 SAS 키를 사용하여 ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에 인증하는 방법에 대해 알아봅니다.
+* **[!UICONTROL 네임스페이스]**: [!DNL Azure Event Hubs] 네임스페이스를 채웁니다. [!DNL Azure Event Hubs]Microsoft 설명서[에서 ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) 네임스페이스에 대해 알아봅니다.
+* **[!UICONTROL 이벤트 허브 이름]**: [!DNL Azure Event Hub] 이름을 입력하십시오. [!DNL Azure Event Hubs]Microsoft 설명서[에서 ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) 이름에 대해 알아보세요.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -147,17 +147,21 @@ Experience Platform은 대상 자격 조건 또는 기타 중요한 이벤트 �
 
 | 대상 내보내기를 결정하는 사항 | 대상 내보내기에 포함된 사항 |
 |---------|----------|
-| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기에 대한 큐 역할을 합니다. 즉, 프로필의 `segmentMembership` 상태가 `realized` 또는 `exiting`(으)로 변경되거나 매핑된 특성이 업데이트되면 대상 내보내기가 시작됩니다.</li><li>현재 ID를 [!DNL Azure Event Hubs] 대상에 매핑할 수 없으므로 지정된 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>`segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 세그먼트가 포함되어 있습니다. 이 경우 자격 또는 세그먼트 종료 이벤트 후 프로필의 상태가 변경되었습니다. 활성화 데이터 흐름에서 매핑된 세그먼트와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 프로필이 자격을 갖춘 매핑되지 않은 다른 세그먼트는 대상 내보내기의 일부가 될 수 있습니다. </li><li>`identityMap` 개체의 모든 ID도 포함됩니다. Experience Platform은 현재 [!DNL Azure Event Hubs] 대상에서 ID 매핑을 지원하지 않습니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
+| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기에 대한 큐 역할을 합니다. 즉, 프로필의 `segmentMembership` 상태가 `realized` 또는 `exiting`(으)로 변경되거나 매핑된 특성이 업데이트되면 대상 내보내기가 시작됩니다.</li><li>현재 ID를 [!DNL Azure Event Hubs] 대상에 매핑할 수 없으므로 지정된 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>**참고**: Azure Event Hubs 대상에 대한 내보내기 동작이 2025년 9월 릴리스로 업데이트되었습니다. 아래에 강조 표시된 새 동작은 현재 이 릴리스 이후에 생성된 새 Azure Event Hubs 대상에만 적용됩니다. 기존 Azure Event Hubs 대상의 경우 이전 내보내기 동작을 계속 사용하거나 Adobe에 문의하여 매핑된 대상자만 내보내는 새 동작으로 마이그레이션할 수 있습니다. 모든 조직이 2026년에 새 동작으로 점진적으로 마이그레이션됩니다. <br><br> <span class="preview"> **새 내보내기 동작**: 대상에 매핑되고 변경된 세그먼트는 segmentMembership 개체에 포함됩니다. 일부 시나리오에서는 여러 호출을 사용하여 내보낼 수 있습니다. 또한 일부 시나리오에서는 변경되지 않은 일부 세그먼트가 호출에 포함될 수도 있습니다. 어떤 경우든 데이터 흐름에서 매핑된 세그먼트만 내보냅니다.</span></li><br>**이전 동작**: `segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 세그먼트가 포함되어 있습니다. 이 경우 자격 또는 세그먼트 종료 이벤트 후 프로필의 상태가 변경되었습니다. 활성화 데이터 흐름에서 매핑된 세그먼트와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 정규화된 프로필에 대한 다른 매핑되지 않은 세그먼트는 대상 내보내기의 일부가 될 수 있습니다. <li>`identityMap` 개체의 모든 ID도 포함됩니다. Experience Platform은 현재 [!DNL Azure Event Hubs] 대상에서 ID 매핑을 지원하지 않습니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
 
 {style="table-layout:fixed"}
+
+>[!BEGINSHADEBOX]
 
 예를 들어, 데이터 흐름에서 대상이 세 개 선택되고 대상에 네 개의 특성이 매핑되는 [!DNL Azure Event Hubs] 대상에 대한 이 데이터 흐름을 고려해 보십시오.
 
 ![Amazon Kinesis 대상 데이터 흐름](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-대상으로의 프로필 내보내기는 *3개의 매핑된 세그먼트 중 하나를 사용하거나 종료하는 프로필에 의해 결정됩니다*. 그러나 데이터 내보내기에서 `segmentMembership` 개체(아래 [내보낸 데이터](#exported-data) 섹션 참조)에 매핑되지 않은 다른 대상이 나타날 수 있습니다. 해당 프로필이 해당 대상의 구성원이고 이러한 대상이 내보내기를 트리거한 대상과 동일한 병합 정책을 공유하는 경우. 프로필이 **Customer with DeLorean Cars** 대상자를 대상으로 하지만 **Watched &quot;Back to the Future&quot;** movie 및 **Science fans** segments의 회원이면 **DeLorean Cars를 사용하는 고객** 세그먼트와 동일한 병합 정책을 공유하는 경우 이 두 대상자가 데이터 흐름에서 매핑되지 않았더라도 데이터 내보내기의 `segmentMembership` 개체에도 표시됩니다.
+대상으로의 프로필 내보내기는 *3개의 매핑된 세그먼트 중 하나를 사용하거나 종료하는 프로필에 의해 결정됩니다*. 데이터 내보내기에서 `segmentMembership` 개체(아래 [내보낸 데이터](#exported-data) 섹션 참조)에 다른 매핑된 대상자가 나타날 수 있습니다. 해당 프로필이 해당 대상자의 구성원이고 이 대상자가 내보내기를 트리거한 대상자와 동일한 병합 정책을 공유하는 경우. 프로필이 **Customer with DeLorean Cars** 세그먼트에 적합하고 **Basic Site Active and City - Dallas** 세그먼트에 속하는 경우 이 두 대상자는 `segmentMembership`Customer with DeLorean Cars **세그먼트와 동일한 병합 정책을 공유하는 경우 데이터 흐름에서 매핑되므로 데이터 내보내기의** 개체에도 표시됩니다.
 
 프로필 속성 관점에서 위에 매핑된 네 개의 속성에 대한 변경 사항은 대상 내보내기를 결정하고 프로필에 있는 네 개의 매핑된 속성 중 하나는 데이터 내보내기에 표시됩니다.
+
+>[!ENDSHADEBOX]
 
 ## 내역 데이터 채우기 {#historical-data-backfill}
 
