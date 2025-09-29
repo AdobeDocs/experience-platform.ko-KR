@@ -81,5 +81,5 @@ Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x2
 
 ## 추가 리소스
 
-* [흐름 서비스 API를 사용하여 새 연결 사양을 만듭니다](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [UI를 사용하여 소스에 연결](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [흐름 서비스 API를 사용하여 새 연결 사양을 만듭니다](https://experienceleague.adobe.com/ko/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [UI를 사용하여 소스에 연결](https://experienceleague.adobe.com/ko/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
