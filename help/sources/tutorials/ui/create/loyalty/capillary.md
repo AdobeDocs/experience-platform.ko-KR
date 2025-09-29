@@ -1,11 +1,9 @@
 ---
 title: UI를 사용하여 Capillary를 Experience Platform에 연결
 description: UI를 사용하여 Capillary를 Experience Platform에 연결하는 방법을 알아봅니다
-hide: true
-hidefromtoc: true
 badge: Beta
 exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
-source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
+source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 5%
