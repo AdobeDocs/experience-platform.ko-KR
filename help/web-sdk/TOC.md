@@ -6,10 +6,10 @@ breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
 role: Developer
-source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
+source-git-commit: c697d0e924545caf430382385797bde340b57d94
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 22%
+source-wordcount: '241'
+ht-degree: 27%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 22%
    * [NPM 패키지를 사용하여 웹 SDK 설치](install/npm.md)
    * [NPM 패키지를 사용하여 사용자 지정 웹 SDK 빌드 만들기](install/create-custom-build.md)
 * 명령 {#commands}
-   * 구성{#configure}
+   * 구성 {#configure}
       * [개요](commands/configure/overview.md)
       * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [클릭콜렉션활성화됨](commands/configure/clickcollectionenabled.md)
@@ -43,6 +43,7 @@ ht-degree: 22%
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
       * [prehidingStyle](commands/configure/prehidingstyle.md)
+      * [푸시 알림](commands/configure/pushnotifications.md)
       * [target마이그레이션 활성화됨](commands/configure/targetmigrationenabled.md)
       * [타사 쿠키 사용](commands/configure/thirdpartycookiesenabled.md)
    * sendEvent {#sendevent}
@@ -63,6 +64,7 @@ ht-degree: 22%
    * [setConsent](commands/setconsent.md)
    * [set디버그](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
+   * [sendPushSubscription](commands/sendPushSubscription.md)
    * [subscribeRulesetItems](commands/subscriberulesetitems.md)
    * [데이터스트림 재정의 구성](commands/datastream-overrides.md)
    * [명령 응답](commands/command-responses.md)
@@ -95,7 +97,7 @@ ht-degree: 22%
       * [웹 SDK에서 웹 인앱 메시지 지원 구성](personalization/web-in-app-messaging.md)
 
 * 동의 {#consent}
-   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
+   * IAB 투명성 및 동의 프레임워크 2.0 {#iab-tcf}
       * [개요](consent/iab-tcf/overview.md)
       * [태그와 통합](consent/iab-tcf/with-tags.md)
       * [태그 없이 통합](consent/iab-tcf/without-tags.md)
