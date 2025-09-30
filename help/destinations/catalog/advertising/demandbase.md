@@ -1,14 +1,14 @@
 ---
 title: Demandbase 연결
 description: 이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대한 계정 대상자를 활성화할 수 있습니다. DemandBase의 B2B Demand Side Platform(DSP)을 통해 대상 계정의 관련 페르소나와 역할에 광고를 게재하십시오. 대상 계정은 마케팅과 판매의 다른 다운스트림 사용 사례를 위해 Demandbase 서드파티 데이터로 강화할 수도 있습니다.
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
-badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923
+source-git-commit: 39012e2308af57af7c9193bdc4894f8f2e358606
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 17%
+source-wordcount: '762'
+ht-degree: 16%
 
 ---
 
@@ -16,15 +16,15 @@ ht-degree: 17%
 
 >[!AVAILABILITY]
 >
->&#x200B;>Real-Time Customer Data Platform의 [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) 에디션을 구매하는 회사는 Demandbase 대상에 대한 계정 대상을 활성화할 수 있습니다.
+>Real-Time Customer Data Platform의 [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) 에디션을 구매하는 회사는 Demandbase 대상에 대한 계정 대상을 활성화할 수 있습니다.
 
 [계정 대상자](/help/segmentation/types/account-audiences.md)를 기반으로 대상자 타깃팅, 개인화 및 제외를 위한 Demandbase 캠페인에 대한 프로필을 활성화합니다.
 
-## 활용 사례 {#use-case}
+## 사용 사례 {#use-case}
 
 이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대한 계정 대상자를 활성화할 수 있습니다. DemandBase의 B2B Demand Side Platform(DSP)을 통해 대상 계정의 관련 페르소나와 역할에 광고를 게재하십시오. 대상 계정은 마케팅과 판매의 다른 다운스트림 사용 사례를 위해 Demandbase 서드파티 데이터로 강화할 수도 있습니다.
 
-예를 들어, Demandbase의 광고 기술 DSP을 활용하여 주요 계정 내에서 특정 담당자 또는 역할을 타겟팅하거나 구매 그룹을 생성하고 늘릴 수 있습니다. Demandbase 대상을 사용하여 계정을 효과적으로 타기팅하는 다른 사용 사례를 살펴보십시오.
+예를 들어, Demandbase의 광고 기술 DSP을 활용하여 funnel의 최상위 리드 생성을 위한 주요 계정 내에서 특정 담당자 또는 역할을 타겟팅하거나 구매 그룹을 생성하고 늘릴 수 있습니다. Demandbase 대상을 사용하여 계정을 효과적으로 타기팅하는 다른 사용 사례를 살펴보십시오.
 
 또한 이 통합을 통해 실시간 계정 정보 조회를 사용하여 웹 사이트 경험을 개인화하여 참여를 최적화할 수 있습니다.
 
@@ -93,6 +93,20 @@ ht-degree: 17%
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상에 대한 계정 대상을 활성화하는 방법에 대한 지침은 [계정 대상 활성화](/help/destinations/ui/activate-account-audiences.md)를 참조하십시오.
+
+### 필수 매핑 {#mandatory-mappings}
+
+대상을 [!DNL Demandbase] 대상으로 활성화할 때 매핑 단계에서 다음의 필수 필드 매핑을 구성해야 합니다.
+
+| 소스 필드 | 대상 필드 | 설명 |
+|--------------|--------------|-------------|
+| `xdm: accountName` | `xdm: accountName` | 계정 이름 |
+| `xdm: accountOrganization.domain` | `xdm: accountEmailDomain` | 계정 조직의 이메일 도메인 |
+| `xdm: accountKey.sourceKey` | `Identity: primaryId` | 계정에 대한 기본 식별자 |
+
+![Demandbase 매핑](/help/destinations/assets/catalog/advertising/demandbase/demandbase-mapping.png)
+
+이러한 매핑은 대상이 제대로 작동하는 데 필요하며 활성화 워크플로우를 계속 진행하기 전에 구성해야 합니다.
 
 ## 추가 참고 사항 및 중요한 설명선 {#additional-notes}
 
