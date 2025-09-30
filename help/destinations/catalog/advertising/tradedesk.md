@@ -3,9 +3,9 @@ keywords: 광고, 무역데스크, 광고 무역데스크
 title: 트레이드 데스크 연결
 description: Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에 걸쳐 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있는 셀프서비스 플랫폼입니다.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 564ee7fbd45677c35057c56de049158f3282d7ad
+source-git-commit: f078d7b20bc16bf1a6cca065e5e6fba85d9d0648
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1066'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 3%
 >[!IMPORTANT]
 >
 > 2025년 7월부터 대상 서비스로 [내부 업그레이드](../../../release-notes/2025/july-2025.md#destinations)한 후 데이터 흐름에서 **활성화된 프로필 수가 감소**&#x200B;되어 [!DNL The Trade Desk]될 수 있습니다.
-> &#x200B;> 이 삭제는 이 대상 플랫폼에 대한 모든 활성화에 대한 **ECID 매핑 요구 사항**&#x200B;의 도입으로 인해 발생합니다. 자세한 내용은 이 페이지의 [필수 매핑](#mandatory-mappings) 섹션을 참조하십시오.
+> > 이 삭제는 이 대상 플랫폼에 대한 모든 활성화에 대한 **ECID 매핑 요구 사항**&#x200B;의 도입으로 인해 발생합니다. 자세한 내용은 이 페이지의 [필수 매핑](#mandatory-mappings) 섹션을 참조하십시오.
 >
 >**변경 사항:**
 >
@@ -84,7 +84,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->[!DNL The Trade Desk]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/ko/docs/id-service/using/id-service-api/methods/idsync)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
+>[!DNL The Trade Desk]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
 
 ## 대상에 연결 {#connect}
 
@@ -131,16 +131,33 @@ ht-degree: 3%
 
 ### 필수 매핑 {#mandatory-mappings}
 
-[지원되는 ID](#supported-identities) 섹션에 설명된 모든 대상 ID는 필수이며 대상 활성화 프로세스 중에 매핑해야 합니다. 여기에는 다음 항목이 포함되어 있습니다.
+[지원되는 ID](#supported-identities) 섹션에 설명된 모든 대상 ID는 대상 활성화 워크플로의 매핑 단계에서 매핑되어야 합니다. 여기에는 다음 항목이 포함되어 있습니다.
 
-* **GAID**(Google Advertising ID)
-* **IDFA**(광고주용 Apple ID)
-* **ECID**(Experience Cloud ID)
-* **거래 데스크 ID**
-
-필요한 모든 ID를 매핑하지 못하면 활성화 워크플로우를 완료할 수 없습니다. 각 ID는 통합에서 특정 용도로 사용되며 대상이 올바르게 작동하려면 모두 필요합니다.
+* [!DNL GAID]&#x200B;(Google Advertising ID)
+* [!DNL IDFA]&#x200B;(광고주용 Apple ID)
+* [!DNL ECID]&#x200B;(Experience Cloud ID)
+* [!DNL The Trade Desk ID]
 
 ![필수 매핑을 보여 주는 스크린샷](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
+
+모든 대상 ID를 매핑하면 활성화가 존재하는 ID를 사용하여 프로필을 올바르게 분할하고 전달할 수 있습니다. 모든 ID가 각 프로필에 있어야 한다는 의미는 아닙니다.
+
+트레이드 데스크로 내보내려면 프로필에 다음이 포함되어야 합니다.
+
+* [!DNL ECID] 및
+* [!DNL GAID], [!DNL IDFA] 또는 [!DNL The Trade Desk ID] 중 하나 이상
+
+예:
+
+* [!DNL ECID]만: 내보내지 않음
+* [!DNL ECID] + [!DNL The Trade Desk ID]: 내보냄
+* [!DNL ECID] + [!DNL IDFA]: 내보냄
+* [!DNL ECID] + [!DNL GAID]: 내보냄
+* [!DNL IDFA] + [!DNL The Trade Desk ID]&#x200B;([!DNL ECID] 없음): 내보내지 않음
+
+>[!NOTE]
+> 
+>대상 서비스로 [2025년 7월 업그레이드](/help/release-notes/2025/july-2025.md#destinations)한 후 [!DNL ECID] 매핑이 적용됩니다. [!DNL ECID]이(가) 누락된 프로필이 예상대로 삭제되어 이전 동작에 비해 활성화 수가 낮을 수 있습니다.
 
 ## 내보낸 데이터 {#exported-data}
 
