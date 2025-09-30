@@ -4,9 +4,9 @@ title: 유니온 스키마 UI 안내서
 type: Documentation
 description: Adobe Experience Platform UI(사용자 인터페이스)에서 조직 내의 모든 결합 스키마를 쉽게 보고 특정 클래스에 대한 필드, ID, 관계 및 기여 스키마를 미리 볼 수 있습니다. 이 안내서에서는 Experience Platform UI를 사용하여 결합 스키마를 보고 탐색하는 방법에 대한 자세한 정보를 제공합니다.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b7f5f08d5b3632a2d80c39559a5fb5116d9567f8
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1206'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,22 @@ ht-degree: 0%
 
 Adobe Experience Platform UI(사용자 인터페이스)에서 조직 내의 모든 결합 스키마를 쉽게 보고 특정 클래스에 대한 필드, ID, 관계 및 기여 스키마를 미리 볼 수 있습니다. 이 안내서에서는 Experience Platform UI를 사용하여 결합 스키마를 보고 탐색하는 방법에 대한 자세한 정보를 제공합니다.
 
-## 시작하기
+## 시작 {#getting-started}
 
 이 UI 안내서를 사용하려면 실시간 고객 프로필 데이터 관리와 관련된 다양한 [!DNL Experience Platform] 서비스에 대한 이해가 필요합니다. 이 안내서를 읽거나 UI에서 작업하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 * [[!DNL Real-Time Customer Profile]](../home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [[!DNL Identity Service]](../../identity-service/home.md): 서로 다른 데이터 원본의 ID를 [!DNL Experience Platform]&#x200B;(으)로 수집할 때 브리징하여 [!DNL Real-Time Customer Profile]을(를) 사용하도록 설정합니다.
+* [[!DNL Identity Service]](../../identity-service/home.md): 서로 다른 데이터 원본의 ID를 [!DNL Real-Time Customer Profile]&#x200B;(으)로 수집할 때 브리징하여 [!DNL Experience Platform]을(를) 사용하도록 설정합니다.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 
-## 유니온 스키마 이해
+## 유니온 스키마 이해 {#understanding-union-schemas}
+
+>[!CONTEXTUALHELP]
+>id="rtcdp_collaboration_union_schema"
+>title="유니온 스키마"
+>abstract=""
+
+<!-- The above contextual help is used in the Collaboration UI for a read more link. -->
 
 실시간 고객 프로필을 사용하면 Adobe Experience Platform과 통합된 시스템 전반에서 고객 특성 및 각 고객 상호 작용의 타임스탬프가 지정된 이벤트가 포함된 강력한 중앙 집중식 프로필을 만들 수 있습니다. 이 데이터의 형식 및 구조는 XDM(경험 데이터 모델) 스키마에서 제공하며 각 스키마는 XDM 클래스를 기반으로 하며 해당 클래스와 호환되는 필드를 포함합니다.
 
@@ -31,13 +38,13 @@ Adobe Experience Platform UI(사용자 인터페이스)에서 조직 내의 모�
 
 유니온 스키마를 사용하여 작업하려면 XDM 스키마를 깊이 이해해야 합니다. 자세한 내용은 [스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md)을 읽어 보십시오.
 
-## 유니온 스키마 보기
+## 유니온 스키마 보기 {#view-union-schemas}
 
 Experience Platform UI 내의 유니온 스키마로 이동하려면 왼쪽 탐색에서 **[!UICONTROL 프로필]**&#x200B;을 선택한 다음 **[!UICONTROL 유니온 스키마]** 탭을 선택합니다. 현재 선택한 클래스의 유니온 스키마를 표시하는 [!UICONTROL 유니온 스키마] 탭이 열립니다.
 
 ![프로필 및 유니온 스키마 탭이 강조 표시된 유니온 스키마 페이지가 표시됩니다.](../images/union-schema/landing.png)
 
-## 클래스 선택
+## 클래스 선택 {#select-a-class}
 
 특정 XDM 클래스의 유니온 스키마를 표시하려면 **[!UICONTROL 클래스]** 드롭다운에서 클래스를 선택합니다. 모든 클래스에 결합 스키마가 있는 것은 아니므로 결합 스키마가 있는 클래스(프로필에 대해 활성화된 스키마가 있는 클래스)만 드롭다운에서 사용할 수 있습니다.
 
@@ -45,7 +52,7 @@ Experience Platform UI 내의 유니온 스키마로 이동하려면 왼쪽 탐�
 
 ![유니온 스키마의 클래스가 포함된 드롭다운이 강조 표시됩니다.](../images/union-schema/class.png)
 
-## 유니온 스키마 살펴보기
+## 유니온 스키마 살펴보기 {#explore-union-schemas}
 
 위/아래로 스크롤하여 전체 스키마 구조를 확인하고 오른쪽 꺾쇠 괄호(`>`)를 선택하여 중첩된 필드를 확장하여 유니온 스키마를 탐색할 수 있습니다.
 
@@ -61,7 +68,7 @@ Experience Platform UI 내의 유니온 스키마로 이동하려면 왼쪽 탐�
 
 ![스키마와 관련된 데이터 세트 목록이 강조 표시됩니다.](../images/union-schema/datasets.png)
 
-## 기여 스키마 보기
+## 기여 스키마 보기 {#view-contributing-schemas}
 
 **[!UICONTROL 모든 기여 스키마]**&#x200B;를 선택하여 스키마 목록을 확장하여 유니온 스키마에 기여하는 특정 스키마를 볼 수도 있습니다. 선택한 클래스와 조직이 Experience Platform 내에서 만든 스키마 수에 따라 단일 스키마를 포함하는 짧은 목록이나 여러 스키마를 포함하는 긴 목록일 수 있습니다.
 
@@ -71,7 +78,7 @@ Experience Platform UI 내의 유니온 스키마로 이동하려면 왼쪽 탐�
 
 ![선택한 기여 스키마가 강조 표시됩니다. 기여 스키마의 일부인 필드는 검정색으로 표시되지만 기여 스키마의 일부가 아닌 필드는 회색으로 표시됩니다.](../images/union-schema/select-schema.png)
 
-## ID 보기
+## ID 보기 {#view-identities}
 
 UI를 통해 **[!UICONTROL ID]**&#x200B;를 선택하여 목록을 확장하면 유니온 스키마에 포함된 ID 목록을 볼 수 있습니다.
 
@@ -83,7 +90,7 @@ UI를 통해 **[!UICONTROL ID]**&#x200B;를 선택하여 목록을 확장하면 
 
 ![선택한 ID가 강조 표시되어 있습니다. 선택한 ID에 대한 세부 정보가 오른쪽 사이드바에 표시됩니다.](../images/union-schema/select-identity.png)
 
-## 관계 보기
+## 관계 보기 {#view-relationships}
 
 결합 스키마 UI를 사용하면 선택한 스키마 클래스를 기반으로 스키마에 대해 정의된 관계를 볼 수도 있습니다. 관계를 정의하는 것은 고객 데이터에 대한 보다 복잡한 통찰력을 얻기 위해 다른 클래스에 속하는 두 개의 스키마를 연결하는 방법입니다.
 
