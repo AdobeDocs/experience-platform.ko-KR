@@ -17,7 +17,7 @@ ht-degree: 4%
 >
 > [!DNL Snowflake] 스트리밍 소스는 Real-Time Customer Data Platform Ultimate을 구매한 사용자에게 API에서 사용할 수 있습니다.
 
-이 자습서에서는 [!DNL Snowflake]API[[!DNL Flow Service] 를 사용하여 ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) 계정의 데이터를 Adobe Experience Platform에 연결하고 스트리밍하는 방법에 대한 단계를 제공합니다.
+이 자습서에서는 [!DNL Snowflake]API[[!DNL Flow Service] 를 사용하여 &#x200B;](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) 계정의 데이터를 Adobe Experience Platform에 연결하고 스트리밍하는 방법에 대한 단계를 제공합니다.
 
 ## 시작
 

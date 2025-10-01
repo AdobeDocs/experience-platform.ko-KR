@@ -52,7 +52,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 [!UICONTROL 기본 인증]을 사용하려면 **[!UICONTROL Snowflake에 대한 기본 인증]**&#x200B;을 선택하고 [!DNL Snowflake] 계정에 대한 자격 증명을 제공하세요. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하고 연결을 설정할 수 있도록 잠시 기다립니다.
 
-[!DNL Snowflake Streaming]필요한 자격 증명 수집[에 대한 자세한 내용은 ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials) 개요를 읽어 보십시오.
+[!DNL Snowflake Streaming]필요한 자격 증명 수집[에 대한 자세한 내용은 &#x200B;](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials) 개요를 읽어 보십시오.
 
 ![기본 인증을 선택한 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/snowflake-streaming/basic-auth.png)
 
@@ -60,7 +60,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 [!UICONTROL KeyPair 인증]을(를) 사용하려면 **[!UICONTROL Snowflake에 대한 KeyPair 인증]**&#x200B;을(를) 선택하고 [!DNL Snowflake] 계정에 자격 증명을 제공하십시오. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하고 연결을 설정할 수 있도록 잠시 기다립니다.
 
-[!DNL Snowflake Streaming]필요한 자격 증명 수집[에 대한 자세한 내용은 ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials) 개요를 읽어 보십시오.
+[!DNL Snowflake Streaming]필요한 자격 증명 수집[에 대한 자세한 내용은 &#x200B;](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials) 개요를 읽어 보십시오.
 
 ![원본 워크플로의 새 계정 인터페이스, 키 쌍 인증이 선택됨](../../../../images/tutorials/create/snowflake-streaming/key-pair.png)
 
