@@ -3,21 +3,21 @@ title: Snowflake 스트리밍 계정을 Adobe Experience Platform에 연결
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Snowflake 스트리밍에 연결하는 방법에 대해 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: a4a464f1f3b61311754a39f2a6e6a4ef21af3ab0
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '874'
 ht-degree: 4%
 
 ---
 
-# [!DNL Flow Service] API를 사용하여 [!DNL Snowflake] 데이터를 Experience Platform으로 스트리밍
+# [!DNL Snowflake] API를 사용하여 [!DNL Flow Service] 데이터를 Experience Platform으로 스트리밍
 
 >[!IMPORTANT]
 >
 >
 > [!DNL Snowflake] 스트리밍 소스는 Real-Time Customer Data Platform Ultimate을 구매한 사용자에게 API에서 사용할 수 있습니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>)를 사용하여 [!DNL Snowflake] 계정의 데이터를 Adobe Experience Platform에 연결하고 스트리밍하는 방법에 대한 단계를 제공합니다.
+이 자습서에서는 [!DNL Snowflake]API[[!DNL Flow Service] 를 사용하여 ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) 계정의 데이터를 Adobe Experience Platform에 연결하고 스트리밍하는 방법에 대한 단계를 제공합니다.
 
 ## 시작
 
@@ -26,17 +26,19 @@ ht-degree: 4%
 * [원본](../../../../home.md): [!DNL Experience Platform]에서는 데이터를 다양한 원본에서 수집할 수 있으며 [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공합니다.
 * [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-[!DNL Snowflake] 스트리밍 소스에 대한 필수 구성 요소 설정 및 정보입니다. [[!DNL Snowflake] 스트리밍 원본 개요](../../../../connectors/databases/snowflake-streaming.md)를 읽으십시오.
-
 ### Experience Platform API 사용
 
 Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+
+### 필요한 자격 증명 수집
+
+인증에 대한 자세한 내용은 [[!DNL Snowflake] 개요](../../../../connectors/databases/snowflake-streaming.md#prerequisites)를 읽어 보십시오.
 
 ## 기본 연결 만들기 {#create-a-base-connection}
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 Experience Platform 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-기본 연결 ID를 만들려면 [!DNL Snowflake] 인증 자격 증명을 요청 본문의 일부로 제공하는 동안 `/connections` 끝점에 대한 POST 요청을 만듭니다.
+기본 연결 ID를 만들려면 `/connections` 인증 자격 증명을 요청 본문의 일부로 제공하는 동안 [!DNL Snowflake] 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -156,7 +158,7 @@ curl -X GET \
 
 소스 연결은 데이터가 수집되는 외부 소스와의 연결을 만들고 관리합니다.
 
-소스 연결을 만들려면 [!DNL Flow Service] API의 `/sourceConnections` 끝점에 대한 POST 요청을 만듭니다.
+소스 연결을 만들려면 `/sourceConnections` API의 [!DNL Flow Service] 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -290,7 +292,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL Flow Service] API를 사용하여 [!DNL Snowflake] 데이터에 대한 스트리밍 데이터 흐름을 만들었습니다. Adobe Experience Platform 소스에 대한 추가 정보는 다음 설명서를 참조하십시오.
+이 자습서에 따라 [!DNL Snowflake] API를 사용하여 [!DNL Flow Service] 데이터에 대한 스트리밍 데이터 흐름을 만들었습니다. Adobe Experience Platform 소스에 대한 추가 정보는 다음 설명서를 참조하십시오.
 
 * [소스 개요](../../../../home.md)
 * [API를 사용하여 데이터 흐름 모니터링](../../monitor.md)

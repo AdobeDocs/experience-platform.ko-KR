@@ -2,16 +2,16 @@
 title: UI를 사용하여 Snowflake 데이터베이스의 데이터를 Experience Platform으로 스트리밍
 description: Snwoflake 데이터베이스에서 Experience Platform으로 데이터를 스트리밍하는 방법에 대해 알아봅니다
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 04a1cecbacdaf0b701d3ef18d03497973a8f3263
+source-git-commit: 0d646136da2c508fe7ce99a15787ee15c5921a6c
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1451'
 ht-degree: 3%
 
 ---
 
 # UI를 사용하여 [!DNL Snowflake] 데이터베이스에서 Experience Platform으로 데이터 스트리밍
 
-이 안내서를 따라 사용자 인터페이스를 사용하여 [!DNL Snowflake] 데이터베이스에서 Adobe Experience Platform으로 데이터를 스트리밍하는 방법에 대해 알아봅니다.
+UI의 소스 작업 영역을 사용하여 [!DNL Snowflake] 데이터베이스에서 Experience Platform으로 데이터를 스트리밍하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
 
 ## 시작하기
 
@@ -24,13 +24,13 @@ ht-degree: 3%
 
 ### 인증
 
-[!DNL Snowflake]에서 Experience Platform으로 스트리밍 데이터를 수집하기 전에 완료해야 하는 단계에 대한 자세한 내용은 [스트리밍 데이터 [!DNL Snowflake] 의 필수 구성 요소 설정](../../../../connectors/databases/snowflake-streaming.md)에 대한 안내서를 참조하십시오.
+[에서 Experience Platform으로 스트리밍 데이터를 수집하기 전에 완료해야 하는 단계에 대한 자세한 내용은  [!DNL Snowflake] 스트리밍 데이터](../../../../connectors/databases/snowflake-streaming.md)의 필수 구성 요소 설정[!DNL Snowflake]에 대한 안내서를 참조하십시오.
 
 ## [!DNL Snowflake Streaming] 소스를 사용하여 [!DNL Snowflake] 데이터를 Experience Platform으로 스트리밍
 
 Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-*데이터베이스* 범주에서 **[!DNL Snowflake Streaming]**&#x200B;을(를) 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
+*데이터베이스* 범주에서 **[!DNL Snowflake Streaming]**&#x200B;을(를) 선택한 다음 **[!UICONTROL 설정]**&#x200B;을(를) 선택합니다.
 
 >[!TIP]
 >
@@ -40,37 +40,33 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 **[!UICONTROL Snowflake 스트리밍 계정 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
 
->[!BEGINTABS]
+### 새 계정 만들기
 
->[!TAB 새 계정 만들기]
-
-새 계정을 만들려면 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택하고 이름, 설명(선택 사항) 및 자격 증명을 제공합니다.
-
-완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택한 다음 새 연결을 설정할 수 있는 시간을 허용하세요.
+새 계정을 만들려면 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택하고 계정에 대한 이름과 설명을 입력하십시오.
 
 ![원본 워크플로의 새 계정 만들기 인터페이스입니다.](../../../../images/tutorials/create/snowflake-streaming/new.png)
 
-| 자격 증명 | 설명 |
-| --- | --- |
-| 계정 | [!DNL Snowflake] 계정의 이름입니다. 계정 이름에 대한 규칙은 [[!DNL Snowflake Streaming] 인증 안내서](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials)를 참조하십시오. |
-| 웨어하우스 | [!DNL Snowflake] 웨어하우스 이름. 웨어하우스는 [!DNL Snowflake]에서 쿼리 실행을 관리합니다. 각 [!DNL Snowflake] 웨어하우스는 서로 독립적이므로 Experience Platform으로 데이터를 가져오려면 개별적으로 액세스해야 합니다. |
-| 데이터베이스 | [!DNL Snowflake] 데이터베이스의 이름입니다. 데이터베이스에는 Experience Platform으로 가져올 데이터가 포함되어 있습니다. |
-| 스키마 | (선택 사항) [!DNL Snowflake] 계정과 연결된 데이터베이스 스키마입니다. |
-| 사용자 이름 | [!DNL Snowflake] 계정의 사용자 이름입니다. |
-| 암호 | [!DNL Snowflake] 계정의 암호입니다. |
-| 역할 | (선택 사항) 지정된 연결에 대해 사용자에게 제공할 수 있는 사용자 정의 역할입니다. 지정하지 않으면 이 값은 기본적으로 `public`(으)로 설정됩니다. |
+>[!BEGINTABS]
 
-계정 만들기에 대한 자세한 내용은 [!DNL Snowflake Streaming] 개요에서 [역할 설정 구성](../../../../connectors/databases/snowflake-streaming.md#configure-role-settings)에 대한 섹션을 참조하십시오.
+>[!TAB 기본 인증]
 
->[!TAB 기존 계정 사용]
+[!UICONTROL 기본 인증]을 사용하려면 **[!UICONTROL Snowflake에 대한 기본 인증]**&#x200B;을 선택하고 [!DNL Snowflake] 계정에 대한 자격 증명을 제공하세요. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하고 연결을 설정할 수 있도록 잠시 기다립니다.
 
-기존 계정을 사용하려면 **[!UICONTROL 기존 계정]**&#x200B;을 선택한 다음 기존 계정 카탈로그에서 원하는 계정을 선택하십시오.
+[!DNL Snowflake Streaming]필요한 자격 증명 수집[에 대한 자세한 내용은 ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials) 개요를 읽어 보십시오.
 
-계속하려면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+![기본 인증을 선택한 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/snowflake-streaming/basic-auth.png)
 
-![원본 카탈로그의 기존 계정 선택 페이지입니다.](../../../../images/tutorials/create/snowflake-streaming/existing.png)
+>[!TAB KeyPair 인증]
+
+[!UICONTROL KeyPair 인증]을(를) 사용하려면 **[!UICONTROL Snowflake에 대한 KeyPair 인증]**&#x200B;을(를) 선택하고 [!DNL Snowflake] 계정에 자격 증명을 제공하십시오. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하고 연결을 설정할 수 있도록 잠시 기다립니다.
+
+[!DNL Snowflake Streaming]필요한 자격 증명 수집[에 대한 자세한 내용은 ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials) 개요를 읽어 보십시오.
+
+![원본 워크플로의 새 계정 인터페이스, 키 쌍 인증이 선택됨](../../../../images/tutorials/create/snowflake-streaming/key-pair.png)
 
 >[!ENDTABS]
+
+기존 계정을 사용하려면 **[!UICONTROL 기존 계정]**&#x200B;을 선택하고 목록에서 계정을 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 선택하십시오.
 
 ## 데이터 선택 {#select-data}
 
@@ -83,8 +79,6 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 [!UICONTROL 데이터 선택] 단계가 나타납니다. 이 단계에서는 Experience Platform으로 가져올 데이터를 선택하고, 타임스탬프와 시간대를 구성하고, 원시 데이터 수집을 위한 샘플 소스 데이터 파일을 제공해야 합니다.
 
 화면 왼쪽에 있는 데이터베이스 디렉터리를 사용하고 Experience Platform으로 가져올 테이블을 선택합니다.
-
-![데이터베이스 테이블이 선택된 데이터 인터페이스를 선택하십시오.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
 그런 다음 테이블의 타임스탬프 열 유형을 선택합니다. 두 종류의 타임스탬프 열 `TIMESTAMP_NTZ` 또는 `TIMESTAMP_LTZ` 중에서 선택할 수 있습니다. `TIMESTAMP_NTZ`의 열 형식을 선택하는 경우 시간대도 제공해야 합니다. 열에는 null 아님 제약 조건이 있어야 합니다. 자세한 내용은 [제한 사항 및 자주 묻는 질문](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions)에 대한 섹션을 참조하십시오.
 
@@ -108,13 +102,11 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 데이터 세트는 스키마(열) 및 필드(행)를 포함하는 데이터 수집을 위한 저장소 및 관리 구조입니다. Experience Platform에 성공적으로 수집된 데이터는 데이터 세트로 데이터 레이크 내에 유지됩니다. 이 단계에서는 새 데이터 세트를 만들거나 기존 데이터 세트를 사용할 수 있습니다.
 
->[!BEGINTABS]
+기존 데이터 세트가 있는 경우 **[!UICONTROL 기존 데이터 세트]**&#x200B;를 선택한 다음 **[!UICONTROL 고급 검색]** 옵션을 사용하여 실시간 고객 프로필로 수집하도록 활성화되었는지 여부와 같은 각 세부 정보를 포함하여 조직의 모든 데이터 세트 창을 확인하십시오.
 
->[!TAB 새 데이터 세트 사용]
+![기존 데이터 집합 선택 인터페이스입니다.](../../../../images/tutorials/create/snowflake-streaming/dataset.png)
 
 새 데이터 집합을 사용하려면 **[!UICONTROL 새 데이터 집합]**&#x200B;을(를) 선택한 다음 데이터 집합에 대한 이름과 선택적 설명을 입력하십시오. 데이터 세트에서 준수하는 XDM(경험 데이터 모델) 스키마도 선택해야 합니다.
-
-![새 데이터 집합 선택 인터페이스입니다.](../../../../images/tutorials/create/snowflake-streaming/new-dataset.png)
 
 | 새 데이터 세트 세부 정보 | 설명 |
 | --- | --- |
@@ -122,28 +114,11 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 | 설명 | (선택 사항) 새 데이터 세트에 대한 간략한 개요. |
 | 스키마 | 조직에 있는 스키마의 드롭다운 목록입니다. 소스 구성 프로세스 전에 고유한 스키마를 생성할 수도 있습니다. 자세한 내용은 [UI에서 XDM 스키마 만들기](../../../../../xdm/tutorials/create-schema-ui.md)에 대한 안내서를 참조하십시오. |
 
->[!TAB 기존 데이터 세트 사용]
-
-기존 데이터 세트가 이미 있는 경우 **[!UICONTROL 기존 데이터 세트]**&#x200B;를 선택한 다음 **[!UICONTROL 고급 검색]** 옵션을 사용하여 실시간 고객 프로필로 수집하도록 활성화되었는지 여부와 같은 각 세부 정보를 포함하여 조직의 모든 데이터 세트 창을 확인하십시오.
-
-![기존 데이터 집합 선택 인터페이스입니다.](../../../../images/tutorials/create/snowflake-streaming/existing-dataset.png)
-
->[!ENDTABS]
-
-+++프로필 수집, 오류 진단 및 부분 수집을 활성화하는 단계를 선택합니다.
-
-Real-Time Customer Profile에 대해 데이터 세트를 사용하도록 설정한 경우 이 단계에서 **[!UICONTROL 프로필 데이터 세트]**&#x200B;를 전환하여 프로필 수집을 위해 데이터를 사용하도록 설정할 수 있습니다. 이 단계를 사용하여 **[!UICONTROL 오류 진단]** 및 **[!UICONTROL 부분 수집]**&#x200B;을 사용하도록 설정할 수도 있습니다.
-
-* **[!UICONTROL 오류 진단]**: **[!UICONTROL 오류 진단]**&#x200B;을 선택하여 데이터 집합 활동 및 데이터 흐름 상태를 모니터링할 때 나중에 참조할 수 있는 오류 진단을 생성하도록 소스에 지시합니다.
-* **[!UICONTROL 부분 수집]**: 부분 일괄 처리 수집은 구성 가능한 특정 임계값까지 오류가 포함된 데이터를 수집하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Experience Platform에 성공적으로 수집할 수 있으며 잘못된 데이터는 모두 잘못된 이유에 대한 정보로 별도로 배치됩니다.
-
-+++
-
 ### 데이터 흐름 세부 정보 {#dataflow-details}
 
 데이터 세트가 구성되면 이름, 선택적 설명 및 경고 구성을 포함하여 데이터 흐름에 대한 세부 정보를 제공해야 합니다.
 
-![데이터 흐름의 세부 구성 단계입니다.](../../../../images/tutorials/create/snowflake-streaming/dataflow-details.png)
+![데이터 흐름의 세부 구성 단계입니다.](../../../../images/tutorials/create/snowflake-streaming/dataflow-detail.png)
 
 | 데이터 흐름 구성 | 설명 |
 | --- | --- |
