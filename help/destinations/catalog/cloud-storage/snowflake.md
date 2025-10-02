@@ -2,11 +2,12 @@
 title: Snowflake 스트리밍 연결
 description: 비공개 목록을 사용하여 Snowflake 계정으로 데이터를 내보냅니다.
 badgeBeta: label="Beta" type="Informative"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 183858daac3a2471cb842f1d7308f91cf514c5ee
+source-git-commit: eed90a5ce988acafface0bac9191f1b3ae28f90c
 workflow-type: tm+mt
-source-wordcount: '1438'
-ht-degree: 5%
+source-wordcount: '1442'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->이 대상 커넥터는 Beta 버전으로 일부 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
+>이 대상 커넥터는 베타 버전이며 Real-Time CDP Ultimate 고객만 사용할 수 있습니다. 기능 및 설명서는 변경될 수 있습니다.
 
 ## 개요 {#overview}
 
