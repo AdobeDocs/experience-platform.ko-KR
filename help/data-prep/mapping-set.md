@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 매핑 세트 개요
 description: Adobe Experience Platform 데이터 준비와 함께 매핑 세트를 사용하는 방법을 알아봅니다.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb0366284f1850bd9742b18d95608f901319f642
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 매핑 세트는 데이터를 한 스키마에서 다른 스키마로 변환하는 매핑 세트입니다. 이 문서에서는 입력 스키마, 출력 스키마 및 매핑을 포함하여 매핑 세트를 구성하는 방법에 대한 정보를 제공합니다.
 
-## 시작하기
+## 시작
 
 이 개요를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
@@ -82,6 +82,10 @@ ht-degree: 0%
 ## 매핑 소스 구성
 
 매핑에서 `source`은(는) 필드, 식 또는 정적 값일 수 있습니다. 주어진 소스 유형을 기반으로 다양한 방법으로 값을 추출할 수 있다.
+
+>[!TIP]
+>
+>매핑을 저장한 후 최대 10분 정도 기다린 후 데이터 수집을 시작하여 완전히 저장되었는지 확인합니다.
 
 ### 열 형식 데이터의 필드
 
