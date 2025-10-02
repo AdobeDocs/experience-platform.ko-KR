@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: b71c6ff74fd173a4be12a9a8caf06e27c4fb54cc
+source-git-commit: d8a4d292747f8ea29709eb13c3344baadba1b6f5
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1323'
 ht-degree: 5%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 5%
    * [대상 계정 삭제](./api/delete-destination-account.md)
    * [대상 데이터 흐름 삭제](./api/delete-destination-dataflow.md)
    * [데이터 세트 내보내기](/help/destinations/api/export-datasets.md)
-   * [대상에 대한 API 응답 정렬 및 필터링](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=ko#use-cases)
+   * [대상에 대한 API 응답 정렬 및 필터링](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI 안내서 {#ui}
    * [대상 작업 영역](./ui/destinations-workspace.md)
    * [새 대상 연결 만들기](./ui/connect-destination.md)
@@ -71,7 +71,7 @@ ht-degree: 5%
       * [(기존) (V2) Marketo Engage 연결](./catalog/adobe/marketo-engage.md)
       * [(Beta) Marketo Engage 사용자 동기화 연결](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate 연결](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform 대상 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ko)
+      * [Experience Platform 대상 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [페더레이션 대상 컴포지션 연결](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising 대상{#advertising}
       * [(Beta) Acxiom 대상 연결](./catalog/advertising/acxiom-audience-connection.md)
@@ -92,7 +92,6 @@ ht-degree: 5%
       * [Facebook 픽셀 확장](./catalog/advertising/facebook-pixel.md)
       * [Flashtalk OneTag 확장](./catalog/advertising/flashtalking.md)
       * [Google 광고 연결](./catalog/advertising/google-ads-destination.md)
-      * [Google 광고 확장](./catalog/advertising/google-ads-extension.md)
       * [Google Ad Manager 연결](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Google Ad Manager 360 연결](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match 연결](./catalog/advertising/google-customer-match.md)
@@ -266,7 +265,7 @@ ht-degree: 5%
          * [과거 프로필 자격 요건](./destination-sdk/functionality/destination-configuration/historical-profile-qualifications.md)
       * [스트리밍 대상에 대한 속도 제한 및 다시 시도 정책](./destination-sdk/functionality/rate-limiting-retry-policy.md)
       * [대상자 메타데이터 관리](./destination-sdk/functionality/audience-metadata-management.md)
-   * Guides {#guides}
+   * 안내서 {#guides}
       * [Destination SDK을 사용하여 스트리밍 대상 구성](./destination-sdk/guides/configure-destination-instructions.md)
       * [Destination SDK을 사용하여 파일 기반 대상 구성](./destination-sdk/guides/configure-file-based-destination-instructions.md)
       * [Destination SDK에서 작성된 대상을 검토하기 위해 제출](./destination-sdk/guides/submit-destination.md)

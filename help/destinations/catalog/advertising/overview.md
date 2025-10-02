@@ -3,9 +3,9 @@ keywords: 광고 대상;대상;플랫폼 대상
 title: Advertising 대상 개요
 description: 'Adobe Experience Platform을 서드파티 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 이러한 플랫폼에 익명 대상을 공유합니다.'
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: a0c1ddc5bcdd8b89e7605491441d56199f301e9e
+source-git-commit: d8a4d292747f8ea29709eb13c3344baadba1b6f5
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '283'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,6 @@ Adobe Experience Platform을 수요 측 플랫폼(DSP), 공급 측 플랫폼(SSP
 * [DoubleClick Floodlight 확장](doubleclick-floodlight.md)
 * [Facebook 픽셀 확장](facebook-pixel.md)
 * [Flashtalk OneTag 확장](flashtalking.md)
-* [Google 광고 확장](google-ads-extension.md)
 * [Google gtag 확장](gtag-advertising.md)
 * [LinkedIn Insight 태그 확장](linkedin.md)
 * [Pinterest 전환 추적 확장](pinterest-extension.md)
