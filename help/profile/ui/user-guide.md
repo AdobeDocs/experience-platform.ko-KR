@@ -3,9 +3,9 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 실시간 고객 프로필 UI 안내서
 description: 실시간 고객 프로파일은 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 다양한 채널의 데이터를 취합하여 각 개별 고객을 전체적으로 파악할 수 있도록 합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하기 위한 안내서 역할을 합니다.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e4f303f9de2d36717288d2119458c8df95fc01bf
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '2004'
 ht-degree: 4%
 
 ---
@@ -127,6 +127,8 @@ Experience Platform 내의 병합 정책 및 역할에 대한 자세한 내용�
 
 #### AI 인사이트 위젯 {#ai-insight-widgets}
 
+[!BADGE Alpha]{type=Informative} 이 기능은 현재 Alpha에 있습니다.
+
 **[!UICONTROL AI insight 위젯]** 섹션에는 AI에서 생성된 위젯이 표시됩니다. 이러한 위젯은 인구 통계(예: 연령, 성별 또는 위치), 사용자 행동(예: 구매 내역, 웹 사이트 활동 또는 소셜 미디어 참여)을 포함한 프로필 데이터와 심리 그래픽(예: 관심사, 선호도 또는 라이프스타일 선택)을 기반으로 프로필에 대한 빠른 통찰력을 제공합니다. 모든 AI 위젯은 프로필에 **이미**&#x200B;이(가) 있는 데이터를 사용합니다.
 
 ![AI insight 위젯 섹션이 표시됩니다.](../images/user-guide/ai-insight-widgets.png)
@@ -144,6 +146,8 @@ Experience Platform 내의 병합 정책 및 역할에 대한 자세한 내용�
 ![표시 이름 표시 토글이 강조 표시됩니다.](../images/user-guide/show-display-names.png)
 
 #### 자동 분류된 위젯 {#auto-classified-widgets}
+
+[!BADGE Alpha]{type=Informative} 이 기능은 현재 Alpha에 있습니다.
 
 **[!UICONTROL 자동 분류된 위젯]** 섹션에는 공용 구조체 스키마를 활용하여 특성이 속하는 소스 필드 그룹을 결정하는 위젯이 표시되어 데이터의 원본 위치에 대한 명확한 컨텍스트를 제공합니다. 검색 창을 사용하여 위젯 내에서 키워드를 보다 쉽게 찾을 수 있습니다.
 
