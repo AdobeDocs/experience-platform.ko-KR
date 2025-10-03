@@ -14,7 +14,7 @@ ht-degree: 5%
 
 >[!AVAILABILITY]
 >
->유연한 대상 평가는 [!DNL Microsoft Azure]에서 실행 중인 Experience Platform 인스턴스에서 **만**&#x200B;할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../landing/multi-cloud.md)를 참조하세요.
+>유연한 대상 평가는 **에서 실행 중인 Experience Platform 인스턴스에서**&#x200B;만[!DNL Microsoft Azure]할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../landing/multi-cloud.md)를 참조하세요.
 >
 >또한 유연한 대상 평가는 Real-Time CDP B2C Edition에서 사용할 수 있는 **전용**&#x200B;입니다.
 
@@ -25,7 +25,7 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_browse_flexibleaudienceevaluation"
 >title="유연한 대상자 평가 제한"
->abstract="유연한 대상자 평가를 한 번 실행하여 최대 20개의 대상자를 평가할 수 있습니다.<br/><br/>또한 평가 작업은 가능한 한 빨리 실행되지만 온디맨드 평가는 다른 온디맨드 또는 일괄 평가와 동시에 실행할 수 <b>없으므로</b> 시스템 지연이 발생할 수 있습니다."
+>abstract="유연한 대상자 평가를 한 번 실행하여 최대 20개의 대상자를 평가할 수 있습니다.<br/><br/>또한 평가 작업은 가능한 한 빨리 실행되지만 온디맨드 평가는 다른 온디맨드 또는 배치 평가와 동시에 실행할 수 <b>없으므로</b> 시스템 지연이 발생할 수 있습니다."
 
 유연한 대상 평가를 실행할 때는 다음 조건을 염두에 두십시오.
 
@@ -45,7 +45,7 @@ ht-degree: 5%
 
 유연한 대상 평가를 사용하려면 다음 권한이 있어야 합니다.
 
-- **[!DNL Profile Management]** 섹션 아래에서 **[!UICONTROL 세그먼트를 대상자에게 평가]**&#x200B;합니다.
+- **[!UICONTROL 섹션 아래에서]**&#x200B;세그먼트를 대상자에게 평가&#x200B;**[!DNL Profile Management]**&#x200B;합니다.
 
 역할 기반 액세스 제어에 대한 자세한 내용은 [액세스 제어 개요](../../access-control/home.md)를 참조하십시오.
 
@@ -203,7 +203,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 세그먼트 작업을 만든 후 `/segment/jobs` 끝점에 대한 GET 요청을 만들고 요청 경로에 새로 만든 세그먼트 작업의 ID를 제공하여 해당 상태를 확인할 수 있습니다.
 
-+++세그먼트 작업을 검색하는 샘플 요청
++++세그먼트 작업 검색에 대한 샘플 요청
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f \
@@ -326,7 +326,7 @@ Experience Platform UI에서 유연한 대상 평가를 실행하려면 **[!UICO
 
 다음 비디오에서는 Experience Platform에서 유연한 대상 평가에 액세스하고 사용하는 방법을 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453647?&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## 자주 묻는 질문 {#faq}
 

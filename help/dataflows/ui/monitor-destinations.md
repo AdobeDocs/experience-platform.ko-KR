@@ -153,13 +153,13 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >
 >**[!UICONTROL 대상]** 탭의 **[!UICONTROL 받은 프로필]** 수가 데이터 흐름 실행에 대해 받은 프로필 수와 항상 일치하지 않을 수 있습니다. 이는 지정된 프로필이 데이터 흐름 실행에서 활성화되는 두 개 이상의 대상에 속할 수 있기 때문입니다.
 
-### 일괄 처리 대상에 대한 데이터 흐름 실행 {#dataflow-runs-for-batch-destinations}
+### 배치 대상에 대한 데이터 흐름 실행 {#dataflow-runs-for-batch-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="데이터 흐름 실행 세부 정보"
 >abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 대상자의 활성화 상태 및 지표에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 검토하십시오."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=ko#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
