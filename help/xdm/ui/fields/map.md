@@ -2,9 +2,9 @@
 title: UI에서 맵 필드 정의
 description: Experience Platform 사용자 인터페이스에서 맵 필드를 정의하는 방법을 알아봅니다.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c0421974493884488e4d639278106835ad1d8b1b
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform을 사용하면 사용자 지정 XDM(경험 데이터 모델) 클래스, 스키마 필드 그룹 및 데이터 유형의 구조를 완전히 사용자 지정할 수 있습니다.
 
-스키마 편집기에서 맵 필드를 정의하여 유연하고 동적인 데이터 구조를 모델링하거나 키-값 쌍의 컬렉션을 저장할 수도 있습니다.
+스키마 편집기에서 맵 필드를 정의하여 유연하고 동적인 키가 있는 키-값 쌍의 컬렉션을 저장할 수도 있습니다.
 
 Experience Platform UI(사용자 인터페이스)에서 새 필드를 정의할 때 **[!UICONTROL Type]** 드롭다운을 사용하고 목록에서 &quot;**[!UICONTROL 맵]**&quot;을(를) 선택하십시오.
 
@@ -36,6 +36,8 @@ XDM에서는 이 데이터 유형의 사용에 대해 다음과 같은 제한 �
 * 맵 유형에는 맵 내에 배치할 수 있는 값을 설명하는 `additionalProperties.type` 필드(`string` 또는 `integer`)가 포함되어야 합니다.
 * 다중 엔티티 세그먼테이션은 맵 키를 기준으로만 정의할 수 있으며 값을 기준으로 정의할 수는 없습니다.
 * 계정 대상자에 대해서는 맵이 지원되지 않습니다.
+* 사용자 지정 XDM 개체에 정의된 맵은 단일 수준으로 제한됩니다. 중첩된 맵을 만들 수 없습니다. 표준 XDM 개체에 정의된 맵에는 이 제한이 적용되지 않습니다.
+* 맵 배열은 지원되지 않습니다.
 
 맵 유형 필드는 다음과 같은 성능 단점이 있으므로 반드시 필요한 경우에만 사용해야 합니다.
 
