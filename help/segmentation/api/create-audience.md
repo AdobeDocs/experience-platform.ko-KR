@@ -3,17 +3,17 @@ title: 대상 API 끝점 만들기
 description: API를 사용하여 외부 대상자를 위한 메타데이터를 만드는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
+source-git-commit: bf90b09693c7b9b7d3ad6ccc6940d255bf7bf4cb
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '246'
 ht-degree: 6%
 
 ---
 
-
 # 대상 엔드포인트 만들기
 
-POST `/audiences` 끝점은 외부 대상에 대한 메타데이터를 만드는 데 사용할 수 있습니다. 대상 수집이 배치 수집과 같은 별도의 서비스에서 관리되는 경우 이 끝점을 사용해야 합니다.
+POST `/audiences` 끝점을 사용하여 외부 대상에 대한 메타데이터를 만들 수 있으므로 대상을 Audience Portal에 표시할 수 있습니다. 대상 수집이 배치 수집과 같은 별도의 서비스에서 관리되는 경우 이 끝점을 사용해야 합니다.
 
 ## 시작
 

@@ -5,10 +5,10 @@ breadcrumb-title: Segmentation Service 안내서
 user-guide-description: Adobe Experience Platform에서 생성한 세그먼트 정의 또는 외부 소스를 사용하여 실시간 고객 프로필 데이터에서 대상자를 빌드합니다.
 feature: Segments
 role: User
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+source-git-commit: 043e0c930b30dc4f04acdcab88a5d63ad044fbfc
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 40%
+source-wordcount: '207'
+ht-degree: 43%
 
 ---
 
@@ -17,14 +17,14 @@ ht-degree: 40%
 
 - [세그먼테이션 서비스 개요](home.md)
 - [세분화 데이터 유형](data-types.md)
-- [세그먼테이션 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ko#segmentation-guardrails)
+- [세그먼테이션 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - 세그먼테이션 API {#api}
    - [개요](api/overview.md)
    - [시작하기](api/getting-started.md)
    - [대상 메타데이터 만들기](api/create-audience.md)
    - [대상자](api/audiences.md)
    - [내보내기 작업](api/export-jobs.md)
-   - [외부 대상](api/external-audiences.md)
+   - [외부 대상자](api/external-audiences.md)
    - [미리 보기 및 예상](api/previews-and-estimates.md)
    - [예약](api/schedules.md)
    - [세그먼트 정의](api/segment-definitions.md)
@@ -36,7 +36,7 @@ ht-degree: 40%
    - [대상자 포털](ui/audience-portal.md)
    - [대상자 컴포지션](ui/audience-composition.md)
    - [세그먼트 빌더](ui/segment-builder.md)
-   - [페더레이션된 대상자 구성](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)
+   - [페더레이션된 대상자 컴포지션](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)
    - [연도 제한 무시 업데이트](ui/ignore-year.md)
    - [시간 제한 리팩터링](ui/segment-refactoring.md)
    - 세그먼트 일치 {#segment-match}
@@ -62,7 +62,7 @@ ht-degree: 40%
    - [다중 엔티티 세그멘테이션](tutorials/multi-entity-segmentation.md)
    - [동의 준수](tutorials/consents.md)
    - [세그먼트 정의 평가](tutorials/evaluate-a-segment.md)
-   - [외부 대상 가져오기 및 사용](tutorials/using-external-audiences.md)
+   - [외부 대상 만들기](tutorials/create-external-audience.md)
    - [데이터를 내보낼 데이터 세트 만들기](tutorials/create-dataset-export-segment.md)
    - [대상에 대한 데이터 사용 규정 준수 적용](tutorials/governance.md)
 - Profile Query Language {#pql}
