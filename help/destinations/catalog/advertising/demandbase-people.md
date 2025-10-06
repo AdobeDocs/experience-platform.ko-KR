@@ -1,13 +1,13 @@
 ---
 title: Demandbase 사용자 연결
 description: 이 대상을 사용하여 마케팅 및 판매의 다른 다운스트림 사용 사례에서 대상을 활성화하고 Demandbase 타사 데이터로 대상자를 보강합니다.
-source-git-commit: df2cb1edbf998082fca961e6d9bb567a1ad3b7e6
+exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
+source-git-commit: ab29c1113dbbd1811acd3d5add5a247cb2703884
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '819'
 ht-degree: 3%
 
 ---
-
 
 # Demandbase 사용자 연결 {#demandbase-people}
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 >
 >[계정 대상을 활성화](../../ui/activate-account-audiences.md)해야 하는 B2B 사용 사례의 경우 대신 [Demandbase](demandbase.md) 대상 커넥터를 사용하십시오.
 
-## 활용 사례 {#use-case}
+## 사용 사례 {#use-case}
 
 마케터는 Adobe Real-Time CDP을 사용하여 자사 연락처의 사람 목록을 만들고 Demandbase에서 이를 활성화하여 수요 측 플랫폼(DSP) 및 LinkedIn과 같은 기타 채널에서 최적화되고 조정된 참여를 할 수 있습니다.
 
@@ -99,6 +99,21 @@ ht-degree: 3%
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)를 참조하십시오.
+
+### 필수 매핑 {#mandatory-mappings}
+
+대상을 [!DNL Demandbase People] 대상으로 활성화할 때 매핑 단계에서 다음의 필수 필드 매핑을 구성해야 합니다.
+
+| 소스 필드 | 대상 필드 | 설명 |
+|--------------|--------------|-------------|
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | 개인용 고유 식별자 |
+| `xdm: person.name.lastName` | `xdm: lastName` | 개인의 성 |
+| `xdm: person.name.firstName` | `xdm: firstName` | 개인의 이름 |
+| `xdm: workEmail.address` | `Identity: email` | 개인의 회사 이메일 주소 |
+
+![Demandbase 사용자 매핑](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
+
+이러한 매핑은 대상이 제대로 작동하는 데 필요하며 활성화 워크플로우를 계속 진행하기 전에 구성해야 합니다.
 
 ## 추가 참고 사항 및 중요한 설명선 {#additional-notes}
 
