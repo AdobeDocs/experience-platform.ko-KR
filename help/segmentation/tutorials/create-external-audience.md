@@ -24,7 +24,7 @@ ht-degree: 3%
 
 ### 필수 헤더
 
-또한 이 자습서에서는 [개의 API를 성공적으로 호출하려면 ](https://www.adobe.com/go/platform-api-authentication-en)인증 자습서[!DNL Experience Platform]를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+또한 이 자습서에서는 [개의 API를 성공적으로 호출하려면 &#x200B;](https://www.adobe.com/go/platform-api-authentication-en)인증 자습서[!DNL Experience Platform]를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - 인증: 전달자 `{ACCESS_TOKEN}`
 - x-api 키: `{API_KEY}`
