@@ -2,10 +2,10 @@
 title: 리소스 복사
 description: Adobe Experience Platform에서 기존 태그 리소스의 설정을 사용하여 새 태그 리소스를 만드는 방법을 알아봅니다.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a4e4fe0ae0f52a3b4b5bfa2c42ef4dce7f2a6a59
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 79%
+source-wordcount: '835'
+ht-degree: 74%
 
 ---
 
@@ -42,6 +42,10 @@ ht-degree: 79%
 ## 속성 복사
 
 전체 속성의 복사본을 만들 때 프로세스에 대해 알고 있어야 하는 몇 가지 사항이 있습니다.
+
+>[!IMPORTANT]
+>
+>데이터 요소 업데이트 변수 유형을 사용하는 리소스는 복사 후 추가 단계가 필요합니다. 각 업데이트 변수 작업을 편집하고, 데이터 또는 XDM 개체의 값을 편집한 다음 변경 사항을 저장합니다. 그러면 게시된 라이브러리가 예상대로 작동합니다. 이 프로세스에 대한 질문이 있는 경우 기술 지원에 문의하십시오.
 
 * 속성 설정이 있는 그대로(도메인, 고급 설정 등) 복사됩니다.
 * 원본 속성 내의 규칙, 데이터 요소 및 확장은 새 타겟 속성에 복사됩니다. 어댑터, 환경 및 라이브러리는 복사되지 않습니다.
