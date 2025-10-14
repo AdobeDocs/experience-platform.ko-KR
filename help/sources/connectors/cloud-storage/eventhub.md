@@ -3,9 +3,9 @@ title: Azure Event Hubs Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Azure Event Hubs를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 02c777b5db9734cf45b35f131d83c35c5ce670fb
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
@@ -38,12 +38,14 @@ Experience Platform 측에서 수집 속도를 높이려면 Experience Platform�
 
 ## 가상 네트워크를 사용하여 Experience Platform에 [!DNL Event Hubs]에 연결
 
-방화벽 측정을 사용하는 동안 [!DNL Event Hubs]을(를) Experience Platform에 연결하도록 가상 네트워크를 설정할 수 있습니다. 가상 네트워크를 설정하려면 이 [[!DNL Event Hubs] 네트워크 규칙 집합 문서](https://learn.microsoft.com/en-us/azure/event-hubs/network-security)&#x200B;(으)로 이동하여 아래 단계를 수행하십시오.
+Experience Platform은 가상 네트워크를 통해 [!DNL Event Hubs]에 연결할 수 있도록 지원합니다. 이렇게 하면 공용 인터넷 대신 안전한 개인 연결을 통해 데이터를 전송할 수 있습니다. 허용 목록에 추가하다 Experience Platform 기존의 방화벽 보호를 유지하면서 [!DNL Event Hubs] 개인 트래픽을 [!DNL Azure] 백본으로 안전하게 라우팅할 수 있습니다.
+
+가상 네트워크를 설정하려면 이 [[!DNL Event Hubs] 네트워크 규칙 집합 문서](https://learn.microsoft.com/en-us/azure/event-hubs/network-security)&#x200B;(으)로 이동하여 아래 단계를 수행하십시오.
 
 * REST API 패널에서 **시도**&#x200B;를 선택합니다.
 * 같은 브라우저에서 자격 증명을 사용하여 [!DNL Azure] 계정을 인증합니다.
 * Experience Platform으로 가져올 [!DNL Event Hubs] 네임스페이스, 리소스 그룹 및 구독을 선택한 다음 **실행**;을(를) 선택하십시오.
-* 표시되는 JSON 본문에서 `properties` 내의 `virtualNetworkRules` 아래에 다음 Experience Platform 서브넷을 추가합니다.
+* 표시되는 JSON 본문에서 `virtualNetworkRules` 내의 `properties` 아래에 다음 Experience Platform 서브넷을 추가합니다.
 
 
 >[!IMPORTANT]
