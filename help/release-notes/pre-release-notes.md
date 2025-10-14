@@ -2,10 +2,10 @@
 title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: c592d007932835f5263d7f78b2e8155790313840
+source-git-commit: 9cf809f8fd6e424b4dcd800c3d554e4eb0e337dc
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 45%
+source-wordcount: '944'
+ht-degree: 33%
 
 ---
 
@@ -25,41 +25,24 @@ ht-degree: 45%
 >- [페더레이션된 대상자 컴포지션](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/latest)
 
-**릴리스 날짜: 2025년 9월**
+**릴리스 날짜: 2025년 10월**
 
 Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 
-- [AI 어시스턴트](#ai-assistant)
 - [경고](#alerts)
 - [대상](#destinations)
-- [경험 데이터 모델 (XDM)](#xdm)
-- [쿼리 서비스](#query-service)
-- [실시간 고객 프로필](#profile)
 - [Segmentation Service](#segmentation-service)
 - [소스](#sources)
-
-## AI 어시스턴트 {#ai-assistant}
-
-Adobe Experience Platform AI Assistant는 Adobe Experience Cloud 애플리케이션 전반에서 워크플로를 가속화하고 최적화하는 데 사용할 수 있는 대화형 경험입니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator은 AI Assistant를 구동하는 지능형 계층입니다. 질문을 하거나 도움을 요청하면 Agent Orchestrator이 전문 에이전트에게 자동으로 연락하여 올바른 답변을 제공합니다. Agent Orchestrator은 대화 기록을 기억하여, 맥락을 반복하지 않고 자연스럽게 이전 질문을 기반으로 할 수 있으며, 여러 에이전트의 통찰력을 결합하여 명확하고 통합된 응답을 제공합니다. |
-| Audience Agent | Audience Agent을 사용하면 중요한 대상 크기 변경 감지, 중복 대상 감지, 대상 인벤토리 탐색 및 대상 크기 검색을 포함하여 대상에 대한 인사이트를 볼 수 있습니다. |
-
-자세한 내용은 [AI 어시스턴트 개요](../ai-assistant/home.md)를 참조하십시오.
 
 ## 경고 {#alerts}
 
 Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이벤트 기반 알림을 구독할 수 있습니다. Experience Platform 사용자 인터페이스의 [!UICONTROL 경고] 탭을 통해 다양한 경고 규칙을 구독할 수 있으며, 원하는 경우 UI 자체 또는 이메일 알림을 통해 알림 메시지를 수신할 수 있습니다.
 
-**새로운 기능**
+**새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 프로필 수집 경고 스트리밍 | 이제 데이터 흐름 수준에서 스트리밍 수집을 위한 두 개의 새 경고를 구독할 수 있습니다. <ul><li>스트리밍 수집 실패율 초과</li><li>스트리밍 수집 건너뛰기 비율 초과</li></ul> 플랫폼 내 또는 이메일 경고는 기본 임계값 또는 사용자가 정의한 사용자 지정 임계값에 대한 임계값이 초과되면 알려줍니다. 자세한 내용은 [프로필 경고](../observability/alerts/rules.md#profile) 안내서를 참조하십시오. |
+| 대상 실패율 경고 | 대상에 대한 새 경고가 추가되었습니다. **대상 실패율이 임계값을 초과합니다**. 이 경고는 데이터 활성화 중 실패한 레코드 수가 허용된 임계값을 초과하는 경우 사용자에게 알려주므로 활성화 문제에 신속하게 대응할 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -69,46 +52,23 @@ Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이
 
 [!DNL Destinations]는 대상 플랫폼과의 사전 빌드된 통합을 통해 Experience Platform의 데이터를 원활하게 활성화할 수 있습니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-**새 대상 또는 업데이트된 대상**
+**새로운 대상 또는 업데이트된 대상**
 
 | 대상 | 설명 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Snowflake Batch] 커넥터 | 이제 새로운 [!DNL Snowflake Batch] 커넥터를 사용할 수 있으며, 특정 사용 사례에 대해 스트리밍 커넥터에 대한 대안을 제공합니다. |
-| [!DNL Adform] 대상 | [!DNL Adform]은(는) 프로그래밍 방식 미디어 구매 및 판매 솔루션을 제공하는 최고의 공급업체입니다. Adform을 Adobe Experience Platform에 연결하면 ECID(Experience Cloud ID)를 기반으로 하는 Adform을 통해 자사 대상을 활성화할 수 있습니다. |
-| [!DNL Data Landing Zone] 암호화 지원 | 이제 RSA 형식의 공개 키를 연결하여 내보낸 파일을 암호화할 수 있으므로 다른 클라우드 스토리지 대상이 중요한 정보를 제공하는 것과 동일한 수준의 보안을 제공합니다. |
-| [!DNL Pinterest] 대상에 대한 인증 만료 세부 정보 | [!DNL Pinterest] 대상에 대한 인증 만료 정보가 이제 Experience Platform 인터페이스에 직접 표시되므로 데이터 흐름이 중단되기 전에 인증이 만료되고 갱신되는 시점을 확인할 수 있습니다. **[[!UICONTROL 계정]](../destinations/ui/destinations-workspace.md#accounts)** 또는 **[[!UICONTROL 찾아보기]](../destinations/ui/destinations-workspace.md#browse)** 탭의 **[!UICONTROL 계정 만료 일자]** 열에서 토큰 만료 일자를 모니터링할 수 있습니다. |
+| [!DNL AdForm] | 이 대상을 사용하여 Adobe Real-Time CDP ID(ECID) 및 [!DNL AdForm]의 ID Fusion을 기반으로 활성화할 수 있도록 [!DNL AdForm]&#x200B;(으)로 Experience Cloud 대상을 보냅니다. [!DNL AdForm]의 ID Fusion은 ECID(Experience Cloud ID)를 기반으로 자사 대상을 활성화할 수 있는 ID 확인 서비스입니다. |
+| `Amazon Ads` | `firstName`, `lastName`, `street`, `city`, `state`, `zip` 및 `country`과(와) 같은 추가 개인 식별자 지원을 추가했습니다. 이러한 필드를 타겟 ID로 매핑하면 대상자 일치율을 향상시킬 수 있습니다. |
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| Experience Platform UI의 향상된 대상 관리 기능 | [[!UICONTROL 찾아보기]](../destinations/ui/destinations-workspace.md#browse) 및 [[!UICONTROL 계정]](../destinations/ui/destinations-workspace.md#accounts) 탭에서 새로운 정렬 기능을 사용하여 대상 관리 워크플로를 개선합니다. 이제 계정 인증이 곧 만료될 때 시각적 표시기도 볼 수 있습니다. |
+| [!DNL AES256] 대상에서 [!DNL Amazon S3] 서버측 암호화 지원 | [!DNL Amazon S3] 대상이 이제 [!DNL AES256] 서버측 암호화를 지원하므로 내보낸 데이터에 대해 향상된 보안을 제공합니다. [!DNL Amazon S3] 대상 연결을 설정하거나 업데이트할 때 이 암호화 방법을 구성하면 산업 표준 [!DNL AES256] 암호화 알고리즘을 사용하여 데이터를 사용하지 않고 암호화할 수 있습니다. 자세한 내용은 [[!DNL Amazon] 설명서](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html)를 참조하십시오. |
+| [대상 수준 모니터링을 지원하는 몇 가지 새로운 대상](../dataflows/ui/monitor-destinations.md#audience-level-view) | 이제 다음 대상이 대상자 수준 모니터링을 지원합니다. <ul><li>[!DNL Airship Tags]</li><li>(API) [!DNL Salesforce Marketing Cloud]</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>(V1) [!DNL Pega CDH Realtime Audience]</li><li>(V2) [!DNL Pega CDH Realtime Audience]</li><li>[!DNL Salesforce Marketing Cloud] 계정 참여</li><li>[!DNL The Trade Desk]</li></ul> |
+| 데이터 세트 내보내기 보호 문제 해결 | 데이터 세트 내보내기 가드레일에 대한 수정 사항이 구현되었습니다. 이전에는 타임스탬프 열이 포함되어 있지만 XDM 경험 이벤트 스키마를 기반으로 하는 _not_&#x200B;인 일부 데이터 세트가 경험 이벤트 데이터 세트로 잘못 처리되어 내보내기가 365일 전환 확인 기간으로 제한되었습니다. 문서화된 365일 전환 확인 가드레일은 이제 경험 이벤트 데이터 세트에만 적용됩니다. XDM 경험 이벤트 스키마 이외의 스키마를 사용하는 데이터 세트는 이제 100억 개의 레코드 가드레일이 제어합니다. 일부 고객은 365일 전환 확인 기간에 잘못 포함된 데이터 세트에 대한 내보내기 횟수가 증가할 수 있습니다. 이를 통해 긴 전환 확인 기간이 있는 예측 워크플로우에 대한 데이터 세트를 내보낼 수 있습니다. 자세한 내용은 [데이터 집합 내보내기 보호](../destinations/guardrails.md#dataset-exports)를 참조하십시오. |
+| 엔터프라이즈 대상에 대한 대상 수준 보고 개선 | 엔터프라이즈 대상에 대한 대상 수준 보고 논리가 개선되었습니다. 이 릴리스 이후 고객은 선택한 대상과 관련된 대상만 포함하는 더 정확한 대상 보고 번호를 볼 수 있습니다. 이 모니터링 조정을 통해 데이터 흐름에 매핑된 대상자만 보고에 포함되므로 실제 데이터 활성화에 대한 보다 명확한 통찰력을 얻을 수 있습니다. 활성화 중인 데이터 양에는 영향을 주지 않습니다. 보고 정확도를 개선하기 위한 모니터링 개선 사항입니다. |
 
 자세한 내용은 [대상 개요](../destinations/home.md)를 참조하십시오.
-
-## 경험 데이터 모델 (XDM) {#xdm}
-
-XDM은 Experience Platform에 가져온 데이터에 대한 공통 구조와 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| 모델 기반 스키마 | 모델 기반 스키마를 사용하여 데이터 모델링을 간소화하십시오. 이제 포괄적인 방법 예제와 지침을 통해 스키마를 더 쉽게 만들 수 있습니다. 이 기능은 현재 Campaign Orchestration 라이선스 소유자가 사용할 수 있으며 GA 시점에 데이터 Distiller 고객으로 확장되어 데이터 모델링에 더 쉽게 액세스하고 효율적으로 작업할 수 있습니다. 이 기능에는 시계열 데이터 및 변경 데이터 캡처 기능에 대한 지원이 포함됩니다. |
-
-자세한 내용은 [XDM 개요](../xdm/home.md)를 참조하십시오.
-
-## 실시간 고객 프로필 {#profile}
-
-Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드와 상호 작용하는지에 관계없이 고객을 위한 조직화되고 일관되며 관련성 높은 경험을 제공할 수 있습니다. 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 여러 채널의 데이터를 결합하여 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. 프로필을 사용하면 모든 고객의 상호 작용에 대해 실행 가능한 타임스탬프가 지정된 계정을 제공하는 통합 보기로 고객 데이터를 통합할 수 있습니다.
-
-**업데이트된 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| 프로필 뷰어 개선 사항 | 2025년 9월 릴리스에는 프로필 뷰어에 대한 다음과 같은 개선 사항이 포함됩니다. <ul><li>**보기 결합**: 특성, 이벤트 및 인사이트가 단일 보기로 결합되었습니다.</li><li>**AI 생성 인사이트**: 이제 프로필 세부 정보 페이지에 AI 생성 인사이트가 표시되어 프로필에서 생성된 세부 정보를 알 수 있습니다. 이러한 통찰력에는 성향 점수 및 트렌드 분석과 같은 정보가 포함될 수 있습니다.</li><li>**스타일 업데이트**: 프로필 세부 정보 페이지가 시각적으로 새로 고쳐졌습니다.</li><li>**찾아보기**: 이제 검색 및 사용자 지정이 포함된 대화형 카드 기반 캐러셀을 통해 프로필을 탐색할 수 있습니다.</li></ul> |
-
-자세한 내용은 [실시간 고객 프로필 개요](../profile/home.md)를 참조하세요.
 
 ## Segmentation Service {#segmentation-service}
 
@@ -118,13 +78,7 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 경험 이벤트 사용 중단이 있는 계정 대상자 | B2B 아키텍처 업그레이드 이후 경험 이벤트가 있는 계정 대상은 더 이상 지원되지 않습니다. 대신, 새로운 세그먼트 세그먼트 접근 방식을 사용하십시오. 경험 이벤트로 사람 대상을 만든 다음, 계정 대상을 만들 때 해당 사람 대상을 참조하십시오. 이렇게 하면 B2B 대상 만들기에 대한 보다 유연하고 유지 관리할 수 있는 접근 방식이 제공됩니다. |
-
-**중요 업데이트**
-
-| 업데이트 | 설명 |
-| ------- | ----------- |
-| 대상자 예상 자동 새로 고침 되돌리기 | 대상자 추정에 대한 자동 새로 고침 개선 사항이 되돌려졌습니다. 대상자 예상은 세그먼트 빌더 내에서 계속 생성되지만 자동 새로 고침 기능은 제거되었습니다. |
+| 스트리밍 세분화 모니터링 | 스트리밍 세그멘테이션을 위한 실시간 모니터링은 샌드박스, 데이터 세트 및 대상 수준에서 평가 속도, 지연 시간 및 데이터 품질 지표에 대한 투명성을 제공합니다. 이를 통해 데이터 엔지니어는 용량 위반 및 수집 문제를 식별하는 데 도움이 되는 사전 예방적 경고 및 실행 가능한 인사이트를 얻을 수 있습니다. 모니터링 지표에는 평가 비율, P95 수집 지연은 물론 수신, 평가, 실패 및 건너뛴 기록이 포함됩니다. 데이터 세트별 보기 및 대상별 보기 기능은 자격을 부여하거나 자격을 박탈한 순 신규 프로필에 대한 포괄적인 가시성을 제공합니다. |
 
 자세한 내용은 [[!DNL Segmentation Service] 개요](../segmentation/home.md)를 참조하십시오.
 
@@ -132,11 +86,17 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
-**새로운 기능 또는 업데이트된 기능**
+**새 소스 또는 업데이트된 소스**
 
-| 기능 | 설명 |
+| 소스 | 설명 |
 | --- | --- |
-| 일반 가용성의 새로운 소스 | 이제 다음 소스가 GA에 포함되었습니다. 여러 소스 커넥터가 Beta에서 GA로 업데이트되었습니다. <ul><li>[Acxiom 데이터 수집](../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acxiom 잠재 고객 데이터 수집](../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. 이러한 소스는 이제 완전히 지원되며 프로덕션 용도로 사용할 수 있습니다. |
-| [!DNL Snowflake] 키 쌍 인증 지원 | 키 쌍 인증을 지원하여 Snowflake 연결에 대한 보안을 개선했습니다. 기본 인증(사용자 이름/암호)은 2025년 11월까지 더 이상 사용되지 않으므로, 고객은 개선된 보안을 위해 키 쌍 인증으로 마이그레이션하는 것이 좋습니다. |
+| 충성도 데이터의 [!BADGE Beta]{type=Informative} [!DNL Talon.one] 소스 | [!DNL Talon.One] 소스를 사용하여 일괄 처리 및 스트리밍 충성도 데이터를 Experience Platform으로 수집합니다. 커넥터는 획득한 포인트, 상환된 포인트, 만료된 포인트 및 계층 데이터를 포함하여 프로필 데이터, 거래 데이터 및 로열티 데이터의 스트리밍을 지원합니다. |
+
+**업데이트된 원본**
+
+| 소스 | 설명 |
+| --- | --- |
+| [!DNL Google Ads] 소스의 일반 가용성(API 전용) | [!DNL Google Ads] 소스의 API 버전이 이제 일반 공급 상태입니다. API 설명서에 최신 버전이 이제 `v21`이고 Experience Platform이 모든 버전 v19 이상을 지원함을 반영하여 업데이트했습니다. UI 버전은 베타 상태로 유지되며 일회성 수집만 지원합니다. 증분 데이터 수집을 사용하려면 API 경로를 사용합니다. |
+| [!DNL Azure Event Hubs] 가상 네트워크 지원 | 이제 Adobe은 Azure Event Hubs에 대한 가상 네트워크 연결을 명시적으로 지원하므로 공개 네트워크가 아닌 개인 네트워크를 통해 데이터를 전송할 수 있습니다. 허용 목록에 추가하다 고객은 Experience Platform VNet를 통해 Azure 백본을 통해 개인적으로 이벤트 트래픽을 라우팅하여 데이터 수집 워크플로우에 대한 향상된 보안을 제공할 수 있습니다. |
 
 자세한 내용은 [소스 개요](../sources/home.md)를 참조하십시오.
