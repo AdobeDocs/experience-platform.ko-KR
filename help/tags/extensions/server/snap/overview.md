@@ -69,7 +69,7 @@ Snapchat Ads 관리자에서 [[!DNL [Snap Pixel]]](https://businesshelp.snapchat
 
 예를 들어 아래에 표시된 스키마에서 `snapClickId`을(를) 참조하는 데이터 요소를 만드는 경우:
 
-![스키마 ](../../../images/extensions/server/snap/schema.png)을(를) 표시하는 이미지
+![스키마 &#x200B;](../../../images/extensions/server/snap/schema.png)을(를) 표시하는 이미지
 
 `snapClickId`이(가) XDM 스키마의 `_snap.inc.exchange` 아래에 있으므로 데이터 요소를 구성해야 합니다.
 

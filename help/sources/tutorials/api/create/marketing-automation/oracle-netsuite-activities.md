@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # 흐름 서비스 API를 사용하여 [!DNL Oracle NetSuite Activities]에 대한 소스 연결 및 데이터 흐름을 만듭니다.
 
-[!DNL Oracle NetSuite Activities]API[[!DNL Flow Service] 를 사용하여 ](https://www.adobe.io/experience-platform-apis/references/flow-service/) 계정의 이벤트 데이터를 Adobe Experience Platform으로 가져오는 방법에 대해 알아보려면 다음 자습서를 참조하십시오.
+[!DNL Oracle NetSuite Activities]API[[!DNL Flow Service] 를 사용하여 &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) 계정의 이벤트 데이터를 Adobe Experience Platform으로 가져오는 방법에 대해 알아보려면 다음 자습서를 참조하십시오.
 
 ## 시작
 

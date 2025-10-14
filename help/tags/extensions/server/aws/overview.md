@@ -58,7 +58,7 @@ ht-degree: 0%
 | --- | --- |
 | [!UICONTROL 스트림 이름] | 이 이벤트 전달 규칙이 데이터 레코드를 보낼 스트림 이름입니다. |
 | [!UICONTROL AWS 지역] | [!DNL Kinesis] 데이터 스트림이 만들어지는 [!DNL AWS] 영역입니다. |
-| [!UICONTROL 파티션 키] | 데이터 스트림으로 데이터를 보낼 때 확장에서 사용할 [파티션 키](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key)입니다.<br><br>[!DNL Kinesis Data Streams]은(는) 스트림에 속하는 데이터 레코드를 여러 개의 조각으로 분리합니다. 각 데이터 레코드와 함께 전송되는 파티션 키를 사용하여 주어진 데이터 레코드가 속하는 분할을 결정합니다.<br><br>각 고객마다 다르므로 고객을 배포하기 위한 올바른 파티션 키가 고객 번호일 수 있습니다. 파티션 키가 좋지 않으면 모두 근처에 같은 지역에 거주할 수 있으므로 우편 번호가 낮을 수 있습니다. 일반적으로 서로 다른 잠재적 값의 범위가 가장 높은 파티션 키를 선택해야 합니다. 파티션 키 관리에 대한 모범 사례를 보려면 [데이터 스트림 크기 조정 [!DNL Kinesis] 의 ](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/)에 대한 [!DNL AWS] 문서를 참조하십시오. |
+| [!UICONTROL 파티션 키] | 데이터 스트림으로 데이터를 보낼 때 확장에서 사용할 [파티션 키](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key)입니다.<br><br>[!DNL Kinesis Data Streams]은(는) 스트림에 속하는 데이터 레코드를 여러 개의 조각으로 분리합니다. 각 데이터 레코드와 함께 전송되는 파티션 키를 사용하여 주어진 데이터 레코드가 속하는 분할을 결정합니다.<br><br>각 고객마다 다르므로 고객을 배포하기 위한 올바른 파티션 키가 고객 번호일 수 있습니다. 파티션 키가 좋지 않으면 모두 근처에 같은 지역에 거주할 수 있으므로 우편 번호가 낮을 수 있습니다. 일반적으로 서로 다른 잠재적 값의 범위가 가장 높은 파티션 키를 선택해야 합니다. 파티션 키 관리에 대한 모범 사례를 보려면 [데이터 스트림 크기 조정 [!DNL Kinesis] 의 &#x200B;](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/)에 대한 [!DNL AWS] 문서를 참조하십시오. |
 
 {style="table-layout:auto"}
 

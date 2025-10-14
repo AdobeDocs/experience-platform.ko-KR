@@ -13,7 +13,7 @@ ht-degree: 2%
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-[!DNL PathFactory]API[[!DNL Flow Service] 를 사용하여 ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>)에 대한 기본 연결을 만드는 방법을 알아보려면 이 문서를 참조하십시오.
+[!DNL PathFactory]API[[!DNL Flow Service] 를 사용하여 &#x200B;](<https://www.adobe.io/experience-platform-apis/references/flow-service/>)에 대한 기본 연결을 만드는 방법을 알아보려면 이 문서를 참조하십시오.
 
 ## 시작
 
@@ -105,5 +105,5 @@ curl -X POST \
 
 이 자습서에 따라 [!DNL PathFactory] API를 사용하여 [!DNL Flow Service] 기본 연결을 만들었습니다. 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다.
 
-* [ [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
-* [ [!DNL Flow Service] API를 사용하여 마케팅 자동화 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/marketing-automation.md)
+* [&#x200B; [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API를 사용하여 마케팅 자동화 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/marketing-automation.md)

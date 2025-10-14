@@ -95,4 +95,4 @@ UI에 Splunk 이벤트 수집기 확장을 설치하려면 **이벤트 전달**(
 
 * [Splunk Web에서 HTTP 이벤트 수집기 설정 및 사용](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
 * [토큰을 사용하여 인증 설정](https://docs.splunk.com/Documentation/Splunk/8.2.5/Security/Setupauthenticationwithtokens#Prerequisites_for_activating_tokens)
-* [HTTP 이벤트 수집기 문제 해결](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector)&#x200B;(또한 [가능한 오류 코드 ](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector#Possible_error_codes)의 표준 목록)
+* [HTTP 이벤트 수집기 문제 해결](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector)&#x200B;(또한 [가능한 오류 코드 &#x200B;](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector#Possible_error_codes)의 표준 목록)

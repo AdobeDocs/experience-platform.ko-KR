@@ -56,7 +56,7 @@ Experience Platform UI에서 임시 스키마 표시를 활성화하려면 필�
 
 ## 스키마 또는 필드의 레이블 편집
 
-전체 스키마의 레이블을 편집하려면 연필 아이콘(![연필 아이콘)을 선택합니다.[!UICONTROL 레이블] 탭 아래에 있는 스키마 이름의 측면에 ](/help/images/icons/edit.png))을(를) 추가합니다.
+전체 스키마의 레이블을 편집하려면 연필 아이콘(![연필 아이콘)을 선택합니다.[!UICONTROL 레이블] 탭 아래에 있는 스키마 이름의 측면에 &#x200B;](/help/images/icons/edit.png))을(를) 추가합니다.
 
 ![연필 아이콘이 강조 표시된 스키마 작업 영역의 레이블 보기입니다.](../images/data-governance/edit-entire-schema-labels.png)
 

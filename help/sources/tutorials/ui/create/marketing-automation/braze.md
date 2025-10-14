@@ -86,7 +86,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 >
 >브레이즈 타임스탬프는 밀리초로 표시되지 않고, 초 단위로 표시됩니다. Experience Platform의 타임스탬프를 정확하게 반영하려면 계산된 필드를 밀리초 단위로 만들어야 합니다. &quot;시간 * 1000&quot;의 계산은 Experience Platform 내의 타임스탬프 필드에 매핑하는 데 적합한 밀리초로 올바르게 변환됩니다.
 >
->![타임스탬프 ](../../../../images/tutorials/create/braze/create-calculated-field.png)에 대해 계산된 필드를 만드는 중
+>![타임스탬프 &#x200B;](../../../../images/tutorials/create/braze/create-calculated-field.png)에 대해 계산된 필드를 만드는 중
 
 ![오류가 없는 매핑입니다.](../../../../images/tutorials/create/braze/completed_mapping.png)
 

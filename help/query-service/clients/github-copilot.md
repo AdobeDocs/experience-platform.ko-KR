@@ -39,7 +39,7 @@ OpenAI Codex에서 제공하는 [!DNL GitHub Copilot]은(는) 코드 조각 및 
 
 ## 연결 만들기 {#create-connection}
 
-원통 아이콘(![원통 아이콘을 선택합니다.[!DNL VS Code]의 왼쪽 탐색 영역에 ](../images/clients/github-copilot/cylinder-icon.png))을 추가한 다음 **[!DNL Add New Connection]** 또는 원통 더하기 아이콘(![원통 더하기 아이콘.](../images/clients/github-copilot/cylinder-plus-icon.png))을 클릭합니다.
+원통 아이콘(![원통 아이콘을 선택합니다.[!DNL VS Code]의 왼쪽 탐색 영역에 &#x200B;](../images/clients/github-copilot/cylinder-icon.png))을 추가한 다음 **[!DNL Add New Connection]** 또는 원통 더하기 아이콘(![원통 더하기 아이콘.](../images/clients/github-copilot/cylinder-plus-icon.png))을 클릭합니다.
 
 ![SQL 도구 확장과 새 연결 추가가 강조 표시된 Visual Studio 코드 UI입니다.](../images/clients/github-copilot/add-new-connection.png)
 
@@ -143,7 +143,7 @@ There are inline features for chat including doc, expalin, fix and test
 
 ## 전용 채팅 보기 {#dedicated-chat}
 
-전용 채팅 사이드바가 있는 보다 전통적인 채팅 인터페이스를 사용하여 아이디어와 전략을 구성하고 코딩 문제를 해결하며 구현 세부 사항을 논의할 수 있습니다. 채팅 아이콘(![Copilot 채팅 아이콘)을 선택합니다.[!DNL VS Code] 사이드바에서 ](../images/clients/github-copilot/chat-icon.png))을(를) 클릭하여 전용 채팅 창을 엽니다.
+전용 채팅 사이드바가 있는 보다 전통적인 채팅 인터페이스를 사용하여 아이디어와 전략을 구성하고 코딩 문제를 해결하며 구현 세부 사항을 논의할 수 있습니다. 채팅 아이콘(![Copilot 채팅 아이콘)을 선택합니다.[!DNL VS Code] 사이드바에서 &#x200B;](../images/clients/github-copilot/chat-icon.png))을(를) 클릭하여 전용 채팅 창을 엽니다.
 
 ![채팅 아이콘이 강조 표시된 [!DNL GitHub Copilot] 채팅 사이드바입니다.](../images/clients/github-copilot/chat-sidebar.png)
 

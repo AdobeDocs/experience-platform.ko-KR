@@ -44,9 +44,9 @@ Experience Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로
 
 계속하려면 [Marketing Cloud 계정 참여](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) 제품에 대한 구독이 있는 [!DNL Marketing Cloud Account Engagement] 계정이 필요합니다.
 
-[!DNL Salesforce] 계정에 [!DNL Salesforce] `Account Engagement Administrator role`이(가) 있어야 합니다. [사용자 지정 잠재 고객 필드를 만들기](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&amp;type=5)하려면 필요합니다.
+[!DNL Salesforce] 계정에 [!DNL Salesforce] `Account Engagement Administrator role`이(가) 있어야 합니다. [사용자 지정 잠재 고객 필드를 만들기](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&type=5)하려면 필요합니다.
 
-마지막으로, 계정에서도 [[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&amp;type=5)에 액세스할 수 있습니다.
+마지막으로, 계정에서도 [[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&type=5)에 액세스할 수 있습니다.
 
 계정이 없거나 계정에 [!DNL Marketing Cloud Account Engagement] 구독 또는 [!DNL Account Engagement Administrator role]이 없는 경우 [[!DNL Salesforce] 지원](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) 또는 [!DNL Salesforce] 계정 관리자에게 문의하세요.
 
@@ -68,7 +68,7 @@ Experience Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로
 
 >[!IMPORTANT]
 >
->[!DNL Salesforce] 계정 관리자가 신뢰할 수 있는 IP 범위에 대한 액세스를 제한한 경우 해당 관리자에게 연락하여 [Experience Platform IP](/help/destinations/catalog/streaming/ip-address-allow-list.md)를 허용 목록에추가된으로 받아야 합니다. 추가 지침이 필요한 경우 [!DNL Salesforce] [연결된 앱에 대한 신뢰할 수 있는 IP 범위에 대한 액세스 제한](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) 설명서를 참조하십시오.
+>[!DNL Salesforce] 계정 관리자가 신뢰할 수 있는 IP 범위에 대한 액세스를 제한한 경우 해당 관리자에게 연락하여 [Experience Platform IP](/help/destinations/catalog/streaming/ip-address-allow-list.md)를 허용 목록에추가된으로 받아야 합니다. 추가 지침이 필요한 경우 [!DNL Salesforce] [연결된 앱에 대한 신뢰할 수 있는 IP 범위에 대한 액세스 제한](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) 설명서를 참조하십시오.
 
 ## 지원되는 ID {#supported-identities}
 

@@ -438,7 +438,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-`applyOffers`전용 설명서[에서 ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=ko) 명령에 대해 자세히 알아보세요.
+`applyOffers`전용 설명서[에서 &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=ko) 명령에 대해 자세히 알아보세요.
 
 
 ### 웹 SDK 사용
@@ -453,7 +453,7 @@ alloy("applyPropositions", {
 });
 ```
 
-`applyPropositions`전용 설명서[에서 ](../../personalization/rendering-personalization-content.md#applypropositions) 명령에 대해 자세히 알아보세요.
+`applyPropositions`전용 설명서[에서 &#x200B;](../../personalization/rendering-personalization-content.md#applypropositions) 명령에 대해 자세히 알아보세요.
 
 ## 이벤트 추적 방법
 

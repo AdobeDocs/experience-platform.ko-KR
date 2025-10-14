@@ -44,13 +44,13 @@ Experience Platform 대상으로 내보내기 동작을 고려할 때 구성이 
 
 예를 들어, [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)의 경우 대상 개발자는 대상이 허용하는 ID를 구성할 수 있으며 아래와 같이 활성화 워크플로의 [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)에서 해당 ID만 사용자에게 표시됩니다.
 
-![활성화 워크플로의 매핑 단계에서 대상 필드에 대한 ID 선택의 화면 기록입니다. ](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
+![활성화 워크플로의 매핑 단계에서 대상 필드에 대한 ID 선택의 화면 기록입니다. &#x200B;](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
 마찬가지로 [파일 기반 대상](/help/destinations/destination-types.md#file-based)의 경우 대상 개발자는 대상에 사용할 수 있는 [파일 이름 추가 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 또는 사용할 수 있는 [파일 서식 옵션](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)을 결정할 수 있으며 사용자는 아래와 같이 이러한 옵션에서만 선택할 수 있습니다.
 
 ![파일 기반 대상에 연결할 때 파일 서식 지정 옵션의 화면 기록입니다.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 
-![활성화 워크플로의 예약 단계에서 파일 이름 추가 옵션에 대한 화면 기록입니다. ](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
+![활성화 워크플로의 예약 단계에서 파일 이름 추가 옵션에 대한 화면 기록입니다. &#x200B;](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
 
 활성화 워크플로에서 사용할 수 있는 다양한 옵션 및 단계에 대해 자세히 알아보십시오.
 

@@ -55,9 +55,9 @@ Experience Platform에서 [!DNL Salesforce Marketing Cloud] 계정으로 데이�
 
 [!DNL Salesforce]에서는 Experience Platform에서 들어오는 대상을 올바르게 읽고 해석하고 [!DNL Salesforce Marketing Cloud] 내에서 대상 상태를 업데이트하려면 이 값이 필요합니다. 대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)에 대한 Experience Platform 설명서를 참조하십시오.
 
-Experience Platform에서 [!DNL Salesforce]까지 활성화하는 각 대상에 대해 [!DNL Salesforce Marketing Cloud] 내의 [!DNL Email Demographics] 데이터 확장에 연결된 `Text` 유형의 특성이 있어야 합니다. 특성을 만들려면 [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder]을(를) 사용합니다. 특성 만들기에 대한 지침이 필요한 경우 [!DNL Salesforce Marketing Cloud] 설명서를 참조하여 [특성 만들기](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US)를 참조하세요.
+Experience Platform에서 [!DNL Salesforce]까지 활성화하는 각 대상에 대해 [!DNL Salesforce Marketing Cloud] 내의 [!DNL Email Demographics] 데이터 확장에 연결된 `Text` 유형의 특성이 있어야 합니다. 특성을 만들려면 [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder]을(를) 사용합니다. 특성 만들기에 대한 지침이 필요한 경우 [!DNL Salesforce Marketing Cloud] 설명서를 참조하여 [특성 만들기](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US)를 참조하세요.
 
-특성 필드 이름은 **[!UICONTROL 매핑]** 단계 동안 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에 사용됩니다. 비즈니스 요구 사항에 따라 최대 4000자로 필드 문자를 정의할 수 있습니다. 특성 유형에 대한 자세한 내용은 [!DNL Salesforce Marketing Cloud] [데이터 확장 데이터 유형](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) 설명서 페이지를 참조하십시오.
+특성 필드 이름은 **[!UICONTROL 매핑]** 단계 동안 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에 사용됩니다. 비즈니스 요구 사항에 따라 최대 4000자로 필드 문자를 정의할 수 있습니다. 특성 유형에 대한 자세한 내용은 [!DNL Salesforce Marketing Cloud] [데이터 확장 데이터 유형](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&type=5) 설명서 페이지를 참조하십시오.
 
 특성을 추가할 [!DNL Salesforce Marketing Cloud]의 데이터 디자이너 화면의 예는 다음과 같습니다.
 ![Salesforce Marketing Cloud UI 데이터 디자이너](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-data-designer.png)
@@ -96,7 +96,7 @@ Experience Platform에서 [!DNL Salesforce]까지 활성화하는 각 대상에 
 액세스 수준을 제한하려면 세분화된 권한을 사용하여 개별 액세스를 재정의할 수도 있습니다.
 ![세분화된 권한을 가진 전자 메일 데이터 확장을 표시하는 Salesforce Marketing Cloud UI](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
 
-자세한 지침은 [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5) 및 [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5) 페이지를 참조하세요.
+자세한 지침은 [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&id=sf.mc_overview_marketing_cloud_roles.htm&type=5) 및 [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&id=sf.mc_overview_roles.htm&type=5) 페이지를 참조하세요.
 
 #### [!DNL Salesforce Marketing Cloud] 자격 증명 수집 {#gather-credentials}
 
@@ -118,7 +118,7 @@ Experience Platform에서 [!DNL Salesforce]까지 활성화하는 각 대상에 
    * [API 개요](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html) 페이지에서 추가 제한을 자세히 설명합니다.
    * 이러한 세부 정보를 대조하는 페이지에 대해서는 [여기](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits)를 참조하세요.
 * 오브젝트당 허용되는 *사용자 정의 필드*&#x200B;의 수는 Salesforce 버전에 따라 다릅니다.
-   * 자세한 지침은 [!DNL Salesforce] [설명서](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&amp;type=5)를 참조하세요.
+   * 자세한 지침은 [!DNL Salesforce] [설명서](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&type=5)를 참조하세요.
    * [!DNL Salesforce Marketing Cloud] 내의 *개체 당 허용되는 사용자 정의 필드*&#x200B;에 대해 정의된 한도에 도달한 경우 다음을 수행해야 합니다.
       * [!DNL Salesforce Marketing Cloud]에 새 특성을 추가하기 전에 이전 특성을 제거하십시오.
       * [대상 예약](#schedule-segment-export-example) 단계 동안 이러한 이전 특성 이름을 **[!UICONTROL 매핑 ID]**&#x200B;에 제공된 값으로 사용하는 Experience Platform 대상에서 활성화된 대상을 업데이트하거나 제거합니다.
@@ -129,7 +129,7 @@ Experience Platform에서 [!DNL Salesforce]까지 활성화하는 각 대상에 
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| contactKey | [!DNL Salesforce Marketing Cloud] 연락처 키. 추가 지침이 필요한 경우 [!DNL Salesforce Marketing Cloud] [설명서](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&amp;type=5)를 참조하세요. | 필수 |
+| contactKey | [!DNL Salesforce Marketing Cloud] 연락처 키. 추가 지침이 필요한 경우 [!DNL Salesforce Marketing Cloud] [설명서](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&type=5)를 참조하세요. | 필수 |
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -293,7 +293,7 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에 올바르
    * 이 오류를 수정하려면 활성화 워크플로에서 [!DNL (API) Salesforce Marketing Cloud] 대상에 제공한 **[!UICONTROL 매핑 ID]**&#x200B;이(가) [!DNL Salesforce Marketing Cloud]에서 만든 특성의 이름과 정확히 일치하는지 확인하십시오. 자세한 내용은  [!DNL Salesforce Marketing Cloud][&#128279;](#prerequisites-custom-field) 섹션 내의 특성 만들기를 참조하세요.
 
 * 세그먼트를 활성화할 때 다음 오류 메시지가 표시될 수 있습니다. `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
-   * 이 오류를 해결하려면 [!DNL Salesforce Marketing Cloud] 계정 관리자에게 문의하여 [!DNL Salesforce Marketing Cloud] 계정의 신뢰할 수 있는 IP 범위에 [Experience Platform IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md)를 추가하십시오. 추가 지침이 필요한 경우 [!DNL Salesforce Marketing Cloud] [Marketing Cloud의 허용 목록에 포함할 IP 주소](https://help.salesforce.com/s/articleView?id=sf.mc_es_ip_addresses_for_inclusion.htm&amp;type=5) 설명서를 참조하십시오.
+   * 이 오류를 해결하려면 [!DNL Salesforce Marketing Cloud] 계정 관리자에게 문의하여 [!DNL Salesforce Marketing Cloud] 계정의 신뢰할 수 있는 IP 범위에 [Experience Platform IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md)를 추가하십시오. 추가 지침이 필요한 경우 [!DNL Salesforce Marketing Cloud] [Marketing Cloud의 허용 목록에 포함할 IP 주소](https://help.salesforce.com/s/articleView?id=sf.mc_es_ip_addresses_for_inclusion.htm&type=5) 설명서를 참조하십시오.
 
 ## 추가 리소스 {#additional-resources}
 

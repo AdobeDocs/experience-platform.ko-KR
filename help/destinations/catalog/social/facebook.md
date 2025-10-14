@@ -253,9 +253,9 @@ Facebook 인증 토큰은 60일마다 만료됩니다. 토큰이 만료되면 �
 소스 필드 선택:
 
 * 사용 중인 전자 메일 주소가 해시되지 않은 경우 `Email` 네임스페이스를 원본 ID로 선택하십시오.
-* `Email_LC_SHA256` [!DNL Experience Platform]전자 메일 해시 요구 사항[!DNL Facebook]에 따라 데이터 수집 시 고객 전자 메일 주소를 [(으)로 해시했다면 ](#email-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
+* `Email_LC_SHA256` [!DNL Experience Platform]전자 메일 해시 요구 사항[!DNL Facebook]에 따라 데이터 수집 시 고객 전자 메일 주소를 [(으)로 해시했다면 &#x200B;](#email-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 해시되지 않은 전화 번호로 구성된 경우 `PHONE_E.164` 네임스페이스를 원본 ID로 선택하십시오. [!DNL Experience Platform]이(가) [!DNL Facebook] 요구 사항을 준수하기 위해 전화 번호를 해시합니다.
-* `Phone_SHA256` [!DNL Experience Platform]전화 번호 해시 요구 사항[!DNL Facebook]에 따라 데이터 수집 시 전화 번호를 [(으)로 해시했다면 ](#phone-number-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
+* `Phone_SHA256` [!DNL Experience Platform]전화 번호 해시 요구 사항[!DNL Facebook]에 따라 데이터 수집 시 전화 번호를 [(으)로 해시했다면 &#x200B;](#phone-number-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 `IDFA` 장치 ID로 구성된 경우 [!DNL Apple] 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 `GAID` 장치 ID로 구성된 경우 [!DNL Android] 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 다른 유형의 식별자로 구성된 경우 `Custom` 네임스페이스를 소스 ID로 선택하십시오.
@@ -295,8 +295,8 @@ Facebook 인증 토큰은 60일마다 만료됩니다. 토큰이 만료되면 �
 
 >[!IMPORTANT]
 >
->[!DNL Facebook Custom Audience Terms of Service]계정 필수 구성 요소`business ID 206617933627973` 섹션의 URL 템플릿에 표시된 대로 [에서 ](#facebook-account-prerequisites)을(를) 수락해야 합니다.
+>[!DNL Facebook Custom Audience Terms of Service]계정 필수 구성 요소`business ID 206617933627973` 섹션의 URL 템플릿에 표시된 대로 [에서 &#x200B;](#facebook-account-prerequisites)을(를) 수락해야 합니다.
 
-`400 Bad Request`Facebook 계정 필수 구성 요소[의 단계를 수행한 후 ](#facebook-account-prerequisites) 오류 메시지가 표시되면 [!DNL Facebook] 권한이 적용될 수 있는 기간을 며칠으로 허용하십시오.
+`400 Bad Request`Facebook 계정 필수 구성 요소[의 단계를 수행한 후 &#x200B;](#facebook-account-prerequisites) 오류 메시지가 표시되면 [!DNL Facebook] 권한이 적용될 수 있는 기간을 며칠으로 허용하십시오.
 
 

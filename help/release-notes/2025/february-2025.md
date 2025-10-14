@@ -131,7 +131,7 @@ Experience Platform의 소스를 사용하여 Adobe 애플리케이션 또는 �
 
 | 기능 | 설명 |
 | --- | --- |
-| [!DNL Microsoft Dynamics]의 보기 지원 | 이제 [!DNL Microsoft Dynamics]를 사용할 때 `"entityType": "view"`를 수집할 수 있습니다. 자세한 내용은 [ [!DNL Microsoft Dynamics] 소스를 Experience Platform으로 연결하기](../../sources/tutorials/api/create/crm/ms-dynamics.md)에 대한 안내서를 참조하십시오. |
+| [!DNL Microsoft Dynamics]의 보기 지원 | 이제 [!DNL Microsoft Dynamics]를 사용할 때 `"entityType": "view"`를 수집할 수 있습니다. 자세한 내용은 [&#x200B; [!DNL Microsoft Dynamics] 소스를 Experience Platform으로 연결하기](../../sources/tutorials/api/create/crm/ms-dynamics.md)에 대한 안내서를 참조하십시오. |
 | 새로운 IP 주소 허용 목록 | Experience Platform 소스를 성공적으로 사용하려면 다음 IP 주소를 허용 목록에 추가해야 합니다.<br></br>**VA7**<ul><li>`48.211.4.136/29`</li><li>`48.211.4.144/28`</li><li>`48.211.4.160/29`</li><li>`40.84.85.144/28`</li><li>`40.84.85.192/28`</li></ul>**AUS5**<ul><li>`20.213.194.144/29`</li><li>`20.227.120.32/27`</li></ul> 허용 목록에 추가하다 <br></br>자세한 내용은 [원본 IP 주소 가이드](../../sources/ip-address-allow-list.md)를 참조하세요. |
 
 {style="table-layout:auto"}

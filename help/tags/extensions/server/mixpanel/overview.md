@@ -32,7 +32,7 @@ ht-degree: 1%
 [!DNL Mixpanel]과(와) 관련된 사용 사례에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [새로 만들기 [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
-* [ [!DNL Mixpanel] (이)란?](https://developer.mixpanel.com/docs)
+* [&#x200B; [!DNL Mixpanel] (이)란?](https://developer.mixpanel.com/docs)
 * [12개의 필수 [!DNL Mixpanel] 기능](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
 ## [!DNL Mixpanel]개 필수 구성 요소 {#prerequisites-mixpanel}

@@ -21,7 +21,7 @@ ht-degree: 5%
 
 ## 활동 {#activities}
 
-이제 [!DNL Marketo] 원본에서 추가 표준 활동을 지원합니다. 스키마를 업데이트하지 않고 새 [ 데이터 흐름을 만들면 새 대상 필드가 스키마에 없으므로 표준 활동을 사용하려면 ](../marketo/marketo-namespaces.md)스키마 자동 생성 유틸리티`activities`를 사용하여 스키마를 업데이트해야 합니다. 스키마를 업데이트하지 않도록 선택하는 경우에도 새 데이터 흐름을 만들고 오류를 무시할 수 있습니다. 그러나 새 필드나 업데이트된 필드는 Experience Platform에 수집되지 않습니다.
+이제 [!DNL Marketo] 원본에서 추가 표준 활동을 지원합니다. 스키마를 업데이트하지 않고 새 [&#x200B; 데이터 흐름을 만들면 새 대상 필드가 스키마에 없으므로 표준 활동을 사용하려면 &#x200B;](../marketo/marketo-namespaces.md)스키마 자동 생성 유틸리티`activities`를 사용하여 스키마를 업데이트해야 합니다. 스키마를 업데이트하지 않도록 선택하는 경우에도 새 데이터 흐름을 만들고 오류를 무시할 수 있습니다. 그러나 새 필드나 업데이트된 필드는 Experience Platform에 수집되지 않습니다.
 
 XDM 클래스 및 XDM 필드 그룹에 대한 자세한 내용은 [XDM 경험 이벤트 클래스](../../../../xdm/classes/experienceevent.md)에 대한 설명서를 참조하십시오.
 
@@ -418,4 +418,4 @@ XDM 클래스에 대한 자세한 내용은 [XDM 개별 프로필 개요](../../
 
 ## 다음 단계
 
-이 문서를 읽고 [!DNL Marketo] 데이터 세트와 해당 XDM 필드 간의 매핑 관계에 대한 insight을 얻었습니다. [ 데이터 흐름을 완료하려면  [!DNL Marketo] 원본 연결 만들기](../../../tutorials/ui/create/adobe-applications/marketo.md)2&rbrace;에 대한 자습서를 참조하십시오.[!DNL Marketo]
+이 문서를 읽고 [!DNL Marketo] 데이터 세트와 해당 XDM 필드 간의 매핑 관계에 대한 insight을 얻었습니다. [&#x200B; 데이터 흐름을 완료하려면  [!DNL Marketo] 원본 연결 만들기](../../../tutorials/ui/create/adobe-applications/marketo.md)2&rbrace;에 대한 자습서를 참조하십시오.[!DNL Marketo]

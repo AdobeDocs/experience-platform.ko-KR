@@ -55,7 +55,7 @@ Advanced Data Lifecycle Management는 [데이터 세트 만료 끝점](../api/da
 
 ### 날짜 및 데이터 세트 선택 {#select-date-and-dataset}
 
-**[!UICONTROL 요청된 작업]** 섹션에서 데이터 집합을 삭제할 날짜를 선택합니다. 날짜를 `mm/dd/yyyy` 형식으로 수동으로 입력하거나 달력 아이콘(![달력 아이콘)을 선택할 수 있습니다.대화 상자에서 날짜를 선택하려면 ](/help/images/icons/calendar.png))
+**[!UICONTROL 요청된 작업]** 섹션에서 데이터 집합을 삭제할 날짜를 선택합니다. 날짜를 `mm/dd/yyyy` 형식으로 수동으로 입력하거나 달력 아이콘(![달력 아이콘)을 선택할 수 있습니다.대화 상자에서 날짜를 선택하려면 &#x200B;](/help/images/icons/calendar.png))
 
 ![데이터 집합에 대해 선택한 만료 날짜가 강조 표시된 일정 대화 상자입니다.](../images/ui/ttl/select-date.png)
 

@@ -15,7 +15,7 @@ ht-degree: 7%
 >
 >[!UICONTROL Adobe Advertising Cloud ExperienceEvent 전체 확장] 필드 그룹은 현재 Beta 상태입니다. 설명서 및 기능은 변경될 수 있습니다.
 
-[!UICONTROL Adobe Advertising Cloud ExperienceEvent 전체 확장 기능]은(는) Adobe Advertising에서 수집하는 일반적인 지표(이전의 &quot;[[!DNL XDM ExperienceEvent] &quot;)를 캡처하는 ](../../classes/experienceevent.md)클래스[!DNL Advertising Cloud]에 대한 표준 스키마 필드 그룹입니다.
+[!UICONTROL Adobe Advertising Cloud ExperienceEvent 전체 확장 기능]은(는) Adobe Advertising에서 수집하는 일반적인 지표(이전의 &quot;[[!DNL XDM ExperienceEvent] &quot;)를 캡처하는 &#x200B;](../../classes/experienceevent.md)클래스[!DNL Advertising Cloud]에 대한 표준 스키마 필드 그룹입니다.
 
 이 문서에서는 [!DNL Advertising Cloud] 확장 필드 그룹의 구조 및 사용 사례를 설명합니다.
 
@@ -27,11 +27,11 @@ ht-degree: 7%
 
 필드 그룹은 스키마에 단일 `_experience` 개체를 제공하며, 이 개체 자체에는 단일 `adcloud` 개체가 있습니다.
 
-![ 필드 그룹의 [!DNL Advertising Cloud]최상위 필드](../../images/field-groups/advertising-full-extension/full-schema.png "필드 그룹의  [!DNL Advertising Cloud] 최상위 필드")
+![&#x200B; 필드 그룹의 [!DNL Advertising Cloud]최상위 필드](../../images/field-groups/advertising-full-extension/full-schema.png "필드 그룹의  [!DNL Advertising Cloud] 최상위 필드")
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `adDeliveryDetails` | 오브젝트 | 광고 게재 세부 정보. 이 개체의 내용에 대한 자세한 내용은 [ 개체에 대한 아래 `adDeliveryDetails`하위 섹션](#adDeliveryDetails)을 참조하세요. |
+| `adDeliveryDetails` | 오브젝트 | 광고 게재 세부 정보. 이 개체의 내용에 대한 자세한 내용은 [&#x200B; 개체에 대한 아래 `adDeliveryDetails`하위 섹션](#adDeliveryDetails)을 참조하세요. |
 | `advertisement` | 오브젝트 | 디지털 광고 세부 정보. 이 개체의 내용에 대한 자세한 내용은 광고 개체에 대한 아래 [하위 섹션](#advertisement)을 참조하세요. |
 | `campaign` | 오브젝트 | Campaign 계층 세부 정보. 이 개체의 내용에 대한 자세한 내용은 캠페인 개체에 대한 아래 [하위 섹션](#campaign-campaign)을 참조하세요. |
 | `conversionDetails` | 오브젝트 | 광고에 대한 전환 세부 정보. 이 개체의 내용에 대한 자세한 내용은 아래 [하위 섹션](#conversionDetails)을 참조하세요. |
@@ -45,7 +45,7 @@ ht-degree: 7%
 
 adDeliveryDetails 개체는 배치 웹 사이트 및 위치 식별자를 포함하여 광고가 게재된 위치와 방법에 대한 정보를 제공합니다.
 
-![ 개체와 해당 필드를 표시하는 `adDeliveryDetails`스키마 다이어그램입니다.](../../images/field-groups/advertising-full-extension/adDeliveryDetails.png)
+![&#x200B; 개체와 해당 필드를 표시하는 `adDeliveryDetails`스키마 다이어그램입니다.](../../images/field-groups/advertising-full-extension/adDeliveryDetails.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
@@ -58,7 +58,7 @@ adDeliveryDetails 개체는 배치 웹 사이트 및 위치 식별자를 포함�
 
 광고 개체는 식별자, 유형, 크리에이티브, 타기팅 및 관련 키워드와 같은 디지털 광고에 대한 세부 사항을 설명합니다.
 
-![ 개체와 해당 필드를 표시하는 `advertisement`스키마 다이어그램입니다.](../../images/field-groups/advertising-full-extension/advertisement.png)
+![&#x200B; 개체와 해당 필드를 표시하는 `advertisement`스키마 다이어그램입니다.](../../images/field-groups/advertising-full-extension/advertisement.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
@@ -81,7 +81,7 @@ adDeliveryDetails 개체는 배치 웹 사이트 및 위치 식별자를 포함�
 
 캠페인 개체는 통화 세부 정보와 함께 계정, 광고주, 배치 및 패키지 식별자를 포함한 광고 캠페인 계층을 정의합니다.
 
-![ 개체와 해당 필드를 표시하는 `campaign`스키마 다이어그램입니다.](../../images/field-groups/advertising-full-extension/campaign.png)
+![&#x200B; 개체와 해당 필드를 표시하는 `campaign`스키마 다이어그램입니다.](../../images/field-groups/advertising-full-extension/campaign.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
@@ -99,7 +99,7 @@ adDeliveryDetails 개체는 배치 웹 사이트 및 위치 식별자를 포함�
 
 conversionDetails 개체는 추적 코드, ID 및 전환 속성을 포함한 광고 전환에 대한 추적 정보를 캡처합니다.
 
-![ 개체와 해당 필드를 표시하는 `conversionDetails`스키마 다이어그램입니다.](../../images/field-groups/advertising-full-extension/conversionDetails.png "conversionDetails 필드")
+![&#x200B; 개체와 해당 필드를 표시하는 `conversionDetails`스키마 다이어그램입니다.](../../images/field-groups/advertising-full-extension/conversionDetails.png "conversionDetails 필드")
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
@@ -111,7 +111,7 @@ conversionDetails 개체는 추적 코드, ID 및 전환 속성을 포함한 광
 
 수수료 오브젝트는 Advertising DSP, 계정 및 광고주별로 분류된 미디어, 데이터 및 기타 광고 비용을 캡처합니다.
 
-![ 개체와 해당 필드를 표시하는 `fees`스키마 다이어그램입니다.](../../images/field-groups/advertising-full-extension/fees.png)
+![&#x200B; 개체와 해당 필드를 표시하는 `fees`스키마 다이어그램입니다.](../../images/field-groups/advertising-full-extension/fees.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
@@ -136,7 +136,7 @@ conversionDetails 개체는 추적 코드, ID 및 전환 속성을 포함한 광
 
 인벤토리 개체는 세션 데이터, 파트너 코드, 사이트 ID, 비용 통화 및 세분화 규칙을 포함하여 광고 인벤토리 영업 기회에 대한 세부 정보를 기록합니다.
 
-![ 개체와 해당 필드를 표시하는 `inventory`스키마 다이어그램입니다.](../../images/field-groups/advertising-full-extension/inventory.png)
+![&#x200B; 개체와 해당 필드를 표시하는 `inventory`스키마 다이어그램입니다.](../../images/field-groups/advertising-full-extension/inventory.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
@@ -154,7 +154,7 @@ conversionDetails 개체는 추적 코드, ID 및 전환 속성을 포함한 광
 
 `productDetails` 개체에는 제품 식별자, 국가, 언어, 파티션, 제목, 광고 유형 등 [!DNL Adobe Advertising Search, Social, & Commerce]의 쇼핑 광고에 포함된 제품에 대한 정보가 들어 있습니다.
 
-![ 개체와 해당 필드를 표시하는 `productDetails`스키마 다이어그램입니다.](../../images/field-groups/advertising-full-extension/productDetails.png)
+![&#x200B; 개체와 해당 필드를 표시하는 `productDetails`스키마 다이어그램입니다.](../../images/field-groups/advertising-full-extension/productDetails.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

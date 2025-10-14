@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # [!DNL Oracle DB] API를 사용하여 [!DNL Flow Service]을(를) Experience Platform에 연결
 
-[!DNL Oracle DB]API[[!DNL Flow Service] 를 사용하여 ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
+[!DNL Oracle DB]API[[!DNL Flow Service] 를 사용하여 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/) 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
 
 ## 시작
 

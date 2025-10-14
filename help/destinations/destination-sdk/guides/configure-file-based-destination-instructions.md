@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 1단계: 서버 및 파일 구성 만들기 {#create-server-file-configuration}
 
-[ 끝점을 사용하여 ](../authoring-api/destination-server/create-destination-server.md)서버 및 파일 구성을 만드는`/destinations-server`부터 시작합니다.
+[&#x200B; 끝점을 사용하여 &#x200B;](../authoring-api/destination-server/create-destination-server.md)서버 및 파일 구성을 만드는`/destinations-server`부터 시작합니다.
 
 다음은 [!DNL Amazon S3] 대상에 대한 예제 구성입니다. 구성에 사용되는 필드에 대한 자세한 내용과 다른 유형의 파일 기반 대상을 구성하려면 해당 [서버 구성](../functionality/destination-server/server-specs.md)을 참조하십시오.
 
@@ -413,7 +413,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
    * [SSH 키를 사용한 SFTP 인증](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [암호가 포함된 SFTP 인증](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* `"authenticationRule": "PLATFORM_AUTHENTICATION"`을(를) 선택한 경우 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을(를) 만들고 `authenticationId`대상 게재[ 구성의 ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
+* `"authenticationRule": "PLATFORM_AUTHENTICATION"`을(를) 선택한 경우 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을(를) 만들고 `authenticationId`대상 게재[&#x200B; 구성의 &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
 
 ## 5단계: 대상 테스트 {#test-destination}
 

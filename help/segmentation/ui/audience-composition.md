@@ -129,7 +129,7 @@ ht-degree: 16%
 
 ![제외 옵션을 선택했습니다.](../images/ui/audience-composition/add-exclude-block.png)
 
-**[!UICONTROL Exclude]** 블록이 추가되었습니다. 이 블록을 선택하면 제외에 대한 세부 정보가 오른쪽 레일에 표시됩니다. 여기에는 블록의 레이블 및 제외 유형이 포함됩니다. 대상별로 [또는 특성별로 ](#exclude-audience)을(를) 제외할 수 있습니다[.](#exclude-attribute)
+**[!UICONTROL Exclude]** 블록이 추가되었습니다. 이 블록을 선택하면 제외에 대한 세부 정보가 오른쪽 레일에 표시됩니다. 여기에는 블록의 레이블 및 제외 유형이 포함됩니다. 대상별로 [또는 특성별로 &#x200B;](#exclude-audience)을(를) 제외할 수 있습니다[.](#exclude-attribute)
 
 ![사용 가능한 두 가지 제외 유형을 강조 표시하는 제외 블록입니다.](../images/ui/audience-composition/exclude.png)
 

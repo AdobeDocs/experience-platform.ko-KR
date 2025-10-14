@@ -263,5 +263,5 @@ curl -X POST \
 
 [!DNL PostgreSQL] 데이터베이스와 Experience Platform을 연결했으므로 이제 다음 단계를 진행하여 [!DNL PostgreSQL] 데이터를 Experience Platform으로 가져올 수 있습니다. 자세한 내용은 다음 설명서를 참조하십시오.
 
-* [ [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
-* [ [!DNL Flow Service] API를 사용하여 데이터베이스 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/database-nosql.md)
+* [&#x200B; [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API를 사용하여 데이터베이스 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/database-nosql.md)

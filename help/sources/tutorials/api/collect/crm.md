@@ -243,7 +243,7 @@ curl -X POST \
 
 ## 매핑 {#mapping}
 
-그런 다음 소스 데이터를 타겟 데이터 세트가 준수하는 타겟 스키마에 매핑합니다. 매핑을 만들려면 `mappingSets`API[[!DNL Data Prep] 의 ](https://developer.adobe.com/experience-platform-apis/references/data-prep/) 끝점에 대한 POST 요청을 만듭니다. 대상 XDM 스키마 ID와 만들려는 매핑 세트에 대한 세부 사항을 포함합니다.
+그런 다음 소스 데이터를 타겟 데이터 세트가 준수하는 타겟 스키마에 매핑합니다. 매핑을 만들려면 `mappingSets`API[[!DNL Data Prep] 의 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-prep/) 끝점에 대한 POST 요청을 만듭니다. 대상 XDM 스키마 ID와 만들려는 매핑 세트에 대한 세부 사항을 포함합니다.
 
 **API 형식**
 

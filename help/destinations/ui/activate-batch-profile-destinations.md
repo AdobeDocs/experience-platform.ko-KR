@@ -540,7 +540,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 >[!IMPORTANT]
 > 
->카탈로그의 모든 클라우드 저장소 대상은 이 섹션에 설명된 [[!UICONTROL 특성 선택] 단계를 대체하는 개선된 ](#mapping)매핑&#x200B;**[!UICONTROL 단계]**&#x200B;를 볼 수 있습니다.
+>카탈로그의 모든 클라우드 저장소 대상은 이 섹션에 설명된 [[!UICONTROL 특성 선택] 단계를 대체하는 개선된 &#x200B;](#mapping)매핑&#x200B;**[!UICONTROL 단계]**&#x200B;를 볼 수 있습니다.
 >
 >이 **[!UICONTROL 특성 선택]** 단계는 Adobe Campaign, Oracle Responsys, Oracle Eloqua 및 Salesforce Marketing Cloud 이메일 마케팅 대상에 대해 계속 표시됩니다.
 

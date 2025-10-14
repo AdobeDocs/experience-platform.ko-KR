@@ -24,7 +24,7 @@ ht-degree: 9%
 
 이전에는 개별 이벤트에 여러 시간 제한 규칙이 첨부되어 있을 수 있었습니다. 최근 업데이트로 인해 규칙에 시간 제약 조건을 추가하려고 하면 이제 **오류**&#x200B;이(가) 발생합니다.
 
-![규칙 수준 시간 제한이 강조 표시되어 있습니다. 이후에 발생하는 오류도 강조 표시됩니다. ](../images/ui/segment-refactoring/rule-time-constraint.png)
+![규칙 수준 시간 제한이 강조 표시되어 있습니다. 이후에 발생하는 오류도 강조 표시됩니다. &#x200B;](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 이제 캔버스 수준 또는 카드 수준에서만 시간 제한을 적용할 수 있습니다.
 

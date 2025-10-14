@@ -67,7 +67,7 @@ ht-degree: 0%
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| `SasURI` | 계정을 연결하는 데 대체 인증 유형으로 사용할 수 있는 공유 액세스 서명 URI입니다. SAS URI 패턴: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}`. 자세한 내용은 [!DNL Azure]공유 액세스 서명 URI[에서 이 ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication) 문서를 참조하십시오. |
+| `SasURI` | 계정을 연결하는 데 대체 인증 유형으로 사용할 수 있는 공유 액세스 서명 URI입니다. SAS URI 패턴: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}`. 자세한 내용은 [!DNL Azure]공유 액세스 서명 URI[에서 이 &#x200B;](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication) 문서를 참조하십시오. |
 | `container` | 데이터 파일이 저장된 [!DNL Azure Blob Storage] 컨테이너의 이름입니다. 컨테이너는 파일 시스템의 디렉토리와 유사하게 블롭 세트를 구성합니다. |
 | `folderPath` | 파일이 있는 지정된 컨테이너 내의 경로입니다. 컨테이너 내부의 선택적 하위 디렉터리 경로(가상 폴더)입니다. 비워 두면 컨테이너의 루트가 사용됩니다. |
 | `connectionSpec.id` | 연결 사양 ID는 기본 및 소스 연결 생성과 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL Azure Blob Storage]의 연결 사양 ID는 `4c10e202-c428-4796-9208-5f1f5732b1cf`입니다. **참고**: 이 자격 증명은 [!DNL Flow Service] API를 통해 연결할 때만 필요합니다. |

@@ -148,7 +148,7 @@ Edge Network에 요청을 전송하면 데이터 스트림 ID가 서버측 구�
 
 >[!IMPORTANT]
 >
->코드 조각 사전 숨김을 사용하는 경우 Adobe에서는 [!DNL CSS]사전 숨김 스타일[에서 사용하는 규칙과 동일한 ](#prehiding-style) 규칙을 사용하는 것이 좋습니다.
+>코드 조각 사전 숨김을 사용하는 경우 Adobe에서는 [!DNL CSS]사전 숨김 스타일[에서 사용하는 규칙과 동일한 &#x200B;](#prehiding-style) 규칙을 사용하는 것이 좋습니다.
 
 ## 데이터 수집 설정 구성 {#data-collection}
 

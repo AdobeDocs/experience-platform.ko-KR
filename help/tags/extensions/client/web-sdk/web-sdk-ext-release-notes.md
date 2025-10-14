@@ -226,7 +226,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
 **새로운 기능**
 
-- 데이터 스트림 ID[의 명령당 ](../../../../datastreams/overrides.md)재정의에 대한 지원을 추가했습니다.
+- 데이터 스트림 ID[의 명령당 &#x200B;](../../../../datastreams/overrides.md)재정의에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
@@ -386,7 +386,7 @@ Adobe Experience Platform Web SDK 라이브러리의 버전 2.5.0을 포함합�
 Adobe Experience Platform Web SDK 라이브러리의 버전 2.4.0을 포함합니다.
 
 - 이벤트 작업 UI 보내기에 [&quot;문서 언로딩&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) 확인란이 추가되었습니다.
-- `out`기본 동의를 구성[할 때 ](/help/web-sdk/commands/configure/defaultconsent.md) 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
+- `out`기본 동의를 구성[할 때 &#x200B;](/help/web-sdk/commands/configure/defaultconsent.md) 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
 - 기본 동의 필드에 도구 설명을 추가했습니다.
 - [`setConsent`](/help/web-sdk/commands/setconsent.md) 명령을 사용할 때 Adobe의 Consent 2.0 표준에 대한 지원이 추가되었습니다.
 - 사용자의 액세스 토큰이 잘못되었거나 잘못 제공된 경우 XDM 개체 데이터 요소 UI에 더 나은 오류가 표시됩니다.

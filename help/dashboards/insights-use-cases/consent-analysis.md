@@ -130,7 +130,7 @@ Adobe은 프로필, 대상 및 대상 대시보드에서 자동으로 사용할 
   ![추가 아이콘과 드롭다운 메뉴가 강조 표시된 위젯 작성기입니다.](../images/standard-dashboards/attributes-dropdown.png)
 - [!UICONTROL 특성]에서 `[!UICONTROL count_of_profiles]`을(를) 검색한 다음 + 아이콘을 사용하여 드롭다운 메뉴에서 Y축에 `[!UICONTROL count_of_profiles]` 특성을 추가합니다.
 - [!UICONTROL Y축] 필드에서 `...`(줄임표) 아이콘을 선택한 다음 드롭다운 메뉴에서 [!UICONTROL SUM] 집계 함수를 선택합니다.
-  ![데이터 모델, 테이블, Y축 드롭다운 메뉴 및 SUM 기능이 강조 표시된 위젯 작성기 동의 트렌드 위젯입니다. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
+  ![데이터 모델, 테이블, Y축 드롭다운 메뉴 및 SUM 기능이 강조 표시된 위젯 작성기 동의 트렌드 위젯입니다. &#x200B;](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - [!UICONTROL 표시] 드롭다운 메뉴를 선택하고 차트 종류를 [!UICONTROL 줄]&#x200B;(으)로 변경하십시오.
 - [!UICONTROL 특성]에서 `[!UICONTROL segment_name]`을(를) 검색한 다음 + 아이콘을 사용하여 드롭다운 메뉴에서 `segment_name`을(를) [!UICONTROL 필터]&#x200B;(으)로 추가합니다. [!UICONTROL 필터: Segment_name] 대화 상자가 나타납니다. 동의와 관련하여 이전에 만든 대상자를 선택합니다. 이 예제에서는 **[!UICONTROL 통화에 동의한 사용자]**, **[!UICONTROL SMS에 동의한 사용자]**, **[!UICONTROL 전자 메일에 동의한 사용자]**, **[!UICONTROL 적용]**&#x200B;을 선택합니다.
 - `[!UICONTROL segment_name]`에 대해 [!UICONTROL 특성]을(를) 검색한 다음 + 아이콘을 선택하여 드롭다운 메뉴에서 `segment_name`을(를) [!UICONTROL 색상]&#x200B;(으)로 추가합니다.

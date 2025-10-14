@@ -45,11 +45,11 @@ Experience Platform에서 Salesforce 계정으로 데이터를 내보내려면 [
 
 #### [!DNL Salesforce] 내에서 연결된 앱 구성 {#prerequisites-connected-app}
 
-먼저 [!DNL Salesforce] 계정 내에 [[!DNL Salesforce] 연결된 앱](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&amp;language=en_US&amp;r=https%3A%2F%2Fhelp.salesforce.com%2F&amp;type=5)이 없는 경우 구성해야 합니다. [!DNL Salesforce CRM]은(는) 연결된 앱을 활용하여 [!DNL Salesforce]에 연결합니다.
+먼저 [!DNL Salesforce] 계정 내에 [[!DNL Salesforce] 연결된 앱](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5)이 없는 경우 구성해야 합니다. [!DNL Salesforce CRM]은(는) 연결된 앱을 활용하여 [!DNL Salesforce]에 연결합니다.
 
-그런 다음 [!DNL Salesforce connected app]에 대해 [!DNL OAuth Settings for API Integration]을(를) 사용하도록 설정합니다. 자세한 내용은 [[!DNL Salesforce]](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&amp;type=5&amp;language=en_US) 설명서를 참조하세요.
+그런 다음 [!DNL Salesforce connected app]에 대해 [!DNL OAuth Settings for API Integration]을(를) 사용하도록 설정합니다. 자세한 내용은 [[!DNL Salesforce]](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) 설명서를 참조하세요.
 
-또한 [!DNL Salesforce connected app]에 대해 아래에 언급된 [범위](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&amp;type=5&amp;language=en_US)를 선택해야 합니다.
+또한 [!DNL Salesforce connected app]에 대해 아래에 언급된 [범위](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US)를 선택해야 합니다.
 
 * ``chatter_api``
 * ``lightning``
@@ -62,11 +62,11 @@ Experience Platform에서 Salesforce 계정으로 데이터를 내보내려면 [
 * ``refresh_token``
 * ``offline_access``
 
-마지막으로 [!DNL Salesforce] 계정 내에서 `password` 부여가 활성화되었는지 확인하십시오. 지침이 필요한 경우 [!DNL Salesforce] [특별 시나리오에 대한 OAuth 2.0 사용자 이름 암호 흐름](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&amp;type=5) 설명서를 참조하십시오.
+마지막으로 [!DNL Salesforce] 계정 내에서 `password` 부여가 활성화되었는지 확인하십시오. 지침이 필요한 경우 [!DNL Salesforce] [특별 시나리오에 대한 OAuth 2.0 사용자 이름 암호 흐름](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&type=5) 설명서를 참조하십시오.
 
 >[!IMPORTANT]
 >
->[!DNL Salesforce] 계정 관리자가 신뢰할 수 있는 IP 범위에 대한 액세스를 제한한 경우 해당 관리자에게 연락하여 [Experience Platform IP](/help/destinations/catalog/streaming/ip-address-allow-list.md)를 허용 목록에추가된으로 받아야 합니다. 추가 지침이 필요한 경우 [!DNL Salesforce] [연결된 앱에 대한 신뢰할 수 있는 IP 범위에 대한 액세스 제한](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) 설명서를 참조하십시오.
+>[!DNL Salesforce] 계정 관리자가 신뢰할 수 있는 IP 범위에 대한 액세스를 제한한 경우 해당 관리자에게 연락하여 [Experience Platform IP](/help/destinations/catalog/streaming/ip-address-allow-list.md)를 허용 목록에추가된으로 받아야 합니다. 추가 지침이 필요한 경우 [!DNL Salesforce] [연결된 앱에 대한 신뢰할 수 있는 IP 범위에 대한 액세스 제한](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) 설명서를 참조하십시오.
 
 #### [!DNL Salesforce] 내에 사용자 지정 필드 만들기 {#prerequisites-custom-field}
 
@@ -74,7 +74,7 @@ Experience Platform에서 Salesforce 계정으로 데이터를 내보내려면 [
 
 [!DNL Salesforce CRM]에서는 Experience Platform에서 들어오는 대상을 올바르게 읽고 해석하고 [!DNL Salesforce] 내에서 대상 상태를 업데이트하려면 이 값이 필요합니다. 대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)에 대한 Experience Platform 설명서를 참조하십시오.
 
-Experience Platform에서 [!DNL Salesforce CRM]&#x200B;(으)로 활성화하는 각 대상에 대해 [!DNL Salesforce] 내에 `Text Area (Long)` 유형의 사용자 지정 필드를 만들어야 합니다. 비즈니스 요구 사항에 따라 256~131,072자 사이의 모든 크기의 필드 문자 길이를 정의할 수 있습니다. 사용자 지정 필드 형식에 대한 자세한 내용은 [!DNL Salesforce] [사용자 지정 필드 형식](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5) 설명서 페이지를 참조하세요. 필드 만들기에 대한 지원이 필요한 경우 [!DNL Salesforce] 설명서를 참조하여 [사용자 지정 필드 만들기](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US)를 참조하십시오.
+Experience Platform에서 [!DNL Salesforce CRM]&#x200B;(으)로 활성화하는 각 대상에 대해 [!DNL Salesforce] 내에 `Text Area (Long)` 유형의 사용자 지정 필드를 만들어야 합니다. 비즈니스 요구 사항에 따라 256~131,072자 사이의 모든 크기의 필드 문자 길이를 정의할 수 있습니다. 사용자 지정 필드 형식에 대한 자세한 내용은 [!DNL Salesforce] [사용자 지정 필드 형식](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&type=5) 설명서 페이지를 참조하세요. 필드 만들기에 대한 지원이 필요한 경우 [!DNL Salesforce] 설명서를 참조하여 [사용자 지정 필드 만들기](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US)를 참조하십시오.
 
 >[!IMPORTANT]
 >
@@ -94,7 +94,7 @@ Experience Platform에서 [!DNL Salesforce CRM]&#x200B;(으)로 활성화하는 
 
 >[!NOTE]
 >
->* Salesforce의 개체는 25개의 외부 필드로 제한됩니다. [사용자 지정 필드 특성](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5)을 참조하십시오.
+>* Salesforce의 개체는 25개의 외부 필드로 제한됩니다. [사용자 지정 필드 특성](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5)을 참조하십시오.
 >* 이 제한은 언제든지 최대 25개의 Experience Platform 대상 멤버십을 활성화할 수 있음을 의미합니다.
 >* Salesforce 내에서 이 제한에 도달한 경우 새 **[!UICONTROL 매핑 ID]**&#x200B;을(를) 사용하기 전에 Experience Platform 내의 이전 대상에 대해 대상 상태를 저장하는 데 사용된 Salesforce에서 사용자 지정 특성을 제거해야 합니다.
 
@@ -106,16 +106,16 @@ Experience Platform에서 [!DNL Salesforce CRM]&#x200B;(으)로 활성화하는 
 | --- | --- | --- |
 | `Username` | [!DNL Salesforce] 계정 사용자 이름입니다. | |
 | `Password` | [!DNL Salesforce] 계정 암호입니다. | |
-| `Security Token` | [대상에 대한 인증](#authenticate)을(를) 수행할 때 **[!UICONTROL 암호]**(으)로 사용할 연결된 문자열을 만들기 위해 나중에 [!DNL Salesforce] 암호 끝에 추가할 [!DNL Salesforce] 보안 토큰입니다.<br> 보안 토큰이 없는 경우 [!DNL Salesforce] 인터페이스에서 다시 생성하는 방법에 대해 알아보려면 [!DNL Salesforce] 설명서를 참조하여 [보안 토큰을 다시 설정](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&amp;type=5)하십시오. |  |
-| `Custom Domain` | [!DNL Salesforce] 도메인 접두사입니다. <br> [!DNL Salesforce] 인터페이스에서 이 값을 가져오는 방법을 알아보려면 [[!DNL Salesforce] 설명서](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5)를 참조하세요. | [!DNL Salesforce] 도메인이 <br>인 경우 *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> 값으로 `d5i000000isb4eak-dev-ed`이(가) 필요합니다. |
-| `Client ID` | Salesforce `Consumer Key`. <br> [!DNL Salesforce] 인터페이스에서 이 값을 가져오는 방법에 대해 알아보려면 [[!DNL Salesforce] 설명서](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5)를 참조하세요. | |
-| `Client Secret` | Salesforce `Consumer Secret`. <br> [!DNL Salesforce] 인터페이스에서 이 값을 가져오는 방법에 대해 알아보려면 [[!DNL Salesforce] 설명서](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5)를 참조하세요. | |
+| `Security Token` | [대상에 대한 인증](#authenticate)을(를) 수행할 때 **[!UICONTROL 암호]**(으)로 사용할 연결된 문자열을 만들기 위해 나중에 [!DNL Salesforce] 암호 끝에 추가할 [!DNL Salesforce] 보안 토큰입니다.<br> 보안 토큰이 없는 경우 [!DNL Salesforce] 인터페이스에서 다시 생성하는 방법에 대해 알아보려면 [!DNL Salesforce] 설명서를 참조하여 [보안 토큰을 다시 설정](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&type=5)하십시오. |  |
+| `Custom Domain` | [!DNL Salesforce] 도메인 접두사입니다. <br> [!DNL Salesforce] 인터페이스에서 이 값을 가져오는 방법을 알아보려면 [[!DNL Salesforce] 설명서](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5)를 참조하세요. | [!DNL Salesforce] 도메인이 <br>인 경우 *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> 값으로 `d5i000000isb4eak-dev-ed`이(가) 필요합니다. |
+| `Client ID` | Salesforce `Consumer Key`. <br> [!DNL Salesforce] 인터페이스에서 이 값을 가져오는 방법에 대해 알아보려면 [[!DNL Salesforce] 설명서](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5)를 참조하세요. | |
+| `Client Secret` | Salesforce `Consumer Secret`. <br> [!DNL Salesforce] 인터페이스에서 이 값을 가져오는 방법에 대해 알아보려면 [[!DNL Salesforce] 설명서](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5)를 참조하세요. | |
 
 ### 가드레일 {#guardrails}
 
 [!DNL Salesforce]은(는) 요청, 속도 및 시간 제한을 적용하여 트랜잭션 로드 균형을 조정합니다. 자세한 내용은 [API 요청 제한 및 할당](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm)을 참조하세요.
 
-[!DNL Salesforce] 계정 관리자가 IP 제한을 적용한 경우 [!DNL Salesforce] 계정의 신뢰할 수 있는 IP 범위에 [Experience Platform IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md)를 추가해야 합니다. 추가 지침이 필요한 경우 [!DNL Salesforce] [연결된 앱에 대한 신뢰할 수 있는 IP 범위에 대한 액세스 제한](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) 설명서를 참조하십시오.
+[!DNL Salesforce] 계정 관리자가 IP 제한을 적용한 경우 [!DNL Salesforce] 계정의 신뢰할 수 있는 IP 범위에 [Experience Platform IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md)를 추가해야 합니다. 추가 지침이 필요한 경우 [!DNL Salesforce] [연결된 앱에 대한 신뢰할 수 있는 IP 범위에 대한 액세스 제한](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) 설명서를 참조하십시오.
 
 >[!IMPORTANT]
 >
@@ -198,14 +198,14 @@ Experience Platform에서 [!DNL Salesforce CRM]&#x200B;(으)로 활성화하는 
 
 **[!UICONTROL 대상 필드]**&#x200B;에 지정된 특성은 요청 본문을 형성하므로 특성 매핑 표에 설명된 대로 정확히 이름을 지정해야 합니다.
 
-**[!UICONTROL Source 필드]**&#x200B;에 지정된 특성은 이러한 제한을 따르지 않습니다. 필요에 따라 매핑할 수 있지만 [[!DNL Salesforce] 설명서](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5)에 따라 입력 데이터 형식이 유효한지 확인합니다. 입력 데이터가 올바르지 않으면 [!DNL Salesforce]에 대한 업데이트 호출이 실패하고 연락처/잠재 고객이 업데이트되지 않습니다.
+**[!UICONTROL Source 필드]**&#x200B;에 지정된 특성은 이러한 제한을 따르지 않습니다. 필요에 따라 매핑할 수 있지만 [[!DNL Salesforce] 설명서](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5)에 따라 입력 데이터 형식이 유효한지 확인합니다. 입력 데이터가 올바르지 않으면 [!DNL Salesforce]에 대한 업데이트 호출이 실패하고 연락처/잠재 고객이 업데이트되지 않습니다.
 
 XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑하려면 다음 단계를 따르십시오.
 
 1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택하면 화면에 새 매핑 행이 표시됩니다.
    ![새 매핑 추가를 위한 Experience Platform UI 스크린샷 예](../../assets/catalog/crm/salesforce/add-new-mapping.png)
 1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 XDM 특성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을 선택하고 ID를 선택합니다.
-1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 ID를 선택하거나 **[!UICONTROL 사용자 지정 특성 선택]** 범주를 선택하고 필요에 따라 특성을 선택하거나 **[!UICONTROL 특성 이름]** 필드를 사용하여 특성을 정의합니다. 지원되는 특성에 대한 지침은 [[!DNL Salesforce CRM] 설명서](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5)를 참조하세요.
+1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 ID를 선택하거나 **[!UICONTROL 사용자 지정 특성 선택]** 범주를 선택하고 필요에 따라 특성을 선택하거나 **[!UICONTROL 특성 이름]** 필드를 사용하여 특성을 정의합니다. 지원되는 특성에 대한 지침은 [[!DNL Salesforce CRM] 설명서](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5)를 참조하세요.
    * XDM 프로필 스키마와 [!DNL (API) Salesforce CRM] 사이에 다음 매핑을 추가하려면 다음 단계를 반복합니다.
 
    **연락처 작업**
@@ -321,7 +321,7 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
    * 이 오류를 수정하려면 활성화 워크플로에서 [!DNL Salesforce CRM] 대상에 제공한 **[!UICONTROL 매핑 ID]**&#x200B;이(가) [!DNL Salesforce]에서 만든 사용자 지정 필드 형식의 값과 정확히 일치하는지 확인하십시오. 지침은  [!DNL Salesforce][&#128279;](#prerequisites-custom-field) 섹션 내에서 사용자 지정 필드 만들기를 참조하세요.
 
 * 세그먼트를 활성화할 때 다음 오류 메시지가 표시될 수 있습니다. `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
-   * 이 오류를 해결하려면 [!DNL Salesforce] 계정 관리자에게 문의하여 [!DNL Salesforce] 계정의 신뢰할 수 있는 IP 범위에 [Experience Platform IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md)를 추가하십시오. 추가 지침이 필요한 경우 [!DNL Salesforce] [연결된 앱에 대한 신뢰할 수 있는 IP 범위에 대한 액세스 제한](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) 설명서를 참조하십시오.
+   * 이 오류를 해결하려면 [!DNL Salesforce] 계정 관리자에게 문의하여 [!DNL Salesforce] 계정의 신뢰할 수 있는 IP 범위에 [Experience Platform IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md)를 추가하십시오. 추가 지침이 필요한 경우 [!DNL Salesforce] [연결된 앱에 대한 신뢰할 수 있는 IP 범위에 대한 액세스 제한](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) 설명서를 참조하십시오.
 
 ## 추가 리소스 {#additional-resources}
 

@@ -69,7 +69,7 @@ ht-degree: 0%
 >
 >초기 가져오기 이후 발생한 데이터 변경 사항을 보려면 전체 데이터 세트를 다시 가져와서 [!DNL Power BI] 내의 데이터를 새로 고쳐야 합니다.
 
-테이블을 가져오려면 서버 및 데이터베이스 세부 정보 [을(를) 위에서 설명한 대로 ](#connect-power-bi)입력하고 **[!DNL Import]** [!DNL Data Connectivity mode], **[!DNL OK]**&#x200B;을(를) 선택하십시오. 사용 가능한 모든 테이블 목록이 표시된 [!DNL Navigator] 대화 상자가 나타납니다. 미리 보려는 테이블을 선택한 다음 **[!DNL Load]**&#x200B;을(를) 선택하여 데이터 집합을 Power BI으로 가져옵니다. 이제 테이블을 [!DNL Power BI]&#x200B;(으)로 가져왔습니다.
+테이블을 가져오려면 서버 및 데이터베이스 세부 정보 [을(를) 위에서 설명한 대로 &#x200B;](#connect-power-bi)입력하고 **[!DNL Import]** [!DNL Data Connectivity mode], **[!DNL OK]**&#x200B;을(를) 선택하십시오. 사용 가능한 모든 테이블 목록이 표시된 [!DNL Navigator] 대화 상자가 나타납니다. 미리 보려는 테이블을 선택한 다음 **[!DNL Load]**&#x200B;을(를) 선택하여 데이터 집합을 Power BI으로 가져옵니다. 이제 테이블을 [!DNL Power BI]&#x200B;(으)로 가져왔습니다.
 
 [PowerBi Desktop의 데이터에 연결하는 방법에 대한 일반 정보](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-quickstart-connect-to-data#connect-to-data) 앱은 공식 문서에서 확인할 수 있습니다.
 

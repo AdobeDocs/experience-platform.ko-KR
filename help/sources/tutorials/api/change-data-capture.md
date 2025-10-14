@@ -86,7 +86,7 @@ Data Mirror은 모델 기반 스키마를 사용하여 변경 데이터 캡처�
 
 파일 기반 원본([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage] 및 [!DNL SFTP])의 경우 파일에 `_change_request_type` 열을 포함하십시오.
 
-위의 `_change_request_type`컨트롤 열 처리[ 섹션에 정의된 ](#control-column-handling) 값을 사용하십시오.
+위의 `_change_request_type`컨트롤 열 처리[&#x200B; 섹션에 정의된 &#x200B;](#control-column-handling) 값을 사용하십시오.
 
 >[!IMPORTANT]
 >
@@ -109,7 +109,7 @@ Data Mirror은 모델 기반 스키마를 사용하여 변경 데이터 캡처�
 
 2. [클라우드 저장소에 대한 원본 연결을 만듭니다](../api/collect/cloud-storage.md#create-a-source-connection).
 
-모든 클라우드 저장소 원본은 위의 `_change_request_type`파일 기반 원본[ 섹션에서 설명한 것과 동일한 ](#file-based-sources) 열 형식을 사용합니다.
+모든 클라우드 저장소 원본은 위의 `_change_request_type`파일 기반 원본[&#x200B; 섹션에서 설명한 것과 동일한 &#x200B;](#file-based-sources) 열 형식을 사용합니다.
 
 ## 데이터베이스 소스 {#database-sources}
 
@@ -165,7 +165,7 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 [!DNL Google BigQuery] 원본 연결에서 변경 기록을 사용하려면 [!DNL Google BigQuery] 콘솔에서 [!DNL Google Cloud] 페이지로 이동하여 `enable_change_history`을(를) `TRUE`(으)로 설정하십시오. 이 속성을 사용하면 데이터 테이블에 대한 변경 내역을 사용할 수 있습니다.
 
-자세한 내용은 [ [!DNL GoogleSQL]의 ](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)데이터 정의 언어 구문에 대한 안내서를 참조하십시오.
+자세한 내용은 [&#x200B; [!DNL GoogleSQL]의 &#x200B;](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)데이터 정의 언어 구문에 대한 안내서를 참조하십시오.
 
 [!DNL Google BigQuery] 소스 연결에 변경 데이터 캡처를 활성화하는 방법에 대한 단계는 다음 설명서를 참조하십시오.
 

@@ -17,7 +17,7 @@ ht-degree: 66%
 
 확장의 기본 디렉터리에 이름이 `extension.json`인 파일을 생성해야 합니다. 여기에는 Adobe Experience Platform에서 확장을 적절하게 사용할 수 있도록 하는 중요한 세부 정보가 포함되어 있습니다. 일부 컨텐츠는 [npm의 `package.json`](https://docs.npmjs.com/files/package.json) 방식을 따라 형성됩니다.
 
-예제 `extension.json`은 [Hello World 확장 ](https://github.com/adobe/reactor-helloworld-extension/blob/master/extension.json) GitHub 리포지토리에서 찾을 수 있습니다.
+예제 `extension.json`은 [Hello World 확장 &#x200B;](https://github.com/adobe/reactor-helloworld-extension/blob/master/extension.json) GitHub 리포지토리에서 찾을 수 있습니다.
 
 확장 매니페스트는 다음과 같이 구성되어야 합니다.
 

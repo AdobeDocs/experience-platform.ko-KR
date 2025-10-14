@@ -88,7 +88,7 @@ Experience Platform으로 데이터를 수집하기 전에 매핑 인터페이�
 
 >[!TIP]
 >
->데이터를 매핑할 준비가 되면 [ 및 ](../../../../images/tutorials/create/capillary/mappings.zip)데이터 준비로 파일 가져오기[!DNL Capillary]에 대한 [이벤트 및 프로필 매핑](../../../../../data-prep/ui/mapping.md#import-mapping)을 다운로드할 수 있습니다.
+>데이터를 매핑할 준비가 되면 [&#x200B; 및 &#x200B;](../../../../images/tutorials/create/capillary/mappings.zip)데이터 준비로 파일 가져오기[!DNL Capillary]에 대한 [이벤트 및 프로필 매핑](../../../../../data-prep/ui/mapping.md#import-mapping)을 다운로드할 수 있습니다.
 
 ![모세관에 대한 매핑 인터페이스입니다.](../../../../images/tutorials/create/capillary/mappings.png)
 

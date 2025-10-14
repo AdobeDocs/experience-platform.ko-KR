@@ -52,7 +52,7 @@ Experience Platform에서 받은 파일을 최적으로 읽고 해석하기 위�
 
 >[!NOTE]
 >
->CSV 옵션은 CSV 파일을 내보낼 때만 지원됩니다. 새 대상 서버를 설정할 때 `fileConfigurations` 섹션이 필수가 아닙니다. CSV 옵션에 대한 API 호출에 값을 전달하지 않으면 [아래 ](#file-formatting-reference-and-example)의 참조 표에 있는 기본 값이 사용됩니다.
+>CSV 옵션은 CSV 파일을 내보낼 때만 지원됩니다. 새 대상 서버를 설정할 때 `fileConfigurations` 섹션이 필수가 아닙니다. CSV 옵션에 대한 API 호출에 값을 전달하지 않으면 [아래 &#x200B;](#file-formatting-reference-and-example)의 참조 표에 있는 기본 값이 사용됩니다.
 
 
 ## 사용자가 구성 옵션을 선택할 수 없는 CSV 옵션 {#file-configuration-templating-none}

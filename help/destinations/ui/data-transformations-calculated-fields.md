@@ -62,7 +62,7 @@ ht-degree: 8%
 
 ![아직 함수가 선택되지 않은 계산된 필드 기능의 모달 창.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
-예를 들어 아래 표시된 대로 `array_to_string` 필드에서 `organizations` 함수를 사용하여 조직 배열을 CSV 파일의 문자열로 내보냅니다. [이 예제와 다른 예제에 대한 자세한 내용은 아래에서 ](#array-to-string-function-export-arrays)을(를) 참조하십시오.
+예를 들어 아래 표시된 대로 `array_to_string` 필드에서 `organizations` 함수를 사용하여 조직 배열을 CSV 파일의 문자열로 내보냅니다. [이 예제와 다른 예제에 대한 자세한 내용은 아래에서 &#x200B;](#array-to-string-function-export-arrays)을(를) 참조하십시오.
 
 ![배열-문자열 함수가 선택된 계산된 필드 기능의 모달 창입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 

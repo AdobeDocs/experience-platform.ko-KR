@@ -53,7 +53,7 @@ Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x2
 
 그런 다음 *[!UICONTROL 데이터 흐름 세부 정보]* 인터페이스를 사용하여 데이터 흐름에 대한 **이름** 및 **선택적 설명**&#x200B;을 제공합니다. 또한 사용할 **[!UICONTROL Target 데이터 세트]**&#x200B;를 선택하십시오. 새 데이터 세트를 만들거나 기존 데이터 세트를 사용할 수 있습니다.
 
-![데이터 흐름 세부 정보 인터페이스입니다. ](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
+![데이터 흐름 세부 정보 인터페이스입니다. &#x200B;](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
 
 ### 매핑
 

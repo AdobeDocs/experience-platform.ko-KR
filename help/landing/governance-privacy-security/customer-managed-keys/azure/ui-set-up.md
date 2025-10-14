@@ -28,7 +28,7 @@ CMK를 사용하려면 다음 설정으로 [[!DNL Azure] Key Vault를 구성](./
 * [제거 보호 사용](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [일시 삭제 사용](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
 * [역할 기반 액세스 제어를 사용하여 액세스 구성 [!DNL Azure] 2&rbrace;](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
-* [ [!DNL Azure] Key Vault 구성](./azure-key-vault-config.md)
+* [&#x200B; [!DNL Azure] Key Vault 구성](./azure-key-vault-config.md)
 
 ## CMK 앱 설정 {#register-app}
 
@@ -46,7 +46,7 @@ CMK를 사용하려면 다음 설정으로 [[!DNL Azure] Key Vault를 구성](./
 
 등록 프로세스를 시작하려면 [!UICONTROL 고객 관리 키 구성] 보기에서 조직의 응용 프로그램 인증 URL을 복사하여 [!DNL Azure] 환경 **[!DNL Key Vault Crypto Service Encryption User]**&#x200B;에 붙여 넣으십시오. [역할을 할당](#assign-to-role)하는 방법에 대한 자세한 내용은 다음 섹션에 나와 있습니다.
 
-복사 아이콘(![복사 아이콘)을 선택합니다.[!UICONTROL 응용 프로그램 인증 url]의 ](../../../../images/icons/copy.png)).
+복사 아이콘(![복사 아이콘)을 선택합니다.[!UICONTROL 응용 프로그램 인증 url]의 &#x200B;](../../../../images/icons/copy.png)).
 
 ![응용 프로그램 인증 url 섹션이 강조 표시된 [!UICONTROL 고객 관리 키 구성] 보기.](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 

@@ -27,7 +27,7 @@ ht-degree: 6%
 
 Adobe과 대상 플랫폼 사이에 글로벌 인증 시스템이 있고 [!DNL Experience Platform] 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우에만 이 API 끝점을 사용하여 자격 증명 구성을 만드십시오. 이 경우 `/credentials` API 끝점을 사용하여 자격 증명 구성을 만들어야 합니다.
 
-글로벌 인증 시스템을 사용하는 경우 `"authenticationRule":"PLATFORM_AUTHENTICATION"`새 대상 구성을 만드는 경우[에 ](../functionality/destination-configuration/destination-delivery.md)대상 게재[ 구성에서 ](../authoring-api/destination-configuration/create-destination-configuration.md)을(를) 설정해야 합니다. 그런 다음 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을 만들고 `authenticationId`대상 게재[ 구성의 ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
+글로벌 인증 시스템을 사용하는 경우 `"authenticationRule":"PLATFORM_AUTHENTICATION"`새 대상 구성을 만드는 경우[에 &#x200B;](../functionality/destination-configuration/destination-delivery.md)대상 게재[&#x200B; 구성에서 &#x200B;](../authoring-api/destination-configuration/create-destination-configuration.md)을(를) 설정해야 합니다. 그런 다음 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을 만들고 `authenticationId`대상 게재[&#x200B; 구성의 &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
 
 >[!IMPORTANT]
 >

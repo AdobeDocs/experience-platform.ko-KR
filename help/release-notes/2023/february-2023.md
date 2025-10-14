@@ -86,7 +86,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 | --- | --- | --- |
 | 필드 그룹 | [!UICONTROL 빈도 상한 설정 제한] | [반복 및 사용자 정의 이벤트를 지원](https://github.com/adobe/xdm/pull/1641/files)하도록 [!UICONTROL 빈도 상한 설정 제한] 필드 그룹이 업데이트되었습니다 |
 | 데이터 유형 | [!UICONTROL 웹 레퍼러] | `xdm:linkName` 및 `xdm:linkRegion`[&#128279;](https://github.com/adobe/xdm/pull/1666/files)을 포함하도록 웹 레퍼러 속성이 업데이트되었습니다. 각각 이전 페이지에서 선택한 HTML 요소의 이름 및 영역입니다. |
-| 필드 그룹 | [!UICONTROL Adobe CJM ExperienceEvent - 메시지 상호 작용 세부 사항] | [[!UICONTROL 추적기 URL] 필드가 [!UICONTROL Adobe CJM ExperienceEvent]에 ](https://github.com/adobe/xdm/pull/1665/files)추가되었습니다. 이 추적기는 사용자가 선택한 URL을 제공합니다. |
+| 필드 그룹 | [!UICONTROL Adobe CJM ExperienceEvent - 메시지 상호 작용 세부 사항] | [[!UICONTROL 추적기 URL] 필드가 [!UICONTROL Adobe CJM ExperienceEvent]에 &#x200B;](https://github.com/adobe/xdm/pull/1665/files)추가되었습니다. 이 추적기는 사용자가 선택한 URL을 제공합니다. |
 | 필드 그룹 | [!UICONTROL Adobe CJM ExperienceEvent - 메시지 상호 작용 세부 사항] | [&#128279;](https://github.com/adobe/xdm/pull/1668/files)URL [!UICONTROL 추적 유형] 필드에서 비어 있는 `meta:enum` 속성이 제거되었습니다. |
 | 데이터 유형 | [!UICONTROL 미디어 정보] | [[!UICONTROL 미디어 정보] 데이터 유형의 `videoSegment` 속성에서 정규 표현식 패턴이 제거](https://github.com/adobe/xdm/pull/1667/files)되었습니다 |
 
@@ -138,8 +138,8 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | --- | --- |
 | [!DNL Google PubSub]를 사용하여 구독 수준의 액세스 지정 | 이제 인증할 때 구독 ID를 제공하여 [!DNL Google PubSub] 소스를 사용할 경우 특정 주제 구독에 대한 액세스 권한을 정의할 수 있습니다. 자세한 내용은 [!DNL Google PubSub] 인증 튜토리얼 [흐름 서비스 API 사용](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) 또는 [Experience Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md)을(를) 참조하십시오. |
 | [!DNL Marketo]에서 사용자 정의된 활동 데이터 수집 | 이제 [!DNL Marketo] 인스턴스의 사용자 정의 활동 데이터를 Experience Platform으로 가져올 수 있습니다. 사용자 정의된 활동 데이터를 수집하려면 B2B 활동 스키마에서 사용자 정의된 활동 필드 그룹을 설정하고 활동 데이터 세트를 사용하여 데이터 흐름을 생성해야 합니다. 데이터 흐름이 완료되면 수집된 데이터 집합에는 [!DNL Marketo] 인스턴스의 표준 활동 및 사용자 정의 활동이 모두 포함됩니다. 그런 다음 [쿼리 서비스](../../query-service/home.md)를 사용하여 Experience Platform에서 사용자 지정 활동 레코드에 액세스할 수 있습니다. 자세한 내용은 [사용자 정의 활동 데이터의 데이터 흐름 생성](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md)에 대한 안내서를 참조하십시오. |
-| [!DNL Marketo]에서 요청되지 않은 계정 제외 | 이제 회사 데이터에 대한 데이터 흐름을 만들 때 요청되지 않은 계정을 수집에서 제외할지 또는 포함할지 여부를 구성할 수 있습니다. 자세한 내용은 [ [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md)에 대한 소스 연결 및 데이터 흐름 생성에 관한 안내서를 참조하십시오. |
+| [!DNL Marketo]에서 요청되지 않은 계정 제외 | 이제 회사 데이터에 대한 데이터 흐름을 만들 때 요청되지 않은 계정을 수집에서 제외할지 또는 포함할지 여부를 구성할 수 있습니다. 자세한 내용은 [&#x200B; [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md)에 대한 소스 연결 및 데이터 흐름 생성에 관한 안내서를 참조하십시오. |
 
 {style="table-layout:auto"}
 
-소스에 대해 자세히 알아보려면 [소스 개요 ](../../sources/home.md)를 참조하십시오.
+소스에 대해 자세히 알아보려면 [소스 개요 &#x200B;](../../sources/home.md)를 참조하십시오.

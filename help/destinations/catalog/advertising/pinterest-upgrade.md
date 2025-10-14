@@ -40,7 +40,7 @@ Adobe은 Pinterest API v5를 활용하고 새 연결에서 기존 데이터 흐�
 2. **Pinterest** 대상에서 세 점 기호... 를 선택하고 **[!UICONTROL 세부 정보 편집]**&#x200B;을 선택합니다.
    ![세부 정보 편집 선택](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
 3. **[!UICONTROL OAuth 다시 연결]**&#x200B;을 선택하고 Pinterest 계정에 로그인합니다.
-   ![다시 연결 ](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
+   ![다시 연결 &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
 4. 아래 섹션의 작업 항목으로 이동
 
 ### 새 대상에 대한 흐름 활성화 {#disable-old-enable-new-flows}

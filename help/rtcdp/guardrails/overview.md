@@ -22,9 +22,9 @@ ht-degree: 1%
 
 * [데이터 수집 보호](/help/ingestion/guardrails.md)
 * [!DNL Edge Network API][&#128279;](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)에 대한 보호 기능
-* [ [!DNL Real-Time Customer Profile] 데이터 및 세분화에 대한 보호 기능](/help/profile/guardrails.md)
-* [ [!DNL Identity Service] 데이터 보호 기능](/help/identity-service/guardrails.md)
-* [ [!DNL Query Service]에 대한 보호 기능](/help/query-service/guardrails.md)
+* [&#x200B; [!DNL Real-Time Customer Profile] 데이터 및 세분화에 대한 보호 기능](/help/profile/guardrails.md)
+* [&#x200B; [!DNL Identity Service] 데이터 보호 기능](/help/identity-service/guardrails.md)
+* [&#x200B; [!DNL Query Service]에 대한 보호 기능](/help/query-service/guardrails.md)
 * [대상을 통한 데이터 활성화 보호](/help/destinations/guardrails.md)
 * [Real-Time CDP B2B 보호](/help/rtcdp/b2b-guardrails.md)
 

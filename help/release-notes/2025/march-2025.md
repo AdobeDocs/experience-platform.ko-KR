@@ -88,8 +88,8 @@ Experience Platform의 소스를 사용하여 Adobe 애플리케이션 또는 �
 
 | 기능 | 설명 |
 | --- | --- |
-| [!DNL Bombora Intent] | 이제 [!DNL Bombora Intent] 소스를 소스 카탈로그에서 이용할 수 있습니다. 이 소스를 사용하면 다음 작업을 수행할 수 있습니다. <ul><li>Bombora의 Company Surge Intent 데이터를 통합하여 제품이나 서비스를 적극적으로 조사하는 계정을 식별할 수 있습니다.</li><li>시장 내 계정에 우선순위를 부여하여 정확한 세그먼트를 만들고 고도로 타기팅된 ABM 캠페인을 실행함으로써 전환 가능성이 가장 높은 계정에 마케팅 활동을 집중할 수 있습니다.</li><li>의도 중심 전략을 활용하여 광고 지출을 최적화하고, 참여를 확대하고, ROI를 극대화할 수 있습니다.</li></ul> 자세한 내용은 [ [!DNL Bombora] 계정을 Experience Platform으로 연결하기](../../sources/tutorials/ui/create/data-partners/bombora.md)에 대한 안내서를 참조하십시오. |
-| [!DNL Demandbase Intent] | 이제 [!DNL Demandbase Intent] 소스를 소스 카탈로그에서 이용할 수 있습니다. 이 소스를 사용하면 다음 작업을 수행할 수 있습니다. <ul><li>Demandbase의 Account Intent 데이터를 통합하여 실시간 참여를 기반으로 관심도가 높은 계정을 식별할 수 있습니다.</li><li>가장 강력한 의도 신호에 우선순위를 부여함으로써 정확한 세그먼트를 만들고 고도로 타기팅된 캠페인을 제공하여 전환 가능성이 가장 높은 계정에 마케팅 활동을 집중할 수 있습니다.</li><li>의도 중심 전략을 활성화하여 광고 지출을 최적화하고, 참여를 늘리고, ROI를 높일 수 있습니다.</li></ul> 자세한 내용은 [ [!DNL Demandbase] 계정을 Experience Platform으로 연결하기](../../sources/tutorials/ui/create/data-partners/demandbase.md)에 대한 안내서를 참조하십시오. |
+| [!DNL Bombora Intent] | 이제 [!DNL Bombora Intent] 소스를 소스 카탈로그에서 이용할 수 있습니다. 이 소스를 사용하면 다음 작업을 수행할 수 있습니다. <ul><li>Bombora의 Company Surge Intent 데이터를 통합하여 제품이나 서비스를 적극적으로 조사하는 계정을 식별할 수 있습니다.</li><li>시장 내 계정에 우선순위를 부여하여 정확한 세그먼트를 만들고 고도로 타기팅된 ABM 캠페인을 실행함으로써 전환 가능성이 가장 높은 계정에 마케팅 활동을 집중할 수 있습니다.</li><li>의도 중심 전략을 활용하여 광고 지출을 최적화하고, 참여를 확대하고, ROI를 극대화할 수 있습니다.</li></ul> 자세한 내용은 [&#x200B; [!DNL Bombora] 계정을 Experience Platform으로 연결하기](../../sources/tutorials/ui/create/data-partners/bombora.md)에 대한 안내서를 참조하십시오. |
+| [!DNL Demandbase Intent] | 이제 [!DNL Demandbase Intent] 소스를 소스 카탈로그에서 이용할 수 있습니다. 이 소스를 사용하면 다음 작업을 수행할 수 있습니다. <ul><li>Demandbase의 Account Intent 데이터를 통합하여 실시간 참여를 기반으로 관심도가 높은 계정을 식별할 수 있습니다.</li><li>가장 강력한 의도 신호에 우선순위를 부여함으로써 정확한 세그먼트를 만들고 고도로 타기팅된 캠페인을 제공하여 전환 가능성이 가장 높은 계정에 마케팅 활동을 집중할 수 있습니다.</li><li>의도 중심 전략을 활성화하여 광고 지출을 최적화하고, 참여를 늘리고, ROI를 높일 수 있습니다.</li></ul> 자세한 내용은 [&#x200B; [!DNL Demandbase] 계정을 Experience Platform으로 연결하기](../../sources/tutorials/ui/create/data-partners/demandbase.md)에 대한 안내서를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -97,7 +97,7 @@ Experience Platform의 소스를 사용하여 Adobe 애플리케이션 또는 �
 
 | 기능 | 설명 |
 | --- | --- |
-| [!DNL Google Ads] 소스에 대한 개선 사항 | 이제 [[!DNL Google Ads] 소스](../../sources/connectors/advertising/ads.md)를 사용하여 집계 데이터를 수집할 수 있습니다. [!DNL Google Ads Query Builder]를 사용하여 Experience Platform에 수집하고자 하는 속성, 세그먼트 및 리소스를 지정할 수 있습니다. 자세한 내용은 [ [!DNL Google Ads] 계정을 Experience Platform으로 연결하기](../../sources/tutorials/ui/create/advertising/ads.md)에 대한 안내서를 참조하십시오. |
+| [!DNL Google Ads] 소스에 대한 개선 사항 | 이제 [[!DNL Google Ads] 소스](../../sources/connectors/advertising/ads.md)를 사용하여 집계 데이터를 수집할 수 있습니다. [!DNL Google Ads Query Builder]를 사용하여 Experience Platform에 수집하고자 하는 속성, 세그먼트 및 리소스를 지정할 수 있습니다. 자세한 내용은 [&#x200B; [!DNL Google Ads] 계정을 Experience Platform으로 연결하기](../../sources/tutorials/ui/create/advertising/ads.md)에 대한 안내서를 참조하십시오. |
 | [!DNL Microsoft Dynamics] 소스에 대한 개선 사항 | 이제 데이터의 콘텐츠와 구조를 살펴볼 때 특정 [!DNL Microsoft Dynamics] 테이블의 기본 키를 지정할 수 있습니다. 이 기능을 사용하면 [!DNL Microsoft Dynamics] 소스를 사용하여 쿼리를 최적화할 수 있습니다. 자세한 내용은 [API를 사용하여 [!DNL Microsoft Dynamics] 소스를 Experience Platform으로 연결하기](../../sources/tutorials/api/create/crm/ms-dynamics.md)에 대한 안내서를 참조하십시오. |
 | 셀프서비스 소스(Batch SDK)에서의 API 키 인증 지원 | 이제 새 소스를 셀프서비스 소스(Batch SDK)와 통합할 때 API 키 인증을 인증 유형으로 사용할 수 있습니다. 자세한 내용은 [Batch SDK에서 인증 사양을 구성하기](../../sources/sources-sdk/config/authspec.md)에 대한 안내서를 참조하십시오. |
 | 소스에서의 속성 기반 액세스 제어 지원 | 이제 소스 데이터 흐름에 대해 속성 기반 액세스 제어 기능을 사용할 수 있습니다. 자세한 내용은 다음 안내서를 읽어보십시오. <ul><li>[API를 사용하여 소스 데이터 흐름에 레이블 적용](../../sources/tutorials/api/labels.md)</li><li>[UI를 사용하여 소스 데이터 흐름에 레이블 적용](../../sources/tutorials/ui/labels.md) |

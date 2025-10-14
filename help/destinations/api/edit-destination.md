@@ -288,7 +288,7 @@ curl -X PATCH \
 
 **요청**
 
-다음 요청은 `advertiserId`대상 연결[[!DNL Pinterest] 의 ](/help/destinations/catalog/advertising/pinterest.md#parameters) 매개 변수를 업데이트합니다.
+다음 요청은 `advertiserId`대상 연결[[!DNL Pinterest] 의 &#x200B;](/help/destinations/catalog/advertising/pinterest.md#parameters) 매개 변수를 업데이트합니다.
 
 ```shell
 curl -X PATCH \
@@ -336,7 +336,7 @@ curl -X PATCH \
 
 기본 연결의 구성 요소를 업데이트하려면 기본 연결 ID, 버전 및 사용할 새 값을 제공하는 동안 `PATCH` 끝점에 대해 `/connections` 요청을 수행합니다.
 
-매개 변수 [에 대해 원하는 대상으로 기존 데이터 흐름을 검사했을 때 ](#look-up-dataflow-details)이전 단계`baseConnection`에서 기본 연결 ID를 얻었습니다.
+매개 변수 [에 대해 원하는 대상으로 기존 데이터 흐름을 검사했을 때 &#x200B;](#look-up-dataflow-details)이전 단계`baseConnection`에서 기본 연결 ID를 얻었습니다.
 
 >[!IMPORTANT]
 >

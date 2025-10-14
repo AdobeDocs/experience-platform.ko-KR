@@ -345,7 +345,7 @@ ht-degree: 0%
 
 **병합 정책**: 병합 정책은 Experience Platform에서 여러 소스의 고객 데이터 조각을 결합하여 개별 프로필을 만드는 방법을 결정하는 데 사용하는 규칙입니다. 데이터 충돌이 발생하면 병합 정책에서 프로필에 포함하기 위해 우선 순위를 지정해야 하는 데이터를 결정합니다.
 
-**MHMDAa**: [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true)은(는) 상태 데이터와 관련된 소비자의 개인 정보 권한을 향상시킵니다. 건강 데이터에 대한 공개, 소비자 동의, 삭제 권한을 의무화하고, 허가 없이 건강 데이터를 판매하는 것을 금지한다. 또한, 이 법은 의료 시설 주변에서 지오펜싱을 사용하는 것을 불법으로 만듭니다.
+**MHMDAa**: [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true)은(는) 상태 데이터와 관련된 소비자의 개인 정보 권한을 향상시킵니다. 건강 데이터에 대한 공개, 소비자 동의, 삭제 권한을 의무화하고, 허가 없이 건강 데이터를 판매하는 것을 금지한다. 또한, 이 법은 의료 시설 주변에서 지오펜싱을 사용하는 것을 불법으로 만듭니다.
 
 **Mixin**: &quot;스키마 필드 그룹&quot;을 참조하십시오.
 

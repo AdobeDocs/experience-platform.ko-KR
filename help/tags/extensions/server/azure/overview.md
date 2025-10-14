@@ -22,7 +22,7 @@ ht-degree: 1%
 
 ## 전제 조건
 
-이 확장을 사용하려면 [!DNL Event Hubs]에 액세스할 수 있는 올바른 [!DNL Azure] 계정이 있어야 합니다. 또한 아래 단계를 수행하기 전에 [ [!DNL Azure] 포털](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create)을 사용하여 이벤트 허브를 만들어야 합니다.
+이 확장을 사용하려면 [!DNL Event Hubs]에 액세스할 수 있는 올바른 [!DNL Azure] 계정이 있어야 합니다. 또한 아래 단계를 수행하기 전에 [&#x200B; [!DNL Azure] 포털](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create)을 사용하여 이벤트 허브를 만들어야 합니다.
 
 ## 확장 설치
 

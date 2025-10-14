@@ -316,7 +316,7 @@ curl -X POST \
 
 ### 매핑 만들기 {#mapping}
 
-그런 다음 소스 데이터를 타겟 데이터 세트가 준수하는 타겟 스키마에 매핑합니다. 매핑을 만들려면 `mappingSets`API[[!DNL Data Prep] 의 ](https://developer.adobe.com/experience-platform-apis/references/data-prep/) 끝점에 대한 POST 요청을 만듭니다. 대상 XDM 스키마 ID와 만들려는 매핑 세트에 대한 세부 사항을 포함합니다.
+그런 다음 소스 데이터를 타겟 데이터 세트가 준수하는 타겟 스키마에 매핑합니다. 매핑을 만들려면 `mappingSets`API[[!DNL Data Prep] 의 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-prep/) 끝점에 대한 POST 요청을 만듭니다. 대상 XDM 스키마 ID와 만들려는 매핑 세트에 대한 세부 사항을 포함합니다.
 
 다음과 같이 모세관 필드를 해당 XDM 스키마 필드에 매핑합니다.
 
@@ -330,7 +330,7 @@ curl -X POST \
 
 >[!TIP]
 >
->데이터를 매핑할 준비가 되면 [ 및 ](../../../../images/tutorials/create/capillary/mappings.zip)데이터 준비로 파일 가져오기[!DNL Capillary]에 대한 [이벤트 및 프로필 매핑](../../../../../data-prep/ui/mapping.md#import-mapping)을 다운로드할 수 있습니다.
+>데이터를 매핑할 준비가 되면 [&#x200B; 및 &#x200B;](../../../../images/tutorials/create/capillary/mappings.zip)데이터 준비로 파일 가져오기[!DNL Capillary]에 대한 [이벤트 및 프로필 매핑](../../../../../data-prep/ui/mapping.md#import-mapping)을 다운로드할 수 있습니다.
 
 ### 데이터 흐름 만들기 {#flow}
 

@@ -43,7 +43,7 @@ insight의 제목과 이 제목을 생성하는 SQL이 포함된 대화 상자�
 
 >[!TIP]
 >
->복사 아이콘(![복사 아이콘)을 선택하여 전체 SQL 문을 클립보드에 복사할 수 있습니다.대화 상자의 오른쪽 맨 위에 있는 ](/help/images/icons/copy.png)).
+>복사 아이콘(![복사 아이콘)을 선택하여 전체 SQL 문을 클립보드에 복사할 수 있습니다.대화 상자의 오른쪽 맨 위에 있는 &#x200B;](/help/images/icons/copy.png)).
 
 ![강조 표시된 SQL 문이 있는 insight 대화 상자입니다.](./images/view-sql/sql-dialog.png)
 

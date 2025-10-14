@@ -58,7 +58,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]** 작업 
 
 [!UICONTROL 파일 업로드] 섹션에는 가져온 CSV 파일의 이름이 표시되고 **[!UICONTROL 미리 보기]** 섹션에는 업로드한 파일의 샘플 데이터 행이 표시됩니다. 워크플로우를 계속하려면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
 
-미리 보기 섹션에 강조 표시된 샘플 데이터의 행 ![과(와) 강조 표시된 다음 ](../images/ui/ml-schema-creation/preview-data.png)
+미리 보기 섹션에 강조 표시된 샘플 데이터의 행 ![과(와) 강조 표시된 다음 &#x200B;](../images/ui/ml-schema-creation/preview-data.png)
 
 ### 스키마 검토 및 편집 {#review-schema}
 

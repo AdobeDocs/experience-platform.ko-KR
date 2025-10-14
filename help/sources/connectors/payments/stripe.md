@@ -37,7 +37,7 @@ Experience Platform의 [!DNL Stripe] 소스를 사용하여 고객이 구매 플
 
 ### 액세스 토큰 검색
 
-* [[!DNL Stripe]  전자 메일 주소와 암호를 사용하여 ](https://dashboard.stripe.com/login)대시보드[!DNL Stripe]에 로그인합니다.
+* [[!DNL Stripe]  전자 메일 주소와 암호를 사용하여 &#x200B;](https://dashboard.stripe.com/login)대시보드[!DNL Stripe]에 로그인합니다.
 * [!DNL Developers] 대시보드에서 **[!DNL API keys for developers]**&#x200B;을(를) 선택합니다.
 * **API 키** 탭에서 **[!DNL Reveal test key]**&#x200B;을(를) 선택하여 액세스 토큰을 표시합니다.
 * 이제 [!DNL Stripe] API 또는 Experience Platform UI를 사용하여 [!DNL Flow Service] 계정을 Experience Platform에 연결할 때 이 토큰을 액세스 토큰으로 사용할 수 있습니다.

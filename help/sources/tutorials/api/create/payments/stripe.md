@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # API를 사용하여 [!DNL Stripe] 계정에서 Experience Platform으로 결제 데이터 수집
 
-[!DNL Stripe]API[[!DNL Flow Service] 를 사용하여 ](https://www.adobe.io/experience-platform-apis/references/flow-service/)에서 Adobe Experience Platform으로 결제 데이터를 수집하는 방법에 대해 알아보려면 다음 자습서를 읽어 보십시오.
+[!DNL Stripe]API[[!DNL Flow Service] 를 사용하여 &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/)에서 Adobe Experience Platform으로 결제 데이터를 수집하는 방법에 대해 알아보려면 다음 자습서를 읽어 보십시오.
 
 ## 시작
 

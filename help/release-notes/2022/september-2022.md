@@ -237,4 +237,4 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | 실패한 데이터 흐름을 재시도하기 위한 API 지원은 배치 소스에 대해 실행됩니다 | `re-trigger` 작업을 사용하여 실패한 데이터 흐름을 API를 통해 다시 시도하세요. 자세한 내용은 [API를 사용하여 실패한 데이터 흐름 실행 다시 시도](../../sources/tutorials/api/retry-flows.md)에 대한 안내서를 참조하십시오. |
 | [!DNL Google BigQuery] 및 [!DNL Snowflake] 소스에 대한 행 수준 데이터 필터링을 위한 API 지원 | 논리 및 비교 연산자를 사용하여 [!DNL Google BigQuery] 및 [!DNL Snowflake] 원본에 대한 행 수준 데이터를 필터링하십시오. 자세한 내용은 [API를 사용하여 소스의 데이터를 필터링](../../sources/tutorials/api/filter.md)하는 방법에 관한 안내서를 참조하십시오. |
 
-소스에 대해 자세히 알아보려면 [소스 개요 ](../../sources/home.md)를 참조하십시오.
+소스에 대해 자세히 알아보려면 [소스 개요 &#x200B;](../../sources/home.md)를 참조하십시오.

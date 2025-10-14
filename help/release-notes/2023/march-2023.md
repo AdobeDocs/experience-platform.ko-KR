@@ -208,4 +208,4 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 {style="table-layout:auto"}
 
-소스에 대해 자세히 알아보려면 [소스 개요 ](../../sources/home.md)를 참조하십시오.
+소스에 대해 자세히 알아보려면 [소스 개요 &#x200B;](../../sources/home.md)를 참조하십시오.

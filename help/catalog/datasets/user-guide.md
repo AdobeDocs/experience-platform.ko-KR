@@ -305,7 +305,7 @@ ht-degree: 4%
 
 >[!TIP]
 >
->데이터 세트 이동 대화 상자에서 직접 폴더를 만들 수도 있습니다. 폴더를 만들려면 폴더 만들기 아이콘(![폴더 만들기 아이콘)을 선택합니다.대화 상자의 오른쪽 맨 위에 있는 ](/help/images/icons/folder-add.png)).
+>데이터 세트 이동 대화 상자에서 직접 폴더를 만들 수도 있습니다. 폴더를 만들려면 폴더 만들기 아이콘(![폴더 만들기 아이콘)을 선택합니다.대화 상자의 오른쪽 맨 위에 있는 &#x200B;](/help/images/icons/folder-add.png)).
 >
 >![폴더 만들기 아이콘이 강조 표시된 [!UICONTROL 이동] 데이터 집합 대화 상자입니다.](/help/catalog/images/datasets/user-guide/create-folder.png)
 

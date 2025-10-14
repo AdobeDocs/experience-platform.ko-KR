@@ -133,7 +133,7 @@ Experience Platform UI에서 소스 작업 영역으로 이동한 다음 상단 
 
 그런 다음 소스 데이터에서 샘플 파일을 선택합니다. 데이터가 암호화되므로 Experience Platform에서는 소스 데이터에 매핑할 수 있는 XDM 스키마를 만들기 위해 샘플 파일이 필요합니다.
 
-![이 파일이 암호화되어 있습니까? 토글이 활성화되고 &quot;샘플 파일 선택&quot; 버튼이 선택되었습니다. ](../../images/tutorials/edi/select_sample_file.png)
+![이 파일이 암호화되어 있습니까? 토글이 활성화되고 &quot;샘플 파일 선택&quot; 버튼이 선택되었습니다. &#x200B;](../../images/tutorials/edi/select_sample_file.png)
 
 샘플 파일을 선택한 후에는 해당 데이터 형식, 구분 기호 및 압축 유형과 같은 데이터 설정을 구성합니다. 미리 보기 인터페이스가 완전히 렌더링될 때까지 잠시 기다렸다가 **[!UICONTROL 저장]**&#x200B;을 선택하세요.
 
@@ -160,4 +160,4 @@ Experience Platform UI에서 소스 작업 영역으로 이동한 다음 상단 
 
 ## 다음 단계
 
-이제 이 문서를 검토하여 클라우드 스토리지 배치 소스에서 Experience Platform으로 암호화된 데이터를 수집할 수 있습니다. API를 사용하여 암호화된 데이터를 수집하는 방법에 대한 자세한 내용은 [API를 사용하여 암호화된 데이터 수집 [!DNL Flow Service] 에 대한 안내서를 참조하십시오. ](../api/encrypt-data.md) Experience Platform의 소스에 대한 일반적인 정보는 [소스 개요](../../home.md)를 참조하십시오.
+이제 이 문서를 검토하여 클라우드 스토리지 배치 소스에서 Experience Platform으로 암호화된 데이터를 수집할 수 있습니다. API를 사용하여 암호화된 데이터를 수집하는 방법에 대한 자세한 내용은 [API를 사용하여 암호화된 데이터 수집 [!DNL Flow Service] 에 대한 안내서를 참조하십시오. &#x200B;](../api/encrypt-data.md) Experience Platform의 소스에 대한 일반적인 정보는 [소스 개요](../../home.md)를 참조하십시오.

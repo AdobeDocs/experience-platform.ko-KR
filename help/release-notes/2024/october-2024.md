@@ -109,7 +109,7 @@ Experience Platform의 소스를 사용하여 Adobe 애플리케이션 또는 �
 
 | 기능 | 설명 |
 | --- | --- |
-| [!DNL Marketo Engage]의 표준 활동 엔티티 필터링 지원 | [!DNL Marketo Engage] 소스에서 데이터를 수집할 때 [!DNL Flow Service] API를 사용하여 표준 활동 엔티티를 필터링할 수 있습니다. 자세한 내용은 [ [!DNL Marketo] 표준 활동 데이터 필터링](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage)에 대한 안내서를 참조하십시오. |
+| [!DNL Marketo Engage]의 표준 활동 엔티티 필터링 지원 | [!DNL Marketo Engage] 소스에서 데이터를 수집할 때 [!DNL Flow Service] API를 사용하여 표준 활동 엔티티를 필터링할 수 있습니다. 자세한 내용은 [&#x200B; [!DNL Marketo] 표준 활동 데이터 필터링](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage)에 대한 안내서를 참조하십시오. |
 
 {style="table-layout:auto"}
 

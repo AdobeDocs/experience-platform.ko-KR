@@ -286,7 +286,7 @@ curl --request GET \
 
 ### 대상으로 인증 {#authenticate}
 
-[!DNL Data Landing Zone]필수 구성 요소[!DNL Azure Storage Explorer] 섹션에 설명된 대로 [ 컨테이너를 ](#prerequisites)에 연결했는지 확인하십시오. [!DNL Data Landing Zone]은(는) Adobe에서 프로비저닝한 스토리지이므로 대상에 인증하기 위해 Experience Platform UI에서 추가 단계를 수행할 필요가 없습니다.
+[!DNL Data Landing Zone]필수 구성 요소[!DNL Azure Storage Explorer] 섹션에 설명된 대로 [&#x200B; 컨테이너를 &#x200B;](#prerequisites)에 연결했는지 확인하십시오. [!DNL Data Landing Zone]은(는) Adobe에서 프로비저닝한 스토리지이므로 대상에 인증하기 위해 Experience Platform UI에서 추가 단계를 수행할 필요가 없습니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -323,7 +323,7 @@ curl --request GET \
 
 ### 예약
 
-**[!UICONTROL 예약]** 단계에서 [ 대상에 대해 ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)내보내기 일정을 설정[!DNL Data Landing Zone]할 수 있으며 [내보낸 파일의 이름을 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)할 수도 있습니다.
+**[!UICONTROL 예약]** 단계에서 [&#x200B; 대상에 대해 &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)내보내기 일정을 설정[!DNL Data Landing Zone]할 수 있으며 [내보낸 파일의 이름을 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)할 수도 있습니다.
 
 ### 속성 및 ID 매핑 {#map}
 

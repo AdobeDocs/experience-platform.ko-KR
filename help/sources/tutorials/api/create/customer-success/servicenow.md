@@ -38,7 +38,7 @@ ht-degree: 4%
 | `password` | 인증을 위해 [!DNL ServiceNow] 서버에 연결할 암호입니다. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL ServiceNow]의 연결 사양 ID는 `eb13cb25-47ab-407f-ba89-c0125281c563`입니다. |
 
-시작하는 방법에 대한 자세한 내용은 [이 ServiceNow 문서](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET)를 참조하세요.
+시작하는 방법에 대한 자세한 내용은 [이 ServiceNow 문서](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&id=r_TableAPI-GET)를 참조하세요.
 
 ### Experience Platform API 사용
 
@@ -108,5 +108,5 @@ curl -X POST \
 
 이 자습서에 따라 [!DNL Flow Service] API를 사용하여 [!DNL ServiceNow] 기본 연결을 만들었습니다. 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다.
 
-* [ [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
-* [ [!DNL Flow Service] API를 사용하여 고객 성공 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/customer-success.md)
+* [&#x200B; [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
+* [&#x200B; [!DNL Flow Service] API를 사용하여 고객 성공 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/customer-success.md)

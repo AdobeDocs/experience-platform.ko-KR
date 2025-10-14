@@ -27,8 +27,8 @@ ht-degree: 1%
 
 | 자격 증명 | 설명 | 예 |
 | --- | --- | --- |
-| 애플리케이션 ID | 응용 프로그램 ID는 [ 대시보드의 ](https://www.algolia.com/account/api-keys/all)API 키[!DNL Algolia] 섹션에서 찾을 수 있습니다. | 0ABCDEPG12 |
-| API 키 검색 | 검색 API 키는 [ 대시보드의 ](https://www.algolia.com/account/api-keys/all)API 키[!DNL Algolia] 섹션에서 찾을 수 있습니다. | 1234a12345678901b1234567890c1ab1 |
+| 애플리케이션 ID | 응용 프로그램 ID는 [&#x200B; 대시보드의 &#x200B;](https://www.algolia.com/account/api-keys/all)API 키[!DNL Algolia] 섹션에서 찾을 수 있습니다. | 0ABCDEPG12 |
+| API 키 검색 | 검색 API 키는 [&#x200B; 대시보드의 &#x200B;](https://www.algolia.com/account/api-keys/all)API 키[!DNL Algolia] 섹션에서 찾을 수 있습니다. | 1234a12345678901b1234567890c1ab1 |
 
 ## [!DNL Algolia] Insights 확장 설치 및 구성 {#install-configure}
 

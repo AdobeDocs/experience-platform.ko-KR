@@ -37,7 +37,7 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 | `username` | 인증을 위해 [!DNL ServiceNow] 서버에 연결하는 데 사용되는 사용자 이름입니다. |
 | `password` | 인증을 위해 [!DNL ServiceNow] 서버에 연결할 암호입니다. |
 
-시작에 대한 자세한 내용은 [이 [!DNL ServiceNow] 문서](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET)를 참조하세요.
+시작에 대한 자세한 내용은 [이 [!DNL ServiceNow] 문서](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&id=r_TableAPI-GET)를 참조하세요.
 
 ## [!DNL ServiceNow] 계정 연결
 
