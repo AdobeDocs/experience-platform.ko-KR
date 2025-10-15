@@ -4,9 +4,9 @@ title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: d0ee4b30716734b8fce3509a6f3661dfa572cc9f
+source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
 workflow-type: tm+mt
-source-wordcount: '2110'
+source-wordcount: '1978'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 [!DNL Kinesis Data Streams]의 [!DNL Amazon Web Services] 서비스를 사용하면 큰 데이터 레코드를 실시간으로 수집하고 처리할 수 있습니다.
 
@@ -182,7 +182,7 @@ Experience Platform은 대상 자격 조건 또는 기타 중요한 이벤트 �
 
 | 대상 내보내기를 결정하는 사항 | 대상 내보내기에 포함된 사항 |
 |---------|----------|
-| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기에 대한 큐 역할을 합니다. 즉, 프로필의 `segmentMembership` 상태가 `realized` 또는 `exiting`(으)로 변경되거나 매핑된 특성이 업데이트되면 대상 내보내기가 시작됩니다.</li><li>현재 ID를 [!DNL Amazon Kinesis] 대상에 매핑할 수 없으므로 지정된 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>**참고**: Amazon Kinesis 대상에 대한 내보내기 동작이 2025년 9월 릴리스로 업데이트되었습니다. 아래에 강조 표시된 새 동작은 현재 이 릴리스 이후에 생성된 새 Amazon Kinesis 대상에만 적용됩니다. 기존 Amazon Kinesis 대상의 경우, 이전 내보내기 동작을 계속 사용하거나 Adobe에 문의하여 매핑된 대상자만 내보내는 새 동작으로 마이그레이션할 수 있습니다. 모든 조직이 2026년에 새 동작으로 점진적으로 마이그레이션됩니다. <br><br> <span class="preview"> **새 내보내기 동작**: 대상에 매핑되고 변경된 세그먼트는 segmentMembership 개체에 포함됩니다. 일부 시나리오에서는 여러 호출을 사용하여 내보낼 수 있습니다. 또한 일부 시나리오에서는 변경되지 않은 일부 세그먼트가 호출에 포함될 수도 있습니다. 어떤 경우든 데이터 흐름에서 매핑된 세그먼트만 내보냅니다.</span></li><br>**이전 동작**: `segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 세그먼트가 포함되어 있습니다. 이 경우 자격 또는 세그먼트 종료 이벤트 후 프로필의 상태가 변경되었습니다. 활성화 데이터 흐름에서 매핑된 세그먼트와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 정규화된 프로필에 대한 다른 매핑되지 않은 세그먼트는 대상 내보내기의 일부가 될 수 있습니다. <li>`identityMap` 개체의 모든 ID도 포함됩니다. Experience Platform은 현재 [!DNL Amazon Kinesis] 대상에서 ID 매핑을 지원하지 않습니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
+| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기에 대한 큐 역할을 합니다. 즉, 프로필의 `segmentMembership` 상태가 `realized` 또는 `exiting`(으)로 변경되거나 매핑된 특성이 업데이트되면 대상 내보내기가 시작됩니다.</li><li>현재 ID를 [!DNL Amazon Kinesis] 대상에 매핑할 수 없으므로 지정된 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>`segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 세그먼트가 포함되어 있습니다. 이 경우 자격 또는 세그먼트 종료 이벤트 후 프로필의 상태가 변경되었습니다. 활성화 데이터 흐름에서 매핑된 세그먼트와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 프로필이 자격을 갖춘 매핑되지 않은 다른 세그먼트는 대상 내보내기의 일부가 될 수 있습니다. </li><li>`identityMap` 개체의 모든 ID도 포함됩니다. Experience Platform은 현재 [!DNL Amazon Kinesis] 대상에서 ID 매핑을 지원하지 않습니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
 
 {style="table-layout:fixed"}
 
