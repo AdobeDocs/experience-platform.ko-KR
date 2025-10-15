@@ -2,10 +2,10 @@
 title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 9cf809f8fd6e424b4dcd800c3d554e4eb0e337dc
+source-git-commit: de95e9a51c979e9249ddf9ceb262fc521d2b38f4
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 33%
+source-wordcount: '1008'
+ht-degree: 31%
 
 ---
 
@@ -57,7 +57,9 @@ Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이
 | 대상 | 설명 |
 | --- | --- |
 | [!DNL AdForm] | 이 대상을 사용하여 Adobe Real-Time CDP ID(ECID) 및 [!DNL AdForm]의 ID Fusion을 기반으로 활성화할 수 있도록 [!DNL AdForm]&#x200B;(으)로 Experience Cloud 대상을 보냅니다. [!DNL AdForm]의 ID Fusion은 ECID(Experience Cloud ID)를 기반으로 자사 대상을 활성화할 수 있는 ID 확인 서비스입니다. |
-| `Amazon Ads` | `firstName`, `lastName`, `street`, `city`, `state`, `zip` 및 `country`과(와) 같은 추가 개인 식별자 지원을 추가했습니다. 이러한 필드를 타겟 ID로 매핑하면 대상자 일치율을 향상시킬 수 있습니다. |
+| [!DNL Amazon Ads] | `firstName`, `lastName`, `street`, `city`, `state`, `zip` 및 `country`과(와) 같은 추가 개인 식별자 지원을 추가했습니다. 이러한 필드를 타겟 ID로 매핑하면 대상자 일치율을 향상시킬 수 있습니다. |
+| [!DNL Snowflake Batch]&#x200B;(제한된 가용성) | 매일 대상자 업데이트를 계정에 공유 테이블로 직접 받으려면 실시간 [!DNL Snowflake] 데이터 공유를 만드십시오. 이 통합은 현재 VA7 지역에 프로비저닝된 고객 조직에서 사용할 수 있습니다. |
+| [!DNL Snowflake Streaming]&#x200B;(제한된 가용성) | 스트리밍 대상 업데이트를 계정에 공유 테이블로 직접 받으려면 라이브 [!DNL Snowflake] 데이터 공유를 만드십시오. 이 통합은 현재 VA7 지역에 프로비저닝된 고객 조직에서 사용할 수 있습니다. |
 
 **새로운 기능 또는 업데이트된 기능**
 
