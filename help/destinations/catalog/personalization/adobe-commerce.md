@@ -23,7 +23,7 @@ ht-degree: 3%
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). 개발자 콘솔에 액세스하여 Adobe Commerce에서 확장의 [구성을 완료](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=ko#configure-the-extension)하는 데 필요한 서비스 계정 및 자격 증명 정보를 볼 수 있습니다.
-- [Adobe Commerce Cloud 버전 2.4.4 이상](https://business.adobe.com/products/magento/magento-commerce.html)
+- [Adobe Commerce Cloud 버전 2.4.4 이상](https://business.adobe.com/kr/products/magento/magento-commerce.html)
 
 Experience Platform에서 다음을 생성합니다.
 

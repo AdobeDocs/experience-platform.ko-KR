@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 개인화된 콘텐츠 렌더링
 
-Adobe Experience Platform Web SDK은 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html), [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ko)을(를) 포함하여 Adobe 개인화 솔루션에서 개인화된 콘텐츠 검색을 지원합니다.
+Adobe Experience Platform Web SDK은 [Adobe Target](https://business.adobe.com/kr/products/target/adobe-target.html), [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ko)을(를) 포함하여 Adobe 개인화 솔루션에서 개인화된 콘텐츠 검색을 지원합니다.
 
 또한 웹 SDK은 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화 연결](../../destinations/catalog/personalization/custom-personalization.md)과 같은 Adobe Experience Platform 개인화 대상을 통해 동일 페이지 및 다음 페이지 개인화 기능을 지원합니다. 동일 페이지 및 다음 페이지 개인화를 위해 Experience Platform을 구성하는 방법에 대해 알아보려면 [전용 안내서](../../destinations/ui/activate-edge-personalization-destinations.md)를 참조하십시오.
 
