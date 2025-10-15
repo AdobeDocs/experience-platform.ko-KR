@@ -5,9 +5,9 @@ type: Documentation
 description: Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터에 액세스할 수 있습니다. 이 안내서에서는 프로필 API를 사용하여 "프로필"로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
+source-git-commit: 193045d530d73d8a3e4f7ac3df4e1f43e8ad5b15
 workflow-type: tm+mt
-source-wordcount: '1981'
+source-wordcount: '2141'
 ht-degree: 2%
 
 ---
@@ -66,6 +66,10 @@ GET /access/entities?{QUERY_PARAMETERS}
 - `schema.name`: 엔터티의 XDM 스키마 이름입니다. 이 사용 사례에서는 `schema.name=_xdm.context.profile`입니다.
 - `entityId`: 검색하려는 엔터티의 ID입니다.
 - `entityIdNS`: 검색하려는 엔터티의 네임스페이스입니다. `entityId`이(가) XID가 **아님**&#x200B;인 경우 이 값을 제공해야 합니다.
+
+또한 다음 쿼리 매개 변수의 사용은 *높음*&#x200B;입니다.
+
+- `mergePolicyId`: 데이터를 필터링할 병합 정책의 ID입니다. 병합 정책을 지정하지 않으면 조직의 기본 병합 정책이 사용됩니다.
 
 부록의 [쿼리 매개 변수](#query-parameters) 섹션에 올바른 매개 변수의 전체 목록이 제공됩니다.
 
@@ -180,6 +184,10 @@ B2B 계정 데이터에 액세스하려면 **다음 쿼리 매개 변수를 제�
 - `entityId`: 검색하려는 엔터티의 ID입니다.
 - `entityIdNS`: 검색하려는 엔터티의 네임스페이스입니다. `entityId`이(가) XID가 **아님**&#x200B;인 경우 이 값을 제공해야 합니다.
 
+또한 다음 쿼리 매개 변수의 사용은 *높음*&#x200B;입니다.
+
+- `mergePolicyId`: 데이터를 필터링할 병합 정책의 ID입니다. 병합 정책을 지정하지 않으면 조직의 기본 병합 정책이 사용됩니다.
+
 부록의 [쿼리 매개 변수](#query-parameters) 섹션에 올바른 매개 변수의 전체 목록이 제공됩니다.
 
 **요청**
@@ -271,6 +279,10 @@ B2B 영업 기회 엔터티에 액세스하려면 **다음 쿼리 매개 변수�
 - `schema.name`: 엔터티의 XDM 스키마 이름입니다. 이 사용 사례에서는 `schema.name=_xdm.context.opportunity`입니다.
 - `entityId`: 검색하려는 엔터티의 ID입니다.
 - `entityIdNS`: 검색하려는 엔터티의 네임스페이스입니다. `entityId`이(가) XID가 **아님**&#x200B;인 경우 이 값을 제공해야 합니다.
+
+또한 다음 쿼리 매개 변수의 사용은 *높음*&#x200B;입니다.
+
+- `mergePolicyId`: 데이터를 필터링할 병합 정책의 ID입니다. 병합 정책을 지정하지 않으면 조직의 기본 병합 정책이 사용됩니다.
 
 부록의 [쿼리 매개 변수](#query-parameters) 섹션에 올바른 매개 변수의 전체 목록이 제공됩니다.
 
@@ -1207,7 +1219,9 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->다음 B2B 엔티티에 대한 삭제 요청은 더 이상 사용되지 않습니다.
+>엔티티 엔드포인트 삭제는 2025년 10월 말까지 더 이상 사용되지 않습니다. 레코드 삭제 작업을 수행하려면 [데이터 주기 레코드 삭제 API 워크플로](/help/hygiene/api/workorder.md) 또는 [데이터 주기 레코드 삭제 UI 워크플로](/help/hygiene/ui/record-delete.md)를 대신 사용할 수 있습니다.
+>
+>또한 다음 B2B 엔터티에 대한 삭제 요청은 이미 더 이상 사용되지 않습니다.
 >
 >- 계정
 >- 계정-사용자 관계
@@ -1276,7 +1290,7 @@ curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.n
 | `relatedEntityId` | `schema.name`이(가) `_xdm.context.experienceevent`인 경우 이 값 **은(는) 관련 프로필 엔터티의 ID를 지정해야 합니다**. 이 값은 `entityId`과(와) 동일한 규칙을 따릅니다. | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | `schema.name`이(가) &quot;_xdm.context.experienceevent&quot;인 경우 이 값은 `relatedEntityId`에 지정된 엔터티의 ID 네임스페이스를 지정해야 합니다. | `relatedEntityIdNS=CRMID` |
 | `fields` | 응답에서 반환된 데이터를 필터링합니다. 검색할 데이터에 포함할 스키마 필드 값을 지정하려면 이 옵션을 사용합니다. 여러 필드의 경우 공백 없이 쉼표로 값을 구분하십시오. | `fields=personalEmail,person.name,person.gender` |
-| `mergePolicyId` | 반환된 데이터를 제어하는 데 사용할 병합 정책을 식별합니다. 호출에 지정되지 않은 경우 해당 스키마에 대한 조직의 기본값이 사용됩니다. 기본 병합 정책이 구성되지 않은 경우 기본값은 프로필 병합 및 ID 결합 없음을 의미합니다. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
+| `mergePolicyId` | *권장* 반환된 데이터를 제어하는 병합 정책을 식별합니다. 호출에 지정되지 않은 경우 해당 스키마에 대한 조직의 기본값이 사용됩니다. 요청하는 스키마에 대해 기본 병합 정책이 정의되지 않은 경우 API는 HTTP 422 오류 상태 코드를 반환합니다. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
 | `orderBy` | 타임스탬프별로 검색된 엔티티의 정렬 순서. `(+/-)timestamp`(으)로 작성되었으며 기본값은 `+timestamp`입니다. | `orderby=-timestamp` |
 | `startTime` | 엔티티를 필터링할 시작 시간(밀리초)을 지정합니다. | `startTime=1539838505` |
 | `endTime` | 엔티티를 필터링할 종료 시간(밀리초)을 지정합니다. | `endTime=1539838510` |

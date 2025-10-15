@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 9월
 description: Adobe Experience Platform에 대한 2025년 9월 릴리스 정보입니다.
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: fe8456823d0e7f1b60ea647e044747cfee4bc4c5
 workflow-type: tm+mt
-source-wordcount: '1422'
-ht-degree: 97%
+source-wordcount: '1528'
+ht-degree: 91%
 
 ---
 
@@ -107,6 +107,12 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 | 기능 | 설명 |
 | ------- | ----------- |
 | [!BADGE Alpha]{type=Informative} 이 기능은 현재 Alpha에 있습니다. 프로필 뷰어 개선 사항 | 2025년 9월 릴리스에는 프로필 뷰어에 대한 다음과 같은 개선 사항이 포함됩니다. <ul><li>**결합된 보기**: 속성, 이벤트 및 인사이트가 단일 보기로 결합되었습니다.</li><li>**AI 생성 인사이트**: 이제 프로필 세부 정보 페이지에 AI 생성 인사이트가 표시되어 프로필에서 생성된 세부 사항을 알 수 있습니다. 이러한 인사이트에는 성향 점수 및 추세 분석과 같은 정보가 포함될 수 있습니다.</li><li>**스타일 업데이트**: 프로필 세부 정보 페이지가 시각적으로 새로 고쳐졌습니다.</li><li>**찾아보기**: 이제 검색 및 사용자 정의 기능이 있는 대화형 카드 기반 캐러셀을 통해 프로필을 탐색할 수 있습니다.</li></ul> |
+
+**중요 업데이트**
+
+| 업데이트 | 설명 |
+| ------ | ----------- |
+| 프로필 삭제 API 사용 중단 | [프로필 삭제 API](/help/profile/api/entities.md#delete-entity)는 2025년 10월 말까지 더 이상 사용되지 않습니다. 레코드 삭제 작업을 수행하려면 [데이터 주기 레코드 삭제 API 워크플로](/help/hygiene/api/workorder.md) 또는 [데이터 주기 레코드 삭제 UI 워크플로](/help/hygiene/ui/record-delete.md)를 대신 사용할 수 있습니다. 데이터 라이프사이클 워크플로우는 보고 관리할 수 있는 월별 할당량뿐만 아니라 전체 라이프사이클 추적을 제공합니다. <br/><br/>끝점이 더 이상 사용되지 않으면 현재 이 끝점을 사용하는 모든 사용자는 이 끝점에 계속 액세스할 수 있습니다. 이에 대한 수명 종료는 별도로 발표됩니다. 질문이 있는 경우 Adobe 고객 지원 센터에 문의하십시오. |
 
 자세히 알아보려면 [실시간 고객 프로필 개요](../../profile/home.md)를 참조하십시오.
 
