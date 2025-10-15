@@ -39,7 +39,7 @@ Experience Platform 대상은 데이터를 HTTPS 호출로 API 기반 통합에 
 
 위의 임계값 중 처음 충족되는 임계값은 Facebook으로 내보내기를 트리거합니다. 따라서 [!DNL Facebook Custom Audiences] 대시보드에서는 대상이 Experience Platform에서 10,000개의 레코드 단위로 증가하는 것을 볼 수 있습니다. 데이터가 300초 내보내기 간격보다 빠르게 처리 및 집계되고, 모든 레코드가 처리될 때까지 약 2~3분마다 더 빠르게 전송되므로 2~3분마다 10,000개의 레코드가 표시될 수 있습니다. 레코드가 부족하여 10,000개의 일괄 처리를 구성할 수 없는 경우 시간 창 임계값이 충족되면 현재 레코드 수가 그대로 전송되므로 더 작은 일괄 처리가 Facebook으로 전송되는 것을 볼 수 있습니다.
 
-다른 예로, [과(와) 함께 ](/help/destinations/catalog/streaming/http-destination.md)최고 노력 집계&#x200B;*[정책을 사용하는](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* HTTP API 대상`maxUsersPerRequest: 10`을(를) 고려해 보십시오. 즉, 이 대상에 대한 HTTP 호출이 실행되기 전에 최대 10개의 프로필이 집계되지만, Experience Platform은 대상 서비스가 업스트림 서비스에서 업데이트된 재평가 정보를 수신하는 즉시 대상에 프로필을 발송하려고 합니다.
+다른 예로, [과(와) 함께 &#x200B;](/help/destinations/catalog/streaming/http-destination.md)최고 노력 집계&#x200B;*[정책을 사용하는](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* HTTP API 대상`maxUsersPerRequest: 10`을(를) 고려해 보십시오. 즉, 이 대상에 대한 HTTP 호출이 실행되기 전에 최대 10개의 프로필이 집계되지만, Experience Platform은 대상 서비스가 업스트림 서비스에서 업데이트된 재평가 정보를 수신하는 즉시 대상에 프로필을 발송하려고 합니다.
 
 집계 정책은 구성이 가능하며, 대상 개발자는 API 끝점 다운스트림의 속도 제한을 가장 잘 충족하도록 집계 정책을 구성하는 방법을 결정할 수 있습니다. Destination SDK 설명서에서 [집계 정책](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)에 대해 자세히 알아보십시오.
 
