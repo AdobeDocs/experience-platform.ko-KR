@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 52dfba88ce3549fb93e8cfcca144e6be720bc26b
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1065'
 ht-degree: 34%
 
 ---
@@ -181,8 +181,6 @@ ht-degree: 34%
          - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify 스트리밍](tutorials/api/create/ecommerce/shopify-streaming.md)
-      - 충성도 {#loyalty}
-         - [모세관 스트리밍 이벤트](tutorials/api/create/loyalty/capillary.md)
       - 마케팅 자동화 {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
