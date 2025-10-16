@@ -29,7 +29,7 @@ Experience Platform 사용자 인터페이스의 소스 작업 영역을 사용�
 
 >[!NOTE]
 >
->[[!DNL Capillary Streaming Events]  원본에 필요한 설정에 대한 자세한 내용은 ](../../../../connectors/loyalty/capillary.md)개요[!DNL Capillary]를 참조하세요.
+>[[!DNL Capillary Streaming Events]  원본에 필요한 설정에 대한 자세한 내용은 &#x200B;](../../../../connectors/loyalty/capillary.md)개요[!DNL Capillary]를 참조하세요.
 
 ## 소스 카탈로그 탐색
 
@@ -49,7 +49,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 >[!TIP]
 >
->[의 ](../../../../images/tutorials/create/capillary/schemas.zip)이벤트 및 프로필 스키마[!DNL Capillary]를 다운로드하여 데이터 선택 인터페이스에서 사용할 수 있습니다.
+>[의 &#x200B;](../../../../images/tutorials/create/capillary/schemas.zip)이벤트 및 프로필 스키마[!DNL Capillary]를 다운로드하여 데이터 선택 인터페이스에서 사용할 수 있습니다.
 
 ![원본 워크플로의 데이터 선택 단계](../../../../images/tutorials/create/capillary/select-data.png)
 
@@ -96,7 +96,7 @@ Experience Platform으로 데이터를 수집하기 전에 매핑 인터페이�
 
 >[!TIP]
 >
->데이터를 매핑할 준비가 되면 [ 및 ](../../../../images/tutorials/create/capillary/mappings.zip)데이터 준비로 파일 가져오기[!DNL Capillary]에 대한 [이벤트 및 프로필 매핑](../../../../../data-prep/ui/mapping.md#import-mapping)을 다운로드할 수 있습니다.
+>데이터를 매핑할 준비가 되면 [&#x200B; 및 &#x200B;](../../../../images/tutorials/create/capillary/mappings.zip)데이터 준비로 파일 가져오기[!DNL Capillary]에 대한 [이벤트 및 프로필 매핑](../../../../../data-prep/ui/mapping.md#import-mapping)을 다운로드할 수 있습니다.
 
 ![모세관에 대한 매핑 인터페이스입니다.](../../../../images/tutorials/create/capillary/mappings.png)
 
