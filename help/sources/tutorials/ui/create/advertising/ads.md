@@ -1,23 +1,22 @@
 ---
 title: UI를 사용하여 Google 광고를 Experience Platform에 연결
 description: UI에서 Google 광고 계정을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+badge: Beta
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
+source-git-commit: 906da82a8940233b3eb226d376c454b477514bc5
 workflow-type: tm+mt
-source-wordcount: '877'
-ht-degree: 0%
+source-wordcount: '893'
+ht-degree: 1%
 
 ---
 
 # UI를 사용하여 [!DNL Google Ads]을(를) Experience Platform에 연결
 
->[!WARNING]
->
->[!DNL Google Ads] 소스는 현재 UI에서 사용할 수 없습니다. API를 사용하여 [!DNL Google Ads] 데이터를 Experience Platform [에 계속 수집할 수 있습니다](../../../api/create/advertising/ads.md).
-
 >[!NOTE]
 >
->[!DNL Google Ads] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
+> [!DNL Google Ads] 원본은 현재 베타 버전이며 일회성 수집만 지원합니다. [API 메서드](../../../api/create/advertising/ads.md)를 사용하여 [!DNL Google Ads] 데이터를 Experience Platform으로 증분 데이터 수집을 수행할 수 있습니다.
+>
+>베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
 
 Experience Platform UI의 소스 작업 영역을 사용하여 [!DNL Google Ads] 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
 
@@ -40,7 +39,7 @@ Experience Platform UI의 소스 작업 영역을 사용하여 [!DNL Google Ads]
 
 Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 *[!UICONTROL 소스]* 작업 영역에 액세스합니다. *[!UICONTROL 범주]* 패널에서 해당 범주를 선택할 수 있습니다. 또는 검색 창을 사용하여 사용할 특정 소스로 이동할 수 있습니다.
 
-[!DNL Google Ads]을(를) 사용하려면 *[!UICONTROL Google]*&#x200B;에서 **[!UICONTROL Advertising 광고]** 소스 카드를 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택하십시오.
+[!DNL Google Ads]을(를) 사용하려면 **[!UICONTROL Google]**&#x200B;에서 *[!UICONTROL Advertising 광고]* 소스 카드를 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택하십시오.
 
 ![Experience Platform UI의 소스 카탈로그.](../../../../images/tutorials/create/ads/catalog.png).
 
@@ -64,7 +63,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 * **새로 고침 토큰**: 새로 고침 토큰은 [!DNL OAuth2] 인증의 일부입니다. 이 토큰을 사용하면 액세스 토큰이 만료된 후 다시 생성할 수 있습니다.
 * **클라이언트 ID**: 클라이언트 ID는 [!DNL OAuth2] 인증의 일부로 클라이언트 암호와 함께 사용됩니다. 클라이언트 ID와 클라이언트 암호를 사용하면 응용 프로그램을 [!DNL Google]에 식별하여 응용 프로그램이 계정을 대신하여 작동할 수 있습니다.
 * **클라이언트 암호**: 클라이언트 암호는 [!DNL OAuth2] 인증의 일부로 클라이언트 ID와 함께 사용됩니다. 클라이언트 ID와 클라이언트 암호를 사용하면 응용 프로그램을 [!DNL Google]에 식별하여 응용 프로그램이 계정을 대신하여 작동할 수 있습니다.
-* **[!DNL Google Ads]API 버전**: [!DNL Google Ads]에서 지원하는 현재 API 버전입니다. 최신 버전은 `v18`이지만 Experience Platform에서 지원되는 최신 버전은 `v17`입니다.
+* **[!DNL Google Ads]API 버전**: [!DNL Google Ads]에서 지원하는 현재 API 버전입니다. 최신 [!DNL Google Ads] API 버전은 v21이지만 Experience Platform은 현재 v19 이상 버전을 지원합니다. 호환성을 보장하려면 지원되는 이러한 버전 중 하나를 사용해야 합니다.
 
 자격 증명을 입력했으면 **[!UICONTROL 소스에 연결]**&#x200B;을(를) 선택하고 연결을 처리할 수 있도록 잠시 기다립니다. 완료되면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
@@ -72,7 +71,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 ## 데이터 선택 {#select-data}
 
-[!DNL Google Ads]을(를) 사용하면 워크플로우의 데이터 선택 단계 동안 수집할 특성 목록을 제공해야 합니다. 이러한 특성을 검색하려면 [[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v17/overview_query_builder)을(를) 사용해야 합니다.
+[!DNL Google Ads]을(를) 사용하면 워크플로우의 데이터 선택 단계 동안 수집할 특성 목록을 제공해야 합니다. 이러한 특성을 검색하려면 [[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v19/overview_query_builder)을(를) 사용해야 합니다.
 
 [!DNL Google Ads Query Builder]에서 사용할 리소스 유형으로 이동한 다음 특성 선택기를 사용하여 특성, 세그먼트 및 지표를 선택합니다.
 

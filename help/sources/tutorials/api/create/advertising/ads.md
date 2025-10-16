@@ -2,31 +2,27 @@
 title: API를 사용하여 Google 광고를 Experience Platform에 연결
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Google 광고에 연결하는 방법을 알아봅니다.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a0977e98219797eda14dd8d7ddb6cf3f1410cef0
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '457'
 ht-degree: 1%
 
 ---
 
-# [!DNL Flow Service] API를 사용하여 [!DNL Google Ads]을(를) Experience Platform에 연결
-
->[!NOTE]
->
->[!DNL Google Ads] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
+# [!DNL Google Ads] API를 사용하여 [!DNL Flow Service]을(를) Experience Platform에 연결
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Google Ads] 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 자습서를 참조하십시오.
+[!DNL Google Ads]API[[!DNL Flow Service] 를 사용하여 ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 자습서를 참조하십시오.
 
-## 시작하기
+## 시작
 
 이 안내서를 사용하려면 Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [소스](../../../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
 * [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL Google Ads]에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Google Ads] API를 사용하여 [!DNL Flow Service]에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### Experience Platform API 사용
 
@@ -72,7 +68,7 @@ curl -X POST \
               "refreshToken": "{REFRESH_TOKEN}",
               "clientId": "{CLIENT_ID}",
               "clientSecret": "{CLIENT_SECRET}",
-              "googleAdsApiVersion": "v17"
+              "googleAdsApiVersion": "v19"
 
           }
       },
@@ -91,7 +87,7 @@ curl -X POST \
 | `auth.params.refreshToken` | [!DNL Google Ads] 계정의 새로 고침 토큰입니다. |
 | `auth.params.clientID` | [!DNL Google Ads] 계정의 클라이언트 ID. |
 | `auth.params.clientSecret` | [!DNL Google Ads] 계정의 클라이언트 암호입니다. |
-| `auth.params.googleAdsApiVersion` | 사용 중인 [!DNL Google Ads] API 버전입니다. Experience Platform에서 지원되는 최신 버전은 `v17`입니다. |
+| `auth.params.googleAdsApiVersion` | 사용 중인 [!DNL Google Ads] API 버전입니다. Experience Platform은 현재 버전 `v19` 이상을 지원합니다. 호환성을 보장하려면 지원되는 이러한 버전 중 하나를 사용해야 합니다. |
 | `connectionSpec.id` | [!DNL Google Ads] 연결 사양 ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **응답**
@@ -107,7 +103,7 @@ curl -X POST \
 
 ## 데이터 흐름을 만들어 광고 데이터 수집
 
-이 자습서에 따라 [!DNL Flow Service] API를 사용하여 [!DNL Google Ads] 기본 연결을 만들고 [!DNL Google Ads] 계정을 Experience Platform에 연결했습니다. 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다.
+이 자습서에 따라 [!DNL Google Ads] API를 사용하여 [!DNL Flow Service] 기본 연결을 만들고 [!DNL Google Ads] 계정을 Experience Platform에 연결했습니다. 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다.
 
-* [&#x200B; [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
-* [&#x200B; [!DNL Flow Service] API를 사용하여 광고 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/advertising.md)
+* [ [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
+* [ [!DNL Flow Service] API를 사용하여 광고 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/advertising.md)
