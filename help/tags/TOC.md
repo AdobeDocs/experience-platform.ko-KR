@@ -6,9 +6,9 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 84cc86e4afa74668ba00a7ef5ba824f44db3f8f1
+source-git-commit: cc89bf68011499e69f4ed8c7dc891ec02a34d361
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '791'
 ht-degree: 36%
 
 ---
@@ -155,7 +155,7 @@ ht-degree: 36%
          * [릴리스 정보](./extensions/client/plugins/release-notes.md)
       * [연결](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
-      * [Usercentrics CMP v2의 쿠키 동의 관리](https://exchange.adobe.com/apps/ec/107037)
+      * Usercentrics CMP v2의 [쿠키 동의 관리](https://exchange.adobe.com/apps/ec/107037)
       * 코어 {#core}
          * [개요](./extensions/client/core/overview.md)
          * [릴리스 정보](./extensions/client/core/release-notes.md)
@@ -190,7 +190,7 @@ ht-degree: 36%
          * [개요](./extensions/client/meta/overview.md)
       * [모니터](https://exchange.adobe.com/apps/ec/106544)
       * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
-      * [쿠키에 대한 OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)
+      * 쿠키에 대한 [OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)
       * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)
       * [Persado 연결](https://exchange.adobe.com/apps/ec/103745)
       * [Pinterest 전환 추적](https://exchange.adobe.com/apps/ec/100523)
@@ -234,7 +234,7 @@ ht-degree: 36%
          * [개요](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [개요](./extensions/server/braze/overview.md)
-      * [Google Analytics용 Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
+      * Google Analytics용 [Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
       * 코어 {#core}
          * [개요](./extensions/server/core/overview.md)
       * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)
@@ -306,6 +306,7 @@ ht-degree: 36%
    * [타사 라이브러리 호스팅](./extension-dev/third-party-libraries.md)
    * [Turbine 자유 변수](./extension-dev/turbine.md)
    * [이전 버전과의 호환성 표준](./extension-dev/backwards-compatibility.md)
+   * [공유 비공개 확장](./extension-dev/shared-private-extensions.md)
 * Reactor API {#api}
    * [개요](./api/overview.md)
    * [Reactor API 인증 및 액세스](./api/getting-started.md)
@@ -329,7 +330,7 @@ ht-degree: 36%
       * [프로필](./api/endpoints/profile.md)
       * [검색](./api/endpoints/search.md)
       * [비밀](./api/endpoints/secrets.md)
-   * Guides {#guides}
+   * 안내서 {#guides}
       * [위임 설명자 ID](./api/guides/delegate-descriptor-ids.md)
       * [값 암호화](./api/guides/encrypting-values.md)
       * [오류 처리](./api/guides/error-handling.md)
