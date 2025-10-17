@@ -91,7 +91,7 @@ Adobe Experience Platform 태그는 이제 **[!UICONTROL 사용 승인]**&#x200B
 
 **[!UICONTROL 인증 사용]** 대화 상자에서 **[!UICONTROL 확인]**&#x200B;을 선택합니다.
 
-![인증 사용[!UICONTROL  대화 상자, 강조 표시 ]확인](../images/shared-extensions/confirmation.png)
+![인증 사용[!UICONTROL &#x200B; 대화 상자, 강조 표시 &#x200B;]확인](../images/shared-extensions/confirmation.png)
 
 이제 확장을 볼 수 있는 [!UICONTROL 사용 승인] 탭으로 돌아가서 **승인됨** 상태를 표시합니다.
 
