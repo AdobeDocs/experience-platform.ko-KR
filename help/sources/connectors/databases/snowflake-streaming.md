@@ -3,9 +3,9 @@ title: Snowflake 스트리밍 Source 커넥터 개요
 description: 소스 연결 및 데이터 흐름을 만들어 Snowflake 인스턴스에서 Adobe Experience Platform으로 스트리밍 데이터를 수집하는 방법을 알아봅니다
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 0d646136da2c508fe7ce99a15787ee15c5921a6c
+source-git-commit: 1d0cc448293ab3cad6ccb971bb2edc86c1b01a5c
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1510'
 ht-degree: 3%
 
 ---
@@ -64,7 +64,7 @@ Experience Platform에서는 [!DNL Snowflake] 데이터베이스에서 데이터
 | --- | --- |
 | `account` | 계정 이름은 조직 내에서 계정을 고유하게 식별합니다. 이 경우 서로 다른 [!DNL Snowflake] 조직에서 계정을 고유하게 식별해야 합니다. 이렇게 하려면 계정 이름 앞에 조직 이름을 추가해야 합니다. 예: `orgname-account_name`. 추가 지침은 [계정 식별자 검색 [!DNL Snowflake] 에 대한 안내서를 참조하십시오](./snowflake.md#retrieve-your-account-identifier). 자세한 내용은 [[!DNL Snowflake] 설명서](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)를 참조하세요. |
 | `username` | [!DNL Snowflake] 계정의 사용자 이름입니다. |
-| `privateKey` | [!DNL Base64-] 계정의 [!DNL Snowflake]인코딩된 개인 키입니다. 암호화되거나 암호화되지 않은 개인 키를 생성할 수 있습니다. 암호화된 개인 키를 사용하는 경우 Experience Platform에 대해 인증할 때 개인 키 암호도 제공해야 합니다. 자세한 내용은 [개인 키 검색 [!DNL Snowflake] 2&rbrace;에 대한 안내서를 참조하십시오.](./snowflake.md) |
+| `privateKey` | [!DNL Base64-] 계정의 [!DNL Snowflake]인코딩된 개인 키입니다. 암호화되거나 암호화되지 않은 개인 키를 생성할 수 있습니다. 암호화된 개인 키를 사용하는 경우 Experience Platform에 대해 인증할 때 개인 키 암호도 제공해야 합니다. 자세한 내용은 [개인 키 검색 [!DNL Snowflake] 2}에 대한 안내서를 참조하십시오.](./snowflake.md) |
 | `passphrase` | 암호는 암호화된 개인 키로 인증할 때 사용해야 하는 추가 보안 계층입니다. 암호화되지 않은 개인 키를 사용하는 경우에는 암호를 제공할 필요가 없습니다. |
 | `database` | Experience Platform으로 수집할 데이터가 포함된 [!DNL Snowflake] 데이터베이스입니다. |
 | `warehouse` | [!DNL Snowflake] 웨어하우스에서 응용 프로그램의 쿼리 실행 프로세스를 관리합니다. 각 [!DNL Snowflake] 웨어하우스는 서로 독립적이므로 Experience Platform으로 데이터를 가져올 때 개별적으로 액세스해야 합니다. |
@@ -157,6 +157,25 @@ MIIE6T...
 >창고의 고급 설정 구성에서 자동 재개 및 자동 일시 중지를 활성화해야 합니다.
 
 역할 및 권한 관리에 대한 자세한 내용은 [[!DNL Snowflake] API 참조](<https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>)를 참조하세요.
+
+## Unix 시간 필드를 날짜 필드로 변환
+
+[!DNL Snowflake Streaming]은(는) Unix Epoch(1970-01-01) 이후의 일 수로 ` DATE` 필드를 구문 분석하고 기록합니다. 예를 들어, `DATE` 값이 0이면 1970년 1월 1일을 의미하며, 1이면 1970년 1월 2일을 의미합니다. 따라서 [!DNL Snowflake Streaming] 원본에서 매핑을 만들 파일을 준비할 때는 `DATE` 열이 정수로 표시되었는지 확인하십시오.
+
+[데이터 준비 데이터 및 시간 함수](../../../data-prep/functions.md#date-and-time-functions)를 사용하여 Unix 시간을 Experience Platform에 수집할 수 있는 날짜 필드로 변환할 수 있습니다. 예:
+
+```shell
+dformat({DATE_COLUMN} * 86400000, "yyyy-MM-dd")
+```
+
+이 함수에서:
+
+* `{DATE_COLUMN}`은(는) epoch 일 정수를 포함하는 날짜 열입니다.
+* 에포크86400000 곱하면 에포크 일수가 밀리초로 변환됩니다.
+* &#39;yyyy-MM-dd&#39;는 원하는 날짜 형식을 지정합니다.
+
+이렇게 변환하면 날짜가 데이터 세트에 올바르게 표시됩니다.
+
 
 ## 제한 사항 및 FAQ {#limitations-and-frequently-asked-questions}
 
