@@ -19,7 +19,7 @@ ID 설정은 고유한 네임스페이스를 지정하고 네임스페이스 우
 
 ID 서비스 UI 작업 영역에서 [!DNL Graph Simulation] 인터페이스를 사용하는 방법에 대한 자세한 내용은 다음 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475969/?captions=kor&learn=on&enablevpops)
 
 UI에서 ID 설정을 구성하는 방법을 배우려면 이 안내서를 참조하십시오.
 

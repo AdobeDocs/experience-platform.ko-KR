@@ -61,7 +61,7 @@ AI Assistant를 쿼리하기 전에 고려해야 할 두 가지 유형의 질문
 
 AI Assistant 제품 지식에 대한 추가 정보는 다음 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475937/?captions=kor&learn=on)
 
 ### 운영 인사이트 {#operational-insights}
 
