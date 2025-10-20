@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 52dfba88ce3549fb93e8cfcca144e6be720bc26b
+source-git-commit: 6debb9eeb811c98d322c99b1b779f5f9eff8573c
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1073'
 ht-degree: 34%
 
 ---
@@ -105,6 +105,7 @@ ht-degree: 34%
       - [로컬 파일 업로드 커넥터](connectors/local-system/local-file-upload.md)
    - 충성도 {#loyalty}
       - [모세관 스트리밍 이벤트](connectors/loyalty/capillary.md)
+      - [Talon.One](connectors/loyalty/talon-one.md)
    - 마케팅 자동화 {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -315,6 +316,8 @@ ht-degree: 34%
          - [로컬 파일 업로드](tutorials/ui/create/local-system/local-file-upload.md)
       - 충성도 {#loyalty}
          - [모세관 스트리밍 이벤트](tutorials/ui/create/loyalty/capillary.md)
+         - [Talon.One 스트리밍 이벤트](tutorials/ui/create/loyalty/talon-one-streaming.md)
+         - [Talon.One 일괄 처리 Source 커넥터](tutorials/ui/create/loyalty/talon-one-batch.md)
       - 마케팅 자동화 {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
