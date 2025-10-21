@@ -43,4 +43,4 @@ Adobe Experience Platform UI에 액세스할 수 있는 경우 왼쪽 탐색 메
 
 ## 다음 단계
 
-로그인에 성공했으므로 [ UI를 사용하여 다양한 작업을 수행하는 방법에 대한 단계는 ](user-guide.md)사용 안내서[!DNL Privacy Service]를 참조하십시오.
+로그인에 성공했으므로 [&#x200B; UI를 사용하여 다양한 작업을 수행하는 방법에 대한 단계는 &#x200B;](user-guide.md)사용 안내서[!DNL Privacy Service]를 참조하십시오.
