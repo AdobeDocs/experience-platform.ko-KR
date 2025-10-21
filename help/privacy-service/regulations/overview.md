@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 개인 정보 보호 규정 개요
 description: 이 문서에서는 Adobe Experience Cloud에서 지원하는 다양한 개인 정보 보호 규정에 대한 개요를 제공합니다.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: c2394035dd6bd4fe6dbb443e4db13934a27066a6
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: '2087'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->미국 주 개인 정보 보호법의 수가 증가하는 것을 지원하기 위해 Privacy Service에서 `regulation_type` 값을 변경하고 있습니다. **12 June 2025**&#x200B;부터 상태 약어(예: `ucpa_ut_usa`)를 포함하는 새 값을 사용하십시오. 이전 값(예: `ucpa_usa`)은 **28 July 2025** 이후에 작동을 중지합니다.
+>미국 주 개인 정보 보호법의 수가 증가하는 것을 지원하기 위해 Privacy Service에서 `regulation_type` 값을 변경하고 있습니다. `ucpa_ut_usa`12 June 2025 **부터 상태 약어(예:**)를 포함하는 새 값을 사용하십시오. 이전 값(예: `ucpa_usa`)은 **28 July 2025** 이후에 작동을 중지합니다.
 >
 >이 기한 전에 통합을 업데이트하여 요청 실패를 방지하십시오.
 
@@ -39,12 +39,14 @@ Experience Cloud은 [Adobe Experience Platform Privacy Service](../home.md)을(�
 | MCDPA(미네소타) | `mcdpa_mn_usa` | [[!DNL Minnesota Consumer Data Privacy Act (MCDPA)]](https://www.house.mn.gov/comm/docs/C6hTV3TEt0W2vuhEMtczrQ.pdf)은(는) 미네소타 거주자에게 개인 데이터의 복사본을 액세스, 수정, 삭제 및 얻을 수 있는 권한을 제공합니다. 또한 합법적이거나 유사하게 중요한 효과를 발생시키는 결정을 제공하는 경우 개인 데이터, 타겟팅 광고 및 프로파일링을 거부할 수 있는 권리도 부여합니다. 이 법은 데이터 제어자에게 명확한 개인 정보 보호 알림을 제공하고, 데이터 보호 평가를 수행하고, 합리적인 데이터 보안 사례를 유지하기 위한 의무를 부과합니다. 집행 권한은 미네소타 주 법무장관에게 부여된다. |
 | MCDPA(몬타나) | `mcdpa_mt_usa` | [[!DNL Montana Consumer Data Privacy Act]](https://legiscan.com/MT/text/SB384/id/2791095)은(는) 거주자에게 비즈니스가 수집, 공유 및 판매하는 개인 데이터와 사용 목적을 알 수 있는 권한을 제공합니다. 또한 소비자에게 수집된 데이터를 수정, 삭제 또는 복사할 수 있는 권한을 부여합니다. 이 법은 50,000명 이상의 몬타나 소비자의 데이터를 처리하는 기업에 적용된다. 동법은 생체 및 유전 정보를 포함한 민감한 개인 데이터의 보호를 강조하고 있다. |
 | MHMDA(워싱턴) | `mhmda_wa_usa` | [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true)은(는) 건강 데이터에 대한 소비자의 개인 정보 권한을 향상시킵니다. 건강 데이터에 대한 공개, 소비자 동의, 삭제 권한을 의무화하고, 허가 없이 건강 데이터를 판매하는 것을 금지한다. 또한, 이 법은 의료 시설 주변에서 지오펜싱을 사용하는 것을 불법으로 만듭니다. |
+| MODPA(메릴랜드) | `modpa_md_usa` | [[!DNL Maryland Online Data Privacy Act]](https://mgaleg.maryland.gov/2024RS/bills/sb/sb0541e.pdf)은(는) 액세스, 수정, 삭제 및 데이터 이동성을 포함하여 메릴랜드 거주자에게 권한을 부여합니다. 거주자는 타겟팅 광고, 개인 데이터 판매 및 프로파일링을 거부할 수 있습니다. 컨트롤러는 고위험 처리를 위해 개인 정보 보호 알림을 제공하고 데이터 보호 평가를 수행해야 합니다. MODPA는 정신 또는 생식 보건 시설 주변의 지오펜싱을 금지하여 눈에 띈다. 이 법은 35,000명 이상의 소비자의 데이터를 처리하는 엔티티 또는 10,000명 이상의 소비자의 데이터를 처리하고 해당 데이터 판매로 인한 수익의 20% 이상을 파생시키는 엔티티에 적용됩니다. 그것은 메릴랜드 주 법무장관에 의해 시행된다. |
 | NDPA(네브래스카) | `ndpa_ne_usa` | [[!DNL Nebraska Data Protection Act]](https://nebraskalegislature.gov/FloorDocs/108/PDF/Slip/LB1074.pdf)은(는) Nebraskans에게 액세스, 수정, 삭제 및 판매 중지 등 개인 데이터에 대한 권한을 제공합니다. 이 법은 개인정보 처리와 판매에 따른 수익을 위하여 특정한 기준에 해당하는 사업자에 대하여 적용한다. 또한 기업이 합리적인 데이터 보안 관행을 구현하도록 하고, 과징금이 부과되기 전에 규정 준수 문제 해결을 위한 30일 의무적인 치유 기간을 제공합니다. |
 | 뉴질랜드 [!DNL Privacy Act] | `nzpa_nzl` | [뉴질랜드 [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/)에서는 기관이 뉴질랜드 시민과 조직의 개인 정보를 수집, 사용, 공개, 저장 및 액세스하는 방법을 제어합니다. 2020년, 이 법의 최신 버전은 이러한 개인 정보 보호법에 대한 중요한 업데이트를 도입했습니다. 이 업데이트에는 새로운 위반, 벌금, 데이터 위반에 대한 필수 알림 및 개인정보 보호 관리자의 권한 증대가 포함됩니다. |
 | NHDPA(뉴햄프셔) | `nhpa_nh_usa` | [[!DNL New Hampshire Privacy Act]](https://www.doj.nh.gov/sites/g/files/ehbemt721/files/inline-documents/sonh/data-privacy-faqs-revised_0.pdf)은(는) 데이터 액세스, 삭제 및 이동성과 관련된 소비자 권한을 설정하여 New Hampshire 거주자의 개인 정보를 보호합니다. 조직은 데이터 수집 및 공유 사례를 공개해야 하며, 소비자가 데이터 판매를 옵트아웃할 수 있도록 합니다. 이 법은 특정 데이터 처리 임계값을 충족하는 사업자에 적용됩니다. |
 | NJDPA(뉴저지) | `njdpa_nj_usa` | [[!DNL New Jersey Data Protection Act]](https://pub.njleg.state.nj.us/Bills/2022/S0500/332_R6.PDF)은(는) 정보를 액세스, 수정 및 삭제할 수 있는 권한을 제공하여 New Jersey 거주자에게 개인 데이터에 대한 제어 권한을 부여합니다. 여기에는 데이터 판매 및 타깃팅된 광고를 위한 옵트아웃 메커니즘이 포함되어 있습니다. 이 법안은 많은 양의 소비자 데이터를 처리하고 데이터 사용의 투명성을 의무화하는 비즈니스를 포함합니다. |
 | OCPA(오레곤) | `ocpa_or_usa` | [[!DNL Oregon Consumer Privacy Act]](https://olis.oregonlegislature.gov/liz/2023R1/Downloads/PublicTestimonyDocument/59856#:~:text=The%20Act%20requires%20controllers%20to,data%3B%20and%20%E2%80%A2%20Contact%20information.)&#x200B;(OCPA)은(는) 오레곤 거주자에게 개인 데이터에 대한 기본 권한을 제공하고 이러한 데이터를 처리하는 기업에 의무를 부과합니다. 소비자는 데이터를 알고, 수정하고, 삭제하고, 사본을 얻을 수 있는 권리가 있으며 타깃팅된 광고 또는 판매에 대한 데이터 처리를 거부할 수 있습니다. 이 법에서는 중요한 데이터에 대한 보호를 강화하고 지정된 목적 이상의 데이터 처리에 동의해야 하며 데이터 관리자의 포괄적인 개인 정보 보호 고지를 의무화합니다. |
 | PDPA(태국) | `pdpa_tha` | [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act)은(는) 태국 데이터 소유자를 불법 수집, 사용 또는 개인 데이터 공개로부터 보호하기 위해 도입되었습니다. 유럽 연합의 GDPR에서 영감을 얻어, 이 규정은 태국 시민에게 저장된 개인 데이터에 대한 액세스 또는 삭제를 요청할 수 있는 권리를 부여합니다. |
+| PIPA(대한민국) | `pipa_kor` | [[!DNL Personal Information Protection Act (PIPA)]](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG)은(는) 대한민국 거주자의 개인 데이터 처리 및 보호를 규제합니다. PIPA는 거주자에게 고지, 열람, 사본 취득, 처리 정정·삭제·정지 요청 등의 권리를 부여한다. 개인정보처리자는 수집 목적을 명시하고, 필요한 최소한의 범위에서 적법하게 데이터를 처리하여야 하며, 데이터의 정확성을 보장하여야 한다. PIPA는 개인정보보호위원회도 설립하여 개인정보 보호 규정을 조사·시행하고 있다. |
 | ql25(퀘벡) | `ql25_qc_can` | [[!DNL Quebec Law 25]](https://www.canlii.org/en/qc/laws/astat/sq-2021-c-25/latest/sq-2021-c-25.html)&#x200B;(QL25)은(는) 글로벌 표준에 맞게 퀘벡 거주자를 위한 개인 정보 권한을 향상시킵니다. 이 법은 거주자가 개인 데이터에 접근, 수정, 삭제 및 전송할 수 있는 명시적 동의, 데이터 최소화 및 권한을 의무화합니다. 또한 조직은 개인정보 보호 책임자를 지정하고, 개인정보 영향 평가를 수행하고, 위반 사실을 알려야 합니다. 법적으로 강제된 준수 기한과 상당한 처벌이 미이행에 적용됩니다. |
 | TDPSA(텍사스) | `tdpsa_tx_usa` | [[!DNL Texas Data Privacy and Security Act]](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=88R&Bill=HB4)&#x200B;(TDPSA)은(는) 텍사스에서 소비자의 개인 데이터를 수집, 사용, 처리 및 처리하도록 규제합니다. 2024년 7월 1일부터 이 서비스는 주민들에게 데이터 사본에 대한 액세스, 수정, 삭제 및 획득과 타겟팅 광고 및 데이터 판매를 거부할 수 있는 권한을 부여합니다. 이 법은 소규모 기업과 특정 다른 조직을 제외하고 텍사스에서 사업을 하거나 텍사스 주민들이 소비하는 제품/서비스를 생산하는 기업에 적용된다. 위반 시 민사 처벌이 발생할 수 있습니다. |
 | 티파어(테네시) | `tipa_tn_usa` | [[!DNL Tennessee Information Protection Act (TIPA)]](https://www.capitol.tn.gov/Bills/113/Bill/HB1181.pdf)은(는) 테네시 거주자에게 개인 데이터의 복사본을 액세스, 수정, 삭제 및 얻을 수 있는 권한을 부여합니다. 또한 개인 정보, 타겟팅 광고 및 특정 유형의 프로파일링에 대한 판매 거부 권리를 제공합니다. 이 법은 데이터 처리 및 수입에 대한 특정 임계값을 충족하는 비즈니스에 적용되며 명확한 개인 정보 보호 고지, 데이터 최소화 및 합리적인 보안 조치를 요구합니다. 집행 권한은 테네시 주 법무 장관에게 부여된다. |

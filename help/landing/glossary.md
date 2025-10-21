@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 용어
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '8009'
+source-wordcount: '8170'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 **특성**: 특성은 프로필을 나타내는 지정된 특성입니다.
 
-**특성 병합**: Real-Time Customer Profile API를 사용하여 병합 정책을 정의할 때 `attributeMerge` 개체는 데이터 충돌 시 병합 정책에서 프로필 특성에 우선 순위를 매기는 방식을 나타냅니다. Experience Platform UI에서 병합 정책을 정의할 때 [!UICONTROL 병합 메서드]을(를) 선택하는 것과 같습니다.
+**특성 병합**: Real-Time Customer Profile API를 사용하여 병합 정책을 정의할 때 `attributeMerge` 개체는 데이터 충돌 시 병합 정책에서 프로필 특성에 우선 순위를 매기는 방식을 나타냅니다. Experience Platform UI에서 병합 정책을 정의할 때 [!UICONTROL Merge method]을(를) 선택하는 것과 같습니다.
 
 **Attribution AI**: [!DNL Attribution AI]은(는) Adobe Sensei에서 제공하는 지능형 서비스로, 전체 고객 라이프사이클에 걸쳐 알고리즘 방식의 다채널 속성 기능을 제공합니다.
 
@@ -95,7 +95,7 @@ ht-degree: 0%
 
 **클래스**: XDM(Experience Data Model)에서 클래스는 스키마를 만드는 데 사용되는 가장 작은 필드 집합을 정의하고 스키마가 나타내는 비즈니스 개체의 기본 동작을 정의합니다.
 
-**클라이언트**: 클라이언트는 [!DNL PostgreSQL] 프로토콜 또는 HTTP API를 통해 [!DNL Query Service]에 연결하는 외부 도구 또는 응용 프로그램입니다.
+**클라이언트**: 클라이언트는 [!DNL Query Service] 프로토콜 또는 HTTP API를 통해 [!DNL PostgreSQL]에 연결하는 외부 도구 또는 응용 프로그램입니다.
 
 **컬렉션**: [!DNL Offer Decisioning]에서 컬렉션은 오퍼의 범주와 같이 마케터가 정의한 사전 정의된 조건을 기반으로 하는 오퍼의 하위 집합입니다.
 
@@ -281,7 +281,7 @@ ht-degree: 0%
 
 **ID(&quot;I&quot;) 레이블**: ID(&quot;I&quot;) 데이터 사용 레이블은 특정 사용자를 식별하거나 연결할 수 있는 데이터를 분류하는 데 사용됩니다.
 
-**ID 그래프**: ID 그래프는 개별 고객에 대해 존재하는 결합된 ID와 연결된 ID 간의 관계 맵입니다. 각 ID 그래프는 고객 활동을 통해 거의 실시간으로 업데이트됩니다. 데이터에서 ID 관계의 일반적인 구조는 [!UICONTROL 개인 그래프]로 표시되며, 이는 각 개별 ID 그래프의 구조적 블루프린트 역할을 합니다.
+**ID 그래프**: ID 그래프는 개별 고객에 대해 존재하는 결합된 ID와 연결된 ID 간의 관계 맵입니다. 각 ID 그래프는 고객 활동을 통해 거의 실시간으로 업데이트됩니다. 데이터에서 ID 관계의 일반적인 구조는 [!UICONTROL Private Graph]로 표시되며, 이는 각 개별 ID 그래프의 구조적 블루프린트 역할을 합니다.
 
 **ID 네임스페이스**: ID 네임스페이스는 전자 메일 주소 또는 CRM ID와 같은 식별자의 컨텍스트를 정의합니다.
 
@@ -305,7 +305,7 @@ ht-degree: 0%
 
 **입력 기능**: 입력 기능은 기능 매핑에 지정되며 기계 학습 모델에서 예측을 수행하는 데 사용됩니다.
 
-**[!DNL Intelligent Services]**: [!DNL Attribution AI] 및 [!DNL Customer AI]과(와) 같은 [!DNL Intelligent Services]은(는) Experience Platform(또는 Adobe Real-Time Customer Data Platform과 같은 Experience Platform 위에 구축된 애플리케이션)를 실행하고 운영해야 하는 머신 러닝, 인공 지능 기반 모델입니다.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] 및 [!DNL Attribution AI]과(와) 같은 [!DNL Customer AI]은(는) Experience Platform(또는 Adobe Real-Time Customer Data Platform과 같은 Experience Platform 위에 구축된 애플리케이션)를 실행하고 운영해야 하는 머신 러닝, 인공 지능 기반 모델입니다.
 
 **관심 기반 타기팅 또는 개인화**: 다음 세 가지 조건이 충족되는 경우 관심 기반 타기팅(개인화)이 발생합니다.
 
@@ -351,6 +351,8 @@ ht-degree: 0%
 
 **모듈**: 태그에서 모듈은 규칙을 만들 필요 없이 클라이언트 환경에서 작업을 수행하는 확장 프로그램에서 제공하는 실행 가능한 JavaScript 코드 조각입니다.
 
+**MODPA**: 2024년의 [!DNL Maryland Online Data Privacy Act]&#x200B;(MODPA)은 액세스, 수정, 삭제 및 데이터 이동성을 포함한 메릴랜드 거주자의 권한을 부여합니다. 거주자는 타겟팅 광고, 개인 데이터 판매 및 프로파일링을 거부할 수 있습니다. 컨트롤러는 고위험 처리를 위해 개인 정보 보호 알림을 제공하고 데이터 보호 평가를 수행해야 합니다. MODPA는 정신 또는 생식 보건 시설 주변의 지오펜싱을 금지하여 눈에 띈다. 이 법은 35,000명 이상의 소비자의 데이터를 처리하는 엔티티 또는 10,000명 이상의 소비자의 데이터를 처리하고 해당 데이터 판매로 인한 수익의 20% 이상을 파생시키는 엔티티에 적용됩니다. 그것은 메릴랜드 주 법무장관에 의해 시행된다.
+
 ## N
 
 **[!DNL New Zealand Privacy Act]**: [[!DNL New Zealand Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/)은(는) 기관이 뉴질랜드 시민과 조직의 개인 정보를 수집, 사용, 공개, 저장 및 액세스하는 방법을 제어합니다. 2020년, 이 법의 최신 버전에서는 새로운 위반, 벌금 인상, 데이터 위반에 대한 필수 알림, 개인정보 보호위원의 권한 강화 등 이러한 개인정보 보호법에 대한 중요한 업데이트를 도입했습니다.
@@ -377,17 +379,15 @@ ht-degree: 0%
 
 ## P
 
-**부분 수집**: 부분 수집을 사용하면 지정된 오류 임계값 내에서 배치 데이터의 유효한 레코드를 수집할 수 있습니다. 실패한 레코드에 대한 오류 진단은 [!UICONTROL 모니터링] 또는 [!UICONTROL 소스] 데이터 흐름 실행 개요에서 다운로드하거나 액세스할 수 있습니다.
+**부분 수집**: 부분 수집을 사용하면 지정된 오류 임계값 내에서 배치 데이터의 유효한 레코드를 수집할 수 있습니다. 실패한 레코드에 대한 오류 진단은 [!UICONTROL Monitoring] 또는 [!UICONTROL Sources] 데이터 흐름 실행 개요에서 다운로드하거나 액세스할 수 있습니다.
 
 **Parquet 파일**: Parquet 파일은 복잡한 중첩 데이터 구조가 있는 열 형식 저장소 파일 형식입니다. 데이터를 추가하여 스키마 데이터 세트를 채우려면 Parquet 파일이 필요합니다.
 
 **PDPA**: [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act)은(는) 태국 데이터 소유자의 개인 데이터를 불법적으로 수집, 사용 또는 공개하지 못하도록 보호하기 위해 도입되었습니다. 유럽 연합의 GDPR에서 영감을 얻어, 이 규정은 태국 시민에게 저장된 개인 데이터에 대한 액세스 또는 삭제를 요청할 수 있는 권리를 부여합니다.
 
-<!-- Not yet released
-**PDPD**: The [[!DNL Personal Data Protection Decree] (PDPD) 
--->
-
 **개인화된 오퍼**: 개인화된 오퍼는 자격 규칙 및 제한에 따라 사용자 지정 가능한 마케팅 메시지입니다.
+
+**PIPA**(대한민국): [[!DNL Personal Information Protection Act] (PIPA)](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG)은(는) 한국 거주자의 개인 데이터 처리 및 보호를 규제합니다. PIPA는 통지, 액세스, 사본 취득, 처리 정정·삭제·정지 요청 등의 권리를 부여한다. 개인정보처리자는 수집 목적을 명시하고, 필요한 최소한의 범위에서 적법하게 데이터를 처리하여야 하며, 데이터의 정확성을 보장하여야 한다. PIPA는 개인정보보호위원회도 설립하여 개인정보 보호 규정을 조사·시행하고 있다.
 
 **배치**: 배치는 최종 사용자에게 나타나는 오퍼의 위치 및 컨텍스트입니다.
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service UI의 개인 정보 작업 관리
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 요청을 조정하고 모니터링하는 방법에 대해 알아봅니다.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '1770'
-ht-degree: 11%
+source-wordcount: '1689'
+ht-degree: 12%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 11%
 
 ## [!DNL Privacy Service] UI 대시보드 찾아보기
 
-[!DNL Privacy Service] UI용 대시보드는 개인 정보 작업의 상태를 볼 수 있는 두 가지 위젯을 제공합니다. &quot;[!UICONTROL 상태 보고서]&quot; 및 &quot;[!UICONTROL 작업 요청]&quot;. 대시보드에는 표시된 작업에 대해 현재 선택한 규정도 표시됩니다.
+[!DNL Privacy Service] UI용 대시보드는 개인 정보 작업의 상태를 볼 수 있는 두 개의 위젯을 제공합니다. &quot;[!UICONTROL Status Report]&quot; 및 &quot;[!UICONTROL Job Requests]&quot;. 대시보드에는 표시된 작업에 대해 현재 선택한 규정도 표시됩니다.
 
 ![UI 대시보드](../images/user-guide/dashboard.png)
 
@@ -36,44 +36,53 @@ ht-degree: 11%
 
 [!DNL Privacy Service]은(는) 여러 개인 정보 보호 규정에 대한 작업 요청을 지원합니다. 다음 표에는 UI에 표시되는 지원되는 규정 및 해당 레이블이 나열되어 있습니다.
 
-| UI 레이블 | 규정 |
-|-------------------------------------|------------------------|
-| [!UICONTROL APA_AUS(오스트레일리아)] | [!DNL Australia Privacy Act] |
-| [!UICONTROL CCPA(캘리포니아)] | [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPA_USA(콜로라도)] | [!DNL Colorado Privacy Act] |
-| [!UICONTROL CPRA_USA(캘리포니아)] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA_USA(Connecticut)] | [!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL DPDPA_USA(Delaware)] | [!DNL Delaware Personal Data Privacy Act] |
-| [!UICONTROL FDBR_USA(플로리다)] | [!DNL Florida Digital Bill of Rights] |
-| [!UICONTROL GDPR(유럽 연합)] | 유럽 연합의 [!DNL General Data Protection Regulation] |
-| [!UICONTROL HIPPA_USA(미국)] | [!DNL Health Insurance Portability and Accountability Act] |
-| [!UICONTROL ICDPA_USA]&#x200B;(Iowa) | [!DNL Iowa Consumer Data Protection Act] |
-| [!UICONTROL LGPD_BRA(브라질)] | 브라질의 &quot;[!DNL General Data Protection Law]&quot; [!DNL Lei Geral de Proteção de Dados] |
-| [!UICONTROL MHMDA_USA(워싱턴)] | [!DNL Washington My Health My Data Act] |
-| [!UICONTROL MCDPA_USA(몬타나)] | [!DNL Montana Consumer Data Privacy Act] |
-| [!UICONTROL NDPA_USA(네브래스카)] | [!DNL Nebraska Data Protection Act] |
-| [!UICONTROL NZPA_NZL(뉴질랜드)] | 뉴질랜드 [!DNL Privacy Act] |
-| [!UICONTROL NHPA_USA(뉴햄프셔)] | [!DNL New Hampshire Privacy Act] |
-| [!UICONTROL NJDPA_USA(뉴저지)] | [!DNL New Jersey Data Protection Act] |
-| [!UICONTROL OCPA USA(오레곤)] | [!DNL Oregon Consumer Privacy Act] |
-| [!UICONTROL PDPA_THA(태국)] | 태국 [!DNL Personal Data Protection Act] |
-| [!UICONTROL QL25_CAN(퀘벡)] | [!DNL Quebec Law 25] |
-| [!UICONTROL TDPSA USA(텍사스)] | [!DNL Texas Data Privacy and Security Act] |
-| [!UICONTROL UCPA_USA(유타)] | [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA(버지니아)] | [!DNL Virginia Consumer Data Protection Act] |
+소비자 권리 및 필수 비즈니스 의무를 설명하는 각 규정에 대한 설명은 [개인 정보 보호 규정 개요](../regulations/overview.md)를 참조하세요.
+
+>[!TIP]
+>
+>일반적인 편의를 위해 API 규정 유형이 포함되었습니다.
+
+| UI 레이블 | API `regulation_type` | 규정 |
+|-------------------------------------------|-----------------------|----------------|
+| [!UICONTROL APA_AUS (Australia)] | `apa_aus` | [!DNL Australia Privacy Act] |
+| [!UICONTROL CCCA (California)] | `ccpa` | [!DNL California Consumer Privacy Act]&#x200B;(CCPA) |
+| [!UICONTROL CPA_CO_USA (Colorado)] | `cpa_co_usa` | [!DNL Colorado Privacy Act] |
+| [!UICONTROL CPRA_CA_USA (California)] | `cpra_ca_usa` | [!DNL California Privacy Rights Act]&#x200B;(CPRA) |
+| [!UICONTROL CTDPA_CT_USA (Connecticut)] | `ctdpa_ct_usa` | [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL DPDPA_DE_USA (Delaware)] | `dpdpa_de_usa` | [!DNL Delaware Personal Data Privacy Act] |
+| [!UICONTROL FDBR_FL_USA (Florida)] | `fdbr_fl_usa` | [!DNL Florida Digital Bill of Rights] |
+| [!UICONTROL GDPR (European Union)] | `gdpr` | 유럽 연합의 [!DNL General Data Protection Regulation] |
+| [!UICONTROL HIPAA_USA (United States)] | `hipaa_usa` | [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL ICDPALIA_USA (Iowa)] | `icdpa_ia_usa` | [!DNL Iowa Consumer Data Protection Act] |
+| [!UICONTROL LGPD_BRA (Brazil)] | `lgpd_bra` | 브라질의 &quot;[!DNL General Data Protection Law]&quot; [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MCDPA_MN_USA (Minnesota)] | `mcdpa_mn_usa` | [!DNL Minnesota Consumer Data Privacy Act] |
+| [!UICONTROL MCDPA_MT_USA (Montana)] | `mcdpa_mt_usa` | [!DNL Montana Consumer Data Privacy Act] |
+| [!UICONTROL MHMDA_WA_USA (Washington)] | `mhmda_wa_usa` | [!DNL Washington My Health My Data Act] |
+| [!UICONTROL MODPA_MD_USA (Maryland)] | `modpa_md_usa` | [!DNL Maryland Online Data Privacy Act] |
+| [!UICONTROL NDPA_NE_USA (Nebraska)] | `ndpa_ne_usa` | [!DNL Nebraska Data Protection Act] |
+| [!UICONTROL NHPA_NH_USA (New Hampshire)] | `nhpa_nh_usa` | [!DNL New Hampshire Privacy Act] |
+| [!UICONTROL NJDPA_NJ_USA (New Jersey)] | `njdpa_nj_usa` | [!DNL New Jersey Data Protection Act] |
+| [!UICONTROL NZPA_NZL (New Zealand)] | `nzpa_nzl` | 뉴질랜드 [!DNL Privacy Act]&#x200B;(PA) |
+| [!UICONTROL OCPA_OR_USA (Oregon)] | `ocpa_or_usa` | [!DNL Oregon Consumer Privacy Act] |
+| [!UICONTROL PDPA_THA (Thailand)] | `pdpa_tha` | 태국 [!DNL Personal Data Protection Act]&#x200B;(PDPA) |
+| [!UICONTROL PIPA_KOR (South Korea)] | `pipa_kor` | 대한민국 [!DNL Personal Information Privacy Act]&#x200B;(PIPA) |
+| [!UICONTROL QL25_QC_CAN (Quebec)] | `ql25_qc_can` | [!DNL Quebec Law 25] |
+| [!UICONTROL TDPSA_TX_USA (Texas)] | `tdpsa_tx_usa` | [!DNL Texas Data Privacy and Security Act] |
+| [!UICONTROL TIPA_TN_USA (Tennessee)] | `tipa_tn_usa` | [!DNL Tennessee Information Protection Act] |
+| [!UICONTROL UCPA_UT_USA (Utah)] | `ucpa_ut_usa` | [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_VA_USA (Virginia)] | `vcdpa_va_usa` | [!DNL Virginia Consumer Data Protection Act]&#x200B;(VCDPA) |
 
 {style="table-layout:auto"}
 
-<!-- 
-Waiting:
-| **[!UICONTROL PIPA_KOR]**  ?        | South Korea [!DNL Personal Information Privacy Act] |
- -->
+<!-- | [!UICONTROL ICDPA_IN_USA (Indiana)]       | `icdpa_in_usa` | [!DNL Indiana Consumer Data Protection Act]| NOT SUPP YET JAN 1st ### ... -->
+<!-- | [!UICONTROL KCDPA_KY_USA (Kentucky)]      | `kcdpa_ky_usa`| [!DNL Kentucky Consumer Data Protection Act]|  NOT SUPP YET JAN 1st ### ... -->
+<!-- | [!UICONTROL RIDTPPA_RI_USA (Rhode Island)]| `ridtppa_ri_usa` | [!DNL Rhode Island Data Transparency and Privacy Protection Act]|  NOT SUPP YET JAN 1st ### ... -->
 
 >[!NOTE]
 >
 >각 규제의 법적 컨텍스트에 대한 자세한 내용은 [지원되는 개인 정보 보호 규정](../regulations/overview.md)에 대한 개요를 참조하십시오.
 
-각 규정 유형에 대한 직무는 별도로 추적된다. 규정 유형 간에 전환하려면 **[!UICONTROL 규정 유형]** 드롭다운 메뉴를 선택하고 목록에서 원하는 규정을 선택하십시오.
+각 규정 유형에 대한 직무는 별도로 추적된다. 규정 유형 간에 전환하려면 **[!UICONTROL Regulation Type]** 드롭다운 메뉴를 선택하고 목록에서 원하는 규정을 선택하십시오.
 
 ![규정 유형 드롭다운이 있는 Privacy Service 콘솔.](../images/user-guide/regulation.png)
 
@@ -103,13 +112,13 @@ Waiting:
 
 ### 작업 요청 {#job-requests}
 
-[!UICONTROL 작업 요청] 작업 영역에 조직의 최근 작업 요청에 대한 세부 정보가 나열됩니다. 세부 정보에는 요청 유형, 현재 상태, 기한, 요청자 이메일 등이 포함됩니다. 한 번에 100개의 레코드 집합이 로드됩니다. 기본적으로 가장 최근에 생성된 작업이 맨 위에 표시되며, 탐색하기 위해 아래로 스크롤할 때 더 많은 레코드 세트가 로드됩니다.
+[!UICONTROL Job Requests] 작업 영역에 조직의 최근 작업 요청에 대한 세부 정보가 나열됩니다. 세부 정보에는 요청 유형, 현재 상태, 기한, 요청자 이메일 등이 포함됩니다. 한 번에 100개의 레코드 집합이 로드됩니다. 기본적으로 가장 최근에 생성된 작업이 맨 위에 표시되며, 탐색하기 위해 아래로 스크롤할 때 더 많은 레코드 세트가 로드됩니다.
 
 >[!NOTE]
 >
 >이전에 생성된 작업의 데이터는 완료 날짜 후 30일 동안만 액세스할 수 있습니다.
 
-[!UICONTROL 작업 요청] 제목 아래의 검색 표시줄에 키워드를 입력하여 목록을 필터링할 수 있습니다. 이 목록은 입력할 때 자동으로 필터링되며, 검색어와 일치하는 값이 포함된 요청을 표시합니다. 검색 필드는 개인 정보 작업 ID를 UI에서 현재 렌더링/로드된 작업에 일치하는 &quot;빠른&quot; 검색을 수행합니다. 제출된 모든 작업에 대한 포괄적인 검색은 아닙니다. 대신 로드된 결과에 적용되는 필터입니다. Privacy Service API를 사용하여 [특정 규정, 날짜 범위 또는 단일 작업에 따라 작업을 반환](../api/privacy-jobs.md#list)할 수 있습니다.
+[!UICONTROL Job Requests] 제목 아래의 검색 막대에 키워드를 입력하여 목록을 필터링할 수 있습니다. 이 목록은 입력할 때 자동으로 필터링되며, 검색어와 일치하는 값이 포함된 요청을 표시합니다. 검색 필드는 개인 정보 작업 ID를 UI에서 현재 렌더링/로드된 작업에 일치하는 &quot;빠른&quot; 검색을 수행합니다. 제출된 모든 작업에 대한 포괄적인 검색은 아닙니다. 대신 로드된 결과에 적용되는 필터입니다. Privacy Service API를 사용하여 [특정 규정, 날짜 범위 또는 단일 작업에 따라 작업을 반환](../api/privacy-jobs.md#list)할 수 있습니다.
 
 >[!TIP]
 >
@@ -117,11 +126,11 @@ Waiting:
 
 ![검색 필드가 강조 표시된 Privacy Console 작업 요청 섹션.](../images/user-guide/job-search.png)
 
-또는 검색 버튼을 사용하여 특정 날짜 범위에 걸친 개인 정보 작업 쿼리를 수행할 수 있습니다. 이 작업은 제공된 기간 동안 조직에서 제출한 모든 개인 정보 작업을 반환합니다. 쿼리의 시작 및 완료 날짜를 선택하려면 **[!UICONTROL 요청한 날짜]** 드롭다운 메뉴를 선택하십시오. 사용 가능한 옵션에는 [!UICONTROL 오늘], [!UICONTROL 최근 7일], [!UICONTROL 최근 2주], [!UICONTROL 최근 30일] 또는 [!UICONTROL 사용자 지정]이 있습니다. [!UICONTROL 요청한 날짜] 옵션과 함께 사용하면 검색 기능에는 선택한 날짜 범위 사이에 제출된 작업 요청만 표시됩니다.
+또는 검색 버튼을 사용하여 특정 날짜 범위에 걸친 개인 정보 작업 쿼리를 수행할 수 있습니다. 이 작업은 제공된 기간 동안 조직에서 제출한 모든 개인 정보 작업을 반환합니다. 쿼리의 시작 및 완료 날짜를 선택하려면 **[!UICONTROL Requested on]** 드롭다운 메뉴를 선택하십시오. 사용 가능한 옵션은 [!UICONTROL Today], [!UICONTROL Last 7 Days], [!UICONTROL Last 2 Weeks], [!UICONTROL Last 30 Days] 또는 [!UICONTROL Custom]입니다. [!UICONTROL Requested on] 옵션과 함께 사용하면 검색 기능에는 선택한 날짜 범위 사이에 제출된 작업 요청만 표시됩니다.
 
 ![검색 필드, 드롭다운 메뉴에서 요청됨, 검색 단추가 강조 표시된 작업 요청 섹션입니다.](../images/user-guide/requested-on-dropdown-menu.png)
 
-특정 작업 요청의 세부 정보를 보려면 목록에서 요청의 작업 ID를 선택하여 **[!UICONTROL 작업 세부 정보]** 페이지를 엽니다.
+특정 작업 요청의 세부 정보를 보려면 목록에서 요청의 작업 ID를 선택하여 **[!UICONTROL Job Details]** 페이지를 엽니다.
 
 ![GDPR UI 작업 세부 정보](../images/user-guide/job-details.png)
 
@@ -129,14 +138,14 @@ Waiting:
 
 솔루션에서 추가 데이터가 제공된 경우 이 대화 상자에서 볼 수 있습니다. 개별 제품 행을 선택하여 이 데이터를 볼 수 있습니다.
 
-전체 작업 데이터를 CSV 파일로 다운로드하려면 대화 상자의 오른쪽 상단에서 **[!UICONTROL CSV로 내보내기]**&#x200B;를 선택합니다.
+전체 작업 데이터를 CSV 파일로 다운로드하려면 대화 상자의 오른쪽 상단에서 **[!UICONTROL Export to CSV]**&#x200B;을(를) 선택합니다.
 
 ## 새 개인정보 보호 작업 요청 만들기 {#create-a-new-privacy-job-request}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"
 >title="지침"
->abstract="<ul><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=ko#logging-in-from-experience-platform">요청</a>을 선택하여 Privacy Ul를 연 다음 <b>요청 만들기</b>를 선택합니다.</li><li>여기에서 요청 빌더를 사용하거나 데이터 주체의 JSON 파일을 업로드할 수 있습니다.</li><li>요청 빌더를 사용하는 경우 작업 유형(액세스 및/또는 삭제)을 선택한 다음 제공하는 자격 증명 유형(이메일, ECID 또는 AAID)을 선택하거나 사용자 정의 자격 증명 네임스페이스를 입력합니다. 고객에 대한 적절한 ID 값을 입력하고 완료되면 <b>만들기</b>를 선택합니다.</li><li>JSON 파일을 업로드하는 경우 요청 만들기 옆에 있는 화살표를 선택합니다. 옵션 목록에서 <b>JSON 업로드</b>를 선택하고 파일을 업로드합니다. 업로드할 JSON 파일이 없는 경우 <b>Adobe-GDPR-Request.json 다운로드</b>를 선택하여 작성할 수 있는 템플릿을 다운로드합니다. JSON을 업로드하고 완료되면 <b>만들기</b>를 선택합니다.</li><li>이 기능에 대한 자세한 내용은 Experience League의 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=ko-KR">Privacy Service 사용 안내서</a>를 참조하십시오.</li></ul>"
+>abstract="<ul><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform">요청</a>을 선택하여 Privacy Ul를 연 다음 <b>요청 만들기</b>를 선택합니다.</li><li>여기에서 요청 빌더를 사용하거나 데이터 주체의 JSON 파일을 업로드할 수 있습니다.</li><li>요청 빌더를 사용하는 경우 작업 유형(액세스 및/또는 삭제)을 선택한 다음 제공하는 자격 증명 유형(이메일, ECID 또는 AAID)을 선택하거나 사용자 정의 자격 증명 네임스페이스를 입력합니다. 고객에 대한 적절한 ID 값을 입력하고 완료되면 <b>만들기</b>를 선택합니다.</li><li>JSON 파일을 업로드하는 경우 요청 만들기 옆에 있는 화살표를 선택합니다. 옵션 목록에서 <b>JSON 업로드</b>를 선택하고 파일을 업로드합니다. 업로드할 JSON 파일이 없는 경우 <b>Adobe-GDPR-Request.json 다운로드</b>를 선택하여 작성할 수 있는 템플릿을 다운로드합니다. JSON을 업로드하고 완료되면 <b>만들기</b>를 선택합니다.</li><li>이 기능에 대한 자세한 내용은 Experience League의 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=ko-KR">Privacy Service 사용 안내서</a>를 참조하십시오.</li></ul>"
 
 >[!NOTE]
 >
@@ -153,21 +162,21 @@ Waiting:
 
 요청 빌더를 사용하여 사용자 인터페이스에서 새 개인 정보 보호 작업 요청을 수동으로 만들 수 있습니다. Request Builder는 요청을 사용자당 ID 유형만 갖도록 제한하므로 더 간단하고 작은 요청 세트에 가장 적절하게 사용됩니다. 더 복잡한 요청의 경우 대신 [JSON 파일을 업로드](#json)하는 것이 좋습니다.
 
-요청 빌더를 사용하려면 화면 오른쪽의 상태 보고서 위젯 아래에서 **[!UICONTROL 요청 만들기]**&#x200B;를 선택하십시오.
+요청 빌더를 사용하려면 화면 오른쪽의 상태 보고서 위젯 아래에서 **[!UICONTROL Create Request]**&#x200B;을(를) 선택하십시오.
 
 ![요청 만들기 선택](../images/user-guide/create-request.png)
 
-**[!UICONTROL 요청 만들기]** 대화 상자가 열리고 현재 선택한 규정 유형에 대한 개인 정보 작업 요청을 제출하는 데 사용할 수 있는 옵션이 표시됩니다.
+**[!UICONTROL Create Request]** 대화 상자가 열리고 현재 선택한 규정 유형에 대한 개인 정보 작업 요청을 제출하는 데 사용할 수 있는 옵션이 표시됩니다.
 
 ![](../images/user-guide/request-builder.png){width=500}
 
-목록에서 요청의 **[!UICONTROL 작업 유형]**(&quot;삭제&quot; 또는 &quot;액세스&quot;) 및 사용 가능한 제품을 하나 이상 선택하십시오.
+목록에서 요청의 **[!UICONTROL Job Type]**(&quot;삭제&quot; 또는 &quot;액세스&quot;) 및 사용 가능한 제품을 하나 이상 선택하십시오.
 
-Privacy Service에서는 개인 데이터에 대한 두 종류의 작업 요청을 지원합니다. [!UICONTROL 액세스]&#x200B;(읽기) 및/또는 [!UICONTROL 삭제]. 조회 대상과 관련된 상품에 있는 모든 정보를 제공받도록 요청하거나 조회 대상과 관련된 모든 정보를 삭제하도록 요청할 수 있습니다.
+Privacy Service에서는 개인 데이터에 대한 두 종류의 작업 요청을 지원합니다. [!UICONTROL Access]&#x200B;(읽기) 및/또는 [!UICONTROL Delete]. 조회 대상과 관련된 상품에 있는 모든 정보를 제공받도록 요청하거나 조회 대상과 관련된 모든 정보를 삭제하도록 요청할 수 있습니다.
 
 ![](../images/user-guide/type-and-products.png){width=500}
 
-**[!UICONTROL 네임스페이스 유형]**&#x200B;에서 [!DNL Privacy Service]&#x200B;(으)로 전송되는 고객 ID에 적합한 네임스페이스 유형을 선택합니다.
+**[!UICONTROL Namespace type]**&#x200B;에서 [!DNL Privacy Service]&#x200B;(으)로 전송되는 고객 ID에 적합한 네임스페이스 유형을 선택합니다.
 
 ![](../images/user-guide/namespace-type.png){width=500}
 
@@ -179,7 +188,7 @@ Privacy Service에서는 개인 데이터에 대한 두 종류의 작업 요청�
 
 ![](../images/user-guide/custom-namespace.png){width=500}
 
-완료되면 **[!UICONTROL 만들기]**&#x200B;를 선택합니다.
+완료되면 **[!UICONTROL Create]**&#x200B;을(를) 선택합니다.
 
 ![](../images/user-guide/request-builder-create.png){width=500}
 
@@ -189,15 +198,15 @@ Privacy Service에서는 개인 데이터에 대한 두 종류의 작업 요청�
 
 처리되는 각 데이터 주체에 대해 여러 ID 유형을 사용하는 요청과 같이 보다 복잡한 요청을 만들 때 JSON 파일을 업로드하여 요청을 만들 수 있습니다.
 
-화면 오른쪽의 상태 보고서 위젯 아래에 있는 **[!UICONTROL 요청 만들기]** 옆에 있는 화살표를 선택합니다. 표시되는 옵션 목록에서 **[!UICONTROL JSON 업로드]**&#x200B;를 선택합니다.
+화면 오른쪽의 상태 보고서 위젯 아래에 있는 **[!UICONTROL Create Request]** 옆에 있는 화살표를 선택합니다. 표시되는 옵션 목록에서 **[!UICONTROL Upload JSON]**&#x200B;을(를) 선택합니다.
 
 ![만들기 옵션 요청](../images/user-guide/create-options.png)
 
-JSON 파일을 드래그하여 놓을 수 있는 창을 제공하는 **[!UICONTROL JSON 업로드]** 대화 상자가 나타납니다.
+JSON 파일을에 끌어다 놓을 수 있는 창을 제공하는 **[!UICONTROL Upload JSON]** 대화 상자가 나타납니다.
 
 ![](../images/user-guide/upload-json.png){width=500}
 
-업로드할 JSON 파일이 없는 경우 **[!UICONTROL Adobe-GDPR-Request.json 다운로드]**&#x200B;를 선택하여 데이터 주체에서 수집한 값에 따라 채울 수 있는 템플릿을 다운로드합니다.
+업로드할 JSON 파일이 없는 경우 **[!UICONTROL Download Adobe-GDPR-Request.json]**&#x200B;을(를) 선택하여 데이터 주체에서 수집한 값에 따라 채울 수 있는 템플릿을 다운로드합니다.
 
 
 ![](../images/user-guide/privacy-template.png){width=500}
@@ -205,7 +214,7 @@ JSON 파일을 드래그하여 놓을 수 있는 창을 제공하는 **[!UICONTR
 
 컴퓨터에서 JSON 파일을 찾아 대화 상자 창으로 드래그합니다. 업로드가 성공적으로 수행되면 대화 상자에 파일 이름이 표시됩니다. 필요에 따라 JSON 파일을 대화 상자로 끌어다 놓아 계속 추가할 수 있습니다.
 
-완료되면 **[!UICONTROL 만들기]**&#x200B;를 선택합니다. 대화 상자가 사라지고 새 작업(또는 작업)이 현재 처리 상태와 함께 작업 요청 위젯에 나열됩니다.
+완료되면 **[!UICONTROL Create]**&#x200B;을(를) 선택합니다. 대화 상자가 사라지고 새 작업(또는 작업)이 현재 처리 상태와 함께 작업 요청 위젯에 나열됩니다.
 
 ### 다음 단계
 
