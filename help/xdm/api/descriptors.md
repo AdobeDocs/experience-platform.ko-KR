@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 끝점을 사용하면 경험 애플리케이션 내에서 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '2916'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,11 @@ Adobe Experience Platform에서 설명자는 스키마에 동작 규칙 또는 �
 
 이 가이드에 사용된 끝점은 [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
-[!DNL Schema Registry]은(는) 표준 설명자 외에도 모델 기반 스키마에 대한 설명자 형식(예: **기본 키**, **버전** 및 **타임스탬프**)을 지원합니다. 이러한 기능은 고유성을 적용하고 버전 관리를 제어하며 스키마 수준에서 시계열 필드를 정의합니다. 모델 기반 스키마에 익숙하지 않은 경우 계속하기 전에 [Data Mirror 개요](../data-mirror/overview.md) 및 [모델 기반 스키마 기술 참조](../schema/model-based.md)를 검토하십시오.
+[!DNL Schema Registry]은(는) 표준 설명자 외에도 **기본 키**, **버전** 및 **타임스탬프**&#x200B;와 같은 관계형 스키마에 대한 설명자 형식을 지원합니다. 이러한 기능은 고유성을 적용하고 버전 관리를 제어하며 스키마 수준에서 시계열 필드를 정의합니다. 관계형 스키마에 익숙하지 않은 경우 [Data Mirror 개요](../data-mirror/overview.md) 및 [관계형 스키마 기술 참조](../schema/relational.md)를 검토한 후 계속하십시오.
+
+>[!NOTE]
+>
+>이전 버전의 Adobe Experience Platform 설명서에서는 관계형 스키마를 모델 기반 스키마라고 했습니다. 설명자 기능 및 API 엔드포인트는 변경되지 않습니다. 용어만 명확성을 위해 업데이트되었습니다.
 
 >[!IMPORTANT]
 >
@@ -296,7 +300,7 @@ curl -X DELETE \
 
 성공적인 응답은 HTTP 상태 204(콘텐츠 없음) 및 빈 본문을 반환합니다.
 
-설명자가 삭제되었는지 확인하기 위해 설명자 [에 대해 &#x200B;](#lookup)조회 요청`@id`을 수행할 수 있습니다. 설명자가 [!DNL Schema Registry]에서 제거되었으므로 응답에서 HTTP 상태 404(찾을 수 없음)를 반환합니다.
+설명자가 삭제되었는지 확인하기 위해 설명자 [에 대해 ](#lookup)조회 요청`@id`을 수행할 수 있습니다. 설명자가 [!DNL Schema Registry]에서 제거되었으므로 응답에서 HTTP 상태 404(찾을 수 없음)를 반환합니다.
 
 ## 부록 {#appendix}
 
@@ -316,7 +320,7 @@ curl -X DELETE \
 
 #### ID 설명자 {#identity-descriptor}
 
-ID 설명자는 &quot;[!UICONTROL sourceSchema]&quot;의 &quot;[!UICONTROL sourceProperty]&quot;이(가) [!DNL Identity]Experience Platform Identity Service[에 설명된 &#x200B;](../../identity-service/home.md) 필드임을 알립니다.
+ID 설명자는 &quot;[!UICONTROL sourceProperty]&quot;의 &quot;[!UICONTROL sourceSchema]&quot;이(가) [!DNL Identity]Experience Platform Identity 서비스[에서 설명한 대로 ](../../identity-service/home.md) 필드임을 알립니다.
 
 ```json
 {
@@ -397,7 +401,7 @@ ID 설명자는 &quot;[!UICONTROL sourceSchema]&quot;의 &quot;[!UICONTROL sourc
 API는 다음 두 가지 패턴을 지원합니다.
 
 - `xdm:descriptorOneToOne`: 표준 1:1 관계.
-- `xdm:descriptorRelationship`: 새 작업 및 모델 기반 스키마에 대한 일반 패턴(카디널리티, 이름 지정 및 기본 키 이외의 대상 지원).
+- `xdm:descriptorRelationship`: 새 작업 및 관계형 스키마에 대한 일반 패턴(카디널리티, 이름 지정 및 기본 키 이외의 대상 지원).
 
 ##### 일대일 관계(표준 스키마)
 
@@ -427,9 +431,9 @@ API는 다음 두 가지 패턴을 지원합니다.
 | `xdm:destinationVersion` | 참조 스키마의 주 버전. |
 | `xdm:destinationProperty` | (선택 사항) 참조 스키마 내의 대상 필드 경로입니다. 이 속성을 생략하면 일치하는 참조 ID 설명자가 포함된 모든 필드에서 대상 필드를 유추합니다(아래 참조). |
 
-##### 일반 관계(모델 기반 스키마 및 새 프로젝트에 권장)
+##### 일반 관계(관계형 스키마 및 새 프로젝트에 권장)
 
-모든 새 구현 및 모델 기반 스키마에 이 설명자를 사용합니다. 이를 통해 관계의 카디널리티를 정의하고(일대일 또는 다대일 등), 관계 이름을 지정하고, 기본 키가 아닌 대상 필드에 연결할 수 있습니다(기본 키가 아님).
+모든 새 구현 및 관계형 스키마에 이 설명자를 사용합니다. 이를 통해 관계의 카디널리티를 정의하고(일대일 또는 다대일 등), 관계 이름을 지정하고, 기본 키가 아닌 대상 필드에 연결할 수 있습니다(기본 키가 아님).
 
 다음 예는 일반적인 관계 설명자를 정의하는 방법을 보여줍니다.
 
@@ -474,7 +478,7 @@ API는 다음 두 가지 패턴을 지원합니다.
 
 | 상황 | 사용할 설명자 |
 | --------------------------------------------------------------------- | ----------------------------------------- |
-| 새 작업 또는 모델 기반 스키마 | `xdm:descriptorRelationship` |
+| 새 작업 또는 관계형 스키마 | `xdm:descriptorRelationship` |
 | 표준 스키마의 기존 1:1 매핑 | `xdm:descriptorOneToOne`에서만 지원되는 기능이 필요한 경우가 아니면 `xdm:descriptorRelationship`을(를) 계속 사용하십시오. |
 | 다대일 또는 선택적 카디널리티(`1:1`, `1:0`, `M:1`, `M:0`)가 필요합니다. | `xdm:descriptorRelationship` |
 | UI/다운스트림 가독성을 위해 관계 이름 또는 제목 필요 | `xdm:descriptorRelationship` |
@@ -493,13 +497,13 @@ API는 다음 두 가지 패턴을 지원합니다.
 | 카디널리티 | 1:1 | 1:1, 1:0, M:1, M:0(정보 제공) |
 | 대상 대상 대상 | ID/명시적 필드 | 기본적으로 기본 키 또는 `xdm:destinationProperty`을(를) 통한 비기본 키 |
 | 이름 지정 필드 | 지원되지 않음 | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName` 및 제목 |
-| 관계 맞춤 | 제한적 | 모델 기반 스키마에 대한 기본 패턴 |
+| 관계 맞춤 | 제한적 | 관계형 스키마에 대한 기본 패턴 |
 
 ##### 제한 및 유효성 검사
 
 일반적인 관계 설명자를 정의할 때 다음 요구 사항 및 권장 사항을 따르십시오.
 
-- 모델 기반 스키마의 경우 루트 수준에 소스 필드(외래 키)를 배치합니다. 이는 단순한 모범 사례 권장 사항이 아닌 수집을 위한 현재 기술적 제한입니다.
+- 관계형 스키마의 경우 소스 필드(외래 키)를 루트 수준에 배치합니다. 이는 단순한 모범 사례 권장 사항이 아닌 수집을 위한 현재 기술적 제한입니다.
 - 소스 및 대상 필드의 데이터 형식(숫자, 날짜, 부울, 문자열)이 호환되는지 확인합니다.
 - 카디널리티는 정보 제공용이며 스토리지는 이를 적용하지 않습니다. 카디널리티를 `<source>:<destination>` 형식으로 지정하십시오. 허용되는 값은 `1:1`, `1:0`, `M:1` 또는 `M:0`입니다.
 
@@ -525,7 +529,7 @@ API는 다음 두 가지 패턴을 지원합니다.
 
 >[!NOTE]
 >
->UI 스키마 편집기에서 버전 설명자가 &quot;[!UICONTROL 버전 식별자]&quot;(으)로 나타납니다.
+>UI 스키마 편집기에서 버전 설명자가 &quot;[!UICONTROL Version identifier]&quot;(으)로 나타납니다.
 
 버전 설명자(`xdm:descriptorVersion`)는 잘못된 변경 이벤트에서 충돌을 감지하고 방지하는 필드를 지정합니다.
 
@@ -547,7 +551,7 @@ API는 다음 두 가지 패턴을 지원합니다.
 
 >[!NOTE]
 >
->UI 스키마 편집기에서 타임스탬프 설명자가 &quot;[!UICONTROL 타임스탬프 식별자]&quot;(으)로 나타납니다.
+>UI 스키마 편집기에서 타임스탬프 설명자가 &quot;[!UICONTROL Timestamp identifier]&quot;(으)로 나타납니다.
 
 타임스탬프 설명자(`xdm:descriptorTimestamp`)는 `"meta:behaviorType": "time-series"`이(가) 있는 스키마의 타임스탬프로 날짜-시간 필드를 지정합니다.
 
@@ -627,7 +631,7 @@ Real-Time CDP B2B edition에서는 다대일 관계를 허용하는 스키마 �
 
 #### 사용되지 않는 필드 설명자
 
-해당 필드에 [(으)로 설정된 &#x200B;](../tutorials/field-deprecation-api.md#custom) 특성을 추가하여 사용자 지정 XDM 리소스 내의 필드를 `meta:status`사용하지 않을 수 있습니다`deprecated`. 그러나 스키마의 표준 XDM 리소스에서 제공하는 필드를 사용하지 않으려면 해당 스키마에 더 이상 사용되지 않는 필드 설명자를 할당하여 동일한 효과를 얻을 수 있습니다. [올바른 `Accept` 헤더](../tutorials/field-deprecation-api.md#verify-deprecation)를 사용하면 API에서 조회할 때 스키마에 대해 더 이상 사용되지 않는 표준 필드를 볼 수 있습니다.
+해당 필드에 [(으)로 설정된 ](../tutorials/field-deprecation-api.md#custom) 특성을 추가하여 사용자 지정 XDM 리소스 내의 필드를 `meta:status`사용하지 않을 수 있습니다`deprecated`. 그러나 스키마의 표준 XDM 리소스에서 제공하는 필드를 사용하지 않으려면 해당 스키마에 더 이상 사용되지 않는 필드 설명자를 할당하여 동일한 효과를 얻을 수 있습니다. [올바른 `Accept` 헤더](../tutorials/field-deprecation-api.md#verify-deprecation)를 사용하면 API에서 조회할 때 스키마에 대해 더 이상 사용되지 않는 표준 필드를 볼 수 있습니다.
 
 ```json
 {

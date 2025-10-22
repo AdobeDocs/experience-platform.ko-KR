@@ -3,7 +3,7 @@ title: 흐름 서비스 API를 사용하여 데이터베이스 소스에 대한 
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 데이터 흐름을 만들고 데이터베이스에서 Experience Platform으로 데이터를 수집하는 방법을 알아봅니다.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 2%
@@ -113,7 +113,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | 데이터베이스 소스의 연결 ID입니다. |
 | `params.tableName` | 소스 파일의 경로입니다. |
-| `params.cdcEnabled` | 변경 내역 캡처를 사용할지 여부를 나타내는 부울 값입니다. 모델 기반 스키마와 함께 사용하는 경우 변경 데이터 캡처는 대상 데이터 세트를 소스와 동기화된 상태로 유지하기 위해 삽입, 업데이트 및 삭제를 추적합니다. 이 속성은 다음 데이터베이스 소스에서 지원됩니다. <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> 이 기능에 대한 개요는 [Data Mirror 개요](../../../../xdm/data-mirror/overview.md)를 참조하십시오. 구현 세부 정보는 [소스 안내서에서 데이터 캡처 변경](../change-data-capture.md) 및 [모델 기반 스키마 기술 참조](../../../../xdm/schema/model-based.md)를 참조하십시오. |
+| `params.cdcEnabled` | 변경 내역 캡처를 사용할지 여부를 나타내는 부울 값입니다. 관계형 스키마와 함께 사용하는 경우 변경 데이터 캡처는 대상 데이터 세트를 소스와 동기화된 상태로 유지하기 위해 삽입, 업데이트 및 삭제를 추적합니다. 이 속성은 다음 데이터베이스 소스에서 지원됩니다. <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> 이 기능에 대한 개요는 [Data Mirror 개요](../../../../xdm/data-mirror/overview.md)를 참조하십시오. 구현 세부 정보는 [소스 안내서에서 데이터 캡처 변경](../change-data-capture.md) 및 [관계형 스키마 기술 참조](../../../../xdm/schema/relational.md)를 참조하십시오. |
 | `connectionSpec.id` | 데이터베이스 소스의 연결 사양 ID입니다. 데이터베이스 사양 ID 목록은 [부록](#appendix)을 참조하십시오. |
 
 **응답**

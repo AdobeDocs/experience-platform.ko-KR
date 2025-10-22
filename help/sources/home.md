@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Source 커넥터 개요
 description: Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집하는 동시에 Experience Platform 서비스를 사용하여 수신 데이터를 구조화하고 레이블을 지정하며 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: fac942a469f61461b5a14d9be5b9a39d921c6b25
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1666'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform을 사용하면 Adobe Analytics 및 Adobe Audience Manager�
 
 ### 고급 엔터프라이즈 소스 {#advanced-enterprise-sources}
 
-다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
+다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
 
 | 소스 | 카테고리 | 수집 유형 | 클라우드 |
 | --- | --- | --- | --- |
@@ -282,15 +282,15 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하는
 
 ## 데이터 수집에서 소스에 대한 액세스 제어
 
-데이터 수집의 소스에 대한 권한은 Adobe Admin Console 내에서 관리할 수 있습니다. 특정 제품 프로필의 **[!UICONTROL 권한]** 탭을 통해 권한에 액세스할 수 있습니다. **[!UICONTROL 권한 편집]** 패널에서 **[!UICONTROL 데이터 수집]** 메뉴 항목을 통해 소스와 관련된 권한에 액세스할 수 있습니다. **[!UICONTROL 소스 보기]** 권한은 **[!UICONTROL 카탈로그]** 탭의 사용 가능한 소스와 **[!UICONTROL 찾아보기]** 탭의 인증된 소스에 대한 읽기 전용 액세스 권한을 부여하고 **[!UICONTROL 소스 관리]** 권한은 소스를 읽기, 만들기, 편집 및 비활성화할 수 있는 전체 액세스 권한을 부여합니다.
+데이터 수집의 소스에 대한 권한은 Adobe Admin Console 내에서 관리할 수 있습니다. 특정 제품 프로필의 **[!UICONTROL Permissions]** 탭을 통해 사용 권한에 액세스할 수 있습니다. **[!UICONTROL Edit Permissions]** 패널에서 **[!UICONTROL data ingestion]** 메뉴 항목을 통해 소스와 관련된 권한에 액세스할 수 있습니다. **[!UICONTROL View Sources]** 권한은 **[!UICONTROL Catalog]** 탭의 사용 가능한 소스와 **[!UICONTROL Browse]** 탭의 인증된 소스에 대한 읽기 전용 액세스 권한을 부여하고 **[!UICONTROL Manage Sources]** 권한은 소스를 읽기, 만들기, 편집 및 비활성화하는 전체 액세스 권한을 부여합니다.
 
 다음 표에서는 이러한 권한의 다양한 조합을 기반으로 UI가 작동하는 방식을 설명합니다.
 
 | 권한 수준 | 설명 |
 | ---- | ----|
-| 다음에서 **[!UICONTROL 소스 보기]**: | [카탈로그] 탭과 [찾아보기], [계정] 및 [데이터 흐름] 탭에서 각 소스 유형의 소스에 대한 읽기 전용 액세스 권한을 부여합니다. |
-| 다음에서 **[!UICONTROL 소스 관리]**: | **[!UICONTROL 소스 보기]**&#x200B;에 포함된 함수 외에 **[!UICONTROL 카탈로그]**&#x200B;의 **[!UICONTROL Source 연결]** 옵션 및 **[!UICONTROL 찾아보기]**&#x200B;의 **[!UICONTROL 데이터 선택]** 옵션에 대한 액세스 권한을 부여합니다. **[!UICONTROL 소스 관리]**&#x200B;를 통해 **[!UICONTROL DataFlows]**&#x200B;을(를) 활성화 또는 비활성화하고 일정을 편집할 수도 있습니다. |
-| **[!UICONTROL 소스 보기]** 해제 및 **[!UICONTROL 소스 관리]** 해제 | 소스에 대한 모든 액세스를 취소합니다. |
+| **[!UICONTROL View Sources]**&#x200B;일 | [카탈로그] 탭과 [찾아보기], [계정] 및 [데이터 흐름] 탭에서 각 소스 유형의 소스에 대한 읽기 전용 액세스 권한을 부여합니다. |
+| **[!UICONTROL Manage Sources]**&#x200B;일 | **[!UICONTROL View Sources]**&#x200B;에 포함된 함수 외에 **[!UICONTROL Connect Source]**&#x200B;의 **[!UICONTROL Catalog]** 옵션 및 **[!UICONTROL Select Data]**&#x200B;의 **[!UICONTROL Browse]** 옵션에 대한 액세스 권한을 부여합니다. **[!UICONTROL Manage Sources]**&#x200B;을(를) 사용하면 **[!UICONTROL DataFlows]**&#x200B;을(를) 활성화 또는 비활성화하고 일정을 편집할 수도 있습니다. |
+| **[!UICONTROL View Sources]** 해제 및 **[!UICONTROL Manage Sources]** 해제 | 소스에 대한 모든 액세스를 취소합니다. |
 
 Adobe 권한을 통해 부여된 사용 가능한 권한에 대한 자세한 내용은 [액세스 제어 개요](../access-control/home.md)를 참조하십시오.
 
@@ -308,11 +308,11 @@ Adobe Experience Platform의 속성 기반 액세스 제어를 통해 관리자�
 
 - 조직의 특정 스키마 필드에 대한 액세스를 정의하기 위해 스키마 필드에 레이블을 적용합니다. 특정 스키마 필드에 대한 액세스가 설정되면 사용자는 액세스 권한이 있는 필드에 대한 매핑만 만들 수 있습니다.
 - 적절한 역할이 없는 사용자는 액세스할 수 없는 스키마 필드가 포함된 매핑으로 데이터 흐름을 만들거나 업데이트할 수 없습니다. 또한 권한이 없는 사용자는 액세스할 수 없는 스키마 필드로 기존 데이터 흐름을 업데이트, 삭제, 활성화 또는 비활성화할 수 없습니다.
-- 또한 데이터 흐름의 매핑, 대상 데이터 세트 및 대상 연결에서 스키마 ID와 버전이 정확히 동일해야 합니다. 이는 표준 XDM 스키마와 모델 기반 스키마 모두에 적용됩니다.
+- 또한 데이터 흐름의 매핑, 대상 데이터 세트 및 대상 연결에서 스키마 ID와 버전이 정확히 동일해야 합니다. 이는 표준 XDM 스키마와 관계형 스키마 모두에 적용됩니다.
 
 >[!NOTE]
 >
->모델 기반 스키마에는 기본 키 및 버전 식별자 필드를 포함한 추가 요구 사항이 있습니다. 자세한 내용은 [모델 기반 스키마 개요](../xdm/schema/model-based.md)를 참조하십시오.
+>관계형 스키마에는 기본 키 및 버전 식별자 필드를 비롯한 추가 요구 사항이 있습니다. 자세한 내용은 [관계형 스키마 개요](../xdm/schema/relational.md)를 참조하십시오.
 
 특성 기반 액세스 제어에 대한 자세한 내용은 [특성 기반 액세스 제어 개요](../access-control/abac/overview.md)를 참조하십시오.
 

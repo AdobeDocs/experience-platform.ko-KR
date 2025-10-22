@@ -3,9 +3,9 @@ description: Adobe Experience Platform UI에서 템플릿을 사용하여 B2B �
 title: UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: f9e3c19fdfd4ca0e03fdf3b3a7b5e82b72490dbc
 workflow-type: tm+mt
-source-wordcount: '2314'
+source-wordcount: '2271'
 ht-degree: 10%
 
 ---
@@ -51,13 +51,13 @@ Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 �
 >id="platform_sources_templates_accounttype"
 >title="비즈니스 유형 선택"
 >abstract="사용 사례에 적합한 비즈니스 유형을 선택합니다. 액세스 권한은 Real-Time Customer Data Platform 구독 계정에 따라 달라질 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko" text="Real-Time CDP 개요"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP 개요"
 
-Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스하고 Experience Platform에서 사용할 수 있는 소스 카탈로그를 확인합니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Sources]**&#x200B;을(를) 선택하여 [!UICONTROL Sources] 작업 영역에 액세스하고 Experience Platform에서 사용할 수 있는 소스 카탈로그를 확인합니다.
 
-*[!UICONTROL 범주]* 메뉴를 사용하여 범주별로 원본을 필터링하세요. 또는 검색 막대에 소스 이름을 입력하여 카탈로그에서 특정 소스를 찾습니다.
+*[!UICONTROL Categories]* 메뉴를 사용하여 범주별로 원본을 필터링하세요. 또는 검색 막대에 소스 이름을 입력하여 카탈로그에서 특정 소스를 찾습니다.
 
-[!UICONTROL Adobe 응용 프로그램] 범주로 이동하여 [!DNL Marketo Engage] 원본 카드를 확인한 다음 [!UICONTROL 데이터 추가]를 선택하여 시작합니다.
+[!UICONTROL Adobe applications] 범주로 이동하여 [!DNL Marketo Engage] 원본 카드를 확인한 다음 [!UICONTROL Add data]을(를) 선택하여 시작합니다.
 
 ![Marketo Engage 소스가 강조 표시된 소스 작업 영역의 카탈로그입니다.](../../images/tutorials/templates/catalog.png)
 
@@ -68,11 +68,11 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 >[!NOTE]
 >
->변경 데이터 캡처 워크플로우가 필요하거나 여러 데이터 모델을 지원하는 소스로 작업할 때 템플릿에서 모델 기반 스키마를 자동으로 생성할 수 있습니다. 이러한 스키마를 사용하면 실시간 데이터 동기화를 위한 Data Mirror 기능을 사용할 수 있습니다.\
->모델 기반 스키마와 함께 템플릿을 사용하는 경우 자동 생성된 에셋에 필수 기본 키, 버전 식별자 및 타임스탬프 식별자 필드가 포함됩니다.\
->자세한 내용은 [Data Mirror 개요](../../../xdm/data-mirror/overview.md) 및 [모델 기반 스키마 기술 참조](../../../xdm/schema/model-based.md)를 참조하십시오.
+>변경 데이터 캡처 워크플로우가 필요하거나 여러 데이터 모델을 지원하는 소스로 작업할 때 템플릿에서 관계형 스키마를 자동으로 생성할 수 있습니다. 이러한 스키마를 사용하면 실시간 데이터 동기화를 위한 Data Mirror 기능을 사용할 수 있습니다.\
+>관계형 스키마와 함께 템플릿을 사용하는 경우 자동 생성된 에셋에 필수 기본 키, 버전 식별자 및 타임스탬프 식별자 필드가 포함됩니다.\
+>자세한 내용은 [Data Mirror 개요](../../../xdm/data-mirror/overview.md) 및 [관계형 스키마 기술 참조](../../../xdm/schema/relational.md)를 참조하십시오.
 
-자동 생성된 에셋을 사용하려면 **[!UICONTROL 템플릿 찾아보기]**&#x200B;를 선택한 다음 **[!UICONTROL 선택]**&#x200B;을 선택하십시오.
+자동 생성된 자산을 사용하려면 **[!UICONTROL Browse templates]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Select]**&#x200B;을(를) 선택하십시오.
 
 ![템플릿을 찾아보거나 기존 자산을 사용할 수 있는 옵션이 있는 팝업 창입니다.](../../images/tutorials/templates/browse-templates.png)
 
@@ -84,13 +84,13 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 >[!TAB 기존 계정 사용]
 
-기존 계정을 사용하려면 [!UICONTROL 기존 계정]을 선택한 다음 표시되는 목록에서 사용할 계정을 선택하십시오.
+기존 계정을 사용하려면 [!UICONTROL Existing account]을(를) 선택한 다음 표시되는 목록에서 사용할 계정을 선택하십시오.
 
 ![액세스할 수 있는 기존 계정 목록이 있는 기존 계정의 선택 페이지입니다.](../../images/tutorials/templates/existing-account.png)
 
 >[!TAB 새 계정 만들기]
 
-새 계정을 만들려면 **[!UICONTROL 새 계정]**&#x200B;을 선택한 다음 원본 연결 세부 정보와 계정 인증 자격 증명을 제공하세요. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하고 새 연결을 설정할 시간을 허용합니다.
+새 계정을 만들려면 **[!UICONTROL New account]**&#x200B;을(를) 선택한 다음 원본 연결 세부 정보와 계정 인증 자격 증명을 제공하세요. 완료되면 **[!UICONTROL Connect to source]**&#x200B;을(를) 선택하고 새 연결을 설정하는 데 시간이 걸릴 수 있도록 합니다.
 
 ![원본 연결 정보 및 계정 인증 자격 증명이 있는 새 계정에 대한 인증 페이지입니다.](../../images/tutorials/templates/new-account.png)
 
@@ -184,11 +184,11 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 ![미리 보기 아이콘이 강조 표시된 템플릿 목록입니다.](../../images/tutorials/templates/templates.png)
 
-템플릿에서 샘플 데이터를 탐색하고 검사할 수 있는 미리보기 창이 나타납니다. 완료되면 **[!UICONTROL 가져오기]**&#x200B;를 선택합니다.
+템플릿에서 샘플 데이터를 탐색하고 검사할 수 있는 미리보기 창이 나타납니다. 완료되면 **[!UICONTROL Got it]**&#x200B;을(를) 선택합니다.
 
 ![샘플 데이터 미리 보기 창](../../images/tutorials/templates/preview-sample-data.png)
 
-그런 다음 목록에서 사용할 템플릿을 선택합니다. 여러 템플릿을 선택하고 한 번에 여러 데이터 흐름을 만들 수 있습니다. 그러나 템플릿은 계정당 한 번만 사용할 수 있습니다. 템플릿을 선택했으면 **[!UICONTROL 완료]**&#x200B;를 선택하고 자산을 생성할 수 있도록 잠시 기다립니다.
+그런 다음 목록에서 사용할 템플릿을 선택합니다. 여러 템플릿을 선택하고 한 번에 여러 데이터 흐름을 만들 수 있습니다. 그러나 템플릿은 계정당 한 번만 사용할 수 있습니다. 템플릿을 선택한 후에는 **[!UICONTROL Finish]**&#x200B;을(를) 선택하고 자산을 생성할 수 있도록 잠시 기다려 주십시오.
 
 사용 가능한 템플릿 목록에서 하나 또는 일부 항목을 선택하는 경우 모든 B2B 스키마 및 ID 네임스페이스가 계속 생성되어 스키마의 B2B 관계가 올바르게 구성됩니다.
 
@@ -210,7 +210,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 이 단계에서는 **다시 채우기**&#x200B;를 사용하도록 설정하고 데이터의 증분 수집을 위한 열을 정의할 수도 있습니다. 채우기 기능은 내역 데이터를 수집하는 데 사용되며 증분 수집을 위해 정의하는 열은 새 데이터를 기존 데이터와 구별할 수 있도록 합니다.
 
-수집 일정 구성을 완료했으면 **[!UICONTROL 완료]**&#x200B;를 선택합니다.
+수집 일정 구성을 완료했으면 **[!UICONTROL Finish]**&#x200B;을(를) 선택합니다.
 
 ![다시 채우기가 활성화된 Dynamics 및 Salesforce 템플릿의 예약 인터페이스입니다.](../../images/tutorials/templates/backfill.png)
 
@@ -221,17 +221,17 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 >title="자동 생성된 자산 검토"
 >abstract="모든 자산을 생성하는 데 최대 5분이 걸릴 수 있습니다. 페이지 종료를 선택하는 경우 자산이 완료되면 반환하라는 알림을 받게 됩니다. 자산이 생성되면 검토하고 언제든지 데이터 흐름에 추가 구성을 만들 수 있습니다."
 
-[!UICONTROL 템플릿 자산 검토] 페이지에 템플릿의 일부로 자동 생성된 자산이 표시됩니다. 이 페이지에서는 소스 연결과 연관된 자동 생성된 스키마, 데이터 세트, ID 네임스페이스 및 데이터 흐름을 볼 수 있습니다. 모든 자산을 생성하는 데 최대 5분이 걸릴 수 있습니다. 페이지 종료를 선택하는 경우 자산이 완료되면 반환하라는 알림을 받게 됩니다. 자산이 생성되면 검토하고 언제든지 데이터 흐름에 추가 구성을 만들 수 있습니다.
+[!UICONTROL Review template assets] 페이지에는 템플릿의 일부로 자동 생성된 자산이 표시됩니다. 이 페이지에서는 소스 연결과 연관된 자동 생성된 스키마, 데이터 세트, ID 네임스페이스 및 데이터 흐름을 볼 수 있습니다. 모든 자산을 생성하는 데 최대 5분이 걸릴 수 있습니다. 페이지 종료를 선택하는 경우 자산이 완료되면 반환하라는 알림을 받게 됩니다. 자산이 생성되면 검토하고 언제든지 데이터 흐름에 추가 구성을 만들 수 있습니다.
 
-기본적으로 자동 생성된 데이터 흐름은 매핑 규칙 또는 예약된 주파수와 같은 구성에 대한 추가 사용자 지정을 허용하도록 초안 상태로 설정됩니다. 데이터 흐름 이름 옆의 생략 부호(`...`)를 선택한 다음 **[!UICONTROL 매핑 미리 보기]**&#x200B;를 선택하여 초안 데이터 흐름에 대해 만들어진 매핑 세트를 확인합니다.
+기본적으로 자동 생성된 데이터 흐름은 매핑 규칙 또는 예약된 주파수와 같은 구성에 대한 추가 사용자 지정을 허용하도록 초안 상태로 설정됩니다. 데이터 흐름 이름 옆의 생략 부호(`...`)를 선택한 다음 **[!UICONTROL Preview mappings]**&#x200B;을(를) 선택하여 초안 데이터 흐름에 대해 만들어진 매핑 집합을 확인합니다.
 
 ![미리 보기 매핑 옵션이 선택된 드롭다운 창입니다.](../../images/tutorials/templates/preview.png)
 
-소스 데이터 필드와 대상 스키마 필드 간의 매핑 관계를 검사할 수 있는 미리보기 페이지가 나타납니다. 데이터 흐름의 매핑을 본 후 **[!UICONTROL 가져왔습니다.]** 선택
+소스 데이터 필드와 대상 스키마 필드 간의 매핑 관계를 검사할 수 있는 미리보기 페이지가 나타납니다. 데이터 흐름의 매핑을 본 후 **[!UICONTROL Got it.]** 선택
 
 ![매핑 미리 보기 창](../../images/tutorials/templates/preview-mappings.png)
 
-실행 후 언제든지 데이터 흐름을 업데이트할 수 있습니다. 데이터 흐름 이름 옆의 생략 부호(`...`)를 선택한 다음 **[!UICONTROL 데이터 흐름 업데이트]**&#x200B;를 선택합니다. 부분 수집, 오류 진단 및 경고 알림에 대한 설정과 데이터 흐름의 매핑을 포함하여 데이터 흐름 세부 정보를 업데이트할 수 있는 소스 워크플로우 페이지로 이동합니다.
+실행 후 언제든지 데이터 흐름을 업데이트할 수 있습니다. 데이터 흐름 이름 옆의 생략 부호(`...`)를 선택한 다음 **[!UICONTROL Update dataflow]**&#x200B;을(를) 선택합니다. 부분 수집, 오류 진단 및 경고 알림에 대한 설정과 데이터 흐름의 매핑을 포함하여 데이터 흐름 세부 정보를 업데이트할 수 있는 소스 워크플로우 페이지로 이동합니다.
 
 스키마 편집기 보기를 사용하여 자동 생성된 스키마를 업데이트할 수 있습니다. 자세한 내용은 [스키마 편집기 사용](../../../xdm/tutorials/create-schema-ui.md)에 대한 안내서를 참조하십시오.
 
@@ -239,29 +239,29 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 >[!TIP]
 >
->소스 작업 영역의 [!UICONTROL 데이터 흐름] 카탈로그 페이지를 통해 초안 데이터 흐름에 액세스할 수 있습니다. 상단 헤더에서 **[!UICONTROL 데이터 흐름]**&#x200B;을 선택한 다음 목록에서 업데이트할 데이터 흐름을 선택하십시오.
+>소스 작업 영역의 [!UICONTROL Dataflows] 카탈로그 페이지를 통해 초안 데이터 흐름에 액세스할 수 있습니다. 상단 헤더에서 **[!UICONTROL Dataflows]**&#x200B;을(를) 선택한 다음 목록에서 업데이트할 데이터 흐름을 선택하십시오.
 >
 >![원본 작업 영역의 데이터 흐름 카탈로그에 있는 기존 데이터 흐름의 목록입니다.](../../images/tutorials/templates/dataflows.png)
 
 ### 데이터 흐름 게시
 
-소스 워크플로우를 통해 게시 프로세스를 시작합니다. [!UICONTROL 데이터 흐름 업데이트]를 선택하면 워크플로의 *[!UICONTROL 데이터 추가]* 단계로 이동합니다. 계속하려면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+소스 워크플로우를 통해 게시 프로세스를 시작합니다. [!UICONTROL Update dataflow]을(를) 선택하면 워크플로의 *[!UICONTROL Add data]* 단계로 이동합니다. 계속하려면 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
 ![초안 데이터 흐름을 위한 데이터 추가 단계](../../images/tutorials/templates/continue-draft.png)
 
-그런 다음 데이터 흐름 세부 정보를 확인하고 오류 진단, 부분 수집 및 경고 알림에 대한 설정을 구성합니다. 완료되면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+그런 다음 데이터 흐름 세부 정보를 확인하고 오류 진단, 부분 수집 및 경고 알림에 대한 설정을 구성합니다. 완료되면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ![초안 데이터 흐름에 대한 데이터 흐름 세부 단계](../../images/tutorials/templates/dataflow-detail.png)
 
 >[!NOTE]
 >
->언제든지 **[!UICONTROL 초안으로 저장]**&#x200B;을 선택하여 데이터 흐름의 변경 사항을 중지하고 저장할 수 있습니다.
+>언제든지 **[!UICONTROL Save as draft]**&#x200B;을(를) 선택하여 중지하고 데이터 흐름의 변경 사항을 저장할 수 있습니다.
 
 매핑 단계가 나타납니다. 이 단계에서는 데이터 흐름의 매핑 구성을 재구성할 수 있습니다. 매핑에 사용되는 데이터 준비 기능에 대한 포괄적인 안내서는 [데이터 준비 UI 안내서](../../../data-prep/ui/mapping.md)를 참조하십시오.
 
 ![초안 데이터 흐름을 위한 매핑 단계입니다.](../../images/tutorials/templates/mapping.png)
 
-마지막으로 데이터 흐름의 세부 정보를 검토한 다음 **[!UICONTROL 저장 및 수집]**&#x200B;을 선택하여 초안을 게시합니다.
+마지막으로 데이터 흐름의 세부 정보를 검토한 다음 **[!UICONTROL Save & ingest]**&#x200B;을(를) 선택하여 초안을 게시합니다.
 
 ![초안 데이터 흐름을 검토하는 단계입니다.](../../images/tutorials/templates/review.png)
 

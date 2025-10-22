@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 9월
 description: Adobe Experience Platform에 대한 2025년 9월 릴리스 정보입니다.
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: fe8456823d0e7f1b60ea647e044747cfee4bc4c5
+source-git-commit: 96b9fcd8bfb4ff62eb9d4adce2e486782d918344
 workflow-type: tm+mt
-source-wordcount: '1528'
-ht-degree: 91%
+source-wordcount: '1524'
+ht-degree: 84%
 
 ---
 
@@ -48,7 +48,7 @@ Adobe Experience Platform Agent Orchestrator은 Adobe Experience Platform의 새
 
 ## 경고 {#alerts}
 
-Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이벤트 기반 알림을 구독할 수 있습니다. Experience Platform 사용자 인터페이스의 [!UICONTROL 경고] 탭을 통해 다양한 경고 규칙을 구독할 수 있으며, 원하는 경우 UI 자체 또는 이메일 알림을 통해 알림 메시지를 수신할 수 있습니다.
+Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이벤트 기반 알림을 구독할 수 있습니다. Experience Platform 사용자 인터페이스의 [!UICONTROL Alerts] 탭을 통해 다양한 경고 규칙을 구독할 수 있으며 UI 자체 내에서 또는 이메일 알림을 통해 경고 메시지를 수신하도록 선택할 수 있습니다.
 
 **새로운 기능**
 
@@ -70,14 +70,14 @@ Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) 커넥터 | 이제 특정 사용 사례에 대한 스트리밍 커넥터의 대안을 제공하는 새로운 [!DNL Snowflake Batch] 커넥터를 사용할 수 있습니다. |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) 암호화 지원 | 이제 RSA 형식의 공개 키를 첨부하여 내보낸 파일을 암호화할 수 있으므로 다른 클라우드 스토리지 대상이 중요한 정보에 대해 제공하는 것과 동일한 수준의 보안을 확보할 수 있습니다. |
-| [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) 대상에 대한 인증 만료 세부 정보 | [!DNL Pinterest] 대상에 대한 인증 만료 정보가 이제 Experience Platform 인터페이스에 직접 표시되므로 데이터 흐름이 중단되기 전에 인증이 만료되고 갱신되는 시점을 확인할 수 있습니다. **[[!UICONTROL 계정]](../../destinations/ui/destinations-workspace.md#accounts)** 또는 **[[!UICONTROL 찾아보기]](../../destinations/ui/destinations-workspace.md#browse)** 탭의 **[!UICONTROL 계정 만료 일자]** 열에서 토큰 만료 일자를 모니터링할 수 있습니다. |
+| [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) 대상에 대한 인증 만료 세부 정보 | [!DNL Pinterest] 대상에 대한 인증 만료 정보가 이제 Experience Platform 인터페이스에 직접 표시되므로 데이터 흐름이 중단되기 전에 인증이 만료되고 갱신되는 시점을 확인할 수 있습니다. **[!UICONTROL Account expiration date]** 또는 **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** 탭의 **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** 열에서 토큰 만료 날짜를 모니터링할 수 있습니다. |
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| Experience Platform UI의 향상된 대상 관리 기능 | [[!UICONTROL 찾아보기]](../../destinations/ui/destinations-workspace.md#browse) 및 [[!UICONTROL 계정]](../../destinations/ui/destinations-workspace.md#accounts) 탭에서 새로운 정렬 기능으로 대상 관리 워크플로를 개선하십시오. 이제 계정 인증이 만료될 예정일 때 시각적 표시기도 볼 수 있습니다. <br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
-| 영구적인 열 너비 설정 | 이제 페이지에서 벗어났다가 다시 돌아올 때 열 너비 설정이 유지됩니다. 예를 들어, [[!UICONTROL 찾아보기]](../../destinations/ui/destinations-workspace.md#browse) 탭에서 열 너비를 조정하면 해당 탭에서 벗어났다가 다시 돌아와도 사용자 정의 열 너비가 동일하게 유지됩니다. |
+| Experience Platform UI의 향상된 대상 관리 기능 | [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse) 및 [[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts) 탭에서 새로운 정렬 기능을 사용하여 대상 관리 워크플로를 개선합니다. 이제 계정 인증이 만료될 예정일 때 시각적 표시기도 볼 수 있습니다. <br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
+| 영구적인 열 너비 설정 | 이제 페이지에서 벗어났다가 다시 돌아올 때 열 너비 설정이 유지됩니다. 예를 들어 [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse) 탭에서 열 너비를 조정하면 다른 곳으로 이동하여 해당 탭으로 돌아갈 때 사용자 지정 열 너비가 동일하게 유지됩니다. |
 
 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
@@ -89,13 +89,13 @@ XDM은 Experience Platform에 가져온 데이터에 대한 공통 구조와 정
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 모델 기반 스키마 | 모델 기반 스키마를 사용하여 데이터 모델링을 간소화하십시오. 이제 포괄적인 방법 예제와 지침을 통해 스키마를 더 쉽게 만들 수 있습니다. 이 기능은 현재 캠페인 오케스트레이션 라이선스 보유자에게만 제공되며, 정식 출시 후에는 GA의 Data Distiller 고객에게도 확장되어 데이터 모델링의 접근성과 효율성이 향상될 예정입니다. 이 기능에는 시계열 데이터 및 변경 데이터 캡처 기능에 대한 지원이 포함됩니다. |
+| 관계형 스키마 | 관계형 스키마(이전의 모델 기반 스키마)를 사용하여 데이터 모델링을 단순화합니다. 이제 포괄적인 방법 예제와 지침을 통해 스키마를 더 쉽게 만들 수 있습니다. 이 기능은 현재 캠페인 오케스트레이션 라이선스 보유자에게만 제공되며, 정식 출시 후에는 GA의 Data Distiller 고객에게도 확장되어 데이터 모델링의 접근성과 효율성이 향상될 예정입니다. 이 기능에는 시계열 데이터 및 변경 데이터 캡처 기능에 대한 지원이 포함됩니다. |
 
 자세한 내용은 [XDM 개요](../../xdm/home.md)를 참조하십시오.
 
 <!--
 
-| Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using model-based schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
+| Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using relational schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
 -->
 
 ## 실시간 고객 프로필 {#profile}

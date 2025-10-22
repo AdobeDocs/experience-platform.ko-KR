@@ -5,10 +5,10 @@ breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: Experience Platform 내의 경험 데이터 모델(XDM) 시스템 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법을 알아봅니다.
 feature: Schemas
 role: Developer
-source-git-commit: f6e63f3fe390c1e47347015e873282719508a0ec
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 48%
+source-wordcount: '707'
+ht-degree: 20%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 48%
    * [데이터 모델링을 위한 모범 사례](schema/best-practices.md)
    * [중요한 개인 데이터](./schema/sensitive-and-personal-data.md)
    * [XDM 필드 유형 제약 조건](schema/field-constraints.md)
-   * [모델 기반 스키마](./schema/model-based.md)
+   * [관계형 스키마](./schema/relational.md)
    * [XDM의 이름 간격](./schema/namespaces.md)
    * 업계 데이터 모델 {#industries}
       * [개요](./schema/industries/overview.md)
@@ -116,14 +116,14 @@ ht-degree: 48%
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics 전체 확장](./field-groups/event/analytics-full-extension.md)
       * [Adobe Advertising Cloud 전체 확장](./field-groups/event/advertising-full-extension.md)
-      * [광고 세보 정보](./field-groups/event/advertising-details.md)
+      * [Advertising 세부 정보](./field-groups/event/advertising-details.md)
       * [애플리케이션 세부 정보](./field-groups/event/application-details.md)
       * [잔고 이체](./field-groups/event/balance-transfers.md)
       * [보트 탐지](./field-groups/event/bot-detection-information.md)
       * [캠페인 마케팅 세부 정보](./field-groups/event/campaign-marketing-details.md)
       * [카드 작업](./field-groups/event/card-actions.md)
       * [채널 세부 사항](./field-groups/event/channel-details.md)
-      * [상거래 세부 정보](./field-groups/event/commerce-details.md)
+      * [Commerce 세부 정보](./field-groups/event/commerce-details.md)
       * [예금 세부 정보](./field-groups/event/deposit-details.md)
       * [디바이스 거래 세부 정보](./field-groups/event/device-trade-in-details.md)
       * [식사 예약](./field-groups/event/dining-reservation.md)
@@ -154,7 +154,7 @@ ht-degree: 48%
    * 공급자 {#provider}
       * [의료 기관](./field-groups/provider/healthcare-provider.md)
    * 공유됨 {#shared}
-      * [외부 소스 시스템 감사 세부 정보](./field-groups/shared/external-source-system-audit-details.md)
+      * [외부 Source 시스템 감사 세부 정보](./field-groups/shared/external-source-system-audit-details.md)
    * [필드 그룹 이름 업데이트](./field-groups/name-updates.md)
 * 데이터 유형 {#data-types}
    * [계정 세부 정보](./data-types/account-details.md)
@@ -165,7 +165,7 @@ ht-degree: 48%
    * [Advertising Pod 세부 정보 컬렉션](./data-types/advertising-pod-details-collection.md)
    * [Advertising Pod 세부 사항 보고](./data-types/advertising-pod-details-reporting.md)
    * [애플리케이션](./data-types/application.md)
-   * [B2B 소스](./data-types/b2b-source.md)
+   * [B2B Source](./data-types/b2b-source.md)
    * [비콘](./data-types/beacon.md)
    * [브라우저 세부 정보](./data-types/browser-details.md)
    * [장바구니](./data-types/cart.md)
@@ -184,19 +184,19 @@ ht-degree: 48%
    * [환경](./data-types/environment.md)
    * [오류 세부 정보 수집](./data-types/error-details-collection.md)
    * [경험 채널](./data-types/experience-channel.md)
-   * [외부 소스 시스템 감사 속성](./data-types/external-source-system-audit-attributes.md)
+   * [외부 Source 시스템 감사 속성](./data-types/external-source-system-audit-attributes.md)
    * [금융 계정](./data-types/financial-account.md)
    * [일반 동의 필드](./data-types/consent-field.md)
-   * [구독이 포함된 일반 마케팅 환경 설정 필드](./data-types/marketing-field-subscriptions.md)
+   * [구독이 있는 일반 마케팅 환경 설정 필드](./data-types/marketing-field-subscriptions.md)
    * [일반 마케팅 환경 설정 필드](./data-types/marketing-field.md)
-   * [일반 개인화 환경 설정 필드](./data-types/personalization-field.md)
-   * [지리 서클](./data-types/geo-circle.md)
+   * [일반 Personalization 환경 설정 필드](./data-types/personalization-field.md)
+   * [지역 서클](./data-types/geo-circle.md)
    * [지리적 좌표](./data-types/geo-coordinates.md)
    * [지역 모습](./data-types/geo-shape.md)
    * [지리적 인터랙션 세부 정보](./data-types/geo-interaction-details.md)
    * [지역](./data-types/geo.md)
    * [ID](./data-types/identity.md)
-   * [구현 세부 정보](./data-types/implementation-details.md)
+   * [구현 세부 사항](./data-types/implementation-details.md)
    * [노출 횟수](./data-types/impressions.md)
    * [내부 사이트 검색](./data-types/internal-site-search.md)
    * [키 값 쌍](./data-types/key-value-pair.md)
@@ -213,7 +213,7 @@ ht-degree: 48%
    * [결제 항목](./data-types/payment-item.md)
    * [개인 이름](./data-types/person-name.md)
    * [개인](./data-types/person.md)
-   * [전화번호](./data-types/phone-number.md)
+   * [전화 번호](./data-types/phone-number.md)
    * [위치 컨텍스트](./data-types/place-context.md)
    * [플레이어 상태 데이터 보고](./data-types/player-state-data-reporting.md)
    * [우편 주소](./data-types/postal-address.md)
@@ -234,7 +234,7 @@ ht-degree: 48%
    * [웹 정보](./data-types/web-information.md)
    * [웹 인터랙션](./data-types/web-interaction.md)
    * [웹 페이지 세부 정보](./data-types/webpage-details.md)
-* [!UICONTROL 스키마] UI {#ui}
+* [!UICONTROL Schemas] UI {#ui}
    * [개요](./ui/overview.md)
    * [XDM 리소스 살펴보기](./ui/explore.md)
    * 리소스 만들기 및 편집 {#resources}
@@ -259,7 +259,7 @@ ht-degree: 48%
    * [개요](api/overview.md)
    * [시작하기](api/getting-started.md)
    * [스키마](api/schemas.md)
-   * [행동](api/behaviors.md)
+   * [비헤이비어](api/behaviors.md)
    * [클래스](api/classes.md)
    * [스키마 필드 그룹](api/field-groups.md)
    * [데이터 유형](api/data-types.md)

@@ -2,9 +2,9 @@
 title: API에서 소스 연결에 대한 변경 데이터 캡처 활성화
 description: API에서 소스 연결에 변경 데이터 캡처를 활성화하는 방법을 알아봅니다
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
-source-wordcount: '1238'
+source-wordcount: '1261'
 ht-degree: 0%
 
 ---
@@ -17,32 +17,36 @@ Experience Platform은 현재 새로 생성되거나 업데이트된 레코드�
 
 반면 변경 데이터 캡처는 거의 실시간으로 삽입, 업데이트 및 삭제를 캡처하고 적용합니다. 이러한 포괄적인 변경 사항 추적을 통해 데이터 세트를 소스 시스템과 완벽하게 연계하고 변동분 복제본이 지원하는 것 이상의 완벽한 변경 내역을 제공할 수 있습니다. 그러나 삭제 작업은 대상 데이터 세트를 사용하는 모든 애플리케이션에 영향을 미치므로 특별히 고려해야 합니다.
 
-Experience Platform에서 데이터 캡처를 변경하려면 **[모델 기반 스키마](../../../xdm/data-mirror/overview.md)**(관계형 스키마라고도 함)가 있는 [Data Mirror](../../../xdm/schema/model-based.md)이(가) 필요합니다. 다음 두 가지 방법으로 Data Mirror에 변경 데이터를 제공할 수 있습니다.
+Experience Platform에서 데이터 캡처를 변경하려면 **[관계형 스키마](../../../xdm/data-mirror/overview.md)**&#x200B;가 있는 [Data Mirror](../../../xdm/schema/relational.md)이(가) 필요합니다. 다음 두 가지 방법으로 Data Mirror에 변경 데이터를 제공할 수 있습니다.
 
 * **[수동 변경 추적](#file-based-sources)**: 변경 데이터 캡처 레코드를 기본적으로 생성하지 않는 소스의 데이터 집합에 `_change_request_type` 열을 포함합니다
 * **[기본 변경 데이터 캡처 내보내기](#database-sources)**: 소스 시스템에서 직접 내보낸 변경 데이터 캡처 레코드를 사용합니다.
 
-두 가지 접근 방식 모두 관계를 유지하고 고유성을 적용하기 위해 Data Mirror에 모델 기반 스키마가 있어야 합니다.
+두 가지 접근 방식 모두 관계를 유지하고 고유성을 적용하기 위해 Data Mirror에 관계형 스키마가 있어야 합니다.
 
-## 모델 기반 스키마가 있는 Data Mirror
+## 관계형 스키마가 있는 Data Mirror
 
 >[!AVAILABILITY]
 >
->Adobe Journey Optimizer **오케스트레이션된 캠페인** 라이선스 소유자는 Data Mirror 및 모델 기반 스키마를 사용할 수 있습니다. 또한 라이선스 및 기능 활성화에 따라 Customer Journey Analytics 사용자를 위한 **제한된 릴리스**(으)로도 사용할 수 있습니다. 액세스하려면 Adobe 담당자에게 문의하십시오.
+>Adobe Journey Optimizer **오케스트레이션된 캠페인** 라이선스 소유자는 Data Mirror 및 관계형 스키마를 사용할 수 있습니다. 또한 라이선스 및 기능 활성화에 따라 Customer Journey Analytics 사용자를 위한 **제한된 릴리스**(으)로도 사용할 수 있습니다. 액세스하려면 Adobe 담당자에게 문의하십시오.
+
+>[!NOTE]
+>
+>이전 버전의 Adobe Experience Platform 설명서에서는 관계형 스키마를 모델 기반 스키마라고 했습니다. 기능 및 변경 데이터 캡처 기능은 그대로 유지됩니다.
 
 >[!NOTE]
 >
 >**오케스트레이션된 캠페인 사용자**: 이 문서에 설명된 Data Mirror 기능을 사용하여 참조 무결성을 유지하는 고객 데이터를 사용합니다. 소스에서 변경 데이터 캡처 형식을 사용하지 않더라도 Data Mirror에서는 기본 키 적용, 레코드 수준 업데이트 및 스키마 관계와 같은 관계형 기능을 지원합니다. 이러한 기능은 연결된 데이터 세트 간에 일관되고 안정적인 데이터 모델링을 보장합니다.
 
-Data Mirror은 모델 기반 스키마를 사용하여 변경 데이터 캡처를 확장하고 고급 데이터베이스 동기화 기능을 활성화합니다. Data Mirror에 대한 개요는 [Data Mirror 개요](../../../xdm/data-mirror/overview.md)를 참조하십시오.
+Data Mirror은 관계형 스키마를 사용하여 변경 데이터 캡처를 확장하고 고급 데이터베이스 동기화 기능을 활성화합니다. Data Mirror에 대한 개요는 [Data Mirror 개요](../../../xdm/data-mirror/overview.md)를 참조하십시오.
 
-모델 기반 스키마는 Experience Platform을 확장하여 기본 키 고유성을 적용하고 행 수준 변경 사항을 추적하며 스키마 수준 관계를 정의합니다. 변경 데이터 캡처를 사용하면 데이터 레이크에서 직접 삽입, 업데이트 및 삭제를 적용하여 추출, 변환, 로드(ETL) 또는 수동 조정에 대한 필요성을 줄일 수 있습니다.
+관계형 스키마는 Experience Platform을 확장하여 기본 키 고유성을 적용하고, 행 수준 변경 사항을 추적하고, 스키마 수준 관계를 정의합니다. 변경 데이터 캡처를 사용하면 데이터 레이크에서 직접 삽입, 업데이트 및 삭제를 적용하여 추출, 변환, 로드(ETL) 또는 수동 조정에 대한 필요성을 줄일 수 있습니다.
 
-자세한 내용은 [모델 기반 스키마 개요](../../../xdm/schema/model-based.md)를 참조하십시오.
+자세한 내용은 [관계형 스키마 개요](../../../xdm/schema/relational.md)를 참조하십시오.
 
-### 변경 데이터 캡처를 위한 모델 기반 스키마 요구 사항
+### 변경 데이터 캡처를 위한 관계형 스키마 요구 사항
 
-변경 데이터 캡처와 함께 모델 기반 스키마를 사용하기 전에 다음 식별자를 구성합니다.
+변경 데이터 캡처와 함께 관계형 스키마를 사용하기 전에 다음 식별자를 구성합니다.
 
 * 기본 키로 각 레코드를 고유하게 식별합니다.
 * 버전 식별자를 사용하여 업데이트를 순차적으로 적용합니다.
@@ -59,9 +63,9 @@ Data Mirror은 모델 기반 스키마를 사용하여 변경 데이터 캡처�
 
 ### 워크플로 {#workflow}
 
-모델 기반 스키마로 변경 데이터 캡처를 활성화하려면 다음을 수행합니다.
+관계형 스키마를 사용하여 변경 데이터 캡처를 활성화하려면 다음을 수행합니다.
 
-1. 모델 기반 스키마를 만듭니다.
+1. 관계형 스키마를 만듭니다.
 2. 필수 설명자를 추가합니다.
    * [기본 키 설명자](../../../xdm/api/descriptors.md#primary-key-descriptor)
    * [버전 설명자](../../../xdm/api/descriptors.md#version-descriptor)
@@ -76,17 +80,17 @@ Data Mirror은 모델 기반 스키마를 사용하여 변경 데이터 캡처�
 
 >[!IMPORTANT]
 >
->**데이터 삭제 계획이 필요합니다**. 모델 기반 스키마를 사용하는 모든 애플리케이션은 변경 데이터 캡처를 구현하기 전에 삭제 의미를 이해해야 합니다. 삭제 작업이 관련 데이터 세트, 규정 준수 요구 사항 및 다운스트림 프로세스에 미치는 영향에 대해 계획합니다. 지침은 [데이터 위생 고려 사항](../../../hygiene/ui/record-delete.md#model-based-record-delete)을 참조하세요.
+>**데이터 삭제 계획이 필요합니다**. 관계형 스키마를 사용하는 모든 애플리케이션은 변경 데이터 캡처를 구현하기 전에 삭제 의미를 이해해야 합니다. 삭제 작업이 관련 데이터 세트, 규정 준수 요구 사항 및 다운스트림 프로세스에 미치는 영향에 대해 계획합니다. 지침은 [데이터 위생 고려 사항](../../../hygiene/ui/record-delete.md#relational-record-delete)을 참조하세요.
 
 ## 파일 기반 소스에 대한 변경 데이터 제공 {#file-based-sources}
 
 >[!IMPORTANT]
 >
->파일 기반 변경 데이터 캡처를 사용하려면 모델 기반 스키마가 있는 Data Mirror이 필요합니다. 아래 파일 서식 단계를 따르려면 먼저 이 문서의 앞부분에서 설명한 [Data Mirror 설치 워크플로](#workflow)를 완료하십시오. 아래 단계에서는 Data Mirror에서 처리할 변경 내용 추적 정보를 포함하도록 데이터 파일의 형식을 지정하는 방법을 설명합니다.
+>파일 기반 변경 데이터 캡처를 사용하려면 관계형 스키마가 있는 Data Mirror이 필요합니다. 아래 파일 서식 단계를 따르려면 먼저 이 문서의 앞부분에서 설명한 [Data Mirror 설치 워크플로](#workflow)를 완료하십시오. 아래 단계에서는 Data Mirror에서 처리할 변경 내용 추적 정보를 포함하도록 데이터 파일의 형식을 지정하는 방법을 설명합니다.
 
 파일 기반 원본([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage] 및 [!DNL SFTP])의 경우 파일에 `_change_request_type` 열을 포함하십시오.
 
-위의 `_change_request_type`컨트롤 열 처리[&#x200B; 섹션에 정의된 &#x200B;](#control-column-handling) 값을 사용하십시오.
+위의 `_change_request_type`컨트롤 열 처리[ 섹션에 정의된 ](#control-column-handling) 값을 사용하십시오.
 
 >[!IMPORTANT]
 >
@@ -109,13 +113,13 @@ Data Mirror은 모델 기반 스키마를 사용하여 변경 데이터 캡처�
 
 2. [클라우드 저장소에 대한 원본 연결을 만듭니다](../api/collect/cloud-storage.md#create-a-source-connection).
 
-모든 클라우드 저장소 원본은 위의 `_change_request_type`파일 기반 원본[&#x200B; 섹션에서 설명한 것과 동일한 &#x200B;](#file-based-sources) 열 형식을 사용합니다.
+모든 클라우드 저장소 원본은 위의 `_change_request_type`파일 기반 원본[ 섹션에서 설명한 것과 동일한 ](#file-based-sources) 열 형식을 사용합니다.
 
 ## 데이터베이스 소스 {#database-sources}
 
 ### [!DNL Azure Databricks]
 
-변경 데이터 캡처를 [!DNL Azure Databricks]과(와) 함께 사용하려면 소스 테이블에서 **변경 데이터 피드**&#x200B;를 사용하도록 설정하고 Experience Platform에서 모델 기반 스키마로 Data Mirror을 구성해야 합니다.
+[!DNL Azure Databricks]에서 변경 데이터 캡처를 사용하려면 소스 테이블에서 **변경 데이터 피드**&#x200B;를 사용하도록 설정하고 Experience Platform에서 관계형 스키마로 Data Mirror을 구성해야 합니다.
 
 다음 명령을 사용하여 테이블에서 변경 데이터 피드를 활성화합니다.
 
@@ -152,7 +156,7 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 ### [!DNL Data Landing Zone]
 
-변경 데이터 캡처를 [!DNL Data Landing Zone]과(와) 함께 사용하려면 소스 테이블에서 **변경 데이터 피드**&#x200B;를 사용하도록 설정하고 Experience Platform에서 모델 기반 스키마로 Data Mirror을 구성해야 합니다.
+[!DNL Data Landing Zone]에서 변경 데이터 캡처를 사용하려면 소스 테이블에서 **변경 데이터 피드**&#x200B;를 사용하도록 설정하고 Experience Platform에서 관계형 스키마로 Data Mirror을 구성해야 합니다.
 
 [!DNL Data Landing Zone] 소스 연결에 변경 데이터 캡처를 활성화하는 방법에 대한 단계는 다음 설명서를 참조하십시오.
 
@@ -161,11 +165,11 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 ### [!DNL Google BigQuery]
 
-[!DNL Google BigQuery]에서 변경 데이터 캡처를 사용하려면 소스 테이블에서 변경 기록을 활성화하고 Experience Platform에서 모델 기반 스키마를 사용하여 Data Mirror을 구성해야 합니다.
+[!DNL Google BigQuery]과(와) 함께 변경 데이터 캡처를 사용하려면 소스 테이블에서 변경 기록을 활성화하고 Experience Platform의 관계형 스키마로 Data Mirror을 구성해야 합니다.
 
 [!DNL Google BigQuery] 원본 연결에서 변경 기록을 사용하려면 [!DNL Google BigQuery] 콘솔에서 [!DNL Google Cloud] 페이지로 이동하여 `enable_change_history`을(를) `TRUE`(으)로 설정하십시오. 이 속성을 사용하면 데이터 테이블에 대한 변경 내역을 사용할 수 있습니다.
 
-자세한 내용은 [&#x200B; [!DNL GoogleSQL]의 &#x200B;](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)데이터 정의 언어 구문에 대한 안내서를 참조하십시오.
+자세한 내용은 [ [!DNL GoogleSQL]의 ](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)데이터 정의 언어 구문에 대한 안내서를 참조하십시오.
 
 [!DNL Google BigQuery] 소스 연결에 변경 데이터 캡처를 활성화하는 방법에 대한 단계는 다음 설명서를 참조하십시오.
 
@@ -174,7 +178,7 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 ### [!DNL Snowflake]
 
-[!DNL Snowflake]에서 변경 데이터 캡처를 사용하려면 소스 테이블에서 **변경 추적**&#x200B;을 사용하도록 설정하고 Experience Platform에서 모델 기반 스키마로 Data Mirror을 구성해야 합니다.
+[!DNL Snowflake]과(와) 함께 변경 데이터 캡처를 사용하려면 소스 테이블에서 **변경 추적**&#x200B;을 사용하도록 설정하고 Experience Platform의 관계형 스키마로 Data Mirror을 구성해야 합니다.
 
 [!DNL Snowflake]에서 `ALTER TABLE`을(를) 사용하고 `CHANGE_TRACKING`을(를) `TRUE`(으)로 설정하여 변경 내용 추적을 사용하도록 설정합니다.
 
