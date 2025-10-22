@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 개인 정보 보호 규정 개요
 description: 이 문서에서는 Adobe Experience Cloud에서 지원하는 다양한 개인 정보 보호 규정에 대한 개요를 제공합니다.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
+source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
 workflow-type: tm+mt
-source-wordcount: '2087'
+source-wordcount: '2086'
 ht-degree: 0%
 
 ---
