@@ -1,7 +1,6 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2025년 10월
 description: Adobe Experience Platform에 대한 2025년 10월 릴리스 정보입니다.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 199acd8d3bdbb0e89fc1ab881bff4d94063b7f78
 workflow-type: tm+mt
 source-wordcount: '920'
