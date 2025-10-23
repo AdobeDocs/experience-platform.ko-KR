@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 9월
 description: Adobe Experience Platform에 대한 2025년 9월 릴리스 정보입니다.
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: 96b9fcd8bfb4ff62eb9d4adce2e486782d918344
+source-git-commit: 1e1e91a4006a55a94c64bbc8e89ff3e2e58c4918
 workflow-type: tm+mt
 source-wordcount: '1524'
 ht-degree: 84%
@@ -68,7 +68,7 @@ Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이
 
 | 대상 | 설명 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) 커넥터 | 이제 특정 사용 사례에 대한 스트리밍 커넥터의 대안을 제공하는 새로운 [!DNL Snowflake Batch] 커넥터를 사용할 수 있습니다. |
+| [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/warehouses/snowflake-batch.md) 커넥터 | 이제 특정 사용 사례에 대한 스트리밍 커넥터의 대안을 제공하는 새로운 [!DNL Snowflake Batch] 커넥터를 사용할 수 있습니다. |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) 암호화 지원 | 이제 RSA 형식의 공개 키를 첨부하여 내보낸 파일을 암호화할 수 있으므로 다른 클라우드 스토리지 대상이 중요한 정보에 대해 제공하는 것과 동일한 수준의 보안을 확보할 수 있습니다. |
 | [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) 대상에 대한 인증 만료 세부 정보 | [!DNL Pinterest] 대상에 대한 인증 만료 정보가 이제 Experience Platform 인터페이스에 직접 표시되므로 데이터 흐름이 중단되기 전에 인증이 만료되고 갱신되는 시점을 확인할 수 있습니다. **[!UICONTROL Account expiration date]** 또는 **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** 탭의 **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** 열에서 토큰 만료 날짜를 모니터링할 수 있습니다. |
 
