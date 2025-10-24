@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 10월
 description: Adobe Experience Platform에 대한 2025년 10월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7f37ba35111f6fa96d1889d74a66e32302b8ab85
+source-git-commit: 0191fc8419c696d8cd114a5eb575b8cc0a815a72
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 22%
+source-wordcount: '1159'
+ht-degree: 24%
 
 ---
 
@@ -28,6 +28,7 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 - [Agent Orchestrator](#agent-orchestrator)
 - [경고](#alerts)
 - [대상](#destinations)
+- [Real-Time CDP B2B Edition](#b2b)
 - [소스](#sources)
 
 ## Agent Orchestrator {#agent-orchestrator}
@@ -84,6 +85,18 @@ Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이
 
 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
+## Real-Time CDP B2B Edition {#b2b}
+
+Real-Time CDP B2B Edition은 포괄적인 B2B 고객 데이터 관리 기능을 제공하여 조직이 통합된 고객 프로필을 빌드하고, 정교한 B2B 대상자를 생성하며, 다양한 마케팅 채널에서 데이터를 활성화할 수 있도록 합니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| B2B 엔터티 간의 비표준 관계에 대한 B2B 지원 중단 | 2026년 1월부터 Real-Time CDP B2B edition은 더 이상 B2B 엔터티 간의 **비표준** 관계를 지원하지 않습니다. 따라서 [B2B 네임스페이스 및 스키마 안내서](../../rtcdp/schemas/b2b.md)에 요약된 표준 관계를 사용하도록 B2B 엔터티를 업데이트하는 것이 좋습니다. |
+
+{style="table-layout:auto"}
+
 ## 소스 {#sources}
 
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
@@ -93,7 +106,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | 기능 | 설명 |
 | --- | --- |
 | Adobe Analytics 소스에 대한 데이터 세트 생성 변경 | Adobe Analytics과 Experience Platform 간의 데이터 흐름 만들기 프로세스의 일부로 카탈로그 서비스를 통해 데이터 세트가 만들어집니다. 이 데이터 세트는 데이터가 들어오는 컨테이너 역할을 합니다. 현재 이 프로세스에는 Analytics 보고서 세트에서 가져와서 카탈로그 서비스로 보낸 다음 새로 만든 데이터 세트와 연결된 DataSource ID가 포함됩니다. 변경 후에는 데이터 세트를 만드는 동안 더 이상 DataSource ID를 제공하는 옵션을 사용할 수 없습니다. 따라서 Analytics 소스에서 만든 새 데이터 세트에는 더 이상 카탈로그 서비스에서 연결된 데이터 소스 ID가 없습니다. 이 변경 사항은 메타데이터에만 적용되며 데이터 세트의 데이터 저장소를 어떤 방식으로든 변경하지 않습니다. 그러나 카탈로그 서비스에서 제공한 DataSource ID는 Adobe Analytics에 대해 새로 만든 데이터 세트에서 더 이상 사용할 수 없습니다. Adobe Analytics 소스 커넥터에 대한 자세한 내용은 [Adobe Analytics 소스 설명서](../../sources/connectors/adobe-applications/analytics.md)를 참조하십시오. |
-| [!DNL Google Ads] 소스의 일반 가용성(API 전용) | [&#x200B; 소스의  [!DNL Google Ads]](../../sources/tutorials/api/create/advertising/ads.md)API 버전이 이제 일반 공급 상태입니다. API 설명서에 최신 버전이 이제 `v21`이고 Experience Platform이 모든 버전 v19 이상을 지원함을 반영하여 업데이트했습니다. [UI 버전](../../sources/tutorials/ui/create/advertising/ads.md)은(는) Beta 상태로 유지되며 일회성 수집만 지원합니다. 증분 데이터 수집을 사용하려면 API 경로를 사용합니다. |
+| [!DNL Google Ads] 소스의 일반 가용성(API 전용) | [ 소스의  [!DNL Google Ads]](../../sources/tutorials/api/create/advertising/ads.md)API 버전이 이제 일반 공급 상태입니다. API 설명서에 최신 버전이 이제 `v21`이고 Experience Platform이 모든 버전 v19 이상을 지원함을 반영하여 업데이트했습니다. [UI 버전](../../sources/tutorials/ui/create/advertising/ads.md)은(는) Beta 상태로 유지되며 일회성 수집만 지원합니다. 증분 데이터 수집을 사용하려면 API 경로를 사용합니다. |
 | [!DNL Azure Event Hubs] 가상 네트워크 지원 | Adobe은 이제 [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md)에 대한 가상 네트워크 연결을 명시적으로 지원하므로 공용 네트워크가 아닌 개인 네트워크를 통해 데이터를 전송할 수 있습니다. 허용 목록에 추가하다 고객은 Experience Platform VNet를 통해 Azure 백본을 통해 개인적으로 이벤트 트래픽을 라우팅하여 데이터 수집 워크플로우에 대한 향상된 보안을 제공할 수 있습니다. |
 
 {style="table-layout:auto"}
