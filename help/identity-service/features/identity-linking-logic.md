@@ -2,7 +2,7 @@
 title: ID 서비스 연결 논리
 description: ID 서비스에서 다양한 ID를 연결하여 고객에 대한 포괄적인 보기를 만드는 방법에 대해 알아봅니다.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
+source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 3%
@@ -23,10 +23,6 @@ ID 네임스페이스와 ID 값이 일치하면 두 ID 간의 링크가 설정�
 * **프로필 레코드**: 이러한 ID는 일반적으로 CRM 시스템에서 가져옵니다.
 * **경험 이벤트**: 이러한 ID는 일반적으로 WebSDK 구현 또는 Adobe Analytics 소스에서 가져옵니다.
 
->[!IMPORTANT]
->
->ID 서비스는 대/소문자를 구분합니다. 예를 들어 **abc<span>@gmail.com** 및 **ABC<span>@GMAIL.COM**&#x200B;은(는) 두 개의 개별 전자 메일 ID로 처리됩니다.
-
 ## 링크 설정의 의미론적 의미
 
 ID는 실제 엔티티를 나타냅니다. 두 ID 사이에 링크가 설정되어 있는 경우 이는 두 ID가 서로 연결되어 있음을 의미합니다. 다음은 이 개념을 설명하는 몇 가지 예입니다.
@@ -44,6 +40,7 @@ ID는 ID 네임스페이스와 ID 값으로 구성됩니다.
 
 * ID 네임스페이스는 지정된 ID 값 의 컨텍스트입니다. ID 네임스페이스의 일반적인 예로는 CRMID, 이메일 및 전화 등이 있습니다.
 * ID 값은 실제 엔티티를 나타내는 문자열입니다. 예를 들어 &quot;julien<span>@acme.com&quot;은 이메일 네임스페이스에 대한 ID 값이고 555-555-1234는 전화 네임스페이스에 대한 해당 ID 값일 수 있습니다.
+* ID 서비스는 대/소문자를 구분합니다. 예를 들어 **julien<span>@gmail.com** 및 **JULIEN<span>@GMAIL.COM**&#x200B;은(는) 두 개의 개별 전자 메일 ID로 처리됩니다.
 
 >[!TIP]
 >
