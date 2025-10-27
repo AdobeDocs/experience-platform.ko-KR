@@ -28,16 +28,16 @@ Adobe Form 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있�
 
 이 대상을 사용하여 Experience Cloud ID(ECID) 및 Adform의 ID Fusion을 기반으로 활성화를 위해 Adobe Real-Time CDP 대상을 Adform으로 보냅니다. Adform의 ID Fusion은 Experience Cloud ID(ECID)를 기반으로 자사 대상을 활성화할 수 있는 Adform의 ID 확인 서비스입니다.
 
-일반적인 사례는 ECID(Experience Cloud ID)를 기반으로 웹 사이트 또는 앱에 대한 웹 사이트 방문자를 재타겟팅하는 것입니다. 이제 즉시 사용 가능한 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 또는 [클라이언트측](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform 확장을 통해 ECID(Experience Cloud ID)를 Adform으로 전송하기만 하면 됩니다. 이후 활성화를 위해 Adform 대상을 통해 ECID(Experience Cloud ID)만을 기준으로 Adform과 대상을 공유할 수 있습니다.
+일반적인 사례는 ECID(Experience Cloud ID)를 기반으로 웹 사이트 또는 앱에 대한 웹 사이트 방문자를 재타겟팅하는 것입니다. 이제 즉시 사용 가능한 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 또는 [클라이언트측](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/analytics/adform) Adform 확장을 통해 ECID(Experience Cloud ID)를 Adform으로 전송하기만 하면 됩니다. 이후 활성화를 위해 Adform 대상을 통해 ECID(Experience Cloud ID)만을 기준으로 Adform과 대상을 공유할 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
 * 이 대상을 사용하려면 기존 Adform 고객이어야 합니다.
 * Adform 대상자 기본 데이터 연결 자격 증명이 있어야 합니다.
    * Adform 대상자 기본 데이터 연결 자격 증명이 없는 경우 Adform 담당자에게 문의하십시오.
-* 적절한 동기화를 위해 엔터티에서 Adobe 사이트 추적에 대해 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 또는 [클라이언트측](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) 연결이 있어야 합니다.
+* 적절한 동기화를 위해 엔터티에서 Adobe 사이트 추적에 대해 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 또는 [클라이언트측](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/analytics/adform) 연결이 있어야 합니다.
    * 엔티티에서 Adform 사이트 추적에 대한 이벤트 스트리밍 또는 클라이언트측 연결이 없는 경우 Adform 담당자에게 문의하십시오.
-   * Adform은 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 및 [클라이언트측](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform)에 모두 Adobe Experience Cloud 확장을 제공합니다.
+   * Adform은 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 및 [클라이언트측](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/analytics/adform)에 모두 Adobe Experience Cloud 확장을 제공합니다.
 
 
 ## 지원되는 ID {#supported-identities}
