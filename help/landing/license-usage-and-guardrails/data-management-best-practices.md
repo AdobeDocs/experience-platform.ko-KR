@@ -2,9 +2,9 @@
 title: 데이터 관리 라이선스 권한 부여 우수 사례
 description: Adobe Experience Platform을 사용하여 라이선스 권한을 보다 효율적으로 관리하는 데 사용할 수 있는 모범 사례 및 도구에 대해 알아봅니다.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: a14d94a87eb433dd0bb38e5bf3c9c3a04be9a5c6
+source-git-commit: 1f3cf3cc57342a23dae2d69c883b5768ec2bba57
 workflow-type: tm+mt
-source-wordcount: '2338'
+source-wordcount: '2957'
 ht-degree: 1%
 
 ---
@@ -127,7 +127,7 @@ Experience Platform의 하나 또는 여러 시스템, 즉 [!DNL data lake] 및/
 | 프로필에 대한 데이터 세트 활성화/비활성화 지원 | 실시간 고객 프로필로 데이터를 수집하려면 프로필 스토어에서 사용할 데이터 세트를 활성화해야 합니다. 이렇게 하면 [!DNL Addressable Audience] 및 [!DNL Total Data Volume] 권한에 추가됩니다. 고객 프로필 사용 사례에 더 이상 데이터 세트가 필요하지 않으면 해당 데이터 세트의 프로필 통합을 비활성화하여 데이터가 라이센스 규정을 준수하는지 확인할 수 있습니다. 자세한 내용은 [프로필에 대한 데이터 세트 활성화 및 비활성화](../../catalog/datasets/enable-for-profile.md)에 대한 안내서를 참조하십시오. |
 | 웹 SDK 및 모바일 SDK 데이터 제외 | 웹 및 모바일 SDK에서 수집하는 데이터에는 자동으로 수집되는 데이터와 개발자가 명시적으로 수집하는 데이터의 두 가지 유형이 있습니다. 라이선스 준수를 보다 잘 관리하려면 컨텍스트 설정을 통해 SDK의 구성에서 자동 데이터 수집을 비활성화하면 됩니다. 사용자 정의 데이터는 개발자가 제거하거나 설정할 수도 없습니다. |
 | 서버 측 전달 데이터 제외 | 서버측 전달을 사용하여 Experience Platform으로 데이터를 전송하는 경우 규칙 작업에서 매핑을 제거하여 모든 이벤트에서 데이터를 제외하거나 규칙에 조건을 추가하여 특정 이벤트에 대해서만 데이터가 실행되도록 전송할 데이터를 제외할 수 있습니다. 자세한 내용은 [이벤트 및 조건](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if)에 대한 설명서를 참조하십시오. |
-| 소스 수준에서 데이터 필터링 | 연결을 만들고 Experience Platform으로 데이터를 수집하기 전에 논리 및 비교 연산자를 사용하여 소스에서 행 수준 데이터를 필터링할 수 있습니다. 자세한 내용은  [!DNL Flow Service] API[&#128279;](../../sources/tutorials/api/filter.md)를 사용하여 소스에 대한 행 수준 데이터 필터링에 대한 안내서를 참조하십시오. |
+| 소스 수준에서 데이터 필터링 | 연결을 만들고 Experience Platform으로 데이터를 수집하기 전에 논리 및 비교 연산자를 사용하여 소스에서 행 수준 데이터를 필터링할 수 있습니다. 자세한 내용은 [API [!DNL Flow Service] 를 사용하여 소스에 대한 ](../../sources/tutorials/api/filter.md)행 수준 데이터 필터링에 대한 안내서를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -175,3 +175,99 @@ Experience Platform의 하나 또는 여러 시스템, 즉 [!DNL data lake] 및/
 * 웹 데이터와 같은 고주파 데이터에 대해 [경험 이벤트 만료](../../catalog/datasets/user-guide.md#data-retention-policy) 및 [익명 프로필 데이터 만료](../../profile/pseudonymous-profiles.md)을(를) 구성합니다.
 * 데이터 레이크에서 경험 이벤트 데이터 세트에 대한 [TTL(Time-to-Live) 보존 정책](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md)을 구성하여 오래된 레코드를 자동으로 제거하고 라이선스 권한에 맞게 저장소 사용을 최적화합니다.
 * 프로필 저장소 구성을 이해하려면 [프로필 구성 보고서](#profile-store-composition-reports)를 정기적으로 확인하십시오. 이를 통해 라이선스 사용 소비에 가장 많이 기여하는 데이터 소스를 이해할 수 있습니다.
+
+## 사용 사례: 라이선스 사용 규정 준수
+
+### 이 사용 사례를 고려하는 이유
+
+데이터 레이크와 프로필 스토리지 모두에 대해 **라이선스 사용 규정**&#x200B;을 준수하도록 함으로써 과다 사용을 방지하고, 비용을 최적화하고, 데이터 보존 정책을 비즈니스 요구 사항에 맞게 조정할 수 있습니다.
+
+### 전제 조건 및 계획
+
+계획 프로세스에서 다음 전제 조건을 고려하십시오.
+
+* **액세스 및 권한**:
+   * 경험 이벤트 TTL을 사용할 수 있는 **데이터 세트 관리** 권한이 있는지 확인하십시오.
+   * 익명 프로필 TTL을 사용하려면 **프로필 설정 관리**&#x200B;가 있는지 확인하십시오.
+* **데이터 보존 정책 이해**:
+   * 데이터 보존 및 규정 준수에 관한 조직 정책
+   * 데이터 분석 및 세그먼테이션 전환 확인 기간에 대한 비즈니스 요구 사항
+
+### 사용할 UI 기능, Experience Platform 구성 요소 및 Experience Cloud 제품
+
+이 사용 사례를 성공적으로 구현하려면 Adobe Experience Platform의 여러 영역을 사용해야 합니다. 이러한 모든 영역에 대해 필요한 속성 기반 액세스 제어 권한이 있는지 확인하거나 시스템 관리자에게 권한을 요청하십시오.
+
+* 라이선스 사용 대시보드 - 샌드박스 수준에서 현재 자격 사용을 봅니다.
+* 데이터 세트 관리 - 데이터 세트 수준 보존 정책을 모니터링하고 관리합니다.
+* 대상(실시간 고객 프로필) - 세그먼테이션 규칙 전환 확인 기간이 데이터 유지 기간에 맞게 조정되도록 합니다.
+* 모니터링 및 경고 - 업데이트를 추적하고 데이터 세트 유지 작업에 대한 통찰력을 받습니다.
+
+### 사용 사례 달성 방법: 단계별 지침
+
+추가 설명서에 대한 링크를 포함하는 아래 섹션을 읽어 위의 높은 수준 개요에서 각 단계를 완료합니다.
+
+**현재 라이선스 사용량 확인**
+
+먼저 **라이선스 사용량 대시보드**(으)로 이동하여 샌드박스 수준에서 자격 사용량을 검토합니다.
+
+>[!BEGINTABS]
+
+>[!TAB 프로덕션 샌드박스]
+
+라이선스 사용 지표를 보려면 [!UICONTROL Metrics] 인터페이스를 사용하십시오. 인터페이스는 기본적으로 프로덕션 샌드박스에 대한 정보를 표시합니다.
+
+![프로덕션 샌드박스에 대한 라이선스 사용 지표를 표시하는 라이선스 사용 대시보드 UI입니다.](../images/data-management/prod-sandbox.png)
+
+>[!TAB 개발 샌드박스]
+
+개발 샌드박스와 관련된 라이선스 사용 지표를 보려면 [!UICONTROL Development]을(를) 선택하십시오.
+
+![개발 샌드박스에 대한 라이선스 사용 지표를 표시하는 라이선스 사용 대시보드 UI입니다.](../images/data-management/dev-sandbox.png)
+
+>[!ENDTABS]
+
+자세한 내용은 [라이선스 사용 대시보드 사용](../../dashboards/guides/license-usage.md)에 대한 설명서를 참조하세요.
+
+**데이터 집합 수준 저장소 사용량 분석**
+
+**데이터 세트 찾아보기 보기**&#x200B;를 사용하여 데이터 레이크와 실시간 고객 프로필 모두에 대한 데이터 세트 사용 지표를 검토하십시오. **[!UICONTROL Data Lake Storage]** 또는 **[!UICONTROL Profile Storage]**&#x200B;의 열 헤더를 선택한 다음 팝업 패널에서 **[!UICONTROL Sort Descending]**&#x200B;을(를) 선택합니다.
+
+>[!BEGINTABS]
+
+>[!TAB 데이터 레이크 저장소]
+
+데이터 레이크의 데이터 세트는 저장소 크기별로 정렬됩니다. 이 기능을 사용하여 데이터 레이크의 가장 큰 스토리지 소비자를 식별합니다.
+
+![가장 큰 데이터 레이크에서 가장 작은 데이터 레이크로 정렬된 데이터 세트입니다.](../images/data-management/data-lake-storage.png)
+
+>[!TAB 프로필 저장소]
+
+프로필의 데이터 세트는 저장소 크기별로 정렬됩니다. 이 기능을 사용하여 프로필의 가장 큰 스토리지 소비자를 식별합니다.
+
+![프로필의 데이터 세트가 가장 큰 것부터 가장 작은 것까지 정렬되었습니다.](../images/data-management/profile-storage.png)
+
+>[!ENDTABS]
+
+**보존 규칙 평가 및 구성**
+
+그런 다음 Analytics 및 세그멘테이션에 대한 라이선스 제한 및 비즈니스 요구 사항에 따라 데이터 세트에 적절한 보존 정책이 있는지 확인합니다. 데이터 세트의 보존 정책을 보려면 데이터 세트 옆에서 줄임표(`...`)를 선택한 다음 **[!UICONTROL Set data retention policy]**&#x200B;을(를) 선택합니다.
+
+![데이터 집합 옵션이 있는 팝업 패널, &quot;데이터 보존 정책 설정&quot; 포함](../images/data-management/set-retention-policy.png)
+
+*[!UICONTROL Set dataset retention]* 인터페이스가 나타납니다. 이 인터페이스를 사용하여 데이터 세트에 대한 보존 정책을 구성합니다. 또한 데이터 레이크나 프로필에서 데이터 세트가 사용하고 있는 스토리지 공간의 양을 보는 데 사용할 수도 있습니다.
+
+![데이터 집합 보존 설정 인터페이스입니다.](../images/data-management/dataset-retention.png)
+
+영향 예측기를 사용하여 데이터 세트의 유지 영향을 추가로 분석할 수 있습니다. 보존 기간과 만료되도록 설정된 총 저장소 비율을 표시하는 차트를 보려면 **[!UICONTROL View ExperienceEvent data distribution]**&#x200B;을(를) 선택하십시오.
+
+완료되면 **[!UICONTROL Save]** 선택
+
+![데이터 집합 보존 인터페이스 내의 영향 예측자입니다.](../images/data-management/impact-forecaster.png)
+
+**보존 변경 내용의 유효성 검사**
+
+보존 정책을 적용하면 다음 도구를 사용하여 변경 사항을 확인할 수 있습니다.
+
+* 데이터 집합 찾아보기 보기의 [데이터 집합 사용 지표](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics).
+* [모니터링 대시보드](../../dataflows/ui/monitor.md)를 통해 보존의 영향을 보고 분석할 수 있습니다.
+* 일별 스냅숏, 예측 트렌드 및 샌드박스 수준 인사이트를 볼 수 있는 [라이선스 사용 대시보드](../../dashboards/guides/license-usage.md)입니다.
