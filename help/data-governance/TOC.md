@@ -5,10 +5,10 @@ breadcrumb-title: Data Governance 안내서
 user-guide-description: 레이블, 마케팅 활동 및 거버넌스 정책 사용을 통해 데이터 사용 제한을 적용합니다.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 6e9ea451eafd08a72a5f26dabe229fdb7c6c909d
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 47%
+source-wordcount: '105'
+ht-degree: 50%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 47%
    * [개요](policies/overview.md)
    * [UI에서 정책 관리](policies/user-guide.md)
    * [API에서 정책 만들기](policies/create.md)
+   * [동의 정책 규칙 작성 참조](policies/consent-policy-rule-building-reference.md)
 * 정책 시행 {#enforcement}
    * [개요](enforcement/overview.md)
    * [자동 적용](enforcement/auto-enforcement.md)
