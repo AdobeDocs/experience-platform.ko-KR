@@ -5,9 +5,9 @@ breadcrumb-title: Segmentation Service 안내서
 user-guide-description: Adobe Experience Platform에서 생성한 세그먼트 정의 또는 외부 소스를 사용하여 실시간 고객 프로필 데이터에서 대상자를 빌드합니다.
 feature: Segments
 role: User
-source-git-commit: 043e0c930b30dc4f04acdcab88a5d63ad044fbfc
+source-git-commit: 0f1ccaf9ea698737eccc25cec6f5b46b7184fc11
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '210'
 ht-degree: 43%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 43%
 
 - [세그먼테이션 서비스 개요](home.md)
 - [세분화 데이터 유형](data-types.md)
-- [세그먼테이션 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ko#segmentation-guardrails)
+- [세그먼테이션 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - 세그먼테이션 API {#api}
    - [개요](api/overview.md)
    - [시작하기](api/getting-started.md)
@@ -35,6 +35,7 @@ ht-degree: 43%
    - [대상 대시보드](ui/audience-dashboard.md)
    - [대상자 포털](ui/audience-portal.md)
    - [대상자 컴포지션](ui/audience-composition.md)
+   - [대상자 구성 개선 사항](ui/composition-enchancements.md)
    - [세그먼트 빌더](ui/segment-builder.md)
    - [페더레이션된 대상자 컴포지션](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)
    - [연도 제한 무시 업데이트](ui/ignore-year.md)
