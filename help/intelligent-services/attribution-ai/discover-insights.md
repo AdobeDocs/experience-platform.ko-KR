@@ -195,4 +195,4 @@ Attribution AI에 대한 인사이트를 활용하려면 서비스 인스턴스�
 
 다음 비디오는 Attribution AI 인사이트 페이지를 사용하여 마케팅 채널 및 캠페인의 ROI를 파악하는 방법을 학습하는 데 도움이 되도록 설계되었습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/345103?captions=kor&learn=on&quality=12)
