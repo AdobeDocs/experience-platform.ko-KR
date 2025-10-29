@@ -1,9 +1,9 @@
 ---
 title: 푸시 알림
 description: 웹 SDK에 대한 푸시 알림을 구성하여 브라우저 기반 푸시 메시지를 활성화합니다.
-source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
+source-git-commit: 84faff58bac199c1113d7451f8cc865b6a870680
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '510'
 ht-degree: 2%
 
 ---
@@ -58,15 +58,15 @@ web-push generate-vapid-keys
 푸시 알림을 활성화하고 구성하려면 다음 단계를 따르십시오.
 
 1. Adobe ID 자격 증명을 사용하여 [experience.adobe.com](https://experience.adobe.com)에 로그인합니다.
-1. **[!UICONTROL 데이터 수집]** > **[!UICONTROL 태그]**(으)로 이동합니다.
+1. **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**(으)로 이동합니다.
 1. 원하는 태그 속성을 선택합니다.
-1. **[!UICONTROL 확장]**(으)로 이동한 다음 **[!UICONTROL Adobe Experience Platform Web SDK]** 카드에서 [!UICONTROL 구성]을 클릭합니다.
-1. **[!UICONTROL 사용자 지정 빌드 구성 요소]** 섹션에서 **[!UICONTROL 푸시 알림]**&#x200B;을 사용하도록 설정합니다.
-1. 아래로 스크롤하여 [!UICONTROL 푸시 알림] 섹션을 찾습니다.
-1. **[!UICONTROL VAPID 공개 키]** 필드에 VAPID 공개 키를 입력합니다.
-1. **[!UICONTROL 응용 프로그램 ID]** 필드에 응용 프로그램 ID를 입력합니다.
-1. **[!UICONTROL 추적 데이터 세트 ID]** 필드에 추적 데이터 세트 ID를 입력합니다.
-1. **[!UICONTROL 저장]**&#x200B;을 클릭한 다음 변경 내용을 게시합니다.
+1. **[!UICONTROL Extensions]**(으)로 이동한 다음 **[!UICONTROL Configure]** 카드에서 [!UICONTROL Adobe Experience Platform Web SDK]을(를) 클릭합니다.
+1. **[!UICONTROL Custom build components]** 섹션에서 **[!UICONTROL Push notifications]**&#x200B;을(를) 사용하도록 설정합니다.
+1. 아래로 스크롤하여 [!UICONTROL Push Notifications] 섹션을 찾습니다.
+1. **[!UICONTROL VAPID Public Key]** 필드에 VAPID 공개 키를 입력합니다.
+1. **[!UICONTROL Application ID]** 필드에 응용 프로그램 ID를 입력합니다.
+1. **[!UICONTROL Tracking Dataset ID]** 필드에 추적 데이터 세트 ID를 입력합니다.
+1. **[!UICONTROL Save]**&#x200B;을(를) 클릭한 다음 변경 내용을 게시합니다.
 
 >[!NOTE]
 >
@@ -105,4 +105,4 @@ alloy("configure", {
 
 ## 다음 단계 {#next-steps}
 
-푸시 알림을 구성한 후 [`sendPushSubscription`](../sendPushSubscription.md) 명령을 사용하여 Adobe Experience Platform에 푸시 구독을 등록합니다.
+푸시 알림을 구성한 후 [`sendPushSubscription`](../sendpushsubscription.md) 명령을 사용하여 Adobe Experience Platform에 푸시 구독을 등록합니다.
