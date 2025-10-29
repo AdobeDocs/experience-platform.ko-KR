@@ -178,7 +178,7 @@ Adobe Experience Platform의 모든 데이터는 표준화된 XDM 스키마를 �
 
 ![](./images/home/evaluation_metrics.png)
 
-[에서 모델을 교육하고 평가하는 방법에 대해 알아보려면 ](./models-recipes/train-evaluate-model-api.md)API[ 또는 ](./models-recipes/train-evaluate-model-ui.md)UI[!DNL Data Science Workspace] 튜토리얼을 방문하십시오.
+[에서 모델을 교육하고 평가하는 방법에 대해 알아보려면 &#x200B;](./models-recipes/train-evaluate-model-api.md)API[&#x200B; 또는 &#x200B;](./models-recipes/train-evaluate-model-ui.md)UI[!DNL Data Science Workspace] 튜토리얼을 방문하십시오.
 
 ### 모델 작업
 
@@ -200,4 +200,4 @@ Adobe Experience Platform의 모든 데이터는 표준화된 XDM 스키마를 �
 
 다음 비디오는 [!DNL Data Science Workspace]에 대한 이해를 돕기 위해 제작되었습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&enable10seconds=on&speedcontrol=on)

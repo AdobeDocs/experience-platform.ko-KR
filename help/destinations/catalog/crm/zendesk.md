@@ -26,7 +26,7 @@ ht-degree: 3%
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL Zendesk] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 ](/help/xdm/schema/composition.md)스키마[, ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[ 및 ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)세그먼트[!DNL Experience Platform]가 있어야 합니다.
+[!DNL Zendesk] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 &#x200B;](/help/xdm/schema/composition.md)스키마[, &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[&#x200B; 및 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)세그먼트[!DNL Experience Platform]가 있어야 합니다.
 
 대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)은 Experience Platform 설명서를 참조하십시오.
 
@@ -60,7 +60,7 @@ Experience Platform에서 [!DNL Zendesk] 계정으로 데이터를 내보내려�
 
 | 항목 | 유형 | 참고 |
 |---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL Profile-based]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> [!DNL Zendesk]의 각 세그먼트 상태는 **[!UICONTROL Mapping ID]**&#x200B;대상 예약[ 단계 동안 제공된 ](#schedule-segment-export-example) 값을 기반으로 Experience Platform의 해당 대상 상태로 업데이트됩니다.</li></ul> |
+| 내보내기 유형 | **[!UICONTROL Profile-based]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> [!DNL Zendesk]의 각 세그먼트 상태는 **[!UICONTROL Mapping ID]**&#x200B;대상 예약[&#x200B; 단계 동안 제공된 &#x200B;](#schedule-segment-export-example) 값을 기반으로 Experience Platform의 해당 대상 상태로 업데이트됩니다.</li></ul> |
 | 내보내기 빈도 | **[!UICONTROL Streaming]** | <ul><li>스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요.</li></ul> |
 
 {style="table-layout:auto"}
@@ -81,7 +81,7 @@ Experience Platform에서 [!DNL Zendesk] 계정으로 데이터를 내보내려�
 
 * **[!UICONTROL Bearer Token]**: [!DNL Zendesk] 계정에서 생성한 액세스 토큰입니다.
 
-대상에 인증하려면 **[!UICONTROL Connect to destination]**을(를) 선택하십시오.
+대상에 인증하려면 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
 
 제공된 세부 정보가 유효한 경우 UI에 녹색 확인 표시와 함께 **[!UICONTROL Connected]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
@@ -160,7 +160,7 @@ XDM 필드를 [!DNL Zendesk] 대상 필드에 올바르게 매핑하려면 다�
 1. 대상자 요약을 모니터링하고 프로필 수가 세그먼트 내의 수와 일치하는지 확인합니다.
    ![세그먼트를 표시하는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. [!DNL Zendesk] 웹 사이트에 로그인한 다음 **[!UICONTROL Contacts]** 페이지로 이동하여 대상자의 프로필이 추가되었는지 확인합니다. 대상**[!UICONTROL Mapping ID]** 및 대상 상태로 만든 추가 필드에 대한 열을 표시하도록 이 목록을 구성할 수 있습니다.
+1. [!DNL Zendesk] 웹 사이트에 로그인한 다음 **[!UICONTROL Contacts]** 페이지로 이동하여 대상자의 프로필이 추가되었는지 확인합니다. 대상&#x200B;**[!UICONTROL Mapping ID]** 및 대상 상태로 만든 추가 필드에 대한 열을 표시하도록 이 목록을 구성할 수 있습니다.
    대상 이름으로 만든 추가 필드가 있는 연락처 페이지를 보여 주는 ![Zendesk UI 스크린샷.](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. 또는 개별 **[!UICONTROL Person]** 페이지로 드릴다운하여 대상 이름 및 대상 상태를 표시하는 **[!UICONTROL Additional fields]** 섹션을 확인할 수 있습니다.

@@ -41,7 +41,7 @@ ht-degree: 2%
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| external_id | 모든 ID의 매핑을 지원하는 사용자 지정 [!DNL Braze] 식별자입니다. | [ ](../../../identity-service/features/namespaces.md)[!DNL Braze]에 매핑하기만 하면 [!DNL Braze]identity[`external_id`을(를) ](https://www.braze.com/docs/api/basics/#external-user-id-explanation) 대상으로 보낼 수 있습니다. |
+| external_id | 모든 ID의 매핑을 지원하는 사용자 지정 [!DNL Braze] 식별자입니다. | [&#x200B; &#x200B;](../../../identity-service/features/namespaces.md) [!DNL Braze]에 매핑하기만 하면 [!DNL Braze]identity[`external_id`을(를) &#x200B;](https://www.braze.com/docs/api/basics/#external-user-id-explanation) 대상으로 보낼 수 있습니다. |
 
 {style="table-layout:auto"}
 

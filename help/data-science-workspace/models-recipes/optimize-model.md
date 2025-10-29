@@ -39,7 +39,7 @@ ht-degree: 0%
 - [Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
-레시피의 샘플 코드는 [의 ](https://github.com/adobe/experience-platform-dsw-reference)experience-platform-dsw-reference`recipes` 리포지토리에서 찾을 수 있습니다. 이 자습서 전체에서 이 저장소의 특정 파일을 참조합니다.
+레시피의 샘플 코드는 [의 &#x200B;](https://github.com/adobe/experience-platform-dsw-reference)experience-platform-dsw-reference`recipes` 리포지토리에서 찾을 수 있습니다. 이 자습서 전체에서 이 저장소의 특정 파일을 참조합니다.
 
 ### 스칼라 {#scala}
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 | DefaultMultiClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator` |
 | Recommendations 평가기 | `com.adobe.platform.ml.impl.RecommendationsEvaluator` |
 
-평가기는 [ 폴더의 ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties)application.properties`recipe` 파일에 있는 레시피에서 정의할 수 있습니다. `DefaultBinaryClassificationEvaluator`을(를) 활성화하는 샘플 코드가 아래에 표시되어 있습니다.
+평가기는 [&#x200B; 폴더의 &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties)application.properties`recipe` 파일에 있는 레시피에서 정의할 수 있습니다. `DefaultBinaryClassificationEvaluator`을(를) 활성화하는 샘플 코드가 아래에 표시되어 있습니다.
 
 ```scala
 evaluation.class=com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator
@@ -101,7 +101,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 > 이 항목 아님: `metrics.add(new MLMetric("MAPE", mape, "measures"))`
 
 
-레시피에 정의되면, 다음 단계는 레시피에서 이를 활성화하는 것이다. 이 작업은 프로젝트의 [ 폴더에 있는 ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties)application.properties`resources` 파일에서 수행됩니다. 여기서 `evaluation.class`은(는) `Evaluator`에 정의된 `Evaluator.scala` 클래스로 설정됩니다.
+레시피에 정의되면, 다음 단계는 레시피에서 이를 활성화하는 것이다. 이 작업은 프로젝트의 [&#x200B; 폴더에 있는 &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties)application.properties`resources` 파일에서 수행됩니다. 여기서 `evaluation.class`은(는) `Evaluator`에 정의된 `Evaluator.scala` 클래스로 설정됩니다.
 
 ```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
@@ -117,7 +117,7 @@ evaluation.class=com.adobe.platform.ml.Evaluator
 
 사용자 지정 평가 지표의 경우 평가기에 대해 구현해야 하는 두 가지 기본 메서드가 있습니다. `split()` 및 `evaluate()`.
 
-[!DNL Python]의 경우 이 메서드는 [ 클래스의 ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py)evaluator.py`Evaluator`에 정의됩니다. [의 예제는 ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py)evaluator.py`Evaluator` 링크를 따르십시오.
+[!DNL Python]의 경우 이 메서드는 [&#x200B; 클래스의 &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py)evaluator.py`Evaluator`에 정의됩니다. [의 예제는 &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py)evaluator.py`Evaluator` 링크를 따르십시오.
 
 [!DNL Python]에서 평가 지표를 만들려면 사용자가 `evaluate()` 및 `split()` 메서드를 구현해야 합니다.
 

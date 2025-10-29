@@ -16,7 +16,7 @@ ht-degree: 2%
 
 [!DNL Airship]은(는) 선도적인 고객 참여 플랫폼으로, 고객 라이프사이클의 모든 단계에서 사용자에게 의미 있고 개인화된 옴니채널 메시지를 제공할 수 있습니다.
 
-이 통합은 타깃팅 또는 트리거를 위해 Adobe Experience Platform 대상 데이터를 [!DNL Airship]태그[(으)로 ](https://docs.airship.com/guides/audience/tags/)에 전달합니다.
+이 통합은 타깃팅 또는 트리거를 위해 Adobe Experience Platform 대상 데이터를 [!DNL Airship]태그[(으)로 &#x200B;](https://docs.airship.com/guides/audience/tags/)에 전달합니다.
 
 [!DNL Airship]에 대한 자세한 내용은 [비행선 문서](https://docs.airship.com)를 참조하세요.
 
@@ -34,7 +34,7 @@ Adobe Experience Platform 대상자를 [!DNL Airship]&#x200B;(으)로 보내려�
 
 >[!TIP]
 > 
->아직 만들지 않은 경우 [!DNL Airship]이 등록 링크[를 통해 ](https://go.airship.eu/accounts/register/plan/starter/) 계정을 만드십시오.
+>아직 만들지 않은 경우 [!DNL Airship]이 등록 링크[를 통해 &#x200B;](https://go.airship.eu/accounts/register/plan/starter/) 계정을 만드십시오.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -60,7 +60,7 @@ Adobe Experience Platform 대상자를 [!DNL Airship]&#x200B;(으)로 보내려�
 
 ## 태그 그룹
 
-Adobe Experience Platform의 대상자 개념은 Airship의 [Tags](https://docs.airship.com/guides/audience/tags/)와 유사하며 구현에 약간의 차이가 있습니다. 이 통합은 Experience Platform 세그먼트 [에서 사용자의 ](../../../xdm/field-groups/profile/segmentation.md)멤버십 상태를 [!DNL Airship] 태그의 존재 여부에 매핑합니다. 예를 들어 `xdm:status`이(가) `realized`(으)로 변경되는 Experience Platform 대상에서는 태그가 [!DNL Airship] 채널 또는 이 프로필이 매핑된 명명된 사용자에 추가됩니다. `xdm:status`이(가) `exited`(으)로 변경되면 태그가 제거됩니다.
+Adobe Experience Platform의 대상자 개념은 Airship의 [Tags](https://docs.airship.com/guides/audience/tags/)와 유사하며 구현에 약간의 차이가 있습니다. 이 통합은 Experience Platform 세그먼트 [에서 사용자의 &#x200B;](../../../xdm/field-groups/profile/segmentation.md)멤버십 상태를 [!DNL Airship] 태그의 존재 여부에 매핑합니다. 예를 들어 `xdm:status`이(가) `realized`(으)로 변경되는 Experience Platform 대상에서는 태그가 [!DNL Airship] 채널 또는 이 프로필이 매핑된 명명된 사용자에 추가됩니다. `xdm:status`이(가) `exited`(으)로 변경되면 태그가 제거됩니다.
 
 이 통합을 사용하려면 *(이름:*)에 [!DNL Airship]태그 그룹`adobe-segments`을(를) 만드십시오.
 
@@ -72,7 +72,7 @@ Adobe Experience Platform의 대상자 개념은 Airship의 [Tags](https://docs.
 
 ## 전달자 토큰 생성
 
-**[!UICONTROL Settings]** Airship 대시보드&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;의 [&quot; ](https://go.airship.com)&#x200B;(으)로 이동한 다음 왼쪽 메뉴에서 **[!UICONTROL Tokens]**&#x200B;을(를) 선택하십시오.
+**[!UICONTROL Settings]** Airship 대시보드&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;의 [&quot; &#x200B;](https://go.airship.com)&#x200B;(으)로 이동한 다음 왼쪽 메뉴에서 **[!UICONTROL Tokens]**&#x200B;을(를) 선택하십시오.
 
 **[!UICONTROL Create Token]**&#x200B;을(를) 클릭합니다.
 

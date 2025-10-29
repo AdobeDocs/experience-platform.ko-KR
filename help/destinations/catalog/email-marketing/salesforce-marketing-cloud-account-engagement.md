@@ -16,7 +16,7 @@ ht-degree: 2%
 
 [!DNL Salesforce Marketing Cloud Engagement]B2C **마케팅을 지향하는**&#x200B;과(와) 비교하여 [!DNL Marketing Cloud Account Engagement]은(는) 더 긴 영업 및 의사 결정 주기를 필요로 하는 여러 부서 및 의사 결정자를 포함하는 **B2B** 사용 사례에 이상적입니다. 또한 CRM과의 긴밀한 근접성과 통합을 유지하여 적절한 판매 및 마케팅 결정을 내릴 수 있습니다. *참고: Experience Platform에 [!DNL Salesforce Marketing Cloud Engagement]에 대한 연결도 있습니다. [[!DNL Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) 및 [[!DNL (API) Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) 페이지에서 확인할 수 있습니다.*
 
-이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) 새 [[!DNL Salesforce Account Engagement API > Prospect Upsert by Email] 세그먼트 내에서 리드를 활성화한 후 ](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#prospect-upsert-by-email)리드를 추가 또는 업데이트&#x200B;**하기 위해**[!DNL Marketing Cloud Account Engagement] 끝점을 활용합니다.
+이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) 새 [[!DNL Salesforce Account Engagement API > Prospect Upsert by Email] 세그먼트 내에서 리드를 활성화한 후 &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#prospect-upsert-by-email)리드를 추가 또는 업데이트&#x200B;**하기 위해**&#x200B;[!DNL Marketing Cloud Account Engagement] 끝점을 활용합니다.
 
 [!DNL Marketing Cloud Account Engagement]은(는) 인증 코드 프로토콜이 있는 OAuth 2를 사용하여 [!DNL Account Engagement] API에 인증합니다. [!DNL Marketing Cloud Account Engagement] 인스턴스에 대한 인증 지침은 [대상에 대한 인증](#authenticate) 섹션에서 아래에 더 나와 있습니다.
 
@@ -34,7 +34,7 @@ Experience Platform 및 [!DNL Salesforce]에서 설정해야 하는 필수 구�
 
 ### Experience Platform의 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL Marketing Cloud Account Engagement] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 ](/help/xdm/schema/composition.md)스키마[, ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[ 및 ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)세그먼트[!DNL Experience Platform]가 있어야 합니다.
+[!DNL Marketing Cloud Account Engagement] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 &#x200B;](/help/xdm/schema/composition.md)스키마[, &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[&#x200B; 및 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)세그먼트[!DNL Experience Platform]가 있어야 합니다.
 
 ### [!DNL Marketing Cloud Account Engagement]의 필수 구성 요소 {#prerequisites-destination}
 
@@ -42,13 +42,13 @@ Experience Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로
 
 #### [!DNL Marketing Cloud Account Engagement] 계정이 있어야 합니다. {#prerequisites-account}
 
-계속하려면 [!DNL Marketing Cloud Account Engagement]Marketing Cloud 계정 참여[ 제품에 대한 구독이 있는 ](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) 계정이 필요합니다.
+계속하려면 [!DNL Marketing Cloud Account Engagement]Marketing Cloud 계정 참여[&#x200B; 제품에 대한 구독이 있는 &#x200B;](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) 계정이 필요합니다.
 
 [!DNL Salesforce] 계정에 [!DNL Salesforce] `Account Engagement Administrator role`이(가) 있어야 합니다. [사용자 지정 잠재 고객 필드를 만들기](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&type=5)하려면 필요합니다.
 
 마지막으로, 계정에서도 [[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&type=5)에 액세스할 수 있습니다.
 
-계정이 없거나 계정에 [[!DNL Salesforce]  구독 또는 ](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10)이 없는 경우 [!DNL Salesforce]지원[!DNL Marketing Cloud Account Engagement] 또는 [!DNL Account Engagement Administrator role] 계정 관리자에게 문의하세요.
+계정이 없거나 계정에 [[!DNL Salesforce]  구독 또는 &#x200B;](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10)이 없는 경우 [!DNL Salesforce]지원[!DNL Marketing Cloud Account Engagement] 또는 [!DNL Account Engagement Administrator role] 계정 관리자에게 문의하세요.
 
 #### [!DNL Marketing Cloud Account Engagement] 자격 증명 수집 {#gather-credentials}
 

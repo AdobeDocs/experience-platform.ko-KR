@@ -97,7 +97,7 @@ Adobe Experience Platform에서 Qualtrics 대상을 설정하기 전에 다음 �
 
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL URL]**: Qualtrics에서 [워크플로를 트리거하는 ](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About)JSON 이벤트[에 있는 URL](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About)입니다. 예제는 아래 스크린샷 을 참조하십시오.
+* **[!UICONTROL URL]**: Qualtrics에서 [워크플로를 트리거하는 &#x200B;](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About)JSON 이벤트[에 있는 URL](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About)입니다. 예제는 아래 스크린샷 을 참조하십시오.
 
 ![URL](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png)
 

@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # [!DNL SAP Commerce] 연결
 
-이전에 [!DNL SAP Commerce][[!DNL Hybris]&#x200B;(으)로 알려졌던 ](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html)은(는) B2B 및 B2C 기업을 위한 클라우드 기반 전자 상거래 플랫폼 솔루션이며 SAP Customer Experience 포트폴리오의 일부로 사용할 수 있습니다. [[!DNL SAP] 구독 청구](https://www.sap.com/products/financial-management/subscription-billing.html)는 포트폴리오의 제품이며 표준화된 통합을 통해 간소화된 판매 및 결제 환경을 통해 완전한 구독 라이프사이클 관리를 가능하게 합니다.
+이전에 [!DNL SAP Commerce][[!DNL Hybris]&#x200B;(으)로 알려졌던 &#x200B;](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html)은(는) B2B 및 B2C 기업을 위한 클라우드 기반 전자 상거래 플랫폼 솔루션이며 SAP Customer Experience 포트폴리오의 일부로 사용할 수 있습니다. [[!DNL SAP] 구독 청구](https://www.sap.com/products/financial-management/subscription-billing.html)는 포트폴리오의 제품이며 표준화된 통합을 통해 간소화된 판매 및 결제 환경을 통해 완전한 구독 라이프사이클 관리를 가능하게 합니다.
 
 이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) [[!DNL SAP Subscription Billing] 고객 관리 API](https://api.sap.com/api/BusinessPartner_APIs/path/PUT_customers-customerNumber)를 사용하여 활성화 후 기존 Experience Platform 대상자에서 [!DNL SAP Commerce] 내의 고객 세부 정보를 업데이트합니다.
 
@@ -30,7 +30,7 @@ Experience Platform 및 [!DNL SAP Commerce]에서 설정해야 하는 필수 구
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL SAP Commerce] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 ](/help/xdm/schema/composition.md)스키마[, ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[ 및 ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)대상[!DNL Experience Platform]이 있어야 합니다.
+[!DNL SAP Commerce] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 &#x200B;](/help/xdm/schema/composition.md)스키마[, &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[&#x200B; 및 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)대상[!DNL Experience Platform]이 있어야 합니다.
 
 대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)은 Experience Platform 설명서를 참조하십시오.
 
@@ -158,7 +158,7 @@ Experience Platform에서 [!DNL SAP Commerce] 계정으로 데이터를 내보�
 | **[!UICONTROL Endpoint]** | 서비스 키의 `url` 값은 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`과(와) 비슷합니다. |
 | **[!UICONTROL Region]** | 데이터 센터 위치. 영역이 `url`에 있으며 `eu10` 또는 `us10`과(와) 유사한 값을 갖습니다. 예를 들어 `url`이(가) `https://eu10.revenue.cloud.sap/api`이면 `eu10`이(가) 필요합니다. |
 
-대상에 인증하려면 **[!UICONTROL Connect to destination]**을(를) 선택하십시오.
+대상에 인증하려면 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 ![대상에 인증하는 방법을 보여 주는 Experience Platform UI의 이미지입니다.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
 
 제공된 세부 정보가 유효한 경우 UI에 녹색 확인 표시와 함께 **[!UICONTROL Connected]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
@@ -195,7 +195,7 @@ Experience Platform에서 [!DNL SAP Commerce] 계정으로 데이터를 내보�
 
 `customerNumberSAP` ID는 이 대상에 대한 필수 매핑입니다. 매핑하려면 아래 단계를 따르십시오.
 
-1. **[!UICONTROL Mapping]** 단계에서 **[!UICONTROL Add new mapping]**을(를) 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
+1. **[!UICONTROL Mapping]** 단계에서 **[!UICONTROL Add new mapping]**&#x200B;을(를) 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
    ![새 매핑 추가 단추가 강조 표시된 Experience Platform UI 스크린샷입니다.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. **[!UICONTROL Select source field]** 창에서 **[!UICONTROL Select identity namespace]**&#x200B;을(를) 선택하고 `customerNumberSAP`을(를) 선택합니다.
    ![ID로 매핑할 소스 특성으로 이메일을 선택하는 Experience Platform UI 스크린샷](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
@@ -213,11 +213,11 @@ Experience Platform에서 [!DNL SAP Commerce] 계정으로 데이터를 내보�
 
 XDM 프로필 스키마와 [!DNL SAP Subscription Billing] 계정 사이에 업데이트할 다른 특성을 추가하려면 아래 단계를 반복합니다.
 
-1. **[!UICONTROL Mapping]** 단계에서 **[!UICONTROL Add new mapping]**을(를) 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
+1. **[!UICONTROL Mapping]** 단계에서 **[!UICONTROL Add new mapping]**&#x200B;을(를) 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
    ![새 매핑 추가 단추가 강조 표시된 Experience Platform UI 스크린샷입니다.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. **[!UICONTROL Select source field]** 창에서 **[!UICONTROL Select attributes]** 범주를 선택하고 XDM 특성을 선택합니다.
    ![성을 소스 특성으로 선택하는 Experience Platform UI 스크린샷](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
-1. **[!UICONTROL Select target field]** 창에서 **[!UICONTROL Select custom attributes]** 범주를 선택하고 고객 [!DNL SAP Subscription Billing]스키마[ 특성 목록에서 ](https://api.sap.com/api/BusinessPartner_APIs/schema) 특성 이름을 입력합니다.
+1. **[!UICONTROL Select target field]** 창에서 **[!UICONTROL Select custom attributes]** 범주를 선택하고 고객 [!DNL SAP Subscription Billing]스키마[&#x200B; 특성 목록에서 &#x200B;](https://api.sap.com/api/BusinessPartner_APIs/schema) 특성 이름을 입력합니다.
    ![lastName이 대상 특성으로 정의된 Experience Platform UI 스크린샷.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
 
 >[!IMPORTANT]
@@ -279,9 +279,9 @@ XDM 프로필 스키마와 [!DNL SAP Subscription Billing] 계정 사이에 업�
 
 ### 대상자 내보내기 예약 및 예제 {#schedule-segment-export-example}
 
-[대상 내보내기 예약](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 단계를 수행할 때 Experience Platform 대상을 [의 ](#prerequisites-attribute)특성[!DNL SAP Subscription Billing]에 수동으로 매핑해야 합니다.
+[대상 내보내기 예약](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 단계를 수행할 때 Experience Platform 대상을 [의 &#x200B;](#prerequisites-attribute)특성[!DNL SAP Subscription Billing]에 수동으로 매핑해야 합니다.
 
-[!DNL SAP Commerce] **[!UICONTROL Mapping ID]**의 위치가 강조 표시된 대상자 내보내기 예약 단계의 예가 아래에 표시되어 있습니다.
+[!DNL SAP Commerce] **[!UICONTROL Mapping ID]**&#x200B;의 위치가 강조 표시된 대상자 내보내기 예약 단계의 예가 아래에 표시되어 있습니다.
 ![매핑 ID가 채워진 대상자 내보내기 일정을 표시하는 Experience Platform의 이미지.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
 이렇게 하려면 각 세그먼트를 선택한 다음 [!DNL SAP Subscription Billing] [!DNL SAP Commerce] 대상 커넥터 필드의 **[!UICONTROL Mapping ID]**&#x200B;에서 사용자 지정 참조 이름을 입력하십시오. 사용자 지정 참조 만들기에 대한 지침은 [사용자 지정 참조 만들기 [!DNL SAP Subscription Billing]](#prerequisites-custom-reference) 섹션을 참조하십시오.
@@ -289,14 +289,14 @@ XDM 프로필 스키마와 [!DNL SAP Subscription Billing] 계정 사이에 업�
 >[!IMPORTANT]
 >
 > 사용자 지정 참조 레이블을 값으로 사용하지 마십시오.
-> >![매핑에 사용자 지정 참조 레이블 값을 사용하지 않아야 함을 나타내는 이미지입니다.](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png)
+> &#x200B;>![매핑에 사용자 지정 참조 레이블 값을 사용하지 않아야 함을 나타내는 이미지입니다.](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png)
 
 예를 들어 선택한 Experience Platform 대상이 `sap_audience1`이고 상태를 [!DNL SAP Subscription Billing] 사용자 지정 참조 `SAP_1`(으)로 업데이트하려면 [!DNL SAP_Commerce] **[!UICONTROL Mapping ID]** 필드에 이 값을 지정하십시오.
 
 **[!UICONTROL Reference Type]**&#x200B;의 [!DNL SAP Subscription Billing] 예제가 아래에 표시되어 있습니다.
 ![SAP 구독 청구에서 사용자 지정 참조를 만들 위치를 보여 주는 이미지입니다.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
-대상이 선택되고 해당 [!DNL SAP Commerce] **[!UICONTROL Mapping ID]**이(가) 강조 표시된 대상 내보내기 예약 단계의 예는 다음과 같습니다.
+대상이 선택되고 해당 [!DNL SAP Commerce] **[!UICONTROL Mapping ID]**&#x200B;이(가) 강조 표시된 대상 내보내기 예약 단계의 예는 다음과 같습니다.
 ![매핑 ID가 채워진 대상자 내보내기 일정을 표시하는 Experience Platform의 이미지.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
 
 표시된 대로 **[!UICONTROL Mapping ID]** 필드 내의 값은 [!DNL SAP Subscription Billing] **[!UICONTROL Reference Type]** 값과 정확히 일치해야 합니다.

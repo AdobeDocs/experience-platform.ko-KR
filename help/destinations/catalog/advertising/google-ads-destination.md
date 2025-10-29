@@ -77,7 +77,7 @@ ht-degree: 2%
 >[!NOTE]
 >
 >Experience Platform에서 첫 번째 [!DNL Google Ads] 대상을 설정하기 전에 허용 목록이 필수입니다. 대상을 만들기 전에 [!DNL Google]이(가) 아래에 설명된 허용 목록 프로세스를 완료했는지 확인하십시오.
->>이 규칙은 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 고객에 대해 예외입니다. Audience Manager에서 이 Google 대상에 대한 연결을 이미 만든 경우 허용 목록 프로세스를 다시 진행할 필요가 없으며 다음 단계를 진행할 수 있습니다.
+>&#x200B;>이 규칙은 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 고객에 대해 예외입니다. Audience Manager에서 이 Google 대상에 대한 연결을 이미 만든 경우 허용 목록 프로세스를 다시 진행할 필요가 없으며 다음 단계를 진행할 수 있습니다.
 
 Experience Platform에서 [!DNL Google Ads] 대상을 만들기 전에 [!DNL Google]에 연락하여 Adobe을 허용된 데이터 공급자 목록에 추가하고 계정을 허용 목록에 추가하다에 추가해야 합니다. [!DNL Google]에게 연락하여 다음 정보를 제공하십시오.
 

@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **응답**
 
-응답이 성공하면 진단이 저장된 위치를 자세히 설명하는 `path`개의 개체가 포함된 JSON 개체가 반환됩니다. 응답은 `path`JSON 줄[ 형식으로 ](https://jsonlines.readthedocs.io/en/latest/) 개체를 반환합니다.
+응답이 성공하면 진단이 저장된 위치를 자세히 설명하는 `path`개의 개체가 포함된 JSON 개체가 반환됩니다. 응답은 `path`JSON 줄[&#x200B; 형식으로 &#x200B;](https://jsonlines.readthedocs.io/en/latest/) 개체를 반환합니다.
 
 ```json
 {"path": "F1.json"}

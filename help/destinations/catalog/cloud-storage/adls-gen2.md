@@ -109,7 +109,7 @@ ht-degree: 2%
 
 ### 예약 {#scheduling}
 
-**[!UICONTROL Scheduling]** 단계에서는 [ 대상에 대해 ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)내보내기 일정을 설정[!DNL Azure Data Lake Storage Gen2]할 수 있으며 [내보낸 파일의 이름을 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)할 수도 있습니다.
+**[!UICONTROL Scheduling]** 단계에서는 [&#x200B; 대상에 대해 &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)내보내기 일정을 설정[!DNL Azure Data Lake Storage Gen2]할 수 있으며 [내보낸 파일의 이름을 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)할 수도 있습니다.
 
 ### 속성 및 ID 매핑 {#map}
 

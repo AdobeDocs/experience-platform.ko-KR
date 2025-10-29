@@ -48,7 +48,7 @@ Taxonomy 리소스는 기본 [!DNL DataX] 메타데이터 구조를 통해 확�
 }
 ```
 
-[ 개발자 설명서에서 ](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/)분류 메타데이터[!DNL DataX]에 대해 자세히 알아보십시오.
+[&#x200B; 개발자 설명서에서 &#x200B;](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/)분류 메타데이터[!DNL DataX]에 대해 자세히 알아보십시오.
 
 ## 등급 제한 및 보호 {#rate-limits-guardrails}
 
@@ -131,4 +131,4 @@ Experience Platform UI의 ![Yahoo DataX 대상 카드](/help/destinations/assets
 
 ## 추가 리소스 {#additional-resources}
 
-자세한 내용은 [!DNL Yahoo/Verizon Media][의  [!DNL DataX] ](https://developer.verizonmedia.com/datax/guide/)설명서를 참조하십시오.
+자세한 내용은 [!DNL Yahoo/Verizon Media][의  [!DNL DataX] &#x200B;](https://developer.verizonmedia.com/datax/guide/)설명서를 참조하십시오.

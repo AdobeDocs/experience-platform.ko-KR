@@ -107,7 +107,7 @@ ht-degree: 4%
 
 ### API 참조 설명서 {#api-reference-documentation}
 
-이 자습서에서 모든 API 작업에 대한 참조 설명서를 함께 찾을 수 있습니다. Adobe Developer 웹 사이트[[!DNL Flow Service] 에서 ](https://developer.adobe.com/experience-platform-apis/references/destinations/)- 대상 API 설명서를 참조하십시오. 이 자습서와 API 참조 설명서를 동시에 사용하는 것이 좋습니다.
+이 자습서에서 모든 API 작업에 대한 참조 설명서를 함께 찾을 수 있습니다. Adobe Developer 웹 사이트[[!DNL Flow Service] 에서 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/)- 대상 API 설명서를 참조하십시오. 이 자습서와 API 참조 설명서를 동시에 사용하는 것이 좋습니다.
 
 ### 용어집 {#glossary}
 
@@ -521,7 +521,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![데이터 세트 내보내기 워크플로의 3단계를 보여 주는 다이어그램](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
 
-기본 연결은 대상에 자격 증명을 안전하게 저장합니다. 대상 유형에 따라 해당 대상에 대해 인증하는 데 필요한 자격 증명이 달라질 수 있습니다. 이러한 인증 매개 변수를 찾으려면 먼저 [!DNL connection spec]연결 사양 및 흐름 사양 수집[ 섹션에 설명된 대로 원하는 대상에 대해 ](#gather-connection-spec-flow-spec)을(를) 검색한 다음 응답의 `authSpec`을(를) 확인하십시오. 지원되는 모든 대상의 `authSpec` 속성을 보려면 아래 탭을 참조하십시오.
+기본 연결은 대상에 자격 증명을 안전하게 저장합니다. 대상 유형에 따라 해당 대상에 대해 인증하는 데 필요한 자격 증명이 달라질 수 있습니다. 이러한 인증 매개 변수를 찾으려면 먼저 [!DNL connection spec]연결 사양 및 흐름 사양 수집[&#x200B; 섹션에 설명된 대로 원하는 대상에 대해 &#x200B;](#gather-connection-spec-flow-spec)을(를) 검색한 다음 응답의 `authSpec`을(를) 확인하십시오. 지원되는 모든 대상의 `authSpec` 속성을 보려면 아래 탭을 참조하십시오.
 
 >[!BEGINTABS]
 
@@ -1631,8 +1631,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)대상 세부 정보 채우기[!DNL Amazon S3] 섹션을 참조하십시오.
->>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)대상 세부 정보 채우기[!DNL Amazon S3] 섹션을 참조하십시오.
+>&#x200B;>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -1684,8 +1684,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details)대상 세부 정보 채우기[!DNL Azure Blob Storage] 섹션을 참조하십시오.
->>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details)대상 세부 정보 채우기[!DNL Azure Blob Storage] 섹션을 참조하십시오.
+>&#x200B;>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
 
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
@@ -1738,8 +1738,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 가져오는 방법에 대한 자세한 내용은 Azure [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details)대상 세부 정보를 채우기[!DNL Data Lake Gen 2(ADLS Gen2)] 섹션을 참조하세요.
->>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
+>필요한 대상 매개 변수를 가져오는 방법에 대한 자세한 내용은 Azure [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details)대상 세부 정보를 채우기[!DNL Data Lake Gen 2(ADLS Gen2)] 섹션을 참조하세요.
+>&#x200B;>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -1790,8 +1790,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details)대상 세부 정보 채우기[!DNL Data Landing Zone] 섹션을 참조하십시오.
->>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details)대상 세부 정보 채우기[!DNL Data Landing Zone] 섹션을 참조하십시오.
+>&#x200B;>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -1842,8 +1842,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)대상 세부 정보 채우기[!DNL Google Cloud Storage] 섹션을 참조하십시오.
->>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)대상 세부 정보 채우기[!DNL Google Cloud Storage] 섹션을 참조하십시오.
+>&#x200B;>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
 
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
@@ -1897,7 +1897,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 SFTP 대상 설명서 페이지의 [대상 세부 정보를 입력하십시오](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) 섹션을 참조하십시오.
->>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
+>&#x200B;>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 

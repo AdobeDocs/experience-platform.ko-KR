@@ -129,7 +129,7 @@ Experience Platform을 [!DNL Google Cloud Storage]에 연결하려면 먼저 [!D
 * `storage.objects.create`
 * `storage.objects.list`
 
-[의 ](https://cloud.google.com/storage/docs/access-control/iam-permissions)액세스 제어 및 권한[!DNL Google Cloud Storage]에 대해 자세히 알아보세요.
+[의 &#x200B;](https://cloud.google.com/storage/docs/access-control/iam-permissions)액세스 제어 및 권한[!DNL Google Cloud Storage]에 대해 자세히 알아보세요.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
@@ -142,7 +142,7 @@ Experience Platform을 [!DNL Google Cloud Storage]에 연결하려면 먼저 [!D
 
 ### 예약
 
-**[!UICONTROL Scheduling]** 단계에서는 [ 대상에 대해 ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)내보내기 일정을 설정[!DNL Google Cloud Storage]할 수 있으며 [내보낸 파일의 이름을 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)할 수도 있습니다.
+**[!UICONTROL Scheduling]** 단계에서는 [&#x200B; 대상에 대해 &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)내보내기 일정을 설정[!DNL Google Cloud Storage]할 수 있으며 [내보낸 파일의 이름을 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)할 수도 있습니다.
 
 ### 속성 및 ID 매핑 {#map}
 

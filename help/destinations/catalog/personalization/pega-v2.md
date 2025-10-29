@@ -37,9 +37,9 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 이 대상을 사용하여 Adobe Experience Platform에서 데이터를 내보내려면 먼저 [!DNL Pega Customer Decision Hub]에서 다음 사전 요구 사항을 완료하십시오.
 
-* [ 인스턴스에서 ](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소[!DNL Pega Customer Decision Hub]를 구성합니다.
-* [ 인스턴스에서 클라이언트 자격 증명을 사용하여 OAuth 2.0 ](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)클라이언트 등록[!DNL Pega Customer Decision Hub] 부여 유형을 구성합니다.
-* [ 인스턴스에서 Adobe 대상 멤버십 데이터 흐름에 대한 ](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)실시간 실행 데이터 흐름[!DNL Pega Customer Decision Hub]을 구성하십시오.
+* [&#x200B; 인스턴스에서 &#x200B;](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소[!DNL Pega Customer Decision Hub]를 구성합니다.
+* [&#x200B; 인스턴스에서 클라이언트 자격 증명을 사용하여 OAuth 2.0 &#x200B;](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)클라이언트 등록[!DNL Pega Customer Decision Hub] 부여 유형을 구성합니다.
+* [&#x200B; 인스턴스에서 Adobe 대상 멤버십 데이터 흐름에 대한 &#x200B;](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)실시간 실행 데이터 흐름[!DNL Pega Customer Decision Hub]을 구성하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -89,7 +89,7 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL Pega CDH Host Name]**: 프로필을 JSON 데이터로 내보내는 Pega 고객 의사 결정 허브 호스트 이름입니다.
-* **[!UICONTROL Application alias]**: 고객 결정 허브 계정에 대해 구성한 응용 프로그램 별칭입니다. 자세한 내용은 [ 인스턴스에서 ](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html)응용 프로그램 URL 별칭 추가[!DNL Pega Customer Decision Hub]를 참조하십시오.
+* **[!UICONTROL Application alias]**: 고객 결정 허브 계정에 대해 구성한 응용 프로그램 별칭입니다. 자세한 내용은 [&#x200B; 인스턴스에서 &#x200B;](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html)응용 프로그램 URL 별칭 추가[!DNL Pega Customer Decision Hub]를 참조하십시오.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 

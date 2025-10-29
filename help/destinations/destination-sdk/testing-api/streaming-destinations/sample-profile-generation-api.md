@@ -61,7 +61,7 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | 쿼리 매개 변수 | 설명 |
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | 샘플 프로필을 생성하는 데 기준이 되는 대상 인스턴스의 ID입니다. |
-| `{COUNT}` | *선택 사항*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이의 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 `maxUsersPerRequest`대상 서버 구성[의 ](../../authoring-api/destination-server/create-destination-server.md) 값에 의해 생성된 프로필의 기본 수가 결정됩니다. 이 속성이 정의되지 않으면 Adobe에서 하나의 샘플 프로필을 생성합니다. |
+| `{COUNT}` | *선택 사항*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이의 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 `maxUsersPerRequest`대상 서버 구성[의 &#x200B;](../../authoring-api/destination-server/create-destination-server.md) 값에 의해 생성된 프로필의 기본 수가 결정됩니다. 이 속성이 정의되지 않으면 Adobe에서 하나의 샘플 프로필을 생성합니다. |
 
 {style="table-layout:auto"}
 
@@ -211,7 +211,7 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | 쿼리 매개 변수 | 설명 |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | 샘플 프로필을 생성하는 데 기준이 되는 대상 구성의 ID입니다. |
-| `{COUNT}` | *선택 사항*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이의 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 `maxUsersPerRequest`대상 서버 구성[의 ](../../authoring-api/destination-server/create-destination-server.md) 값에 의해 생성된 프로필의 기본 수가 결정됩니다. 이 속성이 정의되지 않으면 Adobe에서 하나의 샘플 프로필을 생성합니다. |
+| `{COUNT}` | *선택 사항*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이의 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 `maxUsersPerRequest`대상 서버 구성[의 &#x200B;](../../authoring-api/destination-server/create-destination-server.md) 값에 의해 생성된 프로필의 기본 수가 결정됩니다. 이 속성이 정의되지 않으면 Adobe에서 하나의 샘플 프로필을 생성합니다. |
 
 {style="table-layout:auto"}
 

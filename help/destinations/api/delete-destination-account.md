@@ -147,7 +147,7 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >대상 계정을 삭제하기 전에 대상 계정에 대한 기존 데이터 흐름을 모두 삭제해야 합니다.
->>기존 데이터 흐름을 삭제하려면 아래 페이지를 참조하십시오.
+>&#x200B;>기존 데이터 흐름을 삭제하려면 아래 페이지를 참조하십시오.
 >
 >* 기존 데이터 흐름을 삭제하려면 [Experience Platform UI를 사용](../ui/delete-destinations.md)하십시오.
 >* 기존 데이터 흐름을 삭제하려면 [흐름 서비스 API를 사용](delete-destination-dataflow.md)하십시오.

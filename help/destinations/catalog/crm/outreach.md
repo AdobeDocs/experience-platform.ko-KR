@@ -16,7 +16,7 @@ ht-degree: 2%
 
 [[!DNL Outreach]](https://www.outreach.io/)은(는) 세계에서 가장 많은 B2B 구매자-판매자 상호 작용 데이터와 판매 데이터를 인텔리전스로 변환하기 위한 독점 AI 기술에 대한 상당한 투자가 있는 판매 실행 플랫폼입니다. [!DNL Outreach]을(를) 사용하면 조직의 효율성, 예측 가능성 및 성장을 향상시키기 위해 영업 참여를 자동화하고 매출 인텔리전스를 수행할 수 있습니다.
 
-이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) [의 잠재 고객에 해당하는 대상 내에서 ID를 업데이트할 수 있는 ](https://api.outreach.io/api/v2/docs#update-an-existing-resource)Outreach Update Resource API[!DNL Outreach]를 활용합니다.
+이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) [의 잠재 고객에 해당하는 대상 내에서 ID를 업데이트할 수 있는 &#x200B;](https://api.outreach.io/api/v2/docs#update-an-existing-resource)Outreach Update Resource API[!DNL Outreach]를 활용합니다.
 
 [!DNL Outreach]은(는) 인증 메커니즘으로 권한 부여가 있는 OAuth 2를 사용하여 [!DNL Outreach] [!DNL Update Resource API]과(와) 통신합니다. [!DNL Outreach] 인스턴스에 대한 인증 지침은 [대상에 대한 인증](#authenticate) 섹션 아래에 나와 있습니다.
 
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL Outreach] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 ](/help/xdm/schema/composition.md)스키마[, ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[ 및 ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)세그먼트[!DNL Experience Platform]가 있어야 합니다.
+[!DNL Outreach] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 &#x200B;](/help/xdm/schema/composition.md)스키마[, &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[&#x200B; 및 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)세그먼트[!DNL Experience Platform]가 있어야 합니다.
 
 대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)에 대한 Adobe 설명서를 참조하십시오.
 
@@ -83,7 +83,7 @@ Experience Platform에서 [!DNL Outreach] 계정으로 데이터를 내보내려
 
 | 항목 | 유형 | 참고 |
 |---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL Profile-based]** | <ul><li> 필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> [!DNL Outreach]의 각 세그먼트 상태는 [!UICONTROL Mapping ID]대상 예약[ 단계 동안 제공된 ](#schedule-segment-export-example) 값을 기반으로 Experience Platform의 해당 대상 상태로 업데이트됩니다.</li></ul> |
+| 내보내기 유형 | **[!UICONTROL Profile-based]** | <ul><li> 필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> [!DNL Outreach]의 각 세그먼트 상태는 [!UICONTROL Mapping ID]대상 예약[&#x200B; 단계 동안 제공된 &#x200B;](#schedule-segment-export-example) 값을 기반으로 Experience Platform의 해당 대상 상태로 업데이트됩니다.</li></ul> |
 | 내보내기 빈도 | **[!UICONTROL Streaming]** | <ul><li> 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요.</li></ul> |
 
 {style="table-layout:auto"}
@@ -144,7 +144,7 @@ Experience Platform에서 [!DNL Outreach] 계정으로 데이터를 내보내려
 
 대상 데이터를 Adobe Experience Platform에서 [!DNL Outreach] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Experience Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 스키마 필드 간에 링크를 작성하는 것으로 구성됩니다. XDM 필드를 [!DNL Outreach] 대상 필드에 올바르게 매핑하려면 다음 단계를 따르십시오.
 
-1. [!UICONTROL Mapping] 단계에서 **[!UICONTROL Add new mapping]**을(를) 클릭합니다. 화면에 새 매핑 행이 표시됩니다.
+1. [!UICONTROL Mapping] 단계에서 **[!UICONTROL Add new mapping]**&#x200B;을(를) 클릭합니다. 화면에 새 매핑 행이 표시됩니다.
    ![새 매핑을 추가하는 방법을 보여주는 Experience Platform UI 스크린샷](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
 1. [!UICONTROL Select source field] 창에서 **[!UICONTROL Select identity namespace]** 범주를 선택하고 원하는 매핑을 추가합니다.
@@ -181,7 +181,7 @@ Experience Platform에서 [!DNL Outreach] 계정으로 데이터를 내보내려
 
   >[!IMPORTANT]
   >
-  > * *내에서 사용된 숫자 값 `N`(*)[!UICONTROL Mapping ID]은(는) [!DNL Outreach] 내의 숫자 값으로 추가된 사용자 지정 특성 키와 일치해야 합니다. 예: *사용자 지정 필드 `N` 레이블*.
+  > * *내에서 사용된 숫자 값 `N`(*) [!UICONTROL Mapping ID]은(는) [!DNL Outreach] 내의 숫자 값으로 추가된 사용자 지정 특성 키와 일치해야 합니다. 예: *사용자 지정 필드 `N` 레이블*.
   > * 전체 사용자 정의 필드 레이블이 아닌 숫자 값만 지정해야 합니다.
   > * [!DNL Outreach]은(는) 최대 150개의 사용자 지정 레이블 필드를 지원합니다.
   > * 자세한 내용은 [[!DNL Outreach] 잠재 고객 설명서](https://api.outreach.io/api/v2/docs#prospect)를 참조하세요.
@@ -198,10 +198,10 @@ Experience Platform에서 [!DNL Outreach] 계정으로 데이터를 내보내려
 
 대상을 올바르게 설정했는지 확인하려면 아래 단계를 수행하십시오.
 
-1. 대상 목록으로 이동하려면 **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**을(를) 선택합니다.
+1. 대상 목록으로 이동하려면 **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**&#x200B;을(를) 선택합니다.
    ![찾아보기 대상을 표시하는 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/outreach/browse-destinations.png)
 
-1. 대상을 선택하고 상태가 **[!UICONTROL enabled]**인지 확인하십시오.
+1. 대상을 선택하고 상태가 **[!UICONTROL enabled]**&#x200B;인지 확인하십시오.
    ![선택한 대상에 대해 데이터 흐름이 실행되는 대상을 보여 주는 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
 1. **[!DNL Activation data]** 탭으로 전환한 다음 대상 이름을 선택합니다.
@@ -210,7 +210,7 @@ Experience Platform에서 [!DNL Outreach] 계정으로 데이터를 내보내려
 1. 대상자 요약을 모니터링하고 프로필 수가 세그먼트 내에서 만든 수에 해당하는지 확인합니다.
    ![세그먼트 요약을 보여 주는 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/outreach/segment.png)
 
-1. [!DNL Outreach] 웹 사이트에 로그인한 다음 [!DNL Apps] > [!DNL Contacts] 페이지로 이동하여 대상자의 프로필이 추가되었는지 확인합니다. [!DNL Outreach]대상 예약[!UICONTROL Mapping ID] 단계 동안 제공된 [ 값을 기반으로 ](#schedule-segment-export-example)의 각 대상 상태가 Experience Platform의 해당 대상 상태로 업데이트되었음을 확인할 수 있습니다.
+1. [!DNL Outreach] 웹 사이트에 로그인한 다음 [!DNL Apps] > [!DNL Contacts] 페이지로 이동하여 대상자의 프로필이 추가되었는지 확인합니다. [!DNL Outreach]대상 예약[!UICONTROL Mapping ID] 단계 동안 제공된 [&#x200B; 값을 기반으로 &#x200B;](#schedule-segment-export-example)의 각 대상 상태가 Experience Platform의 해당 대상 상태로 업데이트되었음을 확인할 수 있습니다.
 
 ![대상자 상태가 업데이트된 [전달 전망] 페이지를 표시하는 [전달 UI] 스크린샷.](../../assets/catalog/crm/outreach/outreach-prospect.png)
 

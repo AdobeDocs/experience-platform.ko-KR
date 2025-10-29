@@ -44,13 +44,13 @@ Experience Platform에서 [!DNL LINE] 리소스에 액세스할 수 있도록 �
 
 1. [!DNL LINE] 계정으로 [[!DNL LINE] 개발자 콘솔](https://developers.line.biz/console)에 로그인합니다.
 1. 그런 다음 *[!DNL Providers]* 목록에 액세스한 다음 관심 *[!DNL Provider]*&#x200B;을(를) 선택하고 마지막으로 *메시징 API* 채널을 선택하여 해당 설정에 액세스합니다. 개발자 콘솔에 처음 액세스하는 경우 [[!DNL LINE] 설명서](https://developers.line.biz/en/docs/messaging-api/getting-started/)를 따라 공급자를 만드는 데 필요한 단계를 완료하십시오.
-1. 마지막으로 ***[!DNL Channel access token]*** 섹션으로 이동하여 ***[!DNL Channel access token (long-lived)]***&#x200B;대상에 인증[ 단계 내에 필요한 ](#authenticate) 값을 복사합니다.
+1. 마지막으로 ***[!DNL Channel access token]*** 섹션으로 이동하여 ***[!DNL Channel access token (long-lived)]***&#x200B;대상에 인증[&#x200B; 단계 내에 필요한 &#x200B;](#authenticate) 값을 복사합니다.
 
 | 자격 증명 | 설명 | 예 |
 | --- | --- | --- |
 | `[!DNL Channel access token (long-lived)]` | 내 [!DNL LINE Channel access token (long-lived)]. | `aaa2112XSMWqLXR7..........nyilFU=` |
 
-[[!DNL LINE]  개발자 콘솔을 통해 채널을 만들거나 기존 ](https://developers.line.biz/en/docs/messaging-api/getting-started/) 계정에 채널을 추가하는 방법에 대한 지침은 [!DNL LINE]설명서[!DNL LINE]를 참조하세요.
+[[!DNL LINE]  개발자 콘솔을 통해 채널을 만들거나 기존 &#x200B;](https://developers.line.biz/en/docs/messaging-api/getting-started/) 계정에 채널을 추가하는 방법에 대한 지침은 [!DNL LINE]설명서[!DNL LINE]를 참조하세요.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -84,7 +84,7 @@ Experience Platform에서 [!DNL LINE] 리소스에 액세스할 수 있도록 �
 
 ### 대상으로 인증 {#authenticate}
 
-대상에 인증하려면 **[!UICONTROL Connect to destination]**을(를) 선택하십시오.
+대상에 인증하려면 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 아래의 필수 필드를 입력하십시오.

@@ -38,7 +38,7 @@ Data Science Workspace을 사용하면 사용자가 [!DNL Jupyter Notebooks] 플
 
 [!DNL JupyterLab]을(를) 실행하면 Jupyter Notebooks용 웹 기반 인터페이스가 표시됩니다. 어떤 유형의 노트북을 선택하느냐에 따라 해당 커널이 시작됩니다.
 
-사용할 환경을 비교할 때는 각 서비스의 제한 사항을 고려해야 합니다. 예를 들어 [과(와) 함께 ](https://pandas.pydata.org/)pandas[!DNL Python] 라이브러리를 일반 사용자로 사용하는 경우 RAM 제한은 2GB입니다. 파워 유저로서도 우리는 20GB의 RAM으로 제한됩니다. 더 큰 계산을 처리하는 경우 모든 노트북 인스턴스와 공유하는 1.5TB를 제공하는 [!DNL Spark]을(를) 사용하는 것이 적절합니다.
+사용할 환경을 비교할 때는 각 서비스의 제한 사항을 고려해야 합니다. 예를 들어 [과(와) 함께 &#x200B;](https://pandas.pydata.org/)pandas[!DNL Python] 라이브러리를 일반 사용자로 사용하는 경우 RAM 제한은 2GB입니다. 파워 유저로서도 우리는 20GB의 RAM으로 제한됩니다. 더 큰 계산을 처리하는 경우 모든 노트북 인스턴스와 공유하는 1.5TB를 제공하는 [!DNL Spark]을(를) 사용하는 것이 적절합니다.
 
 기본적으로 Tensorflow 레시피는 GPU 클러스터에서 작동하고 Python은 CPU 클러스터 내에서 실행됩니다.
 

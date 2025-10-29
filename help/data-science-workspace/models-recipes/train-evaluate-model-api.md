@@ -55,7 +55,7 @@ API 호출을 시작하려면 [Experience Platform API 인증 자습서](https:/
 
 ### 인스턴스 만들기
 
-다음 요청을 사용하여 MLInstance를 만들 수 있습니다. `{ENGINE_ID}`API를 사용하여 패키지된 레시피 가져오기[ 자습서에서 엔진을 만들 때 반환된 ](./import-packaged-recipe-ui.md)을(를) 사용하게 됩니다.
+다음 요청을 사용하여 MLInstance를 만들 수 있습니다. `{ENGINE_ID}`API를 사용하여 패키지된 레시피 가져오기[&#x200B; 자습서에서 엔진을 만들 때 반환된 &#x200B;](./import-packaged-recipe-ui.md)을(를) 사용하게 됩니다.
 
 **요청**
 

@@ -30,7 +30,7 @@ Experience Platform 및 [!DNL HubSpot]에서 설정해야 하는 필수 구성 �
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL HubSpot] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 ](/help/xdm/schema/composition.md)스키마[, ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[ 및 ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)대상[!DNL Experience Platform]이 있어야 합니다.
+[!DNL HubSpot] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 &#x200B;](/help/xdm/schema/composition.md)스키마[, &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[&#x200B; 및 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)대상[!DNL Experience Platform]이 있어야 합니다.
 
 대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)은 Experience Platform 설명서를 참조하십시오.
 
@@ -44,15 +44,15 @@ Experience Platform에서 [!DNL Hubspot] 계정으로 데이터를 내보내려�
 
 #### [!DNL HubSpot] 개인 앱 액세스 토큰 수집 {#gather-credentials}
 
-[!DNL HubSpot] 계정 내에서 `Access token` 개인 앱을 통해 [!DNL HubSpot] 대상이 API를 호출하도록 허용하려면 [!DNL HubSpot] [!DNL HubSpot]이(가) 필요합니다. `Access token`대상을 인증`Bearer token`할 때 [이(가) ](#authenticate) 역할을 합니다.
+[!DNL HubSpot] 계정 내에서 `Access token` 개인 앱을 통해 [!DNL HubSpot] 대상이 API를 호출하도록 허용하려면 [!DNL HubSpot] [!DNL HubSpot]이(가) 필요합니다. `Access token`대상을 인증`Bearer token`할 때 [이(가) &#x200B;](#authenticate) 역할을 합니다.
 
 개인 앱이 없는 경우 설명서에 따라 [개인 앱을 만듭니다 [!DNL HubSpot]](https://developers.hubspot.com/docs/api/private-apps).
 
 >[!IMPORTANT]
 >
 > 비공개 앱에는 아래 범위를 할당해야 합니다.
-> > `crm.objects.contacts.write`, `crm.objects.contacts.read`
-> > `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
+> &#x200B;> `crm.objects.contacts.write`, `crm.objects.contacts.read`
+> &#x200B;> `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
 
 | 자격 증명 | 설명 | 예 |
 | --- | --- | --- |
@@ -107,11 +107,11 @@ Experience Platform에서 [!DNL Hubspot] 계정으로 데이터를 내보내려�
 
 ### 대상으로 인증 {#authenticate}
 
-아래의 필수 필드를 입력하십시오. 자세한 내용은 [개인 앱 액세스 토큰 수집 [!DNL HubSpot] 2} 섹션을 참조하십시오.](#gather-credentials)
+아래의 필수 필드를 입력하십시오. 자세한 내용은 [개인 앱 액세스 토큰 수집 [!DNL HubSpot] 2&rbrace; 섹션을 참조하십시오.](#gather-credentials)
 
 * **[!UICONTROL Bearer token]**: [!DNL HubSpot] 개인 앱에 대한 액세스 토큰입니다.
 
-대상에 인증하려면 **[!UICONTROL Connect to destination]**을(를) 선택하십시오.
+대상에 인증하려면 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/authenticate-destination.png)
 
 제공된 세부 정보가 유효한 경우 UI에 녹색 확인 표시와 함께 **[!UICONTROL Connected]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
@@ -148,9 +148,9 @@ XDM 필드를 [!DNL HubSpot] 대상 필드에 올바르게 매핑하려면 아�
 
 `Email` ID는 이 대상에 대한 필수 매핑입니다. 매핑하려면 아래 단계를 따르십시오.
 
-1. **[!UICONTROL Mapping]** 단계에서 **[!UICONTROL Add new mapping]**을(를) 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
+1. **[!UICONTROL Mapping]** 단계에서 **[!UICONTROL Add new mapping]**&#x200B;을(를) 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
    ![새 매핑 추가 단추가 강조 표시된 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
-1. **[!UICONTROL Select source field]** 창에서 **[!UICONTROL Select identity namespace]**을(를) 선택하고 ID를 선택합니다.
+1. **[!UICONTROL Select source field]** 창에서 **[!UICONTROL Select identity namespace]**&#x200B;을(를) 선택하고 ID를 선택합니다.
    ![ID로 매핑할 소스 특성으로 이메일을 선택하는 Experience Platform UI 스크린샷](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
 1. **[!UICONTROL Select target field]** 창에서 **[!UICONTROL Select attributes]**&#x200B;을(를) 선택하고 `email`을(를) 선택합니다.
    ![ID로 매핑할 대상 특성으로 이메일을 선택하는 Experience Platform UI 스크린샷](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
@@ -166,7 +166,7 @@ XDM 필드를 [!DNL HubSpot] 대상 필드에 올바르게 매핑하려면 아�
 
 XDM 프로필 스키마와 [!DNL HubSpot] 계정 사이에 업데이트할 다른 특성을 추가하려면 아래 단계를 반복합니다.
 
-1. **[!UICONTROL Mapping]** 단계에서 **[!UICONTROL Add new mapping]**을(를) 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
+1. **[!UICONTROL Mapping]** 단계에서 **[!UICONTROL Add new mapping]**&#x200B;을(를) 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
    ![새 매핑 추가 단추가 강조 표시된 Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. **[!UICONTROL Select source field]** 창에서 **[!UICONTROL Select attributes]** 범주를 선택하고 XDM 특성을 선택합니다.
    ![이름을 소스 특성으로 선택하는 Experience Platform UI 스크린샷](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
@@ -207,7 +207,7 @@ XDM 프로필 스키마와 [!DNL Hubspot] 간에 사용 가능한 몇 가지 매
 [!DNL HubSpot] 설명서의 추가 유용한 정보는 다음과 같습니다.
 
 * [HubSpot의 인증 방법](https://developers.hubspot.com/docs/api/intro-to-auth)
-* [!DNL HubSpot]연락처[ 및 ](https://developers.hubspot.com/docs/api/crm/contacts)속성[ API에 대한 ](https://developers.hubspot.com/docs/api/crm/properties) API 참조.
+* [!DNL HubSpot]연락처[&#x200B; 및 &#x200B;](https://developers.hubspot.com/docs/api/crm/contacts)속성[&#x200B; API에 대한 &#x200B;](https://developers.hubspot.com/docs/api/crm/properties) API 참조.
 
 ### 변경 로그
 

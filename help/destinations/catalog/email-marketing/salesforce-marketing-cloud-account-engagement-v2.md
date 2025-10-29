@@ -24,8 +24,8 @@ ht-degree: 3%
 >[!IMPORTANT]
 > 
 > [Salesforce Marketing Cloud 계정 참여](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) 대상의 V2 버전입니다. 이 버전은 이전 대상을 대체하며 현재 Alpha 릴리스에 있습니다.
-> > <br>
-> > 현재 이전 버전의 [Salesforce Marketing Cloud 계정 참여](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) 대상을 사용하는 경우 **2026년 1월** 전에 이 V2 버전으로 마이그레이션해야 합니다. 2026년 1월 이후 Adobe은 이전 버전을 중단하고 더 이상 사용할 수 없습니다.
+> &#x200B;> <br>
+> &#x200B;> 현재 이전 버전의 [Salesforce Marketing Cloud 계정 참여](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) 대상을 사용하는 경우 **2026년 1월** 전에 이 V2 버전으로 마이그레이션해야 합니다. 2026년 1월 이후 Adobe은 이전 버전을 중단하고 더 이상 사용할 수 없습니다.
 
 
 ## 사용 사례 {#use-cases}
@@ -50,7 +50,7 @@ Experience Platform 및 [!DNL Salesforce]에서 설정해야 하는 필수 구�
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL (V2) Marketing Cloud Account Engagement] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 ](/help/xdm/schema/composition.md)스키마[, ](../../../catalog/datasets/overview.md)데이터 세트[ 및 ](../../../segmentation/types/overview.md)대상[!DNL Experience Platform]이 있어야 합니다.
+[!DNL (V2) Marketing Cloud Account Engagement] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 &#x200B;](/help/xdm/schema/composition.md)스키마[, &#x200B;](../../../catalog/datasets/overview.md)데이터 세트[&#x200B; 및 &#x200B;](../../../segmentation/types/overview.md)대상[!DNL Experience Platform]이 있어야 합니다.
 
 ### [!DNL Salesforce Marketing Cloud Account Engagement]개 필수 구성 요소 {#prerequisites-destination}
 
@@ -58,7 +58,7 @@ Experience Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로
 
 #### [!DNL Marketing Cloud Account Engagement] 계정이 있어야 합니다. {#prerequisites-account}
 
-계속하려면 [!DNL Marketing Cloud Account Engagement]Marketing Cloud 계정 참여[ 제품에 대한 구독이 있는 ](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) 계정이 필요합니다.
+계속하려면 [!DNL Marketing Cloud Account Engagement]Marketing Cloud 계정 참여[&#x200B; 제품에 대한 구독이 있는 &#x200B;](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) 계정이 필요합니다.
 
 #### [!DNL Marketing Cloud Account Engagement] 자격 증명 수집 {#gather-credentials}
 

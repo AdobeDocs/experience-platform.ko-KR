@@ -405,11 +405,11 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### 기능 파이프라인 엔진 만들기 {#create-engine-api}
 
-도커 이미지 위치가 있으면 [에 대한 POST를 수행하여 ](../api/engines.md#feature-pipeline-docker) API를 사용하여 [!DNL Sensei Machine Learning]기능 파이프라인 엔진을 만들 수 있습니다`/engines`. 기능 파이프라인 엔진을 생성하면 엔진 고유 식별자(`id`)가 제공됩니다. 계속하기 전에 이 값을 저장하십시오.
+도커 이미지 위치가 있으면 [에 대한 POST를 수행하여 &#x200B;](../api/engines.md#feature-pipeline-docker) API를 사용하여 [!DNL Sensei Machine Learning]기능 파이프라인 엔진을 만들 수 있습니다`/engines`. 기능 파이프라인 엔진을 생성하면 엔진 고유 식별자(`id`)가 제공됩니다. 계속하기 전에 이 값을 저장하십시오.
 
 ### 인스턴스 만들기 {#create-mlinstance}
 
-새로 만든 `engineID`을(를) 사용하여 [ 끝점에 대한 POST 요청을 만들어 ](../api/mlinstances.md#create-an-mlinstance)MLIstance를 만들고`/mlInstance`해야 합니다. 성공적인 응답은 다음 API 호출에 사용된 고유 식별자(`id`)를 포함하여 새로 생성된 MLInstance의 세부 정보가 포함된 페이로드를 반환합니다.
+새로 만든 `engineID`을(를) 사용하여 [&#x200B; 끝점에 대한 POST 요청을 만들어 &#x200B;](../api/mlinstances.md#create-an-mlinstance)MLIstance를 만들고`/mlInstance`해야 합니다. 성공적인 응답은 다음 API 호출에 사용된 고유 식별자(`id`)를 포함하여 새로 생성된 MLInstance의 세부 정보가 포함된 페이로드를 반환합니다.
 
 ### 실험 만들기 {#create-experiment}
 
@@ -419,13 +419,13 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 실험을 만든 후에는 실험의 모드를 `featurePipeline`(으)로 변경해야 합니다. 모드를 변경하려면 [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring)을(를) 사용하여 `EXPERIMENT_ID`에 추가 POST를 만들고 본문에서 `{ "mode":"featurePipeline"}`을(를) 전송하여 기능 파이프라인 실험 실행을 지정하십시오.
 
-완료되면 `/experiments/{EXPERIMENT_ID}`실험 상태를 검색[하기 위해 ](../api/experiments.md#retrieve-specific)에 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
+완료되면 `/experiments/{EXPERIMENT_ID}`실험 상태를 검색[하기 위해 &#x200B;](../api/experiments.md#retrieve-specific)에 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
 
 ### 실험 실행 교육 작업 지정 {#training}
 
 다음으로 [교육 실행 작업을 지정](../api/experiments.md#experiment-training-scoring)해야 합니다. `experiments/{EXPERIMENT_ID}/runs`에 POST를 만들고 본문에서 모드를 `train`(으)로 설정하고 교육 매개 변수가 포함된 작업 배열을 보냅니다. 성공적인 응답은 요청된 실험의 세부 사항이 포함된 페이로드를 반환합니다.
 
-완료되면 `/experiments/{EXPERIMENT_ID}`실험 상태를 검색[하기 위해 ](../api/experiments.md#retrieve-specific)에 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
+완료되면 `/experiments/{EXPERIMENT_ID}`실험 상태를 검색[하기 위해 &#x200B;](../api/experiments.md#retrieve-specific)에 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
 
 ### 실험 실행 채점 작업 지정 {#scoring}
 
@@ -435,7 +435,7 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 교육 실행이 완료되면 [채점 실행 작업을 지정](../api/experiments.md#experiment-training-scoring)해야 합니다. POST를 `experiments/{EXPERIMENT_ID}/runs`에 만들고 본문에서 `mode` 특성을 &quot;score&quot;로 설정합니다. 채점 실험 실행이 시작됩니다.
 
-완료되면 `/experiments/{EXPERIMENT_ID}`실험 상태를 검색[하기 위해 ](../api/experiments.md#retrieve-specific)에 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
+완료되면 `/experiments/{EXPERIMENT_ID}`실험 상태를 검색[하기 위해 &#x200B;](../api/experiments.md#retrieve-specific)에 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
 
 채점이 완료되면 기능 파이프라인이 작동되어야 합니다.
 

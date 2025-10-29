@@ -38,8 +38,8 @@ npx @adobe/reactor-releaser
 
 >[!NOTE]
 > 기본적으로 릴리스에서는 서버 간 Oauth 흐름에 Adobe I/O 자격 증명이 필요합니다. 기존 `jwt-auth` 자격 증명
-> > 2025년 1월 1일에 사용이 중단될 때까지 `npx @adobe/reactor-releaser@v3.1.3`을(를) 실행하여 사용할 수 있습니다. 필요한 매개 변수
-> > `jwt-auth` 버전을 실행하려면 [여기](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5)에 있습니다.
+> &#x200B;> 2025년 1월 1일에 사용이 중단될 때까지 `npx @adobe/reactor-releaser@v3.1.3`을(를) 실행하여 사용할 수 있습니다. 필요한 매개 변수
+> &#x200B;> `jwt-auth` 버전을 실행하려면 [여기](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5)에 있습니다.
 
 릴리스에는 몇 가지 정보만 입력해야 합니다. Adobe I/O 콘솔에서 `clientId` 및 `clientSecret`을(를) 검색할 수 있습니다. I/O 콘솔에서 [통합 페이지](https://console.adobe.io/integrations)&#x200B;(으)로 이동합니다. 드롭다운에서 올바른 조직을 선택하고 올바른 통합을 찾은 다음 **[!UICONTROL View]**&#x200B;을(를) 선택합니다.
 

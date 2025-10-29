@@ -63,8 +63,8 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > 기본적으로 업로더는 서버 간 Oauth 흐름에 대해 Adobe I/O 자격 증명을 예상합니다. 기존 `jwt-auth` 자격 증명
-> > 2025년 1월 1일에 사용이 중단될 때까지 `npx @adobe/reactor-uploader@v5.2.0`을(를) 실행하여 사용할 수 있습니다. 필요한 매개 변수
-> > `jwt-auth` 버전을 실행하려면 [여기](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452)에 있습니다.
+> &#x200B;> 2025년 1월 1일에 사용이 중단될 때까지 `npx @adobe/reactor-uploader@v5.2.0`을(를) 실행하여 사용할 수 있습니다. 필요한 매개 변수
+> &#x200B;> `jwt-auth` 버전을 실행하려면 [여기](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452)에 있습니다.
 
 업로더에서는 몇 가지 정보만 입력해야 합니다. Adobe I/O 콘솔에서 `clientId` 및 `clientSecret`을(를) 검색할 수 있습니다. I/O 콘솔에서 [통합 페이지](https://console.adobe.io/integrations)&#x200B;(으)로 이동합니다. 드롭다운에서 올바른 조직을 선택하고 올바른 통합을 찾은 다음 **[!UICONTROL View]**&#x200B;을(를) 선택합니다.
 

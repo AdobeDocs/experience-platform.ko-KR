@@ -15,7 +15,7 @@ ht-degree: 2%
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/)은(는) 이전에 ExactTarget으로 알려졌던 디지털 마케팅 제품군으로, 방문자와 고객이 자신의 경험을 개인화할 수 있도록 여정을 만들고 사용자 지정할 수 있습니다.
 
-대상 데이터를 [!DNL Salesforce Marketing Cloud]에 보내려면 먼저 Experience Platform에서 [대상에 연결](#connect-destination)한 다음 저장소 위치에서 [(으)로 ](#import-data-into-salesforce)데이터 가져오기를 설정[!DNL Salesforce Marketing Cloud]해야 합니다.
+대상 데이터를 [!DNL Salesforce Marketing Cloud]에 보내려면 먼저 Experience Platform에서 [대상에 연결](#connect-destination)한 다음 저장소 위치에서 [(으)로 &#x200B;](#import-data-into-salesforce)데이터 가져오기를 설정[!DNL Salesforce Marketing Cloud]해야 합니다.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -112,4 +112,4 @@ Adobe 이 대상에 대한 대상을 활성화할 때 [공용 구조체 스키�
 
 ## [!DNL Salesforce Marketing Cloud]&#x200B;(으)로 데이터 가져오기 설정 {#import-data-into-salesforce}
 
-[!DNL Experience Platform]을(를) [!DNL SFTP] 저장소에 연결한 후 저장소 위치에서 [!DNL Salesforce Marketing Cloud]&#x200B;(으)로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대해 알아보려면 [의 ](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&type=5)파일에서 Marketing Cloud으로 구독자 가져오기[!DNL Salesforce Help Center]를 참조하십시오.
+[!DNL Experience Platform]을(를) [!DNL SFTP] 저장소에 연결한 후 저장소 위치에서 [!DNL Salesforce Marketing Cloud]&#x200B;(으)로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대해 알아보려면 [의 &#x200B;](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&type=5)파일에서 Marketing Cloud으로 구독자 가져오기[!DNL Salesforce Help Center]를 참조하십시오.

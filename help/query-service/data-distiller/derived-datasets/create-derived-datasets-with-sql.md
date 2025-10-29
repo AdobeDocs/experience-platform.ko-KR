@@ -189,7 +189,7 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 >[!IMPORTANT]
 >
 >문에 `label` 플래그가 제공되지 않았거나 필드 그룹이 이미 있는 경우 SQL을 통한 필드 그룹 만들기가 실패합니다.
->>필드 그룹이 이미 있으므로 쿼리가 실패하는 것을 방지하기 위해 쿼리에 `IF NOT EXISTS` 절이 포함되어 있는지 확인하십시오.
+>&#x200B;>필드 그룹이 이미 있으므로 쿼리가 실패하는 것을 방지하기 위해 쿼리에 `IF NOT EXISTS` 절이 포함되어 있는지 확인하십시오.
 
 실제 예는 아래에 표시된 것과 유사하게 나타날 수 있습니다.
 

@@ -34,7 +34,7 @@ Experience Platform 및 [!DNL Mailchimp]에서 설정해야 하는 필수 구성
 
 ### Experience Platform의 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL Mailchimp Tags] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 ](/help/xdm/schema/composition.md)스키마[, ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en)데이터 세트[ 및 ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)대상[!DNL Experience Platform]이 있어야 합니다.
+[!DNL Mailchimp Tags] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 &#x200B;](/help/xdm/schema/composition.md)스키마[, &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en)데이터 세트[&#x200B; 및 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)대상[!DNL Experience Platform]이 있어야 합니다.
 
 ### [!DNL Mailchimp Tags] 대상에 대한 필수 구성 요소 {#prerequisites-destination}
 
@@ -48,7 +48,7 @@ Experience Platform에서 [!DNL Mailchimp Tags] 계정으로 데이터를 내보
 
 [!DNL Mailchimp] 계정에 대해 **대상을 인증하려면** [!DNL Mailchimp Interest Categories]API 키[!DNL Mailchimp]가 필요합니다. **대상을 인증**&#x200B;할 때 **API 키**&#x200B;이(가) [암호](#authenticate) 역할을 합니다.
 
-**API 키**&#x200B;가 없는 경우 [!DNL Mailchimp] 계정에 로그인하고 [!DNL Mailchimp]API 키 생성 방법[에 대한 ](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) 설명서를 참조하십시오.
+**API 키**&#x200B;가 없는 경우 [!DNL Mailchimp] 계정에 로그인하고 [!DNL Mailchimp]API 키 생성 방법[에 대한 &#x200B;](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) 설명서를 참조하십시오.
 
 API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
@@ -70,7 +70,7 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 ### 가드레일 {#guardrails}
 
-[!DNL Mailchimp] API에 의해 적용되는 제한에 대한 자세한 내용은 [ ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)등급 제한[!DNL Mailchimp]을(를) 참조하십시오.
+[!DNL Mailchimp] API에 의해 적용되는 제한에 대한 자세한 내용은 [&#x200B; &#x200B;](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)등급 제한[!DNL Mailchimp]을(를) 참조하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -121,7 +121,7 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 | 필드 | 설명 |
 | --- | --- |
 | **[!UICONTROL Username]** | [!DNL Mailchimp] 사용자 이름입니다. |
-| **[!UICONTROL Password]** | [!DNL Mailchimp]수집&#x200B;**자격 증명** 섹션에서 기록한 [  [!DNL Mailchimp] API 키](#gather-credentials).<br> API 키는 `{KEY}-{DC}` 형식을 사용합니다. 여기서 `{KEY}` 부분은 [[!DNL Mailchimp] API 키](#gather-credentials) 섹션에 언급된 값을 참조하고 `{DC}` 부분은 [[!DNL Mailchimp] 데이터 센터](#identify-data-center)를 참조합니다. <br>`{KEY}` 부분 또는 전체 양식을 제공할 수 있습니다.<br> 예를 들어 API 키가 <br>*`0123456789abcdef0123456789abcde-us14`*,<br>인 경우&#x200B;*`0123456789abcdef0123456789abcde`*또는&#x200B;*`0123456789abcdef0123456789abcde-us14`*을(를) 값으로 제공할 수 있습니다. |
+| **[!UICONTROL Password]** | [!DNL Mailchimp]수집&#x200B;**자격 증명** 섹션에서 기록한 [&#x200B;  [!DNL Mailchimp] API 키](#gather-credentials).<br> API 키는 `{KEY}-{DC}` 형식을 사용합니다. 여기서 `{KEY}` 부분은 [[!DNL Mailchimp] API 키](#gather-credentials) 섹션에 언급된 값을 참조하고 `{DC}` 부분은 [[!DNL Mailchimp] 데이터 센터](#identify-data-center)를 참조합니다. <br>`{KEY}` 부분 또는 전체 양식을 제공할 수 있습니다.<br> 예를 들어 API 키가 <br>*`0123456789abcdef0123456789abcde-us14`*,<br>인 경우&#x200B;*`0123456789abcdef0123456789abcde`*또는&#x200B;*`0123456789abcdef0123456789abcde-us14`*을(를) 값으로 제공할 수 있습니다. |
 
 {style="table-layout:auto"}
 
