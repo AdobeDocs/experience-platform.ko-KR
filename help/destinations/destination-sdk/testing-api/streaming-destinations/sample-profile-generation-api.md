@@ -2,7 +2,7 @@
 description: 대상 테스트 API를 사용하여 대상 테스트에 사용할 수 있는 스트리밍 대상에 대한 샘플 프로필을 생성하는 방법을 알아봅니다.
 title: 소스 스키마를 기반으로 샘플 프로필 생성
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 1%
@@ -23,8 +23,9 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >이 API 끝점을 사용하여 두 개의 별도 사용 사례에 대한 샘플 프로필을 생성합니다. 다음 중 하나를 수행할 수 있습니다.
->* *대상 ID*&#x200B;을(를) 쿼리 매개 변수로 사용하여 [메시지 변환 템플릿을 만들고 테스트할 때](create-template.md)사용할 프로필을 생성합니다.
->* *대상 인스턴스 ID*&#x200B;를 쿼리 매개 변수로 사용하여 [대상이 올바르게 구성되었는지 테스트](streaming-destination-testing-overview.md)를 호출할 때 사용할 프로필을 생성합니다.
+>
+>* [대상 ID](create-template.md)을(를) 쿼리 매개 변수로 사용하여 *메시지 변환 템플릿을 만들고 테스트할 때*&#x200B;사용할 프로필을 생성합니다.
+>* [대상 인스턴스 ID](streaming-destination-testing-overview.md)를 쿼리 매개 변수로 사용하여 *대상이 올바르게 구성되었는지 테스트*&#x200B;를 호출할 때 사용할 프로필을 생성합니다.
 
 Adobe XDM 소스 스키마(대상을 테스트할 때 사용) 또는 대상에서 지원하는 대상 스키마(템플릿을 만들 때 사용)를 기반으로 샘플 프로필을 생성할 수 있습니다. Adobe XDM 소스 스키마와 대상 스키마의 차이점을 이해하려면 [메시지 형식](../../functionality/destination-server/message-format.md) 문서의 개요 섹션을 참조하십시오.
 
@@ -46,9 +47,10 @@ Adobe XDM 소스 스키마(대상을 테스트할 때 사용) 또는 대상에�
 
 >[!IMPORTANT]
 >
->* 이 API를 사용하려면 Experience Platform UI에 대상에 대한 기존 연결이 있어야 합니다. 자세한 내용은 [대상에 연결](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ko) 및 [대상에 프로필 및 대상자 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=ko)를 참조하십시오.
-> * 대상에 대한 연결을 설정한 후 [대상과의 연결을 탐색](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=ko)할 때 이 끝점에 대한 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다.
->![대상 인스턴스 ID](../../assets/testing-api/get-destination-instance-id.png)을(를) 가져오는 방법 UI 이미지
+>* 이 API를 사용하려면 Experience Platform UI에 대상에 대한 기존 연결이 있어야 합니다. 자세한 내용은 [대상에 연결](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 및 [대상에 프로필 및 대상자 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html)를 참조하십시오.
+>* 대상에 대한 연결을 설정한 후 [대상과의 연결을 탐색](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html)할 때 이 끝점에 대한 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다.
+>
+>![UI 이미지 대상 인스턴스 ID를 가져오는 방법](../../assets/testing-api/get-destination-instance-id.png)
 
 **API 형식**
 
@@ -59,7 +61,7 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | 쿼리 매개 변수 | 설명 |
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | 샘플 프로필을 생성하는 데 기준이 되는 대상 인스턴스의 ID입니다. |
-| `{COUNT}` | *선택 사항*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이의 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)의 `maxUsersPerRequest` 값에 의해 생성된 프로필의 기본 수가 결정됩니다. 이 속성이 정의되지 않으면 Adobe에서 하나의 샘플 프로필을 생성합니다. |
+| `{COUNT}` | *선택 사항*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이의 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 `maxUsersPerRequest`대상 서버 구성[의 ](../../authoring-api/destination-server/create-destination-server.md) 값에 의해 생성된 프로필의 기본 수가 결정됩니다. 이 속성이 정의되지 않으면 Adobe에서 하나의 샘플 프로필을 생성합니다. |
 
 {style="table-layout:auto"}
 
@@ -180,10 +182,10 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `segmentMembership` | 개인의 대상 멤버십을 설명하는 맵 개체입니다. `segmentMembership`에 대한 자세한 내용은 [대상 멤버십 세부 정보](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=ko)를 참조하세요. |
+| `segmentMembership` | 개인의 대상 멤버십을 설명하는 맵 개체입니다. `segmentMembership`에 대한 자세한 내용은 [대상 멤버십 세부 정보](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html)를 참조하세요. |
 | `lastQualificationTime` | 이 프로필이 세그먼트에 대해 마지막으로 적격한 타임스탬프입니다. |
 | `xdm:status` | 대상자 멤버십이 현재 요청의 일부로 실현되었는지 여부를 나타내는 문자열 필드입니다. 다음 값이 허용됩니다. <ul><li>`realized`: 프로필이 세그먼트에 속합니다.</li><li>`exited`: 프로필이 현재 요청의 일부로 대상을 종료합니다.</li></ul> |
-| `identityMap` | 연관된 네임스페이스와 함께 개인에 대한 다양한 ID 값을 설명하는 맵 유형 필드입니다. `identityMap`에 대한 자세한 내용은 [스키마 컴퍼지션의 기준](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko#identityMap)을 참조하세요. |
+| `identityMap` | 연관된 네임스페이스와 함께 개인에 대한 다양한 ID 값을 설명하는 맵 유형 필드입니다. `identityMap`에 대한 자세한 내용은 [스키마 컴퍼지션의 기준](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap)을 참조하세요. |
 
 {style="table-layout:auto"}
 
@@ -197,7 +199,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 >[!TIP]
 >
->* 여기에서 사용해야 하는 대상 ID는 `/destinations` 끝점을 사용하여 만든 대상 구성에 해당하는 `instanceId`입니다. 자세한 내용은 [대상 구성 검색](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)을 참조하세요.
+>* 여기에서 사용해야 하는 대상 ID는 `instanceId` 끝점을 사용하여 만든 대상 구성에 해당하는 `/destinations`입니다. 자세한 내용은 [대상 구성 검색](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)을 참조하세요.
 
 **API 형식**
 
@@ -209,7 +211,7 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | 쿼리 매개 변수 | 설명 |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | 샘플 프로필을 생성하는 데 기준이 되는 대상 구성의 ID입니다. |
-| `{COUNT}` | *선택 사항*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이의 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)의 `maxUsersPerRequest` 값에 의해 생성된 프로필의 기본 수가 결정됩니다. 이 속성이 정의되지 않으면 Adobe에서 하나의 샘플 프로필을 생성합니다. |
+| `{COUNT}` | *선택 사항*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이의 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 `maxUsersPerRequest`대상 서버 구성[의 ](../../authoring-api/destination-server/create-destination-server.md) 값에 의해 생성된 프로필의 기본 수가 결정됩니다. 이 속성이 정의되지 않으면 Adobe에서 하나의 샘플 프로필을 생성합니다. |
 
 {style="table-layout:auto"}
 

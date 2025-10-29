@@ -2,10 +2,10 @@
 title: Demandbase 사용자 연결
 description: 이 대상을 사용하여 마케팅 및 판매의 다른 다운스트림 사용 사례에서 대상을 활성화하고 Demandbase 타사 데이터로 대상자를 보강합니다.
 exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
-source-git-commit: ab29c1113dbbd1811acd3d5add5a247cb2703884
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '819'
-ht-degree: 3%
+source-wordcount: '797'
+ht-degree: 4%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 3%
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
 | 사용자 정의 업로드 | X | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience). |
 
@@ -68,17 +68,17 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상으로 인증 {#authenticate}
 
-대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
+대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 
 ![전달자 토큰 추가](../../assets/catalog/advertising/demandbase-people/bearer-token.png)
 
-* **[!UICONTROL 전달자 토큰]**: 대상에 인증하려면 전달자 토큰을 입력하십시오. 토큰을 얻는 방법에 대한 자세한 내용은 [필수 구성 요소](#prerequisites)를 참조하십시오.
+* **[!UICONTROL Bearer token]**: 대상에 인증하려면 전달자 토큰을 입력하십시오. 토큰을 얻는 방법에 대한 자세한 내용은 [필수 구성 요소](#prerequisites)를 참조하십시오.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -86,8 +86,8 @@ ht-degree: 3%
 
 ![대상 연결에 대한 정보 추가](../../assets/catalog/advertising/demandbase-people/name-and-description.png)
 
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 
 이제 Demandbase People 내에서 대상을 활성화할 준비가 되었습니다.
 
@@ -95,8 +95,8 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 

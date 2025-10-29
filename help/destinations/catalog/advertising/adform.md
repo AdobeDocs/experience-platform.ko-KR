@@ -2,7 +2,7 @@
 title: Adform
 description: Adform은 프로그램 방식의 미디어 구매 및 판매 솔루션을 제공하는 선도적인 공급업체입니다. Adform을 Adobe Experience Platform에 연결하면 ECID(Experience Cloud ID)를 기반으로 하는 Adform을 통해 자사 대상을 활성화할 수 있습니다.
 last-substantial-update: 2025-10-23T00:00:00Z
-source-git-commit: c429ee227bd93455f541a32266bfbef9ddeaae06
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 3%
@@ -28,16 +28,16 @@ Adobe Form 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있�
 
 이 대상을 사용하여 Experience Cloud ID(ECID) 및 Adform의 ID Fusion을 기반으로 활성화를 위해 Adobe Real-Time CDP 대상을 Adform으로 보냅니다. Adform의 ID Fusion은 Experience Cloud ID(ECID)를 기반으로 자사 대상을 활성화할 수 있는 Adform의 ID 확인 서비스입니다.
 
-일반적인 사례는 ECID(Experience Cloud ID)를 기반으로 웹 사이트 또는 앱에 대한 웹 사이트 방문자를 재타겟팅하는 것입니다. 이제 즉시 사용 가능한 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 또는 [클라이언트측](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/analytics/adform) Adform 확장을 통해 ECID(Experience Cloud ID)를 Adform으로 전송하기만 하면 됩니다. 이후 활성화를 위해 Adform 대상을 통해 ECID(Experience Cloud ID)만을 기준으로 Adform과 대상을 공유할 수 있습니다.
+일반적인 사례는 ECID(Experience Cloud ID)를 기반으로 웹 사이트 또는 앱에 대한 웹 사이트 방문자를 재타겟팅하는 것입니다. 이제 즉시 사용 가능한 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 또는 [클라이언트측](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform 확장을 통해 ECID(Experience Cloud ID)를 Adform으로 전송하기만 하면 됩니다. 이후 활성화를 위해 Adform 대상을 통해 ECID(Experience Cloud ID)만을 기준으로 Adform과 대상을 공유할 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
 * 이 대상을 사용하려면 기존 Adform 고객이어야 합니다.
 * Adform 대상자 기본 데이터 연결 자격 증명이 있어야 합니다.
    * Adform 대상자 기본 데이터 연결 자격 증명이 없는 경우 Adform 담당자에게 문의하십시오.
-* 적절한 동기화를 위해 엔터티에서 Adobe 사이트 추적에 대해 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 또는 [클라이언트측](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/analytics/adform) 연결이 있어야 합니다.
+* 적절한 동기화를 위해 엔터티에서 Adobe 사이트 추적에 대해 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 또는 [클라이언트측](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) 연결이 있어야 합니다.
    * 엔티티에서 Adform 사이트 추적에 대한 이벤트 스트리밍 또는 클라이언트측 연결이 없는 경우 Adform 담당자에게 문의하십시오.
-   * Adform은 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 및 [클라이언트측](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/analytics/adform)에 모두 Adobe Experience Cloud 확장을 제공합니다.
+   * Adform은 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 및 [클라이언트측](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform)에 모두 Adobe Experience Cloud 확장을 제공합니다.
 
 
 ## 지원되는 ID {#supported-identities}
@@ -55,7 +55,7 @@ Adform은 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/id
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
 | 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience). |
 
@@ -66,7 +66,7 @@ Adform은 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/id
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
+|---------|----------|---------|
 | 내보내기 유형 | **[!UICONTROL Segment export]** | *YourDestination* 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 세그먼트의 모든 구성원(대상)을 내보내고 있습니다. |
 | 내보내기 빈도 | **[!UICONTROL Batch]** | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. [일괄 파일 기반 대상](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
 

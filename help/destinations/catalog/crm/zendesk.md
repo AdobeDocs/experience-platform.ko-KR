@@ -3,9 +3,9 @@ title: Zendesk 연결
 description: Zendesk 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Zendesk 내에서 활성화할 수 있습니다.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1408'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL Zendesk] 대상에 대한 데이터를 활성화하기 전에 [!DNL Experience Platform]에서 만든 [스키마](/help/xdm/schema/composition.md), [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ko) 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ko)가 있어야 합니다.
+[!DNL Zendesk] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 ](/help/xdm/schema/composition.md)스키마[, ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[ 및 ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)세그먼트[!DNL Experience Platform]가 있어야 합니다.
 
 대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)은 Experience Platform 설명서를 참조하십시오.
 
@@ -59,9 +59,9 @@ Experience Platform에서 [!DNL Zendesk] 계정으로 데이터를 내보내려�
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> [대상 예약](#schedule-segment-export-example) 단계 동안 제공된 **[!UICONTROL 매핑 ID]** 값을 기반으로 [!DNL Zendesk]의 각 세그먼트 상태가 Experience Platform의 해당 대상 상태로 업데이트됩니다.</li></ul> |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | <ul><li>스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요.</li></ul> |
+|---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL Profile-based]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> [!DNL Zendesk]의 각 세그먼트 상태는 **[!UICONTROL Mapping ID]**&#x200B;대상 예약[ 단계 동안 제공된 ](#schedule-segment-export-example) 값을 기반으로 Experience Platform의 해당 대상 상태로 업데이트됩니다.</li></ul> |
+| 내보내기 빈도 | **[!UICONTROL Streaming]** | <ul><li>스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -69,42 +69,43 @@ Experience Platform에서 [!DNL Zendesk] 계정으로 데이터를 내보내려�
 
 >[!IMPORTANT]
 >
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-**[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]** 내에서 [!DNL Zendesk] 검색 또는 **[!UICONTROL CRM]** 범주 아래에서 찾을 수 있습니다.
+**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;에서 [!DNL Zendesk]을(를) 검색합니다. 또는 **[!UICONTROL CRM]** 범주 아래에서 찾을 수 있습니다.
 
 ### 대상으로 인증 {#authenticate}
 
 아래의 필수 필드를 입력하십시오. 자세한 내용은 [수집 [!DNL Zendesk] 자격 증명](#gather-credentials) 섹션을 참조하십시오.
-* **[!UICONTROL 전달자 토큰]**: [!DNL Zendesk] 계정에서 생성한 액세스 토큰입니다.
 
-대상에 인증하려면 **[!UICONTROL 대상에 연결]**&#x200B;을 선택하세요.
+* **[!UICONTROL Bearer Token]**: [!DNL Zendesk] 계정에서 생성한 액세스 토큰입니다.
+
+대상에 인증하려면 **[!UICONTROL Connect to destination]**을(를) 선택하십시오.
 인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
 
-제공된 세부 정보가 유효하면 UI에 녹색 확인 표시와 함께 **[!UICONTROL 연결됨]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
+제공된 세부 정보가 유효한 경우 UI에 녹색 확인 표시와 함께 **[!UICONTROL Connected]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 대상 세부 정보를 표시하는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/crm/zendesk/destination-details.png)
 
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 
 ### 경고 활성화 {#enable-alerts}
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
@@ -112,15 +113,15 @@ Experience Platform에서 [!DNL Zendesk] 계정으로 데이터를 내보내려�
 
 대상 데이터를 Adobe Experience Platform에서 [!DNL Zendesk] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Experience Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 스키마 필드 간에 링크를 작성하는 것으로 구성됩니다.
 
-**[!UICONTROL 대상 필드]**&#x200B;에 지정된 특성은 요청 본문을 형성하므로 특성 매핑 표에 설명된 대로 정확히 이름을 지정해야 합니다.
+**[!UICONTROL Target field]**&#x200B;에 지정된 특성은 요청 본문을 형성하므로 특성 매핑 테이블에 설명된 대로 정확히 이름을 지정해야 합니다.
 
-**[!UICONTROL Source 필드]**&#x200B;에 지정된 특성은 이러한 제한을 따르지 않습니다. 필요에 따라 매핑할 수 있지만 [!DNL Zendesk]에 푸시할 때 데이터 형식이 올바르지 않으면 오류가 발생합니다.
+**[!UICONTROL Source field]**&#x200B;에 지정된 특성은 이러한 제한을 따르지 않습니다. 필요에 따라 매핑할 수 있지만 [!DNL Zendesk]에 푸시할 때 데이터 형식이 올바르지 않으면 오류가 발생합니다.
 
 XDM 필드를 [!DNL Zendesk] 대상 필드에 올바르게 매핑하려면 다음 단계를 따르십시오.
 
-1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다. 화면에 새 매핑 행이 표시됩니다.
-1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 XDM 특성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을 선택하고 ID를 선택합니다.
-1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]** 범주를 선택하고 대상 ID를 선택하거나 **[!UICONTROL 특성 선택]** 범주를 선택하고 지원되는 스키마 특성 중 하나를 선택합니다.
+1. **[!UICONTROL Mapping]** 단계에서 **[!UICONTROL Add new mapping]**&#x200B;을(를) 선택합니다. 화면에 새 매핑 행이 표시됩니다.
+1. **[!UICONTROL Select source field]** 창에서 **[!UICONTROL Select attributes]** 범주를 선택하고 XDM 특성을 선택하거나 **[!UICONTROL Select identity namespace]**&#x200B;을(를) 선택하고 ID를 선택합니다.
+1. **[!UICONTROL Select target field]** 창에서 **[!UICONTROL Select identity namespace]** 범주를 선택하고 대상 ID를 선택하거나 **[!UICONTROL Select attributes]** 범주를 선택하고 지원되는 스키마 특성 중 하나를 선택합니다.
 
    * 다음 필수 매핑을 추가하려면 다음 단계를 반복하십시오. XDM 프로필 스키마와 [!DNL Zendesk] 인스턴스 간에 업데이트할 다른 특성을 추가할 수도 있습니다.
 
@@ -131,20 +132,19 @@ XDM 필드를 [!DNL Zendesk] 대상 필드에 올바르게 매핑하려면 다�
      | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
-
      특성 매핑이 있는 ![Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/zendesk/mappings.png)
 
 >[!IMPORTANT]
 >
 >이 대상에는 `Attribute: last_name` 및 `Identity: email` 대상 매핑이 필수입니다. 이러한 매핑이 누락된 경우 다른 매핑은 모두 무시되고 [!DNL Zendesk]&#x200B;(으)로 전송되지 않습니다.
 
-대상 연결에 대한 매핑을 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 매핑을 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ### 대상자 내보내기 예약 및 예제 {#schedule-segment-export-example}
 
-활성화 워크플로의 [[!UICONTROL 대상 내보내기 예약]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 단계에서 Experience Platform 대상을 [!DNL Zendesk]의 사용자 지정 필드 특성에 수동으로 매핑해야 합니다.
+활성화 워크플로의 [[!UICONTROL Schedule audience export]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 단계에서는 Experience Platform 대상을 [!DNL Zendesk]의 사용자 지정 필드 특성에 수동으로 매핑해야 합니다.
 
-이렇게 하려면 각 세그먼트를 선택한 다음 **[!UICONTROL 매핑 ID]** 필드에 [!DNL Zendesk]의 해당 사용자 지정 필드 특성을 입력하십시오.
+이렇게 하려면 각 세그먼트를 선택한 다음 [!DNL Zendesk] 필드에 **[!UICONTROL Mapping ID]**&#x200B;의 해당 사용자 지정 필드 특성을 입력합니다.
 
 예제는 아래에 나와 있습니다.
 대상자 내보내기 일정을 보여 주는 ![Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
@@ -153,17 +153,17 @@ XDM 필드를 [!DNL Zendesk] 대상 필드에 올바르게 매핑하려면 다�
 
 대상을 올바르게 설정했는지 확인하려면 아래 단계를 수행하십시오.
 
-1. **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**&#x200B;를 선택하고 대상 목록으로 이동합니다.
-1. 그런 다음 대상을 선택하고 **[!UICONTROL 활성화 데이터]** 탭으로 전환한 다음 대상 이름을 선택합니다.
+1. **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**&#x200B;을(를) 선택하고 대상 목록으로 이동합니다.
+1. 그런 다음 대상을 선택하고 **[!UICONTROL Activation data]** 탭으로 전환한 다음 대상 이름을 선택합니다.
    ![대상 활성화 데이터를 보여주는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
 
 1. 대상자 요약을 모니터링하고 프로필 수가 세그먼트 내의 수와 일치하는지 확인합니다.
    ![세그먼트를 표시하는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. [!DNL Zendesk] 웹 사이트에 로그인한 다음 **[!UICONTROL 연락처]** 페이지로 이동하여 대상자의 프로필이 추가되었는지 확인합니다. 대상&#x200B;**[!UICONTROL 매핑 ID]** 및 대상 상태로 만든 추가 필드에 대한 열을 표시하도록 이 목록을 구성할 수 있습니다.
+1. [!DNL Zendesk] 웹 사이트에 로그인한 다음 **[!UICONTROL Contacts]** 페이지로 이동하여 대상자의 프로필이 추가되었는지 확인합니다. 대상**[!UICONTROL Mapping ID]** 및 대상 상태로 만든 추가 필드에 대한 열을 표시하도록 이 목록을 구성할 수 있습니다.
    대상 이름으로 만든 추가 필드가 있는 연락처 페이지를 보여 주는 ![Zendesk UI 스크린샷.](../../assets/catalog/crm/zendesk/contacts.png)
 
-1. 또는 개별 **[!UICONTROL 개인]** 페이지로 드릴다운하여 대상 이름 및 대상 상태를 표시하는 **[!UICONTROL 추가 필드]** 섹션을 확인할 수 있습니다.
+1. 또는 개별 **[!UICONTROL Person]** 페이지로 드릴다운하여 대상 이름 및 대상 상태를 표시하는 **[!UICONTROL Additional fields]** 섹션을 확인할 수 있습니다.
    ![대상 이름 및 대상 상태를 표시하는 추가 필드 섹션과 함께 개인 페이지를 표시하는 Zendesk UI 스크린샷입니다.](../../assets/catalog/crm/zendesk/contact.png)
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
@@ -173,6 +173,7 @@ XDM 필드를 [!DNL Zendesk] 대상 필드에 올바르게 매핑하려면 다�
 ## 추가 리소스 {#additional-resources}
 
 [!DNL Zendesk] 설명서의 추가 유용한 정보는 다음과 같습니다.
+
 * [첫 번째 전화 걸기](https://developer.zendesk.com/documentation/sales-crm/first-call/)
 * [사용자 지정 필드](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
 

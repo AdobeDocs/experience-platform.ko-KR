@@ -4,7 +4,7 @@ title: Experience Platform의 일반 접근성 기능
 type: Documentation
 description: 키보드 탐색, 색상 팔레트 및 대비, 보조 기술 지원을 포함하여 Adobe Experience Platform에서 지원하는 일반적인 접근성 기능에 대해 자세히 알아보십시오.
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 0%
@@ -24,6 +24,7 @@ Adobe Experience Platform은 음성 인식 소프트웨어 및 화면 판독기�
 Experience Platform은 전체 키보드 접근성을 지원하기 위해 노력하고 있습니다.
 
 다음 탐색 요소는 접근성을 용이하게 합니다.
+
 * Tab 키는 UI 요소, 섹션 및 메뉴 그룹 간에 이동합니다.
 * 화살표 키를 메뉴 그룹 내에서 이동하여 포커스를 개별 활성 요소로 설정합니다.
 * Shift + Tab은 탭 순서를 거꾸로 이동합니다.

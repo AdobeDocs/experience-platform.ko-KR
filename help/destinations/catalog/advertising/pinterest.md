@@ -2,10 +2,10 @@
 title: Pinterest 고객 목록 연결
 description: 고객 목록, 사이트를 방문한 사람 또는 Pinterest에서 콘텐츠와 이미 상호 작용한 사람에서 대상을 만듭니다.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 1b35687350dbbcebfc86acc90852d86870292142
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 6%
+source-wordcount: '794'
+ht-degree: 3%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 6%
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Pinterest Customer List] 대상은 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko#getting-started)에 대해 자세히 알아보세요.
+[!DNL Pinterest Customer List] 대상은 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)에 대해 자세히 알아보세요.
 
 대상 활성화 워크플로의 [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)에서 원하는 ID를 대상 필드 *pinterest_audience*&#x200B;에 매핑합니다. ID는 Pinterest으로 데이터를 수집할 때 구분되고 해결됩니다.
 
@@ -43,9 +43,9 @@ ht-degree: 6%
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | Pinterest 고객 목록 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+|---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL Audience export]** | Pinterest 고객 목록 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -61,7 +61,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
 
@@ -69,22 +69,22 @@ ht-degree: 6%
 
 이 대상을 [설정](../../ui/connect-destination.md)할 때 다음 정보를 제공해야 합니다.
 
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 광고 계정 ID]**: Pinterest 광고주 ID.
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Ad Account ID]**: Pinterest 광고주 ID입니다.
 
 ### 인증 자격 증명 새로 고침 {#refresh-authentication-credentials}
 
-Pinterest 토큰은 30일마다 만료됩니다. **[[!UICONTROL 계정]](../../ui/destinations-workspace.md#accounts)** 또는 **[[!UICONTROL 찾아보기]](../../ui/destinations-workspace.md#browse)** 탭의 **[!UICONTROL 계정 만료 일자]** 열에서 토큰 만료 일자를 모니터링할 수 있습니다.
+Pinterest 토큰은 30일마다 만료됩니다. **[!UICONTROL Account expiration date]** 또는 **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** 탭의 **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** 열에서 토큰 만료 날짜를 모니터링할 수 있습니다.
 
 토큰이 만료되면 대상으로의 데이터 내보내기가 더 이상 작동하지 않습니다. 이러한 상황을 방지하려면 다음 단계를 수행하여 다시 인증하십시오.
 
-1. **[!UICONTROL 대상]** > **[!UICONTROL 계정]**(으)로 이동
+1. **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**(으)로 이동
 2. (선택 사항) 페이지에서 사용할 수 있는 필터를 사용하여 Pinterest 계정만 표시합니다.
    ![Pinterest 계정만 표시하도록 필터링](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
-3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**&#x200B;을 선택합니다.
+3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL Edit details]**을(를) 선택하십시오.
    ![세부 정보 편집 컨트롤 선택](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
-4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**&#x200B;을 선택하고 Pinterest 자격 증명으로 다시 인증합니다.
+4. 모달 창에서 **[!UICONTROL Reconnect OAuth]**을(를) 선택하고 Pinterest 자격 증명으로 다시 인증합니다.
    ![다시 연결 OAuth 옵션이 있는 모달 창](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
 
 >[!SUCCESS]
@@ -95,14 +95,14 @@ Pinterest 토큰은 30일마다 만료됩니다. **[[!UICONTROL 계정]](../../u
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 

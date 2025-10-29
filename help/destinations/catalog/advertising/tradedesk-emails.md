@@ -3,9 +3,9 @@ title: 트레이드 데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타기팅 및 억제에 대한 프로필을 트레이드 데스크 계정에 활성화합니다.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1088'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 5%
 >[!IMPORTANT]
 >
 >EUID(유럽 통합 ID)가 출시되면서 이제 두 개의 [!DNL The Trade Desk - CRM] 대상이 [대상 카탈로그](/help/destinations/catalog/overview.md)에 표시됩니다.
+>
 >* EU에서 소스 데이터를 제공하는 경우 **[!DNL The Trade Desk - CRM (EU)]** 대상을 사용하십시오.
 >* APAC 또는 NAMER 지역에서 소스 데이터를 제공하는 경우 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 대상을 사용하십시오.
 >
@@ -74,9 +75,9 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | Trade Desk 대상에 사용된 식별자(이메일 또는 해시된 이메일)로 대상자의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 일별 일괄 처리]** | 대상 평가를 기반으로 Experience Platform에서 프로필이 업데이트되면 프로필(ID)은 대상 플랫폼으로 하루에 한 번 업데이트됩니다. [일괄 내보내기](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
+|---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL Audience export]** | Trade Desk 대상에 사용된 식별자(이메일 또는 해시된 이메일)로 대상자의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL Daily Batch]** | 대상 평가를 기반으로 Experience Platform에서 프로필이 업데이트되면 프로필(ID)은 대상 플랫폼으로 하루에 한 번 업데이트됩니다. [일괄 내보내기](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -88,12 +89,12 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 
 ### 대상 세부 사항 입력 {#fill-in-details}
 
-대상 데이터를 대상으로 보내거나 활성화하려면 먼저 고유한 대상 플랫폼에 대한 연결을 설정해야 합니다. [이 대상을 설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ko)하는 동안 다음 정보를 제공해야 합니다.
+대상 데이터를 대상으로 보내거나 활성화하려면 먼저 고유한 대상 플랫폼에 대한 연결을 설정해야 합니다. [이 대상을 설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)하는 동안 다음 정보를 제공해야 합니다.
 
-* **[!UICONTROL 계정 유형]**: **[!UICONTROL 기존 계정]** 옵션을 선택하십시오.
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 광고주 ID]**: [!DNL Trade Desk Advertiser ID], [!DNL Trade Desk] 계정 관리자가 공유하거나 [!DNL Trade Desk] UI의 [!DNL Advertiser Preferences]에서 찾을 수 있음.
+* **[!UICONTROL Account Type]**: **[!UICONTROL Existing Account]** 옵션을 선택하십시오.
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Advertiser ID]**: [!DNL Trade Desk Advertiser ID] 계정 관리자가 공유하거나 [!DNL Trade Desk] UI의 [!DNL Advertiser Preferences]에서 찾을 수 있는 [!DNL Trade Desk].
 
 대상 세부 정보를 채우는 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
@@ -103,12 +104,12 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 대상을 대상으로 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](/help/destinations/ui/activate-batch-profile-destinations.md)를 참조하십시오.
 
-**[!UICONTROL 예약]** 페이지에서 내보내는 각 대상에 대해 일정 및 파일 이름을 구성할 수 있습니다. 예약을 구성해야 하지만, 파일 이름을 구성하는 것은 선택 사항입니다.
+**[!UICONTROL Scheduling]** 페이지에서 내보내는 각 대상에 대해 일정 및 파일 이름을 구성할 수 있습니다. 예약을 구성해야 하지만, 파일 이름을 구성하는 것은 선택 사항입니다.
 
 대상자 활성화를 예약하기 위한 ![Experience Platform UI 스크린샷](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
@@ -118,7 +119,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 
 대상자 활성화를 예약하기 위한 ![Experience Platform UI 스크린샷](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
-**[!UICONTROL 매핑]** 페이지의 원본 열에서 특성 또는 ID 네임스페이스를 선택하고 대상 열에 매핑해야 합니다.
+**[!UICONTROL Mapping]** 페이지의 원본 열에서 특성 또는 ID 네임스페이스를 선택하고 대상 열에 매핑해야 합니다.
 
 대상 활성화를 매핑할 수 있는 ![Experience Platform UI 스크린샷](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
@@ -135,16 +136,16 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 
 대상 필드 선택:
 
-* 원본 네임스페이스 또는 특성이 `Email`인 경우 `email`을(를) 대상 ID로 입력하십시오.
-* 원본 네임스페이스 또는 특성이 `Email_LC_SHA256`인 경우 `hashed_email`을(를) 대상 ID로 입력하십시오.
+* 원본 네임스페이스 또는 특성이 `email`인 경우 `Email`을(를) 대상 ID로 입력하십시오.
+* 원본 네임스페이스 또는 특성이 `hashed_email`인 경우 `Email_LC_SHA256`을(를) 대상 ID로 입력하십시오.
 
 ## 데이터 내보내기 유효성 검사 {#validate}
 
 데이터가 Experience Platform에서 [!DNL The Trade Desk]&#x200B;(으)로 올바르게 내보내졌는지 확인하려면 [!DNL The Trade Desk] 데이터 관리 플랫폼(DMP)의 Adobe 1PD 데이터 타일 아래에서 대상을 찾으십시오. [!DNL Trade Desk] UI 내에서 해당 ID를 찾는 단계는 다음과 같습니다.
 
-1. 먼저 **[!UICONTROL 데이터]** 탭을 선택하고 **[!UICONTROL 자사]** 섹션을 검토합니다.
-2. 페이지를 아래로 스크롤하면 **[!UICONTROL 가져온 데이터]**&#x200B;에서 **[!UICONTROL Adobe 1PD 타일]**&#x200B;을 찾을 수 있습니다.
-3. **[!UICONTROL Adobe 1PD]** 타일을 클릭하면 광고주의 [!DNL Trade Desk] 대상에 활성화된 모든 대상이 나열됩니다. 검색 기능을 사용할 수도 있습니다.
+1. 먼저 **[!UICONTROL Data]** 탭을 선택하고 **[!UICONTROL First-Party]** 섹션을 검토합니다.
+2. 페이지를 아래로 스크롤하면 **[!UICONTROL Imported Data]**&#x200B;에서 **[!UICONTROL Adobe 1PD Tile]**&#x200B;을(를) 찾을 수 있습니다.
+3. **[!UICONTROL Adobe 1PD]** 타일을 클릭하면 광고주의 [!DNL Trade Desk] 대상에 활성화된 모든 대상자가 나열됩니다. 검색 기능을 사용할 수도 있습니다.
 4. Experience Platform의 세그먼트 ID #이 [!DNL Trade Desk] UI에서 세그먼트 이름으로 표시됩니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}

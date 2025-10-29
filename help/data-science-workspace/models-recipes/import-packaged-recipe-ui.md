@@ -5,9 +5,9 @@ title: 데이터 과학 Workspace UI에서 패키지된 레시피 가져오기
 type: Tutorial
 description: 이 자습서에서는 제공된 소매 판매 사례를 사용하여 패키지된 레시피를 구성하고 가져오는 방법에 대한 insight의 정보를 제공합니다. 이 자습서가 끝날 때까지 Adobe Experience Platform Data Science Workspace에서 모델을 만들고 교육하고 평가할 수 있습니다.
 exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1855'
+source-wordcount: '1760'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,7 @@ ht-degree: 0%
 패키지된 레시피를 [!DNL Data Science Workspace]&#x200B;(으)로 가져오려면 단일 JavaScript 개체 표기법(JSON) 파일로 컴파일된 특정 레시피 구성이 필요합니다. 이 레시피 구성 컴파일을 구성 파일이라고 합니다. 특정 세트의 구성들을 갖는 패키징된 레시피는 레시피 인스턴스로서 지칭된다. 한 레시피를 사용하여 [!DNL Data Science Workspace]에서 여러 레시피 인스턴스를 만들 수 있습니다.
 
 패키지 레시피를 가져오는 워크플로우는 다음 단계로 구성됩니다.
+
 - [레시피 구성](#configure)
 - [도커 기반 레시피 가져오기 - Python](#python)
 - [도커 기반 레시피 가져오기 - R](#r)
@@ -128,11 +129,11 @@ ht-degree: 0%
 
 ### 도커 기반 레시피 가져오기 - [!DNL Python] {#python}
 
-[!DNL Experience Platform] UI의 왼쪽 상단에 있는 **[!UICONTROL 워크플로]**&#x200B;를 탐색하고 선택하여 시작합니다. 다음으로 **레시피 가져오기**&#x200B;를 선택하고 **[!UICONTROL 시작]**&#x200B;을 선택합니다.
+**[!UICONTROL Workflows]** UI의 왼쪽 상단에 있는 [!DNL Experience Platform]을(를) 탐색하고 선택하여 시작합니다. **레시피 가져오기**&#x200B;를 선택하고 **[!UICONTROL Launch]**&#x200B;을(를) 선택합니다.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-**레시피 가져오기** 워크플로에 대한 **구성** 페이지가 나타납니다. 레시피의 이름과 설명을 입력한 다음 오른쪽 상단에서 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+**레시피 가져오기** 워크플로에 대한 **구성** 페이지가 나타납니다. 레시피의 이름과 설명을 입력한 다음 오른쪽 상단에서 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
 ![워크플로 구성](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -140,11 +141,11 @@ ht-degree: 0%
 >
 > [레시피에 소스 파일 패키징](./package-source-files-recipe.md) 자습서에서 Python 소스 파일을 사용하여 소매 판매 레시피를 빌드한 끝에 도커 URL이 제공되었습니다.
 
-**소스 선택** 페이지에 있는 경우 **[!UICONTROL Source URL]** 필드에 [!DNL Python] 소스 파일을 사용하여 만든 패키지된 레시피에 해당하는 도커 URL을 붙여 넣으십시오. 그런 다음 제공된 구성 파일을 드래그 앤 드롭하여 가져오거나 파일 시스템 **브라우저**&#x200B;를 사용하십시오. 제공된 구성 파일을 `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`에서 찾을 수 있습니다. **런타임** 드롭다운에서 **[!UICONTROL Python]**&#x200B;을(를) 선택하고 **유형** 드롭다운에서 **[!UICONTROL 분류]**&#x200B;을(를) 선택합니다. 모든 항목이 다 채워지면 오른쪽 상단에서 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 **스키마 관리**(으)로 진행합니다.
+**소스 선택** 페이지에 있는 경우 [!DNL Python] 소스 파일을 사용하여 만든 패키지된 레시피에 해당하는 도커 URL을 **[!UICONTROL Source URL]** 필드에 붙여 넣으십시오. 그런 다음 제공된 구성 파일을 드래그 앤 드롭하여 가져오거나 파일 시스템 **브라우저**&#x200B;를 사용하십시오. 제공된 구성 파일을 `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`에서 찾을 수 있습니다. **[!UICONTROL Python]** Runtime **드롭다운에서**&#x200B;을(를) 선택하고 **[!UICONTROL Classification]** Type **드롭다운에서**&#x200B;을(를) 선택합니다. 모든 항목이 작성되면 오른쪽 상단에서 **[!UICONTROL Next]**&#x200B;을(를) 선택하여 **스키마 관리**(으)로 진행합니다.
 
 >[!NOTE]
 >
-> 형식이 **[!UICONTROL 분류]** 및 **[!UICONTROL 회귀]**&#x200B;을(를) 지원합니다. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 **[!UICONTROL 사용자 지정]**&#x200B;을 선택하세요.
+> 형식은 **[!UICONTROL Classification]** 및 **[!UICONTROL Regression]**&#x200B;을(를) 지원합니다. 모델이 이러한 유형 중 하나에 해당하지 않으면 **[!UICONTROL Custom]**&#x200B;을(를) 선택하십시오.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
@@ -152,9 +153,9 @@ ht-degree: 0%
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-**기능 관리** 섹션 아래에서 스키마 뷰어의 테넌트 ID에서 을(를) 선택하여 소매 판매 입력 스키마를 확장합니다. 원하는 기능을 강조 표시하고 오른쪽 **[!UICONTROL 필드 속성]** 창에서 **[!UICONTROL 입력 기능]** 또는 **[!UICONTROL 대상 기능]**&#x200B;을(를) 선택하여 입력 및 출력 기능을 선택합니다. 이 자습서에서는 **[!UICONTROL weeklySales]**&#x200B;을(를) **[!UICONTROL 대상 기능]**(으)로 설정하고 그 외의 모든 기능을 **[!UICONTROL 입력 기능]**(으)로 설정합니다. 새로 구성된 레시피를 검토하려면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+**기능 관리** 섹션 아래에서 스키마 뷰어의 테넌트 ID에서 을(를) 선택하여 소매 판매 입력 스키마를 확장합니다. 원하는 기능을 강조 표시하고 오른쪽 **[!UICONTROL Input Feature]** 창에서 **[!UICONTROL Target Feature]** 또는 **[!UICONTROL Field Properties]**&#x200B;을(를) 선택하여 입력 및 출력 기능을 선택합니다. 이 자습서에서는 **[!UICONTROL weeklySales]**&#x200B;을(를) **[!UICONTROL Target Feature]**(으)로 설정하고 기타 모든 항목을 **[!UICONTROL Input Feature]**(으)로 설정합니다. **[!UICONTROL Next]**&#x200B;을(를) 선택하여 새로 구성된 레시피를 검토하십시오.
 
-레시피를 검토하고 필요에 따라 구성을 추가, 수정 또는 제거합니다. **[!UICONTROL 완료]**&#x200B;를 선택하여 레시피를 만드십시오.
+레시피를 검토하고 필요에 따라 구성을 추가, 수정 또는 제거합니다. 레시피를 만들려면 **[!UICONTROL Finish]**&#x200B;을(를) 선택하십시오.
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -162,11 +163,11 @@ ht-degree: 0%
 
 ### 도커 기반 레시피 가져오기 - R {#r}
 
-[!DNL Experience Platform] UI의 왼쪽 상단에 있는 **[!UICONTROL 워크플로]**&#x200B;를 탐색하고 선택하여 시작합니다. 다음으로 **레시피 가져오기**&#x200B;를 선택하고 **[!UICONTROL 시작]**&#x200B;을 선택합니다.
+**[!UICONTROL Workflows]** UI의 왼쪽 상단에 있는 [!DNL Experience Platform]을(를) 탐색하고 선택하여 시작합니다. **레시피 가져오기**&#x200B;를 선택하고 **[!UICONTROL Launch]**&#x200B;을(를) 선택합니다.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-**레시피 가져오기** 워크플로에 대한 **구성** 페이지가 나타납니다. 레시피의 이름과 설명을 입력한 다음 오른쪽 상단에서 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+**레시피 가져오기** 워크플로에 대한 **구성** 페이지가 나타납니다. 레시피의 이름과 설명을 입력한 다음 오른쪽 상단에서 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
 ![워크플로 구성](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -174,11 +175,11 @@ ht-degree: 0%
 >
 > [레시피에 소스 파일 패키징](./package-source-files-recipe.md) 자습서에서 R 소스 파일을 사용하여 소매 판매 레시피를 빌드한 끝에 도커 URL이 제공되었습니다.
 
-**소스 선택** 페이지에 있는 경우 R 소스 파일을 사용하여 만든 패키지된 레시피에 해당하는 도커 URL을 **[!UICONTROL Source URL]** 필드에 붙여 넣으십시오. 그런 다음 제공된 구성 파일을 드래그 앤 드롭하여 가져오거나 파일 시스템 **브라우저**&#x200B;를 사용하십시오. 제공된 구성 파일을 `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`에서 찾을 수 있습니다. **런타임** 드롭다운에서 **[!UICONTROL R]**&#x200B;을(를) 선택하고 **유형** 드롭다운에서 **[!UICONTROL 분류]**&#x200B;을(를) 선택합니다. 모든 항목이 다 채워지면 오른쪽 상단에서 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 **스키마 관리**(으)로 진행합니다.
+**소스 선택** 페이지에 있는 경우 R 소스 파일을 사용하여 만든 패키지된 레시피에 해당하는 도커 URL을 **[!UICONTROL Source URL]** 필드에 붙여 넣으십시오. 그런 다음 제공된 구성 파일을 드래그 앤 드롭하여 가져오거나 파일 시스템 **브라우저**&#x200B;를 사용하십시오. 제공된 구성 파일을 `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`에서 찾을 수 있습니다. **[!UICONTROL R]** Runtime **드롭다운에서**&#x200B;을(를) 선택하고 **[!UICONTROL Classification]** Type **드롭다운에서**&#x200B;을(를) 선택합니다. 모든 항목이 작성되면 오른쪽 상단에서 **[!UICONTROL Next]**&#x200B;을(를) 선택하여 **스키마 관리**(으)로 진행합니다.
 
 >[!NOTE]
 >
-> *Type*&#x200B;은(는) **[!UICONTROL Classification]** 및 **[!UICONTROL Regression]**&#x200B;을 지원합니다. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 **[!UICONTROL 사용자 지정]**&#x200B;을 선택하세요.
+> *Type*&#x200B;은(는) **[!UICONTROL Classification]** 및 **[!UICONTROL Regression]**&#x200B;을(를) 지원합니다. 모델이 이러한 유형 중 하나에 해당하지 않으면 **[!UICONTROL Custom]**&#x200B;을(를) 선택하십시오.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
@@ -186,7 +187,7 @@ ht-degree: 0%
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-*기능 관리* 섹션 아래에서 스키마 뷰어의 테넌트 ID에서 을(를) 선택하여 소매 판매 입력 스키마를 확장합니다. 원하는 기능을 강조 표시하고 오른쪽 **[!UICONTROL 필드 속성]** 창에서 **[!UICONTROL 입력 기능]** 또는 **[!UICONTROL 대상 기능]**&#x200B;을(를) 선택하여 입력 및 출력 기능을 선택합니다. 이 자습서에서는 **[!UICONTROL weeklySales]**&#x200B;을(를) **[!UICONTROL 대상 기능]**(으)로 설정하고 그 외의 모든 기능을 **[!UICONTROL 입력 기능]**(으)로 설정합니다. 구성된 새 레시피를 검토하려면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+*기능 관리* 섹션 아래에서 스키마 뷰어의 테넌트 ID에서 을(를) 선택하여 소매 판매 입력 스키마를 확장합니다. 원하는 기능을 강조 표시하고 오른쪽 **[!UICONTROL Input Feature]** 창에서 **[!UICONTROL Target Feature]** 또는 **[!UICONTROL Field Properties]**&#x200B;을(를) 선택하여 입력 및 출력 기능을 선택합니다. 이 자습서에서는 **[!UICONTROL weeklySales]**&#x200B;을(를) **[!UICONTROL Target Feature]**(으)로 설정하고 기타 모든 항목을 **[!UICONTROL Input Feature]**(으)로 설정합니다. **[!UICONTROL Next]**&#x200B;을(를) 선택하여 새로 구성된 레시피를 검토하십시오.
 
 레시피를 검토하고 필요에 따라 구성을 추가, 수정 또는 제거합니다. **완료**&#x200B;를 선택하여 레시피를 만드십시오.
 
@@ -196,11 +197,11 @@ ht-degree: 0%
 
 ### 도커 기반 레시피 가져오기 - PySpark {#pyspark}
 
-[!DNL Experience Platform] UI의 왼쪽 상단에 있는 **[!UICONTROL 워크플로]**&#x200B;를 탐색하고 선택하여 시작합니다. 다음으로 **레시피 가져오기**&#x200B;를 선택하고 **[!UICONTROL 시작]**&#x200B;을 선택합니다.
+**[!UICONTROL Workflows]** UI의 왼쪽 상단에 있는 [!DNL Experience Platform]을(를) 탐색하고 선택하여 시작합니다. **레시피 가져오기**&#x200B;를 선택하고 **[!UICONTROL Launch]**&#x200B;을(를) 선택합니다.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-**레시피 가져오기** 워크플로에 대한 **구성** 페이지가 나타납니다. 레시피의 이름과 설명을 입력한 다음 오른쪽 상단에서 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 계속 진행하십시오.
+**레시피 가져오기** 워크플로에 대한 **구성** 페이지가 나타납니다. 레시피의 이름과 설명을 입력한 다음 오른쪽 상단에서 **[!UICONTROL Next]**&#x200B;을(를) 선택하여 계속 진행하십시오.
 
 ![워크플로 구성](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -208,11 +209,11 @@ ht-degree: 0%
 >
 > [레시피에 소스 파일 패키징](./package-source-files-recipe.md) 자습서에서 PySpark 소스 파일을 사용하여 소매 판매 레시피를 빌드한 끝에 도커 URL이 제공되었습니다.
 
-**소스 선택** 페이지에 있는 경우 **[!UICONTROL Source URL]** 필드에 PySpark 소스 파일을 사용하여 만든 패키지된 레시피에 해당하는 도커 URL을 붙여 넣으십시오. 그런 다음 제공된 구성 파일을 드래그 앤 드롭하여 가져오거나 파일 시스템 **브라우저**&#x200B;를 사용하십시오. 제공된 구성 파일을 `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`에서 찾을 수 있습니다. **런타임** 드롭다운에서 **[!UICONTROL PySpark]**&#x200B;을(를) 선택합니다. PySpark 런타임을 선택하면 기본 아티팩트가 자동으로 **[!UICONTROL Docker]**(으)로 채워집니다. 그런 다음 **Type** 드롭다운에서 **[!UICONTROL Classification]**&#x200B;을(를) 선택합니다. 모든 항목이 다 채워지면 오른쪽 상단에서 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 **스키마 관리**(으)로 진행합니다.
+**소스 선택** 페이지에 있는 경우 PySpark 소스 파일을 사용하여 만든 패키지된 레시피에 해당하는 도커 URL을 **[!UICONTROL Source URL]** 필드에 붙여 넣으십시오. 그런 다음 제공된 구성 파일을 드래그 앤 드롭하여 가져오거나 파일 시스템 **브라우저**&#x200B;를 사용하십시오. 제공된 구성 파일을 `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`에서 찾을 수 있습니다. **[!UICONTROL PySpark]**&#x200B;런타임&#x200B;**드롭다운에서**&#x200B;을(를) 선택합니다. PySpark 런타임을 선택하면 기본 아티팩트가 자동으로 **[!UICONTROL Docker]**(으)로 채워집니다. 그런 다음 **[!UICONTROL Classification]** Type **드롭다운에서**&#x200B;을(를) 선택합니다. 모든 항목이 작성되면 오른쪽 상단에서 **[!UICONTROL Next]**&#x200B;을(를) 선택하여 **스키마 관리**(으)로 진행합니다.
 
 >[!NOTE]
 >
-> *Type*&#x200B;은(는) **[!UICONTROL Classification]** 및 **[!UICONTROL Regression]**&#x200B;을 지원합니다. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 **[!UICONTROL 사용자 지정]**&#x200B;을 선택하세요.
+> *Type*&#x200B;은(는) **[!UICONTROL Classification]** 및 **[!UICONTROL Regression]**&#x200B;을(를) 지원합니다. 모델이 이러한 유형 중 하나에 해당하지 않으면 **[!UICONTROL Custom]**&#x200B;을(를) 선택하십시오.
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
@@ -220,11 +221,11 @@ ht-degree: 0%
 
 ![스키마 관리](../images/models-recipes/import-package-ui/manage-schemas.png)
 
-**기능 관리** 섹션 아래에서 스키마 뷰어의 테넌트 ID에서 을(를) 선택하여 소매 판매 입력 스키마를 확장합니다. 원하는 기능을 강조 표시하고 오른쪽 **[!UICONTROL 필드 속성]** 창에서 **[!UICONTROL 입력 기능]** 또는 **[!UICONTROL 대상 기능]**&#x200B;을(를) 선택하여 입력 및 출력 기능을 선택합니다. 이 자습서에서는 **[!UICONTROL weeklySales]**&#x200B;을(를) **[!UICONTROL 대상 기능]**(으)로 설정하고 그 외의 모든 기능을 **[!UICONTROL 입력 기능]**(으)로 설정합니다. 새로 구성된 레시피를 검토하려면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+**기능 관리** 섹션 아래에서 스키마 뷰어의 테넌트 ID에서 을(를) 선택하여 소매 판매 입력 스키마를 확장합니다. 원하는 기능을 강조 표시하고 오른쪽 **[!UICONTROL Input Feature]** 창에서 **[!UICONTROL Target Feature]** 또는 **[!UICONTROL Field Properties]**&#x200B;을(를) 선택하여 입력 및 출력 기능을 선택합니다. 이 자습서에서는 **[!UICONTROL weeklySales]**&#x200B;을(를) **[!UICONTROL Target Feature]**(으)로 설정하고 기타 모든 항목을 **[!UICONTROL Input Feature]**(으)로 설정합니다. **[!UICONTROL Next]**&#x200B;을(를) 선택하여 새로 구성된 레시피를 검토하십시오.
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-레시피를 검토하고 필요에 따라 구성을 추가, 수정 또는 제거합니다. **[!UICONTROL 완료]**&#x200B;를 선택하여 레시피를 만드십시오.
+레시피를 검토하고 필요에 따라 구성을 추가, 수정 또는 제거합니다. 레시피를 만들려면 **[!UICONTROL Finish]**&#x200B;을(를) 선택하십시오.
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -232,11 +233,11 @@ ht-degree: 0%
 
 ### 도커 기반 레시피 가져오기 - Scala {#scala}
 
-[!DNL Experience Platform] UI의 왼쪽 상단에 있는 **[!UICONTROL 워크플로]**&#x200B;를 탐색하고 선택하여 시작합니다. 다음으로 **레시피 가져오기**&#x200B;를 선택하고 **[!UICONTROL 시작]**&#x200B;을 선택합니다.
+**[!UICONTROL Workflows]** UI의 왼쪽 상단에 있는 [!DNL Experience Platform]을(를) 탐색하고 선택하여 시작합니다. **레시피 가져오기**&#x200B;를 선택하고 **[!UICONTROL Launch]**&#x200B;을(를) 선택합니다.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-**레시피 가져오기** 워크플로에 대한 **구성** 페이지가 나타납니다. 레시피의 이름과 설명을 입력한 다음 오른쪽 상단에서 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 계속 진행하십시오.
+**레시피 가져오기** 워크플로에 대한 **구성** 페이지가 나타납니다. 레시피의 이름과 설명을 입력한 다음 오른쪽 상단에서 **[!UICONTROL Next]**&#x200B;을(를) 선택하여 계속 진행하십시오.
 
 ![워크플로 구성](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -244,11 +245,11 @@ ht-degree: 0%
 >
 > [레시피에 소스 파일 패키징](./package-source-files-recipe.md) 자습서에서 Scala([!DNL Spark]) 소스 파일을 사용하여 소매 판매 레시피를 빌드한 끝에 도커 URL이 제공되었습니다.
 
-**소스 선택** 페이지에 있는 경우 Source URL 필드에 Scala 소스 파일을 사용하여 만든 패키지된 레시피에 해당하는 도커 URL을 붙여 넣으십시오. 그런 다음 제공된 구성 파일을 드래그 앤 드롭하여 가져오거나 파일 시스템 브라우저를 사용합니다. 제공된 구성 파일을 `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`에서 찾을 수 있습니다. **런타임** 드롭다운에서 **[!UICONTROL Spark]**&#x200B;을(를) 선택합니다. [!DNL Spark] 런타임을 선택하면 기본 아티팩트가 자동으로 **[!UICONTROL Docker]**(으)로 채워집니다. 그런 다음 **Type** 드롭다운에서 **[!UICONTROL 회귀]**&#x200B;을(를) 선택합니다. 모든 항목이 다 채워지면 오른쪽 상단에서 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 **스키마 관리**(으)로 진행합니다.
+**소스 선택** 페이지에 있는 경우 Source URL 필드에 Scala 소스 파일을 사용하여 만든 패키지된 레시피에 해당하는 도커 URL을 붙여 넣으십시오. 그런 다음 제공된 구성 파일을 드래그 앤 드롭하여 가져오거나 파일 시스템 브라우저를 사용합니다. 제공된 구성 파일을 `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`에서 찾을 수 있습니다. **[!UICONTROL Spark]**&#x200B;런타임&#x200B;**드롭다운에서**&#x200B;을(를) 선택합니다. [!DNL Spark] 런타임을 선택하면 기본 아티팩트가 자동으로 **[!UICONTROL Docker]**(으)로 채워집니다. 그런 다음 **[!UICONTROL Regression]** Type **드롭다운에서**&#x200B;을(를) 선택합니다. 모든 항목이 작성되면 오른쪽 상단에서 **[!UICONTROL Next]**&#x200B;을(를) 선택하여 **스키마 관리**(으)로 진행합니다.
 
 >[!NOTE]
 >
-> 형식이 **[!UICONTROL 분류]** 및 **[!UICONTROL 회귀]**&#x200B;을(를) 지원합니다. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 **[!UICONTROL 사용자 지정]**&#x200B;을 선택하세요.
+> 형식은 **[!UICONTROL Classification]** 및 **[!UICONTROL Regression]**&#x200B;을(를) 지원합니다. 모델이 이러한 유형 중 하나에 해당하지 않으면 **[!UICONTROL Custom]**&#x200B;을(를) 선택하십시오.
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
@@ -256,11 +257,11 @@ ht-degree: 0%
 
 ![스키마 관리](../images/models-recipes/import-package-ui/manage-schemas.png)
 
-**기능 관리** 섹션 아래에서 스키마 뷰어의 테넌트 ID에서 을(를) 선택하여 소매 판매 입력 스키마를 확장합니다. 원하는 기능을 강조 표시하고 오른쪽 **[!UICONTROL 필드 속성]** 창에서 **[!UICONTROL 입력 기능]** 또는 **[!UICONTROL 대상 기능]**&#x200B;을(를) 선택하여 입력 및 출력 기능을 선택합니다. 이 자습서에서는 &quot;[!UICONTROL weeklySales]&quot;을(를) **[!UICONTROL Target 기능]**(으)로 설정하고 그 외의 모든 기능을 **[!UICONTROL 입력 기능]**(으)로 설정하십시오. 새로 구성된 레시피를 검토하려면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+**기능 관리** 섹션 아래에서 스키마 뷰어의 테넌트 ID에서 을(를) 선택하여 소매 판매 입력 스키마를 확장합니다. 원하는 기능을 강조 표시하고 오른쪽 **[!UICONTROL Input Feature]** 창에서 **[!UICONTROL Target Feature]** 또는 **[!UICONTROL Field Properties]**&#x200B;을(를) 선택하여 입력 및 출력 기능을 선택합니다. 이 자습서에서는 &quot;[!UICONTROL weeklySales]&quot;을(를) **[!UICONTROL Target Feature]**(으)로 설정하고 나머지는 **[!UICONTROL Input Feature]**(으)로 설정합니다. **[!UICONTROL Next]**&#x200B;을(를) 선택하여 새로 구성된 레시피를 검토하십시오.
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-레시피를 검토하고 필요에 따라 구성을 추가, 수정 또는 제거합니다. **[!UICONTROL 완료]**&#x200B;를 선택하여 레시피를 만드십시오.
+레시피를 검토하고 필요에 따라 구성을 추가, 수정 또는 제거합니다. 레시피를 만들려면 **[!UICONTROL Finish]**&#x200B;을(를) 선택하십시오.
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 

@@ -5,9 +5,9 @@ title: Notebooks를 사용하여 데이터 분석
 type: Tutorial
 description: 이 자습서에서는 Data Science Workspace 내에 구축된 Jupyter Notebooks를 사용하여 데이터에 액세스하고 이를 탐색하고 시각화하는 방법에 중점을 둡니다.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ ht-degree: 0%
 
 이 섹션에서는 이전에 소매 판매 스키마로 수집되었던 데이터를 살펴봅니다.
 
-Data Science Workspace을 사용하면 사용자가 [!DNL JupyterLab] 플랫폼을 통해 기계 학습 워크플로를 만들고 편집할 수 있는 [!DNL Jupyter Notebooks]을(를) 만들 수 있습니다. [!DNL JupyterLab]은(는) 사용자가 웹 브라우저를 통해 전자 필기장 문서를 편집할 수 있는 서버-클라이언트 공동 작업 도구입니다. 이러한 전자 필기장에는 실행 코드와 서식 있는 텍스트 요소가 모두 포함될 수 있습니다. 분석 설명 및 실행 가능한 [!DNL Python] 코드에 Markdown을 사용하여 데이터 탐색 및 분석을 수행합니다.
+Data Science Workspace을 사용하면 사용자가 [!DNL Jupyter Notebooks] 플랫폼을 통해 기계 학습 워크플로를 만들고 편집할 수 있는 [!DNL JupyterLab]을(를) 만들 수 있습니다. [!DNL JupyterLab]은(는) 사용자가 웹 브라우저를 통해 전자 필기장 문서를 편집할 수 있는 서버-클라이언트 공동 작업 도구입니다. 이러한 전자 필기장에는 실행 코드와 서식 있는 텍스트 요소가 모두 포함될 수 있습니다. 분석 설명 및 실행 가능한 [!DNL Python] 코드에 Markdown을 사용하여 데이터 탐색 및 분석을 수행합니다.
 
 ### 작업 영역 선택
 
 [!DNL JupyterLab]을(를) 실행하면 Jupyter Notebooks용 웹 기반 인터페이스가 표시됩니다. 어떤 유형의 노트북을 선택하느냐에 따라 해당 커널이 시작됩니다.
 
-사용할 환경을 비교할 때는 각 서비스의 제한 사항을 고려해야 합니다. 예를 들어 [!DNL Python]과(와) 함께 [pandas](https://pandas.pydata.org/) 라이브러리를 일반 사용자로 사용하는 경우 RAM 제한은 2GB입니다. 파워 유저로서도 우리는 20GB의 RAM으로 제한됩니다. 더 큰 계산을 처리하는 경우 모든 노트북 인스턴스와 공유하는 1.5TB를 제공하는 [!DNL Spark]을(를) 사용하는 것이 적절합니다.
+사용할 환경을 비교할 때는 각 서비스의 제한 사항을 고려해야 합니다. 예를 들어 [과(와) 함께 ](https://pandas.pydata.org/)pandas[!DNL Python] 라이브러리를 일반 사용자로 사용하는 경우 RAM 제한은 2GB입니다. 파워 유저로서도 우리는 20GB의 RAM으로 제한됩니다. 더 큰 계산을 처리하는 경우 모든 노트북 인스턴스와 공유하는 1.5TB를 제공하는 [!DNL Spark]을(를) 사용하는 것이 적절합니다.
 
 기본적으로 Tensorflow 레시피는 GPU 클러스터에서 작동하고 Python은 CPU 클러스터 내에서 실행됩니다.
 
@@ -84,7 +84,7 @@ Pandas의 DataFrame 데이터 구조는 2차원 레이블이 지정된 데이터
 
 이 섹션에서는 소매 판매 샘플 노트북에서 사용되는 것과 동일한 소매 판매 데이터 세트를 사용합니다.
 
-Jupyter Notebook에서 왼쪽의 **데이터** 탭 ![데이터 탭](../images/jupyterlab/analyze-data/dataset-tab.png)에서 데이터에 액세스할 수 있습니다. 탭을 선택하면 두 개의 폴더가 제공됩니다. **[!UICONTROL 데이터 세트]** 폴더를 선택하십시오.
+Jupyter Notebook에서 왼쪽의 **데이터** 탭 ![데이터 탭](../images/jupyterlab/analyze-data/dataset-tab.png)에서 데이터에 액세스할 수 있습니다. 탭을 선택하면 두 개의 폴더가 제공됩니다. **[!UICONTROL Datasets]** 폴더를 선택하십시오.
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
@@ -120,6 +120,7 @@ df.head()
 ### 데이터 탐색
 
 이제 데이터에 액세스할 수 있으므로 통계와 시각화를 사용하여 데이터 자체에 집중해 보겠습니다. 우리가 사용하고 있는 데이터 세트는 주어진 날에 45개의 다른 상점에 대한 기타 정보를 제공하는 소매 데이터 세트입니다. 지정된 `date` 및 `store`의 일부 특성에는 다음이 포함됩니다.
+
 - `storeType`
 - `weeklySales`
 - `storeSize`
@@ -161,6 +162,7 @@ df.describe()
 #### 데이터 시각화
 
 이제 데이터 프레임 값을 알았으므로 이 내용을 시각화로 보완하여 패턴을 더 명확하고 쉽게 식별할 수 있도록 하려고 합니다. 그래프는 결과를 대상자에게 전달할 때도 유용합니다. 시각화에 유용한 일부 [!DNL Python] 라이브러리는 다음과 같습니다.
+
 - [Matplotlib](https://matplotlib.org/)
 - [pandas](https://pandas.pydata.org/)
 - [설정](https://seaborn.pydata.org/)
@@ -201,6 +203,7 @@ df.describe()
 ## 다음 단계
 
 이 튜토리얼에서는 데이터 과학 Workspace에서 새 Jupyter 전자 필기장을 만드는 방법과 외부에서 그리고 [!DNL Adobe Experience Platform]에서 데이터에 액세스하는 방법에 대해 살펴보았습니다. 특히 다음 단계를 살펴보았습니다.
+
 - 새 Jupyter Notebook 만들기
 - 데이터 세트 및 스키마 액세스
 - 데이터 세트 탐색

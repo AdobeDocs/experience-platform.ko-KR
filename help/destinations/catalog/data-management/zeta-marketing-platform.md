@@ -4,9 +4,9 @@ description: ZMP(Zeta Marketing Platform)는 인텔리전스(독점 데이터 �
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1327'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ Adobe Experience Platform에서 사용할 수 있는 Zeta Marketing Platform 커
 > Zeta Marketing Platform 대상을 사용하려면 소스 ID 네임스페이스를 ZMP `uid` 대상 ID에 매핑해야 합니다. 이렇게 하면 Zeta Marketing Platform이 각 프로필을 고유하게 구별할 수 있습니다.
 
 | 대상 ID | 설명 | 고려 사항 | 참고 |
----------|----------|----------|----------|
+|---------|----------|----------|----------|
 | uid | ZMP가 고객 프로필을 구별하는 데 사용하는 고유 ID | 필수 | 전자 메일 주소를 사용하여 고유 프로필을 식별하려면 `Email` 표준 ID 네임스페이스를 선택하세요. 또는 고객 프로필에 전자 메일이 없는 경우 사용자 지정 네임스페이스를 `uid`에 매핑하도록 선택할 수 있습니다. |
 | email_md5_id | 각 고객 프로필을 나타내는 이메일 MD5 | 선택 사항입니다 | 이메일 MD5 값을 사용하여 고객 프로필을 고유하게 식별하려면 이 타겟 ID를 선택합니다. Experience Platform은 일반 텍스트를 MD5로 변환하지 않으므로 Experience Platform 내에서 이메일 주소가 이미 MD5 형식이어야 합니다. 이 시나리오에서는 `uid`(필수)을(를) 동일한 이메일 MD5 값 또는 다른 적절한 ID 네임스페이스로 설정합니다. |
 
@@ -76,8 +76,8 @@ Adobe Experience Platform에서 사용할 수 있는 Zeta Marketing Platform 커
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+|---------|----------|---------|
+| 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -85,39 +85,40 @@ Adobe Experience Platform에서 사용할 수 있는 Zeta Marketing Platform 커
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상으로 인증 {#authenticate}
 
-대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
+대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 
-* **[!UICONTROL 사용자 이름]**: `api`
-* **[!UICONTROL 암호]**: ZMP REST API 키입니다. ZMP 계정에 로그인하고 **설정** > **통합** > **키 및 앱** 섹션으로 이동하여 REST API 키를 찾을 수 있습니다. 자세한 내용은 [ZMP 설명서](https://knowledgebase.zetaglobal.com/kb/integrations)를 참조하세요.
+* **[!UICONTROL Username]**:`api`
+* **[!UICONTROL Password]**: ZMP REST API 키입니다. ZMP 계정에 로그인하고 **설정** > **통합** > **키 및 앱** 섹션으로 이동하여 REST API 키를 찾을 수 있습니다. 자세한 내용은 [ZMP 설명서](https://knowledgebase.zetaglobal.com/kb/integrations)를 참조하세요.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
 ![ZMP 구성을 보여 주는 이미지](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL ZMP 계정 사이트 Id]**: 대상자를 보낼 ZMP **사이트 Id**. **설정** > **통합** > **키 및 앱** 섹션으로 이동하여 사이트 ID를 볼 수 있습니다. 자세한 내용은 [여기](https://knowledgebase.zetaglobal.com/kb/integrations)를 참조하세요.
-* **[!UICONTROL ZMP 세그먼트]**: ZMP 사이트 ID 계정의 고객 목록 세그먼트로, Experience Platform 대상자로 업데이트하려고 합니다.
+
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL ZMP Account Site Id]**: 대상자를 보낼 ZMP **사이트 ID**. **설정** > **통합** > **키 및 앱** 섹션으로 이동하여 사이트 ID를 볼 수 있습니다. 자세한 내용은 [여기](https://knowledgebase.zetaglobal.com/kb/integrations)를 참조하세요.
+* **[!UICONTROL ZMP Segment]**: ZMP 사이트 ID 계정의 고객 목록 세그먼트로서 Experience Platform 대상자로 업데이트하려는 세그먼트.
 
 ### 경고 활성화 {#enable-alerts}
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상에 대한 세그먼트 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [프로필 및 세그먼트를 스트리밍 세그먼트 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
@@ -126,10 +127,12 @@ Adobe Experience Platform에서 사용할 수 있는 Zeta Marketing Platform 커
 다음은 프로필을 [!DNL Zeta Marketing Platform]&#x200B;(으)로 내보낼 때 올바른 ID 매핑의 예입니다.
 
 소스 필드 선택:
-* Adobe Experience Platform 및 [!DNL Zeta Marketing Platform]에서 프로필을 고유하게 식별하는 소스 ID 네임스페이스(사용자 지정 또는 표준(예: `Email`))를 선택하십시오.
+
+* Adobe Experience Platform 및 `Email`에서 프로필을 고유하게 식별하는 소스 ID 네임스페이스(사용자 지정 또는 표준(예: [!DNL Zeta Marketing Platform]))를 선택하십시오.
 * [!DNL Zeta Marketing Platform]&#x200B;(으)로 내보내고 업데이트해야 하는 XDM 소스 프로필 속성을 선택합니다.
 
 대상 필드 선택:
+
 * (필수) 소스 ID 네임스페이스를 매핑할 대상 ID로 `uid`을(를) 선택합니다.
 * (선택 사항) 이메일 md5 값을 나타내는 소스 ID 네임스페이스를 매핑한 대상 ID로 `email_md5_id`을(를) 선택합니다. Experience Platform은 일반 텍스트를 MD5로 변환하지 않으므로 Experience Platform 내에서 이메일 주소가 이미 MD5 형식이어야 합니다
 * 필요한 경우 추가 대상 매핑을 선택합니다.

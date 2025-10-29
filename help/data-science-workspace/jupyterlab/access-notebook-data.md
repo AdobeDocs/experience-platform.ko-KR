@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Jupyterlab Notebooks의 데이터 액세스
 description: 이 안내서는 Data Science Workspace 내에 구축된 Jupyter Notebooks를 사용하여 데이터에 액세스하는 방법에 중점을 둡니다.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '3346'
+source-wordcount: '3274'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 지원되는 각 커널은 노트북 내의 데이터 세트에서 Experience Platform 데이터를 읽을 수 있는 내장된 기능을 제공합니다. 현재 Adobe Experience Platform Data Science Workspace의 JupyterLab은 [!DNL Python], R, PySpark 및 Scala용 노트북을 지원합니다. 그러나 데이터 페이지 매김에 대한 지원은 [!DNL Python] 및 R 전자 필기장으로 제한됩니다. 이 안내서에서는 JupyterLab Notebooks를 사용하여 데이터에 액세스하는 방법에 중점을 둡니다.
 
-## 시작하기
+## 시작
 
 이 안내서를 읽기 전에 [[!DNL JupyterLab] 사용 안내서](./overview.md)를 검토하여 [!DNL JupyterLab]에 대한 자세한 소개와 Data Science Workspace에서의 역할에 대해 알아보십시오.
 
@@ -154,13 +154,13 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Python의 데이터 세트에 쓰기 {#write-python}
 
-JupyterLab 노트북의 데이터 세트에 작성하려면 JupyterLab의 왼쪽 탐색에서 데이터 아이콘 탭(아래 강조 표시)을 선택합니다. **[!UICONTROL 데이터 세트]** 및 **[!UICONTROL 스키마]** 디렉터리가 나타납니다. **[!UICONTROL 데이터 세트]**&#x200B;를 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 세트의 드롭다운 메뉴에서 **[!UICONTROL 전자 필기장에 데이터 쓰기]** 옵션을 선택합니다. 전자 필기장 하단에 실행 가능한 코드 항목이 나타납니다.
+JupyterLab 노트북의 데이터 세트에 작성하려면 JupyterLab의 왼쪽 탐색에서 데이터 아이콘 탭(아래 강조 표시)을 선택합니다. **[!UICONTROL Datasets]** 및 **[!UICONTROL Schemas]** 디렉터리가 나타납니다. **[!UICONTROL Datasets]**&#x200B;을(를) 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 세트의 드롭다운 메뉴에서 **[!UICONTROL Write Data in Notebook]** 옵션을 선택합니다. 전자 필기장 하단에 실행 가능한 코드 항목이 나타납니다.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
-- **[!UICONTROL 전자 필기장에 데이터 쓰기]**&#x200B;를 사용하여 선택한 데이터 집합으로 쓰기 셀을 생성합니다.
-- **[!UICONTROL Notebook에서 데이터 탐색]**&#x200B;을 사용하여 선택한 데이터 집합으로 읽기 셀을 생성합니다.
-- **[!UICONTROL 전자 필기장의 데이터 쿼리]**&#x200B;를 사용하여 선택한 데이터 집합으로 기본 쿼리 셀을 생성합니다.
+- **[!UICONTROL Write Data in Notebook]**&#x200B;을(를) 사용하여 선택한 데이터 집합으로 쓰기 셀을 생성합니다.
+- **[!UICONTROL Explore Data in Notebook]**&#x200B;을(를) 사용하여 선택한 데이터 집합으로 읽기 셀을 생성합니다.
+- **[!UICONTROL Query Data in Notebook]**&#x200B;을(를) 사용하여 선택한 데이터 집합으로 기본 쿼리 셀을 생성합니다.
 
 또는 다음 코드 셀을 복사하여 붙여넣을 수 있습니다. `{DATASET_ID}`과(와) `{PANDA_DATAFRAME}`을(를) 모두 바꿉니다.
 
@@ -173,17 +173,17 @@ dataset_writer = DatasetWriter(get_platform_sdk_client_context(), dataset)
 write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 ```
 
-### [!DNL Python]의 [!DNL Query Service]을(를) 사용하여 데이터 쿼리 {#query-data-python}
+### [!DNL Query Service]의 [!DNL Python]을(를) 사용하여 데이터 쿼리 {#query-data-python}
 
-[!DNL Experience Platform]의 [!DNL JupyterLab]에서 [!DNL Python] 전자 필기장의 SQL을 사용하여 [Adobe Experience Platform 쿼리 서비스](https://www.adobe.com/go/query-service-home-en)를 통해 데이터에 액세스할 수 있습니다. [!DNL Query Service]을(를) 통해 데이터에 액세스하면 실행 시간이 길어 대용량 데이터 세트를 처리하는 데 유용할 수 있습니다. [!DNL Query Service]을(를) 사용하여 데이터를 쿼리하는 데 10분의 처리 시간 제한이 있습니다.
+[!DNL JupyterLab]의 [!DNL Experience Platform]에서 [!DNL Python] 전자 필기장의 SQL을 사용하여 [Adobe Experience Platform 쿼리 서비스](https://www.adobe.com/go/query-service-home-en)를 통해 데이터에 액세스할 수 있습니다. [!DNL Query Service]을(를) 통해 데이터에 액세스하면 실행 시간이 길어 대용량 데이터 세트를 처리하는 데 유용할 수 있습니다. [!DNL Query Service]을(를) 사용하여 데이터를 쿼리하는 데 10분의 처리 시간 제한이 있습니다.
 
-[!DNL JupyterLab]에서 [!DNL Query Service]을(를) 사용하기 전에 [[!DNL Query Service] SQL 구문](https://www.adobe.com/go/query-service-sql-syntax-en)을(를) 이해하고 있는지 확인하십시오.
+[!DNL Query Service]에서 [!DNL JupyterLab]을(를) 사용하기 전에 [[!DNL Query Service] SQL 구문](https://www.adobe.com/go/query-service-sql-syntax-en)을(를) 이해하고 있는지 확인하십시오.
 
-[!DNL Query Service]을(를) 사용하여 데이터를 쿼리하려면 대상 데이터 집합의 이름을 제공해야 합니다. **[!UICONTROL 데이터 탐색기]**&#x200B;를 사용하여 원하는 데이터 집합을 찾아 필요한 코드 셀을 생성할 수 있습니다. 데이터 집합 목록을 마우스 오른쪽 단추로 클릭하고 **[!UICONTROL 전자 필기장의 데이터 쿼리]**&#x200B;를 클릭하여 전자 필기장에 두 개의 코드 셀을 생성합니다. 이 두 세포는 아래에 더 자세히 설명되어 있습니다.
+[!DNL Query Service]을(를) 사용하여 데이터를 쿼리하려면 대상 데이터 집합의 이름을 제공해야 합니다. **[!UICONTROL Data explorer]**&#x200B;을(를) 사용하여 원하는 데이터 세트를 찾아 필요한 코드 셀을 생성할 수 있습니다. 데이터 집합 목록을 마우스 오른쪽 단추로 클릭하고 **[!UICONTROL Query Data in Notebook]**&#x200B;을(를) 클릭하여 전자 필기장에 두 개의 코드 셀을 생성합니다. 이 두 세포는 아래에 더 자세히 설명되어 있습니다.
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
-[!DNL JupyterLab]에서 [!DNL Query Service]을(를) 활용하려면 먼저 작업 중인 [!DNL Python] 전자 필기장과 [!DNL Query Service] 간에 연결을 만들어야 합니다. 이는 처음 생성된 셀을 실행함으로써 달성될 수 있다.
+[!DNL Query Service]에서 [!DNL JupyterLab]을(를) 활용하려면 먼저 작업 중인 [!DNL Python] 전자 필기장과 [!DNL Query Service] 간에 연결을 만들어야 합니다. 이는 처음 생성된 셀을 실행함으로써 달성될 수 있다.
 
 ```python
 qs_connect()
@@ -214,7 +214,7 @@ FROM {table_name}
 
 ### [!DNL ExperienceEvent] 데이터 필터링 {#python-filter}
 
-[!DNL Python] 전자 필기장에서 [!DNL ExperienceEvent] 데이터 집합에 액세스하고 필터링하려면 논리 연산자를 사용하여 특정 시간 범위를 정의하는 필터 규칙과 함께 데이터 집합 ID(`{DATASET_ID}`)를 제공해야 합니다. 시간 범위가 정의된 경우 지정된 페이지 매김이 무시되고 전체 데이터 세트가 고려됩니다.
+[!DNL ExperienceEvent] 전자 필기장에서 [!DNL Python] 데이터 집합에 액세스하고 필터링하려면 논리 연산자를 사용하여 특정 시간 범위를 정의하는 필터 규칙과 함께 데이터 집합 ID(`{DATASET_ID}`)를 제공해야 합니다. 시간 범위가 정의된 경우 지정된 페이지 매김이 무시되고 전체 데이터 세트가 고려됩니다.
 
 필터링 연산자 목록은 아래에 설명되어 있습니다.
 
@@ -290,12 +290,12 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### R의 데이터 세트에 쓰기 {#write-r}
 
-JupyterLab 노트북의 데이터 세트에 작성하려면 JupyterLab의 왼쪽 탐색에서 데이터 아이콘 탭(아래 강조 표시)을 선택합니다. **[!UICONTROL 데이터 세트]** 및 **[!UICONTROL 스키마]** 디렉터리가 나타납니다. **[!UICONTROL 데이터 세트]**&#x200B;를 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 세트의 드롭다운 메뉴에서 **[!UICONTROL 전자 필기장에 데이터 쓰기]** 옵션을 선택합니다. 전자 필기장 하단에 실행 가능한 코드 항목이 나타납니다.
+JupyterLab 노트북의 데이터 세트에 작성하려면 JupyterLab의 왼쪽 탐색에서 데이터 아이콘 탭(아래 강조 표시)을 선택합니다. **[!UICONTROL Datasets]** 및 **[!UICONTROL Schemas]** 디렉터리가 나타납니다. **[!UICONTROL Datasets]**&#x200B;을(를) 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 세트의 드롭다운 메뉴에서 **[!UICONTROL Write Data in Notebook]** 옵션을 선택합니다. 전자 필기장 하단에 실행 가능한 코드 항목이 나타납니다.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
-- **[!UICONTROL 전자 필기장에 데이터 쓰기]**&#x200B;를 사용하여 선택한 데이터 집합으로 쓰기 셀을 생성합니다.
-- **[!UICONTROL Notebook에서 데이터 탐색]**&#x200B;을 사용하여 선택한 데이터 집합으로 읽기 셀을 생성합니다.
+- **[!UICONTROL Write Data in Notebook]**&#x200B;을(를) 사용하여 선택한 데이터 집합으로 쓰기 셀을 생성합니다.
+- **[!UICONTROL Explore Data in Notebook]**&#x200B;을(를) 사용하여 선택한 데이터 집합으로 읽기 셀을 생성합니다.
 
 또는 다음 코드 셀을 복사하여 붙여넣을 수 있습니다.
 
@@ -361,7 +361,7 @@ spark = SparkSession.builder.getOrCreate()
 
 ### %dataset을 사용하여 PySpark 3 전자 필기장으로 읽고 쓰는 중 {#magic}
 
-[!DNL Spark] 2.4의 도입으로 PySpark 3([!DNL Spark] 2.4) 전자 필기장에서 사용할 수 있도록 `%dataset` 사용자 지정 매직이 제공됩니다. IPython 커널에서 사용할 수 있는 매직 명령에 대한 자세한 내용은 [IPython 매직 설명서](https://ipython.readthedocs.io/en/stable/interactive/magics.html)를 참조하세요.
+[!DNL Spark] 2.4의 도입으로 PySpark 3(`%dataset` 2.4) 전자 필기장에서 사용할 수 있도록 [!DNL Spark] 사용자 지정 매직이 제공됩니다. IPython 커널에서 사용할 수 있는 매직 명령에 대한 자세한 내용은 [IPython 매직 설명서](https://ipython.readthedocs.io/en/stable/interactive/magics.html)를 참조하세요.
 
 
 **사용**
@@ -372,7 +372,7 @@ spark = SparkSession.builder.getOrCreate()
 
 **설명**
 
-[!DNL PySpark] 전자 필기장([!DNL Python] 3 커널)에서 데이터 집합을 읽거나 쓰는 사용자 지정 [!DNL Data Science Workspace] 매직 명령입니다.
+[!DNL Data Science Workspace] 전자 필기장([!DNL PySpark] 3 커널)에서 데이터 집합을 읽거나 쓰는 사용자 지정 [!DNL Python] 매직 명령입니다.
 
 | 이름 | 설명 | 필수 여부 |
 | --- | --- | --- |
@@ -402,10 +402,10 @@ spark = SparkSession.builder.getOrCreate()
 
 다음 방법을 사용하여 JupyterLab 구매에서 위의 예를 자동으로 생성할 수 있습니다.
 
-JupyterLab의 왼쪽 탐색에서 데이터 아이콘 탭(아래에 강조 표시됨)을 선택합니다. **[!UICONTROL 데이터 세트]** 및 **[!UICONTROL 스키마]** 디렉터리가 나타납니다. **[!UICONTROL 데이터 세트]**&#x200B;를 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 세트의 드롭다운 메뉴에서 **[!UICONTROL 전자 필기장에 데이터 쓰기]** 옵션을 선택합니다. 전자 필기장 하단에 실행 가능한 코드 항목이 나타납니다.
+JupyterLab의 왼쪽 탐색에서 데이터 아이콘 탭(아래에 강조 표시됨)을 선택합니다. **[!UICONTROL Datasets]** 및 **[!UICONTROL Schemas]** 디렉터리가 나타납니다. **[!UICONTROL Datasets]**&#x200B;을(를) 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 세트의 드롭다운 메뉴에서 **[!UICONTROL Write Data in Notebook]** 옵션을 선택합니다. 전자 필기장 하단에 실행 가능한 코드 항목이 나타납니다.
 
-- **[!UICONTROL Notebook에서 데이터 탐색]**&#x200B;을 사용하여 읽기 셀을 생성합니다.
-- **[!UICONTROL 전자 필기장에 데이터 쓰기]**&#x200B;를 사용하여 쓰기 셀을 생성합니다.
+- **[!UICONTROL Explore Data in Notebook]**&#x200B;을(를) 사용하여 읽기 셀을 생성합니다.
+- 쓰기 셀을 생성하려면 **[!UICONTROL Write Data in Notebook]**&#x200B;을(를) 사용하십시오.
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
@@ -534,10 +534,12 @@ df1.show(10)
 
 다음 방법을 사용하여 JupyterLab 구매에서 위의 예를 자동으로 생성할 수 있습니다.
 
-JupyterLab의 왼쪽 탐색에서 데이터 아이콘 탭(아래에 강조 표시됨)을 선택합니다. **[!UICONTROL 데이터 세트]** 및 **[!UICONTROL 스키마]** 디렉터리가 나타납니다. **[!UICONTROL 데이터 세트]**&#x200B;를 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 세트의 드롭다운 메뉴에서 **[!UICONTROL Notebook에서 데이터 탐색]** 옵션을 선택합니다. 전자 필기장 하단에 실행 가능한 코드 항목이 나타납니다.
+JupyterLab의 왼쪽 탐색에서 데이터 아이콘 탭(아래에 강조 표시됨)을 선택합니다. **[!UICONTROL Datasets]** 및 **[!UICONTROL Schemas]** 디렉터리가 나타납니다. **[!UICONTROL Datasets]**&#x200B;을(를) 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 세트의 드롭다운 메뉴에서 **[!UICONTROL Explore Data in Notebook]** 옵션을 선택합니다. 전자 필기장 하단에 실행 가능한 코드 항목이 나타납니다.
+
 And
-- **[!UICONTROL Notebook에서 데이터 탐색]**&#x200B;을 사용하여 읽기 셀을 생성합니다.
-- **[!UICONTROL 전자 필기장에 데이터 쓰기]**&#x200B;를 사용하여 쓰기 셀을 생성합니다.
+
+- **[!UICONTROL Explore Data in Notebook]**&#x200B;을(를) 사용하여 읽기 셀을 생성합니다.
+- 쓰기 셀을 생성하려면 **[!UICONTROL Write Data in Notebook]**&#x200B;을(를) 사용하십시오.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 

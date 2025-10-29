@@ -3,7 +3,7 @@ title: Snowflake Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Snowflake을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 0476c42924bf0163380e650141fad8e50b98d4cf
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1502'
 ht-degree: 3%
@@ -130,9 +130,9 @@ openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
 성공하면 개인 키를 PEM 형식으로 받아야 합니다.
 
 ```shell
------BEGIN ENCRYPTED PRIVATE KEY-----
+|-----BEGIN ENCRYPTED PRIVATE KEY-----
 MIIE6T...
------END ENCRYPTED PRIVATE KEY-----
+|-----END ENCRYPTED PRIVATE KEY-----
 ```
 
 >[!TAB 암호화되지 않은 개인 키를 만듭니다]
@@ -146,9 +146,9 @@ openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
 성공하면 개인 키를 PEM 형식으로 받아야 합니다.
 
 ```shell
------BEGIN PRIVATE KEY-----
+|-----BEGIN PRIVATE KEY-----
 MIIE6T...
------END PRIVATE KEY-----
+|-----END PRIVATE KEY-----
 ```
 
 >[!ENDTABS]

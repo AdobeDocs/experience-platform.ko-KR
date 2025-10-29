@@ -3,10 +3,10 @@ keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin;
 title: Linkedin 일치하는 대상 연결
 description: 해시된 이메일을 기반으로 대상자 타겟팅, 개인화 및 억제에 대한 LinkedIn 캠페인에 대한 프로필을 활성화합니다.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 6b3b830f822cc02c78d6f593c0a949d3e19ada37
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 5%
+source-wordcount: '1202'
+ht-degree: 3%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience Platform UI의 ![LinkedIn 대상](../../assets/catalog/social/l
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 이 대상 ID를 선택합니다. |
-| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따라 일반 텍스트와 해시된 이메일에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따라 일반 텍스트와 해시된 이메일에 각각 적절한 네임스페이스를 사용하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
 
 {style="table-layout:auto"}
 
@@ -56,15 +56,15 @@ Adobe Experience Platform UI의 ![LinkedIn 대상](../../assets/catalog/social/l
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | [!DNL LinkedIn Matched Audiences] 대상에 사용된 식별자(이름, 전화번호 등)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+|---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL Audience export]** | [!DNL LinkedIn Matched Audiences] 대상에 사용된 식별자(이름, 전화번호 등)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
+| 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
 ## LinkedIn 계정 사전 요구 사항 {#LinkedIn-account-prerequisites}
 
-[!UICONTROL LinkedIn 일치하는 대상] 대상을 사용하려면 먼저 [!DNL LinkedIn Campaign Manager] 계정에 [!DNL Creative Manager] 권한 수준 이상이 있는지 확인하십시오.
+[!UICONTROL LinkedIn Matched Audience] 대상을 사용하려면 먼저 [!DNL LinkedIn Campaign Manager] 계정에 [!DNL Creative Manager] 권한 수준 이상이 있는지 확인하십시오.
 
 [!DNL LinkedIn Campaign Manager] 사용자 권한을 편집하는 방법에 대해 알아보려면 LinkedIn 설명서에서 [Advertising 계정에 대한 사용자 권한 추가, 편집 및 제거](https://www.linkedin.com/help/lms/answer/5753)를 참조하십시오.
 
@@ -92,11 +92,11 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 >[!NOTE]
 >
 >해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Experience Platform]에 의해 자동으로 해시됩니다.
->&#x200B;> 속성 소스 데이터는 자동으로 해시되지 않습니다.
+>> 속성 소스 데이터는 자동으로 해시되지 않습니다.
 > 
-> [ID 매핑](../../ui/activate-segment-streaming-destinations.md#mapping) 단계 동안 소스 필드에 해시되지 않은 특성이 포함되어 있으면 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다.
+> [ID 매핑](../../ui/activate-segment-streaming-destinations.md#mapping) 단계 동안 소스 필드에 해시되지 않은 특성이 포함되어 있으면 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오.
 > 
-> **[!UICONTROL 변환 적용]** 옵션은 특성을 소스 필드로 선택하는 경우에만 표시됩니다. 네임스페이스를 선택하면 표시되지 않습니다.
+> **[!UICONTROL Apply transformation]** 옵션은 특성을 소스 필드로 선택하는 경우에만 표시됩니다. 네임스페이스를 선택하면 표시되지 않습니다.
 
 ![ID 매핑 변환](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -104,13 +104,13 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 아래 비디오에서는 [!DNL LinkedIn Matched Audiences] 대상을 구성하고 대상을 활성화하는 단계도 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -118,23 +118,23 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 ### 대상으로 인증 {#authenticate}
 
-1. 대상 카탈로그에서 [!DNL LinkedIn Matched Audiences] 대상을 찾은 다음 **[!UICONTROL 설정]**&#x200B;을 선택합니다.
-2. **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다.
+1. 대상 카탈로그에서 [!DNL LinkedIn Matched Audiences] 대상을 찾은 다음 **[!UICONTROL Set Up]**&#x200B;을(를) 선택하십시오.
+2. **[!UICONTROL Connect to destination]**를 선택합니다.
    ![LinkedIn 인증](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. LinkedIn 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 
 ### 인증 자격 증명 새로 고침 {#refresh-authentication-credentials}
 
-LinkedIn 토큰은 60일마다 만료됩니다. **[[!UICONTROL 계정]](../../ui/destinations-workspace.md#accounts)** 또는 **[[!UICONTROL 찾아보기]](../../ui/destinations-workspace.md#browse)** 탭의 **[!UICONTROL 계정 만료 일자]** 열에서 토큰 만료 일자를 모니터링할 수 있습니다.
+LinkedIn 토큰은 60일마다 만료됩니다. **[!UICONTROL Account expiration date]** 또는 **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** 탭의 **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** 열에서 토큰 만료 날짜를 모니터링할 수 있습니다.
 
 토큰이 만료되면 대상으로의 데이터 내보내기가 더 이상 작동하지 않습니다. 이러한 상황을 방지하려면 다음 단계를 수행하여 다시 인증하십시오.
 
-1. **[!UICONTROL 대상]** > **[!UICONTROL 계정]**(으)로 이동
+1. **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**(으)로 이동
 2. (선택 사항) 페이지에서 사용할 수 있는 필터를 사용하여 LinkedIn 계정만 표시합니다.
    ![LinkedIn 계정만 표시하도록 필터링](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
-3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**&#x200B;을 선택합니다.
+3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL Edit details]**을(를) 선택하십시오.
    ![세부 정보 편집 컨트롤 선택](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
-4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**&#x200B;을 선택하고 LinkedIn 자격 증명으로 다시 인증합니다.
+4. 모달 창에서 **[!UICONTROL Reconnect OAuth]**을(를) 선택하고 LinkedIn 자격 증명으로 다시 인증합니다.
    ![다시 연결 OAuth 옵션이 있는 모달 창](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
@@ -150,22 +150,22 @@ LinkedIn 토큰은 60일마다 만료됩니다. **[[!UICONTROL 계정]](../../ui
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 계정 ID]**: 내 [!DNL LinkedIn Campaign Manager Account ID]. 이 ID는 [!DNL LinkedIn Campaign Manager] 계정에서 찾을 수 있습니다.
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Account ID]**: 내 [!DNL LinkedIn Campaign Manager Account ID]. 이 ID는 [!DNL LinkedIn Campaign Manager] 계정에서 찾을 수 있습니다.
 
 ### 경고 활성화 {#enable-alerts}
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상에 대한 대상 활성화에 대한 지침은 [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 

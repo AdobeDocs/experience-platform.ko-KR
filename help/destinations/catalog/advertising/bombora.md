@@ -1,15 +1,15 @@
 ---
 title: 봄보라 접속
 description: 계정 대상자를 기반으로 대상자 타겟팅, 개인화 및 억제에 대한 Bombora 캠페인에 대한 프로필을 활성화합니다.
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
-badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
-source-git-commit: 026d8e4c2bcea407d2a750e66b11766b1114b758
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+exl-id: a2f8e399-e192-4104-876a-fe60f8403143
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '846'
 ht-degree: 3%
 
 ---
-
 
 # 봄보라 접속 {#bombora}
 
@@ -48,7 +48,7 @@ B2B 마케터는 Real-time CDP에서 계정 목록을 만들어 높은 의도를
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
 | 사용자 정의 업로드 | X | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience). |
 
@@ -69,9 +69,9 @@ Bombora에는 아래 표에 설명된 대상 ID의 매핑이 필요합니다. [I
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | [!DNL Bombora] 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+|---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL Audience export]** | [!DNL Bombora] 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
+| 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -80,24 +80,24 @@ Bombora에는 아래 표에 설명된 대상 ID의 매핑이 필요합니다. [I
 계정 대상을 Bombora로 내보내려면 다음 정보가 필요합니다.
 
 1. 봄보라 계정입니다.
-2. Bombora **[!UICONTROL 클라이언트 ID]** 및 **[!UICONTROL 클라이언트 암호]**.
+2. Bombora **[!UICONTROL client ID]** 및 **[!UICONTROL client secret]**&#x200B;입니다.
 
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상으로 인증 {#authenticate}
 
-대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
+대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 
 ![전달자 토큰 추가](../../assets/catalog/advertising/bombora/add-bearer-token.png)
 
-* **[!UICONTROL 클라이언트 ID]**: [!DNL Bombora] 클라이언트 ID를 입력하십시오.
-* **[!UICONTROL 클라이언트 암호]**: [!DNL Bombora] 클라이언트 암호를 입력하십시오.
+* **[!UICONTROL Client ID]**: [!DNL Bombora] 클라이언트 ID를 입력하십시오.
+* **[!UICONTROL Client secret]**: [!DNL Bombora] 클라이언트 암호를 입력하십시오.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -105,8 +105,8 @@ Bombora에는 아래 표에 설명된 대상 ID의 매핑이 필요합니다. [I
 
 ![대상 연결에 대한 정보 추가](../..//assets/catalog/advertising/bombora/name-and-description.png)
 
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 
 이제 Bombora 내에서 대상을 활성화할 준비가 되었습니다.
 
@@ -114,8 +114,8 @@ Bombora에는 아래 표에 설명된 대상 ID의 매핑이 필요합니다. [I
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상에 대한 계정 대상을 활성화하는 방법에 대한 지침은 [계정 대상 활성화](/help/destinations/ui/activate-account-audiences.md)를 참조하십시오.
 
@@ -136,4 +136,3 @@ Bombora 대상을 사용하려면 성공적인 데이터 활성화를 위해 다
 ## 추가 참고 사항 및 중요한 설명선 {#additional-notes}
 
 동일한 이름의 계정 대상이 이전에 Bombora에 대해 활성화된 경우 다른 데이터 흐름을 통해 Bombora 대상에 대해 다시 활성화하려고 하면 오류가 표시됩니다.
-

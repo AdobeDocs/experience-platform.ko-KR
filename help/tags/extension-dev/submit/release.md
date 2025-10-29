@@ -2,9 +2,9 @@
 title: 확장 릴리스
 description: Adobe Experience Platform에서 태그 확장을 비공개 또는 공개적으로 릴리스하는 방법을 알아봅니다.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 2152cf98d9809654cca7abd7b8469a72e8387b2a
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '478'
 ht-degree: 25%
 
 ---
@@ -37,11 +37,11 @@ npx @adobe/reactor-releaser
 `npx`을(를) 사용하면 npm 패키지를 컴퓨터에 실제로 설치하지 않고도 다운로드하여 실행할 수 있습니다. 이 방법은 릴리스를 실행하는 가장 간단한 방법입니다.
 
 >[!NOTE]
-> 기본적으로 릴리스에는 서버 간 Oauth 흐름에 대한 Adobe I/O 자격 증명이 필요합니다. 기존 `jwt-auth` 자격 증명
-> 2025년 1월 1일에 사용이 중단될 때까지 `npx @adobe/reactor-releaser@v3.1.3`을(를) 실행하여 사용할 수 있습니다. 필요한 매개 변수
-> `jwt-auth` 버전을 실행하려면 [여기](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5)에 있습니다.
+> 기본적으로 릴리스에서는 서버 간 Oauth 흐름에 Adobe I/O 자격 증명이 필요합니다. 기존 `jwt-auth` 자격 증명
+> > 2025년 1월 1일에 사용이 중단될 때까지 `npx @adobe/reactor-releaser@v3.1.3`을(를) 실행하여 사용할 수 있습니다. 필요한 매개 변수
+> > `jwt-auth` 버전을 실행하려면 [여기](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5)에 있습니다.
 
-릴리스에는 몇 가지 정보만 입력해야 합니다. Adobe I/O 콘솔에서 `clientId` 및 `clientSecret`을(를) 검색할 수 있습니다. I/O 콘솔에서 [통합 페이지](https://console.adobe.io/integrations)(으)로 이동합니다. 드롭다운에서 올바른 조직을 선택하고 올바른 통합을 찾은 다음 **[!UICONTROL 보기]**&#x200B;를 선택합니다.
+릴리스에는 몇 가지 정보만 입력해야 합니다. Adobe I/O 콘솔에서 `clientId` 및 `clientSecret`을(를) 검색할 수 있습니다. I/O 콘솔에서 [통합 페이지](https://console.adobe.io/integrations)&#x200B;(으)로 이동합니다. 드롭다운에서 올바른 조직을 선택하고 올바른 통합을 찾은 다음 **[!UICONTROL View]**&#x200B;을(를) 선택합니다.
 
 - `clientId`은(는) 무엇입니까? I/O 콘솔에서 이 파일을 복사하여 붙여넣습니다.
 - `clientSecret`은(는) 무엇입니까? I/O 콘솔에서 이 파일을 복사하여 붙여넣습니다.
@@ -49,7 +49,7 @@ npx @adobe/reactor-releaser
 릴리스는 확장 매니페스트에서 `name` 및 `platform` 필드를 읽고 Development 가용성의 일치하는 확장 패키지에 대해 API를 쿼리합니다.
 그런 다음 릴리스에서는 비공개 릴리스로 릴리스할 올바른 확장 패키지를 찾았는지 확인하라는 메시지가 표시됩니다.
 
-API를 사용하여 확장을 직접 사용할 수 있는 상태로 릴리스하려면 API 문서에서 [확장 패키지 비공개 릴리스](../../api/endpoints/extension-packages.md/#private-release)에 대한 예제 호출을 참조하십시오.
+API를 사용하여 확장을 직접 사용할 수 있는 상태로 릴리스하려면 API 문서에서 [확장 패키지 비공개 릴리스](/help/tags/api/endpoints/extension-packages.md#private-release)에 대한 예제 호출을 참조하십시오.
 
 ## 공개 릴리스
 

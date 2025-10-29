@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 쿼리 서비스의 Adobe 정의 SQL 함수
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 사용할 수 있는 Adobe 정의 함수에 대한 정보를 제공합니다.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # 쿼리 서비스의 Adobe 정의 SQL 함수
 
-Adobe 정의 함수(여기서는 ADF라고 함)는 [!DNL Experience Event] 데이터에 대해 일반적인 비즈니스 관련 작업을 수행하는 데 도움이 되는 Adobe Experience Platform Query Service의 미리 빌드된 함수입니다. 여기에는 Adobe Analytics에 있는 것과 같은 [세션화](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=ko) 및 [속성](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ko)에 대한 함수가 포함됩니다.
+Adobe 정의 함수(여기서는 ADF라고 함)는 [!DNL Experience Event] 데이터에 대해 일반적인 비즈니스 관련 작업을 수행하는 데 도움이 되는 Adobe Experience Platform Query Service의 미리 빌드된 함수입니다. 여기에는 Adobe Analytics에 있는 것과 같은 [세션화](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) 및 [속성](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)에 대한 함수가 포함됩니다.
 
 이 문서에서는 [!DNL Query Service]에서 사용할 수 있는 Adobe 정의 함수에 대한 정보를 제공합니다.
 
@@ -47,7 +47,7 @@ OVER ({PARTITION} {ORDER} {FRAME})
 
 이러한 그룹화 또는 데이터 세션화는 이벤트를 연결하여 고객 경험에 대한 더 많은 컨텍스트를 발견하는 데 도움이 됩니다.
 
-Adobe Analytics의 세션화에 대한 자세한 내용은 [컨텍스트 인식 세션](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=ko)에 대한 설명서를 참조하십시오.
+Adobe Analytics의 세션화에 대한 자세한 내용은 [컨텍스트 인식 세션](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)에 대한 설명서를 참조하십시오.
 
 **쿼리 구문**
 
@@ -82,7 +82,7 @@ LIMIT 10
 
 ```console
                 id                |       timestamp       |      session       
-----------------------------------+-----------------------+--------------------
+|----------------------------------+-----------------------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | (56,1,false,3)
@@ -102,7 +102,7 @@ LIMIT 10
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | 현재 레코드와 이전 레코드 간의 시간 차이(초)입니다. |
 | `{NUM}` | 창 함수의 `PARTITION BY`에 정의된 키에 대한 고유 세션 번호(1부터 시작)입니다. |
@@ -147,7 +147,7 @@ SELECT
 
 ```console
                 id                |       timestamp       | isLaunch |      session       
-----------------------------------+-----------------------+----------+--------------------
+|----------------------------------+-----------------------+----------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | true     | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | false    | (56,1,false,3)
@@ -167,7 +167,7 @@ SELECT
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | 현재 레코드와 이전 레코드 간의 시간 차이(초)입니다. |
 | `{NUM}` | 창 함수의 `PARTITION BY`에 정의된 키에 대한 고유 세션 번호(1부터 시작)입니다. |
@@ -212,7 +212,7 @@ SELECT
 
 ```console
                 id                |       timestamp       | isExit   |      session       
-----------------------------------+-----------------------+----------+--------------------
+|----------------------------------+-----------------------+----------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | false    | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | true     | (56,1,false,3)
@@ -232,7 +232,7 @@ SELECT
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | 현재 레코드와 이전 레코드 간의 시간 차이(초)입니다. |
 | `{NUM}` | 창 함수의 `PARTITION BY`에 정의된 키에 대한 고유 세션 번호(1부터 시작)입니다. |
@@ -281,7 +281,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
------------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
+|-----------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | 
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | 
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
@@ -333,7 +333,7 @@ LIMIT 10
 
 ```console
                 id                 |       timestamp       |                name                 |             previous_page             
------------------------------------+-----------------------+-------------------------------------+---------------------------------------
+|-----------------------------------+-----------------------+-------------------------------------+---------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | (Kids)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
@@ -401,7 +401,7 @@ LIMIT 10
 
 ```console
              page_name             | average_minutes_since_registration 
------------------------------------+------------------------------------
+|-----------------------------------+------------------------------------
                                    |                                   
  Account Registration|Confirmation |                                0.0
  Seasonal                          |                   5.47029702970297
@@ -463,7 +463,7 @@ LIMIT 10
 
 ```console
              page_name             | average_minutes_until_order_confirmation 
------------------------------------+------------------------------------------
+|-----------------------------------+------------------------------------------
  Shopping Cart|Order Confirmation  |                                      0.0
  Men                               |                       -9.465295629820051
  Equipment                         |                       -9.682098765432098
@@ -481,10 +481,10 @@ LIMIT 10
 
 ## 다음 단계
 
-여기에 설명된 함수를 사용하여 [!DNL Query Service]을(를) 사용하여 자신의 [!DNL Experience Event] 데이터 세트에 액세스하는 쿼리를 작성할 수 있습니다. [!DNL Query Service]에서 쿼리를 작성하는 방법에 대한 자세한 내용은 [쿼리 만들기](../best-practices/writing-queries.md)에 대한 설명서를 참조하십시오.
+여기에 설명된 함수를 사용하여 [!DNL Experience Event]을(를) 사용하여 자신의 [!DNL Query Service] 데이터 세트에 액세스하는 쿼리를 작성할 수 있습니다. [!DNL Query Service]에서 쿼리를 작성하는 방법에 대한 자세한 내용은 [쿼리 만들기](../best-practices/writing-queries.md)에 대한 설명서를 참조하십시오.
 
 ## 추가 리소스
 
 다음 비디오는 Adobe Experience Platform 인터페이스 및 PSQL 클라이언트에서 쿼리를 실행하는 방법을 보여 줍니다. 또한 이 비디오에서는 Adobe 정의 함수 사용 및 CREATE TABLE AS SELECT(CTAS) 사용 시 XDM 개체의 개별 속성과 관련된 예제를 사용합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32942?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)

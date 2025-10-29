@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 0a9782b6018e5c5405c79ce37d969754d7b99fd6
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1712'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)을(를) 확인하십시오.
+>이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을(를) 확인하십시오.
 
 이 페이지에서는 활성화 동작과 관련된 기본 사용량 및 요금 제한을 제공합니다. 다음 보호 기능을 검토할 때 [대상에 올바르게 연결](/help/destinations/ui/connect-destination.md)되어 있다고 가정합니다.
 
@@ -142,7 +142,7 @@ XDM 경험 이벤트 스키마 기반의 데이터 세트의 경우 데이터 �
 >JSON 파일로 내보내기는 압축 모드에서만 지원됩니다.
 
 | 데이터 세트 유형 | 가드레일 | 보호 유형 | 설명 |
----------|----------|---------|-------|
+|---------|----------|---------|-------|
 | **XDM 경험 이벤트 스키마**&#x200B;를 기반으로 하는 데이터 세트 | 최근 365일 데이터 | 시스템 강제 보호 | 지난 달력 연도의 데이터를 내보냅니다. |
 | **XDM 경험 이벤트 스키마 외의 모든 스키마**&#x200B;를 기반으로 하는 데이터 세트 | 데이터 흐름의 내보낸 모든 파일에 대해 100억 개의 레코드 보유 | 시스템 강제 보호 | 데이터 세트의 기록 수는 압축된 JSON 또는 Parquet 파일의 경우 100억 개 미만이어야 하고, 압축되지 않은 Parquet 파일의 경우 100만 개 미만이어야 합니다. 그렇지 않으면 내보내기에 실패합니다. 허용된 임계값보다 큰 경우 내보내려는 데이터 세트의 크기를 줄이십시오. |
 
@@ -196,7 +196,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보호, 종단 간 지연 정보 및 라이선스 정보에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
-* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ko#end-to-end-latency-diagrams).
-* [Real-Time Customer Data Platform(B2C Edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams).
+* [Real-Time Customer Data Platform(B2C Edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

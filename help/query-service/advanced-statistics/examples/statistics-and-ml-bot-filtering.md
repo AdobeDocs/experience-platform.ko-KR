@@ -1,7 +1,8 @@
 ---
 title: 통계 및 머신 러닝을 사용한 보트 필터링
 description: 데이터 Distiller 통계 및 머신 러닝을 사용하여 보트 활동을 식별하고 필터링하여 정확한 분석과 향상된 데이터 무결성을 보장하는 방법을 알아봅니다.
-source-git-commit: a8abbf61bdc646c0834c296a64b27c71c98ea1d3
+exl-id: 30d98281-7d15-47a6-b365-3baa07356010
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 0%
@@ -117,7 +118,7 @@ FROM (
 )
 ```
 
-문이 `mcid` 값 및 웹 페이지를 사용하여 `table_count_1_min`, `table_count_5_mins` 및 `table_count_30_mins`의 데이터를 조인합니다. 그런 다음 여러 시간 간격 동안 각 사용자에 대한 클릭 수를 통합하여 사용자 활동을 완전히 볼 수 있습니다. 마지막으로 플래그 지정 논리는 1분 동안 50번의 클릭을 초과하는 사용자를 식별하고 봇(`isBot = 1`)으로 표시합니다.
+문이 `table_count_1_min` 값 및 웹 페이지를 사용하여 `table_count_5_mins`, `table_count_30_mins` 및 `mcid`의 데이터를 조인합니다. 그런 다음 여러 시간 간격 동안 각 사용자에 대한 클릭 수를 통합하여 사용자 활동을 완전히 볼 수 있습니다. 마지막으로 플래그 지정 논리는 1분 동안 50번의 클릭을 초과하는 사용자를 식별하고 봇(`isBot = 1`)으로 표시합니다.
 
 ### 출력 데이터 세트 구조
 
@@ -168,7 +169,7 @@ root
 
 먼저 (위에서 설명한 대로) 머신 러닝 모델이 사용할 수 있는 평면적이고 중첩된 구조의 데이터 세트를 준비합니다. 이 작업을 수행하는 방법에 대한 자세한 지침은 [중첩 데이터 구조 작업 설명서](../../key-concepts/nested-data-structures.md)에서 확인할 수 있습니다. 타임스탬프, 사용자 ID 및 웹 페이지 이름별로 데이터를 그룹화하여 봇 활동의 패턴을 식별합니다.
 
-### 모델 생성을 위해 TRANSFORM 및 OPTIONS 절 사용 {#transform-and-preprocess}
+### 모델을 만들 때 TRANSFORM 및 OPTIONS 절 사용 {#transform-and-preprocess}
 
 데이터 세트를 변환하고 머신 러닝 모델을 효과적으로 구성하려면 아래 단계를 따르십시오. 이 절차에서는 null 값을 처리하고, 피쳐를 준비하고 최적의 성능을 위해 모델의 매개변수를 정의하는 방법에 대해 자세히 설명합니다.
 
@@ -179,7 +180,7 @@ root
 1. 숫자, 문자열 및 부울 열에서 null 값을 채우려면 각각 `numeric_imputer`, `string_imputer` 및 `boolean_imputer` 함수를 사용합니다. 이 단계에서는 머신 러닝 알고리즘이 오류 없이 데이터를 처리할 수 있도록 합니다.
 2. 피쳐 변환을 적용하여 모델링할 데이터를 준비합니다. `binarized`, `quantile_discretizer` 또는 `string_indexer`을(를) 적용하여 열을 분류하거나 표준화합니다. 그런 다음, 가져오기(`numeric_imputer` 및 `string_imputer`)의 출력을 `string_indexer` 또는 `quantile_discretizer`과(와) 같은 후속 변환기에 전달하여 의미 있는 기능을 만듭니다.
 3. `vector_assembler` 함수를 사용하여 변환된 열을 하나의 기능 열로 결합하십시오. 그런 다음 `min_max_scaler`을(를) 사용하여 기능의 크기를 조정하여 더 나은 모델 성능을 위해 값을 정규화합니다. 참고: SQL 예제에서 TRANSFORM 절 내에 언급된 마지막 변환은 머신 러닝 모델에 사용되는 기능 열이 됩니다.
-4. 모델 유형 및 기타 하이퍼매개 변수를 OPTIONS 절에 지정합니다. 예를 들어 분류 문제이므로 여기에서 `decision_tree_classifier`을(를) 선택했습니다. 더 나은 성능을 위해 모델을 튜닝하기 위해 `max_depth`과(와) 같은 다른 매개 변수가 조정되었습니다(`MAX_DEPTH=4`).
+4. OPTIONS 절에 모델 유형 및 기타 하이퍼매개변수를 지정합니다. 예를 들어 분류 문제이므로 여기에서 `decision_tree_classifier`을(를) 선택했습니다. 더 나은 성능을 위해 모델을 튜닝하기 위해 `max_depth`과(와) 같은 다른 매개 변수가 조정되었습니다(`MAX_DEPTH=4`).
 5. 기능을 결합하고 출력 데이터에 레이블을 지정합니다. SELECT 절을 사용하여 교육을 위한 데이터 세트를 지정합니다. 이 절에는 작업이 봇인지 여부를 나타내는 기능 열(`count_per_id`, `web`, `id`)과 레이블 열(`isBot`)이 모두 포함되어야 합니다.
 
 명령문은 아래 예제와 유사할 수 있습니다.
@@ -209,7 +210,7 @@ SELECT count_per_id, isBot, web, id FROM analytics_events_clicks_count_criteria;
 
 ```console
            Created Model ID           |       Created Model       | Version
---------------------------------------+---------------------------+---------
+|--------------------------------------+---------------------------+---------
  2fb4b49e-d35c-44cf-af19-cc210e7dc72c | bot_filtering_model       |       1
 ```
 
@@ -244,7 +245,7 @@ FROM   model_evaluate(bot_filtering_model, 1,
 
 ```console
 auc_roc | accuracy | precision | recall
----------+----------+-----------+--------
+|---------+----------+-----------+--------
      1.0 |      1.0 |       1.0 |    1.0
 ```
 
@@ -282,7 +283,7 @@ FROM model_predict(bot_filtering_model, 1,
 
 ```console
          id          | count.one_minute | count.five_minute | count.thirty_minute |                                                                  web.webpagedetails.name                                                                  | prediction
----------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
+|---------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
                      |              110 |                   |                     |   4UNDilcY5VAgu2pRmX4/gtVnj+YxDDQaJd1G8p8WX46//wYcrHy+APUN0I556E80j1gIzFmilA6DV4s0Zcs4ruiP36gLgC7bj4TH0q6LU0E=                                             |        1.0  
                      |              105 |                   |                     |   lrSaZk04Yq+5P9+6l4BohwXik0s0/XeW9X28ZgWt1yj1QQztiAt9Qgt2WYrWcAeoGZChAJw/l8e4ojZDT5WHCjteSt35S01Vv1JzDGPAg+IyhIzMTsVyLpW8WWpXjJoMCt6Tv7fFdF73EIH+IrK5fA== |        1.0
  2553215812530219515 |               99 |                 1 |                   1 |   KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg==                                                                 |        1.0

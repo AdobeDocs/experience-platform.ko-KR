@@ -2,7 +2,7 @@
 description: 대상 테스트 API를 사용하여 스트리밍 대상이 올바르게 구성되었는지 테스트하고 구성된 대상에 대한 데이터 흐름의 무결성을 확인하는 방법에 대해 알아봅니다.
 title: 샘플 프로필을 사용하여 스트리밍 대상 테스트
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 1%
@@ -26,9 +26,9 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* 이 API를 사용하려면 Experience Platform UI에 대상에 대한 기존 연결이 있어야 합니다. 자세한 내용은 [대상에 연결](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ko) 및 [대상에 프로필 및 대상자 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=ko)를 참조하십시오.
-> * 대상에 대한 연결을 설정한 후 [대상과의 연결을 탐색](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=ko)할 때 이 끝점에 대한 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다.
->![대상 인스턴스 ID](../../assets/testing-api/get-destination-instance-id.png)을(를) 가져오는 방법 UI 이미지
+>* 이 API를 사용하려면 Experience Platform UI에 대상에 대한 기존 연결이 있어야 합니다. 자세한 내용은 [대상에 연결](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 및 [대상에 프로필 및 대상자 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html)를 참조하십시오.
+>* 대상에 대한 연결을 설정한 후 [대상과의 연결을 탐색](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html)할 때 이 끝점에 대한 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다.
+>  >![대상 인스턴스 ID](../../assets/testing-api/get-destination-instance-id.png)을(를) 가져오는 방법 UI 이미지
 
 ## 대상 테스트 API 작업 시작 {#get-started}
 
@@ -158,7 +158,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 | -------- | ----------- |
 | `aggregationKey` | 대상에 대해 구성된 집계 정책에 대한 정보를 포함합니다. 자세한 내용은 [집계 정책](../../functionality/destination-configuration/aggregation-policy.md) 설명서를 참조하십시오. |
 | `traceId` | 작업의 고유 식별자입니다. 오류가 발생하면 문제 해결 목적으로 Adobe 팀과 이 ID를 공유할 수 있습니다. |
-| `results.httpCalls.request` | Adobe이 대상으로 보낸 요청을 포함합니다. |
+| `results.httpCalls.request` | Adobe에서 대상으로 보낸 요청을 포함합니다. |
 | `results.httpCalls.response` | 대상에서 Adobe이 받은 응답을 포함합니다. |
 | `inputProfiles` | 대상 호출 시 내보낸 프로필을 포함합니다. 프로필이 소스 스키마와 일치합니다. |
 

@@ -2,7 +2,7 @@
 title: 속성 분석
 description: 이 문서에서는 쿼리 서비스를 사용하여 첫 번째 및 마지막 터치의 마케팅 속성 모델을 기반으로 마케팅 효율성 측정 기법을 만드는 방법을 설명합니다.
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -13,16 +13,16 @@ ht-degree: 0%
 
 기여도 분석은 채널, 오퍼 및 메시지와 같은 비즈니스 판매 또는 전환에 기여하는 마케팅 전략을 결정하는 데 도움이 되는 분석 개념입니다. 이 개념은 고객 접점(소비자가 브랜드와 상호 작용할 때마다)을 기반으로 구매 또는 획득을 초래하는 소비자 여정(고객이 목표를 달성하기 위해 회사와 상호 작용하는 프로세스)을 평가합니다. 마케터는 속성 분석을 통해 잠재 고객과 연결하는 채널의 투자 수익을 평가할 수 있습니다.
 
-## 시작하기
+## 시작
 
 이 문서 전체의 SQL 예제는 Adobe Analytics 데이터에 일반적으로 사용되는 쿼리입니다. 이 자습서에서는 다음 구성 요소를 이해하고 있어야 합니다.
 
 * [보고서 세트 데이터 개요용 Adobe Analytics 소스 커넥터](../../sources/connectors/adobe-applications/mapping/analytics.md).
 * [Analytics 필드 매핑 설명서](../../sources/connectors/adobe-applications/mapping/analytics.md)에서 쿼리 서비스에 사용할 분석 데이터를 수집 및 매핑하는 방법에 대한 자세한 정보를 제공합니다.
-* [Attribution IQ 개요](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ko)
-* [Adobe Analytics 속성 패널 안내서](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=ko).
+* [Attribution IQ 개요](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [Adobe Analytics 속성 패널 안내서](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
 
-`OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](../sql/adobe-defined-functions.md#window-functions)에 있습니다. [Adobe 마케팅 및 Commerce 용어 용어집](https://business.adobe.com/kr/glossary/index.html)도 사용할 수 있습니다.
+`OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](../sql/adobe-defined-functions.md#window-functions)에 있습니다. [Adobe 마케팅 및 Commerce 용어 용어집](https://business.adobe.com/glossary/index.html)도 사용할 수 있습니다.
 
 다음 각 사용 사례에 대해 사용자 정의할 템플릿으로 매개 변수가 있는 SQL 쿼리 예제가 제공됩니다. 평가하려는 SQL 예제에 `{ }`이(가) 표시되는 모든 위치에 매개 변수를 제공합니다.
 
@@ -57,10 +57,10 @@ ht-degree: 0%
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ---------- | ----------- |
 | `{NAME}` | Azure Data Factory(ADF)에 레이블로 입력한 `{CHANNEL_NAME}`입니다. |
-| `{VALUE}` | 지정된 `{EXP_TIMEOUT}` 간격 내의 마지막 터치인 `{CHANNEL_VALUE}`의 값 |
+| `{VALUE}` | 지정된 `{CHANNEL_VALUE}` 간격 내의 마지막 터치인 `{EXP_TIMEOUT}`의 값 |
 | `{TIMESTAMP}` | 마지막 터치가 발생한 [!DNL Experience Event]의 타임스탬프 |
 | `{FRACTION}` | 소수 값으로 표현되는 마지막 터치 속성입니다. |
 
@@ -98,11 +98,11 @@ LIMIT 10
 
 **결과**
 
-아래 결과에서는 [!DNL Experience Event] 데이터 집합에서 초기 추적 코드 `em:946426`을(를) 가져옵니다. 이 추적 코드는 첫 번째 상호 작용이었으므로 고객 작업에 대한 100%(`1.0`)의 책임으로 인한 것입니다.
+아래 결과에서는 `em:946426` 데이터 집합에서 초기 추적 코드 [!DNL Experience Event]을(를) 가져옵니다. 이 추적 코드는 첫 번째 상호 작용이었으므로 고객 작업에 대한 100%(`1.0`)의 책임으로 인한 것입니다.
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:06:12.0 | em:946426    | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:07:02.0 | em:946426    | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:07:55.0 |              | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
@@ -149,7 +149,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                  id                |       timestamp       | trackingCode |                   last_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:06:12.0 | em:946426    | (Paid Last,em:946426,2017-12-18 07:06:12.0,1.0)
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:07:02.0 | em:946426    | (Paid Last,em:946426,2017-12-18 07:07:02.0,1.0)
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:07:55.0 |              | (Paid Last,em:946426,2017-12-18 07:07:02.0,1.0)
@@ -200,7 +200,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                  id               |       timestamp       | trackingCode |                   first_touch                   
-----------------------------------+-----------------------+--------------+-------------------------------------------------
+|----------------------------------+-----------------------+--------------+-------------------------------------------------
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:05.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -251,7 +251,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:05.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -302,7 +302,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       | trackingCode |                   last_touch                   
------------------------------------+-----------------------+--------------+------------------------------------------------
+|-----------------------------------+-----------------------+--------------+------------------------------------------------
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
@@ -351,7 +351,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)

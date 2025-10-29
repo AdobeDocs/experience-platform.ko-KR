@@ -5,10 +5,10 @@ title: 흐름 서비스 API를 사용하여 배치 대상에 연결하고 데이
 description: 플로우 서비스 API를 사용하여 Experience Platform에서 일괄 클라우드 스토리지 또는 이메일 마케팅 대상을 만들고 데이터를 활성화하는 단계별 지침
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 833e38559f7150c579840c69fa2658761fc9472c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '3450'
-ht-degree: 2%
+source-wordcount: '3435'
+ht-degree: 4%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 > 
->* 대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
+>* 대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
 >
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
 >
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 >
 >[액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
@@ -61,11 +61,11 @@ Experience Platform 사용자 인터페이스를 사용하여 대상에 연결�
 
 ### 샘플 API 호출 읽기 {#reading-sample-api-calls}
 
-이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [&#x200B; 문제 해결 안내서의 &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request)예제 API 호출을 읽는 방법[!DNL Experience Platform]에 대한 섹션을 참조하십시오.
+이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 문서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 섹션을 참조하십시오.
 
 ### 필수 및 선택적 헤더에 대한 값 수집 {#gather-values-headers}
 
-[!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [인증 튜토리얼](https://www.adobe.com/go/platform-api-authentication-en)을 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 * 인증: 전달자 `{ACCESS_TOKEN}`
 * x-api 키: `{API_KEY}`
@@ -127,7 +127,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 아래 표에는 일반적으로 사용되는 배치 대상에 대한 연결 사양 ID가 포함되어 있습니다.
 
 | 대상 | 연결 사양 ID |
----------|----------|
+|---------|----------|
 | [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
 | [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
 | [!DNL Oracle Responsys] | `a5e28ddf-e265-426e-83a1-9d03a3a6822b` |
@@ -531,8 +531,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `name` | 배치 대상에 대한 기본 연결의 이름을 입력합니다. |
 | `description` | 선택적으로 기본 연결에 대한 설명을 제공할 수 있습니다. |
 | `connectionSpec.id` | 원하는 배치 대상에 대해 연결 사양 ID를 사용합니다. [사용 가능한 대상 목록 가져오기](#get-the-list-of-available-destinations) 단계에서 이 ID를 얻었습니다. |
-| `auth.specname` | 대상의 인증 형식을 나타냅니다. 대상의 specName을 확인하려면 연결 사양 엔드포인트[에 대해 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET 호출을 수행하여 원하는 대상의 연결 사양을 제공하십시오. 응답에서 매개 변수 `authSpec.name`을(를) 찾습니다. <br> 예를 들어 Adobe Campaign 대상의 경우 `S3`, `SFTP with Password` 또는 `SFTP with SSH Key` 중 하나를 사용할 수 있습니다. |
-| `params` | 연결 중인 대상에 따라 서로 다른 필수 인증 매개 변수를 제공해야 합니다. Amazon S3 연결의 경우 Amazon S3 저장소 위치에 액세스 ID와 비밀 키를 제공해야 합니다. <br> 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 끝점[에 대한 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET 호출을 수행하여 원하는 대상의 연결 사양을 제공합니다. 응답에서 매개 변수 `authSpec.spec.required`을(를) 찾습니다. |
+| `auth.specname` | 대상의 인증 형식을 나타냅니다. 대상의 specName을 확인하려면 연결 사양 엔드포인트[에 대해 ](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET 호출을 수행하여 원하는 대상의 연결 사양을 제공하십시오. 응답에서 매개 변수 `authSpec.name`을(를) 찾습니다. <br> 예를 들어 Adobe Campaign 대상의 경우 `S3`, `SFTP with Password` 또는 `SFTP with SSH Key` 중 하나를 사용할 수 있습니다. |
+| `params` | 연결 중인 대상에 따라 서로 다른 필수 인증 매개 변수를 제공해야 합니다. Amazon S3 연결의 경우 Amazon S3 저장소 위치에 액세스 ID와 비밀 키를 제공해야 합니다. <br> 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 끝점[에 대한 ](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET 호출을 수행하여 원하는 대상의 연결 사양을 제공합니다. 응답에서 매개 변수 `authSpec.spec.required`을(를) 찾습니다. |
 
 {style="table-layout:auto"}
 
@@ -857,8 +857,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `description` | 필요한 경우 대상 연결에 대한 설명을 제공할 수 있습니다. |
 | `baseConnectionId` | 위의 단계에서 생성한 기본 연결의 ID를 사용하십시오. |
 | `connectionSpec.id` | 원하는 배치 대상에 대해 연결 사양 ID를 사용합니다. [사용 가능한 대상 목록 가져오기](#get-the-list-of-available-destinations) 단계에서 이 ID를 얻었습니다. |
-| `params` | 연결할 대상에 따라 저장소 위치에 다른 필수 매개 변수를 제공해야 합니다. Amazon S3 연결의 경우 Amazon S3 저장소 위치에 액세스 ID와 비밀 키를 제공해야 합니다. <br> 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 끝점[에 대한 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET 호출을 수행하여 원하는 대상의 연결 사양을 제공합니다. 응답에서 매개 변수 `targetSpec.spec.required`을(를) 찾습니다. |
-| `params.mode` | 대상에 대해 지원되는 모드에 따라 여기에 다른 값을 제공해야 합니다. 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 엔드포인트[에 대해 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET 호출을 수행하여 원하는 대상의 연결 사양을 제공하십시오. 응답에서 매개 변수 `targetSpec.spec.properties.mode.enum`을(를) 찾아 원하는 모드를 선택하십시오. |
+| `params` | 연결할 대상에 따라 저장소 위치에 다른 필수 매개 변수를 제공해야 합니다. Amazon S3 연결의 경우 Amazon S3 저장소 위치에 액세스 ID와 비밀 키를 제공해야 합니다. <br> 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 끝점[에 대한 ](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET 호출을 수행하여 원하는 대상의 연결 사양을 제공합니다. 응답에서 매개 변수 `targetSpec.spec.required`을(를) 찾습니다. |
+| `params.mode` | 대상에 대해 지원되는 모드에 따라 여기에 다른 값을 제공해야 합니다. 대상에 대한 필수 매개 변수를 확인하려면 연결 사양 엔드포인트[에 대해 ](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET 호출을 수행하여 원하는 대상의 연결 사양을 제공하십시오. 응답에서 매개 변수 `targetSpec.spec.properties.mode.enum`을(를) 찾아 원하는 모드를 선택하십시오. |
 | `params.bucketName` | S3 연결의 경우 파일을 내보낼 버킷의 이름을 입력합니다. |
 | `params.path` | S3 연결의 경우 파일을 내보낼 저장소 위치의 파일 경로를 제공합니다. |
 | `params.format` | `CSV`은(는) 현재 지원되는 유일한 파일 내보내기 유형입니다. |
@@ -934,7 +934,7 @@ curl -X POST \
 | --------- | ----------- |
 | `name` | 생성 중인 데이터 흐름의 이름을 입력합니다. |
 | `description` | 선택적으로 데이터 흐름에 대한 설명을 제공할 수 있습니다. |
-| `flowSpec.Id` | 연결할 배치 대상에 대해 흐름 사양 ID를 사용합니다. 흐름 사양 ID를 검색하려면 `flowspecs`흐름 사양 API 참조 설명서[에 표시된 대로 &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec) 끝점에서 GET 작업을 수행하십시오. 응답에서 `upsTo`을(를) 찾아 연결할 배치 대상의 해당 ID를 복사합니다. 예를 들어 Adobe Campaign의 경우 `upsToCampaign`을(를) 찾아 `id` 매개 변수를 복사합니다. |
+| `flowSpec.Id` | 연결할 배치 대상에 대해 흐름 사양 ID를 사용합니다. 흐름 사양 ID를 검색하려면 `flowspecs`흐름 사양 API 참조 설명서[에 표시된 대로 ](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec) 끝점에서 GET 작업을 수행하십시오. 응답에서 `upsTo`을(를) 찾아 연결할 배치 대상의 해당 ID를 복사합니다. 예를 들어 Adobe Campaign의 경우 `upsToCampaign`을(를) 찾아 `id` 매개 변수를 복사합니다. |
 | `sourceConnectionIds` | [Experience Platform 데이터에 연결](#connect-to-your-experience-platform-data) 단계에서 얻은 소스 연결 ID를 사용합니다. |
 | `targetConnectionIds` | [일괄 처리 대상에 연결](#connect-to-batch-destination) 단계에서 얻은 대상 연결 ID를 사용하십시오. |
 | `transformations` | 다음 단계에서는 이 섹션을 활성화할 대상 및 프로필 속성으로 채웁니다. |
@@ -942,7 +942,7 @@ curl -X POST \
 아래 표에는 일반적으로 사용되는 배치 대상에 대한 흐름 사양 ID가 포함되어 있습니다.
 
 | 대상 | 흐름 사양 ID |
----------|----------|
+|---------|----------|
 | 모든 클라우드 저장소 대상([!DNL Amazon S3], SFTP, [!DNL Azure Blob]) 및 [!DNL Oracle Eloqua] | `71471eba-b620-49e4-90fd-23f1fa0174d8` |
 | [!DNL Oracle Responsys] | `51d675ce-e270-408d-91fc-22717bdf2148` |
 | [!DNL Salesforce Marketing Cloud] | `493b2bd6-26e4-4167-ab3b-5e910bba44f0` |

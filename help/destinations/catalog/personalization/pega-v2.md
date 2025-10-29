@@ -1,9 +1,10 @@
 ---
 title: (V2) 페가 CDH 실시간 대상 연결
 description: Adobe Experience Platform의 Pega Customer Decision Hub 실시간 대상 을 사용하여 프로필 속성 및 대상 멤버십 데이터를 Pega Customer Decision Hub로 전송하여 차후 최상의 조치를 취할 수 있습니다.
-source-git-commit: a51f6bd189bc25018cf25e69fe23bc9f6b3372dd
+exl-id: cbb998f9-c268-4d65-87d8-fab56c0844dc
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1000'
 ht-degree: 3%
 
 ---
@@ -36,9 +37,9 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 이 대상을 사용하여 Adobe Experience Platform에서 데이터를 내보내려면 먼저 [!DNL Pega Customer Decision Hub]에서 다음 사전 요구 사항을 완료하십시오.
 
-* [!DNL Pega Customer Decision Hub] 인스턴스에서 [Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)를 구성합니다.
-* [!DNL Pega Customer Decision Hub] 인스턴스에서 클라이언트 자격 증명을 사용하여 OAuth 2.0 [클라이언트 등록](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html) 부여 유형을 구성합니다.
-* [!DNL Pega Customer Decision Hub] 인스턴스에서 Adobe 대상 멤버십 데이터 흐름에 대한 [실시간 실행 데이터 흐름](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)을 구성하십시오.
+* [ 인스턴스에서 ](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소[!DNL Pega Customer Decision Hub]를 구성합니다.
+* [ 인스턴스에서 클라이언트 자격 증명을 사용하여 OAuth 2.0 ](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)클라이언트 등록[!DNL Pega Customer Decision Hub] 부여 유형을 구성합니다.
+* [ 인스턴스에서 Adobe 대상 멤버십 데이터 흐름에 대한 ](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)실시간 실행 데이터 흐름[!DNL Pega Customer Decision Hub]을 구성하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -55,9 +56,9 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 식별자(*CustomerID*), 특성(성, 이름, 위치 등) 및 대상 멤버십 데이터를 사용하여 대상의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 항상 API 기반 연결입니다. 대상 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용은 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)을 참조하세요. |
+|---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL Profile-based]** | 식별자(*CustomerID*), 특성(성, 이름, 위치 등) 및 대상 멤버십 데이터를 사용하여 대상의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 항상 API 기반 연결입니다. 대상 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용은 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)을 참조하세요. |
 
 {style="table-layout:auto"}
 
@@ -71,11 +72,11 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 ![클라이언트 자격 증명 인증이 있는 OAuth 2를 사용하여 페가 CDH 대상에 연결할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
 
-아래 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
+아래 필드를 입력하고 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 
-* **[!UICONTROL 액세스 토큰 URL]**: [!DNL Pega Customer Decision Hub] 인스턴스의 OAuth 2 액세스 토큰 URL.
-* **[!UICONTROL 클라이언트 ID]**: [!DNL Pega Customer Decision Hub] 인스턴스에서 생성한 OAuth 2 [!DNL client ID]입니다.
-* **[!UICONTROL 클라이언트 암호]**: [!DNL Pega Customer Decision Hub] 인스턴스에서 생성한 OAuth 2 [!DNL client secret]입니다.
+* **[!UICONTROL Access Token URL]**: [!DNL Pega Customer Decision Hub] 인스턴스의 OAuth 2 액세스 토큰 URL.
+* **[!UICONTROL Client ID]**: [!DNL client ID] 인스턴스에서 생성한 OAuth 2 [!DNL Pega Customer Decision Hub]입니다.
+* **[!UICONTROL Client Secret]**: [!DNL client secret] 인스턴스에서 생성한 OAuth 2 [!DNL Pega Customer Decision Hub]입니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -83,25 +84,25 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 ![페가 CDH 대상 세부 사항에 대해 완료된 필드를 표시하는 UI 화면 이미지](../../assets/catalog/personalization/pega/pega-connect-destination-v2.png)
 
-대상에 대한 세부 정보를 구성하려면 필수 필드를 입력하고 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+대상에 대한 세부 정보를 구성하려면 필수 필드를 입력하고 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL Pega CDH 호스트 이름]**: 프로필을 JSON 데이터로 내보내는 Pega 고객 의사 결정 허브 호스트 이름입니다.
-* **[!UICONTROL 응용 프로그램 별칭]**: Customer Decision Hub 계정에 대해 구성한 응용 프로그램 별칭입니다. 자세한 내용은 [!DNL Pega Customer Decision Hub] 인스턴스에서 [응용 프로그램 URL 별칭 추가](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html)를 참조하십시오.
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Pega CDH Host Name]**: 프로필을 JSON 데이터로 내보내는 Pega 고객 의사 결정 허브 호스트 이름입니다.
+* **[!UICONTROL Application alias]**: 고객 결정 허브 계정에 대해 구성한 응용 프로그램 별칭입니다. 자세한 내용은 [ 인스턴스에서 ](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html)응용 프로그램 URL 별칭 추가[!DNL Pega Customer Decision Hub]를 참조하십시오.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상으로 대상을 활성화하는 방법에 대한 지침은 [스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화](../../ui/activate-streaming-profile-destinations.md)를 참조하십시오.
 
 ### 매핑 {#mapping}
 
-[!UICONTROL 매핑] 단계에서 유니온 스키마 및 대상으로 내보낼 다른 XDM 필드에서 고유 식별자를 선택합니다.
+[!UICONTROL Mapping] 단계에서 유니온 스키마 및 대상으로 내보낼 다른 XDM 필드에서 고유 식별자를 선택합니다.
 
 ### 매핑 예: [!DNL Pega Customer Decision Hub]에서 프로필 업데이트 활성화 {#mapping-example}
 

@@ -5,10 +5,10 @@ title: 플로우 서비스 API를 사용하여 서드파티 클라우드 스토�
 type: Tutorial
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 서드파티 클라우드 스토리지 시스템에서 Apache Parquet 데이터를 수집하는 단계를 안내합니다.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 9%
+source-wordcount: '1072'
+ht-degree: 13%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 9%
 
 이 자습서에서는 [!DNL Flow Service] API를 사용하여 서드파티 클라우드 스토리지 시스템에서 Parquet 데이터를 수집하는 단계를 안내합니다.
 
-## 시작하기
+## 시작
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
@@ -29,17 +29,17 @@ ht-degree: 9%
 
 ### 샘플 API 호출 읽기
 
-이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)에 대한 섹션을 참조하십시오.
+이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 문서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 섹션을 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [인증 튜토리얼](https://www.adobe.com/go/platform-api-authentication-en)을 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Flow Service]에 속하는 리소스를 포함한 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Experience Platform]에 속하는 리소스를 포함한 [!DNL Flow Service]의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -259,7 +259,10 @@ curl -X POST \
 
 외부 데이터를 [!DNL Experience Platform]&#x200B;(으)로 수집하려면 먼저 [!DNL Experience Platform] 데이터 집합 기본 연결을 획득해야 합니다.
 
-데이터 집합 기본 연결을 만들려면 [데이터 집합 기본 연결 자습서](./create-dataset-base-connection.md)에 설명된 단계를 수행합니다.
+<!--
+broken link. this file not in TOC.
+To create a dataset base connection, follow the steps outlined in the [dataset base connection tutorial](./create-dataset-base-connection.md).
+-->
 
 데이터 세트 기본 연결을 만들 때까지 개발자 안내서에 설명된 단계를 계속 수행합니다. 고유 식별자(`$id`)를 가져와서 저장하고 다음 단계에서 기본 연결 ID로 사용하여 대상 연결을 만듭니다.
 
@@ -427,7 +430,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서에 따라 일정에 따라 서드파티 클라우드 스토리지 시스템에서 Parquet 데이터를 수집하는 소스 커넥터를 만들었습니다. 이제 [!DNL Real-Time Customer Profile] 및 [!DNL Data Science Workspace] 등의 다운스트림 [!DNL Experience Platform] 서비스에서 수신 데이터를 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서에 따라 일정에 따라 서드파티 클라우드 스토리지 시스템에서 Parquet 데이터를 수집하는 소스 커넥터를 만들었습니다. 이제 [!DNL Experience Platform] 및 [!DNL Real-Time Customer Profile] 등의 다운스트림 [!DNL Data Science Workspace] 서비스에서 수신 데이터를 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
 - [실시간 고객 프로필 개요](../../../profile/home.md)
 - [데이터 과학 작업 영역 개요](../../../data-science-workspace/home.md)

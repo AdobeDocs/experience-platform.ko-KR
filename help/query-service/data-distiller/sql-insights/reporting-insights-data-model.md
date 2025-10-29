@@ -2,7 +2,7 @@
 title: Query Accelerated Store 보고 인사이트 안내서
 description: 가속화된 스토어 데이터 및 사용자 정의 대시보드와 함께 사용할 수 있도록 쿼리 서비스를 통해 보고 인사이트 데이터 모델을 구축하는 방법에 대해 알아봅니다.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Adobe Experience Platform의 Real-Time CDP 데이터 모델은 프로필, 대상
 
 이 자습서에서는 사용자 정의 대시보드를 사용하여 Experience Platform UI 내에서 사용자 지정 데이터 모델의 데이터를 시각화합니다. 이 기능에 대한 자세한 내용은 [사용자 정의 대시보드 설명서](../../../dashboards/standard-dashboards.md)를 참조하세요.
 
-## 시작하기
+## 시작
 
 Data Distiller SKU는 보고 통찰력에 대한 사용자 지정 데이터 모델을 구축하고 풍부한 Experience Platform 데이터를 포함하는 Real-Time CDP 데이터 모델을 확장하는 데 필요합니다. Data Distiller SKU와 관련된 [패키징](../../packaging.md), [보호 기능](../../guardrails.md#query-accelerated-store) 및 [라이선스](../../data-distiller/license-usage.md) 설명서를 참조하십시오. Data Distiller SKU가 없는 경우 Adobe 고객 서비스 담당자에게 자세한 내용을 문의하십시오.
 
@@ -37,7 +37,7 @@ Data Distiller SKU는 보고 통찰력에 대한 사용자 지정 데이터 모�
 
 ## Data Distiller을 사용하여 보고 통찰력에 대한 모델 만들기
 
-그런 다음 보고 insight 모델(`audienceinsight` 이 예제에서는 )을 만들고 SQL 명령 `ACCOUNT=acp_query_batch and TYPE=QSACCEL`을(를) 사용하여 가속화된 저장소에 만들도록 합니다. 그런 다음 쿼리 서비스를 사용하여 `audienceinsight` 데이터베이스에 대한 `audienceinsight.audiencemodel` 스키마를 만듭니다.
+그런 다음 보고 insight 모델(`audienceinsight` 이 예제에서는 )을 만들고 SQL 명령 `ACCOUNT=acp_query_batch and TYPE=QSACCEL`을(를) 사용하여 가속화된 저장소에 만들도록 합니다. 그런 다음 쿼리 서비스를 사용하여 `audienceinsight.audiencemodel` 데이터베이스에 대한 `audienceinsight` 스키마를 만듭니다.
 
 >[!NOTE]
 >
@@ -88,7 +88,7 @@ ALTER TABLE externalaudiencereach ADD  CONSTRAINT FOREIGN KEY (ext_custom_audien
 
 ```console
     Database     |    Schema     | GroupType |      ChildType       |        ChildName        | PhysicalParent |               ChildId               
------------------+---------------+-----------+----------------------+-------------------------+----------------+--------------------------------------
+|-----------------+---------------+-----------+----------------------+-------------------------+----------------+--------------------------------------
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencemapping | true           | 9155d3b4-889d-41da-9014-5b174f6fa572
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencereach   | true           | 1b941a6d-6214-4810-815c-81c497a0b636
 ```
@@ -113,7 +113,7 @@ LIMIT  5000 ;
 
 ```console
 ext_custom_audience_id | approximate_count_upper_bound
-------------------------+-------------------------------
+|------------------------+-------------------------------
  23850912218170554      |                          1000
  23850808585120554      |                       1012000
  23850808585220554      |                        100000
@@ -158,7 +158,7 @@ ALTER TABLE externalaudiencereach  ADD  CONSTRAINT FOREIGN KEY (ext_custom_audie
 
 ```console
     Database     |     Schema     | GroupType |      ChildType       |                ChildName  | PhysicalParent |               ChildId               
------------------+----------------+-----------+----------------------+----------------------------------------------------+----------------+--------------------------------------
+|-----------------+----------------+-----------+----------------------+----------------------------------------------------+----------------+--------------------------------------
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | external_seg_dest_map      | true           | 4b4b86b7-2db7-48ee-a67e-4b28cb900810
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencemapping    | true           | b0302c05-28c3-488b-a048-1c635d88dca9
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencereach      | true           | 4485c610-7424-4ed6-8317-eed0991b9727
@@ -186,7 +186,7 @@ LIMIT  25;
 
 ```console
 ext_custom_audience_id | destination_name |       audience_name        | destination_status | destination_id | audience_id 
-------------------------+------------------+---------------------------+--------------------+----------------+-------------
+|------------------------+------------------+---------------------------+--------------------+----------------+-------------
  23850808595110554      | FCA_Test2        | United States             | enabled            |     -605911558 | -1357046572
  23850799115800554      | FCA_Test2        | Born in 1980s             | enabled            |     -605911558 | -1224554872
  23850799115790554      | FCA_Test2        | Born in 1970s             | enabled            |     -605911558 |  1899603869

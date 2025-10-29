@@ -3,9 +3,9 @@ keywords: 사용자 정의 개인화; 대상; experience platform 사용자 정�
 title: 사용자 지정 개인화 연결
 description: 이 대상은 Adobe Experience Platform에서 대상 정보를 검색할 수 있는 방법을 통해 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필 대상 멤버십을 기반으로 실시간 개인화를 제공합니다.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: c037e75da7fa419051a7e38b365a5b6b3a1fc346
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '923'
 ht-degree: 9%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 9%
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
-| 2023년 5월 | 기능 및 설명서 업데이트 | 2023년 5월부터 **[!UICONTROL 사용자 지정 개인화]** 연결은 [특성 기반 개인화](../../ui/activate-edge-personalization-destinations.md#map-attributes)를 지원하며 일반적으로 모든 고객이 사용할 수 있습니다. |
+| 2023년 5월 | 기능 및 설명서 업데이트 | 2023년 5월부터 **[!UICONTROL Custom personalization]** 연결은 [특성 기반 개인화](../../ui/activate-edge-personalization-destinations.md#map-attributes)를 지원하며 일반적으로 모든 고객이 사용할 수 있습니다. |
 
 {style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화를 위해 [사용자 지정 Personalization](https://developer.adobe.com/data-collection-apis/docs/) 대상을 구성할 때 **[!UICONTROL Edge Network API]**&#x200B;를 사용해야 합니다. 모든 Edge Network API 호출은 [인증된 컨텍스트](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)에서 수행되어야 합니다.
+>프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화에 대한 [ 대상을 구성할 때 ](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API **[!UICONTROL Custom Personalization]**&#x200B;를 사용해야 합니다. 모든 Edge Network API 호출은 [인증된 컨텍스트](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)에서 수행되어야 합니다.
 >
 ><br>웹 또는 Mobile SDK 구현에 이미 사용하고 있는 동일한 데이터 스트림을 사용하는 서버측 통합을 추가하여 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)를 통해 프로필 특성을 검색할 수 있습니다.
 >
@@ -59,9 +59,9 @@ ht-degree: 9%
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
+|---------|----------|---------|
 | 내보내기 유형 | **[!DNL Profile request]** | 단일 프로필에 대해 사용자 지정 개인화 대상에서 매핑된 모든 대상을 요청합니다. 다른 [Adobe 데이터 수집 데이터스트림](../../../datastreams/overview.md)에 대해 다른 사용자 지정 개인화 대상을 설정할 수 있습니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+| 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 ## 대상에 연결 {#connect}
 
@@ -69,11 +69,11 @@ ht-degree: 9%
 >id="platform_destinations_custom_personalization_datastream"
 >title="데이터 스트림 정보"
 >abstract="이 옵션은 페이지에 대한 응답으로 대상자에 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에 대상 구성이 활성화된 데이터스트림만 표시됩니다. 대상을 구성하려면 먼저 데이터스트림을 구성해야 합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=ko" text="데이터스트림을 구성하는 방법에 대해 알아보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="데이터스트림을 구성하는 방법에 대해 알아보기"
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
 
@@ -81,22 +81,22 @@ ht-degree: 9%
 
 [이 대상을 설정](../../ui/connect-destination.md)하는 동안 다음 정보를 제공해야 합니다.
 
-* **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력하십시오.
-* **[!UICONTROL 설명]**: 대상에 대한 설명을 입력하십시오. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다. 이 필드는 선택 사항입니다.
-* **[!UICONTROL 통합 별칭]**: 이 값은 JSON 개체 이름으로 Experience Platform Web SDK에 전송됩니다.
-* **[!UICONTROL 데이터스트림]**: 페이지 응답에 대상이 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에 대상 구성이 활성화된 데이터스트림만 표시됩니다. 자세한 내용은 [데이터 스트림 구성](../../../datastreams/overview.md)을 참조하십시오.
+* **[!UICONTROL Name]**: 이 대상의 기본 이름을 입력하십시오.
+* **[!UICONTROL Description]**: 대상에 대한 설명을 입력하십시오. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다. 이 필드는 선택 사항입니다.
+* **[!UICONTROL Integration alias]**: 이 값은 JSON 개체 이름으로 Experience Platform Web SDK에 전송됩니다.
+* **[!UICONTROL Datastream]**: 페이지 응답에 대상이 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에 대상 구성이 활성화된 데이터스트림만 표시됩니다. 자세한 내용은 [데이터 스트림 구성](../../../datastreams/overview.md)을 참조하십시오.
 
 ### 경고 활성화 {#enable-alerts}
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 대한 대상자 활성화에 대한 지침은 [프로필 및 대상자 에지 개인화 대상 활성화](../../ui/activate-edge-personalization-destinations.md)를 참조하십시오.
 
@@ -160,11 +160,11 @@ alloy("sendEvent", {
   });
 ```
 
-### 특성이 있는 [!UICONTROL 사용자 지정 Personalization]에 대한 응답 예
+### [!UICONTROL Custom Personalization With Attributes]에 대한 응답 예
 
-특성이 있는 **[!UICONTROL 사용자 지정 Personalization]**&#x200B;을(를) 사용하는 경우 API 응답은 아래 예와 비슷합니다.
+**[!UICONTROL Custom Personalization With Attributes]**&#x200B;을(를) 사용하는 경우 API 응답은 아래 예와 비슷합니다.
 
-**[!UICONTROL 특성이 있는 사용자 지정 Personalization]**&#x200B;과(와) **[!UICONTROL 사용자 지정 Personalization]**&#x200B;의 차이점은 API 응답에 `attributes` 섹션이 포함되어 있다는 것입니다.
+**[!UICONTROL Custom Personalization With Attributes]**&#x200B;과(와) **[!UICONTROL Custom Personalization]**&#x200B;의 차이점은 API 응답에 `attributes` 섹션이 포함되어 있다는 것입니다.
 
 ```json
 [

@@ -3,10 +3,10 @@ title: 세그먼트 검색 API 끝점
 description: Adobe Experience Platform 세그먼테이션 서비스 API에서 세그먼트 검색은 다양한 데이터 소스에 포함된 필드를 검색하고 이를 실시간에 가깝게 반환하는 데 사용됩니다. 이 안내서에서는 세그먼트 검색을 더 잘 이해하는 데 도움이 되는 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1189'
-ht-degree: 2%
+source-wordcount: '1178'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 이 안내서에서는 세그먼트 검색을 더 잘 이해하는 데 도움이 되는 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 
-## 시작하기
+## 시작
 
 이 가이드에 사용된 끝점은 [!DNL Adobe Experience Platform Segmentation Service] API의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
 
@@ -35,7 +35,7 @@ GET /search/namespaces?schema.name={SCHEMA}
 GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(필수)** 여기서 {SCHEMA}은(는) 검색 개체와 연결된 스키마 클래스 값을 나타냅니다. 현재 `_xdm.context.segmentdefinition`만 지원됩니다. |
 | `s={SEARCH_TERM}` | *(선택 사항)* 여기서 {SEARCH_TERM}은(는) Microsoft의 [Lucene의 검색 구문 구현](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)을 준수하는 쿼리를 나타냅니다. 검색어를 지정하지 않으면 `schema.name`과(와) 연결된 모든 레코드가 반환됩니다. 자세한 설명은 이 문서의 [부록](#appendix)에서 확인할 수 있습니다. |
@@ -95,7 +95,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&s={SEARCH_TERM}
 GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(필수)** 여기서 {SCHEMA}은(는) 검색 개체와 연결된 스키마 클래스 값을 포함합니다. 현재 `_xdm.context.segmentdefinition`만 지원됩니다. |
 | `namespace={NAMESPACE}` | **(필수)** 여기서 {NAMESPACE}은(는) 검색할 네임스페이스를 포함합니다. |
@@ -166,7 +166,7 @@ curl -X GET \
 GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(필수)** 여기서 {SCHEMA}은(는) 검색 개체와 연결된 스키마 클래스 값을 포함합니다. 현재 `_xdm.context.segmentdefinition`만 지원됩니다. |
 | `namespace={NAMESPACE}` | **(필수)** 여기서 {NAMESPACE}은(는) 검색할 네임스페이스를 포함합니다. |
@@ -225,7 +225,9 @@ curl -X GET \
 
 다음 섹션에서는 검색어의 작동 방식에 대한 추가 정보를 제공합니다. 검색 쿼리는 `s={FieldName}:{SearchExpression}` 방식으로 작성됩니다. 따라서 예를 들어 AAM 또는 [!DNL Platform]이라는 세그먼트 정의를 검색하려면 다음 검색 쿼리를 사용합니다. `s=segmentName:AAM%20OR%20Platform`.
 
->  모범 사례를 보려면 위의 예제와 같이 검색 식을 HTML 인코딩해야 합니다.
+>[!NOTE]
+>
+>모범 사례의 경우 검색 표현식은 위에 표시된 예제와 같이 HTML으로 인코딩되어야 합니다.
 
 ### 필드 검색 {#search-fields}
 
@@ -244,7 +246,9 @@ curl -X GET \
 
 다음 표에는 세그먼트 검색 API를 사용할 때 검색 쿼리가 작동하는 방식에 대한 세부 사항이 나와 있습니다.
 
->  다음 예제는 보다 명확하게 하기 위해 HTML이 아닌 인코딩 형식으로 표시됩니다. 모범 사례를 위해 HTML은 검색 표현식을 인코딩합니다.
+>[!NOTE]
+>
+>다음 예는 더 나은 명확성을 위해 HTML이 아닌 인코딩 형식으로 표시됩니다. 모범 사례를 위해 HTML은 검색 표현식을 인코딩합니다.
 
 | 검색 표현식 예 | 설명 |
 | ------------------------- | ----------- |

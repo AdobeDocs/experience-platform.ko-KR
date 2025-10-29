@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK을 사용하여 개인화된 콘텐츠 
 description: Adobe Experience Platform 웹 SDK을 사용하여 개인화된 콘텐츠를 렌더링하는 방법을 알아봅니다.
 keywords: 개인화;renderDecisions;sendEvent;의사 결정 범위;제안;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # 개인화된 콘텐츠 렌더링
 
-Adobe Experience Platform Web SDK은 [Adobe Target](https://business.adobe.com/kr/products/target/adobe-target.html), [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ko)을(를) 포함하여 Adobe 개인화 솔루션에서 개인화된 콘텐츠 검색을 지원합니다.
+Adobe Experience Platform Web SDK은 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html), [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ko)을(를) 포함하여 Adobe 개인화 솔루션에서 개인화된 콘텐츠 검색을 지원합니다.
 
 또한 웹 SDK은 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화 연결](../../destinations/catalog/personalization/custom-personalization.md)과 같은 Adobe Experience Platform 개인화 대상을 통해 동일 페이지 및 다음 페이지 개인화 기능을 지원합니다. 동일 페이지 및 다음 페이지 개인화를 위해 Experience Platform을 구성하는 방법에 대해 알아보려면 [전용 안내서](../../destinations/ui/activate-edge-personalization-destinations.md)를 참조하십시오.
 
-Adobe Target의 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ko) 및 Adobe Journey Optimizer의 [웹 캠페인 UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ko) 내에서 만든 콘텐츠는 SDK에서 자동으로 검색하고 렌더링할 수 있습니다. Adobe Target의 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ko), Adobe Journey Optimizer의 [코드 기반 경험 채널](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/code-based-experience/get-started-code-based) 또는 Offer Decisioning 내에서 만들어진 콘텐츠는 SDK에서 자동으로 렌더링할 수 없습니다. 대신 SDK을 사용하여 이 콘텐츠를 요청한 다음 콘텐츠를 직접 수동으로 렌더링해야 합니다.
+Adobe Target의 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 및 Adobe Journey Optimizer의 [웹 캠페인 UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 내에서 만든 콘텐츠는 SDK에서 자동으로 검색하고 렌더링할 수 있습니다. Adobe Target의 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), Adobe Journey Optimizer의 [코드 기반 경험 채널](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) 또는 Offer Decisioning 내에서 만들어진 콘텐츠는 SDK에서 자동으로 렌더링할 수 없습니다. 대신 SDK을 사용하여 이 콘텐츠를 요청한 다음 콘텐츠를 직접 수동으로 렌더링해야 합니다.
 
 ## 자동으로 콘텐츠 렌더링 {#automatic}
 
@@ -341,7 +341,7 @@ alloy("applyPropositions", {
 
 ### 사용 사례 2: 선택기가 없는 제안 렌더링
 
-이 사용 사례는 [!DNL Target Form-based Experience Composer] 또는 Adobe Journey Optimizer의 [코드 기반 경험 채널](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/code-based-experience/get-started-code-based)을 사용하여 작성된 경험에 적용됩니다.
+이 사용 사례는 [!DNL Target Form-based Experience Composer] 또는 Adobe Journey Optimizer의 [코드 기반 경험 채널](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based)을 사용하여 작성된 경험에 적용됩니다.
 
 `applyPropositions` 호출에 선택기, 작업 및 범위를 제공해야 합니다.
 
@@ -388,9 +388,9 @@ alloy("sendEvent", {
                     "_experience": {
                         "decisioning": {
                             "propositions": [{
-                              	"id": id,
+                                "id": id,
                                 "scope": scope,
-                              	"scopeDetails": scopeDetails
+                                  "scopeDetails": scopeDetails
                             }],
                             "propositionEventType": {
                                 "display": 1

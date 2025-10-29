@@ -5,7 +5,7 @@ title: Sensei 머신 러닝 API를 사용하여 모델 교육 및 평가
 type: Tutorial
 description: 이 자습서에서는 Sensei 머신 러닝 API 호출을 사용하여 모델을 만들고, 교육하고, 평가하는 방법을 보여줍니다.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 1%
@@ -55,7 +55,7 @@ API 호출을 시작하려면 [Experience Platform API 인증 자습서](https:/
 
 ### 인스턴스 만들기
 
-다음 요청을 사용하여 MLInstance를 만들 수 있습니다. [API를 사용하여 패키지된 레시피 가져오기](./import-packaged-recipe-ui.md) 자습서에서 엔진을 만들 때 반환된 `{ENGINE_ID}`을(를) 사용하게 됩니다.
+다음 요청을 사용하여 MLInstance를 만들 수 있습니다. `{ENGINE_ID}`API를 사용하여 패키지된 레시피 가져오기[ 자습서에서 엔진을 만들 때 반환된 ](./import-packaged-recipe-ui.md)을(를) 사용하게 됩니다.
 
 **요청**
 
@@ -270,7 +270,7 @@ curl -X POST \
 }
 ```
 
-실험을 만들 때 본문 `{JSON_PAYLOAD}`에는 `mlInstanceId` 또는 `mlInstanceQuery` 매개 변수가 포함되어야 합니다. 이 예제에서 예약된 실험은 `startTime`부터 `endTime`까지 `cron` 매개 변수에 설정된 20분마다 실행을 호출합니다.
+실험을 만들 때 본문 `{JSON_PAYLOAD}`에는 `mlInstanceId` 또는 `mlInstanceQuery` 매개 변수가 포함되어야 합니다. 이 예제에서 예약된 실험은 `cron`부터 `startTime`까지 `endTime` 매개 변수에 설정된 20분마다 실행을 호출합니다.
 
 **응답**
 
@@ -438,6 +438,7 @@ GET 호출은 아래와 같이 `state` 매개 변수의 상태를 제공합니�
 `{EXPERIMENT_ID}`: 실험 실행이 진행 중인 실험을 나타내는 ID입니다.
 
 `DONE` 상태 외에 다른 상태는 다음과 같습니다.
+
 - `PENDING`
 - `RUNNING`
 - `FAILED`

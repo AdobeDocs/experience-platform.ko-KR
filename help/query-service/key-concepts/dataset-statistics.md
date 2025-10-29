@@ -2,7 +2,7 @@
 title: 데이터 세트 통계 계산
 description: 이 문서에서는 SQL 명령을 사용하여 Azure ADLS(데이터 레이크 저장소) 데이터 세트에 대한 열 수준 통계를 계산하는 방법을 설명합니다.
 exl-id: 66f11cd4-b115-40b8-ba8a-c4bb3606bbbf
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 데이터 세트 통계 계산
 
-이제 `COMPUTE STATISTICS` SQL 명령을 사용하여 [!DNL Azure Data Lake Storage] (ADLS) 데이터 세트에 대한 열 수준 통계를 계산할 수 있습니다. 데이터 집합 통계를 계산하는 SQL 명령은 `ANALYZE TABLE` 명령의 확장입니다. `ANALYZE TABLE` 명령에 대한 전체 세부 정보는 [SQL 참조 설명서](../sql/syntax.md#analyze-table)에서 찾을 수 있습니다.
+이제 [!DNL Azure Data Lake Storage] SQL 명령을 사용하여 `COMPUTE STATISTICS`(ADLS) 데이터 세트에 대한 열 수준 통계를 계산할 수 있습니다. 데이터 집합 통계를 계산하는 SQL 명령은 `ANALYZE TABLE` 명령의 확장입니다. `ANALYZE TABLE` 명령에 대한 전체 세부 정보는 [SQL 참조 설명서](../sql/syntax.md#analyze-table)에서 찾을 수 있습니다.
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->기본 동작은 **전체 데이터 세트** 및 **모든 열**&#x200B;에 대한 통계를 계산합니다. 모든 열에 대한 통계를 계산하려면 쿼리 형식 `ANALYZE TABLE COMPUTE STATISTICS`을(를) 사용합니다. ADLS 데이터 집합의 크기가 매우 클 수 있으므로(잠재적으로 페타바이트급 데이터) ADLS 데이터 집합에 필터 없이 `COMPUTE STATISTICS` 명령을 사용하는 것이 **권장되지**&#x200B;않습니다. 대신 항상 `FILTERCONTEXT`과(와) 지정한 열 목록을 사용하여 analyze 명령을 실행해야 합니다. 자세한 내용은 [분석된 열 제한](#limit-included-columns) 및 [필터 조건 추가](#filter-condition)에 대한 섹션을 참조하십시오.
+>기본 동작은 **전체 데이터 세트** 및 **모든 열**&#x200B;에 대한 통계를 계산합니다. 모든 열에 대한 통계를 계산하려면 쿼리 형식 `ANALYZE TABLE COMPUTE STATISTICS`을(를) 사용합니다. ADLS 데이터 집합의 크기가 매우 클 수 있으므로(잠재적으로 페타바이트급 데이터) ADLS 데이터 집합에 필터 없이 **명령을 사용하는 것이**&#x200B;권장되지`COMPUTE STATISTICS`않습니다. 대신 항상 `FILTERCONTEXT`과(와) 지정한 열 목록을 사용하여 analyze 명령을 실행해야 합니다. 자세한 내용은 [분석된 열 제한](#limit-included-columns) 및 [필터 조건 추가](#filter-condition)에 대한 섹션을 참조하십시오.
 
 아래에 표시된 예제에서는 `adc_geometric` 데이터 집합 및 데이터 집합의 **all** 열에 대한 통계를 계산합니다.
 
@@ -57,7 +57,7 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS AS alias_name;
 
 ## 계산된 통계의 출력 보기 {#view-output-of-computed-statistics}
 
-미리 별칭 이름을 제공하지 않으면 쿼리 서비스에서 `<tableName_stats_{incremental_number}>`의 형식을 따르는 `Statistics ID`에 대한 이름을 자동으로 생성합니다. 별칭 이름을 지정하면 `Statistics ID` 열에 나타납니다.
+미리 별칭 이름을 제공하지 않으면 쿼리 서비스에서 `Statistics ID`의 형식을 따르는 `<tableName_stats_{incremental_number}>`에 대한 이름을 자동으로 생성합니다. 별칭 이름을 지정하면 `Statistics ID` 열에 나타납니다.
 
 `COMPUTE STATISTICS` 쿼리의 출력 예는 다음과 같습니다.
 
@@ -68,7 +68,7 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS AS alias_name;
 (1 row)
 ```
 
-그런 다음 `Statistics ID`을(를) 참조하여 **계산된 통계를 직접 쿼리**&#x200B;할 수 있습니다. 아래 예제 문을 사용하면 `Statistics ID` 또는 별칭 이름과 함께 사용할 때 출력을 모두 볼 수 있습니다.
+그런 다음 **을(를) 참조하여**&#x200B;계산된 통계를 직접 쿼리`Statistics ID`할 수 있습니다. 아래 예제 문을 사용하면 `Statistics ID` 또는 별칭 이름과 함께 사용할 때 출력을 모두 볼 수 있습니다.
 
 ```sql
 SELECT * FROM adc_geometric_stats_1; 
@@ -78,7 +78,7 @@ SELECT * FROM adc_geometric_stats_1;
 
 ```console
  columnName                                                 |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
-------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
+|------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
  marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
  _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
  _experience.analytics.customdimensions.evars.evar74        |            0.0 |            0.0 |            0.0 |               0.0 |                11.0 |         0 | String
@@ -102,7 +102,7 @@ SELECT * FROM adc_geometric_stats_1;
 
 ```console
       statsId         |   tableName   | columnSet |         filterContext       |      timestamp
-----------------------+---------------+-----------+-----------------------------+--------------------
+|----------------------+---------------+-----------+-----------------------------+--------------------
 adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
 demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
@@ -122,7 +122,7 @@ age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) 
 
 ## 포함된 열 제한 {#limit-included-columns}
 
-분석에 초점을 맞추기 위해 이름별로 특정 데이터 세트 열을 참조하여 특정 데이터 세트 열에 대한 통계를 계산할 수 있습니다. 특정 열을 대상으로 지정하려면 `FOR COLUMNS (<col1>, <col2>)` 구문을 사용하십시오. 아래 예제에서는 데이터 세트 `tableName`에 대한 열 `commerce`, `id` 및 `timestamp`에 대한 통계를 계산합니다.
+분석에 초점을 맞추기 위해 이름별로 특정 데이터 세트 열을 참조하여 특정 데이터 세트 열에 대한 통계를 계산할 수 있습니다. 특정 열을 대상으로 지정하려면 `FOR COLUMNS (<col1>, <col2>)` 구문을 사용하십시오. 아래 예제에서는 데이터 세트 `commerce`에 대한 열 `id`, `timestamp` 및 `tableName`에 대한 통계를 계산합니다.
 
 ```sql
 ANALYZE TABLE tableName COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
@@ -144,7 +144,7 @@ ANALYZE TABLE adcgeometric COMPUTE STATISTICS FOR columns (commerce, commerce.pu
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR ALL COLUMNS;
 ```
 
-열 제한과 필터를 결합하여 데이터 세트 열에 대한 특정 계산 쿼리를 만들 수 있습니다. 예를 들어 다음 쿼리는 데이터 집합 `tableName`의 열 `commerce`, `id` 및 `timestamp`에 대한 통계를 계산합니다. 여기서 열 타임스탬프에는 지정된 범위 `2023-04-01 00:00:00`과(와) `2023-04-05 00:00:00` 사이의 값이 있습니다.
+열 제한과 필터를 결합하여 데이터 세트 열에 대한 특정 계산 쿼리를 만들 수 있습니다. 예를 들어 다음 쿼리는 데이터 집합 `commerce`의 열 `id`, `timestamp` 및 `tableName`에 대한 통계를 계산합니다. 여기서 열 타임스탬프에는 지정된 범위 `2023-04-01 00:00:00`과(와) `2023-04-05 00:00:00` 사이의 값이 있습니다.
 
 ```sql
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);

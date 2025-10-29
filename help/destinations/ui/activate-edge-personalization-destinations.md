@@ -3,10 +3,10 @@ title: Edge 개인화 대상에 대한 대상자 활성화
 description: 동일 페이지 및 다음 페이지 개인화 사용 사례를 위해 Adobe Experience Platform에서 Edge 개인화 대상으로 대상을 활성화하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1964'
-ht-degree: 2%
+source-wordcount: '1885'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-Adobe Experience Platform은 [에지 대상](/help/destinations/destination-types.md#edge-personalization-destinations)과 함께 [에지 세분화](../../segmentation/methods/edge-segmentation.md)을(를) 사용하여 고객이 실시간으로 대규모로 대상을 만들고 타깃팅할 수 있도록 합니다. 이 기능은 동일한 페이지 및 다음 페이지 개인화 사용 사례를 구성하는 데 도움이 됩니다.
+Adobe Experience Platform은 [에지 대상](../../segmentation/methods/edge-segmentation.md)과 함께 [에지 세분화](/help/destinations/destination-types.md#edge-personalization-destinations)을(를) 사용하여 고객이 실시간으로 대규모로 대상을 만들고 타깃팅할 수 있도록 합니다. 이 기능은 동일한 페이지 및 다음 페이지 개인화 사용 사례를 구성하는 데 도움이 됩니다.
 
 Edge 대상의 예로는 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화](../../destinations/catalog/personalization/custom-personalization.md) 연결이 있습니다.
 
@@ -25,9 +25,9 @@ Edge 대상의 예로는 [Adobe Target](../../destinations/catalog/personalizati
 
 >[!IMPORTANT]
 > 
-> * 데이터를 활성화하고 워크플로우의 [매핑 단계](#mapping)를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
-> * 워크플로우의 [매핑 단계](#mapping)를 거치지 않고 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 매핑하지 않고 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]**, **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하고 워크플로우의 [매핑 단계](#mapping)을(를) 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
+>* 워크플로우의 [매핑 단계](#mapping)를 거치지 않고 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 > 
 > [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
@@ -39,11 +39,11 @@ Edge 개인화를 위해 Adobe Target 연결을 구성하는 방법에 대한 �
 >
 >Experience Platform 사용자 인터페이스는 자주 업데이트되며, 이 비디오 녹화 이후 변경되었을 수 있습니다. 최신 정보는 아래 섹션에 설명된 구성 단계를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449800/?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 Adobe Target 및 사용자 지정 개인화 대상에 대상 및 프로필 속성을 공유하는 방법에 대한 간략한 개요는 아래 비디오를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447362/?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## 사용 사례 {#use-cases}
 
@@ -55,7 +55,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 
 ### 동일 페이지 개인화 {#same-page}
 
-사용자가 웹 사이트의 페이지를 방문합니다. 현재 페이지 방문 정보(예: 참조 URL, 브라우저 언어, 포함된 제품 정보)를 사용하여 Adobe이 아닌 플랫폼(예: [!DNL Pega], [!DNL Optimizely] 등)에 대한 [사용자 지정 개인화](../catalog/personalization/custom-personalization.md) 연결을 사용하여 다음 작업 또는 결정(예: 개인화)을 선택할 수 있습니다.
+사용자가 웹 사이트의 페이지를 방문합니다. 현재 페이지 방문 정보(예: 참조 URL, 브라우저 언어, 포함된 제품 정보)를 사용하여 Adobe이 아닌 플랫폼(예: [, ](../catalog/personalization/custom-personalization.md) 등)에 대한 [!DNL Pega]사용자 지정 개인화[!DNL Optimizely] 연결을 사용하여 다음 작업 또는 결정(예: 개인화)을 선택할 수 있습니다.
 
 ### 다음 페이지 개인화 {#next-page}
 
@@ -77,7 +77,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 
 개인화 대상을 설정하는 첫 번째 단계는 Experience Platform 웹 SDK에 대한 데이터 스트림을 구성하는 것입니다. 이 작업은 데이터 수집 UI에서 수행됩니다.
 
-데이터스트림을 구성할 때 **[!UICONTROL Adobe Experience Platform]**&#x200B;에서 **[!UICONTROL Edge 세분화]**&#x200B;와 **[!UICONTROL Personalization 대상]**&#x200B;을 모두 선택해야 합니다.
+데이터 스트림을 구성할 때 **[!UICONTROL Adobe Experience Platform]**&#x200B;에서 **[!UICONTROL Edge Segmentation]**&#x200B;과(와) **[!UICONTROL Personalization Destinations]**&#x200B;이(가) 모두 선택되었는지 확인하십시오.
 
 >[!TIP]
 >
@@ -95,13 +95,13 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 >
 >현재 Edge 대상은 기본값으로 설정된 [Active-on-Edge 병합 정책](../../segmentation/ui/segment-builder.md#merge-policies)을 사용하는 대상의 활성화만 지원합니다. 다른 병합 정책을 사용하는 대상을 Edge 대상에 매핑하면 해당 대상이 평가되지 않습니다.
 
-[병합 정책 만들기](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)에 대한 지침을 따르고 **[!UICONTROL Active-On-Edge 병합 정책]** 전환을 사용하도록 설정해야 합니다.
+[병합 정책 만들기](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)의 지침을 따라 **[!UICONTROL Active-On-Edge Merge Policy]** 전환을 사용하도록 설정하십시오.
 
 ### Experience Platform에서 새 대상 만들기 {#create-audience}
 
 [!DNL Active-On-Edge] 병합 정책을 만든 후에는 Experience Platform에서 새 대상을 만들어야 합니다.
 
-[대상 빌더](../../segmentation/ui/segment-builder.md) 안내서에 따라 새 대상을 만들고 이전 단계에서 만든 [!DNL Active-On-Edge] 병합 정책을 [할당](../../segmentation/ui/segment-builder.md#merge-policies)하세요.
+[대상 빌더](../../segmentation/ui/segment-builder.md) 안내서에 따라 새 대상을 만들고 이전 단계에서 만든 [ 병합 정책을 ](../../segmentation/ui/segment-builder.md#merge-policies)할당[!DNL Active-On-Edge]하세요.
 
 ### 대상 연결 만들기 {#connect-destination}
 
@@ -118,15 +118,15 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 
 전제 조건을 완료한 후 이제 동일한 페이지 및 다음 페이지 개인화에 사용할 Edge 개인화 대상을 선택할 수 있습니다.
 
-1. **[!UICONTROL 연결 > 대상]**(으)로 이동하여 **[!UICONTROL 카탈로그]** 탭을 선택합니다.
+1. **[!UICONTROL Connections > Destinations]**(으)로 이동하여 **[!UICONTROL Catalog]** 탭을 선택합니다.
 
    ![Experience Platform UI에서 강조 표시된 대상 카탈로그 탭](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
-1. 아래 이미지에 표시된 대로 대상을 활성화할 개인화 대상에 해당하는 카드에서 **[!UICONTROL 대상 활성화]**&#x200B;를 선택합니다.
+1. 아래 이미지에 표시된 대로 대상을 활성화할 개인화 대상에 해당하는 카드에서 **[!UICONTROL Activate audiences]**&#x200B;을(를) 선택합니다.
 
    ![카탈로그의 대상 카드에 강조 표시된 대상 컨트롤을 활성화합니다.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
-1. 대상을 활성화하는 데 사용할 대상 연결을 선택한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+1. 대상을 활성화하는 데 사용할 대상 연결을 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
    ![활성화 워크플로에서 대상 단계를 선택하십시오.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
@@ -134,14 +134,14 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 
 ## 대상자 선택 {#select-audiences}
 
-대상 이름 왼쪽에 있는 확인란을 사용하여 대상에 대해 활성화할 대상을 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 이름 왼쪽에 있는 확인란을 사용하여 대상에 대해 활성화할 대상을 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
-대상으로 활성화할 대상을 선택하려면 대상 이름 왼쪽에 있는 확인란을 사용한 다음 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상으로 활성화할 대상을 선택하려면 대상 이름 왼쪽에 있는 확인란을 사용한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
 출처에 따라 여러 유형의 대상 중에서 선택할 수 있습니다.
 
-* **[!UICONTROL 세그먼테이션 서비스]**: 세그먼테이션 서비스에 의해 Experience Platform 내에서 생성된 대상입니다. 자세한 내용은 [세그먼테이션 설명서](../../segmentation/ui/overview.md)를 참조하세요.
-* **[!UICONTROL 사용자 지정 업로드]**: Experience Platform 외부에서 생성되어 Experience Platform에 CSV 파일로 업로드된 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience)에 대한 설명서를 참조하십시오.
+* **[!UICONTROL Segmentation Service]**: 세분화 서비스에 의해 Experience Platform 내에서 생성된 대상자입니다. 자세한 내용은 [세그먼테이션 설명서](../../segmentation/ui/overview.md)를 참조하세요.
+* **[!UICONTROL Custom upload]**: Experience Platform 외부에서 생성되어 Experience Platform에 CSV 파일로 업로드된 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience)에 대한 설명서를 참조하십시오.
 * 다른 Adobe 솔루션에서 가져온 다른 유형의 대상(예: [!DNL Audience Manager]).
 
 ![여러 대상이 강조 표시된 활성화 워크플로의 대상 선택 단계입니다.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -150,7 +150,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 
 >[!IMPORTANT]
 >
->프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화를 위해 대상을 구성할 때 **[!UICONTROL 사용자 지정 Personalization]** 대상을 사용하려면 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)를 사용해야 합니다. 모든 Edge Network API 호출은 [인증된 컨텍스트](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/)에서 수행되어야 합니다.
+>프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화를 위해 대상을 구성할 때 **[!UICONTROL Custom Personalization]** 대상을 사용하려면 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)를 사용해야 합니다. 모든 Edge Network API 호출은 [인증된 컨텍스트](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/)에서 수행되어야 합니다.
 >
 ><br>통합에 Web SDK 또는 Mobile SDK을 이미 사용하고 있는 경우 서버측 통합을 추가하여 Edge Network API를 통해 특성을 검색할 수 있습니다.
 >
@@ -164,13 +164,13 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 
 ### 소스 속성 선택 {#select-source-attributes}
 
-소스 특성을 추가하려면 **[!UICONTROL Source 필드]** 열에서 **[!UICONTROL 새 필드 추가]** 컨트롤을 선택하고 아래와 같이 원하는 XDM 특성 필드를 검색하거나 탐색합니다.
+소스 특성을 추가하려면 **[!UICONTROL Add new field]** 열에서 **[!UICONTROL Source field]** 컨트롤을 선택하고 아래와 같이 원하는 XDM 특성 필드를 검색하거나 탐색합니다.
 
 ![매핑 단계에서 대상 특성을 선택하는 방법을 보여 주는 화면 기록입니다.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### 대상 속성 선택 {#select-target-attributes}
 
-대상 특성을 추가하려면 **[!UICONTROL 대상 필드]** 열에서 **[!UICONTROL 새 필드 추가]** 컨트롤을 선택하고 원본 특성을 매핑할 사용자 지정 특성 이름을 입력하십시오.
+대상 특성을 추가하려면 **[!UICONTROL Add new field]** 열에서 **[!UICONTROL Target field]** 컨트롤을 선택하고 원본 특성을 매핑할 사용자 지정 특성 이름을 입력합니다.
 
 >[!NOTE]
 >
@@ -180,31 +180,31 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 
 ## 대상자 내보내기 예약 {#scheduling}
 
-기본적으로 [!UICONTROL 대상 일정] 페이지에는 현재 활성화 흐름에서 선택한 새로 선택한 대상만 표시됩니다.
+기본적으로 [!UICONTROL Audience schedule] 페이지에는 현재 활성화 흐름에서 선택한 새로 선택한 대상만 표시됩니다.
 
-대상에 대해 활성화된 모든 대상을 보려면 필터링 옵션을 사용하고 **[!UICONTROL 새 대상만 표시]** 필터를 비활성화하십시오.
+대상에 대해 활성화된 모든 대상을 보려면 필터링 옵션을 사용하고 **[!UICONTROL Show new audiences only]** 필터를 비활성화하십시오.
 
 ![모든 대상 필터가 강조 표시되었습니다.](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
 
-**[!UICONTROL 대상 일정]** 페이지에서 각 대상을 선택한 다음 **[!UICONTROL 시작 날짜]** 및 **[!UICONTROL 종료 날짜]** 선택기를 사용하여 데이터를 대상으로 보내는 시간 간격을 구성하십시오.
+**[!UICONTROL Audience schedule]** 페이지에서 각 대상을 선택한 다음 **[!UICONTROL Start date]** 및 **[!UICONTROL End date]** 선택기를 사용하여 데이터를 대상으로 보내는 시간 간격을 구성하십시오.
 
 시작 및 종료 날짜가 강조 표시된 활성화 워크플로의 ![대상 일정 단계입니다.](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
 
-**[!UICONTROL 다음]**&#x200B;을(를) 선택하여 [!UICONTROL 검토] 페이지로 이동합니다.
+**[!UICONTROL Next]** 페이지로 이동하려면 [!UICONTROL Review]을(를) 선택하십시오.
 
 ## 검토 {#review}
 
-**[!UICONTROL 검토]** 페이지에서 선택한 항목에 대한 요약을 볼 수 있습니다. 흐름을 중단하려면 **[!UICONTROL 취소]**&#x200B;를 선택하고, 설정을 수정하려면 **[!UICONTROL 뒤로]**&#x200B;를 선택하고, 선택을 확인하고 데이터를 대상으로 보내려면 **[!UICONTROL 완료]**&#x200B;를 선택하십시오.
+**[!UICONTROL Review]** 페이지에서 선택 항목의 요약을 볼 수 있습니다. **[!UICONTROL Cancel]**&#x200B;을(를) 선택하여 흐름을 분류하거나, **[!UICONTROL Back]**&#x200B;을(를) 선택하여 설정을 수정하거나, **[!UICONTROL Finish]**&#x200B;을(를) 선택하여 선택을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
 ![검토 단계의 선택 요약입니다.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
 ### 동의 정책 평가 {#consent-policy-evaluation}
 
-조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;를 구매한 경우 **[!UICONTROL 해당 동의 정책 보기]**&#x200B;를 선택하여 적용된 동의 정책을 조회하고 그 결과로 활성화에 포함된 프로필 수를 확인합니다. 자세한 내용은 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)를 참조하세요.
+조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;을(를) 구입한 경우 **[!UICONTROL View applicable consent policies]**&#x200B;을(를) 선택하여 적용되는 동의 정책 및 그 결과로 활성화에 포함되는 프로필 수를 확인합니다. 자세한 내용은 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)를 참조하세요.
 
 ### 데이터 사용 정책 확인 {#data-usage-policy-checks}
 
-**[!UICONTROL 검토]** 단계에서 Experience Platform은 데이터 사용 정책 위반도 확인합니다. 다음은 정책이 위반되는 예입니다. 위반을 해결할 때까지 대상 활성화 워크플로우를 완료할 수 없습니다. 정책 위반을 해결하는 방법에 대한 자세한 내용은 데이터 거버넌스 설명서 섹션에서 [데이터 사용 정책 위반](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation)을 읽어 보십시오.
+**[!UICONTROL Review]** 단계에서 Experience Platform은 데이터 사용 정책 위반도 확인합니다. 다음은 정책이 위반되는 예입니다. 위반을 해결할 때까지 대상 활성화 워크플로우를 완료할 수 없습니다. 정책 위반을 해결하는 방법에 대한 자세한 내용은 데이터 거버넌스 설명서 섹션에서 [데이터 사용 정책 위반](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation)을 읽어 보십시오.
 
 ![데이터 정책 위반의 예입니다.](../assets/common/data-policy-violation.png)
 
@@ -214,7 +214,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 
 ![검토 단계에서 사용 가능한 대상 필터를 보여 주는 화면 기록입니다.](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
 
-선택에 만족하고 정책 위반이 발견되지 않은 경우 **[!UICONTROL 완료]**&#x200B;를 선택하여 선택을 확인하고 데이터를 대상으로 보내기 시작합니다.
+선택에 만족하고 정책 위반이 발견되지 않은 경우 **[!UICONTROL Finish]**&#x200B;을(를) 선택하여 선택을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
 <!--
 

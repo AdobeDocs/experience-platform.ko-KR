@@ -3,9 +3,9 @@ title: Mailchimp 관심 범주
 description: Mailchimp(Intuit Mailchimp라고도 함)는 기업이 메일링 목록 및 이메일 마케팅 캠페인을 사용하여 연락처(고객, 고객 또는 기타 이해 당사자)를 관리하고 상담하는 데 사용하는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다. 이 커넥터를 사용하여 관심사 및 선호도에 따라 연락처를 정렬합니다.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2312'
+source-wordcount: '2218'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ Experience Platform 및 [!DNL Mailchimp]에서 설정해야 하는 필수 구성
 
 ### Experience Platform의 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL Mailchimp Interest Categories] 대상에 대한 데이터를 활성화하기 전에 [!DNL Experience Platform]에서 만든 [스키마](/help/xdm/schema/composition.md), [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ko) 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ko)가 있어야 합니다.
+[!DNL Mailchimp Interest Categories] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 ](/help/xdm/schema/composition.md)스키마[, ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[ 및 ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)세그먼트[!DNL Experience Platform]가 있어야 합니다.
 
 ### [!DNL Mailchimp Interest Categories] 대상에 대한 필수 구성 요소 {#prerequisites-destination}
 
@@ -48,7 +48,7 @@ Experience Platform에서 [!DNL Mailchimp] 계정으로 데이터를 내보내�
 
 #### [!DNL Mailchimp] API 키 수집 {#gather-credentials}
 
-[!DNL Mailchimp] 계정에 대해 [!DNL Mailchimp Interest Categories] 대상을 인증하려면 [!DNL Mailchimp] **API 키**&#x200B;가 필요합니다. [대상을 인증](#authenticate)할 때 **API 키**&#x200B;이(가) **암호** 역할을 합니다.
+[!DNL Mailchimp] 계정에 대해 **대상을 인증하려면** [!DNL Mailchimp Interest Categories]API 키[!DNL Mailchimp]가 필요합니다. **대상을 인증**&#x200B;할 때 **API 키**&#x200B;이(가) [암호](#authenticate) 역할을 합니다.
 
 **API 키**&#x200B;가 없는 경우 계정에 로그인하고 [[!DNL Mailchimp] API 키 생성](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) 설명서를 참조하여 만드십시오.
 
@@ -72,9 +72,9 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 ### 가드레일 {#guardrails}
 
-각 [!DNL Mailchimp] 대상에는 단일 그룹 또는 동일한 대상자 내의 여러 그룹에 최대 60개의 그룹 이름(또는 관심 범주)이 포함될 수 있습니다. 필요한 설명이 필요하면 [!DNL Mailchimp] [그룹](https://mailchimp.com/help/getting-started-with-groups/)을(를) 참조하십시오. 이 제한에 도달하면 [!DNL Mailchimp] API에서 오류 응답으로 `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` 메시지가 표시됩니다.
+각 [!DNL Mailchimp] 대상에는 단일 그룹 또는 동일한 대상자 내의 여러 그룹에 최대 60개의 그룹 이름(또는 관심 범주)이 포함될 수 있습니다. 필요한 설명이 필요하면 [!DNL Mailchimp] [그룹](https://mailchimp.com/help/getting-started-with-groups/)을(를) 참조하십시오. 이 제한에 도달하면 `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` API에서 오류 응답으로 [!DNL Mailchimp] 메시지가 표시됩니다.
 
-또한 [!DNL Mailchimp] API에 의해 적용되는 제한에 대한 자세한 내용은 [!DNL Mailchimp] [속도 제한](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)을(를) 참조하십시오.
+또한 [!DNL Mailchimp] API에 의해 적용되는 제한에 대한 자세한 내용은 [ ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)속도 제한[!DNL Mailchimp]을(를) 참조하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -91,9 +91,9 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> Experience Platform에서 선택한 각 대상에 대해 해당 [!DNL Mailchimp Interest Categories] 세그먼트 상태가 Experience Platform의 대상 상태로 업데이트됩니다.</li></ul> |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상 평가를 기반으로 Experience Platform에서 프로필을 업데이트하면 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+|---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL Profile-based]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> Experience Platform에서 선택한 각 대상에 대해 해당 [!DNL Mailchimp Interest Categories] 세그먼트 상태가 Experience Platform의 대상 상태로 업데이트됩니다.</li></ul> |
+| 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상 평가를 기반으로 Experience Platform에서 프로필을 업데이트하면 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -101,26 +101,26 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 >[!IMPORTANT]
 >
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-**[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]** 내에서 [!DNL Mailchimp Interest Categories]을(를) 검색합니다. 또는 **[!UICONTROL 이메일 마케팅]** 범주에서 찾을 수 있습니다.
+**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** 내에서 [!DNL Mailchimp Interest Categories]을(를) 검색합니다. 또는 **[!UICONTROL Email marketing]** 범주 아래에서 찾을 수 있습니다.
 
 ### 대상으로 인증 {#authenticate}
 
-대상에 인증하려면 아래의 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
+대상에 인증하려면 아래의 필수 필드를 입력한 다음 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 
 | 필드 | 설명 |
 | --- | --- |
-| **[!UICONTROL 사용자 이름]** | [!DNL Mailchimp Interest Categories] 사용자 이름입니다. |
-| **[!UICONTROL 암호]** | [수집 [!DNL Mailchimp] 자격 증명](#gather-credentials) 섹션에서 기록한 [!DNL Mailchimp] **API 키**.<br> API 키는 `{KEY}-{DC}` 형식을 사용합니다. 여기서 `{KEY}` 부분은 [[!DNL Mailchimp] API 키](#gather-credentials) 섹션에 언급된 값을 참조하고 `{DC}` 부분은 [[!DNL Mailchimp] 데이터 센터](#identify-data-center)를 참조합니다. <br>`{KEY}` 부분 또는 전체 양식을 제공할 수 있습니다.<br> 예를 들어 API 키가 <br>*`0123456789abcdef0123456789abcde-us14`*,<br>인 경우&#x200B;*`0123456789abcdef0123456789abcde`*또는&#x200B;*`0123456789abcdef0123456789abcde-us14`*을(를) 값으로 제공할 수 있습니다. |
+| **[!UICONTROL Username]** | [!DNL Mailchimp Interest Categories] 사용자 이름입니다. |
+| **[!UICONTROL Password]** | [!DNL Mailchimp]수집&#x200B;**자격 증명** 섹션에서 기록한 [  [!DNL Mailchimp] API 키](#gather-credentials).<br> API 키는 `{KEY}-{DC}` 형식을 사용합니다. 여기서 `{KEY}` 부분은 [[!DNL Mailchimp] API 키](#gather-credentials) 섹션에 언급된 값을 참조하고 `{DC}` 부분은 [[!DNL Mailchimp] 데이터 센터](#identify-data-center)를 참조합니다. <br>`{KEY}` 부분 또는 전체 양식을 제공할 수 있습니다.<br> 예를 들어 API 키가 <br>*`0123456789abcdef0123456789abcde-us14`*,<br>인 경우&#x200B;*`0123456789abcdef0123456789abcde`*또는&#x200B;*`0123456789abcdef0123456789abcde-us14`*을(를) 값으로 제공할 수 있습니다. |
 
 {style="table-layout:auto"}
 
 인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
 
-제공된 세부 정보가 유효하면 UI에 녹색 확인 표시와 함께 **[!UICONTROL 연결됨]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
+제공된 세부 정보가 유효한 경우 UI에 녹색 확인 표시와 함께 **[!UICONTROL Connected]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -130,30 +130,30 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 | 필드 | 설명 |
 | --- | --- |
-| **[!UICONTROL 이름]** | 나중에 이 대상을 인식할 수 있는 이름입니다. |
-| **[!UICONTROL 설명]** | 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다. |
-| **[!UICONTROL 데이터 센터]** | [!DNL Mailchimp] 계정 `data center`입니다. 자세한 내용은 [데이터 센터 식별 [!DNL Mailchimp] 섹션](#identify-data-center)을 참조하세요. |
-| **[!UICONTROL 대상 이름(먼저 데이터 센터를 선택하십시오)]** | **[!UICONTROL 데이터 센터]**&#x200B;를 선택하면 이 드롭다운이 [!DNL Mailchimp] 계정의 대상 이름으로 자동으로 채워집니다. Experience Platform의 데이터로 업데이트할 대상을 선택합니다. |
-| **[!UICONTROL 관심 범주(먼저 데이터 센터와 대상 이름을 선택하십시오)]** | **[!UICONTROL 대상 이름]**&#x200B;을 선택하면 이 드롭다운이 [!DNL Mailchimp] 계정의 관심 그룹 범주 이름으로 자동으로 채워집니다. Experience Platform의 데이터로 업데이트할 카테고리 이름을 선택합니다. |
+| **[!UICONTROL Name]** | 나중에 이 대상을 인식할 수 있는 이름입니다. |
+| **[!UICONTROL Description]** | 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다. |
+| **[!UICONTROL Data center]** | [!DNL Mailchimp] 계정 `data center`입니다. 자세한 내용은 [데이터 센터 식별 [!DNL Mailchimp] 섹션](#identify-data-center)을 참조하세요. |
+| **[!UICONTROL Audience Name (Please select Data center first)]** | **[!UICONTROL Data center]**&#x200B;을(를) 선택하면 이 드롭다운이 [!DNL Mailchimp] 계정의 대상 이름으로 자동으로 채워집니다. Experience Platform의 데이터로 업데이트할 대상을 선택합니다. |
+| **[!UICONTROL Interest Category (Please select Data center and Audience Name first)]** | **[!UICONTROL Audience Name]**&#x200B;을(를) 선택하면 이 드롭다운이 [!DNL Mailchimp] 계정의 관심 그룹 범주 이름으로 자동으로 채워집니다. Experience Platform의 데이터로 업데이트할 카테고리 이름을 선택합니다. |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
-> **[!UICONTROL 암호]** 필드 또는 **[!UICONTROL 데이터 센터]** 값에 제공한 API 키가 올바르지 않은 경우 UI에 아래와 같이 [!DNL Mailchimp] API 오류 응답 *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`*&#x200B;이(가) 표시됩니다. 이 경우 **[!UICONTROL 대상 이름(먼저 데이터 센터를 선택하십시오)]** 필드에서 값을 선택할 수 없습니다. 이 오류를 해결하려면 올바른 값을 입력하십시오.
+> **[!UICONTROL Password]** 필드에 입력한 API 키 또는 **[!UICONTROL Data center]** 값이 올바르지 않은 경우 UI에 아래와 같이 [!DNL Mailchimp] API 오류 응답 *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`*&#x200B;이(가) 표시됩니다. 이 경우 **[!UICONTROL Audience Name (Please select Data center first)]** 필드에서 값을 선택할 수 없습니다. 이 오류를 해결하려면 올바른 값을 입력하십시오.
 
 ### 경고 활성화 {#enable-alerts}
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
@@ -163,9 +163,9 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 XDM 필드를 [!DNL Mailchimp Interest Categories] 대상 필드에 올바르게 매핑하려면 아래 단계를 따르십시오.
 
-1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
-1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 XDM 특성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을 선택하고 ID를 선택합니다.
-1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 ID를 선택하거나 **[!UICONTROL 특성 선택]** 범주를 선택하고 [!DNL Mailchimp] API에서 채워진 특성 목록에서 선택하십시오. *선택한 [!DNL Mailchimp] 대상에 추가한 모든 사용자 지정 특성을 대상 필드로 선택할 수도 있습니다.*
+1. **[!UICONTROL Mapping]** 단계에서 **[!UICONTROL Add new mapping]**&#x200B;을(를) 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
+1. **[!UICONTROL Select source field]** 창에서 **[!UICONTROL Select attributes]** 범주를 선택하고 XDM 특성을 선택하거나 **[!UICONTROL Select identity namespace]**&#x200B;을(를) 선택하고 ID를 선택합니다.
+1. **[!UICONTROL Select target field]** 창에서 **[!UICONTROL Select identity namespace]**&#x200B;을(를) 선택하고 ID를 선택하거나 **[!UICONTROL Select attributes]** 범주를 선택하고 [!DNL Mailchimp] API에서 채워진 특성 목록에서 선택합니다. *선택한 [!DNL Mailchimp] 대상에 추가한 모든 사용자 지정 특성을 대상 필드로 선택할 수도 있습니다.*
 
    XDM 프로필 스키마와 [!DNL Mailchimp Interest Categories] 간에 사용할 수 있는 매핑은 다음과 같습니다.
 
@@ -176,7 +176,7 @@ XDM 필드를 [!DNL Mailchimp Interest Categories] 대상 필드에 올바르게
    | `xdm: person.name.lastName` | `Attribute: LNAME` | |
    | `xdm: person.birthDayAndMonth` | `Attribute: BIRTHDAY` | |
 
-   또한 `ADDRESS`은(는) [!DNL Mailchimp] 대상 내에서 `merge field`(으)로 알려진 특수 대상 필드입니다. [[!DNL Mailchimp] 설명서](https://mailchimp.com/developer/marketing/docs/merge-fields/)은(는) 필수 키를 `addr1`, `city`, `state` 및 `zip`(으)로 정의하며 선택적 키 `addr2` 및 `country`을(를) 정의합니다. 이러한 필드의 값은 문자열이어야 합니다. `ADDRESS` 필드 매핑이 있는 경우 대상이 `ADDRESS` 개체를 [!DNL Mailchimp] API에 전달하여 업데이트합니다. 매핑되지 않은 `ADDRESS` 필드의 기본값은 `NULL`입니다. 단, 기본값은 `US`입니다.
+   또한 `ADDRESS`은(는) `merge field` 대상 내에서 [!DNL Mailchimp]&#x200B;(으)로 알려진 특수 대상 필드입니다. [[!DNL Mailchimp] 설명서](https://mailchimp.com/developer/marketing/docs/merge-fields/)은(는) 필수 키를 `addr1`, `city`, `state` 및 `zip`(으)로 정의하며 선택적 키 `addr2` 및 `country`을(를) 정의합니다. 이러한 필드의 값은 문자열이어야 합니다. `ADDRESS` 필드 매핑이 있는 경우 대상이 `ADDRESS` 개체를 [!DNL Mailchimp] API에 전달하여 업데이트합니다. 매핑되지 않은 `ADDRESS` 필드의 기본값은 `NULL`입니다. 단, 기본값은 `US`입니다.
 
    `ADDRESS` 필드에 사용할 수 있는 매핑은 다음과 같습니다.
 
@@ -189,12 +189,12 @@ XDM 필드를 [!DNL Mailchimp Interest Categories] 대상 필드에 올바르게
    | `xdm: workAddress.postalCode` | `Attribute: ADDRESS.zip` |
    | `xdm: workAddress.country` | `Attribute: ADDRESS.country` |
 
-   예를 들어 연락처의 기존 주소 필드 `addr1`, `city`, `state` 및 `zip` 값으로 `country`의 값을 `132, My Street, Kingston`, `New York`, `New York` 및 `12401`(으)로 업데이트하려고 합니다. `country`을(를) 업데이트하려면 변경 내용이 *(있는 경우)*&#x200B;인 기존 값과 새 국가 값을 전달해야 합니다. 따라서 데이터 집합의 값은 `132, My Street, Kingston`, `New York`, `New York`, `12401` 및 `US`이어야 합니다. 다시 말하면 `country`만 전달하고 `addr1`, `city`, `state` 및 `zip`에 대한 값을 제공하지 않으면 `NULL`이(가) 덮어씁니다.
+   예를 들어 연락처의 기존 주소 필드 `country`, `addr1`, `city` 및 `state` 값으로 `zip`의 값을 `132, My Street, Kingston`, `New York`, `New York` 및 `12401`(으)로 업데이트하려고 합니다. `country`을(를) 업데이트하려면 변경 내용이 *(있는 경우)*&#x200B;인 기존 값과 새 국가 값을 전달해야 합니다. 따라서 데이터 집합의 값은 `132, My Street, Kingston`, `New York`, `New York`, `12401` 및 `US`이어야 합니다. 다시 말하면 `country`만 전달하고 `addr1`, `city`, `state` 및 `zip`에 대한 값을 제공하지 않으면 `NULL`이(가) 덮어씁니다.
 
    완료된 매핑의 예가 아래에 나와 있습니다.
    필드 매핑을 보여 주는 ![Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
 
-대상 연결에 대한 매핑을 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 매핑을 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
 
@@ -219,7 +219,7 @@ XDM 필드를 [!DNL Mailchimp Interest Categories] 대상 필드에 올바르게
 
 ### [!DNL Mailchimp] API 키 또는 데이터 센터 값이 잘못된 경우 오류가 발생했습니다. {#incorrect-credentials-error}
 
-**[!UICONTROL 암호]** 필드 또는 **[!UICONTROL 데이터 센터]** 값에 제공한 API 키가 올바르지 않은 경우 UI에 아래와 같이 [!DNL Mailchimp] API 오류 응답 *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`*&#x200B;이(가) 표시됩니다. 이 경우 **[!UICONTROL 대상 이름(먼저 데이터 센터를 선택하십시오)]** 필드에서 값을 선택할 수 없습니다.
+**[!UICONTROL Password]** 필드에 입력한 API 키 또는 **[!UICONTROL Data center]** 값이 올바르지 않은 경우 UI에 아래와 같이 [!DNL Mailchimp] API 오류 응답 *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`*&#x200B;이(가) 표시됩니다. 이 경우 **[!UICONTROL Audience Name (Please select Data center first)]** 필드에서 값을 선택할 수 없습니다.
 
 ![Mailchimp API 키 또는 데이터 센터 값이 잘못된 경우 오류를 표시하는 Experience Platform UI 스크린샷](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
 
@@ -237,6 +237,7 @@ XDM 필드를 [!DNL Mailchimp Interest Categories] 대상 필드에 올바르게
 ## 추가 리소스 {#additional-resources}
 
 [!DNL Mailchimp] 설명서의 추가 유용한 정보는 다음과 같습니다.
+
 * [시작하기 [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
 * [대상자 시작](https://mailchimp.com/help/getting-started-audience/)
 * [대상자 만들기](https://mailchimp.com/help/create-audience/)

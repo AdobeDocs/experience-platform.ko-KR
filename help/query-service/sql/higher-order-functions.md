@@ -2,7 +2,7 @@
 title: 고차 함수로 배열 관리 및 데이터 유형 매핑
 description: Query Service에서 배열을 관리하고 데이터 형식을 고차 함수로 매핑하는 방법에 대해 알아봅니다. 예제는 일반적인 사용 사례와 함께 제공됩니다.
 exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 **예**
 
-아래의 SQL 예제에서는 이 사용 사례를 보여 줍니다. 쿼리는 지정된 테이블에서 제한된 행 집합을 검색하여 각 항목의 `priceTotal` 특성에 73을 곱하여 `productListItems` 배열을 변환합니다. 결과에는 `_id`, `productListItems` 및 변환된 `price_in_inr` 열이 포함됩니다. 선택은 특정 타임스탬프 범위를 기반으로 합니다.
+아래의 SQL 예제에서는 이 사용 사례를 보여 줍니다. 쿼리는 지정된 테이블에서 제한된 행 집합을 검색하여 각 항목의 `productListItems` 특성에 73을 곱하여 `priceTotal` 배열을 변환합니다. 결과에는 `_id`, `productListItems` 및 변환된 `price_in_inr` 열이 포함됩니다. 선택은 특정 타임스탬프 범위를 기반으로 합니다.
 
 ```sql
 SELECT _id,
@@ -46,7 +46,7 @@ LIMIT  10;
 
 ```console
  productListItems | price_in_inr
--------------------+----------------
+|-------------------+----------------
 (8376, NULL, NULL) | 611448.0
 {(Burbank Hills Jeans, NULL, NULL), (Thermomax Steel, NULL, NULL), (Bruin Point Shearling Boots, NULL, NULL), (Uintas Pro Ski Gloves, NULL, NULL), (Timberline Survival Knife, NULL, NULL), (Thermomax Steel, NULL, NULL), (Timpanogos Scarf, NULL, NULL), (Lost Prospector Beanie, NULL, NULL), (Timpanogos Scarf, NULL, NULL), (Uintas Pro Ski Gloves, NULL, NULL)} | {0.0,0.0.0.0,0,0,0,0,0,0,0,0,0,0,0,0,0.0}
 (84763,NULL, NULL) | 6187699.0
@@ -64,7 +64,7 @@ LIMIT  10;
 
 **예**
 
-아래 SQL 예제에서 쿼리는 `geometrixxx_999_xdm_pqs_1batch_10k_rows` 테이블에서 `productListItems`을(를) 가져오고 `productListItems` 배열에서 SKU가 `123679`과(와) 같은 요소가 있는지 평가합니다. 그런 다음 특정 범위의 타임스탬프를 기반으로 결과를 필터링하고 최종 결과를 10개의 행으로 제한합니다.
+아래 SQL 예제에서 쿼리는 `productListItems` 테이블에서 `geometrixxx_999_xdm_pqs_1batch_10k_rows`을(를) 가져오고 `123679` 배열에서 SKU가 `productListItems`과(와) 같은 요소가 있는지 평가합니다. 그런 다음 특정 범위의 타임스탬프를 기반으로 결과를 필터링하고 최종 결과를 10개의 행으로 제한합니다.
 
 ```sql
 SELECT productListItems
@@ -80,7 +80,7 @@ AND timestamp < to_timestamp('2017-11-02 00:00:00')limit 10;
 
 ```console
 productListItems
------------------
+|-----------------
 {(123679, NULL,NULL)}
 {(123679, NULL, NULL)}
 {(123679, NULL, NULL), (150196, NULL, NULL)}
@@ -120,7 +120,7 @@ LIMIT 10;
 
 ```console
 productListItems | _filter
------------------+---------
+|-----------------+---------
 (123679, NULL, NULL) (123679, NULL, NULL)
 (1346, NULL, NULL) |
 (98347, NULL, NULL) |
@@ -159,7 +159,7 @@ LIMIT 50;
 
 ```console
 productListItems | max_value
------------------+---------
+|-----------------+---------
 (123679, NULL, NULL) | 247358
 (1346,NULL, NULL) | 2692
 (98347, NULL, NULL) | 196694
@@ -193,7 +193,7 @@ limit 10;
 
 ```console
 productListItems     | zip_with
----------------------+---------
+|---------------------+---------
                      | {(1,NULL), (2,NULL), (3,NULL),(4,NULL), (5,NULL)}
 (123679, NULL, NULL) | {(1,123679), (2,NULL), (3,NULL), (4,NULL), (5,NULL)}
                      | {(1,NULL), (2,NULL),(3,NULL),(4,NULL), (5,NULL)}
@@ -232,7 +232,7 @@ LIMIT 10;
 
 ```console
 productListItems     | map_from_entries
----------------------+------------------
+|---------------------+------------------
 (123679, NULL, NULL) | [1 -> "(123679,NULL,NULL)"]
 (1346, NULL, NULL)   | [1 -> "(1346, NULL, NULL)"]
 (98347, NULL, NULL)  | [1 -> "(98347, NULL, NULL)"]
@@ -278,7 +278,7 @@ LIMIT  10;
 
 ```console
 productListItems     | map_from_entries
----------------------+------------------
+|---------------------+------------------
 (123679, NULL, NULL) | [1 -> "(123679,NULL,NULL)"]
 (1346, NULL, NULL)   | [1 -> "(1346, NULL, NULL)"]
 (98347, NULL, NULL)  | [1 -> "(98347, NULL, NULL)"]
@@ -321,7 +321,7 @@ limit 10;
 
 ```console
 productListItems     | map_from_entries
----------------------+------------------
+|---------------------+------------------
 (123679, NULL, NULL) | [1 -> "(123679,NULL,NULL)",2 -> "(123679, NULL, NULL)"]
 (1346, NULL, NULL)   | [1 -> "(1346, NULL, NULL)",2 -> "(1346, NULL, NULL)"]
 (98347, NULL, NULL)  | [1 -> "(98347, NULL, NULL)",2 -> "(98347, NULL, NULL)"]
@@ -346,7 +346,7 @@ productListItems     | map_from_entries
 
 **예**
 
-쿼리가 테이블 `geometrixxx_999_xdm_pqs_1batch_10k_rows`에서 `identitymap` 열을 선택하고 각 행에 대해 키 `AAID`과(와) 연결된 값을 추출합니다. 결과는 지정된 타임스탬프 범위 내에 있는 행으로 제한되며 쿼리는 출력을 10개 행으로 제한합니다.
+쿼리가 테이블 `identitymap`에서 `geometrixxx_999_xdm_pqs_1batch_10k_rows` 열을 선택하고 각 행에 대해 키 `AAID`과(와) 연결된 값을 추출합니다. 결과는 지정된 타임스탬프 범위 내에 있는 행으로 제한되며 쿼리는 출력을 10개 행으로 제한합니다.
 
 ```sql
 SELECT identitymap,
@@ -363,7 +363,7 @@ LIMIT 10;
 
 ```console
                                                                   identitymap                                            |  element_at(identitymap, AAID) 
--------------------------------------------------------------------------------------------------------------------------+-------------------------------------
+|-------------------------------------------------------------------------------------------------------------------------+-------------------------------------
 [AAID -> "(3617FBB942466D79-5433F727AD6A0AD, false)",ECID -> "(67383754798169392543508586197135045866,true)"]            | (3617FBB942466D79-5433F727AD6A0AD, false) 
 [AAID -> "[AAID -> "(533F56A682C059B1-396437F68879F61D, false)",ECID -> "(91989370462250197735311833131353001213,true)"] | (533F56A682C059B1-396437F68879F61D, false) 
 [AAID -> "(22E195F8A8ECCC6A-A39615C93B72A9F, false)",ECID -> "(57699241367342030964647681192998909474,true)"]            | (22E195F8A8ECCC6A-A39615C93B72A9F, false) 
@@ -401,7 +401,7 @@ LIMIT  10;
 
 ```console
                                                                   identitymap                                            |  size(identitymap) 
--------------------------------------------------------------------------------------------------------------------------+-------------------------------------
+|-------------------------------------------------------------------------------------------------------------------------+-------------------------------------
 [AAID -> "(3617FBB942466D79-5433F727AD6A0AD, false)",ECID -> "(67383754798169392543508586197135045866,true)"]            |      2  
 [AAID -> "[AAID -> "(533F56A682C059B1-396437F68879F61D, false)",ECID -> "(91989370462250197735311833131353001213,true)"] |      2  
 [AAID -> "(22E195F8A8ECCC6A-A39615C93B72A9F, false)",ECID -> "(57699241367342030964647681192998909474,true)"]            |      2  
@@ -439,7 +439,7 @@ LIMIT 10;
 
 ```console
 productListItems     | array_distinct(productListItems)
----------------------+---------------------------------
+|---------------------+---------------------------------
                      |
 (123679, NULL, NULL) | (123679, NULL, NULL)
                      |

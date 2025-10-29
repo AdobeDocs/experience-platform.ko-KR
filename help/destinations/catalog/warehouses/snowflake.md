@@ -4,7 +4,7 @@ description: 라이브 Snowflake 데이터 공유를 만들어 스트리밍 대�
 last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: c429ee227bd93455f541a32266bfbef9ddeaae06
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1466'
 ht-degree: 3%
@@ -96,7 +96,7 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
+|---------|----------|---------|
 | 내보내기 유형 | **[!UICONTROL Audience export]** | [!DNL Snowflake] 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
 | 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 

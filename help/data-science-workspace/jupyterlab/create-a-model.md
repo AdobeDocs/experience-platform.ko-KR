@@ -5,9 +5,9 @@ title: JupyterLab Notebooks를 사용하여 모델 만들기
 type: Tutorial
 description: 이 튜토리얼에서는 JupyterLab notebooks 레시피 빌더 템플릿을 사용하여 레시피를 만드는 데 필요한 단계를 안내합니다.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2079'
 ht-degree: 0%
 
 ---
@@ -35,23 +35,23 @@ ht-degree: 0%
 
 ## [!DNL JupyterLab] 전자 필기장 환경 시작
 
-레시피를 처음부터 만드는 작업은 [!DNL Data Science Workspace] 내에 수행할 수 있습니다. 시작하려면 [Adobe Experience Platform](https://platform.adobe.com)&#x200B;(으)로 이동하여 왼쪽의 **[!UICONTROL 전자 필기장]** 탭을 선택하십시오. 새 전자 필기장을 만들려면 [!DNL JupyterLab Launcher]에서 Recipe Builder 템플릿을 선택하십시오.
+레시피를 처음부터 만드는 작업은 [!DNL Data Science Workspace] 내에 수행할 수 있습니다. 시작하려면 [Adobe Experience Platform](https://platform.adobe.com)&#x200B;(으)로 이동하여 왼쪽의 **[!UICONTROL Notebooks]** 탭을 선택하십시오. 새 전자 필기장을 만들려면 [!DNL JupyterLab Launcher]에서 Recipe Builder 템플릿을 선택하십시오.
 
-[!UICONTROL 레시피 빌더] 전자 필기장을 사용하면 전자 필기장 내에서 교육 및 채점 실행을 실행할 수 있습니다. 이렇게 하면 교육 및 채점 데이터에 대한 실험 실행 사이에서 `train()` 및 `score()` 메서드를 유연하게 변경할 수 있습니다. 교육 및 채점의 결과가 만족스러우면 레시피를 만들고 레시피를 사용하여 모델 기능을 모델링하여 모델로 게시할 수 있습니다.
+[!UICONTROL Recipe Builder] 전자 필기장을 사용하면 전자 필기장 내에서 교육 및 채점 실행을 실행할 수 있습니다. 이렇게 하면 교육 및 채점 데이터에 대한 실험 실행 사이에서 `train()` 및 `score()` 메서드를 유연하게 변경할 수 있습니다. 교육 및 채점의 결과가 만족스러우면 레시피를 만들고 레시피를 사용하여 모델 기능을 모델링하여 모델로 게시할 수 있습니다.
 
 >[!NOTE]
 >
->[!UICONTROL 레시피 빌더] 전자 필기장은 모든 파일 형식 작업을 지원하지만 현재 레시피 만들기 기능은 [!DNL Python]만 지원합니다.
+>[!UICONTROL Recipe Builder] 전자 필기장은 모든 파일 형식 작업을 지원하지만 현재 레시피 만들기 기능은 [!DNL Python]만 지원합니다.
 
 ![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
-런처에서 [!UICONTROL 레시피 빌더] 전자 필기장을 선택하면 전자 필기장이 새 탭에서 열립니다.
+런처에서 [!UICONTROL Recipe Builder] 전자 필기장을 선택하면 전자 필기장이 새 탭에서 열립니다.
 
-맨 위에 있는 새 전자 필기장 탭에는 **[!UICONTROL 교육]**, **[!UICONTROL 점수]** 및 **[!UICONTROL 레시피 만들기]**&#x200B;와 같은 세 가지 추가 작업이 포함된 도구 모음이 로드됩니다. 이 아이콘은 [!UICONTROL 레시피 빌더] 전자 필기장에만 표시됩니다. 이러한 작업에 대한 자세한 정보는 전자 필기장에서 레시피를 작성한 후 [교육 및 채점 섹션](#training-and-scoring)에서 제공됩니다.
+맨 위에 있는 새 전자 필기장 탭에는 **[!UICONTROL Train]**, **[!UICONTROL Score]** 및 **[!UICONTROL Create Recipe]**&#x200B;의 세 가지 추가 작업이 포함된 도구 모음이 로드됩니다. 이 아이콘은 [!UICONTROL Recipe Builder] 전자 필기장에만 표시됩니다. 이러한 작업에 대한 자세한 정보는 전자 필기장에서 레시피를 작성한 후 [교육 및 채점 섹션](#training-and-scoring)에서 제공됩니다.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-## [!UICONTROL 레시피 빌더] 전자 필기장 시작
+## [!UICONTROL Recipe Builder] 전자 필기장 시작
 
 제공된 에셋 폴더에는 Luma 성향 모델 `propensity_model.ipynb`이(가) 있습니다. JupyterLab의 노트북 업로드 옵션을 사용하여 제공된 모델을 업로드하고 노트북을 엽니다.
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 다음 비디오 튜토리얼에서는 Luma 성향 모델 전자 필기장을 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3452499?captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
 
 ### 요구 사항 파일 {#requirements-file}
 
@@ -99,7 +99,7 @@ Luma 성향 모델 노트북의 경우 요구 사항을 업데이트할 필요�
 
 ![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
-**[스키마](https://platform.adobe.com/schema)** 및 **[데이터 세트](https://platform.adobe.com/dataset/overview)** 탭의 [Adobe Experience Platform](https://platform.adobe.com/)에서 동일한 정보를 찾을 수 있습니다.
+[스키마](https://platform.adobe.com/)**[및 ](https://platform.adobe.com/schema)데이터 세트****[탭의 ](https://platform.adobe.com/dataset/overview)Adobe Experience Platform**&#x200B;에서 동일한 정보를 찾을 수 있습니다.
 
 일단 경쟁하면 교육 및 채점 구성은 다음 스크린샷과 유사해야 합니다.
 
@@ -123,7 +123,7 @@ Luma 성향 모델 노트북의 경우 요구 사항을 업데이트할 필요�
 
 ### 데이터 로드 중 {#loading-data}
 
-이 단계에서는 [pandas 데이터 프레임](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)을 사용합니다. [!DNL Experience Platform] SDK(`platform_sdk`)를 사용하여 [!DNL Adobe Experience Platform]의 파일에서 데이터를 로드하거나 pandas의 `read_csv()` 또는 `read_json()` 함수를 사용하여 외부 소스에서 데이터를 로드할 수 있습니다.
+이 단계에서는 [pandas 데이터 프레임](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)을 사용합니다. [!DNL Adobe Experience Platform] SDK([!DNL Experience Platform])를 사용하여 `platform_sdk`의 파일에서 데이터를 로드하거나 pandas의 `read_csv()` 또는 `read_json()` 함수를 사용하여 외부 소스에서 데이터를 로드할 수 있습니다.
 
 - [[!DNL Experience Platform SDK]](#platform-sdk)
 - [외부 소스](#external-sources)
@@ -139,16 +139,17 @@ Luma 성향 모델 노트북의 경우 요구 사항을 업데이트할 필요�
 ### 외부 소스 {#external-sources}
 
 이 섹션에서는 JSON 또는 CSV 파일을 pandas 객체로 가져오는 방법을 보여줍니다. 판다 라이브러리의 공식 문서는 여기에서 찾을 수 있습니다 :
+
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [read_json](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
-먼저 CSV 파일을 가져오는 예를 살펴보겠습니다. `data` 인수는 CSV 파일의 경로입니다. 이 변수는 [이전 섹션](#configuration-files)의 `configProperties`에서 가져왔습니다.
+먼저 CSV 파일을 가져오는 예를 살펴보겠습니다. `data` 인수는 CSV 파일의 경로입니다. 이 변수는 `configProperties`이전 섹션[의 ](#configuration-files)에서 가져왔습니다.
 
 ```PYTHON
 df = pd.read_csv(data)
 ```
 
-JSON 파일에서 가져올 수도 있습니다. `data` 인수는 CSV 파일의 경로입니다. 이 변수는 [이전 섹션](#configuration-files)의 `configProperties`에서 가져왔습니다.
+JSON 파일에서 가져올 수도 있습니다. `data` 인수는 CSV 파일의 경로입니다. 이 변수는 `configProperties`이전 섹션[의 ](#configuration-files)에서 가져왔습니다.
 
 ```PYTHON
 df = pd.read_json(data)
@@ -162,7 +163,7 @@ df = pd.read_json(data)
 
 `from platform_sdk.dataset_reader import DatasetReader`
 
-그런 다음 `load()` 메서드를 사용하여 구성(`recipe.conf`) 파일에 설정된 대로 `trainingDataSetId`에서 교육 데이터 세트를 가져올 수 있습니다.
+그런 다음 `load()` 메서드를 사용하여 구성(`trainingDataSetId`) 파일에 설정된 대로 `recipe.conf`에서 교육 데이터 세트를 가져올 수 있습니다.
 
 ```PYTHON
 def load(config_properties):
@@ -178,6 +179,7 @@ def load(config_properties):
 >[!NOTE]
 >
 >[구성 파일 섹션](#configuration-files)에서 언급한 대로 `client_context = get_client_context(config_properties)`을(를) 사용하여 Experience Platform의 데이터에 액세스할 때 다음 구성 매개 변수가 설정됩니다.
+>
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -205,7 +207,7 @@ def load(config_properties):
 
 ## 채점 데이터 로더 {#scoring-data-loader}
 
-채점을 위해 데이터를 로드하는 절차는 교육 데이터 로드와 유사합니다. 코드를 자세히 보면 `dataset_reader`의 `scoringDataSetId`을(를) 제외하고 모든 내용이 동일함을 알 수 있습니다. 이는 동일한 Luma 데이터 소스가 교육 및 채점 모두에 사용되기 때문입니다.
+채점을 위해 데이터를 로드하는 절차는 교육 데이터 로드와 유사합니다. 코드를 자세히 보면 `scoringDataSetId`의 `dataset_reader`을(를) 제외하고 모든 내용이 동일함을 알 수 있습니다. 이는 동일한 Luma 데이터 소스가 교육 및 채점 모두에 사용되기 때문입니다.
 
 교육 및 채점에 다른 데이터 파일을 사용하려는 경우 교육 및 채점 데이터 로더는 별개입니다. 이를 통해 필요한 경우 교육 데이터를 채점 데이터에 매핑하는 것과 같은 추가 사전 처리를 수행할 수 있습니다.
 
@@ -249,7 +251,7 @@ def load(config_properties):
 
 ## 데이터 보호기 파일 {#data-saver-file}
 
-`datasaver.py` 파일에는 `save()` 함수가 포함되어 있으며 채점을 테스트하는 동안 예측을 저장하는 데 사용됩니다. `save()` 함수는 예측을 사용하여 [!DNL Experience Platform Catalog]개의 API를 사용하여 `scoring.conf` 파일에 지정한 `scoringResultsDataSetId`에 데이터를 씁니다. 다음을 수행할 수 있습니다.
+`datasaver.py` 파일에는 `save()` 함수가 포함되어 있으며 채점을 테스트하는 동안 예측을 저장하는 데 사용됩니다. `save()` 함수는 예측을 사용하여 [!DNL Experience Platform Catalog]개의 API를 사용하여 `scoringResultsDataSetId` 파일에 지정한 `scoring.conf`에 데이터를 씁니다. 다음을 수행할 수 있습니다.
 
 ![데이터 보호기](../images/jupyterlab/create-recipe/data_saver.png)
 
@@ -257,7 +259,7 @@ def load(config_properties):
 
 수첩에 대한 변경을 완료하고 레시피를 교육하려는 경우 막대의 맨 위에서 관련 버튼을 선택하여 셀에서 교육 실행을 만들 수 있습니다. 단추를 선택하면 교육 스크립트의 명령 및 출력 로그가 전자 필기장(`evaluator.py` 셀 아래)에 나타납니다. Conda가 먼저 모든 종속성을 설치한 다음 교육이 시작됩니다.
 
-채점을 실행하기 전에 교육을 한 번 이상 실행해야 합니다. **[!UICONTROL 채점 실행]** 단추를 선택하면 교육 중에 생성된 학습된 모델에서 채점이 매겨집니다. 채점 스크립트가 `datasaver.py` 아래에 나타납니다.
+채점을 실행하기 전에 교육을 한 번 이상 실행해야 합니다. **[!UICONTROL Run Scoring]** 단추를 선택하면 교육 중에 생성된 교육된 모델에서 점수가 매겨집니다. 채점 스크립트가 `datasaver.py` 아래에 나타납니다.
 
 디버깅을 위해 숨겨진 출력을 보려면 출력 셀의 끝에 `debug`을(를) 추가하고 다시 실행하십시오.
 
@@ -265,15 +267,15 @@ def load(config_properties):
 
 ## 레시피 만들기 {#create-recipe}
 
-레시피 편집이 완료되고 교육/채점 결과에 만족하면 오른쪽 상단에서 **[!UICONTROL 레시피 만들기]**&#x200B;를 선택하여 전자 필기장에서 레시피를 만들 수 있습니다.
+레시피 편집이 완료되고 교육/채점 결과에 만족하면 오른쪽 상단에서 **[!UICONTROL Create Recipe]**&#x200B;을(를) 선택하여 전자 필기장에서 레시피를 만들 수 있습니다.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-**[!UICONTROL 레시피 만들기]**&#x200B;를 선택하면 레시피 이름을 입력하라는 메시지가 표시됩니다. 이 이름은 [!DNL Experience Platform]에서 만든 실제 레시피를 나타냅니다.
+**[!UICONTROL Create Recipe]**&#x200B;을(를) 선택하면 레시피 이름을 입력하라는 메시지가 표시됩니다. 이 이름은 [!DNL Experience Platform]에서 만든 실제 레시피를 나타냅니다.
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-**[!UICONTROL 확인]**&#x200B;을 선택하면 레시피 만들기 프로세스가 시작됩니다. 이 작업에는 시간이 걸릴 수 있으며 레시피 만들기 단추 대신 진행률 표시줄이 표시됩니다. 완료되면 **[!UICONTROL 레시피 보기]** 단추를 선택하여 **[!UICONTROL ML 모델]** 아래의 **[!UICONTROL 레시피]** 탭으로 이동할 수 있습니다.
+**[!UICONTROL Ok]**&#x200B;을(를) 선택하면 레시피 만들기 프로세스가 시작됩니다. 이 작업에는 시간이 걸릴 수 있으며 레시피 만들기 단추 대신 진행률 표시줄이 표시됩니다. 완료되면 **[!UICONTROL View Recipes]** 단추를 선택하여 **[!UICONTROL Recipes]** 아래의 **[!UICONTROL ML Models]** 탭으로 이동할 수 있습니다.
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -285,6 +287,6 @@ def load(config_properties):
 
 ## 다음 단계 {#next-steps}
 
-이 자습서를 완료하면 [!UICONTROL 레시피 빌더] 전자 필기장에서 기계 학습 모델을 만드는 방법을 배웠습니다. 또한 조리법 워크플로우에 대한 수첩의 연습 방법을 배웠습니다.
+이 자습서를 완료하면 [!UICONTROL Recipe Builder] 전자 필기장에서 기계 학습 모델을 만드는 방법을 배웠습니다. 또한 조리법 워크플로우에 대한 수첩의 연습 방법을 배웠습니다.
 
 [!DNL Data Science Workspace] 내의 리소스로 작업하는 방법을 계속 배우려면 [!DNL Data Science Workspace] 레시피 및 모델 드롭다운을 방문하십시오.

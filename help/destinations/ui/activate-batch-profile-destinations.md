@@ -3,10 +3,10 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ec0a51bc8a6151a6d713d8f4639d6733989bbb16
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '4678'
-ht-degree: 13%
+source-wordcount: '4506'
+ht-degree: 12%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 13%
 
 >[!IMPORTANT]
 > 
-> * 대상을 활성화하고 워크플로우의 [매핑 단계](#mapping)를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
-> * 워크플로우의 [매핑 단계](#mapping)를 거치지 않고 대상을 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 매핑하지 않고 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]**, **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 대상을 활성화하고 워크플로의 [매핑 단계](#mapping)을(를) 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
+>* 워크플로우의 [매핑 단계](#mapping)를 거치지 않고 대상을 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 > 
 > [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
@@ -43,15 +43,15 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 
 ## 대상 선택 {#select-destination}
 
-1. **[!UICONTROL 연결 > 대상]**(으)로 이동하여 **[!UICONTROL 카탈로그]** 탭을 선택합니다.
+1. **[!UICONTROL Connections > Destinations]**(으)로 이동하여 **[!UICONTROL Catalog]** 탭을 선택합니다.
 
    ![대상 카탈로그 탭으로 이동하는 방법을 강조 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
-1. 아래 그림과 같이 대상을 활성화할 대상에 해당하는 카드에서 **[!UICONTROL 대상 활성화]**&#x200B;를 선택합니다.
+1. 아래 이미지에 표시된 대로 대상을 활성화할 대상에 해당하는 카드에서 **[!UICONTROL Activate audiences]**&#x200B;을(를) 선택합니다.
 
    ![카탈로그 페이지에서 강조 표시된 대상 컨트롤을 활성화합니다.](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
-1. 대상을 활성화하는 데 사용할 대상 연결을 선택한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+1. 대상을 활성화하는 데 사용할 대상 연결을 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
    ![대상자를 활성화할 하나 이상의 대상을 선택하기 위해 강조 표시된 확인란](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
@@ -59,12 +59,12 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 
 ## 대상자 선택 {#select-audiences}
 
-대상으로 활성화할 대상을 선택하려면 대상 이름 왼쪽에 있는 확인란을 사용한 다음 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상으로 활성화할 대상을 선택하려면 대상 이름 왼쪽에 있는 확인란을 사용한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
 출처에 따라 여러 유형의 대상 중에서 선택할 수 있습니다.
 
-* **[!UICONTROL 세그먼테이션 서비스]**: 세그먼테이션 서비스에 의해 Experience Platform 내에서 생성된 대상입니다. 자세한 내용은 [세그먼테이션 설명서](../../segmentation/ui/overview.md)를 참조하세요.
-* **[!UICONTROL 사용자 지정 업로드]**: Experience Platform 외부에서 생성되어 Experience Platform에 CSV 파일로 업로드된 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience)에 대한 설명서를 참조하십시오. **[!UICONTROL 사용자 지정 업로드]**&#x200B;에서 대상을 선택하면 [데이터 보강 특성 선택](#select-enrichment-attributes) 단계가 자동으로 활성화됩니다.
+* **[!UICONTROL Segmentation Service]**: 세분화 서비스에 의해 Experience Platform 내에서 생성된 대상자입니다. 자세한 내용은 [세그먼테이션 설명서](../../segmentation/ui/overview.md)를 참조하세요.
+* **[!UICONTROL Custom upload]**: Experience Platform 외부에서 생성되어 Experience Platform에 CSV 파일로 업로드된 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience)에 대한 설명서를 참조하십시오. **[!UICONTROL Custom uploads]**&#x200B;에서 대상을 선택하면 [데이터 보강 특성 선택](#select-enrichment-attributes) 단계가 자동으로 활성화됩니다.
 * 다른 Adobe 솔루션에서 가져온 다른 유형의 대상(예: [!DNL Audience Manager]).
 
 >[!IMPORTANT]
@@ -75,7 +75,7 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 
 >[!TIP]
 >
->기존 활성화 흐름에서 대상을 제거하려면 **[!UICONTROL 활성화 데이터]** 페이지를 사용하십시오. 자세한 내용은 [활성화 흐름에서 여러 대상을 제거](../ui/destination-details-page.md#bulk-remove)하는 방법에 대한 섹션을 참조하십시오.
+>기존 활성화 흐름에서 대상을 제거하려면 **[!UICONTROL Activation data]** 페이지를 사용하십시오. 자세한 내용은 [활성화 흐름에서 여러 대상을 제거](../ui/destination-details-page.md#bulk-remove)하는 방법에 대한 섹션을 참조하십시오.
 
 ## 대상자 내보내기 예약 {#scheduling}
 
@@ -94,19 +94,19 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 >title="월별 내보내기"
 >abstract="<sup>*</sup> 시작 일자를 선택하면 선택한 종료 일자까지 해당 월의 해당 날짜에 후속 내보내기가 수행됩니다. 30일 또는 31일 미만의 달의 경우, 내보내기는 해당 월의 마지막 날에 이루어집니다."
 
-[!DNL Adobe Experience Platform]은(는) 전자 메일 마케팅 및 클라우드 저장소 대상에 대한 데이터를 [다른 파일 형식](#supported-file-formats-export)(으)로 내보냅니다. **[!UICONTROL 예약]** 페이지에서 내보내는 각 대상에 대해 일정 및 파일 이름을 구성할 수 있습니다.
+[!DNL Adobe Experience Platform]은(는) 전자 메일 마케팅 및 클라우드 저장소 대상에 대한 데이터를 [다른 파일 형식](#supported-file-formats-export)(으)로 내보냅니다. **[!UICONTROL Scheduling]** 페이지에서 내보내는 각 대상에 대해 일정 및 파일 이름을 구성할 수 있습니다.
 
 Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동으로 설정합니다. 각 일정 옆에 있는 연필 아이콘을 선택하고 사용자 지정 일정을 정의하여 필요에 따라 기본 일정을 수정할 수 있습니다.
 
 ![예약 단계에서 강조 표시된 예약 컨트롤을 편집합니다.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
-여러 일정을 동시에 편집하려면 화면 왼쪽에 있는 확인란을 사용하여 대상자를 선택한 다음 **[!UICONTROL 일정 편집]**&#x200B;을 선택합니다. 그러면 구성한 일정이 선택한 대상에 대해 내보낸 모든 파일에 적용됩니다.
+여러 일정을 동시에 편집하려면 화면 왼쪽에 있는 확인란을 사용하여 대상자를 선택한 다음 **[!UICONTROL Edit schedule]**&#x200B;을(를) 선택합니다. 그러면 구성한 일정이 선택한 대상에 대해 내보낸 모든 파일에 적용됩니다.
 
 ![선택한 여러 대상에 대한 일정 편집 옵션을 표시하는 Experience Platform 사용자 인터페이스 이미지.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
 
 >[!TIP]
 >
->**[!UICONTROL 활성화 데이터]** 페이지에서 기존 활성화 흐름에 대한 대상 활성화 일정을 편집할 수 있습니다. 자세한 내용은 [활성화 일정 일괄 편집](../ui/destination-details-page.md#bulk-edit-schedule)에 대한 설명서를 참조하십시오.
+>**[!UICONTROL Activation data]** 페이지에서 기존 활성화 흐름에 대한 대상 활성화 일정을 편집할 수 있습니다. 자세한 내용은 [활성화 일정 일괄 편집](../ui/destination-details-page.md#bulk-edit-schedule)에 대한 설명서를 참조하십시오.
 
 >[!IMPORTANT]
 >
@@ -120,7 +120,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 >id="platform_destinations_activate_exportoptions"
 >title="파일 내보내기 옵션"
 >abstract="**전체 파일 내보내기**&#x200B;를 선택하여 대상자 조건에 적합한 모든 프로필의 전체 스냅샷을 내보냅니다. **증분 파일 내보내기**&#x200B;를 선택하여 마지막 내보내기 이후 대상자 조건에 적합한 프로필만 내보냅니다. <br>첫 번째 증분 파일 내보내기에는 채우기 역할을 하는 대상자에 적합한 모든 프로필이 포함됩니다. 향후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 대상자 조건에 적합한 프로필만 포함됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko#export-incremental-files" text="증분 파일 내보내기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="증분 파일 내보내기"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
@@ -132,16 +132,16 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 >title="예약된 활성화"
 >abstract="하루 중 고정된 시간에 활성화가 실행됩니다."
 
-**[!UICONTROL 전체 파일 내보내기]**&#x200B;를 선택하여 선택한 대상에 대한 모든 프로필 자격에 대한 전체 스냅숏이 포함된 파일 내보내기를 트리거합니다.
+선택한 대상에 대한 모든 프로필 자격에 대한 전체 스냅숏이 포함된 파일 내보내기를 트리거하려면 **[!UICONTROL Export full files]**&#x200B;을(를) 선택하십시오.
 
 ![전체 파일 내보내기 전환이 선택되었습니다.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
-1. **[!UICONTROL 빈도]** 선택기를 사용하여 내보내기 빈도를 선택하십시오.
+1. **[!UICONTROL Frequency]** 선택기를 사용하여 내보내기 빈도를 선택하십시오.
 
-   * **[!UICONTROL 한 번]**: 온디맨드 전체 파일 내보내기를 한 번 예약합니다.
-   * **[!UICONTROL 매일]**: 지정한 시간에 매일 한 번씩 전체 파일 내보내기를 예약합니다.
-   * **[!UICONTROL 주별]**: 시작 날짜를 선택하면 선택한 종료 날짜까지 그 주의 해당 날짜에 후속 내보내기가 발생합니다.
-   * **[!UICONTROL 월별]**: 시작 날짜를 선택하면 선택한 종료 날짜까지 그 달의 해당 날짜에 후속 내보내기가 수행됩니다. 30일 또는 31일 미만의 달의 경우, 내보내기는 해당 월의 마지막 날에 이루어집니다.
+   * **[!UICONTROL Once]**: 온디맨드 전체 파일 내보내기를 한 번 예약합니다.
+   * **[!UICONTROL Daily]**: 지정한 시간에 매일 한 번씩 전체 파일 내보내기를 예약합니다.
+   * **[!UICONTROL Weekly]**: 시작 날짜를 선택하면 선택한 종료 날짜까지 그 주의 해당 날짜에 후속 내보내기가 발생합니다.
+   * **[!UICONTROL Monthly]**: 시작 날짜를 선택하면 선택한 종료 날짜까지 그 달의 해당 날짜에 후속 내보내기가 발생합니다. 30일 또는 31일 미만의 달의 경우, 내보내기는 해당 월의 마지막 날에 이루어집니다.
 
    >[!NOTE]
    >
@@ -155,9 +155,9 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
    > 
    > 주별 및 월별 예약 옵션은 다른 대상 유형에 사용할 수 없습니다.
 
-2. **[!UICONTROL 시간]** 토글을 사용하여 대상 평가 직후에 내보내기를 수행할지 또는 지정된 시간에 예약된 일정에 따라 내보내기를 수행할지 여부를 선택합니다. **[!UICONTROL 예약됨]** 옵션을 선택할 때 선택기를 사용하여 내보내기를 수행할 시간을 [!DNL UTC] 형식으로 선택할 수 있습니다.
+2. **[!UICONTROL Time]** 토글을 사용하여 대상 평가 직후 또는 예약된 시간에 지정된 시간에 내보내기를 수행할지 여부를 선택합니다. **[!UICONTROL Scheduled]** 옵션을 선택할 때 선택기를 사용하여 내보내기를 수행할 시간을 [!DNL UTC] 형식으로 선택할 수 있습니다.
 
-   매일 Experience Platform 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행하려면 **[!UICONTROL 세그먼트 평가 후]** 옵션을 사용합니다. 이 옵션을 사용하면 활성화 작업이 실행될 때 최신 프로필을 대상으로 내보냅니다. 이로 인해 작업에 따라 대상을 하루에 여러 번 내보낼 수 있습니다.
+   매일 Experience Platform 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행하려면 **[!UICONTROL After segment evaluation]** 옵션을 사용하십시오. 이 옵션을 사용하면 활성화 작업이 실행될 때 최신 프로필을 대상으로 내보냅니다. 이로 인해 작업에 따라 대상을 하루에 여러 번 내보낼 수 있습니다.
 
    >[!IMPORTANT]
    >
@@ -166,7 +166,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
    ![일괄 처리 대상에 대한 활성화 흐름에서 세그먼트 후 평가 옵션을 강조 표시하는 이미지.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-고정된 시간에 활성화 작업을 실행하려면 **[!UICONTROL 예약됨]** 옵션을 사용하십시오. 이 옵션을 사용하면 Experience Platform 프로필 데이터를 매일 같은 시간에 내보낼 수 있습니다. 그러나 활성화 작업이 시작되기 전에 배치 세분화 작업이 완료되었는지 여부에 따라 내보내는 프로필이 최신 상태가 아닐 수 있습니다.
+고정된 시간에 활성화 작업을 실행하려면 **[!UICONTROL Scheduled]** 옵션을 사용하십시오. 이 옵션을 사용하면 Experience Platform 프로필 데이터를 매일 같은 시간에 내보낼 수 있습니다. 그러나 활성화 작업이 시작되기 전에 배치 세분화 작업이 완료되었는지 여부에 따라 내보내는 프로필이 최신 상태가 아닐 수 있습니다.
 
    ![일괄 처리 대상에 대한 활성화 흐름에서 예약된 옵션을 강조 표시하고 시간 선택기를 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -174,13 +174,13 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
    >
    >지난 24시간 내에 만들어지고 [일괄 처리 세분화](../../segmentation/methods/batch-segmentation.md)를 통해 평가된 대상을 매핑할 때 일별 내보내기 일정을 설정하여 빨라도 다음 날 시작하세요. 이렇게 하면 일일 일괄 처리 평가 작업이 먼저 실행되고 전체 대상 데이터를 내보내게 됩니다.
 
-3. 내보내기를 수행할 날짜 또는 간격을 선택하려면 **[!UICONTROL 날짜]** 선택기를 사용하십시오. 일별 내보내기의 경우 가장 좋은 방법은 다운스트림 플랫폼의 캠페인 기간에 맞춰 시작 및 종료 날짜를 설정하는 것입니다.
+3. 내보내기를 수행할 날짜 또는 간격을 선택하려면 **[!UICONTROL Date]** 선택기를 사용하십시오. 일별 내보내기의 경우 가장 좋은 방법은 다운스트림 플랫폼의 캠페인 기간에 맞춰 시작 및 종료 날짜를 설정하는 것입니다.
 
    >[!IMPORTANT]
    >
    > 내보내기 간격을 선택할 때 간격의 마지막 날은 내보내기에 포함되지 않습니다. 예를 들어, 1월 4일 - 11일 간격을 선택하면 마지막 파일 내보내기가 1월 10일에 수행됩니다.
 
-4. **[!UICONTROL 만들기]**&#x200B;를 선택하여 일정을 저장합니다.
+4. **[!UICONTROL Create]**&#x200B;을(를) 선택하여 일정을 저장합니다.
 
 ### 증분 파일 내보내기
 
@@ -189,7 +189,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 >title="파일 이름 구성"
 >abstract="파일 기반 대상의 경우 고유 파일 이름이 대상자당 생성됩니다. 파일 이름 편집기를 사용하여 고유 파일 이름을 만들고 편집하거나 기본 이름을 유지할 수 있습니다."
 
-**[!UICONTROL 증분 파일 내보내기]**&#x200B;를 선택하여 내보내기를 트리거합니다. 여기서 첫 번째 파일은 선택한 대상에 대한 모든 프로필 자격의 전체 스냅숏이고 후속 파일은 이전 내보내기 이후 증분 프로필 자격입니다.
+**[!UICONTROL Export incremental files]**&#x200B;을(를) 선택하여 내보내기를 트리거합니다. 첫 번째 파일은 선택한 대상에 대한 모든 프로필 자격의 전체 스냅숏이고 그 다음 파일은 이전 내보내기 이후 증분 프로필 자격입니다.
 
 >[!IMPORTANT]
 >
@@ -197,21 +197,21 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
 ![증분 파일 내보내기 전환이 선택되었습니다.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
-1. **[!UICONTROL 빈도]** 선택기를 사용하여 내보내기 빈도를 선택하십시오.
+1. **[!UICONTROL Frequency]** 선택기를 사용하여 내보내기 빈도를 선택하십시오.
 
-   * **[!UICONTROL 매일]**: 매일 지정한 시간에 매일 한 번씩 증분 파일 내보내기를 예약합니다.
-   * **[!UICONTROL 시간별]**: 3, 6, 8 또는 12시간마다 증분 파일 내보내기를 예약합니다.
+   * **[!UICONTROL Daily]**: 증분 파일 내보내기를 매일 지정한 시간에 한 번 예약합니다.
+   * **[!UICONTROL Hourly]**: 증분 파일 내보내기를 3, 6, 8 또는 12시간마다 예약합니다.
 
 
-2. 내보내기를 수행할 시간을 **[!UICONTROL 시간]** 선택기에서 [!DNL UTC] 형식으로 선택합니다.
+2. 내보내기를 수행할 시간을 **[!UICONTROL Time]** 형식으로 선택하려면 [!DNL UTC] 선택기를 사용하십시오.
 
-3. **[!UICONTROL 날짜]** 선택기를 사용하여 내보내기를 수행할 간격을 선택하십시오. 가장 좋은 방법은 다운스트림 플랫폼의 캠페인 기간에 맞춰 시작 및 종료 날짜를 설정하는 것입니다.
+3. **[!UICONTROL Date]** 선택기를 사용하여 내보내기를 수행할 간격을 선택하십시오. 가장 좋은 방법은 다운스트림 플랫폼의 캠페인 기간에 맞춰 시작 및 종료 날짜를 설정하는 것입니다.
 
    >[!IMPORTANT]
    >
    >간격의 마지막 날은 내보내기에 포함되지 않습니다. 예를 들어, 1월 4일 - 11일 간격을 선택하면 마지막 파일 내보내기가 1월 10일에 수행됩니다.
 
-4. **[!UICONTROL 만들기]**&#x200B;를 선택하여 일정을 저장합니다.
+4. **[!UICONTROL Create]**&#x200B;을(를) 선택하여 일정을 저장합니다.
 
 ### 파일 이름 구성 {#configure-file-names}
 
@@ -238,47 +238,47 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
 | 파일 이름 옵션 | 설명 |
 |---------|----------|
-| **[!UICONTROL 대상 이름]** | 내보낸 대상자의 이름입니다. |
-| **[!UICONTROL 날짜 및 시간]** | 파일이 생성된 시간의 `MMDDYYYY_HHMMSS` 형식 또는 UNIX 10자리 타임스탬프를 추가할 것인지 선택합니다. 증분 내보내기마다 파일에 동적 파일 이름이 생성되도록 하려면 다음 옵션 중 하나를 선택합니다. |
-| **[!UICONTROL 사용자 지정 텍스트]** | 파일 이름에 추가할 사용자 지정 텍스트입니다. |
-| **[!UICONTROL 대상 ID]** | 대상자를 내보내는 데 사용하는 대상 데이터 흐름의 ID입니다. |
-| **[!UICONTROL 대상 이름]** | 대상을 내보내는 데 사용하는 대상 데이터 흐름의 이름입니다. |
-| **[!UICONTROL 조직 이름]** | Experience Platform 내의 조직 이름입니다. |
-| **[!UICONTROL 샌드박스 이름]** | 대상을 내보내는 데 사용하는 샌드박스의 ID입니다. |
+| **[!UICONTROL Audience name]** | 내보낸 대상자의 이름입니다. |
+| **[!UICONTROL Date and time]** | 파일이 생성된 시간의 `MMDDYYYY_HHMMSS` 형식 또는 UNIX 10자리 타임스탬프를 추가할 것인지 선택합니다. 증분 내보내기마다 파일에 동적 파일 이름이 생성되도록 하려면 다음 옵션 중 하나를 선택합니다. |
+| **[!UICONTROL Custom text]** | 파일 이름에 추가할 사용자 지정 텍스트입니다. |
+| **[!UICONTROL Destination ID]** | 대상자를 내보내는 데 사용하는 대상 데이터 흐름의 ID입니다. |
+| **[!UICONTROL Destination name]** | 대상을 내보내는 데 사용하는 대상 데이터 흐름의 이름입니다. |
+| **[!UICONTROL Organization name]** | Experience Platform 내의 조직 이름입니다. |
+| **[!UICONTROL Sandbox name]** | 대상을 내보내는 데 사용하는 샌드박스의 ID입니다. |
 
 {style="table-layout:auto"}
 
-여러 파일 이름을 동시에 편집하려면 화면 왼쪽에 있는 확인란을 사용하여 대상자를 선택한 다음 **[!UICONTROL 파일 이름 편집]**&#x200B;을 선택합니다. 그러면 사용자가 구성한 파일 이름 옵션이 선택한 대상에 대해 내보낸 모든 파일에 적용됩니다.
+여러 파일 이름을 동시에 편집하려면 화면 왼쪽에 있는 확인란을 사용하여 대상자를 선택한 다음 **[!UICONTROL Edit file name]**&#x200B;을(를) 선택합니다. 그러면 사용자가 구성한 파일 이름 옵션이 선택한 대상에 대해 내보낸 모든 파일에 적용됩니다.
 
 ![선택한 여러 대상에 대한 파일 이름 편집 옵션을 보여 주는 Experience Platform 사용자 인터페이스의 이미지](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
-**[!UICONTROL 변경 내용 적용]**&#x200B;을 선택하여 선택 내용을 확인합니다.
+선택을 확인하려면 **[!UICONTROL Apply changes]**&#x200B;을(를) 선택하십시오.
 
 >[!IMPORTANT]
 > 
->**[!UICONTROL 날짜 및 시간]** 구성 요소를 선택하지 않으면 파일 이름은 정적이며 새로 내보낸 파일은 저장소 위치의 이전 파일을 각 내보내기로 덮어씁니다. 저장소 위치에서 이메일 마케팅 플랫폼으로 반복 가져오기 작업을 실행할 때 이 옵션이 권장됩니다.
+>**[!UICONTROL Date and Time]** 구성 요소를 선택하지 않으면 파일 이름은 정적이며 새로 내보낸 파일은 저장소 위치의 이전 파일을 각 내보내기로 덮어씁니다. 저장소 위치에서 이메일 마케팅 플랫폼으로 반복 가져오기 작업을 실행할 때 이 옵션이 권장됩니다.
 
-모든 대상을 구성했으면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 계속합니다.
+모든 대상을 구성했으면 계속하려면 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
 ## 매핑 {#mapping}
 
 이 단계에서는 대상 대상으로 내보낸 파일에 추가할 프로필 속성을 선택해야 합니다. 내보낼 프로필 속성 및 ID를 선택하려면 다음을 수행하십시오.
 
-1. **[!UICONTROL 매핑]** 페이지에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다.
+1. **[!UICONTROL Mapping]** 페이지에서 **[!UICONTROL Add new mapping]**&#x200B;을(를) 선택합니다.
 
    ![매핑 워크플로에서 강조 표시된 새 필드 컨트롤을 추가합니다.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
-1. **[!UICONTROL Source 필드]** 항목 오른쪽의 화살표를 선택합니다.
+1. **[!UICONTROL Source field]** 항목 오른쪽에 있는 화살표를 선택합니다.
 
    ![매핑 워크플로에서 강조 표시된 원본 필드 컨트롤을 선택하십시오.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
-1. **[!UICONTROL 소스 필드 선택]** 페이지에서 대상으로 내보낸 파일에 포함할 프로필 특성 및 ID를 선택한 다음 **[!UICONTROL 선택]**&#x200B;을 선택합니다.
+1. **[!UICONTROL Select source field]** 페이지에서 대상으로 내보낸 파일에 포함할 프로필 특성 및 ID를 선택한 다음 **[!UICONTROL Select]**&#x200B;을(를) 선택합니다.
 
    >[!TIP]
    > 
    >아래 이미지에 표시된 대로 검색 필드를 사용하여 선택 항목의 범위를 좁힐 수 있습니다.
 
-   **[!UICONTROL 데이터가 있는 필드만 표시]** 전환을 사용하여 값으로 채워진 스키마 필드만 표시합니다. 기본적으로 채워진 스키마 필드만 표시됩니다.
+   **[!UICONTROL Show only fields with data]** 전환을 사용하여 값으로 채워진 스키마 필드만 표시합니다. 기본적으로 채워진 스키마 필드만 표시됩니다.
 
    ![대상으로 내보낼 수 있는 프로필 특성을 표시하는 모달 창](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
 
@@ -291,7 +291,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
    ![대상으로 내보낼 수 있는 프로필 특성을 표시하는 모달 창](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
 
-1. **[!UICONTROL 대상 필드 선택]** 페이지에서 내보낸 파일에 원하는 헤더 이름을 입력한 다음 **[!UICONTROL 선택]**&#x200B;을 선택합니다.
+1. **[!UICONTROL Select target field]** 페이지에서 내보낸 파일에 원하는 헤더 이름을 입력한 다음 **[!UICONTROL Select]**&#x200B;을(를) 선택합니다.
 
    ![헤더의 친숙한 입력 이름을 표시하는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
 
@@ -341,8 +341,8 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
 [!DNL Experience Platform]에서 중복 제거 키를 사용하는 방법에는 세 가지가 있습니다.
 
-* 단일 ID 네임스페이스를 [!UICONTROL 중복 제거 키]&#x200B;(으)로 사용
-* [!DNL XDM] 프로필의 단일 프로필 특성을 [!UICONTROL 중복 제거 키]&#x200B;(으)로 사용
+* 단일 ID 네임스페이스를 [!UICONTROL deduplication key]&#x200B;(으)로 사용
+* [!DNL XDM] 프로필의 단일 프로필 특성을 [!UICONTROL deduplication key]&#x200B;(으)로 사용
 * [!DNL XDM] 프로필의 두 프로필 특성 조합을 복합 키로 사용
 
 >[!IMPORTANT]
@@ -466,7 +466,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 ### 타임스탬프가 동일한 프로필에 대한 중복 제거 동작 {#deduplication-same-timestamp}
 
-프로필을 파일 기반 대상으로 내보낼 때 중복 제거는 여러 프로필이 동일한 중복 제거 키와 동일한 참조 타임스탬프를 공유하는 경우 단 하나의 프로필만 내보내도록 할 수 있습니다. 이 타임스탬프는 프로필의 대상 멤버십 또는 ID 그래프가 마지막으로 업데이트된 순간을 나타냅니다. 프로필을 업데이트하고 내보내는 방법에 대한 자세한 내용은 [프로필 내보내기 동작](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) 문서를 참조하십시오.
+프로필을 파일 기반 대상으로 내보낼 때 중복 제거는 여러 프로필이 동일한 중복 제거 키와 동일한 참조 타임스탬프를 공유하는 경우 단 하나의 프로필만 내보내도록 할 수 있습니다. 이 타임스탬프는 프로필의 대상 멤버십 또는 ID 그래프가 마지막으로 업데이트된 순간을 나타냅니다. 프로필을 업데이트하고 내보내는 방법에 대한 자세한 내용은 [프로필 내보내기 동작](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) 문서를 참조하십시오.
 
 #### 주요 고려 사항
 
@@ -503,11 +503,11 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 ### 알려진 제한 사항 {#known-limitations}
 
-새 **[!UICONTROL 매핑]** 페이지에 다음과 같은 알려진 제한 사항이 있습니다.
+새 **[!UICONTROL Mapping]** 페이지에 다음과 같은 알려진 제한 사항이 있습니다.
 
 #### 대상 멤버십 속성은 매핑 워크플로를 통해 선택할 수 없습니다.
 
-알려진 제한으로 인해 현재 **[!UICONTROL 필드 선택]** 창을 사용하여 `segmentMembership.seg_namespace.seg_id.status`을(를) 파일 내보내기에 추가할 수 없습니다. 대신 아래와 같이 `xdm: segmentMembership.seg_namespace.seg_id.status` 값을 스키마 필드에 수동으로 붙여넣어야 합니다.
+알려진 제한으로 인해 현재 **[!UICONTROL Select field]** 창을 사용하여 파일 내보내기에 `segmentMembership.seg_namespace.seg_id.status`을(를) 추가할 수 없습니다. 대신 아래와 같이 `xdm: segmentMembership.seg_namespace.seg_id.status` 값을 스키마 필드에 수동으로 붙여넣어야 합니다.
 
 ![활성화 워크플로의 매핑 단계에서 대상 멤버십 해결 방법을 보여 주는 화면 기록입니다.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
@@ -521,14 +521,14 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 파일 내보내기는 `segmentMembership.seg_namespace.seg_id.status`의 선택 여부에 따라 다음과 같이 달라집니다.
 
-* `segmentMembership.seg_namespace.seg_id.status` 필드를 선택하면 내보낸 파일에는 초기 전체 스냅숏에 있는 **[!UICONTROL Active]** 구성원과 후속 증분 내보내기에 새로 **[!UICONTROL Active]** 및 **[!UICONTROL Expired]** 구성원이 포함됩니다.
+* `segmentMembership.seg_namespace.seg_id.status` 필드를 선택하면 내보낸 파일에 초기 전체 스냅숏에 **[!UICONTROL Active]** 멤버가 포함되고 후속 증분 내보내기에서 새로 **[!UICONTROL Active]** 및 **[!UICONTROL Expired]** 멤버가 포함됩니다.
 * `segmentMembership.seg_namespace.seg_id.status` 필드를 선택하지 않으면 내보낸 파일에는 초기 전체 스냅숏과 이후 증분 내보내기에서 **[!UICONTROL Active]** 멤버만 포함됩니다.
 
 파일 기반 대상에 대한 [프로필 내보내기 동작](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations)에 대해 자세히 알아보십시오.
 
 #### 내보내기를 위해 현재 ID 네임스페이스를 선택할 수 없습니다.
 
-아래 이미지에 표시된 대로 내보낼 ID 네임스페이스를 선택하는 것은 현재 지원되지 않습니다. 내보낼 ID 네임스페이스를 선택하면 **[!UICONTROL 검토]** 단계에서 오류가 발생합니다.
+아래 이미지에 표시된 대로 내보낼 ID 네임스페이스를 선택하는 것은 현재 지원되지 않습니다. 내보낼 ID 네임스페이스를 선택하면 **[!UICONTROL Review]** 단계에서 오류가 발생합니다.
 
 ![ID 내보내기를 표시하는 지원되지 않는 매핑입니다.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
@@ -540,21 +540,21 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 >[!IMPORTANT]
 > 
->카탈로그의 모든 클라우드 저장소 대상은 이 섹션에 설명된 [[!UICONTROL 특성 선택] 단계를 대체하는 개선된 &#x200B;](#mapping)매핑&#x200B;**[!UICONTROL 단계]**&#x200B;를 볼 수 있습니다.
+>카탈로그의 모든 클라우드 저장소 대상은 이 섹션에서 설명한 [[!UICONTROL Mapping] 단계를 대체하는 향상된 ](#mapping) 단계&#x200B;**[!UICONTROL Select attributes]**&#x200B;을(를) 볼 수 있습니다.
 >
->이 **[!UICONTROL 특성 선택]** 단계는 Adobe Campaign, Oracle Responsys, Oracle Eloqua 및 Salesforce Marketing Cloud 이메일 마케팅 대상에 대해 계속 표시됩니다.
+>이 **[!UICONTROL Select attributes]** 단계는 Adobe Campaign, Oracle Responsys, Oracle Eloqua 및 Salesforce Marketing Cloud 이메일 마케팅 대상에 여전히 표시됩니다.
 
 프로필 기반 대상의 경우 대상 대상으로 전송할 프로필 속성을 선택해야 합니다.
 
-1. **[!UICONTROL 특성 선택]** 페이지에서 **[!UICONTROL 새 필드 추가]**&#x200B;를 선택합니다.
+1. **[!UICONTROL Select attributes]** 페이지에서 **[!UICONTROL Add new field]**&#x200B;을(를) 선택합니다.
 
    ![새 필드 추가 단추를 강조 표시하는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
 
-2. **[!UICONTROL 스키마 필드]** 항목 오른쪽의 화살표를 선택합니다.
+2. **[!UICONTROL Schema field]** 항목 오른쪽에 있는 화살표를 선택합니다.
 
    ![소스 필드를 선택하는 방법을 강조 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
-3. **[!UICONTROL 필드 선택]** 페이지에서 대상으로 보낼 XDM 특성 또는 ID 네임스페이스를 선택한 다음 **[!UICONTROL 선택]**&#x200B;을(를) 선택합니다.
+3. **[!UICONTROL Select field]** 페이지에서 대상으로 보낼 XDM 특성 또는 ID 네임스페이스를 선택한 다음 **[!UICONTROL Select]**&#x200B;을(를) 선택합니다.
 
    ![소스 필드로 사용할 수 있는 다양한 필드를 보여 주는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
@@ -568,13 +568,13 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 >[!IMPORTANT]
 >
->알려진 제한으로 인해 현재 **[!UICONTROL 필드 선택]** 창을 사용하여 `segmentMembership.seg_namespace.seg_id.status`을(를) 파일 내보내기에 추가할 수 없습니다. 대신 아래와 같이 `xdm: segmentMembership.seg_namespace.seg_id.status` 값을 스키마 필드에 수동으로 붙여넣어야 합니다.
+>알려진 제한으로 인해 현재 **[!UICONTROL Select field]** 창을 사용하여 파일 내보내기에 `segmentMembership.seg_namespace.seg_id.status`을(를) 추가할 수 없습니다. 대신 아래와 같이 `xdm: segmentMembership.seg_namespace.seg_id.status` 값을 스키마 필드에 수동으로 붙여넣어야 합니다.
 >
 >![활성화 워크플로의 매핑 단계에서 대상 멤버십 해결 방법을 보여 주는 화면 기록입니다.](../assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 파일 내보내기는 `segmentMembership.seg_namespace.seg_id.status`의 선택 여부에 따라 다음과 같이 달라집니다.
 
-* `segmentMembership.seg_namespace.seg_id.status` 필드를 선택하면 내보낸 파일에는 초기 전체 스냅숏에 **[!UICONTROL Active]** 구성원이 포함되고 후속 증분 내보내기에 **[!UICONTROL Active]** 및 **[!UICONTROL Expired]** 구성원이 포함됩니다.
+* `segmentMembership.seg_namespace.seg_id.status` 필드를 선택하면 내보낸 파일에 초기 전체 스냅숏에 **[!UICONTROL Active]** 구성원이 포함되고 후속 증분 내보내기에 **[!UICONTROL Active]** 및 **[!UICONTROL Expired]** 구성원이 포함됩니다.
 * `segmentMembership.seg_namespace.seg_id.status` 필드를 선택하지 않으면 내보낸 파일에는 초기 전체 스냅숏과 이후 증분 내보내기에서 **[!UICONTROL Active]** 멤버만 포함됩니다.
 
 ## 보강 속성 선택 {#select-enrichment-attributes}
@@ -586,28 +586,28 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 >[!IMPORTANT]
 >
->이 단계는 **[!UICONTROL 대상자 선택]** 단계 동안 [사용자 지정 업로드](#select-audiences)대상자를 선택한 경우에만 표시됩니다.
+>이 단계는 **[!UICONTROL Custom upload]**&#x200B;대상자 선택[ 단계 동안 ](#select-audiences)대상자를 선택한 경우에만 표시됩니다.
 
-데이터 보강 속성은 **[!UICONTROL 사용자 지정 업로드]**(으)로 Experience Platform에서 수집된 사용자 지정 업로드된 대상에 해당합니다. 이 단계에서는 선택한 각 외부 대상에 대해 대상으로 내보낼 속성을 선택할 수 있습니다.
+데이터 보강 속성은 **[!UICONTROL Custom uploads]**(으)로 Experience Platform에서 수집된 사용자 지정 업로드 대상자에 해당합니다. 이 단계에서는 선택한 각 외부 대상에 대해 대상으로 내보낼 속성을 선택할 수 있습니다.
 
 데이터 보강 특성 선택 단계를 보여 주는 ![UI 이미지입니다.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes-step.png)
 
 각 외부 대상에 대한 데이터 보강 속성을 선택하려면 아래 단계를 따르십시오.
 
-1. **[!UICONTROL 데이터 보강 특성]** 열에서 ![편집 단추](/help/images/icons/edit.png)(편집) 단추를 선택합니다.
-1. **[!UICONTROL 데이터 보강 특성 추가]**&#x200B;를 선택합니다. 새 빈 스키마 필드가 표시됩니다.
+1. **[!UICONTROL Enrichment attributes]** 열에서 ![편집 단추](/help/images/icons/edit.png)(편집) 단추를 선택합니다.
+1. **[!UICONTROL Add enrichment attribute]**을(를) 선택합니다. 새 빈 스키마 필드가 표시됩니다.
    데이터 보강 특성 모달 화면을 표시하는 ![UI 이미지입니다.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
 1. 빈 필드 오른쪽의 버튼을 선택하여 필드 선택 화면을 엽니다.
 1. 대상자를 위해 내보낼 속성을 선택합니다.
    데이터 보강 특성 목록을 표시하는 ![UI 이미지입니다.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
-1. 내보낼 특성을 모두 추가한 후 **[!UICONTROL 저장 및 닫기]**&#x200B;를 선택합니다.
+1. 내보낼 특성을 모두 추가한 후 **[!UICONTROL Save and close]**&#x200B;을(를) 선택합니다.
 1. 각 외부 대상에 대해 이 단계를 반복합니다.
 
-특성을 내보내지 않고 대상에 외부 대상을 활성화하려면 **[!UICONTROL 데이터 보강 특성 제외]** 전환을 사용하도록 설정하십시오. 이 옵션을 사용하면 외부 대상에서 프로필을 내보내지만 해당 속성이 대상으로 전송되지 않습니다.
+특성을 내보내지 않고 외부 대상을 대상으로 활성화하려면 **[!UICONTROL Exclude enrichment attributes]** 토글을 활성화하십시오. 이 옵션을 사용하면 외부 대상에서 프로필을 내보내지만 해당 속성이 대상으로 전송되지 않습니다.
 
 ![데이터 보강 특성 제외 전환을 보여 주는 UI 이미지입니다.](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)
 
-**[!UICONTROL 다음]**&#x200B;을(를) 선택하여 [검토](#review) 단계로 이동합니다.
+**[!UICONTROL Next]**&#x200B;검토[ 단계로 이동하려면 ](#review)을(를) 선택하십시오.
 
 ## 검토 {#review}
 
@@ -620,7 +620,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 >
 > 예를 들어 `person.name.firstName` 필드에 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있는 경우 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은 [Adobe Experience Platform의 데이터 거버넌스](../../rtcdp/privacy/data-governance-overview.md#destinations)를 참조하십시오.
 
-**[!UICONTROL 검토]** 페이지에서 선택한 항목에 대한 요약을 볼 수 있습니다. 흐름을 중단하려면 **[!UICONTROL 취소]**&#x200B;를 선택하고, 설정을 수정하려면 **[!UICONTROL 뒤로]**&#x200B;를 선택하고, 선택을 확인하고 데이터를 대상으로 보내려면 **[!UICONTROL 완료]**&#x200B;를 선택하십시오.
+**[!UICONTROL Review]** 페이지에서 선택 항목의 요약을 볼 수 있습니다. **[!UICONTROL Cancel]**&#x200B;을(를) 선택하여 흐름을 분류하거나, **[!UICONTROL Back]**&#x200B;을(를) 선택하여 설정을 수정하거나, **[!UICONTROL Finish]**&#x200B;을(를) 선택하여 선택을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
 ![검토 단계에 표시된 선택 요약입니다.](../assets/ui/activate-batch-profile-destinations/review.png)
 
@@ -629,13 +629,13 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_viewApplicableConsentPolicies"
 >title="해당 동의 정책 보기"
->abstract="조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;를 구매한 경우 **[!UICONTROL 해당 동의 정책 보기]**&#x200B;를 선택하여 적용된 동의 정책을 조회하고 그 결과로 활성화에 포함된 프로필 수를 확인합니다. 기업이 위에서 언급한 SKU에 액세스할 수 없는 경우 이 컨트롤은 비활성화됩니다."
+>abstract="조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;을(를) 구입한 경우 **[!UICONTROL View applicable consent policies]**&#x200B;을(를) 선택하여 적용되는 동의 정책 및 그 결과로 활성화에 포함되는 프로필 수를 확인합니다. 기업이 위에서 언급한 SKU에 액세스할 수 없는 경우 이 컨트롤은 비활성화됩니다."
 
-조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;를 구매한 경우 **[!UICONTROL 해당 동의 정책 보기]**&#x200B;를 선택하여 적용된 동의 정책을 조회하고 그 결과로 활성화에 포함된 프로필 수를 확인합니다. 자세한 내용은 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)를 참조하세요.
+조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;을(를) 구입한 경우 **[!UICONTROL View applicable consent policies]**&#x200B;을(를) 선택하여 적용되는 동의 정책 및 그 결과로 활성화에 포함되는 프로필 수를 확인합니다. 자세한 내용은 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)를 참조하세요.
 
 ### 데이터 사용 정책 확인 {#data-usage-policy-checks}
 
-**[!UICONTROL 검토]** 단계에서 Experience Platform은 데이터 사용 정책 위반도 확인합니다. 다음은 정책이 위반되는 예입니다. 위반을 해결할 때까지 대상 활성화 워크플로우를 완료할 수 없습니다. 정책 위반을 해결하는 방법에 대한 자세한 내용은 데이터 거버넌스 설명서 섹션에서 [데이터 사용 정책 위반](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation)을 읽어 보십시오.
+**[!UICONTROL Review]** 단계에서 Experience Platform은 데이터 사용 정책 위반도 확인합니다. 다음은 정책이 위반되는 예입니다. 위반을 해결할 때까지 대상 활성화 워크플로우를 완료할 수 없습니다. 정책 위반을 해결하는 방법에 대한 자세한 내용은 데이터 거버넌스 설명서 섹션에서 [데이터 사용 정책 위반](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation)을 읽어 보십시오.
 
 ![활성화 워크플로에 표시된 데이터 정책 위반 예입니다.](../assets/common/data-policy-violation.png)
 
@@ -645,7 +645,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 ![검토 단계에서 사용 가능한 대상 필터를 보여 주는 화면 기록입니다.](../assets/ui/activate-batch-profile-destinations/filter-audiences-batch-review.gif)
 
-선택에 만족하고 정책 위반이 발견되지 않은 경우 **[!UICONTROL 완료]**&#x200B;를 선택하여 선택을 확인하고 데이터를 대상으로 보내기 시작합니다.
+선택에 만족하고 정책 위반이 발견되지 않은 경우 **[!UICONTROL Finish]**&#x200B;을(를) 선택하여 선택을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
 ## 대상자 활성화 확인 {#verify}
 

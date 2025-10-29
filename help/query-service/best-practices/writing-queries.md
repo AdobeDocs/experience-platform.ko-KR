@@ -5,7 +5,7 @@ title: 쿼리 서비스의 쿼리 실행에 대한 일반 지침
 type: Tutorial
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 쿼리를 작성할 때 알아야 할 중요한 세부 사항에 대해 간략하게 설명합니다.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 2%
@@ -86,7 +86,7 @@ LIMIT 1
 
 ```console
               endUserIds._experience.mcid   
---------------------------------------------------------
+|--------------------------------------------------------
  (48168239533518554367684086979667672499,"(ECID)",true)
 (1 row)
 ```
@@ -109,7 +109,7 @@ LIMIT 1
 
 ```console
      endUserIds._experience.mcid.id 
-----------------------------------------
+|----------------------------------------
  48168239533518554367684086979667672499
 (1 row)
 ```
@@ -169,7 +169,7 @@ FROM
 
 ### 역따옴표
 
-점 표기법 구문을 사용할 때 **only** 예약된 열 이름을 이스케이프 처리하는 데 역따옴표 `` ` ``이(가) 사용됩니다. 예를 들어 `order`은(는) SQL에서 예약어이므로 `commerce.order` 필드에 액세스하려면 역따옴표를 사용해야 합니다.
+점 표기법 구문을 사용할 때 `` ` ``only **예약된 열 이름을 이스케이프 처리하는 데 역따옴표**&#x200B;이(가) 사용됩니다. 예를 들어 `order`은(는) SQL에서 예약어이므로 `commerce.order` 필드에 액세스하려면 역따옴표를 사용해야 합니다.
 
 ```sql
 SELECT 
@@ -210,7 +210,7 @@ LIMIT 10
 ```sql
              List of relations
  Schema |       Name      | Type  |  Owner   
---------+-----------------+-------+----------
+|--------+-----------------+-------+----------
  public | luma_midvalues  | table | postgres
  public | luma_postvalues | table | postgres
 (2 rows)
@@ -222,7 +222,7 @@ LIMIT 10
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
------------------+--------------------------+----------------+-------------+----------
+|-----------------+--------------------------+----------------+-------------+----------
  luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues | 5c86b896b3c162151785b43c | Luma midValues |             | false
 (2 rows)
@@ -232,12 +232,12 @@ LIMIT 10
 
 테이블 내의 스키마에 대한 자세한 정보를 보려면 `\d {TABLE_NAME}` 명령을 사용할 수 있습니다. 여기서 `{TABLE_NAME}`은(는) 보려는 스키마 정보가 있는 테이블의 이름입니다.
 
-다음 예제에서는 `\d luma_midvalues`을(를) 사용하여 표시되는 `luma_midvalues` 테이블에 대한 스키마 정보를 보여 줍니다.
+다음 예제에서는 `luma_midvalues`을(를) 사용하여 표시되는 `\d luma_midvalues` 테이블에 대한 스키마 정보를 보여 줍니다.
 
 ```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
--------------------+-----------------------------+-----------+----------+---------
+|-------------------+-----------------------------+-----------+----------+---------
  timestamp         | timestamp                   |           |          | 
  _id               | text                        |           |          | 
  productlistitems  | anyarray                    |           |          | 
@@ -262,7 +262,7 @@ LIMIT 10
 ```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
-----------------+-----------------------------------+-----------+----------+---------
+|----------------+-----------------------------------+-----------+----------+---------
  webpagedetails | luma_midvalues_web_webpagedetails |           |          | 
  webreferrer    | web_webreferrer                   |           |          | 
 ```

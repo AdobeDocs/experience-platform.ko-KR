@@ -2,7 +2,7 @@
 title: Ad Hoc 데이터 세트에서 기본 Id 설정
 description: Adobe Experience Platform Query Service를 사용하면 SQL ALTER TABLE 명령을 통해 직접 임시 스키마 데이터 세트 필드에 ID 또는 기본 ID를 설정할 수 있습니다. 이 문서에서는 ALTER TABLE 명령을 사용하여 기본 ID 또는 보조 ID를 설정하는 방법에 대해 설명합니다.
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Adobe Experience Platform Query Service를 사용하면 SQL `ALTER TABLE` 명령에 대한 제약 조건을 사용하여 데이터 집합 열을 기본 또는 보조 ID로 표시할 수 있습니다. 이 기능을 사용하여 플래그가 지정된 필드가 데이터 개인 정보 보호 요구 사항과 일치하도록 할 수 있습니다. 이 명령을 사용하면 SQL을 통해 직접 기본 및 보조 ID 테이블 열에 대한 제약 조건을 추가하거나 삭제할 수 있습니다.
 
-## 시작하기
+## 시작
 
 데이터 집합 열에 기본 또는 보조 ID로 레이블을 지정하려면 `ALTER TABLE` SQL 명령에 대한 이해와 데이터 개인 정보 보호 요구 사항에 대한 충분한 이해가 필요합니다. 이 문서를 계속하기 전에 다음 설명서를 검토하십시오.
 
@@ -44,7 +44,7 @@ ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
 
 **예**
 
-다음 예제에서는 기존 `t1` 테이블에서 `c1` 열에 기본 ID 레이블을 지정하는 요구 사항을 제거합니다.
+다음 예제에서는 기존 `c1` 테이블에서 `t1` 열에 기본 ID 레이블을 지정하는 요구 사항을 제거합니다.
 
 ```sql
 ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
@@ -68,7 +68,7 @@ ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 
 ```console
  tableName | columnName | datatype | namespace | ifPrimary
------------+------------+----------+-----------+----------
+|-----------+------------+----------+-----------+----------
 (0 rows)
 ```
 

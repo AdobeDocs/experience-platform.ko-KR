@@ -1,13 +1,13 @@
 ---
 title: Reactor API에서 개인 확장 패키지 공유
 description: Reactor API에서 다른 비즈니스가 비공개 확장 패키지를 공유하도록 승인하는 방법에 대해 알아봅니다.
-source-git-commit: ea9a2bb00d3ce59e28ea4cda0d30945e77aa95cb
+exl-id: 3300a630-6d22-46e1-8b1b-b5d12a3ea44c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 2%
 
 ---
-
 
 # 비공개 확장 패키지 공유
 
@@ -66,7 +66,7 @@ curl -X POST \
 
 ## 승인 {#approve-authorization}
 
-인증을 승인하려면 `manage_properties` 권한이 있어야 합니다. 승인된 회사는 인증의 `ID`을(를) 포함한 확장 패키지 사용 권한 부여에 PATCH 요청을 보내고 상태를 `approved`(으)로 설정해야 합니다.
+인증을 승인하려면 `manage_properties` 권한이 있어야 합니다. 승인된 회사는 인증의 `ID`을(를) 포함한 확장 패키지 사용 인증으로 PATCH 요청을 보내고 상태를 `approved`(으)로 설정해야 합니다.
 
 **API 형식**
 
@@ -94,10 +94,10 @@ curl -X PATCH \
   -d '{
         "data": {
           "attributes": {
-	          "state": "approved"
-	        },
-	        "id": ":extension_package_usage_authorization_id",
-	        "type": "extension_package_usage_authorizations"
+            "state": "approved"
+            },
+            "id": ":extension_package_usage_authorization_id",
+            "type": "extension_package_usage_authorizations"
         }
       }
 ```

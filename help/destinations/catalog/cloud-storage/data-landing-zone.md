@@ -3,9 +3,9 @@ title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 대상자를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 4eef1804d6974fd54f5e74e0efe62257190f408b
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '1976'
 ht-degree: 2%
 
 ---
@@ -27,10 +27,10 @@ Experience Platform에서는 [!DNL Data Landing Zone] 컨테이너에 업로드�
 
 ![클라우드 지원에 따라 데이터 랜딩 영역 대상의 구현이 어떻게 다른지를 보여 주는 다이어그램입니다.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png "클라우드 지원을 통한 데이터 랜딩 영역 대상 구현"){zoomable="yes"}
 
-## API 또는 UI를 통해 [!UICONTROL 데이터 랜딩 영역] 저장소에 연결합니다. {#connect-api-or-ui}
+## API 또는 UI를 통해 [!UICONTROL Data Landing Zone] 저장소에 연결합니다. {#connect-api-or-ui}
 
-* Experience Platform 사용자 인터페이스를 사용하여 [!UICONTROL 데이터 랜딩 영역] 저장소 위치에 연결하려면 아래의 [대상에 연결](#connect) 및 [이 대상에 대상 활성화](#activate) 섹션을 읽어 보십시오.
-* 프로그래밍 방식으로 [!UICONTROL 데이터 랜딩 영역] 저장소 위치에 연결하려면 흐름 서비스 API 자습서를 사용하여 [파일 기반 대상에 대상 활성화](../../api/activate-segments-file-based-destinations.md)를 읽어 보십시오.
+* Experience Platform 사용자 인터페이스를 사용하여 [!UICONTROL Data Landing Zone] 저장소 위치에 연결하려면 아래의 [대상에 연결](#connect) 및 [이 대상에 대상 활성화](#activate) 섹션을 참조하십시오.
+* 프로그래밍 방식으로 [!UICONTROL Data Landing Zone] 저장소 위치에 연결하려면 흐름 서비스 API 자습서를 사용하여 [파일 기반 대상에 대상 활성화](../../api/activate-segments-file-based-destinations.md)를 읽어 보십시오.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -48,9 +48,9 @@ Experience Platform에서는 [!DNL Data Landing Zone] 컨테이너에 업로드�
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | [대상 활성화 워크플로](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)의 프로필 특성 선택 화면에서 선택한 대로 적용 가능한 스키마 필드(예: PPID)와 함께 세그먼트의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. [일괄 파일 기반 대상](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
+|---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL Profile-based]** | [대상 활성화 워크플로](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)의 프로필 특성 선택 화면에서 선택한 대로 적용 가능한 스키마 필드(예: PPID)와 함께 세그먼트의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL Batch]** | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. [일괄 파일 기반 대상](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -71,7 +71,7 @@ Experience Platform에서는 [!DNL Data Landing Zone] 컨테이너에 업로드�
 
 >[!AVAILABILITY]
 >
->이 섹션은 Microsoft Azure에서 실행되는 Experience Platform 구현에 적용됩니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/landing/multi-cloud)를 참조하세요.
+>이 섹션은 Microsoft Azure에서 실행되는 Experience Platform 구현에 적용됩니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
 
 [!DNL Azure Storage Explorer] 또는 명령줄 인터페이스를 통해 컨테이너에 파일을 읽고 쓸 수 있습니다.
 
@@ -210,7 +210,7 @@ curl -X POST \
 
 >[!AVAILABILITY]
 >
->이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/landing/multi-cloud)를 참조하세요.
+>이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
 
 AWS에서 프로비전된 [!DNL Data Landing Zone] 인스턴스에 대한 자격 증명을 가져오려면 아래 작업을 수행하십시오. 그런 다음 원하는 클라이언트를 사용하여 [!DNL Data Landing Zone] 인스턴스에 연결합니다.
 
@@ -280,26 +280,26 @@ curl --request GET \
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
-이 대상에 연결하려면 [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ko)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
+이 대상에 연결하려면 [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상으로 인증 {#authenticate}
 
-[!DNL Data Landing Zone]필수 구성 요소[!DNL Azure Storage Explorer] 섹션에 설명된 대로 [&#x200B; 컨테이너를 &#x200B;](#prerequisites)에 연결했는지 확인하십시오. [!DNL Data Landing Zone]은(는) Adobe에서 프로비저닝한 스토리지이므로 대상에 인증하기 위해 Experience Platform UI에서 추가 단계를 수행할 필요가 없습니다.
+[!DNL Data Landing Zone]필수 구성 요소[!DNL Azure Storage Explorer] 섹션에 설명된 대로 [ 컨테이너를 ](#prerequisites)에 연결했는지 확인하십시오. [!DNL Data Landing Zone]은(는) Adobe에서 프로비저닝한 스토리지이므로 대상에 인증하기 위해 Experience Platform UI에서 추가 단계를 수행할 필요가 없습니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-* **[!UICONTROL 암호화 키]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
+* **[!UICONTROL Encryption key]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지입니다.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
-* **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력하십시오.
-* **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
-* **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력하십시오.
-* **[!UICONTROL 파일 형식]**: 내보낸 파일에 Experience Platform에서 사용할 형식을 선택하십시오. [!UICONTROL CSV] 옵션을 선택할 때 [파일 서식 옵션을 구성](../../ui/batch-destinations-file-formatting-options.md)할 수도 있습니다.
-* **[!UICONTROL 압축 형식]**: Experience Platform에서 내보낸 파일에 사용할 압축 형식을 선택합니다.
-* **[!UICONTROL 매니페스트 파일 포함]**: 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함된 매니페스트 JSON 파일을 내보내기에 포함하려면 이 옵션을 켜십시오. 매니페스트의 이름은 `manifest-<<destinationId>>-<<dataflowRunId>>.json` 형식을 사용하여 지정합니다. [샘플 매니페스트 파일](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)을(를) 봅니다. 매니페스트 파일에는 다음 필드가 포함되어 있습니다.
+* **[!UICONTROL Name]**: 이 대상의 기본 이름을 입력하십시오.
+* **[!UICONTROL Description]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
+* **[!UICONTROL Folder path]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력하십시오.
+* **[!UICONTROL File type]**: 내보낸 파일에 Experience Platform에서 사용할 형식을 선택하십시오. [!UICONTROL CSV] 옵션을 선택할 때 [파일 서식 옵션을 구성](../../ui/batch-destinations-file-formatting-options.md)할 수도 있습니다.
+* **[!UICONTROL Compression format]**: 내보낸 파일에 Experience Platform에서 사용해야 하는 압축 형식을 선택합니다.
+* **[!UICONTROL Include manifest file]**: 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함된 매니페스트 JSON 파일을 내보내기에 포함하려면 이 옵션을 켜십시오. 매니페스트의 이름은 `manifest-<<destinationId>>-<<dataflowRunId>>.json` 형식을 사용하여 지정합니다. [샘플 매니페스트 파일](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)을(를) 봅니다. 매니페스트 파일에는 다음 필드가 포함되어 있습니다.
    * `flowRunId`: 내보낸 파일을 생성한 [데이터 흐름 실행](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
    * `scheduledTime`: 파일을 내보낸 시간(UTC)입니다.
    * `exportResults.sinkPath`: 내보낸 파일이 저장된 저장소 위치의 경로입니다.
@@ -310,24 +310,24 @@ curl --request GET \
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상에 대한 대상자 활성화에 대한 지침은 [대상자 데이터를 일괄 프로필 내보내기 대상으로 활성화](../../ui/activate-batch-profile-destinations.md)를 참조하십시오.
 
 ### 예약
 
-**[!UICONTROL 예약]** 단계에서 [&#x200B; 대상에 대해 &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)내보내기 일정을 설정[!DNL Data Landing Zone]할 수 있으며 [내보낸 파일의 이름을 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)할 수도 있습니다.
+**[!UICONTROL Scheduling]** 단계에서는 [ 대상에 대해 ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)내보내기 일정을 설정[!DNL Data Landing Zone]할 수 있으며 [내보낸 파일의 이름을 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)할 수도 있습니다.
 
 ### 속성 및 ID 매핑 {#map}
 
-**[!UICONTROL 매핑]** 단계에서는 프로필에 내보낼 특성 및 ID 필드를 선택할 수 있습니다. 내보낸 파일의 헤더를 원하는 이름으로 변경하도록 선택할 수도 있습니다. 자세한 내용은 일괄 처리 대상 활성화 UI 자습서에서 [매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 참조하십시오.
+**[!UICONTROL Mapping]** 단계에서는 프로필에 내보낼 특성 및 ID 필드를 선택할 수 있습니다. 내보낸 파일의 헤더를 원하는 이름으로 변경하도록 선택할 수도 있습니다. 자세한 내용은 일괄 처리 대상 활성화 UI 자습서에서 [매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 참조하십시오.
 
 ## 성공적인 데이터 내보내기 유효성 검사 {#exported-data}
 

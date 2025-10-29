@@ -4,7 +4,7 @@ title: 모델 작성 SDK을 사용하여 기능 파이프라인 생성
 type: Tutorial
 description: Adobe Experience Platform을 사용하면 Sensei Machine Learning Framework 런타임을 통해 규모에 맞게 기능 엔지니어링을 수행하는 사용자 지정 기능 파이프라인을 빌드하고 만들 수 있습니다. 이 문서에서는 기능 파이프라인에 있는 다양한 클래스에 대해 설명하고 PySpark의 모델 작성 SDK을 사용하여 사용자 정의 기능 파이프라인을 만들기 위한 단계별 자습서를 제공합니다.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 0%
@@ -37,9 +37,10 @@ Adobe Experience Platform을 사용하면 Sensei Machine Learning Framework 런�
 6. 모델은 채점 데이터 세트로 변환됩니다.
 7. 그런 다음 출력의 관심 있는 열을 선택하고 관련 데이터가 있는 [!DNL Experience Platform]에 다시 저장합니다.
 
-## 시작하기
+## 시작
 
 조직에서 배합식을 실행하려면 다음이 필요합니다.
+
 - 입력 데이터 세트.
 - 데이터 세트의 스키마.
 - 변환된 스키마와 해당 스키마를 기반으로 하는 빈 데이터 세트.
@@ -404,11 +405,11 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### 기능 파이프라인 엔진 만들기 {#create-engine-api}
 
-도커 이미지 위치가 있으면 `/engines`에 대한 POST를 수행하여 [!DNL Sensei Machine Learning] API를 사용하여 [기능 파이프라인 엔진을 만들 수 있습니다](../api/engines.md#feature-pipeline-docker). 기능 파이프라인 엔진을 생성하면 엔진 고유 식별자(`id`)가 제공됩니다. 계속하기 전에 이 값을 저장하십시오.
+도커 이미지 위치가 있으면 [에 대한 POST를 수행하여 ](../api/engines.md#feature-pipeline-docker) API를 사용하여 [!DNL Sensei Machine Learning]기능 파이프라인 엔진을 만들 수 있습니다`/engines`. 기능 파이프라인 엔진을 생성하면 엔진 고유 식별자(`id`)가 제공됩니다. 계속하기 전에 이 값을 저장하십시오.
 
 ### 인스턴스 만들기 {#create-mlinstance}
 
-새로 만든 `engineID`을(를) 사용하여 `/mlInstance` 끝점에 대한 POST 요청을 만들어 [MLIstance를 만들고](../api/mlinstances.md#create-an-mlinstance)해야 합니다. 성공적인 응답은 다음 API 호출에 사용된 고유 식별자(`id`)를 포함하여 새로 생성된 MLInstance의 세부 정보가 포함된 페이로드를 반환합니다.
+새로 만든 `engineID`을(를) 사용하여 [ 끝점에 대한 POST 요청을 만들어 ](../api/mlinstances.md#create-an-mlinstance)MLIstance를 만들고`/mlInstance`해야 합니다. 성공적인 응답은 다음 API 호출에 사용된 고유 식별자(`id`)를 포함하여 새로 생성된 MLInstance의 세부 정보가 포함된 페이로드를 반환합니다.
 
 ### 실험 만들기 {#create-experiment}
 
@@ -416,15 +417,15 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### 실험 실행 기능 파이프라인 작업 지정 {#specify-feature-pipeline-task}
 
-실험을 만든 후에는 실험의 모드를 `featurePipeline`(으)로 변경해야 합니다. 모드를 변경하려면 `EXPERIMENT_ID`을(를) 사용하여 [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring)에 추가 POST를 만들고 본문에서 `{ "mode":"featurePipeline"}`을(를) 전송하여 기능 파이프라인 실험 실행을 지정하십시오.
+실험을 만든 후에는 실험의 모드를 `featurePipeline`(으)로 변경해야 합니다. 모드를 변경하려면 [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring)을(를) 사용하여 `EXPERIMENT_ID`에 추가 POST를 만들고 본문에서 `{ "mode":"featurePipeline"}`을(를) 전송하여 기능 파이프라인 실험 실행을 지정하십시오.
 
-완료되면 [실험 상태를 검색](../api/experiments.md#retrieve-specific)하기 위해 `/experiments/{EXPERIMENT_ID}`에 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
+완료되면 `/experiments/{EXPERIMENT_ID}`실험 상태를 검색[하기 위해 ](../api/experiments.md#retrieve-specific)에 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
 
 ### 실험 실행 교육 작업 지정 {#training}
 
 다음으로 [교육 실행 작업을 지정](../api/experiments.md#experiment-training-scoring)해야 합니다. `experiments/{EXPERIMENT_ID}/runs`에 POST를 만들고 본문에서 모드를 `train`(으)로 설정하고 교육 매개 변수가 포함된 작업 배열을 보냅니다. 성공적인 응답은 요청된 실험의 세부 사항이 포함된 페이로드를 반환합니다.
 
-완료되면 [실험 상태를 검색](../api/experiments.md#retrieve-specific)하기 위해 `/experiments/{EXPERIMENT_ID}`에 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
+완료되면 `/experiments/{EXPERIMENT_ID}`실험 상태를 검색[하기 위해 ](../api/experiments.md#retrieve-specific)에 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
 
 ### 실험 실행 채점 작업 지정 {#scoring}
 
@@ -434,7 +435,7 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 교육 실행이 완료되면 [채점 실행 작업을 지정](../api/experiments.md#experiment-training-scoring)해야 합니다. POST를 `experiments/{EXPERIMENT_ID}/runs`에 만들고 본문에서 `mode` 특성을 &quot;score&quot;로 설정합니다. 채점 실험 실행이 시작됩니다.
 
-완료되면 [실험 상태를 검색](../api/experiments.md#retrieve-specific)하기 위해 `/experiments/{EXPERIMENT_ID}`에 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
+완료되면 `/experiments/{EXPERIMENT_ID}`실험 상태를 검색[하기 위해 ](../api/experiments.md#retrieve-specific)에 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
 
 채점이 완료되면 기능 파이프라인이 작동되어야 합니다.
 

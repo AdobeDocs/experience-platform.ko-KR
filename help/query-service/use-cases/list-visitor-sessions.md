@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비�
 title: 사용자의 페이지 보기 나열
 description: Experience Events를 사용하여 지정된 사용자가 사용한 마지막 100개 페이지의 목록을 만드는 쿼리를 작성하는 방법에 대해 알아봅니다.
 exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # 사용자의 페이지 보기 나열
 
-이 문서에서는 지정된 사용자가 페이지 보기를 나열하는 데 필요한 SQL의 예를 제공합니다. Adobe Experience Platform 쿼리 서비스를 사용하면 [!DNL Experience Events]을(를) 사용하는 쿼리를 작성하여 다양한 사용 사례를 캡처할 수 있습니다. 경험 이벤트는 사용자가 웹 사이트 또는 서비스와 상호 작용할 때 시스템의 변경할 수 없는 비집계 스냅샷을 캡처하는 XDM(Experience Data Model) ExperienceEvent 클래스로 표시됩니다. 경험 이벤트는 시간 도메인 분석에 사용할 수도 있습니다. 방문자 보고서를 생성하는 데 [!DNL Experience Events]이(가) 포함된 사용 사례는 [다음 단계 섹션](#next-steps)을 참조하세요.
+이 문서에서는 지정된 사용자가 페이지 보기를 나열하는 데 필요한 SQL의 예를 제공합니다. Adobe Experience Platform 쿼리 서비스를 사용하면 [!DNL Experience Events]을(를) 사용하는 쿼리를 작성하여 다양한 사용 사례를 캡처할 수 있습니다. 경험 이벤트는 사용자가 웹 사이트 또는 서비스와 상호 작용할 때 시스템의 변경할 수 없는 비집계 스냅샷을 캡처하는 XDM(Experience Data Model) ExperienceEvent 클래스로 표시됩니다. 경험 이벤트는 시간 도메인 분석에 사용할 수도 있습니다. 방문자 보고서를 생성하는 데 [이(가) 포함된 사용 사례는 ](#next-steps)다음 단계 섹션[!DNL Experience Events]을 참조하세요.
 
 XDM 및 [!DNL Experience Events]에 대한 자세한 내용은 [[!DNL XDM System] 개요](../../xdm/home.md)를 참조하세요. 쿼리 서비스를 [!DNL Experience Events]과(와) 결합하여 사용자 간의 동작 트렌드를 효과적으로 추적할 수 있습니다. 다음 문서에서는 [!DNL Experience Events]과(와) 관련된 쿼리의 예를 제공합니다.
 
@@ -40,7 +40,7 @@ LIMIT 100;
 
 ```console
       timestamp       |  referrerType  |                            referrer                                |                 pageName            |  A  |  B  |  C  | pageViews
-----------------------+----------------+--------------------------------------------------------------------+-------------------------------------+-----+-----+-----+--------------
+|----------------------+----------------+--------------------------------------------------------------------+-------------------------------------+-----+-----+-----+--------------
 2019-11-08 17:15:28.0 | typed_bookmark |                                                                    |                                     |     |     |     |
 2019-11-08 17:53:05.0 | social         | http://www.reddit.com                                              | Home                                |     |     |     |          1.0
 2019-11-08 17:53:45.0 | typed_bookmark |                                                                    | Kids                                |     |     |     |          1.0

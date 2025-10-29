@@ -2,7 +2,7 @@
 title: 데이터 세트 샘플
 description: 쿼리 서비스 샘플 데이터 세트를 사용하면 쿼리 정확도 비용으로 처리 시간을 크게 단축하면서 빅 데이터에 대한 탐색 쿼리를 수행할 수 있습니다. 이 안내서에서는 대략적인 쿼리 처리를 위해 샘플을 관리하는 방법에 대한 정보를 제공합니다
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%
@@ -18,14 +18,14 @@ Adobe Experience Platform 쿼리 서비스는 대략적인 쿼리 처리 기능�
 대략적인 쿼리 처리를 위한 샘플을 관리할 수 있도록 쿼리 서비스는 데이터 세트 샘플에 대해 다음 작업을 지원합니다.
 
 - [데이터 세트 샘플](#dataset-samples)
-   - [시작하기 {#get-started}](#getting-started-get-started)
-   - [단일 무작위 데이터 집합 샘플 {#create-a-sample} 만들기](#create-a-uniform-random-dataset-sample-create-a-sample)
-   - [필요한 경우 필터 조건 {#optional-filter-criteria}을(를) 지정하십시오.](#optionally-specify-a-filter-criteria-optional-filter-criteria)
-   - [{#view-list-of-samples} 샘플 목록 보기](#view-the-list-of-samples-view-list-of-samples)
-   - [샘플 데이터 집합 {#query-sample-datasets} 쿼리](#query-the-sample-dataset-query-sample-datasets)
-   - [데이터 집합 샘플 {#delete-a-sample} 삭제](#delete-dataset-samples-delete-a-sample)
+   - [시작](#getting-started-get-started)
+   - [균일한 무작위 데이터 세트 샘플 만들기](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [선택적으로 필터 조건 지정](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [샘플 목록 보기](#view-the-list-of-samples-view-list-of-samples)
+   - [샘플 데이터 세트 쿼리](#query-the-sample-dataset-query-sample-datasets)
+   - [데이터 세트 샘플 삭제](#delete-dataset-samples-delete-a-sample)
 
-## 시작하기 {#get-started}
+## 시작 {#get-started}
 
 이 문서에 자세히 설명된 대략적인 쿼리 처리 기능을 만들고 삭제하려면 세션 플래그를 `true`(으)로 설정해야 합니다. 쿼리 편집기 또는 PSQL 클라이언트의 명령줄에서 `SET aqp=true;` 명령을 입력합니다.
 
@@ -83,7 +83,7 @@ SELECT sample_meta('example_dataset_name')
 
 ```shell
                   sample_table_name                  |    sample_dataset_id     |    parent_dataset_id     | sample_type | sampling_rate | sample_num_rows |       created      
------------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
+|-----------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
  x5e5cd8ea0a83c418a8ef0928_uniform_4_0_percent_ughk7 | 62ff19853d338f1c07b18965 | 5e5cd8ea0a83c418a8ef0928 | uniform     |           4.0 |             391 | 19/08/2022 05:03:01
 (1 row)
 ```

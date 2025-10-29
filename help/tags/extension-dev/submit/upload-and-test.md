@@ -2,9 +2,9 @@
 title: 확장에 대한 엔드 투 엔드 테스트 업로드 및 구현
 description: Adobe Experience Platform에서 확장을 확인, 업로드 및 테스트하는 방법을 알아봅니다.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2344'
 ht-degree: 22%
 
 ---
@@ -29,7 +29,7 @@ Adobe Experience Platform에서 태그 확장을 테스트하려면 태그 API �
 
 업로드하기 전에 필수 필드 또는 설정이 있는지 확인하십시오. 예를 들어, [확장 매니페스트](../manifest.md), [확장 구성](../configuration.md), [보기](../web/views.md), [라이브러리 모듈](../web/format.md)(최소)을 검토하는 것이 좋습니다.
 
-구체적인 예는 로고 파일로, `extension.json` 파일에 `"iconPath": "example.svg",` 줄을 추가하고 해당 로고 이미지 파일을 프로젝트에 포함합니다. 확장에 대해 표시될 아이콘의 상대 경로입니다. 슬래시로 시작하지 않아야 합니다. 확장자가 `.svg`인 SVG 파일을 참조해야 합니다. SVG은 사각형으로 렌더링할 때 정상적으로 표시되어야 하며 사용자 인터페이스에 의해 크기가 조정될 수 있습니다. 자세한 내용은 [SVG 크기 조정 방법](https://css-tricks.com/scale-svg/)을 참조하세요.
+구체적인 예는 로고 파일로, `"iconPath": "example.svg",` 파일에 `extension.json` 줄을 추가하고 해당 로고 이미지 파일을 프로젝트에 포함합니다. 확장에 대해 표시될 아이콘의 상대 경로입니다. 슬래시로 시작하지 않아야 합니다. 확장자가 `.svg`인 SVG 파일을 참조해야 합니다. SVG은 사각형으로 렌더링할 때 정상적으로 표시되어야 하며 사용자 인터페이스에 의해 크기가 조정될 수 있습니다. 자세한 내용은 [SVG 크기 조정 방법](https://css-tricks.com/scale-svg/)을 참조하세요.
 
 >[!NOTE]
 >
@@ -63,10 +63,10 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > 기본적으로 업로더는 서버 간 Oauth 흐름에 대해 Adobe I/O 자격 증명을 예상합니다. 기존 `jwt-auth` 자격 증명
-> 2025년 1월 1일에 사용이 중단될 때까지 `npx @adobe/reactor-uploader@v5.2.0`을(를) 실행하여 사용할 수 있습니다. 필요한 매개 변수
-> `jwt-auth` 버전을 실행하려면 [여기](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452)에 있습니다.
+> > 2025년 1월 1일에 사용이 중단될 때까지 `npx @adobe/reactor-uploader@v5.2.0`을(를) 실행하여 사용할 수 있습니다. 필요한 매개 변수
+> > `jwt-auth` 버전을 실행하려면 [여기](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452)에 있습니다.
 
-업로더에서는 몇 가지 정보만 입력해야 합니다. Adobe I/O 콘솔에서 `clientId` 및 `clientSecret`을(를) 검색할 수 있습니다. I/O 콘솔에서 [통합 페이지](https://console.adobe.io/integrations)&#x200B;(으)로 이동합니다. 드롭다운에서 올바른 조직을 선택하고 올바른 통합을 찾은 다음 **[!UICONTROL 보기]**&#x200B;를 선택합니다.
+업로더에서는 몇 가지 정보만 입력해야 합니다. Adobe I/O 콘솔에서 `clientId` 및 `clientSecret`을(를) 검색할 수 있습니다. I/O 콘솔에서 [통합 페이지](https://console.adobe.io/integrations)&#x200B;(으)로 이동합니다. 드롭다운에서 올바른 조직을 선택하고 올바른 통합을 찾은 다음 **[!UICONTROL View]**&#x200B;을(를) 선택합니다.
 
 - `clientId`은(는) 무엇입니까? I/O 콘솔에서 이 파일을 복사하여 붙여넣습니다.
 - `clientSecret`은(는) 무엇입니까? I/O 콘솔에서 이 파일을 복사하여 붙여넣습니다.
@@ -82,11 +82,11 @@ npx @adobe/reactor-uploader
 >
 >업로더를 자주 실행하는 경우에는 이러한 모든 정보를 매번 입력하는 것이 번거로울 수 있습니다. 이러한 매개 변수를 명령줄에서 인수로 전달할 수도 있습니다. 자세한 내용은 NPM 문서의 [명령줄 인수 섹션](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments)을 참조하십시오.
 
-API를 사용하여 확장 업로드를 직접 관리하려면 API 문서에서 확장 패키지를 [만들기](../../api/endpoints/extension-packages.md/#create) 또는 [업데이트](../../api/endpoints/extension-packages.md#update)하는 예제 호출을 참조하십시오.
+API를 사용하여 확장 업로드를 직접 관리하려면 API 문서에서 확장 패키지를 [만들기](../../api/endpoints/extension-packages.md#create) 또는 [업데이트](../../api/endpoints/extension-packages.md#update)하는 예제 호출을 참조하십시오.
 
 ## 개발 속성 만들기 {#property}
 
-UI에 로그인하고 왼쪽 탐색에서 **[!UICONTROL 태그]**&#x200B;을(를) 선택하면 [!UICONTROL 속성] 화면이 표시됩니다. 속성은 배포하려는 태그의 컨테이너이며 하나 이상의 사이트에서 사용할 수 있습니다.
+UI에 로그인하고 왼쪽 탐색에서 **[!UICONTROL Tags]**&#x200B;을(를) 선택하면 [!UICONTROL Properties] 화면이 표시됩니다. 속성은 배포하려는 태그의 컨테이너이며 하나 이상의 사이트에서 사용할 수 있습니다.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -208,7 +208,7 @@ Facebook 확장 예제를 사용하여 테스트 사이트에 페이지가 로�
 
 ![](../images/getting-started/launch-installation-instructions-dialogue.png)
 
-문서 또는 사이트 템플릿의 `<head>` 섹션 내에 이 단일 `<script>` 태그를 배치하여 설치를 완료합니다. 그런 다음 테스트 사이트를 방문하여 게시된 태그 라이브러리의 동작을 검사합니다.
+문서 또는 사이트 템플릿의 `<script>` 섹션 내에 이 단일 `<head>` 태그를 배치하여 설치를 완료합니다. 그런 다음 테스트 사이트를 방문하여 게시된 태그 라이브러리의 동작을 검사합니다.
 
 ## 테스트 {#test}
 

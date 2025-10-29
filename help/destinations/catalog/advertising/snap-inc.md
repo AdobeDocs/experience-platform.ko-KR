@@ -2,9 +2,9 @@
 title: Snap Inc 연결
 description: Snapchat Ads Platform에 연결하고 Experience Platform에서 대상을 내보내는 방법에 대해 알아봅니다.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1031'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 2%
 
 *Snap Inc* 대상은 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/identity-service/features/namespaces.md)에 대해 자세히 알아보세요.
 
-*Snap Inc* 대상으로 전송된 모든 식별자는 SHA-256 형식으로 해시해야 합니다. 일반 텍스트 식별자를 대상으로 보내기 전에 해시하려면 대상에 대한 대상 식별자를 매핑할 때 **[!UICONTROL 변환 적용]** 옵션을 선택하십시오.
+*Snap Inc* 대상으로 전송된 모든 식별자는 SHA-256 형식으로 해시해야 합니다. 일반 텍스트 식별자를 대상으로 보내기 전에 해시하려면 대상에 대한 대상 식별자를 매핑할 때 **[!UICONTROL Apply transformation]** 옵션을 선택하십시오.
 
 >[!WARNING]
 > 
@@ -53,7 +53,7 @@ ht-degree: 2%
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | 이메일 주소 | SHA-256 해시된 이메일 주소 | 전자 메일 주소를 대상 ID 필드 *전자 메일 주소*&#x200B;에 매핑합니다. |
-| 전화번호 | SHA-256 해시된 전화 번호 | 전자 메일 주소를 대상 ID 필드 *전화 번호*&#x200B;에 매핑합니다. |
+| 전화 번호 | SHA-256 해시된 전화 번호 | 전자 메일 주소를 대상 ID 필드 *전화 번호*&#x200B;에 매핑합니다. |
 | GAID | SHA-256 해시된 Google Advertising ID | Google Advertising ID를 대상 ID 필드 *gaid*&#x200B;에 매핑합니다. |
 | IDFA | SHA-256 해시된 Apple Advertising ID | Apple Advertising ID를 대상 ID 필드 *idfa*&#x200B;에 매핑합니다. |
 
@@ -76,9 +76,9 @@ ht-degree: 2%
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | Snap Inc 대상에서 사용되는 식별자(이름, 전화 번호 또는 기타)를 사용하여 대상의 모든 멤버를 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+|---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL Audience export]** | Snap Inc 대상에서 사용되는 식별자(이름, 전화 번호 또는 기타)를 사용하여 대상의 모든 멤버를 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -86,14 +86,14 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 ### 대상으로 인증 {#authenticate}
 
 대상에 인증하려면 다음 단계를 수행합니다.
 
 1. Adobe Experience Platform의 대상 카탈로그에서 *Snap Inc* 대상을 찾아 **설정**&#x200B;을(를) 선택합니다.
-2. **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다. 다음 화면으로 리디렉션됩니다.
+2. **[!UICONTROL Connect to destination]**을(를) 선택합니다. 다음 화면으로 리디렉션됩니다.
    ![인증 화면 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Snapchat 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 4. Adobe Experience Platform에서 액세스할 수 있는 Snapchat 데이터가 표시됩니다. 연결 프로세스를 계속하려면 **계속**&#x200B;을(를) 선택하십시오.
@@ -106,11 +106,11 @@ ht-degree: 2%
 
 ![대상 세부 정보](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
 
-대상에 대한 세부 정보를 구성하려면 필수 필드를 입력하고 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+대상에 대한 세부 정보를 구성하려면 필수 필드를 입력하고 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 계정 ID]**: 대상을 가져올 광고 계정과 연결된 광고 계정 ID입니다. 이 정보를 찾는 방법에 대한 자세한 내용은 [Snapchat 비즈니스 도움말 센터에서 이 설명서](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US)를 참조하십시오.
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Account ID]**: 대상자를 가져올 광고 계정과 연결된 광고 계정 ID입니다. 이 정보를 찾는 방법에 대한 자세한 내용은 [Snapchat 비즈니스 도움말 센터에서 이 설명서](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US)를 참조하십시오.
 
 >[!IMPORTANT]
 > 
@@ -120,14 +120,14 @@ ht-degree: 2%
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
@@ -140,7 +140,7 @@ ht-degree: 2%
 
 ![대상자](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Adobe 대상이 Snap Inc.에 처음 활성화되면 빈 대상으로 표시됩니다. 이는 Adobe Experience Platform이 대상자를 평가할 때까지 멤버 데이터를 Snap Inc로 내보내지 않기 때문입니다. Experience Platform에서 대상을 평가하는 방법에 대한 자세한 내용은 [세그먼테이션 서비스 개요](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=ko#evaluate-segments)를 참조하십시오.
+Adobe 대상이 Snap Inc.에 처음 활성화되면 빈 대상으로 표시됩니다. 이는 Adobe Experience Platform이 대상자를 평가할 때까지 멤버 데이터를 Snap Inc로 내보내지 않기 때문입니다. Experience Platform에서 대상을 평가하는 방법에 대한 자세한 내용은 [세그먼테이션 서비스 개요](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments)를 참조하십시오.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

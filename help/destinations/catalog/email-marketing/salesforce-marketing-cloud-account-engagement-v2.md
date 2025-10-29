@@ -4,9 +4,10 @@ description: (V2) Salesforce Marketing Cloud 계정 참여(이전의 Pardot) 대
 badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: d1405237698271607fa672ccae1ac731d66df263
+exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1809'
+source-wordcount: '1742'
 ht-degree: 3%
 
 ---
@@ -23,8 +24,8 @@ ht-degree: 3%
 >[!IMPORTANT]
 > 
 > [Salesforce Marketing Cloud 계정 참여](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) 대상의 V2 버전입니다. 이 버전은 이전 대상을 대체하며 현재 Alpha 릴리스에 있습니다.
-> &#x200B;> <br>
-> &#x200B;> 현재 이전 버전의 [Salesforce Marketing Cloud 계정 참여](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) 대상을 사용하는 경우 **2026년 1월** 전에 이 V2 버전으로 마이그레이션해야 합니다. 2026년 1월 이후 Adobe은 이전 버전을 중단하고 더 이상 사용할 수 없습니다.
+> > <br>
+> > 현재 이전 버전의 [Salesforce Marketing Cloud 계정 참여](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) 대상을 사용하는 경우 **2026년 1월** 전에 이 V2 버전으로 마이그레이션해야 합니다. 2026년 1월 이후 Adobe은 이전 버전을 중단하고 더 이상 사용할 수 없습니다.
 
 
 ## 사용 사례 {#use-cases}
@@ -49,7 +50,7 @@ Experience Platform 및 [!DNL Salesforce]에서 설정해야 하는 필수 구�
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL (V2) Marketing Cloud Account Engagement] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 &#x200B;](/help/xdm/schema/composition.md)스키마[, &#x200B;](../../../catalog/datasets/overview.md)데이터 세트[&#x200B; 및 &#x200B;](../../../segmentation/types/overview.md)대상[!DNL Experience Platform]이 있어야 합니다.
+[!DNL (V2) Marketing Cloud Account Engagement] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 ](/help/xdm/schema/composition.md)스키마[, ](../../../catalog/datasets/overview.md)데이터 세트[ 및 ](../../../segmentation/types/overview.md)대상[!DNL Experience Platform]이 있어야 합니다.
 
 ### [!DNL Salesforce Marketing Cloud Account Engagement]개 필수 구성 요소 {#prerequisites-destination}
 
@@ -57,7 +58,7 @@ Experience Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로
 
 #### [!DNL Marketing Cloud Account Engagement] 계정이 있어야 합니다. {#prerequisites-account}
 
-계속하려면 [!DNL Marketing Cloud Account Engagement]Marketing Cloud 계정 참여[&#x200B; 제품에 대한 구독이 있는 &#x200B;](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) 계정이 필요합니다.
+계속하려면 [!DNL Marketing Cloud Account Engagement]Marketing Cloud 계정 참여[ 제품에 대한 구독이 있는 ](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) 계정이 필요합니다.
 
 #### [!DNL Marketing Cloud Account Engagement] 자격 증명 수집 {#gather-credentials}
 
@@ -65,7 +66,7 @@ Experience Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| **[!UICONTROL 계정 참여 사업부 ID]** | [!DNL Salesforce] 계정 참여 사업부 ID입니다. ID를 찾는 방법에 대해 알아보려면 Salesforce [설명서](https://help.salesforce.com/s/articleView?id=000381973&type=1)를 참조하세요. |
+| **[!UICONTROL Account Engagement Business Unit ID]** | [!DNL Salesforce] 계정 참여 사업부 ID입니다. ID를 찾는 방법에 대해 알아보려면 Salesforce [설명서](https://help.salesforce.com/s/articleView?id=000381973&type=1)를 참조하세요. |
 
 {style="table-layout:auto"}
 
@@ -88,9 +89,9 @@ Experience Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화번호, 성)*&#x200B;과(와) 함께 대상자의 모든 구성원을 내보냅니다.</li><li>이 대상은 Salesforce Import API v5를 사용하여 프로필 데이터의 일괄 내보내기를 지원합니다.</li></ul> |
-| 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | <ul><li>**초기 내보내기**: 매핑 후 즉시 전체 내보내기</li><li>**후속 내보내기**: 3시간마다 증분 내보내기</li><li>이 일정은 수정되었으며 Alpha에서 사용자 지정할 수 없습니다.</li></ul> |
+|---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL Profile-based]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화번호, 성)*&#x200B;과(와) 함께 대상자의 모든 구성원을 내보냅니다.</li><li>이 대상은 Salesforce Import API v5를 사용하여 프로필 데이터의 일괄 내보내기를 지원합니다.</li></ul> |
+| 내보내기 빈도 | **[!UICONTROL Batch]** | <ul><li>**초기 내보내기**: 매핑 후 즉시 전체 내보내기</li><li>**후속 내보내기**: 3시간마다 증분 내보내기</li><li>이 일정은 수정되었으며 Alpha에서 사용자 지정할 수 없습니다.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -98,48 +99,48 @@ Experience Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로
 
 >[!IMPORTANT]
 >
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상으로 인증 {#authenticate}
 
-대상에 인증하려면 **[!UICONTROL 대상에 연결]**&#x200B;을 선택하세요.
+대상에 인증하려면 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 
 ![Salesforce Marketing Cloud 계정 참여 V2 대상 연결 워크플로](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/connect-to-destination.png "Salesforce Marketing Cloud 계정 참여 V2 대상 연결 워크플로")
 
-[!DNL Salesforce] 로그인 페이지로 리디렉션됩니다. [!DNL Marketing Cloud Account Engagement] 계정 자격 증명을 입력하고 **[!UICONTROL 로그인]**&#x200B;을 선택합니다.
+[!DNL Salesforce] 로그인 페이지로 리디렉션됩니다. [!DNL Marketing Cloud Account Engagement] 계정 자격 증명을 입력하고 **[!UICONTROL Log In]**&#x200B;을(를) 선택하십시오.
 
 ![Salesforce 로그인 페이지](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png "Salesforce 로그인 페이지.")
 
-**[!UICONTROL 허용]**&#x200B;을(를) 선택하여 **Adobe Experience Platform** 앱에 권한을 부여하여 [!DNL Salesforce Marketing Cloud Account Engagement] 계정에 액세스하세요. *한 번만 수행해야 합니다*.
+**[!UICONTROL Allow]**&#x200B;을(를) 선택하여 **Adobe Experience Platform** 앱에 권한을 부여하면 [!DNL Salesforce Marketing Cloud Account Engagement] 계정에 액세스할 수 있습니다. *한 번만 수행해야 합니다*.
 
 ![Salesforce 앱 스크린샷 확인 팝업으로 Marketing Cloud 계정에 대한 Experience Platform 앱 액세스 권한을 부여합니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/allow-app.png)
 
-제공된 세부 정보가 유효하면 UI에 다음과 같은 메시지가 표시됩니다. *Salesforce Marketing Cloud 계정 참여 계정에 성공적으로 연결되었습니다* 및 **[!UICONTROL 연결됨]** 상태와 녹색 확인 표시가 있습니다.
+제공된 세부 정보가 유효하면 UI에 다음과 같은 메시지가 표시됩니다. *You successfully connected to (V2) Salesforce Marketing Cloud Account Engagement account* and a **[!UICONTROL Connected]** status with a green check mark.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 계정 참여 사업부 ID]**: [!DNL Salesforce] `Account Engagement Business Unit ID`.
-* **[!UICONTROL 계정 참여 API]**: 계정 참여 API의 프로덕션(`https://pi.pardot.com`) 또는 데모(`https://pi.demo.pardot.com`) 끝점을 사용할지 여부를 선택합니다.
-* **[!UICONTROL 계정 참여 캠페인 ID]**: 모든 [!DNL Account Engagement] 잠재 고객은 캠페인과 연결해야 합니다. 캠페인 ID를 설정하지 않은 경우, 기본값이 Salesforce 계정에 있으면 계정 참여에서 자동으로 ID를 할당하려고 시도합니다.
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Account Engagement Business Unit ID]**: 내 [!DNL Salesforce] `Account Engagement Business Unit ID`.
+* **[!UICONTROL Account Engagement API]**: 계정 참여 API의 프로덕션(`https://pi.pardot.com`) 종단점 또는 데모(`https://pi.demo.pardot.com`) 종단점을 사용할지 여부를 선택합니다.
+* **[!UICONTROL Account Engagement Campaign ID]**: 모든 [!DNL Account Engagement] 잠재 고객은 캠페인과 연결되어야 합니다. 캠페인 ID를 설정하지 않은 경우, 기본값이 Salesforce 계정에 있으면 계정 참여에서 자동으로 ID를 할당하려고 시도합니다.
 
 ### 경고 활성화 {#enable-alerts}
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상으로 대상을 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](/help/destinations/ui/activate-batch-profile-destinations.md)를 참조하십시오.
 
@@ -180,9 +181,9 @@ Salesforce Marketing Cloud 계정 참여 대상은 아래 표에 설명된 타�
 
 아래 단계에 따라 올바른 필드를 매핑하십시오.
 
-1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다. 화면에 새 매핑 행이 표시됩니다.
-1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 XDM 특성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을 선택하고 ID를 선택합니다.
-1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 ID를 선택하거나 **[!UICONTROL 사용자 지정 특성 선택]** 범주를 선택하고 표준 계정 참여 잠재 필드 목록에서 지정합니다.
+1. **[!UICONTROL Mapping]** 단계에서 **[!UICONTROL Add new mapping]**&#x200B;을(를) 선택합니다. 화면에 새 매핑 행이 표시됩니다.
+1. **[!UICONTROL Select source field]** 창에서 **[!UICONTROL Select attributes]** 범주를 선택하고 XDM 특성을 선택하거나 **[!UICONTROL Select identity namespace]**&#x200B;을(를) 선택하고 ID를 선택합니다.
+1. **[!UICONTROL Select target field]** 창에서 **[!UICONTROL Select identity namespace]**&#x200B;을(를) 선택하고 ID를 선택하거나 **[!UICONTROL Select custom attributes]** 범주를 선택하고 표준 계정 참여 잠재 고객 필드 목록에서 을(를) 지정합니다.
 
 ![XDM 필드 및 ID를 Salesforce Marketing Cloud 계정 참여 V2 필드에 매핑](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/mapping.png "XDM 필드 및 ID를 Salesforce Marketing Cloud 계정 참여 V2 필드에 매핑하는 예제")
 
@@ -190,7 +191,7 @@ Salesforce Marketing Cloud 계정 참여 대상은 아래 표에 설명된 타�
 
 대상을 올바르게 설정했는지 확인하려면 아래 단계를 수행하십시오.
 
-1. 선택한 대상 중 하나로 이동합니다. **[!DNL Activation data]** 탭을 선택합니다. **[!UICONTROL 매핑 ID]** 열에 [!DNL Marketing Cloud Account Engagement Prospects] 페이지 내에서 생성된 사용자 지정 필드의 이름이 표시됩니다.
+1. 선택한 대상 중 하나로 이동합니다. **[!DNL Activation data]** 탭을 선택합니다. **[!UICONTROL Mapping ID]** 열에는 [!DNL Marketing Cloud Account Engagement Prospects] 페이지 내에서 생성된 사용자 지정 필드의 이름이 표시됩니다.
    ![선택한 세그먼트에 대한 매핑 ID를 보여 주는 Experience Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
 1. [[!DNL Salesforce]](https://login.salesforce.com/) 웹 사이트에 로그인합니다. 그런 다음 **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** 페이지로 이동하여 대상자의 잠재 고객이 추가/업데이트되었는지 확인합니다. 또는 [[!DNL Account Engagement]](https://pi.pardot.com/)에 액세스하고 **[!DNL Prospects]** 페이지에 액세스할 수도 있습니다.

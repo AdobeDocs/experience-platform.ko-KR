@@ -4,7 +4,7 @@ description: 라이브 Snowflake 데이터 공유를 만들어 매일 대상자 
 last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: c429ee227bd93455f541a32266bfbef9ddeaae06
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1659'
 ht-degree: 3%
@@ -113,7 +113,7 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
+|---------|----------|---------|
 | 내보내기 유형 | **[!UICONTROL Audience export]** | [!DNL Snowflake] 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
 | 내보내기 빈도 | **[!UICONTROL Batch]** | 이 대상은 Snowflake 데이터 공유를 통해 전체 대상 멤버십에 대한 정기적인 스냅샷을 제공합니다. 각 스냅샷은 이전 데이터를 대체하므로 항상 대상에 대한 최신 전체 보기를 확인할 수 있습니다. |
 

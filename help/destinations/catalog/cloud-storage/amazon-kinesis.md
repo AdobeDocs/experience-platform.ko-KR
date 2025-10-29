@@ -4,9 +4,9 @@ title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '1944'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 [!DNL Kinesis Data Streams]의 [!DNL Amazon Web Services] 서비스를 사용하면 큰 데이터 레코드를 실시간으로 수집하고 처리할 수 있습니다.
 
@@ -51,9 +51,9 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | [대상 활성화 워크플로](../../ui/activate-batch-profile-destinations.md#select-attributes)의 프로필 특성 선택 화면에서 선택한 대로 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성)와 함께 세그먼트의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+|---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL Profile-based]** | [대상 활성화 워크플로](../../ui/activate-batch-profile-destinations.md#select-attributes)의 프로필 특성 선택 화면에서 선택한 대로 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성)와 함께 세그먼트의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -106,18 +106,18 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 이 대상에 연결할 때 다음 정보를 제공해야 합니다.
 
 ### 인증 정보 {#authentication-information}
 
-아래 필드를 입력하고 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
+아래 필드를 입력하고 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 
 ![Amazon Kinesis 인증 세부 정보에 대해 완료된 필드를 표시하는 UI 화면 이미지](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
 * **[!DNL Amazon Web Services]액세스 키 및 비밀 키**: [!DNL Amazon Web Services]에서 `access key - secret access key` 쌍을 생성하여 [!DNL Amazon Kinesis] 계정에 Experience Platform 액세스 권한을 부여합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)를 참조하세요.
-* **[!UICONTROL 지역]**: 데이터를 스트리밍할 [!DNL Amazon Web Services] 지역을 가리킵니다.
+* **[!UICONTROL Region]**: 데이터를 스트리밍할 [!DNL Amazon Web Services] 영역을 나타냅니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -135,11 +135,11 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 
 ![Amazon Kinesis 대상 세부 정보에 대해 완료된 필드를 표시하는 UI 화면 이미지](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
-* **[!UICONTROL 이름]**: [!DNL Amazon Kinesis]에 연결할 이름을 입력하십시오.
-* **[!UICONTROL 설명]**: [!DNL Amazon Kinesis] 연결에 대한 설명을 입력하십시오.
-* **[!UICONTROL 스트림]**: [!DNL Amazon Kinesis] 계정에 있는 기존 데이터 스트림의 이름을 제공하십시오. Experience Platform은 데이터를 이 스트림으로 내보냅니다.
-* **[!UICONTROL 세그먼트 이름 포함]**: 내보내는 대상의 이름을 데이터 내보내기에 포함하려면 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 아래의 [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
-* **[!UICONTROL 세그먼트 타임스탬프 포함]**: 대상을 만들고 업데이트할 때 데이터 내보내기에 UNIX 타임스탬프와 활성화를 위해 대상을 대상에 매핑할 때 UNIX 타임스탬프를 포함하도록 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 아래의 [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
+* **[!UICONTROL Name]**: [!DNL Amazon Kinesis]에 대한 연결의 이름을 제공하십시오.
+* **[!UICONTROL Description]**: [!DNL Amazon Kinesis] 연결에 대한 설명을 입력하십시오.
+* **[!UICONTROL Stream]**: [!DNL Amazon Kinesis] 계정에 있는 기존 데이터 스트림의 이름을 제공하십시오. Experience Platform은 데이터를 이 스트림으로 내보냅니다.
+* **[!UICONTROL Include Segment Names]**: 내보내는 대상의 이름을 데이터 내보내기에 포함하려면 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 아래의 [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
+* **[!UICONTROL Include Segment Timestamps]**: 대상을 만들고 업데이트할 때 UNIX 타임스탬프와 활성화를 위해 대상을 대상에 매핑할 때 UNIX 타임스탬프를 데이터 내보내기에 포함하려면 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 아래의 [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
 
 <!--
 
@@ -153,13 +153,13 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)는 현재 Amazon Kinesis 대상으로 내보내는 데 지원되지 않습니다. [자세히 보기](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 이 대상으로 대상을 활성화하는 방법에 대한 지침은 [스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화](../../ui/activate-streaming-profile-destinations.md)를 참조하십시오.
@@ -259,7 +259,7 @@ Experience Platform은 대상 자격 조건 또는 기타 중요한 이벤트 �
 }
 ```
 
-다음은 **[!UICONTROL 세그먼트 이름 포함]** 및 **[!UICONTROL 세그먼트 타임스탬프 포함]** 옵션에 대한 연결 대상 흐름에서 선택한 UI 설정에 따라 내보낸 데이터의 추가 예입니다.
+다음은 **[!UICONTROL Include Segment Names]** 및 **[!UICONTROL Include Segment Timestamps]** 옵션에 대한 연결 대상 흐름에서 선택한 UI 설정에 따라 내보낸 데이터의 추가 예입니다.
 
 +++ 아래 데이터 내보내기 샘플에는 `segmentMembership` 섹션의 대상 이름이 포함되어 있습니다
 

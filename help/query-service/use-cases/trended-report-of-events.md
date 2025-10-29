@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비�
 title: 이벤트의 트렌드 보고서 만들기
 description: Experience Events 를 사용하여 날짜별로 그룹화된, 지정된 날짜 범위 동안의 이벤트에 대한 트렌드 보고서를 만드는 쿼리를 작성하는 방법에 대해 알아봅니다.
 exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 이벤트의 트렌드 보고서 만들기
 
-이 문서에서는 특정 날짜 범위 동안 일별 이벤트의 트렌드 보고서를 만드는 데 필요한 SQL의 예를 제공합니다. Adobe Experience Platform 쿼리 서비스를 사용하면 [!DNL Experience Events]을(를) 사용하는 쿼리를 작성하여 다양한 사용 사례를 캡처할 수 있습니다. 경험 이벤트는 사용자가 웹 사이트 또는 서비스와 상호 작용할 때 시스템의 변경할 수 없는 비집계 스냅샷을 캡처하는 XDM(Experience Data Model) ExperienceEvent 클래스로 표시됩니다. 경험 이벤트는 시간 도메인 분석에 사용할 수도 있습니다. 방문자 보고서를 생성하는 데 [!DNL Experience Events]이(가) 포함된 사용 사례는 [다음 단계 섹션](#next-steps)을 참조하세요.
+이 문서에서는 특정 날짜 범위 동안 일별 이벤트의 트렌드 보고서를 만드는 데 필요한 SQL의 예를 제공합니다. Adobe Experience Platform 쿼리 서비스를 사용하면 [!DNL Experience Events]을(를) 사용하는 쿼리를 작성하여 다양한 사용 사례를 캡처할 수 있습니다. 경험 이벤트는 사용자가 웹 사이트 또는 서비스와 상호 작용할 때 시스템의 변경할 수 없는 비집계 스냅샷을 캡처하는 XDM(Experience Data Model) ExperienceEvent 클래스로 표시됩니다. 경험 이벤트는 시간 도메인 분석에 사용할 수도 있습니다. 방문자 보고서를 생성하는 데 [이(가) 포함된 사용 사례는 ](#next-steps)다음 단계 섹션[!DNL Experience Events]을 참조하세요.
 
 보고서는 Experience Platform 데이터에 액세스하여 조직의 전략적 비즈니스 통찰력에 도움이 되도록 합니다. 이러한 보고서를 사용하면 다양한 방식으로 Experience Platform 데이터를 검사하고, 주요 지표를 이해하기 쉬운 형식으로 표시하며, 결과 통찰력을 공유할 수 있습니다.
 
@@ -47,7 +47,7 @@ ORDER BY Day ASC, pageViews DESC;
 
 ```console
      Day     | pageViews |   A    |   B   |    C    | viewedParkas
--------------+-----------+--------+-------+---------+--------------
+|-------------+-----------+--------+-------+---------+--------------
  2019-03-01  |   55317.0 | 8503.0 | 804.0 | 1578.0  |           73
  2019-03-02  |   55302.0 | 8600.0 | 854.0 | 1528.0  |           86
  2019-03-03  |   54613.0 | 8162.0 | 795.0 | 1568.0  |          100

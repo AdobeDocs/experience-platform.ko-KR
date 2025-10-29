@@ -2,9 +2,9 @@
 title: Adobe Campaign Managed Cloud Services 연결
 description: Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 플랫폼과 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1571'
 ht-degree: 2%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 통합은 [Adobe Campaign 버전 8.4 이상](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=ko#release-8-4-1)에서 작동합니다.
+>이 통합은 [Adobe Campaign 버전 8.4 이상](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1)에서 작동합니다.
 
 ## 개요 {#overview}
 
-Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 플랫폼과 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다. [Campaign 시작](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ko)
+Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 플랫폼과 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다. [Campaign 시작](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 Campaign을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 
@@ -31,11 +31,11 @@ Adobe Campaign Managed Cloud Services 연결을 사용할 때는 다음 보호 �
 
 * 이 대상에 대해 최대 25개의 대상을 [활성화](#activate)할 수 있습니다.
 
-  Campaign 탐색기의 **[!UICONTROL 관리]** > **[!UICONTROL 플랫폼]** > **[!UICONTROL 옵션]** 폴더에서 **NmsCdp_Aep_Audience_List_Limit** 옵션의 값을 업데이트하여 이 제한을 변경할 수 있습니다.
+  Campaign 탐색기의 **>** > **[!UICONTROL Administration]** 폴더에서 **[!UICONTROL Platform]** NmsCdp_Aep_Audience_List_Limit **[!UICONTROL Options]** 옵션의 값을 업데이트하여 이 제한을 변경할 수 있습니다.
 
 * 각 대상에 대해 Adobe Campaign에 [맵](#map)에 최대 20개의 필드를 추가할 수 있습니다.
 
-  Campaign 탐색기의 **[!UICONTROL 관리]** > **[!UICONTROL 플랫폼]** > **[!UICONTROL 옵션]** 폴더에서 **NmsCdp_Aep_Destinations_Max_Columns** 옵션 값을 업데이트하여 이 제한을 변경할 수 있습니다.
+  Campaign 탐색기의 **>** > **[!UICONTROL Administration]** 폴더에서 **[!UICONTROL Platform]** NmsCdp_Aep_Destinations_Max_Columns **[!UICONTROL Options]** 옵션의 값을 업데이트하여 이 제한을 변경할 수 있습니다.
 
 * Azure Blob 스토리지 DLZ(데이터 랜딩 영역)의 데이터 유지 : 7일.
 * 활성화 빈도는 최소 3시간입니다.
@@ -60,7 +60,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
   >
   >프로필 속성 동기화는 Adobe Campaign 데이터베이스에 이미 있는 프로필에 사용할 수 있습니다.
 
-[Adobe Experience Platform과의 Adobe Campaign 통합에 대해 자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=ko)
+[Adobe Experience Platform과의 Adobe Campaign 통합에 대해 자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
 
 ## 지원되는 ID {#supported-identities}
 
@@ -70,8 +70,8 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 |---|---|---|
 | external_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. 이 ID를 사용하여 고객을 나타내는 Campaign 인스턴스의 ID(loyalty_ID, account_ID, customer_ID...)에 매핑하는 것이 좋습니다. |
 | ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 자세한 내용은 [ECID](/help/identity-service/features/ecid.md)에서 다음 문서를 참조하십시오. |
-| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
-| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
+| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
 | GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
 
@@ -82,9 +82,9 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | [대상 활성화 워크플로](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)의 프로필 특성 선택 화면에서 선택한 대로 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성)와 함께 대상자의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. [일괄 파일 기반 대상](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
+|---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL Profile-based]** | [대상 활성화 워크플로](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)의 프로필 특성 선택 화면에서 선택한 대로 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성)와 함께 대상자의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL Batch]** | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. [일괄 파일 기반 대상](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
@@ -102,24 +102,24 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
 
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 인스턴스 선택]**: **[!DNL Campaign]** 마케팅 인스턴스.
-* **[!UICONTROL 대상 매핑]**: **[!DNL Adobe Campaign]**&#x200B;에서 게재를 보낼 대상 매핑을 선택하십시오. [자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=ko).
-* **[!UICONTROL 동기화 유형 선택]**:
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Select instance]**: **[!DNL Campaign]** 마케팅 인스턴스입니다.
+* **[!UICONTROL Target mapping]**: **[!DNL Adobe Campaign]**&#x200B;에서 게재를 보낼 대상 매핑을 선택합니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
+* **[!UICONTROL Select sync type]**:
 
-   * **[!UICONTROL 대상 동기화]**: 이 옵션을 사용하여 Adobe Experience Platform 대상을 Adobe Campaign으로 보낼 수 있습니다.
-   * **[!UICONTROL 프로필 동기화(업데이트만 해당)]**: 이 옵션을 사용하여 Adobe Experience Platform 프로필 특성을 Adobe Campaign으로 가져오고 정기적으로 업데이트할 수 있도록 동기화 프로세스를 준비하십시오.
+   * **[!UICONTROL Audience sync]**: 이 옵션을 사용하여 Adobe Experience Platform 대상자를 Adobe Campaign으로 보냅니다.
+   * **[!UICONTROL Profile sync (Update only)]**: 이 옵션을 사용하여 Adobe Experience Platform 프로필 특성을 Adobe Campaign으로 가져오고 정기적으로 업데이트할 수 있도록 동기화 프로세스를 준비합니다.
 
 ### 경고 활성화 {#enable-alerts}
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ### 거버넌스 정책 및 시행 작업 {#governance}
 
-대상으로 내보낼 데이터에 적용할 수 있는 마케팅 작업을 선택합니다. Adobe Campaign의 경우 **[!UICONTROL 이메일 타겟팅]** 마케팅 액션을 선택하는 것이 좋습니다.
+대상으로 내보낼 데이터에 적용할 수 있는 마케팅 작업을 선택합니다. Adobe Campaign의 경우 **[!UICONTROL Email Targeting]** 마케팅 작업을 선택하는 것이 좋습니다.
 
 마케팅 액션에 대한 자세한 내용은 [데이터 사용 정책 개요](/help/data-governance/policies/overview.md) 페이지를 참조하세요.
 
@@ -127,10 +127,10 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
-대상 데이터를 이 대상으로 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko)를 참조하십시오.
+대상 데이터를 이 대상으로 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html)를 참조하십시오.
 
 ### 속성 및 ID 매핑 {#map}
 
@@ -159,7 +159,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
    ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
-1. 매핑이 수행되면 대상 구성을 검토하고 완료하여 **[!DNL Campaign]**&#x200B;에 데이터를 보낼 수 있습니다.
+1. 매핑이 수행되면 대상 구성을 검토하고 완료하여 **[!DNL Campaign]**에 데이터를 보낼 수 있습니다.
    [대상 구성을 검토하고 완료하는 방법을 알아보세요](/help/destinations/destination-types.md#review).
 
 ## 내보낸 데이터/데이터 내보내기 유효성 검사 {#exported-data}
@@ -168,17 +168,17 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
 ### 데이터 내보내기 작업 모니터링 {#jobs}
 
-**[!UICONTROL 관리]** > **[!UICONTROL 감사]** > **[!UICONTROL 대상자 로드 작업]** 메뉴로 이동하여 Adobe Experience Platform에서 활성화된 모든 내보내기 작업을 모니터링합니다.
+Adobe Experience Platform에서 활성화된 모든 내보내기 작업을 모니터링하려면 **[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!UICONTROL Audience load jobs]** 메뉴로 이동합니다.
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
 
 ### 내보낸 데이터 액세스 {#data}
 
-**[!UICONTROL 대상 동기화]**&#x200B;의 경우 **[!UICONTROL 프로필 및 대상]** > **[!UICONTROL 목록]** > **[!UICONTROL AEP 대상]** 메뉴로 이동하여 내보낸 대상을 확인할 수 있습니다.
+**[!UICONTROL Audience sync]**&#x200B;의 경우 **[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **[!UICONTROL AEP audiences]** 메뉴로 이동하여 내보낸 대상을 확인할 수 있습니다.
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
-**[!UICONTROL 프로필 동기화(업데이트만 해당)]**&#x200B;의 경우 대상에서 활성화된 대상자가 타겟팅한 각 프로필에 대해 Campaign 데이터베이스에 데이터가 자동으로 업데이트됩니다.
+**[!UICONTROL Profile sync (Update only)]**&#x200B;의 경우 대상에서 활성화된 대상자에 의해 타겟팅된 각 프로필에 대한 Campaign 데이터베이스에 데이터가 자동으로 업데이트됩니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

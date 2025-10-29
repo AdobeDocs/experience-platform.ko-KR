@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비�
 title: 페이지 보기 횟수별 방문자 나열
 description: 경험 이벤트를 사용하여 페이지 보기 수로 구성된 방문자 목록을 검색하는 쿼리를 작성하는 방법을 알아봅니다.
 exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # 페이지 보기 횟수별 방문자 나열
 
-이 문서에서는 페이지 보기 수로 구성된 방문자 목록을 검색하는 데 필요한 SQL의 예를 제공합니다. Adobe Experience Platform 쿼리 서비스를 사용하면 [!DNL Experience Events]을(를) 사용하는 쿼리를 작성하여 다양한 사용 사례를 캡처할 수 있습니다. 경험 이벤트는 사용자가 웹 사이트 또는 서비스와 상호 작용할 때 시스템의 변경할 수 없는 비집계 스냅샷을 캡처하는 XDM(Experience Data Model) ExperienceEvent 클래스로 표시됩니다. 경험 이벤트는 시간 도메인 분석에 사용할 수도 있습니다. 방문자 보고서를 생성하는 데 [!DNL Experience Events]이(가) 포함된 사용 사례는 [다음 단계 섹션](#next-steps)을 참조하세요.
+이 문서에서는 페이지 보기 수로 구성된 방문자 목록을 검색하는 데 필요한 SQL의 예를 제공합니다. Adobe Experience Platform 쿼리 서비스를 사용하면 [!DNL Experience Events]을(를) 사용하는 쿼리를 작성하여 다양한 사용 사례를 캡처할 수 있습니다. 경험 이벤트는 사용자가 웹 사이트 또는 서비스와 상호 작용할 때 시스템의 변경할 수 없는 비집계 스냅샷을 캡처하는 XDM(Experience Data Model) ExperienceEvent 클래스로 표시됩니다. 경험 이벤트는 시간 도메인 분석에 사용할 수도 있습니다. 방문자 보고서를 생성하는 데 [이(가) 포함된 사용 사례는 ](#next-steps)다음 단계 섹션[!DNL Experience Events]을 참조하세요.
 
 XDM 및 [!DNL Experience Events]에 대한 자세한 내용은 [[!DNL XDM System] 개요](../../xdm/home.md)를 참조하세요. 쿼리 서비스를 [!DNL Experience Events]과(와) 결합하여 사용자 간의 동작 트렌드를 효과적으로 추적할 수 있습니다. 다음 문서에서는 [!DNL Experience Events]과(와) 관련된 쿼리의 예를 제공합니다.
 
@@ -34,7 +34,7 @@ LIMIT 10;
 
 ```console
                id                  | pageViews
------------------------------------+-----------
+|-----------------------------------+-----------
  457C3510571E5930-69AA721C4CBF9339 |     706.0
  776F85658792C017-6491FE6570382A01 |     700.0
  6BEC9C6AB52E779F-28F5B023113F2C85 |     654.0

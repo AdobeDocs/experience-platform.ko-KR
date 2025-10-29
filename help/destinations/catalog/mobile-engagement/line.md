@@ -4,9 +4,9 @@ title: LINE 연결
 description: LINE 대상을 사용하면 Experience Platform 대상에 프로필을 추가하고 연결된 사용자에게 개인화된 경험을 전달할 수 있습니다.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1147'
 ht-degree: 2%
 
 ---
@@ -36,21 +36,21 @@ Experience Platform에서 [!DNL LINE] 계정으로 데이터를 내보내려면 
 아직 계정이 없는 경우 [!DNL LINE] 계정을 등록하고 만들어야 합니다. 계정을 만들려면 다음 작업을 수행하십시오.
 
 1. [!DNL LINE] [계정 로그인](https://account.line.biz/login?redirectUri=https%3A%2F%2Fmanager.line.biz%2F) 페이지로 이동
-2. **[!UICONTROL 계정 만들기]**&#x200B;를 선택합니다.
+2. **[!UICONTROL Create an account]**&#x200B;를 선택합니다.
 
-#### [!DNL LINE] 개발자 콘솔에서 [!DNL LINE channel access token (long-lived)] 수집 {#gather-credentials}
+#### [!DNL LINE channel access token (long-lived)] 개발자 콘솔에서 [!DNL LINE] 수집 {#gather-credentials}
 
-Experience Platform에서 [!DNL LINE] 리소스에 액세스할 수 있도록 하려면 원하는 [!DNL LINE] *메시징 API* 채널의 *[!DNL Channel access token (long-lived)]*&#x200B;이(가) 필요합니다.
+Experience Platform에서 [!DNL LINE] 리소스에 액세스할 수 있도록 하려면 원하는 *[!DNL Channel access token (long-lived)]* [!DNL LINE]메시징 API *채널의*&#x200B;이(가) 필요합니다.
 
 1. [!DNL LINE] 계정으로 [[!DNL LINE] 개발자 콘솔](https://developers.line.biz/console)에 로그인합니다.
 1. 그런 다음 *[!DNL Providers]* 목록에 액세스한 다음 관심 *[!DNL Provider]*&#x200B;을(를) 선택하고 마지막으로 *메시징 API* 채널을 선택하여 해당 설정에 액세스합니다. 개발자 콘솔에 처음 액세스하는 경우 [[!DNL LINE] 설명서](https://developers.line.biz/en/docs/messaging-api/getting-started/)를 따라 공급자를 만드는 데 필요한 단계를 완료하십시오.
-1. 마지막으로 ***[!DNL Channel access token]*** 섹션으로 이동하여 [대상에 인증](#authenticate) 단계 내에 필요한 ***[!DNL Channel access token (long-lived)]*** 값을 복사합니다.
+1. 마지막으로 ***[!DNL Channel access token]*** 섹션으로 이동하여 ***[!DNL Channel access token (long-lived)]***&#x200B;대상에 인증[ 단계 내에 필요한 ](#authenticate) 값을 복사합니다.
 
 | 자격 증명 | 설명 | 예 |
 | --- | --- | --- |
 | `[!DNL Channel access token (long-lived)]` | 내 [!DNL LINE Channel access token (long-lived)]. | `aaa2112XSMWqLXR7..........nyilFU=` |
 
-[!DNL LINE] 개발자 콘솔을 통해 채널을 만들거나 기존 [!DNL LINE] 계정에 채널을 추가하는 방법에 대한 지침은 [[!DNL LINE] 설명서](https://developers.line.biz/en/docs/messaging-api/getting-started/)를 참조하세요.
+[[!DNL LINE]  개발자 콘솔을 통해 채널을 만들거나 기존 ](https://developers.line.biz/en/docs/messaging-api/getting-started/) 계정에 채널을 추가하는 방법에 대한 지침은 [!DNL LINE]설명서[!DNL LINE]를 참조하세요.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -66,9 +66,9 @@ Experience Platform에서 [!DNL LINE] 리소스에 액세스할 수 있도록 �
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | [!DNL LINE] 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+|---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL Profile-based]** | [!DNL LINE] 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
+| 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -76,43 +76,44 @@ Experience Platform에서 [!DNL LINE] 리소스에 액세스할 수 있도록 �
 
 >[!IMPORTANT]
 >
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-**[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]** 내에서 [!DNL LINE] 검색 또는 **[!UICONTROL Mobile 참여]** 범주 아래에서 찾을 수 있습니다.
+**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;에서 [!DNL LINE]을(를) 검색합니다. 또는 **[!UICONTROL Mobile engagement]** 범주 아래에서 찾을 수 있습니다.
 
 ### 대상으로 인증 {#authenticate}
 
-대상에 인증하려면 **[!UICONTROL 대상에 연결]**&#x200B;을 선택하세요.
+대상에 인증하려면 **[!UICONTROL Connect to destination]**을(를) 선택하십시오.
 인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 아래의 필수 필드를 입력하십시오.
-* **[!UICONTROL 전달자 토큰]**: [!DNL LINE] 개발자 콘솔의 [!DNL LINE Channel access token (long-lived)]. [자격 증명 수집](#gather-credentials) 섹션을 참조하십시오.
 
-제공된 세부 정보가 유효하면 UI에 녹색 확인 표시와 함께 **[!UICONTROL 연결됨]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
+* **[!UICONTROL Bearer token]**: [!DNL LINE Channel access token (long-lived)] 개발자 콘솔의 [!DNL LINE]. [자격 증명 수집](#gather-credentials) 섹션을 참조하십시오.
+
+제공된 세부 정보가 유효한 경우 UI에 녹색 확인 표시와 함께 **[!UICONTROL Connected]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 대상 세부 정보를 표시하는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 대상 유형]**: 내보내려는 ID가 *ID for Advertisers(IFA)* 유형인 경우 **[!UICONTROL ID for Advertisers(IFA)]**&#x200B;을(를) 선택합니다. 내보내려는 ID가 *LINE 사용자 ID* 유형인 경우 **[!UICONTROL LINE 사용자 ID]**&#x200B;을(를) 선택하십시오. ID 유형에 대한 자세한 내용은 [지원되는 ID](#supported-identities) 섹션을 참조하십시오.
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Audience Type]**: 내보내려는 ID가 **[!UICONTROL ID for Advertisers(IFAs)]** ID for Advertisers(IFA)*유형인 경우*&#x200B;을(를) 선택합니다. 내보내려는 ID가 **[!UICONTROL LINE user IDs]** LINE 사용자 ID *유형인 경우*&#x200B;을(를) 선택하십시오. ID 유형에 대한 자세한 내용은 [지원되는 ID](#supported-identities) 섹션을 참조하십시오.
 
 ### 경고 활성화 {#enable-alerts}
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
@@ -141,11 +142,11 @@ Experience Platform에서 데이터를 성공적으로 내보내면 [!DNL LINE] 
 
 1. [!DNL LINE]에서 [관리자 콘솔](https://manager.line.biz/)에 로그인합니다.
 
-1. 그런 다음 **[!UICONTROL 데이터 컨트롤]** > **[!UICONTROL 대상]**(으)로 이동하여 **[!UICONTROL 대상 이름]** 열에서 선택한 대상과 일치하는 이름을 확인합니다.
+1. 그런 다음 **[!UICONTROL Data Controls]** > **[!UICONTROL Audiences]**(으)로 이동하여 **[!UICONTROL Audience name]** 열 내에서 선택한 대상자와 일치하는 이름을 확인합니다.
 
 1. 업데이트된 볼륨은 세그먼트 내의 카운트와 일치합니다.
 
-1. 내보낸 ID가 *UserID* 유형인 경우 *Type* 열에서 **[!UICONTROL UserID]**&#x200B;이(가) 언급됩니다. 마찬가지로 내보낸 ID가 *IDFA* 유형인 경우 *Type* 열에 **[!UICONTROL Mobile 광고 ID]**&#x200B;이(가) 언급됩니다.
+1. 내보낸 ID가 *UserID* 유형인 경우 **[!UICONTROL UserID]** Type *열에*&#x200B;이(가) 표시됩니다. 마찬가지로 내보낸 ID가 *IDFA* 유형인 경우 **[!UICONTROL Mobile ad Id]** Type *열에는*&#x200B;이(가) 표시됩니다.
 
 [!DNL LINE] 내의 예제 설정이 아래에 표시되어 있습니다.
 대상 볼륨을 보여 주는 ![LINE UI 스크린샷입니다.](../../assets/catalog/mobile-engagement/line/audience-volume.png)

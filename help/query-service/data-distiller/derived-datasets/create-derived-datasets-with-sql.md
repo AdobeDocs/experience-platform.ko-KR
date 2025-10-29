@@ -2,7 +2,7 @@
 title: SQL을 사용하여 파생 데이터 세트 만들기
 description: SQL을 사용하여 프로필에 대해 활성화된 파생된 데이터 세트를 만드는 방법과 실시간 고객 프로필 및 세분화 서비스에 대한 데이터 세트를 사용하는 방법에 대해 알아봅니다.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1238'
 ht-degree: 1%
@@ -53,7 +53,7 @@ ARRAY <data_type>
 
 또는 Experience Platform UI를 통해 프로필에 대해 데이터 세트를 활성화할 수도 있습니다. 프로필에 대해 활성화된 데이터 세트로 표시하는 방법에 대한 자세한 내용은 [실시간 고객 프로필에 데이터 세트 활성화](../../../catalog/datasets/user-guide.md#enable-profile)를 참조하십시오.
 
-아래 예제 쿼리에서 `id`을(를) 기본 ID 열로 사용하여 `decile_table` 데이터 집합을 만들고 네임스페이스는 `IDFA`입니다. 맵 데이터 형식의 이름이 `decile1Month`인 필드도 있습니다. 만든 테이블(`decile_table`)이 프로필에 대해 활성화되어 있습니다.
+아래 예제 쿼리에서 `decile_table`을(를) 기본 ID 열로 사용하여 `id` 데이터 집합을 만들고 네임스페이스는 `IDFA`입니다. 맵 데이터 형식의 이름이 `decile1Month`인 필드도 있습니다. 만든 테이블(`decile_table`)이 프로필에 대해 활성화되어 있습니다.
 
 ```sql
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
@@ -69,7 +69,7 @@ Created Table DataSet Id
 (1 row)
 ```
 
-`CREATE TABLE` 명령에 `label='PROFILE'`을(를) 사용하여 프로필이 활성화된 데이터 세트를 만듭니다. `upsert` 기능은 기본적으로 켜져 있습니다. 아래 예제와 같이 `ALTER` 명령을 사용하여 `upsert` 기능을 덮어쓸 수 있습니다.
+`label='PROFILE'` 명령에 `CREATE TABLE`을(를) 사용하여 프로필이 활성화된 데이터 세트를 만듭니다. `upsert` 기능은 기본적으로 켜져 있습니다. 아래 예제와 같이 `upsert` 명령을 사용하여 `ALTER` 기능을 덮어쓸 수 있습니다.
 
 ```sql
 ALTER TABLE <your_table_name> DROP label upsert;
@@ -167,7 +167,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 
 ```sql
        name          |        dataSetId         |     dataSet    | description | labels 
----------------------+--------------------------+----------------+-------------+----------
+|---------------------+--------------------------+----------------+-------------+----------
  luma_midvalues      | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues     | 5c86b896b3c162151785b43c | Luma midValues |             | false
  table_with_a_decile | 5c86b896b3c162151785b43c | Luma midValues |             | 'UPSERT', 'PROFILE'
@@ -189,7 +189,7 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 >[!IMPORTANT]
 >
 >문에 `label` 플래그가 제공되지 않았거나 필드 그룹이 이미 있는 경우 SQL을 통한 필드 그룹 만들기가 실패합니다.
->필드 그룹이 이미 있으므로 쿼리가 실패하는 것을 방지하기 위해 쿼리에 `IF NOT EXISTS` 절이 포함되어 있는지 확인하십시오.
+>>필드 그룹이 이미 있으므로 쿼리가 실패하는 것을 방지하기 위해 쿼리에 `IF NOT EXISTS` 절이 포함되어 있는지 확인하십시오.
 
 실제 예는 아래에 표시된 것과 유사하게 나타날 수 있습니다.
 
@@ -227,7 +227,7 @@ DROP FIELDGROUP field_group_for_test123;
 
 ```sql
        name                      |        fieldgroupId                             |     owner      |
----------------------------------+-------------------------------------------------+-----------------
+|---------------------------------+-------------------------------------------------+-----------------
  AEP Mobile Lifecycle Details    | _experience.aep-mobile-lifecycle-details        | Luma midValues |
  AEP Web SDK ExperienceEvent     | _experience.aep-web-sdk-experienceevent         | Luma midValues |
  AJO Classification Fields       | _experience.journeyOrchestration.classification | Luma midValues |

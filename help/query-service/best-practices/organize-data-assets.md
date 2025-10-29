@@ -2,7 +2,7 @@
 title: Query Service의 데이터 자산 조직에 대한 우수 사례
 description: 이 문서에서는 쿼리 서비스에서 쉽게 사용할 수 있도록 데이터를 구성하는 논리적 방법에 대해 설명합니다.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Experience Platform [!DNL Data Lake] 내에서 데이터 자산이 증가할 때 논리적으로 구성하는 것이 중요합니다. Query Service는 샌드박스 내에서 데이터 자산을 논리적으로 그룹화할 수 있도록 SQL 구문을 확장합니다. 이 조직 방법을 사용하면 물리적으로 이동할 필요 없이 스키마 간에 데이터 자산을 공유할 수 있습니다.
 
-## 시작하기
+## 시작
 
 이 문서를 계속하기 전에 [쿼리 서비스](../home.md) 기능을 잘 이해하고 [사용자 인터페이스 안내서](../ui/user-guide.md)를 읽어야 합니다.
 
@@ -58,7 +58,7 @@ ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 
 데이터베이스 이름을 적절히 지정하면 [!DNL PostgreSQL] 클라이언트가 SHOW 키워드를 사용하여 만든 데이터 구조에 연결할 수 있습니다. SHOW 키워드에 대한 자세한 내용은 SQL 구문 설명서의 [SHOW 섹션](../sql/syntax.md#show)을 참조하십시오.
 
-&quot;all&quot;은 샌드박스의 모든 데이터베이스 및 스키마 컨테이너를 포함하는 기본 데이터베이스 이름입니다. `dbname="all"`을(를) 사용하여 [!DNL PostgreSQL]에 연결할 때 데이터를 논리적으로 구성하기 위해 만든 **모든** 데이터베이스 및 스키마에 액세스할 수 있습니다.
+&quot;all&quot;은 샌드박스의 모든 데이터베이스 및 스키마 컨테이너를 포함하는 기본 데이터베이스 이름입니다. [!DNL PostgreSQL]을(를) 사용하여 `dbname="all"`에 연결할 때 데이터를 논리적으로 구성하기 위해 만든 **모든** 데이터베이스 및 스키마에 액세스할 수 있습니다.
 
 `dbname="all"`의 모든 데이터베이스를 나열하면 사용 가능한 데이터베이스 3개가 표시됩니다.
 
@@ -66,7 +66,7 @@ ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 databaseB
 databaseC
@@ -78,26 +78,26 @@ databaseC
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 databaseB      | schema3
 ```
 
-`dbname="databaseA"`을(를) 사용하여 [!DNL PostgreSQL]에 연결할 때 아래 예와 같이 해당 특정 데이터베이스와 연결된 모든 스키마에 액세스할 수 있습니다.
+[!DNL PostgreSQL]을(를) 사용하여 `dbname="databaseA"`에 연결할 때 아래 예와 같이 해당 특정 데이터베이스와 연결된 모든 스키마에 액세스할 수 있습니다.
 
 ```sql
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
  
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 ```
@@ -108,20 +108,20 @@ databaseA      | schema2
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 
 
 SHOW tables;
 name       | type
-----------------------
+|----------------------
 dataset1| table
 dataset2| table
 dataset3| table
@@ -129,7 +129,7 @@ dataset3| table
 
 ## 데이터 컨테이너에서 데이터 자산 업데이트 또는 제거
 
-조직(또는 샌드박스)의 데이터 에셋 양이 증가함에 따라 데이터 컨테이너에서 데이터 에셋을 업데이트하거나 제거해야 합니다. 점 표기법을 사용하여 적절한 데이터베이스 및 스키마 이름을 참조하여 조직 컨테이너에서 개별 자산을 제거할 수 있습니다. 첫 번째 예에서 `databaseA.schema1`에 추가된 테이블 및 뷰(`t1` 및 `v1`)는 다음 예에서 구문을 사용하여 제거됩니다.
+조직(또는 샌드박스)의 데이터 에셋 양이 증가함에 따라 데이터 컨테이너에서 데이터 에셋을 업데이트하거나 제거해야 합니다. 점 표기법을 사용하여 적절한 데이터베이스 및 스키마 이름을 참조하여 조직 컨테이너에서 개별 자산을 제거할 수 있습니다. 첫 번째 예에서 `t1`에 추가된 테이블 및 뷰(`v1` 및 `databaseA.schema1`)는 다음 예에서 구문을 사용하여 제거됩니다.
 
 ```sql
 ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
