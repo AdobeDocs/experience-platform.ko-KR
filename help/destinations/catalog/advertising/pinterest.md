@@ -26,7 +26,7 @@ ht-degree: 3%
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Pinterest Customer List] 대상은 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)에 대해 자세히 알아보세요.
+[!DNL Pinterest Customer List] 대상은 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko#getting-started)에 대해 자세히 알아보세요.
 
 대상 활성화 워크플로의 [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)에서 원하는 ID를 대상 필드 *pinterest_audience*&#x200B;에 매핑합니다. ID는 Pinterest으로 데이터를 수집할 때 구분되고 해결됩니다.
 

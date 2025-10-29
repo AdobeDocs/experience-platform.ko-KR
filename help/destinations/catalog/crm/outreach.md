@@ -28,7 +28,7 @@ ht-degree: 2%
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL Outreach] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 &#x200B;](/help/xdm/schema/composition.md)스키마[, &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[&#x200B; 및 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)세그먼트[!DNL Experience Platform]가 있어야 합니다.
+[!DNL Outreach] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 &#x200B;](/help/xdm/schema/composition.md)스키마[, &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ko)데이터 세트[&#x200B; 및 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ko)세그먼트[!DNL Experience Platform]가 있어야 합니다.
 
 대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)에 대한 Adobe 설명서를 참조하십시오.
 
