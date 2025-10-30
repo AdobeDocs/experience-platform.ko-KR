@@ -5,9 +5,9 @@ breadcrumb-title: Data Ingestion 안내서
 user-guide-description: 배치 또는 스트리밍 통합 기능을 통해 데이터를 Experience Platform으로 가져올 수 있습니다.
 feature: Data Ingestion
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f1d851afae5ad271e3c7d9d887f614058a262874
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '146'
 ht-degree: 21%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 21%
    - [개요](streaming-ingestion/overview.md)
    - [Kafka 커넥터](streaming-ingestion/kafka.md)
    - [문제 해결](streaming-ingestion/troubleshooting.md)
+   - [IP 주소 허용 목록에 추가](streaming-ingestion/allowlisting.md)
 - 일괄 처리 수집{#batch}
    - [일괄 처리 수집 API 시작](batch-ingestion/getting-started.md)
    - [API 개요](batch-ingestion/overview.md)
