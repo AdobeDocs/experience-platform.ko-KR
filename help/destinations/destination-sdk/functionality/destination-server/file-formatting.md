@@ -1,5 +1,5 @@
 ---
-description: '`/destination-servers'' 끝점을 통해 Adobe Experience Platform Destination SDK으로 빌드된 파일 기반 대상의 파일 형식 옵션을 구성하는 방법을 알아봅니다.'
+description: '&grave;/destination-servers'' 끝점을 통해 Adobe Experience Platform Destination SDK으로 빌드된 파일 기반 대상의 파일 형식 옵션을 구성하는 방법을 알아봅니다.'
 title: 파일 서식 구성
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
 source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
@@ -52,7 +52,7 @@ Experience Platform에서 받은 파일을 최적으로 읽고 해석하기 위�
 
 >[!NOTE]
 >
->CSV 옵션은 CSV 파일을 내보낼 때만 지원됩니다. 새 대상 서버를 설정할 때 `fileConfigurations` 섹션이 필수가 아닙니다. CSV 옵션에 대한 API 호출에 값을 전달하지 않으면 [아래 ](#file-formatting-reference-and-example)의 참조 표에 있는 기본 값이 사용됩니다.
+>CSV 옵션은 CSV 파일을 내보낼 때만 지원됩니다. 새 대상 서버를 설정할 때 `fileConfigurations` 섹션이 필수가 아닙니다. CSV 옵션에 대한 API 호출에 값을 전달하지 않으면 [아래 &#x200B;](#file-formatting-reference-and-example)의 참조 표에 있는 기본 값이 사용됩니다.
 
 
 ## 사용자가 구성 옵션을 선택할 수 없는 CSV 옵션 {#file-configuration-templating-none}

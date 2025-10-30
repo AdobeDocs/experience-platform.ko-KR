@@ -193,7 +193,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->{&#x200B;0}ID 네임스페이스 코드&#x200B;****
+>{&#x200B;0}ID 네임스페이스 코드&#x200B;**&#x200B;**
 >
 > 코드가 유효한지 확인하십시오. 위의 예에서는 표준 ID 네임스페이스인 &quot;이메일&quot;을 사용합니다. 일반적으로 사용되는 다른 표준 ID 네임스페이스는 [ID 서비스 FAQ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)에서 찾을 수 있습니다.
 >

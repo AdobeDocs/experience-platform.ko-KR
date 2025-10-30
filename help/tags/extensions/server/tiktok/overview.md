@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # [!DNL TikTok] 웹 이벤트 API 확장 개요
 
-[!DNL TikTok] 이벤트 API는 웹 사이트에서 사용자 작업에 대한 정보를 [과(와) 직접 공유할 수 있는 보안 ](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API[!DNL TikTok] 인터페이스입니다. 이벤트 전달 규칙을 사용하여 [!DNL Adobe Experience Platform Edge Network] 웹 이벤트 API 확장을 사용하여 [!DNL TikTok]에서 [!DNL TikTok]&#x200B;(으)로 데이터를 보낼 수 있습니다.
+[!DNL TikTok] 이벤트 API는 웹 사이트에서 사용자 작업에 대한 정보를 [과(와) 직접 공유할 수 있는 보안 &#x200B;](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API[!DNL TikTok] 인터페이스입니다. 이벤트 전달 규칙을 사용하여 [!DNL Adobe Experience Platform Edge Network] 웹 이벤트 API 확장을 사용하여 [!DNL TikTok]에서 [!DNL TikTok]&#x200B;(으)로 데이터를 보낼 수 있습니다.
 
 ## [!DNL TikTok]개 필수 구성 요소 {#prerequisites}
 
@@ -27,7 +27,7 @@ ht-degree: 2%
 3. **[!UICONTROL Set Up Web Events]**&#x200B;를 선택합니다.
 4. **[!UICONTROL Partner Setup]**&#x200B;을(를) 연결 방법으로 선택합니다.
 
-[ 픽셀을 설정하는 방법에 대한 자세한 내용은 ](https://ads.tiktok.com/help/article/get-started-pixel)픽셀 시작하기[!DNL TikTok] 안내서를 참조하십시오.
+[&#x200B; 픽셀을 설정하는 방법에 대한 자세한 내용은 &#x200B;](https://ads.tiktok.com/help/article/get-started-pixel)픽셀 시작하기[!DNL TikTok] 안내서를 참조하십시오.
 
 픽셀이 성공적으로 생성되면 액세스 토큰을 생성할 수 있습니다. 이렇게 하려면 픽셀로 이동하여 **[!UICONTROL Settings]** 탭을 선택합니다. Events API에서 **[!UICONTROL Generate Access Token]**&#x200B;을(를) 선택합니다.
 
@@ -122,7 +122,7 @@ ht-degree: 2%
 
 공유 이벤트를 보낼 때 모든 이벤트에 픽셀 ID, 이벤트 ID 및 이름이 포함되어 있는지 확인하십시오. 서로 5분 이내에 도착하는 중복 이벤트는 병합됩니다. 데이터 필드가 첫 번째 이벤트에 없으면 후속 이벤트와 결합됩니다. 48시간 이내에 수신되는 중복 이벤트는 모두 제거됩니다.
 
-이 프로세스에 대한 자세한 내용은 [!DNL TikTok]이벤트 중복 제거[의 ](https://ads.tiktok.com/help/article/event-deduplication) 설명서를 참조하십시오.
+이 프로세스에 대한 자세한 내용은 [!DNL TikTok]이벤트 중복 제거[의 &#x200B;](https://ads.tiktok.com/help/article/event-deduplication) 설명서를 참조하십시오.
 
 ## 다음 단계
 

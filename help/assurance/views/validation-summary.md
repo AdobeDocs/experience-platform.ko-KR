@@ -57,7 +57,7 @@ ht-degree: 93%
 | :--- | :--- | :--- |
 | `message` | 문자열 | 요약 결과에 표시할 유효성 검사 메시지입니다. |
 | `events` | 배열 | 일치 또는 일치하지 않는 것으로 보고되는 이벤트 UUID의 배열입니다. |
-| `links` | 배열 | 설명서 및 기타 리소스에 대한 `ValidationResultLink` 개체의 배열 `{( type: 'doc'`&amp;vert;`'product', url: String )}` |
+| `links` | 배열 | 설명서 및 기타 리소스에 대한 `ValidationResultLink` 개체의 배열 `{( type: 'doc'`&vert;`'product', url: String )}` |
 | `result` | 문자열 | 다음은 유효성 검사 결과이며 “일치함”, “일치하지 않음”, “알 수 없음” 등 열거된 문자열 중 하나일 것으로 예상됩니다. |
 
 ## 유효성 검사 결과 보기

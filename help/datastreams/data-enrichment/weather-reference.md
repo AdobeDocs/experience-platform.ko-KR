@@ -11,7 +11,7 @@ ht-degree: 99%
 
 # 날씨 데이터 필드 매핑
 
-Adobe는 데이터스트림을 통해 수집한 데이터에 미국 날씨에 대한 컨텍스트를 추가 제공하기 위해 [!DNL [The Weather Company]](https://www.ibm.com/weather)와(과) 파트너 관계를 맺고 있습니다. 이 데이터를 사용하여 Experience Platform에서 분석, 타겟팅 및 세그먼트 생성을 수행할 수 있습니다.
+Adobe는 데이터스트림을 통해 수집한 데이터에 미국 날씨에 대한 컨텍스트를 추가 제공하기 위해 [[!DNL [The Weather Company]]](https://www.ibm.com/weather)와(과) 파트너 관계를 맺고 있습니다. 이 데이터를 사용하여 Experience Platform에서 분석, 타겟팅 및 세그먼트 생성을 수행할 수 있습니다.
 
 이 페이지에는 대상자 데이터를 보완하는 데 사용할 수 있는 모든 필드가 나열되어 있습니다.
 
@@ -110,7 +110,7 @@ Adobe는 데이터스트림을 통해 수집한 데이터에 미국 날씨에 �
 | [!DNL Day 1 Forecast Night Snow Range] | 1일간 날씨 예보. 야간 시간 날씨 정보. 잠재적 강설량(1~3인치, 3~6인치 등). | `weather.forecast.day01Forecast.night.snowRange` |
 | [!DNL Day 1 Forecast Night Temperature Celsius] | 1일간 날씨 예보. 야간 시간 날씨 정보. 온도(정의된 측정 단위). 범위 - 140~140. 섭씨 온도 | `weather.forecast.day01Forecast.night.temperature.celsius` |
 | [!DNL Day 1 Forecast Night Temperature Fahrenheit] | 1일간 날씨 예보. 야간 시간 날씨 정보. 온도(정의된 측정 단위). 범위 - 140~140. 화씨 온도 | `weather.forecast.day01Forecast.night.temperature.fahrenheit` |
-| [!DNL  Day 1 Forecast Night Temperature Heat Index Celsius] | 1일간 날씨 예보. 야간 시간 날씨 정보. 온도 및 습도를 기준으로 노출된 사람이 체감하는 온도. 섭씨 온도 | `weather.forecast.day01Forecast.night.temperatureHeatIndex.celsius` |
+| [!DNL &#x200B; Day 1 Forecast Night Temperature Heat Index Celsius] | 1일간 날씨 예보. 야간 시간 날씨 정보. 온도 및 습도를 기준으로 노출된 사람이 체감하는 온도. 섭씨 온도 | `weather.forecast.day01Forecast.night.temperatureHeatIndex.celsius` |
 | [!DNL Day 1 Forecast Night Temperature Heat Index Fahrenheit] | 1일간 날씨 예보. 야간 시간 날씨 정보. 온도 및 습도를 기준으로 노출된 사람이 체감하는 온도. 화씨 온도 | `weather.forecast.day01Forecast.night.temperatureHeatIndex.fahrenheit` |
 | [!DNL Day 1 Forecast Night Temperature Wind Chill Celsius] | 1일간 날씨 예보. 야간 시간 날씨 정보. 온도 및 풍속을 기준으로 노출된 사람이 체감하는 온도. 섭씨 온도 | `weather.forecast.day01Forecast.night.temperatureWindChill.celsius` |
 | [!UICONTROL Day 1 Forecast Night Temperature Wind Chill Fahrenheit] | 1일간 날씨 예보. 야간 시간 날씨 정보. 온도 및 풍속을 기준으로 노출된 사람이 체감하는 온도. 화씨 온도 | `weather.forecast.day01Forecast.night.temperatureWindChill.fahrenheit` |

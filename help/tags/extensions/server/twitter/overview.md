@@ -17,7 +17,7 @@ ht-degree: 2%
 
 [!DNL Twitter] 웹 전환 API [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장을 사용하면 Adobe Experience Platform Edge Network에서 캡처한 데이터를 활용하여 [!DNL Twitter]에 보낼 수 있습니다. 이 문서에서는 확장의 사용 사례, 설치 방법 및 해당 기능을 이벤트 전달 [규칙](../../../ui/managing-resources/rules.md)에 통합하는 방법에 대해 설명합니다.
 
-[!DNL Twitter]은(는) [ ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) API를 사용한 인증을 위해 [!DNL Twitter]OAuth 1.0[!DNL Web Conversions]이(가) 필요합니다.
+[!DNL Twitter]은(는) [&#x200B; &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) API를 사용한 인증을 위해 [!DNL Twitter]OAuth 1.0[!DNL Web Conversions]이(가) 필요합니다.
 
 ## 사용 사례
 
@@ -45,11 +45,11 @@ Experience Platform을 [!DNL Twitter]에 연결하려면 다음 입력이 필요
 
 | 키 유형 | 설명 |
 | --- | --- |
-| 소비자 키 | {&#x200B;0} API에 액세스하기 위한 앱의 API 키. [!DNL Twitter] 지침은 [!DNL Twitter]api 키 및 암호[의 ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) 설명서를 참조하십시오. |
-| 소비자 암호 | API 암호를 사용하면 앱이 [!DNL Twitter] API에 액세스할 수 있습니다. 지침은 [!DNL Twitter]api 키 및 암호[의 ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) 설명서를 참조하십시오. |
-| 토큰 암호 | OAuth를 통해 [!DNL Twitter] API에 인증하는 데 사용되는 앱의 만료되지 않는 토큰 암호입니다. 지침은 [!DNL Twitter]사용 액세스 토큰 가져오기[에 대한 ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) 설명서를 참조하세요. |
-| 액세스 토큰 | OAuth를 통해 [!DNL Twitter] API 인증에 사용되는 앱의 만료되지 않는 액세스 토큰입니다. 지침은 [!DNL Twitter]사용 액세스 토큰 가져오기[에 대한 ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) 설명서를 참조하세요. |
-| 픽셀 ID | [!DNL Twitter] 픽셀은 사이트 작업 또는 전환을 추적하기 위해 웹 사이트에 구현된 웹 사이트 태그입니다. 지침은 [!DNL Twitter]웹 사이트에 대한 전환 추적[에 대한 ](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) 설명서를 참조하십시오. |
+| 소비자 키 | {&#x200B;0} API에 액세스하기 위한 앱의 API 키. [!DNL Twitter] 지침은 [!DNL Twitter]api 키 및 암호[의 &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) 설명서를 참조하십시오. |
+| 소비자 암호 | API 암호를 사용하면 앱이 [!DNL Twitter] API에 액세스할 수 있습니다. 지침은 [!DNL Twitter]api 키 및 암호[의 &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) 설명서를 참조하십시오. |
+| 토큰 암호 | OAuth를 통해 [!DNL Twitter] API에 인증하는 데 사용되는 앱의 만료되지 않는 토큰 암호입니다. 지침은 [!DNL Twitter]사용 액세스 토큰 가져오기[에 대한 &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) 설명서를 참조하세요. |
+| 액세스 토큰 | OAuth를 통해 [!DNL Twitter] API 인증에 사용되는 앱의 만료되지 않는 액세스 토큰입니다. 지침은 [!DNL Twitter]사용 액세스 토큰 가져오기[에 대한 &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) 설명서를 참조하세요. |
+| 픽셀 ID | [!DNL Twitter] 픽셀은 사이트 작업 또는 전환을 추적하기 위해 웹 사이트에 구현된 웹 사이트 태그입니다. 지침은 [!DNL Twitter]웹 사이트에 대한 전환 추적[에 대한 &#x200B;](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) 설명서를 참조하십시오. |
 
 ## [!DNL Twitter] 확장 설치 및 구성 {#install}
 
@@ -63,7 +63,7 @@ Experience Platform을 [!DNL Twitter]에 연결하려면 다음 입력이 필요
 >
 >구현 요구 사항에 따라 확장을 구성하기 전에 스키마, 데이터 요소 및 데이터 세트를 만들어야 할 수 있습니다. 사용 사례에 대해 설정해야 하는 엔터티를 결정하려면 시작하기 전에 모든 구성 단계를 검토하십시오.
 
-다음 화면에서는 이전에 [에서 수집한 다음 ](#configuration-details)구성 값[!DNL Twitter]을 입력합니다.
+다음 화면에서는 이전에 [에서 수집한 다음 &#x200B;](#configuration-details)구성 값[!DNL Twitter]을 입력합니다.
 
 * **[!UICONTROL Pixel Id]**
 * **[!UICONTROL Consumer Key]**

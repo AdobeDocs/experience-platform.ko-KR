@@ -99,7 +99,7 @@ Luma 성향 모델 노트북의 경우 요구 사항을 업데이트할 필요�
 
 ![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
-[스키마](https://platform.adobe.com/)**[및 ](https://platform.adobe.com/schema)데이터 세트****[탭의 ](https://platform.adobe.com/dataset/overview)Adobe Experience Platform**&#x200B;에서 동일한 정보를 찾을 수 있습니다.
+[스키마](https://platform.adobe.com/)**[및 &#x200B;](https://platform.adobe.com/schema)데이터 세트**&#x200B;**[탭의 &#x200B;](https://platform.adobe.com/dataset/overview)Adobe Experience Platform**&#x200B;에서 동일한 정보를 찾을 수 있습니다.
 
 일단 경쟁하면 교육 및 채점 구성은 다음 스크린샷과 유사해야 합니다.
 
@@ -143,13 +143,13 @@ Luma 성향 모델 노트북의 경우 요구 사항을 업데이트할 필요�
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [read_json](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
-먼저 CSV 파일을 가져오는 예를 살펴보겠습니다. `data` 인수는 CSV 파일의 경로입니다. 이 변수는 `configProperties`이전 섹션[의 ](#configuration-files)에서 가져왔습니다.
+먼저 CSV 파일을 가져오는 예를 살펴보겠습니다. `data` 인수는 CSV 파일의 경로입니다. 이 변수는 `configProperties`이전 섹션[의 &#x200B;](#configuration-files)에서 가져왔습니다.
 
 ```PYTHON
 df = pd.read_csv(data)
 ```
 
-JSON 파일에서 가져올 수도 있습니다. `data` 인수는 CSV 파일의 경로입니다. 이 변수는 `configProperties`이전 섹션[의 ](#configuration-files)에서 가져왔습니다.
+JSON 파일에서 가져올 수도 있습니다. `data` 인수는 CSV 파일의 경로입니다. 이 변수는 `configProperties`이전 섹션[의 &#x200B;](#configuration-files)에서 가져왔습니다.
 
 ```PYTHON
 df = pd.read_json(data)

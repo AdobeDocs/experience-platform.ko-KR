@@ -45,7 +45,7 @@ ht-degree: 0%
 
 표시되는 구성 보기에서 확장을 계정에 연결하려면 이전에 복사한 [!DNL Pixel] ID를 제공해야 합니다. ID를 입력에 직접 붙여넣거나 데이터 요소를 대신 사용할 수 있습니다.
 
-[!DNL Conversions API]을(를) 사용하려면 액세스 토큰도 제공해야 합니다. 이 값을 얻는 방법에 대한 단계는 [!DNL Conversions API]액세스 토큰 생성[에 대한 ](https://developers.facebook.com/docs/marketing-api/conversions-api/get-started#access-token) 설명서를 참조하십시오.
+[!DNL Conversions API]을(를) 사용하려면 액세스 토큰도 제공해야 합니다. 이 값을 얻는 방법에 대한 단계는 [!DNL Conversions API]액세스 토큰 생성[에 대한 &#x200B;](https://developers.facebook.com/docs/marketing-api/conversions-api/get-started#access-token) 설명서를 참조하십시오.
 
 완료되면 **[!UICONTROL Save]** 선택
 
@@ -79,7 +79,7 @@ Facebook 및 Instagram에서 인증하라는 대화 상자 프롬프트가 이�
 
 ## 이벤트 전달 규칙 구성 {#rule}
 
-이 섹션에서는 일반 이벤트 전달 규칙에서 [!DNL Conversions API] 확장을 사용하는 방법을 다룹니다. 실제로 [ 및 ](https://developers.facebook.com/docs/meta-pixel/reference)을(를) 통해 허용된 모든 [!DNL Meta Pixel]표준 이벤트[!DNL Conversions API]를 보내려면 여러 규칙을 구성해야 합니다. 모바일 앱 데이터의 경우 필수 필드, 앱 데이터 필드, 고객 정보 매개 변수 및 사용자 지정 데이터 세부 정보 [여기](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events)를 참조하세요.
+이 섹션에서는 일반 이벤트 전달 규칙에서 [!DNL Conversions API] 확장을 사용하는 방법을 다룹니다. 실제로 [&#x200B; 및 &#x200B;](https://developers.facebook.com/docs/meta-pixel/reference)을(를) 통해 허용된 모든 [!DNL Meta Pixel]표준 이벤트[!DNL Conversions API]를 보내려면 여러 규칙을 구성해야 합니다. 모바일 앱 데이터의 경우 필수 필드, 앱 데이터 필드, 고객 정보 매개 변수 및 사용자 지정 데이터 세부 정보 [여기](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events)를 참조하세요.
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ Facebook 및 Instagram에서 인증하라는 대화 상자 프롬프트가 이�
 
 | 구성 섹션 | 설명 |
 | --- | --- |
-| [!UICONTROL Server Event Parameters] | 발생한 시간 및 이벤트를 트리거한 소스 작업을 포함한 이벤트에 대한 일반 정보입니다. [!DNL Meta]에서 수락한 [표준 이벤트 매개 변수](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event)에 대한 자세한 내용은 [!DNL Conversions API] 개발자 설명서를 참조하십시오.<br><br>이벤트를 보내는 데 [!DNL Meta Pixel]과(와) [!DNL Conversions API]을(를) 모두 사용하는 경우 모든 이벤트에 **[!UICONTROL Event Name]**(`event_name`)과(와) **[!UICONTROL Event ID]**(`event_id`)을(를) 모두 포함해야 합니다. [이벤트 중복 제거](#deduplication)에 이 값이 사용되기 때문입니다.<br><br>고객 옵트아웃을 준수하도록 **[!UICONTROL Enable Limited Data Use]**&#x200B;할 수 있는 옵션도 있습니다. 이 기능에 대한 자세한 내용은 [!DNL Conversions API]데이터 처리 옵션[에서 ](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) 설명서를 참조하십시오. |
+| [!UICONTROL Server Event Parameters] | 발생한 시간 및 이벤트를 트리거한 소스 작업을 포함한 이벤트에 대한 일반 정보입니다. [!DNL Meta]에서 수락한 [표준 이벤트 매개 변수](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event)에 대한 자세한 내용은 [!DNL Conversions API] 개발자 설명서를 참조하십시오.<br><br>이벤트를 보내는 데 [!DNL Meta Pixel]과(와) [!DNL Conversions API]을(를) 모두 사용하는 경우 모든 이벤트에 **[!UICONTROL Event Name]**(`event_name`)과(와) **[!UICONTROL Event ID]**(`event_id`)을(를) 모두 포함해야 합니다. [이벤트 중복 제거](#deduplication)에 이 값이 사용되기 때문입니다.<br><br>고객 옵트아웃을 준수하도록 **[!UICONTROL Enable Limited Data Use]**&#x200B;할 수 있는 옵션도 있습니다. 이 기능에 대한 자세한 내용은 [!DNL Conversions API]데이터 처리 옵션[에서 &#x200B;](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) 설명서를 참조하십시오. |
 | [!UICONTROL Customer Information Parameters] | 이벤트를 고객에게 연결하는 데 사용되는 사용자 ID 데이터입니다. 이러한 값 중 일부는 API로 전송되기 전에 해시해야 합니다.<br><br>양호한 일반 API 연결과 높은 이벤트 일치 품질(EMQ)을 보장하려면 서버 이벤트와 함께 모든 [허용된 고객 정보 매개 변수](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters)를 보내는 것이 좋습니다. 이러한 매개 변수는 [중요도와 EMQ에 미치는 영향에 따라 우선 순위가 지정되어야 합니다](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
 | [!UICONTROL Custom Data] | 광고 게재 최적화에 사용할 추가 데이터로서, JSON 오브젝트 형태로 제공됩니다. 이 개체에 대해 허용되는 속성에 대한 자세한 내용은 [[!DNL Conversions API] 설명서](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data)를 참조하세요.<br><br>구매 이벤트를 보내는 경우 이 섹션을 사용하여 필수 특성 `currency` 및 `value`을(를) 제공해야 합니다. |
 | [!UICONTROL Test Event] | 이 옵션은 구성이 서버 이벤트를 예상대로 [!DNL Meta]에서 수신하는지 확인하는 데 사용됩니다. 이 기능을 사용하려면 **[!UICONTROL Send as Test Event]** 확인란을 선택한 다음 아래 입력에 원하는 테스트 이벤트 코드를 입력하십시오. 이벤트 전달 규칙이 배포되면 확장과 작업을 올바르게 구성한 경우 **[!DNL Test Events]**&#x200B;의 [!DNL Meta Events Manager] 보기 내에 나타나는 활동이 표시됩니다. |
@@ -112,7 +112,7 @@ Facebook 및 Instagram에서 인증하라는 대화 상자 프롬프트가 이�
 
 클라이언트와 서버 간에 중복되지 않은 상태로 서로 다른 이벤트 유형을 보내는 경우 중복 제거가 필요하지 않습니다. 그러나 단일 이벤트가 [!DNL Meta Pixel]과(와) [!DNL Conversions API] 모두에서 공유되는 경우 이러한 중복 이벤트가 중복 제거되어 보고에 부정적인 영향을 주지 않도록 해야 합니다.
 
-공유 이벤트를 보낼 때 클라이언트와 서버 모두에서 보내는 모든 이벤트와 함께 이벤트 ID와 이름을 포함해야 합니다. ID와 이름이 같은 여러 이벤트가 수신되면 [!DNL Meta]은(는) 자동으로 여러 전략을 사용하여 중복을 제거하고 가장 관련성이 높은 데이터를 유지합니다. 이 프로세스에 대한 자세한 내용은 [!DNL Meta]중복 제거 대상[및 [!DNL Meta Pixel] 이벤트 [!DNL Conversions API] 에 대한 ](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) 설명서를 참조하십시오.
+공유 이벤트를 보낼 때 클라이언트와 서버 모두에서 보내는 모든 이벤트와 함께 이벤트 ID와 이름을 포함해야 합니다. ID와 이름이 같은 여러 이벤트가 수신되면 [!DNL Meta]은(는) 자동으로 여러 전략을 사용하여 중복을 제거하고 가장 관련성이 높은 데이터를 유지합니다. 이 프로세스에 대한 자세한 내용은 [!DNL Meta]중복 제거 대상[및 [!DNL Meta Pixel] 이벤트 [!DNL Conversions API] 에 대한 &#x200B;](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) 설명서를 참조하십시오.
 
 ## 빠른 시작 워크플로우: Meta 전환 API 확장(Beta) {#quick-start}
 
@@ -217,7 +217,7 @@ Facebook 및 Instagram에서 인증하라는 대화 상자 프롬프트가 이�
 
 모든 `MetaConversion_*` 규칙에서 이 데이터 구조를 사용하여 관련 데이터를 [!DNL Meta Pixel] 확장 및 [!DNL Meta Conversions API]에 전달하므로 이 점을 이해하는 것이 중요합니다. 다양한 메타 이벤트에 필요한 데이터에 대한 자세한 내용은 [표준 이벤트](https://developers.facebook.com/docs/meta-pixel/reference#standard-events)에 대한 설명서를 참조하십시오.
 
-예를 들어 `MetaConversion_Subscribe` 규칙을 사용하려면 `window.dataLayer.meta.currency`표준 이벤트`window.dataLayer.meta.predicted_ltv`에 대한 설명서에 설명된 개체 속성에 따라 `window.dataLayer.meta.value`, [ 및 ](https://developers.facebook.com/docs/meta-pixel/reference#standard-events)을(를) 업데이트해야 합니다.
+예를 들어 `MetaConversion_Subscribe` 규칙을 사용하려면 `window.dataLayer.meta.currency`표준 이벤트`window.dataLayer.meta.predicted_ltv`에 대한 설명서에 설명된 개체 속성에 따라 `window.dataLayer.meta.value`, [&#x200B; 및 &#x200B;](https://developers.facebook.com/docs/meta-pixel/reference#standard-events)을(를) 업데이트해야 합니다.
 
 다음은 규칙을 실행하기 전에 데이터 레이어를 업데이트하기 위해 웹 사이트에서 실행해야 하는 예입니다.
 
@@ -234,4 +234,4 @@ Facebook 및 Instagram에서 인증하라는 대화 상자 프롬프트가 이�
 * 아직 [!DNL Pixels] 통합에 연결되지 않은 다른 [!DNL Conversions API]을(를) 연결합니다.
 * 클라이언트측에서 [!DNL Meta Pixel]을(를) 통해서만 특정 이벤트를 보낼 경우 서버측에서도 동일한 이벤트를 [!DNL Conversions API]에 보냅니다.
 
-통합을 효과적으로 구현하는 방법에 대한 자세한 지침은 [!DNL Meta]의 모범 사례[ [!DNL Conversions API]에 대한 ](https://www.facebook.com/business/help/308855623839366?id=818859032317965) 설명서를 참조하십시오. Adobe Experience Cloud의 태그 및 이벤트 전달에 대한 자세한 내용은 [태그 개요](../../../home.md)를 참조하세요.
+통합을 효과적으로 구현하는 방법에 대한 자세한 지침은 [!DNL Meta]의 모범 사례[&#x200B; [!DNL Conversions API]에 대한 &#x200B;](https://www.facebook.com/business/help/308855623839366?id=818859032317965) 설명서를 참조하십시오. Adobe Experience Cloud의 태그 및 이벤트 전달에 대한 자세한 내용은 [태그 개요](../../../home.md)를 참조하세요.

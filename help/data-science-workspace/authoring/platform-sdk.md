@@ -161,7 +161,7 @@ df2
 | 보다 작음(`<`) | `lt()` |
 | 보다 작거나 같음(`<=`) | `le()` |
 | 및 (`&`) | `And()` |
-| 또는 ( &amp;vert; ) | `Or()` |
+| 또는 ( &vert; ) | `Or()` |
 
 ## 선택한 열로 필터링 {#filter-by-selected-columns}
 
@@ -226,4 +226,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## 다음 단계
 
-`platform_sdk` 데이터 로더를 구성하면 데이터가 준비 과정을 거친 다음 `train` 및 `val` 데이터 세트로 분할됩니다. 데이터 준비 및 기능 엔지니어링에 대한 자세한 내용은 [ 전자 필기장을 사용하여 레시피를 만드는 자습서의 ](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering)데이터 준비 및 기능 엔지니어링[!DNL JupyterLab]에 대한 섹션을 참조하십시오.
+`platform_sdk` 데이터 로더를 구성하면 데이터가 준비 과정을 거친 다음 `train` 및 `val` 데이터 세트로 분할됩니다. 데이터 준비 및 기능 엔지니어링에 대한 자세한 내용은 [&#x200B; 전자 필기장을 사용하여 레시피를 만드는 자습서의 &#x200B;](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering)데이터 준비 및 기능 엔지니어링[!DNL JupyterLab]에 대한 섹션을 참조하십시오.

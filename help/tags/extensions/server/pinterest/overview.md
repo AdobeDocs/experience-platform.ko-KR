@@ -33,7 +33,7 @@ ht-degree: 3%
 
 이 확장을 사용하려면 올바른 [!DNL Pinterest] [비즈니스 계정](https://help.pinterest.com/en/business/article/get-a-business-account)이 있어야 합니다. 아직 계정이 없는 경우 [[!DNL Pinterest] 등록 페이지](https://www.pinterest.com/business/create/)&#x200B;(으)로 이동하여 등록하고 계정을 만드십시오.
 
-[!DNL Pinterest] 비즈니스 계정과 연결되어야 하는 [!DNL Pinterest] 개발자 계정도 필요합니다. 개발자 계정을 비즈니스 계정에 연결하려면 [[!DNL Pinterest ] 개발자 계정](https://developers.pinterest.com/account-setup/)을 참조하세요.
+[!DNL Pinterest] 비즈니스 계정과 연결되어야 하는 [!DNL Pinterest] 개발자 계정도 필요합니다. 개발자 계정을 비즈니스 계정에 연결하려면 [[!DNL Pinterest &#x200B;] 개발자 계정](https://developers.pinterest.com/account-setup/)을 참조하세요.
 
 ### 필요한 구성 세부 정보 수집 {#configuration-details}
 
@@ -62,7 +62,7 @@ Experience Platform을 [!DNL Pinterest]에 연결하려면 다음 입력이 필�
 
 ![[!DNL Pinterest]이(가) 강조 표시된 [!UICONTROL Install] 탭에 [!UICONTROL Configure] 확장이 표시됨.](../../../images/extensions/server/pinterest/configure.png)
 
-다음 화면에서는 [!UICONTROL Ads Account Id]구성 세부 정보[!UICONTROL Conversion Access Token] 섹션에서 이전에 수집한 [ 및 ](#configuration-details)을(를) 입력합니다. 완료되면 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
+다음 화면에서는 [!UICONTROL Ads Account Id]구성 세부 정보[!UICONTROL Conversion Access Token] 섹션에서 이전에 수집한 [&#x200B; 및 &#x200B;](#configuration-details)을(를) 입력합니다. 완료되면 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
 ![[!DNL Pinterest] 및 [!UICONTROL Configure] 입력 필드를 강조 표시하는 [!UICONTROL Ads Account Id] [!UICONTROL Conversion Access Token] 화면입니다.](../../../images/extensions/server/pinterest/input.png)
 
@@ -82,8 +82,8 @@ Experience Platform을 [!DNL Pinterest]에 연결하려면 다음 입력이 필�
 
 | 필드 이름 | 설명 | 예 |
 | --- | --- | --- | 
-| [!UICONTROL Event Name] | 사용자 이벤트의 유형입니다. 모든 이벤트 유형일 수 있지만 [!DNL Pinterest Analytics]을(를) 활용하려면 [[!DNL Pinterest] 이벤트 코드](https://help.pinterest.com/en/business/article/add-event-codes)를 사용하는 것이 좋습니다. | &amp;ast; 체크아웃 <br> &amp;ast; add_to_cart <br> &amp;ast; page_visit <br> &amp;ast; 등록 <br> &amp;ast; [사용자 정의 이벤트] |
-| [!UICONTROL Action Source] | 전환 이벤트가 발생한 위치를 나타내는 소스. | &amp;ast; app_android <br> &amp;ast; app_ios <br> &amp;ast; 웹 <br> &amp;ast; offline |
+| [!UICONTROL Event Name] | 사용자 이벤트의 유형입니다. 모든 이벤트 유형일 수 있지만 [!DNL Pinterest Analytics]을(를) 활용하려면 [[!DNL Pinterest] 이벤트 코드](https://help.pinterest.com/en/business/article/add-event-codes)를 사용하는 것이 좋습니다. | &ast; 체크아웃 <br> &ast; add_to_cart <br> &ast; page_visit <br> &ast; 등록 <br> &ast; [사용자 정의 이벤트] |
+| [!UICONTROL Action Source] | 전환 이벤트가 발생한 위치를 나타내는 소스. | &ast; app_android <br> &ast; app_ios <br> &ast; 웹 <br> &ast; offline |
 | [!UICONTROL Event Time] | 이벤트 시간을 나타냅니다. 사용되는 기본 시간 형식은 UNIX이며 로컬 시간대에 따라 `<seconds>.<miliseconds>` 형식입니다. 자세한 내용은 [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create)를 참조하세요. | 1433188255.500은 epoch 후 또는 2015년 6월 1일 월요일 오후 7:50:55분 GMT에서 1433188255초 및 500밀리초를 나타냅니다. |
 | [!UICONTROL Event ID] | 이 이벤트를 식별하고 전환 API 및 Pinterest 추적을 통해 수집된 이벤트 간에 중복 제거하는 데 사용할 수 있는 고유한 ID 문자열입니다. 이 기능이 없으면 이벤트 데이터가 두 번 계산되고 지표 인플레이션을 보고할 가능성이 높습니다. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad |
 | [!UICONTROL Event Properties] | 이벤트의 사용자 지정 속성이 포함된 JSON 개체입니다. 원시 JSON을 제공하거나 간소화된 키-값 입력 세트를 사용하여 선택하십시오. | { &quot;event_source_url&quot;: &quot;http://site.com&quot; } |

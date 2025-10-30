@@ -147,7 +147,7 @@ XDM(경험 데이터 모델) 리소스는 [!UICONTROL Schemas]의 [!DNL Adobe Ex
 
 #### 고객 디지털 트랜잭션 스키마
 
-이 스키마는 웹 사이트 또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 [!DNL Adobe Experience Platform]웹 SDK[를 통해 ](/help/web-sdk/home.md)에 수집되며, 여정 트리거, 자세한 온라인 고객 분석, 향상된 대상 기능 및 개인화된 메시징에 사용되는 다양한 찾아보기 및 전환 이벤트를 참조하는 데 필요합니다.
+이 스키마는 웹 사이트 또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 [!DNL Adobe Experience Platform]웹 SDK[를 통해 &#x200B;](/help/web-sdk/home.md)에 수집되며, 여정 트리거, 자세한 온라인 고객 분석, 향상된 대상 기능 및 개인화된 메시징에 사용되는 다양한 찾아보기 및 전환 이벤트를 참조하는 데 필요합니다.
 
 고객 디지털 트랜잭션 스키마는 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스로 표시됩니다.
 
