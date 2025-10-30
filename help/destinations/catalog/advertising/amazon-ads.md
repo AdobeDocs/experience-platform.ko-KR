@@ -3,9 +3,9 @@ title: Amazon 광고
 description: Amazon Ads는 등록된 판매자, 공급업체, 서적 공급업체, Kindle Direct Publishing(KDP) 작성자, 앱 개발자 및/또는 에이전시에 대한 광고 목표를 달성하는 데 도움이 되는 다양한 옵션을 제공합니다. Adobe Experience Platform과 Amazon Ads 통합에서는 ADSP(Amazon DSP)를 비롯한 Amazon Ads 제품에 대한 전환 키 통합을 제공합니다. Adobe Experience Platform의 Amazon Ads 대상을 사용하면 Amazon DSP에서 타깃팅 및 활성화를 위해 광고주 대상을 정의할 수 있습니다.
 last-substantial-update: 2025-10-08T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 6afb8d56b8af8e5b0450f769414d3afcac1d58eb
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '1977'
 ht-degree: 2%
 
 ---
@@ -55,15 +55,15 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
-| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
-| `firstName` | 사용자의 이름 | 일반 텍스트 또는 SHA256을 지원합니다. 일반 텍스트를 사용하는 경우 Adobe UI에서 [!UICONTROL 변환 적용]을 사용하도록 설정하십시오. |
-| `lastName` | 사용자의 성 | 일반 텍스트 또는 SHA256을 지원합니다. 일반 텍스트를 사용하는 경우 Adobe UI에서 [!UICONTROL 변환 적용]을 사용하도록 설정하십시오. |
+| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
+| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
+| `firstName` | 사용자의 이름 | 일반 텍스트 또는 SHA256을 지원합니다. 일반 텍스트를 사용하는 경우 Adobe UI에서 [!UICONTROL Apply transformation]을(를) 활성화합니다. |
+| `lastName` | 사용자의 성 | 일반 텍스트 또는 SHA256을 지원합니다. 일반 텍스트를 사용하는 경우 Adobe UI에서 [!UICONTROL Apply transformation]을(를) 활성화합니다. |
 | `street` | 사용자의 상세 주소 | SHA256 해시 입력만 지원됩니다. 해시 전에 정규화합니다. Adobe 측 변환을 **사용하지 않음**. |
-| `city` | 사용자의 구/군/시 | 일반 텍스트 또는 SHA256을 지원합니다. 일반 텍스트를 사용하는 경우 Adobe UI에서 [!UICONTROL 변환 적용]을 사용하도록 설정하십시오. |
-| `state` | 사용자의 주 또는 시/도 | 일반 텍스트 또는 SHA256을 지원합니다. 일반 텍스트를 사용하는 경우 Adobe UI에서 [!UICONTROL 변환 적용]을 사용하도록 설정하십시오. |
-| `zip` | 사용자의 우편 번호 | 일반 텍스트 또는 SHA256을 지원합니다. 일반 텍스트를 사용하는 경우 Adobe UI에서 [!UICONTROL 변환 적용]을 사용하도록 설정하십시오. |
-| `country` | 사용자의 국가 | 일반 텍스트 또는 SHA256을 지원합니다. 일반 텍스트를 사용하는 경우 Adobe UI에서 [!UICONTROL 변환 적용]을 사용하도록 설정하십시오. |
+| `city` | 사용자의 구/군/시 | 일반 텍스트 또는 SHA256을 지원합니다. 일반 텍스트를 사용하는 경우 Adobe UI에서 [!UICONTROL Apply transformation]을(를) 활성화합니다. |
+| `state` | 사용자의 주 또는 시/도 | 일반 텍스트 또는 SHA256을 지원합니다. 일반 텍스트를 사용하는 경우 Adobe UI에서 [!UICONTROL Apply transformation]을(를) 활성화합니다. |
+| `zip` | 사용자의 우편 번호 | 일반 텍스트 또는 SHA256을 지원합니다. 일반 텍스트를 사용하는 경우 Adobe UI에서 [!UICONTROL Apply transformation]을(를) 활성화합니다. |
+| `country` | 사용자의 국가 | 일반 텍스트 또는 SHA256을 지원합니다. 일반 텍스트를 사용하는 경우 Adobe UI에서 [!UICONTROL Apply transformation]을(를) 활성화합니다. |
 
 {style="table-layout:auto"}
 
@@ -73,8 +73,8 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 | 항목 | 유형 | 참고 |
 | ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | *[!DNL Amazon Ads]* 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+| 내보내기 유형 | **[!UICONTROL Audience export]** | *[!DNL Amazon Ads]* 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
+| 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -82,13 +82,13 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상으로 인증 {#authenticate}
 
-대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
+대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 
 연결할 광고주 계정을 먼저 선택한 [!DNL Amazon Ads] 연결 인터페이스로 이동합니다. 연결하면 선택한 광고주 계정의 ID가 제공된 새 연결로 Adobe Experience Platform으로 다시 리디렉션됩니다. 계속하려면 대상 구성 화면에서 적절한 광고주 계정을 선택하십시오.
 
@@ -96,17 +96,17 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL Amazon 광고 연결]**: 대상에 사용되는 대상 [!DNL Amazon Ads] 계정의 ID를 선택합니다.
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Amazon Ads Connection]**: 대상에 사용되는 대상 [!DNL Amazon Ads] 계정의 ID를 선택하십시오.
 
 >[!NOTE]
 >
 >대상 구성을 저장한 후에는 Amazon 계정을 통해 다시 인증하더라도 [!DNL Amazon Ads] 광고주 ID를 변경할 수 없습니다. 다른 [!DNL Amazon Ads] 광고주 ID를 사용하려면 새 대상 연결을 만들어야 합니다. 이미 ADSP와의 통합을 통해 설정된 광고주가 해당 대상을 AMC 또는 다른 ADSP 계정으로 전달하려면 새 대상 플로우를 생성해야 합니다.
 
-* **[!UICONTROL 광고주 지역]**: 광고주가 호스팅되는 적절한 지역을 선택하십시오. 각 지역에서 지원하는 마켓플레이스에 대한 자세한 내용은 [Amazon 광고 설명서](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)를 참조하세요.
+* **[!UICONTROL Advertiser Region]**: 광고주가 호스팅되는 적절한 지역을 선택하십시오. 각 지역에서 지원하는 마켓플레이스에 대한 자세한 내용은 [Amazon 광고 설명서](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)를 참조하세요.
 
-* **[!UICONTROL Amazon 광고 동의 신호]**: 이 연결을 통해 전송된 모든 데이터가 개인 데이터를 광고 목적으로 사용하도록 동의했는지 확인합니다. &quot;승인됨&quot;은 Amazon이 광고에 고객의 개인 데이터를 사용하는 것에 대한 동의를 나타냅니다. 허용되는 값은 &quot;GRANTED&quot; 및 &quot;DENIED&quot;입니다. &quot;거부됨&quot;을 사용하는 연결을 통해 전송된 모든 레코드는 Amazon 광고 내에서 더 이상 사용할 수 없도록 거부됩니다.
+* **[!UICONTROL Amazon Ads Consent Signal]**: 이 연결을 통해 전송된 모든 데이터가 개인 데이터를 광고 목적으로 사용하는 데 동의했는지 확인합니다. &quot;승인됨&quot;은 Amazon이 광고에 고객의 개인 데이터를 사용하는 것에 대한 동의를 나타냅니다. 허용되는 값은 &quot;GRANTED&quot; 및 &quot;DENIED&quot;입니다. &quot;거부됨&quot;을 사용하는 연결을 통해 전송된 모든 레코드는 Amazon 광고 내에서 더 이상 사용할 수 없도록 거부됩니다.
 
 ![새 대상 구성](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
@@ -114,14 +114,14 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
@@ -154,7 +154,7 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 **Amazon DSP의 경우**
 
-**[!UICONTROL 광고주 ID]** > **[!UICONTROL 대상]** > **[!UICONTROL 광고주 대상]**(으)로 이동합니다. 대상자가 만들어졌고 최소 대상자 구성원 수를 충족하면 `Active` 상태가 표시됩니다. 대상자 크기 및 도달에 대한 자세한 내용은 Amazon DSP 사용자 인터페이스 오른쪽에 있는 예측 도달 패널에서 확인할 수 있습니다.
+**[!UICONTROL Advertiser ID]** > **[!UICONTROL Audiences]** > **[!UICONTROL Advertiser Audiences]**(으)로 이동합니다. 대상자가 만들어졌고 최소 대상자 구성원 수를 충족하면 `Active` 상태가 표시됩니다. 대상자 크기 및 도달에 대한 자세한 내용은 Amazon DSP 사용자 인터페이스 오른쪽에 있는 예측 도달 패널에서 확인할 수 있습니다.
 
 ![Amazon DSP 대상 만들기 유효성 검사](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
@@ -185,7 +185,7 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
 | 2025년 10월 | 추가 ID 필드에 지원이 추가되었습니다. | `firstName`, `lastName`, `street`, `city`, `state`, `zip` 및 `country`과(와) 같은 추가 개인 식별자 지원을 추가했습니다. 이러한 필드를 매핑하면 대상자 일치율을 향상시킬 수 있습니다. |
-| 2025년 2월 | 데이터 흐름을 내보내고 대상을 Beta에서 일반적으로 사용할 수 있도록 승격하기 위해 **[!UICONTROL Amazon 광고 동의 신호]**&#x200B;를 추가하는 요구 사항이 추가되었습니다. |
+| 2025년 2월 | 데이터 흐름을 내보내고 대상을 Beta에서 일반적으로 사용할 수 있도록 승격하기 위해 **[!UICONTROL Amazon Ads Consent Signal]**&#x200B;을(를) 추가하는 요구 사항이 추가되었습니다. |  |
 | 2024년 5월 | 기능 및 설명서 업데이트 | `countryCode` 매개 변수를 Amazon 광고로 내보내는 매핑 옵션을 추가했습니다. [매핑 단계](#map)에서 `countryCode`를 사용하여 Amazon의 ID 일치율을 개선해 보십시오. |
 | 2024년 3월 | 기능 및 설명서 업데이트 | [!DNL Amazon Marketing Cloud]&#x200B;(AMC)에서 사용할 대상을 내보내는 옵션이 추가되었습니다. |
 | 2023년 5월 | 기능 및 설명서 업데이트 | <ul><li>[대상 연결 워크플로](#destination-details)에서 광고주 영역 선택에 대한 지원을 추가했습니다.</li><li>광고주 지역 선택 사항의 추가를 반영하도록 설명서를 업데이트했습니다. 올바른 광고주 지역 선택에 대한 자세한 내용은 [Amazon 설명서](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)를 참조하세요.</li></ul> |

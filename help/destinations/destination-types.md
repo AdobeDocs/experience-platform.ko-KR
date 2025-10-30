@@ -3,9 +3,9 @@ keywords: 대상;대상;대상 유형
 title: 대상 유형 및 범주
 description: Adobe Experience Platform의 다양한 유형과 범주에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '801'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform에서는 서로 다른 대상 유형(연결, 데이터
 
 ## 연결 {#connections}
 
-Adobe Experience Platform의 **[!UICONTROL 프로필 내보내기]**, **[!UICONTROL 스트리밍 대상 내보내기]** 및 **[!DNL Edge Personalization]** 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하여 [실시간 고객 프로필](../profile/home.md)을 형성하고, 세그먼테이션을 적용하고, 대상 및 자격 조건을 갖춘 프로필을 대상으로 내보냅니다.
+Adobe Experience Platform의 **[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]** 및 **[!DNL Edge Personalization]** 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하여 [실시간 고객 프로필](../profile/home.md)을(를) 형성하고, 세그먼테이션을 적용하고, 대상자와 정규화된 프로필을 대상으로 내보냅니다.
 
 ## 프로필 내보내기 대상 {#profile-export}
 
@@ -41,7 +41,7 @@ Adobe Experience Platform의 **[!UICONTROL 프로필 내보내기]**, **[!UICONT
 
 >[!IMPORTANT]
 >
->고급 엔터프라이즈 대상 또는 스트리밍 프로필 내보내기 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객만 사용할 수 있습니다.
+>고급 엔터프라이즈 대상 또는 스트리밍 프로필 내보내기 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객만 사용할 수 있습니다.
 
 고급 엔터프라이즈 대상 Data Connectors를 사용하여 데이터 동기화, 분석 및 추가적인 프로필 보강 사용 사례를 위해 Adobe Real-Time Customer Data Platform 프로필을 거의 실시간으로 내부 시스템이나 다른 서드파티 시스템에 전달합니다.
 
@@ -71,7 +71,7 @@ Experience Platform의 Edge 개인화 대상에는 [Adobe Target](/help/destinat
 
 아래 비디오에서는 두 가지 유형의 대상에 대한 자세한 내용을 소개합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32149?quality=12&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ## 내보낸 대상자 유형 {#exported-audiences-types}
 

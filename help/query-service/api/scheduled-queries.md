@@ -5,9 +5,9 @@ title: 일정 끝점
 description: 다음 섹션에서는 쿼리 서비스 API를 사용하여 예약된 쿼리에 대해 수행할 수 있는 다양한 API 호출을 안내합니다.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1409'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 >
 >예약된 쿼리를 관리할 때 고려해야 할 중요한 사항:<ul><li>예약된 쿼리를 만드는 데 사용된 계정(기술 또는 사용자)에 액세스나 권한이 없으면 예약된 쿼리가 실패합니다.</li><li>API 또는 UI를 통해 삭제하기 전에 예약된 쿼리를 비활성화해야 합니다.</li><li>종료 날짜 없이 무기한 예약은 지원되지 않습니다. 종료 날짜는 항상 지정해야 합니다.</li></ul>
 
-계정 요구 사항, 권한 설정 및 예약된 쿼리 관리에 대한 자세한 지침은 [쿼리 일정 설명서](../ui/query-schedules.md#technical-account-user-requirements)를 참조하세요. 기술 계정 만들기 및 구성에 대한 단계별 지침은 [Developer Console 설정](https://experienceleague.adobe.com/ko/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) 및 [전체 기술 계정 설정](https://experienceleague.adobe.com/ko/docs/platform-learn/tutorial-comprehensive-technical/setup)을 참조하세요.
+계정 요구 사항, 권한 설정 및 예약된 쿼리 관리에 대한 자세한 지침은 [쿼리 일정 설명서](../ui/query-schedules.md#technical-account-user-requirements)를 참조하세요. 기술 계정 만들기 및 구성에 대한 단계별 지침은 [Developer Console 설정](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) 및 [전체 기술 계정 설정](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup)을 참조하세요.
 
 ## 샘플 API 호출
 
@@ -176,7 +176,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.sql` | 정의된 일정에 따라 실행할 SQL 쿼리입니다. |
 | `query.name` | 예약된 쿼리의 이름입니다. |
 | `query.description` | 예약된 쿼리에 대한 선택적 설명입니다. |
-| `schedule.schedule` | 쿼리에 대한 cron 일정. cron 표현식을 만들고, 확인하고, 이해하는 대화형 방법은 [Crontab.guru](https://crontab.guru/)을 참조하세요. 이 예에서 &quot;30 * * * *&quot;는 쿼리가 매 시간마다 30분 표시에 실행됨을 의미합니다.<br><br>또는 다음 축약 표현식을 사용할 수 있습니다.<ul><li>`@once`: 쿼리가 한 번만 실행됩니다.</li><li>`@hourly`: 쿼리가 매시간 시작 시간에 실행됩니다. 크론 식 `0 * * * *`과(와) 같습니다.</li><li>`@daily`: 쿼리가 매일 자정에 한 번 실행됩니다. 크론 식 `0 0 * * *`과(와) 같습니다.</li><li>`@weekly`: 쿼리가 일주일에 한 번, 일요일 자정에 실행됩니다. 크론 식 `0 0 * * 0`과(와) 같습니다.</li><li>`@monthly`: 쿼리가 한 달에 한 번, 그 달의 첫째 날 자정에 실행됩니다. 크론 식 `0 0 1 * *`과(와) 같습니다.</li><li>`@yearly`: 쿼리가 1년에 한 번 1월 1일 자정에 실행됩니다. 크론 식 `0 0 1 1 *`과(와) 같습니다. |
+| `schedule.schedule` | 쿼리에 대한 cron 일정. cron 표현식을 만들고, 확인하고, 이해하는 대화형 방법은 [Crontab.guru](https://crontab.guru/)을 참조하세요. 이 예에서 &quot;`30 * * * *`&quot;은(는) 30분 표시에 한 시간마다 쿼리가 실행됨을 의미합니다.<br><br>또는 다음 축약 표현식을 사용할 수 있습니다.<ul><li>`@once`: 쿼리가 한 번만 실행됩니다.</li><li>`@hourly`: 쿼리가 매시간 시작 시간에 실행됩니다. 크론 식 `0 * * * *`과(와) 같습니다.</li><li>`@daily`: 쿼리가 매일 자정에 한 번 실행됩니다. 크론 식 `0 0 * * *`과(와) 같습니다.</li><li>`@weekly`: 쿼리가 일주일에 한 번, 일요일 자정에 실행됩니다. 크론 식 `0 0 * * 0`과(와) 같습니다.</li><li>`@monthly`: 쿼리가 한 달에 한 번, 그 달의 첫째 날 자정에 실행됩니다. 크론 식 `0 0 1 * *`과(와) 같습니다.</li><li>`@yearly`: 쿼리가 1년에 한 번 1월 1일 자정에 실행됩니다. 크론 식 `0 0 1 1 *`과(와) 같습니다. |
 | `schedule.startDate` | UTC 타임스탬프로 작성된 예약된 쿼리의 시작 날짜입니다. |
 
 **응답**

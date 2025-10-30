@@ -9,7 +9,7 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 4%
@@ -48,7 +48,7 @@ API 키는 모든 API 요청의 헤더로 필요합니다. [Adobe Developer Cons
 
 ## 쿼리 매개 변수는 어떻게 사용합니까? {#how-do-i-user-query-parameters}
 
-일부 [!DNL Experience Platform] API 끝점은 쿼리 매개 변수를 사용하여 특정 정보를 찾고 응답에서 반환된 결과를 필터링합니다. 쿼리 매개 변수는 `paramName=paramValue` 형식을 사용하여 하나 이상의 쿼리 매개 변수 뒤에 물음표(`?`) 기호가 있는 요청 경로에 추가됩니다. 단일 호출에서 여러 매개 변수를 결합할 경우 앰퍼샌드(`&`)를 사용하여 개별 매개 변수를 분리해야 합니다. 다음 예는 여러 쿼리 매개 변수를 사용하는 요청이 설명서에 표시되는 방법을 보여 줍니다.
+일부 [!DNL Experience Platform] API 끝점은 쿼리 매개 변수를 사용하여 특정 정보를 찾고 응답에서 반환된 결과를 필터링합니다. 쿼리 매개 변수는 `?` 형식을 사용하여 하나 이상의 쿼리 매개 변수 뒤에 물음표(`paramName=paramValue`) 기호가 있는 요청 경로에 추가됩니다. 단일 호출에서 여러 매개 변수를 결합할 경우 앰퍼샌드(`&`)를 사용하여 개별 매개 변수를 분리해야 합니다. 다음 예는 여러 쿼리 매개 변수를 사용하는 요청이 설명서에 표시되는 방법을 보여 줍니다.
 
 일반적으로 사용되는 쿼리 매개 변수의 예는 다음과 같습니다.
 
@@ -73,11 +73,15 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 UI 또는 API 사용 여부에 따라 다음 시스템 요구 사항이 적용됩니다.
 
 **UI 기반 작업의 경우:**
+
 - 최신 표준 웹 브라우저입니다. 최신 버전의 [!DNL Chrome]이(가) 권장되지만 [!DNL Firefox], [!DNL Internet Explorer] 및 Safari의 현재 및 이전 주요 릴리스도 지원됩니다.
+
    - 새 주요 버전이 릴리스될 때마다 [!DNL Experience Platform]은(는) 최신 버전을 지원하기 시작하지만 세 번째 최신 버전에 대한 지원은 중단됩니다.
+
 - 모든 브라우저에는 쿠키와 JavaScript이 활성화되어 있어야 합니다.
 
 **API 및 개발자 상호 작용의 경우:**
+
 - REST, 스트리밍 및 Webhook 통합을 위해 개발할 개발 환경입니다.
 
 ## 오류 및 문제 해결 {#errors-and-troubleshooting}
@@ -94,7 +98,7 @@ UI 또는 API 사용 여부에 따라 다음 시스템 요구 사항이 적용�
 | 401 | 인증 실패 | 요청이 인증 검사를 통과하지 못했습니다. 액세스 토큰이 누락되었거나 유효하지 않을 수 있습니다. 자세한 내용은 아래의 [OAuth 토큰 오류](#oauth-token-is-missing) 섹션을 참조하십시오. |
 | 403 | 금지 | 리소스를 찾았지만 볼 수 있는 자격 증명이 없습니다. <br> 이 오류의 가능한 원인은 리소스에 액세스하거나 편집하는 데 필요한 [액세스 제어 권한](/help/access-control/home.md)이 없기 때문일 수 있습니다. Experience Platform API를 사용하기 위해 [필요한 특성 기반 액세스 제어 권한을 얻는 방법](/help/landing/api-authentication.md#get-abac-permissions)을 읽어 보십시오. </p> |
 | 404 | 찾을 수 없음 | 요청한 리소스를 서버에서 찾을 수 없습니다. 리소스가 삭제되었거나 요청한 경로가 잘못 입력되었을 수 있습니다. |
-| 500 | 내부 서버 오류 | 서버측 오류입니다. 여러 번 동시에 호출하는 경우 API 제한에 도달하고 결과를 필터링해야 할 수 있습니다. 자세한 내용은 [데이터 필터링](../catalog/api/filter-data.md)에 대한 [!DNL Catalog Service] API 개발자 안내서 하위 가이드를 참조하십시오. 요청을 다시 시도하기 전에 잠시 기다린 후 문제가 지속되면 관리자에게 문의하십시오. |
+| 500 | 내부 서버 오류 | 서버측 오류입니다. 여러 번 동시에 호출하는 경우 API 제한에 도달하고 결과를 필터링해야 할 수 있습니다. 자세한 내용은 [!DNL Catalog Service]데이터 필터링[에 대한 ](../catalog/api/filter-data.md) API 개발자 안내서 하위 가이드를 참조하십시오. 요청을 다시 시도하기 전에 잠시 기다린 후 문제가 지속되면 관리자에게 문의하십시오. |
 
 ## 요청 헤더 오류 {#request-header-errors}
 
@@ -155,7 +159,7 @@ API 요청에서 `Authorization` 헤더가 누락된 경우 이 오류 메시지
 
 이 오류 메시지는 API 요청에서 조직 헤더(`x-gw-ims-org-id`)가 누락된 경우 표시됩니다. 헤더가 조직의 ID에 포함되어 있는지 확인한 후 다시 시도하십시오.
 
-### 프로필이 올바르지 않음 {#profile-is-not-valid}
+### 프로필이 잘못되었습니다. {#profile-is-not-valid}
 
 ```json
 {
@@ -164,7 +168,7 @@ API 요청에서 `Authorization` 헤더가 누락된 경우 이 오류 메시지
 }
 ```
 
-이 오류 메시지는 사용자 또는 Adobe I/O 통합(`Authorization` 헤더의 [액세스 토큰](#how-do-i-get-an-access-token)(으)로 식별됨)이 `x-gw-ims-org-id` 헤더에 제공된 조직의 [!DNL Experience Platform] API를 호출할 권한이 없는 경우에 표시됩니다. 헤더에 조직에 대한 올바른 ID를 입력했는지 확인한 후 다시 시도하십시오. 조직 ID를 모를 경우 [Adobe I/O 콘솔](https://console.adobe.io)에서 찾을 수 있습니다. **통합** 탭의 **개요** 섹션으로 이동하여 특정 통합을 위해 **클라이언트 자격 증명**&#x200B;에서 ID를 찾습니다.
+이 오류 메시지는 사용자 또는 Adobe I/O 통합([ 헤더의 ](#how-do-i-get-an-access-token)액세스 토큰`Authorization`(으)로 식별됨)이 [!DNL Experience Platform] 헤더에 제공된 조직의 `x-gw-ims-org-id` API를 호출할 권한이 없는 경우에 표시됩니다. 헤더에 조직에 대한 올바른 ID를 입력했는지 확인한 후 다시 시도하십시오. 조직 ID를 모를 경우 [Adobe I/O 콘솔](https://console.adobe.io)에서 찾을 수 있습니다. **통합** 탭의 **개요** 섹션으로 이동하여 특정 통합을 위해 **클라이언트 자격 증명**&#x200B;에서 ID를 찾습니다.
 
 ### Etag 새로 고침 오류 {#refresh-etag-error}
 
@@ -201,6 +205,7 @@ API 요청에서 `Authorization` 헤더가 누락된 경우 이 오류 메시지
 ```
 
 이 오류 메시지는 아래 두 가지 경우 중 하나에 표시됩니다.
+
 - API 요청에서 잘못되거나 잘못된 조직 ID 헤더(`x-gw-ims-org-id`)가 전달된 경우. 조직의 올바른 ID가 포함되어 있는지 확인한 후 다시 시도하십시오.
 - 제공된 인증 자격 증명으로 표현되는 계정이 Experience Platform의 제품 프로필과 연결되어 있지 않은 경우입니다. Experience Platform API 인증 자습서에서 [액세스 자격 증명을 생성](./api-authentication.md#authentication-for-each-session)하는 단계에 따라 Experience Platform을 계정에 추가하고 그에 따라 인증 자격 증명을 업데이트합니다.
 

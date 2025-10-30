@@ -4,9 +4,9 @@ title: 리팩터링된 세그멘테이션 시간 제한 UI 안내서
 description: 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '352'
 ht-degree: 9%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 9%
 
 이전에는 개별 이벤트에 여러 시간 제한 규칙이 첨부되어 있을 수 있었습니다. 최근 업데이트로 인해 규칙에 시간 제약 조건을 추가하려고 하면 이제 **오류**&#x200B;이(가) 발생합니다.
 
-![규칙 수준 시간 제한이 강조 표시되어 있습니다. 이후에 발생하는 오류도 강조 표시됩니다. &#x200B;](../images/ui/segment-refactoring/rule-time-constraint.png)
+![규칙 수준 시간 제한이 강조 표시되어 있습니다. 이후에 발생하는 오류도 강조 표시됩니다.](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 이제 캔버스 수준 또는 카드 수준에서만 시간 제한을 적용할 수 있습니다.
 
@@ -38,6 +38,6 @@ ht-degree: 9%
 
 ![캔버스 수준 시간 제약 조건이 강조 표시됩니다.](../images/ui/segment-refactoring/canvas-time-constraint.png)
 
-카드 수준에서 시간 제한을 적용하려면 시간 제한을 적용할 특정 카드를 선택합니다. **[!UICONTROL 이벤트 규칙]** 컨테이너가 나타납니다. 이제 카드에 적용할 시간 제한을 선택할 수 있습니다.
+카드 수준에서 시간 제한을 적용하려면 시간 제한을 적용할 특정 카드를 선택합니다. **[!UICONTROL Event Rules]** 컨테이너가 나타납니다. 이제 카드에 적용할 시간 제한을 선택할 수 있습니다.
 
 ![카드 수준 시간 제약 조건이 강조 표시됩니다.](../images/ui/segment-refactoring/card-time-constraint.png)

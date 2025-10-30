@@ -2,7 +2,7 @@
 title: Adobe 클라이언트 데이터 레이어 확장
 description: Adobe Experience Platform의 Adobe 클라이언트 데이터 레이어 태그 확장에 대해 알아봅니다.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
@@ -11,14 +11,14 @@ ht-degree: 0%
 
 # Adobe 클라이언트 데이터 레이어 확장
 
-이 설명서는 Adobe 클라이언트 데이터 레이어 확장을 사용하는 방법에 대한 예제와 모범 사례를 제공합니다.
+이 설명서에서는 Adobe 클라이언트 데이터 레이어 확장 사용 방법에 대한 예제와 모범 사례를 제공합니다.
 
 <!-- (Missing document?)
 If you would like to have more details on development consideration, [please reach this page](./dev.md). -->
 
 ## 설치
 
-확장을 설치하려면 Experience Platform UI 또는 데이터 수집 UI에서 확장 카탈로그로 이동하고 클라이언트 데이터 레이어 Adobe 를 선택합니다.
+확장을 설치하려면 Experience Platform UI 또는 데이터 수집 UI에서 확장 카탈로그로 이동하고 Adobe 클라이언트 데이터 레이어 를 선택합니다.
 
 카탈로그의 ![ACDL 확장 보기](./images/catalog.png)
 
@@ -51,12 +51,12 @@ This installation will not be supported on our end.<br>
 
 다음 예제 푸시 이벤트는 리스너에 의해 추적됩니다.
 
-* ` adobeDataLayer.push({"data":"something"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"data":"something"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 다음 예제 푸시 이벤트는 리스너에 의해 추적되지 않습니다.
 
-* ` adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent"})`
 
 ### 모든 이벤트 수신
 
@@ -64,8 +64,8 @@ This installation will not be supported on our end.<br>
 
 다음 예제 푸시 이벤트는 리스너에 의해 추적됩니다.
 
-* ` adobeDataLayer.push({"event":"myevent"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 다음 예제 푸시 이벤트는 리스너에 의해 추적되지 않습니다.
 
@@ -91,7 +91,7 @@ This installation will not be supported on our end.<br>
 
 ### 데이터 레이어 재설정
 
-확장은 데이터 레이어 길이를 재설정하는 방법을 제공하여 단일 페이지 애플리케이션(SPA)의 제한된 크기를 유지하는 데 도움이 됩니다.
+확장 프로그램은 데이터 레이어 길이를 재설정하는 방법을 제공하여 단일 페이지 애플리케이션(SPA)의 제한된 크기를 유지하는 데 도움이 될 수 있습니다.
 
 그러나 현재 푸시 방법 중에 이전에 설정한 정보를 완전히 제거할 가능성은 없습니다.
 

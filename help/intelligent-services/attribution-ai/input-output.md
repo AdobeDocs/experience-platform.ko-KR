@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Attribution AI의 입력 및 출력
 description: 다음 문서에서는 기여도 AI에서 사용되는 다양한 입력 및 출력에 대해 간략하게 설명합니다.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2474'
+source-wordcount: '2467'
 ht-degree: 3%
 
 ---
@@ -64,6 +64,7 @@ ht-degree: 3%
 >[!IMPORTANT]
 >
 > 기여도 AI가 작동하는 데 필요한 최소 데이터 양은 다음과 같습니다.
+>
 > - 좋은 모델을 실행하려면 최소한 3개월(90일) 이상의 데이터를 제공해야 합니다.
 > - 1000개 이상의 전환이 필요합니다.
 
@@ -102,9 +103,10 @@ Attribution AI는 모델 교육을 위한 입력으로 내역 데이터를 필�
 
 >[!NOTE]
 >
-> 다음 중 하나가 참인 경우에만 점수 출력 데이터 세트의 입력 데이터 세트에서 원하는 보고 열을 볼 수 있습니다.
-> - 보고 열은 접점 또는 전환 정의 구성의 일부로 구성 페이지에 포함됩니다.
-> - 보고 열은 추가 점수 데이터 세트 열에 포함됩니다.
+>다음 중 하나가 참인 경우에만 점수 출력 데이터 세트의 입력 데이터 세트에서 원하는 보고 열을 볼 수 있습니다.
+>
+>- 보고 열은 접점 또는 전환 정의 구성의 일부로 구성 페이지에 포함됩니다.
+>- 보고 열은 추가 점수 데이터 세트 열에 포함됩니다.
 
 다음 표에서는 원시 스코어 예 출력의 스키마 필드에 대해 설명합니다.
 
@@ -137,18 +139,18 @@ Attribution AI는 모델 교육을 위한 입력으로 내역 데이터를 필�
 | id(객체) | False | `id` 및 `namespace` 등 모델을 만드는 데 사용되는 사용자의 세부 정보를 포함합니다. |
 | id (문자열) | True | 쿠키 ID, Adobe Analytics ID(AAID) 또는 Experience Cloud ID(ECID, MCID 또는 방문자 ID라고도 함) 등과 같은 사용자의 ID입니다. <br> **예:** 17348762725408656344688320891369597404 |
 | 네임스페이스(문자열) | True | 경로 및 모델 구축에 사용되는 ID 네임스페이스. <br> **예:** aaid |
-| touchpointsDetail(오브젝트 배열) | True | 다음에서 순서가 지정된 전환으로 이어지는 접점 세부 정보 목록 | 터치포인트 발생 또는 타임스탬프. |
+| touchpointsDetail(오브젝트 배열) | True | 접점 발생 또는 타임스탬프별로 순서가 지정된 전환으로 이어지는 접점 세부 정보 목록입니다. |
 | touchpointName(문자열) | True | 설정 중에 구성된 터치포인트의 이름입니다. <br> **예:** PAID_SEARCH_CLICK |
 | scores(객체) | True | 이 전환에 대한 터치포인트 기여도를 점수로 표시합니다. 이 개체에서 생성된 점수에 대한 자세한 내용은 [집계된 속성 점수](#aggregated-attribution-scores) 섹션을 참조하십시오. |
 | touchPoint(객체) | True | 접점 메타데이터. 이 개체에서 생성된 점수에 대한 자세한 내용은 [집계된 점수](#aggregated-scores) 섹션을 참조하십시오. |
 
 ### 원시 스코어 경로 보기(UI) {#raw-score-path}
 
-UI에서 원시 점수에 대한 경로를 볼 수 있습니다. Experience Platform UI에서 **[!UICONTROL 스키마]**&#x200B;를 선택한 다음 **[!UICONTROL 찾아보기]** 탭에서 기여도 AI 스코어 스키마를 검색하고 선택합니다.
+UI에서 원시 점수에 대한 경로를 볼 수 있습니다. Experience Platform UI에서 **[!UICONTROL Schemas]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Browse]** 탭에서 기여도 AI 스코어 스키마를 검색하고 선택합니다.
 
 ![스키마 선택](./images/input-output/schemas_browse.png)
 
-그런 다음 UI의 **[!UICONTROL 구조]** 창에서 필드를 선택하면 **[!UICONTROL 필드 속성]** 탭이 열립니다. **[!UICONTROL 필드 속성]** 내에는 원시 점수에 매핑되는 경로 필드가 있습니다.
+그런 다음 UI의 **[!UICONTROL Structure]** 창 내에서 필드를 선택하면 **[!UICONTROL Field properties]** 탭이 열립니다. **[!UICONTROL Field properties]** 내에는 원시 점수에 매핑되는 경로 필드가 있습니다.
 
 ![스키마 선택](./images/input-output/field_properties.png)
 
@@ -206,7 +208,7 @@ UI에서 원시 점수에 대한 경로를 볼 수 있습니다. Experience Plat
 | 지역(문자열) | 사용자 정의 | True | 전환이 전달된 지리적 위치(placeContext.geo.countryCode) <br> **예**: US |
 | event_type (String) | 사용자 정의 | True | 이 시계열 레코드 <br>에 대한 기본 이벤트 유형 **예**: 유료 전환 |
 | media_type (String) | 열거형 | False | 미디어 유형이 유료, 소유 또는 소득인지 설명합니다. <br> **예**: 유료, 소유 |
-| channel (String) | 열거형 | False | [!DNL Consumer Experience Event] XDM에서 유사한 속성을 가진 채널을 대략적으로 분류하는 데 사용되는 `channel._type` 속성입니다. <br> **예**: 검색 |
+| channel (String) | 열거형 | False | `channel._type` XDM에서 유사한 속성을 가진 채널을 대략적으로 분류하는 데 사용되는 [!DNL Consumer Experience Event] 속성입니다. <br> **예**: 검색 |
 | action (String) | 열거형 | False | `mediaAction` 속성은 경험 이벤트 미디어 작업의 유형을 제공하는 데 사용됩니다. <br> **예**: 클릭 |
 | campaign_group (문자열) | 사용자 정의 | True | 여러 캠페인이 &#39;50%_DISCOUNT&#39;처럼 함께 그룹화된 캠페인 그룹의 이름입니다. <br> **예**: 상업용 |
 | campaign_name(문자열) | 사용자 정의 | True | &#39;50%_DISCOUNT_USA&#39; 또는 &#39;50%_DISCOUNT_ASIA&#39; 등 마케팅 캠페인을 식별하는 데 사용되는 캠페인 이름. <br> **예**: 추수감사절 할인 |
@@ -228,7 +230,7 @@ UI에서 원시 점수에 대한 경로를 볼 수 있습니다. Experience Plat
 | event_type | eventType |
 | media_type | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaType |
 | channel | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaChannel |
-| 작업 | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
+| 액션 | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
 | campaign_group | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
 | campaign_name | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignName |
 

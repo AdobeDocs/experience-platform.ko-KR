@@ -5,10 +5,10 @@ title: 스트리밍 수집 유효성 검사
 type: Tutorial
 description: 스트리밍 수집을 사용하면 스트리밍 끝점을 사용하여 실시간으로 Adobe Experience Platform에 데이터를 업로드할 수 있습니다. 스트리밍 수집 API는 동기 및 비동기 두 가지 유효성 검사 모드를 지원합니다.
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '906'
-ht-degree: 11%
+ht-degree: 15%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 11%
 
 스트리밍 수집을 사용하면 스트리밍 끝점을 사용하여 실시간으로 Adobe Experience Platform에 데이터를 업로드할 수 있습니다. 스트리밍 수집 API는 동기 및 비동기 두 가지 유효성 검사 모드를 지원합니다.
 
-## 시작하기
+## 시작
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
@@ -25,17 +25,17 @@ ht-degree: 11%
 
 ### 샘플 API 호출 읽기
 
-이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request)에 대한 섹션을 참조하십시오.
+이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 문서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 섹션을 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [인증 튜토리얼](https://www.adobe.com/go/platform-api-authentication-en)을 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - 인증: 전달자 `{ACCESS_TOKEN}`
 - x-api 키: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-[!DNL Schema Registry]에 속하는 리소스를 포함한 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Experience Platform]에 속하는 리소스를 포함한 [!DNL Schema Registry]의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -50,6 +50,7 @@ ht-degree: 11%
 ### 유효성 검사 범위
 
 [!DNL Streaming Validation Service]은(는) 다음 영역에서 유효성 검사를 다룹니다.
+
 - 범위
 - 현재 상태
 - 열거형
@@ -144,7 +145,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 }
 ```
 
-위의 응답에는 발견된 스키마 위반 수와 위반 내용이 나열됩니다. 예를 들어, 이 응답은 키 `workEmail` 및 `person`이(가) 스키마에 정의되어 있지 않으므로 허용되지 않음을 나타냅니다. 스키마에 `string`이(가) 필요하지만 대신 `long`이(가) 삽입되었으므로 `_id`에 대한 값에 잘못된 플래그를 지정합니다. 5개의 오류가 발생하면 유효성 검사 서비스가 해당 메시지를 **중지**&#x200B;합니다. 그러나 다른 메시지는 계속 구문 분석됩니다.
+위의 응답에는 발견된 스키마 위반 수와 위반 내용이 나열됩니다. 예를 들어, 이 응답은 키 `workEmail` 및 `person`이(가) 스키마에 정의되어 있지 않으므로 허용되지 않음을 나타냅니다. 스키마에 `_id`이(가) 필요하지만 대신 `string`이(가) 삽입되었으므로 `long`에 대한 값에 잘못된 플래그를 지정합니다. 5개의 오류가 발생하면 유효성 검사 서비스가 해당 메시지를 **중지**&#x200B;합니다. 그러나 다른 메시지는 계속 구문 분석됩니다.
 
 ## 비동기 유효성 검사
 

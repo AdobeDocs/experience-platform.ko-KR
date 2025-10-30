@@ -2,7 +2,7 @@
 description: 이 페이지에서는 Adobe Experience Platform에서 대상으로 내보낸 데이터의 메시지 형식 및 프로필 변형을 다룹니다.
 title: 메시지 포맷
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2489'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 ## 사전 요구 사항 - Adobe Experience Platform 개념 {#prerequisites}
 
-Adobe 측의 메시지 포맷 및 프로필 구성 및 변환 프로세스를 이해하려면 다음 Experience Platform 개념을 숙지하십시오.
+Adobe 측의 메시지 포맷, 프로필 구성 및 변환 프로세스를 이해하려면 다음 Experience Platform 개념을 숙지하십시오.
 
 * **XDM(경험 데이터 모델)**. [XDM 개요](../../../../xdm/home.md) 및 [Adobe Experience Platform에서 XDM 스키마를 만드는 방법](../../../../xdm/tutorials/create-schema-ui.md).
 * **클래스**. [UI에서 클래스를 만들고 편집합니다](../../../../xdm/ui/resources/classes.md).
-* **IdentityMap**. ID 맵은 Adobe Experience Platform의 모든 최종 사용자 ID의 맵을 나타냅니다. [XDM 필드 사전](../../../../xdm/schema/field-dictionary.md)의 `xdm:identityMap`을(를) 참조하세요.
+* **IdentityMap**. ID 맵은 Adobe Experience Platform의 모든 최종 사용자 ID의 맵을 나타냅니다. `xdm:identityMap`XDM 필드 사전[의 ](../../../../xdm/schema/field-dictionary.md)을(를) 참조하세요.
 * **SegmentMembership** [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM 특성은 프로필이 멤버인 대상을 알려줍니다. `status` 필드의 세 가지 다른 값에 대해 [대상 멤버십 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/segmentation.md)에 대한 설명서를 읽어 보십시오.
 
 >[!IMPORTANT]
@@ -37,7 +37,7 @@ Adobe 측의 메시지 포맷 및 프로필 구성 및 변환 프로세스를 �
 
 이 페이지에서는 Adobe Experience Platform에서 대상으로 내보낸 데이터의 메시지 형식 및 프로필 변형을 다룹니다.
 
-Adobe Experience Platform은 데이터를 다양한 데이터 형식으로 상당한 수의 대상으로 내보냅니다. 대상 유형의 몇 가지 예로는 광고 플랫폼(Google), 소셜 네트워크(Facebook) 및 클라우드 스토리지 위치(Amazon S3, Azure 이벤트 허브)가 있습니다.
+Adobe Experience Platform은 데이터를 다양한 데이터 형식으로 상당한 수의 대상으로 내보냅니다. 대상 유형의 몇 가지 예로는 광고 플랫폼(Google), 소셜 네트워크(Facebook) 및 클라우드 저장소 위치(Amazon S3, Azure 이벤트 허브)가 있습니다.
 
 Experience Platform은 측면에서 예상되는 포맷과 일치하도록 내보낸 프로필의 메시지 포맷을 조정할 수 있습니다. 이 사용자 지정을 이해하기 위해서는 다음 개념이 중요합니다.
 
@@ -55,7 +55,7 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**Source XDM 스키마(1)**: 이 항목은 고객이 Experience Platform에서 사용하는 스키마를 참조합니다. 대상 Experience Platform 워크플로의 [매핑 단계](../../../ui/activate-segment-streaming-destinations.md#mapping)에서 고객은 XDM 스키마의 필드를 대상의 대상 스키마에 매핑합니다(2).
+**Source XDM 스키마(1)**: 이 항목은 고객이 Experience Platform에서 사용하는 스키마를 참조합니다. Experience Platform에서 대상 활성화 워크플로의 [매핑 단계](../../../ui/activate-segment-streaming-destinations.md#mapping)에서 고객은 XDM 스키마의 필드를 대상의 대상 스키마에 매핑합니다(2).
 
 **대상 XDM 스키마(2)**: 대상 예상 형식의 JSON 표준 스키마(3)와 대상이 해석할 수 있는 특성을 기반으로 대상 XDM 스키마에서 프로필 속성 및 ID를 정의할 수 있습니다. 대상 구성, [schemaConfig](../../functionality/destination-configuration/schema-configuration.md) 및 [identityNamespaces](../../functionality/destination-configuration/identity-namespace-configuration.md) 개체에서 이 작업을 수행할 수 있습니다.
 
@@ -71,7 +71,7 @@ Users who want to activate data to your destination need to map the fields in th
 
 >[!NOTE]
 >
->고객은 [대상 워크플로우 활성화](../../../ui/activate-segment-streaming-destinations.md#mapping)의 **매핑** 단계에서 소스 XDM 스키마의 특성을 Adobe Experience Platform UI의 파트너 XDM 스키마에 매핑합니다.
+>고객은 **대상 워크플로우 활성화**&#x200B;의 [매핑](../../../ui/activate-segment-streaming-destinations.md#mapping) 단계에서 소스 XDM 스키마의 특성을 Adobe Experience Platform UI의 파트너 XDM 스키마에 매핑합니다.
 
 플랫폼이 다음과 같은 메시지 형식을 수신할 수 있다고 가정해 보겠습니다.
 
@@ -94,7 +94,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | Adobe 측의 파트너 XDM 스키마의 속성 | 변환 | 사용자 측의 HTTP 메시지에 있는 속성 |
 |---------|----------|---------|
-| `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
+| `_your_custom_schema.firstName` | `attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
 
@@ -102,7 +102,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## Experience Platform의 프로필 구조 {#profile-structure}
 
-페이지의 아래 예를 더 이해하려면 Experience Platform 내 프로필의 구조를 아는 것이 중요합니다.
+페이지의 아래 예를 더 이해하려면 Experience Platform의 프로필 구조를 아는 것이 중요합니다.
 
 프로필에는 다음 3개의 섹션이 있습니다.
 
@@ -172,7 +172,7 @@ Experience Platform의 두 가지 프로필 예를 참조하십시오.
 
 ## ID, 속성 및 대상자 멤버십 변환에 템플릿 언어 사용 {#using-templating}
 
-Adobe은 [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)와(과) 유사한 템플릿 언어인 [페블 템플릿](https://pebbletemplates.io/)을(를) 사용하여 Experience Platform XDM 스키마의 필드를 대상에서 지원하는 형식으로 변환합니다.
+Adobe은 [Jinja](https://pebbletemplates.io/)와(과) 유사한 템플릿 언어인 [페블 템플릿](https://jinja.palletsprojects.com/en/2.11.x/)을(를) 사용하여 Experience Platform XDM 스키마의 필드를 대상에서 지원하는 형식으로 변환합니다.
 
 이 섹션에서는 입력 XDM 스키마에서 템플릿을 통해 그리고 대상에서 허용하는 페이로드 형식으로 출력하면서 이러한 변환을 수행하는 방법에 대한 몇 가지 예를 제공합니다. 아래 예제는 다음과 같이 복잡성을 증가시켜 제공됩니다.
 
@@ -223,7 +223,7 @@ Adobe은 [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)와(과) 유사한
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)에서 [템플릿](../../functionality/destination-server/templating-specs.md)을 삽입하기 전에 큰따옴표 `""`과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
+>사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 ](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 ](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
 
 ```python
 {
@@ -320,7 +320,7 @@ Adobe은 [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)와(과) 유사한
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)에서 [템플릿](../../functionality/destination-server/templating-specs.md)을 삽입하기 전에 큰따옴표 `""`과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
+>사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 ](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 ](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
 
 
 ```python
@@ -424,7 +424,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)에서 [템플릿](../../functionality/destination-server/templating-specs.md)을 삽입하기 전에 큰따옴표 `""`과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
+>사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 ](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 ](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
 
 ```python
 {
@@ -561,7 +561,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)에서 [템플릿](../../functionality/destination-server/templating-specs.md)을 삽입하기 전에 큰따옴표 `""`과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
+>사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 ](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 ](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
 
 ```python
 {
@@ -743,7 +743,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)에서 [템플릿](../../functionality/destination-server/templating-specs.md)을 삽입하기 전에 큰따옴표 `""`과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
+>사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 ](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 ](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
 
 ```python
 {
@@ -963,7 +963,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)에서 [템플릿](../../functionality/destination-server/templating-specs.md)을 삽입하기 전에 큰따옴표 `""`과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
+>사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 ](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 ](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
 
 `audienceId`이(가) 대상 ID에 액세스하기 위해 템플릿에 사용되는 방법은 아래에 나와 있습니다. 이 예제에서는 대상 분류에서 대상 멤버십에 `audienceId`을(를) 사용한다고 가정합니다. 자체 분류법에 따라 다른 필드 이름을 대신 사용할 수 있습니다.
 
@@ -1043,7 +1043,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### 템플릿에서 ID 네임스페이스 집계 키 사용 {#aggregation-key-identity}
 
-다음은 대상 구성의 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)가 `"namespaces": ["email", "phone"]` 및 `"namespaces": ["GAID", "IDFA"]` 형식의 ID 네임스페이스별로 내보낸 프로필을 집계하도록 설정된 예입니다. 그룹화에 대한 자세한 내용은 [대상 구성 만들기](../../authoring-api/destination-configuration/create-destination-configuration.md) 설명서의 `groups` 매개 변수를 참조하십시오.
+다음은 대상 구성의 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)가 `"namespaces": ["email", "phone"]` 및 `"namespaces": ["GAID", "IDFA"]` 형식의 ID 네임스페이스별로 내보낸 프로필을 집계하도록 설정된 예입니다. 그룹화에 대한 자세한 내용은 `groups`대상 구성 만들기[ 설명서의 ](../../authoring-api/destination-configuration/create-destination-configuration.md) 매개 변수를 참조하십시오.
 
 **입력**
 
@@ -1115,7 +1115,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)에서 [템플릿](../../functionality/destination-server/templating-specs.md)을 삽입하기 전에 큰따옴표 `""`과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
+>사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 ](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 ](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
 
 `input.aggregationKey.identityNamespaces`이(가) 아래 템플릿에서 사용되고 있습니다.
 
@@ -1199,17 +1199,17 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 
 ### 참조: 변환 템플릿에 사용되는 컨텍스트 및 함수 {#reference}
 
-템플릿에 제공된 컨텍스트에는 `input`(이 호출에서 내보낸 프로필/데이터)과 `destination`(모든 프로필에 대해 유효한 Adobe이 데이터를 보내는 대상에 대한 데이터)이 포함됩니다.
+템플릿에 제공된 컨텍스트에는 `input`(이 호출에서 내보낸 프로필/데이터)과 `destination`(모든 프로필에 유효한 Adobe에서 데이터를 보내는 대상에 대한 데이터)이 포함되어 있습니다.
 
 아래 표는 위의 예에서 함수에 대한 설명을 제공합니다.
 
 | 함수 | 설명 | 예 |
 |---------|----------|----------|
-| `input.profile` | [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html)(으)로 표시된 프로필입니다. 이 페이지에서 위에 언급된 파트너 XDM 스키마를 따릅니다. |
+| `input.profile` | [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html)&#x200B;(으)로 표시된 프로필입니다. 이 페이지에서 위에 언급된 파트너 XDM 스키마를 따릅니다. |  |
 | `hasSegments` | 이 함수는 네임스페이스 대상 ID 맵을 매개 변수로 사용합니다. 이 함수는 상태에 관계없이 맵에 대상이 하나 이상 있으면 `true`을(를) 반환하고, 그렇지 않으면 `false`을(를) 반환합니다. 이 함수를 사용하여 대상자 맵을 반복할지 여부를 결정할 수 있습니다. | `hasSegments(input.profile.segmentMembership)` |
 | `destination.namespaceSegmentAliases` | 특정 Adobe Experience Platform 네임스페이스의 대상 ID에서 파트너 시스템의 대상 별칭으로 매핑합니다. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
 | `destination.namespaceSegmentNames` | 특정 Adobe Experience Platform 네임스페이스의 대상 이름에서 파트너 시스템의 대상 이름으로 매핑합니다. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
-| `destination.namespaceSegmentTimestamps` | 대상이 생성, 업데이트 또는 활성화된 시간을 UNIX 타임스탬프 형식으로 반환합니다. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: `ups` 네임스페이스에서 ID가 `seg-id-1`인 세그먼트를 만든 시간을 UNIX 타임스탬프 형식으로 반환합니다.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: `ups` 네임스페이스에서 ID가 `seg-id-1`인 대상이 업데이트된 시간을 UNIX 타임스탬프 형식으로 반환합니다.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: ID가 `seg-id-1`인 대상이 `ups` 네임스페이스에서 대상으로 활성화된 시간을 UNIX 타임스탬프 형식으로 반환합니다.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: 대상에서 대상 활성화가 업데이트된 시간을 UNIX 타임스탬프 형식으로 반환합니다.</li></ul> |
+| `destination.namespaceSegmentTimestamps` | 대상이 생성, 업데이트 또는 활성화된 시간을 UNIX 타임스탬프 형식으로 반환합니다. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: `seg-id-1` 네임스페이스에서 ID가 `ups`인 세그먼트를 만든 시간을 UNIX 타임스탬프 형식으로 반환합니다.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: `seg-id-1` 네임스페이스에서 ID가 `ups`인 대상이 업데이트된 시간을 UNIX 타임스탬프 형식으로 반환합니다.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: ID가 `seg-id-1`인 대상이 `ups` 네임스페이스에서 대상으로 활성화된 시간을 UNIX 타임스탬프 형식으로 반환합니다.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: 대상에서 대상 활성화가 업데이트된 시간을 UNIX 타임스탬프 형식으로 반환합니다.</li></ul> |
 | `addedSegments(mapOfNamespacedSegmentIds)` | 모든 네임스페이스에서 상태가 `realized`인 대상자만 반환합니다. | `addedSegments(input.profile.segmentMembership)` |
 | `removedSegments(mapOfNamespacedSegmentIds)` | 모든 네임스페이스에서 상태가 `exited`인 대상자만 반환합니다. | `removedSegments(input.profile.segmentMembership)` |
 | `destination.segmentAliases` | **사용되지 않습니다. Adobe Experience Platform 네임스페이스의 대상 ID에서 파트너 시스템의 대상 별칭에 대한`destination.namespaceSegmentAliases`** <br><br> 맵으로 대체되었습니다. | `destination.segmentAliases["seg-id-1"]` |
@@ -1228,6 +1228,6 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 
 다른 대상 서버 구성 요소에 대한 자세한 내용은 다음 문서를 참조하십시오.
 
-* [Destination SDK으로 생성된 대상의 서버 사양](server-specs.md)
+* [Destination SDK으로 만든 대상의 서버 사양](server-specs.md)
 * [사양 템플릿](templating-specs.md)
 * [파일 서식 구성](file-formatting.md)

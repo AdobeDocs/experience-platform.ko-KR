@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '722'
 ht-degree: 25%
 
 ---
@@ -80,6 +80,6 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | [!DNL Google BigQuery] 소스 커넥터 개선 사항 | 이제 [!DNL BigQuery] 원본 커넥터를 사용하여 한 번의 흐름에서 10GB보다 큰 파일을 수집할 수 있습니다. 자세한 내용은 [[!DNL BigQuery] 소스 커넥터 개요](../../sources/connectors/databases/bigquery.md)를 참조하십시오. |
 | 클라우드 스토리지용 복잡한 데이터 유형 지원 | 이제 클라우드 저장소 소스 커넥터를 사용할 때 JSON 파일의 배열과 같은 복잡한 데이터 유형을 수집할 수 있습니다. 자세한 내용은 UI에서 클라우드 저장소 데이터 흐름 [만들기](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 또는 [API 사용 [!DNL Flow Service] 에 대한 튜토리얼을 참조하십시오.](../../sources/tutorials/api/collect/cloud-storage.md) |
 | [!DNL Microsoft Dynamics] 원본에 대한 서비스 사용자 키 기반 인증 지원 | 이제 암호 기반 인증 대신 서비스 사용자 키를 사용하여 [!DNL Dynamics] 계정을 인증할 수 있습니다. 자세한 내용은 [[!DNL Dynamics] 소스 커넥터 개요](../../sources/connectors/crm/ms-dynamics.md)를 참조하십시오. |
-| 클라우드 스토리지 소스의 사용자 정의 구분 기호에 대한 UI 지원 | 이제 쉼표(`,`), 탭(`\t`) 또는 파이프(`|`)와 같은 사용자 지정 열 구분 기호를 설정하여 구분된 파일을 UI로 수집할 수 있습니다. 자세한 내용은 [클라우드 저장소 원본 커넥터로 데이터 흐름 만들기](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)에 대한 자습서를 참조하십시오 |
+| 클라우드 스토리지 소스의 사용자 정의 구분 기호에 대한 UI 지원 | 이제 쉼표(`,`), 탭(`\t`) 또는 파이프(&amp;vert;)와 같은 사용자 지정 열 구분 기호를 설정하여 구분된 파일을 UI에서 수집할 수 있습니다. 자세한 내용은 [클라우드 저장소 원본 커넥터로 데이터 흐름 만들기](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)에 대한 자습서를 참조하십시오 |
 
 소스에 대한 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하세요.

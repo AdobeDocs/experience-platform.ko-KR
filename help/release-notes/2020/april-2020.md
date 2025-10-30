@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: 릴리스 정보;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 27%
@@ -18,9 +18,11 @@ ht-degree: 27%
 **릴리스 일자: 2020년 4월 8일 목요일**
 
 Adobe Experience Platform의 새로운 기능:
+
 * [[!DNL Intelligent Services]](#intelligent)
 
 기존 기능에 대한 업데이트:
+
 * [[!DNL Experience Data Model (XDM)]](#xdm)
 * [데이터 거버넌스](#governance)
 * [[!DNL Destinations]](#destinations)
@@ -78,7 +80,7 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 | 기능 | 설명 |
 | -----------| ---------- |
-| UI에서 데이터 사용 정책 관리 | 이제 데이터 사용 정책은 [!DNL Experience Platform] UI의 **정책** 작업 영역에서 관리할 수 있습니다. 자세한 내용은 [정책 사용 안내서](../../data-governance/policies/user-guide.md)를 참조하십시오. |
+| UI에서 데이터 사용 정책 관리 | 이제 데이터 사용 정책은 **UI의**&#x200B;정책[!DNL Experience Platform] 작업 영역에서 관리할 수 있습니다. 자세한 내용은 [정책 사용 안내서](../../data-governance/policies/user-guide.md)를 참조하십시오. |
 
 **알려진 문제**
 

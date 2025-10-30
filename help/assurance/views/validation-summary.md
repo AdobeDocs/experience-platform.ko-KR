@@ -2,10 +2,10 @@
 title: 유효성 검사 편집기 보기
 description: 이 안내서에는 Adobe Experience Platform Assurance의 유효성 검사 편집기 보기에 대한 정보가 자세히 나와 있습니다.
 exl-id: 09be531c-8dc3-48b8-814f-b7a06adf1da3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 100%
+source-wordcount: '496'
+ht-degree: 93%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 ## 유효성 검사 편집기 시작하기
 
-[Assurance를 설정](../tutorials/implement-assurance.md)한 후 **[!UICONTROL 홈]** 보기에서 **[!UICONTROL 유효성 검사 편집기]**&#x200B;를 선택합니다
+[Assurance 설정](../tutorials/implement-assurance.md) 후 **[!UICONTROL Home]** 보기에서 **[!UICONTROL Validation Editor]**&#x200B;을(를) 선택합니다.
 
 ![Validation-Editor-Screen-Shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 
@@ -23,11 +23,11 @@ ht-degree: 100%
 
 이 기능을 사용하면 Adobe Experience Platform Assurance 세션에 대한 유효성 검사 기능을 생성, 편집 또는 삭제할 수 있습니다.
 
-1. **[!UICONTROL 새 유효성 검사 만들기]**&#x200B;를 선택합니다.
+1. **[!UICONTROL Create a New Validation]**&#x200B;를 선택합니다.
 2. 유효성 검사를 확인할 **이름**&#x200B;을 입력한 다음 **카테고리** 및 **설명**&#x200B;을 제공합니다.
 3. 편집기에서 코드를 편집하여 Assurance 세션에 대한 이벤트의 유효성을 검사합니다.
 
-함수 테스트가 완료되면 **[!UICONTROL 게시]**&#x200B;를 선택하여 유효성 검사를 저장합니다.
+함수 테스트가 완료되면 **[!UICONTROL Publish]**&#x200B;을(를) 선택하여 유효성 검사를 저장합니다.
 
 ### 이벤트 정의
 
@@ -57,7 +57,7 @@ ht-degree: 100%
 | :--- | :--- | :--- |
 | `message` | 문자열 | 요약 결과에 표시할 유효성 검사 메시지입니다. |
 | `events` | 배열 | 일치 또는 일치하지 않는 것으로 보고되는 이벤트 UUID의 배열입니다. |
-| `links` | 배열 | 참조 문서 및 기타 리소스`{( type: 'doc'|'product', url: String )}`에 대한 `ValidationResultLink` 오브젝트 배열 |
+| `links` | 배열 | 설명서 및 기타 리소스에 대한 `ValidationResultLink` 개체의 배열 `{( type: 'doc'`&amp;vert;`'product', url: String )}` |
 | `result` | 문자열 | 다음은 유효성 검사 결과이며 “일치함”, “일치하지 않음”, “알 수 없음” 등 열거된 문자열 중 하나일 것으로 예상됩니다. |
 
 ## 유효성 검사 결과 보기

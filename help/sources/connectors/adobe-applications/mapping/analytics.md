@@ -2,10 +2,10 @@
 title: Adobe Analytics Source 커넥터에 대한 매핑 필드
 description: Analytics Source Connector를 사용하여 Adobe Analytics 필드를 XDM 필드에 매핑합니다.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 316879afe8c94657156c768cdc14d4710da9fd35
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '3914'
-ht-degree: 6%
+source-wordcount: '3854'
+ht-degree: 5%
 
 ---
 
@@ -23,10 +23,10 @@ Adobe Experience Platform을 사용하면 Analytics 소스를 통해 Adobe Analy
 | --- | --- | --- | --- |
 | `videoname` | `mediaReporting.sessionDetails.friendlyName` | 문자열 | 사람이 인식할 수 있는 알기 쉬운 비디오 이름. |
 | `videoaudioauthor` | `mediaReporting.sessionDetails.author` | 문자열 | 미디어 작성자의 이름입니다. |
-| `videoaudioartist` | `mediaReporting.sessionDetails.artist` | 문자열 | 뮤직 레코딩 또는 비디오의 앨범 아티스트나 단체의 이름. |
-| `videoaudioalbum` | `mediaReporting.sessionDetails.album` | 문자열 | 뮤직 레코딩 또는 비디오가 포함된 앨범 이름. |
-| `videolength` | `mediaReporting.sessionDetails.length ` | 정수 | 비디오의 길이 또는 런타임입니다. |
-| `videoshowtype` | `mediaReporting.sessionDetails.showType` | 문자열 |
+| `videoaudioartist` | `mediaReporting.sessionDetails.artist` | 문자열 | 뮤직 레코딩 또는 비디오를 수행하는 앨범 아티스트나 그룹의 이름. |
+| `videoaudioalbum` | `mediaReporting.sessionDetails.album` | 문자열 | 뮤직 레코딩 또는 비디오가 속한 앨범의 이름. |
+| `videolength` | `mediaReporting.sessionDetails.length` | 정수 | 비디오의 길이 또는 런타임입니다. |
+| `videoshowtype` | `mediaReporting.sessionDetails.showType` | 문자열 |  |
 | `video` | `mediaReporting.sessionDetails.name` | 문자열 | 비디오의 ID입니다. |
 | `videoshow` | `mediaReporting.sessionDetails.show` | 문자열 | 프로그램 또는 시리즈 이름. 프로그램/시리즈 이름은 표시가 시리즈의 일부인 경우에만 필요합니다. |
 | `videostreamtype` | mediaReporting.sessionDetails.streamType | 문자열 | &quot;비디오&quot; 또는 &quot;오디오&quot; 등 스트리밍 미디어 유형. |
@@ -34,12 +34,12 @@ Adobe Experience Platform을 사용하면 Analytics 소스를 통해 Adobe Analy
 | `videoepisode` | `mediaReporting.sessionDetails.episode` | 문자열 | 에피소드의 번호입니다. |
 | `videogenre` | `mediaReporting.sessionDetails.genreList[]` | 문자열[] | 비디오의 장르입니다. |
 | `videosessionid` | `mediaReporting.sessionDetails.ID` | 문자열 | 개별 재생에 고유한 컨텐츠 스트림의 인스턴스에 대한 식별자입니다. |
-| `videoplayername` | `mediaReporting.sessionDetails.playerName ` | 문자열 | 비디오 플레이어의 이름입니다. |
+| `videoplayername` | `mediaReporting.sessionDetails.playerName` | 문자열 | 비디오 플레이어의 이름입니다. |
 | `videochannel` | `mediaReporting.sessionDetails.channel` | 문자열 | 콘텐츠가 재생된 위치의 배포 채널입니다. |
 | `videocontenttype` | `mediaReporting.sessionDetails.contentType` | 문자열 | 콘텐츠에 사용되는 스트림 전달 유형입니다. 모든 비디오 보기에 대해 자동으로 &quot;비디오&quot;로 설정됩니다. 권장 값에는 VOD, Live, Linear, UGC, DVOD, Radio, Podcast, Audiobook 및 Song이 포함됩니다. |
 | `videonetwork` | `mediaReporting.sessionDetails.network` | 문자열 | 네트워크 또는 채널 이름입니다. |
 | `videofeedtype` | `mediaReporting.sessionDetails.feed` | 문자열 | 피드 유형. 실제 피드 관련 데이터(예: &quot;East HD&quot; 또는 &quot;SD&quot;)나 피드 소스(예: URL)를 나타낼 수 있습니다. |
-| `videosegment` | `mediaReporting.sessionDetails.segment` | 문자열 |
+| `videosegment` | `mediaReporting.sessionDetails.segment` | 문자열 |  |
 | `videostart` | `mediaReporting.sessionDetails.isViewed` | 부울 | 비디오가 시작되었는지 여부를 나타내는 부울 값입니다. 이 문제는 사용자가 재생 버튼을 선택하면 발생하며 프리롤 광고, 버퍼링, 오류 등이 있는 경우에도 계산됩니다. |
 | `videoplay` | `mediaReporting.sessionDetails.isPlayed` | 부울 | 미디어의 첫 번째 프레임이 시작되었는지 여부를 나타내는 부울 값입니다. 광고 또는 버퍼링 시간 중에 사용자가 그만두면 &quot;콘텐츠 시작&quot;이 적용되지 않습니다. |
 | `videotime` | `mediaReporting.sessionDetails.timePlayed` | 정수 | 기본 콘텐츠에서 `type=PLAY`의 모든 이벤트에 대한 기간(초)입니다. |
@@ -57,7 +57,7 @@ Adobe Experience Platform을 사용하면 Analytics 소스를 통해 Adobe Analy
 | `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | 정수 | 사용자가 재생을 일시 중단한 총 기간(초)입니다. |
 | `videomvpd` | `mediaReporting.sessionDetails.mvpd` | 문자열 | Adobe 인증을 통해 제공되는 MVPD 식별자. |
 | `videoauthorized` | `mediaReporting.sessionDetails.authorized` | 문자열 | 사용자가 Adobe 인증을 통해 인증되었음을 정의합니다. |
-| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | 콘텐츠가 브로드캐스트되거나 재생되는 시간을 정의합니다. |
+| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | 콘텐츠가 브로드캐스트 또는 재생되는 시간을 정의합니다. |  |
 | `videoresume` | `mediaReporting.sessionDetails.hasResume` | 부울 | 버퍼, 일시 중지 또는 지연 기간이 30분 이상 지난 후 다시 시작된 각 재생을 표시하는 부울 값. |
 | `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView` | 부울 | 적어도 한 개의 프레임이 조회되었음을 나타내는 부울 값. 이 프레임은 첫 번째 프레임일 필요가 없습니다. |
 | `videoaudiolabel` | `mediaReporting.sessionDetails.label` | 문자열 | 레코드 레이블의 이름입니다. |
@@ -133,11 +133,11 @@ Adobe Experience Platform을 사용하면 Analytics 소스를 통해 Adobe Analy
 | --- | --- | --- | --- |
 | `videoqoebitrateaverage` | `mediaReporting.qoeDataDetails.bitrateAverage` | 번호 | 평균 비트율(kbps, 정수)입니다. 이 지표는 재생 기간과 관련하여 재생 세션 중에 발생한 모든 비트율 값의 가중 평균으로 계산됩니다. |
 | `videoqoebitratechange` | `mediaReporting.qoeDataDetails.hasBitrateChangeImpactedStreams` | 부울 | 비트율 변경이 발생한 스트림 수를 나타내는 부울 값. 이 지표는 재생 세션 중에 하나 이상의 비트율 변경 이벤트가 발생한 경우에만 true로 설정됩니다. |
-| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | 정수 |
+| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | 정수 |  |
 | `videoqoebitrateaverageevar` | `mediaReporting.qoeDataDetails.bitrateAverageBucket` | 문자열 | 비트율 변경 횟수입니다. 이 값은 재생 세션 중에 발생한 모든 비트율 변경 이벤트의 합계로 계산됩니다. |
 | `videoqoetimetostartevar` | `mediaReporting.qoeDataDetails.timeToStart` | 정수 | 비디오 로드와 비디오 시작 사이에 경과된 기간(초 단위)입니다. |
 | `videoqoedroppedframes` | `mediaReporting.qoeDataDetails.hasDroppedFrameImpactedStreams` | 부울 | 프레임이 드롭된 스트림 수를 나타내는 부울 값입니다. 이 지표는 재생 세션 중에 하나 이상의 프레임이 드롭된 경우에만 true로 설정됩니다. |
-| `videoqoedroppedframecountevar` | `mediaReporting.qoeDataDetails.droppedFrames` | 정수 | 메인 콘텐츠 재생 도중 드롭된 프레임 횟수. |
+| `videoqoedroppedframecountevar` | `mediaReporting.qoeDataDetails.droppedFrames` | 정수 | 기본 컨텐츠 재생 중 드롭된 프레임 수. |
 | `videoqoebuffercountevar` | `mediaReporting.qoeDataDetails.bufferCount` | 정수 | 버퍼 이벤트 수입니다. 이 지표는 재생 세션 중에 발생한 다른 버퍼 상태의 수로 계산됩니다. 플레이어가 재생 또는 일시 중지와 같은 다른 상태에서 버퍼 상태에 들어가는 횟수입니다. |
 | `videoqoebuffertimeevar` | `mediaReporting.qoeDataDetails.bufferTime` | 정수 | 버퍼링에 걸린 총 시간(초)입니다. 이 값은 재생 세션 중에 발생한 모든 버퍼 이벤트 기간의 합계로 계산됩니다. |
 | `videoqoebuffer` | `mediaReporting.qoeDataDetails.hasBufferImpactedStreams` | 부울 | 버퍼링의 영향을 받은 스트림 수를 나타내는 부울 값. 이 지표는 재생 세션 중에 하나 이상의 버퍼 이벤트가 발생한 경우에만 true로 설정됩니다. |
@@ -155,7 +155,7 @@ Adobe Experience Platform을 사용하면 Analytics 소스를 통해 Adobe Analy
 
 ### 직접 매핑 필드
 
-+++사용되지 않는 직접 매핑 필드의 테이블을 보려면 선택
++++더 이상 사용되지 않는 직접 매핑 필드의 테이블을 보려면 선택
 
 | 데이터 피드 | XDM 필드 | XDM 유형 | 설명 |
 | --- | --- | --- | --- |
@@ -182,7 +182,7 @@ Adobe Experience Platform을 사용하면 Analytics 소스를 통해 Adobe Analy
 | `m_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | 문자열 | 우편번호 차원을 채우는 데 사용되는 변수입니다. |
 | `accept_language` | `environment.browserDetails.acceptLanguage` | 문자열 | Accept-Language HTTP 헤더에 표시된 대로 모든 수락된 언어를 나열합니다. |
 | `homepage` | `web.webPageDetails.isHomePage` | 부울 | 더 이상 사용되지 않습니다. 현재 URL이 브라우저의 홈 페이지인 경우 표시됩니다. |
-| `ipv6` | `environment.ipV6` | 문자열 |
+| `ipv6` | `environment.ipV6` | 문자열 |  |
 | `j_jscript` | `environment.browserDetails.javaScriptVersion` | 문자열 | 브라우저가 지원하는 JavaScript 버전. |
 | `user_agent` | `environment.browserDetails.userAgent` | 문자열 | HTTP 헤더에서 전송된 사용자 에이전트 문자열입니다. |
 | `mobileappid` | `application.name` | 문자열 | `[AppName][BundleVersion]` 형식으로 저장된 모바일 앱 ID입니다. |
@@ -196,21 +196,21 @@ Adobe Experience Platform을 사용하면 Analytics 소스를 통해 Adobe Analy
 | `mobilebeaconmajor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMajor` | 번호 | Mobile Services 비콘 Major. |
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | 번호 | Mobile Services 비콘 Minor. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | 문자열 | Mobile Services 비콘 UUID |
-| `mobileinstalls` | `application.firstLaunches` | 오브젝트 | 설치 또는 재설치 후 처음 실행할 때 트리거됩니다. | {id (문자열), 값 (숫자)} |
-| `mobileupgrades` | `application.upgrades` | 오브젝트 | 앱 업그레이드 수를 보고합니다. 업그레이드 후 또는 버전 번호가 변경될 때 처음 실행할 때 트리거됩니다. | {id (문자열), 값 (숫자)} |
-| `mobilelaunches` | `application.launches` | 오브젝트 | 앱을 시작한 횟수입니다. | {id (문자열), 값 (숫자)} |
-| `mobilecrashes` | `application.crashes` | 오브젝트 |  | {id (문자열), 값 (숫자)} |
-| `mobilemessageclicks` | `directMarketing.clicks` | 오브젝트 |  | {id (문자열), 값 (숫자)} |
-| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | 오브젝트 | | {id (문자열), 값 (숫자)} |
-| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | 오브젝트 | | {id (문자열), 값 (숫자)} |
-| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | 오브젝트 | 비디오 품질 시작 시간입니다. | {id (문자열), 값 (숫자)} |
-| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | 오브젝트 | | {id (문자열), 값 (숫자)} |
-| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | 오브젝트 | 비디오 품질 버퍼 카운트 | {id (문자열), 값 (숫자)} |
-| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | 오브젝트 | 비디오 품질 버퍼 시간 | {id (문자열), 값 (숫자)} |
-| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | 오브젝트 | 비디오 품질 변경 카운트 | {id (문자열), 값 (숫자)} |
-| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | 오브젝트 | 비디오 품질 평균 비트 전송률 | {id (문자열), 값 (숫자)} |
-| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | 오브젝트 | 비디오 품질 오류 카운트 | {id (문자열), 값 (숫자)} |
-| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | 오브젝트 | | {id (문자열), 값 (숫자)} |
+| `mobileinstalls` | `application.firstLaunches` | 오브젝트 | 설치 또는 다시 설치 후 처음 실행할 때 트리거됩니다. `{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | 오브젝트 | 앱 업그레이드 수를 보고합니다. 업그레이드 후 또는 버전 번호가 변경될 때 처음 실행할 때 트리거됩니다. | `{id (string), value (number)}` |
+| `mobilelaunches` | `application.launches` | 오브젝트 | 앱을 시작한 횟수입니다.  `{id (string), value (number)}` |
+| `mobilecrashes` | `application.crashes` | 오브젝트 | `{id (string), value (number)}` |
+| `mobilemessageclicks` | `directMarketing.clicks` | 오브젝트 | `{id (string), value (number)}` |
+| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | 오브젝트 | `{id (string), value (number)}` |
+| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | 오브젝트 | `{id (string), value (number)}` |
+| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | 오브젝트 | 비디오 품질 시작 시간입니다. `{id (string), value (number)}` |
+| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | 오브젝트 | `{id (string), value (number)}` |
+| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | 오브젝트 | 비디오 품질 버퍼 개수 `{id (string), value (number)}` |
+| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | 오브젝트 | 비디오 품질 버퍼 시간 `{id (string), value (number)}` |
+| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | 오브젝트 | 비디오 품질 변경 카운트 `{id (string), value (number)}` |
+| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | 오브젝트 | 비디오 품질 평균 비트 전송률 `{id (string), value (number)}` |
+| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | 오브젝트 | 비디오 품질 오류 개수 `{id (string), value (number)}` |
+| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | 오브젝트 | `{id (string), value (number)}` |
 
 {style="table-layout:auto"}
 
@@ -295,7 +295,7 @@ Analytics 소스 커넥터는 사전 처리된 데이터를 Experience Platform�
 
 쿼리 서비스를 사용하여 이러한 변환을 수행하는 방법에 대한 자세한 내용은 쿼리 서비스 사용 안내서의 [Adobe 정의 함수](/help/query-service/sql/adobe-defined-functions.md)를 참조하십시오.
 
-+++사용되지 않는 고급 매핑 필드의 테이블을 보려면 선택
++++더 이상 사용되지 않는 고급 매핑 필드의 테이블을 보려면 선택
 
 | 데이터 피드 | XDM 필드 | XDM 유형 | 설명 |
 | — | — | — | — ||

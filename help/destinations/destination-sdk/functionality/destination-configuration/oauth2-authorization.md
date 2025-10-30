@@ -2,7 +2,7 @@
 description: 이 페이지에서는 Destination SDK에서 지원하는 다양한 OAuth 2 인증 흐름에 대해 설명하고 대상에 대한 OAuth 2 인증을 설정하는 지침을 제공합니다.
 title: OAuth 2 인증
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 7ba9971b44410e609c64f4dcf956a1976207353e
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2181'
 ht-degree: 2%
@@ -33,7 +33,7 @@ Destination SDK은 대상에 대한 여러 인증 방법을 지원합니다. 이
 
 ### 시스템의 필수 구성 요소 {#prerequisites}
 
-첫 번째 단계로, Adobe Experience Platform용 시스템에서 앱을 만들거나 시스템에 Experience Platform을 등록해야 합니다. 목표는 대상에 대한 Experience Platform을 인증하는 데 필요한 클라이언트 ID와 클라이언트 암호를 생성하는 것입니다.
+첫 번째 단계로, Adobe Experience Platform용 시스템에서 앱을 만들거나 시스템에 Experience Platform을 등록해야 합니다. 목표는 대상에 Experience Platform을 인증하는 데 필요한 클라이언트 ID와 클라이언트 암호를 생성하는 것입니다.
 
 시스템에서 이 구성의 일부로 아래 목록에서 가져올 수 있는 Adobe Experience Platform OAuth 2 리디렉션/콜백 URL이 필요합니다.
 
@@ -46,16 +46,17 @@ Destination SDK은 대상에 대한 여러 인증 방법을 지원합니다. 이
 
 >[!IMPORTANT]
 >
->시스템에 Adobe Experience Platform에 대한 리디렉션/콜백 URL을 등록하는 단계는 인증 코드[&#128279;](#authorization-code) 부여 유형이 있는 OAuth 2에만 필요합니다. 지원되는 다른 두 권한 유형(암호 및 클라이언트 자격 증명)의 경우 이 단계를 건너뛸 수 있습니다.
+>시스템에 Adobe Experience Platform에 대한 리디렉션/콜백 URL을 등록하는 단계는 인증 코드[ 부여 유형이 있는 ](#authorization-code)OAuth 2에만 필요합니다. 지원되는 다른 두 권한 유형(암호 및 클라이언트 자격 증명)의 경우 이 단계를 건너뛸 수 있습니다.
 
 이 단계를 마치면 다음과 같은 작업을 수행할 수 있습니다.
+
 * 클라이언트 ID;
 * 클라이언트 암호
 * Adobe의 콜백 URL(인증 코드 부여용).
 
 ### Destination SDK에서 수행해야 하는 작업 {#to-do-in-destination-sdk}
 
-Experience Platform에서 대상에 대한 OAuth 2 인증을 설정하려면 `customerAuthenticationConfigurations` 매개 변수 아래의 [대상 구성](../../authoring-api/destination-configuration/create-destination-configuration.md)에 OAuth 2 세부 사항을 추가해야 합니다. 자세한 예제는 [고객 인증](../../functionality/destination-configuration/customer-authentication.md)을 참조하십시오. OAuth 2 권한 부여 유형에 따라 구성 템플릿에 추가해야 하는 필드에 대한 특정 지침은 이 페이지의 아래에 나와 있습니다.
+Experience Platform에서 대상에 대한 OAuth 2 인증을 설정하려면 [ 매개 변수 아래의 ](../../authoring-api/destination-configuration/create-destination-configuration.md)대상 구성`customerAuthenticationConfigurations`에 OAuth 2 세부 사항을 추가해야 합니다. 자세한 예제는 [고객 인증](../../functionality/destination-configuration/customer-authentication.md)을 참조하십시오. OAuth 2 권한 부여 유형에 따라 구성 템플릿에 추가해야 하는 필드에 대한 특정 지침은 이 페이지의 아래에 나와 있습니다.
 
 ## 지원되는 OAuth 2 부여 유형 {#oauth2-grant-types}
 
@@ -63,7 +64,7 @@ Experience Platform은 아래 표에서 세 가지 OAuth 2 부여 유형을 지�
 
 >[!IMPORTANT]
 >
->* 아래 섹션에 설명된 대로 입력 매개 변수를 제공합니다. Adobe 내부 시스템은 플랫폼의 인증 시스템에 연결되고 출력 매개 변수를 가져오며, 이 매개 변수는 사용자를 인증하고 대상에 대한 인증을 유지 관리하는 데 사용됩니다.
+>* 아래 섹션에 설명된 대로 입력 매개 변수를 제공합니다. Adobe 내부 시스템은 플랫폼의 인증 시스템에 연결하고 사용자를 인증하고 대상에 대한 인증을 유지 관리하는 데 사용되는 grab 출력 매개 변수를 사용합니다.
 >* 표에서 굵게 강조 표시된 입력 매개 변수는 OAuth 2 인증 흐름의 필수 매개 변수입니다. 다른 매개 변수는 선택 사항입니다. 여기에는 표시되지 않지만 [OAuth 2 구성 사용자 지정](#customize-configuration) 및 [액세스 토큰 새로 고침](#access-token-refresh) 섹션에 자세히 설명되어 있는 다른 사용자 지정 입력 매개 변수가 있습니다.
 
 | OAuth 2 부여 | 입력 | 출력 |
@@ -74,11 +75,12 @@ Experience Platform은 아래 표에서 세 가지 OAuth 2 부여 유형을 지�
 
 {style="table-layout:auto"}
 
-위의 표에는 표준 OAuth 2 흐름에 사용되는 필드가 나열되어 있습니다. 이러한 표준 필드 외에도 다양한 파트너 통합은 추가 입력 및 출력이 필요할 수 있습니다. Adobe은 만료된 액세스 토큰과 같은 잘못된 출력을 자동으로 재생성하는 메커니즘을 지원하면서 위의 표준 필드 패턴에 대한 변형을 처리할 수 있는 유연한 Destination SDK용 OAuth 2 인증 프레임워크를 설계했습니다.
+위의 표에는 표준 OAuth 2 흐름에 사용되는 필드가 나열되어 있습니다. 이러한 표준 필드 외에도 다양한 파트너 통합은 추가 입력 및 출력이 필요할 수 있습니다. Adobe은 만료된 액세스 토큰과 같은 잘못된 출력을 자동으로 재생성하는 메커니즘을 지원하면서 위의 표준 필드 패턴에 대한 변형을 처리할 수 있는 Destination SDK용 유연한 OAuth 2 인증 프레임워크를 설계했습니다.
 
-모든 경우에 출력에는 액세스 토큰이 포함되며, 이 액세스 토큰은 Experience Platform에서 대상에 대한 인증을 인증하고 유지 관리하는 데 사용됩니다.
+모든 경우의 출력에는 액세스 토큰이 포함되며, 이 토큰은 Experience Platform에서 대상에 대한 인증을 인증하고 유지 관리하는 데 사용됩니다.
 
 Adobe이 OAuth 2 인증을 위해 디자인한 시스템:
+
 * 는 추가 데이터 필드, 비표준 API 호출 등과 같은 다양한 변형을 고려하면서 세 가지 OAuth 2 권한 모두를 지원합니다.
 * 90일, 30분 또는 지정한 다른 모든 라이프타임 값을 포함하여 다양한 라이프타임 값으로 액세스 토큰을 지원합니다.
 * 새로 고침 토큰이 있거나 없는 OAuth 2 인증 흐름을 지원합니다.
@@ -123,13 +125,13 @@ Adobe이 OAuth 2 인증을 위해 디자인한 시스템:
 | `refreshTokenUrl` | 문자열 | *선택 사항입니다.* 새로 고침 토큰을 발급하는 사용자 측의 URL입니다. 종종 `refreshTokenUrl`은(는) `accessTokenUrl`과(와) 같습니다. |
 | `clientId` | 문자열 | 시스템이 Adobe Experience Platform에 할당하는 클라이언트 ID입니다. |
 | `clientSecret` | 문자열 | 시스템이 Adobe Experience Platform에 할당하는 클라이언트 암호입니다. |
-| `scope` | 문자열 목록 | *선택 사항*. 액세스 토큰으로 Experience Platform이 리소스에 대해 수행할 수 있는 범위를 설정합니다. 예: &quot;read, write&quot;. |
+| `scope` | 문자열 목록 | *선택 사항*. Experience Platform에서 리소스에 대해 수행할 수 있는 액세스 토큰의 범위를 설정합니다. 예: &quot;read, write&quot;. |
 
 {style="table-layout:auto"}
 
 ## 암호 부여가 있는 OAuth 2
 
-OAuth 2 암호 부여([RFC 표준 사양](https://tools.ietf.org/html/rfc6749#section-4.3) 읽기)의 경우 Experience Platform에 사용자의 사용자 이름과 암호가 필요합니다. 인증 흐름에서 Experience Platform은 액세스 토큰 및 선택적으로 새로 고침 토큰에 대해 이러한 자격 증명을 교환합니다.
+OAuth 2 암호 부여([RFC 표준 사양](https://tools.ietf.org/html/rfc6749#section-4.3) 읽기)의 경우 Experience Platform에는 사용자의 사용자 이름과 암호가 필요합니다. 인증 흐름에서 Experience Platform은 액세스 토큰 및 선택적으로 새로 고침 토큰에 대해 이러한 자격 증명을 교환합니다.
 Adobe은 아래의 표준 입력을 사용하여 값을 재정의하는 기능으로 대상 구성을 단순화합니다.
 
 | OAuth 2 부여 | 입력 | 출력 |
@@ -140,7 +142,7 @@ Adobe은 아래의 표준 입력을 사용하여 값을 재정의하는 기능�
 
 >[!NOTE]
 >
-> 아래 구성에서 `username` 및 `password`에 대한 매개 변수를 추가할 필요가 없습니다. 대상 구성에 `"grant": "OAUTH2_PASSWORD"`을(를) 추가하면 대상 인증 시 시스템에서 Experience Platform UI에 사용자 이름과 암호를 입력하도록 사용자에게 요청합니다.
+> 아래 구성에서 `username` 및 `password`에 대한 매개 변수를 추가할 필요가 없습니다. 대상 구성에 `"grant": "OAUTH2_PASSWORD"`을(를) 추가하면 대상 인증 시 시스템에서 사용자에게 Experience Platform UI에서 사용자 이름과 암호를 입력하도록 요청합니다.
 
 대상에 대해 이 인증 방법을 설정하려면 [대상 구성을 만들 때](../../authoring-api/destination-configuration/create-destination-configuration.md) 구성에 다음 줄을 추가하십시오.
 
@@ -166,7 +168,7 @@ Adobe은 아래의 표준 입력을 사용하여 값을 재정의하는 기능�
 | `accessTokenUrl` | 문자열 | 액세스 토큰 및 선택적으로 토큰 새로 고침을 발행하는 사용자 측의 URL입니다. |
 | `clientId` | 문자열 | 시스템이 Adobe Experience Platform에 할당하는 클라이언트 ID입니다. |
 | `clientSecret` | 문자열 | 시스템이 Adobe Experience Platform에 할당하는 클라이언트 암호입니다. |
-| `scope` | 문자열 목록 | *선택 사항*. 액세스 토큰으로 Experience Platform이 리소스에 대해 수행할 수 있는 범위를 설정합니다. 예: &quot;read, write&quot;. |
+| `scope` | 문자열 목록 | *선택 사항*. Experience Platform에서 리소스에 대해 수행할 수 있는 액세스 토큰의 범위를 설정합니다. 예: &quot;read, write&quot;. |
 
 {style="table-layout:auto"}
 
@@ -208,17 +210,17 @@ Adobe은 아래의 표준 입력을 사용하여 값을 재정의하는 기능�
 | `refreshTokenUrl` | 문자열 | *선택 사항입니다.* 새로 고침 토큰을 발급하는 사용자 측의 URL입니다. 종종 `refreshTokenUrl`은(는) `accessTokenUrl`과(와) 같습니다. |
 | `clientId` | 문자열 | 시스템이 Adobe Experience Platform에 할당하는 클라이언트 ID입니다. |
 | `clientSecret` | 문자열 | 시스템이 Adobe Experience Platform에 할당하는 클라이언트 암호입니다. |
-| `scope` | 문자열 목록 | *선택 사항*. 액세스 토큰으로 Experience Platform이 리소스에 대해 수행할 수 있는 범위를 설정합니다. 예: &quot;read, write&quot;. |
+| `scope` | 문자열 목록 | *선택 사항*. Experience Platform에서 리소스에 대해 수행할 수 있는 액세스 토큰의 범위를 설정합니다. 예: &quot;read, write&quot;. |
 
 {style="table-layout:auto"}
 
 ## OAuth 2 구성 사용자 지정 {#customize-configuration}
 
-위 섹션에 설명된 구성은 표준 OAuth 2 부여에 대해 설명합니다. 그러나 Adobe에서 디자인한 시스템은 유연성을 제공하므로 OAuth 2 부여에 있는 모든 변형에 대해 사용자 지정 매개 변수를 사용할 수 있습니다. 표준 OAuth 2 설정을 사용자 지정하려면 아래 예제와 같이 `authenticationDataFields` 매개 변수를 사용하십시오.
+위 섹션에 설명된 구성은 표준 OAuth 2 부여에 대해 설명합니다. 그러나 Adobe에서 디자인한 시스템은 유연성을 제공하므로 OAuth 2 부여에 있는 모든 변형에 사용자 지정 매개 변수를 사용할 수 있습니다. 표준 OAuth 2 설정을 사용자 지정하려면 아래 예제와 같이 `authenticationDataFields` 매개 변수를 사용하십시오.
 
 ### 예제 1: `authenticationDataFields`을(를) 사용하여 권한 부여 응답에서 오는 정보를 캡처합니다. {#example-1}
 
-이 예에서 대상 플랫폼에는 특정 시간 후에 만료되는 새로 고침 토큰이 있습니다. 이 경우 파트너는 API 응답의 `refresh_token_expires_in` 필드에서 새로 고침 토큰 만료를 가져오도록 `refreshTokenExpiration` 사용자 지정 필드를 설정합니다.
+이 예에서 대상 플랫폼에는 특정 시간 후에 만료되는 새로 고침 토큰이 있습니다. 이 경우 파트너는 API 응답의 `refreshTokenExpiration` 필드에서 새로 고침 토큰 만료를 가져오도록 `refresh_token_expires_in` 사용자 지정 필드를 설정합니다.
 
 ```json
 {
@@ -365,7 +367,7 @@ Adobe은 아래의 표준 입력을 사용하여 값을 재정의하는 기능�
 | `authenticationDataFields.description` | 문자열 | 설정한 사용자 정의 데이터 필드에 대한 설명입니다. |
 | `authenticationDataFields.type` | 문자열 | 사용자 지정 데이터 필드의 유형을 정의합니다. <br> 허용되는 값: `string`, `boolean`, `integer` |
 | `authenticationDataFields.isRequired` | 부울 | 인증 흐름에 사용자 지정 데이터 필드가 필요한지 여부를 지정합니다. |
-| `authenticationDataFields.format` | 문자열 | `"format":"password"`을(를) 선택하면 Adobe이 권한 부여 데이터 필드의 값을 암호화합니다. `"fieldType": "CUSTOMER"`과(와) 함께 사용하는 경우 사용자가 필드에 입력할 때 UI의 입력도 숨깁니다. |
+| `authenticationDataFields.format` | 문자열 | `"format":"password"`을(를) 선택하면 Adobe에서 권한 부여 데이터 필드의 값을 암호화합니다. `"fieldType": "CUSTOMER"`과(와) 함께 사용하는 경우 사용자가 필드에 입력할 때 UI의 입력도 숨깁니다. |
 | `authenticationDataFields.fieldType` | 문자열 | Experience Platform에서 대상을 설정할 때 입력이 파트너(본인)로부터 오는지 사용자로부터 오는지 여부를 나타냅니다. |
 | `authenticationDataFields.value` | 문자열. 부울. 정수 | 사용자 지정 데이터 필드의 값. 값이 `authenticationDataFields.type`에서 선택한 형식과 일치합니다. |
 | `authenticationDataFields.authenticationResponsePath` | 문자열 | 참조하는 API 응답 경로의 필드를 나타냅니다. |
@@ -451,19 +453,19 @@ Adobe은 사용자가 플랫폼에 다시 로그인할 필요 없이 만료된 �
 | 매개변수 | 유형 | 설명 |
 |---------|----------|------|
 | `accessTokenRequest.destinationServerType` | 문자열 | `URL_BASED` 사용. |
-| `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | 문자열 | <ul><li>`accessTokenRequest.urlBasedDestination.url.value`의 값에 템플릿을 사용하는 경우 `PEBBLE_V1`을(를) 사용합니다.</li><li> `accessTokenRequest.urlBasedDestination.url.value` 필드의 값이 상수인 경우 `NONE`을(를) 사용합니다. </li></li> |
+| `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | 문자열 | <ul><li>`PEBBLE_V1`의 값에 템플릿을 사용하는 경우 `accessTokenRequest.urlBasedDestination.url.value`을(를) 사용합니다.</li><li> `NONE` 필드의 값이 상수인 경우 `accessTokenRequest.urlBasedDestination.url.value`을(를) 사용합니다. </li></li> |
 | `accessTokenRequest.urlBasedDestination.url.value` | 문자열 | Experience Platform이 액세스 토큰을 요청하는 URL입니다. |
-| `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | 문자열 | <ul><li>`accessTokenRequest.httpTemplate.requestBody.value`의 값에 템플릿을 사용하는 경우 `PEBBLE_V1`을(를) 사용합니다.</li><li> `accessTokenRequest.httpTemplate.requestBody.value` 필드의 값이 상수인 경우 `NONE`을(를) 사용합니다. </li></li> |
+| `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | 문자열 | <ul><li>`PEBBLE_V1`의 값에 템플릿을 사용하는 경우 `accessTokenRequest.httpTemplate.requestBody.value`을(를) 사용합니다.</li><li> `NONE` 필드의 값이 상수인 경우 `accessTokenRequest.httpTemplate.requestBody.value`을(를) 사용합니다. </li></li> |
 | `accessTokenRequest.httpTemplate.requestBody.value` | 문자열 | 액세스 토큰 엔드포인트에 대한 HTTP 요청의 필드를 사용자 지정하려면 템플릿 언어를 사용하십시오. 템플릿을 사용하여 필드를 사용자 지정하는 방법에 대한 자세한 내용은 [템플릿 규칙](#templating-conventions) 섹션을 참조하십시오. |
 | `accessTokenRequest.httpTemplate.httpMethod` | 문자열 | 액세스 토큰 끝점을 호출하는 데 사용되는 HTTP 메서드를 지정합니다. 대부분의 경우 이 값은 `POST`입니다. |
 | `accessTokenRequest.httpTemplate.contentType` | 문자열 | 액세스 토큰 끝점에 대한 HTTP 호출의 콘텐츠 유형을 지정합니다. <br> 예: `application/x-www-form-urlencoded` 또는 `application/json`. |
 | `accessTokenRequest.httpTemplate.headers` | 문자열 | 액세스 토큰 끝점에 대한 HTTP 호출에 헤더를 추가할지 여부를 지정합니다. |
-| `accessTokenRequest.responseFields.templatingStrategy` | 문자열 | <ul><li>`accessTokenRequest.responseFields.value`의 값에 템플릿을 사용하는 경우 `PEBBLE_V1`을(를) 사용합니다.</li><li> `accessTokenRequest.responseFields.value` 필드의 값이 상수인 경우 `NONE`을(를) 사용합니다. </li></li> |
+| `accessTokenRequest.responseFields.templatingStrategy` | 문자열 | <ul><li>`PEBBLE_V1`의 값에 템플릿을 사용하는 경우 `accessTokenRequest.responseFields.value`을(를) 사용합니다.</li><li> `NONE` 필드의 값이 상수인 경우 `accessTokenRequest.responseFields.value`을(를) 사용합니다. </li></li> |
 | `accessTokenRequest.responseFields.value` | 문자열 | 템플릿 언어를 사용하여 액세스 토큰 엔드포인트에서 HTTP 응답의 필드에 액세스합니다. 템플릿을 사용하여 필드를 사용자 지정하는 방법에 대한 자세한 내용은 [템플릿 규칙](#templating-conventions) 섹션을 참조하십시오. |
 | `accessTokenRequest.validations.name` | 문자열 | 이 유효성 검사에 제공한 이름을 나타냅니다. |
-| `accessTokenRequest.validations.actualValue.templatingStrategy` | 문자열 | <ul><li>`accessTokenRequest.validations.actualValue.value`의 값에 템플릿을 사용하는 경우 `PEBBLE_V1`을(를) 사용합니다.</li><li> `accessTokenRequest.validations.actualValue.value` 필드의 값이 상수인 경우 `NONE`을(를) 사용합니다. </li></li> |
+| `accessTokenRequest.validations.actualValue.templatingStrategy` | 문자열 | <ul><li>`PEBBLE_V1`의 값에 템플릿을 사용하는 경우 `accessTokenRequest.validations.actualValue.value`을(를) 사용합니다.</li><li> `NONE` 필드의 값이 상수인 경우 `accessTokenRequest.validations.actualValue.value`을(를) 사용합니다. </li></li> |
 | `accessTokenRequest.validations.actualValue.value` | 문자열 | 템플릿 언어를 사용하여 HTTP 응답의 필드에 액세스합니다. 템플릿을 사용하여 필드를 사용자 지정하는 방법에 대한 자세한 내용은 [템플릿 규칙](#templating-conventions) 섹션을 참조하십시오. |
-| `accessTokenRequest.validations.expectedValue.templatingStrategy` | 문자열 | <ul><li>`accessTokenRequest.validations.expectedValue.value`의 값에 템플릿을 사용하는 경우 `PEBBLE_V1`을(를) 사용합니다.</li><li> `accessTokenRequest.validations.expectedValue.value` 필드의 값이 상수인 경우 `NONE`을(를) 사용합니다. </li></li> |
+| `accessTokenRequest.validations.expectedValue.templatingStrategy` | 문자열 | <ul><li>`PEBBLE_V1`의 값에 템플릿을 사용하는 경우 `accessTokenRequest.validations.expectedValue.value`을(를) 사용합니다.</li><li> `NONE` 필드의 값이 상수인 경우 `accessTokenRequest.validations.expectedValue.value`을(를) 사용합니다. </li></li> |
 | `accessTokenRequest.validations.expectedValue.value` | 문자열 | 템플릿 언어를 사용하여 HTTP 응답의 필드에 액세스합니다. 템플릿을 사용하여 필드를 사용자 지정하는 방법에 대한 자세한 내용은 [템플릿 규칙](#templating-conventions) 섹션을 참조하십시오. |
 
 {style="table-layout:auto"}
@@ -475,14 +477,14 @@ Adobe은 사용자가 플랫폼에 다시 로그인할 필요 없이 만료된 �
 
 | 접두사 | 설명 | 예 |
 |---------|----------|---------|
-| authData | 파트너 또는 고객 데이터 필드의 값에 액세스합니다. | ``{{ authData.accessToken }}`` |
-| response.body | HTTP 응답 본문 | ``{{ response.body.access_token }}`` |
-| response.status | HTTP 응답 상태 | ``{{ response.status }}`` |
-| response.headers | HTTP 응답 헤더 | ``{{ response.headers.server[0] }}`` |
-| userContext | 현재 인증 시도에 대한 액세스 정보 | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authorization attempt `</li></ul> |
+| authData | 파트너 또는 고객 데이터 필드의 값에 액세스합니다. | `{{ authData.accessToken }}` |
+| response.body | HTTP 응답 본문 | `{{ response.body.access_token }}` |
+| response.status | HTTP 응답 상태 | `{{ response.status }}` |
+| response.headers | HTTP 응답 헤더 | `{{ response.headers.server[0] }}` |
+| userContext | 현재 인증 시도에 대한 액세스 정보 | <ul><li>`{{ userContext.sandboxName }}`</li><li>`{{ userContext.sandboxId }}`</li><li>`{{ userContext.imsOrgId }}`</li><li>`{{ userContext.client }} // the client executing the authorization attempt`</li></ul> |
 
 {style="table-layout:auto"}
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽으면 이제 Adobe Experience Platform에서 지원하는 OAuth 2 인증 패턴에 대해 이해하고 OAuth 2 인증 지원을 통해 대상을 구성하는 방법을 알 수 있습니다. 다음으로, Destination SDK을 사용하여 OAuth 2 지원 대상을 설정할 수 있습니다. 다음 단계를 위해 [Destination SDK을 사용하여 대상을 구성](../../guides/configure-destination-instructions.md)을 읽어 보세요.
+이 문서를 읽으면 이제 Adobe Experience Platform에서 지원하는 OAuth 2 인증 패턴에 대해 이해하고 OAuth 2 인증 지원을 통해 대상을 구성하는 방법을 알 수 있습니다. 그런 다음 Destination SDK을 사용하여 OAuth 2 지원 대상을 설정할 수 있습니다. 다음 단계를 위해 [Destination SDK을 사용하여 대상 구성](../../guides/configure-destination-instructions.md)을 참조하십시오.

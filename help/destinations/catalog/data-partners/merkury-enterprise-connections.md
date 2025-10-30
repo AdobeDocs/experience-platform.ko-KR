@@ -3,9 +3,9 @@ title: Merkury Enterprise 연결 대상
 description: Adobe Experience Platform UI를 사용하여 Merkury Enterprise Connections 대상 연결을 만드는 방법을 알아봅니다.
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1370'
 ht-degree: 4%
 
 ---
@@ -39,8 +39,8 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->* 대상에 연결하려면 **대상 보기** 및 **대상 관리**, **대상 활성화**, **프로필 보기** 및 **세그먼트 보기** [[액세스 제어 권한]](https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/home#permissions)이 필요합니다. 필요한 권한을 얻으려면 [[액세스 제어 개요]](https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/ui/overview)를 읽거나 제품 관리자에게 문의하십시오.
->* *ID*&#x200B;을(를) 내보내려면 **ID 그래프 보기** [[액세스 제어 권한]](https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/home#permissions)이 필요합니다.\![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
+>* 대상에 연결하려면 **대상 보기** 및 **대상 관리**, **대상 활성화**, **프로필 보기** 및 **세그먼트 보기** [[액세스 제어 권한]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)이 필요합니다. 필요한 권한을 얻으려면 [[액세스 제어 개요]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview)를 읽거나 제품 관리자에게 문의하십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **ID 그래프 보기** [[액세스 제어 권한]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)이 필요합니다.\![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
 
 ## 지원되는 ID {#supported-identities}
 
@@ -49,8 +49,8 @@ ht-degree: 4%
 | GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
 | ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 자세한 내용은 [ECID](/help/identity-service/features/ecid.md)에서 다음 문서를 참조하십시오. |
-| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
-| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
+| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
 | extern_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
 
 {style="table-layout:auto"}
@@ -62,7 +62,7 @@ ht-degree: 4%
 | **대상자** | **지원됨** | **설명 원본** |
 |---|---|---|      
 | Segmentation Service | ✓ | Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/ko/docs/experience-platform/segmentation/home)을(를) 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | X | CSV 파일에서 대상 [[가져옴]](https://experienceleague.adobe.com/ko/docs/experience-platform/segmentation/ui/overview#import-audience)을(를) Experience Platform으로 가져왔습니다. |
+| 사용자 정의 업로드 | X | CSV 파일에서 Experience Platform으로 대상 [가져옴](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -72,8 +72,8 @@ ht-degree: 4%
 
 | **항목** | **유형** | **참고** |
 |---|---|---|  
-| 내보내기 유형 | **프로필 기반** | [[대상 활성화 워크플로]](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes)의 프로필 특성 선택 화면에서 선택한 대로 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성)와 함께 세그먼트의 모든 구성원을 내보냅니다. |
-| 빈도 | **일괄 처리** | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. [[일괄 처리 파일 기반 빈도 대상]](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/destination-types#file-based)에 대해 자세히 알아보십시오. |
+| 내보내기 유형 | **프로필 기반** | [[대상 활성화 워크플로]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes)의 프로필 특성 선택 화면에서 선택한 대로 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성)와 함께 세그먼트의 모든 구성원을 내보냅니다. |
+| 빈도 | **일괄 처리** | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. [[일괄 처리 파일 기반 빈도 대상]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-types#file-based)에 대해 자세히 알아보십시오. |
 
 {style="table-layout:auto"}
 
@@ -81,9 +81,9 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->대상에 연결하려면 **대상 보기** 및 **데이터 집합 대상 관리 및 활성화** [[액세스 제어 권한]](https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/home#permissions)이 필요합니다. 필요한 권한을 얻으려면 [[액세스 제어 개요]](https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/ui/overview)를 읽거나 제품 관리자에게 문의하십시오.
+>대상에 연결하려면 **대상 보기** 및 **데이터 집합 대상 관리 및 활성화** [[액세스 제어 권한]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)이 필요합니다. 필요한 권한을 얻으려면 [[액세스 제어 개요]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview)를 읽거나 제품 관리자에게 문의하십시오.
 
-이 대상에 연결하려면 [[대상 구성 자습서]](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/ui/connect-destination)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
+이 대상에 연결하려면 [[대상 구성 자습서]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상으로 인증
 
@@ -128,7 +128,7 @@ Merkury Enterprise Connections 대상을 사용하여 이미 정의된 계정이
 
 ## 경고 활성화
 
-경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/ui/alerts)에 대한 안내서를 참조하십시오.
+경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts)에 대한 안내서를 참조하십시오.
 
 대상 연결에 대한 세부 정보를 모두 제공했으면 **다음**&#x200B;을 선택합니다.
 
@@ -140,7 +140,7 @@ Merkury Enterprise Connections 대상을 사용하여 이미 정의된 계정이
 >* ID를 내보내려면 **ID 그래프 보기** 액세스 제어 권한이 필요합니다.
 
 
-이 대상으로 대상을 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)를 참조하십시오.
+이 대상으로 대상을 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)를 참조하십시오.
 
 ## 매핑 제안
 
@@ -150,7 +150,7 @@ Merkury Enterprise Connections 대상을 사용하여 이미 정의된 계정이
 
 | 대상 필드 | Source 설명 |
 |---|---|
-| ID | [!DNL Merkury Enterprise Identity] Source 커넥터를 통해 [!DNL Merkury] 데이터를 Experience Platform에 매핑하는 데 사용할 ID 필드 |
+| ID | [!DNL Merkury] Source 커넥터를 통해 [!DNL Merkury Enterprise Identity] 데이터를 Experience Platform에 매핑하는 데 사용할 ID 필드 |
 | Input_First_Name | Experience Platform의 `person.name.firstName` 값입니다. |
 | Input_Last_Name | Experience Platform의 `person.name.lastName` 값입니다. |
 | Input_Address_Line_1 | Experience Platform의 `mailingAddress.street` 값입니다. |
@@ -169,7 +169,7 @@ Merkury Enterprise Connections 대상을 사용하여 이미 정의된 계정이
 
 ## 데이터 사용 및 관리
 
-모든 Adobe Experience Platform 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. Adobe Experience Platform에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/data-governance/home)를 참조하십시오.
+모든 Adobe Experience Platform 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. Adobe Experience Platform에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)를 참조하십시오.
 
 ## 다음 단계
 

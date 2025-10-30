@@ -2,7 +2,7 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 작성할 때 검토를 위해 제작된 대상을 제출하는 데 필요한 모든 정보를 제공합니다.
 title: 검토를 위해 제품화된 대상 제출
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1045'
 ht-degree: 0%
@@ -263,6 +263,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 대상 카탈로그에는 각 대상 카드에 대한 로고가 포함되어 있습니다. 제출 이메일에 대상에 대한 로고가 있는 이미지를 포함합니다.
 
 이미지 요구 사항은 다음과 같습니다.
+
 * **형식**: `SVG`
 * **크기**: 2MB 미만
 

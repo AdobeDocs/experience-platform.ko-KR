@@ -5,7 +5,7 @@ title: 스트리밍 수집 API를 사용하여 시계열 데이터 스트리밍
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 수집 서비스 API의 일부인 수집 API 스트리밍을 사용하는 데 도움이 됩니다.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 이 자습서는 Adobe Experience Platform [!DNL Data Ingestion Service] API의 일부인 수집 API 스트리밍을 사용하는 데 도움이 됩니다.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
@@ -193,7 +193,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->{&#x200B;0}ID 네임스페이스 코드&#x200B;**&#x200B;**
+>{&#x200B;0}ID 네임스페이스 코드&#x200B;****
 >
 > 코드가 유효한지 확인하십시오. 위의 예에서는 표준 ID 네임스페이스인 &quot;이메일&quot;을 사용합니다. 일반적으로 사용되는 다른 표준 ID 네임스페이스는 [ID 서비스 FAQ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)에서 찾을 수 있습니다.
 >
@@ -402,7 +402,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 | -------- | ----------- |
 | `{CONNECTION_ID}` | 이전에 만든 스트리밍 연결의 `inletId`입니다. |
 | `xactionId` | 방금 전송한 레코드에 대해 서버측에서 생성된 고유 식별자입니다. 이 ID는 Adobe이 다양한 시스템을 통해 디버깅을 통해 이 레코드의 라이프사이클을 추적하는 데 도움이 됩니다. |
-| `receivedTimeMs`: 요청이 수신된 시간을 보여 주는 타임스탬프(밀리초 단위)입니다. |
+| `receivedTimeMs`: 요청이 수신된 시간을 보여 주는 타임스탬프(밀리초 단위)입니다. |  |
 | `syncValidation.status` | 쿼리 매개 변수 `syncValidation=true`이(가) 추가되었으므로 이 값이 표시됩니다. 유효성 검사가 성공하면 상태는 `pass`이(가) 됩니다. |
 
 ## 새로 수집된 시계열 데이터 검색

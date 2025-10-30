@@ -1,9 +1,9 @@
 ---
 title: 푸시 알림
 description: 웹 SDK에 대한 푸시 알림을 구성하여 브라우저 기반 푸시 메시지를 활성화합니다.
-source-git-commit: 84faff58bac199c1113d7451f8cc865b6a870680
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '511'
 ht-degree: 2%
 
 ---
@@ -105,4 +105,4 @@ alloy("configure", {
 
 ## 다음 단계 {#next-steps}
 
-푸시 알림을 구성한 후 [`sendPushSubscription`](../sendpushsubscription.md) 명령을 사용하여 Adobe Experience Platform에 푸시 구독을 등록합니다.
+푸시 알림을 구성한 후 [sendPushSubscription](../sendpushsubscription.md) 명령을 사용하여 Adobe Experience Platform에 푸시 구독을 등록합니다.

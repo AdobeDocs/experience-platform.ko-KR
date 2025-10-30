@@ -2,9 +2,9 @@
 title: 샌드박스 도구
 description: 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져옵니다.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 76e1edf7ed78cffdb8f858d5685836c452dd6dd3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '3728'
+source-wordcount: '3524'
 ht-degree: 5%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 5%
 | 플랫폼 | 오브젝트 | 세부 사항 |
 | --- | --- | --- |
 | 고객 데이터 플랫폼 | 소스 | <ul><li>소스 계정 자격 증명은 보안상의 이유로 타겟 샌드박스에서 복제되지 않으며 수동으로 업데이트해야 합니다.</li><li>소스 데이터 흐름은 기본적으로 초안 상태로 복사됩니다.</li></ul> |
-| 고객 데이터 플랫폼 | 대상자 | <ul><li>**[!UICONTROL 고객 대상]** 유형 **[!UICONTROL 세그먼테이션 서비스]**&#x200B;만 지원됩니다.</li><li>동의 및 거버넌스에 대한 기존 레이블은 동일한 가져오기 작업에서 복사됩니다.</li><li> 병합 정책 종속성을 확인할 때 시스템에서 동일한 XDM 클래스가 있는 대상 샌드박스의 기본 병합 정책을 자동으로 선택합니다.</li><li>대상을 가져올 때 이름이 같은 기존 개체가 검색되는 경우 샌드박스 툴은 개체 증식을 방지하기 위해 항상 기존 개체를 재사용합니다.</li></ul> |
+| 고객 데이터 플랫폼 | 대상자 | <ul><li>**[!UICONTROL Customer Audience]** 형식 **[!UICONTROL Segmentation service]**&#x200B;만 지원됩니다.</li><li>동의 및 거버넌스에 대한 기존 레이블은 동일한 가져오기 작업에서 복사됩니다.</li><li> 병합 정책 종속성을 확인할 때 시스템에서 동일한 XDM 클래스가 있는 대상 샌드박스의 기본 병합 정책을 자동으로 선택합니다.</li><li>대상을 가져올 때 이름이 같은 기존 개체가 검색되는 경우 샌드박스 툴은 개체 증식을 방지하기 위해 항상 기존 개체를 재사용합니다.</li></ul> |
 | 고객 데이터 플랫폼 | ID | <ul><li>타겟 샌드박스에서 을(를) 만들 때 Adobe 표준 ID 네임스페이스에 대한 자동 중복 제거가 수행됩니다.</li><li>대상 규칙의 모든 속성이 유니온 스키마에서 활성화된 경우에만 대상을 복사할 수 있습니다. 통합 프로필에 대해 필요한 스키마를 먼저 이동하고 활성화해야 합니다.</li></ul> |
 | 고객 데이터 플랫폼 | 스키마/필드 그룹/데이터 유형 | <ul><li>동의 및 거버넌스에 대한 기존 레이블은 동일한 가져오기 작업에서 복사됩니다.</li><li>통합 프로필 옵션을 활성화하지 않고도 스키마를 유연하게 가져올 수 있습니다. 스키마 관계 에지 케이스는 패키지에 포함되지 않습니다.</li><li>스키마/필드 그룹을 가져올 때 이름이 동일한 기존 객체가 검색되는 경우 샌드박스 툴은 객체 확산을 방지하기 위해 항상 기존 객체를 재사용합니다.</li></ul> |
 | 고객 데이터 플랫폼 | 데이터 세트 | 데이터 세트는 기본적으로 통합 프로필 설정이 비활성화된 상태로 복사됩니다. |
@@ -65,12 +65,12 @@ ht-degree: 5%
 | [!DNL Adobe Journey Optimizer] | 대상자 | | 대상자는 여정 객체의 종속 객체로 복사할 수 있습니다. 타겟 샌드박스에서 새 대상 만들기 를 선택하거나 기존 대상을 재사용할 수 있습니다. |
 | [!DNL Adobe Journey Optimizer] | 스키마 | | 여정에 사용된 스키마는 종속 객체로 복사할 수 있습니다. 대상 샌드박스에서 새 스키마 만들기 를 선택하거나 기존 스키마를 재사용할 수 있습니다. |
 | [!DNL Adobe Journey Optimizer] | 병합 정책 | | 여정에 사용된 병합 정책을 종속 객체로 복사할 수 있습니다. 대상 샌드박스에서 **새 병합 정책을 만들 수 없음**. 기존 병합 정책만 사용할 수 있습니다. |
-| [!DNL Adobe Journey Optimizer] | 여정 | 여정에 사용된 다음 객체는 종속 객체로 복사됩니다. 가져오기 작업 과정에서 각각에 대해 **[!UICONTROL 새로 만들기]** 또는 **[!UICONTROL 기존 항목 사용]**&#x200B;을 선택할 수 있습니다. <ul><li>대상자</li><li>캔버스 세부 정보</li><li>콘텐츠 템플릿</li><li>사용자 정의 액션</li><li>데이터 소스</li><li>이벤트</li><li>필드 그룹</li><li>조각</li><li>스키마</li></ul> | 가져오기 프로세스 중에 여정을 다른 샌드박스로 복사하기 위해 **[!UICONTROL 기존 항목 사용]**&#x200B;을 선택한 경우 **필수**&#x200B;을(를) 선택한 기존 사용자 지정 작업은 원본 사용자 지정 작업과 정확히 일치해야 합니다. 일치하지 않으면 새 여정에서 해결할 수 없는 오류가 발생합니다.<br>여정에 사용된 이벤트와 이벤트 세부 정보를 복사하고 대상 샌드박스에 새 버전을 만듭니다. |
+| [!DNL Adobe Journey Optimizer] | 여정 | 여정에 사용된 다음 객체는 종속 객체로 복사됩니다. 가져오기 작업 과정에서 각각에 대해 **[!UICONTROL Create new]** 또는 **[!UICONTROL Use existing]**&#x200B;을(를) 선택할 수 있습니다. <ul><li>대상자</li><li>캔버스 세부 정보</li><li>콘텐츠 템플릿</li><li>사용자 정의 액션</li><li>데이터 소스</li><li>이벤트</li><li>필드 그룹</li><li>조각</li><li>스키마</li></ul> | 가져오기 프로세스 중에 **[!UICONTROL Use existing]**&#x200B;을(를) 선택하여 다른 샌드박스에 여정을 복사하는 경우 **필수**&#x200B;를 선택한 기존 사용자 지정 작업이 소스 사용자 지정 작업과 정확히 일치해야 합니다. 일치하지 않으면 새 여정에서 해결할 수 없는 오류가 발생합니다.<br>여정에 사용된 이벤트와 이벤트 세부 정보를 복사하고 대상 샌드박스에 새 버전을 만듭니다. |
 | [!DNL Adobe Journey Optimizer] | 작업 | | 여정에 사용된 이메일 및 푸시 메시지는 종속 오브젝트로 복사할 수 있습니다. 여정 필드에 사용된 채널 작업 활동으로, 메시지의 개인화에 사용되며 완성도가 확인되지 않습니다. 콘텐츠 블록은 복사되지 않습니다.<br><br>여정에 사용된 프로필 업데이트 작업을 복사할 수 있습니다. 사용자 지정 작업은 패키지에 개별적으로 추가할 수 있습니다. 여정에 사용된 작업 세부 정보도 복사됩니다. 대상 샌드박스에서 항상 새 버전이 생성됩니다. |
 | [!DNL Adobe Journey Optimizer] | 사용자 지정 작업 |  | 사용자 지정 작업은 패키지에 개별적으로 추가할 수 있습니다. 사용자 지정 작업이 여정에 할당되면 더 이상 편집할 수 없습니다. 사용자 지정 작업을 업데이트하려면 다음을 수행해야 합니다. <ul><li>여정 마이그레이션 전에 사용자 지정 작업 이동</li><li>마이그레이션 후 사용자 지정 작업에 대한 구성(예: 요청 헤더, 쿼리 매개 변수 및 인증) 업데이트</li><li>첫 번째 단계에서 추가한 사용자 지정 작업으로 여정 개체 마이그레이션</li></ul> |
 | [!DNL Adobe Journey Optimizer] | 콘텐츠 템플릿 | | 컨텐츠 템플릿은 여정 객체의 종속 객체로 복사할 수 있습니다. 독립형 템플릿을 사용하면 Journey Optimizer 캠페인 및 여정 전반에서 사용자 정의 콘텐츠를 쉽게 재사용할 수 있습니다. |
 | [!DNL Adobe Journey Optimizer] | 조각 | 모든 중첩된 조각. | 조각을 여정 개체의 종속 개체로 복사할 수 있습니다. 조각은 Journey Optimizer 캠페인 및 여정 간 하나 이상의 이메일에서 참조할 수 있는 재사용 가능한 구성 요소입니다. |
-| [!DNL Adobe Journey Optimizer] | 캠페인 | 캠페인에 사용된 다음 객체는 종속 객체로 복사됩니다. <ul><li>캠페인</li><li>대상자</li><li>스키마</li><li>콘텐츠 템플릿</li><li>조각</li><li>메시지/컨텐츠</li><li>채널 구성</li><li>통합 의사 결정 개체</li><li>실험 설정/변형</li></ul> | <ul><li>프로필, 대상자, 스키마, 인라인 메시지 및 종속 오브젝트와 관련된 모든 항목과 함께 캠페인을 복사할 수 있습니다. 데이터 사용 레이블 및 언어 설정과 같은 일부 항목은 복사되지 않습니다. 복사할 수 없는 전체 개체 목록은 [다른 샌드박스로 개체 내보내기](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) 안내서를 참조하십시오.</li><li>시스템은 동일한 구성이 존재하는 경우 타겟 샌드박스에서 기존 채널 구성 객체를 자동으로 감지하고 재사용합니다. 일치하는 구성을 찾을 수 없으면 가져오는 동안 채널 구성을 건너뛰며 사용자가 이 여정에 대한 대상 샌드박스의 채널 설정을 수동으로 업데이트해야 합니다.</li><li>사용자는 Target 샌드박스의 기존 실험 및 대상을 선택한 캠페인의 종속 오브젝트로 재사용할 수 있습니다.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 캠페인 | 캠페인에 사용된 다음 객체는 종속 객체로 복사됩니다. <ul><li>캠페인</li><li>대상자</li><li>스키마</li><li>콘텐츠 템플릿</li><li>조각</li><li>메시지/컨텐츠</li><li>채널 구성</li><li>통합 의사 결정 개체</li><li>실험 설정/변형</li></ul> | <ul><li>프로필, 대상자, 스키마, 인라인 메시지 및 종속 오브젝트와 관련된 모든 항목과 함께 캠페인을 복사할 수 있습니다. 데이터 사용 레이블 및 언어 설정과 같은 일부 항목은 복사되지 않습니다. 복사할 수 없는 전체 개체 목록은 [다른 샌드박스로 개체 내보내기](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) 안내서를 참조하십시오.</li><li>시스템은 동일한 구성이 존재하는 경우 타겟 샌드박스에서 기존 채널 구성 객체를 자동으로 감지하고 재사용합니다. 일치하는 구성을 찾을 수 없으면 가져오는 동안 채널 구성을 건너뛰며 사용자가 이 여정에 대한 대상 샌드박스의 채널 설정을 수동으로 업데이트해야 합니다.</li><li>사용자는 Target 샌드박스의 기존 실험 및 대상을 선택한 캠페인의 종속 오브젝트로 재사용할 수 있습니다.</li></ul> |
 | [!DNL Adobe Journey Optimizer] | 결정 | Decisioning 객체를 복사하기 전에 다음 객체가 대상 샌드박스에 있어야 합니다. <ul><li>Decisioning 개체 전체에 사용된 프로필 속성</li><li>사용자 정의 오퍼 속성의 필드 그룹</li><li>규칙, 등급 또는 캡핑에 대한 컨텍스트 속성에 사용되는 데이터 스트림의 스키마.</li></ul> | <ul><li>AI 모델을 사용하는 등급 수식 복사는 현재 지원되지 않습니다.</li><li>결정 항목(오퍼 항목)은 자동으로 포함되지 않습니다. 전송되었는지 확인하려면 **패키지에 추가** 옵션을 사용하여 수동으로 추가하십시오.</li><li>선택 전략을 사용하는 정책에서는 복사 프로세스 중에 관련 결정 항목을 수동으로 추가해야 합니다. 수동 또는 대체 결정 항목을 사용하는 정책에는 해당 항목이 직접 종속성으로 자동으로 포함됩니다.</li><li>의사 결정 항목을 다른 관련 객체 앞에 먼저 복사해야 합니다.</li></ul> |
 
 Decisioning 객체 전체에 사용된 프로필 속성
@@ -110,39 +110,39 @@ Decisioning 객체 전체에 사용된 프로필 속성
 
 ### 새 패키지에 개체 추가 {#add-object-to-new-package}
 
-왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;을(를) 선택한 다음 사용 가능한 스키마를 나열하는 **[!UICONTROL 찾아보기]** 탭을 선택합니다. 선택한 스키마 옆의 생략 부호(`...`)를 선택하면 드롭다운에 컨트롤이 표시됩니다. 드롭다운에서 **[!UICONTROL 패키지에 추가]**&#x200B;를 선택합니다.
+왼쪽 탐색에서 **[!UICONTROL Schemas]**&#x200B;을(를) 선택한 다음 사용 가능한 스키마를 나열하는 **[!UICONTROL Browse]** 탭을 선택합니다. 선택한 스키마 옆의 생략 부호(`...`)를 선택하면 드롭다운에 컨트롤이 표시됩니다. 드롭다운에서 **[!UICONTROL Add to package]**&#x200B;을(를) 선택합니다.
 
-![패키지에 추가[!UICONTROL &#x200B; 컨트롤을 강조 표시하는 드롭다운 메뉴를 표시하는 스키마 목록]](../images/ui/sandbox-tooling/add-to-package.png)
+![[!UICONTROL Add to package] 컨트롤을 강조 표시하는 드롭다운 메뉴를 표시하는 스키마 목록입니다.](../images/ui/sandbox-tooling/add-to-package.png)
 
-**[!UICONTROL 패키지에 추가]** 대화 상자에서 **[!UICONTROL 새 패키지 만들기]** 옵션을 선택합니다. 패키지의 [!UICONTROL 이름]과(와) 선택적 [!UICONTROL 설명]을(를) 입력한 다음 **[!UICONTROL 추가]**&#x200B;를 선택하십시오.
+**[!UICONTROL Add to package]** 대화 상자에서 **[!UICONTROL Create new package]** 옵션을 선택합니다. 패키지에 대한 [!UICONTROL Name]과(와) 선택적 [!UICONTROL Description]을(를) 입력한 다음 **[!UICONTROL Add]**&#x200B;을(를) 선택하십시오.
 
-![패키지에 추가[!UICONTROL &#x200B; 대화 상자(]새 패키지 만들기[!UICONTROL &#x200B; 선택 및 강조 표시 &#x200B;]추가[!UICONTROL .])](../images/ui/sandbox-tooling/create-new-package.png)
+![선택한 [!UICONTROL Add to package]과(와) 함께 [!UICONTROL Create new package] 대화 상자를 선택하고 [!UICONTROL Add]을(를) 강조 표시합니다.](../images/ui/sandbox-tooling/create-new-package.png)
 
-**[!UICONTROL 스키마]** 환경으로 돌아갔습니다. 이제 아래 나열된 다음 단계를 수행하여 만든 패키지에 개체를 추가할 수 있습니다.
+**[!UICONTROL Schemas]** 환경으로 돌아갔습니다. 이제 아래 나열된 다음 단계를 수행하여 만든 패키지에 개체를 추가할 수 있습니다.
 
 ### 기존 패키지에 개체 추가 및 게시 {#add-object-to-existing-package}
 
-사용 가능한 스키마 목록을 보려면 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;을(를) 선택한 다음 **[!UICONTROL 찾아보기]** 탭을 선택하십시오. 그런 다음 선택한 스키마 옆의 생략 부호(`...`)를 선택하여 드롭다운 메뉴에서 제어 옵션을 확인합니다. 드롭다운에서 **[!UICONTROL 패키지에 추가]**&#x200B;를 선택합니다.
+사용 가능한 스키마 목록을 보려면 왼쪽 탐색에서 **[!UICONTROL Schemas]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Browse]** 탭을 선택하십시오. 그런 다음 선택한 스키마 옆의 생략 부호(`...`)를 선택하여 드롭다운 메뉴에서 제어 옵션을 확인합니다. 드롭다운에서 **[!UICONTROL Add to package]**&#x200B;을(를) 선택합니다.
 
-![패키지에 추가[!UICONTROL &#x200B; 컨트롤을 강조 표시하는 드롭다운 메뉴를 표시하는 스키마 목록]](../images/ui/sandbox-tooling/add-to-package.png)
+![[!UICONTROL Add to package] 컨트롤을 강조 표시하는 드롭다운 메뉴를 표시하는 스키마 목록입니다.](../images/ui/sandbox-tooling/add-to-package.png)
 
-**[!UICONTROL 패키지에 추가]** 대화 상자가 나타납니다. **[!UICONTROL 기존 패키지]** 옵션을 선택한 다음 **[!UICONTROL 패키지 이름]** 드롭다운을 선택하고 필요한 패키지를 선택합니다. 마지막으로 **[!UICONTROL 추가]**&#x200B;를 선택하여 선택 항목을 확인합니다.
+**[!UICONTROL Add to package]** 대화 상자가 나타납니다. **[!UICONTROL Existing package]** 옵션을 선택한 다음 **[!UICONTROL Package name]** 드롭다운을 선택하고 필요한 패키지를 선택합니다. 마지막으로 **[!UICONTROL Add]**&#x200B;을(를) 선택하여 선택 항목을 확인합니다.
 
-드롭다운에서 선택한 패키지를 표시하는 ![[!UICONTROL 패키지에 추가] 대화 상자를 표시합니다.](../images/ui/sandbox-tooling/add-to-existing-package.png)
+드롭다운에서 선택한 패키지를 표시하는 대화 상자 ![[!UICONTROL Add to package]개.](../images/ui/sandbox-tooling/add-to-existing-package.png)
 
-패키지에 추가된 오브젝트 목록이 나열됩니다. 패키지를 게시하여 샌드박스로 가져올 수 있도록 하려면 **[!UICONTROL 게시]**&#x200B;를 선택하십시오.
+패키지에 추가된 오브젝트 목록이 나열됩니다. 패키지를 게시하여 샌드박스로 가져올 수 있도록 하려면 **[!UICONTROL Publish]**&#x200B;을(를) 선택합니다.
 
-![패키지의 개체 목록으로서 [!UICONTROL 게시] 옵션을 강조 표시합니다.](../images/ui/sandbox-tooling/publish-package.png)
+![패키지의 개체 목록으로서 [!UICONTROL Publish] 옵션을 강조 표시합니다.](../images/ui/sandbox-tooling/publish-package.png)
 
-패키지 게시를 확인하려면 **[!UICONTROL 게시]**&#x200B;를 선택하십시오.
+패키지 게시를 확인하려면 **[!UICONTROL Publish]**&#x200B;을(를) 선택하십시오.
 
-![패키지 게시 확인 대화 상자에서 [!UICONTROL 게시] 옵션을 강조 표시합니다.](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![패키지 게시 확인 대화 상자에서 [!UICONTROL Publish] 옵션을 강조 표시합니다.](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 >[!NOTE]
 >
 >게시되면 패키지의 콘텐츠를 변경할 수 없습니다. 호환성 문제를 방지하려면 필요한 모든 에셋을 선택했는지 확인하십시오. 변경해야 하는 경우 새 패키지를 만들어야 합니다.
 
-**[!UICONTROL 샌드박스]** 환경의 [!UICONTROL 패키지] 탭으로 돌아가서 새로 게시된 패키지를 볼 수 있습니다.
+**[!UICONTROL Packages]** 환경의 [!UICONTROL Sandboxes] 탭으로 돌아가며 새로 게시된 패키지를 볼 수 있습니다.
 
 ![새로 게시된 패키지를 강조 표시하는 샌드박스 패키지 목록.](../images/ui/sandbox-tooling/published-packages.png)
 
@@ -152,39 +152,39 @@ Decisioning 객체 전체에 사용된 프로필 속성
 >
 >모든 가져오기 작업은 감사 로그에 기록됩니다.
 
-패키지를 대상 샌드박스로 가져오려면 샌드박스 **[!UICONTROL 찾아보기]** 탭으로 이동하여 샌드박스 이름 옆에 있는 더하기(+) 옵션을 선택합니다.
+패키지를 대상 샌드박스로 가져오려면 샌드박스 **[!UICONTROL Browse]** 탭으로 이동하여 샌드박스 이름 옆에 있는 더하기(+) 옵션을 선택합니다.
 
-![샌드박스 **[!UICONTROL 찾아보기]** 탭에서 패키지 가져오기 선택을 강조 표시합니다.](../images/ui/sandbox-tooling/browse-sandboxes.png)
+![샌드박스 **[!UICONTROL Browse]** 탭에서 패키지 가져오기 선택을 강조 표시합니다.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-드롭다운 메뉴를 사용하여 타겟팅된 샌드박스로 가져올 **[!UICONTROL 패키지 이름]**&#x200B;을(를) 선택합니다. 향후 모니터링에 사용할 **[!UICONTROL 작업 이름]**&#x200B;을(를) 추가합니다. 기본적으로 통합 프로필은 패키지의 스키마를 가져올 때 비활성화됩니다. **프로필에 대해 스키마 활성화**&#x200B;를 전환하여 활성화한 다음 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+드롭다운 메뉴를 사용하여 타겟팅된 샌드박스로 가져올 **[!UICONTROL Package name]**&#x200B;을(를) 선택합니다. **[!UICONTROL Job name]**&#x200B;을(를) 추가하세요. 이 값은 나중에 모니터링에 사용됩니다. 기본적으로 통합 프로필은 패키지의 스키마를 가져올 때 비활성화됩니다. **프로필에 대해 스키마 활성화**&#x200B;를 전환하여 활성화한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
-![가져오기 세부 정보 페이지에 [!UICONTROL 패키지 이름] 드롭다운 선택](../images/ui/sandbox-tooling/import-package-to-sandbox.png)이 표시됩니다.
+![가져오기 세부 정보 페이지에 [!UICONTROL Package name] 드롭다운 선택이 표시됩니다](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-[!UICONTROL 패키지 개체 및 종속성] 페이지에서 이 패키지에 포함된 모든 자산의 목록을 제공합니다. 시스템은 선택한 상위 객체를 성공적으로 가져오는 데 필요한 종속 객체를 자동으로 검색합니다. 누락된 속성은 페이지 맨 위에 표시됩니다. 자세한 분류를 보려면 **[!UICONTROL 세부 정보 보기]**&#x200B;를 선택하십시오.
+[!UICONTROL Package object and dependencies] 페이지에서 이 패키지에 포함된 모든 자산의 목록을 제공합니다. 시스템은 선택한 상위 객체를 성공적으로 가져오는 데 필요한 종속 객체를 자동으로 검색합니다. 누락된 속성은 페이지 맨 위에 표시됩니다. 자세한 분류를 보려면 **[!UICONTROL View details]**&#x200B;을(를) 선택하십시오.
 
-![[!UICONTROL 패키지 개체 및 종속성] 페이지에 누락된 특성이 표시됩니다.](../images/ui/sandbox-tooling/missing-attributes.png)
+![[!UICONTROL Package object and dependencies] 페이지에 특성이 없습니다.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
 >종속 객체는 Target 샌드박스의 기존 객체로 대체할 수 있으므로 새 버전을 만드는 대신 기존 객체를 재사용할 수 있습니다. 예를 들어 스키마를 포함하는 패키지를 가져올 때 대상 샌드박스에서 기존 사용자 정의 필드 그룹 및 ID 네임스페이스를 다시 사용할 수 있습니다. 또는 여정이 포함된 패키지를 가져올 때 target 샌드박스에서 기존 세그먼트를 재사용할 수 있습니다.
 >
->샌드박스 툴은 현재 기존 객체를 업데이트하거나 덮어쓸 수 없습니다. 새 객체를 작성하도록 선택할 수도 있고, 기존 객체를 수정하지 않고 계속 사용할 수도 있습니다. 같은 이름의 기존 개체가 검색되면 개체 증식을 방지하기 위해 [!UICONTROL 새로 만들기] 옵션을 선택하더라도 샌드박스 툴은 항상 기존 개체를 재사용합니다.
+>샌드박스 툴은 현재 기존 객체를 업데이트하거나 덮어쓸 수 없습니다. 새 객체를 작성하도록 선택할 수도 있고, 기존 객체를 수정하지 않고 계속 사용할 수도 있습니다. 같은 이름의 기존 개체가 검색되면 개체 증식을 방지하기 위해 [!UICONTROL Create new] 옵션을 선택하더라도 샌드박스 툴은 항상 기존 개체를 재사용합니다.
 
 기존 개체를 사용하려면 종속 개체 옆에 있는 연필 아이콘을 선택합니다.
 
-![패키지 개체 및 종속성[!UICONTROL &#x200B; 페이지에 패키지에 포함된 에셋 목록이 표시됩니다.]](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![[!UICONTROL Package object and dependencies] 페이지에 패키지에 포함된 자산 목록이 표시됩니다.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
 
-새로 만들거나 기존 항목을 사용하는 옵션이 표시됩니다. **[!UICONTROL 기존 사용]**&#x200B;을 선택합니다.
+새로 만들거나 기존 항목을 사용하는 옵션이 표시됩니다. **[!UICONTROL Use existing]**&#x200B;를 선택합니다.
 
-![종속 개체 옵션을 표시하는 [!UICONTROL 패키지 개체 및 종속성] 페이지 [!UICONTROL 새로 만들기] 및 [!UICONTROL 기존 항목 사용].](../images/ui/sandbox-tooling/use-existing-object.png)
+![종속 개체 옵션 [!UICONTROL Package object and dependencies] 및 [!UICONTROL Create new]을(를) 표시하는 [!UICONTROL Use existing] 페이지입니다.](../images/ui/sandbox-tooling/use-existing-object.png)
 
-**[!UICONTROL 필드 그룹]** 대화 상자에 개체에 사용할 수 있는 필드 그룹 목록이 표시됩니다. 필요한 필드 그룹을 선택한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+**[!UICONTROL Field group]** 대화 상자에 개체에 사용할 수 있는 필드 그룹 목록이 표시됩니다. 필요한 필드 그룹을 선택한 다음 **[!UICONTROL Save]**&#x200B;을(를) 선택하십시오.
 
-![필드 그룹[!UICONTROL &#x200B; 대화 상자에 표시된 필드 목록으로서 &#x200B;]저장[!UICONTROL &#x200B; 선택 항목을 강조 표시합니다. &#x200B;]](../images/ui/sandbox-tooling/field-group-list.png)
+![[!UICONTROL Field group] 대화 상자에 표시된 필드 목록으로서 [!UICONTROL Save] 선택 항목을 강조 표시합니다.](../images/ui/sandbox-tooling/field-group-list.png)
 
-[!UICONTROL 패키지 개체 및 종속성] 페이지로 돌아왔습니다. 여기에서 **[!UICONTROL 완료]**&#x200B;를 선택하여 패키지 가져오기를 완료합니다.
+[!UICONTROL Package object and dependencies] 페이지로 돌아왔습니다. 여기에서 **[!UICONTROL Finish]**&#x200B;을(를) 선택하여 패키지 가져오기를 완료합니다.
 
-![패키지 개체 및 종속성[!UICONTROL &#x200B; 페이지에 패키지에 포함된 에셋 목록이 표시되며 &#x200B;]완료[!UICONTROL .]](../images/ui/sandbox-tooling/finish-object-dependencies.png)
+![[!UICONTROL Package object and dependencies] 페이지에 패키지에 포함된 에셋 목록이 표시되어 [!UICONTROL Finish]을(를) 강조 표시합니다.](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
 ## 전체 샌드박스 내보내기 및 가져오기
 
@@ -199,19 +199,19 @@ Decisioning 객체 전체에 사용된 프로필 속성
 
 ### 전체 샌드박스 내보내기 {#export-entire-sandbox}
 
-전체 샌드박스를 내보내려면 [!UICONTROL 샌드박스] **[!UICONTROL 패키지]** 탭으로 이동하여 **[!UICONTROL 패키지 만들기]**&#x200B;를 선택합니다.
+전체 샌드박스를 내보내려면 [!UICONTROL Sandboxes] **[!UICONTROL Packages]** 탭으로 이동하여 **[!UICONTROL Create package]**&#x200B;을(를) 선택합니다.
 
-![샌드박스패키지&#x200B;**[!UICONTROL 탭 강조 표시]**&#x200B;패키지 만들기[!UICONTROL .]](../images/ui/sandbox-tooling/create-sandbox-package.png)
+![[!UICONTROL Sandboxes]을(를) 강조 표시하는 **[!UICONTROL Packages]** [!UICONTROL Create package] 탭](../images/ui/sandbox-tooling/create-sandbox-package.png)
 
-**[!UICONTROL 패키지 만들기]** 대화 상자에서 [!UICONTROL 패키지 유형]에 대한 [!UICONTROL 전체 샌드박스]를 선택합니다. 새 패키지에 [!UICONTROL 패키지 이름]을 제공하고 드롭다운에서 **[!UICONTROL 샌드박스]**&#x200B;를 선택합니다. 마지막으로 **[!UICONTROL 만들기]**&#x200B;를 선택하여 항목을 확인합니다.
+**[!UICONTROL Entire sandbox]** 대화 상자에서 [!UICONTROL Type of package]에 대해 [!UICONTROL Create package]을(를) 선택합니다. 새 패키지에 대한 [!UICONTROL Package name]을(를) 제공하고 드롭다운에서 **[!UICONTROL Sandbox]**&#x200B;을(를) 선택합니다. 마지막으로 **[!UICONTROL Create]**&#x200B;을(를) 선택하여 항목을 확인합니다.
 
-![완료된 필드를 표시하고 [!UICONTROL 만들기]를 강조 표시하는 [!UICONTROL 패키지 만들기] 대화 상자.](../images/ui/sandbox-tooling/create-package-dialog.png)
+![완료된 필드를 표시하고 [!UICONTROL Create package]을(를) 강조 표시하는 [!UICONTROL Create] 대화 상자.](../images/ui/sandbox-tooling/create-package-dialog.png)
 
-패키지가 생성되었습니다. 패키지를 게시하려면 **[!UICONTROL 게시]**&#x200B;를 선택하십시오.
+패키지가 생성되었습니다. 패키지를 게시하려면 **[!UICONTROL Publish]**&#x200B;을(를) 선택하십시오.
 
 ![새로 게시된 패키지를 강조 표시하는 샌드박스 패키지 목록.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
-**[!UICONTROL 샌드박스]** 환경의 [!UICONTROL 패키지] 탭으로 돌아가서 새로 게시된 패키지를 볼 수 있습니다.
+**[!UICONTROL Packages]** 환경의 [!UICONTROL Sandboxes] 탭으로 돌아가며 새로 게시된 패키지를 볼 수 있습니다.
 
 ### 전체 샌드박스 패키지 가져오기 {#import-entire-sandbox-package}
 
@@ -219,29 +219,29 @@ Decisioning 객체 전체에 사용된 프로필 속성
 >
 >모든 오브젝트를 타겟 샌드박스에 새 오브젝트로 가져옵니다. 전체 샌드박스 패키지를 빈 샌드박스로 가져오는 것이 좋습니다.
 
-패키지를 대상 샌드박스로 가져오려면 [!UICONTROL 샌드박스] **[!UICONTROL 찾아보기]** 탭으로 이동하여 샌드박스 이름 옆에 있는 더하기(+) 옵션을 선택합니다.
+패키지를 대상 샌드박스로 가져오려면 [!UICONTROL Sandboxes] **[!UICONTROL Browse]** 탭으로 이동하여 샌드박스 이름 옆에 있는 더하기(+) 옵션을 선택합니다.
 
-![샌드박스 **[!UICONTROL 찾아보기]** 탭에서 패키지 가져오기 선택을 강조 표시합니다.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+![샌드박스 **[!UICONTROL Browse]** 탭에서 패키지 가져오기 선택을 강조 표시합니다.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
 
-드롭다운 메뉴를 사용하여 **[!UICONTROL 패키지 이름]** 드롭다운을 사용하여 전체 샌드박스를 선택합니다. 향후 모니터링에 사용할 **[!UICONTROL 작업 이름]**&#x200B;과(와) 선택적 **[!UICONTROL 작업 설명]**&#x200B;을(를) 추가한 다음 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+드롭다운 메뉴를 사용하여 **[!UICONTROL Package name]** 드롭다운을 사용하여 전체 샌드박스를 선택합니다. 향후 모니터링에 사용할 **[!UICONTROL Job name]**&#x200B;과(와) 선택적 **[!UICONTROL Job description]**&#x200B;을(를) 추가한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
-![가져오기 세부 정보 페이지에 [!UICONTROL 패키지 이름] 드롭다운 선택](../images/ui/sandbox-tooling/import-full-sandbox-package.png)이 표시됩니다.
+![가져오기 세부 정보 페이지에 [!UICONTROL Package name] 드롭다운 선택이 표시됩니다](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
 
 >[!NOTE]
 >
 >패키지에 포함된 모든 개체에 대한 모든 권한이 있어야 합니다. 권한이 없는 경우 가져오기 작업이 실패하고 오류 메시지가 표시됩니다.
 
-가져온 개체와 제외된 개체의 수를 볼 수 있는 [!UICONTROL 패키지 개체 및 종속성] 페이지로 이동합니다. 여기에서 **[!UICONTROL 가져오기]**&#x200B;를 선택하여 패키지 가져오기를 완료합니다.
+[!UICONTROL Package object and dependencies] 페이지로 이동되어 가져온 개체 수와 제외된 개체를 확인할 수 있습니다. 여기에서 **[!UICONTROL Import]**&#x200B;을(를) 선택하여 패키지 가져오기를 완료합니다.
 
-![[!UICONTROL 패키지 개체 및 종속성] 페이지에 지원되지 않는 개체 형식의 인라인 메시지가 표시되어 [!UICONTROL 가져오기].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+![[!UICONTROL Package object and dependencies] 페이지에 지원되지 않는 개체 형식의 인라인 메시지가 표시되어 [!UICONTROL Import]을(를) 강조 표시합니다.](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 
-가져오기가 완료될 때까지 잠시 기다립니다. 완료 시간은 패키지에 있는 객체의 수에 따라 달라질 수 있습니다. [!UICONTROL 샌드박스] **[!UICONTROL 작업]** 탭에서 가져오기 작업을 모니터링할 수 있습니다.
+가져오기가 완료될 때까지 잠시 기다립니다. 완료 시간은 패키지에 있는 객체의 수에 따라 달라질 수 있습니다. [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** 탭에서 가져오기 작업을 모니터링할 수 있습니다.
 
 ## 가져오기 세부 정보 모니터링 {#view-import-details}
 
-가져온 세부 정보를 보려면 [!UICONTROL 샌드박스] **[!UICONTROL 작업]** 탭으로 이동하여 목록에서 패키지를 선택하십시오. 또는 검색 창을 사용하여 패키지를 검색합니다.
+가져온 세부 정보를 보려면 [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** 탭으로 이동하여 목록에서 패키지를 선택하십시오. 또는 검색 창을 사용하여 패키지를 검색합니다.
 
-![샌드박스 [!UICONTROL 작업] 탭에서는 패키지 가져오기 선택을 강조 표시합니다.](../images/ui/sandbox-tooling/imports-tab.png)
+![샌드박스 [!UICONTROL Jobs] 탭에서 패키지 가져오기 선택이 강조 표시됩니다.](../images/ui/sandbox-tooling/imports-tab.png)
 
 <!--### View imported objects {#view-imported-objects}
 
@@ -255,17 +255,17 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 ![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
 
-샌드박스 환경의 **[!UICONTROL 작업]** 탭에 있는 오른쪽 세부 정보 창에서 **[!UICONTROL 가져오기 요약 보기]**&#x200B;를 선택합니다.
+샌드박스 환경의 **[!UICONTROL View import summary]** 탭에 있는 오른쪽 세부 정보 창에서 **[!UICONTROL Jobs]**&#x200B;을(를) 선택합니다.
 
-![샌드박스 [!UICONTROL 가져오기] 탭에서는 오른쪽 창에서 [!UICONTROL 가져오기 세부 정보 보기] 선택 항목을 강조 표시합니다.](../images/ui/sandbox-tooling/view-import-details.png)
+![샌드박스 [!UICONTROL Imports] 탭에서 오른쪽 창의 [!UICONTROL View import details] 선택 항목을 강조 표시합니다.](../images/ui/sandbox-tooling/view-import-details.png)
 
-**[!UICONTROL 가져오기 요약]** 대화 상자에 진행 중인 가져오기의 분류가 백분율로 표시됩니다.
+**[!UICONTROL Import summary]** 대화 상자에 진행 중인 가져오기의 분류가 백분율로 표시됩니다.
 
 >[!NOTE]
 >
 >특정 인벤토리 페이지로 이동하여 개체 목록을 볼 수 있습니다.
 
-![가져오기 세부 정보[!UICONTROL &#x200B; 대화 상자에서 가져오기의 세부 정보를 확인할 수 있습니다.]](../images/ui/sandbox-tooling/import-details.png)
+![가져오기의 세부 분류를 보여주는 [!UICONTROL Import details] 대화 상자입니다.](../images/ui/sandbox-tooling/import-details.png)
 
 가져오기가 완료되면 Experience Platform UI에서 알림이 수신됩니다. 경고 아이콘에서 이러한 알림에 액세스할 수 있습니다. 작업이 실패한 경우 여기에서 문제 해결로 이동할 수 있습니다.
 
@@ -304,31 +304,31 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 사용 사례에 구성 업데이트가 필요한 소스 샌드박스의 기존 오브젝트가 포함되어 있는 경우, 이미 다른 샌드박스로 패키지화되어 가져온 다음 다음 단계를 따릅니다.
 
-먼저 소스 샌드박스에서 객체를 업데이트합니다. 예를 들어 **[!UICONTROL 스키마]** 작업 영역으로 이동하여 스키마를 선택하고 새 필드 그룹을 추가합니다.
+먼저 소스 샌드박스에서 객체를 업데이트합니다. 예를 들어 **[!UICONTROL Schemas]** 작업 영역으로 이동하여 스키마를 선택하고 새 필드 그룹을 추가합니다.
 
 ![업데이트된 스키마가 있는 스키마 작업 영역입니다.](../images/ui/sandbox-tooling/update-schema.png)
 
-스키마를 업데이트했으면 **[!UICONTROL 샌드박스]**(으)로 이동하여 **[!UICONTROL 패키지]**&#x200B;를 선택한 다음 기존 패키지를 찾습니다.
+스키마를 업데이트했으면 **[!UICONTROL Sandboxes]**(으)로 이동하여 **[!UICONTROL Packages]**&#x200B;을(를) 선택한 다음 기존 패키지를 찾습니다.
 
 ![패키지가 선택된 샌드박스 도구 인터페이스](../images/ui/sandbox-tooling/select-package.png)
 
-패키지 인터페이스를 사용하여 변경 사항을 확인합니다. 패키지에 있는 아티팩트에 대한 변경 내용을 보려면 **[!UICONTROL 업데이트 확인]**&#x200B;을 선택하세요. 그런 다음 **[!UICONTROL 차이점 보기]**&#x200B;를 선택하여 아티팩트에 대해 수행된 모든 변경 내용에 대한 자세한 요약을 받습니다.
+패키지 인터페이스를 사용하여 변경 사항을 확인합니다. 패키지에 있는 아티팩트에 대한 변경 내용을 보려면 **[!UICONTROL Check for updates]**&#x200B;을(를) 선택하십시오. **[!UICONTROL View diff]**&#x200B;을(를) 선택하여 아티팩트에 대해 수행된 모든 변경 내용에 대한 자세한 요약을 받습니다.
 
 ![비교 보기 단추가 선택된 패키지 인터페이스입니다.](../images/ui/sandbox-tooling/view-diff.png)
 
-[!UICONTROL 차이점 보기] 인터페이스가 나타납니다. 소스 및 타겟 아티팩트에 대한 정보와 해당 아티팩트에 적용할 변경 사항에 대해서는 이 요금을 참조하십시오.
+[!UICONTROL View diff] 인터페이스가 나타납니다. 소스 및 타겟 아티팩트에 대한 정보와 해당 아티팩트에 적용할 변경 사항에 대해서는 이 요금을 참조하십시오.
 
 ![변경 사항의 요약입니다.](../images/ui/sandbox-tooling/summary-of-changes.png)
 
-이 단계에서는 모든 변경 사항에 대한 단계별 요약을 위해 [!UICONTROL AI로 요약]을 선택할 수도 있습니다.
+이 단계에서는 모든 변경 사항에 대한 단계별 요약을 위해 [!UICONTROL Summarize with AI]을(를) 선택할 수도 있습니다.
 
 ![AI가 활성화된 요약입니다.](../images/ui/sandbox-tooling/ai-summary.png)
 
-준비가 되면 **[!UICONTROL 패키지 업데이트]**&#x200B;를 선택한 다음 표시되는 팝업 창에서 **[!UICONTROL 확인]**&#x200B;을 선택합니다. 작업이 완료되면 페이지를 새로 고치고 **[!UICONTROL 내역 보기]**&#x200B;를 선택하여 패키지 버전을 확인할 수 있습니다.
+준비가 되면 **[!UICONTROL Update package]**&#x200B;을(를) 선택한 다음 표시되는 팝업 창에서 **[!UICONTROL Confirm]**&#x200B;을(를) 선택합니다. 작업이 완료되면 페이지를 새로 고치고 **[!UICONTROL View history]**&#x200B;을(를) 선택하여 패키지 버전을 확인할 수 있습니다.
 
 ![확인 창.](../images/ui/sandbox-tooling/confirm-changes.png)
 
-변경 사항을 가져오려면 [!UICONTROL 패키지] 디렉터리로 돌아가서 패키지 옆의 생략 부호(`...`)를 선택한 다음 **[!UICONTROL 패키지 가져오기]**&#x200B;를 선택합니다. Experience Platform이 [!UICONTROL 기존 개체 업데이트]를 자동으로 선택합니다. 변경 내용을 확인한 다음 **[!UICONTROL 마침]**&#x200B;을 선택합니다.
+변경 내용을 가져오려면 [!UICONTROL Packages] 디렉터리로 돌아가서 패키지 옆의 생략 부호(`...`)를 선택한 다음 **[!UICONTROL Import package]**&#x200B;을(를) 선택합니다. Experience Platform이 [!UICONTROL Update existing objects]을(를) 자동으로 선택합니다. 변경 내용을 확인한 다음 **[!UICONTROL Finish]**&#x200B;을(를) 선택합니다.
 
 >[!NOTE]
 >
@@ -344,7 +344,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 먼저 업데이트된 오브젝트로 새 패키지를 만들어 게시합니다.
 
-그런 다음 업데이트하려는 개체가 포함된 대상 샌드박스로 패키지를 가져옵니다. 가져오기 프로세스 중에 **[!UICONTROL 기존 개체 업데이트]**&#x200B;를 선택한 다음 개체 탐색기를 사용하여 업데이트를 적용할 대상 개체를 수동으로 선택합니다.
+그런 다음 업데이트하려는 개체가 포함된 대상 샌드박스로 패키지를 가져옵니다. 가져오기 프로세스 중에 **[!UICONTROL Update existing objects]**&#x200B;을(를) 선택한 다음 개체 탐색기를 사용하여 업데이트를 적용할 대상 개체를 수동으로 선택합니다.
 
 >[!NOTE]
 >
@@ -353,7 +353,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 ![업데이트할 대상 개체에 대한 자리 표시자가 있는 가져오기 목표 인터페이스입니다.](../images/ui/sandbox-tooling/update-existing-objects.png)
 
-업데이트할 대상 개체를 식별했으면 **[!UICONTROL 마침]**&#x200B;을 선택합니다.
+업데이트할 대상 개체를 식별했으면 **[!UICONTROL Finish]**&#x200B;을(를) 선택합니다.
 
 ![대상 개체가 선택되었습니다.](../images/ui/sandbox-tooling/add-updated-objects.png)
 
@@ -361,7 +361,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 다음 비디오에서는 샌드박스 도구에 대한 이해를 돕기 위해 새 패키지를 만들고, 패키지를 게시하고, 패키지를 가져오는 방법을 간략하게 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446093/?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## 다음 단계
 

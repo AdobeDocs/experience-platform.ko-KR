@@ -2,7 +2,7 @@
 title: 끝점 검색
 description: Reactor API에서 /search 끝점을 호출하는 방법을 알아봅니다.
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 1%
@@ -33,19 +33,20 @@ Reactor API의 `/search` 끝점은 쿼리로 표현되는 원하는 기준과 �
 >[!IMPORTANT]
 >
 >검색 기능에는 다음과 같은 주의 사항과 예외가 있습니다.
+>
 >* 메타는 검색할 수 없으며 검색 결과에 반환되지 않습니다.
->* 확장 패키지 위임에 대한 스키마 필드(작업, 조건 등) 중첩된 데이터 구조가 아닌 텍스트로 검색할 수 있습니다.
+>* 확장 패키지 위임에 대한 스키마 필드(작업, 조건 등)는 중첩된 데이터 구조가 아닌 텍스트로 검색할 수 있습니다.
 >* 범위 쿼리는 현재 정수만 지원합니다.
 
 이 기능을 사용하는 방법에 대한 자세한 내용은 [검색 가이드](../guides/search.md)를 참조하세요.
 
-## 시작하기
+## 시작
 
 이 가이드에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 [시작 안내서](../getting-started.md)에서 API 인증 방법에 대한 중요한 정보를 검토하십시오.
 
 ## 검색 수행 {#perform}
 
-POST 요청을 하여 검색을 수행할 수 있습니다.
+POST 요청을 수행하여 검색을 수행할 수 있습니다.
 
 **API 형식**
 

@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1889'
 ht-degree: 7%
@@ -17,11 +17,13 @@ ht-degree: 7%
 **릴리스 날짜: 2019년 11월 18일 화요일**
 
 Adobe Experience Platform의 새로운 기능:
+
 * [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Sources]](#sources)
 
 기존 기능에 대한 업데이트:
+
 * [[!DNL Data Science Workspace]](#dsw)
 * [[!DNL Experience Data Model (XDM) System]](#xdm)
 * [[!DNL Real-Time Customer Profile]](#profile)
@@ -64,7 +66,7 @@ Real-Time CDP에 로그인할 때 시스템에 데이터가 없으면 홈 페이
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations]은(는) Adobe의 Real-Time Customer Data Platform에서 지원하는 대상 플랫폼과의 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다. 자세한 내용은 [대상 개요](../../destinations/home.md) 문서를 참조하십시오.
+[!DNL Destinations]은(는) Adobe의 Real-Time Customer Data Platform에서 지원하는 대상 플랫폼과의 사전 빌드된 통합으로 해당 파트너에게 데이터를 원활하게 활성화합니다. 자세한 내용은 [대상 개요](../../destinations/home.md) 문서를 참조하십시오.
 
 **사용 가능한 대상**
 
@@ -148,7 +150,7 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 | 주어진 데이터 세트에 대한 데이터 정리 | 이제 사용자는 [!DNL Profile] 시스템 작업 API를 사용하여 지정된 데이터 세트 또는 배치에 대한 데이터를 삭제할 수 있습니다. |
 | Edge [!DNL Profile] 쿼리 개선 사항 | 이제 응용 프로그램에서 지정된 프로필의 ID로 Edge [!DNL Profile]을(를) 쿼리할 수 있습니다. |
 | 프로젝트별 병합 정책 구성 | 이제 애플리케이션은 특정 병합 정책이 제어하는 데이터 보기를 생성하기 위해 프로젝트별로 병합 정책을 구성할 수 있습니다. |
-| 계산된 속성 | 계산된 속성은 다른 값, 계산 및 표현식을 기반으로 필드 값을 자동으로 계산합니다. 계산된 속성은 프로필 수준에서 작동하여 수신 이벤트, 수신 이벤트 및 프로필 데이터 또는 수신 이벤트, 프로필 데이터 및 이전 이벤트를 기반으로 &quot;총 구매&quot;, &quot;라이프타임 값&quot; 또는 &quot;단계 상태&quot;와 같은 값을 집계합니다. |
+| 계산된 속성 | 계산된 속성은 다른 값, 계산 및 표현식을 기반으로 필드 값을 자동으로 계산합니다. 계산된 속성은 프로필 수준에서 작동하여 수신 이벤트, 수신 이벤트 및 프로필 데이터 또는 수신 이벤트, 프로필 데이터 및 이전 이벤트를 기반으로 &quot;총 구매&quot;, &quot;라이프타임 값&quot; 또는 &quot;funnel 상태&quot;와 같은 값을 집계합니다. |
 
 **버그 수정**
 
@@ -158,7 +160,7 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 
 * 없음.
 
-[!DNL Profile] 데이터 작업에 대한 튜토리얼 및 모범 사례를 포함하여 [!DNL Real-Time Customer Profile]에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md)를 참조하십시오.
+[!DNL Real-Time Customer Profile] 데이터 작업에 대한 튜토리얼 및 모범 사례를 포함하여 [!DNL Profile]에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md)를 참조하십시오.
 
 ## [!DNL Segmentation Service] {#segmentation}
 

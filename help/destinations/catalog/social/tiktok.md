@@ -3,7 +3,7 @@ title: TikTok 연결
 description: 광고 캠페인으로 타깃팅할 데이터를 사용하여 TikTok에서 사용자 지정 대상을 작성합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 대상을 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1111'
 ht-degree: 3%
@@ -117,7 +117,7 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. [ID](/help/id
 
 소스 필드 선택:
 
-* Adobe Experience Platform 및 ` Email_LC_SHA256`에서 프로필을 고유하게 식별하는 원본 ID로 식별자(예: [!DNL TikTok Ads Manager])를 선택하십시오.
+* Adobe Experience Platform 및 `Email_LC_SHA256`에서 프로필을 고유하게 식별하는 원본 ID로 식별자(예: [!DNL TikTok Ads Manager])를 선택하십시오.
 
 대상 필드 선택:
 

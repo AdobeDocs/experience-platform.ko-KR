@@ -4,9 +4,9 @@ title: 활성화 데이터 흐름 편집
 type: Tutorial
 description: 이 문서의 단계에 따라 Adobe Experience Platform에서 기존 활성화 데이터 흐름을 편집합니다.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: ec87cb1c8755f52233a5725aa3bb0c80a135d60c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '917'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform에서 다음과 같이 대상에 대한 기존 활성�
 
 기존 활성화 데이터 흐름을 검색하고 편집할 데이터 흐름을 식별하려면 아래 단계를 따르십시오.
 
-1. [Experience Platform UI](https://platform.adobe.com/)에 로그인하고 왼쪽 탐색 모음에서 **[!UICONTROL 대상]**&#x200B;을 선택합니다. 기존 대상 데이터 흐름을 보려면 상단 헤더에서 **[!UICONTROL 찾아보기]**&#x200B;를 선택하십시오.
+1. [Experience Platform UI](https://platform.adobe.com/)에 로그인하고 왼쪽 탐색 모음에서 **[!UICONTROL Destinations]**&#x200B;을(를) 선택합니다. 기존 대상 데이터 흐름을 보려면 상단 헤더에서 **[!UICONTROL Browse]**&#x200B;을(를) 선택하십시오.
 
    ![대상 찾아보기](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -40,21 +40,21 @@ Adobe Experience Platform에서 다음과 같이 대상에 대한 기존 활성�
 
    ![대상 선택](../assets/ui/edit-activation/destination-select.png)
 
-4. 대상에 대한 **[!UICONTROL 데이터 흐름 실행]** 페이지가 나타나고 사용 가능한 컨트롤이 표시됩니다. 대상 유형에 따라 다양한 데이터 흐름 작업을 수행할 수 있습니다. 지원되는 각 데이터 흐름 작업에 대해 다음 섹션을 참조하십시오.
+4. 대상의 **[!UICONTROL Dataflow runs]** 페이지가 나타나고 사용 가능한 컨트롤이 표시됩니다. 대상 유형에 따라 다양한 데이터 흐름 작업을 수행할 수 있습니다. 지원되는 각 데이터 흐름 작업에 대해 다음 섹션을 참조하십시오.
 
 ## 활성화 데이터 흐름 활성화 또는 비활성화 {#enable-disable-dataflows}
 
-**[!UICONTROL 사용]/[!UICONTROL 사용 안 함]** 전환을 사용하여 대상으로 모든 데이터 내보내기를 시작하거나 일시 중지합니다.
+**[!UICONTROL Enabled]/[!UICONTROL Disabled]** 전환을 사용하여 대상으로 모든 데이터 내보내기를 시작하거나 일시 중지합니다.
 
 ![사용/사용 안 함 데이터 흐름 실행 토글을 표시하는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/enable-toggle.png)
 
 ## 활성화 데이터 흐름에 대상 추가 {#add-audiences}
 
-대상으로 보낼 대상을 변경하려면 오른쪽 레일에서 **[!UICONTROL 대상 활성화]**&#x200B;를 선택하십시오. 이 작업은 활성화 워크플로우로 이동합니다.
+대상으로 보낼 대상을 변경하려면 오른쪽 레일에서 **[!UICONTROL Activate audiences]**&#x200B;을(를) 선택하십시오. 이 작업은 활성화 워크플로우로 이동합니다.
 
 ![대상 데이터 흐름 활성화 실행 옵션을 보여 주는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/activate-audiences.png)
 
-활성화 워크플로의 **[!UICONTROL 대상자 선택]** 단계에서 기존 대상자를 제거하거나 새 대상자를 활성화 워크플로에 추가할 수 있습니다.
+활성화 워크플로의 **[!UICONTROL Select audiences]** 단계에서 기존 대상을 제거하거나 활성화 워크플로에 새 대상을 추가할 수 있습니다.
 
 활성화 워크플로우는 대상 유형에 따라 약간 다릅니다. 각 대상 유형의 활성화 워크플로에 대한 자세한 내용은 다음 안내서를 참조하십시오.
 
@@ -64,13 +64,14 @@ Adobe Experience Platform에서 다음과 같이 대상에 대한 기존 활성�
 
 ## 활성화 일정 및 내보내기 빈도 편집 {#edit-schedule-frequency}
 
-오른쪽 레일에서 **[!UICONTROL 대상자 활성화]**&#x200B;를 선택합니다. 이 작업은 활성화 워크플로우로 이동합니다.
+오른쪽 레일에서 **[!UICONTROL Activate audiences]** 선택 이 작업은 활성화 워크플로우로 이동합니다.
 
 ![대상 데이터 흐름 활성화 실행 옵션을 보여 주는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/activate-audiences.png)
 
-활성화 워크플로에서 **[!UICONTROL 예약]** 단계를 선택하여 데이터 흐름의 활성화 일정 및 내보내기 빈도를 편집합니다. 이 단계에서는 데이터를 대상으로 내보내는 빈도를 구성할 수 있습니다.
+활성화 워크플로에서 **[!UICONTROL Scheduling]** 단계를 선택하여 데이터 흐름의 활성화 일정 및 내보내기 빈도를 편집합니다. 이 단계에서는 데이터를 대상으로 내보내는 빈도를 구성할 수 있습니다.
 
-활성화 워크플로의 **[!UICONTROL 예약]** 단계에서 다음을 수행할 수 있습니다.
+활성화 워크플로의 **[!UICONTROL Scheduling]** 단계에서 다음을 수행할 수 있습니다.
+
 * 내보내기 빈도를 조정합니다.
 * 활성화 데이터 흐름의 시작 및 종료 날짜 등을 설정하거나 수정합니다.
 
@@ -82,13 +83,13 @@ Adobe Experience Platform에서 다음과 같이 대상에 대한 기존 활성�
 
 ## 매핑된 속성 및 ID 편집 {#edit-mapped-attributes}
 
-오른쪽 레일에서 **[!UICONTROL 대상자 활성화]**&#x200B;를 선택합니다. 이 작업은 활성화 워크플로우로 이동합니다.
+오른쪽 레일에서 **[!UICONTROL Activate audiences]** 선택 이 작업은 활성화 워크플로우로 이동합니다.
 
 ![대상 데이터 흐름 활성화 실행 옵션을 보여 주는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/activate-audiences.png)
 
-활성화 워크플로에서 **[!UICONTROL 매핑]** 단계를 선택하여 활성화 데이터 흐름의 매핑된 특성 및 ID를 편집합니다. 이를 통해 대상으로 내보낼 프로필 속성 및 ID를 조정할 수 있습니다.
+활성화 워크플로에서 **[!UICONTROL Mapping]** 단계를 선택하여 활성화 데이터 흐름의 매핑된 속성 및 ID를 편집합니다. 이를 통해 대상으로 내보낼 프로필 속성 및 ID를 조정할 수 있습니다.
 
-활성화 워크플로의 **[!UICONTROL 매핑]** 단계에서 다음을 수행할 수 있습니다.
+활성화 워크플로의 **[!UICONTROL Mapping]** 단계에서 다음을 수행할 수 있습니다.
 
 * 새 속성 또는 ID를 매핑에 추가합니다.
 * 매핑에서 기존 속성 또는 ID를 제거합니다.
@@ -102,7 +103,7 @@ Adobe Experience Platform에서 다음과 같이 대상에 대한 기존 활성�
 
 ## 활성화 데이터 흐름에 데이터 세트 추가 {#add-datasets}
 
-대상으로 내보낼 추가 데이터 세트를 선택하려면 오른쪽 레일에서 **[!UICONTROL 데이터 세트 내보내기]**&#x200B;를 선택하십시오. 이 옵션을 사용하면 [데이터 집합 내보내기 워크플로](export-datasets.md)로 이동합니다.
+대상으로 내보낼 추가 데이터 세트를 선택하려면 오른쪽 레일에서 **[!UICONTROL Export datasets]**&#x200B;을(를) 선택하십시오. 이 옵션을 사용하면 [데이터 집합 내보내기 워크플로](export-datasets.md)로 이동합니다.
 
 >[!NOTE]
 >
@@ -118,29 +119,29 @@ Adobe Experience Platform에서 다음과 같이 대상에 대한 기존 활성�
 
 대상에 처음 연결할 때 설정한 마케팅 작업을 추가하거나 제거할 수 있습니다.
 
-오른쪽 레일에서 **[!UICONTROL 마케팅 작업 편집]**&#x200B;을 선택하여 마케팅 작업 선택 화면을 엽니다.
+오른쪽 레일에서 **[!UICONTROL Edit marketing actions]**&#x200B;을(를) 선택하여 마케팅 작업 선택 화면을 엽니다.
 
 ![마케팅 작업 편집 옵션을 표시하는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/edit-marketing-actions.png)
 
-적용 가능한 마케팅 작업을 선택한 다음 **[!UICONTROL 저장]**&#x200B;을 선택하여 변경 내용을 적용합니다.
+적용 가능한 마케팅 작업을 선택한 다음 **[!UICONTROL Save]**&#x200B;을(를) 선택하여 변경 내용을 적용합니다.
 
 ![마케팅 작업 편집 화면을 표시하는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/edit-marketing-actions-screen.png)
 
 
 ## 액세스 레이블 적용 {#apply-access-labels}
 
-내보낸 데이터의 데이터 사용 레이블을 편집하려면 **[!UICONTROL 액세스 레이블 적용]**&#x200B;을 선택하십시오. 자세한 내용은 [데이터 사용 레이블 설명서](../../data-governance/labels/overview.md)를 참조하세요.
+내보낸 데이터의 데이터 사용 레이블을 편집하려면 **[!UICONTROL Apply access labels]**&#x200B;을(를) 선택하십시오. 자세한 내용은 [데이터 사용 레이블 설명서](../../data-governance/labels/overview.md)를 참조하세요.
 
 ![데이터 세트 데이터 흐름 내보내기 실행 옵션을 보여 주는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/apply-access-labels.png)
 
 ## 활성화 데이터 흐름 이름 및 설명 편집 {#edit-names-descriptions}
 
-활성화 데이터 흐름 이름 및 설명을 편집하려면 **[!UICONTROL 대상 이름]** 및 **[!UICONTROL 설명]** 필드를 사용하십시오.
+활성화 데이터 흐름 이름 및 설명을 편집하려면 **[!UICONTROL Destination name]** 및 **[!UICONTROL Description]** 필드를 사용하십시오.
 
 ![대상 세부 정보](../assets/ui/edit-activation/edit-destination-name-description.png)
 
 ## 다음 단계 {#next-steps}
 
-이 자습서에 따라 **[!UICONTROL 대상]** 작업 영역을 사용하여 기존 대상 데이터 흐름을 업데이트했습니다.
+이 자습서에 따라 **[!UICONTROL destinations]** 작업 영역을 사용하여 기존 대상 데이터 흐름을 업데이트했습니다.
 
 대상에 대한 자세한 내용은 [대상 개요](../catalog/overview.md)를 참조하세요.

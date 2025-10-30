@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Marketo Engage Source에 대한 필드 매핑
 description: 아래 표에는 Marketo 데이터 세트의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3b21d952da603b519c9919b08467cd5c6091f235
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1451'
 ht-degree: 5%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 5%
 
 ## 활동 {#activities}
 
-이제 [!DNL Marketo] 원본에서 추가 표준 활동을 지원합니다. 스키마를 업데이트하지 않고 새 [&#x200B; 데이터 흐름을 만들면 새 대상 필드가 스키마에 없으므로 표준 활동을 사용하려면 &#x200B;](../marketo/marketo-namespaces.md)스키마 자동 생성 유틸리티`activities`를 사용하여 스키마를 업데이트해야 합니다. 스키마를 업데이트하지 않도록 선택하는 경우에도 새 데이터 흐름을 만들고 오류를 무시할 수 있습니다. 그러나 새 필드나 업데이트된 필드는 Experience Platform에 수집되지 않습니다.
+이제 [!DNL Marketo] 원본에서 추가 표준 활동을 지원합니다. 스키마를 업데이트하지 않고 새 [ 데이터 흐름을 만들면 새 대상 필드가 스키마에 없으므로 표준 활동을 사용하려면 ](../marketo/marketo-namespaces.md)스키마 자동 생성 유틸리티`activities`를 사용하여 스키마를 업데이트해야 합니다. 스키마를 업데이트하지 않도록 선택하는 경우에도 새 데이터 흐름을 만들고 오류를 무시할 수 있습니다. 그러나 새 필드나 업데이트된 필드는 Experience Platform에 수집되지 않습니다.
 
 XDM 클래스 및 XDM 필드 그룹에 대한 자세한 내용은 [XDM 경험 이벤트 클래스](../../../../xdm/classes/experienceevent.md)에 대한 설명서를 참조하십시오.
 
 >[!NOTE]
 >
->`iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` 원본 필드는 Experience Platform UI의 **[!UICONTROL 계산된 필드 추가]** 옵션을 사용하여 추가해야 하는 계산된 필드입니다. 자세한 내용은 [계산된 필드 추가](../../../../data-prep/ui/mapping.md#calculated-fields)에 대한 자습서를 참조하십시오.
+>`iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` 원본 필드는 Experience Platform UI의 **[!UICONTROL Add calculated field]** 옵션을 사용하여 추가해야 하는 계산된 필드입니다. 자세한 내용은 [계산된 필드 추가](../../../../data-prep/ui/mapping.md#calculated-fields)에 대한 자습서를 참조하십시오.
 
 | Marketo 소스 필드 | 활동 유형 ID | Source 데이터 세트 | XDM 타겟 필드 | 참고 |
 | -------------------- | ---------------- | -------------- | ---------------- | ----- |
@@ -66,7 +66,7 @@ XDM 클래스 및 XDM 필드 그룹에 대한 자세한 내용은 [XDM 경험 �
 | (7, 8, 9, 10, 11, 27)에서 activityTypeId일 때 primaryAttributeValueId | 7, 8, 9, 10, 11, 27 | `directMarketing.mailingName` | `directMarketing.mailingName` |  |
 |  |  | `directMarketing.testVariantName` | `directMarketing.testVariantName` |  |
 | `attributes.Test Variant` |  | `directMarketing.testVariantID` | `directMarketing.testVariantID` |  |
-| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 → 메시지 차단됨</li><li>Source에서 1003 → 스팸 차단됨</li><li>메시지에서 1004 → 스팸 차단됨</li><li>2003 → 이메일 주소가 잘못됨</li><li>2001 → 주소 오류</li><li>* → 바운스에 대한 알 수 없는 이유</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 → 메시지가 수락되지 않음</li><li>3001 → 가득 참</li><li>3004 → 시간 초과 발생</li><li>4003 → 실패</li><li>4002 → 메시지가 너무 큼</li><li>→ 정책 위반</li><li>4999 → 일시적 실패</li><li>9999 → 잘못된 응답 수신</li><li>* → 소프트 바운스에 대한 알 수 없는 이유</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
+| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 → 메시지 차단됨</li><li>Source에서 1003 → 스팸 차단됨</li><li>메시지에서 1004 → 스팸 차단됨</li><li>2003 → 이메일 주소가 잘못됨</li><li>2001 → 주소 오류</li><li>*` &rarr;`알 수 없는 반송 이유</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 → 메시지가 수락되지 않음</li><li>3001 → 가득 참</li><li>3004 → 시간 초과 발생</li><li>4003 → 실패</li><li>4002 → 메시지가 너무 큼</li><li>→ 정책 위반</li><li>4999 → 일시적 실패</li><li>9999 → 잘못된 응답 수신</li><li>소프트 바운스에 대한 알 수 없는 이유→ *개</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
 | `attributes.Details` |  | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |  |
 | `attributes.Email` |  | `directMarketing.email` | `directMarketing.email` |  |
 | `attributes.Is Mobile Device` |  | `device.isMobileDevice` | `device.isMobileDevice` |  |
@@ -418,4 +418,4 @@ XDM 클래스에 대한 자세한 내용은 [XDM 개별 프로필 개요](../../
 
 ## 다음 단계
 
-이 문서를 읽고 [!DNL Marketo] 데이터 세트와 해당 XDM 필드 간의 매핑 관계에 대한 insight을 얻었습니다. [&#x200B; 데이터 흐름을 완료하려면  [!DNL Marketo] 원본 연결 만들기](../../../tutorials/ui/create/adobe-applications/marketo.md)2&rbrace;에 대한 자습서를 참조하십시오.[!DNL Marketo]
+이 문서를 읽고 [!DNL Marketo] 데이터 세트와 해당 XDM 필드 간의 매핑 관계에 대한 insight을 얻었습니다. [ 데이터 흐름을 완료하려면  [!DNL Marketo] 원본 연결 만들기](../../../tutorials/ui/create/adobe-applications/marketo.md)2}에 대한 자습서를 참조하십시오.[!DNL Marketo]

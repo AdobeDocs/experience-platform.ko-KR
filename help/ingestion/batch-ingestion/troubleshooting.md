@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;홈;자주 찾는 주제;수집된 데이터;문제 해결;faq;수집;일괄 처리 수집;일괄 처리 수집;
+keywords: Experience Platform;홈;인기 있는 주제;수집된 데이터;문제 해결;faq;수집;일괄 처리 수집;일괄 처리 수집;
 solution: Experience Platform
 title: 일괄 처리 수집 문제 해결 안내서
 description: 이 설명서는 Adobe Experience Platform 배치 데이터 수집 API와 관련하여 자주 묻는 질문에 대한 답변을 제공합니다.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 1%
@@ -189,7 +189,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | 비활성 | x | 배치가 정상적으로 홍보되었지만, 되돌리거나 만료되었습니다. 배치를 더 이상 다운스트림 소비에 사용할 수 없지만 기본 데이터는 유지, 보관 또는 삭제될 때까지 기본으로 유지됩니다. |
 | 로드 중 | | 클라이언트가 현재 배치에 대한 데이터를 쓰고 있습니다. 이 시점에서 일괄 처리를 승격할 준비가 **되지 않음**&#x200B;되었습니다. |
 | 로드됨 | | 클라이언트가 배치에 대한 데이터 쓰기를 완료했습니다. 배치를 승격할 준비가 되었습니다. |
-| 유지됨 | | 데이터는 기본으로 제거되고 Adobe 데이터 레이크의 지정된 아카이브에 있습니다. |
+| 유지됨 | | 데이터는 기본으로 반출되었으며 Adobe 데이터 레이크의 지정된 아카이브에 보관됩니다. |
 | 스테이징 | | 클라이언트가 프로모션을 위해 배치의 신호를 성공적으로 보냈으며, 데이터는 소비 다운스트림용으로 스테이징되고 있습니다. |
 | 재시도 | | 클라이언트가 프로모션을 위해 배치에 신호를 보냈지만 오류로 인해 배치 모니터링 서비스에서 배치를 재시도합니다. 이 상태는 데이터 수집이 지연될 수 있음을 클라이언트에게 알리는 데 사용할 수 있습니다. |
 | 정지됨 | | 클라이언트가 승격용 일괄 처리에 신호를 보냈지만 일괄 모니터링 서비스에서 `n`번 다시 시도한 후 일괄 처리 승격이 중지되었습니다. |
@@ -252,8 +252,8 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | ------ | ----------- |
 | 입력 바이트 크기 | 처리할 [!DNL Data Ingestion Services]에 대해 준비된 총 바이트 수입니다. |
 | 입력 레코드 크기 | 처리할 [!DNL Data Ingestion Services]의 준비된 총 행 수입니다. |
-| 출력 바이트 크기 | [!DNL Data Ingestion Services]에서 [!DNL Data Lake] (으)로 출력한 총 바이트 수입니다. |
-| 출력 레코드 크기 | [!DNL Data Ingestion Services]에서 [!DNL Data Lake] (으)로 출력하는 총 행 수입니다. |
+| 출력 바이트 크기 | [!DNL Data Ingestion Services]에서 [!DNL Data Lake]&#x200B;(으)로 출력한 총 바이트 수입니다. |
+| 출력 레코드 크기 | [!DNL Data Ingestion Services]에서 [!DNL Data Lake]&#x200B;(으)로 출력하는 총 행 수입니다. |
 | partitionCount | [!DNL Data Lake]에 기록된 총 파티션 수입니다. |
 
 ### 일부 배치에서 지표를 사용할 수 없는 이유는 무엇입니까?
@@ -272,4 +272,4 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | 200 | 배치가 처리에 수락되었으며 활성 또는 실패와 같은 최종 상태로 전환됩니다. 제출되면 `GetBatch` 끝점을 사용하여 일괄 처리를 모니터링할 수 있습니다. |
 | 400 | 잘못된 요청. 일괄 처리에 누락되거나 겹치는 청크가 있는 경우 반환됩니다. |
 
-[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
+`[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files`

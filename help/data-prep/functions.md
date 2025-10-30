@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 준비 매핑 기능
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '6009'
 ht-degree: 1%
@@ -126,7 +126,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 날짜 | 날짜 문자열을 ZonedDateTime 개체로 변환합니다(ISO 8601 형식). | <ul><li>날짜: **필수** 날짜를 나타내는 문자열입니다.</li><li>형식: **필수** 원본 날짜의 형식을 나타내는 문자열입니다.**참고:** 날짜 문자열을 변환할 형식을 **그렇지 않습니다**. </li><li>DEFAULT_DATE: **필수** 제공된 날짜가 null인 경우 기본 날짜가 반환됩니다.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
 | 날짜 | 날짜 문자열을 ZonedDateTime 개체로 변환합니다(ISO 8601 형식). | <ul><li>날짜: **필수** 날짜를 나타내는 문자열입니다.</li><li>형식: **필수** 원본 날짜의 형식을 나타내는 문자열입니다.**참고:** 날짜 문자열을 변환할 형식을 **그렇지 않습니다**. </li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | `2019-10-23T11:24:00Z` |
 | 날짜 | 날짜 문자열을 ZonedDateTime 개체로 변환합니다(ISO 8601 형식). | <ul><li>날짜: **필수** 날짜를 나타내는 문자열입니다.</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
-| date_part | 날짜의 일부를 검색합니다. 지원되는 구성 요소 값은 다음과 같습니다. <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh12&rbrace;&quot;<br>&quot;7&rbrace;분&quot;25&rbrace;&quot;m<br><br><br><br><br><br><br><br><br><br><br><br> | <ul><li>구성 요소: **필수** 날짜의 일부를 나타내는 문자열입니다. </li><li>날짜: **필수** 표준 형식의 날짜입니다.</li></ul> | date_&#x200B;part(COMPONENT, DATE) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12&quot;)) | 10 |
+| date_part | 날짜의 일부를 검색합니다. 지원되는 구성 요소 값은 다음과 같습니다. <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh12}&quot;<br>&quot;7}분&quot;25}&quot;m<br><br><br><br><br><br><br><br><br><br><br><br> | <ul><li>구성 요소: **필수** 날짜의 일부를 나타내는 문자열입니다. </li><li>날짜: **필수** 표준 형식의 날짜입니다.</li></ul> | date_&#x200B;part(COMPONENT, DATE) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12&quot;)) | 10 |
 | set_date_part | 지정된 날짜의 구성 요소를 대체합니다. 다음 구성 요소가 허용됩니다. <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>구성 요소: **필수** 날짜의 일부를 나타내는 문자열입니다. </li><li>값: **필수** 지정된 날짜에 구성 요소에 대해 설정할 값입니다.</li><li>날짜: **필수** 표준 형식의 날짜입니다.</li></ul> | set_date_&#x200B;part(COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44Z&quot; |
 | make_date_time | 부품에서 날짜를 생성합니다. 이 함수는 make_timestamp를 사용하여 유도할 수도 있습니다. | <ul><li>연도: **필수** 4자리 숫자로 작성된 연도입니다.</li><li>월: **필수** 월 허용되는 값은 1-12입니다.</li><li>일: **필수**&#x200B;일. 허용되는 값은 1~31입니다.</li><li>시간: **필수** 시간. 허용되는 값은 0~23입니다.</li><li>분: **필수** 분. 허용되는 값은 0~59입니다.</li><li>NANOSECOND: **필수** 나노초 값. 허용되는 값은 0에서 999999999까지입니다.</li><li>시간대: **필수** 날짜 시간에 대한 시간대입니다.</li></ul> | make_date_&#x200B;time(YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, NANOSECOND, TIMEZONE) | make_date_time&#x200B;(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | 모든 시간대의 날짜를 UTC 형식의 날짜로 변환합니다. | <ul><li>날짜: **필수** 변환하려는 날짜입니다.</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
@@ -154,8 +154,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | map_has_keys | 하나 이상의 입력 키가 제공되면 함수는 true를 반환합니다. 문자열 배열이 입력으로 제공되면 함수는 발견되는 첫 번째 키에 true를 반환합니다. | <ul><li>맵: **필수** 입력 맵 데이터</li><li>키: **필수** 키는 단일 문자열 또는 문자열 배열일 수 있습니다. 다른 기본 유형(데이터/숫자)이 제공되면 문자열로 처리됩니다.</li></ul> | map_has_keys(MAP, KEY) | 코드 샘플은 [부록](#map_has_keys)을 참조하십시오. | |
 | add_to_map | 최소 두 개 이상의 입력을 허용합니다. 맵의 수는 입력으로서 제공될 수 있다. 데이터 준비는 모든 입력의 모든 키-값 쌍이 있는 단일 맵을 반환합니다. 하나 이상의 키가 동일한 맵에서 또는 맵 간에 반복되는 경우, 데이터 준비는 첫 번째 키-값 쌍이 입력에서 전달된 순서대로 유지되도록 키를 중복 제거합니다. | 맵: **필수** 입력 맵 데이터입니다. | add_to_map(지도 1, 지도 2, 지도 3, ...) | 코드 샘플은 [부록](#add_to_map)을 참조하십시오. | |
 | object_to_map (구문 1) | 이 함수를 사용하여 맵 데이터 유형을 만듭니다. | <ul><li>키: **필수** 키는 문자열이어야 합니다. 정수 또는 날짜와 같은 다른 기본 값이 제공되면 문자열로 자동 변환되고 문자열로 처리됩니다.</li><li>ANY_TYPE: **필수** 맵을 제외한 지원되는 모든 XDM 데이터 형식을 참조합니다.</li></ul> | object_to_map(KEY, ANY_TYPE, KEY, ANY_TYPE, ... ) | 코드 샘플은 [부록](#object_to_map)을 참조하십시오. | |
-| object_to_map (구문 2) | 이 함수를 사용하여 맵 데이터 유형을 만듭니다. | <ul><li>개체: **필수** 들어오는 개체 또는 개체 배열을 제공하고 개체 내의 특성을 키로 지정할 수 있습니다.</li></ul> | object_to_map(OBJECT) | 코드 샘플은 [부록](#object_to_map)을 참조하십시오. |
-| object_to_map (구문 3) | 이 함수를 사용하여 맵 데이터 유형을 만듭니다. | <ul><li>개체: **필수** 들어오는 개체 또는 개체 배열을 제공하고 개체 내의 특성을 키로 지정할 수 있습니다.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | 코드 샘플은 [부록](#object_to_map)을 참조하십시오. |
+| object_to_map (구문 2) | 이 함수를 사용하여 맵 데이터 유형을 만듭니다. | <ul><li>개체: **필수** 들어오는 개체 또는 개체 배열을 제공하고 개체 내의 특성을 키로 지정할 수 있습니다.</li></ul> | object_to_map(OBJECT) | 코드 샘플은 [부록](#object_to_map)을 참조하십시오. |  |
+| object_to_map (구문 3) | 이 함수를 사용하여 맵 데이터 유형을 만듭니다. | <ul><li>개체: **필수** 들어오는 개체 또는 개체 배열을 제공하고 개체 내의 특성을 키로 지정할 수 있습니다.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | 코드 샘플은 [부록](#object_to_map)을 참조하십시오. |  |
 
 {style="table-layout:auto"}
 
@@ -180,8 +180,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | upsert_array_replace | 이 함수는 배열에서 요소를 바꾸는 데 사용합니다. 이 함수는 업데이트 중에 **전용**&#x200B;입니다. 삽입 컨텍스트에서 사용되는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>배열: **필수** 프로필에서 배열을 바꿀 배열입니다.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 | [!BADGE 대상만]{type=Informative} array_to_string | 지정된 구분 기호를 사용하여 배열에 있는 요소의 문자열 표현을 조인합니다. 배열이 다차원이면 결합되기 전에 평면화됩니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-maps-objects.md)를 참조하세요. | <ul><li>구분 기호: **필수** 배열에서 요소를 연결하는 데 사용되는 구분 기호입니다.</li><li>배열: **필수** 병합할 배열입니다(병합한 후).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | &quot;Hello;world&quot; |
 | [!BADGE 대상만]{type=Informative} filterArray* | 술어를 기반으로 해당 배열을 필터링합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-maps-objects.md)를 참조하세요. | <ul><li>배열: **필수** 필터링할 배열</li><li>조건자: **필수** 특정 배열의 각 요소에 적용할 조건자입니다. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7] |
-| [!BADGE 대상만]{type=Informative} transformArray* | 조건자를 기반으로 특정 배열을 변환합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-maps-objects.md)를 참조하세요. | <ul><li>배열: **필수** 변환할 배열입니다.</li><li>조건자: **필수** 특정 배열의 각 요소에 적용할 조건자입니다. | transformArray(ARRAY, PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
-| [!BADGE 대상만]{type=Informative}flattenArray* | 지정된 (다차원) 배열을 1차원 배열로 병합합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-maps-objects.md)를 참조하세요. | <ul><li>배열: **필수** 병합할 배열입니다.</li></ul> | flattenArray(ARRAY) | flattenArray(&lbrack;[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
+| [!BADGE 대상만]{type=Informative} transformArray* | 조건자를 기반으로 특정 배열을 변환합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-maps-objects.md)를 참조하세요. | <ul><li>배열: **필수** 변환할 배열입니다.</li><li>조건자: **필수** 특정 배열의 각 요소에 적용할 조건자입니다. | transformArray(ARRAY, PREDICATE) | `transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
+| [!BADGE 대상만]{type=Informative}flattenArray* | 지정된 (다차원) 배열을 1차원 배열로 병합합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-maps-objects.md)를 참조하세요. | <ul><li>배열: **필수** 병합할 배열입니다.</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 
@@ -193,7 +193,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 함수 | 설명 | 매개변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| array_to_map | 이 함수는 개체 배열과 키를 입력으로 취하여 값을 키로 사용하고 배열 요소를 값으로 하는 키 필드의 맵을 반환합니다. | <ul><li>입력: **필수** null이 아닌 첫 번째 개체를 찾을 개체 배열입니다.</li><li>키: **필수** 키는 개체 배열의 필드 이름이어야 하며 값으로 개체여야 합니다.</li></ul> | array_to_map(OBJECT[] INPUT, KEY) | 코드 샘플을 보려면 [부록](#object_to_map)을 읽어 보십시오. |
+| array_to_map | 이 함수는 개체 배열과 키를 입력으로 취하여 값을 키로 사용하고 배열 요소를 값으로 하는 키 필드의 맵을 반환합니다. | <ul><li>입력: **필수** null이 아닌 첫 번째 개체를 찾을 개체 배열입니다.</li><li>키: **필수** 키는 개체 배열의 필드 이름이어야 하며 값으로 개체여야 합니다.</li></ul> | array_to_map(OBJECT[] INPUT, KEY) | 코드 샘플을 보려면 [부록](#object_to_map)을 읽어 보십시오. |  |
 | object_to_map | 이 함수는 개체를 인수로 사용하고 키-값 쌍의 맵을 반환합니다. | <ul><li>입력: **필수** null이 아닌 첫 번째 개체를 찾을 개체 배열입니다.</li></ul> | object_to_map(OBJECT_INPUT) | &quot;object_to_map(address) 여기서 입력은 &quot; + &quot;address: {line1 : \&quot;345 park ave\&quot;,line2: \&quot;bldg 2\&quot;,도시 : \&quot;san jose\&quot;,상태 : \&quot;CA\&quot;,유형: \&quot;office\&quot;}입니다.&quot; | 입력이 null인 경우 필드 이름과 값 쌍이 지정된 맵을 반환하거나 null을 반환합니다. 예: `"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
 | to_map | 이 함수는 키-값 쌍의 목록을 가져와서 키-값 쌍의 맵을 반환합니다. | | to_map(OBJECT_INPUT) | &quot;to_map(\&quot;firstName\&quot;, \&quot;John\&quot;, \&quot;lastName\&quot;, \&quot;Doe\&quot;)&quot; | 입력이 null인 경우 필드 이름과 값 쌍이 지정된 맵을 반환하거나 null을 반환합니다. 예: `"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
@@ -261,7 +261,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 함수 | 설명 | 매개변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | 의사 무작위 ID를 생성합니다. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
-| `fpid_to_ecid ` | 이 함수는 FPID 문자열을 가져와 Adobe Experience Platform 및 Adobe Experience Cloud 애플리케이션에서 사용할 ECID로 변환합니다. | <ul><li>문자열: **필수** ECID로 변환할 FPID 문자열입니다.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
+| `fpid_to_ecid` | 이 함수는 FPID 문자열을 가져와 Adobe Experience Platform 및 Adobe Experience Cloud 애플리케이션에서 사용할 ECID로 변환합니다. | <ul><li>문자열: **필수** ECID로 변환할 FPID 문자열입니다.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
 
@@ -387,11 +387,11 @@ address.line1 -> addr.addrLine1
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5B |
+| [ | %5B |
 | | | %5C |
-| &rbrack; | %5D |
+| ] | %5D |
 | ^ | %5E |
-| &grave; | %60 |
+| ` | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}

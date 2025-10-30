@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 23%
+source-wordcount: '887'
+ht-degree: 25%
 
 ---
 
@@ -53,8 +53,8 @@ XDM은 디지털 경험의 성능을 개선하기 위해 설계된 공개적으�
 | [!DNL Privacy Service] 리브랜딩 | 이전 명칭인 “GDPR 서비스”는 GDPR 외에도 다른 규정을 지원하도록 서비스가 확대됨에 따라 [!DNL Privacy Service]로 이름이 변경되었습니다. |
 | 새로운 API 엔드포인트 | [!DNL Privacy Service] API의 기본 경로가 `/data/privacy/gdpr`에서 `/data/core/privacy/jobs`(으)로 업데이트되었습니다. |
 | 새로운 필수 `regulation` 속성 | [!DNL Privacy Service] API에서 새로운 작업을 만들 때 요청 페이로드에 작업을 추적할 규정을 나타내는 `regulation` 속성을 제공해야 합니다. 허용되는 값은 `gdpr` 및 `ccpa`입니다. |
-| [!DNL Adobe Primetime Authentication] 지원 | [!DNL Privacy Service]이(가) 이제 `primetimeAuthentication`을(를) 제품 값으로 사용하여 Adobe [!DNL Primetime Authentication]의 액세스/삭제 요청을 수락합니다. |
-| Privacy Service UI 개선 사항 | GDPR 및 CCPA 규정에 대한 별도의 작업 추적 페이지입니다. GDPR 및 CCPA에 대한 추적 데이터 간을 전환하는 새로운 **규정 유형**&#x200B;드롭다운. |
+| [!DNL Adobe Primetime Authentication] 지원 | [!DNL Privacy Service]이(가) 이제 [!DNL Primetime Authentication]을(를) 제품 값으로 사용하여 Adobe `primetimeAuthentication`의 액세스/삭제 요청을 수락합니다. |
+| Privacy Service UI 개선 사항 | GDPR 및 CCPA 규정에 대한 별도의 작업 추적 페이지입니다. GDPR과 CCPA에 대한 추적 데이터를 전환할 수 있는 새로운 **규정 유형** 드롭다운을 추가했습니다. |
 
 **알려진 문제**
 
@@ -81,7 +81,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동�
 | 카테고리 | 사용 권한 | 설명 |
 |--- | --- | ---|
 | 데이터 수집 | 소스 관리 | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있는 액세스 권한. |
-| 데이터 수집 | 소스 보기 | **[!UICONTROL 카탈로그]** 탭의 사용 가능한 소스와 **[!UICONTROL 찾아보기]** 탭의 인증된 소스에 대한 읽기 전용 액세스 권한입니다. |
+| 데이터 수집 | 소스 보기 | **[!UICONTROL Catalog]** 탭의 사용 가능한 소스와 **[!UICONTROL Browse]** 탭의 인증된 소스에 대한 읽기 전용 액세스 권한입니다. |
 
 **알려진 문제**
 
@@ -104,7 +104,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동�
 | 카테고리 | 사용 권한 | 설명 |
 |--- | --- | ---|
 | 대상 | 대상 관리 | 대상을 읽고, 만들고, 편집하고, 비활성화할 수 있는 액세스 권한. |
-| 대상 | 대상 보기 | **[!UICONTROL 카탈로그]** 탭의 사용 가능한 대상 및 **찾아보기** 탭의 인증된 대상에 대한 읽기 전용 액세스입니다. |
+| 대상 | 대상 보기 | **[!UICONTROL Catalog]** 탭의 사용 가능한 대상 및 **찾아보기** 탭의 인증된 대상에 대한 읽기 전용 액세스 권한입니다. |
 | 대상 | 대상 활성화 | 대상에 데이터를 활성화하는 기능. 이 권한을 사용하려면 제품 프로필에 &quot;대상 관리&quot; 또는 &quot;대상 보기&quot;를 추가해야 합니다. |
 
 **알려진 문제**

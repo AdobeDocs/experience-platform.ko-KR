@@ -2,7 +2,7 @@
 description: 대상 테스트 API를 사용하여 스트리밍 대상 구성을 게시하기 전에 테스트하는 방법을 알아봅니다.
 title: 스트리밍 대상 테스트 API 개요
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -25,10 +25,12 @@ Adobe은 Destination SDK의 일부로 대상을 구성하고 테스트하는 데
 대상 테스트 도구를 사용하여 [서버 구성](../../authoring-api/destination-server/create-destination-server.md)에서 제공한 파트너 끝점에 메시지를 보내 대상 구성을 테스트하십시오.
 
 도구를 사용하기 전에 다음을 확인하십시오.
+
 * [대상 구성 워크플로](../../authoring-api/destination-configuration/create-destination-configuration.md)에 설명된 단계에 따라 대상을 구성합니다.
 * [대상 인스턴스 ID를 가져오는 방법](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id)에 자세히 설명된 대로 대상에 대한 연결을 설정하십시오.
 
 이 도구를 사용하여 대상을 구성한 후 다음을 수행할 수 있습니다.
+
 * 대상이 올바르게 구성되었는지 테스트합니다.
 * 구성된 대상에 대한 데이터 흐름의 무결성을 확인합니다.
 
@@ -43,7 +45,8 @@ Adobe은 Destination SDK의 일부로 대상을 구성하고 테스트하는 데
 요청에 프로필을 추가하지 않으면 Adobe이 내부적으로 프로필을 생성하여 요청에 추가합니다. 이 요청에 사용할 프로필을 생성하려면 [샘플 프로필 생성 API 참조](../../testing-api/streaming-destinations/sample-profile-generation-api.md)를 참조하세요. [API 참조](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema)에 표시된 대로 소스 XDM 스키마를 기반으로 프로필을 생성해야 합니다. 소스 스키마는 사용 중인 샌드박스의 [유니온 스키마](../../../../profile/ui/union-schema.md)입니다.
 
 응답에는 대상 요청 처리 결과가 포함됩니다. 이 요청에는 다음 세 가지 기본 섹션이 포함됩니다.
-* 대상에 대해 Adobe이 생성한 요청입니다.
+
+* 대상에 대해 Adobe에서 생성한 요청입니다.
 * 대상에서 받은 응답입니다.
 * 요청에서 보낸 프로필 목록, 프로필이 요청에서 [추가되었는지](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles) 또는 [대상 테스트 요청의 본문이 비어 있는 경우 Adobe에서 생성되었는지](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
 

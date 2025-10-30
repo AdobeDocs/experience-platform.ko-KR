@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform SDK을 사용하여 모델 작성
 description: 이 자습서에서는 data_access_sdk_python을 Python 및 R에서 모두 새로운 Python platform_sdk로 변환하는 방법에 대한 정보를 제공합니다.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '508'
 ht-degree: 3%
 
 ---
@@ -161,7 +161,7 @@ df2
 | 보다 작음(`<`) | `lt()` |
 | 보다 작거나 같음(`<=`) | `le()` |
 | 및 (`&`) | `And()` |
-| 또는 (`|`) | `Or()` |
+| 또는 ( &amp;vert; ) | `Or()` |
 
 ## 선택한 열로 필터링 {#filter-by-selected-columns}
 
@@ -226,4 +226,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## 다음 단계
 
-`platform_sdk` 데이터 로더를 구성하면 데이터가 준비 과정을 거친 다음 `train` 및 `val` 데이터 세트로 분할됩니다. 데이터 준비 및 기능 엔지니어링에 대한 자세한 내용은 [!DNL JupyterLab] 전자 필기장을 사용하여 레시피를 만드는 자습서의 [데이터 준비 및 기능 엔지니어링](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering)에 대한 섹션을 참조하십시오.
+`platform_sdk` 데이터 로더를 구성하면 데이터가 준비 과정을 거친 다음 `train` 및 `val` 데이터 세트로 분할됩니다. 데이터 준비 및 기능 엔지니어링에 대한 자세한 내용은 [ 전자 필기장을 사용하여 레시피를 만드는 자습서의 ](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering)데이터 준비 및 기능 엔지니어링[!DNL JupyterLab]에 대한 섹션을 참조하십시오.

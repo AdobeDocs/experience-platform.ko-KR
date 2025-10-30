@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 23%
@@ -62,7 +62,7 @@ Experience Platform을 기반으로 구축된 Real-Time Customer Data Platform([
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| IAB TCF 2.0 지원 | [!DNL Real-Time CDP]은(는) IAB([!DNL Interactive Advertising Bureau])에 의해 요약된 대로 TCF([!DNL Transparency & Consent Framework])의 2.0 버전에 대해 등록된 공급업체입니다. CMP에서 생성된 고객 동의 데이터를 수락하도록 데이터 작업 및 프로필 스키마를 구성하고, 세그먼트를 다운스트림 대상으로 활성화할 때 고객의 동의 환경 설정을 적용할 수 있습니다. |
+| IAB TCF 2.0 지원 | [!DNL Real-Time CDP]은(는) IAB([!DNL Transparency & Consent Framework])에 의해 요약된 대로 TCF([!DNL Interactive Advertising Bureau])의 2.0 버전에 대해 등록된 공급업체입니다. CMP에서 생성된 고객 동의 데이터를 수락하도록 데이터 작업 및 프로필 스키마를 구성하고, 세그먼트를 다운스트림 대상으로 활성화할 때 고객의 동의 환경 설정을 적용할 수 있습니다. |
 
 [!DNL Real-Time CDP]에 대한 자세한 내용은 [[!DNL Real-Time CDP] 개요](../../rtcdp/overview.md)를 참조하십시오.
 

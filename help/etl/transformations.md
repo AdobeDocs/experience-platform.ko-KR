@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 샘플 ETL 변형
 description: 이 문서에서는 ETL(추출, 변환, 로드) 개발자에게 발생할 수 있는 다음 예제 변환을 보여 줍니다.
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 2%
+source-wordcount: '452'
+ht-degree: 1%
 
 ---
 
@@ -42,6 +42,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### 매핑
 
 CRM 데이터에 대한 매핑 요구 사항은 다음 표에 요약되어 있으며 다음 변환을 포함합니다.
+
 - `identityMap` 속성에 대한 ID 열
 - 생년월일(DOB) - 연월일
 - 문자열을 중복 또는 짧은 정수로 바꿉니다.
@@ -55,7 +56,7 @@ CRM 데이터에 대한 매핑 요구 사항은 다음 표에 요약되어 있�
 | DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | birthDayAndMonth를 string으로 변환<br/>birthDate를 string으로 변환<br/>birthYear를 short int로 변환 |
 | EMAIL | personalEmail.address | 문자열로 복사 |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | idMap의 CRMID 배열에 문자열로 복사하고 기본 을 false로 설정합니다. |
-| ECID | identityMap.ECID[{&quot;id&quot;:x, primary: false}] | idMap에서 ECID 배열의 첫 번째 항목에 문자열로 복사하고 기본 을 false로 설정합니다. |
+| ECID | identityMap.ECID[{&quot;id&quot;:x, 기본: false}] | idMap에서 ECID 배열의 첫 번째 항목에 문자열로 복사하고 기본 을 false로 설정합니다. |
 | 충혈- | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | identityMap의 LOYALTYID 배열에 문자열로 복사하고 Primary를 true로 설정합니다. |
 | ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | idMap에서 ECID 배열의 두 번째 항목에 문자열로 복사하고 기본 을 false로 설정합니다. |
 | 전화 | homePhone.number | 문자열로 복사 |
@@ -284,9 +285,9 @@ ID 배열에 대한 매핑 요구 사항은 다음 표에 요약되어 있습니
 
 | ID 필드 | identityMap 필드 | 데이터 유형 |
 | -------------- | ----------------- | --------- |
-| id[0].id | identityMap[이메일][{"id"}] | 문자열로 복사 |
-| id[1].id | identityMap[CRMID][{"id"}] | 문자열로 복사 |
-| id[2].id | identityMap[LOYALTYID][{"id"}] | 문자열로 복사 |
+| `identities[0].id` | `identityMap[Email][{"id"}]` | 문자열로 복사 |
+| `identities[1].id` | `identityMap[CRMID][{"id"}]` | 문자열로 복사 |
+| `identities[2].id` | `identityMap[LOYALTYID][{"id"}]` | 문자열로 복사 |
 
 ### 출력 XDM
 

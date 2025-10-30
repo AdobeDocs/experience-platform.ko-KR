@@ -2,9 +2,9 @@
 title: Google 데이터 레이어 확장
 description: Adobe Experience Platform의 Google 클라이언트 데이터 레이어 태그 확장에 대해 알아봅니다.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Google 데이터 레이어 확장을 사용하면 Tags 구현에서 Google 데�
 
 ## 설치
 
-확장을 설치하려면 데이터 수집 UI에서 확장 카탈로그로 이동하고 **[!UICONTROL Google 데이터 레이어]**&#x200B;를 선택합니다.
+확장을 설치하려면 데이터 수집 UI에서 확장 카탈로그로 이동하고 **[!UICONTROL Google Data Layer]**&#x200B;을(를) 선택합니다.
 
 확장이 설치되면 Adobe Experience Platform 태그 라이브러리의 모든 로드에서 데이터 레이어를 만들거나 해당 데이터 레이어에 액세스합니다.
 
@@ -36,6 +36,7 @@ Google 데이터 레이어 확장을 사용하면 Tags 구현에서 Google 데�
 >[!NOTE]
 >
 >Adobe Experience Platform Tags에서 이벤트 기반 데이터 레이어를 사용할 때 _event_ 단어가 오버로드됩니다. _이벤트_&#x200B;은(는) 다음과 같을 수 있습니다.
+>
 > - Adobe Experience Platform 태그 이벤트(라이브러리가 로드됨 등).
 > - JavaScript 이벤트.
 > - _event_ 키워드를 사용하여 데이터 레이어로 푸시된 데이터입니다.
@@ -49,7 +50,7 @@ Google 데이터 레이어 확장을 사용하면 Tags 구현에서 Google 데�
 
 ### Google 이벤트 유형
 
-Google에서는 `push()` 메서드를 사용하는 Google Tag Manager와 `gtag()` 메서드를 사용하는 Google Analytics 4의 두 가지 푸시 이벤트 수단을 지원합니다.
+Google에서는 `push()` 메서드를 사용하는 Google Tag Manager와 `gtag()` 메서드를 사용하는 Google Analytics 4라는 두 가지 이벤트 푸시 수단을 지원합니다.
 
 1.2.1 이전의 Google 데이터 레이어 확장 버전은 이 페이지의 코드 예제와 같이 `push()`에서 만든 이벤트만 지원합니다.
 

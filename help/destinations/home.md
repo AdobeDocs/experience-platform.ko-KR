@@ -2,9 +2,9 @@
 title: 대상 개요
 description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과 미리 빌드된 통합입니다. Adobe Experience Platform의 대상 을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1296'
 ht-degree: 3%
 
 ---
@@ -61,12 +61,12 @@ Experience Platform의 대상 기능은 Adobe Experience Platform 액세스 제�
 
 | 권한 수준 | 설명 |
 | ---- | ---- |
-| **[!UICONTROL 대상 보기]** | Experience Platform UI의 대상 탭에 액세스하려면 **[!UICONTROL 대상 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. |
-| **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 관리]** | 대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. |
-| **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** | 대상에 대상을 활성화하고 워크플로우의 [매핑 단계](ui/activate-batch-profile-destinations.md#mapping)을(를) 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. |
-| **[!UICONTROL 대상 보기]**, **[!UICONTROL 매핑하지 않고 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** | 워크플로우의 [매핑 단계](ui/activate-batch-profile-destinations.md#mapping)에 액세스하지 않고 기존 데이터 흐름에서 대상을 추가하거나 제거하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 매핑하지 않고 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. |
-| **[!UICONTROL 대상 보기]**, **[!UICONTROL 데이터 집합 대상 관리 및 활성화]** | 대상으로 데이터 세트를 내보내려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 데이터 세트 대상 관리 및 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. |
-| **[!UICONTROL ID 그래프 보기]** | 대상으로 *ID*&#x200B;를 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"} |
+| **[!UICONTROL View Destinations]** | Experience Platform UI의 대상 탭에 액세스하려면 **[!UICONTROL View Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | 대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** | 대상을 대상으로 활성화하고 워크플로우의 [매핑 단계](ui/activate-batch-profile-destinations.md#mapping)을(를) 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** | 워크플로우의 [매핑 단계](ui/activate-batch-profile-destinations.md#mapping)에 액세스하지 않고 기존 데이터 흐름에서 대상을 추가하거나 제거하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | 대상으로 데이터 세트를 내보내려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage and Activate Dataset Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. |
+| **[!UICONTROL View Identity Graph]** | 대상으로 *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Adobe Experience Platform의 속성 기반 액세스 제어를 통해 관리자�
 
 ## 대상에서 프로필 제거 {#profile-removal}
 
-대상에 대해 활성화된 대상자에서 프로필이 제거되면 해당 프로필도 대상 플랫폼의 해당 대상자에서 제거됩니다. 예를 들어 이전에 LinkedIn으로 활성화된 대상에서 프로필이 제거되면 연결된 [!UICONTROL LinkedIn과 일치하는 대상]에서 해당 프로필이 제거됩니다.
+대상에 대해 활성화된 대상자에서 프로필이 제거되면 해당 프로필도 대상 플랫폼의 해당 대상자에서 제거됩니다. 예를 들어 이전에 LinkedIn으로 활성화된 대상자에서 프로필이 제거되면 연결된 [!UICONTROL LinkedIn Matched Audience]에서 해당 프로필이 제거됩니다.
 
 대상에서 프로필 제거(세그먼테이션 해제라고도 함)는 세그먼테이션과 동일한 케이던스에서 발생합니다. Experience Platform의 대상에서 프로필이 제거되자마자 대상에 대해 다음으로 예약된 데이터 흐름은 해당 변경 사항을 반영하고 대상 대상에서 프로필을 제거합니다.
 
@@ -118,7 +118,7 @@ Adobe Experience Platform의 속성 기반 액세스 제어를 통해 관리자�
 * [이메일 마케팅 대상](./catalog/email-marketing/overview.md)
 * [소셜 대상](./catalog/social/overview.md)
 
-대상자 활성화 워크플로의 데이터 정책 위반에 대한 자세한 내용은 다음 안내서에서 **[!UICONTROL 검토]** 단계를 참조하십시오.
+대상자 활성화 워크플로의 데이터 정책 위반에 대한 자세한 내용은 다음 안내서에서 **[!UICONTROL Review]** 단계를 참조하십시오.
 
 * [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](./ui/activate-segment-streaming-destinations.md#review)
 * [대상자 데이터를 스트리밍 프로필 내보내기 대상으로 활성화](./ui/activate-streaming-profile-destinations.md#review)

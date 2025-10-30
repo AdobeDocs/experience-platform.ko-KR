@@ -1,26 +1,26 @@
 ---
 title: 공유 비공개 확장 패키지
 description: Adobe Experience Platform Tags에서 비공개 확장 패키지를 공유하는 방법을 알아봅니다.
-source-git-commit: f45f58b4679b619708204cdb0c18174a4836ce8d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
 
 # 공유 비공개 확장 패키지
 
-Adobe Experience Platform 태그는 이제 **[!UICONTROL 사용 승인]**&#x200B;을 지원합니다. 이 강력한 기능을 통해 신뢰할 수 있는 파트너와 비공개 확장 패키지를 확장 카탈로그에서 공개적으로 사용하지 않고 안전하게 공유할 수 있습니다. 이 기능은 조직 간에 안전한 브리지를 만들어 서로 간의 사용자 지정 확장 코드를 활용하는 동시에 독점 솔루션에 대한 개인 정보 보호 및 제어 기능을 유지할 수 있습니다.
+이제 Adobe Experience Platform Tags는 확장 카탈로그에서 비공개 확장 패키지를 공개적으로 사용하지 않고 신뢰할 수 있는 파트너와 안전하게 공유할 수 있는 강력한 기능인 **[!UICONTROL Usage Authorizations]**&#x200B;을(를) 지원합니다. 이 기능은 조직 간에 안전한 브리지를 만들어 서로 간의 사용자 지정 확장 코드를 활용하는 동시에 독점 솔루션에 대한 개인 정보 보호 및 제어 기능을 유지할 수 있습니다.
 
 ## 다른 조직과 확장 패키지 공유
 
 >[!NOTE]
 >
->[!UICONTROL 사용 승인]을 통해 공유하려면 확장 패키지에 비공개 또는 공개 버전이 있어야 합니다. 개발 가용성으로 표시된 버전은 공유할 수 없어 권한 부여 드롭다운에 표시되지 않습니다. 이전 버전(예: 1.0.0)이 이미 공유된 경우에도 적용됩니다. 최신 버전(예: 1.0.1)은 수신 조직에서 승인하거나 설치하기 전에 적어도 비공개로 만들어야 합니다.
+>[!UICONTROL Usage Authorizations]을(를) 통해 공유하려면 확장 패키지에 비공개 또는 공개 버전이 있어야 합니다. 개발 가용성으로 표시된 버전은 공유할 수 없어 권한 부여 드롭다운에 표시되지 않습니다. 이전 버전(예: 1.0.0)이 이미 공유된 경우에도 적용됩니다. 최신 버전(예: 1.0.1)은 수신 조직에서 승인하거나 설치하기 전에 적어도 비공개로 만들어야 합니다.
 >
 >비공개 확장 패키지 공유에 대한 모든 지침은 나중에 이러한 패키지를 공개로 설정하도록 선택하는 경우에도 적용됩니다. 가시성, 버전 관리, 보안, 호환성, 지원 및 설명서에 대한 동일한 고려 사항은 패키지의 가용성 상태에 관계없이 계속 적용됩니다.
 
-[!UICONTROL 사용 승인]을 통해 공개 및 비공개 확장 패키지를 공유할 수 있지만 개발 사용 가능 상태의 확장에는 사용 승인을 연결할 수 없습니다.
+공개 및 비공개 확장 패키지는 모두 [!UICONTROL Usage Authorizations]을(를) 통해 공유할 수 있지만 개발 사용 가능 상태의 확장에 연결된 권한이 없습니다.
 
 조직에서는 고유한 비즈니스 요구 사항에 맞게 특화된 확장을 개발하는 경우가 많습니다. 이러한 확장에는 독점 논리, 사용자 지정 통합 또는 공개적으로 사용할 수 없는 중요한 구성이 포함될 수 있습니다. 사용 권한은 다음을 활성화하여 이 문제를 해결합니다.
 
@@ -38,40 +38,40 @@ Adobe Experience Platform 태그는 이제 **[!UICONTROL 사용 승인]**&#x200B
 
 ## 확장 패키지 사용 인증 만들기
 
-확장을 공유하려면 데이터 수집 UI로 이동한 다음 왼쪽 탐색에서 **[!UICONTROL 태그]**&#x200B;를 선택합니다. 여기에서 기존 속성을 선택하거나 새 속성을 만듭니다.
+확장을 공유하려면 데이터 수집 UI로 이동하고 왼쪽 탐색에서 **[!UICONTROL Tags]**&#x200B;을(를) 선택합니다. 여기에서 기존 속성을 선택하거나 새 속성을 만듭니다.
 
-원하는 속성을 선택하거나 만든 후에는 왼쪽 탐색에서 **[!UICONTROL 확장]**&#x200B;을 선택한 다음 **[!UICONTROL 사용 승인]** 탭을 선택합니다.
+원하는 속성을 선택하거나 만들었으면 왼쪽 탐색에서 **[!UICONTROL Extensions]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Usage Authorizations]** 탭을 선택합니다.
 
 여기에서 두 가지 범주로 구성된 기존 공유 권한 목록을 볼 수 있습니다.
 
 - **이 조직과 공유**: 다른 조직이 사용자와 공유한 확장입니다.
 - **다른 조직과 공유**: 다른 조직과 공유한 확장입니다.
 
-**[!UICONTROL 권한 부여 추가]**&#x200B;를 선택합니다.
+**[!UICONTROL Add Authorization]**&#x200B;를 선택합니다.
 
-![이 조직과 공유된 확장 목록을 표시하는 [!UICONTROL 사용 권한] 탭에서 [!UICONTROL 권한 부여 추가]](../images/shared-extensions/add-authorization.png)를 강조 표시합니다.
+![이 조직과 공유된 확장 목록을 표시하는 [!UICONTROL Usage Authorizations] 탭이며 [!UICONTROL Add Authorization]](../images/shared-extensions/add-authorization.png)을(를) 강조 표시합니다.
 
 >[!IMPORTANT]
 >
 >대상 조직의 **`Organization ID`**&#x200B;을(를) 조직의 소유자로 가져와야 합니다. 이름은 조직을 검색할 수 없습니다.
 
-드롭다운에서 사용 가능한 확장에서 공유할 **[!UICONTROL 확장]**&#x200B;을 선택합니다. 목록에는 조직이 소유한 확장이 가용성 상태와 함께 표시됩니다. 최신 버전이 **개발** 가용성에 있는 확장은 이 목록에 표시되지 않습니다.
+드롭다운에서 사용 가능한 확장에서 공유할 **[!UICONTROL Extension]**&#x200B;을(를) 선택합니다. 목록에는 조직이 소유한 확장이 가용성 상태와 함께 표시됩니다. 최신 버전이 **개발** 가용성에 있는 확장은 이 목록에 표시되지 않습니다.
 
-그런 다음 받는 조직의 ID를 입력한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+다음으로 받는 조직의 ID를 입력한 다음 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
-![선택한 확장과 Adobe 조직 ID를 표시하는 [!UICONTROL 확장 패키지 사용 권한 부여 만들기] 페이지에서 [!UICONTROL 저장]](../images/shared-extensions/save-authorization.png)을(를) 강조 표시합니다.
+![선택한 확장과 Adobe 조직 ID를 표시하는 [!UICONTROL Create extension package usage authorization] 페이지가 입력되어 [!UICONTROL Save]](../images/shared-extensions/save-authorization.png)이(가) 강조 표시되었습니다.
 
-[!UICONTROL 다른 조직과 공유] 목록에서 확장을 볼 수 있는 **[!UICONTROL 사용 승인]** 탭으로 돌아갑니다. 수신 조직에서 인증을 승인할 때까지 상태는 **승인 대기 중**&#x200B;으로 표시되며, 이 때 **승인됨**(으)로 업데이트됩니다.
+[!UICONTROL Usage Authorizations] 목록에서 확장을 볼 수 있는 **[!UICONTROL Shared with other orgs]** 탭으로 돌아갑니다. 수신 조직에서 인증을 승인할 때까지 상태는 **승인 대기 중**&#x200B;으로 표시되며, 이 때 **승인됨**(으)로 업데이트됩니다.
 
-![다른 조직과 공유된 확장 목록을 표시하는 [!UICONTROL 사용 권한] 탭에서 새 권한 부여를 강조 표시](../images/shared-extensions/new-authorization.png)
+![다른 조직과 공유된 확장 목록을 표시하는 [!UICONTROL Usage Authorizations] 탭에서 새 권한 부여를 강조 표시](../images/shared-extensions/new-authorization.png)
 
 >[!TIP]
 >
->확장 카드에서 메뉴(⋯)를 선택한 다음 메뉴에서 공유 옵션을 선택하여 **[!UICONTROL 확장 카탈로그]**&#x200B;에서 직접 확장을 공유할 수도 있습니다.
+>확장 카드에서 메뉴(⋯)를 선택한 다음 메뉴에서 공유 옵션을 선택하여 **[!UICONTROL Extension Catalog]**&#x200B;에서 직접 확장을 공유할 수도 있습니다.
 
 권한 부여가 활성화되면 공유 확장은 카탈로그에 다른 조직과 공유 중임을 나타내는 ***공유*** 배지를 표시합니다.
 
-![배지가 있는 공유 확장을 표시하는 [!UICONTROL 카탈로그] 탭](../images/shared-extensions/sharing-badge.png)
+![배지가 있는 공유 확장을 표시하는 [!UICONTROL Catalog] 탭](../images/shared-extensions/sharing-badge.png)
 
 ## 공유 확장 승인 및 관리
 
@@ -79,37 +79,39 @@ Adobe Experience Platform 태그는 이제 **[!UICONTROL 사용 승인]**&#x200B
 >
 >수신 조직에서는 공유 확장만 승인하거나 거부할 수 있습니다. 인증 세부 사항은 공유 조직에서 제어하므로 관리하거나 수정할 수 없습니다.
 
-조직의 공유 확장을 승인하려면 데이터 수집 UI로 이동하여 왼쪽 탐색에서 **[!UICONTROL 태그]**&#x200B;를 선택하고 속성을 선택합니다. 그런 다음 왼쪽 탐색에서 **[!UICONTROL 확장]**&#x200B;을 선택한 다음 **[!UICONTROL 사용 승인]** 탭을 선택합니다.
+조직의 공유 확장을 승인하려면 데이터 수집 UI로 이동하여 왼쪽 탐색에서 **[!UICONTROL Tags]**&#x200B;을(를) 선택하고 속성을 선택합니다. 그런 다음 왼쪽 탐색에서 **[!UICONTROL Extensions]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Usage Authorizations]** 탭을 선택합니다.
 
-**이 조직과 공유** 섹션에서 **[!UICONTROL 승인 대기 중]**&#x200B;을(를) 포함한 공유 확장 목록을 볼 수 있습니다. 승인할 확장을 선택한 다음 **[!UICONTROL 승인]**&#x200B;을 선택합니다.
+**섹션에서**&#x200B;승인 대기 중&#x200B;**[!UICONTROL Shared with this org]**&#x200B;을(를) 포함한 공유 확장 목록을 볼 수 있습니다. 승인할 확장을 선택한 다음 **[!UICONTROL Approve]**&#x200B;을(를) 선택합니다.
 
-![승인 대기 중인 확장이 선택된 상태로 이 조직과 공유된 확장 목록을 표시하는 [!UICONTROL 사용 권한] 탭에서 [!UICONTROL 승인]](../images/shared-extensions/approve-authorization.png)을(를) 강조 표시합니다.
+![승인 대기 중인 확장이 선택된 상태로 이 조직과 공유된 확장 목록을 표시하는 [!UICONTROL Usage Authorizations] 탭에서 [!UICONTROL Approve]](../images/shared-extensions/approve-authorization.png)을(를) 강조 표시합니다
 
 >[!NOTE]
 >
->조직에서 공유 확장을 더 이상 필요로 하지 않는 경우 **[!UICONTROL 사용 승인]** 탭에서 요청을 거부할 수도 있습니다.
+>조직에서 공유 확장을 더 이상 필요로 하지 않는 경우 **[!UICONTROL Usage Authorizations]** 탭에서 요청을 거부할 수도 있습니다.
 
-**[!UICONTROL 인증 사용]** 대화 상자에서 **[!UICONTROL 확인]**&#x200B;을 선택합니다.
+**[!UICONTROL OK]** 대화 상자에서 **[!UICONTROL Authorization Usages]** 선택.
 
-![인증 사용[!UICONTROL &#x200B; 대화 상자, 강조 표시 &#x200B;]확인](../images/shared-extensions/confirmation.png)
+![을(를) 강조 표시하는 [!UICONTROL Authorization Usages] 대화 상자 [!UICONTROL OK]](../images/shared-extensions/confirmation.png)
 
-이제 확장을 볼 수 있는 [!UICONTROL 사용 승인] 탭으로 돌아가서 **승인됨** 상태를 표시합니다.
+이제 확장을 볼 수 있는 [!UICONTROL Usage Authorizations] 탭으로 돌아가서 **승인됨** 상태를 표시합니다.
 
-![이 조직과 공유된 확장 목록을 표시하는 [!UICONTROL 사용 권한] 탭에서 승인됨 상태로 확장을 강조 표시함](../images/shared-extensions/approved-authorization.png)
+![이 조직과 공유된 확장 목록을 표시하는 [!UICONTROL Usage Authorizations] 탭에서는 확장이 승인됨 상태로 강조 표시됨](../images/shared-extensions/approved-authorization.png)
 
 승인이 승인되면 카탈로그에서 확장을 사용할 수 있으며 다른 확장과 같이 설치하고 사용할 수 있습니다. 공유 확장에는 다른 조직에서 공유하는 확장임을 나타내는 ***수신*** 배지가 표시됩니다.
 
-![받는 중&quot; 배지가 있는 공유 확장을 표시하는 [!UICONTROL 카탈로그] 탭](../images/shared-extensions/receiving-badge.png)
+![공유 확장을 &quot;받는 중&quot; 배지로 표시하는 [!UICONTROL Catalog] 탭](../images/shared-extensions/receiving-badge.png)
 
 ## 권한 취소
 
 소유 조직으로서 현재 상태(승인 대기 중, 거부됨 또는 승인됨)에 관계없이 언제든지 승인을 삭제할 수 있습니다.
 
 **확장을 공개하지 않은 경우:**
+
 - 수신 조직이 이미 설치한 비공개 버전은 설치된 확장 목록에 계속 표시됩니다.
 - 수신 조직에서 확장을 설치하지 않은 경우 해당 인터페이스의 아무 위치에도 더 이상 표시되지 않습니다.
 
 **확장을 공개하는 경우:**
+
 - 수신 조직이 설치한 비공개 버전은 설치된 확장 목록에 계속 표시됩니다.
 - 비공개 버전을 설치하지 않은 경우에도 카탈로그에 최신 공개 버전이 표시되고 설치할 수 있습니다.
 - 원하는 경우 개인 버전에서 사용 가능한 최신 공개 버전으로 다운그레이드할 수도 있습니다.

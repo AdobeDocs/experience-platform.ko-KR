@@ -5,7 +5,7 @@ title: 흐름 서비스 API를 사용하여 프로토콜 소스에 대한 데이
 type: Tutorial
 description: 이 튜토리얼에서는 프로토콜 응용 프로그램에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Experience Platform으로 수집하는 단계를 다룹니다.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1326'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 >
 >* 데이터 흐름을 만들려면 프로토콜 원본이 있는 올바른 기본 연결 ID가 이미 있어야 합니다. 이 ID가 없으면 기본 연결을 만들 수 있는 프로토콜 원본 목록을 보려면 [원본 개요](../../../home.md#protocols)를 참조하십시오.
 
-## 시작하기
+## 시작
 
 또한 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
@@ -214,7 +214,7 @@ curl -X POST \
 
 소스 데이터를 타겟 데이터 세트에 수집하려면 먼저 타겟 데이터 세트가 준수하는 타겟 스키마에 매핑해야 합니다.
 
-매핑 세트를 만들려면 대상 XDM 스키마 `$id`과(와) 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)의 `mappingSets` 끝점에 대한 POST 요청을 수행하십시오.
+매핑 세트를 만들려면 대상 XDM 스키마 `mappingSets`과(와) 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)의 `$id` 끝점에 대한 POST 요청을 수행하십시오.
 
 **API 형식**
 

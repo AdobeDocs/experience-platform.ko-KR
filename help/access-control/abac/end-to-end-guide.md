@@ -4,10 +4,10 @@ title: 속성 기반 액세스 제어 엔드투엔드 안내서
 description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 전체 안내서를 제공합니다
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1603'
-ht-degree: 7%
+source-wordcount: '1522'
+ht-degree: 8%
 
 ---
 
@@ -36,30 +36,30 @@ Adobe Experience Platform에서 속성 기반 액세스 제어를 사용하여 �
 
 의료 서비스 제공업체로서 조직의 리소스에 대한 액세스를 구성하려고 합니다.
 
-* 내부 마케팅 팀에서 **[!UICONTROL PHI/ 규제 상태 데이터]** 데이터에 액세스할 수 있어야 합니다.
-* 외부 에이전트에서 **[!UICONTROL PHI/ 규제 상태 데이터]** 데이터에 액세스할 수 없습니다.
+* 내부 마케팅 팀에서 **[!UICONTROL PHI/ Regulated Health Data]** 데이터에 액세스할 수 있어야 합니다.
+* 외부 에이전트에서 **[!UICONTROL PHI/ Regulated Health Data]** 데이터에 액세스할 수 없습니다.
 
 이렇게 하려면 역할, 리소스 및 정책을 구성해야 합니다.
 
 다음을 수행할 수 있습니다.
 
 * [사용자의 역할에 레이블 지정](#label-roles): 마케팅 그룹이 외부 에이전시와 함께 작동하는 의료 공급자(ACME 비즈니스 그룹)의 예를 사용하십시오.
-* [리소스(스키마 필드 및 대상)에 레이블 지정](#label-resources): 스키마 리소스 및 대상에 **[!UICONTROL PHI/ 규제 상태 데이터]** 레이블을 지정합니다.
+* [리소스(스키마 필드 및 대상)에 레이블 지정](#label-resources): 스키마 리소스 및 대상에 **[!UICONTROL PHI/ Regulated Health Data]** 레이블을 지정합니다.
 * [함께 연결할 정책을 활성화합니다](#policy): 기본 정책을 사용하여 리소스의 레이블을 역할의 레이블에 연결하여 스키마 필드 및 대상에 대한 액세스를 차단합니다. 그러면 레이블이 일치하는 사용자에게 모든 샌드박스의 스키마 필드 및 세그먼트에 대한 액세스 권한이 제공됩니다.
 
 ## 권한
 
-[!UICONTROL 권한]은(는) 관리자가 사용자 역할과 정책을 정의하여 제품 응용 프로그램 내의 기능 및 개체에 대한 권한을 관리할 수 있는 Experience Cloud 영역입니다.
+[!UICONTROL Permissions]은(는) 관리자가 사용자 역할과 정책을 정의하여 제품 응용 프로그램 내의 기능 및 개체에 대한 권한을 관리할 수 있는 Experience Cloud 영역입니다.
 
-[!UICONTROL 권한]을 통해 역할을 만들고 관리하며 이러한 역할에 대해 원하는 리소스 권한을 할당할 수 있습니다. [!UICONTROL 권한]을 통해 레이블, 샌드박스 및 특정 역할과 연결된 사용자를 관리할 수도 있습니다.
+[!UICONTROL Permissions]을(를) 통해 역할을 만들고 관리하며 이러한 역할에 대해 원하는 리소스 권한을 할당할 수 있습니다. [!UICONTROL Permissions]을(를) 사용하면 레이블, 샌드박스 및 특정 역할과 연결된 사용자를 관리할 수도 있습니다.
 
 관리자 권한이 없는 경우 시스템 관리자에게 문의하여 액세스 권한을 받으십시오.
 
-관리자 권한이 있으면 [Adobe Experience Cloud](https://experience.adobe.com/)&#x200B;(으)로 이동하여 Adobe 자격 증명을 사용하여 로그인하십시오. 로그인하면 관리자 권한이 있는 조직의 **[!UICONTROL 개요]** 페이지가 나타납니다. 이 페이지에는 조직이 구독한 제품과 함께 사용자 및 관리자를 조직에 추가할 수 있는 다른 컨트롤이 표시됩니다. Experience Platform 통합을 위한 작업 영역을 열려면 **[!UICONTROL 권한]**&#x200B;을 선택하십시오.
+관리자 권한이 있으면 [Adobe Experience Cloud](https://experience.adobe.com/)&#x200B;(으)로 이동하여 Adobe 자격 증명을 사용하여 로그인하십시오. 로그인하면 관리자 권한이 있는 조직의 **[!UICONTROL Overview]** 페이지가 나타납니다. 이 페이지에는 조직이 구독한 제품과 함께 사용자 및 관리자를 조직에 추가할 수 있는 다른 컨트롤이 표시됩니다. **[!UICONTROL Permissions]**&#x200B;을(를) 선택하여 Experience Platform 통합을 위한 작업 영역을 엽니다.
 
 ![Adobe Experience Cloud에서 선택 중인 권한 제품을 보여 주는 이미지](../images/flac-ui/flac-select-product.png)
 
-Experience Platform UI에 대한 권한 작업 영역이 표시되어 **[!UICONTROL 개요]** 페이지에 열립니다.
+Experience Platform UI에 대한 권한 작업 영역이 **[!UICONTROL Overview]** 페이지에서 열립니다.
 
 ## 역할에 레이블 적용 {#label-roles}
 
@@ -67,19 +67,19 @@ Experience Platform UI에 대한 권한 작업 영역이 표시되어 **[!UICONT
 >id="platform_permissions_labels_about"
 >title="레이블이란 무엇입니까?"
 >abstract="레이블을 사용하면 해당 데이터에 적용되는 사용 및 액세스 정책에 따라 데이터 세트 및 필드를 분류할 수 있습니다. Adobe Experience Platform은 데이터 거버넌스에 적용할 수 있는 다양한 공통 제한 사항을 다루는 Adobe에서 정의한 여러 <strong>핵심</strong> 데이터 사용 레이블을 제공합니다. 예를 들어 RHD(규제 건강 데이터)와 같은 민감 (<strong>S</strong>) 레이블을 사용하면 PHI(개인건강정보)를 참조하는 데이터를 분류할 수 있습니다. 조직의 요구 사항에 맞는 고유한 사용자 정의 레이블을 정의할 수도 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ko#understanding-data-usage-labels" text="데이터 사용 레이블 개요"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="데이터 사용 레이블 개요"
 
 역할은 Experience Platform 인스턴스와 상호 작용하는 사용자 유형을 분류하는 방법이며 액세스 제어 정책을 작성하는 빌딩 블록입니다. 역할에는 지정된 권한 집합이 있으며, 필요한 액세스 범위에 따라 조직 구성원을 하나 이상의 역할에 할당할 수 있습니다.
 
-시작하려면 왼쪽 탐색에서 **[!UICONTROL 역할]**&#x200B;을 선택한 다음 **[!UICONTROL ACME 비즈니스 그룹]**&#x200B;을 선택하십시오.
+시작하려면 왼쪽 탐색에서 **[!UICONTROL Roles]**&#x200B;을(를) 선택한 다음 **[!UICONTROL ACME Business Group]**&#x200B;을(를) 선택하십시오.
 
 ![역할에서 선택 중인 ACME 비즈니스 그룹을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
-**[!UICONTROL 레이블]**&#x200B;을 선택한 다음 **[!UICONTROL 레이블 추가]**&#x200B;를 선택합니다.
+**[!UICONTROL Labels]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Add Labels]**&#x200B;을(를) 선택합니다.
 
 ![레이블 탭에서 선택된 레이블 추가를 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-조직의 모든 레이블 목록이 나타납니다. **[!UICONTROL RHD]**&#x200B;을(를) 선택하여 **[!UICONTROL PHI/규제 상태 데이터]**&#x200B;에 대한 레이블을 추가한 다음 **[!UICONTROL 저장]**&#x200B;을(를) 선택합니다.
+조직의 모든 레이블 목록이 나타납니다. **[!UICONTROL RHD]**&#x200B;을(를) 선택하여 **[!UICONTROL PHI/Regulated Health Data]**&#x200B;에 대한 레이블을 추가한 다음 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
 ![선택 및 저장되는 RHD 레이블을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
@@ -91,19 +91,19 @@ Experience Platform UI에 대한 권한 작업 영역이 표시되어 **[!UICONT
 
 [!UICONTROL RHD] 레이블로 사용자 역할을 구성했으므로 다음 단계에서는 해당 역할에 대해 제어할 리소스에 동일한 레이블을 추가합니다.
 
-위쪽 탐색에서 **응용 프로그램 전환기** 아이콘으로 표시되는 ![응용 프로그램 전환기](/help/images/icons/apps.png)를 선택한 다음 **[!UICONTROL Experience Platform]**&#x200B;을 선택합니다.
+위쪽 탐색에서 **응용 프로그램 전환기** 아이콘으로 표시되는 ![응용 프로그램 전환기](/help/images/icons/apps.png)를 선택한 다음 **[!UICONTROL Experience Platform]**&#x200B;을(를) 선택합니다.
 
 ![응용 프로그램 전환기의 드롭다운 메뉴에서 Experience Platform을 표시하는 이미지](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
-왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택한 다음 표시되는 스키마 목록에서 **[!UICONTROL ACME 의료 서비스]**&#x200B;를 선택하십시오.
+왼쪽 탐색에서 **[!UICONTROL Schemas]**&#x200B;을(를) 선택한 다음 표시되는 스키마 목록에서 **[!UICONTROL ACME Healthcare]**&#x200B;을(를) 선택하십시오.
 
 ![스키마 탭에서 선택된 ACME 의료 서비스 스키마를 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-그런 다음 **[!UICONTROL 레이블]**&#x200B;을 선택하여 스키마와 연결된 필드를 표시하는 목록을 확인합니다. 여기에서 한 번에 하나 또는 여러 필드에 레이블을 할당할 수 있습니다. **[!UICONTROL 혈당]** 및 **[!UICONTROL 인슐린 수준]** 필드를 선택한 다음 **[!UICONTROL 액세스 및 데이터 거버넌스 레이블 적용]**&#x200B;을 선택하십시오.
+**[!UICONTROL Labels]**&#x200B;을(를) 선택하여 스키마와 연결된 필드를 표시하는 목록을 확인합니다. 여기에서 한 번에 하나 또는 여러 필드에 레이블을 할당할 수 있습니다. **[!UICONTROL BloodGlucose]** 및 **[!UICONTROL InsulinLevel]** 필드를 선택한 다음 **[!UICONTROL Apply access and data governance labels]**&#x200B;을(를) 선택하십시오.
 
 ![혈당 및 인슐린 수준을 선택하고 액세스 및 데이터 거버넌스 레이블을 적용하는 것을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
-스키마 필드에 적용할 레이블을 선택할 수 있는 **[!UICONTROL 레이블 편집]** 대화 상자가 나타납니다. 이 사용 사례의 경우 **[!UICONTROL PHI/ 규제 상태 데이터]** 레이블을 선택한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+스키마 필드에 적용할 레이블을 선택할 수 있는 **[!UICONTROL Edit labels]** 대화 상자가 나타납니다. 이 사용 사례의 경우 **[!UICONTROL PHI/ Regulated Health Data]** 레이블을 선택한 다음 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
 ![선택 및 저장되는 RHD 레이블을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
 
@@ -119,46 +119,46 @@ Experience Platform UI에 대한 권한 작업 영역이 표시되어 **[!UICONT
 
 스키마 필드에 레이블 지정을 완료한 후에는 대상에 레이블을 지정할 수 있습니다.
 
-**[!UICONTROL 고객]** 섹션 아래의 왼쪽 탐색에서 **[!UICONTROL 대상]**&#x200B;을(를) 선택하십시오. 조직에서 사용할 수 있는 대상자 목록이 표시됩니다. 이 예에서 다음 두 대상에는 중요한 상태 데이터가 포함되어 있으므로 레이블이 지정됩니다.
+**[!UICONTROL Audiences]** 섹션 아래의 왼쪽 탐색에서 **[!UICONTROL Customers]**&#x200B;을(를) 선택합니다. 조직에서 사용할 수 있는 대상자 목록이 표시됩니다. 이 예에서 다음 두 대상에는 중요한 상태 데이터가 포함되어 있으므로 레이블이 지정됩니다.
 
 * 혈당 >100
 * 인슐린 &lt;50
 
-**[!UICONTROL 혈당 >100]**(확인란이 아닌 대상 이름으로)을 선택하여 대상에 레이블을 지정합니다.
+**[!UICONTROL Blood Glucose >100]**(확인란이 아닌 대상 이름으로)을(를) 선택하여 대상 레이블을 지정합니다.
 
 ![대상자 탭에서 혈당 100 이상을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-audience.png)
 
-세그먼트 **[!UICONTROL 세부 정보]** 화면이 나타납니다. **[!UICONTROL 액세스 관리]**&#x200B;를 선택합니다.
+**[!UICONTROL Details]** 세그먼트 화면이 나타납니다. **[!UICONTROL Manage Access]**&#x200B;를 선택합니다.
 
 ![액세스 관리 선택을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-audience-fields-manage-access.png)
 
-대상자에 적용할 레이블을 선택할 수 있는 **[!UICONTROL 액세스 및 데이터 거버넌스 레이블 적용]** 대화 상자가 나타납니다. 이 사용 사례의 경우 **[!UICONTROL PHI/ 규제 상태 데이터]** 레이블을 선택한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+대상자에 적용할 레이블을 선택할 수 있는 **[!UICONTROL Apply access and data governance labels]** 대화 상자가 나타납니다. 이 사용 사례의 경우 **[!UICONTROL PHI/ Regulated Health Data]** 레이블을 선택한 다음 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
 ![선택 중인 RHD 레이블 및 저장을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-audience-labels.png)
 
-**[!UICONTROL 인슐린 &lt;50]**(으)로 위의 단계를 반복합니다.
+**[!UICONTROL Insulin <50]**&#x200B;을(를) 사용하여 위의 단계를 반복합니다.
 
 >[!NOTE]
 >
-> [!UICONTROL 개체 수준 액세스 제어]를 사용하여 [권한](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/access-control/object-based-access) 작업 영역에서 만든 레이블(예: 위의 세그먼트 레이블)을 Adobe Journey Optimizer의 다양한 개체에 할당합니다.&quot;
+> [!UICONTROL Permissions]개체 수준 액세스 제어[를 사용하여 ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access) 작업 영역에서 만든 레이블(예: 위의 세그먼트 레이블)을 Adobe Journey Optimizer의 다양한 개체에 할당합니다.&quot;
 
 ## 액세스 제어 정책 활성화 {#policy}
 
 기본 액세스 제어 정책은 레이블을 활용하여 특정 Experience Platform 리소스에 액세스할 수 있는 사용자 역할을 정의합니다. 이 예에서는 스키마 필드에 해당 레이블이 있는 역할에 없는 사용자의 경우 모든 샌드박스에서 스키마 필드 및 대상에 대한 액세스가 거부됩니다.
 
-액세스 제어 정책을 활성화하려면 왼쪽 탐색에서 [!UICONTROL 권한]을 선택한 다음 **[!UICONTROL 정책]**&#x200B;을 선택하십시오.
+액세스 제어 정책을 활성화하려면 왼쪽 탐색에서 [!UICONTROL Permissions]을(를) 선택한 다음 **[!UICONTROL Policies]**&#x200B;을(를) 선택하십시오.
 
 ![표시된 정책 목록](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-`...`기본 필드 수준 액세스 제어 정책&#x200B;**[!UICONTROL 옆에 있는 줄임표(]**)를 선택하면 드롭다운에 역할을 편집, 활성화, 삭제 또는 복제하는 컨트롤이 표시됩니다. 드롭다운에서 **[!UICONTROL 활성화]**&#x200B;를 선택합니다.
+그런 다음 `...` 옆에 있는 줄임표(**[!UICONTROL Default-Field-Level-Access-Control-Policy]**)를 선택하면 드롭다운에 역할을 편집, 활성화, 삭제 또는 복제하는 컨트롤이 표시됩니다. 드롭다운에서 **[!UICONTROL Activate]**&#x200B;을(를) 선택합니다.
 
 정책을 활성화하기 위한 ![드롭다운](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-활성화를 확인하라는 메시지가 표시되는 정책 활성화 대화 상자가 나타납니다. **[!UICONTROL 확인]**&#x200B;을 선택합니다.
+활성화를 확인하라는 메시지가 표시되는 정책 활성화 대화 상자가 나타납니다. **[!UICONTROL Confirm]**&#x200B;를 선택합니다.
 
 ![정책 대화 상자 활성화](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
-정책 활성화를 확인하면 [!UICONTROL 정책] 페이지로 돌아갑니다.
+정책 활성화 확인을 받으면 [!UICONTROL Policies] 페이지로 돌아갑니다.
 
 ![정책 확인 활성화](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
@@ -168,19 +168,19 @@ Experience Platform UI에 대한 권한 작업 영역이 표시되어 **[!UICONT
 >id="platform_permissions_policies_about"
 >title="What are policies?"
 >abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=ko" text="Manage policies"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html" text="Manage policies"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
 >title="Create a policy"
 >abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=ko#create-a-new-policy" text="Create a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
 >abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=ko#edit-a-policy" text="Edit a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
@@ -237,7 +237,7 @@ Select **[!UICONTROL The following being false]** and then select **[!UICONTROL 
 
 Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears which prompts you to confirm activation. Select **[!UICONTROL Confirm]** and then select **[!UICONTROL Close]**.
 
-![Image showing the Policy being activated ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) -->
+![Image showing the Policy being activated](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) -->
 
 ## 다음 단계
 
@@ -247,4 +247,4 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 다음 비디오에서는 속성 기반 액세스 제어에 대한 이해를 돕기 위해 역할, 리소스 및 정책을 구성하는 방법에 대해 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3451845?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)

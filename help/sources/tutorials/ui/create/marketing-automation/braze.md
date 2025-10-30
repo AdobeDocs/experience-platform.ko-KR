@@ -4,10 +4,10 @@ description: Adobe Experience Platform UI를 사용하여 Braze 계정의 데이
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 2%
+source-wordcount: '971'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 2%
 * [Adobe Experience Platform](https://platform.adobe.com)에 대한 로그인 및 새 스트리밍 원본 연결을 만들 수 있는 권한입니다.
 * [[!DNL Braze] 대시보드](https://dashboard.braze.com/sign_in)에 대한 로그인, 사용하지 않은 [현재 커넥터 라이선스](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents) 및 커넥터를 만들 수 있는 권한. 자세한 내용은 [설정 요구 사항 [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements)을 읽어 보십시오.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
@@ -47,19 +47,19 @@ ht-degree: 2%
 >
 >[!DNL Braze Currents] 연결을 처음 만드는 경우 XDM(경험 데이터 모델) 스키마를 만들어야 합니다. [!DNL Braze Currents]에 대한 스키마를 이미 만든 경우 이 단계를 건너뛰고 [계정을 Experience Platform에 연결](#connect)로 진행할 수 있습니다.
 
-Experience Platform UI에서 왼쪽 탐색을 사용한 다음 **[!UICONTROL 스키마]**&#x200B;을(를) 선택하여 [!UICONTROL 스키마] 작업 영역에 액세스합니다. **[!UICONTROL 스키마 만들기]**&#x200B;를 선택한 다음 **[!UICONTROL 경험 이벤트]**&#x200B;를 선택합니다. 계속하려면 **[!UICONTROL 다음]**&#x200B;을 선택하세요.
+Experience Platform UI에서 왼쪽 탐색을 사용한 다음 **[!UICONTROL Schemas]**&#x200B;을(를) 선택하여 [!UICONTROL Schemas] 작업 영역에 액세스합니다. **[!UICONTROL Create schema]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Experience Event]**&#x200B;을(를) 선택합니다. 계속하려면 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
 ![완료된 스키마입니다.](../../../../images/tutorials/create/braze/schema.png)
 
-스키마의 이름과 설명을 입력합니다. 그런 다음 [!UICONTROL 컴포지션] 패널을 사용하여 스키마 특성을 구성합니다. [!UICONTROL 필드 그룹]에서 **[!UICONTROL 추가]**&#x200B;를 선택하고 [!UICONTROL 현재 동기화 사용자 이벤트] 필드 그룹을 추가하십시오. 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+스키마의 이름과 설명을 입력합니다. 그런 다음 [!UICONTROL Composition] 패널을 사용하여 스키마 특성을 구성합니다. [!UICONTROL Field groups]에서 **[!UICONTROL Add]**&#x200B;을(를) 선택하고 [!UICONTROL Braze Currents User Event] 필드 그룹을 추가합니다. 완료되면 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
 스키마에 대한 자세한 내용은 [UI에서 스키마 만들기](../../../../../xdm/tutorials/create-schema-ui.md)에 대한 안내서를 참조하십시오.
 
 ## [!DNL Braze] 계정을 Experience Platform에 연결 {#connect}
 
-Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Sources]**&#x200B;을(를) 선택하여 [!UICONTROL Sources] 작업 영역에 액세스합니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-*마케팅 자동화* 범주에서 **[!UICONTROL 현재 동기화]**&#x200B;를 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
+*마케팅 자동화* 범주에서 **[!UICONTROL Braze Currents]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Add data]**&#x200B;을(를) 선택합니다.
 
 ![현재 동기화 원본이 선택된 Experience Platform UI의 원본 카탈로그입니다.](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -78,19 +78,19 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 소스 데이터에서 *id*&#x200B;이(가) *_braze.appID*&#x200B;에 잘못 매핑됩니다. 스키마의 루트 수준에서 대상 매핑 필드를 *_id*(으)로 변경해야 합니다. 그런 다음 *properties.is_amp*&#x200B;이(가) *_braze.messaging.email.isAMP*&#x200B;에 매핑되어 있는지 확인하십시오.
 
-*타임스탬프*&#x200B;에 대한 *time* 매핑을 삭제한 다음 추가(`+`) 아이콘을 선택한 다음 **[!UICONTROL 계산된 필드 추가]**&#x200B;를 선택하십시오. 제공된 상자에 *시간 \* 1000*&#x200B;을 입력하고 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+*타임스탬프*&#x200B;에 대한 *time* 매핑을 삭제한 다음 추가(`+`) 아이콘을 선택한 다음 **[!UICONTROL Add calculated field]**&#x200B;을(를) 선택하십시오. 제공된 상자에 *시간 \* 1000*&#x200B;을 입력하고 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
-새 계산된 필드가 추가되면 새 소스 필드 옆의 **[!UICONTROL 대상 필드 매핑]**&#x200B;을(를) 선택하고 스키마의 루트 수준에서 *타임스탬프*&#x200B;에 매핑합니다. 그런 다음 **[!UICONTROL 유효성 검사]**&#x200B;를 선택하여 더 이상 오류가 없는지 확인해야 합니다.
+새 계산된 필드가 추가되면 새 소스 필드 옆의 **[!UICONTROL Map target field]**&#x200B;을(를) 선택하고 스키마의 루트 수준에서 *타임스탬프*&#x200B;에 매핑합니다. 그런 다음 **[!UICONTROL Validate]**&#x200B;을(를) 선택하여 더 이상 오류가 없는지 확인해야 합니다.
 
 >[!IMPORTANT]
 >
 >브레이즈 타임스탬프는 밀리초로 표시되지 않고, 초 단위로 표시됩니다. Experience Platform의 타임스탬프를 정확하게 반영하려면 계산된 필드를 밀리초 단위로 만들어야 합니다. &quot;시간 * 1000&quot;의 계산은 Experience Platform 내의 타임스탬프 필드에 매핑하는 데 적합한 밀리초로 올바르게 변환됩니다.
 >
->![타임스탬프 &#x200B;](../../../../images/tutorials/create/braze/create-calculated-field.png)에 대해 계산된 필드를 만드는 중
+>![타임스탬프에 대한 계산된 필드를 만드는 중](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
 ![오류가 없는 매핑입니다.](../../../../images/tutorials/create/braze/completed_mapping.png)
 
-완료되면 **[!UICONTROL 다음]**&#x200B;을 선택합니다. 검토 페이지를 사용하여 데이터 흐름의 세부 정보를 확인한 다음 **[!UICONTROL 마침]**&#x200B;을 선택합니다.
+완료되면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다. 검토 페이지에서 데이터 흐름의 세부 정보를 확인한 다음 **[!UICONTROL Finish]**&#x200B;을(를) 선택하십시오.
 
 ### 필요한 자격 증명 수집
 
@@ -100,7 +100,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 | --- | --- |
 | 클라이언트 ID | Experience Platform 소스와 연결된 클라이언트 ID. |
 | 클라이언트 암호 | Experience Platform 소스와 연결된 클라이언트 암호입니다. |
-| 테넌트 ID | Experience Platform 소스와 연결된 테넌트 ID입니다. |
+| 임차인 ID | Experience Platform 소스와 연결된 테넌트 ID입니다. |
 | 샌드박스 이름 | Experience Platform 소스와 연결된 샌드박스. |
 | 데이터 흐름 ID | Experience Platform 소스와 연결된 데이터 흐름 ID. |
 | 스트리밍 엔드포인트 | Experience Platform 소스와 연결된 스트리밍 엔드포인트. **참고**: [!DNL Braze]에서 일괄 처리 스트리밍 끝점으로 자동 변환합니다. |

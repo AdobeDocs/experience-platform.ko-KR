@@ -2,7 +2,7 @@
 title: Id 그래프 연결 규칙 구성 안내서
 description: ID 그래프 연결 규칙을 사용하여 구성할 수 있는 다양한 구현 유형에 대해 알아봅니다.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 6af5f87c9c32212568e84edbed9f043a766870be
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -407,6 +407,7 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 >[!NOTE]
 >
 >아래 구현을 완료하려면 다음의 ID 기호(대/소문자 구분)를 사용하여 사용자 지정 네임스페이스를 만들어야 합니다.
+>
 >* `CRMID`
 >* `loginID`
 

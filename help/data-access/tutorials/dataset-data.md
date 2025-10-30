@@ -5,10 +5,10 @@ title: 데이터 액세스 API를 사용하여 데이터 세트 데이터 보기
 type: Tutorial
 description: Adobe Experience Platform의 Data Access API를 사용하여 데이터 세트 내에 저장된 데이터를 찾고, 액세스하고, 다운로드하는 방법을 알아봅니다. 이 문서에서는 페이징 및 부분 다운로드와 같은 Data Access API의 고유한 기능 중 일부를 소개합니다.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1365'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 7%
 
 이 단계별 자습서를 사용하여 Adobe Experience Platform에서 [!DNL Data Access] API를 사용하여 데이터 세트 내에 저장된 데이터를 찾고, 액세스하고, 다운로드하는 방법을 알아보십시오. 이 문서에서는 페이징 및 부분 다운로드와 같은 [!DNL Data Access] API의 고유한 기능 중 일부를 소개합니다.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 데이터 세트를 만들고 채우는 방법에 대한 작업 이해를 필요로 합니다. 자세한 내용은 [데이터 집합 만들기 자습서](../../catalog/datasets/create.md)를 참조하세요.
 
@@ -24,7 +24,7 @@ ht-degree: 7%
 
 ### 샘플 API 호출 읽기 {#reading-sample-api-calls}
 
-이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request)에 대한 섹션을 참조하십시오.
+이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 문서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 섹션을 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
@@ -416,7 +416,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 ## 파일의 일부 내용 다운로드 {#download-partial-file-contents}
 
-파일에서 특정 바이트 범위를 다운로드하려면 [!DNL Data Access] API에 대한 `GET /files/{FILE_ID}` 요청 중에 범위 헤더를 지정하십시오. 범위를 지정하지 않으면 기본적으로 API가 전체 파일을 다운로드합니다.
+파일에서 특정 바이트 범위를 다운로드하려면 `GET /files/{FILE_ID}` API에 대한 [!DNL Data Access] 요청 중에 범위 헤더를 지정하십시오. 범위를 지정하지 않으면 기본적으로 API가 전체 파일을 다운로드합니다.
 
 [이전 섹션](#retrieve-the-metadata-of-a-file)의 HEAD 예제는 특정 파일의 크기를 바이트 단위로 제공합니다.
 
@@ -428,7 +428,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{FILE_ID} ` | 파일 식별자. |
+| `{FILE_ID}` | 파일 식별자. |
 | `{FILE_NAME}` | 파일 이름(예: profiles.parquet) |
 
 **요청**
@@ -488,7 +488,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c102cac7c
 
 **응답**:
 
-요청 매개 변수 `limit=1`에 지정된 대로 응답에 단일 요소가 있는 `"data"` 배열이 포함되어 있습니다. 이 요소는 요청의 `start=0` 매개 변수에 지정된 대로 사용 가능한 첫 번째 파일의 세부 정보를 포함하는 개체입니다(0 기반 번호 매기기를 사용할 때 첫 번째 요소는 &quot;0&quot;).
+요청 매개 변수 `"data"`에 지정된 대로 응답에 단일 요소가 있는 `limit=1` 배열이 포함되어 있습니다. 이 요소는 요청의 `start=0` 매개 변수에 지정된 대로 사용 가능한 첫 번째 파일의 세부 정보를 포함하는 개체입니다(0 기반 번호 매기기를 사용할 때 첫 번째 요소는 &quot;0&quot;).
 
 `_links.next.href` 값에는 `start` 매개 변수가 `start=1`(으)로 이동한 다음 응답 페이지에 대한 링크가 포함되어 있습니다.
 

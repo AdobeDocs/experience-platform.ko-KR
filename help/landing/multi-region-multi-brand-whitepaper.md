@@ -1,7 +1,7 @@
 ---
 title: 다중 지역, 다중 브랜드 기업을 위한 Adobe Experience Platform
 description: Adobe Experience Platform의 복잡한 내용을 효과적으로 탐색하는 데 필요한 도구 및 통찰력을 구현 팀에 제공하는 방법을 알아봅니다.
-source-git-commit: e930b070f18e220cc1fa97bb0183520d495f33be
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '5325'
 ht-degree: 0%
@@ -28,14 +28,17 @@ Experience Platform은 구조를 나타내고 확장 가능하고 유연한 구�
 배포 옵션을 살펴볼 때 Experience Platform 및 플랫폼 기반 애플리케이션과 상호 작용할 담당자를 이해하고 고려해야 합니다. 역할과 관심사를 기반으로 경험을 설계하면 성공적인 구현이 보장됩니다. 옵션을 탐색할 때 고려해야 하는 세 가지 주요 담당자는 다음과 같습니다.
 
 **Mary, 마케터:**
+
 - 포커스: 고객 확보 및 규모에 맞는 경험 개인화입니다.
 - 목표: 포괄적인 프로필 만들기, 미디어 효율성 향상.
 
 **Ted, 기술 전문가**
+
 - 포커스: 조직 데이터 관리.
 - 목표: 규정 준수 보장, 데이터 사일로 관리, 다양한 비즈니스 라인 서비스
 
 **Dan, 데이터 설계자**
+
 - 초점: 데이터 정확성 및 품질.
 - 목표: 데이터 개인정보 보호 및 신뢰 보장, 스키마 및 데이터 모델 디자인, 데이터 소스 관리
 
@@ -77,13 +80,13 @@ Experience Platform의 주요 아키텍처 원칙은 거버넌스 정책 및 요
 
 모든 Experience Platform 및 플랫폼 기반 애플리케이션 기능에 액세스할 필요가 없는 데이터 엔지니어를 생각해 보십시오. 일반적으로 데이터 정의(스키마) 생성, 데이터를 수집하도록 데이터 소스 구성 및 데이터 세트 생성을 담당합니다. 그러나 개인화된 고객 경험에 대한 대상을 만들고 활성화하는 성향과 동일하지 않을 수 있습니다. 이 담당자의 경우 역할을 만들고 적절한 권한을 추가한 다음 필요한 기능에 대한 액세스 권한만 부여합니다. 반면 마케터는 스키마를 만들고 데이터를 수집하는 것이 아니라 개인화된 고객 경험을 활성화하기 위한 대상을 만들고 활성화하는 데 중점을 둡니다.
 
-원할 경우 속성 기반 액세스 제어/필드 수준 액세스 제어 기능을 사용하여 통합 고객 프로필의 특정 필드에 대한 액세스를 제한하기 위해 세분화된 액세스 제어를 추가하는 것이 좋습니다. 사전 정의된 레이블을 기반으로 데이터 속성에 대한 액세스를 제한할 수 있는 Experience Platform의 거버넌스 메커니즘입니다. 필드 수준 액세스 제어를 사용하면 개인 식별 데이터를 관리할 수 있으며 모든 Experience Platform 및 애플리케이션 워크플로우에서 액세스가 제한됩니다. 액세스 제어 기능에 대한 자세한 내용은 [액세스 제어 설명서](https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/home)를 참조하세요.
+원할 경우 속성 기반 액세스 제어/필드 수준 액세스 제어 기능을 사용하여 통합 고객 프로필의 특정 필드에 대한 액세스를 제한하기 위해 세분화된 액세스 제어를 추가하는 것이 좋습니다. 사전 정의된 레이블을 기반으로 데이터 속성에 대한 액세스를 제한할 수 있는 Experience Platform의 거버넌스 메커니즘입니다. 필드 수준 액세스 제어를 사용하면 개인 식별 데이터를 관리할 수 있으며 모든 Experience Platform 및 애플리케이션 워크플로우에서 액세스가 제한됩니다. 액세스 제어 기능에 대한 자세한 내용은 [액세스 제어 설명서](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home)를 참조하세요.
 
 ![CDP 액세스 제어, 역할 권한 구성](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
 
 **개발 샌드박스를 사용한 개발 라이프사이클**
 
-개발 샌드박스는 모든 기능 측면에서 프로덕션 샌드박스와 동일한 방식으로 작동합니다. 라이선스 제한 범위 내에서 유지할 수 있는 몇 가지 계약 보호 기능이 있다는 점에서 다릅니다. 비프로덕션 프로필을 사용하는 개발 및 테스트용으로 독점적으로 설계되어 라이선스 프로필 약정의 최대 10%를 지원합니다(모든 승인된 개발 샌드박스에서 누적적으로 측정). 자세한 내용 및 보호 기능은 [샌드박스 개요 설명서](https://experienceleague.adobe.com/ko/docs/experience-platform/sandbox/home) 및 [제품 설명 페이지](https://helpx.adobe.com/kr/legal/product-descriptions.html)에서 사용 권한 정보를 참조하십시오.
+개발 샌드박스는 모든 기능 측면에서 프로덕션 샌드박스와 동일한 방식으로 작동합니다. 라이선스 제한 범위 내에서 유지할 수 있는 계약상의 보호 기능이 일부 있다는 점에서 다릅니다. 비프로덕션 프로필을 사용하는 개발 및 테스트용으로 독점적으로 설계되어 라이선스 프로필 약정의 최대 10%를 지원합니다(모든 승인된 개발 샌드박스에서 누적적으로 측정). 자세한 내용 및 보호 기능은 [샌드박스 개요 설명서](https://experienceleague.adobe.com/ko/docs/experience-platform/sandbox/home) 및 [제품 설명 페이지](https://helpx.adobe.com/legal/product-descriptions.html)에서 사용 권한 정보를 참조하십시오.
 
 개발 및 테스트 라이프사이클에 여러 개발 샌드박스(하나의 프로덕션 샌드박스를 사용하고 있으므로 이 엔터프라이즈 예에서는 최대 4개)를 사용할 수 있습니다.
 
@@ -99,7 +102,7 @@ Experience Platform의 주요 아키텍처 원칙은 거버넌스 정책 및 요
 
 Experience Platform API를 사용하여 샌드박스 배포 및 구성 작업을 자동화할 수 있습니다. API를 사용하면 샌드박스 구성 내보내기, 가져오기 또는 수정과 같은 반복적인 작업에 대해 프로그래밍 가능한 제어를 수행할 수 있으므로 자동화된 워크플로우를 선호하는 경우 유연성을 제공합니다.
 
-샌드박스 툴링에 대한 자세한 내용은 [샌드박스 툴 설명서](https://experienceleague.adobe.com/ko/docs/experience-platform/sandbox/ui/sandbox-tooling)를 참조하세요.
+샌드박스 툴링에 대한 자세한 내용은 [샌드박스 툴 설명서](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling)를 참조하세요.
 
 | ![CDP-패키지 만들기](./images/whitepaper/create-package.png) | ![CDP 목록 패키지](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -226,7 +229,7 @@ Customer Journey Analytics을 사용하여 글로벌 샌드박스의 집계된 �
 
 이 세그먼트 공유 서비스를 사용하면 두 명 이상의 사용자가 안전하고 관리되며 개인 정보 보호 친화적인 방식으로 세그먼트 데이터를 교환할 수 있습니다.
 
-세그먼트 일치 기능에 대한 자세한 내용은 [세그먼트 일치 설명서](https://experienceleague.adobe.com/ko/docs/experience-platform/segmentation/ui/segment-match/overview)를 참조하세요.
+세그먼트 일치 기능에 대한 자세한 내용은 [세그먼트 일치 설명서](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview)를 참조하세요.
 
 ### 3. 글로벌 운영, 지역 및 브랜드별 접근 방식의 혼합
 
@@ -238,7 +241,7 @@ Customer Journey Analytics을 사용하여 글로벌 샌드박스의 집계된 �
 
 #### 작동 방식
 
-먼저 구현을 계획하고, 최상위 환경을 구성하고, 이 엔터프라이즈에 가장 적합한 Experience Platform 및 플랫폼 기반 애플리케이션을 운영하는 데 필요한 샌드박스, 역할 및 권한의 수를 결정하겠습니다.
+구현을 계획하고, 최상위 환경을 구성하고, 이 엔터프라이즈에 가장 적합한 Experience Platform 및 플랫폼 기반 애플리케이션을 운영하는 데 필요한 샌드박스, 역할 및 권한의 수를 결정하는 것부터 시작하겠습니다.
 
 ##### 이 엔터프라이즈의 일반 설정
 
@@ -264,7 +267,7 @@ Customer Journey Analytics을 사용하여 글로벌 샌드박스의 집계된 �
 
 - 역할을 만들고 올바른 담당자의 특정 기능에 대한 액세스 권한만 부여합니다. 예를 들어 사용자 역할 &quot;**마케터—독일**&quot; 및 &quot;**마케터—프랑스**&quot;은(는) 필드 수준 액세스 제어, 개체 수준 액세스 제어 및 기본 대상의 조합으로 활성화된 국가 데이터에 대한 대상을 만들고, 보고, 관리할 수 있는 권한만 받습니다.
 
-- &quot;**기술자—전역**&quot; 역할을 만들고 스키마, 데이터 세트, 정책, 소스 등을 만들고 관리할 수 있는 올바른 권한을 부여합니다. 이 역할은 필요한 모든 관리 및 구성을 담당합니다.
+- 역할 &quot;**기술자—전역**&quot;을(를) 만들고 스키마, 데이터 세트, 정책, 원본 등을 만들고 관리할 수 있는 올바른 권한을 부여합니다. 이 역할은 필요한 모든 관리 및 구성을 담당합니다.
 
 ###### 스키마 디자인 및 속성 기반 액세스 제어: 필드 수준 액세스 제어
 
@@ -285,23 +288,23 @@ XDM 개별 프로필 스키마:
 ```
 \- PII
 \- Germany
-	\- name --> Label: "Germany"
-	\- email --> Label: "Germany"
-	\- birthdate --> Label: "Germany"
+    \- name --> Label: "Germany"
+    \- email --> Label: "Germany"
+    \- birthdate --> Label: "Germany"
 
 \- France
-	\- name --> Label: "France"
-	\- email --> Label: "France"
-	\- birthdate --> Label: "France"
+    \- name --> Label: "France"
+    \- email --> Label: "France"
+    \- birthdate --> Label: "France"
 
 \- Netherland
-	\- name --> Label: "Netherland", "Germany"
-	\- email --> Label: "Netherland", "Germany"
-	\- birthdate --> Label: "Netherland", "Germany"
+    \- name --> Label: "Netherland", "Germany"
+    \- email --> Label: "Netherland", "Germany"
+    \- birthdate --> Label: "Netherland", "Germany"
 
 \- Loyalty
-	\- member
-	\- registrationDate
+    \- member
+    \- registrationDate
 ```
 
 ###### 대상: 속성 기반 액세스 제어: 개체 수준 액세스 제어를 사용하여 브랜드/국가별 대상에 대한 액세스를 제어합니다
@@ -374,7 +377,7 @@ XDM 개별 프로필 스키마:
 
 | 이점 | 고려 사항 |
 | -------- | -------------- |
-| 다음은 여러 조직 ID가 있을 때의 이점 목록입니다. <ul><li>특정 전역 영역에 데이터를 저장할 수 있는 유연성.</li><li>인스턴스별&#x200B;으로 사용자 로그인 - 즉, Wholefoods가 Audible에 로그인할 수 없습니다&#x200B;.</li><li>각 시장/BU에 필요한 경우 자체 환경에 사용자 지정 연결을 구축할 수 있는 기능을 제공하는 전용 API 엔드포인트입니다&#x200B;.</li><li>각 사업부마다 고유한 고객 관리 키가 있습니다&#x200B;.</li><li>GDPR 요청은 비즈니스 단위별로 수행할 수 있습니다&#x200B;.</li><li>비즈니스 부서 간에 완벽하게 격리된 스토리지 및 컴퓨팅 &#x200B;.</li><li>일부 조직 수준의 성능 보호/제한을 완화합니다&#x200B;.</li><li>비즈니스 단위 간에 SKU를 프로비저닝하고 혼합할 수 있어 유연성이 향상됩니다. 예를 들어 한 조직은 다른 조직과 Adobe Journey Optimizer의 다른 SKU를 가질 수 있습니다.</li></ul> | 다음은 여러 조직 ID가 있을 때 고려해야 할 사항입니다. <ul><li>관리할 여러 조직 ID와 &#x200B; 하나</li><li>관리할 여러 개의 별도 인스턴스/환경(통합, 데이터 로드 등).</li><li>ECID&#x200B;은 조직별로 고유하므로 비즈니스 단위 간에 데이터를 일치시키기 어렵습니다&#x200B;.</li><li>조직별로 Analytics 및 Target을 마이그레이션/재구현해야 하므로 글로벌 롤업이 손실됩니다(현재 사용 중인 경우)&#x200B;.</li><li>여러 사업부에서 GDPR 요청을 수행하는 데 더 많은 오케스트레이션이 필요합니다&#x200B;.</li><li>일부 Experience Platform 기반 애플리케이션 통합은 조직 수준에서 메타데이터를 저장합니다. 모든 것이 샌드박스로 &quot;샌드박스&quot;되는 것은 아닙니다&#x200B;.</li><li>조직 ID가 영역에 고정되어 있습니다. Adobe AWS 호스팅 위치는 현재 미국에만 있습니다. Adobe은 한 호스팅 영역에서 다른 호스팅 영역으로 마이그레이션하는 기능을 지원하지 않습니다&#x200B;.</li><li>Edge은 샌드박스를 인식하지 못합니다(이벤트 전달용).</li></ul> |
+| 다음은 여러 조직 ID가 있을 때의 이점 목록입니다. <ul><li>특정 전역 영역에 데이터를 저장할 수 있는 유연성.</li><li>인스턴스당 &#x200B; 별도의 사용자 로그인 - 즉, Wholefoods가 Audible에 로그인할 수 없습니다&#x200B;.</li><li>각 시장/BU에 필요한 경우 자체 환경에 사용자 지정 연결을 구축할 수 있는 기능을 제공하는 전용 API 엔드포인트입니다&#x200B;.</li><li>각 사업부마다 고유한 고객 관리 키가 있습니다&#x200B;.</li><li>GDPR 요청은 비즈니스 단위별로 수행할 수 있습니다&#x200B;.</li><li>비즈니스 부서 간에 완벽하게 격리된 스토리지 및 컴퓨팅 &#x200B;.</li><li>일부 조직 수준의 성능 보호/제한을 완화합니다&#x200B;.</li><li>비즈니스 단위 간에 SKU를 프로비저닝하고 혼합할 수 있어 유연성이 향상됩니다. 예를 들어 한 조직은 다른 조직과 Adobe Journey Optimizer의 다른 SKU를 가질 수 있습니다.</li></ul> | 다음은 여러 조직 ID가 있을 때 고려해야 할 사항입니다. <ul><li>관리할 여러 조직 ID와 &#x200B; 하나</li><li>관리할 여러 개의 별도 인스턴스/환경(통합, 데이터 로드 등).</li><li>ECID&#x200B;은 조직별로 고유하므로 비즈니스 단위 간에 데이터를 일치시키기 어렵습니다&#x200B;.</li><li>조직별로 Analytics 및 Target을 마이그레이션/재구현해야 하므로 글로벌 롤업이 손실됩니다(현재 사용 중인 경우)&#x200B;.</li><li>여러 사업부에서 GDPR 요청을 수행하는 데 더 많은 오케스트레이션이 필요합니다&#x200B;.</li><li>일부 Experience Platform 기반 애플리케이션 통합은 조직 수준에서 메타데이터를 저장합니다. 모든 항목이 샌드박스로 &quot;샌드박스&quot;되는 것은 아닙니다&#x200B;.</li><li>조직 ID가 영역에 고정되어 있습니다. Adobe AWS 호스팅 위치는 현재 미국에만 있습니다. Adobe은 한 호스팅 영역에서 다른 호스팅 영역으로 마이그레이션하는 기능을 지원하지 않습니다&#x200B;.</li><li>Edge은 샌드박스를 인식하지 못합니다(이벤트 전달용).</li></ul> |
 
 **단일 조직 ID: 이점 및 고려 사항**
 
@@ -382,7 +385,7 @@ XDM 개별 프로필 스키마:
 
 | 이점 | 고려 사항 |
 | -------- | -------------- |
-| 다음은 단일 조직 ID가 있는 경우의 이점 목록입니다. <ul><li>개별 샌드박스를 프로비저닝하여 배포된 지역 내 비즈니스 단위 간에 논리적 분리 생성</li><li>사용자, 프로비저닝 등을 위해 관리할 IT 조직의 단일 ID.</li><li>동일한 조직 ID에 있는 경우 Adobe 태그, Target, Analytics 등의 마이그레이션이 없습니다.</li><li>기존 ECID에 재설정이 필요하지 않으므로 Adobe Analytics 데이터에서 &quot;클리핑&quot;이 발생하지 않습니다.</li><li>글로벌 마케팅 리소스를 위한 단일 로그인.</li><li>적절한 수준의 역할 기반 액세스 제어를 통해 샌드박스에 대한 액세스 권한을 누구에게 부여할지 제어할 수 있는 사용자 액세스 권한.</li><li>Global Analytics 및 Target 인스턴스와 보고서 세트 데이터를 활용합니다.</li></ul> | 다음은 단일 조직 ID가 있을 때 고려해야 할 사항입니다. <ul><li>데이터는 단일 영역에 저장됩니다.</li><li>데이터를 단일 조직 ID로 통합해야 할 가능성이 있습니다.</li><li>모든 사업부가 애플리케이션(핵심 Experience Platform, Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics) 간에 동일한 인프라를 공유하게 됩니다.</li><li>보호 기능: 일부는 1.5k RPS인 스트리밍 세그먼테이션과 같이 조직당 전역적입니다.</li><li>GDPR 요청은 조직 수준에서 작동하며 특정 샌드박스를 타깃팅할 수 없습니다.</li><li>고객 관리 키는 조직 ID 수준에서 설정되며, 모든 비즈니스 단위 샌드박스는 이 접근 방식으로 동일한 암호화 키를 공유합니다.</li><li>애플리케이션이 올바른 조직 ID로 프로비저닝되도록 하려면 DX 및 CC 전반에 걸친 엔터프라이즈 라이센스에 대한 명확한 설명이 필요합니다.</ul></li> |
+| 다음은 단일 조직 ID가 있는 경우의 이점 목록입니다. <ul><li>개별 샌드박스를 프로비저닝하여 배포된 지역 내 비즈니스 단위 간에 논리적 분리 생성</li><li>사용자, 프로비저닝 등을 위해 관리할 IT 조직의 단일 ID.</li><li>동일한 조직 ID에 있는 경우 Adobe 태그, Target, Analytics 등의 마이그레이션이 없습니다.</li><li>기존 ECID에 재설정이 필요하지 않음 - Adobe Analytics 데이터에서 &quot;클리핑&quot;을 방지할 수 있습니다.</li><li>글로벌 마케팅 리소스를 위한 단일 로그인.</li><li>적절한 수준의 역할 기반 액세스 제어를 통해 샌드박스에 대한 액세스 권한을 누구에게 부여할지 제어할 수 있는 사용자 액세스 권한.</li><li>Global Analytics 및 Target 인스턴스와 보고서 세트 데이터를 활용합니다.</li></ul> | 다음은 단일 조직 ID가 있을 때 고려해야 할 사항입니다. <ul><li>데이터는 단일 영역에 저장됩니다.</li><li>데이터를 단일 조직 ID로 통합해야 할 가능성이 있습니다.</li><li>모든 사업부가 애플리케이션(핵심 Experience Platform, Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics) 간에 동일한 인프라를 공유하게 됩니다.</li><li>보호 기능: 일부는 1.5k RPS인 스트리밍 세그먼테이션과 같이 조직당 전역적입니다.</li><li>GDPR 요청은 조직 수준에서 작동하며 특정 샌드박스를 타깃팅할 수 없습니다.</li><li>고객 관리 키는 조직 ID 수준에서 설정되며, 모든 비즈니스 단위 샌드박스는 이 접근 방식으로 동일한 암호화 키를 공유합니다.</li><li>애플리케이션이 올바른 조직 ID로 프로비저닝되도록 하려면 DX 및 CC 전반에 걸친 엔터프라이즈 라이센스에 대한 명확한 설명이 필요합니다.</ul></li> |
 
 **이점 및 고려 사항**
 
@@ -431,7 +434,7 @@ Experience Platform은 여러 브랜드의 멀티리전 비즈니스 모델 전�
 
    - 데이터 상주, 규정 준수 및 운영 요구 사항에 따라 **여러 조직 ID 또는 여러 샌드박스**&#x200B;를 배포할지 여부를 신중하게 평가해야 합니다.
 
-   - **조직 ID**&#x200B;은(는) 전체 격리를 제공하며 **&#x200B; 다중 샌드박스 설정은 공유 거버넌스 프레임워크 내에서 유연하게 작업할 수 &#x200B;**.
+   - **조직 ID**&#x200B;은(는) 전체 격리를 제공하며** 다중 샌드박스 설정은 공유 거버넌스 프레임워크 내에서 유연하게 작업할 수 **.
 
 ## 마지막 생각
 

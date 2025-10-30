@@ -3,7 +3,7 @@ title: Oracle NetSuite Source 개요
 description: API 또는 사용자 인터페이스를 사용하여 Oracle NetSuite를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2024-01-30T00:00:00Z
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '738'
 ht-degree: 6%
@@ -43,13 +43,13 @@ Experience Platform은 데이터 수집 서드파티 마케팅 자동화 시스�
    * 올바른 계정이 아직 없는 경우 [[!DNL Oracle NetSuite]](https://www.NetSuite.com/portal/company/contactus.shtml)에 문의하세요.
 * **제품에 대한**&#x200B;활성 구독[!DNL Oracle NetSuite].
 * **계정 ID**.
-   * [!DNL Oracle NetSuite] 원본은 OAuth 2.0을 사용하여 [!DNL Oracle NetSuite] API와 통신합니다. 계정 ID가 없는 경우 [!DNL Oracle]계정 ID를 검색하는 방법[의 &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1498754928.html#Finding-Your-NetSuite-Account-ID) 설명서를 참조하세요.
+   * [!DNL Oracle NetSuite] 원본은 OAuth 2.0을 사용하여 [!DNL Oracle NetSuite] API와 통신합니다. 계정 ID가 없는 경우 [!DNL Oracle]계정 ID를 검색하는 방법[의 ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1498754928.html#Finding-Your-NetSuite-Account-ID) 설명서를 참조하세요.
 * **클라이언트 ID** 및 **클라이언트 암호** 조합입니다.
    * [!DNL Oracle NetSuite] API에 액세스하려면 클라이언트 ID 및 클라이언트 암호가 필요합니다. 이 단계에서 관리자는 또한 다음을 수행해야 합니다.
       * OAuth 2.0 기능을 활성화하고 적절한 OAuth 2.0 역할을 설정합니다.
       * OAuth 2.0 역할에 사용자를 할당하고 필요한 통합 레코드를 만들었습니다.
 * **액세스 토큰** 및 **새로 고침 토큰**&#x200B;입니다.
-   * 액세스 및 토큰 새로 고침 방법에 대한 자세한 내용은 [!DNL Oracle]OAuth 2.0 인증 코드 부여 흐름[의 &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) 안내서를 참조하십시오.
+   * 액세스 및 토큰 새로 고침 방법에 대한 자세한 내용은 [!DNL Oracle]OAuth 2.0 인증 코드 부여 흐름[의 ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) 안내서를 참조하십시오.
 
 ### 필요한 자격 증명 수집 {#gather-credentials}
 
@@ -57,11 +57,11 @@ Experience Platform은 데이터 수집 서드파티 마케팅 자동화 시스�
 
 | 자격 증명 | 설명 | 예 |
 | --- | --- | --- |
-| 클라이언트 ID | [!DNL Oracle NetSuite]에서 통합 레코드를 만들 때 생성되는 클라이언트 ID 값입니다. 자세한 내용은 [!DNL Oracle]통합 레코드를 만드는 방법[에 대한 &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) 안내서를 참조하십시오. | `7fce.....b42f`<br>값이 64자로 이루어진 문자열입니다. |
-| 클라이언트 암호 | 통합 레코드를 만들 때 생성되는 클라이언트 암호 값입니다. 자세한 내용은 [!DNL Oracle]통합 레코드를 만드는 방법[에 대한 &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) 안내서를 참조하십시오. | `5c98.....1b46`<br>값이 64자로 이루어진 문자열입니다. |
+| 클라이언트 ID | [!DNL Oracle NetSuite]에서 통합 레코드를 만들 때 생성되는 클라이언트 ID 값입니다. 자세한 내용은 [!DNL Oracle]통합 레코드를 만드는 방법[에 대한 ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) 안내서를 참조하십시오. | `7fce.....b42f`<br>값이 64자로 이루어진 문자열입니다. |
+| 클라이언트 암호 | 통합 레코드를 만들 때 생성되는 클라이언트 암호 값입니다. 자세한 내용은 [!DNL Oracle]통합 레코드를 만드는 방법[에 대한 ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981) 안내서를 참조하십시오. | `5c98.....1b46`<br>값이 64자로 이루어진 문자열입니다. |
 | 인증 테스트 URL | (선택 사항) [!DNL NetSuite] 인증 테스트 URL입니다. | `https://{ACCOUNT_ID}.app.netsuite.com<br>/app/login/oauth2/authorize.nl?response_type=code<br>&redirect_uri=https%3A%2F%2Fapi.github.com<br>&scope=rest_webservices<br>&state=ykv2XLx1BpT5Q0F3MRPHb94j<br>&client_id={CLIENT_ID}` |
-| 액세스 토큰 | 액세스 토큰은 JSON 웹 토큰(JWT) 형식이며 60분 동안만 유효합니다. 액세스 토큰을 검색하는 방법에 대한 자세한 내용은 [!DNL Oracle]NetSuite에 대한 OAuth 2.0 권한 부여[에 대한 &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) 안내서를 참조하십시오. | `eyJr......f4V0`<br> 값이 JSON 웹 토큰(JWT) 형식의 1024자 문자열입니다. |
-| 토큰 새로 고침 | 액세스 토큰이 만료된 후 새로 고침을 사용하여 새 액세스 토큰을 생성합니다. 새로 고침 토큰은 7일 동안 유효합니다. 액세스 토큰을 검색하는 방법에 대한 자세한 내용은 [!DNL Oracle]NetSuite에 대한 OAuth 2.0 권한 부여[에 대한 &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) 안내서를 참조하십시오. | `eyJr......dmxM`<br> 값이 JSON 웹 토큰(JWT) 형식의 1024자 문자열입니다. |
+| 액세스 토큰 | 액세스 토큰은 JSON 웹 토큰(JWT) 형식이며 60분 동안만 유효합니다. 액세스 토큰을 검색하는 방법에 대한 자세한 내용은 [!DNL Oracle]NetSuite에 대한 OAuth 2.0 권한 부여[에 대한 ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) 안내서를 참조하십시오. | `eyJr......f4V0`<br> 값이 JSON 웹 토큰(JWT) 형식의 1024자 문자열입니다. |
+| 토큰 새로 고침 | 액세스 토큰이 만료된 후 새로 고침을 사용하여 새 액세스 토큰을 생성합니다. 새로 고침 토큰은 7일 동안 유효합니다. 액세스 토큰을 검색하는 방법에 대한 자세한 내용은 [!DNL Oracle]NetSuite에 대한 OAuth 2.0 권한 부여[에 대한 ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) 안내서를 참조하십시오. | `eyJr......dmxM`<br> 값이 JSON 웹 토큰(JWT) 형식의 1024자 문자열입니다. |
 | 토큰 URL 액세스 | 애플리케이션이 POST 요청을에 전송하는 토큰 종단점입니다. | `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com<br>/services/rest/auth/oauth2/v1/token` |
 
 >[!IMPORTANT]
