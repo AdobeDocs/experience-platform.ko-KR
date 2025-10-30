@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 부분 일괄 처리 수집 개요
 description: 이 문서에서는 부분 일괄 처리 수집 관리에 대한 자습서를 제공합니다.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: bc72f77b1b4a48126be9b49c5c663ff11e9054ea
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 7%
+source-wordcount: '1209'
+ht-degree: 9%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 이 문서에서는 부분 일괄 처리 수집 관리에 대한 자습서를 제공합니다.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 부분 일괄 처리 수집과 관련된 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
@@ -28,11 +28,11 @@ ht-degree: 7%
 
 ### 샘플 API 호출 읽기
 
-이 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request)에 대한 섹션을 참조하십시오.
+이 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 문서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 섹션을 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [인증 튜토리얼](https://www.adobe.com/go/platform-api-authentication-en)을 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - 인증: 전달자 `{ACCESS_TOKEN}`
 - x-api 키: `{API_KEY}`
@@ -54,7 +54,7 @@ ht-degree: 7%
 
 부분 수집이 활성화된 새 배치를 생성할 수 있습니다.
 
-새 일괄 처리를 만들려면 [일괄 처리 수집 개발자 안내서](./api-overview.md)의 단계를 따릅니다. **[!UICONTROL 일괄 처리 만들기]** 단계에 도달하면 다음 필드를 요청 본문에 추가합니다.
+새 일괄 처리를 만들려면 [일괄 처리 수집 개발자 안내서](./api-overview.md)의 단계를 따릅니다. **[!UICONTROL Create batch]** 단계에 도달하면 다음 필드를 요청 본문에 추가합니다.
 
 ```json
 {
@@ -75,21 +75,21 @@ ht-degree: 7%
 >
 >이 섹션에서는 UI를 사용하여 부분 일괄 처리 수집에 대한 일괄 처리를 활성화하는 방법에 대해 설명합니다. API를 사용하여 부분 일괄 처리 수집에 대한 일괄 처리를 이미 활성화한 경우 다음 섹션으로 건너뛸 수 있습니다.
 
-[!DNL Experience Platform] UI를 통해 부분 수집에 대한 일괄 처리를 활성화하려면 소스 연결을 통해 새 일괄 처리를 만들거나 기존 데이터 세트에서 새 일괄 처리를 만들거나 &quot;[!UICONTROL CSV를 XDM 흐름에 매핑]&quot;을 통해 새 일괄 처리를 만들 수 있습니다.
+[!DNL Experience Platform] UI를 통해 부분 수집을 위한 일괄 처리를 활성화하려면 소스 연결을 통해 새 일괄 처리를 만들거나 기존 데이터 세트에서 새 일괄 처리를 만들거나 &quot;[!UICONTROL Map CSV to XDM flow]&quot;을(를) 통해 새 일괄 처리를 만들 수 있습니다.
 
 ### 새 소스 연결 만들기 {#new-source}
 
-새 원본 연결을 만들려면 [원본 개요](../../sources/home.md)에 나열된 단계를 따릅니다. **[!UICONTROL 데이터 흐름 세부 정보]** 단계에 도달하면 **[!UICONTROL 부분 수집]** 및 **[!UICONTROL 오류 진단]** 필드를 참고하십시오.
+새 원본 연결을 만들려면 [원본 개요](../../sources/home.md)에 나열된 단계를 따릅니다. **[!UICONTROL Dataflow detail]** 단계에 도달하면 **[!UICONTROL Partial ingestion]** 및 **[!UICONTROL Error diagnostics]** 필드를 메모해 두십시오.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-**[!UICONTROL 부분 수집]** 전환을 사용하면 부분 일괄 처리 수집을 사용하거나 사용하지 않도록 설정할 수 있습니다.
+**[!UICONTROL Partial ingestion]** 토글을 사용하면 부분 일괄 처리 수집의 사용을 활성화하거나 비활성화할 수 있습니다.
 
-**[!UICONTROL 오류 진단]** 전환은 **[!UICONTROL 부분 수집]** 전환이 꺼진 경우에만 나타납니다. 이 기능을 사용하면 [!DNL Experience Platform]에서 수집된 일괄 처리에 대한 자세한 오류 메시지를 생성할 수 있습니다. **[!UICONTROL 부분 수집]** 토글이 켜져 있으면 향상된 오류 진단이 자동으로 적용됩니다.
+**[!UICONTROL Error diagnostics]** 전환은 **[!UICONTROL Partial ingestion]** 전환이 꺼진 경우에만 나타납니다. 이 기능을 사용하면 [!DNL Experience Platform]에서 수집된 일괄 처리에 대한 자세한 오류 메시지를 생성할 수 있습니다. **[!UICONTROL Partial ingestion]** 토글이 켜져 있으면 향상된 오류 진단이 자동으로 적용됩니다.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-**[!UICONTROL 오류 임계값]**&#x200B;을(를) 사용하면 전체 일괄 처리가 실패하기 전에 허용되는 오류의 백분율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
+**[!UICONTROL Error threshold]**&#x200B;을(를) 사용하면 전체 일괄 처리가 실패하기 전에 허용되는 오류의 백분율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
 
 ### 기존 데이터 세트 사용 {#existing-dataset}
 
@@ -97,29 +97,129 @@ ht-degree: 7%
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-**[!UICONTROL 부분 수집]** 전환을 사용하면 부분 일괄 처리 수집을 사용하거나 사용하지 않도록 설정할 수 있습니다.
+**[!UICONTROL Partial ingestion]** 토글을 사용하면 부분 일괄 처리 수집의 사용을 활성화하거나 비활성화할 수 있습니다.
 
-**[!UICONTROL 오류 진단]** 전환은 **[!UICONTROL 부분 수집]** 전환이 꺼진 경우에만 나타납니다. 이 기능을 사용하면 [!DNL Experience Platform]에서 수집된 일괄 처리에 대한 자세한 오류 메시지를 생성할 수 있습니다. **[!UICONTROL 부분 수집]** 토글이 켜져 있으면 향상된 오류 진단이 자동으로 적용됩니다.
+**[!UICONTROL Error diagnostics]** 전환은 **[!UICONTROL Partial ingestion]** 전환이 꺼진 경우에만 나타납니다. 이 기능을 사용하면 [!DNL Experience Platform]에서 수집된 일괄 처리에 대한 자세한 오류 메시지를 생성할 수 있습니다. **[!UICONTROL Partial ingestion]** 토글이 켜져 있으면 향상된 오류 진단이 자동으로 적용됩니다.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-**[!UICONTROL 오류 임계값]**&#x200B;을(를) 사용하면 전체 일괄 처리가 실패하기 전에 허용되는 오류의 백분율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
+**[!UICONTROL Error threshold]**&#x200B;을(를) 사용하면 전체 일괄 처리가 실패하기 전에 허용되는 오류의 백분율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
 
 이제 **데이터 추가** 단추를 사용하여 데이터를 업로드할 수 있으며 부분 수집을 사용하여 수집됩니다.
 
-### &quot;[!UICONTROL XDM 스키마에 CSV 매핑]&quot; 흐름 사용 {#map-flow}
+### &quot;[!UICONTROL Map CSV to XDM schema]&quot; 흐름 사용 {#map-flow}
 
-&quot;[!UICONTROL CSV를 XDM 스키마에 매핑]&quot; 흐름을 사용하려면 [CSV 파일 매핑 자습서](../tutorials/map-csv/overview.md)의 나열된 단계를 따릅니다. **[!UICONTROL 데이터 추가]** 단계에 도달하면 **[!UICONTROL 부분 수집]** 및 **[!UICONTROL 오류 진단]** 필드를 참고하십시오.
+&quot;[!UICONTROL Map CSV to XDM schema]&quot; 흐름을 사용하려면 [CSV 파일 매핑 자습서](../tutorials/map-csv/overview.md)의 나열된 단계를 따르십시오. **[!UICONTROL Add data]** 단계에 도달하면 **[!UICONTROL Partial ingestion]** 및 **[!UICONTROL Error diagnostics]** 필드를 메모해 두십시오.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-**[!UICONTROL 부분 수집]** 전환을 사용하면 부분 일괄 처리 수집을 사용하거나 사용하지 않도록 설정할 수 있습니다.
+**[!UICONTROL Partial ingestion]** 토글을 사용하면 부분 일괄 처리 수집의 사용을 활성화하거나 비활성화할 수 있습니다.
 
-**[!UICONTROL 오류 진단]** 전환은 **[!UICONTROL 부분 수집]** 전환이 꺼진 경우에만 나타납니다. 이 기능을 사용하면 [!DNL Experience Platform]에서 수집된 일괄 처리에 대한 자세한 오류 메시지를 생성할 수 있습니다. **[!UICONTROL 부분 수집]** 토글이 켜져 있으면 향상된 오류 진단이 자동으로 적용됩니다.
+**[!UICONTROL Error diagnostics]** 전환은 **[!UICONTROL Partial ingestion]** 전환이 꺼진 경우에만 나타납니다. 이 기능을 사용하면 [!DNL Experience Platform]에서 수집된 일괄 처리에 대한 자세한 오류 메시지를 생성할 수 있습니다. **[!UICONTROL Partial ingestion]** 토글이 켜져 있으면 향상된 오류 진단이 자동으로 적용됩니다.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-**[!UICONTROL 오류 임계값]**&#x200B;을(를) 사용하면 전체 일괄 처리가 실패하기 전에 허용되는 오류의 백분율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
+**[!UICONTROL Error threshold]**&#x200B;을(를) 사용하면 전체 일괄 처리가 실패하기 전에 허용되는 오류의 백분율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
+
+## 기존 데이터 흐름에 대한 부분 수집 및 오류 진단 활성화
+
+부분 수집 또는 오류 진단을 활성화하지 않고 Experience Platform의 데이터 흐름이 생성된 경우 흐름을 다시 생성하지 않고 이러한 기능을 활성화할 수 있습니다. 부분 수집 및 강력한 오류 진단을 활성화하여 데이터 수집 워크플로우의 안정성과 문제 해결 편의성을 크게 향상시킬 수 있습니다. [!DNL Flow Service] API를 사용하여 기존 데이터 흐름에 대한 부분 수집 및 오류 진단을 활성화하는 방법에 대해 알아보려면 아래 섹션을 읽어 보십시오.
+
+기본적으로 데이터 흐름에는 부분 수집 또는 오류 진단이 활성화되어 있지 않을 수 있습니다. 이러한 기능은 데이터 수집 중 문제를 식별하고 격리하는 데 유용합니다. [!DNL Flow Service] API를 사용하면 현재 데이터 흐름 구성을 검색하고 PATCH 요청을 사용하여 필요한 변경 내용을 적용할 수 있습니다.
+
+기존 데이터 흐름에 대해 부분 수집 및 오류 진단을 활성화하려면 아래 단계를 따르십시오.
+
+### 플로우 세부 정보 검색
+
+데이터 흐름 구성을 검색하려면 `/flows/{FLOW_ID}` 끝점에 GET 요청을 만들고 데이터 흐름의 ID를 제공하십시오. 데이터 흐름 세부 정보 검색에 대한 자세한 내용은 [API를 사용하여 데이터 흐름 업데이트 [!DNL Flow Service]  안내서를 참조하십시오.](../../sources/tutorials/api/update-dataflows.md)
+
+응답에서 반환된 `etag` 필드의 값을 저장하십시오. 버전 일관성을 유지하기 위해 업데이트 요청에 필요합니다.
+
+### 흐름 구성 업데이트
+
+그런 다음 `/flows/` 끝점에 PATCH 요청을 수행하고 부분 수집 및 오류 진단을 활성화할 데이터 흐름의 ID를 제공합니다.
+
+>[!IMPORTANT]
+>
+>- If-Match 키를 사용하여 이전에 저장한 `etag` 값을 요청 헤더에 포함합니다.
+>- 특정 요구 사항에 맞게 `partialIngestionPercent` 값을 수정할 수 있습니다.
+
+**API 형식**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+**요청**
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+    -d '[
+        {
+            "op": "add",
+            "path": "/options",
+            "value": {
+                "partialIngestionPercent": "10"
+            }
+        },
+        {
+            "op": "add",
+            "path": "/options/errorDiagnosticsEnabled",
+            "value": true
+        }
+    ]'
+```
+
+**응답**
+
+응답이 성공하면 데이터 흐름의 `id`과(와) 업데이트된 `etag`이(가) 반환됩니다.
+
+```json
+{
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"2c000802-0000-0200-0000-613976440000\""
+}
+```
+
+### 업데이트 확인
+
+PATCH이 완료되면 GET 요청을 만들고 데이터 흐름을 검색하여 변경 사항이 성공적으로 완료되었는지 확인합니다.
+
+**API 형식**
+
+```http
+GET /flows/{FLOW_ID}
+```
+
+**요청**
+
+다음 요청은 플로우 ID에 대한 업데이트된 정보를 검색합니다.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**응답**
+
+성공적인 응답이 데이터 흐름 세부 정보를 반환하여 이제 `options` 섹션에서 부분 수집 및 오류 진단이 활성화되었는지 확인합니다.
+
+```json
+"options": {
+    "partialIngestionPercent": 10,
+    "errorDiagnosticsEnabled": true
+}
+```
 
 ## 다음 단계 {#next-steps}
 
