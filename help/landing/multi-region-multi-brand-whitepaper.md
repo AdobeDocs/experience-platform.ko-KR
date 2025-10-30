@@ -80,13 +80,13 @@ Experience Platform의 주요 아키텍처 원칙은 거버넌스 정책 및 요
 
 모든 Experience Platform 및 플랫폼 기반 애플리케이션 기능에 액세스할 필요가 없는 데이터 엔지니어를 생각해 보십시오. 일반적으로 데이터 정의(스키마) 생성, 데이터를 수집하도록 데이터 소스 구성 및 데이터 세트 생성을 담당합니다. 그러나 개인화된 고객 경험에 대한 대상을 만들고 활성화하는 성향과 동일하지 않을 수 있습니다. 이 담당자의 경우 역할을 만들고 적절한 권한을 추가한 다음 필요한 기능에 대한 액세스 권한만 부여합니다. 반면 마케터는 스키마를 만들고 데이터를 수집하는 것이 아니라 개인화된 고객 경험을 활성화하기 위한 대상을 만들고 활성화하는 데 중점을 둡니다.
 
-원할 경우 속성 기반 액세스 제어/필드 수준 액세스 제어 기능을 사용하여 통합 고객 프로필의 특정 필드에 대한 액세스를 제한하기 위해 세분화된 액세스 제어를 추가하는 것이 좋습니다. 사전 정의된 레이블을 기반으로 데이터 속성에 대한 액세스를 제한할 수 있는 Experience Platform의 거버넌스 메커니즘입니다. 필드 수준 액세스 제어를 사용하면 개인 식별 데이터를 관리할 수 있으며 모든 Experience Platform 및 애플리케이션 워크플로우에서 액세스가 제한됩니다. 액세스 제어 기능에 대한 자세한 내용은 [액세스 제어 설명서](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home)를 참조하세요.
+원할 경우 속성 기반 액세스 제어/필드 수준 액세스 제어 기능을 사용하여 통합 고객 프로필의 특정 필드에 대한 액세스를 제한하기 위해 세분화된 액세스 제어를 추가하는 것이 좋습니다. 사전 정의된 레이블을 기반으로 데이터 속성에 대한 액세스를 제한할 수 있는 Experience Platform의 거버넌스 메커니즘입니다. 필드 수준 액세스 제어를 사용하면 개인 식별 데이터를 관리할 수 있으며 모든 Experience Platform 및 애플리케이션 워크플로우에서 액세스가 제한됩니다. 액세스 제어 기능에 대한 자세한 내용은 [액세스 제어 설명서](https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/home)를 참조하세요.
 
 ![CDP 액세스 제어, 역할 권한 구성](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
 
 **개발 샌드박스를 사용한 개발 라이프사이클**
 
-개발 샌드박스는 모든 기능 측면에서 프로덕션 샌드박스와 동일한 방식으로 작동합니다. 라이선스 제한 범위 내에서 유지할 수 있는 계약상의 보호 기능이 일부 있다는 점에서 다릅니다. 비프로덕션 프로필을 사용하는 개발 및 테스트용으로 독점적으로 설계되어 라이선스 프로필 약정의 최대 10%를 지원합니다(모든 승인된 개발 샌드박스에서 누적적으로 측정). 자세한 내용 및 보호 기능은 [샌드박스 개요 설명서](https://experienceleague.adobe.com/ko/docs/experience-platform/sandbox/home) 및 [제품 설명 페이지](https://helpx.adobe.com/legal/product-descriptions.html)에서 사용 권한 정보를 참조하십시오.
+개발 샌드박스는 모든 기능 측면에서 프로덕션 샌드박스와 동일한 방식으로 작동합니다. 라이선스 제한 범위 내에서 유지할 수 있는 계약상의 보호 기능이 일부 있다는 점에서 다릅니다. 비프로덕션 프로필을 사용하는 개발 및 테스트용으로 독점적으로 설계되어 라이선스 프로필 약정의 최대 10%를 지원합니다(모든 승인된 개발 샌드박스에서 누적적으로 측정). 자세한 내용 및 보호 기능은 [샌드박스 개요 설명서](https://experienceleague.adobe.com/ko/docs/experience-platform/sandbox/home) 및 [제품 설명 페이지](https://helpx.adobe.com/kr/legal/product-descriptions.html)에서 사용 권한 정보를 참조하십시오.
 
 개발 및 테스트 라이프사이클에 여러 개발 샌드박스(하나의 프로덕션 샌드박스를 사용하고 있으므로 이 엔터프라이즈 예에서는 최대 4개)를 사용할 수 있습니다.
 
@@ -102,7 +102,7 @@ Experience Platform의 주요 아키텍처 원칙은 거버넌스 정책 및 요
 
 Experience Platform API를 사용하여 샌드박스 배포 및 구성 작업을 자동화할 수 있습니다. API를 사용하면 샌드박스 구성 내보내기, 가져오기 또는 수정과 같은 반복적인 작업에 대해 프로그래밍 가능한 제어를 수행할 수 있으므로 자동화된 워크플로우를 선호하는 경우 유연성을 제공합니다.
 
-샌드박스 툴링에 대한 자세한 내용은 [샌드박스 툴 설명서](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling)를 참조하세요.
+샌드박스 툴링에 대한 자세한 내용은 [샌드박스 툴 설명서](https://experienceleague.adobe.com/ko/docs/experience-platform/sandbox/ui/sandbox-tooling)를 참조하세요.
 
 | ![CDP-패키지 만들기](./images/whitepaper/create-package.png) | ![CDP 목록 패키지](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -229,7 +229,7 @@ Customer Journey Analytics을 사용하여 글로벌 샌드박스의 집계된 �
 
 이 세그먼트 공유 서비스를 사용하면 두 명 이상의 사용자가 안전하고 관리되며 개인 정보 보호 친화적인 방식으로 세그먼트 데이터를 교환할 수 있습니다.
 
-세그먼트 일치 기능에 대한 자세한 내용은 [세그먼트 일치 설명서](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview)를 참조하세요.
+세그먼트 일치 기능에 대한 자세한 내용은 [세그먼트 일치 설명서](https://experienceleague.adobe.com/ko/docs/experience-platform/segmentation/ui/segment-match/overview)를 참조하세요.
 
 ### 글로벌 운영, 지역 및 브랜드별 접근 방식의 혼합
 
