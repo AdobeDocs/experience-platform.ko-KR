@@ -26,7 +26,7 @@ ht-degree: 2%
 >
 >예약된 쿼리를 관리할 때 고려해야 할 중요한 사항:<ul><li>예약된 쿼리를 만드는 데 사용된 계정(기술 또는 사용자)에 액세스나 권한이 없으면 예약된 쿼리가 실패합니다.</li><li>API 또는 UI를 통해 삭제하기 전에 예약된 쿼리를 비활성화해야 합니다.</li><li>종료 날짜 없이 무기한 예약은 지원되지 않습니다. 종료 날짜는 항상 지정해야 합니다.</li></ul>
 
-계정 요구 사항, 권한 설정 및 예약된 쿼리 관리에 대한 자세한 지침은 [쿼리 일정 설명서](../ui/query-schedules.md#technical-account-user-requirements)를 참조하세요. 기술 계정 만들기 및 구성에 대한 단계별 지침은 [Developer Console 설정](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) 및 [전체 기술 계정 설정](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup)을 참조하세요.
+계정 요구 사항, 권한 설정 및 예약된 쿼리 관리에 대한 자세한 지침은 [쿼리 일정 설명서](../ui/query-schedules.md#technical-account-user-requirements)를 참조하세요. 기술 계정 만들기 및 구성에 대한 단계별 지침은 [Developer Console 설정](https://experienceleague.adobe.com/ko/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) 및 [전체 기술 계정 설정](https://experienceleague.adobe.com/ko/docs/platform-learn/tutorial-comprehensive-technical/setup)을 참조하세요.
 
 ## 샘플 API 호출
 
