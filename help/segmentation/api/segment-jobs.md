@@ -4,7 +4,7 @@ title: 세그먼트 작업 API 엔드포인트
 description: Adobe Experience Platform Segmentation Service API의 세그먼트 작업 끝점을 사용하면 조직의 세그먼트 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # 세그먼트 작업 엔드포인트
 
-세그먼트 작업은 요청 시 대상 세그먼트를 만드는 비동기 프로세스입니다. [이(가) 프로필 조각에서 겹치는 특성을 병합하는 방법을 제어하는 &#x200B;](./segment-definitions.md)병합 정책[뿐만 아니라 &#x200B;](../../profile/api/merge-policies.md)세그먼트 정의[!DNL Real-Time Customer Profile]을(를) 참조합니다. 세그먼트 작업이 성공적으로 완료되면 처리 중에 발생할 수 있는 오류와 대상자의 최종 크기 등 세그먼트에 대한 다양한 정보를 수집할 수 있습니다.
+세그먼트 작업은 요청 시 대상 세그먼트를 만드는 비동기 프로세스입니다. [이(가) 프로필 조각에서 겹치는 특성을 병합하는 방법을 제어하는 ](./segment-definitions.md)병합 정책[뿐만 아니라 ](../../profile/api/merge-policies.md)세그먼트 정의[!DNL Real-Time Customer Profile]을(를) 참조합니다. 세그먼트 작업이 성공적으로 완료되면 처리 중에 발생할 수 있는 오류와 대상자의 최종 크기 등 세그먼트에 대한 다양한 정보를 수집할 수 있습니다.
 
 이 안내서에서는 세그먼트 작업을 더 잘 이해하는 데 도움이 되는 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 
@@ -43,7 +43,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `start` | 반환된 세그먼트 작업의 시작 오프셋을 지정합니다. | `start=1` |
 | `limit` | 페이지당 반환되는 세그먼트 작업 수를 지정합니다. | `limit=20` |
 | `status` | 상태를 기반으로 결과를 필터링합니다. 지원되는 값은 NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELLING, CANCELLED입니다. | `status=NEW` |
-| `sort` | 반환된 세그먼트 작업의 순서를 지정합니다. `[attributeName]:[desc|asc]` 형식으로 작성되었습니다. `sort=creationTime:desc` |
+| `sort` | 반환된 세그먼트 작업의 순서를 지정합니다. | `[attributeName]:[desc\|asc]` 형식으로 작성되었습니다. `sort=creationTime:desc` |
 | `property` | 작업을 필터링하고 지정된 필터와 정확히 일치하는 항목을 가져옵니다. 다음 형식 중 하나로 쓸 수 있습니다. <ul><li>`[jsonObjectPath]==[value]` - 개체 키 필터링</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - 배열에서 필터링</li></ul> | `property=segments~segmentId==workInUS` |
 
 +++

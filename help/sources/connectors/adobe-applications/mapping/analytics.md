@@ -2,9 +2,9 @@
 title: Adobe Analytics Source 커넥터에 대한 매핑 필드
 description: Analytics Source Connector를 사용하여 Adobe Analytics 필드를 XDM 필드에 매핑합니다.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
 workflow-type: tm+mt
-source-wordcount: '3854'
+source-wordcount: '3838'
 ht-degree: 5%
 
 ---
@@ -197,7 +197,7 @@ Adobe Experience Platform을 사용하면 Analytics 소스를 통해 Adobe Analy
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | 번호 | Mobile Services 비콘 Minor. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | 문자열 | Mobile Services 비콘 UUID |
 | `mobileinstalls` | `application.firstLaunches` | 오브젝트 | 설치 또는 다시 설치 후 처음 실행할 때 트리거됩니다. `{id (string), value (number)}` |
-| `mobileupgrades` | `application.upgrades` | 오브젝트 | 앱 업그레이드 수를 보고합니다. 업그레이드 후 또는 버전 번호가 변경될 때 처음 실행할 때 트리거됩니다. | `{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | 오브젝트 | 앱 업그레이드 수를 보고합니다. 업그레이드 후 또는 버전 번호가 변경될 때 처음 실행할 때 트리거됩니다. `{id (string), value (number)}` |
 | `mobilelaunches` | `application.launches` | 오브젝트 | 앱을 시작한 횟수입니다.  `{id (string), value (number)}` |
 | `mobilecrashes` | `application.crashes` | 오브젝트 | `{id (string), value (number)}` |
 | `mobilemessageclicks` | `directMarketing.clicks` | 오브젝트 | `{id (string), value (number)}` |
@@ -224,13 +224,13 @@ ADC에서 제공되는 선택 필드는 변환해야 하며 XDM에서 Adobe Anal
 
 | 데이터 피드 | XDM 필드 | XDM 유형 | 설명 |
 | --- | --- | --- | --- |
-| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | 오브젝트 | 목록 prop으로 구성된 사용자 지정 Analytics prop. 여기에는 구분된 값 목록이 포함되어 있습니다. | {} |
-| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | 오브젝트 | 계층 변수에서 사용됩니다. 여기에는 구분된 값 목록이 포함되어 있습니다. | {values (배열), 구분 기호 (문자열)} |
-| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | 배열 | 사용자 지정 분석 목록 변수입니다. 구분된 값 목록을 포함합니다. | {value (문자열), key (문자열)} |
+| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | 오브젝트 | 목록 prop으로 구성된 사용자 지정 Analytics prop. 여기에는 구분된 값 목록이 포함되어 있습니다. `{}` |
+| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | 오브젝트 | 계층 변수에서 사용됩니다. 여기에는 구분된 값 목록이 포함되어 있습니다. `{values (array), delimiter (string)}` |
+| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | 배열 | 사용자 지정 분석 목록 변수입니다. 구분된 값 목록을 포함합니다.  `{value (string), key (string)}` |
 | `m_color` | `device.colorDepth` | 정수 | c_color 열의 값을 기반으로 하는 색상 심도 ID입니다. |
 | `m_cookies` | `environment.browserDetails.cookiesEnabled` | 부울 | 쿠키 지원 차원에 사용되는 변수입니다. |
-| `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | 오브젝트 | 히트에서 트리거된 표준 상거래 이벤트. | {id (문자열), 값 (숫자)} |
-| `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | 오브젝트 | 히트에서 트리거된 사용자 지정 이벤트입니다. | {id (오브젝트), value (오브젝트)} |
+| `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | 오브젝트 | 히트에서 트리거된 표준 상거래 이벤트. `{id (string), value (number)}` |
+| `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | 오브젝트 | 히트에서 트리거된 사용자 지정 이벤트입니다. `{id (Object), value (Object)}` |
 | `m_geo_country` | `placeContext.geo.countryCode` | 문자열 | IP를 기반으로 하는, 히트가 발생한 국가의 약어입니다. |
 | `m_geo_latitude` | `placeContext.geo._schema.latitude` | 번호 | |
 | `m_geo_longitude` | `placeContext.geo._schema.longitude` | 번호 | |
