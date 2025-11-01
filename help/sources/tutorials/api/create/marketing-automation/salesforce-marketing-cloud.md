@@ -15,7 +15,7 @@ ht-degree: 1%
 >
 >[!DNL Salesforce Marketing Cloud] 원본은 2026년 1월에 사용되지 않습니다. 대안으로 새로운 정보원이 올해 말 공개될 것이다. 새 소스가 릴리스되면 2026년 1월 말 이전에 새 계정 연결 및 데이터 흐름을 생성하여 새 소스로 마이그레이션할 계획이어야 합니다.
 
-[!DNL Salesforce Marketing Cloud]API[[!DNL Flow Service] 를 사용하여 ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
+[!DNL Salesforce Marketing Cloud]API[[!DNL Flow Service] 를 사용하여 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/) 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
 
 ## 시작하기
 

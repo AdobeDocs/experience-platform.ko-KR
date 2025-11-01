@@ -263,7 +263,7 @@ Source 사양에는 소스의 카테고리, Beta 상태 및 카탈로그 아이�
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | 종료 시간 매개 변수 이름 정의 | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | `scheduleStartParamName`에 지원되는 형식을 정의합니다. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | `scheduleEndParamName`에 지원되는 형식을 정의합니다. | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | 사용자가 제공한 매개 변수를 정의하여 리소스 값을 가져옵니다. | [에 대한 사용자 입력 매개 변수의 예는 ](#user-input)추가 리소스`spec.properties`을(를) 참조하십시오. |
+| `sourceSpec.spec.properties` | 사용자가 제공한 매개 변수를 정의하여 리소스 값을 가져옵니다. | [에 대한 사용자 입력 매개 변수의 예는 &#x200B;](#user-input)추가 리소스`spec.properties`을(를) 참조하십시오. |
 
 {style="table-layout:auto"}
 
