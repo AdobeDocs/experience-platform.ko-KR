@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: 셀프서비스 소스에 대한 소스 사양 구성(배치 SDK)
 description: 이 문서에서는 셀프서비스 소스(일괄 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '2090'
 ht-degree: 1%
@@ -229,41 +229,41 @@ Source 사양에는 소스의 카테고리, Beta 상태 및 카탈로그 아이�
 
 | 속성 | 설명 | 예 |
 | --- | --- | --- |
-| `sourceSpec.attributes` | UI 또는 API와 관련된 소스에 대한 정보를 포함합니다. |
-| `sourceSpec.attributes.uiAttributes` | UI와 관련된 소스에 대한 정보를 표시합니다. |
+| `sourceSpec.attributes` | UI 또는 API와 관련된 소스에 대한 정보를 포함합니다. |  |
+| `sourceSpec.attributes.uiAttributes` | UI와 관련된 소스에 대한 정보를 표시합니다. |  |
 | `sourceSpec.attributes.uiAttributes.isBeta` | 소스에 해당 기능에 추가하기 위해 고객의 피드백이 더 필요한지 여부를 나타내는 부울 속성. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | 소스의 범주를 정의합니다. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Experience Platform UI에서 소스를 렌더링하는 데 사용되는 아이콘을 정의합니다. | `mailchimp-icon.svg` |
-| `sourceSpec.attributes.uiAttributes.description` | 소스에 대한 간단한 설명을 표시합니다. |
-| `sourceSpec.attributes.uiAttributes.label` | Experience Platform UI에서 소스의 렌더링에 사용할 레이블을 표시합니다. |
-| `sourceSpec.attributes.spec.properties.urlParams` | URL 리소스 경로, 메서드 및 지원되는 쿼리 매개 변수에 대한 정보를 포함합니다. |
+| `sourceSpec.attributes.uiAttributes.description` | 소스에 대한 간단한 설명을 표시합니다. |  |
+| `sourceSpec.attributes.uiAttributes.label` | Experience Platform UI에서 소스의 렌더링에 사용할 레이블을 표시합니다. |  |
+| `sourceSpec.attributes.spec.properties.urlParams` | URL 리소스 경로, 메서드 및 지원되는 쿼리 매개 변수에 대한 정보를 포함합니다. |  |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | 데이터를 가져올 위치의 리소스 경로를 정의합니다. | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | 데이터를 가져오도록 리소스에 요청하는 데 사용할 HTTP 메서드를 정의합니다. | `GET`, `POST` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | 데이터 가져오기를 요청할 때 소스 URL을 추가하는 데 사용할 수 있는 지원되는 쿼리 매개 변수를 정의합니다. **참고**: 사용자가 제공한 매개 변수 값은 자리 표시자로 포맷해야 합니다. 예: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}`이(가) `/?key=value&key1=value1`(으)로 원본 URL에 추가됩니다. |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | 데이터를 가져오는 동안 소스 URL에 대한 HTTP 요청에서 제공해야 하는 헤더를 정의합니다. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
-| `sourceSpec.attributes.spec.properties.bodyParams` | 이 속성은 POST 요청을 통해 HTTP 본문을 보내도록 구성할 수 있습니다. |
+| `sourceSpec.attributes.spec.properties.bodyParams` | 이 속성은 POST 요청을 통해 HTTP 본문을 보내도록 구성할 수 있습니다. |  |
 | `sourceSpec.attributes.spec.properties.contentPath` | Experience Platform에 수집해야 하는 항목 목록을 포함하는 노드를 정의합니다. 이 속성은 유효한 JSON 경로 구문을 따라야 하며 특정 배열을 가리켜야 합니다. | 콘텐츠 경로에 포함된 리소스의 예를 보려면 [추가 리소스 섹션](#content-path)을(를) 보십시오. |
 | `sourceSpec.attributes.spec.properties.contentPath.path` | Experience Platform에 수집될 컬렉션 레코드를 가리키는 경로입니다. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | 이 속성을 사용하면 콘텐츠 경로에서 식별된 리소스에서 수집에서 제외할 특정 항목을 식별할 수 있습니다. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | 이 속성을 사용하면 유지할 개별 속성을 명시적으로 지정할 수 있습니다. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | 이 속성을 사용하면 `contentPath`에 지정한 특성 이름의 값을 재정의할 수 있습니다. | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | 이 속성을 사용하면 두 배열을 병합하고 리소스 데이터를 Experience Platform 리소스로 변환할 수 있습니다. |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | 이 속성을 사용하면 두 배열을 병합하고 리소스 데이터를 Experience Platform 리소스로 변환할 수 있습니다. |  |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | 평면화할 컬렉션 레코드를 가리키는 경로입니다. | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | 이 속성을 사용하면 엔티티 경로에서 식별된 리소스에서 수집되지 않도록 제외할 특정 항목을 식별할 수 있습니다. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | 이 속성을 사용하면 유지할 개별 속성을 명시적으로 지정할 수 있습니다. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | 이 속성을 사용하면 `explodeEntityPath`에 지정한 특성 이름의 값을 재정의할 수 있습니다. | `activity` |
-| `sourceSpec.attributes.spec.properties.paginationParams` | 사용자의 현재 페이지 응답에서 또는 다음 페이지 URL을 만드는 동안 다음 페이지에 대한 링크를 가져오기 위해 제공해야 하는 매개 변수 또는 필드를 정의합니다. |
+| `sourceSpec.attributes.spec.properties.paginationParams` | 사용자의 현재 페이지 응답에서 또는 다음 페이지 URL을 만드는 동안 다음 페이지에 대한 링크를 가져오기 위해 제공해야 하는 매개 변수 또는 필드를 정의합니다. |  |
 | `sourceSpec.attributes.spec.properties.paginationParams.type` | 소스에 대해 지원되는 페이지 매김 유형의 유형을 표시합니다. | <ul><li>`OFFSET`: 이 페이지 매김 유형을 사용하면 결과 배열을 시작할 위치에 인덱스를 지정하여 결과를 구문 분석할 수 있으며 반환되는 결과 수에 대한 제한을 설정할 수 있습니다.</li><li>`POINTER`: 이 페이지 매김 유형을 사용하면 `pointer` 변수를 사용하여 요청과 함께 전송해야 하는 특정 항목을 지정할 수 있습니다. 포인터 형식 페이지 매김에는 다음 페이지를 가리키는 페이로드의 경로가 필요합니다.</li><li>`CONTINUATION_TOKEN`: 이 페이지 매김 유형을 사용하면 쿼리 또는 헤더 매개 변수를 연속 토큰과 함께 추가하여 원본에서 남은 반환 데이터를 검색할 수 있습니다. 이 반환 데이터는 미리 결정된 최대값으로 인해 처음에 반환되지 않았습니다.</li><li>`PAGE`: 이 페이지 매김 유형을 사용하면 쿼리 매개 변수를 페이지 0부터 시작하여 페이지별로 반환 데이터를 이동할 수 있는 페이지 매개 변수와 함께 추가할 수 있습니다.</li><li>`NONE`: 이 페이지 매김 형식은 사용 가능한 페이지 매김 형식을 지원하지 않는 소스에 사용할 수 있습니다. 페이지 매김 형식 `NONE`이(가) 요청 후 전체 응답 데이터를 반환합니다.</li></ul> |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitName` | API가 페이지에서 가져올 레코드 수를 지정할 수 있는 제한 이름입니다. | `limit` 또는 `count` |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | 페이지에서 가져올 레코드 수입니다. | `limit=10` 또는 `count=10` |
 | `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | 오프셋 속성 이름입니다. 페이지 매김 유형이 `offset`(으)로 설정된 경우 필요합니다. | `offset` |
 | `sourceSpec.attributes.spec.properties.paginationParams.pointerPath` | 포인터 속성 이름입니다. 이를 위해서는 다음 페이지를 가리키는 속성에 대한 json 경로가 필요합니다. 페이지 매김 유형이 `pointer`(으)로 설정된 경우 필요합니다. | `pointer` |
-| `sourceSpec.attributes.spec.properties.scheduleParams` | 소스에 대해 지원되는 예약 형식을 정의하는 매개 변수를 포함합니다. 일정 매개 변수에는 `startTime` 및 `endTime`이(가) 포함되어 있습니다. 이 두 매개 변수 모두 일괄 처리 실행에 대한 특정 시간 간격을 설정할 수 있으므로 이전 일괄 처리 실행에서 가져온 레코드를 다시 가져오지 않습니다. |
+| `sourceSpec.attributes.spec.properties.scheduleParams` | 소스에 대해 지원되는 예약 형식을 정의하는 매개 변수를 포함합니다. 일정 매개 변수에는 `startTime` 및 `endTime`이(가) 포함되어 있습니다. 이 두 매개 변수 모두 일괄 처리 실행에 대한 특정 시간 간격을 설정할 수 있으므로 이전 일괄 처리 실행에서 가져온 레코드를 다시 가져오지 않습니다. |  |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamName` | 시작 시간 매개 변수 이름을 정의합니다. | `since_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | 종료 시간 매개 변수 이름 정의 | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | `scheduleStartParamName`에 지원되는 형식을 정의합니다. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | `scheduleEndParamName`에 지원되는 형식을 정의합니다. | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | 사용자가 제공한 매개 변수를 정의하여 리소스 값을 가져옵니다. | `spec.properties`에 대한 사용자 입력 매개 변수의 예는 [추가 리소스](#user-input)을(를) 참조하십시오. |
+| `sourceSpec.spec.properties` | 사용자가 제공한 매개 변수를 정의하여 리소스 값을 가져옵니다. | [에 대한 사용자 입력 매개 변수의 예는 ](#user-input)추가 리소스`spec.properties`을(를) 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -273,7 +273,7 @@ Source 사양에는 소스의 카테고리, Beta 상태 및 카탈로그 아이�
 
 ### 콘텐츠 경로 예 {#content-path}
 
-다음은 [!DNL MailChimp Members] 연결 사양의 `contentPath` 속성 내용의 예입니다.
+다음은 `contentPath` 연결 사양의 [!DNL MailChimp Members] 속성 내용의 예입니다.
 
 ```json
 "contentPath": {
@@ -289,7 +289,7 @@ Source 사양에는 소스의 카테고리, Beta 상태 및 카탈로그 아이�
 
 ### `spec.properties` 사용자 입력 예 {#user-input}
 
-다음은 [!DNL MailChimp Members] 연결 사양을 사용하는 사용자 제공 `spec.properties`의 예입니다.
+다음은 `spec.properties` 연결 사양을 사용하는 사용자 제공 [!DNL MailChimp Members]의 예입니다.
 
 이 예제에서는 `listId`이(가) `urlParams.path`의 일부로 제공됩니다. 고객으로부터 `listId`을(를) 검색해야 하는 경우 `spec.properties`의 일부로 정의해야 합니다.
 
@@ -556,7 +556,7 @@ Source 사양에는 소스의 카테고리, Beta 상태 및 카탈로그 아이�
 
 ### 사용자 정의 스키마를 추가하여 소스의 동적 속성 정의
 
-`sourceSpec`에 사용자 지정 스키마를 포함하여 필요한 동적 특성을 포함하여 소스에 필요한 모든 특성을 정의할 수 있습니다. 연결 사양의 `sourceSpec` 섹션에 사용자 지정 스키마를 제공하는 동안 [!DNL Flow Service] API의 `/connectionSpecs` 끝점에 대해 PUT 요청을 수행하여 소스의 해당 연결 사양을 업데이트할 수 있습니다.
+`sourceSpec`에 사용자 지정 스키마를 포함하여 필요한 동적 특성을 포함하여 소스에 필요한 모든 특성을 정의할 수 있습니다. 연결 사양의 `/connectionSpecs` 섹션에 사용자 지정 스키마를 제공하는 동안 [!DNL Flow Service] API의 `sourceSpec` 끝점에 대해 PUT 요청을 수행하여 소스의 해당 연결 사양을 업데이트할 수 있습니다.
 
 다음은 소스의 연결 사양에 추가할 수 있는 사용자 정의 스키마의 예입니다.
 

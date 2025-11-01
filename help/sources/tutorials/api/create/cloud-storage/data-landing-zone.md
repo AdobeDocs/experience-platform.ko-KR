@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 데이터 랜딩 영역을 Adobe Experience Platform에 연결
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 데이터 랜딩 영역에 연결하는 방법을 알아봅니다.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1417'
 ht-degree: 3%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 3%
 
 [!DNL Data Landing Zone]은(는) Adobe Experience Platform으로 파일을 가져올 수 있는 안전한 클라우드 기반 파일 저장소 기능입니다. 데이터는 7일 후 [!DNL Data Landing Zone]에서 자동으로 삭제됩니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Data Landing Zone] 소스 연결을 만드는 방법에 대한 단계를 안내합니다. 이 자습서에서는 [!DNL Data Landing Zone]을(를) 검색하고 자격 증명을 보고 새로 고치는 방법에 대한 지침도 제공합니다.
+이 자습서에서는 [!DNL Data Landing Zone]API[[!DNL Flow Service] 를 사용하여 ](https://www.adobe.io/experience-platform-apis/references/flow-service/) 소스 연결을 만드는 방법에 대한 단계를 안내합니다. 이 자습서에서는 [!DNL Data Landing Zone]을(를) 검색하고 자격 증명을 보고 새로 고치는 방법에 대한 지침도 제공합니다.
 
-## 시작하기
+## 시작
 
 이 안내서를 사용하려면 Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
@@ -28,15 +28,15 @@ ht-degree: 3%
 
 또한 이 자습서에서는 [Experience Platform API 시작하기](../../../../../landing/api-guide.md)에 대한 안내서를 읽고 Experience Platform API를 인증하고 설명서에 제공된 예제 호출을 해석하는 방법을 알아봐야 합니다.
 
-다음 절에서는 [!DNL Flow Service] API를 사용하여 [!DNL Data Landing Zone] 원본 연결을 만들기 위해 알아야 할 추가 정보를 제공합니다.
+다음 절에서는 [!DNL Data Landing Zone] API를 사용하여 [!DNL Flow Service] 원본 연결을 만들기 위해 알아야 할 추가 정보를 제공합니다.
 
 ## 사용 가능한 랜딩 영역 검색
 
 >[!IMPORTANT]
 >
->[!DNL Data Landing Zone] API를 사용하고 `type=user_drop_zone`을(를) 검색하려면 **[!UICONTROL 소스 관리]** 액세스 제어 권한이 있어야 합니다. 자세한 내용은 [액세스 제어 개요](../../../../../access-control/home.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>**[!UICONTROL Manage Sources]** API를 사용하고 [!DNL Data Landing Zone]을(를) 검색하려면 `type=user_drop_zone` 액세스 제어 권한이 있어야 합니다. 자세한 내용은 [액세스 제어 개요](../../../../../access-control/home.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
-API를 사용하여 [!DNL Data Landing Zone]에 액세스하는 첫 번째 단계는 `type=user_drop_zone`을(를) 요청 헤더의 일부로 제공하는 동안 [!DNL Connectors] API의 `/landingzone` 끝점에 GET 요청을 수행하는 것입니다.
+API를 사용하여 [!DNL Data Landing Zone]에 액세스하는 첫 번째 단계는 `/landingzone`을(를) 요청 헤더의 일부로 제공하는 동안 [!DNL Connectors] API의 `type=user_drop_zone` 끝점에 GET 요청을 수행하는 것입니다.
 
 **API 형식**
 
@@ -104,7 +104,7 @@ curl -X GET \
 
 ## [!DNL Data Landing Zone] 자격 증명 검색
 
-[!DNL Data Landing Zone]에 대한 자격 증명을 검색하려면 [!DNL Connectors] API의 `/credentials` 끝점에 대한 GET 요청을 만드십시오.
+[!DNL Data Landing Zone]에 대한 자격 증명을 검색하려면 `/credentials` API의 [!DNL Connectors] 끝점에 대한 GET 요청을 만드십시오.
 
 **API 형식**
 
@@ -287,7 +287,7 @@ public class Main {
 
 ## [!DNL Data Landing Zone] 자격 증명 업데이트
 
-[!DNL Connectors] API의 `/credentials` 끝점에 대한 POST 요청을 수행하여 `SASToken`을(를) 업데이트할 수 있습니다.
+`SASToken` API의 `/credentials` 끝점에 대한 POST 요청을 수행하여 [!DNL Connectors]을(를) 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -330,7 +330,7 @@ curl -X POST \
 
 ## 랜딩 영역 파일 구조 및 콘텐츠 탐색
 
-[!DNL Flow Service] API의 `connectionSpecs` 끝점에 대한 GET 요청을 통해 랜딩 영역의 파일 구조 및 콘텐츠를 살펴볼 수 있습니다.
+`connectionSpecs` API의 [!DNL Flow Service] 끝점에 대한 GET 요청을 통해 랜딩 영역의 파일 구조 및 콘텐츠를 살펴볼 수 있습니다.
 
 **API 형식**
 
@@ -395,7 +395,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | 매개변수 | 설명 | 예 |
 | --- | --- | --- |
-| `{CONNECTION_SPEC_ID}` | [!DNL Data Landing Zone]에 해당하는 연결 사양 ID입니다. 이 고정 ID는 `26f526f2-58f4-4712-961d-e41bf1ccc0e8`입니다. |
+| `{CONNECTION_SPEC_ID}` | [!DNL Data Landing Zone]에 해당하는 연결 사양 ID입니다. 이 고정 ID는 `26f526f2-58f4-4712-961d-e41bf1ccc0e8`입니다. |  |
 | `{OBJECT_TYPE}` | 액세스하려는 객체의 유형입니다. | `file` |
 | `{OBJECT}` | 액세스하려는 객체의 경로 및 이름입니다. | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | 파일의 유형입니다. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
@@ -515,9 +515,9 @@ curl -X GET \
 
 **응답**
 
-성공한 응답은 파일 이름 및 데이터 형식을 포함한 쿼리된 파일의 구조와 `fileType`, `compressionType` 및 `columnDelimiter`에 대한 정보가 포함된 `properties` 키를 반환합니다.
+성공한 응답은 파일 이름 및 데이터 형식을 포함한 쿼리된 파일의 구조와 `properties`, `fileType` 및 `compressionType`에 대한 정보가 포함된 `columnDelimiter` 키를 반환합니다.
 
-+++내 클릭
++++나를 클릭합니다.
 
 ```json
 {
@@ -619,7 +619,7 @@ curl -X GET \
 
 소스 연결은 데이터가 수집되는 외부 소스와의 연결을 만들고 관리합니다. 소스 연결은 데이터 소스, 데이터 형식 및 데이터 흐름을 만드는 데 필요한 소스 연결 ID와 같은 정보로 구성됩니다. 소스 연결 인스턴스는 테넌트 및 조직에만 해당됩니다.
 
-소스 연결을 만들려면 [!DNL Flow Service] API의 `/sourceConnections` 끝점에 대한 POST 요청을 만듭니다.
+소스 연결을 만들려면 `/sourceConnections` API의 [!DNL Flow Service] 끝점에 대한 POST 요청을 만듭니다.
 
 
 **API 형식**

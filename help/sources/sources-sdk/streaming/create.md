@@ -1,11 +1,11 @@
 ---
-title: 흐름 서비스 API를 사용하여 Streaming SDK에 대한 새 연결 사양 만들기
+title: 흐름 서비스 API를 사용하여 SDK 스트리밍에 대한 새 연결 사양 만들기
 description: 다음 문서에서는 Flow Service API를 사용하여 연결 사양을 만들고 셀프 서비스 소스를 통해 새 소스를 통합하는 방법에 대한 단계를 제공합니다.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '744'
 ht-degree: 1%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Streaming SDK는 베타 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions)를 참조하십시오.
+>SDK 스트리밍은 베타 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions)를 참조하십시오.
 
-연결 사양은 소스의 구조를 나타냅니다. 여기에는 소스의 인증 요구 사항에 대한 정보가 포함되어 있으며 소스 데이터를 탐색하고 검사하는 방법을 정의하고 주어진 소스의 속성에 대한 정보를 제공합니다. [!DNL Flow Service] API의 `/connectionSpecs` 끝점을 사용하면 조직 내에서 연결 사양을 프로그래밍 방식으로 관리할 수 있습니다.
+연결 사양은 소스의 구조를 나타냅니다. 여기에는 소스의 인증 요구 사항에 대한 정보가 포함되어 있으며 소스 데이터를 탐색하고 검사하는 방법을 정의하고 주어진 소스의 속성에 대한 정보를 제공합니다. `/connectionSpecs` API의 [!DNL Flow Service] 끝점을 사용하면 조직 내에서 연결 사양을 프로그래밍 방식으로 관리할 수 있습니다.
 
-다음 문서에서는 [!DNL Flow Service] API를 사용하여 연결 사양을 만들고 셀프 서비스 소스(Streaming SDK)를 통해 새 소스를 통합하는 방법에 대한 단계를 설명합니다.
+다음 문서에서는 [!DNL Flow Service] API를 사용하여 연결 사양을 만들고 셀프 서비스 소스(스트리밍 SDK)를 통해 새 소스를 통합하는 방법에 대한 단계를 설명합니다.
 
-## 시작하기
+## 시작
 
 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
 ## 아티팩트 수집
 
-셀프서비스 소스를 사용하여 새 스트리밍 소스를 만들려면 먼저 Adobe과 조정하고, 개인 Git 저장소를 요청하고, 소스의 레이블, 설명, 카테고리 및 아이콘과 관련된 세부 정보에 대한 Adobe과 일치해야 합니다.
+셀프서비스 소스를 사용하여 새 스트리밍 소스를 만들려면 먼저 Adobe과 조정하고, 개인 Git 저장소를 요청하고, 소스의 레이블, 설명, 카테고리 및 아이콘과 관련된 세부 정보를 Adobe과 조정해야 합니다.
 
 제공된 후에는 다음과 같이 개인 Git 저장소를 구성해야 합니다.
 
@@ -43,8 +43,8 @@ ht-degree: 1%
 | --- | --- | --- |
 | {your_source} | 소스의 이름입니다. 이 폴더에는 개인 Git 저장소 내에 있는 소스와 관련된 모든 아티팩트가 포함되어야 합니다. | `medallia` |
 | {your_source}-category.txt | 텍스트 파일 형식의 소스가 속한 범주입니다. **참고**: 원본이 위의 범주에 맞지 않는다고 생각되면 Adobe 담당자에게 문의하여 논의하십시오. | `medallia-category.txt` 파일 내에서 원본의 범주를 지정하십시오(예: `streaming`). |
-| {your_source}-description.txt | 소스에 대한 간략한 설명. | [!DNL Medallia]은(는) [!DNL Medallia] 데이터를 Experience Platform 상태로 만드는 데 사용할 수 있는 마케팅 자동화 소스입니다. |
-| {your_source}-icon.svg | Experience Platform 소스 카탈로그에서 소스를 나타내는 데 사용할 이미지입니다. 이 아이콘은 SVG 파일이어야 합니다. |
+| {your_source}-description.txt | 소스에 대한 간략한 설명. | [!DNL Medallia]은(는) [!DNL Medallia] 데이터를 Experience Platform으로 가져오는 데 사용할 수 있는 마케팅 자동화 소스입니다. |
+| {your_source}-icon.svg | Experience Platform 소스 카탈로그에서 소스를 나타내는 데 사용되는 이미지입니다. 이 아이콘은 SVG 파일이어야 합니다. |  |
 | {your_source}-label.txt | Experience Platform 소스 카탈로그에 표시되어야 하는 소스의 이름입니다. | 메달리아 |
 | {your_source}-connectionSpec.json | 소스의 연결 사양이 포함된 JSON 파일. 이 안내서를 완료할 때 연결 사양을 채우므로 이 파일은 처음에 필요하지 않습니다. | `medallia-connectionSpec.json` |
 
@@ -54,7 +54,7 @@ ht-degree: 1%
 >
 >연결 사양의 테스트 기간 동안 키 값 대신 연결 사양의 `text`을(를) 사용할 수 있습니다.
 
-필요한 파일을 개인 Git 저장소에 추가한 후에는 Adobe이 검토할 끌어오기 요청(PR)을 만들어야 합니다. PR이 승인되고 병합되면 소스의 레이블, 설명 및 아이콘을 참조하는 연결 사양에 사용할 수 있는 ID가 제공됩니다.
+필요한 파일을 개인 Git 저장소에 추가한 후 Adobe이 검토할 가져오기 요청(PR)을 만들어야 합니다. PR이 승인되고 병합되면 소스의 레이블, 설명 및 아이콘을 참조하는 연결 사양에 사용할 수 있는 ID가 제공됩니다.
 
 다음으로 아래에 설명된 단계에 따라 연결 사양을 구성합니다. 고급 예약, 사용자 지정 스키마 또는 다양한 페이지 매김 유형과 같이 소스에 추가할 수 있는 다양한 기능에 대한 추가 지침은 [소스 사양 구성](../config/sourcespec.md)의 안내서를 검토하십시오.
 
@@ -72,7 +72,7 @@ ht-degree: 1%
   "attributes": {
     "category": "Streaming",
     "isSource": true,
-    "documentationLink": "https://docs.adobe.com/content/help/ko-KR/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+    "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
     "uiAttributes": {
       "apiFeatures": {
         "updateSupported": false
@@ -144,7 +144,7 @@ ht-degree: 1%
 * [소스 사양 구성](../config/sourcespec.md)
 * [탐색 사양 구성](../config/explorespec.md)
 
-사양 정보를 업데이트하면 [!DNL Flow Service] API의 `/connectionSpecs` 끝점에 POST 요청을 하여 새 연결 사양을 제출할 수 있습니다.
+사양 정보를 업데이트하면 `/connectionSpecs` API의 [!DNL Flow Service] 끝점에 POST 요청을 하여 새 연결 사양을 제출할 수 있습니다.
 
 **API 형식**
 
@@ -172,7 +172,7 @@ curl -X POST \
       "attributes": {
           "category": "Streaming",
           "isSource": true,
-          "documentationLink": "https://docs.adobe.com/content/help/ko-KR/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+          "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
           "uiAttributes": {
             "apiFeatures": {
               "updateSupported": false
@@ -287,7 +287,7 @@ curl -X POST \
       "attributes": {
         "category": "Streaming",
         "isSource": true,
-        "documentationLink": "https://docs.adobe.com/content/help/ko-KR/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+        "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
         "uiAttributes": {
           "apiFeatures": {
             "updateSupported": false

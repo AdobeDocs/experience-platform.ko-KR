@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: 셀프서비스 소스에 대한 인증 사양 구성(일괄 SDK)
 description: 이 문서에서는 셀프서비스 소스(일괄 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 3%
@@ -24,7 +24,7 @@ ht-degree: 3%
 
 OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰을 생성하여 애플리케이션에 안전하게 액세스할 수 있도록 합니다. 액세스 토큰을 사용하면 다른 자격 증명을 제공할 필요 없이 리소스에 안전하게 액세스할 수 있으며, 새로 고침 토큰을 사용하면 액세스 토큰이 만료되면 새 액세스 토큰을 생성할 수 있습니다.
 
-+++OAuth 2 새로 고침 코드의 보기 예
++++OAuth 2 새로 고침 코드의 예 보기
 
 ```json
 {
@@ -116,20 +116,20 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
 | --- | --- | --- |
 | `authSpec.name` | 지원되는 인증 유형의 이름을 표시합니다. | `oAuth2-refresh-code` |
 | `authSpec.type` | 소스에서 지원하는 인증 유형을 정의합니다. | `oAuth2-refresh-code` |
-| `authSpec.spec` | 인증의 스키마, 데이터 유형 및 속성에 대한 정보를 포함합니다. |
+| `authSpec.spec` | 인증의 스키마, 데이터 유형 및 속성에 대한 정보를 포함합니다. |  |
 | `authSpec.spec.$schema` | 인증에 사용되는 스키마를 정의합니다. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | 스키마의 데이터 유형을 정의합니다. | `object` |
-| `authSpec.spec.properties` | 인증에 사용되는 자격 증명에 대한 정보를 포함합니다. |
-| `authSpec.spec.properties.description` | 자격 증명에 대한 간단한 설명을 표시합니다. |
+| `authSpec.spec.properties` | 인증에 사용되는 자격 증명에 대한 정보를 포함합니다. |  |
+| `authSpec.spec.properties.description` | 자격 증명에 대한 간단한 설명을 표시합니다. |  |
 | `authSpec.spec.properties.type` | 자격 증명의 데이터 유형을 정의합니다. | `string` |
-| `authSpec.spec.properties.clientId` | 응용 프로그램과 연결된 클라이언트 ID입니다. 클라이언트 ID는 액세스 토큰을 검색하기 위해 클라이언트 암호와 함께 사용됩니다. |
-| `authSpec.spec.properties.clientSecret` | 응용 프로그램과 연결된 클라이언트 암호입니다. 클라이언트 암호는 액세스 토큰을 검색하기 위해 클라이언트 ID와 함께 사용됩니다. |
-| `authSpec.spec.properties.accessToken` | 액세스 토큰은 애플리케이션에 대한 보안 액세스를 승인합니다. |
-| `authSpec.spec.properties.refreshToken` | 새로 고침 토큰은 액세스 토큰이 만료될 때 새 액세스 토큰을 생성하는 데 사용됩니다. |
-| `authSpec.spec.properties.expirationDate` | 액세스 토큰의 만료 날짜를 정의합니다. |
-| `authSpec.spec.properties.refreshTokenUrl` | 새로 고침 토큰을 검색하는 데 사용되는 URL입니다. |
-| `authSpec.spec.properties.accessTokenUrl` | 새로 고침 토큰을 검색하는 데 사용되는 URL입니다. |
-| `authSpec.spec.properties.requestParameterOverride` | 인증 시 재정의할 자격 증명 매개 변수를 지정할 수 있습니다. |
+| `authSpec.spec.properties.clientId` | 응용 프로그램과 연결된 클라이언트 ID입니다. 클라이언트 ID는 액세스 토큰을 검색하기 위해 클라이언트 암호와 함께 사용됩니다. |  |
+| `authSpec.spec.properties.clientSecret` | 응용 프로그램과 연결된 클라이언트 암호입니다. 클라이언트 암호는 액세스 토큰을 검색하기 위해 클라이언트 ID와 함께 사용됩니다. |  |
+| `authSpec.spec.properties.accessToken` | 액세스 토큰은 애플리케이션에 대한 보안 액세스를 승인합니다. |  |
+| `authSpec.spec.properties.refreshToken` | 새로 고침 토큰은 액세스 토큰이 만료될 때 새 액세스 토큰을 생성하는 데 사용됩니다. |  |
+| `authSpec.spec.properties.expirationDate` | 액세스 토큰의 만료 날짜를 정의합니다. |  |
+| `authSpec.spec.properties.refreshTokenUrl` | 새로 고침 토큰을 검색하는 데 사용되는 URL입니다. |  |
+| `authSpec.spec.properties.accessTokenUrl` | 새로 고침 토큰을 검색하는 데 사용되는 URL입니다. |  |
+| `authSpec.spec.properties.requestParameterOverride` | 인증 시 재정의할 자격 증명 매개 변수를 지정할 수 있습니다. |  |
 | `authSpec.spec.required` | 인증에 필요한 자격 증명을 표시합니다. | `accessToken` |
 
 {style="table-layout:auto"}
@@ -173,13 +173,13 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
 | --- | --- | --- |
 | `authSpec.name` | 지원되는 인증 유형의 이름을 표시합니다. | `Basic Authentication` |
 | `authSpec.type` | 소스에서 지원하는 인증 유형을 정의합니다. | `BasicAuthentication` |
-| `authSpec.spec` | 인증의 스키마, 데이터 유형 및 속성에 대한 정보를 포함합니다. |
+| `authSpec.spec` | 인증의 스키마, 데이터 유형 및 속성에 대한 정보를 포함합니다. |  |
 | `authSpec.spec.$schema` | 인증에 사용되는 스키마를 정의합니다. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | 스키마의 데이터 유형을 정의합니다. | `object` |
-| `authSpec.spec.description` | 인증 유형과 관련된 추가 정보를 표시합니다. |
-| `authSpec.spec.properties` | 인증에 사용되는 자격 증명에 대한 정보를 포함합니다. |
-| `authSpec.spec.properties.username` | 응용 프로그램과 연결된 계정 사용자 이름입니다. |
-| `authSpec.spec.properties.password` | 응용 프로그램과 연결된 계정 암호입니다. |
+| `authSpec.spec.description` | 인증 유형과 관련된 추가 정보를 표시합니다. |  |
+| `authSpec.spec.properties` | 인증에 사용되는 자격 증명에 대한 정보를 포함합니다. |  |
+| `authSpec.spec.properties.username` | 응용 프로그램과 연결된 계정 사용자 이름입니다. |  |
+| `authSpec.spec.properties.password` | 응용 프로그램과 연결된 계정 암호입니다. |  |
 | `authSpec.spec.required` | Experience Platform에서 입력해야 할 필수 값으로 필요한 필드를 지정합니다. | `username` |
 
 {style="table-layout:auto"}
@@ -269,7 +269,7 @@ API 키 인증을 사용할 때 일반적으로 다음 매개 변수가 필요�
 
 `authKey1`에 `"headerParamName": "X-Auth-Key1"`이(가) 있는 경우. 즉, 요청 헤더에 `X-Auth-Key:{YOUR_AUTH_KEY1}`이(가) 포함되어야 합니다. 또한 키 이름과 `headerParamName`이(가) 반드시 같을 필요는 없습니다. 예:
 
-* `authKey1`에 `headerParamName: X-Custom-Auth-Key`이(가) 있을 수 있습니다. 즉, 요청 헤더에서 `authKey1` 대신 `X-Custom-Auth-Key`을(를) 사용합니다.
+* `authKey1`에 `headerParamName: X-Custom-Auth-Key`이(가) 있을 수 있습니다. 즉, 요청 헤더에서 `X-Custom-Auth-Key` 대신 `authKey1`을(를) 사용합니다.
 * 반대로 `authKey1`은(는) `headerParamName: authKey1`을(를) 가질 수 있습니다. 즉, 요청 헤더 이름은 변경되지 않습니다.
 
 **예제 API 형식**

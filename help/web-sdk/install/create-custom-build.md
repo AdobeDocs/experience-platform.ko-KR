@@ -1,13 +1,13 @@
 ---
 title: NPM 패키지를 사용하여 사용자 지정 웹 SDK 빌드 만들기
 description: 필요한 모듈만 포함된 사용자 지정 웹 SDK 빌드를 만듭니다.
-source-git-commit: 0f77023b07102ac2bc812034afacb1522ef209e5
+exl-id: 0ba5ae55-9ec0-41b6-9675-e76ade8ca4cd
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 6%
 
 ---
-
 
 # 사용자 지정 웹 SDK 빌드 만들기
 
@@ -40,7 +40,7 @@ Experience Platform 웹 SDK 라이브러리에는 개인화, ID, 링크 추적 �
 | 활동 수집기 | [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) | N/A | 보통 |
 | 대상자 | N/A | N/A | 소규모 |
 | 컨텍스트 | [`context`](../commands/configure/context.md) | N/A | 소규모 |
-| 규칙 엔진 | `personalizationStorageEnabled` | | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | 보통 |
+| 규칙 엔진 | `personalizationStorageEnabled` | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | 보통 |
 | 이벤트 병합 | N/A | `createEventMergeId` | 소규모 |
 | 미디어 분석 Bridge | N/A | [`getMediaAnalyticsTracker`](../commands/getmediaanalyticstracker.md) | 대규모 |
 | 개인화 | <ul><li>[`prehidingStyle`](../commands/configure/prehidingstyle.md)</li><li>[`targetMigrationEnabled`](../commands/configure/targetmigrationenabled.md)</li><li>[`autoCollectPropositionInteractions`](../commands/configure/autocollectpropositioninteractions.md)</li></ul> | N/A | 대규모 |
@@ -71,4 +71,3 @@ Experience Platform 웹 SDK 라이브러리에는 개인화, ID, 링크 추적 �
 1. 위치를 확인하면 사용자 지정 빌드가 생성되고 저장됩니다.
 
    ![사용자 지정 빌드 저장 위치를 표시하는 터미널 이미지입니다.](../assets/custom-build/saved.png)
-

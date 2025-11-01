@@ -2,9 +2,9 @@
 title: Adobe Analytics Source 커넥터에 대한 매핑 필드
 description: Analytics Source Connector를 사용하여 Adobe Analytics 필드를 XDM 필드에 매핑합니다.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3832'
 ht-degree: 5%
 
 ---
@@ -242,7 +242,7 @@ ADC에서 제공되는 선택 필드는 변환해야 하며 XDM에서 Adobe Anal
 | `m_page_type` | `web.webPageDetails.isErrorPage` | 부울 | 페이지를 찾을 수 없음 차원을 채우는 데 사용되는 변수입니다. 이 변수는 비어 있거나 &quot;ErrorPage&quot;를 포함해야 합니다. |
 | `m_pagename_no_url` | `web.webPageDetails.name` | 번호 | 페이지 이름(설정된 경우)입니다. 지정된 페이지가 없으면 이 값은 비워 둡니다. |
 | `m_paid_search` | `search.isPaid` | 부울 | 히트가 유료 검색 감지와 일치하는 경우 설정되는 플래그입니다. |
-| `m_product_list` | `productListItems[].items` | 배열 | products 변수를 통해 전달되는 제품 목록입니다. | {SKU(문자열), 수량(정수), priceTotal(숫자)} |
+| `m_product_list` | `productListItems[].items` | 배열 | products 변수를 통해 전달되는 제품 목록입니다. `{SKU (string), quantity (integer), priceTotal (number)}` |
 | `m_ref_type` | `web.webReferrer.type` | 문자열 | 히트에 대한 참조 유형을 나타내는 숫자 ID입니다.<br/>`1`: 사이트 내부<br/>`2`: 기타 웹 사이트<br/>`3`: 검색 엔진<br/>`4`: 하드 드라이브<br/>`5`: USENET<br/>`6`: 입력/책갈피 표시(레퍼러 없음)<br/>`7`: 전자 메일<br/>`8`: JavaScript 없음<br/>`9`: 소셜 네트워크 |
 | `m_search_engine` | `search.searchEngine` | 문자열 | 방문자를 사이트로 유도한 검색 엔진을 나타내는 숫자 ID입니다. |
 | `post_currency` | `commerce.order.currencyCode` | 문자열 | 거래 중에 사용된 통화 코드. |
