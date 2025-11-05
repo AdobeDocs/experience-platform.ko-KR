@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: 셀프서비스 소스에 대한 소스 사양 구성(배치 SDK)
 description: 이 문서에서는 셀프서비스 소스(일괄 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 2ff70ee6e4aa7fd723293e66000ccb161d61ab6a
 workflow-type: tm+mt
-source-wordcount: '2090'
-ht-degree: 1%
+source-wordcount: '2107'
+ht-degree: 0%
 
 ---
 
@@ -231,6 +231,7 @@ Source 사양에는 소스의 카테고리, Beta 상태 및 카탈로그 아이�
 | --- | --- | --- |
 | `sourceSpec.attributes` | UI 또는 API와 관련된 소스에 대한 정보를 포함합니다. |  |
 | `sourceSpec.attributes.uiAttributes` | UI와 관련된 소스에 대한 정보를 표시합니다. |  |
+| `sourceSpec.attributes.uiAttributes.isPreview` | 소스가 미리 보기로 표시되는지 여부를 나타내는 부울 속성(프로덕션/일반 가용성이 아님). | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.isBeta` | 소스에 해당 기능에 추가하기 위해 고객의 피드백이 더 필요한지 여부를 나타내는 부울 속성. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | 소스의 범주를 정의합니다. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Experience Platform UI에서 소스를 렌더링하는 데 사용되는 아이콘을 정의합니다. | `mailchimp-icon.svg` |
@@ -263,7 +264,7 @@ Source 사양에는 소스의 카테고리, Beta 상태 및 카탈로그 아이�
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | 종료 시간 매개 변수 이름 정의 | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | `scheduleStartParamName`에 지원되는 형식을 정의합니다. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | `scheduleEndParamName`에 지원되는 형식을 정의합니다. | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | 사용자가 제공한 매개 변수를 정의하여 리소스 값을 가져옵니다. | [에 대한 사용자 입력 매개 변수의 예는 &#x200B;](#user-input)추가 리소스`spec.properties`을(를) 참조하십시오. |
+| `sourceSpec.spec.properties` | 사용자가 제공한 매개 변수를 정의하여 리소스 값을 가져옵니다. | [에 대한 사용자 입력 매개 변수의 예는 ](#user-input)추가 리소스`spec.properties`을(를) 참조하십시오. |
 
 {style="table-layout:auto"}
 
