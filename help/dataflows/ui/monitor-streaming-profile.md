@@ -2,16 +2,16 @@
 title: 스트리밍 프로필 수집 모니터
 description: 모니터링 대시보드를 사용하여 스트리밍 프로필 수집을 모니터링하는 방법에 대해 알아봅니다
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 450a59b406684b456a67df43fbf954edbae49ff7
 workflow-type: tm+mt
-source-wordcount: '1932'
-ht-degree: 19%
+source-wordcount: '1835'
+ht-degree: 18%
 
 ---
 
 # 스트리밍 프로필 수집 모니터
 
-Adobe Experience Platform UI의 모니터링 대시보드를 사용하여 조직 내에서 스트리밍 프로필 수집을 실시간으로 모니터링할 수 있습니다. 이 기능을 사용하여 스트리밍 데이터와 관련된 처리량, 대기 시간 및 데이터 품질 지표에 대한 투명도를 높일 수 있습니다. 또한 사전 경고 및 실행 가능한 통찰력 검색에 이 기능을 사용하여 잠재적인 용량 위반 및 데이터 수집 문제를 식별하는 데 도움이 됩니다.
+Adobe Experience Platform UI의 모니터링 대시보드를 사용하여 조직 내에서 스트리밍 프로필 수집을 실시간으로 모니터링할 수 있습니다. 이 기능을 사용하여 스트리밍 데이터와 관련된 처리량 및 데이터 품질 지표에 대한 투명도를 높일 수 있습니다. 또한 사전 경고 및 실행 가능한 통찰력 검색에 이 기능을 사용하여 잠재적인 용량 위반 및 데이터 수집 문제를 식별하는 데 도움이 됩니다.
 
 모니터링 대시보드를 사용하여 조직에서 프로필 수집 작업을 스트리밍하기 위한 비율 및 지표를 추적하는 방법에 대해 알아보려면 다음 안내서를 참조하십시오.
 
@@ -21,19 +21,19 @@ Adobe Experience Platform UI의 모니터링 대시보드를 사용하여 조직
 
 * [데이터 흐름](../home.md): 데이터 흐름은 Experience Platform에서 정보를 전송하는 데이터 작업을 나타냅니다. ID 서비스, 실시간 고객 프로필 및 대상뿐만 아니라 소스 커넥터에서 대상 데이터 세트로 데이터를 쉽게 이동할 수 있도록 다양한 서비스에 걸쳐 구성됩니다.
 * [실시간 고객 프로필](../../profile/home.md): 실시간 고객 프로필은 온라인, 오프라인, CRM 및 서드파티와 같은 여러 소스의 데이터를 각 고객에 대한 실행 가능한 단일 보기로 결합하여 모든 접점에서 일관되고 개인화된 경험을 제공합니다.
-* [스트리밍 수집](../../ingestion/streaming-ingestion/overview.md): Experience Platform에 대한 스트리밍 수집은 클라이언트 및 서버측 장치에서 실시간으로 Experience Platform으로 데이터를 전송하는 방법을 사용자에게 제공합니다.Experience Platform을 사용하면 각 개별 고객에 대한 실시간 고객 프로필을 생성하여 조정되고 일관되며 관련 있는 환경을 구현할 수 있습니다. &#x200B;스트리밍 수집은 이러한 프로필을 빌드하는 데 있어 가능한 한 적은 지연으로 중요한 역할을 합니다.
+* [스트리밍 수집](../../ingestion/streaming-ingestion/overview.md): Experience Platform에 대한 스트리밍 수집은 클라이언트 및 서버측 장치에서 실시간으로 Experience Platform으로 데이터를 전송하는 방법을 사용자에게 제공합니다.Experience Platform을 사용하면 각 개별 고객에 대한 실시간 고객 프로필을 생성하여 조정되고 일관되며 관련 있는 환경을 구현할 수 있습니다. .
 * [기능](../../landing/license-usage-and-guardrails/capacity.md): Experience Platform에서 기능은 조직이 보호 기능을 초과했는지 여부를 알려주고 이러한 문제를 해결하는 방법에 대한 정보를 제공합니다.
 
 >[!NOTE]
 >
->스트리밍 처리량 용량은 초당 최대 1500개의 인바운드 이벤트를 지원합니다. 추가 스트리밍 세분화를 구매하여 초당 최대 13,500개의 추가 인바운드 이벤트를 지원할 수 있습니다&#x200B;. 자세한 내용은 [Real-Time CDP B2C Edition - Prime 및 Ultimate 패키지 제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)을 참조하세요.
+>스트리밍 처리량 용량은 초당 최대 1500개의 인바운드 이벤트를 지원합니다. 추가 스트리밍 세분화를 구매하여 초당 최대 13,500개의 추가 인바운드 이벤트를 지원할 수 있습니다&#x200B;. 자세한 내용은 [Real-Time CDP B2C Edition - Prime 및 Ultimate 패키지 제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)을 참조하세요.
 
 ## 스트리밍 프로필 수집을 위한 모니터링 지표 {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
 >title="스트리밍 프로필 수집 모니터"
->abstract="스트리밍 프로필에 대한 모니터링 대시보드에는 처리량, 수집 속도, 지연 시간에 대한 정보가 표시됩니다. 이 대시보드를 사용하면 데이터 처리 지표를 조회하고 이해하고 분석할 수 있습니다. Experience Platform의 스트리밍 프로필."
+>abstract="스트리밍 프로필에 대한 모니터링 대시보드에는 처리량 및 수집 속도에 대한 정보가 표시됩니다. 이 대시보드를 사용하면 데이터 처리 지표를 조회하고 이해하고 분석할 수 있습니다. Experience Platform의 스트리밍 프로필."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -90,7 +90,6 @@ Adobe Experience Platform UI의 모니터링 대시보드를 사용하여 조직
 | --- | --- | --- | --- |
 | 요청 처리량 | 이 지표는 초당 수집 시스템에 들어오는 이벤트 수를 나타냅니다. | 샌드박스/데이터 흐름 | 60초마다 데이터 새로 고침으로 실시간 모니터링. |
 | 프로세싱 처리량 | 이 지표는 시스템이 매 초마다 성공적으로 수집한 이벤트 수를 나타냅니다. | 샌드박스/데이터 흐름 | 60초마다 데이터 새로 고침으로 실시간 모니터링. |
-| P95 수집 지연 | 이 지표는 이벤트가 Experience Platform에 도착한 순간부터 프로필 스토어에 성공적으로 수집될 때까지의 95번째 백분위수 지연 시간을 측정합니다. | 샌드박스/데이터 흐름 | 60초마다 데이터 새로 고침으로 실시간 모니터링. |
 | 최대 처리량 | 이 지표는 스트리밍 프로필 수집을 시작하는 초당 최대 인바운드 요청 수를 나타냅니다 | <ul><li>샌드박스/데이터 흐름</li><li>데이터 흐름 실행</li></ul> |  |
 | 레코드 수집됨 | 이 지표는 구성된 시간 창 내에 프로필 스토어에 수집된 총 레코드 수를 나타냅니다. | <ul><li>샌드박스/데이터 흐름</li><li>데이터 흐름 실행</li></ul> | <ul><li>샌드박스/데이터 흐름: 60초마다 데이터 새로 고침으로 실시간 모니터링.</li><li>데이터 흐름 실행: 15분 안에 그룹화됩니다.</li></ul> |
 | 레코드 실패 | 이 지표는 구성된 시간 창 내에 오류로 인해 프로필 스토어로 수집에 실패한 총 레코드 수를 나타냅니다. | <ul><li>샌드박스/데이터 흐름</li><li>데이터 흐름 실행</li></ul> | <ul><li>샌드박스/데이터 흐름: 60초마다 데이터 새로 고침으로 실시간 모니터링.</li><li>데이터 흐름 실행: 15분 안에 그룹화됩니다.</li></ul> |
@@ -105,7 +104,7 @@ Adobe Experience Platform UI의 모니터링 대시보드를 사용하여 조직
 
 ![스트리밍 프로필 수집을 위한 모니터링 대시보드입니다.](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-*[!UICONTROL Profile]* 지표 카드에 대한 대시보드의 위쪽 헤더를 참조하십시오. 이 표시를 사용하여 수집, 실패 및 건너뛴 레코드에 대한 정보와 요청 처리량 및 대기 시간의 현재 상태에 대한 정보를 볼 수 있습니다.
+*[!UICONTROL Profile]* 지표 카드에 대한 대시보드의 위쪽 헤더를 참조하십시오. 이 디스플레이를 사용하여 수집, 실패 및 생략된 레코드에 대한 정보와 요청 처리량의 현재 상태에 대한 정보를 볼 수 있습니다.
 
 ![프로필 카드입니다.](../assets/ui/streaming-profiles/profile-card.png)
 
@@ -119,7 +118,7 @@ Adobe Experience Platform UI의 모니터링 대시보드를 사용하여 조직
 
 또는 달력을 사용하여 직접 일정을 구성할 수도 있습니다.
 
-스트리밍 프로필 수집을 위한 모니터링 대시보드에서 [!UICONTROL Throughput], [!UICONTROL Ingestion] 및 [!UICONTROL Latency] 세 가지 지표 범주를 사용할 수 있습니다.
+스트리밍 프로필 수집을 위한 모니터링 대시보드에서 [!UICONTROL Throughput] 및 [!UICONTROL Ingestion] 두 개의 다른 지표 범주를 사용할 수 있습니다.
 
 >[!BEGINTABS]
 
@@ -142,12 +141,6 @@ Adobe Experience Platform UI의 모니터링 대시보드를 사용하여 조직
 * **수집된 레코드**: 지정된 기간 내에 만들어진 총 레코드 양입니다. 이 지표는 샌드박스의 성공적인 데이터 수집 프로세스를 나타냅니다.
 * **건너뛴 레코드**: 오류로 인해 수집되지 않은 총 레코드 수입니다.
 * **건너뛴 레코드**: 용량 제한을 위반하여 삭제된 총 레코드 수입니다.
-
->[!TAB 대기 시간]
-
-**[!UICONTROL Latency]**&#x200B;을(를) 선택하여 Experience Platform이 요청에 응답하거나 지정된 기간 내에 작업을 완료하는 데 걸리는 시간에 대한 정보를 봅니다.
-
-![디스플레이가 &quot;대기 시간&quot;으로 설정된 대시보드입니다.](../assets/ui/streaming-profiles/latency.png)
 
 >[!ENDTABS]
 
@@ -194,7 +187,7 @@ Experience Platform에서 데이터 흐름을 가장 잘 관리하고 데이터 
 | 기여 요인 | 정의 | 사용 사례에 미치는 영향 | 모범 사례 |
 | --- | --- | --- | --- |
 | 일괄 처리-스트리밍 전환 | 스트리밍으로 전환된 일괄 작업 로드는 처리량을 크게 증가시켜 성능과 리소스 할당에 영향을 줄 수 있습니다. 예를 들어, 비율 제한 없이 이벤트 후에 벌크 프로필 업데이트를 수행하는 경우입니다. | 짧은 지연 처리가 필요하지 않은 일괄 사용 사례에는 스트리밍 전략이 필요하지 않습니다. | 사용 사례 요구 사항 평가 일괄 아웃바운드 마케팅의 경우 스트리밍 대신 [일괄 처리 수집](../../ingestion/batch-ingestion/overview.md)을 사용하여 데이터 수집을 보다 효율적으로 관리하는 것이 좋습니다. |
-| 불필요한 데이터 수집 | 개인화에 필요하지 않은 데이터를 수집하면 가치를 추가하지 않고 처리량이 증가하여 리소스를 낭비할 수 있습니다. 예를 들어 관련성에 관계없이 모든 분석 트래픽을 프로필로 수집합니다. | 관련 없는 데이터가 너무 많으면 노이즈가 발생하여 영향을 미치는 데이터 포인트를 식별하기가 더 어려워집니다. 또한 대상자 및 프로필을 정의하고 관리할 때 마찰이 발생할 수 있습니다. | 사용 사례에 필요한 데이터만 수집합니다. 불필요한 데이터를 필터링해야 합니다.<ul><li>**Adobe Analytics**: [행 수준 필터링](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)을 사용하여 데이터 섭취를 최적화합니다.</li><li>**소스**: [[!DNL Flow Service] API를 사용하여 &#x200B;](../../sources/tutorials/api/filter.md) 및 [!DNL Snowflake]과(와) 같은 지원되는 소스에 대해 행 수준 데이터를 필터링[!DNL Google BigQuery]합니다.</li></li>**Edge 데이터스트림**: WebSDK에서 들어오는 트래픽의 행 수준 필터링을 수행하려면 [동적 데이터스트림](../../datastreams/configure-dynamic-datastream.md)을 구성하십시오.</li></ul> |
+| 불필요한 데이터 수집 | 개인화에 필요하지 않은 데이터를 수집하면 가치를 추가하지 않고 처리량이 증가하여 리소스를 낭비할 수 있습니다. 예를 들어 관련성에 관계없이 모든 분석 트래픽을 프로필로 수집합니다. | 관련 없는 데이터가 너무 많으면 노이즈가 발생하여 영향을 미치는 데이터 포인트를 식별하기가 더 어려워집니다. 또한 대상자 및 프로필을 정의하고 관리할 때 마찰이 발생할 수 있습니다. | 사용 사례에 필요한 데이터만 수집합니다. 불필요한 데이터를 필터링해야 합니다.<ul><li>**Adobe Analytics**: [행 수준 필터링](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)을 사용하여 데이터 섭취를 최적화합니다.</li><li>**소스**: [[!DNL Flow Service] API를 사용하여 ](../../sources/tutorials/api/filter.md) 및 [!DNL Snowflake]과(와) 같은 지원되는 소스에 대해 행 수준 데이터를 필터링[!DNL Google BigQuery]합니다.</li></li>**Edge 데이터스트림**: WebSDK에서 들어오는 트래픽의 행 수준 필터링을 수행하려면 [동적 데이터스트림](../../datastreams/configure-dynamic-datastream.md)을 구성하십시오.</li></ul> |
 
 {style="table-layout:auto"}
 
