@@ -51,13 +51,13 @@ ht-degree: 0%
 
 모델을 만들려면 모델을 교육하고 평가하는 데 사용되는 Experience Platform 데이터 세트가 있어야 합니다. [데이터 과학 Workspace 교육 과정](https://experienceleague.adobe.com/?lang=ko&recommended=ExperiencePlatform-U-1-2021.1.dsw)의 다음 비디오 튜토리얼에서는 Luma 스키마를 만들고 구매 성향 모델에서 사용하는 데이터를 수집하는 과정을 안내합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/333312)
+>[!VIDEO](https://video.tv.adobe.com/v/3447161?captions=kor)
 
 ### 교육, 채점 및 채점 결과 데이터 세트 만들기
 
 레시피 빌더 전자 필기장을 실행하거나 API를 사용하여 모델을 교육하고 평가하려면 교육/점수에 사용되는 데이터 세트와 스키마를 지정해야 합니다. 다음 비디오 튜토리얼에서는 Luma 구매 성향 모델에 사용되는 점수 지정 결과 스키마뿐만 아니라 교육, 점수 지정 및 점수 지정 결과 데이터 세트를 설정하는 방법을 안내합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/333426)
+>[!VIDEO](https://video.tv.adobe.com/v/3447428?captions=kor)
 
 ## 다음 단계
 
