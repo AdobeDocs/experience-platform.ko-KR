@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ### Luma 웹 데이터 스키마를 만들고 데이터 수집
 
-모델을 만들려면 모델을 교육하고 평가하는 데 사용되는 Experience Platform 데이터 세트가 있어야 합니다. [데이터 과학 Workspace 교육 과정](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw)의 다음 비디오 튜토리얼에서는 Luma 스키마를 만들고 구매 성향 모델에서 사용하는 데이터를 수집하는 과정을 안내합니다.
+모델을 만들려면 모델을 교육하고 평가하는 데 사용되는 Experience Platform 데이터 세트가 있어야 합니다. [데이터 과학 Workspace 교육 과정](https://experienceleague.adobe.com/?lang=ko&recommended=ExperiencePlatform-U-1-2021.1.dsw)의 다음 비디오 튜토리얼에서는 Luma 스키마를 만들고 구매 성향 모델에서 사용하는 데이터를 수집하는 과정을 안내합니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 
