@@ -3,18 +3,14 @@ solution: Experience Platform
 title: 유사 대상
 description: 유사 대상을 사용하여 Adobe Experience Platform에서 새로운 고부가가치 대상을 타깃팅하는 방법에 대해 알아봅니다.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
+source-git-commit: 03f8124f0fc750efa9b7bca0ff80de4c9263915d
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2250'
 ht-degree: 9%
 
 ---
 
 # 유사 대상 안내서
-
->[!AVAILABILITY]
->
->유사 인사이트 및 유사 대상은 **B2C 에디션**&#x200B;에서만 사용할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -85,15 +81,15 @@ Adobe Experience Platform에서 유사 모델은 세 가지 서로 다른 유형
 
 ## 액세스 {#access}
 
-유사 대상에 대한 액세스 권한이 있는지 확인하려면 대상 포털 내에서 대상을 선택하고 **[!UICONTROL 유사 인사이트]** 탭이 표시되는지 확인하십시오.
+유사 대상에 대한 액세스 권한이 있는지 확인하려면 대상 포털 내에서 대상을 선택하고 **[!UICONTROL Look-alike insights]** 탭이 표시되는지 확인하십시오.
 
 ## 유사 인사이트 보기 {#view}
 
-대상 세부 사항 페이지에 유사 인사이트가 내장되어 있습니다. 대상에 대한 유사 인사이트를 보려면 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&#x200B;을 선택한 후 **[!UICONTROL 찾아보기]**&#x200B;를 선택하고 인사이트를 보려는 대상을 선택하십시오.
+대상 세부 사항 페이지에 유사 인사이트가 내장되어 있습니다. 대상에 대한 유사 인사이트를 보려면 왼쪽 탐색 막대에서 **[!UICONTROL Audiences]**&#x200B;을(를) 선택하고 **[!UICONTROL Browse]**&#x200B;을(를) 선택한 다음 인사이트를 보려는 대상을 선택하십시오.
 
 ![유사 모델링에 사용되는 기본 대상뿐만 아니라 대상 단추가 강조 표시됩니다.](../images/types/lookalike/browse.png)
 
-대상자 세부 사항 페이지가 나타납니다. 대상자에 대한 유사 인사이트를 보려면 **[!UICONTROL 유사 인사이트]** 탭을 선택하십시오. **[!UICONTROL 유사 인사이트]** 페이지가 표시됩니다. 이 페이지에는 유사성 및 도달 범위 그래프, 유사 대상 및 영향력 있는 요소의 세 가지 주요 요소가 있습니다.
+대상자 세부 사항 페이지가 나타납니다. 대상의 유사 인사이트를 보려면 **[!UICONTROL Look-alike insights]** 탭을 선택하십시오. **[!UICONTROL Look-alike insights]** 페이지가 표시됩니다. 이 페이지에는 유사성 및 도달 범위 그래프, 유사 대상 및 영향력 있는 요소의 세 가지 주요 요소가 있습니다.
 
 ![유사 인사이트 탭이 강조 표시되어 기본 대상에 대한 유사 인사이트를 표시합니다.](../images/types/lookalike/look-alike-insights.png)
 
@@ -128,7 +124,7 @@ y축은 x축의 일치 값에 해당하는 유사성 백분율과 함께 예상 
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="영향력 있는 요소"
 >abstract="영향력 있는 요소는 프로필의 유사성을 기본 대상자 멤버에게 설명하는 데 중요한 속성, 이벤트 및 대상자 멤버십입니다. 데이터 사용 레이블 및 정책을 사용하여 유사 모델에서 특정 데이터가 영향력 있는 요소로 간주되지 않도록 제외할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html?lang=ko#exclude" text="데이터 제외"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html#exclude" text="데이터 제외"
 
 영향 요인 섹션에는 선택한 기본 대상의 유사 모델에 영향을 주는 상위 100개 요인이 표시됩니다. 이러한 영향력 있는 요소는 기본 대상의 유사성을 설명하는 데 가장 중요한 프로필 속성, 경험 이벤트 및 대상 멤버십입니다. 가장 영향력 있는 주요 요인을 이해하면 이 대상자 및 이 대상자를 통해 생성하는 유사 대상자에 대한 마케팅 콘텐츠를 더 잘 개인화할 수 있습니다. 유사 모델에 영향을 미치는 모든 영향 요소가 표시되지는 않음에 유의하시기 바랍니다.
 
@@ -155,17 +151,17 @@ y축은 x축의 일치 값에 해당하는 유사성 백분율과 함께 예상 
 >
 >**다른 유사 대상을 위한 기본 대상으로 유사 대상을 사용할 수 없습니다**. 즉, **연결된 유사 대상을 만들 수 없습니다**.
 
-유사 대상을 만들려면 유사 대상을 기준으로 사용할 대상을 선택해야 합니다. 사용 가능한 대상자 목록에 액세스하려면 왼쪽 탐색 막대에서 **[!UICONTROL 대상자]**&#x200B;를 선택한 다음 **[!UICONTROL 찾아보기]**&#x200B;를 선택하십시오. 대상자 목록이 나타납니다. 이 페이지에서는 기본 대상자로 사용할 대상자를 선택할 수 있습니다.
+유사 대상을 만들려면 유사 대상을 기준으로 사용할 대상을 선택해야 합니다. 사용 가능한 대상자 목록에 액세스하려면 왼쪽 탐색 막대에서 **[!UICONTROL Audiences]**&#x200B;을(를) 선택한 후 **[!UICONTROL Browse]**&#x200B;을(를) 선택하십시오. 대상자 목록이 나타납니다. 이 페이지에서는 기본 대상자로 사용할 대상자를 선택할 수 있습니다.
 
 ![유사 모델링에 사용되는 기본 대상뿐만 아니라 대상 단추가 강조 표시됩니다.](../images/types/lookalike/browse.png)
 
-대상 세부 정보 페이지에서 **[!UICONTROL 유사 대상 만들기]**&#x200B;를 선택하여 유사 대상을 만드는 프로세스를 시작합니다.
+대상 세부 정보 페이지에서 **[!UICONTROL Create look-alike audience]**&#x200B;을(를) 선택하여 유사 대상을 만드는 프로세스를 시작합니다.
 
-![유사 대상 만들기] 단추가 강조 표시되어 있습니다.(../images/types/lookalike/create-look-alike-audience.png)
+![[!UICONTROL Create look-alike audience] 단추가 강조 표시되어 있습니다.](../images/types/lookalike/create-look-alike-audience.png)
 
-**[!UICONTROL 유사 대상 만들기]** 팝오버가 나타납니다. 이 페이지에서 유사 대상의 유사성 백분율을 설정할 수 있습니다.
+**[!UICONTROL Create a look-alike audience]** 팝오버가 나타납니다. 이 페이지에서 유사 대상의 유사성 백분율을 설정할 수 있습니다.
 
-![유사 대상자 만들기] 팝오버가 표시됩니다.(../images/types/lookalike/create-audience.png)
+![[!UICONTROL Create a look-alike audience] 팝오버가 표시됩니다.](../images/types/lookalike/create-audience.png)
 
 다음 세 가지 방법으로 이 유사성 백분율을 설정할 수 있습니다.
 
@@ -175,17 +171,17 @@ y축은 x축의 일치 값에 해당하는 유사성 백분율과 함께 예상 
 
 이름 및 설명을 포함하여 유사 대상에 대한 세부 사항을 업데이트할 수도 있습니다. 기본적으로 유사 대상 이름은 기본 대상 이름 및 이전에 지정된 유사성 백분율을 기반으로 생성됩니다.
 
-![기본 정보는 [!UICONTROL 유사 대상 만들기] 팝오버 내에서 강조 표시됩니다.](../images/types/lookalike/basic-info.png)
+![기본 정보가 [!UICONTROL Create a look-alike audience] 팝오버 내에 강조 표시됩니다.](../images/types/lookalike/basic-info.png)
 
-**[!UICONTROL 만들기]**&#x200B;를 선택하여 유사 대상자 만들기를 완료합니다.
+**[!UICONTROL Create]**&#x200B;을(를) 선택하여 유사 대상자 만들기를 완료합니다.
 
-![만들기 단추가 [!UICONTROL 유사 대상 만들기] 팝오버 내에서 강조 표시됩니다.](../images/types/lookalike/create-audience.png)
+![만들기 단추가 [!UICONTROL Create a look-alike audience] 팝오버 내에 강조 표시됩니다.](../images/types/lookalike/create-audience.png)
 
-새로 만든 유사 대상은 대상 세부 정보 페이지의 **[!UICONTROL 유사 대상]** 섹션에서 액세스할 수 있으며 Audience Portal 및 다른 다운스트림 사용에도 사용할 수 있습니다. 유사 대상 점수가 매겨지려면 시간이 다소 소요됩니다. 점수가 매겨질 때까지 프로필 수는 0으로 표시됩니다.
+새로 만든 유사 대상은 대상 세부 정보 페이지의 **[!UICONTROL Look-alike audiences]** 섹션에서 액세스할 수 있으며 대상 포털 및 다른 다운스트림 사용에서도 사용할 수 있습니다. 유사 대상 점수가 매겨지려면 시간이 다소 소요됩니다. 점수가 매겨질 때까지 프로필 수는 0으로 표시됩니다.
 
 ## 유사 대상 세부 정보 보기 {#view-details}
 
-유사 대상의 세부 정보를 보려면 기본 대상의 **[!UICONTROL 유사 대상]** 섹션에서 유사 대상을 선택하십시오.
+유사 대상의 세부 정보를 보려면 기본 대상의 **[!UICONTROL Look-alike audiences]** 섹션에서 유사 대상을 선택하십시오.
 
 ![유사 대상 섹션이 강조 표시됩니다.](../images/types/lookalike/select-laa.png)
 
