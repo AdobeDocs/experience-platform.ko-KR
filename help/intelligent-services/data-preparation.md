@@ -96,7 +96,7 @@ CEE 스키마는 모든 XDM ExperienceEvent 스키마와 마찬가지로 시점 
 
 모든 XDM 스키마와 마찬가지로 CEE 스키마 필드 그룹은 확장 가능합니다. 즉, CEE 필드 그룹에 추가 필드를 추가할 수 있고, 필요한 경우 다른 변형을 여러 스키마에 포함할 수 있습니다.
 
-필드 그룹의 전체 예는 [공용 XDM 저장소](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)에서 찾을 수 있습니다. 또한 CEE 스키마를 준수하도록 데이터를 구조화하는 방법의 예를 보려면 다음 [JSON 파일](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)을 보고 복사할 수 있습니다. 아래 섹션에 설명된 키 필드에 대해 학습할 때 이 두 예 모두를 참조하여 자신의 데이터를 스키마에 매핑하는 방법을 확인하십시오.
+필드 그룹의 전체 예는 [공용 XDM 저장소](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)에서 찾을 수 있습니다. 또한 CEE 스키마를 준수하도록 데이터를 구조화하는 방법의 예를 보려면 다음 [JSON 파일](https://github.com/AdobeDocs/experience-platform.ko-KR/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)을 보고 복사할 수 있습니다. 아래 섹션에 설명된 키 필드에 대해 학습할 때 이 두 예 모두를 참조하여 자신의 데이터를 스키마에 매핑하는 방법을 확인하십시오.
 
 ## 주요 필드
 
@@ -355,7 +355,7 @@ CEE 필드 그룹 내에는 [!DNL Intelligent Services]에서 유용한 통찰�
 
 #### 데이터 매핑 및 수집 {#ingest}
 
-CEE 스키마 및 데이터 세트를 만든 후 데이터 테이블을 스키마에 매핑하고 해당 데이터를 Experience Platform에 수집할 수 있습니다. UI에서 이 작업을 수행하는 방법에 대한 단계는 [XDM 스키마에 CSV 파일 매핑](../ingestion/tutorials/map-csv/overview.md)에 대한 자습서를 참조하십시오. 다음 [샘플 JSON 파일](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)을 사용하여 데이터를 사용하기 전에 수집 프로세스를 테스트할 수 있습니다.
+CEE 스키마 및 데이터 세트를 만든 후 데이터 테이블을 스키마에 매핑하고 해당 데이터를 Experience Platform에 수집할 수 있습니다. UI에서 이 작업을 수행하는 방법에 대한 단계는 [XDM 스키마에 CSV 파일 매핑](../ingestion/tutorials/map-csv/overview.md)에 대한 자습서를 참조하십시오. 다음 [샘플 JSON 파일](https://github.com/AdobeDocs/experience-platform.ko-KR/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)을 사용하여 데이터를 사용하기 전에 수집 프로세스를 테스트할 수 있습니다.
 
 데이터 세트가 채워지면 동일한 데이터 세트를 사용하여 추가 데이터 파일을 수집할 수 있습니다.
 

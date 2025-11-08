@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## GitHub 작성 환경 설정 {#set-up-environment}
 
-1. 브라우저에서 `https://github.com/AdobeDocs/experience-platform.en`(으)로 이동합니다.
+1. 브라우저에서 `https://github.com/AdobeDocs/experience-platform.ko-KR`(으)로 이동합니다.
 1. 리포지토리를 [포크](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ko#fork-the-repository)하려면 아래 표시된 대로 **포크**&#x200B;를 클릭하십시오. 이렇게 하면 자체 GitHub 계정에 Experience Platform 저장소의 복사본이 만들어집니다.
 
    ![Adobe 문서 리포지토리 포크](../assets/docs-framework/ssd-fork-repository.gif)
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 1. 이때 Adobe 기여자 라이선스 계약(CLA)에 서명하라는 메시지가 표시됩니다. 필수 단계입니다. CLA에 서명한 후 PR 페이지를 새로 고치고 끌어오기 요청을 제출합니다.
 
-1. **의**&#x200B;끌어오기 요청`https://github.com/AdobeDocs/experience-platform.en` 탭을 검사하여 끌어오기 요청이 제출되었는지 확인할 수 있습니다.
+1. **의**&#x200B;끌어오기 요청`https://github.com/AdobeDocs/experience-platform.ko-KR` 탭을 검사하여 끌어오기 요청이 제출되었는지 확인할 수 있습니다.
 
    ![PR 성공](../assets/docs-framework/ssd-pr-successful.png)
 

@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## GitHub에 연결하고 로컬 작성 환경 설정
 
-로컬 작성 환경을 설정하는 첫 번째 단계는 [Adobe Experience Platform GitHub 저장소](https://github.com/AdobeDocs/experience-platform.en)로 이동하는 것입니다.
+로컬 작성 환경을 설정하는 첫 번째 단계는 [Adobe Experience Platform GitHub 저장소](https://github.com/AdobeDocs/experience-platform.ko-KR)로 이동하는 것입니다.
 
 ![platform-repo](../assets/platform-repo.png)
 
@@ -97,6 +97,6 @@ Adobe에서는 [Visual Studio Code](https://code.visualstudio.com/)을 사용하
 
 ![create-pr](../assets/create-pr.png)
 
-https://github.com/AdobeDocs/experience-platform.en에서 가져오기 요청 탭을 검사하여 가져오기 요청이 제출되었는지 확인할 수 있습니다.
+https://github.com/AdobeDocs/experience-platform.ko-KR에서 가져오기 요청 탭을 검사하여 가져오기 요청이 제출되었는지 확인할 수 있습니다.
 
 ![confirm-pr](../assets/confirm-pr.png)
