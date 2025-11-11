@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 데이터 흐름 업데이트
 description: 흐름 서비스 API를 사용하여 이름, 설명 및 일정을 포함한 데이터 흐름 방법을 알아봅니다.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 292fb89d457a86ee9f63cebd461abf1f2ecb9662
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '684'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 >
 >소스 연결 및 대상 연결을 단일 데이터 흐름에 매핑해야 합니다. 변경 사항은 해당 데이터 흐름에 반영되지 않으므로 소스 및 타겟 연결을 별도로 업데이트해서는 안 됩니다. 사용 사례에서 소스 및 타겟 연결을 업데이트해야 하는 경우 새 소스 및 타겟 연결 쌍과 새 데이터 흐름을 만들어야 합니다.
 
-## 시작하기
+## 시작
 
 이 자습서를 사용하려면 유효한 흐름 ID가 있어야 합니다. 올바른 흐름 ID가 없는 경우 [소스 개요](../../home.md)에서 선택한 커넥터를 선택하고 이 자습서를 시도하기 전에 설명된 단계를 따르십시오.
 
@@ -177,7 +177,9 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->PATCH 요청을 수행할 때 `If-Match` 헤더가 필요합니다. 이 헤더의 값은 업데이트할 연결의 고유한 버전입니다. 데이터 흐름이 성공적으로 업데이트될 때마다 etag 값이 업데이트됩니다.
+>* PATCH 요청을 수행할 때 `If-Match` 헤더가 필요합니다. 이 헤더의 값은 업데이트할 연결의 고유한 버전입니다. 데이터 흐름이 성공적으로 업데이트될 때마다 etag 값이 업데이트됩니다.
+>
+>* 처음 예약된 `startTime`이(가) 이미 발생한 경우 데이터 흐름의 `startTime`을(를) 업데이트할 수 없습니다. 이 제한은 활성화된 데이터 흐름과 비활성화된 데이터 흐름 모두에 적용됩니다.
 
 **API 형식**
 
@@ -191,29 +193,29 @@ PATCH /flows/{FLOW_ID}
 
 ```shell
 curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
-    -d '[
-            {
-                "op": "replace",
-                "path": "/scheduleParams/frequency",
-                "value": "day"
-            },
-            {
-                "op": "replace",
-                "path": "/name",
-                "value": "Database Dataflow Feb2021"
-            },
-            {
-                "op": "replace",
-                "path": "/description",
-                "value": "Database dataflow for testing update API"
-            }
-        ]'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+  -d '[
+          {
+              "op": "replace",
+              "path": "/scheduleParams/frequency",
+              "value": "day"
+          },
+          {
+              "op": "replace",
+              "path": "/name",
+              "value": "Database Dataflow Feb2021"
+          },
+          {
+              "op": "replace",
+              "path": "/description",
+              "value": "Database dataflow for testing update API"
+          }
+      ]'
 ```
 
 | 속성 | 설명 |
@@ -249,25 +251,25 @@ PATCH /flows/{FLOW_ID}
 
 ```shell
 curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
-    -d '[
-        {
-            "op": "replace",
-            "path": "/transformations/0",
-            "value": {
-                "name": "Mapping",
-                "params": {
-                    "mappingId": "c5f22f04e09f44498e528901546a83b1",
-                    "mappingVersion": 2
-                }
-            }
-        }
-    ]'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
+  -d '[
+      {
+          "op": "replace",
+          "path": "/transformations/0",
+          "value": {
+              "name": "Mapping",
+              "params": {
+                  "mappingId": "c5f22f04e09f44498e528901546a83b1",
+                  "mappingVersion": 2
+              }
+          }
+      }
+  ]'
 ```
 
 | 속성 | 설명 |
