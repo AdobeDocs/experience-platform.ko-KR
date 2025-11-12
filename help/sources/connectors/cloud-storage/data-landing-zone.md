@@ -25,7 +25,7 @@ Azure에서 Experience Platform에 대한 [!DNL Data Landing Zone] 계정을 설
 
 >[!NOTE]
 >
->[!DNL Data Landing Zone]에서 [!DNL Azure Data Factory]에 액세스하려면 Experience Platform에서 제공한 [!DNL Data Landing Zone]SAS 자격 증명[을(를) 사용하여 ](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials)에 연결된 서비스를 만들어야 합니다. 연결된 서비스를 만든 후에는 기본 루트 경로 대신 컨테이너 경로를 선택하여 [!DNL Data Landing Zone]을(를) 탐색할 수 있습니다.
+>[!DNL Data Landing Zone]에서 [!DNL Azure Data Factory]에 액세스하려면 Experience Platform에서 제공한 [!DNL Data Landing Zone]SAS 자격 증명[을(를) 사용하여 &#x200B;](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials)에 연결된 서비스를 만들어야 합니다. 연결된 서비스를 만든 후에는 기본 루트 경로 대신 컨테이너 경로를 선택하여 [!DNL Data Landing Zone]을(를) 탐색할 수 있습니다.
 
 ### 파일 및 디렉터리에 대한 이름 지정 제약 조건
 
@@ -117,7 +117,7 @@ curl -v -X PUT \
 
 >[!TIP]
 >
->아래 예제에서는 전체 SAS URI를 사용하여 [!DNL Azure Blob] 컨테이너에 연결하지만 다른 방법 및 작업을 사용하여 인증할 수 있습니다. 자세한 내용은 Python v12 SDK[[!DNL Microsoft] 의 이 ](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)문서를 참조하십시오.
+>아래 예제에서는 전체 SAS URI를 사용하여 [!DNL Azure Blob] 컨테이너에 연결하지만 다른 방법 및 작업을 사용하여 인증할 수 있습니다. 자세한 내용은 Python v12 SDK[[!DNL Microsoft] 의 이 &#x200B;](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)문서를 참조하십시오.
 
 ```py
 import os

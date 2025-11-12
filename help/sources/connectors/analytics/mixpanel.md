@@ -42,7 +42,7 @@ Experience Platform은 타사 분석 애플리케이션에서 데이터를 수�
 
 ![Mixpanel 서비스 계정](../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png)
 
-마지막으로 [에 필요한 Experience Platform ](../../../xdm/schema/composition.md)스키마[!DNL Mixpanel Event Export API]을(를) 만듭니다. 스키마에 필요한 매핑에 대한 자세한 내용은 [UI에서  [!DNL Mixpanel] 소스 연결 만들기](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources)에 대한 안내서를 참조하십시오.
+마지막으로 [에 필요한 Experience Platform &#x200B;](../../../xdm/schema/composition.md)스키마[!DNL Mixpanel Event Export API]을(를) 만듭니다. 스키마에 필요한 매핑에 대한 자세한 내용은 [UI에서  [!DNL Mixpanel] 소스 연결 만들기](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources)에 대한 안내서를 참조하십시오.
 
 ![스키마 만들기](../../images/tutorials/create/mixpanel-export-events/schema.png)
 

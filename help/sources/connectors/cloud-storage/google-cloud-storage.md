@@ -41,7 +41,7 @@ Experience Platform에 연결하려면 먼저 [!DNL Google Cloud Storage] 계정
 
 새로 생성된 액세스 키 ID 및 비밀 액세스 키를 사용하여 [!DNL Google Cloud Storage] 계정을 Experience Platform에 연결할 수 있습니다.
 
-자세한 내용은 [ 설명서에서 ](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)서비스 계정 키 만들기 및 관리[!DNL Google Cloud]에 대한 안내서를 참조하십시오.
+자세한 내용은 [&#x200B; 설명서에서 &#x200B;](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)서비스 계정 키 만들기 및 관리[!DNL Google Cloud]에 대한 안내서를 참조하십시오.
 
 ## 파일 및 디렉터리에 대한 이름 지정 제약 조건
 

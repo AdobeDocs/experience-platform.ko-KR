@@ -39,7 +39,7 @@ B2B 및 B2C 엔터프라이즈를 위한 클라우드 기반 전자 상거래 �
 * [!DNL SAP] 서비스 키입니다. [!DNL SAP] 서비스 키를 사용하면 Experience Platform을 통해 [!DNL SAP Subscription Billing] API에 액세스할 수 있습니다. [!DNL SAP Commerce]를 사용하려면 다음 요구 사항을 충족해야 합니다.
    * 클라이언트 ID
    * 클라이언트 암호
-   * URL. URL 패턴은 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`입니다. 이 값은 API를 사용하여 `region`기본 연결을 만듭니다`tokenEndpoint` 또는 Experience Platform UI를 통해 [계정 연결](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection)을(를) [할 때  [!DNL SAP Commerce]  및 ](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account)의 값을 얻는 데 나중에 사용됩니다.
+   * URL. URL 패턴은 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`입니다. 이 값은 API를 사용하여 `region`기본 연결을 만듭니다`tokenEndpoint` 또는 Experience Platform UI를 통해 [계정 연결](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection)을(를) [할 때  [!DNL SAP Commerce]  및 &#x200B;](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account)의 값을 얻는 데 나중에 사용됩니다.
 
 +++서비스 키의 예를 보려면 선택
 
