@@ -159,7 +159,7 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 >[!AVAILABILITY]
 >
->이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
+>이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/landing/multi-cloud)를 참조하세요.
 
 Amazon Web Services(AWS)에서 Experience Platform에 대한 [!DNL Data Landing Zone] 계정을 설정하는 방법에 대해 알아보려면 아래 단계를 따르십시오.
 
