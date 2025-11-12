@@ -2,9 +2,9 @@
 title: 데이터 랜딩 영역 Source
 description: 데이터 랜딩 영역을 Adobe Experience Platform에 연결하는 방법 알아보기
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Azure에서 Experience Platform에 대한 [!DNL Data Landing Zone] 계정을 설
 
 >[!NOTE]
 >
->[!DNL Azure Data Factory]에서 [!DNL Data Landing Zone]에 액세스하려면 Experience Platform에서 제공한 [SAS 자격 증명](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials)을(를) 사용하여 [!DNL Data Landing Zone]에 연결된 서비스를 만들어야 합니다. 연결된 서비스를 만든 후에는 기본 루트 경로 대신 컨테이너 경로를 선택하여 [!DNL Data Landing Zone]을(를) 탐색할 수 있습니다.
+>[!DNL Data Landing Zone]에서 [!DNL Azure Data Factory]에 액세스하려면 Experience Platform에서 제공한 [!DNL Data Landing Zone]SAS 자격 증명[을(를) 사용하여 ](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials)에 연결된 서비스를 만들어야 합니다. 연결된 서비스를 만든 후에는 기본 루트 경로 대신 컨테이너 경로를 선택하여 [!DNL Data Landing Zone]을(를) 탐색할 수 있습니다.
 
 ### 파일 및 디렉터리에 대한 이름 지정 제약 조건
 
@@ -42,7 +42,7 @@ Azure에서 Experience Platform에 대한 [!DNL Data Landing Zone] 계정을 설
 
 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/)을(를) 사용하여 [!DNL Data Landing Zone] 컨테이너의 콘텐츠를 관리할 수 있습니다.
 
-[!DNL Azure Storage Explorer] UI의 왼쪽 탐색에서 연결 아이콘을 선택합니다. 연결할 수 있는 옵션을 제공하는 **리소스 선택** 창이 나타납니다. [!DNL Data Landing Zone]에 연결하려면 **[!DNL Blob container]**&#x200B;을(를) 선택하십시오.
+[!DNL Azure Storage Explorer] UI의 왼쪽 탐색에서 연결 아이콘을 선택합니다. 연결할 수 있는 옵션을 제공하는 **리소스 선택** 창이 나타납니다. **[!DNL Blob container]**&#x200B;에 연결하려면 [!DNL Data Landing Zone]을(를) 선택하십시오.
 
 ![Azure 탐색기에서 리소스 작업 영역을 선택합니다.](../../images/tutorials/create/dlz/select-resource.png)
 
@@ -50,7 +50,7 @@ Azure에서 Experience Platform에 대한 [!DNL Data Landing Zone] 계정을 설
 
 ![공유 액세스 서명이 선택된 Azure Explorer의 연결 선택 방법입니다.](../../images/tutorials/create/dlz/select-connection-method.png)
 
-연결 방법을 선택한 후 [!DNL Data Landing Zone] 컨테이너에 해당하는 **표시 이름** 및 **[!DNL Blob]컨테이너 SAS URL**&#x200B;을(를) 제공해야 합니다.
+연결 방법을 선택한 후 **컨테이너에 해당하는**&#x200B;표시 이름&#x200B;**[!DNL Blob]및** 컨테이너 SAS URL[!DNL Data Landing Zone]을(를) 제공해야 합니다.
 
 >[!TIP]
 >
@@ -60,7 +60,7 @@ Azure에서 Experience Platform에 대한 [!DNL Data Landing Zone] 계정을 설
 
 ![표시 이름 및 SAS URL이 입력되는 Azure 탐색기의 연결 정보 작업 영역입니다.](../../images/tutorials/create/dlz/enter-connection-info.png)
 
-[!DNL Blob] 끝점 및 사용 권한에 대한 정보를 포함하여 설정에 대한 개요를 제공하는 **요약** 창이 나타납니다. 준비가 되면 **연결**&#x200B;을 선택합니다.
+**끝점 및 사용 권한에 대한 정보를 포함하여 설정에 대한 개요를 제공하는**&#x200B;요약[!DNL Blob] 창이 나타납니다. 준비가 되면 **연결**&#x200B;을 선택합니다.
 
 ![리소스 연결 설정을 다시 가져오는 Azure 탐색기 요약 작업 영역입니다.](../../images/tutorials/create/dlz/summary.png)
 
@@ -87,7 +87,7 @@ Azure에서 Experience Platform에 대한 [!DNL Data Landing Zone] 계정을 설
 
 ### Bash를 사용하여 파일 업로드
 
-다음 예제에서는 Bash 및 cURL을 사용하여 [!DNL Azure Blob Storage] REST API를 사용하여 [!DNL Data Landing Zone]에 파일을 업로드합니다.
+다음 예제에서는 Bash 및 cURL을 사용하여 [!DNL Data Landing Zone] REST API를 사용하여 [!DNL Azure Blob Storage]에 파일을 업로드합니다.
 
 ```shell
 # Set Azure Blob-related settings
@@ -117,7 +117,7 @@ curl -v -X PUT \
 
 >[!TIP]
 >
->아래 예제에서는 전체 SAS URI를 사용하여 [!DNL Azure Blob] 컨테이너에 연결하지만 다른 방법 및 작업을 사용하여 인증할 수 있습니다. 자세한 내용은 Python v12 SDK[&#128279;](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)의 이 [!DNL Microsoft] 문서를 참조하십시오.
+>아래 예제에서는 전체 SAS URI를 사용하여 [!DNL Azure Blob] 컨테이너에 연결하지만 다른 방법 및 작업을 사용하여 인증할 수 있습니다. 자세한 내용은 Python v12 SDK[[!DNL Microsoft] 의 이 ](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)문서를 참조하십시오.
 
 ```py
 import os
@@ -146,7 +146,7 @@ except Exception as ex:
 
 >[!TIP]
 >
->아래 예제에서는 `copy` 명령을 사용하는 동안 다른 명령 및 옵션을 사용하여 [!DNL AzCopy]을(를) 사용하여 파일을 [!DNL Data Landing Zone]에 업로드할 수 있습니다. 자세한 내용은 이 [[!DNL Microsoft AzCopy] 문서](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json)를 참조하세요.
+>아래 예제에서는 `copy` 명령을 사용하는 동안 다른 명령 및 옵션을 사용하여 [!DNL Data Landing Zone]을(를) 사용하여 파일을 [!DNL AzCopy]에 업로드할 수 있습니다. 자세한 내용은 이 [[!DNL Microsoft AzCopy] 문서](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json)를 참조하세요.
 
 ```bat
 set sasUri=<FULL SAS URI, PROPERLY ESCAPED>
@@ -159,7 +159,7 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 >[!AVAILABILITY]
 >
->이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/landing/multi-cloud)를 참조하세요.
+>이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
 
 Amazon Web Services(AWS)에서 Experience Platform에 대한 [!DNL Data Landing Zone] 계정을 설정하는 방법에 대해 알아보려면 아래 단계를 따르십시오.
 
@@ -299,13 +299,13 @@ print(f"Sign-in URL: {signin_url}")
 
 #### AWS 콘솔 액세스
 
-마지막으로 생성된 URL로 이동하여 [!DNL Amazon S3] 버킷 내의 특정 폴더에 대한 액세스를 제공하는 [!DNL Data Landing Zone] 자격 증명으로 AWS 콘솔에 직접 로그인합니다. 로그인 URL을 사용하면 해당 폴더로 바로 이동되므로 허가된 데이터만 보고 관리할 수 있습니다.
+마지막으로 생성된 URL로 이동하여 [!DNL Data Landing Zone] 버킷 내의 특정 폴더에 대한 액세스를 제공하는 [!DNL Amazon S3] 자격 증명으로 AWS 콘솔에 직접 로그인합니다. 로그인 URL을 사용하면 해당 폴더로 바로 이동되므로 허가된 데이터만 보고 관리할 수 있습니다.
 
 ## Experience Platform에 [!DNL Data Landing Zone] 연결
 
 >[!IMPORTANT]
 >
->- 소스에 연결하려면 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 액세스 제어 권한이 필요합니다. 자세한 내용은 [액세스 제어 개요](../../../access-control/home.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>- 소스에 연결하려면 **[!UICONTROL View Sources]** 및 **[!UICONTROL Manage Sources]** 액세스 제어 권한이 필요합니다. 자세한 내용은 [액세스 제어 개요](../../../access-control/home.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >
 >- [!DNL Data Landing Zone]을(를) 사용하여 Experience Platform에 연결할 때 개인 링크는 현재 지원되지 않습니다. 액세스가 지원되는 메서드는 [여기](#manage-the-contents-of-your-data-landing-zone)에 나열된 메서드뿐입니다.
 

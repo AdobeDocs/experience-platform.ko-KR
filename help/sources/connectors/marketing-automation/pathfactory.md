@@ -3,9 +3,9 @@ title: PathFactory Source 개요
 description: API 또는 사용자 인터페이스를 사용하여 PathFactory를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2024-04-30T00:00:00Z
 exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
-source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '429'
 ht-degree: 3%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 3%
 
 [!DNL PathFactory] 소스 계정을 설정하는 방법에 대한 자세한 내용은 아래 문서를 참조하십시오.
 
-## IP 주소 허용 목록 {#ip-allow-list}
+## 허용 목록에 추가하다 IP 주소 {#ip-allow-list}
 
-소스 커넥터로 작업하기 전에 IP 주소 목록을 허용 목록에 추가해야 할 수 있습니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지를 참조하세요.
+소스를 Experience Platform에 연결하기 전에 지역별 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 자세한 내용은 [Experience Platform에 연결하기 위한 IP 주소 허용 목록에 추가](../../ip-address-allow-list.md)에 대한 안내서를 참조하십시오.
 
 ## 전제 조건 {#prerequisites}
 
@@ -56,7 +56,7 @@ ht-degree: 3%
 
 ### Experience Platform에 대한 권한 구성
 
-**[!UICONTROL 계정을 Experience Platform에 연결하려면 계정에 대해]**&#x200B;소스 보기&#x200B;**[!UICONTROL 및]**&#x200B;소스 관리[!DNL PathFactory] 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/ui/overview.md)를 참조하십시오.
+**[!UICONTROL View Sources]** 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL Manage Sources]** 및 [!DNL PathFactory] 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/ui/overview.md)를 참조하십시오.
 
 ## Experience Platform에 [!DNL PathFactory] 연결 {#pathfactory-connect}
 

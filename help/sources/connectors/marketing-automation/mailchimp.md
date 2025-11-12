@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Mailchimp 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Mailchimp를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: eedb4fe0-3aae-4e93-bf13-c095171e2d11
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '214'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수�
 
 Experience Platform은 서드파티 마케팅 자동화 시스템에서 데이터 수집을 지원합니다. 마케팅 자동화 공급자에 대한 지원에는 [!DNL Mailchimp]이(가) 포함됩니다.
 
-## IP 주소 허용 목록
+## 허용 목록에 추가하다 IP 주소
 
-소스 커넥터로 작업하려면 먼저 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지를 참조하세요.
+소스를 Experience Platform에 연결하기 전에 지역별 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 자세한 내용은 [Experience Platform에 연결하기 위한 IP 주소 허용 목록에 추가](../../ip-address-allow-list.md)에 대한 안내서를 참조하십시오.
 
 아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Mailchimp]을(를) Experience Platform에 연결하고 [!DNL Mailchimp Campaigns] 또는 [!DNL Mailchimp Members] 데이터를 가져오는 방법에 대한 정보를 제공합니다.
 

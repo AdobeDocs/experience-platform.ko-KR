@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: UI에 대한 셀프서비스 설명서 템플릿
 description: Adobe Experience Platform UI를 사용하여 YOURSOURCE 연결을 만드는 방법을 알아봅니다.
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '710'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 *Adobe Experience Platform 사용자 인터페이스에서 소스 설정을 시작하기 전에 고객이 알아야 할 사항에 대한 정보를 이 섹션에 추가합니다. 이 값은*&#x200B;일 수 있습니다.
 
-* *허용 목록에 추가해야 함*
+* *허용 목록에 추가되어야 함*
 * *전자 메일 해시에 대한 요구 사항*
 * *모든 계정 세부 정보*
 * *플랫폼에 연결할 인증 자격 증명을 얻는 방법*
@@ -49,11 +49,11 @@ ht-degree: 1%
 
 ## *YOURSOURCE* 계정 연결
 
-Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL Sources]**&#x200B;을(를) 선택하여 [!UICONTROL Sources] 작업 영역에 액세스합니다. [!UICONTROL Catalog] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-*YOURSOURCE의 범주* 범주 아래에서 *YOURSOURCE*&#x200B;을 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
+*YOURSOURCE의 범주* 범주 아래에서 *YOURSOURCE*&#x200B;을 선택한 다음 **[!UICONTROL Add data]**&#x200B;을(를) 선택합니다.
 
 >[!TIP]
 >
@@ -61,17 +61,17 @@ Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x2
 
 ![카탈로그](../assets/ui/catalog.png)
 
-**[!UICONTROL 원본 계정 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
+**[!UICONTROL Connect YOURSOURCE account]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
 
 ### 기존 계정
 
-기존 계정을 사용하려면 새 데이터 흐름을 만들 *YOURSOURCE* 계정을 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 선택하여 계속하십시오.
+기존 계정을 사용하려면 새 데이터 흐름을 만들 *YOURSOURCE* 계정을 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택하여 계속하십시오.
 
 ![기존](../assets/ui/existing.png)
 
 ### 새 계정
 
-새 계정을 만드는 경우 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택한 다음 이름, 설명(선택 사항) 및 자격 증명을 제공합니다. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택한 다음 새 연결을 설정할 수 있는 시간을 허용하세요.
+새 계정을 만드는 경우 **[!UICONTROL New account]**&#x200B;을(를) 선택한 다음 이름, 설명(선택 사항) 및 자격 증명을 제공합니다. 완료되면 **[!UICONTROL Connect to source]**&#x200B;을(를) 선택한 다음 새 연결을 설정할 시간을 허용합니다.
 
 ![새로 만들기](../assets/ui/new.png)
 
@@ -79,7 +79,7 @@ Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x2
 
 데이터 흐름을 만드는 나머지 단계에 대한 *워크플로가 모듈화되었습니다. 소스에 대해 수행할 특정 콜아웃이 있는 경우 아래의 추가 리소스 섹션을 참조하십시오.*
 
-이 자습서를 따라 *YOURSOURCE* 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 Experience Platform으로 가져오도록 데이터 흐름을 구성](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=ko)할 수 있습니다.
+이 자습서를 따라 *YOURSOURCE* 계정에 대한 연결을 설정했습니다. 이제 다음 자습서를 계속 진행하고 [데이터를 Experience Platform으로 가져오도록 데이터 흐름을 구성](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html)할 수 있습니다.
 
 ## 추가 리소스
 

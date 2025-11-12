@@ -4,9 +4,9 @@ description: API 또는 사용자 인터페이스를 사용하여 SAP Commerce�
 last-substantial-update: 2023-07-26T00:00:00Z
 badge: Beta
 exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '335'
 ht-degree: 3%
 
 ---
@@ -26,9 +26,9 @@ B2B 및 B2C 엔터프라이즈를 위한 클라우드 기반 전자 상거래 �
 
 또한 고객 데이터를 검색하기 위해 [!DNL SAP Commerce]을(를) 실행하는 경우 고객의 연락처 정보를 검색하기 위해 [고객 연락처 관계](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) API도 호출됩니다.
 
-## IP 주소 허용 목록 {#ip-allow-list}
+## 허용 목록에 추가하다 IP 주소 {#ip-allow-list}
 
-소스 커넥터로 작업하기 전에 IP 주소 목록을 허용 목록에 추가해야 할 수 있습니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지를 참조하세요.
+소스를 Experience Platform에 연결하기 전에 지역별 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 자세한 내용은 [Experience Platform에 연결하기 위한 IP 주소 허용 목록에 추가](../../ip-address-allow-list.md)에 대한 안내서를 참조하십시오.
 
 ## 전제 조건 {#prerequisites}
 
@@ -39,7 +39,7 @@ B2B 및 B2C 엔터프라이즈를 위한 클라우드 기반 전자 상거래 �
 * [!DNL SAP] 서비스 키입니다. [!DNL SAP] 서비스 키를 사용하면 Experience Platform을 통해 [!DNL SAP Subscription Billing] API에 액세스할 수 있습니다. [!DNL SAP Commerce]를 사용하려면 다음 요구 사항을 충족해야 합니다.
    * 클라이언트 ID
    * 클라이언트 암호
-   * URL. URL 패턴은 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`입니다. 이 값은 API를 사용하여 [기본 연결을 만듭니다](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) 또는 Experience Platform UI를 통해 [계정 연결 [!DNL SAP Commerce] 을(를) &#x200B;](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account)할 때 `region` 및 `tokenEndpoint`의 값을 얻는 데 나중에 사용됩니다.
+   * URL. URL 패턴은 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`입니다. 이 값은 API를 사용하여 `region`기본 연결을 만듭니다`tokenEndpoint` 또는 Experience Platform UI를 통해 [계정 연결](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection)을(를) [할 때  [!DNL SAP Commerce]  및 ](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account)의 값을 얻는 데 나중에 사용됩니다.
 
 +++서비스 키의 예를 보려면 선택
 

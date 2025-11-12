@@ -3,16 +3,16 @@ title: Mixpanel Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Mixpanel을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 0%
+source-wordcount: '431'
+ht-degree: 6%
 
 ---
 
 # [!DNL Mixpanel]
 
-Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집하는 동시에 Experience Platform 서비스를 사용하여 수신 데이터를 구조화하고 레이블을 지정하며 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 Experience Platform은 타사 분석 애플리케이션에서 데이터를 수집하는 기능을 지원합니다. 분석 공급자에 대한 지원에는 [!DNL Mixpanel]이(가) 포함됩니다.
 
@@ -20,9 +20,9 @@ Experience Platform은 타사 분석 애플리케이션에서 데이터를 수�
 
 소스는 [Mixpanel 이벤트 내보내기 API > 다운로드](https://developer.mixpanel.com/reference/raw-event-export)를 활용하여 [!DNL Mixpanel] 내에서 수신 및 저장되는 이벤트 데이터와 모든 이벤트 속성(`distinct_id` 포함) 및 이벤트가 Experience Platform으로 전송된 정확한 타임스탬프를 다운로드합니다. Mixpanel은 인증 메커니즘으로 전달자 토큰을 사용하여 Mixpanel 이벤트 내보내기 API와 통신합니다.
 
-## IP 주소 허용 목록
+## 허용 목록에 추가하다 IP 주소
 
-소스 커넥터로 작업하려면 먼저 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지를 참조하세요.
+소스를 Experience Platform에 연결하기 전에 지역별 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 자세한 내용은 [Experience Platform에 연결하기 위한 IP 주소 허용 목록에 추가](../../ip-address-allow-list.md)에 대한 안내서를 참조하십시오.
 
 ## [!DNL Mixpanel] 계정 인증
 
@@ -30,11 +30,11 @@ Experience Platform은 타사 분석 애플리케이션에서 데이터를 수�
 
 [!DNL Mixpanel] 원본 연결 및 데이터 흐름을 만들려면 먼저 올바른 [!DNL Mixpanel] 계정이 있어야 합니다. 유효한 [!DNL Mixpanel] 계정이 없는 경우 [Mixpanel 등록](https://mixpanel.com/register/) 페이지에서 계정을 만드십시오.
 
-[!DNL Mixpanel] 계정을 만들었으면 [!DNL Mixpanel] UI의 [!DNL Project Seettings] 페이지에서 [!DNL Project Details] 탭으로 이동하여 프로젝트 ID를 검색하고 시간대를 구성합니다.
+[!DNL Mixpanel] 계정을 만들었으면 [!DNL Project Details] UI의 [!DNL Project Seettings] 페이지에서 [!DNL Mixpanel] 탭으로 이동하여 프로젝트 ID를 검색하고 시간대를 구성합니다.
 
 ![mixpanel-project-settings](../../images/tutorials/create/mixpanel-export-events/mixpanel-project-settings.png)
 
-다음으로, [!DNL Mixpanel] UI의 [!DNL Project Settings] 페이지에서 [!DNL Service Accounts] 탭으로 이동하여 서비스 계정 자격 증명을 검색합니다.
+다음으로, [!DNL Service Accounts] UI의 [!DNL Project Settings] 페이지에서 [!DNL Mixpanel] 탭으로 이동하여 서비스 계정 자격 증명을 검색합니다.
 
 >[!TIP]
 >
@@ -42,7 +42,7 @@ Experience Platform은 타사 분석 애플리케이션에서 데이터를 수�
 
 ![Mixpanel 서비스 계정](../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png)
 
-마지막으로 [!DNL Mixpanel Event Export API]에 필요한 Experience Platform [스키마](../../../xdm/schema/composition.md)을(를) 만듭니다. 스키마에 필요한 매핑에 대한 자세한 내용은 [UI에서  [!DNL Mixpanel] 소스 연결 만들기](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources)에 대한 안내서를 참조하십시오.
+마지막으로 [에 필요한 Experience Platform ](../../../xdm/schema/composition.md)스키마[!DNL Mixpanel Event Export API]을(를) 만듭니다. 스키마에 필요한 매핑에 대한 자세한 내용은 [UI에서  [!DNL Mixpanel] 소스 연결 만들기](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources)에 대한 안내서를 참조하십시오.
 
 ![스키마 만들기](../../images/tutorials/create/mixpanel-export-events/schema.png)
 

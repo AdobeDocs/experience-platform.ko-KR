@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google 클라우드 스토리지 Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Google Cloud Storage를 Adobe Experience Platform에 연결하는 방법에 대해 알아봅니다.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -21,27 +21,27 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]�
 
 클라우드 스토리지 소스는 다운로드, 포맷 또는 업로드 없이도 자신의 데이터를 Experience Platform으로 가져올 수 있습니다. 수집된 데이터는 XDM(Experience 데이터 모델) 을 준수하는 JSON 또는 Parquet으로 포맷하거나 구분된 형식으로 포맷할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. Experience Platform을 사용하면 일괄 처리를 통해 [!DNL Google Cloud Storage]에서 데이터를 가져올 수 있습니다.
 
-## IP 주소 허용 목록
+## 허용 목록에 추가하다 IP 주소
 
-소스 커넥터로 작업하려면 먼저 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지를 참조하세요.
+소스를 Experience Platform에 연결하기 전에 지역별 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 자세한 내용은 [Experience Platform에 연결하기 위한 IP 주소 허용 목록에 추가](../../ip-address-allow-list.md)에 대한 안내서를 참조하십시오.
 
 ## [!DNL Google Cloud Storage] 계정에 연결하기 위한 필수 구성 요소 설정
 
-Experience Platform에 연결하려면 먼저 [!DNL Google Cloud Storage] 계정에 대해 상호 운용성을 사용하도록 설정해야 합니다. 상호 운용성 설정에 액세스하려면 [!DNL Google Cloud Platform]을(를) 열고 탐색 패널의 **[!UICONTROL 클라우드 저장소]** 옵션에서 **[!UICONTROL 설정]**&#x200B;을(를) 선택하십시오.
+Experience Platform에 연결하려면 먼저 [!DNL Google Cloud Storage] 계정에 대해 상호 운용성을 사용하도록 설정해야 합니다. 상호 운용성 설정에 액세스하려면 [!DNL Google Cloud Platform]을(를) 열고 탐색 패널의 **[!UICONTROL Settings]** 옵션에서 **[!UICONTROL Cloud Storage]**&#x200B;을(를) 선택하십시오.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
-**[!UICONTROL 설정]** 페이지가 나타납니다. 여기에서 [!DNL Google] 프로젝트 ID에 대한 정보와 [!DNL Google Cloud Storage] 계정에 대한 세부 정보를 볼 수 있습니다. 상호 운용성 설정에 액세스하려면 상단 헤더에서 **[!UICONTROL 상호 운용성]**&#x200B;을 선택하십시오.
+**[!UICONTROL Settings]** 페이지가 나타납니다. 여기에서 [!DNL Google] 프로젝트 ID에 대한 정보와 [!DNL Google Cloud Storage] 계정에 대한 세부 정보를 볼 수 있습니다. 상호 운용성 설정에 액세스하려면 맨 위 헤더에서 **[!UICONTROL Interoperability]**&#x200B;을(를) 선택하십시오.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/project-access.png) -->
 
-**[!UICONTROL 상호 운용성]** 페이지에는 서비스 계정과 연결된 인증, 액세스 키 및 기본 프로젝트에 대한 정보가 포함되어 있습니다. 서비스 계정에 대한 새 액세스 키 ID와 비밀 액세스 키를 생성하려면 **[!UICONTROL 서비스 계정에 대한 키 만들기]**&#x200B;를 선택하십시오.
+**[!UICONTROL Interoperability]** 페이지에는 서비스 계정과 연결된 인증, 액세스 키 및 기본 프로젝트에 대한 정보가 포함되어 있습니다. 서비스 계정에 대한 새 액세스 키 ID와 비밀 액세스 키를 생성하려면 **[!UICONTROL Create a Key for a Service Account]**&#x200B;을(를) 선택하십시오.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
 새로 생성된 액세스 키 ID 및 비밀 액세스 키를 사용하여 [!DNL Google Cloud Storage] 계정을 Experience Platform에 연결할 수 있습니다.
 
-자세한 내용은 [!DNL Google Cloud] 설명서에서 [서비스 계정 키 만들기 및 관리](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)에 대한 안내서를 참조하십시오.
+자세한 내용은 [ 설명서에서 ](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)서비스 계정 키 만들기 및 관리[!DNL Google Cloud]에 대한 안내서를 참조하십시오.
 
 ## 파일 및 디렉터리에 대한 이름 지정 제약 조건
 

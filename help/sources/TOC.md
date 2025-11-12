@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 6debb9eeb811c98d322c99b1b779f5f9eff8573c
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 34%
 
 ---
@@ -398,7 +398,7 @@ ht-degree: 34%
    - [소스의 오류 메시지](./errors/sources-errors.md)
    - [흐름 서비스의 오류 메시지](./errors/flow-service-errors.md)
 - [플로우 실행 알림](notifications.md)
-- [IP 주소 허용 목록](ip-address-allow-list.md)
+- [허용 목록에 추가하다 IP 주소](ip-address-allow-list.md)
 - [자주 묻는 질문](./troubleshooting.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

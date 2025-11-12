@@ -3,14 +3,14 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: 설명서 셀프서비스 템플릿
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 YOURSOURCE에 연결하는 방법을 알아봅니다.
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2082'
 ht-degree: 1%
 
 ---
 
-# [!DNL Flow Service] API를 사용하여 *YOURSOURCE* 연결 만들기
+# *API를 사용하여* YOURSOURCE[!DNL Flow Service] 연결 만들기
 
 *이 서식 파일을 사용할 때 이탤릭체로 된 모든 단락을 바꾸거나 삭제합니다(이 단락부터 시작).*
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 *Adobe Experience Platform 사용자 인터페이스에서 소스 설정을 시작하기 전에 고객이 알아야 할 사항에 대한 정보를 이 섹션에 추가합니다. 이 값은*&#x200B;일 수 있습니다.
 
-* *허용 목록에 추가해야 함*
+* *허용 목록에 추가되어야 함*
 * *전자 메일 해시에 대한 요구 사항*
 * *모든 계정 세부 정보*
 * *플랫폼에 연결할 API 키를 얻는 방법*
@@ -45,15 +45,15 @@ ht-degree: 1%
 
 이러한 자격 증명에 대한 자세한 내용은 *YOURSOURCE* 인증 설명서를 참조하십시오. *여기에서 플랫폼의 인증 설명서에 대한 링크를 추가하십시오*.
 
-## [!DNL Flow Service] API를 사용하여 *YOURSOURCE*&#x200B;을(를) Experience Platform에 연결
+## *API를 사용하여* YOURSOURCE[!DNL Flow Service]을(를) Experience Platform에 연결
 
-다음 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 *YOURSOURCE* 소스 연결을 만들고 *YOURSOURCE* 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만드는 단계를 안내합니다.
+다음 자습서에서는 *API*&#x200B;를 사용하여 *YOURSOURCE* 소스 연결을 만들고 [[!DNL Flow Service] YOURSOURCE](https://www.adobe.io/experience-platform-apis/references/flow-service/) 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만드는 단계를 안내합니다.
 
 ### 기본 연결 만들기 {#base-connection}
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 Experience Platform 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-기본 연결 ID를 만들려면 *YOURSOURCE* 인증 자격 증명을 요청 본문의 일부로 제공하는 동안 `/connections` 끝점에 대한 POST 요청을 만듭니다.
+기본 연결 ID를 만들려면 `/connections`YOURSOURCE *인증 자격 증명을 요청 본문의 일부로 제공하는 동안* 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -299,13 +299,13 @@ curl -X POST \
 
 [스키마 레지스트리 API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)에 대한 POST 요청을 수행하여 대상 XDM 스키마를 만들 수 있습니다.
 
-대상 XDM 스키마를 만드는 방법에 대한 자세한 단계는 [API를 사용하여 스키마 만들기](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=ko#create)에 대한 자습서를 참조하십시오.
+대상 XDM 스키마를 만드는 방법에 대한 자세한 단계는 [API를 사용하여 스키마 만들기](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create)에 대한 자습서를 참조하십시오.
 
 ### 타겟 데이터 세트 만들기 {#target-dataset}
 
 [카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하여 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
 
-대상 데이터 집합을 만드는 방법에 대한 자세한 단계는 [API를 사용하여 데이터 집합 만들기](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=ko)에 대한 자습서를 참조하십시오.
+대상 데이터 집합을 만드는 방법에 대한 자세한 단계는 [API를 사용하여 데이터 집합 만들기](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html)에 대한 자습서를 참조하십시오.
 
 ### 대상 연결 만들기 {#target-connection}
 
@@ -534,20 +534,20 @@ curl -X POST \
 
 ### 데이터 흐름 모니터링
 
-데이터 흐름이 만들어지면 데이터 흐름을 통해 수집되는 데이터를 모니터링하여 흐름 실행, 완료 상태 및 오류에 대한 정보를 볼 수 있습니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름 모니터링](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html?lang=ko)에 대한 안내서를 참조하십시오.
+데이터 흐름이 만들어지면 데이터 흐름을 통해 수집되는 데이터를 모니터링하여 흐름 실행, 완료 상태 및 오류에 대한 정보를 볼 수 있습니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름 모니터링](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html)에 대한 안내서를 참조하십시오.
 
 ### 데이터 흐름 업데이트
 
-데이터 흐름의 ID를 제공하면서 [!DNL Flow Service] API의 `/flows` 끝점에 PATCH 요청을 수행하여 데이터 흐름의 이름, 설명, 실행 일정 및 관련 매핑 세트와 같은 데이터 흐름의 세부 정보를 업데이트합니다. PATCH 요청을 할 때는 `If-Match` 헤더에 데이터 흐름의 고유한 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름 업데이트](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html?lang=ko)에 대한 안내서를 참조하십시오.
+데이터 흐름의 ID를 제공하면서 `/flows` API의 [!DNL Flow Service] 끝점에 PATCH 요청을 수행하여 데이터 흐름의 이름, 설명, 실행 일정 및 관련 매핑 세트와 같은 데이터 흐름의 세부 정보를 업데이트합니다. PATCH 요청을 할 때는 `etag` 헤더에 데이터 흐름의 고유한 `If-Match`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름 업데이트](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)에 대한 안내서를 참조하십시오.
 
 ### 계정 업데이트
 
-기본 연결 ID를 쿼리 매개 변수로 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. PATCH을 요청할 때 `If-Match` 헤더에 소스 계정의 고유 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 계정을 업데이트하는 방법](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html?lang=ko)에 대한 안내서를 참조하십시오.
+기본 연결 ID를 쿼리 매개 변수로 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. PATCH을 요청할 때 `etag` 헤더에 소스 계정의 고유 `If-Match`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 계정을 업데이트하는 방법](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html)에 대한 안내서를 참조하십시오.
 
 ### 데이터 흐름 삭제
 
-쿼리 매개 변수의 일부로 삭제할 데이터 흐름의 ID를 제공하면서 [!DNL Flow Service] API에 대한 DELETE 요청을 수행하여 데이터 흐름을 삭제합니다. 전체 API 예제는 [API를 사용하여 데이터 흐름 삭제](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html?lang=ko)에 대한 안내서를 참조하십시오.
+쿼리 매개 변수의 일부로 삭제할 데이터 흐름의 ID를 제공하면서 [!DNL Flow Service] API에 대한 DELETE 요청을 수행하여 데이터 흐름을 삭제합니다. 전체 API 예제는 [API를 사용하여 데이터 흐름 삭제](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html)에 대한 안내서를 참조하십시오.
 
 ### 계정 삭제
 
-삭제할 계정의 기본 연결 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 DELETE 요청을 수행하여 계정을 삭제합니다. 전체 API 예제는 [API를 사용하여 소스 계정 삭제](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html?lang=ko)에 대한 안내서를 참조하십시오.
+삭제할 계정의 기본 연결 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 DELETE 요청을 수행하여 계정을 삭제합니다. 전체 API 예제는 [API를 사용하여 소스 계정 삭제](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html)에 대한 안내서를 참조하십시오.

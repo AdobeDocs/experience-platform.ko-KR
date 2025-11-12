@@ -3,9 +3,9 @@ title: 흐름 서비스 API를 사용하여 Amazon Kinesis Source 연결 만들�
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Amazon Kinesis 소스에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '759'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 >
 >[!DNL Amazon Kinesis] 소스는 Real-Time Customer Data Platform Ultimate을 구매한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Amazon Kinesis]&#x200B;(이하 &quot;[!DNL Kinesis]&quot;)을(를) Experience Platform에 연결하는 단계를 안내합니다.
+이 자습서에서는 [!DNL Amazon Kinesis]API[!DNL Kinesis]를 사용하여 [[!DNL Flow Service] (이하 &quot;](https://www.adobe.io/experience-platform-apis/references/flow-service/)&quot;)을(를) Experience Platform에 연결하는 단계를 안내합니다.
 
 ## 시작
 
@@ -25,7 +25,7 @@ ht-degree: 3%
 * [소스](../../../../home.md): Experience Platform을 사용하면 [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
 * [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL Kinesis]을(를) Experience Platform에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Kinesis] API를 사용하여 [!DNL Flow Service]을(를) Experience Platform에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### 필요한 자격 증명 수집
 
@@ -35,7 +35,7 @@ ht-degree: 3%
 | ---------- | ----------- |
 | `accessKeyId` | 액세스 키 ID는 Experience Platform에 대한 [!DNL Kinesis] 계정을 인증하는 데 사용되는 액세스 키 쌍의 절반입니다. |
 | `secretKey` | 비밀 액세스 키는 Experience Platform에 대한 [!DNL Kinesis] 계정을 인증하는 데 사용되는 액세스 키 쌍의 나머지 절반입니다. |
-| `region` | [!DNL Kinesis] 계정의 지역입니다. 지역에 대한 자세한 내용은 [허용 목록에 IP 주소 추가](../../../../ip-address-allow-list.md)에 대한 안내서를 참조하십시오. |
+| `region` | [!DNL Kinesis] 계정의 지역입니다. 지역에 대한 자세한 내용은 [IP 주소를 허용 목록에 추가](../../../../ip-address-allow-list.md)에 대한 안내서를 참조하십시오. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL Kinesis] 연결 사양 ID: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 [!DNL Kinesis] 액세스 키 및 생성 방법에 대한 자세한 내용은 이 [[!DNL AWS] IAM 사용자에 대한 액세스 키 관리 가이드](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)를 참조하십시오.
@@ -48,7 +48,7 @@ Experience Platform API를 성공적으로 호출하는 방법에 대한 자세�
 
 원본 연결을 만드는 첫 번째 단계는 [!DNL Kinesis] 원본을 인증하고 기본 연결 ID를 생성하는 것입니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-기본 연결 ID를 만들려면 [!DNL Kinesis] 인증 자격 증명을 요청 매개 변수의 일부로 제공하는 동안 `/connections` 끝점에 대한 POST 요청을 만듭니다.
+기본 연결 ID를 만들려면 `/connections` 인증 자격 증명을 요청 매개 변수의 일부로 제공하는 동안 [!DNL Kinesis] 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -107,7 +107,7 @@ curl -X POST \
 
 소스 연결은 데이터가 수집되는 외부 소스와의 연결을 만들고 관리합니다. 소스 연결은 데이터 소스, 데이터 형식 및 데이터 흐름을 만드는 데 필요한 소스 연결 ID와 같은 정보로 구성됩니다. 소스 연결 인스턴스는 테넌트 및 조직에만 해당됩니다.
 
-소스 연결을 만들려면 [!DNL Flow Service] API의 `/sourceConnections` 끝점에 대한 POST 요청을 만듭니다.
+소스 연결을 만들려면 `/sourceConnections` API의 [!DNL Flow Service] 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -172,4 +172,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL Flow Service] API를 사용하여 [!DNL Kinesis] 소스 연결을 만들었습니다. 다음 자습서에서 이 원본 연결 ID를 사용하여 [API를 사용하여 스트리밍 데이터 흐름을 만들 [!DNL Flow Service] 수 있습니다](../../collect/streaming.md).
+이 자습서에 따라 [!DNL Kinesis] API를 사용하여 [!DNL Flow Service] 소스 연결을 만들었습니다. 다음 자습서에서 이 원본 연결 ID를 사용하여 [API를 사용하여 스트리밍 데이터 흐름을 만들 [!DNL Flow Service] 수 있습니다](../../collect/streaming.md).

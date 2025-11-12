@@ -2,9 +2,9 @@
 title: Salesforce Service Cloud Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce Service Cloud를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '238'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수�
 
 ## 허용 목록에 추가하다 IP 주소
 
-소스 커넥터를 사용하기 전에 IP 주소 목록을 허용 목록에 추가하다에 추가해야 합니다. 영역별 IP 주소를 허용 목록에 추가하다에 추가하지 않으면 소스를 사용할 때 오류나 성능이 저하될 수 있습니다. 허용 목록에 추가하다 자세한 내용은 [IP 주소](../../ip-address-allow-list.md) 페이지를 참조하십시오.
+소스를 Experience Platform에 연결하기 전에 지역별 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 자세한 내용은 [Experience Platform에 연결하기 위한 IP 주소 허용 목록에 추가](../../ip-address-allow-list.md)에 대한 안내서를 참조하십시오.
 
 아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Salesforce Service Cloud]을(를) [!DNL Experience Platform]에 연결하는 방법에 대한 정보를 제공합니다.
 

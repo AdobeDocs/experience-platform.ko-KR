@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 일반 REST API Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 일반 REST API를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: e3449e33-7261-4aa2-bce9-5530eb4fcc68
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Experience Platform에서는 [!DNL Generic REST API]을(를) 포함한 프로토
 
 [!DNL Generic REST API] 소스를 사용하면 REST 기반 응용 프로그램의 데이터를 Experience Platform으로 가져올 수 있습니다. [!DNL Generic REST API]은(는) 기본 인증과 OAuth 2 새로 고침 코드 기반 인증을 모두 지원합니다.
 
-## IP 주소 허용 목록
+## 허용 목록에 추가하다 IP 주소
 
-소스 커넥터로 작업하려면 먼저 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지를 참조하세요.
+소스를 Experience Platform에 연결하기 전에 지역별 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 자세한 내용은 [Experience Platform에 연결하기 위한 IP 주소 허용 목록에 추가](../../ip-address-allow-list.md)에 대한 안내서를 참조하십시오.
 
 아래 설명서에서는 API를 사용하여 [!DNL Generic REST API] 소스를 Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
 

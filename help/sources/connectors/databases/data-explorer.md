@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Azure Data Explorer Source 개요
 description: API 또는 사용자 인터페이스를 사용하여 Azure Data Explorer을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ Adobe Experience Platform은 [!DNL Microsoft], MySQL 및 [!DNL Azure]과(와) �
 
 관계형, NoSQL 또는 데이터 웨어하우스를 비롯한 다양한 유형의 타사 데이터베이스가 지원됩니다. 데이터베이스 공급자 지원에 [!DNL Azure Data Explorer]이(가) 포함됩니다.
 
-## IP 주소 허용 목록
+## 허용 목록에 추가하다 IP 주소
 
-소스 커넥터로 작업하려면 먼저 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지를 참조하세요.
+소스를 Experience Platform에 연결하기 전에 지역별 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 자세한 내용은 [Experience Platform에 연결하기 위한 IP 주소 허용 목록에 추가](../../ip-address-allow-list.md)에 대한 안내서를 참조하십시오.
 
 아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Azure Data Explorer]을(를) [!DNL Experience Platform]에 연결하는 방법에 대한 정보를 제공합니다.
 
