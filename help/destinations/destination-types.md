@@ -3,9 +3,9 @@ keywords: 대상;대상;대상 유형
 title: 대상 유형 및 범주
 description: Adobe Experience Platform의 다양한 유형과 범주에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d57af88cc9507e0164b044a7203c66fe9fd9240e
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform의 **[!UICONTROL Profile Export]**, **[!UICONTROL Stre
 
 >[!IMPORTANT]
 >
->고급 엔터프라이즈 대상 또는 스트리밍 프로필 내보내기 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객만 사용할 수 있습니다.
+>고급 엔터프라이즈 대상 또는 스트리밍 프로필 내보내기 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객만 사용할 수 있습니다.
 
 고급 엔터프라이즈 대상 Data Connectors를 사용하여 데이터 동기화, 분석 및 추가적인 프로필 보강 사용 사례를 위해 Adobe Real-Time Customer Data Platform 프로필을 거의 실시간으로 내부 시스템이나 다른 서드파티 시스템에 전달합니다.
 
@@ -52,6 +52,12 @@ Adobe Experience Platform의 **[!UICONTROL Profile Export]**, **[!UICONTROL Stre
 * [HTTP API 대상](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
 * [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md)
+* [Snowflake 스트리밍](catalog/warehouses/snowflake.md)
+* [Snowflake 일괄 처리](catalog/warehouses/snowflake-batch.md)
+
+>[!NOTE]
+>
+>Snowflake 대상은 현재 미국 고객만 사용할 수 있습니다. 미국 이외의 지역에서 액세스해야 하는 경우 Adobe 계정 팀에 문의하십시오.
 
 ### 배치(파일 기반) 대상 {#file-based}
 
@@ -71,7 +77,7 @@ Experience Platform의 Edge 개인화 대상에는 [Adobe Target](/help/destinat
 
 아래 비디오에서는 두 가지 유형의 대상에 대한 자세한 내용을 소개합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32149?captions=kor&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ## 내보낸 대상자 유형 {#exported-audiences-types}
 
