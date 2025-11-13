@@ -1,10 +1,10 @@
 ---
-description: '&grave;/authoring/destination-servers'' 엔드포인트를 통해 Adobe Experience Platform Destination SDK에서 대상 서버 사양을 구성하는 방법을 알아봅니다.'
+description: '`/authoring/destination-servers'' 엔드포인트를 통해 Adobe Experience Platform Destination SDK에서 대상 서버 사양을 구성하는 방법을 알아봅니다.'
 title: Destination SDK으로 만든 대상의 서버 사양
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 455886806d46a227eddb5ba060c15e1a00e13edf
 workflow-type: tm+mt
-source-wordcount: '2753'
+source-wordcount: '2775'
 ht-degree: 2%
 
 ---
@@ -78,7 +78,7 @@ Destination SDK을 통해 대상 서버를 만들 때 구성 매개 변수 값�
          "templatingStrategy":"NONE",
          "value":"Your/hardcoded/path/here"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    }
 }
 ```
@@ -153,7 +153,7 @@ API 엔드포인트 선택 또는 필드 값 제공과 같이, Experience Platfo
 |---|---|---|
 | `name` | 문자열 | *필수.* Adobe에만 표시되는 서버의 알기 쉬운 이름을 나타냅니다. 이 이름은 파트너나 고객에게 표시되지 않습니다. 예: `Moviestar destination server`. |
 | `destinationServerType` | 문자열 | *필수.* 스트리밍 대상에 대해 `URL_BASED`(으)로 설정합니다. |
-| `templatingStrategy` | 문자열 | *필수.* <ul><li>`value` 필드에서 하드 코딩된 값 대신 템플릿화된 필드를 사용하는 경우 `PEBBLE_V1`을(를) 사용합니다. 사용자가 Experience Platform UI에서 끝점 영역을 선택해야 하는 `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있는 경우 이 옵션을 사용합니다. </li><li> Adobe 측에 템플릿 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items`과 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오. </li></ul> |
+| `templatingStrategy` | 문자열 | *필수.* <ul><li>`PEBBLE_V1` 필드에서 하드 코딩된 값 대신 템플릿화된 필드를 사용하는 경우 `value`을(를) 사용합니다. 사용자가 Experience Platform UI에서 끝점 영역을 선택해야 하는 `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있는 경우 이 옵션을 사용합니다. </li><li> Adobe 측에 템플릿 변환이 필요하지 않은 경우(예: `NONE`과 같은 끝점이 있는 경우) `https://api.moviestar.com/data/items`을(를) 사용하십시오. </li></ul> |
 | `value` | 문자열 | *필수.* Experience Platform에서 연결할 API 끝점의 주소를 입력합니다. |
 
 {style="table-layout:auto"}
@@ -185,9 +185,9 @@ API 엔드포인트 선택 또는 필드 값 제공과 같이, Experience Platfo
 |---|---|---|
 | `name` | 문자열 | 대상 서버의 이름입니다. |
 | `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. 파일을 [!DNL Amazon S3] 버킷으로 내보내려면 `FILE_BASED_S3`(으)로 설정하십시오. |
-| `fileBasedS3Destination.bucket.templatingStrategy` | 문자열 | *필수*. `bucket.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에서 자신의 버킷 이름을 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정하십시오. 이 경우 사용자가 입력한 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)의 값을 읽으려면 `value` 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>통합에 `"bucket.value":"MyBucket"`과(와) 같이 하드 코딩된 버킷 이름을 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오.</li></ul> |
+| `fileBasedS3Destination.bucket.templatingStrategy` | 문자열 | *필수*. `bucket.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에서 자신의 버킷 이름을 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정하십시오. 이 경우 사용자가 입력한 `value`고객 데이터 필드[의 값을 읽으려면 ](../destination-configuration/customer-data-fields.md) 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>통합에 `"bucket.value":"MyBucket"`과(와) 같이 하드 코딩된 버킷 이름을 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오.</li></ul> |
 | `fileBasedS3Destination.bucket.value` | 문자열 | 이 대상에서 사용할 [!DNL Amazon S3] 버킷의 이름입니다. 이는 사용자가 채운 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)의 값을 읽는 서식 있는 필드이거나(위의 예에서 보듯이) `"value":"MyBucket"`과(와) 같이 하드 코딩된 값일 수 있습니다. |
-| `fileBasedS3Destination.path.templatingStrategy` | 문자열 | *필수*. `path.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에서 자신의 경로를 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정하십시오. 이 경우 사용자가 입력한 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)의 값을 읽으려면 `path.value` 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>`"bucket.value":"/path/to/MyBucket"`과(와) 같이 통합에 하드 코딩된 경로를 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오.</li></ul> |
+| `fileBasedS3Destination.path.templatingStrategy` | 문자열 | *필수*. `path.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에서 자신의 경로를 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정하십시오. 이 경우 사용자가 입력한 `path.value`고객 데이터 필드[의 값을 읽으려면 ](../destination-configuration/customer-data-fields.md) 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>`"bucket.value":"/path/to/MyBucket"`과(와) 같이 통합에 하드 코딩된 경로를 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오.</li></ul> |
 | `fileBasedS3Destination.path.value` | 문자열 | 이 대상에서 사용할 [!DNL Amazon S3] 버킷의 경로입니다. 이는 사용자가 채운 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)의 값을 읽는 서식 있는 필드이거나(위의 예에서 보듯이) `"value":"/path/to/MyBucket"`과(와) 같이 하드 코딩된 값일 수 있습니다. |
 
 {style="table-layout:auto"}
@@ -221,9 +221,9 @@ API 엔드포인트 선택 또는 필드 값 제공과 같이, Experience Platfo
 |---|---|---|
 | `name` | 문자열 | 대상 서버의 이름입니다. |
 | `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. 파일을 [!DNL SFTP] 대상으로 내보내려면 `FILE_BASED_SFTP`(으)로 설정하십시오. |
-| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | 문자열 | *필수*. `rootDirectory.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에서 자신의 루트 디렉터리 경로를 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정합니다. 이 경우 사용자가 입력한 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)에서 사용자가 제공한 값을 읽으려면 `rootDirectory.value` 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>`"rootDirectory.value":"Storage/MyDirectory"`과(와) 같이 통합에 하드 코딩된 루트 디렉터리 경로를 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오.</li></ul> |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | 문자열 | *필수*. `rootDirectory.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에서 자신의 루트 디렉터리 경로를 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정합니다. 이 경우 사용자가 입력한 `rootDirectory.value`고객 데이터 필드[에서 사용자가 제공한 값을 읽으려면 ](../destination-configuration/customer-data-fields.md) 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>`"rootDirectory.value":"Storage/MyDirectory"`과(와) 같이 통합에 하드 코딩된 루트 디렉터리 경로를 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오.</li></ul> |
 | `fileBasedSFTPDestination.rootDirectory.value` | 문자열 | 내보낸 파일을 호스팅할 디렉토리의 경로입니다. 이는 사용자가 채운 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)의 값을 읽는 서식 있는 필드이거나(위의 예에서 보듯이) `"value":"Storage/MyDirectory"`과(와) 같이 하드 코딩된 값일 수 있습니다. |
-| `fileBasedSFTPDestination.hostName.templatingStrategy` | 문자열 | *필수*. `hostName.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에서 자신의 호스트 이름을 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정하십시오. 이 경우 사용자가 입력한 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)에서 사용자가 제공한 값을 읽으려면 `hostName.value` 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>통합에 하드 코딩된 호스트 이름(예: `"hostName.value":"my.hostname.com"`)을 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오.</li></ul> |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | 문자열 | *필수*. `hostName.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에서 자신의 호스트 이름을 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정하십시오. 이 경우 사용자가 입력한 `hostName.value`고객 데이터 필드[에서 사용자가 제공한 값을 읽으려면 ](../destination-configuration/customer-data-fields.md) 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>통합에 하드 코딩된 호스트 이름(예: `"hostName.value":"my.hostname.com"`)을 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오.</li></ul> |
 | `fileBasedSFTPDestination.hostName.value` | 문자열 | SFTP 서버의 호스트 이름입니다. 이는 사용자가 채운 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)의 값을 읽는 서식 있는 필드이거나(위의 예에서 보듯이) `"hostName.value":"my.hostname.com"`과(와) 같이 하드 코딩된 값일 수 있습니다. |
 | `port` | 정수 | SFTP 파일 서버 포트입니다. |
 | `encryptionMode` | 문자열 | 파일 암호화를 사용할지 여부를 나타냅니다. 지원되는 값: <ul><li>PGP</li><li>None</li></ul> |
@@ -253,7 +253,7 @@ API 엔드포인트 선택 또는 필드 값 제공과 같이, Experience Platfo
 |---|---|---|
 | `name` | 문자열 | 대상 연결의 이름입니다. |
 | `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. [!DNL Azure Data Lake Storage] 대상의 경우 `FILE_BASED_ADLS_GEN2`(으)로 설정하십시오. |
-| `fileBasedAdlsGen2Destination.path.templatingStrategy` | 문자열 | *필수*. `path.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에서 자신의 [!DNL ADLS] 폴더 경로를 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정하십시오. 이 경우 사용자가 입력한 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)의 값을 읽으려면 `path.value` 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>`"abfs://<file_system>@<account_name>.dfs.core.windows.net/<path>/"`과(와) 같이 통합에 하드 코딩된 경로를 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오.</li></ul> |
+| `fileBasedAdlsGen2Destination.path.templatingStrategy` | 문자열 | *필수*. `path.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에서 자신의 [!DNL ADLS] 폴더 경로를 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정하십시오. 이 경우 사용자가 입력한 `path.value`고객 데이터 필드[의 값을 읽으려면 ](../destination-configuration/customer-data-fields.md) 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>`"abfs://<file_system>@<account_name>.dfs.core.windows.net/<path>/"`과(와) 같이 통합에 하드 코딩된 경로를 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오.</li></ul> |
 | `fileBasedAdlsGen2Destination.path.value` | 문자열 | [!DNL ADLS] 저장소 폴더의 경로입니다. 이는 사용자가 채운 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)의 값을 읽는 서식 있는 필드이거나(위의 예에서 보듯이) `abfs://<file_system>@<account_name>.dfs.core.windows.net/<path>/`과(와) 같이 하드 코딩된 값일 수 있습니다. |
 
 {style="table-layout:auto"}
@@ -307,7 +307,7 @@ API 엔드포인트 선택 또는 필드 값 제공과 같이, Experience Platfo
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    }
 }
 ```
@@ -316,8 +316,9 @@ API 엔드포인트 선택 또는 필드 값 제공과 같이, Experience Platfo
 |---|---|---|
 | `name` | 문자열 | 대상 연결의 이름입니다. |
 | `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. [!DNL Data Landing Zone] 대상의 경우 `FILE_BASED_DLZ`(으)로 설정하십시오. |
-| `fileBasedDlzDestination.path.templatingStrategy` | 문자열 | *필수*. `path.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에서 자신의 [!DNL Data Landing Zone] 계정을 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정하십시오. 이 경우 사용자가 입력한 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)의 값을 읽으려면 `path.value` 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>`"path.value": "https://myaccount.blob.core.windows.net/"`과(와) 같이 통합에 하드 코딩된 경로를 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오. |
+| `fileBasedDlzDestination.path.templatingStrategy` | 문자열 | *필수*. `path.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에서 자신의 [!DNL Data Landing Zone] 계정을 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정하십시오. 이 경우 사용자가 입력한 `path.value`고객 데이터 필드[의 값을 읽으려면 ](../destination-configuration/customer-data-fields.md) 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>`"path.value": "https://myaccount.blob.core.windows.net/"`과(와) 같이 통합에 하드 코딩된 경로를 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오. |
 | `fileBasedDlzDestination.path.value` | 문자열 | 내보낸 파일을 호스팅할 대상 폴더의 경로입니다. |
+| `fileBasedDlzDestination.useCase` | 문자열 | *필수*. `"dlz_destination"`(으)로 설정합니다. 이 속성은 대상을 [!DNL Data Landing Zone] 대상으로 식별합니다. 이 속성은 [!DNL Data Landing Zone] 대상을 만들 때만 사용됩니다. |
 
 {style="table-layout:auto"}
 
@@ -348,9 +349,9 @@ API 엔드포인트 선택 또는 필드 값 제공과 같이, Experience Platfo
 |---|---|---|
 | `name` | 문자열 | 대상 연결의 이름입니다. |
 | `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. [!DNL Google Cloud Storage] 대상의 경우 `FILE_BASED_GOOGLE_CLOUD`(으)로 설정하십시오. |
-| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | 문자열 | *필수*. `bucket.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에 자신의 [!DNL Google Cloud Storage] 버킷 이름을 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정하십시오. 이 경우 사용자가 입력한 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)의 값을 읽으려면 `bucket.value` 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>통합에 `"bucket.value": "my-bucket"`과(와) 같이 하드 코딩된 버킷 이름을 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오. |
+| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | 문자열 | *필수*. `bucket.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에 자신의 [!DNL Google Cloud Storage] 버킷 이름을 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정하십시오. 이 경우 사용자가 입력한 `bucket.value`고객 데이터 필드[의 값을 읽으려면 ](../destination-configuration/customer-data-fields.md) 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>통합에 `"bucket.value": "my-bucket"`과(와) 같이 하드 코딩된 버킷 이름을 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오. |
 | `fileBasedGoogleCloudStorageDestination.bucket.value` | 문자열 | 이 대상에서 사용할 [!DNL Google Cloud Storage] 버킷의 이름입니다. 이는 사용자가 채운 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)의 값을 읽는 서식 있는 필드이거나(위의 예에서 보듯이) `"value": "my-bucket"`과(와) 같이 하드 코딩된 값일 수 있습니다. |
-| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | 문자열 | *필수*. `path.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에 자신의 [!DNL Google Cloud Storage] 버킷 경로를 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정하십시오. 이 경우 사용자가 입력한 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)의 값을 읽으려면 `path.value` 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>`"path.value": "/path/to/my-bucket"`과(와) 같이 통합에 하드 코딩된 경로를 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오.</li></ul> |
+| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | 문자열 | *필수*. `path.value` 필드에 사용된 값의 유형에 따라 이 값을 설정하십시오.<ul><li>사용자가 Experience Platform UI에 자신의 [!DNL Google Cloud Storage] 버킷 경로를 입력하도록 하려면 이 값을 `PEBBLE_V1`(으)로 설정하십시오. 이 경우 사용자가 입력한 `path.value`고객 데이터 필드[의 값을 읽으려면 ](../destination-configuration/customer-data-fields.md) 필드를 템플릿으로 만들어야 합니다. 이 사용 사례는 위의 예제에 나와 있습니다.</li><li>`"path.value": "/path/to/my-bucket"`과(와) 같이 통합에 하드 코딩된 경로를 사용하는 경우 이 값을 `NONE`(으)로 설정하십시오.</li></ul> |
 | `fileBasedGoogleCloudStorageDestination.path.value` | 문자열 | 이 대상에서 사용할 [!DNL Google Cloud Storage] 폴더의 경로입니다. 이는 사용자가 채운 [고객 데이터 필드](../destination-configuration/customer-data-fields.md)의 값을 읽는 서식 있는 필드이거나(위의 예에서 보듯이) `"value": "/path/to/my-bucket"`과(와) 같이 하드 코딩된 값일 수 있습니다. |
 
 {style="table-layout:auto"}
