@@ -3,10 +3,10 @@ keywords: google 고객 일치;Google 고객 일치;Google 고객 일치
 title: Google Customer Match 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑 및 Gmail과 같이 Google이 소유하고 운영하는 속성에서 고객에게 연락하고 다시 연결할 수 있습니다.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: a119418e8da7594a99116b4de65f60fdaa95ba8e
 workflow-type: tm+mt
-source-wordcount: '2413'
-ht-degree: 8%
+source-wordcount: '2719'
+ht-degree: 7%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 8%
 >[!IMPORTANT]
 >
 > Google은 유럽 연합([EU 사용자 동의 정책](https://developers.google.com/google-ads/api/docs/start))의 [디지털 시장법](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)&#x200B;(DMA)에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/display-video/api/guides/getting-started/overview), [고객 일치](https://digital-markets-act.ec.europa.eu/index_en) 및 [디스플레이 및 비디오 360 API](https://www.google.com/about/company/user-consent-policy/)에 대한 변경 사항을 출시합니다. 동의 요구 사항에 대한 이러한 변경 사항의 시행은 2024년 3월 6일부터 시작됩니다.
-> &#x200B;><br/>
-> &#x200B;>EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
-> &#x200B;><br/>
-> &#x200B;>Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
-> &#x200B;><br/>
-> &#x200B;>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/home.md#segment-definitions) 내의 [세그먼트 정의](../../../segmentation/ui/segment-builder.md) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
+><br/>
+>EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
+><br/>
+>Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
+><br/>
+>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/home.md#segment-definitions) 내의 [세그먼트 정의](../../../segmentation/ui/segment-builder.md) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en)을(를) 사용하면 온라인 및 오프라인 데이터를 사용하여 [!DNL Search], [!DNL Shopping] 및 [!DNL Gmail]과(와) 같은 Google의 소유 및 운영되는 속성에서 고객에게 연락하고 고객과 다시 연결할 수 있습니다.
 
@@ -94,7 +94,7 @@ Experience Platform의 일부 대상에는 대상 플랫폼으로 보내거나 �
 
 ## [!DNL Google Customer Match] 계정 필수 구성 요소 {#google-account-prerequisites}
 
-Experience Platform에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [!DNL Customer Match]Google 지원 설명서[에 설명된 &#x200B;](https://support.google.com/google-ads/answer/6299717) 사용에 대한 Google 정책을 읽고 준수하는지 확인하십시오.
+Experience Platform에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [!DNL Customer Match]Google 지원 설명서[에 설명된 ](https://support.google.com/google-ads/answer/6299717) 사용에 대한 Google 정책을 읽고 준수하는지 확인하십시오.
 
 그런 다음 [!DNL Google] 계정이 [!DNL Standard] 이상의 권한 수준에 대해 구성되어 있는지 확인하십시오. 자세한 내용은 [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1)를 참조하세요.
 
@@ -156,13 +156,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## 비디오 개요 {#video-overview}
 
 아래 비디오를 통해 혜택과 Google Customer Match에 대한 데이터 활성화 방법에 대해 알아보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/326488?captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## 대상에 연결 {#connect}
 
@@ -187,6 +187,12 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 >[!IMPORTANT]
 >
 > * **[!UICONTROL Combine with PII]** 대상에 대해 기본적으로 [!DNL Google Customer Match] 마케팅 작업이 선택되어 있으며 제거할 수 없습니다.
+
+### 인증 및 권한 {#authentication-permissions}
+
+Google Ads 계정을 연결하면 Google에서 Adobe의 애플리케이션에 대한 액세스 권한을 부여하라는 메시지가 표시됩니다. Adobe에서 고객 목록을 만들고 관리할 수 있도록 Google Ads API 권한을 승인해야 합니다. 활성화하려는 고객 계정에서 표준 이상의 액세스 권한을 가진 Google 광고 사용자를 사용하십시오. 관리자 계정(MCC)을 사용하는 경우 고객 계정의 사용자와 로그인하고 고객 계정 ID(MCC ID 아님)를 제공합니다.
+
+OAuth 흐름 중에 Google Ads 권한이 부여되지 않은 경우 나중에 Google Ads API에서 오류가 발생하여 활성화가 실패할 수 있습니다. 권한 관련 오류를 해결하는 방법에 대한 자세한 내용은 [문제 해결 섹션](#troubleshooting)을 참조하세요.
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -216,9 +222,9 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 소스 필드 선택:
 
 * 사용 중인 전자 메일 주소가 해시되지 않은 경우 `Email` 네임스페이스를 원본 ID로 선택하십시오.
-* `Email_LC_SHA256` [!DNL Experience Platform]전자 메일 해시 요구 사항[!DNL Google Customer Match]에 따라 데이터 수집 시 고객 전자 메일 주소를 [(으)로 해시했다면 &#x200B;](#hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
+* `Email_LC_SHA256` [!DNL Experience Platform]전자 메일 해시 요구 사항[!DNL Google Customer Match]에 따라 데이터 수집 시 고객 전자 메일 주소를 [(으)로 해시했다면 ](#hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 해시되지 않은 전화 번호로 구성된 경우 `PHONE_E.164` 네임스페이스를 원본 ID로 선택하십시오. [!DNL Experience Platform]이(가) [!DNL Google Customer Match] 요구 사항을 준수하기 위해 전화 번호를 해시합니다.
-* `Phone_SHA256_E.164` [!DNL Experience Platform]전화 번호 해시 요구 사항[!DNL Facebook]에 따라 데이터 수집 시 전화 번호를 [(으)로 해시했다면 &#x200B;](#phone-number-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
+* `Phone_SHA256_E.164` [!DNL Experience Platform]전화 번호 해시 요구 사항[!DNL Google Customer Match]에 따라 데이터 수집 시 전화 번호를 [(으)로 해시했다면 ](#phone-number-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 `IDFA` 장치 ID로 구성된 경우 [!DNL Apple] 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 `GAID` 장치 ID로 구성된 경우 [!DNL Android] 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 다른 유형의 식별자로 구성된 경우 `Custom` 네임스페이스를 소스 ID로 선택하십시오.
@@ -261,3 +267,26 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
 이 오류는 고객 계정이 [필수 구성 요소](#google-account-prerequisites)를 준수하지 않을 때 발생합니다. 이 문제를 해결하려면 Google에 문의하고 계정이 허용 목록에 있으며 [!DNL Standard] 이상의 권한 수준에 대해 구성되어 있는지 확인하십시오. 자세한 내용은 [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1)를 참조하세요.
+
+### 500 내부 서버 오류 - 인증 범위 부족 {#insufficient-scopes}
+
+이 대상에 대한 대상을 활성화할 때 다음 오류가 표시될 수 있습니다.
+
+`{"message":"com.google.api.gax.rpc.PermissionDeniedException: io.grpc.StatusRuntimeException: PERMISSION_DENIED: Request had insufficient authentication scopes.","code":"500 INTERNAL_SERVER_ERROR"}`
+
+이 오류는 이 대상 연결에 사용된 Google OAuth 토큰이 필요한 Google Ads API 범위 없이 만들어졌거나 로그인한 사용자에게 target 고객 계정에 대한 권한이 부족한 경우에 발생합니다.
+
+이 문제를 해결하려면 다음 단계를 수행합니다.
+
+1. 이 대상 계정에 대해 **Google 인증을 다시 생성**&#x200B;하고 요청한 Google 광고 권한을 수락하는지 확인하십시오.
+   * Experience Platform에서 **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**(으)로 이동
+   * Google Customer Match 계정 찾기
+   * **[!UICONTROL More actions]**(⋯) > **[!UICONTROL Edit]** > **[!UICONTROL Renew]** 선택
+   * Google 로그인 및 동의 플로우를 완료하고 요청된 모든 권한을 승인합니다
+2. 관리자 계정(MCC)을 통해 광고를 관리하는 경우 대상 고객 계정에 대해 [!DNL Standard] 이상 액세스 권한이 있는 사용자로 인증하고 있는지, 대상에 구성된 **[!UICONTROL Account ID]**&#x200B;이(가) 고객 계정 ID(MCC ID 아님)인지 확인하십시오.
+3. 활성화를 다시 실행합니다.
+
+문제가 지속되는 경우:
+
+* Google Ads 계정이 Customer Match에 대해 허용 목록에추가된이고 [정책 요구 사항](#google-account-prerequisites)을 충족하는지 확인하십시오.
+* Google Ads 고객 계정에서 사용자의 액세스 수준이 [!DNL Standard] 이상인지 확인하십시오. 자세한 내용은 [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1)를 참조하세요.
