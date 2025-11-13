@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 기능의 최적 사용을 보장하기 위해 프로필 데이터 및 세분화에 대한 성능 및 시스템 적용 가드레일에 대해 알아봅니다.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
+source-git-commit: 28009ec826e76a9ef07f0c36ff1a7230ced812eb
 workflow-type: tm+mt
-source-wordcount: '2668'
+source-wordcount: '2744'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 
 >[!IMPORTANT]
 >
->이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)을(를) 확인하십시오.
+>이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을(를) 확인하십시오.
 >
 >또는 [용량 서비스](../landing/license-usage-and-guardrails/capacity.md)를 사용하여 Experience Platform 내에서 스트리밍 처리량 및 기타 데이터를 모니터링하고 설정할 수 있습니다.
 
@@ -97,7 +97,7 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 | --------- | ----- | ---------- | ----------- |
 | 최대 ExperienceEvent 크기 | 10KB | 시스템 강제 보호 | **이벤트의 최대 크기는 10KB입니다.** 수집은 계속되지만 10KB보다 큰 이벤트는 모두 삭제됩니다. |
 | 최대 프로필 레코드 크기 | 100KB | 시스템 강제 보호 | **프로필 레코드의 최대 크기는 100KB입니다.** 수집은 계속되지만 100KB보다 큰 프로필 레코드는 삭제됩니다. |
-| 최대 프로필 조각 크기 | 50MB | 시스템 강제 보호 | **단일 프로필 조각의 최대 크기는 50MB입니다.50MB보다 큰**&#x200B;프로필 조각[에 대해 &#x200B;](#profile-fragments) 세분화, 내보내기 및 조회가 실패할 수 있습니다. |
+| 최대 프로필 조각 크기 | 50MB | 시스템 강제 보호 | **단일 프로필 조각의 최대 크기는 50MB입니다.50MB보다 큰**&#x200B;프로필 조각[에 대해 ](#profile-fragments) 세분화, 내보내기 및 조회가 실패할 수 있습니다. |
 | 최대 프로필 스토리지 크기 | 50MB | 성능 보호 | **저장된 프로필의 최대 크기는 50MB입니다.** 50MB가 넘는 프로필에 새 [프로필 조각](#profile-fragments)을 추가하는 것은 시스템 성능에 영향을 줍니다. 예를 들어 프로필에는 50MB인 단일 조각이 포함되거나 결합된 총 크기가 50MB인 여러 데이터 세트에 여러 조각을 포함할 수 있습니다. 단일 조각이 50MB보다 크거나 총 조각이 50MB를 초과하는 여러 조각을 사용하여 프로필을 저장하려고 하면 시스템 성능에 영향을 줍니다. |
 | 하루에 수집된 프로필 또는 ExperienceEvent 배치 수 | 90 | 성능 보호 | **하루에 수집할 수 있는 프로필 또는 ExperienceEvent 일괄 처리의 최대 수는 90개입니다.** 이는 매일 수집된 프로필 및 ExperienceEvent 배치의 합계가 90개를 초과할 수 없음을 의미합니다. 추가 배치를 수집하면 시스템 성능에 영향을 줍니다. |
 | 프로필 레코드당 ExperienceEvents 수 | 5000 | 성능 보호 | **프로필 레코드당 최대 ExperienceEvents 수는 5000개입니다.ExperienceEvents가 5000개가 넘는** 프로필은 세그먼테이션과 함께 사용할 때 **최신** 5000 ExperienceEvents만 사용합니다. |
@@ -126,14 +126,17 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 | 샌드박스당 스트리밍 대상 | 500 | 성능 보호 | 샌드박스당 최대 500개의 **활성** 스트리밍 대상을 가질 수 있습니다. 각 **개별** 샌드박스에 500개 미만의 스트리밍 대상이 있는 한 조직당 500개 이상의 스트리밍 대상을 가질 수 있습니다. 여기에는 스트리밍 대상과 에지 대상이 모두 포함됩니다. 스트리밍 대상을 추가로 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. [스트리밍 대상](/help/segmentation/methods/streaming-segmentation.md)에 대해 자세히 알아보세요. |
 | 모든 샌드박스에서 스트리밍 처리량 | 1500RPS | 성능 보호 | 스트리밍 세그멘테이션은 프로덕션 및 개발 샌드박스에서 초당 1500개의 인바운드 이벤트의 결합된 최대 값을 지원합니다. 스트리밍 세분화는 프로필 멤버십에 자격을 부여하는 데 최대 5분이 걸릴 수 있습니다. [스트리밍 대상](/help/segmentation/methods/streaming-segmentation.md)에 대해 자세히 알아보세요. |
 | 샌드박스당 배치 대상 | 4000 | 성능 보호 | 샌드박스당 최대 4000개의 **활성** 일괄 처리 대상을 가질 수 있습니다. 각 **개별** 샌드박스에 4000개 미만의 배치 대상이 있는 한 조직당 4000개 이상의 배치 대상이 있을 수 있습니다. 추가 배치 대상을 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. |
-| 샌드박스당 계정 대상자 | 50 | 시스템 강제 보호 | 샌드박스에서 최대 50개의 계정 대상을 만들 수 있습니다. 샌드박스에서 대상 50개에 도달하면 새 계정 대상을 만들 때 **[!UICONTROL 대상 만들기]** 컨트롤이 비활성화됩니다. [계정 대상자](/help/segmentation/types/account-audiences.md)에 대해 자세히 알아보세요. |
+| 샌드박스당 계정 대상자 | 50 | 시스템 강제 보호 | 샌드박스에서 최대 50개의 계정 대상을 만들 수 있습니다. 샌드박스에서 대상 50개에 도달하면 새 계정 대상을 만들 때 **[!UICONTROL Create audience]** 컨트롤이 비활성화됩니다. [계정 대상자](/help/segmentation/types/account-audiences.md)에 대해 자세히 알아보세요. |
 | 샌드박스당 게시된 컴포지션 | 10 | 성능 보호 | 샌드박스에 최대 10개의 컴포지션이 게시될 수 있습니다. UI 가이드의 [대상 구성에 대해 자세히 알아보세요](/help/segmentation/ui/audience-composition.md). **참고**: Federated Audience Composition으로 만든 컴포지션은 이 가드레일로 계산되지 **않습니다**. |
 | 최대 대상자 크기 | 30% | 성능 보호 | 대상자의 권장 최대 멤버십은 시스템 총 프로필 수의 30%입니다. 프로필의 30% 이상이 멤버이거나 큰 대상이 여러 개인 대상을 만드는 것은 가능하지만 시스템 성능에 영향을 줍니다. |
 | 유연한 대상 평가 실행 | 연간 50개(프로덕션 샌드박스)<br/>연간 100개(개발 샌드박스) | 시스템 강제 보호 | **프로덕션** 샌드박스당 연간 최대 50개의 유연한 대상 평가 실행이 있습니다. **개발** 샌드박스당 연간 최대 100개의 유연한 대상 평가 실행이 있습니다. |
 | 유연한 대상 평가 실행 | 일별 2개 | 시스템 강제 보호 | 샌드박스당 하루에 최대 2회의 실행이 있습니다. |
 | 유연한 대상 평가 실행당 대상 | 20 | 시스템 강제 보호 | 유연한 대상 평가 실행당 최대 20개의 대상을 가질 수 있습니다. |
+| B2B 샌드박스당 세그먼트 정의 | 400 | 성능 보호 | 각 개별 B2B 샌드박스에 400개 미만의 세그먼트 정의가 있는 한 조직에는 총 400개 이상의 세그먼트 정의가 있을 수 있습니다. 추가 세그먼트 정의를 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. 자세한 내용은 [Real-Time Customer Data Platform B2B edition의 기본 보호 기능](../rtcdp/b2b-guardrails.md)을 참조하세요. |
 
 {style="table-layout:auto"}
+
+B2B 전용 보호 기능에 대한 자세한 내용은 [Real-Time Customer Data Platform B2B edition의 기본 보호 기능](../rtcdp/b2b-guardrails.md) 설명서를 참조하십시오.
 
 ## 예상 가용성
 
@@ -190,7 +193,7 @@ Dimension 엔티티는 다중 엔티티 세그먼트 정의를 지원 및 간소
 Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보호, 종단 간 지연 정보 및 라이선스 정보에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
-* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ko#end-to-end-latency-diagrams).
-* [Real-Time Customer Data Platform(B2C Edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams).
+* [Real-Time Customer Data Platform(B2C Edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
