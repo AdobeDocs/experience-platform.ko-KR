@@ -2,9 +2,9 @@
 title: Adobe Campaign Managed Cloud Services 연결
 description: Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 플랫폼과 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: f0db626401d76997e19632c3e27a133f577bc571
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1610'
 ht-degree: 2%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 통합은 [Adobe Campaign 버전 8.4 이상](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=ko#release-8-4-1)에서 작동합니다.
+>이 통합은 [Adobe Campaign 버전 8.4 이상](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1)에서 작동합니다.
 
 ## 개요 {#overview}
 
-Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 플랫폼과 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다. [Campaign 시작](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ko)
+Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 플랫폼과 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다. [Campaign 시작](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 Campaign을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 
@@ -31,7 +31,7 @@ Adobe Campaign Managed Cloud Services 연결을 사용할 때는 다음 보호 �
 
 * 이 대상에 대해 최대 25개의 대상을 [활성화](#activate)할 수 있습니다.
 
-  Campaign 탐색기의 **>** > **[!UICONTROL Administration]** 폴더에서 **[!UICONTROL Platform]** NmsCdp_Aep_Audience_List_Limit **[!UICONTROL Options]** 옵션의 값을 업데이트하여 이 제한을 변경할 수 있습니다.
+  Campaign 탐색기의 **>** > **[!UICONTROL Administration]** 폴더에서 **[!UICONTROL Platform]** NmsCdp_Aep_Audience_List_Limit **[!UICONTROL Options]** 옵션의 값을 업데이트하여 이 제한을 변경할 수 있습니다. 이 가드레일은 구성된 모든 대상에서 단일 Campaign 인스턴스로 내보낼 수 있는 총 Experience Platform 대상 수를 제한합니다.
 
 * 각 대상에 대해 Adobe Campaign에 [맵](#map)에 최대 20개의 필드를 추가할 수 있습니다.
 
@@ -40,6 +40,7 @@ Adobe Campaign Managed Cloud Services 연결을 사용할 때는 다음 보호 �
 * Azure Blob 스토리지 DLZ(데이터 랜딩 영역)의 데이터 유지 : 7일.
 * 활성화 빈도는 최소 3시간입니다.
 * 이 연결에서 지원되는 최대 파일 이름 길이는 255자입니다. [내보낸 파일 이름을 구성](../../ui/activate-batch-profile-destinations.md#configure-file-names)할 때 파일 이름이 255자를 초과하지 않는지 확인하십시오. 최대 파일 이름 길이를 초과하면 활성화 오류가 발생합니다.
+* 대상을 Adobe Campaign으로 내보낼 때 특수 문자(예: `&`)가 포함된 세그먼트/대상은 지원되지 않습니다.
 
 ## 사용 사례 {#use-cases}
 
@@ -60,7 +61,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
   >
   >프로필 속성 동기화는 Adobe Campaign 데이터베이스에 이미 있는 프로필에 사용할 수 있습니다.
 
-[Adobe Experience Platform과의 Adobe Campaign 통합에 대해 자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=ko)
+[Adobe Experience Platform과의 Adobe Campaign 통합에 대해 자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
 
 ## 지원되는 ID {#supported-identities}
 
@@ -105,7 +106,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL Select instance]**: **[!DNL Campaign]** 마케팅 인스턴스입니다.
-* **[!UICONTROL Target mapping]**: **[!DNL Adobe Campaign]**&#x200B;에서 게재를 보낼 대상 매핑을 선택합니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=ko).
+* **[!UICONTROL Target mapping]**: **[!DNL Adobe Campaign]**&#x200B;에서 게재를 보낼 대상 매핑을 선택합니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
 * **[!UICONTROL Select sync type]**:
 
    * **[!UICONTROL Audience sync]**: 이 옵션을 사용하여 Adobe Experience Platform 대상자를 Adobe Campaign으로 보냅니다.
@@ -130,7 +131,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
-대상 데이터를 이 대상으로 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko)를 참조하십시오.
+대상 데이터를 이 대상으로 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html)를 참조하십시오.
 
 ### 속성 및 ID 매핑 {#map}
 
@@ -159,7 +160,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
    ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
-1. 매핑이 수행되면 대상 구성을 검토하고 완료하여 **[!DNL Campaign]**&#x200B;에 데이터를 보낼 수 있습니다.
+1. 매핑이 수행되면 대상 구성을 검토하고 완료하여 **[!DNL Campaign]**에 데이터를 보낼 수 있습니다.
    [대상 구성을 검토하고 완료하는 방법을 알아보세요](/help/destinations/destination-types.md#review).
 
 ## 내보낸 데이터/데이터 내보내기 유효성 검사 {#exported-data}
