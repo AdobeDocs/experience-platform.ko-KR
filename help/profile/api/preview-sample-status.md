@@ -19,7 +19,7 @@ Adobe Experience Platform을 사용하면 여러 소스에서 고객 데이터�
 
 >[!NOTE]
 >
->Adobe Experience Platform 세그먼테이션 서비스 API의 일부로 사용할 수 있는 예상 및 미리 보기 끝점이 있습니다. 이 끝점을 사용하면 세그먼트 정의에 대한 요약 수준 정보를 보고 예상 대상을 격리할 수 있습니다. 미리 보기 및 예상 끝점을 사용하는 작업에 대한 자세한 단계를 찾으려면 [ API 개발자 가이드의 일부인 ](../../segmentation/api/previews-and-estimates.md)미리 보기 및 예상 끝점 안내서[!DNL Segmentation]를 참조하십시오.
+>Adobe Experience Platform 세그먼테이션 서비스 API의 일부로 사용할 수 있는 예상 및 미리 보기 끝점이 있습니다. 이 끝점을 사용하면 세그먼트 정의에 대한 요약 수준 정보를 보고 예상 대상을 격리할 수 있습니다. 미리 보기 및 예상 끝점을 사용하는 작업에 대한 자세한 단계를 찾으려면 [&#x200B; API 개발자 가이드의 일부인 &#x200B;](../../segmentation/api/previews-and-estimates.md)미리 보기 및 예상 끝점 안내서[!DNL Segmentation]를 참조하십시오.
 
 ## 시작
 
@@ -212,9 +212,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/d
 | 속성 | 설명 |
 | -------- | ----------- |
 | `sampleCount` | 이 데이터 세트 ID로 샘플링된 병합된 프로필의 총 수입니다. |
-| `samplePercentage` | `sampleCount`은(는) 십진수 형식으로 표현되는, 샘플링된 병합된 프로필의 총 수(`numRowsToRead`마지막 샘플 상태[에서 반환된 ](#view-last-sample-status) 값)의 백분율입니다. |
+| `samplePercentage` | `sampleCount`은(는) 십진수 형식으로 표현되는, 샘플링된 병합된 프로필의 총 수(`numRowsToRead`마지막 샘플 상태[에서 반환된 &#x200B;](#view-last-sample-status) 값)의 백분율입니다. |
 | `fullIDsCount` | 이 데이터 세트 ID를 가진 병합된 프로필의 총 수입니다. |
-| `fullIDsPercentage` | `fullIDsCount`은(는) 10진수 형식으로 표현되는 병합된 프로필 총 수(`totalRows`마지막 샘플 상태[에서 반환된 ](#view-last-sample-status) 값)의 백분율입니다. |
+| `fullIDsPercentage` | `fullIDsCount`은(는) 10진수 형식으로 표현되는 병합된 프로필 총 수(`totalRows`마지막 샘플 상태[에서 반환된 &#x200B;](#view-last-sample-status) 값)의 백분율입니다. |
 | `name` | 데이터 세트 생성 시 제공된 데이터 세트의 이름입니다. |
 | `description` | 데이터 세트 생성 중 제공된 데이터 세트에 대한 설명입니다. |
 | `value` | 데이터 세트의 ID입니다. |
@@ -318,11 +318,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/n
 | 속성 | 설명 |
 | -------- | ----------- |
 | `sampleCount` | 네임스페이스에서 샘플링된 병합된 프로필의 총 수입니다. |
-| `samplePercentage` | `sampleCount`은(는) 십진수 형식으로 표현되는 샘플링된 병합 프로필(`numRowsToRead`마지막 샘플 상태[에서 반환된 ](#view-last-sample-status) 값)의 백분율입니다. |
+| `samplePercentage` | `sampleCount`은(는) 십진수 형식으로 표현되는 샘플링된 병합 프로필(`numRowsToRead`마지막 샘플 상태[에서 반환된 &#x200B;](#view-last-sample-status) 값)의 백분율입니다. |
 | `reportTimestamp` | 보고서의 타임스탬프. 요청 중에 `date` 매개 변수가 제공된 경우 반환된 보고서는 제공된 날짜에 대한 것입니다. `date` 매개 변수를 제공하지 않으면 가장 최근 보고서가 반환됩니다. |
 | `fullIDsFragmentCount` | 네임스페이스의 총 프로필 조각 수입니다. |
 | `fullIDsCount` | 네임스페이스에 병합된 총 프로필 수입니다. |
-| `fullIDsPercentage` | `fullIDsCount`은(는) 10진수 형식으로 표현되는 총 병합 프로필 비율(`totalRows`마지막 샘플 상태[에서 반환된 ](#view-last-sample-status) 값)입니다. |
+| `fullIDsPercentage` | `fullIDsCount`은(는) 10진수 형식으로 표현되는 총 병합 프로필 비율(`totalRows`마지막 샘플 상태[에서 반환된 &#x200B;](#view-last-sample-status) 값)입니다. |
 | `code` | 네임스페이스에 대한 `code`입니다. 이 ID는 [Adobe Experience Platform ID 서비스 API](../../identity-service/api/list-namespaces.md)를 사용하여 네임스페이스로 작업할 때 찾을 수 있으며 Experience Platform UI에서 [!UICONTROL Identity symbol]이라고도 합니다. 자세한 내용은 [ID 네임스페이스 개요](../../identity-service/features/namespaces.md)를 참조하세요. |
 | `value` | 네임스페이스에 대한 `id` 값입니다. [ID 서비스 API](../../identity-service/api/list-namespaces.md)를 사용하여 네임스페이스로 작업할 때 찾을 수 있습니다. |
 
