@@ -2,9 +2,9 @@
 title: 보고서 세트 데이터용 Adobe Analytics Source 커넥터
 description: 이 문서에서는 Analytics에 대한 개요를 제공하고 Analytics 데이터의 사용 사례를 설명합니다.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 816c41613844e0d2b53003bc865f1996a86297c6
+source-git-commit: d9dad6b5da413740559e6c8de7392bc2e169d5d9
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1343'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform을 사용하면 Analytics 소스 커넥터를 통해 A
 
 [!DNL Analytics]은(는) 높은 수준에서 전 세계 다양한 디지털 채널과 여러 데이터 센터에서 데이터를 수집합니다. 데이터가 수집되면 방문자 식별, VISTA(세그먼테이션 및 변형 아키텍처) 규칙 및 처리 규칙이 적용되어 들어오는 데이터를 형성합니다. 원시 데이터가 이 간단한 처리를 거친 후 [!DNL Real-Time Customer Profile]에서 사용할 준비가 된 것으로 간주됩니다. 앞에서 설명한 것과 병행되는 프로세스에서, 동일한 처리된 데이터는 마이크로 일괄 처리되어 [!DNL Query Service] 및 기타 데이터 검색 응용 프로그램에서 사용할 수 있도록 Experience Platform 데이터 세트로 수집됩니다.
 
-처리 규칙에 대한 자세한 내용은 [처리 규칙 개요](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=ko)를 참조하십시오.
+처리 규칙에 대한 자세한 내용은 [처리 규칙 개요](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html)를 참조하십시오.
 
 ## 경험 데이터 모델 (XDM)
 
@@ -43,6 +43,14 @@ Experience Platform 사용자 인터페이스를 사용하여 [!DNL Analytics] �
 
 [!DNL Analytics]과(와) Experience Platform 간에 발생하는 필드 매핑에 대한 자세한 내용은 [Adobe Analytics 필드 매핑](./mapping/analytics.md) 안내서를 참조하십시오.
 
+>[!TIP]
+>
+>다음 모범 사례에 따라 라이선스 권한을 초과하여 총 저장소 및 데이터 풍부성 지표를 초과하지 않도록 하십시오.
+>
+>* 시작 부분에서 경험 이벤트 데이터 세트 유지 TTL(Time-To-Live)을 설정하여 데이터 수명주기 관리 및 스토리지 효율성을 최적화합니다. 자세한 내용은 TTL을 사용하여 데이터 레이크에서 [경험 이벤트 데이터 세트 유지 관리](../../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md)에 대한 안내서를 참조하십시오.
+>
+>* Analytics 소스 데이터 흐름을 만들 때 먼저 데이터 레이크로만 데이터를 수집하도록 커넥터를 구성합니다. 데이터 흐름이 작동하는지 확인한 후 데이터 세트에 대해 프로필 수집을 활성화할 수 있습니다. 이 방법은 행 및 열 필터가 데이터 볼륨을 효과적으로 줄일 때 가장 적합합니다. 자세한 내용은 [Experience Platform에 Adobe Analytics 연결](../../tutorials/ui/create/adobe-applications/analytics.md) 설명서를 참조하세요.
+
 ## Experience Platform에서 Analytics 데이터의 예상 대기 시간은 어떻게 됩니까?
 
 Experience Platform의 Analytics 데이터에 대한 예상 대기 시간은 아래 표에 요약되어 있습니다. 지연은 고객 구성, 데이터 볼륨 및 소비자 애플리케이션에 따라 달라집니다. 예를 들어 Analytics 구현이 `A4T`(으)로 구성된 경우 파이프라인 지연 시간은 5~10분으로 늘어납니다.
@@ -52,11 +60,11 @@ Experience Platform의 Analytics 데이터에 대한 예상 대기 시간은 아
 | [!DNL Real-Time Customer Profile]에 대한 새 데이터(A4T **not** 사용) | 2분 미만 |
 | [!DNL Real-Time Customer Profile]에 대한 새 데이터(A4T **is** 사용) | 최대 30분 |
 | 데이터 레이크에 새 데이터 추가 | &lt; 2.25시간 |
-| [결합](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=ko) 없이 Customer Journey Analytics에 새 데이터 보내기 | &lt; 3.75시간 |
+| [결합](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) 없이 Customer Journey Analytics에 새 데이터 보내기 | &lt; 3.75시간 |
 | Customer Journey Analytics에 대한 새로운 데이터 결합 | 7시간 미만 |
 | 100억 개 미만의 이벤트 채우기 | &lt; 4주 |
 
-Customer Journey Analytics 지연에 대한 자세한 내용은 [Customer Journey Analytics 보호](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=ko)를 참조하십시오.
+Customer Journey Analytics 지연에 대한 자세한 내용은 [Customer Journey Analytics 보호](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en)를 참조하십시오.
 
 프로덕션 샌드박스에 대한 Analytics 채우기는 기본적으로 13개월로 설정됩니다. 비프로덕션 샌드박스의 Analytics 데이터의 경우 채우기는 3개월로 설정됩니다. 위 표에 언급된 100억 개의 이벤트 제한은 예상되는 지연과 관련하여 엄격히 제한됩니다.
 
@@ -79,9 +87,9 @@ Customer Journey Analytics 지연에 대한 자세한 내용은 [Customer Journe
 
 | ID 필드 | 설명 |
 | --- | --- |
-| AAID | AAID는 Adobe Analytics의 기본 장치 식별자이며 [!DNL Analytics] 원본을 통해 전달되는 모든 이벤트에 존재할 수 있습니다. AAID를 *기존 Analytics ID* 또는 `s_vi` 쿠키 ID라고도 합니다. 그럼에도 불구하고 AAID는 `s_vi` 쿠키가 없는 경우에도 생성됩니다. AAID는 [[!DNL Analytics] 데이터 피드](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html?lang=ko)의 `post_visid_high` 및 `post_visid_low` 열에 표시됩니다. 특정 이벤트에서는 AAID 필드에 [ID &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html?lang=ko)에 대한 작업 순서  [!DNL Analytics] 에 설명된 여러 다른 유형 중 하나일 수 있는 단일 ID가 포함됩니다. **참고**: 전체 보고서 세트 내에서 AAID에는 여러 이벤트에 걸쳐 혼합된 형식이 포함될 수 있습니다. |
-| ECID | ECID(Experience Cloud ID)는 Experience Cloud ID 서비스를 사용하여 [!DNL Analytics]을(를) 구현할 때 Adobe Analytics에 채워지는 별도의 장치 식별자 필드입니다. ECID를 MCID(Marketing Cloud ID)라고도 합니다. 이벤트에 ECID가 존재하는 경우, AAID는 Analytics [유예 기간](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html?lang=ko)이 구성되었는지 여부에 따라 ECID에 기반할 수 있습니다. ECID는 Analytics 데이터 피드에서 `mcvisid`에 의해 표시됩니다. ECID에 대한 자세한 내용은 [ECID 개요](../../../identity-service/features/ecid.md)를 참조하십시오. ECID가 [!DNL Analytics]에서 작동하는 방법에 대한 자세한 내용은 [Analytics 및 Experience Cloud ID 요청](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html?lang=ko)에 대한 문서를 참조하십시오. |
-| AACUSTOMID | AACUSTOMID는 [!DNL Analytics] 구현에서의 `s.VisitorID` 변수 사용에 따라 Adobe Analytics에 채워지는 별도의 식별자 필드입니다. AACUSTOMID는 [[!DNL Analytics] 데이터 피드](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html?lang=ko)의 `cust_visid` 열에 표시됩니다. AACUSTOMID가 있으면 AACUSTOMID가 [ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html?lang=ko)에 대한 작업 순서  [!DNL Analytics] 로 정의된 다른 모든 식별자를 우선하므로 AAID는 AACUSTOMID를 기반으로 합니다. |
+| AAID | AAID는 Adobe Analytics의 기본 장치 식별자이며 [!DNL Analytics] 원본을 통해 전달되는 모든 이벤트에 존재할 수 있습니다. AAID를 *기존 Analytics ID* 또는 `s_vi` 쿠키 ID라고도 합니다. 그럼에도 불구하고 AAID는 `s_vi` 쿠키가 없는 경우에도 생성됩니다. AAID는 `post_visid_high`데이터 피드`post_visid_low`의 [[!DNL Analytics]  및 ](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html) 열에 표시됩니다. 특정 이벤트에서는 AAID 필드에 [ID  [!DNL Analytics] 에 대한 작업 순서 ](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html)에 설명된 여러 다른 유형 중 하나일 수 있는 단일 ID가 포함됩니다. **참고**: 전체 보고서 세트 내에서 AAID에는 여러 이벤트에 걸쳐 혼합된 형식이 포함될 수 있습니다. |
+| ECID | ECID(Experience Cloud ID)는 Experience Cloud ID 서비스를 사용하여 [!DNL Analytics]을(를) 구현할 때 Adobe Analytics에 채워지는 별도의 장치 식별자 필드입니다. ECID를 MCID(Marketing Cloud ID)라고도 합니다. 이벤트에 ECID가 존재하는 경우, AAID는 Analytics [유예 기간](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html)이 구성되었는지 여부에 따라 ECID에 기반할 수 있습니다. ECID는 Analytics 데이터 피드에서 `mcvisid`에 의해 표시됩니다. ECID에 대한 자세한 내용은 [ECID 개요](../../../identity-service/features/ecid.md)를 참조하십시오. ECID가 [!DNL Analytics]에서 작동하는 방법에 대한 자세한 내용은 [Analytics 및 Experience Cloud ID 요청](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html)에 대한 문서를 참조하십시오. |
+| AACUSTOMID | AACUSTOMID는 `s.VisitorID` 구현에서의 [!DNL Analytics] 변수 사용에 따라 Adobe Analytics에 채워지는 별도의 식별자 필드입니다. AACUSTOMID는 `cust_visid`데이터 피드[[!DNL Analytics] 의 ](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html) 열에 표시됩니다. AACUSTOMID가 있으면 AACUSTOMID가 [ID [!DNL Analytics] 에 대한 작업 순서 ](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html)로 정의된 다른 모든 식별자를 우선하므로 AAID는 AACUSTOMID를 기반으로 합니다. |
 
 ### [!DNL Analytics] 원본에서 ID를 처리하는 방법
 
@@ -103,7 +111,7 @@ ID 또는 ID가 `identityMap`에 복사되면 `endUserIDs._experience.mcid.names
 * ECID가 있으면 `endUserIDs._experience.mcid.namespace.code`이(가) &quot;ECID&quot;로 설정됩니다.
 * AACUSTOMID가 있으면 `endUserIDs._experience.aacustomid.namespace.code`이(가) &quot;AACUSTOMID&quot;로 설정됩니다.
 
-ID 맵에서 ECID가 있으면 이벤트의 기본 ID로 표시됩니다. 이 경우 [ID 서비스 유예 기간](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html?lang=ko)으로 인해 AAID는 ECID를 기반으로 할 수 있습니다. 그렇지 않으면 AAID가 이벤트의 기본 ID로 표시됩니다. AACUSTOMID는 이벤트의 기본 ID로 표시되지 않습니다. 그러나 AACUSTOMID가 있으면 Experience Cloud 작업 순서로 인해 AAID는 AACUSTOMID를 기반으로 합니다.
+ID 맵에서 ECID가 있으면 이벤트의 기본 ID로 표시됩니다. 이 경우 [ID 서비스 유예 기간](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html)으로 인해 AAID는 ECID를 기반으로 할 수 있습니다. 그렇지 않으면 AAID가 이벤트의 기본 ID로 표시됩니다. AACUSTOMID는 이벤트의 기본 ID로 표시되지 않습니다. 그러나 AACUSTOMID가 있으면 Experience Cloud 작업 순서로 인해 AAID는 AACUSTOMID를 기반으로 합니다.
 
 >[!NOTE]
 >
