@@ -6,10 +6,10 @@ breadcrumb-title: 데이터스트림 안내서
 user-guide-description: Adobe Experience Platform에서 데이터스트림을 구성하는 방법에 대해 알아봅니다.
 feature: Datastreams
 role: Developer
-source-git-commit: 4f3bec03d26c7606e70db75320cf3ba39d9d2b0d
+source-git-commit: 5e2445e2f1ec71aeeb2b6abbd032dad607a7427b
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 83%
+source-wordcount: '42'
+ht-degree: 78%
 
 ---
 
@@ -22,6 +22,3 @@ ht-degree: 83%
 * [데이터스트림에 대한 보트 탐지 구성](bot-detection.md)
 * [데이터스트림 재정의 구성](overrides.md)
 * [데이터 수집을 위한 데이터 준비](data-prep.md)
-* 데이터 보강 {#data-enrichment}
-   * [The Weather Channel별 날씨 데이터](data-enrichment/weather.md)
-   * [날씨 데이터 필드 매핑](data-enrichment/weather-reference.md)
