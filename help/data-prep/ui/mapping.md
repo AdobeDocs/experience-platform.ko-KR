@@ -3,18 +3,23 @@ keywords: Experience Platform;홈;인기 항목;csv 매핑;csv 파일 매핑;xdm
 title: 데이터 준비 UI 안내서
 description: Experience Platform UI에서 데이터 준비 기능을 사용하여 CSV 파일을 XDM 스키마에 매핑하는 방법을 알아봅니다.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: c9638cdca887f439c57f1dc01f93d63016869b29
+source-git-commit: 789d00912edd0ce8e2871b7e22445a043868ccf5
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
 
-# 데이터 준비 UI 안내서
+# 데이터 준비 UI 안내서 {#data-prep-ui-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_data_prep_import_mapping"
+>title="템플릿 다운로드"
+>abstract="csv 템플릿을 다운로드하여 오프라인에서 매핑을 수행합니다."
 
 Adobe Experience Platform 사용자 인터페이스에서 [데이터 준비](../home.md) 매핑 함수를 사용하여 CSV 파일을 [XDM(Experience Data Model) 스키마](../../xdm/home.md)에 매핑하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
 
@@ -29,7 +34,7 @@ Adobe Experience Platform 사용자 인터페이스에서 [데이터 준비](../
 
 두 가지 서로 다른 경로를 통해 UI의 매핑 인터페이스에 액세스할 수 있습니다.
 
-1. Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 워크플로]**&#x200B;를 선택한 다음 **[!UICONTROL XDM 스키마에 CSV 매핑]**&#x200B;을 선택합니다. 그런 다음 데이터 흐름 세부 정보를 입력하고 수집할 데이터를 선택합니다. 완료되면 소스 데이터와 XDM 스키마 간의 매핑을 구성할 수 있는 매핑 인터페이스로 이동합니다.
+1. Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Workflows]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Map CSV to XDM schema]**&#x200B;을(를) 선택합니다. 그런 다음 데이터 흐름 세부 정보를 입력하고 수집할 데이터를 선택합니다. 완료되면 소스 데이터와 XDM 스키마 간의 매핑을 구성할 수 있는 매핑 인터페이스로 이동합니다.
 2. 소스 작업 영역을 통해 매핑 인터페이스에 액세스할 수도 있습니다.
 
 ## CSV 파일을 XDM 스키마에 매핑
@@ -44,10 +49,10 @@ Adobe Experience Platform 사용자 인터페이스에서 [데이터 준비](../
 
 | 속성 | 설명 |
 | --- | --- |
-| [!UICONTROL 매핑된 필드] | 오류에 관계없이 대상 XDM 필드에 매핑된 총 소스 필드 수를 표시합니다. |
-| [!UICONTROL 필수 필드] | 필수 매핑 필드의 수를 표시합니다. |
-| [!UICONTROL ID 필드] | ID로 정의된 총 매핑 필드 수를 표시합니다. 이러한 매핑 필드는 지문 아이콘으로 표시됩니다. |
-| [!UICONTROL 오류] | 잘못된 매핑 필드의 수를 표시합니다. |
+| [!UICONTROL Mapped fields] | 오류에 관계없이 대상 XDM 필드에 매핑된 총 소스 필드 수를 표시합니다. |
+| [!UICONTROL Required fields] | 필수 매핑 필드의 수를 표시합니다. |
+| [!UICONTROL Identity fields] | ID로 정의된 총 매핑 필드 수를 표시합니다. 이러한 매핑 필드는 지문 아이콘으로 표시됩니다. |
+| [!UICONTROL Errors] | 잘못된 매핑 필드의 수를 표시합니다. |
 
 {style="table-layout:auto"}
 
@@ -55,32 +60,32 @@ Adobe Experience Platform 사용자 인터페이스에서 [데이터 준비](../
 
 | 옵션 | 설명 |
 | --- | --- |
-| [!UICONTROL 소스 필드 검색] | 검색 창을 사용하여 특정 소스 필드로 이동합니다. |
-| [!UICONTROL 모든 필드] | 매핑을 필터링할 옵션의 드롭다운 메뉴를 보려면 **[!UICONTROL 모든 필드]**&#x200B;를 선택하십시오. 사용 가능한 필터링 옵션은 다음과 같습니다.<ul><li>**[!UICONTROL 필수 필드]**: 인터페이스를 필터링하여 워크플로를 완료하는 데 필요한 필드만 표시합니다.</li><li> **[!UICONTROL ID 필드]**: ID로 표시된 필드만 표시하도록 인터페이스를 필터링합니다.</li><li>**[!UICONTROL 매핑된 필드]**: 이미 매핑된 필드만 표시하도록 인터페이스를 필터링합니다.</li><li>**[!UICONTROL 매핑되지 않은 필드]**: 아직 매핑되지 않은 필드만 표시하도록 인터페이스를 필터링합니다.</li><li>**[!UICONTROL 오류가 있는 필드]**: 오류가 있는 필드만 표시하도록 인터페이스를 필터링합니다.</li></ul> |
-| [!UICONTROL 새 필드 형식] | 새 필드 또는 계산된 필드를 추가하려면 **[!UICONTROL 새 필드 형식]**&#x200B;을(를) 선택하십시오. 자세한 내용은 [새 필드 형식 추가](#add-a-new-field-type)에 대한 섹션을 참조하십시오. |
-| [!UICONTROL 매핑 가져오기] | 기존 파일 또는 데이터 흐름에서 매핑을 가져오려면 **[!UICONTROL 매핑 가져오기]**&#x200B;를 선택하십시오. 자세한 내용은 [매핑을 가져오는 중](#import-mapping) 섹션을 참조하십시오. |
-| [!UICONTROL 유효성 검사] | 매핑에서 오류를 확인하려면 **[!UICONTROL 유효성 검사]**&#x200B;를 선택하십시오. |
-| [!UICONTROL 템플릿 다운로드] | **[!UICONTROL 템플릿 다운로드]**&#x200B;를 선택하여 매핑의 CSV 파일을 내보내고 다운로드합니다. |
-| [!UICONTROL 데이터 미리 보기] | 미리 보기 패널을 사용하고 소스 데이터 집합의 구조 및 내용을 검사하려면 **[!UICONTROL 데이터 미리 보기]**&#x200B;를 선택하십시오. |
-| [!UICONTROL 모두 지우기] | 인터페이스에서 모든 매핑을 삭제하려면 **[!UICONTROL 모두 지우기]**&#x200B;를 선택하십시오. |
+| [!UICONTROL Search source fields] | 검색 창을 사용하여 특정 소스 필드로 이동합니다. |
+| [!UICONTROL All fields] | 매핑을 필터링할 옵션의 드롭다운 메뉴를 보려면 **[!UICONTROL All fields]**&#x200B;을(를) 선택하십시오. 사용 가능한 필터링 옵션은 다음과 같습니다.<ul><li>**[!UICONTROL Required fields]**: 워크플로우를 완료하는 데 필요한 필드만 표시하도록 인터페이스를 필터링합니다.</li><li> **[!UICONTROL Identity fields]**: ID로 표시된 필드만 표시하도록 인터페이스를 필터링합니다.</li><li>**[!UICONTROL Mapped fields]**: 이미 매핑된 필드만 표시하도록 인터페이스를 필터링합니다.</li><li>**[!UICONTROL Unmapped fields]**: 아직 매핑되지 않은 필드만 표시하도록 인터페이스를 필터링합니다.</li><li>**[!UICONTROL Fields with errors]**: 오류가 있는 필드만 표시하도록 인터페이스를 필터링합니다.</li></ul> |
+| [!UICONTROL New field type] | 새 필드 또는 계산된 필드를 추가하려면 **[!UICONTROL New field type]**&#x200B;을(를) 선택하십시오. 자세한 내용은 [새 필드 형식 추가](#add-a-new-field-type)에 대한 섹션을 참조하십시오. |
+| [!UICONTROL Import mappings] | 기존 파일 또는 데이터 흐름에서 매핑을 가져오려면 **[!UICONTROL Import mappings]**&#x200B;을(를) 선택하십시오. 자세한 내용은 [매핑을 가져오는 중](#import-mapping) 섹션을 참조하십시오. |
+| [!UICONTROL Validate] | **[!UICONTROL Validate]**&#x200B;을(를) 선택하여 매핑에서 오류를 확인합니다. |
+| [!UICONTROL Download template] | **[!UICONTROL Download template]**&#x200B;을(를) 선택하여 매핑의 CSV 파일을 내보내고 다운로드합니다. |
+| [!UICONTROL Preview data] | 미리 보기 패널을 사용하고 소스 데이터 세트의 구조 및 내용을 검사하려면 **[!UICONTROL Preview data]**&#x200B;을(를) 선택하십시오. |
+| [!UICONTROL Clear all] | 인터페이스에서 모든 매핑을 삭제하려면 **[!UICONTROL Clear all]**&#x200B;을(를) 선택하십시오. |
 
 {style="table-layout:auto"}
 
 ### 새 필드 유형 추가 {#add-a-new-field-type}
 
-**[!UICONTROL 새 필드 유형]**&#x200B;을 선택하여 새 매핑 필드 또는 계산된 필드를 추가할 수 있습니다.
+**[!UICONTROL New field type]**&#x200B;을(를) 선택하여 새 매핑 필드 또는 계산된 필드를 추가할 수 있습니다.
 
 #### 새 매핑 필드
 
-새 매핑 필드를 추가하려면 **[!UICONTROL 새 필드 유형]**&#x200B;을 선택한 다음 표시되는 드롭다운 메뉴에서 **[!UICONTROL 새 필드 추가]**&#x200B;를 선택하십시오.
+새 매핑 필드를 추가하려면 **[!UICONTROL New field type]**&#x200B;을(를) 선택한 다음 표시되는 드롭다운 메뉴에서 **[!UICONTROL Add new field]**&#x200B;을(를) 선택합니다.
 
 ![새 필드 추가 단추가 선택된 매핑 인터페이스입니다.](../images/ui/mapping/add_new_field.png)
 
-그런 다음 표시되는 소스 스키마 트리에서 추가할 소스 필드를 선택한 다음 **[!UICONTROL 선택]**&#x200B;을 선택합니다.
+그런 다음 표시되는 소스 스키마 트리에서 추가할 소스 필드를 선택한 다음 **[!UICONTROL Select]**&#x200B;을(를) 선택합니다.
 
 ![새 추가 필드로 &quot;국가&quot;가 있는 원본 스키마를 선택했습니다.](../images/ui/mapping/source_field.png)
 
-매핑 인터페이스는 선택한 소스 필드와 빈 대상 필드로 업데이트됩니다. 새 소스 필드를 적절한 대상 XDM 필드에 매핑하려면 **[!UICONTROL 대상 필드 매핑]**&#x200B;을(를) 선택하십시오.
+매핑 인터페이스는 선택한 소스 필드와 빈 대상 필드로 업데이트됩니다. 새 원본 필드를 적절한 대상 XDM 필드에 매핑하려면 **[!UICONTROL Map target field]**&#x200B;을(를) 선택하십시오.
 
 ![매핑되지 않은 새 원본 필드가 있는 매핑 인터페이스입니다.](../images/ui/mapping/new_field_added.png)
 
@@ -92,21 +97,21 @@ Adobe Experience Platform 사용자 인터페이스에서 [데이터 준비](../
 
 계산된 필드를 사용하면 입력 스키마의 속성을 기반으로 값을 만들 수 있습니다. 그런 다음 대상 스키마의 속성에 이러한 값을 할당하고 더 쉽게 참조할 수 있도록 이름과 설명을 제공할 수 있습니다. 계산된 필드의 최대 길이는 4096자입니다.
 
-계산된 필드를 만들려면 **[!UICONTROL 새 필드 유형]**&#x200B;을 선택한 다음 **[!UICONTROL 계산된 필드 추가]**&#x200B;를 선택하십시오.
+계산된 필드를 만들려면 **[!UICONTROL New field type]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Add calculated field]**&#x200B;을(를) 선택하십시오.
 
 ![&quot;계산된 필드 추가&quot; 단추가 선택된 매핑 인터페이스입니다.](../images/ui/mapping/new_calculated_field.png)
 
-**[!UICONTROL 계산된 필드 만들기]** 창이 나타납니다. 인터페이스를 사용하여 계산된 필드를 입력하고 왼쪽의 대화 상자에서 지원되는 필드, 함수 및 연산자를 참조하십시오.
+**[!UICONTROL Create calculated field]** 창이 나타납니다. 인터페이스를 사용하여 계산된 필드를 입력하고 왼쪽의 대화 상자에서 지원되는 필드, 함수 및 연산자를 참조하십시오.
 
 | 탭 | 설명 |
 | --- | ----------- |
-| [!UICONTROL 함수] | 함수 탭에는 데이터를 변환하는 데 사용할 수 있는 함수가 나열되어 있습니다. 계산된 필드 내에서 사용할 수 있는 함수에 대한 자세한 내용은 [데이터 준비(매퍼) 함수 사용](../functions.md)에 대한 안내서를 참조하십시오. |
-| [!UICONTROL 필드] | 필드 탭에는 소스 스키마에서 사용할 수 있는 필드와 특성이 나열됩니다. |
-| [!UICONTROL 연산자] | 연산자 탭에는 데이터를 변환하는 데 사용할 수 있는 연산자가 나열됩니다. |
+| [!UICONTROL Function] | 함수 탭에는 데이터를 변환하는 데 사용할 수 있는 함수가 나열되어 있습니다. 계산된 필드 내에서 사용할 수 있는 함수에 대한 자세한 내용은 [데이터 준비(매퍼) 함수 사용](../functions.md)에 대한 안내서를 참조하십시오. |
+| [!UICONTROL Field] | 필드 탭에는 소스 스키마에서 사용할 수 있는 필드와 특성이 나열됩니다. |
+| [!UICONTROL Operator] | 연산자 탭에는 데이터를 변환하는 데 사용할 수 있는 연산자가 나열됩니다. |
 
 ![계산된 필드 인터페이스](../images/ui/mapping/calculated_field.png)
 
-중앙에 표현식 편집기를 사용하여 필드, 함수 및 연산자를 수동으로 추가할 수 있습니다. 편집기를 선택하여 표현식 만들기를 시작합니다. 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택하여 계속 진행하십시오.
+중앙에 표현식 편집기를 사용하여 필드, 함수 및 연산자를 수동으로 추가할 수 있습니다. 편집기를 선택하여 표현식 만들기를 시작합니다. 완료되면 **[!UICONTROL Save]**&#x200B;을(를) 선택하여 계속 진행하십시오.
 
 ### 매핑 가져오기 {#import-mapping}
 
@@ -118,11 +123,11 @@ Adobe Experience Platform 사용자 인터페이스에서 [데이터 준비](../
 
 유사한 소스 파일 및 대상 스키마를 기반으로 하는 데이터 흐름이 여러 개 있는 경우 기존 매핑을 가져오고 새 데이터 흐름에 재사용할 수 있습니다.
 
-기존 데이터 흐름에서 매핑을 가져오려면 **[!UICONTROL 매핑 가져오기]**&#x200B;를 선택한 다음 **[!UICONTROL 흐름에서 매핑 가져오기]**&#x200B;를 선택하십시오.
+기존 데이터 흐름에서 매핑을 가져오려면 **[!UICONTROL Import mappings]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Import mapping from flow]**&#x200B;을(를) 선택하십시오.
 
 ![매핑 가져오기 및 흐름에서 매핑 가져오기가 선택된 매핑 인터페이스입니다.](../images/ui/mapping/import_from_flow.png)
 
-그런 다음 팝업 창을 사용하여 가져오려는 매핑의 데이터 흐름을 찾습니다. 이 단계에서 검색 기능을 사용하여 특정 데이터 흐름을 격리하고 매핑을 검색할 수도 있습니다. 완료되면 **[!UICONTROL 선택]**&#x200B;을 선택합니다.
+그런 다음 팝업 창을 사용하여 가져오려는 매핑의 데이터 흐름을 찾습니다. 이 단계에서 검색 기능을 사용하여 특정 데이터 흐름을 격리하고 매핑을 검색할 수도 있습니다. 완료되면 **[!UICONTROL Select]**&#x200B;을(를) 선택합니다.
 
 ![해당 매핑을 가져올 수 있는 기존 데이터 흐름의 목록입니다.](../images/ui/mapping/import_flow_window.png)
 
@@ -130,11 +135,11 @@ Adobe Experience Platform 사용자 인터페이스에서 [데이터 준비](../
 
 경우에 따라 데이터에 대해 많은 수의 매핑을 구현해야 할 수 있습니다. 매핑 인터페이스를 사용하여 수동으로 이 작업을 수행할 수도 있지만, 매핑 템플릿을 내보내고 오프라인 스프레드시트에서 매핑을 구성하여 시간을 절약하고 Experience Platform에서 사용자 시간 초과를 방지할 수도 있습니다.
 
-내보낸 파일에서 매핑을 가져오려면 **[!UICONTROL 매핑 가져오기]**&#x200B;를 선택한 다음 **[!UICONTROL 파일에서 매핑 가져오기]**&#x200B;를 선택합니다.
+내보낸 파일에서 매핑을 가져오려면 **[!UICONTROL Import mappings]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Import mapping from file]**&#x200B;을(를) 선택합니다.
 
 ![매핑 가져오기 및 파일에서 매핑 가져오기가 선택된 매핑 인터페이스입니다.](../images/ui/mapping/import_from_file.png)
 
-그런 다음 [!UICONTROL 템플릿 업로드] 창을 사용하여 매핑의 CSV 복사본을 다운로드합니다. 그런 다음 CSV 파일 유형 편집을 지원하는 소프트웨어를 사용하여 매핑을 장치에서 로컬로 구성할 수 있습니다. 이 단계에서는 소스 파일 및 대상 스키마에 제공된 필드만 사용하고 있는지 확인해야 합니다.
+[!UICONTROL Upload template] 창을 사용하여 매핑의 CSV 복사본을 다운로드합니다. 그런 다음 CSV 파일 유형 편집을 지원하는 소프트웨어를 사용하여 매핑을 장치에서 로컬로 구성할 수 있습니다. 이 단계에서는 소스 파일 및 대상 스키마에 제공된 필드만 사용하고 있는지 확인해야 합니다.
 
 ![매핑의 내보낸 csv 파일을 다운로드하고 업로드하는 옵션을 표시하는 업로드 템플릿 창입니다.](../images/ui/mapping/upload_template.png)
 
@@ -144,13 +149,13 @@ Adobe Experience Platform 사용자 인터페이스에서 [데이터 준비](../
 
 +++
 
-완료되면 **[!UICONTROL 파일 업로드]**&#x200B;를 선택하고 업데이트된 매핑 csv 파일을 선택하십시오. 시스템이 처리할 수 있도록 잠시 기다린 후 **[!UICONTROL 완료]**&#x200B;를 선택하세요.
+완료되면 **[!UICONTROL Upload file]**&#x200B;을(를) 선택하고 업데이트된 매핑의 csv 파일을 선택하십시오. 시스템이 처리할 수 있도록 잠시 기다린 후 **[!UICONTROL Done]**&#x200B;을(를) 선택하십시오.
 
 ![새 파일이 업로드된 업로드 템플릿 창입니다.](../images/ui/mapping/upload_successful.png)
 
 >[!ENDTABS]
 
-이제 매핑이 완료되면 **[!UICONTROL 완료]**&#x200B;를 선택하고 다음 단계로 진행하여 데이터 흐름을 완료할 수 있습니다.
+이제 매핑이 완료되면 **[!UICONTROL Finish]**&#x200B;을(를) 선택하고 다음 단계로 진행하여 데이터 흐름을 완료할 수 있습니다.
 
 >[!TIP]
 >
