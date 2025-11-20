@@ -39,7 +39,7 @@ ht-degree: 1%
 
 다음 화면에서 [!UICONTROL Advertiser ID]을(를) 입력하고 선택적으로 [!UICONTROL Merchant ID]을(를) 입력합니다. ID의 를 이러한 입력에 직접 붙여넣거나 데이터 요소를 대신 사용할 수 있습니다. [!DNL The Trade Desk] 실시간 전환 API에 대한 이벤트 호출을 수행할 때 사용되는 기본값 역할을 합니다. 완료되면 **[!UICONTROL Save]**&#x200B;을 선택합니다.
 
-데이터 요소를 만들고 태그 속성의 확장에 사용할 수 있도록 하는 방법에 대해 알아보려면 [데이터 요소 만들기](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements) 자습서를 따르십시오.
+데이터 요소를 만들고 태그 속성의 확장에 사용할 수 있도록 하는 방법에 대해 알아보려면 [데이터 요소 만들기](https://experienceleague.adobe.com/ko/docs/platform-learn/data-collection/tags/create-data-elements) 자습서를 따르십시오.
 
 ![[!DNL The Trade Desk] 및 [!UICONTROL Advertiser ID] 필드가 강조 표시된 [!UICONTROL Merchant ID] 확장 구성 페이지입니다.](../../../images/extensions/server/tradedesk/configure-extension.png)
 
