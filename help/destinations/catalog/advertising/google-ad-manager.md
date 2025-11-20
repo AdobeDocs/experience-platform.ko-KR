@@ -15,12 +15,12 @@ ht-degree: 7%
 >[!IMPORTANT]
 >
 > Google은 유럽 연합([EU 사용자 동의 정책](https://developers.google.com/google-ads/api/docs/start))의 [디지털 시장법](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)&#x200B;(DMA)에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/display-video/api/guides/getting-started/overview), [고객 일치](https://digital-markets-act.ec.europa.eu/index_en) 및 [디스플레이 및 비디오 360 API](https://www.google.com/about/company/user-consent-policy/)에 대한 변경 사항을 출시합니다. 동의 요구 사항에 대한 이러한 변경 사항의 시행은 2024년 3월 6일부터 시작됩니다.
-> &#x200B;><br/>
-> &#x200B;>EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
-> &#x200B;><br/>
-> &#x200B;>Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
-> &#x200B;><br/>
-> &#x200B;>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/home.md#segment-definitions) 내의 [세그먼트 정의](../../../segmentation/ui/segment-builder.md) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
+><br/>
+>EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
+><br/>
+>Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
+><br/>
+>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/home.md#segment-definitions) 내의 [세그먼트 정의](../../../segmentation/ui/segment-builder.md) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
 
 
 이전에 DFP([!DNL Google Ad Manager]) 또는 [!DNL DoubleClick for Publishers]&#x200B;(으)로 알려졌던 [!DNL DoubleClick AdX]은(는) 게시자에게 웹 사이트, 비디오 및 모바일 앱에서 광고 표시를 관리할 수 있는 수단을 제공하는 [!DNL Google]의 광고 제공 플랫폼입니다.
@@ -42,7 +42,7 @@ ht-degree: 7%
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] |  |
 | IDFA | [!DNL Apple ID for Advertisers] |  |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=ko)&#x200B;(일명 [!DNL Device ID]). Audience Manager이 상호 작용하는 각 장치에 연결하는 숫자 38자리 장치 ID입니다. | Google은 [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=ko)을(를) 사용하여 캘리포니아에 있는 사용자를 타깃팅하고 다른 모든 사용자의 Google 쿠키 ID를 사용합니다. |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)&#x200B;(일명 [!DNL Device ID]). Audience Manager이 상호 작용하는 각 장치에 연결하는 숫자 38자리 장치 ID입니다. | Google은 [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)을(를) 사용하여 캘리포니아에 있는 사용자를 타깃팅하고 다른 모든 사용자의 Google 쿠키 ID를 사용합니다. |
 | [!DNL Google] 쿠키 ID | [!DNL Google] 쿠키 ID | [!DNL Google]은(는) 이 ID를 사용하여 캘리포니아 외부의 사용자를 타깃팅합니다. |
 | 리다 | Advertising용 Roku ID. 이 ID는 Roku 장치를 고유하게 식별합니다. |  |
 | 하녀 | Microsoft Advertising ID. 이 ID는 Windows 10을 실행하는 장치를 고유하게 식별합니다. |  |
@@ -74,7 +74,7 @@ ht-degree: 7%
 
 ## 전제 조건 {#prerequisites}
 
-[!DNL Google Ad Manager]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ko)을(를) 활성화하지 않은 경우(Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Google] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
+[!DNL Google Ad Manager]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Google] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
 
 ### 허용 목록 {#allow-listing}
 

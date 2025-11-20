@@ -33,11 +33,11 @@ ht-degree: 7%
 | [C2](#c2) | 데이터를 서드파티로 내보낼 수 없습니다. |
 | [C3](#c3) | 데이터는 직접 식별 가능한 정보와 결합하거나 사용할 수 없습니다. |
 | [C4](#c4) | 온사이트 또는 크로스 사이트에서 광고 또는 콘텐츠를 타겟팅하는 데 데이터를 사용할 수 없습니다. |
-| [C5](#c5) | 콘텐츠 또는 광고의 관심 기반 크로스 사이트 타겟팅에는 데이터를 사용할 수 없습니다. |
+| [C5](#c5) | Data cannot be used for interest-based, cross-site targeting of content or ads. |
 | [C6](#c6) | 온사이트 광고 타겟팅에는 데이터를 사용할 수 없습니다. |
-| [C7](#c7) | 온사이트 콘텐츠 타겟팅에는 데이터를 사용할 수 없습니다. |
-| [C8](#c8) | 조직의 웹 사이트 또는 앱을 측정하는 데 데이터를 사용할 수 없습니다. |
-| [C9](#c9) | 데이터 과학 워크플로에서는 데이터를 사용할 수 없습니다. |
+| [C7](#c7) | Data cannot be used for on-site targeting of content. |
+| [C8](#c8) | Data cannot be used for measurement of your organization&#39;s websites or apps. |
+| [C9](#c9) | Data cannot be used in data science workflows. |
 | [C10](#c10) | 결합된 ID 활성화에는 데이터를 사용할 수 없습니다. |
 | [C11](#c11) | 세그먼트 일치 파트너와 데이터를 공유할 수 없습니다. |
 | [C12](#c12) | 어떤 방식으로도 데이터를 내보낼 수 없습니다. |
@@ -51,7 +51,7 @@ ID &quot;I&quot; 레이블은 특정 사용자를 식별하거나 연결할 수 
 | **I1** | 장치가 아닌 특정 사용자를 식별하거나 연결할 수 있는 직접 식별 가능한 데이터입니다. |
 | **I2** | 특정 사용자를 식별하거나 연결하기 위해 다른 모든 데이터와 함께 사용할 수 있는 간접 식별 가능한 데이터입니다. |
 
-## 중요 레이블 {#sensitive}
+## 민감 레이블 {#sensitive}
 
 중요 &quot;S&quot; 레이블은 사용자 및 조직에서 중요하다고 간주하는 데이터를 분류하는 데 사용됩니다.
 
@@ -74,7 +74,7 @@ ID &quot;I&quot; 레이블은 특정 사용자를 식별하거나 연결할 수 
 | --- | --- |
 | **타사** | 타사 데이터는 타사 데이터 공급업체에서 제공한 데이터입니다. 서드파티 데이터 공급업체는 Experience Platform과 함께 서드파티의 데이터에 액세스하고, 사용하고, 표시하고, 전송할 수 있도록 귀하에게 승인하는 계약을 조직과 체결한 엔티티입니다. |
 | **타사 데이터 보강** | 데이터 주체와 직접 관련이 없는 서드파티 조직에서 수집한 데이터. 레이블은 자사 프로필을 보강하는 데 사용되는 타사 데이터에 적용해야 합니다. |
-| **타사 잠재 고객 확보** | 데이터 주체와 직접 관련이 없는 서드파티 조직에서 수집한 데이터. 레이블을 신규 고객을 대상으로 사전 예측에 사용되는 타사 데이터에 적용해야 합니다. |
+| **타사 잠재 고객 확보** | 데이터 주체와 직접 관련이 없는 서드파티 조직에서 수집한 데이터. 레이블은 신규 고객을 대상으로 하는 funnel 전망 상단에 사용되는 서드파티 데이터에 적용되어야 합니다. |
 
 ## 부록
 
@@ -94,7 +94,7 @@ ID &quot;I&quot; 레이블은 특정 사용자를 식별하거나 연결할 수 
 
 #### C3 {#c3}
 
-일부 데이터 공급자는 직접 식별할 수 있는 정보와 함께 해당 데이터를 결합하거나 사용하는 것을 금지하는 약관을 계약서에 명시하고 있습니다. 예를 들어 광고 네트워크, 광고 서버 및 서드파티 데이터 공급자로부터 가져온 데이터에 대한 계약에는 직접 식별할 수 있는 데이터가 있는 이러한 데이터의 사용에 대한 특정 계약 금지가 포함되는 경우가 많습니다.
+Some data providers have terms in their contracts that prohibit the combination or use of that data with directly identifiable information. For example, contracts for data sourced from ad networks, ad servers, and third-party data providers often include specific contractual prohibitions on the use of such data with directly identifiable data.
 
 #### C4 {#c4}
 
@@ -102,11 +102,11 @@ C4는 [C5](#c5), [C6](#c6) 및 [C7](#c7) 레이블을 포함합니다. [C12](#c1
 
 #### C5 {#c5}
 
-다음 세 가지 조건이 충족되는 경우 관심 기반 타기팅 또는 개인화가 발생합니다. (1) 사이트에서 수집된 데이터는 사용자의 관심 사항을 추론하는 데 사용되며, (2) 다른 사이트 또는 앱(오프사이트)과 같은 다른 컨텍스트에서 사용되며, (3) 이러한 추론을 기반으로 제공되는 콘텐츠 또는 광고를 선택하는 데 사용됩니다.
+Interest-based targeting, or personalization, occurs if the following three conditions are met: The data collected on-site is (1) used to make inferences about a users&#39; interests, (2) is used in another context, such as on another site or app (off-site) AND (3) is used to select which content or ads are served based on those inferences.
 
-온사이트 데이터와 오프사이트 데이터의 조합 또는 여러 오프사이트 소스의 데이터 조합을 포함하는 여러 사이트의 데이터 조합을 크로스 사이트 데이터라고 합니다. 서로 다른 사이트는 서로 다른 컨텍스트를 나타내므로 모든 컨텍스트에서 사이트 간 데이터를 사용하는 것은 원본과 다릅니다. 크로스 사이트 데이터는 일반적으로 사용자의 관심 분야를 추론하기 위해 수집 및 처리됩니다. 그 결과, 광고 또는 컨텐츠가 온사이트에 표시되는지 아니면 오프사이트에 표시되는지에 관계없이, 광고 또는 컨텐츠를 타깃팅하기 위해 크로스 사이트 데이터를 사용하는 것은 일반적으로 관심 기반 타깃팅으로 사용할 수 있습니다. 예를 들어, 조직 자체 사이트에서 사용자를 표시할 광고를 선택하기 위해 온사이트 데이터를 오프사이트 데이터와 함께 사용한 경우 해당 광고는 관심 기반 타깃팅으로 적합합니다. 또 다른 예로, 오프사이트 사용자에게 광고를 재타겟팅하는 경우 관심 기반 타겟팅으로 적절할 수도 있습니다.
+온사이트 데이터와 오프사이트 데이터의 조합 또는 여러 오프사이트 소스의 데이터 조합을 포함하는 여러 사이트의 데이터 조합을 크로스 사이트 데이터라고 합니다. Different sites represent different contexts such that the use of cross-site data in any context is different than the original. 크로스 사이트 데이터는 일반적으로 사용자의 관심 분야를 추론하기 위해 수집 및 처리됩니다. As a result, the use of cross-site data for targeting ads or content typically qualifies as interest-based targeting, regardless of whether the ad or content appears on-site or off-site. For example, if on-site data was used in combination with off-site data to select which ad to show a user on an organization&#39;s own site, that use would qualify as interest-based targeting. As another example, retargeting ads to users off-site would also likely qualify as interest-based targeting.
 
-일반적으로 오프사이트 데이터는 사용자의 관심 분야에 대한 추론을 위해 수집 및 처리되므로 타겟팅에 오프사이트 데이터만 사용하면 관심 기반 타겟팅에도 적합합니다.
+Use of off-site data alone for targeting would likely also qualify as interest-based targeting since off-site data is usually collected and processed to make inferences about users&#39; interests.
 
 그러나 온사이트 데이터만 사용하는 콘텐츠 또는 광고는 일반적으로 관심 기반 타깃팅으로 적합하지 않습니다. 달리 관심 기반 타깃팅으로 분류되지 않는 온사이트 타깃팅은 두 개의 개별 레이블로 처리됩니다. 특히 레이블 C6은 온사이트 광고 타기팅 및 보고를 다루고 광고 선택, 전달 및 보고를 특별하게 설명하며, 레이블 C7은 온사이트 콘텐츠 선택, 전달 및 보고(온사이트 콘텐츠 타기팅)를 다룹니다.
 
@@ -120,11 +120,11 @@ DAA: 온라인 행동 광고. 시간 경과에 따른 웹 보기 동작과 관�
 
 광고는 주로 상품 또는 서비스의 판매를 촉진하기 위한 웹 사이트 또는 앱에 나타나는 텍스트 및 이미지를 포함하는 메시지 또는 알림입니다. 이러한 메시지 또는 알림의 목적을 결정하는 것은 귀하의 책임입니다. 광고는 온 사이트 콘텐츠와 별개이며 레이블 [C7](#c7)에 포함됩니다. C6 레이블이 있는 데이터는 조직의 웹 사이트 또는 앱에서 광고를 선택 및 전달하거나 그러한 광고의 전달 및 효과를 측정하는 등 온사이트 광고 타겟팅에 사용할 수 없습니다. 여기에는 사용자의 관심사에 대해 이전에 수집된 현장 데이터를 사용하여 광고를 선택하고, 어떤 광고가 표시되었는지, 언제 어디서 표시되었는지, 사용자가 광고 선택 또는 구매 등 광고와 관련된 작업을 수행했는지 등이 포함됩니다. 일반적으로 해당 사용자의 온사이트 활동을 기반으로 사용자 환경 설정을 추정한 다음 온사이트 광고 타겟팅에서 이러한 환경 설정을 사용하면 관심 기반 타겟팅에 필요한 세 가지 요구 사항을 모두 충족하지 않으므로 관심 기반 타겟팅(개인화)으로 적합하지 않습니다. *[이러한 요구 사항에 대해서는 레이블 C5를 참조하십시오.](#c5)*
 
-궁극적으로 레이블의 해석 및 해당 레이블의 데이터 사용이 적용되는 방식은 사용자가 결정합니다. 참고로 IAB 및 DAA 프레임워크는 아래에 나와 있습니다.
+Ultimately, the interpretation of the label and how usage of data with that label is enforced is up to you. For reference, the IAB and DAA frameworks are provided below:
 
-3번. 광고 선택, 전달, 보고: 정보 수집 및 이전에 수집된 정보와의 결합을 통해 광고를 선택하여 전달하고, 해당 광고의 전달 및 효과를 측정합니다. 여기에는 광고를 선택하기 위해 이전에 수집된 정보 사용, 광고가 표시되는 내용, 광고가 표시되는 빈도, 표시되는 시기와 위치, 광고 선택 또는 구매 등 광고와 관련된 조치를 취했는지 여부 등이 포함됩니다. 여기에는 Personalization이 포함되지 않습니다. 이 정보는 웹 사이트 또는 앱과 같은 다른 컨텍스트에서 시간에 따라 이후에 사용자를 위해 광고 및/또는 콘텐츠를 개인화하기 위해 이 서비스의 사용에 대한 정보를 수집 및 처리합니다.
+IAB: 3. Ad selection, delivery, reporting: The collection of information, and combination with previously collected information, to select and deliver advertisements for you, and to measure the delivery and effectiveness of such advertisements. This includes using previously collected information about your interests to select ads, processing data about what advertisements were shown, how often they were shown, when and where they were shown, and whether you took any action related to the advertisement, including for example selecting an ad or making a purchase. This does not include Personalization, which is the collection and processing of information about your use of this service to subsequently personalize advertising and/or content for you in other contexts, such as websites or apps, over time.
 
-DAA: 온라인 행동 광고에는 자사, 광고 게재 또는 광고 보고 활동이나 컨텍스트 광고(즉, 방문 중인 웹 페이지의 콘텐츠, 소비자의 현재 웹 페이지 방문 또는 검색 쿼리)가 포함되지 않습니다.
+DAA: Online Behavioral Adverting does not include the activities of First Parties, Ad Delivery or Ad Reporting, or contextual advertising (i.e. advertising based on the content of the Web page being visited, a consumer&#39;s current visit to a Web page, or a search query).
 
 #### C7 {#c7}
 

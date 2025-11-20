@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 [!DNL Azure Event Hubs]은(는) 빅 데이터 스트리밍 플랫폼 및 이벤트 수집 서비스입니다. 초당 수백만 개의 이벤트를 수신하고 처리할 수 있습니다. 이벤트 허브로 전송된 데이터는 모든 실시간 분석 공급자나 일괄 처리/저장소 어댑터를 사용하여 변환하거나 저장할 수 있습니다.
 
@@ -78,8 +78,8 @@ UI의 ![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 HTTP 끝점에 연결할 **[!UICONTROL Standard authentication]** 유형을 선택한 경우 아래 필드를 입력하고 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 
 * **[!UICONTROL SAS Key Name]**: SAS 키 이름이라고도 하는 인증 규칙의 이름입니다.
-* **[!UICONTROL SAS Key]**: 이벤트 허브 네임스페이스의 기본 키입니다. 이벤트 허브 목록을 채우려면 `sasPolicy`에 해당하는 `sasKey`에 **관리** 권한이 구성되어 있어야 합니다. [!DNL Azure Event Hubs]Microsoft 설명서[에서 SAS 키를 사용하여 &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에 인증하는 방법에 대해 알아봅니다.
-* **[!UICONTROL Namespace]**: [!DNL Azure Event Hubs] 네임스페이스를 채웁니다. [!DNL Azure Event Hubs]Microsoft 설명서[에서 &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) 네임스페이스에 대해 알아봅니다.
+* **[!UICONTROL SAS Key]**: 이벤트 허브 네임스페이스의 기본 키입니다. 이벤트 허브 목록을 채우려면 `sasPolicy`에 해당하는 `sasKey`에 **관리** 권한이 구성되어 있어야 합니다. [!DNL Azure Event Hubs]Microsoft 설명서[에서 SAS 키를 사용하여 ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에 인증하는 방법에 대해 알아봅니다.
+* **[!UICONTROL Namespace]**: [!DNL Azure Event Hubs] 네임스페이스를 채웁니다. [!DNL Azure Event Hubs]Microsoft 설명서[에서 ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) 네임스페이스에 대해 알아봅니다.
 
 #### SAS(공유 액세스 서명) 인증 {#sas-authentication}
 
@@ -88,9 +88,9 @@ HTTP 끝점에 연결할 **[!UICONTROL Standard authentication]** 유형을 선�
 HTTP 끝점에 연결할 **[!UICONTROL Standard authentication]** 유형을 선택한 경우 아래 필드를 입력하고 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 
 * **[!UICONTROL SAS Key Name]**: SAS 키 이름이라고도 하는 인증 규칙의 이름입니다.
-* **[!UICONTROL SAS Key]**: 이벤트 허브 네임스페이스의 기본 키입니다. 이벤트 허브 목록을 채우려면 `sasPolicy`에 해당하는 `sasKey`에 **관리** 권한이 구성되어 있어야 합니다. [!DNL Azure Event Hubs]Microsoft 설명서[에서 SAS 키를 사용하여 &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에 인증하는 방법에 대해 알아봅니다.
-* **[!UICONTROL Namespace]**: [!DNL Azure Event Hubs] 네임스페이스를 채웁니다. [!DNL Azure Event Hubs]Microsoft 설명서[에서 &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) 네임스페이스에 대해 알아봅니다.
-* **[!UICONTROL Event Hub Name]**: [!DNL Azure Event Hub] 이름을 입력하십시오. [!DNL Azure Event Hubs]Microsoft 설명서[에서 &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) 이름에 대해 알아보세요.
+* **[!UICONTROL SAS Key]**: 이벤트 허브 네임스페이스의 기본 키입니다. 이벤트 허브 목록을 채우려면 `sasPolicy`에 해당하는 `sasKey`에 **관리** 권한이 구성되어 있어야 합니다. [!DNL Azure Event Hubs]Microsoft 설명서[에서 SAS 키를 사용하여 ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에 인증하는 방법에 대해 알아봅니다.
+* **[!UICONTROL Namespace]**: [!DNL Azure Event Hubs] 네임스페이스를 채웁니다. [!DNL Azure Event Hubs]Microsoft 설명서[에서 ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) 네임스페이스에 대해 알아봅니다.
+* **[!UICONTROL Event Hub Name]**: [!DNL Azure Event Hub] 이름을 입력하십시오. [!DNL Azure Event Hubs]Microsoft 설명서[에서 ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) 이름에 대해 알아보세요.
 
 ### 대상 세부 정보 입력 {#destination-details}
 

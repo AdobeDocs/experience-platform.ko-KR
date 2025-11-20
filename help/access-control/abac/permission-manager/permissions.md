@@ -4,7 +4,7 @@ description: 보고서를 생성하고 액세스 권한을 확인하는 Adobe Ex
 exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
 source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '572'
 ht-degree: 7%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->[!UICONTROL 권한 관리자]에 액세스하려면 제품 관리자여야 합니다. 관리자 권한이 없는 경우 시스템 관리자에게 문의하여 액세스 권한을 받으십시오.
+>[!UICONTROL Permission Manager]에 액세스하려면 제품 관리자여야 합니다. 관리자 권한이 없는 경우 시스템 관리자에게 문의하여 액세스 권한을 받으십시오.
 
-[!UICONTROL 권한 관리자]에서 간단한 쿼리를 사용하여 액세스 관리를 이해하고 여러 워크플로우 및 세부 기간 수준에서 액세스 권한을 확인하는 데 걸리는 시간을 절약할 수 있는 간결한 보고서를 만드십시오. [!UICONTROL 권한 관리자]를 사용하여 사용자 그룹에 속하고 지정된 액세스 권한을 가진 사용자와 특정 레이블을 가진 역할을 찾을 수 있습니다.
+[!UICONTROL Permission Manager]에서 간단한 쿼리를 사용하여 액세스 관리를 이해하고 여러 워크플로우 및 세부 기간 수준에서 액세스 권한을 확인하는 데 도움이 되는 간결한 보고서를 만드십시오. [!UICONTROL Permission Manager]을(를) 사용하여 사용자 그룹에 속하고 지정된 액세스 권한이 있는 사용자와 특정 레이블이 있는 역할을 찾을 수 있습니다.
 
 ## 지정된 사용자 그룹 내 사용자 검색 {#search-users}
 
@@ -23,25 +23,25 @@ ht-degree: 7%
 >id="platform_permission_manager"
 >title="권한 관리자"
 >abstract="페이지의 드롭다운 선택기를 사용하여 사용자 및 역할에 대해 다양한 세부 수준의 액세스 수준 보고서를 받습니다."
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=ko" text="Permission manager" -->
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
 
-드롭다운을 사용하여 **[!UICONTROL 사용자]** 특성을 선택합니다.
+드롭다운을 사용하여 **[!UICONTROL Users]** 특성을 선택합니다.
 
 ![특성 드롭다운에서 사용자를 강조 표시합니다.](../../images/permission-manager/users-select.png)
 
-그런 다음 드롭다운을 사용하여 검색할 **[!UICONTROL 사용자 그룹]**&#x200B;을(를) 선택합니다.
+그런 다음 드롭다운을 사용하여 검색할 **[!UICONTROL User Group]**&#x200B;을(를) 선택합니다.
 
 >[!INFO]
 >
->[!UICONTROL 사용자 그룹]은(는) 필수 필드가 아닙니다. 각 보고서에 대해 하나의 사용자 그룹만 선택할 수 있습니다.
+>[!UICONTROL User Group]은(는) 필수 필드가 아닙니다. 각 보고서에 대해 하나의 사용자 그룹만 선택할 수 있습니다.
 
 ![사용자 그룹 드롭다운이 강조 표시되었습니다.](../../images/permission-manager/user-group-select.png)
 
-보다 세분화된 보고서의 경우 특정 샌드박스의 작업에서 리소스를 지정할 수 있습니다. 드롭다운을 사용하여 **[!UICONTROL 리소스]**, **[!UICONTROL 작업]** 및 **[!UICONTROL 샌드박스]**&#x200B;를 선택한 다음 **[!UICONTROL 결과 표시]**&#x200B;를 선택합니다.
+보다 세분화된 보고서의 경우 특정 샌드박스의 작업에서 리소스를 지정할 수 있습니다. 드롭다운을 사용하여 **[!UICONTROL Resource]**, **[!UICONTROL Actions]** 및 **[!UICONTROL Sandboxes]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Show Results]**&#x200B;을(를) 선택합니다.
 
 >[!INFO]
 >
->[!UICONTROL 리소스], [!UICONTROL 작업] 및 [!UICONTROL 샌드박스]는 필수 필드가 아닙니다. 제거할 선택 항목 옆의 **&#39;x&#39;**&#x200B;을(를) 선택하여 작업 또는 샌드박스를 추가한 후 제거할 수 있습니다.
+>[!UICONTROL Resource], [!UICONTROL Actions] 및 [!UICONTROL Sandboxes]은(는) 필수 필드가 아닙니다. 제거할 선택 항목 옆의 **&#39;x&#39;**&#x200B;을(를) 선택하여 작업 또는 샌드박스를 추가한 후 제거할 수 있습니다.
 
 ![리소스, 작업, 샌드박스 드롭다운 및 강조 표시된 결과 표시](../../images/permission-manager/users-additional-attributes-select.png)
 
@@ -51,23 +51,23 @@ ht-degree: 7%
 
 ## 특정 레이블이 있는 역할 검색 {#search-roles}
 
-드롭다운을 사용하여 **[!UICONTROL 역할]** 특성을 선택합니다.
+드롭다운을 사용하여 **[!UICONTROL Roles]** 특성을 선택합니다.
 
 >[!INFO]
 >
->[!UICONTROL 레이블]은(는) 필수 필드가 아닙니다. 여러 레이블을 선택할 수 있으며, 선택하면 이 드롭다운 아래에 나열됩니다. 작업 옆의 **&#39;x&#39;**&#x200B;을(를) 선택하여 레이블을 추가하면 제거할 수 있습니다.
+>[!UICONTROL Labels]은(는) 필수 필드가 아닙니다. 여러 레이블을 선택할 수 있으며, 선택하면 이 드롭다운 아래에 나열됩니다. 작업 옆의 **&#39;x&#39;**&#x200B;을(를) 선택하여 레이블을 추가하면 제거할 수 있습니다.
 
 ![역할을 강조 표시하는 특성 드롭다운입니다.](../../images/permission-manager/roles-select.png)
 
-그런 다음 드롭다운을 사용하여 검색할 **[!UICONTROL 레이블]**&#x200B;을 선택합니다.
+그런 다음 드롭다운을 사용하여 검색할 **[!UICONTROL Labels]**&#x200B;을(를) 선택합니다.
 
 ![강조 표시된 레이블 드롭다운입니다.](../../images/permission-manager/roles-labels-select.png)
 
-보다 세분화된 보고서의 경우 특정 샌드박스의 작업에서 리소스를 지정할 수 있습니다. 드롭다운을 사용하여 **[!UICONTROL 리소스]**, **[!UICONTROL 작업]** 및 **[!UICONTROL 샌드박스]**&#x200B;를 선택한 다음 **[!UICONTROL 결과 표시]**&#x200B;를 선택합니다.
+보다 세분화된 보고서의 경우 특정 샌드박스의 작업에서 리소스를 지정할 수 있습니다. 드롭다운을 사용하여 **[!UICONTROL Resource]**, **[!UICONTROL Actions]** 및 **[!UICONTROL Sandboxes]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Show Results]**&#x200B;을(를) 선택합니다.
 
 >[!INFO]
 >
->[!UICONTROL 리소스], [!UICONTROL 작업] 및 [!UICONTROL 샌드박스]는 필수 필드가 아닙니다. 각 보고서에 대해 하나의 [!UICONTROL 리소스]만 선택할 수 있습니다. 제거할 선택 항목 옆의 **&#39;x&#39;**&#x200B;을(를) 선택하여 작업 또는 샌드박스를 추가한 후 제거할 수 있습니다.
+>[!UICONTROL Resource], [!UICONTROL Actions] 및 [!UICONTROL Sandboxes]은(는) 필수 필드가 아닙니다. 각 보고서에 대해 하나의 [!UICONTROL Resource]만 선택할 수 있습니다. 제거할 선택 항목 옆의 **&#39;x&#39;**&#x200B;을(를) 선택하여 작업 또는 샌드박스를 추가한 후 제거할 수 있습니다.
 
 ![리소스, 작업, 샌드박스 드롭다운 및 강조 표시된 결과 표시](../../images/permission-manager/roles-additional-attributes-select.png)
 
@@ -82,7 +82,7 @@ ht-degree: 7%
 | 샌드박스 | 이 역할을 포함하는 Sanbox 목록입니다. |
 | 수정된 위치 | 역할이 마지막으로 업데이트된 날짜 및 타임스탬프입니다. |
 | 생성된 위치 | 역할을 만든 날짜 및 타임스탬프입니다. |
-| 제작자 | 역할 작성자에 대한 세부 정보. |
+| 생성자 | 역할 작성자에 대한 세부 정보. |
 
 ![강조 표시된 특성을 기반으로 생성된 보고서](../../images/permission-manager/roles-report.png)
 

@@ -1,10 +1,10 @@
 ---
 title: ID 네임스페이스 개요
-description: ID 서비스의 ID 네임스페이스에 대해 알아봅니다.
+description: Identity Service의 ID 네임스페이스에 대해 알아봅니다.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1860'
+source-wordcount: '1848'
 ht-degree: 17%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 17%
 
 Adobe Experience Platform ID 서비스에서 ID 네임스페이스로 수행할 수 있는 작업에 대해 자세히 알아보려면 다음 문서를 참조하십시오.
 
-## 시작하기
+## 시작
 
 ID 네임스페이스를 사용하려면 다양한 Adobe Experience Platform 서비스에 대한 이해가 필요합니다. 네임스페이스 작업을 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계한 데이터를 기반으로 통합 고객 프로필을 실시간으로 제공합니다.
-* [[!DNL Identity Service]](../home.md): 장치 및 시스템 간에 ID를 연결하여 개별 고객 및 개별 고객의 행동을 더 잘 볼 수 있습니다.
-* [[!DNL Privacy Service]](../../privacy-service/home.md): ID 네임스페이스는 GDPR(일반 데이터 보호 규정)과 같은 법적 개인 정보 보호 규정에 대한 준수 요청에 사용됩니다. 각 개인 정보 보호 요청은 영향을 받아야 하는 소비자의 데이터를 식별하기 위해 네임스페이스를 기준으로 수행됩니다.
+* [[!DNL Identity Service]](../home.md): 디바이스 및 시스템 간에 ID를 연결하여 개별 고객과 고객의 행동을 더 잘 파악할 수 있습니다.
+* [[!DNL Privacy Service]](../../privacy-service/home.md): ID 네임스페이스는 GDPR(일반 데이터 보호 규정)과 같은 법적 개인 정보 보호 규정에 대한 준수 요청에 사용됩니다. 각 개인 정보 요청 요청은 영향을 받아야 하는 소비자의 데이터를 식별하기 위해 네임스페이스를 기준으로 이루어집니다.
 
 ## ID 네임스페이스 이해 {#understanding-identity-namespaces}
 
@@ -69,9 +69,9 @@ ID 서비스에 동일한 논리 적용:
 >abstract="ID 유형은 데이터가 ID 그래프에 저장되는지 여부를 제어합니다. 비개인 식별자 및 파트너 ID 등의 신원 유형에 대해서는 아이덴티티 그래프가 생성되지 않습니다."
 >text="Learn more in documentation"
 
-ID 네임스페이스의 요소 중 하나는 **ID 유형**&#x200B;입니다. ID 유형은 다음을 결정합니다.
+ID 네임스페이스의 한 요소는 ID 유형&#x200B;**입니다**. ID 유형은 다음을 결정합니다.
 
-* ID 그래프 생성 여부:
+* ID 그래프가 생성되는지 여부:
    * 비개인 식별자 및 파트너 ID 등의 신원 유형에 대해서는 아이덴티티 그래프가 생성되지 않습니다.
    * ID 그래프는 다른 모든 ID 유형에 대해 생성됩니다.
 * 시스템 제한에 도달하면 ID 그래프에서 제거되는 ID입니다. 자세한 내용은 [ID 데이터 보호](../guardrails.md)를 참조하십시오.
@@ -81,12 +81,12 @@ Experience Platform 내에서 사용할 수 있는 ID 유형은 다음과 같습
 | ID 유형 | 설명 |
 | --- | --- |
 | 쿠키 ID | 쿠키 ID는 웹 브라우저를 식별합니다. 이러한 ID는 확장에 중요하며 ID 그래프의 대부분을 구성합니다. 그러나 자연적으로 그들은 빠르게 부패하고 시간이 지남에 따라 가치를 잃습니다. |
-| 교차 장치 ID | 크로스 디바이스 ID는 개인을 식별하며 일반적으로 다른 ID를 함께 연결합니다. 예를 들면 로그인 ID, CRMID 및 충성도 ID가 있습니다. 값을 민감하게 처리하기 위해 [!DNL Identity Service]에 대한 표시입니다. |
+| 교차 장치 ID | 교차 디바이스 ID는 개인을 식별하며 일반적으로 다른 ID를 함께 연결합니다. 예를 들어 로그인 ID, CRMID 및 충성도 ID가 있습니다. 이는 값을 민감하게 처리하라는 [!DNL Identity Service] 표시입니다. |
 | 디바이스 ID | 디바이스 ID는 IDFA(iPhone 및 iPad), GAID(Android) 및 RIDA(Roku) 등 하드웨어 디바이스를 식별해 가정에서 여러 명이 공유할 수 있습니다. |
-| 이메일 주소 | 이메일 주소는 종종 단일 사용자와 연결되므로, 다양한 채널에서 해당 사용자를 식별하는 데 사용할 수 있습니다. 이 유형의 ID에는 PII(개인 식별 정보)가 포함됩니다. 값을 민감하게 처리하기 위해 [!DNL Identity Service]에 대한 표시입니다. |
+| 이메일 주소 | 이메일 주소는 종종 한 사람과 연결되므로 다양한 채널에서 해당 개인을 식별하는 데 사용할 수 있습니다. 이 유형의 ID에는 PII(개인 식별 정보)가 포함됩니다. 이는 값을 민감하게 처리하라는 [!DNL Identity Service] 표시입니다. |
 | 비개인 식별자 | 비사용자 ID는 네임스페이스가 필요하지만 사용자 클러스터에 연결되지 않은 식별자를 저장하는 데 사용됩니다. 예를 들어 제품 SKU, 제품, 조직 또는 스토어와 관련된 데이터입니다. |
 | 파트너 ID | <ul><li>파트너 ID는 데이터 파트너가 사람을 나타내기 위해 사용하는 식별자입니다. 파트너 ID는 종종 개인의 진짜 신분을 밝히지 않기 위해 가명으로 사용되며 확률적일 수 있습니다. Real-Time Customer Data Platform에서 파트너 ID는 ID 그래프 링크 구축이 아니라 주로 확장된 대상 활성화 및 데이터 보강에 사용됩니다.</li><li>파트너 ID 유형으로 지정된 ID 네임스페이스가 포함된 ID를 수집할 때 ID 그래프가 생성되지 않습니다.</li><li>파트너 ID의 ID 유형을 사용하여 파트너 데이터를 수집하지 않으면 ID 서비스의 시스템 그래프 제한에 도달할 수 있을 뿐만 아니라 원치 않는 프로필 병합이 발생할 수 있습니다.</li><ul> |
-| 전화번호 | 전화번호는 종종 한 사람과 연관되어 있으므로 다른 채널에서 해당 사람을 식별하는 데 사용할 수 있습니다. 이 유형의 ID에는 PII가 포함됩니다. 값을 민감하게 처리하기 위해 [!DNL Identity Service]에 대한 표시입니다. |
+| 전화번호 | 전화번호는 종종 한 사람과 연관되어 있으므로 다른 채널에서 해당 사람을 식별하는 데 사용할 수 있습니다. 이 유형의 ID에는 PII가 포함됩니다. 값을 민감하게 처리하라는 표시 [!DNL Identity Service] 입니다. |
 
 {style="table-layout:auto"}
 
@@ -99,20 +99,20 @@ Experience Platform 내의 모든 조직에서 사용할 수 있도록 다음 �
 | 표시 이름 | 설명 |
 | ------------ | ----------- |
 | AdCloud | Adobe AdCloud를 나타내는 네임스페이스입니다. |
-| Adobe Analytics (기존 ID) | Adobe Analytics을 나타내는 네임스페이스입니다. 자세한 내용은 [Adobe Analytics 네임스페이스](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=ko#namespaces)에서 다음 문서를 참조하십시오. |
+| Adobe Analytics (기존 ID) | Adobe Analytics을 나타내는 네임스페이스입니다. 자세한 내용은 [Adobe Analytics 네임스페이스](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces)에서 다음 문서를 참조하십시오. |
 | Apple IDFA (광고주용 ID) | 광고주용 Apple ID를 나타내는 네임스페이스입니다. 자세한 내용은 [관심 기반 광고](https://support.apple.com/en-us/HT202074)에 대한 다음 문서를 참조하십시오. |
 | Apple 푸시 알림 서비스 | Apple 푸시 알림 서비스를 사용하여 수집된 ID를 나타내는 네임스페이스입니다. 자세한 내용은 [Apple 푸시 알림 서비스](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)에 대한 다음 문서를 참조하십시오. |
 | ECID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 자세한 내용은 [ECID](./ecid.md)에서 다음 문서를 참조하십시오. |
 | 이메일 | 이메일 주소를 나타내는 네임스페이스입니다. 이러한 유형의 네임스페이스는 종종 단일 사용자와 연결되므로 여러 채널에서 해당 사용자를 식별하는 데 사용할 수 있습니다. |
-| 이메일(SHA256, 소문자) | 사전 해시된 이메일 주소를 위한 네임스페이스입니다. 이 네임스페이스에 제공된 값은 SHA256으로 해싱하기 전에 소문자로 변환됩니다. 전자 메일 주소가 정규화되기 전에 선행 및 후행 공백을 잘라내야 합니다. 이 설정은 소급하여 변경할 수 없습니다. 자세한 내용은 [SHA256 해시 지원](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=ko#hashing-support)에 대한 다음 문서를 참조하십시오. |
+| 이메일 (SHA256, 소문자) | 사전 해시된 이메일 주소를 위한 네임스페이스입니다. 이 네임스페이스에 제공된 값은 SHA256으로 해싱하기 전에 소문자로 변환됩니다. 전자 메일 주소가 정규화되기 전에 선행 및 후행 공백을 잘라내야 합니다. 이 설정은 소급하여 변경할 수 없습니다. 자세한 내용은 [SHA256 해시 지원](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support)에 대한 다음 문서를 참조하십시오. |
 | Firebase 클라우드 메시징 | 푸시 알림용 Google Firebase Cloud Messaging을 사용하여 수집된 ID를 나타내는 네임스페이스입니다. 자세한 내용은 [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging)에 대한 다음 문서를 참조하십시오. |
 | Google 광고 ID (GAID) | Google Advertising ID를 나타내는 네임스페이스입니다. 자세한 내용은 [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en)에 대한 다음 문서를 참조하십시오. |
 | 휴대폰 | 전화 번호를 나타내는 네임스페이스입니다. 이러한 유형의 네임스페이스는 종종 단일 사용자와 연결되므로 여러 채널에서 해당 사용자를 식별하는 데 사용할 수 있습니다. |
 | 전화(E.164) | E.164 형식으로 해시해야 하는 원시 전화 번호를 나타내는 네임스페이스입니다. E.164 형식에는 더하기 기호(`+`), 국제 국가 호출 코드, 지역 번호 및 전화 번호가 포함됩니다. 예: `(+)(country code)(area code)(phone number)`. |
 | 휴대폰 (SHA256) | SHA256을 사용하여 해시해야 하는 전화 번호를 나타내는 네임스페이스입니다. 기호, 문자 및 앞에 오는 0을 제거해야 합니다. 국가 호출 코드도 접두사로 추가해야 합니다. |
 | 전화(SHA256_E.164) | SHA256과 E.164 포맷을 모두 사용하여 해시해야 하는 원시 전화번호를 나타내는 네임스페이스입니다. |
-| TNTID | Adobe Target을 나타내는 네임스페이스입니다. 자세한 내용은 [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ko)에 대한 다음 문서를 참조하십시오. |
-| Windows AID | Windows Advertising ID를 나타내는 네임스페이스입니다. 자세한 내용은 [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041)에서 다음 문서를 참조하십시오. |
+| TNTID | Adobe Target을 나타내는 네임스페이스입니다. 자세한 내용은 [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html)에 대한 다음 문서를 참조하십시오. |
+| 윈도우 에이드 | Windows Advertising ID를 나타내는 네임스페이스입니다. 자세한 내용은 Windows Advertising ID[에 대한 ](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041)다음 문서를 참조하십시오. |
 
 ### ID 네임스페이스 보기 {#view-identity-namespaces}
 
@@ -121,29 +121,29 @@ Experience Platform 내의 모든 조직에서 사용할 수 있도록 다음 �
 >title="통합 ID 보기"
 >abstract="통합 ID는 다른 시스템에 연결하는 데 사용되는 네임스페이스이며 ID 확인 또는 연결 ID에는 사용되지 않습니다. <br> 이러한 ID는 기본적으로 숨겨져 있습니다. 토글을 사용하여 통합 네임스페이스를 봅니다."
 
-UI에서 ID 네임스페이스를 보려면 왼쪽 탐색에서 **[!UICONTROL ID]**&#x200B;를 선택한 다음 **[!UICONTROL 찾아보기]**&#x200B;를 선택하십시오.
+UI에서 ID 네임스페이스를 보려면 왼쪽 탐색 창에서 을 선택한 **[!UICONTROL Identities]** 다음, 을 선택합니다 **[!UICONTROL Browse]**.
 
-조직의 네임스페이스 디렉터리가 나타나고 이름, ID 기호, 마지막으로 업데이트된 날짜, 해당 ID 유형 및 설명에 대한 정보가 표시됩니다.
+기관의 네임스페이스 디렉터리가 나타나고 이름, ID 기호, 마지막 업데이트 날짜, 해당 ID 유형 및 설명에 대한 정보가 표시됩니다.
 
-![조직에 있는 사용자 지정 ID 네임스페이스의 디렉터리입니다.](../images/namespace/browse.png)
+![조직의 사용자 지정 ID 네임스페이스 디렉터리입니다.](../images/namespace/browse.png)
 
-## 사용자 정의 네임스페이스 만들기 {#create-namespaces}
+## 사용자 지정 네임스페이스 만들기 {#create-namespaces}
 
-조직 데이터 및 사용 사례에 따라 사용자 정의 네임스페이스가 필요할 수 있습니다. [[!DNL Identity Service]](../api/create-custom-namespace.md) API를 사용하거나 UI를 통해 사용자 지정 네임스페이스를 만들 수 있습니다.
+조직 데이터 및 사용 사례에 따라 사용자 지정 네임스페이스가 필요할 수 있습니다. [[!DNL Identity Service]](../api/create-custom-namespace.md) API를 사용하거나 UI를 통해 사용자 지정 네임스페이스를 만들 수 있습니다.
 
-사용자 지정 네임스페이스를 만들려면 **[!UICONTROL ID 네임스페이스 만들기]**&#x200B;를 선택합니다.
+사용자 지정 네임스페이스를 만들려면 **[!UICONTROL Create identity namespace]**&#x200B;을(를) 선택합니다.
 
 >[!TIP]
 >
->통합 ID는 다른 시스템과 연결하는 데 사용되는 네임스페이스입니다. ID 해결에는 사용되지 않으며 ID를 결합하는 데도 사용되지 않습니다. 목록을 업데이트하고 통합 ID를 포함하려면 **[!UICONTROL 통합 ID 보기]**&#x200B;를 선택하십시오. 그러나 통합 ID는 보기 전용이므로 구성할 필요가 없으므로 기본적으로 숨겨집니다.
+>통합 ID는 다른 시스템과 연결하는 데 사용되는 네임스페이스입니다. ID 해결에는 사용되지 않으며 ID를 결합하는 데도 사용되지 않습니다. 목록을 업데이트하고 통합 ID를 포함하려면 **[!UICONTROL View integration identities]**&#x200B;을(를) 선택하십시오. 그러나 통합 ID는 보기 전용이므로 구성할 필요가 없으므로 기본적으로 숨겨집니다.
 
 ![ID 작업 영역의 ID 네임스페이스 만들기 단추입니다.](../images/namespace/create-identity-namespace.png)
 
-[!UICONTROL ID 네임스페이스 만들기] 창이 나타납니다. 먼저 만들려는 사용자 지정 네임스페이스에 대한 표시 이름과 ID 기호를 제공해야 합니다. 필요한 경우 만들고 있는 사용자 지정 네임스페이스에 더 많은 컨텍스트를 추가하는 설명을 제공할 수도 있습니다.
+[!UICONTROL Create identity namespace] 창이 나타납니다. 먼저 만들려는 사용자 지정 네임스페이스에 대한 표시 이름과 ID 기호를 제공해야 합니다. 필요한 경우 만들고 있는 사용자 지정 네임스페이스에 더 많은 컨텍스트를 추가하는 설명을 제공할 수도 있습니다.
 
 ![사용자 지정 ID 네임스페이스와 관련된 정보를 입력할 수 있는 팝업 창입니다.](../images/namespace/name-and-symbol.png)
 
-그런 다음 사용자 지정 네임스페이스에 할당할 ID 유형을 선택합니다. 완료되면 **[!UICONTROL 만들기]**&#x200B;를 선택합니다.
+그런 다음 사용자 지정 네임스페이스에 할당할 ID 유형을 선택합니다. 완료되면 **[!UICONTROL Create]**&#x200B;을(를) 선택합니다.
 
 ![사용자 지정 ID 네임스페이스에서 선택하고 할당할 수 있는 ID 유형 선택.](../images/namespace/select-identity-type.png)
 

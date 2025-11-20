@@ -5,7 +5,7 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
 workflow-type: tm+mt
 source-wordcount: '1605'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 9%
 
 Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용하면 데이터가 완벽하게 수집되고 병합된 모든 프로필이 CRMID와 같은 개인 식별자를 통해 단일 개별 사용자를 나타낸다고 쉽게 가정할 수 있습니다. 그러나 특정 데이터가 서로 다른 여러 프로필을 하나의 프로필로 병합하려고 할 수 있는 시나리오가 있습니다(&quot;그래프 축소&quot;). 이러한 원치 않는 병합을 방지하기 위해 [!DNL Identity Graph Linking Rules]을(를) 통해 제공된 구성을 사용하고 사용자에게 정확한 개인화를 허용할 수 있습니다.
 
-## 시작
+## 시작하기
 
 다음 문서는 [!DNL Identity Graph Linking Rules]을(를) 이해하는 데 필수적입니다.
 
@@ -40,12 +40,12 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
 
 <!-- CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -55,7 +55,7 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="아이덴티티 그래프 연결 규칙 개요" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448279/?format=jpeg&nocache=1747851655227&captions=kor" alt="아이덴티티 그래프 연결 규칙 개요"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="아이덴티티 그래프 연결 규칙 개요"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +78,7 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="ID 그래프 연결 규칙 - 그래프 시뮬레이션" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444050/?format=jpeg&nocache=1747851655237&captions=kor" alt="ID 그래프 연결 규칙 - 그래프 시뮬레이션"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="ID 그래프 연결 규칙 - 그래프 시뮬레이션"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -101,7 +101,7 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="ID 그래프 연결 규칙 - ID 설정" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475969/?captions=kor&format=jpeg&nocache=1747851655218" alt="ID 그래프 연결 규칙 - ID 설정"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="ID 그래프 연결 규칙 - ID 설정"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

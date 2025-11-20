@@ -23,7 +23,7 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화에 대한 [&#x200B; 대상을 구성할 때 &#x200B;](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API **[!UICONTROL Custom Personalization]**&#x200B;를 사용해야 합니다. 모든 Edge Network API 호출은 [인증된 컨텍스트](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)에서 수행되어야 합니다.
+>프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화에 대한 [ 대상을 구성할 때 ](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API **[!UICONTROL Custom Personalization]**&#x200B;를 사용해야 합니다. 모든 Edge Network API 호출은 [인증된 컨텍스트](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)에서 수행되어야 합니다.
 >
 ><br>웹 또는 Mobile SDK 구현에 이미 사용하고 있는 동일한 데이터 스트림을 사용하는 서버측 통합을 추가하여 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)를 통해 프로필 특성을 검색할 수 있습니다.
 >
@@ -69,7 +69,7 @@ ht-degree: 9%
 >id="platform_destinations_custom_personalization_datastream"
 >title="데이터 스트림 정보"
 >abstract="이 옵션은 페이지에 대한 응답으로 대상자에 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에 대상 구성이 활성화된 데이터스트림만 표시됩니다. 대상을 구성하려면 먼저 데이터스트림을 구성해야 합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=ko" text="데이터스트림을 구성하는 방법에 대해 알아보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="데이터스트림을 구성하는 방법에 대해 알아보기"
 
 >[!IMPORTANT]
 > 

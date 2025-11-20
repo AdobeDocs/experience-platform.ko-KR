@@ -4,7 +4,7 @@ description: Adobe Experience Platform UI에서 매개 변수가 있는 쿼리�
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '681'
 ht-degree: 11%
 
 ---
@@ -47,7 +47,7 @@ SELECT
 
 UI에서 매개 변수가 있는 쿼리를 만들려면 쿼리 편집기로 이동합니다. 자세한 지침은 [쿼리 편집기 액세스](./user-guide.md#accessing-query-editor)에 대한 섹션을 참조하십시오.
 
-`'$'` 서문을 사용하여 텍스트 편집기의 쿼리에 쿼리 매개변수를 입력합니다. 그런 다음 [!UICONTROL 콘솔] 옆에 있는 **[!UICONTROL 쿼리 매개 변수]** 탭을 선택하고 키에 대해 누락된 값을 추가합니다. 필요한 키에 값을 추가하지 않으면 쿼리를 실행할 수 없습니다. 경고 아이콘(![경고 아이콘.](/help/images/icons/alert.png))이(가) 쿼리 매개 변수 섹션에 비어 있는 [!UICONTROL 값] 입력 필드 옆에 나타납니다.
+`'$'` 서문을 사용하여 텍스트 편집기의 쿼리에 쿼리 매개변수를 입력합니다. 그런 다음 **[!UICONTROL Query parameters]** 옆의 [!UICONTROL Console] 탭을 선택하여 키에 대해 누락된 값을 추가합니다. 필요한 키에 값을 추가하지 않으면 쿼리를 실행할 수 없습니다. 경고 아이콘(![경고 아이콘.](/help/images/icons/alert.png))이(가) 쿼리 매개 변수 섹션에 비어 있는 [!UICONTROL Value] 입력 필드 옆에 나타납니다.
 
 >[!NOTE]
 >
@@ -57,11 +57,11 @@ UI에서 매개 변수가 있는 쿼리를 만들려면 쿼리 편집기로 이�
 
 >[!TIP]
 >
->쿼리의 콘솔 출력을 보려면 탭을 [!UICONTROL 쿼리 매개 변수]에서 [!UICONTROL 콘솔]&#x200B;(으)로 변경하십시오.
+>쿼리의 콘솔 출력을 보려면 탭을 [!UICONTROL Query parameters]에서 [!UICONTROL Console]&#x200B;(으)로 변경하십시오.
 
 ## 쿼리 로그 세부 정보를 사용하여 매개 변수 값 확인 {#check-parameter-values}
 
-사용된 값이 지속적이지 않으므로 템플릿 내에 매개 변수를 저장할 수 없습니다. 그러나 [!UICONTROL 쿼리 로그 세부 정보] 페이지에서 쿼리 실행에 사용되는 매개 변수 값을 찾을 수 있습니다. 이 경우, 로그는 쿼리가 매개 변수가 있는 쿼리임을 나타내지 않습니다. 사용된 값을 찾는 방법에 대한 지침은 [쿼리 로그 설명서](./query-logs.md)를 참조하세요.
+사용된 값이 지속적이지 않으므로 템플릿 내에 매개 변수를 저장할 수 없습니다. 그러나 [!UICONTROL Query log details] 페이지에서 쿼리 실행에 사용되는 매개 변수 값을 찾을 수 있습니다. 이 경우, 로그는 쿼리가 매개 변수가 있는 쿼리임을 나타내지 않습니다. 사용된 값을 찾는 방법에 대한 지침은 [쿼리 로그 설명서](./query-logs.md)를 참조하세요.
 
 ![세부 정보 섹션에서 매개 변수가 있는 쿼리의 SQL을 강조 표시한 쿼리 로그 보기입니다.](../images/ui/parameterized-queries/parameterized-query-logs.png)
 

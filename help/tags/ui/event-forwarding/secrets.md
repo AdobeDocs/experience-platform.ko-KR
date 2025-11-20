@@ -4,8 +4,8 @@ description: 이벤트 전달 속성에 사용되는 엔드포인트를 인증�
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
-source-wordcount: '2577'
-ht-degree: 2%
+source-wordcount: '2363'
+ht-degree: 3%
 
 ---
 
@@ -18,12 +18,12 @@ ht-degree: 2%
 | 암호 유형 | 설명 |
 | --- | --- |
 | [!UICONTROL Amazon OAuth 2] | [!DNL Amazon] 서비스를 사용하여 보안 인증을 사용하도록 설정합니다. 시스템은 토큰을 안전하게 저장하고 지정된 간격으로 갱신을 처리합니다. |
-| [!UICONTROL Google OAuth 2] | [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) 및 [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)에서 사용할 [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 인증 사양을 지원하는 몇 가지 특성이 포함되어 있습니다. 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
+| [!UICONTROL Google OAuth 2] | [Google Ads API](https://datatracker.ietf.org/doc/html/rfc6749) 및 [Pub/Sub API](https://developers.google.com/google-ads/api/docs/oauth/overview)에서 사용할 [OAuth 2.0](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) 인증 사양을 지원하는 몇 가지 특성이 포함되어 있습니다. 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
 | [!UICONTROL HTTP] | 사용자 이름과 암호에 대해 각각 두 개의 문자열 속성을 포함합니다. |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
-| [!UICONTROL OAuth 2] | [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 인증 사양에 대한 [클라이언트 자격 증명 부여 형식](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4)을(를) 지원하는 여러 특성이 포함되어 있습니다. 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
+| [!UICONTROL OAuth 2] | [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) 인증 사양에 대한 [클라이언트 자격 증명 부여 형식](https://datatracker.ietf.org/doc/html/rfc6749)을(를) 지원하는 여러 특성이 포함되어 있습니다. 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
 | [!UICONTROL OAuth 2 JWT] | [OAuth 2.0 권한 부여](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1)에 대한 JSON 웹 토큰(JWT) 프로필을 지원하는 몇 가지 특성이 포함되어 있습니다. 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
-| [!UICONTROL 토큰] | 두 시스템에서 알려지고 이해하는 인증 토큰 값을 나타내는 단일 문자 문자열입니다. |
+| [!UICONTROL Token] | 두 시스템에서 알려지고 이해하는 인증 토큰 값을 나타내는 단일 문자 문자열입니다. |
 
 {style="table-layout:auto"}
 
@@ -45,9 +45,9 @@ ht-degree: 2%
 >id="platform_eventforwarding_secrets_environments"
 >title="시크릿 환경"
 >abstract="시크릿을 이벤트 전달에 사용하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성에 환경이 생성되지 않은 경우 계속하기 전에 환경을 구성해야 합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ko" text="환경 개요"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="환경 개요"
 
-암호를 만들려면 왼쪽 탐색에서 **[!UICONTROL 이벤트 전달]**&#x200B;을 선택한 다음 암호를 추가할 이벤트 전달 속성을 엽니다. 그런 다음 왼쪽 탐색에서 **[!UICONTROL 암호]**&#x200B;를 선택한 다음 **[!UICONTROL 새 암호 만들기]**&#x200B;를 선택합니다.
+암호를 만들려면 왼쪽 탐색에서 **[!UICONTROL Event Forwarding]**&#x200B;을(를) 선택한 다음 암호를 추가할 이벤트 전달 속성을 엽니다. 그런 다음 왼쪽 탐색에서 **[!UICONTROL Secrets]**&#x200B;을(를) 선택한 후 **[!UICONTROL Create New Secret]**&#x200B;을(를) 선택합니다.
 
 ![새 암호 만들기](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -55,25 +55,25 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->암호를 환경에 추가하기 전에 만들고 저장하려면 **[!UICONTROL 암호를 환경에 첨부]** 토글을 비활성화한 후 나머지 정보를 입력하십시오. 암호를 사용하려면 나중에 환경에 지정해야 합니다.
+>암호를 환경에 추가하기 전에 만들고 저장하려면 **[!UICONTROL Attach Secret to Environments]** 토글을 사용하지 않도록 설정한 후 나머지 정보를 입력하십시오. 암호를 사용하려면 나중에 환경에 지정해야 합니다.
 >
 >![환경 비활성화](../../images/ui/event-forwarding/secrets/env-disabled.png)
 
-**[!UICONTROL 대상 환경]**&#x200B;에서 드롭다운 메뉴를 사용하여 암호를 할당할 환경을 선택합니다. **[!UICONTROL 암호 이름]**&#x200B;에서 환경의 컨텍스트에서 암호 이름을 지정하십시오. 이 이름은 이벤트 전달 속성에 있는 모든 비밀에서 고유해야 합니다.
+**[!UICONTROL Target Environment]**&#x200B;에서 드롭다운 메뉴를 사용하여 암호를 할당할 환경을 선택합니다. **[!UICONTROL Secret Name]**&#x200B;에서 환경 컨텍스트에서 암호 이름을 지정하십시오. 이 이름은 이벤트 전달 속성에 있는 모든 비밀에서 고유해야 합니다.
 
 ![환경 및 이름](../../images/ui/event-forwarding/secrets/env-and-name.png)
 
-암호는 한 번에 하나의 환경에만 할당할 수 있지만 원할 경우 다른 환경의 여러 암호에 동일한 자격 증명을 할당할 수 있습니다. 목록에 다른 행을 추가하려면 **[!UICONTROL 환경 추가]**&#x200B;를 선택하십시오.
+암호는 한 번에 하나의 환경에만 할당할 수 있지만 원할 경우 다른 환경의 여러 암호에 동일한 자격 증명을 할당할 수 있습니다. 목록에 다른 행을 추가하려면 **[!UICONTROL Add Environment]**&#x200B;을(를) 선택하십시오.
 
 ![환경 추가](../../images/ui/event-forwarding/secrets/add-env.png)
 
-추가하는 각 환경에 대해 연결된 암호에 다른 고유한 이름을 제공해야 합니다. 사용 가능한 환경을 모두 소진하면 **[!UICONTROL 환경 추가]** 단추를 사용할 수 없습니다.
+추가하는 각 환경에 대해 연결된 암호에 다른 고유한 이름을 제공해야 합니다. 사용 가능한 모든 환경을 소진하면 **[!UICONTROL Add Environment]** 단추를 사용할 수 없습니다.
 
 ![환경을 추가할 수 없음](../../images/ui/event-forwarding/secrets/add-env-greyed.png)
 
 여기에서 암호를 만드는 단계는 만드는 암호 유형에 따라 다릅니다. 자세한 내용은 아래 하위 섹션을 참조하십시오.
 
-* [[!UICONTROL 토큰]](#token)
+* [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
@@ -81,15 +81,15 @@ ht-degree: 2%
 * [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
 * [[!UICONTROL [!DNL Amazon] OAuth 2]](#amazon-oauth2)
 
-### [!UICONTROL 토큰] {#token}
+### [!UICONTROL Token] {#token}
 
-토큰 암호를 만들려면 **[!UICONTROL Type]** 드롭다운에서 **[!UICONTROL Token]**&#x200B;을(를) 선택하십시오. 표시되는 **[!UICONTROL 토큰]** 필드에 인증 중인 시스템에서 인식하는 자격 증명 문자열을 제공하십시오. **[!UICONTROL 암호 만들기]**&#x200B;를 선택하여 암호를 저장합니다.
+토큰 암호를 만들려면 **[!UICONTROL Token]** 드롭다운에서 **[!UICONTROL Type]**&#x200B;을(를) 선택하십시오. 표시되는 **[!UICONTROL Token]** 필드에 인증 중인 시스템에서 인식하는 자격 증명 문자열을 제공합니다. 암호를 저장하려면 **[!UICONTROL Create Secret]**&#x200B;을(를) 선택하십시오.
 
 ![토큰 암호](../../images/ui/event-forwarding/secrets/token-secret.png)
 
 ### [!UICONTROL HTTP] {#http}
 
-HTTP 암호를 만들려면 **[!UICONTROL Type]** 드롭다운에서 **[!UICONTROL 단순 HTTP]**&#x200B;을(를) 선택합니다. 아래 필드에 자격 증명의 사용자 이름과 암호를 입력한 다음 **[!UICONTROL 암호 만들기]**&#x200B;를 선택하여 암호를 저장하십시오.
+HTTP 암호를 만들려면 **[!UICONTROL Simple HTTP]** 드롭다운에서 **[!UICONTROL Type]**&#x200B;을(를) 선택합니다. 아래 필드에 자격 증명의 사용자 이름과 암호를 입력한 다음 **[!UICONTROL Create Secret]**&#x200B;을(를) 선택하여 암호를 저장하십시오.
 
 >[!NOTE]
 >
@@ -99,15 +99,15 @@ HTTP 암호를 만들려면 **[!UICONTROL Type]** 드롭다운에서 **[!UICONTR
 
 ### [!UICONTROL OAuth 2] {#oauth2}
 
-OAuth 2 암호를 만들려면 **[!UICONTROL Type]** 드롭다운에서 **[!UICONTROL OAuth 2]**&#x200B;을(를) 선택합니다. 아래 표시되는 필드에서 OAuth 통합을 위해 [[!UICONTROL 클라이언트 ID] 및 [!UICONTROL 클라이언트 암호]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)와 [[!UICONTROL 토큰 URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)을 제공합니다. UI의 [!UICONTROL 토큰 URL] 필드는 인증 서버 호스트와 토큰 경로 간의 연결입니다.
+OAuth 2 암호를 만들려면 **[!UICONTROL OAuth 2]** 드롭다운에서 **[!UICONTROL Type]**&#x200B;을(를) 선택합니다. 아래 표시되는 필드에서 OAuth 통합을 위해 [[!UICONTROL Client ID] 및 [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)과(와) [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)을(를) 제공합니다. UI의 [!UICONTROL Token URL] 필드는 인증 서버 호스트와 토큰 경로 간의 연결입니다.
 
 ![OAuth 2 암호](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
-**[!UICONTROL 자격 증명 옵션]**&#x200B;에서 키-값 쌍의 형태로 `scope` 및 `audience`과(와) 같은 다른 자격 증명 옵션을 제공할 수 있습니다. 키-값 쌍을 더 추가하려면 **[!UICONTROL 다른 키-값 쌍 추가]**&#x200B;를 선택하십시오.
+**[!UICONTROL Credential Options]**&#x200B;에서 키-값 쌍의 형태로 `scope` 및 `audience`과(와) 같은 다른 자격 증명 옵션을 제공할 수 있습니다. 키-값 쌍을 더 추가하려면 **[!UICONTROL Add another]**&#x200B;을(를) 선택하십시오.
 
 ![자격 증명 옵션](../../images/ui/event-forwarding/secrets/oauth-secret-2.png)
 
-마지막으로 암호에 대해 **[!UICONTROL 새로 고침 오프셋]** 값을 구성할 수 있습니다. 시스템이 자동 새로 고침을 수행할 토큰 만료 전 시간(초)을 나타냅니다. 해당 시간(시간 및 분)은 필드 오른쪽에 표시되며 입력할 때 자동으로 업데이트됩니다.
+마지막으로 암호에 대한 **[!UICONTROL Refresh Offset]** 값을 구성할 수 있습니다. 시스템이 자동 새로 고침을 수행할 토큰 만료 전 시간(초)을 나타냅니다. 해당 시간(시간 및 분)은 필드 오른쪽에 표시되며 입력할 때 자동으로 업데이트됩니다.
 
 ![오프셋 새로 고침](../../images/ui/event-forwarding/secrets/oauth-secret-3.png)
 
@@ -119,31 +119,31 @@ OAuth 2 암호를 만들려면 **[!UICONTROL Type]** 드롭다운에서 **[!UICO
 >
 >예를 들어, 오프셋이 `28800`(8시간)로 설정되고 액세스 토큰에 `expires_in`/`36000`(10시간)이 있는 경우 결과 차이가 4시간 미만이므로 교환이 실패합니다.
 
-완료되면 **[!UICONTROL 암호 만들기]**&#x200B;를 선택하여 암호를 저장합니다.
+완료되면 **[!UICONTROL Create Secret]**&#x200B;을(를) 선택하여 암호를 저장합니다.
 
 ![OAuth 2 오프셋 저장](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
 
 ### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
 
-OAuth 2 JWT 암호를 만들려면 **[!UICONTROL Type]** 드롭다운에서 **[!UICONTROL OAuth 2 JWT]**&#x200B;을(를) 선택합니다.
+OAuth 2 JWT 암호를 만들려면 **[!UICONTROL OAuth 2 JWT]** 드롭다운에서 **[!UICONTROL Type]**&#x200B;을(를) 선택합니다.
 
-![OAuth 2 JWT 비밀이 [!UICONTROL Type] 드롭다운에서 강조 표시된 [!UICONTROL 비밀 만들기] 탭입니다.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+![OAuth 2 JWT 비밀이 강조 표시된 [!UICONTROL Create Secret] 탭은 [!UICONTROL Type] 드롭다운에서 강조 표시됩니다.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
 
 >[!NOTE]
 >
->현재 JWT 서명을 위해 지원되는 유일한 [!UICONTROL 알고리즘]은(는) RS256입니다.
+>현재 JWT 서명을 위해 지원되는 [!UICONTROL Algorithm]은(는) RS256뿐입니다.
 
-아래 표시되는 필드에서 [!UICONTROL 발급자], [!UICONTROL 제목], [!UICONTROL 대상자], [!UICONTROL 사용자 지정 클레임], [!UICONTROL TTL]을 제공한 다음 드롭다운에서 [!UICONTROL 알고리즘]을 선택합니다. 그런 다음 OAuth 통합을 위해 [!UICONTROL 개인 키 ID]와 [[!UICONTROL 토큰 URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)을(를) 입력하십시오. [!UICONTROL 토큰 URL] 필드는 필수 필드가 아닙니다. 값이 제공되면 JWT는 액세스 토큰과 교환됩니다. 응답의 `expires_in` 특성 및 [!UICONTROL 새로 고침 오프셋] 값에 따라 암호가 새로 고쳐집니다. 값을 제공하지 않으면 가장자리로 밀린 비밀이 JWT입니다. [!UICONTROL TTL] 및 [!UICONTROL 오프셋 새로 고침] 값에 따라 JWT가 새로 고쳐집니다.
+아래 표시되는 필드에서 [!UICONTROL Issuer], [!UICONTROL Subject], [!UICONTROL Audience], [!UICONTROL Custom Claims], [!UICONTROL TTL]을(를) 입력한 다음 드롭다운에서 [!UICONTROL Algorithm]을(를) 선택합니다. 그런 다음 OAuth 통합을 위해 [!UICONTROL Private Key Id]과(와) [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)을(를) 입력합니다. [!UICONTROL Token URL] 필드는 필수 필드가 아닙니다. 값이 제공되면 JWT는 액세스 토큰과 교환됩니다. 응답의 `expires_in` 특성 및 [!UICONTROL Refresh Offset] 값에 따라 암호가 새로 고쳐집니다. 값을 제공하지 않으면 가장자리로 밀린 비밀이 JWT입니다. [!UICONTROL TTL] 및 [!UICONTROL Refresh Offset] 값에 따라 JWT가 새로 고쳐집니다.
 
-![선택한 입력 필드가 강조 표시된 [!UICONTROL 암호 만들기] 탭입니다.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+![선택한 입력 필드가 강조 표시된 [!UICONTROL Create Secret] 탭입니다.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
-**[!UICONTROL 자격 증명 옵션]**&#x200B;에서 키-값 쌍의 형태로 `jwt_param`과(와) 같은 다른 자격 증명 옵션을 제공할 수 있습니다. 키-값 쌍을 더 추가하려면 **[!UICONTROL 다른 키-값 쌍 추가]**&#x200B;를 선택하십시오.
+**[!UICONTROL Credential Options]**&#x200B;에서 키-값 쌍의 형태로 `jwt_param`과(와) 같은 다른 자격 증명 옵션을 제공할 수 있습니다. 키-값 쌍을 더 추가하려면 **[!UICONTROL Add another]**&#x200B;을(를) 선택하십시오.
 
-![[!UICONTROL 자격 증명 옵션] 필드를 강조 표시하는 [!UICONTROL 암호 만들기] 탭](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+![[!UICONTROL Create Secret] 필드를 강조 표시하는 [!UICONTROL Credential Options] 탭입니다.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
 
-마지막으로 암호에 대해 **[!UICONTROL 새로 고침 오프셋]** 값을 구성할 수 있습니다. 시스템이 자동 새로 고침을 수행할 토큰 만료 전 시간(초)을 나타냅니다. 해당 시간(시간 및 분)은 필드 오른쪽에 표시되며 입력할 때 자동으로 업데이트됩니다.
+마지막으로 암호에 대한 **[!UICONTROL Refresh Offset]** 값을 구성할 수 있습니다. 시스템이 자동 새로 고침을 수행할 토큰 만료 전 시간(초)을 나타냅니다. 해당 시간(시간 및 분)은 필드 오른쪽에 표시되며 입력할 때 자동으로 업데이트됩니다.
 
-![[!UICONTROL 새로 고침 오프셋] 필드를 강조 표시하는 [!UICONTROL 암호 만들기] 탭입니다.](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+![필드 [!UICONTROL Create Secret]을(를) 강조 표시하는 [!UICONTROL Refresh Offset] 탭입니다.](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
 
 예를 들어 새로 고침 오프셋이 `1800`(30분)의 기본값으로 설정되고 액세스 토큰의 `expires_in` 값이 `3600`(1시간)이면 시스템은 1시간 후에 암호를 자동으로 새로 고칩니다.
 
@@ -153,22 +153,22 @@ OAuth 2 JWT 암호를 만들려면 **[!UICONTROL Type]** 드롭다운에서 **[!
 >
 >예를 들어, 오프셋이 `1800`(30분)으로 설정되고 액세스 토큰의 `expires_in`이(가) `2700`(45분)인 경우 결과 차이가 30분 미만이므로 교환이 실패합니다.
 
-완료되면 **[!UICONTROL 암호 만들기]**&#x200B;를 선택하여 암호를 저장합니다.
+완료되면 **[!UICONTROL Create Secret]**&#x200B;을(를) 선택하여 암호를 저장합니다.
 
-![[!UICONTROL 암호 만들기] 탭 강조 표시 [!UICONTROL 암호 만들기]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
+![[!UICONTROL Create Secret]을(를) 강조 표시하는 [!UICONTROL Create Secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png) 탭
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
-Google OAuth 2 암호를 만들려면 **[!UICONTROL Type]** 드롭다운에서 **[!UICONTROL Google OAuth 2]**&#x200B;을(를) 선택합니다. **[!UICONTROL 범위]**&#x200B;에서 이 암호를 사용하여 액세스 권한을 부여할 Google API를 선택합니다. 현재 지원되는 제품은 다음과 같습니다.
+Google OAuth 2 암호를 만들려면 **[!UICONTROL Google OAuth 2]** 드롭다운에서 **[!UICONTROL Type]**&#x200B;을(를) 선택합니다. **[!UICONTROL Scopes]**&#x200B;에서 이 암호를 사용하여 액세스 권한을 부여할 Google API를 선택합니다. 현재 지원되는 제품은 다음과 같습니다.
 
 * [Google 광고 API](https://developers.google.com/google-ads/api/docs/oauth/overview)
 * [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
 
-완료되면 **[!UICONTROL 암호 만들기]**&#x200B;를 선택합니다.
+완료되면 **[!UICONTROL Create Secret]**&#x200B;을(를) 선택합니다.
 
 ![Google OAuth 2 암호](../../images/ui/event-forwarding/secrets/google-oauth.png)
 
-Google을 통해 암호를 수동으로 승인해야 함을 알리는 팝오버가 표시됩니다. 계속하려면 **[!UICONTROL 만들기 및 승인]**&#x200B;을 선택하세요.
+Google을 통해 암호를 수동으로 승인해야 함을 알리는 팝오버가 표시됩니다. 계속하려면 **[!UICONTROL Create & Authorize]**&#x200B;을(를) 선택하십시오.
 
 ![Google 권한 부여 팝오버](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
@@ -182,19 +182,19 @@ Google 계정에 대한 자격 증명을 입력할 수 있는 대화 상자가 �
 
 ### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
 
-[!DNL LinkedIn] OAuth 2 암호를 만들려면 **[!UICONTROL Type]** 드롭다운에서 **[!UICONTROL [!DNL LinkedIn]OAuth 2]**&#x200B;을(를) 선택합니다. **[!UICONTROL 암호 만들기]**&#x200B;를 선택합니다.
+[!DNL LinkedIn] OAuth 2 암호를 만들려면 **[!UICONTROL [!DNL LinkedIn] OAuth 2]** 드롭다운에서 **[!UICONTROL Type]**&#x200B;을(를) 선택합니다. 그 다음 **[!UICONTROL Create Secret]**&#x200B;를 선택합니다.
 
-![[!UICONTROL Type] 필드가 강조 표시된 [!UICONTROL 암호 만들기] 탭.](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+![[!UICONTROL Create Secret] 필드가 강조 표시된 [!UICONTROL Type] 탭입니다.](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
 
-[!DNL LinkedIn]을(를) 통해 암호를 수동으로 승인해야 함을 알리는 팝오버가 나타납니다. 계속하려면 **[!UICONTROL [!DNL LinkedIn]]**&#x200B;을(를) 사용하여 암호 만들기 및 권한 부여를 선택하십시오.
+[!DNL LinkedIn]을(를) 통해 암호를 수동으로 승인해야 함을 알리는 팝오버가 나타납니다. 계속하려면 **[!UICONTROL Create & Authorize secret with [!DNL LinkedIn]]**&#x200B;을(를) 선택하십시오.
 
 ![LinkedIn 권한 부여 팝오버에서 &quot;LinkedIn으로 암호 만들기 및 승인&quot; 단추를 강조 표시합니다.](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 [!DNL LinkedIn] 자격 증명을 입력하라는 대화 상자가 나타납니다. 화면의 지침에 따라 데이터에 이벤트 전달 액세스 권한을 부여합니다.
 
-인증 프로세스가 완료되면 새로 만든 암호를 볼 수 있는 **[!UICONTROL 암호]** 탭으로 돌아갑니다. 여기에서 암호의 상태와 만료일을 볼 수 있습니다.
+인증 프로세스가 완료되면 새로 만든 암호를 볼 수 있는 **[!UICONTROL Secrets]** 탭으로 돌아갑니다. 여기에서 암호의 상태와 만료일을 볼 수 있습니다.
 
-![새로 만든 암호를 강조 표시하는 [!UICONTROL 암호] 탭](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+![새로 만든 암호를 강조 표시하는 [!UICONTROL Secret] 탭입니다.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
 #### [!UICONTROL [!DNL LinkedIn] OAuth 2] 암호 재인증
 
@@ -202,35 +202,35 @@ Google 계정에 대한 자격 증명을 입력할 수 있는 대화 상자가 �
 >
 >365일마다 [!DNL LinkedIn] 자격 증명을 사용하여 다시 승인해야 합니다. 기한 내에 재인증하지 않으면 암호가 새로 고쳐지지 않고 [!DNL LinkedIn] 전환 요청이 실패합니다.
 
-재인증이 필요한 암호보다 3개월 먼저, 속성의 페이지를 탐색할 때 팝업이 표시됩니다. **[!UICONTROL 암호를 확인하려면 여기를 클릭하세요]**.
+재인증이 필요한 암호보다 3개월 먼저, 속성의 페이지를 탐색할 때 팝업이 표시됩니다. **[!UICONTROL Click here to go to your secrets]**&#x200B;를 선택합니다.
 
-![비밀 재인증 팝업을 강조 표시하는 [!UICONTROL 속성 개요] 탭입니다.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+![비밀 재인증 팝업을 강조 표시하는 [!UICONTROL Property Overview] 탭입니다.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
 
-[!UICONTROL 암호] 탭으로 리디렉션됩니다. 이 페이지에 나열된 비밀은 다시 승인해야 하는 비밀만 표시하도록 필터링됩니다. 다시 인증해야 하는 암호에 대해 **[!UICONTROL 인증 필요]**&#x200B;를 선택하십시오.
+[!UICONTROL Secrets] 탭으로 리디렉션됩니다. 이 페이지에 나열된 비밀은 다시 승인해야 하는 비밀만 표시하도록 필터링됩니다. 다시 승인해야 하는 암호에 대해 **[!UICONTROL Auth Needed]**&#x200B;을(를) 선택하십시오.
 
-![[!UICONTROL 암호] 탭에서 [!DNL LinkedIn] 암호에 대해 [!UICONTROL 인증 필요]를 강조 표시합니다.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+![[!UICONTROL Secret] 암호에 대해 [!UICONTROL Auth Needed]을(를) 강조 표시하는 [!DNL LinkedIn] 탭입니다.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 [!DNL LinkedIn] 자격 증명을 입력하라는 대화 상자가 나타납니다. 화면의 지침에 따라 암호를 다시 인증합니다.
 
 ### [!UICONTROL [!DNL Amazon] OAuth 2] {#amazon-oauth2}
 
-[!DNL Amazon] OAuth 2 암호를 만들려면 **[!UICONTROL Type]** 드롭다운에서 **[!UICONTROL [!DNL Amazon]OAuth 2]**&#x200B;을(를) 선택합니다. **[!UICONTROL 암호 만들기]**&#x200B;를 선택합니다.
+[!DNL Amazon] OAuth 2 암호를 만들려면 **[!UICONTROL [!DNL Amazon] OAuth 2]** 드롭다운에서 **[!UICONTROL Type]**&#x200B;을(를) 선택합니다. 그 다음 **[!UICONTROL Create Secret]**&#x200B;를 선택합니다.
 
-![[!UICONTROL Type] 필드가 강조 표시된 [!UICONTROL 암호 만들기] 탭.](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
+![[!UICONTROL Create Secret] 필드가 강조 표시된 [!UICONTROL Type] 탭입니다.](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
 
-[!DNL Amazon]을(를) 통해 암호를 수동으로 승인해야 함을 알리는 팝오버가 나타납니다. 계속하려면 **[!UICONTROL [!DNL Amazon]]**&#x200B;을(를) 사용하여 암호 만들기 및 권한 부여를 선택하십시오.
+[!DNL Amazon]을(를) 통해 암호를 수동으로 승인해야 함을 알리는 팝오버가 나타납니다. 계속하려면 **[!UICONTROL Create & Authorize secret with [!DNL Amazon]]**&#x200B;을(를) 선택하십시오.
 
 ![Amazon 인증 팝오버에서 &quot;Amazon으로 암호 만들기 및 승인&quot; 단추를 강조 표시합니다.](../../images/ui/event-forwarding/secrets/amazon-authorization.png)
 
 [!DNL Amazon] 자격 증명을 입력하라는 대화 상자가 나타납니다. 화면의 지침에 따라 데이터에 이벤트 전달 액세스 권한을 부여합니다.
 
-인증 프로세스가 완료되면 새로 만든 암호를 볼 수 있는 **[!UICONTROL 암호]** 탭으로 돌아갑니다. 여기에서 암호의 상태와 만료일을 볼 수 있습니다.
+인증 프로세스가 완료되면 새로 만든 암호를 볼 수 있는 **[!UICONTROL Secrets]** 탭으로 돌아갑니다. 여기에서 암호의 상태와 만료일을 볼 수 있습니다.
 
-![새로 만든 암호를 강조 표시하는 [!UICONTROL 암호] 탭](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
+![새로 만든 암호를 강조 표시하는 [!UICONTROL Secret] 탭입니다.](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
 
 ## 암호 편집
 
-속성에 대한 암호를 만들면 **[!UICONTROL 암호]** 작업 영역에서 해당 암호를 찾을 수 있습니다. 기존 비밀의 세부 정보를 편집하려면 목록에서 해당 이름을 선택합니다.
+속성에 대한 비밀을 만든 후에는 **[!UICONTROL Secrets]** 작업 영역에 나열된 암호를 찾을 수 있습니다. 기존 비밀의 세부 정보를 편집하려면 목록에서 해당 이름을 선택합니다.
 
 ![편집할 암호 선택](../../images/ui/event-forwarding/secrets/edit-secret.png)
 
@@ -248,13 +248,13 @@ Google 계정에 대한 자격 증명을 입력할 수 있는 대화 상자가 �
 
 | 암호 유형 | 프로토콜 다시 시도 |
 | --- | --- |
-| [!UICONTROL 토큰] | 암호 교환을 다시 시도하려면 **[!UICONTROL 교환 암호]**&#x200B;를 선택하십시오. 이 컨트롤은 암호에 연결된 환경이 있을 때만 사용할 수 있습니다. |
-| [!UICONTROL HTTP] | 암호에 연결된 환경이 없는 경우 **[!UICONTROL 암호 교환]**&#x200B;을 선택하여 base64로 자격 증명을 교환하세요. 환경이 연결되어 있으면 **[!UICONTROL Exchange 및 암호 배포]**&#x200B;를 선택하여 base64로 Exchange를 수행하고 암호를 배포합니다. |
-| [!UICONTROL OAuth 2] | 자격 증명을 교환하고 인증 공급자로부터 액세스 토큰을 반환하려면 **[!UICONTROL 토큰 생성]**&#x200B;을 선택하십시오. |
+| [!UICONTROL Token] | 비밀 교환을 다시 시도하려면 **[!UICONTROL Exchange Secret]**&#x200B;을(를) 선택하십시오. 이 컨트롤은 암호에 연결된 환경이 있을 때만 사용할 수 있습니다. |
+| [!UICONTROL HTTP] | 암호에 연결된 환경이 없는 경우 **[!UICONTROL Exchange Secret]**&#x200B;을(를) 선택하여 base64로 자격 증명을 교환하세요. 환경이 연결되어 있으면 **[!UICONTROL Exchange and Deploy Secret]**&#x200B;을(를) 선택하여 base64로 교환하고 암호를 배포합니다. |
+| [!UICONTROL OAuth 2] | 자격 증명을 교환하고 인증 공급자로부터 액세스 토큰을 반환하려면 **[!UICONTROL Generate Token]**&#x200B;을(를) 선택하십시오. |
 
 ## 암호 삭제
 
-**[!UICONTROL 암호]** 작업 영역에서 기존 암호를 삭제하려면 **[!UICONTROL 삭제]**&#x200B;를 선택하기 전에 이름 옆에 있는 확인란을 선택하십시오.
+**[!UICONTROL Secrets]** 작업 영역에서 기존 암호를 삭제하려면 **[!UICONTROL Delete]**&#x200B;을(를) 선택하기 전에 이름 옆에 있는 확인란을 선택하십시오.
 
 ![암호 삭제](../../images/ui/event-forwarding/secrets/delete.png)
 
@@ -262,7 +262,7 @@ Google 계정에 대한 자격 증명을 입력할 수 있는 대화 상자가 �
 
 이벤트 전달에서 암호를 사용하려면 먼저 암호 자체를 참조하는 [데이터 요소](../managing-resources/data-elements.md)를 만들어야 합니다. 데이터 요소를 저장한 후 이벤트 전달 [규칙](../managing-resources/rules.md)에 데이터 요소를 포함하고 해당 규칙을 [라이브러리](../publishing/libraries.md)에 추가하여 [빌드](../publishing/builds.md)로서 Adobe 서버에 배포할 수 있습니다.
 
-데이터 요소를 만들 때 **[!UICONTROL 코어]** 확장을 선택한 다음 데이터 요소 유형으로 **[!UICONTROL 암호]**&#x200B;를 선택합니다. 오른쪽 패널은 데이터 요소에 최대 세 개의 비밀([!UICONTROL 개발], [!UICONTROL 스테이징] 및 [!UICONTROL 프로덕션]에 대해 각각 하나씩)을 할당하도록 드롭다운 컨트롤을 업데이트하고 제공합니다.
+데이터 요소를 만들 때 **[!UICONTROL Core]** 확장을 선택한 다음 데이터 요소 유형으로 **[!UICONTROL Secret]**&#x200B;을(를) 선택합니다. 오른쪽 패널은 데이터 요소에 최대 세 개의 비밀([!UICONTROL Development], [!UICONTROL Staging] 및 [!UICONTROL Production]에 대해 각각 하나씩)을 할당하도록 드롭다운 컨트롤을 업데이트하고 제공합니다.
 
 ![데이터 요소](../../images/ui/event-forwarding/secrets/data-element.png)
 

@@ -4,7 +4,7 @@ description: Adobe Experience Platform 내의 라이선스 사용 및 용량 제
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 source-git-commit: ae0c626eaad66f663c9d97137087b2cca24d747e
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1605'
 ht-degree: 6%
 
 ---
@@ -58,7 +58,7 @@ Experience Platform의 보호 기능에 대한 자세한 내용은 [Real-Time CD
    - 이러한 500개의 스트리밍 대상 중 최대 Edge 대상 수는 150개입니다
 - 스트리밍 수집을 위한 초기 통합 처리량은 초당 레코드 1500개(rps)입니다
    - 이 결합된 스트리밍 처리량은 프로덕션 및 개발 샌드박스에서 실시간 고객 프로필로 수집을 스트리밍하기 위해 초당 결합된 최대 인바운드 이벤트를 측정합니다.
-   - 초당 최대 13,500개의 레코드로 스트리밍 세분화 지원을 추가로 구매할 수 있습니다. 추가 권한 구매에 대한 자세한 내용은 [Real-Time CDP 제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)에서 확인할 수 있습니다.
+   - 초당 최대 13,500개의 레코드로 스트리밍 세분화 지원을 추가로 구매할 수 있습니다. 추가 권한 구매에 대한 자세한 내용은 [Real-Time CDP 제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)에서 확인할 수 있습니다.
 
 대상자 수용작업량은 **샌드박스** 수준입니다. 즉, 조직에 있는 모든 샌드박스에 500개의 스트리밍 대상을 가질 수 있으며, 이 중 150개는 에지 대상이 될 수 있습니다.
 
@@ -72,7 +72,7 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 
 ## 액세스 {#access}
 
-용량 개요에 액세스하려면 **[!UICONTROL 라이선스 사용량]**, **[!UICONTROL 용량]**&#x200B;을 선택하십시오.
+용량 개요에 액세스하려면 **[!UICONTROL License usage]**, **[!UICONTROL Capacity]**&#x200B;을(를) 차례로 선택합니다.
 
 ![용량 섹션에 액세스하는 메서드가 강조 표시되어 있습니다.](/help/landing/images/capacity/access-capacity.png)
 
@@ -82,7 +82,7 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 
 ### 경고 내역 {#alert-history}
 
-**[!UICONTROL 경고 기록]** 섹션에는 조직 내 가장 최근 용량 위반 목록이 표시됩니다.
+**[!UICONTROL Alert history]** 섹션에는 조직 내에서 가장 최근에 발생한 용량 위반 목록이 표시됩니다.
 
 ![경고 기록 섹션이 표시됩니다.](/help/landing/images/capacity/alert-history.png)
 
@@ -92,7 +92,7 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 | 경고 | 샌드박스에서 위반된 용량입니다. |
 | 타임스탬프 | 위반이 발생한 데이터 및 시간입니다. |
 
-조직의 전체 알림 기록을 보려면 ![점 세 개 아이콘](/help/images/icons/more.png)을 선택한 다음 **[!UICONTROL 모두 보기]**&#x200B;를 선택하십시오.
+조직의 전체 알림 기록을 보려면 ![점 3개 아이콘](/help/images/icons/more.png)을 선택한 다음 **[!UICONTROL View all]**&#x200B;을(를) 선택하십시오.
 
 ![조직에 대한 전체 경고 기록이 표시됩니다.](/help/landing/images/capacity/full-alert-history.png)
 
@@ -127,7 +127,7 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 
 ![선택한 샌드박스의 스트리밍 처리량에 대한 자세한 정보를 보여주는 스트리밍 처리량 페이지가 표시됩니다.](/help/landing/images/capacity/streaming-capacity-allocation.png)
 
-조직의 스트리밍 처리량 용량을 업데이트하려면 **[!UICONTROL 용량 할당]**&#x200B;을 선택하세요.
+조직의 스트리밍 처리량 용량을 업데이트하려면 **[!UICONTROL Allocate capacities]**&#x200B;을(를) 선택하십시오.
 
 ![스트리밍 처리량 세부 정보 페이지에서 [용량 할당] 단추가 강조 표시됩니다.](/help/landing/images/capacity/select-allocate.png)
 
@@ -141,11 +141,11 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 >
 >값이 100 순서가 아니면 그에 따라 반올림되거나 내림됩니다.
 
-용량 할당을 업데이트한 후 **[!UICONTROL 저장]**&#x200B;을 선택하여 업데이트를 완료합니다. 변경 사항이 조직에 반영되기까지 최대 10분이 소요될 수 있습니다.
+용량 할당을 업데이트한 후 **[!UICONTROL Save]**&#x200B;을(를) 선택하여 업데이트를 완료합니다. 변경 사항이 조직에 반영되기까지 최대 10분이 소요될 수 있습니다.
 
 #### 대상자 수 {#audience-count}
 
-**[!UICONTROL 스트리밍 대상 수]** 및 **[!UICONTROL Edge 대상 수]** 섹션에는 샌드박스 내의 스트리밍 및 Edge 대상 수와 샌드박스 내에서 허용되는 최대 스트리밍 및 Edge 대상 수가 표시됩니다.
+**[!UICONTROL Streaming audience count]** 및 **[!UICONTROL Edge audience count]** 섹션에는 샌드박스 내의 스트리밍 및 Edge 대상 수와 샌드박스 내에서 허용되는 최대 스트리밍 및 Edge 대상 수가 표시됩니다.
 
 ![대상자 수 섹션이 표시됩니다.](/help/landing/images/capacity/audience-count.png)
 
@@ -169,13 +169,13 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 | 기여 요인 | 정의 | 사용 사례에 미치는 영향 | 모범 사례 |
 | --- | --- | --- | --- |
 | 일괄 처리-스트리밍 전환 | 스트리밍으로 전환된 일괄 작업 로드는 처리량을 크게 증가시켜 성능과 리소스 할당에 영향을 줄 수 있습니다. 예를 들어, 비율 제한 없이 이벤트 후에 벌크 프로필 업데이트를 수행하는 경우입니다. | 짧은 지연 처리가 필요하지 않은 일괄 사용 사례에는 스트리밍 전략이 필요하지 않습니다. | 사용 사례 요구 사항 평가 일괄 아웃바운드 마케팅의 경우 스트리밍 대신 [일괄 처리 수집](/help/ingestion/batch-ingestion/overview.md)을 사용하여 데이터 수집을 보다 효율적으로 관리하는 것이 좋습니다. |
-| 불필요한 데이터 수집 | 개인화에 필요하지 않은 데이터를 수집하면 가치를 추가하지 않고 처리량이 증가하여 리소스를 낭비할 수 있습니다. 예를 들어 관련성에 관계없이 모든 분석 트래픽을 프로필로 수집합니다. | 관련 없는 데이터가 너무 많으면 노이즈가 발생하여 영향을 미치는 데이터 포인트를 식별하기가 더 어려워집니다. 또한 대상자 및 프로필을 정의하고 관리할 때 마찰이 발생할 수 있습니다. | 사용 사례에 필요한 데이터만 수집합니다. 불필요한 데이터를 필터링해야 합니다.<ul><li>**Adobe Analytics**: [행 수준 필터링](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)을 사용하여 데이터 섭취를 최적화합니다.</li><li>**소스**: [[!DNL Flow Service] API를 사용하여 &#x200B;](/help/sources/tutorials/api/filter.md) 및 [!DNL Snowflake]과(와) 같은 지원되는 소스에 대해 행 수준 데이터를 필터링[!DNL Google BigQuery]합니다.</li></li>**Edge 데이터스트림**: WebSDK에서 들어오는 트래픽의 행 수준 필터링을 수행하려면 [동적 데이터스트림](/help/datastreams/configure-dynamic-datastream.md)을 구성하십시오.</li></ul> |
+| 불필요한 데이터 수집 | 개인화에 필요하지 않은 데이터를 수집하면 가치를 추가하지 않고 처리량이 증가하여 리소스를 낭비할 수 있습니다. 예를 들어 관련성에 관계없이 모든 분석 트래픽을 프로필로 수집합니다. | 관련 없는 데이터가 너무 많으면 노이즈가 발생하여 영향을 미치는 데이터 포인트를 식별하기가 더 어려워집니다. 또한 대상자 및 프로필을 정의하고 관리할 때 마찰이 발생할 수 있습니다. | 사용 사례에 필요한 데이터만 수집합니다. 불필요한 데이터를 필터링해야 합니다.<ul><li>**Adobe Analytics**: [행 수준 필터링](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)을 사용하여 데이터 섭취를 최적화합니다.</li><li>**소스**: [[!DNL Flow Service] API를 사용하여 ](/help/sources/tutorials/api/filter.md) 및 [!DNL Snowflake]과(와) 같은 지원되는 소스에 대해 행 수준 데이터를 필터링[!DNL Google BigQuery]합니다.</li></li>**Edge 데이터스트림**: WebSDK에서 들어오는 트래픽의 행 수준 필터링을 수행하려면 [동적 데이터스트림](/help/datastreams/configure-dynamic-datastream.md)을 구성하십시오.</li></ul> |
 
 ## 비디오 개요 {#video}
 
 다음 비디오에서는 용량에 대한 개요를 제공합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475280/?learn=on&enablevpops&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## 자주 묻는 질문 {#faq}
 

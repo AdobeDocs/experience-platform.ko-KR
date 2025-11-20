@@ -5,8 +5,8 @@ description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이�
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 23%
+source-wordcount: '594'
+ht-degree: 24%
 
 ---
 
@@ -20,16 +20,16 @@ ht-degree: 23%
 >id="platform_permissions_roles_about_create"
 >title="새 역할 만들기"
 >abstract="Experience Platform 인스턴스와 상호 작용하는 사용자를 더 잘 분류하기 위해 새로운 역할을 만듭니다. 예를 들어 내부 마케팅 팀의 역할을 생성하고 규제 건강 데이터(RHD) 레이블을 해당 역할에 적용하여 내부 마케팅 팀이 개인건강정보(PHI)에 액세스할 수 있도록 할 수 있습니다. 또는 외부 에이전시에 대한 역할을 생성하고 해당 역할에 RHD 레이블을 적용하지 않음으로써 PHI 데이터에 대한 해당 역할의 액세스를 거부할 수도 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ko" text="역할 관리"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="역할 관리"
 >additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="역할에 레이블 적용"
 
-새 역할을 만들려면 사이드바에서 **[!UICONTROL 역할]** 탭을 선택하고 **[!UICONTROL 역할 만들기]**&#x200B;를 선택하십시오.
+새 역할을 만들려면 사이드바에서 **[!UICONTROL Roles]** 탭을 선택하고 **[!UICONTROL Create Role]**&#x200B;을(를) 선택합니다.
 
 ![flac-new-role](../../images/flac-ui/flac-new-role.png)
 
-**[!UICONTROL 새 역할 만들기]** 대화 상자가 나타나고 이름과 선택적 설명을 입력하라는 메시지가 표시됩니다.
+**[!UICONTROL Create a new role]** 대화 상자가 나타나고 이름 및 설명(선택 사항)을 입력하라는 메시지가 표시됩니다.
 
-완료되면 **[!UICONTROL 확인]**&#x200B;을 선택합니다.
+완료되면 **[!UICONTROL Confirm]**&#x200B;을(를) 선택합니다.
 
 ![flac-create-new-role](../../images/flac-ui/flac-create-new-role.png)
 
@@ -45,11 +45,11 @@ ht-degree: 23%
 
 ![flac 추가 리소스 추가됨](../../images/flac-ui/flac-additional-resources-added.png)
 
-드롭다운 메뉴를 사용하여 역할에 포함할 리소스 권한을 선택합니다. 역할에 포함할 모든 리소스에 대해 이 작업을 반복합니다. 완료되면 **[!UICONTROL 저장 및 종료]**&#x200B;를 선택합니다.
+드롭다운 메뉴를 사용하여 역할에 포함할 리소스 권한을 선택합니다. 역할에 포함할 모든 리소스에 대해 이 작업을 반복합니다. 완료되면 **[!UICONTROL Save and exit]**&#x200B;을(를) 선택합니다.
 
 ![flac-save-resources](../../images/flac-ui/flac-save-resources.png)
 
-새 역할이 만들어졌고 **[!UICONTROL 역할]** 페이지로 리디렉션됩니다. 그러면 새로 만든 역할이 목록에 표시됩니다.
+새 역할이 만들어졌고 **[!UICONTROL Roles]** 페이지로 리디렉션됩니다. 그러면 새로 만든 역할이 목록에 나타납니다.
 
 ![flac-role 저장됨](../../images/flac-ui/flac-role-saved.png)
 
@@ -57,29 +57,29 @@ ht-degree: 23%
 
 다음 비디오는 새 역할을 만들고 해당 역할에 대한 사용자를 관리하는 방법에 대한 이해를 돕기 위한 것입니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423941/?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## 역할 복제
 
-기존 역할을 복제하려면 **[!UICONTROL 역할]** 탭에서 역할을 선택하십시오. 또는 필터 옵션을 사용하여 결과를 필터링하여 복제할 역할을 찾습니다.
+기존 역할을 복제하려면 **[!UICONTROL Roles]** 탭에서 역할을 선택합니다. 또는 필터 옵션을 사용하여 결과를 필터링하여 복제할 역할을 찾습니다.
 
 ![flac-duplicate-role](../../images/flac-ui/flac-duplicate-role.png)
 
-그런 다음 화면 오른쪽 상단에서 **[!UICONTROL 복제]**&#x200B;를 선택합니다.
+그런 다음 화면 오른쪽 상단에서 **[!UICONTROL Duplicate]**&#x200B;을(를) 선택합니다.
 
 ![flac-duplicate](../../images/flac-ui/flac-duplicate.png)
 
-**[!UICONTROL 역할 복제]** 대화 상자가 나타나고 복제를 확인하라는 메시지가 표시됩니다.
+**[!UICONTROL Duplicate role]** 대화 상자가 나타나고 복제를 확인하는 메시지가 표시됩니다.
 
 ![flac-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
 
 그런 다음 역할의 이름 및 권한을 변경할 수 있는 역할의 세부 사항 페이지로 이동합니다. 세부 정보, 레이블 및 샌드박스는 이전 역할과 중복됩니다. 사용자 탭을 통해 사용자를 추가해야 합니다. 역할에 세부 정보, 레이블, 샌드박스 및 사용자를 추가하는 방법에 대한 자세한 내용을 보려면 [역할에 대한 권한 관리](permissions.md) 문서를 볼 수 있습니다.
 
-왼쪽 화살표를 클릭하여 **[!UICONTROL 역할]** 탭으로 돌아갑니다.
+왼쪽 화살표를 클릭하여 **[!UICONTROL Roles]** 탭으로 돌아갑니다.
 
 ![flac-역할로 돌아가기](../../images/flac-ui/flac-return-to-roles.png)
 
-**[!UICONTROL 역할]** 페이지의 목록에 새 역할이 나타납니다.
+**[!UICONTROL Roles]** 페이지의 목록에 새 역할이 나타납니다.
 
 ![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
 
@@ -89,11 +89,11 @@ ht-degree: 23%
 
 ![flac-role-delete](../../images/flac-ui/flac-role-delete.png)
 
-**[!UICONTROL 사용자 역할 삭제]** 대화 상자가 나타나고 삭제를 확인하는 메시지가 표시됩니다.
+**[!UICONTROL Delete user role]** 대화 상자가 나타나고 삭제를 확인하는 메시지가 표시됩니다.
 
 ![flac-confirm-role-delete](../../images/flac-ui/flac-confirm-role-delete.png)
 
-**[!UICONTROL 역할]** 탭으로 돌아갑니다.
+**[!UICONTROL Roles]** 탭으로 돌아갑니다.
 
 ## 다음 단계
 

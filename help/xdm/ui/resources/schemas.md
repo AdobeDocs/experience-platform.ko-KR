@@ -31,7 +31,7 @@ ht-degree: 1%
 
 ![[!UICONTROL Create Schema]이(가) 강조 표시되고 &#39;스키마 유형 선택&#39; 드롭다운이 표시된 스키마 작업 영역](../../images/ui/resources/schemas/create-schema.png).
 
-## 관계 스키마 만들기 {#create-relational-schema}
+## 관계형 스키마 만들기 {#create-relational-schema}
 
 >[!AVAILABILITY]
 >
@@ -83,8 +83,8 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->저장되면 [!UICONTROL Type] 사이드바의 [!UICONTROL &#x200B; Schema properties] 필드가 [!UICONTROL Relational] 스키마임을 나타냅니다. 스키마 인벤토리 보기의 세부 정보 사이드바에도 표시됩니다.
->&#x200B;>![관계형 형식이 강조 표시된 빈 관계형 스키마 구조를 보여 주는 스키마 편집기 캔버스.](../../images/ui/resources/schemas/relational-empty-canvas.png)
+>저장되면 [!UICONTROL Type] 사이드바의 [!UICONTROL  Schema properties] 필드가 [!UICONTROL Relational] 스키마임을 나타냅니다. 스키마 인벤토리 보기의 세부 정보 사이드바에도 표시됩니다.
+>![관계형 형식이 강조 표시된 빈 관계형 스키마 구조를 보여 주는 스키마 편집기 캔버스.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### DDL 파일 업로드 {#upload-ddl-file}
 
@@ -258,7 +258,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 >[!IMPORTANT]
 >
 >**[!UICONTROL Remove]**&#x200B;을(를) 선택하면 필드 그룹 자체에서 필드가 삭제되어 해당 필드 그룹을 사용하는 *모든* 스키마에 영향을 줍니다.
->&#x200B;>**필드 그룹을 포함하는 모든 스키마에서 필드를 제거**&#x200B;하려는 경우가 아니면 이 옵션을 사용하지 마십시오.
+>**필드 그룹을 포함하는 모든 스키마에서 필드를 제거**&#x200B;하려는 경우가 아니면 이 옵션을 사용하지 마십시오.
 
 필드 그룹에서 필드를 삭제하려면 캔버스에서 필드를 선택하고 오른쪽 레일에서 **[!UICONTROL Remove]**&#x200B;을(를) 선택합니다. 이 예제에서는 `taxId` 그룹의 **[!UICONTROL Demographic Details]** 필드를 보여줍니다.
 

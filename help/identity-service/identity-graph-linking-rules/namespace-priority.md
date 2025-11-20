@@ -4,7 +4,7 @@ description: ID 서비스의 네임스페이스 우선 순위에 대해 알아�
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 source-git-commit: 7df0d0c7eb97760190ac8b20d1b74472b87e8b6a
 workflow-type: tm+mt
-source-wordcount: '2120'
+source-wordcount: '2119'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 모든 고객 구현은 특정 조직의 목표를 충족하도록 고유하고 맞춤화되며, 따라서 지정된 네임스페이스의 중요성은 고객마다 다릅니다. 실제 사례는 다음과 같습니다.
 
 * 회사에서 각 전자 메일 주소를 단일 개인 엔터티를 나타내도록 간주할 수 있으므로 [ID 설정](./identity-settings-ui.md)을 사용하여 전자 메일 네임스페이스를 고유하게 구성할 수 있습니다. 그러나 다른 회사에서는 1인 엔티티를 여러 개의 이메일 주소가 있는 것으로 나타내어 이메일 네임스페이스를 고유하지 않도록 구성할 수 있습니다. 이러한 회사에서는 여러 이메일 주소에 연결된 1인 식별자가 있을 수 있도록 CRMID 네임스페이스와 같은 고유한 다른 ID 네임스페이스를 사용해야 합니다.
-* &quot;로그인 ID&quot; 네임스페이스를 사용하여 온라인 동작을 수집할 수 있습니다. 이 로그인 ID는 CRMID와 1:1 관계를 가질 수 있으며, 이는 CRM 시스템의 속성을 저장하고 가장 중요한 네임스페이스로 간주될 수 있습니다. 이 경우 CRMID 네임스페이스가 개인을 더 정확하게 나타내는 반면 로그인 ID 네임스페이스가 두 번째로 가장 중요하다고 판단하게 됩니다.
+* &quot;로그인 ID&quot; 네임스페이스를 사용하여 온라인 동작을 수집할 수 있습니다. 이 로그인 ID는 CRMID와 1:1 관계를 가질 수 있으며, 이는 CRM 시스템의 특성을 저장하고 가장 중요한 네임스페이스로 간주될 수 있습니다. 이 경우 CRMID 네임스페이스가 개인을 더 정확하게 나타내는 반면 로그인 ID 네임스페이스가 두 번째로 가장 중요하다고 판단하게 됩니다.
 
 프로필 및 관련 ID 그래프의 형성 및 분할 방식에 영향을 주므로 ID 서비스에서 네임스페이스의 중요성을 반영하는 구성을 수행해야 합니다.
 
@@ -65,7 +65,7 @@ ID는 실제 개체를 나타냅니다. ID 그래프에 표시되는 객체는 �
 
 ## 네임스페이스 우선 순위 사용
 
-현재 네임스페이스 우선 순위는 실시간 고객 프로필의 시스템 동작에 영향을 줍니다. 아래 다이어그램은 이 개념을 보여 줍니다. 자세한 내용은 [Adobe Experience Platform 및 응용 프로그램 아키텍처 다이어그램](https://experienceleague.adobe.com/ko/docs/blueprints-learn/architecture/architecture-overview/platform-applications)에 대한 안내서를 참조하십시오.
+현재 네임스페이스 우선 순위는 실시간 고객 프로필의 시스템 동작에 영향을 줍니다. 아래 다이어그램은 이 개념을 보여 줍니다. 자세한 내용은 [Adobe Experience Platform 및 응용 프로그램 아키텍처 다이어그램](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications)에 대한 안내서를 참조하십시오.
 
 ![네임스페이스 우선 순위 응용 프로그램 범위의 다이어그램입니다.](../images/namespace-priority/application-scope.png "네임스페이스 우선 순위 응용 프로그램 범위의 다이어그램입니다."){zoomable="yes"}
 
@@ -78,7 +78,7 @@ ID는 실제 개체를 나타냅니다. ID 그래프에 표시되는 객체는 �
 * 지정된 샌드박스에 대한 ID 설정을 구성하면 경험 이벤트에 대한 기본 ID가 구성에서 가장 높은 네임스페이스 우선 순위에 따라 결정됩니다.
    * 이는 체험 행사가 그 자체로 역동적이기 때문이다. ID 맵에는 3개 이상의 ID가 포함될 수 있으며 네임스페이스 우선 순위는 가장 중요한 네임스페이스가 경험 이벤트에 연결되어 있도록 합니다.
 * 따라서 다음 구성 **은(는) 더 이상 실시간 고객 프로필에서 사용되지 않습니다**:
-   * 웹 SDK, Mobile SDK 또는 Edge Network API를 사용하여 `identityMap`에서 ID를 보낼 때 기본 ID 구성(`primary=true`)이 사용됩니다(ID 네임스페이스 및 ID 값은 프로필에서 계속 사용됨). **참고**: 데이터 레이크 저장소 또는 Adobe Target과 같은 실시간 고객 프로필 외부의 서비스는 기본 ID 구성(`primary=true`)을 계속 사용합니다.
+   * 웹 SDK, Mobile SDK 또는 Edge Network API를 사용하여 `primary=true`에서 ID를 보낼 때 기본 ID 구성(`identityMap`)이 사용됩니다(ID 네임스페이스 및 ID 값은 프로필에서 계속 사용됨). **참고**: 데이터 레이크 저장소 또는 Adobe Target과 같은 실시간 고객 프로필 외부의 서비스는 기본 ID 구성(`primary=true`)을 계속 사용합니다.
    * XDM 경험 이벤트 클래스 스키마에서 기본 ID로 표시된 모든 필드.
    * Adobe Analytics 소스 커넥터(ECID 또는 AAID)의 기본 기본 ID 설정.
 * 반면 **네임스페이스 우선 순위는 프로필 레코드의 기본 ID를 결정하지 않습니다**.
@@ -204,17 +204,17 @@ XDM 스키마에 대한 자세한 내용은 [스키마 개요](../../xdm/home.md
 
 #### 에지 세분화
 
-특정 이벤트에서는 [XDM 필드](../../xdm/ui/fields/identity.md)(으)로 전송된 ID가 무시되고 세그먼트 멤버십 메타데이터 저장소에 사용되지 않으므로 개인 엔터티를 나타내는 모든 네임스페이스가 `identityMap`에 포함되어 있는지 확인하십시오.
+특정 이벤트에서는 `identityMap`XDM 필드[(으)로 전송된 ID가 무시되고 세그먼트 멤버십 메타데이터 저장소에 사용되지 않으므로 개인 엔터티를 나타내는 모든 네임스페이스가 ](../../xdm/ui/fields/identity.md)에 포함되어 있는지 확인하십시오.
 
 * **이벤트 적용 가능성**: 이 동작은 Edge Network(예: WebSDK 및 Mobile SDK)로 직접 전송된 이벤트에만 적용됩니다. HTTP API 소스, 기타 스트리밍 소스 및 일괄 처리 소스와 함께 수집된 이벤트와 같이 [Experience Platform 허브](../../landing/edge-and-hub-comparison.md)에서 수집된 이벤트에는 이 제한이 적용되지 않습니다.
 * **Edge 세그멘테이션 특성**: 이 동작은 가장자리 세그멘테이션에만 적용됩니다. 배치 및 스트리밍 세분화는 허브에서 평가되는 별도의 서비스이며 동일한 프로세스를 따르지 않습니다. 자세한 내용은 [Edge 세그멘테이션 안내서](../../segmentation/methods/edge-segmentation.md)를 참조하십시오.
-* 자세한 내용은 [Adobe Experience Platform 및 응용 프로그램 아키텍처 다이어그램](https://experienceleague.adobe.com/ko/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) 및 [Edge Network 및 허브 비교](../../landing/edge-and-hub-comparison.md) 페이지를 참조하십시오.
+* 자세한 내용은 [Adobe Experience Platform 및 응용 프로그램 아키텍처 다이어그램](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) 및 [Edge Network 및 허브 비교](../../landing/edge-and-hub-comparison.md) 페이지를 참조하십시오.
 
 #### Edge Network 애플리케이션
 
 Edge Network의 응용 프로그램이 지체 없이 Edge 프로필에 액세스할 수 있도록 하려면 이벤트에 CRMID의 `primary=true`이(가) 포함되어 있는지 확인하십시오. 이렇게 하면 허브에서 ID 그래프 업데이트를 기다리지 않고 즉시 사용할 수 있습니다.
 
 * Adobe Target, Offer Decisioning 및 사용자 지정 Personalization 대상 등 Edge Network의 애플리케이션은 계속해서 이벤트의 기본 ID를 사용하여 Edge 프로필의 프로필에 액세스합니다.
-* Edge Network 동작에 대한 자세한 내용은 [Experience Platform 웹 SDK 및 Edge Network 아키텍처 다이어그램](https://experienceleague.adobe.com/ko/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment)을 참조하세요.
+* Edge Network 동작에 대한 자세한 내용은 [Experience Platform 웹 SDK 및 Edge Network 아키텍처 다이어그램](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment)을 참조하세요.
 * Web SDK에서 기본 ID를 구성하는 방법에 대한 자세한 내용은 [데이터 요소 유형](../../tags/extensions/client/web-sdk/data-element-types.md) 및 [Web SDK의 ID 데이터](../../web-sdk/identity/overview.md)에 대한 설명서를 참조하십시오.
 * ECID가 경험 이벤트에 포함되어 있는지 확인합니다. ECID가 누락된 경우 `primary=true`이(가) 있는 이벤트 페이로드에 추가되므로 예기치 않은 결과가 발생할 수 있습니다.

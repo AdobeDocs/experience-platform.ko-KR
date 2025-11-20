@@ -4,7 +4,7 @@ description: Adobe Experience Platform UI를 사용하여 계산된 속성을 �
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
 source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1497'
 ht-degree: 6%
 
 ---
@@ -19,67 +19,67 @@ Adobe Experience Platform에서 계산된 속성은 이벤트 수준 데이터�
 
 이 문서에서는 Adobe Experience Platform UI를 사용하여 계산된 속성을 만들고 업데이트하는 방법에 대한 안내서를 제공합니다.
 
-## 시작하기
+## 시작
 
-이 UI 안내서를 사용하려면 [!DNL Real-Time Customer Profiles] 관리와 관련된 다양한 [!DNL Experience Platform] 서비스를 이해해야 합니다. 이 안내서를 읽거나 UI에서 작업하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
+이 UI 안내서를 사용하려면 [!DNL Experience Platform] 관리와 관련된 다양한 [!DNL Real-Time Customer Profiles] 서비스를 이해해야 합니다. 이 안내서를 읽거나 UI에서 작업하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [[!DNL Real-Time Customer Profile]](../home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 
 ## 계산된 속성 보기 {#view}
 
-Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 프로필]**&#x200B;을 선택한 다음 **[!UICONTROL 계산된 특성]**&#x200B;을 선택하여 조직에 사용할 수 있는 계산된 특성 목록을 확인합니다. 여기에는 계산된 속성의 이름, 설명, 마지막 평가 날짜 및 마지막 평가 상태에 대한 정보가 포함됩니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Profiles]**&#x200B;을(를) 선택하고 **[!UICONTROL Computed attributes]**&#x200B;을(를) 선택하여 조직에 사용할 수 있는 계산된 특성 목록을 확인합니다. 여기에는 계산된 속성의 이름, 설명, 마지막 평가 날짜 및 마지막 평가 상태에 대한 정보가 포함됩니다.
 
-![[!UICONTROL 프로필] 섹션과 [!UICONTROL 계산된 특성] 탭이 강조 표시되어 사용자가 계산된 특성 검색 페이지에 액세스하는 방법을 보여 줍니다.](./images/ui/browse.png)
+![섹션 [!UICONTROL Profile]과(와) 탭 [!UICONTROL Computed attributes]이(가) 강조 표시되어 사용자가 계산된 특성 검색 페이지에 액세스하는 방법을 보여 줍니다.](./images/ui/browse.png)
 
 표시할 필드를 선택하려면 ![열 구성 아이콘](/help/images/icons/column-settings.png)을 선택하여 표시할 필드를 추가하거나 제거할 수 있습니다.
 
 | 필드 | 설명 |
 | ----- | ----------- |
-| [!UICONTROL 이름] | 계산된 속성의 표시 이름입니다. |
-| [!UICONTROL 설명] | 계산된 속성에 대한 설명입니다. |
-| [!UICONTROL 평가 메서드] | 계산된 속성에 대한 평가 메서드입니다. 지금은 **일괄 처리**&#x200B;만 지원됩니다. |
-| [!UICONTROL 마지막으로 평가됨] | 이 타임스탬프는 마지막으로 성공한 평가 실행을 나타냅니다. 이 타임스탬프에서 **이전**&#x200B;에 발생한 이벤트만 마지막으로 성공한 평가에서 고려됩니다. |
-| [!UICONTROL 마지막 평가 상태] | 계산된 속성이 마지막 평가 실행에서 성공적으로 계산되었는지 여부를 나타내는 상태입니다. 가능한 값은 **[!UICONTROL 성공]** 또는 **[!UICONTROL 실패]**&#x200B;입니다. |
-| [!UICONTROL 새로 고침 빈도] | 계산된 속성이 새로 고쳐질 빈도를 나타냅니다. 가능한 값은 시간별, 일별, 주별 또는 월별입니다. |
-| [!UICONTROL 빠른 새로 고침] | 이 연산 속성에 대해 빠른 새로 고침이 활성화되었는지 여부를 보여 주는 값입니다. 빠른 새로 고침을 활성화하면 계산된 속성을 주별, 격주 또는 월별 기준이 아닌 일별로 새로 고칠 수 있습니다. 이 값은 전환 확인 기간이 주 단위보다 긴 계산된 속성에만 적용할 수 있습니다. |
-| [!UICONTROL 라이프사이클 상태] | 계산된 속성의 현재 상태입니다. 가능한 상태는 세 가지가 있습니다. <ul><li>**[!UICONTROL 초안]:** 계산된 특성이 **없음**&#x200B;이(가) 스키마에 아직 필드를 만들지 않았습니다. 이 상태에서는 계산된 속성을 편집할 수 있습니다. </li><li>**[!UICONTROL 게시됨]:** 계산된 특성에 스키마에 생성된 필드가 있으며 사용할 준비가 되었습니다. 이 상태에서는 연산 속성 **을(를) 편집할 수 없습니다**.</li><li>**[!UICONTROL 비활성]:** 계산된 특성을 사용할 수 없습니다. 비활성 상태에 대한 자세한 내용은 [FAQ 페이지](./faq.md#inactive-status)를 참조하십시오. </li> |
-| [!UICONTROL 생성일] | 계산된 속성이 생성된 날짜와 시간을 보여 주는 타임스탬프입니다. |
-| [!UICONTROL 마지막 수정일] | 계산된 속성이 마지막으로 수정된 날짜와 시간을 보여 주는 타임스탬프입니다. |
+| [!UICONTROL Name] | 계산된 속성의 표시 이름입니다. |
+| [!UICONTROL Description] | 계산된 속성에 대한 설명입니다. |
+| [!UICONTROL Evaluation method] | 계산된 속성에 대한 평가 메서드입니다. 지금은 **일괄 처리**&#x200B;만 지원됩니다. |
+| [!UICONTROL Last evaluated] | 이 타임스탬프는 마지막으로 성공한 평가 실행을 나타냅니다. 이 타임스탬프에서 **이전**&#x200B;에 발생한 이벤트만 마지막으로 성공한 평가에서 고려됩니다. |
+| [!UICONTROL Last evaluation status] | 계산된 속성이 마지막 평가 실행에서 성공적으로 계산되었는지 여부를 나타내는 상태입니다. Possible values include **[!UICONTROL Success]** or **[!UICONTROL Failed]**. |
+| [!UICONTROL Refresh frequency] | An indication on how frequently the computed attribute is expected to be refreshed. Possible values include hourly, daily, weekly, or monthly. |
+| [!UICONTROL Fast refresh] | 이 연산 속성에 대해 빠른 새로 고침이 활성화되었는지 여부를 보여 주는 값입니다. 빠른 새로 고침을 활성화하면 계산된 속성을 주별, 격주 또는 월별 기준이 아닌 일별로 새로 고칠 수 있습니다. 이 값은 전환 확인 기간이 주 단위보다 긴 계산된 속성에만 적용할 수 있습니다. |
+| [!UICONTROL Lifecycle status] | 계산된 속성의 현재 상태입니다. 가능한 상태는 세 가지가 있습니다. <ul><li>**[!UICONTROL Draft]:** 계산된 특성에 아직 스키마에 필드가 만들어지지 않았습니다&#x200B;**not**. 이 상태에서는 계산된 속성을 편집할 수 있습니다. </li><li>**[!UICONTROL Published]:** 계산된 특성에 스키마에 생성된 필드가 있으며 사용할 준비가 되었습니다. In this state, the computed attribute **cannot** be edited.</li><li>**[!UICONTROL Inactive]:** The computed attribute is disabled. For more information about the inactive status, please read the [FAQ page](./faq.md#inactive-status). </li> |
+| [!UICONTROL Created] | 계산된 속성이 생성된 날짜와 시간을 보여 주는 타임스탬프입니다. |
+| [!UICONTROL Last modified] | 계산된 속성이 마지막으로 수정된 날짜와 시간을 보여 주는 타임스탬프입니다. |
 
-라이프사이클 상태에 따라 표시된 계산된 속성을 필터링할 수도 있습니다. ![단계](/help/images/icons/filter.png) 아이콘을 선택하십시오.
+라이프사이클 상태에 따라 표시된 계산된 속성을 필터링할 수도 있습니다. ![funnel](/help/images/icons/filter.png) 아이콘을 선택합니다.
 
-![필터 아이콘이 강조 표시되어 있습니다.](./images/ui/select-filter.png)
+![The filter icon is highlighted.](./images/ui/select-filter.png)
 
-이제 계산된 특성을 상태([!UICONTROL 초안], [!UICONTROL 게시됨] 및 [!UICONTROL 비활성])별로 필터링하도록 선택할 수 있습니다.
+You can now choose to filter the computed attributes by status ([!UICONTROL Draft], [!UICONTROL Published], and [!UICONTROL Inactive]).
 
-![계산된 특성을 필터링할 수 있는 옵션이 강조 표시되어 있습니다. 이러한 옵션에는 [!UICONTROL 초안], [!UICONTROL 게시] 및 [!UICONTROL 비활성].](./images/ui/view-filters.png)이 포함됩니다.
+![The options tht you can filter the computed attributes by are highlighted. These options include [!UICONTROL Draft], [!UICONTROL Published], and [!UICONTROL Inactive].](./images/ui/view-filters.png)
 
-또한 계산된 속성을 선택하여 속성에 대한 자세한 내용을 볼 수 있습니다. 계산된 특성 세부 정보 페이지에 대한 자세한 내용은 [계산된 특성의 세부 정보 섹션 보기](#view-details)를 참조하십시오.
+Additionally, you can select a computed attribute to see more detailed information about it. For more information on the computed attributes details page, please read the [view a computed attribute&#39;s details section](#view-details).
 
 ## 계산된 속성 만들기 {#create}
 
-새 연산 속성을 만들려면 **[!UICONTROL 연산 속성 만들기]**&#x200B;를 선택하여 새 연산 속성 워크플로우를 입력합니다.
+새 계산된 특성을 만들려면 **[!UICONTROL Create computed attribute]**&#x200B;을(를) 선택하여 새 계산된 특성 워크플로를 입력합니다.
 
-![계산된 특성 만들기] 단추가 강조 표시되어 사용자가 계산된 특성 만들기 페이지에 도달하는 방법을 보여 줍니다.(./images/ui/create.png)
+![[!UICONTROL Create computed attributes] 단추가 강조 표시되어 사용자가 연산 속성 만들기 페이지에 도달하는 방법을 보여 줍니다.](./images/ui/create.png)
 
-**[!UICONTROL 계산된 특성 만들기]** 페이지가 나타납니다. 이 페이지에서는 생성하려는 계산된 속성에 대한 기본 정보를 추가할 수 있습니다.
+**[!UICONTROL Create computed attribute]** 페이지가 나타납니다. 이 페이지에서는 생성하려는 계산된 속성에 대한 기본 정보를 추가할 수 있습니다.
 
 | 필드 | 설명 |
 | ----- | ----------- |
-| [!UICONTROL 표시 이름] | 계산된 속성을 알 수 있는 이름입니다. 계산된 각 속성에 대해 이 표시 이름을 고유하게 유지해야 합니다. 가장 좋은 방법은 이 표시 이름에 계산된 속성과 관련된 식별자를 포함하는 것입니다. 예를 들어 &quot;지난 7일 동안의 신발 구매 금액 합계&quot;가 여기에 해당합니다. |
-| [!UICONTROL 필드 이름] | 다른 다운스트림 서비스에서 계산된 속성을 참조하는 데 사용되는 이름입니다. 이 이름은 표시 이름에서 자동으로 파생되며 camelCase로 작성됩니다. |
-| [!UICONTROL 설명] | 만들려는 계산된 속성에 대한 설명입니다. |
+| [!UICONTROL Display name] | 계산된 속성을 알 수 있는 이름입니다. You should keep this display name unique for each computed attribute. 가장 좋은 방법은 이 표시 이름에 계산된 속성과 관련된 식별자를 포함하는 것입니다. 예를 들어 &quot;지난 7일 동안의 신발 구매 금액 합계&quot;가 여기에 해당합니다. |
+| [!UICONTROL Field name] | 다른 다운스트림 서비스에서 계산된 속성을 참조하는 데 사용되는 이름입니다. 이 이름은 표시 이름에서 자동으로 파생되며 camelCase로 작성됩니다. |
+| [!UICONTROL Description] | 만들려는 계산된 속성에 대한 설명입니다. |
 
-![[!UICONTROL 계산된 특성 만들기] 페이지의 [!UICONTROL 기본 정보] 섹션이 강조 표시되어 있습니다.](./images/ui/basic-information.png)
+![The [!UICONTROL Basic information] section of the [!UICONTROL Create computed attribute] page is highlighted.](./images/ui/basic-information.png)
 
-계산된 속성 세부 정보를 추가한 후 규칙 정의를 시작할 수 있습니다.
+After adding the computed attribute details, you can start  defining your rules.
 
-### 이벤트 필터링 조건 지정
+### Specify event filtering conditions
 
-규칙을 만들려면 먼저 **[!UICONTROL 이벤트]** 섹션에서 특성을 선택하여 집계할 이벤트를 필터링합니다. 현재는 배열이 아닌 유형 이벤트 속성만 지원됩니다.
+To create a rule, first select attributes from the **[!UICONTROL Events]** section to filter down events that you want to aggregate on. Currently, only non-array type event attributes are supported.
 
-![[!UICONTROL 이벤트] 섹션이 강조 표시되어 있습니다.](./images/ui/events.png)
+![The [!UICONTROL Events] section is highlighted.](./images/ui/events.png)
 
 계산된 속성 정의에 사용할 속성을 선택한 후 이 값을 비교할 대상을 선택할 수 있습니다.
 
@@ -87,7 +87,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 프로필]**&#x200B;
 
 ### 집계 함수 적용
 
-이제 조건부 출력에서 필드에 함수를 적용할 수 있습니다. 먼저 집계 함수 유형을 선택합니다. 사용 가능한 옵션에는 [!UICONTROL 합계], [!UICONTROL 최소], [!UICONTROL 최대], [!UICONTROL 개수] 및 [!UICONTROL 가장 최근]이 포함됩니다. 이러한 함수에 대한 자세한 내용은 계산된 특성 개요의 [함수 섹션](./overview.md#functions)에서 찾을 수 있습니다.
+이제 조건부 출력에서 필드에 함수를 적용할 수 있습니다. 먼저 집계 함수 유형을 선택합니다. 사용 가능한 옵션은 [!UICONTROL Sum], [!UICONTROL Min], [!UICONTROL Max], [!UICONTROL Count] 및 [!UICONTROL Most Recent]입니다. 이러한 함수에 대한 자세한 내용은 계산된 특성 개요의 [함수 섹션](./overview.md#functions)에서 찾을 수 있습니다.
 
 ![계산된 특성 함수가 표시됩니다.](./images/ui/select-function.png)
 
@@ -110,7 +110,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 프로필]**&#x200B;
 
 집계 함수를 적용하는 동안 전환 확인 기간이 1주보다 큰 경우 빠른 새로 고침을 활성화할 수 있습니다.
 
-![빠른 새로 고침] 확인란이 강조 표시되어 있습니다.(./images/ui/enable-fast-refresh.png)
+![[!UICONTROL Fast Refresh] 확인란이 강조 표시되어 있습니다.](./images/ui/enable-fast-refresh.png)
 
 빠른 새로 고침을 사용하면 속성을 최신 상태로 유지할 수 있습니다. 이 옵션을 활성화하면 더 긴 전환 확인 기간에도 계산된 속성을 매일 새로 고칠 수 있으므로 사용자 활동에 빠르게 반응할 수 있습니다.
 
@@ -118,15 +118,15 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 프로필]**&#x200B;
 
 이러한 단계를 완료하면 이제 이 계산된 속성을 초안으로 저장하거나 즉시 게시하도록 선택할 수 있습니다.
 
-![초안으로 저장] 및 [!UICONTROL 게시] 단추가 강조 표시되어 있습니다.(./images/ui/draft-or-publish.png)
+![[!UICONTROL Save as draft] 및 [!UICONTROL Publish] 단추가 강조 표시되어 있습니다.](./images/ui/draft-or-publish.png)
 
 ## 계산된 속성의 세부 정보 보기 {#view-details}
 
-계산된 특성의 세부 정보를 보려면 [!UICONTROL **찾아보기**] 페이지에서 세부 정보를 보려는 계산된 특성을 선택하십시오.
+To view the details of a computed attribute, select the computed attribute you want to see details about on the [!UICONTROL **Browse**] page.
 
-![계산된 특성이 강조 표시됩니다.](./images/ui/select.png)
+![A computed attribute is highlighted.](./images/ui/select.png)
 
-페이지의 내용은 계산된 특성이 **[!UICONTROL 게시됨]**&#x200B;인지 **[!UICONTROL 초안]**&#x200B;인지 여부에 따라 다릅니다.
+The content of the page differs, depending if the computed attribute is **[!UICONTROL Published]** or in **[!UICONTROL Draft]**.
 
 ### 게시된 계산된 속성 {#published}
 
@@ -140,11 +140,11 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 프로필]**&#x200B;
 >
 >값 분포는 샘플링 작업 시 프로필에 대한 속성 값 분포를 반영합니다. 샘플 프로필의 계산된 속성 값은 일부 샘플 프로필에 대해 가장 최근에 병합된 프로필 값을 반영합니다.
 
-### 초안 계산된 속성 {#draft}
+### Draft computed attribute {#draft}
 
-초안 연산 속성을 선택하면 **[!UICONTROL 연산 속성 편집]** 페이지가 나타납니다. [!UICONTROL 계산된 특성 만들기] 페이지와 마찬가지로 이 페이지에서는 초안을 업데이트하거나 게시하기 전에 계산된 특성의 기본 정보와 정의를 편집할 수 있습니다.
+초안 연산 속성을 선택하면 **[!UICONTROL Edit computed attributes]** 페이지가 나타납니다. [!UICONTROL Create computed attributes] 페이지와 마찬가지로 이 페이지에서는 초안을 업데이트하거나 게시하기 전에 계산된 속성의 기본 정보와 해당 정의를 편집할 수 있습니다.
 
-![계산된 특성 [!UICONTROL 편집] 페이지가 표시됩니다.](./images/ui/edit.png)
+![[!UICONTROL Edit computed attributes] 페이지가 표시됩니다.](./images/ui/edit.png)
 
 ## 계산된 속성 사용 {#usage}
 
@@ -152,7 +152,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 프로필]**&#x200B;
 >
 >세그먼트 정의에서 **가장 최근** 함수와 함께 계산된 특성을 사용하는 경우 **반드시**&#x200B;계산된 특성 개체에 **값과 타임스탬프 값을 모두**&#x200B;포함해야 합니다.
 >
->예를 들어, 전자 메일 주소 필드가 가장 최근 함수를 가진 계산된 특성으로 채워지는 &quot;올바른 전자 메일 주소를 가진 모든 프로필&quot;을 찾는 세그먼트 정의를 만드는 경우 **반드시**&#x200B;에 전자 메일 주소 값이 **있고** 전자 메일 주소 타임스탬프가 있습니다.
+>For example, if you&#39;re creating a segment definition that is looking for &quot;All profiles that have a valid email address&quot; where the email address field is populated by a computed attribute with the most recent function, you **must** include both the email address&#39; value exists **and** the email address&#39; timestamp exists.
 
 계산된 특성을 만든 후에는 다른 다운스트림 서비스에서 **게시된** 계산된 특성을 사용할 수 있습니다. 계산된 속성은 프로필 결합 스키마에서 생성된 프로필 속성 필드이므로, 실시간 고객 프로필에 대해 계산된 속성 값을 조회하고 대상에서 사용하거나 대상에 대해 활성화하거나 Adobe Journey Optimizer의 여정에서 개인화에 사용할 수 있습니다.
 
@@ -160,7 +160,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 프로필]**&#x200B;
 >
 >계산된 특성 **은(는) 대상**&#x200B;컴포지션&#x200B;**에서 사용할 수 없습니다**.
 
-![세그먼트 빌더가 표시되어 계산된 특성을 세그먼트 정의 컴포지션의 일부로 표시합니다.](./images/ui/use-ca.png)
+![The Segment Builder is displayed, showing a computed attribute as part of the segment definition composition.](./images/ui/use-ca.png)
 
 ## 다음 단계
 

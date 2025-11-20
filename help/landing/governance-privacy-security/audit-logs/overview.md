@@ -6,7 +6,7 @@ feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1579'
 ht-degree: 29%
 
 ---
@@ -32,7 +32,7 @@ Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명
 
 기본적으로 감사 로그는 **누가**&#x200B;이(가) **무엇을** 작업하고 **언제**&#x200B;했는지 알려 줍니다. 로그에 기록된 각 작업에는 작업 유형, 날짜 및 시간, 작업을 수행한 사용자의 이메일 ID 및 작업 유형과 관련된 추가 속성을 나타내는 메타데이터가 포함됩니다.
 
-사용자가 작업을 수행하면 두 가지 유형의 감사 이벤트가 기록됩니다. 핵심 이벤트는 작업의 승인 결과([!UICONTROL allow] 또는 [!UICONTROL deny])를 캡처하는 반면 고급 이벤트는 실행 결과([!UICONTROL success] 또는 [!UICONTROL failure])를 캡처합니다. 여러 향상된 이벤트를 동일한 핵심 이벤트에 연결할 수 있습니다. 예를 들어 대상을 활성화할 때 핵심 이벤트는 [!UICONTROL 대상 업데이트] 작업의 인증을 기록하는 반면 향상된 이벤트는 여러 [!UICONTROL 세그먼트 활성화] 작업을 기록합니다.
+사용자가 작업을 수행하면 두 가지 유형의 감사 이벤트가 기록됩니다. 핵심 이벤트는 작업의 권한 부여 결과 [!UICONTROL allow] 또는 [!UICONTROL deny]을(를) 캡처하고 고급 이벤트는 실행 결과 [!UICONTROL success] 또는 [!UICONTROL failure]을(를) 캡처합니다. 여러 향상된 이벤트를 동일한 핵심 이벤트에 연결할 수 있습니다. 예를 들어 대상을 활성화할 때 핵심 이벤트는 [!UICONTROL Destination Update] 작업의 인증을 기록하는 반면 향상된 이벤트는 여러 [!UICONTROL Segment Activate] 작업을 기록합니다.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명
 
 조직에서 이 기능을 활성화하면 활동이 발생할 때 감사 로그가 자동으로 수집됩니다. 로그 수집을 수동으로 활성화할 필요가 없습니다.
 
-감사 로그를 보고 내보내려면 **[!UICONTROL 사용자 활동 로그 보기]** 액세스 제어 권한이 부여되어야 합니다([!UICONTROL 데이터 거버넌스] 범주 아래에 있음). Experience Platform 기능에 대한 개별 권한을 관리하는 방법을 알아보려면 [액세스 제어 문서](../../../access-control/home.md)를 참조하십시오.
+감사 로그를 보고 내보내려면 **[!UICONTROL View User Activity Log]** 범주 아래에 있는 [!UICONTROL Data Governance] 액세스 제어 권한이 부여되어야 합니다. Experience Platform 기능에 대한 개별 권한을 관리하는 방법을 알아보려면 [액세스 제어 문서](../../../access-control/home.md)를 참조하십시오.
 
 ## UI에서 감사 로그 관리 {#managing-audit-logs-in-the-ui}
 
@@ -85,13 +85,13 @@ Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명
 >title="지침"
 >abstract="<ul><li>왼쪽 탐색 영역에서 <b>감사</b>를 선택합니다. 감사 작업 영역에는 기록된 로그 목록이 기본적으로 가장 최근 항목 순으로 정렬되어 표시됩니다.</li>   <li> 참고: 감사 로그는 365일 동안 유지되며 그 후에는 시스템에서 삭제됩니다. 따라서 최대 365일 동안만 돌아갈 수 있습니다. 365일 이상 지난 데이터를 다시 확인해야 하는 경우 내부 정책 요구 사항을 충족하도록 정기적으로 로그를 내보내야 합니다. </li><li>오른쪽 레일에서 세부 정보를 보려면 목록에서 이벤트를 선택하십시오. </li><li>깔때기 아이콘을 선택하여 필터 컨트롤 목록을 표시하면 결과 범위를 좁힐 수 있습니다. 선택한 필터에 관계없이 마지막 1000개의 레코드만 표시됩니다. </li><li>현재 감사 로그 목록을 내보내려면 **로그 다운로드**&#x200B;를 선택합니다.</li><li>이 기능에 대한 자세한 내용은 Experience League의 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=ko">감사 로그 개요</a>를 참조하십시오.</li></ul>"
 
-Experience Platform UI의 **[!UICONTROL 감사]** 작업 영역에서 다양한 Experience Platform 기능에 대한 감사 로그를 볼 수 있습니다. 작업 공간에는 기본적으로 가장 최근에서 가장 최근으로 정렬된 기록된 로그 목록이 표시됩니다.
+Experience Platform UI의 **[!UICONTROL Audits]** 작업 영역에서 다양한 Experience Platform 기능에 대한 감사 로그를 볼 수 있습니다. 작업 공간에는 기본적으로 가장 최근에서 가장 최근으로 정렬된 기록된 로그 목록이 표시됩니다.
 
 ![왼쪽 메뉴에서 감사를 강조 표시하는 감사 대시보드입니다.](../../images/audit-logs/audits.png)
 
 감사 로그는 365일 동안 유지되며 그 후에는 시스템에서 삭제됩니다. 365일 이상의 데이터가 필요한 경우 내부 정책 요구 사항을 충족하도록 정기적으로 로그를 내보내야 합니다.
 
-감사 로그를 요청하는 방법은 허용 가능한 기간 및 액세스 권한이 있는 레코드 수를 변경합니다. [로그를 내보내면 365일(90일 간격)에서 최대 10,000개의 감사 로그(core 또는 enhanced 중 하나)로 돌아갈 수 있습니다. Experience Platform의 &#x200B;](#export-audit-logs)활동 로그 UI[에 지난 90일에서 최대 1000개의 핵심 이벤트가 표시되며, 각 핵심 이벤트에는 해당 고급 이벤트가 포함됩니다.](#filter-audit-logs)
+감사 로그를 요청하는 방법은 허용 가능한 기간 및 액세스 권한이 있는 레코드 수를 변경합니다. [로그를 내보내면 365일(90일 간격)에서 최대 10,000개의 감사 로그(core 또는 enhanced 중 하나)로 돌아갈 수 있습니다. Experience Platform의 ](#export-audit-logs)활동 로그 UI[에 지난 90일에서 최대 1000개의 핵심 이벤트가 표시되며, 각 핵심 이벤트에는 해당 고급 이벤트가 포함됩니다.](#filter-audit-logs)
 
 오른쪽 레일에서 세부 정보를 보려면 목록에서 이벤트를 선택하십시오.
 
@@ -99,7 +99,7 @@ Experience Platform UI의 **[!UICONTROL 감사]** 작업 영역에서 다양한 
 
 ### 감사 로그 필터링
 
-단계 아이콘(![필터 아이콘](/help/images/icons/filter.png))을 선택하여 결과를 좁히는 데 도움이 되는 필터 컨트롤 목록을 표시합니다.
+결과를 좁히는 데 도움이 되는 필터 컨트롤 목록을 표시하려면 funnel 아이콘(![필터 아이콘](/help/images/icons/filter.png))을 선택하십시오.
 
 >[!NOTE]
 >
@@ -111,13 +111,13 @@ UI의 감사 이벤트에 사용할 수 있는 필터는 다음과 같습니다.
 
 | 필터 | 설명 |
 | --- | --- |
-| [!UICONTROL 범주] | 드롭다운 메뉴를 사용하여 표시된 결과를 [범주](#category)(으)로 필터링합니다. |
-| [!UICONTROL 작업] | 액션으로 필터링합니다. 각 서비스에 대해 사용할 수 있는 작업은 위의 리소스 테이블에서 확인할 수 있습니다. |
-| [!UICONTROL 사용자] | 사용자별로 필터링할 전체 사용자 ID(예: `johndoe@acme.com`)를 입력하십시오. |
-| [!UICONTROL 상태] | 감사 이벤트를 결과별로 필터링합니다. [액세스 제어](../../../access-control/home.md) 권한이 없어 성공, 실패, 허용 또는 거부되었습니다. 실행된 작업의 경우, 핵심 이벤트는 [!UICONTROL Allow] 또는 [!UICONTROL Deny]을(를) 표시합니다. 핵심 이벤트가 [!UICONTROL Allow]인 경우 **[!UICONTROL Success]** 또는 **[!UICONTROL Failure]**&#x200B;을(를) 표시하는 고급 이벤트가 하나 이상 첨부되었을 수 있습니다. 예를 들어 성공적인 작업은 핵심 이벤트에서는 [!UICONTROL Allow]를, 연결된 고급 이벤트에서는 [!UICONTROL Success]을 표시합니다. |
-| [!UICONTROL 날짜] | 시작 날짜 및/또는 종료 날짜를 선택하여 결과를 필터링할 날짜 범위를 정의합니다. 데이터는 90일 전환 확인 기간(예: 2021-12-15에서 2022-03-15)을 사용하여 내보낼 수 있습니다. 이는 이벤트 유형별로 다를 수 있습니다. |
+| [!UICONTROL Category] | 드롭다운 메뉴를 사용하여 표시된 결과를 [범주](#category)(으)로 필터링합니다. |
+| [!UICONTROL Action] | 액션으로 필터링합니다. 각 서비스에 대해 사용할 수 있는 작업은 위의 리소스 테이블에서 확인할 수 있습니다. |
+| [!UICONTROL User] | 사용자별로 필터링할 전체 사용자 ID(예: `johndoe@acme.com`)를 입력하십시오. |
+| [!UICONTROL Status] | 감사 이벤트를 결과별로 필터링합니다. [액세스 제어](../../../access-control/home.md) 권한이 없어 성공, 실패, 허용 또는 거부되었습니다. 실행된 작업의 경우 코어 이벤트에 [!UICONTROL Allow] 또는 [!UICONTROL Deny]이(가) 표시됩니다. 코어 이벤트가 [!UICONTROL Allow]인 경우 **[!UICONTROL Success]** 또는 **[!UICONTROL Failure]**&#x200B;을(를) 표시하는 향상된 이벤트가 하나 이상 첨부되었을 수 있습니다. 예를 들어 성공적인 작업은 코어 이벤트에 [!UICONTROL Allow]을(를) 표시하고 연결된 고급 이벤트에 [!UICONTROL Success]을(를) 표시합니다. |
+| [!UICONTROL Date] | 시작 날짜 및/또는 종료 날짜를 선택하여 결과를 필터링할 날짜 범위를 정의합니다. 데이터는 90일 전환 확인 기간(예: 2021-12-15에서 2022-03-15)을 사용하여 내보낼 수 있습니다. 이는 이벤트 유형별로 다를 수 있습니다. |
 
-필터를 제거하려면 해당 필터의 알약 아이콘에서 &quot;X&quot;를 선택하거나 **[!UICONTROL 모두 지우기]**&#x200B;를 선택하여 모든 필터를 제거합니다.
+필터를 제거하려면 해당 필터의 알약 아이콘에서 &quot;X&quot;를 선택하거나 **[!UICONTROL Clear all]**&#x200B;을(를) 선택하여 모든 필터를 제거합니다.
 
 ![필터가 선택된 감사 대시보드입니다.](../../images/audit-logs/clear-filters.png)
 
@@ -125,27 +125,27 @@ UI의 감사 이벤트에 사용할 수 있는 필터는 다음과 같습니다.
 
 | 열 이름 | 설명 |
 |---|---|
-| [!UICONTROL 타임스탬프] | `month/day/year hour:minute AM/PM` 형식으로 수행된 작업의 정확한 날짜 및 시간입니다. |
-| [!UICONTROL 자산 이름] | [!UICONTROL 자산 이름] 필드의 값은 필터로 선택한 범주에 따라 다릅니다. |
-| [!UICONTROL 범주] | 이 필드는 필터 드롭다운에서 선택한 범주와 일치합니다. |
-| [!UICONTROL 작업] | 사용 가능한 작업은 필터로 선택한 범주에 따라 다릅니다. |
-| [!UICONTROL 사용자] | 이 필드는 쿼리를 실행한 사용자 ID를 제공합니다. |
+| [!UICONTROL Timestamp] | `month/day/year hour:minute AM/PM` 형식으로 수행된 작업의 정확한 날짜 및 시간입니다. |
+| [!UICONTROL Asset Name] | [!UICONTROL Asset Name] 필드의 값은 필터로 선택한 범주에 따라 다릅니다. |
+| [!UICONTROL Category] | 이 필드는 필터 드롭다운에서 선택한 범주와 일치합니다. |
+| [!UICONTROL Action] | 사용 가능한 작업은 필터로 선택한 범주에 따라 다릅니다. |
+| [!UICONTROL User] | 이 필드는 쿼리를 실행한 사용자 ID를 제공합니다. |
 
 ![필터링된 작업 로그가 강조 표시된 감사 대시보드입니다.](../../images/audit-logs/filtered.png)
 
 ### 감사 로그 내보내기 {#export-audit-logs}
 
-현재 감사 로그 목록을 내보내려면 **[!UICONTROL 로그 다운로드]**&#x200B;를 선택합니다.
+현재 감사 로그 목록을 내보내려면 **[!UICONTROL Download log]**&#x200B;을(를) 선택합니다.
 
 >[!NOTE]
 >
 >과거 365일까지 90일 간격으로 로그를 요청할 수 있습니다. 단, 단일 내보내기 중에 반환될 수 있는 최대 로그 양은 10,000개의 감사 이벤트(핵심 또는 고급)입니다.
 
-![다운로드 로그[!UICONTROL 가 강조 표시된 감사 대시보드입니다.]](../../images/audit-logs/download.png)
+![이(가) 강조 표시된 감사 대시보드입니다.[!UICONTROL Download log]](../../images/audit-logs/download.png)
 
-표시되는 대화 상자에서 원하는 형식(**[!UICONTROL CSV]** 또는 **[!UICONTROL JSON]**)을 선택한 다음 **[!UICONTROL 다운로드]**&#x200B;를 선택합니다. 브라우저가 생성된 파일을 다운로드하여 시스템에 저장합니다.
+표시되는 대화 상자에서 원하는 형식(**[!UICONTROL CSV]** 또는 **[!UICONTROL JSON]**)을 선택한 다음 **[!UICONTROL Download]**&#x200B;을 선택합니다. 브라우저가 생성된 파일을 다운로드하여 시스템에 저장합니다.
 
-![강조 표시된 [!UICONTROL 다운로드]의 파일 형식 선택 대화 상자.](../../images/audit-logs/select-download-format.png)
+![강조 표시된 [!UICONTROL Download]이(가) 있는 파일 형식 선택 대화 상자입니다.](../../images/audit-logs/select-download-format.png)
 
 ## 경고 활성화 {#enable-alerts}
 
@@ -169,7 +169,7 @@ UI에서 수행할 수 있는 모든 작업은 API 호출을 사용하여 수행
 
 ## Adobe Admin Console에 대한 감사 로그 관리
 
-Adobe Admin Console의 활동에 대한 감사 로그를 관리하는 방법에 대해 알아보려면 다음 [문서](https://helpx.adobe.com/kr/enterprise/using/audit-logs.html)를 참조하세요.
+Adobe Admin Console의 활동에 대한 감사 로그를 관리하는 방법에 대해 알아보려면 다음 [문서](https://helpx.adobe.com/enterprise/using/audit-logs.html)를 참조하세요.
 
 ## 다음 단계 및 추가 리소스
 
@@ -177,4 +177,4 @@ Adobe Admin Console의 활동에 대한 감사 로그를 관리하는 방법에 
 
 Experience Platform의 감사 로그에 대한 이해를 강화하려면 다음 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/344652?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

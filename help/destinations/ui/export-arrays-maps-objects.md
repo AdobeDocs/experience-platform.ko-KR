@@ -5,7 +5,7 @@ description: Real-Time CDP에서 클라우드 스토리지 대상으로 배열, 
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1062'
 ht-degree: 13%
 
 ---
@@ -71,11 +71,11 @@ organizations = [{
 
 ## 전제 조건 {#prerequisites}
 
-원하는 클라우드 저장소 대상에 [연결](/help/destinations/ui/connect-destination.md)하고, 클라우드 저장소 대상에 대한 [활성화 단계](/help/destinations/ui/activate-batch-profile-destinations.md)를 진행하고 [매핑](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 단계로 이동하십시오. 원하는 클라우드 대상에 연결할 때 **[!UICONTROL 배열, 맵, 개체 내보내기]** 토글을 선택해야 합니다. 자세한 내용은 아래 섹션을 참조하십시오.
+원하는 클라우드 저장소 대상에 [연결](/help/destinations/ui/connect-destination.md)하고, 클라우드 저장소 대상에 대한 [활성화 단계](/help/destinations/ui/activate-batch-profile-destinations.md)를 진행하고 [매핑](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 단계로 이동하십시오. 원하는 클라우드 대상에 연결할 때 **[!UICONTROL Export arrays, maps, objects]** 토글을 선택해야 합니다. 자세한 내용은 아래 섹션을 참조하십시오.
 
 >[!NOTE]
 >
->엔터프라이즈 및 에지 개인화 대상의 경우 **[!UICONTROL 배열, 맵, 개체 내보내기]** 토글을 선택하지 않아도 맵 유형 필드에 대한 내보내기 지원을 사용할 수 있습니다. 이러한 유형의 대상에 연결하는 경우 이 토글을 사용하거나 사용할 수 없습니다.
+>엔터프라이즈 및 에지 개인화 대상의 경우 **[!UICONTROL Export arrays, maps, objects]** 토글을 선택하지 않아도 맵 유형 필드에 대한 내보내기 지원을 사용할 수 있습니다. 이러한 유형의 대상에 연결하는 경우 이 토글을 사용하거나 사용할 수 없습니다.
 
 ## 배열, 맵 및 오브젝트 토글 내보내기 {#export-arrays-maps-objects-toggle}
 
@@ -84,7 +84,7 @@ organizations = [{
 >title="배열, 맵 및 오브젝트 내보내기"
 >abstract="<p> 배열, 맵 및 오브젝트를 JSON 또는 Parquet 파일로 내보낼 수 있도록 설정을 <b>켜짐</b>으로 토글합니다. 매핑 단계의 소스 필드 보기에서 이들 오브젝트 유형을 선택할 수 있습니다. 토글을 켜면 매핑 단계에서 계산된 필드 옵션을 사용할 수 없습니다.</p><p>이 설정을 <b>꺼짐</b>으로 토글하여 계산된 필드 옵션을 사용하고 대상자를 활성화할 때 다양한 데이터 변환 기능을 적용할 수 있습니다. 단, 배열, 맵, 오브젝트를 JSON이나 Parquet 파일로 내보낼 수는 <i>없으며</i> 해당 목적에 대한 별도의 대상을 구성해야 합니다.</p>"
 
-파일 기반 클라우드 저장소 대상에 연결할 때 **[!UICONTROL 배열 내보내기, 맵, 개체]** 토글을 설정하거나 해제할 수 있습니다.
+파일 기반 클라우드 저장소 대상에 연결할 때 **[!UICONTROL Export arrays, maps, objects]** 토글을 설정하거나 해제할 수 있습니다.
 
 ![배열, 맵, 개체 내보내기는 팝오버를 강조 표시하고 켜기 또는 끄기 설정으로 전환됩니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
@@ -98,7 +98,7 @@ organizations = [{
 
 ![활성화 워크플로의 매핑 단계에서 원본 필드 선택기를 통해 개체를 선택합니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif)
 
-이 옵션을 선택하면 사용자 인터페이스에서 계산된 필드를 사용할 수 없게 되며 아래와 같이 **[!UICONTROL 계산된 필드 추가]** 컨트롤이 비활성화됩니다. 데이터 변환에 계산된 필드를 사용하려면 토글을 해제하여 대상 연결을 설정하십시오.
+이 옵션을 선택하면 사용자 인터페이스에서 계산된 필드를 사용할 수 없게 되며 아래와 같이 **[!UICONTROL Add calculated fields]** 컨트롤이 비활성화됩니다. 데이터 변환에 계산된 필드를 사용하려면 토글을 해제하여 대상 연결을 설정하십시오.
 
 ![계산된 필드 컨트롤이 비활성화되었습니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/calculated-fields-disabled.png)
 

@@ -5,7 +5,7 @@ description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이�
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '258'
 ht-degree: 18%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 18%
 
 ## 샌드박스 구성
 
-샌드박스가 할당된 세부 정보 및 역할을 보려면 **[!UICONTROL 샌드박스]** 탭을 선택하십시오.
+샌드박스가 할당되거나 사용되는 세부 정보 및 역할을 보려면 **[!UICONTROL Sandboxes]** 탭을 선택하십시오.
 
 ![flac-sandboxes-tab](../../images/flac-ui/flac-sandboxes-tab.png)
 
@@ -32,7 +32,7 @@ ht-degree: 18%
 
 ![flac-sandboxes-details](../../images/flac-ui/flac-sandboxes-details.png)
 
-샌드박스가 할당된 역할을 보려면 **[!UICONTROL 역할]** 탭을 선택하십시오.
+샌드박스가 할당된 역할을 보려면 **[!UICONTROL Roles]** 탭을 선택하십시오.
 
 ![flac-sandboxes-roles](../../images/flac-ui/flac-sandboxes-roles.png)
 

@@ -29,12 +29,12 @@ Adobe Real-Time CDP과 같은 특정 Google 통합 서드파티는 [!DNL Google 
 >[!IMPORTANT]
 >
 > Google은 유럽 연합([EU 사용자 동의 정책](https://developers.google.com/google-ads/api/docs/start))의 [디지털 시장법](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)&#x200B;(DMA)에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/display-video/api/guides/getting-started/overview), [고객 일치](https://digital-markets-act.ec.europa.eu/index_en) 및 [디스플레이 및 비디오 360 API](https://www.google.com/about/company/user-consent-policy/)에 대한 변경 사항을 출시합니다. 동의 요구 사항에 대한 이러한 변경 사항의 시행은 2024년 3월 6일부터 시작됩니다.
-> &#x200B;><br/>
-> &#x200B;>EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
-> &#x200B;><br/>
-> &#x200B;>Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
-> &#x200B;><br/>
-> &#x200B;>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/home.md#segment-definitions) 내의 [세그먼트 정의](../../../segmentation/ui/segment-builder.md) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
+><br/>
+>EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
+><br/>
+>Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
+><br/>
+>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/home.md#segment-definitions) 내의 [세그먼트 정의](../../../segmentation/ui/segment-builder.md) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
 
 ## 이 대상을 사용해야 하는 경우
 
@@ -95,7 +95,7 @@ Adobe Real-Time CDP과 같은 특정 Google 통합 서드파티는 [!DNL Google 
 
 ## [!DNL Google Customer Match] 계정 필수 구성 요소 {#google-account-prerequisites}
 
-Experience Platform에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [!DNL Customer Match]Google 지원 설명서[에 설명된 &#x200B;](https://support.google.com/google-ads/answer/6299717) 사용에 대한 Google 정책을 읽고 준수하는지 확인하십시오.
+Experience Platform에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [!DNL Customer Match]Google 지원 설명서[에 설명된 ](https://support.google.com/google-ads/answer/6299717) 사용에 대한 Google 정책을 읽고 준수하는지 확인하십시오.
 
 그런 다음 [!DNL Google] 계정이 [!DNL Standard] 이상의 권한 수준에 대해 구성되어 있는지 확인하십시오. 자세한 내용은 [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1)를 참조하세요.
 
@@ -176,7 +176,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## 대상에 연결 {#connect}
 
@@ -230,9 +230,9 @@ For details on how to find the [!DNL App ID], refer to the [Google official docu
 소스 필드 선택:
 
 * 사용 중인 전자 메일 주소가 해시되지 않은 경우 `Email` 네임스페이스를 원본 ID로 선택하십시오.
-* `Email_LC_SHA256` [!DNL Experience Platform]전자 메일 해시 요구 사항[!DNL Google Customer Match]에 따라 데이터 수집 시 고객 전자 메일 주소를 [(으)로 해시했다면 &#x200B;](#hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
+* `Email_LC_SHA256` [!DNL Experience Platform]전자 메일 해시 요구 사항[!DNL Google Customer Match]에 따라 데이터 수집 시 고객 전자 메일 주소를 [(으)로 해시했다면 ](#hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 해시되지 않은 전화 번호로 구성된 경우 `PHONE_E.164` 네임스페이스를 원본 ID로 선택하십시오. [!DNL Experience Platform]이(가) [!DNL Google Customer Match] 요구 사항을 준수하기 위해 전화 번호를 해시합니다.
-* `Phone_SHA256_E.164` [!DNL Experience Platform]전화 번호 해시 요구 사항[!DNL Facebook]에 따라 데이터 수집 시 전화 번호를 [(으)로 해시했다면 &#x200B;](#phone-number-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
+* `Phone_SHA256_E.164` [!DNL Experience Platform]전화 번호 해시 요구 사항[!DNL Facebook]에 따라 데이터 수집 시 전화 번호를 [(으)로 해시했다면 ](#phone-number-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
 
 대상 필드 선택:
 

@@ -77,7 +77,7 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 * **[!UICONTROL Password]**: [!DNL LiveRamp - Onboarding] 저장소 위치의 암호입니다.
 * **[!UICONTROL PGP/GPG encryption key]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**&#x200B;암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
+* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
 
 **SSH 키 인증이 있는 SFTP** {#sftp-ssh}
 
@@ -92,7 +92,7 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 
 * **[!UICONTROL PGP/GPG encryption key]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**&#x200B;암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
+* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -227,7 +227,7 @@ abc101@testemailabc.com,active,active,
 
 Experience Platform은 각 [병합 정책 ID](../../../profile/merge-policies/overview.md)에 대해 하나의 CSV 파일을 생성하므로 각 병합 정책 ID에 대해 별도의 데이터 흐름 실행도 생성합니다.
 
-즉, **[!UICONTROL Identities activated]**&#x200B;데이터 흐름 실행&#x200B;**[!UICONTROL Profiles received]** 페이지의 [&#x200B; 및 &#x200B;](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 지표가 각 대상에 대해 표시되지 않고 동일한 병합 정책을 사용하는 각 대상 그룹에 대해 집계됩니다.
+즉, **[!UICONTROL Identities activated]**&#x200B;데이터 흐름 실행&#x200B;**[!UICONTROL Profiles received]** 페이지의 [ 및 ](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 지표가 각 대상에 대해 표시되지 않고 동일한 병합 정책을 사용하는 각 대상 그룹에 대해 집계됩니다.
 
 동일한 병합 정책을 사용하는 대상자 그룹에 대해 데이터 흐름이 생성되면 대상자 이름이 [모니터링 대시보드](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)에 표시되지 않습니다.
 

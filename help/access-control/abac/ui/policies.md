@@ -5,7 +5,7 @@ description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이�
 exl-id: 66820711-2db0-4621-908d-01187771de14
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '648'
 ht-degree: 11%
 
 ---
@@ -120,29 +120,29 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 >[!IMPORTANT]
 >
->기본적으로 모든 고객에 대해 [!UICONTROL 자동 포함] 기능이 설정되어 있으므로 모든 샌드박스가 정책에 추가됩니다.
+>기본적으로 모든 고객에 대해 [!UICONTROL Auto-include] 기능이 설정되어 있으므로 모든 샌드박스가 정책에 추가됩니다.
 
 >[!NOTE]
 >
 >**[!UICONTROL Default-Label-Based-Access-Control-Policy]** 정책만 현재 구성할 수 있습니다.
 
-정책과 연결된 샌드박스를 보려면 **[!UICONTROL 정책]** 탭에서 정책을 선택합니다.
+정책과 연결된 샌드박스를 보려면 **[!UICONTROL Policies]** 탭에서 정책을 선택합니다.
 
 ![사용 가능한 기존 정책 목록을 표시하는 정책 페이지입니다.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-정책을 선택한 다음 **[!UICONTROL 샌드박스]** 탭을 선택합니다. 정책과 연결된 샌드박스 목록이 표시됩니다.
+정책을 선택한 다음 **[!UICONTROL Sandboxes]** 탭을 선택합니다. 정책과 연결된 샌드박스 목록이 표시됩니다.
 
 ![사용 가능한 기존 정책 목록을 표시하는 정책 페이지입니다.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
 
 ### 모든 샌드박스에 정책 추가
 
-**[!UICONTROL 샌드박스]** 탭의 **[!UICONTROL 자동 포함]** 토글을 사용하여 모든 샌드박스에 대한 정책을 활성화합니다.
+**[!UICONTROL Auto-include]** 탭의 **[!UICONTROL Sandboxes]** 전환을 사용하여 모든 샌드박스에 대한 정책을 활성화합니다.
 
-![[!UICONTROL 자동 포함] 전환을 표시하는 [!UICONTROL 샌드박스] 탭입니다.](../../images/flac-ui/abac-policies-auto-include.png)
+![[!UICONTROL Sandboxes] 전환을 표시하는 [!UICONTROL Auto-include] 탭입니다.](../../images/flac-ui/abac-policies-auto-include.png)
 
-**[!UICONTROL 자동 포함 사용]** 대화 상자가 나타나 선택 내용을 확인할 수 있습니다. 구성 설정을 완료하려면 **[!UICONTROL 사용]**&#x200B;을 선택하세요.
+선택 내용을 확인하는 대화 상자가 나타납니다. **[!UICONTROL Enable Auto-include]** 구성 설정을 완료하려면 **[!UICONTROL Enable]**&#x200B;을(를) 선택하십시오.
 
-![자동 포함 사용] 대화 상자 강조 표시 [!UICONTROL 사용].(../../images/flac-ui/abac-policies-auto-include-enable.png)
+![[!UICONTROL Enable Auto-include]을(를) 강조 표시하는 [!UICONTROL Enable] 대화 상자.](../../images/flac-ui/abac-policies-auto-include-enable.png)
 
 >[!SUCCESS]
 >
@@ -152,19 +152,19 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 >[!IMPORTANT]
 >
->[!UICONTROL 자동 포함] 토글이 꺼지면 향후 샌드박스가 기본적으로 정책에 포함되지 않습니다. 정책에 샌드박스를 수동으로 관리하고 추가해야 합니다.
+>[!UICONTROL Auto-include] 토글이 꺼진 경우 향후 샌드박스가 기본적으로 정책에 포함되지 않습니다. 정책에 샌드박스를 수동으로 관리하고 추가해야 합니다.
 
-**[!UICONTROL 샌드박스]** 탭의 **[!UICONTROL 자동 포함]** 토글을 사용하여 모든 샌드박스에 대한 정책을 사용하지 않도록 설정합니다.
+**[!UICONTROL Auto-include]** 탭의 **[!UICONTROL Sandboxes]** 전환을 사용하여 모든 샌드박스에 대한 정책을 사용하지 않도록 설정합니다.
 
-![[!UICONTROL 자동 포함] 전환을 표시하는 [!UICONTROL 샌드박스] 탭입니다.](../../images/flac-ui/abac-policies-auto-include.png)
+![[!UICONTROL Sandboxes] 전환을 표시하는 [!UICONTROL Auto-include] 탭입니다.](../../images/flac-ui/abac-policies-auto-include.png)
 
-**[!UICONTROL 샌드박스]** 탭에서 **[!UICONTROL 샌드박스 추가]**&#x200B;를 선택하여 이 정책이 적용될 샌드박스를 선택합니다.
+**[!UICONTROL Sandboxes]** 탭에서 **[!UICONTROL Add Sandboxes]**&#x200B;을(를) 선택하여 이 정책이 적용될 샌드박스를 선택합니다.
 
-![정책에 추가된 샌드박스 목록을 표시하는 [!UICONTROL 샌드박스] 탭입니다.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+![정책에 추가된 샌드박스 목록을 표시하는 [!UICONTROL Sandboxes] 탭입니다.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
 
-샌드박스 목록이 나타납니다. 목록에서 추가할 샌드박스를 선택합니다. 또는 검색 창을 사용하여 샌드박스를 검색합니다. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+샌드박스 목록이 나타납니다. 목록에서 추가할 샌드박스를 선택합니다. 또는 검색 창을 사용하여 샌드박스를 검색합니다. **[!UICONTROL Save]**&#x200B;를 선택합니다.
 
-![정책에 추가할 수 있는 기존 샌드박스 목록을 표시하는 [!UICONTROL 샌드박스 추가] 페이지입니다.](../../images/flac-ui/abac-policies-sandboxes-list.png)
+![정책에 추가할 수 있는 기존 샌드박스 목록을 표시하는 [!UICONTROL Add Sandboxes] 페이지입니다.](../../images/flac-ui/abac-policies-sandboxes-list.png)
 
 >[!SUCCESS]
 >
@@ -174,11 +174,11 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 샌드박스를 제거하려면 샌드박스 이름 옆에 있는 **X** 아이콘을 선택하십시오.
 
-![샌드박스 목록을 표시하는 [!UICONTROL 샌드박스] 탭에서 삭제할 [!UICONTROL X]을(를) 강조 표시합니다.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+![삭제할 [!UICONTROL Sandboxes]을(를) 강조 표시하는 샌드박스 목록을 표시하는 [!UICONTROL X] 탭입니다.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
 
-**[!UICONTROL 제거]** 대화 상자가 표시되어 선택을 확인하라는 메시지가 표시됩니다. **[!UICONTROL 확인]**&#x200B;을 선택하여 제거를 완료합니다.
+선택 내용을 확인하는 대화 상자가 나타납니다. **[!UICONTROL Remove]** **[!UICONTROL Confirm]**&#x200B;을(를) 선택하여 제거를 완료합니다.
 
-![[!UICONTROL 확인]을 강조 표시하는 [!UICONTROL 제거] 대화 상자](../../images/flac-ui/abac-policies-remove-sandbox.png)
+![[!UICONTROL Remove]을(를) 강조 표시하는 [!UICONTROL Confirm] 대화 상자.](../../images/flac-ui/abac-policies-remove-sandbox.png)
 
 >[!SUCCESS]
 >
@@ -192,7 +192,7 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 >abstract="정책은 속성을 함께 가져와서 허용되는 작업과 허용되지 않는 작업을 설정하는 문입니다. 모든 조직에는 레이블을 기반으로 특정 오브젝트에 대한 액세스를 제어하기 위해 활성화해야 하는 기본 정책이 있습니다. 리소스에 적용된 레이블은 사용자에게 레이블에 해당하는 역할이 할당된 경우가 아니라면 액세스를 거부합니다. 기본 정책은 편집하거나 삭제할 수 없지만 활성화하거나 비활성화할 수는 있습니다."
 >additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/abac/permissions-ui/labels" text="레이블 관리"
 
-기존 정책을 활성화하려면 **[!UICONTROL 정책]** 탭에서 정책을 선택합니다.
+기존 정책을 활성화하려면 **[!UICONTROL Policies]** 탭에서 정책을 선택합니다.
 
 ![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
@@ -200,12 +200,12 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 ![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-**[!UICONTROL 정책 활성화]** 대화 상자가 나타나고 활성화를 확인하는 메시지가 표시됩니다.
+**[!UICONTROL Activate policy]** 대화 상자가 나타나고 활성화를 확인하라는 메시지가 표시됩니다.
 
 ![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
 
-**[!UICONTROL 정책]** 탭으로 돌아왔고 활성화 팝업이 나타납니다. 정책 상태가 활성으로 표시됩니다.
+**[!UICONTROL policies]** 탭으로 돌아오면 활성화 팝업이 나타납니다. 정책 상태가 활성으로 표시됩니다.
 
 ![플래그 정책 활성화됨](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 

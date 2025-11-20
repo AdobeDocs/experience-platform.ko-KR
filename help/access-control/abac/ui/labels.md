@@ -5,8 +5,8 @@ description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이�
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 24%
+source-wordcount: '238'
+ht-degree: 26%
 
 ---
 
@@ -29,18 +29,18 @@ ht-degree: 24%
 >id="platform_permissions_labels_about_create"
 >title="새 레이블 만들기"
 >abstract="조직의 요구 사항에 맞게 고유한 사용자 정의 레이블을 만들 수 있습니다. 사용자 정의 레이블을 사용하여 데이터 거버넌스와 액세스 제어 구성을 모두 데이터에 적용할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ko#manage-labels" text="사용자 정의 레이블 관리"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="사용자 정의 레이블 관리"
 
 >[!NOTE]
 >
->전체 조직에 대해 하나의 레이블 목록이 있습니다. 사용자 지정 레이블을 만들려면 프로덕션 샌드박스에서 **[!UICONTROL 사용 레이블 관리]** 권한이 필요합니다. 레이블 삭제는 현재 지원되지 않습니다.
+>전체 조직에 대해 하나의 레이블 목록이 있습니다. 사용자 지정 레이블을 만들려면 프로덕션 샌드박스에 **[!UICONTROL Manage Usage Labels]** 권한이 필요합니다. 레이블 삭제는 현재 지원되지 않습니다.
 
-새 레이블을 만들려면 사이드바에서 **[!UICONTROL 레이블]** 탭을 선택하고 **[!UICONTROL 레이블 만들기]**&#x200B;를 선택하십시오.
+새 레이블을 만들려면 사이드바에서 **[!UICONTROL Labels]** 탭을 선택하고 **[!UICONTROL Create Label]**&#x200B;을(를) 선택합니다.
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
 
-**[!UICONTROL 새 레이블 만들기]** 대화 상자가 나타나고 이름, 알기 쉬운 이름(선택 사항) 및 설명을 입력하라는 메시지가 표시됩니다.
+이름, 알기 쉬운 이름(선택 사항) 및 설명(선택 사항)을 입력하라는 메시지가 표시되는 **[!UICONTROL Create a new label]** 대화 상자가 나타납니다.
 
 ![new-label-info](../../images/flac-ui/new-label-info.png)
 
-완료되면 **[!UICONTROL 확인]**&#x200B;을 선택합니다.
+완료되면 **[!UICONTROL Confirm]**&#x200B;을(를) 선택합니다.

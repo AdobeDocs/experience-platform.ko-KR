@@ -15,7 +15,7 @@ ht-degree: 4%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/)을(를) 사용하면 마케터가 잠재 고객을 위해 개인화된 고객 경험을 제공하는 동안 캠페인을 계획하고 실행할 수 있습니다. 통합된 리드 관리와 손쉬운 캠페인 생성을 통해 마케터는 구매자의 여정에서 적시에 적절한 대상자를 참여시킬 수 있도록 지원하고 이메일, 디스플레이 검색, 비디오 및 모바일을 비롯한 다양한 채널에서 대상자에게 도달하도록 우아하게 확장할 수 있습니다. 영업 팀은 더 많은 거래를 더 빠른 속도로 마감할 수 있어 실시간 insight을 통해 마케팅 ROI가 향상됩니다.
 
-이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) [&#x200B; REST API의 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html)연락처 업데이트[!DNL Oracle Eloqua] 작업을 활용합니다. 이를 통해 대상 내의 ID를 **업데이트**&#x200B;할 수 있습니다. [!DNL Oracle Eloqua].
+이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) [ REST API의 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html)연락처 업데이트[!DNL Oracle Eloqua] 작업을 활용합니다. 이를 통해 대상 내의 ID를 **업데이트**&#x200B;할 수 있습니다. [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua]은(는) [기본 인증](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html)을 사용하여 [!DNL Oracle Eloqua] REST API와 통신합니다. [!DNL Oracle Eloqua] 인스턴스에 대한 인증 지침은 [대상에 대한 인증](#authenticate) 섹션에서 아래에 더 나와 있습니다.
 
@@ -27,7 +27,7 @@ ht-degree: 4%
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL Oracle Eloqua] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 &#x200B;](/help/xdm/schema/composition.md)스키마[, &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ko)데이터 세트[&#x200B; 및 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ko)세그먼트[!DNL Experience Platform]가 있어야 합니다.
+[!DNL Oracle Eloqua] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 ](/help/xdm/schema/composition.md)스키마[, ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[ 및 ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)세그먼트[!DNL Experience Platform]가 있어야 합니다.
 
 대상 상태에 대한 지침이 필요한 경우 [대상 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md)에 대한 Experience Platform 설명서를 참조하십시오.
 
@@ -35,7 +35,7 @@ ht-degree: 4%
 
 Experience Platform에서 [!DNL Oracle Eloqua] 계정으로 데이터를 내보내려면 [!DNL Oracle Eloqua] 계정이 있어야 합니다.
 
-또한 *인스턴스에 대해 최소한*&quot;고급 사용자 - 마케팅 권한&quot;[!DNL Oracle Eloqua]이 필요합니다. 지침은 *보안 사용자 액세스* 페이지의 [&quot;보안 그룹&quot;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) 섹션을 참조하십시오. [&#x200B; API를 호출할 때 프로그래밍 방식으로 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html)기본 URL을 확인[!DNL Oracle Eloqua]하려면 대상에 액세스 권한이 필요합니다.
+또한 *인스턴스에 대해 최소한*&quot;고급 사용자 - 마케팅 권한&quot;[!DNL Oracle Eloqua]이 필요합니다. 지침은 *보안 사용자 액세스* 페이지의 [&quot;보안 그룹&quot;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) 섹션을 참조하십시오. [ API를 호출할 때 프로그래밍 방식으로 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html)기본 URL을 확인[!DNL Oracle Eloqua]하려면 대상에 액세스 권한이 필요합니다.
 
 #### [!DNL Oracle Eloqua] 자격 증명 수집 {#gather-credentials}
 
@@ -43,7 +43,7 @@ Experience Platform에서 [!DNL Oracle Eloqua] 계정으로 데이터를 내보�
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| `Company Name` | [!DNL Oracle Eloqua] 계정과 연결된 회사 이름. <br>나중에 `Company Name`대상에 대한 인증[!DNL Oracle Eloqua]을 수행할 때 `Username`(으)로 사용할 연결된 문자열로 **[!UICONTROL Username]** 및 [&#x200B; &#x200B;](#authenticate)을(를) 사용합니다. |
+| `Company Name` | [!DNL Oracle Eloqua] 계정과 연결된 회사 이름. <br>나중에 `Company Name`대상에 대한 인증[!DNL Oracle Eloqua]을 수행할 때 `Username`(으)로 사용할 연결된 문자열로 **[!UICONTROL Username]** 및 [ ](#authenticate)을(를) 사용합니다. |
 | `Username` | [!DNL Oracle Eloqua] 계정의 사용자 이름입니다. |
 | `Password` | [!DNL Oracle Eloqua] 계정의 암호입니다. |
 | `Pod` | [!DNL Oracle Eloqua]은(는) 각각 고유한 도메인 이름을 가진 여러 데이터 센터를 지원합니다. [!DNL Oracle Eloqua]은(는) &quot;포드&quot;라고 하며, 현재 p01, p02, p03, p04, p06, p07 및 p08의 총 7개가 있습니다. 사용 중인 POD를 얻으려면 [!DNL Oracle Eloqua]에 로그인하여 로그인한 후 브라우저에서 URL을 확인합니다. 예를 들어 브라우저 URL이 `secure.p01.eloqua.com`인 경우 `pod`은(는) `p01`입니다. 추가 지침은 [POD 확인](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) 페이지를 참조하세요. |
@@ -104,7 +104,7 @@ Experience Platform에서 [!DNL Oracle Eloqua] 계정으로 데이터를 내보�
 * **[!UICONTROL Password]**: [!DNL Oracle Eloqua] 계정의 암호입니다.
 * **[!UICONTROL Username]**: [!DNL Oracle Eloqua] 회사 이름과 [!DNL Oracle Eloqua] 사용자 이름으로 구성된 연결된 문자열입니다.<br>연결된 값은 `{COMPANY_NAME}\{USERNAME}` 형식입니다.<br> 참고: 중괄호 또는 공백을 사용하지 말고 `\`을(를) 유지하십시오. <br>예를 들어 [!DNL Oracle Eloqua] 회사 이름이 `MyCompany`이고 [!DNL Oracle Eloqua] 사용자 이름이 `Username`인 경우 **[!UICONTROL Username]** 필드에서 사용할 연결된 값은 `MyCompany\Username`입니다.
 
-대상에 인증하려면 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
+대상에 인증하려면 **[!UICONTROL Connect to destination]**을(를) 선택하십시오.
 인증 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
 
 제공된 세부 정보가 유효한 경우 UI에 녹색 확인 표시와 함께 **[!UICONTROL Connected]** 상태가 표시됩니다. 그런 다음 다음 다음 단계로 진행할 수 있습니다.
@@ -148,7 +148,7 @@ XDM 필드를 [!DNL Oracle Eloqua] 대상 필드에 매핑하려면 다음 단�
 
 1. **[!UICONTROL Mapping]** 단계에서 **[!UICONTROL Add new mapping]**&#x200B;을(를) 선택합니다. 화면에 새 매핑 행이 표시됩니다.
 1. **[!UICONTROL Select source field]** 창에서 **[!UICONTROL Select attributes]** 범주를 선택하고 XDM 특성을 선택하거나 **[!UICONTROL Select identity namespace]**&#x200B;을(를) 선택하고 ID를 선택합니다.
-1. **[!UICONTROL Select target field]** 창에서 **[!UICONTROL Select identity namespace]**&#x200B;을(를) 선택하고 ID를 선택하거나 **[!UICONTROL Select custom attributes]**&#x200B;을(를) 선택하고 **[!UICONTROL Attribute name]** 필드에 원하는 특성 이름을 입력합니다. 제공한 특성 이름은 [!DNL Oracle Eloqua]의 기존 연락처 특성과 일치해야 합니다. [[!DNL create a contact]에서 사용할 수 있는 정확한 특성 이름은 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) [!DNL Oracle Eloqua]을(를) 참조하십시오.
+1. **[!UICONTROL Select target field]** 창에서 **[!UICONTROL Select identity namespace]**&#x200B;을(를) 선택하고 ID를 선택하거나 **[!UICONTROL Select custom attributes]**&#x200B;을(를) 선택하고 **[!UICONTROL Attribute name]** 필드에 원하는 특성 이름을 입력합니다. 제공한 특성 이름은 [!DNL Oracle Eloqua]의 기존 연락처 특성과 일치해야 합니다. [[!DNL create a contact]에서 사용할 수 있는 정확한 특성 이름은 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html)[!DNL Oracle Eloqua]을(를) 참조하십시오.
 
    * 다음 단계를 반복하여 XDM 프로필 스키마와 [!DNL Oracle Eloqua] 사이에 필요한 속성 매핑과 원하는 속성 매핑을 모두 추가합니다.
 
@@ -194,7 +194,7 @@ XDM 필드를 [!DNL Oracle Eloqua] 대상 필드에 매핑하려면 다음 단�
 
 >[!NOTE]
 >
->대화 상대 필드 정보를 [!DNL Oracle Eloqua]&#x200B;(으)로 보낼 때 대상은 각 실행 시 선택한 대상 이름에 자동으로 고유 식별자를 추가합니다. 이렇게 하면 대상자 이름에 해당하는 연락처 필드 이름이 겹치지 않습니다. 대상자 이름을 사용하여 만든 사용자 지정 연락처 필드가 있는 [&#x200B; 연락처 세부 정보 페이지의 &#x200B;](#exported-data)데이터 내보내기 유효성 검사[!DNL Oracle Eloqua] 섹션 스크린샷 예제를 참조하십시오.
+>대화 상대 필드 정보를 [!DNL Oracle Eloqua]&#x200B;(으)로 보낼 때 대상은 각 실행 시 선택한 대상 이름에 자동으로 고유 식별자를 추가합니다. 이렇게 하면 대상자 이름에 해당하는 연락처 필드 이름이 겹치지 않습니다. 대상자 이름을 사용하여 만든 사용자 지정 연락처 필드가 있는 [ 연락처 세부 정보 페이지의 ](#exported-data)데이터 내보내기 유효성 검사[!DNL Oracle Eloqua] 섹션 스크린샷 예제를 참조하십시오.
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
 
@@ -237,7 +237,7 @@ XDM 필드를 [!DNL Oracle Eloqua] 대상 필드에 매핑하려면 다음 단�
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
-| 2023년 4월 | 설명서 업데이트 | <ul><li>고객이 이 대상을 사용할 때 이점을 얻을 수 있는 경우를 보다 명확하게 예로 들어 [사용 사례](#use-cases) 섹션을 업데이트했습니다.</li> <li>필수 및 선택적 매핑에 대한 명확한 예제로 [매핑](#mapping-considerations-example) 섹션을 업데이트했습니다.</li> <li>[&#x200B; 회사 이름 및 &#x200B;](#connect) 사용자 이름을 사용하여 **[!UICONTROL Username]** 필드에 연결된 값을 만드는 방법에 대한 예제로 [!DNL Oracle Eloqua]대상에 연결[!DNL Oracle Eloqua] 섹션을 업데이트했습니다. (PLATIR-28343)</li><li>[&#x200B;  [!DNL Oracle Eloqua]  선택에 대한 지침과 함께 &#x200B;](#gather-credentials)수집[자격 증명](#destination-details) 및 [!DNL Oracle Eloqua]대상 세부 정보 채우기&#x200B;**[!UICONTROL Pod]** 섹션을 업데이트했습니다. *&quot;Pod&quot;* 값은 API 호출에 대한 기본 URL을 구성하는 데 대상에서 사용됩니다. [[!DNL Oracle Eloqua]  인스턴스에 필요한 &#x200B;](#prerequisites-destination)&quot;보안 그룹&quot;*(으)로*&quot;고급 사용자 - 마케팅 권한&quot;*을(를) 할당하는 방법에 대한 지침과 함께*&#x200B;필수 구성 요소[!DNL Oracle Eloqua] 섹션도 업데이트되었습니다.</li></ul> |
+| 2023년 4월 | 설명서 업데이트 | <ul><li>고객이 이 대상을 사용할 때 이점을 얻을 수 있는 경우를 보다 명확하게 예로 들어 [사용 사례](#use-cases) 섹션을 업데이트했습니다.</li> <li>필수 및 선택적 매핑에 대한 명확한 예제로 [매핑](#mapping-considerations-example) 섹션을 업데이트했습니다.</li> <li>[ 회사 이름 및 ](#connect) 사용자 이름을 사용하여 **[!UICONTROL Username]** 필드에 연결된 값을 만드는 방법에 대한 예제로 [!DNL Oracle Eloqua]대상에 연결[!DNL Oracle Eloqua] 섹션을 업데이트했습니다. (PLATIR-28343)</li><li>[  [!DNL Oracle Eloqua]  선택에 대한 지침과 함께 ](#gather-credentials)수집[자격 증명](#destination-details) 및 [!DNL Oracle Eloqua]대상 세부 정보 채우기&#x200B;**[!UICONTROL Pod]** 섹션을 업데이트했습니다. *&quot;Pod&quot;* 값은 API 호출에 대한 기본 URL을 구성하는 데 대상에서 사용됩니다. [[!DNL Oracle Eloqua]  인스턴스에 필요한 ](#prerequisites-destination)&quot;보안 그룹&quot;*(으)로*&quot;고급 사용자 - 마케팅 권한&quot;*을(를) 할당하는 방법에 대한 지침과 함께*&#x200B;필수 구성 요소[!DNL Oracle Eloqua] 섹션도 업데이트되었습니다.</li></ul> |
 | 2023년 3월 | 초기 릴리스 | 초기 대상 릴리스 및 설명서 게시. |
 
 {style="table-layout:auto"}

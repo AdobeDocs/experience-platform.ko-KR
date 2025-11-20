@@ -4,7 +4,7 @@ description: Adobe Experience Platform UI를 사용하여 Mixpanel 소스 연결
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '783'
 ht-degree: 11%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 11%
 
 이 자습서에서는 Adobe Experience Platform Experience Platform 사용자 인터페이스를 사용하여 [!DNL Mixpanel] 소스 연결을 만드는 단계를 제공합니다.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
@@ -37,25 +37,25 @@ ht-degree: 11%
 
 ## [!DNL Mixpanel] 계정 연결
 
-Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL Sources]**&#x200B;을(를) 선택하여 [!UICONTROL Sources] 작업 영역에 액세스합니다. [!UICONTROL Catalog] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-*Analytics* 범주에서 [!DNL Mixpanel]을(를) 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
+*Analytics* 범주에서 [!DNL Mixpanel]을(를) 선택한 다음 **[!UICONTROL Add data]**&#x200B;을(를) 선택합니다.
 
 ![카탈로그](../../../../images/tutorials/create/mixpanel-export-events/catalog.png)
 
-**[!UICONTROL Mixpanel 계정 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
+**[!UICONTROL Connect Mixpanel account]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
 
 ### 기존 계정
 
-기존 계정을 사용하려면 새 데이터 흐름을 만들 [!DNL Mixpanel] 계정을 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 선택하여 계속합니다.
+기존 계정을 사용하려면 새 데이터 흐름을 만들 [!DNL Mixpanel] 계정을 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택하여 계속합니다.
 
 ![기존](../../../../images/tutorials/create/mixpanel-export-events/existing.png)
 
 ### 새 계정
 
-새 계정을 만드는 경우 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택한 다음 이름, 설명(선택 사항) 및 자격 증명을 제공합니다. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택한 다음 새 연결을 설정할 수 있는 시간을 허용하세요.
+새 계정을 만드는 경우 **[!UICONTROL New account]**&#x200B;을(를) 선택한 다음 이름, 설명(선택 사항) 및 자격 증명을 제공합니다. 완료되면 **[!UICONTROL Connect to source]**&#x200B;을(를) 선택한 다음 새 연결을 설정할 시간을 허용합니다.
 
 ![새로 만들기](../../../../images/tutorials/create/mixpanel-export-events/new.png)
 
@@ -65,13 +65,13 @@ Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x2
 >id="platform_sources_mixpanel_timezone"
 >title="Mixpanel 수집 시간대 설정"
 >abstract="Experience Platform은 지정된 프로젝트 시간대를 사용하여 Mixpanel에서 관련 데이터를 수집하므로 시간대는 Mixpanel 프로필 시간대 설정과 같아야 합니다. 이벤트가 Mixpanel 데이터 저장소에 기록되기 전에 Mixpanel은 프로젝트 시간대에 맞게 시간대를 조정합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=ko#project-id-and-timezone" text="설명서에서 자세히 알아보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html#project-id-and-timezone" text="설명서에서 자세히 알아보기"
 
-소스가 인증되면 프로젝트 ID와 시간대를 제공한 다음 **[!UICONTROL 선택]**&#x200B;을 선택합니다.
+소스가 인증되면 프로젝트 ID와 시간대를 제공한 다음 **[!UICONTROL Select]**&#x200B;을(를) 선택하십시오.
 
-[!DNL Mixpanel] 데이터를 Experience Platform으로 수집하기 전에 지정한 시간대는 [!DNL Mixpanel] 프로필 시간대 설정과 같아야 합니다. 데이터의 시간대에 대한 모든 변경 사항은 새 이벤트에만 적용되고 이전 이벤트는 이전에 지정한 시간대에 유지됩니다. [!DNL Mixpanel]은(는) 일광 절약 시간제를 수용하며 수집 타임스탬프를 적절하게 조정합니다. 시간대가 데이터에 미치는 영향에 대한 자세한 내용은 [프로젝트에 대한 시간대 관리](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel)에 대한 [!DNL Mixpanel] 가이드를 참조하십시오.
+[!DNL Mixpanel] 데이터를 Experience Platform으로 수집하기 전에 지정한 시간대는 [!DNL Mixpanel] 프로필 시간대 설정과 같아야 합니다. 데이터의 시간대에 대한 모든 변경 사항은 새 이벤트에만 적용되고 이전 이벤트는 이전에 지정한 시간대에 유지됩니다. [!DNL Mixpanel]은(는) 일광 절약 시간제를 수용하며 수집 타임스탬프를 적절하게 조정합니다. 시간대가 데이터에 미치는 영향에 대한 자세한 내용은 [!DNL Mixpanel]프로젝트에 대한 시간대 관리[에 대한 ](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel) 가이드를 참조하십시오.
 
-잠시 후 올바른 인터페이스가 미리보기 패널로 업데이트되어 데이터 흐름을 생성하기 전에 스키마를 검사할 수 있습니다. 완료되면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+잠시 후 올바른 인터페이스가 미리보기 패널로 업데이트되어 데이터 흐름을 생성하기 전에 스키마를 검사할 수 있습니다. 완료되면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ![구성](../../../../images/tutorials/create/mixpanel-export-events/authentication-configuration.png)
 
@@ -87,7 +87,7 @@ Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x2
 
 다음은 [!DNL Mixpanel] 원본을 연결했으며 [!DNL Mixpanel] 이벤트가 Experience Platform에 수집되고 있는지 확인하기 위해 수행할 수 있는 단계입니다.
 
-Experience Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 데이터 세트]**&#x200B;를 선택하여 [!UICONTROL 데이터 세트] 작업 영역에 액세스합니다. [!UICONTROL 데이터 집합 활동] 화면에 실행 세부 정보가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL Datasets]**&#x200B;을(를) 선택하여 [!UICONTROL Datasets] 작업 영역에 액세스합니다. [!UICONTROL Dataset Activity] 화면에 실행 세부 정보가 표시됩니다.
 
 ![dataset-activity](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
 
@@ -95,7 +95,7 @@ Experience Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 데이터 세
 
 ![데이터 흐름 모니터링](../../../../images/tutorials/create/mixpanel-export-events/dataflow-monitoring.png)
 
-마지막으로 **[!UICONTROL 데이터 집합 미리 보기]**&#x200B;를 선택하여 수집된 데이터를 표시합니다.
+마지막으로 **[!UICONTROL Preview dataset]**&#x200B;을(를) 선택하여 수집된 데이터를 표시합니다.
 
 ![미리 보기-데이터 세트](../../../../images/tutorials/create/mixpanel-export-events/preview-dataset.png)
 

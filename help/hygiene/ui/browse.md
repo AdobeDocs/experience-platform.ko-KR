@@ -4,8 +4,8 @@ description: Adobe Experience Platform 사용자 인터페이스에서 기존 �
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 27%
+source-wordcount: '812'
+ht-degree: 26%
 
 ---
 
@@ -23,15 +23,15 @@ ht-degree: 27%
 
 ## 기존 작업 주문 나열 및 필터링
 
-UI에서 **[!UICONTROL 데이터 수명 주기]** 작업 영역에 처음 액세스하면 기본 세부 정보와 함께 기존 작업 주문 목록이 표시됩니다.
+UI에서 **[!UICONTROL Data Lifecycle]** 작업 영역에 처음 액세스하면 기존 작업 주문 목록이 기본 세부 정보와 함께 표시됩니다.
 
-![Experience Platform UI에서 [!UICONTROL 데이터 수명 주기] 작업 영역을 표시하는 이미지](../images/ui/browse/work-order-list.png)
+![Experience Platform UI에서 [!UICONTROL Data Lifecycle] 작업 영역을 표시하는 이미지](../images/ui/browse/work-order-list.png)
 
-목록에는 한 번에 한 범주에 대한 작업 주문만 표시됩니다. 레코드 삭제 작업 목록을 보려면 **[!UICONTROL 소비자]**&#x200B;를 선택하고, 예약된 데이터 세트 만료 목록을 보려면 **[!UICONTROL 데이터 세트]**&#x200B;를 선택하십시오.
+목록에는 한 번에 한 범주에 대한 작업 주문만 표시됩니다. 레코드 삭제 작업 목록을 보려면 **[!UICONTROL Consumer]**&#x200B;을(를) 선택하고, 예약된 데이터 세트 만료 목록을 보려면 **[!UICONTROL Dataset]**&#x200B;을(를) 선택하십시오.
 
-![[!UICONTROL 데이터 집합] 탭을 표시하는 이미지](../images/ui/browse/dataset-tab.png)
+![[!UICONTROL Dataset] 탭을 표시하는 이미지](../images/ui/browse/dataset-tab.png)
 
-단계 아이콘(![단계 아이콘 이미지](/help/images/icons/filter.png))을 선택하여 표시된 작업 주문에 대한 필터 목록을 확인합니다.
+표시된 작업 주문에 대한 필터 목록을 보려면 funnel 아이콘(![funnel 아이콘 이미지](/help/images/icons/filter.png))을 선택하십시오.
 
 ![표시된 작업 순서 필터의 이미지](../images/ui/browse/filters.png)
 
@@ -43,9 +43,9 @@ UI에서 **[!UICONTROL 데이터 수명 주기]** 작업 영역에 처음 액세
 
 | 필터 | 설명 |
 | --- | --- |
-| [!UICONTROL 상태] | 작업 주문의 현재 상태를 기반으로 필터링:<ul><li>**[!UICONTROL 완료]**: 작업이 완료되었습니다.</li><li>**[!UICONTROL 실패]**: 작업에 오류가 발생하여 완료할 수 없습니다.</li><li>**[!UICONTROL 처리 중]**: 요청이 시작되었으며 현재 처리 중입니다.</li></ul> |
-| [!UICONTROL 만든 날짜] | 작업 순서가 지정된 시간을 기준으로 필터링합니다. |
-| [!UICONTROL 업데이트 날짜] | 작업 주문이 마지막으로 업데이트된 날짜를 기준으로 필터링합니다. 생성은 업데이트로 계산됩니다. |
+| [!UICONTROL Status] | 작업 주문의 현재 상태를 기반으로 필터링:<ul><li>**[!UICONTROL Completed]**: 작업이 완료되었습니다.</li><li>**[!UICONTROL Failed]**: 작업에 오류가 발생하여 완료할 수 없습니다.</li><li>**[!UICONTROL Processing]**: 요청이 시작되었으며 현재 처리 중입니다.</li></ul> |
+| [!UICONTROL Date created] | 작업 순서가 지정된 시간을 기준으로 필터링합니다. |
+| [!UICONTROL Date updated] | 작업 주문이 마지막으로 업데이트된 날짜를 기준으로 필터링합니다. 생성은 업데이트로 계산됩니다. |
 
 ### 데이터 세트 만료 필터
 
@@ -53,10 +53,10 @@ UI에서 **[!UICONTROL 데이터 수명 주기]** 작업 영역에 처음 액세
 
 | 필터 | 설명 |
 | --- | --- |
-| [!UICONTROL 상태] | 작업 주문의 현재 상태를 기반으로 필터링:<ul><li>**[!UICONTROL 완료]**: 작업이 완료되었습니다.</li><li>**[!UICONTROL 보류 중]**: 작업이 만들어졌지만 아직 실행되지 않았습니다. [데이터 집합 만료 요청](./dataset-expiration.md)은(는) 예약된 삭제 날짜 이전에 이 상태를 가정합니다. 삭제 날짜가 되면 작업이 미리 취소되지 않는 한 상태가 [!UICONTROL 실행 중]&#x200B;(으)로 업데이트됩니다.</li><li>**[!UICONTROL 실행 중]**: 데이터 세트 만료 요청이 시작되었으며 현재 처리 중입니다.</li><li>**[!UICONTROL 취소됨]**: 수동 사용자 요청의 일부로 작업이 취소되었습니다.</li></ul> |
-| [!UICONTROL 만든 날짜] | 작업 순서가 지정된 시간을 기준으로 필터링합니다. |
-| [!UICONTROL 만료 날짜] | 해당 데이터 세트에 대해 예약된 삭제 날짜를 기준으로 데이터 세트 만료 요청을 필터링합니다. |
-| [!UICONTROL 업데이트 날짜] | 작업 주문이 마지막으로 업데이트된 날짜를 기준으로 필터링합니다. 생성 및 만료는 업데이트로 계산됩니다. |
+| [!UICONTROL Status] | 작업 주문의 현재 상태를 기반으로 필터링:<ul><li>**[!UICONTROL Completed]**: 작업이 완료되었습니다.</li><li>**[!UICONTROL Pending]**: 작업이 만들어졌지만 아직 실행되지 않았습니다. [데이터 집합 만료 요청](./dataset-expiration.md)은(는) 예약된 삭제 날짜 이전에 이 상태를 가정합니다. 삭제 날짜가 되면 작업이 미리 취소되지 않는 한 상태가 [!UICONTROL Executing]&#x200B;(으)로 업데이트됩니다.</li><li>**[!UICONTROL Executing]**: 데이터 세트 만료 요청이 시작되었으며 현재 처리 중입니다.</li><li>**[!UICONTROL Cancelled]**: 수동 사용자 요청의 일부로 작업이 취소되었습니다.</li></ul> |
+| [!UICONTROL Date created] | 작업 순서가 지정된 시간을 기준으로 필터링합니다. |
+| [!UICONTROL Expiration date] | 해당 데이터 세트에 대해 예약된 삭제 날짜를 기준으로 데이터 세트 만료 요청을 필터링합니다. |
+| [!UICONTROL Date updated] | 작업 주문이 마지막으로 업데이트된 날짜를 기준으로 필터링합니다. 생성 및 만료는 업데이트로 계산됩니다. |
 
 {style="table-layout:auto"}
 
@@ -75,7 +75,7 @@ UI에서 **[!UICONTROL 데이터 수명 주기]** 작업 영역에 처음 액세
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="레코드 삭제 응답"
->abstract="레코드 삭제 프로세스가 시스템에서 응답을 수신하면 해당 메시지가 **[!UICONTROL 결과]** 섹션 아래에 표시됩니다. 작업 주문이 처리되는 동안 문제가 발생하는 경우 이 섹션에 관련 오류 메시지가 표시되면 문제를 해결하는 데 도움이 됩니다. 자세한 내용은 데이터 라이프사이클 UI 안내서를 참조하십시오."
+>abstract="레코드 삭제 프로세스에서 시스템의 응답을 받으면 이러한 메시지가 **[!UICONTROL Result]** 섹션 아래에 표시됩니다. 작업 주문이 처리되는 동안 문제가 발생하는 경우 이 섹션에 관련 오류 메시지가 표시되면 문제를 해결하는 데 도움이 됩니다. 자세한 내용은 데이터 라이프사이클 UI 안내서를 참조하십시오."
 
 나열된 작업 주문의 ID를 선택하여 세부 정보를 확인합니다.
 
@@ -85,7 +85,7 @@ UI에서 **[!UICONTROL 데이터 수명 주기]** 작업 영역에 처음 액세
 
 ### 삭제 세부 정보 기록 {#record-delete}
 
-레코드 삭제 요청의 세부 정보에는 현재 상태와 요청이 수행된 이후 경과된 시간이 포함됩니다. 각 요청에는 삭제와 관련된 각 다운스트림 서비스의 개별 상태 세부 정보를 제공하는 **[!UICONTROL 서비스별 상태]** 섹션도 포함됩니다. 오른쪽 레일에서 컨트롤을 사용하여 작업 주문의 이름과 설명을 업데이트할 수 있습니다.
+레코드 삭제 요청의 세부 정보에는 현재 상태와 요청이 수행된 이후 경과된 시간이 포함됩니다. 각 요청에는 삭제와 관련된 각 다운스트림 서비스에 대한 개별 상태 세부 정보를 제공하는 **[!UICONTROL Status by service]** 섹션도 포함됩니다. 오른쪽 레일에서 컨트롤을 사용하여 작업 주문의 이름과 설명을 업데이트할 수 있습니다.
 
 ![레코드 삭제 작업 순서에 대한 세부 정보 페이지를 표시하는 이미지](../images/ui/browse/record-delete-details.png)
 

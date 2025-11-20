@@ -26,7 +26,7 @@ Adobe Experience Platform UI의 모니터링 대시보드를 사용하여 조직
 
 >[!NOTE]
 >
->스트리밍 처리량 용량은 초당 최대 1500개의 인바운드 이벤트를 지원합니다. 추가 스트리밍 세분화를 구매하여 초당 최대 13,500개의 추가 인바운드 이벤트를 지원할 수 있습니다&#x200B;. 자세한 내용은 [Real-Time CDP B2C Edition - Prime 및 Ultimate 패키지 제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)을 참조하세요.
+>스트리밍 처리량 용량은 초당 최대 1500개의 인바운드 이벤트를 지원합니다. 추가 스트리밍 세분화를 구매하여 초당 최대 13,500개의 추가 인바운드 이벤트를 지원할 수 있습니다&#x200B;. 자세한 내용은 [Real-Time CDP B2C Edition - Prime 및 Ultimate 패키지 제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)을 참조하세요.
 
 ## 스트리밍 프로필 수집을 위한 모니터링 지표 {#streaming-profile-metrics}
 
@@ -187,7 +187,7 @@ Experience Platform에서 데이터 흐름을 가장 잘 관리하고 데이터 
 | 기여 요인 | 정의 | 사용 사례에 미치는 영향 | 모범 사례 |
 | --- | --- | --- | --- |
 | 일괄 처리-스트리밍 전환 | 스트리밍으로 전환된 일괄 작업 로드는 처리량을 크게 증가시켜 성능과 리소스 할당에 영향을 줄 수 있습니다. 예를 들어, 비율 제한 없이 이벤트 후에 벌크 프로필 업데이트를 수행하는 경우입니다. | 짧은 지연 처리가 필요하지 않은 일괄 사용 사례에는 스트리밍 전략이 필요하지 않습니다. | 사용 사례 요구 사항 평가 일괄 아웃바운드 마케팅의 경우 스트리밍 대신 [일괄 처리 수집](../../ingestion/batch-ingestion/overview.md)을 사용하여 데이터 수집을 보다 효율적으로 관리하는 것이 좋습니다. |
-| 불필요한 데이터 수집 | 개인화에 필요하지 않은 데이터를 수집하면 가치를 추가하지 않고 처리량이 증가하여 리소스를 낭비할 수 있습니다. 예를 들어 관련성에 관계없이 모든 분석 트래픽을 프로필로 수집합니다. | 관련 없는 데이터가 너무 많으면 노이즈가 발생하여 영향을 미치는 데이터 포인트를 식별하기가 더 어려워집니다. 또한 대상자 및 프로필을 정의하고 관리할 때 마찰이 발생할 수 있습니다. | 사용 사례에 필요한 데이터만 수집합니다. 불필요한 데이터를 필터링해야 합니다.<ul><li>**Adobe Analytics**: [행 수준 필터링](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)을 사용하여 데이터 섭취를 최적화합니다.</li><li>**소스**: [[!DNL Flow Service] API를 사용하여 &#x200B;](../../sources/tutorials/api/filter.md) 및 [!DNL Snowflake]과(와) 같은 지원되는 소스에 대해 행 수준 데이터를 필터링[!DNL Google BigQuery]합니다.</li></li>**Edge 데이터스트림**: WebSDK에서 들어오는 트래픽의 행 수준 필터링을 수행하려면 [동적 데이터스트림](../../datastreams/configure-dynamic-datastream.md)을 구성하십시오.</li></ul> |
+| 불필요한 데이터 수집 | 개인화에 필요하지 않은 데이터를 수집하면 가치를 추가하지 않고 처리량이 증가하여 리소스를 낭비할 수 있습니다. 예를 들어 관련성에 관계없이 모든 분석 트래픽을 프로필로 수집합니다. | 관련 없는 데이터가 너무 많으면 노이즈가 발생하여 영향을 미치는 데이터 포인트를 식별하기가 더 어려워집니다. 또한 대상자 및 프로필을 정의하고 관리할 때 마찰이 발생할 수 있습니다. | 사용 사례에 필요한 데이터만 수집합니다. 불필요한 데이터를 필터링해야 합니다.<ul><li>**Adobe Analytics**: [행 수준 필터링](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)을 사용하여 데이터 섭취를 최적화합니다.</li><li>**소스**: [[!DNL Flow Service] API를 사용하여 ](../../sources/tutorials/api/filter.md) 및 [!DNL Snowflake]과(와) 같은 지원되는 소스에 대해 행 수준 데이터를 필터링[!DNL Google BigQuery]합니다.</li></li>**Edge 데이터스트림**: WebSDK에서 들어오는 트래픽의 행 수준 필터링을 수행하려면 [동적 데이터스트림](../../datastreams/configure-dynamic-datastream.md)을 구성하십시오.</li></ul> |
 
 {style="table-layout:auto"}
 

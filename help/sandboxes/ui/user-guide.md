@@ -6,7 +6,7 @@ description: 이 문서에서는 Adobe Experience Platform 사용자 인터페�
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1086'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 ## 샌드박스 보기
 
-Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 샌드박스]**&#x200B;를 선택한 다음 **[!UICONTROL 찾아보기]** 탭을 선택하여 [!UICONTROL 샌드박스] 대시보드를 엽니다. 대시보드에는 해당 유형(프로덕션 또는 개발)을 포함하여 조직에서 사용할 수 있는 모든 샌드박스가 나열됩니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Sandboxes]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Browse]** 탭을 선택하여 [!UICONTROL Sandboxes] 대시보드를 엽니다. 대시보드에는 해당 유형(프로덕션 또는 개발)을 포함하여 조직에서 사용할 수 있는 모든 샌드박스가 나열됩니다.
 
 ![사용 가능한 샌드박스 목록을 표시하는 찾아보기 탭이 선택된 샌드박스 대시보드.](../images/ui/view-sandboxes.png)
 
@@ -49,27 +49,27 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 샌드박스]**&#x20
 
 >[!WARNING]
 >
->새 샌드박스를 만들려면 [[!UICONTROL 권한]](../../access-control/abac/ui/permissions.md)에서 역할에 샌드박스를 추가해야 사용을 시작할 수 있습니다. 역할에 대한 샌드박스를 프로비저닝하는 방법에 대해 알아보려면 [역할에 대한 샌드박스 관리](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) 설명서를 참조하십시오.
+>새 샌드박스를 만들려면 [[!UICONTROL Permissions]](../../access-control/abac/ui/permissions.md)의 역할에 샌드박스를 추가해야 사용을 시작할 수 있습니다. 역할에 대한 샌드박스를 프로비저닝하는 방법에 대해 알아보려면 [역할에 대한 샌드박스 관리](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) 설명서를 참조하십시오.
 
 Experience Platform에서 샌드박스를 사용하는 방법에 대한 빠른 개요를 알려면 다음 비디오를 사용하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430298/?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-새 샌드박스를 만들려면 화면 오른쪽 상단에서 **[!UICONTROL 샌드박스 만들기]**&#x200B;를 선택합니다.
+새 샌드박스를 만들려면 화면 오른쪽 상단에서 **[!UICONTROL Create sandbox]**&#x200B;을(를) 선택합니다.
 
 ![create-sandbox](../images/ui/create-sandbox.png)
 
-**[!UICONTROL 샌드박스 만들기]** 대화 상자가 나타납니다. **[!UICONTROL 유형]** 드롭다운을 선택하고 [!UICONTROL 개발] 또는 [!UICONTROL 프로덕션] 샌드박스 유형을 선택합니다.
+**[!UICONTROL Create sandbox]** 대화 상자가 나타납니다. **[!UICONTROL Type]** 드롭다운을 선택하고 [!UICONTROL Development] 또는 [!UICONTROL Production] 샌드박스 유형을 선택합니다.
 
 ![샌드박스 유형 선택기가 강조 표시된 샌드박스 만들기 대화 상자입니다.](../images/ui/sandbox-type.png)
 
-유형을 선택한 후 **[!UICONTROL 이름]** 필드에 샌드박스의 이름을 입력하십시오. 샌드박스 이름은 API 호출에 사용할 모든 소문자 식별자이므로 고유하고 간결해야 합니다. 샌드박스 이름은 문자로 시작하고 최대 256자까지 사용할 수 있으며 영숫자와 하이픈(-)으로만 구성해야 합니다. 그런 다음 **[!UICONTROL 제목]** 필드에 샌드박스의 제목을 입력합니다. 제목은 사람이 읽을 수 있어야 하며 쉽게 식별할 수 있을 만큼 설명적이어야 합니다.
+유형을 선택한 후 **[!UICONTROL Name]** 필드에 샌드박스의 이름을 입력하십시오. 샌드박스 이름은 API 호출에 사용할 모든 소문자 식별자이므로 고유하고 간결해야 합니다. 샌드박스 이름은 문자로 시작하고 최대 256자까지 사용할 수 있으며 영숫자와 하이픈(-)으로만 구성해야 합니다. 그런 다음 **[!UICONTROL Title]** 필드에 샌드박스의 제목을 입력합니다. 제목은 사람이 읽을 수 있어야 하며 쉽게 식별할 수 있을 만큼 설명적이어야 합니다.
 
-완료되면 **[!UICONTROL 만들기]**&#x200B;를 선택합니다.
+완료되면 **[!UICONTROL Create]**&#x200B;을(를) 선택합니다.
 
 ![이름 및 제목이 입력되어 있고 만들기 옵션이 강조 표시된 샌드박스 만들기 대화 상자.](../images/ui/sandbox-info.png)
 
-샌드박스 만들기가 완료되면 페이지를 새로 고치고 새 샌드박스가 **[!UICONTROL 샌드박스]** 대시보드에 &quot;[!UICONTROL 만들기]&quot; 상태로 나타납니다. 새 샌드박스는 시스템에서 프로비저닝되는 데 약 30초가 걸리고 그 이후에는 상태가 &quot;[!UICONTROL 활성]&quot;(으)로 변경됩니다.
+샌드박스를 만들었으면 페이지를 새로 고치고 새 샌드박스가 **[!UICONTROL Sandboxes]** 대시보드에 &quot;[!UICONTROL Creating]&quot; 상태로 나타납니다. 새 샌드박스는 시스템에서 프로비저닝되는 데 약 30초가 걸리고 그 이후에는 상태가 &quot;[!UICONTROL Active]&quot;(으)로 변경됩니다.
 
 ![새로 만든 샌드박스가 강조 표시된 샌드박스 대시보드입니다.](../images/ui/new-sandbox.png)
 
@@ -88,15 +88,15 @@ Experience Platform에서 샌드박스를 사용하는 방법에 대한 빠른 �
 
 대상 구성은 현재 샌드박스 재설정 기능과 통합되지 않았으므로 샌드박스 재설정을 수행하기 전에 대상을 수동으로 삭제해야 합니다.
 
-왼쪽 탐색 메뉴의 **[!UICONTROL 고객]** 섹션에서 **[!UICONTROL 대상]**&#x200B;을 선택한 다음 **[!UICONTROL 구성]** 탭을 선택합니다.
+왼쪽 탐색의 **[!UICONTROL Audiences]** 섹션에서 **[!UICONTROL Customers]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Compositions]** 탭을 선택합니다.
 
 ![컴포지션 탭이 선택되어 강조 표시된 대상자 대시보드입니다.](../images/ui/audiences.png)
 
-그런 다음 첫 번째 대상 옆의 생략 부호(`...`)를 선택한 다음 **[!UICONTROL 삭제]**&#x200B;를 선택합니다.
+그런 다음 첫 번째 대상 옆의 생략 부호(`...`)를 선택한 다음 **[!UICONTROL Delete]**&#x200B;을(를) 선택합니다.
 
-![[!UICONTROL 삭제] 옵션을 강조 표시하는 대상 메뉴입니다.](../images/ui/delete-composition.png)
+![[!UICONTROL Delete] 옵션을 강조 표시하는 대상 메뉴입니다.](../images/ui/delete-composition.png)
 
-삭제 성공 확인이 표시되고 **[!UICONTROL 컴포지션]** 탭으로 돌아갑니다.
+삭제 성공 확인이 표시되고 **[!UICONTROL Compositions]** 탭으로 돌아갑니다.
 
 모든 컴포지션을 사용하여 위의 단계를 반복합니다. 이렇게 하면 대상 인벤토리에서 모든 대상이 삭제됩니다. 모든 대상이 제거되면 샌드박스를 계속 재설정할 수 있습니다.
 
@@ -104,15 +104,15 @@ Experience Platform에서 샌드박스를 사용하는 방법에 대한 빠른 �
 
 프로덕션 또는 개발 샌드박스를 재설정하면 샌드박스의 이름과 관련 권한을 유지하면서 해당 샌드박스(스키마, 데이터 세트 등)와 관련된 모든 리소스가 삭제됩니다. 이 &quot;클린&quot; 샌드박스는 액세스 권한이 있는 사용자가 동일한 이름으로 계속 사용할 수 있습니다.
 
-샌드박스 목록에서 재설정할 샌드박스를 선택합니다. 표시되는 오른쪽 탐색 패널에서 **[!UICONTROL 샌드박스 재설정]**&#x200B;을 선택합니다.
+샌드박스 목록에서 재설정할 샌드박스를 선택합니다. 표시되는 오른쪽 탐색 패널에서 **[!UICONTROL Sandbox reset]**&#x200B;을(를) 선택합니다.
 
 ![선택한 샌드박스가 선택되고 샌드박스 재설정 옵션이 강조 표시된 샌드박스 대시보드.](../images/ui/reset.png)
 
-선택을 확인하는 대화 상자가 나타납니다. 계속하려면 **[!UICONTROL 계속]**&#x200B;을 선택하세요.
+선택을 확인하는 대화 상자가 나타납니다. 계속하려면 **[!UICONTROL Continue]**&#x200B;을(를) 선택하십시오.
 
 ![다시 설정 대화 상자가 계속 옵션이 강조 표시된 상태로 표시됩니다.](../images/ui/reset-warning.png)
 
-마지막 확인 창에서 대화 상자에 샌드박스 이름을 입력하고 **[!UICONTROL 재설정]**&#x200B;을 선택합니다.
+마지막 확인 창에서 대화 상자에 샌드박스 이름을 입력하고 **[!UICONTROL Reset]**&#x200B;을(를) 선택합니다.
 
 ![이름 확인 필드와 재설정 옵션이 강조 표시된 재설정 대화 상자.](../images/ui/reset-confirm.png)
 
@@ -124,15 +124,15 @@ Experience Platform에서 샌드박스를 사용하는 방법에 대한 빠른 �
 
 프로덕션 또는 개발 샌드박스를 삭제하면 권한을 포함하여 해당 샌드박스와 연결된 모든 리소스가 영구적으로 제거됩니다.
 
-샌드박스 목록에서 삭제할 샌드박스를 선택합니다. 표시되는 오른쪽 탐색 패널에서 **[!UICONTROL 삭제]**&#x200B;를 선택합니다.
+샌드박스 목록에서 삭제할 샌드박스를 선택합니다. 표시되는 오른쪽 탐색 패널에서 **[!UICONTROL Delete]**&#x200B;을(를) 선택합니다.
 
 ![선택한 샌드박스가 선택되고 삭제 옵션이 강조 표시된 샌드박스 대시보드.](../images/ui/delete.png)
 
-선택을 확인하는 대화 상자가 나타납니다. 계속하려면 **[!UICONTROL 계속]**&#x200B;을 선택하세요.
+선택을 확인하는 대화 상자가 나타납니다. 계속하려면 **[!UICONTROL Continue]**&#x200B;을(를) 선택하십시오.
 
 ![삭제 대화 상자에 계속 옵션이 강조 표시되어 있습니다.](../images/ui/delete-warning.png)
 
-마지막 확인 창에서 대화 상자에 샌드박스 이름을 입력하고 **[!UICONTROL 계속]**&#x200B;을 선택합니다.
+마지막 확인 창에서 대화 상자에 샌드박스 이름을 입력하고 **[!UICONTROL Continue]**&#x200B;을(를) 선택합니다.
 
 ![이름 확인 및 계속 옵션이 강조 표시된 삭제 대화 상자입니다.](../images/ui/delete-confirm.png)
 

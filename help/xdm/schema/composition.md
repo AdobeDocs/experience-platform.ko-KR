@@ -6,7 +6,7 @@ description: XDM(Experience Data Model) 스키마와 Adobe Experience Platform�
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
 workflow-type: tm+mt
-source-wordcount: '4350'
+source-wordcount: '4308'
 ht-degree: 8%
 
 ---
@@ -48,7 +48,7 @@ Experience Platform에서 사용하기 위한 데이터는 다음 두 가지 동
 
 레코드와 시계열 스키마 모두에 ID 맵(`xdm:identityMap`)이 포함되어 있습니다. 이 필드에는 다음 섹션에 설명된 대로 &quot;ID&quot;로 표시된 필드에서 가져온 주체의 ID 표현이 포함되어 있습니다.
 
-### [!UICONTROL ID] {#identity}
+### [!UICONTROL Identity] {#identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
@@ -57,9 +57,9 @@ Experience Platform에서 사용하기 위한 데이터는 다음 두 가지 동
 
 스키마는 Experience Platform에 수집된 데이터의 구조를 정의합니다. 이 데이터는 플랫폼 내에서 여러 서비스를 지원하며 각 개인에 대한 통합된 단일 보기를 만드는 데 도움이 됩니다. 따라서 스키마를 디자인할 때 ID로 표시할 필드를 신중하게 생각하십시오. 이러한 필드는 데이터 세트에서 프로필이 결합하는 방법을 제어합니다.
 
-이 프로세스를 지원하기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터를 수집하면 해당 필드의 데이터가 해당 개인의 &quot;[!UICONTROL ID 그래프]&quot;에 삽입됩니다. 그런 다음 [[!DNL Real-Time Customer Profile]](../../profile/home.md) 및 기타 Experience Platform 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 결합 보기를 제공할 수 있습니다.
+이 프로세스를 지원하기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터를 수집하면 해당 필드의 데이터가 해당 개인의 &quot;[!UICONTROL Identity Graph]&quot;에 삽입됩니다. 그런 다음 [[!DNL Real-Time Customer Profile]](../../profile/home.md) 및 기타 Experience Platform 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 결합 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;[!UICONTROL ID]&quot;(으)로 표시되는 필드에는 전자 메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko), CRM ID 또는 기타 고유 ID 필드가 포함됩니다. 조직에 고유한 식별자를 고려하십시오. 이러한 식별자는 좋은 &quot;[!UICONTROL ID]&quot; 필드일 수도 있습니다.
+일반적으로 &quot;[!UICONTROL Identity]&quot;(으)로 표시되는 필드에는 전자 메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유 ID 필드가 포함됩니다. 좋은 &quot;[!UICONTROL Identity]&quot; 필드일 수도 있으므로 조직 고유의 식별자를 고려하십시오.
 
 ID 정보를 통해 디지털 환경을 고객에게 제공하는 방법에 대한 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md)를 참조하세요. 스키마를 만들 때 ID 사용에 대한 [팁은 데이터 모델링 모범 사례 문서를 참조하십시오](./best-practices.md#data-validation-fields).
 
@@ -109,7 +109,7 @@ ID 데이터를 Experience Platform으로 전송하는 방법에는 두 가지�
 }
 ```
 
-위의 예에서 보듯이 `identityMap` 개체의 각 키는 ID 네임스페이스를 나타냅니다. 각 키의 값은 각 네임스페이스의 ID 값(`id`)을 나타내는 개체 배열입니다. Adobe 애플리케이션에서 인식하는 [표준 ID 네임스페이스 목록](../../identity-service/troubleshooting-guide.md#standard-namespaces)에 대해서는 [!DNL Identity Service] 설명서를 참조하십시오.
+위의 예에서 보듯이 `identityMap` 개체의 각 키는 ID 네임스페이스를 나타냅니다. 각 키의 값은 각 네임스페이스의 ID 값(`id`)을 나타내는 개체 배열입니다. Adobe 애플리케이션에서 인식하는 [!DNL Identity Service]표준 ID 네임스페이스 목록[에 대해서는 ](../../identity-service/troubleshooting-guide.md#standard-namespaces) 설명서를 참조하십시오.
 
 >[!NOTE]
 >
@@ -161,9 +161,9 @@ Experience Platform에서는 표준 빌딩 블록이 결합되어 스키마를 �
 
 스키마는 다음 공식을 사용하여 구성됩니다.
 
-**클래스 + 스키마 필드 그룹&ast; = XDM 스키마**
+**클래스 + 스키마 필드 그룹&amp;ast; = XDM 스키마**
 
-&ast;스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. 즉, 필드 그룹을 전혀 사용하지 않고 데이터 세트 스키마를 구성할 수 있습니다.
+&amp;ast;스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. 즉, 필드 그룹을 전혀 사용하지 않고 데이터 세트 스키마를 구성할 수 있습니다.
 
 ### 클래스 {#class}
 
@@ -183,9 +183,9 @@ Experience Platform에서는 표준 빌딩 블록이 결합되어 스키마를 �
 
 Adobe은 몇 가지 표준(&quot;코어&quot;) XDM 클래스를 제공합니다. 이러한 클래스 중 두 개([!DNL XDM Individual Profile] 및 [!DNL XDM ExperienceEvent])는 거의 모든 다운스트림 Experience Platform 프로세스에 필요합니다. 이러한 핵심 클래스 외에도 자신만의 사용자 지정 클래스를 만들어 조직에 대한 보다 구체적인 사용 사례를 설명할 수도 있습니다. 고유한 사용 사례를 설명하는 데 사용할 수 있는 Adobe 정의 핵심 클래스가 없는 경우 조직에서 사용자 정의 클래스를 정의합니다.
 
-다음 스크린샷은 Experience Platform UI에서 클래스가 표현되는 방법을 보여 줍니다. 표시된 예제 스키마에는 필드 그룹이 없으므로 표시되는 모든 필드는 스키마의 클래스([!UICONTROL XDM 개인 프로필])에서 제공합니다.
+다음 스크린샷은 Experience Platform UI에서 클래스가 표현되는 방법을 보여 줍니다. 표시된 예제 스키마에 필드 그룹이 없으므로 표시되는 모든 필드는 스키마의 클래스([!UICONTROL XDM Individual Profile])에서 제공합니다.
 
-![스키마 편집기 내의 [!UICONTROL XDM 개별 프로필].](../images/schema-composition/class.png)
+![스키마 편집기 내의 [!UICONTROL XDM Individual Profile]입니다.](../images/schema-composition/class.png)
 
 사용 가능한 표준 XDM 클래스의 최신 목록을 보려면 [공식 XDM 저장소](https://github.com/adobe/xdm/tree/master/components/classes)를 참조하십시오. 또는 UI에서 리소스를 보려면 [XDM 구성 요소 탐색](../ui/explore.md)에 대한 안내서를 참조할 수 있습니다.
 
@@ -207,7 +207,7 @@ Adobe은 몇 가지 표준(&quot;코어&quot;) XDM 클래스를 제공합니다.
 
 Experience Platform에는 많은 표준 Adobe 필드 그룹이 포함되어 있으며 공급업체는 이를 통해 사용자를 위한 필드 그룹을 정의하고 개별 사용자는 고유한 개념에 대한 필드 그룹을 정의할 수 있습니다.
 
-예를 들어 &quot;[!UICONTROL 충성도 멤버]&quot; 스키마에 대한 &quot;[!UICONTROL 이름]&quot; 및 &quot;[!UICONTROL 홈 주소]&quot; 등의 세부 정보를 캡처하려면 일반적인 개념을 정의하는 표준 필드 그룹을 사용할 수 있습니다. 그러나 조직에 더 고유한 개념(예: 사용자 정의 충성도 프로그램 세부 정보 또는 제품 속성)은 표준 필드 그룹에서 다루지 않을 수 있습니다. 이 경우 이 정보를 캡처하려면 고유한 필드 그룹을 정의해야 합니다.
+예를 들어 &quot;[!UICONTROL First Name]&quot; 스키마에 대한 &quot;[!UICONTROL Home Address]&quot; 및 &quot;[!UICONTROL Loyalty Members]&quot; 등의 세부 정보를 캡처하려면 일반적인 개념을 정의하는 표준 필드 그룹을 사용할 수 있습니다. 그러나 조직에 더 고유한 개념(예: 사용자 정의 충성도 프로그램 세부 정보 또는 제품 속성)은 표준 필드 그룹에서 다루지 않을 수 있습니다. 이 경우 이 정보를 캡처하려면 고유한 필드 그룹을 정의해야 합니다.
 
 >[!NOTE]
 >
@@ -217,9 +217,9 @@ Experience Platform에는 많은 표준 Adobe 필드 그룹이 포함되어 있�
 
 스키마는 &quot;0개 이상&quot;의 필드 그룹으로 구성되어 있으므로 필드 그룹을 전혀 사용하지 않고도 유효한 스키마를 구성할 수 있음을 의미합니다.
 
-다음 스크린샷은 Experience Platform UI에 필드 그룹이 어떻게 표시되는지 보여 줍니다. 단일 필드 그룹([!UICONTROL 인구 통계 세부 정보])이 이 예제의 스키마에 추가되어 스키마 구조에 대한 필드 그룹화를 제공합니다.
+다음 스크린샷은 Experience Platform UI에 필드 그룹이 어떻게 표시되는지 보여 줍니다. 단일 필드 그룹([!UICONTROL Demographic Details])이 이 예제의 스키마에 추가되어 스키마의 구조에 대한 필드 그룹화를 제공합니다.
 
-![예제 스키마에서 [!UICONTROL 인구 통계학적 세부 정보] 필드 그룹이 강조 표시된 스키마 편집기.](../images/schema-composition/field-group.png)
+![예제 스키마에서 [!UICONTROL Demographic Details] 필드 그룹이 강조 표시된 스키마 편집기.](../images/schema-composition/field-group.png)
 
 사용 가능한 표준 XDM 필드 그룹의 최신 목록을 보려면 [공식 XDM 저장소](https://github.com/adobe/xdm/tree/master/components/fieldgroups)를 참조하세요. 또는 UI에서 리소스를 보려면 [XDM 구성 요소 탐색](../ui/explore.md)에 대한 안내서를 참조할 수 있습니다.
 
@@ -237,7 +237,7 @@ Experience Platform에는 많은 표준 Adobe 필드 그룹이 포함되어 있�
 
 Experience Platform에서는 일반적인 데이터 구조를 설명하는 표준 패턴을 사용할 수 있도록 [!DNL Schema Registry]의 일부로 여러 가지 일반적인 데이터 형식을 제공합니다. 이 내용은 [스키마 레지스트리 튜토리얼](../tutorials/create-schema-api.md)에 자세히 설명되어 있으며 데이터 형식을 정의하는 단계를 거칠 때 명확해집니다.
 
-다음 스크린샷은 Experience Platform UI에 데이터 유형이 표현되는 방법을 보여 줍니다. [!UICONTROL 인구 통계학적 세부 정보] 필드 그룹에서 제공한 필드 중 하나가 필드 이름 옆에 있는 파이프 문자(`|`) 뒤에 있는 텍스트로 표시된 &quot;[!UICONTROL Object]&quot; 데이터 형식을 사용합니다. 이 특정 데이터 유형은 개별 사용자의 이름과 관련된 여러 하위 필드를 제공하며, 개인의 이름을 캡처해야 하는 다른 필드에 다시 사용할 수 있는 구성입니다.
+다음 스크린샷은 Experience Platform UI에 데이터 유형이 표현되는 방법을 보여 줍니다. [!UICONTROL Demographic Details] 필드 그룹에서 제공한 필드 중 하나가 필드 이름 옆에 있는 파이프 문자([!UICONTROL Object]) 뒤에 있는 텍스트로 표시된 &quot;`|`&quot; 데이터 형식을 사용합니다. 이 특정 데이터 유형은 개별 사용자의 이름과 관련된 여러 하위 필드를 제공하며, 개인의 이름을 캡처해야 하는 다른 필드에 다시 사용할 수 있는 구성입니다.
 
 ![전체 이름 개체 및 특성이 강조 표시된 개인을 위한 스키마 편집기의 다이어그램입니다.](../images/schema-composition/data-type.png)
 
@@ -268,7 +268,7 @@ Experience Platform에서는 일반적인 데이터 구조를 설명하는 표�
 * Long
 * 짧음
 * 바이트
-* 일자
+* Date
 * 날짜-시간
 * 맵
 
@@ -280,11 +280,11 @@ Experience Platform에서는 일반적인 데이터 구조를 설명하는 표�
 
 스키마는 컴포지션 모델을 사용하여 만들어지며 [!DNL Experience Platform]에 수집할 데이터의 형식 및 구조를 나타냅니다. 앞에서 언급했듯이 이러한 스키마는 클래스와 해당 클래스와 호환되는 0개 이상의 필드 그룹으로 구성됩니다.
 
-예를 들어 소매점에서 구매한 항목을 설명하는 스키마를 &quot;[!UICONTROL 스토어 트랜잭션]&quot;이라고 할 수 있습니다. 스키마는 표준 [!UICONTROL Commerce] 필드 그룹 및 사용자 정의 [!UICONTROL 제품 정보] 필드 그룹과 결합된 [!DNL XDM ExperienceEvent] 클래스를 구현합니다.
+예를 들어 소매점에서 구매한 항목을 설명하는 스키마를 &quot;[!UICONTROL Store Transactions]&quot;이라고 할 수 있습니다. 스키마는 표준 [!DNL XDM ExperienceEvent] 필드 그룹 및 사용자 정의 [!UICONTROL Commerce] 필드 그룹과 결합된 [!UICONTROL Product Info] 클래스를 구현합니다.
 
-웹 사이트 트래픽을 추적하는 다른 스키마를 &quot;[!UICONTROL 웹 방문]&quot;이라고 할 수 있습니다. 또한 [!DNL XDM ExperienceEvent] 클래스도 구현하지만 이번에는 표준 [!UICONTROL Web] 필드 그룹이 결합됩니다.
+웹 사이트 트래픽을 추적하는 다른 스키마를 &quot;[!UICONTROL Web Visits]&quot;이라고 할 수 있습니다. [!DNL XDM ExperienceEvent] 클래스도 구현하지만 이번에는 표준 [!UICONTROL Web] 필드 그룹이 결합됩니다.
 
-아래 다이어그램은 이러한 스키마와 각 필드 그룹에서 제공한 필드를 보여 줍니다. 또한 이 안내서에서 이전에 언급한 &quot;[!UICONTROL 충성도 멤버]&quot; 스키마를 포함하여 [!DNL XDM Individual Profile] 클래스를 기반으로 하는 두 개의 스키마가 포함되어 있습니다.
+아래 다이어그램은 이러한 스키마와 각 필드 그룹에서 제공한 필드를 보여 줍니다. 또한 이 안내서에서 이전에 언급한 &quot;[!DNL XDM Individual Profile]&quot; 스키마를 포함하여 [!UICONTROL Loyalty Members] 클래스를 기반으로 하는 두 개의 스키마가 포함되어 있습니다.
 
 ![4개의 스키마와 이에 기여하는 필드 그룹의 흐름 다이어그램입니다.](../images/schema-composition/composition.png)
 
@@ -306,8 +306,8 @@ Experience Platform에 수집되는 모든 데이터 파일은 XDM 스키마 구
 
 외부 시스템의 대상을 Experience Platform으로 가져오는 경우 다음 구성 요소를 사용하여 스키마에서 캡처해야 합니다.
 
-* [[!UICONTROL 세그먼트 정의] 클래스](../classes/segment-definition.md): 이 표준 클래스를 사용하여 외부 세그먼트 정의의 주요 특성을 캡처할 수 있습니다.
-* [[!UICONTROL 세그먼트 멤버십 세부 정보] 필드 그룹](../field-groups/profile/segmentation.md): 이 필드 그룹을 [!UICONTROL XDM 개인 프로필] 스키마에 추가하여 고객 프로필을 특정 대상과 연결합니다.
+* [[!UICONTROL Segment definition] 클래스](../classes/segment-definition.md): 이 표준 클래스를 사용하여 외부 세그먼트 정의의 주요 특성을 캡처할 수 있습니다.
+* [[!UICONTROL Segment Membership Details] 필드 그룹](../field-groups/profile/segmentation.md): 고객 프로필을 특정 대상과 연결하려면 이 필드 그룹을 [!UICONTROL XDM Individual Profile] 스키마에 추가하십시오.
 
 ## 다음 단계
 

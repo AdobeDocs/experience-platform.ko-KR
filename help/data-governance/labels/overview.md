@@ -6,7 +6,7 @@ description: Adobe Experience Platform에서 데이터 거버넌스 규정 준�
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 916eb01ea7878366620b859c1d6a667a88b850c9
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '786'
 ht-degree: 16%
 
 ---
@@ -44,7 +44,7 @@ Experience Platform에서 자동 적용이 작동하는 방법에 대한 자세�
 
 [!DNL Experience Platform]은(는) Adobe Audience Manager과 세그먼트를 공유할 수 있습니다. Audience Manager 세그먼트에 적용된 모든 데이터 내보내기 컨트롤은 [!DNL Experience Platform] 데이터 거버넌스에서 인식하는 동등한 레이블 및 마케팅 작업으로 변환됩니다.
 
-특정 데이터 내보내기 컨트롤이 [!DNL Experience Platform]의 데이터 사용 레이블에 매핑되는 방법에 대한 참조는 [Audience Manager 설명서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ko#aam-data-export-control-in-aep)를 참조하십시오.
+특정 데이터 내보내기 컨트롤이 [!DNL Experience Platform]의 데이터 사용 레이블에 매핑되는 방법에 대한 참조는 [Audience Manager 설명서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)를 참조하십시오.
 
 ## [!DNL Experience Platform]에서 데이터 사용 레이블 관리 {#manage-labels}
 
@@ -57,7 +57,7 @@ Experience Platform에서 자동 적용이 작동하는 방법에 대한 자세�
 
 ### UI 사용
 
-[!DNL Experience Platform] UI의 **[!UICONTROL 정책]** 작업 영역에서 조직의 핵심 및 사용자 지정 레이블을 보고 관리할 수 있습니다. **[!UICONTROL 스키마]** 작업 영역을 사용하여 [XDM(Experience Data Model) 스키마에 레이블을 적용](../../xdm/tutorials/labels.md)하거나, 데이터 사용 레이블 사용 안내서를 대신 읽고 [정책&#x200B;]&#x200B;**UI에서 사용자 지정 레이블을 만들고 관리(./user-guide.md)하는 방법을 배울 수 있습니다.**
+**[!UICONTROL Policies]** UI의 [!DNL Experience Platform] 작업 영역에서 조직의 핵심 및 사용자 지정 레이블을 보고 관리할 수 있습니다. **[!UICONTROL Schemas]** 작업 영역을 사용하여 [XDM(Experience Data Model) 스키마에 레이블을 적용](../../xdm/tutorials/labels.md)하거나, 대신 데이터 사용 레이블 사용 안내서를 읽고 [UI에서 사용자 지정 레이블을 만들고 관리&#x200B;**[!UICONTROL Policies]**&#x200B;하는 방법을 배울 수 있습니다.](./user-guide.md)
 
 >[!IMPORTANT]
 >
@@ -65,7 +65,7 @@ Experience Platform에서 자동 적용이 작동하는 방법에 대한 자세�
 
 ### API 사용
 
-[정책 서비스 API](https://www.adobe.io/experience-platform-apis/references/policy-service/)의 `/labels` 끝점을 사용하면 사용자 지정 레이블 만들기를 포함하여 데이터 사용 레이블을 프로그래밍 방식으로 관리할 수 있습니다. 자세한 내용은 [레이블 끝점 안내서](../api/labels.md)를 참조하십시오.
+`/labels`정책 서비스 API[의 ](https://www.adobe.io/experience-platform-apis/references/policy-service/) 끝점을 사용하면 사용자 지정 레이블 만들기를 포함하여 데이터 사용 레이블을 프로그래밍 방식으로 관리할 수 있습니다. 자세한 내용은 [레이블 끝점 안내서](../api/labels.md)를 참조하십시오.
 
 [데이터 집합 서비스 API](https://www.adobe.io/experience-platform-apis/references/dataset-service/)를 사용하여 데이터 집합 및 필드의 레이블을 관리합니다. 자세한 내용은 [데이터 세트 레이블 관리](./dataset-api.md)에 대한 안내서를 참조하십시오.
 

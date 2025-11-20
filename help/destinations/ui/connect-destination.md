@@ -5,7 +5,7 @@ description: Adobe Experience Platform에서 대상에 연결하고, 경고를 �
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1236'
 ht-degree: 4%
 
 ---
@@ -14,8 +14,8 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 > 
->* 대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* 데이터 세트 내보내기를 지원하는 대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 데이터 세트 대상 관리 및 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* 대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* 데이터 집합 내보내기를 지원하는 대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage and Activate Dataset Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 ## 개요 {#overview}
 
@@ -23,29 +23,29 @@ ht-degree: 4%
 
 ## 카탈로그에서 원하는 대상 찾기 {#setup}
 
-1. **[!UICONTROL 연결]** > **[!UICONTROL 대상]**(으)로 이동한 다음 **[!UICONTROL 카탈로그]** 탭을 선택합니다.
+1. **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**(으)로 이동하여 **[!UICONTROL Catalog]** 탭을 선택합니다.
 
    대상 카탈로그 페이지를 표시하는 Experience Platform UI의 ![스크린샷입니다.](../assets/ui/connect-destinations/catalog.png)
 
 2. 대상에 대한 기존 연결 여부와 대상이 대상자 활성화, 데이터 세트 내보내기 또는 두 가지 모두를 지원하는지 여부에 따라 카탈로그의 대상 카드에 다른 작업 컨트롤이 있을 수 있습니다. 대상 카드에 대해 다음 컨트롤이 표시될 수 있습니다.
 
-   * **[!UICONTROL 설정]**. 대상을 활성화하거나 데이터 세트를 내보내려면 먼저 이 대상에 연결을 설정해야 합니다.
-   * **[!UICONTROL 활성화]**. 이 대상에 대한 연결이 이미 설정되었습니다. 이 대상은 대상 활성화 및 데이터 세트 내보내기를 지원합니다.
-   * **[!UICONTROL 대상자 활성화]**. 이 대상에 대한 연결이 이미 설정되었습니다. 이 대상은 대상자 활성화만 지원합니다.
+   * **[!UICONTROL Set up]** 질문에 답합니다. 대상을 활성화하거나 데이터 세트를 내보내려면 먼저 이 대상에 연결을 설정해야 합니다.
+   * **[!UICONTROL Activate]** 질문에 답합니다. 이 대상에 대한 연결이 이미 설정되었습니다. 이 대상은 대상 활성화 및 데이터 세트 내보내기를 지원합니다.
+   * **[!UICONTROL Activate audiences]** 질문에 답합니다. 이 대상에 대한 연결이 이미 설정되었습니다. 이 대상은 대상자 활성화만 지원합니다.
 
    이러한 컨트롤의 차이점에 대한 자세한 내용은 대상 작업 영역 설명서의 [카탈로그](../ui/destinations-workspace.md#catalog) 섹션도 참조하십시오.
 
-   사용 가능한 제어에 따라 **[!UICONTROL 설정]**, **[!UICONTROL 활성화]** 또는 **[!UICONTROL 대상자 활성화]**&#x200B;를 선택하십시오.
+   사용 가능한 제어에 따라 **[!UICONTROL Set up]**, **[!UICONTROL Activate]** 또는 **[!UICONTROL Activate audiences]**&#x200B;을(를) 선택하십시오.
 
    [설정] 컨트롤이 강조 표시된 대상 카탈로그 페이지를 표시하는 Experience Platform UI의 ![스크린샷입니다.](../assets/ui/connect-destinations/set-up.png)
 
    대상자 활성화 컨트롤이 강조 표시된 대상 카탈로그 페이지를 표시하는 Experience Platform UI의 ![스크린샷입니다.](../assets/ui/connect-destinations/activate-segments.png)
 
-3. **[!UICONTROL 설정]**&#x200B;을 선택한 경우 다음 단계로 건너뛰고 대상에 대해 [인증](#authenticate)합니다.
+3. **[!UICONTROL Set up]**&#x200B;을(를) 선택한 경우 다음 단계로 건너뛰고 대상에 대해 [인증](#authenticate)합니다.
 
-   **[!UICONTROL 활성화]**, **[!UICONTROL 대상자 활성화]** 또는 **[!UICONTROL 데이터 세트 내보내기]**&#x200B;를 선택한 경우 이제 기존 대상 연결 목록을 볼 수 있습니다.
+   **[!UICONTROL Activate]**, **[!UICONTROL Activate audiences]** 또는 **[!UICONTROL Export datasets]**&#x200B;을(를) 선택한 경우 기존 대상 연결 목록을 볼 수 있습니다.
 
-   대상에 대한 새 연결을 설정하려면 **[!UICONTROL 새 대상 구성]**&#x200B;을 선택하십시오.
+   대상에 대한 새 연결을 설정하려면 **[!UICONTROL Configure new destination]**&#x200B;을(를) 선택하십시오.
 
    ![사용 가능한 대상 목록과 새 대상 구성 컨트롤이 강조 표시된 Experience Platform UI의 스크린샷입니다.](../assets/ui/connect-destinations/configure-new-destination.png)
 
@@ -60,10 +60,10 @@ ht-degree: 4%
 
 연결 중인 대상에 따라 대상 파트너의 페이지로 이동하여 인증하거나 Experience Platform 워크플로에서 직접 인증 자격 증명을 입력하라는 메시지가 표시될 수 있습니다.
 
-새 대상 연결을 설정할 때 **[!UICONTROL 계정 이름]** 및 선택적으로 **[!UICONTROL 설명]**&#x200B;을 제공해야 합니다. 이러한 필드는 모든 대상에 사용할 수 있습니다.
+새 대상 연결을 설정할 때 **[!UICONTROL Account name]** 및 선택적으로 **[!UICONTROL Description]**&#x200B;을(를) 제공해야 합니다. 이러한 필드는 모든 대상에 사용할 수 있습니다.
 
-* **[!UICONTROL 계정 이름]**: 나중에 이 대상 계정을 쉽게 식별할 수 있는 이름을 입력하십시오. 이 기능은 동일한 대상에 대한 연결이 여러 개 있는 경우에 특히 유용합니다.
-* **[!UICONTROL 설명]**(선택 사항): 연결의 목적 또는 관련 비즈니스 컨텍스트와 같이 사용자 또는 팀이 계정을 구분하는 데 도움이 되는 추가 세부 정보를 추가합니다.
+* **[!UICONTROL Account name]**: 나중에 이 대상 계정을 쉽게 식별할 수 있는 이름을 입력하십시오. 이 기능은 동일한 대상에 대한 연결이 여러 개 있는 경우에 특히 유용합니다.
+* **[!UICONTROL Description]**(선택 사항): 연결 목적 또는 관련 비즈니스 컨텍스트 등 사용자 또는 팀이 계정을 구분하는 데 도움이 되는 추가 세부 정보를 추가합니다.
 
 이러한 필드에 명확하고 설명적인 정보를 제공하면 대상자를 활성화할 때 올바른 대상 계정을 보다 쉽게 관리하고 선택할 수 있습니다.
 
@@ -113,7 +113,7 @@ ht-degree: 4%
 
    ![컨텍스트 내 대상 경고 구독 옵션이 강조 표시된 새 대상 구성 대화 상자.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
-2. **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+2. **[!UICONTROL Next]**&#x200B;를 선택합니다.
 
    ![다음 컨트롤이 강조 표시된 새 대상 구성 대화 상자를 사용하여 사용자가 워크플로우의 다음 단계로 진행할 수 있습니다.](../assets/ui/connect-destinations/next.png)
 
@@ -123,7 +123,7 @@ ht-degree: 4%
 
    ![사용 가능한 마케팅 작업이 강조 표시된 새 대상 구성 대화 상자 대상에 연결 워크플로를 완료하는 데 사용할 수 있는 컨트롤도 강조 표시됩니다.](../assets/ui/connect-destinations/governance.png)
 
-2. 대상 구성을 저장하려면 **[!UICONTROL 저장 및 종료]**&#x200B;를 선택하고 대상 데이터 **[!UICONTROL 활성화 흐름]**&#x200B;으로 진행하려면 [다음](activation-overview.md)을 선택하십시오.
+2. 대상 구성을 저장하려면 **[!UICONTROL Save & Exit]**&#x200B;을(를) 선택하고 대상 데이터 **[!UICONTROL Next]**&#x200B;활성화 흐름[으로 진행하려면 ](activation-overview.md)을(를) 선택하십시오.
 
 ## 다음 단계 {#next-steps}
 

@@ -18,8 +18,8 @@ ht-degree: 14%
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
-| 2024년 1월 | 기능 및 설명서 업데이트 | 이제 Amazon S3 대상 커넥터가 새로운 가정된 역할 인증 유형을 지원합니다. 자세한 내용은 [인증 섹션](#assumed-role-authentication)을 참조하세요. |
-| 2023년 7월 | 기능 및 설명서 업데이트 | 2023년 7월 Experience Platform 릴리스에서는 [!DNL Amazon S3] 대상이 아래 나열된 새로운 기능을 제공합니다. <br><ul><li>[데이터 집합 내보내기 지원](/help/destinations/ui/export-datasets.md)</li><li>추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>[향상된 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능.</li><li>[내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
+| 2024년 1월 | 기능 및 설명서 업데이트 | 이제 Amazon S3 대상 커넥터가 새로운 가정된 역할 인증 유형을 지원합니다. Read more about it in the [authentication section](#assumed-role-authentication). |
+| 2023년 7월 | 기능 및 설명서 업데이트 | With the July 2023 Experience Platform release, the [!DNL Amazon S3] destination provides new functionality, as listed below: <br><ul><li>[Dataset export support](/help/destinations/ui/export-datasets.md)</li><li>추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>[향상된 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능.</li><li>[내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -109,10 +109,10 @@ Adobe와 계정 키 및 시크릿 키를 공유하지 않으려면 이 인증 �
 
 ![가정된 역할 인증을 선택할 때 필요한 필드의 이미지](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-* **[!DNL Role]**: Adobe 사용자를 위해 AWS에서 만든 역할의 ARN을 붙여 넣습니다. 패턴은 `arn:aws:iam::800873819705:role/destinations-role-customer`과(와) 유사합니다. S3 액세스를 올바르게 구성하는 방법에 대한 자세한 지침은 아래 단계를 참조하십시오.
+* **[!DNL Role]**: Adobe 사용자를 위해 AWS에서 만든 역할의 ARN을 붙여 넣습니다. The pattern is similar to `arn:aws:iam::800873819705:role/destinations-role-customer`. S3 액세스를 올바르게 구성하는 방법에 대한 자세한 지침은 아래 단계를 참조하십시오.
 * **[!UICONTROL Encryption key]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-이렇게 하려면 AWS 콘솔에서 Amazon S3 버킷에 쓸 수 있는 [올바른 필수 권한](#minimum-permissions-iam-user)이 있는 Adobe의 가정 역할을 만들어야 합니다.
+To do this, you need to create in the AWS console an assumed role for Adobe with the [right required permissions](#minimum-permissions-iam-user) to write to your Amazon S3 buckets.
 
 **필요한 권한으로 정책 만들기**
 
@@ -207,7 +207,7 @@ AWS 콘솔에서 역할을 만든 후 기본 페이지에서 ARN을 찾을 수 �
 >id="platform_destinations_connect_s3_folderpath"
 >title="폴더 경로"
 >abstract="A-Z, a-z, 0-9 문자만 포함해야 하며 특수 문자(예: `/!-_.'()"^[]+$%.*"`)를 포함할 수 있습니다. 대상자 파일별로 폴더를 만들려면 매크로(예: `/%SEGMENT_NAME%` 또는 `/%SEGMENT_ID%` 또는 `/%SEGMENT_NAME%/%SEGMENT_ID%`)를 텍스트 필드에 삽입합니다. 매크로는 폴더 경로 끝에만 삽입할 수 있습니다. 설명서의 매크로 예 보기"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=ko#use-macros" text="매크로를 사용하여 스토리지 위치에 폴더 만들기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="매크로를 사용하여 스토리지 위치에 폴더 만들기"
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
@@ -247,7 +247,7 @@ AWS 콘솔에서 역할을 만든 후 기본 페이지에서 ARN을 찾을 수 �
 
 #### IAM에서 지정한 역할 인증에 필요한 최소 권한 {#minimum-permissions-iam-user}
 
-고객으로 IAM 역할을 구성할 때 역할과 연결된 권한 정책에 버킷의 대상 폴더에 필요한 작업과 버킷의 루트에 대한 `s3:ListBucket` 작업이 포함되어 있는지 확인하십시오. 아래에서는 이 인증 유형에 대한 최소 권한 정책의 예를 봅니다.
+When configuring the IAM role as a customer, make sure that the permission policy associated with the role includes the required actions to the target folder in the bucket and the `s3:ListBucket` action for the root of the bucket. 아래에서는 이 인증 유형에 대한 최소 권한 정책의 예를 봅니다.
 
 ```json
 {
@@ -302,4 +302,4 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 ## 허용 목록에 추가하다 IP 주소 {#ip-address-allow-list}
 
-허용 목록에 추가하다 Adobe IP를 허용 목록에 추가하다에 추가해야 하는 경우 [IP 주소](ip-address-allow-list.md) 문서를 참조하십시오.
+Refer to the [IP address allowlist](ip-address-allow-list.md) article if you need to add Adobe IPs to an allowlist.

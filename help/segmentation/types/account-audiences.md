@@ -1,12 +1,12 @@
 ---
 title: 계정 대상자
 description: 계정 대상자를 만들고 사용하여 다운스트림 대상의 계정 프로필을 타겟팅하는 방법을 알아봅니다.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1498'
 ht-degree: 21%
 
 ---
@@ -35,11 +35,11 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 
 ## 액세스 {#access}
 
-계정 대상에 액세스하려면 **[!UICONTROL 계정]** 섹션에서 **[!UICONTROL 대상]**&#x200B;을(를) 선택하십시오.
+계정 대상에 액세스하려면 **[!UICONTROL Audiences]** 섹션에서 **[!UICONTROL Accounts]**&#x200B;을(를) 선택하십시오.
 
 ![Accounts 섹션 내에서 대상 단추가 강조 표시됩니다.](../images/types/account/select.png)
 
-[!UICONTROL 찾아보기] 페이지가 표시되어 조직의 모든 계정 대상자 목록을 표시합니다.
+[!UICONTROL Browse] 페이지가 표시되어 조직의 모든 계정 대상자 목록을 표시합니다.
 
 ![조직에 속한 계정 대상이 표시됩니다.](../images/types/account/browse.png)
 
@@ -53,19 +53,19 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 >
 >계정 대상은 **일괄 처리** 세그먼테이션을 사용하여 평가되며, 24시간마다 평가됩니다.
 
-계정 대상을 만들려면 **[!UICONTROL 찾아보기]** 페이지에서 [!UICONTROL 대상 만들기]를 선택하십시오.
+계정 대상을 만들려면 **[!UICONTROL Create audience]** 페이지에서 [!UICONTROL Browse]을(를) 선택하십시오.
 
-![계정 대상자 찾아보기 페이지에서 [!UICONTROL 대상자 만들기] 단추가 강조 표시됩니다.](../images/types/account/select-create-audience.png)
+![계정 대상자 찾아보기 페이지에서 [!UICONTROL Create audience] 단추가 강조 표시되어 있습니다.](../images/types/account/select-create-audience.png)
 
-세그먼트 빌더 가 나타납니다. 계정 속성 및 대상은 왼쪽 탐색 모음에 표시됩니다. [!UICONTROL 특성] 탭에서 Experience Platform에서 만든 특성과 사용자 지정 특성을 모두 추가할 수 있습니다.
+세그먼트 빌더 가 나타납니다. 계정 속성 및 대상은 왼쪽 탐색 모음에 표시됩니다. [!UICONTROL Attributes] 탭에서 Experience-Platform에서 만든 특성과 사용자 지정 특성을 모두 추가할 수 있습니다.
 
 ![세그먼트 빌더가 표시됩니다. 특성과 대상만 표시됩니다.](../images/types/account/segment-builder.png)
 
-계정 대상을 만들 때 이벤트는 자신의 탭이 아니라 **[!UICONTROL 사람]** 아래에 나열됩니다. 이러한 속성은 사람과 연결되어 있기 때문입니다.
+계정 대상을 만들 때는 이벤트가 고유한 탭이 아니라 **[!UICONTROL People]** 아래에 나열됩니다. 이러한 속성은 사용자와 연결되어 있기 때문입니다.
 
-![이벤트를 찾을 위치([!UICONTROL 사람] 폴더 내)가 강조 표시되어 있습니다.](../images/types/account/attributes.png)
+![이벤트를 찾을 위치([!UICONTROL People] 폴더 내)가 강조 표시되어 있습니다.](../images/types/account/attributes.png)
 
-[!UICONTROL 대상] 탭에서 이전에 만든 사람 기반 대상을 추가하여 자신의 계정 대상을 만들 때 빌드할 수 있습니다.
+[!UICONTROL Audiences] 탭에서 이전에 만든 사람 기반 대상을 추가하여 자신의 계정 대상을 만들 때 빌드할 수 있습니다.
 
 ![세그먼트 빌더 내의 대상자 탭이 강조 표시되어 있습니다.](../images/types/account/audiences.png)
 
@@ -79,11 +79,11 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 
 ![필드 섹션에 설정 아이콘이 강조 표시되어 있습니다.](../images/types/account/select-settings.png)
 
-[!UICONTROL 설정] 탭의 **[!UICONTROL 필드 관계]** 섹션에서 **[!UICONTROL 관계 선택기 표시]**&#x200B;를 선택합니다.
+[!UICONTROL Settings] 탭의 **[!UICONTROL Show relationship selectors]** 섹션에서 **[!UICONTROL Relationship of fields]**&#x200B;을(를) 선택합니다.
 
 ![설정 탭의 필드 관계 섹션에서 관계 선택기 표시 토글이 선택됩니다.](../images/types/account/show-relation-selectors.png)
 
-![설정 아이콘](../../images/icons/settings.png)을 다시 선택하여 [!UICONTROL 필드] 탭으로 돌아갑니다. 이제 **[!UICONTROL 관계 설정]** 섹션을 볼 수 있습니다. 이를 통해 계정과 사용자 연결 방법 및 사용자가 영업 기회에 연결되는 방법을 설정할 수 있습니다.
+![설정 아이콘](../../images/icons/settings.png)을 다시 선택하여 [!UICONTROL Fields] 탭으로 돌아갑니다. 이제 **[!UICONTROL Establish relationships]** 섹션을 볼 수 있습니다. 이 섹션에서는 계정과 해당 사용자에 연결된 방법 및 해당 사용자가 해당 기회에 연결된 방법을 설정할 수 있습니다.
 
 ![관계 설정 섹션이 강조 표시되어 계정을 개인에 연결하는 방법과 개인을 기회에 연결하는 방법에 대한 옵션을 표시합니다.](../images/types/account/establish-relationships.png)
 
@@ -112,11 +112,11 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 
 계정 대상을 만든 후 대상을 다른 다운스트림 서비스로 활성화할 수 있습니다.
 
-활성화할 대상을 선택한 다음 **[!UICONTROL 대상에 활성화]**&#x200B;를 선택합니다.
+활성화할 대상을 선택한 다음 **[!UICONTROL Activate to destination]**&#x200B;을(를) 클릭합니다.
 
-![선택한 대상자에 대한 빠른 작업 메뉴에서 [!UICONTROL 대상에 활성화] 단추가 강조 표시됩니다.](../images/types/account/activate.png)
+![선택한 대상자에 대한 빠른 작업 메뉴에서 [!UICONTROL Activate to destination] 단추가 강조 표시됩니다.](../images/types/account/activate.png)
 
-[!UICONTROL 대상 활성화] 페이지가 나타납니다. 지원되는 대상 및 필드 매핑에 대한 세부 정보를 포함하여 활성화 프로세스에 대한 자세한 내용은 [계정 대상자 활성화](/help/destinations/ui/activate-account-audiences.md) 자습서를 참조하십시오.
+[!UICONTROL Activate destination] 페이지가 나타납니다. 지원되는 대상 및 필드 매핑에 대한 세부 정보를 포함하여 활성화 프로세스에 대한 자세한 내용은 [계정 대상자 활성화](/help/destinations/ui/activate-account-audiences.md) 자습서를 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 

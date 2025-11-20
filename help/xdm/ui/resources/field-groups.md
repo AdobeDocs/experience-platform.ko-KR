@@ -6,8 +6,8 @@ description: Experience Platform 사용자 인터페이스에서 스키마 필�
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 8%
+source-wordcount: '966'
+ht-degree: 9%
 
 ---
 
@@ -34,11 +34,11 @@ Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 �
 
 새 필드 그룹을 만들려면 먼저 필드 그룹을 추가할 스키마를 선택해야 합니다. [새 스키마를 만들거나](./schemas.md#create) [편집할 기존 스키마를 선택](./schemas.md#edit)할 수 있습니다.
 
-[!DNL Schema Editor]에서 스키마를 열면 왼쪽 레일의 **[!UICONTROL 필드 그룹]** 섹션 옆에 있는 [!UICONTROL 추가]를 선택합니다.
+[!DNL Schema Editor]에서 스키마를 열면 왼쪽 레일에서 **[!UICONTROL Add]** 섹션 옆의 [!UICONTROL Field groups]을(를) 선택합니다.
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-표시되는 대화 상자에서 **[!UICONTROL 새 필드 그룹 만들기]**&#x200B;를 선택합니다. 여기에서 필드 그룹에 **[!UICONTROL 표시 이름]** 및 **[!UICONTROL 설명]**&#x200B;을 제공할 수 있습니다. 완료되면 **[!UICONTROL 필드 그룹 추가]**&#x200B;를 선택합니다.
+표시되는 대화 상자에서 **[!UICONTROL Create new field group]**&#x200B;을(를) 선택합니다. 여기에서 필드 그룹에 **[!UICONTROL Display name]** 및 **[!UICONTROL Description]**&#x200B;을(를) 제공할 수 있습니다. 완료되면 **[!UICONTROL Add field groups]**&#x200B;을(를) 선택합니다.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
@@ -48,9 +48,9 @@ Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 �
 
 ## 필드 그룹 필터링 {#filter}
 
-사용할 수 있는 필드 그룹의 목록은 생성 방법에 따라 사전에 필터링됩니다. 기본 설정은 Adobe에서 정의한 필드 그룹을 표시합니다. 그러나 목록을 필터링하여 조직에서 만든 목록을 표시할 수도 있습니다. 라디오 단추를 선택하여 [!UICONTROL 표준]과(와) [!UICONTROL 사용자 지정] 옵션 중에서 선택하십시오. [!UICONTROL 표준] 옵션은 Adobe에서 만든 엔터티를 표시하고 [!UICONTROL 사용자 지정] 옵션은 조직 내에서 만든 엔터티를 표시합니다.
+사용할 수 있는 필드 그룹의 목록은 생성 방법에 따라 사전에 필터링됩니다. 기본 설정은 Adobe에서 정의한 필드 그룹을 표시합니다. 그러나 목록을 필터링하여 조직에서 만든 목록을 표시할 수도 있습니다. 라디오 단추를 선택하여 [!UICONTROL Standard]과(와) [!UICONTROL Custom] 옵션 중에서 선택합니다. [!UICONTROL Standard] 옵션은 Adobe에서 만든 엔터티를 표시하고 [!UICONTROL Custom] 옵션은 조직 내에서 만든 엔터티를 표시합니다.
 
-![Standard[!UICONTROL &#x200B; 및 &#x200B;]Custom[!UICONTROL 이 강조 표시된 &#x200B;]스키마[!UICONTROL &#x200B; 작업 영역의 &#x200B;]필드 그룹[!UICONTROL &#x200B; 탭]](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+![[!UICONTROL Field groups] 및 [!UICONTROL Schemas]이(가) 강조 표시된 [!UICONTROL Standard] 작업 영역의 [!UICONTROL Custom] 탭입니다.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## 기존 필드 그룹 편집 {#edit}
 
@@ -74,17 +74,17 @@ Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 �
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-**[!UICONTROL 제목 없는 필드]** 자리 표시자가 캔버스에 나타나고 오른쪽 레일이 업데이트되어 필드의 속성을 구성하는 컨트롤을 표시합니다. 다른 필드 형식을 구성하는 방법에 대한 특정 단계는 [UI의 필드 정의](../fields/overview.md#define)에 대한 안내서를 참조하십시오.
+**[!UICONTROL Untitled Field]** 자리 표시자가 캔버스에 나타나고 오른쪽 레일이 업데이트되어 필드의 속성을 구성하는 컨트롤을 표시합니다. 다른 필드 형식을 구성하는 방법에 대한 특정 단계는 [UI의 필드 정의](../fields/overview.md#define)에 대한 안내서를 참조하십시오.
 
-**[!UICONTROL 할당 대상]**&#x200B;에서 **[!UICONTROL 필드 그룹]** 옵션을 선택한 다음 드롭다운을 사용하여 목록에서 원하는 필드 그룹을 선택합니다. 필드 그룹의 이름을 입력하여 결과의 범위를 좁힐 수 있습니다.
-
-![](../../images/ui/resources/field-groups/select-field-group.png)
-
-**[!UICONTROL 할당 대상]**&#x200B;에서 **[!UICONTROL 필드 그룹]** 옵션을 선택한 다음 드롭다운을 사용하여 목록에서 원하는 필드 그룹을 선택합니다. 필드 그룹의 이름을 입력하여 결과의 범위를 좁힐 수 있습니다.
+**[!UICONTROL Assign to]**&#x200B;에서 **[!UICONTROL Field Group]** 옵션을 선택한 다음 드롭다운을 사용하여 목록에서 원하는 필드 그룹을 선택합니다. 필드 그룹의 이름을 입력하여 결과의 범위를 좁힐 수 있습니다.
 
 ![](../../images/ui/resources/field-groups/select-field-group.png)
 
-필드가 스키마에 추가되면 선택한 필드 그룹에 할당됩니다. 필드 그룹에 필요한 만큼 필드를 계속 추가합니다. 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택하여 스키마와 필드 그룹을 모두 저장합니다.
+**[!UICONTROL Assign to]**&#x200B;에서 **[!UICONTROL Field Group]** 옵션을 선택한 다음 드롭다운을 사용하여 목록에서 원하는 필드 그룹을 선택합니다. 필드 그룹의 이름을 입력하여 결과의 범위를 좁힐 수 있습니다.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+필드가 스키마에 추가되면 선택한 필드 그룹에 할당됩니다. 필드 그룹에 필요한 만큼 필드를 계속 추가합니다. 완료되면 **[!UICONTROL Save]**&#x200B;을(를) 선택하여 스키마와 필드 그룹을 모두 저장합니다.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 
@@ -92,6 +92,6 @@ Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 �
 
 ## 다음 단계 {#next-steps}
 
-이 안내서에서는 Experience Platform UI를 사용하여 필드 그룹을 만들고 편집하는 방법에 대해 다룹니다. [!UICONTROL 스키마] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md)를 참조하십시오.
+이 안내서에서는 Experience Platform UI를 사용하여 필드 그룹을 만들고 편집하는 방법에 대해 다룹니다. [!UICONTROL Schemas] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL Schemas] 작업 영역 개요](../overview.md)를 참조하십시오.
 
 [!DNL Schema Registry] API를 사용하여 필드 그룹을 관리하는 방법에 대해 알아보려면 [필드 그룹 끝점 안내서](../../api/field-groups.md)를 참조하십시오.

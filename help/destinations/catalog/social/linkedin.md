@@ -1,7 +1,7 @@
 ---
 keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin;
 title: Linkedin 일치하는 대상 연결
-description: 해시된 이메일을 기반으로 대상자 타겟팅, 개인화 및 억제에 대한 LinkedIn 캠페인에 대한 프로필을 활성화합니다.
+description: 해시된 이메일을 기반으로 대상자 타겟팅, 개인화 및 억제를 위해 LinkedIn 캠페인에 대한 프로필을 활성화합니다.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## 개요 {#overview}
 
-해시된 이메일과 모바일 ID를 기반으로 대상자 타겟팅, 개인화 및 제외를 위해 [!DNL LinkedIn] 캠페인에 대한 프로필을 활성화합니다.
+해시된 이메일 및 모바일 ID를 기반으로 대상자 타겟팅, 개인화 및 억제를 위한 캠페인 프로필을 [!DNL LinkedIn] 활성화합니다.
 
-Adobe Experience Platform UI의 ![LinkedIn 대상](../../assets/catalog/social/linkedin/catalog.png)
+![Adobe Experience Platform UI의 LinkedIn 대상](../../assets/catalog/social/linkedin/catalog.png)
 
 ## 사용 사례
 
@@ -47,7 +47,7 @@ Adobe Experience Platform UI의 ![LinkedIn 대상](../../assets/catalog/social/l
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| 사용자 지정 업로드 | ✓ | [CSV 파일에서 Experience Platform으로 가져온](../../../segmentation/ui/audience-portal.md#import-audience) Audiences. |
 
 {style="table-layout:auto"}
 
@@ -66,13 +66,13 @@ Adobe Experience Platform UI의 ![LinkedIn 대상](../../assets/catalog/social/l
 
 [!UICONTROL LinkedIn Matched Audience] 대상을 사용하려면 먼저 [!DNL LinkedIn Campaign Manager] 계정에 [!DNL Creative Manager] 권한 수준 이상이 있는지 확인하십시오.
 
-[!DNL LinkedIn Campaign Manager] 사용자 권한을 편집하는 방법에 대해 알아보려면 LinkedIn 설명서에서 [Advertising 계정에 대한 사용자 권한 추가, 편집 및 제거](https://www.linkedin.com/help/lms/answer/5753)를 참조하십시오.
+사용자 권한을 편집 [!DNL LinkedIn Campaign Manager] 하는 방법에 대한 자세한 내용은 LinkedIn 설명서에서 광고 계정에[ 대한 사용자 권한 추가, 편집 및 제거를 참조하세요](https://www.linkedin.com/help/lms/answer/5753).
 
 ## ID 일치 요구 사항 {#id-matching-requirements}
 
 [!DNL LinkedIn Matched Audiences]을(를) 사용하려면 PII(개인 식별 정보)를 명확하게 보내지 않아야 합니다. 따라서 [!DNL LinkedIn Matched Audiences]에 대해 활성화된 대상은 이메일 주소 또는 모바일 장치 ID와 같은 *hashed* 식별자에서 벗어날 수 있습니다.
 
-Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사항을 준수해야 합니다.
+Adobe Experience Platform 으로 수집하는 ID 유형에 따라 해당 요구 사항을 준수해야 합니다.
 
 ## 이메일 해시 요구 사항 {#email-hashing-requirements}
 
@@ -84,19 +84,19 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 * 전자 메일 문자열에서 선행 및 후행 공백을 모두 트리밍합니다. 예: `johndoe@example.com`이(가) 아닌 `<space>johndoe@example.com<space>`;
 * 이메일 문자열을 해시할 때는 소문자 문자열을 해시해야 합니다.
-   * 예: `example@email.com`, `EXAMPLE@EMAIL.COM` 아님;
+   * 예: `example@email.com`, not `EXAMPLE@EMAIL.COM`;
 * 해시된 문자열이 모두 소문자인지 확인합니다.
-   * 예: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149` 아님;
+   * 예: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, not `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 * 문자열에 소금을 뿌리지 마십시오.
 
 >[!NOTE]
 >
 >해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Experience Platform]에 의해 자동으로 해시됩니다.
->&#x200B;> 속성 소스 데이터는 자동으로 해시되지 않습니다.
+> 속성 소스 데이터는 자동으로 해시되지 않습니다.
 > 
-> [ID 매핑](../../ui/activate-segment-streaming-destinations.md#mapping) 단계 동안 소스 필드에 해시되지 않은 특성이 포함되어 있으면 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오.
+> [ID 매핑](../../ui/activate-segment-streaming-destinations.md#mapping) 단계에서 소스 필드에 해시되지 않은 속성이 포함되어 있으면 활성화 시 데이터를 자동으로 해시 처리하도록 **[!UICONTROL Apply transformation]** 옵션을 선택합니다[!DNL Experience Platform].
 > 
-> **[!UICONTROL Apply transformation]** 옵션은 특성을 소스 필드로 선택하는 경우에만 표시됩니다. 네임스페이스를 선택하면 표시되지 않습니다.
+> 이 **[!UICONTROL Apply transformation]** 옵션은 속성을 소스 필드로 선택하는 경우에만 표시됩니다. 네임스페이스를 선택할 때는 표시되지 않습니다.
 
 ![ID 매핑 변환](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -104,13 +104,13 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 및 **[!UICONTROL View Destinations]** **[!UICONTROL Manage Destinations]**&#x200B;액세스 제어 권한이[ 필요합니다](/help/access-control/home.md#permissions). [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 아래 비디오에서는 [!DNL LinkedIn Matched Audiences] 대상을 구성하고 대상을 활성화하는 단계도 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 [!DNL LinkedIn Matched Audiences] 대상을 찾은 다음 **[!UICONTROL Set Up]**&#x200B;을(를) 선택하십시오.
-2. **[!UICONTROL Connect to destination]**&#x200B;를 선택합니다.
+2. **[!UICONTROL Connect to destination]**를 선택합니다.
    ![LinkedIn 인증](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. LinkedIn 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 
@@ -132,9 +132,9 @@ LinkedIn 토큰은 60일마다 만료됩니다. **[!UICONTROL Account expiration
 1. **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**(으)로 이동
 2. (선택 사항) 페이지에서 사용할 수 있는 필터를 사용하여 LinkedIn 계정만 표시합니다.
    ![LinkedIn 계정만 표시하도록 필터링](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
-3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL Edit details]**&#x200B;을(를) 선택하십시오.
+3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL Edit details]**을(를) 선택하십시오.
    ![세부 정보 편집 컨트롤 선택](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
-4. 모달 창에서 **[!UICONTROL Reconnect OAuth]**&#x200B;을(를) 선택하고 LinkedIn 자격 증명으로 다시 인증합니다.
+4. 모달 창에서 **[!UICONTROL Reconnect OAuth]**을(를) 선택하고 LinkedIn 자격 증명으로 다시 인증합니다.
    ![다시 연결 OAuth 옵션이 있는 모달 창](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
@@ -148,9 +148,9 @@ LinkedIn 토큰은 60일마다 만료됩니다. **[!UICONTROL Account expiration
 >title="계정 ID"
 >abstract="LinkedIn Campaign Manager 계정 ID. LinkedIn Campaign Manager 계정에서 이 ID를 찾을 수 있습니다."
 
-대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
+대상에 대한 세부 사항을 구성하려면 아래의 필수 필드와 선택적 필드를 채우십시오. UI의 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식하는 데 사용할 이름입니다.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL Account ID]**: 내 [!DNL LinkedIn Campaign Manager Account ID]. 이 ID는 [!DNL LinkedIn Campaign Manager] 계정에서 찾을 수 있습니다.
 
@@ -171,8 +171,8 @@ LinkedIn 토큰은 60일마다 만료됩니다. **[!UICONTROL Account expiration
 
 ## 내보낸 데이터 {#exported-data}
 
-활성화가 성공하면 [!DNL LinkedIn] 사용자 지정 대상자가 [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login)에서 프로그래밍 방식으로 만들어집니다. 사용자가 활성화된 대상에 대해 자격이 부여되거나 자격을 상실함에 따라 대상 멤버십이 조정됩니다.
+활성화에 성공하면 [!DNL LinkedIn] 사용자 지정 대상자 가 에서 프로그래밍 방식으로 [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login)만들어집니다. 대상 멤버십 자격은 사용자가 활성화된 대상에 대해 자격이 있는지 여부에 따라 조정됩니다.
 
 >[!TIP]
 >
->Adobe Experience Platform과 [!DNL LinkedIn Matched Audiences] 간의 통합은 과거 대상 다시 채우기를 지원합니다. 대상에 대해 대상을 활성화하면 기존의 모든 대상 자격이 [!DNL LinkedIn]&#x200B;(으)로 전송됩니다.
+>Adobe Experience Platform 간의 통합은 [!DNL LinkedIn Matched Audiences] 이전 대상자 채우기를 지원합니다. 모든 내역 대상자 자격은 대상을 대상으로 활성화할 때 전송됩니다 [!DNL LinkedIn] .

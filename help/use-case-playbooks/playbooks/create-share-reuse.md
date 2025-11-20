@@ -6,14 +6,14 @@ role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 81%
+source-wordcount: '769'
+ht-degree: 71%
 
 ---
 
 # 플레이북 인스턴스 만들기, 공유 및 재사용
 
-플레이북을 사용하려면 **[!UICONTROL 사용 사례 플레이북] > [!UICONTROL 플레이북]**&#x200B;으로 이동합니다. 페이지에서 다양한 검색 및 필터링 옵션을 찾아보고 사용하여 특정 플레이북을 선택하고 시작합니다.
+플레이북을 사용하려면 **[!UICONTROL Use Case Playbooks]>[!UICONTROL Playbooks]**(으)로 이동합니다. 페이지에서 다양한 검색 및 필터링 옵션을 찾아보고 사용하여 특정 플레이북을 선택하고 시작합니다.
 
 ## 플레이북 인스턴스 만들기 {#create-playbook-instance}
 
@@ -22,7 +22,7 @@ ht-degree: 81%
 >title="인스턴스 만들기"
 >abstract="여정 또는 활성화 시나리오에 사용할 여정, 대상자, 스키마 또는 대상과 같은 자산 목록을 생성합니다."
 
-플레이북 인스턴스를 만들기 전에 사용 가능한 플레이북을 살펴보고 [올바른 플레이북을 선택하십시오](/help/use-case-playbooks/playbooks/choose.md). 플레이북을 진행하고 인스턴스를 생성할 준비가 되면 **[!UICONTROL 인스턴스 만들기]**&#x200B;를 선택하여 플레이북을 진행하고 기술 자산을 생성합니다.
+플레이북 인스턴스를 만들기 전에 사용 가능한 플레이북을 살펴보고 [올바른 플레이북을 선택하십시오](/help/use-case-playbooks/playbooks/choose.md). 플레이북을 계속 진행하고 인스턴스를 만들 준비가 되면 **[!UICONTROL Create Instance]**&#x200B;을(를) 선택하여 플레이북을 계속 진행하고 기술 자산을 생성합니다.
 
 ![플레이북의 인스턴스를 만듭니다.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
@@ -32,7 +32,7 @@ ht-degree: 81%
 
 ### 구성 제어를 사용하여 인스턴스 이름 및 설명 편집 {#edit-instance-metadata}
 
-플레이북을 기반으로 인스턴스를 생성한 후 동일한 플레이북에서 생성된 다른 인스턴스와 구별되도록 인스턴스를 개인 설정할 수 있습니다. 아래와 같이 구성 제어를 선택합니다. 이름, 설명 및 정보를 편집하고 완료되었으면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+플레이북을 기반으로 인스턴스를 생성한 후 동일한 플레이북에서 생성된 다른 인스턴스와 구별되도록 인스턴스를 개인 설정할 수 있습니다. 아래와 같이 구성 제어를 선택합니다. 이름, 설명 및 메모를 편집하고 완료되면 **[!UICONTROL Save]**&#x200B;을(를) 선택하십시오.
 
 ![인스턴스의 이름 및 설명을 편집합니다.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-settings.gif)
 
@@ -45,9 +45,9 @@ ht-degree: 81%
 활성화하는 사용 사례에 따라 생성된 자산이 다르다는 것을 이해하는 것이 중요합니다.
 
 * 다양한 유형의 플레이북에 대해 서로 다른 자산이 생성됩니다. 이러한 자산은 플레이북을 통해 달성한 사용 사례를 위해 특별히 생성됩니다. 예를 들어 플레이북은 스키마, 대상, 여정 및 메시지를 생성합니다. 다른 플레이북은 데이터를 활성화할 스키마, 대상 및 대상을 생성합니다.
-* 자산 자체는 플레이북마다 다릅니다. **[!UICONTROL 게스트에게 생일 메시지 보내기]** 플레이북을 예로 들면 생성된 대상자에게는 `birthday=today AND year=any` 규칙이 있습니다.
+* 자산 자체는 플레이북마다 다릅니다. 예를 들어 **[!UICONTROL Send A Birthday Message To Guests]** 플레이북의 경우 만들어진 대상에는 `birthday=today AND year=any` 규칙이 있습니다.
 
-**[!UICONTROL 포기한 장바구니: 상품]** 플레이북의 경우 이 사용 사례에 대해 생성된 메시지를 포함하는 특정 여정이 생성되는 것을 볼 수 있습니다.
+예를 들어 **[!UICONTROL Abandoned Cart: Merchandise]** 플레이북의 경우 이 사용 사례에 대해 만들어진 메시지를 포함하는 특정 여정이 만들어짐을 확인할 수 있습니다.
 
 ![사용 사례 플레이북에서 생성한 여정.](/help/use-case-playbooks/assets/playbooks/ui-guide/journey-preview.png)
 

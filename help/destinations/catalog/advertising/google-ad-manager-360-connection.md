@@ -14,12 +14,12 @@ ht-degree: 7%
 >[!IMPORTANT]
 >
 > Google은 유럽 연합([EU 사용자 동의 정책](https://developers.google.com/google-ads/api/docs/start))의 [디지털 시장법](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)&#x200B;(DMA)에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/display-video/api/guides/getting-started/overview), [고객 일치](https://digital-markets-act.ec.europa.eu/index_en) 및 [디스플레이 및 비디오 360 API](https://www.google.com/about/company/user-consent-policy/)에 대한 변경 사항을 출시합니다. 동의 요구 사항에 대한 이러한 변경 사항의 시행은 2024년 3월 6일부터 시작됩니다.
-> &#x200B;><br/>
-> &#x200B;>EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
-> &#x200B;><br/>
-> &#x200B;>Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
-> &#x200B;><br/>
-> &#x200B;>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/home.md#segment-definitions) 내의 [세그먼트 정의](../../../segmentation/ui/segment-builder.md) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
+><br/>
+>EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
+><br/>
+>Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
+><br/>
+>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/home.md#segment-definitions) 내의 [세그먼트 정의](../../../segmentation/ui/segment-builder.md) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
 
 [!DNL Google Ad Manager 360] 연결을 통해 [!DNL publisher provided identifiers]&#x200B;(PPID)의 일괄 업로드를 [!DNL Google Ad Manager 360]을(를) 통해 [!DNL Google Cloud Storage]에 사용할 수 있습니다.
 
@@ -78,7 +78,7 @@ Experience Platform에서 첫 번째 [!DNL Google Ad Manager 360] 대상을 설�
 
 >[!NOTE]
 >
->이 규칙은 기존 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=ko) 고객에 대해 예외입니다. Audience Manager에서 이 Google 대상에 대한 연결을 이미 만든 경우 허용 목록 프로세스를 다시 진행할 필요가 없으며 다음 단계를 진행할 수 있습니다.
+>이 규칙은 기존 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 고객에 대해 예외입니다. Audience Manager에서 이 Google 대상에 대한 연결을 이미 만든 경우 허용 목록 프로세스를 다시 진행할 필요가 없으며 다음 단계를 진행할 수 있습니다.
 
 1. [Google Ad Manager 설명서](https://support.google.com/admanager/answer/3289669?hl=en)에 설명된 단계에 따라 Adobe을 연결된 데이터 관리 플랫폼(DMP)으로 추가합니다.
 2. [!DNL Google Ad Manager] 인터페이스에서 **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]**(으)로 이동하여 **[!UICONTROL API Access]** 슬라이더를 사용하도록 설정합니다.
@@ -90,7 +90,7 @@ Experience Platform에서 첫 번째 [!DNL Google Ad Manager 360] 대상을 설�
 > 
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
-이 대상에 연결하려면 [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ko)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
+이 대상에 연결하려면 [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상으로 인증 {#authenticate}
 

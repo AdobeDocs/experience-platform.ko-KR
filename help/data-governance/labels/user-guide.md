@@ -6,8 +6,8 @@ description: 이 안내서에서는 Adobe Experience Platform 사용자 인터�
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 17%
+source-wordcount: '1495'
+ht-degree: 18%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 17%
 
 ## 레이블 관리 {#manage-labels}
 
-데이터에 레이블을 적용하려면 &quot;prod&quot;라는 기본 프로덕션 샌드박스에서 사용할 **[!UICONTROL 사용 레이블 관리]** 권한이 필요합니다. 사용자 지정 레이블을 만들려면 제품 프로필에 대한 관리 권한도 있어야 합니다. 각 조직에는 적용 가능한 레이블 목록이 하나만 있습니다. 레이블을 **삭제할 수 없습니다**. 대신 데이터 세트가 적용되는 데이터 세트 또는 필드에서 제거할 수 있습니다.
+데이터에 레이블을 적용하려면 &quot;prod&quot;라는 기본 프로덕션 샌드박스에서 사용할 수 있는 **[!UICONTROL Manage Usage Labels]** 권한이 필요합니다. 사용자 지정 레이블을 만들려면 제품 프로필에 대한 관리 권한도 있어야 합니다. 각 조직에는 적용 가능한 레이블 목록이 하나만 있습니다. 레이블을 **삭제할 수 없습니다**. 대신 데이터 세트가 적용되는 데이터 세트 또는 필드에서 제거할 수 있습니다.
 
-권한을 할당하는 방법에 대한 자세한 내용은 [권한을 구성하는 방법](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=ko) 또는 [액세스 제어 개요](../../access-control/home.md)에 대한 안내서를 참조하십시오. 조직의 Admin Console에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
+권한을 할당하는 방법에 대한 자세한 내용은 [권한을 구성하는 방법](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) 또는 [액세스 제어 개요](../../access-control/home.md)에 대한 안내서를 참조하십시오. 조직의 Admin Console에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
 
 ## 스키마 수준에서 레이블 관리
 
@@ -38,7 +38,7 @@ ht-degree: 17%
 >
 >정책 위반에 대한 자세한 내용은 [데이터 사용 정책 위반 설명서](../enforcement/auto-enforcement.md#data-usage-violation)를 참조하십시오.
 
-스키마 수준에서 데이터 사용 레이블을 관리하려면 기존 스키마를 선택하거나 새 스키마를 만들어야 합니다. Adobe Experience Platform에 로그인한 후 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택하여 **[!UICONTROL 스키마]** 작업 영역을 엽니다. 이 페이지에는 각 스키마와 관련된 유용한 세부 정보와 함께 조직에 속하는 생성된 모든 스키마가 나열됩니다.
+스키마 수준에서 데이터 사용 레이블을 관리하려면 기존 스키마를 선택하거나 새 스키마를 만들어야 합니다. Adobe Experience Platform에 로그인한 후 왼쪽 탐색에서 **[!UICONTROL Schemas]**&#x200B;을(를) 선택하여 **[!UICONTROL Schemas]** 작업 영역을 엽니다. 이 페이지에는 각 스키마와 관련된 유용한 세부 정보와 함께 조직에 속하는 생성된 모든 스키마가 나열됩니다.
 
 ![스키마 탭이 강조 표시된 Adobe Experience Platform UI입니다.](../images/labels/schema-tab.png)
 
@@ -46,11 +46,11 @@ ht-degree: 17%
 
 ### 새 스키마 만들기
 
-새 스키마를 만들려면 **[!UICONTROL 스키마]** 작업 영역의 오른쪽 상단 모서리에서 **[!UICONTROL 스키마 만들기]**&#x200B;를 선택하십시오. 자세한 지침은 [스키마 편집기를 사용하여 스키마를 만드는 방법](../../xdm/tutorials/create-schema-ui.md#create)에 대한 안내서를 참조하십시오. 또는 필요한 경우 [스키마 레지스트리 API를 사용하여 스키마를 만들](../../xdm/tutorials/create-schema-api.md)수 있습니다.
+새 스키마를 만들려면 **[!UICONTROL Create schema]** 작업 영역의 오른쪽 상단 모서리에서 **[!UICONTROL Schemas]**&#x200B;을(를) 선택합니다. 자세한 지침은 [스키마 편집기를 사용하여 스키마를 만드는 방법](../../xdm/tutorials/create-schema-ui.md#create)에 대한 안내서를 참조하십시오. 또는 필요한 경우 [스키마 레지스트리 API를 사용하여 스키마를 만들](../../xdm/tutorials/create-schema-api.md)수 있습니다.
 
 ### 스키마에 데이터 사용 레이블 추가 {#add-labels-to-schema}
 
-새 스키마를 만들거나 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 찾아보기] 탭에 있는 목록에서 기존 스키마를 선택한 후 스키마 편집기의 스키마에서 필드를 선택하십시오. [!UICONTROL 필드 속성] 사이드바에서 **[!UICONTROL 액세스 및 데이터 거버넌스 레이블 적용]**&#x200B;을 선택합니다.
+[!UICONTROL Browse] 작업 영역의 [!UICONTROL Schemas] 탭에 있는 목록에서 새 스키마를 만들거나 기존 스키마를 선택한 후 스키마 편집기의 스키마에서 필드를 선택합니다. [!UICONTROL Field properties] 사이드바에서 **[!UICONTROL Apply Access and Data Governance Labels]**&#x200B;을(를) 선택합니다.
 
 ![액세스 적용 및 데이터 거버넌스 레이블이 강조 표시된 스키마의 시각화를 표시하는 스키마 작업 공간 구조 탭입니다.](../images/labels/schema-label-governance.png)
 
@@ -61,27 +61,27 @@ ht-degree: 17%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="지침"
->abstract="<ol><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=ko">데이터 세트</a>를 선택한 다음 데이터를 제한하려는 데이터 세트를 선택합니다.</li><li>데이터 세트 세부 정보 보기에서 <b>데이터 거버넌스</b> 탭을 선택합니다.</li><li>제한할 데이터 세트 필드를 선택한 다음 <b>거버넌스 레이블 편집</b>을 선택하여 사용 제한에 따라 데이터에 레이블을 지정합니다.</li><li>데이터에 레이블을 지정한 후 왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ko">정책</a>을 선택한 다음 <b>정책 만들기</b>를 선택합니다.</li><li><a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ko#create-governance-policy">데이터 거버넌스 정책</a> 만들기를 선택한 다음 정책이 해당 정책에 적용할 데이터 사용 레이블을 선택합니다.</li><li>해당 레이블이 포함된 모든 데이터에 대해 정책이 거부할 마케팅 작업을 선택하십시오. 정책이 생성되면 목록에서 해당 정책을 선택하고 오른쪽 레일의 토글을 사용하여 활성화합니다.</li><li>활성화된 각 정책에 대해 Experience Platform은 지정된 레이블이 포함된 모든 데이터가 정의된 마케팅 액션에 사용되는 것을 방지합니다. 이 적용은 관련 마케팅 액션(사용 사례)이 있는 대상에 대해 레이블이 지정된 데이터를 활성화하려고 시도할 때 자동으로 수행됩니다.</li></ol>"
+>abstract="<ol><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=ko">데이터 세트</a>를 선택한 다음 데이터를 제한하려는 데이터 세트를 선택합니다.</li><li>데이터 세트 세부 정보 보기에서 <b>데이터 거버넌스</b> 탭을 선택합니다.</li><li>제한할 데이터 세트 필드를 선택한 다음 <b>거버넌스 레이블 편집</b>을 선택하여 사용 제한에 따라 데이터에 레이블을 지정합니다.</li><li>데이터에 레이블을 지정한 후 왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ko">정책</a>을 선택한 다음 <b>정책 만들기</b>를 선택합니다.</li><li><a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">데이터 거버넌스 정책</a> 만들기를 선택한 다음 정책이 해당 정책에 적용할 데이터 사용 레이블을 선택합니다.</li><li>해당 레이블이 포함된 모든 데이터에 대해 정책이 거부할 마케팅 작업을 선택하십시오. 정책이 생성되면 목록에서 해당 정책을 선택하고 오른쪽 레일의 토글을 사용하여 활성화합니다.</li><li>활성화된 각 정책에 대해 Experience Platform은 지정된 레이블이 포함된 모든 데이터가 정의된 마케팅 액션에 사용되는 것을 방지합니다. 이 적용은 관련 마케팅 액션(사용 사례)이 있는 대상에 대해 레이블이 지정된 데이터를 활성화하려고 시도할 때 자동으로 수행됩니다.</li></ol>"
 
 >[!IMPORTANT]
 >
 >더 이상 데이터 세트 수준의 필드에 레이블을 적용할 수 없습니다. 이 워크플로우는 더 이상 사용되지 않으며, 대신 스키마 수준에서 레이블을 적용합니다. 데이터 세트 오브젝트 수준에서 이전에 적용된 모든 레이블은 2024년 5월 31일까지 Experience Platform UI를 통해 계속 지원됩니다. 모든 스키마에서 레이블이 일관되도록 하려면 데이터 세트 수준의 필드에 이전에 첨부된 모든 레이블을 향후 연도에 따라 스키마 수준으로 마이그레이션해야 합니다. [이전에 적용된 레이블을 데이터 집합에서 스키마 수준으로 마이그레이션하는 방법](../e2e.md#migrate-labels)에 대한 지침은 설명서를 참조하세요.
 
-레이블은 **[!UICONTROL 데이터 세트]** 작업 영역의 **[!UICONTROL 데이터 거버넌스]** 탭에서 전체 데이터 세트에 적용할 수 있습니다. 작업 공간에서는 데이터 세트 수준에서 데이터 사용 레이블을 관리할 수 있습니다.
+레이블은 **[!UICONTROL Data Governance]** 작업 영역의 **[!UICONTROL Datasets]** 탭에서 전체 데이터 세트에 적용할 수 있습니다. 작업 공간에서는 데이터 세트 수준에서 데이터 사용 레이블을 관리할 수 있습니다.
 
-![데이터 거버넌스가 강조 표시된 [!UICONTROL 데이터 집합] 작업 영역의 [!UICONTROL 데이터 거버넌스] 탭.](../images/labels/dataset-governance.png)
+![데이터 거버넌스가 강조 표시된 [!UICONTROL Data Governance] 작업 영역의 [!UICONTROL Datasets] 탭입니다.](../images/labels/dataset-governance.png)
 
 데이터 집합 수준에서 데이터 사용 레이블을 편집하려면 먼저 연필 아이콘(![연필 아이콘)을 선택하십시오.](/help/images/icons/edit.png))을(를) 데이터 집합 이름의 행에 포함합니다.
 
-![연필 편집 아이콘이 강조 표시된 [!UICONTROL 데이터 집합] 작업 영역의 [!UICONTROL 데이터 거버넌스] 탭.](../images/labels/dataset-level-edit.png)
+![연필 편집 아이콘이 강조 표시된 [!UICONTROL Data Governance] 작업 영역의 [!UICONTROL Datasets] 탭입니다.](../images/labels/dataset-level-edit.png)
 
-**[!UICONTROL 거버넌스 레이블 편집]** 대화 상자가 열립니다. 대화 상자에서 데이터 세트에 적용할 레이블 옆의 상자를 선택합니다. 이러한 레이블은 데이터 세트 내의 모든 필드에 상속됩니다. **[!UICONTROL 적용된 레이블]** 헤더는 각 상자를 선택하면 업데이트되며 선택한 레이블을 표시합니다. 원하는 레이블을 선택하면 **[!UICONTROL 변경 내용 저장]**&#x200B;을 선택합니다.
+**[!UICONTROL Edit Governance Labels]** 대화 상자가 열립니다. 대화 상자에서 데이터 세트에 적용할 레이블 옆의 상자를 선택합니다. 이러한 레이블은 데이터 세트 내의 모든 필드에 상속됩니다. 각 상자를 선택하면 **[!UICONTROL Applied Labels]** 헤더가 업데이트되어 선택한 레이블이 표시됩니다. 원하는 레이블을 선택하면 **[!UICONTROL Save Changes]**&#x200B;을(를) 선택합니다.
 
 ![레이블 확인란과 변경 내용 저장이 강조 표시된 거버넌스 레이블 편집 대화 상자.](../images/labels/apply-labels-dataset.png)
 
-**[!UICONTROL 데이터 거버넌스]** 작업 영역이 다시 표시되어 테이블의 초기 행에 데이터 집합 수준에서 적용한 레이블을 표시합니다. 또한 데이터 세트 내의 각 필드로 상속되는 개별 카드로 표시된 레이블을 볼 수 있습니다.
+**[!UICONTROL Data Governance]** 작업 영역이 다시 표시되어 테이블의 초기 행에 데이터 세트 수준에서 적용한 레이블을 표시합니다. 또한 데이터 세트 내의 각 필드로 상속되는 개별 카드로 표시된 레이블을 볼 수 있습니다.
 
-![데이터 세트 수준 레이블이 적용되고 상속된 데이터 세트 파일 레이블이 강조 표시된 [!UICONTROL 데이터 세트] 작업 영역의 [!UICONTROL 데이터 거버넌스] 탭.](../images/labels/applied-dataset-labels.png)
+![적용된 데이터 세트 수준 레이블 및 상속된 데이터 세트 필드 레이블이 강조 표시된 [!UICONTROL Data Governance] 작업 영역의 [!UICONTROL Datasets] 탭입니다.](../images/labels/applied-dataset-labels.png)
 
 ### 데이터 세트에서 레이블 제거 {#remove-labels-from-a-dataset}
 
@@ -101,7 +101,7 @@ The inherited labels beside each field do not have an "x" next to them and appea
 
 <!--Beleive can cut above here  -->
 
-**[!UICONTROL 상속된 레이블 표시]** 토글이 기본적으로 설정되어 스키마에서 해당 필드로 상속된 레이블을 볼 수 있습니다. 토글을 끄면 데이터 세트 내에 상속된 모든 레이블이 숨겨집니다.
+**[!UICONTROL Show Inherited Labels]** 토글이 기본적으로 설정되어 스키마에서 해당 필드로 상속된 모든 레이블을 볼 수 있습니다. 토글을 끄면 데이터 세트 내에 상속된 모든 레이블이 숨겨집니다.
 
 ![상속된 레이블 표시 토글이 강조 표시된 데이터 세트 작업 영역의 데이터 거버넌스 탭입니다.](../images/labels/inherited-labels.png)
 
@@ -122,25 +122,25 @@ The inherited labels beside each field do not have an "x" next to them and appea
 >title="레이블 만들기"
 >abstract="레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트 및 필드를 분류할 수 있습니다. Experience Platform은 사용할 수 있는 표준 레이블 집합을 제공하지만 조직에 특정한 사용자 정의 레이블을 만들 수도 있습니다."
 
-[!DNL Experience Platform] UI의 **[!UICONTROL 정책]** 작업 영역에서 사용자 지정 사용 레이블을 만들 수 있습니다. 왼쪽 탐색에서 **[!UICONTROL 정책]**&#x200B;을 선택한 다음 **[!UICONTROL 레이블]**&#x200B;을 선택하여 기존 레이블 목록을 봅니다. 여기에서 **[!UICONTROL 레이블 만들기]**&#x200B;를 선택합니다.
+**[!UICONTROL Policies]** UI의 [!DNL Experience Platform] 작업 영역 내에서 자신만의 사용자 지정 사용 레이블을 만들 수 있습니다. 왼쪽 탐색에서 **[!UICONTROL Policies]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Labels]**&#x200B;을(를) 선택하여 기존 레이블 목록을 봅니다. 여기에서 **[!UICONTROL Create label]**&#x200B;을(를) 선택합니다.
 
 ![정책 만들기가 강조 표시된 정책 작업 영역입니다.](../images/labels/create-label-btn.png)
 
-**[!UICONTROL 레이블 만들기]** 대화 상자가 나타납니다. 여기에서 새 레이블에 대한 다음 정보를 제공합니다.
+**[!UICONTROL Create label]** 대화 상자가 나타납니다. 여기에서 새 레이블에 대한 다음 정보를 제공합니다.
 
-* **[!UICONTROL 이름]**: 레이블의 고유 식별자입니다. 이 값은 조회 목적으로 사용되므로 짧고 간결해야 합니다.
-* **[!UICONTROL 알기 쉬운 이름]**: 레이블의 알기 쉬운 표시 이름입니다.
-* **[!UICONTROL 설명]**: (선택 사항) 추가 컨텍스트를 제공하기 위한 레이블에 대한 설명입니다.
+* **[!UICONTROL Name]**: 레이블의 고유 식별자입니다. 이 값은 조회 목적으로 사용되므로 짧고 간결해야 합니다.
+* **[!UICONTROL Friendly name]**: 레이블에 대한 알기 쉬운 표시 이름입니다.
+* **[!UICONTROL Description]**: (선택 사항) 추가 컨텍스트를 제공하기 위한 레이블에 대한 설명입니다.
 
-완료되면 **[!UICONTROL 만들기]**&#x200B;를 선택합니다.
+완료되면 **[!UICONTROL Create]**&#x200B;을(를) 선택합니다.
 
 ![[만들기]가 강조 표시된 [정책 작업 영역 레이블 만들기] 대화 상자입니다.](../images/labels/create-label-dialog.png)
 
-대화 상자가 닫히고 새로 만든 사용자 지정 레이블이 **[!UICONTROL 레이블]** 탭 아래의 목록에 나타납니다.
+대화 상자가 닫히고 새로 만든 사용자 지정 레이블이 **[!UICONTROL Labels]** 탭 아래의 목록에 나타납니다.
 
 ![새 사용자 지정 레이블이 강조 표시된 정책 작업 영역의 레이블 탭입니다.](../images/labels/label-created.png)
 
-이제 데이터 세트 및 필드의 사용 레이블을 편집하거나 데이터 사용 정책을 만들 때 **[!UICONTROL 사용자 지정 레이블]**&#x200B;에서 레이블을 선택할 수 있습니다.
+이제 데이터 집합 및 필드에 대한 사용 레이블을 편집하거나 데이터 사용 정책을 만들 때 **[!UICONTROL Custom Labels]**&#x200B;에서 레이블을 선택할 수 있습니다.
 
 ![사용자 지정 레이블이 강조 표시된 액세스 및 데이터 거버넌스 레이블 적용 대화 상자.](../images/labels/add-custom-label.png)
 
@@ -156,4 +156,4 @@ The inherited labels beside each field do not have an "x" next to them and appea
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422792?quality=12&enable10seconds=on&speedcontrol=on&captions=kor) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) -->

@@ -34,7 +34,7 @@ Adobe Experience Platform [!DNL Segmentation Service]에서는 [!DNL Real-Time C
 
 컴포지션, 세그먼트 정의, 페더레이션 데이터 및 Data Distiller을 포함하여 Adobe Experience Platform에서 다양한 방식으로 대상을 만들 수 있습니다.
 
-### 대상자 구성
+### 대상자 컴포지션
 
 Experience Platform에서 대상을 직접 작성할 때 대상 작성을 사용할 수 있습니다. 대상 구성을 사용하여 대상을 만드는 방법에 대해 알아보려면 [대상 구성 가이드](./ui/audience-composition.md)를 참조하십시오.
 
@@ -52,7 +52,7 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >
 >또한 데이터 세트에서 경험 이벤트 만료 값이 활성화되면 생성된 세그먼트 정의의 멤버십에 영향을 줄 수 있습니다. 이 기능이 세분화에 미치는 영향에 대한 자세한 내용은 [경험 이벤트 만료](../profile/event-expirations.md)에 대한 안내서를 참조하십시오.
 
-### 페더레이션된 대상자 구성 {#fac}
+### 페더레이션된 대상자 컴포지션 {#fac}
 
 대상 구성 및 세그먼트 정의 외에 Adobe Federated Audience Composition을 사용하여 기본 데이터를 복사하지 않고 Enterprise 데이터 세트에서 새 대상을 작성하고 이러한 대상을 Adobe Experience Platform Audience Portal에 저장할 수 있습니다. Enterprise Data Warehouse에서 페더레이션된 구성된 대상 데이터를 활용하여 Adobe Experience Platform의 기존 대상을 강화할 수도 있습니다. [Federated Audience Composition](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)에 대한 안내서를 읽어 보십시오.
 
@@ -67,7 +67,7 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >id="platform_segments_evaluation_streaming"
 >title="스트리밍 평가"
 >abstract="스트리밍 세분화는 사용자 활동에 대응하여 대상자를 업데이트하는 진행형 데이터 선택 프로세스입니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html?lang=ko" text="스트리밍 세분화를 통해 거의 실시간으로 이벤트 평가"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="스트리밍 세분화를 통해 거의 실시간으로 이벤트 평가"
 
 현재 Experience Platform은 대상자를 평가하는 세 가지 방식(스트리밍 세분화, 배치 세분화, 에지 세분화)을 지원합니다.
 
@@ -94,9 +94,9 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >id="platform_segments_evaluation_edge"
 >title="에지 평가"
 >abstract="에지 세분화는 Edge Network에서 Experience Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지의 개인화 사용 사례를 활성화하는 기능입니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html?lang=ko" text="에지 세분화 안내서"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="에지 세분화 안내서"
 
-Edge 세그멘테이션은 Experience Platform의 세그먼트를 Edge Network[&#128279;](../landing/edge-and-hub-comparison.md)에서 즉시 평가하는 기능으로, 동일한 페이지와 다음 페이지 개인화 사용 사례를 가능하게 합니다.
+Edge 세그멘테이션은 Experience Platform의 세그먼트를 Edge Network[에서 즉시 ](../landing/edge-and-hub-comparison.md)평가하는 기능으로, 동일한 페이지와 다음 페이지 개인화 사용 사례를 가능하게 합니다.
 
 Edge 세그멘테이션에 대한 자세한 내용은 [Edge 세그멘테이션 개요](./methods/edge-segmentation.md)를 참조하십시오.
 

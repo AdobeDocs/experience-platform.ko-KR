@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 source-git-commit: 6fe0a36a8f2ac2cb954935ee8fe64432442b6e84
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '368'
 ht-degree: 6%
 
 ---
@@ -54,8 +54,8 @@ intro blurb
 
 ## 스트리밍 대상에 대한 모니터링 대시보드 사용 {#monitoring-dashboard}
 
-스트리밍 대상의 모니터링 대시보드에 액세스하려면 Experience Platform UI로 이동하여 왼쪽 탐색에서 **[!UICONTROL 모니터링]**&#x200B;을 선택한 다음 **[!UICONTROL 전체 스트리밍]**&#x200B;을 선택하십시오.
+스트리밍 대상의 모니터링 대시보드에 액세스하려면 Experience Platform UI로 이동하여 왼쪽 탐색에서 **[!UICONTROL Monitoring]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Streaming end-to-end]**&#x200B;을(를) 선택하십시오.
 
 이미지
 
-대시보드 맨 위에는 **[!UICONTROL 대상]** 지표 카드가 있습니다. 대상의 **평가 비율**&#x200B;에 대한 정보가 표시됩니다.
+대시보드 맨 위에는 **[!UICONTROL Audiences]** 지표 카드가 있습니다. 대상의 **평가 비율**&#x200B;에 대한 정보가 표시됩니다.

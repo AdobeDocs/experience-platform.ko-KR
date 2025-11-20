@@ -4,7 +4,7 @@ description: Adobe Real-Time Customer Data Platform B2B edition에서 두 스키
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1771'
+source-wordcount: '1726'
 ht-degree: 12%
 
 ---
@@ -55,7 +55,7 @@ Adobe Real-Time Customer Data Platform B2B edition은 [계정](../classes/b2b/bu
 
 관계를 설정하려면 참조 스키마에 정의된 기본 ID가 있어야 합니다. B2B 엔티티에 대한 기본 ID를 설정할 때 문자열 기반 엔티티 ID는 서로 다른 시스템 또는 위치에서 수집하는 경우 겹칠 수 있으며, 이로 인해 Experience Platform에서 데이터 충돌이 발생할 수 있다는 점을 유의하십시오.
 
-이를 위해 모든 표준 B2B 클래스에는 [[!UICONTROL B2B Source] 데이터 형식](../data-types/b2b-source.md)을 준수하는 &quot;key&quot; 필드가 포함되어 있습니다. 이 데이터 유형은 식별자의 소스에 대한 다른 컨텍스트 정보와 함께 B2B 엔티티의 문자열 식별자에 대한 필드를 제공합니다. 이러한 필드 중 하나인 `sourceKey`은(는) 데이터 형식의 다른 필드 값을 연결하여 엔터티에 대해 완전히 고유한 식별자를 생성합니다. 이 필드는 항상 B2B 엔티티 스키마의 기본 ID로 사용해야 합니다.
+이를 위해 모든 표준 B2B 클래스에는 [[!UICONTROL B2B Source] 데이터 형식](../data-types/b2b-source.md)을(를) 준수하는 &quot;key&quot; 필드가 포함되어 있습니다. 이 데이터 유형은 식별자의 소스에 대한 다른 컨텍스트 정보와 함께 B2B 엔티티의 문자열 식별자에 대한 필드를 제공합니다. 이러한 필드 중 하나인 `sourceKey`은(는) 데이터 형식의 다른 필드 값을 연결하여 엔터티에 대해 완전히 고유한 식별자를 생성합니다. 이 필드는 항상 B2B 엔티티 스키마의 기본 ID로 사용해야 합니다.
 
 ![sourceKey 필드](../images/tutorials/relationship-b2b/sourcekey.png)
 
@@ -67,15 +67,15 @@ Adobe Real-Time Customer Data Platform B2B edition은 [계정](../classes/b2b/bu
 
 ### 영업 기회 스키마
 
-소스 스키마 &quot;[!DNL Opportunities]&quot;이(가) [!UICONTROL XDM 비즈니스 영업 기회] 클래스를 기반으로 합니다. 클래스에서 제공하는 필드 중 하나(`opportunityKey`)가 스키마의 식별자 역할을 합니다. 특히 `sourceKey` 개체 아래의 `opportunityKey` 필드는 [!DNL B2B Opportunity]&#x200B;(이)라는 사용자 지정 네임스페이스에서 스키마의 기본 ID로 설정됩니다.
+원본 스키마 &quot;[!DNL Opportunities]&quot;은(는) [!UICONTROL XDM Business Opportunity] 클래스를 기반으로 합니다. 클래스에서 제공하는 필드 중 하나(`opportunityKey`)가 스키마의 식별자 역할을 합니다. 특히 `sourceKey` 개체 아래의 `opportunityKey` 필드는 [!DNL B2B Opportunity]&#x200B;(이)라는 사용자 지정 네임스페이스에서 스키마의 기본 ID로 설정됩니다.
 
-**[!UICONTROL 필드 속성]**&#x200B;에서 볼 수 있듯이 이 스키마는 [!DNL Real-Time Customer Profile]에서 사용할 수 있도록 설정되었습니다.
+**[!UICONTROL Field Properties]**&#x200B;에서 볼 수 있듯이 이 스키마는 [!DNL Real-Time Customer Profile]에서 사용할 수 있도록 설정되었습니다.
 
 ![스키마 편집기에서 opportunityKey 개체와 Enable for profile 토글이 강조 표시된 Opportunities 스키마.](../images/tutorials/relationship-b2b/opportunities.png)
 
 ### [!DNL Accounts] 스키마
 
-참조 스키마 &quot;[!DNL Accounts]&quot;은(는) [!UICONTROL XDM 계정] 클래스를 기반으로 합니다. 루트 수준 `accountKey` 필드에는 `sourceKey`이라는 사용자 지정 네임스페이스에서 기본 ID 역할을 하는 [!DNL B2B Account]이(가) 포함되어 있습니다. 이 스키마는 프로필에서도 사용할 수 있도록 설정되었습니다.
+참조 스키마 &quot;[!DNL Accounts]&quot;은(는) [!UICONTROL XDM Account] 클래스를 기반으로 합니다. 루트 수준 `accountKey` 필드에는 `sourceKey`이라는 사용자 지정 네임스페이스에서 기본 ID 역할을 하는 [!DNL B2B Account]이(가) 포함되어 있습니다. 이 스키마는 프로필에서도 사용할 수 있도록 설정되었습니다.
 
 ![AccountKey 개체와 Enable for profile 토글이 강조 표시된 스키마 편집기의 Accounts 스키마.](../images/tutorials/relationship-b2b/accounts.png)
 
@@ -91,21 +91,21 @@ Adobe Real-Time Customer Data Platform B2B edition은 [계정](../classes/b2b/bu
 >title="참조 스키마의 관계 이름"
 >abstract="참조 스키마에서 현재 스키마(예: “관련 기회”)까지 관계를 설명하는 레이블입니다. 프로필 및 세분화에서 이 레이블을 사용하여 관련 B2B 엔티티의 데이터에 컨텍스트를 제공합니다. B2B 스키마 관계 빌드에 대한 자세한 내용은 설명서를 참조하십시오."
 
-두 스키마 간의 관계를 정의하려면 소스 스키마에 참조 스키마의 기본 ID를 나타내는 전용 필드가 있어야 합니다. 표준 B2B 클래스는 일반적으로 관련된 비즈니스 엔터티를 위한 전용 소스 키 필드를 포함합니다. 예를 들어 [!UICONTROL XDM 비즈니스 영업 기회] 클래스에는 관련 계정(`accountKey`) 및 관련 캠페인(`campaignKey`)에 대한 소스 키 필드가 포함되어 있습니다. 그러나 기본 구성 요소 이상이 필요한 경우 사용자 지정 필드 그룹을 사용하여 다른 [!UICONTROL B2B Source] 필드를 스키마에 추가할 수도 있습니다.
+두 스키마 간의 관계를 정의하려면 소스 스키마에 참조 스키마의 기본 ID를 나타내는 전용 필드가 있어야 합니다. 표준 B2B 클래스는 일반적으로 관련된 비즈니스 엔터티를 위한 전용 소스 키 필드를 포함합니다. 예를 들어 [!UICONTROL XDM Business Opportunity] 클래스에는 관련 계정(`accountKey`) 및 관련 캠페인(`campaignKey`)에 대한 소스 키 필드가 포함되어 있습니다. 그러나 기본 구성 요소 이상이 필요한 경우 사용자 지정 필드 그룹을 사용하여 스키마에 다른 [!UICONTROL B2B Source] 필드를 추가할 수도 있습니다.
 
 >[!NOTE]
 >
 >현재 소스 스키마에서 참조 스키마까지 다대일 및 일대일 관계만 정의할 수 있습니다. 일대다 관계의 경우 &quot;다&quot;를 나타내는 관계 필드를 스키마에 정의해야 합니다.
 
-관계 필드를 설정하려면 캔버스 내에서 해당 필드를 선택한 다음 **[!UICONTROL 스키마 속성]** 사이드바에서 [!UICONTROL 관계 추가]를 선택하십시오. [!DNL Opportunities] 스키마의 경우 계정과 다대일 관계를 설정하는 것이 목표이므로 `accountKey.sourceKey` 필드입니다.
+관계 필드를 설정하려면 캔버스 내에서 해당 필드를 선택한 후 **[!UICONTROL Add relationship]** 사이드바에서 [!UICONTROL Schema properties]을(를) 선택하십시오. [!DNL Opportunities] 스키마의 경우 계정과 다대일 관계를 설정하는 것이 목표이므로 `accountKey.sourceKey` 필드입니다.
 
 ![sourceKey 필드 및 관계 추가가 강조 표시된 스키마 편집기입니다.](../images/tutorials/relationship-b2b/add-relationship.png)
 
-[!UICONTROL 관계 추가] 대화 상자가 나타납니다. 이 대화 상자를 사용하여 관계 세부 사항을 지정합니다. 관계 유형은 기본적으로 **[!UICONTROL 다대일]**(으)로 설정됩니다.
+[!UICONTROL Add relationship] 대화 상자가 나타납니다. 이 대화 상자를 사용하여 관계 세부 사항을 지정합니다. 관계 유형은 기본적으로 **[!UICONTROL Many-to-one]**(으)로 설정됩니다.
 
 ![다대일 스키마 관계가 강조 표시된 관계 추가 대화 상자입니다.](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-**[!UICONTROL 참조 스키마]**&#x200B;에서 검색 창 또는 드롭다운 메뉴를 사용하여 참조 스키마의 이름을 찾습니다. 참조 스키마의 이름을 강조 표시하면 **[!UICONTROL 참조 ID 네임스페이스]** 필드가 참조 스키마의 기본 ID의 네임스페이스로 자동 업데이트됩니다.
+**[!UICONTROL Reference Schema]**&#x200B;에서 검색 창 또는 드롭다운 메뉴를 사용하여 참조 스키마의 이름을 찾습니다. 참조 스키마 이름을 강조 표시하면 **[!UICONTROL Reference Identity Namespace]** 필드가 참조 스키마 기본 ID의 네임스페이스로 자동 업데이트됩니다.
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ Adobe Real-Time Customer Data Platform B2B edition은 [계정](../classes/b2b/bu
 
 ![참조 스키마 및 참조 ID 네임스페이스 필드가 강조 표시된 관계 추가 대화 상자입니다.](../images/tutorials/relationship-b2b/reference-schema.png)
 
-**[!UICONTROL 현재 스키마의 관계 이름]** 및 **[!UICONTROL 참조 스키마의 관계 이름]**&#x200B;에서 소스 및 참조 스키마 컨텍스트의 관계에 대해 알기 쉬운 이름을 각각 지정하십시오. 완료되면 **[!UICONTROL 적용]**&#x200B;을 선택하여 변경 내용을 확인하고 관계를 저장합니다.
+**[!UICONTROL Relationship Name From Current Schema]** 및 **[!UICONTROL Relationship Name From Reference Schema]**&#x200B;에서 소스 및 참조 스키마의 컨텍스트에서 관계에 대한 친숙한 이름을 각각 제공합니다. 완료되면 **[!UICONTROL Apply]**&#x200B;을(를) 선택하여 변경 내용을 확인하고 관계를 저장합니다.
 
 >[!NOTE]
 >
@@ -131,16 +131,16 @@ Adobe Real-Time Customer Data Platform B2B edition은 [계정](../classes/b2b/bu
 
 ## B2B 스키마 관계 편집 {#edit-schema-relationship}
 
-스키마 관계가 설정되면 소스 스키마에서 관계 필드를 선택한 후 **[!UICONTROL 관계 편집]**&#x200B;을 선택합니다.
+스키마 관계가 설정되면 **[!UICONTROL Edit relationship]** 다음에 오는 소스 스키마의 관계 필드를 선택합니다.
 
 >[!NOTE]
 >
->연결된 관계를 모두 보려면 참조 스키마에서 기본 ID 필드를 선택한 다음 [!UICONTROL 관계 보기]를 선택하십시오.
->&#x200B;>![관계 필드가 선택되고 관계 보기가 강조 표시된 스키마 편집기.](../images/tutorials/relationship-b2b/view-relationships.png "관계 필드가 선택되어 있고 관계 보기가 강조 표시된 스키마 편집기입니다."){width="100" zoomable="yes"}
+>연결된 관계를 모두 보려면 참조 스키마의 기본 ID 필드 [!UICONTROL View relationships]을(를) 선택하십시오.
+>![관계 필드가 선택되고 관계 보기가 강조 표시된 스키마 편집기.](../images/tutorials/relationship-b2b/view-relationships.png "관계 필드가 선택되어 있고 관계 보기가 강조 표시된 스키마 편집기입니다."){width="100" zoomable="yes"}
 
 ![관계 필드와 관계 편집이 강조 표시된 스키마 편집기입니다.](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
 
-[!UICONTROL 관계 편집] 대화 상자가 나타납니다. 이 대화 상자에서 참조 스키마 및 관계 이름을 변경하거나 관계를 삭제할 수 있습니다. 다대일 관계 유형은 변경할 수 없습니다.
+[!UICONTROL Edit relationship] 대화 상자가 나타납니다. 이 대화 상자에서 참조 스키마 및 관계 이름을 변경하거나 관계를 삭제할 수 있습니다. 다대일 관계 유형은 변경할 수 없습니다.
 
 ![관계 편집 대화 상자](../images/tutorials/relationship-b2b/edit-b2b-relationship-dialog.png)
 
@@ -152,7 +152,7 @@ Adobe Real-Time Customer Data Platform B2B edition은 [계정](../classes/b2b/bu
 
 ## 관계 필터링 및 검색 {#filter-and-search}
 
-[!UICONTROL 스키마] 작업 영역의 [!UICONTROL 관계] 탭에서 스키마 내의 특정 관계를 필터링하고 검색할 수 있습니다. 이 보기를 사용하여 관계를 빠르게 찾고 관리할 수 있습니다. 필터링 옵션에 대한 자세한 지침은 [스키마 리소스 탐색](../ui/explore.md#lookup)에 대한 문서를 참조하십시오.
+[!UICONTROL Relationships] 작업 영역의 [!UICONTROL Schemas] 탭에서 스키마 내의 특정 관계를 필터링하고 검색할 수 있습니다. 이 보기를 사용하여 관계를 빠르게 찾고 관리할 수 있습니다. 필터링 옵션에 대한 자세한 지침은 [스키마 리소스 탐색](../ui/explore.md#lookup)에 대한 문서를 참조하십시오.
 
 ![스키마 작업 영역의 관계 탭입니다.](../images/tutorials/relationship-b2b/relationship-tab.png)
 

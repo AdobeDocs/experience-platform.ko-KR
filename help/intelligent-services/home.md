@@ -22,7 +22,7 @@ ht-degree: 2%
 
 다음 비디오는 Intelligent Services에 대한 이해를 돕기 위해 설계되었습니다. 이 비디오에서는 예제 비즈니스 사용 사례를 통해 높은 수준의 워크플로를 설명하고 Attribution AI와 고객 AI의 기능을 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/36615?learn=on&quality=12&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
 ## 인텔리전트 서비스의 이점
 
@@ -30,11 +30,11 @@ ht-degree: 2%
 
 ### 비용 효율적인 시장 출시 속도
 
-Adobe은 심층적인 CXM 경험과 결합된 AI/ML 전문 지식을 갖추고 있으며, Intelligent Services는 마케터가 희소하고 값비싼 데이터 과학자를 고용할 필요 없이 일반적인 마케팅 사용 사례에 대해 즉시 AI/ML을 활용할 수 있도록 특별히 설계되어 시장 출시 속도를 높이고 실행 가능성을 가속화합니다.
+Adobe has AI/ML expertise combined with deep CXM experience, and Intelligent Services have been designed specifically for marketers to get AI/ML off the ground immediately for common marketing use cases without the need to hire scarce and expensive data scientists, accelerating speed to market and actionability.
 
-### 예측 통찰력의 정확도 향상
+### Higher accuracy in predictive insights
 
-고급 알고리즘 AI/ML 모델을 채택하여 최고의 정확도로 개발, 깊이와 세부기간을 가진 공통 데이터 세트에서 AI/ML을 실행하여 예측을 슬라이싱하고 다이싱할 수 있는 기능 및 예측 고객 통찰력의 배경과 이유를 제공하는 인텔리전스를 제공합니다.
+Developed with the highest level of accuracy resultant through the adoption of advanced algorithmic AI/ML models; the ability to run AI/ML on a common dataset with the depth and granularity to enable slicing and dicing of predictions; and intelligence to provide the what and why behind predictive customer insights.
 
 ### 인사이트 및 ROI에 대한 빠른 시간
 
@@ -52,7 +52,7 @@ Adobe은 심층적인 CXM 경험과 결합된 AI/ML 전문 지식을 갖추고 �
 
 ### 예측
 
-모델이 교육 및 채점을 완료한 후 점수가 다시 Experience Platform에 기록됩니다.
+After the models have finished training and scoring, the scores are written back into Experience Platform.
 
 ### 조치 취하기
 

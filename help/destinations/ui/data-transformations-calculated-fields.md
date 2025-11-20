@@ -5,7 +5,7 @@ description: 계산된 필드 기능을 사용하여 클라우드 스토리지 �
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
 source-git-commit: bd9efc1bcf6058827cc5c603b9976c9e42c7ec9e
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1604'
 ht-degree: 8%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="계산된 필드 추가"
 >abstract="<p>**계산된 필드 추가** 컨트롤을 사용하여 클라우드 스토리지 대상으로 내보낸 데이터에 다양한 데이터 변환을 수행합니다. 예를 들어 데이터에 해싱을 적용하고 배열을 문자열로 연결하는 등의 작업이 가능합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html?lang=ko#examples" text="예시"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="예"
 
 >[!AVAILABILITY]
 >
@@ -31,7 +31,7 @@ ht-degree: 8%
 
 데이터 변환에 계산된 필드를 사용하려면 다음을 수행하십시오.
 
-1. 원하는 클라우드 저장소 대상에 [연결](/help/destinations/ui/connect-destination.md)합니다. 원하는 클라우드 대상에 연결할 때 **[!UICONTROL 배열, 맵, 개체 내보내기]** [옵션 해제](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle)를 전환하십시오.
+1. 원하는 클라우드 저장소 대상에 [연결](/help/destinations/ui/connect-destination.md)합니다. 원하는 클라우드 대상에 연결할 때 **[!UICONTROL Export arrays, maps, objects]** [옵션을 끄거나](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle)합니다.
 2. 클라우드 저장소 대상에 대한 [활성화 단계](/help/destinations/ui/activate-batch-profile-destinations.md)를 진행하고 [매핑](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 단계로 이동하십시오.
 
 ## 계산된 필드로 작업하는 방법 {#how-to-export-calculated-fields}
@@ -50,11 +50,11 @@ ht-degree: 8%
 >
 >계산된 필드를 사용하여 작업할 때마다 적용하는 데이터 변환 함수 외에 `array_to_string` 함수를 사용하여 필드를 문자열로 연결해야 합니다.
 
-클라우드 저장소 대상에 대한 활성화 워크플로의 매핑 단계에서 **[!UICONTROL 계산된 필드 추가]**&#x200B;를 선택합니다.
+클라우드 저장소 대상에 대한 활성화 워크플로의 매핑 단계에서 **[!UICONTROL Add calculated field]**&#x200B;을(를) 선택합니다.
 
 >[!TIP]
 >
->**[!UICONTROL 배열, 맵 및 개체 내보내기]** 컨트롤이 해제되어 있는 대상 연결에 대해 **[!UICONTROL 계산된 필드 추가]** 컨트롤을 사용할 수 없습니다. [자세히 보기](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
+>**[!UICONTROL Add calculated field]** 컨트롤이 전환된 대상 연결에 대해 **[!UICONTROL Export arrays, maps, and objects]** 컨트롤이 비활성화되었습니다. [자세히 보기](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 
 ![일괄 활성화 워크플로의 매핑 단계에서 강조 표시된 계산된 필드를 추가합니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
@@ -62,21 +62,21 @@ ht-degree: 8%
 
 ![아직 함수가 선택되지 않은 계산된 필드 기능의 모달 창.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
-예를 들어 아래 표시된 대로 `array_to_string` 필드에서 `organizations` 함수를 사용하여 조직 배열을 CSV 파일의 문자열로 내보냅니다. [이 예제와 다른 예제에 대한 자세한 내용은 아래에서 &#x200B;](#array-to-string-function-export-arrays)을(를) 참조하십시오.
+예를 들어 아래 표시된 대로 `array_to_string` 필드에서 `organizations` 함수를 사용하여 조직 배열을 CSV 파일의 문자열로 내보냅니다. [이 예제와 다른 예제에 대한 자세한 내용은 아래에서 ](#array-to-string-function-export-arrays)을(를) 참조하십시오.
 
 ![배열-문자열 함수가 선택된 계산된 필드 기능의 모달 창입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
-계산된 필드를 유지하고 매핑 단계로 돌아가려면 **[!UICONTROL 저장]**&#x200B;을(를) 선택하십시오.
+**[!UICONTROL Save]**&#x200B;을(를) 선택하여 계산된 필드를 유지하고 매핑 단계로 돌아갑니다.
 
 ![Array-to-string 함수가 선택되고 Save 컨트롤이 강조 표시된 계산된 필드 기능의 모달 창.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
-워크플로우의 매핑 단계로 돌아가서 내보낸 파일의 이 필드에 사용할 열 머리글 값으로 **[!UICONTROL 대상 필드]**&#x200B;을(를) 채웁니다.
+워크플로우의 매핑 단계로 돌아가서 내보낸 파일의 이 필드에 사용할 열 머리글 값으로 **[!UICONTROL Target field]**&#x200B;을(를) 채웁니다.
 
-대상 필드가 강조 표시된 매핑 단계 ![1&rbrace;](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+대상 필드가 강조 표시된 매핑 단계 ![1}](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![대상 필드 선택](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
-준비가 되면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 활성화 워크플로의 다음 단계로 진행합니다.
+준비가 되면 **[!UICONTROL Next]**&#x200B;을(를) 선택하여 활성화 워크플로의 다음 단계로 진행합니다.
 
 대상 필드가 강조 표시되고 대상 값이 채워진 ![매핑 단계.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
@@ -229,7 +229,7 @@ johndoe@acme.org,"5"
 
 >[!IMPORTANT]
 >
->이 페이지에 설명된 다른 함수와 달리 배열의 개별 요소를 내보내려면 *UI에서*&#x200B;계산된 필드&#x200B;**[!UICONTROL 컨트롤을 사용할 필요가 없습니다]**.
+>이 페이지에 설명된 다른 함수와 달리 배열의 개별 요소를 내보내려면 *UI에서* 컨트롤을 사용할 필요가 없습니다&#x200B;**[!UICONTROL Calculated fields]**.
 
 배열의 인덱스에 액세스하여 배열에서 단일 항목을 내보낼 수 있습니다. 예를 들어, `size_of` 함수에 대한 위의 예제와 유사하게 고객이 특정 제품을 처음 구매한 경우에만 액세스하고 내보내려고 하는 경우 `purchaseTime[0]`을(를) 사용하여 타임스탬프의 첫 번째 요소를 내보내고, `purchaseTime[1]`을(를) 사용하여 타임스탬프의 두 번째 요소를 내보내고, `purchaseTime[2]`을(를) 사용하여 타임스탬프의 세 번째 요소를 내보낼 수 있습니다.
 

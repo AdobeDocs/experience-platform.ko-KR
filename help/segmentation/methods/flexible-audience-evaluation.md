@@ -5,7 +5,7 @@ role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
 source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1124'
 ht-degree: 5%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 5%
 
 유연한 대상 평가를 사용하려면 다음 권한이 있어야 합니다.
 
-- **[!UICONTROL 섹션 아래에서]**&#x200B;세그먼트를 대상자에게 평가&#x200B;**[!DNL Profile Management]**&#x200B;합니다.
+- **[!UICONTROL Evaluate Segment to an Audience]** 섹션 아래의 **[!DNL Profile Management]**.
 
 역할 기반 액세스 제어에 대한 자세한 내용은 [액세스 제어 개요](../../access-control/home.md)를 참조하십시오.
 
@@ -300,15 +300,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 >[!TAB Experience Platform UI]
 
-Experience Platform UI에서 유연한 대상 평가를 실행하려면 **[!UICONTROL 고객]** 섹션에서 **[!UICONTROL 대상]**&#x200B;을(를) 선택하십시오.
+Experience Platform UI 내에서 유연한 대상 평가를 실행하려면 **[!UICONTROL Audiences]** 섹션에서 **[!UICONTROL Customers]**&#x200B;을(를) 선택합니다.
 
 ![Customers 섹션의 Audiences 단추가 강조 표시됩니다. 고객 프로필에 대한 대상 포털이 표시됩니다.](../images/methods/fae/audience-portal.png)
 
-대상 포털이 표시되고 조직에 대한 모든 사람 대상 목록이 표시됩니다. 대상 포털에서 평가하려는 대상을 선택하고 **[!UICONTROL 대상 평가]**&#x200B;를 선택할 수 있습니다.
+대상 포털이 표시되고 조직에 대한 모든 사람 대상 목록이 표시됩니다. 대상 포털에서 평가하려는 대상을 선택하고 **[!UICONTROL Evaluate audience]**&#x200B;을(를) 선택할 수 있습니다.
 
 ![유연한 대상 평가를 사용할 대상을 선택했습니다.](../images/methods/fae/evaluate-audiences.png)
 
-**[!UICONTROL 요청 시 대상 평가]** 팝오버가 표시되어 요청 시 세그먼트 작업으로 평가할 대상 목록을 표시합니다. 대상자가 요청 시 평가를 받을 수 없는 경우 평가 작업에서 자동으로 제거됩니다. 나열된 대상이 평가하려는 대상인지 확인합니다.
+온디맨드 세그먼트 작업으로 평가될 대상자 목록을 표시하는 **[!UICONTROL Evaluate audiences on demand]** 팝오버가 나타납니다. 대상자가 요청 시 평가를 받을 수 없는 경우 평가 작업에서 자동으로 제거됩니다. 나열된 대상이 평가하려는 대상인지 확인합니다.
 
 ![유연한 대상 평가를 사용하여 평가할 수 있는 대상이 표시됩니다.](../images/methods/fae/evaluate-audiences-modal.png)
 
@@ -318,7 +318,7 @@ Experience Platform UI에서 유연한 대상 평가를 실행하려면 **[!UICO
 >
 >세그먼트 작업의 상태는 모니터링 대시보드 내에서 &quot;큐에 있음&quot; 상태로 보고될 수 있습니다. `/segment/jobs` 끝점에 대한 GET 요청을 만들고 요청 경로에 세그먼트 작업의 ID를 제공하여 세그먼트 작업의 최신 상태를 볼 수 있습니다. 이 엔드포인트 사용에 대한 자세한 내용은 API 탭에서 확인할 수 있습니다.
 >
->유연한 대상 평가를 실행하고 평가를 통해 대상을 대상으로 활성화하려는 경우 빈도를 **[!UICONTROL 세그먼트 평가 후]**(으)로 설정해야 합니다. [세그먼트 평가 후](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)에 이미 활성화되도록 설정된 대상에 대해 유연한 대상 평가를 실행하면 이전의 모든 일일 활성화 작업에 관계없이 유연한 대상 평가 작업이 완료되는 즉시 대상이 활성화됩니다.
+>유연한 대상 평가를 실행하고 평가를 통해 대상에 대한 대상을 활성화하려는 경우 빈도를 **[!UICONTROL After segment evaluation]**(으)로 설정해야 합니다. [세그먼트 평가 후](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)에 이미 활성화되도록 설정된 대상에 대해 유연한 대상 평가를 실행하면 이전의 모든 일일 활성화 작업에 관계없이 유연한 대상 평가 작업이 완료되는 즉시 대상이 활성화됩니다.
 
 >[!ENDTABS]
 
@@ -326,7 +326,7 @@ Experience Platform UI에서 유연한 대상 평가를 실행하려면 **[!UICO
 
 다음 비디오에서는 Experience Platform에서 유연한 대상 평가에 액세스하고 사용하는 방법을 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453647?&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## 자주 묻는 질문 {#faq}
 

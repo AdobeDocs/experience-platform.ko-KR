@@ -2,12 +2,12 @@
 title: Real-Time Customer Data Platform의 Audience Builder
 description: Real-Time Customer Data Platform에서 Audience Builder를 사용하여 대상을 만드는 방법을 알아봅니다.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 8%
+source-wordcount: '957'
+ht-degree: 9%
 
 ---
 
@@ -42,19 +42,19 @@ Adobe Experience Platform 위에 구축된 [!DNL Adobe Real-Time Customer Data P
 
 >[!NOTE]
 >
->**[!UICONTROL 필드 옵션]** 섹션은 현재 베타 버전이며 일부 고객만 사용할 수 있습니다. 자세한 내용은 Adobe 고객 지원 센터에 문의하십시오.
+>**[!UICONTROL Field options]** 섹션은 현재 베타 버전이며 일부 고객에게만 제공됩니다. 자세한 내용은 Adobe 고객 지원 센터에 문의하십시오.
 
-[!UICONTROL 설정] 섹션이 표시됩니다. 이 섹션에서는 표시되는 필드와 필드의 관계를 업데이트할 수 있습니다.
+[!UICONTROL Settings] 섹션이 표시됩니다. 이 섹션에서는 표시되는 필드와 필드의 관계를 업데이트할 수 있습니다.
 
-**[!UICONTROL 필드 옵션]**&#x200B;의 경우 데이터가 포함된 필드 또는 전체 XDM 스키마만 표시할 수 있습니다.
+**[!UICONTROL Field options]**&#x200B;의 경우 데이터가 포함된 필드 또는 전체 XDM 스키마만 표시할 수 있습니다.
 
-**[!UICONTROL 필드의 관계]**&#x200B;에 대해 조직의 표준 관계를 사용하거나 관계 선택기를 표시할 수 있습니다.
+**[!UICONTROL Relationship of fields]**&#x200B;의 경우 조직의 표준 관계를 사용하거나 관계 선택기를 표시할 수 있습니다.
 
 ![설정 모듈이 표시됩니다.](../assets/segmentation/audience-builder/settings.png){width="300"}
 
 ### 속성 {#attributes}
 
-[!UICONTROL 특성] 탭을 사용하여 XDM 비즈니스 계정 클래스에 속하는 계정 특성과 영업 기회 및 사용자 기반 특성을 찾아볼 수 있습니다. 각 폴더를 확장하여 추가 특성을 표시할 수 있습니다. 여기서 각 특성은 작업 영역의 중앙에 있는 [규칙 빌더 캔버스](#rule-builder-canvas)(으)로 끌 수 있는 타일입니다.
+[!UICONTROL Attributes] 탭에서는 XDM 비즈니스 계정 클래스에 속하는 계정 속성과 기회 및 사용자 기반 속성을 찾아볼 수 있습니다. 각 폴더를 확장하여 추가 특성을 표시할 수 있습니다. 여기서 각 특성은 작업 영역의 중앙에 있는 [규칙 빌더 캔버스](#rule-builder-canvas)(으)로 끌 수 있는 타일입니다.
 
 ![Audience Builder에 특성 탭이 표시됩니다](../assets/segmentation/audience-builder/attributes.png)
 
@@ -76,7 +76,7 @@ Adobe Experience Platform 위에 구축된 [!DNL Adobe Real-Time Customer Data P
 
 ### 대상자 {#audiences}
 
-**[!UICONTROL 대상]** 탭에는 Experience Platform에서 사용할 수 있는 모든 사용자 기반 및 계정 기반 대상이 나열됩니다.
+**[!UICONTROL Audiences]** 탭에는 Experience Platform에서 사용할 수 있는 모든 사람 기반 및 계정 기반 대상이 나열됩니다.
 
 대상자 옆에 있는 ![정보 아이콘](../../images/icons/info.png) 위로 마우스를 가져가면 해당 ID, 설명 및 폴더 계층 구조를 포함하여 대상자에 대한 정보를 볼 수 있습니다.
 
@@ -86,7 +86,7 @@ Adobe Experience Platform 위에 구축된 [!DNL Adobe Real-Time Customer Data P
 
 Audience Builder에서 만든 대상은 대상 대상의 주요 특성 또는 동작을 설명하는 데 사용되는 규칙 컬렉션입니다. 이러한 규칙은 Audience Builder의 중앙에 있는 규칙 빌더 캔버스를 사용하여 만들어집니다.
 
-세그먼트 정의에 새 규칙을 추가하려면 **[!UICONTROL 필드]** 탭에서 타일을 드래그하여 규칙 빌더 캔버스에 놓습니다.
+세그먼트 정의에 새 규칙을 추가하려면 **[!UICONTROL Fields]** 탭에서 타일을 드래그하여 규칙 빌더 캔버스에 놓습니다.
 
 ![필드가 추가된 규칙 빌더 캔버스입니다.](../assets/segmentation/audience-builder/added-field.png){zoomable="yes"}
 
@@ -100,25 +100,25 @@ Audience Builder에서 만든 대상은 대상 대상의 주요 특성 또는 �
 
 ## 대상자 속성 {#properties}
 
-**[!UICONTROL 대상 속성]** 섹션에는 예상 대상 크기를 포함하여 대상에 대한 정보가 표시됩니다. 이름, 설명 및 태그를 포함하여 대상에 대한 세부 사항을 지정할 수도 있습니다.
+**[!UICONTROL Audience properties]** 섹션에는 예상 대상자 크기를 포함하여 대상자에 대한 정보가 표시됩니다. 이름, 설명 및 태그를 포함하여 대상에 대한 세부 사항을 지정할 수도 있습니다.
 
 ![Audience Builder 내의 대상에 대해 대상 속성 섹션이 표시됩니다.](../assets/segmentation/audience-builder/audience-properties.png){width="300"}
 
-**[!UICONTROL 자격 있는 계정]**&#x200B;은(는) 대상자의 규칙과 일치하는 실제 계정 수를 나타냅니다. 이 숫자는 세그먼테이션 작업이 실행된 후 24시간마다 업데이트됩니다.
+**[!UICONTROL Qualified accounts]**&#x200B;은(는) 대상자의 규칙과 일치하는 실제 계정 수를 나타냅니다. 이 숫자는 세그먼테이션 작업이 실행된 후 24시간마다 업데이트됩니다.
 
-**[!UICONTROL 예상 계정]**&#x200B;은(는) 샘플 작업의 대략적인 계정 수를 나타냅니다. 새 규칙이나 조건을 추가하고 **[!UICONTROL 예상 새로 고침]**&#x200B;을 선택한 후 이 값을 업데이트할 수 있습니다.
+**[!UICONTROL Estimated accounts]**&#x200B;은(는) 샘플 작업의 대략적인 계정 수를 나타냅니다. 새 규칙이나 조건을 추가하고 **[!UICONTROL Refresh estimate]**&#x200B;을(를) 선택한 후 이 값을 업데이트할 수 있습니다.
 
 ![대상 속성 섹션에 예상 섹션이 표시됩니다.](../assets/segmentation/audience-builder/account-estimates.png){width="300"}
 
-**[!UICONTROL 계정 보기]**&#x200B;를 선택하여 현재 규칙으로 대상자에 적합한 계정 샘플을 볼 수 있습니다.
+**[!UICONTROL View accounts]**&#x200B;을(를) 선택하여 현재 규칙으로 대상자에 적합한 계정 샘플을 볼 수 있습니다.
 
 ![계정 보기 단추가 강조 표시됩니다.](../assets/segmentation/audience-builder/view-accounts.png){width="300"}
 
-**[!UICONTROL 코드 보기]**&#x200B;에서는 대상 규칙에 대한 텍스트 기반 코드 설명을 제공합니다.
+**[!UICONTROL Code view]**&#x200B;은(는) 대상자의 규칙에 대한 텍스트 기반 코드 설명을 제공합니다.
 
 ![계정 대상자의 코드 보기 버전입니다.](../assets/segmentation/audience-builder/code-view.png)
 
-**[!UICONTROL 액세스 레이블 적용]**&#x200B;을 선택하여 대상에 대한 관련 액세스 레이블을 적용할 수 있습니다. 액세스 레이블에 대한 자세한 내용은 [레이블 관리 가이드](../../access-control/abac/ui/labels.md){target="_blank"}에서 확인할 수 있습니다.
+**[!UICONTROL Apply access labels]**&#x200B;을(를) 선택하여 대상에 대한 관련 액세스 레이블을 적용할 수 있습니다. 액세스 레이블에 대한 자세한 내용은 [레이블 관리 가이드](../../access-control/abac/ui/labels.md){target="_blank"}에서 확인할 수 있습니다.
 
 ![액세스 및 데이터 거버넌스 레이블 적용 팝오버가 표시됩니다.](../assets/segmentation/audience-builder/apply-access-labels.png)
 

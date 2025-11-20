@@ -216,7 +216,7 @@ ht-degree: 12%
 
 코드 보기는 API 호출에 사용할 세그먼트 정의의 값을 복사할 수 있도록 하는 단추를 제공합니다. 최신 버전의 세그먼트 정의를 가져오려면 세그먼트 정의에 대한 최신 변경 사항을 저장했는지 확인합니다.
 
-![코드 복사 버튼이 강조 표시되어 &#x200B;](../images/ui/segment-builder/copy-code.png)할 수 있습니다.
+![코드 복사 버튼이 강조 표시되어 ](../images/ui/segment-builder/copy-code.png)할 수 있습니다.
 
 ### 집계 함수
 
@@ -330,7 +330,7 @@ ht-degree: 12%
 >[!NOTE]
 >
 >&quot;After&quot; 시간 제한을 사용할 때 후자의 이벤트는 시간 제한 내에 나열된 시간보다 많이 발생할 수 있습니다. >
->&#x200B;>예를 들어, 페이지 보기 이벤트와 체크아웃 이벤트가 있고, 이 두 이벤트 사이에 &quot;1시간 후&quot; 시간 제한을 두는 경우, 페이지 보기 이벤트 2시간 후에 체크아웃 이벤트가 있는 세그먼트 정의가 유효합니다.
+>예를 들어, 페이지 보기 이벤트와 체크아웃 이벤트가 있고, 이 두 이벤트 사이에 &quot;1시간 후&quot; 시간 제한을 두는 경우, 페이지 보기 이벤트 2시간 후에 체크아웃 이벤트가 있는 세그먼트 정의가 유효합니다.
 >
 >추가로, 이 두 시간 제약들은 서로 협력하여 사용될 수 있다.
 >
@@ -386,7 +386,7 @@ ht-degree: 12%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="예상치 새로 고침"
 >abstract="세그먼트 대상의 예상치를 새로 고쳐 제안된 세그먼트 대상에 적합한 프로필 개수를 미리 볼 수 있습니다. 당일 샘플 데이터의 샘플 크기를 사용하여 대상자 예상치를 생성합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=ko#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"

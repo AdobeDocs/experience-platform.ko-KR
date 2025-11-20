@@ -40,7 +40,7 @@ ht-degree: 60%
 
 ### 비동기 배포
 
-`<script>` 태그에 `async` 특성을 추가하여 모든 라이브러리를 비동기적으로 로드할 수 있습니다. 예:
+`async` 태그에 `<script>` 특성을 추가하여 모든 라이브러리를 비동기적으로 로드할 수 있습니다. 예:
 
 ```markup
 <script src="example.js" async></script>

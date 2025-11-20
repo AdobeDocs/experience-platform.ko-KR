@@ -4,7 +4,7 @@ title: 파일 기반 대상에 대한 파일 서식 옵션 구성
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1191'
 ht-degree: 17%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 17%
 > 
 >이 문서에 설명된 파일 서식 옵션은 현재 CSV 파일에만 사용할 수 있습니다.
 
-내보낸 파일에 대한 다양한 파일 서식 옵션을 구성하는 옵션은 [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) 또는 [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect)와 같은 파일 기반 대상에 연결[&#128279;](/help/destinations/ui/connect-destination.md)할 때 사용할 수 있습니다.
+내보낸 파일에 대한 다양한 파일 서식 옵션을 구성하는 옵션은 [Amazon S3](/help/destinations/ui/connect-destination.md), [Azure Blob](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect) 또는 [SFTP](/help/destinations/catalog/cloud-storage/azure-blob.md#connect)와 같은 파일 기반 대상에 연결[할 때 사용할 수 있습니다.](/help/destinations/catalog/cloud-storage/sftp.md#connect)
 
 Experience Platform UI를 사용하여 내보낸 파일에 대한 다양한 파일 서식 옵션을 구성할 수 있습니다. Experience Platform에서 받은 파일을 최적으로 읽고 해석하기 위해 내보낸 파일의 여러 속성을 사용자 측의 파일 수신 시스템의 요구 사항과 일치하도록 수정할 수 있습니다.
 
@@ -26,7 +26,7 @@ Experience Platform UI를 사용하여 내보낸 파일에 대한 다양한 파�
 
 ## CSV 파일에 대한 파일 형식 지정 구성 {#file-configuration}
 
-파일 서식 옵션을 표시하려면 [대상에 연결](/help/destinations/ui/connect-destination.md) 워크플로우를 시작하십시오. 내보낸 `CSV`개 파일에 사용할 수 있는 파일 형식 설정을 표시하려면 **데이터 형식: 세그먼트** 및 **파일 형식: CSV**&#x200B;을 선택하십시오.
+파일 서식 옵션을 표시하려면 [대상에 연결](/help/destinations/ui/connect-destination.md) 워크플로우를 시작하십시오. 내보낸 **개 파일에 사용할 수 있는 파일 형식 설정을 표시하려면**&#x200B;데이터 형식: 세그먼트&#x200B;**및**&#x200B;파일 형식: CSV`CSV`을 선택하십시오.
 
 >[!IMPORTANT]
 >
@@ -51,15 +51,15 @@ Experience Platform UI를 사용하여 내보낸 파일에 대한 다양한 파�
 * 세미콜론 `(;)`
 * 탭 `(\t)`
 
-#### 예시
+#### 예
 
 UI에서 선택한 각 내용과 함께 내보낸 CSV 파일의 아래 예를 봅니다.
 
-* **[!UICONTROL 콜론`(:)`]**&#x200B;이(가) 선택된 출력 예: `male:John:Doe`
-* **[!UICONTROL 쉼표`(,)`]**&#x200B;이(가) 선택된 출력 예: `male,John,Doe`
-* **[!UICONTROL 파이프`(|)`]**&#x200B;이(가) 선택된 출력 예: `male|John|Doe`
-* **[!UICONTROL 세미콜론`(;)`]**&#x200B;이(가) 선택된 출력 예: `male;John;Doe`
-* **[!UICONTROL 탭`(\t)`]**&#x200B;이(가) 선택된 출력 예: `male \t John \t Doe`
+* **[!UICONTROL Colon `(:)`]**&#x200B;이(가) 선택된 출력 예: `male:John:Doe`
+* **[!UICONTROL Comma `(,)`]**&#x200B;이(가) 선택된 출력 예: `male,John,Doe`
+* **[!UICONTROL Pipe `(|)`]**&#x200B;이(가) 선택된 출력 예: `male|John|Doe`
+* **[!UICONTROL Semicolon `(;)`]**&#x200B;이(가) 선택된 출력 예: `male;John;Doe`
+* **[!UICONTROL Tab `(\t)`]**&#x200B;이(가) 선택된 출력 예: `male \t John \t Doe`
 
 ### 인용 부호 {#quote-character}
 
@@ -72,17 +72,17 @@ UI에서 선택한 각 내용과 함께 내보낸 CSV 파일의 아래 예를 �
 
 사용 가능한 옵션은 다음과 같습니다.
 
-* **[!UICONTROL Null 문자(\0000)]**. 내보낸 CSV 파일에서 큰따옴표를 제거하려면 이 옵션을 사용합니다.
-* **[!UICONTROL 큰따옴표(&quot;)]**. 문자열 값에 구분 기호 또는 큰따옴표가 포함되어 있을 때 이 옵션을 사용합니다. 이 옵션은 내보낸 CSV 파일에 구분 기호 또는 큰따옴표를 유지하는 데 도움이 되므로 어느 값이 어느 필드에 해당하는지 올바르게 식별할 수 있습니다.
+* **[!UICONTROL Null Character (\0000)]** 질문에 답합니다. 내보낸 CSV 파일에서 큰따옴표를 제거하려면 이 옵션을 사용합니다.
+* **[!UICONTROL Double Quotes (")]** 질문에 답합니다. 문자열 값에 구분 기호 또는 큰따옴표가 포함되어 있을 때 이 옵션을 사용합니다. 이 옵션은 내보낸 CSV 파일에 구분 기호 또는 큰따옴표를 유지하는 데 도움이 되므로 어느 값이 어느 필드에 해당하는지 올바르게 식별할 수 있습니다.
 
-#### 예시
+#### 예
 
 입력 값 `Anna,"Doe,John"`을(를) 고려하십시오.
 
 UI에서 선택한 각 내용이 포함된 내보낸 CSV 파일의 콘텐츠 아래 예를 봅니다.
 
-* **[!UICONTROL Null 문자(\0000)]**&#x200B;이(가) 선택된 출력 예: `Anna,Doe,John`
-* **[!UICONTROL 큰따옴표(&quot;)]**&#x200B;이(가) 선택된 출력 예: `Anna,"Doe,John"`
+* **[!UICONTROL Null Character (\0000)]**&#x200B;이(가) 선택된 출력 예: `Anna,Doe,John`
+* **[!UICONTROL Double Quotes (")]**&#x200B;이(가) 선택된 출력 예: `Anna,"Doe,John"`
 
 ### 문자 이스케이프 {#escape-character}
 
@@ -96,12 +96,12 @@ UI에서 선택한 각 내용이 포함된 내보낸 CSV 파일의 콘텐츠 아
 * 백슬래시 `(\)`
 * 작은 따옴표 `(')`
 
-#### 예시
+#### 예
 
 UI에서 선택한 각 내용이 포함된 내보낸 CSV 파일의 콘텐츠 아래 예를 봅니다.
 
-* **[!UICONTROL 백슬래시`(\)`]**&#x200B;이(가) 선택된 출력 예: `"Test,\"John\",LastName"`
-* **[!UICONTROL 작은 따옴표`(')`]**&#x200B;이(가) 선택된 출력 예: `"Test,'"John'",LastName"`
+* **[!UICONTROL Back slash `(\)`]**&#x200B;이(가) 선택된 출력 예: `"Test,\"John\",LastName"`
+* **[!UICONTROL Single quote `(')`]**&#x200B;이(가) 선택된 출력 예: `"Test,'"John'",LastName"`
 
 ### 빈 값 출력 {#empty-value-output}
 
@@ -112,17 +112,17 @@ UI에서 선택한 각 내용이 포함된 내보낸 CSV 파일의 콘텐츠 아
 
 이 컨트롤을 사용하여 빈 값의 문자열 표현을 설정합니다. 이 옵션은 내보낸 CSV 파일에 빈 값이 표시되는 방식을 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
 
-* **[!UICONTROL Null(null)]**
+* **[!UICONTROL Null (null)]**
 * **큰따옴표(&quot;&quot;)의 빈 문자열**
-* **[!UICONTROL 빈 문자열]**
+* **[!UICONTROL Empty string]**
 
-#### 예시
+#### 예
 
 UI에서 선택한 각 내용이 포함된 내보낸 CSV 파일의 콘텐츠 아래 예를 봅니다.
 
 * **[!UICONTROL null]**&#x200B;이(가) 선택된 출력 예: `male,NULL,TestLastName`. 이 경우 Experience Platform은 빈 값을 null 값으로 변환합니다.
 * **&quot;&quot;**&#x200B;이(가) 선택된 출력 예: `male,"",TestLastName`. 이 경우 Experience Platform은 빈 값을 큰따옴표 쌍으로 변환합니다.
-* **[!UICONTROL 빈 문자열]**&#x200B;이 선택된 출력 예: `male,,TestLastName`. 이 경우 Experience Platform은 빈 값을 유지하고 큰따옴표 없이 그대로 내보냅니다.
+* **[!UICONTROL Empty string]**&#x200B;이(가) 선택된 출력 예: `male,,TestLastName`. 이 경우 Experience Platform은 빈 값을 유지하고 큰따옴표 없이 그대로 내보냅니다.
 
 >[!TIP]
 >
@@ -137,17 +137,17 @@ UI에서 선택한 각 내용이 포함된 내보낸 CSV 파일의 콘텐츠 아
 
 내보낸 파일 내에서 null 값의 문자열 표현을 설정하려면 이 컨트롤을 사용합니다. 이 옵션은 내보낸 CSV 파일에 null 값이 표시되는 방식을 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
 
-* **[!UICONTROL Null(null)]**
+* **[!UICONTROL Null (null)]**
 * **큰따옴표(&quot;&quot;)의 빈 문자열**
-* **[!UICONTROL 빈 문자열]**
+* **[!UICONTROL Empty string]**
 
-#### 예시
+#### 예
 
 UI에서 선택한 각 내용이 포함된 내보낸 CSV 파일의 콘텐츠 아래 예를 봅니다.
 
 * **[!UICONTROL null]**&#x200B;이(가) 선택된 출력 예: `male,NULL,TestLastName`. 이 경우 변환은 발생하지 않으며 CSV 파일에 null 값이 포함됩니다.
 * **&quot;&quot;**&#x200B;이(가) 선택된 출력 예: `male,"",TestLastName`. 이 경우 Experience Platform은 빈 문자열 주위에서 null 값을 큰따옴표로 바꿉니다.
-* **[!UICONTROL 빈 문자열]**&#x200B;이 선택된 출력 예: `male,,TestLastName`. 이 경우 Experience Platform은 null 값을 큰따옴표 없이 빈 문자열로 바꿉니다.
+* **[!UICONTROL Empty string]**&#x200B;이(가) 선택된 출력 예: `male,,TestLastName`. 이 경우 Experience Platform은 null 값을 큰따옴표 없이 빈 문자열로 바꿉니다.
 
 ### 압축 포맷 {#compression-format}
 

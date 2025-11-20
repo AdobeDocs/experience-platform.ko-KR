@@ -6,7 +6,7 @@ description: 이 문서에서는 Adobe Experience Platform 내의 익명 프로�
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1260'
 ht-degree: 7%
 
 ---
@@ -49,15 +49,15 @@ Adobe Experience Platform에서는 익명 프로필에 대한 데이터 만료 �
 >
 >Experience Platform의 권한에 대한 자세한 내용은 [액세스 제어 개요](../access-control/home.md#permissions)를 참조하십시오.
 
-조직에 익명 프로필 데이터 만료를 추가하려면 프로필 대시보드로 이동하여 **[!UICONTROL 설정]**&#x200B;을 선택하세요.
+조직에 익명 프로필 데이터 만료를 추가하려면 프로필 대시보드로 이동하여 **[!UICONTROL Settings]**&#x200B;을(를) 선택하십시오.
 
 ![프로필 대시보드의 설정 단추가 강조 표시됩니다.](./images/pseudonymous-profiles/profile-settings.png)
 
-[!UICONTROL 프로필 설정] 팝오버가 나타납니다. 이 팝오버에서는 익명 프로필 데이터 만료 기간(일)과 데이터 만료에 사용되는 ID 네임스페이스를 설정할 수 있습니다.
+[!UICONTROL Profile settings] 팝오버가 나타납니다. 이 팝오버에서는 익명 프로필 데이터 만료 기간(일)과 데이터 만료에 사용되는 ID 네임스페이스를 설정할 수 있습니다.
 
 프로덕션 샌드박스의 경우 기본 익명 프로필 데이터 만료는 14일이며 최소는 1일이고 최대는 365일입니다. 개발 샌드박스의 경우 기본 익명 프로필 데이터 만료는 3일이며 최소는 1일이고 최대는 365일입니다.
 
-**[!UICONTROL 적용]**&#x200B;을 선택하여 데이터 만료 설정을 저장합니다.
+**[!UICONTROL Apply]**&#x200B;을(를) 선택하여 데이터 만료 설정을 저장합니다.
 
 ![조직 프로필에 익명 프로필 데이터 만료 추가를 위한 팝오버입니다. 적용 단추가 강조 표시됩니다.](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
 
@@ -71,7 +71,7 @@ Adobe Experience Platform에서는 익명 프로필에 대한 데이터 만료 �
 
 익명 프로필 데이터 만료와 경험 이벤트 데이터 만료는 상호 보완적인 기능입니다.
 
-#### 세부 기간
+#### 세부기간
 
 익명 프로필 데이터 만료는 **샌드박스** 수준에서 작동합니다. 따라서 데이터 만료는 샌드박스의 모든 프로필에 영향을 줍니다.
 

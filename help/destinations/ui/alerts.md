@@ -5,14 +5,14 @@ title: 컨텍스트 내 대상 경고 구독
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 8%
+source-wordcount: '935'
+ht-degree: 14%
 
 ---
 
 # 컨텍스트 내 대상 경고 구독
 
-Adobe Experience Platform을 사용하면 Adobe Experience Platform 활동과 관련된 이벤트 기반 경고를 구독할 수 있습니다. 경고는 작업이 완료되었는지, 워크플로우 내의 특정 마일스톤에 도달했는지 또는 오류가 발생했는지 확인하기 위해 [[!DNL Observability Insights] API](../../observability/api/overview.md)를 폴링하지 않아도 됩니다.
+Adobe Experience Platform을 통해 Adobe Experience Platform 활동에 관한 이벤트 기반 알림을 구독할 수 있습니다. 알림은 작업이 완료되었는지, 워크플로 내에서 특정 마일스톤에 도달했는지 또는 오류가 발생했는지 확인하기 위해 [[!DNL Observability Insights] API](../../observability/api/overview.md)를 폴링할 필요성을 줄이거나 제거합니다.
 
 데이터 흐름을 만들 때 경고를 구독하여 흐름 실행의 상태, 성공 또는 실패와 관련된 경고 메시지를 받을 수 있습니다.
 
@@ -38,11 +38,11 @@ Adobe Experience Platform을 사용하면 Adobe Experience Platform 활동과 �
 >
 >데이터 흐름에 대한 이메일 기반 경고 알림을 수신하려면 Experience Platform 계정에 대해 이메일 인스턴트 알림을 활성화해야 합니다.
 
-[!UICONTROL 대상 연결] 워크플로의 [새 대상 구성](connect-destination.md) 단계 동안 데이터 흐름에 대한 경고를 사용하도록 설정할 수 있습니다.
+[!UICONTROL Configure new destination]대상 연결[ 워크플로의 ](connect-destination.md) 단계 동안 데이터 흐름에 대한 경고를 사용하도록 설정할 수 있습니다.
 
 대상 경고 섹션을 표시하는 ![UI 이미지입니다.](../assets/ui/alerts/destination-alerts.png)
 
-구독할 경고를 선택한 다음 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 데이터 흐름을 검토하고 완료합니다.
+구독할 경고를 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택하여 데이터 흐름을 검토하고 완료합니다.
 
 대상 데이터 흐름에 사용할 수 있는 경고는 아래 표에 설명되어 있습니다.
 
@@ -79,11 +79,11 @@ Adobe Experience Platform을 사용하면 Adobe Experience Platform 활동과 �
 
 알림을 선택하는 방법을 보여 주는 ![UI 이미지](../assets/ui/alerts/select-alert-message.png)
 
-[!UICONTROL 데이터 흐름 실행 세부 정보] 페이지가 나타납니다. 화면 상단에는 속성, 해당 데이터 흐름 실행 ID 및 높은 수준의 오류 요약에 대한 정보를 포함하여 데이터 흐름에 대한 개요가 표시됩니다.
+[!UICONTROL Dataflow run details] 페이지가 나타납니다. 화면 상단에는 속성, 해당 데이터 흐름 실행 ID 및 높은 수준의 오류 요약에 대한 정보를 포함하여 데이터 흐름에 대한 개요가 표시됩니다.
 
 ![데이터 흐름 실행 세부 정보 페이지를 표시하는 UI 이미지입니다.](../assets/ui/alerts/dataflow-overview.png)
 
-페이지 아래쪽에 데이터 흐름 실행 단계에서 발생한 [!UICONTROL 데이터 흐름 실행 오류]가 표시됩니다. 여기에서 오류 진단을 미리 보거나 [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/)를 사용하여 오류 진단 또는 데이터 흐름에 해당하는 파일 매니페스트를 다운로드할 수 있습니다.
+페이지 아래쪽에 데이터 흐름 실행 단계에서 발생한 [!UICONTROL Dataflow run errors]이(가) 표시됩니다. 여기에서 오류 진단을 미리 보거나 [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/)를 사용하여 오류 진단 또는 데이터 흐름에 해당하는 파일 매니페스트를 다운로드할 수 있습니다.
 
 ![오류 섹션에 강조 표시된 데이터 흐름 실행 세부 정보 페이지를 표시하는 UI 이미지입니다.](../assets/ui/alerts/dataflow-run-error.png)
 
@@ -95,21 +95,21 @@ Adobe Experience Platform을 사용하면 Adobe Experience Platform 활동과 �
 
 경고 전자 메일의 ![스크린샷](../assets/ui/alerts/email.png)
 
-UI 경고와 마찬가지로 [!UICONTROL 데이터 흐름 실행 개요] 페이지가 표시되어 데이터 흐름과 관련된 모든 오류를 조사할 수 있는 인터페이스를 제공합니다.
+UI 경고와 마찬가지로 [!UICONTROL Dataflow run overview] 페이지가 나타나며 데이터 흐름과 관련된 오류를 조사할 수 있는 인터페이스를 제공합니다.
 
 ![데이터 흐름 개요](../assets/ui/alerts/dataflow-overview.png)
 
 ## 경고 구독 및 구독 취소 {#subscribe-and-unsubscribe}
 
-대상 [!UICONTROL 찾아보기] 페이지에서 기존 대상 데이터 흐름에 대해 더 많은 경고를 구독하거나 설정된 경고에서 구독을 취소할 수 있습니다.
+대상 [!UICONTROL Browse] 페이지에서 기존 대상 데이터 흐름에 대해 더 많은 경고를 구독하거나 설정된 경고에서 구독을 취소할 수 있습니다.
 
 ![대상 찾아보기 페이지를 표시하는 UI 이미지](../assets/ui/alerts/destination-list.png)
 
-알림을 받을 대상 연결을 찾은 다음 타원(`...`)을 선택하여 옵션의 드롭다운 메뉴를 확인합니다. 다음으로 **[!UICONTROL 경고 구독]**&#x200B;을 선택하여 대상 데이터 흐름의 경고 설정을 수정합니다.
+알림을 받을 대상 연결을 찾은 다음 타원(`...`)을 선택하여 옵션의 드롭다운 메뉴를 확인합니다. **[!UICONTROL Subscribe to alerts]**&#x200B;을(를) 선택하여 대상 데이터 흐름의 경고 설정을 수정합니다.
 
 대상 옵션을 표시하는 ![UI 이미지](../assets/ui/alerts/destination-alerts-subscribe.png)
 
-대상 경고 목록을 제공하는 팝업 창이 나타납니다. 가입하려는 경고를 선택하거나 가입을 해지하려는 경고를 선택 취소합니다. 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+대상 경고 목록을 제공하는 팝업 창이 나타납니다. 가입하려는 경고를 선택하거나 가입을 해지하려는 경고를 선택 취소합니다. 완료되면 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
 ![대상 알림 구독 페이지를 표시하는 UI 이미지](../assets/ui/alerts/destination-alerts-list.png)
 
