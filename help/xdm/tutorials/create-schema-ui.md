@@ -409,11 +409,11 @@ ML 알고리즘을 사용하여 업로드된 파일을 기반으로 스키마 �
 
 다음 비디오는 [!DNL Experience Platform] UI에서 간단한 스키마를 만드는 방법을 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430221?captions=kor&quality=12&learn=on)
 
 다음 비디오는 현장 그룹 및 수업에 대한 이해를 강화하기 위한 것입니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413604?captions=kor&quality=12&learn=on)
 
 ## 부록
 

@@ -53,7 +53,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Sandboxes]**&#x200B;
 
 Experience Platform에서 샌드박스를 사용하는 방법에 대한 빠른 개요를 알려면 다음 비디오를 사용하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430298/?captions=kor&quality=12&learn=on)
 
 새 샌드박스를 만들려면 화면 오른쪽 상단에서 **[!UICONTROL Create sandbox]**&#x200B;을(를) 선택합니다.
 

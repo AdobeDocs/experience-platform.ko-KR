@@ -175,7 +175,7 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 
 다음 비디오에서는 용량에 대한 개요를 제공합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475280/?captions=kor&learn=on&enablevpops)
 
 ## 자주 묻는 질문 {#faq}
 
