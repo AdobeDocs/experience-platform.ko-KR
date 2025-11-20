@@ -102,7 +102,7 @@ Audience Portal 내에서 다음 작업을 수행할 수 있습니다.
 | ----- | ----------- |
 | [!UICONTROL Name] | 대상자의 이름입니다. |
 | [!UICONTROL Profile count] | 대상자 자격이 있는 총 프로필 수입니다. |
-| [!UICONTROL Origin] | 대상자의 기원입니다. 이것은 대상자 출신의 위치를 나타냅니다. 가능한 값에는 세그멘테이션 서비스[, 사용자 지정 업로드](#segment-builder), [대상 구성](#import-audience), [Audience Manager](#audience-composition), [Look 유사 대상자](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [페더레이션 대상 구성](../types/lookalike-audiences.md), [Customer Journey Analytics](#fac), [데이터 Distiller](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [AJO B2B](#data-distiller) 및 [실시간 CDP 협업](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview)이 포함됩니다[&#128279;](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origin] | 대상자의 기원입니다. 이것은 대상자 출신의 위치를 나타냅니다. 가능한 값에는 세그멘테이션 서비스[, 사용자 지정 업로드](#segment-builder), [대상 구성](#import-audience), [Audience Manager](#audience-composition), [Look 유사 대상자](https://experienceleague.adobe.com/ko/docs/audience-manager/user-guide/aam-home), [페더레이션 대상 구성](../types/lookalike-audiences.md), [Customer Journey Analytics](#fac), [데이터 Distiller](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/cja-overview/cja-overview), [AJO B2B](#data-distiller) 및 [실시간 CDP 협업](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview)이 포함됩니다[&#128279;](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL Lifecycle status] | 대상자 상태입니다. 이 필드에 `Draft`사용할 수 있는 값은 , `Inactive`, 및 `Published`입니다. 다양한 상태의 의미와 대상을 다른 라이프사이클 상태로 이동하는 방법을 포함하여 라이프사이클 상태에 대한 자세한 내용은 세그멘테이션 FAQ[의 라이프사이클 상태 섹션을 참조하십시오](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | 대상자의 데이터가 업데이트되는 빈도를 나타내는 값입니다. 이 필드에 사용할 수 있는 값은 [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] 및 [!UICONTROL Not Scheduled]입니다. |
 | [!UICONTROL Last updated by] | 대상자를 마지막으로 업데이트한 사람의 이름입니다. |
@@ -138,7 +138,7 @@ Audience Portal 내에서 다음 작업을 수행할 수 있습니다.
 
 ![검색 창이 강조 표시되어 있습니다.](../images/ui/audience-portal/browse-audience-search.png)
 
-지원되는 기능을 포함하여 [!DNL Unified Search]에 대한 자세한 내용은 [통합 검색 설명서](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html)를 참조하십시오.
+지원되는 기능을 포함하여 [!DNL Unified Search]에 대한 자세한 내용은 [통합 검색 설명서](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html?lang=ko)를 참조하십시오.
 
 #### 태그 {#tags}
 
@@ -203,7 +203,7 @@ Audience Portal 내에서 다음 작업을 수행할 수 있습니다.
 
 | 필터 | 설명 |
 | ------ | ----------- |
-| [!UICONTROL Origin] | 대상자 원점을 기준으로 필터링할 수 있습니다. 가능한 값에는 세그멘테이션 서비스[, 사용자 지정 업로드](#segment-builder), [대상 구성](#import-audience), [Audience Manager](#audience-composition), [Look 유사 대상자](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [페더레이션 대상 구성](../types/lookalike-audiences.md), [Customer Journey Analytics](#fac), [데이터 Distiller](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [AJO B2B](#data-distiller) 및 [실시간 CDP 협업](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview)이 포함됩니다[&#128279;](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origin] | 대상자 원점을 기준으로 필터링할 수 있습니다. 가능한 값에는 세그멘테이션 서비스[, 사용자 지정 업로드](#segment-builder), [대상 구성](#import-audience), [Audience Manager](#audience-composition), [Look 유사 대상자](https://experienceleague.adobe.com/ko/docs/audience-manager/user-guide/aam-home), [페더레이션 대상 구성](../types/lookalike-audiences.md), [Customer Journey Analytics](#fac), [데이터 Distiller](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/cja-overview/cja-overview), [AJO B2B](#data-distiller) 및 [실시간 CDP 협업](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview)이 포함됩니다[&#128279;](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL Has any tag] | 태그별로 필터링할 수 있습니다. 와 **[!UICONTROL Has any tag]**. 중에서 선택할 **[!UICONTROL Has all tags]** 수 있습니다. **[!UICONTROL Has any tag]**&#x200B;을(를) 선택하면 필터링된 대상에 추가한 태그 중 **임의**&#x200B;개가 포함됩니다. **[!UICONTROL Has all tags]**&#x200B;을(를) 선택한 경우 필터링된 대상자에는 추가한 태그 중 **모두**&#x200B;개가 포함되어야 합니다. |
 | [!UICONTROL Lifecycle status] | 대상자의 라이프사이클 상태에 따라 필터링할 수 있습니다. 사용 가능한 옵션은 [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive] 및 [!UICONTROL Published]입니다. |
 | [!UICONTROL Update frequency] | 대상자의 업데이트 빈도(평가 방법)를 기준으로 필터링할 수 있습니다. 사용 가능한 옵션은 [!UICONTROL Batch], [!UICONTROL Streaming] 및 [!UICONTROL Edge]입니다. |

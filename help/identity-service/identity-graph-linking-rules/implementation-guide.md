@@ -94,7 +94,7 @@ Adobe Experience Platform Identity Service를 사용하여 데이터를 구현�
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/",
+          "URL": "https://business.adobe.com/kr/",
           "name": "Adobe Business"
       }
   }
@@ -133,7 +133,7 @@ Adobe Experience Platform Identity Service를 사용하여 데이터를 구현�
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/",
+          "URL": "https://business.adobe.com/kr/",
           "name": "Adobe Business"
       }
   }
@@ -169,7 +169,7 @@ Adobe Experience Platform Identity Service를 사용하여 데이터를 구현�
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/",
+            "URL": "https://business.adobe.com/kr/",
             "name": "Adobe Business"
         }
     }

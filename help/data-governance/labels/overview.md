@@ -44,7 +44,7 @@ Experience Platform에서 자동 적용이 작동하는 방법에 대한 자세�
 
 [!DNL Experience Platform]은(는) Adobe Audience Manager과 세그먼트를 공유할 수 있습니다. Audience Manager 세그먼트에 적용된 모든 데이터 내보내기 컨트롤은 [!DNL Experience Platform] 데이터 거버넌스에서 인식하는 동등한 레이블 및 마케팅 작업으로 변환됩니다.
 
-특정 데이터 내보내기 컨트롤이 [!DNL Experience Platform]의 데이터 사용 레이블에 매핑되는 방법에 대한 참조는 [Audience Manager 설명서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)를 참조하십시오.
+특정 데이터 내보내기 컨트롤이 [!DNL Experience Platform]의 데이터 사용 레이블에 매핑되는 방법에 대한 참조는 [Audience Manager 설명서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ko#aam-data-export-control-in-aep)를 참조하십시오.
 
 ## [!DNL Experience Platform]에서 데이터 사용 레이블 관리 {#manage-labels}
 
