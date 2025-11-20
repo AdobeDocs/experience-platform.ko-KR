@@ -159,7 +159,7 @@ ML 알고리즘을 사용하여 업로드된 파일을 기반으로 스키마 �
 그러나 사용 사례를 달성하기 위해 표준 필드 그룹에서 다루지 않는 추가 사용자 정의 필드를 포함하려는 시나리오가 있을 수 있습니다. 사용자 정의 충성도 필드를 추가하는 경우 두 가지 옵션이 있습니다.
 
 1. 이러한 필드를 캡처할 새 사용자 정의 필드 그룹을 만듭니다. 이 방법은 이 자습서에서 다룹니다.
-1. 표준 [!UICONTROL Loyalty Details] 필드 그룹을 사용자 지정 필드로 확장합니다. 이로 인해 [!UICONTROL Loyalty Details]이(가) 사용자 지정 필드 그룹으로 변환되며, 원래 표준 필드 그룹은 더 이상 사용할 수 없습니다. [!UICONTROL Schemas]표준 필드 그룹의 구조에 사용자 지정 필드를 추가[하는 방법에 대한 자세한 내용은 ](../ui/resources/schemas.md#custom-fields-for-standard-groups) UI 가이드를 참조하십시오.
+1. 표준 [!UICONTROL Loyalty Details] 필드 그룹을 사용자 지정 필드로 확장합니다. 이로 인해 [!UICONTROL Loyalty Details]이(가) 사용자 지정 필드 그룹으로 변환되며, 원래 표준 필드 그룹은 더 이상 사용할 수 없습니다. [!UICONTROL Schemas]표준 필드 그룹의 구조에 사용자 지정 필드를 추가[하는 방법에 대한 자세한 내용은 &#x200B;](../ui/resources/schemas.md#custom-fields-for-standard-groups) UI 가이드를 참조하십시오.
 
 새 필드 그룹을 만들려면 이전과 같이 **[!UICONTROL Add]** 하위 섹션에서 **[!UICONTROL Field groups]**&#x200B;을(를) 선택하십시오. 하지만 이번에는 표시되는 대화 상자의 위쪽에 있는 **[!UICONTROL Create New Field group]**&#x200B;을(를) 선택하십시오. 그런 다음 새 필드 그룹의 표시 이름과 설명을 입력하라는 메시지가 표시됩니다. 이 자습서의 경우 새 필드 그룹 이름을 &quot;[!DNL Custom Loyalty Details]&quot;로 지정한 다음 **[!UICONTROL Add field groups]**&#x200B;을(를) 선택하십시오.
 
@@ -312,7 +312,7 @@ ML 알고리즘을 사용하여 업로드된 파일을 기반으로 스키마 �
 >
 >아래 설명된 단계는 기존 스키마 필드에 ID 설명자를 추가하는 방법을 다룹니다. 스키마 자체의 구조 내에서 ID 필드를 정의하는 대신 `identityMap` 필드를 사용하여 ID 정보를 대신 포함할 수도 있습니다.
 >
->`identityMap`을(를) 사용할 계획이라면 스키마에 직접 추가하는 기본 ID를 재정의합니다. 자세한 내용은 스키마 구성 가이드의 `identityMap`기본 사항[에서 ](../schema/composition.md#identityMap)의 섹션을 참조하십시오.
+>`identityMap`을(를) 사용할 계획이라면 스키마에 직접 추가하는 기본 ID를 재정의합니다. 자세한 내용은 스키마 구성 가이드의 `identityMap`기본 사항[에서 &#x200B;](../schema/composition.md#identityMap)의 섹션을 참조하십시오.
 
 캔버스에서 `personalEmail.address` 필드를 선택하면 **[!UICONTROL Identity]** 확인란이 **[!UICONTROL Field properties]** 아래에 나타납니다. 상자를 선택하면 **[!UICONTROL Primary identity]**(으)로 설정하는 옵션이 나타납니다. 이 상자도 선택하십시오.
 

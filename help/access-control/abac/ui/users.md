@@ -20,17 +20,17 @@ ht-degree: 11%
 
 사용자 세부 정보 및 할당된 역할을 보려면 **[!UICONTROL Users]** 탭을 선택하십시오.
 
-![ 탭이 강조 표시된 [!UICONTROL Users]사용자 페이지가 표시됩니다.](../../images/flac-ui/flac-users-tab.png)
+![&#x200B; 탭이 강조 표시된 [!UICONTROL Users]사용자 페이지가 표시됩니다.](../../images/flac-ui/flac-users-tab.png)
 
 사용자 목록이 나타납니다. 목록에서 보려는 사용자를 선택합니다. 또는 검색 창을 사용하여 이름이나 이메일 주소를 입력하여 사용자를 검색합니다.
 
 세부 정보 탭에서는 사용자에 대한 개요를 제공합니다. 개요에는 사용자 이름, 계정 유형, 이메일, 인증 ID, 연락처 정보 및 위치 세부 정보가 표시됩니다.
 
-![ 탭과 사용자 프로필이 강조 표시된 [!UICONTROL Details]사용자 세부 정보 페이지입니다.](../../images/flac-ui/flac-users-details.png)
+![&#x200B; 탭과 사용자 프로필이 강조 표시된 [!UICONTROL Details]사용자 세부 정보 페이지입니다.](../../images/flac-ui/flac-users-details.png)
 
 사용자가 할당된 역할을 보려면 **[!UICONTROL Roles]** 탭을 선택하십시오.
 
-![ 탭과 역할이 강조 표시된 [!UICONTROL Roles]역할 페이지가 표시됩니다.](../../images/flac-ui/flac-users-roles.png)
+![&#x200B; 탭과 역할이 강조 표시된 [!UICONTROL Roles]역할 페이지가 표시됩니다.](../../images/flac-ui/flac-users-roles.png)
 
 ## Experience Platform 권한을 사용하여 개발자 및 API 액세스 제어
 

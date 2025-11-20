@@ -112,7 +112,7 @@ Experience Platform 내의 모든 조직에서 사용할 수 있도록 다음 �
 | 휴대폰 (SHA256) | SHA256을 사용하여 해시해야 하는 전화 번호를 나타내는 네임스페이스입니다. 기호, 문자 및 앞에 오는 0을 제거해야 합니다. 국가 호출 코드도 접두사로 추가해야 합니다. |
 | 전화(SHA256_E.164) | SHA256과 E.164 포맷을 모두 사용하여 해시해야 하는 원시 전화번호를 나타내는 네임스페이스입니다. |
 | TNTID | Adobe Target을 나타내는 네임스페이스입니다. 자세한 내용은 [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html)에 대한 다음 문서를 참조하십시오. |
-| 윈도우 에이드 | Windows Advertising ID를 나타내는 네임스페이스입니다. 자세한 내용은 Windows Advertising ID[에 대한 ](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041)다음 문서를 참조하십시오. |
+| 윈도우 에이드 | Windows Advertising ID를 나타내는 네임스페이스입니다. 자세한 내용은 Windows Advertising ID[에 대한 &#x200B;](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041)다음 문서를 참조하십시오. |
 
 ### ID 네임스페이스 보기 {#view-identity-namespaces}
 

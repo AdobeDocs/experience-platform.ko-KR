@@ -17,7 +17,7 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 
 ## 시작
 
-B2B [ 대시보드에 액세스하려면 ](../../rtcdp/b2b-overview.md)Adobe Real-Time Customer Data Platform B2B edition[!UICONTROL Account Profiles]에 대한 권한이 있어야 합니다.
+B2B [&#x200B; 대시보드에 액세스하려면 &#x200B;](../../rtcdp/b2b-overview.md)Adobe Real-Time Customer Data Platform B2B edition[!UICONTROL Account Profiles]에 대한 권한이 있어야 합니다.
 
 ## 계정 프로필 데이터 {#data}
 

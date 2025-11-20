@@ -69,7 +69,7 @@ Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL Sources]**&#x
 
 소스가 인증되면 프로젝트 ID와 시간대를 제공한 다음 **[!UICONTROL Select]**&#x200B;을(를) 선택하십시오.
 
-[!DNL Mixpanel] 데이터를 Experience Platform으로 수집하기 전에 지정한 시간대는 [!DNL Mixpanel] 프로필 시간대 설정과 같아야 합니다. 데이터의 시간대에 대한 모든 변경 사항은 새 이벤트에만 적용되고 이전 이벤트는 이전에 지정한 시간대에 유지됩니다. [!DNL Mixpanel]은(는) 일광 절약 시간제를 수용하며 수집 타임스탬프를 적절하게 조정합니다. 시간대가 데이터에 미치는 영향에 대한 자세한 내용은 [!DNL Mixpanel]프로젝트에 대한 시간대 관리[에 대한 ](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel) 가이드를 참조하십시오.
+[!DNL Mixpanel] 데이터를 Experience Platform으로 수집하기 전에 지정한 시간대는 [!DNL Mixpanel] 프로필 시간대 설정과 같아야 합니다. 데이터의 시간대에 대한 모든 변경 사항은 새 이벤트에만 적용되고 이전 이벤트는 이전에 지정한 시간대에 유지됩니다. [!DNL Mixpanel]은(는) 일광 절약 시간제를 수용하며 수집 타임스탬프를 적절하게 조정합니다. 시간대가 데이터에 미치는 영향에 대한 자세한 내용은 [!DNL Mixpanel]프로젝트에 대한 시간대 관리[에 대한 &#x200B;](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel) 가이드를 참조하십시오.
 
 잠시 후 올바른 인터페이스가 미리보기 패널로 업데이트되어 데이터 흐름을 생성하기 전에 스키마를 검사할 수 있습니다. 완료되면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 

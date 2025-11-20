@@ -21,7 +21,7 @@ ht-degree: 7%
 
 HTTP API 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 [!DNL Adobe Experience Platform] 스트리밍 대상입니다.
 
-프로필 데이터를 HTTP 끝점으로 보내려면 먼저 [에서 ](#connect-destination)대상에 연결[!DNL Adobe Experience Platform]해야 합니다.
+프로필 데이터를 HTTP 끝점으로 보내려면 먼저 [에서 &#x200B;](#connect-destination)대상에 연결[!DNL Adobe Experience Platform]해야 합니다.
 
 ## 사용 사례 {#use-cases}
 
@@ -88,7 +88,7 @@ HTTP API 대상은 HTTP 끝점에 대한 여러 인증 유형을 지원합니다
 
 * 인증이 없는 HTTP 끝점;
 * 전달자 토큰 인증;
-* 아래 예와 같이 HTTP 요청의 본문에 [, ](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 및 [!DNL client ID]이(가) 있는 본문 형식의 [!DNL client secret]OAuth 2.0 클라이언트 자격 증명[!DNL grant type] 인증.
+* 아래 예와 같이 HTTP 요청의 본문에 [, &#x200B;](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 및 [!DNL client ID]이(가) 있는 본문 형식의 [!DNL client secret]OAuth 2.0 클라이언트 자격 증명[!DNL grant type] 인증.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -98,7 +98,7 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-* URL로 인코딩된 [ 및 ](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)이(가) 포함된 권한 부여 헤더가 있는 기본 권한 부여가 있는 [!DNL client ID]OAuth 2.0 클라이언트 자격 증명[!DNL client secret].
+* URL로 인코딩된 [&#x200B; 및 &#x200B;](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)이(가) 포함된 권한 부여 헤더가 있는 기본 권한 부여가 있는 [!DNL client ID]OAuth 2.0 클라이언트 자격 증명[!DNL client secret].
 
 ```shell
 curl --location --request POST 'https://some-api.com/token' \

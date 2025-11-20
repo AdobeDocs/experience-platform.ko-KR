@@ -83,7 +83,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->저장되면 [!UICONTROL Type] 사이드바의 [!UICONTROL  Schema properties] 필드가 [!UICONTROL Relational] 스키마임을 나타냅니다. 스키마 인벤토리 보기의 세부 정보 사이드바에도 표시됩니다.
+>저장되면 [!UICONTROL Type] 사이드바의 [!UICONTROL &#x200B; Schema properties] 필드가 [!UICONTROL Relational] 스키마임을 나타냅니다. 스키마 인벤토리 보기의 세부 정보 사이드바에도 표시됩니다.
 >![관계형 형식이 강조 표시된 빈 관계형 스키마 구조를 보여 주는 스키마 편집기 캔버스.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### DDL 파일 업로드 {#upload-ddl-file}

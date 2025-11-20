@@ -204,7 +204,7 @@ XDM 스키마에 대한 자세한 내용은 [스키마 개요](../../xdm/home.md
 
 #### 에지 세분화
 
-특정 이벤트에서는 `identityMap`XDM 필드[(으)로 전송된 ID가 무시되고 세그먼트 멤버십 메타데이터 저장소에 사용되지 않으므로 개인 엔터티를 나타내는 모든 네임스페이스가 ](../../xdm/ui/fields/identity.md)에 포함되어 있는지 확인하십시오.
+특정 이벤트에서는 `identityMap`XDM 필드[(으)로 전송된 ID가 무시되고 세그먼트 멤버십 메타데이터 저장소에 사용되지 않으므로 개인 엔터티를 나타내는 모든 네임스페이스가 &#x200B;](../../xdm/ui/fields/identity.md)에 포함되어 있는지 확인하십시오.
 
 * **이벤트 적용 가능성**: 이 동작은 Edge Network(예: WebSDK 및 Mobile SDK)로 직접 전송된 이벤트에만 적용됩니다. HTTP API 소스, 기타 스트리밍 소스 및 일괄 처리 소스와 함께 수집된 이벤트와 같이 [Experience Platform 허브](../../landing/edge-and-hub-comparison.md)에서 수집된 이벤트에는 이 제한이 적용되지 않습니다.
 * **Edge 세그멘테이션 특성**: 이 동작은 가장자리 세그멘테이션에만 적용됩니다. 배치 및 스트리밍 세분화는 허브에서 평가되는 별도의 서비스이며 동일한 프로세스를 따르지 않습니다. 자세한 내용은 [Edge 세그멘테이션 안내서](../../segmentation/methods/edge-segmentation.md)를 참조하십시오.

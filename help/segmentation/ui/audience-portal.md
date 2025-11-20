@@ -63,13 +63,13 @@ Audience Portal 내에서 다음 작업을 수행할 수 있습니다.
 | [!UICONTROL Open composition] | 대상자 컴포지션 | 대상을 볼 수 있는 대상 구성을 엽니다. 대상 구성에 대한 자세한 내용은 [대상 구성 UI 안내서](./audience-composition.md)를 참조하십시오. |
 | [!UICONTROL Activate to destination] | Segmentation Service | 대상을 대상으로 활성화합니다. 대상을 대상으로 활성화하는 방법에 대한 자세한 내용은 [활성화 개요](../../destinations/ui/activation-overview.md)를 참조하십시오. |
 | [!UICONTROL Share with partners] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 대상자를 다른 Experience Platform 사용자와 공유합니다. 이 기능에 대한 자세한 내용은 [세그먼트 일치 개요](./segment-match/overview.md)를 참조하십시오. |
-| [!UICONTROL Manage tags] | 대상 구성, 사용자 지정 업로드, 세그멘테이션 서비스 | 대상자에 속하는 사용자 정의 태그를 관리합니다. 이 기능에 대한 자세한 내용은 필터링 및 태그 지정[ 섹션을 ](#manage-audiences)참조하십시오. |
-| [!UICONTROL Move to folder] | 대상 구성, 사용자 지정 업로드, 세그멘테이션 서비스 | 대상자 어느 폴더에 속하는지 관리합니다. 이 기능에 대한 자세한 내용은 필터링 및 태그 지정[ 섹션을 ](#manage-audiences)참조하십시오. |
+| [!UICONTROL Manage tags] | 대상 구성, 사용자 지정 업로드, 세그멘테이션 서비스 | 대상자에 속하는 사용자 정의 태그를 관리합니다. 이 기능에 대한 자세한 내용은 필터링 및 태그 지정[&#x200B; 섹션을 &#x200B;](#manage-audiences)참조하십시오. |
+| [!UICONTROL Move to folder] | 대상 구성, 사용자 지정 업로드, 세그멘테이션 서비스 | 대상자 어느 폴더에 속하는지 관리합니다. 이 기능에 대한 자세한 내용은 필터링 및 태그 지정[&#x200B; 섹션을 &#x200B;](#manage-audiences)참조하십시오. |
 | [!UICONTROL Copy] | Segmentation Service | 선택한 대상자를 복제합니다. 이 함수에 대한 자세한 내용은 [세그먼테이션 FAQ](../faq.md#copy)에서 확인할 수 있습니다. |
 | [!UICONTROL Apply access labels] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 대상에 속하는 액세스 레이블을 관리합니다. 액세스 레이블에 대한 자세한 내용은 [레이블 관리](../../access-control/abac/ui/labels.md)에 대한 설명서를 참조하십시오. |
 | [!UICONTROL Publish] | 사용자 정의 업로드, 세분화 서비스 | 선택한 대상자를 게시합니다. 라이프사이클 상태 관리에 대한 자세한 내용은 세그멘테이션 FAQ[의 라이프사이클 상태 섹션을 참조하십시오](../faq.md#lifecycle-states). |
-| [!UICONTROL Deactivate] | 사용자 정의 업로드, 세분화 서비스 | 선택한 대상자를 비활성화합니다. 대상을 비활성화하려면 **은(는)** any **대상(Experience Platform이 아닌 대상 포함)에서 활성화하거나** any **다른 대상에 속할 수**&#x200B;없습니다. 라이프사이클 상태 관리에 대한 자세한 내용은 세분화 FAQ[의 ](../faq.md#lifecycle-states)라이프사이클 상태 섹션을 참조하십시오. |
-| [!UICONTROL Delete] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 선택한 대상자 삭제 다운스트림 대상에 사용되거나 다른 대상 **에 종속된 Audiences 변수는 삭제할 수 없습니다** . 대상자 삭제에 대한 자세한 내용은 세분화 FAQ[를 ](../faq.md#lifecycle-states)참조하십시오. |
+| [!UICONTROL Deactivate] | 사용자 정의 업로드, 세분화 서비스 | 선택한 대상자를 비활성화합니다. 대상을 비활성화하려면 **은(는)** any **대상(Experience Platform이 아닌 대상 포함)에서 활성화하거나** any **다른 대상에 속할 수**&#x200B;없습니다. 라이프사이클 상태 관리에 대한 자세한 내용은 세분화 FAQ[의 &#x200B;](../faq.md#lifecycle-states)라이프사이클 상태 섹션을 참조하십시오. |
+| [!UICONTROL Delete] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 선택한 대상자 삭제 다운스트림 대상에 사용되거나 다른 대상 **에 종속된 Audiences 변수는 삭제할 수 없습니다** . 대상자 삭제에 대한 자세한 내용은 세분화 FAQ[를 &#x200B;](../faq.md#lifecycle-states)참조하십시오. |
 | [!UICONTROL Add to package] | 대상 구성, 사용자 지정 업로드, 세그멘테이션 서비스 | 샌드박스 간에 대상자를 이동합니다. 이 기능에 대한 자세한 내용은 [샌드박스 도구 안내서](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!IMPORTANT]
@@ -78,11 +78,11 @@ Audience Portal 내에서 다음 작업을 수행할 수 있습니다.
 
 페이지 맨 위에는 일정에 모든 대상을 추가하고, 대상을 가져오고, 새 대상을 만들고, 대상 평가의 요약을 볼 수 있는 옵션이 있습니다.
 
-**[!UICONTROL Schedule all audiences]**&#x200B;을(를) 전환하면 예약된 세그먼테이션이 활성화됩니다. 예약된 세그먼테이션에 대한 자세한 내용은 이 사용 안내서 [의 ](#scheduled-segmentation)예약된 세그먼테이션 섹션에 있습니다.
+**[!UICONTROL Schedule all audiences]**&#x200B;을(를) 전환하면 예약된 세그먼테이션이 활성화됩니다. 예약된 세그먼테이션에 대한 자세한 내용은 이 사용 안내서 [의 &#x200B;](#scheduled-segmentation)예약된 세그먼테이션 섹션에 있습니다.
 
 **[!UICONTROL Import audience]**&#x200B;을(를) 선택하면 외부에서 생성된 대상자를 가져올 수 있습니다. 대상자 가져오기에 대한 자세한 내용은 [사용 안내서에서 대상자 가져오기](#import-audience)에 대한 섹션을 참조하십시오.
 
-선택하면 **[!UICONTROL Create audience]** 대상자 만들 수 있습니다. 대상을 만드는 방법에 대한 자세한 내용은 사용자 안내서[ 안내서에서 대상자 만들기에 대한 ](#create-audience)섹션을 참조하세요.
+선택하면 **[!UICONTROL Create audience]** 대상자 만들 수 있습니다. 대상을 만드는 방법에 대한 자세한 내용은 사용자 안내서[&#x200B; 안내서에서 대상자 만들기에 대한 &#x200B;](#create-audience)섹션을 참조하세요.
 
 ![대상자 찾아보기 페이지의 위쪽 탐색 모음이 강조 표시됩니다. 이 막대에는 대상을 만드는 단추와 대상을 가져오는 단추가 있습니다.](../images/ui/audience-portal/browse-audiences-top.png)
 
@@ -102,7 +102,7 @@ Audience Portal 내에서 다음 작업을 수행할 수 있습니다.
 | ----- | ----------- |
 | [!UICONTROL Name] | 대상자의 이름입니다. |
 | [!UICONTROL Profile count] | 대상자 자격이 있는 총 프로필 수입니다. |
-| [!UICONTROL Origin] | 대상자의 기원입니다. 이것은 대상자 출신의 위치를 나타냅니다. 가능한 값에는 세그멘테이션 서비스[, 사용자 지정 업로드](#segment-builder), [대상 구성](#import-audience), [Audience Manager](#audience-composition), [Look 유사 대상자](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [페더레이션 대상 구성](../types/lookalike-audiences.md), [Customer Journey Analytics](#fac), [데이터 Distiller](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [AJO B2B](#data-distiller) 및 [실시간 CDP 협업](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview)이 포함됩니다[](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origin] | 대상자의 기원입니다. 이것은 대상자 출신의 위치를 나타냅니다. 가능한 값에는 세그멘테이션 서비스[, 사용자 지정 업로드](#segment-builder), [대상 구성](#import-audience), [Audience Manager](#audience-composition), [Look 유사 대상자](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [페더레이션 대상 구성](../types/lookalike-audiences.md), [Customer Journey Analytics](#fac), [데이터 Distiller](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [AJO B2B](#data-distiller) 및 [실시간 CDP 협업](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview)이 포함됩니다[&#128279;](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL Lifecycle status] | 대상자 상태입니다. 이 필드에 `Draft`사용할 수 있는 값은 , `Inactive`, 및 `Published`입니다. 다양한 상태의 의미와 대상을 다른 라이프사이클 상태로 이동하는 방법을 포함하여 라이프사이클 상태에 대한 자세한 내용은 세그멘테이션 FAQ[의 라이프사이클 상태 섹션을 참조하십시오](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | 대상자의 데이터가 업데이트되는 빈도를 나타내는 값입니다. 이 필드에 사용할 수 있는 값은 [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] 및 [!UICONTROL Not Scheduled]입니다. |
 | [!UICONTROL Last updated by] | 대상자를 마지막으로 업데이트한 사람의 이름입니다. |
@@ -111,7 +111,7 @@ Audience Portal 내에서 다음 작업을 수행할 수 있습니다.
 | [!UICONTROL Tags] | 대상자에 속하는 사용자 정의 태그입니다. 이러한 태그에 대한 자세한 내용은 태그 섹션에서 확인할 [수 있습니다](#tags). |
 | [!UICONTROL Description] | 대상자 설명입니다. |
 | [!UICONTROL Created by] | 대상자 작성자의 이름입니다. |
-| [!UICONTROL Access labels] | 대상자 액세스 레이블입니다. 액세스 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 집합과 필드를 분류할 수 있습니다. 이러한 레이블은 언제든지 적용할 수 있으므로 데이터 관리 방법을 유연하게 선택할 수 있습니다. 액세스 레이블에 대한 자세한 내용은 레이블[ 관리에 대한 ](../../access-control/abac/ui/labels.md)설명서를 참조하십시오. |
+| [!UICONTROL Access labels] | 대상자 액세스 레이블입니다. 액세스 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 집합과 필드를 분류할 수 있습니다. 이러한 레이블은 언제든지 적용할 수 있으므로 데이터 관리 방법을 유연하게 선택할 수 있습니다. 액세스 레이블에 대한 자세한 내용은 레이블[&#x200B; 관리에 대한 &#x200B;](../../access-control/abac/ui/labels.md)설명서를 참조하십시오. |
 | [!UICONTROL Breakdown] | 대상자에 대한 프로필 상태 분류입니다. 이 프로필 상태 분류에 대한 자세한 설명은 아래에서 확인할 수 있습니다. |
 
 분류를 선택하면 [!UICONTROL Realized], [!UICONTROL Existing] 및 [!UICONTROL Exiting] 각각의 계산된 프로필 상태에 속하는 프로필의 비율을 요약한 막대 그래프가 표시됩니다. 또한 [!UICONTROL Browse] 탭에 표시되는 분류는 세그먼트 정의 상태를 가장 정확하게 분류합니다. 이 숫자가 [!UICONTROL Overview] 탭에 명시된 것과 다를 경우 [!UICONTROL Browse] 탭 번호는 하루에 한 번만 업데이트되므로 [!UICONTROL Overview] 탭의 숫자를 올바른 정보 소스로 사용해야 합니다.
@@ -119,7 +119,7 @@ Audience Portal 내에서 다음 작업을 수행할 수 있습니다.
 | 상태 | 설명 |
 | ------ | ----------- |
 | [!UICONTROL Realized] | 마지막 배치 세그먼트 작업이 실행된 이후 지난 24시간 동안 대상자 자격이&#x200B;**있는**&#x200B;프로필 수입니다. |
-| [!UICONTROL Existing] | 마지막 배치 세그먼트 작업이 실행된 이후 지난 24시간 동안 대상자에 남아&#x200B;**있는**&#x200B;프로필 수입니다. 이 필드는 계산&#x200B;**되며**&#x200B;개체[`segmentMembership`에 ](../../xdm/field-groups/profile/segmentation.md) 표시되지 않습니다. |
+| [!UICONTROL Existing] | 마지막 배치 세그먼트 작업이 실행된 이후 지난 24시간 동안 대상자에 남아&#x200B;**있는**&#x200B;프로필 수입니다. 이 필드는 계산&#x200B;**되며**&#x200B;개체[`segmentMembership`에 &#x200B;](../../xdm/field-groups/profile/segmentation.md) 표시되지 않습니다. |
 | [!UICONTROL Exiting] | 마지막 배치 세그먼트 작업이 실행된 이후 지난 24시간 동안 대상자를 종료&#x200B;**한**&#x200B;프로필 수입니다. |
 
 표시할 필드를 선택한 후 표시되는 열의 너비를 조정할 수도 있습니다. 열 사이의 영역을 드래그하거나 크기를 조정할 열의 화살표 아이콘![과 를 차례](/help/images/icons/chevron-down.png)로 **[!UICONTROL Resize column]**&#x200B;선택하여 이 작업을 수행할 수 있습니다.
@@ -203,7 +203,7 @@ Audience Portal 내에서 다음 작업을 수행할 수 있습니다.
 
 | 필터 | 설명 |
 | ------ | ----------- |
-| [!UICONTROL Origin] | 대상자 원점을 기준으로 필터링할 수 있습니다. 가능한 값에는 세그멘테이션 서비스[, 사용자 지정 업로드](#segment-builder), [대상 구성](#import-audience), [Audience Manager](#audience-composition), [Look 유사 대상자](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [페더레이션 대상 구성](../types/lookalike-audiences.md), [Customer Journey Analytics](#fac), [데이터 Distiller](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [AJO B2B](#data-distiller) 및 [실시간 CDP 협업](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview)이 포함됩니다[](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origin] | 대상자 원점을 기준으로 필터링할 수 있습니다. 가능한 값에는 세그멘테이션 서비스[, 사용자 지정 업로드](#segment-builder), [대상 구성](#import-audience), [Audience Manager](#audience-composition), [Look 유사 대상자](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [페더레이션 대상 구성](../types/lookalike-audiences.md), [Customer Journey Analytics](#fac), [데이터 Distiller](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [AJO B2B](#data-distiller) 및 [실시간 CDP 협업](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview)이 포함됩니다[&#128279;](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL Has any tag] | 태그별로 필터링할 수 있습니다. 와 **[!UICONTROL Has any tag]**. 중에서 선택할 **[!UICONTROL Has all tags]** 수 있습니다. **[!UICONTROL Has any tag]**&#x200B;을(를) 선택하면 필터링된 대상에 추가한 태그 중 **임의**&#x200B;개가 포함됩니다. **[!UICONTROL Has all tags]**&#x200B;을(를) 선택한 경우 필터링된 대상자에는 추가한 태그 중 **모두**&#x200B;개가 포함되어야 합니다. |
 | [!UICONTROL Lifecycle status] | 대상자의 라이프사이클 상태에 따라 필터링할 수 있습니다. 사용 가능한 옵션은 [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive] 및 [!UICONTROL Published]입니다. |
 | [!UICONTROL Update frequency] | 대상자의 업데이트 빈도(평가 방법)를 기준으로 필터링할 수 있습니다. 사용 가능한 옵션은 [!UICONTROL Batch], [!UICONTROL Streaming] 및 [!UICONTROL Edge]입니다. |
@@ -257,13 +257,13 @@ Audience Portal 내에서 다음 작업을 수행할 수 있습니다.
 
 ![대상자 세부 정보 페이지가 표시되고 [!UICONTROL Open composition] 버튼이 강조 표시됩니다.](../images/ui/audience-portal/audience-details-open-composition.png)
 
-**[!UICONTROL Open composition]**&#x200B;을(를) 선택하면 대상자 구성에서 대상자를 볼 수 있습니다. 대상 구성에 대한 자세한 내용은 대상 구성 UI 안내서 를[ 참조하십시오](./audience-composition.md).
+**[!UICONTROL Open composition]**&#x200B;을(를) 선택하면 대상자 구성에서 대상자를 볼 수 있습니다. 대상 구성에 대한 자세한 내용은 대상 구성 UI 안내서 를[&#x200B; 참조하십시오](./audience-composition.md).
 
 >[!TAB 사용자 지정 업로드]
 
 ![대상자 세부 사항 페이지가 강조 [!UICONTROL Update audience] 표시되고 버튼이 강조 표시됩니다.](../images/ui/audience-portal/audience-details-update-audience.png)
 
-선택하면 **[!UICONTROL Update audience]** 외부에서 생성된 대상자를 다시 업로드할 수 있습니다. 외부에서 생성된 대상자 가져오기에 대한 자세한 내용은 대상자[ 가져오기에 대한 ](#import-audience)섹션을 참조하십시오.
+선택하면 **[!UICONTROL Update audience]** 외부에서 생성된 대상자를 다시 업로드할 수 있습니다. 외부에서 생성된 대상자 가져오기에 대한 자세한 내용은 대상자[&#x200B; 가져오기에 대한 &#x200B;](#import-audience)섹션을 참조하십시오.
 
 >[!TAB 세분화 서비스]
 
@@ -302,7 +302,7 @@ Experience Platform 생성 대상 및 컴포지션의 경우 **[!UICONTROL Audie
 | 프로필 개수 | 대상자 자격이 있는 총 프로필 수입니다. |
 | 데이터 세트 이름 | 대상자가 수집된 데이터 세트 이름입니다. 데이터 세트 이름을 선택하여 데이터 세트에 대한 자세한 내용을 확인할 수 있습니다. 데이터 세트에 대한 자세한 내용은 [데이터 세트 UI 안내서](../../catalog/datasets/user-guide.md)를 참조하세요. |
 | 데이터 세트 일괄 처리 | 대상자가 수집된 데이터 세트의 ID입니다. 배치에 대한 자세한 내용을 보려면 배치의 ID를 선택할 수 있습니다. 배치에 대해 자세히 알아보려면 [데이터 수집 모니터링 가이드](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)를 읽어 보십시오. |
-| 프로필 배치 | Experience Platform 에서 프로필을 만든 배치의 ID입니다. 배치에 대한 자세한 내용을 보기 위해 배치의 ID를 선택할 수 있습니다. 일괄 처리에 대한 자세한 내용은 모니터링 데이터 수집 안내서[ 를 참조하세요](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| 프로필 배치 | Experience Platform 에서 프로필을 만든 배치의 ID입니다. 배치에 대한 자세한 내용을 보기 위해 배치의 ID를 선택할 수 있습니다. 일괄 처리에 대한 자세한 내용은 모니터링 데이터 수집 안내서[&#x200B; 를 참조하세요](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
 | 스키마 | 대상자 자신이 속한 스키마의 이름입니다. 스키마 이름을 선택하여 스키마 구조에 대한 정보를 보고 데이터 사용량 레이블을 적용할 수 있습니다. 자세한 내용은 스키마 안내서[에 대한 관리 데이터 사용 레이블을 참조하세요](../../xdm/tutorials/labels.md). |
 | 레코드 수집됨 | 데이터 세트에 수집된 레코드 수입니다. |
 | 레코드 실패 | 데이터 세트에 수집할 수 없는 레코드 수입니다. |
@@ -319,7 +319,7 @@ Experience Platform 생성 대상 및 컴포지션의 경우 **[!UICONTROL Audie
 
 >[!NOTE]
 >
-> 대상은 에서 사용할 수 [!DNL Adobe Real-Time Customer Data Platform]있는 기능으로, 데이터를 외부 플랫폼으로 내보낼 수 있습니다. 목적지에 대한 자세한 내용은 목적지 개요를[ 참조하십시오](../../destinations/home.md). 대상에 대한 세그먼트 활성화 방법을 알아보려면 활성화 개요를[ 참조하십시오](../../destinations/ui/activation-overview.md).
+> 대상은 에서 사용할 수 [!DNL Adobe Real-Time Customer Data Platform]있는 기능으로, 데이터를 외부 플랫폼으로 내보낼 수 있습니다. 목적지에 대한 자세한 내용은 목적지 개요를[&#x200B; 참조하십시오](../../destinations/home.md). 대상에 대한 세그먼트 활성화 방법을 알아보려면 활성화 개요를[&#x200B; 참조하십시오](../../destinations/ui/activation-overview.md).
 
 ### 프로필 샘플 {#profile-samples}
 
@@ -411,7 +411,7 @@ Data Distiller에 대한 자세한 내용은 [SQL 안내서를 사용하여 대�
 
 >[!IMPORTANT]
 >
->외부에서 생성된 대상자 **를 가져오려면 ,**, 및 [!UICONTROL View segments]. 권한이 있어야 합니다[!UICONTROL Manage segments]. [!UICONTROL Import audience] 이러한 권한 관련 자세한 내용은 액세스 제어 개요를[ 참조하십시오](../../access-control/home.md#permissions).
+>외부에서 생성된 대상자 **를 가져오려면 ,**, 및 [!UICONTROL View segments]. 권한이 있어야 합니다[!UICONTROL Manage segments]. [!UICONTROL Import audience] 이러한 권한 관련 자세한 내용은 액세스 제어 개요를[&#x200B; 참조하십시오](../../access-control/home.md#permissions).
 
 외부에서 생성된 대상자 가져오기를 선택할 **[!UICONTROL Import audience]** 수 있습니다.
 
@@ -478,6 +478,6 @@ Data Distiller에 대한 자세한 내용은 [SQL 안내서를 사용하여 대�
 
 이 개요를 읽은 후에는 Audience Portal을 사용하여 대상을 효과적으로 관리, 생성 및 Adobe Experience Platform 으로 가져올 수 있습니다.
 
-세그멘테이션 서비스 UI 사용에 대한 자세한 내용은 세그멘테이션 서비스 UI 개요를[ 참조하십시오](./overview.md).
+세그멘테이션 서비스 UI 사용에 대한 자세한 내용은 세그멘테이션 서비스 UI 개요를[&#x200B; 참조하십시오](./overview.md).
 
-Audience Portal에 대한 FAQ(자주 묻는 질문)를 알아보려면 FAQ(자주 묻는 질문[)를 ](../faq.md)읽어보십시오.
+Audience Portal에 대한 FAQ(자주 묻는 질문)를 알아보려면 FAQ(자주 묻는 질문[)를 &#x200B;](../faq.md)읽어보십시오.

@@ -62,4 +62,4 @@ ID 필드는 Experience Platform에서 고객 ID 그래프를 구성하는 방�
 
 이 안내서에서는 UI에서 ID 필드를 정의하는 방법을 다룹니다. 이 스키마를 사용하여 데이터가 수집되면 고객 ID 그래프가 스키마의 ID 필드를 반영하도록 업데이트됩니다. UI에서 조직의 개인 그래프를 살펴보려면 [ID 그래프 뷰어](../../../identity-service/features/identity-graph-viewer.md)의 안내서를 참조하십시오.
 
-[에서 다른 XDM 필드 유형을 정의하는 방법을 알아보려면 ](./overview.md#special)UI의 필드 정의[!DNL Schema Editor]에 대한 개요를 참조하십시오.
+[에서 다른 XDM 필드 유형을 정의하는 방법을 알아보려면 &#x200B;](./overview.md#special)UI의 필드 정의[!DNL Schema Editor]에 대한 개요를 참조하십시오.

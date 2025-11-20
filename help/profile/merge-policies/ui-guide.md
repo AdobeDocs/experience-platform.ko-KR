@@ -217,4 +217,4 @@ Adobe Experience Platform 내에서 데이터 거버넌스를 수행하는 방�
 
 ## 다음 단계
 
-조직에 대한 병합 정책을 만들고 구성했으므로 이를 사용하여 Experience Platform 내에서 고객 프로필 보기를 조정하고 프로필 데이터에서 대상을 만들 수 있습니다. [ UI 및 API를 사용하여 대상을 만들고 작업하는 방법에 대한 자세한 내용은 ](../../segmentation/home.md)세그먼테이션 개요[!DNL Experience Platform]를 참조하십시오.
+조직에 대한 병합 정책을 만들고 구성했으므로 이를 사용하여 Experience Platform 내에서 고객 프로필 보기를 조정하고 프로필 데이터에서 대상을 만들 수 있습니다. [&#x200B; UI 및 API를 사용하여 대상을 만들고 작업하는 방법에 대한 자세한 내용은 &#x200B;](../../segmentation/home.md)세그먼테이션 개요[!DNL Experience Platform]를 참조하십시오.

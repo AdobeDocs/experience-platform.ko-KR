@@ -105,7 +105,7 @@ Adobe Experience Platform Identity Service를 사용하여 데이터를 구현�
 
 시스템에서 두 사람의 식별자를 보내는 경우 구현 시 한 사람의 네임스페이스 요구 사항을 충족하지 못할 수 있습니다. 예를 들어 webSDK 구현 ID의 identityMap에 CRMID, customerID 및 ECID 네임스페이스가 포함된 경우 모든 단일 이벤트에 CRMID와 customerID가 모두 포함된다는 보장은 없습니다.
 
-아래 좋아요 페이로드를 보내면 안 **** 됩니다.
+아래 좋아요 페이로드를 보내면 안 **&#x200B;**&#x200B;됩니다.
 
 ```json
 {
@@ -217,7 +217,7 @@ ID 설정 UI를 사용하여 고유한 네임스페이스를 지정하고 우선
 
 실시간 고객 프로필로 데이터를 수집하려면 스키마에 기본 ID로 지정된 필드가 하나 이상 포함되어 있는지 확인해야 합니다. 기본 ID를 설정하여 프로필 수집에 지정된 스키마를 사용하도록 설정할 수 있습니다.
 
-스키마를 만드는 방법에 대한 지침은 UI[ 에서 XDM 스키마 만들기에 대한 ](../../xdm/tutorials/create-schema-ui.md)안내서.
+스키마를 만드는 방법에 대한 지침은 UI[&#x200B; 에서 XDM 스키마 만들기에 대한 &#x200B;](../../xdm/tutorials/create-schema-ui.md)안내서.
 
 ## 데이터 세트 만들기 {#dataset}
 

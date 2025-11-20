@@ -44,7 +44,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->이 그래프에 데이터를 표시하려면 에 대해 **데이터를 명시적으로** 활성화해야 [!DNL Profile]합니다. 에 대한 [!DNL Profile]스트리밍 데이터를 사용하도록 설정하는 방법을 알아보려면 데이터 세트 사용자 안내서[ 를 읽어보세요](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>이 그래프에 데이터를 표시하려면 에 대해 **데이터를 명시적으로** 활성화해야 [!DNL Profile]합니다. 에 대한 [!DNL Profile]스트리밍 데이터를 사용하도록 설정하는 방법을 알아보려면 데이터 세트 사용자 안내서[&#x200B; 를 읽어보세요](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 

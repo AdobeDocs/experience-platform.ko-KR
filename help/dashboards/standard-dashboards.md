@@ -162,7 +162,7 @@ Adobe Real-Time Customer Data Platform 인사이트 대시보드에 대한 각 �
 >
 >기존 사용자 정의 대시보드 간에 전환하려면 왼쪽 탐색 막대에서 대시보드 를 선택한 다음 인벤토리 목록에서 대시보드 이름을 선택합니다.
 
-연필 아이콘(![연필 아이콘)을 선택합니다.사용자 지정 대시보드의 오른쪽 상단에서 ](/help/images/icons/edit.png))을(를) 클릭하여 편집 모드로 전환합니다.
+연필 아이콘(![연필 아이콘)을 선택합니다.사용자 지정 대시보드의 오른쪽 상단에서 &#x200B;](/help/images/icons/edit.png))을(를) 클릭하여 편집 모드로 전환합니다.
 
 ![연필 아이콘이 강조 표시된 사용자 지정 대시보드입니다.](./images/standard-dashboards/edit-mode.png)
 

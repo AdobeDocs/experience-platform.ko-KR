@@ -123,7 +123,7 @@ ht-degree: 4%
 
    ![사용 가능한 마케팅 작업이 강조 표시된 새 대상 구성 대화 상자 대상에 연결 워크플로를 완료하는 데 사용할 수 있는 컨트롤도 강조 표시됩니다.](../assets/ui/connect-destinations/governance.png)
 
-2. 대상 구성을 저장하려면 **[!UICONTROL Save & Exit]**&#x200B;을(를) 선택하고 대상 데이터 **[!UICONTROL Next]**&#x200B;활성화 흐름[으로 진행하려면 ](activation-overview.md)을(를) 선택하십시오.
+2. 대상 구성을 저장하려면 **[!UICONTROL Save & Exit]**&#x200B;을(를) 선택하고 대상 데이터 **[!UICONTROL Next]**&#x200B;활성화 흐름[으로 진행하려면 &#x200B;](activation-overview.md)을(를) 선택하십시오.
 
 ## 다음 단계 {#next-steps}
 

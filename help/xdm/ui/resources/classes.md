@@ -34,7 +34,7 @@ Adobe은 [XDM 개별 프로필](../../classes/individual-profile.md) 및 [XDM Ex
 
 Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Schemas]**&#x200B;을(를) 선택하여 [!UICONTROL Schemas] 작업 영역을 연 다음 **[!UICONTROL Classes]** 탭을 선택합니다. 사용 가능한 클래스 목록이 표시됩니다.
 
-![ 작업 영역 [!UICONTROL Classes] 및 [!UICONTROL Schemas]의 [!UICONTROL Classes] 탭에 있는 클래스 중 [!UICONTROL Schemas]개가 강조 표시되었습니다.](../../images/ui/resources/classes/available-classes.png)
+![&#x200B; 작업 영역 [!UICONTROL Classes] 및 [!UICONTROL Schemas]의 [!UICONTROL Classes] 탭에 있는 클래스 중 [!UICONTROL Schemas]개가 강조 표시되었습니다.](../../images/ui/resources/classes/available-classes.png)
 
 ## 클래스 필터링 {#filter}
 

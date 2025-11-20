@@ -213,7 +213,7 @@ Use the **[!UICONTROL Scheduling]** step to:
 
 ![사용자 지정 폴더 모달 창에서 강조 표시된 매크로 선택.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-원하는 매크로를 선택하면 저장소 위치에 생성되는 폴더 구조의 미리보기가 표시됩니다. 폴더 구조의 첫 번째 수준은 데이터 집합을 내보내기 위해 **[!UICONTROL Folder path]**&#x200B;대상에 연결[할 때 표시한 ](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)을(를) 나타냅니다.
+원하는 매크로를 선택하면 저장소 위치에 생성되는 폴더 구조의 미리보기가 표시됩니다. 폴더 구조의 첫 번째 수준은 데이터 집합을 내보내기 위해 **[!UICONTROL Folder path]**&#x200B;대상에 연결[할 때 표시한 &#x200B;](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)을(를) 나타냅니다.
 
 ![사용자 지정 폴더 모달 창에서 강조 표시된 폴더 경로를 미리 봅니다.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
@@ -231,7 +231,7 @@ Experience Platform은 사용자가 지정한 저장 위치에 폴더 구조를 
 
 >[!TIP]
 > 
->이 폴더 구조의 첫 번째 수준인 `folder-name-you-provided`은(는) 데이터 집합을 내보내기 위해 **[!UICONTROL Folder path]**&#x200B;대상에 연결[할 때 표시한 ](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)을(를) 나타냅니다.
+>이 폴더 구조의 첫 번째 수준인 `folder-name-you-provided`은(는) 데이터 집합을 내보내기 위해 **[!UICONTROL Folder path]**&#x200B;대상에 연결[할 때 표시한 &#x200B;](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)을(를) 나타냅니다.
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 

@@ -66,7 +66,7 @@ ht-degree: 3%
 
 [!UICONTROL LinkedIn Matched Audience] 대상을 사용하려면 먼저 [!DNL LinkedIn Campaign Manager] 계정에 [!DNL Creative Manager] 권한 수준 이상이 있는지 확인하십시오.
 
-사용자 권한을 편집 [!DNL LinkedIn Campaign Manager] 하는 방법에 대한 자세한 내용은 LinkedIn 설명서에서 광고 계정에[ 대한 사용자 권한 추가, 편집 및 제거를 참조하세요](https://www.linkedin.com/help/lms/answer/5753).
+사용자 권한을 편집 [!DNL LinkedIn Campaign Manager] 하는 방법에 대한 자세한 내용은 LinkedIn 설명서에서 광고 계정에[&#x200B; 대한 사용자 권한 추가, 편집 및 제거를 참조하세요](https://www.linkedin.com/help/lms/answer/5753).
 
 ## ID 일치 요구 사항 {#id-matching-requirements}
 
@@ -104,7 +104,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 및 **[!UICONTROL View Destinations]** **[!UICONTROL Manage Destinations]**&#x200B;액세스 제어 권한이[ 필요합니다](/help/access-control/home.md#permissions). [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 및 **[!UICONTROL View Destinations]** **[!UICONTROL Manage Destinations]**&#x200B;액세스 제어 권한이[&#x200B; 필요합니다](/help/access-control/home.md#permissions). [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
@@ -119,7 +119,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 [!DNL LinkedIn Matched Audiences] 대상을 찾은 다음 **[!UICONTROL Set Up]**&#x200B;을(를) 선택하십시오.
-2. **[!UICONTROL Connect to destination]**를 선택합니다.
+2. **[!UICONTROL Connect to destination]**&#x200B;를 선택합니다.
    ![LinkedIn 인증](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. LinkedIn 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 
@@ -132,9 +132,9 @@ LinkedIn 토큰은 60일마다 만료됩니다. **[!UICONTROL Account expiration
 1. **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**(으)로 이동
 2. (선택 사항) 페이지에서 사용할 수 있는 필터를 사용하여 LinkedIn 계정만 표시합니다.
    ![LinkedIn 계정만 표시하도록 필터링](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
-3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL Edit details]**을(를) 선택하십시오.
+3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL Edit details]**&#x200B;을(를) 선택하십시오.
    ![세부 정보 편집 컨트롤 선택](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
-4. 모달 창에서 **[!UICONTROL Reconnect OAuth]**을(를) 선택하고 LinkedIn 자격 증명으로 다시 인증합니다.
+4. 모달 창에서 **[!UICONTROL Reconnect OAuth]**&#x200B;을(를) 선택하고 LinkedIn 자격 증명으로 다시 인증합니다.
    ![다시 연결 OAuth 옵션이 있는 모달 창](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
