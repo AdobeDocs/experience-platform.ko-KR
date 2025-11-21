@@ -91,7 +91,7 @@ Experience Platform UI의 **[!UICONTROL Audits]** 작업 영역에서 다양한 
 
 감사 로그는 365일 동안 유지되며 그 후에는 시스템에서 삭제됩니다. 365일 이상의 데이터가 필요한 경우 내부 정책 요구 사항을 충족하도록 정기적으로 로그를 내보내야 합니다.
 
-감사 로그를 요청하는 방법은 허용 가능한 기간 및 액세스 권한이 있는 레코드 수를 변경합니다. [로그를 내보내면 365일(90일 간격)에서 최대 10,000개의 감사 로그(core 또는 enhanced 중 하나)로 돌아갈 수 있습니다. Experience Platform의 &#x200B;](#export-audit-logs)활동 로그 UI[에 지난 90일에서 최대 1000개의 핵심 이벤트가 표시되며, 각 핵심 이벤트에는 해당 고급 이벤트가 포함됩니다.](#filter-audit-logs)
+감사 로그를 요청하는 방법은 허용 가능한 기간 및 액세스 권한이 있는 레코드 수를 변경합니다. [로그를 내보내면 365일(90일 간격)에서 최대 10,000개의 감사 로그(core 또는 enhanced 중 하나)로 돌아갈 수 있습니다. Experience Platform의 ](#export-audit-logs)활동 로그 UI[에 지난 90일에서 최대 1000개의 핵심 이벤트가 표시되며, 각 핵심 이벤트에는 해당 고급 이벤트가 포함됩니다.](#filter-audit-logs)
 
 오른쪽 레일에서 세부 정보를 보려면 목록에서 이벤트를 선택하십시오.
 
@@ -169,7 +169,7 @@ UI에서 수행할 수 있는 모든 작업은 API 호출을 사용하여 수행
 
 ## Adobe Admin Console에 대한 감사 로그 관리
 
-Adobe Admin Console의 활동에 대한 감사 로그를 관리하는 방법에 대해 알아보려면 다음 [문서](https://helpx.adobe.com/kr/enterprise/using/audit-logs.html)를 참조하세요.
+Adobe Admin Console의 활동에 대한 감사 로그를 관리하는 방법에 대해 알아보려면 다음 [문서](https://helpx.adobe.com/enterprise/using/audit-logs.html)를 참조하세요.
 
 ## 다음 단계 및 추가 리소스
 
@@ -177,4 +177,4 @@ Adobe Admin Console의 활동에 대한 감사 로그를 관리하는 방법에 
 
 Experience Platform의 감사 로그에 대한 이해를 강화하려면 다음 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/344652?captions=kor&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

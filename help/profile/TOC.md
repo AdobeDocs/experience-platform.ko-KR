@@ -7,7 +7,7 @@ role: User
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '133'
-ht-degree: 33%
+ht-degree: 35%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 33%
    * [[!DNL Profile] UI 안내서](ui/user-guide.md)
    * [[!DNL Profile] 세부 정보 사용자 지정](ui/profile-customization.md)
    * [잠재 고객 프로필](ui/prospect-profile.md)
-* 계산된 특성 {#computed-attributes}
+* 계산된 속성 {#computed-attributes}
    * [개요](computed-attributes/overview.md)
    * [계산된 속성 API 안내서](computed-attributes/api.md)
    * [계산된 속성 UI 안내서](computed-attributes/ui.md)
@@ -50,7 +50,7 @@ ht-degree: 33%
    * [실시간 고객 프로필에 데이터 추가](tutorials/add-profile-data.md)
    * [프로필에 대한 데이터 세트 구성](tutorials/dataset-configuration.md)
    * [데이터 세트 중복 보고서 생성](tutorials/dataset-overlap-report.md)
-   * [추가 튜토리얼](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ko)
+   * [추가 튜토리얼](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [개인 정보 보호 요청 처리](privacy.md)
 * [[!DNL Profile] 문제 해결 안내서](troubleshooting.md)
 * [프로필 API 참조](https://www.adobe.com/go/profile-apis-en)

@@ -16,7 +16,7 @@ ht-degree: 42%
 
 * [카탈로그 서비스 개요](home.md)
 * 카탈로그 서비스 API {#api}
-   * [시작하기](api/getting-started.md)
+   * [시작](api/getting-started.md)
    * [쿼리 매개 변수를 사용하여 카탈로그 데이터 필터링](api/filter-data.md)
    * [목록 개체](api/list-objects.md)
    * [오브젝트 조회](api/look-up-object.md)

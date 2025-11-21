@@ -19,7 +19,7 @@ ht-degree: 33%
 * [데이터 과학 작업 영역 개요](home.md)
 * [데이터 과학 Workspace 액세스 및 기능](access-features-dsw.md)
 * [데이터 과학 작업 영역 워크스루](walkthrough.md)
-* JupyterLab 전자 필기장 {#jupyterlab}
+* JupyterLab 노트북 {#jupyterlab}
    * [개요](jupyterlab/overview.md)
    * [데이터 액세스](jupyterlab/access-notebook-data.md)
    * [데이터 분석](jupyterlab/analyze-your-data.md)
@@ -27,16 +27,16 @@ ht-degree: 33%
    * [EDA(탐색적 데이터 분석)](jupyterlab/eda-notebook.md)
    * [레시피 빌더를 사용하여 모델 만들기](jupyterlab/create-a-model.md)
    * [Git을 사용하여 JupyterLab에서 공동 작업 수행](jupyterlab/using-git-for-collaboration.md)
-* Sensei 기계 학습 API {#api}
-   * [시작하기](api/getting-started.md)
+* Sensei 머신 러닝 API {#api}
+   * [시작](api/getting-started.md)
    * [엔진](api/engines.md)
    * [MLInstances(레시피)](api/mlinstances.md)
    * [실험](api/experiments.md)
    * [모델](api/models.md)
    * [MLSservices](api/mlservices.md)
-   * [인사이트](api/insights.md)
+   * [Insights](api/insights.md)
    * [부록](api/appendix.md)
-* 미리 빌드된 레시피 {#pre-built-recipes}
+* 사전 빌드된 레시피 {#pre-built-recipes}
    * [제품 추천 레시피](pre-built-recipes/product-recommendations.md)
    * [제품 구매 예측](pre-built-recipes/product-purchase-prediction.md)
    * [소매 판매 레시피](pre-built-recipes/retail-sales.md)
@@ -46,7 +46,7 @@ ht-degree: 33%
    * [Experience Platform SDK(Python)를 사용하여 모델 작성](authoring/platform-sdk.md)
    * [Python 데이터 액세스](authoring/python.md)
    * [Spark 데이터 액세스](authoring/spark.md)
-* 모델 및 레시피 튜토리얼 {#models-recipes}
+* 모델 및 레서피 튜토리얼 {#models-recipes}
    * [머신 러닝 모델 만들기 및 게시](models-recipes/create-publish-model.md)
    * [데모 Luma 스키마 및 데이터 세트 만들기](models-recipes/create-luma-data.md)
    * [소매 판매 스키마 및 데이터 세트 만들기](models-recipes/create-retails-sales-dataset.md)

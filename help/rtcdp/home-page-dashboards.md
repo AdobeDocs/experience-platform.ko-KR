@@ -38,7 +38,7 @@ Real-Time CDP 홈 페이지에는 여러 가지 다양한 기능에 빠르게 �
 >id="platform_home_metrics_totalProfiles"
 >title="총 프로필 수"
 >abstract="귀하의 조직에서 Experience Platform 내에 보유하고 있는 총 프로필 수입니다. 이 수는 조직의 병합 정책을 기반으로 하며 프로필 조각은 포함되지 않습니다. 프로필 수는 24시간마다 한 번씩 업데이트됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=ko#profile-count" text="설명서에서 자세히 알아보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="설명서에서 자세히 알아보기"
 
 지표 대시보드에는 Experience Platform 데이터에 대한 최신 정보가 표시됩니다. 대시보드는 다음 두 섹션으로 나뉩니다.
 

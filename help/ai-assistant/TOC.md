@@ -7,7 +7,7 @@ role: Admin,User,Developer,Leader
 source-git-commit: 40f7ea3e6477590dc2eed5af8aa9848901a8c204
 workflow-type: tm+mt
 source-wordcount: '118'
-ht-degree: 30%
+ht-degree: 33%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 30%
 # Adobe Experience Platform의 AI 지원 {#ai-assistant}
 
 * [AI Assistant 제품 설명서](landing.md)
-* [AI Assistant 개요](home.md)
+* [AI 어시스턴트 개요](home.md)
 * [기능 액세스](access.md)
 * [AI Assistant 질문 안내서](questions.md)
 * [AI Assistant UI 안내서](ui-guide.md)

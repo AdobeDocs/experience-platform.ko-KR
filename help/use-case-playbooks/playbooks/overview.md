@@ -6,7 +6,7 @@ role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
 source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '523'
 ht-degree: 30%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 30%
 
 ## 개요 {#overview}
 
-[!UICONTROL 사용 사례 플레이북]을 통해 Real-Time CDP 또는 Adobe Journey Optimizer을 시작할 때 원하는 사용 사례를 달성하기 위해 무엇을 시작해야 하는지 또는 올바른 자산을 만드는 방법을 정확히 알 수 없는 경우 문제를 해결할 수 있습니다.
+[!UICONTROL Use Case Playbooks]을(를) 사용하면 Real-Time CDP 또는 Adobe Journey Optimizer을 시작할 때 원하는 사용 사례를 달성하기 위해 무엇을 시작해야 하는지 또는 올바른 자산을 만드는 방법을 정확히 모를 수 있는 문제를 해결할 수 있습니다.
 
 사용 사례 플레이북은 다음을 통해 여기에서 도움을 줄 수 있습니다.
 
@@ -52,7 +52,7 @@ ht-degree: 30%
 
 ## 가용성 {#availability}
 
-일부 [!UICONTROL 사용 사례 플레이북]은(는) Real-Time CDP 사용 사례에 맞게 조정되지만 다른 플레이북은 Journey Optimizer 사용 고객에게 가장 적합합니다. 카탈로그를 탐색하여 제품 및 사용 사례에 가장 적합한 플레이북을 찾습니다. [제품 설명 Adobe](https://helpx.adobe.com/kr/legal/product-descriptions.html)에서 Real-Time CDP 및 Journey Optimizer에 대해 자세히 알아보세요.
+일부 [!UICONTROL Use Case Playbooks]은(는) Real-Time CDP 사용 사례에 맞게 조정되지만 다른 은(는) Journey Optimizer 사용 고객에게 가장 적합합니다. 카탈로그를 탐색하여 제품 및 사용 사례에 가장 적합한 플레이북을 찾습니다. [Adobe 제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)에서 Real-Time CDP 및 Journey Optimizer에 대해 자세히 알아보세요.
 
 ## UI 안내서 {#ui-guides}
 

@@ -1,11 +1,11 @@
 ---
 title: 이벤트 전달 개요
-description: Experience Platform Edge Network를 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있도록 Adobe Experience Platform의 이벤트 게재에 대해 알아봅니다.
+description: Experience Platform Edge Network를 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있도록 Adobe Experience Platform의 이벤트 전달에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1181'
 ht-degree: 8%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform의 이벤트 전달을 사용하면 수집된 이벤�
 >
 >이벤트 전달이 Experience Platform의 데이터 수집 생태계에 어떻게 적합한지에 대한 자세한 내용은 [데이터 수집 개요](../../../collection/home.md)를 참조하십시오.
 
-Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) 및 [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=ko)와 결합된 이벤트 전달은 다음과 같은 이점을 제공합니다.
+Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) 및 [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html)와 결합된 이벤트 전달은 다음과 같은 이점을 제공합니다.
 
 **성능**:
 
@@ -53,7 +53,7 @@ Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) 및 [Mobile SDK](http
 
 ### 속성 {#properties}
 
-이벤트 전달은 태그와 별도로 고유한 속성 저장소를 유지 관리합니다. 이 저장소는 왼쪽 탐색에서 **[!UICONTROL 이벤트 전달]**&#x200B;을(를) 선택하여 Experience Platform UI 또는 데이터 수집 UI에서 볼 수 있습니다.
+이벤트 전달은 태그와 별도로 고유한 속성 저장소를 유지 관리합니다. 이 저장소는 왼쪽 탐색에서 **[!UICONTROL Event Forwarding]**&#x200B;을(를) 선택하여 Experience Platform UI 또는 데이터 수집 UI에서 볼 수 있습니다.
 
 >[!TIP]
 >
@@ -65,7 +65,7 @@ Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) 및 [Mobile SDK](http
 
 ### 확장 {#extensions}
 
-이벤트 전달에는 [Core](../../extensions/server/core/overview.md) 확장 및 [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md) 확장과 같은 호환되는 확장에 대한 자체 카탈로그가 있습니다. 왼쪽 탐색에서 **[!UICONTROL 확장]**&#x200B;을 선택한 다음 **[!UICONTROL 카탈로그]**&#x200B;를 선택하여 UI에서 이벤트 전달 속성에 사용 가능한 확장을 볼 수 있습니다.
+이벤트 전달에는 [Core](../../extensions/server/core/overview.md) 확장 및 [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md) 확장과 같은 호환되는 확장에 대한 자체 카탈로그가 있습니다. 왼쪽 탐색에서 **[!UICONTROL Extensions]**&#x200B;을(를) 선택한 후 **[!UICONTROL Catalog]**&#x200B;을(를) 선택하여 UI에서 이벤트 전달 속성에 사용 가능한 확장을 볼 수 있습니다.
 
 오른쪽 패널에서 ![정보](../../images/ui/event-forwarding/overview/about.png)을(를) 선택하여 이 기능에 대해 자세히 알아볼 수 있는 추가 리소스를 볼 수 있습니다.
 
@@ -81,7 +81,7 @@ Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) 및 [Mobile SDK](http
 
 Experience Platform Edge Network의 데이터를 참조하려면 해당 데이터에 올바른 경로를 제공하는 데이터 요소를 만들어야 합니다. UI에서 데이터 요소를 만들 때 확장에 대해 **[!UICONTROL Core]**&#x200B;을(를) 선택하고 유형에 대해 **[!UICONTROL Path]**&#x200B;을(를) 선택합니다.
 
-데이터 요소의 **[!UICONTROL Path]** 값은 `arc.event.{ELEMENT}` 패턴(예: `arc.event.xdm.web.webPageDetails.URL`)을 따라야 합니다. 데이터를 전송하려면 이 경로를 올바르게 지정해야 합니다.
+데이터 요소의 **[!UICONTROL Path]** 값은 `arc.event.{ELEMENT}` 패턴을 따라야 합니다(예: `arc.event.xdm.web.webPageDetails.URL`). 데이터를 전송하려면 이 경로를 올바르게 지정해야 합니다.
 
 오른쪽 패널에서 ![정보](../../images/ui/event-forwarding/overview/about.png)을(를) 선택하여 이 기능에 대해 자세히 알아볼 수 있는 추가 리소스를 볼 수 있습니다.
 
@@ -107,7 +107,7 @@ Experience Platform Edge Network의 데이터를 참조하려면 해당 데이�
 
 #### 규칙 작업 순서 {#action-sequencing}
 
-이벤트 전달 규칙의 [!UICONTROL 작업] 섹션은 항상 순차적으로 실행됩니다. 예를 들어 규칙에 두 개의 작업이 있는 경우 이전 작업이 완료될 때까지(그리고 끝점에서 응답이 예상되는 경우 해당 끝점이 응답함) 두 번째 작업은 실행을 시작하지 않습니다. 규칙을 저장할 때 작업 순서가 올바른지 확인합니다. 이 실행 시퀀스는 태그 규칙과 마찬가지로 비동기식으로 실행할 수 없습니다.
+이벤트 전달 규칙의 [!UICONTROL Actions] 섹션은 항상 순차적으로 실행됩니다. 예를 들어 규칙에 두 개의 작업이 있는 경우 이전 작업이 완료될 때까지(그리고 끝점에서 응답이 예상되는 경우 해당 끝점이 응답함) 두 번째 작업은 실행을 시작하지 않습니다. 규칙을 저장할 때 작업 순서가 올바른지 확인합니다. 이 실행 시퀀스는 태그 규칙과 마찬가지로 비동기식으로 실행할 수 없습니다.
 
 ## 비밀 {#secrets}
 

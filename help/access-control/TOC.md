@@ -8,7 +8,7 @@ role: Admin
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 56%
+ht-degree: 57%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 56%
 # 액세스 제어 {#access-control}
 
 * [액세스 제어 개요](home.md)
-* 특성 기반 액세스 제어 {#abac}
+* 속성 기반 액세스 제어 {#abac}
    * [개요](abac/overview.md)
    * [전체 안내서](abac/end-to-end-guide.md)
    * [액세스 레이블을 사용하여 대상 데이터 흐름에 대한 사용자 액세스를 관리할 수 있습니다.](/help/access-control/abac/apply-access-labels-destinations.md)
@@ -31,7 +31,7 @@ ht-degree: 56%
    * 권한 관리자 {#permissions-manager}
       * [개요](abac/permission-manager/overview.md)
       * [권한](abac/permission-manager/permissions.md)
-   * 특성 기반 액세스 제어 API {#abac-api}
+   * 속성 기반 액세스 제어 API {#abac-api}
       * [개요](abac/api/overview.md)
       * [시작하기](abac/api/getting-started.md)
       * [역할](abac/api/roles.md)
@@ -45,7 +45,7 @@ ht-degree: 56%
    * [새 제품 프로필 만들기](ui/create-profile.md)
    * [제품 프로필에 대한 사용자 관리](ui/users.md)
 * 액세스 제어 API {#api}
-   * [시작하기](api/getting-started.md)
+   * [시작](api/getting-started.md)
    * [권한 및 리소스 유형의 목록 이름](api/permissions-and-resource-types.md)
    * [유효한 정책 보기](api/effective-policies.md)
 * [문제 해결 안내서](troubleshooting-guide.md)

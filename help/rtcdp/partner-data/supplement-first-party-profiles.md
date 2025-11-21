@@ -5,8 +5,8 @@ feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1257'
-ht-degree: 77%
+source-wordcount: '1249'
+ht-degree: 72%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 77%
 
 >[!AVAILABILITY]
 >
->* 이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate에 라이선스를 부여한 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
+>* 이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate 라이선스가 있는 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
 
 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선합니다.
 
@@ -24,9 +24,9 @@ ht-degree: 77%
 
 자사 데이터가 풍부한 브랜드라도 대부분의 브랜드는 데이터를 간소화하고 고객, 고객의 행동, 패턴 및 선호도에 대해 보다 미묘한 이해를 얻을 수 있으므로 도움이 될 수 있습니다.
 
-Adobe Real-time Customer Data Platform은 브랜드가 신뢰할 수 있는 한 명 이상의 파트너로부터 얻은 중요한 통찰력, 식별자 및 속성으로 자사 데이터를 책임감 있게 보완하도록 지원할 수 있습니다.
+Adobe Real-time Customer Data Platform은 브랜드가 신뢰할 수 있는 하나 이상의 파트너의 중요한 통찰력, 식별자 및 속성을 통해 자사 데이터를 책임감 있게 보완할 수 있도록 지원합니다.
 
-Adobe은 한 가지 방법으로 모든 요구 사항을 충족할 수 있는 접근 방식이 없다는 것을 이해하고 데이터 및 ID 파트너와의 원활한 상호 운용성을 통해 고객 라이프사이클의 모든 단계에서 개별화되고 사려 깊은 참여를 촉진할 수 있습니다. 이러한 기능은 신뢰할 수 있는 데이터 거버넌스 프레임워크의 지원을 받아 파트너 데이터가 사용되는 위치와 방법을 세부적으로 제어할 수 있습니다. 예를 들어, 세그먼테이션에 대해 파트너가 제공한 인사이트를 사용할 수 있지만 개인화에는 사용할 수 없습니다.
+Adobe은 획일적인 접근 방식이 없으며 데이터 및 id 파트너와의 원활한 상호 운용성을 통해 고객 라이프사이클의 모든 단계에서 개별화되고 사려 깊은 참여를 촉진할 수 있습니다. 이러한 기능은 신뢰할 수 있는 데이터 거버넌스 프레임워크의 지원을 받아 파트너 데이터가 사용되는 위치와 방법을 세부적으로 제어할 수 있습니다. 예를 들어, 세그먼테이션에 대해 파트너가 제공한 인사이트를 사용할 수 있지만 개인화에는 사용할 수 없습니다.
 
 예를 들어 인구 통계학적 및 의도 신호로 고객 레코드를 보강해야 하는 경우 이 사용 사례에 설명된 단계를 따릅니다.
 
@@ -41,13 +41,13 @@ Adobe은 한 가지 방법으로 모든 요구 사항을 충족할 수 있는 �
 
 >[!WARNING]
 >
->Real-Time CDP에 수집된 추가 파트너 제공 특성은 *총 데이터 볼륨*&#x200B;에 영향을 줍니다. 총 데이터 볼륨에 대한 자세한 내용은 [Real-time Customer Data Platform 제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html)을 참조하세요.
+>Real-Time CDP에 수집된 추가 파트너 제공 특성은 *총 데이터 볼륨*&#x200B;에 영향을 줍니다. 총 데이터 볼륨에 대한 자세한 내용은 [Real-Time Customer Data Platform 제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html)을 참조하세요.
 
 ## 비디오 워크스루 {#video-walkthrough}
 
 파트너가 제공한 속성을 사용하여 자사 대상을 보완하는 방법에 대한 연습은 아래 비디오 튜토리얼을 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3452462/?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## 사용 사례를 달성하는 방법: 높은 수준의 개요 {#achieve-the-use-case-high-level}
 
@@ -71,14 +71,14 @@ Adobe은 한 가지 방법으로 모든 요구 사항을 충족할 수 있는 �
 
 이 시점에서 Real-Time CDP의 데이터 관리 프레임워크를 확장하여 파트너가 제공한 속성을 수용합니다.
 
-**[!UICONTROL XDM 개별 프로필]** 클래스의 새 스키마를 만들거나 파트너가 제공한 속성을 포함하도록 동일한 유형의 기존 스키마를 확장할 수 있습니다. Adobe는 데이터 공급업체의 추가 속성을 가장 잘 나타내는 새로운 필드 그룹 세트로 새 스키마를 생성할 것을 강력히 권장합니다. 이를 통해 데이터 스키마가 정리되고 서로 독립적으로 발전할 수 있습니다.
+**[!UICONTROL XDM Individual Profile]** 클래스의 새 스키마를 만들거나 동일한 형식의 기존 스키마를 확장하여 파트너가 제공한 특성을 포함할 수 있습니다. Adobe는 데이터 공급업체의 추가 속성을 가장 잘 나타내는 새로운 필드 그룹 세트로 새 스키마를 생성할 것을 강력히 권장합니다. 이를 통해 데이터 스키마가 정리되고 서로 독립적으로 발전할 수 있습니다.
 
 파트너가 제공한 속성을 스키마에 포함하려면 원하는 속성으로 새 필드 그룹을 만들거나 Adobe에서 제공하는 미리 구성된 필드 그룹 중 하나를 사용할 수 있습니다.
 
 자세한 내용은 아래의 설명서 페이지를 참조하십시오.
 
-* [스키마 구성의 기본 사항](/help/xdm/schema/composition.md)
-* [[!UICONTROL XDM 개별 프로필] 클래스의 개요](/help/xdm/classes/individual-profile.md)
+* [스키마 컴포지션의 기본 사항](/help/xdm/schema/composition.md)
+* [[!UICONTROL XDM Individual Profile] 클래스 개요](/help/xdm/classes/individual-profile.md)
 * [UI에서 스키마 생성 및 편집](/help/xdm/ui/resources/schemas.md)
 * [UI에서 스키마 필드 그룹 생성 및 편집](/help/xdm/ui/resources/field-groups.md)
 
@@ -99,7 +99,7 @@ Commenting out links for now
 
 >[!TIP]
 >
->데이터 공급업체의 사용자 기반 식별자로 고객 프로필을 보완하도록 선택한 경우 **[[!UICONTROL 파트너 ID]](/help/identity-service/features/namespaces.md)** 유형의 새 ID 유형을 생성할 수 있습니다.
+>데이터 공급업체의 개인 기반 식별자로 고객 프로필을 보완하도록 선택하면 **[[!UICONTROL Partner ID]](/help/identity-service/features/namespaces.md)** 유형의 새 ID 유형을 만들 수 있습니다.
 >
 >[ID 유형 섹션](/help/identity-service/features/namespaces.md)의 파트너 ID에 대해 자세히 알아보십시오.
 >Experience Platform 사용자 인터페이스에서 [ID 필드를 정의하는 방법](/help/xdm/ui/fields/identity.md)에 대해 알아보십시오.

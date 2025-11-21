@@ -4,7 +4,7 @@ description: 개발자는 Reactor API를 통해 프로그래밍 방식으로 Ado
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1079'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ Reactor API는 Adobe Experience Platform의 태그에 대한 모든 리소스를
 
 ## 회사
 
-회사는 태그 사용자 조직(일반적으로 비즈니스)을 나타냅니다. 이러한 회사는 조직 ID와 1:1로 일치합니다. API 사용자는 액세스 권한이 있는 회사에 대한 가시성만 갖습니다.
+회사는 태그 사용자 조직(일반적으로 비즈니스)을 나타냅니다. 이 회사는 조직 ID와 1:1을(를) 일치시킵니다. API 사용자는 액세스 권한이 있는 회사에 대한 가시성만 갖습니다.
 
 API에서 사용 가능한 회사를 보는 방법을 알아보려면 [회사 엔드포인트 가이드](./endpoints/companies.md)를 참조하세요.
 

@@ -22,7 +22,7 @@ ht-degree: 71%
    * [조직 간 패키지 공유](ui/sharing-packages-across-orgs.md)
 * 샌드박스 API {#api}
    * [개요](api/overview.md)
-   * [시작하기](api/getting-started.md)
+   * [시작](api/getting-started.md)
    * [사용 가능한 샌드박스](api/available.md)
    * [샌드박스 관리](api/sandboxes.md)
    * [샌드박스 유형](api/types.md)

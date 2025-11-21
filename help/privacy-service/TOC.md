@@ -8,7 +8,7 @@ role: User,Admin
 source-git-commit: 306f7fcd09f395895fde241b668c41a2479a8d2d
 workflow-type: tm+mt
 source-wordcount: '92'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -20,14 +20,14 @@ ht-degree: 100%
 * [Privacy Service 및 Experience Cloud 애플리케이션](./experience-cloud-apps.md)
 * [개인정보 보호 요청을 위한 ID 데이터](./identity-data.md)
 * [개인정보 보호 JS 라이브러리 개요](./js-library.md)
-* Privacy Service API {#api}
+* PRIVACY SERVICE API {#api}
    * [개요](./api/overview.md)
    * [Privacy Service API 인증 및 액세스](./api/getting-started.md)
    * [개인정보 보호 작업](./api/privacy-jobs.md)
    * [동의](./api/consent.md)
    * [콘텐츠](./api/content.md)
    * [부록](./api/appendix.md)
-* Privacy Service UI {#ui}
+* PRIVACY SERVICE UI {#ui}
    * [개요](./ui/overview.md)
    * [개인정보 보호 작업 관리](./ui/user-guide.md)
 * [개인정보 보호 이벤트 구독](./privacy-events.md)

@@ -51,12 +51,12 @@ ht-degree: 26%
       - [회귀](advanced-statistics/implement-models/regression.md)
       - [분류](advanced-statistics/implement-models/classification.md)
       - [클러스터링](advanced-statistics/implement-models/clustering.md)
-   - 예시 {#examples}
+   - 예 {#examples}
       - [통계 및 머신 러닝을 사용한 보트 필터링](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [SQL 기반 로지스틱 회귀 분석을 사용하여 고객 이탈 예측](advanced-statistics/examples/predict-customer-churn.md)
 - 데이터 Distiller 대상 {#data-distiller-audiences}
    - [SQL을 사용하여 외부 대상 작성](data-distiller-audiences/overview.md)
-- 예시 {#use-cases}
+- 예 {#use-cases}
    - [개요](use-cases/overview.md)
    - [찾아보기 중단됨](use-cases/abandoned-browse.md)
    - [속성 분석](use-cases/attribution-analysis.md)
@@ -113,7 +113,7 @@ ht-degree: 26%
    - [JWT를 OAuth 자격 증명으로 마이그레이션](ui/migrate-jwt-to-oauth.md)
    - [쿼리 결과에서 출력 데이터 세트 생성](ui/create-datasets.md)
 - 쿼리 서비스 API {#api}
-   - [시작하기](api/getting-started.md)
+   - [시작](api/getting-started.md)
    - [쿼리](api/queries.md)
    - [연결 매개변수](api/connection-parameters.md)
    - [예약](api/scheduled-queries.md)

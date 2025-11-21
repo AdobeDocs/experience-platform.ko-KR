@@ -98,7 +98,7 @@ UI 또는 API 사용 여부에 따라 다음 시스템 요구 사항이 적용�
 | 401 | 인증 실패 | 요청이 인증 검사를 통과하지 못했습니다. 액세스 토큰이 누락되었거나 유효하지 않을 수 있습니다. 자세한 내용은 아래의 [OAuth 토큰 오류](#oauth-token-is-missing) 섹션을 참조하십시오. |
 | 403 | 금지 | 리소스를 찾았지만 볼 수 있는 자격 증명이 없습니다. <br> 이 오류의 가능한 원인은 리소스에 액세스하거나 편집하는 데 필요한 [액세스 제어 권한](/help/access-control/home.md)이 없기 때문일 수 있습니다. Experience Platform API를 사용하기 위해 [필요한 특성 기반 액세스 제어 권한을 얻는 방법](/help/landing/api-authentication.md#get-abac-permissions)을 읽어 보십시오. </p> |
 | 404 | 찾을 수 없음 | 요청한 리소스를 서버에서 찾을 수 없습니다. 리소스가 삭제되었거나 요청한 경로가 잘못 입력되었을 수 있습니다. |
-| 500 | 내부 서버 오류 | 서버측 오류입니다. 여러 번 동시에 호출하는 경우 API 제한에 도달하고 결과를 필터링해야 할 수 있습니다. 자세한 내용은 [!DNL Catalog Service]데이터 필터링[에 대한 &#x200B;](../catalog/api/filter-data.md) API 개발자 안내서 하위 가이드를 참조하십시오. 요청을 다시 시도하기 전에 잠시 기다린 후 문제가 지속되면 관리자에게 문의하십시오. |
+| 500 | 내부 서버 오류 | 서버측 오류입니다. 여러 번 동시에 호출하는 경우 API 제한에 도달하고 결과를 필터링해야 할 수 있습니다. 자세한 내용은 [!DNL Catalog Service]데이터 필터링[에 대한 ](../catalog/api/filter-data.md) API 개발자 안내서 하위 가이드를 참조하십시오. 요청을 다시 시도하기 전에 잠시 기다린 후 문제가 지속되면 관리자에게 문의하십시오. |
 
 ## 요청 헤더 오류 {#request-header-errors}
 
@@ -168,7 +168,7 @@ API 요청에서 `Authorization` 헤더가 누락된 경우 이 오류 메시지
 }
 ```
 
-이 오류 메시지는 사용자 또는 Adobe I/O 통합([&#x200B; 헤더의 &#x200B;](#how-do-i-get-an-access-token)액세스 토큰`Authorization`(으)로 식별됨)이 [!DNL Experience Platform] 헤더에 제공된 조직의 `x-gw-ims-org-id` API를 호출할 권한이 없는 경우에 표시됩니다. 헤더에 조직에 대한 올바른 ID를 입력했는지 확인한 후 다시 시도하십시오. 조직 ID를 모를 경우 [Adobe I/O 콘솔](https://console.adobe.io)에서 찾을 수 있습니다. **통합** 탭의 **개요** 섹션으로 이동하여 특정 통합을 위해 **클라이언트 자격 증명**&#x200B;에서 ID를 찾습니다.
+이 오류 메시지는 사용자 또는 Adobe I/O 통합([ 헤더의 ](#how-do-i-get-an-access-token)액세스 토큰`Authorization`(으)로 식별됨)이 [!DNL Experience Platform] 헤더에 제공된 조직의 `x-gw-ims-org-id` API를 호출할 권한이 없는 경우에 표시됩니다. 헤더에 조직에 대한 올바른 ID를 입력했는지 확인한 후 다시 시도하십시오. 조직 ID를 모를 경우 [Adobe I/O 콘솔](https://console.adobe.io)에서 찾을 수 있습니다. **통합** 탭의 **개요** 섹션으로 이동하여 특정 통합을 위해 **클라이언트 자격 증명**&#x200B;에서 ID를 찾습니다.
 
 ### Etag 새로 고침 오류 {#refresh-etag-error}
 
