@@ -29,7 +29,7 @@ Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧�
 
 다음 비디오는 기여도 AI에 대한 이해를 돕기 위해 설계되었습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36606?captions=kor&learn=on&quality=12)
 
 ## 비즈니스 사용 사례의 예
 
