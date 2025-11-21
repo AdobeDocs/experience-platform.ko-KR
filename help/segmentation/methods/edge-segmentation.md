@@ -2,9 +2,9 @@
 title: Edge 세그멘테이션 안내서
 description: 에지 세분화를 사용하여 에지에서 즉시 Experience Platform의 대상을 평가하여 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화하는 방법에 대해 알아봅니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 1b69fa4ecadb1f6b8575358ca4a81549221430e1
+source-git-commit: d93bf7a3b7447a71fa3ead96e5c35ec9cd2dd99a
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1191'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,9 @@ Edge 세그멘테이션은 Adobe Experience Platform의 세그먼트 정의를 �
 >
 > 에지 데이터는 수집된 위치와 가장 가까운 에지 서버 위치에 저장됩니다. 이 데이터는 허브(또는 주체) Adobe Experience Platform 데이터 센터로 지정된 위치 이외의 위치에도 저장될 수 있다.
 >
-> 또한 에지 세분화 엔진은 에지 기반이 아닌 기본 ID와 일치하는 **one** 기본 표시 ID가 있는 에지의 요청만 처리합니다.
+> 에지 세분화 엔진은 에지 기반이 아닌 기본 ID와 일치하는 **one** 기본 표시 ID가 있는 에지의 요청만 처리합니다.
+>
+> 또한 Edge Segmentation은 규모에 맞게 요청을 처리하도록 설계되었기 때문에 Edge Server는 필요한 메타데이터를 동적으로 로드합니다. 따라서 첫 번째 호출에서는 샌드박스 유형에 관계없이 &quot;콜드 스타트&quot; 지연이 발생할 수 있습니다. 이 창 동안 처음 몇 번의 평가 호출로 시간 초과가 발생할 수 있습니다. 간단한 사전 예열 버스트 또는 현실적인 부하가 긍정 오류(false-positive) 테스트 실패를 제거하는 데 도움이 됩니다.
 
 ## Edge 세그멘테이션 쿼리 유형 {#query-types}
 
@@ -151,15 +153,15 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 >[!TAB 대상자 포털]
 
-대상 포털에서 **[!UICONTROL 대상 만들기]**&#x200B;를 선택합니다.
+대상 포털에서 **[!UICONTROL Create audience]**&#x200B;을(를) 선택합니다.
 
 ![대상자 만들기 단추가 대상자 포털에서 강조 표시됩니다.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
-팝오버가 나타납니다. 세그먼트 빌더를 입력하려면 **[!UICONTROL 규칙 작성]**&#x200B;을 선택하십시오.
+팝오버가 나타납니다. 세그먼트 빌더를 입력하려면 **[!UICONTROL Build rules]**&#x200B;을(를) 선택하십시오.
 
 ![대상 만들기 팝오버에서 빌드 규칙 단추가 강조 표시됩니다.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
-세그먼트 빌더 내에서 [적격 쿼리 유형](#eligible-query-types) 중 하나와 일치하는 세그먼트 정의를 만듭니다. 세그먼트 정의가 Edge 세그멘테이션에 적합하면 **[!UICONTROL Edge]**&#x200B;을(를) **[!UICONTROL 평가 메서드]**(으)로 선택할 수 있습니다.
+세그먼트 빌더 내에서 [적격 쿼리 유형](#eligible-query-types) 중 하나와 일치하는 세그먼트 정의를 만듭니다. 세그먼트 정의가 에지 세분화에 적격인 경우 **[!UICONTROL Edge]**&#x200B;을(를) **[!UICONTROL Evaluation method]**(으)로 선택할 수 있습니다.
 
 ![세그먼트 정의가 표시됩니다. 평가 유형이 강조 표시되어 가장자리 세분화를 사용하여 세그먼트 정의를 평가할 수 있음을 보여 줍니다.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
@@ -315,11 +317,11 @@ Audience Portal에서 대상을 선택하면 대상 세부 사항 페이지가 �
 
 ![에지 세분화를 사용하여 평가된 대상에 대해 대상 세부 정보 페이지가 표시됩니다.](../images/methods/edge/audience-details.png)
 
-Edge 사용 대상의 경우 **[!UICONTROL 시간 경과에 따른 프로필]** 카드가 표시되며, 여기에는 정규화된 총 지표와 새로 업데이트된 지표가 표시됩니다.
+에지 사용 대상의 경우 전체 적격 지표 및 새 대상 업데이트 지표를 보여 주는 **[!UICONTROL Profiles over time]** 카드가 표시됩니다.
 
-**[!UICONTROL 총 정규화]** 지표는 이 대상에 대한 에지 평가를 기반으로 전체 정규화 대상 수를 나타냅니다.
+**[!UICONTROL Total qualified]** 지표는 이 대상에 대한 에지 평가를 기반으로 전체 적격 대상 수를 나타냅니다.
 
-**[!UICONTROL 새로 업데이트된 대상]** 지표는 가장자리 세분화를 통해 대상 크기의 변화를 보여 주는 선 그래프로 표시됩니다. 드롭다운을 조정하여 지난 24시간, 지난 주 또는 지난 30일을 표시할 수 있습니다.
+**[!UICONTROL New audience updated]** 지표는 가장자리 세분화를 통해 대상 크기의 변화를 보여 주는 선 그래프로 표시됩니다. 드롭다운을 조정하여 지난 24시간, 지난 주 또는 지난 30일을 표시할 수 있습니다.
 
 ![시간 경과에 따른 프로필 카드가 강조 표시됩니다.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
@@ -331,5 +333,5 @@ Edge 사용 대상의 경우 **[!UICONTROL 시간 경과에 따른 프로필]** 
 
 Experience Platform 사용자 인터페이스 사용에 대한 자세한 내용은 [세그먼테이션 사용 안내서](./overview.md)를 참조하세요.
 
-에지 세분화에 대한 FAQ는 FAQ[의 &#x200B;](../faq.md#edge-segmentation)에지 세분화 섹션을 참조하십시오.
+에지 세분화에 대한 FAQ는 FAQ[의 ](../faq.md#edge-segmentation)에지 세분화 섹션을 참조하십시오.
 
