@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 대상 데이터 흐름 업데이트
 type: Tutorial
 description: 이 튜토리얼에서는 대상 데이터 흐름을 업데이트하는 단계를 설명합니다. 흐름 서비스 API를 사용하여 데이터 흐름을 활성화 또는 비활성화하거나, 기본 정보를 업데이트하거나, 대상 및 속성을 추가 및 제거하는 방법을 알아봅니다.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 7f8fbbec8927dffb3c8456b2a1d908d27d4b03c2
 workflow-type: tm+mt
-source-wordcount: '2410'
+source-wordcount: '2471'
 ht-degree: 3%
 
 ---
@@ -749,6 +749,14 @@ curl -X PATCH \
 ## 데이터 흐름에 프로필 속성 추가 {#add-profile-attribute}
 
 대상 데이터 흐름에 프로필 특성을 추가하려면 흐름 ID, 버전 및 추가할 프로필 특성을 제공하는 동안 [!DNL Flow Service] API에 대한 PATCH 요청을 수행합니다.
+
+>[!IMPORTANT]
+>
+>**대상별 매핑 요구 사항**
+>
+>이 섹션에서 설명하는 `profileSelectors` 메서드는 대부분의 스트리밍 대상에 대해 작동합니다. 그러나 **Adobe Target**&#x200B;을(를) 포함한 일부 스트리밍 대상에는 데이터 준비 매핑 세트 워크플로우가 대신 필요합니다.
+>
+>**API 응답(202)**&#x200B;이 성공한 후 프로필 특성이 Experience Platform UI에 표시되지 않으면 [대상에 대한 대상자 활성화](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)에 설명된 매핑 집합 메서드를 사용해야 합니다.
 
 **API 형식**
 

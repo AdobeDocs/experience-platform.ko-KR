@@ -2,9 +2,9 @@
 title: 데이터스트림에 대한 보트 탐지 구성
 description: 사람 트래픽과 사람 트래픽을 구분하기 위해 데이터스트림에 대한 봇 탐지를 구성하는 방법에 대해 알아봅니다.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 9a60212a9a9fa01ef8a73cfa2c16088c196788d4
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1374'
 ht-degree: 0%
 
 ---
@@ -33,13 +33,19 @@ Edge Network에 대한 요청이 보트 감지 규칙과 일치하는 경우, XD
 >
 >보트 감지는 보트 요청을 삭제하지 않습니다. 보트 채점을 사용하여 XDM 스키마만 업데이트하고 이벤트를 구성한 [데이터스트림 서비스](configure.md)에 전달합니다.
 >
->Adobe 솔루션은 다양한 방식으로 봇 점수를 처리할 수 있습니다. 예를 들어 Adobe Analytics은 자체 [보트 필터링 서비스](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=ko)를 사용하며 Edge Network에서 설정한 점수를 사용하지 않습니다. 두 서비스는 동일한 [IAB 보트 목록](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)을 사용하므로 보트 점수는 동일합니다.
+>Adobe 솔루션은 다양한 방식으로 봇 점수를 처리할 수 있습니다. 예를 들어 Adobe Analytics은 자체 [보트 필터링 서비스](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html)를 사용하며 Edge Network에서 설정한 점수를 사용하지 않습니다. 두 서비스는 동일한 [IAB 보트 목록](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)을 사용하므로 보트 점수는 동일합니다.
 
-보트 감지 규칙은 만들어진 후 Edge Network을 통해 전파되는 데 최대 15분이 걸릴 수 있습니다.
+## 기술 고려 사항 {#technical-considerations}
+
+데이터스트림에서 보트 탐지를 활성화하기 전에 정확한 결과와 원활한 구현을 보장하기 위해 몇 가지 유의해야 할 사항은 다음과 같습니다.
+
+* 보트 감지는 `edge.adobedc.net`에 전송된 인증되지 않은 요청에만 적용됩니다.
+* 인증된 트래픽은 신뢰할 수 있는 것으로 간주되므로 `server.adobedc.net`에 전송된 인증된 요청은 봇 트래픽에 대해 평가되지 않습니다.
+* 보트 감지 규칙은 만들어진 후 Edge Network을 통해 전파되는 데 최대 15분이 걸릴 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
-데이터 스트림에서 봇 탐지가 작동하려면 **[!UICONTROL 봇 탐지 정보]** 필드 그룹을 스키마에 추가해야 합니다. 스키마에 필드 그룹을 추가하는 방법에 대해 알아보려면 [XDM 스키마](../xdm/ui/resources/schemas.md#add-field-groups) 설명서를 참조하세요.
+데이터 스트림에서 봇 탐지가 작동하려면 **[!UICONTROL Bot Detection Information]** 필드 그룹을 스키마에 추가해야 합니다. 스키마에 필드 그룹을 추가하는 방법에 대해 알아보려면 [XDM 스키마](../xdm/ui/resources/schemas.md#add-field-groups) 설명서를 참조하세요.
 
 ## 데이터스트림에 대한 보트 탐지 구성 {#configure}
 
@@ -49,17 +55,17 @@ Edge Network에 대한 요청이 보트 감지 규칙과 일치하는 경우, XD
 
 ![데이터스트림 목록을 표시하는 데이터스트림 사용자 인터페이스](assets/bot-detection/datastream-list.png)
 
-데이터 스트림 세부 정보 페이지에서 오른쪽 레일의 **[!UICONTROL 보트 검색]** 옵션을 선택합니다.
+데이터 스트림 세부 정보 페이지에서 오른쪽 레일의 **[!UICONTROL Bot Detection]** 옵션을 선택합니다.
 
 ![데이터 스트림 사용자 인터페이스에서 강조 표시된 봇 검색 옵션입니다.](assets/bot-detection/bot-detection.png)
 
-**[!UICONTROL 보트 검색 규칙]** 페이지가 표시됩니다.
+**[!UICONTROL Bot Detection Rules]** 페이지가 표시됩니다.
 
 ![데이터 스트림 설정 페이지의 보트 검색 설정.](assets/bot-detection/bot-detection-page.png)
 
 [보트 탐지 규칙] 페이지에서 다음 기능을 사용하여 보트 탐지를 구성할 수 있습니다.
 
-* [[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) 사용 중.
+* [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) 사용 중.
 * 보트 감지 규칙을 만듭니다.
 
 ### IAB/ABC International Spiders and Bots List 사용 {#iab-list}
@@ -68,8 +74,8 @@ Edge Network에 대한 요청이 보트 감지 규칙과 일치하는 경우, XD
 
 IAB/ABC International Spiders and Bots List를 사용하도록 데이터 스트림을 구성하려면 다음을 수행하십시오.
 
-1. **[!UICONTROL 이 데이터 스트림에서 보트 감지를 위해 IAB/ABC International Spiders and Bots List 사용]** 옵션을 전환합니다.
-2. 보트 검색 설정을 데이터 스트림에 적용하려면 **[!UICONTROL 저장]**&#x200B;을 선택하십시오.
+1. **[!UICONTROL Use IAB/ABC International Spiders and Bots List for bot detection on this datastream]** 옵션을 전환합니다.
+2. 보트 검색 설정을 데이터 스트림에 적용하려면 **[!UICONTROL Save]**&#x200B;을(를) 선택하십시오.
 
 ![IAB 스파이더 및 보트 목록을 사용할 수 있습니다.](assets/bot-detection/bot-detection-list.png)
 
@@ -97,15 +103,15 @@ IAB/ABC International Spiders and Bots List를 사용하도록 데이터 스트�
 
 보트 탐지 규칙을 만들려면 아래 단계를 수행하십시오.
 
-1. **[!UICONTROL 새 규칙 추가]**&#x200B;를 선택합니다.
+1. **[!UICONTROL Add New Rule]**&#x200B;를 선택합니다.
 
    새 규칙 추가 단추가 강조 표시된 ![보트 검색 설정 화면입니다.](assets/bot-detection/bot-detection-new-rule.png)
 
-2. **[!UICONTROL 규칙 이름]** 필드에 규칙 이름을 입력하십시오.
+2. **[!UICONTROL Rule Name]** 필드에 규칙 이름을 입력하십시오.
 
    ![규칙 이름이 강조 표시된 보트 검색 규칙 화면](assets/bot-detection/rule-name.png)
 
-3. 새 IP 기반 규칙을 추가하려면 **[!UICONTROL 새 IP 조건 추가]**&#x200B;를 선택하십시오. IP 주소 또는 IP 주소 범위별로 규칙을 정의할 수 있습니다.
+3. 새 IP 기반 규칙을 추가하려면 **[!UICONTROL Add new IP condition]**&#x200B;을(를) 선택하십시오. IP 주소 또는 IP 주소 범위별로 규칙을 정의할 수 있습니다.
 
    ![IP 주소 필드가 강조 표시된 봇 검색 규칙 화면입니다.](assets/bot-detection/ip-address-rule.png)
 
@@ -115,7 +121,7 @@ IAB/ABC International Spiders and Bots List를 사용하도록 데이터 스트�
    >
    >IP 조건은 논리 `OR` 작업을 기반으로 합니다. 정의한 IP 조건 중 하나와 일치하는 경우 요청이 봇에서 시작된 것으로 표시됩니다.
 
-4. 규칙에 헤더 조건을 추가하려면 **[!UICONTROL 헤더 조건 그룹 추가]**&#x200B;를 선택한 다음 규칙이 사용할 헤더를 선택하십시오.
+4. 규칙에 헤더 조건을 추가하려면 **[!UICONTROL Add header conditions group]**&#x200B;을(를) 선택한 다음 규칙이 사용할 헤더를 선택합니다.
 
    헤더 조건이 강조 표시된 ![보트 검색 규칙 화면입니다.](assets/bot-detection/header-conditions.png)
 
@@ -123,7 +129,7 @@ IAB/ABC International Spiders and Bots List를 사용하도록 데이터 스트�
 
    헤더 조건이 강조 표시된 ![보트 검색 규칙 화면입니다.](assets/bot-detection/header-condition-rule.png)
 
-5. 원하는 보트 검색 규칙을 구성한 후 **[!UICONTROL 저장]**&#x200B;을 선택하여 데이터 스트림에 규칙을 적용합니다.
+5. 원하는 보트 탐지 규칙을 구성한 후 **[!UICONTROL Save]**&#x200B;을(를) 선택하여 데이터 스트림에 규칙을 적용합니다.
 
    헤더 조건이 강조 표시된 ![보트 검색 규칙 화면입니다.](assets/bot-detection/bot-detection-save.png)
 
