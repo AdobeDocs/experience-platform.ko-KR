@@ -2,7 +2,7 @@
 keywords: rtcdp b2b;b2b;계정;계정 프로필;계정 프로필 rtcdp;실시간 고객 데이터 플랫폼;
 title: Real-Time CDP B2B edition의 계정 프로필
 description: Adobe Real-Time Customer Data Platform B2B Edition을 통해 계정 프로필을 사용하여 여러 소스에서 계정 정보를 통합하는 방법에 대해 알아봅니다.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
