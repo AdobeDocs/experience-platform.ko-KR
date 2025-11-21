@@ -25,7 +25,7 @@ Adobe Experience Platform의 태그 주요 목표 중 하나는 Adobe 외부의 
 
 ### 매니페스트 파일
 
-디렉터리 루트에 매니페스트 파일([`extension.json`](./manifest.md))이 있어야 합니다. 이 파일은 확장의 구성과 특정 파일이 디렉터리 내에 있는 위치를 설명합니다. 매니페스트는 [`package.json`npm](https://docs.npmjs.com/files/package.json) 프로젝트의 [](https://www.npmjs.com/) 파일과 유사하게 작동합니다.
+디렉터리 루트에 매니페스트 파일([`extension.json`](./manifest.md))이 있어야 합니다. 이 파일은 확장의 구성과 특정 파일이 디렉터리 내에 있는 위치를 설명합니다. 매니페스트는 [`package.json`npm](https://docs.npmjs.com/files/package.json) 프로젝트의 [&#128279;](https://www.npmjs.com/) 파일과 유사하게 작동합니다.
 
 ### 라이브러리 모듈
 

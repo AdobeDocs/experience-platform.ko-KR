@@ -41,7 +41,7 @@ Experience Platform 경고는 한 번 전송하거나 해결할 때까지 사전
 
 | 구성 요소 | 설명 |
 | --- | --- |
-| **지표** | 실패한 일괄 처리 수집 이벤트 수([)와 같이 값이 경고를 트리거하는 Observability ](../api/metrics.md#available-metrics)metric`timeseries.ingestion.dataset.batchfailed.count`. |
+| **지표** | 실패한 일괄 처리 수집 이벤트 수([)와 같이 값이 경고를 트리거하는 Observability &#x200B;](../api/metrics.md#available-metrics)metric`timeseries.ingestion.dataset.batchfailed.count`. |
 | **조건** | 특정 수를 초과하는 카운트 지표와 같이 true로 확인될 경우 경고를 트리거하는 지표와 관련된 조건입니다. 이 조건은 미리 정의된 시간 윈도우(time window)와 연관될 수 있다. |
 | **창** | (선택 사항) 경보에 대한 조건은 미리 정의된 시간 윈도우로 제한될 수 있다. 예를 들어 지난 5분 동안 실패한 일괄 처리 수에 따라 경고가 트리거될 수 있습니다. |
 | **작업** | 경고가 트리거되면 작업이 수행됩니다. 특히 미리 구성된 웹후크 또는 Experience Platform UI와 같은 게재 채널을 통해 메시지를 적용 가능한 수신자에게 보냅니다. |
