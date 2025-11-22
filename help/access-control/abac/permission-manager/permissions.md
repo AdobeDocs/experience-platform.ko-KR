@@ -22,8 +22,8 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_permission_manager"
 >title="권한 관리자"
->abstract="페이지의 드롭다운 선택기를 사용하여 사용자 및 역할에 대해 다양한 세부 수준의 액세스 수준 보고서를 받습니다."
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=ko" text="Permission manager" -->
+>abstract="페이지의 드롭다운 선택기를 사용하여 사용자 및 역할에 대한 다양한 세부성 수준의 액세스 수준 보고서를 확인할 수 있습니다."
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
 
 드롭다운을 사용하여 **[!UICONTROL Users]** 특성을 선택합니다.
 
