@@ -3,10 +3,10 @@ title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 69a1ae08fefebb7fed54564ed06f42af523d2903
+source-git-commit: de161bcb29a0d4fc9b0c419506537b18255c79a4
 workflow-type: tm+mt
-source-wordcount: '2656'
-ht-degree: 8%
+source-wordcount: '3005'
+ht-degree: 7%
 
 ---
 
@@ -50,16 +50,16 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 만들어진 프로필 및 경험 이벤트 데이터 세트입니다.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=ko#profile-attribute-datasets">System-generated Profile Snapshot dataset</a>.</li></td>
+    <td><ul><li>소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 만들어진 프로필 및 경험 이벤트 데이터 세트입니다.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">시스템 생성 프로필 스냅숏 데이터 집합</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ko#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ko#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -69,7 +69,7 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
   <tr>
     <td>Data Distiller</td>
     <td>Data Distiller (추가 기능)</td>
-    <td>Derived datasets created through Query Service.</td>
+    <td>쿼리 서비스를 통해 만들어진 파생 데이터 세트입니다.</td>
   </tr>
 </tbody>
 </table>
@@ -78,7 +78,7 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
 
 이 페이지에 설명된 워크플로에 대한 전체적인 설명, 데이터 세트 내보내기 기능을 사용할 때의 이점 및 몇 가지 제안된 사용 사례를 확인하려면 아래 비디오를 보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448825?captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## 지원되는 대상 {#supported-destinations}
 
@@ -143,6 +143,10 @@ Experience Platform 카탈로그의 일부 파일 기반 대상은 대상 활성
 
 ![내보낼 데이터 세트를 선택할 수 있는 데이터 세트 선택 단계를 표시하는 데이터 세트 내보내기 워크플로우입니다.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
+>[!NOTE]
+>
+>여기에서 선택한 모든 데이터 세트가 동일한 내보내기 일정을 공유합니다. 서로 다른 내보내기 일정(예: 일부 데이터 세트의 경우 증분 내보내기, 다른 데이터 세트의 경우 1회 전체 내보내기)이 필요한 경우 각 일정 유형에 대해 별도의 데이터 흐름을 만듭니다.
+
 ## 데이터 세트 내보내기 예약 {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -160,13 +164,27 @@ Experience Platform 카탈로그의 일부 파일 기반 대상은 대상 활성
 >title="이 데이터 흐름 본문의 종료 일자 업데이트"
 >abstract="최근 이 대상에 대한 업데이트로 인해 이제 데이터 흐름에 종료 일자가 필요합니다. Adobe는 기본 종료 일자를 2025년 9월 1일로 설정했습니다. 원하는 종료 일자로 업데이트하지 않으면 기본 일자에 데이터 내보내기가 중단됩니다."
 
-Use the **[!UICONTROL Scheduling]** step to:
+>[!IMPORTANT]
+>
+>**일정은 데이터 흐름의 모든 데이터 세트에 적용됩니다**
+>
+>내보내기 일정을 구성하거나 수정하면 현재 구성 중인 데이터 흐름을 통해 내보내는 **모든 데이터 세트**&#x200B;에 적용됩니다. 동일한 데이터 흐름 내에서 개별 데이터 세트에 대해 다른 일정을 설정할 수 없습니다.
+>
+>서로 다른 데이터 세트에 대해 서로 다른 내보내기 일정이 필요한 경우 각 일정 유형에 대해 별도의 데이터 흐름(별도의 대상 연결)을 만들어야 합니다.
+>
+>**예:** 데이터 세트 A를 점진적으로 내보내고 데이터 세트 B를 일회성 전체 내보내기 일정과 함께 추가한 경우 데이터 세트 A도 일회성 전체 내보내기 일정으로 업데이트됩니다.
 
-* Set a start date and an end date, as well as an export cadence for your dataset exports.
-* Configure if the exported dataset files should export the complete membership of the dataset or just incremental changes to the membership on each export occurrence.
-* Customize the folder path in your storage location where datasets should be exported. Read more about how to [edit the export folder path](#edit-folder-path).
+**[!UICONTROL Scheduling]** 단계를 사용하여 다음을 수행합니다.
+
+* 데이터 세트 내보내기에 대한 내보내기 케이던스뿐만 아니라 시작 날짜 및 종료 날짜를 설정합니다.
+* 내보낸 데이터 세트 파일이 데이터 세트의 전체 멤버십을 내보내야 하는지 또는 각 내보내기 발생 시 멤버십에 대한 증분 변경만 내보내야 하는지 여부를 구성합니다.
+* 데이터 세트를 내보내야 하는 저장소 위치의 폴더 경로를 사용자 지정합니다. [내보내기 폴더 경로를 편집](#edit-folder-path)하는 방법에 대해 자세히 알아보세요.
 
 페이지의 **[!UICONTROL Edit schedule]** 컨트롤을 사용하여 내보내기 케이던스를 편집하고 전체 파일을 내보내는지 증분 파일을 내보내는지 여부를 선택합니다.
+
+>[!WARNING]
+>
+>여기에서 일정을 수정하면 이 데이터 흐름의 모든 데이터 세트에 대한 내보내기 동작이 업데이트됩니다. 이 데이터 흐름에 여러 데이터 세트가 포함되어 있는 경우 모든 데이터 세트가 이 변경 사항의 영향을 받습니다.
 
 ![예약 단계에서 강조 표시된 예약 컨트롤을 편집합니다.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
@@ -191,7 +209,7 @@ Use the **[!UICONTROL Scheduling]** step to:
 
 >[!NOTE]
 > 
->For dataset exports, the file names have a preset, default format, which cannot be modified. See the section [Verify successful dataset export](#verify) for more information and examples of exported files.
+>데이터 세트 내보내기의 경우 파일 이름에 수정할 수 없는 사전 설정된 기본 형식이 있습니다. 내보낸 파일에 대한 자세한 내용과 예를 보려면 [데이터 집합 내보내기 성공 확인](#verify) 섹션을 참조하십시오.
 
 ## 폴더 경로 편집 {#edit-folder-path}
 
@@ -213,13 +231,22 @@ Use the **[!UICONTROL Scheduling]** step to:
 
 ![사용자 지정 폴더 모달 창에서 강조 표시된 매크로 선택.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-원하는 매크로를 선택하면 저장소 위치에 생성되는 폴더 구조의 미리보기가 표시됩니다. 폴더 구조의 첫 번째 수준은 데이터 집합을 내보내기 위해 **[!UICONTROL Folder path]**&#x200B;대상에 연결[할 때 표시한 &#x200B;](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)을(를) 나타냅니다.
+원하는 매크로를 선택하면 저장소 위치에 생성되는 폴더 구조의 미리보기가 표시됩니다. 폴더 구조의 첫 번째 수준은 데이터 집합을 내보내기 위해 **[!UICONTROL Folder path]**&#x200B;대상에 연결[할 때 표시한 ](/help/destinations/ui/connect-destination.md#set-up-connection-parameters)을(를) 나타냅니다.
 
 ![사용자 지정 폴더 모달 창에서 강조 표시된 폴더 경로를 미리 봅니다.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
+### 여러 데이터 세트 관리에 대한 우수 사례 {#best-practices-multiple-datasets}
+
+여러 데이터 세트를 내보낼 때 다음 모범 사례를 고려하십시오.
+
+* **동일한 일정 요구 사항**: 더 쉽게 관리할 수 있도록 동일한 내보내기 일정(빈도, 유형)이 필요한 데이터 세트를 단일 데이터 흐름으로 그룹화합니다.
+* **다른 일정 요구 사항**: 다른 내보내기 일정 또는 내보내기 유형(증분 대 전체)이 필요한 데이터 세트에 대해 별도의 데이터 흐름을 만듭니다. 이렇게 하면 특정 요구 사항에 따라 각 데이터 세트를 내보낼 수 있습니다.
+* **수정하기 전에 검토**: 기존 데이터 흐름의 일정을 변경하기 전에 해당 데이터 흐름을 통해 이미 내보내지고 있는 데이터 세트를 검토하여 내보내기 동작이 의도하지 않게 변경되는 것을 방지하십시오.
+* **설정을 문서화하십시오**: 특히 여러 대상에 걸쳐 여러 내보내기 일정을 관리할 때 데이터 흐름이 있는 데이터 세트를 추적하십시오.
+
 ## 검토 {#review}
 
-**[!UICONTROL Review]** 페이지에서 선택 항목의 요약을 볼 수 있습니다. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start exporting datasets to the destination.
+**[!UICONTROL Review]** 페이지에서 선택 항목의 요약을 볼 수 있습니다. 흐름을 분할하려면 **[!UICONTROL Cancel]**&#x200B;을(를) 선택하고, 설정을 수정하려면 **[!UICONTROL Back]**&#x200B;을(를) 선택하고, 선택을 확인하고 데이터 세트를 대상으로 내보내기를 시작하려면 **[!UICONTROL Finish]**&#x200B;을(를) 선택하십시오.
 
 ![검토 단계를 표시하는 데이터 집합 내보내기 워크플로우입니다.](/help/destinations/assets/ui/export-datasets/review.png)
 
@@ -231,7 +258,7 @@ Experience Platform은 사용자가 지정한 저장 위치에 폴더 구조를 
 
 >[!TIP]
 > 
->이 폴더 구조의 첫 번째 수준인 `folder-name-you-provided`은(는) 데이터 집합을 내보내기 위해 **[!UICONTROL Folder path]**&#x200B;대상에 연결[할 때 표시한 &#x200B;](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)을(를) 나타냅니다.
+>이 폴더 구조의 첫 번째 수준인 `folder-name-you-provided`은(는) 데이터 집합을 내보내기 위해 **[!UICONTROL Folder path]**&#x200B;대상에 연결[할 때 표시한 ](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)을(를) 나타냅니다.
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -270,17 +297,17 @@ JSON 파일로 내보내기는 압축 모드에서 *지원됩니다*. Parquet �
 
    ![활성화 데이터 열에서 사용 가능한 데이터 세트 탐색 옵션이 강조 표시되어 있습니다.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-3. The **[!UICONTROL Activation data]** page for the destination appears. 데이터 세트 목록 왼쪽의 확인란을 사용하여 제거할 데이터 세트를 선택한 다음 오른쪽 레일에서 **[!UICONTROL Remove datasets]**&#x200B;을(를) 선택하여 데이터 세트 제거 확인 대화 상자를 트리거합니다.
+3. 대상에 대한 **[!UICONTROL Activation data]** 페이지가 나타납니다. 데이터 세트 목록 왼쪽의 확인란을 사용하여 제거할 데이터 세트를 선택한 다음 오른쪽 레일에서 **[!UICONTROL Remove datasets]**&#x200B;을(를) 선택하여 데이터 세트 제거 확인 대화 상자를 트리거합니다.
 
-   ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png)
+   ![오른쪽 레일에서 데이터 집합 제거 컨트롤을 표시하는 데이터 집합 제거 대화 상자.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
-4. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination.
+4. 확인 대화 상자에서 **[!UICONTROL Remove]**&#x200B;을(를) 선택하여 대상으로 내보내기에서 데이터 세트를 즉시 제거합니다.
 
-   ![Dialog showing the Confirm dataset removal option from the dataflow.](../assets/ui/export-datasets/remove-dataset-confirm.png)
+   ![데이터 흐름에서 데이터 집합 제거 확인 옵션을 보여 주는 대화 상자.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
 ## 데이터 세트 내보내기 권한 {#licensing-entitlement}
 
-연간 각 Experience Platform 애플리케이션에 대해 내보낼 수 있는 데이터의 양을 파악하려면 제품 설명 문서를 참조하십시오. 예를 들어 Real-Time CDP 제품 설명 [여기](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)를 볼 수 있습니다.
+연간 각 Experience Platform 애플리케이션에 대해 내보낼 수 있는 데이터의 양을 파악하려면 제품 설명 문서를 참조하십시오. 예를 들어 Real-Time CDP 제품 설명 [여기](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)를 볼 수 있습니다.
 
 다른 애플리케이션에 대한 데이터 내보내기 권한은 가산되지 않습니다. 예를 들어 Real-Time CDP Ultimate 및 Adobe Journey Optimizer Ultimate을 구매하는 경우 제품 설명에 따라 프로필 내보내기 권한이 두 권한 중 더 커지게 됩니다. 볼륨 권한은 라이선스가 부여된 총 프로필 수를 계산하고 Real-Time CDP Prime의 경우 500KB 또는 Real-Time CDP Ultimate의 경우 700KB를 곱하여 권한이 부여된 데이터의 양을 결정합니다.
 
@@ -294,9 +321,9 @@ JSON 파일로 내보내기는 압축 모드에서 *지원됩니다*. Parquet �
 
 * Experience Platform은 작은 데이터 세트의 경우에도 여러 파일을 내보낼 수 있습니다. 데이터 세트 내보내기는 시스템 간 통합을 위해 설계되었으며 성능에 최적화되었기 때문에 내보낸 파일 수를 사용자 지정할 수 없습니다.
 * 내보낸 파일 이름은 현재 사용자 지정할 수 없습니다.
-* 현재 UI가 대상으로 내보내는 데이터 세트를 삭제할 수 있도록 차단하지 않습니다. 대상으로 내보내는 데이터 세트는 삭제하지 마십시오. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
-* Monitoring metrics for dataset exports are currently mixed with numbers for profile exports so they do not reflect the true export numbers.
-* Data with a timestamp older than 365 days is excluded from dataset exports. For more information, view the [guardrails for scheduled dataset exports](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
+* 현재 UI가 대상으로 내보내는 데이터 세트를 삭제할 수 있도록 차단하지 않습니다. 대상으로 내보내는 데이터 세트는 삭제하지 마십시오. 데이터 집합을 삭제하기 전에 대상 데이터 흐름에서 [데이터 집합을 제거](#remove-dataset)합니다.
+* 데이터 세트 내보내기에 대한 모니터링 지표는 현재 프로필 내보내기에 대한 숫자와 혼합되므로 실제 내보내기 숫자를 반영하지 않습니다.
+* 타임스탬프가 365일보다 오래된 데이터는 데이터 세트 내보내기에서 제외됩니다. 자세한 내용은 예약된 데이터 세트 내보내기에 대한 [보호 기능](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)을 참조하십시오.
 
 ## 자주 묻는 질문 {#faq}
 
@@ -318,7 +345,7 @@ JSON 파일로 내보내기는 압축 모드에서 *지원됩니다*. Parquet �
 내보내기 예약 옵션이 있습니다. 파일 복사를 지연하거나 순서를 지정하는 옵션은 없습니다. 이러한 파일은 생성되는 즉시 저장소 위치에 복사됩니다.
 +++
 
-**What formats are available for the manifest file?**
+**매니페스트 파일에 사용할 수 있는 형식은 무엇입니까?**
 
 +++답변
 매니페스트 파일은 .json 형식입니다.
@@ -352,4 +379,10 @@ JSON 파일로 내보내기는 압축 모드에서 *지원됩니다*. Parquet �
 
 +++답변
 대부분의 시스템 오류 유형에 대해 자동으로 다시 시도가 수행됩니다.
++++
+
+**동일한 데이터 흐름에서 서로 다른 데이터 세트에 대해 서로 다른 내보내기 일정을 설정할 수 있습니까?**
+
++++답변
+아니요. 단일 데이터 흐름 내의 모든 데이터 세트가 동일한 내보내기 일정을 공유합니다. 서로 다른 데이터 세트에 대해 서로 다른 내보내기 일정이 필요한 경우 각 일정 유형에 대해 별도의 데이터 흐름(대상 연결)을 만들어야 합니다. 예를 들어 데이터 세트 A를 매일 증분하여 내보내고 데이터 세트 B를 1회 전체 내보내기로 내보내려면 두 개의 개별 데이터 흐름을 만들어야 합니다.
 +++
