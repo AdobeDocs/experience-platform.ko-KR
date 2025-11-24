@@ -2,9 +2,9 @@
 title: Demandbase 사용자 연결
 description: 이 대상을 사용하여 마케팅 및 판매의 다른 다운스트림 사용 사례에서 대상을 활성화하고 Demandbase 타사 데이터로 대상자를 보강합니다.
 exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: cc05ca282cdfd012366e3deccddcae92a29fef1c
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '891'
 ht-degree: 4%
 
 ---
@@ -106,10 +106,25 @@ ht-degree: 4%
 
 | 소스 필드 | 대상 필드 | 설명 |
 |--------------|--------------|-------------|
+| `xdm: workEmail.address` | `Identity: email` | 개인의 회사 이메일 주소 |
+
+### 권장 매핑 {#recommended-mappings}
+
+최적의 일치 정확성을 위해 위의 [필수 매핑](#mandatory-mappings) 외에 다음 선택적 매핑을 활성화 흐름에 포함하십시오.
+
+| 소스 필드 | 대상 필드 | 설명 |
+|--------------|--------------|-------------|
 | `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | 개인용 고유 식별자 |
 | `xdm: person.name.lastName` | `xdm: lastName` | 개인의 성 |
 | `xdm: person.name.firstName` | `xdm: firstName` | 개인의 이름 |
-| `xdm: workEmail.address` | `Identity: email` | 개인의 회사 이메일 주소 |
+
+### 매핑 모범 사례 {#mapping-best-practices}
+
+필드를 [!DNL Demandbase People]에 매핑할 때 다음 일치 동작을 고려하십시오.
+
+* **기본 일치**: `externalPersonId`이(가) 있는 경우 Demandbase는 이 값을 사용자 일치를 위한 기본 식별자로 사용합니다.
+* **대체 항목 일치**: `externalPersonId`을(를) 사용할 수 없는 경우 Demandbase는 식별을 위해 `email` 필드를 사용합니다.
+* **필수 및 권장**: Demandbase에는 `email`만 필요하지만 Adobe에서는 일치하는 정확도와 캠페인 성능을 개선하기 위해 위의 권장 매핑 테이블에서 사용 가능한 모든 필드를 매핑하는 것을 권장합니다.
 
 ![Demandbase 사용자 매핑](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
 
@@ -120,4 +135,4 @@ ht-degree: 4%
 * **Demandbase API 보호**: 대상을 Demandbase로 내보냈고 Experience Platform에서 내보내기가 성공했지만 일부 데이터가 Demandbase에 도달하지 못한 경우 Demandbase 측에서 API 제한이 발생할 수 있습니다. 자세한 내용은 해당 담당자에게 문의하십시오.
 * **목록 삭제**: 사람 목록은 고유하므로 이미 사용 중인 이름으로 새 목록을 다시 만들 수 없습니다. 목록에서 사용자를 제거하면 더 이상 사용할 수 없지만 삭제되지는 않습니다.
 * **활성화 시간**: Demandbase에서 데이터를 로드하면 익일 처리가 적용됩니다.
-* **대상 이름 지정**: 같은 이름의 계정 대상이 Demandbase에 대해 이전에 활성화되었다면 다른 데이터 흐름을 통해 Demandbase 대상에 대해 다시 활성화할 수 없습니다.
+* **대상 이름 지정**: 같은 이름을 가진 사용자 대상이 Demandbase에 대해 이전에 활성화되었다면 다른 데이터 흐름을 통해 Demandbase 대상에 대해 다시 활성화할 수 없습니다.

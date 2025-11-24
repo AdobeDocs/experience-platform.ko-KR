@@ -1,14 +1,14 @@
 ---
 title: Demandbase 연결
 description: 이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대한 계정 대상자를 활성화할 수 있습니다. DemandBase의 B2B Demand Side Platform(DSP)을 통해 대상 계정의 관련 페르소나와 역할에 광고를 게재하십시오. 대상 계정은 마케팅과 판매의 다른 다운스트림 사용 사례를 위해 Demandbase 서드파티 데이터로 강화할 수도 있습니다.
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
-badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: cc05ca282cdfd012366e3deccddcae92a29fef1c
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 17%
+source-wordcount: '785'
+ht-degree: 16%
 
 ---
 
@@ -110,5 +110,7 @@ ht-degree: 17%
 
 ## 추가 참고 사항 및 중요한 설명선 {#additional-notes}
 
-* 같은 이름의 계정 대상이 이전에 Demandbase에 활성화되었을 경우 Demandbase 대상에 대한 다른 데이터 흐름을 통해 다시 활성화할 수 없습니다.
-* Demandbase로 대상을 내보내고 Experience Platform에서 성공적으로 내보냈지만 모든 데이터가 Demandbase에 도달하지 않은 경우 Demandbase 측에서 API 제한이 발생할 수 있습니다. 자세한 내용은 해당 담당자에게 문의하십시오.
+* **대상 이름 지정**: 같은 이름의 계정 대상이 Demandbase에 대해 이전에 활성화되었다면 다른 데이터 흐름을 통해 Demandbase 대상에 대해 다시 활성화할 수 없습니다.
+* **Demandbase API 보호**: 대상을 Demandbase로 내보냈고 Experience Platform에서 내보내기가 성공했지만 일부 데이터가 Demandbase에 도달하지 못한 경우 Demandbase 측에서 API 제한이 발생할 수 있습니다. 자세한 내용은 해당 담당자에게 문의하십시오.
+* **목록 삭제**: 계정 목록이 고유하므로 이미 사용 중인 이름의 새 목록을 다시 만들 수 없습니다. 목록에서 계정을 제거하면 더 이상 사용할 수 없지만 삭제되지는 않습니다.
+* **활성화 시간**: Demandbase에서 데이터를 로드하면 익일 처리가 적용됩니다.
