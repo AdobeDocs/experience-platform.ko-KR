@@ -3,9 +3,9 @@ title: 작업 주문 삭제 기록
 description: 데이터 위생 API에서 /workorder 끝점을 사용하여 Adobe Experience Platform에서 레코드 삭제 작업 주문을 관리하는 방법을 알아봅니다. 이 안내서에서는 할당량, 처리 타임라인 및 API 사용을 다룹니다.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 4f4b668c2b29228499dc28b2c6c54656e98aaeab
+source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2440'
 ht-degree: 1%
 
 ---
@@ -300,6 +300,110 @@ curl -X POST \
 >[!NOTE]
 >
 >레코드 삭제 작업 주문에 대한 작업 속성은 현재 API 응답에서 `identity-delete`입니다. API가 다른 값(예: `delete_identity`)을 사용하도록 변경되면 이 설명서도 그에 따라 업데이트됩니다.
+
+## 레코드 삭제 요청을 위해 ID 목록을 JSON으로 변환
+
+식별자가 포함된 CSV, TSV 또는 TXT 파일에서 레코드 삭제 작업 순서를 만들려면 전환 스크립트를 사용하여 `/workorder` 끝점에 필요한 JSON 페이로드를 생성할 수 있습니다. 이 방법은 기존 데이터 파일로 작업할 때 특히 유용합니다. 즉시 사용할 수 있는 스크립트 및 포괄적인 지침을 보려면 [csv에서 데이터로 위생 GitHub 저장소](https://github.com/perlmonger42/csv-to-data-hygiene)를 방문하십시오.
+
+### JSON 페이로드 생성
+
+다음 bash 스크립트 예는 Python 또는 Ruby에서 변환 스크립트를 실행하는 방법을 보여줍니다.
+
+>[!BEGINTABS]
+
+>[!TAB Python 스크립트를 실행하는 예제]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.py sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!TAB Ruby 스크립트를 실행하는 예제]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.rb sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!ENDTABS]
+
+아래 표에서는 기본 스크립트의 매개 변수에 대해 설명합니다.
+
+| 매개변수 | 설명 |
+| ---           | ---     |
+| `verbose` | 자세한 정보 출력을 활성화합니다. |
+| `column` | 삭제할 ID 값이 포함된 열의 인덱스(1 기반) 또는 헤더 이름입니다. 지정하지 않은 경우 기본값은 첫 번째 열로 설정됩니다. |
+| `namespace` | ID 네임스페이스를 지정하는 `code` 속성이 있는 개체(예: &quot;email&quot;). |
+| `dataset-id` | 작업 주문과 연계된 데이터 세트에 대한 고유 식별자. 요청이 모든 데이터 세트에 적용되는 경우 이 필드는 `ALL`(으)로 설정됩니다. |
+| `description` | 작업 주문 삭제 레코드에 대한 설명. |
+| `output-dir` | 출력 JSON 페이로드를 쓸 디렉터리입니다. |
+
+{style="table-layout:auto"}
+
+아래 예제는 CSV, TSV 또는 TXT 파일에서 변환된 성공적인 JSON 페이로드를 보여 줍니다. 지정된 네임스페이스와 연결된 레코드가 포함되어 있으며 전자 메일 주소로 식별된 레코드를 삭제하는 데 사용됩니다.
+
+```json
+{
+  "action": "delete_identity",
+  "datasetId": "66f4161cc19b0f2aef3edf10",
+  "displayName": "output/sample-big-001.json",
+  "description": "a simple sample",
+  "identities": [
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "1"
+    },
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "2"
+    }
+  ]
+}
+```
+
+다음 표에서는 JSON 페이로드의 속성에 대해 설명합니다.
+
+| 속성 | 설명 |
+| ---          | ---     |
+| `action` | 작업 주문 삭제 레코드에 대해 요청한 작업입니다. 변환 스크립트에 의해 자동으로 `delete_identity`(으)로 설정됩니다. |
+| `datasetId` | 데이터 세트에 대한 고유 식별자입니다. |
+| `displayName` | 사람이 인식할 수 있는 이 레코드의 레이블은 작업 순서를 삭제합니다. |
+| `description` | 작업 주문 삭제 레코드에 대한 설명. |
+| `identities` | 각각 <br>을(를) 포함하는 개체 배열<ul><li> `namespace`: ID 네임스페이스를 지정하는 `code` 속성이 있는 개체(예: &quot;email&quot;).</li><li> `id`: 이 네임스페이스에 대해 삭제할 ID 값입니다.</li></ul> |
+
+{style="table-layout:auto"}
+
+### 생성된 JSON 데이터를 `/workorder` 끝점에 제출
+
+요청을 제출하려면 [레코드 삭제 작업 주문 만들기](#create) 섹션의 지침을 따르십시오. `-d` POST 요청을 `curl` API 끝점으로 보낼 때 변환된 JSON 페이로드를 요청 본문(`/workorder`)으로 사용해야 합니다.
 
 ## 특정 레코드 삭제 작업 주문에 대한 세부 정보 검색 {#lookup}
 
