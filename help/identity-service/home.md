@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ID 서비스 개요
 description: Adobe Experience Platform Identity Service를 사용하면 디바이스와 시스템 간에 ID를 연결하여 고객과 고객의 행동을 더 잘 볼 수 있으므로 효과적인 개인 디지털 경험을 실시간으로 제공할 수 있습니다.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: f791940300036159ceaad11ff725eecfaa8332f4
+source-git-commit: 8dc4393232f5e256f375d2104d4fe0eaffc1d716
 workflow-type: tm+mt
 source-wordcount: '1574'
 ht-degree: 2%
@@ -105,7 +105,7 @@ ID 그래프는 서로 다른 ID 네임스페이스 간의 관계 맵으로, 고
 
 다음 비디오는 ID 및 ID 그래프에 대한 이해를 돕기 위한 것입니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422775?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Experience Platform 인프라 내에서 ID 서비스의 역할 이해
 
