@@ -4,9 +4,9 @@ title: 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로
 description: 흐름 서비스 API를 사용하여 적격 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 290c20d3deb70372fb2fc691c6e6d04d34a72853
 workflow-type: tm+mt
-source-wordcount: '4975'
+source-wordcount: '4976'
 ht-degree: 4%
 
 ---
@@ -376,7 +376,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![사용자가 켜져 있는 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
-[기본 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)은(는) 대상에 자격 증명을 안전하게 저장합니다. 대상 유형에 따라 해당 대상에 대해 인증하는 데 필요한 자격 증명이 달라질 수 있습니다. 이러한 인증 매개 변수를 찾으려면 먼저 `connection spec`대상을 내보낼 대상 선택[&#x200B; 섹션에 설명된 대로 원하는 대상에 대해 &#x200B;](#select-destination)을(를) 검색한 다음 응답의 `authSpec`을(를) 살펴보십시오. 지원되는 모든 대상의 `authSpec` 속성을 보려면 아래 탭을 참조하십시오.
+[기본 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)은(는) 대상에 자격 증명을 안전하게 저장합니다. 대상 유형에 따라 해당 대상에 대해 인증하는 데 필요한 자격 증명이 달라질 수 있습니다. 이러한 인증 매개 변수를 찾으려면 먼저 `connection spec`대상을 내보낼 대상 선택[ 섹션에 설명된 대로 원하는 대상에 대해 ](#select-destination)을(를) 검색한 다음 응답의 `authSpec`을(를) 살펴보십시오. 지원되는 모든 대상의 `authSpec` 속성을 보려면 아래 탭을 참조하십시오.
 
 >[!BEGINTABS]
 
@@ -1096,7 +1096,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ### 내보낸 파일에 암호화 추가
 
-선택적으로 내보낸 파일에 암호화를 추가할 수 있습니다. 이렇게 하려면 `encryptionSpecs`에서 항목을 추가해야 합니다. 필수 매개 변수가 강조 표시된 아래 요청 예를 참조하십시오.
+선택적으로 내보낸 파일에 암호화를 추가할 수 있습니다. 이렇게 하려면 `encryption` 개체에서 항목을 추가해야 합니다. 필수 매개 변수가 강조 표시된 아래 요청 예를 참조하십시오.
 
 
 >[!BEGINSHADEBOX]
@@ -1104,7 +1104,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 +++ 클라우드 스토리지 대상에 대한 암호화 사양 보기
 
 ```json {line-numbers="true" start-line="1" highlight="26-27"}
-           "encryptionSpecs": [
+           "encryption": [
                 {
                     "name": "File PGP/GPG Encryption",
                     "type": "FileAsymmetric",
@@ -1163,12 +1163,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "sshKey": "<Add SSH key>"
       }
     },
-  "encryptionSpecs":{
-     "specName": "Encryption spec",
-     "params": {
-         "encryptionAlgo":"PGPGPG",
-         "publicKey":"<Add public key>"
-      }            
+  "encryption": {
+    "specName": "File Encryption",
+        "params": {
+            "encryptionAlgo": "PGP/GPG",
+            "publicKey": "<Add public key>"
+        }
     },
   "connectionSpec": {
     "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec
@@ -1221,7 +1221,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { //describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1432,7 +1432,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1632,7 +1632,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1822,11 +1822,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
         "version": "1.0",
         "authSpec": [],
-        "encryptionSpecs": [],
-            "targetSpec": { // describes the target connection parameters
-                "name": "User based target",
-                "type": "UserNamespace",
-                "spec": {
+        "encryption": [],
+        "targetSpec": { // describes the target connection parameters
+            "name": "User based target",
+            "type": "UserNamespace",
+            "spec": {
                     "$schema": "http://json-schema.org/draft-07/schema#",
                     "type": "object",
                     "properties": {
@@ -2013,7 +2013,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -2212,7 +2212,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -2402,7 +2402,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)대상 세부 정보 채우기[!DNL Amazon S3] 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)대상 세부 정보 채우기[!DNL Amazon S3] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2496,7 +2496,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details)대상 세부 정보 채우기[!DNL Azure Blob Storage] 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details)대상 세부 정보 채우기[!DNL Azure Blob Storage] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2590,7 +2590,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 가져오는 방법에 대한 자세한 내용은 Azure [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details)대상 세부 정보를 채우기[!DNL Data Lake Gen 2(ADLS Gen2)] 섹션을 참조하세요.
+>필요한 대상 매개 변수를 가져오는 방법에 대한 자세한 내용은 Azure [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details)대상 세부 정보를 채우기[!DNL Data Lake Gen 2(ADLS Gen2)] 섹션을 참조하세요.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2683,7 +2683,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details)대상 세부 정보 채우기[!DNL Data Landing Zone] 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details)대상 세부 정보 채우기[!DNL Data Landing Zone] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2776,7 +2776,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)대상 세부 정보 채우기[!DNL Google Cloud Storage] 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)대상 세부 정보 채우기[!DNL Google Cloud Storage] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
