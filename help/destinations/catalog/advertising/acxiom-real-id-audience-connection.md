@@ -114,11 +114,11 @@ ht-degree: 5%
 
 
 
-**[!UICONTROL Source Field]** 열에서 해당 대상 필드에 매핑할 원본 특성의 이름을 입력하거나 화살표 아이콘을 선택하여 **[!UICONTROL  Select source field]** 화면을 엽니다. **[!UICONTROL Next]**을(를) 선택합니다.
+**[!UICONTROL Source Field]** 열에서 해당 대상 필드에 매핑할 원본 특성의 이름을 입력하거나 화살표 아이콘을 선택하여 **[!UICONTROL &#x200B; Select source field]** 화면을 엽니다. **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 ![매핑 화면](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 
-[!DNL Adobe's] 표준 스키마를 사용하지 않는 경우 쿼리 서비스를 사용하여 [ 표준 스키마를 필드 이름으로 채우는 방법에 대한 자세한 내용은 ](../../../query-service/ui/overview.md)쿼리 서비스 UI 안내서[!DNL Adobe] 설명서를 참조하십시오.
+[!DNL Adobe's] 표준 스키마를 사용하지 않는 경우 쿼리 서비스를 사용하여 [&#x200B; 표준 스키마를 필드 이름으로 채우는 방법에 대한 자세한 내용은 &#x200B;](../../../query-service/ui/overview.md)쿼리 서비스 UI 안내서[!DNL Adobe] 설명서를 참조하십시오.
 
 
 ### 검토 {#review}
