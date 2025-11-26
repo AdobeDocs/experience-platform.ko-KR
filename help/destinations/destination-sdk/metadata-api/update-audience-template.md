@@ -2,7 +2,7 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 템플릿을 업데이트하는 데 사용되는 API 호출을 구현합니다.
 title: 대상자 템플릿 업데이트
 exl-id: 8185a015-256d-46a7-af33-8475832fb6c1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fda542e62c448788099d63951277278a146fdfc8
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 1%
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 ## 대상자 템플릿 업데이트 {#create}
 
-업데이트된 페이로드로 `/authoring/audience-templates` 끝점에 대해 `PUT` 요청을 수행하여 [기존](create-audience-template.md) 대상 템플릿을 업데이트할 수 있습니다.
+업데이트된 페이로드로 [ 끝점에 대해 ](create-audience-template.md) 요청을 수행하여 `PUT`기존`/authoring/audience-templates` 대상 템플릿을 업데이트할 수 있습니다.
 
 기존 대상 템플릿과 해당 `{INSTANCE_ID}`을(를) 가져오려면 [대상 템플릿 검색](retrieve-audience-template.md)에 대한 문서를 참조하십시오.
 
@@ -48,7 +48,7 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 +++요청
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-templates/{INSTANCE_ID} \
+curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-templates/{INSTANCE_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
