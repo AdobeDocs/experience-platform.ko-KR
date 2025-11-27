@@ -4,9 +4,9 @@ title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 서드파티 HTTP 끝점으로 전송하여 자체 분석을 실행하거나 Experience Platform에서 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 6d1b73c1557124f283558e1daeb3ddeaaec8e8a4
+source-git-commit: aacc3cbbc2bc8c02e50f375f78733a851138e1c7
 workflow-type: tm+mt
-source-wordcount: '3079'
+source-wordcount: '2908'
 ht-degree: 6%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 HTTP API 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 [!DNL Adobe Experience Platform] 스트리밍 대상입니다.
 
-프로필 데이터를 HTTP 끝점으로 보내려면 먼저 [에서 &#x200B;](#connect-destination)대상에 연결[!DNL Adobe Experience Platform]해야 합니다.
+프로필 데이터를 HTTP 끝점으로 보내려면 먼저 [에서 ](#connect-destination)대상에 연결[!DNL Adobe Experience Platform]해야 합니다.
 
 ## 사용 사례 {#use-cases}
 
@@ -59,7 +59,7 @@ HTTP API 대상을 사용하여 Experience Platform에서 데이터를 내보내
 * HTTP 끝점은 Experience Platform 프로필 스키마를 지원해야 합니다. HTTP API 대상에서는 서드파티 페이로드 스키마로의 변환이 지원되지 않습니다. Experience Platform 출력 스키마의 예는 [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
 * HTTP 끝점은 헤더를 지원해야 합니다.
 * 적절한 데이터 처리를 보장하고 시간 초과 오류를 방지하기 위해 HTTP 끝점이 2초 이내에 응답해야 합니다.
-* mTLS를 사용하려는 경우: 데이터 수신 끝점에 TLS가 비활성화되어 있고 mTLS만 활성화되어야 합니다. OAuth 2 인증도 사용하는 경우 토큰 검색을 위해 별도의 표준 HTTPS 엔드포인트를 유지 관리해야 합니다. 자세한 내용은 [mTLS 고려 사항](#mtls-considerations) 섹션을 참조하십시오.
+* mTLS를 사용하려는 경우: 데이터 수신 끝점에 TLS가 비활성화되어 있고 mTLS만 활성화되어야 합니다. 끝점에 OAuth 2 암호 또는 클라이언트 자격 증명 인증이 필요한 경우 mTLS가 지원되지 않습니다.
 
 >[!TIP]
 >
@@ -73,23 +73,13 @@ HTTP API 대상을 사용하여 Experience Platform에서 데이터를 내보내
 
 ### mTLS 고려 사항 {#mtls-considerations}
 
-HTTP API 대상에 대한 mTLS 지원은 프로필 내보내기가 전송되는 데이터 수신 끝점&#x200B;**에만**&#x200B;적용됩니다(**[!UICONTROL HTTP Endpoint]**&#x200B;대상 세부 정보[의 &#x200B;](#destination-details) 필드).
+HTTP API 대상에 대한 mTLS 지원은 프로필 내보내기가 전송되는 데이터 수신 끝점&#x200B;**에만**&#x200B;적용됩니다(**[!UICONTROL HTTP Endpoint]**&#x200B;대상 세부 정보[의 ](#destination-details) 필드).
 
-**mTLS는 OAuth 2 인증 엔드포인트에 대해 지원되지 않습니다.**
-
-* OAuth 2 클라이언트 자격 증명 또는 OAuth 2 암호 인증에 사용된 **[!UICONTROL Access Token URL]**&#x200B;은(는) mTLS를 지원하지 않습니다
-* 토큰 검색 및 새로 고침 요청은 클라이언트 인증서 인증 없이 표준 HTTPS를 통해 전송됩니다
-
-**필수 아키텍처:** 데이터 수신 끝점에 mTLS가 필요하고 OAuth 2 인증을 사용하는 경우 두 개의 개별 끝점을 유지 관리해야 합니다.
-
-* 토큰 관리를 위한 **인증 끝점:** 표준 HTTPS(mTLS 없음)
-* **데이터 수신 끝점:** 프로필 내보내기에 대해 mTLS 전용 HTTPS가 활성화됨
-
-이 아키텍처는 현재 플랫폼이 제한되어 있습니다. 인증 종단점에 대한 mTLS 지원은 향후 릴리스에 대해 평가됩니다.
+끝점에 OAuth 2 암호 또는 클라이언트 자격 증명 인증이 필요한 경우 mTLS가 **지원되지 않음**.
 
 ### 데이터 내보내기를 위한 mTLS 구성 {#configuring-mtls}
 
-[!DNL mTLS]개의 대상에 [!DNL HTTP API]을(를) 사용하려면 **[!UICONTROL HTTP Endpoint]**&#x200B;대상 세부 정보[&#x200B; 페이지에서 구성하는 &#x200B;](#destination-details)(데이터 수신 끝점)에 [!DNL TLS]개의 프로토콜이 비활성화되어 있어야 하며 [!DNL mTLS]만 활성화되어야 합니다. 끝점에서 [!DNL TLS] 1.2 프로토콜이 여전히 활성화되어 있으면 클라이언트 인증을 위한 인증서가 전송되지 않습니다. 즉, [!DNL mTLS] 대상에 [!DNL HTTP API]을(를) 사용하려면 데이터 수신 서버 끝점이 [!DNL mTLS] 전용 연결 끝점이어야 합니다.
+[!DNL mTLS]개의 대상에 [!DNL HTTP API]을(를) 사용하려면 **[!UICONTROL HTTP Endpoint]**&#x200B;대상 세부 정보[ 페이지에서 구성하는 ](#destination-details)(데이터 수신 끝점)에 [!DNL TLS]개의 프로토콜이 비활성화되어 있어야 하며 [!DNL mTLS]만 활성화되어야 합니다. 끝점에서 [!DNL TLS] 1.2 프로토콜이 여전히 활성화되어 있으면 클라이언트 인증을 위한 인증서가 전송되지 않습니다. 즉, [!DNL mTLS] 대상에 [!DNL HTTP API]을(를) 사용하려면 데이터 수신 서버 끝점이 [!DNL mTLS] 전용 연결 끝점이어야 합니다.
 
 ### 인증서 세부 정보 검색 및 검사 {#certificate}
 
@@ -107,7 +97,7 @@ HTTP API 대상은 HTTP 끝점에 대한 여러 인증 유형을 지원합니다
 
 * 인증이 없는 HTTP 끝점;
 * 전달자 토큰 인증;
-* 아래 예와 같이 HTTP 요청의 본문에 [, &#x200B;](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 및 [!DNL client ID]이(가) 있는 본문 형식의 [!DNL client secret]OAuth 2.0 클라이언트 자격 증명[!DNL grant type] 인증.
+* 아래 예와 같이 HTTP 요청의 본문에 [, ](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 및 [!DNL client ID]이(가) 있는 본문 형식의 [!DNL client secret]OAuth 2.0 클라이언트 자격 증명[!DNL grant type] 인증.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -117,7 +107,7 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-* URL로 인코딩된 [&#x200B; 및 &#x200B;](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)이(가) 포함된 권한 부여 헤더가 있는 기본 권한 부여가 있는 [!DNL client ID]OAuth 2.0 클라이언트 자격 증명[!DNL client secret].
+* URL로 인코딩된 [ 및 ](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)이(가) 포함된 권한 부여 헤더가 있는 기본 권한 부여가 있는 [!DNL client ID]OAuth 2.0 클라이언트 자격 증명[!DNL client secret].
 
 ```shell
 curl --location --request POST 'https://some-api.com/token' \
@@ -167,9 +157,9 @@ HTTP 끝점에 연결할 **[!UICONTROL OAuth 2 Password]** 인증 유형을 선�
 
 >[!NOTE]
 >
->**mTLS 제한:** [!UICONTROL Access Token URL]은(는) mTLS를 지원하지 않습니다. 데이터 수신 끝점에 mTLS를 사용하려는 경우 인증 끝점은 표준 HTTPS를 사용해야 합니다. 필요한 아키텍처에 대한 자세한 내용은 [mTLS 고려 사항](#mtls-considerations) 섹션을 참조하십시오.
+>**mTLS 제한:** mTLS는 OAuth 2 암호 인증에서 지원되지 않습니다. 자세한 내용은 [mTLS 고려 사항](#mtls-considerations) 섹션을 참조하십시오.
 
-* **[!UICONTROL Access Token URL]**: 액세스 토큰 및 선택적으로 새로 고침 토큰을 발급하는 사용자 측의 URL입니다. 이 끝점은 표준 HTTPS를 사용해야 하며 mTLS를 지원하지 않습니다.
+* **[!UICONTROL Access Token URL]**: 액세스 토큰 및 선택적으로 새로 고침 토큰을 발급하는 사용자 측의 URL입니다.
 * **[!UICONTROL Client ID]**: 시스템이 Adobe Experience Platform에 할당하는 [!DNL client ID]입니다.
 * **[!UICONTROL Client Secret]**: 시스템이 Adobe Experience Platform에 할당하는 [!DNL client secret]입니다.
 * **[!UICONTROL Username]**: HTTP 끝점에 액세스하기 위한 사용자 이름.
@@ -187,9 +177,9 @@ HTTP 끝점에 연결할 **[!UICONTROL OAuth 2 Client Credentials]** 인증 유�
 
 >[!NOTE]
 >
->**mTLS 제한:** [!UICONTROL Access Token URL]은(는) mTLS를 지원하지 않습니다. 데이터 수신 끝점에 mTLS를 사용하려는 경우 인증 끝점은 표준 HTTPS를 사용해야 합니다. 필요한 아키텍처에 대한 자세한 내용은 [mTLS 고려 사항](#mtls-considerations) 섹션을 참조하십시오.
+>**mTLS 제한:** mTLS는 OAuth 2 클라이언트 자격 증명 인증에서 지원되지 않습니다. 자세한 내용은 [mTLS 고려 사항](#mtls-considerations) 섹션을 참조하십시오.
 
-* **[!UICONTROL Access Token URL]**: 액세스 토큰 및 선택적으로 새로 고침 토큰을 발급하는 사용자 측의 URL입니다. 이 끝점은 표준 HTTPS를 사용해야 하며 mTLS를 지원하지 않습니다.
+* **[!UICONTROL Access Token URL]**: 액세스 토큰 및 선택적으로 새로 고침 토큰을 발급하는 사용자 측의 URL입니다.
 * **[!UICONTROL Client ID]**: 시스템이 Adobe Experience Platform에 할당하는 [!DNL client ID]입니다.
 * **[!UICONTROL Client Secret]**: 시스템이 Adobe Experience Platform에 할당하는 [!DNL client secret]입니다.
 * **[!UICONTROL Client Credentials Type]**: 끝점에서 지원하는 OAuth2 클라이언트 자격 증명 부여 유형을 선택하십시오.
@@ -206,7 +196,7 @@ HTTP 끝점에 연결할 **[!UICONTROL OAuth 2 Client Credentials]** 인증 유�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="HTTP 엔드포인트"
->abstract="프로필 데이터를 보낼 HTTP 끝점의 URL입니다. 데이터 수신 끝점이며 구성된 경우 mTLS를 지원합니다. 이는 mTLS를 지원하지 않는 OAuth 2 액세스 토큰 URL과 별개입니다."
+>abstract="프로필 데이터를 보낼 HTTP 끝점의 URL입니다. 데이터 수신 끝점이며 구성된 경우 mTLS를 지원합니다(OAuth 2 암호 또는 클라이언트 자격 증명 인증에서는 사용할 수 없음)."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
@@ -230,7 +220,7 @@ HTTP 끝점에 연결할 **[!UICONTROL OAuth 2 Client Credentials]** 인증 유�
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 이름을 입력하십시오.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명을 입력하십시오.
 * **[!UICONTROL Headers]**: 대상 호출에 포함할 사용자 지정 헤더를 다음 형식으로 입력하십시오. `header1:value1,header2:value2,...headerN:valueN`.
-* **[!UICONTROL HTTP Endpoint]**: 프로필 데이터를 보낼 HTTP 끝점의 URL. 데이터 수신 엔드포인트입니다. mTLS를 사용하는 경우 이 끝점에는 TLS가 비활성화되어 있어야 하며 mTLS만 활성화되어야 합니다. 인증 중에 구성된 OAuth 2 액세스 토큰 URL과 다릅니다.
+* **[!UICONTROL HTTP Endpoint]**: 프로필 데이터를 보낼 HTTP 끝점의 URL. 데이터 수신 엔드포인트입니다. mTLS를 사용하는 경우 이 끝점에는 TLS가 비활성화되어 있어야 하며 mTLS만 활성화되어야 합니다.
 * **[!UICONTROL Query parameters]**: HTTP 끝점 URL에 쿼리 매개 변수를 추가할 수 있습니다(선택 사항). 사용하는 쿼리 매개변수 형식(예: `parameter1=value&parameter2=value`)을 지정합니다.
 * **[!UICONTROL Include Segment Names]**: 내보내는 대상의 이름을 데이터 내보내기에 포함하려면 전환합니다. **참고**: 세그먼트 이름은 대상에 매핑된 세그먼트의 경우에만 포함됩니다. 내보내기에 나타나는 매핑되지 않은 세그먼트에는 `name` 필드가 포함되지 않습니다. 이 옵션을 선택한 데이터 내보내기의 예는 아래의 [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
 * **[!UICONTROL Include Segment Timestamps]**: 대상을 만들고 업데이트할 때 UNIX 타임스탬프와 활성화를 위해 대상을 대상에 매핑할 때 UNIX 타임스탬프를 데이터 내보내기에 포함하려면 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 아래의 [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
