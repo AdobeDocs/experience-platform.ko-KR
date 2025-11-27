@@ -46,7 +46,7 @@ Destination SDK은 대상에 대한 여러 인증 방법을 지원합니다. 이
 
 >[!IMPORTANT]
 >
->시스템에 Adobe Experience Platform에 대한 리디렉션/콜백 URL을 등록하는 단계는 인증 코드[ 부여 유형이 있는 ](#authorization-code)OAuth 2에만 필요합니다. 지원되는 다른 두 권한 유형(암호 및 클라이언트 자격 증명)의 경우 이 단계를 건너뛸 수 있습니다.
+>시스템에 Adobe Experience Platform에 대한 리디렉션/콜백 URL을 등록하는 단계는 인증 코드[&#x200B; 부여 유형이 있는 &#x200B;](#authorization-code)OAuth 2에만 필요합니다. 지원되는 다른 두 권한 유형(암호 및 클라이언트 자격 증명)의 경우 이 단계를 건너뛸 수 있습니다.
 
 이 단계를 마치면 다음과 같은 작업을 수행할 수 있습니다.
 
@@ -56,7 +56,7 @@ Destination SDK은 대상에 대한 여러 인증 방법을 지원합니다. 이
 
 ### Destination SDK에서 수행해야 하는 작업 {#to-do-in-destination-sdk}
 
-Experience Platform에서 대상에 대한 OAuth 2 인증을 설정하려면 [ 매개 변수 아래의 ](../../authoring-api/destination-configuration/create-destination-configuration.md)대상 구성`customerAuthenticationConfigurations`에 OAuth 2 세부 사항을 추가해야 합니다. 자세한 예제는 [고객 인증](../../functionality/destination-configuration/customer-authentication.md)을 참조하십시오. OAuth 2 권한 부여 유형에 따라 구성 템플릿에 추가해야 하는 필드에 대한 특정 지침은 이 페이지의 아래에 나와 있습니다.
+Experience Platform에서 대상에 대한 OAuth 2 인증을 설정하려면 [&#x200B; 매개 변수 아래의 &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md)대상 구성`customerAuthenticationConfigurations`에 OAuth 2 세부 사항을 추가해야 합니다. 자세한 예제는 [고객 인증](../../functionality/destination-configuration/customer-authentication.md)을 참조하십시오. OAuth 2 권한 부여 유형에 따라 구성 템플릿에 추가해야 하는 필드에 대한 특정 지침은 이 페이지의 아래에 나와 있습니다.
 
 ## 지원되는 OAuth 2 부여 유형 {#oauth2-grant-types}
 
