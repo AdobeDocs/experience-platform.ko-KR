@@ -2,10 +2,10 @@
 title: 확장 개발
 description: 이 문서에서는 태그 확장 개발 프로세스에 대한 일반적인 개요를 제공하고, 보다 자세한 프로세스를 안내하는 추가 설명서에 대한 링크를 제공합니다.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: 36870fa5359b5382cb9f1e9a5220ce8311f0c45c
+source-git-commit: 3f5e432ef381c10d8197724783135637d01a120e
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 28%
+source-wordcount: '436'
+ht-degree: 26%
 
 ---
 
@@ -42,11 +42,7 @@ ht-degree: 28%
 
 ## 예시 확장
 
-GitHub에는 시작 프로젝트로 검토하거나 사용할 수 있는 다음과 같은 확장이 있습니다.
-
-* [Hello World 예시 확장](https://github.com/adobe/reactor-helloworld-extension)
-* [Typekit 예시 확장](https://github.com/jeffchasin/extension-typekit)
-* [Pinterest 예시 확장](https://github.com/jeffchasin/extension-pinterest)
+[Hello World 예시 확장](https://github.com/adobe/reactor-helloworld-extension)과 같은 GitHub의 예시 확장을 시작 프로젝트로 검토하거나 사용할 수 있습니다.
 
 ## Slack 작업 영역
 

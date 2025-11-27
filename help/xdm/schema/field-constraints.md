@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM 필드 유형 제한
 description: 매핑할 수 있는 다른 일련화 형식과 API에서 고유한 필드 유형을 정의하는 방법을 포함하여 XDM(Experience Data Model)의 필드 유형 제약 조건에 대한 참조입니다.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 8ddedb5ff8c12b05cdf39fa8dc2b59258389e522
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '635'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 XDM(경험 데이터 모델) 스키마에서 필드 유형은 필드에 포함될 수 있는 데이터 종류를 제한합니다. 이 문서에서는 매핑할 수 있는 다른 일련화 형식과 다양한 제약 조건을 적용하기 위해 API에서 고유한 필드 유형을 정의하는 방법을 포함하여 각 코어 필드 유형에 대한 개요를 제공합니다.
 
-## 시작하기
+## 시작
 
 이 안내서를 사용하기 전에 XDM 스키마, 클래스 및 스키마 필드 그룹에 대한 소개는 [스키마 컴포지션의 기본 사항](./composition.md)을 검토하십시오.
 
@@ -60,23 +60,23 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "integer",
   "maximum": 9007199254740991,
   "minimum": -9007199254740991
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL 정수]</td>
+      <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "integer",
   "maximum": 2147483648,
   "minimum": -2147483648
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -84,11 +84,11 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "integer",
-  "maximum": 32768,
+  "maximum": 32767,
   "minimum": -32768
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -96,22 +96,22 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "integer",
   "maximum": 128,
   "minimum": -128
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>90</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL 날짜]*</td>
+      <td>[!UICONTROL Date]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "string",
   "format": "date"
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -119,15 +119,15 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "string",
   "format": "date-time"
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL 부울]</td>
+      <td>[!UICONTROL Boolean]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "boolean"}</pre>
@@ -157,16 +157,16 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
 
 | XDM 유형 | 쪽모이 세공 | Spark SQL | Java |
 | --- | --- | --- | --- |
-| [!UICONTROL 문자열] | 형식: `BYTE_ARRAY`<br>주석: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL 숫자] | 유형: `DOUBLE` | `LongType` | `java.lang.Double` |
-| [!UICONTROL 길게] | 유형: `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL 정수] | 형식: `INT32`<br>주석: `INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL 짧음] | 형식: `INT32`<br>주석: `INT_16` | `ShortType` | `java.lang.Short` |
-| [!UICONTROL 바이트] | 형식: `INT32`<br>주석: `INT_8` | `ByteType` | `java.lang.Short` |
-| [!UICONTROL 날짜] | 형식: `INT32`<br>주석: `DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL String] | 형식: `BYTE_ARRAY`<br>주석: `UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL Number] | 유형: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Long] | 유형: `INT64` | `LongType` | `java.lang.Long` |
+| [!UICONTROL Integer] | 형식: `INT32`<br>주석: `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Short] | 형식: `INT32`<br>주석: `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL Byte] | 형식: `INT32`<br>주석: `INT_8` | `ByteType` | `java.lang.Short` |
+| [!UICONTROL Date] | 형식: `INT32`<br>주석: `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | 형식: `INT64`<br>주석: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
-| [!UICONTROL 부울] | 유형: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL 맵] | `MAP` 주석이 있는 그룹<br><br>(`<key-type>`은(는) `STRING`이어야 합니다.) | `MapType`<br><br>(`keyType`은(는) `StringType`이어야 함) | `java.util.Map` |
+| [!UICONTROL Boolean] | 유형: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+| [!UICONTROL Map] | `MAP` 주석이 있는 그룹<br><br>(`<key-type>`은(는) `STRING`이어야 합니다.) | `MapType`<br><br>(`keyType`은(는) `StringType`이어야 함) | `java.util.Map` |
 
 {style="table-layout:auto"}
 
@@ -174,16 +174,16 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
 
 | XDM 유형 | 스칼라 | .NET | CosmosDB |
 | --- | --- | --- | --- |
-| [!UICONTROL 문자열] | `String` | `System.String` | `String` |
-| [!UICONTROL 숫자] | `Double` | `System.Double` | `Number` |
-| [!UICONTROL 길게] | `Long` | `System.Int64` | `Number` |
-| [!UICONTROL 정수] | `Int` | `System.Int32` | `Number` |
-| [!UICONTROL 짧음] | `Short` | `System.Int16` | `Number` |
-| [!UICONTROL 바이트] | `Byte` | `System.SByte` | `Number` |
-| [!UICONTROL 날짜] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL String] | `String` | `System.String` | `String` |
+| [!UICONTROL Number] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
+| [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
+| [!UICONTROL Date] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL 부울] | `Boolean` | `System.Boolean` | `Boolean` |
-| [!UICONTROL 맵] | `Map` | (N/A) | `object` |
+| [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
+| [!UICONTROL Map] | `Map` | (N/A) | `object` |
 
 {style="table-layout:auto"}
 
@@ -191,16 +191,16 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
 
 | XDM 유형 | 몽고DB | 에어로스파이크 | 프로토콜 버퍼 2 |
 | --- | --- | --- | --- |
-| [!UICONTROL 문자열] | `string` | `String` | `string` |
-| [!UICONTROL 숫자] | `double` | `Double` | `double` |
-| [!UICONTROL 길게] | `long` | `Integer` | `int64` |
-| [!UICONTROL 정수] | `int` | `Integer` | `int32` |
-| [!UICONTROL 짧음] | `int` | `Integer` | `int32` |
-| [!UICONTROL 바이트] | `int` | `Integer` | `int32` |
-| [!UICONTROL 날짜] | `date` | `Integer`<br>(Unix 밀리초) | `int64`<br>(Unix 밀리초) |
+| [!UICONTROL String] | `string` | `String` | `string` |
+| [!UICONTROL Number] | `double` | `Double` | `double` |
+| [!UICONTROL Long] | `long` | `Integer` | `int64` |
+| [!UICONTROL Integer] | `int` | `Integer` | `int32` |
+| [!UICONTROL Short] | `int` | `Integer` | `int32` |
+| [!UICONTROL Byte] | `int` | `Integer` | `int32` |
+| [!UICONTROL Date] | `date` | `Integer`<br>(Unix 밀리초) | `int64`<br>(Unix 밀리초) |
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix 밀리초) | `int64`<br>(Unix 밀리초) |
-| [!UICONTROL 부울] | `bool` | `Integer`<br>(0/1 이진) | `bool` |
-| [!UICONTROL 맵] | `object` | `map` | `map<key_type, value_type>` |
+| [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 이진) | `bool` |
+| [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
 
 {style="table-layout:auto"}
 
