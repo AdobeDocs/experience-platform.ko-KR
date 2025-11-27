@@ -1181,7 +1181,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->유니온 뷰 작업에 대한 자세한 내용은 [ 개발자 가이드의 ](../api/unions.md)유니온[!DNL Schema Registry]에 대한 섹션을 참조하십시오.
+>유니온 뷰 작업에 대한 자세한 내용은 [&#x200B; 개발자 가이드의 &#x200B;](../api/unions.md)유니온[!DNL Schema Registry]에 대한 섹션을 참조하십시오.
 
 ### `union` 태그 추가
 
