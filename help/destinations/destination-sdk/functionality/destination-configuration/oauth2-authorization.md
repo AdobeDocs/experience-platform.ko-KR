@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK에서 지원하는 다양한 OAuth 2 인증 흐름에 대해 설명하고 대상에 대한 OAuth 2 인증을 설정하는 지침을 제공합니다.
 title: OAuth 2 인증
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2182'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ Destination SDK은 대상에 대한 여러 인증 방법을 지원합니다. 이
 
 >[!IMPORTANT]
 >
->시스템에 Adobe Experience Platform에 대한 리디렉션/콜백 URL을 등록하는 단계는 인증 코드[&#x200B; 부여 유형이 있는 &#x200B;](#authorization-code)OAuth 2에만 필요합니다. 지원되는 다른 두 권한 유형(암호 및 클라이언트 자격 증명)의 경우 이 단계를 건너뛸 수 있습니다.
+>시스템에 Adobe Experience Platform에 대한 리디렉션/콜백 URL을 등록하는 단계는 인증 코드[ 부여 유형이 있는 ](#authorization-code)OAuth 2에만 필요합니다. 지원되는 다른 두 권한 유형(암호 및 클라이언트 자격 증명)의 경우 이 단계를 건너뛸 수 있습니다.
 
 이 단계를 마치면 다음과 같은 작업을 수행할 수 있습니다.
 
@@ -56,7 +56,7 @@ Destination SDK은 대상에 대한 여러 인증 방법을 지원합니다. 이
 
 ### Destination SDK에서 수행해야 하는 작업 {#to-do-in-destination-sdk}
 
-Experience Platform에서 대상에 대한 OAuth 2 인증을 설정하려면 [&#x200B; 매개 변수 아래의 &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md)대상 구성`customerAuthenticationConfigurations`에 OAuth 2 세부 사항을 추가해야 합니다. 자세한 예제는 [고객 인증](../../functionality/destination-configuration/customer-authentication.md)을 참조하십시오. OAuth 2 권한 부여 유형에 따라 구성 템플릿에 추가해야 하는 필드에 대한 특정 지침은 이 페이지의 아래에 나와 있습니다.
+Experience Platform에서 대상에 대한 OAuth 2 인증을 설정하려면 [ 매개 변수 아래의 ](../../authoring-api/destination-configuration/create-destination-configuration.md)대상 구성`customerAuthenticationConfigurations`에 OAuth 2 세부 사항을 추가해야 합니다. 자세한 예제는 [고객 인증](../../functionality/destination-configuration/customer-authentication.md)을 참조하십시오. OAuth 2 권한 부여 유형에 따라 구성 템플릿에 추가해야 하는 필드에 대한 특정 지침은 이 페이지의 아래에 나와 있습니다.
 
 ## 지원되는 OAuth 2 부여 유형 {#oauth2-grant-types}
 
@@ -82,7 +82,7 @@ Experience Platform은 아래 표에서 세 가지 OAuth 2 부여 유형을 지�
 Adobe이 OAuth 2 인증을 위해 디자인한 시스템:
 
 * 는 추가 데이터 필드, 비표준 API 호출 등과 같은 다양한 변형을 고려하면서 세 가지 OAuth 2 권한 모두를 지원합니다.
-* 90일, 30분 또는 지정한 다른 모든 라이프타임 값을 포함하여 다양한 라이프타임 값으로 액세스 토큰을 지원합니다.
+* 다양한 라이프타임 값으로 액세스 토큰을 지원합니다. Adobe에서는 토큰 라이프타임 값을 최소 24시간으로 설정할 것을 권장합니다.
 * 새로 고침 토큰이 있거나 없는 OAuth 2 인증 흐름을 지원합니다.
 
 ## 인증 코드가 있는 OAuth 2 {#authorization-code}
