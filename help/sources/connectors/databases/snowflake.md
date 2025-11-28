@@ -3,10 +3,10 @@ title: Snowflake Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Snowflake을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 687363ab664e43cc854b535760dfbfc55acefd2c
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 3%
+source-wordcount: '1570'
+ht-degree: 1%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 3%
 >* 기본적으로 [!DNL Snowflake] 원본은 `null`을(를) 빈 문자열로 해석합니다. Adobe 담당자에게 문의하여 `null` 값이 Adobe Experience Platform에서 `null`(으)로 올바르게 기록되었는지 확인하십시오.
 >* Experience Platform이 데이터를 수집하려면 모든 테이블 기반 배치 소스의 시간대를 UTC로 구성해야 합니다. [!DNL Snowflake] 소스에 대해 지원되는 타임스탬프는 UTC 시간이 있는 TIMESTAMP_NTZ뿐입니다.
 
-Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집하는 동시에 Experience Platform 서비스를 사용하여 수신 데이터를 구조화하고 레이블을 지정하며 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+[!DNL Snowflake]은(는) 조직에서 대량의 데이터를 효율적으로 저장, 처리 및 분석할 수 있도록 설계된 클라우드 기반의 데이터 웨어하우스 플랫폼입니다. 클라우드의 확장성과 유연성을 활용하도록 빌드된 [!DNL Snowflake]은(는) 데이터 통합, 고급 분석 및 팀 간의 원활한 공유를 지원합니다. [!DNL Snowflake]은(는) 완전 관리 서비스로서 기존 데이터베이스에 공통되는 유지 관리의 복잡성을 제거하여 데이터에서 통찰력과 가치를 도출하는 데 집중할 수 있도록 합니다.
 
-Experience Platform은 타사 데이터베이스에서 데이터를 수집하는 기능을 지원합니다. Experience Platform은 관계형, NoSQL 또는 데이터 웨어하우스와 같은 다양한 유형의 데이터베이스에 연결할 수 있습니다. 데이터베이스 공급자에 대한 지원에는 [!DNL Snowflake]이(가) 포함됩니다.
+[!DNL Snowflake] 원본을 사용하여 [!DNL Snowflake]에서 Adobe Experience Platform으로 데이터를 연결하고 가져올 수 있습니다. [!DNL Snowflake] 소스를 설정하고 Experience Platform에 연결하는 방법에 대해 알아보려면 아래 설명서를 읽어 보십시오.
 
 ## 전제 조건 {#prerequisites}
 
@@ -42,7 +42,7 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하는
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `account` | 계정 이름은 조직 내에서 계정을 고유하게 식별합니다. 이 경우 서로 다른 [!DNL Snowflake] 조직에서 계정을 고유하게 식별해야 합니다. 이렇게 하려면 계정 이름 앞에 조직 이름을 추가해야 합니다. 예: `orgname-account_name`. 추가 지침을 보려면 [계정 식별자 검색 [!DNL Snowflake] 의 섹션을 참조하십시오](#retrieve-your-account-identifier). 자세한 내용은 [[!DNL Snowflake] 설명서](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)를 참조하세요. |
+| `account` | 계정 이름은 조직 내에서 계정을 고유하게 식별합니다. 이 경우 서로 다른 [!DNL Snowflake] 조직에서 계정을 고유하게 식별해야 합니다. 이렇게 하려면 계정 이름 앞에 조직 이름을 추가해야 합니다. 예: `myorg-myaccount.snowflakecomputing.com`. 추가 지침을 보려면 [계정 식별자 검색 [!DNL Snowflake] 의 섹션을 참조하십시오](#retrieve-your-account-identifier). 자세한 내용은 [[!DNL Snowflake] 설명서](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)를 참조하세요. |
 | `warehouse` | [!DNL Snowflake] 웨어하우스에서 응용 프로그램의 쿼리 실행 프로세스를 관리합니다. 각 [!DNL Snowflake] 웨어하우스는 서로 독립적이므로 Experience Platform으로 데이터를 가져올 때 개별적으로 액세스해야 합니다. |
 | `database` | [!DNL Snowflake] 데이터베이스에 Experience Platform으로 가져올 데이터가 있습니다. |
 | `username` | [!DNL Snowflake] 계정의 사용자 이름입니다. |
@@ -56,7 +56,7 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하는
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| `account` | 계정 이름은 조직 내에서 계정을 고유하게 식별합니다. 이 경우 서로 다른 [!DNL Snowflake] 조직에서 계정을 고유하게 식별해야 합니다. 이렇게 하려면 계정 이름 앞에 조직 이름을 추가해야 합니다. 예: `orgname-account_name`. 추가 지침을 보려면 [계정 식별자 검색 [!DNL Snowflake] 의 섹션을 참조하십시오](#retrieve-your-account-identifier). 자세한 내용은 [[!DNL Snowflake] 설명서](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)를 참조하세요. |
+| `account` | 계정 이름은 조직 내에서 계정을 고유하게 식별합니다. 이 경우 서로 다른 [!DNL Snowflake] 조직에서 계정을 고유하게 식별해야 합니다. 이렇게 하려면 계정 이름 앞에 조직 이름을 추가해야 합니다. 예: `myorg-myaccount.snowflakecomputing.com`. 추가 지침을 보려면 [계정 식별자 검색 [!DNL Snowflake] 의 섹션을 참조하십시오](#retrieve-your-account-identifier). 자세한 내용은 [[!DNL Snowflake] 설명서](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)를 참조하세요. |
 | `username` | [!DNL Snowflake] 계정의 사용자 이름입니다. |
 | `privateKey` | [!DNL Base64-] 계정의 [!DNL Snowflake]인코딩된 개인 키입니다. 암호화되거나 암호화되지 않은 개인 키를 생성할 수 있습니다. 암호화된 개인 키를 사용하는 경우 Experience Platform에 대해 인증할 때 개인 키 암호도 제공해야 합니다. 자세한 내용은 [개인 키 검색](#retrieve-your-private-key)의 섹션을 참조하십시오. |
 | `privateKeyPassphrase` | 개인 키 암호는 암호화된 개인 키로 인증할 때 사용해야 하는 추가 보안 계층입니다. 암호화되지 않은 개인 키를 사용하는 경우에는 암호를 제공할 필요가 없습니다. |
@@ -90,7 +90,7 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하는
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| `account` | 계정 이름은 조직 내에서 계정을 고유하게 식별합니다. 이 경우 서로 다른 [!DNL Snowflake] 조직에서 계정을 고유하게 식별해야 합니다. 이렇게 하려면 계정 이름 앞에 조직 이름을 추가해야 합니다. 예: `orgname-account_name`. 추가 지침은 [계정 식별자 검색 [!DNL Snowflake] 에 대한 안내서를 참조하십시오](#etrieve-your-account-identifier). 자세한 내용은 [[!DNL Snowflake] 설명서](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)를 참조하세요. |
+| `account` | 계정 이름은 조직 내에서 계정을 고유하게 식별합니다. 이 경우 서로 다른 [!DNL Snowflake] 조직에서 계정을 고유하게 식별해야 합니다. 이렇게 하려면 계정 이름 앞에 조직 이름을 추가해야 합니다. 예: `http://myorg-myaccount.snowflakecomputing.com/`. 추가 지침은 [계정 식별자 검색 [!DNL Snowflake] 에 대한 안내서를 참조하십시오](#etrieve-your-account-identifier). 자세한 내용은 [[!DNL Snowflake] 설명서](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)를 참조하세요. |
 | `username` | [!DNL Snowflake] 계정의 사용자 이름입니다. |
 | `privateKey` | 머리글이나 줄 바꿈이 없는 한 줄로 base64가 인코딩된 [!DNL Snowflake] 사용자의 개인 키입니다. 준비하려면 PEM 파일의 내용을 복사하고 `BEGIN`/`END` 줄과 모든 줄 바꿈을 제거한 다음 base64 인코딩하여 결과를 만듭니다. 자세한 내용은 [개인 키 검색](#retrieve-your-private-key)의 섹션을 참조하십시오. **참고:** 암호화된 개인 키는 현재 AWS 연결에 대해 지원되지 않습니다. |
 | `port` | [!DNL Snowflake]이(가) 인터넷을 통해 서버에 연결할 때 사용하는 포트 번호입니다. |
@@ -103,66 +103,69 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하는
 
 ### 계정 식별자 검색 {#retrieve-your-account-identifier}
 
-Experience Platform에서 계정 식별자를 사용하여 [!DNL Snowflake] 인스턴스를 인증하게 되므로 [!DNL Snowflake] UI 대시보드에서 계정 식별자를 검색해야 합니다.
+Experience Platform에서 [!DNL Snowflake] 인스턴스를 인증하기 위해 [!DNL Snowflake] UI 대시보드에서 계정 식별자를 검색해야 합니다.
 
 계정 식별자를 검색하려면:
 
-* [[!DNL Snowflake] 응용 프로그램 UI 대시보드](https://app.snowflake.com/)에서 내 계정으로 이동합니다.
-* 왼쪽 탐색에서 **[!DNL Accounts]**&#x200B;을(를) 선택한 후 헤더에서 **[!DNL Active Accounts]**&#x200B;을(를) 선택합니다.
+* [[!DNL Snowflake] 응용 프로그램 UI 대시보드](https://app.snowflake.com/)를 사용하여 계정에 액세스하세요.
+* 왼쪽 탐색에서 **[!DNL Accounts]**&#x200B;을(를) 선택한 다음 헤더에서 **[!DNL Active Accounts]**&#x200B;을(를) 선택합니다.
 * 그런 다음 정보 아이콘을 선택하고 을(를) 선택한 다음 현재 URL의 도메인 이름을 복사합니다.
 
 ![도메인 이름이 선택된 Snowflake UI 대시보드입니다.](../../images/tutorials/create/snowflake/snowflake-dashboard.png)
 
-### 개인 키 검색 {#retrieve-your-private-key}
+### RSA 키 쌍 생성
 
-[!DNL Snowflake] 연결에 키 쌍 인증을 사용하는 경우 Experience Platform에 연결하기 전에 개인 키도 생성해야 합니다.
+명령줄 인터페이스에서 OpenSSL을 사용하여 PKCS#8 형식의 2048비트 RSA 키 쌍을 생성합니다. 보안을 위해 암호 암호가 필요한 암호화된 개인 키를 만드는 것이 좋습니다.
 
 >[!BEGINTABS]
 
->[!TAB 암호화된 개인 키를 만듭니다]
+>[!TAB 암호화된 개인 키 생성]
 
 암호화된 [!DNL Snowflake] 개인 키를 생성하려면 터미널에서 다음 명령을 실행하십시오.
 
-```shell
-openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
+```bash
+openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8# You will be prompted to enter a passphrase. Store this securely!
 ```
 
-성공하면 개인 키를 PEM 형식으로 받아야 합니다.
-
-```shell
-|-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIIE6T...
-|-----END ENCRYPTED PRIVATE KEY-----
-```
-
->[!TAB 암호화되지 않은 개인 키를 만듭니다]
+>[!TAB 암호화되지 않은 개인 키 생성]
 
 암호화되지 않은 [!DNL Snowflake] 개인 키를 생성하려면 터미널에서 다음 명령을 실행하십시오.
 
-```shell
+```bash
 openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
-```
-
-성공하면 개인 키를 PEM 형식으로 받아야 합니다.
-
-```shell
-|-----BEGIN PRIVATE KEY-----
-MIIE6T...
-|-----END PRIVATE KEY-----
 ```
 
 >[!ENDTABS]
 
-그런 다음 개인 키를 가져와서 [!DNL Base64]에서 인코딩하십시오. [!DNL Snowflake] 개인 키에 대해 변환이나 형식 변환을 수행하지 않도록 하십시오. 또한 [!DNL Base64]에서 인코딩하기 전에 개인 키 끝에 후행 줄바꿈 문자가 없는지 확인해야 합니다.
+### 개인 키에서 공개 키 생성
+
+그런 다음 명령줄 인터페이스에서 다음 명령을 실행하여 개인 키를 기반으로 공개 키를 만듭니다.
+
+```bash
+openssl rsa -in rsa_key.p8 -pubout -out rsa_key.pub# You will be prompted to enter the passphrase if the private key is encrypted.
+```
+
+### [!DNL Snowflake] 사용자에게 공개 키 할당
+
+생성된 공개 키를 Experience Platform에서 사용할 [!DNL Snowflake] 서비스 사용자와 연결하려면 **관리자 역할(예:** SECURITYADMIN[!DNL Snowflake])을 사용해야 합니다. 공개 키 콘텐츠를 검색하려면 `rsa_key.pub` 파일을 열고 `-----BEGIN PUBLIC KEY----- and -----END PUBLIC KEY-----` 줄을 제외한 전체 콘텐츠를 복사하십시오. 그런 다음 [!DNL Snowflake]에서 다음 SQL을 실행하십시오.
+
+```sql
+ALTER USER {YOUR_SNOWFLAKE_USERNAME}>SET RSA_PUBLIC_KEY='{PUBLIC_KEY_CONTENT}';
+```
+
+### [!DNL Base64]의 개인 키 인코딩
+
+Experience Platform에서는 연결을 설정하는 동안 개인 키를 [!DNL Base64] 인코딩하고 문자열로 제공해야 합니다. 적절한 도구 또는 스크립트를 사용하여 `rsa_key.p8` 파일의 내용을 단일 [!DNL Base64] 문자열로 인코딩하십시오.
+
+>[!TIP]
+>
+>인코딩 프로세스 전이나 후에 인증 오류가 발생할 수 있으므로 머리글/바닥글 줄 `(-----BEGIN ENCRYPTED PRIVATE KEY----- and -----END ENCRYPTED PRIVATE KEY-----)`을(를) 포함하여 추가 공백이나 줄 바꿈이 없는지 확인하십시오.
 
 ### 구성 확인
 
-[!DNL Snowflake] 데이터에 대한 원본 연결을 만들려면 먼저 다음 구성도 충족하는지 확인해야 합니다.
+Experience Platform에서 [!DNL Snowflake] 소스 연결을 만들기 전에 사용자의 **[!DNL Default Role]** 및 **[!DNL Default Warehouse]**&#x200B;이(가) Experience Platform에서 제공하는 값과 일치하는지 확인해야 합니다. [!DNL Snowflake] SQL 명령을 사용하여 `DESCRIBE USER {USERNAME}` UI에서 이러한 설정을 확인할 수 있습니다.
 
-* 주어진 사용자에게 할당된 기본 웨어하우스는 Experience Platform에 인증할 때 입력하는 웨어하우스와 동일해야 합니다.
-* 지정된 사용자에게 할당된 기본 역할은 Experience Platform 인증 시 입력한 것과 동일한 데이터베이스에 대한 액세스 권한이 있어야 합니다.
-
-역할 및 웨어하우스를 확인하려면:
+또는 아래 단계에 따라 설정을 확인할 수 있습니다.
 
 * 왼쪽 탐색에서 **[!DNL Admin]**&#x200B;을(를) 선택한 다음 **[!DNL Users & Roles]**&#x200B;을(를) 선택합니다.
 * 적절한 사용자를 선택한 다음 오른쪽 상단 모서리에서 줄임표(`...`)를 선택합니다.
@@ -171,17 +174,17 @@ MIIE6T...
 
 ![역할과 웨어하우스를 확인할 수 있는 Snowflake UI입니다.](../../images/tutorials/create/snowflake/snowflake-configs.png)
 
-인코딩이 완료되면 Experience Platform에서 [!DNL Base64] 인코딩된 개인 키를 사용하여 [!DNL Snowflake] 계정을 인증할 수 있습니다.
+## 다음 단계
 
-아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Snowflake]을(를) Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
+설정이 완료되면 이제 [!DNL Snowflake] 계정을 Experience Platform에 연결할 수 있습니다. 자세한 내용은 다음 설명서를 참조하십시오.
 
-## API를 사용하여 [!DNL Snowflake]을(를) Experience Platform에 연결
+### API를 사용하여 [!DNL Snowflake]을(를) Experience Platform에 연결
 
-* [흐름 서비스 API를 사용하여 Snowflake 기본 연결 만들기](../../tutorials/api/create/databases/snowflake.md)
+* [API를 사용하여  [!DNL Snowflake] 을(를) Experience Platform에 연결](../../tutorials/api/create/databases/snowflake.md)
 * [흐름 서비스 API를 사용하여 데이터 테이블 탐색](../../tutorials/api/explore/tabular.md)
 * [흐름 서비스 API를 사용하여 데이터베이스 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/database-nosql.md)
 
-## UI를 사용하여 [!DNL Snowflake]을(를) Experience Platform에 연결
+### UI를 사용하여 [!DNL Snowflake]을(를) Experience Platform에 연결
 
-* [UI에서 Snowflake 소스 연결 만들기](../../tutorials/ui/create/databases/snowflake.md)
+* [UI를 사용하여  [!DNL Snowflake] 을(를) Experience Platform에 연결](../../tutorials/ui/create/databases/snowflake.md)
 * [UI에서 데이터베이스 소스 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/databases.md)
