@@ -58,13 +58,13 @@ ht-degree: 4%
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="오케스트레이션된 캠페인"
 >abstract="이 토글을 활성화하여 선택한 데이터 세트를 Adobe Journey Optimizer 오케스트레이션된 캠페인에서 사용할 수 있도록 합니다. 데이터 세트는 관계형 스키마를 사용해야 하며 스키마당 하나의 데이터 세트만 생성할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="오케스트레이션된 캠페인에 대한 데이터 세트 활성화"
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="오케스트레이션된 캠페인에 대한 데이터 세트 활성화"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_enableforlookup_toggle"
 >title="조회를 위해 활성화"
 >abstract="조회에 이 데이터 세트를 활성화하면 개인화, 의사 결정 및 여정 오케스트레이션을 위해 Journey Optimizer에서 해당 데이터를 사용할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Journey Optimizer에서 Adobe Experience Platform 데이터 사용"
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Journey Optimizer에서 Adobe Experience Platform 데이터 사용"
 
 [!DNL Experience Platform] UI의 왼쪽 탐색에서 **[!UICONTROL Datasets]**&#x200B;을(를) 선택하여 **[!UICONTROL Datasets]** 대시보드를 엽니다. 대시보드에는 조직에서 사용 가능한 모든 데이터 세트가 나열됩니다. 이름, 데이터 세트가 준수하는 스키마, 가장 최근 수집 실행 상태 등 나열된 각 데이터 세트에 대한 세부 사항이 표시됩니다.
 
@@ -312,7 +312,7 @@ ht-degree: 4%
 
 >[!TIP]
 >
->데이터 세트 이동 대화 상자에서 직접 폴더를 만들 수도 있습니다. 폴더를 만들려면 폴더 만들기 아이콘(![폴더 만들기 아이콘)을 선택합니다.대화 상자의 오른쪽 맨 위에 있는 &#x200B;](/help/images/icons/folder-add.png)).
+>데이터 세트 이동 대화 상자에서 직접 폴더를 만들 수도 있습니다. 폴더를 만들려면 폴더 만들기 아이콘(![폴더 만들기 아이콘)을 선택합니다.대화 상자의 오른쪽 맨 위에 있는 ](/help/images/icons/folder-add.png)).
 >
 >![폴더 만들기 아이콘이 강조 표시된 [!UICONTROL Move] 데이터 집합 대화 상자입니다.](/help/catalog/images/datasets/user-guide/create-folder.png)
 
@@ -358,7 +358,7 @@ Real-Time Customer Profile API를 사용하여 [!DNL Profile] 저장소에서 �
 
 기본적으로 데이터를 수집한 데이터 세트만 표시됩니다. 시스템에서 생성한 데이터 세트를 보려면 **[!UICONTROL Yes]** 섹션에서 [!UICONTROL Show system datasets] 확인란을 선택하십시오. 시스템에서 생성한 데이터 세트는 다른 구성 요소를 처리하는 데만 사용됩니다. 예를 들어 시스템에서 생성한 프로필 내보내기 데이터 세트는 프로필 대시보드를 처리하는 데 사용됩니다.
 
-![&#x200B; 섹션이 강조 표시된 데이터 세트 작업 영역의 필터 옵션입니다.[!UICONTROL Show system datasets]](../images/datasets/user-guide/show-system-datasets.png)
+![ 섹션이 강조 표시된 데이터 세트 작업 영역의 필터 옵션입니다.[!UICONTROL Show system datasets]](../images/datasets/user-guide/show-system-datasets.png)
 
 ### 프로필 사용 데이터 세트 필터링 {#filter-profile-enabled-datasets}
 
@@ -366,7 +366,7 @@ Real-Time Customer Profile API를 사용하여 [!DNL Profile] 저장소에서 �
 
 프로필에 대해 데이터 집합이 활성화되었는지 여부를 기준으로 데이터 집합을 필터링하려면 필터 옵션에서 [!UICONTROL Yes] 확인란을 선택하십시오.
 
-![&#x200B; 섹션이 강조 표시된 데이터 세트 작업 영역의 필터 옵션입니다.[!UICONTROL Included in Profile]](../images/datasets/user-guide/included-in-profile.png)
+![ 섹션이 강조 표시된 데이터 세트 작업 영역의 필터 옵션입니다.[!UICONTROL Included in Profile]](../images/datasets/user-guide/included-in-profile.png)
 
 ### 태그로 데이터 세트 필터링 {#filter-by-tag}
 
