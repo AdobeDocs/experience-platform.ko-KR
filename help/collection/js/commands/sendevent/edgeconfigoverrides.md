@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `edgeConfigOverrides`(`sendEvent` 명령)
 
-`edgeConfigOverrides` 개체를 사용하면 현재 `sendEvent` 명령에 대한 구성 설정을 재정의할 수 있습니다. 이 개체는 웹 SDK 구현의 나머지 부분과 다른 구성 설정으로 실행하려는 동일한 페이지에 특정 명령이 있을 때 유용합니다. 지정된 페이지의 모든 명령에 대한 구성 설정을 무시하려면 [`edgeConfigOverrides` 명령`configure`에서 ](../configure/edgeconfigoverrides.md) 개체를 사용하는 것이 좋습니다.
+`edgeConfigOverrides` 개체를 사용하면 현재 `sendEvent` 명령에 대한 구성 설정을 재정의할 수 있습니다. 이 개체는 웹 SDK 구현의 나머지 부분과 다른 구성 설정으로 실행하려는 동일한 페이지에 특정 명령이 있을 때 유용합니다. 지정된 페이지의 모든 명령에 대한 구성 설정을 무시하려면 [`edgeConfigOverrides` 명령`configure`에서 &#x200B;](../configure/edgeconfigoverrides.md) 개체를 사용하는 것이 좋습니다.
 
 중요한 데이터스트림 구성 재정의 프로세스는 다음 두 가지 주요 단계로 구성됩니다.
 
@@ -72,4 +72,4 @@ alloy("sendEvent", {
 
 ## 웹 SDK 태그 확장을 사용하여 데이터 스트림 구성 재정의
 
-이 개체에 해당하는 웹 SDK 태그 확장은 &#39;[&#39; 작업을 구성할 때 ](/help/tags/extensions/client/web-sdk/actions/send-event.md#datastream-configuration-overrides)데이터 스트림 구성 재정의[!UICONTROL Send event] 섹션입니다.
+이 개체에 해당하는 웹 SDK 태그 확장은 &#39;[&#39; 작업을 구성할 때 &#x200B;](/help/tags/extensions/client/web-sdk/actions/send-event.md#datastream-configuration-overrides)데이터 스트림 구성 재정의[!UICONTROL Send event] 섹션입니다.

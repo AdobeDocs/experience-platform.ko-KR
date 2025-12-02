@@ -25,13 +25,13 @@ Experience Platform에서는 [!DNL Customer Attributes] 프로필 데이터를 A
 
 ## ID
 
-데이터 세트의 기본 ID는 소스 데이터의 CSV 파일의 첫 번째 열에 포함되어 있습니다. [!DNL Customer Attributes] 원본은 ID가 항상 [`CORE`에서 지원하는 시스템 생성 네임스페이스인 ](../../../identity-service/features/namespaces.md) 네임스페이스[[!DNL Identity Service]](../../../identity-service/home.md)에 매핑되어 있다고 가정합니다.
+데이터 세트의 기본 ID는 소스 데이터의 CSV 파일의 첫 번째 열에 포함되어 있습니다. [!DNL Customer Attributes] 원본은 ID가 항상 [`CORE`에서 지원하는 시스템 생성 네임스페이스인 &#x200B;](../../../identity-service/features/namespaces.md) 네임스페이스[[!DNL Identity Service]](../../../identity-service/home.md)에 매핑되어 있다고 가정합니다.
 
 [!DNL Customer Attributes]에서 스키마의 기본 ID가 항상 ID 맵에 있다고 간주하므로 [!DNL Customer Attributes] 소스를 사용할 때 ID에 대한 기존 네임스페이스를 선택할 수 없습니다. 그런 다음 [!DNL Customer Attributes]은(는) 자동화된 방식으로 소스 ID와 ID 맵 UUID의 매핑을 만듭니다.
 
 [!DNL Customer Attributes] 데이터를 다른 [!DNL Profile] 데이터 세트에 연결하려면 해당 데이터와 ID를 Experience Cloud ID와 일치시킬 수 있어야 합니다.
 
-`CORE`Web SDK[, ](/help/collection/use-cases/identity/id-overview.md)Mobile SDK[ 또는 ](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)Experience Cloud ID 서비스 API[를 사용하여 방문자에 대한 Experience Cloud ID를 설정하여 ](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ko-KR) 네임스페이스를 설정할 수 있습니다.
+`CORE`Web SDK[, &#x200B;](/help/collection/use-cases/identity/id-overview.md)Mobile SDK[&#x200B; 또는 &#x200B;](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)Experience Cloud ID 서비스 API[를 사용하여 방문자에 대한 Experience Cloud ID를 설정하여 &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ko-KR) 네임스페이스를 설정할 수 있습니다.
 
 [!DNL Customer Attributes] 파일이 다른 ID 관계를 더 이상 채우지 않습니다. 예를 들어 [!DNL Customer Attributes] 소스 데이터 집합에 **이메일** 및 **충성도 ID** 필드가 포함된 경우 [!DNL Identity Service]&#x200B;(으)로 처리하려면 해당 필드에 스키마의 ID 필드로 레이블을 지정해야 합니다.
 

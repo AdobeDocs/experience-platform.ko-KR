@@ -128,8 +128,8 @@ SDK에서 Experience Platform으로 데이터를 보내려면 먼저 Experience 
 | --- | --- |
 | [!UICONTROL Sandbox] | 데이터 스트림을 설정하는 데 필요한 스트리밍 연결 및 데이터 세트가 포함된 Experience Platform [sandbox](/help/sandboxes/home.md)의 이름입니다. |
 | [!UICONTROL Streaming Inlet] | Experience Platform에 대한 유효한 스트리밍 연결입니다. 기존 스트리밍 인렛이 없는 경우 [스트리밍 연결 만들기](/help/ingestion/tutorials/create-streaming-connection-ui.md)에 대한 자습서를 참조하십시오. |
-| [!UICONTROL Event Dataset] | [!DNL XDM ExperienceEvent]이전 단계[에서 만든 ](#datasets) 데이터 세트를 선택하십시오. 이 데이터 집합의 스키마에 [[!UICONTROL IAB TCF 2.0 Consent] 필드 그룹](/help/xdm/field-groups/event/iab.md)을(를) 포함시킨 경우 [`sendEvent`](#sendEvent) 명령을 사용하여 시간 경과에 따른 동의 변경 이벤트를 추적하여 해당 데이터를 이 데이터 집합에 저장할 수 있습니다. 이 데이터 집합에 저장된 동의 값은 자동 적용 워크플로우에서 사용되는 **not**&#x200B;입니다. |
-| [!UICONTROL Profile Dataset] | [!DNL XDM Individual Profile]이전 단계[에서 만든 ](#datasets) 데이터 세트를 선택하십시오. [`setConsent`](#setConsent) 명령을 사용하여 CMP 동의 변경 후크에 응답할 때 수집된 데이터가 이 데이터 집합에 저장됩니다. 이 데이터 세트는 프로필이 활성화되므로 자동 시행 워크플로 동안 이 데이터 세트에 저장된 동의 값이 적용됩니다. |
+| [!UICONTROL Event Dataset] | [!DNL XDM ExperienceEvent]이전 단계[에서 만든 &#x200B;](#datasets) 데이터 세트를 선택하십시오. 이 데이터 집합의 스키마에 [[!UICONTROL IAB TCF 2.0 Consent] 필드 그룹](/help/xdm/field-groups/event/iab.md)을(를) 포함시킨 경우 [`sendEvent`](#sendEvent) 명령을 사용하여 시간 경과에 따른 동의 변경 이벤트를 추적하여 해당 데이터를 이 데이터 집합에 저장할 수 있습니다. 이 데이터 집합에 저장된 동의 값은 자동 적용 워크플로우에서 사용되는 **not**&#x200B;입니다. |
+| [!UICONTROL Profile Dataset] | [!DNL XDM Individual Profile]이전 단계[에서 만든 &#x200B;](#datasets) 데이터 세트를 선택하십시오. [`setConsent`](#setConsent) 명령을 사용하여 CMP 동의 변경 후크에 응답할 때 수집된 데이터가 이 데이터 집합에 저장됩니다. 이 데이터 세트는 프로필이 활성화되므로 자동 시행 워크플로 동안 이 데이터 세트에 저장된 동의 값이 적용됩니다. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 

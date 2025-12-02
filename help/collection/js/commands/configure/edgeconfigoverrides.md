@@ -10,7 +10,7 @@ ht-degree: 0%
 
 # `edgeConfigOverrides`(`configure` 명령)
 
-`edgeConfigOverrides` 개체를 사용하면 현재 페이지에서 실행되는 명령에 대한 구성 설정을 재정의할 수 있습니다. 이 개체는 국가별로 다른 웹 사이트 또는 하위 도메인이 있거나 여러 비즈니스 단위에 맞는 데이터를 저장할 여러 개의 Experience Platform 샌드박스가 있는 경우에 유용합니다. 페이지의 단일 명령에 대해서만 구성 설정을 재정의하려면 [`edgeConfigOverrides` 명령`sendEvent`에서 ](../sendevent/edgeconfigoverrides.md) 개체를 사용하는 것이 좋습니다.
+`edgeConfigOverrides` 개체를 사용하면 현재 페이지에서 실행되는 명령에 대한 구성 설정을 재정의할 수 있습니다. 이 개체는 국가별로 다른 웹 사이트 또는 하위 도메인이 있거나 여러 비즈니스 단위에 맞는 데이터를 저장할 여러 개의 Experience Platform 샌드박스가 있는 경우에 유용합니다. 페이지의 단일 명령에 대해서만 구성 설정을 재정의하려면 [`edgeConfigOverrides` 명령`sendEvent`에서 &#x200B;](../sendevent/edgeconfigoverrides.md) 개체를 사용하는 것이 좋습니다.
 
 데이터 스트림 구성 재정의 프로세스는 다음 두 가지 주요 단계로 구성됩니다.
 

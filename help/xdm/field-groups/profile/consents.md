@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->이 필드 그룹은 [!DNL XDM Individual Profile]과만 호환되므로 [!DNL XDM ExperienceEvent] 스키마에 사용할 수 없습니다. 경험 이벤트 스키마에 동의 및 환경 설정 데이터를 포함하려면 대신 [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences]사용자 지정 필드 그룹](../../data-types/consents.md)을 사용하여 [ 데이터 형식](../../ui/resources/field-groups.md#create)을(를) 스키마에 추가하십시오.
+>이 필드 그룹은 [!DNL XDM Individual Profile]과만 호환되므로 [!DNL XDM ExperienceEvent] 스키마에 사용할 수 없습니다. 경험 이벤트 스키마에 동의 및 환경 설정 데이터를 포함하려면 대신 [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences]사용자 지정 필드 그룹](../../data-types/consents.md)을 사용하여 [&#x200B; 데이터 형식](../../ui/resources/field-groups.md#create)을(를) 스키마에 추가하십시오.
 
 ## 필드 그룹 구조 {#structure}
 

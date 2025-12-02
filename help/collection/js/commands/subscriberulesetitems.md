@@ -50,7 +50,7 @@ alloy("subscribeRulesetItems", {
 
 | 매개변수 | 유형 | 설명 |
 | --- | --- | --- |
-| `result` | 오브젝트 | 이 개체에는 `propositions` 배열이 있습니다.  이 제안은 충족된 규칙 세트의 직접적인 결과입니다. `result` 개체는 [ 절을 사용하여 ](command-responses.md)에서 반환된 `sendEvent`결과 개체`then`와 동일하게 구조화되었습니다. |
+| `result` | 오브젝트 | 이 개체에는 `propositions` 배열이 있습니다.  이 제안은 충족된 규칙 세트의 직접적인 결과입니다. `result` 개체는 [&#x200B; 절을 사용하여 &#x200B;](command-responses.md)에서 반환된 `sendEvent`결과 개체`then`와 동일하게 구조화되었습니다. |
 | `collectEvent` | 함수 | 인터랙션, 디스플레이 및 기타 이벤트를 추적하기 위해 Edge Network 이벤트를 전송하는 데 사용할 수 있는 편의 기능입니다. |
 
 ### `collectEvent` 함수 {#collectevent-function}

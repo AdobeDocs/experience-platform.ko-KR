@@ -17,7 +17,7 @@ ht-degree: 0%
 
 1. Adobe ID 자격 증명을 사용하여 [experience.adobe.com](https://experience.adobe.com)에 로그인합니다.
 1. Adobe Experience Cloud 내의 어디에서나 **`[Ctrl]`** + **`[I]`**&#x200B;을(를) 누릅니다. [!UICONTROL User Data Debugger] 창이 열립니다.
-1. **[!UICONTROL Copy]** 옆에 있는 ![ ](../../assets/copy.png)복사[!UICONTROL Current Org ID]를 클릭하거나 **[!UICONTROL Assigned Orgs]** 탭을 클릭하여 액세스할 수 있는 다른 조직 ID를 확인합니다.
+1. **[!UICONTROL Copy]** 옆에 있는 ![&#x200B; &#x200B;](../../assets/copy.png)복사[!UICONTROL Current Org ID]를 클릭하거나 **[!UICONTROL Assigned Orgs]** 탭을 클릭하여 액세스할 수 있는 다른 조직 ID를 확인합니다.
 1. 원하는 정보를 찾으면 **[!UICONTROL Close]**&#x200B;을(를) 클릭합니다.
 
 조직 ID는 항상 24자의 영숫자 문자열이며, 항상 `@AdobeOrg`로 끝납니다.

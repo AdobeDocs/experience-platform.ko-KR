@@ -109,7 +109,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | --- | --- |
 | Experience Platform UI에서 왼쪽 탐색 통합 | 이전에 데이터 수집 UI에 독점적이었던 모든 기능(태그, 이벤트 전달 및 데이터스트림 포함)은 이제 Experience Platform에서 범주 **[!UICONTROL Data Collection]** 아래에 있는 왼쪽 탐색을 통해 사용할 수도 있습니다. 이렇게 하면 Experience Platform에서 데이터 수집 기능을 사용할 때 UI 간을 전환할 필요가 없습니다. |
 | 태그 및 이벤트 전달의 사용자 속성 | 태그 및 이벤트 전달에 사용 가능한 [!UICONTROL Properties]을(를) 나열할 때 이제 나열된 각 속성은 마지막으로 업데이트한 시기와 업데이트를 수행한 사용자를 표시합니다. |
-| 이벤트 전달용 [[!DNL Snap Conversions API] 확장](https://exchange.adobe.com/apps/ec/108550) | 이제 [!DNL Snapchat Conversions API]이벤트 전달[ 확장을 사용하여 ](../../tags/ui/event-forwarding/overview.md)에 데이터를 보낼 수 있습니다. API 인증 및 사용 방법에 대한 자세한 내용은 이 [[!DNL Snapchat Marketing API] 설명서](https://marketingapi.snapchat.com/docs/conversion.html)를 참조하십시오. |
+| 이벤트 전달용 [[!DNL Snap Conversions API] 확장](https://exchange.adobe.com/apps/ec/108550) | 이제 [!DNL Snapchat Conversions API]이벤트 전달[&#x200B; 확장을 사용하여 &#x200B;](../../tags/ui/event-forwarding/overview.md)에 데이터를 보낼 수 있습니다. API 인증 및 사용 방법에 대한 자세한 내용은 이 [[!DNL Snapchat Marketing API] 설명서](https://marketingapi.snapchat.com/docs/conversion.html)를 참조하십시오. |
 | [Web SDK의 사용자 에이전트 클라이언트 힌트](/help/collection/use-cases/client-hints.md) | 이제 웹 SDK에서 [사용자 에이전트 클라이언트 힌트](https://developer.chrome.com/docs/privacy-sandbox/user-agent/)를 지원합니다. 클라이언트 힌트를 사용하면 웹 사이트 소유자가 [!DNL User-Agent] 문자열에서 사용할 수 있는 동일한 정보의 대부분에 액세스할 수 있지만 보다 개인정보 보호에 특화되었습니다. |
 | 웹 SDK 페이지별 마이그레이션 | 이제 기존 웹 속성을 다른 Experience Cloud 라이브러리(예: [!DNL at.js])에서 웹 SDK으로 한 번에 한 페이지씩 마이그레이션할 수 있습니다. 이렇게 하면 모든 페이지를 한 번에 마이그레이션할 필요 없이 웹 SDK 마이그레이션에 대한 단계별 접근 방식이 활성화됩니다. |
 | [[!DNL Adobe Journey Optimizer] 데이터스트림 지원](../../datastreams/overview.md#aep) | 이제 데이터 스트림에 대한 Adobe Experience Platform 서비스에서 [!DNL Adobe Journey Optimizer]을(를) 지원합니다. 이 옵션을 사용하면 [!DNL Adobe Journey Optimizer]에서 웹 및 앱 기반 인바운드 채널을 사용할 수 있습니다. |
@@ -237,4 +237,4 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | 실패한 데이터 흐름을 재시도하기 위한 API 지원은 배치 소스에 대해 실행됩니다 | `re-trigger` 작업을 사용하여 실패한 데이터 흐름을 API를 통해 다시 시도하세요. 자세한 내용은 [API를 사용하여 실패한 데이터 흐름 실행 다시 시도](../../sources/tutorials/api/retry-flows.md)에 대한 안내서를 참조하십시오. |
 | [!DNL Google BigQuery] 및 [!DNL Snowflake] 소스에 대한 행 수준 데이터 필터링을 위한 API 지원 | 논리 및 비교 연산자를 사용하여 [!DNL Google BigQuery] 및 [!DNL Snowflake] 원본에 대한 행 수준 데이터를 필터링하십시오. 자세한 내용은 [API를 사용하여 소스의 데이터를 필터링](../../sources/tutorials/api/filter.md)하는 방법에 관한 안내서를 참조하십시오. |
 
-소스에 대해 자세히 알아보려면 [소스 개요 ](../../sources/home.md)를 참조하십시오.
+소스에 대해 자세히 알아보려면 [소스 개요 &#x200B;](../../sources/home.md)를 참조하십시오.

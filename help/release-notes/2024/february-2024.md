@@ -34,7 +34,7 @@ Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이
 
 {style="table-layout:auto"}
 
-경고에 대해 자세히 알아보려면 [[!DNL Observability Insights] 개요 ](/help/observability/home.md)를 참조하십시오.
+경고에 대해 자세히 알아보려면 [[!DNL Observability Insights] 개요 &#x200B;](/help/observability/home.md)를 참조하십시오.
 
 ## 데이터 수집 {#data-collection}
 

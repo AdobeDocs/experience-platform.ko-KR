@@ -253,7 +253,7 @@ Adobe Target에서 반환된 Personalization 콘텐츠에는 활동, 오퍼, 경
 var propositions = event.propositions;
 ```
 
-`event.propositions`이(가) 있으면 개인화 제안 개체가 포함된 배열입니다. [의 콘텐츠에 대한 자세한 내용은 ](#manually-render-personalized-content)개인화된 콘텐츠를 수동으로 렌더링`result.propositions`을 참조하십시오.
+`event.propositions`이(가) 있으면 개인화 제안 개체가 포함된 배열입니다. [의 콘텐츠에 대한 자세한 내용은 &#x200B;](#manually-render-personalized-content)개인화된 콘텐츠를 수동으로 렌더링`result.propositions`을 참조하십시오.
 
 웹 SDK에서 자동으로 렌더링된 모든 명제에서 모든 활동 이름을 수집하여 단일 배열로 푸시하려는 경우 그런 다음 단일 스토리지를 서드파티로 전송할 수 있습니다. 이 경우 [!UICONTROL Custom code] 작업 내에 사용자 지정 코드를 작성하여 다음 작업을 수행하십시오.
 

@@ -36,7 +36,8 @@ Adobe Experience Platform의 **tags**(이전 Launch)을(를) 사용하여 웹 �
 
 ![스키마 캔버스](assets/getting-started/schema-structure.png)
 
->[!NOTE]\
+>[!NOTE]
+>\
 >저장되면 스키마에서는 *추가*&#x200B;만 변경할 수 있습니다. 자세한 내용은 [스키마 진화](/help/xdm/schema/composition.md#evolution)을 참조하십시오.
 
 ## 데이터 스트림 만들기 {#datastream}

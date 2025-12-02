@@ -37,4 +37,4 @@ alloy("configure", {
 
 ## 웹 SDK 태그 확장을 사용한 Edge 도메인
 
-이 속성에 해당하는 태그 확장은 확장을 구성할 때 **[!UICONTROL Edge domain]** SDK 인스턴스 구성 설정[ 아래의 ](/help/tags/extensions/client/web-sdk/configure/general.md) 필드입니다.
+이 속성에 해당하는 태그 확장은 확장을 구성할 때 **[!UICONTROL Edge domain]** SDK 인스턴스 구성 설정[&#x200B; 아래의 &#x200B;](/help/tags/extensions/client/web-sdk/configure/general.md) 필드입니다.

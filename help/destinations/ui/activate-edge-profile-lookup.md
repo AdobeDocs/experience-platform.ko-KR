@@ -77,7 +77,7 @@ Edge에서 프로필 속성을 조회하려면 Edge 평가를 위해 대상을 �
 
 새 대상 연결을 만드는 방법에 대한 자세한 지침은 [대상 연결 만들기 자습서](../ui/connect-destination.md)를 따르십시오.
 
-새 대상을 구성할 때는 [ 필드의 ](#create-datastream)단계 1 **[!UICONTROL Datastream ID]**&#x200B;에서 만든 데이터 스트림을 선택하십시오. **[!UICONTROL Integration alias]**&#x200B;의 경우 대상 이름과 같이 나중에 이 대상 연결을 식별하는 데 도움이 되는 모든 값을 사용할 수 있습니다.
+새 대상을 구성할 때는 [&#x200B; 필드의 &#x200B;](#create-datastream)단계 1 **[!UICONTROL Datastream ID]**&#x200B;에서 만든 데이터 스트림을 선택하십시오. **[!UICONTROL Integration alias]**&#x200B;의 경우 대상 이름과 같이 나중에 이 대상 연결을 식별하는 데 도움이 되는 모든 값을 사용할 수 있습니다.
 
 ![특성을 가진 사용자 지정 Personalization 구성 화면을 표시하는 Experience Platform UI 이미지입니다.](../assets/ui/activate-edge-profile-lookup/destination-config.png)
 
@@ -276,7 +276,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 |---------|----------|
 | `payload` | 에지 조회 정보가 포함된 `payload` 개체입니다. 이 응답에는 에지 조회와 관련 없는 `payload` 개체가 여러 개 더 포함될 수 있습니다. |
 | `type` | 페이로드는 응답에서 유형별로 그룹화됩니다. 에지 프로필 조회에 대한 페이로드 유형이 항상 `profileLookup`(으)로 설정되어 있습니다. |
-| `destinationId` | **[!UICONTROL Custom Personalization]**&#x200B;단계 3[에서 만든 ](#configure-custom-personalization-connection) 연결 인스턴스의 ID입니다. |
+| `destinationId` | **[!UICONTROL Custom Personalization]**&#x200B;단계 3[에서 만든 &#x200B;](#configure-custom-personalization-connection) 연결 인스턴스의 ID입니다. |
 | `alias` | [사용자 지정 Personalization](../catalog/personalization/custom-personalization.md) 대상 연결을 만들 때 사용자가 구성한 대상 연결의 별칭입니다. |
 | `attributes` | 이 배열에는 [3단계](#configure-custom-personalization-connection)에서 활성화한 대상자의 Edge 프로필 특성이 포함되어 있습니다. |
 | `segments` | 이 배열에는 [3단계](#configure-custom-personalization-connection)에서 활성화한 대상이 포함되어 있습니다. |
