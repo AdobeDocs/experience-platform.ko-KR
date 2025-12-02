@@ -4,33 +4,33 @@ title: 사용 사례 플레이북 시작
 description: 사용 사례 플레이북 기능을 시작하는 방법에 대해 알아봅니다.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
+source-git-commit: d6b62b9539a04be2d2adc7aa66436a294e08303a
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 14%
+source-wordcount: '942'
+ht-degree: 8%
 
 ---
 
 
 # 시작하기
 
-자동으로 설정되지 않은 경우 Real-time Customer Data Platform 및 Adobe Journey Optimizer용으로 설계된 사용 사례 플레이북에 대한 계정을 설정하는 방법을 알아봅니다. 세 가지 주요 구성 단계는 다음과 같습니다.
+자동으로 설정되지 않은 경우 Real-Time Customer Data Platform 및 Adobe Journey Optimizer용으로 설계된 사용 사례 플레이북에 대한 계정을 설정하는 방법을 알아봅니다. 세 가지 주요 구성 단계는 다음과 같습니다.
 
 * 샌드박스 만들기
 * 사용자 권한 구성
 * 이메일, 푸시 및 SMS 알림에 대한 Journey Optimizer 채널 표면 구성(Journey Optimizer 플레이북을 사용할 계획인 경우)
 
-Experience Platform UI에서 사용 사례 플레이북의 다양한 갤러리에 액세스하려면 왼쪽 탐색에서 **[!UICONTROL 플레이북]**&#x200B;을 선택하십시오. [사용 사례 플레이북을 탐색](../playbooks/navigate.md)하고 [영감을 주는 샌드박스](../playbooks/navigate.md)를 시작하는 방법에 대한 설명서를 읽어 보십시오.
+Experience Platform UI에서 사용 사례 플레이북의 다양한 갤러리에 액세스하려면 왼쪽 탐색에서 **[!UICONTROL Playbooks]**&#x200B;을(를) 선택하십시오. [사용 사례 플레이북을 탐색](../playbooks/navigate.md)하고 [영감을 주는 샌드박스](../playbooks/navigate.md)를 시작하는 방법에 대한 설명서를 읽어 보십시오.
 
 ## 사용 사례 플레이북 구성 - 비디오 연습 {#video}
 
 이 비디오를 통해 Journey Optimizer에서 샌드박스를 만들고, 권한을 구성하고, 이메일, 푸시 및 SMS 알림에 대한 채널 표면을 구성하는 데 필요한 단계에 대해 알아보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449833?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
 
 ## 개발 샌드박스 만들기 {#create-development-sandbox}
 
-사용 사례 플레이북은 특수한 유형의 개발 샌드박스를 사용합니다. [[!UICONTROL 사용 사례 플레이북]](/help/use-case-playbooks/playbooks/overview.md) 기능을 시작하고 액세스하려면 아래와 같이 접미사에 `-ucp` 또는 `-UCP`가 포함된 이름(제목이 아닌)으로 [새 개발 샌드박스를 만듭니다](/help/sandboxes/ui/user-guide.md#create)(프로덕션 샌드박스는 선택하지 않음).
+사용 사례 플레이북은 특수한 유형의 개발 샌드박스를 사용합니다. 시작하여 [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md) 기능에 액세스하려면 아래 표시된 대로 접미사에 [ 또는 ](/help/sandboxes/ui/user-guide.md#create)이(가) 포함된 이름(제목이 아님)을 사용하여 `-ucp`새 개발 샌드박스를 만들기`-UCP`(프로덕션 샌드박스를 선택하지 않도록 확인)하십시오.
 
 >[!IMPORTANT]
 >
@@ -39,15 +39,15 @@ Experience Platform UI에서 사용 사례 플레이북의 다양한 갤러리�
 
 ![사용 사례 플레이북을 위한 개발 샌드박스 생성](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
-이제 [!UICONTROL 사용 사례 플레이북]의 왼쪽 레일에 [!UICONTROL 플레이북]이 표시됩니다.
+이제 [!UICONTROL Playbooks] 아래의 왼쪽 레일에 [!UICONTROL Use Case Playbooks]이(가) 표시됩니다.
 
 ![샌드박스를 만든 후에 UI에서 사용 사례 플레이북을 사용합니다.](/help/use-case-playbooks/assets/playbooks/get-started/ucp-sandbox-in-ui.png)
 
-위와 같이 왼쪽 레일에 [!UICONTROL 플레이북]이 표시되지 않으면 해당 링크(`https://experience.adobe.com/#/@<YOUR_ORG>/sname:<YOUR_SANDBOX_NAME>/platform/mexp/templates`)를 사용하여 직접 이동합니다. 이 링크에서 `<YOUR_ORG>`는 조직 이름이며 `<YOUR_SANDBOX_NAME>`는 생성한 개발 샌드박스의 이름입니다.
+위와 같이 왼쪽 레일에 [!UICONTROL Playbooks]이(가) 표시되지 않으면 이 링크 `https://experience.adobe.com/#/@<YOUR_ORG>/sname:<YOUR_SANDBOX_NAME>/platform/mexp/templates`을(를) 사용하여 해당 레일을 직접 탐색하십시오. 이 링크에서 `<YOUR_ORG>`는 조직 이름이며 `<YOUR_SANDBOX_NAME>`는 생성한 개발 샌드박스의 이름입니다.
 
 ## 팀에 필요한 액세스 권한 부여 {#grant-access-permissions}
 
-[!UICONTROL 사용 사례 플레이북]을 시작하려면 마케팅 팀원이 만든 플레이북 목록을 보거나 직접 플레이북을 만들 수 있도록 올바른 권한이 필요합니다.
+[!UICONTROL Use Case Playbooks]을(를) 시작하려면 마케팅 팀원이 만든 플레이북 목록을 보거나 플레이북을 직접 만들 수 있도록 올바른 권한이 필요합니다.
 
 **필요한 권한**
 
@@ -69,15 +69,15 @@ Experience Platform UI에서 사용 사례 플레이북의 다양한 갤러리�
 
 **스키마에 대한 권한**
 
-스키마를 만들고 관리하려면 데이터 모델링 권한을 활용하십시오. **[!UICONTROL 스키마 관리]**, **[!UICONTROL 스키마 보기]**, **[!UICONTROL 관계 관리]**, **[!UICONTROL ID 메타데이터 관리]**
+스키마를 만들고 관리하려면 데이터 모델링 권한 **[!UICONTROL Manage Schemas]**, **[!UICONTROL View Schemas]**, **[!UICONTROL Manage Relationships]**, **[!UICONTROL Manage Identity Metadata]**&#x200B;을(를) 활용하십시오.
 
 대상에 대한 **권한**
 
-대상을 만들고 관리하려면 대상 권한을 사용합니다. **[!UICONTROL 관리]**, **[!UICONTROL 대상]**, **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 매핑하지 않고 세그먼트 활성화]**, **[!UICONTROL 데이터 세트 대상 관리 및 활성화]**, **[!UICONTROL 대상 작성]**.
+대상을 만들고 관리하려면 대상 권한(**[!UICONTROL Manage]**, **[!UICONTROL Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL Manage and Activate Dataset Destination]**, **[!UICONTROL Destination Authoring]**)을 사용합니다.
 
 **여정에 대한 권한**
 
-여정을 만들고 관리하려면 여정 권한(**[!UICONTROL 여정 관리]**, **[!UICONTROL 여정 보기]**, **[!UICONTROL 여정 보고서 보기]**, **[!UICONTROL 여정 관리]**, **[!UICONTROL 이벤트]**, **[!UICONTROL 데이터 소스 및 작업 보기]**, **[!UICONTROL 여정 보기]**, **[!UICONTROL 이벤트]**, **[!UICONTROL 데이터 소스 및 작업, Publish 여정]**)을 사용합니다.
+여정을 만들고 관리하려면 여정 권한(**[!UICONTROL Manage Journeys]**, **[!UICONTROL View Journeys]**, **[!UICONTROL View Journeys Report]**, **[!UICONTROL Manage Journeys]**, **[!UICONTROL Events]**, **[!UICONTROL Data Sources and Actions]**, **[!UICONTROL View Journeys]**, **[!UICONTROL Events]**, **[!UICONTROL Data Sources and Actions, Publish Journeys]**)을 사용합니다.
 
 아래 이미지는 플레이북과 플레이북에서 생성된 에셋을 보고, 만들고, 관리하는 데 사용할 수 있는 권장 권한의 스냅숏을 표시합니다.
 
@@ -89,13 +89,13 @@ Experience Platform UI에서 사용 사례 플레이북의 다양한 갤러리�
 
 ## Journey Optimizer에서 샌드박스 및 채널 표면 구성 {#configure-channel-surfaces}
 
-조직에서 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ko-KR)에 대한 라이선스를 보유하고 있으며 Journey Optimizer용으로 설계된 플레이북을 사용하려는 경우 샌드박스에서 메시지에 필요한 기술 매개 변수를 정의하는 채널 사전 설정을 구성해야 합니다. [Adobe Journey Optimizer에서 채널 표면을 설정하는 방법에 대해 알아봅니다](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=ko).
+조직에 [Adobe Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/ajo-home)에 대한 라이선스가 있고 Journey Optimizer용으로 설계된 플레이북을 사용하려는 경우 샌드박스에서 채널 표면을 구성하십시오. 채널 표면은 이메일 유형, 발신자 이메일 및 이름, 모바일 앱, SMS 구성 등과 같이 메시지에 필요한 모든 기술 매개 변수를 정의합니다. [Adobe Journey Optimizer에서 채널 표면을 설정하는 방법에 대해 알아봅니다](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/channel-surfaces).
 
 Journey Optimizer에서 플레이북의 인스턴스를 생성하려면 이메일, 푸시 및 SMS 알림에 대한 채널 표면을 구성해야 합니다.
 
 ### 전자 메일 채널 표면
 
-Journey Optimizer 인터페이스의 `Channels`(으)로 이동합니다. 아직 구성되지 않은 경우 마케팅 이메일 및 트랜잭션 메시지를 위한 별도의 하위 도메인 및 IP 풀을 구성합니다. 다음은 주문 확인 이메일과 같은 트랜잭션 메시지가 고객에게 전달되도록 하는 모범 사례입니다. 이름, 이메일 주소 및 추가 설정을 입력합니다. 페이지 오른쪽 상단에서 **제출**&#x200B;을 선택하여 마케팅 채널 표면을 만듭니다. [전자 메일 채널 표면을 설정하는 방법](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=ko)에 대한 설명서를 읽어 보십시오.
+Journey Optimizer 인터페이스의 `Channels`(으)로 이동합니다. 아직 구성되지 않은 경우 마케팅 이메일 및 트랜잭션 메시지를 위한 별도의 하위 도메인 및 IP 풀을 구성합니다. 다음은 주문 확인 이메일과 같은 트랜잭션 메시지가 고객에게 전달되도록 하는 모범 사례입니다. 이름, 이메일 주소 및 추가 설정을 입력합니다. 페이지 오른쪽 상단에서 **제출**&#x200B;을 선택하여 마케팅 채널 표면을 만듭니다. [전자 메일 채널 표면을 설정하는 방법](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html)에 대한 설명서를 읽어 보십시오.
 
 ### SMS 채널 표면
 
@@ -111,7 +111,7 @@ SMS 채널 표면을 만들려면 먼저 SMS API 자격 증명을 만들고 기�
 
 그런 다음 채널 구성에서 확인한 채널, 플랫폼 및 앱을 선택합니다. 푸시 채널 표면을 만들려면 **제출**&#x200B;을 선택합니다.
 
-[푸시 채널 표면을 설정하는 방법](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=ko)에 대한 설명서를 읽어 보십시오.
+[푸시 채널 표면을 설정하는 방법](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html)에 대한 설명서를 읽어 보십시오.
 
 ## 다음 단계 {#next-steps}
 
