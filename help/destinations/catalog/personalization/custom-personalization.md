@@ -3,7 +3,7 @@ keywords: 사용자 정의 개인화; 대상; experience platform 사용자 정�
 title: 사용자 지정 개인화 연결
 description: 이 대상은 Adobe Experience Platform에서 대상 정보를 검색할 수 있는 방법을 통해 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필 대상 멤버십을 기반으로 실시간 개인화를 제공합니다.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 44a4d5c592e13cdd1d4d75787dee5e1763fae9a4
+source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 9%
@@ -23,7 +23,7 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화에 대한 [&#x200B; 대상을 구성할 때 &#x200B;](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API **[!UICONTROL Custom Personalization]**&#x200B;를 사용해야 합니다. 모든 Edge Network API 호출은 [인증된 컨텍스트](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)에서 수행되어야 합니다.
+>프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화에 대한 [ 대상을 구성할 때 ](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API **[!UICONTROL Custom Personalization]**&#x200B;를 사용해야 합니다. 모든 Edge Network API 호출은 [인증된 컨텍스트](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)에서 수행되어야 합니다.
 >
 ><br>웹 또는 Mobile SDK 구현에 이미 사용하고 있는 동일한 데이터 스트림을 사용하는 서버측 통합을 추가하여 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)를 통해 프로필 특성을 검색할 수 있습니다.
 >
@@ -37,9 +37,9 @@ ht-degree: 9%
 
 이 대상은 구현에 따라 다음 데이터 수집 방법 중 하나를 사용해야 합니다.
 
-* 웹 사이트에서 데이터를 수집하려면 [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)를 사용하십시오.
+* 웹 사이트에서 데이터를 수집하려면 [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)를 사용하십시오.
 * 모바일 애플리케이션에서 데이터를 수집하려면 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)를 사용하십시오.
-* [Web SDK](https://developer.adobe.com/data-collection-apis/docs/) 또는 [Mobile SDK](/help/web-sdk/home.md)을 사용하지 않거나 프로필 특성을 기반으로 사용자 경험을 개인화하려는 경우 [Edge Network API](https://developer.adobe.com/client-sdks/documentation/)를 사용하십시오.
+* Web SDK 또는 Mobile SDK을 사용하지 않거나 프로필 특성을 기반으로 사용자 경험을 개인화하려면 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)를 사용하십시오.
 
 >[!IMPORTANT]
 >
@@ -75,7 +75,7 @@ ht-degree: 9%
 >id="platform_destinations_custom_personalization_datastream"
 >title="데이터 스트림 정보"
 >abstract="이 옵션은 페이지에 대한 응답으로 대상자에 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에 대상 구성이 활성화된 데이터스트림만 표시됩니다. 대상을 구성하려면 먼저 데이터스트림을 구성해야 합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=ko" text="데이터스트림을 구성하는 방법에 대해 알아보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="데이터스트림을 구성하는 방법에 대해 알아보기"
 
 >[!IMPORTANT]
 > 
@@ -108,7 +108,7 @@ ht-degree: 9%
 
 ## 내보낸 데이터 {#exported-data}
 
-[Adobe Experience Platform의 태그](../../../tags/home.md)를 사용하여 Experience Platform Web SDK을 배포하는 경우 [이벤트 완료 보내기](../../../tags/extensions/client/web-sdk/event-types.md) 기능을 사용하면 사용자 지정 코드 작업에 내보낸 데이터를 보는 데 사용할 수 있는 `event.destinations` 변수가 생깁니다.
+[Adobe Experience Platform의 태그](/help/tags/home.md)를 사용하여 Experience Platform Web SDK을 배포하는 경우 [이벤트 완료 보내기](/help/tags/extensions/client/web-sdk/event-types.md) 기능을 사용하면 사용자 지정 코드 작업에 내보낸 데이터를 보는 데 사용할 수 있는 `event.destinations` 변수가 생깁니다.
 
 다음은 `event.destinations` 변수의 샘플 값입니다.
 
@@ -130,7 +130,7 @@ ht-degree: 9%
 ]
 ```
 
-[태그](/help/tags/home.md)를 사용하여 Experience Platform Web SDK을 배포하지 않는 경우 [명령 응답](/help/web-sdk/commands/command-responses.md)을 사용하여 내보낸 데이터를 확인합니다.
+[태그](/help/tags/home.md)를 사용하여 Experience Platform Web SDK을 배포하지 않는 경우 [명령 응답](/help/collection/js/commands/command-responses.md)을 사용하여 내보낸 데이터를 확인합니다.
 
 Adobe Experience Platform의 JSON 응답을 구문 분석하여 Adobe Experience Platform과 통합 중인 애플리케이션의 해당 통합 별칭을 찾을 수 있습니다. 대상 ID는 타깃팅 매개 변수로 애플리케이션의 코드에 전달될 수 있습니다. 다음은 대상 응답에만 적용되는 예제입니다.
 

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
+source-git-commit: 0b3f4ec51cac182b637c79b9fcb883e5f8f78d02
 workflow-type: tm+mt
-source-wordcount: '2970'
+source-wordcount: '2949'
 ht-degree: 22%
 
 ---
@@ -12,20 +12,20 @@ ht-degree: 22%
 
 # 웹 SDK 확장 릴리스 노트
 
-이 문서에서는 Adobe Experience Platform Web SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Experience Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md)를 참조하십시오.
+이 문서에서는 Adobe Experience Platform Web SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Experience Platform Web SDK 릴리스 노트](/help/collection/js/release-notes.md)를 참조하십시오.
 
 ## 버전 2.33.0 - 2025년 9월 24일
 
 **새로운 기능**
 
 - 푸시 알림 표시에 대한 지원을 추가했습니다.
-- Adobe Experience Platform Web SDK의 [버전 2.30.0](../../../../web-sdk/release-notes.md#2-30-0)을 포함합니다.
+- Adobe Experience Platform Web SDK의 [버전 2.30.0](/help/collection/js/release-notes.md#2-30-0)을 포함합니다.
 
 ## 버전 2.32.0 - 2025년 9월 4일
 
 **새로운 기능**
 
-- Adobe Experience Platform Web SDK의 [버전 2.29.0](../../../../web-sdk/release-notes.md#2-29-0)을 포함합니다.
+- Adobe Experience Platform Web SDK의 [버전 2.29.0](/help/collection/js/release-notes.md#2-29-0)을 포함합니다.
 - 새로운 사용자 지정 빌드 구성 요소로서 Adobe Advertising에 대한 지원이 추가되었습니다. 확장 구성 및 이벤트 호출 전송에서 를 구성합니다.
 - 프로필에 푸시 구독 세부 정보를 기록할 수 있는 지원이 추가되었습니다. 이는 새 작업, &quot;구독 세부 정보 푸시&quot;를 통한 것입니다.
 
@@ -36,13 +36,13 @@ ht-degree: 22%
 ## 버전 2.31.1 - 2025년 7월 31일 금요일
 
 - 사용자 지정 빌드가 실행되지 않는 문제를 해결했습니다.
-- Adobe Experience Platform Web SDK의 [버전 2.28.1](../../../../web-sdk/release-notes.md#2-28-1)을 포함합니다.
+- Adobe Experience Platform Web SDK의 [버전 2.28.1](/help/collection/js/release-notes.md#2-28-1)을 포함합니다.
 
 ## 버전 2.31.0 - 2025년 7월 24일 금요일
 
 **새로운 기능**
 
-- Adobe Experience Platform Web SDK의 [버전 2.28.0](../../../../web-sdk/release-notes.md#2-28-0)을 포함합니다.
+- Adobe Experience Platform Web SDK의 [버전 2.28.0](/help/collection/js/release-notes.md#2-28-0)을 포함합니다.
 
 **수정 사항 및 개선 사항**
 
@@ -52,7 +52,7 @@ ht-degree: 22%
 
 **알려진 문제**
 
-- v2.31.0이 릴리스된 후 [사용자 지정 구성 요소 빌드](/help/web-sdk/install/create-custom-build.md) 프로세스에서 문제가 발견되었습니다. 사용자 지정 빌드는 계속 작동하는 동안 모든 구성 요소가 현재 빌드에 포함되어 구성 요소 선택에 관계없이 전체 크기의 패키지가 됩니다. 이 문제에 대한 수정 사항이 개발 중입니다. 사용자 지정 구성 요소 선택을 사용하여 빌드 크기를 최소화하는 경우 향후 릴리스를 기다리는 것이 좋습니다.
+- v2.31.0이 릴리스된 후 [사용자 지정 구성 요소 빌드](/help/collection/js/install/create-custom-build.md) 프로세스에서 문제가 발견되었습니다. 사용자 지정 빌드는 계속 작동하는 동안 모든 구성 요소가 현재 빌드에 포함되어 구성 요소 선택에 관계없이 전체 크기의 패키지가 됩니다. 이 문제에 대한 수정 사항이 개발 중입니다. 사용자 지정 구성 요소 선택을 사용하여 빌드 크기를 최소화하는 경우 향후 릴리스를 기다리는 것이 좋습니다.
 
 ## 버전 2.30.1 - 2025년 5월 27일 수요일
 
@@ -66,7 +66,7 @@ ht-degree: 22%
 
 - 이제 서드파티 쿠키를 활성화할 때 데이터 요소를 지정할 수 있습니다.
 - 코드 필드에 지우기 단추가 추가되었습니다.
-- Adobe Experience Platform Web SDK의 [버전 2.27.0](../../../../web-sdk/release-notes.md#2-27-0)을 포함합니다.
+- Adobe Experience Platform Web SDK의 [버전 2.27.0](/help/collection/js/release-notes.md)을 포함합니다.
 
 **수정 사항 및 개선 사항**
 
@@ -82,13 +82,13 @@ ht-degree: 22%
 
 **새로운 기능**
 
-- 이제 사용자 지정 웹 SDK 빌드를 만들고 태그 확장 사용자 인터페이스에서 필요한 구성 요소를 선택할 수 있습니다. 이렇게 하면 사용되지 않는 구성 요소를 제외하여 빌드가 작아질 수 있습니다. [사용자 지정 웹 SDK 빌드 만들기](web-sdk-extension-configuration.md#custom-build)에 대한 설명서를 참조하세요.
-- Adobe Experience Platform Web SDK의 [버전 2.26.0](../../../../web-sdk/release-notes.md#2-26-0)을 포함합니다.
+- 이제 사용자 지정 웹 SDK 빌드를 만들고 태그 확장 사용자 인터페이스에서 필요한 구성 요소를 선택할 수 있습니다. 이렇게 하면 사용되지 않는 구성 요소를 제외하여 빌드가 작아질 수 있습니다. [사용자 지정 빌드 구성 요소](configure/custom-build-components.md)를 참조하십시오.
+- Adobe Experience Platform Web SDK의 [버전 2.26.0](/help/collection/js/release-notes.md)을 포함합니다.
 
 **수정 사항 및 개선 사항**
 
-- [변수 업데이트](action-types.md#update-variable) 작업에서 누락된 데이터 요소를 정상적으로 처리하는 기능이 추가되었습니다. 이전에는 누락된 데이터 요소로 변수 업데이트 작업을 편집하면 오류 메시지가 표시되었습니다. 이제 다른 데이터 요소를 선택할 수 있으며 변수 업데이트 작업에 대한 모든 설정이 계속 적용됩니다. 데이터 요소는 삭제되거나 태그 속성이 중복되는 경우 누락될 수 있습니다.
-- [ID로 리디렉션](action-types.md#redirect-with-identity) 작업으로 새 탭을 열 수 있도록 지원을 추가했습니다. 이제 작업을 사용할 때 브라우저를 리디렉션할 때 앵커 태그의 `target` 특성이 사용됩니다.
+- [변수 업데이트](actions/update-variable.md) 작업에서 누락된 데이터 요소를 정상적으로 처리하는 기능이 추가되었습니다. 이전에는 누락된 데이터 요소로 변수 업데이트 작업을 편집하면 오류 메시지가 표시되었습니다. 이제 다른 데이터 요소를 선택할 수 있으며 변수 업데이트 작업에 대한 모든 설정이 계속 적용됩니다. 데이터 요소는 삭제되거나 태그 속성이 중복되는 경우 누락될 수 있습니다.
+- [ID로 리디렉션](actions/redirect-with-identity.md) 작업으로 새 탭을 열 수 있도록 지원을 추가했습니다. 이제 작업을 사용할 때 브라우저를 리디렉션할 때 앵커 태그의 `target` 특성이 사용됩니다.
 - 구성 재정의에서 Adobe Audience Manager을 비활성화할 수 없는 문제를 해결했습니다.
 
 ## 버전 2.28.0 - 2025년 1월 23일 금요일
@@ -102,14 +102,14 @@ ht-degree: 22%
 **새로운 기능**
 
 - XDM 오브젝트에서 기술 이름과 표시 이름 간을 전환하는 새 기능이 추가되었습니다.
-- Adobe Experience Platform Web SDK의 [버전 2.25.0](../../../../web-sdk/release-notes.md#2-25-0)을 포함합니다.
+- Adobe Experience Platform Web SDK의 [버전 2.25.0](/help/collection/js/release-notes.md)을 포함합니다.
 
 ## 버전 2.27.0 - 2024년 10월 31일 금요일
 
 **새로운 기능**
 
-- [데이터스트림 재정의](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides)에 이제 Experience Cloud 솔루션 및 Adobe Experience Platform 서비스를 비활성화하는 설정이 포함됩니다.
-- 이제 미디어 세션에 대해 [데이터 스트림 무시](../web-sdk/web-sdk-extension-configuration.md)를 만들 수 있습니다.
+- [구성 재정의](configure/configuration-overrides.md)에 이제 Experience Cloud 솔루션 및 Adobe Experience Platform 서비스를 사용하지 않도록 설정하는 설정이 포함됩니다.
+- 이제 미디어 세션에 대한 구성 재정의를 생성할 수 있습니다.
 
 Adobe Experience Platform Web SDK 버전 2.24.0을 포함합니다.
 
@@ -126,12 +126,12 @@ Adobe Experience Platform Web SDK 버전 2.23.0을 포함합니다.
 **새로운 기능**
 
 - 모니터링 후크 `triggered` 이벤트가 추가되었습니다.
-- [안내 이벤트](action-types.md#instance), [기본 개인화 요청](action-types.md#personalization), [규칙 집합 항목 구독](event-types.md#subscribe-ruleset-items) 및 [규칙 집합 평가](action-types.md#evaluate-rulesets)를 이제 일반적으로 사용할 수 있습니다.
+- [안내 이벤트](actions/actions-overview.md), [기본 개인화 요청](configure/personalization.md), [규칙 집합 항목 구독](event-types.md#subscribe-ruleset-items) 및 [규칙 집합 평가](actions/evaluate-rulesets.md)를 이제 일반적으로 사용할 수 있습니다.
 
 **수정 사항 및 개선 사항**
 
 - 복제된 변수 데이터 요소가 서로 덮어쓰기될 수 있는 문제를 해결했습니다.
-- [기본 개인화 요청](action-types.md#personalization) 안내 이벤트를 사용할 때 이제 시각적 개인화 결정이 자동으로 활성화됩니다.
+- [기본 개인화 요청](configure/personalization.md) 안내 이벤트를 사용할 때 이제 시각적 개인화 결정이 자동으로 활성화됩니다.
 
 Adobe Experience Platform Web SDK 버전 2.22.0을 포함합니다.
 
@@ -159,16 +159,16 @@ Adobe Experience Platform Web SDK 버전 2.20.0을 포함합니다.
 
 **새로운 기능**
 
-- 확장 구성에 [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) 구성 요소에 대한 지원을 추가했습니다.
-- [`Send Media Event`](action-types.md#send-media-event) 기능에 대한 [!DNL Streaming Media Collection] 작업을 추가했습니다.
+- 확장 구성에 [`Streaming Media Collection`](configure/streaming-media.md) 구성 요소에 대한 지원을 추가했습니다.
+- [`Send Media Event`](actions/send-media-event.md) 기능에 대한 [!DNL Streaming Media Collection] 작업을 추가했습니다.
 - [`Media: Quality of Experience`](data-element-types.md#quality-experience) 기능에 대한 [!DNL Streaming Media Collection] 데이터 요소를 추가했습니다.
 
 Adobe Experience Platform Web SDK 버전 2.20.0을 포함합니다.
 
 **수정 사항 및 개선 사항**
 
-- [변수 업데이트](action-types.md#update-variable) 작업에서 데이터 요소를 검색할 때 발생하는 오류를 수정했습니다.
-- [!UICONTROL &#x200B; 작업에 사용하도록 권장된 이벤트 유형에서 &#x200B;]Media`sendEvent` 이벤트 유형을 제거했습니다.
+- [변수 업데이트](actions/update-variable.md) 작업에서 데이터 요소를 검색할 때 발생하는 오류를 수정했습니다.
+- [!UICONTROL Media] 작업에 사용하도록 제안된 이벤트 유형에서 `sendEvent`개의 이벤트 유형을 제거했습니다.
 
 ## 버전 2.22.0 - 2024년 5월 3일 토요일
 
@@ -226,7 +226,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
 **새로운 기능**
 
-- 데이터 스트림 ID[의 명령당 &#x200B;](../../../../datastreams/overrides.md)재정의에 대한 지원을 추가했습니다.
+- 데이터 스트림 ID[의 명령당 ](../../../../datastreams/overrides.md)재정의에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
@@ -235,7 +235,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
 ## 버전 2.19.0 - 2023년 6월 21일 목요일
 
-- 이제 **[!UICONTROL 변수]** 데이터 요소와 **[!UICONTROL 변수 업데이트]** 작업을 일반적으로 사용할 수 있습니다.
+- 이제 **[!UICONTROL Variable]** 데이터 요소와 **[!UICONTROL Update Variable]** 작업을 일반적으로 사용할 수 있습니다.
 
 ## 버전 2.18.0 - 2023년 5월 18일 금요일
 
@@ -261,12 +261,12 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
 **새로운 기능**
 
-- (Beta) **[!UICONTROL 변수 업데이트]** 작업과 **[!UICONTROL 변수]** 데이터 요소를 추가했습니다.
-- [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) 콜백 함수에 대한 구성을 추가했습니다.
+- (Beta) **[!UICONTROL Update variable]** 작업과 **[!UICONTROL Variable]** 데이터 요소를 추가했습니다.
+- [`onBeforeLinkClickSend`](/help/collection/js/commands/configure/onbeforelinkclicksend.md) 콜백 함수에 대한 구성을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
-- **[!UICONTROL ID를 사용하여 리디렉션]** 작업을 사용할 때 앵커 태그 내의 요소를 클릭하는 기능이 작동하지 않는 문제를 해결했습니다.
+- **[!UICONTROL Redirect with identity]** 작업을 사용할 때 앵커 태그 내의 요소를 클릭해도 작동하지 않는 문제를 해결했습니다.
 - 스키마가 하나만 있을 때 XDM 개체 데이터 요소가 작동하지 않는 문제를 수정했습니다.
 - Adobe Experience Platform Web SDK 버전 2.15.0을 포함합니다.
 
@@ -300,7 +300,7 @@ Adobe Experience Platform Web SDK 라이브러리 버전 2.12.0을 포함합니�
 ## 버전 2.12.0 - 2022년 6월 13일 화요일
 
 - 확장 설정에 정의된 샌드박스를 기반으로 네임스페이스 옵션을 채우도록 `identityMap` 데이터 요소를 업데이트했습니다.
-- 도메인 간 ID 공유를 허용하기 위해 **[!UICONTROL ID로 리디렉션]** 작업이 추가되었습니다.
+- 도메인 간 ID 공유를 허용하기 위해 **[!UICONTROL Redirect with identity]** 작업이 추가되었습니다.
 - `sendEvent` 작업에 대한 설명서 링크를 추가했습니다.
 - React 스펙트럼 UI 라이브러리가 업그레이드되었습니다.
 - 다양한 사용자 인터페이스 개선 사항.
@@ -385,10 +385,10 @@ Adobe Experience Platform Web SDK 라이브러리의 버전 2.5.0을 포함합�
 
 Adobe Experience Platform Web SDK 라이브러리의 버전 2.4.0을 포함합니다.
 
-- 이벤트 작업 UI 보내기에 [&quot;문서 언로딩&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) 확인란이 추가되었습니다.
-- `out`기본 동의를 구성[할 때 &#x200B;](/help/web-sdk/commands/configure/defaultconsent.md) 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
+- [이벤트 보내기](actions/send-event.md) 작업에 &#39;문서 언로드&#39; 확인란이 추가되었습니다.
+- `out`기본 동의를 구성[할 때 ](configure/consent.md) 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
 - 기본 동의 필드에 도구 설명을 추가했습니다.
-- [`setConsent`](/help/web-sdk/commands/setconsent.md) 명령을 사용할 때 Adobe의 Consent 2.0 표준에 대한 지원이 추가되었습니다.
+- [`Set consent`](actions/set-consent.md) 작업을 사용할 때 Adobe의 동의 2.0 표준에 대한 지원이 추가되었습니다.
 - 사용자의 액세스 토큰이 잘못되었거나 잘못 제공된 경우 XDM 개체 데이터 요소 UI에 더 나은 오류가 표시됩니다.
 - XDM 개체 데이터 요소를 볼 때 브라우저 개발자 콘솔에 표시되는 교차 원본 오류(확장 작업에 영향을 주지 않음)가 수정되었습니다.
 
@@ -413,7 +413,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 ## 버전 2.1.0 - 2020년 8월 5일
 
 - 변경 내용: `syncIdentity` 작업을 제거하고 대신 `sendEvent` 작업에서 이러한 ID를 전달할 수 있도록 지원합니다. 확장을 업그레이드하기 전에 이 작업을 사용하여 기존 규칙을 비활성화하십시오.
-- Alloy v. 2.1.0로 업데이트([릴리스 노트](/help/web-sdk/release-notes.md))
+- Alloy 버전 2.1.0으로 업데이트되었습니다.
 - `setConsent` 작업에서 IAB 2.0 동의 표준을 지원합니다.
 - `sendEvent` 작업에서 데이터 세트 ID 재정의를 지원합니다.
 - 이제 활성화된 XDM 개체 데이터 요소와 `IdentityMap` 작업에 `identityMap` 항목을 채우는 데 사용할 수 있는 `setConsent` 유형의 새 데이터 요소를 추가합니다.

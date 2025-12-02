@@ -2,10 +2,10 @@
 title: 코어 확장 개요
 description: Adobe Experience Platform의 Core Tag Extension에 대해 알아봅니다.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
 workflow-type: tm+mt
-source-wordcount: '5447'
-ht-degree: 61%
+source-wordcount: '5425'
+ht-degree: 62%
 
 ---
 
@@ -178,8 +178,8 @@ Blur 이벤트는 폼이 포커스를 잃으면 작업을 트리거합니다. �
 
 #### Specific Elements \| Any Element
 
-* **[!UICONTROL 특정 요소]**&#x200B;를 선택하면 요소 및 속성 값을 선택하는 옵션이 나타납니다.
-* **[!UICONTROL 모든 요소]**&#x200B;를 선택하는 경우 요소 범위를 좁히는 데 더 이상 필요한 옵션이 없습니다.
+* **[!UICONTROL Specific Elements]**&#x200B;를 선택하는 경우 요소 및 속성 값을 선택하는 옵션이 나타납니다.
+* **[!UICONTROL Any Element]**&#x200B;를 선택하는 경우 요소 범위를 좁히는 데 더 이상 필요한 옵션이 없습니다.
 
 #### Elements matching the CSS selector
 
@@ -231,9 +231,9 @@ Blur 이벤트는 폼이 포커스를 잃으면 작업을 트리거합니다. �
 
 내장된 코드 편집기를 사용하여 사용자 지정 코드를 입력합니다.
 
-1. **[!UICONTROL 편집기 열기]**&#x200B;를 선택합니다.
+1. **[!UICONTROL Open Editor]**&#x200B;를 선택합니다.
 1. 사용자 지정 코드를 입력합니다.
-1. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+1. **[!UICONTROL Save]**&#x200B;를 선택합니다.
 
 사용자 지정 코드 내에서 참조할 수 있는 `event`라는 변수를 자동으로 사용할 수 있습니다. `event` 개체에는 규칙을 트리거한 이벤트에 대한 유용한 정보가 포함됩니다. 사용 가능한 이벤트 데이터를 확인하는 가장 쉬운 방법은 사용자 지정 코드 내에서 `event` 콘솔에 기록하는 것입니다.
 
@@ -557,8 +557,8 @@ URL에 있어야 하는 하위 도메인을 한 개 이상 지정합니다.
    * JavaScript
    * HTML
 1. 작업 코드를 전체적으로 실행할지 여부를 선택합니다.
-1. **[!UICONTROL 편집기 열기]**&#x200B;를 선택합니다.
-1. 코드를 편집한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+1. **[!UICONTROL Open Editor]**&#x200B;를 선택합니다.
+1. 코드를 편집한 다음 **[!UICONTROL Save]**&#x200B;를 선택합니다.
 
 JavaScript를 언어로 선택하면 사용자 지정 코드 내에서 참조할 수 있는 `event`라는 변수를 자동으로 사용할 수 있습니다. `event` 개체에는 규칙을 트리거한 이벤트에 대한 유용한 정보가 포함됩니다. 사용 가능한 이벤트 데이터를 확인하는 가장 쉬운 방법은 사용자 지정 코드 내에서 `event` 콘솔에 기록하는 것입니다.
 
@@ -636,7 +636,7 @@ setTimeout(function() {
 
 데이터 수집 UI에서 직접 호출 트리거 작업의 ![스크린샷](../../../images/extensions/client/core/direct-call-action.png)
 
-이 작업은 클라이언트측 코드로 액세스할 수 있는 `satellite` 개체의 [`track` 메서드](../../../ui/client-side/satellite-object.md#track)에 직접 매핑됩니다.
+이 작업은 [`_satellite.track()`](/help/collection/tags/track.md)에 직접 매핑됩니다.
 
 ## 코어 확장 데이터 요소 유형
 
@@ -866,7 +866,7 @@ Session Storage Item Name 필드에 세션 저장소 항목의 이름을 입력�
 다음 변수 중 하나를 선택할 수 있습니다.
 
 * 환경 단계 - 개발/스테이징/프로덕션 환경을 구별하기 위해 `_satellite.environment.stage`을(를) 반환합니다.
-* 라이브러리 빌드 날짜 - `_satellite.buildInfo.buildDate`과(와) 같은 값이 포함된 `turbine.buildInfo.buildDate`을(를) 반환합니다.
+* 라이브러리 빌드 날짜 - `turbine.buildInfo.buildDate`과(와) 같은 값이 포함된 `_satellite.buildInfo.buildDate`을(를) 반환합니다.
 * 속성 이름 - Launch 속성의 이름을 가져올 `_satellite.property.name`을 반환합니다.
 * 속성 ID - Launch 속성의 ID를 가져오려면 `_satellite.property.id`을(를) 반환합니다.
 * 규칙 이름 - 실행된 규칙의 이름이 포함된 `event.$rule.name`을(를) 반환합니다.

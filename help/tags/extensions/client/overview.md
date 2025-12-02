@@ -2,10 +2,10 @@
 title: 태그 확장 참조
 description: Adobe Experience Platform에서 태그 확장에 대한 설명서를 찾습니다.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 2%
+ht-degree: 12%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 다음은 클라이언트측 태그 확장에 대한 설명서 목록입니다. 사용 가능한 서버측 확장 목록을 보려면 대신 [이벤트 전달 확장 참조](../server/overview.md)를 참조하십시오.
 
@@ -32,19 +32,19 @@ ht-degree: 2%
 * [Adobe Analytics 및 Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [Adobe Analytics 제품 문자열](./product-string/overview.md)
 * [Adobe Analytics 제품 문자열 빌더](https://exchange.adobe.com/apps/ec/101461)*
-* [Adobe Experience Platform Web SDK를 통한 Adobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
+* [Adobe Experience Platform Web SDK을 통한 Adobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
 * [Adobe Audience Manager](./audience-manager/overview.md)
 * [Adobe 클라이언트 데이터 레이어](./client-data-layer/overview.md)
-* [Adobe ContextHub](./contexthub/overview.md)
+* [Adobe Context허브](./contexthub/overview.md)
 * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
 * [Adobe Experience Cloud ID 서비스](./id-service/overview.md)
 * [Adobe Experience Platform 데모](./platform-demo/overview.md)
 * [Adobe Experience Platform 웹 SDK](./web-sdk/overview.md)
 * [Adobe Experience Manager 자산 통찰력](./asset-insights/overview.md)
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
-* [오디오 및 비디오용 Adobe Medium 분석](./media-analytics/overview.md)
-* [Adobe Medium Analytics(3.x SDK)](./media-analytics-3x/overview.md)
-* [Adobe 개인 정보](./privacy/overview.md)
+* [오디오 및 비디오용 Adobe Media Analytics](./media-analytics/overview.md)
+* [Adobe Media Analytics(3.x SDK)](./media-analytics-3x/overview.md)
+* [Adobe 개인 정보 보호](./privacy/overview.md)
 * [Adobe 보고서 세트 선택기](https://exchange.adobe.com/apps/ec/100640)*
 * [Adobe Target](./target/overview.md)
 * [Adobe Target v2](./target-v2/overview.md)
@@ -65,7 +65,7 @@ ht-degree: 2%
 * [치타 경험](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [일반 Analytics 플러그인](./plugins/overview.md)
-* [일반 웹 SDK 플러그인](./web-sdk/web-sdk-plugins.md)
+* [일반 웹 SDK 플러그인](web-sdk-plugins/web-sdk-plugins.md)
 * [연결](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
 * Usercentrics CMP v2의 [쿠키 동의 관리](https://exchange.adobe.com/apps/ec/*107037)*

@@ -2,7 +2,7 @@
 title: 데이터스트림에 대한 보트 탐지 구성
 description: 사람 트래픽과 사람 트래픽을 구분하기 위해 데이터스트림에 대한 봇 탐지를 구성하는 방법에 대해 알아봅니다.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 9a60212a9a9fa01ef8a73cfa2c16088c196788d4
+source-git-commit: 5f599b8572c4cebcdfb9ab85027211da4d8a020c
 workflow-type: tm+mt
 source-wordcount: '1374'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 자동화된 프로그램, 웹 스크레이퍼, 스파이더 및 스크립팅된 스캐너로부터의 비사람 트래픽은 사람 방문자로부터 발생하는 이벤트를 식별하는 것을 어렵게 할 수 있습니다. 이 유형의 트래픽은 중요한 비즈니스 지표에 부정적인 영향을 주어 잘못된 트래픽 보고를 초래할 수 있습니다.
 
-보트 검색을 사용하면 [Web SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) 및 [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/)에서 생성된 이벤트를 알려진 스파이더 및 보트에서 생성된 이벤트로 식별할 수 있습니다.
+보트 검색을 사용하면 [Web SDK](/help/collection/js/js-overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) 및 [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/)에서 생성된 이벤트를 알려진 스파이더 및 보트에서 생성된 이벤트로 식별할 수 있습니다.
 
 데이터스트림에 대한 보트 감지를 구성하여 특정 IP 주소, IP 범위 및 요청 헤더를 식별하여 보트 이벤트로 분류할 수 있습니다. 이렇게 하면 사이트 또는 모바일 애플리케이션에서 사용자 활동을 보다 정확하게 측정할 수 있습니다.
 
@@ -33,7 +33,7 @@ Edge Network에 대한 요청이 보트 감지 규칙과 일치하는 경우, XD
 >
 >보트 감지는 보트 요청을 삭제하지 않습니다. 보트 채점을 사용하여 XDM 스키마만 업데이트하고 이벤트를 구성한 [데이터스트림 서비스](configure.md)에 전달합니다.
 >
->Adobe 솔루션은 다양한 방식으로 봇 점수를 처리할 수 있습니다. 예를 들어 Adobe Analytics은 자체 [보트 필터링 서비스](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=ko)를 사용하며 Edge Network에서 설정한 점수를 사용하지 않습니다. 두 서비스는 동일한 [IAB 보트 목록](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)을 사용하므로 보트 점수는 동일합니다.
+>Adobe 솔루션은 다양한 방식으로 봇 점수를 처리할 수 있습니다. 예를 들어 Adobe Analytics은 자체 [보트 필터링 서비스](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html)를 사용하며 Edge Network에서 설정한 점수를 사용하지 않습니다. 두 서비스는 동일한 [IAB 보트 목록](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)을 사용하므로 보트 점수는 동일합니다.
 
 ## 기술 고려 사항 {#technical-considerations}
 
@@ -65,7 +65,7 @@ Edge Network에 대한 요청이 보트 감지 규칙과 일치하는 경우, XD
 
 [보트 탐지 규칙] 페이지에서 다음 기능을 사용하여 보트 탐지를 구성할 수 있습니다.
 
-* [[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) 사용 중.
+* [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) 사용 중.
 * 보트 감지 규칙을 만듭니다.
 
 ### IAB/ABC International Spiders and Bots List 사용 {#iab-list}

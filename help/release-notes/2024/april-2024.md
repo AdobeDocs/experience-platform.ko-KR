@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2024년 4월
 description: Adobe Experience Platform의 2024년 4월 릴리스 정보.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
-workflow-type: ht
-source-wordcount: '1896'
-ht-degree: 100%
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+workflow-type: tm+mt
+source-wordcount: '1893'
+ht-degree: 98%
 
 ---
 
@@ -52,7 +52,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | 유형 | 기능 | 설명 |
 | --- | --- | --- |
 | 확장 | [!DNL Acxiom Anonymous Visitor Insights] 태그 확장 기능 | 웹 사이트 방문자가 [!DNL Acxiom's Visitor Insights]를 통해 어디에서 왔는지 알아볼 수 있습니다. Acxiom은 지리적 IP 조회 기술을 활용하여 익명 브라우저의 위치를 정확히 파악할 수 있습니다. 위치를 파악하면 정리된 데이터베이스에서 검색하여 브라우저로 다시 전송되는 추가 인사이트를 얻을 수 있습니다. 따라서 콘텐츠 제작자는 낯선 사람으로 시작하더라도 이러한 데이터 포인트에 맞게 콘텐츠를 조정하여 방문자에게 보다 개인화된 매력적인 경험을 제공할 수 있습니다. |
-| 데이터스트림 | [Edge Network 봇 탐지](../../datastreams/bot-detection.md) | 자동화된 프로그램, 웹 스크래퍼, 스파이더, 스크립트 스캐너 등 비인간 엔티티에서 발생하는 트래픽으로 인해 방문자로부터 발생하는 이벤트를 식별하기가 더 어려워질 수 있습니다. 이러한 유형의 트래픽은 중요한 비즈니스 지표에 부정적인 영향을 미쳐 잘못된 트래픽 보고로 이어질 수 있습니다. <br>봇 탐지 기능을 사용하면 [Web SDK](../../web-sdk/home.md), [ Mobile SDK](https://developer.adobe.com/client-sdks/home/) 및 [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/)에서 생성된 이벤트가 알려진 스파이더 및 봇에 의해 생성된 것으로 식별할 수 있습니다. 데이터스트림에 봇 탐지를 구성하면 봇 이벤트로 분류할 특정 IP 주소, IP 범위 및 요청 헤더를 식별할 수 있습니다. <br> 봇 트래픽을 식별하면 사이트 또는 모바일 애플리케이션에서 사용자 활동을 보다 정확하게 측정할 수 있습니다. |
+| 데이터스트림 | [Edge Network 봇 탐지](../../datastreams/bot-detection.md) | 자동화된 프로그램, 웹 스크래퍼, 스파이더, 스크립트 스캐너 등 비인간 엔티티에서 발생하는 트래픽으로 인해 방문자로부터 발생하는 이벤트를 식별하기가 더 어려워질 수 있습니다. 이러한 유형의 트래픽은 중요한 비즈니스 지표에 부정적인 영향을 미쳐 잘못된 트래픽 보고로 이어질 수 있습니다. <br>보트 검색을 사용하면 [Adobe Experience Platform 데이터 수집](/help/collection/home.md)에서 생성된 이벤트를 알려진 스파이더 및 보트에서 생성된 이벤트로 식별할 수 있습니다. 데이터스트림에 봇 탐지를 구성하면 봇 이벤트로 분류할 특정 IP 주소, IP 범위 및 요청 헤더를 식별할 수 있습니다. <br> 봇 트래픽을 식별하면 사이트 또는 모바일 애플리케이션에서 사용자 활동을 보다 정확하게 측정할 수 있습니다. |
 | Mobile SDK | 주요 버전 출시 | Mobile SDK의 새로운 주요 버전이 iOS Mobile Core 5.x 및 호환되는 iOS 확장 기능, Android Mobile Core 3.x 및 호환되는 Android 확장 기능, React Native Core 6.x 및 호환되는 React Native 확장 기능, Flutter Core 4.x 및 호환 Flutter 확장 기능 플랫폼용으로 출시되었습니다. 이 릴리스는 Jetpack Compose용 Android SDK 지원, Adobe Journey Optimizer 코드 기반 환경 지원, Flutter용 Adobe Journey Optimizer 메시지 확장 기능의 일반적인 가용성 등 몇 가지 새로운 기능과 향상된 기능을 제공합니다. 더 자세한 릴리스 정보를 보려면 [Mobile SDK 릴리스 정보](https://developer.adobe.com/client-sdks/home/release-notes/)를 참조하십시오. |
 | Mobile SDK | 개인 정보 보호 | Apple의 정책 업데이트로 인해 2024년 5월 1일부터 개발자는 App Store에 제출하기 위해 새로운 개인 정보 보호 기능을 구현해야 합니다. Mobile SDK를 사용하는 모든 Adobe 고객은 5월 1일 이후 App Store 승인을 받으려면 SDK 버전 5.x로 업그레이드해야 합니다. |
 | Roku SDK | Roku SDK | Experience Platform Edge Network용 스트리밍 미디어를 지원하는 Roku SDK의 첫 번째 주요 버전이 출시되었습니다. |
@@ -61,7 +61,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 {style="table-layout:auto"}
 
-<!--| Web SDK | [Streaming Media Collection support in Web SDK](../../web-sdk/commands/configure/streamingmedia.md) | You can now use Experience Platform Web SDK to collect data related to media sessions on your website. The collected data can include information about media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform and/or Adobe Analytics, to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website. <br>See the [Web SDK](../../web-sdk/commands/configure/streamingmedia.md) documentation to learn how to configure the `streamingMedia` component. <br>See the guide on [migrating your Analytics for Streaming Media implementation from Media JS to Web SDK](https://experienceleague.adobe.com/ko/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/edge-web-sdk) for more details.|-->
+<!--| Web SDK | [Streaming Media Collection support in Web SDK](/help/collection/js/commands/configure/streamingmedia.md) | You can now use Experience Platform Web SDK to collect data related to media sessions on your website. The collected data can include information about media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform and/or Adobe Analytics, to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website. <br>See the [Web SDK](/help/collection/js/commands/configure/streamingmedia.md) documentation to learn how to configure the `streamingMedia` component. <br>See the guide on [migrating your Analytics for Streaming Media implementation from Media JS to Web SDK](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/edge-web-sdk) for more details.|-->
 
 데이터 수집에 대해 자세히 알아보려면 [데이터 수집 개요](../../collection/home.md)를 참조하십시오.
 

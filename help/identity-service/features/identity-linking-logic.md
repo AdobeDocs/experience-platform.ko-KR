@@ -2,7 +2,7 @@
 title: ID 서비스 연결 논리
 description: ID 서비스에서 다양한 ID를 연결하여 고객에 대한 포괄적인 보기를 만드는 방법에 대해 알아봅니다.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
+source-git-commit: 5d08a6d90e53aa2f5b1fb72c36e19156e3ac5299
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 3%
@@ -102,7 +102,7 @@ Identity Service는 CRMID:60013ABC이(가) 그래프 내에 이미 있음을 인
 | `t=3` | ECID:44675 | 홈 페이지 보기 |
 | `t=4` | ECID:44675, CRMID: 31260XYZ | 구매 내역 보기 |
 
-각 이벤트에 대한 기본 ID는 [데이터 요소 유형을 구성하는 방법](../../tags/extensions/client/web-sdk/data-element-types.md)에 따라 결정됩니다.
+각 이벤트에 대한 기본 ID는 [데이터 요소 유형을 구성하는 방법](/help/tags/extensions/client/web-sdk/data-element-types.md)에 따라 결정됩니다.
 
 >[!NOTE]
 >

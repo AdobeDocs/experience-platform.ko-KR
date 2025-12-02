@@ -3,7 +3,7 @@ title: 이벤트 전달 개요
 description: Experience Platform Edge Network를 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있도록 Adobe Experience Platform의 이벤트 전달에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 88995c933bf067fe3d077d1be8b92b076e461707
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 8%
@@ -24,13 +24,13 @@ Adobe Experience Platform의 이벤트 전달을 사용하면 수집된 이벤�
 
 이 문서에서는 Experience Platform의 이벤트 전달에 대한 높은 수준의 개요를 제공합니다.
 
-![데이터 수집 생태계의 이벤트 전달.](../../../collection/images/home/event-forwarding.png)
+![데이터 수집 생태계의 이벤트 전달.](/help/collection/assets/event-forwarding.png)
 
 >[!NOTE]
 >
->이벤트 전달이 Experience Platform의 데이터 수집 생태계에 어떻게 적합한지에 대한 자세한 내용은 [데이터 수집 개요](../../../collection/home.md)를 참조하십시오.
+>이벤트 전달이 Experience Platform의 데이터 수집 생태계에 어떻게 적합한지에 대한 자세한 내용은 [데이터 수집 개요](/help/collection/home.md)를 참조하십시오.
 
-Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) 및 [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=ko)와 결합된 이벤트 전달은 다음과 같은 이점을 제공합니다.
+Adobe Experience Platform [Web SDK](/help/collection/js/js-overview.md) 및 [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html)와 결합된 이벤트 전달은 다음과 같은 이점을 제공합니다.
 
 **성능**:
 
@@ -89,7 +89,7 @@ Experience Platform Edge Network의 데이터를 참조하려면 해당 데이�
 
 ### 규칙 {#rules}
 
-이벤트 전달 속성에서 규칙을 만드는 것은 태그와 유사한 방식으로 작동하며 주요 차이점은 이벤트를 규칙 구성 요소로 선택할 수 없다는 것입니다. 대신 이벤트 전달 규칙은 [데이터스트림](../../../datastreams/overview.md)에서 받은 모든 이벤트를 처리하고 특정 조건이 충족되는 경우 이러한 이벤트를 대상으로 전달합니다.
+이벤트 전달 속성에서 규칙을 만드는 것은 태그와 유사한 방식으로 작동하며 주요 차이점은 이벤트를 규칙 구성 요소로 선택할 수 없다는 것입니다. 대신 이벤트 전달 규칙은 [데이터스트림](/help/datastreams/overview.md)에서 받은 모든 이벤트를 처리하고 특정 조건이 충족되는 경우 이러한 이벤트를 대상으로 전달합니다.
 
 또한 이벤트 전달 속성 내의 모든 규칙(및 따라서 모든 작업)에 걸쳐 처리되므로 단일 이벤트에 적용되는 30초 시간 초과가 있습니다. 즉, 이 시간대에 단일 이벤트에 대한 모든 규칙과 모든 작업을 완료해야 합니다.
 

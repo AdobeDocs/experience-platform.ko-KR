@@ -6,22 +6,22 @@ description: Adobe Experience Platform에서 세그먼트를 대상으로 활성
 role: Developer
 feature: Consent
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2509'
 ht-degree: 0%
 
 ---
 
 # Experience Platform의 IAB TCF 2.0 지원
 
-[!DNL Interactive Advertising Bureau]&#x200B;(IAB)에 설명된 [!DNL Transparency & Consent Framework]&#x200B;(TCF)는 조직이 유럽 연합의 [!DNL General Data Protection Regulation]&#x200B;(GDPR)을 준수하여 개인 데이터 처리에 대한 소비자 동의를 얻고, 기록하고, 업데이트할 수 있도록 하기 위한 개방형 표준 기술 프레임워크입니다. 프레임워크의 두 번째 반복인 TCF 2.0은 공급업체가 정확한 지리적 위치와 같은 데이터 처리의 특정 기능을 사용할 수 있는지 여부와 방법을 포함하여 소비자가 동의를 제공하거나 보류할 수 있는 방법에 대해 더 많은 유연성을 부여합니다.
+[!DNL Transparency & Consent Framework]&#x200B;(IAB)에 설명된 [!DNL Interactive Advertising Bureau]&#x200B;(TCF)는 조직이 유럽 연합의 [!DNL General Data Protection Regulation]&#x200B;(GDPR)을 준수하여 개인 데이터 처리에 대한 소비자 동의를 얻고, 기록하고, 업데이트할 수 있도록 하기 위한 개방형 표준 기술 프레임워크입니다. 프레임워크의 두 번째 반복인 TCF 2.0은 공급업체가 정확한 지리적 위치와 같은 데이터 처리의 특정 기능을 사용할 수 있는지 여부와 방법을 포함하여 소비자가 동의를 제공하거나 보류할 수 있는 방법에 대해 더 많은 유연성을 부여합니다.
 
 >[!NOTE]
 >
 >지원 자료 및 기술 사양을 포함하여 TCF 2.0에 대한 자세한 내용은 [IAB 유럽 웹 사이트](https://iabeurope.eu/)를 참조하십시오.
 
-Adobe Experience Platform은 ID **565**&#x200B;에 등록된 [IAB TCF 2.0 공급업체 목록](https://iabeurope.eu/vendor-list-tcf/)의 일부입니다. TCF 2.0 요구 사항을 준수하는 Experience Platform을 사용하면 고객 동의 데이터를 수집하여 저장된 고객 프로필에 통합할 수 있습니다. 그런 다음 이 동의 데이터를 사용 사례에 따라 프로필이 내보낸 대상 세그먼트에 포함되는지 여부에 팩터링할 수 있습니다.
+Adobe Experience Platform은 ID [565](https://iabeurope.eu/vendor-list-tcf/)에 등록된 **IAB TCF 2.0 공급업체 목록**&#x200B;의 일부입니다. TCF 2.0 요구 사항을 준수하는 Experience Platform을 사용하면 고객 동의 데이터를 수집하여 저장된 고객 프로필에 통합할 수 있습니다. 그런 다음 이 동의 데이터를 사용 사례에 따라 프로필이 내보낸 대상 세그먼트에 포함되는지 여부에 팩터링할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -42,8 +42,8 @@ Adobe Experience Platform은 ID **565**&#x200B;에 등록된 [IAB TCF 2.0 공급
 * [XDM(경험 데이터 모델)](/help/xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 * [Adobe Experience Platform ID 서비스](/help/identity-service/home.md): 장치 및 시스템 간에 ID를 연결하여 고객 경험 데이터의 단편화로 인한 근본적인 문제를 해결합니다.
 * [실시간 고객 프로필](/help/profile/home.md): [!DNL Identity Service]을(를) 사용하여 데이터 세트에서 실시간으로 세부 고객 프로필을 만듭니다. [!DNL Real-Time Customer Profile]은(는) 데이터 레이크에서 데이터를 가져오고 고객 프로필을 별도의 데이터 저장소에 유지합니다.
-* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): 다양한 Experience Platform 서비스를 고객용 웹 사이트에 통합할 수 있는 클라이언트측 JavaScript 라이브러리입니다.
-   * [SDK 동의 명령](../../../../web-sdk/commands/setconsent.md): 이 안내서에 표시된 동의 관련 SDK 명령의 사용 사례 개요입니다.
+* [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md): 다양한 Experience Platform 서비스를 고객용 웹 사이트에 통합할 수 있는 클라이언트측 JavaScript 라이브러리입니다.
+   * [SDK 동의 명령](/help/collection/js/commands/setconsent.md): 이 안내서에 표시된 동의 관련 SDK 명령의 사용 사례 개요입니다.
 * [Adobe Experience Platform 세분화 서비스](/help/segmentation/home.md): [!DNL Real-Time Customer Profile] 데이터를 유사한 트레이트를 공유하고 마케팅 전략에 유사하게 반응하는 개인 그룹으로 나눌 수 있습니다.
 
 위에 나열된 Experience Platform 서비스 외에도 [대상](/help/data-governance/home.md) 및 Experience Platform 생태계에서의 역할에 대해서도 잘 알고 있어야 합니다.
@@ -63,7 +63,7 @@ Experience Platform에서는 다음 프로세스를 통해 고객 동의 데이�
 
 CMP 동의 변경 후크에서 트리거된 SDK 명령 외에도 동의 데이터는 [!DNL Profile] 사용 데이터 세트에 직접 업로드되는 고객 생성 XDM 데이터를 통해 Experience Platform으로 유입될 수 있습니다.
 
-적절한 필드가 [!DNL Experience Cloud Identity Service]을(를) 통해 해당 세그먼트에 적용된 경우 Adobe Audience Manager에서 [!DNL Audience Manager] 소스 커넥터 등을 통해 Experience Platform과 공유하는 모든 세그먼트에도 동의 데이터가 포함될 수 있습니다. [!DNL Audience Manager]에서 동의 데이터를 수집하는 방법에 대한 자세한 내용은 [IAB TCF용 Adobe Audience Manager 플러그인](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=ko-KR)에 대한 문서를 참조하십시오.
+적절한 필드가 [!DNL Audience Manager]을(를) 통해 해당 세그먼트에 적용된 경우 Adobe Audience Manager에서 [!DNL Experience Cloud Identity Service] 소스 커넥터 등을 통해 Experience Platform과 공유하는 모든 세그먼트에도 동의 데이터가 포함될 수 있습니다. [!DNL Audience Manager]에서 동의 데이터를 수집하는 방법에 대한 자세한 내용은 [IAB TCF용 Adobe Audience Manager 플러그인](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=ko-KR)에 대한 문서를 참조하십시오.
 
 ### 다운스트림 동의 적용
 
@@ -122,18 +122,18 @@ TCF 사양에서 동의 문자열은 정책 및 공급업체에서 정의한 특
 
 SDK에서 Experience Platform으로 데이터를 보내려면 먼저 Experience Platform에 대한 데이터스트림을 만들어야 합니다. 데이터 스트림을 만드는 방법에 대한 특정 단계는 [SDK 설명서](/help/datastreams/overview.md)에 나와 있습니다.
 
-데이터 스트림에 고유한 이름을 제공한 후 **[!UICONTROL Adobe Experience Platform]** 옆에 있는 전환 단추를 선택하십시오. 그런 다음 다음 다음 값을 사용하여 나머지 양식을 작성합니다.
+데이터 스트림에 대한 고유한 이름을 제공한 후 **[!UICONTROL Adobe Experience Platform]** 옆에 있는 토글 단추를 선택합니다. 그런 다음 다음 다음 값을 사용하여 나머지 양식을 작성합니다.
 
 | 데이터 스트림 필드 | 값 |
 | --- | --- |
-| [!UICONTROL 샌드박스] | 데이터 스트림을 설정하는 데 필요한 스트리밍 연결 및 데이터 세트가 포함된 Experience Platform [sandbox](/help/sandboxes/home.md)의 이름입니다. |
-| [!UICONTROL 스트리밍 인렛] | Experience Platform에 대한 유효한 스트리밍 연결입니다. 기존 스트리밍 인렛이 없는 경우 [스트리밍 연결 만들기](/help/ingestion/tutorials/create-streaming-connection-ui.md)에 대한 자습서를 참조하십시오. |
-| [!UICONTROL 이벤트 데이터 세트] | [이전 단계](#datasets)에서 만든 [!DNL XDM ExperienceEvent] 데이터 세트를 선택하십시오. 이 데이터 세트의 스키마에 [[!UICONTROL IAB TCF 2.0 동의] 필드 그룹](/help/xdm/field-groups/event/iab.md)을(를) 포함한 경우 [`sendEvent`](#sendEvent) 명령을 사용하여 시간 경과에 따른 동의 변경 이벤트를 추적하여 해당 데이터를 이 데이터 세트에 저장할 수 있습니다. 이 데이터 집합에 저장된 동의 값은 자동 적용 워크플로우에서 사용되는 **not**&#x200B;입니다. |
-| [!UICONTROL 프로필 데이터 세트] | [이전 단계](#datasets)에서 만든 [!DNL XDM Individual Profile] 데이터 세트를 선택하십시오. [`setConsent`](#setConsent) 명령을 사용하여 CMP 동의 변경 후크에 응답할 때 수집된 데이터가 이 데이터 집합에 저장됩니다. 이 데이터 세트는 프로필이 활성화되므로 자동 시행 워크플로 동안 이 데이터 세트에 저장된 동의 값이 적용됩니다. |
+| [!UICONTROL Sandbox] | 데이터 스트림을 설정하는 데 필요한 스트리밍 연결 및 데이터 세트가 포함된 Experience Platform [sandbox](/help/sandboxes/home.md)의 이름입니다. |
+| [!UICONTROL Streaming Inlet] | Experience Platform에 대한 유효한 스트리밍 연결입니다. 기존 스트리밍 인렛이 없는 경우 [스트리밍 연결 만들기](/help/ingestion/tutorials/create-streaming-connection-ui.md)에 대한 자습서를 참조하십시오. |
+| [!UICONTROL Event Dataset] | [!DNL XDM ExperienceEvent]이전 단계[에서 만든 ](#datasets) 데이터 세트를 선택하십시오. 이 데이터 집합의 스키마에 [[!UICONTROL IAB TCF 2.0 Consent] 필드 그룹](/help/xdm/field-groups/event/iab.md)을(를) 포함시킨 경우 [`sendEvent`](#sendEvent) 명령을 사용하여 시간 경과에 따른 동의 변경 이벤트를 추적하여 해당 데이터를 이 데이터 집합에 저장할 수 있습니다. 이 데이터 집합에 저장된 동의 값은 자동 적용 워크플로우에서 사용되는 **not**&#x200B;입니다. |
+| [!UICONTROL Profile Dataset] | [!DNL XDM Individual Profile]이전 단계[에서 만든 ](#datasets) 데이터 세트를 선택하십시오. [`setConsent`](#setConsent) 명령을 사용하여 CMP 동의 변경 후크에 응답할 때 수집된 데이터가 이 데이터 집합에 저장됩니다. 이 데이터 세트는 프로필이 활성화되므로 자동 시행 워크플로 동안 이 데이터 세트에 저장된 동의 값이 적용됩니다. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
-완료되면 화면 하단에서 **[!UICONTROL 저장]**&#x200B;을 선택하고 추가 프롬프트에 따라 계속 구성을 완료합니다.
+완료되면 화면 하단의 **[!UICONTROL Save]**&#x200B;을(를) 선택하고 추가 프롬프트에 따라 구성을 완료합니다.
 
 ### 동의 변경 명령 만들기
 
@@ -141,7 +141,7 @@ SDK에서 Experience Platform으로 데이터를 보내려면 먼저 Experience 
 
 #### CMP 동의 변경 후크 사용 {#setConsent}
 
-많은 CMP는 동의 변경 이벤트를 수신하는 즉시 사용 가능한 후크를 제공합니다. 이러한 이벤트가 발생하면 [`setConsent`](/help/web-sdk/commands/setconsent.md) 명령을 사용하여 해당 고객의 동의 데이터를 업데이트할 수 있습니다.
+많은 CMP는 동의 변경 이벤트를 수신하는 즉시 사용 가능한 후크를 제공합니다. 이러한 이벤트가 발생하면 [`setConsent`](/help/collection/js/commands/setconsent.md) 명령을 사용하여 해당 고객의 동의 데이터를 업데이트할 수 있습니다.
 
 `setConsent` 명령에는 두 개의 인수가 필요합니다.
 
@@ -168,7 +168,7 @@ alloy("setConsent", {
 | `value` | CMP에서 생성된 기본 64로 인코딩된 동의 문자열. |
 | `gdprApplies` | GDPR이 현재 로그인한 고객에게 적용되는지 여부를 나타내는 부울 값입니다. 이 고객에 대해 TCF 2.0이 적용되려면 값을 `true`(으)로 설정해야 합니다. 정의되지 않은 경우 기본값은 `true`입니다. |
 
-`setConsent` 명령은 동의 설정 변경을 감지하는 CMP 후크의 일부로 사용해야 합니다. 다음 JavaScript에서는 OneTrust의 `OnConsentChanged` 후크에 `setConsent` 명령을 사용하는 방법에 대한 예를 제공합니다.
+`setConsent` 명령은 동의 설정 변경을 감지하는 CMP 후크의 일부로 사용해야 합니다. 다음 JavaScript에서는 OneTrust의 `setConsent` 후크에 `OnConsentChanged` 명령을 사용하는 방법에 대한 예를 제공합니다.
 
 ```js
 OneTrust.OnConsentChanged(function () {
@@ -224,7 +224,7 @@ alloy("sendEvent", {
 
 ### SDK 응답 처리
 
-많은 웹 SDK 명령은 호출의 성공 또는 실패 여부를 나타내는 약속을 반환합니다. 그런 다음 고객에게 확인 메시지를 표시하는 것과 같은 추가 논리에 이러한 응답을 사용할 수 있습니다. 자세한 내용은 [명령 응답](/help/web-sdk/commands/command-responses.md)을 참조하세요.
+많은 웹 SDK 명령은 호출의 성공 또는 실패 여부를 나타내는 약속을 반환합니다. 그런 다음 고객에게 확인 메시지를 표시하는 것과 같은 추가 논리에 이러한 응답을 사용할 수 있습니다. 자세한 내용은 [명령 응답](/help/collection/js/commands/command-responses.md)을 참조하세요.
 
 ## 세그먼트 내보내기 {#export}
 

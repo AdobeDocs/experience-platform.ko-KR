@@ -2,9 +2,9 @@
 description: Destination SDK으로 빌드된 대상에 대해 지원되는 타겟 ID를 구성하는 방법에 대해 알아봅니다.
 title: ID 네임스페이스 구성
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '918'
 ht-degree: 3%
 
 ---
@@ -61,9 +61,9 @@ Experience Platform의 ID 네임스페이스에 대한 자세한 내용은 [ID �
 |---------|----------|---|------|
 | `acceptsAttributes` | 부울 | 선택 사항입니다 | 고객이 표준 프로필 속성을 구성 중인 ID에 매핑할 수 있는지 여부를 나타냅니다. |
 | `acceptsCustomNamespaces` | 부울 | 선택 사항입니다 | 고객이 사용자 정의 ID 네임스페이스를 구성 중인 ID 네임스페이스에 매핑할 수 있는지 여부를 나타냅니다. |
-| `acceptedGlobalNamespaces` | - | 선택 사항입니다 | 고객이 구성할 ID에 매핑할 수 있는 [표준 ID 네임스페이스](../../../../identity-service/features/namespaces.md#standard)(예: [!UICONTROL IDFA])를 나타냅니다. |
-| `transformation` | 문자열 | 선택 사항입니다 | 소스 필드가 XDM 특성이거나 사용자 지정 ID 네임스페이스인 경우 Experience Platform UI에서 [[!UICONTROL 변형 적용]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) 확인란을 표시합니다. 이 옵션을 사용하여 사용자가 내보낼 때 소스 속성을 해시할 수 있도록 합니다. 이 옵션을 사용하려면 값을 `sha256(lower($))`(으)로 설정하십시오. |
-| `requiredTransformation` | 문자열 | 선택 사항입니다 | 고객이 이 소스 ID 네임스페이스를 선택하면 [[!UICONTROL 변환 적용]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) 확인란이 매핑에 자동으로 적용되며 고객은 이 확인란을 비활성화할 수 없습니다. 이 옵션을 사용하려면 값을 `sha256(lower($))`(으)로 설정하십시오. |
+| `acceptedGlobalNamespaces` | - | 선택 사항입니다 | 구성할 ID에 매핑할 수 있는 [표준 ID 네임스페이스](../../../../identity-service/features/namespaces.md#standard)(예: [!UICONTROL IDFA])를 나타냅니다. |
+| `transformation` | 문자열 | 선택 사항입니다 | 소스 필드가 XDM 속성이거나 사용자 지정 ID 네임스페이스인 경우 Experience Platform UI에 [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) 확인란을 표시합니다. 이 옵션을 사용하여 사용자가 내보낼 때 소스 속성을 해시할 수 있도록 합니다. 이 옵션을 사용하려면 값을 `sha256(lower($))`(으)로 설정하십시오. |
+| `requiredTransformation` | 문자열 | 선택 사항입니다 | 고객이 이 소스 ID 네임스페이스를 선택하면 [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) 확인란이 매핑에 자동으로 적용되며 고객은 이 확인란을 비활성화할 수 없습니다. 이 옵션을 사용하려면 값을 `sha256(lower($))`(으)로 설정하십시오. |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ Experience Platform의 ID 네임스페이스에 대한 자세한 내용은 [ID �
 고객이 대상으로 내보낼 수 있는 [!DNL Experience Platform] ID를 나타내야 합니다. 일부 예로는 [!DNL Experience Cloud ID], 해시된 이메일, 장치 ID([!DNL IDFA], [!DNL GAID])가 있습니다. 이 값은 고객이 대상에서 ID 네임스페이스에 매핑할 수 있는 [!DNL Experience Platform] ID 네임스페이스입니다.
 
 ID 네임스페이스에는 [!DNL Experience Platform]과(와) 대상 간에 일대일 응답이 필요하지 않습니다.
-예를 들어 고객은 대상의 [!DNL IDFA] 네임스페이스에 [!DNL Experience Platform] [!DNL IDFA] 네임스페이스를 매핑하거나 대상의 [!DNL Customer ID] 네임스페이스에 동일한 [!DNL Experience Platform] [!DNL IDFA] 네임스페이스를 매핑할 수 있습니다.
+예를 들어 고객은 대상의 [!DNL Experience Platform] 네임스페이스에 [!DNL IDFA] [!DNL IDFA] 네임스페이스를 매핑하거나 대상의 [!DNL Experience Platform] 네임스페이스에 동일한 [!DNL IDFA] [!DNL Customer ID] 네임스페이스를 매핑할 수 있습니다.
 
 [ID 네임스페이스 개요](../../../../identity-service/features/namespaces.md)에서 ID에 대해 자세히 알아보세요.
 
@@ -124,7 +124,7 @@ Experience Platform 고객은 데이터를 해시된 형식 또는 일반 텍스
 
 ## 필수 소스 필드 해시 구성
 
-대상에서 해시된 데이터만 허용하는 경우 내보낸 속성을 Experience Platform에서 자동으로 해시하도록 구성할 수 있습니다. 아래 구성은 `Email` 및 `Phone` ID가 매핑될 때 **변환 적용** 옵션을 자동으로 확인합니다.
+대상에서 해시된 데이터만 허용하는 경우 내보낸 속성을 Experience Platform에서 자동으로 해시하도록 구성할 수 있습니다. 아래 구성은 **및** ID가 매핑될 때 `Email`변환 적용`Phone` 옵션을 자동으로 확인합니다.
 
 ```json {line-numbers="true" highlight="8,11"}
 "identityNamespaces":{

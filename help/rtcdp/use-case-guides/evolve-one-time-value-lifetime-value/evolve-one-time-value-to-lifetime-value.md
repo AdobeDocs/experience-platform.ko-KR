@@ -3,10 +3,10 @@ title: 일회성 고객 가치를 라이프타임 가치로 향상
 description: 특정 고객의 특성, 동작 및 과거 구매를 기반으로 최상의 보완 제품 또는 서비스를 제공하기 위해 개인화된 캠페인을 만드는 방법을 알아봅니다.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '3181'
-ht-degree: 25%
+source-wordcount: '3156'
+ht-degree: 21%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 25%
 
 타겟팅하는 대상은 지난 3개월 이내에 구매한 적이 없는 속성 방문자입니다.
 
-속성을 방문하고 제공하는 제품이나 서비스를 산발적으로 구매하는 이러한 고객을 고려하십시오. 브랜드가 일회성 값이 아닌 장기적인 가치를 제공할 수 있도록 이러한 고객에게 어필할 수 있는 개인화된 캠페인을 만들 수 있습니다. 방법 알아보기:
+속성을 방문하고 제공하는 제품이나 서비스를 산발적으로 구매하는 이러한 고객을 고려하십시오. 브랜드가 일회성 값이 아닌 장기적인 가치를 제공할 수 있도록 이러한 고객에게 어필할 수 있는 개인화된 캠페인을 만들 수 있습니다. 다음을 수행하는 방법을 알아보세요.
 
 * 데이터 수집 및 관리
 * 대상자 만들기
@@ -33,22 +33,22 @@ ht-degree: 25%
 
 내부적으로 브랜드 충성도를 높이기 위한 비즈니스 목표 및 목표를 정의했습니다. 이는 고객 참여 및 충성도를 높이기 위한 사용 사례 실행으로 번역할 수 있습니다.
 
-이를 위해 필요한 기술은 두 개의 Experience Platform 앱 [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ko)으로 구성됩니다. 아래 목록은 사용 사례를 구현할 때 사용할 두 앱의 다양한 기능과 UI 요소입니다.
+이를 위해 필요한 기술은 두 개의 Experience Platform 앱 [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ko)으로 구성됩니다. 아래 목록은 사용 사례를 구현할 때 사용할 두 앱의 다양한 기능과 UI 요소입니다.
 
 >[!TIP]
 >
 >이러한 모든 영역에 대해 필요한 [속성 기반의 액세스 제어 권한](/help/access-control/abac/end-to-end-guide.md)이 있는지 확인하거나, 시스템 관리자에게 필요한 권한 부여를 요청하십시오.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=ko): 데이터 원본 간에 데이터를 통합하여 캠페인을 실행합니다. 그런 다음 이 데이터를 사용하여 이메일 및 웹 프로모션 타일에 사용되는 표면 맞춤형 데이터 요소(예: 이름 또는 계정 관련 정보) 및 캠페인 대상자를 만듭니다. 마지막으로 Real-Time CDP은 유료 미디어 대상에 대한 대상을 활성화하는 데에도 사용됩니다.
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html): 데이터 원본 간에 데이터를 통합하여 캠페인을 실행합니다. 그런 다음 이 데이터를 사용하여 이메일 및 웹 프로모션 타일에 사용되는 표면 맞춤형 데이터 요소(예: 이름 또는 계정 관련 정보) 및 캠페인 대상자를 만듭니다. 마지막으로 Real-Time CDP은 유료 미디어 대상에 대한 대상을 활성화하는 데에도 사용됩니다.
    * [스키마](/help/xdm/home.md)
    * [프로필](/help/profile/home.md)
    * [데이터 세트](/help/catalog/datasets/overview.md)
    * [대상자](/help/segmentation/home.md)
    * [대상](/help/destinations/home.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ko): 여정을 디자인하고, 트리거를 설정하고, 방문자에게 알맞은 메시지를 만듭니다.
-   * [이벤트 또는 대상자 트리거](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=ko)
-   * [대상 및 이벤트](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=ko)
-   * [여정](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ko)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): 여정을 디자인하고, 트리거를 설정하고, 방문자에게 알맞은 메시지를 만듭니다.
+   * [이벤트 또는 대상자 트리거](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+   * [대상 및 이벤트](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
+   * [여정](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Real-Time CDP 및 Journey Optimizer 아키텍처
 
@@ -72,7 +72,7 @@ ht-degree: 25%
 
 ![1회성 값을 라이프타임 값으로 단계별로 발전시켜 높은 수준의 시각적 개요](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
-1. 스키마와 데이터 세트를 만든 다음 [!UICONTROL 프로필]에 대해 표시합니다.
+1. 스키마와 데이터 세트를 만든 다음 [!UICONTROL Profile]에 대해 표시합니다.
 2. Web SDK, Mobile Edge SDK 또는 API를 통해 데이터를 수집하고 Experience Platform에 통합합니다. Analytics Data Connector도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
 3. 프로필을 Real-Time CDP에 로드하고 책임 있는 사용을 보장하기 위한 거버넌스 정책을 구축합니다.
 4. 프로필 목록에서 집중 대상자를 만들어 고가치 고객과 저빈도 고객을 확인합니다.
@@ -91,7 +91,7 @@ ht-degree: 25%
 
 ### 스키마 디자인 만들기 및 필드 그룹 지정 {#schema-design}
 
-Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UICONTROL 스키마] 작업 영역에서 관리됩니다. [!DNL Adobe]에서 제공하는 핵심 리소스(예: [!UICONTROL 필드 그룹])를 보고 탐색하며 조직에 대한 사용자 지정 리소스 및 스키마를 만들 수 있습니다.
+XDM(경험 데이터 모델) 리소스는 [!UICONTROL Schemas]의 [!DNL Adobe Experience Platform] 작업 영역에서 관리됩니다. [!DNL Adobe]&#x200B;(예: [!UICONTROL field groups])에서 제공한 핵심 리소스를 보고 탐색하며 조직에 대한 사용자 지정 리소스 및 스키마를 만들 수 있습니다.
 
 [스키마](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ko-KR) 만들기에 대한 자세한 내용은 [스키마 튜토리얼 만들기](/help/xdm/tutorials/create-schema-ui.md)를 참조하십시오.
 
@@ -109,7 +109,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 필드 그룹이 강조 표시된 ![고객 특성 스키마](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-attributes-schema.png)
 
-고객 속성 스키마는 [!UICONTROL XDM 개별 프로필] 클래스에 표시되며, 다음 필드 그룹을 포함합니다.
+고객 특성 스키마는 다음 필드 그룹을 포함하는 [!UICONTROL XDM Individual Profile] 클래스로 표시됩니다.
 
 +++인구 통계 세부 정보(필드 그룹)
 
@@ -123,7 +123,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++
 
-+++외부 소스 시스템 감사 세부 정보(필드 그룹)
++++외부 Source 시스템 감사 세부 정보(필드 그룹)
 
 [외부 소스 시스템 감사 속성](/help/xdm/data-types/external-source-system-audit-attributes.md)은 외부 소스 시스템에 대한 감사 세부 정보를 캡처하는 표준 Experience Data Model(XDM) 데이터 유형입니다.
 
@@ -137,13 +137,13 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 #### 고객 디지털 트랜잭션 스키마 {#customer-digital-transactions-schema}
 
-이 스키마는 웹 사이트 또는 기타 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 [웹 SDK](/help/web-sdk/home.md)를 통해 [!DNL Adobe Experience Platform]에 수집되며, 여정 트리거, 자세한 온라인 고객 분석 및 향상된 세그멘테이션 기능에 사용되는 다양한 찾아보기 및 전환 이벤트를 참조하는 데 필요합니다.
+이 스키마는 웹 사이트 또는 기타 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 [!DNL Adobe Experience Platform]웹 SDK[를 통해 ](/help/collection/js/js-overview.md)에 수집되며, 여정 트리거, 자세한 온라인 고객 분석 및 향상된 세그멘테이션 기능에 사용되는 다양한 찾아보기 및 전환 이벤트를 참조하는 데 필요합니다.
 
 필드 그룹이 강조 표시된 ![고객 디지털 트랜잭션 스키마](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
-고객 디지털 트랜잭션 스키마는 [!UICONTROL XDM ExperienceEvent] 클래스로 표시되며, 다음 필드 그룹을 포함합니다.
+고객 디지털 트랜잭션 스키마는 다음 필드 그룹을 포함하는 [!UICONTROL XDM ExperienceEvent] 클래스로 표시됩니다.
 
-+++Adobe Experience Platform Web SDK ExperienceEvent(필드 그룹)
++++Adobe Experience Platform 웹 SDK ExperienceEvent (필드 그룹)
 
 | 필드 | 요구 사항 |
 | --- | --- |
@@ -158,7 +158,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++
 
-+++소비자 경험 이벤트(필드 그룹)
++++고객 경험 이벤트(필드 그룹)
 
 이 필드 그룹에는 웹 속성에서 사용자가 수행한 구매 또는 이벤트 검색 등의 작업에 대한 다양한 정보가 포함됩니다.
 
@@ -202,7 +202,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++
 
-+++외부 소스 시스템 감사 세부 정보(필드 그룹)
++++외부 Source 시스템 감사 세부 정보(필드 그룹)
 
 외부 소스 시스템 감사 속성은 외부 소스 시스템에 대한 감사 세부 정보를 캡처하는 표준 Experience Data Model(XDM) 데이터 유형입니다.
 
@@ -214,9 +214,9 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 필드 그룹이 강조 표시된 ![고객 오프라인 트랜잭션 스키마](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-offline-transactions-schema.png)
 
-고객 오프라인 트랜잭션 스키마는 [!UICONTROL XDM ExperienceEvent] 클래스로 표시되며, 다음 필드 그룹을 포함합니다.
+고객 오프라인 트랜잭션 스키마는 다음 필드 그룹을 포함하는 [!UICONTROL XDM ExperienceEvent] 클래스로 표시됩니다.
 
-+++상거래 세부 정보(필드 그룹)
++++Commerce 세부 정보(필드 그룹)
 
 [Commerce 세부 정보](/help/xdm/field-groups/event/commerce-details.md)은(는) 제품 정보(SKU, 이름, 수량) 및 표준 장바구니 작업(주문, 체크아웃, 포기)과 같은 상거래 데이터를 설명하는 데 사용되는 [!DNL XDM ExperienceEvent] 클래스의 표준 스키마 필드 그룹입니다.
 
@@ -224,11 +224,11 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++개인 연락처 세부 정보(필드 그룹)
 
-[[!UICONTROL 개인 연락처 정보]](/help/xdm/field-groups/profile/personal-contact-details.md)은(는) [!DNL XDM Individual Profile] 클래스에 대한 표준 스키마 필드 그룹으로, 개별 사용자에 대한 연락처 정보를 설명합니다.
+[[!UICONTROL Personal Contact Details]](/help/xdm/field-groups/profile/personal-contact-details.md)은(는) [!DNL XDM Individual Profile] 클래스에 대한 표준 스키마 필드 그룹으로, 개별 사용자의 연락처 정보를 설명합니다.
 
 +++
 
-+++외부 소스 시스템 감사 세부 정보(필드 그룹)
++++외부 Source 시스템 감사 세부 정보(필드 그룹) 
 
 외부 소스 시스템 감사 속성은 외부 소스 시스템에 대한 감사 세부 정보를 캡처하는 표준 Experience Data Model(XDM) 데이터 유형입니다.
 
@@ -244,11 +244,11 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 필드 그룹이 강조 표시된 ![Adobe 웹 커넥터 스키마](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
 
-[!DNL Adobe] 웹 커넥터 스키마는 [!UICONTROL XDM ExperienceEvent] 클래스로 표시되며, 다음 필드 그룹을 포함합니다.
+[!DNL Adobe] 웹 커넥터 스키마는 다음 필드 그룹을 포함하는 [!UICONTROL XDM ExperienceEvent] 클래스로 표시됩니다.
 
 +++Adobe Analytics ExperienceEvent 템플릿(필드 그룹)
 
-[[!UICONTROL Adobe Analytics ExperienceEvent 전체 확장 기능]](/help/xdm/field-groups/event/analytics-full-extension.md)은(는) Adobe Analytics에서 수집하는 일반적인 지표를 캡처하는 표준 스키마 필드 그룹입니다.
+[[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](/help/xdm/field-groups/event/analytics-full-extension.md)은(는) Adobe Analytics에서 수집하는 일반적인 지표를 캡처하는 표준 스키마 필드 그룹입니다.
 
 +++
 
@@ -268,9 +268,9 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 >[!IMPORTANT]
 >
->고객에게 브랜드로부터 커뮤니케이션 수신을 거부할 수 있는 기능을 제공하고 이러한 선택이 존중되도록 하는 것은 법적 요구 사항입니다. [개인 정보 보호 규정 개요](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=ko)에서 해당 법률에 대해 자세히 알아보세요.
+>고객에게 브랜드로부터 커뮤니케이션 수신을 거부할 수 있는 기능을 제공하고 이러한 선택이 존중되도록 하는 것은 법적 요구 사항입니다. [개인 정보 보호 규정 개요](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html)에서 해당 법률에 대해 자세히 알아보세요.
 
-연락하기 전에 다음 [동의 정책](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=ko)을 구현하고 방문자에게 동의를 요청하십시오.
+연락하기 전에 다음 [동의 정책](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html)을 구현하고 방문자에게 동의를 요청하십시오.
 
 * `consents.marketing.email.val = "Y"`인 경우, 이메일 전송 가능
 * `consents.marketing.sms.val = "Y"`인 경우, SMS 전송 가능
@@ -298,7 +298,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 이 사용 사례에서는 두 명의 대상을 만들어 프로필 저장소의 프로필 하위 집합에서 공유하는 특정 속성이나 동작을 정의하여 마케팅 가능한 사람 그룹을 구별해야 합니다. Adobe Experience Platform에서 여러 가지 방법으로 대상을 만들 수 있습니다.
 
-* 대상을 만드는 방법에 대한 자세한 내용은 [대상 서비스 UI 안내서](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=ko#create-audience)를 참조하세요.
+* 대상을 만드는 방법에 대한 자세한 내용은 [대상 서비스 UI 안내서](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience)를 참조하세요.
 * [대상](/help/segmentation/home.md)을 구성하는 방법에 대한 자세한 내용은 [대상 구성 UI 안내서](/help/segmentation/ui/audience-composition.md)를 참조하십시오.
 * Experience Platform에서 파생된 세그먼트 정의를 통해 대상자를 만드는 방법에 대한 자세한 내용은 [대상자 빌더 UI 안내서](/help/segmentation/ui/segment-builder.md)를 참조하십시오.
 
@@ -342,9 +342,9 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer]는 다이어그램에 표시된 모든 항목을 포함하지 않습니다. 모든 [유료 미디어 광고](/help/destinations/catalog/social/overview.md)가 [!UICONTROL 대상] [작업 영역](/help/destinations/ui/destinations-workspace.md)에서 만들어집니다.
+>[!DNL Adobe Journey Optimizer]는 다이어그램에 표시된 모든 항목을 포함하지 않습니다. 모든 [유료 미디어 광고](/help/destinations/catalog/social/overview.md)가 [!UICONTROL destinations] [작업 영역](/help/destinations/ui/destinations-workspace.md)에 만들어집니다.
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ko)는 고객에게 연관성 있고 상황에 맞는 개인화된 경험을 제공할 수 있도록 해 줍니다. 고객 여정은 고객이 브랜드와 상호 작용하는 전체 프로세스입니다. 각 사용 사례 여정에 특정 정보가 필요합니다.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)는 고객에게 연관성 있고 상황에 맞는 개인화된 경험을 제공할 수 있도록 해 줍니다. 고객 여정은 고객이 브랜드와 상호 작용하는 전체 프로세스입니다. 각 사용 사례 여정에 특정 정보가 필요합니다.
 
 이 사용 사례를 달성하려면 두 개의 별도 여정을 만들어야 합니다.
 
@@ -363,19 +363,19 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 ![라이프타임 여정 높은 수준의 비주얼 개요입니다.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "일생 여정에 대한 일회성 값 높은 수준의 시각적 개요"){zoomable="yes"}
 
-+++세부 여정 논리
++++자세한 여정 논리
 
 위에 표시된 여정은 다음 논리를 따릅니다.
 
-1. 대상자 읽기: 위의 대상자 섹션에서 만든 첫 번째 대상자에 대해 [대상자 읽기 활동](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=ko)을 사용하십시오.
+1. 대상자 읽기: 위의 대상자 섹션에서 만든 첫 번째 대상자에 대해 [대상자 읽기 활동](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en)을 사용하십시오.
 
-2. 조건 - 기본 채널: [조건 활동](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html?lang=ko)을 사용하여 이메일, SMS 또는 푸시 알림을 통해 고객에게 연락하는 방법을 결정합니다. 세 가지 작업 활동을 사용하여 세 개의 분기를 만듭니다.
+2. 조건 - 기본 채널: [조건 활동](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html)을 사용하여 이메일, SMS 또는 푸시 알림을 통해 고객에게 연락하는 방법을 결정합니다. 세 가지 작업 활동을 사용하여 세 개의 분기를 만듭니다.
 
-3. 대기: [대기 활동](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=ko)을 사용하여 구매를 수신할 때까지 기다립니다.
+3. 대기: [대기 활동](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html)을 사용하여 구매를 수신할 때까지 기다립니다.
 
 4. 조건 - 지난 7일 동안 구매한 구독: 조건 활동을 사용하여 지난 7일 동안의 제품 구매를 수신합니다.
 
-5. JourneyStepEventTracker - 구독을 구매하지 않음: 메시지를 수신했지만 아직 구독을 구매하지 않은 방문자를 위해 [사용자 지정 작업](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html?lang=ko)을 사용합니다. 여정 종료 시 사용자 지정 조건의 일부로 `journey.feedback` 이벤트를 만들고 [!UICONTROL 여정 단계 이벤트] 스키마를 기준으로 데이터 집합에 추가합니다. 이 이벤트를 사용하여 구독을 구매하지 않은 대상과 유료 미디어 광고를 통해 타깃팅할 수 있는 대상을 세그먼트화할 수 있습니다.
+5. JourneyStepEventTracker - 구독을 구매하지 않음: 메시지를 수신했지만 아직 구독을 구매하지 않은 방문자를 위해 [사용자 지정 작업](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html)을 사용합니다. 여정 종료 시 사용자 지정 조건의 일부로 `journey.feedback` 이벤트를 만들고 [!UICONTROL Journey Step Event] 스키마를 기준으로 데이터 집합에 추가합니다. 이 이벤트를 사용하여 구독을 구매하지 않은 대상과 유료 미디어 광고를 통해 타깃팅할 수 있는 대상을 세그먼트화할 수 있습니다.
 
 +++
 
@@ -430,13 +430,13 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
       * SMS
 
    * 채널 콘텐츠 개인화
-      * 주문 세부 정보를 표시하고 제품 목록을 테이블 형식으로 표시할 수 있습니다.
+      * 주문 세부 사항을 표시하고 제품 목록을 테이블 형식으로 표시할 수 있습니다.
 
 +++
 
 >[!ENDTABS]
 
-[!DNL Adobe Journey Optimizer]에서 여정을 만드는 방법에 대한 자세한 내용은 [여정 시작](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=ko) 안내서를 참조하십시오.
+[!DNL Adobe Journey Optimizer]에서 여정을 만드는 방법에 대한 자세한 내용은 [여정 시작](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) 안내서를 참조하십시오.
 
 ### 유료 미디어 광고를 표시할 대상 설정 {#paid-media-ads}
 

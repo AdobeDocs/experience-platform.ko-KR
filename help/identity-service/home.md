@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ID 서비스 개요
 description: Adobe Experience Platform Identity Service를 사용하면 디바이스와 시스템 간에 ID를 연결하여 고객과 고객의 행동을 더 잘 볼 수 있으므로 효과적인 개인 디지털 경험을 실시간으로 제공할 수 있습니다.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 8dc4393232f5e256f375d2104d4fe0eaffc1d716
+source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1580'
 ht-degree: 2%
 
 ---
@@ -105,7 +105,7 @@ ID 그래프는 서로 다른 ID 네임스페이스 간의 관계 맵으로, 고
 
 다음 비디오는 ID 및 ID 그래프에 대한 이해를 돕기 위한 것입니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422775?captions=kor&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Experience Platform 인프라 내에서 ID 서비스의 역할 이해
 
@@ -113,7 +113,7 @@ ID 서비스는 Experience Platform 내에서 중요한 역할을 합니다. 이
 
 * [스키마](../xdm/home.md): 특정 스키마 내에서 ID로 표시된 스키마 필드를 사용하면 ID 그래프를 작성할 수 있습니다.
 * [데이터 세트](../catalog/datasets/overview.md): 실시간 고객 프로필로 수집하도록 데이터 세트를 활성화하면 데이터 세트에 ID로 표시된 필드가 두 개 이상 있는 경우 데이터 세트에서 ID 그래프가 생성됩니다.
-* [웹 SDK](../web-sdk/home.md): 웹 SDK은 경험 이벤트를 Adobe Experience Platform에 보내고, 이벤트에 둘 이상의 ID가 있으면 ID 서비스에서 그래프를 생성합니다.
+* [데이터 수집](/help/collection/home.md): 데이터 수집 라이브러리(예: Web SDK)가 경험 이벤트를 Adobe Experience Platform에 보냅니다. ID 서비스는 이벤트에 둘 이상의 ID가 존재하는 경우 그래프를 생성합니다.
 * [실시간 고객 프로필](../profile/home.md): 지정된 프로필의 특성 및 이벤트가 병합되기 전에 실시간 고객 프로필에서 ID 그래프를 참조할 수 있습니다. 자세한 내용은 [ID 서비스와 실시간 고객 프로필 간의 관계 이해](./identity-and-profile.md)에 대한 안내서를 참조하십시오.
 * [대상](../destinations/home.md): 대상은 해시된 이메일과 같은 ID 네임스페이스를 기반으로 프로필 정보를 다른 시스템에 보낼 수 있습니다.
 * [세그먼트 일치](../segmentation/ui/segment-match/overview.md): 세그먼트 일치는 ID 네임스페이스와 ID 값이 같은 두 개의 서로 다른 샌드박스에서 두 개의 프로필을 일치시킵니다.

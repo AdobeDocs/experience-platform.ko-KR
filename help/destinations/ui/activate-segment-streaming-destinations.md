@@ -3,9 +3,9 @@ title: 스트리밍 대상으로 대상 데이터 활성화
 type: Tutorial
 description: 스트리밍 대상에 매핑하여 Adobe Experience Platform에 있는 대상을 활성화하는 방법을 알아봅니다.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 595856842a3890426bb196218bd8be4e321ff8aa
+source-git-commit: 2eb890f06097f1b9766408aad3b6ab11d5d12f9f
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1098'
 ht-degree: 3%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 3%
 
 ## 대상자 선택 {#select-audiences}
 
-대상으로 활성화할 대상을 선택하려면 대상 이름 왼쪽에 있는 확인란을 사용한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
+대상으로 활성화할 대상을 선택하려면 대상 이름 왼쪽의 확인란을 사용한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
 출처에 따라 여러 유형의 대상 중에서 선택할 수 있습니다.
 

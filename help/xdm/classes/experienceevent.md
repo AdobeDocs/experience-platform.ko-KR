@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent 클래스
 description: XDM ExperienceEvent 클래스와 이벤트 데이터 모델링을 위한 모범 사례에 대해 알아봅니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
+source-git-commit: dc333f30f9a2cb7cd485d1cb13272c078da0bd76
 workflow-type: tm+mt
-source-wordcount: '2783'
+source-wordcount: '2728'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 | 속성 | 설명 |
 | --- | --- |
 | `_id`<br>**(필수)** | 경험 이벤트 클래스 `_id` 필드는 Adobe Experience Platform에 수집되는 개별 이벤트를 고유하게 식별합니다. 이 필드는 개별 이벤트의 고유성을 추적하고, 데이터 중복을 방지하고, 다운스트림 서비스에서 해당 이벤트를 조회하는 데 사용됩니다.<br><br>중복 이벤트가 검색되면 Experience Platform 응용 프로그램 및 서비스에서 중복을 다르게 처리할 수 있습니다. 예를 들어 동일한 `_id`을(를) 가진 이벤트가 프로필 저장소에 이미 있는 경우 프로필 서비스의 중복 이벤트가 삭제됩니다. 그러나 이러한 이벤트는 여전히 데이터 레이크에 기록됩니다.<br><br>경우에 따라 `_id`은(는) [UUID(Universally Unique Identifier)](https://datatracker.ietf.org/doc/html/rfc4122) 또는 [GUID(Globally Unique Identifier)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)일 수 있습니다.<br><br>소스 연결에서 데이터를 스트리밍하거나 Parquet 파일에서 직접 수집하는 경우, 이벤트를 고유하게 만드는 특정 필드 조합을 연결하여 이 값을 생성해야 합니다. 연결할 수 있는 이벤트의 예로는 기본 ID, 타임스탬프, 이벤트 유형 등이 있습니다. 연결된 값은 `uri-reference` 형식의 문자열이어야 합니다. 즉, 콜론 문자는 모두 제거해야 합니다. 그런 다음 연결된 값을 SHA-256 또는 선택한 다른 알고리즘을 사용하여 해시해야 합니다.<br><br>이 필드가 개별 사용자와 관련된 ID를 나타내는 것이 아니라 데이터 기록 자체를 나타내는 것임을 구별하는 것이 중요합니다&#x200B;**.** 사용자와 관련된 ID 데이터는 대신 호환 가능한 필드 그룹에서 제공하는 [ID 필드](../schema/composition.md#identity)(으)로 수준을 내려야 합니다. |
-| `eventMergeId` | [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)을(를) 사용하여 데이터를 수집하는 경우, 레코드가 생성되도록 한 수집된 일괄 처리의 ID를 나타냅니다. 이 필드는 데이터 수집 시 시스템에서 자동으로 채워집니다. 웹 SDK 구현의 컨텍스트 외부에서 이 필드를 사용하는 것은 지원되지 않습니다. |
+| `eventMergeId` | [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)을(를) 사용하여 데이터를 수집하는 경우, 레코드가 생성되도록 한 수집된 일괄 처리의 ID를 나타냅니다. 이 필드는 데이터 수집 시 시스템에서 자동으로 채워집니다. 웹 SDK 구현의 컨텍스트 외부에서 이 필드를 사용하는 것은 지원되지 않습니다. |
 | `eventType` | 이벤트의 유형 또는 범주를 나타내는 문자열입니다. 이 필드는 제품 보기 이벤트를 소매 회사에 대한 장바구니에 추가 이벤트와 구분하는 것처럼 동일한 스키마 및 데이터 세트 내에서 다른 이벤트 유형을 구분하려는 경우 사용할 수 있습니다.<br><br>이 속성의 표준 값은 의도한 사용 사례에 대한 설명을 포함하여 [부록 섹션](#eventType)에 제공됩니다. 이 필드는 확장 가능한 열거형입니다. 즉, 고유한 이벤트 유형 문자열을 사용하여 추적 중인 이벤트를 분류할 수도 있습니다.<br><br>`eventType`은(는) 응용 프로그램에서 히트당 하나의 이벤트만 사용하도록 제한하므로 시스템에서 가장 중요한 이벤트를 알려주기 위해 계산된 필드를 사용해야 합니다. 자세한 내용은 [계산된 필드에 대한 모범 사례](#calculated)의 섹션을 참조하십시오. |
 | `producedBy` | 이벤트의 생성자 또는 출처를 설명하는 문자열 값입니다. 이 필드는 세분화 목적으로 필요한 경우 특정 이벤트 제작자를 필터링하는 데 사용할 수 있습니다.<br><br>이 속성에 대해 제안된 일부 값은 [부록 섹션](#producedBy)에 제공됩니다. 이 필드는 확장 가능한 열거형입니다. 즉, 고유한 문자열을 사용하여 다른 이벤트 생성자를 나타낼 수도 있습니다. |
 | `identityMap` | 이벤트가 적용되는 개인에 대한 네임스페이스 ID 세트가 포함된 맵 필드입니다. 이 필드는 ID 데이터가 수집될 때 시스템에 의해 자동으로 업데이트됩니다. [실시간 고객 프로필](../../profile/home.md)에 대해 이 필드를 제대로 활용하려면 데이터 작업에서 필드의 내용을 수동으로 업데이트하지 마십시오.<br /><br />사용 사례에 대한 자세한 내용은 [스키마 컴포지션의 기본 사항](../schema/composition.md#identityMap)에서 ID 맵에 대한 섹션을 참조하십시오. |
@@ -64,25 +64,25 @@ UI를 통해 수동으로 Experience Platform에 데이터를 수집하는 경�
 
 Adobe에서는 [!DNL XDM ExperienceEvent] 클래스와 함께 사용할 수 있는 여러 표준 필드 그룹을 제공합니다. 다음은 클래스에서 일반적으로 사용되는 몇 가지 필드 그룹 목록입니다.
 
-* [[!UICONTROL Adobe Analytics ExperienceEvent 전체 확장]](../field-groups/event/analytics-full-extension.md)
-* [[!UICONTROL Adobe Advertising Cloud ExperienceEvent 전체 확장]](../field-groups/event/advertising-full-extension.md)
-* [[!UICONTROL 잔고 전송]](../field-groups/event/balance-transfers.md)
-* [[!UICONTROL 캠페인 마케팅 세부 정보]](../field-groups/event/campaign-marketing-details.md)
-* [[!UICONTROL 카드 동작]](../field-groups/event/card-actions.md)
-* [[!UICONTROL 채널 세부 정보]](../field-groups/event/channel-details.md)
-* [[!UICONTROL Commerce 세부 정보]](../field-groups/event/commerce-details.md)
-* [[!UICONTROL 예금 세부 정보]](../field-groups/event/deposit-details.md)
-* [[!UICONTROL 장치 거래 세부 정보]](../field-groups/event/device-trade-in-details.md)
-* [[!UICONTROL 식사 예약]](../field-groups/event/dining-reservation.md)
-* [[!UICONTROL 최종 사용자 ID 세부 정보]](../field-groups/event/enduserids.md)
-* [[!UICONTROL 환경 세부 정보]](../field-groups/event/environment-details.md)
-* [[!UICONTROL 비행 예약]](../field-groups/event/flight-reservation.md)
-* [[!UICONTROL IAB TCF 2.0 동의]](../field-groups/event/iab.md)
-* [[!UICONTROL 숙박 예약]](../field-groups/event/lodging-reservation.md)
-* [[!UICONTROL MediaAnalytics 상호 작용 세부 정보]](../field-groups/event/mediaanalytics-interaction.md)
-* [[!UICONTROL 견적 요청 세부 정보]](../field-groups/event/quote-request-details.md)
-* [[!UICONTROL 예약 세부 정보]](../field-groups/event/reservation-details.md)
-* [[!UICONTROL 웹 세부 정보]](../field-groups/event/web-details.md)
+* [[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](../field-groups/event/analytics-full-extension.md)
+* [[!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension]](../field-groups/event/advertising-full-extension.md)
+* [[!UICONTROL Balance Transfers]](../field-groups/event/balance-transfers.md)
+* [[!UICONTROL Campaign Marketing Details]](../field-groups/event/campaign-marketing-details.md)
+* [[!UICONTROL Card Actions]](../field-groups/event/card-actions.md)
+* [[!UICONTROL Channel Details]](../field-groups/event/channel-details.md)
+* [[!UICONTROL Commerce Details]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL Deposit Details]](../field-groups/event/deposit-details.md)
+* [[!UICONTROL Device Trade-In Details]](../field-groups/event/device-trade-in-details.md)
+* [[!UICONTROL Dining Reservation]](../field-groups/event/dining-reservation.md)
+* [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
+* [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
+* [[!UICONTROL Flight Reservation]](../field-groups/event/flight-reservation.md)
+* [[!UICONTROL IAB TCF 2.0 Consent]](../field-groups/event/iab.md)
+* [[!UICONTROL Lodging Reservation]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL MediaAnalytics Interaction Details]](../field-groups/event/mediaanalytics-interaction.md)
+* [[!UICONTROL Quote Request Details]](../field-groups/event/quote-request-details.md)
+* [[!UICONTROL Reservation Details]](../field-groups/event/reservation-details.md)
+* [[!UICONTROL Web Details]](../field-groups/event/web-details.md)
 
 ## 부록
 
@@ -126,7 +126,7 @@ Adobe에서는 [!DNL XDM ExperienceEvent] 클래스와 함께 사용할 수 있�
 | `decisioning.propositionFetch` | 이벤트가 주로 의사 결정을 가져오기 위한 것임을 나타내는 데 사용됩니다. Adobe Analytics에서 이 이벤트를 자동으로 삭제합니다. |
 | `decisioning.propositionInteract` | 이 이벤트 유형은 개인화된 콘텐츠에서 클릭 수와 같은 상호 작용을 추적하는 데 사용됩니다. |
 | `decisioning.propositionSend` | 이 이벤트는 잠재 고객에게 추천 또는 고려 제안을 보내기로 결정한 경우 추적합니다. |
-| `decisioning.propositionTrigger` | 이 유형의 이벤트는 [Web SDK](../../web-sdk/home.md)에서 로컬 저장소에 저장되지만 Experience Edge으로 전송되지 않습니다. 규칙 세트가 충족될 때마다 이벤트가 생성되고 로컬 저장소에 저장됩니다(해당 설정이 활성화된 경우). |
+| `decisioning.propositionTrigger` | 이 유형의 이벤트는 웹 SDK에 의해 로컬 저장소에 저장되지만 Edge Network으로 전송되지 않습니다. 규칙 세트가 충족될 때마다 이벤트가 생성되고 로컬 저장소에 저장됩니다(해당 설정이 활성화된 경우). |
 | `delivery.feedback` | 이 이벤트는 이메일 게재와 같은 게재의 피드백 이벤트를 추적합니다. |
 | `directMarketing.emailBounced` | 이 이벤트는 개인에게 전송된 이메일이 반송되면 추적합니다. |
 | `directMarketing.emailBouncedSoft` | 이 이벤트는 개인에게 보낸 이메일이 소프트 바운스되면 추적합니다. |

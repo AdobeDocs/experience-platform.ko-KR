@@ -2,10 +2,10 @@
 title: 속성
 description: Adobe Experience Platform에서 조직의 확장, 환경 및 라이브러리를 구성하고 그룹화하는 방법에 대해 알아봅니다.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 59%
+source-wordcount: '1153'
+ht-degree: 64%
 
 ---
 
@@ -97,7 +97,7 @@ Properties 목록에는 다음 정보가 표시됩니다.
 
 시작하기 전에 속성에 대한 [속성 계획 모범 사례](companies-and-properties.md#best-practices-for-planning-properties)를 복습하기 바랍니다.
 
-회사 페이지로 이동한 다음 **[!UICONTROL 속성 추가]**&#x200B;를 선택하거나 목록에서 기존 속성을 선택하고 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+회사 페이지로 이동한 다음, **[!UICONTROL Add Property]**&#x200B;를 선택하거나 목록에서 기존 속성을 선택하고 **[!UICONTROL Configure]**&#x200B;을 선택합니다.
 
 ![](../../images/property-settings.png)
 
@@ -111,10 +111,10 @@ Properties 목록에는 다음 정보가 표시됩니다.
 
    **Domains:** 이 속성을 배포하려는 사이트의 기본 URL
 
-1. (고급) **[!UICONTROL 시퀀스에서 규칙 구성 요소 실행]** 이전 조건과 작업이 완료될 때까지 기다렸다가 실행하도록 하려면 이 확인란을 선택하십시오.
-1. (고급) **[!UICONTROL 누락된 데이터 요소에 대한 빈 문자열 반환:]** 라이브러리 내에 존재하지 않는 데이터 요소를 참조하는 경우 일반적으로 `undefined`을(를) 반환합니다.  해당 시나리오가 빈 문자열을 대신 반환하도록 하려면 이 확인란을 선택합니다.
-1. (고급) **[!UICONTROL 확장 개발에 대한 구성:]** 회사에서 활발하게 개발 중인 개발 확장을 설치하려면 이 확인란을 선택하십시오
-1. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+1. (고급) **[!UICONTROL Run rule components in sequence]** 이 확인란을 선택하면 이전 조건과 작업이 완료될 때까지 기다렸다가 실행해야 합니다.
+1. (고급) **[!UICONTROL Return an empty string for missing data elements:]** 라이브러리 내에 존재하지 않는 데이터 요소를 참조하는 경우 일반적으로 `undefined`을(를) 반환합니다. 해당 시나리오가 빈 문자열을 대신 반환하도록 하려면 이 확인란을 활성화하십시오.
+1. (고급) **[!UICONTROL Configure for extension development:]** 회사에서 활발하게 개발 중인 개발 확장을 설치하려면 이 확인란을 사용하도록 설정합니다.
+1. **[!UICONTROL Save]**&#x200B;를 선택합니다.
 
 ### 모바일
 
@@ -131,7 +131,7 @@ Properties 목록에는 다음 정보가 표시됩니다.
 
    * **Use HTTPS:** HTTP 또는 HTTPS를 통해 모든 데이터 통신을 전송해야 하는 경우 선택합니다.
 
-1. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+1. **[!UICONTROL Save]**&#x200B;를 선택합니다.
 
 속성이 만들어지면 Experience Platform에서 기본 호스트, 환경 세트(개발, 스테이징 및 프로덕션) 및 기본 확장을 자동으로 추가합니다.
 
@@ -147,4 +147,4 @@ Properties 목록에는 다음 정보가 표시됩니다.
 
    삭제할 속성을 여러 개 선택할 수 있습니다.
 
-1. **[!UICONTROL 삭제]**&#x200B;를 선택한 다음 속성 제거를 확인합니다.
+1. **[!UICONTROL Delete]**&#x200B;를 선택한 다음 속성 제거를 확인합니다.

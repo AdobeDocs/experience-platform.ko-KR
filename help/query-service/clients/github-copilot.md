@@ -2,9 +2,9 @@
 title: GitHub Copilot 및 Visual Studio 코드를 쿼리 서비스에 연결
 description: GitHub Copilot 및 Visual Studio 코드를 Adobe Experience Platform 쿼리 서비스와 연결하는 방법에 대해 알아봅니다.
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ OpenAI Codex에서 제공하는 [!DNL GitHub Copilot]은(는) 코드 조각 및 
 
 이 안내서를 사용하려면 이미 GitHub 계정에 액세스할 수 있고 [!DNL GitHub Copilot]에 등록해야 합니다. [GitHub 웹 사이트에서 등록](https://github.com/github-copilot/signup)할 수 있습니다. [!DNL VS Code]도 필요합니다. 공식 웹 사이트에서 [다운로드 [!DNL VS Code] 할 수 있습니다](https://code.visualstudio.com/download).
 
-[!DNL VS Code]을(를) 설치하고 [!DNL Copilot] 구독을 활성화했으면 Experience Platform에 대한 연결 자격 증명을 획득하십시오. 이러한 자격 증명은 Experience Platform UI의 [!UICONTROL 쿼리] 작업 영역의 [!UICONTROL 자격 증명] 탭에 있습니다. 자격 증명 안내서를 읽고 [Experience Platform UI에서 이러한 값을 찾는 방법을 알아보세요](../ui/credentials.md). 현재 [!UICONTROL 쿼리] 작업 영역에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
+[!DNL VS Code]을(를) 설치하고 [!DNL Copilot] 구독을 활성화했으면 Experience Platform에 대한 연결 자격 증명을 획득하십시오. 이러한 자격 증명은 Experience Platform UI에서 [!UICONTROL Credentials] 작업 영역의 [!UICONTROL Queries] 탭에 있습니다. 자격 증명 안내서를 읽고 [Experience Platform UI에서 이러한 값을 찾는 방법을 알아보세요](../ui/credentials.md). 현재 [!UICONTROL Queries] 작업 영역에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
 
 ### 필수 확장 [!DNL Visual Studio Code]개 {#required-extensions}
 
@@ -39,7 +39,7 @@ OpenAI Codex에서 제공하는 [!DNL GitHub Copilot]은(는) 코드 조각 및 
 
 ## 연결 만들기 {#create-connection}
 
-원통 아이콘(![원통 아이콘을 선택합니다.[!DNL VS Code]의 왼쪽 탐색 영역에 &#x200B;](../images/clients/github-copilot/cylinder-icon.png))을 추가한 다음 **[!DNL Add New Connection]** 또는 원통 더하기 아이콘(![원통 더하기 아이콘.](../images/clients/github-copilot/cylinder-plus-icon.png))을 클릭합니다.
+원통 아이콘(![원통 아이콘을 선택합니다.](../images/clients/github-copilot/cylinder-icon.png)의 왼쪽 탐색 영역에 [!DNL VS Code])을 추가한 다음 **[!DNL Add New Connection]** 또는 원통 더하기 아이콘(![원통 더하기 아이콘.](../images/clients/github-copilot/cylinder-plus-icon.png))을 클릭합니다.
 
 ![SQL 도구 확장과 새 연결 추가가 강조 표시된 Visual Studio 코드 UI입니다.](../images/clients/github-copilot/add-new-connection.png)
 
@@ -57,9 +57,9 @@ OpenAI Codex에서 제공하는 [!DNL GitHub Copilot]은(는) 코드 조각 및 
 | [!DNL Connect using] | **[!DNL Server and Port]** 옵션을 사용하여 서버의 주소(호스트 이름)와 포트 번호를 지정하여 Experience Platform에 직접 연결합니다. |
 | [!DNL Server address] | Experience Platform Postgres 자격 증명에 제공된 **[!UICONTROL Host]** 값을 입력하십시오(예: `acmeprod.platform-query.adobe.io`). |
 | [!DNL Port] | 이 값은 일반적으로 Experience Platform 서비스의 경우 `80`입니다. |
-| [!DNL Database] | Experience Platform Postgres 자격 증명에 제공된 **[!UICONTROL 데이터베이스]** 값을 입력하십시오(예: `prod:all`). |
-| [!DNL Username] | 이 속성은 조직 ID를 참조합니다. Experience Platform Postgres 자격 증명에 제공된 **[!UICONTROL 사용자 이름]** 값을 입력하십시오. |
-| [!DNL Password] | 이 속성은 액세스 토큰입니다. Experience Platform Postgres 자격 증명에 제공된 **[!UICONTROL 암호]** 값을 입력하십시오. |
+| [!DNL Database] | Experience Platform Postgres 자격 증명에 제공된 **[!UICONTROL Database]** 값을 입력하십시오(예: `prod:all`). |
+| [!DNL Username] | 이 속성은 조직 ID를 참조합니다. Experience Platform Postgres 자격 증명에 제공된 **[!UICONTROL Username]** 값을 입력합니다. |
+| [!DNL Password] | 이 속성은 액세스 토큰입니다. Experience Platform Postgres 자격 증명에 제공된 **[!UICONTROL Password]** 값을 입력합니다. |
 
 ![여러 설정이 강조 표시된 연결 도우미 작업 영역입니다.](../images/clients/github-copilot/connection-settings.png)
 
@@ -97,9 +97,9 @@ Experience Platform 인스턴스에 연결되면 [!DNL Copilot]을(를) AI 코�
 
 먼저 최신 버전의 [!DNL VS Code]이(가) 설치되어 있는지 확인하십시오. 오래된 [!DNL VS Code] 버전을 사용하면 키 [!DNL Copilot] 기능이 의도한 대로 작동하지 않을 수 있습니다. 그런 다음 [!DNL Enable Auto Completions] 설정이 활성화되어 있는지 확인합니다. [!DNL Copilot]이(가) 올바르게 실행 중인 경우 **[!DNL Copilot]아이콘**(![Copilot 아이콘](../images/clients/github-copilot/copilot-icon.png))이 상태 표시줄에 나타납니다(문제가 있는 경우 대신 [!DNL Copilot] 오류 아이콘이 표시됨). **[!DNL Copilot]아이콘**&#x200B;을(를) 선택하여 [!DNL [!DNL GitHub Copilot] 메뉴]를 엽니다. **[!DNL [!DNL GitHub Copilot] Menu]**&#x200B;에서 **[!DNL Edit Settings]**&#x200B;을(를) 선택합니다.
 
-![[!DNL GitHub Copilot Menu]이(가) 표시되고 [!DNL Copilot] 아이콘과 설정 편집이 강조 표시된 [!DNL VS Code] 편집기입니다.](../images/clients/github-copilot/github-copilot-menu.png)
+![[!DNL VS Code]이(가) 표시되고 [!DNL GitHub Copilot Menu] 아이콘과 설정 편집이 강조 표시된 [!DNL Copilot] 편집기입니다.](../images/clients/github-copilot/github-copilot-menu.png)
 
-옵션을 아래로 스크롤하여 [!DNL Enable Auto Completions] 설정에 대해 확인란이 활성화되어 있는지 확인합니다.
+옵션을 아래로 스크롤하여 [!DNL Enable Auto Completions] 설정에 대해 확인란이 활성화되었는지 확인합니다.
 
 ![자동 완성 사용 확인란이 선택되어 있고 강조 표시된 [!DNL GitHub Copilot]의 설정 패널입니다.](../images/clients/github-copilot/enable-auto-completions.png)
 
@@ -121,7 +121,7 @@ Experience Platform 인스턴스에 연결되면 [!DNL Copilot]을(를) AI 코�
 >  
 >제안 사항이 없으면 [[!DNL Copilot] 이(가) 파일의 언어로 활성화되었는지](#get-started-with-copilot)하세요.
 
-![부분적으로 입력된 코드 옆에 희미한 회색 텍스트 제안을 [!DNL GitHub Copilot]에서 유령 텍스트로 표시하는 [!DNL VS Code] 편집기입니다.](../images/clients/github-copilot/accept-partial-suggestions.png)
+![부분적으로 입력된 코드 옆에 희미한 회색 텍스트 제안을 [!DNL VS Code]에서 유령 텍스트로 표시하는 [!DNL GitHub Copilot] 편집기입니다.](../images/clients/github-copilot/accept-partial-suggestions.png)
 
 ### 대체 제안 {#alternative-suggestions}
 
@@ -143,7 +143,7 @@ There are inline features for chat including doc, expalin, fix and test
 
 ## 전용 채팅 보기 {#dedicated-chat}
 
-전용 채팅 사이드바가 있는 보다 전통적인 채팅 인터페이스를 사용하여 아이디어와 전략을 구성하고 코딩 문제를 해결하며 구현 세부 사항을 논의할 수 있습니다. 채팅 아이콘(![Copilot 채팅 아이콘)을 선택합니다.[!DNL VS Code] 사이드바에서 &#x200B;](../images/clients/github-copilot/chat-icon.png))을(를) 클릭하여 전용 채팅 창을 엽니다.
+전용 채팅 사이드바가 있는 보다 전통적인 채팅 인터페이스를 사용하여 아이디어와 전략을 구성하고 코딩 문제를 해결하며 구현 세부 사항을 논의할 수 있습니다. 채팅 아이콘(![Copilot 채팅 아이콘)을 선택합니다.](../images/clients/github-copilot/chat-icon.png) 사이드바에서 [!DNL VS Code])을(를) 클릭하여 전용 채팅 창을 엽니다.
 
 ![채팅 아이콘이 강조 표시된 [!DNL GitHub Copilot] 채팅 사이드바입니다.](../images/clients/github-copilot/chat-sidebar.png)
 

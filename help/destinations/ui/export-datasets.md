@@ -3,9 +3,9 @@ title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: de161bcb29a0d4fc9b0c419506537b18255c79a4
+source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
 workflow-type: tm+mt
-source-wordcount: '3005'
+source-wordcount: '3004'
 ht-degree: 7%
 
 ---
@@ -50,16 +50,16 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 만들어진 프로필 및 경험 이벤트 데이터 세트입니다.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=ko#profile-attribute-datasets">시스템 생성 프로필 스냅숏 데이터 집합</a>.</li></td>
+    <td><ul><li>소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 만들어진 프로필 및 경험 이벤트 데이터 세트입니다.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">시스템 생성 프로필 스냅숏 데이터 집합</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ko#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ko#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
+    <td><a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하세요.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
 
 이 페이지에 설명된 워크플로에 대한 전체적인 설명, 데이터 세트 내보내기 기능을 사용할 때의 이점 및 몇 가지 제안된 사용 사례를 확인하려면 아래 비디오를 보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448825?captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## 지원되는 대상 {#supported-destinations}
 
@@ -139,7 +139,7 @@ Experience Platform 카탈로그의 일부 파일 기반 대상은 대상 활성
 
 ## 데이터 세트 선택 {#select-datasets}
 
-데이터 세트 이름 왼쪽에 있는 확인란을 사용하여 대상으로 내보낼 데이터 세트를 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
+데이터 세트 이름 왼쪽의 확인란을 사용하여 대상으로 내보낼 데이터 세트를 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ![내보낼 데이터 세트를 선택할 수 있는 데이터 세트 선택 단계를 표시하는 데이터 세트 내보내기 워크플로우입니다.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
@@ -231,7 +231,7 @@ Experience Platform 카탈로그의 일부 파일 기반 대상은 대상 활성
 
 ![사용자 지정 폴더 모달 창에서 강조 표시된 매크로 선택.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-원하는 매크로를 선택하면 저장소 위치에 생성되는 폴더 구조의 미리보기가 표시됩니다. 폴더 구조의 첫 번째 수준은 데이터 집합을 내보내기 위해 **[!UICONTROL Folder path]**&#x200B;대상에 연결[할 때 표시한 &#x200B;](/help/destinations/ui/connect-destination.md#set-up-connection-parameters)을(를) 나타냅니다.
+원하는 매크로를 선택하면 저장소 위치에 생성되는 폴더 구조의 미리보기가 표시됩니다. 폴더 구조의 첫 번째 수준은 데이터 집합을 내보내기 위해 **[!UICONTROL Folder path]**&#x200B;대상에 연결[할 때 표시한 ](/help/destinations/ui/connect-destination.md#set-up-connection-parameters)을(를) 나타냅니다.
 
 ![사용자 지정 폴더 모달 창에서 강조 표시된 폴더 경로를 미리 봅니다.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
@@ -258,7 +258,7 @@ Experience Platform은 사용자가 지정한 저장 위치에 폴더 구조를 
 
 >[!TIP]
 > 
->이 폴더 구조의 첫 번째 수준인 `folder-name-you-provided`은(는) 데이터 집합을 내보내기 위해 **[!UICONTROL Folder path]**&#x200B;대상에 연결[할 때 표시한 &#x200B;](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)을(를) 나타냅니다.
+>이 폴더 구조의 첫 번째 수준인 `folder-name-you-provided`은(는) 데이터 집합을 내보내기 위해 **[!UICONTROL Folder path]**&#x200B;대상에 연결[할 때 표시한 ](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)을(를) 나타냅니다.
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -307,7 +307,7 @@ JSON 파일로 내보내기는 압축 모드에서 *지원됩니다*. Parquet �
 
 ## 데이터 세트 내보내기 권한 {#licensing-entitlement}
 
-연간 각 Experience Platform 애플리케이션에 대해 내보낼 수 있는 데이터의 양을 파악하려면 제품 설명 문서를 참조하십시오. 예를 들어 Real-Time CDP 제품 설명 [여기](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)를 볼 수 있습니다.
+연간 각 Experience Platform 애플리케이션에 대해 내보낼 수 있는 데이터의 양을 파악하려면 제품 설명 문서를 참조하십시오. 예를 들어 Real-Time CDP 제품 설명 [여기](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)를 볼 수 있습니다.
 
 다른 애플리케이션에 대한 데이터 내보내기 권한은 가산되지 않습니다. 예를 들어 Real-Time CDP Ultimate 및 Adobe Journey Optimizer Ultimate을 구매하는 경우 제품 설명에 따라 프로필 내보내기 권한이 두 권한 중 더 커지게 됩니다. 볼륨 권한은 라이선스가 부여된 총 프로필 수를 계산하고 Real-Time CDP Prime의 경우 500KB 또는 Real-Time CDP Ultimate의 경우 700KB를 곱하여 권한이 부여된 데이터의 양을 결정합니다.
 

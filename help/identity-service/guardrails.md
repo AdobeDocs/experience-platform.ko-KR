@@ -3,9 +3,9 @@ keywords: Experience Platform;identity;identity 서비스;문제 해결;보호 �
 title: ID 서비스 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1576'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)을(를) 확인하십시오.
+>이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을(를) 확인하십시오.
 
 ## 시작하기
 
@@ -109,7 +109,7 @@ ID 서비스는 들어오는 데이터를 지속적으로 모니터링하여 규
 CRMID에 대해 인증된 이벤트를 유지하려면 기본 ID를 ECID에서 CRMID로 변경하는 것이 좋습니다. 이 변경 사항을 구현하는 방법에 대한 단계는 다음 문서를 참조하십시오.
 
 * [Experience Platform 태그에 대한 ID 맵을 구성합니다](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Experience Platform Web SDK의 ID 데이터](../web-sdk/identity/overview.md#using-identitymap)
+* [Experience Platform Web SDK의 ID 데이터](/help/collection/use-cases/identity/id-overview.md)
 
 ### 예제 시나리오
 
@@ -137,19 +137,19 @@ CRMID에 대해 인증된 이벤트를 유지하려면 기본 ID를 ECID에서 C
 * 다음 다이어그램은 `timestamp=50`에 ID 그래프에 50개의 ID가 있다고 가정합니다.
 * `(...)`은(는) 그래프 내에 이미 연결되어 있는 다른 ID를 나타냅니다.
 
-이 예에서 ECID:32110은 수집되고 `timestamp=51`에 큰 그래프에 연결되어 50개의 ID 제한을 초과합니다.
+이 예제에서는 ECID:32110이(가) 수집되어 `timestamp=51`에 있는 큰 그래프에 연결되어 ID 50개 제한을 초과했습니다.
 
 ![](./images/guardrails/before-split.png)
 
 >[!TAB 삭제 프로세스]
 
-따라서 ID 서비스는 타임스탬프 및 ID 유형에 따라 가장 오래된 ID를 삭제합니다. 이 경우 ECID:35577은 ID 그래프에서만 삭제됩니다.
+따라서 ID 서비스는 타임스탬프 및 ID 유형에 따라 가장 오래된 ID를 삭제합니다. 이 경우 ECID:35577은(는) ID 그래프에서만 삭제됩니다.
 
 ![](./images/guardrails/during-split.png)
 
 >[!TAB 그래프 출력]
 
-ECID:35577을 삭제하면 CRMID:60013 및 CRMID:25212을 현재 삭제된 ECID:35577과 연결한 에지도 삭제됩니다. 이 삭제 프로세스를 수행하면 그래프가 두 개의 더 작은 그래프로 분할됩니다.
+ECID:35577을(를) 삭제한 결과, CRMID:60013 및 CRMID:25212을(를) 현재 삭제된 ECID:35577과(와) 연결한 모서리도 삭제됩니다. 이 삭제 프로세스를 수행하면 그래프가 두 개의 더 작은 그래프로 분할됩니다.
 
 ![](./images/guardrails/after-split.png)
 
@@ -168,15 +168,15 @@ ECID:35577을 삭제하면 CRMID:60013 및 CRMID:25212을 현재 삭제된 ECID:
 
 삭제 논리로 인해 일부 &quot;허브&quot; ID도 삭제될 수 있습니다. 이러한 허브 ID는 연결되지 않은 여러 개별 ID에 연결된 노드를 나타냅니다.
 
-아래 예에서 ECID:21011이 수집되고 `timestamp=51`에 그래프에 연결되므로 ID 제한이 50개를 초과합니다.
+아래 예에서 ECID:21011이(가) 수집되고 `timestamp=51`에 그래프에 연결되어 50개 ID 제한을 초과합니다.
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
 >[!TAB 삭제 프로세스]
 
-따라서 ID 서비스는 ID 그래프에서 가장 오래된 ID만 삭제합니다(이 경우 ECID:35577). ECID:35577을 삭제하면 다음 항목도 삭제됩니다.
+따라서 ID 그래프에서만 가장 오래된 ID가 삭제됩니다. 이 그래프는 ECID:35577입니다. ECID:35577을(를) 삭제하면 다음도 삭제됩니다.
 
-* CRMID:60013과 현재 삭제된 ECID:35577 간의 링크로 인해 그래프 분할 시나리오가 발생합니다.
+* CRMID: 60013과 현재 삭제된 ECID:35577 간의 연결로 인해 그래프 분할 시나리오가 발생합니다.
 * IDFA: 32110, IDFA: 02383 및 `(...)`(으)로 표시되는 나머지 ID입니다. 이러한 ID는 개별적으로 다른 ID와 연결되어 있지 않으므로 그래프로 표시할 수 없으므로 삭제됩니다.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
@@ -199,7 +199,7 @@ ECID:35577을 삭제하면 CRMID:60013 및 CRMID:25212을 현재 삭제된 ECID:
 Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보호, 종단 간 지연 정보 및 라이선스 정보에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
-* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ko#end-to-end-latency-diagrams).
-* [Real-Time Customer Data Platform(B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams).
+* [Real-Time Customer Data Platform(B2C Edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

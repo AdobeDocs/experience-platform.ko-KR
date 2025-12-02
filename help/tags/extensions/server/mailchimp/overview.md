@@ -7,9 +7,9 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1251'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >  
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=ko)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html)를 참조하십시오.
 
 Mailchimp [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장은 Mailchimp 마케팅 캠페인, 여정 또는 트랜잭션에 대한 이메일을 트리거할 수 있는 이벤트를 Mailchimp Marketing API에 보냅니다.
 
@@ -47,7 +47,7 @@ Mailchimp에 로그인하고 대시보드 보기에 도착한 후에는 브라�
 
 ### API 키
 
-계정의 API 키를 찾으려면 Mailchimp UI에서 프로필 아이콘을 선택한 다음 **프로필**&#x200B;을 선택하십시오. `https://us11.admin.mailchimp.com/account/profile/`과(와) 같은 URL이 표시되어야 하지만 `us11` 대신 **your** 접두사가 있습니다.
+계정의 API 키를 찾으려면 Mailchimp UI에서 프로필 아이콘을 선택한 다음 **프로필**&#x200B;을 선택하십시오. `https://us11.admin.mailchimp.com/account/profile/`과(와) 같은 URL이 표시되어야 하지만 **대신** your`us11` 접두사가 있습니다.
 
 **추가 항목**&#x200B;을 선택한 다음 **API 키**&#x200B;을 선택합니다.
 
@@ -79,17 +79,17 @@ Mailchimp 플랜과 트랜잭션 이메일, 고객 여정 또는 기타 Mailchim
 
 ### 암호 및 데이터 요소 만들기
 
-이벤트 전달 속성에서 [`Mailchimp API Key`(이)라는 [!UICONTROL 토큰] 암호를 만듭니다](../../../ui/event-forwarding/secrets.md#token).
+이벤트 전달 속성에서 [[!UICONTROL Token]&#x200B;(이)라는 ](../../../ui/event-forwarding/secrets.md#token) 암호를 만듭니다`Mailchimp API Key`.
 
-그런 다음 [!UICONTROL Core] 확장 및 [!UICONTROL Secret] 데이터 요소 형식을 사용하여 [데이터 요소를 만듭니다](../../../ui/managing-resources/data-elements.md#create-a-data-element). 방금 만든 `Mailchimp API Key` 암호를 참조합니다. `Mailchimp Token`을(를) 데이터 요소 이름으로 입력하십시오.
+다음으로, 방금 만든 [ 암호를 참조하기 위해 ](../../../ui/managing-resources/data-elements.md#create-a-data-element) 확장 및 [!UICONTROL Core] 데이터 요소 형식을 사용하여 [!UICONTROL Secret]데이터 요소를 만듭니다`Mailchimp API Key`. `Mailchimp Token`을(를) 데이터 요소 이름으로 입력하십시오.
 
 ### 확장 설치 및 구성
 
-동일한 이벤트 전달 속성에서 **[!UICONTROL 확장],**, **[!UICONTROL 카탈로그]**&#x200B;를 선택하여 설치할 수 있는 확장을 표시합니다. 여기에서 Mailchimp 확장을 검색하고 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
+동일한 이벤트 전달 속성에서 **[!UICONTROL Extensions],**, **[!UICONTROL Catalog]**&#x200B;을(를) 선택하여 설치할 수 있는 확장을 표시합니다. 여기에서 Mailchimp 확장을 검색하고 **[!UICONTROL Install]**&#x200B;을(를) 선택합니다.
 
 ![Mailchimp 확장 설치](../../../images/extensions/server/mailchimp/install.png)
 
-구성 화면이 나타납니다. **[!UICONTROL Mailchimp 서버 접두사 도메인 이름]**&#x200B;에 고유한 도메인 접두사를 포함하여 Mailchimp 계정에서 이전에 복사한 도메인을 입력합니다.
+구성 화면이 나타납니다. **[!UICONTROL Mailchimp Server Prefix Domain Name]** 아래에 Mailchimp 계정에서 이전에 복사한 도메인을 입력합니다. 여기에 고유한 도메인 접두사가 포함됩니다.
 
 >[!IMPORTANT]
 >
@@ -97,15 +97,15 @@ Mailchimp 플랜과 트랜잭션 이메일, 고객 여정 또는 기타 Mailchim
 
 ![확장 구성](../../../images/extensions/server/mailchimp/mailchimp-domain.png)
 
-**[!UICONTROL Mailchimp 토큰]**&#x200B;에서 데이터 요소 아이콘을 선택하고 이전에 만든 `Mailchimp Token` 데이터 요소를 선택합니다. 변경 내용을 저장하려면 **[!UICONTROL 저장]**&#x200B;을 선택하십시오.
+**[!UICONTROL Mailchimp token]**&#x200B;에서 데이터 요소 아이콘을 선택하고 이전에 만든 `Mailchimp Token` 데이터 요소를 선택합니다. 변경 내용을 저장하려면 **[!UICONTROL Save]**&#x200B;을(를) 선택하십시오.
 
 이제 확장이 설치되고 속성에서 사용하도록 구성되었습니다.
 
 ## 데이터 수집
 
-[규칙](../../../ui/managing-resources/rules.md)에서 이 확장을 사용할 때 확장에서 각 이벤트와 함께 Mailchimp에 보내는 여러 데이터 값이 있습니다. 일반적인 구현의 경우 이벤트 전달 속성에서 확장을 사용할 수 있도록 해당 데이터를 [!DNL Experience Platform Edge Network]에 보내도록 [Adobe Experience Platform Web SDK 확장](../../client/web-sdk/overview.md)을 구성할 수 있습니다.
+[규칙](../../../ui/managing-resources/rules.md)에서 이 확장을 사용할 때 확장에서 각 이벤트와 함께 Mailchimp에 보내는 여러 데이터 값이 있습니다. 일반적인 구현의 경우 이벤트 전달 속성에서 확장을 사용할 수 있도록 해당 데이터를 [에 보내도록 ](../../client/web-sdk/overview.md)Adobe Experience Platform Web SDK 확장[!DNL Experience Platform Edge Network]을 구성할 수 있습니다.
 
-이 확장에 필요한 데이터는 Web SDK에서 XDM 데이터([`xdm`](/help/web-sdk/commands/sendevent/xdm.md) 개체 사용) 또는 비 XDM 데이터([`data`](/help/web-sdk/commands/sendevent/data.md) 개체 사용)로 보낼 수 있습니다.
+이 확장에 필요한 데이터는 Web SDK에서 XDM 데이터([`xdm`](/help/collection/js/commands/sendevent/xdm.md) 개체 사용) 또는 비 XDM 데이터([`data`](/help/collection/js/commands/sendevent/data.md) 개체 사용)로 보낼 수 있습니다.
 
 예를 들어 고객이 사이트에서 이벤트를 구매하거나 등록하는 경우 이 확장 기능을 사용하여 Mailchimp를 통해 확인 이메일을 보낼 수 있습니다. 웹 SDK에서 Edge Network으로 필수 정보를 전송하면 확장 기능이 Mailchimp를 사용하여 이메일을 트리거합니다.
 
@@ -132,7 +132,7 @@ Mailchimp 플랜과 트랜잭션 이메일, 고객 여정 또는 기타 Mailchim
 >  
 >위의 **예제 경로** 값은 예제입니다. 위의 단계에서 웹 SDK의 이름을 지정하고 구성한 방식에 따라 해당 데이터 요소에서 참조하는 필드 이름과 [경로](../../../ui/event-forwarding/overview.md#data-element-path)가 속성에서 다를 수 있습니다.
 
-이벤트 전달 속성에서 위에 설명된 각 필드에 대한 데이터 요소를 만들 수 있습니다. 만든 후에는 이 확장의 [!UICONTROL 이벤트 추가] 작업에서 데이터 요소를 참조할 수 있습니다.
+이벤트 전달 속성에서 위에 설명된 각 필드에 대한 데이터 요소를 만들 수 있습니다. 만든 후에는 이 확장의 [!UICONTROL Add Event] 작업에서 데이터 요소를 참조할 수 있습니다.
 
 ![이벤트 작업 구성 추가](../../../images/extensions/server/mailchimp/action-configurations.png)
 

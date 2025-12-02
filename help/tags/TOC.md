@@ -6,9 +6,9 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: cc89bf68011499e69f4ed8c7dc891ec02a34d361
+source-git-commit: c7bedcdb04d5c5483d0239a9fb99388d5e1e1fe5
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '834'
 ht-degree: 36%
 
 ---
@@ -50,7 +50,6 @@ ht-degree: 36%
 * 클라이언트측 정보  {#client-side}
    * [개요](./ui/client-side/overview.md)
    * [비동기 배포](./ui/client-side/asynchronous-deployment.md)
-   * [위성 개체 참조](./ui/client-side/satellite-object.md)
    * [JavaScript 태그를 배포하여 고객 동의 관리](./ui/client-side/consent.md)
    * [CSP(콘텐츠 보안 정책) 지원](./ui/client-side/content-security-policy.md)
    * [SRI(Subresource Integrity) 지원](./ui/client-side/sri.md)
@@ -99,21 +98,46 @@ ht-degree: 36%
       * Adobe Experience Cloud ID 서비스 {#id-service}
          * [개요](./extensions/client/id-service/overview.md)
          * [릴리스 정보](./extensions/client/id-service/release-notes.md)
-      * Adobe Experience Platform 데모 {#platform-demo}
-         * [개요](./extensions/client/platform-demo/overview.md)
-      * Adobe Experience Platform 웹 SDK {#web-sdk}
-         * [개요](./extensions/client/web-sdk/overview.md)
-         * [웹 SDK 태그 확장 구성](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
-         * [이벤트 유형](./extensions/client/web-sdk/event-types.md)
-         * [작업 유형](./extensions/client/web-sdk/action-types.md)
-         * [데이터 요소 유형](./extensions/client/web-sdk/data-element-types.md)
-         * [ECID 액세스](./extensions/client/web-sdk/accessing-the-ecid.md)
-         * [웹 SDK 플러그인](./extensions/client/web-sdk/web-sdk-plugins.md)
-         * [웹 SDK 확장 릴리스 노트](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
-         * [웹 SDK 플러그인 릴리스 노트](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * Adobe Experience Manager 자산 통찰력 {#asset-insights}
          * [개요](./extensions/client/asset-insights/overview.md)
          * [릴리스 정보](./extensions/client/asset-insights/release-notes.md)
+      * Adobe Experience Platform 데모 {#platform-demo}
+         * [개요](./extensions/client/platform-demo/overview.md)
+      * Adobe Experience Platform 웹 SDK {#web-sdk}
+         * [개요](extensions/client/web-sdk/overview.md)
+         * [시작하기](extensions/client/web-sdk/getting-started.md)
+         * 구성 {#configure}
+            * [개요](extensions/client/web-sdk/configure/config-overview.md)
+            * [사용자 지정 빌드 구성 요소](extensions/client/web-sdk/configure/custom-build-components.md)
+            * [SDK 인스턴스](extensions/client/web-sdk/configure/general.md)
+            * [데이터 스트림](extensions/client/web-sdk/configure/datastreams.md)
+            * [동의](extensions/client/web-sdk/configure/consent.md)
+            * [ID](extensions/client/web-sdk/configure/identity.md)
+            * [개인화](extensions/client/web-sdk/configure/personalization.md)
+            * [데이터 수집](extensions/client/web-sdk/configure/data-collection.md)
+            * [스트리밍 미디어](extensions/client/web-sdk/configure/streaming-media.md)
+            * [푸시 알림](extensions/client/web-sdk/configure/push-notifications.md)
+            * [Advertising](extensions/client/web-sdk/configure/advertising.md)
+            * [구성 재정의](extensions/client/web-sdk/configure/configuration-overrides.md)
+            * [고급 설정](extensions/client/web-sdk/configure/advanced-settings.md)
+         * [이벤트 유형](extensions/client/web-sdk/event-types.md)
+         * 작업 유형 {#actions}
+            * [개요](extensions/client/web-sdk/actions/actions-overview.md)
+            * [제안 적용](extensions/client/web-sdk/actions/apply-propositions.md)
+            * [응답 적용](extensions/client/web-sdk/actions/apply-response.md)
+            * [규칙 세트 평가](extensions/client/web-sdk/actions/evaluate-rulesets.md)
+            * [Media Analytics 추적기 가져오기](extensions/client/web-sdk/actions/get-media-analytics-tracker.md)
+            * [ID로 리디렉션](extensions/client/web-sdk/actions/redirect-with-identity.md)
+            * [이벤트 병합 ID 재설정](extensions/client/web-sdk/actions/reset-event-merge-id.md)
+            * [이벤트 보내기](extensions/client/web-sdk/actions/send-event.md)
+            * [미디어 이벤트 보내기](extensions/client/web-sdk/actions/send-media-event.md)
+            * [푸시 구독 전송](extensions/client/web-sdk/actions/send-push-subscription.md)
+            * [동의 설정](extensions/client/web-sdk/actions/set-consent.md)
+            * [변수 업데이트](extensions/client/web-sdk/actions/update-variable.md)
+         * [데이터 요소 유형](extensions/client/web-sdk/data-element-types.md)
+         * [ECID 액세스](extensions/client/web-sdk/accessing-the-ecid.md)
+         * [웹 SDK 확장 릴리스 노트](extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+      * [Adobe Experience Platform Web SDK 플러그인](extensions/client/web-sdk-plugins/web-sdk-plugins.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
       * 오디오 및 비디오용 Adobe Media Analytics {#media-analytics}
          * [개요](./extensions/client/media-analytics/overview.md)
@@ -155,7 +179,7 @@ ht-degree: 36%
          * [릴리스 정보](./extensions/client/plugins/release-notes.md)
       * [연결](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
-      * [Usercentrics CMP v2의 쿠키 동의 관리](https://exchange.adobe.com/apps/ec/107037)
+      * Usercentrics CMP v2의 [쿠키 동의 관리](https://exchange.adobe.com/apps/ec/107037)
       * 코어 {#core}
          * [개요](./extensions/client/core/overview.md)
          * [릴리스 정보](./extensions/client/core/release-notes.md)
@@ -190,7 +214,7 @@ ht-degree: 36%
          * [개요](./extensions/client/meta/overview.md)
       * [모니터](https://exchange.adobe.com/apps/ec/106544)
       * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
-      * [쿠키에 대한 OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)
+      * 쿠키에 대한 [OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)
       * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)
       * [Persado 연결](https://exchange.adobe.com/apps/ec/103745)
       * [Pinterest 전환 추적](https://exchange.adobe.com/apps/ec/100523)
@@ -234,7 +258,7 @@ ht-degree: 36%
          * [개요](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [개요](./extensions/server/braze/overview.md)
-      * [Google Analytics용 Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
+      * Google Analytics용 [Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
       * 코어 {#core}
          * [개요](./extensions/server/core/overview.md)
       * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)

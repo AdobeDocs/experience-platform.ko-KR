@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 2월
 description: Adobe Experience Platform의 2022년 2월 릴리스 정보.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 16%
@@ -33,7 +33,7 @@ Adobe Experience Platform에서는 매일 스냅숏 중에 캡처된 조직 데�
 
 | 기능 | 설명 |
 | --- | --- |
-| 새로운 표준 대상 위젯 | 다음 표준 위젯을 사용하여 대상과 관련된 다양한 지표를 시각화할 수 있습니다.<ul><li>대상별로 최근에 활성화된 세그먼트입니다. 이 위젯은 선택한 대상에 따라 가장 최근에 활성화된 상위 5개의 세그먼트를 내림차순으로 표시합니다.</li><li>대상자 크기 트렌드입니다. 이 위젯은 해당 대상 계정에 매핑된 세그먼트의 기간 동안의 프로필 수 관계를 보여 줍니다.</li><li>ID별로 매핑되지 않은 세그먼트. 이 위젯은 주어진 대상 및 ID에 대한 ID 수를 내림차순으로 하여 순위가 매겨진 매핑되지 않은 상위 5개의 세그먼트를 나열합니다.</li><li>ID별로 매핑된 세그먼트. 이 위젯은 매핑된 상위 5개의 세그먼트를 나열합니다. 세그먼트는 위젯의 드롭다운 메뉴에서 선택한 대상 ID와 일치하는 소스 ID의 각 수에 따라 높음에서 낮음 순으로 정렬됩니다.</li><li>일반 대상자. 이 위젯은 페이지 상단에서 선택한 대상 계정 전체에 걸쳐 활성화된 상위 5개 세그먼트 목록과 위젯 드롭다운에서 선택한 대상을 제공합니다.</li></ul> 사용 가능한 표준 위젯에 대한 자세한 내용은 [대상 대시보드 설명서](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=ko#standard-widgets)를 참조하십시오. |
+| 새로운 표준 대상 위젯 | 다음 표준 위젯을 사용하여 대상과 관련된 다양한 지표를 시각화할 수 있습니다.<ul><li>대상별로 최근에 활성화된 세그먼트입니다. 이 위젯은 선택한 대상에 따라 가장 최근에 활성화된 상위 5개의 세그먼트를 내림차순으로 표시합니다.</li><li>대상자 크기 트렌드입니다. 이 위젯은 해당 대상 계정에 매핑된 세그먼트의 기간 동안의 프로필 수 관계를 보여 줍니다.</li><li>ID별로 매핑되지 않은 세그먼트. 이 위젯은 주어진 대상 및 ID에 대한 ID 수를 내림차순으로 하여 순위가 매겨진 매핑되지 않은 상위 5개의 세그먼트를 나열합니다.</li><li>ID별로 매핑된 세그먼트. 이 위젯은 매핑된 상위 5개의 세그먼트를 나열합니다. 세그먼트는 위젯의 드롭다운 메뉴에서 선택한 대상 ID와 일치하는 소스 ID의 각 수에 따라 높음에서 낮음 순으로 정렬됩니다.</li><li>일반 대상자. 이 위젯은 페이지 상단에서 선택한 대상 계정 전체에 걸쳐 활성화된 상위 5개 세그먼트 목록과 위젯 드롭다운에서 선택한 대상을 제공합니다.</li></ul> 사용 가능한 표준 위젯에 대한 자세한 내용은 [대상 대시보드 설명서](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#standard-widgets)를 참조하십시오. |
 
 [!DNL Dashboards]에 대한 자세한 내용은 [[!DNL Dashboards] 개요](../../dashboards/home.md)를 참조하십시오.
 
@@ -47,7 +47,7 @@ Experience Platform은 클라이언트측 고객 경험 데이터를 수집하�
 | --- | --- |
 | 데이터 스트림 구성에 대한 UI 워크플로우 개선 | 데이터 수집 UI에서 새 데이터 스트림을 만드는 워크플로우가 업데이트되었습니다. 데이터 스트림에 서비스를 추가할 때 액세스 권한이 있는 서비스만 옵션 목록에 포함됩니다. 자세한 내용은 [데이터 스트림 구성](../../datastreams/overview.md)에 대한 안내서를 참조하십시오. |
 | 데이터 수집을 위한 데이터 준비 | Adobe Experience Platform Web SDK을 사용하는 경우, 이제 데이터 준비 기능을 활용하여 데이터를 서버측의 XDM(Experience Data Model)에 매핑할 수 있습니다. 자세한 내용은 데이터스트림 가이드의 [데이터 수집을 위한 데이터 준비](../../datastreams/data-prep.md)에 대한 섹션을 참조하십시오. |
-| 자사 디바이스 ID | 이제 Experience Platform Web SDK을 사용하여 고객 데이터를 수집할 때 자신의 장치 ID를 Adobe Experience Platform Edge Network으로 보낼 수 있습니다. 이렇게 하면 서드파티 쿠키 수명 주기에 대한 최근 브라우저 제한 사항에 대한 해결 방법을 제공합니다. 자세한 내용은 [자사 장치 ID](../../web-sdk/identity/first-party-device-ids.md)의 안내서를 참조하십시오. |
+| 자사 디바이스 ID | 이제 Experience Platform Web SDK을 사용하여 고객 데이터를 수집할 때 자신의 장치 ID를 Adobe Experience Platform Edge Network으로 보낼 수 있습니다. 이렇게 하면 서드파티 쿠키 수명 주기에 대한 최근 브라우저 제한 사항에 대한 해결 방법을 제공합니다. 자세한 내용은 [자사 장치 ID](/help/collection/use-cases/identity/first-party-device-ids.md)의 안내서를 참조하십시오. |
 
 Experience Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md)를 참조하십시오.
 
