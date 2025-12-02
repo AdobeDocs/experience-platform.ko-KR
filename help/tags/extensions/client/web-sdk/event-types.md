@@ -245,7 +245,7 @@ if (discountHtml) {
 
 ### Adobe Target 응답 토큰 액세스
 
-Adobe Target에서 반환된 Personalization 콘텐츠에는 활동, 오퍼, 경험, 사용자 프로필, 지역 정보 등에 대한 세부 정보인 [응답 토큰](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)이 포함됩니다. 이러한 세부 정보는 서드파티 도구와 공유하거나 디버깅에 사용할 수 있습니다. Adobe Target 사용자 인터페이스에서 응답 토큰을 구성할 수 있습니다.
+Adobe Target에서 반환된 Personalization 콘텐츠에는 활동, 오퍼, 경험, 사용자 프로필, 지역 정보 등에 대한 세부 정보인 [응답 토큰](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ko)이 포함됩니다. 이러한 세부 정보는 서드파티 도구와 공유하거나 디버깅에 사용할 수 있습니다. Adobe Target 사용자 인터페이스에서 응답 토큰을 구성할 수 있습니다.
 
 응답 데이터 처리 규칙에 있는 사용자 지정 코드 작업에서 서버에서 반환된 개인화 제안에 액세스할 수 있습니다. 이렇게 하려면 다음 사용자 지정 코드를 입력합니다.
 

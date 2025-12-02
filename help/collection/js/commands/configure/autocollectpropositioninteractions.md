@@ -50,7 +50,7 @@ alloy("configure", {
 | 이름 | 데이터 속성 | 설명 |
 | --- | --- | --- |
 | **[!UICONTROL Label]** | `data-aep-click-label` | 레이블 데이터 속성이 클릭한 요소에 있으면 Edge Network으로 전송된 상호 작용 세부 정보에 포함됩니다. 웹 SDK은 클릭한 요소로 시작하여 DOM 트리 위로 이동하는 레이블 데이터 속성을 찾습니다. 웹 SDK은 처음 찾은 레이블을 사용합니다. |
-| **[!UICONTROL Token]** | `data-aep-click-token` | [Adobe Journey Optimizer 코드 기반 캠페인](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based)에서 의사 결정 정책을 활용할 때 이 토큰을 사용하십시오. 토큰을 사용하여 클릭한 결정 정책 항목을 구분할 수 있습니다. 토큰 데이터 속성은 클릭한 요소에 있으면 Edge Network으로 전송된 상호 작용 세부 정보에 포함됩니다. 웹 SDK은 클릭한 요소로 시작하여 DOM 트리를 올라가는 토큰 데이터 속성을 찾습니다. 웹 SDK은 찾은 첫 번째 토큰을 사용합니다. |
+| **[!UICONTROL Token]** | `data-aep-click-token` | [Adobe Journey Optimizer 코드 기반 캠페인](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/code-based-experience/get-started-code-based)에서 의사 결정 정책을 활용할 때 이 토큰을 사용하십시오. 토큰을 사용하여 클릭한 결정 정책 항목을 구분할 수 있습니다. 토큰 데이터 속성은 클릭한 요소에 있으면 Edge Network으로 전송된 상호 작용 세부 정보에 포함됩니다. 웹 SDK은 클릭한 요소로 시작하여 DOM 트리를 올라가는 토큰 데이터 속성을 찾습니다. 웹 SDK은 찾은 첫 번째 토큰을 사용합니다. |
 | **[!UICONTROL Interact ID]** | `data-aep-interact-id` | 웹 SDK은 제안을 렌더링할 때 이 고유 ID를 컨테이너 요소에 자동으로 추가합니다. 웹 SDK은 이 ID를 사용하여 DOM 요소와 제안을 상호 연관시킵니다. 웹 SDK에 필요한 ID이므로 어떤 식으로든 변경해서는 안 됩니다. 무시해도 됩니다. |
 
 ## 예

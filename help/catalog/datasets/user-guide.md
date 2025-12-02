@@ -58,13 +58,13 @@ ht-degree: 4%
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="오케스트레이션된 캠페인"
 >abstract="이 토글을 활성화하여 선택한 데이터 세트를 Adobe Journey Optimizer 오케스트레이션된 캠페인에서 사용할 수 있도록 합니다. 데이터 세트는 관계형 스키마를 사용해야 하며 스키마당 하나의 데이터 세트만 생성할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="오케스트레이션된 캠페인에 대한 데이터 세트 활성화"
+>additional-url="https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="오케스트레이션된 캠페인에 대한 데이터 세트 활성화"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_enableforlookup_toggle"
 >title="조회를 위해 활성화"
 >abstract="조회에 이 데이터 세트를 활성화하면 개인화, 의사 결정 및 여정 오케스트레이션을 위해 Journey Optimizer에서 해당 데이터를 사용할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Journey Optimizer에서 Adobe Experience Platform 데이터 사용"
+>additional-url="https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Journey Optimizer에서 Adobe Experience Platform 데이터 사용"
 
 [!DNL Experience Platform] UI의 왼쪽 탐색에서 **[!UICONTROL Datasets]**&#x200B;을(를) 선택하여 **[!UICONTROL Datasets]** 대시보드를 엽니다. 대시보드에는 조직에서 사용 가능한 모든 데이터 세트가 나열됩니다. 이름, 데이터 세트가 준수하는 스키마, 가장 최근 수집 실행 상태 등 나열된 각 데이터 세트에 대한 세부 사항이 표시됩니다.
 

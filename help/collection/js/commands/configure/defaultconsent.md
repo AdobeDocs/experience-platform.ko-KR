@@ -61,7 +61,7 @@ alloy("configure", {
 | `out` | `out` | 아니요 | 예 |
 | `out` | 설정되지 않음 | 아니요 | 아니요 |
 
-라이브러리에서 설정하는 쿠키 목록은 [Adobe Experience Platform Web SDK 쿠키](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)를 참조하십시오.
+라이브러리에서 설정하는 쿠키 목록은 [Adobe Experience Platform Web SDK 쿠키](https://experienceleague.adobe.com/ko/docs/core-services/interface/data-collection/cookies/web-sdk)를 참조하십시오.
 
 >[!NOTE]
 >

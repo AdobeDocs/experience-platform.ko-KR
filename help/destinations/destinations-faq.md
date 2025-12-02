@@ -229,7 +229,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### Adobe Target에서 활성화된 속성은 어디에서 볼 수 있습니까?
 
 +++답변
-[JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) 및 [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) 오퍼의 Target에서 특성을 사용할 수 있습니다.
+[JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=ko) 및 [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=ko) 오퍼의 Target에서 특성을 사용할 수 있습니다.
 +++
 
 ### 데이터스트림 없이 대상을 만든 다음 나중에 동일한 대상에 데이터스트림을 추가할 수 있습니까?
@@ -265,7 +265,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### [!DNL Adobe Target] 및 [!DNL Custom Personalization] 대상이 [!DNL HIPAA]을(를) 준수합니까?
 
 +++답변
-[!DNL Adobe Target]이(가) [!DNL HIPPA][[!DNL Adobe Healthcare Shield]과(와) 호환되지 않습니다. &#x200B;](https://business.adobe.com/solutions/industries/healthcare.html) 고객은 [!DNL HIPPA] 또는 [!DNL Adobe Target] 대상을 통해 Edge 개인화를 사용하기 전에 사용자 지정 최적화 채널에 대한 [!DNL Custom Personalization] 준비 상태를 자체 법률팀에 확인해야 합니다.
+[!DNL Adobe Target]이(가) [!DNL HIPPA][[!DNL Adobe Healthcare Shield]과(와) 호환되지 않습니다. &#x200B;](https://business.adobe.com/kr/solutions/industries/healthcare.html) 고객은 [!DNL HIPPA] 또는 [!DNL Adobe Target] 대상을 통해 Edge 개인화를 사용하기 전에 사용자 지정 최적화 채널에 대한 [!DNL Custom Personalization] 준비 상태를 자체 법률팀에 확인해야 합니다.
 
 동의 정책 관리를 규모에 맞게 적용해야 하는 사용 사례의 경우 고객은 [!DNL Adobe Privacy & Security Shield]을(를) 구매해야 합니다. [!DNL Adobe Privacy & Security Shield] 기능은 고급 기능 세트로 판매되며 별도로 구입할 수 없습니다.
 

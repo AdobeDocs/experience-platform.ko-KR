@@ -14,7 +14,7 @@ ht-degree: 72%
 
 >[!AVAILABILITY]
 >
->이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate 라이선스가 있는 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
+>이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate 라이선스가 있는 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
 
 파트너 지원 인식을 사용하여 웹 속성 방문자에게 개인화된 경험을 제공하는 방법을 알아보십시오. 이 튜토리얼을 사용하여 인증된 방문자와 인증되지 않은 방문자에게 개인화된 경험을 표시하기 위해 Experience Platform 및 기타 Experience Cloud 솔루션의 다양한 요소 구현 시퀀스를 이해하십시오.
 
@@ -73,7 +73,7 @@ ht-degree: 72%
 1. **고객**&#x200B;은 익명의 웹 사이트 방문자에게 실시간으로 인사이트를 가져올 수 있는 기능에 대한 라이선스를 **데이터 파트너**&#x200B;에게 부여합니다.
 2. **고객**&#x200B;은 속성에 클라이언트측 라이브러리를 배포하여 **파트너** API를 호출하고 파트너 제공 신호를 Real-Time CDP로 보내도록 Web SDK 또는 Mobile SDK를 구성합니다.
 3. 웹 사이트나 앱을 검색할 때, ID와 함께 속성을 반환하는 **파트너**&#x200B;가 **방문자**&#x200B;를 인식할 확률이 높습니다.
-4. Real-Time CDP는 에지 세분화를 실행하여 들어오는 이벤트 히트를 평가하고 [ECID 식별자](https://experienceleague.adobe.com/docs/id-service/using/home.html)에 대한 결과를 유지합니다.
+4. Real-Time CDP는 에지 세분화를 실행하여 들어오는 이벤트 히트를 평가하고 [ECID 식별자](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko)에 대한 결과를 유지합니다.
 5. Adobe Target은 에지 세분화 출력을 사용하여 세션 내 개인화를 위해 **방문자**&#x200B;에게 경험을 다시 렌더링합니다.
 6. 이벤트는 분석 및 대상 변경과 같은 다운스트림 워크플로를 위해 전체적으로 유지됩니다.
 
@@ -157,7 +157,7 @@ UI의 **[!UICONTROL Data Collection]** 섹션은 아래 이미지와 유사합�
 
 ![새 속성에 대한 필수 필드를 채웁니다.](/help/rtcdp/assets/partner-data/onsite-personalization/tag-property-fields.png)
 
-[태그 속성 생성](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html) 방법에 대해 자세히 알아보십시오.
+[태그 속성 생성](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=ko) 방법에 대해 자세히 알아보십시오.
 
 다음으로 속성 내에 다양한 확장 기능을 설치해야 합니다. 태그 속성을 선택하고 [!UICONTROL Extensions] 섹션으로 이동합니다.
 
@@ -175,7 +175,7 @@ UI의 **[!UICONTROL Data Collection]** 섹션은 아래 이미지와 유사합�
 
 웹 SDK을 구성하는 화면에서 아래로 **[!UICONTROL Datastreams]** 섹션으로 이동하여 사용 중인 Experience Platform 샌드박스에 대한 정보를 제공합니다. 다음 드롭다운에서 이전 단계에 생성된 해당 샌드박스 및 데이터스트림을 선택합니다. 다른 모든 환경에 대해 동일한 샌드박스 및 데이터스트림 값을 선택할 수 있습니다. 다른 설정은 그대로 두고 **[!UICONTROL Save]**&#x200B;을(를) 선택하십시오.
 
-[install Web SDK 설치 방법](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html)에 대해 자세히 알아보십시오.
+[install Web SDK 설치 방법](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=ko)에 대해 자세히 알아보십시오.
 
 #### ID 서비스 확장 기능 설치
 

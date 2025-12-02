@@ -32,4 +32,4 @@ Adobe에 데이터를 전송할 조직의 ID입니다. 대부분의 경우 자�
 
 ## [!UICONTROL Edge domain]
 
-확장에서 데이터를 보내고 받는 도메인입니다. Adobe 기본값인 `edge.adobedc.net`은(는) 작동하지만, 대부분의 경우 자사 도메인을 사용하는 것이 좋습니다. 데이터 수집에 적합한 자사 도메인을 설정하는 방법에 대한 지침은 [Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)을 참조하세요. 이 값을 설정하는 방법에 대한 지침은 JavaScript 라이브러리 설명서에서 [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md)을(를) 참조하십시오.
+확장에서 데이터를 보내고 받는 도메인입니다. Adobe 기본값인 `edge.adobedc.net`은(는) 작동하지만, 대부분의 경우 자사 도메인을 사용하는 것이 좋습니다. 데이터 수집에 적합한 자사 도메인을 설정하는 방법에 대한 지침은 [Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/ko/docs/core-services/interface/data-collection/adobe-managed-cert)을 참조하세요. 이 값을 설정하는 방법에 대한 지침은 JavaScript 라이브러리 설명서에서 [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md)을(를) 참조하십시오.

@@ -51,7 +51,7 @@ Adobe Target에서 각 결정 범위는 mbox 또는 활동에 매핑됩니다. A
 
 ## `personalization.surfaces`
 
-`surfaces` 속성은 개인화가 요청된 채널, 장치 또는 컨텍스트를 수동으로 정의하는 [표면 URI](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/code-based-experience/configure-code-based-channel/code-based-surface#surface-uri) 문자열의 배열입니다. 이를 통해 크로스 채널 생태계 내에서 도메인, 앱 또는 디바이스 플랫폼과 같은 서로 다른 디지털 경험을 구별할 수 있습니다. 기본적으로 라이브러리는 현재 페이지의 기본 표면을 유추합니다. 이 속성을 사용하여 현재 페이지에 대해 자동으로 추론된 표면을 재정의할 수 있습니다.
+`surfaces` 속성은 개인화가 요청된 채널, 장치 또는 컨텍스트를 수동으로 정의하는 [표면 URI](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/channels/code-based-experience/configure-code-based-channel/code-based-surface#surface-uri) 문자열의 배열입니다. 이를 통해 크로스 채널 생태계 내에서 도메인, 앱 또는 디바이스 플랫폼과 같은 서로 다른 디지털 경험을 구별할 수 있습니다. 기본적으로 라이브러리는 현재 페이지의 기본 표면을 유추합니다. 이 속성을 사용하여 현재 페이지에 대해 자동으로 추론된 표면을 재정의할 수 있습니다.
 
 이 속성은 크로스 채널 개인화를 사용하려는 경우 유용하며, 개별 채널 간에 개인화가 작동하는 방식을 구별해야 합니다. 이를 통해 동일한 Adobe Experience Platform 조직 아래에 있는 서로 다른 사이트에 대해 고유한 오퍼를 만들 수 있습니다.
 
