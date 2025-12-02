@@ -17,4 +17,4 @@ Adobe Experience Platform Web SDK 태그 확장은 Adobe Experience Platform Edg
 
 한 번의 호출로 [!DNL Web SDK], [!DNL Edge Network], [!DNL Experience Platform] 및 [!DNL Analytics]&#x200B;(으)로 데이터를 전송하여 아래 비디오를 통해 Adobe Experience Platform [!DNL Audience Manager] 및 [!DNL Target]의 작동 방식을 확인하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/34148)
+>[!VIDEO](https://video.tv.adobe.com/v/3413668?captions=kor)
