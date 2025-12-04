@@ -15,9 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Adobe은 고객이 공동 작업을 수행하고 대상을 교환할 수 있도록 2021년에 [!DNL Segment Match]을(를) 도입했습니다. 2025년 초에 Adobe에서는 이 사용 사례를 충족하기 위한 보다 장기적인 접근 방식인 [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)을(를) 도입했습니다.
+>Adobe은 고객이 공동 작업을 수행하고 대상을 교환할 수 있도록 2021년에 [!DNL Segment Match]을(를) 도입했습니다. 2025년 초에 Adobe에서는 이 사용 사례를 충족하기 위한 보다 장기적인 접근 방식인 [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/home)을(를) 도입했습니다.
 >
->* 미국, 캐나다, 호주, 뉴질랜드 및 EMEA의 고객을 위한: Adobe은 Real-Time CDP Prime 및 Ultimate 고객에게 데이터 공동 작업 사용 사례를 [!DNL Segment Match]에서 Real-Time CDP Collaboration으로 전환할 것을 권장합니다. Real-Time CDP Collaboration에 대한 [설명서](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) 및 [빠른 시작 안내서](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide)를 보고 자세한 내용을 알아보려면 Adobe 계정 팀에 문의하십시오.
+>* 미국, 캐나다, 호주, 뉴질랜드 및 EMEA의 고객을 위한: Adobe은 Real-Time CDP Prime 및 Ultimate 고객에게 데이터 공동 작업 사용 사례를 [!DNL Segment Match]에서 Real-Time CDP Collaboration으로 전환할 것을 권장합니다. Real-Time CDP Collaboration에 대한 [설명서](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/home) 및 [빠른 시작 안내서](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/quick-start-guide)를 보고 자세한 내용을 알아보려면 Adobe 계정 팀에 문의하십시오.
 >* 다른 모든 지역의 고객의 경우: 2026년에 Real-Time CDP Collaboration이 해당 지역에 릴리스될 때까지 [!DNL Segment Match]이(가) 권장됩니다.
 
 Adobe Experience Platform 세그먼트 일치 는 두 명 이상의 Experience Platform 사용자가 안전하고 통제되며 개인 정보 보호 방식으로 세그먼트 데이터를 교환할 수 있는 세그먼트 공유 서비스입니다. [!DNL Segment Match]은(는) Experience Platform 개인 정보 보호 표준과 해시된 이메일, 해시된 전화번호, IDFA 및 GAID와 같은 장치 식별자 등의 개인 식별자를 사용합니다.
@@ -51,7 +51,7 @@ ID 네임스페이스는 [Adobe Experience Platform ID 서비스](../../../ident
 
 | 네임스페이스 | 설명 |
 | --------- | ----------- |
-| 이메일 (SHA256, 소문자) | 사전 해시된 이메일 주소를 위한 네임스페이스입니다. 이 네임스페이스에 제공된 값은 SHA256으로 해싱하기 전에 소문자로 변환됩니다. 전자 메일 주소가 정규화되기 전에 선행 및 후행 공백을 잘라내야 합니다. 이 설정은 소급하여 변경할 수 없습니다. Experience Platform은 데이터 수집 시 해싱을 지원하는 두 가지 방법을 제공합니다([`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) 및 [데이터 준비](../../../data-prep/functions.md#hashing)). |
+| 이메일 (SHA256, 소문자) | 사전 해시된 이메일 주소를 위한 네임스페이스입니다. 이 네임스페이스에 제공된 값은 SHA256으로 해싱하기 전에 소문자로 변환됩니다. 전자 메일 주소가 정규화되기 전에 선행 및 후행 공백을 잘라내야 합니다. 이 설정은 소급하여 변경할 수 없습니다. Experience Platform은 데이터 수집 시 해싱을 지원하는 두 가지 방법을 제공합니다([`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=ko#hashing-support) 및 [데이터 준비](../../../data-prep/functions.md#hashing)). |
 | 전화(SHA256_E.164) | SHA256과 E.164 포맷을 모두 사용하여 해시해야 하는 원시 전화번호를 나타내는 네임스페이스입니다. |
 | ECID | ECID(Experience Cloud ID) 값을 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 자세한 내용은 [ECID 개요](../../../identity-service/features/ecid.md)를 참조하십시오. |
 | Apple IDFA (광고주용 ID) | 광고주용 Apple ID를 나타내는 네임스페이스입니다. 자세한 내용은 [관심 기반 광고](https://support.apple.com/en-us/HT202074)에 대한 다음 문서를 참조하십시오. |
