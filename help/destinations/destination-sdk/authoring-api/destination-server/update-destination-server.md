@@ -34,7 +34,7 @@ ht-degree: 8%
 
 ## 대상 서버 구성 업데이트 {#update}
 
-업데이트된 페이로드로 [ 끝점에 대한 ](create-destination-server.md) 요청을 수행하여 `PUT`기존`/authoring/destination-servers` 대상 서버 구성을 업데이트할 수 있습니다.
+업데이트된 페이로드로 [&#x200B; 끝점에 대한 &#x200B;](create-destination-server.md) 요청을 수행하여 `PUT`기존`/authoring/destination-servers` 대상 서버 구성을 업데이트할 수 있습니다.
 
 >[!TIP]
 >
