@@ -2,7 +2,7 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 서버를 만드는 데 사용되는 API 호출을 보여 줍니다.
 title: 대상 서버 구성 만들기
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e1dd6ae9bf28014e8e84de85bdf67707744ea0ad
 workflow-type: tm+mt
 source-wordcount: '2040'
 ht-degree: 5%
@@ -32,7 +32,7 @@ ht-degree: 5%
 
 ## 대상 서버 구성 만들기 {#create}
 
-`/authoring/destination-servers` 끝점에 대한 `POST` 요청을 수행하여 새 대상 서버 구성을 만들 수 있습니다.
+`POST` 끝점에 대한 `/authoring/destination-servers` 요청을 수행하여 새 대상 서버 구성을 만들 수 있습니다.
 
 >[!TIP]
 >
@@ -96,7 +96,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | 문자열 | *필수.* Adobe에만 표시되는 서버의 알기 쉬운 이름을 나타냅니다. 이 이름은 파트너나 고객에게 표시되지 않습니다. 예 `Moviestar destination server`. |
 | `destinationServerType` | 문자열 | *필수.실시간(스트리밍) 대상에 대해*&#x200B;을(를) `URL_BASED`(으)로 설정합니다. |
-| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe에서 아래 `value` 필드의 URL을 변환해야 하는 경우 `PEBBLE_V1`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있고 고객 간에 `region` 부분이 다를 수 있는 경우 이 옵션을 사용합니다. 이 경우 [대상 구성]&#x200B;(../destination-configuration/create-destination-configuration.md)에서 `region`을(를) [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md)(으)로 구성해야 합니다. </li><li> Adobe 측에 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items`과 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe에서 아래 `PEBBLE_V1` 필드의 URL을 변환해야 하는 경우 `value`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있고 고객 간에 `region` 부분이 다를 수 있는 경우 이 옵션을 사용합니다. 이 경우 `region`대상 구성[(../destination-configuration/create-destination-configuration.md)에서 ](../../functionality/destination-configuration/customer-data-fields.md)을(를) [고객 데이터 필드]&#x200B;(으)로 구성해야 합니다. </li><li> Adobe 측에 변환이 필요하지 않은 경우(예: `NONE`과 같은 끝점이 있는 경우) `https://api.moviestar.com/data/items`을(를) 사용하십시오.</li></ul> |
 | `urlBasedDestination.url.value` | 문자열 | *필수.* Experience Platform에서 연결할 API 끝점의 주소를 입력합니다. |
 | `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe에서 서버 호출에 사용할 메서드입니다. 옵션은 `GET`, `PUT`, `POST`, `DELETE`, `PATCH`입니다. |
 | `httpTemplate.requestBody.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
@@ -248,7 +248,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
-      }, 
+      },
+      "hostName":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.hostName}}"
+      },
       "port": 22,
       "encryptionMode" : "PGP"
    },
@@ -579,7 +583,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    },
    "fileConfigurations": {
         "compression": {
@@ -828,7 +832,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | 문자열 | *필수.* 동적 스키마 서버의 알기 쉬운 이름을 나타내며 Adobe에만 표시됩니다. |
 | `destinationServerType` | 문자열 | *필수.동적 스키마 서버에 대해*&#x200B;을(를) `URL_BASED`(으)로 설정합니다. |
-| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe에서 아래 `value` 필드의 URL을 변환해야 하는 경우 `PEBBLE_V1`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있는 경우 이 옵션을 사용합니다. </li><li> Adobe 측에 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items`과 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe에서 아래 `PEBBLE_V1` 필드의 URL을 변환해야 하는 경우 `value`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있는 경우 이 옵션을 사용합니다. </li><li> Adobe 측에 변환이 필요하지 않은 경우(예: `NONE`과 같은 끝점이 있는 경우) `https://api.moviestar.com/data/items`을(를) 사용하십시오.</li></ul> |
 | `urlBasedDestination.url.value` | 문자열 | *필수.* 활성화 워크플로의 매핑 단계에서 대상 필드로 채울 스키마 필드를 Experience Platform이 연결해야 하는 API 끝점의 주소를 입력합니다. |
 | `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe에서 서버 호출에 사용할 메서드입니다. 동적 스키마 서버의 경우 `GET`을(를) 사용합니다. |
 | `responseFields.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
@@ -925,7 +929,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | 문자열 | *필수.* 동적 드롭다운 서버의 알기 쉬운 이름을 나타내며 Adobe에만 표시됩니다. |
 | `destinationServerType` | 문자열 | *필수.동적 드롭다운 서버에 대해*&#x200B;을(를) `URL_BASED`(으)로 설정합니다. |
-| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe에서 아래 `value` 필드의 URL을 변환해야 하는 경우 `PEBBLE_V1`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있는 경우 이 옵션을 사용합니다. </li><li> Adobe 측에 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items`과 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe에서 아래 `PEBBLE_V1` 필드의 URL을 변환해야 하는 경우 `value`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있는 경우 이 옵션을 사용합니다. </li><li> Adobe 측에 변환이 필요하지 않은 경우(예: `NONE`과 같은 끝점이 있는 경우) `https://api.moviestar.com/data/items`을(를) 사용하십시오.</li></ul> |
 | `urlBasedDestination.url.value` | 문자열 | *필수.* Experience Platform이 연결할 API 끝점의 주소를 입력하고 드롭다운 값을 검색합니다. |
 | `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe에서 서버 호출에 사용할 메서드입니다. 동적 드롭다운 서버의 경우 `GET`을(를) 사용합니다. |
 | `httpTemplate.headers` | 오브젝트 | *Optiona.l* 동적 드롭다운 서버에 연결하는 데 필요한 모든 헤더를 포함합니다. |

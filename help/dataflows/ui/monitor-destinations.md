@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 대상에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: d537284b804214fa8a37febab5f78335a590e9f5
+source-git-commit: 4faa15431fe069b5be964f0f8643a73633338a89
 workflow-type: tm+mt
-source-wordcount: '3541'
+source-wordcount: '3550'
 ht-degree: 10%
 
 ---
@@ -91,7 +91,8 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 각 개별 데이터 흐름 실행에는 다음 세부 사항이 표시됩니다.
 
 - **[!UICONTROL Dataflow run start]**: 데이터 흐름 실행이 시작된 시간입니다. 스트리밍 데이터 흐름 실행의 경우, Experience Platform은 데이터 흐름 실행 시작을 기반으로 한 지표를 시간별 지표 형태로 캡처합니다. 즉, 스트리밍 데이터 흐름 실행의 경우 데이터 흐름 실행이 예를 들어 10:30PM에 시작된 경우 지표는 UI에서 시작 시간을 오후 10:00으로 표시합니다.
-- **[!UICONTROL Processing time]**: 데이터 흐름 실행을 처리하는 데 걸린 시간입니다.
+- **[!UICONTROL Audience]**: 각 데이터 흐름과 연결된 대상 수입니다.
+- **[!UICONTROL Processing duration]**: 데이터 흐름 실행을 처리하는 데 걸린 시간입니다.
    - **[!UICONTROL completed]** 실행의 경우 처리 시간 지표에 항상 1시간이 표시됩니다.
    - 아직 **[!UICONTROL processing]** 상태인 데이터 흐름 실행의 경우 데이터 흐름 실행에 해당하는 모든 지표를 처리하기 위해 모든 지표를 캡처할 창이 1시간 이상 열려 있습니다. 예를 들어 오전 9시:30에 시작된 데이터 흐름 실행은 모든 지표를 캡처하고 처리하기 위해 1시간 30분 동안 처리 상태를 유지할 수 있습니다. 처리 시간 길이는 대상의 실패한 응답 결과로 수행된 재시도의 영향을 직접 받습니다. 그런 다음 처리 창이 닫히고 데이터 흐름 실행 상태가 **완료됨**(으)로 업데이트되면 표시된 처리 시간이 1시간으로 변경됩니다.
 - **[!UICONTROL Profiles received]**: 데이터 흐름에서 받은 총 프로필 수입니다.
@@ -141,7 +142,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="데이터 흐름 실행 세부 정보"
 >abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 대상자의 활성화 상태 및 지표에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 검토하십시오."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=ko#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -169,7 +170,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 - **[!UICONTROL Dataflow run start]**: 데이터 흐름 실행이 시작된 시간입니다.
 - **[!UICONTROL Audience]**: 각 데이터 흐름 실행과 연결된 대상자의 이름입니다.
-- **[!UICONTROL Processing time]**: 데이터 흐름 실행을 처리하는 데 걸린 시간입니다.
+- **[!UICONTROL Processing duration]**: 데이터 흐름 실행을 처리하는 데 걸린 시간입니다.
 - **[!UICONTROL Profiles received]**: 데이터 흐름에서 받은 총 프로필 수입니다. 이 값은 60분마다 업데이트됩니다.
 - **[!UICONTROL Identities activated]**: 데이터 흐름 실행의 일부로 선택한 대상에 성공적으로 활성화된 총 프로필 ID 수입니다. 이 지표에는 내보낸 대상자에서 생성, 업데이트 및 제거된 ID가 포함됩니다.
 - **[!UICONTROL Identities excluded]**: 누락된 특성 및 동의 위반에 따라 활성화에서 제외된 총 프로필 ID 수입니다.
