@@ -2,14 +2,16 @@
 title: 위성 개체 참조
 description: 클라이언트측 _satellite 개체 및 태그에서 이 개체를 사용하여 수행할 수 있는 다양한 기능에 대해 알아봅니다.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: a36e5af39f904370c1e97a9ee1badad7a2eac32e
+source-git-commit: 05bf3a8c92aa221af153b4ce9949f0fdfc3c86ab
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---
 
 # `_satellite` 개체 참조
+
+_이 페이지에서는 JavaScript을 사용하여 태그 논리를 관리하고 사용자 지정할 수 있는 `_satellite` 개체의 사용 방법에 대해 간략히 설명합니다. 데이터 수집 UI에서 구현을 설정하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Web SDK 태그 확장](/help/tags/extensions/client/web-sdk/overview.md)을 참조하십시오._
 
 `_satellite` 개체는 사이트에 게시된 태그 라이브러리와 상호 작용하는 데 도움이 되는 몇 가지 지원되는 진입점을 노출합니다. 로더 태그가 올바르게 구현되면 모든 태그 배포에 `_satellite`이(가) 표시됩니다. 이 개체에는 다음과 같은 몇 가지 주요 사용 사례가 있습니다.
 
@@ -26,16 +28,18 @@ ht-degree: 0%
 ## 일반적인 사용 예
 
 ```js
-// Read and write a temporary data element value
-const region = _satellite.getVar('user_region');
-_satellite.setVar('promo_code', code);
+// Read and write a temporary data element value (guarded)
+if(window._satellite?.getVar && window._satellite?.setVar) {
+  const region = _satellite.getVar('user_region');
+  _satellite.setVar('promo_code', code);
+}
 
-// Local debugging
-_satellite.setDebug(true);
-_satellite.logger.log('Rule evaluated');
-
-// Manually trigger a rule configured in your tag property
+// Manually trigger a rule configured in your tag property (guarded)
 if (window._satellite?.track) {
   _satellite.track('cart_add', { sku: '123', qty: 2 });
 }
+
+// Local console debugging (guarding not needed)
+_satellite.setDebug(true);
+_satellite.logger.log('Rule evaluated');
 ```
