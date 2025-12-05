@@ -27,8 +27,8 @@ ht-degree: 1%
 
 | 자격 증명 | 설명 | 예 |
 | --- | --- | --- |
-| 애플리케이션 ID | 응용 프로그램 ID는 [ 대시보드의 ](https://www.algolia.com/account/api-keys/all)API 키[!DNL Algolia] 섹션에서 찾을 수 있습니다. | 0ABCDEPG12 |
-| API 키 검색 | 검색 API 키는 [ 대시보드의 ](https://www.algolia.com/account/api-keys/all)API 키[!DNL Algolia] 섹션에서 찾을 수 있습니다. | 1234a12345678901b1234567890c1ab1 |
+| 애플리케이션 ID | 응용 프로그램 ID는 [&#x200B; 대시보드의 &#x200B;](https://www.algolia.com/account/api-keys/all)API 키[!DNL Algolia] 섹션에서 찾을 수 있습니다. | 0ABCDEPG12 |
+| API 키 검색 | 검색 API 키는 [&#x200B; 대시보드의 &#x200B;](https://www.algolia.com/account/api-keys/all)API 키[!DNL Algolia] 섹션에서 찾을 수 있습니다. | 1234a12345678901b1234567890c1ab1 |
 
 ## [!DNL Algolia] Insights 확장 설치 및 구성 {#install-configure}
 
@@ -42,8 +42,8 @@ ht-degree: 1%
 
 | 속성 | 설명 |
 | --- | --- |
-| [!UICONTROL Application ID] | 이전에 [!UICONTROL Application Id]구성 세부 정보[ 섹션에서 수집한 ](#configuration-details)을(를) 입력하십시오. |
-| [!UICONTROL Search API Key] | 이전에 [!UICONTROL Search API Key]구성 세부 정보[ 섹션에서 수집한 ](#configuration-details)을(를) 입력하십시오. |
+| [!UICONTROL Application ID] | 이전에 [!UICONTROL Application Id]구성 세부 정보[&#x200B; 섹션에서 수집한 &#x200B;](#configuration-details)을(를) 입력하십시오. |
+| [!UICONTROL Search API Key] | 이전에 [!UICONTROL Search API Key]구성 세부 정보[&#x200B; 섹션에서 수집한 &#x200B;](#configuration-details)을(를) 입력하십시오. |
 | [!UICONTROL Index Name] | [!UICONTROL Index Name]에 제품 또는 콘텐츠가 포함되어 있습니다.  이 색인은 기본값으로 사용됩니다. |
 | [!UICONTROL User Token Data Element] | 사용자 토큰을 반환하는 데이터 요소입니다. |
 | [!UICONTROL Authenticated User Token Data Element] | 인증된 사용자 토큰을 반환하는 데이터 요소를 설정합니다. |
@@ -126,7 +126,7 @@ ht-degree: 1%
 >
 >데이터 요소에 `queryId`이(가) 포함된 경우 이벤트는 **검색 후 장바구니 개체 ID에 추가됨**(으)로 분류됩니다. 그렇지 않으면 **장바구니 개체 ID에 추가됨** 이벤트로 분류됩니다.
 ><br>
->데이터 요소가 `indexName`을(를) 제공하지 않으면 이벤트를 보낼 때 **기본 인덱스 이름**이(가) 사용됩니다.
+>데이터 요소가 `indexName`을(를) 제공하지 않으면 이벤트를 보낼 때 **기본 인덱스 이름**&#x200B;이(가) 사용됩니다.
 ><br>
 >기본 데이터 요소가 요구 사항을 충족하지 않는 경우 사용자 지정 데이터 요소를 만들어 원하는 이벤트 세부 정보를 반환할 수 있습니다.
 
@@ -308,7 +308,7 @@ DataSet Data Element는 HTML 요소와 관련된 데이터를 검색하여 [!DNL
 * [자동 완성에 대한 인사이트 설정](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-insights)
 * [InstantSearch.js에 대한 인사이트 설정](https://www.algolia.com/doc/guides/building-search-ui/events/js/#set-the-insights-option-to-true)
 * [클릭 및 전환 이벤트 시작](https://www.algolia.com/doc/guides/sending-events/implementing/how-to/sending-events-backend/)
-* [Insights 이벤트 보내기 [!DNL Algolia] 2}](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
+* [Insights 이벤트 보내기 [!DNL Algolia] 2&rbrace;](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
 * [[!DNL Algolia] Launch 확장 GitHub 저장소](https://github.com/algolia/algolia-launch-extension)
 * [InstantSearch.js 설명서](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
 * [[!DNL Algolia] Insights API 설명서](https://www.algolia.com/doc/rest-api/insights/)
