@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK FAQ
 description: Adobe Experience Platform 웹 SDK에 대해 자주 묻는 질문에 대한 답변을 얻으십시오.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
 source-wordcount: '1999'
 ht-degree: 1%
@@ -67,9 +67,9 @@ Adobe Experience Platform Web SDK에서 데이터를 Adobe Experience Platform�
 
 **가치 창출 시간:** Adobe은 태그를 통해 웹 SDK을 배포하고 클라이언트측 데이터를 XDM에 매핑하기 위해 최대한 노력했습니다(및 계속 진행할 예정). 이 작업이 완료되면 다른 모든 Adobe 솔루션 및 Adobe Experience Platform 서비스를 서버측에서 켜거나 끌 수 있습니다. 예를 들어, Adobe Analytics에 대해 이 기능을 사용 중이며 Target 또는 Experience Platform을 켜려는 경우 데이터 스트림 구성에 대한 토글을 전환하고 해당 사용 사례를 켤 수 있습니다.
 
-## [!DNL alloy.js] 소개
+## `alloy.js` 소개
 
-[!DNL alloy.js]은(는) 웹 SDK JavaScript 라이브러리의 이름입니다. SDK 소스 코드 및 파일 이름 내에서 참조됩니다.
+`alloy.js`은(는) 웹 SDK JavaScript 라이브러리의 이름입니다. SDK 소스 코드 및 파일 이름 내에서 참조됩니다.
 
 ## 고객이 [!DNL Web SDK]을(를) 사용하려면 Adobe Experience Platform을 구입해야 합니까?
 
@@ -78,7 +78,7 @@ Adobe Experience Platform Web SDK에서 데이터를 Adobe Experience Platform�
 * *없음*&#x200B;이(가) Experience Platform 또는 Real-Time CDP에 액세스할 수 있고 [!DNL Web SDK]을(를) 사용하려는 고객은 데이터 수집 UI 또는 Experience Platform UI에서 스키마 및 데이터스트림을 만드는 올바른 권한을 구성해야 합니다.
 * Experience Platform 또는 Real-time CDP에 액세스할 수 있으며 [!DNL Web SDK]을(를) 사용하려는 고객은 데이터 수집 UI 또는 Experience Platform UI에서 스키마, 데이터 세트, ID 네임스페이스 및 데이터스트림을 만드는 올바른 권한을 구성해야 합니다.
 
-이러한 권한을 구성하는 방법에 대한 자세한 내용은 [데이터 수집 권한 관리](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=ko)에 대한 설명서를 참조하십시오.
+이러한 권한을 구성하는 방법에 대한 자세한 내용은 [데이터 수집 권한 관리](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html)에 대한 설명서를 참조하십시오.
 
 ## 웹 SDK을 사용해야 하는 사용자
 
@@ -144,7 +144,7 @@ SDK를 사용하고 XDM을 Edge Network으로 전송하는 경우 이러한 새�
 
 ## CNAME 또는 자사 도메인이란 무엇이며 이것이 중요한 이유는 무엇입니까?
 
-CNAME에 대한 자세한 내용은 [Adobe 설명서](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=ko)를 참조하세요.
+CNAME에 대한 자세한 내용은 [Adobe 설명서](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html)를 참조하세요.
 
 ## Adobe Experience Platform Web SDK에서 쿠키를 사용합니까? 그렇다면 어떤 쿠키를 사용합니까?
 

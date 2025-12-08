@@ -1,15 +1,15 @@
 ---
-title: 위성 개체 참조
+title: 태그 클라이언트측 JavaScript 개요(_satellite)
 description: 클라이언트측 _satellite 개체 및 태그에서 이 개체를 사용하여 수행할 수 있는 다양한 기능에 대해 알아봅니다.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 05bf3a8c92aa221af153b4ce9949f0fdfc3c86ab
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
 
-# `_satellite` 개체 참조
+# 태그 클라이언트측 JavaScript 개요(`_satellite`)
 
 _이 페이지에서는 JavaScript을 사용하여 태그 논리를 관리하고 사용자 지정할 수 있는 `_satellite` 개체의 사용 방법에 대해 간략히 설명합니다. 데이터 수집 UI에서 구현을 설정하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Web SDK 태그 확장](/help/tags/extensions/client/web-sdk/overview.md)을 참조하십시오._
 

@@ -1,17 +1,17 @@
 ---
-title: JavaScript 라이브러리를 사용하여 웹 SDK 설치
+title: 웹 SDK JavaScript 라이브러리 설치
 description: 독립 실행형 CDN 파일을 사용하여 웹 SDK 라이브러리를 참조합니다.
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
-# JavaScript 라이브러리를 사용하여 웹 SDK 설치
+# 웹 SDK JavaScript 라이브러리 설치
 
-[태그 확장](/help/tags/extensions/client/web-sdk/overview.md)을 사용하지 않고 웹 SDK을 설치하는 다른 방법은 CDN에서 호스팅되는 JavaScript 라이브러리를 참조하는 것입니다. 라이브러리를 직접 참조하거나 다운로드하여 자체 인프라에 호스팅할 수 있습니다. 축소된 전체 형식으로 사용할 수 있습니다.
+[태그 확장을 사용하지 않고](/help/tags/extensions/client/web-sdk/overview.md)Web SDK을 설치하는 다른 방법은 CDN에서 호스팅되는 Web SDK JavaScript 라이브러리를 참조하는 것입니다. 라이브러리를 직접 참조하거나 다운로드하여 자체 인프라에 호스팅할 수 있습니다. 축소된 전체 형식으로 사용할 수 있습니다.
 
 웹 SDK 라이브러리는 다음 URL 구조를 사용하여 사용할 수 있습니다.
 

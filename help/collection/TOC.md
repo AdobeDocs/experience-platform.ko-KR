@@ -6,10 +6,10 @@ breadcrumb-title: 데이터 수집
 user-guide-description: Adobe Experience Platform으로 데이터를 전송하는 방법에 대해 알아봅니다.
 feature: Data Collection
 role: Developer
-source-git-commit: 3abe25a9c538bf4d1b439d48f624d8cad109a99e
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 31%
+source-wordcount: '139'
+ht-degree: 30%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 31%
 + BrightScript {#brightscript}
    + [BrightScript 개요](brightscript/brs-overview.md)
 + JavaScript {#js}
-   + [JavaScript 개요](js/js-overview.md)
+   + [웹 SDK JavaScript 개요](js/js-overview.md)
    + [릴리스 정보](js/release-notes.md)
    + 설치 {#install}
       + [설치 개요](js/install/overview.md)
@@ -75,7 +75,7 @@ ht-degree: 31%
       + [명령 응답](js/commands/command-responses.md)
    + [후크 모니터링](js/monitoring-hooks.md)
    + [FAQ](js/faq.md)
-+ 태그 {#tags}
++ 태그 클라이언트측 JavaScript {#tags}
    + [개요](tags/overview.md)
    + [buildInfo](tags/buildinfo.md)
    + [회사](tags/company.md)
