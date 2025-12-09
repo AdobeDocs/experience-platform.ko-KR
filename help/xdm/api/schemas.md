@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스키마 API 엔드포인트
 description: 스키마 레지스트리 API의 /schemas 끝점을 사용하면 experience 애플리케이션 내에서 XDM 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2122'
+source-wordcount: '2091'
 ht-degree: 3%
 
 ---
@@ -277,19 +277,15 @@ curl -X POST \
 }
 ```
 
-이제 테넌트 컨테이너에 [모든 스키마를 나열](#list)하기 위한 GET 요청을 수행하면 새 스키마가 포함됩니다. URL로 인코딩된 [&#x200B; URI를 사용하여 &#x200B;](#lookup)조회(GET) 요청`$id`을 수행하여 새 스키마를 직접 볼 수 있습니다.
+이제 테넌트 컨테이너에 [모든 스키마를 나열](#list)하기 위한 GET 요청을 수행하면 새 스키마가 포함됩니다. URL로 인코딩된 [ URI를 사용하여 ](#lookup)조회(GET) 요청`$id`을 수행하여 새 스키마를 직접 볼 수 있습니다.
 
 스키마에 필드를 추가하려면 [PATCH 작업](#patch)을 수행하여 스키마의 `allOf` 및 `meta:extends` 배열에 필드 그룹을 추가할 수 있습니다.
 
-## 관계 스키마 만들기 {#create-relational-schema}
+## 관계형 스키마 만들기 {#create-relational-schema}
 
 >[!AVAILABILITY]
 >
 >Adobe Journey Optimizer **오케스트레이션된 캠페인** 라이선스 소유자는 Data Mirror 및 관계형 스키마를 사용할 수 있습니다. 또한 라이선스 및 기능 활성화에 따라 Customer Journey Analytics 사용자를 위한 **제한된 릴리스**(으)로도 사용할 수 있습니다. 액세스하려면 Adobe 담당자에게 문의하십시오.
-
->[!NOTE]
->
->이전 버전의 Adobe Experience Platform API 설명서에서는 관계형 스키마를 모델 기반 스키마라고 했습니다. 기능은 그대로 유지됩니다. 명확성을 위해 용어만 변경되었습니다.
 
 `/schemas` 끝점에 대한 POST 요청을 수행하여 관계형 스키마를 만듭니다. 관계형 스키마는 **클래스 또는 필드 그룹 없이**&#x200B;구조화된 관계형 스타일 데이터를 저장합니다. 스키마에서 필드를 직접 정의하고 논리 비헤이비어 태그를 사용하여 스키마를 관계식으로 식별합니다.
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 끝점을 사용하면 경험 애플리케이션 내에서 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2916'
+source-wordcount: '2882'
 ht-degree: 1%
 
 ---
@@ -35,10 +35,6 @@ Adobe Experience Platform에서 설명자는 스키마에 동작 규칙 또는 �
 이 가이드에 사용된 끝점은 [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
 [!DNL Schema Registry]은(는) 표준 설명자 외에도 **기본 키**, **버전** 및 **타임스탬프**&#x200B;와 같은 관계형 스키마에 대한 설명자 형식을 지원합니다. 이러한 기능은 고유성을 적용하고 버전 관리를 제어하며 스키마 수준에서 시계열 필드를 정의합니다. 관계형 스키마에 익숙하지 않은 경우 [Data Mirror 개요](../data-mirror/overview.md) 및 [관계형 스키마 기술 참조](../schema/relational.md)를 검토한 후 계속하십시오.
-
->[!NOTE]
->
->이전 버전의 Adobe Experience Platform 설명서에서는 관계형 스키마를 모델 기반 스키마라고 했습니다. 설명자 기능 및 API 엔드포인트는 변경되지 않습니다. 용어만 명확성을 위해 업데이트되었습니다.
 
 >[!IMPORTANT]
 >
@@ -300,7 +296,7 @@ curl -X DELETE \
 
 성공적인 응답은 HTTP 상태 204(콘텐츠 없음) 및 빈 본문을 반환합니다.
 
-설명자가 삭제되었는지 확인하기 위해 설명자 [에 대해 &#x200B;](#lookup)조회 요청`@id`을 수행할 수 있습니다. 설명자가 [!DNL Schema Registry]에서 제거되었으므로 응답에서 HTTP 상태 404(찾을 수 없음)를 반환합니다.
+설명자가 삭제되었는지 확인하기 위해 설명자 [에 대해 ](#lookup)조회 요청`@id`을 수행할 수 있습니다. 설명자가 [!DNL Schema Registry]에서 제거되었으므로 응답에서 HTTP 상태 404(찾을 수 없음)를 반환합니다.
 
 ## 부록 {#appendix}
 
@@ -320,7 +316,7 @@ curl -X DELETE \
 
 #### ID 설명자 {#identity-descriptor}
 
-ID 설명자는 &quot;[!UICONTROL sourceProperty]&quot;의 &quot;[!UICONTROL sourceSchema]&quot;이(가) [!DNL Identity]Experience Platform Identity 서비스[에서 설명한 대로 &#x200B;](../../identity-service/home.md) 필드임을 알립니다.
+ID 설명자는 &quot;[!UICONTROL sourceProperty]&quot;의 &quot;[!UICONTROL sourceSchema]&quot;이(가) [!DNL Identity]Experience Platform Identity 서비스[에서 설명한 대로 ](../../identity-service/home.md) 필드임을 알립니다.
 
 ```json
 {
@@ -631,7 +627,7 @@ Real-Time CDP B2B edition에서는 다대일 관계를 허용하는 스키마 �
 
 #### 사용되지 않는 필드 설명자
 
-해당 필드에 [(으)로 설정된 &#x200B;](../tutorials/field-deprecation-api.md#custom) 특성을 추가하여 사용자 지정 XDM 리소스 내의 필드를 `meta:status`사용하지 않을 수 있습니다`deprecated`. 그러나 스키마의 표준 XDM 리소스에서 제공하는 필드를 사용하지 않으려면 해당 스키마에 더 이상 사용되지 않는 필드 설명자를 할당하여 동일한 효과를 얻을 수 있습니다. [올바른 `Accept` 헤더](../tutorials/field-deprecation-api.md#verify-deprecation)를 사용하면 API에서 조회할 때 스키마에 대해 더 이상 사용되지 않는 표준 필드를 볼 수 있습니다.
+해당 필드에 [(으)로 설정된 ](../tutorials/field-deprecation-api.md#custom) 특성을 추가하여 사용자 지정 XDM 리소스 내의 필드를 `meta:status`사용하지 않을 수 있습니다`deprecated`. 그러나 스키마의 표준 XDM 리소스에서 제공하는 필드를 사용하지 않으려면 해당 스키마에 더 이상 사용되지 않는 필드 설명자를 할당하여 동일한 효과를 얻을 수 있습니다. [올바른 `Accept` 헤더](../tutorials/field-deprecation-api.md#verify-deprecation)를 사용하면 API에서 조회할 때 스키마에 대해 더 이상 사용되지 않는 표준 필드를 볼 수 있습니다.
 
 ```json
 {

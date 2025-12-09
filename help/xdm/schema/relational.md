@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;관계형 스키마;관계형 스키마;스키마;xdm;경험 데이터 모델;
 solution: Experience Platform
 title: 관계형 스키마
-description: 기능, 필수 필드, 관계 및 제한 사항을 포함하여 Adobe Experience Platform의 관계형 스키마(이전의 모델 기반 스키마)에 대해 알아봅니다.
+description: 기능, 필수 필드, 관계 및 제한 사항을 포함하여 Adobe Experience Platform의 관계 스키마에 대해 알아봅니다.
 badge: 제한 공개
 exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
-source-git-commit: 605c169c9de7a978e6d2f0bdc809371c82cd3280
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,6 @@ ht-degree: 0%
 >
 >데이터 삭제 고려 사항은 모든 관계형 스키마 구현에 적용됩니다. 이러한 스키마를 사용하는 응용 프로그램은 삭제가 관련 데이터 세트, 규정 준수 요구 사항 및 다운스트림 프로세스에 미치는 영향을 이해해야 합니다. 삭제 시나리오를 계획하고 구현하기 전에 [데이터 위생 지침](../../hygiene/ui/record-delete.md#relational-record-delete)을 검토하십시오.
 
->[!NOTE]
->
->이전 버전의 Adobe Experience Platform 설명서에서는 관계형 스키마를 모델 기반 스키마라고 했습니다.
-
 관계형 스키마를 사용하여 다음을 수행할 수 있습니다.
 
 * 강제 단일 필드 또는 복합 기본 키로 데이터 무결성을 보장합니다.
@@ -38,7 +34,7 @@ ht-degree: 0%
 
 ## 관계형 스키마가 표준 XDM 스키마와 어떻게 다른지
 
-Experience Platform의 표준 XDM 스키마는 레코드, 시계열 또는 임시, 이렇게 세 가지 데이터 동작 중 하나를 따릅니다. 자세한 내용 및 정의는 [XDM 데이터 동작](https://experienceleague.adobe.com/ko/docs/experience-platform/xdm/home#data-behaviors)을 참조하십시오.
+Experience Platform의 표준 XDM 스키마는 레코드, 시계열 또는 임시, 이렇게 세 가지 데이터 동작 중 하나를 따릅니다. 자세한 내용 및 정의는 [XDM 데이터 동작](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors)을 참조하십시오.
 
 기존 모델에서 레코드 및 시계열 스키마는 [유니온 스키마](../api/unions.md)에 참여합니다([유니온 스키마 UI 안내서](../../profile/ui/union-schema.md) 참조). 공유 [필드 그룹](./composition.md#field-group)이 업데이트되고 사용자 지정 필드가 테넌트 네임스페이스에 중첩되어야 하므로 이러한 스키마는 자동으로 발전합니다. 이 모델은 강력하지만, 온보딩을 느리게 하고, 사용되지 않은 필드가 있는 지나치게 복잡한 스키마를 생성하고, 추가 데이터 매핑 또는 변환이 필요할 수 있습니다. 이러한 요인들은 학습 곡선과 지속적인 유지 관리 노력을 증가시킵니다.
 

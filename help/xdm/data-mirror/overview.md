@@ -5,9 +5,9 @@ title: Data Mirror 개요
 description: Data Mirror에서 강제 고유성, 관계 및 버전 관리를 사용하는 관계형 스키마를 사용하여 외부 데이터베이스의 행 수준 변경 사항을 Adobe Experience Platform으로 수집하는 방법을 알아봅니다.
 badge: 제한 공개
 exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,6 @@ ht-degree: 0%
 >[!AVAILABILITY]
 >
 >Adobe Journey Optimizer **오케스트레이션된 캠페인** 라이선스 소유자는 Data Mirror 및 관계형 스키마를 사용할 수 있습니다. 또한 라이선스 및 기능 활성화에 따라 Customer Journey Analytics 사용자를 위한 **제한된 릴리스**(으)로도 사용할 수 있습니다. 액세스하려면 Adobe 담당자에게 문의하십시오.
-
->[!NOTE]
->
->이전 버전의 Adobe Experience Platform 설명서에서는 관계형 스키마를 모델 기반 스키마라고 했습니다. 기능은 그대로 유지됩니다.
 
 Data Mirror은 관계형 스키마를 사용하여 외부 데이터베이스에서 데이터 레이크로 행 수준 변경 사항을 수집할 수 있는 Adobe Experience Platform 기능입니다. 데이터 관계를 유지하고, 고유성을 적용하며, 업스트림 추출, 변환, 로드(ETL) 프로세스 없이 버전 관리를 지원합니다.
 

@@ -2,9 +2,9 @@
 title: 삭제 요청 기록(UI 워크플로)
 description: Adobe Experience Platform UI에서 레코드를 삭제하는 방법을 알아봅니다.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 83aed6a79d47ee4043a8303ec8f8c8c20482e12a
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2358'
 ht-degree: 5%
 
 ---
@@ -208,10 +208,6 @@ ID를 삭제한 후에는 복구할 수 없음을 나타내는 [!UICONTROL Confi
 ## 관계형 스키마를 기반으로 데이터 세트에서 레코드 삭제 {#relational-record-delete}
 
 삭제하려는 데이터 세트가 관계형 스키마를 기반으로 하는 경우, 다음 고려 사항을 검토하여 Experience Platform과 소스 시스템 간의 불일치로 인해 레코드가 올바르게 제거되고 다시 수집되지 않는지 확인하십시오.
-
->[!NOTE]
->
->이전 버전의 Adobe Experience Platform 설명서에서는 관계형 스키마를 모델 기반 스키마라고 했습니다. 기능 및 삭제 동작은 동일하게 유지됩니다.
 
 ### 레코드 삭제 동작
 

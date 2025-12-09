@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법의 기본 사항에 대해 알아봅니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '4652'
-ht-degree: 1%
+source-wordcount: '4635'
+ht-degree: 2%
 
 ---
 
@@ -36,10 +36,6 @@ ht-degree: 1%
 >[!AVAILABILITY]
 >
 >Adobe Journey Optimizer **오케스트레이션된 캠페인** 라이선스 소유자는 Data Mirror 및 관계형 스키마를 사용할 수 있습니다. 또한 라이선스 및 기능 활성화에 따라 Customer Journey Analytics 사용자를 위한 **제한된 릴리스**(으)로도 사용할 수 있습니다. 액세스하려면 Adobe 담당자에게 문의하십시오.
-
->[!NOTE]
->
->이전 버전의 Adobe Experience Platform 설명서에서는 관계형 스키마를 모델 기반 스키마라고 했습니다.
 
 레코드에 대한 세분화된 제어를 통해 구조화된 관계형 스타일 스키마를 정의하려면 **[!UICONTROL Relational]**&#x200B;을(를) 선택하십시오. 관계형 스키마는 기본 및 외래 키를 통해 기본 키 적용, 레코드 수준 버전 관리 및 스키마 수준 관계를 지원합니다. 또한 변경 데이터 캡처를 사용하는 증분 수집에 최적화되어 있으며 Campaign Orchestration, Data Distiller 및 B2B 구현에 사용되는 여러 데이터 모델을 지원합니다.
 
@@ -83,7 +79,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->저장되면 [!UICONTROL Type] 사이드바의 [!UICONTROL &#x200B; Schema properties] 필드가 [!UICONTROL Relational] 스키마임을 나타냅니다. 스키마 인벤토리 보기의 세부 정보 사이드바에도 표시됩니다.
+>저장되면 [!UICONTROL Type] 사이드바의 [!UICONTROL  Schema properties] 필드가 [!UICONTROL Relational] 스키마임을 나타냅니다. 스키마 인벤토리 보기의 세부 정보 사이드바에도 표시됩니다.
 >![관계형 형식이 강조 표시된 빈 관계형 스키마 구조를 보여 주는 스키마 편집기 캔버스.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### DDL 파일 업로드 {#upload-ddl-file}

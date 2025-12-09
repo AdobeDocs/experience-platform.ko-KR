@@ -2,9 +2,9 @@
 title: API에서 소스 연결에 대한 변경 데이터 캡처 활성화
 description: API에서 소스 연결에 변경 데이터 캡처를 활성화하는 방법을 알아봅니다
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1234'
 ht-degree: 0%
 
 ---
@@ -29,10 +29,6 @@ Experience Platform에서 데이터 캡처를 변경하려면 **[관계형 스�
 >[!AVAILABILITY]
 >
 >Adobe Journey Optimizer **오케스트레이션된 캠페인** 라이선스 소유자는 Data Mirror 및 관계형 스키마를 사용할 수 있습니다. 또한 라이선스 및 기능 활성화에 따라 Customer Journey Analytics 사용자를 위한 **제한된 릴리스**(으)로도 사용할 수 있습니다. 액세스하려면 Adobe 담당자에게 문의하십시오.
-
->[!NOTE]
->
->이전 버전의 Adobe Experience Platform 설명서에서는 관계형 스키마를 모델 기반 스키마라고 했습니다. 기능 및 변경 데이터 캡처 기능은 그대로 유지됩니다.
 
 >[!NOTE]
 >
@@ -90,7 +86,7 @@ Data Mirror은 관계형 스키마를 사용하여 변경 데이터 캡처를 �
 
 파일 기반 원본([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage] 및 [!DNL SFTP])의 경우 파일에 `_change_request_type` 열을 포함하십시오.
 
-위의 `_change_request_type`컨트롤 열 처리[&#x200B; 섹션에 정의된 &#x200B;](#control-column-handling) 값을 사용하십시오.
+위의 `_change_request_type`컨트롤 열 처리[ 섹션에 정의된 ](#control-column-handling) 값을 사용하십시오.
 
 >[!IMPORTANT]
 >
@@ -113,7 +109,7 @@ Data Mirror은 관계형 스키마를 사용하여 변경 데이터 캡처를 �
 
 2. [클라우드 저장소에 대한 원본 연결을 만듭니다](../api/collect/cloud-storage.md#create-a-source-connection).
 
-모든 클라우드 저장소 원본은 위의 `_change_request_type`파일 기반 원본[&#x200B; 섹션에서 설명한 것과 동일한 &#x200B;](#file-based-sources) 열 형식을 사용합니다.
+모든 클라우드 저장소 원본은 위의 `_change_request_type`파일 기반 원본[ 섹션에서 설명한 것과 동일한 ](#file-based-sources) 열 형식을 사용합니다.
 
 ## 데이터베이스 소스 {#database-sources}
 
@@ -169,7 +165,7 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 [!DNL Google BigQuery] 원본 연결에서 변경 기록을 사용하려면 [!DNL Google BigQuery] 콘솔에서 [!DNL Google Cloud] 페이지로 이동하여 `enable_change_history`을(를) `TRUE`(으)로 설정하십시오. 이 속성을 사용하면 데이터 테이블에 대한 변경 내역을 사용할 수 있습니다.
 
-자세한 내용은 [&#x200B; [!DNL GoogleSQL]의 &#x200B;](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)데이터 정의 언어 구문에 대한 안내서를 참조하십시오.
+자세한 내용은 [ [!DNL GoogleSQL]의 ](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)데이터 정의 언어 구문에 대한 안내서를 참조하십시오.
 
 [!DNL Google BigQuery] 소스 연결에 변경 데이터 캡처를 활성화하는 방법에 대한 단계는 다음 설명서를 참조하십시오.
 
