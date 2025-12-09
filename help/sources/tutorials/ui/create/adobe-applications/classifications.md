@@ -63,4 +63,4 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Sources]**&#x200B;�
 
 * [Adobe Analytics 소스 커넥터 개요](../../../../connectors/adobe-applications/analytics.md)
 * [UI에서 보고서 세트 데이터에 대한 Analytics 소스 연결 만들기](./analytics.md)
-* [분류 정보](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
+* [분류 정보](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=ko)
