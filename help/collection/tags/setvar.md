@@ -1,9 +1,9 @@
 ---
 title: setVar()
 description: getVar()를 사용하여 나중에 검색할 수 있는 값을 설정합니다.
-source-git-commit: 6f8bdfd09023ea48962a40a9539afe017bc108cc
+source-git-commit: 54c32803136bf37a13bb9ca14b1d1c7b09a2041c
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,7 @@ _satellite.getVar('title'); // Blinding Light
 _satellite.getVar('category'); // Game
 _satellite.getVar('genre'); // Tower defense
 ```
+
+>[!NOTE]
+>
+>이 메서드를 사용하여 변수 이름을 설정할 때는 마침표(`.`)를 사용하지 마십시오. `getVar()` 메서드가 `setVar()`을(를) 사용하여 설정된 마침표가 포함된 변수를 인식하지 못합니다. 그러나 `getVar()` _does_&#x200B;은(는) 태그 UI에 정의된 마침표를 사용하는 데이터 요소를 인식합니다.
