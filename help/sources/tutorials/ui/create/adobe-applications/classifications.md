@@ -2,9 +2,9 @@
 description: UI에서 Adobe Analytics 소스 커넥터를 만들어 분류 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 title: UI에서 분류 데이터에 대한 Adobe Analytics Source 연결 만들기
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dfc8a1d51e6dd25210a0b6f24dad4d0f00052414
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -29,31 +29,31 @@ Analytics 분류 소스 커넥터를 사용하려면 데이터를 Adobe Analytic
 
 ## 분류 선택
 
-Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Sources]**&#x200B;을(를) 선택하여 [!UICONTROL Sources] 작업 영역에 액세스합니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-*Adobe 응용 프로그램* 범주에서 **[!UICONTROL Adobe Analytics]**&#x200B;을 선택한 다음 **[!UICONTROL 설정]**&#x200B;을 선택합니다.
+*Adobe 응용 프로그램* 범주에서 **[!UICONTROL Adobe Analytics]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Set up]**&#x200B;을(를) 선택합니다.
 
 >[!TIP]
 >
->인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL 설정]** 옵션이 표시됩니다. 계정이 인증되면 옵션이 **[!UICONTROL 데이터 추가]**(으)로 변경됩니다.
+>인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL Set up]** 옵션이 표시됩니다. 계정이 인증되면 옵션이 **[!UICONTROL Add data]**(으)로 변경됩니다.
 
 ![Adobe Analytics 소스가 선택된 Experience Platform UI의 소스 카탈로그입니다.](../../../../images/tutorials/create/classifications/catalog.png)
 
-그런 다음 [!UICONTROL 분류]를 선택한 다음 Experience Platform으로 수집할 분류 데이터 세트를 선택합니다.
+[!UICONTROL Classifications]을(를) 선택한 다음 Experience Platform으로 수집할 분류 데이터 세트를 선택합니다. 또는 검색을 사용하여 특정 분류를 필터링하고 선택할 수 있습니다.
 
-최대 30개의 다양한 분류 데이터 세트를 선택하여 Experience Platform으로 가져올 수 있습니다. 선택하는 모든 데이터 세트가 오른쪽 레일에 표시됩니다. 완료되면 [!UICONTROL 다음]을(를) 선택하여 계속하십시오.
+최대 30개의 다양한 분류 데이터 세트를 선택하여 Experience Platform으로 가져올 수 있습니다. 선택하는 모든 데이터 세트가 오른쪽 레일에 표시됩니다. 완료되면 [!UICONTROL Next]을(를) 선택하여 계속 진행하십시오.
 
 ![여러 분류 데이터 세트가 있는 분류 페이지입니다.](../../../../images/tutorials/create/classifications/select.png)
 
 ## 분류 검토
 
-선택한 분류 데이터 세트를 만들기 전에 검토할 수 있는 **[!UICONTROL 검토]** 단계가 나타납니다. 세부 사항은 다음 범주 내에서 그룹화됩니다.
+선택한 분류 데이터 세트를 만들기 전에 검토할 수 있는 **[!UICONTROL Review]** 단계가 나타납니다. 세부 사항은 다음 범주 내에서 그룹화됩니다.
 
-* **[!UICONTROL 연결]**: 원본 플랫폼과 연결 상태를 표시합니다.
-* **[!UICONTROL 데이터 형식]**: 선택한 분류의 수를 표시합니다.
-* **[!UICONTROL 예약]**: 분류 데이터의 동기화 빈도를 표시합니다. **참고**: 분류 데이터는 매주 업데이트됩니다.
+* **[!UICONTROL Connection]**: 원본 플랫폼과 연결 상태를 표시합니다.
+* **[!UICONTROL Data type]**: 선택한 분류의 수를 표시합니다.
+* **[!UICONTROL Scheduling]**: 분류 데이터의 동기화 빈도를 표시합니다. **참고**: 분류 데이터는 매주 업데이트됩니다.
 
-데이터 흐름을 검토한 후 **[!UICONTROL 완료]**&#x200B;를 클릭하고 데이터 흐름이 만들어지도록 잠시 기다립니다.
+데이터 흐름을 검토한 후 **[!UICONTROL Finish]**&#x200B;을(를) 클릭하고 데이터 흐름이 만들어지도록 잠시 기다립니다.
 
 ![Adobe Analytics 분류 데이터를 검토하는 페이지입니다.](../../../../images/tutorials/create/classifications/review.png)
 
@@ -63,4 +63,4 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 * [Adobe Analytics 소스 커넥터 개요](../../../../connectors/adobe-applications/analytics.md)
 * [UI에서 보고서 세트 데이터에 대한 Analytics 소스 연결 만들기](./analytics.md)
-* [분류 정보](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=ko)
+* [분류 정보](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
