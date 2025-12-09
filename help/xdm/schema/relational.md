@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ## 관계형 스키마가 표준 XDM 스키마와 어떻게 다른지
 
-Experience Platform의 표준 XDM 스키마는 레코드, 시계열 또는 임시, 이렇게 세 가지 데이터 동작 중 하나를 따릅니다. 자세한 내용 및 정의는 [XDM 데이터 동작](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors)을 참조하십시오.
+Experience Platform의 표준 XDM 스키마는 레코드, 시계열 또는 임시, 이렇게 세 가지 데이터 동작 중 하나를 따릅니다. 자세한 내용 및 정의는 [XDM 데이터 동작](https://experienceleague.adobe.com/ko/docs/experience-platform/xdm/home#data-behaviors)을 참조하십시오.
 
 기존 모델에서 레코드 및 시계열 스키마는 [유니온 스키마](../api/unions.md)에 참여합니다([유니온 스키마 UI 안내서](../../profile/ui/union-schema.md) 참조). 공유 [필드 그룹](./composition.md#field-group)이 업데이트되고 사용자 지정 필드가 테넌트 네임스페이스에 중첩되어야 하므로 이러한 스키마는 자동으로 발전합니다. 이 모델은 강력하지만, 온보딩을 느리게 하고, 사용되지 않은 필드가 있는 지나치게 복잡한 스키마를 생성하고, 추가 데이터 매핑 또는 변환이 필요할 수 있습니다. 이러한 요인들은 학습 곡선과 지속적인 유지 관리 노력을 증가시킵니다.
 
