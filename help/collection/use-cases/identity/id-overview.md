@@ -70,7 +70,7 @@ Adobe Experience Platform Web SDK은 [Adobe Experience Cloud ID(ECID)](/help/ide
 사용 사례에 따라 [!DNL ECID]에 액세스할 수 있는 두 가지 방법이 있습니다.
 
 * [데이터 수집을 위한 데이터 준비를 통해  [!DNL ECID] 을(를) 검색합니다](#retrieve-ecid-data-prep): 이 방법은 권장되는 방법입니다.
-* [ [!DNL ECID]  명령을 통해 `getIdentity()`검색](#retrieve-ecid-getidentity): 클라이언트측에서 [!DNL ECID] 정보가 필요한 경우에만 이 메서드를 사용하십시오.
+* [&#x200B; [!DNL ECID]  명령을 통해 `getIdentity()`검색](#retrieve-ecid-getidentity): 클라이언트측에서 [!DNL ECID] 정보가 필요한 경우에만 이 메서드를 사용하십시오.
 
 ### 데이터 수집을 위한 데이터 준비를 통해 [!DNL ECID] 검색 {#retrieve-ecid-data-prep}
 
@@ -162,7 +162,7 @@ ID 배열의 각 ID 개체에는 다음 속성이 포함되어 있습니다.
 | `authenticatedState` | 문자열 | **(필수)** ID의 인증 상태입니다. 가능한 값은 `ambiguous`, `authenticated` 및 `loggedOut`입니다. |
 | `primary` | 부울 | 이 ID를 프로필의 기본 조각으로 사용할지 여부를 결정합니다. 기본적으로 ECID는 사용자의 기본 식별자로 설정됩니다. 생략하면 이 값의 기본값은 `false`입니다. |
 
-`identityMap` 필드를 사용하여 장치 또는 사용자를 식별하면 [`setCustomerIDs`에서 ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html)[!DNL ID Service API] 메서드를 사용하는 것과 동일한 결과가 발생합니다. 자세한 내용은 [ID 서비스 API 설명서](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html)를 참조하세요.
+`identityMap` 필드를 사용하여 장치 또는 사용자를 식별하면 [`setCustomerIDs`에서 &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) [!DNL ID Service API] 메서드를 사용하는 것과 동일한 결과가 발생합니다. 자세한 내용은 [ID 서비스 API 설명서](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html)를 참조하세요.
 
 ## 방문자 API에서 ECID로 마이그레이션 {#migrating-visitor-api-ecid}
 
