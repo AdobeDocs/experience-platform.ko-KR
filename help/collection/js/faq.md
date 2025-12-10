@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK FAQ
 description: Adobe Experience Platform 웹 SDK에 대해 자주 묻는 질문에 대한 답변을 얻으십시오.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '1665'
 ht-degree: 1%
 
 ---
@@ -78,7 +78,7 @@ Adobe Experience Platform Web SDK에서 데이터를 Adobe Experience Platform�
 * *없음*&#x200B;이(가) Experience Platform 또는 Real-Time CDP에 액세스할 수 있고 [!DNL Web SDK]을(를) 사용하려는 고객은 데이터 수집 UI 또는 Experience Platform UI에서 스키마 및 데이터스트림을 만드는 올바른 권한을 구성해야 합니다.
 * Experience Platform 또는 Real-time CDP에 액세스할 수 있으며 [!DNL Web SDK]을(를) 사용하려는 고객은 데이터 수집 UI 또는 Experience Platform UI에서 스키마, 데이터 세트, ID 네임스페이스 및 데이터스트림을 만드는 올바른 권한을 구성해야 합니다.
 
-이러한 권한을 구성하는 방법에 대한 자세한 내용은 [데이터 수집 권한 관리](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=ko)에 대한 설명서를 참조하십시오.
+이러한 권한을 구성하는 방법에 대한 자세한 내용은 [데이터 수집 권한 관리](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html)에 대한 설명서를 참조하십시오.
 
 ## 웹 SDK을 사용해야 하는 사용자
 
@@ -144,25 +144,11 @@ SDK를 사용하고 XDM을 Edge Network으로 전송하는 경우 이러한 새�
 
 ## CNAME 또는 자사 도메인이란 무엇이며 이것이 중요한 이유는 무엇입니까?
 
-CNAME에 대한 자세한 내용은 [Adobe 설명서](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=ko)를 참조하세요.
+핵심 서비스 안내서에서 [Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)을 참조하세요.
 
 ## Adobe Experience Platform Web SDK에서 쿠키를 사용합니까? 그렇다면 어떤 쿠키를 사용합니까?
 
-예. 현재 웹 SDK은 구현에 따라 1개에서 7개 사이의 쿠키를 사용합니다. 다음은 웹 SDK에서 볼 수 있는 쿠키 목록과 쿠키가 사용되는 방법입니다.
-
-| **이름** | **maxAge** | **친숙한 나이** | **설명** |
-|---|---|---|---|
-| **kndct_orgid_identity** | 34128000 | 395일 | ID 쿠키는 ECID와 ECID와 관련된 기타 정보를 저장합니다. |
-| **kndctr_orgid_consent_check** | 7200 | 2시간 | 이 세션 기반 쿠키는 서버에서 동의 환경 설정 서버측을 조회하도록 신호를 보냅니다. |
-| **kndctr_orgid_consent** | 15552000 | 180일 | 이 쿠키는 웹 사이트에 대한 사용자의 동의 기본 설정을 저장합니다. |
-| **kndctr_orgid_cluster** | 1800 | 30분 | 이 쿠키는 현재 사용자의 요청을 제공하는 Edge Network 영역을 저장합니다. Edge Network이 요청을 올바른 영역으로 라우팅할 수 있도록 이 영역은 URL 경로에 사용됩니다. 이 쿠키에는 30분의 라이프타임이 있으므로 사용자가 다른 IP 주소와 연결하는 경우 요청을 가장 가까운 영역으로 라우팅할 수 있습니다. |
-| **mbox** | 63072000 | 2년 | 이 쿠키는 Target 마이그레이션 설정이 true로 설정된 경우에 나타납니다. 이렇게 하면 웹 SDK에서 Target [mbox 쿠키](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/)를 설정할 수 있습니다. |
-| **mboxEdgeCluster** | 1800 | 30분 | 이 쿠키는 Target 마이그레이션 설정이 true로 설정된 경우에 나타납니다. 이 쿠키를 사용하면 웹 SDK에서 올바른 에지 클러스터를 at.js에 전달하여 사용자가 사이트를 탐색할 때 Target 프로필이 동기화 상태를 유지할 수 있습니다. |
-| **AMCV_###@AdobeOrg** | 34128000 | 395일 | 이 쿠키는 Adobe Experience Platform Web SDK에서 ID 마이그레이션이 활성화되어 있을 때만 나타납니다. 이 쿠키는 사이트의 일부가 여전히 visitor.js를 사용하는 동안 웹 SDK으로 전환할 때 유용합니다. 자세한 내용은 [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md)을(를) 참조하십시오. |
-
-웹 SDK을 사용하는 경우 Edge Network은 위의 쿠키 중 하나 이상을 설정합니다. Edge Network은 `secure` 및 `sameSite="none"` 특성이 있는 모든 쿠키를 설정합니다.
-
-현재 웹 사이트에 보안 섹션과 비보안 섹션이 모두 있는 경우 이로 인해 사용자 식별이 방해될 수 있습니다. 사용자가 사이트의 보안 섹션에서 비보안 섹션으로 이동하면 Edge Network은 요청을 통해 새 `ECID`을(를) 생성합니다.
+핵심 서비스 안내서에서 [Adobe Experience Platform Web SDK 쿠키](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)를 참조하십시오.
 
 ## Adobe Experience Platform Web SDK은 어떤 브라우저를 지원합니까?
 

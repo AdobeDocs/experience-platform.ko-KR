@@ -2,10 +2,10 @@
 title: setConsent
 description: 각 페이지에서 사용자의 동의 환경 설정을 추적하는 데 사용됩니다.
 exl-id: d01a6ef1-4fa7-4a60-a3a1-19568b4e0d23
-source-git-commit: 364b9adc406f732ea5ba450730397c4ce1bf03cf
+source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
 workflow-type: tm+mt
-source-wordcount: '1289'
-ht-degree: 3%
+source-wordcount: '1117'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 3%
    1. 경험 이벤트 스키마에 [IAB TCF 2.0 동의 필드 그룹](/help/xdm/field-groups/event/iab.md)이(가) 있습니다.
    1. 이벤트 [XDM 개체](sendevent/xdm.md)에 IAB 동의 정보를 포함합니다. 웹 SDK은 이벤트 데이터를 전송할 때 동의 정보를 자동으로 포함하지 않습니다.
 
-이 명령을 사용하면 웹 SDK은 쿠키에 사용자의 환경 설정을 기록합니다. 다음에 사용자가 브라우저에 웹 사이트를 로드할 때 SDK은 이러한 지속적인 환경 설정을 검색하여 이벤트를 Adobe에 보낼 수 있는지 확인합니다.
+이 명령을 사용하면 웹 SDK에서 [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) 쿠키에 사용자 환경 설정을 기록합니다. 이 쿠키는 방문자의 동의 기본 설정을 저장하기 때문에 방문자의 동의 기본 설정과 관계없이 설정됩니다. 다음에 사용자가 브라우저에 웹 사이트를 로드할 때 SDK은 이러한 지속적인 환경 설정을 검색하여 이벤트를 Adobe에 보낼 수 있는지 확인합니다.
 
 Adobe은 모든 동의 대화 상자 환경 설정을 Web SDK 동의와 별도로 저장할 것을 권장합니다. 웹 SDK은 동의를 검색하는 방법을 제공하지 않습니다. 사용자 환경 설정이 SDK과 계속 동기화되도록 하려면 페이지를 로드할 때마다 `setConsent` 명령을 호출할 수 있습니다. 웹 SDK은 동의를 변경할 때만 서버 호출을 수행합니다.
 
@@ -34,15 +34,13 @@ Adobe은 모든 동의 대화 상자 환경 설정을 Web SDK 동의와 별도�
 
 웹 SDK은 두 개의 상호 보완적인 동의 구성 명령을 제공합니다.
 
-* [`defaultConsent`](configure/defaultconsent.md): 이 명령은 Web SDK을 사용하는 Adobe 고객의 동의 환경 설정을 캡처하기 위한 것입니다.
-* [`setConsent`](setconsent.md): 이 명령은 사이트 방문자의 동의 환경 설정을 캡처하기 위한 것입니다.
+* [`defaultConsent`](configure/defaultconsent.md): 이 명령은 `setConsent`을(를) 호출하기 전에 방문자의 기본 동의 기본 설정을 자동으로 설정합니다.
+* `setConsent`(현재 페이지): 이 명령은 방문자의 동의 기본 설정을 명시적으로 설정합니다.
 
 이러한 설정을 함께 사용하면 구성된 값에 따라 데이터 수집 및 쿠키 설정 결과가 달라질 수 있습니다.
 
-동의 설정을 기반으로 데이터 수집이 발생하는 시점과 쿠키가 설정되는 시점을 이해하려면 아래 표를 참조하십시오.
-
 | `defaultConsent` | `setConsent` | 데이터 수집 발생 | 웹 SDK 브라우저 쿠키 설정 |
-|---------|----------|---------|---------|
+| --- | --- | --- | --- |
 | `in` | `in` | 예 | 예 |
 | `in` | `out` | 아니요 | 예 |
 | `in` | 설정되지 않음 | 예 | 예 |
@@ -53,16 +51,9 @@ Adobe은 모든 동의 대화 상자 환경 설정을 Web SDK 동의와 별도�
 | `out` | `out` | 아니요 | 예 |
 | `out` | 설정되지 않음 | 아니요 | 아니요 |
 
-다음 쿠키는 동의 구성이 허용하면 설정됩니다.
+설정할 수 있는 쿠키의 전체 목록은 핵심 서비스 안내서의 [Adobe Experience Platform Web SDK 쿠키](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)를 참조하십시오.
 
-| 이름 | 최대 나이 | 설명 |
-|---|---|---|
-| **`AMCV_###@AdobeOrg`** | 34128000(395일) | [`idMigrationEnabled`](configure/idmigrationenabled.md)이(가) 활성화된 경우 표시됩니다. 사이트의 일부 부분이 여전히 `visitor.js`을(를) 사용하고 있는 동안 Web SDK으로 전환할 때 도움이 됩니다. |
-| **`Demdex cookie`** | 15552000(180일) | ID 동기화가 활성화된 경우 표시됩니다. Audience Manager은 이 쿠키를 설정하여 사이트 방문자에게 고유 ID를 할당합니다. demdex 쿠키는 Audience Manger 가 방문자 식별, ID 동기화, 세그먼테이션, 모델링, 보고 등과 같은 기본 기능을 수행하는 데 도움이 됩니다. |
-| **`kndctr_orgid_cluster`** | 1800(30분) | 현재 사용자의 요청을 처리하는 Edge Network 영역을 저장합니다. Edge Network이 요청을 올바른 영역으로 라우팅할 수 있도록 이 영역은 URL 경로에 사용됩니다. 사용자가 다른 IP 주소 또는 다른 세션에 연결하는 경우 요청이 다시 가장 가까운 영역으로 라우팅됩니다. |
-| **`kndct_orgid_identity`** | 34128000(395일) | ECID 및 ECID와 관련된 기타 정보를 저장합니다. |
-| **`kndctr_orgid_consent`** | 15552000(180일) | 웹 사이트에 대한 사용자 동의 환경 설정을 저장합니다. |
-| **`s_ecid`** | 63115200(2년) | Experience Cloud ID([!DNL ECID]) 또는 MID의 복사본을 포함합니다. MID는 `s_ecid=MCMID\|<ECID>` 구문 뒤에 오는 키-값 쌍에 저장됩니다. |
+## `setConsent` 명령 사용
 
 웹 SDK의 구성된 인스턴스를 호출할 때 `setConsent` 명령을 실행합니다. 이 명령에 다음 개체를 포함할 수 있습니다.
 
