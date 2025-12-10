@@ -22,7 +22,7 @@ ht-degree: 2%
    1. 경험 이벤트 스키마에 [IAB TCF 2.0 동의 필드 그룹](/help/xdm/field-groups/event/iab.md)이(가) 있습니다.
    1. 이벤트 [XDM 개체](sendevent/xdm.md)에 IAB 동의 정보를 포함합니다. 웹 SDK은 이벤트 데이터를 전송할 때 동의 정보를 자동으로 포함하지 않습니다.
 
-이 명령을 사용하면 웹 SDK에서 [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) 쿠키에 사용자 환경 설정을 기록합니다. 이 쿠키는 방문자의 동의 기본 설정을 저장하기 때문에 방문자의 동의 기본 설정과 관계없이 설정됩니다. 다음에 사용자가 브라우저에 웹 사이트를 로드할 때 SDK은 이러한 지속적인 환경 설정을 검색하여 이벤트를 Adobe에 보낼 수 있는지 확인합니다.
+이 명령을 사용하면 웹 SDK에서 [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/ko/docs/core-services/interface/data-collection/cookies/web-sdk) 쿠키에 사용자 환경 설정을 기록합니다. 이 쿠키는 방문자의 동의 기본 설정을 저장하기 때문에 방문자의 동의 기본 설정과 관계없이 설정됩니다. 다음에 사용자가 브라우저에 웹 사이트를 로드할 때 SDK은 이러한 지속적인 환경 설정을 검색하여 이벤트를 Adobe에 보낼 수 있는지 확인합니다.
 
 Adobe은 모든 동의 대화 상자 환경 설정을 Web SDK 동의와 별도로 저장할 것을 권장합니다. 웹 SDK은 동의를 검색하는 방법을 제공하지 않습니다. 사용자 환경 설정이 SDK과 계속 동기화되도록 하려면 페이지를 로드할 때마다 `setConsent` 명령을 호출할 수 있습니다. 웹 SDK은 동의를 변경할 때만 서버 호출을 수행합니다.
 
@@ -51,7 +51,7 @@ Adobe은 모든 동의 대화 상자 환경 설정을 Web SDK 동의와 별도�
 | `out` | `out` | 아니요 | 예 |
 | `out` | 설정되지 않음 | 아니요 | 아니요 |
 
-설정할 수 있는 쿠키의 전체 목록은 핵심 서비스 안내서의 [Adobe Experience Platform Web SDK 쿠키](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)를 참조하십시오.
+설정할 수 있는 쿠키의 전체 목록은 핵심 서비스 안내서의 [Adobe Experience Platform Web SDK 쿠키](https://experienceleague.adobe.com/ko/docs/core-services/interface/data-collection/cookies/web-sdk)를 참조하십시오.
 
 ## `setConsent` 명령 사용
 

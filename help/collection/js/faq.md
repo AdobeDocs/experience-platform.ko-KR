@@ -78,7 +78,7 @@ Adobe Experience Platform Web SDK에서 데이터를 Adobe Experience Platform�
 * *없음*&#x200B;이(가) Experience Platform 또는 Real-Time CDP에 액세스할 수 있고 [!DNL Web SDK]을(를) 사용하려는 고객은 데이터 수집 UI 또는 Experience Platform UI에서 스키마 및 데이터스트림을 만드는 올바른 권한을 구성해야 합니다.
 * Experience Platform 또는 Real-time CDP에 액세스할 수 있으며 [!DNL Web SDK]을(를) 사용하려는 고객은 데이터 수집 UI 또는 Experience Platform UI에서 스키마, 데이터 세트, ID 네임스페이스 및 데이터스트림을 만드는 올바른 권한을 구성해야 합니다.
 
-이러한 권한을 구성하는 방법에 대한 자세한 내용은 [데이터 수집 권한 관리](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html)에 대한 설명서를 참조하십시오.
+이러한 권한을 구성하는 방법에 대한 자세한 내용은 [데이터 수집 권한 관리](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=ko)에 대한 설명서를 참조하십시오.
 
 ## 웹 SDK을 사용해야 하는 사용자
 
@@ -144,11 +144,11 @@ SDK를 사용하고 XDM을 Edge Network으로 전송하는 경우 이러한 새�
 
 ## CNAME 또는 자사 도메인이란 무엇이며 이것이 중요한 이유는 무엇입니까?
 
-핵심 서비스 안내서에서 [Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)을 참조하세요.
+핵심 서비스 안내서에서 [Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/ko/docs/core-services/interface/data-collection/adobe-managed-cert)을 참조하세요.
 
 ## Adobe Experience Platform Web SDK에서 쿠키를 사용합니까? 그렇다면 어떤 쿠키를 사용합니까?
 
-핵심 서비스 안내서에서 [Adobe Experience Platform Web SDK 쿠키](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)를 참조하십시오.
+핵심 서비스 안내서에서 [Adobe Experience Platform Web SDK 쿠키](https://experienceleague.adobe.com/ko/docs/core-services/interface/data-collection/cookies/web-sdk)를 참조하십시오.
 
 ## Adobe Experience Platform Web SDK은 어떤 브라우저를 지원합니까?
 
