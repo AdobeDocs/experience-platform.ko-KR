@@ -136,8 +136,8 @@ Adobe Experience Platform 데이터 거버넌스를 통해 고객 데이터를 �
 >
 >이 비디오는 개별 데이터 세트 필드에 레이블을 적용하는 것을 참조합니다. 이 워크플로우는 더 이상 사용되지 않습니다. [이제 스키마 필드 수준에서 레이블을 적용해야 합니다](./e2e.md#labels). 비디오의 개념은 정확하지만 레이블 지정 워크플로가 변경되었습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32135?captions=kor&quality=12&enable10seconds=on&speedcontrol=on)
 
 다음 비디오에서는 데이터 사용 레이블을 스키마 또는 Experience Platform의 데이터 세트 전체에 적용하는 방법에 대한 지침을 제공합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422792/?captions=kor&learn=on)
