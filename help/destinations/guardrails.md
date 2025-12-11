@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 216621652697c378164125a6d0e125a33ee008be
+source-git-commit: 0b607decfa687f89c74fb81055ac2bf4cc54d59b
 workflow-type: tm+mt
 source-wordcount: '1763'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)을(를) 확인하십시오.
+>이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을(를) 확인하십시오.
 
 이 페이지에서는 활성화 동작과 관련된 기본 사용량 및 요금 제한을 제공합니다. 다음 보호 기능을 검토할 때 [대상에 올바르게 연결](/help/destinations/ui/connect-destination.md)되어 있다고 가정합니다.
 
@@ -177,7 +177,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
 | 최대 [개인 사용자 지정 대상 수](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | 성능 보호 | Destination SDK을 사용하여 최대 5개의 개인 사용자 지정 스트리밍 또는 배치 대상을 만들 수 있습니다. 이러한 대상을 5개 이상 만들어야 하는 경우 사용자 정의 지원 담당자에게 문의하십시오. |
-| Destination SDK에 대한 프로필 내보내기 정책 | <ul><li>`maxBatchAgeInSecs`(최소 1,800 및 최대 3,600)</li><li>`maxNumEventsInBatch`(최소 1,000개 및 최대 10,000개)</li></ul> | 시스템 강제 보호 | 대상에 대해 [구성 가능한 집계](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 옵션을 사용할 때는 API 기반 대상으로 HTTP 메시지를 보내는 빈도와 메시지에 포함할 프로필 수를 결정하는 최소값과 최대값을 염두에 두십시오. |
+| Destination SDK에 대한 프로필 내보내기 정책 | <ul><li>`maxBatchAgeInSecs`(최소 301, 최대 3,600)</li><li>`maxNumEventsInBatch`(최소 1,000개 및 최대 10,000개)</li></ul> | 시스템 강제 보호 | 대상에 대해 [구성 가능한 집계](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 옵션을 사용할 때는 API 기반 대상으로 HTTP 메시지를 보내는 빈도와 메시지에 포함할 프로필 수를 결정하는 최소값과 최대값을 염두에 두십시오. |
 | Destination SDK의 OAuth 2 토큰 라이프타임 | 최소 24시간 권장 | 성능 보호 | [OAuth 2 인증](/help/destinations/destination-sdk/functionality/destination-configuration/oauth2-authorization.md)을 사용하는 대상의 경우 Adobe에서는 액세스 토큰 라이프타임 값을 최소 24시간으로 설정할 것을 권장합니다. 라이프타임이 1시간 미만인 토큰과 연결하면 활성화 중에 프로필이 삭제됩니다. |
 
 {style="table-layout:auto"}
@@ -197,7 +197,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보호, 종단 간 지연 정보 및 라이선스 정보에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
-* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ko#end-to-end-latency-diagrams).
-* [Real-Time Customer Data Platform(B2C Edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams).
+* [Real-Time Customer Data Platform(B2C Edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
