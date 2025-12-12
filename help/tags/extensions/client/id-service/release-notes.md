@@ -11,7 +11,7 @@ ht-degree: 66%
 
 # Adobe Experience Cloud Identity Service 확장 릴리스 노트
 
-이 문서에서는 Adobe Experience Cloud Identity 서비스 태그 확장에 대한 릴리스 정보를 다룹니다. Experience Cloud ID 서비스 자체에 대한 릴리스 노트는 [ID 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html)를 참조하십시오.
+이 문서에서는 Adobe Experience Cloud Identity 서비스 태그 확장에 대한 릴리스 정보를 다룹니다. Experience Cloud ID 서비스 자체에 대한 릴리스 노트는 [ID 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ko)를 참조하십시오.
 
 ## 2022년 10월 17일
 

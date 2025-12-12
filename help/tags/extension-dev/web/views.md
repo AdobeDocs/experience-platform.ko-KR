@@ -72,7 +72,7 @@ window.extensionBridge.register({
 | `company` | `orgId`(24자 Adobe Experience Cloud ID), `id`(Reactor API 내 회사의 고유 식별자) 및 `tenantId`(Adobe Identity Management 시스템 내의 조직에 대한 고유 식별자)이 포함된 개체입니다. |
 | `schema` | [JSON 스키마](https://json-schema.org/) 형식의 객체입니다. 이 객체는 [확장 매니페스트](../manifest.md)에서 가져오며 양식 유효성 검사에 도움이 될 수 있습니다. |
 | `apiEndpoints` | Reactor API의 웹 주소에 대한 참조가 포함된 `reactor`이(가) 포함된 개체입니다. |
-| `userConsentPermissions` | Adobe의 [제품 사용 데이터](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data)에서 동의 플래그를 포함하는 개체입니다. 확장에서 `globalDataCollectionAndUsage`any *고객 데이터를 수집할 수 있는지 확인하려면* 플래그에 저장된 을(를) 사용하십시오. |
+| `userConsentPermissions` | Adobe의 [제품 사용 데이터](https://experienceleague.adobe.com/ko/docs/core-services/interface/features/account-preferences#product-usage-data)에서 동의 플래그를 포함하는 개체입니다. 확장에서 `globalDataCollectionAndUsage`any *고객 데이터를 수집할 수 있는지 확인하려면* 플래그에 저장된 을(를) 사용하십시오. |
 | `preferredLanguages` | 언어 문자열의 배열입니다. |
 
 이 정보를 사용하여 양식을 렌더링하고 관리해야 합니다. `info.settings`만 처리하면 되지만, 필요한 경우 다른 정보가 제공됩니다.

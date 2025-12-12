@@ -26,7 +26,7 @@ Adobe Experience Platform(이전의 Adobe Experience Platform Launch 서버측)�
 >
 >이벤트 전달이 Experience Platform의 데이터 수집 생태계에 어떻게 적합한지에 대한 자세한 내용은 [데이터 수집 개요](/help/collection/home.md)를 참조하십시오.
 
-Adobe Experience Platform [Web SDK](/help/collection/js/js-overview.md) 및 [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html)와 결합된 이벤트 전달은 다음과 같은 이점을 제공합니다.
+Adobe Experience Platform [Web SDK](/help/collection/js/js-overview.md) 및 [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=ko)와 결합된 이벤트 전달은 다음과 같은 이점을 제공합니다.
 
 **성능**:
 
