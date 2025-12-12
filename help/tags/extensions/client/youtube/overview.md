@@ -2,18 +2,14 @@
 title: YouTube 비디오 추적 확장 개요
 description: Adobe Experience Platform의 YouTube 비디오 추적 태그 확장에 대해 알아봅니다.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 35%
+source-wordcount: '852'
+ht-degree: 32%
 
 ---
 
 # YouTube 비디오 추적 확장 개요
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 **전제 조건**
 
@@ -23,13 +19,13 @@ Adobe Experience Platform의 각 태그 속성을 사용하려면 확장 화면�
 * Experience Cloud Visitor ID 서비스
 * 코어 확장
 
-비디오 플레이어를 렌더링할 각 웹 페이지의 HTML에 있는 Google 개발자 문서에서 \&lt;iframe\> 태그&quot;[&#128279;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) 코드 조각을 사용하여 &quot;플레이어 포함&quot;을 사용하십시오.
+비디오 플레이어를 렌더링할 각 웹 페이지의 HTML에 있는 Google 개발자 문서에서 \&lt;iframe\> 태그&quot;[ 코드 조각을 사용하여 ](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds)&quot;플레이어 포함&quot;을 사용하십시오.
 
-이 확장 버전 2.0.1은 iframe 스크립트 태그에 고유한 값이 있는 `id` 특성을 삽입하고 아직 포함되지 않은 경우 `src` 특성 값의 끝에 `enablejsapi=1` 및 `rel=0`을(를) 추가하여 단일 웹 페이지에 하나 이상의 YouTube 비디오를 포함하도록 지원합니다. 예:
+이 확장 버전 2.0.1은 iframe 스크립트 태그에 고유한 값이 있는 `id` 특성을 삽입하고 아직 포함되지 않은 경우 `enablejsapi=1` 특성 값의 끝에 `rel=0` 및 `src`을(를) 추가하여 단일 웹 페이지에 하나 이상의 YouTube 비디오를 포함하도록 지원합니다. 예:
 
 `<iframe id="player1" width="560" height="315" src="https://www.youtube.com/embed/xpatB77BzYE?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 
-또한 이 확장은 `enablejsapi` 및 `rel` 쿼리 문자열 매개 변수의 존재 여부 및 예상 값이 올바른지 여부에 관계없이 `player1`과(와) 같은 고유한 ID 특성 값을 동적으로 확인하도록 설계되었습니다. 따라서 `id` 특성을 사용하거나 사용하지 않고 `enablejsapi` 및 `rel` 쿼리 문자열 매개 변수의 포함 여부에 관계없이 YouTube 스크립트 태그를 웹 페이지에 추가할 수 있습니다.
+또한 이 확장은 `player1` 및 `enablejsapi` 쿼리 문자열 매개 변수의 존재 여부 및 예상 값이 올바른지 여부에 관계없이 `rel`과(와) 같은 고유한 ID 특성 값을 동적으로 확인하도록 설계되었습니다. 따라서 `id` 특성을 사용하거나 사용하지 않고 `enablejsapi` 및 `rel` 쿼리 문자열 매개 변수의 포함 여부에 관계없이 YouTube 스크립트 태그를 웹 페이지에 추가할 수 있습니다.
 
 >[!NOTE]
 >
@@ -98,9 +94,9 @@ document.onreadystatechange = function () {
 
 >[!TIP]
 > 
->각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 사용할 수 없는 구현의 경우, 데이터 요소 값을 Experience Platform 내에서 연결하고, 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석한 다음, [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ko](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ko)에 설명된 대로 Analysis Workspace에서 세그먼트로 적용할 수 있습니다.
+>각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 사용할 수 없는 구현의 경우, 데이터 요소 값을 Experience Platform 내에서 연결하고, 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석한 다음, [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)에 설명된 대로 Analysis Workspace에서 세그먼트로 적용할 수 있습니다.
 
-비디오 정보 값을 연결하려면 &quot;비디오 메타데이터&quot;라는 새 데이터 요소를 만들고 이를 프로그래밍하여 모든 비디오 데이터 요소(위에 나열됨)를 가져와서 함께 조합합니다. 예:
+비디오 정보 값을 연결하려면 &quot;비디오 Meta 데이터&quot;라는 새 데이터 요소를 만들고 이를 프로그래밍하여 모든 비디오 데이터 요소(위에 나열됨)를 가져와서 함께 조합합니다. 예:
 
 ```javascript
 var r = [];

@@ -2,18 +2,14 @@
 title: 웹 확장에 대한 데이터 요소 유형
 description: 웹 속성에서 태그 확장에 대한 데이터 요소 유형 라이브러리 모듈을 정의하는 방법에 대해 알아봅니다.
 exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 49%
+source-wordcount: '555'
+ht-degree: 53%
 
 ---
 
 # 웹 확장에 대한 데이터 요소 유형
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 데이터 수집 태그에서 데이터 요소는 기본적으로 페이지의 데이터 조각에 대한 별칭입니다. 이 데이터는 쿼리 문자열 매개 변수, 쿠키, DOM 요소 또는 기타 위치에서 찾을 수 있습니다. 데이터 요소는 규칙에서 참조하고 이러한 데이터 조각에 액세스하기 위해 추상적으로 사용할 수 있습니다.
 

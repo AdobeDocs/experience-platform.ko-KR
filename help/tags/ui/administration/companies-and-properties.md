@@ -2,18 +2,14 @@
 title: 속성
 description: Adobe Experience Platform에서 조직의 확장, 환경 및 라이브러리를 구성하고 그룹화하는 방법에 대해 알아봅니다.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 64%
+source-wordcount: '1108'
+ht-degree: 63%
 
 ---
 
 # 속성
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 ## 웹 속성
 

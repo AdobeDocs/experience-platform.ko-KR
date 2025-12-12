@@ -2,18 +2,14 @@
 title: 확장 업그레이드
 description: 확장 업그레이드가 확장 카탈로그에 어떻게 패키지화되고 표시되는지 알아봅니다.
 exl-id: 4a7e0c5c-4bd1-4fb8-8509-f88a0aa42ac4
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 72%
+source-wordcount: '620'
+ht-degree: 94%
 
 ---
 
 # 확장 업그레이드
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 확장 개발자는 확장에 새로운 기능을 지속적으로 추가하고 버그를 자주 수정합니다. 이러한 업데이트는 새로운 버전의 확장에 패키지화되어 확장 카탈로그에서 업그레이드로 사용할 수 있습니다.
 
@@ -25,7 +21,7 @@ ht-degree: 72%
 
 ## 업그레이드 알림
 
-속성에 대한 확장을 설치했는데 카탈로그에서 최신 버전을 사용할 수 있는 경우 Installed Extensions를 보면 확장 카드에 [!UICONTROL Upgrade] 단추가 표시됩니다.
+속성에 대한 확장을 설치했는데 카탈로그에서 최신 버전을 사용할 수 있는 경우 Installed Extensions를 보면 확장 카드에 [!UICONTROL Upgrade] 버튼이 표시됩니다.
 
 또한 해당 확장에서 제공하는 리소스를 편집할 때도 알림이 표시됩니다.
 
@@ -41,13 +37,13 @@ ht-degree: 72%
 
 업그레이드 설치 방법은 처음 확장을 설치하는 방법과 거의 동일합니다.
 
-1. **[!UICONTROL 업그레이드]**&#x200B;를 선택하여 [!UICONTROL 확장 구성] 화면으로 이동합니다.
+1. [!UICONTROL Extension Configuration] 화면으로 이동하려면 **[!UICONTROL Upgrade]**&#x200B;를 선택합니다.
 1. 원하는 대로 구성을 변경합니다.
-1. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+1. **[!UICONTROL Save]**&#x200B;를 선택합니다.
 
-업그레이드는 실제로 **[!UICONTROL 저장]**&#x200B;을 누를 때까지 수행되지 않습니다. 언제든지 그 전에 [!UICONTROL 취소]를 선택하여 현재 설치된 버전을 유지할 수 있습니다. **[!UICONTROL 저장]**&#x200B;을(를) 선택하면 되돌릴 수 없습니다.
+업그레이드는 사용자가 **[!UICONTROL Save]**&#x200B;를 누를 때까지 실제로 수행되지 않습니다. 언제든지 그 전에 [!UICONTROL Cancel]을 선택하여 현재 설치된 버전을 유지할 수 있습니다. **[!UICONTROL Save]**&#x200B;를 선택하면 되돌릴 수 없습니다.
 
-`Approved` 또는 `Submitted` 상태의 라이브러리가 있는 경우 확장 업그레이드가 허용되지 않습니다.  그 이유는 다음 빌드가 반드시 새 확장 버전을 포함해야 하기 때문입니다.  `Approved`또는 `Submitted`인 라이브러리의 경우 다음 빌드는 프로덕션 빌드입니다.  프로덕션 빌드는 최신 버전을 포함하지 않아서 실패하게 되므로, 확장을 업그레이드하기 _전에_ `Approved` 또는 `Submitted` 상태의 라이브러리를 게시하거나 거부하는 것이 워크플로우입니다.
+`Approved` 또는 `Submitted` 상태의 라이브러리가 있는 경우 확장 업그레이드가 허용되지 않습니다.  그 이유는 다음 빌드가 반드시 새 확장 버전을 포함해야 하기 때문입니다.  `Approved`또는 `Submitted`인 라이브러리의 경우 다음 빌드는 프로덕션 빌드입니다.  프로덕션 빌드는 최신 버전을 포함하지 않아서 실패하게 되므로, 확장을 업그레이드하기 _전에_ `Approved` 또는 `Submitted` 상태의 라이브러리를 게시하거나 거부하는 것이 워크플로입니다.
 
 ## 업그레이드 게시
 
@@ -55,7 +51,7 @@ ht-degree: 72%
 
 그 외에 업그레이드된 확장을 라이브러리에 추가하는 것은 라이브러리에 [다른 변경 사항을 추가](../../publishing/libraries.md)하는 것과 같습니다.
 
-[!UICONTROL 라이브러리 편집] 화면에서 &quot;[!UICONTROL 변경된 모든 리소스 추가]&quot; 단추를 사용하거나 &quot;[!UICONTROL 리소스 추가]&quot; 단추를 사용하여 업그레이드된 확장을 직접 선택할 수 있습니다.
+[!UICONTROL Edit Library] 화면에서 &quot;[!UICONTROL Add All Changed Resources]&quot; 버튼을 사용하거나 &quot;[!UICONTROL Add a Resource]&quot; 버튼을 사용하고 업그레이드된 확장을 직접 선택할 수 있습니다.
 
 >[!TIP]
 >

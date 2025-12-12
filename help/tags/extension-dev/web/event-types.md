@@ -2,18 +2,14 @@
 title: 웹 확장에 대한 이벤트 유형
 description: Adobe Experience Platform에서 웹 확장에 대한 이벤트 유형 라이브러리 모듈을 정의하는 방법을 알아봅니다.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 32%
+source-wordcount: '1007'
+ht-degree: 29%
 
 ---
 
 # 웹 확장에 대한 이벤트 유형
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 태그 규칙에서 이벤트는 규칙이 실행되기 위해 발생해야 하는 활동입니다. 예를 들어 웹 확장은 특정 마우스 또는 터치 제스처가 발생하는지 감시하는 &quot;제스처&quot; 이벤트 유형을 제공할 수 있습니다. 제스처가 발생하면 이벤트 논리에서 규칙을 실행하게 됩니다.
 

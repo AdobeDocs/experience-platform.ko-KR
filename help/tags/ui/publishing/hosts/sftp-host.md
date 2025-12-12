@@ -2,18 +2,14 @@
 title: SFTP 호스트
 description: Adobe Experience Platform에서 태그를 구성하여 보안 및 자체 호스팅되는 SFTP 서버에 라이브러리 빌드를 전달하는 방법에 대해 알아봅니다.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: a077d3a1b14d9b7786d3181a556c49e940a42c2f
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 11%
+source-wordcount: '751'
+ht-degree: 6%
 
 ---
 
 # SFTP 호스트
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Experience Platform을 사용하면 호스팅하는 보안 SFTP 서버에 태그 라이브러리 빌드를 전달할 수 있으므로, 빌드의 저장 및 관리 방법을 보다 세밀하게 제어할 수 있습니다. 이 안내서에서는 Experience Platform UI 또는 데이터 수집 UI에서 태그 속성에 대한 SFTP 호스트를 설정하는 방법을 다룹니다.
 
@@ -51,11 +47,11 @@ Experience Platform이 SFTP 서버에 연결할 수 있도록 하기 위해 회�
 
 ## SFTP 호스트 만들기 {#create}
 
-왼쪽 탐색에서 **[!UICONTROL 호스트]**&#x200B;를 선택한 다음 **[!UICONTROL 호스트 추가]**&#x200B;를 선택하십시오.
+왼쪽 탐색에서 **[!UICONTROL Hosts]**&#x200B;을(를) 선택한 후 **[!UICONTROL Add Host]**&#x200B;을(를) 선택합니다.
 
 ![UI에서 선택 중인 호스트 추가 단추를 보여 주는 이미지](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 
-호스트 생성 대화 상자가 나타납니다. 호스트의 이름을 입력하고 **[!UICONTROL 유형]**&#x200B;에서 **[!UICONTROL SFTP]**&#x200B;을(를) 선택합니다.
+호스트 생성 대화 상자가 나타납니다. 호스트의 이름을 입력하고 **[!UICONTROL Type]**&#x200B;에서 **[!UICONTROL SFTP]**&#x200B;을(를) 선택합니다.
 
 ![선택 중인 SFTP 호스팅 옵션을 보여 주는 이미지](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
 
@@ -67,18 +63,18 @@ Experience Platform이 SFTP 서버에 연결할 수 있도록 하기 위해 회�
 
 | 구성 필드 | 설명 |
 | --- | --- |
-| [!UICONTROL 심볼릭 링크 사용 안 함] | 기본적으로 모든 SFTP 호스트는 기호 링크(symlink)를 사용하여 서버에 저장된 라이브러리 [빌드](../builds.md)를 참조합니다. 그러나 모든 서버가 symlink의 사용을 지원하는 것은 아닙니다. 이 옵션을 선택하면 호스트가 심볼릭 링크를 사용하는 대신 복사 작업을 사용하여 빌드 에셋을 직접 업데이트합니다. |
-| [!UICONTROL SFTP 서버 URL] | 서버의 URL 기본 경로입니다. |
-| [!UICONTROL 경로] | 이 호스트의 기본 서버 URL에 추가할 경로입니다. |
-| [!UICONTROL 포트] | 포트는 다음 중 하나여야 합니다.<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>보안 모범 사례로서 Adobe는 발신 트래픽에 사용할 수 있는 포트 수를 제한합니다. 선택한 포트는 일반적으로 회사 방화벽을 통해 허용되며 일부 범위의 유연성을 포함합니다. |
-| [!UICONTROL 사용자 이름] | 서버에 액세스할 때 사용할 사용자 이름입니다. |
-| [!UICONTROL 암호화된 개인 키] | [이전 단계](#access-key)에서 만든 암호화된 개인 키입니다. |
+| [!UICONTROL Don't Use Symlinks] | 기본적으로 모든 SFTP 호스트는 기호 링크(symlink)를 사용하여 서버에 저장된 라이브러리 [빌드](../builds.md)를 참조합니다. 그러나 모든 서버가 symlink의 사용을 지원하는 것은 아닙니다. 이 옵션을 선택하면 호스트가 심볼릭 링크를 사용하는 대신 복사 작업을 사용하여 빌드 에셋을 직접 업데이트합니다. |
+| [!UICONTROL SFTP Server URL] | 서버의 URL 기본 경로입니다. |
+| [!UICONTROL Path] | 이 호스트의 기본 서버 URL에 추가할 경로입니다. |
+| [!UICONTROL Port] | 포트는 다음 중 하나여야 합니다.<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>보안 모범 사례로서 Adobe는 발신 트래픽에 사용할 수 있는 포트 수를 제한합니다. 선택한 포트는 일반적으로 회사 방화벽을 통해 허용되며 일부 범위의 유연성을 포함합니다. |
+| [!UICONTROL Username] | 서버에 액세스할 때 사용할 사용자 이름입니다. |
+| [!UICONTROL Encrypted Private Key] | [이전 단계](#access-key)에서 만든 암호화된 개인 키입니다. |
 
-선택한 구성으로 호스트를 만들려면 **[!UICONTROL 저장]**&#x200B;을 선택하십시오.
+선택한 구성으로 호스트를 만들려면 **[!UICONTROL Save]**&#x200B;을(를) 선택하십시오.
 
 ![저장 중인 SFTP 호스트를 보여 주는 이미지](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
-**[!UICONTROL 저장]**&#x200B;을 선택하면 SFTP 서버에 파일을 전달할 수 있는 연결 및 기능이 테스트됩니다. Experience Platform은 폴더를 만들고 해당 폴더 내에 파일을 작성한 다음, 파일이 폴더에 있는지 확인한 후 삭제합니다. SFTP 서버의 사용자 계정(Experience Platform에 제공한 보안 인증서에 첨부된 계정)에 이 작업을 수행하는 데 필요한 권한이 없는 경우 호스트가 &quot;실패&quot; 상태로 전환됩니다.
+**[!UICONTROL Save]**&#x200B;을(를) 선택하면 SFTP 서버에 파일을 전달할 수 있는 연결 및 기능이 테스트됩니다. Experience Platform은 폴더를 만들고 해당 폴더 내에 파일을 작성한 다음, 파일이 폴더에 있는지 확인한 후 삭제합니다. SFTP 서버의 사용자 계정(Experience Platform에 제공한 보안 인증서에 첨부된 계정)에 이 작업을 수행하는 데 필요한 권한이 없는 경우 호스트가 &quot;실패&quot; 상태로 전환됩니다.
 
 ## 다음 단계
 

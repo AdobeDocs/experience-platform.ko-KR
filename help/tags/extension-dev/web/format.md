@@ -2,18 +2,14 @@
 title: 웹 확장의 라이브러리 모듈
 description: Adobe Experience Platform에서 웹 확장에 대한 라이브러리 모듈의 형식을 지정하는 방법을 알아봅니다.
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: b3754c94843f32ba58aa1e020dface1179372de3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 63%
+source-wordcount: '327'
+ht-degree: 72%
 
 ---
 
 # 웹 확장의 라이브러리 모듈
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 >[!IMPORTANT]
 >

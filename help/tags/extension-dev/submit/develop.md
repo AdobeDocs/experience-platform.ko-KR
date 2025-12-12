@@ -2,18 +2,14 @@
 title: 확장 개발
 description: 이 문서에서는 태그 확장 개발 프로세스에 대한 일반적인 개요를 제공하고, 보다 자세한 프로세스를 안내하는 추가 설명서에 대한 링크를 제공합니다.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: 3f5e432ef381c10d8197724783135637d01a120e
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 26%
+source-wordcount: '391'
+ht-degree: 18%
 
 ---
 
 # 확장 개발
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 태그 확장은 자체 요구 사항이 있는 (소규모) 제품으로 간주해야 합니다. Adobe Experience Platform 사용자가 확장을 사용할 방법을 결정하면 확장에서 제공해야 하는 이벤트 유형, 조건 유형, 작업 유형 및 데이터 요소 유형으로 기능을 정렬할 수 있습니다.
 

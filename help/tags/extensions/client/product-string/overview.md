@@ -2,18 +2,14 @@
 title: Adobe Analytics 제품 문자열 확장 프로그램 개요
 description: Adobe Experience Platform의 Adobe Analytics 제품 문자열 태그 확장에 대해 알아봅니다.
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
-source-git-commit: 36ca1e63c043baa776f27b627cdbe493b2ced674
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 85%
+source-wordcount: '470'
+ht-degree: 94%
 
 ---
 
 # Adobe Analytics 제품 문자열 확장 개요
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 `products` 변수는 사용자가 사이트에서 제품과 어떻게 상호 작용하는지를 추적합니다. 예를 들어 `products` 변수는 몇 번이나 제품을 보았는지, 장바구니에 추가했는지, 체크아웃했는지 및 구입했는지를 추적할 수 있습니다. 또한 사이트에 있는 머천다이징 카테고리의 상대적 효과를 추적할 수도 있습니다.
 
@@ -27,7 +23,7 @@ ht-degree: 85%
 Category;Product;Quantity;Price;eventN=X|eventN2=X2;eVarN=merch_category|eVarN2=merch_category2
 ```
 
-전체 문서를 보려면 [제품](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html?lang=ko)을 참조하십시오.
+전체 문서를 보려면 [제품](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html)을 참조하십시오.
 
 ## 확장 지침
 
@@ -81,7 +77,7 @@ digitalData.transaction.item.productInfo.productName
 
 구현에서 사용자 지정 이벤트 또는 머천다이징 eVar를 사용하는 경우 다음 단계를 수행합니다.
 
-1. 연결된 **[!UICONTROL 추가]** 단추를 선택하십시오.
+1. 관련 **[!UICONTROL Add]** 버튼을 선택합니다.
 1. 드롭다운에서 설정해야 하는 이벤트 또는 eVar를 선택합니다.
 1. 위에서 설명한 것과 동일한 구문을 사용하여 적절한 데이터 계층 변수의 경로를 입력합니다.
 
@@ -93,5 +89,5 @@ digitalData.transaction.item.productInfo.productName
 
 ### 요구 사항
 
-* 모든 제품 관련 데이터(예: 제품 ID, 수량, 가격)에 대한 변수와 함께 개체를 기반으로 한 [데이터 계층](https://theblog.adobe.com/data-layers-buzzword-best-practice/)입니다. 이 확장 프로그램은 어레이 기반 데이터 레이어에서 작동하지 않습니다.
+* 모든 제품 관련 데이터(예: 제품 ID, 수량, 가격)에 대한 변수와 함께 개체를 기반으로 한 [데이터 계층](https://theblog.adobe.com/data-layers-buzzword-best-practice/)입니다. 이 확장 프로그램은 배열 기반 데이터 레이어에서 작동하지 않습니다.
 * [Adobe Analytics](../analytics/overview.md) 확장 프로그램을 설치해야 합니다.

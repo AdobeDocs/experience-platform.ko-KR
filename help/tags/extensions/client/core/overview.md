@@ -2,18 +2,14 @@
 title: 코어 확장 개요
 description: Adobe Experience Platform의 Core Tag Extension에 대해 알아봅니다.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '5425'
-ht-degree: 62%
+source-wordcount: '5380'
+ht-degree: 61%
 
 ---
 
 # 코어 확장 개요
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 코어 태그 확장은 Adobe Experience Platform과 함께 릴리스된 기본 확장입니다.
 

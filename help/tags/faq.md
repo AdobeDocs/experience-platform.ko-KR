@@ -2,18 +2,14 @@
 title: 태그 문제 해결 안내서
 description: Adobe Experience Platform의 태그에 대해 자주 묻는 질문에 대한 답변을 얻으십시오.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 23%
+source-wordcount: '987'
+ht-degree: 25%
 
 ---
 
 # 태그 문제 해결 안내서
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](./term-updates.md)를 참조하십시오.
 
 이 문서에서는 Adobe Experience Platform의 태그에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 
@@ -37,7 +33,7 @@ ht-degree: 23%
 
 ## 모든 타사 확장은 바로 이용할 수 있습니까?
 
-확장 프로그램은 Adobe 솔루션 및 점차 크게 늘어나고 있는 독립적인 분석, 마케팅, 광고, 동의 공급업체 및 기술에 이미 제공되고 있습니다. 에코시스템을 확장하기 위해 파트너와 계속 협력하고 있습니다. 확장 프로그램은 기술 소유자가 구축, 관리 및 업데이트할 수 있으므로 고객은 Adobe 엔지니어링이 확장 프로그램을 구축할 때까지 기다리지 않아도 됩니다.
+확장 프로그램은 Adobe 솔루션 및 점차 크게 늘어나고 있는 독립적인 분석, 마케팅, 광고, 동의 공급업체 및 기술에 이미 제공되고 있습니다. 에코시스템을 확장하기 위해 파트너와 계속 협력하고 있습니다. 확장 프로그램은 기술 소유자가 구축, 관리 및 업데이트할 수 있으므로 고객은 Adobe 엔지니어링 팀이 확장 프로그램을 구축할 때까지 기다리지 않아도 됩니다.
 
 ## 클라이언트나 파트너가 확장 프로그램을 구축할 수 있는 경우는 언제입니까?
 
@@ -53,7 +49,7 @@ Adobe에는 동일한 확장 프로그램 개발 방법을 사용하여 자체 �
 
 ## 언제 태그로 이동할 수 있습니까?
 
-지금이 태그로 이동하기에 가장 좋은 때입니다. 마이그레이션 프로세스를 통해 DTM 속성을 태그에 쉽게 복사할 수 있습니다. 포괄적인 테스트를 권장하지만, 가능한 한 많이 자동화했습니다(페이지에 내장된 코드 변경 사항 및 규칙 및 데이터 요소의 자동 마이그레이션 없음).
+지금이 태그로 이동하기에 가장 좋은 때입니다. 마이그레이션 프로세스를 통해 DTM 속성을 태그에 쉽게 복사할 수 있습니다. 포괄적인 테스트를 권장하지만, 가능한 한 많이 자동화했습니다(페이지에 임베드 코드 변경 사항 및 규칙 및 데이터 요소의 자동 마이그레이션 없음).
 
 ## 태그가 단일 페이지 앱과 즐겨찾는 프레임워크를 지원합니까?
 
@@ -93,4 +89,4 @@ Adobe Admin Console에서 제품 프로필을 구성하여 속성 관리 권한�
 
 ## 다른 질문이 있을 경우 어떻게 합니까?
 
-다른 질문이 있는 경우 Experience League의 [Adobe Experience Platform 데이터 수집 커뮤니티 페이지](https://adobe.com/go/launchme)에 문의하거나 개발자 및 기술 구현 항목을 위한 [커뮤니티 Slack 작업 공간](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform)에 참여하십시오.
+다른 질문이 있는 경우 Experience League의 [Adobe Experience Platform 데이터 수집 커뮤니티 페이지](https://adobe.com/go/launchme)에 문의하거나 [커뮤니티 Slack 작업 영역](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform)에 참여하여 개발자 및 기술 구현 항목을 확인할 수 있습니다.

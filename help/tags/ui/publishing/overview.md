@@ -2,18 +2,14 @@
 title: 게시 개요
 description: Adobe Experience Platform에서 태그 관리 코드 라이브러리에 변경 사항을 게시하는 프로세스에 대해 알아봅니다.
 exl-id: 32eaad87-d7dc-4812-b546-a136511512fe
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 79%
+source-wordcount: '565'
+ht-degree: 78%
 
 ---
 
 # 게시 개요
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform을 사용하면 개별 라이브러리 내에서 태그 관리 코드에 대한 변경 사항을 캡슐화할 수 있습니다. 이제 여러 팀이 여러 라이브러리를 동시에 개발할 수 있으므로 이러한 라이브러리는 프로덕션 환경으로 푸시하기 전에 변경 사항을 병합하기 위해 신중하고 허가된 프로세스를 따라야 합니다.
 

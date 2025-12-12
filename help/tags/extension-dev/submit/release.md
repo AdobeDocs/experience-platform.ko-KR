@@ -2,18 +2,14 @@
 title: 확장 릴리스
 description: Adobe Experience Platform에서 태그 확장을 비공개 또는 공개적으로 릴리스하는 방법을 알아봅니다.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 25%
+source-wordcount: '433'
+ht-degree: 17%
 
 ---
 
 # 확장 릴리스
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 테스트 및 문서화가 완료되면 확장을 릴리스할 수 있습니다. 현재 수행할 수 있는 릴리스 유형은 다음의 두 가지입니다.
 
@@ -38,8 +34,8 @@ npx @adobe/reactor-releaser
 
 >[!NOTE]
 > 기본적으로 릴리스에서는 서버 간 Oauth 흐름에 Adobe I/O 자격 증명이 필요합니다. 기존 `jwt-auth` 자격 증명
-> &#x200B;> 2025년 1월 1일에 사용이 중단될 때까지 `npx @adobe/reactor-releaser@v3.1.3`을(를) 실행하여 사용할 수 있습니다. 필요한 매개 변수
-> &#x200B;> `jwt-auth` 버전을 실행하려면 [여기](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5)에 있습니다.
+> 2025년 1월 1일에 사용이 중단될 때까지 `npx @adobe/reactor-releaser@v3.1.3`을(를) 실행하여 사용할 수 있습니다. 필요한 매개 변수
+> `jwt-auth` 버전을 실행하려면 [여기](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5)에 있습니다.
 
 릴리스에는 몇 가지 정보만 입력해야 합니다. Adobe I/O 콘솔에서 `clientId` 및 `clientSecret`을(를) 검색할 수 있습니다. I/O 콘솔에서 [통합 페이지](https://console.adobe.io/integrations)&#x200B;(으)로 이동합니다. 드롭다운에서 올바른 조직을 선택하고 올바른 통합을 찾은 다음 **[!UICONTROL View]**&#x200B;을(를) 선택합니다.
 

@@ -2,18 +2,14 @@
 title: 타사 라이브러리 구현
 description: Adobe Experience Platform 태그 확장 내에서 타사 라이브러리를 호스팅하는 다양한 방법에 대해 알아봅니다.
 exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1315'
-ht-degree: 65%
+source-wordcount: '1270'
+ht-degree: 66%
 
 ---
 
 # 타사 라이브러리 구현
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform에서 태그 확장의 주요 목적 중 하나는 기존 마케팅 기술(라이브러리)을 웹 사이트에 쉽게 구현할 수 있도록 하는 것입니다. 확장을 사용하면 웹 사이트의 HTML을 수동으로 편집하지 않고도 타사 컨텐츠 전달 네트워크(CDN)에서 제공하는 라이브러리를 구현할 수 있습니다.
 
@@ -25,7 +21,7 @@ Adobe Experience Platform에서 태그 확장의 주요 목적 중 하나는 기
 
 ## 기본 코드 로드 프로세스
 
-태그의 컨텍스트 밖에서 마케팅 기술이 일반적으로 웹 사이트에서 로드되는 방식을 이해하는 것이 중요합니다. 타사 라이브러리 공급업체는 라이브러리의 기능을 로드하기 위해 웹 사이트의 HTML 내에 포함되어야 하는 코드 조각(기본 코드라고 함)을 제공합니다.
+태그의 컨텍스트 밖에서 마케팅 기술이 일반적으로 웹 사이트에서 로드되는 방식을 이해하는 것이 중요합니다. 타사 라이브러리 공급업체는 라이브러리의 기능을 로드하기 위해 웹 사이트의 HTML 내에 임베드되어야 하는 코드 조각(기본 코드라고 함)을 제공합니다.
 
 일반적으로 마케팅 기술의 기본 코드는 사이트에서 로드할 때 다음 프로세스의 일부 변형을 실행합니다.
 
@@ -98,9 +94,9 @@ firstScriptElement.parentNode.insertBefore(
    - [기본 코드 로드 프로세스](#base-code-loading-process)
       - [기본 코드 예](#base-code-example)
    - [태그 구현 옵션](#tags-implementation-options)
-      - [공급업체 호스트 에서 런타임에 로드{#vendor-host}](#load-at-runtime-from-the-vendor-host-vendor-host)
+      - [공급업체 호스트에서 런타임에 로드](#load-at-runtime-from-the-vendor-host-vendor-host)
       - [태그 라이브러리 호스트에서 런타임에 로드](#load-at-runtime-from-the-tag-library-host)
-      - [라이브러리를 직접 포함](#embed-the-library-directly)
+      - [라이브러리를 직접 임베드](#embed-the-library-directly)
    - [다음 단계](#next-steps)
 
 ### 공급업체 호스트에서 런타임에 로드 {#vendor-host}
@@ -203,7 +199,7 @@ module.exports = function() {
 
 이 방법을 사용할 때는 라이브러리가 CDN에서 업데이트될 때마다 다운로드한 공급업체 파일을 수동으로 업데이트하고 변경 사항을 새 버전의 확장에 릴리스해야 합니다.
 
-### 라이브러리를 직접 포함
+### 라이브러리를 직접 임베드
 
 라이브러리 코드를 작업 코드 자체에 직접 포함시켜 공급업체 라이브러리를 완전히 로드할 필요가 없으므로 효율적으로 기본 태그 라이브러리의 일부로 사용할 수 있습니다. 이 방법을 사용하면 기본 라이브러리의 크기가 증가하지만 별도의 파일을 검색하기 위해 추가 HTTP 요청을 수행할 필요가 없습니다.
 

@@ -2,18 +2,14 @@
 title: 이전 버전과의 호환성 표준
 description: 업데이트된 버전의 태그 확장이 이전 버전과 호환되는지 확인하는 Adobe Experience Platform의 이전 버전 호환성 표준에 대해 알아봅니다.
 exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 81%
+source-wordcount: '788'
+ht-degree: 86%
 
 ---
 
 # 이전 버전과의 호환성 표준
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform의 태그 확장 업데이트는 이전 버전의 확장과 호환되어야 합니다. 이것의 의미는 다음과 같습니다.
 

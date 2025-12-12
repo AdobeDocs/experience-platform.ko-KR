@@ -2,18 +2,14 @@
 title: YouTube 비디오 추적 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 YouTube 비디오 추적 태그 확장에 대한 최신 릴리스 정보입니다.
 exl-id: 5c680b1d-3970-42ed-9956-e78ead7b3662
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 14%
+source-wordcount: '93'
+ht-degree: 22%
 
 ---
 
 # YouTube Video Tracking 확장 릴리스 노트
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 ## 2021년 6월 4일
 
@@ -24,7 +20,7 @@ ht-degree: 14%
 * 여러 iFrame이 있는 페이지에 대한 버그 수정
 * 브랜딩 이름 변경
 
-## 2021년 4월 23일
+## 2021년 4월 23일 토요일
 
 ### YouTube 비디오 추적 확장 2.0.0
 

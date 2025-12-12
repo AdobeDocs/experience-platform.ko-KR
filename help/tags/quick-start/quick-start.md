@@ -2,18 +2,14 @@
 title: 빠른 시작 안내서
 description: Adobe Experience Platform에서 태그를 빠르게 시작하고 실행하는 방법에 대해 알아봅니다.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1522'
-ht-degree: 44%
+source-wordcount: '1473'
+ht-degree: 42%
 
 ---
 
 # 빠른 시작 안내서
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
 
 태그는 Adobe Experience Platform의 차세대 태그 관리 기술입니다. Adobe 고객이 자신의 사이트에 배포할 수 있는 자체 통합을 빌드할 수 있는 개방적이고 지속 가능한 에코시스템을 지원하도록 완전히 새로 빌드되었습니다. UI를 통해 수행할 수 있는 것은 무엇이든 API를 통해 프로그래밍 방식으로 수행할 수도 있는 API 최초 애플리케이션입니다.
 
@@ -27,7 +23,7 @@ ht-degree: 44%
 6. 개발 환경에서 테스트합니다.
 7. 프로덕션으로 승격.
 
-## 1. 그룹 및 사용자 설정
+## &#x200B;1. 그룹 및 사용자 설정
 
 태그는 Adobe ID과 완전히 통합됩니다. 사용자 권한은 [!DNL Creative Cloud], [!DNL Document Cloud] 및 Experience Cloud의 다른 Adobe 제품 및 솔루션과 함께 Admin Console을 통해 관리됩니다.
 
@@ -35,21 +31,21 @@ ht-degree: 44%
 
 그룹을 만들고 태그에 대한 사용자를 추가하는 방법에 대한 자세한 지침은 [데이터 수집 권한 안내서](../../collection/permissions.md)를 참조하십시오.
 
-## 2. 로그인
+## &#x200B;2. 로그인
 
-Adobe ID에 태그 권한이 추가되면 Experience Platform UI 또는 데이터 수집 UI에 로그인해야 합니다. 이렇게 하려면 [Experience Cloud 로그인 화면](https://experience.adobe.com/)&#x200B;(으)로 직접 이동한 다음 **[!UICONTROL 데이터 수집]** 또는 **[!UICONTROL Experience Platform]**&#x200B;을(를) 선택하면 됩니다.
+Adobe ID에 태그 권한이 추가되면 Experience Platform UI 또는 데이터 수집 UI에 로그인해야 합니다. 이렇게 하려면 [Experience Cloud 로그인 화면](https://experience.adobe.com/)&#x200B;(으)로 직접 이동한 다음 **[!UICONTROL Data Collection]** 또는 **[!UICONTROL Experience Platform]**&#x200B;을(를) 선택하면 됩니다.
 
 >[!NOTE]
 >
 >여러 조직에 대한 권한이 있는 단일 계정이 있는 경우 화면 상단의 컨트롤 막대에서 조직 이름을 선택하고 드롭다운 목록에서 다른 조직을 선택하여 조직을 변경할 수 있습니다.
 
-## 3. 속성 만들기
+## &#x200B;3. 속성 만들기
 
 UI에 로그인하면 맨 먼저 속성을 만듭니다. 속성은 사이트에 태그를 배포할 때 기본적으로 확장, 규칙, 데이터 요소 및 라이브러리로 채우는 컨테이너입니다. 많은 사람들이 동일한 태그 세트를 배포하려는 각 웹 사이트(또는 밀접하게 연관된 사이트 그룹)에 대한 속성을 만듭니다.
 
 속성 만들기에 대한 자세한 내용은 [속성 만들기](../ui/administration/companies-and-properties.md)를 참조하십시오.
 
-## 4. 확장 설치
+## &#x200B;4. 확장 설치
 
 확장은 Adobe 또는 Adobe 파트너가 빌드한 통합으로, 사용자가 자신의 사이트에 배포할 수 있는 태그에 대한 새롭고 무한한 옵션을 추가합니다. 태그를 운영 체제라고 생각하면 확장은 사용자가 설치하는 앱으로, 태그가 수행해야 하는 특정 작업을 수행합니다.
 
@@ -57,7 +53,7 @@ UI에 로그인하면 맨 먼저 속성을 만듭니다. 속성은 사이트에 
 
 Experience Platform의 태그를 고유하게 만드는 것은 이러한 확장을 누구나 구축할 수 있다는 것입니다. 사이트에서 Facebook 리마케팅 픽셀을 삭제해야 합니까? Facebook에서 작성한 확장을 확인합니다. Twitter나 LinkedIn에 대해 동일하게 하시겠습니까? 그러한 확장을 사용합니다. 설문 조사를 실행해야 합니까? Question Pro 또는 Foresee를 참조하십시오. [!DNL GDPR]을(를) 지원하기 위해 최종 사용자의 개인 정보를 관리하고 동의를 받아야 합니까? Evidon 및 Trust Arc를 살펴보십시오. 세분화된 insight을 통해 사이트에서 개별 사용자의 행동을 보시겠습니까? Clicktale을 살펴보십시오. 자세한 내용은 [새 확장 추가](../ui/managing-resources/extensions/overview.md#add-a-new-extension)에 대한 섹션을 참조하십시오.
 
-## 5. 데이터 요소 및 규칙 만들기
+## &#x200B;5. 데이터 요소 및 규칙 만들기
 
 **데이터 요소**&#x200B;는 수집하여 페이지의 다른 위치로 전송할 정보에 대한 포인터입니다.
 
@@ -71,7 +67,7 @@ Experience Platform의 태그를 고유하게 만드는 것은 이러한 확장�
 
 **규칙**&#x200B;은 구현의 논리 코어에 있으며, 사이트에서 모든 태그의 내용, 시기, 시기, 위치 및 방법을 제어합니다. 이벤트를 정의하고, 조건 및 예외를 설정한 다음 작업 및 순서를 정의합니다. 마지막으로 변경 사항을 게시하여 결과를 확인합니다. 자세한 내용은 [규칙](../ui/managing-resources/rules.md)을 참조하십시오.
 
-## 6. 개발 환경에서 테스트
+## &#x200B;6. 개발 환경에서 테스트
 
 ### 라이브러리 및 빌드
 
@@ -83,7 +79,7 @@ Experience Platform의 태그를 고유하게 만드는 것은 이러한 확장�
 
    각 환경은 호스트와 관계를 맺고 있고, 호스트는 빌드를 전달할 위치를 나타내는 엔드포인트를 제공합니다. 속성은 여러 호스트를 가질 수 있지만 호스트는 하나의 속성에만 속할 수 있습니다.
 
-2. 포함 코드는 웹 사이트 HTML의 `<head>` 섹션으로 이동하는 `<script>` 형식의 태그로 제공됩니다.
+2. 포함 코드는 웹 사이트 HTML의 `<script>` 섹션으로 이동하는 `<head>` 형식의 태그로 제공됩니다.
 
    환경을 만들고 호스트를 연결할 때 환경에서는 할당된 빌드를 사이트에 통합할 수 있는 고유한 포함 코드를 자동으로 생성합니다. `<script>` 코드는 런타임에 라이브러리 빌드를 배포하는 데 사용됩니다.
 
@@ -104,7 +100,7 @@ Experience Platform의 태그를 고유하게 만드는 것은 이러한 확장�
 * **호스트:** 각 환경에는 이 환경에서 만든 빌드가 푸시될 끝점을 결정하는 호스트가 필요합니다.
 * **보관:** 기본적으로 축소된 .js 파일로 빌드를 배포하는 것입니다. 사용자 지정 코드를 사용하는 경우 서로 참조하는 파일이 여러 개 있을 수 있습니다. 이를 하나의 zip 파일로 결합하여 암호화할 수 있습니다.
 
-환경을 저장하면 웹 사이트에 복사하여 붙여넣을 수 있는 포함 코드가 생성됩니다. 포함 코드는 라이브러리를 만들고 빌드를 생성할 때까지 작동하지 않습니다. 자세한 내용은 [환경](../ui/publishing/environments.md)을 참조하십시오.
+환경을 저장하면 웹 사이트에 복사하여 붙여넣을 수 있는 임베드 코드가 생성됩니다. 포함 코드는 라이브러리를 만들고 빌드를 생성할 때까지 작동하지 않습니다. 자세한 내용은 [환경](../ui/publishing/environments.md)을 참조하십시오.
 
 ### 개발에 빌드 게시
 
@@ -112,11 +108,11 @@ Experience Platform의 태그를 고유하게 만드는 것은 이러한 확장�
 
 1. 호스트를 만듭니다.
 1. 작성한 호스트를 사용하여 개발 환경을 만듭니다.
-1. 개발 환경에서 개발 테스트 사이트에 포함 코드를 배포합니다.
+1. 개발 환경에서 개발 테스트 사이트에 임베드 코드를 배포합니다.
 1. 라이브러리를 만들고 만든 개발 환경에 할당합니다.
 1. 라이브러리를 빌드합니다.
 
-## 7. 프로덕션으로 승격
+## &#x200B;7. 프로덕션으로 승격
 
 개발 환경에서 빌드를 테스트한 후에는 스테이징 및 프로덕션 환경을 만들고 임베드된 코드를 필요한 위치에 배치하십시오. 이러한 목적으로 기존 호스트를 재사용할 수 있습니다.
 
@@ -134,6 +130,6 @@ Experience Platform의 태그를 고유하게 만드는 것은 이러한 확장�
 
 태그에 대한 자세한 내용은 다음 리소스를 참조하십시오.
 
-* **[데이터 수집 커뮤니티](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community?profile.language=ko)**: 질문 및 답변하고, 아이디어를 제출하고, 다른 사람의 아이디어를 투표할 수 있습니다. Adobe ID으로 로그인합니다.
+* **[데이터 수집 커뮤니티](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: 질문 및 답변하고, 아이디어를 제출하고, 다른 사람의 아이디어를 투표할 수 있습니다. Adobe ID으로 로그인합니다.
 * **[개발자 문서](../api/overview.md)**: 태그 개발자 커뮤니티에 참여하여 확장을 빌드하거나 태그 API를 사용합니다
-* **[자습서 개요](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=ko)**: 이 문서에서는 Android 앱의 이벤트 전달 및 모바일 SDK을 포함한 태그 개념을 소개합니다.
+* **[자습서 개요](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**: 이 문서에서는 Android 앱의 이벤트 전달 및 모바일 SDK을 포함한 태그 개념을 소개합니다.

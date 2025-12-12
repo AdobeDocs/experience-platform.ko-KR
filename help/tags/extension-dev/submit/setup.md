@@ -2,18 +2,14 @@
 title: Experience Cloud 조직 설정
 description: Adobe Experience Platform용 확장 개발을 시작하기 위해 Adobe Experience Cloud 조직을 등록하는 방법에 대해 알아봅니다.
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 31%
+source-wordcount: '528'
+ht-degree: 34%
 
 ---
 
 # Experience Cloud 조직 설정
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform에서 태그 확장을 개발하려면 Adobe Experience Cloud 조직을 등록해야 합니다.
 
@@ -31,7 +27,7 @@ Experience Cloud 고객은 계약이 체결되면 조직에 할당됩니다. 기
 
 ## 솔루션 파트너 프로그램(SPP)
 
-이 프로그램은 Adobe 고객이 투자를 최대한 활용할 수 있도록 지원하는 컨설팅 기업과 Adobe 솔루션을 리셀하는 파트너를 위한 프로그램이다. 솔루션 파트너 프로그램에 참여하는 방법에 대한 단계별 안내서를 보려면 [Adobe Spark 웹 사이트](https://spark.adobe.com/page/7PKZzIJJjkcDd/)(으)로 이동하거나 [솔루션 파트너 프로그램 사이트](https://solutionpartners.adobe.com/home.html)를 참조하십시오.
+이 프로그램은 Adobe 고객이 Adobe 솔루션을 재판매하는 투자 및 파트너를 최대한 활용할 수 있도록 지원하는 컨설팅 회사를 위한 프로그램입니다. 솔루션 파트너 프로그램에 참여하는 방법에 대한 단계별 안내서를 보려면 [Adobe Spark 웹 사이트](https://spark.adobe.com/page/7PKZzIJJjkcDd/)&#x200B;(으)로 이동하거나 [솔루션 파트너 프로그램 사이트](https://solutionpartners.adobe.com/home.html)를 참조하십시오.
 
 >[!NOTE]
 >

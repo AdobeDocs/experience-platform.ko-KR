@@ -2,18 +2,14 @@
 title: Adobe Target 확장 개요
 description: Adobe Experience Platform의 Adobe Target용 태그 확장에 대해 알아봅니다.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1179'
-ht-degree: 71%
+source-wordcount: '1126'
+ht-degree: 78%
 
 ---
 
 # Adobe Target 확장 개요
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -23,9 +19,9 @@ ht-degree: 71%
 >
 > Adobe Target 확장을 사용하려면 at.js가 필요합니다. 이 확장은 mbox.js를 지원하지 않습니다.
 
-Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고 Target 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
+Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL Extensions > Catalog]**&#x200B;를 선택하고 Target 확장을 마우스로 가리킨 다음 **[!UICONTROL Install]**&#x200B;을 선택합니다.
 
-확장을 구성하려면 [!UICONTROL 확장] 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+확장을 구성하려면 [!UICONTROL Extensions] 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL Configure]**&#x200B;을 선택합니다.
 
 ![](../../../images/ext-target-config.png)
 
@@ -68,11 +64,11 @@ Target이 브라우저에서 쿠키를 설정하는 위치를 결정합니다.
 
 정의한 기간 내에 Target에서 응답을 받지 못하면 요청 시간이 초과되고 기본 콘텐츠가 표시됩니다. 방문자 세션 중에 추가 요청을 계속 시도합니다. 기본값은 3000ms이며, 이 값은 Target 사용자 인터페이스에 구성된 시간 초과와 다를 수 있습니다.
 
-시간 초과 설정 작동 방식에 대한 자세한 내용은 [Adobe Target 도움말](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=ko)을 참조하십시오.
+시간 초과 설정 작동 방식에 대한 자세한 내용은 [Adobe Target 도움말](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html)을 참조하십시오.
 
 #### Target 사용자 인터페이스에서 사용할 수 있는 기타 at.js 설정
 
-Target UI의 [!UICONTROL at.js 설정 편집] 페이지에서 사용할 수 있는 몇 가지 설정은 Target 확장의 일부가 아닙니다. 다음은 추천 해결 방법입니다.
+Target UI의 [!UICONTROL Edit at.js settings] 페이지에서 사용할 수 있는 몇 가지 설정은 Target 확장의 일부가 아닙니다. 다음은 추천 해결 방법입니다.
 
 * Auto-create global mbox. 이 설정은 Target 확장에서 글로벌 Mbox 실행 작업에 의해 대체됩니다.
 * Library Header. 이 설정은 Target 확장의 일부가 아닙니다. Target 로드 작업을 사용하기 전에 Core Extension>Custom Code 작업에서 at.js 앞에 로드해야 하는 코드를 지정합니다.
@@ -115,7 +111,7 @@ Target 확장은 규칙의 Then 부분에서 다음 작업을 제공합니다.
 * **Body Hiding:** 이 설정을 활성화하거나 비활성화할 수 있습니다. 기본값은 Enabled로, HTML BODY가 숨겨짐을 의미합니다.
 * **Body Hidden Style:** 기본값은 `body{opacity:0}`입니다. 이 값은 `body{display:none}`과 같은 다른 값으로 변경될 수 있습니다.
 
-자세한 내용은 [Target 온라인 도움말 설명서](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=ko)를 참조하십시오.
+자세한 내용은 [Target 온라인 도움말 설명서](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html)를 참조하십시오.
 
 ## Adobe Target 기본 배포
 

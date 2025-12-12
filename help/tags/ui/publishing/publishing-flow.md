@@ -2,10 +2,10 @@
 title: 게시 플로우
 description: Adobe Experience Platform에서 라이브러리를 만들고 빌드를 테스트하고 프로덕션용으로 승인하는 프로세스에 대해 알아봅니다.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1407'
-ht-degree: 66%
+source-wordcount: '1362'
+ht-degree: 65%
 
 ---
 
@@ -15,10 +15,6 @@ ht-degree: 66%
 >id="platform_tags_publishing_flow"
 >title="게시 플로우"
 >abstract="개발, 승인, 게시 권한을 포함하여 게시 흐름에 필요한 사용자 권한 수준에 대해 알아봅니다."
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform의 태그 게시 플로우는 라이브러리를 만들고 빌드를 테스트하고 프로덕션용으로 승인하는 프로세스를 의미합니다.
 

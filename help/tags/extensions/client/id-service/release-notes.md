@@ -2,20 +2,16 @@
 title: Adobe Experience Cloud ID 서비스 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe Experience Cloud Identity 서비스 태그 확장 기능에 대한 최신 릴리스 정보입니다.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 61%
+source-wordcount: '643'
+ht-degree: 66%
 
 ---
 
 # Adobe Experience Cloud Identity Service 확장 릴리스 노트
 
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
-
-이 문서에서는 Adobe Experience Cloud Identity 서비스 태그 확장에 대한 릴리스 정보를 다룹니다. Experience Cloud ID 서비스 자체에 대한 릴리스 노트는 [ID 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ko)를 참조하십시오.
+이 문서에서는 Adobe Experience Cloud Identity 서비스 태그 확장에 대한 릴리스 정보를 다룹니다. Experience Cloud ID 서비스 자체에 대한 릴리스 노트는 [ID 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html)를 참조하십시오.
 
 ## 2022년 10월 17일
 
@@ -52,7 +48,7 @@ ht-degree: 61%
 
 ### Experience Cloud ID 확장 5.2.1
 
-* 이 패치에는 Google Chrome 브라우저의 `SameSite=None` 특성이 있는 iFrame에서 쿠키를 쓰는 수정 사항이 포함되어 있습니다.
+* 이 패치에는 Google Chrome 브라우저의 `SameSite=None` 속성이 있는 iFrame에서 쿠키를 쓰는 수정 사항이 포함되어 있습니다.
 
 ## 2020년 10월 27일
 
@@ -150,7 +146,7 @@ ht-degree: 61%
 ### Experience Cloud ID 확장 4.0.0
 
 * visitor.js가 4.0으로 업데이트되었습니다.
-* 새로 내장된 옵트인 개체에 대한 구성 옵션이 추가되었습니다. 옵트인 설정을 사용하여 Adobe 솔루션의 쿠키 및 비콘 호출을 억제함으로써 GDPR와 같은 규정을 보다 효과적으로 지원합니다.
+* 새로운 기본 제공 옵트인 개체에 대한 구성 옵션이 추가되었습니다. 옵트인 설정을 사용하여 Adobe 솔루션의 쿠키 및 비콘 호출을 억제함으로써 GDPR와 같은 규정을 보다 효과적으로 지원합니다.
 
   ![](../../../images/ext-mcid-opt-in.png)
 

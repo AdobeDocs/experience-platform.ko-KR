@@ -2,18 +2,14 @@
 title: Edge 확장의 데이터 요소 유형
 description: Edge 속성에서 태그 확장에 대한 데이터 요소 유형 라이브러리 모듈을 정의하는 방법에 대해 알아봅니다.
 exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 18%
+source-wordcount: '394'
+ht-degree: 20%
 
 ---
 
 # Edge 확장의 데이터 요소 유형
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 태그에서 데이터 요소는 서버에서 받은 이벤트 내에서 데이터가 발견되는 위치에 관계없이 웹 또는 모바일 페이지의 데이터 조각에 대한 별칭입니다. 데이터 요소는 규칙에서 참조하고 이러한 데이터 조각에 액세스하기 위해 추상적으로 사용할 수 있습니다. 향후에 데이터 위치가 변경되면(예: 값이 포함된 이벤트 키 변경), 단일 데이터 요소를 재구성할 수 있으며 해당 데이터 요소를 참조하는 모든 규칙은 변경되지 않습니다.
 

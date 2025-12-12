@@ -2,18 +2,14 @@
 title: 태그 및 이벤트 전달 확장
 description: Adobe Experience Platform의 태그 및 이벤트 전달 확장에 대한 설명서입니다.
 exl-id: 2433a64f-66f2-4c21-bdec-c6b8e1658b2b
-source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
 # 태그 및 이벤트 전달 확장
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
 
 확장은 태그 또는 이벤트 전달에서 제공하는 기능을 확장하는 패키지화된 코드 세트입니다. 라이브러리에 확장을 설치하면 해당 라이브러리의 [규칙 구성](../ui/managing-resources/rules.md)에서 사용할 수 있는 고유한 이벤트, 조건 및/또는 작업 집합이 확장에 추가됩니다.
 

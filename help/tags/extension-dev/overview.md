@@ -2,18 +2,14 @@
 title: 확장 개발 개요
 description: Adobe Experience Platform에서 다양한 태그 확장 기능 유형의 주요 구성 요소와 확장 기능 개발 프로세스에 대해 알아봅니다.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 23%
+source-wordcount: '893'
+ht-degree: 20%
 
 ---
 
 # 확장 개발 개요
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform의 태그 주요 목표 중 하나는 Adobe 외부의 엔지니어가 웹 사이트 및 모바일 애플리케이션에서 추가 기능을 노출할 수 있는 개방형 에코시스템을 만드는 것입니다. 이 작업은 태그 확장을 통해 수행됩니다. 태그 속성에 확장을 설치하면 해당 확장의 기능을 속성의 모든 사용자가 사용할 수 있게 됩니다.
 
@@ -25,7 +21,7 @@ Adobe Experience Platform의 태그 주요 목표 중 하나는 Adobe 외부의 
 
 ### 매니페스트 파일
 
-디렉터리 루트에 매니페스트 파일([`extension.json`](./manifest.md))이 있어야 합니다. 이 파일은 확장의 구성과 특정 파일이 디렉터리 내에 있는 위치를 설명합니다. 매니페스트는 [`package.json`npm](https://docs.npmjs.com/files/package.json) 프로젝트의 [&#128279;](https://www.npmjs.com/) 파일과 유사하게 작동합니다.
+디렉터리 루트에 매니페스트 파일([`extension.json`](./manifest.md))이 있어야 합니다. 이 파일은 확장의 구성과 특정 파일이 디렉터리 내에 있는 위치를 설명합니다. 매니페스트는 [`package.json`npm](https://docs.npmjs.com/files/package.json) 프로젝트의 [](https://www.npmjs.com/) 파일과 유사하게 작동합니다.
 
 ### 라이브러리 모듈
 

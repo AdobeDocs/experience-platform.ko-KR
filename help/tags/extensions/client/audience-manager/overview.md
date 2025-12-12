@@ -2,18 +2,14 @@
 title: Adobe Audience Manager 확장 개요
 description: Adobe Experience Platform에서의 Adobe Audience Manager 태그 확장 기능에 대해 알아봅니다.
 exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 87%
+source-wordcount: '395'
+ht-degree: 85%
 
 ---
 
 # Adobe Audience Manager 확장 개요
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Audience Manager 태그 확장을 사용하면 Audience Manager에서 사용하는 DIL 코드와 Adobe Experience Platform의 속성을 통합할 수 있습니다.
 
@@ -51,7 +47,7 @@ URL이 정규 표현식인 경우 Regex를 활성화합니다.
 
 #### Use DIL Site Catalyst Module
 
-[SiteCatalyst 모듈](https://experiencecloud.adobe.com/resources/help/ko_KR/aam/r_dil_sc_init.html)은 DIL을 사용하여 Analytics 태그 요소를 Audience Manager로 보냅니다.
+[SiteCatalyst 모듈](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_sc_init.html)은 DIL을 사용하여 Analytics 태그 요소를 Audience Manager로 보냅니다.
 
 siteCatalyst.init 파일을 구성하려면 코드 편집기를 사용합니다.
 
@@ -59,15 +55,15 @@ siteCatalyst.init 파일을 구성하려면 코드 편집기를 사용합니다.
 
 #### Use DIL Google Analytics Module
 
-[Google Analytics 모듈](https://experiencecloud.adobe.com/resources/help/ko_KR/aam/dil-google-universal-analytics.html)을 활성화합니다.
+[Google Analytics 모듈](https://experiencecloud.adobe.com/resources/help/en_US/aam/dil-google-universal-analytics.html)을 활성화합니다.
 
 #### DIL.create Initialization Properties
 
-[DIL.create](https://experiencecloud.adobe.com/resources/help/ko_KR/aam/r_dil_create.html)에서 사용되는 초기화 속성과 [visitorService 개체](https://experiencecloud.adobe.com/resources/help/ko_KR/aam/r_dil_visitor_service.html)의 네임스페이스 하위 속성을 추가합니다. 두 개의 샘플 사용 사례는 코드 편집기에서 코드 주석에 포함되어 있습니다.
+[DIL.create](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html)에서 사용되는 초기화 속성과 [visitorService 개체](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_visitor_service.html)의 네임스페이스 하위 속성을 추가합니다. 두 개의 샘플 사용 사례는 코드 편집기에서 코드 주석에 포함되어 있습니다.
 
 속성을 더 추가하려면 **[!UICONTROL Choose an Item]**&#x200B;을 선택합니다.
 
-i 아이콘을 마우스로 가리키면 각 속성이 수행하는 작업을 확인할 수 있습니다. [Audience Manager DIL 설명서](https://experiencecloud.adobe.com/resources/help/ko_KR/aam/r_dil_create.html)에서 속성에 대한 자세한 내용을 찾을 수 있습니다.
+i 아이콘을 마우스로 가리키면 각 속성이 수행하는 작업을 확인할 수 있습니다. [Audience Manager DIL 설명서](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html)에서 속성에 대한 자세한 내용을 찾을 수 있습니다.
 
 확장 구성을 마치면 **[!UICONTROL Save]**&#x200B;를 선택합니다.
 

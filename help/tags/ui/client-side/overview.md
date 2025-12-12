@@ -2,18 +2,14 @@
 title: 클라이언트측 정보
 description: 웹 또는 모바일 애플리케이션의 클라이언트측에서 태그 작업을 관리하는 방법을 알아봅니다.
 exl-id: 54c66066-93f7-4311-a255-0825055d0dec
-source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 40%
+source-wordcount: '131'
+ht-degree: 19%
 
 ---
 
 # 클라이언트측 정보 
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 이 섹션에는 Adobe Experience Platform에서 클라이언트측 태그 작업을 관리할 때 유용한 정보가 포함되어 있습니다.
 

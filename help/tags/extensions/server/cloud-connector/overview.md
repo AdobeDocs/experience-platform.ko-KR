@@ -2,18 +2,14 @@
 title: Cloud Connector 확장 개요
 description: Adobe Experience Platform의 Cloud Connector 이벤트 전달 확장에 대해 알아봅니다.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1681'
-ht-degree: 68%
+source-wordcount: '1636'
+ht-degree: 67%
 
 ---
 
 # Cloud Connector 확장 개요
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Cloud Connector 이벤트 전달 확장을 사용하면 데이터를 대상에 보내거나 대상에서 데이터를 검색하는 사용자 지정 HTTP 요청을 만들 수 있습니다. Cloud Connector 확장은 Adobe Experience Platform Edge Network에 우편배달부가 있는 것과 비슷하며 전용 확장이 아직 없는 엔드포인트로 데이터를 보내는 데 사용할 수 있습니다.
 

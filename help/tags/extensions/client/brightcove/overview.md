@@ -2,18 +2,14 @@
 title: BrightCove 비디오 추적 확장 개요
 description: Adobe Experience Platform의 BrightCove 비디오 추적 태그 확장에 대해 알아봅니다.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 35%
+source-wordcount: '853'
+ht-degree: 36%
 
 ---
 
 # BrightCove 비디오 추적 확장 개요
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 ## 전제 조건
 
@@ -23,7 +19,7 @@ Adobe Experience Platform의 각 태그 속성에는 확장 화면에 다음과 
 * Experience Cloud Visitor ID 서비스
 * 핵심 확장이 설치됨
 
-비디오 플레이어를 렌더링할 각 웹 페이지의 HTML에 있는 &quot;In-Page embed code (Advanced)&quot; 코드 조각을 사용하십시오. &quot;In-Page Embed Code(Advanced)&quot; HTML 코드 조각은 [Brightcove 설명서](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage)에서 찾을 수 있습니다. 다음 링크에서는 [미리 보기와 게시된 비디오 플레이어 모두에 대해 포함된 코드를 생성하는 방법](https://studio.support.brightcove.com/players/generating-player-embed-code.html)에 대한 자세한 정보를 제공합니다.
+비디오 플레이어를 렌더링할 각 웹 페이지의 HTML에 있는 &quot;In-Page embed code (Advanced)&quot; 코드 조각을 사용하십시오. &quot;In-Page Embed Code(Advanced)&quot; HTML 코드 조각은 [Brightcove 설명서](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage)에 있습니다. 다음 링크에서는 [미리 보기와 게시된 비디오 플레이어 모두에 대해 포함된 코드를 생성하는 방법](https://studio.support.brightcove.com/players/generating-player-embed-code.html)에 대한 자세한 정보를 제공합니다.
 
 이 확장 버전 1.1.0은 여러 개의 BrightCove 비디오를 단일 웹 페이지에 포함할 수 있습니다. 고급 포함 태그 내에 `id` 속성이 여러 개 있는 경우 각각 고유한 값이 있는지 확인하십시오. 예: `player1`, `player2` 등.
 
@@ -100,7 +96,7 @@ Adobe Experience Platform의 각 태그 속성에는 확장 화면에 다음과 
 
 >[!TIP]
 >
->각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 제공하기를 원하지 않는 사용자의 경우, 데이터 요소 값이 대체 방법으로 연결됩니다. 그런 다음 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석합니다. 자세한 내용은 [분류 규칙 빌더 도구](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=ko) 설명서를 참조하십시오. 마지막으로 Analysis Workspace에서 세그먼트로 적용됩니다.
+>각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 제공하기를 원하지 않는 사용자의 경우, 데이터 요소 값이 대체 방법으로 연결됩니다. 그런 다음 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석합니다. 자세한 내용은 [분류 규칙 빌더 도구](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) 설명서를 참조하십시오. 마지막으로 Analysis Workspace에서 세그먼트로 적용됩니다.
 >
 >이렇게 하려면 &quot;비디오 메타데이터&quot;와 같은 새로운 데이터 요소를 만들고 이를 프로그래밍하여 모든 비디오 데이터 요소(위에 나열됨)를 가져와서 함께 연결합니다.
 

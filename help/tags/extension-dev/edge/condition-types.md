@@ -2,18 +2,14 @@
 title: Edge 확장에 대한 조건 유형
 description: Adobe Experience Platform에서 Edge 확장에 대한 조건 유형 라이브러리 모듈을 정의하는 방법을 알아봅니다.
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 38%
+source-wordcount: '358'
+ht-degree: 43%
 
 ---
 
 # Edge 확장의 조건 유형
-
->[!NOTE]
->
-> Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 태그 규칙에서 조건은 이벤트가 발생한 후 평가됩니다. 규칙이 계속 처리되려면 모든 조건이 true를 반환해야 합니다. 조건 유형은 확장에서 제공되며 true 또는 false인지를 평가하여 부울 값을 반환합니다.
 
@@ -29,7 +25,7 @@ ht-degree: 38%
 
 조건 유형은 일반적으로 다음과 같이 구성됩니다.
 
-1. 사용자가 조건에 대한 설정을 수정할 수 있도록 하는 Experience Platform UI 및 데이터 수집 UI 내에 표시되는 보기.
+1. 사용자가 조건에 대한 설정을 수정할 수 있는 Experience Platform UI 및 데이터 수집 UI 내에 표시되는 보기입니다.
 2. 설정을 해석하고 조건을 평가하기 위해 태그 런타임 라이브러리 내에서 전달되는 라이브러리 모듈입니다.
 
 예를 들어 사용자가 `example.com` 호스트에 있는지 여부를 평가하려면 모듈이 다음과 같을 수 있습니다.

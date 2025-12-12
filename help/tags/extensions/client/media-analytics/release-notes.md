@@ -1,19 +1,15 @@
 ---
-title: 오디오 및 비디오용 Adobe Medium Analytics 확장 기능 릴리스 노트
-description: Adobe Experience Platform의 Adobe Medium Analytics for Audio 및 Video 태그 확장에 대한 최신 릴리스 정보입니다.
+title: Adobe Media Analytics for Audio 및 Video 확장에 대한 릴리스 노트
+description: Adobe Experience Platform의 Adobe Media Analytics for Audio 및 Video 태그 확장에 대한 최신 릴리스 정보입니다.
 exl-id: 79d92f42-795f-4685-926f-ebe6f4125539
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 51%
+source-wordcount: '165'
+ht-degree: 66%
 
 ---
 
-# Adobe Medium Analytics for Audio and Video 릴리스 노트
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+# Adobe Media Analytics for Audio 및 Video 릴리스 노트
 
 ## 2019년 10월 25일
 

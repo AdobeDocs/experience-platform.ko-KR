@@ -2,18 +2,14 @@
 title: Adobe Media Analytics(3.x SDK) for Audio 및 Video 확장 개요
 description: Adobe Experience Platform의 Adobe Media Analytics(3.x SDK) for Audio and Video 태그 확장 기능에 대해 알아봅니다.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 72%
+source-wordcount: '648'
+ht-degree: 81%
 
 ---
 
 # Adobe Media Analytics(3.x SDK) for Audio 및 Video 확장 개요
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Media Analytics(3.x SDK) for Audio and Video 확장(Media Analytics 확장) 설치, 구성 및 구현 관련 정보에 대해서는 이 설명서를 참조합니다. 예제 및 샘플 링크와 함께 이 확장을 사용하여 규칙을 만들 때 사용할 수 있는 옵션이 포함되어 있습니다.
 
@@ -33,9 +29,9 @@ MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 3.x SDK)를 추가
 
 ## MA 확장 설치 및 구성
 
-* **설치:** MA 확장을 설치하려면 확장 속성을 열고 **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고 오디오 및 비디오용 **[!UICONTROL Adobe Media Analytics(3.x SDK) 확장 위에 마우스를 놓고]** **[!UICONTROL 설치]**&#x200B;를 선택합니다.
+* **설치:** MA 확장을 설치하려면 확장 속성을 열고 **[!UICONTROL Extensions > Catalog]**&#x200B;를 선택하고 **[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]** 확장을 마우스로 가리킨 다음 **[!UICONTROL Install]**&#x200B;를 선택합니다.
 
-* **구성:** MA 확장을 구성하려면 [!UICONTROL 확장] 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+* **구성:** MA 확장을 구성하려면 [!UICONTROL Extensions] 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL Configure]**&#x200B;를 선택합니다.
 
 ![MA 확장 구성](../../../images/ext-ma-config.png)
 
@@ -58,7 +54,7 @@ MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 3.x SDK)를 추가
 
 ### 웹 페이지/JS 앱에서 사용
 
-MA 확장은 [!UICONTROL 구성] 페이지에서 &quot;Export APIs to Window Object&quot; 설정을 활성화하여 글로벌 창 개체에서 Media API를 내보냅니다. 구성된 변수 이름 아래에 API를 내보냅니다. 예를 들어 변수 이름이 `ADB`가 되도록 구성된 경우 Media API는 `window.ADB.Media`로 액세스할 수 있습니다.
+MA 확장은 [!UICONTROL Configuration] 페이지의 &quot;Export APIs to Window Object&quot; 설정을 활성화하여 글로벌 창 개체에서 Media API를 내보냅니다. 구성된 변수 이름 아래에 API를 내보냅니다. 예를 들어 변수 이름이 `ADB`가 되도록 구성된 경우 Media API는 `window.ADB.Media`로 액세스할 수 있습니다.
 
 >[!IMPORTANT]
 >

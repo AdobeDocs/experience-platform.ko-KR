@@ -3,18 +3,14 @@ title: 코어 이벤트 전달 확장 개요
 description: Adobe Experience Platform의 핵심 이벤트 전달 확장에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 90%
+source-wordcount: '1662'
+ht-degree: 93%
 
 ---
 
 # 코어 이벤트 전달 확장 개요
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 코어 이벤트 전달 확장은 Adobe Experience Platform에서 이벤트 전달을 위한 기본 이벤트, 조건 및 데이터 유형을 제공합니다.
 
@@ -26,11 +22,11 @@ ht-degree: 90%
 
 ### 사용자 지정 코드
 
-이벤트의 조건으로 존재해야 하는 사용자 지정 코드를 지정합니다. 내장된 코드 편집기를 사용하여 사용자 지정 코드를 입력합니다. Adobe Experience Platform의 이벤트 전달은 ES13을 지원합니다.
+이벤트의 조건으로 존재해야 하는 사용자 지정 코드를 지정합니다. 기본 제공 코드 편집기를 사용하여 사용자 지정 코드를 입력합니다. Adobe Experience Platform의 이벤트 전달은 ES13을 지원합니다.
 
-1. **[!UICONTROL 편집기 열기]**&#x200B;를 선택합니다.
+1. **[!UICONTROL Open Editor]**&#x200B;를 선택합니다.
 1. 사용자 지정 코드를 입력합니다.
-1. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+1. **[!UICONTROL Save]**&#x200B;를 선택합니다.
 
 사용자 지정 코드의 데이터 요소 값에 액세스하려면 `getDataElementValue` 메서드를 사용합니다. 예를 들어 `productName`이라는 데이터 요소의 값을 검색하려면 다음을 입력합니다.
 
@@ -158,8 +154,8 @@ module.exports = (context) => {
 이벤트가 트리거되고 조건이 평가된 후 실행되는 코드를 제공합니다. Adobe Experience Platform의 이벤트 전달은 ES13을 지원합니다.
 
 1. 작업 코드에 이름을 지정합니다.
-1. **[!UICONTROL 편집기 열기]**&#x200B;를 선택합니다.
-1. 코드를 편집한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+1. **[!UICONTROL Open Editor]**&#x200B;를 선택합니다.
+1. 코드를 편집한 다음 **[!UICONTROL Save]**&#x200B;를 선택합니다.
 
 사용자 지정 코드의 데이터 요소 값에 액세스하려면 `getDataElementValue` 메서드를 사용합니다. 예를 들어 `productName`이라는 데이터 요소의 값을 검색하려면 다음을 입력합니다.
 
@@ -183,9 +179,9 @@ arc.ruleStash.core.productCategory
 
 ### 사용자 지정 코드
 
-사용자 지정 JavaScript은 **[!UICONTROL 편집기 열기]**&#x200B;를 선택하고 코드를 편집기 창에 삽입하여 UI에 입력할 수 있습니다.
+사용자 지정 JavaScript는 **[!UICONTROL Open Editor]**&#x200B;를 선택하고 코드를 편집기 창에 삽입하여 UI에 입력할 수 있습니다.
 
-데이터 요소 값으로 어떤 값을 사용해야 하는지 알 수 있도록 편집기 창에 문장이 반환되어야 합니다. return 문이 포함되지 않거나 `null` 또는 `undefined` 값이 반환되면 데이터 요소의 기본값은 `null` 또는 `undefined`을 반영합니다. 
+데이터 요소 값으로 어떤 값을 사용해야 하는지 알 수 있도록 편집기 창에 문장이 반환되어야 합니다. 반환된 문이 포함되지 않았거나 값 `null` 또는 `undefined`이(가) 반환되면 데이터 요소의 기본값은 `null` 또는 `undefined`을(를) 반영합니다.
 
 사용자 지정 코드의 데이터 요소 값에 액세스하려면 `getDataElementValue` 메서드를 사용합니다. 예를 들어 `productName`이라는 데이터 요소의 값을 검색하려면 다음을 입력합니다.
 

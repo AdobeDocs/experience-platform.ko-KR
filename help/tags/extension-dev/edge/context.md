@@ -2,18 +2,14 @@
 title: Edge 확장 모듈의 컨텍스트
 description: 컨텍스트 개체와 이 개체가 Edge 속성의 태그 확장에서 라이브러리 모듈과 상호 작용할 때 수행하는 역할에 대해 알아봅니다.
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 73%
+source-wordcount: '681'
+ht-degree: 82%
 
 ---
 
 # Edge 확장 모듈의 컨텍스트
-
->[!NOTE]
->
-> Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Edge 확장의 모든 라이브러리 모듈은 실행될 때 `context` 개체가 제공됩니다. 이 문서에서는 `context` 개체에서 제공하는 속성과 라이브러리 모듈에서 수행하는 역할에 대해 설명합니다.
 
@@ -42,7 +38,7 @@ logger.log(context.arc.event);
 logger.log(context.arc.request)
 ```
 
-`request` 개체에는 두 개의 최상위 속성이 있습니다. `body` 및 `head`. `body` 속성에는 XDM(Experience Data Model) 정보가 포함되어 있으며 **[!UICONTROL Launch]**&#x200B;로 이동하여 **[!UICONTROL Edge 추적]** 탭을 선택하면 Adobe Experience Platform Debugger에서 검사할 수 있습니다.
+`request` 개체에는 두 개의 최상위 속성이 있습니다. `body` 및 `head`. `body` 속성에는 XDM(Experience Data Model) 정보가 포함되어 있으며 **[!UICONTROL Launch]**&#x200B;로 이동하여 **[!UICONTROL Edge Trace]** 탭을 선택하면 Adobe Experience Platform Debugger에서 검사할 수 있습니다.
 
 ### [!DNL ruleStash] {#rulestash}
 
@@ -104,7 +100,7 @@ module.exports = (context) => {
 
 ### [!DNL logger]
 
-`logger` 유틸리티를 사용하면 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)을 사용할 때 디버깅 세션 중에 표시되는 메시지를 기록할 수 있습니다.
+`logger` 유틸리티를 사용하면 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)을(를) 사용할 때 디버깅 세션 중에 표시되는 메시지를 기록할 수 있습니다.
 
 ```js
 context.utils.logger.error('Error!');

@@ -1,19 +1,15 @@
 ---
 title: Adobe ContextHub 확장 개요
-description: Adobe Experience Platform의 Adobe ContextHub 태그 확장에 대해 알아봅니다.
+description: Adobe Experience Platform의 Adobe ContextHub 태그 확장 기능에 대해 알아봅니다.
 exl-id: 90700ce2-14fd-4d15-bbb8-98a8bbca5005
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 45%
+source-wordcount: '172'
+ht-degree: 79%
 
 ---
 
 # Adobe ContextHub 확장 개요
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe ContextHub 확장 구성 및 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -21,9 +17,9 @@ Adobe ContextHub 확장 구성 및 이 확장을 사용하여 규칙을 작성�
 
 이 섹션에서는 Adobe ContextHub 확장을 구성할 때 사용할 수 있는 옵션에 대한 참조를 제공합니다.
 
-Adobe ContextHub 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고 Adobe ContextHub 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
+Adobe ContextHub 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL Extensions > Catalog]**&#x200B;를 선택하고 Adobe ContextHub 확장을 마우스로 가리킨 다음 **[!UICONTROL Install]**&#x200B;를 선택합니다.
 
-확장을 구성하려면 [!UICONTROL 확장] 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+확장을 구성하려면 [!UICONTROL Extensions] 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL Configure]**&#x200B;을 선택합니다.
 
 ![](../../../images/ext-contexthub-config.png)
 

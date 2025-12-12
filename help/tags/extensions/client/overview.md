@@ -2,18 +2,14 @@
 title: 태그 확장 참조
 description: Adobe Experience Platform에서 태그 확장에 대한 설명서를 찾습니다.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 12%
+source-wordcount: '427'
+ht-degree: 3%
 
 ---
 
 # 태그 확장 참조
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 다음은 클라이언트측 태그 확장에 대한 설명서 목록입니다. 사용 가능한 서버측 확장 목록을 보려면 대신 [이벤트 전달 확장 참조](../server/overview.md)를 참조하십시오.
 

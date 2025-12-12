@@ -2,18 +2,14 @@
 title: 자체 호스팅 라이브러리
 description: Adobe Experience Platform에서 태그 라이브러리 빌드에 대한 자체 호스팅을 구현하는 방법을 알아봅니다.
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 72%
+source-wordcount: '446'
+ht-degree: 69%
 
 ---
 
 # 자체 호스팅 라이브러리
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform의 태그를 사용하면 [build](../builds.md)라는 파일 집합을 만들 수 있습니다. 이 파일 세트는 런타임 시 응용 프로그램의 동작을 제어합니다.
 

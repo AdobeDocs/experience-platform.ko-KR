@@ -2,18 +2,14 @@
 title: Adobe Target v2 확장 릴리스 노트
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장 기능에 대한 최신 릴리스 정보입니다.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: a062305e3ed0eb4d127f93ff37efe15e41eaa601
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 12%
+source-wordcount: '788'
+ht-degree: 15%
 
 ---
 
 # Adobe Target v2 확장 릴리스 노트
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 ## v0.20.3 (2024년 1월 23일)
 
@@ -34,7 +30,7 @@ ht-degree: 12%
 
 - `at.js` 2.11.0을 지원하도록 업데이트되었습니다.
 - getOffer/getOffers 호출 시 배달 API로 전달되는 targetGlobalSettings의 사용자 지정 Adobe Experience Platform sandboxId 및 sandboxName 설정에 대한 지원이 추가되었습니다.
-- 선택기에서 체인 :eq()에 대한 섀도 DOM 수정.
+- 선택기에서 :eq() 체인 관련 섀도 DOM이 수정되었습니다.
 
 ## v0.19.3 (2023년 9월 18일)
 
@@ -71,7 +67,7 @@ ht-degree: 12%
 
 ## v0.17.0 (2022년 1월 7일)
 
-- 기능 사용 및 성능 원격 분석 데이터를 수집하는 `at.js` v2.8.0을 지원하도록 업데이트되었습니다.  개인 데이터는 수집되지 않습니다. 이 기능을 옵트아웃하려면 `targetGlobalSettings`에서 `telemetryEnabled`을(를) `false`(으)로 설정합니다.
+- 기능 사용 및 성능 원격 분석 데이터를 수집하는 `at.js` v2.8.0을 지원하도록 업데이트되었습니다.  개인 데이터는 수집되지 않습니다. 이 기능을 옵트아웃하려면 `telemetryEnabled`에서 `false`을(를) `targetGlobalSettings`(으)로 설정합니다.
 
 ## v0.16.0 (2021년 10월 28일)
 
@@ -85,7 +81,7 @@ ht-degree: 12%
 
 ## v0.15.1(2021년 7월 20일)
 
-- `sessionId`, `requestId` 등에 대해 잘못된 UUID 값이 생성되는 `stringify` 함수 이름 충돌 문제를 해결했습니다.
+- `stringify`, `sessionId` 등에 대해 잘못된 UUID 값이 생성되는 `requestId` 함수 이름 충돌 문제를 해결했습니다.
 
 ## v0.15.0 (2021년 7월 16일)
 
@@ -107,13 +103,13 @@ ht-degree: 12%
 
 ## v0.14 (2021년 5월 14일)
 
-- 온디바이스 의사 결정 기능이 있는 `at.js` 2.5를 로드하는 [온디바이스 의사 결정](./overview.md#load-target-with-on-device-decisioning)을 사용하는 Target 로드 작업을 새로 추가했습니다
+- 온디바이스 의사 결정 기능이 있는 [ 2.5를 로드하는 ](./overview.md#load-target-with-on-device-decisioning)온디바이스 의사 결정`at.js`을 사용하는 Target 로드 작업을 새로 추가했습니다
 - `at.js`을(를) 2.5로 업데이트함
 
 
 ## v0.13.7 (2021년 3월 25일)
 
-- `targetPageParams`이(가) mbox 요청에 포함되는 문제를 해결했습니다. `targetPageParams`은(는) `pageLoad`개의 요청에만 포함되어야 합니다.
+- mbox 요청에 포함되는 `targetPageParams`에 관한 문제가 해결되었습니다. `targetPageParams`은(는) `pageLoad`개의 요청에만 포함되어야 합니다.
 - 글로벌 오브젝트 종속성을 그에 대한 직접 참조로 교체하여 태그 확장에서 문서 및 창 글로벌 오브젝트에 관한 문제를 해결했습니다.
 - `at.js`이(가) 2.4.1로 업데이트되었습니다.
 

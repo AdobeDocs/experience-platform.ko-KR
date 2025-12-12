@@ -2,18 +2,14 @@
 title: 웹 확장의 보기
 description: Adobe Experience Platform 웹 확장에서 라이브러리 모듈의 보기를 정의하는 방법을 알아봅니다.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2148'
-ht-degree: 70%
+source-wordcount: '2103'
+ht-degree: 69%
 
 ---
 
 # 웹 확장의 보기
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 각 이벤트, 조건, 작업 또는 데이터 요소 유형마다 사용자가 설정을 제공할 수 있는 보기를 제공할 수 있습니다. 또한 확장에는 사용자가 전체 확장에 대한 전역 설정을 제공할 수 있는 최상위 [확장 구성 보기](../configuration.md)가 있을 수 있습니다. 뷰 개발 프로세스는 모든 유형의 뷰에서 동일합니다.
 
@@ -76,7 +72,7 @@ window.extensionBridge.register({
 | `company` | `orgId`(24자 Adobe Experience Cloud ID), `id`(Reactor API 내 회사의 고유 식별자) 및 `tenantId`(Adobe Identity Management 시스템 내의 조직에 대한 고유 식별자)이 포함된 개체입니다. |
 | `schema` | [JSON 스키마](https://json-schema.org/) 형식의 객체입니다. 이 객체는 [확장 매니페스트](../manifest.md)에서 가져오며 양식 유효성 검사에 도움이 될 수 있습니다. |
 | `apiEndpoints` | Reactor API의 웹 주소에 대한 참조가 포함된 `reactor`이(가) 포함된 개체입니다. |
-| `userConsentPermissions` | Adobe의 [제품 사용 데이터](https://experienceleague.adobe.com/ko/docs/core-services/interface/features/account-preferences#product-usage-data)에서 동의 플래그를 포함하는 개체입니다. 확장에서 `globalDataCollectionAndUsage`any *고객 데이터를 수집할 수 있는지 확인하려면* 플래그에 저장된 을(를) 사용하십시오. |
+| `userConsentPermissions` | Adobe의 [제품 사용 데이터](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data)에서 동의 플래그를 포함하는 개체입니다. 확장에서 `globalDataCollectionAndUsage`any *고객 데이터를 수집할 수 있는지 확인하려면* 플래그에 저장된 을(를) 사용하십시오. |
 | `preferredLanguages` | 언어 문자열의 배열입니다. |
 
 이 정보를 사용하여 양식을 렌더링하고 관리해야 합니다. `info.settings`만 처리하면 되지만, 필요한 경우 다른 정보가 제공됩니다.
@@ -122,7 +118,7 @@ window.extensionBridge.openCodeEditor().then(function(code) {
 | 속성 | 설명 |
 | --- | --- |
 | `code` | 편집기에 표시되어야 하는 코드입니다. 일반적으로 사용자가 기존 코드를 편집할 때 제공됩니다. 이 값을 제공하지 않는 경우 코드 편집기를 열면 비어 있게 됩니다. |
-| `language` | 편집할 코드의 언어입니다. 유효한 옵션은 `javascript`, `html` `css`, `json` 및 `plaintext`입니다. 이 값을 제공하지 않으면 이 `javascript`를 가정합니다. |
+| `language` | 편집할 코드의 언어입니다. 유효한 옵션은 `javascript`, `html``css`, `json` 및 `plaintext`입니다. 이 값을 제공하지 않으면 이 `javascript`를 가정합니다. |
 
 ### [!DNL openRegexTester]
 
@@ -137,7 +133,7 @@ window.extensionBridge.openRegexTester().then(function(pattern) {
 | 속성 | 설명 |
 | --- | --- |
 | `pattern` | 테스터 내의 패턴 필드의 초기 값으로 사용해야 하는 정규 표현식 패턴입니다. 일반적으로 사용자가 기존 정규 표현식을 편집할 때 제공됩니다. 이 값이 제공되지 않으면 처음에는 패턴 필드가 비어 있게 됩니다. |
-| `flags` | 테스터가 사용해야 하는 일반 표현식 플래그입니다. 예를 들어, `gi`는 전역 일치 플래그와 대/소문자 무시 플래그를 지정합니다. 이러한 플래그는 테스터 내의 사용자가 수정할 수 없지만 일반 표현식을 실행할 때 확장에서 사용할 특정 플래그를 표시하는 데 사용됩니다. 제공되지 않으면 테스터에서 플래그가 사용되지 않습니다. 정규 표현식 플래그에 대한 자세한 내용은 [MDN의 RegExp 설명서](https://developer.mozilla.org/ko-KR/docs/Web/JavaScript/Reference/Global_Objects/RegExp)를 참조하십시오.<br><br>일반적인 시나리오는 일반 표현식에 대한 대소문자 구분을 전환할 수 있는 확장입니다. 이 기능을 지원하기 위해 확장은 일반적으로 확장 보기 내에 확인란을 제공하며 이 확인란을 선택하면 대소문자 무시(`i` 플래그로 표시됨)가 활성화됩니다. 뷰로 저장된 설정 객체의 경우 일반 표현식을 실행하는 라이브러리 모듈에서 `i` 플래그를 사용할지 여부를 알 수 있도록 확인란을 선택했는지 여부를 표시해야 합니다. 또한, 확장 보기에서 일반 표현식 테스터를 열려면 대/소문자 구분 확인란이 선택되면 `i` 플래그를 전달해야 합니다. 이렇게 하면 사용자가 대/소문자 구분을 활성화한 상태로 정규 표현식을 제대로 테스트할 수 있습니다. |
+| `flags` | 테스터가 사용해야 하는 일반 표현식 플래그입니다. 예를 들어, `gi`는 전역 일치 플래그와 대/소문자 무시 플래그를 지정합니다. 이러한 플래그는 테스터 내의 사용자가 수정할 수 없지만 일반 표현식을 실행할 때 확장에서 사용할 특정 플래그를 표시하는 데 사용됩니다. 제공되지 않으면 테스터에서 플래그가 사용되지 않습니다. 정규 표현식 플래그에 대한 자세한 내용은 [MDN의 RegExp 설명서](https://developer.mozilla.org/ko-KR/docs/Web/JavaScript/Reference/Global_Objects/RegExp)를 참조하십시오.<br><br>일반적인 시나리오는 일반 표현식에 대한 대소문자 구분을 토글할 수 있는 확장입니다. 이 기능을 지원하기 위해 확장은 일반적으로 확장 보기 내에 확인란을 제공하며 이 확인란을 선택하면 대소문자 무시(`i` 플래그로 표시됨)가 활성화됩니다. 뷰로 저장된 설정 객체의 경우 일반 표현식을 실행하는 라이브러리 모듈에서 `i` 플래그를 사용할지 여부를 알 수 있도록 확인란을 선택했는지 여부를 표시해야 합니다. 또한, 확장 보기에서 일반 표현식 테스터를 열려면 대/소문자 구분 확인란이 선택되면 `i` 플래그를 전달해야 합니다. 이렇게 하면 사용자가 대/소문자 구분을 활성화한 상태로 정규 표현식을 제대로 테스트할 수 있습니다. |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 
@@ -179,9 +175,9 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 
 >[!NOTE]
 >
->적절한 아이콘을 다운로드하려면 Adobe Spectrum[의 &#x200B;](https://spectrum.adobe.com/page/icons/)아이콘 페이지로 이동하여 &quot;[!DNL Data]&quot;을(를) 검색합니다.
+>적절한 아이콘을 다운로드하려면 Adobe Spectrum[의 ](https://spectrum.adobe.com/page/icons/)아이콘 페이지로 이동하여 &quot;[!DNL Data]&quot;을(를) 검색합니다.
 
-텍스트 필드 옆에 있는 버튼을 사용자가 선택하면 `window.extensionBridge.openDataElementSelector`위의 설명[과 같이 &#x200B;](#open-data-element)가 호출됩니다. 이름 및 유형 퍼센트 기호를 기억하도록 하는 대신 사용자가 선택할 수 있는 사용자 데이터 요소 목록이 표시됩니다. 사용자가 데이터 요소를 선택하면 퍼센트 기호로 둘러싸인 선택한 데이터 요소의 이름이 전달됩니다(`tokenize` 옵션을 `false`로 설정한 경우 제외). 그런 다음 텍스트 필드를 결과로 채우는 것이 좋습니다.
+텍스트 필드 옆에 있는 버튼을 사용자가 선택하면 `window.extensionBridge.openDataElementSelector`위의 설명[과 같이 ](#open-data-element)가 호출됩니다. 이름 및 유형 퍼센트 기호를 기억하도록 하는 대신 사용자가 선택할 수 있는 사용자 데이터 요소 목록이 표시됩니다. 사용자가 데이터 요소를 선택하면 퍼센트 기호로 둘러싸인 선택한 데이터 요소의 이름이 전달됩니다(`tokenize` 옵션을 `false`로 설정한 경우 제외). 그런 다음 텍스트 필드를 결과로 채우는 것이 좋습니다.
 
 ### 데이터 요소 토큰 바꾸기
 

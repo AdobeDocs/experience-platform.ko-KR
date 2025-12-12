@@ -2,18 +2,14 @@
 title: 확장 제출 프로세스 개요
 description: 개발에서 릴리스로 Adobe Experience Platform에서 확장을 제출하는 단계를 알아봅니다.
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 30%
+source-wordcount: '186'
+ht-degree: 13%
 
 ---
 
 # 확장 제출 프로세스 개요
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform의 데이터 수집 카탈로그에 확장을 제출하는 것은 어려운 작업처럼 보일 수 있습니다. 이 문서에서는 개별 순차적 안내서를 사용하여 확장을 제출하는 방법에 대한 단계별 안내서를 제공합니다. 확장을 제출하려면 다음 단계를 완료해야 합니다.
 
@@ -33,4 +29,4 @@ Adobe Experience Platform의 데이터 수집 카탈로그에 확장을 제출�
 
 >[!NOTE]
 >
->이 Slack 작업 영역에는 Adobe 팀원이 있지만 Adobe이 후원 또는 중재하지 않는 커뮤니티 리소스입니다.
+>이 Slack 작업 공간에는 Adobe 팀 구성원이 있지만 Adobe이 후원 또는 중재하지 않는 커뮤니티 리소스입니다.

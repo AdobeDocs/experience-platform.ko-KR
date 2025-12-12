@@ -2,18 +2,14 @@
 title: 라이브러리 다시 게시
 description: Adobe Experience Platform에서 이전 태그 라이브러리를 다시 게시하는 방법을 알아봅니다.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 56%
+source-wordcount: '604'
+ht-degree: 53%
 
 ---
 
 # 라이브러리 다시 게시
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 웹 속성의 프로덕션 환경에 게시된 최신 라이브러리 5개는 나중에 검색할 수 있습니다. 이 기능은 프로덕션 라이브러리에서 버그를 찾고 알려진 양호한 상태로 즉시 롤백해야 할 때 유용합니다.
 
@@ -57,7 +53,7 @@ ht-degree: 56%
 
 1. 게시됨 열에서 다시 게시할 라이브러리를 찾습니다.
 1. 라이브러리 카드의 오른쪽 상단 모서리에서 생략 부호(`...`)를 선택합니다.
-1. **[!UICONTROL 다시 게시]**&#x200B;를 선택합니다.
+1. **[!UICONTROL Republish]**&#x200B;를 선택합니다.
 
 ## 다운로드
 
@@ -71,4 +67,4 @@ ht-degree: 56%
 
 1. 게시됨 열에서 다운로드할 라이브러리를 찾습니다.
 1. 라이브러리 카드의 오른쪽 상단 모서리에서 생략 부호(`...`)를 선택합니다.
-1. **[!UICONTROL 다운로드]**&#x200B;를 선택합니다.
+1. **[!UICONTROL Download]**&#x200B;를 선택합니다.

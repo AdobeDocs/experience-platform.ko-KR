@@ -2,18 +2,14 @@
 title: 리소스 삭제
 description: Adobe Experience Platform에서 태그 리소스를 삭제하는 방법을 알아봅니다.
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 74%
+source-wordcount: '512'
+ht-degree: 83%
 
 ---
 
 # 리소스 삭제
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 리소스를 삭제하는 것은 Adobe Experience Platform에서 해당 리소스를 영구적으로 제거하는 것입니다. 특정 태그 라이브러리에서 리소스를 제거하지만 해당 리소스를 다른 라이브러리에서 사용할 수 있도록 하려면 [라이브러리에서 리소스 제거](remove-resources-from-library.md)에 대한 안내서를 참조하십시오.
 
@@ -78,4 +74,4 @@ ht-degree: 74%
 
 ## 리소스 삭제
 
-해당 목록 보기에서 삭제할 리소스를 선택한 다음 **[!UICONTROL 삭제]**&#x200B;를 선택합니다.
+해당 목록 보기에서 삭제할 리소스를 선택한 다음 **[!UICONTROL Delete]**&#x200B;를 선택합니다.

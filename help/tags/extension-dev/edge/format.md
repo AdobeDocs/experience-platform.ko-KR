@@ -2,18 +2,14 @@
 title: Edge 확장의 라이브러리 모듈
 description: Edge 속성에서 태그 확장에 대한 라이브러리 모듈 형식을 지정합니다.
 exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 68%
+source-wordcount: '256'
+ht-degree: 80%
 
 ---
 
 # Edge 확장의 라이브러리 모듈
-
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 >[!IMPORTANT]
 >

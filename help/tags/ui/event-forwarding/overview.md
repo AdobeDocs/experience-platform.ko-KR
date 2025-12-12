@@ -3,10 +3,10 @@ title: 이벤트 전달 개요
 description: Experience Platform Edge Network를 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있도록 Adobe Experience Platform의 이벤트 전달에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 88995c933bf067fe3d077d1be8b92b076e461707
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1181'
-ht-degree: 8%
+source-wordcount: '1144'
+ht-degree: 4%
 
 ---
 
@@ -16,11 +16,7 @@ ht-degree: 8%
 >
 >이벤트 전달은 Adobe Real-Time Customer Data Platform 연결, Prime 또는 Ultimate 오퍼링의 일부로 포함된 유료 기능입니다.
 
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
-
-Adobe Experience Platform의 이벤트 전달을 사용하면 수집된 이벤트 데이터를 서버측 처리를 위해 대상으로 전송할 수 있습니다. 이벤트 전달은 Adobe Experience Platform Edge Network을 사용하여 클라이언트에서 일반적으로 수행되는 작업을 실행하여 웹 페이지 및 앱 가중치를 줄입니다. 태그와 유사한 방식으로 구현된 이벤트 전달 규칙은 데이터를 변환하여 새 대상으로 전송할 수 있지만 웹 브라우저와 같은 클라이언트 애플리케이션에서 이 데이터를 전송하는 대신 Adobe 서버에서 전송됩니다.
+Adobe Experience Platform(이전의 Adobe Experience Platform Launch 서버측)의 이벤트 전달을 사용하면 수집된 이벤트 데이터를 서버측 처리를 위해 대상으로 전송할 수 있습니다. 이벤트 전달은 Adobe Experience Platform Edge Network을 사용하여 클라이언트에서 일반적으로 수행되는 작업을 실행하여 웹 페이지 및 앱 가중치를 줄입니다. 태그와 유사한 방식으로 구현된 이벤트 전달 규칙은 데이터를 변환하여 새 대상으로 전송할 수 있지만 웹 브라우저와 같은 클라이언트 애플리케이션에서 이 데이터를 전송하는 대신 Adobe 서버에서 전송됩니다.
 
 이 문서에서는 Experience Platform의 이벤트 전달에 대한 높은 수준의 개요를 제공합니다.
 
@@ -30,7 +26,7 @@ Adobe Experience Platform의 이벤트 전달을 사용하면 수집된 이벤�
 >
 >이벤트 전달이 Experience Platform의 데이터 수집 생태계에 어떻게 적합한지에 대한 자세한 내용은 [데이터 수집 개요](/help/collection/home.md)를 참조하십시오.
 
-Adobe Experience Platform [Web SDK](/help/collection/js/js-overview.md) 및 [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=ko)와 결합된 이벤트 전달은 다음과 같은 이점을 제공합니다.
+Adobe Experience Platform [Web SDK](/help/collection/js/js-overview.md) 및 [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html)와 결합된 이벤트 전달은 다음과 같은 이점을 제공합니다.
 
 **성능**:
 

@@ -2,18 +2,14 @@
 title: TLS(전송 계층 보안) 정보
 description: TLS 버전 및 암호에 대한 정보
 exl-id: 04948cd8-6cf0-4159-a9d3-3130b97af106
-source-git-commit: 236c5a11f40490fc7ee536358fb146027fe64545
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 15%
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
 # TLS(전송 계층 보안) 정보
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참조는 [용어 업데이트](../../term-updates.md) 문서를 참조하십시오.
 
 TLS(전송 계층 보안)는 인터넷을 통해 응용 프로그램 간에 전송되는 데이터에 대한 종단 간 보안을 제공하는 암호화 프로토콜입니다. TLS에 대한 자세한 내용은 [TLS 기본 사항](https://www.internetsociety.org/deploy360/tls/basics/) 설명서를 참조하십시오.
 

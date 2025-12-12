@@ -2,20 +2,16 @@
 title: 리소스 관리
 description: 확장, 데이터 요소 및 규칙을 포함하여 Adobe Experience Platform의 다양한 리소스를 관리하는 방법을 알아봅니다.
 exl-id: 3ec0078e-76a6-42ac-94cf-df9572b37b52
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 55%
+source-wordcount: '138'
+ht-degree: 73%
 
 ---
 
 # 리소스 관리
 
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
-
-Experience Platform의 태그와 관련하여 &quot;리소스&quot;라는 단어는 다음 중 하나를 나타냅니다.
+Experience Platform의 태그와 관련하여 &quot;리소스&quot;라는 단어는 다음 중 하나를 의미합니다.
 
 * [확장](extensions/overview.md) - 확장은 사용할 데이터 요소 유형과 규칙을 제공합니다.
 * [데이터 요소](data-elements.md) - 데이터 요소는 다른 곳에 있는 모든 데이터를 쉽게 참조할 수 있는 방법입니다. 규칙 및 확장 구성 내에서 사용할 수 있는 단축키를 만듭니다. 기본 데이터 위치가 변경되면 개별 규칙 또는 확장을 업데이트하지 않고도 새로운 위치를 가리키도록 업데이트할 수 있습니다.

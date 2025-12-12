@@ -2,18 +2,14 @@
 title: Adobe Experience Platform 데모 확장 개요
 description: Adobe Experience Platform의 Adobe Experience Platform 데모 확장에 대해 알아봅니다.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 74%
+source-wordcount: '1009'
+ht-degree: 81%
 
 ---
 
 # Adobe Experience Platform 데모 확장
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 >[!NOTE]
 >
@@ -37,21 +33,21 @@ ht-degree: 74%
 
 이 섹션에서는 Adobe Experience Platform 확장을 구성할 때 사용할 수 있는 옵션에 대한 참조를 제공합니다.
 
-Adobe Experience Platform 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고 Adobe Experience Platform 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
+Adobe Experience Platform 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL Extensions > Catalog]**&#x200B;를 선택하고 Adobe Experience Platform 확장을 마우스로 가리킨 다음 **[!UICONTROL Install]**&#x200B;을 선택합니다.
 
-확장을 구성하려면 [!UICONTROL 확장] 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+확장을 구성하려면 [!UICONTROL Extensions] 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL Configure]**&#x200B;을 선택합니다.
 
 ![](../../../images/adobe-experience-platform-extension-configuration.png)
 
 ### 스트리밍 연결
 
-스트리밍 연결을 선택하는 것은 Adobe Experience Platform으로 데이터 스트리밍을 시작하기 위한 첫 단계입니다. 스트리밍 연결 콤보 상자에서 하나를 선택할 수 있습니다. 스트리밍 연결은 필수 필드입니다. 만든 스트리밍 연결이 없는 경우 **[!UICONTROL 스트리밍 연결 만들기]** 버튼을 선택하여 만들 수 있습니다.
+스트리밍 연결을 선택하는 것은 Adobe Experience Platform으로 데이터 스트리밍을 시작하기 위한 첫 단계입니다. 스트리밍 연결 콤보 상자에서 하나를 선택할 수 있습니다. 스트리밍 연결은 필수 필드입니다. 만든 스트리밍 연결이 없는 경우 **[!UICONTROL Create a streaming connection]** 버튼을 선택하여 만들 수 있습니다.
 
-**[!UICONTROL 스트리밍 연결 만들기]**&#x200B;를 선택하면 모달 창이 나타납니다.
+**[!UICONTROL Create a streaming connection]**&#x200B;을 선택하면 모달 창이 나타납니다.
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-모달에는 사용자의 요구 사항에 맞게 변경할 수 있는 미리 채워진 값이 있는 필드가 포함되어 있습니다. 스트리밍 연결을 두 개 이상 만들 계획이라면 **[!UICONTROL 데이터 Source]** 필드는 고유해야 합니다. 다른 연결에 이미 사용한 **[!UICONTROL 데이터 Source]**&#x200B;을(를) 사용하여 다른 스트리밍 연결을 만들려고 하면 실패합니다.
+모달에는 사용자의 요구 사항에 맞게 변경할 수 있는 미리 채워진 값이 있는 필드가 포함되어 있습니다. 스트리밍 연결을 두 개 이상 만들려는 경우에는 **[!UICONTROL Data Source]** 필드가 고유해야 합니다. 다른 연결에 이미 사용한 **[!UICONTROL Data Source]**&#x200B;를 사용하여 다른 스트리밍 연결을 만들려고 하면 실패합니다.
 
 스트리밍 끝점을 선택하면 스트리밍 끝점 URL 및 소스가 표시됩니다.
 

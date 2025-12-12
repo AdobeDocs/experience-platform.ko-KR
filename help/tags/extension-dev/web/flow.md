@@ -2,18 +2,14 @@
 title: 웹 확장 흐름
 description: Adobe Experience Platform에서 런타임 시 웹 확장 구성 요소가 서로 상호 작용하는 방법에 대해 알아봅니다.
 exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 59%
+source-wordcount: '227'
+ht-degree: 47%
 
 ---
 
 # 웹 확장 흐름
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 웹 확장에서는 각 이벤트, 조건, 작업 및 데이터 요소 유형에 사용자에게 설정 수정 기능을 제공하는 보기와 사용자 정의 설정에 따라 작동하는 라이브러리 모듈이 모두 포함됩니다.
 
@@ -31,4 +27,4 @@ ht-degree: 59%
 1. 이벤트 라이브러리 모듈에서 이벤트가 발생된 것으로 판단되면 이벤트 라이브러리 모듈이 `trigger`를 호출합니다.
 1. 태그는 `settings`을(를) 조건이 평가되는 규칙의 조건 라이브러리 모듈로 전달합니다.
 1. 각 조건 라이브러리 모듈은 조건이 true로 평가되는지의 여부를 반환합니다.
-1. 모든 조건이 통과하면 규칙의 작업이 실행됩니다.
+1. 모든 조건이 전달되면 규칙의 작업이 실행됩니다.

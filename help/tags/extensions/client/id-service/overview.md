@@ -2,18 +2,14 @@
 title: Adobe Experience Cloud Identity Service 확장 개요
 description: Adobe Experience Platform의 Adobe Experience Cloud Identity 서비스 태그 확장에 대해 알아봅니다.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '793'
-ht-degree: 75%
+source-wordcount: '739'
+ht-degree: 82%
 
 ---
 
 # Adobe Experience Cloud Identity Service 확장 개요
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Cloud ID 확장 구성 및 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -23,9 +19,9 @@ Adobe Experience Cloud ID 확장 구성 및 이 확장을 사용하여 규칙을
 
 이 섹션에서는 Experience Cloud ID 확장을 구성할 때 사용할 수 있는 옵션에 대한 참조를 제공합니다.
 
-Experience Cloud ID 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고 Experience Cloud ID 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
+Experience Cloud ID 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL Extensions > Catalog]**&#x200B;를 선택하고 Experience Cloud ID 확장을 마우스로 가리킨 다음 **[!UICONTROL Install]**&#x200B;을 선택합니다.
 
-확장을 구성하려면 Extensions 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+확장을 구성하려면 Extensions 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL Configure]**&#x200B;을 선택합니다.
 
 ![](../../../images/optin.jpg)
 
@@ -43,7 +39,7 @@ URL이 지정된 경로와 일치하는 경우 Experience Cloud ID가 로드되�
 
 (선택 사항) 정규 표현식인 경우 Regex를 활성화합니다.
 
-다른 경로를 제외하려면 **[!UICONTROL 추가]**&#x200B;를 선택하십시오.
+다른 경로를 제외하려면 **[!UICONTROL Add]**&#x200B;를 선택합니다.
 
 ### 옵트인
 
@@ -73,7 +69,7 @@ URL이 지정된 경로와 일치하는 경우 Experience Cloud ID가 로드되�
 
 저장소가 활성화된 경우 옵트인 쿠키가 만료되는 시간을 초 단위로 지정합니다.
 
-숫자를 입력한 다음 드롭다운 목록에서 시간 단위를 선택합니다. 예를 들어 2를 입력하고 **[!UICONTROL 주]**&#x200B;를 선택합니다. 기본값은 13개월입니다.
+숫자를 입력한 다음 드롭다운 목록에서 시간 단위를 선택합니다. 예를 들면 2를 입력하고 **[!UICONTROL Weeks]**&#x200B;를 선택합니다. 기본값은 13개월입니다.
 
 **권한?**
 
@@ -103,7 +99,7 @@ URL이 지정된 경로와 일치하는 경우 Experience Cloud ID가 로드되�
 
 1. 통합 코드를 입력합니다.
 
-   통합 코드에는 Audience Manager 또는 고객 특성에 데이터 소스로 설정된 값이 포함되어 있어야 합니다.
+   통합 코드에는 Audience Manager 또는 고객 속성에 데이터 소스로 설정된 값이 포함되어 있어야 합니다.
 
 1. 값을 선택합니다.
 
@@ -117,5 +113,5 @@ URL이 지정된 경로와 일치하는 경우 Experience Cloud ID가 로드되�
    * Authenticated
    * 로그아웃됨
 
-1. (선택 사항) 더 많은 고객 ID를 설정하려면 **[!UICONTROL 추가]**&#x200B;를 선택하십시오.
-1. **[!UICONTROL 변경 내용 유지]**&#x200B;를 선택합니다.
+1. (선택 사항) 더 많은 고객 ID를 설정하려면 **[!UICONTROL Add]**&#x200B;를 선택합니다.
+1. **[!UICONTROL Keep Changes]**&#x200B;를 선택합니다.

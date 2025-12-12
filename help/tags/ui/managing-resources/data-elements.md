@@ -2,18 +2,14 @@
 title: 데이터 요소
 description: 데이터 요소는 데이터 사전(또는 데이터 맵)의 기본 구성단위입니다. 데이터 요소를 사용하여 마케팅 및 광고 기술 전반에서 데이터를 수집, 구성 및 전달합니다.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 71%
+source-wordcount: '1549'
+ht-degree: 75%
 
 ---
 
 # 데이터 요소
-
->[!NOTE]
->
->Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 데이터 요소는 데이터 사전(또는 데이터 맵)의 기본 구성단위입니다. 데이터 요소를 사용하여 마케팅 및 광고 기술 전반에서 데이터를 수집, 구성 및 전달합니다.
 
@@ -56,7 +52,7 @@ ht-degree: 71%
 
 데이터 요소는 규칙용 빌드 블록입니다. 데이터 요소를 사용해 사이트에 포함되어 있는 개체의 출처(쿼리 문자열, URL 또는 쿠키 값)에 관계없이 페이지에서 공통적으로 사용된 항목의 데이터 사전(또는 데이터 맵)을 작성합니다.
 
-1. 속성 페이지에서 [!UICONTROL 데이터 요소] 탭을 연 다음 **[!UICONTROL 새 데이터 요소 만들기]**&#x200B;를 선택합니다.
+1. Property 페이지에서 [!UICONTROL Data Elements] 탭을 연 다음을 **[!UICONTROL Create New Data Element]**&#x200B;를 선택합니다.
 1. 데이터 요소에 이름을 지정합니다.
 1. 확장 및 유형을 선택합니다.
 
@@ -85,9 +81,9 @@ ht-degree: 71%
    * Visitor
       * 이 값은 브라우저의 로컬 저장소에 무기한으로 저장됩니다.
 
-1. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+1. **[!UICONTROL Save]**&#x200B;를 선택합니다.
 
-요소를 만들거나 편집할 때 [활성 라이브러리](../publishing/libraries.md#active-library)에 저장하고 빌드할 수 있습니다. 이렇게 하면 변경 사항이 라이브러리에 바로 저장되고 빌드가 실행됩니다. 빌드의 상태가 표시됩니다. [!UICONTROL 활성 라이브러리] 드롭다운에서 새 라이브러리를 만들 수도 있습니다.
+요소를 만들거나 편집할 때 [활성 라이브러리](../publishing/libraries.md#active-library)에 저장하고 빌드할 수 있습니다. 이렇게 하면 변경 사항이 라이브러리에 바로 저장되고 빌드가 실행됩니다. 빌드의 상태가 표시됩니다. [!UICONTROL Active Library] 드롭다운에서 새 라이브러리를 만들 수도 있습니다.
 
 ## 데이터 요소 유형 {#types-of-data-elements}
 
@@ -107,7 +103,7 @@ ht-degree: 71%
 
 ### 사용자 지정 코드
 
-사용자 지정 JavaScript은 [!UICONTROL 편집기 열기]를 선택하고 코드를 편집기 창에 삽입하여 UI에 입력할 수 있습니다.
+사용자 지정 JavaScript는 [!UICONTROL Open Editor]를 선택하고 코드를 편집기 창에 삽입하여 UI에 입력할 수 있습니다.
 
 데이터 요소 값으로 어떤 값을 설정해야 하는지 알 수 있도록 편집기 창에 문장이 반환되어야 합니다. 반환문이 포함되지 않으면 데이터 요소가 `undefined`(으)로 확인됩니다.  이렇게 하면 저장된 값을 찾는 폴백이 트리거되고, 저장된 값이 없을 경우 기본값이 됩니다.
 
@@ -184,7 +180,7 @@ CSS 선택기 체인:
 
 ### 로컬 저장소
 
-[!UICONTROL 로컬 저장소 항목 이름] 필드에 로컬 저장소 항목의 이름을 입력하십시오.
+[!UICONTROL Local Storage Item Name] 필드에 로컬 저장소 항목의 이름을 입력합니다.
 
 로컬 저장소는 브라우저에 페이지 간 정보를 저장하는 방법을 제공합니다([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). 로컬 저장소는 쿠키와 매우 유사하지만 훨씬 더 크고 유연합니다.
 
@@ -205,7 +201,7 @@ CSS 선택기 체인:
 
 ### 쿼리 문자열 매개 변수
 
-[!UICONTROL URL 매개 변수] 필드에 단일 URL 매개 변수를 지정합니다.
+[!UICONTROL URL Parameter] 필드에 단일 URL 매개 변수를 지정합니다.
 
 이름 섹션만 필요하며 &quot;?&quot;와 같은 특별한 지정자만 필요합니다. 또는 &quot;=&quot;는 생략해야 합니다.
 
@@ -232,7 +228,7 @@ CSS 선택기 체인:
 
 ### 세션 저장소
 
-[!UICONTROL 세션 저장소 항목 이름] 필드에 세션 저장소 항목의 이름을 입력하십시오.
+[!UICONTROL Session Storage Item Name] 필드에 세션 저장소 항목의 이름을 입력합니다.
 
 세션 저장소는 세션이 종료된 후 데이터를 삭제하는 것을 제외하고, 로컬 저장소와 비슷하지만 로컬 저장소나 쿠키가 데이터를 유지할 수 있습니다.
 

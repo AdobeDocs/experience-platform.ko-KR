@@ -2,24 +2,20 @@
 title: Adobe Analytics 확장을 위한 공유 모듈
 description: Adobe Experience Platform의 Adobe Analytics 태그 확장에서 제공하는 공유 라이브러리 모듈에 대해 알아봅니다.
 exl-id: f1d7cb2b-0058-46f9-983c-079079e06057
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 70%
+source-wordcount: '380'
+ht-degree: 78%
 
 ---
 
 # Adobe Analytics 확장을 위한 공유 모듈
 
->[!NOTE]
->
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
-
 [Adobe Analytics 확장](./overview.md)은 Experience 애플리케이션에 통합할 수 있는 서로 다른 두 개의 [공유 모듈](../../../extension-dev/web/shared.md)을 제공합니다. 이러한 모듈은 다음 섹션에 설명되어 있습니다.
 
 ## [!DNL get-tracker]
 
-Adobe Analytics에서 비콘을 전송하기 전에 추적기 개체를 초기화해야 합니다. 초기화 프로세스는 추적기 개체를 만들면 발생하는 [AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko)를 로드한 후 시작합니다.
+Adobe Analytics에서 비콘을 전송하기 전에 추적기 개체를 초기화해야 합니다. 초기화 프로세스는 추적기 개체를 만들면 발생하는 [AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html)를 로드한 후 시작합니다.
 
 다음과 같이 `get-tracker` 공유 모듈을 사용하여 추적기 개체가 완전히 초기화된 후 추적기 개체에 액세스할 수 있습니다.
 
