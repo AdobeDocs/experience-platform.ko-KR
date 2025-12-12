@@ -15,7 +15,7 @@ ht-degree: 0%
 
 `targetMigrationEnabled` 명령을 실행할 때 `configure` 부울을 설정합니다. 웹 SDK을 구성할 때 이 속성을 생략하면 기본적으로 `false`이(가) 됩니다. Adobe Target 1.x 또는 2.x 라이브러리를 계속 사용하는 페이지가 있는 경우 이 값을 `true`(으)로 설정하십시오.
 
-이 속성을 사용할 때는 Adobe Target 구현 내에서 [`overrideMboxEdgeServer`의 ](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver)`targetGlobalSettings()`도 사용하도록 설정해야 합니다.
+이 속성을 사용할 때는 Adobe Target 구현 내에서 [`overrideMboxEdgeServer`의 &#x200B;](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver)`targetGlobalSettings()`도 사용하도록 설정해야 합니다.
 
 ```js
 alloy("configure", {
