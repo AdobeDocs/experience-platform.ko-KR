@@ -11,11 +11,11 @@ ht-degree: 0%
 
 # `targetMigrationEnabled`
 
-`targetMigrationEnabled` 속성은 웹 SDK에서 Adobe Target 1.x 및 2.x 라이브러리가 사용하는 [`mbox` 및 `mboxEdgeCluster` 쿠키](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)를 읽고 쓸 수 있도록 하는 부울입니다. 이 옵션을 사용하면 이전 Adobe Target 구현을 사용하는 페이지와 웹 SDK을 사용하는 페이지 간에 방문자 프로필을 유지할 수 있습니다.
+`targetMigrationEnabled` 속성은 웹 SDK에서 Adobe Target 1.x 및 2.x 라이브러리가 사용하는 [`mbox` 및 `mboxEdgeCluster` 쿠키](https://experienceleague.adobe.com/ko/docs/core-services/interface/data-collection/cookies/web-sdk)를 읽고 쓸 수 있도록 하는 부울입니다. 이 옵션을 사용하면 이전 Adobe Target 구현을 사용하는 페이지와 웹 SDK을 사용하는 페이지 간에 방문자 프로필을 유지할 수 있습니다.
 
 `targetMigrationEnabled` 명령을 실행할 때 `configure` 부울을 설정합니다. 웹 SDK을 구성할 때 이 속성을 생략하면 기본적으로 `false`이(가) 됩니다. Adobe Target 1.x 또는 2.x 라이브러리를 계속 사용하는 페이지가 있는 경우 이 값을 `true`(으)로 설정하십시오.
 
-이 속성을 사용할 때는 Adobe Target 구현 내에서 [`overrideMboxEdgeServer`의 &#x200B;](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver)`targetGlobalSettings()`도 사용하도록 설정해야 합니다.
+이 속성을 사용할 때는 Adobe Target 구현 내에서 [`overrideMboxEdgeServer`의 &#x200B;](https://experienceleague.adobe.com/ko/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver)`targetGlobalSettings()`도 사용하도록 설정해야 합니다.
 
 ```js
 alloy("configure", {

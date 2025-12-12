@@ -26,7 +26,7 @@ ht-degree: 1%
 
 웹 SDK에서 `mbox` 1.x 또는 2.x 라이브러리에서 사용하는 레거시 `mboxEdgeCluster` 및 `at.js` 쿠키를 읽고 쓸 수 있도록 하려면 이 옵션을 사용합니다. 이 설정은 동일한 웹 사이트에서 웹 SDK 또는 `at.js`을(를) 사용하여 페이지 간에 이동하는 동안 방문자 프로필을 그대로 유지하는 데 도움이 됩니다. 사이트에 `at.js`이(가) 구현되지 않은 경우 이 확인란을 활성화할 필요가 없습니다. 이 확인란에 해당하는 JavaScript 라이브러리는 [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md)입니다.
 
-이 옵션을 활성화할 때는 [`overrideMboxEdgeServer`에서 &#x200B;](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver)`targetGlobalSettings()`도 활성화해야 합니다.
+이 옵션을 활성화할 때는 [`overrideMboxEdgeServer`에서 &#x200B;](https://experienceleague.adobe.com/ko/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver)`targetGlobalSettings()`도 활성화해야 합니다.
 
 ## [!UICONTROL Prehiding style] {#prehiding-style}
 
