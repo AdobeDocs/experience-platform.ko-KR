@@ -3,9 +3,9 @@ keywords: Experience Platform;쿼리 서비스;쿼리 서비스;중첩된 데이
 title: BI 도구에 사용할 중첩된 데이터 구조 평면화
 description: 이 문서에서는 쿼리 서비스에서 타사 BI 도구를 사용할 때 세션 중에 모든 테이블 및 뷰에 대한 XDM 스키마를 병합하는 방법을 설명합니다.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fc98b111aa15cdeb64eacdc05cac33a00ee98d80
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '854'
 ht-degree: 0%
 
 ---
@@ -42,19 +42,19 @@ Adobe Experience Platform Query Service는 타사 BI 도구를 통해 데이터�
 
 입력은 다음 형식을 사용해야 합니다.
 
-```terminal
+```bash
 {sandbox_name}:{all/ID/database_name}?FLATTEN
 ```
 
 연결 문자열의 예는 다음과 같습니다.
 
-```terminal
+```bash
 prod:all?FLATTEN
 ```
 
 ## 예 {#example}
 
-이 안내서에 사용된 예제 스키마는 표준 필드 그룹 [!UICONTROL Commerce 세부 정보]를 사용합니다. 이 스키마는 `commerce` 개체 구조 및 `productListItems` 배열을 사용합니다. [!UICONTROL Commerce 세부 정보] 필드 그룹[&#128279;](../../xdm/field-groups/event/commerce-details.md)에 대한 자세한 내용은 XDM 설명서를 참조하세요. 스키마 구조의 표현은 아래 이미지에서 볼 수 있습니다.
+이 안내서에 사용된 예제 스키마는 [!UICONTROL Commerce Details] 개체 구조 및 `commerce` 배열을 사용하는 표준 필드 그룹 `productListItems`을(를) 사용합니다. [필드 그룹 [!UICONTROL Commerce Details]에 대한 자세한 정보](../../xdm/field-groups/event/commerce-details.md)는 XDM 설명서를 참조하세요. 스키마 구조의 표현은 아래 이미지에서 볼 수 있습니다.
 
 ![`commerce` 및 `productListItems` 구조를 포함하는 Commerce 세부 정보 필드 그룹의 스키마 다이어그램입니다.](../images/key-concepts/commerce-details.png)
 
@@ -62,13 +62,13 @@ BI 도구가 중첩된 데이터 구조를 지원하지 않는 경우 중첩된 
 
 다음 값은 형식이 잘못 중첩된 필드의 `commerce.order.priceTotal`(3018.0), `commerce.order.purchaseID`(c9b5aff9-25de-450b-98f4-4484a2170180) 및 `commerce.purchases.value`(1.0)을(를) 나타냅니다.
 
-```terminal
+```bash
 ("(3018.0,c9b5aff9-25de-450b-98f4-4484a2170180)","(1.0)")
 ```
 
 `FLATTEN` 설정을 사용하면 점 표기법과 원래 경로 이름을 사용하여 스키마 내의 개별 필드 또는 중첩된 데이터 구조의 전체 섹션에 액세스할 수 있습니다. `commerce` 필드 그룹을 사용하는 이 형식의 예는 아래에 나와 있습니다.
 
-```terminal
+```bash
 commerce.order.priceTotal
 commerce.order.purchaseID
 commerce.purchases.value
