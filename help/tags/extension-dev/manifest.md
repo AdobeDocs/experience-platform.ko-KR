@@ -13,7 +13,7 @@ ht-degree: 65%
 
 확장의 기본 디렉터리에 이름이 `extension.json`인 파일을 생성해야 합니다. 여기에는 Adobe Experience Platform에서 확장을 적절하게 사용할 수 있도록 하는 중요한 세부 정보가 포함되어 있습니다. 일부 컨텐츠는 [npm의 `package.json`](https://docs.npmjs.com/files/package.json) 방식을 따라 형성됩니다.
 
-예제 `extension.json`은 [Hello World 확장 ](https://github.com/adobe/reactor-helloworld-extension/blob/master/extension.json) GitHub 리포지토리에서 찾을 수 있습니다.
+예제 `extension.json`은 [Hello World 확장 &#x200B;](https://github.com/adobe/reactor-helloworld-extension/blob/master/extension.json) GitHub 리포지토리에서 찾을 수 있습니다.
 
 확장 매니페스트는 다음과 같이 구성되어야 합니다.
 
@@ -71,20 +71,20 @@ ht-degree: 65%
       <td><code>schema</code></td>
       <td>확장 구성 보기에서 저장되는 유효한 객체의 형식을 설명하는 <a href="https://json-schema.org/">JSON 스키마</a> 객체입니다. 저장된 설정 객체가 이 스키마와 일치하도록 하는 것은 구성 보기 개발자의 책임입니다. 이 스키마는 사용자가 Experience Platform 서비스를 사용하여 데이터를 저장하려고 할 때도 유효성 검사에 사용됩니다.<br><br>예제 스키마 객체는 다음과 같습니다.
 <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": {
-    "delay": {
+  "properties": &lbrace;
+    "delay": &lbrace;
       "type": "number",
       "minimum": 1
-    }
-  },
-  "required": [
+    &rbrace;
+  &rbrace;,
+  "required": &lbrack;
     "delay"
-  ],
+  &rbrack;,
   "additionalProperties": false
-}
+&rbrace;
 </pre>
       <a href="https://www.jsonschemavalidator.net/">JSON 스키마 유효성 검사기</a>와 같은 툴을 사용하여 스키마를 수동으로 테스트하는 것이 좋습니다.</td>
     </tr>
@@ -131,20 +131,20 @@ ht-degree: 65%
       <td><code>schema</code></td>
       <td>사용자가 저장할 수 있는 유효한 설정 객체의 형식을 설명하는 <a href="https://json-schema.org/">JSON 스키마</a> 객체입니다. 설정은 일반적으로 데이터 수집 사용자 인터페이스를 사용하여 사용자가 구성 및 저장합니다. 이러한 경우 확장의 보기에서 사용자가 제공한 설정을 확인하는 데 필요한 단계를 수행할 수 있습니다. 반면, 일부 사용자는 사용자 인터페이스의 지원 없이 태그 API를 직접 사용하도록 선택합니다. 이 스키마의 목적은 Experience Platform이 사용자 인터페이스의 사용 여부와 관계없이 사용자가 저장한 설정 객체가 런타임 시 설정 객체에 적용되는 라이브러리 모듈과 호환되는 형식으로 되어 있는지 확인하기 위한 것입니다.<br><br>예제 스키마 객체는 다음과 같습니다.<br>
 <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": {
-    "delay": {
+  "properties": &lbrace;
+    "delay": &lbrace;
       "type": "number",
       "minimum": 1
-    }
-  },
-  "required": [
+    &rbrace;
+  &rbrace;,
+  "required": &lbrack;
     "delay"
-  ],
+  &rbrack;,
   "additionalProperties": false
-}
+&rbrace;
 </pre>
       <a href="https://www.jsonschemavalidator.net/">JSON 스키마 유효성 검사기</a>와 같은 툴을 사용하여 스키마를 수동으로 테스트하는 것이 좋습니다.</td>
     </tr>

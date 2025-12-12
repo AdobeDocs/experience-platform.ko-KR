@@ -45,8 +45,8 @@ ht-degree: 1%
 
 | 속성 | 설명 |
 |----------|-------------|
-| **[!UICONTROL Application ID]** | [!UICONTROL Application ID]API 키[ 섹션 아래의 Algolia 대시보드에 있는 ](https://www.algolia.com/account/api-keys/all)을(를) 입력하십시오. |
-| **[!UICONTROL Search API Key]** | [!UICONTROL Search API Key]API 키[ 섹션 아래의 Algolia 대시보드에 있는 ](https://www.algolia.com/account/api-keys/all)을(를) 입력하십시오. |
+| **[!UICONTROL Application ID]** | [!UICONTROL Application ID]API 키[&#x200B; 섹션 아래의 Algolia 대시보드에 있는 &#x200B;](https://www.algolia.com/account/api-keys/all)을(를) 입력하십시오. |
+| **[!UICONTROL Search API Key]** | [!UICONTROL Search API Key]API 키[&#x200B; 섹션 아래의 Algolia 대시보드에 있는 &#x200B;](https://www.algolia.com/account/api-keys/all)을(를) 입력하십시오. |
 | **[!UICONTROL Index Name]** | 제품이나 콘텐츠가 포함된 [!UICONTROL Index Name]을(를) 입력하십시오. 이 색인은 기본값으로 사용됩니다. |
 
 {style="table-layout:auto"}

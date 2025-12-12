@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 전제 조건
 
-이 확장을 사용하려면 기존 [!DNL AWS] 데이터 스트림을 가진 [!DNL Kinesis] 계정이 있어야 합니다. 기존 데이터 스트림이 없는 경우 [!DNL AWS]관리 콘솔을 사용하여 새 데이터 스트림 만들기[3}에 대한  [!DNL AWS]  설명서를 참조하십시오.](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html)
+이 확장을 사용하려면 기존 [!DNL AWS] 데이터 스트림을 가진 [!DNL Kinesis] 계정이 있어야 합니다. 기존 데이터 스트림이 없는 경우 [!DNL AWS]관리 콘솔을 사용하여 새 데이터 스트림 만들기[3&rbrace;에 대한  [!DNL AWS]  설명서를 참조하십시오.](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html)
 
 ## 확장 설치 {#install}
 
@@ -28,13 +28,13 @@ ht-degree: 0%
 
 ![데이터 수집 UI에서 [!UICONTROL Install] 확장에 대해 [!UICONTROL AWS] 단추를 선택하고 있습니다.](../../../images/extensions/server/aws/install.png)
 
-다음 화면에서는 [!DNL AWS] 계정에 대한 연결 자격 증명을 제공해야 합니다. 특히 [!DNL AWS] 액세스 키 ID와 비밀 액세스 키를 제공해야 합니다. 이러한 값을 모를 경우 [!DNL AWS]액세스 키 ID와 비밀 액세스 키를 얻는 방법[에 대한 ](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html) 설명서를 참조하십시오.
+다음 화면에서는 [!DNL AWS] 계정에 대한 연결 자격 증명을 제공해야 합니다. 특히 [!DNL AWS] 액세스 키 ID와 비밀 액세스 키를 제공해야 합니다. 이러한 값을 모를 경우 [!DNL AWS]액세스 키 ID와 비밀 액세스 키를 얻는 방법[에 대한 &#x200B;](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html) 설명서를 참조하십시오.
 
 ![확장 구성 보기에 추가된 액세스 키 ID 및 비밀 액세스 키입니다.](../../../images/extensions/server/aws/credentials.png)
 
 >[!IMPORTANT]
 >
->액세스 자격 증명을 생성하는 데 사용되는 [!DNL AWS] 계정에 액세스 정책을 첨부해야 합니다. 데이터를 [!DNL Kinesis] 데이터 스트림으로 보낼 수 있는 액세스 권한을 부여하려면 이 정책을 구성해야 합니다. **예제 정책**[!DNL AWS]에 대한 [ 문서의  [!DNL Kinesis Data Streams]예제 2](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html#kinesis-using-iam-examples)을(를) 참조하여 정책을 정의하는 방법을 확인하십시오.
+>액세스 자격 증명을 생성하는 데 사용되는 [!DNL AWS] 계정에 액세스 정책을 첨부해야 합니다. 데이터를 [!DNL Kinesis] 데이터 스트림으로 보낼 수 있는 액세스 권한을 부여하려면 이 정책을 구성해야 합니다. **예제 정책**&#x200B;[!DNL AWS]에 대한 [&#x200B; 문서의  [!DNL Kinesis Data Streams]예제 2](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html#kinesis-using-iam-examples)을(를) 참조하여 정책을 정의하는 방법을 확인하십시오.
 
 완료되면 **[!UICONTROL Save]**&#x200B;을(를) 선택하고 확장이 설치되었습니다.
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ![데이터 수집 UI에서 규칙에 대해 [!UICONTROL Send Data to Kinesis Data Stream] 작업 유형을 선택하고 있습니다.](../../../images/extensions/server/aws/select-action-type.png)
 
-오른쪽 패널이 업데이트되어 데이터를 전송하는 방법에 대한 구성 옵션을 표시합니다. 특히 [ 구성을 나타내는 다양한 속성에 ](../../../ui/managing-resources/data-elements.md)데이터 요소[!DNL Event Hub]를 할당해야 합니다.
+오른쪽 패널이 업데이트되어 데이터를 전송하는 방법에 대한 구성 옵션을 표시합니다. 특히 [&#x200B; 구성을 나타내는 다양한 속성에 &#x200B;](../../../ui/managing-resources/data-elements.md)데이터 요소[!DNL Event Hub]를 할당해야 합니다.
 
 ![UI에 표시된 [!UICONTROL Send Data to Kinesis Data Stream] 작업 형식에 대한 구성 옵션입니다.](../../../images/extensions/server/aws/data-stream-details.png)
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 | --- | --- |
 | [!UICONTROL Stream Name] | 이 이벤트 전달 규칙이 데이터 레코드를 보낼 스트림 이름입니다. |
 | [!UICONTROL AWS Region] | [!DNL AWS] 데이터 스트림이 만들어지는 [!DNL Kinesis] 영역입니다. |
-| [!UICONTROL Partition Key] | 데이터 스트림으로 데이터를 보낼 때 확장에서 사용할 [파티션 키](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key)입니다.<br><br>[!DNL Kinesis Data Streams]은(는) 스트림에 속하는 데이터 레코드를 여러 개의 조각으로 분리합니다. 각 데이터 레코드와 함께 전송되는 파티션 키를 사용하여 주어진 데이터 레코드가 속하는 분할을 결정합니다.<br><br>각 고객마다 다르므로 고객을 배포하기 위한 올바른 파티션 키가 고객 번호일 수 있습니다. 파티션 키가 좋지 않으면 모두 근처에 같은 지역에 거주할 수 있으므로 우편 번호가 낮을 수 있습니다. 일반적으로 서로 다른 잠재적 값의 범위가 가장 높은 파티션 키를 선택해야 합니다. 파티션 키 관리에 대한 모범 사례를 보려면 [!DNL AWS]데이터 스트림 크기 조정[의  [!DNL Kinesis] 에 대한 ](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) 문서를 참조하십시오. |
+| [!UICONTROL Partition Key] | 데이터 스트림으로 데이터를 보낼 때 확장에서 사용할 [파티션 키](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key)입니다.<br><br>[!DNL Kinesis Data Streams]은(는) 스트림에 속하는 데이터 레코드를 여러 개의 조각으로 분리합니다. 각 데이터 레코드와 함께 전송되는 파티션 키를 사용하여 주어진 데이터 레코드가 속하는 분할을 결정합니다.<br><br>각 고객마다 다르므로 고객을 배포하기 위한 올바른 파티션 키가 고객 번호일 수 있습니다. 파티션 키가 좋지 않으면 모두 근처에 같은 지역에 거주할 수 있으므로 우편 번호가 낮을 수 있습니다. 일반적으로 서로 다른 잠재적 값의 범위가 가장 높은 파티션 키를 선택해야 합니다. 파티션 키 관리에 대한 모범 사례를 보려면 [!DNL AWS]데이터 스트림 크기 조정[의  [!DNL Kinesis] 에 대한 &#x200B;](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) 문서를 참조하십시오. |
 
 {style="table-layout:auto"}
 

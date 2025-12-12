@@ -103,7 +103,7 @@ ht-degree: 15%
 
 ## v0.14 (2021년 5월 14일)
 
-- 온디바이스 의사 결정 기능이 있는 [ 2.5를 로드하는 ](./overview.md#load-target-with-on-device-decisioning)온디바이스 의사 결정`at.js`을 사용하는 Target 로드 작업을 새로 추가했습니다
+- 온디바이스 의사 결정 기능이 있는 [&#x200B; 2.5를 로드하는 &#x200B;](./overview.md#load-target-with-on-device-decisioning)온디바이스 의사 결정`at.js`을 사용하는 Target 로드 작업을 새로 추가했습니다
 - `at.js`을(를) 2.5로 업데이트함
 
 

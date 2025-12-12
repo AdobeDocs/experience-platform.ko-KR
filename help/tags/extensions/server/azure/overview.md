@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 전제 조건
 
-이 확장을 사용하려면 [!DNL Azure]에 액세스할 수 있는 올바른 [!DNL Event Hubs] 계정이 있어야 합니다. 또한 아래 단계를 수행하기 전에 [ [!DNL Azure] 포털](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create)을 사용하여 이벤트 허브를 만들어야 합니다.
+이 확장을 사용하려면 [!DNL Azure]에 액세스할 수 있는 올바른 [!DNL Event Hubs] 계정이 있어야 합니다. 또한 아래 단계를 수행하기 전에 [&#x200B; [!DNL Azure] 포털](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create)을 사용하여 이벤트 허브를 만들어야 합니다.
 
 ## 확장 설치
 
@@ -36,7 +36,7 @@ Microsoft [!DNL Azure] 확장을 설치하려면 데이터 수집 UI 또는 Expe
 
 ![데이터 수집 UI에서 규칙에 대해 [!UICONTROL Send Data to Event Hubs] 작업 유형을 선택하고 있습니다.](../../../images/extensions/server/azure/select-action-type.png)
 
-오른쪽 패널이 업데이트되어 데이터를 전송하는 방법에 대한 구성 옵션을 표시합니다. 특히 [ 구성을 나타내는 다양한 속성에 ](../../../ui/managing-resources/data-elements.md)데이터 요소[!DNL Event Hub]를 할당해야 합니다.
+오른쪽 패널이 업데이트되어 데이터를 전송하는 방법에 대한 구성 옵션을 표시합니다. 특히 [&#x200B; 구성을 나타내는 다양한 속성에 &#x200B;](../../../ui/managing-resources/data-elements.md)데이터 요소[!DNL Event Hub]를 할당해야 합니다.
 
 ![UI에 표시된 [!UICONTROL Send Data to Event Hubs] 작업 형식에 대한 구성 옵션입니다.](../../../images/extensions/server/azure/event-hub-details.png)
 
@@ -44,7 +44,7 @@ Microsoft [!DNL Azure] 확장을 설치하려면 데이터 수집 UI 또는 Expe
 
 | 입력 | 설명 |
 | --- | --- |
-| [!UICONTROL Namespace] | [!DNL Event Hubs]이벤트 허브를 설정[할 때 만든 ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) 네임스페이스의 이름입니다. |
+| [!UICONTROL Namespace] | [!DNL Event Hubs]이벤트 허브를 설정[할 때 만든 &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) 네임스페이스의 이름입니다. |
 | [!UICONTROL Name] | 이벤트 허브의 이름입니다. |
 | [!UICONTROL SAS Authorization Rule Name] | 전체 [!DNL Event Hubs] 네임스페이스 또는 데이터를 보낼 특정 이벤트 허브 인스턴스에 대한 공유 액세스 권한 부여 규칙의 이름입니다. 자세한 내용은 [SAS 인증 값 가져오기](#sas)에 대한 부록 섹션을 참조하십시오. |
 | [!UICONTROL SAS Access Key] | 전체 [!DNL Event Hubs] 네임스페이스 또는 데이터를 보낼 특정 이벤트 허브 인스턴스에 대한 공유 액세스 권한 부여 규칙의 기본 키입니다. 자세한 내용은 [SAS 인증 값 가져오기](#sas)에 대한 부록 섹션을 참조하십시오. |
@@ -70,7 +70,7 @@ Microsoft [!DNL Azure] 확장을 설치하려면 데이터 수집 UI 또는 Expe
 
 ## 부록: SAS 인증 값 얻기 {#sas}
 
-외부 응용 프로그램에는 [!DNL Event Hubs]SAS(공유 액세스 서명)[을(를) 통해 ](https://learn.microsoft.com/en-us/azure/event-hubs/authorize-access-shared-access-signature)에 대한 액세스 권한이 부여됩니다. 각 [!DNL Event Hubs] 네임스페이스 및 이벤트 허브 인스턴스에는 생성 시 자동으로 할당된 기본 SAS 권한 부여 규칙이 있지만 원하는 경우 각 리소스에 대해 추가 정책을 만들 수도 있습니다.
+외부 응용 프로그램에는 [!DNL Event Hubs]SAS(공유 액세스 서명) [을(를) 통해 &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/authorize-access-shared-access-signature)에 대한 액세스 권한이 부여됩니다. 각 [!DNL Event Hubs] 네임스페이스 및 이벤트 허브 인스턴스에는 생성 시 자동으로 할당된 기본 SAS 권한 부여 규칙이 있지만 원하는 경우 각 리소스에 대해 추가 정책을 만들 수도 있습니다.
 
 [이벤트 전달 규칙을 구성](#rule)할 때 [!DNL Azure] 확장을 사용하면 데이터를 보낼 네임스페이스 또는 특정 이벤트 허브를 제어하는 권한 부여 규칙의 이름과 기본 키를 제공해야 합니다. [!DNL Azure] 포털에서 이러한 값을 가져오는 방법에 대한 자세한 내용은 [!DNL Azure] 설명서의 다음 섹션을 참조하십시오.
 
