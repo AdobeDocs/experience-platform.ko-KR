@@ -146,4 +146,4 @@ XDM에 대한 자세한 내용은 [XDM 개요](../../xdm/home.md)를 참조하�
 
 Customer Journey Analytics(CJA) 액세스 권한은 CJA의 애플리케이션 수준에서 관리됩니다. CJA은 자체 속성 기반 액세스 제어를 사용하며, Adobe Experience Platform에 정의된 속성 기반 액세스 제어를 상속하거나 적용하지 않습니다.
 
-CJA 액세스 제어에 대한 자세한 내용은 [CJA 액세스 제어](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control) 설명서를 참조하십시오.
+CJA 액세스 제어에 대한 자세한 내용은 [CJA 액세스 제어](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/technotes/access-control) 설명서를 참조하십시오.
