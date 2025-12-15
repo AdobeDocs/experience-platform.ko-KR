@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 개요
 description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 정보를 제공합니다
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 14028928362d8396c30babfc2279135011dd7c6f
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1929'
 ht-degree: 13%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 13%
 
 다음 비디오에서는 속성 기반 액세스 제어에 대한 이해를 돕기 위해 역할, 리소스 및 정책을 구성하는 방법에 대해 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3451845?learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## 속성 기반 액세스 제어 용어
 
@@ -80,7 +80,7 @@ Admin Console에서 새 권한 인터페이스로 모든 Experience Platform 기
 
 ### 대상 {#destinations}
 
-[!DNL Destinations]은(는) Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 대상 플랫폼과의 사전 빌드된 통합을 통해 Experience Platform의 데이터를 원활하게 활성화할 수 있습니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 관리자는 속성 기반 액세스 제어 기능을 사용하여 다음을 수행할 수 있습니다.
 
@@ -141,3 +141,9 @@ XDM(경험 데이터 모델)은 디지털 경험의 성능을 개선하기 위�
 * 사용자에게 할당된 역할에 적용되는 권한 집합에 따라 특정 XDM 스키마 필드에 대한 사용자 액세스를 구성합니다.
 
 XDM에 대한 자세한 내용은 [XDM 개요](../../xdm/home.md)를 참조하세요.
+
+### Customer Journey Analytics(CJA)
+
+Customer Journey Analytics(CJA) 액세스 권한은 CJA의 애플리케이션 수준에서 관리됩니다. CJA은 자체 속성 기반 액세스 제어를 사용하며, Adobe Experience Platform에 정의된 속성 기반 액세스 제어를 상속하거나 적용하지 않습니다.
+
+CJA 액세스 제어에 대한 자세한 내용은 [CJA 액세스 제어](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control) 설명서를 참조하십시오.
