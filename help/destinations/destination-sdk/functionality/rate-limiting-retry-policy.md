@@ -1,23 +1,30 @@
 ---
-description: Experience Platform이 스트리밍 대상에서 반환되는 다양한 유형의 오류를 처리하는 방법과 데이터를 대상 플랫폼으로 전송하기 위해 다시 시도하는 방법을 알아봅니다.
-title: Destination SDK으로 빌드된 스트리밍 대상에 대한 속도 제한 및 다시 시도 정책
+description: Experience Platform에서 스트리밍 대상에서 반환되는 다양한 유형의 오류를 처리하는 방법과 데이터를 대상 플랫폼으로 전송하기 위해 다시 시도하는 방법을 알아봅니다.
+title: Destination SDK을 사용하여 빌드된 스트리밍 대상에 대한 속도 제한 및 다시 시도 정책
 exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 75bee8fde648101335df7a66eae1907b267b4eb6
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
 
-# Destination SDK으로 빌드된 스트리밍 대상에 대한 속도 제한 및 다시 시도 정책
+# Destination SDK을 사용하여 빌드된 스트리밍 대상에 대한 속도 제한 및 다시 시도 정책
 
 파트너가 빌드한 대상은 다양한 오류를 반환하고 다른 속도 제한 정책을 사용할 수 있습니다. 이 페이지에서는 Experience Platform이 스트리밍 대상에서 반환되는 다양한 유형의 오류를 처리하는 방법을 설명합니다.
 
-Destination SDK을 사용하여 대상을 구성할 때 두 가지 집계 유형, 즉 [최고 작업 집계](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)와 [구성 가능한 집계](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 중에서 선택할 수 있습니다. 선택하는 집계 유형에 따라 아래에서 Experience Platform이 오류 및 비율 제한을 처리하는 방법을 읽어 보십시오.
+Destination SDK을 사용하여 대상을 구성할 때 두 가지 집계 유형([최고 작업량 집계](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) 및 [구성 가능한 집계](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)) 중에서 선택할 수 있습니다. 선택하는 집계 유형에 따라 Experience Platform에서 오류 및 등급 제한을 처리하는 방법을 아래를 참조하십시오.
 
 ## 최상의 작업 집계 {#best-effort-aggregation}
 
-대상에 대해 실패한 모든 HTTP 호출의 경우 Experience Platform은 첫 번째 호출 직후 한 번 더 호출을 시도합니다. 두 번째 시도에서 호출이 계속 실패하면 Experience Platform은 호출을 삭제하고 세 번째 다시 시도하지 않습니다.
+다음 HTTP 응답 코드를 반환하는 Experience Platform 다시 시도 호출: **403, 408, 409, 429, 500, 502, 503, 504**. 다음 간격으로 두 번 다시 시도합니다.
+
+* 첫 번째 재시도: 15초 후
+* 두 번째 재시도: 30초 후
+
+Experience Platform은 400(잘못된 요청)과 같은 다른 HTTP 응답 코드를 반환하는 *not* 재시도 호출을 수행합니다. 두 번 모두 다시 시도한 후에도 호출이 계속 실패하면 Experience Platform은 활성화를 중단하고 다시 시도하지 않습니다.
+
+고객 지원 센터에 문의하여 특정 데이터 흐름에 다른 재시도 정책을 요청할 수 있습니다.
 
 ## 구성 가능한 집계 {#configurable-aggregation}
 
@@ -30,18 +37,18 @@ Destination SDK을 사용하여 대상을 구성할 때 두 가지 집계 유형
 
 ### 재시도 접근 방식 설명 {#retry-approach}
 
-구성 가능한 집계를 위한 Experience Platform 접근 방식이 아래에 기술된다. 이 예제에서는 Experience Platform이 분당 50,000개 이상의 요청을 수신하는 경우 429개의 오류 코드를 반환하기 시작하는 대상 플랫폼으로 데이터를 전송한다고 가정합니다.
+구성 가능한 집계를 위한 Experience Platform 접근 방식이 아래에 설명되어 있습니다. 이 예제에서는 Experience Platform이 분당 50,000개 이상의 요청을 수신하는 경우 429개의 오류 코드를 반환하기 시작하는 대상 플랫폼으로 데이터를 전송한다고 가정합니다.
 
-* 1분: Experience Platform은 프로필이 있는 배치 40만 개를 집계하여 대상 플랫폼으로 보냅니다. Experience Platform은 40k HTTP 요청을 수행하므로 모두 성공합니다.
-* 2분: Experience Platform이 프로필이 있는 배치를 7만 개 집계하여 대상 플랫폼으로 보냅니다. Experience Platform은 70k의 HTTP 요청과 50k의 HTTP 요청이 성공했습니다. 다른 20k는 끝점에서 속도 제한 오류를 받으며 30분 후에 다시 시도합니다.
-* 3분: Experience Platform은 프로필이 있는 배치를 3만 개 집계하여 대상 플랫폼으로 보냅니다. Experience Platform은 30k HTTP 요청을 수행하므로 모두 성공합니다.
+* 1분: Experience Platform은 프로필이 포함된 4만 개의 배치를 집계하여 대상 플랫폼으로 보냅니다. Experience Platform은 40k HTTP 요청을 수행하므로 모두 성공합니다.
+* 2분: Experience Platform은 프로필이 있는 7만 개의 배치를 집계하여 대상 플랫폼으로 보냅니다. Experience Platform은 7만 개의 HTTP 요청과 5만 개의 HTTP 요청에 성공했습니다. 다른 20k는 끝점에서 속도 제한 오류를 받으며 30분 후에 다시 시도합니다.
+* 3분: Experience Platform은 프로필이 포함된 30k 배치를 집계하여 대상 플랫폼으로 보냅니다. Experience Platform은 30만 개의 HTTP 요청을 수행하므로 모든 요청이 성공합니다.
 * ...
 * ...
-* 32분: Experience Platform이 2분에 실패한 20k 배치를 다시 전송하려고 합니다. 모든 호출이 성공했습니다.
+* 32분: Experience Platform은 2분에 실패한 2만 개의 일괄 처리를 다시 전송합니다. 모든 호출이 성공했습니다.
 
 ## 다음 단계 {#next-steps}
 
-이제 스트리밍 대상을 구성할 때 선택한 집계 정책에 따라 Experience Platform이 대상 플랫폼에서 오류 및 속도 제한을 처리하는 방법을 알 수 있습니다. 그런 다음 다음 다음 설명서를 검토할 수 있습니다.
+이제 스트리밍 대상을 구성할 때 선택한 집계 정책에 따라 Experience Platform에서 대상 플랫폼에서 오류 및 속도 제한을 처리하는 방법을 알 수 있습니다. 그런 다음 다음 다음 설명서를 검토할 수 있습니다.
 
 * [대상 구성 테스트](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)
 * [Destination SDK에서 작성된 대상을 검토하기 위해 제출](../guides/submit-destination.md)

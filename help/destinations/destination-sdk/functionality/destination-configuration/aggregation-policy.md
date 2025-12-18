@@ -2,9 +2,9 @@
 description: 대상에 대한 HTTP 요청을 그룹화하고 일괄 처리하는 방법을 결정하는 집계 정책을 설정하는 방법에 대해 알아봅니다.
 title: 집계 정책
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: d5d7841cc8799e7f7d4b607bfb8adea63a7eb1db
+source-git-commit: 92d7abcbd642cea4e0fa041d2926ba8868f506e5
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1235'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,26 @@ Destination SDK을 사용하여 실시간(스트리밍) 대상을 작성할 때 
    "aggregationType":"BEST_EFFORT",
    "bestEffortAggregation":{
       "maxUsersPerRequest":10,
-      "splitUserById":false
+      "splitUserById":false,
+      "aggregationKey":{
+         "includeSegmentId":true,
+         "includeSegmentStatus":true,
+         "includeIdentity":true,
+         "oneIdentityPerGroup":true,
+         "groups":[
+            {
+               "namespaces":[
+                  "IDFA",
+                  "GAID"
+               ]
+            },
+            {
+               "namespaces":[
+                  "EMAIL"
+               ]
+            }
+         ]
+      }
    }
 }
 ```
@@ -62,6 +81,12 @@ Destination SDK을 사용하여 실시간(스트리밍) 대상을 작성할 때 
 | `aggregationType` | 문자열 | 대상에서 사용해야 하는 집계 정책 유형을 나타냅니다. 지원되는 집계 유형: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `bestEffortAggregation.maxUsersPerRequest` | 정수 | Experience Platform은 단일 HTTP 호출에서 내보낸 여러 프로필을 집계할 수 있습니다. <br><br>이 값은 끝점이 단일 HTTP 호출에서 받아야 하는 최대 프로필 수를 나타냅니다. 이는 최선의 작업 집계입니다. 예를 들어 100 값을 지정하면 Experience Platform에서 호출 시 100보다 작은 수의 프로필을 보낼 수 있습니다. <br><br> 서버가 요청당 여러 사용자를 허용하지 않는 경우 이 값을 `1`(으)로 설정하십시오. |
 | `bestEffortAggregation.splitUserById` | 부울 | 대상에 대한 호출을 ID로 분할해야 하는 경우 이 플래그를 사용합니다. 서버에서 지정된 ID 네임스페이스에 대해 호출당 하나의 ID만 허용하는 경우 이 플래그를 `true`(으)로 설정하십시오. |
+| `bestEffortAggregation.aggregationKey` | 오브젝트 | *선택 사항*. 아래 설명된 매개 변수를 기반으로 대상에 매핑된 내보낸 프로필을 집계할 수 있습니다. 이 매개 변수는 생략하거나 집계가 필요하지 않은 경우 `null`(으)로 설정할 수 있습니다. 제공될 때, 그것은 구성가능한 어그리게이션에서 어그리게이션 키와 동일하게 기능한다. |
+| `bestEffortAggregation.aggregationKey.includeSegmentId` | 부울 | 대상으로 내보낸 프로필을 대상 ID로 그룹화하려면 이 매개 변수를 `true`(으)로 설정하십시오. |
+| `bestEffortAggregation.aggregationKey.includeSegmentStatus` | 부울 | 대상 ID 및 대상 상태별로 대상으로 내보낸 프로필을 그룹화하려면 이 매개 변수와 `includeSegmentId`을(를) 모두 `true`(으)로 설정하십시오. |
+| `bestEffortAggregation.aggregationKey.includeIdentity` | 부울 | ID 네임스페이스별로 대상으로 내보낸 프로필을 그룹화하려면 이 매개 변수를 `true`(으)로 설정하십시오. |
+| `bestEffortAggregation.aggregationKey.oneIdentityPerGroup` | 부울 | 내보낸 프로필을 단일 ID(GAID, IDFA, 전화 번호, 이메일 등)를 기반으로 그룹으로 집계하려면 이 매개 변수를 `true`(으)로 설정하십시오. `false` 매개 변수를 사용하여 사용자 지정 ID 네임스페이스 그룹화를 정의하려면 `groups`(으)로 설정하십시오. |
+| `bestEffortAggregation.aggregationKey.groups` | 배열 | `oneIdentityPerGroup`이(가) `false`(으)로 설정된 경우 이 매개 변수를 사용하십시오. 대상으로 내보낸 프로필을 ID 네임스페이스 그룹별로 그룹화하려면 ID 그룹 목록을 만듭니다. 예를 들어 위의 예에 표시된 구성을 사용하여 IDFA 및 GAID 모바일 식별자가 포함된 프로필을 대상에 대한 한 호출로 결합하고 이메일이 다른 호출로 결합될 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -115,8 +140,8 @@ Destination SDK을 사용하여 실시간(스트리밍) 대상을 작성할 때 
 | `configurableAggregation.aggregationKey.includeSegmentId` | 부울 | 대상으로 내보낸 프로필을 대상 ID로 그룹화하려면 이 매개 변수를 `true`(으)로 설정하십시오. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | 부울 | 대상 ID 및 대상 상태별로 대상으로 내보낸 프로필을 그룹화하려면 이 매개 변수와 `includeSegmentId`을(를) 모두 `true`(으)로 설정하십시오. |
 | `configurableAggregation.aggregationKey.includeIdentity` | 부울 | ID 네임스페이스별로 대상으로 내보낸 프로필을 그룹화하려면 이 매개 변수를 `true`(으)로 설정하십시오. |
-| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | 부울 | 내보낸 프로필을 단일 ID(GAID, IDFA, 전화 번호, 이메일 등)를 기반으로 그룹으로 집계하려면 이 매개 변수를 `true`(으)로 설정하십시오. |
-| `configurableAggregation.aggregationKey.groups` | 배열 | 대상으로 내보낸 프로필을 ID 네임스페이스 그룹별로 그룹화하려면 ID 그룹 목록을 만듭니다. 예를 들어 위의 예에 표시된 구성을 사용하여 IDFA 및 GAID 모바일 식별자가 포함된 프로필을 대상에 대한 한 호출로 결합하고 이메일이 다른 호출로 결합될 수 있습니다. |
+| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | 부울 | 내보낸 프로필을 단일 ID(GAID, IDFA, 전화 번호, 이메일 등)를 기반으로 그룹으로 집계하려면 이 매개 변수를 `true`(으)로 설정하십시오. `false` 매개 변수를 사용하여 사용자 지정 ID 네임스페이스 그룹화를 정의하려면 `groups`(으)로 설정하십시오. |
+| `configurableAggregation.aggregationKey.groups` | 배열 | `oneIdentityPerGroup`이(가) `false`(으)로 설정된 경우 이 매개 변수를 사용하십시오. 대상으로 내보낸 프로필을 ID 네임스페이스 그룹별로 그룹화하려면 ID 그룹 목록을 만듭니다. 예를 들어 위의 예에 표시된 구성을 사용하여 IDFA 및 GAID 모바일 식별자가 포함된 프로필을 대상에 대한 한 호출로 결합하고 이메일이 다른 호출로 결합될 수 있습니다. |
 
 {style="table-layout:auto"}
 
