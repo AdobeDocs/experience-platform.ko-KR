@@ -18,7 +18,7 @@ ht-degree: 8%
 
 [[!DNL Nextdoor] 전환 API 확장](https://help.nextdoor.com/s/article/About-the-Nextdoor-Conversion-API)을(를) 사용하여 전환 이벤트를 [!DNL Nextdoor's] 전환 API로 직접 보냅니다. 이 확장을 사용하면 서버측 전환 데이터를 전송하여 [!DNL Nextdoor] 광고 캠페인의 성능을 추적하고 측정할 수 있습니다.
 
-이 안내서에서는 이벤트 전달 [!DNL Nextdoor]규칙[에서 &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) 전환 API 확장을 설치, 구성 및 사용하는 방법을 보여 줍니다.
+이 안내서에서는 이벤트 전달 [!DNL Nextdoor]규칙[에서 &#x200B;](https://experienceleague.adobe.com/ko/docs/experience-platform/tags/ui/rules) 전환 API 확장을 설치, 구성 및 사용하는 방법을 보여 줍니다.
 
 ## 전제 조건 {#prerequisites}
 
