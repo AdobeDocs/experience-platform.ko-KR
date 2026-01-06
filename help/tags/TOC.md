@@ -6,9 +6,9 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 321cb9b2b9add2460cbde2dfe571ad41a9be163b
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '825'
 ht-degree: 36%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 36%
    * [전송 계층 보안](./ui/client-side/transport-layer-security.md)
 * 이벤트 전달 {#event-forwarding}
    * [개요](./ui/event-forwarding/overview.md)
-   * [시작하기](./ui/event-forwarding/getting-started.md)
+   * [시작](./ui/event-forwarding/getting-started.md)
    * [암호 구성](./ui/event-forwarding/secrets.md)
    * [모니터링(Beta)](./ui/event-forwarding/monitoring.md)
 * 관리 {#admin}
@@ -105,7 +105,7 @@ ht-degree: 36%
          * [개요](./extensions/client/platform-demo/overview.md)
       * Adobe Experience Platform 웹 SDK {#web-sdk}
          * [개요](extensions/client/web-sdk/overview.md)
-         * [시작하기](extensions/client/web-sdk/getting-started.md)
+         * [시작](extensions/client/web-sdk/getting-started.md)
          * 구성 {#configure}
             * [개요](extensions/client/web-sdk/configure/config-overview.md)
             * [사용자 지정 빌드 구성 요소](extensions/client/web-sdk/configure/custom-build-components.md)
@@ -179,7 +179,7 @@ ht-degree: 36%
          * [릴리스 정보](./extensions/client/plugins/release-notes.md)
       * [연결](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
-      * [Usercentrics CMP v2의 쿠키 동의 관리](https://exchange.adobe.com/apps/ec/107037)
+      * Usercentrics CMP v2의 [쿠키 동의 관리](https://exchange.adobe.com/apps/ec/107037)
       * 코어 {#core}
          * [개요](./extensions/client/core/overview.md)
          * [릴리스 정보](./extensions/client/core/release-notes.md)
@@ -214,7 +214,7 @@ ht-degree: 36%
          * [개요](./extensions/client/meta/overview.md)
       * [모니터](https://exchange.adobe.com/apps/ec/106544)
       * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
-      * [쿠키에 대한 OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)
+      * 쿠키에 대한 [OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)
       * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)
       * [Persado 연결](https://exchange.adobe.com/apps/ec/103745)
       * [Pinterest 전환 추적](https://exchange.adobe.com/apps/ec/100523)
@@ -258,7 +258,7 @@ ht-degree: 36%
          * [개요](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [개요](./extensions/server/braze/overview.md)
-      * [Google Analytics용 Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
+      * Google Analytics용 [Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
       * 코어 {#core}
          * [개요](./extensions/server/core/overview.md)
       * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)
@@ -276,6 +276,8 @@ ht-degree: 36%
          * [개요](./extensions/server/azure/overview.md)
       * [!DNL Mixpanel] {#mixpanel}
          * [개요](./extensions/server/mixpanel/overview.md)
+      * [!DNL Nextdoor] {#nextdoor}
+         * [개요](./extensions/server/nextdoor/overview.md)
       * [Pega 고객 의사 결정 허브](https://exchange.adobe.com/apps/ec/107597)
       * [!DNL Pinterest] {#pinterest}
          * [개요](./extensions/server/pinterest/overview.md)
@@ -297,7 +299,7 @@ ht-degree: 36%
          * [개요](./extensions/server/zendesk/overview.md)
 * 확장 개발 {#extension-dev}
    * [개요](./extension-dev/overview.md)
-   * [시작하기](./extension-dev/getting-started.md)
+   * [시작](./extension-dev/getting-started.md)
    * [지원되는 브라우저](./extension-dev/browsers.md)
    * 제출 프로세스 {#submit}
       * [개요](./extension-dev/submit/overview.md)
