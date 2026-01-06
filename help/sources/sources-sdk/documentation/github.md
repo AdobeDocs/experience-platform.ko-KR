@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Adobe 기여 안내서의 다음 문서를 사용하여 설명서 프로세스를 추가로 지원할 수 있습니다. <ul><li>[Git 및 Markdown 작성 도구 설치](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[로컬에서 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[주요 변경 사항에 대한 GitHub 기여 워크플로](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Adobe 기여 안내서의 다음 문서를 사용하여 설명서 프로세스를 추가로 지원할 수 있습니다. <ul><li>[Git 및 Markdown 작성 도구 설치](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=ko)</li><li>[로컬에서 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ko)</li><li>[주요 변경 사항에 대한 GitHub 기여 워크플로](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=ko)</li></ul>
 
 ## GitHub 환경 설정
 
-GitHub 환경을 설정하는 첫 번째 단계는 [Adobe Experience Platform GitHub 저장소](https://github.com/AdobeDocs/experience-platform.en)로 이동하는 것입니다.
+GitHub 환경을 설정하는 첫 번째 단계는 [Adobe Experience Platform GitHub 저장소](https://github.com/AdobeDocs/experience-platform.ko-KR)로 이동하는 것입니다.
 
 ![platform-repo](../assets/platform-repo.png)
 
@@ -33,11 +33,11 @@ GitHub 환경을 설정하는 첫 번째 단계는 [Adobe Experience Platform Gi
 
 ![create-branch](../assets/create-branch.png)
 
-포크된 리포지토리의 GitHub 폴더 구조에서 [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create)&#x200B;(으)로 이동한 다음 목록에서 소스에 대한 적절한 범주를 선택합니다. 예를 들어 새 CRM 원본에 대한 설명서를 만드는 경우 **crm**&#x200B;을 선택하십시오.
+포크된 리포지토리의 GitHub 폴더 구조에서 [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.ko-KR/tree/main/help/sources/tutorials/api/create)&#x200B;(으)로 이동한 다음 목록에서 소스에 대한 적절한 범주를 선택합니다. 예를 들어 새 CRM 원본에 대한 설명서를 만드는 경우 **crm**&#x200B;을 선택하십시오.
 
 >[!TIP]
 >
->UI에 대한 설명서를 만드는 경우 [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create)&#x200B;(으)로 이동하여 소스에 적합한 범주를 선택합니다. 이미지를 추가하려면 [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create)&#x200B;(으)로 이동한 다음 스크린샷을 `sdk` 폴더에 추가합니다.
+>UI에 대한 설명서를 만드는 경우 [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.ko-KR/tree/main/help/sources/tutorials/ui/create)&#x200B;(으)로 이동하여 소스에 적합한 범주를 선택합니다. 이미지를 추가하려면 [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.ko-KR/tree/main/help/sources/images/tutorials/create)&#x200B;(으)로 이동한 다음 스크린샷을 `sdk` 폴더에 추가합니다.
 
 ![crm](../assets/crm.png)
 
@@ -77,6 +77,6 @@ GitHub 웹 편집기 인터페이스에 복사된 템플릿을 사용하여 템�
 
 이때 Adobe 기여자 라이선스 계약(CLA)에 서명하라는 메시지가 표시됩니다. 필수 단계입니다. CLA에 서명한 후 PR 페이지를 새로 고치고 끌어오기 요청을 제출합니다.
 
-https://github.com/AdobeDocs/experience-platform.en에서 가져오기 요청 탭을 검사하여 가져오기 요청이 제출되었는지 확인할 수 있습니다.
+https://github.com/AdobeDocs/experience-platform.ko-KR에서 가져오기 요청 탭을 검사하여 가져오기 요청이 제출되었는지 확인할 수 있습니다.
 
 ![confirm-pr](../assets/confirm-pr.png)
