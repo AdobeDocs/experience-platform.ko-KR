@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 액세스 제어;ABAC
 title: 속성 기반 액세스 제어 역할 권한 관리
-description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 역할에 대한 권한을 구성하는 방법에 대해 설명합니다
+description: Adobe Experience Cloud의 권한 인터페이스를 통해 역할을 구성하는 방법을 알아봅니다.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 157fb27ae492971a48ad62c2d6b3eddd674167f4
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1603'
 ht-degree: 17%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 17%
 >id="platform_permissions_roles_about"
 >title="역할이란 무엇입니까?"
 >abstract="역할은 관리자, 전문가 또는 최종 사용자가 조직 내 리소스에 접근할 수 있는 권한을 정의합니다. Experience Platform 인스턴스와 상호 작용하는 사용자를 분류하고 액세스 제어 정책의 구성 요소입니다. 역할에는 주어진 권한 집합이 있으며 조직의 멤버들은 필요한 보기 또는 쓰기 액세스 범위에 따라 하나 이상의 역할에 할당될 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ko" text="역할 관리"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="역할 관리"
 
 >[!IMPORTANT]
 >
@@ -38,14 +38,14 @@ UI의 역할에 사용할 수 있는 필터는 다음과 같습니다.
 
 | 필터 | 설명 |
 | --- | --- |
-| [!UICONTROL Created between] | 결과를 필터링할 기준 날짜 범위 정의하려면 시작 날짜 및/또는 종료 날짜를 선택합니다. |
-| [!UICONTROL Created by] | 드롭다운에서 사용자를 선택하여 역할 작성자별 필터링. |
-| [!UICONTROL Modified between] | 결과를 필터링할 기준 날짜 범위 정의하려면 시작 날짜 및/또는 종료 날짜를 선택합니다. |
+| [!UICONTROL Created between] | 시작 날짜 및/또는 종료 날짜를 선택하여 결과를 필터링할 날짜 범위를 정의합니다. |
+| [!UICONTROL Created by] | 드롭다운에서 사용자를 선택하여 역할 생성자별로 필터링합니다. |
+| [!UICONTROL Modified between] | 시작 날짜 및/또는 종료 날짜를 선택하여 결과를 필터링할 날짜 범위를 정의합니다. |
 | [!UICONTROL Modified by] | 드롭다운에서 사용자를 선택하여 역할 수정자로 필터링합니다. |
 
-필터를 제거하려면 해당 필터의 알약 모양 아이콘에서 &quot;X&quot;를 선택하거나 모든 필터를 제거하도록 선택합니다 **[!UICONTROL Clear all]** .
+필터를 제거하려면 해당 필터의 알약 아이콘에서 &quot;X&quot;를 선택하거나 **[!UICONTROL Clear all]**&#x200B;을(를) 선택하여 모든 필터를 제거합니다.
 
-![권한 UI의 역할 대시보드는 선택한 필터에서 강조 표시된 X 및 모든 선택 항목 지우기로 표시됩니다.](../../images/flac-ui/flac-clear-filters.png)
+![선택한 필터에 강조 표시된 X 및 모든 선택 항목 지우기를 사용하는 권한 UI의 역할 대시보드.](../../images/flac-ui/flac-clear-filters.png)
 
 ## 역할 세부 정보 {#role-details}
 
@@ -116,7 +116,7 @@ UI의 역할에 사용할 수 있는 필터는 다음과 같습니다.
 
 다음 비디오는 새 역할을 만들고 해당 역할에 대한 사용자를 관리하는 방법에 대한 이해를 돕기 위한 것입니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475980/?captions=kor&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## 역할에 대한 API 자격 증명 관리 {#manage-api-credentials-for-role}
 
@@ -138,21 +138,21 @@ Experience Platform API를 사용자 또는 개발자로 사용하려면 시스�
 
 **[!UICONTROL Add API credentials]** 대화 상자가 나타납니다. 목록에서 역할에 추가할 API 자격 증명을 선택한 다음 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
-![자격 증명이 선택되고 저장 옵션이 강조 표시된 Add API credentials(API 자격 증명 추가) 대화 상자.](../../images/flac-ui/flac-add-api-credentials.png)
+![자격 증명을 선택하고 [저장] 옵션이 강조 표시된 API 자격 증명 추가 대화 상자.](../../images/flac-ui/flac-add-api-credentials.png)
 
-추가된 API 자격 증명이 탭 아래에 **[!UICONTROL API credentials]** 표시됩니다.
+추가된 API 자격 증명이 **[!UICONTROL API credentials]** 탭에 나타납니다.
 
-![추가된 자격 증명이 표시된 역할의 API 자격 증명 작업 영역.](../../images/flac-ui/flac-added-api-credentials.png)
+![추가된 자격 증명이 표시된 역할의 API 자격 증명 작업 영역입니다.](../../images/flac-ui/flac-added-api-credentials.png)
 
-역할 목록에서 API 자격 증명을 제거하려면 API 자격 증명 이름 옆에 있는 X **아이콘을 선택합니다**.
+역할에서 API 자격 증명을 제거하려면 API 자격 증명 이름 옆에 있는 **X** 아이콘을 선택하십시오.
 
-![강조 표시된 자격 증명을 제거하기 위한 X 옵션이 있는 역할의 API 자격 증명 작업 영역.](../../images/flac-ui/flac-remove-api-credentials.png)
+![강조 표시된 자격 증명을 제거하기 위한 X 옵션이 있는 역할의 API 자격 증명 작업 영역입니다.](../../images/flac-ui/flac-remove-api-credentials.png)
 
-**[!UICONTROL Remove API credentials]** 삭제를 확인하는 대화 상자가 나타납니다. 선택한 자격 증명 제거를 완료하려면 선택합니다 **[!UICONTROL Confirm]** .
+**[!UICONTROL Remove API credentials]** 대화 상자가 나타나고 삭제를 확인하는 메시지가 표시됩니다. 선택한 자격 증명 제거를 완료하려면 **[!UICONTROL Confirm]**&#x200B;을(를) 선택하십시오.
 
-![자격 증명 제거를 확인하는 제거 팝업이 강조 표시됩니다.](../../images/flac-ui/flac-confirm-api-credentials-delete.png)
+![자격 증명 제거 팝오버가 강조 표시되어 자격 증명 제거를 확인하는 메시지가 표시됩니다.](../../images/flac-ui/flac-confirm-api-credentials-delete.png)
 
-탭 으로 **[!UICONTROL API credentials]** 돌아갑니다.
+**[!UICONTROL API credentials]** 탭으로 돌아갑니다.
 
 ## 역할에 대한 사용자 그룹 관리 {#manage-user-groups}
 
@@ -168,23 +168,23 @@ Experience Platform API를 사용자 또는 개발자로 사용하려면 시스�
 
 ![그룹 추가 옵션이 있는 역할의 사용자 그룹 작업 영역입니다](../../images/flac-ui/flac-user-groups.png)
 
-**[!UICONTROL Add Groups]** 대화 상자가 나타납니다. 목록에서 역할에 추가할 좋아요 사용자 그룹을 선택합니다. 또는 검색 막대에서 그룹 이름을 입력하여 사용자 그룹 검색한 다음 **[!UICONTROL Save]**
+**[!UICONTROL Add Groups]** 대화 상자가 나타납니다. 역할에 추가할 목록에서 사용자 그룹을 선택합니다. 또는 검색 창을 사용하여 그룹 이름을 입력하여 사용자 그룹을 검색한 다음 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다
 
-![사용자 그룹이 선택되고 검색 및 저장 옵션이 강조 표시된 그룹 추가 대화 상자.](../../images/flac-ui/flac-add-user-groups.png)
+![사용자 그룹이 선택되어 있고 검색 및 저장 옵션이 강조 표시된 그룹 추가 대화 상자입니다.](../../images/flac-ui/flac-add-user-groups.png)
 
-추가된 사용자 그룹 이 탭 아래에 **[!UICONTROL User groups]** 나타납니다.
+추가된 사용자 그룹이 **[!UICONTROL User groups]** 탭에 나타납니다.
 
 ![추가된 사용자 그룹 목록을 표시하는 역할의 사용자 그룹 작업 영역입니다.](../../images/flac-ui/flac-added-user-groups.png)
 
-역할에서 사용자 그룹을 제거하려면 사용자 그룹 이름 옆에 있는 X **아이콘을 선택합니다**.
+역할에서 사용자 그룹을 제거하려면 사용자 그룹 이름 옆에 있는 **X** 아이콘을 선택하십시오.
 
-![특정 사용자 그룹을 제거하기 위한 X 옵션이 강조 표시된 역할의 사용자 그룹 작업 영역.](../../images/flac-ui/flac-remove-user-groups.png)
+![특정 사용자 그룹을 제거하기 위한 X 옵션이 강조 표시된 역할의 사용자 그룹 작업 영역입니다.](../../images/flac-ui/flac-remove-user-groups.png)
 
-**[!UICONTROL Remove user group]** 삭제를 확인하는 대화 상자가 나타납니다. 선택한 사용자 그룹 그룹을 제거하려면 선택합니다 **[!UICONTROL Confirm]** .
+**[!UICONTROL Remove user group]** 대화 상자가 나타나고 삭제를 확인하는 메시지가 표시됩니다. 선택한 사용자 그룹을 제거하려면 **[!UICONTROL Confirm]**&#x200B;을(를) 선택하십시오.
 
-![사용자 그룹 제거를 위한 팝오버가 표시되고 강조 표시됩니다.](../../images/flac-ui/flac-confirm-user-groups-delete.png)
+![사용자 그룹 제거 팝오버가 표시되고 강조 표시됩니다.](../../images/flac-ui/flac-confirm-user-groups-delete.png)
 
-탭 으로 **[!UICONTROL User groups]** 돌아갑니다.
+**[!UICONTROL User groups]** 탭으로 돌아갑니다.
 
 ## Experience Platform에 사용자 추가
 
