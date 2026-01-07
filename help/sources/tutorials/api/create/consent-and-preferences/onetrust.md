@@ -4,20 +4,20 @@ solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 OneTrust 통합 소스에 대한 데이터 흐름 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 OneTrust 통합에 연결하는 방법을 알아봅니다.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f9ca6b7683c64c36772d02c1a88c3ef18f961b92
 workflow-type: tm+mt
 source-wordcount: '1924'
 ht-degree: 1%
 
 ---
 
-# [!DNL Flow Service] API를 사용하여 [!DNL OneTrust Integration] 소스에 대한 데이터 흐름을 만듭니다.
+# [!DNL OneTrust Integration] API를 사용하여 [!DNL Flow Service] 소스에 대한 데이터 흐름을 만듭니다.
 
 >[!NOTE]
 >
 >[!DNL OneTrust Integration] 원본은 동의 및 환경 설정 데이터 수집만 지원하며 쿠키는 지원하지 않습니다.
 
-다음 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US)에서 Adobe Experience Platform으로 기록 및 예약된 동의 데이터를 모두 가져오기 위해 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다.
+다음 자습서에서는 [[!DNL OneTrust Integration]API](https://my.onetrust.com/s/contactsupport?language=en_US)를 사용하여 [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/)에서 Adobe Experience Platform으로 기록 및 예약된 동의 데이터를 모두 가져오기 위해 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다.
 
 ## 전제 조건
 
@@ -29,19 +29,19 @@ ht-degree: 1%
 
 [!DNL OneTrust]에서 시스템 간 새로 고침 토큰을 지원하지 않으므로 액세스 토큰이 만료된 후 자동으로 새로 고쳐지지 않습니다. 따라서 액세스 토큰이 만료되기 전에 연결에서 업데이트되었는지 확인해야 합니다. 액세스 토큰의 최대 구성 가능한 수명은 1년입니다. 액세스 토큰 업데이트에 대한 자세한 내용은 [[!DNL OneTrust] OAuth 2.0 클라이언트 자격 증명 관리에 대한 문서](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials)를 참조하십시오.
 
-## [!DNL Flow Service] API를 사용하여 [!DNL OneTrust Integration]을(를) Experience Platform에 연결
+## [!DNL OneTrust Integration] API를 사용하여 [!DNL Flow Service]을(를) Experience Platform에 연결
 
 >[!NOTE]
 >
 >[!DNL OneTrust Integration] API 사양이 데이터 수집을 위해 Adobe과 공유되고 있습니다.
 
-다음 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL OneTrust Integration] 데이터를 Experience Platform으로 가져오기 위해 [!DNL OneTrust Integration] 소스 연결을 만들고 데이터 흐름을 만드는 단계를 안내합니다.
+다음 자습서에서는 [!DNL OneTrust Integration]API[!DNL OneTrust Integration]를 사용하여 [[!DNL Flow Service]  데이터를 Experience Platform으로 가져오기 위해 ](https://www.adobe.io/experience-platform-apis/references/flow-service/) 소스 연결을 만들고 데이터 흐름을 만드는 단계를 안내합니다.
 
 ### 기본 연결 만들기 {#base-connection}
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 Experience Platform 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-기본 연결 ID를 만들려면 [!DNL OneTrust Integration] 인증 자격 증명을 요청 본문의 일부로 제공하는 동안 `/connections` 끝점에 대한 POST 요청을 만듭니다.
+기본 연결 ID를 만들려면 `/connections` 인증 자격 증명을 요청 본문의 일부로 제공하는 동안 [!DNL OneTrust Integration] 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -139,7 +139,7 @@ curl -X GET \
 >
 >간결성을 위해 아래의 JSON 응답 페이로드가 숨겨집니다. 응답 페이로드를 보려면 나를 클릭합니다 를 선택합니다.
 
-+++내 클릭
++++나를 클릭합니다.
 
 ```json
 {
@@ -757,8 +757,13 @@ curl -X POST \
               "sourceType": "ATTRIBUTE",
               "source": "content.Purposes",
               "destination": "_exchangesandboxbravo.Purposes"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "content.LinkToken",
+              "destination": "_exchangesandboxbravo.LinkToken",
+              "description": "Link Token"
           }
-
       ]
   }'
 ```
@@ -878,11 +883,11 @@ curl -X POST \
 
 ### 데이터 흐름 업데이트
 
-데이터 흐름의 ID를 제공하면서 [!DNL Flow Service] API의 `/flows` 끝점에 PATCH 요청을 수행하여 데이터 흐름의 이름, 설명, 실행 일정 및 관련 매핑 세트와 같은 데이터 흐름의 세부 정보를 업데이트합니다. PATCH 요청을 할 때는 `If-Match` 헤더에 데이터 흐름의 고유한 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름을 업데이트하는 방법](../../update-dataflows.md)에 대한 안내서를 참조하십시오.
+데이터 흐름의 ID를 제공하면서 `/flows` API의 [!DNL Flow Service] 끝점에 PATCH 요청을 수행하여 데이터 흐름의 이름, 설명, 실행 일정 및 관련 매핑 세트와 같은 데이터 흐름의 세부 정보를 업데이트합니다. PATCH 요청을 할 때는 `etag` 헤더에 데이터 흐름의 고유한 `If-Match`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름을 업데이트하는 방법](../../update-dataflows.md)에 대한 안내서를 참조하십시오.
 
 ### 계정 업데이트
 
-기본 연결 ID를 쿼리 매개 변수로 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. PATCH을 요청할 때 `If-Match` 헤더에 소스 계정의 고유 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 계정을 업데이트하는 방법](../../update.md)에 대한 안내서를 참조하십시오.
+기본 연결 ID를 쿼리 매개 변수로 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. PATCH을 요청할 때 `etag` 헤더에 소스 계정의 고유 `If-Match`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 계정을 업데이트하는 방법](../../update.md)에 대한 안내서를 참조하십시오.
 
 ### 데이터 흐름 삭제
 
