@@ -22,7 +22,7 @@ ht-degree: 16%
 
 ## 샌드박스 탐색 {#explore-sandboxes}
 
-샌드박스의 세부 정보 및 관련 역할을 보려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 ](https://experience.adobe.com/){target="_blank"}(으)로 이동하십시오. 왼쪽 패널의 **[!UICONTROL Sandboxes]** 섹션에서 **[!UICONTROL Resources]** 선택
+샌드박스의 세부 정보 및 관련 역할을 보려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 &#x200B;](https://experience.adobe.com/){target="_blank"}(으)로 이동하십시오. 왼쪽 패널의 **[!UICONTROL Sandboxes]** 섹션에서 **[!UICONTROL Resources]** 선택
 
 조직의 샌드박스 목록이 나타납니다. 목록에서 보려는 샌드박스를 선택합니다. 또는 검색 막대에 샌드박스 이름을 입력하여 샌드박스를 검색하거나 필터 아이콘(![필터 아이콘](../../../images/icons/filter.png))을 선택하고 **[!UICONTROL Sandbox Type]** 드롭다운 메뉴를 사용하여 샌드박스를 유형별로 필터링합니다.
 
