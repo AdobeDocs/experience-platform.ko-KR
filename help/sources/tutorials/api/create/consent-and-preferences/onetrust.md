@@ -17,7 +17,7 @@ ht-degree: 1%
 >
 >[!DNL OneTrust Integration] 원본은 동의 및 환경 설정 데이터 수집만 지원하며 쿠키는 지원하지 않습니다.
 
-다음 자습서에서는 [[!DNL OneTrust Integration]API](https://my.onetrust.com/s/contactsupport?language=en_US)를 사용하여 [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/)에서 Adobe Experience Platform으로 기록 및 예약된 동의 데이터를 모두 가져오기 위해 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다.
+다음 자습서에서는 [[!DNL OneTrust Integration]API](https://my.onetrust.com/s/contactsupport?language=en_US)를 사용하여 [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/)에서 Adobe Experience Platform으로 기록 및 예약된 동의 데이터를 모두 가져오기 위해 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다.
 
 ## 전제 조건
 
@@ -35,7 +35,7 @@ ht-degree: 1%
 >
 >[!DNL OneTrust Integration] API 사양이 데이터 수집을 위해 Adobe과 공유되고 있습니다.
 
-다음 자습서에서는 [!DNL OneTrust Integration]API[!DNL OneTrust Integration]를 사용하여 [[!DNL Flow Service]  데이터를 Experience Platform으로 가져오기 위해 ](https://www.adobe.io/experience-platform-apis/references/flow-service/) 소스 연결을 만들고 데이터 흐름을 만드는 단계를 안내합니다.
+다음 자습서에서는 [!DNL OneTrust Integration]API[!DNL OneTrust Integration]를 사용하여 [[!DNL Flow Service]  데이터를 Experience Platform으로 가져오기 위해 &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) 소스 연결을 만들고 데이터 흐름을 만드는 단계를 안내합니다.
 
 ### 기본 연결 만들기 {#base-connection}
 
