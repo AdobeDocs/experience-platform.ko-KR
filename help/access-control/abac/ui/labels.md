@@ -22,7 +22,7 @@ ht-degree: 11%
 
 ## 레이블 탐색 {#explore-labels}
 
-사용 가능한 모든 레이블을 보려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 &#x200B;](https://experience.adobe.com/){target="_blank"}(으)로 이동하십시오. 왼쪽 패널에서 **[!UICONTROL Labels]**&#x200B;을(를) 선택합니다.
+사용 가능한 모든 레이블을 보려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 ](https://experience.adobe.com/){target="_blank"}(으)로 이동하십시오. 왼쪽 패널에서 **[!UICONTROL Labels]**&#x200B;을(를) 선택합니다.
 
 ![왼쪽 패널에서 레이블이 강조 표시된 사용 권한의 레이블 작업 영역입니다.](../../images/ui/labels/labels-home.png){zoomable="yes"}
 
@@ -56,7 +56,7 @@ ht-degree: 11%
 >id="platform_permissions_labels_about_create"
 >title="새 레이블 만들기"
 >abstract="조직의 요구 사항에 맞게 고유한 사용자 정의 레이블을 만들 수 있습니다. 사용자 정의 레이블을 사용하여 데이터 거버넌스와 액세스 제어 구성을 모두 데이터에 적용할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ko#manage-labels" text="사용자 정의 레이블 관리"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="사용자 정의 레이블 관리"
 
 >[!NOTE]
 >
