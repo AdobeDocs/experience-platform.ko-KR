@@ -26,7 +26,7 @@ ht-degree: 8%
 >
 >**[!UICONTROL Default-Label-Based-Access-Control-Policy]** 정책만 현재 구성할 수 있습니다.
 
-정책의 샌드박스 구성을 시작하려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[에서 ](https://experience.adobe.com/){target="_blank"}(으)로 이동합니다. 왼쪽 패널에서 **[!UICONTROL Policies]**&#x200B;을(를) 선택한 다음 목록에서 **[!UICONTROL Default-Label-Based-Access-Control-Policy]**&#x200B;을(를) 선택합니다.
+정책의 샌드박스 구성을 시작하려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[에서 &#x200B;](https://experience.adobe.com/){target="_blank"}(으)로 이동합니다. 왼쪽 패널에서 **[!UICONTROL Policies]**&#x200B;을(를) 선택한 다음 목록에서 **[!UICONTROL Default-Label-Based-Access-Control-Policy]**&#x200B;을(를) 선택합니다.
 
 ![기존 정책 목록을 표시하는 정책 작업 영역입니다.](../../images/ui/policies/policies-home.png){zoomable="yes"}
 
@@ -54,7 +54,7 @@ ht-degree: 8%
 
 ### 샌드박스 수동 관리 {#manually-manage-sandboxes}
 
-**[!UICONTROL Auto-include]**이(가) 꺼져 있으면 정책에서 특정 샌드박스를 수동으로 추가하거나 제거할 수 있습니다. 이렇게 하면 정책의 액세스 제어 규칙을 적용하는 샌드박스를 정확하게 제어할 수 있습니다.
+**[!UICONTROL Auto-include]**&#x200B;이(가) 꺼져 있으면 정책에서 특정 샌드박스를 수동으로 추가하거나 제거할 수 있습니다. 이렇게 하면 정책의 액세스 제어 규칙을 적용하는 샌드박스를 정확하게 제어할 수 있습니다.
 
 >[!NOTE]
 >
