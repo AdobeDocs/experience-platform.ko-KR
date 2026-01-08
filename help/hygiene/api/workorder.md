@@ -3,9 +3,9 @@ title: 작업 주문 삭제 기록
 description: 데이터 위생 API에서 /workorder 끝점을 사용하여 Adobe Experience Platform에서 레코드 삭제 작업 주문을 관리하는 방법을 알아봅니다. 이 안내서에서는 할당량, 처리 타임라인 및 API 사용을 다룹니다.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
+source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
 workflow-type: tm+mt
-source-wordcount: '2440'
+source-wordcount: '2541'
 ht-degree: 1%
 
 ---
@@ -202,6 +202,14 @@ POST /workorder
 >[!NOTE]
 >
 >연관된 XDM 스키마가 기본 ID 또는 ID 맵을 정의하는 데이터 세트에서만 레코드를 삭제할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>레코드 삭제 작업 주문은 **기본 ID** 필드에서만 작동합니다. 다음 제한 사항이 적용됩니다.
+>
+>- **보조 ID를 검사하지 않습니다.** 데이터 집합에 여러 ID 필드가 포함된 경우 일치에 기본 ID만 사용됩니다. 레코드는 기본이 아닌 ID를 기준으로 타깃팅하거나 삭제할 수 없습니다.
+>- 채워진 기본 ID가 없는 **레코드를 건너뜁니다.** 레코드에 기본 ID 메타데이터가 채워져 있지 않으면 삭제할 수 없습니다.
+>- **ID 구성 전에 수집된 데이터는 사용할 수 없습니다.** 데이터 수집 후 기본 ID 필드가 스키마에 추가된 경우 이전에 수집된 레코드는 레코드 삭제 작업 주문을 통해 삭제할 수 없습니다.
 
 >[!NOTE]
 >
