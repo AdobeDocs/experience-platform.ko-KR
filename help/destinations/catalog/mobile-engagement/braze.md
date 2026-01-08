@@ -4,9 +4,9 @@ title: 브레이즈 연결
 description: Braze는 고객과 고객이 사랑하는 브랜드 간의 관련성 있고 기억에 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: cc97efec5fba090378ceaf73441d0b4bd7fbf51f
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1078'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 2%
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| external_id | 모든 ID의 매핑을 지원하는 사용자 지정 [!DNL Braze] 식별자입니다. | [&#x200B; &#x200B;](../../../identity-service/features/namespaces.md) [!DNL Braze]에 매핑하기만 하면 [!DNL Braze]identity[`external_id`을(를) &#x200B;](https://www.braze.com/docs/api/basics/#external-user-id-explanation) 대상으로 보낼 수 있습니다. |
+| external_id | 모든 ID의 매핑을 지원하는 사용자 지정 [!DNL Braze] 식별자입니다. | [ ](../../../identity-service/features/namespaces.md)[!DNL Braze]에 매핑하기만 하면 [!DNL Braze]identity[`external_id`을(를) ](https://www.braze.com/docs/api/basics/#external-user-id-explanation) 대상으로 보낼 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -87,7 +87,7 @@ ht-degree: 2%
 
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 이름을 입력하십시오.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명을 입력하십시오.
-* **[!UICONTROL Endpoint Instance]**: 사용할 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오.
+* **[!UICONTROL Endpoint Instance]**: [에서 지원하는 모든 ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오.
 
 ### 경고 활성화 {#enable-alerts}
 
