@@ -1,12 +1,12 @@
 ---
 title: 계정 대상자
 description: 계정 대상자를 만들고 사용하여 다운스트림 대상의 계정 프로필을 타겟팅하는 방법을 알아봅니다.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 6cb5afb78502c34e0eba99af29d7a67119b7e05a
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1461'
 ht-degree: 21%
 
 ---
@@ -60,10 +60,6 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 세그먼트 빌더 가 나타납니다. 계정 속성 및 대상은 왼쪽 탐색 모음에 표시됩니다. [!UICONTROL Attributes] 탭에서 Experience-Platform에서 만든 특성과 사용자 지정 특성을 모두 추가할 수 있습니다.
 
 ![세그먼트 빌더가 표시됩니다. 특성과 대상만 표시됩니다.](../images/types/account/segment-builder.png)
-
-계정 대상을 만들 때는 이벤트가 고유한 탭이 아니라 **[!UICONTROL People]** 아래에 나열됩니다. 이러한 속성은 사용자와 연결되어 있기 때문입니다.
-
-![이벤트를 찾을 위치([!UICONTROL People] 폴더 내)가 강조 표시되어 있습니다.](../images/types/account/attributes.png)
 
 [!UICONTROL Audiences] 탭에서 이전에 만든 사람 기반 대상을 추가하여 자신의 계정 대상을 만들 때 빌드할 수 있습니다.
 
@@ -208,8 +204,8 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
    - 크로스 엔티티는 대상자 내에서 서로 다른 엔티티 간에 변경하는 경우입니다. 예를 들어 계정에서 사용자, 마케팅 목록으로 이동합니다.
 - 단일 필드에 대해 확인할 수 있는 최대 값 수는 **50**&#x200B;입니다.
    - 예를 들어 &quot;도시 이름&quot; 필드가 있는 경우 50개의 도시 이름에 대해 해당 값을 확인할 수 있습니다.
-- 계정 대상자 **은(는) 순차적 이벤트를 사용할 수 없습니다**.
 - 계정 대상자 **은(는) 맵을 사용할 수 없습니다**.
+- 계정 대상자 **은(는) 이벤트를 사용할 수**&#x200B;없습니다.
 - 중첩된 배열의 최대 깊이는 **5**&#x200B;입니다.
 - 중첩된 개체의 최대 수는 **10**&#x200B;입니다.
 
