@@ -3,9 +3,9 @@ title: 트레이드 데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타기팅 및 억제에 대한 프로필을 트레이드 데스크 계정에 활성화합니다.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b9713d5155f89ee895d9fb623088eda77b931d89
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1140'
 ht-degree: 5%
 
 ---
@@ -89,7 +89,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 
 ### 대상 세부 사항 입력 {#fill-in-details}
 
-대상 데이터를 대상으로 보내거나 활성화하려면 먼저 고유한 대상 플랫폼에 대한 연결을 설정해야 합니다. [이 대상을 설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ko)하는 동안 다음 정보를 제공해야 합니다.
+대상 데이터를 대상으로 보내거나 활성화하려면 먼저 고유한 대상 플랫폼에 대한 연결을 설정해야 합니다. [이 대상을 설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)하는 동안 다음 정보를 제공해야 합니다.
 
 * **[!UICONTROL Account Type]**: **[!UICONTROL Existing Account]** 옵션을 선택하십시오.
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
@@ -101,6 +101,11 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 대상에 연결할 때 데이터 거버넌스 정책을 설정하는 것은 완전히 선택 사항입니다. 자세한 내용은 Experience Platform [데이터 거버넌스 개요](/help/data-governance/policies/overview.md)를 검토하십시오.
 
 ## 이 대상으로 대상자 활성화 {#activate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_ttdg"
+>title="사전 구성된 매핑 세트"
+>abstract="4개의 매핑 세트가 사전 구성되어 있습니다. 데이터를 Trade Desk에 활성화할 때, 이 대상이 여기에 표시된 대상 ID와 작동하므로 활성화된 대상에 대해 자격이 있는 프로필에 반드시 4개의 ID가 모두 있어야 하는 것은 아닙니다."
 
 >[!IMPORTANT]
 > 
