@@ -4,9 +4,9 @@ title: 경고 개요
 description: 경고 규칙이 정의되는 구조를 포함하여 Adobe Experience Platform에서의 다양한 경고에 대해 알아봅니다.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f33bcf982216d25e514992d5ebf978b5535abd77
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '791'
 ht-degree: 12%
 
 ---
@@ -31,7 +31,7 @@ Experience Platform 경고는 한 번 전송하거나 해결할 때까지 사전
 | --- | --- |
 | 반드시 문제가 있음을 나타내지는 않습니다. | 잠재적으로 원하지 않는 상태를 나타냅니다. |
 | 반복하지 않습니다. | 이상 상태가 지속되면 반복할 수 있습니다. |
-| 해당 예는 다음과 같습니다.<ul><li>데이터 수집이 완료되었습니다.</li><li>쿼리 실행이 완료되었습니다.</li><li>데이터가 삭제되었습니다.</li></ul> | 해당 예는 다음과 같습니다.<ul><li>수집 기간이 서비스 수준 계약(SLA)을 초과합니다.</li><li>지난 24시간 동안 일일 섭취는 발생하지 않았습니다.</li><li>스트림 프로세서의 오류 속도가 구성된 임계값을 초과합니다.</li><li>총 프로필 수가 권한을 초과합니다.</li></ul> |
+| 해당 예는 다음과 같습니다.<ul><li>데이터 수집이 완료되었습니다.</li><li>쿼리 실행이 완료되었습니다.</li><li>데이터가 삭제되었습니다.</li></ul> | 해당 예는 다음과 같습니다.<ul><li>수집 기간이 서비스 수준 계약(SLA)을 초과합니다.</li><li>지난 24시간 동안 일일 섭취는 발생하지 않았습니다.</li><li>스트림 프로세서의 오류 속도가 구성된 임계값을 초과합니다.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -41,7 +41,7 @@ Experience Platform 경고는 한 번 전송하거나 해결할 때까지 사전
 
 | 구성 요소 | 설명 |
 | --- | --- |
-| **지표** | 실패한 일괄 처리 수집 이벤트 수([)와 같이 값이 경고를 트리거하는 Observability &#x200B;](../api/metrics.md#available-metrics)metric`timeseries.ingestion.dataset.batchfailed.count`. |
+| **지표** | 실패한 일괄 처리 수집 이벤트 수([)와 같이 값이 경고를 트리거하는 Observability ](../api/metrics.md#available-metrics)metric`timeseries.ingestion.dataset.batchfailed.count`. |
 | **조건** | 특정 수를 초과하는 카운트 지표와 같이 true로 확인될 경우 경고를 트리거하는 지표와 관련된 조건입니다. 이 조건은 미리 정의된 시간 윈도우(time window)와 연관될 수 있다. |
 | **창** | (선택 사항) 경보에 대한 조건은 미리 정의된 시간 윈도우로 제한될 수 있다. 예를 들어 지난 5분 동안 실패한 일괄 처리 수에 따라 경고가 트리거될 수 있습니다. |
 | **작업** | 경고가 트리거되면 작업이 수행됩니다. 특히 미리 구성된 웹후크 또는 Experience Platform UI와 같은 게재 채널을 통해 메시지를 적용 가능한 수신자에게 보냅니다. |
@@ -64,7 +64,7 @@ Experience Platform 경고는 한 번 전송하거나 해결할 때까지 사전
 
 Experience Platform UI를 통해 수신된 경고를 보고 경고 규칙을 관리할 수 있습니다. 다음 비디오에서는 이러한 기능에 대해 소개합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423921?captions=kor&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Experience Platform UI에서 경고를 사용하여 작업하려면 Adobe Admin Console을 통해 다음 액세스 제어 권한을 활성화해야 합니다.
 
