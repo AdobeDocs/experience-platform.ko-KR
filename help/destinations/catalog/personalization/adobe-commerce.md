@@ -67,7 +67,7 @@ Experience Platform에서 다음을 생성합니다.
 > 
 >데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
-[ 대상에 대한 대상자 활성화에 대한 지침은 ](../../ui/activate-edge-personalization-destinations.md)프로필 및 대상자 활성화[!DNL Commerce]를 참조하세요.
+[&#x200B; 대상에 대한 대상자 활성화에 대한 지침은 &#x200B;](../../ui/activate-edge-personalization-destinations.md)프로필 및 대상자 활성화[!DNL Commerce]를 참조하세요.
 
 ## [!DNL Adobe Commerce]의 다음 단계
 
