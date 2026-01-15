@@ -109,7 +109,7 @@ ID 데이터를 Experience Platform으로 전송하는 방법에는 두 가지�
 }
 ```
 
-위의 예에서 보듯이 `identityMap` 개체의 각 키는 ID 네임스페이스를 나타냅니다. 각 키의 값은 각 네임스페이스의 ID 값(`id`)을 나타내는 개체 배열입니다. Adobe 애플리케이션에서 인식하는 [!DNL Identity Service]표준 ID 네임스페이스 목록[에 대해서는 ](../../identity-service/troubleshooting-guide.md#standard-namespaces) 설명서를 참조하십시오.
+위의 예에서 보듯이 `identityMap` 개체의 각 키는 ID 네임스페이스를 나타냅니다. 각 키의 값은 각 네임스페이스의 ID 값(`id`)을 나타내는 개체 배열입니다. Adobe 애플리케이션에서 인식하는 [!DNL Identity Service]표준 ID 네임스페이스 목록[에 대해서는 &#x200B;](../../identity-service/troubleshooting-guide.md#standard-namespaces) 설명서를 참조하십시오.
 
 >[!NOTE]
 >
@@ -161,9 +161,9 @@ Experience Platform에서는 표준 빌딩 블록이 결합되어 스키마를 �
 
 스키마는 다음 공식을 사용하여 구성됩니다.
 
-**클래스 + 스키마 필드 그룹&amp;ast; = XDM 스키마**
+**클래스 + 스키마 필드 그룹&ast; = XDM 스키마**
 
-&amp;ast;스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. 즉, 필드 그룹을 전혀 사용하지 않고 데이터 세트 스키마를 구성할 수 있습니다.
+&ast;스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. 즉, 필드 그룹을 전혀 사용하지 않고 데이터 세트 스키마를 구성할 수 있습니다.
 
 ### 클래스 {#class}
 
