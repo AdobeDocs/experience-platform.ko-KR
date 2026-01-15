@@ -2,7 +2,7 @@
 title: Adobe Commerce 대상 커넥터
 description: Adobe Commerce 및 Real-Time CDP 판매자가 Real-Time CDP 내에서 구축 및 관리되는 고객 대상에 맞게 맞춤화된, 관련성이 높은 사이트 콘텐츠 및 프로모션을 제공하여 쇼핑 경험을 개인화하는 방법을 알아봅니다.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: fb8a17b8ea2ba1ddd64ceee7544f17058b43a943
+source-git-commit: 70556134a96260ae111c71ee288d4d646481270b
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 3%
@@ -22,12 +22,12 @@ ht-degree: 3%
 이 대상 연결을 사용하려면 다음에 대한 액세스 권한이 있는지 확인하십시오.
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). 개발자 콘솔에 액세스하여 Adobe Commerce에서 확장의 [구성을 완료](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=ko#configure-the-extension)하는 데 필요한 서비스 계정 및 자격 증명 정보를 볼 수 있습니다.
-- [Adobe Commerce 버전 2.4.4 이상](https://business.adobe.com/kr/products/commerce.html)
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). 개발자 콘솔에 액세스하여 Adobe Commerce에서 확장의 [구성을 완료](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension)하는 데 필요한 서비스 계정 및 자격 증명 정보를 볼 수 있습니다.
+- [Adobe Commerce 버전 2.4.4 이상](https://business.adobe.com/products/commerce.html)
 
 Experience Platform에서 다음을 생성합니다.
 
-- [스키마](../../../xdm/schema/composition.md). 생성하는 스키마는 Adobe Commerce에서 수집하려는 데이터를 나타냅니다. Commerce 관련 필드 그룹을 포함하는 스키마를 만드는 방법에 대해 [자세히 알아보기](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html?lang=ko).
+- [스키마](../../../xdm/schema/composition.md). 생성하는 스키마는 Adobe Commerce에서 수집하려는 데이터를 나타냅니다. Commerce 관련 필드 그룹을 포함하는 스키마를 만드는 방법에 대해 [자세히 알아보기](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html).
 - [데이터 집합](../../../catalog/datasets/user-guide.md#create). 데이터 집합은 데이터 수집을 위한 스토리지 및 관리 구성입니다. 위에서 만든 스키마에서 이 데이터 세트를 만듭니다.
 - [데이터스트림](../../../datastreams/overview.md#create). Adobe Experience Platform에서 다른 Adobe DX 제품으로 데이터가 흐를 수 있는 ID입니다. 이 ID는 특정 Adobe Commerce 인스턴스 내의 특정 웹 사이트에 연결되어야 합니다. 이 데이터 스트림을 만들 때 위에서 만든 XDM 스키마를 지정합니다.
 
@@ -67,11 +67,11 @@ Experience Platform에서 다음을 생성합니다.
 > 
 >데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
-[&#x200B; 대상에 대한 대상자 활성화에 대한 지침은 &#x200B;](../../ui/activate-edge-personalization-destinations.md)프로필 및 대상자 활성화[!DNL Commerce]를 참조하세요.
+[ 대상에 대한 대상자 활성화에 대한 지침은 ](../../ui/activate-edge-personalization-destinations.md)프로필 및 대상자 활성화[!DNL Commerce]를 참조하세요.
 
 ## [!DNL Adobe Commerce]의 다음 단계
 
-이제 Experience Platform 내에서 [!DNL Commerce] 대상을 구성했으므로 [!DNL Audience Activation]에 [!DNL Commerce] 확장을 설치하고 만든 Real-Time CDP 대상을 가져오도록 [!DNL Commerce Admin]을(를) 구성해야 합니다. 자세한 내용은 [[!DNL Commerce] 설명서](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=ko)를 참조하세요.
+이제 Experience Platform 내에서 [!DNL Commerce] 대상을 구성했으므로 [!DNL Audience Activation]에 [!DNL Commerce] 확장을 설치하고 만든 Real-Time CDP 대상을 가져오도록 [!DNL Commerce Admin]을(를) 구성해야 합니다. 자세한 내용은 [[!DNL Commerce] 설명서](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html)를 참조하세요.
 
 ## Commerce에서 대상자 활성화 확인 {#exported-data}
 
