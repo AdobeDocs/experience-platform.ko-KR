@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK에서 지원하는 다양한 OAuth 2 인증 흐름에 대해 설명하고 대상에 대한 OAuth 2 인증을 설정하는 지침을 제공합니다.
 title: OAuth 2 인증
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
+source-git-commit: 720f599810d119ac4997d24d400199d8efe087c2
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2273'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ Destination SDK은 대상에 대한 여러 인증 방법을 지원합니다. 이
 
 >[!IMPORTANT]
 >
->시스템에 Adobe Experience Platform에 대한 리디렉션/콜백 URL을 등록하는 단계는 인증 코드[&#x200B; 부여 유형이 있는 &#x200B;](#authorization-code)OAuth 2에만 필요합니다. 지원되는 다른 두 권한 유형(암호 및 클라이언트 자격 증명)의 경우 이 단계를 건너뛸 수 있습니다.
+>시스템에 Adobe Experience Platform에 대한 리디렉션/콜백 URL을 등록하는 단계는 인증 코드[ 부여 유형이 있는 ](#authorization-code)OAuth 2에만 필요합니다. 지원되는 다른 두 권한 유형(암호 및 클라이언트 자격 증명)의 경우 이 단계를 건너뛸 수 있습니다.
 
 이 단계를 마치면 다음과 같은 작업을 수행할 수 있습니다.
 
@@ -56,7 +56,7 @@ Destination SDK은 대상에 대한 여러 인증 방법을 지원합니다. 이
 
 ### Destination SDK에서 수행해야 하는 작업 {#to-do-in-destination-sdk}
 
-Experience Platform에서 대상에 대한 OAuth 2 인증을 설정하려면 [&#x200B; 매개 변수 아래의 &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md)대상 구성`customerAuthenticationConfigurations`에 OAuth 2 세부 사항을 추가해야 합니다. 자세한 예제는 [고객 인증](../../functionality/destination-configuration/customer-authentication.md)을 참조하십시오. OAuth 2 권한 부여 유형에 따라 구성 템플릿에 추가해야 하는 필드에 대한 특정 지침은 이 페이지의 아래에 나와 있습니다.
+Experience Platform에서 대상에 대한 OAuth 2 인증을 설정하려면 [ 매개 변수 아래의 ](../../authoring-api/destination-configuration/create-destination-configuration.md)대상 구성`customerAuthenticationConfigurations`에 OAuth 2 세부 사항을 추가해야 합니다. 자세한 예제는 [고객 인증](../../functionality/destination-configuration/customer-authentication.md)을 참조하십시오. OAuth 2 권한 부여 유형에 따라 구성 템플릿에 추가해야 하는 필드에 대한 특정 지침은 이 페이지의 아래에 나와 있습니다.
 
 ## 지원되는 OAuth 2 부여 유형 {#oauth2-grant-types}
 
@@ -109,7 +109,10 @@ Adobe이 OAuth 2 인증을 위해 디자인한 시스템:
       "refreshTokenUrl": "https://api.moviestar.com/OAuth/refresh_token",
       "clientId": "Experience-Platform-client-id",
       "clientSecret": "Experience-Platform-client-secret",
-      "scope": ["read", "write"]
+      "scope": ["read", "write"],
+      "options": {
+          "useBasicAuth": true 
+      }
     }
   ]
 //...
@@ -126,6 +129,7 @@ Adobe이 OAuth 2 인증을 위해 디자인한 시스템:
 | `clientId` | 문자열 | 시스템이 Adobe Experience Platform에 할당하는 클라이언트 ID입니다. |
 | `clientSecret` | 문자열 | 시스템이 Adobe Experience Platform에 할당하는 클라이언트 암호입니다. |
 | `scope` | 문자열 목록 | *선택 사항*. Experience Platform에서 리소스에 대해 수행할 수 있는 액세스 토큰의 범위를 설정합니다. 예: &quot;read, write&quot;. |
+| `options.useBasicAuth` | 부울 | *선택 사항*. 액세스 토큰에 대한 인증 코드를 교환할 때 클라이언트 자격 증명(클라이언트 ID 및 클라이언트 암호)이 OAuth 공급자의 토큰 엔드포인트로 전송되는 방식을 제어하는 부울 값입니다. <ul><li>`false`(으)로 설정되거나 정의되지 않은 경우 자격 증명이 POST 요청 본문에서 `client_id` 및 `client_secret` 매개 변수로 전송됩니다(기본 동작).</li><li>이 매개 변수를 `true`(으)로 설정하면 기본 인증 형식 `Authorization`을(를) 사용하여 HTTP `Authorization: Basic base64(clientID:clientSecret)` 헤더에서 자격 증명이 전송됩니다.</li></ul> OAuth 공급자가 요청 본문이 아닌 `useBasicAuth` 헤더에서 클라이언트 자격 증명을 보내야 하는 경우 `true`을(를) `Authorization`(으)로 설정하십시오. |
 
 {style="table-layout:auto"}
 
