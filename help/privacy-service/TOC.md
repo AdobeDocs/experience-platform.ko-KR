@@ -5,9 +5,9 @@ breadcrumb-title: Privacy Service 안내서
 user-guide-description: GDPR 및 CPA와 같은 법적 개인정보 보호 규정을 준수하도록 고객 데이터 요청을 관리합니다.
 feature: Privacy
 role: User,Admin
-source-git-commit: 306f7fcd09f395895fde241b668c41a2479a8d2d
+source-git-commit: bc180437c42ab2eea946e1a4d6d9dbd77e0896c8
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '94'
 ht-degree: 93%
 
 ---
@@ -26,6 +26,7 @@ ht-degree: 93%
    * [개인정보 보호 작업](./api/privacy-jobs.md)
    * [동의](./api/consent.md)
    * [콘텐츠](./api/content.md)
+   * [오류 코드](./api/error-codes.md)
    * [부록](./api/appendix.md)
 * PRIVACY SERVICE UI {#ui}
    * [개요](./ui/overview.md)
