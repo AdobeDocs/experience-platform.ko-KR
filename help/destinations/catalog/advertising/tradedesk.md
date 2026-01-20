@@ -3,9 +3,9 @@ keywords: 광고, 무역데스크, 광고 무역데스크
 title: 트레이드 데스크 연결
 description: Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에 걸쳐 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있는 셀프서비스 플랫폼입니다.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 4472548fc5b5181cdf8ef8b1666d6e1fafbce588
+source-git-commit: 036d784014e7cdb101f39f63f9d6e8bac01fdc97
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1136'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL The Trade Desk]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/ko/docs/id-service/using/id-service-api/methods/idsync)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
+>[!DNL The Trade Desk]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
 
 ## 대상에 연결 {#connect}
 
@@ -129,6 +129,11 @@ ht-degree: 2%
 대상을 매핑할 때에는 Adobe에서 사용하기 쉽도록 Experience Platform 대상 이름 또는 더 짧은 형식을 사용하는 것이 좋습니다. 그러나 대상의 대상 ID 또는 이름은 Experience Platform 계정의 대상 ID 또는 이름과 일치할 필요가 없습니다. 매핑 필드에 삽입하는 모든 값은 대상에 의해 반영됩니다.
 
 ### 필수 매핑 {#mandatory-mappings}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_ttd"
+>title="사전 구성된 매핑 세트"
+>abstract="4개의 매핑 세트가 사전 구성되어 있습니다. 데이터를 Trade Desk에 활성화할 때, 이 대상이 여기에 표시된 대상 ID와 작동하므로 활성화된 대상에 대해 자격이 있는 프로필에 반드시 4개의 ID가 모두 있어야 하는 것은 아닙니다."
 
 [지원되는 ID](#supported-identities) 섹션에 설명된 모든 대상 ID는 대상 활성화 워크플로의 매핑 단계에서 매핑되어야 합니다. 여기에는 다음 항목이 포함되어 있습니다.
 
