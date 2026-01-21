@@ -2,10 +2,10 @@
 title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: acb8303673c3271794dcda87b149b473328a7a21
+source-git-commit: d401707e263f09ccd8575f02a71d7e74899e02db
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 24%
+source-wordcount: '1395'
+ht-degree: 20%
 
 ---
 
@@ -54,11 +54,24 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 
 [!DNL Destinations]는 대상 플랫폼과의 사전 빌드된 통합을 통해 Experience Platform의 데이터를 원활하게 활성화할 수 있습니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
+**새로운 대상 또는 업데이트된 대상**
+
+| 대상 | 설명 |
+| --- | --- |
+| 이제 케벨 대상 커넥터를 사용할 수 있습니다. | [[!DNL Kevel]](https://www.kevel.com/)은(는) 혁신적인 상거래 리더가 소매 미디어를 출시하고, 확장하고, 성공할 수 있도록 지원하는 AI 지원 기술 및 전문가 지침을 제공합니다. [!DNL Kevel]의 Retail Media Cloud는 온사이트 및 오프사이트 광고를 위한 타깃팅되고, 귀속되며, 사용자 지정 가능한 광고 형식을 지원합니다. |
+| 이제 인덱스 교환 대상 커넥터를 사용할 수 있습니다. | [!DNL Index]은(는) 미디어 소유자가 모든 화면에서 콘텐츠의 가치를 극대화할 수 있도록 지원하는 글로벌 광고 공급측 플랫폼입니다. 20년 이상의 업계 리더십 덕분에 [!DNL Index]은(는) 세계 최대 브랜드와 프리미엄 경험 메이커를 연결하여 고품질의 소비자 경험을 제공합니다. |
+| 브레이즈 연결에 대한 지역 엔드포인트 지원 | 이제 대상 구성 흐름 동안 [에서 지원하는 모든 ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오. |
+| Liveramp 온보딩을 위한 주간 및 월간 일정 조정 지원 | 이제 Liveramp 온보딩 대상에 대한 주별 및 월별 내보내기 일정을 구성할 수 있습니다. |
+| Amazon S3 대상에 대한 AES256 암호화 지원 | 이제 Amazon S3 내보내기에 대해 AES256 암호화를 구성할 수 있습니다. |
+| Trade Desk 및 Microsoft Bing 대상을 위한 활성화 경험 개선 | 이제 Trade Desk 및 Microsoft Bing 대상에 최적화된 활성화 경험을 위한 사전 정의된 필수 매핑이 포함됩니다. |
+
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| Adobe Target 대상에 대한 보호 제한을 업데이트했습니다. | 단일 Adobe Target 대상에 매핑할 수 있는 최대 대상 수가 50개에서 250개로 증가했습니다. 이렇게 하면 Adobe Target이 다른 대상에 대한 표준 대상 제한에 맞춰 조정되므로 대상 활성화 워크플로우에 더 많은 유연성을 제공합니다. 이제 고객은 여러 데이터 흐름을 만들 필요 없이 Adobe Target 대상에 대해 더 많은 대상을 활성화할 수 있습니다. |
+| Adobe Target 대상에 대한 보호 제한을 업데이트했습니다. | 단일 Adobe Target 대상에 매핑할 수 있는 최대 대상 수가 50개에서 250개로 증가했습니다. 이렇게 하면 Adobe Target이 다른 대상에 대한 표준 대상 제한에 맞춰 조정되므로 대상 활성화 워크플로우에 더 많은 유연성을 제공합니다. 이제 여러 데이터 흐름을 만들지 않고도 Adobe Target 대상에 대해 더 많은 대상을 활성화할 수 있습니다. |
+| [대상 편집](/help/destinations/ui/edit-destination.md) 및 [마케팅 작업 편집](/help/destinations/ui/edit-activation.md#edit-marketing-actions) 일반 가용성 | 이제 모든 사용자가 대상 및 마케팅 작업을 편집하는 옵션을 사용할 수 있습니다. |
+| 매핑 단계에서 필드 표시 이름 전환 | 이제 스키마 필드를 대상에 매핑할 때 전체 XDM 필드 이름을 표시하는 것과 표시 이름만 표시하는 것 간을 전환할 수 있습니다. |
 
 {style="table-layout:auto"}
 
