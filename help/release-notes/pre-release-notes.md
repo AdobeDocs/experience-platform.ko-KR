@@ -2,9 +2,9 @@
 title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d401707e263f09ccd8575f02a71d7e74899e02db
+source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1389'
 ht-degree: 20%
 
 ---
@@ -60,7 +60,7 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 | --- | --- |
 | 이제 케벨 대상 커넥터를 사용할 수 있습니다. | [[!DNL Kevel]](https://www.kevel.com/)은(는) 혁신적인 상거래 리더가 소매 미디어를 출시하고, 확장하고, 성공할 수 있도록 지원하는 AI 지원 기술 및 전문가 지침을 제공합니다. [!DNL Kevel]의 Retail Media Cloud는 온사이트 및 오프사이트 광고를 위한 타깃팅되고, 귀속되며, 사용자 지정 가능한 광고 형식을 지원합니다. |
 | 이제 인덱스 교환 대상 커넥터를 사용할 수 있습니다. | [!DNL Index]은(는) 미디어 소유자가 모든 화면에서 콘텐츠의 가치를 극대화할 수 있도록 지원하는 글로벌 광고 공급측 플랫폼입니다. 20년 이상의 업계 리더십 덕분에 [!DNL Index]은(는) 세계 최대 브랜드와 프리미엄 경험 메이커를 연결하여 고품질의 소비자 경험을 제공합니다. |
-| 브레이즈 연결에 대한 지역 엔드포인트 지원 | 이제 대상 구성 흐름 동안 [에서 지원하는 모든 &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오. |
+| 브레이즈 연결에 대한 지역 엔드포인트 지원 | 이제 대상 구성 흐름 동안 [에서 지원하는 모든 ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오. |
 | Liveramp 온보딩을 위한 주간 및 월간 일정 조정 지원 | 이제 Liveramp 온보딩 대상에 대한 주별 및 월별 내보내기 일정을 구성할 수 있습니다. |
 | Amazon S3 대상에 대한 AES256 암호화 지원 | 이제 Amazon S3 내보내기에 대해 AES256 암호화를 구성할 수 있습니다. |
 | Trade Desk 및 Microsoft Bing 대상을 위한 활성화 경험 개선 | 이제 Trade Desk 및 Microsoft Bing 대상에 최적화된 활성화 경험을 위한 사전 정의된 필수 매핑이 포함됩니다. |
@@ -86,7 +86,7 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 | 기능 | 설명 |
 | --- | --- |
 | 스트리밍 용량 적용 | 이제 Experience Platform에서는 실시간 고객 프로필 및 ID 서비스를 위해 스트리밍 처리량 기능을 적용합니다. 고객이 계약된 스트리밍 용량을 초과하면 데이터는 선입선출 방식으로 큐에 올라가 처리됩니다. 이를 통해 예측 가능한 시스템 성능을 보장하고 용량 위반이 데이터 수집 품질에 영향을 미치지 않도록 할 수 있습니다. 중요 참고 사항: 용량을 초과하면 데이터 레이크에서 스트리밍 업데이트를 사용할 수 없으며, 이 적용은 Adobe Journey Optimizer 라이선스가 있는 고객에게는 적용되지 않으며, 용량이 사용 가능해지면 큐에 있는 데이터가 순차적으로 처리됩니다. |
-| Real-Time CDP Prime에 대한 API 액세스 사용 중단 | 경험 이벤트에 대한 API 액세스는 이제 모든 Real-Time CDP Prime 고객에게 더 이상 사용되지 않습니다. 이 변경 사항은 API를 통해 직접 경험 이벤트를 쿼리하는 기능에 영향을 줍니다. Real-Time CDP Ultimate 고객은 사용 사례에 필요한 경우 공식 예외 프로세스를 통해 예외를 요청하여 경험 이벤트 API 액세스를 활성화할 수 있습니다. 이러한 사용 중단은 시스템 성능을 최적화하는 데 도움이 되며 데이터 액세스 패턴에 대한 우수 사례에 부합합니다. |
+| Real-Time CDP Prime에 대한 API 액세스 사용 중단 | 경험 이벤트에 대한 API 액세스는 이제 모든 Real-Time CDP Prime 고객에게 더 이상 사용되지 않습니다. 이 변경 사항은 API를 통해 직접 경험 이벤트를 쿼리하는 기능에 영향을 줍니다. Real-Time CDP Ultimate 고객은 사용 사례에 필요한 경우 공식 예외 프로세스를 통해 예외를 요청하여 경험 이벤트 API 액세스를 활성화할 수 있습니다. 이러한 사용 중단은 Real-Time CDP을 라이선스 기능에 맞게 조정하는 데 도움이 됩니다. |
 | 데이터 흐름 실행 모니터링 | 이제 프로필에서 데이터 흐름 실행의 진행 상황과 준비를 모니터링할 수 있습니다. |
 
 {style="table-layout:auto"}

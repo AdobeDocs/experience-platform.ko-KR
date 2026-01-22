@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 27071d79f52fa47e27da84b970729eb52fbbb7d3
 workflow-type: tm+mt
-source-wordcount: '5161'
+source-wordcount: '5175'
 ht-degree: 12%
 
 ---
@@ -21,6 +21,31 @@ ht-degree: 12%
 ![세그먼트 빌더 UI가 표시됩니다.](../images/ui/segment-builder/segment-builder.png)
 
 ## 세그먼트 정의 빌딩 블록 {#building-blocks}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
+>title="로직 복잡성"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_chaincountcheck"
+>title="이벤트 시퀀스 제한"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_rewritescheck"
+>title="쿼리 효율성 경고"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_countaggregationcheck"
+>title="카운트 필터 경고"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_arraydepthcheck"
+>title="중첩 데이터 경고"
+>abstract=""
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
@@ -216,7 +241,7 @@ ht-degree: 12%
 
 코드 보기는 API 호출에 사용할 세그먼트 정의의 값을 복사할 수 있도록 하는 단추를 제공합니다. 최신 버전의 세그먼트 정의를 가져오려면 세그먼트 정의에 대한 최신 변경 사항을 저장했는지 확인합니다.
 
-![코드 복사 버튼이 강조 표시되어 &#x200B;](../images/ui/segment-builder/copy-code.png)할 수 있습니다.
+![코드 복사 버튼이 강조 표시되어 ](../images/ui/segment-builder/copy-code.png)할 수 있습니다.
 
 ### 집계 함수
 
@@ -284,7 +309,7 @@ ht-degree: 12%
 | 다음 기간 동안 | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트는 선택한 월 또는 연도 내에 발생합니다. 월을 선택한 경우 속성 또는 이벤트가 발생한 월과 연도를 모두 선택해야 합니다.  연도를 선택한 경우 속성 또는 이벤트가 발생한 연도를 선택하면 됩니다. 월을 선택하면 [!UICONTROL Ignore year] 확인란도 활성화할 수 있습니다. | 예 | ![사용 중인 &quot;During&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
 | 다음 범위 내(+/-) | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트는 선택한 날짜로부터 일, 주, 월 또는 년 이내에 발생합니다. 이 기간은 두 날짜의 **포함**&#x200B;입니다. 선택한 날짜는 오늘, 어제 또는 선택한 다른 사용자 지정 날짜일 수 있습니다. | 예 | ![사용 중인 &quot;Within&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
 | 다음 이전 | 비교 중인 특성 또는 이벤트는 선택한 날짜 이전에 **반드시**&#x200B;해야 합니다. 선택한 날짜는 선택한 사용자 지정 날짜이거나 일, 주, 월 또는 년 전 중에서 선택할 수 있습니다. | 예 | ![사용 중인 &quot;Before&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
-| 다음 이후 | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트는 선택한 날짜 이후에 발생합니다. 선택한 날짜는 선택한 사용자 지정 날짜이거나 일, 주, 월 또는 년 전 중에서 선택할 수 있습니다. | 예 | ![사용 중인 &quot;After&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| 후 | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트는 선택한 날짜 이후에 발생합니다. 선택한 날짜는 선택한 사용자 지정 날짜이거나 일, 주, 월 또는 년 전 중에서 선택할 수 있습니다. | 예 | ![사용 중인 &quot;After&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
 | 롤링 범위 | 비교되는 특성 또는 이벤트는 두 상대적 날짜 사이에 발생해야 합니다. 날짜는 초, 분, 시간, 일, 주, 월 또는 년 단위로 표시될 수 있습니다. | 아니요 | ![사용되는 &quot;롤링 범위&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
 | 다음에서 | 비교되는 속성 또는 이벤트는 선택한 다음 기간 내에 발생해야 합니다. 선택한 기간에는 분, 시간, 일, 주, 월 및 년이 포함됩니다. | 아니요 | ![사용 중인 &quot;다음 시간 내&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
 | 존재 | 속성이 존재합니다. | 아니요 | ![사용 중인 &quot;존재&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
@@ -324,7 +349,7 @@ ht-degree: 12%
 
 | 시간 제한 | 설명 |
 | --------------- | ----------- |
-| 다음 이후 | 후자 이벤트 **은(는) 이전 이벤트 다음에 적어도**&#x200B;을(를) 수행해야 합니다. |
+| 후 | 후자 이벤트 **은(는) 이전 이벤트 다음에 적어도**&#x200B;을(를) 수행해야 합니다. |
 | 다음 범위 내 | 두 이벤트 **must**&#x200B;은(는) 시간 제약 조건 내에 나열된 기간 동안 발생합니다. |
 
 >[!NOTE]
@@ -386,7 +411,7 @@ ht-degree: 12%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="예상치 새로 고침"
 >abstract="세그먼트 대상의 예상치를 새로 고쳐 제안된 세그먼트 대상에 적합한 프로필 개수를 미리 볼 수 있습니다. 당일 샘플 데이터의 샘플 크기를 사용하여 대상자 예상치를 생성합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=ko#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
