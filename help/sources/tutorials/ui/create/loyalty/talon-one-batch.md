@@ -4,9 +4,9 @@ description: UI를 사용하여 Talon.One의 일괄 처리 데이터를 Adobe Ex
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+source-git-commit: d8b8143da3a67bba690229b1f8e88eb86f3fe804
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1420'
 ht-degree: 1%
 
 ---
@@ -34,29 +34,29 @@ UI의 소스 작업 영역을 사용하여 [!DNL Talon.One] 계정의 일괄 처
 
 ## 소스 카탈로그 탐색
 
-Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 *[!UICONTROL 소스]* 작업 영역에 액세스합니다. *[!UICONTROL 범주]* 패널에서 적절한 범주를 선택합니다. 또는 검색 창을 사용하여 사용할 특정 소스로 이동합니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Sources]**&#x200B;을(를) 선택하여 *[!UICONTROL Sources]* 작업 영역에 액세스합니다. *[!UICONTROL Categories]* 패널에서 적절한 범주를 선택합니다. 또는 검색 창을 사용하여 사용할 특정 소스로 이동합니다.
 
-[!DNL Talon.One]에서 데이터를 수집하려면 **[!UICONTROL 충성도]**&#x200B;에서 *[!UICONTROL Talon.One 일괄 Source 커넥터]* 소스 카드를 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택하십시오.
+[!DNL Talon.One]에서 데이터를 수집하려면 **[!UICONTROL Talon.One Batch Source Connector]**&#x200B;에서 *[!UICONTROL Loyalty]* 원본 카드를 선택한 다음 **[!UICONTROL Add data]**&#x200B;을(를) 선택하십시오.
 
 >[!TIP]
 >
->지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL 설정]** 옵션이 표시됩니다. 인증된 계정을 만들면 이 옵션이 **[!UICONTROL 데이터 추가]**(으)로 변경됩니다.
+>지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL Set up]** 옵션이 표시됩니다. 인증된 계정이 만들어지면 이 옵션이 **[!UICONTROL Add data]**(으)로 변경됩니다.
 
 ![Talon.One 일괄 처리 원본 커넥터 카드가 선택된 원본 카탈로그입니다.](../../../../images/tutorials/create/talon-one-batch/catalog.png)
 
 ### 새 계정 만들기
 
-[!DNL Talon.One] 원본에 대한 새 계정을 만들려면 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택하고 계정에 대한 이름과 선택적 설명을 입력하십시오. 그런 다음 [!DNL Talon.One] 도메인과 [!UICONTROL Talon.One 관리 API 키]를 제공하십시오. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하고 연결을 설정할 수 있도록 잠시 기다립니다.
+[!DNL Talon.One] 원본에 대한 새 계정을 만들려면 **[!UICONTROL New account]**&#x200B;을(를) 선택하고 계정에 대한 이름과 선택적 설명을 입력하십시오. 그런 다음 [!DNL Talon.One] 도메인과 [!UICONTROL Talon.One Management API Key]을(를) 제공하십시오. 완료되면 **[!UICONTROL Connect to source]**&#x200B;을(를) 선택하고 연결을 설정할 수 있도록 잠시 기다립니다.
 
 ![원본 워크플로의 새 계정 만들기 단계입니다.](../../../../images/tutorials/create/talon-one-batch/new.png)
 
 ### 기존 계정 사용
 
-기존 계정을 사용하려면 **[!UICONTROL 기존 계정]**&#x200B;을(를) 선택하고 계정 인터페이스에서 사용할 [!DNL Talon.One] 계정을 선택하십시오.
+기존 계정을 사용하려면 **[!UICONTROL Existing account]**&#x200B;을(를) 선택하고 계정 인터페이스에서 사용할 [!DNL Talon.One] 계정을 선택하십시오.
 
 ## 데이터 선택
 
-인증되면 **applicationId** 및 **sessionType**&#x200B;의 값을 제공하십시오. 이 단계에서 미리보기 기능을 사용하여 데이터의 구조를 검사할 수 있습니다. 완료되면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 계속하십시오.
+인증되면 **applicationId** 및 **sessionType**&#x200B;의 값을 제공하십시오. 이 단계에서 미리보기 기능을 사용하여 데이터의 구조를 검사할 수 있습니다. 완료되면 계속하려면 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
 ![원본 워크플로의 데이터 선택 및 미리 보기 단계입니다.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 
@@ -76,10 +76,10 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 +++프로필 수집, 오류 진단 및 부분 수집을 활성화하는 단계를 선택합니다.
 
-Real-Time Customer Profile에 대해 데이터 세트를 사용하도록 설정한 경우 이 단계에서 **[!UICONTROL 프로필 데이터 세트]**&#x200B;를 전환하여 프로필 수집에 데이터를 사용하도록 설정할 수 있습니다. 이 단계를 사용하여 **[!UICONTROL 오류 진단]** 및 **[!UICONTROL 부분 수집]**&#x200B;을 사용하도록 설정할 수도 있습니다.
+Real-Time Customer Profile에 대해 데이터 세트가 활성화되어 있으면 이 단계에서 **[!UICONTROL Profile dataset]**&#x200B;을(를) 전환하여 프로필 수집에 데이터를 활성화할 수 있습니다. 이 단계를 사용하여 **[!UICONTROL Error diagnostics]** 및 **[!UICONTROL Partial ingestion]**&#x200B;을(를) 활성화할 수도 있습니다.
 
-* **[!UICONTROL 오류 진단]**: **[!UICONTROL 오류 진단]**&#x200B;을 선택하여 데이터 집합 활동 및 데이터 흐름 상태를 모니터링할 때 나중에 참조할 수 있는 오류 진단을 생성하도록 소스에 지시합니다.
-* **[!UICONTROL 부분 수집]**: 부분 일괄 처리 수집은 구성 가능한 특정 임계값까지 오류가 포함된 데이터를 수집하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Experience Platform에 성공적으로 수집할 수 있으며 잘못된 데이터는 모두 잘못된 이유에 대한 정보로 별도로 배치됩니다.
+* **[!UICONTROL Error diagnostics]**: **[!UICONTROL Error diagnostics]**&#x200B;을(를) 선택하여 데이터 세트 활동 및 데이터 흐름 상태를 모니터링할 때 나중에 참조할 수 있는 오류 진단을 생성하도록 소스에 지시합니다.
+* **[!UICONTROL Partial ingestion]**: 부분 일괄 처리 수집은 구성 가능한 특정 임계값까지 오류가 포함된 데이터를 수집하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Experience Platform에 성공적으로 수집할 수 있으며 잘못된 데이터는 모두 잘못된 이유에 대한 정보로 별도로 배치됩니다.
 
 +++
 
@@ -109,7 +109,7 @@ Real-Time Customer Profile에 대해 데이터 세트를 사용하도록 설정�
 
 ## 데이터 흐름 수집 예약
 
-[!UICONTROL 예약] 단계가 나타납니다. 구성된 매핑을 사용하여 선택한 소스 데이터를 자동으로 수집하도록 수집 일정을 구성하려면 인터페이스를 사용하십시오. 기본적으로 예약은 `Once`(으)로 설정됩니다. 수집 빈도를 조정하려면 **[!UICONTROL 빈도]**&#x200B;를 선택한 다음 드롭다운 메뉴에서 옵션을 선택합니다.
+[!UICONTROL Scheduling] 단계가 나타납니다. 구성된 매핑을 사용하여 선택한 소스 데이터를 자동으로 수집하도록 수집 일정을 구성하려면 인터페이스를 사용하십시오. 기본적으로 예약은 `Once`(으)로 설정됩니다. 수집 빈도를 조정하려면 **[!UICONTROL Frequency]**&#x200B;을(를) 선택한 다음 드롭다운 메뉴에서 옵션을 선택합니다.
 
 >[!TIP]
 >
@@ -132,15 +132,19 @@ Real-Time Customer Profile에 대해 데이터 세트를 사용하도록 설정�
 
 ## 검토
 
-*[!UICONTROL 검토]* 단계가 표시되어 데이터 흐름을 만들기 전에 세부 사항을 검토할 수 있습니다. 세부 사항은 다음 범주 내에서 그룹화됩니다.
+*[!UICONTROL Review]* 단계가 나타나므로 데이터 흐름을 만들기 전에 자세한 내용을 검토할 수 있습니다. 세부 사항은 다음 범주 내에서 그룹화됩니다.
 
-* **[!UICONTROL 연결]**: 계정 이름, 원본 플랫폼 및 원본 이름을 표시합니다.
-* **[!UICONTROL 데이터 집합 및 맵 필드 할당]**: 대상 데이터 집합과 데이터 집합이 준수하는 스키마를 표시합니다.
+* **[!UICONTROL Connection]**: 계정 이름, 원본 플랫폼 및 원본 이름을 표시합니다.
+* **[!UICONTROL Assign dataset and map fields]**: 대상 데이터 세트와 데이터 세트가 준수하는 스키마를 표시합니다.
 
-세부 정보가 올바른지 확인한 후 **[!UICONTROL 마침]**&#x200B;을 선택합니다.
+세부 정보가 올바른지 확인한 후 **[!UICONTROL Finish]**&#x200B;을(를) 선택합니다.
 
 ![원본 워크플로의 검토 단계입니다.](../../../../images/tutorials/create/talon-one-batch/review.png)
 
 ## 데이터 흐름 모니터링
 
 데이터 흐름이 만들어지면 데이터 흐름을 통해 수집되는 데이터를 모니터링하여 수집 비율, 성공 및 오류에 대한 정보를 볼 수 있습니다. 데이터 흐름을 모니터링하는 방법에 대한 자세한 내용은 [UI에서 계정 및 데이터 흐름 모니터링](../../../../../dataflows/ui/monitor-sources.md)에 대한 자습서를 참조하십시오.
+
+## 알려진 제한 사항
+
+[!DNL Talon.One]의 스키마에서 Adobe Experience Platform으로 데이터를 매핑할 때 현재 단일 트랜잭션 내에서 동일한 유형의 여러 효과를 캡처할 수 없습니다. 예를 들어, 트랜잭션에 `setDiscount` 효과가 여러 개 포함된 경우(예: 다른 캠페인의 할인), 그러한 효과 중 하나만 매핑 중에 유지되고 나머지는 덮어쓰기됩니다.
