@@ -85,7 +85,7 @@ ht-degree: 6%
 | **[!UICONTROL Total failed flow runs]** | 실패한 데이터 흐름 실행 수입니다. |
 | **[!UICONTROL Last active]** | 데이터 흐름이 마지막으로 실행된 타임스탬프입니다. |
 
-![ 데이터 흐름 실행에 대한 자세한 내용을 보려면 데이터 흐름 실행 시작 시간 옆에 있는 필터 아이콘 ](/help/images/icons/filter.png)filter[!DNL Profile]을(를) 선택하십시오.
+![&#x200B; 데이터 흐름 실행에 대한 자세한 내용을 보려면 데이터 흐름 실행 시작 시간 옆에 있는 필터 아이콘 &#x200B;](/help/images/icons/filter.png)filter[!DNL Profile]을(를) 선택하십시오.
 
 모든 데이터 흐름 실행을 표시하는 대시보드가 나타납니다. 이 대시보드에는 데이터 흐름 실행에 대한 지표와 성공률을 보여주는 그래프, 생성된 프로필 조각 및 업데이트된 프로필 조각이 포함되어 있습니다.
 
