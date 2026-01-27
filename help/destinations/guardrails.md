@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 0b607decfa687f89c74fb81055ac2bf4cc54d59b
+source-git-commit: 11ef8fe8b64a7c2bb698c62093aafe3fb11d3789
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1731'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)을(를) 확인하십시오.
+>이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을(를) 확인하십시오.
 
 이 페이지에서는 활성화 동작과 관련된 기본 사용량 및 요금 제한을 제공합니다. 다음 보호 기능을 검토할 때 [대상에 올바르게 연결](/help/destinations/ui/connect-destination.md)되어 있다고 가정합니다.
 
@@ -51,7 +51,7 @@ ht-degree: 2%
 | --- | --- | --- | --- |
 | 단일 대상에 대한 최대 대상 수 | 250 | 성능 보호 | 최대 250개의 대상을 데이터 흐름의 단일 대상에 매핑하는 것이 좋습니다. <br><br> 대상에 대해 250개 이상의 대상을 활성화해야 하는 경우 다음 중 하나를 수행할 수 있습니다. <ul><li> 더 이상 활성화하지 않으려는 대상자 매핑 해제 또는</li><li>원하는 대상에 대한 새 데이터 흐름을 만들고 대상을 이 새 데이터 흐름에 매핑합니다.</li></ul> <br> 일부 대상의 경우 대상에 매핑된 대상자가 250명 미만으로 제한될 수 있습니다. 이러한 대상은 해당 섹션에서 페이지의 아래에서 더 많이 호출됩니다. |
 | 대상에 매핑된 최대 속성 수 | 50 | 성능 보호 | 여러 대상 및 대상 유형의 경우 내보내기 위해 매핑할 프로필 속성 및 ID를 선택할 수 있습니다. 최적의 성능을 위해 데이터 흐름에서 대상에 최대 50개의 속성을 매핑해야 합니다. |
-| 최대 대상 수 | 10 | 시스템 강제 보호 | 데이터를 연결하고 활성화할 수 있는 대상을 최대 100개까지 만들 수 있습니다. *샌드박스당*. [Edge 개인화 대상(사용자 지정 개인화)](#edge-destinations-activation)은(는) 100개의 권장 대상 중 최대 10개를 구성할 수 있습니다. |
+| 최대 대상 수 | 100 | 시스템 강제 보호 | 데이터를 연결하고 활성화할 수 있는 대상을 최대 100개까지 만들 수 있습니다. *샌드박스당*. [Edge 개인화 대상(사용자 지정 개인화)](#edge-destinations-activation)은(는) 100개의 권장 대상 중 최대 10개를 구성할 수 있습니다. |
 | 대상에 활성화된 데이터 유형 | ID 및 ID 맵을 포함한 프로필 데이터 | 시스템 강제 보호 | 현재 *프로필 레코드 특성*&#x200B;을(를) 대상으로 내보낼 수만 있습니다. 이벤트 데이터를 설명하는 XDM 속성은 현재 내보내기에서 지원되지 않습니다. |
 | 대상에 활성화된 데이터 유형 - 배열 및 맵 속성 지원 | 부분적으로 사용 가능하 | 시스템 강제 보호 | 배열 특성을 [파일 기반 대상](/help/destinations/destination-types.md#file-based)(으)로 내보낼 수 있습니다. 기능에 대해 [자세히 알아보십시오](/help/destinations/ui/export-arrays-maps-objects.md). |
 
@@ -99,7 +99,6 @@ ht-degree: 2%
 | --- | --- | --- | --- |
 | 최대 [사용자 지정 개인화](/help/destinations/catalog/personalization/custom-personalization.md) 대상 수 | 10 | 성능 보호 | 샌드박스당 10개의 사용자 지정 개인화 대상으로 데이터 흐름을 설정할 수 있습니다. |
 | 샌드박스당 개인화 대상에 매핑된 최대 속성 수 | 30 | 성능 보호 | 샌드박스당 데이터 흐름에서 개인화 대상에 최대 30개의 속성을 매핑할 수 있습니다. |
-| 단일 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 대상에 매핑된 최대 대상 수 | 50 | 성능 보호 | 단일 Adobe Target 대상에 대한 활성화 흐름에서 최대 50개의 대상을 활성화할 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -197,7 +196,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보호, 종단 간 지연 정보 및 라이선스 정보에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
-* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ko#end-to-end-latency-diagrams).
-* [Real-Time Customer Data Platform(B2C Edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams).
+* [Real-Time Customer Data Platform(B2C Edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
