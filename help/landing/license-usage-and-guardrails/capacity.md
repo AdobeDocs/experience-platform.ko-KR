@@ -58,7 +58,7 @@ Experience Platform의 보호 기능에 대한 자세한 내용은 [Real-Time CD
    - 이러한 500개의 스트리밍 대상 중 최대 Edge 대상 수는 150개입니다
 - 스트리밍 수집을 위한 초기 통합 처리량은 초당 레코드 1500개(rps)입니다
    - 이 결합된 스트리밍 처리량은 프로덕션 및 개발 샌드박스에서 실시간 고객 프로필로 수집을 스트리밍하기 위해 초당 결합된 최대 인바운드 이벤트를 측정합니다.
-   - 초당 최대 13,500개의 레코드로 스트리밍 세분화 지원을 추가로 구매할 수 있습니다. 추가 권한 구매에 대한 자세한 내용은 [Real-Time CDP 제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)에서 확인할 수 있습니다.
+   - 초당 최대 13,500개의 레코드로 스트리밍 세분화 지원을 추가로 구매할 수 있습니다. 추가 권한 구매에 대한 자세한 내용은 [Real-Time CDP 제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)에서 확인할 수 있습니다.
 
 대상자 수용작업량은 **샌드박스** 수준입니다. 즉, 조직에 있는 모든 샌드박스에 500개의 스트리밍 대상을 가질 수 있으며, 이 중 150개는 에지 대상이 될 수 있습니다.
 
