@@ -5,14 +5,22 @@ type: Documentation
 description: Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터에 액세스할 수 있습니다. 이 안내서에서는 프로필 API를 사용하여 "프로필"로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 2f32cae89d69f6dc2930c3908c87b79e1b724f4b
+source-git-commit: 17bd3494c2d9b2a05ca86903297ebec85c9350f2
 workflow-type: tm+mt
-source-wordcount: '2211'
+source-wordcount: '2290'
 ht-degree: 2%
 
 ---
 
 # 엔티티 끝점(프로필 액세스)
+
+>[!IMPORTANT]
+>
+>Real-Time CDP Ultimate이 있는 경우 이러한 끝점을 **만**&#x200B;사용할 수 있습니다.
+>
+>Real-Time CDP Prime이 있는 경우 개인화 사용 사례에 대한 경험 이벤트를 계속 수집 및 사용하고 Experience Platform UI 내에서 이벤트를 볼 수 있지만, API를 사용하여 경험 이벤트를 프로그래밍 방식으로 조회할 수 **없음**&#x200B;이 됩니다.
+>
+>Real-Time CDP Ultimate이 있고 현재 프로그래밍 방식으로 이벤트를 **아니**&#x200B;하는 경우 이 기능을 활성화하려면 Adobe 고객 지원 센터에 문의하십시오.
 
 Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 [!DNL Real-Time Customer Profile] 데이터에 액세스할 수 있습니다. 이 안내서에서는 API를 사용하여 &quot;프로필&quot;로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다. [!DNL Experience Platform] UI를 사용하여 프로필에 액세스하는 방법에 대한 자세한 내용은 [프로필 사용 안내서](../ui/user-guide.md)를 참조하십시오.
 

@@ -4,9 +4,9 @@ title: 실시간 고객 프로필 API 안내서
 description: 실시간 고객 프로필 API를 통해 개발자는 프로필 보기, 병합 정책 만들기 및 업데이트, 프로필 데이터 내보내기 또는 샘플, 더 이상 필요하지 않거나 오류로 추가된 프로필 데이터 삭제 등을 포함하여 프로필 데이터를 탐색하고 작업할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아봅니다.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82a9b405a1d36155c84cd27a005c7ec469164ef3
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '874'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 사용 가능한 모든 끝점 및 CRUD 작업을 보려면 [실시간 고객 프로필 API 참조 스웨거](https://www.adobe.com/go/profile-apis-en)를 방문하세요.
 
-[!DNL Experience Platform] UI에서 [!DNL Real-Time Customer Profile] 데이터를 사용하는 방법에 대한 지침은 [프로필 사용 안내서](../ui/user-guide.md)를 참조하세요.
+[!DNL Real-Time Customer Profile] UI에서 [!DNL Experience Platform] 데이터를 사용하는 방법에 대한 지침은 [프로필 사용 안내서](../ui/user-guide.md)를 참조하세요.
 
 ## 계산된 속성 {#computed-attributes}
 
@@ -30,6 +30,10 @@ ht-degree: 2%
 `ca/attributes/` 끝점을 사용하여 계산된 특성을 만들고, 보고, 편집하고, 삭제할 수 있습니다. 계산된 특성을 사용하는 방법을 알아보려면 [계산된 특성 개요](../computed-attributes/overview.md)를 참조하세요. API 작업의 경우 [계산된 특성 API 끝점 안내서](../computed-attributes/api.md)를 참조하십시오.
 
 ## 엔터티([!DNL Profile] 액세스) {#entities}
+
+>[!NOTE]
+>
+>Real-Time CDP Ultimate이 있는 경우에만 이러한 끝점을 사용할 수 있습니다.
 
 Adobe Experience Platform을 통해 RESTful API 또는 사용자 인터페이스를 사용하여 [!DNL Real-Time Customer Profile] 데이터에 액세스할 수 있습니다. API를 사용하여 엔터티에 액세스하는 방법을 알아보려면 [엔터티 끝점 안내서](entities.md)에 설명된 단계를 따르십시오. &quot;프로필&quot;이라고도 합니다. [!DNL Experience Platform] UI를 사용하여 프로필에 액세스하려면 [프로필 사용 안내서](../ui/user-guide.md)를 참조하세요.
 
@@ -49,7 +53,7 @@ Adobe Experience Platform을 통해 RESTful API 또는 사용자 인터페이스
 
 ## 프로필 시스템 작업 {#profile-system-jobs}
 
-[!DNL Experience Platform]에 수집되는 프로필 사용 데이터는 [!DNL Data Lake] 및 [!DNL Real-Time Customer Profile] 데이터 저장소에 저장됩니다. 더 이상 필요하지 않거나 오류로 추가된 데이터를 제거하기 위해 프로필 저장소에서 데이터 세트와 연결된 프로필 데이터를 삭제해야 하는 경우가 있습니다. API를 사용하여 필요한 경우 수정, 모니터링 또는 삭제할 수 있는 &quot;[!DNL delete request]&quot;이라고도 하는 [!DNL Profile System Job]을(를) 만들어야 합니다. [!DNL Real-Time Customer Profile] API에서 `/system/jobs` 끝점을 사용하여 삭제 요청을 처리하는 방법에 대해 알아보려면 [프로필 시스템 작업 끝점 안내서](profile-system-jobs.md)에 설명된 단계를 따르십시오.
+[!DNL Experience Platform]에 수집되는 프로필 사용 데이터는 [!DNL Data Lake] 및 [!DNL Real-Time Customer Profile] 데이터 저장소에 저장됩니다. 더 이상 필요하지 않거나 오류로 추가된 데이터를 제거하기 위해 프로필 저장소에서 데이터 세트와 연결된 프로필 데이터를 삭제해야 하는 경우가 있습니다. API를 사용하여 필요한 경우 수정, 모니터링 또는 삭제할 수 있는 &quot;[!DNL Profile System Job]&quot;이라고도 하는 [!DNL delete request]을(를) 만들어야 합니다. `/system/jobs` API에서 [!DNL Real-Time Customer Profile] 끝점을 사용하여 삭제 요청을 처리하는 방법에 대해 알아보려면 [프로필 시스템 작업 끝점 안내서](profile-system-jobs.md)에 설명된 단계를 따르십시오.
 
 ## 프로필 속성 업데이트 {#update-profile}
 
@@ -57,4 +61,4 @@ Adobe Experience Platform을 통해 RESTful API 또는 사용자 인터페이스
 
 ## 다음 단계 {#next-steps}
 
-[!DNL Real-Time Customer Profile] API를 사용하여 호출을 시작하려면 [시작 안내서](getting-started.md)를 읽은 다음 끝점 안내서 중 하나를 선택하여 특정 [!DNL Profile] 관련 끝점을 사용하는 방법을 알아보세요. [!DNL Experience Platform] UI를 사용하여 [!DNL Profile] 데이터로 작업하려면 [실시간 고객 프로필 사용 안내서](../ui/user-guide.md)를 참조하십시오.
+[!DNL Real-Time Customer Profile] API를 사용하여 호출을 시작하려면 [시작 안내서](getting-started.md)를 읽은 다음 끝점 안내서 중 하나를 선택하여 특정 [!DNL Profile] 관련 끝점을 사용하는 방법을 알아보세요. [!DNL Profile] UI를 사용하여 [!DNL Experience Platform] 데이터로 작업하려면 [실시간 고객 프로필 사용 안내서](../ui/user-guide.md)를 참조하십시오.
