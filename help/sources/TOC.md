@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: ded7a095f95bd43a34e694fb0a6fd4b468b4e246
+source-git-commit: fe5faaeb026fa10d185f43408b122104ecd42196
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1083'
 ht-degree: 34%
 
 ---
@@ -110,9 +110,10 @@ ht-degree: 34%
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
-      - [HubSpot 커넥터](connectors/marketing-automation/hubspot.md)
-      - [Mailchimp 커넥터](connectors/marketing-automation/mailchimp.md)
-      - [Oracle Eloqua 커넥터](connectors/marketing-automation/oracle-eloqua.md)
+      - [HubSpot](connectors/marketing-automation/hubspot.md)
+      - [Mailchimp](connectors/marketing-automation/mailchimp.md)
+      - [Oracle Eloqua](connectors/marketing-automation/oracle-eloqua.md)
+      - [Oracle Eloqua (V2)](connectors/marketing-automation/eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
@@ -327,6 +328,7 @@ ht-degree: 34%
          - [Mailchimp 캠페인](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp 멤버](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+         - [Oracle Eloqua (V2)](tutorials/ui/create/marketing-automation/eloqua.md)
          - [Oracle NetSuite 활동](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite 엔티티](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
