@@ -19,7 +19,7 @@ Adobe Experience Platform용 [!DNL Kevel] 스트리밍 대상을 사용하면 �
 
 >[!IMPORTANT]
 > 
->질문이 있거나 [!DNL Kevel] 대상 또는 해당 설명서에 대한 업데이트를 요청하려면 [!DNL Kevel]support@kevel.com[에서 ](mailto:support@kevel.com) 팀에 전자 메일을 보내십시오.
+>질문이 있거나 [!DNL Kevel] 대상 또는 해당 설명서에 대한 업데이트를 요청하려면 [!DNL Kevel]support@kevel.com[에서 &#x200B;](mailto:support@kevel.com) 팀에 전자 메일을 보내십시오.
 
 ## 사용 사례 {#use-cases}
 
