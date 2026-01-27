@@ -4,10 +4,10 @@ description: 실시간 고객 프로필을 사용하면 온라인, 오프라인,
 title: UI에서 프로필에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1d60afdf486642398a2d31302db339eb9cb45130
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 8%
+source-wordcount: '1240'
+ht-degree: 6%
 
 ---
 
@@ -65,8 +65,6 @@ ht-degree: 8%
 
 소스 이름 옆에 있는 필터 아이콘 ![필터 아이콘](/help/images/icons/filter.png)을 선택하여 선택한 소스의 데이터 흐름에 대한 프로필 처리 정보를 볼 수 있습니다.
 
-![필터 아이콘이 강조 표시되어 있습니다. 이 아이콘을 선택하면 선택한 소스의 데이터 흐름을 볼 수 있습니다.](../assets/ui/monitor-profiles/sources-filter.png)
-
 또는 토글을 통해 **[!UICONTROL Dataflows]**&#x200B;을(를) 선택하여 지난 24시간 동안 조직의 데이터 흐름에 대한 프로필 처리 세부 정보를 볼 수 있습니다.
 
 ![프로필 대시보드. 데이터 흐름당 받은 프로필 레코드 수에 대한 정보가 표시됩니다.](../assets/ui/monitor-profiles/dataflows.png)
@@ -78,6 +76,7 @@ ht-degree: 8%
 | **[!UICONTROL Dataflow]** | 데이터 흐름의 이름입니다. |
 | **[!UICONTROL Dataset]** | 데이터 흐름이 삽입되는 데이터 세트의 이름입니다. |
 | **[!UICONTROL Source name]** | 데이터 흐름이 속하는 소스의 이름입니다. |
+| **[!UICONTROL Data type]** | 데이터 집합에서 받은 데이터의 유형입니다. |
 | **[!UICONTROL Records received**] | 데이터 레이크에서 받은 레코드 수입니다. |
 | **[!UICONTROL Records failed]** | 수집되었지만 오류로 인해 [!DNL Profile]에 수집되지 않은 레코드 수입니다. |
 | **[!UICONTROL Profile fragments created]** | 추가된 순 새 [!DNL Profile] 조각의 수입니다. |
@@ -86,9 +85,33 @@ ht-degree: 8%
 | **[!UICONTROL Total failed flow runs]** | 실패한 데이터 흐름 실행 수입니다. |
 | **[!UICONTROL Last active]** | 데이터 흐름이 마지막으로 실행된 타임스탬프입니다. |
 
-![&#x200B; 데이터 흐름 실행에 대한 자세한 내용을 보려면 데이터 흐름 실행 시작 시간 옆에 있는 필터 아이콘 &#x200B;](/help/images/icons/filter.png)filter[!DNL Profile]을(를) 선택하십시오.
+![ 데이터 흐름 실행에 대한 자세한 내용을 보려면 데이터 흐름 실행 시작 시간 옆에 있는 필터 아이콘 ](/help/images/icons/filter.png)filter[!DNL Profile]을(를) 선택하십시오.
 
-![필터 아이콘이 강조 표시되어 있습니다. 이 아이콘을 선택하면 선택한 데이터 흐름에 대한 세부 정보를 볼 수 있습니다.](../assets/ui/monitor-profiles/dataflows-filter.png)
+모든 데이터 흐름 실행을 표시하는 대시보드가 나타납니다. 이 대시보드에는 데이터 흐름 실행에 대한 지표와 성공률을 보여주는 그래프, 생성된 프로필 조각 및 업데이트된 프로필 조각이 포함되어 있습니다.
+
+![데이터 흐름이 대시보드를 실행합니다. 데이터 흐름 실행에 대한 정보가 표시됩니다.](../assets/ui/monitor-profiles/dataflow-run.png)
+
+이 대시보드 보기에 사용할 수 있는 지표는 다음과 같습니다.
+
+>[!NOTE]
+>
+>데이터 흐름 실행이 **[!UICONTROL Processing]** 상태일 때 수집 프로세스에서 체크포인트 상태를 확인하여 준비에 대한 정보를 볼 수 있습니다.
+>
+>![프로필 수집 준비 버블이 표시됩니다.](../assets/ui/monitor-profiles/profile-ingestion-readiness.png){zoomable="yes" width="300"}
+
+| 지표 | 설명 |
+| ------ | ----------- |
+| **[!UICONTROL Dataflow run start]** | 데이터 흐름이 UTC로 시작된 시간입니다. |
+| **[!UICONTROL Data type]** | 데이터 흐름에서 수신한 데이터의 유형입니다. |
+| **[!UICONTROL Records received]** | 데이터 레이크에서 받은 레코드 수입니다. |
+| **[!UICONTROL Records failed]** | 수집되었지만 오류로 인해 [!DNL Profile]에 수집되지 않은 레코드 수입니다. |
+| **[!UICONTROL Profile fragments created]** | 추가된 순 새 [!DNL Profile] 조각의 수입니다. |
+| **[!UICONTROL Profile fragments updated]** | 업데이트된 기존 [!DNL Profile] 조각의 수입니다. |
+| **[!UICONTROL Total profile fragments]** | 업데이트된 기존 [!DNL Profile]개 조각과 새로 만든 [!DNL Profile]개 조각을 포함하여 [!DNL Profile]에 기록된 총 레코드 수입니다. |
+| **[!UICONTROL Processing time]** | 데이터 흐름 실행을 처리하는 데 걸린 시간입니다. |
+| **[!UICONTROL Status]** | 데이터 흐름 실행의 상태입니다. 가능한 값은 [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued] 및 [!UICONTROL Processing]입니다. |
+| **[!UICONTROL Ready for customer segmentation]** | 수집된 레코드가 고객 세분화에 사용될 준비가 되었는지 보여 주는 상태. 가능한 값은 [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued] 및 [!UICONTROL Processing]입니다. 데이터 흐름의 **상태**&#x200B;가 처리 중인 경우에도 이 필드의 값이 [예]이면 고객 세분화에서 프로필을 사용할 수 있습니다. |
+| **[!UICONTROL Ready for lookup]** | 수집된 레코드가 Adobe Journey Optimizer 조회에서 사용될 준비가 되었는지 보여 주는 상태.  가능한 값은 [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued] 및 [!UICONTROL Processing]입니다. 데이터 흐름의 **상태**&#x200B;가 처리 중인 경우에도 이 필드의 값이 [예]이면 Journey Optimizer 조회에서 프로필을 사용할 수 있습니다. |
 
 [!UICONTROL Dataflow run details] 페이지에는 조직 ID 및 데이터 흐름 실행 ID를 포함하여 [!DNL Profile] 데이터 흐름 실행에 대한 자세한 정보가 표시됩니다. 수집 프로세스에서 오류가 발생하는 경우 해당 오류 코드와 [!DNL Profile]에서 제공한 오류 메시지도 이 페이지에 표시됩니다.
 
