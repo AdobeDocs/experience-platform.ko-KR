@@ -2,10 +2,10 @@
 title: 라이선스 사용 및 용량
 description: Adobe Experience Platform 내의 라이선스 사용 및 용량 제한에 대해 알아봅니다.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 5520e449b4cbe45eb9664ce3c913dd5d544e088c
+source-git-commit: 8cef502f60a42de9c89c29923811215b3a8086c6
 workflow-type: tm+mt
-source-wordcount: '1603'
-ht-degree: 6%
+source-wordcount: '1670'
+ht-degree: 5%
 
 ---
 
@@ -58,7 +58,7 @@ Experience Platform의 보호 기능에 대한 자세한 내용은 [Real-Time CD
    - 이러한 500개의 스트리밍 대상 중 최대 Edge 대상 수는 150개입니다
 - 스트리밍 수집을 위한 초기 통합 처리량은 초당 레코드 1500개(rps)입니다
    - 이 결합된 스트리밍 처리량은 프로덕션 및 개발 샌드박스에서 실시간 고객 프로필로 수집을 스트리밍하기 위해 초당 결합된 최대 인바운드 이벤트를 측정합니다.
-   - 초당 최대 13,500개의 레코드로 스트리밍 세분화 지원을 추가로 구매할 수 있습니다. 추가 권한 구매에 대한 자세한 내용은 [Real-Time CDP 제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)에서 확인할 수 있습니다.
+   - 초당 최대 13,500개의 레코드로 스트리밍 세분화 지원을 추가로 구매할 수 있습니다. 추가 권한 구매에 대한 자세한 내용은 [Real-Time CDP 제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)에서 확인할 수 있습니다.
 
 대상자 수용작업량은 **샌드박스** 수준입니다. 즉, 조직에 있는 모든 샌드박스에 500개의 스트리밍 대상을 가질 수 있으며, 이 중 150개는 에지 대상이 될 수 있습니다.
 
@@ -68,7 +68,17 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 
 사용이 라이선스 용량의 80% 및 90%에 도달하면 Experience Platform에서 지정된 용량의 최대값에 도달하고 있음을 알리는 경고를 발행합니다. 설정을 수정하여 경고를 수신할 용량 비율을 사용자 정의하거나 경고를 완전히 제거할 수 있습니다.
 
-사용 용량이 라이선스 용량의 100% 이상이 되면 용량 초과로 간주됩니다. 이 시점에서 성능 지연이 발생하며 서비스 수준 목표(SLT)는 **보장되지 않습니다**.
+사용 용량이 라이선스 용량의 100%를 초과하면 용량 위반으로 간주됩니다. 용량을 위반하는 경우 다음 제한이 적용됩니다.
+
+>[!NOTE]
+>
+>Adobe Journey Optimizer에 액세스할 수 있는 경우 다음 제한 사항이 **적용되지 않습니다**.
+
+- 이벤트 처리 큐가 12시간을 초과하는 경우 스트리밍 개인화에서 이벤트 데이터 **할 수**
+- 제거된 이벤트 데이터는 프로필에 수집되지 **않습니다**
+   - 이벤트가 제거된 시기를 확인할 수 있습니다.
+   - 사용자의 권한에 따라 데이터 레이크 내에서 이벤트를 사용할 수 있습니다.
+   - 필요한 경우 쿼리 서비스를 사용하여 데이터를 직접 *다시 수집할 수*&#x200B;있습니다.
 
 ## 액세스 {#access}
 
@@ -169,13 +179,13 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 | 기여 요인 | 정의 | 사용 사례에 미치는 영향 | 모범 사례 |
 | --- | --- | --- | --- |
 | 일괄 처리-스트리밍 전환 | 스트리밍으로 전환된 일괄 작업 로드는 처리량을 크게 증가시켜 성능과 리소스 할당에 영향을 줄 수 있습니다. 예를 들어, 비율 제한 없이 이벤트 후에 벌크 프로필 업데이트를 수행하는 경우입니다. | 짧은 지연 처리가 필요하지 않은 일괄 사용 사례에는 스트리밍 전략이 필요하지 않습니다. | 사용 사례 요구 사항 평가 일괄 아웃바운드 마케팅의 경우 스트리밍 대신 [일괄 처리 수집](/help/ingestion/batch-ingestion/overview.md)을 사용하여 데이터 수집을 보다 효율적으로 관리하는 것이 좋습니다. |
-| 불필요한 데이터 수집 | 개인화에 필요하지 않은 데이터를 수집하면 가치를 추가하지 않고 처리량이 증가하여 리소스를 낭비할 수 있습니다. 예를 들어 관련성에 관계없이 모든 분석 트래픽을 프로필로 수집합니다. | 관련 없는 데이터가 너무 많으면 노이즈가 발생하여 영향을 미치는 데이터 포인트를 식별하기가 더 어려워집니다. 또한 대상자 및 프로필을 정의하고 관리할 때 마찰이 발생할 수 있습니다. | 사용 사례에 필요한 데이터만 수집합니다. 불필요한 데이터를 필터링해야 합니다.<ul><li>**Adobe Analytics**: [행 수준 필터링](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)을 사용하여 데이터 섭취를 최적화합니다.</li><li>**소스**: [[!DNL Flow Service] API를 사용하여 &#x200B;](/help/sources/tutorials/api/filter.md) 및 [!DNL Snowflake]과(와) 같은 지원되는 소스에 대해 행 수준 데이터를 필터링[!DNL Google BigQuery]합니다.</li></li>**Edge 데이터스트림**: WebSDK에서 들어오는 트래픽의 행 수준 필터링을 수행하려면 [동적 데이터스트림](/help/datastreams/configure-dynamic-datastream.md)을 구성하십시오.</li></ul> |
+| 불필요한 데이터 수집 | 개인화에 필요하지 않은 데이터를 수집하면 가치를 추가하지 않고 처리량이 증가하여 리소스를 낭비할 수 있습니다. 예를 들어 관련성에 관계없이 모든 분석 트래픽을 프로필로 수집합니다. | 관련 없는 데이터가 너무 많으면 노이즈가 발생하여 영향을 미치는 데이터 포인트를 식별하기가 더 어려워집니다. 또한 대상자 및 프로필을 정의하고 관리할 때 마찰이 발생할 수 있습니다. | 사용 사례에 필요한 데이터만 수집합니다. 불필요한 데이터를 필터링해야 합니다.<ul><li>**Adobe Analytics**: [행 수준 필터링](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)을 사용하여 데이터 섭취를 최적화합니다.</li><li>**소스**: [[!DNL Flow Service] API를 사용하여 ](/help/sources/tutorials/api/filter.md) 및 [!DNL Snowflake]과(와) 같은 지원되는 소스에 대해 행 수준 데이터를 필터링[!DNL Google BigQuery]합니다.</li></li>**Edge 데이터스트림**: WebSDK에서 들어오는 트래픽의 행 수준 필터링을 수행하려면 [동적 데이터스트림](/help/datastreams/configure-dynamic-datastream.md)을 구성하십시오.</li></ul> |
 
 ## 비디오 개요 {#video}
 
 다음 비디오에서는 용량에 대한 개요를 제공합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475280/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## 자주 묻는 질문 {#faq}
 
