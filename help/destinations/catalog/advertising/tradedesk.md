@@ -133,7 +133,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_ttd"
 >title="사전 구성된 매핑 세트"
->abstract="4개의 매핑 세트가 사전 구성되어 있습니다. 데이터를 The Trade Desk에 활성화하면 이 대상이 여기에 표시된 대상 ID와 작동하므로 활성화된 대상에 적합한 프로필에는 4개의 ID가 모두 있을 필요는 없습니다.
+>abstract="4개의 매핑 세트가 사전 구성되어 있습니다. 데이터를 The Trade Desk에 활성화하면 이 대상이 여기에 표시된 대상 ID와 작동하므로 활성화된 대상에 적합한 프로필에는 4개의 ID가 모두 있을 필요는 없습니다."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="미리 구성된 매핑에 대해 자세히 알아보십시오"
 
 [지원되는 ID](#supported-identities) 섹션에 설명된 모든 대상 ID는 대상 활성화 워크플로의 매핑 단계에서 매핑되어야 합니다. 여기에는 다음 항목이 포함되어 있습니다.

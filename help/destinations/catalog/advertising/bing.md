@@ -33,7 +33,7 @@ ht-degree: 5%
 
 [!DNL Microsoft Bing] 대상을 사용하여 [!DNL Microsoft Advertising Network], [!DNL Display Advertising] 및 [!DNL Search]을(를) 포함하여 전체 [!DNL Native]에 프로필 데이터를 보냅니다.
 
-[!DNL Microsoft Bing] 대상은 Microsoft에서 *[!DNL Custom Audiences]*&#x200B;을(를) 만듭니다. [!DNL Microsoft Search Network]Microsoft Advertising 설명서[!DNL Audience Network]에 나열된 대로 [!DNL Native] 및 [!DNL Display]&#x200B;([!DNL Programmatic] /[ /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500))에서 모두 사용할 수 있습니다.
+[!DNL Microsoft Bing] 대상은 Microsoft에서 *[!DNL Custom Audiences]*&#x200B;을(를) 만듭니다. [!DNL Microsoft Search Network]Microsoft Advertising 설명서[!DNL Audience Network]에 나열된 대로 [!DNL Native] 및 [!DNL Display]&#x200B;([!DNL Programmatic] /[&#x200B; /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500))에서 모두 사용할 수 있습니다.
 
 [!DNL Microsoft Bing]에 프로필 데이터를 보내려면 먼저 대상에 연결해야 합니다.
 
@@ -118,7 +118,7 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_bing"
 >title="사전 구성된 매핑 세트"
->abstract="이 두 매핑 세트가 사전 구성되어 있습니다. Microsoft Bing에 데이터를 활성화할 때 대상으로 성공적으로 내보내려면 활성화된 대상에 적합한 프로필에 해당 프로필과 연결된 ECID ID가 적어도 있어야 합니다.
+>abstract="이 두 매핑 세트가 사전 구성되어 있습니다. Microsoft Bing에 데이터를 활성화할 때 대상으로 성공적으로 내보내려면 활성화된 대상에 적합한 프로필에 해당 프로필과 연결된 ECID ID가 적어도 있어야 합니다."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="미리 구성된 매핑에 대해 자세히 알아보십시오"
 
 >[!IMPORTANT]
