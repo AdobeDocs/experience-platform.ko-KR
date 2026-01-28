@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2026년 1월
 description: Adobe Experience Platform의 2026년 1월 릴리스 정보.
-source-git-commit: 9a3fbe281195041cf7444c5b6ec185395ff5ad23
+source-git-commit: 54be4d5c309f60e6c3e2a96ab1fea700cc79a608
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 22%
+source-wordcount: '1231'
+ht-degree: 20%
 
 ---
 
@@ -45,7 +45,7 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/ko/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
+For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
 
 ## 대상 {#destinations}
 
@@ -55,13 +55,12 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 | 대상 | 설명 |
 | --- | --- |
-| 이제 케벨 대상 커넥터를 사용할 수 있습니다. | Adobe Experience Platform용 [!DNL Kevel] 스트리밍 대상을 사용하면 고객이 [!DNL Kevel]의 UserDB 및 세그먼트 관리 API로 직접 Adobe 대상을 활성화하여 광고 결정 시 실시간 타깃팅을 지원할 수 있습니다. [[!DNL Kevel]](https://www.kevel.com/)은(는) 혁신적인 상거래 리더가 소매 미디어를 출시하고, 확장하고, 성공할 수 있도록 지원하는 AI 지원 기술 및 전문가 지침을 제공합니다. [!DNL Kevel]의 Retail Media Cloud는 온사이트 및 오프사이트 광고를 위한 타깃팅되고, 귀속되며, 사용자 지정 가능한 광고 형식을 지원합니다. |
-| 이제 인덱스 교환 대상 커넥터를 사용할 수 있습니다. | 이 대상 커넥터를 사용하여 Adobe Experience Platform의 대상 세그먼트를 [!DNL Index Exchange]의 프로그래밍 방식 광고 플랫폼으로 직접 내보냅니다. [!DNL Index]은(는) 미디어 소유자가 모든 화면에서 콘텐츠의 가치를 극대화할 수 있도록 지원하는 글로벌 광고 공급측 플랫폼입니다. 20년 이상의 업계 리더십 덕분에 [!DNL Index]은(는) 세계 최대 브랜드와 프리미엄 경험 메이커를 연결하여 고품질의 소비자 경험을 제공합니다. |
-| 브레이즈 연결에 대한 지역 엔드포인트 지원 | 이제 대상 구성 흐름 동안 [에서 지원하는 모든 &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오. |
+| 이제 [Kevel 대상](/help/destinations/catalog/advertising/kevel.md) 커넥터를 사용할 수 있습니다. | Adobe Experience Platform용 [!DNL Kevel] 스트리밍 대상을 사용하면 고객이 [!DNL Kevel]의 UserDB 및 세그먼트 관리 API로 직접 Adobe 대상을 활성화하여 광고 결정 시 실시간 타깃팅을 지원할 수 있습니다. [[!DNL Kevel]](https://www.kevel.com/)은(는) 혁신적인 상거래 리더가 소매 미디어를 출시하고, 확장하고, 성공할 수 있도록 지원하는 AI 지원 기술 및 전문가 지침을 제공합니다. [!DNL Kevel]의 Retail Media Cloud는 온사이트 및 오프사이트 광고를 위한 타깃팅되고, 귀속되며, 사용자 지정 가능한 광고 형식을 지원합니다. |
+| [인덱스 교환](/help/destinations/catalog/advertising/index-exchange.md) 대상 커넥터를 사용할 수 있습니다. | 이 대상 커넥터를 사용하여 Adobe Experience Platform의 대상 세그먼트를 [!DNL Index Exchange]의 프로그래밍 방식 광고 플랫폼으로 직접 내보냅니다. [!DNL Index]은(는) 미디어 소유자가 모든 화면에서 콘텐츠의 가치를 극대화할 수 있도록 지원하는 글로벌 광고 공급측 플랫폼입니다. 20년 이상의 업계 리더십 덕분에 [!DNL Index]은(는) 세계 최대 브랜드와 프리미엄 경험 메이커를 연결하여 고품질의 소비자 경험을 제공합니다. |
+| 브레이즈 연결에 대한 지역 엔드포인트 지원 | 이제 대상 구성 흐름 동안 [에서 지원하는 모든 ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오. |
 | [Liveramp 온보딩](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling)에 대한 주별 및 월별 예약 지원 | 이제 Liveramp 온보딩 대상에 대한 주별 및 월별 내보내기 일정을 구성할 수 있습니다. <br> 이 릴리스는 점진적으로 출시되고 있으며 1월 30일까지 완료될 예정입니다. |
 | [트레이드 데스크](../../destinations/catalog/advertising/tradedesk.md) 및 [Microsoft Bing](../../destinations/catalog/advertising/bing.md) 대상에 대한 활성화 경험이 개선되었습니다. | 이제 Trade Desk 및 Microsoft Bing 대상에 최적화된 활성화 경험을 위한 사전 정의된 필수 매핑이 포함됩니다.  <br> 이 릴리스는 점진적으로 출시되고 있으며 1월 30일까지 완료될 예정입니다. |
-
-<!-- |AES256 encryption support for [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destinations | You can now configure AES256 encryption for your Amazon S3 exports. Two options are available: <br><br>**[!UICONTROL Default]**: If you don't have any custom policies applied on your buckets, data will be encrypted at rest when it lands in S3 with the AES256 algorithm. However, if you have custom policies applied, Experience Platform will respect those policies and Amazon S3 will continue to apply whichever custom encryption policies you have configured.<br><br>**[!UICONTROL SSE-S3/AES256]**: Experience Platform adds the `s3:x-amz-server-side-encryption": "AES256` header in the export and data will be encrypted at rest when it lands in S3 with the AES256 algorithm. | -->
+| [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 대상에 대한 AES256 암호화 지원 | 이제 Amazon S3 내보내기에 대해 AES256 암호화를 구성할 수 있습니다. 두 가지 옵션을 사용할 수 있습니다. <ul><li>**[!UICONTROL Default]**: 버킷에 적용된 사용자 지정 정책이 없는 경우 데이터가 AES256 알고리즘으로 S3에 도달하면 사용되지 않는 상태에서 암호화됩니다. 그러나 사용자 정의 정책이 적용된 경우 Experience Platform은 해당 정책을 준수하며 Amazon S3는 사용자가 구성한 모든 사용자 정의 암호화 정책을 계속 적용합니다.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform은 내보내기에 `s3:x-amz-server-side-encryption": "AES256` 헤더를 추가하며 데이터가 AES256 알고리즘으로 S3에 도달할 때 사용하지 않을 때 암호화됩니다.</li></ul>  <br> 이 릴리스는 점진적으로 출시되고 있으며 1월 30일까지 완료될 예정입니다. |
 
 
 **새로운 기능 또는 업데이트된 기능**
