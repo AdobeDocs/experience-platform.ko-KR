@@ -80,7 +80,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->[!DNL Microsoft Bing]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Microsoft Bing] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
+>[!DNL Microsoft Bing]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ko)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Microsoft Bing] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
 
 대상을 구성할 때는 다음 정보를 제공해야 합니다.
 
@@ -119,7 +119,7 @@ ht-degree: 5%
 >id="platform_destinations_required_mappings_bing"
 >title="사전 구성된 매핑 세트"
 >abstract="이 두 매핑 세트가 사전 구성되어 있습니다. Microsoft Bing에 데이터를 활성화할 때 대상으로 성공적으로 내보내려면 활성화된 대상에 적합한 프로필에 해당 프로필과 연결된 ECID ID가 적어도 있어야 합니다."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="미리 구성된 매핑에 대해 자세히 알아보십시오"
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="미리 구성된 매핑에 대해 자세히 알아보십시오"
 
 >[!IMPORTANT]
 > 
