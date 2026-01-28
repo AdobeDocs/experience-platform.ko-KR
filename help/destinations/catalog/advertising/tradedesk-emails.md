@@ -81,6 +81,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
       * 기간(`.`) 문자(ASCII 코드 46). 예를 들어 &#39;jane.doe@gmail.com&#39;을 &#39;janedoe@gmail.com&#39;으로 정규화합니다.
      * 더하기 기호(`+`) 문자(ASCII 코드 43) 및 모든 후속 문자입니다. 예를 들어 &#39;janedoe+home@gmail.com&#39;을 &#39;janedoe@gmail.com&#39;으로 정규화합니다.
   
+
 ## 전화번호 표준화 및 해시 요구 사항 {#phone-hashing}
 
 다음은 전화번호 업로드에 대해 알아야 할 사항입니다.
