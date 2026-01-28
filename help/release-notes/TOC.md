@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 릴리스 정보
 breadcrumb-title: Experience Platform 릴리스 정보
 user-guide-description: Adobe Experience Platform에 대한 월별 릴리스 정보를 살펴보십시오.
-source-git-commit: 199acd8d3bdbb0e89fc1ab881bff4d94063b7f78
+source-git-commit: a32410dbdfcd2b6da19377648a62b4c7a16734ae
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 94%
+source-wordcount: '181'
+ht-degree: 95%
 
 ---
 
@@ -15,7 +15,9 @@ ht-degree: 94%
 
 * [현재 Experience Platform 릴리스 노트](latest/latest.md)
 * [Experience Platform 프리릴리스 노트](./pre-release-notes.md)
-* 2025 {#2025}
+* 2026 {#2026}
+   * [2026년 1월](2026/january-2026.md)
+* 2025년 {#2025}
    * [2025년 10월](2025/october-2025.md)
    * [2025년 9월](2025/september-2025.md)
    * [2025년 8월](2025/august-2025.md)
@@ -25,7 +27,7 @@ ht-degree: 94%
    * [2025년 4월](2025/april-2025.md)
    * [2025년 3월](2025/march-2025.md)
    * [2025년 2월](2025/february-2025.md)
-* 2024 {#2024}
+* 2024년 {#2024}
    * [2024년 11월](2024/november-2024.md)
    * [2024년 10월](2024/october-2024.md)
    * [2024년 9월](2024/september-2024.md)
@@ -37,7 +39,7 @@ ht-degree: 94%
    * [2024년 3월](2024/march-2024.md)
    * [2024년 2월](2024/february-2024.md)
    * [2024년 1월](2024/january-2024.md)
-* 2023 {#2023}
+* 2023년 {#2023}
    * [2023년 10월](2023/october-2023.md)
    * [2023년 9월](2023/september-2023.md)
    * [2023년 8월](2023/august-2023.md)
@@ -85,7 +87,7 @@ ht-degree: 94%
    * [2020년 3월](2020/march-2020.md)
    * [2020년 2월](2020/february-2020.md)
    * [2020년 1월](2020/january-2020.md)
-* 2019년 {#2019}
+* 2019 {#2019}
    * [2019년 12월](2019/december-2019.md)
    * [2019년 11월](2019/november-2019.md)
    * [2019년 9월](2019/september-2019.md)

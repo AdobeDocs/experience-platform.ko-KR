@@ -2,9 +2,9 @@
 title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
+source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1316'
 ht-degree: 20%
 
 ---
@@ -60,7 +60,7 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 | --- | --- |
 | 이제 케벨 대상 커넥터를 사용할 수 있습니다. | [[!DNL Kevel]](https://www.kevel.com/)은(는) 혁신적인 상거래 리더가 소매 미디어를 출시하고, 확장하고, 성공할 수 있도록 지원하는 AI 지원 기술 및 전문가 지침을 제공합니다. [!DNL Kevel]의 Retail Media Cloud는 온사이트 및 오프사이트 광고를 위한 타깃팅되고, 귀속되며, 사용자 지정 가능한 광고 형식을 지원합니다. |
 | 이제 인덱스 교환 대상 커넥터를 사용할 수 있습니다. | [!DNL Index]은(는) 미디어 소유자가 모든 화면에서 콘텐츠의 가치를 극대화할 수 있도록 지원하는 글로벌 광고 공급측 플랫폼입니다. 20년 이상의 업계 리더십 덕분에 [!DNL Index]은(는) 세계 최대 브랜드와 프리미엄 경험 메이커를 연결하여 고품질의 소비자 경험을 제공합니다. |
-| 브레이즈 연결에 대한 지역 엔드포인트 지원 | 이제 대상 구성 흐름 동안 [에서 지원하는 모든 &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오. |
+| 브레이즈 연결에 대한 지역 엔드포인트 지원 | 이제 대상 구성 흐름 동안 [에서 지원하는 모든 ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오. |
 | Liveramp 온보딩을 위한 주간 및 월간 일정 조정 지원 | 이제 Liveramp 온보딩 대상에 대한 주별 및 월별 내보내기 일정을 구성할 수 있습니다. |
 | Amazon S3 대상에 대한 AES256 암호화 지원 | 이제 Amazon S3 내보내기에 대해 AES256 암호화를 구성할 수 있습니다. |
 | Trade Desk 및 Microsoft Bing 대상을 위한 활성화 경험 개선 | 이제 Trade Desk 및 Microsoft Bing 대상에 최적화된 활성화 경험을 위한 사전 정의된 필수 매핑이 포함됩니다. |
@@ -113,7 +113,6 @@ Experience Platform은 스키마를 사용하여 데이터의 구조를 일관�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 스트리밍 세분화 모니터링 | 스트리밍 세그멘테이션을 위한 실시간 모니터링은 샌드박스, 데이터 세트 및 대상 수준에서 평가 속도, 지연 시간 및 데이터 품질 지표에 대한 투명성을 제공합니다. 이를 통해 데이터 엔지니어는 용량 위반 및 수집 문제를 식별하는 데 도움이 되는 사전 예방적 경고 및 실행 가능한 인사이트를 얻을 수 있습니다. 모니터링 지표에는 평가 비율, P95 수집 지연은 물론 수신, 평가, 실패 및 건너뛴 기록이 포함됩니다. 데이터 세트별 보기 및 대상별 보기 기능은 자격을 부여하거나 자격을 박탈한 순 신규 프로필에 대한 포괄적인 가시성을 제공합니다. |
 | 외부 대상 TTL 새로 고침 | 이제 외부 대상(예: CSV 업로드)은 TTL(Time-to-Live) 설정에 대한 강제 새로 고침 기능을 지원합니다. 이 기능을 사용하면 외부 대상에 대한 TTL 만료를 수동으로 새로 고칠 수 있으므로 대상 라이프사이클 관리를 더욱 세밀하게 제어할 수 있습니다. 이 기능은 초기 TTL 기간 이상 유지해야 하거나 데이터를 다시 업로드하지 않고 다시 활성화해야 하는 대상에 특히 유용합니다. |
 
 자세한 내용은 [[!DNL Segmentation Service] 개요](../segmentation/home.md)를 참조하십시오.
