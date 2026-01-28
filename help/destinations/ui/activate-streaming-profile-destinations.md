@@ -4,9 +4,9 @@ type: Tutorial
 description: 스트리밍 프로필 기반 대상으로 대상자를 전송하여 Adobe Experience Platform에 있는 대상자 데이터를 활성화하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '762'
 ht-degree: 1%
 
 ---
@@ -75,9 +75,15 @@ ht-degree: 1%
 
    ![매핑 단계에서 소스 필드를 선택하는 방법을 강조 표시하는 이미지](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
-1. **[!UICONTROL Select field]** 페이지에서 대상으로 보낼 XDM 특성을 선택한 다음 **[!UICONTROL Select]**&#x200B;을(를) 선택합니다.
+1. **[!UICONTROL Select source field]** 페이지에서 대상으로 보낼 XDM 특성을 선택한 다음 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
-   ![소스 필드로 선택할 수 있는 XDM 필드 선택을 보여 주는 이미지입니다.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![소스 필드로 선택할 수 있는 XDM 필드 선택을 보여 주는 이미지입니다.](../assets/ui/activate-streaming-profile-destinations/select-source-field-modal.png)
+
+   **[!UICONTROL Show only fields with data]** 전환을 사용하여 값으로 채워진 스키마 필드만 표시합니다. 기본적으로 채워진 스키마 필드만 표시됩니다.
+
+   **[!UICONTROL Show display names for fields]** 전환을 사용하여 스키마 필드 이름 대신 필드에 대한 친숙한 이름을 표시합니다.
+
+   ![표시 이름에 대한 토글을 표시하는 원본 필드 선택 페이지입니다.](../assets/ui/activate-batch-profile-destinations/show-display-names.gif)
 
 1. 필드를 더 추가하려면 1~3단계를 반복한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 

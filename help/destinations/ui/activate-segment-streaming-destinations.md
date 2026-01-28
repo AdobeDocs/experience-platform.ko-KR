@@ -3,9 +3,9 @@ title: 스트리밍 대상으로 대상 데이터 활성화
 type: Tutorial
 description: 스트리밍 대상에 매핑하여 Adobe Experience Platform에 있는 대상을 활성화하는 방법을 알아봅니다.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 2eb890f06097f1b9766408aad3b6ab11d5d12f9f
+source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1124'
 ht-degree: 3%
 
 ---
@@ -82,6 +82,10 @@ ht-degree: 3%
    **[!UICONTROL Show only fields with data]** 전환을 사용하여 값으로 채워진 스키마 필드만 표시합니다. 기본적으로 채워진 스키마 필드만 표시됩니다.
 
    ![사용 가능한 여러 소스 필드를 표시하는 소스 필드 선택 페이지입니다.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
+
+   **[!UICONTROL Show display names for fields]** 전환을 사용하여 스키마 필드 이름 대신 필드에 대한 친숙한 이름을 표시합니다.
+
+   ![표시 이름에 대한 토글을 표시하는 원본 필드 선택 페이지입니다.](../assets/ui/activate-segment-streaming-destinations/show-display-names.gif)
 
 1. **[!UICONTROL Target field]** 항목 오른쪽에 있는 버튼을 선택합니다.
 
