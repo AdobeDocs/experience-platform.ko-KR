@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 27071d79f52fa47e27da84b970729eb52fbbb7d3
+source-git-commit: 054b34875a0eb2676bcb4a8a8a555b4465410d66
 workflow-type: tm+mt
-source-wordcount: '5175'
+source-wordcount: '5355'
 ht-degree: 12%
 
 ---
@@ -21,31 +21,6 @@ ht-degree: 12%
 ![세그먼트 빌더 UI가 표시됩니다.](../images/ui/segment-builder/segment-builder.png)
 
 ## 세그먼트 정의 빌딩 블록 {#building-blocks}
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
->title="로직 복잡성"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_chaincountcheck"
->title="이벤트 시퀀스 제한"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_rewritescheck"
->title="쿼리 효율성 경고"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_countaggregationcheck"
->title="카운트 필터 경고"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_arraydepthcheck"
->title="중첩 데이터 경고"
->abstract=""
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
@@ -214,6 +189,45 @@ ht-degree: 12%
 
 ![최대 값 수에 도달했음을 나타내는 경고가 표시됩니다.](../images/ui/segment-builder/maximum-values.png)
 
+### 쿼리 유효성 검사 {#query-validation}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
+>title="로직 복잡성"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_chaincountcheck"
+>title="이벤트 시퀀스 제한"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_rewritescheck"
+>title="쿼리 효율성 경고"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_countaggregationcheck"
+>title="카운트 필터 경고"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_arraydepthcheck"
+>title="중첩 데이터 경고"
+>abstract=""
+
+세그먼트 빌더는 대상 쿼리를 자동으로 분석 및 확인하여 대상 정의 모범 사례를 준수하도록 합니다. 이러한 모범 사례는 중요 유효성 검사와 성능 최적화의 두 가지 범주로 설정할 수 있습니다.
+
+대상 정의가 중요한 유효성 검사 모범 사례를 위반하는 경우 샌드박스를 안정적으로 유지하기 위해 변경 사항을 **저장할 수 없습니다**. 대상 정의가 성능 최적화 모범 사례를 중단하면 변경 사항을 저장할 수 있지만 성능 문제를 방지하기 위해 대상 정의를 업데이트하는 것이 *적극 권장*&#x200B;됩니다.
+
+| 유효성 검사 | 유형 | 임계값 |
+| ---------------- | ---- | --------- |
+| 논리적 복잡성 | 중요 유효성 검사 | 대상 정의가 너무 복잡합니다. |
+| 순차적 이벤트 | 중요 유효성 검사 | 대상 정의 내에 6개 이상의 순차적 이벤트가 있습니다. |
+| 집계된 수 | 성능 최적화 | 대상 정의 내에 3개 이상의 집계 함수가 있습니다. |
+| 중첩된 데이터 | 성능 최적화 | 대상 정의 내에는 2개 이상의 중첩된 데이터(배열 또는 맵 데이터 유형) 깊이가 있습니다. |
+| 대상자 크기 | 성능 최적화 | 대상 자격 크기는 샌드박스의 총 프로필 수의 30%보다 큽니다. |
+
 ### 대상자 추가
 
 >[!CONTEXTUALHELP]
@@ -241,7 +255,7 @@ ht-degree: 12%
 
 코드 보기는 API 호출에 사용할 세그먼트 정의의 값을 복사할 수 있도록 하는 단추를 제공합니다. 최신 버전의 세그먼트 정의를 가져오려면 세그먼트 정의에 대한 최신 변경 사항을 저장했는지 확인합니다.
 
-![코드 복사 버튼이 강조 표시되어 &#x200B;](../images/ui/segment-builder/copy-code.png)할 수 있습니다.
+![코드 복사 버튼이 강조 표시되어 ](../images/ui/segment-builder/copy-code.png)할 수 있습니다.
 
 ### 집계 함수
 
@@ -411,7 +425,7 @@ ht-degree: 12%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="예상치 새로 고침"
 >abstract="세그먼트 대상의 예상치를 새로 고쳐 제안된 세그먼트 대상에 적합한 프로필 개수를 미리 볼 수 있습니다. 당일 샘플 데이터의 샘플 크기를 사용하여 대상자 예상치를 생성합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=ko#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
