@@ -2,11 +2,10 @@
 title: 대상 편집
 type: Tutorial
 description: Adobe Experience Platform UI에서 기존 대상 계정을 편집하고 업데이트하는 방법을 알아봅니다
-badgeBeta: label="Beta" type="Informative"
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
-source-git-commit: 990fe9162c5b2970f269a5b0668916b7b6e61f44
+source-git-commit: f91551c460c7d6fd4f98111210f29cf16ec5b565
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -15,20 +14,22 @@ ht-degree: 0%
 
 Experience Platform UI를 사용하여 인증 자격 증명을 업데이트하는 방법, 내보내기 위치 등을 포함하여 기존 대상 연결의 다양한 구성 요소를 편집하는 방법에 대해 알아봅니다.
 
->[!IMPORTANT]
->
->이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
-
 >[!NOTE]
 >
 > 이 자습서에 설명된 편집 작업은 API 작업을 통해서도 지원됩니다. 자세한 내용은 API에서 대상을 [편집](/help/destinations/api/edit-destination.md)하는 방법에 대한 자습서를 참조하십시오.
 
+## 전제 조건 {#prerequisites}
+
+대상 연결을 편집하려면 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+
+## 대상 연결 편집 {#edit}
+
 기존 대상 연결의 다양한 구성 요소를 편집하려면 다음을 수행하십시오.
 
-1. **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**&#x200B;로 이동합니다.
+1. **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**(으)로 이동합니다.
 2. 편집할 대상을 선택합니다.
-3. `...`이름[!UICONTROL &#x200B; 열에서 줄임표(])를 선택하고 ![대상 컨트롤 편집](/help/images/icons/edit.png)**[!UICONTROL 대상 편집&#x200B;]**&#x200B;컨트롤을 사용하여 기존 대상 연결을 편집합니다.
-4. 모달 창에서 원하는 설정을 편집합니다. 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+3. `...` 열에서 줄임표([!UICONTROL Name])를 선택하고 ![대상 컨트롤 편집&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**컨트롤을 사용하여 기존 대상 연결을 편집합니다.
+4. 모달 창에서 원하는 설정을 편집합니다. 완료되면 **[!UICONTROL Save]**&#x200B;을(를) 선택하십시오.
 
 대상 편집 창에서 대상에 처음 연결할 때 구성한 모든 설정을 업데이트할 수 있습니다. 이러한 설정은 업데이트하려는 대상 플랫폼에 따라 다릅니다.
 
@@ -60,6 +61,6 @@ Experience Platform UI 또는 플로우 서비스 API를 사용하여 아래 링
 
 ## 다음 단계
 
-이 자습서에 따라 **[!UICONTROL 대상]** 작업 영역을 사용하여 기존 대상 연결을 업데이트했습니다.
+이 자습서에 따라 **[!UICONTROL destinations]** 작업 영역을 사용하여 기존 대상 연결을 업데이트했습니다.
 
 대상에 대한 자세한 내용은 [대상 개요](../catalog/overview.md)를 참조하세요.

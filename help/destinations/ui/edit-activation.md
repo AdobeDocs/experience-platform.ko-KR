@@ -4,9 +4,9 @@ title: 활성화 데이터 흐름 편집
 type: Tutorial
 description: 이 문서의 단계에 따라 Adobe Experience Platform에서 기존 활성화 데이터 흐름을 편집합니다.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 5fae3fe6a3647ba416a26f4cdb9e5b6ce308e990
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '927'
 ht-degree: 0%
 
 ---
@@ -111,11 +111,11 @@ Adobe Experience Platform에서 다음과 같이 대상에 대한 기존 활성�
 
 ![데이터 세트 데이터 흐름 내보내기 실행 옵션을 보여 주는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/export-datasets.png)
 
-## [!BADGE Beta]{type=Informative} 마케팅 작업 편집 {#edit-marketing-actions}
+## 마케팅 액션 편집 {#edit-marketing-actions}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->이 기능은 현재 **베타**&#x200B;에 있습니다. 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
+>마케팅 작업을 편집하려면 **[!UICONTROL Activate Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 대상에 처음 연결할 때 설정한 마케팅 작업을 추가하거나 제거할 수 있습니다.
 
