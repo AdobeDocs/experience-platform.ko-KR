@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2026년 1월
 description: Adobe Experience Platform의 2026년 1월 릴리스 정보.
-source-git-commit: 8ce256234be0917242f117ee7e9b806abe90888c
+source-git-commit: cbe9dd4babb31061405dee3ebe4bd40acad82e90
 workflow-type: tm+mt
-source-wordcount: '1287'
-ht-degree: 19%
+source-wordcount: '1454'
+ht-degree: 18%
 
 ---
 
@@ -25,27 +25,26 @@ ht-degree: 19%
 
 Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 
-<!-- - [Agent Orchestrator](#agent-orchestrator) -->
-
+- [Agent Orchestrator](#agent-orchestrator)
 - [대상](#destinations)
 - [실시간 고객 프로필](#real-time-customer-profile)
 - [스키마](#schemas)
 - [Segmentation Service](#segmentation-service)
 - [소스](#sources)
 
-<!-- ## Agent Orchestrator {#agent-orchestrator}
+## Agent Orchestrator {#agent-orchestrator}
 
-Agent Orchestrator enables you to build and deploy AI-powered agents that can automate workflows and interact with customers across multiple channels.
+Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채널에서 고객과 상호 작용할 수 있는 AI 기반 에이전트를 구축하고 배포할 수 있습니다.
 
-**New or updated features**
+**새로운 기능 또는 업데이트된 기능**
 
-| Feature | Description |
+| 기능 | 설명 |
 | --- | --- |
-| Trial motion for Adobe Experience Platform Agents | **Select customers now have access to Adobe Experience Platform Agents for a complimentary trial**, enabling them to explore and interact with these Agents through the AI Assistant interface powered by Adobe Experience Platform Agent Orchestrator. The trial offers hands-on experience with AI Agents that operate within the context of customers' existing Experience Cloud products and environments, allowing teams to evaluate value before committing to a full purchase. Adobe Experience Platform Agents are guided by user input and oversight and respect existing product-level access controls, ensuring users can only perform actions or view data for which they are authorized within the underlying Experience Cloud applications.|
+| Adobe Experience Platform Agents 사용 바인딩된 체험판 | **이제 고객 선택 시 Adobe Experience Platform 에이전트에 무료로 액세스할 수 있습니다**. 체험판을 사용하여 Adobe Experience Platform Agent Orchestrator에서 제공하는 AI Assistant 인터페이스를 통해 에이전트를 탐색하고 상호 작용할 수 있습니다. 이 체험판은 고객의 기존 Experience Cloud 제품 및 환경 컨텍스트 내에서 작동하는 AI 에이전트에 대한 실습 경험을 제공하여 팀이 전체 구매를 약속하기 전에 가치를 평가할 수 있도록 합니다. Adobe Experience Platform 에이전트는 사용자 입력 및 감독에 의해 안내되며 기존 제품 수준 액세스 제어를 준수하여 사용자가 기본 Experience Cloud 애플리케이션 내에서 승인된 작업만 수행하거나 데이터를 볼 수 있도록 합니다. 시작 방법에 대한 자세한 내용은 [Experience Platform 에이전트 사용 제한 평가판 개요](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/ko/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
+자세한 내용은 [Agent Orchestrator 설명서](https://experienceleague.adobe.com/ko/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator)를 참조하세요.
 
 ## 대상 {#destinations}
 
@@ -57,7 +56,7 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 | --- | --- |
 | 이제 [Kevel 대상](/help/destinations/catalog/advertising/kevel.md) 커넥터를 사용할 수 있습니다. | Adobe Experience Platform용 [!DNL Kevel] 스트리밍 대상을 사용하면 고객이 [!DNL Kevel]의 UserDB 및 세그먼트 관리 API로 직접 Adobe 대상을 활성화하여 광고 결정 시 실시간 타깃팅을 지원할 수 있습니다. [[!DNL Kevel]](https://www.kevel.com/)은(는) 혁신적인 상거래 리더가 소매 미디어를 출시하고, 확장하고, 성공할 수 있도록 지원하는 AI 지원 기술 및 전문가 지침을 제공합니다. [!DNL Kevel]의 Retail Media Cloud는 온사이트 및 오프사이트 광고를 위한 타깃팅되고, 귀속되며, 사용자 지정 가능한 광고 형식을 지원합니다. |
 | [인덱스 교환](/help/destinations/catalog/advertising/index-exchange.md) 대상 커넥터를 사용할 수 있습니다. | 이 대상 커넥터를 사용하여 Adobe Experience Platform의 대상 세그먼트를 [!DNL Index Exchange]의 프로그래밍 방식 광고 플랫폼으로 직접 내보냅니다. [!DNL Index]은(는) 미디어 소유자가 모든 화면에서 콘텐츠의 가치를 극대화할 수 있도록 지원하는 글로벌 광고 공급측 플랫폼입니다. 20년 이상의 업계 리더십 덕분에 [!DNL Index]은(는) 세계 최대 브랜드와 프리미엄 경험 메이커를 연결하여 고품질의 소비자 경험을 제공합니다. |
-| 브레이즈 연결에 대한 지역 엔드포인트 지원 | 이제 대상 구성 흐름 동안 [에서 지원하는 모든 &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오. |
+| 브레이즈 연결에 대한 지역 엔드포인트 지원 | 이제 대상 구성 흐름 동안 [에서 지원하는 모든 ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오. |
 | [Liveramp 온보딩](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling)에 대한 주별 및 월별 예약 지원 | 이제 Liveramp 온보딩 대상에 대한 주별 및 월별 내보내기 일정을 구성할 수 있습니다. <br> 이 릴리스는 점진적으로 출시되고 있으며 1월 30일까지 완료될 예정입니다. |
 | [트레이드 데스크](../../destinations/catalog/advertising/tradedesk.md) 및 [Microsoft Bing](../../destinations/catalog/advertising/bing.md) 대상에 대한 활성화 경험이 개선되었습니다. | 이제 Trade Desk 및 Microsoft Bing 대상에 최적화된 활성화 경험을 위한 사전 정의된 필수 매핑이 포함됩니다.  <br> 이 릴리스는 점진적으로 출시되고 있으며 1월 30일까지 완료될 예정입니다. ![Trade Desk에 대해 미리 정의된 매핑을 보여 주는 이미지](assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br> ![Microsoft Bing에 대해 미리 정의된 매핑을 보여 주는 이미지](assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |
 | [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 대상에 대한 AES256 암호화 지원 | 이제 Amazon S3 내보내기에 대해 AES256 암호화를 구성할 수 있습니다. 두 가지 옵션을 사용할 수 있습니다. <ul><li>**[!UICONTROL Default]**: 버킷에 설정된 기본 암호화 알고리즘으로 사용되지 않는 데이터가 암호화됩니다.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform은 내보내기에 `s3:x-amz-server-side-encryption": "AES256` 헤더를 추가하고 데이터가 S3에 도달할 때 AES256 알고리즘으로 사용하지 않을 때 암호화됩니다. **이 옵션은 S3 버킷에 구성된 기본 암호화 알고리즘보다 우선합니다**.</li></ul> 이 릴리스는 점진적으로 출시되고 있으며 1월 30일까지 완료될 예정입니다. |
