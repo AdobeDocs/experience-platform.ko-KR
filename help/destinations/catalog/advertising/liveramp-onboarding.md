@@ -3,9 +3,9 @@ title: LiveRamp - 온보드 연결
 description: LiveRamp 커넥터를 사용하여 Adobe Real-Time Customer Data Platform에서 LiveRamp Connect로 대상을 온보딩하는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b8540eb20838e7f2228d71bfc002392d07daffe4
 workflow-type: tm+mt
-source-wordcount: '1849'
+source-wordcount: '1872'
 ht-degree: 4%
 
 ---
@@ -50,7 +50,7 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 | 항목 | 유형 | 참고 |
 |---------|----------|---------|
 | 내보내기 유형 | **[!UICONTROL Audience export]** | [!DNL LiveRamp - Onboarding] 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
-| 내보내기 빈도 | **[!UICONTROL Daily batch]** | 프로필은 대상 평가를 기반으로 Experience Platform에서 업데이트되므로 프로필(ID)은 대상 플랫폼으로 다운스트림으로 하루에 한 번 업데이트됩니다. [일괄 파일 기반 대상](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
+| 내보내기 빈도 | **[!UICONTROL Batch]** | 대상 평가를 기반으로 Experience Platform에서 프로필이 업데이트되면 프로필(ID)이 업데이트되고, 일별, 주별 또는 월별 케이던스로 대상 플랫폼으로 다운스트림으로 전달될 수 있습니다. [일괄 파일 기반 대상](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 * **[!UICONTROL Password]**: [!DNL LiveRamp - Onboarding] 저장소 위치의 암호입니다.
 * **[!UICONTROL PGP/GPG encryption key]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**&#x200B;암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
+* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
 
 **SSH 키 인증이 있는 SFTP** {#sftp-ssh}
 
@@ -92,7 +92,7 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 
 * **[!UICONTROL PGP/GPG encryption key]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**&#x200B;암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
+* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -127,12 +127,12 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 
 이 대상으로 대상을 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](/help/destinations/ui/activate-batch-profile-destinations.md)를 참조하십시오.
 
-### 예약 {#scheduling}
+### 일정 조정 {#scheduling}
 
 [!UICONTROL Scheduling] 단계에서 아래 표시된 설정을 사용하여 각 대상에 대한 내보내기 일정을 만듭니다.
 
 * **[!UICONTROL File export options]**: [!UICONTROL Export full files]. [증분 파일 내보내기](../../ui/activate-batch-profile-destinations.md#export-incremental-files)는 현재 [!DNL LiveRamp] 대상에 대해 지원되지 않습니다.
-* **[!UICONTROL Frequency]**:[!UICONTROL Daily]
+* **[!UICONTROL Frequency]**: [!UICONTROL Daily], [!UICONTROL Weekly] 또는 [!UICONTROL Monthly]
 * **[!UICONTROL Date]**: 원하는 대로 내보내기 시작 및 종료 시간을 선택합니다.
 
 대상 예약 단계를 보여 주는 ![Experience Platform UI 스크린샷입니다.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
@@ -227,7 +227,7 @@ abc101@testemailabc.com,active,active,
 
 Experience Platform은 각 [병합 정책 ID](../../../profile/merge-policies/overview.md)에 대해 하나의 CSV 파일을 생성하므로 각 병합 정책 ID에 대해 별도의 데이터 흐름 실행도 생성합니다.
 
-즉, **[!UICONTROL Identities activated]**&#x200B;데이터 흐름 실행&#x200B;**[!UICONTROL Profiles received]** 페이지의 [&#x200B; 및 &#x200B;](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 지표가 각 대상에 대해 표시되지 않고 동일한 병합 정책을 사용하는 각 대상 그룹에 대해 집계됩니다.
+즉, **[!UICONTROL Identities activated]**&#x200B;데이터 흐름 실행&#x200B;**[!UICONTROL Profiles received]** 페이지의 [ 및 ](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 지표가 각 대상에 대해 표시되지 않고 동일한 병합 정책을 사용하는 각 대상 그룹에 대해 집계됩니다.
 
 동일한 병합 정책을 사용하는 대상자 그룹에 대해 데이터 흐름이 생성되면 대상자 이름이 [모니터링 대시보드](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)에 표시되지 않습니다.
 
@@ -255,6 +255,7 @@ Experience Platform은 각 [병합 정책 ID](../../../profile/merge-policies/ov
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
+| 2025년 2월 | 기능 및 설명서 업데이트 | <ul><li> 주간 및 월간 게재 케이던스에 대한 지원을 추가했습니다. |
 | 2024년 3월 | 기능 및 설명서 업데이트 | <ul><li>유럽 및 오스트레일리아 [!DNL LiveRamp] [!DNL SFTP] 인스턴스에 대한 게재 지원이 추가되었습니다.</li><li>새로 지원되는 영역의 특정 구성을 설명하는 설명서가 업데이트되었습니다.</li><li>최대 파일 크기가 1,000만 행으로 증가했습니다(이전에는 500만 개에서).</li><li>파일 크기 증가를 반영하도록 설명서가 업데이트되었습니다.</li></ul> |
 | 2023년 7월 | 초기 릴리스 | 초기 대상 릴리스 및 설명서가 게시되었습니다. |
 
