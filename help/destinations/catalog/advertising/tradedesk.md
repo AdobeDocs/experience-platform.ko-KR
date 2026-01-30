@@ -83,7 +83,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL The Trade Desk]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
+>[!DNL The Trade Desk]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/ko/docs/id-service/using/id-service-api/methods/idsync)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
 
 ## 대상에 연결 {#connect}
 
@@ -134,7 +134,7 @@ ht-degree: 2%
 >id="platform_destinations_required_mappings_ttd"
 >title="사전 구성된 매핑 세트"
 >abstract="4개의 매핑 세트가 사전 구성되어 있습니다. 데이터를 The Trade Desk에 활성화하면 이 대상이 여기에 표시된 대상 ID와 작동하므로 활성화된 대상에 적합한 프로필에는 4개의 ID가 모두 있을 필요는 없습니다. <br> Trade Desk ID를 기반으로 하는 쿠키 기반 타깃팅의 경우 프로필에 ECID가 있어야 하며 Trade Desk ID와 ECID 간의 ID 동기화 매핑이 필요합니다."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="미리 구성된 매핑에 대해 자세히 알아보십시오"
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="미리 구성된 매핑에 대해 자세히 알아보십시오"
 
 [지원되는 ID](#supported-identities) 섹션에 설명된 모든 대상 ID는 대상 활성화 워크플로의 매핑 단계에서 매핑되어야 합니다. 여기에는 다음 항목이 포함되어 있습니다.
 
