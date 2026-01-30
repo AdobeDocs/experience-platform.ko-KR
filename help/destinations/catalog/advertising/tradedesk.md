@@ -3,9 +3,9 @@ keywords: 광고, 무역데스크, 광고 무역데스크
 title: 트레이드 데스크 연결
 description: Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에 걸쳐 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있는 셀프서비스 플랫폼입니다.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: e145dc91fca471078cf94d84ce1012f659d70293
+source-git-commit: 138bfe721bb20fe3ba614a73ffffca3e00979acb
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1242'
 ht-degree: 2%
 
 ---
@@ -13,22 +13,6 @@ ht-degree: 2%
 # [!DNL The Trade Desk] 연결
 
 ## 개요 {#overview}
-
-
->[!IMPORTANT]
->
-> 2025년 7월부터 대상 서비스로 [내부 업그레이드](../../../release-notes/2025/july-2025.md#destinations)한 후 데이터 흐름에서 **활성화된 프로필 수가 감소**&#x200B;되어 [!DNL The Trade Desk]될 수 있습니다.
-> 이 감소는 향상된 모니터링 가시성으로 인해 발생합니다. 이제 ECID가 없는 프로필은 활성화 지표에서 삭제됨으로 올바르게 계산됩니다. 자세한 내용은 이 페이지의 [필수 매핑](#mandatory-mappings) 섹션을 참조하십시오.
->
->**변경 사항:**
->
->* 이제 대상 서비스가 ECID가 없는 프로필이 활성화에서 삭제될 때 올바르게 보고합니다.
->* **중요:** ECID가 없는 프로필은 이 업그레이드 전이라도 [!DNL The Trade Desk]에 도달하지 않았습니다. 통합에는 항상 ECID가 필요합니다. 이 업그레이드는 이전에 지표에 이러한 드롭이 표시되지 않던 버그를 수정합니다.
->
->**수행할 작업:**
->
->* 대상자 데이터를 검토하여 프로필에 유효한 ECID 값이 있는지 확인하십시오.
->* 활성화 지표를 모니터링하여 예상 프로필 수를 확인합니다. 카운트가 낮을수록 대상 동작의 변경이 아닌 정확한 보고가 반영됩니다.
 
 이 대상 커넥터를 사용하여 [!DNL The Trade Desk]&#x200B;(으)로 프로필 데이터를 보냅니다. 이 커넥터는 [!DNL The Trade Desk] 자사 끝점으로 데이터를 보냅니다. Adobe Experience Platform과 [!DNL The Trade Desk] 간의 통합은 [!DNL The Trade Desk] 타사 끝점으로 데이터 내보내기를 지원하지 않습니다.
 
@@ -46,14 +30,14 @@ ht-degree: 2%
 
 다음은 [!DNL The Trade Desk] 대상에서 지원하는 ID입니다. 이러한 ID를 사용하여 대상자를 [!DNL The Trade Desk]에 활성화할 수 있습니다.
 
-아래 표의 모든 ID는 필수 매핑입니다.
+아래 표의 모든 ID는 사전 구성되어 있으며 활성화 중에 자동으로 매핑됩니다. 활성화 워크플로에서 이러한 매핑을 수동으로 구성할 필요는 없습니다.
 
 | 타겟 ID | 설명 | 고려 사항 |
 |---|---|---|
-| [!DNL GAID] | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
-| [!DNL IDFA] | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
-| [!DNL ECID] | Experience Cloud ID | 이 ID는 통합이 올바르게 작동하기 위해 필수이지만 대상 활성화에 사용되지 않습니다. |
-| [!DNL Tradedesk] | [!DNL TDID] 플랫폼의 [!DNL The Trade Desk] | Trade Desk의 고유 ID를 기반으로 대상을 활성화할 때 이 ID를 사용합니다. |
+| GAID | GOOGLE ADVERTISING ID | GAID가 프로필에 있으면 활성화됩니다. |
+| IDFA | 광고주용 Apple ID | IDFA가 프로필에 있으면 활성화됩니다. |
+| ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 자세한 내용은 [ECID](/help/identity-service/features/ecid.md)에서 다음 문서를 참조하십시오. |
+| [!DNL Tradedesk] | [!DNL TDID] 플랫폼의 [!DNL The Trade Desk] | 프로필에 ECID가 있고 ECID-to-Trade Desk ID 매핑이 Experience Platform에 있는 경우 활성화됩니다. |
 
 {style="table-layout:auto"}
 
@@ -81,9 +65,16 @@ ht-degree: 2%
 
 ## 전제 조건 {#prerequisites}
 
->[!IMPORTANT]
->
->[!DNL The Trade Desk]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/ko/docs/id-service/using/id-service-api/methods/idsync)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 설정한 ID 동기화가 Experience Platform으로 이월됩니다.
+사전 요구 사항은 대상자 활성화에 사용할 ID 유형에 따라 다릅니다.
+
+**모바일 ID 활성화에만**&#x200B;하려면 필수 구성 요소가 없습니다. 고객에 대한 ID(GAID 및/또는 IDFA)를 수집 및 관리하는 한 대상을 [!DNL The Trade Desk]에 활성화할 수 있습니다.
+
+**[!DNL The Trade Desk]**&#x200B;에서 쿠키 기반 타깃팅을 사용하려면 ECID와 [!DNL Trade Desk ID] 간의 매핑이 설정되어 있는지 확인하십시오. 이렇게 하려면 아래 단계를 완료하십시오.
+
+1. **ID 동기화 기능 사용**: [!DNL The Trade Desk ID] 활성화를 처음 설정하는 경우로서 이전에 Experience Cloud ID 서비스(Adobe Audience Manager 또는 다른 응용 프로그램 포함)에서 [ID 동기화 기능](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)을 활성화하지 않은 경우 Adobe Consulting 또는 고객 지원 센터에 문의하여 ID 동기화를 활성화하십시오.
+   * 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 기존 ID 동기화가 자동으로 Experience Platform으로 이전됩니다.
+
+2. **웹 페이지 계측**: [!DNL The Trade Desk ID]과(와) Adobe ECID 간의 매핑을 만들려면 웹 페이지에 코드를 구현하십시오. 이렇게 하면 Experience Platform에서 트레이드 데스크 ID를 고객 프로필과 연결할 수 있습니다.
 
 ## 대상에 연결 {#connect}
 
@@ -128,41 +119,43 @@ ht-degree: 2%
 
 대상을 매핑할 때에는 Adobe에서 사용하기 쉽도록 Experience Platform 대상 이름 또는 더 짧은 형식을 사용하는 것이 좋습니다. 그러나 대상의 대상 ID 또는 이름은 Experience Platform 계정의 대상 ID 또는 이름과 일치할 필요가 없습니다. 매핑 필드에 삽입하는 모든 값은 대상에 의해 반영됩니다.
 
-### 필수 매핑 {#mandatory-mappings}
+### 사전 구성된 매핑 {#preconfigured-mappings}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_ttd"
 >title="사전 구성된 매핑 세트"
 >abstract="4개의 매핑 세트가 사전 구성되어 있습니다. 데이터를 The Trade Desk에 활성화하면 이 대상이 여기에 표시된 대상 ID와 작동하므로 활성화된 대상에 적합한 프로필에는 4개의 ID가 모두 있을 필요는 없습니다. <br> Trade Desk ID를 기반으로 하는 쿠키 기반 타깃팅의 경우 프로필에 ECID가 있어야 하며 Trade Desk ID와 ECID 간의 ID 동기화 매핑이 필요합니다."
->additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="미리 구성된 매핑에 대해 자세히 알아보십시오"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="미리 구성된 매핑에 대해 자세히 알아보십시오"
 
-[지원되는 ID](#supported-identities) 섹션에 설명된 모든 대상 ID는 대상 활성화 워크플로의 매핑 단계에서 매핑되어야 합니다. 여기에는 다음 항목이 포함되어 있습니다.
+다음 ID 매핑은 대상 활성화 워크플로에서 **사전 구성되어 자동으로 채워집니다**.
 
-* [!DNL GAID]&#x200B;(Google Advertising ID)
-* [!DNL IDFA]&#x200B;(광고주용 Apple ID)
-* [!DNL ECID]&#x200B;(Experience Cloud ID)
+* GAID (Google Advertising ID)
+* IDFA (광고주용 Apple ID)
+* ECID (Experience Cloud ID)
 * [!DNL The Trade Desk ID]
 
 ![필수 매핑을 보여 주는 스크린샷](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
-모든 대상 ID를 매핑하면 활성화가 존재하는 ID를 사용하여 프로필을 올바르게 분할하고 전달할 수 있습니다. 모든 ID가 각 프로필에 있어야 한다는 의미는 아닙니다.
+이러한 매핑은 회색으로 표시되며 읽기 전용입니다. 이 단계에서는 아무것도 구성하지 않아도 됩니다. 계속하려면 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
-트레이드 데스크로 내보내려면 프로필에 다음이 포함되어야 합니다.
+Experience Platform은 지원되는 모든 id 유형에 대해 활성화 워크플로에서 매핑된 대상자에 속하는 각 프로필을 자동으로 확인한 다음, 존재하는 id를 사용하여 프로필을 활성화합니다.
 
-* [!DNL ECID] 및
-* [!DNL GAID], [!DNL IDFA] 또는 [!DNL The Trade Desk ID] 중 하나 이상
+### 활성화 유형별 ID 요구 사항
 
-예:
+**Mobile ID 활성화(GAID/IDFA):** GAID 또는 IDFA만 있는 프로필로 활성화할 수 있습니다. 추가 ID 또는 필수 구성 요소는 필요하지 않습니다.
 
-* [!DNL ECID]만: 내보내지 않음
-* [!DNL ECID] + [!DNL The Trade Desk ID]: 내보냄
-* [!DNL ECID] + [!DNL IDFA]: 내보냄
-* [!DNL ECID] + [!DNL GAID]: 내보냄
-* [!DNL IDFA] + [!DNL The Trade Desk ID]&#x200B;([!DNL ECID] 없음): 내보내지 않음
+**쿠키 기반 타깃팅([!DNL Trade Desk ID]):**&#x200B;에는 다음 두 가지가 모두 필요합니다.
 
->[!NOTE]
-> 
->대상 서비스로 [2025년 7월 업그레이드](/help/release-notes/2025/july-2025.md#destinations)한 후 [!DNL ECID]이(가) 누락된 프로필이 활성화 지표에서 삭제된 것으로 올바르게 보고됩니다. 이 동작은 항상 [!DNL ECID]이(가) 없는 프로필이 [!DNL The Trade Desk]에 도달하지 않는 통합의 동작이었지만 이제 데이터 흐름 모니터링에서 드롭이 올바르게 표시됩니다. 활성화 횟수가 적으면 대상 기능의 변경이 아니라 정확한 보고를 반영합니다.
+* 프로필에 있는 ECID
+* [!DNL Trade Desk ID]과(와) ECID 간의 ID 동기화 매핑([필수 구성 요소](#prerequisites) 섹션에 설명된 대로 구성됨)
+
+**여러 ID 동작:** 프로필에 지원되는 여러 ID가 포함된 경우 각 ID가 [!DNL The Trade Desk]에 대해 개별적으로 활성화됩니다. 이를 통해 대상자 활성화에 대한 최대 도달 범위와 유연성을 확보할 수 있습니다.
+
+### 활성화 예
+
+* **모바일 ID 프로필:** GAID 및/또는 IDFA가 있는 프로필이 해당 광고 ID를 사용하여 활성화됩니다. 프로필에 GAID와 IDFA가 모두 포함된 경우 각 ID가 별도로 활성화됩니다.
+* **쿠키 기반 프로필:** ECID와 해당 [!DNL Trade Desk ID] 매핑이 있는 프로필은 쿠키 기반 타깃팅에 Trade Desk ID를 사용하여 활성화됩니다.
+* **ECID 전용 프로필:** ECID만 있고 [!DNL Trade Desk ID] 매핑이 없는 프로필은 **내보낼 수 없습니다**. ECID만으로는 활성화할 수 없습니다.
 
 ## 내보낸 데이터 {#exported-data}
 
