@@ -4,9 +4,9 @@ description: 라이브 Snowflake 데이터 공유를 만들어 매일 대상자 
 last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1662'
 ht-degree: 3%
 
 ---
@@ -149,7 +149,8 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 * **[!UICONTROL Snowflake Account ID]**: Snowflake 계정 ID입니다. 계정이 조직에 연결되어 있는지 여부에 따라 다음 계정 ID 형식을 사용하십시오.
    * 계정이 조직에 연결되어 있는 경우: `OrganizationName.AccountName`.
    * 계정이 조직에 연결되어 있지 않은 경우: `AccountName`.
-* **[!UICONTROL Account acknowledgment]**: Snowflake 계정 ID 승인을 전환하여 계정 ID가 올바르고 사용자가 소유하고 있는지 확인합니다.
+* **[!UICONTROL Select Snowflake Region]**: Snowflake 인스턴스가 프로비저닝되는 지역을 선택하십시오. 지원되는 클라우드 영역에 대한 자세한 내용은 Snowflake [설명서](https://docs.snowflake.com/en/user-guide/intro-regions)를 참조하세요.
+* **[!UICONTROL Account acknowledgment]**: **[!UICONTROL Snowflake Account ID]**&#x200B;을(를) 입력한 후 이 드롭다운에서 **[!UICONTROL Yes]**&#x200B;을(를) 선택하여 **[!UICONTROL Snowflake Account ID]**&#x200B;이(가) 올바르고 사용자가 소유하고 있는지 확인합니다.
 
 >[!IMPORTANT]
 >
@@ -195,10 +196,6 @@ ID 및 프로필 속성을 이 대상으로 내보낼 수 있습니다.
 ![동적 테이블 데이터가 있는 Snowflake 인터페이스를 보여주는 스크린샷](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
 
 ## 알려진 제한 사항 {#known-limitations}
-
-### 기본 병합 정책 제한 {#default-merge-policy-restriction}
-
-현재 기본 병합 정책에 매핑된 대상자만 내보낼 수 있습니다.
 
 ### 지역 가용성 {#regional-availability}
 
