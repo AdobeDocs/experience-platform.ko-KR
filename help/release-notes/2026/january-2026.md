@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2026년 1월
 description: Adobe Experience Platform의 2026년 1월 릴리스 정보.
-source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
+source-git-commit: 76b2537b47c0f7bdf115afdec655a1de8460384c
 workflow-type: tm+mt
-source-wordcount: '1529'
-ht-degree: 17%
+source-wordcount: '1621'
+ht-degree: 20%
 
 ---
 
@@ -40,7 +40,7 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 
 | 기능 | 설명 |
 | --- | --- |
-| Adobe Experience Platform Agents 사용 바인딩된 체험판 | **이제 고객 선택 시 Adobe Experience Platform 에이전트에 무료로 액세스할 수 있습니다**. 체험판을 사용하여 Adobe Experience Platform Agent Orchestrator에서 제공하는 AI Assistant 인터페이스를 통해 에이전트를 탐색하고 상호 작용할 수 있습니다. 이 체험판은 고객의 기존 Experience Cloud 제품 및 환경 컨텍스트 내에서 작동하는 AI 에이전트에 대한 실습 경험을 제공하여 팀이 전체 구매를 약속하기 전에 가치를 평가할 수 있도록 합니다. Adobe Experience Platform 에이전트는 사용자 입력 및 감독에 의해 안내되며 기존 제품 수준 액세스 제어를 준수하여 사용자가 기본 Experience Cloud 애플리케이션 내에서 승인된 작업만 수행하거나 데이터를 볼 수 있도록 합니다. 시작 방법에 대한 자세한 내용은 [Experience Platform 에이전트 사용 제한 평가판 개요](https://experienceleague.adobe.com/ko/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)를 참조하십시오. |
+| Adobe Experience Platform Agents 사용 바인딩된 체험판 | **이제 고객 선택 시 Adobe Experience Platform 에이전트에 무료로 액세스할 수 있습니다**. 체험판을 사용하여 Adobe Experience Platform Agent Orchestrator에서 제공하는 AI Assistant 인터페이스를 통해 에이전트를 탐색하고 상호 작용할 수 있습니다. 이 체험판은 고객의 기존 Experience Cloud 제품 및 환경 컨텍스트 내에서 작동하는 AI 에이전트에 대한 실습 경험을 제공하여 팀이 전체 구매를 약속하기 전에 가치를 평가할 수 있도록 합니다. Adobe Experience Platform 에이전트는 사용자 입력 및 감독에 의해 안내되며 기존 제품 수준 액세스 제어를 준수하여 사용자가 기본 Experience Cloud 애플리케이션 내에서 승인된 작업만 수행하거나 데이터를 볼 수 있도록 합니다. 시작 방법에 대한 자세한 내용은 [Experience Platform 에이전트 사용 제한 평가판 개요](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -56,7 +56,7 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 | --- | --- |
 | 이제 [Kevel 대상](/help/destinations/catalog/advertising/kevel.md) 커넥터를 사용할 수 있습니다. | Adobe Experience Platform용 [!DNL Kevel] 스트리밍 대상을 사용하면 고객이 [!DNL Kevel]의 UserDB 및 세그먼트 관리 API로 직접 Adobe 대상을 활성화하여 광고 결정 시 실시간 타깃팅을 지원할 수 있습니다. [[!DNL Kevel]](https://www.kevel.com/)은(는) 혁신적인 상거래 리더가 소매 미디어를 출시하고, 확장하고, 성공할 수 있도록 지원하는 AI 지원 기술 및 전문가 지침을 제공합니다. [!DNL Kevel]의 Retail Media Cloud는 온사이트 및 오프사이트 광고를 위한 타깃팅되고, 귀속되며, 사용자 지정 가능한 광고 형식을 지원합니다. |
 | [인덱스 교환](/help/destinations/catalog/advertising/index-exchange.md) 대상 커넥터를 사용할 수 있습니다. | 이 대상 커넥터를 사용하여 Adobe Experience Platform의 대상 세그먼트를 [!DNL Index Exchange]의 프로그래밍 방식 광고 플랫폼으로 직접 내보냅니다. [!DNL Index]은(는) 미디어 소유자가 모든 화면에서 콘텐츠의 가치를 극대화할 수 있도록 지원하는 글로벌 광고 공급측 플랫폼입니다. 20년 이상의 업계 리더십 덕분에 [!DNL Index]은(는) 세계 최대 브랜드와 프리미엄 경험 메이커를 연결하여 고품질의 소비자 경험을 제공합니다. |
-| 브레이즈 연결에 대한 지역 엔드포인트 지원 | 이제 대상 구성 흐름 동안 [에서 지원하는 모든 &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오. |
+| 브레이즈 연결에 대한 지역 엔드포인트 지원 | 이제 대상 구성 흐름 동안 [에서 지원하는 모든 ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오. |
 | [Liveramp 온보딩](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling)에 대한 주별 및 월별 예약 지원 | 이제 Liveramp 온보딩 대상에 대한 주별 및 월별 내보내기 일정을 구성할 수 있습니다. <br> 이 릴리스는 점진적으로 출시되고 있으며 1월 30일까지 완료될 예정입니다. |
 | [트레이드 데스크](../../destinations/catalog/advertising/tradedesk.md) 및 [Microsoft Bing](../../destinations/catalog/advertising/bing.md) 대상에 대한 활성화 경험이 개선되었습니다. | 이제 Trade Desk 및 Microsoft Bing 대상에 최적화된 활성화 경험을 위한 사전 정의된 필수 매핑이 포함됩니다.  <br> 이 릴리스는 점진적으로 출시되고 있으며 1월 30일까지 완료될 예정입니다. ![Trade Desk에 대해 미리 정의된 매핑을 보여 주는 이미지](assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br> ![Microsoft Bing에 대해 미리 정의된 매핑을 보여 주는 이미지](assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |
 | [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 대상에 대한 AES256 암호화 지원 | 이제 Amazon S3 내보내기에 대해 AES256 암호화를 구성할 수 있습니다. 두 가지 옵션을 사용할 수 있습니다. <ul><li>**[!UICONTROL Default]**: 버킷에 설정된 기본 암호화 알고리즘으로 사용되지 않는 데이터가 암호화됩니다.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform은 내보내기에 `s3:x-amz-server-side-encryption": "AES256` 헤더를 추가하고 데이터가 S3에 도달할 때 AES256 알고리즘으로 사용하지 않을 때 암호화됩니다. **이 옵션은 S3 버킷에 구성된 기본 암호화 알고리즘보다 우선합니다**.</li></ul> 이 릴리스는 점진적으로 출시되고 있으며 1월 30일까지 완료될 예정입니다. |
@@ -87,6 +87,7 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 | [스트리밍 용량](/help/landing/license-usage-and-guardrails/capacity.md) 적용 | 이제 Experience Platform에서는 실시간 고객 프로필 및 ID 서비스를 위해 스트리밍 처리량 기능을 적용합니다. 고객이 계약된 스트리밍 용량을 초과하면 데이터는 선입선출 방식으로 큐에 올라가 처리됩니다. 이를 통해 예측 가능한 시스템 성능을 보장하고 용량 위반이 데이터 수집 품질에 영향을 미치지 않도록 할 수 있습니다. 중요 참고 사항: <ul><li>용량을 초과하면 데이터 레이크에서 스트리밍 업데이트를 사용할 수 없습니다.</li><li>이 적용은 Adobe Journey Optimizer 라이선스가 있는 고객에게는 적용되지 않습니다</li><li>용량이 사용 가능해지면 큐에 있는 데이터가 순차적으로 처리됩니다.</li></ul> 자세한 내용은 [용량 개요](/help/landing/license-usage-and-guardrails/capacity.md)를 참조하십시오. |
 | 엔티티 조회 사용 중단 | 이제 모든 Real-Time CDP Prime 고객이 경험 이벤트에 엔티티 조회 API를 더 이상 사용할 수 없습니다. 이러한 사용 중단은 Real-Time CDP을 라이선스 기능에 맞게 조정하는 데 도움이 됩니다. 이 기능을 사용하려는 Real-Time CDP Ultimate 고객은 Adobe 고객 지원 센터에 문의하여 이 기능을 다시 활성화할 수 있습니다.  자세한 내용은 [엔터티 API 안내서](/help/profile/api/entities.md)를 참조하십시오. |
 | 프로필 수집 작업 상태 모니터링 | 이제 일괄 프로필 수집 데이터 흐름 실행에 대한 작업 수준 진행률을 모니터링할 수 있습니다. 이 기능은 고객 세분화 및 Adobe Journey Optimizer 조회를 위해 수집이 준비되었는지 여부를 나타내는 중요한 체크포인트를 포함하여 일괄 처리 수집 작업의 현재 진행 상황을 실시간으로 보여 줍니다. 처리하는 데 몇 시간이 걸릴 수 있는 대용량 수집의 경우 이러한 진행 투명성을 통해 작업이 정상적으로 진행되고 있는지 또는 문제가 발생하는지 파악하여 데이터 처리 중 불확실성을 줄일 수 있습니다.자세한 내용은 [프로필 모니터링 가이드](/help/dataflows/ui/monitor-profiles.md)를 참조하세요. |
+| 프로필 뷰어 개선 사항(GA) | 이제 프로필 뷰어에 대한 다음과 같은 개선 사항을 일반적으로 사용할 수 있습니다. <ul><li>**결합된 보기**: 속성, 이벤트 및 인사이트가 단일 보기로 결합되었습니다.</li><li>**AI 생성 인사이트**: 이제 프로필 세부 정보 페이지에 AI 생성 인사이트가 표시되어 프로필에서 생성된 세부 사항을 알 수 있습니다. 이러한 인사이트에는 성향 점수 및 추세 분석과 같은 정보가 포함될 수 있습니다.</li><li>**스타일 업데이트**: 프로필 세부 정보 페이지가 시각적으로 새로 고쳐졌습니다.</li><li>**찾아보기**: 이제 검색 및 사용자 정의 기능이 있는 대화형 카드 기반 캐러셀을 통해 프로필을 탐색할 수 있습니다.</li></ul> 자세한 내용은 [프로필 뷰어 안내서](/help/profile/ui/user-guide.md)를 참조하세요. |
 
 {style="table-layout:auto"}
 
