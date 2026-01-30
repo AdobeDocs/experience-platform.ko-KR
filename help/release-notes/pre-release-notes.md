@@ -2,10 +2,10 @@
 title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
+source-git-commit: 76e8f0678c4634258170ca1161134dd1176c24e7
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 20%
+source-wordcount: '1110'
+ht-degree: 22%
 
 ---
 
@@ -32,7 +32,6 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 - [Agent Orchestrator](#agent-orchestrator)
 - [대상](#destinations)
 - [실시간 고객 프로필](#real-time-customer-profile)
-- [스키마](#schemas)
 - [Segmentation Service](#segmentation-service)
 - [소스](#sources)
 
@@ -60,7 +59,7 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 | --- | --- |
 | 이제 케벨 대상 커넥터를 사용할 수 있습니다. | [[!DNL Kevel]](https://www.kevel.com/)은(는) 혁신적인 상거래 리더가 소매 미디어를 출시하고, 확장하고, 성공할 수 있도록 지원하는 AI 지원 기술 및 전문가 지침을 제공합니다. [!DNL Kevel]의 Retail Media Cloud는 온사이트 및 오프사이트 광고를 위한 타깃팅되고, 귀속되며, 사용자 지정 가능한 광고 형식을 지원합니다. |
 | 이제 인덱스 교환 대상 커넥터를 사용할 수 있습니다. | [!DNL Index]은(는) 미디어 소유자가 모든 화면에서 콘텐츠의 가치를 극대화할 수 있도록 지원하는 글로벌 광고 공급측 플랫폼입니다. 20년 이상의 업계 리더십 덕분에 [!DNL Index]은(는) 세계 최대 브랜드와 프리미엄 경험 메이커를 연결하여 고품질의 소비자 경험을 제공합니다. |
-| 브레이즈 연결에 대한 지역 엔드포인트 지원 | 이제 대상 구성 흐름 동안 [에서 지원하는 모든 &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오. |
+| 브레이즈 연결에 대한 지역 엔드포인트 지원 | 이제 대상 구성 흐름 동안 [에서 지원하는 모든 ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오. |
 | Liveramp 온보딩을 위한 주간 및 월간 일정 조정 지원 | 이제 Liveramp 온보딩 대상에 대한 주별 및 월별 내보내기 일정을 구성할 수 있습니다. |
 | Amazon S3 대상에 대한 AES256 암호화 지원 | 이제 Amazon S3 내보내기에 대해 AES256 암호화를 구성할 수 있습니다. |
 | Trade Desk 및 Microsoft Bing 대상을 위한 활성화 경험 개선 | 이제 Trade Desk 및 Microsoft Bing 대상에 최적화된 활성화 경험을 위한 사전 정의된 필수 매핑이 포함됩니다. |
@@ -92,18 +91,6 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 {style="table-layout:auto"}
 
 자세한 내용은 [[!DNL Real-Time Customer Profile] 개요](../profile/home.md)를 참조하십시오.
-
-## 스키마 {#schemas}
-
-Experience Platform은 스키마를 사용하여 데이터의 구조를 일관되고 재사용 가능한 방식으로 설명합니다. 여러 시스템에서 데이터를 일관되게 정의하면 의미를 쉽게 유지할 수 있으므로 데이터의 가치를 얻을 수 있습니다. 스키마는 기본 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다.
-
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| 검색, 필터, 태그 및 폴더를 통한 스키마 인벤토리 현대화 | 향상된 조직 및 검색 기능을 제공하기 위해 스키마 찾아보기 페이지를 현대화했습니다. 새로운 기능에는 고급 검색 및 필터링 옵션, 사용자 생성 태그 및 폴더에 대한 지원을 통해 스키마를 구성하고 인라인 작업을 통해 워크플로우를 간소화하는 기능이 포함됩니다. 주요 개선 사항으로는 업데이트된 열(이름, 클래스, 데이터 세트, ID, 관계, 프로필에 대해 활성화, 동작, 스키마 유형, 태그, 생성됨 날짜, 마지막 수정됨), 고급 필터(프로필 표시, 스키마 유형, 클래스, 임의 태그 있음, 생성자, 생성됨 날짜, 수정됨 날짜, 기본 ID 있음, 관계 있음, 기본 ID 네임스페이스), 인라인 작업(편집, 삭제, 레이블 적용, 비관계형 스키마에 대한 데이터 세트 생성, 태그 관리, 폴더로 이동, 패키지에 추가, JSON 구조 복사, 샘플 파일 다운로드) 및 태그와 폴더를 사용하여 스키마를 구성하는 기능이 있습니다. 이러한 향상된 기능은 스키마 리소스에 대한 포괄적인 가시성을 제공하고 샌드박스 수준에서 보다 효율적인 스키마 관리를 가능하게 합니다. |
-
-자세한 내용은 [[!DNL Schemas] 개요](../xdm/home.md)를 참조하십시오.
 
 ## Segmentation Service {#segmentation-service}
 
