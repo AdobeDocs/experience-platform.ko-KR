@@ -1,12 +1,12 @@
 ---
 title: Real-Time CDP B2B edition으로 아키텍처 업그레이드
 description: Real-Time CDP B2B edition으로의 포괄적인 아키텍처 업그레이드에 대해 알아보려면 이 문서 를 참조하십시오.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: 1a3be99ca3c270dda6e8dc559359cbe21bb8f4fb
+source-git-commit: da288d1a917df85b3c003bc6592fda7a6f1eafe7
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 0%
+source-wordcount: '1096'
+ht-degree: 1%
 
 ---
 
@@ -39,7 +39,7 @@ Adobe은 확장성, 성능 및 안정성을 향상하는 동시에 보다 고급
 
 자세한 내용은 [계정 대상자](../segmentation/types/account-audiences.md)에 대한 설명서를 참조하십시오.
 
-### B2B 엔티티를 포함하는 대상에 대한 대상 개수
+### B2B 엔티티를 포함하는 대상을 위한 대상자 규모
 
 B2B 엔티티가 있는 대상에 대한 대상 크기 예상은 이제 정확한 정밀도로 계산됩니다. 이러한 예상치는 미리보기 중에 사용할 수 있으며, 복잡한 B2B 관계를 포함하는 대상자에게 보다 정확하고 신뢰할 수 있는 통찰력을 제공합니다.
 
@@ -123,6 +123,10 @@ B2B 특성이 있는 다중 엔티티 대상은 이제 여러 병합 정책 대�
 * 마케팅 목록 구성원
 
 자세한 내용은 [[!DNL Profile Access] API](../profile/api/entities.md)을(를) 참조하십시오.
+
+### 세그먼트 작업 API 사용 중단
+
+새 아키텍처에서 &quot;세그먼트 작업 만들기&quot; 엔드포인트와 유연한 대상 평가는 지원되지 *않습니다.
 
 ### 계정 및 영업 기회 프로필 조회
 

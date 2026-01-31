@@ -2,9 +2,9 @@
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 8fed1f034cd530bd84bf9d9b180d9db3c4ee0faf
+source-git-commit: 1a2536437ae8aa34dac13406dd4b36afa9585ae5
 workflow-type: tm+mt
-source-wordcount: '4434'
+source-wordcount: '4457'
 ht-degree: 3%
 
 ---
@@ -67,8 +67,8 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 | [!UICONTROL Move to folder] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 대상자가 속한 폴더를 관리합니다. 이 기능에 대한 자세한 내용은 [필터링 및 태깅](#manage-audiences)의 섹션을 참조하십시오. |
 | [!UICONTROL Copy] | Segmentation Service | 선택한 대상자를 복제합니다. 이 함수에 대한 자세한 내용은 [세그먼테이션 FAQ](../faq.md#copy)에서 확인할 수 있습니다. |
 | [!UICONTROL Apply access labels] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 대상에 속하는 액세스 레이블을 관리합니다. 액세스 레이블에 대한 자세한 내용은 [레이블 관리](../../access-control/abac/ui/labels.md)에 대한 설명서를 참조하십시오. |
-| [!UICONTROL Publish] | 사용자 정의 업로드, 세분화 서비스 | 선택한 대상자를 게시합니다. 라이프사이클 상태 관리에 대한 자세한 내용은 세분화 FAQ[의 &#x200B;](../faq.md#lifecycle-states)라이프사이클 상태 섹션을 참조하십시오. |
-| [!UICONTROL Deactivate] | 사용자 정의 업로드, 세분화 서비스 | 선택한 대상자를 비활성화합니다. 대상을 비활성화하려면 **은(는)** any **대상(Experience Platform이 아닌 대상 포함)에서 활성화하거나** any **다른 대상에 속할 수**&#x200B;없습니다. 라이프사이클 상태 관리에 대한 자세한 내용은 세분화 FAQ[의 &#x200B;](../faq.md#lifecycle-states)라이프사이클 상태 섹션을 참조하십시오. |
+| [!UICONTROL Publish] | 사용자 정의 업로드, 세분화 서비스 | 선택한 대상자를 게시합니다. 라이프사이클 상태 관리에 대한 자세한 내용은 세분화 FAQ[의 ](../faq.md#lifecycle-states)라이프사이클 상태 섹션을 참조하십시오. |
+| [!UICONTROL Deactivate] | 사용자 정의 업로드, 세분화 서비스 | 선택한 대상자를 비활성화합니다. 대상을 비활성화하려면 **은(는)** any **대상(Experience Platform이 아닌 대상 포함)에서 활성화하거나** any **다른 대상에 속할 수**&#x200B;없습니다. 라이프사이클 상태 관리에 대한 자세한 내용은 세분화 FAQ[의 ](../faq.md#lifecycle-states)라이프사이클 상태 섹션을 참조하십시오. |
 | [!UICONTROL Delete] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 선택한 대상자를 삭제합니다. 다운스트림 대상에 사용되거나 다른 대상에 종속된 대상은 **삭제할 수 없습니다**. 대상자 삭제에 대한 자세한 내용은 [세그먼테이션 FAQ](../faq.md#lifecycle-states)를 참조하십시오. |
 | [!UICONTROL Add to package] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 샌드박스 간에 대상자를 이동합니다. 이 기능에 대한 자세한 내용은 [샌드박스 도구 가이드](../../sandboxes/ui/sandbox-tooling.md)를 참조하십시오. |
 
@@ -78,7 +78,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 페이지 맨 위에는 일정에 모든 대상을 추가하고, 대상을 가져오고, 새 대상을 만들고, 대상 평가의 요약을 볼 수 있는 옵션이 있습니다.
 
-**[!UICONTROL Schedule all audiences]**&#x200B;을(를) 전환하면 예약된 세그먼테이션이 활성화됩니다. 예약된 세그먼테이션에 대한 자세한 내용은 이 사용 안내서 [의 &#x200B;](#scheduled-segmentation)예약된 세그먼테이션 섹션에 있습니다.
+**[!UICONTROL Schedule all audiences]**&#x200B;을(를) 전환하면 예약된 세그먼테이션이 활성화됩니다. 예약된 세그먼테이션에 대한 자세한 내용은 이 사용 안내서 [의 ](#scheduled-segmentation)예약된 세그먼테이션 섹션에 있습니다.
 
 **[!UICONTROL Import audience]**&#x200B;을(를) 선택하면 외부에서 생성된 대상자를 가져올 수 있습니다. 대상자 가져오기에 대한 자세한 내용은 [사용 안내서에서 대상자 가져오기](#import-audience)에 대한 섹션을 참조하십시오.
 
@@ -102,8 +102,8 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 | ----- | ----------- |
 | [!UICONTROL Name] | 대상자의 이름입니다. |
 | [!UICONTROL Profile count] | 대상자에 적합한 총 프로필 수입니다. |
-| [!UICONTROL Origin] | 대상의 기원입니다. 이는 대상자가 어디에서 오는지 설명합니다. 가능한 값에는 [세그먼테이션 서비스](#segment-builder), [사용자 지정 업로드](#import-audience), [대상 구성](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/ko/docs/audience-manager/user-guide/aam-home), [유사 대상](../types/lookalike-audiences.md), [페더레이션 대상 구성](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/cja-overview/cja-overview), [데이터 Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview) 및 [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)이 포함됩니다. |
-| [!UICONTROL Lifecycle status] | 대상의 상태입니다. 이 필드에 사용할 수 있는 값은 `Draft`, `Inactive` 및 `Published`입니다. 다른 상태의 의미와 대상을 다른 라이프사이클 상태로 이동하는 방법 등 라이프사이클 상태에 대한 자세한 내용은 세분화 FAQ[의 &#x200B;](../faq.md#lifecycle-status)라이프사이클 상태 섹션을 참조하십시오. |
+| [!UICONTROL Origin] | 대상의 기원입니다. 이는 대상자가 어디에서 오는지 설명합니다. 가능한 값에는 [세그먼테이션 서비스](#segment-builder), [사용자 지정 업로드](#import-audience), [대상 구성](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [유사 대상](../types/lookalike-audiences.md), [페더레이션 대상 구성](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [데이터 Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview) 및 [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)이 포함됩니다. |
+| [!UICONTROL Lifecycle status] | 대상의 상태입니다. 이 필드에 사용할 수 있는 값은 `Draft`, `Inactive` 및 `Published`입니다. 다른 상태의 의미와 대상을 다른 라이프사이클 상태로 이동하는 방법 등 라이프사이클 상태에 대한 자세한 내용은 세분화 FAQ[의 ](../faq.md#lifecycle-status)라이프사이클 상태 섹션을 참조하십시오. |
 | [!UICONTROL Update frequency] | 대상자의 데이터가 업데이트되는 빈도를 나타내는 값입니다. 이 필드에 사용할 수 있는 값은 [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] 및 [!UICONTROL Not Scheduled]입니다. |
 | [!UICONTROL Last updated by] | 대상자를 마지막으로 업데이트한 사람의 이름입니다. |
 | [!UICONTROL Created] | 대상이 생성된 날짜와 시간(UTC). |
@@ -138,7 +138,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 ![검색 창이 강조 표시되어 있습니다.](../images/ui/audience-portal/browse-audience-search.png)
 
-지원되는 기능을 포함하여 [!DNL Unified Search]에 대한 자세한 내용은 [통합 검색 설명서](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html?lang=ko)를 참조하십시오.
+지원되는 기능을 포함하여 [!DNL Unified Search]에 대한 자세한 내용은 [통합 검색 설명서](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html)를 참조하십시오.
 
 #### 태그 {#tags}
 
@@ -203,7 +203,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 | 필터 | 설명 |
 | ------ | ----------- |
-| [!UICONTROL Origin] | 대상자의 출처를 기준으로 필터링할 수 있습니다. 가능한 값에는 [세그먼테이션 서비스](#segment-builder), [사용자 지정 업로드](#import-audience), [대상 구성](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/ko/docs/audience-manager/user-guide/aam-home), [유사 대상](../types/lookalike-audiences.md), [페더레이션 대상 구성](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/cja-overview/cja-overview), [데이터 Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview) 및 [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)이 포함됩니다. |
+| [!UICONTROL Origin] | 대상자의 출처를 기준으로 필터링할 수 있습니다. 가능한 값에는 [세그먼테이션 서비스](#segment-builder), [사용자 지정 업로드](#import-audience), [대상 구성](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [유사 대상](../types/lookalike-audiences.md), [페더레이션 대상 구성](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [데이터 Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview) 및 [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)이 포함됩니다. |
 | [!UICONTROL Has any tag] | 태그로 필터링할 수 있습니다. **[!UICONTROL Has any tag]**&#x200B;에서 **[!UICONTROL Has all tags]** 중 하나를 선택할 수 있습니다. **[!UICONTROL Has any tag]**&#x200B;을(를) 선택하면 필터링된 대상에 추가한 태그 중 **임의**&#x200B;개가 포함됩니다. **[!UICONTROL Has all tags]**&#x200B;을(를) 선택한 경우 필터링된 대상자에는 추가한 태그 중 **모두**&#x200B;개가 포함되어야 합니다. |
 | [!UICONTROL Lifecycle status] | 대상자의 라이프사이클 상태에 따라 필터링할 수 있습니다. 사용 가능한 옵션은 [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive] 및 [!UICONTROL Published]입니다. |
 | [!UICONTROL Update frequency] | 대상자의 업데이트 빈도(평가 방법)를 기준으로 필터링할 수 있습니다. 사용 가능한 옵션은 [!UICONTROL Batch], [!UICONTROL Streaming] 및 [!UICONTROL Edge]입니다. |
@@ -269,14 +269,14 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 ![대상자 세부 정보 페이지에서 [!UICONTROL Refresh data expiration] 단추가 강조 표시됩니다.](../images/ui/audience-portal/refresh-data-expiration.png)
 
-이렇게 하면 데이터 만료일이 30일 연장되고 동일한 대상 메타데이터를 사용합니다. 버튼을 누르면 20분 동안 다시 선택할 수 없습니다.
+이렇게 하면 데이터 만료가 초기 업로드에 정의된 일 수만큼 연장되고 동일한 대상 메타데이터를 사용합니다. 데이터 만료가 이전에 정의되지 않은 경우 데이터 만료는 30일 연장됩니다. 버튼을 누르면 20분 동안 다시 선택할 수 없습니다.
 
 다음 상황에서는 이 단추를 **선택할 수 없습니다**.
 
 - 대상자에 대한 성공적인 일괄 처리가 없습니다.
 - 초기 새로 고침 실패
 - 데이터 만료일이 7일 이상입니다.
-- 대상자에게 데이터가 없습니다.
+- 대상이 이미 만료되었습니다.
 
 >[!TAB 세분화 서비스]
 

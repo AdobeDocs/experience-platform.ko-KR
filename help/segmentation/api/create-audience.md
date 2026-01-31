@@ -4,9 +4,9 @@ description: API를 사용하여 외부 대상자를 위한 메타데이터를 �
 hide: true
 hidefromtoc: true
 exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
-source-git-commit: a3b82eb1efaf257723208504c90210850a44b4a4
+source-git-commit: ea7fd13675a95941be7267f1cf75056b224efcd3
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '264'
 ht-degree: 6%
 
 ---
@@ -61,7 +61,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
  -H 'Accept: application/vnd.adobe.external.audiences+json; version=2'
  -d '{
     "name": "Sample audience name",
-    "description" "A sample description for the audience.",
+    "description": "A sample description for the audience.",
+    "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7",
     "namespace": "agora",
     "originName": "Agora_Collaboration"
  }'
@@ -71,6 +72,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
 | -------- | ---- | ----------- |
 | `name` | 문자열 | 대상자의 이름입니다. |
 | `description` | 문자열 | 대상자에 대한 선택적 설명입니다. |
+| `audienceId` | 문자열 | 대상에 대해 외부에서 생성된 ID입니다. |
 | `namespace` | 문자열 | 대상자를 위한 네임스페이스입니다. |
 | `originName` | 문자열 | 대상자의 기원 이름. |
 
@@ -80,6 +82,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
 
 ```json
 {
+    "id": "6bb1ee15-8f64-49fd-bce3-d5c2f22f1f14",
     "name": "Sample audience name",
     "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7"
 }
@@ -87,5 +90,6 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
 
 | 속성 | 유형 | 설명 |
 | -------- | ---- | ----------- |
+| `id` | 문자열 | 대상에 대해 시스템에서 생성한 ID입니다. |
 | `name` | 문자열 | 만든 대상자의 이름입니다. |
-| `audienceId` | 문자열 | 만든 대상자의 ID입니다. |
+| `audienceId` | 문자열 | 귀하가 만든 대상자의 외부 제공 ID. |
