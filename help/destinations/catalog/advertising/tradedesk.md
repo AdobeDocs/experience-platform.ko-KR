@@ -71,7 +71,7 @@ ht-degree: 2%
 
 **[!DNL The Trade Desk]**&#x200B;에서 쿠키 기반 타깃팅을 사용하려면 ECID와 [!DNL Trade Desk ID] 간의 매핑이 설정되어 있는지 확인하십시오. 이렇게 하려면 아래 단계를 완료하십시오.
 
-1. **ID 동기화 기능 사용**: [!DNL The Trade Desk ID] 활성화를 처음 설정하는 경우로서 이전에 Experience Cloud ID 서비스(Adobe Audience Manager 또는 다른 응용 프로그램 포함)에서 [ID 동기화 기능](https://experienceleague.adobe.com/ko/docs/id-service/using/id-service-api/methods/idsync)을 활성화하지 않은 경우 Adobe Consulting 또는 고객 지원 센터에 문의하여 ID 동기화를 활성화하십시오.
+1. **ID 동기화 기능 사용**: [!DNL The Trade Desk ID] 활성화를 처음 설정하는 경우로서 이전에 Experience Cloud ID 서비스(Adobe Audience Manager 또는 다른 응용 프로그램 포함)에서 [ID 동기화 기능](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)을 활성화하지 않은 경우 Adobe Consulting 또는 고객 지원 센터에 문의하여 ID 동기화를 활성화하십시오.
    * 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 기존 ID 동기화가 자동으로 Experience Platform으로 이전됩니다.
 
 2. **웹 페이지 계측**: [!DNL The Trade Desk ID]과(와) Adobe ECID 간의 매핑을 만들려면 웹 페이지에 코드를 구현하십시오. 이렇게 하면 Experience Platform에서 트레이드 데스크 ID를 고객 프로필과 연결할 수 있습니다.
@@ -125,7 +125,7 @@ ht-degree: 2%
 >id="platform_destinations_required_mappings_ttd"
 >title="사전 구성된 매핑 세트"
 >abstract="4개의 매핑 세트가 사전 구성되어 있습니다. 데이터를 The Trade Desk에 활성화하면 이 대상이 여기에 표시된 대상 ID와 작동하므로 활성화된 대상에 적합한 프로필에는 4개의 ID가 모두 있을 필요는 없습니다. <br> Trade Desk ID를 기반으로 하는 쿠키 기반 타깃팅의 경우 프로필에 ECID가 있어야 하며 Trade Desk ID와 ECID 간의 ID 동기화 매핑이 필요합니다."
->additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="미리 구성된 매핑에 대해 자세히 알아보십시오"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="미리 구성된 매핑에 대해 자세히 알아보십시오"
 
 다음 ID 매핑은 대상 활성화 워크플로에서 **사전 구성되어 자동으로 채워집니다**.
 
