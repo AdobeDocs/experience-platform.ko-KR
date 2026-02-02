@@ -1,7 +1,8 @@
 ---
 title: Oracle Eloqua (V2) Source 개요
 description: Oracle Eloqua를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
-source-git-commit: 180754969d4ae8dbd1308dfc85dae73baf64f759
+last-substantial-update: 2025-02-02T00:00:00Z
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
 source-wordcount: '1824'
 ht-degree: 2%
@@ -78,7 +79,7 @@ ht-degree: 2%
 
 ![안내 캠페인이 포함된 보안 그룹이 추가되었습니다.](../../images/tutorials/create/eloqua/add-guided-campaigns.png)
 
-선택적으로 추가 사용자를 생성하고 해당 사용자를 보안 그룹에 추가할 수 있습니다. 자세한 단계는 [!DNL Eloqua]사용자 만들기[&#x200B; 및 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm)보안 그룹에 사용자 할당[에 대한 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm) 설명서를 참조하십시오.
+선택적으로 추가 사용자를 생성하고 해당 사용자를 보안 그룹에 추가할 수 있습니다. 자세한 단계는 [!DNL Eloqua]사용자 만들기[ 및 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm)보안 그룹에 사용자 할당[에 대한 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm) 설명서를 참조하십시오.
 
 ### 필요한 자격 증명 수집
 

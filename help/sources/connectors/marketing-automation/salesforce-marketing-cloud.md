@@ -3,10 +3,10 @@ title: Salesforce Marketing Cloud Source 개요
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce Marketing Cloud을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2025-05-17T00:00:00Z
-source-git-commit: 0c0a58df4beae499008e52c118b40bed86ff0596
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 1%
+source-wordcount: '639'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!WARNING]
 >
->[!DNL Salesforce Marketing Cloud] 원본은 2026년 1월에 사용되지 않습니다. 대안으로 새로운 정보원이 올해 말 공개될 것이다. 새 소스가 릴리스되면 2026년 1월 말 이전에 새 계정 연결 및 데이터 흐름을 생성하여 새 소스로 마이그레이션할 계획이어야 합니다.
+>[!DNL Oracle Salesforce Marketing Cloud] 원본은 이제 사용되지 않으며 더 이상 사용할 수 없습니다. 새 [[!DNL Salesforce Marketing Cloud] (V2) 원본](sfmc.md)을(를) [!DNL Salesforce Marketing Cloud] 데이터의 새 커넥터로 사용합니다.
 
 [!DNL Salesforce Marketing Cloud]을(를) 사용하면 하나의 플랫폼에서 이메일, 모바일, 소셜 미디어 및 광고 전반에 걸친 고객 참여를 관리하고 자동화할 수 있습니다. Email Studio, 여정 빌더 및 대상 빌더와 같은 도구를 사용하여 대상에 맞게 개인화된 캠페인과 고객 여정을 만들 수 있습니다.
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 * `campaign_read`
 * `list_and_subscribers_read`
 
-[!DNL Salesforce Marketing Cloud] API의 `v2/userinfo` 리소스를 호출하여 범위를 요청할 수 있습니다. 범위를 요청하고 비교하는 방법에 대한 지침은 [[!DNL Salesforce Marketing Cloud] API 통합 권한 범위 문서](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>)를 참조하십시오.
+`v2/userinfo` API의 [!DNL Salesforce Marketing Cloud] 리소스를 호출하여 범위를 요청할 수 있습니다. 범위를 요청하고 비교하는 방법에 대한 지침은 [[!DNL Salesforce Marketing Cloud] API 통합 권한 범위 문서](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>)를 참조하십시오.
 
 관련 권한 및 동작 목록을 포함한 범위에 대한 자세한 내용은 이 [[!DNL Salesforce Marketing Cloud] REST API 문서](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>)를 참조하십시오.
 
@@ -45,7 +45,7 @@ ht-degree: 1%
 
 ### Azure에서 Experience Platform 인증 {#azure}
 
-[!DNL Azure]의 Experience Platform에 [!DNL Salesforce Marketing Cloud]을(를) 연결하려면 다음 자격 증명의 값을 제공해야 합니다.
+[!DNL Salesforce Marketing Cloud]의 Experience Platform에 [!DNL Azure]을(를) 연결하려면 다음 자격 증명의 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | --- | --- |

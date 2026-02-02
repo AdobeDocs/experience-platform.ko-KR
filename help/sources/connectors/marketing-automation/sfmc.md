@@ -1,7 +1,8 @@
 ---
 title: Salesforce Marketing Cloud (V2) Source 개요
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce Marketing Cloud(V2)를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
-source-git-commit: 3c200ff1a29c3462a5d4fef554f6a410cfcbdde8
+last-substantial-update: 2025-02-02T00:00:00Z
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 0%
