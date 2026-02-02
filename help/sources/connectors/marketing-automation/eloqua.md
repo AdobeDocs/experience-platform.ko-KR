@@ -79,7 +79,7 @@ ht-degree: 2%
 
 ![안내 캠페인이 포함된 보안 그룹이 추가되었습니다.](../../images/tutorials/create/eloqua/add-guided-campaigns.png)
 
-선택적으로 추가 사용자를 생성하고 해당 사용자를 보안 그룹에 추가할 수 있습니다. 자세한 단계는 [!DNL Eloqua]사용자 만들기[ 및 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm)보안 그룹에 사용자 할당[에 대한 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm) 설명서를 참조하십시오.
+선택적으로 추가 사용자를 생성하고 해당 사용자를 보안 그룹에 추가할 수 있습니다. 자세한 단계는 [!DNL Eloqua]사용자 만들기[&#x200B; 및 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm)보안 그룹에 사용자 할당[에 대한 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm) 설명서를 참조하십시오.
 
 ### 필요한 자격 증명 수집
 
