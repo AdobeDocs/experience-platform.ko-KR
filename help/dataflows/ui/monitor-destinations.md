@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 대상에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 4faa15431fe069b5be964f0f8643a73633338a89
+source-git-commit: 5b36722e5c2ca0cc8a4fb8667ceb3dc4a3568b02
 workflow-type: tm+mt
-source-wordcount: '3550'
+source-wordcount: '3542'
 ht-degree: 10%
 
 ---
@@ -142,7 +142,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="데이터 흐름 실행 세부 정보"
 >abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 대상자의 활성화 상태 및 지표에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 검토하십시오."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=ko#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -371,7 +371,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 - **[!UICONTROL IMS org ID]**: 데이터 흐름이 속한 조직입니다.
 - **[!UICONTROL Last updated]**: 데이터 흐름 실행을 마지막으로 업데이트한 시간입니다.
 
-또한 세부 정보 페이지에는 데이터 흐름 실행 오류와 대상 간을 전환하는 토글이 있습니다. 이 옵션은 일괄 처리 대상의 데이터 흐름 실행과 [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) 스트리밍 대상에만 사용할 수 있습니다.
+또한 세부 정보 페이지에는 데이터 흐름 실행 오류와 대상 간을 전환하는 토글이 있습니다. 이 옵션은 [대상 수준 보기](#segment-level-view) 섹션에 나열된 대상에 사용할 수 있습니다.
 
 데이터 흐름 실행 오류 보기에는 실패한 레코드와 건너뛴 레코드 목록이 표시됩니다. 오류 코드, ID 카운트 및 설명을 포함하여 실패 및 생략된 레코드에 대한 정보가 표시됩니다. 기본적으로 이 목록에는 실패한 레코드가 표시됩니다. 건너뛴 레코드를 표시하려면 **[!UICONTROL Records skipped]** 전환을 선택합니다.
 

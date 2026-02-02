@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 17bc44d4c7e21f6d8fe544b3052fed32453002b6
+source-git-commit: 5b36722e5c2ca0cc8a4fb8667ceb3dc4a3568b02
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1329'
 ht-degree: 5%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 5%
    * [대상 계정 삭제](./api/delete-destination-account.md)
    * [대상 데이터 흐름 삭제](./api/delete-destination-dataflow.md)
    * [데이터 세트 내보내기](/help/destinations/api/export-datasets.md)
-   * [대상에 대한 API 응답 정렬 및 필터링](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=ko#use-cases)
+   * [대상에 대한 API 응답 정렬 및 필터링](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI 안내서 {#ui}
    * [대상 작업 영역](./ui/destinations-workspace.md)
    * [새 대상 연결 만들기](./ui/connect-destination.md)
@@ -54,7 +54,7 @@ ht-degree: 5%
       * [배열, 맵 및 오브젝트 내보내기](/help/destinations/ui/export-arrays-maps-objects.md)
       * [클라우드 스토리지 대상으로 내보낸 데이터에 대한 변환 수행](/help/destinations/ui/data-transformations-calculated-fields.md)
    * [대상 세부 사항 보기](./ui/destination-details-page.md)
-   * [(Beta) 대상 편집](./ui/edit-destination.md)
+   * [대상 편집](./ui/edit-destination.md)
    * [대상 계정 업데이트](./ui/update-accounts.md)
    * [대상 계정 삭제](./ui/delete-destination-account.md)
    * [활성화 데이터 흐름 편집](./ui/edit-activation.md)
@@ -71,7 +71,7 @@ ht-degree: 5%
       * [(기존) (V2) Marketo Engage 연결](./catalog/adobe/marketo-engage.md)
       * [(Beta) Marketo Engage 사용자 동기화 연결](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate 연결](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform 대상 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ko)
+      * [Experience Platform 대상 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [페더레이션 대상 컴포지션 연결](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising 대상{#advertising}
       * [(Beta) Acxiom 대상 연결](./catalog/advertising/acxiom-audience-connection.md)
