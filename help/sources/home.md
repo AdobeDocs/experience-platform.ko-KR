@@ -61,7 +61,7 @@ Experience Platform을 사용하면 Adobe Analytics 및 Adobe Audience Manager�
 
 ### 고급 엔터프라이즈 소스 {#advanced-enterprise-sources}
 
-다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
+다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
 
 | 소스 | 카테고리 | 수집 유형 | 클라우드 |
 | --- | --- | --- | --- |
