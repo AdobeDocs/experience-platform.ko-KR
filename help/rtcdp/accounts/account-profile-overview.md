@@ -2,13 +2,13 @@
 keywords: rtcdp b2b;b2b;계정;계정 프로필;계정 프로필 rtcdp;실시간 고객 데이터 플랫폼;
 title: Real-Time CDP B2B edition의 계정 프로필
 description: Adobe Real-Time Customer Data Platform B2B Edition을 통해 계정 프로필을 사용하여 여러 소스에서 계정 정보를 통합하는 방법에 대해 알아봅니다.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 769d83155ae70516a296b71baec37d797dd81f34
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 7%
+source-wordcount: '339'
+ht-degree: 6%
 
 ---
 
@@ -25,6 +25,10 @@ ht-degree: 7%
 ## 계정 프로필 뷰어
 
 Real-Time CDP, B2B edition을 사용하면 Experience Platform 사용자 인터페이스를 사용하여 계정 프로필을 보고 연결된 엔터프라이즈 소스의 계정 ID를 사용하거나 소스 세부 정보를 직접 입력하여 특정 계정을 검색할 수 있습니다. Experience Platform UI에서 계정 프로필을 보는 방법에 대한 자세한 내용은 [계정 프로필 UI 안내서](account-profile-ui-guide.md)를 참조하십시오.
+
+>[!IMPORTANT]
+>
+>계정 프로필에 데이터를 표시하려면 일일 배치 세분화 평가를 활성화해야 합니다. 정확한 계정 프로필 정보를 유지 관리하기 위해 배치 세그먼테이션이 구성 및 예약되어 있는지 확인합니다. 자세한 내용은 [일괄 처리 세분화 가이드](../../segmentation/methods/batch-segmentation.md)를 참조하세요.
 
 ## 계정 대상자 만들기 및 활성화
 
