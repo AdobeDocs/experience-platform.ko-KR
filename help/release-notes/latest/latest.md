@@ -39,7 +39,7 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 
 | 기능 | 설명 |
 | --- | --- |
-| Adobe Experience Platform Agents 사용 바인딩된 체험판 | **이제 고객 선택 시 Adobe Experience Platform 에이전트에 무료로 액세스할 수 있습니다**. 체험판을 사용하여 Adobe Experience Platform Agent Orchestrator에서 제공하는 AI Assistant 인터페이스를 통해 에이전트를 탐색하고 상호 작용할 수 있습니다. 이 체험판은 고객의 기존 Experience Cloud 제품 및 환경 컨텍스트 내에서 작동하는 AI 에이전트에 대한 실습 경험을 제공하여 팀이 전체 구매를 약속하기 전에 가치를 평가할 수 있도록 합니다. Adobe Experience Platform 에이전트는 사용자 입력 및 감독에 의해 안내되며 기존 제품 수준 액세스 제어를 준수하여 사용자가 기본 Experience Cloud 애플리케이션 내에서 승인된 작업만 수행하거나 데이터를 볼 수 있도록 합니다. 시작 방법에 대한 자세한 내용은 [Experience Platform 에이전트 사용 제한 평가판 개요](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)를 참조하십시오. |
+| Adobe Experience Platform Agents 사용 바인딩된 체험판 | **이제 고객 선택 시 Adobe Experience Platform 에이전트에 무료로 액세스할 수 있습니다**. 체험판을 사용하여 Adobe Experience Platform Agent Orchestrator에서 제공하는 AI Assistant 인터페이스를 통해 에이전트를 탐색하고 상호 작용할 수 있습니다. 이 체험판은 고객의 기존 Experience Cloud 제품 및 환경 컨텍스트 내에서 작동하는 AI 에이전트에 대한 실습 경험을 제공하여 팀이 전체 구매를 약속하기 전에 가치를 평가할 수 있도록 합니다. Adobe Experience Platform 에이전트는 사용자 입력 및 감독에 의해 안내되며 기존 제품 수준 액세스 제어를 준수하여 사용자가 기본 Experience Cloud 애플리케이션 내에서 승인된 작업만 수행하거나 데이터를 볼 수 있도록 합니다. 시작 방법에 대한 자세한 내용은 [Experience Platform 에이전트 사용 제한 평가판 개요](https://experienceleague.adobe.com/ko/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
