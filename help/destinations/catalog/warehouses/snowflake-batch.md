@@ -4,7 +4,7 @@ description: 라이브 Snowflake 데이터 공유를 만들어 매일 대상자 
 last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
+source-git-commit: 271700625e8cc1d2b5e737e89435c543caa86264
 workflow-type: tm+mt
 source-wordcount: '1662'
 ht-degree: 3%
@@ -136,7 +136,7 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 ### 대상 세부 정보 입력 {#destination-details}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_snowflake_batch_accountID"
+>id="platform_destinations_snowflake_batch_accountid"
 >title="Snowflake 계정 ID 입력"
 >abstract="계정이 조직에 연결되어 있는 경우 다음 형식을 사용합니다. `OrganizationName.AccountName`<br><br> 계정이 조직에 연결되어 있지 않은 경우 다음 형식을 사용합니다. `AccountName`"
 
