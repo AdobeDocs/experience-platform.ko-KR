@@ -1,7 +1,8 @@
 ---
 title: 케벨 연결
 description: Kevel 스트리밍 대상을 사용하여 대상자를 Kevel의 UserDB 및 세그먼트 관리 API로 직접 활성화하고, 의사 결정 시 실시간 타깃팅을 지원합니다.
-source-git-commit: d820485fd81efd08d8626f8476338558c4585c20
+last-substantial-update: 2026-01-27T00:00:00Z
+source-git-commit: 04d01b2deafb1b8f1b0c256f31475bb75989a2c4
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 3%
@@ -19,7 +20,7 @@ Adobe Experience Platform용 [!DNL Kevel] 스트리밍 대상을 사용하면 �
 
 >[!IMPORTANT]
 > 
->질문이 있거나 [!DNL Kevel] 대상 또는 해당 설명서에 대한 업데이트를 요청하려면 [!DNL Kevel]support@kevel.com[에서 &#x200B;](mailto:support@kevel.com) 팀에 전자 메일을 보내십시오.
+>질문이 있거나 [!DNL Kevel] 대상 또는 해당 설명서에 대한 업데이트를 요청하려면 [!DNL Kevel]support@kevel.com[에서 ](mailto:support@kevel.com) 팀에 전자 메일을 보내십시오.
 
 ## 사용 사례 {#use-cases}
 

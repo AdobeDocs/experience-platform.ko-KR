@@ -1,7 +1,8 @@
 ---
 title: 색인 교환
 description: 색인 Exchange(색인)에 연결하고 데이터를 활성화하면 색인 UI에서 만들어진 거래로 대상 세그먼트를 타깃팅할 수 있습니다.
-source-git-commit: 4ecd3b60a6b45a94285785049fd4dee99d7c9bdf
+last-substantial-update: 2026-01-27T00:00:00Z
+source-git-commit: 04d01b2deafb1b8f1b0c256f31475bb75989a2c4
 workflow-type: tm+mt
 source-wordcount: '1083'
 ht-degree: 2%
