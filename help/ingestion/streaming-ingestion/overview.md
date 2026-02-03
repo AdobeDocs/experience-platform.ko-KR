@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스트리밍 수집 개요
 description: Adobe Experience Platform용 스트리밍 수집은 클라이언트 및 서버측 장치에서 실시간으로 Experience Platform으로 데이터를 전송하는 방법을 사용자에게 제공합니다.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: ea693cb4bb732c829d9a477cbd3dcb209da524f3
+source-git-commit: a77be4ef97540b929192fa6f367830f4a29e5af7
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '433'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform을 사용하면 각 개별 고객에 대해 [!DNL Real
 
 다음 비디오에서는 스트리밍 수집에 대한 이해를 돕기 위해 제작되었으며 위의 개념에 대해 간략히 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/31706?captions=kor&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### 프로필 레코드 및 [!DNL ExperienceEvents] 스트리밍
 
@@ -43,7 +43,7 @@ Adobe Experience Platform을 사용하면 각 개별 고객에 대해 [!DNL Real
 
 | 대상 | 예상 지연 시간 |
 | --------- | ---------------- |
-| 실시간 고객 프로필 | 95번째 백분위수에서 15분 미만 |
+| 실시간 고객 프로필 | <ul><li>B2C 데이터 수집의 95번째 백분위수에서 15분 미만입니다.</li><li>B2B 데이터 수집의 95번째 백분위수에서 30분 미만입니다.</li></ul> |
 | 데이터 레이크 | 60분 미만 |
 
 ## 스트리밍 수집에 대한 RPS(초당 요청) 지침
