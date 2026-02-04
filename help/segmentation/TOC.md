@@ -17,7 +17,7 @@ ht-degree: 42%
 
 - [세그먼테이션 서비스 개요](home.md)
 - [세분화 데이터 유형](data-types.md)
-- [세그먼테이션 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [세그먼테이션 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ko#segmentation-guardrails)
 - [대상 유효성 검사](./validation.md)
 - 세그먼테이션 API {#api}
    - [개요](api/overview.md)
