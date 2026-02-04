@@ -96,12 +96,12 @@ ht-degree: 7%
 | 이메일 | 기본 이메일 기본적으로 이 필드는 중복 제거 키로 사용되어 레코드를 고유하게 만듭니다. | 아니요 | 10 | 255 |
 | 휴대폰 | 개인 전화 번호(지역 코드 + 번호)<br> 기본적으로 이 필드는 중복 제거 키로 사용되어 레코드를 고유하게 만듭니다. | 아니요 | 11 | 10 |
 
-**[!UICONTROL Source Field]** 열에서 해당 대상 필드에 매핑할 각 원본 특성의 이름을 입력하거나 화살표 아이콘을 선택하여 **[!UICONTROL  Select source field]** 화면을 엽니다.<br>
+**[!UICONTROL Source Field]** 열에서 해당 대상 필드에 매핑할 각 원본 특성의 이름을 입력하거나 화살표 아이콘을 선택하여 **[!UICONTROL &#x200B; Select source field]** 화면을 엽니다.<br>
 ![매핑 화면](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
 모든 필드를 매핑했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
-[!DNL Adobe's] 표준 스키마를 사용하지 않는 경우 쿼리 서비스를 사용하여 [ 표준 스키마를 필드 이름으로 채우는 방법에 대한 자세한 내용은 ](../../../query-service/ui/overview.md)쿼리 서비스 UI 안내서[!DNL Adobe] 설명서를 참조하십시오.
+[!DNL Adobe's] 표준 스키마를 사용하지 않는 경우 쿼리 서비스를 사용하여 [&#x200B; 표준 스키마를 필드 이름으로 채우는 방법에 대한 자세한 내용은 &#x200B;](../../../query-service/ui/overview.md)쿼리 서비스 UI 안내서[!DNL Adobe] 설명서를 참조하십시오.
 
 ### 검토 {#review}
 
