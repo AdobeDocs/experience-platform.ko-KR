@@ -31,7 +31,7 @@ ht-degree: 1%
    * [데이터 사용 정책](../policies/overview.md): 데이터 사용 정책은 특정 데이터 사용 레이블 집합에 대해 허용되거나 제한되는 마케팅 작업 종류를 설명하는 규칙입니다.
 * [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-이 자습서를 시작하기 전에 필수 헤더와 예제 API 호출을 읽는 방법을 포함하여 [ API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보는 ](../api/getting-started.md)개발자 안내서[!DNL Policy Service]를 검토하십시오.
+이 자습서를 시작하기 전에 필수 헤더와 예제 API 호출을 읽는 방법을 포함하여 [&#x200B; API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보는 &#x200B;](../api/getting-started.md)개발자 안내서[!DNL Policy Service]를 검토하십시오.
 
 ## 레이블 및 마케팅 액션을 사용하여 평가
 
