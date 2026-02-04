@@ -5,10 +5,10 @@ breadcrumb-title: Segmentation Service 안내서
 user-guide-description: Adobe Experience Platform에서 생성한 세그먼트 정의 또는 외부 소스를 사용하여 실시간 고객 프로필 데이터에서 대상자를 빌드합니다.
 feature: Segments
 role: User
-source-git-commit: 60775eeeb0a07a95f3fac86dc4ecc8603328ed49
+source-git-commit: d70aa03400362bb5609623ca5eceefeadd6fe1ce
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 43%
+source-wordcount: '212'
+ht-degree: 42%
 
 ---
 
@@ -17,10 +17,11 @@ ht-degree: 43%
 
 - [세그먼테이션 서비스 개요](home.md)
 - [세분화 데이터 유형](data-types.md)
-- [세그먼테이션 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ko#segmentation-guardrails)
+- [세그먼테이션 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [대상 유효성 검사](./validation.md)
 - 세그먼테이션 API {#api}
    - [개요](api/overview.md)
-   - [시작하기](api/getting-started.md)
+   - [시작](api/getting-started.md)
    - [대상 메타데이터 만들기](api/create-audience.md)
    - [대상자](api/audiences.md)
    - [내보내기 작업](api/export-jobs.md)
