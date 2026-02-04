@@ -3,9 +3,9 @@ title: Acxiom 대상 연결
 description: ' [!DNL Acxiom Audience Connection] 대상을 사용하여 [!DNL Acxiom''s Real ID] 기술로 대상을 향상하고  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등의 여러 플랫폼에 대상을 활성화합니다.'
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 70a1cdcfd99ae006f02289ab5a20ced624b51ccc
+source-git-commit: 582b8b681163a0e40908cf36ba317954a32f73d0
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '872'
 ht-degree: 7%
 
 ---
@@ -32,8 +32,8 @@ ht-degree: 7%
 
 ## 전제 조건 {#prerequisites}
 
-* **사용 약관 확인:** 새 [!DNL Acxiom Audience Connection] 대상을 구성하려면 [!DNL Acxiom's] 사용 약관 계약을 읽고 서명해야 합니다. 실행된 판매 주문이 완료되면 계약 링크를 받게 됩니다. 계약에 서명할 때까지 Experience Platform 대상 카탈로그에 [!DNL Acxiom Audience Connection] 대상 카드가 표시되지 않습니다. 계약에 동의하고 서명하면 [!DNL Adobe]이(가) 온보딩 프로세스를 완료하고 [!DNL Acxiom Audience Connection] 대상 카드가 표시됩니다.
-* **Adobe 조직 ID를 알고 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [!DNL Adobe's]조직 ID를 보는 방법&#x200B;*에 대한 자세한 내용은* [Experience Cloud의 조직](https://experienceleague.adobe.com/ko/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) 항목을 참조하십시오.
+* **사용 약관 확인:** 새 [!DNL Acxiom Audience Connection] 대상을 구성하려면 [!DNL Acxiom's] 사용 약관 계약을 읽고 서명해야 합니다. 실행된 판매 주문이 완료되면 계약 링크를 받게 됩니다.
+* **Adobe 조직 ID를 알고 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [!DNL Adobe's]조직 ID를 보는 방법&#x200B;*에 대한 자세한 내용은* [Experience Cloud의 조직](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) 항목을 참조하십시오.
 
 ## 지원되는 대상 {#supported-destinations}
 
@@ -67,8 +67,8 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상으로 대상을 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](/help/destinations/ui/activate-batch-profile-destinations.md)를 참조하십시오.
 
@@ -96,18 +96,18 @@ ht-degree: 7%
 | 이메일 | 기본 이메일 기본적으로 이 필드는 중복 제거 키로 사용되어 레코드를 고유하게 만듭니다. | 아니요 | 10 | 255 |
 | 휴대폰 | 개인 전화 번호(지역 코드 + 번호)<br> 기본적으로 이 필드는 중복 제거 키로 사용되어 레코드를 고유하게 만듭니다. | 아니요 | 11 | 10 |
 
-**[!UICONTROL Source 필드]** 열에서 해당 대상 필드에 매핑할 각 원본 특성의 이름을 입력하거나 화살표 아이콘을 선택하여 **[!UICONTROL 원본 필드 선택]** 화면을 엽니다.<br>
+**[!UICONTROL Source Field]** 열에서 해당 대상 필드에 매핑할 각 원본 특성의 이름을 입력하거나 화살표 아이콘을 선택하여 **[!UICONTROL  Select source field]** 화면을 엽니다.<br>
 ![매핑 화면](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
-모든 필드를 매핑한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택합니다.
+모든 필드를 매핑했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
-[!DNL Adobe's] 표준 스키마를 사용하지 않는 경우 쿼리 서비스를 사용하여 [&#x200B; 표준 스키마를 필드 이름으로 채우는 방법에 대한 자세한 내용은 &#x200B;](../../../query-service/ui/overview.md)쿼리 서비스 UI 안내서[!DNL Adobe] 설명서를 참조하십시오.
+[!DNL Adobe's] 표준 스키마를 사용하지 않는 경우 쿼리 서비스를 사용하여 [ 표준 스키마를 필드 이름으로 채우는 방법에 대한 자세한 내용은 ](../../../query-service/ui/overview.md)쿼리 서비스 UI 안내서[!DNL Adobe] 설명서를 참조하십시오.
 
 ### 검토 {#review}
 
 위의 모든 단계를 완료하면 대상 연결 상태 및 대상 세부 사항을 검토한 후 활성화(배포)할 수 있습니다. 선택한 대상이 목록의 맨 아래에 표시됩니다. 각 대상자는 [!DNL Acxiom Audience Connection] API에 대한 별도의 호출이 됩니다.
 
-결과에 만족하면 **[!UICONTROL 완료]**&#x200B;를 선택하여 대상을 활성화하세요.
+결과에 만족하면 **[!UICONTROL Finish]**&#x200B;을(를) 선택하여 대상을 활성화하십시오.
 
 ![대상자 검토](../../assets/catalog/advertising/acxiom-audience-distribution/review_audience.png)
 
@@ -128,4 +128,4 @@ ht-degree: 7%
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
-데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/data-governance/home)를 참조하십시오.
+데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)를 참조하십시오.
