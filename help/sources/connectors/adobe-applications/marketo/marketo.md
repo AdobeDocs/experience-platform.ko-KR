@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Marketo Engage 커넥터
 description: 이 문서에서는 인증, 매핑 및 데이터 지연에 대한 정보를 포함하여 Marketo Engage 소스 커넥터에 대한 개요를 제공합니다.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 659e873f9bccdbc0e52a1943a924dc70d3170e96
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 1%
+source-wordcount: '740'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 >
 >이제 Amazon Web Services(AWS)에서 Adobe Experience Platform을 실행할 때 [!DNL Marketo Engage] 소스를 사용할 수 있습니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../../landing/multi-cloud.md)를 참조하세요.
 
-Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집하는 동시에 Experience Platform 서비스를 사용하여 수신 데이터를 구조화하고 레이블을 지정하며 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 [[!DNL Marketo Engage]](https://www.marketo.com/software/)은(는) 리드 관리를 위한 완전한 솔루션이며, 복잡한 구매 여정의 모든 단계에서 고객 경험을 전환하여 고객 경험을 혁신하고자 하는 B2B 마케터입니다.
 
@@ -25,13 +25,13 @@ Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수�
 
 >[!IMPORTANT]
 >
->[실시간 고객 프로필](../../../../profile/home.md)을(를) 사용하여 세분화하기 위해 모든 Marketo 데이터 세트를 사용하려면 [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md)에 액세스할 수 있어야 합니다. Real-Time CDP B2B edition이 없어도 Marketo 소스를 사용하여 세분화를 위해 사람 및 활동 데이터 세트의 데이터를 실시간 고객 프로필로 가져올 수 있습니다.
+>[실시간 고객 프로필](../../../../rtcdp/b2b-overview.md)을(를) 사용하여 세분화하기 위해 모든 Marketo 데이터 세트를 사용하려면 [Adobe Real-Time Customer Data Platform B2B edition](../../../../profile/home.md)에 액세스할 수 있어야 합니다. Real-Time CDP B2B edition이 없어도 Marketo 소스를 사용하여 세분화를 위해 사람 및 활동 데이터 세트의 데이터를 실시간 고객 프로필로 가져올 수 있습니다.
 
 이 문서에서는 커넥터를 인증하는 방법, [!DNL Marketo Engage] 필드를 XDM(Experience Data Model)에 매핑하는 방법, 커넥터의 데이터 지연 시간 등 [!DNL Marketo Engage] 소스 커넥터에 대한 개요를 제공합니다.
 
 ## Adobe 조직 매핑 설정
 
-[!DNL Marketo Engage]에 대한 매핑 집합을 설정하려면 먼저 Adobe 조직 매핑을 설정해야 합니다. 이 작업을 완료하는 방법에 대한 자세한 단계는 [다음에 대한 Adobe 조직 매핑 설정 [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=ko)에 대한 안내서를 참조하십시오.
+[!DNL Marketo Engage]에 대한 매핑 집합을 설정하려면 먼저 Adobe 조직 매핑을 설정해야 합니다. 이 작업을 완료하는 방법에 대한 자세한 단계는 [다음에 대한 Adobe 조직 매핑 설정 [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html)에 대한 안내서를 참조하십시오.
 
 ## [!DNL Marketo Engage] 커넥터 인증
 
@@ -74,12 +74,12 @@ XDM과 Experience Platform에서의 역할에 대한 자세한 내용은 [XDM �
 
 | 대상 | 예상 대기 시간 |
 | ----------- | ---------------- |
-| [!DNL Real-Time Customer Profile] | &lt; 10분 |
+| [!DNL Real-Time Customer Profile] | &lt; 20분 |
 | 데이터 레이크 | 60분 미만 |
 
 >[!NOTE]
 >
->위의 지연 수치는 95% 신뢰 수준에서 기대치를 나타냅니다. 실제 지연 시간은 다양하며 드문 경우 이러한 수치를 50% 초과할 수 있습니다.
+>위의 지연 수치는 95% 신뢰 수준에서 기대치를 나타냅니다. 실제 지연은 다양할 것이고 어떤 경우에는 그러한 수치들을 넘어설 것이다.
 
 ## 다음 단계 및 추가 리소스
 
