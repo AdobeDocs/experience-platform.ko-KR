@@ -5,7 +5,7 @@ title: 정책 서비스 API를 사용하여 데이터 사용 정책 시행
 type: Tutorial
 description: 데이터에 대한 데이터 사용 레이블을 만들고 이러한 레이블에 대한 마케팅 작업에 대한 사용 정책을 만들었으면, Policy Service API 를 사용하여 데이터 세트 또는 임의의 레이블 그룹에 대해 수행된 마케팅 작업이 정책 위반을 구성하는지 여부를 평가할 수 있습니다. 그런 다음 API 응답을 기반으로 정책 위반을 처리하도록 자체 내부 프로토콜을 설정할 수 있습니다.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: c3e12c17967ad46bf2eb8bcbfd00a92317aec8a2
+source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 1%
@@ -31,7 +31,7 @@ ht-degree: 1%
    * [데이터 사용 정책](../policies/overview.md): 데이터 사용 정책은 특정 데이터 사용 레이블 집합에 대해 허용되거나 제한되는 마케팅 작업 종류를 설명하는 규칙입니다.
 * [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-이 자습서를 시작하기 전에 필수 헤더와 예제 API 호출을 읽는 방법을 포함하여 [&#x200B; API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보는 &#x200B;](../api/getting-started.md)개발자 안내서[!DNL Policy Service]를 검토하십시오.
+이 자습서를 시작하기 전에 필수 헤더와 예제 API 호출을 읽는 방법을 포함하여 [ API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보는 ](../api/getting-started.md)개발자 안내서[!DNL Policy Service]를 검토하십시오.
 
 ## 레이블 및 마케팅 액션을 사용하여 평가
 
@@ -134,7 +134,7 @@ curl -X GET \
 
 >[!WARNING]
 >
->데이터 집합 기반 평가를 위한 `/constraints` 끝점은 더 이상 사용되지 않습니다. 정책 위반을 평가하거나 여러 평가 작업을 수행하려면 대신 [일괄 평가 API(`/bulk-eval`)](../api/evaluation.md#evaluate-policies-in-bulk)를 사용하십시오.
+>데이터 집합 기반 평가를 위한 `/constraints` 끝점은 더 이상 사용되지 않습니다. 정책 위반을 평가하거나 여러 평가 작업을 수행하려면 대신 [일괄 평가 API(`/bulk-eval`)](../api/evaluation.md#bulk)를 사용하십시오.
 
 레이블을 수집할 수 있는 하나 이상의 데이터 세트에 대한 마케팅 작업을 테스트하여 데이터 사용 정책을 평가할 수 있습니다. 이 작업은 아래 예와 같이 `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints`에 대한 POST 요청을 수행하고 요청 본문 내에 데이터 세트 ID를 제공하여 수행됩니다.
 

@@ -5,7 +5,7 @@ title: 정책 평가 API 엔드포인트
 description: 마케팅 작업이 생성되고 정책이 정의되면 정책 서비스 API를 사용하여 특정 작업에 의해 위반된 정책이 있는지 평가할 수 있습니다. 반환된 제약 조건은 데이터 사용 레이블이 포함된 지정된 데이터에 대한 마케팅 작업을 시도하여 위반되는 정책 집합의 형태를 취합니다.
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 32e5b2ba04554ba8ed2a73009fae2ea3a3f5328a
+source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 1%
@@ -125,7 +125,7 @@ curl -X GET \
 
 >[!WARNING]
 >
->데이터 집합 기반 평가를 위한 `/constraints` 끝점은 더 이상 사용되지 않습니다. 정책 위반을 평가하거나 여러 평가 작업을 수행하려면 대신 [일괄 평가 API(`/bulk-eval`)](#evaluate-policies-in-bulk)를 사용하십시오.
+>데이터 집합 기반 평가를 위한 `/constraints` 끝점은 더 이상 사용되지 않습니다. 정책 위반을 평가하거나 여러 평가 작업을 수행하려면 대신 [일괄 평가 API(`/bulk-eval`)](#bulk)를 사용하십시오.
 
 데이터 사용 레이블을 수집할 수 있는 하나 이상의 데이터 세트 세트를 기준으로 정책 위반을 평가할 수 있습니다. 이 작업은 특정 마케팅 작업에 대해 `/constraints` 끝점에 대한 POST 요청을 수행하고 요청 본문 내에 데이터 세트 ID 목록을 제공하여 수행됩니다.
 
