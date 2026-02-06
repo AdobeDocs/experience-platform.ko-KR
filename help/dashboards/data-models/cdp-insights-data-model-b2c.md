@@ -326,7 +326,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### ID 중복(프로필) 사용 사례 {#profiles-identity-overlap}
 
-[!UICONTROL Identity overlap] 위젯에서 사용되는 로직은 **프로필 저장소**&#x200B;에서 선택한 두 ID를 포함하는 프로필이 겹치는 것을 표시합니다. 자세한 내용은 [[!UICONTROL Identity overlap] 대시보드 설명서[!UICONTROL Profiles]의 ](../guides/profiles.md#identity-overlap) 위젯 섹션을 참조하십시오.
+[!UICONTROL Identity overlap] 위젯에서 사용되는 로직은 **프로필 저장소**&#x200B;에서 선택한 두 ID를 포함하는 프로필이 겹치는 것을 표시합니다. 자세한 내용은 [[!UICONTROL Identity overlap] 대시보드 설명서[!UICONTROL Profiles]의 &#x200B;](../guides/profiles.md#identity-overlap) 위젯 섹션을 참조하십시오.
 
 [!UICONTROL Identity overlap] 위젯을 생성하는 SQL이 아래의 축소 가능 섹션에 표시됩니다.
 
@@ -395,7 +395,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 #### ID 중복(대상) 사용 사례 {#audiences-identity-overlap}
 
-[!UICONTROL Audiences] 대시보드 [!UICONTROL Identity overlap] 위젯에서 사용되는 논리는 특정 대상에 대해 선택한 두 ID가 포함된 프로필의 겹침을 보여 줍니다. 자세한 내용은 [[!UICONTROL Identity overlap] 대시보드 설명서[!UICONTROL Audiences]의 ](../guides/audiences.md#identity-overlap) 위젯 섹션을 참조하십시오.
+[!UICONTROL Audiences] 대시보드 [!UICONTROL Identity overlap] 위젯에서 사용되는 논리는 특정 대상에 대해 선택한 두 ID가 포함된 프로필의 겹침을 보여 줍니다. 자세한 내용은 [[!UICONTROL Identity overlap] 대시보드 설명서[!UICONTROL Audiences]의 &#x200B;](../guides/audiences.md#identity-overlap) 위젯 섹션을 참조하십시오.
 
 [!UICONTROL Identity overlap] 위젯을 생성하는 SQL이 아래의 축소 가능 섹션에 표시됩니다.
 
