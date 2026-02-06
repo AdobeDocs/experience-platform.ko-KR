@@ -2,13 +2,11 @@
 title: Demandbase 의도
 description: Experience Platform의 Demandbase Intent 소스에 대해 알아봅니다.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
-badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: e223ea754a250956e65c3f526119a3ebd7bb067c
+source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
 workflow-type: tm+mt
-source-wordcount: '1504'
-ht-degree: 1%
+source-wordcount: '1500'
+ht-degree: 2%
 
 ---
 
@@ -54,7 +52,7 @@ Experience Platform의 [!DNL Demandbase]은(는) [!DNL Google Cloud Storage]에 
 | 버킷 이름 | 데이터를 가져올 [!DNL Demandbase] 버킷. |
 | 폴더 경로 | 액세스 권한을 제공할 폴더의 경로입니다. |
 
-이러한 자격 증명에 대한 자세한 내용은 [[!DNL Google Cloud Storage] HMAC 키 안내서](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)를 참조하십시오. 액세스 키를 생성하는 방법에 대한 단계는 [소스 개요 [!DNL Google Cloud Storage] 의 &#x200B;](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)사전 요구 사항 안내서를 참조하십시오.
+이러한 자격 증명에 대한 자세한 내용은 [[!DNL Google Cloud Storage] HMAC 키 안내서](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)를 참조하십시오. 액세스 키를 생성하는 방법에 대한 단계는 [소스 개요 [!DNL Google Cloud Storage] 의 ](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)사전 요구 사항 안내서를 참조하십시오.
 
 ## [!DNL Demandbase] 스키마
 

@@ -2,11 +2,11 @@
 title: Real-Time Customer Data Platform B2B edition의 소스
 description: Adobe Real-Time Customer Data Platform B2B edition의 소스 역할에 대한 개요입니다.
 feature: Sources, Data Ingestion, Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform에서 사용할 수 있는 소스 유형에 대한 자
 
 >[!IMPORTANT]
 >
->B2B 스키마가 [실시간 고객 프로필](../proile/../../profile/home.md)에 참여하려면 [Real-Time Customer Data Platform B2B edition](../../rctcdp/../rtcdp/b2b-overview.md)에 액세스할 수 있어야 합니다.
+>B2B 스키마가 [실시간 고객 프로필](../../rctcdp/../rtcdp/b2b-overview.md)에 참여하려면 [Real-Time Customer Data Platform B2B edition](../proile/../../profile/home.md)에 액세스할 수 있어야 합니다.
 
 다음 문서에서는 [!DNL Marketo]을(를) 사용하여 B2B 데이터를 Experience Platform으로 가져오는 방법에 대한 자세한 정보를 제공합니다.
 

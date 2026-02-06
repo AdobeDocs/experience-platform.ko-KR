@@ -3,18 +3,18 @@ title: Real-Time CDP B2B의 예측 리드 및 계정 점수
 type: Documentation
 description: Experience Platform CDP B2B의 예측 리드 및 계정 점수 기능에 대한 개요와 추가 정보입니다.
 feature: Profiles, B2B
-badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '859'
-ht-degree: 2%
+source-wordcount: '853'
+ht-degree: 3%
 
 ---
 
 # Real-Time CDP B2B의 예측 리드 및 계정 점수
 
-B2B 마케터는 마케팅 단계의 맨 위에서 여러 가지 문제에 직면합니다. 효과를 거두기 위해서는 B2B 마케터들은 많은 수의 사람들이 고가치 타겟에 집중할 수 있도록 자격을 부여하는 자동화된 방법이 필요하다. 자격은 마케팅 전환뿐만 아니라 궁극적인 판매 성과와 일치해야 합니다.
+B2B 마케터는 마케팅 funnel의 맨 위에서 여러 가지 문제에 직면합니다. 효과를 거두기 위해서는 B2B 마케터들은 많은 수의 사람들이 고가치 타겟에 집중할 수 있도록 자격을 부여하는 자동화된 방법이 필요하다. 자격은 마케팅 전환뿐만 아니라 궁극적인 판매 성과와 일치해야 합니다.
 
 계정 은 B2B 제품 및 서비스를 구매하는 최종 엔티티입니다. 효과적인 마케팅 및 판매를 위해 B2B 마케터는 개인의 뿐만 아니라 계정의 구매 가능성까지 알아야 합니다.
 
@@ -52,7 +52,7 @@ B2B 마케터는 마케팅 단계의 맨 위에서 여러 가지 문제에 직�
 
 >[!NOTE]
 > 
->이 알고리즘은 Person:personComponents 필드 그룹의 `sourceAccountKey.sourceKey` 필드만 검사합니다.
+>알고리즘에서는 개인 `sourceAccountKey.sourceKey` 필드 그룹의 :personComponents 필드만 검사합니다.
 
 * 계정 프로필
 
@@ -102,13 +102,13 @@ B2B 마케터는 마케팅 단계의 맨 위에서 여러 가지 문제에 직�
 
 ### 고객 프로필 점수 보기
 
-개인 프로필에 대한 예측 점수를 보려면 왼쪽 패널의 고객 섹션에서 **[!UICONTROL 프로필]**&#x200B;을 선택한 다음 ID 네임스페이스와 ID 값을 입력하십시오. 완료되면 **[!UICONTROL 보기]**&#x200B;를 선택하세요.
+개인 프로필에 대한 예측 점수를 보려면 왼쪽 패널의 고객 섹션에서 **[!UICONTROL Profiles]**&#x200B;을(를) 선택한 다음 ID 네임스페이스와 ID 값을 입력하십시오. 완료되면 **[!UICONTROL View]**&#x200B;을(를) 선택합니다.
 
 그런 다음 목록에서 프로필을 선택합니다.
 
 ![고객 프로필](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-이제 **[!UICONTROL 세부 정보]** 페이지에 예측 점수가 포함됩니다. 예측 점수 옆에 있는 차트 아이콘을 클릭합니다.
+이제 **[!UICONTROL Detail]** 페이지에 예측 점수가 포함됩니다. 예측 점수 옆에 있는 차트 아이콘을 클릭합니다.
 
 ![고객 프로필 예측 점수](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 

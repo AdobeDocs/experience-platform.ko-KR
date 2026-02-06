@@ -2,11 +2,11 @@
 title: Real-Time Customer Data Platform B2B edition에 대한 세그멘테이션 사용 사례
 description: 사용 가능한 다양한 Adobe Real-Time Customer Data Platform B2B edition 사용 사례에 대한 개요입니다.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: d1f48140922b4c98f75b4c9af9e1706a402319a4
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1603'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ B2B 사용 사례에 대한 대상을 효과적으로 만들려면 스키마에 
 
 데이터 모델은 복잡할 수 있으므로, 사용 사례에 대한 관련 속성을 찾는 데 도움이 되도록 Platform UI를 사용하여 데이터 모델에 대한 보다 자세한 시각적 표현을 볼 수 있습니다. 시작하려면 Platform UI로 이동한 다음 왼쪽 탐색에서 스키마 를 선택합니다.
 
-사용 가능한 목록에서 적절한 스키마를 선택하고 [!UICONTROL 컴포지션] 쪽 레일에서 적절한 관계를 선택합니다. 아래 예에서 &quot;사람&quot; 관계를 선택하면 현재 스키마에서 관련 &quot;사람&quot; 스키마를 참조하거나(관계의 소스 스키마인 경우) &quot;사람&quot; 스키마에서 참조한(관계의 참조 스키마인 경우) 속성이 표시됩니다.
+사용 가능한 목록에서 적절한 스키마를 선택하고 [!UICONTROL Composition]측 레일에서 적절한 관계를 선택합니다. 아래 예에서 &quot;사람&quot; 관계를 선택하면 현재 스키마에서 관련 &quot;사람&quot; 스키마를 참조하거나(관계의 소스 스키마인 경우) &quot;사람&quot; 스키마에서 참조한(관계의 참조 스키마인 경우) 속성이 표시됩니다.
 
 스키마 작업 영역에서 사람 관계를 사용하는 ![소스 키 예](../assets/segmentation/b2b/source-key-schema-relationship-example.png)
 
@@ -74,23 +74,23 @@ B2B 사용 사례에 대한 대상을 효과적으로 만들려면 스키마에 
 
 ## 다양한 세분화 사용 사례의 예 {#use-cases}
 
-B2B edition을 사용한 세그멘테이션에 다음 사용 사례를 사용할 수 있습니다. 각 예는 대상자가 수행하는 작업과 이 대상자를 만드는 데 사용되는 클래스에 대한 설명을 제공합니다. 제공된 이미지는 스키마의 구조를 반영하는 [!UICONTROL 특성] 쪽 레일의 파일 경로를 강조 표시합니다. 디스플레이 오른쪽의 [!UICONTROL 세그먼트 속성] 섹션에는 대상자의 특성에 대한 서면 분류가 포함되어 있습니다.
+B2B edition을 사용한 세그멘테이션에 다음 사용 사례를 사용할 수 있습니다. 각 예는 대상자가 수행하는 작업과 이 대상자를 만드는 데 사용되는 클래스에 대한 설명을 제공합니다. 제공된 이미지는 [!UICONTROL Attributes]측 레일의 파일 경로를 강조 표시하고 스키마의 구조를 반영합니다. 디스플레이 오른쪽의 [!UICONTROL Segment properties] 섹션에는 대상자의 특성에 대한 서면 분류가 포함되어 있습니다.
 
 ### 예제 1: B2B 기회에 대한 &quot;의사 결정자&quot; 찾기 {#find-decision-maker}
 
-모든 기회의 &quot;의사 결정자&quot;인 모든 사람을 찾습니다. 이 대상자는 [!UICONTROL XDM 개별 프로필] 클래스와 [!UICONTROL XDM 비즈니스 영업 기회 사용자 관계] 클래스 간의 링크가 필요합니다.
+모든 기회의 &quot;의사 결정자&quot;인 모든 사람을 찾습니다. 이 대상자는 [!UICONTROL XDM Individual Profile] 클래스와 [!UICONTROL XDM Business Opportunity Person Relation] 클래스 간의 연결이 필요합니다.
 
 ![UI에 예제 1 설정이 표시됨](../assets/segmentation/b2b/example-1.png)
 
 ### 예 2: 특정 달러 금액 이상의 기회에 지정된 B2B 프로필 찾기 {#find-opportunities-amount}
 
-영업 기회 금액이 지정된 금액(100만 달러)보다 많은 영업 기회에 직접 할당된 모든 직원을 찾습니다. 이 대상자는 [!UICONTROL XDM 개별 프로필] 클래스, [!UICONTROL XDM 비즈니스 영업 기회 사용자 관계] 클래스와 [!UICONTROL XDM 비즈니스 영업 기회] 클래스 간의 링크가 필요합니다.
+영업 기회 금액이 지정된 금액(100만 달러)보다 많은 영업 기회에 직접 할당된 모든 직원을 찾습니다. 이 대상자는 [!UICONTROL XDM Individual Profile] 클래스, [!UICONTROL XDM Business Opportunity Person Relation] 클래스 및 [!UICONTROL XDM Business Opportunity] 클래스 간의 연결이 필요합니다.
 
 ![UI에 예제 2 설정이 표시됨](../assets/segmentation/b2b/example-2.png)
 
 ### 예제 3: 위치별로 기회에 지정된 B2B 프로필 찾기 {#find-opportunities-location}
 
-계정이 지정된 위치(캐나다)에 있는 기회에 직접 할당된 모든 직원을 찾습니다. 이 대상자는 [!UICONTROL XDM 개별 프로필] 클래스, [!UICONTROL XDM 비즈니스 영업 기회 사용자 관계] 클래스, [!UICONTROL XDM 비즈니스 영업 기회] 클래스와 [!UICONTROL XDM 비즈니스 계정] 클래스 간의 링크가 필요합니다.
+계정이 지정된 위치(캐나다)에 있는 기회에 직접 할당된 모든 직원을 찾습니다. 이 대상자는 [!UICONTROL XDM Individual Profile] 클래스, [!UICONTROL XDM Business Opportunity Person Relation] 클래스, [!UICONTROL XDM Business Opportunity] 클래스 및 [!UICONTROL XDM Business Account] 클래스 간의 연결이 필요합니다.
 
 ![UI에 예제 3 설정이 표시됨](../assets/segmentation/b2b/example-3.png)
 
@@ -108,13 +108,13 @@ B2B edition을 사용한 세그멘테이션에 다음 사용 사례를 사용할
 
 ### 예 5: 부서명 및 기회 금액별로 기회에 대한 B2B 프로파일 찾기 {#find-department-opportunity-amount}
 
-HR(인사 관리) 부서에서 근무하며 주어진 금액(100만 달러) 이상의 가치를 지닌 영업 기회가 하나 이상 개설된 계정을 보유한 모든 직원을 찾습니다. 이 대상자는 [!UICONTROL XDM 개인 프로필] 클래스, [!UICONTROL XDM 비즈니스 계정] 클래스와 [!UICONTROL XDM 비즈니스 영업 기회] 클래스 간의 링크가 필요합니다.
+HR(인사 관리) 부서에서 근무하며 주어진 금액(100만 달러) 이상의 가치를 지닌 영업 기회가 하나 이상 개설된 계정을 보유한 모든 직원을 찾습니다. 이 대상자는 [!UICONTROL XDM Individual Profile] 클래스, [!UICONTROL XDM Business Account] 클래스 및 [!UICONTROL XDM Business Opportunity] 클래스 간의 연결이 필요합니다.
 
 ![UI에 예제 5 설정이 표시됨](../assets/segmentation/b2b/example-5.png)
 
 ### 예 6: 직책 및 연간 계정 매출액별로 B2B 프로필 찾기 {#find-by-job-title-and-revenue}
 
-직함이 부사장이고 연간 매출액(1억 달러) 이상의 계정이 있으며 지난 달에 최소 3번 가격 책정 페이지를 방문한 적이 있는 사람을 모두 찾아보십시오. 이 대상자는 [!UICONTROL XDM 개인 프로필] 클래스, [!UICONTROL XDM 비즈니스 계정] 클래스와 [!UICONTROL XDM ExperienceEvent] 클래스 간의 링크가 필요합니다.
+직함이 부사장이고 연간 매출액(1억 달러) 이상의 계정이 있으며 지난 달에 최소 3번 가격 책정 페이지를 방문한 적이 있는 사람을 모두 찾아보십시오. 이 대상자는 [!UICONTROL XDM Individual Profile] 클래스, [!UICONTROL XDM Business Account] 클래스 및 [!UICONTROL XDM ExperienceEvent] 클래스 간의 연결이 필요합니다.
 
 ![UI에 예제 6 설정이 표시됨](../assets/segmentation/b2b/example-6.png)
 
@@ -132,7 +132,7 @@ HR(인사 관리) 부서에서 근무하며 주어진 금액(100만 달러) 이�
 
 ### 예제 8: 관련 계정을 사용하여 세그멘테이션 도달 범위 확장 {#related-accounts}
 
-HR(인사 관리) 부서에서 근무하며 지정된 금액(100만 달러) 이상의 공개 기회가 하나 이상 있는 *계정 또는 계정의 관련 계정 중 하나와 관련된 모든 직원을 찾습니다*. 이 대상자는 [!UICONTROL XDM 개인 프로필] 클래스, [!UICONTROL XDM 비즈니스 계정] 클래스와 [!UICONTROL XDM 비즈니스 영업 기회] 클래스 간의 링크가 필요합니다.
+HR(인사 관리) 부서에서 근무하며 지정된 금액(100만 달러) 이상의 공개 기회가 하나 이상 있는 *계정 또는 계정의 관련 계정 중 하나와 관련된 모든 직원을 찾습니다*. 이 대상자는 [!UICONTROL XDM Individual Profile] 클래스, [!UICONTROL XDM Business Account] 클래스 및 [!UICONTROL XDM Business Opportunity] 클래스 간의 연결이 필요합니다.
 
 ![관련 계정에 대한 세분화를 표시하는 UI](../assets/segmentation/b2b/example-8.png)
 

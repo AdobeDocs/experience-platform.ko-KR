@@ -1,12 +1,11 @@
 ---
 title: 계정 프로필 통찰력
 description: 계정 프로필 인사이트를 제공하는 SQL을 살펴보고 이러한 쿼리를 사용하여 고객 및 고객 경험을 추가로 살펴보는 사용자 지정 인사이트를 생성하십시오.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: null
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -19,15 +18,15 @@ ht-degree: 0%
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-다음 인사이트는 모두 [계정 프로필 대시보드](../guides/account-profiles.md) 또는 [사용자 지정 대시보드](../standard-dashboards.md)의 일부로 사용할 수 있습니다. 위젯 라이브러리 및 [사용자 정의 대시보드](../standard-dashboards.md#create-widget)에서 대시보드를 사용자 정의하거나 [새 위젯을 만들고 편집](../customize/custom-widgets.md)하는 방법에 대한 지침은 [사용자 정의 개요](../customize/overview.md)를 참조하세요.
+다음 인사이트는 모두 [계정 프로필 대시보드](../guides/account-profiles.md) 또는 [사용자 지정 대시보드](../standard-dashboards.md)의 일부로 사용할 수 있습니다. 위젯 라이브러리 및 [사용자 정의 대시보드](../customize/overview.md)에서 대시보드를 사용자 정의하거나 [새 위젯을 만들고 편집](../customize/custom-widgets.md)하는 방법에 대한 지침은 [사용자 정의 개요](../standard-dashboards.md#create-widget)를 참조하세요.
 
 ## 계정 프로필 추가됨 {#account-profiles-added}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 지정된 기간 동안 얼마나 많은 계정 프로필이 추가되었습니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 WITH accounts_by_mm_dd AS
@@ -49,11 +48,11 @@ ORDER BY date_key limit 5000;
 
 ## 업종별 신규 계정 {#accounts-by-industry}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 계정 프로필이 속하는 상위 5개 산업은 무엇입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 WITH rankedindustries AS
@@ -85,11 +84,11 @@ ORDER BY total_accounts DESC limit 5000;
 
 ## 유형별 새 계정 {#accounts-by-type}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 유형별 계정 수는 얼마입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT t.account_type,
@@ -108,11 +107,11 @@ LIMIT  5000;
 
 ## 기회 추가됨 {#opportunities-added}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 주어진 기간 동안 몇 개의 기회가 추가되었습니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT d.date_key,
@@ -131,11 +130,11 @@ LIMIT  5000;
 
 ## 개인 역할별 새로운 기회 {#opportunities-by-person-role}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 기회에서 다양한 역할의 상대적 크기와 수는 얼마입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT p.person_role,
@@ -153,11 +152,11 @@ LIMIT  5000;
 
 ## 매출액별 새로운 기회 {#opportunities-by-revenue}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 매출(USD)로 순위가 매겨진 상위 20개 기회는 무엇입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 WITH ranked_opportunities AS
@@ -193,12 +192,12 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 ## 상태 및 단계별 새로운 기회 {#opportunities-by-status-and-stage}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
-- 어떤 오픈 기회가 있으며 판매 또는 마케팅 단계의 어느 단계에 있습니까?
-- 마감된 영업 기회는 무엇이며, 영업 또는 마케팅 단계의 어느 단계에 있습니까?
+- 어떤 오픈 기회가 있으며, 영업 또는 마케팅 funnel의 어느 단계에 있습니까?
+- 마감된 영업 기회는 무엇이며, 영업 또는 마케팅 funnel의 어느 단계에 있습니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 WITH opportunities_by_isclosed AS
@@ -226,11 +225,11 @@ FROM   opportunities_by_isclosed limit 5000;
 
 ## 획득한 새로운 영업 기회 {#opportunities-won}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 정상적으로 종료되거나 완료된 영업 기회의 수는 얼마입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 WITH opportunities_by_iswon AS
@@ -255,11 +254,11 @@ FROM   opportunities_by_iswon limit 5000;
 
 <!-- Q) Can we change this name? -->
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 주어진 기간 동안 성공적으로 마감되거나 최종 확정(원)된 기회는 몇 개입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 WITH opportunities_won_counts AS
@@ -285,13 +284,13 @@ ORDER BY  d.date_key limit 5000;
 
 >[!NOTE]
 >
->[!UICONTROL 계정당 고객 개요] 차트에는 [!UICONTROL 계정당 고객 세부 정보], [!UICONTROL 계정당 기회 개요] 및 [!UICONTROL 계정당 기회 세부 정보]의 세 가지 드릴스루 인사이트가 포함됩니다. 이러한 드릴스루는 카테고리(예: 직접 및 간접 고객)와 범위(예: 고객 및 기회 수 범위)별로 고객 및 기회 수를 분류하여 보다 세분화된 통찰력을 제공합니다. 이러한 차트는 사용자가 설정했을 수 있는 글로벌 날짜 필터의 영향을 받지 않습니다.
+>[!UICONTROL Customers per Account Overview] 차트에는 [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunities per Account Overview] 및 [!UICONTROL Opportunities per Account Detail]의 세 가지 드릴스루 인사이트가 포함되어 있습니다. 이러한 드릴스루는 카테고리(예: 직접 및 간접 고객)와 범위(예: 고객 및 기회 수 범위)별로 고객 및 기회 수를 분류하여 보다 세분화된 통찰력을 제공합니다. 이러한 차트는 사용자가 설정했을 수 있는 글로벌 날짜 필터의 영향을 받지 않습니다.
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 직간접 고객 유무에 따른 계좌의 분포는 어떠한가?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 WITH LatestDate AS (SELECT MAX(inserted_date) AS max_inserted_date FROM adwh_b2b_account_person_association),
@@ -329,13 +328,13 @@ ORDER BY ac.Account_Category;
 
 >[!NOTE]
 >
->이 인사이트는 글로벌 날짜 필터의 영향을 받지 않습니다.
+>이 insight은 글로벌 날짜 필터의 영향을 받지 않습니다.
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 직접 또는 간접 고객 범위가 다른 계정은 몇 개입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 WITH customer_ranges AS (
@@ -403,13 +402,13 @@ ORDER BY cr.customer_type,
 
 >[!NOTE]
 >
->이 인사이트는 글로벌 날짜 필터의 영향을 받지 않습니다.
+>이 insight은 글로벌 날짜 필터의 영향을 받지 않습니다.
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 관련 영업 기회가 있는지 여부에 따른 계정 분포는 무엇입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 WITH LatestDate AS (
@@ -453,13 +452,13 @@ ORDER BY ac.Opportunity_Category;
 
 >[!NOTE]
 >
->이 인사이트는 글로벌 날짜 필터의 영향을 받지 않습니다.
+>이 insight은 글로벌 날짜 필터의 영향을 받지 않습니다.
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 몇 개의 고객이 서로 다른 범위의 연계 기회를 가지고 있습니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 WITH opportunity_ranges AS (

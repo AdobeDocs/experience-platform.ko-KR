@@ -3,12 +3,12 @@ title: Real-Time CDP B2B에서 계정 일치로 리드
 type: Documentation
 description: Experience Platform CDP B2B의 리드-계정 일치 기능에 대한 개요 및 추가 정보입니다.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 4ba609e777716b1b38f5b143587e5476d851e344
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 3%
+source-wordcount: '402'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 3%
 - 개인 이름
 - 이메일 주소
 - 연락처 번호
-- 회사명
+- 회사 이름
 - 회사 웹 사이트
 - 직위
 - 위치
@@ -62,11 +62,11 @@ workEmail 속성은 B2B 개인 스키마에서 최상위 필드 그룹으로 찾
 
 작업 실행 후 결과는 기존 계정 사용자 관계 XDM의 새 데이터 세트에 저장됩니다.
 
-데이터 집합을 미리 보려면 오른쪽 상단에서 **[!UICONTROL 데이터 집합 미리 보기]**&#x200B;를 선택하십시오.
+데이터 집합을 미리 보려면 오른쪽 상단에서 **[!UICONTROL Preview dataset]**&#x200B;을(를) 선택하십시오.
 
 ![새 데이터 세트](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
-데이터 세트에는 일치된 계정 정보와 선택한 데이터 세트에 대한 일치 점수가 포함됩니다. **[!UICONTROL 관계 Source]** 필드는 잠재 고객에서 계정 일치 프로세스로의 관계 여부를 나타냅니다.
+데이터 세트에는 일치된 계정 정보와 선택한 데이터 세트에 대한 일치 점수가 포함됩니다. **[!UICONTROL Relationship Source]** 필드는 리드 대 계정 일치 프로세스에서 가져왔는지 여부를 나타냅니다.
 
 ![데이터 집합 신뢰도 점수 및 출력 미리 보기](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 

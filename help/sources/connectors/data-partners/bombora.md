@@ -2,12 +2,10 @@
 title: 봄보라 의도
 description: Experience Platform의 Bombora Intent 소스에 대해 알아봅니다.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
-badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
+source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1593'
 ht-degree: 1%
 
 ---
@@ -48,7 +46,7 @@ B2B 마케터는 Real-Time CDP에서 계정 목록을 만들어 높은 의도를
 
 ### Experience Platform에 대한 권한 구성
 
-**[!UICONTROL 계정을 Experience Platform에 연결하려면 계정에 대해]**&#x200B;소스 보기&#x200B;**[!UICONTROL 및]**&#x200B;소스 관리[!DNL Bombora] 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/abac/ui/permissions.md)를 참조하십시오.
+**[!UICONTROL View Sources]** 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL Manage Sources]** 및 [!DNL Bombora] 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/abac/ui/permissions.md)를 참조하십시오.
 
 ### 파일 및 디렉터리에 대한 이름 지정 제약 조건
 
@@ -71,7 +69,7 @@ Experience Platform의 [!DNL Bombora]은(는) [!DNL Google Cloud Storage]에 의
 | 비밀 액세스 키 | [!DNL Bombora] 비밀 액세스 키입니다. Experience Platform 계정을 인증하는 데 필요한 40자의 Base64로 인코딩된 문자열입니다. |
 | 버킷 이름 | 데이터를 가져올 [!DNL Bombora] 버킷. |
 
-이러한 자격 증명에 대한 자세한 내용은 [[!DNL Google Cloud Storage] HMAC 키 안내서](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)를 참조하십시오. 액세스 키를 생성하는 방법에 대한 단계는 [소스 개요 [!DNL Google Cloud Storage] 의 &#x200B;](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)사전 요구 사항 안내서를 참조하십시오.
+이러한 자격 증명에 대한 자세한 내용은 [[!DNL Google Cloud Storage] HMAC 키 안내서](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)를 참조하십시오. 액세스 키를 생성하는 방법에 대한 단계는 [소스 개요 [!DNL Google Cloud Storage] 의 ](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)사전 요구 사항 안내서를 참조하십시오.
 
 ## [!DNL Bombora] 스키마 {#schema}
 

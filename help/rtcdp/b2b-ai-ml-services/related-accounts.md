@@ -1,24 +1,24 @@
 ---
-title: Real-Time CDP B2B 에디션의 관련 계정
+title: Real-Time CDP B2B edition의 관련 계정
 type: Documentation
-description: Real-Time CDP B2B Experience Platform의 관련 계정 기능에 대한 개요 및 추가 정보입니다.
+description: Experience Platform Real-Time CDP B2B의 관련 계정 기능에 대한 개요 및 추가 정보입니다.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 4%
+source-wordcount: '427'
+ht-degree: 5%
 
 ---
 
-# Real-Time CDP B2B 에디션의 관련 계정
+# Real-Time CDP B2B edition의 관련 계정
 
 ## 개요 {#overview}
 
 B2B 기업은 고객 정보가 여러 시스템에 저장되어 있는 경우가 많으며, 각 시스템에는 동일한 실제 사업체에 대한 부분적인 데이터만 포함되어 있거나 심지어 충돌하는 데이터도 포함되어 있습니다. 따라서 B2B 마케팅 및 판매 노력의 효율성과 효과를 줄이기 위해 고객을 정확하게 파악해야 하는 과제가 커집니다.
 
-| ID | 이름 | 웹 사이트 | 산업 | 주/도 | 휴대폰 | 금액이 `$1 million`보다 큰 영업 기회가 열려 있습니다. |
+| ID | 이름 | 웹 사이트 | 업계 | 주/도 | 휴대폰 | 금액이 `$1 million`보다 큰 영업 기회가 열려 있습니다. |
 |---|---|---|---|---|---|---|
 | 1 | Acme | acme.com | 소프트웨어 | CA | (408)536-6000 |   |
 | 2 | Acme | acm.com | 소프트웨어 | CA | 4085366000 | x |
@@ -36,11 +36,11 @@ B2B 기업은 고객 정보가 여러 시스템에 저장되어 있는 경우가
 
 ## 관련 계정 서비스 활성화 {#enable}
 
-서비스를 사용하려면 사이드바에서 **[!UICONTROL 프로필]**&#x200B;을 선택한 후 **[!UICONTROL 설정]**&#x200B;을 선택하십시오.
+서비스를 사용하려면 사이드바에서 **[!UICONTROL Profiles]**&#x200B;을(를) 선택한 후 **[!UICONTROL Settings]**&#x200B;을(를) 선택하십시오.
 
-![Experience Platform UI에서 프로필 및 설정을 강조 표시합니다.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+![프로필 및 설정을 강조 표시하는 Experience Platform UI](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
-[!UICONTROL 관련 계정 사용] 옆의 토글을 선택하여 서비스를 사용하도록 설정한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+[!UICONTROL Enable related accounts] 옆의 토글을 선택하여 서비스를 사용하도록 설정한 다음 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
 ![전환 및 저장을 강조 표시하는 계정 설정 화면](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 

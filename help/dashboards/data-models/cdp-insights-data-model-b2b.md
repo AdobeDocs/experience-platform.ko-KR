@@ -1,19 +1,18 @@
 ---
-title: Real-time Customer Data Platform 통찰력 데이터 모델 B2B edition
-description: Real-time Customer Data Platform Insights 데이터 모델(B2B edition)과 함께 SQL 쿼리를 사용하여 마케팅 및 KPI 사용 사례에 맞게 고유한 Real-Time CDP 보고서를 사용자 지정하는 방법을 알아봅니다.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+title: Real-Time Customer Data Platform 통찰력 데이터 모델 B2B edition
+description: Real-Time Customer Data Platform Insights 데이터 모델(B2B edition)과 함께 SQL 쿼리를 사용하여 마케팅 및 KPI 사용 사례에 맞게 고유한 Real-Time CDP 보고서를 사용자 지정하는 방법을 알아봅니다.
+badgeB2B: null
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 0%
+source-wordcount: '438'
+ht-degree: 1%
 
 ---
 
 # Real-Time CDP Insights 데이터 모델 B2B edition
 
-B2B edition용 Real-Time CDP Insights 데이터 모델은 [계정 프로필](https://experienceleague.adobe.com/ko/docs/experience-platform/rtcdp/account/account-profile-overview)에 대한 인사이트를 제공하는 데이터 모델과 SQL을 노출합니다. 이러한 SQL 쿼리 템플릿을 사용자 지정하여 B2B 마케팅 및 KPI(주요 성능 지표) 사용 사례에 대한 Real-Time CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 인사이트를 대시보드의 사용자 정의 위젯으로 사용할 수 있습니다.
+B2B edition용 Real-Time CDP Insights 데이터 모델은 [계정 프로필](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview)에 대한 인사이트를 제공하는 데이터 모델과 SQL을 노출합니다. 이러한 SQL 쿼리 템플릿을 사용자 지정하여 B2B 마케팅 및 KPI(주요 성능 지표) 사용 사례에 대한 Real-Time CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 인사이트를 대시보드의 사용자 정의 위젯으로 사용할 수 있습니다.
 
 >[!AVAILABILITY]
 >
@@ -27,7 +26,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 이 안내서를 사용하려면 사용자 정의 대시보드에 대한 작업 이해가 필요합니다. 이 안내서를 계속하기 전에 [사용자 지정 대시보드를 만드는 방법](../standard-dashboards.md)에 대한 설명서를 읽어 보십시오.
 
-## Real-Time CDP B2B 인사이트 보고서 및 사용 사례 {#B2B-insight-reports-and-use-cases}
+## Real-Time CDP B2B insight 보고서 및 사용 사례 {#B2B-insight-reports-and-use-cases}
 
 Real-Time CDP B2B 보고에서는 계정 프로필 데이터와 계정 및 기회 간의 관계에 대한 통찰력을 제공합니다. 다음의 스타 스키마 모델은 다양한 일반적인 마케팅 사용 사례에 답변할 수 있도록 개발되었으며 각 데이터 모델은 여러 사용 사례를 지원할 수 있습니다.
 
@@ -52,13 +51,13 @@ Real-Time CDP B2B 보고에서는 계정 프로필 데이터와 계정 및 기�
 
 #### 업종별 새 계정 사용 사례 {#accounts-by-industry}
 
-[!UICONTROL 업종별 새 계정] 인사이트에 사용된 논리는 상위 5개 업종을 계정 프로필 수와 상대 크기에 따라 반환합니다. 자세한 내용은 [[!UICONTROL 업종별 새 계정] 위젯 설명서](../guides/account-profiles.md#accounts-by-industry)를 참조하십시오.
+[!UICONTROL New accounts by industry] insight에 사용된 논리는 계정 프로필 수와 상대 크기에 따라 상위 5개 산업을 반환합니다. 자세한 내용은 [[!UICONTROL New accounts By Industry] 위젯 설명서](../guides/account-profiles.md#accounts-by-industry)를 참조하세요.
 
 >[!TIP]
 >
 >이 SQL 쿼리를 사용자 지정하여 상위 5개 산업보다 많거나 적은 수의 산업을 반환할 수 있습니다.
 
-[!UICONTROL 업종별 새 계정] 인사이트를 생성하는 SQL은 아래 축소 가능 섹션에 표시됩니다.
+[!UICONTROL New accounts by industry] insight을 생성하는 SQL이 아래의 축소 가능 섹션에 표시됩니다.
 
 +++SQL 쿼리
 
@@ -97,9 +96,9 @@ LIMIT 5000;
 
 #### 유형별 새 계정 사용 사례 {#accounts-by-type}
 
-[!UICONTROL 유형별 새 계정] 인사이트에 사용된 논리는 해당 유형별 계정의 숫자 분류를 반환합니다. 이러한 통찰력은 리소스 할당 또는 마케팅 전략을 포함하여 비즈니스 전략 및 운영을 안내하는 데 도움이 될 수 있습니다. 자세한 내용은 [[!UICONTROL 유형별 새 계정] 위젯 설명서](../guides/account-profiles.md#accounts-by-type)를 참조하십시오.
+[!UICONTROL New accounts by type] insight에 사용된 논리는 계정 유형별 숫자 분류를 반환합니다. 이 insight은 리소스 할당 또는 마케팅 전략을 포함하여 비즈니스 전략 및 운영을 안내하는 데 도움이 될 수 있습니다. 자세한 내용은 [[!UICONTROL New accounts by type] 위젯 설명서](../guides/account-profiles.md#accounts-by-type)를 참조하세요.
 
-[!UICONTROL 유형별 새 계정] 인사이트를 생성하는 SQL은 아래 축소 가능 섹션에 표시됩니다.
+[!UICONTROL New accounts by type] insight을 생성하는 SQL이 아래의 축소 가능 섹션에 표시됩니다.
 
 +++SQL 쿼리
 

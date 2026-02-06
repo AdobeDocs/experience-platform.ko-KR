@@ -1,18 +1,18 @@
 ---
 title: Real-Time CDP B2B에서 예측 리드 및 계정 점수 관리
 type: Documentation
-description: 이 문서에서는 Experience Platform CDP B2B의 예측 리드 및 계정 점수 기능을 관리하는 방법에 대한 정보를 제공합니다.
+description: 이 문서에서는 Experience Platform CDP B2B의 예측 리드 및 계정 점수 책정 기능 관리에 대한 정보를 제공합니다.
 feature: Profiles, B2B
-badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '982'
 ht-degree: 3%
 
 ---
 
-# Adobe Real-time Customer Data Platform, B2B 에디션에서 예측 리드 및 계정 점수 관리
+# Adobe Real-Time Customer Data Platform, B2B edition에서 예측 리드 및 계정 점수 관리
 
 >[!NOTE]
 >
@@ -22,27 +22,27 @@ ht-degree: 3%
 
 ## 새 점수 만들기
 
-새 점수를 만들려면 사이드바에서 **[!UICONTROL 서비스]**&#x200B;를 선택하고 **[!UICONTROL 점수 만들기]**&#x200B;를 선택하십시오.
+새 점수를 만들려면 사이드바에서 **[!UICONTROL Services]**&#x200B;을(를) 선택하고 **[!UICONTROL Create score]**&#x200B;을(를) 선택하십시오.
 
 ![plas-new-score](../assets/../b2b-ai-ml-services/assets/plas-create-score.png)
 
-**[!UICONTROL 기본 정보]** 화면이 나타나고 프로필 유형을 선택하고 이름 및 설명(선택 사항)을 입력하라는 메시지가 표시됩니다. 완료되면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+프로필 유형을 선택하고 이름 및 설명(선택 사항)을 입력하라는 메시지가 표시되는 **[!UICONTROL Basic information]** 화면이 나타납니다. 완료되면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ![plas-enter-basic-information](../assets/../b2b-ai-ml-services/assets/plas-basic-information.png)
 
-**[!UICONTROL 목표 정의]** 화면이 나타납니다. 드롭다운 화살표를 선택한 다음 표시되는 드롭다운 창에서 목표 유형을 선택합니다.
+**[!UICONTROL Define your goal]** 화면이 나타납니다. 드롭다운 화살표를 선택한 다음 표시되는 드롭다운 창에서 목표 유형을 선택합니다.
 
 ![plas-select-a-goal](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
 
-**[!UICONTROL 목표 세부 정보]** 대화 상자가 열립니다. 드롭다운 화살표를 선택한 다음 표시되는 드롭다운 창에서 목표 필드 이름 을 선택합니다.
+**[!UICONTROL Goal specifics]** 대화 상자가 열립니다. 드롭다운 화살표를 선택한 다음 표시되는 드롭다운 창에서 목표 필드 이름 을 선택합니다.
 
 ![plas-select-a-goal-field-name](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
 
-**[!UICONTROL 목표 조건]** 선택이 나타납니다. 드롭다운 화살표를 선택한 다음 표시되는 드롭다운 창에서 조건 을 선택합니다.
+**[!UICONTROL Goal conditions]** 선택 항목이 나타납니다. 드롭다운 화살표를 선택한 다음 표시되는 드롭다운 창에서 조건 을 선택합니다.
 
 ![plas-goal-specifications-condition](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
 
-**[!UICONTROL 목표 값]** 필드가 나타납니다. 다음으로 [!UICONTROL 목표 세부 사항]을 구성하십시오. [!UICONTROL 필드 값 입력] 패널을 선택하고 목표 값을 입력하십시오.
+**[!UICONTROL Goal value]** 필드가 나타납니다. 그런 다음 [!UICONTROL Goal specifics]을(를) 구성합니다. [!UICONTROL Enter Field Value] 패널을 선택하고 목표 값을 입력하십시오.
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ ht-degree: 3%
 
 ![plas-goal-specifications-field-value](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-value.png)
 
-필드를 추가하려면 **[!UICONTROL 필드 추가]**&#x200B;를 선택하십시오.
+필드를 추가하려면 **[!UICONTROL Add field]**&#x200B;을(를) 선택하십시오.
 
 ![plas-goal-specifications-add-event](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-add-event.png)
 
@@ -58,9 +58,9 @@ ht-degree: 3%
 
 ![plas-prediction-timeframe](../assets/../b2b-ai-ml-services/assets/plas-prediction-timeframe.png)
 
-선택한 병합 정책은 개인 프로필의 필드 값을 선택하는 방법을 결정합니다. 드롭다운 화살표를 사용하여 선택한 병합 정책을 선택한 다음 **[!UICONTROL 마침]**&#x200B;을 선택합니다.
+선택한 병합 정책은 개인 프로필의 필드 값을 선택하는 방법을 결정합니다. 드롭다운 화살표를 사용하여 선택한 병합 정책을 선택한 다음 **[!UICONTROL Finish]**&#x200B;을(를) 선택합니다.
 
-**[!UICONTROL 채점 설정이 완료되었습니다]** 대화 상자가 표시되어 새 점수가 생성되었음을 확인합니다. **[!UICONTROL 확인]**&#x200B;을 선택합니다.
+새 점수가 만들어졌음을 확인하는 **[!UICONTROL Scoring setup is complete]** 대화 상자가 나타납니다. **[!UICONTROL OK]**&#x200B;를 선택합니다.
 
 ![plas-score-complete](../assets/../b2b-ai-ml-services/assets/plas-score-complete.png)
 
@@ -68,7 +68,7 @@ ht-degree: 3%
 >
 >각 채점 프로세스가 완료되는 데 최대 24시간이 소요될 수 있습니다.
 
-점수 목록에서 만든 새 점수를 볼 수 있는 **[!UICONTROL 서비스]** 탭으로 돌아갑니다.
+점수 목록에서 만든 새 점수를 볼 수 있는 **[!UICONTROL Services]** 탭으로 돌아갑니다.
 
 ![plas-score-created](../assets/../b2b-ai-ml-services/assets/plas-score-created.png)
 
@@ -80,11 +80,11 @@ ht-degree: 3%
 
 ## 점수 편집
 
-점수를 편집하려면 **[!UICONTROL 서비스]** 탭에서 점수를 선택하고 화면 오른쪽의 추가 세부 정보 패널에서 **[!UICONTROL 편집]**&#x200B;을 선택합니다.
+점수를 편집하려면 **[!UICONTROL Services]** 탭에서 점수를 선택하고 화면 오른쪽의 추가 세부 정보 패널에서 **[!UICONTROL Edit]**&#x200B;을(를) 선택합니다.
 
 ![plas-edit-score](../assets/../b2b-ai-ml-services/assets/plas-edit-score.png)
 
-점수에 대한 설명을 편집할 수 있는 **[!UICONTROL 인스턴스 편집]** 대화 상자가 나타납니다. 변경 내용을 적용한 다음 **[!UICONTROL 저장]**&#x200B;을 선택하세요.
+점수에 대한 설명을 편집할 수 있는 **[!UICONTROL Edit instance]** 대화 상자가 나타납니다. 변경하고 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
 ![plas-edit-save](../assets/../b2b-ai-ml-services/assets/plas-edit-save.png)
 
@@ -92,33 +92,33 @@ ht-degree: 3%
 >
 >이 경우 모델 재교육 및 재점수가 트리거되므로 점수 구성을 변경할 수 없습니다. 점수를 삭제하고 새 점수를 만드는 것과 같습니다. 점수의 구성을 편집하려면 이 점수를 복제하거나 새 점수를 만들어야 합니다.
 
-**[!UICONTROL 서비스]** 탭으로 돌아갑니다. 화면 오른쪽의 추가 세부 정보 패널에서 업데이트된 설명 세부 정보를 보려면 점수를 선택합니다.
+**[!UICONTROL Services]** 탭으로 돌아갑니다. 화면 오른쪽의 추가 세부 정보 패널에서 업데이트된 설명 세부 정보를 보려면 점수를 선택합니다.
 
 ## 점수 복제
 
-점수를 복제하려면 **[!UICONTROL 서비스]** 탭에서 점수를 선택하고 화면 오른쪽의 추가 세부 정보 패널에서 **[!UICONTROL 복제]**&#x200B;를 선택합니다.
+점수를 복제하려면 **[!UICONTROL Services]** 탭에서 점수를 선택하고 화면 오른쪽의 추가 세부 정보 패널에서 **[!UICONTROL Clone]**&#x200B;을(를) 선택합니다.
 
 ![plas-clone-score](../assets/../b2b-ai-ml-services/assets/plas-clone-score.png)
 
-**[!UICONTROL 기본 정보]** 화면이 나타납니다. 프로필 유형, 이름 및 설명이 원래 점수에서 복제됩니다. 이러한 세부 정보를 수정하고 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+**[!UICONTROL Basic information]** 화면이 나타납니다. 프로필 유형, 이름 및 설명이 원래 점수에서 복제됩니다. 이러한 세부 정보를 수정하고 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
 ![plas-clone-basic-info](../assets/../b2b-ai-ml-services/assets/plas-clone-basic-info.png)
 
-**[!UICONTROL 목표 정의]** 화면이 나타납니다. 새 점수를 만들 때와 마찬가지로 목표 섹션을 완료하고 **[!UICONTROL 완료]**&#x200B;를 선택합니다.
+**[!UICONTROL Define your goal]** 화면이 나타납니다. 새 점수를 만들 때와 마찬가지로 목표 섹션을 완료하고 **[!UICONTROL Finish]**&#x200B;을(를) 선택합니다.
 
-목록에서 새로 복제된 점수를 볼 수 있는 **[!UICONTROL 서비스]** 탭으로 돌아갑니다.
+목록에서 새로 복제된 점수를 볼 수 있는 **[!UICONTROL Services]** 탭으로 돌아갑니다.
 
 >[!NOTE]
 >
->**[!UICONTROL 목표 정의]** 섹션이 원래 점수에서 복제되지 않았습니다.
+>**[!UICONTROL Define your goal]** 섹션이 원래 점수에서 복제되지 않았습니다.
 
 ## 점수 삭제
 
-점수를 삭제하려면 **[!UICONTROL 서비스]** 탭에서 점수를 선택하고 화면 오른쪽의 추가 세부 정보 패널에서 **[!UICONTROL 삭제]**&#x200B;를 선택합니다.
+점수를 삭제하려면 **[!UICONTROL Services]** 탭에서 점수를 선택하고 화면 오른쪽의 추가 세부 정보 패널에서 **[!UICONTROL Delete]**&#x200B;을(를) 선택합니다.
 
 ![plas-delete-score](../assets/../b2b-ai-ml-services/assets/plas-delete-score.png)
 
-**[!UICONTROL 문서 삭제]** 확인 대화 상자가 나타납니다. **[!UICONTROL 삭제]**&#x200B;를 선택합니다.
+**[!UICONTROL Delete documentation]** 확인 대화 상자가 나타납니다. **[!UICONTROL Delete]**&#x200B;를 선택합니다.
 
 ![plas-delete-score-confirmation](../assets/../b2b-ai-ml-services/assets/plas-delete-score-confirmation.png)
 
@@ -126,7 +126,7 @@ ht-degree: 3%
 >
 >점수 정의를 삭제하면 개인 프로필 또는 계정 프로필에 대한 모든 예상 점수가 삭제되지만, 점수 정의에 대해 생성된 필드 그룹은 삭제되지 않습니다. 필드 그룹은 데이터 모델에서 &quot;고립됨&quot; 상태로 유지됩니다.
 
-목록에서 더 이상 점수를 볼 수 없는 **[!UICONTROL 서비스]** 탭으로 돌아갑니다.
+목록에서 더 이상 점수를 볼 수 없는 **[!UICONTROL Services]** 탭으로 돌아갑니다.
 
 ## 리드 AI 파이프라인 오류 코드
 
@@ -147,7 +147,7 @@ ht-degree: 3%
 
 | 경고/정보 코드 | 메시지 |
 | --- | --- |
-| 10 | 정보 100. 리드 AI 품질 검사: 계정 수는 {}개입니다. |
+| 100 | 정보 100. 리드 AI 품질 검사: 계정 수는 {}개입니다. |
 | 101 | 정보 101. 잠재 고객 AI 품질 검사: 연락처 수: {}. |
 | 102 | 정보 102. 잠재 고객 AI 품질 검사: 기회 수: {}. |
 | 103 | 정보 103. AI 품질 검사 리드: 테스트 auc가 낮습니다. 매개변수 조정을 시작합니다. Auc 테스트: {}. |

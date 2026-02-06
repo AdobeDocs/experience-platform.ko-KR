@@ -3,12 +3,12 @@ keywords: 프로필;실시간 고객 프로필;문제 해결;가드레일;지침
 title: Real-Time Customer Data Platform B2B edition의 기본 보호
 type: Documentation
 description: Adobe Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다. 이 문서에서는 Adobe Real-Time Customer Data Platform B2B edition을 사용하여 최적의 시스템 성능을 위해 데이터를 모델링하는 데 도움이 되는 기본 사용 및 속도 제한을 제공합니다.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: bc399f3af0524232671af780ea1380f1a71a5b7e
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1815'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Real-Time Customer Data Platform B2B edition을 사용하면 행동 통찰력 �
 
 >[!IMPORTANT]
 >
->이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)을(를) 확인하십시오.
+>이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을(를) 확인하십시오.
 
 이 문서는 최적의 시스템 성능을 위해 데이터를 모델링하는 데 도움이 되는 기본 사용 및 속도 제한을 제공합니다. 다음 가드레일을 검토할 때 데이터를 올바르게 모델링했다고 가정합니다. 데이터 모델링 방법에 대한 질문이 있는 경우 고객 서비스 담당자에게 문의하십시오.
 
@@ -69,7 +69,7 @@ Real-Time Customer Data Platform B2B edition을 사용하면 행동 통찰력 �
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --------- | ----- | ---------- | ----------- |
-| 중첩된 레거시 관계 없음 | 0 | 성능 보호 | [!DNL XDM Individual Profile]이 아닌 두 스키마 간에 관계를 만들면 안 됩니다. [!DNL Profile] 유니온 스키마에 속하지 않는 스키마에는 관계를 만드는 것이 **권장되지 않습니다**. |
+| 중첩된 레거시 관계 없음 | 0 | 성능 보호 | [!DNL XDM Individual Profile]이 아닌 두 스키마 간에 관계를 만들면 안 됩니다. **유니온 스키마에 속하지 않는 스키마에는 관계를 만드는 것이**&#x200B;권장되지 않습니다[!DNL Profile]. |
 | B2B 개체만 다대일 관계에 참여할 수 있습니다 | 0 | 시스템 강제 보호 | 시스템은 B2B 개체 간의 다대일 관계만 지원합니다. 다대일 관계에 대한 자세한 내용은 [B2B 스키마 관계 정의](../xdm/tutorials/relationship-b2b.md)에 대한 자습서를 참조하십시오. |
 | B2B 개체 간 중첩 관계의 최대 깊이 | 3 | 시스템 강제 보호 | B2B 개체 간의 중첩 관계의 최대 깊이는 3입니다. 즉, 고도로 중첩된 스키마에서는 3개 수준 이상 중첩된 B2B 개체 간의 관계가 없어야 합니다. |
 | 각 차원 엔티티에 대한 단일 스키마 | 1 | 시스템 강제 보호 | 각 차원 엔티티에는 단일 스키마가 있어야 합니다. 둘 이상의 스키마에서 생성된 차원 엔티티를 사용하려고 하면 세분화 결과에 영향을 줄 수 있습니다. 다른 차원 엔티티에는 별도의 스키마가 있어야 합니다. |

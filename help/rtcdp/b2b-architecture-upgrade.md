@@ -1,11 +1,11 @@
 ---
 title: Real-Time CDP B2B edition으로 아키텍처 업그레이드
 description: Real-Time CDP B2B edition으로의 포괄적인 아키텍처 업그레이드에 대해 알아보려면 이 문서 를 참조하십시오.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: da288d1a917df85b3c003bc6592fda7a6f1eafe7
+source-git-commit: a48196d369cec9e9927d9320475e06457e575691
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1094'
 ht-degree: 1%
 
 ---
@@ -106,7 +106,7 @@ B2B 특성이 있는 다중 엔티티 대상은 이제 여러 병합 정책 대�
 
 * 계정-사용자 관계
 * 영업 기회-사용자 관계
-* Campaign
+* 캠페인
 * 캠페인 멤버
 * 마케팅 목록
 * 마케팅 목록 구성원
@@ -117,7 +117,7 @@ B2B 특성이 있는 다중 엔티티 대상은 이제 여러 병합 정책 대�
 * 계정-사용자 관계
 * 기회
 * 영업 기회-사용자 관계
-* Campaign
+* 캠페인
 * 캠페인 멤버
 * 마케팅 목록
 * 마케팅 목록 구성원
