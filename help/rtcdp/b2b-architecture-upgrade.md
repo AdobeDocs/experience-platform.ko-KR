@@ -1,7 +1,7 @@
 ---
 title: Real-Time CDP B2B edition으로 아키텍처 업그레이드
 description: Real-Time CDP B2B edition으로의 포괄적인 아키텍처 업그레이드에 대해 알아보려면 이 문서 를 참조하십시오.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
 source-git-commit: a48196d369cec9e9927d9320475e06457e575691
 workflow-type: tm+mt

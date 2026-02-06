@@ -3,7 +3,7 @@ keywords: RTCDP;CDP;Real-Time Customer Data Platform;실시간 고객 데이터 
 title: Real-Time Customer Data Platform B2B edition의 사용 사례 예
 description: 이 샘플 시나리오는 Adobe Real-Time Customer Data Platform B2B Edition 구현 구성에 대한 예제를 제공합니다.
 feature: Get Started, Use Cases, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions" newtab=true
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
