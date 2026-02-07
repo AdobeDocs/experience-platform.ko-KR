@@ -1,13 +1,11 @@
 ---
 title: 계정 대상자
 description: 계정 대상자를 만들고 사용하여 다운스트림 대상의 계정 프로필을 타겟팅하는 방법을 알아봅니다.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 6cb5afb78502c34e0eba99af29d7a67119b7e05a
+source-git-commit: 53bc79a580641e662d6c51fbf2b0c0f51eb6ddb4
 workflow-type: tm+mt
-source-wordcount: '1461'
-ht-degree: 21%
+source-wordcount: '1451'
+ht-degree: 22%
 
 ---
 

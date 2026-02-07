@@ -1,17 +1,22 @@
 ---
 title: XDM 비즈니스 사용자 세부 사항 스키마 필드 그룹
 description: XDM 비즈니스 사용자 세부 사항 스키마 필드 그룹에 대해 알아봅니다.
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 5%
+source-wordcount: '572'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL XDM 비즈니스 사용자 세부 정보] 스키마 필드 그룹
+# [!UICONTROL XDM Business Person Details] 스키마 필드 그룹
 
-[!UICONTROL XDM 비즈니스 사용자 세부 정보]는 B2B(비즈니스 대 비즈니스) 엔터프라이즈의 컨텍스트에서 개별 사용자에 대한 정보를 캡처하는 [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md)에 대한 표준 스키마 필드 그룹입니다.
+>[!AVAILABILITY]
+>
+>이 필드 그룹은 Real-Time CDP B2B edition에 액세스할 수 있는 조직만 사용할 수 있습니다.
+
+[!UICONTROL XDM Business Person Details]은(는) B2B(Business-to-Business) 엔터프라이즈의 컨텍스트에서 개별 사용자에 대한 정보를 캡처하는 [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md)에 대한 표준 스키마 필드 그룹입니다.
 
 ![](../../images/field-groups/business-person-details.png)
 
@@ -47,7 +52,7 @@ ht-degree: 5%
 | `mobilePhone` | [전화 번호](../../data-types/phone-number.md) | 개인 휴대폰 번호. |
 | `otherAddress` | [우편 주소](../../data-types/postal-address.md) | 개인용 대체 주소. |
 | `otherPhone` | [전화 번호](../../data-types/phone-number.md) | 개인용 대체 전화번호. |
-| `person` | [사용자](../../data-types/person.md) | 개인 작업자, 연락처 또는 소유자. |
+| `person` | [사용자](../../data-types/person.md) | 개인 작업자, 연락처 또는 소유자입니다. |
 | `personalEmail` | [전자 메일 주소](../../data-types/email-address.md) | 개인의 개인 이메일 주소입니다. |
 | `workAddress` | [우편 주소](../../data-types/postal-address.md) | 개인의 회사 주소입니다. |
 | `workEmail` | [전자 메일 주소](../../data-types/email-address.md) | 개인의 회사 이메일 주소입니다. |

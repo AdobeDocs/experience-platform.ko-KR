@@ -1,17 +1,22 @@
 ---
 title: XDM 비즈니스 사용자 구성 요소 스키마 필드 그룹
 description: XDM 비즈니스 사용자 구성 요소 스키마 필드 그룹에 대해 알아봅니다.
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '516'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL XDM 비즈니스 사용자 구성 요소] 스키마 필드 그룹
+# [!UICONTROL XDM Business Person Components] 스키마 필드 그룹
 
-[!UICONTROL XDM 비즈니스 사용자 구성 요소]는 사용자에 대한 여러 소스 레코드와 사용자 세분화에 필요한 기타 특성을 캡처하는 [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md)에 대한 표준 스키마 필드 그룹입니다.
+>[!AVAILABILITY]
+>
+>이 필드 그룹은 Real-Time CDP B2B edition에 액세스할 수 있는 조직만 사용할 수 있습니다.
+
+[!UICONTROL XDM Business Person Components]은(는) 사용자에 대한 여러 소스 레코드와 사용자 세분화에 필요한 기타 특성을 캡처하는 [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md)에 대한 표준 스키마 필드 그룹입니다.
 
 Real-Time CDP의 B2B edition에서 [실시간 고객 프로필](../../../profile/home.md)을 통해 사용자에 대한 프로필을 만드는 경우 해당 프로필을 만드는 데 사용되는 정보는 여러 소스 레코드에서 제공될 수 있습니다. 예를 들어 한 사람이 두 개의 다른 회사에 근무하는 경우 많은 CRM 시스템에서 의도적으로 해당 사람의 복사본을 만들어 한 복사본은 회사 A에 연결되고 다른 복사본은 회사 B에 연결됩니다. 해당 데이터를 Adobe Experience Platform으로 가져올 때 이 필드 그룹을 사용하여 서로 다른 소스 레코드를 단일 표현으로 병합합니다.
 
@@ -34,7 +39,7 @@ Real-Time CDP의 B2B edition에서 [실시간 고객 프로필](../../../profile
 | `sourceConvertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | 해당 잠재 고객이 전환된 경우 관련 연락처에 대한 복합 식별자. |
 | `sourceExternalKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | 사용자 데이터가 시작된 소스 시스템의 복합 식별자. |
 | `sourcePersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | 개인용 복합 식별자. |
-| `workEmail` | [[!UICONTROL 전자 메일 주소]](../../data-types/b2b-source.md) | 개인용 회사 이메일 ID. |
+| `workEmail` | [[!UICONTROL Email address]](../../data-types/b2b-source.md) | 개인용 회사 이메일 ID. |
 | `personGroupID` | 문자열 | 개인용 그룹 식별자. |
 | `personScore` | 문자열 | CRM 시스템에서 생성된 개인용 스코어. |
 | `personSource` | 문자열 | 사용자 데이터가 시작된 소스 시스템에 대한 고유한 문자열 기반 식별자입니다. |

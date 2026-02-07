@@ -1,10 +1,11 @@
 ---
 title: Real-Time Customer Data Platform B2B edition에서 두 스키마 간의 관계 정의
 description: Adobe Real-Time Customer Data Platform B2B edition에서 두 스키마 간의 다대일 관계를 정의하는 방법을 알아봅니다.
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cb036262ff81d245fe436fc337b3911170c61425
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1729'
 ht-degree: 12%
 
 ---
