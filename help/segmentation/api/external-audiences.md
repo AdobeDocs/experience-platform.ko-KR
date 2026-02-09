@@ -2,9 +2,9 @@
 title: 외부 대상 API 엔드포인트
 description: 외부 대상 API를 사용하여 Adobe Experience Platform에서 외부 대상을 만들고, 업데이트하고, 활성화하고, 삭제하는 방법을 알아봅니다.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 0a37ef2f5fc08eb515c7c5056936fd904ea6d360
+source-git-commit: ff58324446f28cbdca369ecbb58d8261614ae684
 workflow-type: tm+mt
-source-wordcount: '2253'
+source-wordcount: '2340'
 ht-degree: 4%
 
 ---
@@ -12,6 +12,16 @@ ht-degree: 4%
 # 외부 대상 엔드포인트
 
 외부 대상을 사용하면 외부 소스의 프로필 데이터를 Adobe Experience Platform에 업로드할 수 있습니다. 세그먼테이션 서비스 API의 `/external-audience` 끝점을 사용하여 외부 대상을 Experience Platform으로 수집하고, 세부 정보를 보고, 외부 대상을 업데이트하며, 외부 대상을 삭제할 수 있습니다.
+
+## 가드레일
+
+3월 릴리스부터 외부 대상 엔드포인트를 사용할 때 다음과 같은 가드레일이 적용됩니다.
+
+| 가드레일 | 제한 | 제한 유형 | 설명 |
+| --------- | ----- | ---------- | ----------- |
+| 일일 대상자 수집 실행 수 | 100 | 시스템 강제 보호 | 하루에 허용되는 최대 대상 수집 실행 수입니다. 이 제한은 **샌드박스** 수준에 따라 다릅니다. |
+| 대상당 수집 수 | 10 | 시스템 강제 보호 | 지정된 대상자에서 수행할 수 있는 수집 수입니다. |
+| 외부 대상 크기 | 10 GB | 성능 보호 | 외부 대상자의 권장 전체 크기는 10GB입니다. |
 
 ## 시작
 
