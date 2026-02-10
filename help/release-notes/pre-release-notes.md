@@ -1,11 +1,11 @@
 ---
 title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
-exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 76e8f0678c4634258170ca1161134dd1176c24e7
+exl-id: a1b52e9f-1c4d-4a2b-9d3e-5f6a7b8c9d0e
+source-git-commit: 3a45b3aadb08af98d6d379ecfc858474ea1e55db
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 22%
+source-wordcount: '1052'
+ht-degree: 32%
 
 ---
 
@@ -21,18 +21,20 @@ ht-degree: 22%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/releases/pre-release-notes)
->- [페더레이션된 대상자 컴포지션](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/e-release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/releases/latest)
+>- [페더레이션된 대상자 컴포지션](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/latest)
 
-**릴리스 날짜: 2026년 1월**
+**릴리스 날짜: 2026년 2월**
 
 Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 
 - [Agent Orchestrator](#agent-orchestrator)
+- [경고](#alerts)
+- [데이터 수집](#data-collection)
 - [대상](#destinations)
-- [실시간 고객 프로필](#real-time-customer-profile)
-- [Segmentation Service](#segmentation-service)
+- [경험 데이터 모델 (XDM)](#xdm)
+- [쿼리 서비스](#query-service)
 - [소스](#sources)
 
 ## Agent Orchestrator {#agent-orchestrator}
@@ -43,11 +45,41 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 
 | 기능 | 설명 |
 | --- | --- |
-| Agent Orchestrator의 평가판 동작 | 이제 Agent Orchestrator에서 체험판을 제공하여 고객이 전체 구매를 약속하기 전에 서비스를 탐색 및 테스트할 수 있습니다. 이 구매 전 시도 옵션을 통해 조직은 자체 환경에서 스킬 및 오케스트레이션 기능을 포함하여 Agent Orchestrator의 기능을 평가할 수 있습니다. 이 체험판에서는 AI 기반 에이전트를 구축하고 기존 워크플로우에 통합할 수 있는 방법을 이해하는 데 실습형 경험을 제공합니다. |
+| 데이터 온보딩 에이전트 | 데이터 온보딩 에이전트를 사용하여 소스 연결 구성, 데이터 품질 유효성 검사, 의미 체계 강화 적용, 스키마 검토 및 유효성 검사, 데이터 수집 실행 등을 수행할 수 있습니다. B2C 및 B2B 플로우 모두에 대한 단계별 워크플로우를 따르고, 예상되는 출력을 검토하고, 일반적인 문제를 해결합니다. |
+| 데이터 Distiller 에이전트 | Data Distiller 에이전트를 사용하여 자연어에서 SQL 작업을 생성하고, SQL 성능을 최적화하고, SQL 오류를 복구하고, SQL 작업을 예약 및 관리하고, 작업 상태를 모니터링할 수 있습니다. 시작하려면 보호 기능, 필요한 권한 및 문제 해결 지침을 검토하십시오. |
+| 데이터 수집 에이전트 | 데이터 수집 에이전트를 사용하면 복잡한 데이터 수집 구성에 대한 컨텍스트 내 지침을 얻을 수 있고, 대화형 통찰력을 통해 데이터 수집 개체 간에 계보, 종속성 및 관계를 탐색할 수 있습니다. |
 
 {style="table-layout:auto"}
 
 자세한 내용은 [Agent Orchestrator 설명서](https://experienceleague.adobe.com/ko/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator)를 참조하세요.
+
+## 경고 {#alerts}
+
+Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이벤트 기반 알림을 구독할 수 있습니다. Experience Platform 사용자 인터페이스의 [!UICONTROL Alerts] 탭을 통해 다양한 경고 규칙을 구독할 수 있으며 UI 자체 내에서 또는 이메일 알림을 통해 경고 메시지를 수신하도록 선택할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 고객 응대 경고에 대한 [!DNL Slack] 통합 | 이제 [!DNL Slack]에게 고객 응대 경고를 제공할 수 있습니다. 단계별 자습서에 따라 [!DNL Slack] 통합을 설정하고 [!DNL Slack] 작업 영역에서 바로 경고 알림을 받을 수 있습니다. |
+
+{style="table-layout:auto"}
+
+자세한 내용은 [[!DNL Observability Insights] 개요](../observability/home.md)를 참조하십시오.
+
+## 데이터 수집 {#data-collection}
+
+Adobe Experience Platform 데이터 수집에서는 클라이언트측 고객 경험 데이터를 수집하여 Adobe Experience Platform Edge Network 및 기타 대상으로 전송할 수 있는 기술 집합을 제공합니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| Adobe Platform 태그 확장 관리 | 새로운 확장 관리 기능을 사용하여 개발, 비공개 및 공개 배포에 대한 조직의 확장을 업로드, 패키지 및 릴리스할 수 있습니다. 최상위 수준 회사 보기에서 소유한 확장과 함께 공유 비공개 확장을 찾습니다. 이 기능은 웹, Edge 및 모바일 확장을 지원합니다. |
+
+{style="table-layout:auto"}
+
+자세한 내용은 [데이터 수집 설명서](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home)를 참조하세요.
 
 ## 대상 {#destinations}
 
@@ -57,52 +89,40 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 
 | 대상 | 설명 |
 | --- | --- |
-| 이제 케벨 대상 커넥터를 사용할 수 있습니다. | [[!DNL Kevel]](https://www.kevel.com/)은(는) 혁신적인 상거래 리더가 소매 미디어를 출시하고, 확장하고, 성공할 수 있도록 지원하는 AI 지원 기술 및 전문가 지침을 제공합니다. [!DNL Kevel]의 Retail Media Cloud는 온사이트 및 오프사이트 광고를 위한 타깃팅되고, 귀속되며, 사용자 지정 가능한 광고 형식을 지원합니다. |
-| 이제 인덱스 교환 대상 커넥터를 사용할 수 있습니다. | [!DNL Index]은(는) 미디어 소유자가 모든 화면에서 콘텐츠의 가치를 극대화할 수 있도록 지원하는 글로벌 광고 공급측 플랫폼입니다. 20년 이상의 업계 리더십 덕분에 [!DNL Index]은(는) 세계 최대 브랜드와 프리미엄 경험 메이커를 연결하여 고품질의 소비자 경험을 제공합니다. |
-| 브레이즈 연결에 대한 지역 엔드포인트 지원 | 이제 대상 구성 흐름 동안 [에서 지원하는 모든 &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오. |
-| Liveramp 온보딩을 위한 주간 및 월간 일정 조정 지원 | 이제 Liveramp 온보딩 대상에 대한 주별 및 월별 내보내기 일정을 구성할 수 있습니다. |
-| Amazon S3 대상에 대한 AES256 암호화 지원 | 이제 Amazon S3 내보내기에 대해 AES256 암호화를 구성할 수 있습니다. |
-| Trade Desk 및 Microsoft Bing 대상을 위한 활성화 경험 개선 | 이제 Trade Desk 및 Microsoft Bing 대상에 최적화된 활성화 경험을 위한 사전 정의된 필수 매핑이 포함됩니다. |
-
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| Adobe Target 대상에 대한 보호 제한을 업데이트했습니다. | 단일 Adobe Target 대상에 매핑할 수 있는 최대 대상 수가 50개에서 250개로 증가했습니다. 이렇게 하면 Adobe Target이 다른 대상에 대한 표준 대상 제한에 맞춰 조정되므로 대상 활성화 워크플로우에 더 많은 유연성을 제공합니다. 이제 여러 데이터 흐름을 만들지 않고도 Adobe Target 대상에 대해 더 많은 대상을 활성화할 수 있습니다. |
-| [대상 편집](/help/destinations/ui/edit-destination.md) 및 [마케팅 작업 편집](/help/destinations/ui/edit-activation.md#edit-marketing-actions) 일반 가용성 | 이제 모든 사용자가 대상 및 마케팅 작업을 편집하는 옵션을 사용할 수 있습니다. |
-| 매핑 단계에서 필드 표시 이름 전환 | 이제 스키마 필드를 대상에 매핑할 때 전체 XDM 필드 이름을 표시하는 것과 표시 이름만 표시하는 것 간을 전환할 수 있습니다. |
+| [!DNL ZoomInfo] 계정 대상 | 이제 B2B CDP 사용자는 새 [!DNL ZoomInfo] 계정 대상 커넥터를 통해 [!DNL ZoomInfo]에 계정 수준 데이터를 활성화할 수 있습니다. 계정 대상자를 [!DNL ZoomInfo]&#x200B;(으)로 보내려면 커넥터를 설정하십시오. |
+| [!DNL Snowflake] 일괄 처리를 일반적으로 사용할 수 있음 | [!DNL Snowflake] 일괄 처리 대상이 일반 가용성으로 이동되었습니다. 이제 내보낸 데이터의 병합 정책 ID 열을 타임스탬프, 매핑 속성 및 대상 멤버십과 같은 기존 열과 함께 볼 수 있습니다. |
+| [Amazon S3](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 대상에 대한 AES256 암호화 지원 | 이제 Amazon S3 내보내기에 대해 AES256 암호화를 구성할 수 있습니다. 다음 두 옵션 중에서 선택합니다. <ul><li>**[!UICONTROL Default]**: Experience Platform은 버킷에 설정된 기본 암호화 알고리즘으로 사용 중인 데이터를 암호화합니다.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform은 내보내기에 `s3:x-amz-server-side-encryption": "AES256` 헤더를 추가하고 S3에 도달할 때 AES256 알고리즘으로 사용하지 않는 데이터를 암호화합니다. **이 옵션은 S3 버킷에서 구성한 기본 암호화 알고리즘보다 우선합니다**.</li></ul> |
 
 {style="table-layout:auto"}
 
 자세한 내용은 [대상 개요](../destinations/home.md)를 참조하십시오.
 
-## 실시간 고객 프로필 {#real-time-customer-profile}
+## 경험 데이터 모델 (XDM) {#xdm}
 
-실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 여러 채널의 데이터를 결합하여 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. 프로필을 사용하면 모든 고객 상호 작용에 대해 실행 가능한 타임스탬프 계정을 제공하는 통합 보기로 고객 데이터를 통합할 수 있습니다.
-
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 스트리밍 용량 적용 | 이제 Experience Platform에서는 실시간 고객 프로필 및 ID 서비스를 위해 스트리밍 처리량 기능을 적용합니다. 고객이 계약된 스트리밍 용량을 초과하면 데이터는 선입선출 방식으로 큐에 올라가 처리됩니다. 이를 통해 예측 가능한 시스템 성능을 보장하고 용량 위반이 데이터 수집 품질에 영향을 미치지 않도록 할 수 있습니다. 중요 참고 사항: 용량을 초과하면 데이터 레이크에서 스트리밍 업데이트를 사용할 수 없으며, 이 적용은 Adobe Journey Optimizer 라이선스가 있는 고객에게는 적용되지 않으며, 용량이 사용 가능해지면 큐에 있는 데이터가 순차적으로 처리됩니다. |
-| Real-Time CDP Prime에 대한 API 액세스 사용 중단 | 경험 이벤트에 대한 API 액세스는 이제 모든 Real-Time CDP Prime 고객에게 더 이상 사용되지 않습니다. 이 변경 사항은 API를 통해 직접 경험 이벤트를 쿼리하는 기능에 영향을 줍니다. Real-Time CDP Ultimate 고객은 사용 사례에 필요한 경우 공식 예외 프로세스를 통해 예외를 요청하여 경험 이벤트 API 액세스를 활성화할 수 있습니다. 이러한 사용 중단은 Real-Time CDP을 라이선스 기능에 맞게 조정하는 데 도움이 됩니다. |
-| 데이터 흐름 실행 모니터링 | 이제 프로필에서 데이터 흐름 실행의 진행 상황과 준비를 모니터링할 수 있습니다. |
-
-{style="table-layout:auto"}
-
-자세한 내용은 [[!DNL Real-Time Customer Profile] 개요](../profile/home.md)를 참조하십시오.
-
-## Segmentation Service {#segmentation-service}
-
-[!DNL Segmentation Service]는 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 프로필의 특정 하위 집합을 정의합니다. 대상자는 기록 데이터(예: 인구 통계 정보) 또는 고객과 브랜드의 상호 작용을 나타내는 시계열 이벤트를 기반으로 할 수 있습니다.
+XDM은 Experience Platform에 가져온 데이터에 대한 공통 구조와 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 외부 대상 TTL 새로 고침 | 이제 외부 대상(예: CSV 업로드)은 TTL(Time-to-Live) 설정에 대한 강제 새로 고침 기능을 지원합니다. 이 기능을 사용하면 외부 대상에 대한 TTL 만료를 수동으로 새로 고칠 수 있으므로 대상 라이프사이클 관리를 더욱 세밀하게 제어할 수 있습니다. 이 기능은 초기 TTL 기간 이상 유지해야 하거나 데이터를 다시 업로드하지 않고 다시 활성화해야 하는 대상에 특히 유용합니다. |
+| 스키마 인벤토리 조직 및 검색 | 이제 스키마 찾아보기 페이지에 향상된 검색 및 필터링, 인라인 작업 및 사용자 정의 태그와 폴더에 대한 지원이 포함됩니다. 이러한 업데이트를 통해 샌드박스 간 스키마를 더 쉽게 찾고, 구성하고, 관리할 수 있을 뿐 아니라 수동 탐색 및 유지 관리 작업을 줄일 수 있습니다. |
 
-자세한 내용은 [[!DNL Segmentation Service] 개요](../segmentation/home.md)를 참조하십시오.
+자세한 내용은 [[!DNL Schemas] 개요](../xdm/home.md)를 참조하십시오.
+
+## 쿼리 서비스 {#query-service}
+
+쿼리 서비스를 사용하면 표준 SQL로 Adobe Experience Platform [!DNL Data Lake]에서 데이터를 쿼리할 수 있습니다. [!DNL Data Lake]의 데이터 세트에 참여하고 쿼리 결과를 보고 또는 데이터 과학 작업 영역에 사용하거나 실시간 고객 프로필에 수집하기 위한 새 데이터 세트로 캡처할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| Data Distiller 연간 계산 재설정 날짜 정렬(제한된 릴리스) | 이제 Data Distiller 연간 계산 시간이 라이선스가 구매되거나 갱신되는 시기를 기준으로 Data Distiller 계약 기념일에 재설정됩니다. 이렇게 하면 라이선스 사용 보고가 계약 조건에 맞게 조정되며 현재 사용 값으로 1회 조정될 수 있습니다. |
+| Data Distiller 세션 관리(제한된 릴리스) | 승인된 관리자는 UI를 통해 조직 및 샌드박스 내에서 활성 쿼리 서비스 및 Data Distiller 세션을 보고 관리할 수 있습니다. 세션 관리를 사용하여 유휴 세션을 식별하고 종료하여 용량을 확보합니다. 내장된 안전 장치를 사용하면 활성 쿼리가 있는 세션을 종료할 수 없습니다. 이 기능은 감사를 위한 모든 제거 작업을 로그하여 영향을 받는 사용자에게 알립니다. 이 기능에 액세스하려면 **쿼리 세션 관리** 권한이 필요합니다. |
+
+{style="table-layout:auto"}
+
+자세한 내용은 [쿼리 서비스 개요](../query-service/home.md)를 참조하세요.
 
 ## 소스 {#sources}
 
@@ -112,8 +132,8 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 소스 | 설명 |
 | --- | --- |
-| [!DNL Oracle Eloqua] V2 원본 | 이제 더 이상 사용되지 않는 커넥터를 대체하는 새 [!DNL Oracle Eloqua] 소스 커넥터를 사용할 수 있습니다. 이 업데이트된 커넥터는 [!DNL Oracle Eloqua]에서 Experience Platform으로 데이터를 수집하기 위한 향상된 기능과 향상된 안정성을 제공합니다. 기존 연결이 더 이상 작동하지 않으므로 기존 커넥터를 사용하는 고객은 새 구현으로 마이그레이션해야 합니다. 새 커넥터는 [!DNL Oracle Eloqua]에 연결하고 마케팅 자동화 데이터를 수집하는 데 필요한 모든 설정 및 구성 단계를 지원합니다. |
-| [!DNL Salesforce Marketing Cloud] V2 원본 | 이제 더 이상 사용되지 않는 커넥터를 대체하는 새 [!DNL Salesforce Marketing Cloud] 소스 커넥터를 사용할 수 있습니다. 이 업데이트된 커넥터는 [!DNL Salesforce Marketing Cloud]에서 Experience Platform으로 데이터를 수집하기 위한 향상된 성능과 추가 기능을 제공합니다. 기존 커넥터를 사용하는 고객은 새 구현으로 전환해야 합니다. 새 커넥터에는 [!DNL Salesforce Marketing Cloud]에 연결하고 마케팅 자동화 데이터를 수집하기 위한 포괄적인 설정 지침이 포함되어 있습니다. |
+| [!DNL Databricks] 원본 커넥터의 Unity 카탈로그 지원 | 이제 [!DNL Databricks] 원본 커넥터가 Unity 카탈로그를 지원합니다. 소스 연결을 구성할 때 Unity 카탈로그를 사용하는 방법에 대해 알아보려면 업데이트된 [[!DNL Databricks]](../sources/connectors/databases/databricks.md) 설명서를 읽어 보십시오. |
+
+{style="table-layout:auto"}
 
 자세한 내용은 [소스 개요](../sources/home.md)를 참조하십시오.
-
