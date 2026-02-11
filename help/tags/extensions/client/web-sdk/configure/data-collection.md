@@ -1,9 +1,10 @@
 ---
 title: 데이터 수집 구성 설정
 description: 웹 SDK 태그 확장에서 데이터 수집 설정을 구성합니다.
-source-git-commit: 46c8748e9ab972705b8283c174c285e571acb2ed
+exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
+source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -119,3 +120,4 @@ if (myBotDetector.isABot()) {
 * **[!UICONTROL Environment]**: 사용자의 브라우저에 대한 정보를 수집합니다.
 * **[!UICONTROL Place context]**: 사용자의 위치에 대한 정보를 수집합니다.
 * **[!UICONTROL High entropy user-agent hints]**: 사용자 장치에 대한 자세한 정보를 수집합니다.
+* **[!UICONTROL Send referrer to Adobe Analytics only once per page view]**: 중복 레퍼러 데이터가 Adobe Analytics으로 전송되지 않도록 합니다.

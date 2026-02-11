@@ -5,9 +5,9 @@ description: Experience Platform 웹 SDK에 대한 CSP를 구성하는 방법을
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: 구성;구성;SDK;edge;Web SDK;구성;컨텍스트;웹;장치;환경;웹 SDK 설정;컨텐츠 보안 정책;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+source-git-commit: 010192e91185c11d5454d4153913c06b90fe2122
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ connect-src 'self' EDGE-DOMAIN
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-또한 CSP 임시 항목은 [!DNL Experience Platform Web SDK] [기본 코드](../js/install/library.md) 스크립트 태그에 특성으로 추가해야 합니다. [!DNL Experience Platform Web SDK]은(는) 인라인 스크립트나 스타일 태그를 페이지에 추가할 때 해당 임시 항목을 사용합니다.
+또한 CSP 임시 항목은 웹 SDK [기본 코드](../js/install/base-code.md)에 특성으로 추가해야 합니다. 그런 다음 웹 SDK은 페이지에 인라인 스크립트 또는 스타일 태그를 추가할 때 해당 임시 항목을 사용합니다.
 
 ```html
 <script nonce="SERVER-GENERATED-NONCE">

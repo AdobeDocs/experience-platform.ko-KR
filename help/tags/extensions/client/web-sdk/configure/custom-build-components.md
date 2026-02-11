@@ -1,9 +1,10 @@
 ---
 title: 사용자 지정 빌드 구성 요소
 description: 빌드 크기를 줄이는 기능을 사용하지 않도록 설정하는 사용자 지정 웹 SDK 빌드를 만듭니다.
-source-git-commit: d6aea91d6989775ff5b6038b216ed2518f4a7d98
+exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
@@ -31,6 +32,7 @@ Adobe은 다음 웹 SDK 빌드 구성 요소를 비활성화하는 기능을 제
 | **[!UICONTROL Activity collector]** | 자동 링크 컬렉션 및 Activity Map 추적을 허용합니다. | |
 | **[!UICONTROL Advertising]** | Customer Journey Analytics과 Adobe Advertising 통합을 활성화합니다. | |
 | **[!UICONTROL Audiences]** | ID 동기화와 같이 Adobe Audience Manager과의 통합을 지원합니다. | |
+| **[!UICONTROL Brand concierge]** | Brand Concierge와 통합할 수 있습니다. |
 | **[!UICONTROL Consent]** | 동의 기능을 사용할 수 있습니다. | [[!UICONTROL Set consent]](../actions/set-consent.md) 액션 |
 | **[!UICONTROL Event merge]** | 사용하지 않음. | [[!UICONTROL Event merge ID]](../data-element-types.md) 데이터 요소(더 이상 사용되지 않음)<br>[[!UICONTROL Reset event merge ID]](../actions/reset-event-merge-id.md) 작업(더 이상 사용되지 않음) |
 | **[!UICONTROL Media Analytics bridge]** | 는 기존 Media Analytics와의 통합을 지원합니다. | [[!UICONTROL Get media analytics tracker]](../actions/get-media-analytics-tracker.md) 액션 |

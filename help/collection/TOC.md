@@ -6,10 +6,10 @@ breadcrumb-title: 데이터 수집
 user-guide-description: Adobe Experience Platform으로 데이터를 전송하는 방법에 대해 알아봅니다.
 feature: Data Collection
 role: Developer
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 30%
+source-wordcount: '142'
+ht-degree: 32%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 30%
    + [릴리스 정보](js/release-notes.md)
    + 설치 {#install}
       + [설치 개요](js/install/overview.md)
+      + [기본 코드](js/install/base-code.md)
       + [라이브러리](js/install/library.md)
       + [NPM](js/install/npm.md)
       + [사용자 지정 빌드](js/install/create-custom-build.md)
@@ -38,6 +39,7 @@ ht-degree: 30%
          + [clickCollection](js/commands/configure/clickcollection.md)
          + [클릭콜렉션활성화됨](js/commands/configure/clickcollectionenabled.md)
          + [컨텍스트](js/commands/configure/context.md)
+         + [대화](js/commands/configure/conversation.md)
          + [datastreamId](js/commands/configure/datastreamid.md)
          + [debugEnable](js/commands/configure/debugenabled.md)
          + [defaultConsent](js/commands/configure/defaultconsent.md)
@@ -88,7 +90,7 @@ ht-degree: 30%
    + [모니터(_M)](tags/monitors.md)
    + [set디버그](tags/setdebug.md)
    + [setVar](tags/setvar.md)
-   + [track](tags/track.md)
+   + [추적](tags/track.md)
 + 사용 사례 {#use-cases}
    + [개요](use-cases/overview.md)
    + [클라이언트 힌트](use-cases/client-hints.md)

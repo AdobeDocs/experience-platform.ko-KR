@@ -2,9 +2,9 @@
 title: 컨텍스트
 description: 장치, 환경 또는 위치 데이터를 자동으로 수집합니다.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: c2564f1b9ff036a49c9fa4b9e9ffbdbc598a07a8
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '998'
 ht-degree: 5%
 
 ---
@@ -95,17 +95,28 @@ ht-degree: 5%
 
 자세한 내용은 [사용자 에이전트 클라이언트 힌트](/help/collection/use-cases/client-hints.md)를 참조하십시오.
 
-`context` 명령을 실행할 때 `configure` 문자열 배열을 설정하십시오. SDK을 구성할 때 이 속성을 생략하면 기본적으로 `"highEntropyUserAgentHints"`을(를) 제외한 모든 컨텍스트 정보가 수집됩니다. 높은 엔트로피 클라이언트 힌트를 수집하거나 데이터 수집에서 다른 컨텍스트 정보를 생략하려면 이 속성을 설정하십시오. 문자열은 임의의 순서로 포함될 수 있습니다.
+### 일회성 Analytics 레퍼러 {#one-time-analytics-referrer}
 
->[!NOTE]
+`"oneTimeAnalyticsReferrer"` 키워드는 페이지에 대한 첫 번째 비의사 결정 `sendEvent` 호출에서만 Adobe Analytics에 레퍼러 값을 보냅니다. 이 컨텍스트 키워드의 기본 사용 사례는 Adobe Analytics의 [레퍼러](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) 차원이 Analytics 및 Target 통합에 주로 사용되는 히트에 의해 부풀려지지 않도록 하는 것입니다.
+
+지정된 `sendEvent` 명령이 의사 결정 이벤트 유형(`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`)을 사용하는 경우 페이지에서 첫 번째 `sendEvent`을(를) 계산할 때 무시됩니다. 페이지에서 레퍼러 값이 변경되고 다른 `sendEvent`이(가) 트리거되면 새 레퍼러 값이 페이로드에 포함됩니다. 이 조건을 사용하면 기능을 단일 페이지 애플리케이션과 함께 사용할 수 있습니다.
+
+중복 레퍼러 값이 검색되면 라이브러리는 `data.__adobe.analytics.referrer`을(를) 빈 문자열(`""`)로 설정합니다.
+이 데이터 개체 필드를 빈 문자열로 설정하면 히트가 Adobe Analytics에 도달할 때 데이터 개체가 XDM 개체 해당 필드를 덮어쓰므로 값이 사실상 지워집니다. XDM 개체에는 영향을 주지 않으므로 데이터 스트림에 여러 서비스를 포함하는 경우 해당 데이터를 Experience Platform 데이터 세트로 계속 전송할 수 있습니다.
+
+## 구현
+
+`context` 명령을 실행할 때 `configure` 문자열 배열을 설정하십시오. SDK을 구성할 때 이 속성을 생략하면 기본적으로 `"highEntropyUserAgentHints"` 및 `"oneTimeAnalyticsReferrer"`을(를) 제외한 모든 컨텍스트 정보가 수집됩니다. 높은 엔트로피 클라이언트 힌트를 수집하거나 데이터 수집에서 다른 컨텍스트 정보를 생략하려면 이 속성을 설정하십시오. 문자열은 임의의 순서로 포함될 수 있습니다.
+
+>[!TIP]
 >
->높은 엔트로피 클라이언트 힌트를 포함하여 모든 컨텍스트 정보를 수집하려면 `context` 배열 문자열에 모든 값을 포함해야 합니다. 기본 `context` 값은 `highEntropyUserAgentHints`을(를) 생략하고 `context` 속성을 설정하는 경우 누락된 값은 데이터를 수집하지 않습니다.
+>높은 엔트로피 클라이언트 힌트를 포함하여 모든 컨텍스트 정보를 수집하려면 `context` 배열 문자열에 모든 값을 포함해야 합니다. 기본 `context` 값은 `"highEntropyUserAgentHints"` 및 `"oneTimeAnalyticsReferrer"`을(를) 생략합니다. `context` 속성을 설정하면 생략된 값은 데이터를 수집하지 않습니다.
 
 ```js
 alloy("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]
+  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints", "oneTimeAnalyticsReferrer"]
 });
 ```
 

@@ -2,9 +2,9 @@
 title: 클릭콜렉션활성화됨
 description: 링크 클릭 데이터가 자동으로 수집되는지 여부를 결정하도록 웹 SDK을 구성하는 방법을 알아봅니다.
 exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
-source-git-commit: 364b9adc406f732ea5ba450730397c4ce1bf03cf
+source-git-commit: 4d251ff7323e83ac5c47b5817f81e8fde64cb7d9
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,21 @@ ht-degree: 0%
 1. 링크 대상 도메인이 현재 `window.location.hostname`과(와) 다른 경우 `xdm.web.webInteraction.type`이(가) `"exit"`(활성화된 경우)으로 설정됩니다.`clickCollection.exitLinkEnabled`
 1. 링크가 `"download"` 또는 `"exit"`에 적합하지 않으면 `xdm.web.webInteraction.type`이(가) `"other"`(으)로 설정됩니다.
 
-모든 경우에 `xdm.web.webInteraction.name`은(는) 링크 텍스트 레이블로 설정되고 `xdm.web.webInteraction.URL`은(는) 링크 대상 URL로 설정됩니다. 링크 이름도 URL로 설정하려면 `filterClickDetails` 개체에서 `clickCollection` 콜백을 사용하여 이 XDM 필드를 재정의할 수 있습니다.
+모든 경우에 `xdm.web.webInteraction.name`은(는) 클릭한 요소와 그 하위 항목을 다음 순서로 비어 있지 않은 첫 번째 값에 대해 확인합니다.
+
+1. `innerText`(`textContent`(으)로 대체)
+1. 지원되는 하위 텍스트 노드에서 `nodeValue` 연결됨
+1. `alt` 특성
+1. `title` 특성
+1. `<input value="...">` 특성
+1. `<img src="...">` 특성
+1. `aria-label` 특성
+1. `name` 특성
+1. 빈 문자열
+
+`xdm.web.webInteraction.URL` 필드가 링크 대상 URL로 설정되어 있습니다. 링크 이름도 URL로 설정하려면 `filterClickDetails` 개체에서 `clickCollection` 콜백을 사용하여 이 XDM 필드를 재정의할 수 있습니다.
+
+## 구현
 
 `clickCollectionEnabled` 명령을 실행할 때 `configure` 부울을 설정합니다. 웹 SDK을 구성할 때 이 속성을 생략하면 기본적으로 `true`이(가) 됩니다. `false` 및 `xdm.web.webInteraction.type`을(를) 수동으로 설정하려면 이 값을 `xdm.web.webInteraction.value`(으)로 설정하십시오.
 
