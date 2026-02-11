@@ -2,10 +2,10 @@
 title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 695b8486211c2fee03bc29243d65d5bbf6d561db
+source-git-commit: b8c257ad9ab4e7ee085687f6c03cf55d7fb83ef0
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 33%
+source-wordcount: '1022'
+ht-degree: 34%
 
 ---
 
@@ -79,7 +79,7 @@ Adobe Experience Platform 데이터 수집에서는 클라이언트측 고객 �
 
 {style="table-layout:auto"}
 
-자세한 내용은 [데이터 수집 설명서](https://experienceleague.adobe.com/ko/docs/experience-platform/collection/home)를 참조하세요.
+자세한 내용은 [데이터 수집 설명서](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home)를 참조하세요.
 
 ## 대상 {#destinations}
 
@@ -89,7 +89,6 @@ Adobe Experience Platform 데이터 수집에서는 클라이언트측 고객 �
 
 | 대상 | 설명 |
 | --- | --- |
-| [!DNL ZoomInfo] 계정 대상 | 이제 B2B CDP 사용자는 새 [!DNL ZoomInfo] 계정 대상 커넥터를 통해 [!DNL ZoomInfo]에 계정 수준 데이터를 활성화할 수 있습니다. 계정 대상자를 [!DNL ZoomInfo]&#x200B;(으)로 보내려면 커넥터를 설정하십시오. |
 | [!DNL Snowflake] 일괄 처리를 일반적으로 사용할 수 있음 | [!DNL Snowflake] 일괄 처리 대상이 일반 가용성으로 이동되었습니다. 이제 내보낸 데이터의 병합 정책 ID 열을 타임스탬프, 매핑 속성 및 대상 멤버십과 같은 기존 열과 함께 볼 수 있습니다. |
 | [Amazon S3](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 대상에 대한 AES256 암호화 지원 | 이제 Amazon S3 내보내기에 대해 AES256 암호화를 구성할 수 있습니다. 다음 두 옵션 중에서 선택합니다. <ul><li>**[!UICONTROL Default]**: Experience Platform은 버킷에 설정된 기본 암호화 알고리즘으로 사용 중인 데이터를 암호화합니다.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform은 내보내기에 `s3:x-amz-server-side-encryption": "AES256` 헤더를 추가하고 S3에 도달할 때 AES256 알고리즘으로 사용하지 않는 데이터를 암호화합니다. **이 옵션은 S3 버킷에서 구성한 기본 암호화 알고리즘보다 우선합니다**.</li></ul> |
 
