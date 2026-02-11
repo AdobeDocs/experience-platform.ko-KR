@@ -1,11 +1,11 @@
 ---
 title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
-exl-id: a1b52e9f-1c4d-4a2b-9d3e-5f6a7b8c9d0e
-source-git-commit: 3a45b3aadb08af98d6d379ecfc858474ea1e55db
+exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
+source-git-commit: 695b8486211c2fee03bc29243d65d5bbf6d561db
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 32%
+source-wordcount: '1050'
+ht-degree: 33%
 
 ---
 
@@ -79,7 +79,7 @@ Adobe Experience Platform 데이터 수집에서는 클라이언트측 고객 �
 
 {style="table-layout:auto"}
 
-자세한 내용은 [데이터 수집 설명서](https://experienceleague.adobe.com/ko/docs/experience-platform/collection/home)를 참조하세요.
+자세한 내용은 [데이터 수집 설명서](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home)를 참조하세요.
 
 ## 대상 {#destinations}
 
@@ -107,7 +107,7 @@ XDM은 Experience Platform에 가져온 데이터에 대한 공통 구조와 정
 | ------- | ----------- |
 | 스키마 인벤토리 조직 및 검색 | 이제 스키마 찾아보기 페이지에 향상된 검색 및 필터링, 인라인 작업 및 사용자 정의 태그와 폴더에 대한 지원이 포함됩니다. 이러한 업데이트를 통해 샌드박스 간 스키마를 더 쉽게 찾고, 구성하고, 관리할 수 있을 뿐 아니라 수동 탐색 및 유지 관리 작업을 줄일 수 있습니다. |
 
-자세한 내용은 [[!DNL Schemas] 개요](../xdm/home.md)를 참조하십시오.
+자세한 내용은 [[!DNL XDM] 개요](../xdm/home.md)를 참조하십시오.
 
 ## 쿼리 서비스 {#query-service}
 
