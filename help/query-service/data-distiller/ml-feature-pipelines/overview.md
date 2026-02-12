@@ -33,7 +33,7 @@ This document provides an overview of the AI/ML feature pipelines use case and d
 
 - [Experience Platform API 인증 및 액세스 방법](../../../landing/api-authentication.md).
 - 샌드박스: [특성 기반 액세스 제어 권한](../../../access-control/abac/overview.md) 및 역할을 만들고 관리하는 방법과 이러한 역할에 대해 원하는 리소스 권한을 할당하는 방법을 참조하십시오.
-- 데이터 거버넌스: 데이터 세트 및 필드에 데이터 사용 레이블을 [적용하여 관련 데이터 거버넌스 정책 및 액세스 제어 정책에 따라 각각 ](../../../data-governance/labels/overview.md)을(를) 분류하는 방법.
+- 데이터 거버넌스: 데이터 세트 및 필드에 데이터 사용 레이블을 [적용하여 관련 데이터 거버넌스 정책 및 액세스 제어 정책에 따라 각각 &#x200B;](../../../data-governance/labels/overview.md)을(를) 분류하는 방법.
 
 ## 다음 단계
 
