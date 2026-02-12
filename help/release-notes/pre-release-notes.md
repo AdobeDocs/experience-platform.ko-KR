@@ -79,7 +79,7 @@ Adobe Experience Platform 데이터 수집에서는 클라이언트측 고객 �
 
 {style="table-layout:auto"}
 
-자세한 내용은 [데이터 수집 설명서](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home)를 참조하세요.
+자세한 내용은 [데이터 수집 설명서](https://experienceleague.adobe.com/ko/docs/experience-platform/collection/home)를 참조하세요.
 
 ## 대상 {#destinations}
 
