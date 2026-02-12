@@ -2,12 +2,12 @@
 keywords: IP 주소, IP 범위, 허용 목록, 스트리밍 대상 허용 목록 허용 목록에 추가하다
 title: 허용 목록에 추가하다 스트리밍 대상의 IP 주소
 type: Documentation
-description: 이 페이지에서는 Experience Platform에서 HTTP REST API 끝점, Amazon Kinesis 또는 Azure Event Hubs 인스턴스로 데이터를 안전하게 내보내도록 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
+description: 이 페이지에서는 Experience Platform에서 HTTP REST API 끝점 또는 Amazon Kinesis 인스턴스로 데이터를 안전하게 내보내기 위해 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 851565b4c40452d102eff134533c9d44ea19ca76
+source-git-commit: 6d59d0555dda124acfd16483e11c2899ff5c846e
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 0%
+source-wordcount: '425'
+ht-degree: 2%
 
 ---
 
@@ -22,9 +22,14 @@ ht-degree: 0%
 
 이 페이지에 설명된 IP 범위는 다음 대상에 적용됩니다.
 
-* [고급 엔터프라이즈 대상](../../destination-types.md#advanced-enterprise-destinations): [HTTP API 대상](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [고급 엔터프라이즈 대상](../../destination-types.md#advanced-enterprise-destinations): [HTTP API 대상](./http-destination.md) 및 [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [Pega CDH 실시간 대상](../../destination-types.md#streaming-destinations), [Salesforce Marketing Cloud](/help/destinations/catalog/personalization/pega-v2.md) 및 [Oracle Eloqua](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)와(과) API 기반 통합 같은 [스트리밍 대상 내보내기 대상](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
-* [Destination SDK](../../destination-sdk/getting-started.md)을(를) 통해 빌드된 공개 또는 개인 대상
+* [Destination SDK](../../destination-sdk/getting-started.md)를 통해 빌드된 공개 또는 비공개 대상
+
+>[!IMPORTANT]
+>
+>이 페이지에 문서화된 IP 범위는 *대상 및 Microsoft Azure에서 호스팅되는 스트리밍 API 기반 대상에 대해*&#x200B;지원되지 않음[!DNL Azure Event Hubs]입니다.
+
 
 Experience Platform에서 이러한 대상으로의 아웃바운드 트래픽은 항상 이 페이지에 나열된 IP를 통해 이동합니다.
 
