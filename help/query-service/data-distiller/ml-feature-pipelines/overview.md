@@ -2,9 +2,9 @@
 title: AI/ML 기능 파이프라인
 description: Data Distiller을 사용하여 Adobe Experience Platform 데이터에서 파생된 기능을 사용하여 머신 러닝 파이프라인을 보강하는 방법에 대해 알아봅니다. 원시 데이터를 기능으로 변환하고 기능 데이터를 전달하여 마케팅 사용 사례를 지원하는 모델을 교육하거나 평가합니다.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eceafa1852fc7c17660263d6ef7878a3e7bd0841
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '465'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ This document provides an overview of the AI/ML feature pipelines use case and d
 
 >[!IMPORTANT]
 >
->이 워크플로우에는 Data Distiller 및 Adobe Experience Platform Intelligence 라이선스가 필요합니다. 이러한 제품이 없는 경우 Adobe 서비스 담당자에게 문의하십시오.
+>이 워크플로우에는 Data Distiller 라이선스가 필요합니다. 이 제품이 없는 경우 Adobe 서비스 담당자에게 문의하십시오.
 
 ![AI-ML 기능 파이프라인을 자세히 설명하는 인포그래픽](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
@@ -33,7 +33,7 @@ This document provides an overview of the AI/ML feature pipelines use case and d
 
 - [Experience Platform API 인증 및 액세스 방법](../../../landing/api-authentication.md).
 - 샌드박스: [특성 기반 액세스 제어 권한](../../../access-control/abac/overview.md) 및 역할을 만들고 관리하는 방법과 이러한 역할에 대해 원하는 리소스 권한을 할당하는 방법을 참조하십시오.
-- 데이터 거버넌스: 데이터 세트 및 필드에 데이터 사용 레이블을 [적용하여 관련 데이터 거버넌스 정책 및 액세스 제어 정책에 따라 각각 &#x200B;](../../../data-governance/labels/overview.md)을(를) 분류하는 방법.
+- 데이터 거버넌스: 데이터 세트 및 필드에 데이터 사용 레이블을 [적용하여 관련 데이터 거버넌스 정책 및 액세스 제어 정책에 따라 각각 ](../../../data-governance/labels/overview.md)을(를) 분류하는 방법.
 
 ## 다음 단계
 
