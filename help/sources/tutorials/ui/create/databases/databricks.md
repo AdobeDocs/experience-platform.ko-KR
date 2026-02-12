@@ -4,9 +4,9 @@ description: 사용자 인터페이스를 사용하여 Databricks를 Experience 
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '461'
 ht-degree: 4%
 
 ---
@@ -34,7 +34,7 @@ UI의 소스 작업 영역을 사용하여 [!DNL Databricks] 계정을 Adobe Exp
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| 도메인 | [!DNL Databricks] 작업 영역의 URL입니다. 예: `https://adb-1234567890123456.7.azuredatabricks.net`. |
+| 도메인 | [!DNL Databricks] 작업 영역의 URL입니다. 예, `https://adb-1234567890123456.7.azuredatabricks.net`. |
 | 클러스터 ID | [!DNL Databricks]에 있는 클러스터의 ID입니다. 이 클러스터는 이미 기존 클러스터여야 하며 대화형 클러스터여야 합니다. |
 | 액세스 토큰 | [!DNL Databricks] 계정을 인증하는 액세스 토큰입니다. [!DNL Databricks] 작업 영역을 사용하여 액세스 토큰을 생성할 수 있습니다. |
 | 데이터베이스 | 델타 레이크에 있는 데이터베이스의 이름입니다. |
@@ -43,34 +43,35 @@ UI의 소스 작업 영역을 사용하여 [!DNL Databricks] 계정을 Adobe Exp
 
 ## 소스 카탈로그 탐색
 
-Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 *[!UICONTROL 소스]* 작업 영역에 액세스합니다. 카테고리를 선택하거나 검색 창을 사용하여 소스를 찾습니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Sources]**&#x200B;을(를) 선택하여 *[!UICONTROL Sources]* 작업 영역에 액세스합니다. 카테고리를 선택하거나 검색 창을 사용하여 소스를 찾습니다.
 
-[!DNL Databricks]에 연결하려면 *[!UICONTROL 데이터베이스]* 범주로 이동하여 **[!UICONTROL Azure 데이터베이스]** 원본 카드를 선택한 다음 **[!UICONTROL 설정]**&#x200B;을 선택하세요.
+[!DNL Databricks]에 연결하려면 *[!UICONTROL Databases]* 범주로 이동하여 **[!UICONTROL Azure Databricks]** 원본 카드를 선택한 다음 **[!UICONTROL Set up]**&#x200B;을(를) 선택하십시오.
 
 >[!TIP]
 >
->지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL 설정]** 옵션이 표시됩니다. 인증된 계정을 만들면 이 옵션이 **[!UICONTROL 데이터 추가]**(으)로 변경됩니다.
+>지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL Set up]** 옵션이 표시됩니다. 인증된 계정이 만들어지면 이 옵션이 **[!UICONTROL Add data]**(으)로 변경됩니다.
 
-![Azure Databricks 원본 카드가 있는 원본 카탈로그를 선택했습니다.](../../../../images/tutorials/create/databricks/catalog.png)
+![Azure Databricks 소스 카드가 있는 소스 카탈로그를 선택했습니다.](../../../../images/tutorials/create/databricks/catalog.png)
 
 ### 기존 계정 사용
 
-기존 계정을 사용하려면 **[!UICONTROL 기존 계정]**&#x200B;을(를) 선택한 다음 사용할 [!DNL Azure Databricks] 계정을 선택하십시오.
+기존 계정을 사용하려면 **[!UICONTROL Existing account]**&#x200B;을(를) 선택한 다음 사용할 [!DNL Azure Databricks] 계정을 선택하십시오.
 
 ![&quot;기존 계정&quot;이 선택된 원본 워크플로의 기존 계정 인터페이스입니다.](../../../../images/tutorials/create/databricks/existing.png)
 
 ### 새 계정 만들기
 
-새 계정을 만들려면 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택하고 이름을 입력하고 선택적으로 계정에 대한 설명을 추가하십시오. 그런 다음 다음 다음 인증 자격 증명의 값을 제공합니다.
+새 계정을 만들려면 **[!UICONTROL New account]**&#x200B;을(를) 선택하고 이름을 입력한 다음 선택적으로 계정에 대한 설명을 추가하십시오. 그런 다음 다음 다음 인증 자격 증명의 값을 제공합니다.
 
 * 도메인
 * 클러스터 ID
 * 액세스 토큰
 * 데이터베이스
+* 카탈로그
 
 ![계정 이름과 선택적 설명을 제공하는 원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/databricks/new.png)
 
-또한 [!UICONTROL 스테이징 SAS URI] 자격 증명을 복사하여 [!DNL Azure Databricks] 환경에 붙여넣어야 합니다. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하고 연결을 설정할 수 있도록 잠시 기다립니다.
+또한 [!UICONTROL Staging SAS URI] 자격 증명을 복사하여 [!DNL Azure Databricks] 환경에 붙여넣어야 합니다. 완료되면 **[!UICONTROL Connect to source]**&#x200B;을(를) 선택하고 연결을 설정할 수 있도록 잠시 기다립니다.
 
 ![SAS URI 스테이징 자격 증명입니다.](../../../../images/tutorials/create/databricks/sas-uri.png)
 

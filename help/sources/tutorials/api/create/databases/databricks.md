@@ -4,9 +4,9 @@ description: API를 사용하여 Databricks를 Experience Platform에 연결하�
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '553'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 >
 >* [!DNL Databricks] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 소스 개요에서 [약관](../../../../home.md#terms-and-conditions)을 참조하십시오.
 
-[!DNL Databricks]API[[!DNL Flow Service] 를 사용하여 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/) 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
+[!DNL Databricks]API[[!DNL Flow Service] 를 사용하여 ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
 
 ## 시작하기
 
@@ -42,10 +42,11 @@ Experience Platform API를 성공적으로 호출하는 방법에 대한 자세�
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| `domain` | [!DNL Databricks] 작업 영역의 URL입니다. 예: `https://adb-1234567890123456.7.azuredatabricks.net`. |
+| `domain` | [!DNL Databricks] 작업 영역의 URL입니다. 예, `https://adb-1234567890123456.7.azuredatabricks.net`. |
 | `clusterId` | [!DNL Databricks]에 있는 클러스터의 ID입니다. 이 클러스터는 이미 기존 클러스터여야 하며 대화형 클러스터여야 합니다. |
 | `accessToken` | [!DNL Databricks] 계정을 인증하는 액세스 토큰입니다. [!DNL Databricks] 작업 영역을 사용하여 액세스 토큰을 생성할 수 있습니다. |
 | `database` | 델타 레이크에 있는 데이터베이스의 이름입니다. |
+| `catalog` | 델타 레이크에 있는 카탈로그의 이름입니다. 기본 카탈로그에 대한 값을 지정할 필요가 없습니다. |
 | `connectionSpec.Id` | 연결 사양 ID는 기본 및 소스 연결 생성과 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL Databricks]의 연결 사양 ID는 `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`입니다. |
 
 자세한 내용은 [[!DNL Databricks] 개요](../../../../connectors/databases/databricks.md)를 참조하십시오.
@@ -124,5 +125,5 @@ curl -X POST \
 
 이 자습서를 따라 [!DNL Databricks] 계정과 Experience Platform 간의 연결을 만들었습니다. 다음 자습서에서는 새로 생성된 기본 연결 ID를 사용할 수 있습니다.
 
-* [&#x200B; [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
-* [&#x200B; [!DNL Flow Service] API를 사용하여 데이터베이스 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/database-nosql.md)
+* [ [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
+* [ [!DNL Flow Service] API를 사용하여 데이터베이스 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/database-nosql.md)
