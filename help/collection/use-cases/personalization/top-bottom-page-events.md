@@ -2,9 +2,9 @@
 title: 웹 SDK에서 페이지 이벤트의 상단 및 하단 구성
 description: 이 문서에서는 Web SDK에서 페이지 이벤트의 상단과 하단을 사용하는 방법에 대해 설명합니다.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 | 매개 변수 | 필수/선택 사항 | 설명 |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | 필수 여부 | 이 섹션에서는 수동으로 렌더링된 제안을 정의합니다. 제안 `ID`, `scope` 및 `scopeDetails`을(를) 포함해야 합니다. 수동으로 렌더링된 콘텐츠의 표시 이벤트를 기록하는 방법에 대한 자세한 내용은 [수동으로 개인화를 렌더링](../personalization/rendering-personalization-content.md#manually)하는 방법에 대한 설명서를 참조하십시오. 수동으로 렌더링된 개인화 콘텐츠는 페이지 조회수 하단에 포함되어야 합니다. |
+| `xdm._experience.decisioning.propositions` | 필수 여부 | 이 섹션에서는 수동으로 렌더링된 제안을 정의합니다. 제안 `ID`, `scope` 및 `scopeDetails`을(를) 포함해야 합니다. 자세한 내용은 [디스플레이 이벤트 관리](display-events.md)를 참조하십시오. 수동으로 렌더링된 개인화 콘텐츠는 페이지 조회수 하단에 포함되어야 합니다. |
 | `xdm._experience.decisioning.propositionEventType` | 필수 여부 | 이 매개 변수를 `display: 1`(으)로 설정하십시오. |
 | `xdm` | 선택 사항입니다 | 이 섹션을 사용하여 페이지 이벤트 하단에 필요한 모든 데이터를 포함합니다. |
 

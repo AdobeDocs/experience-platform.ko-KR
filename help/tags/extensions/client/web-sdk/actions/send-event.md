@@ -1,9 +1,10 @@
 ---
 title: 이벤트 보내기
 description: Adobe Experience Platform Edge Network으로 데이터를 전송합니다.
-source-git-commit: d6aea91d6989775ff5b6038b216ed2518f4a7d98
+exl-id: 4ac7750e-48ab-4eb6-873d-bb2556dbf788
+source-git-commit: caaf5cad7276d6429fbbf35585fd4845de6ff60c
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -48,8 +49,8 @@ ht-degree: 0%
 ![이벤트 보내기 작업 유형에 대한 Personalization 설정을 보여 주는 Experience Platform 태그 UI 이미지입니다.](../assets/personalization-settings.png)
 
 * **[!UICONTROL Scopes]**: 개인화에서 명시적으로 요청하려는 범위의 배열입니다. 범위를 수동으로 입력하거나 데이터 요소를 제공할 수 있습니다. 수동으로 범위를 입력할 때 각 필드는 하나의 범위를 나타냅니다. 작업에 범위를 더 추가하려면 **[!UICONTROL Add scope]**&#x200B;을(를) 선택하십시오.
-* **[!UICONTROL Surfaces]**: 이벤트를 사용하여 쿼리할 표면 배열입니다. 자세한 내용은 Adobe Journey Optimizer 설명서의 [웹 경험 만들기](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=ko)를 참조하십시오. 서피스를 수동으로 입력할 때 각 필드는 하나의 서피스를 나타냅니다. **[!UICONTROL Add surface]**&#x200B;을(를) 선택하여 더 많은 표면을 작업에 추가합니다.
-* **시각적 개인화 결정 렌더링:** 활성화되면 페이지에서 개인화된 콘텐츠를 렌더링할 수 있는 확인란입니다. 자세한 내용은 [개인화된 콘텐츠 렌더링](/help/collection/use-cases/personalization/rendering-personalization-content.md#automatically-rendering-content)을 참조하십시오.
+* **[!UICONTROL Surfaces]**: 이벤트를 사용하여 쿼리할 표면 배열입니다. 자세한 내용은 Adobe Journey Optimizer 설명서의 [웹 경험 만들기](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)를 참조하십시오. 서피스를 수동으로 입력할 때 각 필드는 하나의 서피스를 나타냅니다. **[!UICONTROL Add surface]**&#x200B;을(를) 선택하여 더 많은 표면을 작업에 추가합니다.
+* **시각적 개인화 결정 렌더링:** 활성화되면 페이지에서 개인화된 콘텐츠를 렌더링할 수 있는 확인란입니다. 자세한 내용은 [DOM 작업을 자동으로 렌더링](/help/collection/use-cases/personalization/render-auto-pers-content.md)을 참조하십시오.
 * **[!UICONTROL Request default personalization]**: 페이지 범위 및 기본 표면을 요청할지 여부를 제어합니다. 기본적으로 페이지 로드 중 처음 `sendEvent` 호출 중에 자동으로 요청됩니다. 이 라디오 단추에 해당하는 JavaScript 라이브러리는 [`requestDefaultPersonalization`](/help/collection/js/commands/sendevent/personalization.md)입니다. 다음 옵션 중에서 선택할 수 있습니다.
    * **[!UICONTROL Automatic]**: 기본 동작입니다. 아직 요청되지 않은 경우에만 기본 개인화를 요청합니다.
    * **[!UICONTROL Enabled]**: 페이지 범위 및 기본 표면을 명시적으로 요청합니다. SPA 보기 캐시를 업데이트합니다.

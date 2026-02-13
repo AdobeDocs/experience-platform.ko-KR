@@ -6,10 +6,10 @@ breadcrumb-title: 데이터 수집
 user-guide-description: Adobe Experience Platform으로 데이터를 전송하는 방법에 대해 알아봅니다.
 feature: Data Collection
 role: Developer
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: caaf5cad7276d6429fbbf35585fd4845de6ff60c
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 32%
+source-wordcount: '149'
+ht-degree: 30%
 
 ---
 
@@ -106,7 +106,9 @@ ht-degree: 32%
    + [여러 SDK 인스턴스](use-cases/multiple-instances.md)
    + 개인화 {#personalization}
       + [개요](use-cases/personalization/pers-overview.md)
-      + [이벤트 표시](use-cases/personalization/display-events.md)
+      + [자동으로 DOM 작업 렌더링](use-cases/personalization/render-auto-pers-content.md)
+      + [HTML 오퍼 렌더링](use-cases/personalization/render-html-offers.md)
+      + [수동으로 제안 렌더링](use-cases/personalization/render-manual-propositions.md)
       + [플리커 관리](use-cases/personalization/manage-flicker.md)
-      + [개인화된 콘텐츠 렌더링](use-cases/personalization/rendering-personalization-content.md)
+      + [이벤트 표시](use-cases/personalization/display-events.md)
       + [상위 및 하위 페이지 이벤트](use-cases/personalization/top-bottom-page-events.md)

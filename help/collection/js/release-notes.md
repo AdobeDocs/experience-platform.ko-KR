@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
+source-git-commit: 5ef0b97d6908753be738d7ad2dfd423d02f87c8d
 workflow-type: tm+mt
-source-wordcount: '2725'
+source-wordcount: '2718'
 ht-degree: 5%
 
 ---
@@ -71,14 +71,14 @@ ht-degree: 5%
 
 **수정 사항 및 개선 사항**
 
-- 미디어 개체의 [&#x200B; 속성이 잘못된 데이터 형식을 잘못 받아들인 &#x200B;](commands/getmediaanalyticstracker.md)Media Analytics 추적기`length`의 오류를 수정했습니다.
+- 미디어 개체의 [ 속성이 잘못된 데이터 형식을 잘못 받아들인 ](commands/getmediaanalyticstracker.md)Media Analytics 추적기`length`의 오류를 수정했습니다.
 - ID 조회가 실패할 때 약속 거부를 제대로 처리하기 위해 [ID 관리](../use-cases/identity/id-overview.md) 오류 처리가 개선되었습니다.
 - 누락된 `renderStatusHandler`과(와) 관련된 오류로 인해 HTML 콘텐츠 항목이 있는 개인화 콘텐츠를 렌더링하지 못하던 문제를 해결했습니다.
 - Activity Map [URL 컬렉션](commands/configure/clickcollectionenabled.md)이 HTTP가 아닌 URL을 올바르게 처리하도록 수정되었습니다.
 
 **알려진 문제**
 
-- [을(를) 사용하는 &#x200B;](/help/collection/js/install/create-custom-build.md)사용자 지정 빌드`npx @adobe/alloy` 프로세스가 현재 버전 2.28.0에서 예상대로 작동하지 않습니다. 선택한 모듈에 관계없이 모든 구성 요소가 생성된 빌드에 포함됩니다. 이 문제는 CDN에서 사용할 수 있는 표준 JavaScript 파일에는 영향을 주지 않습니다. 수정 작업이 진행 중입니다.
+- [을(를) 사용하는 ](/help/collection/js/install/create-custom-build.md)사용자 지정 빌드`npx @adobe/alloy` 프로세스가 현재 버전 2.28.0에서 예상대로 작동하지 않습니다. 선택한 모듈에 관계없이 모든 구성 요소가 생성된 빌드에 포함됩니다. 이 문제는 CDN에서 사용할 수 있는 표준 JavaScript 파일에는 영향을 주지 않습니다. 수정 작업이 진행 중입니다.
 
 ## 버전 2.27.0 - 2025년 5월 20일 수요일
 
@@ -219,7 +219,7 @@ ht-degree: 5%
 
 **새로운 기능**
 
-- 데이터 스트림 ID[의 명령당 &#x200B;](/help/datastreams/overrides.md)재정의에 대한 지원을 추가했습니다.
+- 데이터 스트림 ID[의 명령당 ](/help/datastreams/overrides.md)재정의에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
@@ -293,7 +293,7 @@ ht-degree: 5%
 **새로운 기능**
 
 - 이제 모바일 앱과 모바일 웹 콘텐츠 및 도메인 간에 방문자 ID를 공유하여 개인화된 경험을 보다 정확하게 제공할 수 있습니다. 자세한 내용은 [전용 설명서](../use-cases/identity/id-sharing.md)를 참조하세요.
-- 이제 분석 지표를 증가시키지 않고도 [!DNL Adobe Target]의 제안 배열을 단일 페이지 애플리케이션으로 렌더링하거나 실행할 수 있습니다. 이렇게 하면 보고 오류가 줄어들고 분석 정확도가 높아집니다. 자세한 내용은 [전용 설명서](../use-cases/personalization/rendering-personalization-content.md)를 참조하세요.
+- 이제 분석 지표를 증가시키지 않고도 [!DNL Adobe Target]의 제안 배열을 단일 페이지 애플리케이션으로 렌더링하거나 실행할 수 있습니다. 이렇게 하면 보고 오류가 줄어들고 분석 정확도가 높아집니다.
 - 사용 가능한 명령 및 인스턴스에 대한 최종 구성을 포함하여 `getLibraryInfo` 명령에 추가 정보를 추가했습니다.
 
 **수정 사항 및 개선 사항**
@@ -361,7 +361,7 @@ ht-degree: 5%
 ## 버전 2.4.0 - 2021년 3월
 
 - 이제 SDK을 [NPM 패키지](install/npm.md)(으)로 설치할 수 있습니다.
-- `out`기본 동의를 구성[할 때 &#x200B;](commands/configure/defaultconsent.md) 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
+- `out`기본 동의를 구성[할 때 ](commands/configure/defaultconsent.md) 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
 - 이제 [`onBeforeEventSend`](commands/configure/onbeforeeventsend.md) 콜백을 사용하여 이벤트가 전송되지 않도록 할 수 있습니다.
 - 이제 렌더링하거나 클릭하는 개인화된 콘텐츠에 대한 이벤트를 보낼 때 `meta.personalization` 대신 XDM 스키마 필드 그룹을 사용합니다.
 - 이제 [`getIdentity`](commands/getidentity.md) 명령이 ID와 함께 에지 영역 ID를 반환합니다.

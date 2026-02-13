@@ -2,9 +2,9 @@
 title: propositions 적용
 description: 이미 sendEvent로 렌더링된 제안을 다시 렌더링합니다.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ ht-degree: 0%
    * 범위
    * 선택기
    * 작업 유형
+
+>[!NOTE]
+>
+>`applyPropositions` 명령은 표시 이벤트를 자동으로 보내지 않습니다. 녹화 표시가 필요한 경우 `sendEvent`표시 이벤트 관리[에 설명된 대로 ](/help/collection/use-cases/personalization/display-events.md) 명령을 사용하십시오.
 
 웹 SDK의 구성된 인스턴스를 호출할 때 `applyPropositions` 명령을 실행합니다. 구성 옵션이 포함된 개체는 다음 필드를 지원합니다.
 
