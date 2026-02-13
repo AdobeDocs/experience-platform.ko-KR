@@ -1,18 +1,24 @@
 ---
 title: Brand Concierge 구성 설정
 description: Brand Concierge 채팅에 대한 세션 지속성 및 스트림 시간 제한을 구성합니다.
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 4%
+source-wordcount: '152'
+ht-degree: 5%
 
 ---
 
-# Brand Concierge 구성 설정
+# Brand Concierge 구성 설정 {#brand-concierge}
 
 >[!AVAILABILITY]
 >
 >웹 SDK용 Brand Concierge은 현재 **베타**&#x200B;에 있습니다. 기능 및 설명서는 변경될 수 있습니다.
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_brandconcierge"
+>title="Brand Concierge"
+>abstract="속성에서 Brand Concierge을 사용할 때의 구성 설정입니다."
 
 **[!UICONTROL Brand Concierge]** 섹션을 통해 웹 SDK 태그 확장에서 Brand Concierge 채팅 세션이 작동하는 방식을 제어할 수 있습니다.
 

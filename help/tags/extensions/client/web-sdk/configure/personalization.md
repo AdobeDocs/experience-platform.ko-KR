@@ -1,14 +1,20 @@
 ---
 title: Personalization 구성 설정
 description: 웹 SDK 태그 확장에서 개인화 설정을 구성합니다.
-source-git-commit: 9a617b6e97aec22a6726266f2628bd2c2a05da19
+exl-id: 24009a40-92ad-49d6-b768-49d64dccf4e0
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
 
-# Personalization 구성 설정
+# Personalization 구성 설정 {#personalization}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_personalization"
+>title="개인화"
+>abstract="태그 확장이 개인화된 콘텐츠를 처리하는 방법을 결정합니다."
 
 이 구성 섹션에서는 개인화된 콘텐츠를 로드하는 동안 페이지의 특정 부분을 숨기는 방법을 결정할 수 있습니다. 올바르게 구성된 경우 이러한 설정은 방문자에게 올바른 개인화된 콘텐츠가 표시되도록 합니다.
 
@@ -26,7 +32,7 @@ ht-degree: 1%
 
 웹 SDK에서 `mbox` 1.x 또는 2.x 라이브러리에서 사용하는 레거시 `mboxEdgeCluster` 및 `at.js` 쿠키를 읽고 쓸 수 있도록 하려면 이 옵션을 사용합니다. 이 설정은 동일한 웹 사이트에서 웹 SDK 또는 `at.js`을(를) 사용하여 페이지 간에 이동하는 동안 방문자 프로필을 그대로 유지하는 데 도움이 됩니다. 사이트에 `at.js`이(가) 구현되지 않은 경우 이 확인란을 활성화할 필요가 없습니다. 이 확인란에 해당하는 JavaScript 라이브러리는 [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md)입니다.
 
-이 옵션을 활성화할 때는 [`overrideMboxEdgeServer`에서 &#x200B;](https://experienceleague.adobe.com/ko/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver)`targetGlobalSettings()`도 활성화해야 합니다.
+이 옵션을 활성화할 때는 [`overrideMboxEdgeServer`에서 ](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver)`targetGlobalSettings()`도 활성화해야 합니다.
 
 ## [!UICONTROL Prehiding style] {#prehiding-style}
 

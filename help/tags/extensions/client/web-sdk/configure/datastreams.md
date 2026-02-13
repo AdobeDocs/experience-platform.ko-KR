@@ -1,14 +1,20 @@
 ---
 title: 데이터 스트림 구성 설정
 description: 웹 SDK 태그 확장을 사용하여에 데이터를 전송하도록 데이터 스트림을 구성합니다.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 2d2504c6-b3f9-4e7b-aff4-a8d8d6c4e3dd
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 0%
+source-wordcount: '251'
+ht-degree: 1%
 
 ---
 
-# 데이터 스트림 구성 설정
+# 데이터 스트림 구성 설정 {#datastreams}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datastreams"
+>title="데이터스트림"
+>abstract="필수 여부. 데이터를 전송할 Edge Network 내의 데이터 스트림을 설정합니다."
 
 이 구성 섹션에서는 데이터를 보낼 [데이터스트림](/help/datastreams/overview.md)을(를) 결정할 수 있습니다. **Edge Network으로 전송되는 모든 데이터에 데이터 스트림 ID가 필요합니다.**
 

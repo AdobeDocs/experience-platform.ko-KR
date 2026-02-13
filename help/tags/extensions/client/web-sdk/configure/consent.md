@@ -1,14 +1,20 @@
 ---
 title: 동의 구성 설정
 description: 태그 확장에 대한 기본 동의 및 개인 정보 설정을 구성합니다.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 93913a8b-0351-409d-b26a-8dc2ac0296c5
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---
 
-# 동의 구성 설정
+# 동의 구성 설정 {#consent}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_consent"
+>title="동의"
+>abstract="다른 명시적 동의 환경 설정이 제공되지 않을 경우 가정하는 기본 동의 수준을 선택합니다."
 
 **[!UICONTROL Consent]** 섹션에서 다른 명시적 동의 환경 설정이 제공되지 않을 경우 가정하는 기본 동의 수준을 선택할 수 있습니다. 기본 동의 수준이 사용자 프로필에 저장되지 않습니다.
 

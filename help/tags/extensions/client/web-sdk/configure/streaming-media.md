@@ -1,14 +1,20 @@
 ---
 title: 스트리밍 미디어 구성 설정
 description: 웹 SDK 태그 확장이 스트리밍 미디어 데이터를 수집하는 방법을 사용자 지정합니다.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: f486d729-b7ad-4720-8399-71495cb9c57e
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 4%
+source-wordcount: '310'
+ht-degree: 3%
 
 ---
 
-# 스트리밍 미디어 구성 설정
+# 스트리밍 미디어 구성 설정 {#streaming-media}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_streamingmedia"
+>title="스트리밍 미디어"
+>abstract="미디어 재생 세션 중에 스트리밍 미디어 데이터를 수집하는 방법을 결정합니다."
 
 미디어 컬렉션 기능은 미디어 재생, 일시 중지, 완료 및 기타 관련 이벤트와 같은 미디어 세션과 관련된 데이터를 수집하는 데 도움이 됩니다. 수집되면 이 데이터를 Adobe Experience Platform 또는 Adobe Analytics으로 전송하여 보고서를 생성할 수 있습니다. 이 기능은 웹 사이트에서의 미디어 소비 행동을 추적하고 이해하는 포괄적인 솔루션을 제공합니다.
 

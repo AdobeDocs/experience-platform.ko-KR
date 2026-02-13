@@ -1,15 +1,20 @@
 ---
-title: 사용자 지정 빌드 구성 요소
+title: 빌드 옵션
 description: 빌드 크기를 줄이는 기능을 사용하지 않도록 설정하는 사용자 지정 웹 SDK 빌드를 만듭니다.
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
 
-# 사용자 지정 빌드 구성 요소
+# 빌드 옵션 {#build-options}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_buildoptions"
+>title="빌드 옵션"
+>abstract="JavaScript 라이브러리에서 모듈을 선택적으로 포함하거나 제외하여 라이브러리 크기를 줄이고 성능을 개선합니다."
 
 웹 SDK 라이브러리에는 개인화, ID, 링크 추적 등과 같은 다양한 기능에 대한 여러 모듈이 포함되어 있습니다. 사용 사례에 따라 전체 라이브러리가 아닌 특정 기능만 필요할 수 있습니다. 빌드 구성 요소를 비활성화하면 필요한 모듈만 사용할 수 있으므로 라이브러리 크기를 줄이고 성능을 향상시킬 수 있습니다.
 

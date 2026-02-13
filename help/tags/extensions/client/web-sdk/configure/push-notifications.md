@@ -1,14 +1,20 @@
 ---
 title: 푸시 알림 설정
 description: 웹 SDK 태그 확장에 대한 푸시 알림 설정을 구성합니다.
-source-git-commit: 0b3f4ec51cac182b637c79b9fcb883e5f8f78d02
+exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 0%
+source-wordcount: '196'
+ht-degree: 1%
 
 ---
 
-# 푸시 알림 설정
+# 푸시 알림 설정 {#push-notifications}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_pushnotifications"
+>title="푸시 알림"
+>abstract="푸시 알림 인증을 위한 VAPID 공개 키를 설정합니다."
 
 >[!AVAILABILITY]
 >

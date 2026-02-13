@@ -1,14 +1,20 @@
 ---
 title: 데이터 스트림 구성 재정의 설정
 description: 특정 조건이 충족되면 구성 설정을 수정합니다.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 68227148-3d74-4807-836c-14acd8a9c1dc
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '600'
 ht-degree: 3%
 
 ---
 
-# 데이터 스트림 구성 재정의 설정
+# 데이터 스트림 구성 재정의 설정 {#config-overrides}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_overrides"
+>title="데이터 스트림 구성 재정의"
+>abstract="별도의 데이터 스트림을 필요로 하지 않고 조건부로 다른 데이터 스트림 동작을 트리거합니다. 이 섹션에서 환경에 대한 클라이언트측 데이터스트림 구성 재정의를 설정하면 해당 환경에 대한 서버측 동적 데이터스트림 구성 및 규칙이 재정의됩니다."
 
 데이터 스트림 재정의를 사용하면 웹 SDK을 통해 Edge Network에 전달되는 데이터 스트림에 대한 추가 구성을 정의할 수 있습니다. 이 기능을 사용하면 새 데이터스트림을 만들거나 기존 설정을 수정하지 않고 조건부로 다른 데이터스트림 동작을 트리거할 수 있습니다.
 

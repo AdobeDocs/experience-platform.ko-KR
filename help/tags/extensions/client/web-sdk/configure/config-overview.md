@@ -1,14 +1,15 @@
 ---
 title: 구성 설정 개요
 description: 웹 SDK 태그 확장을 구성할 때 사용할 수 있는 옵션에 대해 알아봅니다.
-source-git-commit: 5f0203cfff3cb5c8b892142ff9b1c121925c3c46
+exl-id: 03f7bc0a-05c9-48ae-ae57-478db6d18f52
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%
 
 ---
 
-# 구성 설정 개요
+# 구성 설정 개요 {#config-overview}
 
 Adobe Experience Platform Web SDK 태그 확장은 사용자 지정할 수 있는 몇 가지 옵션을 제공합니다. 이러한 구성 설정은 JavaScript 라이브러리에서 [`configure`](/help/collection/js/commands/configure/overview.md) 명령을 사용하는 것과 같은 태그입니다.
 

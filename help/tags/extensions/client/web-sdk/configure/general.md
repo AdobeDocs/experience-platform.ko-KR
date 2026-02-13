@@ -2,14 +2,19 @@
 title: SDK 인스턴스 구성 설정
 description: 웹 SDK 인스턴스에 대한 일반 설정을 구성합니다.
 exl-id: cc22b8b3-88c6-4030-91b4-60e14a3b0f42
-source-git-commit: 50881ef9498196f2de5519f050800334019a2586
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '278'
 ht-degree: 2%
 
 ---
 
-# SDK 인스턴스 구성 설정
+# SDK 인스턴스 구성 설정 {#sdk-instance}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_sdkinstance"
+>title="SDK 인스턴스"
+>abstract="SDK 인스턴스 이름, 인스턴스가 속한 IMS 조직 및 Edge 도메인을 설정합니다."
 
 이 구성 섹션은 웹 SDK 인스턴스 이름, 적용되는 IMS 조직 및 데이터를 보낼 위치를 제어합니다. 기본적으로 인스턴스 이름은 `alloy`입니다.
 
@@ -35,4 +40,4 @@ Adobe에 데이터를 전송할 조직의 ID입니다. 대부분의 경우 자�
 
 확장에서 데이터를 보내고 받는 도메인입니다. 기본적으로 필드에는 `<COMPANYID>.data.adobedc.net`이(가) 포함되어 있습니다. 이전 구현에는 기본값인 `edge.adobedc.net`이(가) 포함되어 있을 수 있으며, 이 값도 유효합니다.
 
-Adobe에서는 대부분의 경우 자사 도메인을 사용하는 것이 좋습니다. 데이터 수집에 적합한 자사 도메인을 설정하는 방법에 대한 지침은 [Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/ko/docs/core-services/interface/data-collection/adobe-managed-cert)을 참조하세요. 이 값을 설정하는 방법에 대한 지침은 JavaScript 라이브러리 설명서에서 [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md)을(를) 참조하십시오.
+Adobe에서는 대부분의 경우 자사 도메인을 사용하는 것이 좋습니다. 데이터 수집에 적합한 자사 도메인을 설정하는 방법에 대한 지침은 [Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)을 참조하세요. 이 값을 설정하는 방법에 대한 지침은 JavaScript 라이브러리 설명서에서 [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md)을(를) 참조하십시오.

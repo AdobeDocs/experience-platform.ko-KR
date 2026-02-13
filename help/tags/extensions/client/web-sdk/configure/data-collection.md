@@ -2,14 +2,19 @@
 title: 데이터 수집 구성 설정
 description: 웹 SDK 태그 확장에서 데이터 수집 설정을 구성합니다.
 exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
-source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 0%
+source-wordcount: '719'
+ht-degree: 1%
 
 ---
 
-# 데이터 수집 구성 설정
+# 데이터 수집 구성 설정 {#data-collection}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datacollection"
+>title="데이터 수집"
+>abstract="수집할 데이터 및 태그 확장 전체에서 해당 데이터가 수집되는 방법을 결정합니다."
 
 이 구성 섹션에서는 확장 간에 데이터를 수집하는 방법을 결정할 수 있습니다.
 

@@ -1,14 +1,20 @@
 ---
 title: ID 구성 설정
 description: 태그 확장이 방문자를 식별하는 방법을 정의합니다.
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '298'
 ht-degree: 2%
 
 ---
 
-# ID 구성 설정
+# ID 구성 설정 {#identity}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_identity"
+>title="ID"
+>abstract="태그 확장이 방문자를 식별하는 방법을 정의합니다."
 
 이 구성 섹션에서는 사용자 ID를 처리할 때 웹 SDK의 동작을 정의할 수 있습니다.
 

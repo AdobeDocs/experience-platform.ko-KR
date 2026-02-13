@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
+source-git-commit: 7dac63a5c2ca3897795b8849677ae606c8ea8c4b
 workflow-type: tm+mt
-source-wordcount: '3118'
+source-wordcount: '3165'
 ht-degree: 21%
 
 ---
@@ -14,11 +14,17 @@ ht-degree: 21%
 
 이 문서에서는 Adobe Experience Platform Web SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Experience Platform Web SDK 릴리스 노트](/help/collection/js/release-notes.md)를 참조하십시오.
 
+## 버전 2.34.1 - 2026년 2월 11일
+
+- Adobe Experience Platform Web SDK의 [버전 2.31.1](/help/collection/js/release-notes.md)을 포함합니다.
+- [이벤트 보내기](configure/advertising.md) 작업에서 [Adobe Advertising 구성 설정](actions/send-event.md)을(를) 편집할 수 없는 문제가 수정되었습니다.
+- `edge.adobedc.net`을(를) 사용할 수 없을 때 [Edge 도메인](configure/general.md) 구성 설정에 대한 `tenant-id`에 대체 항목이 추가되었습니다.
+
 ## 버전 2.34.0 - 2026년 2월 9일
 
 **새로운 기능**
 
-- Adobe Experience Platform Web SDK의 [버전 2.31.0](/help/collection/js/release-notes.md#2-31-0)을 포함합니다.
+- Adobe Experience Platform Web SDK의 [버전 2.31.0](/help/collection/js/release-notes.md)을 포함합니다.
 - 태그 확장에 대해 [기본 코드 지원](/help/collection/js/install/base-code.md)을 추가했습니다.
 - 확장 설정에 **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [context](configure/data-collection.md#context-settings)이(가) 추가되었습니다.
 - Brand Concierge 구성 요소를 추가했습니다.
@@ -27,7 +33,7 @@ ht-degree: 21%
 **수정 사항 및 개선 사항**
 
 - 회사 ID를 하위 도메인으로 포함하도록 [기본 에지 도메인](configure/general.md#edge-domain)을 업데이트했습니다.
-- **[!UICONTROL No overrides]**&#x200B;데이터 스트림 구성 재정의[에 &#x200B;](configure/configuration-overrides.md) 옵션을 추가했습니다.
+- **[!UICONTROL No overrides]**&#x200B;데이터 스트림 구성 재정의[에 ](configure/configuration-overrides.md) 옵션을 추가했습니다.
 - 일부 입력 필드의 항목을 다시 채우는 새로 고침 단추가 추가되었습니다.
 - 이제 인스턴스가 생성될 때마다 고유 인스턴스 이름이 자동으로 생성됩니다.
 - 값이 `combinedValidator` 또는 `undefined`일 때 `null`에서 오류가 발생하는 오류를 해결했습니다.
@@ -249,7 +255,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
 **새로운 기능**
 
-- 데이터 스트림 ID[의 명령당 &#x200B;](../../../../datastreams/overrides.md)재정의에 대한 지원을 추가했습니다.
+- 데이터 스트림 ID[의 명령당 ](../../../../datastreams/overrides.md)재정의에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
@@ -409,7 +415,7 @@ Adobe Experience Platform Web SDK 라이브러리의 버전 2.5.0을 포함합�
 Adobe Experience Platform Web SDK 라이브러리의 버전 2.4.0을 포함합니다.
 
 - [이벤트 보내기](actions/send-event.md) 작업에 &#39;문서 언로드&#39; 확인란이 추가되었습니다.
-- `out`기본 동의를 구성[할 때 &#x200B;](configure/consent.md) 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
+- `out`기본 동의를 구성[할 때 ](configure/consent.md) 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
 - 기본 동의 필드에 도구 설명을 추가했습니다.
 - [`Set consent`](actions/set-consent.md) 작업을 사용할 때 Adobe의 동의 2.0 표준에 대한 지원이 추가되었습니다.
 - 사용자의 액세스 토큰이 잘못되었거나 잘못 제공된 경우 XDM 개체 데이터 요소 UI에 더 나은 오류가 표시됩니다.
