@@ -24,7 +24,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`applyPropositions` 명령은 표시 이벤트를 자동으로 보내지 않습니다. 녹화 표시가 필요한 경우 `sendEvent`표시 이벤트 관리[에 설명된 대로 ](/help/collection/use-cases/personalization/display-events.md) 명령을 사용하십시오.
+>`applyPropositions` 명령은 표시 이벤트를 자동으로 보내지 않습니다. 녹화 표시가 필요한 경우 `sendEvent`표시 이벤트 관리[에 설명된 대로 &#x200B;](/help/collection/use-cases/personalization/display-events.md) 명령을 사용하십시오.
 
 웹 SDK의 구성된 인스턴스를 호출할 때 `applyPropositions` 명령을 실행합니다. 구성 옵션이 포함된 개체는 다음 필드를 지원합니다.
 
