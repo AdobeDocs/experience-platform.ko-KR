@@ -3,7 +3,7 @@ keywords: Experience Platform;문제 해결;보호;지침;
 title: 데이터 수집 보호
 description: Adobe Experience Platform에서의 데이터 수집을 위한 보호 기능에 대해 알아봅니다.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
+source-git-commit: b5b975308d28ae82ea4d811652681215bc2cfbdb
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)을(를) 확인하십시오.
+>이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을(를) 확인하십시오.
 
 이 문서에서는 Adobe Experience Platform의 데이터 수집을 위한 보호 기능에 대한 지침을 제공합니다.
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 다음 표에서는 [일괄 처리 수집 API](./batch-ingestion/overview.md) 또는 소스를 사용할 때 고려해야 할 경고에 대해 설명합니다.
 
-| 수집 유형 | 가이드라인 | 참고 |
+| 수집 유형 | 지침 | 참고 |
 | --- | --- | --- |
 | 일괄 처리 수집 API를 사용한 데이터 레이크 수집 | <ul><li>일괄 처리 수집 API를 사용하여 시간당 최대 20GB의 데이터를 데이터 레이크로 수집할 수 있습니다.</li><li>배치당 최대 파일 수는 1500개입니다.</li><li>최대 배치 크기는 100GB입니다.</li><li>행당 최대 속성 또는 필드 수는 10000.</li><li>사용자당 분당 최대 배치 수는 2000개입니다.</li></ul> | |
 | 일괄 처리 소스를 사용한 데이터 레이크 수집 | <ul><li>[!DNL Azure Blob], [!DNL Amazon S3] 및 [!DNL SFTP]과(와) 같은 일괄 처리 수집 소스를 사용하여 시간당 최대 200GB의 데이터를 데이터 레이크로 수집할 수 있습니다.</li><li>배치 크기는 256MB에서 100GB 사이여야 합니다. 압축되지 않은 데이터와 압축된 데이터 모두에 적용됩니다. 압축된 데이터가 데이터 레이크에서 압축되지 않은 경우 이러한 제한 사항이 적용됩니다.</li><li>배치당 최대 파일 수는 1500개입니다.</li><li>파일 또는 폴더의 최소 크기는 1바이트입니다. 0바이트 크기 파일 또는 폴더는 수집할 수 없습니다.</li></ul> | 데이터 수집에 사용할 수 있는 소스 카탈로그의 경우 [소스 개요](../sources/home.md)를 읽어 보십시오. |
@@ -47,9 +47,9 @@ ht-degree: 0%
 
 다음 표에서는 스트리밍 소스 사용 시 고려해야 할 가드레일에 대해 설명합니다.
 
-| 수집 유형 | 가이드라인 | 참고 |
+| 수집 유형 | 지침 | 참고 |
 | --- | --- | --- |
-| 스트리밍 소스 | <ul><li>최대 레코드 크기는 1MB이며 권장 크기는 10KB입니다.</li><li>스트리밍 소스는 데이터 레이크로 수집할 때 초당 4000~5000개의 요청을 지원합니다. 이는 기존 소스 연결뿐만 아니라 새로 생성된 소스 연결 모두에 적용됩니다. **참고**: 스트리밍 데이터가 데이터 레이크로 완전히 처리되려면 최대 30분이 걸릴 수 있습니다.</li><li>스트리밍 소스는 프로필로 데이터를 수집하거나 스트리밍 세분화를 수행할 때 초당 최대 1500개의 요청을 지원합니다.</li></ul> | [!DNL Kafka], [!DNL Azure Event Hubs] 및 [!DNL Amazon Kinesis]과(와) 같은 스트리밍 원본은 [!DNL Data Collection Core Service]&#x200B;(DCCS) 경로를 사용하지 않으며 다른 처리량 제한을 가질 수 있습니다. 데이터 수집에 사용할 수 있는 소스 카탈로그는 [소스 개요](../sources/home.md)를 참조하십시오. |
+| 스트리밍 소스 | <ul><li>최대 레코드 크기는 1MB이며 권장 크기는 10KB입니다.</li><li>스트리밍 소스는 데이터 레이크로 수집할 때 초당 4000~5000개의 요청을 지원합니다. 이는 기존 소스 연결뿐만 아니라 새로 생성된 소스 연결 모두에 적용됩니다. **참고**: 스트리밍 데이터가 데이터 레이크로 완전히 처리되는 데 최대 60분이 걸릴 수 있습니다.</li><li>스트리밍 소스는 프로필로 데이터를 수집하거나 스트리밍 세분화를 수행할 때 초당 최대 1500개의 요청을 지원합니다.</li></ul> | [!DNL Kafka], [!DNL Azure Event Hubs] 및 [!DNL Amazon Kinesis]과(와) 같은 스트리밍 원본은 [!DNL Data Collection Core Service]&#x200B;(DCCS) 경로를 사용하지 않으며 다른 처리량 제한을 가질 수 있습니다. 데이터 수집에 사용할 수 있는 소스 카탈로그는 [소스 개요](../sources/home.md)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보호, 종단 간 지연 정보 및 라이선스 정보에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
-* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ko#end-to-end-latency-diagrams).
-* [Real-Time Customer Data Platform(B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams).
+* [Real-Time Customer Data Platform(B2C Edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
