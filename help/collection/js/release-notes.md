@@ -71,14 +71,14 @@ ht-degree: 5%
 
 **수정 사항 및 개선 사항**
 
-- 미디어 개체의 [ 속성이 잘못된 데이터 형식을 잘못 받아들인 ](commands/getmediaanalyticstracker.md)Media Analytics 추적기`length`의 오류를 수정했습니다.
+- 미디어 개체의 [&#x200B; 속성이 잘못된 데이터 형식을 잘못 받아들인 &#x200B;](commands/getmediaanalyticstracker.md)Media Analytics 추적기`length`의 오류를 수정했습니다.
 - ID 조회가 실패할 때 약속 거부를 제대로 처리하기 위해 [ID 관리](../use-cases/identity/id-overview.md) 오류 처리가 개선되었습니다.
 - 누락된 `renderStatusHandler`과(와) 관련된 오류로 인해 HTML 콘텐츠 항목이 있는 개인화 콘텐츠를 렌더링하지 못하던 문제를 해결했습니다.
 - Activity Map [URL 컬렉션](commands/configure/clickcollectionenabled.md)이 HTTP가 아닌 URL을 올바르게 처리하도록 수정되었습니다.
 
 **알려진 문제**
 
-- [을(를) 사용하는 ](/help/collection/js/install/create-custom-build.md)사용자 지정 빌드`npx @adobe/alloy` 프로세스가 현재 버전 2.28.0에서 예상대로 작동하지 않습니다. 선택한 모듈에 관계없이 모든 구성 요소가 생성된 빌드에 포함됩니다. 이 문제는 CDN에서 사용할 수 있는 표준 JavaScript 파일에는 영향을 주지 않습니다. 수정 작업이 진행 중입니다.
+- [을(를) 사용하는 &#x200B;](/help/collection/js/install/create-custom-build.md)사용자 지정 빌드`npx @adobe/alloy` 프로세스가 현재 버전 2.28.0에서 예상대로 작동하지 않습니다. 선택한 모듈에 관계없이 모든 구성 요소가 생성된 빌드에 포함됩니다. 이 문제는 CDN에서 사용할 수 있는 표준 JavaScript 파일에는 영향을 주지 않습니다. 수정 작업이 진행 중입니다.
 
 ## 버전 2.27.0 - 2025년 5월 20일 수요일
 
@@ -219,7 +219,7 @@ ht-degree: 5%
 
 **새로운 기능**
 
-- 데이터 스트림 ID[의 명령당 ](/help/datastreams/overrides.md)재정의에 대한 지원을 추가했습니다.
+- 데이터 스트림 ID[의 명령당 &#x200B;](/help/datastreams/overrides.md)재정의에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
@@ -361,7 +361,7 @@ ht-degree: 5%
 ## 버전 2.4.0 - 2021년 3월
 
 - 이제 SDK을 [NPM 패키지](install/npm.md)(으)로 설치할 수 있습니다.
-- `out`기본 동의를 구성[할 때 ](commands/configure/defaultconsent.md) 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
+- `out`기본 동의를 구성[할 때 &#x200B;](commands/configure/defaultconsent.md) 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
 - 이제 [`onBeforeEventSend`](commands/configure/onbeforeeventsend.md) 콜백을 사용하여 이벤트가 전송되지 않도록 할 수 있습니다.
 - 이제 렌더링하거나 클릭하는 개인화된 콘텐츠에 대한 이벤트를 보낼 때 `meta.personalization` 대신 XDM 스키마 필드 그룹을 사용합니다.
 - 이제 [`getIdentity`](commands/getidentity.md) 명령이 ID와 함께 에지 영역 ID를 반환합니다.
