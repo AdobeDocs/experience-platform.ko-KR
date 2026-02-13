@@ -40,7 +40,7 @@ alloy("sendEvent", {
 
 ## 후속 `sendEvent` 호출에서 표시 이벤트 보내기
 
-나중에 `sendEvent` 호출에 표시 이벤트를 포함하면 개인화를 요청할 때 사용할 수 없는 추가 페이지 로드 데이터를 첨부하려는 경우 유용합니다. [상위 및 하위 페이지 이벤트](/help/collection/use-cases/personalization/top-bottom-page-events.md)를 구현할 때 일반적으로 사용됩니다. 이 방식으로 디스플레이 이벤트를 올바르게 구현하면 Adobe Analytics에서 [바운스 비율](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/bounce-rate)에 문제가 발생하지 않습니다.
+나중에 `sendEvent` 호출에 표시 이벤트를 포함하면 개인화를 요청할 때 사용할 수 없는 추가 페이지 로드 데이터를 첨부하려는 경우 유용합니다. [상위 및 하위 페이지 이벤트](/help/collection/use-cases/personalization/top-bottom-page-events.md)를 구현할 때 일반적으로 사용됩니다. 이 방식으로 디스플레이 이벤트를 올바르게 구현하면 Adobe Analytics에서 [바운스 비율](https://experienceleague.adobe.com/ko/docs/analytics/components/metrics/bounce-rate)에 문제가 발생하지 않습니다.
 
 1. 초기 `sendEvent` 호출 시(종종 페이지 맨 위에서) 콘텐츠를 요청하고 렌더링하되, `renderDecisions`을(를) `true`(으)로, `personalization.sendDisplayEvent`을(를) `false`(으)로 설정하여 자동 표시 이벤트를 표시하지 않습니다.
 
