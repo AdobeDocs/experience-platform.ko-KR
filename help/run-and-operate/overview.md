@@ -2,8 +2,7 @@
 title: 실행 및 운영 개요
 description: 실행 및 운영 도구를 사용하여 Adobe Experience Platform 구현을 검사, 문제 해결 및 최적화합니다. 예약된 일괄 처리 활성화에 대한 가시성을 확보하고 구성 문제를 식별하며 시스템 안정성을 개선합니다.
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 1%
@@ -50,7 +49,7 @@ Experience Platform UI에서 실행 및 작업 도구에 액세스하려면 다�
    >
    >현재 사용 가능한 기능은 [작업 일정](job-schedules.md)뿐입니다.
 
-![실행 및 왼쪽 탐색 작업을 보여 주는 Experience Platform UI.](assets/overview/run-and-operate.png)
+![실행 및 왼쪽 탐색 표시가 있는 Experience Platform UI.](assets/overview/run-and-operate.png)
 
 ## 사용 가능한 도구 {#available-tools}
 

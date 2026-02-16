@@ -4,10 +4,9 @@ solution: Experience Platform
 title: 작업 일정 세부 정보 보기
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1783'
 ht-degree: 1%
 
 ---
@@ -38,7 +37,7 @@ ht-degree: 1%
 
 작업 세부 사항을 보기 전에 다음을 수행해야 합니다.
 
-* [!UICONTROL Job Schedules] 및 **[!UICONTROL View Job Schedules]** **[!UICONTROL View Profile Management]**&#x200B;액세스 제어 권한[을 가진 &#x200B;](/help/access-control/home.md#permissions)에 액세스할 수 있습니다.
+* [!UICONTROL Job Schedules] 및 **[!UICONTROL View Job Schedules]** **[!UICONTROL View Profile Management]**&#x200B;액세스 제어 권한[을 가진 ](/help/access-control/home.md#permissions)에 액세스할 수 있습니다.
 * [작업 일정 인터페이스](job-schedules.md#understanding-interface) 및 타임라인 보기에 익숙해지도록 합니다.
 * 다양한 [작업 유형](job-schedules.md#job-schedules-details)(레이크 수집, 프로필 수집, 세분화, 활성화)을 이해합니다.
 
@@ -67,6 +66,8 @@ ht-degree: 1%
 이 레이아웃을 사용하면 데이터 파이프라인 작업과 다운스트림 처리 간의 타이밍 관계를 빠르게 식별할 수 있습니다. 이상적으로 업스트림 작업(예: 데이터 레이크 및 프로필 수집)은 이러한 수직 마커의 왼쪽에 완료되어야 세그먼테이션 및 활성화가 시작되기 전에 데이터가 준비됩니다. 이러한 마커를 지나서 확장된 작업은 데이터가 완전히 준비되기 전에 다운스트림 프로세스가 시작될 수 있는 잠재적 타이밍 문제를 나타냅니다.
 
 ### 어떤 보기를 사용해야 합니까? {#which-view}
+
+아래 표를 사용하여 작업에 맞는 보기를 선택하십시오. 작업을 수행하는 데 필요한 작업을 권장 보기와 일치시켜 효율적으로 탐색합니다.
 
 | 난... | 이 보기 사용 |
 |--------------|---------------|

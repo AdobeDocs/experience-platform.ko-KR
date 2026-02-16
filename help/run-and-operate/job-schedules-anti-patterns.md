@@ -4,8 +4,7 @@ solution: Experience Platform
 title: 작업 일정 방지 패턴 식별
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 9d170fec9b80f0f2e17fc39e8f573cbad515f823
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 0%
@@ -30,7 +29,7 @@ ht-degree: 0%
 
 앤티 패턴을 식별하기 전에 다음을 수행해야 합니다.
 
-* [!UICONTROL Job Schedules] **[!UICONTROL View Job Schedules]**&#x200B;액세스 제어 권한[을(를) 사용하여 &#x200B;](/help/access-control/home.md#permissions)에 액세스할 수 있습니다.
+* [!UICONTROL Job Schedules] **[!UICONTROL View Job Schedules]**&#x200B;액세스 제어 권한[을(를) 사용하여 ](/help/access-control/home.md#permissions)에 액세스할 수 있습니다.
 * [작업 일정 인터페이스](job-schedules.md#understanding-interface) 및 타임라인 보기를 읽는 방법을 숙지하십시오.
 * 기본 [일괄 처리 수집](../ingestion/batch-ingestion/overview.md), [세그먼테이션](../segmentation/home.md) 및 [프로필 처리](../profile/home.md) 개념을 이해합니다.
 

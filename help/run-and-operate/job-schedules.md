@@ -4,11 +4,10 @@ solution: Experience Platform
 title: 작업 일정 검사
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -79,7 +78,7 @@ ht-degree: 1%
 * **어제**: 어제 실행된 작업을 봅니다.
 * **최근 7일**: 지난 주의 작업을 봅니다.
 
-### 일괄 작업 일정 세부 정보 {#job-schedules-details}
+### 배치 작업 일정 세부 정보 {#job-schedules-details}
 
 기본 보기는 배치 작업이 하루 종일 실행되도록 예약된 시간을 보여 줍니다. 다음과 같은 작업을 수행할 수 있습니다.
 
