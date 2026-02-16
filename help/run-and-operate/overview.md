@@ -1,10 +1,10 @@
 ---
 title: 실행 및 운영 개요
-description: 실행 및 운영 도구를 사용하여 Adobe Experience Platform 구현을 검사, 문제 해결 및 최적화합니다. 예약된 일괄 처리 활성화에 대한 가시성을 확보하고 구성 문제를 식별하며 시스템 안정성을 개선합니다.
+description: 실행 및 운영 도구를 사용하여 Experience Platform 구현을 검사, 문제 해결 및 최적화합니다. 예약된 일괄 처리 활성화에 대한 가시성을 확보하고 구성 문제를 식별하며 시스템 안정성을 개선합니다.
 hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+source-git-commit: 4733fae23c5029f4bc2c405376b1a52212dc0440
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '543'
 ht-degree: 1%
 
 ---
