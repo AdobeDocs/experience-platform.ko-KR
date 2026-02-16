@@ -38,7 +38,7 @@ ht-degree: 1%
 
 작업 세부 사항을 보기 전에 다음을 수행해야 합니다.
 
-* [!UICONTROL Job Schedules] 및 **[!UICONTROL View Job Schedules]** **[!UICONTROL View Profile Management]**&#x200B;액세스 제어 권한[을 가진 ](/help/access-control/home.md#permissions)에 액세스할 수 있습니다.
+* [!UICONTROL Job Schedules] 및 **[!UICONTROL View Job Schedules]** **[!UICONTROL View Profile Management]**&#x200B;액세스 제어 권한[을 가진 &#x200B;](/help/access-control/home.md#permissions)에 액세스할 수 있습니다.
 * [작업 일정 인터페이스](job-schedules.md#understanding-interface) 및 타임라인 보기에 익숙해지도록 합니다.
 * 다양한 [작업 유형](job-schedules.md#job-schedules-details)(레이크 수집, 프로필 수집, 세분화, 활성화)을 이해합니다.
 
