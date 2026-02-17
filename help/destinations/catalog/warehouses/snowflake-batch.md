@@ -1,21 +1,17 @@
 ---
 title: Snowflake 배치 연결
 description: 라이브 Snowflake 데이터 공유를 만들어 매일 대상자 업데이트를 계정에 공유 테이블로 직접 받을 수 있습니다.
-last-substantial-update: 2025-10-23T00:00:00Z
+last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 271700625e8cc1d2b5e737e89435c543caa86264
+source-git-commit: 89968d4e4c552b7c6b339a39f7a7224133446116
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 4%
+source-wordcount: '1708'
+ht-degree: 3%
 
 ---
 
 # Snowflake 배치 연결 {#snowflake-destination}
-
->[!AVAILABILITY]
->
->이 대상 커넥터는 제한된 가용성이며 [VA7 지역](/help/landing/multi-cloud.md#azure-regions)에 프로비저닝된 Real-Time CDP Ultimate 고객만 사용할 수 있습니다.
 
 ## 개요 {#overview}
 
@@ -51,7 +47,7 @@ Adobe에서 Snowflake 계정으로의 데이터 흐름을 처음 설정한 후�
 
 Experience Platform은 두 가지 유형의 Snowflake 대상을 제공합니다. [Snowflake 스트리밍](snowflake.md) 및 [Snowflake 일괄 처리](snowflake-batch.md).
 
-두 대상 모두 Snowflake의 데이터에 복사 없는 방식으로 액세스할 수 있지만 각 커넥터의 사용 사례 측면에서 권장되는 몇 가지 모범 사례가 있습니다.
+두 대상 모두 계정에 물리적으로 복사하지 않고 Snowflake의 데이터에 액세스할 수 있지만 각 커넥터의 사용 사례 측면에서 권장되는 몇 가지 모범 사례가 있습니다.
 
 아래 표는 각 데이터 공유 방법이 가장 적합한 시나리오를 요약하여 사용할 커넥터를 결정하는 데 도움이 됩니다.
 
@@ -83,8 +79,13 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 
 * [!DNL Snowflake] 계정에 액세스할 수 있습니다.
 * Snowflake 계정이 비공개 목록을 구독하고 있습니다. 귀하 또는 Snowflake에 대한 계정 관리자 권한이 있는 회사에서 이 구성을 할 수 있습니다.
+* Snowflake 계정의 클라우드 공급자 및 지역을 알고 있습니다. 대상에 연결할 때 두 가지를 모두 입력해야 합니다.
 
 필요한 권한에 대한 자세한 내용은 [[!DNL Snowflake] 설명서](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing)를 참조하십시오.
+
+>[!IMPORTANT]
+>
+>이 대상은 방화벽 뒤에 있거나 [[!DNL Azure Private Link]](https://docs.snowflake.com/en/user-guide/privatelink-azure)을(를) 사용하는 Snowflake 계정을 지원하지 않습니다.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -137,7 +138,7 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_batch_accountid"
->title="Snowflake 계정 ID 입력"
+>title="Snowflake 데이터 공유 계정 식별자를 입력합니다"
 >abstract="계정이 조직에 연결되어 있는 경우 다음 형식을 사용합니다. `OrganizationName.AccountName`<br><br> 계정이 조직에 연결되어 있지 않은 경우 다음 형식을 사용합니다. `AccountName`"
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
@@ -146,10 +147,10 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL Snowflake Account ID]**: Snowflake 계정 ID입니다. 계정이 조직에 연결되어 있는지 여부에 따라 다음 계정 ID 형식을 사용하십시오.
-   * 계정이 조직에 연결되어 있는 경우: `OrganizationName.AccountName`.
+* **[!UICONTROL Snowflake Account ID]**: [Snowflake 데이터 공유 계정 식별자](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name-data-sharing). 계정이 조직에 연결되어 있는지 여부에 따라 다음 형식을 사용하십시오.
+   * 계정이 조직에 연결되어 있는 경우 조직 이름과 계정 이름을 **period**(`.`)로 구분하여 입력하십시오. 예를 들어 조직 이름이 ACME이고 계정 이름이 AsiaRegion인 경우 `ACME.AsiaRegion`을 입력합니다.
    * 계정이 조직에 연결되어 있지 않은 경우: `AccountName`.
-* **[!UICONTROL Select Snowflake Region]**: Snowflake 인스턴스가 프로비저닝되는 지역을 선택하십시오. 지원되는 클라우드 영역에 대한 자세한 내용은 Snowflake [설명서](https://docs.snowflake.com/en/user-guide/intro-regions)를 참조하세요.
+* **[!UICONTROL Snowflake Region]**: Snowflake 인스턴스가 프로비저닝되는 지역을 선택하십시오. 지원되는 클라우드 영역에 대한 자세한 내용은 Snowflake [설명서](https://docs.snowflake.com/en/user-guide/intro-regions)를 참조하세요.
 * **[!UICONTROL Account acknowledgment]**: **[!UICONTROL Snowflake Account ID]**&#x200B;을(를) 입력한 후 이 드롭다운에서 **[!UICONTROL Yes]**&#x200B;을(를) 선택하여 **[!UICONTROL Snowflake Account ID]**&#x200B;이(가) 올바르고 사용자가 소유하고 있는지 확인합니다.
 
 >[!IMPORTANT]
@@ -189,17 +190,12 @@ ID 및 프로필 속성을 이 대상으로 내보낼 수 있습니다.
 
 동적 테이블에는 다음 열이 포함되어 있습니다.
 
-* **TS**: 각 행이 마지막으로 업데이트된 시기를 나타내는 타임스탬프 열입니다.
+* **TS**: 공유 테이블의 각 행이 마지막으로 업데이트된 시기를 나타내는 타임스탬프 열입니다.
+* **병합 정책 ID**: 활성화 중인 대상자가 속한 [병합 정책](../../../profile/merge-policies/overview.md)의 ID입니다
 * **매핑 특성**: 활성화 워크플로 중에 선택한 모든 매핑 특성은 Snowflake에서 열 헤더로 표시됩니다
 * **대상 멤버십**: 데이터 흐름에 매핑된 모든 대상에 대한 멤버십은 해당 셀의 `active` 항목을 통해 표시됩니다
 
-![동적 테이블 데이터가 있는 Snowflake 인터페이스를 보여주는 스크린샷](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
-
-## 알려진 제한 사항 {#known-limitations}
-
-### 지역 가용성 {#regional-availability}
-
-[!DNL Snowflake] 일괄 처리 대상은 현재 Experience Platform VA7 지역에서 프로비저닝된 Real-Time CDP 고객만 사용할 수 있습니다.
+![동적 테이블 데이터가 있는 Snowflake 인터페이스를 보여주는 스크린샷](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
