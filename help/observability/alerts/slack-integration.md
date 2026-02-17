@@ -10,7 +10,7 @@ ht-degree: 0%
 
 # 고객 응대 경고를 위한 Slack 통합
 
-Adobe Experience Platform을 사용하면 [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app)에서 웹후크 프록시를 사용하여 [에서 ](https://developer.adobe.com/events/docs/guides/)Adobe I/O Events[!DNL Slack]을(를) 받을 수 있습니다. 프록시는 Adobe의 확인 핸드셰이크를 처리하고 이벤트 페이로드를 [!DNL Slack] 메시지로 전환하므로 고객이 응대하는 알림을 작업 영역에 전달할 수 있습니다.
+Adobe Experience Platform을 사용하면 [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app)에서 웹후크 프록시를 사용하여 [에서 &#x200B;](https://developer.adobe.com/events/docs/guides/)Adobe I/O Events[!DNL Slack]을(를) 받을 수 있습니다. 프록시는 Adobe의 확인 핸드셰이크를 처리하고 이벤트 페이로드를 [!DNL Slack] 메시지로 전환하므로 고객이 응대하는 알림을 작업 영역에 전달할 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -19,7 +19,7 @@ Adobe Experience Platform을 사용하면 [Adobe App Builder](https://developer.
 * **Adobe Developer Console 액세스**: App Builder이 활성화된 조직의 시스템 관리자 또는 개발자 역할입니다.
 * **Node.js 및 npm**: Adobe CLI 및 프로젝트 종속성을 설치하기 위한 npm이 포함된 Node.js(LTS 권장). 자세한 내용은 [Node.js 다운로드](https://nodejs.org/) 및 [npm 시작 안내서](https://docs.npmjs.com/getting-started)를 참조하십시오.
 * **Adobe I/O CLI**: 터미널에서 Adobe I/O CLI를 설치합니다. `npm install -g @adobe/aio-cli`.
-* **들어오는 Webhook가 있는 Slack 앱**: **들어오는 Webhook**&#x200B;이(가) 활성화된 작업 공간의 Slack 앱입니다. 앱을 만들고 웹후크 URL(형식: [)을 가져오려면 ](https://api.slack.com/apps)Slack 앱 만들기[ 및 ](https://api.slack.com/messaging/webhooks)Slack 수신 웹후크 안내서`https://hooks.slack.com/...`를 참조하십시오.
+* **들어오는 Webhook가 있는 Slack 앱**: **들어오는 Webhook**&#x200B;이(가) 활성화된 작업 공간의 Slack 앱입니다. 앱을 만들고 웹후크 URL(형식: [)을 가져오려면 &#x200B;](https://api.slack.com/apps)Slack 앱 만들기[&#x200B; 및 &#x200B;](https://api.slack.com/messaging/webhooks)Slack 수신 웹후크 안내서`https://hooks.slack.com/...`를 참조하십시오.
 
 ## 템플릿 프로젝트 설정 {#templated-project}
 
