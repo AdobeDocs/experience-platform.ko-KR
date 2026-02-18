@@ -5,10 +5,10 @@ breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: Experience Platform 내의 경험 데이터 모델(XDM) 시스템 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법을 알아봅니다.
 feature: Schemas
 role: Developer
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 511c93342d112056ead54c0d82184cc262a43383
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 20%
+source-wordcount: '711'
+ht-degree: 21%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 20%
 * 스키마 {#schema}
    * [스키마 컴포지션 기본 사항](schema/composition.md)
    * [데이터 모델링을 위한 모범 사례](schema/best-practices.md)
+   * [프로필 활성화 계획](./schema/profile-enablement-planning.md)
    * [중요한 개인 데이터](./schema/sensitive-and-personal-data.md)
    * [XDM 필드 유형 제약 조건](schema/field-constraints.md)
    * [관계형 스키마](./schema/relational.md)
@@ -58,7 +59,7 @@ ht-degree: 20%
          * [코딩](./schema/healthcare/data-types/coding.md)
          * [연락처](./schema/healthcare/data-types/contact-point.md)
          * [용량](./schema/healthcare/data-types/dosage.md)
-         * [기간](./schema/healthcare/data-types/duration.md)
+         * [지속 시간](./schema/healthcare/data-types/duration.md)
          * [확장 연락처 세부 정보](./schema/healthcare/data-types/extended-contact-detail.md)
          * [사람 이름](./schema/healthcare/data-types/human-name.md)
          * [식별자](./schema/healthcare/data-types/identifier.md)
@@ -81,7 +82,7 @@ ht-degree: 20%
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [약물](./classes/medication.md)
    * [지불인](./classes/payer.md)
-   * [플랜](./classes/plan.md)
+   * [계획](./classes/plan.md)
    * [정책](./classes/policy.md)
    * [제품](./classes/product.md)
    * [잠재 고객](./classes/prospect.md)
@@ -146,7 +147,7 @@ ht-degree: 20%
       * [XDM 비즈니스 캠페인 멤버 세부 정보](./field-groups/b2b-campaign-members/details.md)
    * 약물 {#medication}
       * [헬스케어 의약품](./field-groups/medication/healthcare-medication.md)
-   * 플랜 {#plan}
+   * 계획 {#plan}
       * [의료 서비스 플랜 세부 정보](./field-groups/plan/healthcare-plan-details.md)
    * 제품 {#product}
       * [제품 카탈로그](./field-groups/product/product-catalog.md)
@@ -257,7 +258,7 @@ ht-degree: 20%
    * [XDM 스키마 내보내기](./ui/export.md)
 * 스키마 레지스트리 API {#api}
    * [개요](api/overview.md)
-   * [시작하기](api/getting-started.md)
+   * [시작](api/getting-started.md)
    * [스키마](api/schemas.md)
    * [비헤이비어](api/behaviors.md)
    * [클래스](api/classes.md)
