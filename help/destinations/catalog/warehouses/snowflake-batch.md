@@ -4,9 +4,9 @@ description: 라이브 Snowflake 데이터 공유를 만들어 매일 대상자 
 last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 89968d4e4c552b7c6b339a39f7a7224133446116
+source-git-commit: 2ad61b1b7e728429e047c4801b9a79e479a3aa18
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1735'
 ht-degree: 3%
 
 ---
@@ -152,6 +152,10 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
    * 계정이 조직에 연결되어 있지 않은 경우: `AccountName`.
 * **[!UICONTROL Snowflake Region]**: Snowflake 인스턴스가 프로비저닝되는 지역을 선택하십시오. 지원되는 클라우드 영역에 대한 자세한 내용은 Snowflake [설명서](https://docs.snowflake.com/en/user-guide/intro-regions)를 참조하세요.
 * **[!UICONTROL Account acknowledgment]**: **[!UICONTROL Snowflake Account ID]**&#x200B;을(를) 입력한 후 이 드롭다운에서 **[!UICONTROL Yes]**&#x200B;을(를) 선택하여 **[!UICONTROL Snowflake Account ID]**&#x200B;이(가) 올바르고 사용자가 소유하고 있는지 확인합니다.
+
+>[!NOTE]
+>
+> 대상을 만든 후에는 **[!UICONTROL Snowflake Account ID]**&#x200B;대상 편집&#x200B;**[!UICONTROL Snowflake Region]** 워크플로우를 통해 [ 및 ](../../ui/edit-destination.md)을(를) 편집할 수 없습니다. 다른 계정 또는 지역 값을 사용하려면 [새 대상 연결을 만드세요](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >
