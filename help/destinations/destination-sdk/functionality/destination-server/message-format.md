@@ -17,7 +17,7 @@ Adobe 측의 메시지 포맷, 프로필 구성 및 변환 프로세스를 이�
 
 * **XDM(경험 데이터 모델)**. [XDM 개요](../../../../xdm/home.md) 및 [Adobe Experience Platform에서 XDM 스키마를 만드는 방법](../../../../xdm/tutorials/create-schema-ui.md).
 * **클래스**. [UI에서 클래스를 만들고 편집합니다](../../../../xdm/ui/resources/classes.md).
-* **IdentityMap**. ID 맵은 Adobe Experience Platform의 모든 최종 사용자 ID의 맵을 나타냅니다. `xdm:identityMap`XDM 필드 사전[의 ](../../../../xdm/schema/field-dictionary.md)을(를) 참조하세요.
+* **IdentityMap**. ID 맵은 Adobe Experience Platform의 모든 최종 사용자 ID의 맵을 나타냅니다. `xdm:identityMap`XDM 필드 사전[의 &#x200B;](../../../../xdm/schema/field-dictionary.md)을(를) 참조하세요.
 * **SegmentMembership** [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM 특성은 프로필이 멤버인 대상을 알려줍니다. `status` 필드의 세 가지 다른 값에 대해 [대상 멤버십 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/segmentation.md)에 대한 설명서를 읽어 보십시오.
 
 >[!IMPORTANT]
@@ -223,7 +223,7 @@ Adobe은 [Jinja](https://pebbletemplates.io/)와(과) 유사한 템플릿 언어
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 ](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 ](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
+>사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 &#x200B;](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 &#x200B;](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
 
 ```python
 {
@@ -320,7 +320,7 @@ Adobe은 [Jinja](https://pebbletemplates.io/)와(과) 유사한 템플릿 언어
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 ](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 ](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
+>사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 &#x200B;](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 &#x200B;](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
 
 
 ```python
@@ -424,7 +424,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 ](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 ](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
+>사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 &#x200B;](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 &#x200B;](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
 
 ```python
 {
@@ -561,7 +561,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 ](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 ](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
+>사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 &#x200B;](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 &#x200B;](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
 
 ```python
 {
@@ -743,7 +743,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 ](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 ](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
+>사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 &#x200B;](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 &#x200B;](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
 
 ```python
 {
@@ -963,7 +963,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 ](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 ](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
+>사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 &#x200B;](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 &#x200B;](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
 
 `audienceId`이(가) 대상 ID에 액세스하기 위해 템플릿에 사용되는 방법은 아래에 나와 있습니다. 이 예제에서는 대상 분류에서 대상 멤버십에 `audienceId`을(를) 사용한다고 가정합니다. 자체 분류법에 따라 다른 필드 이름을 대신 사용할 수 있습니다.
 
@@ -1042,7 +1042,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### 템플릿에서 ID 네임스페이스 집계 키 사용 {#aggregation-key-identity}
 
-다음은 대상 구성의 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)가 `"namespaces": ["email", "phone"]` 및 `"namespaces": ["GAID", "IDFA"]` 형식의 ID 네임스페이스별로 내보낸 프로필을 집계하도록 설정된 예입니다. 그룹화에 대한 자세한 내용은 `groups`대상 구성 만들기[ 설명서의 ](../../authoring-api/destination-configuration/create-destination-configuration.md) 매개 변수를 참조하십시오.
+다음은 대상 구성의 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)가 `"namespaces": ["email", "phone"]` 및 `"namespaces": ["GAID", "IDFA"]` 형식의 ID 네임스페이스별로 내보낸 프로필을 집계하도록 설정된 예입니다. 그룹화에 대한 자세한 내용은 `groups`대상 구성 만들기[&#x200B; 설명서의 &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) 매개 변수를 참조하십시오.
 
 **입력**
 
@@ -1114,7 +1114,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 ](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 ](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
+>사용하는 모든 템플릿의 경우 `""`대상 서버 구성[에서 &#x200B;](../../functionality/destination-server/templating-specs.md)템플릿[을 삽입하기 전에 큰따옴표 &#x200B;](../../authoring-api/destination-server/create-destination-server.md)과(와) 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)의 9장을 참조하십시오.
 
 `input.aggregationKey.identityNamespaces`이(가) 아래 템플릿에서 사용되고 있습니다.
 
