@@ -221,7 +221,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 선택한 Customer AI 모델에 대한 자세한 인사이트 페이지로 이동하려면 **[!UICONTROL View model details]**&#x200B;을(를) 선택합니다.
 
-![&#x200B; 위젯과 [!UICONTROL Customer AI distribution of scores]이(가) 강조 표시된 Experience Platform 대상 대시보드입니다.[!UICONTROL View model details]](../images/segments/customer-ai-distribution-of-scores.png)
+![ 위젯과 [!UICONTROL Customer AI distribution of scores]이(가) 강조 표시된 Experience Platform 대상 대시보드입니다.[!UICONTROL View model details]](../images/segments/customer-ai-distribution-of-scores.png)
 
 자세한 모델 인사이트 페이지가 표시됩니다.
 
@@ -291,7 +291,7 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 >
 >[!UICONTROL Profile count] 위젯은 여러 가지 이유로 UI의 [!UICONTROL Browse] 섹션에서 [!UICONTROL Profiles] 탭에 표시되는 프로필 수와 다른 수를 표시할 수 있습니다. 이러한 차이가 발생하는 가장 일반적인 이유는 [!UICONTROL Browse] 탭은 조직의 기본 병합 정책을 기반으로 병합된 프로필의 총 수를 참조하는 반면 [!UICONTROL Profile count] 위젯은 대시보드에서 보기 위해 선택한 병합 정책을 기반으로 병합된 프로필의 총 수를 참조하기 때문입니다.
 >
->또 다른 일반적인 이유는 [!UICONTROL Browse] 탭에 대해 대시보드 스냅숏을 만드는 시간과 샘플 작업을 실행하는 시간 사이의 차이점 때문입니다. 위젯의 타임스탬프를 보고 [!UICONTROL Profile count] 위젯이 마지막으로 업데이트된 시기를 확인할 수 있습니다. [!UICONTROL Browse] 탭에서 샘플 작업이 트리거되는 방법에 대한 자세한 내용은 Real-Time Customer Profile UI 안내서[의 &#x200B;](../../profile/ui/user-guide.md#profile-count)profile count 섹션을 참조하십시오.
+>또 다른 일반적인 이유는 [!UICONTROL Browse] 탭에 대해 대시보드 스냅숏을 만드는 시간과 샘플 작업을 실행하는 시간 사이의 차이점 때문입니다. 위젯의 타임스탬프를 보고 [!UICONTROL Profile count] 위젯이 마지막으로 업데이트된 시기를 확인할 수 있습니다. [!UICONTROL Browse] 탭에서 샘플 작업이 트리거되는 방법에 대한 자세한 내용은 Real-Time Customer Profile UI 안내서[의 ](../../profile/ui/user-guide.md#profile-count)profile count 섹션을 참조하십시오.
 
 ![프로필 수 위젯이 강조 표시된 Experience Platform 프로필 대시보드입니다.](../images/profiles/profile-count.png)
 
