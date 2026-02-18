@@ -3,10 +3,10 @@ title: Experience Platform UI를 사용하여 주문형 파일을 배치 대상�
 type: Tutorial
 description: Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내는 방법을 알아봅니다.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 111f6d5093a0b66a683745b1da8d8909eb17f7eb
+source-git-commit: c7e6de2db416592ca9340fefadd53709fe71b058
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 8%
+source-wordcount: '805'
+ht-degree: 5%
 
 ---
 
@@ -26,9 +26,26 @@ ht-degree: 8%
 
 이 문서에서는 Experience Platform UI를 사용하여 주문형 파일을 [클라우드 저장소](/help/destinations/catalog/cloud-storage/overview.md) 및 [이메일 마케팅](/help/destinations/catalog/email-marketing/overview.md) 대상과 같은 배치 대상으로 내보내는 방법에 대해 설명합니다.
 
-**[!UICONTROL Export file now]** 컨트롤을 사용하면 이전에 예약된 대상자의 현재 내보내기 일정을 중단하지 않고 전체 파일을 내보낼 수 있습니다. 이 내보내기는 이전에 예약한 내보내기 외에 추가로 수행되며 대상자의 내보내기 빈도는 변경되지 않습니다. 파일 내보내기가 즉시 트리거되어 Experience Platform 세분화 실행에서 최신 결과를 선택합니다.
+**[!UICONTROL Export file now]** 컨트롤을 사용하면 이전에 예약된 대상자의 현재 내보내기 일정을 중단하지 않고 전체 파일을 내보낼 수 있습니다. 이 내보내기는 이전에 예약한 내보내기 외에 추가로 수행되며 대상자의 내보내기 빈도는 변경되지 않습니다.
+
+파일 내보내기는 즉시 트리거되며 가장 최근 대상 평가 스냅샷의 데이터만 사용합니다. 스냅샷 생성 후 발생하는 프로필 또는 ID 변경은 포함되지 않습니다. 반면 예약된 내보내기에는 스냅샷 데이터와 스냅샷 생성과 내보내기 시간 사이에 발생하는 증분 변경 사항이 모두 포함됩니다.
 
 이러한 목적으로 Experience Platform API를 사용할 수도 있습니다. 임시 활성화 API를 통해 [주문형 대상을 일괄 대상으로 활성화](/help/destinations/api/ad-hoc-activation-api.md)하는 방법을 읽어 보십시오.
+
+## 예약된 내보내기와 주문형 내보내기 {#scheduled-vs-ondemand}
+
+주문형 내보내기와 예약된 내보내기는 서로 다른 데이터 소스를 사용하므로 내보낸 데이터에 차이가 발생할 수 있습니다. 각 사례에서 내보내는 내용을 이해하려면 아래 표를 참조하십시오.
+
+|  | 지금 파일 내보내기 | 예약된 내보내기 |
+|--------|-----------------|-------------------|
+| **데이터 원본** | 스냅샷만 | 스냅샷 + 증분 변경 사항 |
+| **프로필 속성** | 스냅샷 시간 값 | 내보내기 시 현재 값 |
+
+>[!NOTE]
+>
+>예약된 내보내기에는 대상 평가 후 발생하는 프로필 업데이트가 포함되므로 온디맨드 내보내기와 다른 프로필 개수 또는 속성 값이 표시될 수 있습니다.
+
+자세한 내용은 [예약된 내보내기 동작 이해](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior)를 참조하십시오.
 
 ## 전제 조건 {#prerequisites}
 
