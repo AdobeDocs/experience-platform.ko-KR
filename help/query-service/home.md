@@ -38,7 +38,7 @@ RESTful API도 유사한 경험을 제공합니다. 쿼리 서비스 API를 사�
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
-Adobe Experience Platform [!DNL Data Science Workspace]은(는) 머신 러닝 및 인공 지능을 사용하여 Experience Platform 내에 저장된 데이터를 통해 통찰력을 얻습니다. 데이터 과학자는 [IDNL Data Science Workspace]를 사용하여 고객 및 고객 활동에 대한 기록 및 시계열 데이터를 기반으로 레시피를 만들 수 있습니다. 이러한 레시피는 개인이 인식하고 사용할 가능성이 높은 구매 성향 및 추천 오퍼와 같은 예측을 용이하게 합니다. 쿼리 서비스를 [!DNL Data Science Workspace]에 통합하여 [!DNL JupyterLab] 내의 SQL을 사용하여 Adobe Analytics 데이터를 탐색, 변환 및 분석할 수 있습니다. [[!DNL Data Science Workspace] 이(가) 쿼리 서비스와 상호 작용하는 방법에 대한 자세한 내용은 ](../data-science-workspace/home.md)개요[ 및 ](./clients/jupyter-notebook.md)Jupyter 전자 필기장 연결 안내서[!DNL Data Science Workspace]를 참조하십시오.
+Adobe Experience Platform [!DNL Data Science Workspace]은(는) 머신 러닝 및 인공 지능을 사용하여 Experience Platform 내에 저장된 데이터를 통해 통찰력을 얻습니다. 데이터 과학자는 [!DNL I Data Science Workspace]를 사용하여 고객 및 고객 활동에 대한 기록 및 시계열 데이터를 기반으로 레시피를 만들 수 있습니다. 이러한 레시피는 개인이 인식하고 사용할 가능성이 높은 구매 성향 및 추천 오퍼와 같은 예측을 용이하게 합니다. 쿼리 서비스를 [!DNL Data Science Workspace]에 통합하여 [!DNL JupyterLab] 내의 SQL을 사용하여 Adobe Analytics 데이터를 탐색, 변환 및 분석할 수 있습니다. [[!DNL Data Science Workspace] 이(가) 쿼리 서비스와 상호 작용하는 방법에 대한 자세한 내용은 &#x200B;](../data-science-workspace/home.md)개요[&#x200B; 및 &#x200B;](./clients/jupyter-notebook.md)Jupyter 전자 필기장 연결 안내서[!DNL Data Science Workspace]를 참조하십시오.
 
 ### [!DNL Segmentation Service] {#segmentation}
 
