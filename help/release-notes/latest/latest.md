@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2026년 2월
 description: Adobe Experience Platform의 2026년 2월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7cb35f5b35878b655dc668c0b26e22a41d675161
+source-git-commit: a11c00c218ffbbd5618616f401613a604c35859a
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 43%
+source-wordcount: '606'
+ht-degree: 46%
 
 ---
 
@@ -28,6 +28,7 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 - [경고](#alerts)
 - [대상](#destinations)
 - [소스](#sources)
+- [경험 데이터 모델 (XDM)](#xdm)
 
 ## 경고 {#alerts}
 
@@ -79,3 +80,14 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 {style="table-layout:auto"}
 
 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하십시오.
+
+## 경험 데이터 모델 (XDM) {#xdm}
+
+XDM은 Experience Platform에 가져온 데이터에 대한 공통 구조와 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
+
+| 기능 | 설명 |
+| --- | --- |
+| 데이터 세트가 있는 스키마에 대한 제한된 편집 | 변경 내용을 중단시키는 편집 작업은 스키마에 대한 데이터 세트가 존재하면 이제 제한됩니다. 데이터 세트가 연결되면 더 이상 필드의 이름 변경 또는 삭제, 필드 데이터 유형 또는 형식 변경, ID 설명자 수정, 기존 필드를 제거하기 위한 관련 필드 관리 또는 할당된 클래스 변경을 수행할 수 없습니다. 추가 변경 사항 및 필드 사용 중단 기능은 계속 지원됩니다. |
+
+자세한 내용은 [XDM 개요](../../xdm/home.md)를 참조하십시오.
+
