@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 11ef8fe8b64a7c2bb698c62093aafe3fb11d3789
+source-git-commit: 67dec10b0d1343fffd522ee3e615ac2823894a67
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1755'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions.html)을(를) 확인하십시오.
+>이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을(를) 확인하십시오.
 
 이 페이지에서는 활성화 동작과 관련된 기본 사용량 및 요금 제한을 제공합니다. 다음 보호 기능을 검토할 때 [대상에 올바르게 연결](/help/destinations/ui/connect-destination.md)되어 있다고 가정합니다.
 
@@ -76,7 +76,7 @@ ht-degree: 2%
 | 활성화 빈도 | 3, 6, 8 또는 12시간마다 일일 전체 내보내기 또는 빈번한 증분 내보내기 | 시스템 강제 보호 | 일괄 내보내기의 빈도 증가에 대한 자세한 내용은 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 설명서 섹션을 참조하십시오. |
 | 지정된 시간에 내보낼 수 있는 최대 대상 수 | 100 | 성능 보호 | 최대 100개의 대상을 대상 데이터 흐름을 일괄 처리하는 것이 좋습니다. |
 | 활성화할 파일당 최대 행(레코드) 수 | 500만 | 시스템 강제 보호 | Adobe Experience Platform은 내보낸 파일을 파일당 5백만 개의 레코드(행)로 자동으로 분할합니다. 각 행은 하나의 프로필을 나타냅니다. 분할 파일 이름에는 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다(예: `filename.csv`, `filename_2.csv`, `filename_3.csv`). 자세한 내용은 일괄 처리 대상 활성화 자습서의 [예약 섹션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)을 참조하세요. |
-| 데이터 흐름에서 활성화할 최대 사용자 지정 업로드 대상자 수 | 10 | 시스템 강제 보호 | [사용자 지정 업로드 대상자](/help/segmentation/ui/audience-portal.md#import-audience)를 활성화하여 파일 기반 대상을 일괄 처리할 때 데이터 흐름에서 활성화할 수 있는 대상자는 10명으로 제한됩니다. [사용자 지정 업로드 대상을 파일 기반 대상으로 활성화](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences)하는 워크플로에 대해 자세히 알아보십시오. |
+| 데이터 흐름에서 활성화할 수 있는 최대 외부 대상(예: FAC, 사용자 지정 업로드, 대상 구성) 수 | 10 | 시스템 강제 보호 | 파일 기반 대상을 일괄 처리하기 위해 외부 대상(예: [Federated Audience Composition](/help/segmentation/ui/audience-portal.md#fac), [사용자 지정 업로드](/help/segmentation/ui/audience-portal.md#import-audience), [Audience Composition](/help/segmentation/ui/audience-portal.md#audience-composition))을 활성화할 때 데이터 흐름에서 활성화할 수 있는 대상은 10개로 제한됩니다. 이러한 대상 유형에 대한 자세한 내용은 [대상 유형 및 사용자 지정](/help/segmentation/ui/audience-portal.md#customize)을 참조하십시오. [파일 기반 대상을 일괄 처리할 외부 대상을 활성화](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences)하는 워크플로에 대해 자세히 알아보십시오. |
 
 {style="table-layout:auto"}
 
@@ -196,7 +196,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보호, 종단 간 지연 정보 및 라이선스 정보에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
-* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=ko#end-to-end-latency-diagrams).
-* [Real-Time Customer Data Platform(B2C Edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams).
+* [Real-Time Customer Data Platform(B2C Edition - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
