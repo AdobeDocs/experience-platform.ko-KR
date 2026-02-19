@@ -28,7 +28,7 @@ ht-degree: 4%
 >[!UICONTROL Permissions] manages access control for existing Experience Platform users. To add users to Experience Platform, navigate to Adobe Admin Console through the **[!UICONTROL Edit in admin console]** option. To learn how to add users through the Admin Console, follow the [adding users to Experience Platform](...){#target="_blank"} guide.
 -->
 
-조직의 사용자를 보려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 ](https://experience.adobe.com/){target="_blank"}(으)로 이동하십시오. 왼쪽 패널에서 **[!UICONTROL Users]**&#x200B;을(를) 선택합니다.
+조직의 사용자를 보려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 &#x200B;](https://experience.adobe.com/){target="_blank"}(으)로 이동하십시오. 왼쪽 패널에서 **[!UICONTROL Users]**&#x200B;을(를) 선택합니다.
 
 ![사용 권한 내의 사용자 작업 영역입니다.](../../images/ui/users/users-overview.png){zoomable="yes"}
 
@@ -79,7 +79,7 @@ ht-degree: 4%
 >[!UICONTROL Permissions] manages access control for existing Experience Platform user groups. To add user groups to Experience Platform, navigate to Admin Console through the **[!UICONTROL Edit in admin console]** option. To learn how to add user groups in the Admin Console, follow the [adding user groups to Experience Platform](...){#target="_blank"} guide.
  -->
 
-조직의 사용자를 보려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 ](https://experience.adobe.com/){target="_blank"}(으)로 이동합니다.왼쪽 패널의 **[!UICONTROL Groups]** 섹션에서 **[!UICONTROL Users]**&#x200B;을(를) 선택합니다.
+조직의 사용자를 보려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 &#x200B;](https://experience.adobe.com/){target="_blank"}(으)로 이동합니다.왼쪽 패널의 **[!UICONTROL Groups]** 섹션에서 **[!UICONTROL Users]**&#x200B;을(를) 선택합니다.
 
 ![사용자가 권한 내에서 작업 영역을 그룹화합니다.](../../images/ui/users/user-groups-overview.png){zoomable="yes"}
 
@@ -125,7 +125,7 @@ ht-degree: 4%
 
 Experience Platform API를 사용자 또는 개발자로 사용하려면 시스템 관리자가 역할에 지정된 권한 집합 외에 API 자격 증명을 추가해야 합니다. 권한을 사용하면 이전에 만든 API 자격 증명을 Experience Platform 제품에 할당하여 역할에 할당할 수 있습니다. API 자격 증명 만들기 및 할당과 필요한 권한에 대한 전체 안내서는 [Experience Platform API 인증 및 액세스](/help/landing/api-authentication.md){target="_blank"}의 단계별 자습서를 참조하십시오.
 
-Experience Platform과 연결된 조직 API 자격 증명을 보려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 ](https://experience.adobe.com/){target="_blank"}(으)로 이동하십시오. 왼쪽 패널의 **[!UICONTROL API Credentials]** 섹션에서 **[!UICONTROL Users]** 선택
+Experience Platform과 연결된 조직 API 자격 증명을 보려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 &#x200B;](https://experience.adobe.com/){target="_blank"}(으)로 이동하십시오. 왼쪽 패널의 **[!UICONTROL API Credentials]** 섹션에서 **[!UICONTROL Users]** 선택
 
 ![권한 내의 API 자격 증명 작업 영역입니다.](../../images/ui/users/api-credentials-overview.png){zoomable="yes"}
 

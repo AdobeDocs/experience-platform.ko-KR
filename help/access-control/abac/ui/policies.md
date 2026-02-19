@@ -24,7 +24,7 @@ ht-degree: 10%
 >
 >**[!UICONTROL Default-Label-Based-Access-Control-Policy]** 정책만 현재 구성할 수 있습니다.
 
-정책 구성을 시작하려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 ](https://experience.adobe.com/){target="_blank"}(으)로 이동합니다. 왼쪽 패널에서 **[!UICONTROL Policies]**&#x200B;을(를) 선택합니다. 목록에서 **[!UICONTROL Default-Label-Based-Access-Control-Policy]**&#x200B;을(를) 선택합니다.
+정책 구성을 시작하려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 &#x200B;](https://experience.adobe.com/){target="_blank"}(으)로 이동합니다. 왼쪽 패널에서 **[!UICONTROL Policies]**&#x200B;을(를) 선택합니다. 목록에서 **[!UICONTROL Default-Label-Based-Access-Control-Policy]**&#x200B;을(를) 선택합니다.
 
 ![기존 정책 목록을 표시하는 정책 작업 영역입니다.](../../images/ui/policies/policies-home.png){zoomable="yes"}
 
