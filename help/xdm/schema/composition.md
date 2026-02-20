@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스키마 컴포지션 기본 사항
 description: XDM(Experience Data Model) 스키마와 Adobe Experience Platform에서 스키마를 구성하기 위한 빌딩 블록, 원칙 및 모범 사례에 대해 알아봅니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 5b59d491834854829a89a240ccd612367cf558d4
+source-git-commit: 33b3534a2c3f9b5da54fa4f3897d1e107f7c1976
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4331'
 ht-degree: 8%
 
 ---
@@ -59,7 +59,7 @@ Experience Platform에서 사용하기 위한 데이터는 다음 두 가지 동
 
 이 프로세스를 지원하기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터를 수집하면 해당 필드의 데이터가 해당 개인의 &quot;[!UICONTROL Identity Graph]&quot;에 삽입됩니다. 그런 다음 [[!DNL Real-Time Customer Profile]](../../profile/home.md) 및 기타 Experience Platform 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 결합 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;[!UICONTROL Identity]&quot;(으)로 표시되는 필드에는 전자 메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko), CRM ID 또는 기타 고유 ID 필드가 포함됩니다. 좋은 &quot;[!UICONTROL Identity]&quot; 필드일 수도 있으므로 조직 고유의 식별자를 고려하십시오.
+일반적으로 &quot;[!UICONTROL Identity]&quot;(으)로 표시되는 필드에는 전자 메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유 ID 필드가 포함됩니다. 좋은 &quot;[!UICONTROL Identity]&quot; 필드일 수도 있으므로 조직 고유의 식별자를 고려하십시오.
 
 ID 정보를 통해 디지털 환경을 고객에게 제공하는 방법에 대한 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md)를 참조하세요. 스키마를 만들 때 ID 사용에 대한 [팁은 데이터 모델링 모범 사례 문서를 참조하십시오](./best-practices.md#data-validation-fields).
 
@@ -109,7 +109,7 @@ ID 데이터를 Experience Platform으로 전송하는 방법에는 두 가지�
 }
 ```
 
-위의 예에서 보듯이 `identityMap` 개체의 각 키는 ID 네임스페이스를 나타냅니다. 각 키의 값은 각 네임스페이스의 ID 값(`id`)을 나타내는 개체 배열입니다. Adobe 애플리케이션에서 인식하는 [!DNL Identity Service]표준 ID 네임스페이스 목록[에 대해서는 &#x200B;](../../identity-service/troubleshooting-guide.md#standard-namespaces) 설명서를 참조하십시오.
+위의 예에서 보듯이 `identityMap` 개체의 각 키는 ID 네임스페이스를 나타냅니다. 각 키의 값은 각 네임스페이스의 ID 값(`id`)을 나타내는 개체 배열입니다. Adobe 애플리케이션에서 인식하는 [!DNL Identity Service]표준 ID 네임스페이스 목록[에 대해서는 ](../../identity-service/troubleshooting-guide.md#standard-namespaces) 설명서를 참조하십시오.
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ ID 데이터를 Experience Platform으로 전송하는 방법에는 두 가지�
 
 >[!NOTE]
 >
->아직 Experience Platform으로 데이터를 수집하는 데 사용되지 않고 실시간 고객 프로필에서 사용할 수 있도록 활성화되지 않은 스키마에만 변경 사항을 적용할 수 있습니다. 그러나 Experience Platform에서 스키마를 사용한 후에는 추가 버전 관리 정책을 준수해야 합니다.
+>아직 Experience Platform으로 데이터를 수집하는 데 사용되지 않고 실시간 고객 프로필에서 사용할 수 있도록 활성화되지 않은 스키마에만 변경 사항을 적용할 수 있습니다. 그러나 Experience Platform에서 스키마를 사용한 후에는 추가 버전 관리 정책을 준수해야 합니다. 스키마에 대한 데이터 세트가 만들어지면 스키마의 모든 필드에 대해 시스템에서 스키마 진화 규칙을 엄격하게 적용합니다. 해당 필드는 참조되는 모든 XDM 스키마에서 편집할 수 없습니다.
 
 다음 표는 스키마, 필드 그룹 및 데이터 유형을 편집할 때 지원되는 변경 사항을 분류합니다.
 
@@ -161,9 +161,9 @@ Experience Platform에서는 표준 빌딩 블록이 결합되어 스키마를 �
 
 스키마는 다음 공식을 사용하여 구성됩니다.
 
-**클래스 + 스키마 필드 그룹&ast; = XDM 스키마**
+**클래스 + 스키마 필드 그룹&amp;ast; = XDM 스키마**
 
-&ast;스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. 즉, 필드 그룹을 전혀 사용하지 않고 데이터 세트 스키마를 구성할 수 있습니다.
+&amp;ast;스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. 즉, 필드 그룹을 전혀 사용하지 않고 데이터 세트 스키마를 구성할 수 있습니다.
 
 ### 클래스 {#class}
 
@@ -268,7 +268,7 @@ Experience Platform에서는 일반적인 데이터 구조를 설명하는 표�
 * Long
 * 짧음
 * 바이트
-* Date
+* 일자
 * 날짜-시간
 * 맵
 
