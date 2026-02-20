@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 2026년 2월
 description: Adobe Experience Platform의 2026년 2월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a11c00c218ffbbd5618616f401613a604c35859a
+source-git-commit: 05c9a99132d1385f9ec043bb667a72304b17a9b5
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '731'
 ht-degree: 46%
 
 ---
@@ -27,6 +27,7 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 
 - [경고](#alerts)
 - [대상](#destinations)
+- [Segmentation Service](#segmentation-service)
 - [소스](#sources)
 - [경험 데이터 모델 (XDM)](#xdm)
 
@@ -66,6 +67,19 @@ Experience Platform을 통해 다양한 Experience Platform 활동에 대한 이
 {style="table-layout:auto"}
 
 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
+
+## Segmentation Service {#segmentation-service}
+
+[!DNL Segmentation Service]는 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 프로필의 특정 하위 집합을 정의합니다. 대상자는 기록 데이터(예: 인구 통계 정보) 또는 고객과 브랜드의 상호 작용을 나타내는 시계열 이벤트를 기반으로 할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 편집 가능한 API 대상 | 이제 세그먼트 빌더의 세그먼테이션 서비스 API 또는 Audience Agent을 사용하여 만든 대상자를 편집할 수 있습니다. **참고:** 시계열 데이터가 포함된 대상은 **현재 세그먼트 빌더를 사용하여 편집할 수 없습니다**. |
+| 외부 대상 데이터 만료 새로 고침 | 세분화 서비스 API를 사용하여 외부 대상의 데이터 만료를 확장할 수 있습니다. 자세한 내용은 [외부 대상 API 안내서](/help/segmentation/api/external-audiences.md#extend-data-expiration)를 참조하십시오. |
+
+자세한 내용은 [[!DNL Segmentation Service] 개요](../../segmentation/home.md)를 참조하십시오.
 
 ## 소스 {#sources}
 
