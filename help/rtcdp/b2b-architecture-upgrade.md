@@ -1,11 +1,11 @@
 ---
 title: Real-Time CDP B2B edition으로 아키텍처 업그레이드
 description: Real-Time CDP B2B edition으로의 포괄적인 아키텍처 업그레이드에 대해 알아보려면 이 문서 를 참조하십시오.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: a48196d369cec9e9927d9320475e06457e575691
+source-git-commit: 056a7ff98e335b238fc03ab84b11c9a97221ddaa
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1155'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,13 @@ Adobe은 확장성, 성능 및 안정성을 향상하는 동시에 보다 고급
 
 * **데이터 수집의 확장성**: 수천 명의 사용자에게 연결된 계정과 같은 카디널리티가 높은 B2B 관계에 대한 지원이 개선되었습니다.
 * **성능이 뛰어나고 안정적인 대상 평가**: 복잡한 B2B 대상을 위한 보다 빠르고 탄력적인 세분화
-* **엔티티 해상도**: B2B 엔티티에 대한 ID 해상도를 개선하고 데이터 품질을 개선하며 중복을 줄여 보다 정확한 세분화 및 집계를 가능하게 합니다.
+* **엔터티 확인**: B2B 엔터티에 대한 ID 확인이 개선되고, 데이터 품질이 개선되었으며, 중복이 줄어 보다 정확한 세분화 및 집계가 가능합니다.
+
+>[!TIP]
+>
+>대상 크기와 복잡성에 따라 대상 평가 및 대상 활성화에 필요한 시간에 약간의 변화가 있을 수 있습니다.
+>
+>세분화 실행 시간을 모니터링하는 것이 좋습니다. 특히 비즈니스 프로세스가 세분화 및 활성화의 적시 완료에 의존하는 경우 더욱 그렇습니다. 이렇게 하면 워크플로우가 계속 원활하게 실행되고 예상치 못한 변경 사항을 미리 해결할 수 있습니다.
 
 ## 새로운 기능
 
