@@ -3,9 +3,9 @@ keywords: 광고, 무역데스크, 광고 무역데스크
 title: 트레이드 데스크 연결
 description: Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에 걸쳐 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있는 셀프서비스 플랫폼입니다.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 138bfe721bb20fe3ba614a73ffffca3e00979acb
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1376'
 ht-degree: 2%
 
 ---
@@ -47,10 +47,24 @@ ht-degree: 2%
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+대상 데이터 유형별 지원되는 대상:
+
+| 대상 데이터 유형 | 지원됨 | 설명 | 사용 사례 |
+|--------------------|-----------|-------------|-----------|
+| [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
+| [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
+| [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+
+{style="table-layout:auto"}
+
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -71,7 +85,7 @@ ht-degree: 2%
 
 **[!DNL The Trade Desk]**&#x200B;에서 쿠키 기반 타깃팅을 사용하려면 ECID와 [!DNL Trade Desk ID] 간의 매핑이 설정되어 있는지 확인하십시오. 이렇게 하려면 아래 단계를 완료하십시오.
 
-1. **ID 동기화 기능 사용**: [!DNL The Trade Desk ID] 활성화를 처음 설정하는 경우로서 이전에 Experience Cloud ID 서비스(Adobe Audience Manager 또는 다른 응용 프로그램 포함)에서 [ID 동기화 기능](https://experienceleague.adobe.com/ko/docs/id-service/using/id-service-api/methods/idsync)을 활성화하지 않은 경우 Adobe Consulting 또는 고객 지원 센터에 문의하여 ID 동기화를 활성화하십시오.
+1. **ID 동기화 기능 사용**: [!DNL The Trade Desk ID] 활성화를 처음 설정하는 경우로서 이전에 Experience Cloud ID 서비스(Adobe Audience Manager 또는 다른 응용 프로그램 포함)에서 [ID 동기화 기능](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)을 활성화하지 않은 경우 Adobe Consulting 또는 고객 지원 센터에 문의하여 ID 동기화를 활성화하십시오.
    * 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 기존 ID 동기화가 자동으로 Experience Platform으로 이전됩니다.
 
 2. **웹 페이지 계측**: [!DNL The Trade Desk ID]과(와) Adobe ECID 간의 매핑을 만들려면 웹 페이지에 코드를 구현하십시오. 이렇게 하면 Experience Platform에서 트레이드 데스크 ID를 고객 프로필과 연결할 수 있습니다.
@@ -125,7 +139,7 @@ ht-degree: 2%
 >id="platform_destinations_required_mappings_ttd"
 >title="사전 구성된 매핑 세트"
 >abstract="4개의 매핑 세트가 사전 구성되어 있습니다. 데이터를 The Trade Desk에 활성화하면 이 대상이 여기에 표시된 대상 ID와 작동하므로 활성화된 대상에 적합한 프로필에는 4개의 ID가 모두 있을 필요는 없습니다. <br> Trade Desk ID를 기반으로 하는 쿠키 기반 타깃팅의 경우 프로필에 ECID가 있어야 하며 Trade Desk ID와 ECID 간의 ID 동기화 매핑이 필요합니다."
->additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="미리 구성된 매핑에 대해 자세히 알아보십시오"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="미리 구성된 매핑에 대해 자세히 알아보십시오"
 
 다음 ID 매핑은 대상 활성화 워크플로에서 **사전 구성되어 자동으로 채워집니다**.
 

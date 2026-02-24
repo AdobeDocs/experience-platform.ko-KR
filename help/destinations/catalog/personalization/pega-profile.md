@@ -3,9 +3,9 @@ title: Pega 프로필 커넥터
 description: Adobe Experience Platform의 Amazon S3용 Pega Profile Connector를 사용하여 전체 또는 증분, 또는 둘 다 프로필 데이터를 Amazon S3 클라우드 스토리지로 내보냅니다. Pega 고객 의사 결정 허브에서 Amazon S3 스토리지에서 주기적으로 프로필 데이터를 가져오기 위해 고객 프로필 Designer에서 데이터 작업을 예약할 수 있습니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1256'
 ht-degree: 4%
 
 ---
@@ -40,7 +40,7 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 
 * 데이터 파일 내보내기 및 가져오기에 사용할 [!DNL Amazon S3] 버킷 및 폴더 경로를 구성하십시오.
 * [!DNL Amazon S3] 액세스 키와 [!DNL Amazon S3] 비밀 키를 구성하십시오. [!DNL Amazon S3]에서 `access key - secret access key` 쌍을 생성하여 [!DNL Amazon S3] 계정에 Experience Platform 액세스 권한을 부여하십시오.
-* 데이터를 [!DNL Amazon S3] 저장소 위치에 연결하고 내보내려면 [!DNL Amazon S3]에서 [!DNL Experience Platform]에 대한 IAM(Identity and Access Management) 사용자를 만들고 `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts` 등의 권한을 할당합니다
+* 데이터를 [!DNL Amazon S3] 저장소 위치에 연결하고 내보내려면 [!DNL Experience Platform]에서 [!DNL Amazon S3]에 대한 IAM(Identity and Access Management) 사용자를 만들고 `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts` 등의 권한을 할당합니다
 * [!DNL Pega Customer Decision Hub] 인스턴스가 8.8 버전 이상으로 업그레이드되었는지 확인하십시오.
 
 ## 지원되는 ID {#supported-identities}
@@ -53,14 +53,39 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 
 {style="table-layout:auto"}
 
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
+
+| 대상자 원본 | 지원됨 | 설명 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+대상 데이터 유형별 지원되는 대상:
+
+| 대상 데이터 유형 | 지원됨 | 설명 | 사용 사례 |
+|--------------------|-----------|-------------|-----------|
+| [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
+| [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
+| [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+
+{style="table-layout:auto"}
+
+
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
 |---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | [대상 활성화 워크플로](../../ui/activate-batch-profile-destinations.md#select-attributes)의 프로필 특성 선택 화면에서 선택한 대로 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성)와 함께 세그먼트의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. [일괄 파일 기반 대상](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
+| 내보내기 유형 | **[!UICONTROL Profile-based]** | [대상 활성화 워크플로](../../ui/activate-batch-profile-destinations.md#select-attributes)의 프로필 특성 선택 화면에서 선택한 대로 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성)와 함께 세그먼트의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL Batch]** | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. [일괄 파일 기반 대상](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -68,13 +93,13 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상으로 인증 {#authenticate}
 
-대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
+대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 
 * **[!DNL Amazon S3]액세스 키** 및 **[!DNL Amazon S3]비밀 키**: [!DNL Amazon S3]에서 `access key - secret access key` 쌍을 생성하여 [!DNL Amazon S3] 계정에 Adobe Experience Platform 액세스 권한을 부여합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)를 참조하세요.
 
@@ -84,13 +109,13 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 
 ![Pega 프로필 커넥터 대상 세부 사항에 대해 완료된 필드를 표시하는 UI 화면 이미지](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
 
-대상에 대한 세부 정보를 구성하려면 필수 필드를 입력하고 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
+대상에 대한 세부 정보를 구성하려면 필수 필드를 입력하고 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-* **[!UICONTROL 이름]**: 이 대상을 식별하는 데 도움이 되는 이름을 입력하십시오.
-* **[!UICONTROL 설명]**: 이 대상에 대한 설명을 입력하십시오.
-* **[!UICONTROL 버킷 이름]**: 이 대상에서 사용할 [!DNL Amazon S3] 버킷의 이름을 입력하십시오.
-* **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력하십시오.
-* **[!UICONTROL 압축 유형]**: 압축 유형을 GZIP 또는 없음으로 선택합니다.
+* **[!UICONTROL Name]**: 이 대상을 식별하는 데 도움이 되는 이름을 입력하십시오.
+* **[!UICONTROL Description]**: 이 대상에 대한 설명을 입력하십시오.
+* **[!UICONTROL Bucket name]**: 이 대상에서 사용할 [!DNL Amazon S3] 버킷의 이름을 입력하십시오.
+* **[!UICONTROL Folder path]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력하십시오.
+* **[!UICONTROL Compression Type]**: 압축 유형을 GZIP 또는 없음으로 선택합니다.
 
 >[!TIP]
 >
@@ -100,20 +125,20 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 이 대상에 대한 대상자 활성화에 대한 지침은 [대상자 데이터를 일괄 프로필 내보내기 대상으로 활성화](../../ui/activate-batch-profile-destinations.md)를 참조하십시오.
 
 ### 속성 및 ID 매핑 {#map}
 
-**[!UICONTROL 매핑]** 단계에서는 프로필에 내보낼 특성 및 ID 필드를 선택할 수 있습니다. 내보낸 파일의 헤더를 원하는 이름으로 변경하도록 선택할 수도 있습니다. 자세한 내용은 일괄 처리 대상 활성화 UI 자습서에서 [매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 참조하십시오.
+**[!UICONTROL Mapping]** 단계에서는 프로필에 내보낼 특성 및 ID 필드를 선택할 수 있습니다. 내보낸 파일의 헤더를 원하는 이름으로 변경하도록 선택할 수도 있습니다. 자세한 내용은 일괄 처리 대상 활성화 UI 자습서에서 [매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 참조하십시오.
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
 
@@ -122,12 +147,12 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 S3에서 프로필 데이터를 성공적으로 가져오면 [!DNL Pega Customer] 프로필 데이터 저장소에 데이터가 삽입됩니다. 가져온 고객 프로필 데이터는 다음 그림과 같이 [!DNL Pega Customer Profile Designer]에서 확인할 수 있습니다.
 ![고객 프로필 Designer에서 Adobe 프로필 데이터의 유효성을 검사할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-[!DNL Pega Customer Decision Hub]에서 데이터 관리자는 다음 그림과 같이 S3에서 주기적으로 프로필 데이터를 가져오도록 [!DNL Customer Profile Designer]의 데이터 작업을 구성할 수 있습니다. [!DNL Amazon S3]에서 프로필 데이터를 가져오도록 데이터 작업을 구성하는 방법에 대한 자세한 내용은 [추가 리소스](#additional-resources)를 참조하세요.
+[!DNL Pega Customer Decision Hub]에서 데이터 관리자는 다음 그림과 같이 S3에서 주기적으로 프로필 데이터를 가져오도록 [!DNL Customer Profile Designer]의 데이터 작업을 구성할 수 있습니다. [에서 프로필 데이터를 가져오도록 데이터 작업을 구성하는 방법에 대한 자세한 내용은 ](#additional-resources)추가 리소스[!DNL Amazon S3]를 참조하세요.
 고객 프로필 Designer에서 데이터 작업을 구성하기 위한 ![UI 화면의 이미지](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## 추가 리소스 {#additional-resources}
 
-[!DNL Pega Customer Decision Hub]에서 [데이터 가져오기 작업](https://academy.pega.com/topic/import-data-jobs/v1)을 참조하십시오.
+[에서 ](https://academy.pega.com/topic/import-data-jobs/v1)데이터 가져오기 작업[!DNL Pega Customer Decision Hub]을 참조하십시오.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

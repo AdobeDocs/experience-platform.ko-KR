@@ -3,10 +3,10 @@ title: Gainsight PX 연결
 description: Gainsight PX 대상을 사용하여 Gainsight PX 플랫폼으로 세그멘테이션 정보를 보냅니다.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 2%
+source-wordcount: '988'
+ht-degree: 3%
 
 ---
 
@@ -31,7 +31,7 @@ SaaS 회사는 Gainsight PX에서 작성한 애플리케이션 내 안내서를 
 ## 전제 조건 {#prerequisites}
 
 * [!DNL Gainsight] 지원 팀에 연락하여 구독에 대한 외부 세그먼트 기능 활성화를 요청하세요.
-* [회사 세부 정보 페이지](https://app.aptrinsic.com/settings/subscription) 하단에 있는 **[!UICONTROL 새 암호 생성]** 단추를 사용하여 PX 구독에 대한 OAuth 암호 값을 생성합니다.
+* **[!UICONTROL Generate New Secret]**&#x200B;회사 세부 정보 페이지[의 맨 아래에 있는 ](https://app.aptrinsic.com/settings/subscription) 단추를 사용하여 PX 구독에 대한 OAuth 암호 값을 생성합니다.
   ![새 암호 생성 단추를 표시하는 Gainsight PX의 회사 세부 정보 화면](../../assets/catalog/analytics/gainsight-px/generate_oauth_secret.png)
 
 ## 지원되는 ID {#supported-identities}
@@ -49,11 +49,25 @@ Gainsight PX는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](..
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
-|---|---|---|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | X | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+대상 데이터 유형별 지원되는 대상:
+
+| 대상 데이터 유형 | 지원됨 | 설명 | 사용 사례 |
+|--------------------|-----------|-------------|-----------|
+| [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
+| [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
+| [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+
+{style="table-layout:auto"}
+
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -61,8 +75,8 @@ Gainsight PX는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](..
 
 | 항목 | 유형 | 참고 |
 |---|---|---|
-| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | [!DNL Gainsight PX] 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필을 업데이트하면 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+| 내보내기 유형 | **[!UICONTROL Segment export]** | [!DNL Gainsight PX] 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
+| 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상 평가를 기반으로 Experience Platform에서 프로필을 업데이트하면 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -70,20 +84,20 @@ Gainsight PX는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](..
 
 >[!IMPORTANT]
 >
->대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상으로 인증 {#authenticate}
 
-대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
+대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 
 ![인증 스크린샷](../../assets/catalog/analytics/gainsight-px/auth-screen.png)
 
-* **[!UICONTROL 암호]**: [[!DNL Gainsight PX]에 로그인하는 데 사용되는 암호](https://app.aptrinsic.com)
-* **[!UICONTROL 클라이언트 ID]**: [회사 세부 정보 페이지의 Gainsight PX 구독 ID](https://app.aptrinsic.com/settings/subscription)
-* **[!UICONTROL 클라이언트 암호]**: [!DNL Gainsight PX] UI의 [회사 세부 정보 페이지](https://app.aptrinsic.com/settings/subscription)의 맨 아래에 생성된 OAuth 암호입니다.
-* **[!UICONTROL 사용자 이름]**: [[!DNL Gainsight PX]](https://app.aptrinsic.com) UI에 로그인하는 데 사용되는 전자 메일
+* **[!UICONTROL Password]**: [[!DNL Gainsight PX]](https://app.aptrinsic.com)에 로그인하는 데 사용되는 암호
+* **[!UICONTROL Client ID]**: [회사 세부 정보 페이지](https://app.aptrinsic.com/settings/subscription)의 Gainsight PX 구독 ID
+* **[!UICONTROL Client secret]**: [ UI의 ](https://app.aptrinsic.com/settings/subscription)회사 세부 정보 페이지[!DNL Gainsight PX]의 맨 아래에 생성된 OAuth 암호입니다.
+* **[!UICONTROL Username]**: [[!DNL Gainsight PX]](https://app.aptrinsic.com) UI에 로그인하는 데 사용되는 전자 메일
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -91,17 +105,17 @@ Gainsight PX는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](..
 
 ![이름 및 설명 필드를 채우는 방법을 보여 주는 Experience Platform 사용자 인터페이스의 대상 세부 정보 화면](../../assets/catalog/analytics/gainsight-px/destination_details.png)
 
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
+* **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상에 대한 세그먼트 활성화 {#activate}
 
 >[!IMPORTANT]
 >
->* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [프로필 및 세그먼트를 스트리밍 세그먼트 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
@@ -119,7 +133,7 @@ Gainsight PX는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](..
 
 #### ID 네임스페이스 매핑 {#map-identity-namespace}
 
-아래 예제에서 소스 필드는 **[!UICONTROL IDENTIFY_ID]** 대상 네임스페이스에 매핑되는 ID 네임스페이스(**[!UICONTROL ECID]**)입니다.
+아래 예제에서 소스 필드는 **[!UICONTROL ECID]** 대상 네임스페이스에 매핑되는 ID 네임스페이스(**[!UICONTROL IDENTIFY_ID]**)입니다.
 
 ![원본 및 대상 값을 선택하는 방법을 보여 주는 특성 예제 매핑 화면](../../assets/catalog/analytics/gainsight-px/mapping_identities.png)
 

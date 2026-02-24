@@ -1,13 +1,13 @@
 ---
 title: 알골리아
 description: 이 커넥터를 사용하여 Algolia에 대한 대상자를 활성화하여 개인화하고 검색 및 권장 사항 전반에서 사용할 수 있습니다. 그런 다음 Algolia 사용자 프로필 소스 커넥터를 사용하여 프로필을 Real-Time CDP으로 가져와 리치 대상자를 구축할 수 있습니다.
-source-git-commit: 01e8739952ce2f56eaafcbb0731fb88d5961b21d
+exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 3%
+source-wordcount: '1140'
+ht-degree: 4%
 
 ---
-
 
 # [!DNL Algolia] 연결
 
@@ -43,8 +43,8 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->* 대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
+>* 대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
 ## 지원되는 ID {#supported-identities}
 
@@ -52,7 +52,7 @@ ht-degree: 3%
 
 | 대상 ID | 설명 | 고려 사항 |
 |---------|---------|----------|
-| userId | [!DNL Algolia] 사용자 토큰 | `AlgoliaUserToken` 원본 ID를 [!DNL Algolia] 플랫폼의 `userToken`에 매핑하려면 이 대상 ID를 선택하십시오. |
+| userId | [!DNL Algolia] 사용자 토큰 | `AlgoliaUserToken` 원본 ID를 `userToken` 플랫폼의 [!DNL Algolia]에 매핑하려면 이 대상 ID를 선택하십시오. |
 
 {style="table-layout:auto"}
 
@@ -62,10 +62,24 @@ ht-degree: 3%
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|---------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+대상 데이터 유형별 지원되는 대상:
+
+| 대상 데이터 유형 | 지원됨 | 설명 | 사용 사례 |
+|--------------------|-----------|-------------|-----------|
+| [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
+| [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
+| [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+
+{style="table-layout:auto"}
+
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -74,7 +88,7 @@ ht-degree: 3%
 | 항목 | 유형 | 참고 |
 |---------|----------|---------|
 | 내보내기 유형 | **[!DNL Audience export]** | [!DNL Algolia] 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보내고 있습니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+| 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -82,16 +96,16 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 데이터 집합 대상 관리 및 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage and Activate Dataset Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상으로 인증 {#authenticate}
 
-대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
+대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 
-* **[!UICONTROL 응용 프로그램 ID]**: [!DNL Algolia] 응용 프로그램 ID는 [!DNL Algolia] 계정에 할당된 고유 식별자입니다.
-* **[!UICONTROL API 키]**: [!DNL Algolia] API 키는 [!DNL Algolia]의 검색 및 인덱싱 서비스에 대한 API 요청을 인증하고 권한을 부여하는 데 사용되는 자격 증명입니다.
+* **[!UICONTROL Application ID]**: [!DNL Algolia] 응용 프로그램 ID는 [!DNL Algolia] 계정에 할당된 고유 식별자입니다.
+* **[!UICONTROL API Key]**: [!DNL Algolia] API 키는 [!DNL Algolia]의 검색 및 인덱싱 서비스에 대한 API 요청을 인증하고 권한을 부여하는 데 사용되는 자격 증명입니다.
 
 이러한 자격 증명에 대한 자세한 내용은 [!DNL Algolia] [인증 설명서](https://www.algolia.com/doc/tools/cli/get-started/authentication/)를 참조하세요.
 
@@ -101,9 +115,9 @@ ht-degree: 3%
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-* **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력하십시오.
-* **[!UICONTROL 설명]**: 대상의 용도에 대한 간략한 설명입니다.
-* **[!UICONTROL 지역]**: 옵션은 **US** 또는 **EU**&#x200B;입니다. 고객 데이터가 저장되는 영역을 선택합니다.
+* **[!UICONTROL Name]**: 이 대상의 기본 이름을 입력하십시오.
+* **[!UICONTROL Description]**: 대상의 용도에 대한 간략한 설명.
+* **[!UICONTROL Region]**: 옵션은 **US** 또는 **EU**&#x200B;입니다. 고객 데이터가 저장되는 영역을 선택합니다.
 
 
 ![계정 세부 정보](../../assets/catalog/personalization/algolia/account.png)
@@ -112,26 +126,26 @@ ht-degree: 3%
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* ID를 내보내려면 ID 그래프 보기 [액세스 제어 권한](https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/home#permissions)이 필요합니다.
+>* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* ID를 내보내려면 ID 그래프 보기 [액세스 제어 권한](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)이 필요합니다.
 
-이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)를 참조하십시오.
+이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)를 참조하십시오.
 
 ### 속성 및 ID 매핑 {#mapping-attributes-identities}
 
-[!UICONTROL 매핑 단계] 동안 AlgoliaUserToken 소스 ID를 userId 대상 ID에 매핑해야 합니다.
+[!UICONTROL Mapping step] 동안 AlgoliaUserToken 소스 ID를 userId 대상 ID에 매핑해야 합니다.
 
 ![매핑 완료](../../assets/catalog/personalization/algolia/mapping-complete.png)
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
 
-대상을 사용자 프로필로 내보냈는지 확인하려면 [!DNL Algolia] 대시보드를 확인하고 **[!UICONTROL 고급 Personalization]**(으)로 이동한 다음 **[!UICONTROL 사용자 검사기]**&#x200B;를 클릭하십시오. 내보낸 Adobe Experience Platform 대상자와 연결된 사용자 프로필을 찾아 User Inspector에서 검색합니다. 대상 ID는 세그먼트 섹션에 표시됩니다.
+대상을 사용자 프로필로 내보냈는지 확인하려면 [!DNL Algolia] 대시보드를 확인하고 **[!UICONTROL Advanced Personalization]**(으)로 이동한 다음 **[!UICONTROL User Inspector]**&#x200B;을(를) 클릭합니다. 내보낸 Adobe Experience Platform 대상자와 연결된 사용자 프로필을 찾아 User Inspector에서 검색합니다. 대상 ID는 세그먼트 섹션에 표시됩니다.
 
 ![Algolia User Inspector](../../assets/catalog/personalization/algolia/verify-segment-user-profile.png)
 

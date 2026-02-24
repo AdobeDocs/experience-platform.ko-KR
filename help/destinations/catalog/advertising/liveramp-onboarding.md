@@ -3,9 +3,9 @@ title: LiveRamp - 온보드 연결
 description: LiveRamp 커넥터를 사용하여 Adobe Real-Time Customer Data Platform에서 LiveRamp Connect로 대상을 온보딩하는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: b8540eb20838e7f2228d71bfc002392d07daffe4
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '2006'
 ht-degree: 4%
 
 ---
@@ -38,10 +38,24 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+대상 데이터 유형별 지원되는 대상:
+
+| 대상 데이터 유형 | 지원됨 | 설명 | 사용 사례 |
+|--------------------|-----------|-------------|-----------|
+| [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
+| [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
+| [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+
+{style="table-layout:auto"}
+
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -77,7 +91,7 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 * **[!UICONTROL Password]**: [!DNL LiveRamp - Onboarding] 저장소 위치의 암호입니다.
 * **[!UICONTROL PGP/GPG encryption key]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**&#x200B;암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
+* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
 
 **SSH 키 인증이 있는 SFTP** {#sftp-ssh}
 
@@ -92,7 +106,7 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 
 * **[!UICONTROL PGP/GPG encryption key]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**&#x200B;암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
+* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -227,7 +241,7 @@ abc101@testemailabc.com,active,active,
 
 Experience Platform은 각 [병합 정책 ID](../../../profile/merge-policies/overview.md)에 대해 하나의 CSV 파일을 생성하므로 각 병합 정책 ID에 대해 별도의 데이터 흐름 실행도 생성합니다.
 
-즉, **[!UICONTROL Identities activated]**&#x200B;데이터 흐름 실행&#x200B;**[!UICONTROL Profiles received]** 페이지의 [&#x200B; 및 &#x200B;](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 지표가 각 대상에 대해 표시되지 않고 동일한 병합 정책을 사용하는 각 대상 그룹에 대해 집계됩니다.
+즉, **[!UICONTROL Identities activated]**&#x200B;데이터 흐름 실행&#x200B;**[!UICONTROL Profiles received]** 페이지의 [ 및 ](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 지표가 각 대상에 대해 표시되지 않고 동일한 병합 정책을 사용하는 각 대상 그룹에 대해 집계됩니다.
 
 동일한 병합 정책을 사용하는 대상자 그룹에 대해 데이터 흐름이 생성되면 대상자 이름이 [모니터링 대시보드](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)에 표시되지 않습니다.
 
