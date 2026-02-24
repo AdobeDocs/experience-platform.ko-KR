@@ -16,7 +16,7 @@ ht-degree: 5%
 
 [!DNL Microsoft Bing] 대상을 사용하여 [!DNL Microsoft Advertising Network], [!DNL Display Advertising] 및 [!DNL Search]을(를) 포함하여 전체 [!DNL Native]에 프로필 데이터를 보냅니다.
 
-[!DNL Microsoft Bing] 대상은 Microsoft에서 *[!DNL Custom Audiences]*&#x200B;을(를) 만듭니다. [!DNL Microsoft Search Network]Microsoft Advertising 설명서[!DNL Audience Network]에 나열된 대로 [!DNL Native] 및 [!DNL Display]&#x200B;([!DNL Programmatic] /[ /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500))에서 모두 사용할 수 있습니다.
+[!DNL Microsoft Bing] 대상은 Microsoft에서 *[!DNL Custom Audiences]*&#x200B;을(를) 만듭니다. [!DNL Microsoft Search Network]Microsoft Advertising 설명서[!DNL Audience Network]에 나열된 대로 [!DNL Native] 및 [!DNL Display]&#x200B;([!DNL Programmatic] /[&#x200B; /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500))에서 모두 사용할 수 있습니다.
 
 [!DNL Microsoft Bing]에 프로필 데이터를 보내려면 먼저 대상에 연결해야 합니다.
 

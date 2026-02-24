@@ -31,7 +31,7 @@ SaaS 회사는 Gainsight PX에서 작성한 애플리케이션 내 안내서를 
 ## 전제 조건 {#prerequisites}
 
 * [!DNL Gainsight] 지원 팀에 연락하여 구독에 대한 외부 세그먼트 기능 활성화를 요청하세요.
-* **[!UICONTROL Generate New Secret]**&#x200B;회사 세부 정보 페이지[의 맨 아래에 있는 ](https://app.aptrinsic.com/settings/subscription) 단추를 사용하여 PX 구독에 대한 OAuth 암호 값을 생성합니다.
+* **[!UICONTROL Generate New Secret]**&#x200B;회사 세부 정보 페이지[의 맨 아래에 있는 &#x200B;](https://app.aptrinsic.com/settings/subscription) 단추를 사용하여 PX 구독에 대한 OAuth 암호 값을 생성합니다.
   ![새 암호 생성 단추를 표시하는 Gainsight PX의 회사 세부 정보 화면](../../assets/catalog/analytics/gainsight-px/generate_oauth_secret.png)
 
 ## 지원되는 ID {#supported-identities}
@@ -96,7 +96,7 @@ Gainsight PX는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](..
 
 * **[!UICONTROL Password]**: [[!DNL Gainsight PX]](https://app.aptrinsic.com)에 로그인하는 데 사용되는 암호
 * **[!UICONTROL Client ID]**: [회사 세부 정보 페이지](https://app.aptrinsic.com/settings/subscription)의 Gainsight PX 구독 ID
-* **[!UICONTROL Client secret]**: [ UI의 ](https://app.aptrinsic.com/settings/subscription)회사 세부 정보 페이지[!DNL Gainsight PX]의 맨 아래에 생성된 OAuth 암호입니다.
+* **[!UICONTROL Client secret]**: [&#x200B; UI의 &#x200B;](https://app.aptrinsic.com/settings/subscription)회사 세부 정보 페이지[!DNL Gainsight PX]의 맨 아래에 생성된 OAuth 암호입니다.
 * **[!UICONTROL Username]**: [[!DNL Gainsight PX]](https://app.aptrinsic.com) UI에 로그인하는 데 사용되는 전자 메일
 
 ### 대상 세부 정보 입력 {#destination-details}
