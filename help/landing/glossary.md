@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 용어
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
+source-git-commit: bdd0039249366ceabebe52694046ec01906ced3c
 workflow-type: tm+mt
-source-wordcount: '8169'
+source-wordcount: '8224'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 0%
 
 **대상 스냅숏**: 대상 스냅숏은 세분화 시 세그먼트 기준에 맞는 모든 프로필을 캡처합니다.
 
-## B
+## byte
 
 **다시 채우기**: 예약된 소스의 경우 다시 채우기 옵션을 사용하면 이전 데이터를 수집할 수 있습니다.
 
@@ -177,7 +177,7 @@ ht-degree: 0%
 
 **데이터 사용 레이블**: 데이터 사용 레이블을 사용하면 개인 정보 보호 관련 고려 사항 및 계약 조건을 반영하여 규정 및 기업 정책을 준수하는 데이터를 분류할 수 있습니다. 데이터 세트에 추가된 데이터 사용 레이블은 상속되거나 해당 데이터 세트 내의 모든 필드에 적용됩니다. 데이터 사용 레이블은 필드에 직접 적용할 수도 있습니다.
 
-**데이터 흐름**: 데이터 흐름은 원본에서 Experience Platform으로 유입되고 대상으로 유출되는 데이터의 가상 파이프라인입니다.
+**데이터 흐름**: 데이터 흐름은 원본에서 Experience Platform으로 유입되고 대상으로 유출되는 데이터의 가상 파이프라인입니다. 대상 컨텍스트에서 데이터 흐름은 [대상 인스턴스](#destination-instance)와 동의어입니다. {#dataflow}
 
 **데이터 흐름 실행**: 데이터 흐름 실행은 사용자가 지정한 일정에 따라 Experience Platform에 들어오는 데이터 흐름입니다.
 
@@ -200,6 +200,8 @@ ht-degree: 0%
 **대상 범주**: 대상 범주는 유사한 특성을 가진 대상을 그룹화한 것입니다.
 
 **대상 카탈로그**: 대상 카탈로그는 Experience Platform에서 사용 가능한 대상 목록입니다.
+
+**대상 인스턴스**: 대상 인스턴스는 UI 또는 API를 통해 생성된 Experience Platform의 특정 대상에 대해 개별적으로 구성된 연결입니다. Experience Platform에서 대상 엔드포인트로의 단일 활성화 파이프라인을 나타냅니다. [데이터 흐름](#dataflow)이라고도 합니다. {#destination-instance}
 
 **직접 호출 규칙**: 태그 컨텍스트에서 직접 호출 규칙은 이벤트 감지 및 조회 시스템을 무시하고 페이지에서 직접 호출 시 실행되는 규칙입니다.
 
