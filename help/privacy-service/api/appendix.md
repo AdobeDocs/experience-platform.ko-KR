@@ -5,10 +5,10 @@ title: Privacy Service API 안내서 부록
 description: 이 문서에는 Privacy Service API 작업에 대한 추가 정보가 포함되어 있습니다.
 role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 644e85fe5c9b1a37f69c75755713e929736c2e89
+source-git-commit: 9b3fb0d545408369d96a3fc7c5c6e9c098af9933
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 5%
+source-wordcount: '552'
+ht-degree: 6%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 ## 표준 ID 네임스페이스 {#standard-namespaces}
 
-[!DNL Privacy Service] (으)로 전송되는 모든 ID는 특정 ID 네임스페이스에 제공되어야 합니다. ID 네임스페이스는 [Adobe Experience Platform ID 서비스](../../identity-service/home.md)의 구성 요소로서 ID와 관련된 컨텍스트를 나타냅니다.
+[!DNL Privacy Service]&#x200B;(으)로 전송되는 모든 ID는 특정 ID 네임스페이스에 제공되어야 합니다. ID 네임스페이스는 [Adobe Experience Platform ID 서비스](../../identity-service/home.md)의 구성 요소로서 ID와 관련된 컨텍스트를 나타냅니다.
 
 다음 표에서는 [!DNL Experience Platform]에서 일반적으로 사용되는 사전 정의된 ID 유형과 관련 `namespace` 값을 간략하게 설명합니다.
 
@@ -26,7 +26,7 @@ ht-degree: 5%
 | --- | --- | --- |
 | 이메일 | `Email` | `6` |
 | 휴대폰 | `Phone` | `7` |
-| ADOBE ADVERTISING CLOUD ID | `AdCloud` | `411` |
+| Adobe Advertising Cloud Id | `AdCloud` | `411` |
 | ADOBE AUDIENCE MANAGER UUID | `CORE` | `0` |
 | ADOBE EXPERIENCE CLOUD ID | `ECID` | `4` |
 | ADOBE TARGET ID | `TNTID` | `9` |
@@ -38,13 +38,13 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->각 ID 유형에는 `namespaceId` 정수 값도 있습니다. 이 값은 ID의 `type` 속성을 &quot;namespaceId&quot;로 설정할 때 `namespace` 문자열 대신 사용할 수 있습니다. 자세한 내용은 [네임스페이스 한정자](#namespace-qualifiers)의 섹션을 참조하십시오.
+>각 ID 유형에는 `namespaceId` 정수 값도 있습니다. 이 값은 ID의 `namespace` 속성을 &quot;namespaceId&quot;로 설정할 때 `type` 문자열 대신 사용할 수 있습니다. 자세한 내용은 [네임스페이스 한정자](#namespace-qualifiers)의 섹션을 참조하십시오.
 
-[!DNL Identity Service] API의 `idnamespace/identities` 끝점에 대한 GET 요청을 통해 조직에서 사용 중인 ID 네임스페이스 목록을 검색할 수 있습니다. 자세한 내용은 [ID 서비스 개발자 안내서](../../identity-service/api/getting-started.md)를 참조하십시오.
+`idnamespace/identities` API의 [!DNL Identity Service] 끝점에 대한 GET 요청을 통해 조직에서 사용 중인 ID 네임스페이스 목록을 검색할 수 있습니다. 자세한 내용은 [ID 서비스 개발자 안내서](../../identity-service/api/getting-started.md)를 참조하십시오.
 
-## 네임스페이스 한정자
+## 네임스페이스 한정자 {#namespace-qualifiers}
 
-[!DNL Privacy Service] API에서 `namespace` 값을 지정할 때 **네임스페이스 한정자**&#x200B;이(가) 해당 `type` 매개 변수에 포함되어야 합니다. 다음 표에서는 허용되는 다양한 네임스페이스 한정자에 대해 설명합니다.
+`namespace` API에서 [!DNL Privacy Service] 값을 지정할 때 **네임스페이스 한정자**&#x200B;이(가) 해당 `type` 매개 변수에 포함되어야 합니다. 다음 표에서는 허용되는 다양한 네임스페이스 한정자에 대해 설명합니다.
 
 | 한정자 | 정의 |
 | --------- | ---------- |
@@ -58,28 +58,31 @@ ht-degree: 5%
 
 {style="table-layout:auto"}
 
-## 허용된 제품 값
+## 허용된 제품 값 {#accepted-product-values}
 
-다음 표에서는 작업 생성 요청의 `include` 특성에서 Adobe 제품을 지정하는 데 허용되는 값을 간략하게 설명합니다.
+이 섹션에는 Privacy Service 작업(API 또는 UI)을 만들 때 `include` 특성에서 허용되는 제품 식별자 값이 나열됩니다. 작업 요청의 `include` 배열에서 이 값을 사용합니다.
+
+다음 표에는 지원되는 제품, 해당 UI 표시 이름 및 해당 코드 값이 나와 있습니다.
 
 >[!NOTE]
 >
->제품 목록의 값은 대/소문자를 구분하지 않습니다. Camel-case가 권장되지만 적용되지 않습니다.
+>- 제품 값은 대/소문자를 구분하지 않습니다. 일관성을 위해 camel 대/소문자를 사용하는 것이 좋습니다.
+>- 위에 나열된 제품만 UI 및 API에서 지원됩니다. 조직에 대해 제품이 프로비저닝되지 않은 경우 해당 제품이 무시되거나 유효성 검사 오류가 발생할 수 있습니다. 권한을 확인하려면 Adobe 계약 또는 프로비저닝 설명서를 참조하십시오.
 
-| 제품 | `include` 특성에 사용할 값 |
-| --- | --- |
-| Adobe Advertising Cloud | `adCloud` |
-| Adobe Analytics | `analytics` |
-| Adobe Audience Manager | `audienceManager` |
-| Adobe Campaign | `campaign` |
-| Adobe Experience Platform (데이터 레이크) | `aepDataLake` |
-| Adobe Experience Platform (실시간 고객 프로필) | `profileService` |
-| Adobe Pass 인증 | `primetimeAuthentication` |
-| Adobe Target | `target` |
-| 고객 속성(CRS) | `CRS` |
-| 고객 여정 관리 | `cjm` |
-| ID 서비스 | `identity` |
-| Marketo Engage | `marketo` |
-| Marketo Measure | `marketomeasure` |
+| 브랜드 제품 이름 | UI 표시 이름 | `include` 값 |
+| ------------------------------------------------------ | -------------------------- | ---------------------------------------- |
+| Adobe Analytics | [!UICONTROL Analytics] | `analytics` |
+| Adobe Audience Manager | [!UICONTROL Audience Manager] | `audienceManager` |
+| Adobe Advertising | [!UICONTROL Ad Cloud] | `adCloud` |
+| Adobe Experience Platform(프로필 스토어) | [!UICONTROL Profile] | `profileService` |
+| Adobe Experience Platform (데이터 레이크) | [!UICONTROL AEP Data Lake] | `aepDataLake` |
+| Adobe Campaign | [!UICONTROL Campaign] | `campaign` |
+| Adobe Target | [!UICONTROL Target] | `target` |
+| 고객 속성 | [!UICONTROL Customer Attributes (CRS)] | `CRS` |
+| Adobe Journey Optimizer | [!UICONTROL Adobe Journey Optimizer] | `cjm` |
+| Marketo Engage | [!UICONTROL Marketo Engage / AJO B2B] | `marketo` |
+| ID 서비스 | [!UICONTROL Identity] | `identity` |
+| Marketo Measure | [!UICONTROL Marketo Measure] | `marketomeasure` |
+| Adobe Commerce | [!UICONTROL Commerce (Personalization)] | `commerceMarketingData` |
 
 {style="table-layout:auto"}
