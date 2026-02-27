@@ -5,9 +5,9 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: 8b33d9231aeebd454fd614a81b356a9e971b757c
+source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '411'
 ht-degree: 26%
 
 ---
@@ -51,12 +51,12 @@ ht-degree: 26%
       - [회귀](advanced-statistics/implement-models/regression.md)
       - [분류](advanced-statistics/implement-models/classification.md)
       - [클러스터링](advanced-statistics/implement-models/clustering.md)
-   - 예 {#examples}
+   - 예시 {#examples}
       - [통계 및 머신 러닝을 사용한 보트 필터링](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [SQL 기반 로지스틱 회귀 분석을 사용하여 고객 이탈 예측](advanced-statistics/examples/predict-customer-churn.md)
 - 데이터 Distiller 대상 {#data-distiller-audiences}
    - [SQL을 사용하여 외부 대상 작성](data-distiller-audiences/overview.md)
-- 예 {#use-cases}
+- 예시 {#use-cases}
    - [개요](use-cases/overview.md)
    - [찾아보기 중단됨](use-cases/abandoned-browse.md)
    - [속성 분석](use-cases/attribution-analysis.md)
@@ -109,6 +109,7 @@ ht-degree: 26%
    - [쿼리 일정](ui/query-schedules.md)
    - [쿼리 로그](ui/query-logs.md)
    - [예약된 쿼리 모니터링](ui/monitor-queries.md)
+   - [세션 관리](ui/session-management.md)
    - [자격 증명 안내서](ui/credentials.md)
    - [JWT를 OAuth 자격 증명으로 마이그레이션](ui/migrate-jwt-to-oauth.md)
    - [쿼리 결과에서 출력 데이터 세트 생성](ui/create-datasets.md)
@@ -123,7 +124,7 @@ ht-degree: 26%
    - [경고 구독](api/alert-subscriptions.md)
 - 데이터 Distiller 인증 API {#auth-api}
    - [개요](auth-api/overview.md)
-   - [시작하기](auth-api/getting-started.md)
+   - [시작](auth-api/getting-started.md)
    - [액세스](auth-api/ip-access.md)
    - [유효성 검사](auth-api/validate.md)
 - 데이터 거버넌스 {#data-governance}
