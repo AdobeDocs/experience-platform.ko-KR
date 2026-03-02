@@ -2,9 +2,9 @@
 title: Demandbase 사용자 연결
 description: 이 대상을 사용하여 마케팅 및 판매의 다른 다운스트림 사용 사례에서 대상을 활성화하고 Demandbase 타사 데이터로 대상자를 보강합니다.
 exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 1ceafcccf3f95e401fdce8e00b1755fafe004343
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1018'
 ht-degree: 4%
 
 ---
@@ -121,6 +121,7 @@ ht-degree: 4%
 | 소스 필드 | 대상 필드 | 설명 |
 |--------------|--------------|-------------|
 | `xdm: workEmail.address` | `Identity: email` | 개인의 회사 이메일 주소 |
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | 개인용 고유 식별자 |
 
 ### 권장 매핑 {#recommended-mappings}
 
@@ -128,7 +129,6 @@ ht-degree: 4%
 
 | 소스 필드 | 대상 필드 | 설명 |
 |--------------|--------------|-------------|
-| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | 개인용 고유 식별자 |
 | `xdm: person.name.lastName` | `xdm: lastName` | 개인의 성 |
 | `xdm: person.name.firstName` | `xdm: firstName` | 개인의 이름 |
 
@@ -136,9 +136,9 @@ ht-degree: 4%
 
 필드를 [!DNL Demandbase People]에 매핑할 때 다음 일치 동작을 고려하십시오.
 
-* **기본 일치**: `externalPersonId`이(가) 있는 경우 Demandbase는 이 값을 사용자 일치를 위한 기본 식별자로 사용합니다.
+* **기본 일치**: Demandbase는 `externalPersonId`을(를) 사용자 일치의 기본 식별자로 사용합니다.
 * **대체 항목 일치**: `externalPersonId`을(를) 사용할 수 없는 경우 Demandbase는 식별을 위해 `email` 필드를 사용합니다.
-* **필수 및 권장**: Demandbase에는 `email`만 필요하지만 Adobe에서는 일치하는 정확도와 캠페인 성능을 개선하기 위해 위의 권장 매핑 테이블에서 사용 가능한 모든 필드를 매핑하는 것을 권장합니다.
+* **권장 필드**: `email`과(와) `externalPersonId`만 필요하지만 Adobe에서는 일치하는 정확도와 캠페인 성능을 개선하기 위해 위의 권장 매핑 테이블에서 사용 가능한 모든 필드를 매핑하는 것을 권장합니다.
 
 ![Demandbase 사용자 매핑](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
 
