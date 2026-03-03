@@ -3,13 +3,13 @@ title: 대상 구성 개선 사항
 description: 대상 강화 및 빠른 활성화를 통해 대상 구성에 대한 개선 사항에 대해 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 42e639b403edbaf666d8bc21eb35b2b75530d6b0
+exl-id: 068a178e-ef50-45f1-bcce-c207ebcd5ef1
+source-git-commit: 2d16cc990ea15c1596aae92d8768cddc77a30efd
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
-
 
 # 대상자 구성 개선 사항
 
@@ -26,15 +26,15 @@ ht-degree: 0%
 
 ![대상 블록과 빌드 규칙 단추가 강조 표시됩니다.](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
 
-규칙 빌더 캔버스가 표시됩니다. 이제 대상 강화를 위한 필터 기준을 만들 수 있습니다. 이 필터 조건 **must**&#x200B;에는 배열 내에 있는 특성이 포함되어 있습니다. 배열인 속성은 조직의 스키마 구조에 따라 다릅니다. 필터 조건을 만든 후 오른쪽 패널에서 **[!UICONTROL Delivery]**&#x200B;을(를) 선택합니다.
+규칙 빌더 캔버스가 표시됩니다. 이제 대상 강화를 위한 필터 기준을 만들 수 있습니다. 이 필터 조건 **must**&#x200B;에는 배열 내에 있는 특성이 포함되어 있습니다. 배열인 속성은 조직의 스키마 구조에 따라 다릅니다. 필터 조건을 만든 후 오른쪽 패널에서 **[!UICONTROL View enrichment]**&#x200B;을(를) 선택합니다.
 
-![규칙 빌더 캔버스에는 다양한 기능을 사용할 수 있는 대상의 예가 표시됩니다. 게재 단추도 강조 표시됩니다.](/help/segmentation/images/ui/composition-enhancements/view-delivery.png)
+![규칙 빌더 캔버스에는 다양한 기능을 사용할 수 있는 대상의 예가 표시됩니다. 게재 단추도 강조 표시됩니다.](/help/segmentation/images/ui/composition-enhancements/view-enrichment.png)
 
-왼쪽 패널의 목록에서 데이터 보강에 사용할 오브젝트 배열을 선택합니다. 프로필에 스토리지가 하나만 있는 경우 스토리지가 자동으로 선택됩니다. 대상 구성으로 돌아가려면 **[!UICONTROL Save]**&#x200B;을(를) 선택하십시오.
+왼쪽 패널의 목록에서 데이터 보강에 사용할 필드와 오브젝트 배열을 선택합니다. 프로필에 스토리지가 하나만 있는 경우 스토리지가 자동으로 선택됩니다. 대상 구성으로 돌아가려면 **[!UICONTROL Save]**&#x200B;을(를) 선택하십시오.
 
 <!-- , as well as the fields you want to be used in the enrichment. -->
 
-![데이터 보강 트리의 스키마 트리가 표시됩니다.](/help/segmentation/images/ui/composition-enhancements/view-schema-tree.png)
+![데이터 보강 트리의 스키마 트리가 표시됩니다.](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
 
 대상 구성 내에서 [!UICONTROL Audience] 블록은 이제 &quot;[!UICONTROL Rule builder with enhancement]&quot; 형식입니다. **[!UICONTROL Publish]**&#x200B;을(를) 선택하여 다음 일별 일괄 처리로 대상자를 활성화합니다.
 
@@ -58,7 +58,7 @@ ht-degree: 0%
    - 페이로드 **must** 내의 모든 열이 기본 형식입니다.
    - 배열의 처음 **20** 열만 출력됩니다.
 
-- 지금은 **1&rbrace;개의 대상자 구성만 사용할 수 있습니다.**
+- 지금은 **1}개의 대상자 구성만 사용할 수 있습니다.**
 
 ## 더 빠른 활성화 {#faster-activation}
 
