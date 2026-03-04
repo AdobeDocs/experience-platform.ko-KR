@@ -2,7 +2,7 @@
 title: Twitter 사용자 지정 대상 연결
 description: Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience Platform 내에 구축된 대상을 활성화하여 관련 리마케팅 캠페인을 만듭니다
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 6%
@@ -24,7 +24,7 @@ Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Twitter Custom Audiences]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko#getting-started)에 대해 자세히 알아보세요.
+[!DNL Twitter Custom Audiences]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)에 대해 자세히 알아보세요.
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
@@ -40,7 +40,7 @@ Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ Twitter에서 기존 팔로워와 고객을 타겟팅하고 Twitter에서 [!DNL 
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 [!DNL Twitter Custom Audiences] 대상을 찾은 다음 **[!UICONTROL Set Up]**&#x200B;을(를) 선택하십시오.
-2. **[!UICONTROL Connect to destination]**&#x200B;를 선택합니다.
+2. **[!UICONTROL Connect to destination]**를 선택합니다.
    ![LinkedIn 인증](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
 3. Twitter 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 
