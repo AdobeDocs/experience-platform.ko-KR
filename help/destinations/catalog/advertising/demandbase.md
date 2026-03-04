@@ -3,12 +3,13 @@ title: Demandbase 연결
 description: 이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대한 계정 대상자를 활성화할 수 있습니다. DemandBase의 B2B Demand Side Platform(DSP)을 통해 대상 계정의 관련 페르소나와 역할에 광고를 게재하십시오. 대상 계정은 마케팅과 판매의 다른 다운스트림 사용 사례를 위해 Demandbase 서드파티 데이터로 강화할 수도 있습니다.
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 5a03902df358d804cbafb401ffcef54eab240dfd
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 15%
 
 ---
+
 
 # Demandbase 연결 {#demandbase}
 
@@ -37,8 +38,6 @@ ht-degree: 15%
 
 {style="table-layout:auto"}
 
-
-
 대상 데이터 유형별 지원되는 대상:
 
 | 대상 데이터 유형 | 지원됨 | 설명 | 사용 사례 |
@@ -49,7 +48,6 @@ ht-degree: 15%
 | [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
-
 
 ## 내보내기 유형 및 빈도 {#export-type-and-frequency}
 

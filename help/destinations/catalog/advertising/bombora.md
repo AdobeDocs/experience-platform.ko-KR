@@ -1,19 +1,19 @@
 ---
-title: 봄보라 접속
+title: Bombora ABM 대상자 연결
 description: 계정 대상자를 기반으로 대상자 타겟팅, 개인화 및 억제에 대한 Bombora 캠페인에 대한 프로필을 활성화합니다.
 exl-id: a2f8e399-e192-4104-876a-fe60f8403143
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
 workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 4%
+source-wordcount: '1170'
+ht-degree: 3%
 
 ---
 
-# 봄보라 접속 {#bombora}
+# Bombora ABM 대상자 연결 {#bombora}
 
 >[!AVAILABILITY]
 >
->Real-Time Customer Data Platform의 [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) 에디션을 구매하는 회사는 Bombora 대상에 대한 계정 대상을 활성화할 수 있습니다.
+>Real-Time Customer Data Platform의 [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) 에디션을 구매하는 회사는 Bombora ABM Audiences 대상에 대한 계정 대상을 활성화할 수 있습니다.
 
 [계정 대상자](/help/segmentation/types/account-audiences.md)를 기반으로 대상자 타겟팅, 개인화 및 억제에 대한 Bombora 캠페인에 대한 프로필을 활성화합니다.
 
@@ -52,8 +52,6 @@ B2B 마케터는 Real-time CDP에서 계정 목록을 만들어 높은 의도를
 
 {style="table-layout:auto"}
 
-
-
 대상 데이터 유형별 지원되는 대상:
 
 | 대상 데이터 유형 | 지원됨 | 설명 | 사용 사례 |
@@ -91,8 +89,9 @@ Bombora에는 아래 표에 설명된 대상 ID의 매핑이 필요합니다. [I
 
 계정 대상을 Bombora로 내보내려면 다음 정보가 필요합니다.
 
-1. 봄보라 계정입니다.
+1. 봄보라 계정입니다. 계정이 없는 경우 [Bombora 대상자 활성화 요청 양식](https://customers.bombora.com/artcdp/audience-activation-request)을 사용하여 Bombora 계정을 요청할 수 있습니다.
 2. Bombora **[!UICONTROL client ID]** 및 **[!UICONTROL client secret]**&#x200B;입니다.
+3. Bombora로 전송되는 데이터는 **프로필이 활성화됨**&#x200B;인 데이터 세트에서 가져와야 하므로 데이터 세트가 프로필에 포함됩니다. 이 대상에 대한 대상을 활성화하기 전에 데이터 세트가 [프로필에 대해 활성화됨](/help/catalog/datasets/enable-for-profile.md)인지 확인하십시오.
 
 ## 대상에 연결 {#connect}
 
@@ -135,8 +134,6 @@ Bombora에는 아래 표에 설명된 대상 ID의 매핑이 필요합니다. [I
 
 Bombora 대상을 사용하려면 성공적인 데이터 활성화를 위해 다음 매핑을 구성해야 합니다.
 
-
-
 | 소스 필드 | 대상 필드 | 설명 |
 |---------|----------|---------|
 | 모든 값 | `Identity: primaryId` | 이 매핑은 Experience Platform이 Bombora에 대한 연결을 설정하는 데 필수입니다. 이 값은 Bombora로 익스포트되지 않지만 대상 구성에 필요합니다. 소스 필드에 대한 속성을 선택할 수 있습니다. |
@@ -144,6 +141,17 @@ Bombora 대상을 사용하려면 성공적인 데이터 활성화를 위해 다
 
 ![필수 매핑 추가](../..//assets/catalog/advertising/bombora/mappings.png)
 
+## 대상자 동기화 동작 {#sync-behavior}
+
+초기 대상 활성화 이후, Experience Platform의 대상에 대한 후속 업데이트는 Bombora에 점진적으로 동기화됩니다. 다음과 같은 동작이 적용됩니다.
+
+* **계정에 대상자가 추가됨**: 계정이 Experience Platform의 대상자에 추가되면 Bombora의 해당 대상자에 자동으로 추가됩니다.
+* **계정이 제거되었거나 더 이상 사용할 수 없음**: 계정이 더 이상 대상 그룹에 사용할 수 없거나 Experience Platform의 대상에서 제거되면 Bombora의 해당 대상에서 제거됩니다.
+* **계정 또는 프로필이 삭제됨**: Experience Platform에서 계정 또는 프로필이 삭제되어 해당 계정이 더 이상 대상자에 적합하지 않으면 Bombora의 해당 대상자에서 제거됩니다.
+
+### 대상 삭제 및 연결 끊기 동작 {#deletion-disconnect}
+
+Experience Platform에서 대상을 삭제하거나 Bombora 활성화 데이터 흐름에서 대상을 제거하면 Bombora 계정에서 대상이 제거됩니다.
 
 ## 추가 참고 사항 및 중요한 설명선 {#additional-notes}
 

@@ -3,9 +3,9 @@ title: 대상에 대한 계정 대상자 활성화
 type: Tutorial
 description: 대상에 대한 계정 대상을 활성화하는 방법을 알아봅니다
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 044306709747c32c4ce265d03d3908bbae169edc
+source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '779'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 지원되는 대상 {#supported-destinations}
 
-**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**(으)로 이동하여 **[!UICONTROL Catalog]** 탭을 선택합니다. **[!UICONTROL Data types]** 필터를 사용하고 **[!UICONTROL Accounts]**&#x200B;을(를) 선택하여 계정 대상자 활성화를 지원하는 대상을 확인합니다. 현재 계정 대상 내보내기는 특정 클라우드 저장소 대상([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob 저장소](/help/destinations/catalog/cloud-storage/azure-blob.md), [데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md) 및 [SFTP](/help/destinations/catalog/cloud-storage/sftp.md))과 [Demandbase](/help/destinations/catalog/advertising/demandbase.md) 및 [(회사) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md) 스트리밍 대상에만 사용할 수 있습니다.
+**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**(으)로 이동하여 **[!UICONTROL Catalog]** 탭을 선택합니다. **[!UICONTROL Data types]** 필터를 사용하고 **[!UICONTROL Accounts]**&#x200B;을(를) 선택하여 계정 대상자 활성화를 지원하는 대상을 확인합니다. 현재 계정 대상 내보내기는 특정 클라우드 저장소 대상([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob 저장소](/help/destinations/catalog/cloud-storage/azure-blob.md), [데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md) 및 [SFTP](/help/destinations/catalog/cloud-storage/sftp.md))과 [Bombora](/help/destinations/catalog/advertising/bombora.md), [Demandbase](/help/destinations/catalog/advertising/demandbase.md) 및 [(회사) LinkedIn 일치하는 대상](/help/destinations/catalog/social/linkedin-b2b.md) 스트리밍 대상에만 사용할 수 있습니다.
 
 계정 대상을 지원하는 ![대상.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
