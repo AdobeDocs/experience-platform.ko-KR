@@ -64,7 +64,7 @@ Experience Platform 경고는 한 번 전송하거나 해결할 때까지 사전
 
 Experience Platform UI를 통해 수신된 경고를 보고 경고 규칙을 관리할 수 있습니다. 다음 비디오에서는 이러한 기능에 대해 소개합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423921?captions=kor&quality=12&learn=on)
 
 Experience Platform UI에서 경고를 사용하여 작업하려면 Adobe Admin Console을 통해 다음 액세스 제어 권한을 활성화해야 합니다.
 
@@ -97,7 +97,7 @@ Experience Platform UI에서 경고를 사용하여 작업하려면 Adobe Admin 
 
 [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app)에서 웹후크 프록시를 사용하여 Experience Platform에서 [(으)로 &#x200B;](https://developer.adobe.com/events/docs/guides/)Adobe I/O Events[!DNL Slack]을(를) 받을 수 있습니다. 프록시는 Adobe의 확인 핸드셰이크를 처리하고 이벤트 페이로드를 [!DNL Slack] 메시지로 전환하므로 고객이 응대하는 알림을 작업 영역에서 직접 받을 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3480202?captions=kor&learn=on)
 
 Adobe App Builder 웹후크 프록시와 통합하여 [!DNL Slack]에서 Experience Platform 알림을 받는 방법에 대한 자세한 내용은 [Experience Platform 이벤트 모니터링 [!DNL Slack]](https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack)을(를) 참조하십시오.
 
