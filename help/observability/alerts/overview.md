@@ -4,10 +4,10 @@ title: 경고 개요
 description: 경고 규칙이 정의되는 구조를 포함하여 Adobe Experience Platform에서의 다양한 경고에 대해 알아봅니다.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: f33bcf982216d25e514992d5ebf978b5535abd77
+source-git-commit: bdddcdb19fe248af8f83d42bf885f07b9749a399
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 12%
+source-wordcount: '865'
+ht-degree: 11%
 
 ---
 
@@ -41,7 +41,7 @@ Experience Platform 경고는 한 번 전송하거나 해결할 때까지 사전
 
 | 구성 요소 | 설명 |
 | --- | --- |
-| **지표** | 실패한 일괄 처리 수집 이벤트 수([)와 같이 값이 경고를 트리거하는 Observability &#x200B;](../api/metrics.md#available-metrics)metric`timeseries.ingestion.dataset.batchfailed.count`. |
+| **지표** | 실패한 일괄 처리 수집 이벤트 수([)와 같이 값이 경고를 트리거하는 Observability ](../api/metrics.md#available-metrics)metric`timeseries.ingestion.dataset.batchfailed.count`. |
 | **조건** | 특정 수를 초과하는 카운트 지표와 같이 true로 확인될 경우 경고를 트리거하는 지표와 관련된 조건입니다. 이 조건은 미리 정의된 시간 윈도우(time window)와 연관될 수 있다. |
 | **창** | (선택 사항) 경보에 대한 조건은 미리 정의된 시간 윈도우로 제한될 수 있다. 예를 들어 지난 5분 동안 실패한 일괄 처리 수에 따라 경고가 트리거될 수 있습니다. |
 | **작업** | 경고가 트리거되면 작업이 수행됩니다. 특히 미리 구성된 웹후크 또는 Experience Platform UI와 같은 게재 채널을 통해 메시지를 적용 가능한 수신자에게 보냅니다. |
@@ -64,7 +64,7 @@ Experience Platform 경고는 한 번 전송하거나 해결할 때까지 사전
 
 Experience Platform UI를 통해 수신된 경고를 보고 경고 규칙을 관리할 수 있습니다. 다음 비디오에서는 이러한 기능에 대해 소개합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423921?captions=kor&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Experience Platform UI에서 경고를 사용하여 작업하려면 Adobe Admin Console을 통해 다음 액세스 제어 권한을 활성화해야 합니다.
 
@@ -92,6 +92,14 @@ Experience Platform UI에서 경고를 사용하여 작업하려면 Adobe Admin 
 > 경고가 트리거된 이유에 대한 자세한 내용을 보려면 경고를 선택하여 관련 대시보드로 이동합니다.
 
 또한 UI의 [!UICONTROL Alerts] 탭에서는 개별 사용자가 특정 경고 유형을 구독할 수 있으며 관리자가 경고 규칙을 모두 활성화하거나 비활성화할 수 있습니다. 경고 관리에 대한 자세한 내용은 [UI 안내서](./ui.md)를 참조하세요.
+
+### Slack 통합 {#slack-integration}
+
+[Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app)에서 웹후크 프록시를 사용하여 Experience Platform에서 [(으)로 ](https://developer.adobe.com/events/docs/guides/)Adobe I/O Events[!DNL Slack]을(를) 받을 수 있습니다. 프록시는 Adobe의 확인 핸드셰이크를 처리하고 이벤트 페이로드를 [!DNL Slack] 메시지로 전환하므로 고객이 응대하는 알림을 작업 영역에서 직접 받을 수 있습니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
+
+Adobe App Builder 웹후크 프록시와 통합하여 [!DNL Slack]에서 Experience Platform 알림을 받는 방법에 대한 자세한 내용은 [Experience Platform 이벤트 모니터링 [!DNL Slack]](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack)을(를) 참조하십시오.
 
 ## 다음 단계
 
