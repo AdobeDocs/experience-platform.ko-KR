@@ -99,7 +99,7 @@ Experience Platform UI에서 경고를 사용하여 작업하려면 Adobe Admin 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
 
-Adobe App Builder 웹후크 프록시와 통합하여 [!DNL Slack]에서 Experience Platform 알림을 받는 방법에 대한 자세한 내용은 [Experience Platform 이벤트 모니터링 [!DNL Slack]](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack)을(를) 참조하십시오.
+Adobe App Builder 웹후크 프록시와 통합하여 [!DNL Slack]에서 Experience Platform 알림을 받는 방법에 대한 자세한 내용은 [Experience Platform 이벤트 모니터링 [!DNL Slack]](https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack)을(를) 참조하십시오.
 
 ## 다음 단계
 
