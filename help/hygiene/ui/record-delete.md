@@ -5,7 +5,7 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 source-git-commit: 56ae47f511a7392286c4f85173dba30e93fc07d0
 workflow-type: tm+mt
 source-wordcount: '2520'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -81,7 +81,7 @@ Experience Platform의 각 데이터 세트는 하나의 기본 ID 유형만 지
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="기본 ID 네임스페이스"
->abstract="기본 ID 네임스페이스는 Experience Platform에서 레코드를 소비자의 프로필에 고유하게 연결하는 속성입니다. 데이터 세트의 기본 ID 필드는 데이터 세트가 기반으로 하는 스키마에 의해 정의됩니다. 이 열에서는 데이터 집합의 스키마와 일치하는 기본 ID 네임스페이스(예: 이메일 주소의 경우 `email`, Experience Cloud ID의 경우 `ecid`)를 제공해야 합니다. 자세한 내용은 데이터 라이프사이클 UI 안내서를 참조하십시오."
+>abstract="기본 ID 네임스페이스는 레코드를 Experience Platform의 소비자 프로필에 고유하게 연결하는 속성입니다. 데이터 세트의 기본 ID 필드는 데이터 세트가 기반으로 하는 스키마에 의해 정의됩니다. 이 열에서는 데이터 세트의 스키마와 일치하는 기본 ID 네임스페이스(예: 이메일 주소에 대한 `email` 또는 Experience Cloud ID에 대한 `ecid`)를 제공해야 합니다. 자세한 내용은 데이터 라이프사이클 UI 안내서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"

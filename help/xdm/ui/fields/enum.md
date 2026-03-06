@@ -30,7 +30,7 @@ XDM(Experience Data Model)에서 문자열 필드에는 해당 필드에 수집�
 
 이 문서에서는 [!UICONTROL Schemas] UI 작업 영역에서 열거형 및 제안 값을 정의하는 방법을 다룹니다. UI에서 열거형을 구성하는 방법 및 다운스트림 효과를 포함하여 열거형 및 제안된 값에 대한 빠른 개요는 다음 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3413680/?captions=kor&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## 열거형 정의 {#enum}
 
@@ -64,7 +64,7 @@ XDM(Experience Data Model)에서 문자열 필드에는 해당 필드에 수집�
 
 ### 표준 필드에 대한 제안 값 관리
 
-표준 XDM 구성 요소의 일부 필드에는 `eventType` 클래스[[!UICONTROL XDM ExperienceEvent]의 &#x200B;](../../classes/experienceevent.md)과(와) 같이 제안된 자체 값이 포함되어 있습니다. 표준 필드에 대해 추가 제안 값을 생성할 수 있지만 조직에서 정의하지 않은 제안 값은 수정하거나 제거할 수 없습니다. UI에서 표준 필드를 볼 때 제안된 값이 표시되지만 읽기 전용입니다.
+표준 XDM 구성 요소의 일부 필드에는 `eventType` 클래스[[!UICONTROL XDM ExperienceEvent]의 ](../../classes/experienceevent.md)과(와) 같이 제안된 자체 값이 포함되어 있습니다. 표준 필드에 대해 추가 제안 값을 생성할 수 있지만 조직에서 정의하지 않은 제안 값은 수정하거나 제거할 수 없습니다. UI에서 표준 필드를 볼 때 제안된 값이 표시되지만 읽기 전용입니다.
 
 ![UI의 문자열 필드에 대해 채워진 열거형 값과 표시 이름을 보여 주는 이미지](../../images/ui/fields/enum/suggested-standard.png)
 

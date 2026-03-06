@@ -3,13 +3,13 @@ title: 스트리밍 대상자 모니터링
 description: 모니터링 대시보드를 사용하여 스트리밍 세분화를 사용하여 평가되는 대상을 모니터링하는 방법에 대해 알아봅니다
 hide: true
 hidefromtoc: true
-source-git-commit: 6fe0a36a8f2ac2cb954935ee8fe64432442b6e84
+exl-id: b47325fb-7768-4bc0-92d2-5541729e636d
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '368'
-ht-degree: 6%
+ht-degree: 16%
 
 ---
-
 
 # 스트리밍 대상자 모니터링
 
@@ -23,7 +23,7 @@ intro blurb
 * [세그먼테이션 서비스](../../segmentation/home.md):
 * [기능](../../landing/license-usage-and-guardrails/capacity.md): Experience Platform에서 기능은 조직이 보호 기능을 초과했는지 여부를 알려주고 이러한 문제를 해결하는 방법에 대한 정보를 제공합니다.
 
-## 스트리밍 대상에 대한 지표 모니터링 {#streaming-audience-metrics}
+## 스트리밍 대상자를 위한 모니터링 지표 {#streaming-audience-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_audience_evaluation_rate"
@@ -34,7 +34,7 @@ intro blurb
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_audience_p95_latency"
 >title="P95 수집 지연"
->abstract="이 지표는 대상자에 대한 성공적인 평가를 위해 Adobe Experience Platform에 도착하는 이벤트의 95번째 백분위수 지연을 측정합니다."
+>abstract="이 지표는 Adobe Experience Platform에 도착하여 대상자에게 성공적인 평가를 내리는 이벤트의 95번째 백분위수 지연 시간을 측정합니다."
 >text="Learn more in documentation"
 
 다음 표는 스트리밍 대상에 사용되는 지표에 대한 자세한 정보를 제공합니다.

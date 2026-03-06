@@ -6,7 +6,7 @@ exl-id: 66820711-2db0-4621-908d-01187771de14
 source-git-commit: b0094920720c54990953f79de32ab95c2a5c7e1c
 workflow-type: tm+mt
 source-wordcount: '625'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 10%
 >
 >**[!UICONTROL Default-Label-Based-Access-Control-Policy]** 정책만 현재 구성할 수 있습니다.
 
-정책 구성을 시작하려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 &#x200B;](https://experience.adobe.com/){target="_blank"}(으)로 이동합니다. 왼쪽 패널에서 **[!UICONTROL Policies]**&#x200B;을(를) 선택합니다. 목록에서 **[!UICONTROL Default-Label-Based-Access-Control-Policy]**&#x200B;을(를) 선택합니다.
+정책 구성을 시작하려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 ](https://experience.adobe.com/){target="_blank"}(으)로 이동합니다. 왼쪽 패널에서 **[!UICONTROL Policies]**&#x200B;을(를) 선택합니다. 목록에서 **[!UICONTROL Default-Label-Based-Access-Control-Policy]**&#x200B;을(를) 선택합니다.
 
 ![기존 정책 목록을 표시하는 정책 작업 영역입니다.](../../images/ui/policies/policies-home.png){zoomable="yes"}
 
@@ -83,7 +83,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
 >title="정책이란 무엇입니까?"
->abstract="정책은 속성을 함께 가져와서 허용되는 작업과 허용되지 않는 작업을 설정하는 문입니다. 모든 조직에는 레이블을 기반으로 특정 오브젝트에 대한 액세스를 제어하기 위해 활성화해야 하는 기본 정책이 있습니다. 리소스에 적용된 레이블은 사용자에게 레이블에 해당하는 역할이 할당된 경우가 아니라면 액세스를 거부합니다. 정책은 편집하거나 삭제할 수 없지만 활성화하거나 비활성화할 수 있습니다."
+>abstract="정책은 속성을 함께 가져와서 허용되는 작업과 허용되지 않는 작업을 설정하는 문입니다. 모든 조직에는 레이블을 기반으로 특정 오브젝트에 대한 액세스를 제어하기 위해 활성화해야 하는 기본 정책이 있습니다. 리소스에 적용된 레이블은 사용자에게 레이블에 해당하는 역할이 할당된 경우가 아니라면 액세스를 거부합니다. 정책은 편집하거나 삭제할 수 없지만 활성화하거나 비활성화할 수는 있습니다."
 >additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/abac/permissions-ui/labels" text="레이블 관리"
 
 기존 정책을 활성화하려면 **[!UICONTROL Policies]**&#x200B;의 **[!UICONTROL Permissions]** 탭에서 정책을 선택합니다. 정책의 활성화 상태가 **[!UICONTROL Status]** 섹션에 표시됩니다.

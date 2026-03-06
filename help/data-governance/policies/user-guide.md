@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 364a92bde1a1629d2811e7ff16bd6a4fb5287249
 workflow-type: tm+mt
 source-wordcount: '2380'
-ht-degree: 11%
+ht-degree: 13%
 
 ---
 
@@ -102,7 +102,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="지침"
->abstract="<ul><li>동의를 위해 OneTrust 소스 커넥터 또는 표준 XDM 스키마를 통해 환경 설정 데이터를 통합 스키마로 수집하고 있는지 확인하십시오.</li><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ko">정책</a>을 선택한 다음 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ko#create-governance-policy">정책 만들기</a>를 선택합니다.</li><li><b>If</b> 섹션에서 정책 확인을 트리거할 조건 또는 작업을 설명합니다.</li><li><b>Then</b> 섹션에서 프로필이 정책을 트리거한 작업에 포함되기 위해 있어야 하는 동의 속성을 입력합니다.</li><li><b>저장</b>을 선택하여 정책을 생성합니다. 정책을 활성화하려면 오른쪽 레일에서 <b>상태</b> 토글을 선택합니다.</li><li>Experience Platform은 대상에 대한 세그먼트를 활성화할 때 활성화된 동의 정책을 자동으로 적용하고 각 정책이 대상자 크기에 미치는 영향에 대한 세부 정보를 제공합니다.</li><li>이 기능에 대한 자세한 내용은 Experience League의 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ko#consent-policy">동의 정책 생성</a> 안내서를 참조하십시오.</li></ul>"
+>abstract="<ul><li>동의를 위해 OneTrust 소스 커넥터 또는 표준 XDM 스키마를 통해 환경 설정 데이터를 통합 스키마로 수집하고 있는지 확인하십시오.</li><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ko">정책</a>을 선택한 다음 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">정책 만들기</a>를 선택합니다.</li><li><b>If</b> 섹션에서 정책 확인을 트리거할 조건 또는 작업을 설명합니다.</li><li><b>Then</b> 섹션에서 프로필이 정책을 트리거한 작업에 포함되기 위해 있어야 하는 동의 속성을 입력합니다.</li><li><b>저장</b>을 선택하여 정책을 생성합니다. 정책을 활성화하려면 오른쪽 레일에서 <b>상태</b> 토글을 선택합니다.</li><li>Experience Platform은 대상에 대한 세그먼트를 활성화할 때 활성화된 동의 정책을 자동으로 적용하고 각 정책이 대상자 크기에 미치는 영향에 대한 세부 정보를 제공합니다.</li><li>이 기능에 대한 자세한 내용은 Experience League의 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ko#consent-policy">동의 정책 생성</a> 안내서를 참조하십시오.</li></ul>"
 
 >[!IMPORTANT]
 >
@@ -128,7 +128,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
 >title="If 조건"
->abstract="정책 확인을 트리거할 조건을 정의하여 시작하십시오. 조건에는 수행되는 특정 마케팅 작업, 제공되는 특정 데이터 거버넌스 레이블 또는 두 가지의 조합이 포함될 수 있습니다. AND/OR 논리를 사용하여 여러 조건 간에 복잡한 조건부 관계를 만듭니다."
+>abstract="정책 확인을 트리거할 조건을 정의하여 시작하십시오. 조건에는 수행 중인 특정 마케팅 액션, 존재하는 특정 데이터 거버넌스 레이블 또는 이 둘의 조합이 포함될 수 있습니다. AND/OR 논리를 사용하여 여러 조건 간의 복잡한 조건부 관계를 만듭니다."
 
 **[!UICONTROL If]** 섹션에서 이 정책을 트리거해야 하는 마케팅 작업 및/또는 데이터 사용 레이블을 선택합니다. 사용 가능한 마케팅 작업과 레이블의 전체 목록을 보려면 각각 **[!UICONTROL View all]** 및 **[!UICONTROL Select labels]**&#x200B;을(를) 선택하십시오.
 
@@ -145,7 +145,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
 >title="Then 조건"
->abstract="&#39;If&#39; 조건이 정의되면 &#39;Then&#39; 섹션을 사용하여 통합 스키마에서 하나 이상의 동의 속성을 선택합니다. 규칙 빌드를 위한 기본 필드(문자열, 숫자, 부울 등)에 도달하려면 컨테이너 필드(객체, 맵, 배열)를 탐색해야 합니다. 이 기본 필드는 프로필이 이 정책이 제어하는 작업에 포함되기 위해 존재해야 하는 속성입니다."
+>abstract="&#39;If&#39; 조건이 정의되면 &#39;Then&#39; 섹션을 사용하여 통합 스키마에서 하나 이상의 동의 속성을 선택합니다. 규칙 빌드를 위한 기본 필드(문자열, 숫자, 부울 등)에 도달하려면 컨테이너 필드(객체, 맵, 배열)를 탐색해야 합니다. 이 기본 필드는 프로필이 이 정책에 의해 적용되는 액션에 포함되기 위해 반드시 존재해야 하는 속성입니다."
 
 **[!UICONTROL Then]** 섹션 아래에서 유니온 스키마에서 동의 특성을 하나 이상 선택합니다. 프로필이 이 정책이 제어하는 작업에 포함되려면 이 속성이 있어야 합니다. 제안된 옵션 중 하나를 선택하거나 **[!UICONTROL View all]**&#x200B;을(를) 선택하여 공용 구조체 스키마에서 직접 특성을 선택할 수 있습니다.
 
@@ -285,4 +285,4 @@ ht-degree: 11%
 
 다음 비디오에서는 [!DNL Experience Platform] UI에서 사용 정책으로 작업하는 방법에 대해 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/37138?captions=kor&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
