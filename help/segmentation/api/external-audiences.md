@@ -2,9 +2,9 @@
 title: 외부 대상 API 엔드포인트
 description: 외부 대상 API를 사용하여 Adobe Experience Platform에서 외부 대상을 만들고, 업데이트하고, 활성화하고, 삭제하는 방법을 알아봅니다.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: de18b8292f07c143d63d26a45ca541e50b2ed2f3
+source-git-commit: b024571a33c8c9313e0814c090e496a8ffa98009
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2622'
 ht-degree: 4%
 
 ---
@@ -92,7 +92,11 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
                 "sourceType": "Cloud Storage",
-                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b",
+                "encryption": {
+                    "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2",
+                    "signVerificationId": "ZTMxYWU4OTUtNzg5Ni00NjlhLThlMDYtZWI5MjA3ZGRmMWMy"
+                }
             }
         },
         "ttlInDays": "40",
@@ -108,7 +112,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `description` | 문자열 | 외부 대상자에 대한 선택적 설명입니다. |
 | `customAudienceId` | 문자열 | 외부 대상자에 대한 선택적 식별자입니다. |
 | `fields` | 오브젝트 배열 | 필드 및 해당 데이터 유형 목록. 배열에 최소 1개의 필드와 최대 41개의 필드가 있어야 합니다. 필드 **은(는) ID 필드여야 합니다** 중 하나이며 `identityNs`을(를) 포함합니다. 필드 목록을 만들 때 다음 항목을 추가할 수 있습니다. <ul><li>`name`: **필수** 외부 대상 지정에 속하는 필드의 이름입니다.</li><li>`type`: **필수** 필드에 들어가는 데이터 형식입니다. 지원되는 값은 `string`, `number`, `long`, `integer`, `date`(`2025-05-13`), `datetime`(`2025-05-23T20:19:00+00:00`) 및 `boolean`입니다.</li><li>`identityNs`: **ID 필드에 필요** ID 필드에서 사용하는 네임스페이스입니다. 지원되는 값에는 `ECID` 또는 `email`과(와) 같이 유효한 모든 네임스페이스가 포함됩니다.</li><li>`labels`: *선택 사항* 필드에 대한 액세스 제어 레이블의 배열입니다. 사용 가능한 액세스 제어 레이블에 대한 자세한 내용은 [데이터 사용 레이블 용어집](/help/data-governance/labels/reference.md)에 있습니다. </li></ul> |
-| `sourceSpec` | 오브젝트 | 외부 대상자가 있는 정보가 포함된 객체입니다. 이 개체를 사용할 때 **다음 정보를 포함해야** 합니다. <ul><li>`path`: **필수**: 외부 대상 또는 소스 내의 외부 대상이 포함된 폴더의 위치입니다. 파일 경로 **에는 공백을 포함할 수 없습니다**. 예를 들어 경로가 `activation/sample-source/Example CSV File.csv`이면 경로를 `activation/sample-source/ExampleCSVFile.csv`(으)로 설정합니다. 데이터 흐름 섹션의 **Source 데이터** 열에서 소스에 대한 경로를 찾을 수 있습니다.</li><li>`type`: **필수** 원본에서 검색 중인 개체의 형식입니다. 이 값은 `file` 또는 `folder`일 수 있습니다.</li><li>`sourceType`: *선택 사항* 검색 중인 원본 유형입니다. 현재 지원되는 값은 `Cloud Storage`뿐입니다.</li><li>`cloudType`: **필수** 원본 유형에 따른 클라우드 저장소 유형입니다. 지원되는 값은 `S3`, `DLZ`, `GCS`, `Azure` 및 `SFTP`입니다.</li><li>`baseConnectionId`: 기본 연결의 ID이며 원본 공급자에서 제공됩니다. **,** 또는 `cloudType`의 `S3` 값을 사용하는 경우 이 값은 `GCS`required`SFTP`입니다. 그렇지 않으면 **not**&#x200B;이 매개 변수를 포함할 필요가 없습니다. 자세한 내용은 [소스 커넥터 개요](../../sources/home.md)를 참조하십시오.</li></ul> |
+| `sourceSpec` | 오브젝트 | 외부 대상자가 있는 정보가 포함된 객체입니다. 이 개체를 사용할 때 **다음 정보를 포함해야** 합니다. <ul><li>`path`: **필수**: 외부 대상 또는 소스 내의 외부 대상이 포함된 폴더의 위치입니다. 파일 경로 **에는 공백을 포함할 수 없습니다**. 예를 들어 경로가 `activation/sample-source/Example CSV File.csv`이면 경로를 `activation/sample-source/ExampleCSVFile.csv`(으)로 설정합니다. 데이터 흐름 섹션의 **Source 데이터** 열에서 소스에 대한 경로를 찾을 수 있습니다.</li><li>`type`: **필수** 원본에서 검색 중인 개체의 형식입니다. 이 값은 `file` 또는 `folder`일 수 있습니다.</li><li>`sourceType`: *선택 사항* 검색 중인 원본 유형입니다. 현재 지원되는 값은 `Cloud Storage`뿐입니다.</li><li>`cloudType`: **필수** 원본 유형에 따른 클라우드 저장소 유형입니다. 지원되는 값은 `S3`, `DLZ`, `GCS`, `Azure` 및 `SFTP`입니다.</li><li>`baseConnectionId`: 기본 연결의 ID이며 원본 공급자에서 제공됩니다. **,** 또는 `cloudType`의 `S3` 값을 사용하는 경우 이 값은 `GCS`required`SFTP`입니다. 그렇지 않으면 **not**&#x200B;이 매개 변수를 포함할 필요가 없습니다. 자세한 내용은 [소스 커넥터 개요](../../sources/home.md)를 참조하십시오.</li><li>`encryption`: *선택 사항* 비동기 암호화 데이터 수집에 필요한 암호화 키를 포함하는 개체입니다.</li><ul><li>`publicKeyId`: **필수**: 암호화 키 쌍을 생성할 때 반환된 공개 키 ID입니다. 자세한 내용은 [데이터 암호화 안내서](/help/sources/tutorials/api/encrypt-data.md#create-encryption-key-pair)를 참조하십시오. </li><li>`signVerificationKeyId`: *선택 사항*: 고객 관리 키를 Experience Platform과 공유할 때 반환된 공개 키 ID입니다. **참고:** 이 필드는 해당 API 요청에 대한 응답에서 `publicKeyId`(으)로 레이블이 지정됩니다. 자세한 내용은 [데이터 암호화 안내서](/help/sources/tutorials/api/encrypt-data.md##share-your-public-key-to-experience-platform)를 참조하십시오.</li></ul></ul> |
 | `ttlInDays` | 정수 | 외부 대상에 대한 데이터 만료(일 단위). 이 값은 1부터 90까지 설정할 수 있습니다. 기본적으로 데이터 만료는 30일로 설정됩니다. |
 | `audienceType` | 문자열 | 외부 대상의 대상 유형입니다. 현재 `people`만 지원됩니다. |
 | `originName` | 문자열 | **필수** 대상자의 원본입니다. 이는 대상자가 어디에서 오는지 설명합니다. 외부 대상의 경우 `CUSTOM_UPLOAD`을(를) 사용해야 합니다. |
@@ -155,7 +159,11 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
                 "sourceType": "Cloud Storage",
-                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b",
+                "encryption": {
+                    "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2",
+                    "signVerificationId": "ZTMxYWU4OTUtNzg5Ni00NjlhLThlMDYtZWI5MjA3ZGRmMWMy"
+                }
             }
         },
         "ttlInDays": 40,
@@ -390,6 +398,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ais/external-audience/60ccea95
 >[!NOTE]
 >
 >다음 끝점을 사용하려면 외부 대상의 `audienceId`이(가) 있어야 합니다. `audienceId` 끝점에 대한 성공적인 호출에서 `GET /external-audiences/operations/{OPERATION_ID}`을(를) 가져올 수 있습니다.
+>
+>또한 이 끝점은 이전에 수집된 경우 대상에 대한 데이터를 새로 고치는 데 사용할 수 있습니다.
 
 대상 ID를 제공하는 동안 다음 엔드포인트에 POST 요청을 하여 대상 수집을 시작할 수 있습니다.
 
