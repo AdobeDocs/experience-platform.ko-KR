@@ -22,7 +22,7 @@ ht-degree: 11%
 
 ## 레이블 탐색 {#explore-labels}
 
-사용 가능한 모든 레이블을 보려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 ](https://experience.adobe.com/){target="_blank"}(으)로 이동하십시오. 왼쪽 패널에서 **[!UICONTROL Labels]**&#x200B;을(를) 선택합니다.
+사용 가능한 모든 레이블을 보려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 &#x200B;](https://experience.adobe.com/){target="_blank"}(으)로 이동하십시오. 왼쪽 패널에서 **[!UICONTROL Labels]**&#x200B;을(를) 선택합니다.
 
 ![왼쪽 패널에서 레이블이 강조 표시된 사용 권한의 레이블 작업 영역입니다.](../../images/ui/labels/labels-home.png){zoomable="yes"}
 

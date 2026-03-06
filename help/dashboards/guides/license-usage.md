@@ -260,7 +260,7 @@ Experience Platform UI 내의 라이선스 사용 대시보드로 이동하려�
 
 >[!IMPORTANT]
 >
->예측은 매주 금요일에 갱신된다. 새로 고침 날짜가 정보 아이콘(![이 정보 아이콘)에 포함되어 있습니다.열 제목 위에 ](../images/license-usage/info-icon.png)) 있습니다.
+>예측은 매주 금요일에 갱신된다. 새로 고침 날짜가 정보 아이콘(![이 정보 아이콘)에 포함되어 있습니다.열 제목 위에 &#x200B;](../images/license-usage/info-icon.png)) 있습니다.
 
 [!UICONTROL Product] 테이블 아래의 [!UICONTROL Core products] 탭에서 제품의 권한 사용 요약을 봅니다.
 

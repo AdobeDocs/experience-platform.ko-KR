@@ -119,7 +119,7 @@ Experience Platform UI 내에서 [!UICONTROL Audiences] 대시보드로 이동�
 
 선택한 Customer AI 모델에 대한 자세한 인사이트 페이지로 이동하려면 **[!UICONTROL View model details]**&#x200B;을(를) 선택합니다.
 
-![ 위젯과 [!UICONTROL Customer AI distribution of scores]이(가) 강조 표시된 Experience Platform 대상 대시보드입니다.[!UICONTROL View model details]](../images/segments/customer-ai-distribution-of-scores.png)
+![&#x200B; 위젯과 [!UICONTROL Customer AI distribution of scores]이(가) 강조 표시된 Experience Platform 대상 대시보드입니다.[!UICONTROL View model details]](../images/segments/customer-ai-distribution-of-scores.png)
 
 자세한 모델 인사이트 페이지가 표시됩니다.
 
