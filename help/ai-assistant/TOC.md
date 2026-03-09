@@ -5,33 +5,33 @@ user-guide-description: AI 어시스턴트를 사용하여 Adobe Experience Plat
 description: 이 문서에는 Adobe Experience Platform의 AI Assistant 목차 목록이 있습니다.
 feature: AI Assistant
 role: Admin,User,Developer,Leader
-source-git-commit: e1bdba5e708b7a51536e8c2ee213a88b64b4c8ec
+source-git-commit: 077c42f2190316a00168bbeca685c08677c2b13a
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 33%
+source-wordcount: '124'
+ht-degree: 29%
 
 ---
 
 
 # Adobe Experience Platform의 AI 지원 {#ai-assistant}
 
-* [AI Assistant 제품 설명서](landing.md)
-* [AI 어시스턴트 개요](home.md)
+* [AI Assistant(기존) 제품 설명서](landing.md)
+* [AI Assistant(이전) 개요](home.md)
 * [기능 액세스](access.md)
-* [AI Assistant 질문 안내서](questions.md)
-* [AI Assistant UI 안내서](ui-guide.md)
+* [AI Assistant에 대한 질문 안내서 (기존)](questions.md)
+* [AI Assistant(기존) UI 안내서](ui-guide.md)
 * [개인 정보, 보안 및 거버넌스](privacy.md)
 * [FAQ](faq.md)
 * [법적 고지 사항](legal-disclaimer.md)
 * 새로운 기능 {#new-features}
-   * [Alpha 및 Beta의 AI Assistant 기능](./new-features/alpha-beta.md)
+   * [Alpha 및 Beta의 AI Assistant(이전) 기능](./new-features/alpha-beta.md)
    * [주요 변경 사항 모니터링 및 대상 예측](./new-features/audience-forecasting.md)
    * [자연어 추정](./new-features/natural-language.md)
    * [제품 지원 에이전트](./new-features/customer-support.md)
    * [대상자 생성을 위한 XDM 필드 검색](./new-features/xdm-field-discovery.md)
 * 모델 세부 정보 {#model-details}
    * [모델 세부 사항 개요](./model-details/overview.md)
-   * [AI Assistant Natural Operational Insights - SQL](./model-details/natural-language-to-sql.md)
+   * [AI Assistant(기존) Natural Operational Insights to SQL](./model-details/natural-language-to-sql.md)
    * [전송 시간 최적화](./model-details/send-time-optimization.md)
 * [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
 
