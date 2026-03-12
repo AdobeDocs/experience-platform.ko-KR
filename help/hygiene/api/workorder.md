@@ -3,9 +3,9 @@ title: 작업 주문 삭제 기록
 description: 데이터 위생 API에서 /workorder 끝점을 사용하여 Adobe Experience Platform에서 레코드 삭제 작업 주문을 관리하는 방법을 알아봅니다. 이 안내서에서는 할당량, 처리 타임라인 및 API 사용을 다룹니다.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
+source-git-commit: 5ca3e4feae3096e41689610ac3afac7e93047149
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '3316'
 ht-degree: 1%
 
 ---
@@ -32,27 +32,20 @@ ht-degree: 1%
 
 ### 제품별 월별 제출 권한 {#quota-limits}
 
-다음 표는 제품 및 자격 수준별 식별자 제출 제한을 보여 줍니다. 각 제품에 대해 월간 상한은 고정 식별자 천장이나 사용 허가된 데이터 볼륨에 연결된 백분율 기반 임계값의 두 값 중 적은 값입니다.
+다음 표는 제품 및 자격 수준별 식별자 제출 제한을 보여 줍니다. 각 제품에 대해 월간 상한은 고정 식별자 천장이나 사용 허가된 데이터 볼륨에 연결된 백분율 기반 임계값의 두 값 중 적은 값입니다. 실제로 대부분의 조직에서는 실제 대응 가능 대상 또는 Adobe Customer Journey Analytics 행 권한을 기준으로 월별 제한이 더 낮습니다.
 
 | 제품 | 권한 설명 | 월별 상한(둘 중 더 작은 값) |
 |----------|-------------------------|---------------------------------|
 | Real-Time CDP 또는 Adobe Journey Optimizer | Privacy and Security Shield 또는 Healthcare Shield 추가 기능 없음 | 식별자 2,000,000개 또는 대응 가능 대상의 5% |
 | Real-Time CDP 또는 Adobe Journey Optimizer | Privacy and Security Shield 또는 Healthcare Shield 추가 기능 포함 | 식별자 15,000,000개 또는 대응 가능 대상의 10% |
-| Customer Journey Analytics | Privacy and Security Shield 또는 Healthcare Shield 추가 기능 없음 | 2,000,000개의 식별자 또는 100개의 식별자/백만 CJA 권한 행당 |
-| Customer Journey Analytics | Privacy and Security Shield 또는 Healthcare Shield 추가 기능 포함 | 15,000,000개의 식별자 또는 100만 개의 CJA 권한 행당 200개의 식별자 |
+| Customer Journey Analytics | Privacy and Security Shield 또는 Healthcare Shield 추가 기능 없음 | 2,000,000개의 식별자 또는 100개의 식별자/백만 Customer Journey Analytics 권한 행당 |
+| Customer Journey Analytics | Privacy and Security Shield 또는 Healthcare Shield 추가 기능 포함 | 15,000,000개의 식별자 또는 100만 개의 Customer Journey Analytics 권한 행당 200개의 식별자 |
 
 >[!NOTE]
 >
->대부분의 조직에서는 실제 대응 가능 대상 또는 CJA 행 권한에 따라 월별 제한이 내려집니다.
-
->[!NOTE]
->
->할당량은 매월 1일에 재설정됩니다. 사용되지 않은 할당량은 **이월되지 않습니다**.
-
->[!NOTE]
->
->할당량 사용량은 **제출된 식별자**&#x200B;에 대한 조직의 라이선스가 부여된 월별 권한을 기준으로 합니다. 할당량은 시스템 가드레일에 의해 적용되지 않지만 모니터링 및 검토 될 수 있습니다.\
->레코드 삭제 작업 주문 용량은 **공유 서비스**&#x200B;입니다. 월간 캡은 Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics 및 적용 가능한 모든 Shield 추가 기능에 걸쳐 가장 높은 권한을 반영합니다.
+>- 할당량은 매월 1일에 재설정됩니다. 사용되지 않은 할당량은 **이월되지 않습니다**.
+>- 할당량 사용량은 **제출된 식별자**&#x200B;에 대한 조직의 라이선스가 부여된 월별 권한을 기준으로 합니다. 할당량은 시스템 가드레일에 의해 적용되지 않지만 모니터링 및 검토 될 수 있습니다.
+>- 레코드 삭제 작업 주문 용량은 **공유 서비스**&#x200B;입니다. 월간 캡은 Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics 및 적용 가능한 모든 Shield 추가 기능에 걸쳐 가장 높은 권한을 반영합니다.
 
 ### 식별자 제출을 위한 처리 타임라인 {#sla-processing-timelines}
 
@@ -131,7 +124,8 @@ curl -X GET \
       "targetServices": [
         "profile",
         "datalake",
-        "identity"
+        "identity",
+        "ajo"
       ],
       "status": "received",
       "createdBy": "a.stark@acme.com <a.stark@acme.com> BD8C3D631F41@acme.com",
@@ -168,10 +162,10 @@ curl -X GET \
 | `createdAt` | 작업 순서가 생성된 타임스탬프. |
 | `updatedAt` | 작업 주문이 마지막으로 업데이트된 타임스탬프입니다. |
 | `operationCount` | 작업 주문에 포함된 작업 수입니다. |
-| `targetServices` | 작업 주문에 대한 대상 서비스 목록입니다. |
+| `targetServices` | 삭제를 처리한 대상 서비스 세트입니다. 기본값은 조직의 권한에 따라 다릅니다. Real-Time CDP 또는 Adobe Journey Optimizer을 사용하는 조직의 경우 기본값은 지원되는 서비스의 전체 집합(`["datalake", "identity", "profile", "ajo"]`)입니다. Customer Journey Analytics 전용 조직(실시간 고객 프로필 권한 없음)의 경우 유효한 값은 [&quot;datalake&quot;]뿐입니다. |
 | `status` | 작업 주문의 현재 상태입니다. 가능한 값은 `received`,`validated`, `submitted`, `ingested`, `completed` 및 `failed`입니다. |
 | `createdBy` | 작업 주문을 만든 사용자의 이메일 및 식별자입니다. |
-| `datasetId` | 작업 주문과 연계된 데이터 세트에 대한 고유 식별자. 요청이 모든 데이터 세트에 적용되는 경우 이 필드는 ALL로 설정됩니다. |
+| `datasetId` | 작업 순서에 의해 타깃팅된 데이터 세트: 단일 데이터 세트 ID, 쉼표로 구분된 데이터 세트 ID 목록(다중 데이터 세트) 또는 리터럴 `ALL`. 요청에서 프로필 전용 모드를 사용한 경우 이 값은 `ALL`입니다. |
 | `datasetName` | 작업 주문과 연계된 데이터 세트 이름. |
 | `displayName` | 사람이 인식할 수 있는 작업 순서 레이블. |
 | `description` | 작업 주문 목적에 대한 설명. |
@@ -185,9 +179,9 @@ curl -X GET \
 
 ## 레코드 만들기 삭제 작업 주문 {#create}
 
-단일 데이터 세트 또는 모든 데이터 세트에서 하나 이상의 ID와 연결된 레코드를 삭제하려면 `/workorder` 끝점에 대한 POST 요청을 만듭니다.
+단일 데이터 세트, 여러 데이터 세트 또는 모든 데이터 세트에서 하나 이상의 ID와 연결된 레코드를 삭제하려면 `/workorder` 끝점에 대한 POST 요청을 만듭니다.
 
-작업 주문은 비동기적으로 처리되며 제출 후 작업 주문 목록에 나타납니다.
+작업 주문은 비동기적으로 처리되며 제출 후 작업 주문 목록에 나타납니다. 다중 데이터 세트 및 프로필 전용(타겟팅된 서비스) 옵션은 일반적으로 2026년 3월 Experience Platform 릴리스를 기준으로 모든 고객이 사용할 수 있습니다.
 
 >[!TIP]
 >
@@ -199,25 +193,36 @@ curl -X GET \
 POST /workorder
 ```
 
->[!NOTE]
->
->연관된 XDM 스키마가 기본 ID 또는 ID 맵을 정의하는 데이터 세트에서만 레코드를 삭제할 수 있습니다.
-
 >[!IMPORTANT]
 >
 >레코드 삭제 작업 주문은 **기본 ID** 필드에서만 작동합니다. 다음 제한 사항이 적용됩니다.
 >
+>- **데이터 집합 스키마는 기본 ID 또는 ID 맵을 정의해야 합니다.** 연결된 XDM 스키마가 기본 ID 또는 ID 맵을 정의하는 데이터 세트에서만 레코드를 삭제할 수 있습니다.
 >- **보조 ID를 검사하지 않습니다.** 데이터 집합에 여러 ID 필드가 포함된 경우 일치에 기본 ID만 사용됩니다. 레코드는 기본이 아닌 ID를 기준으로 타깃팅하거나 삭제할 수 없습니다.
 >- 채워진 기본 ID가 없는 **레코드를 건너뜁니다.** 레코드에 기본 ID 메타데이터가 채워져 있지 않으면 삭제할 수 없습니다.
 >- **ID 구성 전에 수집된 데이터는 사용할 수 없습니다.** 데이터 수집 후 기본 ID 필드가 스키마에 추가된 경우 이전에 수집된 레코드는 레코드 삭제 작업 주문을 통해 삭제할 수 없습니다.
 
 >[!NOTE]
 >
->이미 활성 만료가 있는 데이터 세트에 대해 레코드 삭제 작업 주문을 만들려고 하면 요청이 HTTP 400(잘못된 요청)을 반환합니다. 활성 만료는 아직 완료되지 않은 예약된 삭제입니다.
+>이미 활성 만료가 있는 데이터 세트에 대해 레코드 삭제 작업 주문을 만들려고 하면 요청은 HTTP 400(잘못된 요청)을 반환합니다. 활성 만료는 아직 완료되지 않은 예약된 삭제입니다.
+
+### ID 페이로드 형식(`namespacesIdentities` 또는 `identities`)
+
+요청 본문에는 다음 중 **정확히 하나**&#x200B;이(가) 포함되어야 합니다.
+
+| 형식 | 속성 | 모양 | 사용 시기 |
+|--------|----------|-------|-------------|
+| **권장** | `namespacesIdentities` | `namespace`(예: `{ "code": "email" }`) 및 `ids`(ID 문자열 배열)이 있는 개체의 배열입니다. | 수동으로 생성하든 코드 생성하든 관계없이 모든 페이로드에 사용됩니다. 여러 ID가 동일한 네임스페이스를 공유하는 경우 특히 페이로드 크기를 줄이는 것이 효율적입니다. |
+| **수락됨** | `identities` | `namespace`(예: `{ "code": "email" }`)과 단일 `id`(문자열)이 있는 개체의 배열입니다. | 이전 버전과의 호환성을 위해 승인되었습니다. [csv에서 데이터 위생 전환 스크립트](#convert-id-lists-to-json-for-record-delete-requests)로 생성된 형식입니다. 서비스는 내부적으로 이 형식을 표준화하므로 결과 동작은 동일합니다. |
+
+**두 속성**, **두 속성 모두 없음**&#x200B;을 보내거나 포함하는 속성에 대해 **빈 배열**&#x200B;을 제공하는 경우 API는 다음 메시지 중 하나와 함께 **HTTP 400(잘못된 요청)**&#x200B;을 반환합니다.
+
+- **제공된 두 속성:** `"Identities and NamespacesIdentities are not allowed at the same time"`
+- **둘 다 제공되지 않았거나 비어 있는 목록 없음:** `"Identities are Empty for Delete Identity request."`
 
 **요청**
 
-다음 요청은 특정 데이터 세트에서 지정된 이메일 주소와 연관된 모든 레코드를 삭제합니다.
+다음 요청은 특정 데이터 세트에서 지정된 이메일 주소와 연관된 모든 레코드를 삭제합니다. 권장 `namespacesIdentities` 형식을 사용합니다.
 
 ```shell
 curl -X POST \
@@ -237,7 +242,7 @@ curl -X POST \
             "namespace": {
               "code": "email"
             },
-            "IDs": [
+            "ids": [
               "alice.smith@acmecorp.com",
               "bob.jones@acmecorp.com",
               "charlie.brown@acmecorp.com"
@@ -254,8 +259,10 @@ curl -X POST \
 | `displayName` | 사람이 인식할 수 있는 이 레코드의 레이블은 작업 순서를 삭제합니다. |
 | `description` | 작업 주문 삭제 레코드에 대한 설명. |
 | `action` | 작업 주문 삭제 레코드에 대해 요청한 작업입니다. 특정 ID와 연결된 레코드를 삭제하려면 `delete_identity`을(를) 사용합니다. |
-| `datasetId` | 데이터 세트에 대한 고유 식별자입니다. 특정 데이터 세트의 데이터 세트 ID를 사용하거나 `ALL`을(를) 사용하여 모든 데이터 세트를 대상으로 합니다. 데이터 세트에는 기본 ID 또는 ID 맵이 있어야 합니다. ID 맵이 있으면 `identityMap`(이)라는 최상위 수준의 필드로 표시됩니다.<br>데이터 집합 행의 ID 맵에는 여러 ID가 있을 수 있지만, 한 ID만 기본으로 표시할 수 있습니다. `"primary": true`이(가) 기본 ID와 일치하도록 하려면 `id`을(를) 포함해야 합니다. |
-| `namespacesIdentities` | 각각 <br>을(를) 포함하는 개체 배열<ul><li> `namespace`: ID 네임스페이스를 지정하는 `code` 속성이 있는 개체(예: &quot;email&quot;).</li><li> `IDs`: 이 네임스페이스에 대해 삭제할 ID 값의 배열입니다.</li></ul>ID 네임스페이스는 ID 데이터에 컨텍스트를 제공합니다. Experience Platform에서 제공하는 표준 네임스페이스를 사용하거나 고유한 네임스페이스를 만들 수 있습니다. 자세한 내용은 [ID 네임스페이스 설명서](../../identity-service/features/namespaces.md) 및 [ID 서비스 API 사양](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces)을 참조하세요. |
+| `datasetId` | 데이터 세트에 대한 고유 식별자입니다. 값은 리터럴 `ALL`, 단일 데이터 세트 ID 또는 둘 이상의 데이터 세트 ID로 이루어진 쉼표로 구분된 목록(예: `"id1,id2,id3"`) 중 정확히 하나여야 합니다. `ALL`을(를) 특정 ID와 결합할 수 없습니다. 단일 데이터 세트 요청은 이전과 같이 동작하며 다중 데이터 세트 요청은 나열된 각 데이터 세트에서 ID를 삭제하고 `ALL`은(는) 모든 데이터 세트를 타겟팅합니다. 데이터 세트에는 기본 ID 또는 ID 맵이 있어야 합니다. ID 맵이 있으면 `identityMap`(이)라는 최상위 수준의 필드로 표시됩니다.<br>**참고**: 데이터 집합 행의 ID 맵에는 여러 ID가 있을 수 있지만, 하나의 ID만 기본으로 표시할 수 있습니다. `"primary": true`이(가) 기본 ID와 일치하도록 하려면 `id`을(를) 포함해야 합니다.<br>프로필 전용 삭제에 `targetServices`을(를) 사용하는 경우 `datasetId`은(는) `ALL`이어야 합니다. |
+| `targetServices` | 선택 사항입니다. 삭제를 처리할 서비스를 지정합니다. 기본값은 조직의 권한에 따라 다릅니다. Real-Time CDP 또는 Adobe Journey Optimizer이 있는 조직은 기본적으로 지원되는 서비스 전체 집합(`["datalake", "identity", "profile", "ajo"]`)을 받습니다. Customer Journey Analytics이 있지만 실시간 고객 프로필 권한이 없는 조직에서는 [&quot;datalake&quot;]만 사용할 수 있습니다. 프로필 관련 데이터만 삭제하도록 제한하고 데이터 레이크는 그대로 유지하려면 `["identity", "profile", "ajo"]`(순서에 상관없이)으로 설정하십시오. 이 프로필 전용 모드에는 Real-Time CDP 또는 Adobe Journey Optimizer 권한이 필요하며 `datasetId`은(는) `ALL`이어야 합니다. |
+| `identities` | **`identities` 또는 `namespacesIdentities` 중 하나만 사용하십시오.각각**(`namespace`이(가) 있는 개체, 예: `code`) 및 `"email"`(단일 ID 문자열)이 있는 개체의 `id` 배열. 이전 버전과의 호환성을 위해 허용되고 전환 스크립트에서 생성합니다. 이 서비스는 내부적으로 이 형식을 표준화합니다. 동작은 동일합니다. 위의 [ID 페이로드 형식](#identity-payload-format-identities-or-namespacesidentities)을(를) 참조하십시오. |
+| `namespacesIdentities` | **`identities` 또는 `namespacesIdentities` 중 하나만 사용하십시오.각각**(`namespace`이(가) 있는 개체, 예: `code`) 및 `"email"`(ID 문자열 배열)이 있는 개체의 `ids` 배열. 모든 페이로드에 권장됩니다. `namespacesIdentities` 속성은 여러 ID가 하나의 네임스페이스를 공유할 때 더 컴팩트합니다. 위의 [ID 페이로드 형식](#identity-payload-format-identities-or-namespacesidentities)을(를) 참조하십시오. ID 네임스페이스: [ID 네임스페이스 설명서](../../identity-service/features/namespaces.md), [ID 서비스 API](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 **응답**
 
@@ -273,7 +280,8 @@ curl -X POST \
   "targetServices": [
     "profile",
     "datalake",
-    "identity"
+    "identity",
+    "ajo"
   ],
   "status": "received",
   "createdBy": "c.lannister@acme.com <c.lannister@acme.com> 7EAB61F3E5C34810A49A1AB3@acme.com",
@@ -298,20 +306,77 @@ curl -X POST \
 | `targetServices` | 레코드 삭제 작업 주문에 대한 대상 서비스 목록입니다. |
 | `status` | 작업 주문 삭제 레코드의 현재 상태. |
 | `createdBy` | 레코드 삭제 작업 주문을 만든 사용자의 이메일 및 식별자입니다. |
-| `datasetId` | 데이터 세트에 대한 고유 식별자입니다. 모든 데이터 세트에 대한 요청인 경우 값이 `ALL`(으)로 설정됩니다. |
+| `datasetId` | 데이터 세트에 대한 고유 식별자입니다. 모든 데이터 세트에 대한 요청인 경우 값이 `ALL`(으)로 설정됩니다. 다중 데이터 세트 요청의 경우 값이 제출된 쉼표로 구분된 목록 또는 단일 ID를 반영합니다. |
 | `datasetName` | 이 레코드의 작업 주문 삭제 데이터 세트 이름. |
 | `displayName` | 사람이 인식할 수 있는 레코드 삭제 작업 순서 레이블. |
 | `description` | 작업 주문 삭제 레코드에 대한 설명. |
 
 {style="table-layout:auto"}
 
+응답 `targetServices` 값이 요청을 반복하거나 생략하면 전체 기본 집합을 표시합니다(위의 응답 표 참조).
+
+### 다중 데이터 세트 및 프로필 전용(API) {#multi-dataset-profile-only}
+
+다음 옵션은 API를 통해서만 사용할 수 있으며 데이터 위생 UI에서는 지원되지 않습니다. 이는 삭제를 처리하는 데이터 세트 및 서비스를 제어하여 다중 데이터 세트 제출 및 프로필 전용 타깃팅된 서비스 요청을 가능하게 합니다.
+
+다음 표에는 각 옵션에 대한 요청 본문 및 동작이 어떻게 변경되는지 요약되어 있습니다.
+
+| 옵션 | 본문 변경 요청 | 비헤이비어 |
+|--------|---------------------|----------|
+| **다중 데이터 집합** | `datasetId`(예: `"id1,id2,id3"`)에서 쉼표로 구분된 목록을 사용하십시오. 단일 ID 또는 `ALL`이(가) 변경되지 않았습니다. | ID는 나열된 데이터 세트(또는 한 데이터 세트 또는 `ALL`일 때 모든 데이터 세트)에서 삭제됩니다. |
+| **프로필 전용(대상 서비스)** | 정확히 `targetServices`인 `["identity", "profile", "ajo"]`을(를) 추가합니다(모든 순서). `datasetId` 필요: `"ALL"`. | ID, 프로필 및 Adobe Journey Optimizer만 삭제를 처리하며, 데이터 레이크는 수정되지 않습니다. |
+
+#### 다중 데이터 세트 요청
+
+`datasetId` 필드는 쉼표로 분할됩니다. 단일 ID(이전과 동일한 동작), 쉼표로 구분된 ID 목록 또는 리터럴 `ALL`을(를) 사용하십시오. 하나의 작업 순서로 여러 특정 데이터 세트에서 ID를 삭제하려면 쉼표로 구분된 목록을 제공하십시오.
+
+```json
+"datasetId": "6707eb36eef4d42ab86d9fbe,6643f00c16ddf51767fcf780"
+```
+
+그런 다음 나열된 각 데이터 세트에서 ID가 삭제됩니다. 단일 데이터 세트 요청은 항상 그랬듯이 작동합니다. `ALL`을(를) 사용하여 모든 데이터 세트를 타깃팅하십시오. 값은 `ALL`, 단일 데이터 세트 ID 또는 쉼표로 구분된 둘 이상의 데이터 세트 ID 중 정확히 하나여야 합니다(`ALL`을(를) 특정 ID와 결합하지 않음).
+
+#### 프로필 전용(타겟팅된 서비스)
+
+데이터 레이크를 그대로 두고 ID 및 프로필 관련 데이터만 제거하려면 `targetServices`, `identity` 및 `profile` 순서로 이 세 가지 값을 정확히 사용하여 `ajo`을(를) 포함하십시오. ID, 프로필 및 AJO이 명시적으로 포함되며 데이터 레이크는 제외됩니다. 이 모드에서 `datasetId`은(는) `ALL`이어야 합니다(사용 사례는 데이터 집합 조각당 삭제가 아니라 전체 프로필 삭제임).
+
+다음 예제에서는 프로필 전용 레코드 삭제 작업 지시를 만듭니다.
+
+```shell
+curl -X POST \
+  "https://platform.adobe.io/data/core/hygiene/workorder" \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -d '{
+    "action": "delete_identity",
+    "datasetId": "ALL",
+    "displayName": "Profile-only delete for specified identity",
+    "description": "Delete identity, profile, and AJO data only; datalake unchanged.",
+    "targetServices": ["identity", "profile", "ajo"],
+    "namespacesIdentities": [
+      {
+        "namespace": { "code": "email" },
+        "ids": ["user@example.com"]
+      }
+    ]
+  }'
+```
+
+다중 데이터 세트 또는 프로필 전용 요청에 대한 성공적인 응답은 다른 작업 주문 응답과 동일한 형태를 따릅니다. 반환된 `datasetId` 및 `targetServices`은(는) 요청의 값(또는 `targetServices`이 생략된 경우 전체 기본 목록)을 반영하므로 제출된 내용을 확인할 수 있습니다.
+
 >[!NOTE]
 >
 >레코드 삭제 작업 주문에 대한 작업 속성은 현재 API 응답에서 `identity-delete`입니다. API가 다른 값(예: `delete_identity`)을 사용하도록 변경되면 이 설명서도 그에 따라 업데이트됩니다.
 
-## 레코드 삭제 요청을 위해 ID 목록을 JSON으로 변환
+## 레코드 삭제 요청(#convert-id-lists-to-json-for-record-delete-requests)을 위해 ID 목록을 JSON으로 변환
 
-식별자가 포함된 CSV, TSV 또는 TXT 파일에서 레코드 삭제 작업 순서를 만들려면 전환 스크립트를 사용하여 `/workorder` 끝점에 필요한 JSON 페이로드를 생성할 수 있습니다. 이 방법은 기존 데이터 파일로 작업할 때 특히 유용합니다. 즉시 사용할 수 있는 스크립트 및 포괄적인 지침을 보려면 [csv에서 데이터로 위생 GitHub 저장소](https://github.com/perlmonger42/csv-to-data-hygiene)를 방문하십시오.
+식별자가 CSV, TSV 또는 TXT 파일인 경우 전환 스크립트를 사용하여 `/workorder` 끝점에 대한 필수 JSON 페이로드를 생성합니다. 이 방법은 기존 데이터 파일로 작업할 때 특히 유용합니다. 사용 준비 스크립트 및 지침은 [csv-to-data-hygiene GitHub 저장소](https://github.com/perlmonger42/csv-to-data-hygiene)를 참조하십시오.
+
+스크립트는 **`identities`** 형식을 출력합니다. `id`이(가) 있는 개체당 하나의 `namespace`. API는 이 형식을 그대로 허용합니다. 변환 없이 POST 본문에서 `/workorder`(으)로 생성된 JSON을 직접 보낼 수 있습니다. 권장 형식은 **`namespacesIdentities`**&#x200B;입니다. [레코드 삭제 작업 순서 만들기](#create) 및 [ID 페이로드 형식](#identity-payload-format-identities-or-namespacesidentities)을(를) 참조하십시오.
 
 ### JSON 페이로드 생성
 
@@ -365,8 +430,8 @@ done
 | ---           | ---     |
 | `verbose` | 자세한 정보 출력을 활성화합니다. |
 | `column` | 삭제할 ID 값이 포함된 열의 인덱스(1 기반) 또는 헤더 이름입니다. 지정하지 않은 경우 기본값은 첫 번째 열로 설정됩니다. |
-| `namespace` | ID 네임스페이스를 지정하는 `code` 속성이 있는 개체(예: &quot;email&quot;). |
-| `dataset-id` | 작업 주문과 연계된 데이터 세트에 대한 고유 식별자. 요청이 모든 데이터 세트에 적용되는 경우 이 필드는 `ALL`(으)로 설정됩니다. |
+| `namespace` | 스크립트로 전달된 ID 네임스페이스 코드(예: `email`). 생성된 JSON은 각 개체의 `namespace.code` 속성에서 이 값을 사용합니다. |
+| `dataset-id` | 데이터 세트의 고유 식별자: 단일 ID, 다중 데이터 세트의 경우 쉼표로 구분된 ID 또는 모든 데이터 세트의 경우 `ALL`. |
 | `description` | 작업 주문 삭제 레코드에 대한 설명. |
 | `output-dir` | 출력 JSON 페이로드를 쓸 디렉터리입니다. |
 
@@ -402,7 +467,7 @@ done
 | 속성 | 설명 |
 | ---          | ---     |
 | `action` | 작업 주문 삭제 레코드에 대해 요청한 작업입니다. 변환 스크립트에 의해 자동으로 `delete_identity`(으)로 설정됩니다. |
-| `datasetId` | 데이터 세트에 대한 고유 식별자입니다. |
+| `datasetId` | 데이터 집합에 대한 고유 식별자: 단일 ID, 쉼표로 구분된 ID 또는 `ALL`. |
 | `displayName` | 사람이 인식할 수 있는 이 레코드의 레이블은 작업 순서를 삭제합니다. |
 | `description` | 작업 주문 삭제 레코드에 대한 설명. |
 | `identities` | 각각 <br>을(를) 포함하는 개체 배열<ul><li> `namespace`: ID 네임스페이스를 지정하는 `code` 속성이 있는 개체(예: &quot;email&quot;).</li><li> `id`: 이 네임스페이스에 대해 삭제할 ID 값입니다.</li></ul> |
@@ -411,7 +476,7 @@ done
 
 ### 생성된 JSON 데이터를 `/workorder` 끝점에 제출
 
-요청을 제출하려면 [레코드 삭제 작업 주문 만들기](#create) 섹션의 지침을 따르십시오. `-d` POST 요청을 `curl` API 끝점으로 보낼 때 변환된 JSON 페이로드를 요청 본문(`/workorder`)으로 사용해야 합니다.
+스크립트 출력에서는 API에서 그대로 허용하는 `identities` 형식을 사용합니다. `-d` POST 요청을 `curl` 끝점으로 보낼 때 변환된 JSON 페이로드를 요청 본문(`/workorder`)으로 사용합니다. 전체 요청 옵션 및 유효성 검사 규칙에 대해서는 [레코드 삭제 작업 순서 만들기](#create)를 참조하십시오.
 
 ## 특정 레코드 삭제 작업 주문에 대한 세부 정보 검색 {#lookup}
 
@@ -482,12 +547,12 @@ curl -X GET \
 | `targetServices` | 이 레코드의 영향을 받은 대상 서비스 목록 삭제 작업 순서. |
 | `status` | 작업 주문 삭제 레코드의 현재 상태. |
 | `createdBy` | 레코드 삭제 작업 주문을 만든 사용자의 이메일 및 식별자입니다. |
-| `datasetId` | 작업 주문과 연계된 데이터 세트에 대한 고유 식별자. |
+| `datasetId` | 작업 주문과 연결된 데이터 세트의 고유 식별자입니다(단일 ID, 쉼표로 구분된 ID 또는 `ALL`). |
 | `datasetName` | 작업 주문과 연계된 데이터 세트 이름. |
 | `displayName` | 사람이 인식할 수 있는 레코드 삭제 작업 순서 레이블. |
 | `description` | 작업 주문 삭제 레코드에 대한 설명. |
 
-## 레코드 삭제 작업 주문 업데이트
+## 레코드 삭제 작업 주문 업데이트 {#update}
 
 `name` 끝점에 대한 PUT 요청을 수행하여 레코드 삭제 작업 순서에 대한 `description` 및 `/workorder/{WORKORDER_ID}`을(를) 업데이트합니다.
 
@@ -590,7 +655,7 @@ curl -X PUT \
 | `targetServices` | 이 레코드의 영향을 받은 대상 서비스 목록 삭제 작업 순서. |
 | `status` | 작업 주문 삭제 레코드의 현재 상태. 가능한 값은 `received`,`validated`, `submitted`, `ingested`, `completed` 및 `failed`입니다. |
 | `createdBy` | 레코드 삭제 작업 주문을 만든 사용자의 이메일 및 식별자입니다. |
-| `datasetId` | 레코드 삭제 작업 주문에 연결된 데이터 세트에 대한 고유 식별자입니다. |
+| `datasetId` | 레코드 삭제 작업 주문과 연결된 데이터 집합에 대한 고유 식별자입니다(단일 ID, 쉼표로 구분된 ID 또는 `ALL`). |
 | `datasetName` | 레코드 삭제 작업 주문과 연결된 데이터 세트의 이름입니다. |
 | `displayName` | 사람이 인식할 수 있는 레코드 삭제 작업 순서 레이블. |
 | `description` | 작업 주문 삭제 레코드에 대한 설명. |
