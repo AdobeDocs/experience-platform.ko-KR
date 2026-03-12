@@ -6,7 +6,7 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 19c8bc9f0b27e1c04c5038cd268bed43cf57080f
+source-git-commit: 82f412676c89d7d14116be9328ab7fa438e10fc0
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 3%
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->이 대상 커넥터는 현재 사용할 수 없습니다. 액세스하려면 Adobe 담당자에게 문의하십시오.</br>
+>이 대상 커넥터는 현재 사용할 수 없습니다. 액세스 권한을 받으려면 Adobe 담당자에게 문의하십시오.
 
 ## 개요 {#overview}
 
@@ -106,25 +106,25 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_id"
 >title="Customer ID"
->abstract="관리자 계정 ID라고도 하는 Microsoft Advertising 고객 ID입니다. 여러 광고주 계정(고객 계정 ID)을 가질 수 있는 Microsoft Advertising의 최상위 식별자입니다."
->additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="고객 ID 찾기"
+>abstract="Your Microsoft Advertising Customer ID, also known as the Manager account ID. This is the top-level identifier in Microsoft Advertising that can have multiple advertiser accounts (Customer Account IDs) under it."
+>additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Find your Customer ID"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_account_id"
->title="고객 계정 ID"
->abstract="광고주 계정 ID라고도 하는 Microsoft Advertising 고객 계정 ID입니다. 이는 고객 ID에서 특정 광고주 계정을 식별합니다."
+>title="Customer Account ID"
+>abstract="광고주 계정 ID라고도 하는 Microsoft Advertising 고객 계정 ID입니다. This identifies a specific advertiser account under your Customer ID."
 >additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="고객 계정 ID 찾기"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_membership_duration"
->title="멤버십 기간"
->abstract="사용자가 고객 일치 목록에 남아 있는 일 수입니다. 허용되는 값은 1일에서 390일 사이입니다."
+>title="Membership Duration"
+>abstract="The number of days a user remains in the customer match list. Accepted values are between 1 and 390 days."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_list_availability"
->title="고객 일치 목록 가용성"
->abstract="고객 일치 목록을 단일 광고주 계정에서 사용할 수 있는지 아니면 관리자 계정의 모든 계정에서 사용할 수 있는지 선택합니다. 고객 ID 를 선택하여 고객 ID 아래에 있는 모든 광고주 계정에서 목록을 사용할 수 있도록 합니다. 목록을 특정 고객 계정 ID로 제한하려면 고객 계정 ID 를 선택합니다."
->additional-url="https://help.ads.microsoft.com/apex/index/3/en/56727" text="Microsoft Advertising의 대상 목록 공유에 대해 자세히 알아보기"
+>title="Customer Match List Availability"
+>abstract="Select whether the customer match list is available to a single advertiser account or to all accounts under the manager account. Select Customer ID to make the list available across all advertiser accounts under your Customer ID. Select Customer Account ID to restrict the list to the specific Customer Account ID."
+>additional-url="https://help.ads.microsoft.com/apex/index/3/en/56727" text="Learn more about audience list sharing in Microsoft Advertising"
 
 [이 대상을 설정](../../ui/connect-destination.md)하는 동안 다음 정보를 제공해야 합니다.
 
