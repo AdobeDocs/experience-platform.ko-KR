@@ -5,7 +5,7 @@ exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
 source-wordcount: '152'
-ht-degree: 5%
+ht-degree: 16%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_brandconcierge"
 >title="Brand Concierge"
->abstract="속성에서 Brand Concierge을 사용할 때의 구성 설정입니다."
+>abstract="속성에서 Brand Concierge를 사용할 때의 구성 설정."
 
 **[!UICONTROL Brand Concierge]** 섹션을 통해 웹 SDK 태그 확장에서 Brand Concierge 채팅 세션이 작동하는 방식을 제어할 수 있습니다.
 

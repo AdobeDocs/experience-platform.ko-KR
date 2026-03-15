@@ -5,7 +5,7 @@ exl-id: 594fd75d-bb13-4146-9105-1398e24c4c16
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 1%
+ht-degree: 25%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_advertising"
 >title="Adobe Advertising"
->abstract="Adobe Advertising 통합에 대한 설정을 구성합니다. 클릭스루 측정을 활성화하는 데 광고 구성이 필요하지 않습니다. 검색, 소셜 및 Commerce 클라이언트에는 추가 작업이 필요하지 않습니다. 그러나 Demand-side Platform(DSP) 사용자는 뷰스루 전환을 측정하려면 이 섹션에서 광고주를 구성해야 합니다."
+>abstract="Adobe Advertising 통합에 대한 설정을 구성합니다. 클릭스루 측정을 활성화하는 데 광고 구성이 필요하지 않습니다. 검색, 소셜, 커머스 클라이언트는 추가 액션이 필요하지 않지만, 수요측 플랫폼(DSP) 사용자는 이 섹션에서 뷰 스루 전환을 측정하기 위해 광고주를 구성해야 합니다."
 
 **[!UICONTROL Adobe Advertising]** 섹션을 사용하면 구현에 사용되는 경우 수요 측 플랫폼(DSP) 기능을 활성화하거나 비활성화할 수 있습니다. 구현에서 DSP을 사용하는 경우에만 이 필드를 설정하면 됩니다.
 

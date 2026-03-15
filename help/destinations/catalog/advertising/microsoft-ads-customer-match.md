@@ -9,7 +9,7 @@ exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
 source-git-commit: 82f412676c89d7d14116be9328ab7fa438e10fc0
 workflow-type: tm+mt
 source-wordcount: '1347'
-ht-degree: 3%
+ht-degree: 16%
 
 ---
 
@@ -90,8 +90,8 @@ ht-degree: 3%
 
 대상을 구성할 때는 다음 정보를 제공해야 합니다.
 
-* [!UICONTROL Customer ID]: 정수 형식의 [!DNL Microsoft Ads] CID(고객 ID)입니다. 고객 ID를 찾는 방법에 대한 지침은 [Microsoft Advertising 설명서](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids)를 참조하세요.
-* [!UICONTROL Customer Account ID]: [!DNL Microsoft Ads] 고객 계정 ID입니다. 고객 계정 ID를 찾는 방법에 대한 지침은 [Microsoft Advertising 설명서](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids)를 참조하세요.
+* [!UICONTROL Customer ID]: 정수 형식의 [!DNL Microsoft Ads] CID(고객 ID)입니다. 고객 ID를 찾는 방법에 대한 지침은 [Microsoft Advertising 설명서](https://learn.microsoft.com/ko-kr/advertising/guides/get-started?view=bingads-13#get-ids)를 참조하세요.
+* [!UICONTROL Customer Account ID]: [!DNL Microsoft Ads] 고객 계정 ID입니다. 고객 계정 ID를 찾는 방법에 대한 지침은 [Microsoft Advertising 설명서](https://learn.microsoft.com/ko-kr/advertising/guides/get-started?view=bingads-13#get-ids)를 참조하세요.
 
 ## 대상에 연결 {#connect}
 
@@ -106,32 +106,32 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_id"
 >title="Customer ID"
->abstract="Your Microsoft Advertising Customer ID, also known as the Manager account ID. This is the top-level identifier in Microsoft Advertising that can have multiple advertiser accounts (Customer Account IDs) under it."
->additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Find your Customer ID"
+>abstract="관리자 계정 ID라고도 하는 Microsoft Advertising 고객 ID입니다. 여러 광고주 계정(고객 계정 ID)을 가질 수 있는 Microsoft Advertising의 최상위 ID입니다."
+>additional-url="https://learn.microsoft.com/ko-kr/advertising/guides/get-started?view=bingads-13#get-ids" text="고객 ID 찾기"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_account_id"
->title="Customer Account ID"
->abstract="광고주 계정 ID라고도 하는 Microsoft Advertising 고객 계정 ID입니다. This identifies a specific advertiser account under your Customer ID."
->additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="고객 계정 ID 찾기"
+>title="고객 계정 ID"
+>abstract="광고주 계정 ID라고도 하는 Microsoft Advertising 고객 계정 ID입니다. 고객 ID에서 특정 광고주 계정을 식별합니다."
+>additional-url="https://learn.microsoft.com/ko-kr/advertising/guides/get-started?view=bingads-13#get-ids" text="고객 계정 ID 찾기"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_membership_duration"
->title="Membership Duration"
->abstract="The number of days a user remains in the customer match list. Accepted values are between 1 and 390 days."
+>title="멤버십 기간"
+>abstract="사용자가 고객 일치 목록에 남아 있는 일 수입니다. 허용되는 값은 1일에서 390일 사이입니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_list_availability"
->title="Customer Match List Availability"
->abstract="Select whether the customer match list is available to a single advertiser account or to all accounts under the manager account. Select Customer ID to make the list available across all advertiser accounts under your Customer ID. Select Customer Account ID to restrict the list to the specific Customer Account ID."
->additional-url="https://help.ads.microsoft.com/apex/index/3/en/56727" text="Learn more about audience list sharing in Microsoft Advertising"
+>title="고객 일치 목록 가용성"
+>abstract="고객 일치 목록을 단일 광고주 계정에서 사용할 수 있는지 아니면 관리자 계정의 모든 계정에서 사용할 수 있는지 선택합니다. 고객 ID를 선택하여 고객 ID 아래의 모든 광고주 계정에서 목록을 사용할 수 있도록 합니다. 고객 계정 ID를 선택하여 특정 고객 계정 ID로 목록을 제한합니다."
+>additional-url="https://help.ads.microsoft.com/apex/index/3/en/56727" text="Microsoft Advertising의 대상자 목록 공유에 대해 자세히 알아보기"
 
 [이 대상을 설정](../../ui/connect-destination.md)하는 동안 다음 정보를 제공해야 합니다.
 
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL Customer ID]**: [!DNL Microsoft Ads] CID(고객 ID)입니다. 고객 ID를 찾는 방법에 대한 지침은 [Microsoft Advertising 설명서](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids)를 참조하세요.
-* **[!UICONTROL Customer Account ID]**: [!DNL Microsoft Ads] 고객 계정 ID입니다. 고객 계정 ID를 찾는 방법에 대한 지침은 [Microsoft Advertising 설명서](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids)를 참조하세요.
+* **[!UICONTROL Customer ID]**: [!DNL Microsoft Ads] CID(고객 ID)입니다. 고객 ID를 찾는 방법에 대한 지침은 [Microsoft Advertising 설명서](https://learn.microsoft.com/ko-kr/advertising/guides/get-started?view=bingads-13#get-ids)를 참조하세요.
+* **[!UICONTROL Customer Account ID]**: [!DNL Microsoft Ads] 고객 계정 ID입니다. 고객 계정 ID를 찾는 방법에 대한 지침은 [Microsoft Advertising 설명서](https://learn.microsoft.com/ko-kr/advertising/guides/get-started?view=bingads-13#get-ids)를 참조하세요.
 * **[!UICONTROL Membership Duration]**: 사용자가 고객 일치 목록에 남아 있는 일 수입니다. 허용되는 값은 1일에서 390일 사이입니다.
 * **[!UICONTROL Customer Match List Availability]**: 고객 일치 목록의 사용 가능 여부를 선택합니다. [!DNL Microsoft Advertising]에서 고객 ID에는 여러 고객 계정 ID(광고주 계정)가 있을 수 있습니다. 고객 ID의 모든 광고주 계정에서 목록을 사용할 수 있도록 하려면 **[!UICONTROL Customer ID (all advertising accounts)]**&#x200B;을(를) 선택하고, 위에서 제공한 특정 고객 계정 ID로 목록을 제한하려면 **[!UICONTROL Customer Account ID (single advertising account)]**&#x200B;을(를) 선택하십시오. 자세한 내용은 [Microsoft Advertising 설명서](https://help.ads.microsoft.com/apex/index/3/en/56727)를 참조하세요.
 

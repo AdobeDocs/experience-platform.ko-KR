@@ -5,7 +5,7 @@ exl-id: d830a210-77ab-4823-b5fa-c1194a01bea3
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
 source-wordcount: '150'
-ht-degree: 2%
+ht-degree: 20%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_advanced"
 >title="고급 설정"
->abstract="고급 구성 설정. Adobe에서는 대부분의 구현에 이러한 옵션을 있는 그대로 두는 것이 좋습니다."
+>abstract="고급 구성 설정. Adobe는 대부분의 구현에서 이러한 옵션을 그대로 두는 것을 권장합니다."
 
-이 구성 섹션에서는 고급 설정을 변경할 수 있습니다. Adobe에서는 대부분의 구현에 이러한 옵션을 있는 그대로 두는 것이 좋습니다.
+이 구성 섹션에서는 고급 설정을 변경할 수 있습니다. Adobe는 대부분의 구현에서 이러한 옵션을 그대로 두는 것을 권장합니다.
 
 1. Adobe ID 자격 증명을 사용하여 [experience.adobe.com](https://experience.adobe.com)에 로그인합니다.
 1. **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**(으)로 이동합니다.

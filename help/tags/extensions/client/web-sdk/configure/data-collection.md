@@ -5,7 +5,7 @@ exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
 source-wordcount: '719'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_datacollection"
 >title="데이터 수집"
->abstract="수집할 데이터 및 태그 확장 전체에서 해당 데이터가 수집되는 방법을 결정합니다."
+>abstract="태그 확장 기능에서 어떤 데이터를 수집할지, 그리고 그 데이터가 어떻게 수집되는지 결정합니다."
 
 이 구성 섹션에서는 확장 간에 데이터를 수집하는 방법을 결정할 수 있습니다.
 
