@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: fe5faaeb026fa10d185f43408b122104ecd42196
+source-git-commit: 2c7cc6d29eae13cd8caa387063ae9ab80ca65e1e
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1089'
 ht-degree: 34%
 
 ---
@@ -49,8 +49,8 @@ ht-degree: 34%
       - [Apache HDFS 커넥터](connectors/cloud-storage/hdfs.md)
       - [Azure Data Lake Storage Gen2 커넥터](connectors/cloud-storage/adls-gen2.md)
       - [Azure Blob 커넥터](connectors/cloud-storage/blob.md)
-      - [Azure Event Hubs 커넥터](connectors/cloud-storage/eventhub.md)
-      - [Azure 파일 저장소 커넥터](connectors/cloud-storage/azure-file-storage.md)
+      - [Azure 이벤트 허브 커넥터](connectors/cloud-storage/eventhub.md)
+      - [Azure 파일 스토리지 커넥터](connectors/cloud-storage/azure-file-storage.md)
       - [데이터 랜딩 구역](connectors/cloud-storage/data-landing-zone.md)
       - [FTP 커넥터](connectors/cloud-storage/ftp.md)
       - [Google 클라우드 스토리지 커넥터](connectors/cloud-storage/google-cloud-storage.md)
@@ -97,6 +97,8 @@ ht-degree: 34%
       - [봄보라 의도](connectors/data-partners/bombora.md)
       - [Demandbase 의도](connectors/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
+   - 데이터 공유 {#data-sharing}
+      - [델타셰어](connectors/data-sharing/deltashare.md)
    - 전자 상거래 {#ecommerce}
       - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -310,6 +312,8 @@ ht-degree: 34%
          - [봄보라 의도](tutorials/ui/create/data-partners/bombora.md)
          - [Demandbase 의도](tutorials/ui/create/data-partners/demandbase.md)
          - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+      - 데이터 공유 {#data-sharing}
+         - [델타셰어](tutorials/ui/create/data-sharing/deltashare.md)
       - 전자 상거래 {#ecommerce}
          - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
