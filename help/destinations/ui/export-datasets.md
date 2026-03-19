@@ -78,7 +78,7 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
 
 이 페이지에 설명된 워크플로에 대한 전체적인 설명, 데이터 세트 내보내기 기능을 사용할 때의 이점 및 몇 가지 제안된 사용 사례를 확인하려면 아래 비디오를 보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424392/)
+>[!VIDEO](https://video.tv.adobe.com/v/3448825?captions=kor)
 
 ## 지원되는 대상 {#supported-destinations}
 
