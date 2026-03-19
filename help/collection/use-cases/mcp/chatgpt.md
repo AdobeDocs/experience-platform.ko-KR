@@ -19,7 +19,7 @@ ht-degree: 0%
 
 이 사용 사례에서는 데이터 수집을 위한 서버측 구현과 개인화된 콘텐츠를 렌더링하기 위한 클라이언트측 구현을 모두 사용하여 하이브리드 접근 방식을 선호합니다. MCP 도구 호출이 분석을 수집하는 가장 신뢰할 수 있는 순간이므로 이 접근 방식이 이상적입니다. 위젯은 브라우저 컨텍스트에서 실행되며 ID(쿠키에)를 저장하고 개인화 결정을 적용할 수 있는 올바른 위치입니다.
 
-이 사용 사례에는 완전한 작동 코드 예제가 포함되어 있습니다. 샘플 코드 및 구현 지침은 GitHub의 [ 리포지토리에서 ](https://github.com/adobe/alloy-samples/tree/main/chatgpt-app)ChatGPT 앱 + Adobe Experience Platform Edge`alloy-samples`을(를) 참조하십시오.
+이 사용 사례에는 완전한 작동 코드 예제가 포함되어 있습니다. 샘플 코드 및 구현 지침은 GitHub의 [&#x200B; 리포지토리에서 &#x200B;](https://github.com/adobe/alloy-samples/tree/main/chatgpt-app)ChatGPT 앱 + Adobe Experience Platform Edge`alloy-samples`을(를) 참조하십시오.
 
 >[!IMPORTANT]
 >
