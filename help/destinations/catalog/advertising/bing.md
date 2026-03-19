@@ -79,7 +79,7 @@ ht-degree: 7%
 
 [!DNL Microsoft Bing] 대상이 올바르게 작동하려면 다음 설정이 필요합니다.
 
-1. **ID 동기화 기능 사용**: [!DNL Microsoft Bing] 활성화를 처음 설정하는 경우로서 이전에 Experience Cloud ID 서비스(Adobe Audience Manager 또는 다른 응용 프로그램 포함)에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을 활성화하지 않은 경우 Adobe Consulting 또는 고객 지원 센터에 문의하여 ID 동기화를 활성화하십시오.
+1. **ID 동기화 기능 사용**: [!DNL Microsoft Bing] 활성화를 처음 설정하는 경우로서 이전에 Experience Cloud ID 서비스(Adobe Audience Manager 또는 다른 응용 프로그램 포함)에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=ko)을 활성화하지 않은 경우 Adobe Consulting 또는 고객 지원 센터에 문의하여 ID 동기화를 활성화하십시오.
    * 이전에 Audience Manager에서 [!DNL Microsoft Bing] 통합을 설정한 경우 기존 ID 동기화가 자동으로 Experience Platform으로 이전됩니다.
 
 2. **프로필의 ECID를 확인합니다**: 내보내기를 수행하려면 모든 프로필에 ECID가 있어야 합니다. 이 대상에 대한 ECID는 **필수**&#x200B;입니다.
