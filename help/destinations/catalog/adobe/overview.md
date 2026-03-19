@@ -49,4 +49,4 @@ ht-degree: 7%
 
 Experience Platform 대상 공유 기능을 사용하여 Experience Platform 대상을 추가 Adobe 대상에 공유할 수 있습니다. 자세한 내용은 아래 페이지(Audience Manager 설명서 포털에 열림)를 참조하십시오.
 
-* [핵심 서비스 통합을 통해 Adobe Audience Manager, Adobe Advertising Cloud 및 Adobe Target과 공유하는 Experience Platform 대상](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [핵심 서비스 통합을 통해 Adobe Audience Manager, Adobe Advertising Cloud 및 Adobe Target과 공유하는 Experience Platform 대상](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ko)

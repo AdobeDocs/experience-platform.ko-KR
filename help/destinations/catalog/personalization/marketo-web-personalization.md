@@ -16,7 +16,7 @@ ht-degree: 3%
 
 이 확장은 [!DNL Marketo's] 웹 Personalization 및 ContentAI 애플리케이션용 스크립트를 배포합니다. [!DNL Marketo] Web Personalization은 익명의 방문자에 대한 firmographics 및 알려진 방문자에 대한 [!DNL Marketo] 참여 플랫폼 내의 광범위한 동작 특성과 같은 웹 방문자 특성에 맞게 콘텐츠를 고유하게 식별하고 개인화합니다. [!DNL Marketo] ContentAI에는 B2B 고객에게만 해당하는 웹 및 이메일 캠페인을 위한 AI 기반 권장 사항 및 개인 맞춤화를 위한 기능이 포함되어 있습니다.
 
-[!DNL Marketo Web Personalization]은(는) Adobe Experience Platform의 개인화 확장입니다. Marketo의 웹 개인화 및 ContentAI에 대한 자세한 내용은 [웹 Personalization 개요](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html)를 참조하십시오.
+[!DNL Marketo Web Personalization]은(는) Adobe Experience Platform의 개인화 확장입니다. Marketo의 웹 개인화 및 ContentAI에 대한 자세한 내용은 [웹 Personalization 개요](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=ko)를 참조하십시오.
 
 이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 

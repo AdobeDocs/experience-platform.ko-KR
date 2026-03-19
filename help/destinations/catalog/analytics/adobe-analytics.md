@@ -42,7 +42,7 @@ Adobe Analytics 확장을 설치하려면:
 
 워크플로를 사용하면 데이터 수집 UI로 이동하여 설치를 완료할 수 있습니다.
 
-확장 구성 옵션에 대한 자세한 내용은 태그 설명서의 [Adobe Analytics 확장 페이지](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html)를 참조하십시오.
+확장 구성 옵션에 대한 자세한 내용은 태그 설명서의 [Adobe Analytics 확장 페이지](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html?lang=ko)를 참조하십시오.
 
 [데이터 수집 UI](https://experience.adobe.com/#/data-collection/)에서 바로 확장을 설치할 수도 있습니다. 자세한 내용은 [새 확장 추가](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)에 대한 안내서를 참조하십시오.
 
