@@ -14,7 +14,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->여기에 설명된 Google gtag 확장은 더 이상 사용되지 않으며 [[!DNL Google Global Site Tag (gtag)]에서 개발한 ](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)[!DNL Acronym] 확장으로 대체되었습니다. 데이터 수집 UI 또는 Experience Platform UI의 [!DNL Google Global Site Tag (gtag)] 작업 영역에서 [[!UICONTROL Tags]](../../../tags/home.md) 확장을 찾을 수 있습니다.
+>여기에 설명된 Google gtag 확장은 더 이상 사용되지 않으며 [[!DNL Google Global Site Tag (gtag)]에서 개발한 &#x200B;](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) [!DNL Acronym] 확장으로 대체되었습니다. 데이터 수집 UI 또는 Experience Platform UI의 [!DNL Google Global Site Tag (gtag)] 작업 영역에서 [[!UICONTROL Tags]](../../../tags/home.md) 확장을 찾을 수 있습니다.
 
 ## 개요 {#overview}
 

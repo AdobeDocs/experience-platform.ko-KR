@@ -55,7 +55,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 
 ### 동일 페이지 개인화 {#same-page}
 
-사용자가 웹 사이트의 페이지를 방문합니다. 현재 페이지 방문 정보(예: 참조 URL, 브라우저 언어, 포함된 제품 정보)를 사용하여 Adobe이 아닌 플랫폼(예: [, ](../catalog/personalization/custom-personalization.md) 등)에 대한 [!DNL Pega]사용자 지정 개인화[!DNL Optimizely] 연결을 사용하여 다음 작업 또는 결정(예: 개인화)을 선택할 수 있습니다.
+사용자가 웹 사이트의 페이지를 방문합니다. 현재 페이지 방문 정보(예: 참조 URL, 브라우저 언어, 포함된 제품 정보)를 사용하여 Adobe이 아닌 플랫폼(예: [, &#x200B;](../catalog/personalization/custom-personalization.md) 등)에 대한 [!DNL Pega]사용자 지정 개인화[!DNL Optimizely] 연결을 사용하여 다음 작업 또는 결정(예: 개인화)을 선택할 수 있습니다.
 
 ### 다음 페이지 개인화 {#next-page}
 
@@ -101,7 +101,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트�
 
 [!DNL Active-On-Edge] 병합 정책을 만든 후에는 Experience Platform에서 새 대상을 만들어야 합니다.
 
-[대상 빌더](../../segmentation/ui/segment-builder.md) 안내서에 따라 새 대상을 만들고 이전 단계에서 만든 [ 병합 정책을 ](../../segmentation/ui/segment-builder.md#merge-policies)할당[!DNL Active-On-Edge]하세요.
+[대상 빌더](../../segmentation/ui/segment-builder.md) 안내서에 따라 새 대상을 만들고 이전 단계에서 만든 [&#x200B; 병합 정책을 &#x200B;](../../segmentation/ui/segment-builder.md#merge-policies)할당[!DNL Active-On-Edge]하세요.
 
 ### 대상 연결 만들기 {#connect-destination}
 

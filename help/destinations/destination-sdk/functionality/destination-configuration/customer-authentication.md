@@ -58,7 +58,7 @@ Destination SDK을 통해 [대상을 만들기](../../authoring-api/destination-
 
 ## 인증 규칙 구성 {#authentication-rule}
 
-이 페이지에 설명된 고객 인증 구성을 사용하는 경우 항상 아래와 같이 `authenticationRule`대상 게재[의 ](destination-delivery.md) 매개 변수를 `"CUSTOMER_AUTHENTICATION"`(으)로 설정하십시오.
+이 페이지에 설명된 고객 인증 구성을 사용하는 경우 항상 아래와 같이 `authenticationRule`대상 게재[의 &#x200B;](destination-delivery.md) 매개 변수를 `"CUSTOMER_AUTHENTICATION"`(으)로 설정하십시오.
 
 ```json {line-numbers="true" highlight="4"
 {
@@ -163,7 +163,7 @@ Experience Platform의 파일 기반 대상에 대해 [!DNL Azure Data Lake Stor
 
 [!DNL Azure Data Lake Storage] 인증 유형을 구성할 때 사용자는 Azure Service Principal 자격 증명과 테넌트 정보를 입력해야 합니다.
 
-![ 인증을 사용하여 [!DNL Azure Data Lake Storage]UI 렌더링](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
+![&#x200B; 인증을 사용하여 [!DNL Azure Data Lake Storage]UI 렌더링](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
 
 대상에 대한 [!DNL Azure Data Lake Storage]&#x200B;(ADLS) 인증을 설정하려면 아래와 같이 `customerAuthenticationConfigurations` 끝점에서 `/destinations` 매개 변수를 구성하십시오.
 

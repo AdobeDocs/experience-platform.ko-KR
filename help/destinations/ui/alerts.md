@@ -38,7 +38,7 @@ Adobe Experience Platform을 통해 Adobe Experience Platform 활동에 관한 �
 >
 >데이터 흐름에 대한 이메일 기반 경고 알림을 수신하려면 Experience Platform 계정에 대해 이메일 인스턴트 알림을 활성화해야 합니다.
 
-[!UICONTROL Configure new destination]대상 연결[ 워크플로의 ](connect-destination.md) 단계 동안 데이터 흐름에 대한 경고를 사용하도록 설정할 수 있습니다.
+[!UICONTROL Configure new destination]대상 연결[&#x200B; 워크플로의 &#x200B;](connect-destination.md) 단계 동안 데이터 흐름에 대한 경고를 사용하도록 설정할 수 있습니다.
 
 대상 경고 섹션을 표시하는 ![UI 이미지입니다.](../assets/ui/alerts/destination-alerts.png)
 

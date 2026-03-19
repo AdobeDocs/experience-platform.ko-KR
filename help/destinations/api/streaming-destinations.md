@@ -273,9 +273,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{ACCESS_ID}`: *개 연결용 [!DNL Amazon Kinesis]입니다.* Amazon Kinesis 저장소 위치에 대한 액세스 ID입니다.
 * `{SECRET_KEY}`: *개 연결용 [!DNL Amazon Kinesis]입니다.* Amazon Kinesis 저장소 위치에 대한 비밀 키.
 * `{REGION}`: *개 연결용 [!DNL Amazon Kinesis]입니다.* [!DNL Amazon Kinesis] 계정에서 Experience Platform이 데이터를 스트리밍할 지역입니다.
-* `{SAS_KEY_NAME}`: *개 연결용 [!DNL Azure Event Hubs]입니다.* SAS 키 이름을 입력하십시오. [!DNL Azure Event Hubs]Microsoft 설명서[에서 SAS 키를 사용하여 ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에 인증하는 방법에 대해 알아봅니다.
-* `{SAS_KEY}`: *개 연결용 [!DNL Azure Event Hubs]입니다.* SAS 키를 입력하십시오. [!DNL Azure Event Hubs]Microsoft 설명서[에서 SAS 키를 사용하여 ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에 인증하는 방법에 대해 알아봅니다.
-* `{EVENT_HUB_NAMESPACE}`: *개 연결용 [!DNL Azure Event Hubs]입니다.* Experience Platform에서 데이터를 스트리밍할 [!DNL Azure Event Hubs] 네임스페이스를 채웁니다. 자세한 내용은 [ 설명서의 ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)이벤트 허브 네임스페이스 만들기[!DNL Microsoft]를 참조하십시오.
+* `{SAS_KEY_NAME}`: *개 연결용 [!DNL Azure Event Hubs]입니다.* SAS 키 이름을 입력하십시오. [!DNL Azure Event Hubs]Microsoft 설명서[에서 SAS 키를 사용하여 &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에 인증하는 방법에 대해 알아봅니다.
+* `{SAS_KEY}`: *개 연결용 [!DNL Azure Event Hubs]입니다.* SAS 키를 입력하십시오. [!DNL Azure Event Hubs]Microsoft 설명서[에서 SAS 키를 사용하여 &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에 인증하는 방법에 대해 알아봅니다.
+* `{EVENT_HUB_NAMESPACE}`: *개 연결용 [!DNL Azure Event Hubs]입니다.* Experience Platform에서 데이터를 스트리밍할 [!DNL Azure Event Hubs] 네임스페이스를 채웁니다. 자세한 내용은 [&#x200B; 설명서의 &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)이벤트 허브 네임스페이스 만들기[!DNL Microsoft]를 참조하십시오.
 
 **응답**
 
@@ -332,7 +332,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{CONNECTION_SPEC_ID}`: [사용 가능한 대상 목록 가져오기](#get-the-list-of-available-destinations) 단계에서 얻은 연결 사양을 사용합니다.
 * `{NAME_OF_DATA_STREAM}`: *개 연결용 [!DNL Amazon Kinesis]입니다.* [!DNL Amazon Kinesis] 계정에 기존 데이터 스트림의 이름을 제공합니다. Experience Platform은 데이터를 이 스트림으로 내보냅니다.
 * `{REGION}`: *개 연결용 [!DNL Amazon Kinesis]입니다.* Amazon Kinesis 계정에서 Experience Platform이 데이터를 스트리밍하는 지역입니다.
-* `{EVENT_HUB_NAME}`: *개 연결용 [!DNL Azure Event Hubs]입니다.* Experience Platform에서 데이터를 스트리밍할 [!DNL Azure Event Hub] 이름을 입력합니다. 자세한 내용은 [ 설명서에서 ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)이벤트 허브 만들기[!DNL Microsoft]를 참조하십시오.
+* `{EVENT_HUB_NAME}`: *개 연결용 [!DNL Azure Event Hubs]입니다.* Experience Platform에서 데이터를 스트리밍할 [!DNL Azure Event Hub] 이름을 입력합니다. 자세한 내용은 [&#x200B; 설명서에서 &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)이벤트 허브 만들기[!DNL Microsoft]를 참조하십시오.
 
 **응답**
 
