@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 액세스 제어 개요
 
-Adobe Experience Platform에 대한 액세스 제어는 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 ](https://experience.adobe.com/)을(를) 통해 제공됩니다. 이 기능은 권한 및 샌드박스를 사용자와 연결하는 역할 및 정책을 활용합니다.
+Adobe Experience Platform에 대한 액세스 제어는 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 &#x200B;](https://experience.adobe.com/)을(를) 통해 제공됩니다. 이 기능은 권한 및 샌드박스를 사용자와 연결하는 역할 및 정책을 활용합니다.
 
 ## 액세스 제어 계층 및 워크플로
 
@@ -132,7 +132,7 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Configurations] | 모델 구성에 대한 읽기 전용 액세스 권한. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Manage Adobe Mix Modeler Models Plans Configurations] | 계획 구성을 보고 수정하는 기능입니다. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Plans Configurations] | 계획 구성에 대한 읽기 전용 액세스 권한. |
-| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | [!DNL [AI assistant]](../ai-assistant/access.md)개의 질문을 할 수 있습니다. |
+| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | [[!DNL [AI assistant]]](../ai-assistant/access.md)개의 질문을 할 수 있습니다. |
 | [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | [operational insights](../ai-assistant/home.md##operational-insights) 쿼리에 대한 응답을 얻을 수 있는 액세스 권한. |
 | [!DNL AI Assistant] | [!UICONTROL Generate Content] | 사용자가 [!DNL AI Assistant]을(를) 사용하여 콘텐츠를 생성할 수 있도록 설정하십시오. |
 | [!DNL AI Assistant] | [!UICONTROL Manage Brand Kit] | 사용자가 [!DNL AI Assistant]을(를) 사용하여 브랜드 지침을 만들 수 있도록 합니다. |
