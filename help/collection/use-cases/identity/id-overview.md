@@ -2,7 +2,7 @@
 title: 웹 SDK의 ID 데이터
 description: Adobe Experience Platform Web SDK을 사용하여 Adobe Experience Cloud ID(ECID)를 검색하고 관리하는 방법에 대해 알아봅니다.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
+source-git-commit: 9cde3e244a78598bc407b137426829fcb50f82a2
 workflow-type: tm+mt
 source-wordcount: '1559'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Adobe Experience Platform Web SDK은 [Adobe Experience Cloud ID(ECID)](/help/ide
 새 사용자가 웹 사이트에 도달하면 [Adobe Experience Cloud Identity 서비스](/help/identity-service/home.md)에서 해당 사용자에 대한 장치 ID 쿠키를 설정하려고 시도합니다.
 
 * 처음 방문하는 사용자의 경우 Experience Platform Edge Network의 첫 번째 응답에서 [!DNL ECID]이(가) 생성되고 반환됩니다.
-* 재방문자의 경우 [!DNL ECID]이(가) [`kndctr_<orgId>_identity`](https://experienceleague.adobe.com/ko/docs/core-services/interface/data-collection/cookies/web-sdk) 쿠키에서 검색되어 Edge Network에 의해 요청 페이로드에 추가됩니다.
+* 재방문자의 경우 [!DNL ECID]이(가) [`kndctr_<orgId>_identity`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) 쿠키에서 검색되어 Edge Network에 의해 요청 페이로드에 추가됩니다.
 
 [!DNL ECID]을(를) 포함하는 쿠키가 설정되면 웹 SDK에서 생성한 각 후속 요청에는 [!DNL ECID] 쿠키에 인코딩된 `kndctr_<orgId>_identity`이(가) 포함됩니다.
 
@@ -55,7 +55,7 @@ Adobe Experience Platform Web SDK은 [Adobe Experience Cloud ID(ECID)](/help/ide
 
 ### 쿠키 수명이 Adobe Experience Cloud 애플리케이션에 미치는 영향 {#lifespans}
 
-자사 데이터 수집을 선택하는지 또는 서드파티 데이터 수집을 선택하는지에 관계없이, 쿠키가 지속될 수 있는 시간은 [Adobe Analytics](https://experienceleague.adobe.com/ko/docs/analytics) 및 [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/customer-journey-analytics)의 방문자 수에 직접적인 영향을 줍니다. 또한 사이트에서 [Adobe Target](https://experienceleague.adobe.com/ko/docs/target) 또는 [Offer Decisioning](https://experienceleague.adobe.com/ko/docs/target/using/integrate/ajo/offer-decision)을(를) 사용하면 최종 사용자에게 일관되지 않은 개인화 경험이 발생할 수 있습니다.
+자사 데이터 수집을 선택하는지 또는 서드파티 데이터 수집을 선택하는지에 관계없이, 쿠키가 지속될 수 있는 시간은 [Adobe Analytics](https://experienceleague.adobe.com/ko/docs/analytics) 및 [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/customer-journey-analytics)의 방문자 수에 직접적인 영향을 줍니다. 또한 사이트에서 [Adobe Target](https://experienceleague.adobe.com/en/docs/target) 또는 [Offer Decisioning](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision)을(를) 사용하면 최종 사용자에게 일관되지 않은 개인화 경험이 발생할 수 있습니다.
 
 예를 들어 사용자가 지난 7일 동안 항목을 3번 본 경우 항목을 홈 페이지로 홍보하는 개인화 경험을 만든 상황을 생각해 보겠습니다.
 
@@ -70,7 +70,7 @@ Adobe Experience Platform Web SDK은 [Adobe Experience Cloud ID(ECID)](/help/ide
 사용 사례에 따라 [!DNL ECID]에 액세스할 수 있는 두 가지 방법이 있습니다.
 
 * [데이터 수집을 위한 데이터 준비를 통해  [!DNL ECID] 을(를) 검색합니다](#retrieve-ecid-data-prep): 이 방법은 권장되는 방법입니다.
-* [&#x200B; [!DNL ECID]  명령을 통해 `getIdentity()`검색](#retrieve-ecid-getidentity): 클라이언트측에서 [!DNL ECID] 정보가 필요한 경우에만 이 메서드를 사용하십시오.
+* [ [!DNL ECID]  명령을 통해 `getIdentity()`검색](#retrieve-ecid-getidentity): 클라이언트측에서 [!DNL ECID] 정보가 필요한 경우에만 이 메서드를 사용하십시오.
 
 ### 데이터 수집을 위한 데이터 준비를 통해 [!DNL ECID] 검색 {#retrieve-ecid-data-prep}
 
@@ -126,7 +126,7 @@ alloy("getIdentity",{
 
 XDM [`identityMap` 필드](/help/xdm/schema/composition.md#identityMap)을(를) 사용하여 여러 ID를 사용하는 장치/사용자를 식별하고, 인증 상태를 설정하고, 기본 ID로 간주되는 식별자를 결정할 수 있습니다. 식별자가 `primary`(으)로 설정되지 않은 경우 기본 값은 `ECID`입니다.
 
-`identityMap` 필드가 `sentEvent` 명령을 사용하여 업데이트됩니다.
+`identityMap` 필드가 `sendEvent` 명령을 사용하여 업데이트됩니다.
 
 ```javascript
 alloy("sendEvent", {
@@ -162,7 +162,7 @@ ID 배열의 각 ID 개체에는 다음 속성이 포함되어 있습니다.
 | `authenticatedState` | 문자열 | **(필수)** ID의 인증 상태입니다. 가능한 값은 `ambiguous`, `authenticated` 및 `loggedOut`입니다. |
 | `primary` | 부울 | 이 ID를 프로필의 기본 조각으로 사용할지 여부를 결정합니다. 기본적으로 ECID는 사용자의 기본 식별자로 설정됩니다. 생략하면 이 값의 기본값은 `false`입니다. |
 
-`identityMap` 필드를 사용하여 장치 또는 사용자를 식별하면 [`setCustomerIDs`에서 &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=ko) [!DNL ID Service API] 메서드를 사용하는 것과 동일한 결과가 발생합니다. 자세한 내용은 [ID 서비스 API 설명서](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=ko)를 참조하세요.
+`identityMap` 필드를 사용하여 장치 또는 사용자를 식별하면 [`setCustomerIDs`에서 ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html)[!DNL ID Service API] 메서드를 사용하는 것과 동일한 결과가 발생합니다. 자세한 내용은 [ID 서비스 API 설명서](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html)를 참조하세요.
 
 ## 방문자 API에서 ECID로 마이그레이션 {#migrating-visitor-api-ecid}
 
@@ -174,7 +174,7 @@ ID 배열의 각 ID 개체에는 다음 속성이 포함되어 있습니다.
 
 ### 마이그레이션할 트레이트 업데이트
 
-XDM 형식 데이터를 Audience Manager으로 전송하면 마이그레이션할 때 이 데이터가 신호로 변환되어야 합니다. XDM에서 제공하는 새 키를 반영하도록 트레이트를 업데이트해야 합니다. 이 프로세스는 Audience Manager에서 만든 [BAAAM 도구](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=ko#getting-started-with-bulk-management)를 사용하여 쉽게 수행할 수 있습니다.
+XDM 형식 데이터를 Audience Manager으로 전송하면 마이그레이션할 때 이 데이터가 신호로 변환되어야 합니다. XDM에서 제공하는 새 키를 반영하도록 트레이트를 업데이트해야 합니다. 이 프로세스는 Audience Manager에서 만든 [BAAAM 도구](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management)를 사용하여 쉽게 수행할 수 있습니다.
 
 ## 이벤트 전달에 사용
 
