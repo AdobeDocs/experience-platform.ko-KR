@@ -2,10 +2,10 @@
 title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: efa50881315d986940f7cb3afcbfcc30ef67c3a7
+source-git-commit: 5cbf63cc0a149d54de63e3e1797cae4098498fe8
 workflow-type: tm+mt
-source-wordcount: '1411'
-ht-degree: 27%
+source-wordcount: '1322'
+ht-degree: 29%
 
 ---
 
@@ -74,12 +74,10 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 
 | 대상 | 설명 |
 | --- | --- |
-| [Snowflake 스트리밍](../destinations/catalog/warehouses/snowflake.md) 다중 지역 지원 | 이제 Snowflake 스트리밍 커넥터를 미국 VA7 지역 이외의 다른 지역의 고객이 사용할 수 있습니다. 지역 드롭다운 선택기를 사용하여 계정이 속한 Snowflake 지역을 선택합니다. Snowflake 스트리밍 테이블에 대한 예상 데이터 구조로 설명서가 업데이트되었습니다. |
-| [Snowflake 스트리밍](../destinations/catalog/warehouses/snowflake.md) 및 [Snowflake 일괄 처리](../destinations/catalog/warehouses/snowflake-batch.md) 지역 선택기 | 이제 검색과 드롭다운을 하나의 컨트롤로 결합한 새로운 검색 가능 드롭다운을 사용하여 영역을 보다 쉽게 찾을 수 있습니다. |
+| [Snowflake 일괄 처리](../destinations/catalog/warehouses/snowflake-batch.md) 영역 선택기 | 이제 검색과 드롭다운을 하나의 컨트롤로 결합한 새로운 검색 가능 드롭다운을 사용하여 영역을 보다 쉽게 찾을 수 있습니다. |
 | 대상 메타데이터를 [Snowflake 일괄 처리](../destinations/catalog/warehouses/snowflake-batch.md) 대상으로 내보내기 | 이제 이 대상으로 내보낸 파일에 대상 메타데이터가 포함됩니다. 새 테이블 구조는 앞으로 설정된 모든 새 대상 연결에 적용됩니다. 이전 테이블 구조는 더 이상 사용되지 않기 전에 3개월 더 유지됩니다. |
 | [!DNL Adobe Advertising Cloud DSP] 연결 | 새 Adobe Advertising DSP 연결은 레거시 연결과 동일한 기능을 제공하며 추가 ID를 지원합니다. |
 | [트레이드 데스크 CRM](../destinations/catalog/advertising/tradedesk-emails.md), [크리터](../destinations/catalog/advertising/criteo.md) 및 [Pinterest](../destinations/catalog/advertising/pinterest.md)에 대한 외부 대상 지원 | 이제 사용자 지정 업로드 대상(CSV에서 가져옴), 유사 대상, 페더레이션 대상 및 Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 만든 대상을 포함하여 세분화 서비스 세그먼트를 넘어 트레이드 데스크 CRM, 크리터 및 Pinterest에 대한 대상을 활성화할 수 있습니다. 자세한 내용은 각 대상의 카탈로그 페이지에서 [지원되는 대상](../destinations/catalog/advertising/criteo.md#supported-audiences) 섹션을 참조하십시오. |
-| 활성화 워크플로우의 대상 필터링 | 이제 대상 페이지와 동일한 경험을 사용하여 **[!UICONTROL Select audiences]** 단계에서 대상을 찾고 필터링할 수 있습니다. 예를 들어 대상 원본을 필터링하여 원하는 대상을 쉽게 찾을 수 있습니다. |
 | 사용자 정의 업로드 대상자 제한 늘림 | 이제 대상 인스턴스당 최대 20개의 사용자 지정 업로드 대상을 활성화할 수 있습니다. 이전에는 이 제한이 10개였습니다. |
 | 외부 대상에 대해 [지금 파일 내보내기](../destinations/ui/export-file-now.md) 및 [임시 활성화 API](../destinations/api/ad-hoc-activation-api.md) 지원 | 이제 파일 기반 대상 일괄 처리를 활성화할 때 외부 대상(예: 사용자 지정 업로드, 유사, 페더레이션 및 다른 Experience Platform 앱의 대상)과 함께 UI(파일 내보내기) 및 임시 활성화 API를 사용할 수 있습니다. |
 | OAuth 2 및 mTLS를 사용하는 HTTP API 대상 | 이제 인증 끝점에 상호 TLS(mTLS)가 필요한 경우 OAuth 2를 사용하는 HTTP API 대상을 만들고 인증할 수 있습니다. 대상 설정 중 토큰 검색은 이제 mTLS를 지원합니다. |
@@ -181,5 +179,8 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 <!--
 
 | Data Engineering Agent | The following new and updated skills are available in the Data Engineering Agent:<br><br><ul><li><strong>Data onboarding:</strong> Follow step-by-step workflows and example prompts to connect sources, check data quality, enrich data semantically, and ingest data for B2C and B2B flows, with expected outputs and troubleshooting guidance in the docs.</li><li><strong>Data quality and validation:</strong> Validate data fields and datasets using two new skills (DataField and DataSet).</li><li><strong>Data collection:</strong> Get in-context guidance for complex Data Collection configurations and use conversational insights to explore lineage, dependencies, and relationships across your data collection objects.</li></ul> |
+
+| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) multiregion support | The Snowflake Streaming connector is now available to customers beyond the US VA7 region. Use the region dropdown selector to select which Snowflake region your account is in. The documentation has been updated with the expected data structure for Snowflake streaming tables. |
+| Audience filtering in activation workflow | You can now find and filter audiences in the **[!UICONTROL Select audiences]** step with the same experience as the Audiences page; for example, you can filter on audience origin to easily find the audience you are looking for. |
 
 -->
