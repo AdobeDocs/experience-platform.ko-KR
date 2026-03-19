@@ -2,7 +2,7 @@
 description: Destination SDK으로 빌드된 대상에 대해 지원되는 타겟 ID를 구성하는 방법에 대해 알아봅니다.
 title: ID 네임스페이스 구성
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 3%
@@ -92,11 +92,11 @@ ID 네임스페이스에는 [!DNL Experience Platform]과(와) 대상 간에 일
 
 [ID 네임스페이스 개요](../../../../identity-service/features/namespaces.md)에서 ID에 대해 자세히 알아보세요.
 
-## 매핑 고려 사항
+## 매핑 고려 사항 {#mapping-considerations}
 
 고객이 소스 ID 네임스페이스를 선택하고 대상 매핑을 선택하지 않으면 Experience Platform은 자동으로 대상 매핑을 동일한 이름의 속성으로 채웁니다.
 
-## 선택적 소스 필드 해시 구성
+## 선택적 소스 필드 해시 구성 {#configure-optional-hashing}
 
 Experience Platform 고객은 데이터를 해시된 형식 또는 일반 텍스트로 Experience Platform에 수집하도록 선택할 수 있습니다. 대상 플랫폼에서 해시된 데이터와 해시되지 않은 데이터를 모두 허용하는 경우 고객에게 Experience Platform을 대상으로 내보낼 때 소스 필드 값을 해시할지 여부를 선택하는 옵션을 제공할 수 있습니다.
 
@@ -122,7 +122,7 @@ Experience Platform 고객은 데이터를 해시된 형식 또는 일반 텍스
 
 해시되지 않은 소스 특성을 대상이 해시될 것으로 예상하는 대상 특성(예: `email_lc_sha256` 또는 `phone_sha256`)에 매핑할 때 **변환 적용** 옵션을 선택하여 Adobe Experience Platform이 활성화 시 소스 특성을 자동으로 해시하도록 합니다.
 
-## 필수 소스 필드 해시 구성
+## 필수 소스 필드 해시 구성 {#configure-mandatory-hashing}
 
 대상에서 해시된 데이터만 허용하는 경우 내보낸 속성을 Experience Platform에서 자동으로 해시하도록 구성할 수 있습니다. 아래 구성은 **및** ID가 매핑될 때 `Email`변환 적용`Phone` 옵션을 자동으로 확인합니다.
 

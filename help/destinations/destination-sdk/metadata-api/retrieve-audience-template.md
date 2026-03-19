@@ -2,10 +2,10 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 템플릿을 검색하는 데 사용되는 API 호출을 예시합니다.
 title: 대상자 템플릿 검색
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 0%
+source-wordcount: '419'
+ht-degree: 1%
 
 ---
 
@@ -25,11 +25,11 @@ ht-degree: 0%
 
 ## 대상자 템플릿 API 작업 시작 {#get-started}
 
-계속하기 전에 [시작 안내서](../getting-started.md)에서 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
+계속하기 전에 [시작 안내서](../getting-started.md)를 검토하여 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 확인하십시오.
 
 ## 대상자 템플릿 검색 {#retrieve}
 
-`/authoring/audience-templates` 끝점에 대해 `GET` 요청을 수행하여 기존 대상 템플릿을 검색할 수 있습니다.
+`GET` 끝점에 대해 `/authoring/audience-templates` 요청을 수행하여 기존 대상 템플릿을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -197,6 +197,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 | 매개변수 | 설명 |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | 검색할 대상 템플릿의 ID입니다. |
+
+{style="table-layout:auto"}
 
 +++
 

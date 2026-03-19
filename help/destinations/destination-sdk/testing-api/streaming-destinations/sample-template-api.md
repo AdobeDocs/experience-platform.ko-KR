@@ -2,9 +2,9 @@
 description: 대상 테스트 API를 사용하여 대상에 대한 테스트 메시지 변형 템플릿을 생성하는 방법을 알아봅니다.
 title: 샘플 메시지 변환 템플릿 생성
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '375'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 샘플 템플릿 API 작업 시작 {#get-started}
 
-계속하기 전에 [시작 안내서](../../getting-started.md)에서 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
+계속하기 전에 [시작 안내서](../../getting-started.md)를 검토하여 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 확인하십시오.
 
 ## 샘플 템플릿 가져오기 {#generate-sample-template}
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->* 여기에서 사용해야 하는 대상 ID는 `/destinations` 끝점을 사용하여 만든 대상 구성에 해당하는 `instanceId`입니다. 자세한 내용은 [대상 구성 검색](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)을 참조하세요.
+>* 여기에서 사용해야 하는 대상 ID는 `instanceId` 끝점을 사용하여 만든 대상 구성에 해당하는 `/destinations`입니다. 자세한 내용은 [대상 구성 검색](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)을 참조하세요.
 
 **API 형식**
 
@@ -39,6 +39,8 @@ GET authoring/testing/template/sample/{DESTINATION_ID}
 | 매개변수 | 설명 |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | 메시지 변환 템플릿을 생성하는 대상 구성의 ID입니다. |
+
+{style="table-layout:auto"}
 
 **요청**
 
@@ -91,7 +93,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 }
 ```
 
-제공한 대상 ID가 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 또는 `maxUsersPerRequest`이(가) 둘 이상인 [최상의 노력 집계](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)인 대상 서버 템플릿에 해당하는 경우 요청은 다음과 유사한 샘플 템플릿을 반환합니다.
+제공한 대상 ID가 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 또는 [이(가) 둘 이상인 ](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)최상의 노력 집계`maxUsersPerRequest`인 대상 서버 템플릿에 해당하는 경우 요청은 다음과 유사한 샘플 템플릿을 반환합니다.
 
 ```python
 {#- THIS is an example template for multiple profiles -#}

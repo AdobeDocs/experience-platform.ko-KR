@@ -2,9 +2,9 @@
 title: (V2) 페가 CDH 실시간 대상 연결
 description: Adobe Experience Platform의 Pega Customer Decision Hub 실시간 대상 을 사용하여 프로필 속성 및 대상 멤버십 데이터를 Pega Customer Decision Hub로 전송하여 차후 최상의 조치를 취할 수 있습니다.
 exl-id: cbb998f9-c268-4d65-87d8-fab56c0844dc
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1170'
 ht-degree: 4%
 
 ---
@@ -37,9 +37,9 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 이 대상을 사용하여 Adobe Experience Platform에서 데이터를 내보내려면 먼저 [!DNL Pega Customer Decision Hub]에서 다음 사전 요구 사항을 완료하십시오.
 
-* [&#x200B; 인스턴스에서 &#x200B;](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소[!DNL Pega Customer Decision Hub]를 구성합니다.
-* [&#x200B; 인스턴스에서 클라이언트 자격 증명을 사용하여 OAuth 2.0 &#x200B;](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)클라이언트 등록[!DNL Pega Customer Decision Hub] 부여 유형을 구성합니다.
-* [&#x200B; 인스턴스에서 Adobe 대상 멤버십 데이터 흐름에 대한 &#x200B;](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)실시간 실행 데이터 흐름[!DNL Pega Customer Decision Hub]을 구성하십시오.
+* [ 인스턴스에서 ](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소[!DNL Pega Customer Decision Hub]를 구성합니다.
+* [ 인스턴스에서 클라이언트 자격 증명을 사용하여 OAuth 2.0 ](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)클라이언트 등록[!DNL Pega Customer Decision Hub] 부여 유형을 구성합니다.
+* [ 인스턴스에서 Adobe 대상 멤버십 데이터 흐름에 대한 ](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)실시간 실행 데이터 흐름[!DNL Pega Customer Decision Hub]을 구성하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -114,12 +114,12 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL Pega CDH Host Name]**: 프로필을 JSON 데이터로 내보내는 Pega 고객 의사 결정 허브 호스트 이름입니다.
-* **[!UICONTROL Application alias]**: 고객 결정 허브 계정에 대해 구성한 응용 프로그램 별칭입니다. 자세한 내용은 [&#x200B; 인스턴스에서 &#x200B;](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html)응용 프로그램 URL 별칭 추가[!DNL Pega Customer Decision Hub]를 참조하십시오.
+* **[!UICONTROL Application alias]**: 고객 결정 허브 계정에 대해 구성한 응용 프로그램 별칭입니다. 자세한 내용은 [ 인스턴스에서 ](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html)응용 프로그램 URL 별칭 추가[!DNL Pega Customer Decision Hub]를 참조하십시오.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 

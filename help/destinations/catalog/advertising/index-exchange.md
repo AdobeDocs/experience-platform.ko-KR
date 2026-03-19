@@ -3,10 +3,10 @@ title: 색인 교환
 description: 색인 Exchange(색인)에 연결하고 데이터를 활성화하면 색인 UI에서 만들어진 거래로 대상 세그먼트를 타깃팅할 수 있습니다.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 2%
+source-wordcount: '1215'
+ht-degree: 3%
 
 ---
 
@@ -44,7 +44,9 @@ ht-degree: 2%
 
 [!DNL Index]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/identity-service/features/namespaces.md)에 대해 자세히 알아보세요.
 
-[!DNL Index Exchange] 대상은 업로드당 하나의 ID 유형만 지원합니다. 대상 세부 정보를 구성할 때 적절한 식별자 유형을 지정해야 합니다(아래 [&quot;대상 세부 정보 채우기&quot;](#destination-details) 섹션 참조).
+>[!NOTE]
+>
+>[!DNL Index Exchange] 대상은 업로드당 하나의 id 유형만 지원합니다. 대상 세부 정보를 구성할 때 적절한 식별자 유형을 지정해야 합니다(아래 [&quot;대상 세부 정보 채우기&quot;](#destination-details) 섹션 참조).
 
 여러 ID 유형을 업로드하려면 각 ID 유형에 대해 [!DNL Index Exchange] 대상의 별도 인스턴스를 만드십시오.
 
@@ -96,7 +98,7 @@ ht-degree: 2%
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
@@ -112,7 +114,7 @@ ht-degree: 2%
 * [!UICONTROL Identifier Type]: [!DNL Index]에 보내는 식별자와 일치하는 인덱스 제공 식별자 유형을 선택합니다. 아래의 지원되는 식별자 유형 표를 참조하십시오. 사용할 식별자 유형을 잘 모를 경우 [!DNL Index] 담당자에게 문의하십시오. 여러 식별자 유형을 보내려면 이 대상의 별도 인스턴스를 만듭니다.
 * [!UICONTROL Account ID]: [!DNL Index] 계정 ID를 입력하십시오. 게시자 ID와 다릅니다. 사용할 ID를 잘 모를 경우 [!DNL Index] 담당자에게 문의하세요.
 
-#### 지원되는 식별자 유형
+#### 지원되는 식별자 유형 {#supported-identifier-types}
 
 | 식별자 유형 | 설명 |
 |------------------ | ------------- |
@@ -131,10 +133,10 @@ ht-degree: 2%
 경고를 활성화하여 이 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 하나 이상의 경고를 선택하여 데이터 흐름에 대한 상태 알림을 구독합니다. 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 

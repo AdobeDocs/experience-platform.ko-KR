@@ -1,11 +1,11 @@
 ---
 title: Google Customer Match + Display & Video 360 연결
 description: Google Customer Match + Display & Video 360 대상 커넥터를 사용하면 Experience Platform의 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail 및 YouTube과 같은 Google의 소유 및 운영 속성에서 고객에게 연락하고 다시 연결할 수 있습니다.
-badge: 제한 공개
+badge: label="제한 공개" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2479'
+source-wordcount: '2475'
 ht-degree: 5%
 
 ---
@@ -24,19 +24,19 @@ Adobe Real-Time CDP과 같은 특정 Google 통합 서드파티는 [!DNL Google 
 
 ![Adobe Experience Platform UI의 Google Customer Match + DV360 대상.](/help/destinations/assets/catalog/advertising/gcm-dv360/catalog.png)
 
-## 유럽 연합의 업데이트된 동의 요구 사항과 관련된 Google 대상 변경에 대한 중요 공지
+## 유럽 연합의 업데이트된 동의 요구 사항과 관련된 Google 대상 변경에 대한 중요 공지 {#eu-consent-notice}
 
 >[!IMPORTANT]
 >
-> Google은 유럽 연합([EU 사용자 동의 정책](https://developers.google.com/google-ads/api/docs/start))의 [디지털 시장법](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)&#x200B;(DMA)에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/display-video/api/guides/getting-started/overview), [고객 일치](https://digital-markets-act.ec.europa.eu/index_en) 및 [디스플레이 및 비디오 360 API](https://www.google.com/about/company/user-consent-policy/)에 대한 변경 사항을 출시합니다. 동의 요구 사항에 대한 이러한 변경 사항의 시행은 2024년 3월 6일부터 시작됩니다.
+> Google은 유럽 연합([EU 사용자 동의 정책](https://developers.google.com/google-ads/api/docs/start))의 [디지털 시장법](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)&#x200B;(DMA)에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google 광고 API](https://developers.google.com/display-video/api/guides/getting-started/overview), [고객 일치](https://digital-markets-act.ec.europa.eu/index_en) 및 [디스플레이 및 비디오 360 API](https://www.google.com/about/company/user-consent-policy/)에 대한 변경 사항을 출시합니다. 동의 요구 사항에 대한 이러한 변경 사항의 시행은 2024년 3월 6일부터 시작됩니다.
 ><br/>
 >EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
 ><br/>
 >Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
 ><br/>
->Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/home.md#segment-definitions) 내의 [세그먼트 정의](../../../segmentation/ui/segment-builder.md) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
+>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/home.md#segment-definitions) 내의 [세그먼트 정의](../../../segmentation/ui/segment-builder.md) 기능을 사용하여 동의하지 않은 프로필을 필터링하고 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용해야 합니다.
 
-## 이 대상을 사용해야 하는 경우
+## 이 대상을 사용해야 하는 경우 {#when-to-use}
 
 대상 카탈로그에서 Google과의 몇 가지 통합을 사용할 수 있으며 사용 가능한 각 Google 대상을 사용하는 시기를 이해하는 것은 어려울 수 있습니다. 아래 표의 정보를 참조하여 다양한 사용 사례를 이해하십시오.
 
@@ -48,11 +48,11 @@ Adobe Real-Time CDP과 같은 특정 Google 통합 서드파티는 [!DNL Google 
 
 이 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 기능을 사용하여 해결할 수 있는 샘플 사용 사례를 소개합니다.
 
-### 사용 사례 #1
+### 사용 사례 #1 {#use-case-1}
 
 운동복 브랜드는 [!DNL Google Search] 및 [!DNL Google Shopping]을(를) 통해 기존 고객에게 연락하여 과거 구매 및 검색 기록을 기반으로 오퍼와 항목을 개인화하려고 합니다. 의류 브랜드는 자체 CRM에서 Experience Platform으로 이메일 주소를 수집하고 자체 오프라인 데이터에서 대상을 구축할 수 있습니다. 그런 다음 이러한 대상을 [!DNL Google Customer Match + Display & Video 360], [!DNL Google Display & Video 360], [!DNL Search] 및 [!DNL YouTube]과(와) 같은 [!DNL Gmail] 속성에서 사용할 [!DNL Google Display Network] 대상으로 보낼 수 있습니다.
 
-### 사용 사례 #2
+### 사용 사례 #2 {#use-case-2}
 
 한 저명한 기술 회사가 새 전화기를 출시했다. 이 새로운 폰 모델을 홍보하기 위해, 그들은 이전 폰 모델을 소유한 고객들에게 이 폰의 새로운 기능과 기능성에 대한 인지도를 높이고자 한다.
 
@@ -109,7 +109,7 @@ Adobe Real-Time CDP과 같은 특정 Google 통합 서드파티는 [!DNL Google 
 
 ## [!DNL Google Customer Match] 계정 필수 구성 요소 {#google-account-prerequisites}
 
-Experience Platform에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [!DNL Customer Match]Google 지원 설명서[에 설명된 &#x200B;](https://support.google.com/google-ads/answer/6299717) 사용에 대한 Google 정책을 읽고 준수하는지 확인하십시오.
+Experience Platform에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [!DNL Customer Match]Google 지원 설명서[에 설명된 ](https://support.google.com/google-ads/answer/6299717) 사용에 대한 Google 정책을 읽고 준수하는지 확인하십시오.
 
 그런 다음 [!DNL Google] 계정이 [!DNL Standard] 이상의 권한 수준에 대해 구성되어 있는지 확인하십시오. 자세한 내용은 [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1)를 참조하세요.
 
@@ -190,7 +190,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## 대상에 연결 {#connect}
 
@@ -200,7 +200,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 >abstract="여기에 입력하는 Google 계정 ID가 이미 Adobe 계정에 연결되어 있는지 확인하십시오. 여러 클라이언트 계정이 있는 관리자 Google 계정이 있고 Experience Platform에서 특정 클라이언트 계정으로 데이터를 내보내려는 경우, 해당 클라이언트 계정을 Adobe 계정과 연결하고 여기에 계정 ID를 입력해야 합니다."
 
 >[!IMPORTANT]
-> 
+>
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
@@ -225,7 +225,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* 대상으로 *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](../../assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
@@ -244,9 +244,9 @@ For details on how to find the [!DNL App ID], refer to the [Google official docu
 소스 필드 선택:
 
 * 사용 중인 전자 메일 주소가 해시되지 않은 경우 `Email` 네임스페이스를 원본 ID로 선택하십시오.
-* `Email_LC_SHA256` [!DNL Experience Platform]전자 메일 해시 요구 사항[!DNL Google Customer Match]에 따라 데이터 수집 시 고객 전자 메일 주소를 [(으)로 해시했다면 &#x200B;](#hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
+* `Email_LC_SHA256` [!DNL Experience Platform]전자 메일 해시 요구 사항[!DNL Google Customer Match]에 따라 데이터 수집 시 고객 전자 메일 주소를 [(으)로 해시했다면 ](#hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 해시되지 않은 전화 번호로 구성된 경우 `PHONE_E.164` 네임스페이스를 원본 ID로 선택하십시오. [!DNL Experience Platform]이(가) [!DNL Google Customer Match] 요구 사항을 준수하기 위해 전화 번호를 해시합니다.
-* `Phone_SHA256_E.164` [!DNL Experience Platform]전화 번호 해시 요구 사항[!DNL Facebook]에 따라 데이터 수집 시 전화 번호를 [(으)로 해시했다면 &#x200B;](#phone-number-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
+* `Phone_SHA256_E.164` [!DNL Experience Platform]전화 번호 해시 요구 사항[!DNL Facebook]에 따라 데이터 수집 시 전화 번호를 [(으)로 해시했다면 ](#phone-number-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
 
 대상 필드 선택:
 
@@ -271,7 +271,7 @@ For details on how to find the [!DNL App ID], refer to the [Google official docu
 
 활성화 흐름을 완료한 후 **[!UICONTROL Google Ads]** 계정으로 전환합니다. 활성화된 대상은 Google 계정에 고객 목록으로 표시됩니다. 대상 크기에 따라 제공할 활성 사용자가 1,000명을 넘지 않는 한 일부 대상은 채워지지 않습니다. 자세한 내용은 [Google 대상 파트너 설명서](https://developers.google.com/audience-partner/api/docs/customer-match/get-started#verify-list)를 참조하세요. Google에 링크의 설명서에 대한 액세스를 요청해야 합니다.
 
-## 데이터 거버넌스
+## 데이터 거버넌스 {#data-governance}
 
 Experience Platform의 일부 대상에는 대상 플랫폼으로 보내거나 대상 플랫폼으로부터 받은 데이터에 대한 특정 규칙과 의무가 있습니다. 데이터의 제한 사항 및 의무와 Adobe Experience Platform 및 대상 플랫폼에서 해당 데이터를 사용하는 방법을 이해해야 합니다. Adobe Experience Platform은 이러한 데이터 사용 의무 중 일부를 관리하는 데 도움이 되는 데이터 거버넌스 도구를 제공합니다. 데이터 거버넌스 도구 및 정책에 대해 [자세히 알아보세요](../../../data-governance/labels/overview.md).
 

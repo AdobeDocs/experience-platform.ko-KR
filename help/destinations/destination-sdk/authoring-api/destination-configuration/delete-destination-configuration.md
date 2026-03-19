@@ -2,9 +2,9 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 기존 대상 구성을 삭제하는 데 사용되는 API 호출을 구현합니다.
 title: 대상 구성 삭제
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: fda542e62c448788099d63951277278a146fdfc8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '277'
 ht-degree: 2%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 2%
 
 ## 대상 구성 API 작업 시작 {#get-started}
 
-계속하기 전에 [시작 안내서](../../getting-started.md)에서 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
+계속하기 전에 [시작 안내서](../../getting-started.md)를 검토하여 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 확인하십시오.
 
 ## 대상 구성 삭제 {#delete}
 
-삭제하려는 대상 구성의 [을(를) 사용하여 &#x200B;](create-destination-configuration.md) 끝점에 대한 `DELETE` 요청을 수행하여 `/authoring/destinations`기존`{INSTANCE_ID}` 대상 구성을 삭제할 수 있습니다.
+삭제하려는 대상 구성의 [을(를) 사용하여 ](create-destination-configuration.md) 끝점에 대한 `DELETE` 요청을 수행하여 `/authoring/destinations`기존`{INSTANCE_ID}` 대상 구성을 삭제할 수 있습니다.
 
 >[!TIP]
 >
@@ -40,6 +40,8 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 | 매개변수 | 설명 |
 | --------- | ----------- |
 | `{INSTANCE_ID}` | 삭제할 대상 구성의 `ID`입니다. |
+
+{style="table-layout:auto"}
 
 +++요청
 
@@ -60,7 +62,7 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 이제 이 문서를 읽고 Destination SDK `/authoring/destinations` API 끝점을 통해 기존 대상 구성을 삭제하는 방법을 알 수 있습니다.
 

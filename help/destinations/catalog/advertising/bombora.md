@@ -2,7 +2,7 @@
 title: Bombora ABM 대상자 연결
 description: 계정 대상자를 기반으로 대상자 타겟팅, 개인화 및 억제에 대한 Bombora 캠페인에 대한 프로필을 활성화합니다.
 exl-id: a2f8e399-e192-4104-876a-fe60f8403143
-source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 3%
@@ -96,7 +96,7 @@ Bombora에는 아래 표에 설명된 대상 ID의 매핑이 필요합니다. [I
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
@@ -124,7 +124,7 @@ Bombora에는 아래 표에 설명된 대상 ID의 매핑이 필요합니다. [I
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 

@@ -5,10 +5,10 @@ title: 흐름 서비스 API를 사용하여 대상 계정 삭제
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 대상 계정을 삭제하는 방법을 알아봅니다.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 21%
+source-wordcount: '758'
+ht-degree: 19%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 21%
 * [대상](../home.md): [!DNL Destinations]은(는) Adobe Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 * [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 [!DNL Flow Service] API를 사용하여 대상 계정을 성공적으로 삭제하기 위해 알아야 하는 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Flow Service] API를 사용하여 대상 계정을 성공적으로 삭제하는 데 알아야 하는 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기 {#reading-sample-api-calls}
 
@@ -39,7 +39,7 @@ ht-degree: 21%
 
 ### 필수 헤더에 대한 값 수집 {#gather-values-for-required-headers}
 
-[!DNL Experience Platform] API를 호출하려면 먼저 [인증 튜토리얼](https://www.adobe.com/go/platform-api-authentication-en)을 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -87,6 +87,8 @@ GET /connections/{CONNECTION_ID}
 | Parameter | Description |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | The unique `id` value for the connection you want to retrieve. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -147,7 +149,7 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >대상 계정을 삭제하기 전에 대상 계정에 대한 기존 데이터 흐름을 모두 삭제해야 합니다.
->&#x200B;>기존 데이터 흐름을 삭제하려면 아래 페이지를 참조하십시오.
+>기존 데이터 흐름을 삭제하려면 아래 페이지를 참조하십시오.
 >
 >* 기존 데이터 흐름을 삭제하려면 [Experience Platform UI를 사용](../ui/delete-destinations.md)하십시오.
 >* 기존 데이터 흐름을 삭제하려면 [흐름 서비스 API를 사용](delete-destination-dataflow.md)하십시오.
@@ -183,6 +185,6 @@ curl -X DELETE \
 
 이 자습서의 API 끝점은 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 이 자습서에 따라 [!DNL Flow Service] API를 사용하여 기존 대상 계정을 삭제했습니다. 대상 사용에 대한 자세한 내용은 [대상 개요](/help/destinations/home.md)를 참조하세요.

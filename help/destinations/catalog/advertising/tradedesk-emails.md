@@ -3,9 +3,9 @@ title: 트레이드 데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타기팅 및 억제에 대한 프로필을 트레이드 데스크 계정에 활성화합니다.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1812'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 >* EU에서 데이터를 원본으로 사용하는 경우 **[!DNL The Trade Desk - CRM (EU)]** 대상을 사용하십시오.
 >* APAC 또는 NAMER 영역에서 데이터를 소싱할 경우 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 대상을 사용합니다.
 >
->이 대상 커넥터 및 설명서 페이지는 *[!DNL Trade Desk]* 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 [!DNL Trade Desk] 담당자에게 문의하십시오.
+>이 대상 커넥터 및 설명서 페이지는 *[!DNL Trade Desk]* 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청이 있으면 [!DNL Trade Desk] 담당자에게 문의하십시오.
 
 ## 개요 {#overview}
 
@@ -106,7 +106,6 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
       * 기간(`.`) 문자(ASCII 코드 46). 예를 들어 &#39;jane.doe@gmail.com&#39;을 &#39;janedoe@gmail.com&#39;으로 정규화합니다.
      * 더하기 기호(`+`) 문자(ASCII 코드 43) 및 모든 후속 문자입니다. 예를 들어 &#39;janedoe+home@gmail.com&#39;을 &#39;janedoe@gmail.com&#39;으로 정규화합니다.
   
-
 ## 전화번호 표준화 및 해시 요구 사항 {#phone-hashing}
 
 다음은 전화번호 업로드에 대해 알아야 할 사항입니다.
@@ -166,7 +165,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 
 ### 대상 세부 사항 입력 {#fill-in-details}
 
-대상 데이터를 대상으로 보내거나 활성화하려면 먼저 고유한 대상 플랫폼에 대한 연결을 설정해야 합니다. [이 대상을 설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ko)하는 동안 다음 정보를 제공해야 합니다.
+대상 데이터를 대상으로 보내거나 활성화하려면 먼저 고유한 대상 플랫폼에 대한 연결을 설정해야 합니다. [이 대상을 설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)하는 동안 다음 정보를 제공해야 합니다.
 
 * **[!UICONTROL Account Type]**: **[!UICONTROL Existing Account]** 옵션을 선택하십시오.
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
@@ -180,7 +179,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
@@ -222,13 +221,14 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 | netID | net_id |
 | FirstID | first_id |
 
+{style="table-layout:auto"}
 
 ## 데이터 내보내기 유효성 검사 {#validate}
 
 데이터가 Experience Platform에서 [!DNL The Trade Desk]&#x200B;(으)로 올바르게 내보내졌는지 확인하려면 [!DNL The Trade Desk] &quot;Advertiser Data and ID&quot; 라이브러리의 Adobe 1PD 탭에서 대상을 찾으십시오. [!DNL Trade Desk] UI 내에서 해당 ID를 찾는 단계는 다음과 같습니다.
 
 1. 먼저 **[!UICONTROL Libraries]** 탭을 선택하고 **[!UICONTROL Advertiser data and identity]** 섹션을 검토합니다.
-2. **[!UICONTROL Adobe 1PD]**&#x200B;을(를) 클릭하면 [!DNL The Trade Desk]에 대해 활성화된 모든 대상이 나열됩니다.
+2. **[!UICONTROL Adobe 1PD]**&#x200B;을(를) 선택하면 [!DNL The Trade Desk]에 활성화된 모든 대상이 나열됩니다.
 3. Experience Platform의 세그먼트 이름 또는 세그먼트 ID가 [!DNL Trade Desk] UI에서 세그먼트 이름으로 표시됩니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}

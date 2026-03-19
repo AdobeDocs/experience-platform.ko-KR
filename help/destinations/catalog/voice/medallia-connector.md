@@ -2,9 +2,9 @@
 title: 메달리아 연결
 description: 타겟팅된 Medallia 설문 조사 및 피드백 수집을 위한 프로필을 활성화하여 고객의 요구 사항과 기대치를 보다 잘 이해할 수 있습니다.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1268'
 ht-degree: 3%
 
 ---
@@ -17,17 +17,17 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->이 대상 커넥터 및 설명서 페이지는 Medallia 팀에서 만들고 관리합니다. 문의 사항이나 업데이트 요청은 adobe-integrations@medallia.com으로 직접 문의하시기 바랍니다.
+>이 대상 커넥터 및 설명서 페이지는 Medallia 팀에서 만들고 관리합니다. 문의 사항이나 업데이트 요청은 adobe-integrations@medallia.com으로 직접 문의하십시오.
 
 ## 사용 사례 {#use-cases}
 
 Medallia 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례를 소개합니다.
 
-### 사용 사례 #1
+### 사용 사례 #1 {#use-case-1}
 
 B2B 브랜드는 온보딩 프로그램을 평가하고 간소화하려고 합니다. 온보딩 프로세스를 완료한 고객에게 실시간으로 개인화된 설문 조사를 보내려고 합니다.
 
-### 사용 사례 #2
+### 사용 사례 #2 {#use-case-2}
 
 retailer은 주문 처리를 위한 고객 선호도를 더 잘 이해하고자 합니다. 지난 한 달 동안 온라인 및 매장 내에서 구매한 고객에게 간단한 1문 SMS 설문 조사를 보내려고 합니다.
 
@@ -93,7 +93,7 @@ Medallia는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
@@ -128,7 +128,7 @@ Medallia는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
@@ -153,7 +153,7 @@ Medallia는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/
 ![ID 및 특성에 대한 샘플 매핑을 보여 주는 이미지입니다.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
 
 >[!IMPORTANT]
-> 
+>
 > **대상 필드** > **사용자 지정 특성 선택** > **특성 이름**&#x200B;을 사용하여 매핑하는 모든 대상 사용자 지정 특성에 대해 정확한 **특성 이름**&#x200B;을(를) Medallia 배달 팀과 공유합니다. 직접 공유할 매핑 페이지의 스크린샷을 캡처할 수 있습니다.
 
 ## 내보낸 데이터 {#exported-data}

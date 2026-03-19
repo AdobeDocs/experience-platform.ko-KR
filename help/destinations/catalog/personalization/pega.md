@@ -2,9 +2,9 @@
 title: (V1) 페가 CDH 실시간 대상 연결
 description: Adobe Experience Platform의 Pega Customer Decision Hub 실시간 대상 을 사용하여 프로필 속성 및 대상 멤버십 데이터를 Pega Customer Decision Hub로 전송하여 차후 최상의 조치를 취할 수 있습니다.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1213'
 ht-degree: 3%
 
 ---
@@ -25,15 +25,15 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 >
 >이 대상 커넥터 및 설명서 페이지는 Pegasystem에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 Pega에게 직접 [여기](mailto:support@pega.com)로 문의하십시오.
 
-## 사용 사례
+## 사용 사례 {#use-cases}
 
 [!DNL Customer Decision Hub] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례를 소개합니다.
 
-### 통신
+### 통신 {#telecommunications}
 
 마케터는 고객 참여를 위해 [!DNL Pega Customer Decision Hub]이(가) 제공한 데이터 과학 모델 기반의 차선책을 통해 얻은 통찰력을 활용하려고 합니다. [!DNL Pega Customer Decision Hub]은(는) 고객의 의도에 크게 의존합니다(예: &quot;Interest_In_5G&quot;, &quot;Interest_in_Unlimited_Dataplan&quot; 또는 &quot;Interest_in_iPhone_accessories&quot;).
 
-### 금융 서비스
+### 금융 서비스 {#financial-services}
 
 마케터는 연금 제도 또는 퇴직 연금 제도 뉴스레터를 구독하거나 구독 취소한 고객을 위해 오퍼를 최적화하려고 합니다. 금융 서비스 회사는 자체 CRM에서 여러 CustomerID를 Adobe Experience Platform으로 수집하고, 자체 오프라인 데이터에서 대상을 작성하고, 대상을 입력하거나 종료하는 프로필을 [!DNL Pega Customer Decision Hub]&#x200B;(으)로 전송하여 아웃바운드 채널에서 NBA(Next Best Action) 의사 결정을 내릴 수 있습니다.
 
@@ -41,9 +41,9 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 이 대상을 사용하여 Adobe Experience Platform에서 데이터를 내보내려면 먼저 [!DNL Pega Customer Decision Hub]에서 다음 사전 요구 사항을 완료하십시오.
 
-* [&#x200B; 인스턴스에서 &#x200B;](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소[!DNL Pega Customer Decision Hub]를 구성합니다.
-* [&#x200B; 인스턴스에서 클라이언트 자격 증명을 사용하여 OAuth 2.0 &#x200B;](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)클라이언트 등록[!DNL Pega Customer Decision Hub] 부여 유형을 구성합니다.
-* [&#x200B; 인스턴스에서 Adobe 대상 멤버십 데이터 흐름에 대한 &#x200B;](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)실시간 실행 데이터 흐름[!DNL Pega Customer Decision Hub]을 구성하십시오.
+* [ 인스턴스에서 ](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소[!DNL Pega Customer Decision Hub]를 구성합니다.
+* [ 인스턴스에서 클라이언트 자격 증명을 사용하여 OAuth 2.0 ](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)클라이언트 등록[!DNL Pega Customer Decision Hub] 부여 유형을 구성합니다.
+* [ 인스턴스에서 Adobe 대상 멤버십 데이터 흐름에 대한 ](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)실시간 실행 데이터 흐름[!DNL Pega Customer Decision Hub]을 구성하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -122,7 +122,7 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 

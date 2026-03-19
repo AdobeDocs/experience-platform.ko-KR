@@ -3,10 +3,10 @@ title: Gainsight PX 연결
 description: Gainsight PX 대상을 사용하여 Gainsight PX 플랫폼으로 세그멘테이션 정보를 보냅니다.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '988'
-ht-degree: 3%
+source-wordcount: '983'
+ht-degree: 4%
 
 ---
 
@@ -31,7 +31,7 @@ SaaS 회사는 Gainsight PX에서 작성한 애플리케이션 내 안내서를 
 ## 전제 조건 {#prerequisites}
 
 * [!DNL Gainsight] 지원 팀에 연락하여 구독에 대한 외부 세그먼트 기능 활성화를 요청하세요.
-* **[!UICONTROL Generate New Secret]**&#x200B;회사 세부 정보 페이지[의 맨 아래에 있는 &#x200B;](https://app.aptrinsic.com/settings/subscription) 단추를 사용하여 PX 구독에 대한 OAuth 암호 값을 생성합니다.
+* **[!UICONTROL Generate New Secret]**&#x200B;회사 세부 정보 페이지[의 맨 아래에 있는 ](https://app.aptrinsic.com/settings/subscription) 단추를 사용하여 PX 구독에 대한 OAuth 암호 값을 생성합니다.
   ![새 암호 생성 단추를 표시하는 Gainsight PX의 회사 세부 정보 화면](../../assets/catalog/analytics/gainsight-px/generate_oauth_secret.png)
 
 ## 지원되는 ID {#supported-identities}
@@ -96,7 +96,7 @@ Gainsight PX는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](..
 
 * **[!UICONTROL Password]**: [[!DNL Gainsight PX]](https://app.aptrinsic.com)에 로그인하는 데 사용되는 암호
 * **[!UICONTROL Client ID]**: [회사 세부 정보 페이지](https://app.aptrinsic.com/settings/subscription)의 Gainsight PX 구독 ID
-* **[!UICONTROL Client secret]**: [&#x200B; UI의 &#x200B;](https://app.aptrinsic.com/settings/subscription)회사 세부 정보 페이지[!DNL Gainsight PX]의 맨 아래에 생성된 OAuth 암호입니다.
+* **[!UICONTROL Client secret]**: [ UI의 ](https://app.aptrinsic.com/settings/subscription)회사 세부 정보 페이지[!DNL Gainsight PX]의 맨 아래에 생성된 OAuth 암호입니다.
 * **[!UICONTROL Username]**: [[!DNL Gainsight PX]](https://app.aptrinsic.com) UI에 로그인하는 데 사용되는 전자 메일
 
 ### 대상 세부 정보 입력 {#destination-details}
@@ -110,14 +110,14 @@ Gainsight PX는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](..
 
 대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 >
 >* 데이터를 활성화하려면 **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
-대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [프로필 및 세그먼트를 스트리밍 세그먼트 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)를 참조하십시오.
+이 대상에 대한 대상 활성화에 대한 지침은 [스트리밍 대상에 대상 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
 ### ID 매핑 {#map}
 

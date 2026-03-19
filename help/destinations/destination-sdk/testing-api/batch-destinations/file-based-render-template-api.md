@@ -2,9 +2,9 @@
 description: 이 페이지에서는 /authoring/testing/template/render 끝점을 사용하여 대상 구성에 정의된 템플릿화된 고객 데이터 필드의 모양을 시각화하는 방법에 대해 설명합니다.
 title: 템플릿화된 고객 필드의 유효성 검사
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 2%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 2%
 
 끝점은 고객 데이터 필드에 대한 무작위 값을 생성하고 응답에서 반환합니다. 버킷 이름 또는 폴더 경로와 같은 고객 데이터 필드의 의미 체계 구조를 확인하는 데 도움이 됩니다.
 
-## 시작하기 {#getting-started}
+## 시작 {#getting-started}
 
-계속하기 전에 [시작 안내서](../../getting-started.md)에서 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
+계속하기 전에 [시작 안내서](../../getting-started.md)를 검토하여 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 확인하십시오.
 
 ## 전제 조건 {#prerequisites}
 
@@ -75,10 +75,12 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | -------- | ----------- |
 | `destinationId` | 테스트 중인 [대상 구성](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)의 ID입니다. |
 | `templates` | [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)에 정의된 서식 있는 필드 이름입니다. |
+
+{style="table-layout:auto"}
 
 **응답**
 

@@ -3,9 +3,9 @@ title: 대상에 대한 잠재 고객 활성화
 type: Tutorial
 description: 잠재 고객을 대상으로 활성화하는 방법을 알아봅니다
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '593'
 ht-degree: 14%
 
 ---
@@ -63,11 +63,15 @@ ht-degree: 14%
 
 ## 잠재 고객 선택 {#select-prospect-audiences}
 
-잠재 고객 이름 왼쪽에 있는 확인란을 사용하여 대상으로 내보낼 대상을 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다. 이 보기에는 Prospect 대상만 표시되고 다른 대상은 표시되지 않습니다.
+잠재 고객 이름 왼쪽에 있는 확인란을 사용하여 대상으로 내보낼 대상을 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
+
+>[!NOTE]
+>
+>이 보기에는 Prospect 대상만 표시되고 다른 대상은 표시되지 않습니다.
 
 ![내보낼 잠재 고객을 선택할 수 있는 대상 선택 단계를 표시하는 데이터 세트 내보내기 워크플로우입니다.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 
-## 예약 및 다음 단계
+## 예약 및 다음 단계 {#scheduling-and-next-steps}
 
 잠재 고객을 내보내기 위한 활성화 워크플로의 나머지 부분에 대해서는 파일 기반 대상으로 데이터 활성화에 대한 자습서를 참조하십시오. [대상자 내보내기 예약 단계](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)에서 계속합니다.
 

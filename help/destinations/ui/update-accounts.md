@@ -4,9 +4,9 @@ title: 대상 계정 업데이트
 type: Tutorial
 description: 이 자습서에는 Adobe Experience Platform UI에서 대상 계정을 업데이트하는 단계가 나와 있습니다
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-**[!UICONTROL 계정]** 탭에는 다양한 대상으로 설정한 연결에 대한 세부 정보가 표시됩니다. 각 대상 계정에서 확인할 수 있는 모든 정보는 [계정 개요](../ui/destinations-workspace.md#accounts)를 참조하세요.
+**[!UICONTROL Accounts]** 탭에는 다양한 대상으로 설정한 연결에 대한 세부 정보가 표시됩니다. 각 대상 계정에서 확인할 수 있는 모든 정보는 [계정 개요](../ui/destinations-workspace.md#accounts)를 참조하세요.
 
 이 튜토리얼에서는 Experience Platform UI를 사용하여 대상 계정 세부 사항을 업데이트하는 단계를 설명합니다.
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 기존 대상에 대한 연결 세부 사항을 업데이트하려면 아래 단계를 따르십시오.
 
-1. [Experience Platform UI](https://platform.adobe.com/)에 로그인하고 왼쪽 탐색 모음에서 **[!UICONTROL 대상]**&#x200B;을 선택합니다. 기존 계정을 보려면 상단 헤더에서 **[!UICONTROL 계정]**&#x200B;을 선택하십시오.
+1. [Experience Platform UI](https://platform.adobe.com/)에 로그인하고 왼쪽 탐색 모음에서 **[!UICONTROL Destinations]**&#x200B;을(를) 선택합니다. 기존 계정을 보려면 상단 헤더에서 **[!UICONTROL Accounts]**&#x200B;을(를) 선택하십시오.
 
    ![계정 탭](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -37,13 +37,13 @@ ht-degree: 0%
 
    ![대상 계정 필터링](../assets/ui/update-accounts/filter-accounts.png)
 
-3. 업데이트하려는 계정 이름 옆의 생략 부호(`...`)를 선택합니다. 팝업 패널이 표시되어 계정을 **[!UICONTROL 대상자 활성화]**, **[!UICONTROL 세부 정보 편집]** 및 **[!UICONTROL 삭제]**&#x200B;하는 옵션을 제공합니다. 계정 정보를 편집하려면 ![세부 정보 편집 단추](/help/images/icons/edit.png) **[!UICONTROL 세부 정보 편집 단추]** 단추를 선택하십시오.
+3. 업데이트하려는 계정 이름 옆의 생략 부호(`...`)를 선택합니다. **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]** 및 **[!UICONTROL Delete]** 계정에 옵션을 제공하는 팝업 패널이 나타납니다. 계정 정보를 편집하려면 ![세부 정보 편집 단추](/help/images/icons/edit.png) **[!UICONTROL Edit details]** 단추를 선택하세요.
 
    ![계정 편집](../assets/ui/update-accounts/accounts-edit.png)
 
 4. 업데이트된 계정 자격 증명을 입력합니다.
 
-   * `OAuth1` 또는 `OAuth2` 연결 유형을 사용하는 계정의 경우 **[!UICONTROL OAuth 다시 연결]**&#x200B;을 선택하여 계정 자격 증명을 갱신하십시오. 계정의 이름과 설명을 업데이트할 수도 있습니다.
+   * `OAuth1` 또는 `OAuth2` 연결 유형을 사용하는 계정의 경우 **[!UICONTROL Reconnect OAuth]**&#x200B;을(를) 선택하여 계정 자격 증명을 갱신하십시오. 계정의 이름과 설명을 업데이트할 수도 있습니다.
 
    ![세부 정보 편집](../assets/ui/update-accounts/edit-details-oauth.png)
 
@@ -59,10 +59,10 @@ ht-degree: 0%
 
    ![서버 간 세부 정보 편집](../assets/ui/update-accounts/edit-details-s2s.png)
 
-5. 계정 세부 정보 업데이트를 완료하려면 **[!UICONTROL 저장]**&#x200B;을 선택하세요.
+5. 계정 세부 정보 업데이트를 완료하려면 **[!UICONTROL Save]**&#x200B;을(를) 선택하십시오.
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
-이 자습서에 따라 **[!UICONTROL 대상]** 작업 영역을 사용하여 기존 계정을 업데이트했습니다.
+이 자습서에 따라 **[!UICONTROL destinations]** 작업 영역을 사용하여 기존 계정을 업데이트했습니다.
 
 대상에 대한 자세한 내용은 [대상 개요](../catalog/overview.md)를 참조하세요.

@@ -4,10 +4,10 @@ title: 흐름 서비스 API를 사용하여 대상 연결 편집
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 대상 연결의 다양한 구성 요소를 편집하는 방법에 대해 알아봅니다.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1610'
+ht-degree: 5%
 
 ---
 
@@ -64,7 +64,7 @@ Experience Platform API를 호출하려면 먼저 [인증 자습서](https://www
 
 >[!TIP]
 >
->Experience Platform UI를 사용하여 원하는 대상 데이터 흐름 ID를 가져올 수 있습니다. **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**(으)로 이동하여 원하는 대상 데이터 흐름을 선택하고 오른쪽 레일에서 대상 ID를 찾습니다. 대상 ID는 다음 단계에서 흐름 ID로 사용할 값입니다.
+>Experience Platform UI를 사용하여 원하는 대상 데이터 흐름 ID를 가져올 수 있습니다. **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**(으)로 이동하여 원하는 대상 데이터 흐름을 선택하고 오른쪽 레일에서 대상 ID를 찾습니다. 대상 ID는 다음 단계에서 흐름 ID로 사용할 값입니다.
 >
 > ![Experience Platform UI를 사용하여 대상 ID 가져오기](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
@@ -79,6 +79,8 @@ GET /flows/{FLOW_ID}
 | 매개변수 | 설명 |
 | --------- | ----------- |
 | `{FLOW_ID}` | 검색할 대상 데이터 흐름의 고유한 `id` 값입니다. |
+
+{style="table-layout:auto"}
 
 **요청**
 
@@ -233,6 +235,8 @@ curl -X PATCH \
 | `path` | 플로우에서 업데이트할 부분을 정의합니다. |
 | `value` | 매개 변수를 업데이트할 새 값입니다. |
 
+{style="table-layout:auto"}
+
 **응답**
 
 성공적인 응답은 대상 연결 ID와 업데이트된 Etag를 반환합니다. 대상 연결 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 수행하여 업데이트를 확인할 수 있습니다.
@@ -248,7 +252,7 @@ curl -X PATCH \
 
 **요청**
 
-다음 요청은 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) 또는 [[!DNL Google Ad Manager 360] 대상](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 연결의 매개 변수를 업데이트하여 새 [**[!UICONTROL 대상 ID를 대상 이름에 추가]**](/help/release-notes/2023/april-2023.md#destinations) 필드를 추가합니다.
+다음 요청은 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) 또는 [[!DNL Google Ad Manager 360] 대상](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 연결의 매개 변수를 업데이트하여 새 [**[!UICONTROL Append audience ID to audience name]**](/help/release-notes/2023/april-2023.md#destinations) 필드를 추가합니다.
 
 ```shell
 curl -X PATCH \
@@ -273,6 +277,8 @@ curl -X PATCH \
 | `path` | 플로우에서 업데이트할 부분을 정의합니다. |
 | `value` | 매개 변수를 업데이트할 새 값입니다. |
 
+{style="table-layout:auto"}
+
 **응답**
 
 성공적인 응답은 대상 연결 ID와 업데이트된 etag를 반환합니다. 대상 연결 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 수행하여 업데이트를 확인할 수 있습니다.
@@ -288,7 +294,7 @@ curl -X PATCH \
 
 **요청**
 
-다음 요청은 `advertiserId`대상 연결[[!DNL Pinterest] 의 &#x200B;](/help/destinations/catalog/advertising/pinterest.md#parameters) 매개 변수를 업데이트합니다.
+다음 요청은 `advertiserId`대상 연결[[!DNL Pinterest] 의 ](/help/destinations/catalog/advertising/pinterest.md#parameters) 매개 변수를 업데이트합니다.
 
 ```shell
 curl -X PATCH \
@@ -315,6 +321,8 @@ curl -X PATCH \
 | `path` | 플로우에서 업데이트할 부분을 정의합니다. |
 | `value` | 매개 변수를 업데이트할 새 값입니다. |
 
+{style="table-layout:auto"}
+
 **응답**
 
 성공적인 응답은 대상 연결 ID와 업데이트된 etag를 반환합니다. 대상 연결 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 수행하여 업데이트를 확인할 수 있습니다.
@@ -336,7 +344,7 @@ curl -X PATCH \
 
 기본 연결의 구성 요소를 업데이트하려면 기본 연결 ID, 버전 및 사용할 새 값을 제공하는 동안 `PATCH` 끝점에 대해 `/connections` 요청을 수행합니다.
 
-매개 변수 [에 대해 원하는 대상으로 기존 데이터 흐름을 검사했을 때 &#x200B;](#look-up-dataflow-details)이전 단계`baseConnection`에서 기본 연결 ID를 얻었습니다.
+매개 변수 [에 대해 원하는 대상으로 기존 데이터 흐름을 검사했을 때 ](#look-up-dataflow-details)이전 단계`baseConnection`에서 기본 연결 ID를 얻었습니다.
 
 >[!IMPORTANT]
 >
@@ -392,6 +400,8 @@ curl -X PATCH \
 | `path` | 플로우에서 업데이트할 부분을 정의합니다. |
 | `value` | 매개 변수를 업데이트할 새 값입니다. |
 
+{style="table-layout:auto"}
+
 **응답**
 
 성공적인 응답은 기본 연결 ID와 업데이트된 etag를 반환합니다. 기본 연결 ID를 제공하면서 [!DNL Flow Service] API에 대한 GET 요청을 만들어 업데이트를 확인할 수 있습니다.
@@ -433,6 +443,8 @@ curl -X PATCH \
 | `op` | 데이터 흐름을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 `add`, `replace` 및 `remove`이(가) 포함됩니다. |
 | `path` | 플로우에서 업데이트할 부분을 정의합니다. |
 | `value` | 매개 변수를 업데이트할 새 값입니다. |
+
+{style="table-layout:auto"}
 
 **응답**
 

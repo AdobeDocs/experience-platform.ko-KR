@@ -2,7 +2,7 @@
 description: 대상 테스트 API를 사용하여 스트리밍 대상 구성을 게시하기 전에 테스트하는 방법을 알아봅니다.
 title: 스트리밍 대상 테스트 API 개요
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -233,6 +233,6 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 요청 및 응답 매개 변수에 대한 설명은 [대상 테스트 API 작업](../../testing-api/streaming-destinations/destination-testing-api.md)을 참조하세요.
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 대상을 테스트하고 올바르게 구성되었는지 확인한 후 [대상 게시 API](../../publishing-api/create-publishing-request.md)를 사용하여 Adobe에 구성을 제출하여 검토하십시오.

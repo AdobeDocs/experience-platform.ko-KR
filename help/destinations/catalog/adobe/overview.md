@@ -3,7 +3,7 @@ keywords: 대상;experience cloud 솔루션;target;target 대상;ad cloud;advert
 title: Adobe 대상 개요
 description: 광고 타기팅, 개인화, 마케팅 자동화 등을 위해 Experience Platform의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 7%
@@ -22,7 +22,7 @@ ht-degree: 7%
 
 연결과 확장의 차이점을 이해하려면 대상 유형 및 범주 페이지에서 [연결](../../destination-types.md#connections)을 참조하십시오.
 
-### 연결
+### 연결 {#connections}
 
 * [Adobe Advertising Cloud DSP 연결](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Adobe Campaign 연결](../email-marketing/adobe-campaign.md)
@@ -32,7 +32,7 @@ ht-degree: 7%
 * [Marketo Measure Ultimate 연결](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
 * [페더레이션 대상 컴포지션 연결](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
 
-### 확장
+### 확장 {#extensions}
 
 * [Adobe Advertising Cloud 확장](../advertising/adobe-advertising-cloud.md)
 * [Adobe Analytics 확장](../analytics/adobe-analytics.md)
@@ -45,8 +45,8 @@ ht-degree: 7%
 * [Marketo Munchkin 확장 프로그램](../email/marketo-munchkin.md)
 * [Marketo 웹 Personalization 확장](../personalization/marketo-web-personalization.md)
 
-## Experience Platform 대상 공유
+## Experience Platform 대상 공유 {#audience-sharing}
 
 Experience Platform 대상 공유 기능을 사용하여 Experience Platform 대상을 추가 Adobe 대상에 공유할 수 있습니다. 자세한 내용은 아래 페이지(Audience Manager 설명서 포털에 열림)를 참조하십시오.
 
-* [핵심 서비스 통합을 통해 Adobe Audience Manager, Adobe Advertising Cloud 및 Adobe Target과 공유하는 Experience Platform 대상](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ko)
+* [핵심 서비스 통합을 통해 Adobe Audience Manager, Adobe Advertising Cloud 및 Adobe Target과 공유하는 Experience Platform 대상](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

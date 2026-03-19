@@ -3,9 +3,9 @@ title: 대상에 대한 계정 대상자 활성화
 type: Tutorial
 description: 대상에 대한 계정 대상을 활성화하는 방법을 알아봅니다
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 계정 대상을 지원하는 ![대상.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
-## 비디오 개요
+## 비디오 개요 {#video-overview}
 
 계정 대상자 만들기 및 활성화에 대한 개요와 계정 대상자 활성화 시 지원되는 사용 사례에 대해서는 아래 비디오를 참조하십시오.
 
@@ -69,17 +69,21 @@ ht-degree: 0%
 
 ## 계정 대상자 선택 {#select-account-audiences}
 
-계정 대상자 이름 왼쪽에 있는 확인란을 사용하여 대상으로 내보낼 대상을 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다. 이 보기에는 *계정 대상자*&#x200B;만 표시되며 다른 대상자 유형은 표시되지 않습니다.
+계정 대상자 이름 왼쪽에 있는 확인란을 사용하여 대상으로 내보낼 대상을 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
+
+>[!NOTE]
+>
+>이 보기에는 *계정 대상자*&#x200B;만 표시되고 다른 대상자 유형은 표시되지 않습니다.
 
 ![내보낼 계정 대상을 선택할 수 있는 대상 선택 단계를 표시하는 데이터 집합 내보내기 워크플로우입니다.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
 
-## 예약 및 다음 단계
+## 예약 및 다음 단계 {#scheduling-and-next-steps}
 
 계정 대상을 내보내는 활성화 워크플로의 나머지 부분에 대해서는 파일 기반 대상으로 데이터 활성화에 대한 자습서를 참조하십시오. [대상자 내보내기 예약 단계](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)에서 계속합니다. **[!UICONTROL (Companies) LinkedIn Matched Audiences]** 대상에 대한 계정 대상을 활성화하는 경우 스트리밍 대상 활성화에 대한 자습서를 읽어 보십시오. [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)에서 계속합니다.
 
 >[!NOTE]
 >
->예약 단계에서 계정 대상을 클라우드 저장소 대상으로 내보낼 때 계정 대상을 활성화하는 워크플로에서는 [전체 파일](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _을(를) 매일 일정_&#x200B;에 내보낼 수만 있습니다. 시간별 내보내기는 지원되지 않습니다. 또한 **[!UICONTROL After audience evaluation]**&#x200B;은(는) 유일하게 지원되는 평가 유형입니다.
+>계정 대상을 클라우드 저장소 대상으로 내보낼 때 예약 단계에서 계정 대상을 활성화하는 워크플로에서는 [전체 파일](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _을(를) 매일 일정_&#x200B;에 내보낼 수만 있습니다. 시간별 내보내기는 지원되지 않습니다. **[!UICONTROL After audience evaluation]**&#x200B;은(는) 유일하게 지원되는 평가 유형입니다.
 
 ## 중요한 콜아웃 및 알려진 제한 사항 {#important-callouts-known-limitations}
 
@@ -95,6 +99,8 @@ ht-degree: 0%
 |---------|----------|
 | `accountName` | `companyName` |
 | `accountKey.sourceKey` | `primaryId`(**[!UICONTROL Select Identity namespace]**&#x200B;을(를) 선택할 때 **[!UICONTROL Target Field]** 보기에서 이 필드를 선택합니다. <br> ![워크플로에서 강조 표시된 ID 네임스페이스를 선택하여 계정 대상자를 대상으로 활성화합니다.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "대상에 대한 계정 대상을 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"} |
+
+{style="table-layout:auto"}
 
 ### 데이터 거버넌스 적용 {#data-governance-enforcement}
 

@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK의 /sample-profiles API 엔드포인트를 사용하여 소스 스키마를 기반으로 샘플 프로필을 생성하는 방법을 설명합니다. 이러한 샘플 프로필을 사용하여 파일 기반 대상 구성을 테스트할 수 있습니다.
 title: 소스 스키마를 기반으로 샘플 프로필 생성
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '652'
 ht-degree: 1%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 1%
 
 샘플 프로필은 프로필의 JSON 구조를 이해하는 데 도움이 될 수 있습니다. 또한 추가적인 대상 테스트를 위해 자신의 프로필 데이터로 사용자 정의할 수 있는 기본값을 제공합니다.
 
-## 시작하기 {#getting-started}
+## 시작 {#getting-started}
 
-계속하기 전에 [시작 안내서](../../getting-started.md)에서 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
+계속하기 전에 [시작 안내서](../../getting-started.md)를 검토하여 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 확인하십시오.
 
 ## 전제 조건 {#prerequisites}
 
@@ -116,7 +116,7 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 이 문서를 읽은 후에는 대상 [활성화 흐름](../../../ui/activate-batch-profile-destinations.md)에서 구성한 소스 스키마를 기반으로 샘플 프로필을 생성하는 방법을 이해할 수 있습니다.
 

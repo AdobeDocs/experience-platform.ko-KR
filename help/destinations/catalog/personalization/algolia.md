@@ -2,7 +2,7 @@
 title: 알골리아
 description: 이 커넥터를 사용하여 Algolia에 대한 대상자를 활성화하여 개인화하고 검색 및 권장 사항 전반에서 사용할 수 있습니다. 그런 다음 Algolia 사용자 프로필 소스 커넥터를 사용하여 프로필을 Real-Time CDP으로 가져와 리치 대상자를 구축할 수 있습니다.
 exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1140'
 ht-degree: 4%
@@ -111,7 +111,7 @@ ht-degree: 4%
 
 ![새 계정](../../assets/catalog/personalization/algolia/connection.png)
 
-### 대상 세부 정보 입력
+### 대상 세부 정보 입력 {#destination-details}
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
@@ -131,11 +131,11 @@ ht-degree: 4%
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* ID를 내보내려면 ID 그래프 보기 [액세스 제어 권한](https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/home#permissions)이 필요합니다.
+>* ID를 내보내려면 ID 그래프 보기 [액세스 제어 권한](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)이 필요합니다.
 
-이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)를 참조하십시오.
+이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)를 참조하십시오.
 
 ### 속성 및 ID 매핑 {#mapping-attributes-identities}
 

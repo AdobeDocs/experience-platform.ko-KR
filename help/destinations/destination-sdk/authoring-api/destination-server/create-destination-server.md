@@ -2,9 +2,9 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 서버를 만드는 데 사용되는 API 호출을 보여 줍니다.
 title: 대상 서버 구성 만들기
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: e1dd6ae9bf28014e8e84de85bdf67707744ea0ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2038'
 ht-degree: 5%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 5%
 
 ## 대상 서버 API 작업 시작 {#get-started}
 
-계속하기 전에 [시작 안내서](../../getting-started.md)에서 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
+계속하기 전에 [시작 안내서](../../getting-started.md)를 검토하여 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 확인하십시오.
 
 ## 대상 서버 구성 만들기 {#create}
 
@@ -96,7 +96,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | 문자열 | *필수.* Adobe에만 표시되는 서버의 알기 쉬운 이름을 나타냅니다. 이 이름은 파트너나 고객에게 표시되지 않습니다. 예 `Moviestar destination server`. |
 | `destinationServerType` | 문자열 | *필수.실시간(스트리밍) 대상에 대해*&#x200B;을(를) `URL_BASED`(으)로 설정합니다. |
-| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe에서 아래 `PEBBLE_V1` 필드의 URL을 변환해야 하는 경우 `value`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있고 고객 간에 `region` 부분이 다를 수 있는 경우 이 옵션을 사용합니다. 이 경우 `region`대상 구성[(../destination-configuration/create-destination-configuration.md)에서 &#x200B;](../../functionality/destination-configuration/customer-data-fields.md)을(를) [고객 데이터 필드]&#x200B;(으)로 구성해야 합니다. </li><li> Adobe 측에 변환이 필요하지 않은 경우(예: `NONE`과 같은 끝점이 있는 경우) `https://api.moviestar.com/data/items`을(를) 사용하십시오.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe에서 아래 `PEBBLE_V1` 필드의 URL을 변환해야 하는 경우 `value`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있고 고객 간에 `region` 부분이 다를 수 있는 경우 이 옵션을 사용합니다. 이 경우 `region`대상 구성[(../destination-configuration/create-destination-configuration.md)에서 ](../../functionality/destination-configuration/customer-data-fields.md)을(를) [고객 데이터 필드]&#x200B;(으)로 구성해야 합니다. </li><li> Adobe 측에 변환이 필요하지 않은 경우(예: `NONE`과 같은 끝점이 있는 경우) `https://api.moviestar.com/data/items`을(를) 사용하십시오.</li></ul> |
 | `urlBasedDestination.url.value` | 문자열 | *필수.* Experience Platform에서 연결할 API 끝점의 주소를 입력합니다. |
 | `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe에서 서버 호출에 사용할 메서드입니다. 옵션은 `GET`, `PUT`, `POST`, `DELETE`, `PATCH`입니다. |
 | `httpTemplate.requestBody.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |

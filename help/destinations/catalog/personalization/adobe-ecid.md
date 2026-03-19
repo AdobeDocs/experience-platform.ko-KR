@@ -3,9 +3,9 @@ Keywords: ECID;ecid
 title: Experience Cloud ID 서비스 확장
 description: Experience Cloud ID 서비스 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 4cc49c14-66ec-43e0-a106-70d9c3646d87
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '450'
 ht-degree: 4%
 
 ---
@@ -26,17 +26,17 @@ ht-degree: 4%
 
 이 확장은 Experience Platform을 구입한 모든 고객의 대상 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 문의하여 데이터 수집 UI에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여해 달라고 요청하십시오.
+이 확장을 사용하려면 Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 문의하여 데이터 수집 UI에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있는 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 
 [!DNL Experience Cloud] ID 서비스 확장을 설치하려면:
 
-[Experience Platform 인터페이스](https://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**(으)로 이동합니다.
+[Experience Platform 인터페이스](https://platform.adobe.com/)에서 **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**(으)로 이동합니다.
 
 카탈로그에서 확장을 선택하거나 검색 창을 사용합니다.
 
-대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL 구성]**&#x200B;을 선택합니다. **[!UICONTROL Configure]** 컨트롤이 회색으로 표시되어 있으면 **[!UICONTROL manage_properties]** 권한이 없습니다. [필수 구성 요소](#prerequisites)를 참조하십시오.
+대상을 선택한 다음 오른쪽 레일에서 **[!UICONTROL Configure]**&#x200B;을(를) 선택합니다. **[!UICONTROL Configure]** 컨트롤이 회색으로 표시되어 있으면 **[!UICONTROL manage_properties]** 권한이 없습니다. [필수 구성 요소](#prerequisites)를 참조하십시오.
 
 확장을 설치할 태그 속성을 선택합니다. 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. [태그 설명서](../../../tags/ui/administration/companies-and-properties.md)에서 속성에 대해 알아보세요.
 
@@ -56,6 +56,6 @@ ht-degree: 4%
 
 >[!TIP]
 >
->확장이 속성 중 하나에 이미 설치되어 있는 경우에도 UI에 확장에 대한 **[!UICONTROL 설치]**&#x200B;가 표시됩니다. 확장을 구성하거나 삭제하려면 [확장 설치](#install-extension)에 설명된 대로 설치 워크플로를 시작합니다.
+>확장이 속성 중 하나에 이미 설치되어 있는 경우 UI에 확장에 대한 **[!UICONTROL Install]**&#x200B;이(가) 계속 표시됩니다. 확장을 구성하거나 삭제하려면 [확장 설치](#install-extension)에 설명된 대로 설치 워크플로를 시작합니다.
 
 확장을 업그레이드하려면 태그 설명서의 [확장 업그레이드 프로세스](../../../tags/ui/managing-resources/extensions/extension-upgrade.md)에 대한 안내서를 참조하십시오.

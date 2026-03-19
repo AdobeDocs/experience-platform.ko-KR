@@ -3,9 +3,9 @@ title: Pega 프로필 커넥터
 description: Adobe Experience Platform의 Amazon S3용 Pega Profile Connector를 사용하여 전체 또는 증분, 또는 둘 다 프로필 데이터를 Amazon S3 클라우드 스토리지로 내보냅니다. Pega 고객 의사 결정 허브에서 Amazon S3 스토리지에서 주기적으로 프로필 데이터를 가져오기 위해 고객 프로필 Designer에서 데이터 작업을 예약할 수 있습니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1255'
 ht-degree: 4%
 
 ---
@@ -22,15 +22,15 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 >
 >이 대상 커넥터 및 설명서 페이지는 Pegasystem에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 Pega에게 직접 [여기](mailto:support@pega.com)로 문의하십시오.
 
-## 사용 사례
+## 사용 사례 {#use-cases}
 
 [!DNL Pega Profile Connector] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례를 소개합니다.
 
-### 사용 사례 1
+### 사용 사례 1 {#use-case-1}
 
 마케터는 처음에 Adobe Experience Platform에서 로드된 프로필 데이터로 [!DNL Pega Customer Decision Hub]을(를) 설정하려고 합니다. 이는 초기 전체 로드 후 일정에 따라 델타 로드 가 이어집니다.
 
-### 사용 사례 2
+### 사용 사례 2 {#use-case-2}
 
 마케터는 지속적으로 고객 프로필에 대한 페가 통찰력을 향상시키는 Adobe Experience Platform의 최신 프로필 데이터를 [!DNL Pega Customer Decision Hub]에서 사용할 수 있기를 원합니다.
 
@@ -92,7 +92,7 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
@@ -130,7 +130,7 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
@@ -147,12 +147,12 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 S3에서 프로필 데이터를 성공적으로 가져오면 [!DNL Pega Customer] 프로필 데이터 저장소에 데이터가 삽입됩니다. 가져온 고객 프로필 데이터는 다음 그림과 같이 [!DNL Pega Customer Profile Designer]에서 확인할 수 있습니다.
 ![고객 프로필 Designer에서 Adobe 프로필 데이터의 유효성을 검사할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-[!DNL Pega Customer Decision Hub]에서 데이터 관리자는 다음 그림과 같이 S3에서 주기적으로 프로필 데이터를 가져오도록 [!DNL Customer Profile Designer]의 데이터 작업을 구성할 수 있습니다. [에서 프로필 데이터를 가져오도록 데이터 작업을 구성하는 방법에 대한 자세한 내용은 &#x200B;](#additional-resources)추가 리소스[!DNL Amazon S3]를 참조하세요.
+[!DNL Pega Customer Decision Hub]에서 데이터 관리자는 다음 그림과 같이 S3에서 주기적으로 프로필 데이터를 가져오도록 [!DNL Customer Profile Designer]의 데이터 작업을 구성할 수 있습니다. [에서 프로필 데이터를 가져오도록 데이터 작업을 구성하는 방법에 대한 자세한 내용은 ](#additional-resources)추가 리소스[!DNL Amazon S3]를 참조하세요.
 고객 프로필 Designer에서 데이터 작업을 구성하기 위한 ![UI 화면의 이미지](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## 추가 리소스 {#additional-resources}
 
-[에서 &#x200B;](https://academy.pega.com/topic/import-data-jobs/v1)데이터 가져오기 작업[!DNL Pega Customer Decision Hub]을 참조하십시오.
+[에서 ](https://academy.pega.com/topic/import-data-jobs/v1)데이터 가져오기 작업[!DNL Pega Customer Decision Hub]을 참조하십시오.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

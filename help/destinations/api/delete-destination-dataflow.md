@@ -5,10 +5,10 @@ title: 흐름 서비스 API를 사용하여 대상 데이터 흐름 삭제
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 일괄 처리 및 스트리밍 대상에 대한 데이터 흐름을 삭제하는 방법을 알아봅니다.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 14%
+source-wordcount: '563'
+ht-degree: 18%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 14%
 
 이 자습서에서는 [!DNL Flow Service]을(를) 사용하여 일괄 처리와 스트리밍 대상으로 데이터 흐름을 삭제하는 단계를 다룹니다.
 
-## 시작하기 {#get-started}
+## 시작 {#get-started}
 
 이 자습서를 사용하려면 유효한 흐름 ID가 있어야 합니다. 유효한 흐름 ID가 없는 경우 [대상 카탈로그](../catalog/overview.md)에서 선택한 대상을 선택하고 [대상에 연결](../ui/connect-destination.md) 및 [데이터 활성화](../ui/activation-overview.md)에 설명된 단계를 따라 이 자습서를 시작하십시오.
 
@@ -27,11 +27,11 @@ ht-degree: 14%
 * [대상](../home.md): [!DNL Destinations]은(는) Adobe Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 * [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 [!DNL Flow Service] API를 사용하여 데이터 흐름을 성공적으로 삭제하기 위해 알아야 하는 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Flow Service] API를 사용하여 데이터 흐름을 성공적으로 삭제하는 데 알아야 하는 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기 {#reading-sample-api-calls}
 
-이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request)에 대한 섹션을 참조하십시오.
+이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 문서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 섹션을 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집 {#gather-values-for-required-headers}
 
@@ -41,7 +41,7 @@ ht-degree: 14%
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Flow Service]에 속하는 리소스를 포함한 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Experience Platform]에 속하는 리소스를 포함한 [!DNL Flow Service]의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -66,6 +66,8 @@ DELETE /flows/{FLOW_ID}
 | 매개변수 | 설명 |
 | --------- | ----------- |
 | `{FLOW_ID}` | 삭제할 대상 데이터 흐름의 고유한 `id` 값입니다. |
+
+{style="table-layout:auto"}
 
 **요청**
 
@@ -92,4 +94,4 @@ curl -X DELETE \
 
 사용자 인터페이스를 사용하여 이러한 작업을 수행하는 방법에 대한 단계는 [UI에서 데이터 흐름 삭제](../ui/delete-destinations.md)에 대한 자습서를 참조하십시오.
 
-이제 [!DNL Flow Service] API를 사용하여 [대상 계정을 삭제](/help/destinations/api/delete-destination-account.md)할 수 있습니다.
+이제 [ API를 사용하여 ](/help/destinations/api/delete-destination-account.md)대상 계정을 삭제[!DNL Flow Service]할 수 있습니다.

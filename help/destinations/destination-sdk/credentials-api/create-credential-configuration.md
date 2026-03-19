@@ -2,10 +2,10 @@
 description: 이 페이지는 자격 증명 구성 Adobe Experience Platform Destination SDK을 만드는 데 사용되는 API 호출을 예시합니다.
 title: 자격 증명 구성 만들기
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 6%
+source-wordcount: '584'
+ht-degree: 7%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 6%
 
 Adobe과 대상 플랫폼 사이에 글로벌 인증 시스템이 있고 [!DNL Experience Platform] 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우에만 이 API 끝점을 사용하여 자격 증명 구성을 만드십시오. 이 경우 `/credentials` API 끝점을 사용하여 자격 증명 구성을 만들어야 합니다.
 
-글로벌 인증 시스템을 사용하는 경우 `"authenticationRule":"PLATFORM_AUTHENTICATION"`새 대상 구성을 만드는 경우[에 &#x200B;](../functionality/destination-configuration/destination-delivery.md)대상 게재[&#x200B; 구성에서 &#x200B;](../authoring-api/destination-configuration/create-destination-configuration.md)을(를) 설정해야 합니다. 그런 다음 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을 만들고 `authenticationId`대상 게재[&#x200B; 구성의 &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
+글로벌 인증 시스템을 사용하는 경우 `"authenticationRule":"PLATFORM_AUTHENTICATION"`새 대상 구성을 만드는 경우[에 ](../functionality/destination-configuration/destination-delivery.md)대상 게재[ 구성에서 ](../authoring-api/destination-configuration/create-destination-configuration.md)을(를) 설정해야 합니다. 그런 다음 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을 만들고 `authenticationId`대상 게재[ 구성의 ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ Adobe과 대상 플랫폼 사이에 글로벌 인증 시스템이 있고 [!DNL E
 
 ## 자격 증명 API 작업 시작 {#get-started}
 
-계속하기 전에 [시작 안내서](../getting-started.md)에서 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
+계속하기 전에 [시작 안내서](../getting-started.md)를 검토하여 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 확인하십시오.
 
 ## 자격 증명 구성 만들기 {#create}
 
@@ -194,8 +194,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | -------- | ----------- | ----------- |
 | `url` | 문자열 | 인증 공급자의 URL |
 | `tenant` | 문자열 | Azure Data Lake 저장소 테넌트 |
-| `servicePrincipalId` | 문자열 | Azure 데이터 레이크 스토리지에 대한 Azure 서비스 사용자 ID |
-| `servicePrincipalKey` | 문자열 | Azure 데이터 레이크 스토리지에 대한 Azure 서비스 사용자 키 |
+| `servicePrincipalId` | 문자열 | Azure Data Lake 스토리지용 Azure 서비스 주체 ID |
+| `servicePrincipalKey` | 문자열 | Azure 데이터 레이크 스토리지에 대한 Azure 서비스 주체 키 |
 
 {style="table-layout:auto"}
 

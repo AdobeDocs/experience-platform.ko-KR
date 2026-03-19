@@ -5,9 +5,9 @@ title: 임시 활성화 API를 통해 대상을 일괄 대상으로 활성화
 description: 이 문서에서는 활성화 전에 수행되는 세분화 작업을 포함하여 임시 활성화 API를 통해 대상을 활성화하기 위한 전체적인 워크플로를 보여 줍니다.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: e5a757fcd73fc743b570c6456a66907e4720e8b6
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1689'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,15 @@ ht-degree: 0%
 
 ## 사용 사례 {#use-cases}
 
-### 플래시 판매 또는 프로모션
+### 플래시 판매 또는 프로모션 {#flash-sales}
 
 온라인 retailer은 제한된 플래시 세일을 준비하고 있으며 고객에게 짧은 시간에 알리기를 원합니다. 마케팅 팀은 Experience Platform 임시 활성화 API를 통해 온디맨드로 대상자를 내보내고 프로모션 이메일을 신속하게 고객 기반으로 전송할 수 있습니다.
 
-### 최신 이벤트 또는 속보
+### 최신 이벤트 또는 속보 {#current-events}
 
 A호텔 측은 앞으로 며칠간 악천후가 예상되며, 해당 팀은 도착 손님들에게 신속히 알리기를 원하기 때문에 그에 맞는 계획을 세울 수 있다. 마케팅 팀은 Experience Platform 애드혹 활성화 API 를 사용하여 대상을 온디맨드로 내보내고 게스트에게 알릴 수 있습니다.
 
-### 통합 테스트
+### 통합 테스트 {#integration-testing}
 
 IT 관리자는 Experience Platform 임시 활성화 API를 사용하여 대상을 온디맨드로 내보낼 수 있으므로 Adobe Experience Platform과의 사용자 정의 통합을 테스트하고 모든 것이 올바르게 작동하는지 확인할 수 있습니다.
 

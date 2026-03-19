@@ -4,7 +4,7 @@ type: Tutorial
 description: 스트리밍 프로필 기반 대상으로 대상자를 전송하여 Adobe Experience Platform에 있는 대상자 데이터를 활성화하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 # 스트리밍 프로필 내보내기 대상에 대상자 활성화
 
 >[!IMPORTANT]
-> 
+>
 > * 데이터를 활성화하고 워크플로우의 [매핑 단계](#mapping)을(를) 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
 > * 워크플로우의 [매핑 단계](#mapping)를 거치지 않고 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다.
 > 

@@ -2,7 +2,7 @@
 description: 지원되는 ID 및 속성 매핑 구성에 대한 대상을 구성하는 방법에 대해 알아봅니다.
 title: 지원되는 매핑 구성
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 3%
@@ -33,6 +33,8 @@ Destination SDK으로 구축된 실시간(스트리밍) 대상은 아래 표에 
 | --- | --- |
 | XDM 속성 | 사용자 지정 속성 |
 | ID 네임스페이스 | ID 네임스페이스 |
+
+{style="table-layout:auto"}
 
 아래 구성 예제를 통해 위의 표에서 두 매핑을 모두 사용할 수 있습니다.
 
@@ -87,6 +89,8 @@ Destination SDK으로 빌드된 파일 기반 대상은 아래 표에 설명된 
 | XDM 속성 | 속성 / 사용자 지정 속성 |
 | ID 네임스페이스 | 속성 / 사용자 지정 속성 |
 | ID 네임스페이스 | ID 네임스페이스 |
+
+{style="table-layout:auto"}
 
 아래 구성 예제를 통해 고객은 위 표의 모든 매핑을 사용할 수 있습니다.
 

@@ -3,7 +3,7 @@ title: 새 대상 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform에서 대상에 연결하고, 경고를 활성화하고, 연결된 대상에 대한 마케팅 작업을 설정하는 방법을 알아봅니다.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1236'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 # 새 대상 연결 만들기
 
 >[!IMPORTANT]
-> 
+>
 >* 대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* 데이터 집합 내보내기를 지원하는 대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage and Activate Dataset Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
@@ -29,9 +29,9 @@ ht-degree: 4%
 
 2. 대상에 대한 기존 연결 여부와 대상이 대상자 활성화, 데이터 세트 내보내기 또는 두 가지 모두를 지원하는지 여부에 따라 카탈로그의 대상 카드에 다른 작업 컨트롤이 있을 수 있습니다. 대상 카드에 대해 다음 컨트롤이 표시될 수 있습니다.
 
-   * **[!UICONTROL Set up]** 질문에 답합니다. 대상을 활성화하거나 데이터 세트를 내보내려면 먼저 이 대상에 연결을 설정해야 합니다.
-   * **[!UICONTROL Activate]** 질문에 답합니다. 이 대상에 대한 연결이 이미 설정되었습니다. 이 대상은 대상 활성화 및 데이터 세트 내보내기를 지원합니다.
-   * **[!UICONTROL Activate audiences]** 질문에 답합니다. 이 대상에 대한 연결이 이미 설정되었습니다. 이 대상은 대상자 활성화만 지원합니다.
+   * **[!UICONTROL Set up]** 구문을 사용하는 키-값 쌍으로 전달됩니다. 대상을 활성화하거나 데이터 세트를 내보내려면 먼저 이 대상에 연결을 설정해야 합니다.
+   * **[!UICONTROL Activate]** 구문을 사용하는 키-값 쌍으로 전달됩니다. 이 대상에 대한 연결이 이미 설정되었습니다. 이 대상은 대상 활성화 및 데이터 세트 내보내기를 지원합니다.
+   * **[!UICONTROL Activate audiences]** 구문을 사용하는 키-값 쌍으로 전달됩니다. 이 대상에 대한 연결이 이미 설정되었습니다. 이 대상은 대상자 활성화만 지원합니다.
 
    이러한 컨트롤의 차이점에 대한 자세한 내용은 대상 작업 영역 설명서의 [카탈로그](../ui/destinations-workspace.md#catalog) 섹션도 참조하십시오.
 
@@ -123,7 +123,7 @@ ht-degree: 4%
 
    ![사용 가능한 마케팅 작업이 강조 표시된 새 대상 구성 대화 상자 대상에 연결 워크플로를 완료하는 데 사용할 수 있는 컨트롤도 강조 표시됩니다.](../assets/ui/connect-destinations/governance.png)
 
-2. 대상 구성을 저장하려면 **[!UICONTROL Save & Exit]**&#x200B;을(를) 선택하고 대상 데이터 **[!UICONTROL Next]**&#x200B;활성화 흐름[으로 진행하려면 &#x200B;](activation-overview.md)을(를) 선택하십시오.
+2. 대상 구성을 저장하려면 **[!UICONTROL Save & Exit]**&#x200B;을(를) 선택하고 대상 데이터 **[!UICONTROL Next]**&#x200B;활성화 흐름[으로 진행하려면 ](activation-overview.md)을(를) 선택하십시오.
 
 ## 다음 단계 {#next-steps}
 

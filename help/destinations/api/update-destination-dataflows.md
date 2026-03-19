@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 대상 데이터 흐름 업데이트
 type: Tutorial
 description: 이 튜토리얼에서는 대상 데이터 흐름을 업데이트하는 단계를 설명합니다. 흐름 서비스 API를 사용하여 데이터 흐름을 활성화 또는 비활성화하거나, 기본 정보를 업데이트하거나, 대상 및 속성을 추가 및 제거하는 방법을 알아봅니다.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 7f8fbbec8927dffb3c8456b2a1d908d27d4b03c2
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2471'
+source-wordcount: '2467'
 ht-degree: 3%
 
 ---
@@ -68,6 +68,8 @@ GET /flows/{FLOW_ID}
 | 매개변수 | 설명 |
 | --------- | ----------- |
 | `{FLOW_ID}` | 검색할 대상 데이터 흐름의 고유한 `id` 값입니다. |
+
+{style="table-layout:auto"}
 
 **요청**
 
@@ -389,6 +391,8 @@ curl -X PATCH \
 | `path` | 플로우에서 업데이트할 부분을 정의합니다. |
 | `value` | 매개 변수를 업데이트할 새 값입니다. |
 
+{style="table-layout:auto"}
+
 **응답**
 
 성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하면서 [!DNL Flow Service] API에 대한 GET 요청을 만들어 업데이트를 확인할 수 있습니다.
@@ -507,6 +511,8 @@ curl -X PATCH \
 | `endDate` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br> 및 `"exportMode":"DAILY_FULL_EXPORT"`을(를) 선택할 때는 `"frequency":"ONCE"`을(를) 적용할 수 없습니다. <br> 대상 구성원의 대상 내보내기를 중지할 날짜를 설정합니다. |
 | `startTime` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br>은(는) 필수입니다. 대상자의 멤버가 포함된 파일을 생성하여 대상으로 내보내야 하는 시간을 선택합니다. |
 
+{style="table-layout:auto"}
+
 **응답**
 
 성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하면서 [!DNL Flow Service] API에 대한 GET 요청을 만들어 업데이트를 확인할 수 있습니다.
@@ -567,6 +573,7 @@ curl -X PATCH \
 | `op` | 데이터 흐름을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 `add`, `replace` 및 `remove`이(가) 포함됩니다. 데이터 흐름에서 대상을 제거하려면 `remove` 작업을 사용하십시오. |
 | `path` | 대상 선택기의 색인에 따라 대상 데이터 흐름에서 제거해야 하는 기존 대상을 지정합니다. 데이터 흐름에서 대상자 순서를 검색하려면 `/flows` 끝점에 대한 GET 호출을 수행하고 `transformations.segmentSelectors` 속성을 검사하십시오. 데이터 흐름의 첫 번째 대상을 삭제하려면 `"path":"/transformations/0/params/segmentSelectors/selectors/0"`을(를) 사용합니다. |
 
+{style="table-layout:auto"}
 
 **응답**
 
@@ -796,6 +803,8 @@ curl -X PATCH \
 | `path` | 플로우에서 업데이트할 부분을 정의합니다. 데이터 흐름에 프로필 속성을 추가할 때는 예제에 지정된 경로를 사용하십시오. |
 | `value.path` | 데이터 흐름에 추가할 프로필 속성의 값입니다. |
 
+{style="table-layout:auto"}
+
 **응답**
 
 성공적인 응답은 흐름 ID와 업데이트된 etag를 반환합니다. 흐름 ID를 제공하면서 [!DNL Flow Service] API에 대한 GET 요청을 만들어 업데이트를 확인할 수 있습니다.
@@ -849,6 +858,7 @@ curl -X PATCH \
 | `op` | 데이터 흐름을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 `add`, `replace` 및 `remove`이(가) 포함됩니다. 데이터 흐름에서 대상을 제거하려면 `remove` 작업을 사용하십시오. |
 | `path` | 대상 선택기의 색인에 따라 대상 데이터 흐름에서 제거해야 하는 기존 프로필 속성을 지정합니다. 데이터 흐름에서 프로필 특성 순서를 검색하려면 `/flows` 끝점에 대한 GET 호출을 수행하고 `transformations.profileSelectors` 속성을 검사하십시오. 데이터 흐름의 첫 번째 대상을 삭제하려면 `"path":"transformations/0/params/segmentSelectors/selectors/0/"`을(를) 사용합니다. |
 
+{style="table-layout:auto"}
 
 **응답**
 

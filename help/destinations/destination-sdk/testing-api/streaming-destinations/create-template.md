@@ -2,7 +2,7 @@
 description: 대상을 게시하기 전에 대상 테스트 API를 사용하여 스트리밍 대상 메시지 변환 템플릿을 테스트하는 방법을 알아봅니다.
 title: 메시지 변형 템플릿 만들기 및 테스트
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Adobe은 Destination SDK의 일부로 대상을 구성하고 테스트하는 데
 
 Adobe Experience Platform의 대상 스키마와 대상에서 지원하는 메시지 형식 간에 **메시지 변환 템플릿을 만들고 테스트하려면** 아래에 설명된 *템플릿 작성 도구*&#x200B;를 사용하십시오.  [메시지 형식 문서](../../functionality/destination-server/message-format.md#using-templating)에서 원본 스키마와 대상 스키마 간의 데이터 변환에 대해 자세히 알아보세요.
 
-메시지 변환 템플릿을 만들고 테스트하는 것이 Destination SDK의 [대상 구성 워크플로](../../guides/configure-destination-instructions.md)에 어떻게 적합한지 아래에 나와 있습니다.
+메시지 변환 템플릿을 만들고 테스트하는 방법이 Destination SDK의 [대상 구성 워크플로](../../guides/configure-destination-instructions.md)에 어떻게 적합한지 아래에 나와 있습니다.
 
 ![템플릿 만들기 단계가 대상 구성 워크플로에 맞는 위치에 대한 그래픽](../../assets/testing-api/create-template-step.png)
 
@@ -109,7 +109,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 }
 ```
 
-제공한 대상 ID가 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 또는 `maxUsersPerRequest`이(가) 둘 이상인 [최상의 노력 집계](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)인 대상 서버 템플릿에 해당하는 경우 요청은 다음과 유사한 샘플 템플릿을 반환합니다.
+제공한 대상 ID가 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 또는 [이(가) 둘 이상인 ](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)최상의 노력 집계`maxUsersPerRequest`인 대상 서버 템플릿에 해당하는 경우 요청은 다음과 유사한 샘플 템플릿을 반환합니다.
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
@@ -167,6 +167,6 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 내보낸 프로필이 대상의 예상 데이터 형식과 일치할 때까지 템플릿을 편집하고 렌더링 템플릿 API 끝점을 호출합니다.
 
-## 문자가 이스케이프 처리된 템플릿을 대상 서버 구성에 추가합니다.
+## 문자가 이스케이프 처리된 템플릿을 대상 서버 구성에 추가합니다. {#add-template-to-server-config}
 
-메시지 변환 템플릿에 만족하면 `httpTemplate.requestBody.value`의 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md)에 추가하십시오.
+메시지 변환 템플릿에 만족하면 [의 ](../../authoring-api/destination-server/create-destination-server.md)대상 서버 구성`httpTemplate.requestBody.value`에 추가하십시오.

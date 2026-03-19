@@ -4,9 +4,9 @@ title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2077'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 [!DNL Kinesis Data Streams]의 [!DNL Amazon Web Services] 서비스를 사용하면 큰 데이터 레코드를 실시간으로 수집하고 처리할 수 있습니다.
 
@@ -73,7 +73,7 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 
 ## 허용 목록에 추가하다 IP 주소 {#ip-address-allowlist}
 
-고객 보안 및 규정 준수 요구 사항을 충족하기 위해 Experience Platform에서는 [!DNL Amazon Kinesis] 대상에 대해 허용 목록에 추가하다할 수 있는 정적 IP 목록을 제공합니다. IP에서 허용 목록에 추가하다에 대한 전체 목록은 [스트리밍 대상의 IP 주소 허용 목록](/help/destinations/catalog/streaming/ip-address-allow-list.md)을 참조하십시오.
+고객 보안 및 규정 준수 요구 사항을 충족하기 위해 Experience Platform에서는 [!DNL Amazon Kinesis] 대상에 대해 허용 목록에 추가하다할 수 있는 정적 IP 목록을 제공합니다. 허용 목록에 추가하다 허용 목록에 추가하다 스트리밍 대상에 대한 [IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md)에서 IP에 대한 전체 목록을 참조하십시오.
 
 ## 필요한 [!DNL Amazon Kinesis] 권한 {#required-kinesis-permission}
 
@@ -119,7 +119,7 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 이 대상에 연결할 때 다음 정보를 제공해야 합니다.
@@ -172,7 +172,7 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)는 현재 Amazon Kinesis 대상으로 내보내는 데 지원되지 않습니다. [자세히 보기](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 

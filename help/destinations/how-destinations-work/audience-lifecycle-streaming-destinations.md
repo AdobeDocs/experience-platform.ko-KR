@@ -1,13 +1,13 @@
 ---
 title: Experience Platform 및 스트리밍 대상의 고객 라이프사이클
 description: Experience Platform의 대상 이름 및 매핑이 스트리밍 대상 플랫폼에 어떻게 반영되는지 알아봅니다.
-source-git-commit: 6b4dfa714e078fb5b97900811aade081ffef0d78
+exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 2%
 
 ---
-
 
 # 스트리밍 대상의 대상 라이프사이클
 
@@ -86,6 +86,6 @@ ht-degree: 2%
 * [Twitter 사용자 지정 대상](../catalog/social/twitter.md)
 * [야후 데이터 X](../catalog/advertising/datax.md)
 
-### 대상자 제거를 지원하지 않는 대상
+### 대상자 제거를 지원하지 않는 대상 {#no-removal-support}
 
 위에 나열되지 않은 대상의 경우 대상에서 대상을 매핑 해제하면 Experience Platform에서는 매핑만 제거합니다. 대상 플랫폼의 대상은 파트너 플랫폼에서 수동으로 삭제할 때까지 활성 상태로 유지됩니다.

@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Adobe Experience Platform Destination SDK을 통해 기존 대상 서버 구성을 업데이트하는 데 사용되는 API 호출을 구현합니다.
 title: 대상 서버 구성 업데이트
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
-source-git-commit: e1dd6ae9bf28014e8e84de85bdf67707744ea0ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1101'
 ht-degree: 8%
 
 ---
@@ -30,11 +30,11 @@ ht-degree: 8%
 
 ## 대상 서버 API 작업 시작 {#get-started}
 
-계속하기 전에 [시작 안내서](../../getting-started.md)에서 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
+계속하기 전에 [시작 안내서](../../getting-started.md)를 검토하여 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 확인하십시오.
 
 ## 대상 서버 구성 업데이트 {#update}
 
-업데이트된 페이로드로 [&#x200B; 끝점에 대한 &#x200B;](create-destination-server.md) 요청을 수행하여 `PUT`기존`/authoring/destination-servers` 대상 서버 구성을 업데이트할 수 있습니다.
+업데이트된 페이로드로 [ 끝점에 대한 ](create-destination-server.md) 요청을 수행하여 `PUT`기존`/authoring/destination-servers` 대상 서버 구성을 업데이트할 수 있습니다.
 
 >[!TIP]
 >

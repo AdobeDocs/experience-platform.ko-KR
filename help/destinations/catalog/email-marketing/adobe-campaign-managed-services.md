@@ -2,9 +2,9 @@
 title: Adobe Campaign Managed Cloud Services 연결
 description: Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 플랫폼과 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1851'
 ht-degree: 2%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 통합은 [Adobe Campaign 버전 8.4 이상](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=ko#release-8-4-1)에서 작동합니다.
+>이 통합은 [Adobe Campaign 버전 8.4 이상](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1)에서 작동합니다.
 
 ## 개요 {#overview}
 
-Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 플랫폼과 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다. [Campaign 시작](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ko)
+Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 플랫폼과 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다. [Campaign 시작](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 Campaign을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 
@@ -61,7 +61,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
   >
   >프로필 속성 동기화는 Adobe Campaign 데이터베이스에 이미 있는 프로필에 사용할 수 있습니다.
 
-[Adobe Experience Platform과의 Adobe Campaign 통합에 대해 자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=ko)
+[Adobe Experience Platform과의 Adobe Campaign 통합에 대해 자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
 
 ## 지원되는 ID {#supported-identities}
 
@@ -117,7 +117,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
@@ -126,12 +126,12 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
+![이름, 설명, 인스턴스 선택, 대상 매핑 및 동기화 유형에 대한 필드를 표시하는 Adobe Campaign Managed Cloud Services 대상 세부 정보 양식입니다.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
 
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL Select instance]**: **[!DNL Campaign]** 마케팅 인스턴스입니다.
-* **[!UICONTROL Target mapping]**: **[!DNL Adobe Campaign]**&#x200B;에서 게재를 보낼 대상 매핑을 선택합니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=ko).
+* **[!UICONTROL Target mapping]**: **[!DNL Adobe Campaign]**&#x200B;에서 게재를 보낼 대상 매핑을 선택합니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
 * **[!UICONTROL Select sync type]**:
 
    * **[!UICONTROL Audience sync]**: 이 옵션을 사용하여 Adobe Experience Platform 대상자를 Adobe Campaign으로 보냅니다.
@@ -152,11 +152,11 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
-대상 데이터를 이 대상으로 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko)를 참조하십시오.
+대상 데이터를 이 대상으로 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html)를 참조하십시오.
 
 ### 속성 및 ID 매핑 {#map}
 
@@ -183,9 +183,9 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
      >
      >중복 제거 키 속성의 이름이 선택한 대상 매핑의 열 이름과 일치하는지 확인합니다.
 
-   ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
+   ![필수 및 중복 제거 키 표시기와 함께 Adobe Campaign 대상 필드에 매핑된 XDM 원본 필드를 표시하는 특성 매핑 화면입니다.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
-1. 매핑이 수행되면 대상 구성을 검토하고 완료하여 **[!DNL Campaign]**&#x200B;에 데이터를 보낼 수 있습니다.
+1. 매핑이 수행되면 대상 구성을 검토하고 완료하여 **[!DNL Campaign]**에 데이터를 보낼 수 있습니다.
    [대상 구성을 검토하고 완료하는 방법을 알아보세요](/help/destinations/destination-types.md#review).
 
 ## 내보낸 데이터/데이터 내보내기 유효성 검사 {#exported-data}
@@ -196,13 +196,13 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
 Adobe Experience Platform에서 활성화된 모든 내보내기 작업을 모니터링하려면 **[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!UICONTROL Audience load jobs]** 메뉴로 이동합니다.
 
-![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
+![Adobe Campaign에서 활성화된 내보내기 작업을 보여 주는 Adobe Experience Platform 대상자 로드 작업 화면입니다.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
 
 ### 내보낸 데이터 액세스 {#data}
 
 **[!UICONTROL Audience sync]**&#x200B;의 경우 **[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **[!UICONTROL AEP audiences]** 메뉴로 이동하여 내보낸 대상을 확인할 수 있습니다.
 
-![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
+![Experience Platform에서 내보낸 대상을 보여 주는 Adobe Campaign AEP 대상 목록 보기는 프로필 및 타겟에서 사용할 수 있습니다.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
 **[!UICONTROL Profile sync (Update only)]**&#x200B;의 경우 대상에서 활성화된 대상자에 의해 타겟팅된 각 프로필에 대한 Campaign 데이터베이스에 데이터가 자동으로 업데이트됩니다.
 

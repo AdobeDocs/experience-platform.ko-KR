@@ -3,9 +3,9 @@ title: Moengage 연결
 description: Moengage는 소비자와 브랜드 간의 고객 중심 상호 작용을 실시간으로 향상시키는 고객 참여 플랫폼입니다.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1156'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!DNL Moengage] 대상을 사용하여 Adobe 데이터(사용자 특성, 세그먼트 및 이벤트)를 MoEngage에 실시간으로 연결하고 매핑합니다. 그런 다음 고객은 이 데이터에 따라 행동하여 개인화되고 타겟팅된 경험을 제공할 수 있습니다.
 
-Adobe을 사용하면 통합이 매우 간단하고 직관적입니다. Adobe 사용자 프로필을 가져와 MoEngage 사용자 속성에 매핑하기만 하면 됩니다.
+Adobe을 사용하면 통합이 매우 간단하고 직관적입니다. Adobe 사용자 프로필을 가져와 MoEngage 사용자 속성에 매핑합니다.
 
 >[!IMPORTANT]
 >
@@ -83,7 +83,7 @@ Adobe Experience Platform 데이터를 [!DNL Moengage]&#x200B;(으)로 보내려
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
@@ -114,10 +114,10 @@ Adobe Experience Platform 데이터를 [!DNL Moengage]&#x200B;(으)로 보내려
 
 대상 연결에 대한 세부 정보를 제공했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 대상 세그먼트를 활성화하는 방법에 대한 지침은 [스트리밍 세그먼트 내보내기 대상에 대상 데이터 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.

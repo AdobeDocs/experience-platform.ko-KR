@@ -2,9 +2,9 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 템플릿을 업데이트하는 데 사용되는 API 호출을 구현합니다.
 title: 대상자 템플릿 업데이트
 exl-id: 8185a015-256d-46a7-af33-8475832fb6c1
-source-git-commit: fda542e62c448788099d63951277278a146fdfc8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '319'
 ht-degree: 1%
 
 ---
@@ -25,11 +25,11 @@ ht-degree: 1%
 
 ## 대상자 템플릿 API 작업 시작 {#get-started}
 
-계속하기 전에 [시작 안내서](../getting-started.md)에서 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
+계속하기 전에 [시작 안내서](../getting-started.md)를 검토하여 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 확인하십시오.
 
 ## 대상자 템플릿 업데이트 {#create}
 
-업데이트된 페이로드로 [&#x200B; 끝점에 대해 &#x200B;](create-audience-template.md) 요청을 수행하여 `PUT`기존`/authoring/audience-templates` 대상 템플릿을 업데이트할 수 있습니다.
+업데이트된 페이로드로 [ 끝점에 대해 ](create-audience-template.md) 요청을 수행하여 `PUT`기존`/authoring/audience-templates` 대상 템플릿을 업데이트할 수 있습니다.
 
 기존 대상 템플릿과 해당 `{INSTANCE_ID}`을(를) 가져오려면 [대상 템플릿 검색](retrieve-audience-template.md)에 대한 문서를 참조하십시오.
 
@@ -42,6 +42,8 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 | 매개변수 | 설명 |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | 업데이트할 대상 템플릿의 ID입니다. 기존 대상 템플릿과 해당 `{INSTANCE_ID}`을(를) 가져오려면 [대상 템플릿 검색](retrieve-audience-template.md)을 참조하십시오. |
+
+{style="table-layout:auto"}
 
 다음 요청은 페이로드에 제공된 매개 변수로 구성된 기존 대상 메타데이터 템플릿을 업데이트합니다.
 
@@ -268,10 +270,10 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++
 
-## API 오류 처리
+## API 오류 처리 {#error-handling}
 
 Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 이제 이 문서를 읽고 나면 대상 템플릿을 사용할 시점과 `/authoring/audience-templates` API 끝점을 사용하여 대상 템플릿을 업데이트하는 방법을 알 수 있습니다. [Destination SDK을 사용하여 대상을 구성하는 방법](../guides/configure-destination-instructions.md)을 읽어 대상을 구성하는 프로세스에 이 단계가 어디에 맞는지 이해합니다.

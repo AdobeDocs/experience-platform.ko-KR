@@ -3,9 +3,9 @@ keywords: 비행선 속성;비행선 목적지
 title: 비행선 속성 연결
 description: Airship 내에서 타깃팅할 대상 속성으로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 7b22c4b058b0068b96c26d0c4c7743d489451620
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1139'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!DNL Airship]은(는) 선도적인 Customer Engagement Experience Platform으로, 고객 수명 주기의 모든 단계에서 사용자에게 의미 있고 개인화된 옴니채널 메시지를 전달할 수 있도록 지원합니다.
 
-이 통합은 타깃팅 또는 트리거를 위해 Adobe 프로필 데이터를 [!DNL Airship]특성[(으)로 &#x200B;](https://docs.airship.com/guides/audience/attributes/)에 전달합니다.
+이 통합은 타깃팅 또는 트리거를 위해 Adobe 프로필 데이터를 [!DNL Airship]특성[(으)로 ](https://docs.airship.com/guides/audience/attributes/)에 전달합니다.
 
 [!DNL Airship]에 대한 자세한 내용은 [비행선 문서](https://docs.airship.com)를 참조하세요.
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 >[!TIP]
 >
->아직 만들지 않은 경우 [!DNL Airship]이 등록 링크[를 통해 &#x200B;](https://go.airship.eu/accounts/register/plan/starter/) 계정을 만드십시오.
+>아직 만들지 않은 경우 [!DNL Airship]이 등록 링크[를 통해 ](https://go.airship.eu/accounts/register/plan/starter/) 계정을 만드십시오.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -79,7 +79,7 @@ Adobe Experience Platform 프로필 속성은 [!DNL Airship] 속성과 유사하
 
 ## 전달자 토큰 생성 {#bearer-token}
 
-**[!UICONTROL Settings]** Airship 대시보드&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;의 [&quot; &#x200B;](https://go.airship.com)&#x200B;(으)로 이동한 다음 왼쪽 메뉴에서 **[!UICONTROL Tokens]**&#x200B;을(를) 선택하십시오.
+**[!UICONTROL Settings]** Airship 대시보드&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;의 [&quot; ](https://go.airship.com)&#x200B;(으)로 이동한 다음 왼쪽 메뉴에서 **[!UICONTROL Tokens]**&#x200B;을(를) 선택하십시오.
 
 **[!UICONTROL Create Token]**&#x200B;을(를) 클릭합니다.
 
@@ -91,18 +91,18 @@ Adobe Experience Platform 프로필 속성은 [!DNL Airship] 속성과 유사하
 
 [!DNL Airship Attributes] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례를 소개합니다.
 
-### 사용 사례 #1
+### 사용 사례 #1 {#use-case-1}
 
 [!DNL Airship]의 채널 내에서 메시지 및 풍부한 콘텐츠를 개인화하기 위해 Adobe Experience Platform 내에서 수집된 프로필 데이터를 활용합니다. 예를 들어 [!DNL Experience Platform] 프로필 데이터를 활용하여 [!DNL Airship] 내에서 위치 특성을 설정합니다. 이렇게 하면 호텔 브랜드에서 각 사용자에 대해 가장 가까운 호텔 위치에 대한 이미지를 표시할 수 있습니다.
 
-### 사용 사례 #2
+### 사용 사례 #2 {#use-case-2}
 
 Adobe Experience Platform의 특성을 활용하여 [!DNL Airship] 프로필을 더욱 보강하고 SDK 또는 [!DNL Airship] 예측 데이터와 결합합니다. 예를 들어 retailer은 충성도 상태 및 위치 데이터(Experience Platform의 특성)와 이탈할 것으로 예상되는 [!DNL Airship]을(를) 통해 대상을 만들어 NV의 라스베이거스에 거주하고 이탈 가능성이 높은 골드 충성도 상태의 사용자에게 높은 타깃팅된 메시지를 보낼 수 있습니다.
 
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
@@ -130,7 +130,7 @@ Adobe Experience Platform의 특성을 활용하여 [!DNL Airship] 프로필을 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 

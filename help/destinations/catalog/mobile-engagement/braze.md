@@ -4,7 +4,7 @@ title: 브레이즈 연결
 description: Braze는 고객과 고객이 사랑하는 브랜드 간의 관련성 있고 기억에 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1212'
 ht-degree: 3%
@@ -41,7 +41,7 @@ ht-degree: 3%
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| external_id | 모든 ID의 매핑을 지원하는 사용자 지정 [!DNL Braze] 식별자입니다. | [&#x200B; &#x200B;](../../../identity-service/features/namespaces.md) [!DNL Braze]에 매핑하기만 하면 [!DNL Braze]identity[`external_id`을(를) &#x200B;](https://www.braze.com/docs/api/basics/#external-user-id-explanation) 대상으로 보낼 수 있습니다. |
+| external_id | 모든 ID의 매핑을 지원하는 사용자 지정 [!DNL Braze] 식별자입니다. | [ ](../../../identity-service/features/namespaces.md)[!DNL Braze]에 매핑하기만 하면 [!DNL Braze]identity[`external_id`을(를) ](https://www.braze.com/docs/api/basics/#external-user-id-explanation) 대상으로 보낼 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -84,7 +84,7 @@ ht-degree: 3%
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
@@ -101,7 +101,7 @@ ht-degree: 3%
 
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 이름을 입력하십시오.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명을 입력하십시오.
-* **[!UICONTROL Endpoint Instance]**: [에서 지원하는 모든 &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오.
+* **[!UICONTROL Endpoint Instance]**: [에서 지원하는 모든 ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)지역별 끝점[!DNL Braze]을 선택할 수 있습니다. 사용해야 하는 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오.
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -112,7 +112,7 @@ ht-degree: 3%
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
@@ -126,7 +126,7 @@ ht-degree: 3%
 
 XDM 필드를 [!DNL Braze] 대상 필드에 올바르게 매핑하려면 다음 단계를 따르십시오.
 
-[!UICONTROL Mapping] 단계에서 **[!UICONTROL Add new mapping]**&#x200B;을(를) 클릭합니다.
+[!UICONTROL Mapping] 단계에서 **[!UICONTROL Add new mapping]**&#x200B;을(를) 선택합니다.
 
 ![대상 병합 매핑 추가](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
@@ -144,7 +144,7 @@ XDM 필드를 [!DNL Braze] 대상 필드에 올바르게 매핑하려면 다음 
 
 ![대상 매핑 Source 네임스페이스 동기화](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
-원본 필드를 선택한 다음 **[!UICONTROL Select]**&#x200B;을(를) 클릭합니다.
+소스 필드를 선택한 다음 **[!UICONTROL Select]**&#x200B;을(를) 선택합니다.
 
 [!UICONTROL Target Field] 섹션에서 필드 오른쪽에 있는 매핑 아이콘을 클릭합니다.
 
@@ -157,7 +157,7 @@ XDM 필드를 [!DNL Braze] 대상 필드에 올바르게 매핑하려면 다음 
 
 ![대상 매핑 필드 동기화](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
-대상 필드를 선택한 다음 **[!UICONTROL Select]**&#x200B;을(를) 클릭합니다.
+대상 필드를 선택한 다음 **[!UICONTROL Select]**&#x200B;을(를) 선택합니다.
 
 이제 목록에 필드 매핑이 표시됩니다.
 

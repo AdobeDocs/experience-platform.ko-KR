@@ -3,7 +3,7 @@ title: Real-Time CDP에서 배열, 맵 및 개체 내보내기
 type: Tutorial
 description: Real-Time CDP에서 클라우드 스토리지 대상으로 배열, 맵 및 개체를 내보내는 방법에 대해 알아봅니다.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1062'
 ht-degree: 13%
@@ -23,7 +23,7 @@ Real-Time CDP에서 [클라우드 저장소 대상](/help/destinations/catalog/c
 
 | 대상 유형 | 배열, 맵 및 기타 사용자 지정 개체 내보내기 기능 |
 |---|---|
-| Adobe 작성 클라우드 스토리지 대상(Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, 데이터 랜딩 영역, Google 클라우드 스토리지, SFTP) | 예. 대상 연결을 설정할 때 배열, 맵 및 개체의 내보내기 활성화 토글이 켜져 있습니다. |
+| Adobe 작성 클라우드 스토리지 대상(Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, Data Landing Zone, Google 클라우드 스토리지, SFTP) | 예. 대상 연결을 설정할 때 배열, 맵 및 개체의 내보내기 활성화 토글이 켜져 있습니다. |
 | 파일 기반 이메일 마케팅 대상(Adobe Campaign, Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | 아니요 |
 | 기존 사용자 지정 파트너가 빌드한 클라우드 스토리지 대상(Destination SDK을 통해 빌드한 사용자 지정 파일 기반 대상) | 아니요 |
 | 엔터프라이즈 대상(Amazon Kinesis, Azure Event Hubs, HTTP API) | 부분적으로요 활성화 워크플로의 매핑 단계에서 맵 유형 개체를 선택하고 내보낼 수 있습니다. |
@@ -34,7 +34,7 @@ Real-Time CDP에서 [클라우드 저장소 대상](/help/destinations/catalog/c
 
 Experience Platform에서 배열, 맵 및 기타 개체 유형을 내보내는 방법에 대해 알고 싶은 경우 이 페이지를 방문하십시오.
 
-## 맨 앞까지 내림표
+## 맨 앞까지 내림표 {#bottom-line}
 
 이 섹션에서 기능에 대한 가장 중요한 정보를 얻고 아래에서 문서의 다른 섹션으로 이동하여 자세한 내용을 확인하십시오.
 

@@ -2,9 +2,9 @@
 description: 이 페이지에서는 /testing/destinationInstance API 끝점을 사용하여 파일 기반 대상이 올바르게 구성되었는지 테스트하고 구성된 대상에 대한 데이터 흐름의 무결성을 확인하는 방법에 대해 설명합니다.
 title: 샘플 프로필을 사용하여 파일 기반 대상 테스트
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '829'
 ht-degree: 2%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 2%
 
 자동 생성된 샘플 프로필에는 일반 데이터가 포함되어 있습니다. 보다 직관적인 사용자 지정 프로필 데이터로 대상을 테스트하려면 [샘플 프로필 생성 API](file-based-sample-profile-generation-api.md)를 사용하여 샘플 프로필을 생성한 다음 응답을 사용자 지정하고 `/testing/destinationInstance` 끝점에 대한 요청에 포함하십시오.
 
-## 시작하기 {#getting-started}
+## 시작 {#getting-started}
 
-계속하기 전에 [시작 안내서](../../getting-started.md)에서 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
+계속하기 전에 [시작 안내서](../../getting-started.md)를 검토하여 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 확인하십시오.
 
 ## 전제 조건 {#prerequisites}
 
@@ -240,10 +240,10 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. Experience Platform 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 이제 이 문서를 읽고 파일 기반 대상 구성을 테스트하는 방법을 이해할 수 있습니다.
 
-유효한 API 응답을 받은 경우 대상이 올바르게 작동합니다. 활성화 흐름에 대한 자세한 정보를 보려면 [자세한 활성화 결과 보기](file-based-destination-results-api.md)에 대한 응답에서 `results` 속성을 사용할 수 있습니다.
+유효한 API 응답을 받은 경우 대상이 올바르게 작동합니다. 활성화 흐름에 대한 자세한 정보를 보려면 `results`자세한 활성화 결과 보기[에 대한 응답에서 ](file-based-destination-results-api.md) 속성을 사용할 수 있습니다.
 
 공개 대상을 만드는 경우 이제 [대상 구성을 제출](../../guides/submit-destination.md)하여 검토할 수 있습니다. Adobe

@@ -4,7 +4,7 @@ description: 라이브 Snowflake 데이터 공유를 만들어 매일 대상자 
 last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1738'
 ht-degree: 4%
@@ -123,7 +123,7 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
@@ -155,7 +155,7 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 
 >[!NOTE]
 >
-> 대상을 만든 후에는 **[!UICONTROL Snowflake Account ID]**&#x200B;대상 편집&#x200B;**[!UICONTROL Snowflake Region]** 워크플로우를 통해 [&#x200B; 및 &#x200B;](../../ui/edit-destination.md)을(를) 편집할 수 없습니다. 다른 계정 또는 지역 값을 사용하려면 [새 대상 연결을 만드세요](../../ui/connect-destination.md).
+> 대상을 만든 후에는 **[!UICONTROL Snowflake Account ID]**&#x200B;대상 편집&#x200B;**[!UICONTROL Snowflake Region]** 워크플로우를 통해 [ 및 ](../../ui/edit-destination.md)을(를) 편집할 수 없습니다. 다른 계정 또는 지역 값을 사용하려면 [새 대상 연결을 만드세요](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >
@@ -170,7 +170,7 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 

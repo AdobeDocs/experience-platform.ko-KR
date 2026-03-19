@@ -3,16 +3,16 @@ title: LiveRamp 식별자를 기반으로 조정된 대상에 대상 활성화
 type: Tutorial
 description: LiveRamp Ramp Id를 사용하여 Adobe Experience Platform에서 연결된 TV 및 오디오 대상 및 기타 통합에 대한 대상을 활성화하는 방법을 알아봅니다.
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
 
 # LiveRamp 식별자를 기반으로 조정된 대상에 대상 활성화
 
-[!DNL LiveRamp]과(와) Adobe Real-Time CDP 통합을 사용하여 아래 나열된 대상과 같이 연결된 TV 및 오디오 대상을 포함하여 활성화를 위해 [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html)을(를) 사용하는 선별된 대상 목록에 대상을 활성화합니다.
+[!DNL LiveRamp]과(와) Adobe Real-Time CDP 통합을 사용하여 아래 나열된 대상과 같이 연결된 TV 및 오디오 대상을 포함하여 활성화를 위해 [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html)을(를) 사용하는 선별된 대상 목록에 대상을 활성화합니다.
 
 >[!IMPORTANT]
 >
@@ -56,17 +56,17 @@ ht-degree: 0%
 
 >[!TIP]
 >
->이 프로세스를 사용하면 활성화를 위해 [!DNL LiveRamp] 계정에 로그인할 필요 없이 Real-Time CDP UI에서 직접 [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney) 등의 대상에 대상을 활성화할 수 있습니다.
+>이 프로세스를 사용하면 활성화를 위해 [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku) 계정에 로그인할 필요 없이 Real-Time CDP UI에서 직접 [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney), [!DNL LiveRamp] 등의 대상에 대상을 활성화할 수 있습니다.
 
 ### 비디오 튜토리얼 {#video}
 
 이 페이지에 설명된 워크플로에 대한 전체적인 설명은 아래 비디오를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3452664?captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
 ### 1단계: [!DNL LiveRamp - Onboarding] 대상을 통해 대상을 Experience Platform에서 LiveRamp로 보내기 {#onboarding}
 
-LiveRamp RampID를 기반으로 대상자를 조정된 대상으로 활성화하기 위해 가장 먼저 수행해야 하는 작업은 **대상자를 Experience Platform에서[!DNL LiveRamp]**(으)로 내보내는 것입니다.
+LiveRamp RampID를 기반으로 대상자를 조정된 대상으로 활성화하기 위해 가장 먼저 해야 할 일은 **대상자를 Experience Platform에서[!DNL LiveRamp]**(으)로 내보내는 것입니다.
 
 **[!DNL LiveRamp - Onboarding]** 대상을 사용하여 이 작업을 수행합니다.
 
@@ -89,15 +89,15 @@ LiveRamp RampID를 기반으로 대상자를 조정된 대상으로 활성화하
 
 대상을 LiveRamp로 내보내는 데 성공했는지 [확인](../catalog/advertising/liveramp-onboarding.md#exported-data)한 후에는 [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney) 등과 같이 원하는 대상으로 대상을 활성화할 수 있습니다.
 
-**[!DNL LiveRamp - Distribution]** 대상을 사용하여 대상([단계 1](#onboarding)에서 내보냄)을 활성화합니다.
+[ 대상을 사용하여 대상(](#onboarding)단계 1 **[!DNL LiveRamp - Distribution]**&#x200B;에서 내보냄)을 활성화합니다.
 
 ![LiveRamp - 배포 대상 카드를 표시하는 Experience Platform UI 이미지](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
 
-[단계 1](#onboarding)에서 내보낸 대상을 활성화하고 **[!DNL LiveRamp - Distribution]** 대상을 구성하는 방법에 대해 알아보려면 [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) 대상 설명서를 읽어 보십시오.
+**[!DNL LiveRamp - Distribution]**&#x200B;단계 1[에서 내보낸 대상을 활성화하고 ](#onboarding) 대상을 구성하는 방법에 대해 알아보려면 [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) 대상 설명서를 읽어 보십시오.
 
 >[!IMPORTANT]
 >
->**[!DNL LiveRamp - Distribution]** 대상의 **대상 선택** 단계에서는 [단계 1](#onboarding)에서 [LiveRamp - Onboarding](../catalog/advertising/liveramp-onboarding.md) 대상으로 내보낸 *정확히 동일한 대상*&#x200B;을 선택해야 합니다.
+>**대상의**&#x200B;대상 선택&#x200B;**[!DNL LiveRamp - Distribution]** 단계에서는 *단계 1*&#x200B;에서 [LiveRamp - Onboarding](../catalog/advertising/liveramp-onboarding.md) 대상으로 내보낸 [정확히 동일한 대상](#onboarding)을 선택해야 합니다.
 
 **[!DNL LiveRamp - Distribution]** 대상을 구성할 때 사용할 각 다운스트림 대상(Roku, Disney 등)에 대해 전용 연결을 만들어야 합니다.
 

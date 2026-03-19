@@ -1,10 +1,10 @@
 ---
 description: 파일 기반 대상에 대한 파일 서식 옵션 구성
-title: Destination SDK을 사용하여 파일 기반 대상에 대한 파일 서식 옵션을 구성하는 방법에 대해 알아봅니다.
+title: Destination SDK을 사용하여 파일 기반 대상에 대한 파일 형식 지정 옵션을 구성하는 방법에 대해 알아봅니다.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '902'
 ht-degree: 1%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 1%
 
 Destination SDK을 사용하면 내보낸 파일의 형식 지정 및 압축 옵션을 스토리지 위치의 다운스트림 요구 사항에 맞게 광범위하게 조정할 수 있습니다.
 
-이 페이지에서는 Destination SDK을 사용하여 파일 기반 대상에 대한 파일 서식 옵션을 구성하는 방법에 대해 설명합니다.
+이 페이지에서는 Destination SDK을 사용하여 파일 기반 대상에 대한 파일 형식 지정 옵션을 구성하는 방법에 대해 설명합니다.
 
 ## 전제 조건 {#prerequisites}
 
-아래 설명된 단계로 진행하기 전에 [Destination SDK 시작](../../getting-started.md) 페이지에서 Destination SDK API를 사용하는 데 필요한 Adobe I/O 인증 자격 증명 및 기타 필수 구성 요소를 얻는 방법에 대한 정보를 읽어 보십시오.
+아래 설명된 단계로 진행하기 전에 [Destination SDK 시작하기](../../getting-started.md) 페이지에서 Destination SDK API를 사용하는 데 필요한 Adobe I/O 인증 자격 증명 및 기타 필수 구성 요소를 가져오는 방법에 대한 정보를 참조하십시오.
 
-또한 Adobe은 계속하기 전에 다음 설명서를 읽고 숙지하는 것이 좋습니다.
+Adobe은 계속하기 전에 다음 설명서를 읽고 숙지하는 것이 좋습니다.
 
 * 사용 가능한 모든 파일 서식 옵션은 [파일 서식 구성](../../functionality/destination-server/file-formatting.md) 섹션에 자세히 설명되어 있습니다.
 * Destination SDK을 사용하여 [파일 기반 대상을 구성](../../guides/configure-file-based-destination-instructions.md)하는 단계를 완료합니다.
@@ -102,7 +102,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!TIP]
 >
->**Experience Platform UI를 확인**&#x200B;합니다. 아래 섹션에 설명된 구성으로 파일 형식 지정 옵션을 구성할 때 이러한 옵션이 렌더링되는 방법에 대한 Experience Platform UI를 확인해야 합니다.
+>**Experience Platform UI를 확인**&#x200B;합니다. 아래 섹션에 설명된 구성으로 파일 형식 지정 옵션을 구성할 때 이러한 옵션이 렌더링되는 방법에 대해 Experience Platform UI를 확인해야 합니다.
 
 이전 단계에서 대상 서버 및 파일 형식 구성에 원하는 파일 형식 지정 옵션을 추가한 후 이제 `/destinations` API 끝점을 사용하여 원하는 필드를 대상 구성에 고객 데이터 필드로 추가할 수 있습니다.
 
@@ -116,7 +116,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ### 파일 서식 옵션 순서 지정 {#ordering}
 
-파일 형식 옵션을 대상 구성의 고객 데이터 필드로 추가하는 순서는 UI에 반영됩니다. 예를 들어 아래 구성은 그에 따라 UI에 반영되며, 옵션은 **[!UICONTROL 구분 기호]**, **[!UICONTROL 따옴표 문자]**, **[!UICONTROL 이스케이프 문자]**, **[!UICONTROL 빈 값]**, **[!UICONTROL Null 값]** 순서로 표시됩니다.
+파일 형식 옵션을 대상 구성의 고객 데이터 필드로 추가하는 순서는 UI에 반영됩니다. 예를 들어 아래 구성은 UI에 따라 반영되며, 옵션은 **[!UICONTROL Delimiter]**, **[!UICONTROL Quote Character]**, **[!UICONTROL Escape Character]**, **[!UICONTROL Empty Value]**, **[!UICONTROL Null Value]** 순서로 표시됩니다.
 
 ![Experience Platform UI에서 파일 서식 옵션 순서를 보여 주는 이미지입니다.](../../assets/guides/batch/file-formatting-order.png)
 
@@ -241,7 +241,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 한 섹션 내에서 여러 파일 서식 옵션을 그룹화할 수 있습니다. UI에서 대상에 대한 연결을 설정할 때 사용자는 유사한 필드를 시각적으로 그룹화할 수 있습니다.
 
-이렇게 하려면 `"type": "object"`을(를) 사용하여 그룹을 만들고 아래 예와 같이 **[!UICONTROL CSV 옵션]** 그룹화가 강조 표시된 `properties` 매개 변수 내에서 원하는 파일 서식 옵션을 수집합니다.
+이렇게 하려면 `"type": "object"`을(를) 사용하여 그룹을 만들고 아래 예와 같이 `properties` 그룹화가 강조 표시된 **[!UICONTROL CSV Options]** 매개 변수 내에서 원하는 파일 서식 옵션을 수집합니다.
 
 ```json {line-numbers="true" start-number="100" highlight="106-128"}
 "customerDataFields":[
@@ -340,7 +340,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             }
 ```
 
-보다 넓은 컨텍스트에서는 `fileType` 문자열 및 필드가 정의된 `csvOptions` 개체와 함께 아래 대상 구성에서 사용되는 `conditional` 필드를 볼 수 있습니다.
+보다 넓은 컨텍스트에서는 `conditional` 문자열 및 필드가 정의된 `fileType` 개체와 함께 아래 대상 구성에서 사용되는 `csvOptions` 필드를 볼 수 있습니다.
 
 ```json
         {
@@ -487,7 +487,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ![CSV 파일에 대한 조건부 파일 서식 옵션을 보여 주는 화면 기록입니다.](../../assets/guides/batch/conditional-file-formatting.gif)
 
-### 위에 표시된 모든 옵션을 포함하는 전체 API 요청
+### 위에 표시된 모든 옵션을 포함하는 전체 API 요청 {#complete-api-request}
 
 아래 API 요청은 위의 섹션에 설명된 모든 옵션을 한 구성에 결합합니다.
 
@@ -716,7 +716,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 ## 알려진 제한 사항 {#known-limitations}
 
 특정 파일 형식 옵션 조합을 사용하면 원하지 않는 파일 내보내기 결과가 발생할 수 있습니다.
-Adobe은 다음 CSV 옵션 조합을 선택하지 않는 것을 권장합니다.
+Adobe에서는 다음 CSV 옵션 조합을 선택하지 않는 것이 좋습니다.
 
 ```
 nullValue -> ""
@@ -728,7 +728,7 @@ emptyValue -> ""
 
 | 이름 | 성 | 국가 | state |
 |---------|----------|---------|--------|
-| Michael | 로즈 | 미국 | 뉴욕 |
+| Michael | 로즈 | USA | 뉴욕 |
 | 제임스 | Smith |  | null |
 
 {style="table-layout:auto"}
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽으면 이제 Destination SDK을 사용하여 내보낸 파일에 대한 사용자 정의 파일 서식 옵션을 설정하는 방법을 알 수 있습니다. 그런 다음 팀은 [파일 기반 대상에 대한 활성화 워크플로](../../../ui/activate-batch-profile-destinations.md)를 사용하여 데이터를 대상으로 내보낼 수 있습니다.
+이 문서를 읽은 후에는 Destination SDK을 사용하여 내보낸 파일에 대한 사용자 정의 파일 서식 옵션을 설정하는 방법을 이해할 수 있습니다. 그런 다음 팀은 [파일 기반 대상에 대한 활성화 워크플로](../../../ui/activate-batch-profile-destinations.md)를 사용하여 데이터를 대상으로 내보낼 수 있습니다.

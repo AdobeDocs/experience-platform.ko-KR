@@ -2,11 +2,11 @@
 keywords: advertising; microsoft ads; customer match;
 title: Microsoft Ads 고객 일치 연결
 description: Microsoft Ads Customer Match 대상을 사용하여 이메일 주소로 고객을 일치시키고 검색 및 대상 광고를 포함하여 Microsoft Advertising 네트워크에서 고객과 다시 교류합니다.
-badge: Beta
+badge: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 82f412676c89d7d14116be9328ab7fa438e10fc0
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 16%
@@ -27,11 +27,11 @@ ht-degree: 16%
 
 [!DNL Microsoft Ads Customer Match] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 기능을 사용하여 해결할 수 있는 사용 사례를 소개합니다.
 
-### 사용 사례 #1
+### 사용 사례 #1 {#use-case-1}
 
 전자 상거래 브랜드는 [!DNL Microsoft Search] 및 [!DNL Microsoft Audience Network]을(를) 통해 기존 고객에게 연락하여 과거 구매 및 검색 기록을 기반으로 오퍼를 개인화하려고 합니다. 브랜드는 자체 CRM의 이메일 주소를 Experience Platform으로 수집하고, 자체 오프라인 데이터에서 대상을 만들고, 이러한 대상을 [!DNL Microsoft Ads Customer Match]에 보내 검색 및 대상 광고 전반에 걸쳐 사용할 수 있도록 함으로써 광고 비용을 최적화할 수 있습니다.
 
-### 사용 사례 #2
+### 사용 사례 #2 {#use-case-2}
 
 한 기술 회사가 신제품을 출시했다. 이번 신제품 홍보를 위해 기존에 관련 제품을 구매한 고객들의 인지도를 끌어내고자 한다. CRM 데이터베이스의 이메일 주소를 식별자로 사용하여 Experience Platform에 업로드합니다. 관련 제품을 소유한 고객을 기반으로 대상을 만듭니다. 이러한 대상은 [!DNL Microsoft Ads Customer Match]&#x200B;(으)로 전송되므로 회사는 현재 고객과 [!DNL Microsoft Advertising Network]의 유사한 고객을 타깃팅할 수 있습니다.
 
@@ -96,7 +96,7 @@ ht-degree: 16%
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
@@ -146,7 +146,7 @@ ht-degree: 16%
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* 대상으로 *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 

@@ -2,9 +2,9 @@
 title: 설명서 셀프서비스 템플릿 // 대상 이름으로 바꾸기
 description: 이 템플릿을 사용하여 Adobe Experience Platform 카탈로그의 대상에 대한 공개 설명서를 만듭니다. // 개요 섹션의 단락으로 바꾸기
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 38178723dc142ba3e79d6c170affaf86ec496086
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1737'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 대상 커넥터 및 설명서 페이지는 *YourDestination* 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 *링크 또는 이메일 주소 삽입(예: `support@YourDestination.com`)에서 직접 문의하십시오.*
+>이 대상 커넥터 및 설명서 페이지는 *YourDestination* 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청이 있으면 *링크 또는 이메일 주소 삽입(예: `support@YourDestination.com`)으로 직접 연락하십시오.*
 
 ## 사용 사례 {#use-cases}
 
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 *Adobe Experience Platform 사용자 인터페이스에서 대상 설정을 시작하기 전에 고객이 알아야 할 사항에 대한 정보를 이 섹션에 추가합니다. 이 값은*&#x200B;일 수 있습니다.
 
-* *허용 목록에 추가해야 함*
+* *허용 목록에 추가되어야 함*
 * *전자 메일 해시에 대한 요구 사항*
 * *모든 계정 세부 정보*
 * *플랫폼에 연결할 API 키를 얻는 방법*
@@ -115,7 +115,7 @@ ht-degree: 2%
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
@@ -151,7 +151,7 @@ ht-degree: 2%
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 

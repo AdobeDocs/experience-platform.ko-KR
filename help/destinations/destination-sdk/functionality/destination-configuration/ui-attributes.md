@@ -2,9 +2,9 @@
 description: Destination SDK으로 빌드된 대상의 설명서 링크, 대상 카드 카테고리, 대상 연결 유형 및 빈도와 같은 UI 속성을 구성하는 방법을 알아봅니다.
 title: UI 속성
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,8 @@ Destination SDK을 통해 [대상을 만들기](../../authoring-api/destination-
 | 실시간(스트리밍) 통합 | 예 |
 | 파일 기반 (일괄 처리) 통합 | 예 |
 
+{style="table-layout:auto"}
+
 ## 지원되는 매개 변수 {#supported-parameters}
 
 ```json
@@ -66,7 +68,7 @@ Destination SDK을 통해 [대상을 만들기](../../authoring-api/destination-
 
 `http://www.adobe.com/go/destinations-YOURDESTINATION-en` 형식을 사용하십시오. 여기서 `YOURDESTINATION`은(는) 대상 이름입니다. Moviestar라는 대상의 경우 `http://www.adobe.com/go/destinations-moviestar-en`을(를) 사용합니다.
 
-사용자는 UI의 대상 카탈로그 페이지에서 설명서 링크를 보고 방문할 수 있습니다. 아래 이미지에 표시된 대로 대상 카드를 찾은 다음 **[!UICONTROL 추가 작업]**&#x200B;을 선택한 다음 **[!UICONTROL 설명서 보기]**&#x200B;를 선택해야 합니다.
+사용자는 UI의 대상 카탈로그 페이지에서 설명서 링크를 보고 방문할 수 있습니다. 아래 그림과 같이 대상 카드를 찾은 다음 **[!UICONTROL More actions]**, **[!UICONTROL View documentation]**&#x200B;을(를) 선택해야 합니다.
 
 ![설명서 링크 위치를 표시하는 UI 이미지입니다.](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
 
@@ -94,7 +96,7 @@ Destination SDK을 통해 [대상을 만들기](../../authoring-api/destination-
 
 `frequency`은(는) 대상에서 지원하는 데이터 내보내기 형식을 참조하는 문자열 매개 변수입니다. API 기반 통합을 위해 `Streaming`(으)로 설정하거나 파일을 대상으로 내보낼 때 `Batch`(으)로 설정합니다.
 
-사용자는 각 대상 연결의 **[!UICONTROL 데이터 흐름 실행]** 페이지에서 빈도 유형을 볼 수 있습니다.
+각 대상 연결의 **[!UICONTROL Dataflow runs]** 페이지에서 빈도 유형을 볼 수 있습니다.
 
 ![UI에서 빈도 유형 위치를 보여 주는 UI 이미지입니다.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
 

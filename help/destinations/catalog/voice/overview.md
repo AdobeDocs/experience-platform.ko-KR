@@ -3,7 +3,7 @@ keywords: 음성 대상;음성 대상
 title: 고객의 소리 대상 개요
 description: 음성 플랫폼은 음성 메시지, 통화 데이터, 채팅 대화 등 다양한 소스의 데이터를 수집하고 취합한다. 수집된 정보는 필터링 및 분석되어 기업이 해당 요구 사항을 충족하기 위해 웹 사이트를 최적화할 수 있습니다.
 exl-id: f4e9ffea-5429-42ca-9075-562686ba3179
-source-git-commit: be2d4e5d1f204feefc7acb7cb4518044ab3f153a
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # 고객의 소리 대상 개요 {#voice-of-customer-destinations}
 
-## 개요
+## 개요 {#overview}
 
 음성 플랫폼은 음성 메시지, 통화 데이터, 채팅 대화 등 다양한 소스의 데이터를 수집하고 취합한다. 수집된 정보는 필터링 및 분석되어 기업이 해당 요구 사항을 충족하기 위해 웹 사이트를 최적화할 수 있습니다.
 

@@ -2,11 +2,11 @@
 keywords: IP 주소, IP 범위, 허용 목록, 스트리밍 대상 허용 목록 허용 목록에 추가하다
 title: 허용 목록에 추가하다 스트리밍 대상의 IP 주소
 type: Documentation
-description: 이 페이지에서는 Experience Platform에서 HTTP REST API 끝점 또는 Amazon Kinesis 인스턴스로 데이터를 안전하게 내보내기 위해 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
+description: 이 페이지에서는 Experience Platform의 데이터를 HTTP REST API 끝점 또는 Amazon Kinesis 인스턴스로 안전하게 내보내기 위해 허용 목록에 추가하다에 추가할 수 있는 IP 범위를 제공합니다.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 6d59d0555dda124acfd16483e11c2899ff5c846e
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '424'
 ht-degree: 2%
 
 ---

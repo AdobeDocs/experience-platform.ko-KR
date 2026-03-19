@@ -2,9 +2,9 @@
 description: 대상 테스트 API를 사용하여 메시지 변환 템플릿을 기반으로 스트리밍 대상에 대한 출력을 확인하는 방법에 대해 알아봅니다.
 title: 내보낸 프로필 구조의 유효성 검사
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '792'
 ht-degree: 1%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 1%
 >
 >**API 끝점**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
-이 페이지에서는 [메시지 변환 템플릿](../../functionality/destination-server/message-format.md#using-templating)을(를) 기반으로 대상의 예상 형식과 일치하는 내보낸 프로필을 렌더링하기 위해 `/authoring/testing/template/render` API 끝점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. 이 끝점에서 지원하는 기능에 대한 설명은 [템플릿 만들기](create-template.md)를 참조하십시오.
+이 페이지에서는 `/authoring/testing/template/render`메시지 변환 템플릿[을(를) 기반으로 대상의 예상 형식과 일치하는 내보낸 프로필을 렌더링하기 위해 ](../../functionality/destination-server/message-format.md#using-templating) API 끝점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. 이 끝점에서 지원하는 기능에 대한 설명은 [템플릿 만들기](create-template.md)를 참조하십시오.
 
 ## 렌더링 템플릿 API 작업 시작 {#get-started}
 
-계속하기 전에 [시작 안내서](../../getting-started.md)에서 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
+계속하기 전에 [시작 안내서](../../getting-started.md)를 검토하여 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 확인하십시오.
 
 ## 메시지 변형 템플릿을 기반으로 내보낸 프로필 렌더링 {#render-exported-data}
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->* 여기에서 사용해야 하는 대상 ID는 `/destinations` 끝점을 사용하여 만든 대상 구성에 해당하는 `instanceId`입니다. 자세한 내용은 [대상 구성 검색](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)을 참조하세요.
+>* 여기에서 사용해야 하는 대상 ID는 `instanceId` 끝점을 사용하여 만든 대상 구성에 해당하는 `/destinations`입니다. 자세한 내용은 [대상 구성 검색](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)을 참조하세요.
 
 **API 형식**
 

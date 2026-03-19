@@ -2,9 +2,9 @@
 title: Snap Inc 연결
 description: Snapchat Ads Platform에 연결하고 Experience Platform에서 대상을 내보내는 방법에 대해 알아봅니다.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1161'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->이 대상 커넥터 및 설명서 페이지는 *Snap Inc* 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 *dev-support@snap.com*&#x200B;로 직접 연락하십시오.
+>이 대상 커넥터 및 설명서 페이지는 *Snap Inc* 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 *dev-support@snap.com*&#x200B;로 직접 문의하십시오.
 
 ## 사용 사례 {#use-cases}
 
@@ -42,12 +42,12 @@ ht-degree: 3%
 *Snap Inc* 대상으로 전송된 모든 식별자는 SHA-256 형식으로 해시해야 합니다. 일반 텍스트 식별자를 대상으로 보내기 전에 해시하려면 대상에 대한 대상 식별자를 매핑할 때 **[!UICONTROL Apply transformation]** 옵션을 선택하십시오.
 
 >[!WARNING]
-> 
+>
 > 해시되지 않은 식별자는 Snap Inc 대상에서 허용되지 않으며 이러한 식별자를 보내면 오류가 발생할 수 있습니다.
 
 
 >[!IMPORTANT]
-> 
+>
 > Snap Inc 대상은 여러 ID를 지원하지 않습니다. ID를 하나만 선택하십시오.
 
 | 대상 ID | 설명 | 고려 사항 |
@@ -99,7 +99,7 @@ ht-degree: 3%
 ## Snap Inc에 연결 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 ### 대상으로 인증 {#authenticate}
@@ -107,7 +107,7 @@ ht-degree: 3%
 대상에 인증하려면 다음 단계를 수행합니다.
 
 1. Adobe Experience Platform의 대상 카탈로그에서 *Snap Inc* 대상을 찾아 **설정**&#x200B;을(를) 선택합니다.
-2. **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택합니다. 다음 화면으로 리디렉션됩니다.
+2. **[!UICONTROL Connect to destination]**을(를) 선택합니다. 다음 화면으로 리디렉션됩니다.
    ![인증 화면 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Snapchat 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 4. Adobe Experience Platform에서 액세스할 수 있는 Snapchat 데이터가 표시됩니다. 연결 프로세스를 계속하려면 **계속**&#x200B;을(를) 선택하십시오.
@@ -127,7 +127,7 @@ ht-degree: 3%
 * **[!UICONTROL Account ID]**: 대상자를 가져올 광고 계정과 연결된 광고 계정 ID입니다. 이 정보를 찾는 방법에 대한 자세한 내용은 [Snapchat 비즈니스 도움말 센터에서 이 설명서](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US)를 참조하십시오.
 
 >[!IMPORTANT]
-> 
+>
 >잘못되거나 잘못된 Snapchat 광고 계정 ID를 입력하면 대상자 활성화에 실패하게 됩니다. 적절한 광고 계정 ID를 입력했는지 다시 확인하십시오.
 
 ### 경고 활성화 {#enable-alerts}
@@ -139,7 +139,7 @@ ht-degree: 3%
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
@@ -154,7 +154,7 @@ ht-degree: 3%
 
 ![대상자](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Adobe 대상이 Snap Inc.에 처음 활성화되면 빈 대상으로 표시됩니다. 이는 Adobe Experience Platform이 대상자를 평가할 때까지 멤버 데이터를 Snap Inc로 내보내지 않기 때문입니다. Experience Platform에서 대상을 평가하는 방법에 대한 자세한 내용은 [세그먼테이션 서비스 개요](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=ko#evaluate-segments)를 참조하십시오.
+Adobe 대상자가 Snap Inc.에 처음 활성화되면 처음에는 빈 대상자로 표시됩니다. 이는 Adobe Experience Platform이 대상자를 평가할 때까지 멤버 데이터를 Snap Inc로 내보내지 않기 때문입니다. Experience Platform에서 대상을 평가하는 방법에 대한 자세한 내용은 [세그먼테이션 서비스 개요](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments)를 참조하세요.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
