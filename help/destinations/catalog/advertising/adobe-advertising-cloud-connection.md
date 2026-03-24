@@ -60,7 +60,7 @@ Adobe Advertising Demand-Side Platform(DSP) 대상을 사용하면 인증된 퍼
 
 * 캠페인 활성화를 위한 대상을 받을 [DSP의 Real-Time CDP 소스](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Adobe 계정 팀은 Experience Cloud 조직 ID를 사용하여 소스를 만듭니다.
 
-* [!DNL DSP]Real-Time CDP 소스가 [ [!DNL DSP]에 생성될 때 생성되는 ](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) 계정 또는 광고주의 소스 키. [!DNL DSP] 계정 팀이 이 키를 공유합니다. 아래 설명된 대로 Experience Platform 내에서 이를 사용하여 Advertising DSP 대상에 대한 대상 연결을 만듭니다.
+* [!DNL DSP]Real-Time CDP 소스가 [&#x200B; [!DNL DSP]에 생성될 때 생성되는 &#x200B;](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) 계정 또는 광고주의 소스 키. [!DNL DSP] 계정 팀이 이 키를 공유합니다. 아래 설명된 대로 Experience Platform 내에서 이를 사용하여 Advertising DSP 대상에 대한 대상 연결을 만듭니다.
 
 ### 쿠키를 공유하도록 ID 동기화 설정 {#cookie-sync}
 
