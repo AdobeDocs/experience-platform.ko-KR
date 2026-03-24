@@ -2,9 +2,8 @@
 title: Ui를 사용하여 Talon.One에서 Experience Platform으로 데이터 스트리밍
 description: UI를 사용하여 Talon.One에서 Adobe Experience Platform으로 데이터를 스트리밍하는 방법에 대해 알아봅니다. 이 안내서에서는 설정, 데이터 선택 및 데이터 흐름 구성을 다룹니다.
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: 554d86e2f07966ee08940a30fe06050570129e41
+exl-id: a92e17dd-123c-4e83-a851-3cf2861751e5
+source-git-commit: 3d0c216a9f8eb46a25221660253a80ce8e7a7eb0
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 2%
