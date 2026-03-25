@@ -2,12 +2,12 @@
 title: Real-Time Customer Data Platform의 Audience Builder
 description: Real-Time Customer Data Platform에서 Audience Builder를 사용하여 대상을 만드는 방법을 알아봅니다.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
+source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 9%
+source-wordcount: '1079'
+ht-degree: 7%
 
 ---
 
@@ -40,10 +40,6 @@ Adobe Experience Platform 위에 구축된 [!DNL Adobe Real-Time Customer Data P
 
 ![Audience Builder에서 설정 아이콘이 강조 표시되어 있습니다.](../assets/segmentation/audience-builder/select-settings.png){zoomable="yes"}
 
->[!NOTE]
->
->**[!UICONTROL Field options]** 섹션은 현재 베타 버전이며 일부 고객에게만 제공됩니다. 자세한 내용은 Adobe 고객 지원 센터에 문의하십시오.
-
 [!UICONTROL Settings] 섹션이 표시됩니다. 이 섹션에서는 표시되는 필드와 필드의 관계를 업데이트할 수 있습니다.
 
 **[!UICONTROL Field options]**&#x200B;의 경우 데이터가 포함된 필드 또는 전체 XDM 스키마만 표시할 수 있습니다.
@@ -58,9 +54,17 @@ Adobe Experience Platform 위에 구축된 [!DNL Adobe Real-Time Customer Data P
 
 ![Audience Builder에 특성 탭이 표시됩니다](../assets/segmentation/audience-builder/attributes.png)
 
-특성을 선택할 때 [정보 아이콘](../../images/icons/info.png)을 선택하면 요약 데이터를 볼 수 있습니다. 요약 데이터에는 최상위 값, 필드에 대한 설명, 그리고 이 속성에 대한 값이 포함된 계정의 백분율 등의 정보가 포함됩니다.
+특성을 선택할 때 [정보 아이콘](../../images/icons/info.png)을 선택하면 요약 데이터를 볼 수 있습니다. 요약 데이터에는 최상위 값, 필드에 대한 설명, 값의 레코드 수 및 이 속성에 대한 값이 포함된 계정의 백분율과 같은 정보가 포함됩니다.
+
+**[!UICONTROL Populated]** 섹션에는 사용 가능한 총 레코드 수와 비교하여 특성이 채워진 레코드 수와 이 필드에 대한 값이 있는 계정의 비율이 표시됩니다.
+
+**[!UICONTROL Top values]** 섹션에는 특성에 대해 가장 자주 발생하는 값이 표시되며 값, 값이 있는 레코드 수 및 값이 나타내는 총 레코드 비율과 같은 세부 정보가 포함됩니다.
 
 ![특성에 대한 요약 데이터의 전체 버전을 표시하는 팝오버입니다.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
+
+또는 최소값, 평균(평균) 및 최대값이 표시된 데이터 분포를 확인할 수 있습니다.
+
+![최소값, 평균값, 최대값을 포함하여 특성에 대한 통계를 표시하는 팝오버](../assets/segmentation/audience-builder/statistics.png)
 
 특성이 계정의 25% 미만으로 채워지는 경우 대신 ![데이터 알림 아이콘](../../images/icons/data-notice.png)이 표시됩니다. 속성에 관계없이 동일한 요약 데이터가 표시됩니다.
 
@@ -72,7 +76,11 @@ Adobe Experience Platform 위에 구축된 [!DNL Adobe Real-Time Customer Data P
 >
 >이 요약 데이터는 **일별**&#x200B;로 업데이트됩니다.
 
-대상 빌더에 대한 자세한 안내서는 [대상 빌더 사용 안내서](../../segmentation/ui/segment-builder.md){target="_blank"}를 참조하십시오.
+또한 특성에는 **[!UICONTROL Ingestion Type]**&#x200B;이(가) 있습니다. 수집 유형을 통해 데이터의 출처를 알 수 있으며 **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** 또는 **[!UICONTROL No Data Ingested]** 값 중 하나일 수 있습니다.
+
+![특성에 대한 수집 유형이 표시됩니다.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png)
+
+Audience Builder의 특성에 대한 자세한 내용은 [Audience Builder 사용 안내서](../../segmentation/ui/segment-builder.md){target="_blank"}를 참조하십시오.
 
 ### 대상자 {#audiences}
 
