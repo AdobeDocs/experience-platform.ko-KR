@@ -2,9 +2,9 @@
 title: 데이터스트림에 대한 보트 탐지 구성
 description: 사람 트래픽과 사람 트래픽을 구분하기 위해 데이터스트림에 대한 봇 탐지를 구성하는 방법에 대해 알아봅니다.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 5f599b8572c4cebcdfb9ab85027211da4d8a020c
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1382'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Edge Network에 대한 요청이 보트 감지 규칙과 일치하는 경우, XD
 >
 >보트 감지는 보트 요청을 삭제하지 않습니다. 보트 채점을 사용하여 XDM 스키마만 업데이트하고 이벤트를 구성한 [데이터스트림 서비스](configure.md)에 전달합니다.
 >
->Adobe 솔루션은 다양한 방식으로 봇 점수를 처리할 수 있습니다. 예를 들어 Adobe Analytics은 자체 [보트 필터링 서비스](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=ko)를 사용하며 Edge Network에서 설정한 점수를 사용하지 않습니다. 두 서비스는 동일한 [IAB 보트 목록](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)을 사용하므로 보트 점수는 동일합니다.
+>Adobe 솔루션은 다양한 방식으로 봇 점수를 처리할 수 있습니다. 예를 들어 Adobe Analytics은 자체 [보트 필터링 서비스](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html)를 사용하며 Edge Network에서 설정한 점수를 사용하지 않습니다. 두 서비스는 동일한 [IAB 보트 목록](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)을 사용하므로 보트 점수는 동일합니다.
 
 ## 기술 고려 사항 {#technical-considerations}
 
@@ -65,12 +65,12 @@ Edge Network에 대한 요청이 보트 감지 규칙과 일치하는 경우, XD
 
 [보트 탐지 규칙] 페이지에서 다음 기능을 사용하여 보트 탐지를 구성할 수 있습니다.
 
-* [[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) 사용 중.
+* [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) 사용.
 * 보트 감지 규칙을 만듭니다.
 
 ### IAB/ABC International Spiders and Bots List 사용 {#iab-list}
 
-[IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)은(는) 타사의 산업 표준 인터넷 스파이더 및 보트 목록입니다. 이 목록은 검색 엔진 크롤러, 모니터링 도구 및 분석 횟수에 포함하지 않으려는 기타 비인적 트래픽과 같은 자동화된 트래픽을 식별하는 데 도움이 됩니다.
+[IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)은(는) 타사의 산업 표준 인터넷 스파이더 및 보트 목록입니다. 이 목록은 검색 엔진 웹 크롤러, 모니터링 도구 및 분석 횟수에 포함하지 않으려는 기타 비인적 트래픽과 같은 자동화된 트래픽을 식별하는 데 도움이 됩니다.
 
 IAB/ABC International Spiders and Bots List를 사용하도록 데이터 스트림을 구성하려면 다음을 수행하십시오.
 

@@ -2,16 +2,16 @@
 title: 데이터스트림 재정의 구성
 description: 데이터스트림 UI에서 데이터스트림 재정의를 구성하고 웹 SDK 또는 모바일 SDK을 통해 활성화하는 방법에 대해 알아봅니다.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 53%
+source-wordcount: '1043'
+ht-degree: 52%
 
 ---
 
 # 데이터스트림 재정의 구성
 
-데이터 스트림 재정의를 사용하면 웹 SDK 또는 모바일 SDK을 통해 Edge Network에 전달되는 데이터 스트림에 대한 추가 구성을 정의할 수 있습니다.
+데이터 스트림 재정의를 사용하여 웹 SDK 또는 모바일 SDK을 통해 Edge Network에 전달되는 데이터 스트림에 대한 추가 구성을 정의합니다.
 
 이렇게 하면 데이터 스트림을 만들거나 기존 설정을 수정하지 않고도 기본 데이터 스트림 비헤이비어와 다른 데이터 스트림 비헤이비어를 트리거할 수 있습니다.
 
@@ -51,7 +51,7 @@ ht-degree: 53%
 
 ## Datastreams UI에서 데이터스트림 재정의 구성 {#configure-overrides}
 
-데이터스트림 구성 재정의를 사용하여 다음 데이터스트림 구성을 수정할 수 있습니다.
+데이터 스트림 구성 재정의를 사용하면 다음 데이터 스트림 구성을 수정할 수 있습니다.
 
 * Experience Platform 이벤트 데이터 세트
 * Adobe Target 속성 토큰
@@ -74,7 +74,7 @@ Adobe Target 데이터스트림에 대한 데이터스트림 재정의를 구성
 
 Adobe Analytics 데이터스트림에 대한 데이터스트림 재정의를 구성하려면 먼저 [Adobe Analytics](configure.md#analytics) 데이터스트림을 만들어야 합니다. 지침에 따라 [Adobe Analytics](configure.md#analytics) 서비스로 [데이터스트림을 구성](configure.md)합니다.
 
-데이터 스트림을 만들었으면 추가한 [Adobe Analytics](configure.md#target) 서비스를 편집하고 **[!UICONTROL Report Suite Overrides]** 섹션을 사용하여 아래 그림과 같이 원하는 데이터 스트림 재정의를 추가하십시오.
+데이터 스트림을 만들었으면 추가한 [Adobe Analytics](configure.md#analytics) 서비스를 편집하고 **[!UICONTROL Report Suite Overrides]** 섹션을 사용하여 아래 그림과 같이 원하는 데이터 스트림 재정의를 추가하십시오.
 
 보고서 세트 무시의 일괄 편집을 활성화하려면 **[!UICONTROL Show Batch Mode]**&#x200B;을(를) 선택하십시오. 보고서 세트 재정의 목록을 복사하여 붙여넣으면 한 줄에 하나의 보고서 세트를 입력할 수 있습니다.
 

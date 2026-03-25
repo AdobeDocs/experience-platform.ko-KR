@@ -2,9 +2,9 @@
 title: 동적 데이터 스트림 구성 만들기
 description: 규칙을 기반으로 다양한 Experience Cloud 서비스로 데이터를 라우팅하기 위해 동적 데이터스트림 구성을 만드는 방법을 알아봅니다.
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1092'
 ht-degree: 3%
 
 ---
@@ -52,29 +52,29 @@ ht-degree: 3%
 
 1. **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** 페이지로 이동하여 만든 데이터 스트림을 선택합니다.
 
-   ![데이터스트림 목록을 표시하는 데이터스트림 사용자 인터페이스의 이미지](assets/configure-dynamic-datastream/select-datastream.png)
+   ![데이터스트림 목록을 표시하는 데이터스트림 사용자 인터페이스](assets/configure-dynamic-datastream/select-datastream.png)
 
 1. 동적 구성을 정의할 서비스에서 **[!UICONTROL Edit]** 옵션을 선택하십시오.
 
-   ![데이터스트림에 추가된 서비스를 보여 주는 데이터스트림 사용자 인터페이스의 이미지입니다.](assets/configure-dynamic-datastream/select-service.png)
+   ![데이터스트림에 추가된 서비스를 표시하는 데이터스트림 사용자 인터페이스.](assets/configure-dynamic-datastream/select-service.png)
 
 1. **[!UICONTROL Configure]** 페이지에서 **[!UICONTROL Save and Edit Dynamic Configuration]**&#x200B;을(를) 선택합니다.
 
-   ![데이터스트림 구성 페이지를 표시하는 데이터스트림 사용자 인터페이스 이미지.](assets/configure-dynamic-datastream/save-and-edit.png)
+   ![데이터 스트림 구성 페이지를 표시하는 데이터 스트림 사용자 인터페이스입니다.](assets/configure-dynamic-datastream/save-and-edit.png)
 
 1. **[!UICONTROL Add Dynamic Configuration]**&#x200B;를 선택합니다.
 
-   ![규칙 추가 없는 동적 구성을 보여 주는 데이터스트림 사용자 인터페이스의 이미지입니다.](assets/configure-dynamic-datastream/add-dynamic-config.png)
+   ![규칙이 추가되기 전에 동적 구성 페이지를 표시하는 데이터스트림 사용자 인터페이스입니다.](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
 1. **[!UICONTROL Resources]** 패널에서 규칙을 작성할 항목을 창의 오른쪽에 끌어다 놓습니다. 여러 리소스를 결합하여 복잡한 규칙을 작성할 수 있습니다.
 
    **[!UICONTROL equals]**, **[!UICONTROL does not equal]**, **[!UICONTROL exists]** 등 각 리소스의 옵션을 사용하여 규칙을 미세 조정하십시오.
 
-   ![동적 구성 규칙을 표시하는 데이터스트림 사용자 인터페이스의 이미지](assets/configure-dynamic-datastream/drag-resources.png)
+   ![리소스가 드래그되는 동적 구성 규칙 빌더를 표시하는 데이터스트림 사용자 인터페이스](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. **[!UICONTROL Configuration]** 섹션에서 데이터를 각 서비스로 전송할지 여부에 따라 각 규칙에 대해 활성화하거나 비활성화할 서비스를 전환합니다. 토글을 끄면 서비스 라우팅이 비활성화되고 *데이터가 업스트림 서비스로 전송되지 않습니다*.
+1. **[!UICONTROL Configuration]** 섹션에서 데이터를 각 서비스로 전송할지 여부에 따라 각 규칙에 대해 활성화하거나 비활성화할 서비스를 전환합니다. 토글을 끄면 서비스 라우팅이 비활성화되고 *데이터가 다운스트림 서비스로 전송되지 않습니다*.
 
-   ![동적 구성 규칙을 표시하는 데이터스트림 사용자 인터페이스의 이미지](assets/configure-dynamic-datastream/enable-service.png)
+   ![서비스 전환이 있는 동적 구성 규칙을 표시하는 데이터스트림 사용자 인터페이스입니다.](assets/configure-dynamic-datastream/enable-service.png)
 
 1. 규칙 구성이 완료되면 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
@@ -135,9 +135,9 @@ ht-degree: 3%
 
 이 규칙을 다음과 같은 간단한 규칙으로 나눌 수 있습니다.
 
-![복잡한 규칙을 표시하는 플랫폼 UI 이미지입니다.](assets/configure-dynamic-datastream/simple-rule-1.png)
+![간소화된 첫 번째 규칙을 보여 주는 플랫폼 UI 이미지입니다.](assets/configure-dynamic-datastream/simple-rule-1.png)
 
-![복잡한 규칙을 표시하는 플랫폼 UI 이미지입니다.](assets/configure-dynamic-datastream/simple-rule-2.png)
+![간소화된 두 번째 규칙을 보여 주는 플랫폼 UI 이미지입니다.](assets/configure-dynamic-datastream/simple-rule-2.png)
 
 **복잡한 규칙을 사용하지 마십시오**. 더 간단한 규칙을 통해 보다 신속하게 평가하고 유지 관리할 수 있습니다.
 
