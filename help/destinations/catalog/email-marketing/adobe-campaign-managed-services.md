@@ -185,7 +185,7 @@ Campaign을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 
    ![필수 및 중복 제거 키 표시기와 함께 [!DNL Adobe Campaign] 대상 필드에 매핑된 XDM 원본 필드를 표시하는 특성 매핑 화면입니다.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
-1. 매핑이 수행되면 대상 구성을 검토하고 완료하여 **[!DNL Campaign]**에 데이터를 보낼 수 있습니다.
+1. 매핑이 수행되면 대상 구성을 검토하고 완료하여 **[!DNL Campaign]**&#x200B;에 데이터를 보낼 수 있습니다.
    [대상 구성을 검토하고 완료하는 방법을 알아보세요](/help/destinations/destination-types.md#destination-types-and-categories).
 
 ## 내보낸 데이터/데이터 내보내기 유효성 검사 {#exported-data}

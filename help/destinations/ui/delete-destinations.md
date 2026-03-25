@@ -36,7 +36,7 @@ ht-degree: 0%
 
    ![대상 필터링](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. 이름 열에서 ![추가 단추](/help/images/icons/more.png) 단추를 선택한 다음 ![삭제 단추](/help/images/icons/delete.png) **[!UICONTROL Delete]**을(를) 선택하여 기존 대상 연결을 제거합니다.
+3. 이름 열에서 ![추가 단추](/help/images/icons/more.png) 단추를 선택한 다음 ![삭제 단추](/help/images/icons/delete.png) **[!UICONTROL Delete]**&#x200B;을(를) 선택하여 기존 대상 연결을 제거합니다.
    ![대상 삭제](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. 대상 연결 제거를 확인하려면 **[!UICONTROL Delete]**&#x200B;을(를) 선택하십시오.

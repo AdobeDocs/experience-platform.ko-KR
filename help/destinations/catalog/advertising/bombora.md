@@ -13,7 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->[의 ](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Business[ 및 ](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Person[!DNL Real-Time Customer Data Platform] 에디션을 구매하는 회사는 Bombora ABM Audiences 대상에 대한 계정 대상을 활성화할 수 있습니다.
+>[의 &#x200B;](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Business[&#x200B; 및 &#x200B;](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Person[!DNL Real-Time Customer Data Platform] 에디션을 구매하는 회사는 Bombora ABM Audiences 대상에 대한 계정 대상을 활성화할 수 있습니다.
 
 [계정 대상자](/help/segmentation/types/account-audiences.md)를 기반으로 대상자 타겟팅, 개인화 및 억제에 대한 Bombora 캠페인에 대한 프로필을 활성화합니다.
 

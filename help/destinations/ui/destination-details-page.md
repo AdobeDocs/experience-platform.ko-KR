@@ -113,7 +113,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->대상에 매핑된 특성 및 ID에 대한 세부 정보를 보고 편집하려면 **[!UICONTROL Activate audiences]**&#x200B;오른쪽 레일[에서 ](#right-rail)을(를) 선택하십시오.
+>대상에 매핑된 특성 및 ID에 대한 세부 정보를 보고 편집하려면 **[!UICONTROL Activate audiences]**&#x200B;오른쪽 레일[에서 &#x200B;](#right-rail)을(를) 선택하십시오.
 
 >[!BEGINSHADEBOX]
 
@@ -146,7 +146,7 @@ ht-degree: 0%
 
 ### 주문형 여러 파일을 배치 대상으로 내보내기 {#bulk-export}
 
-[ 페이지에서 ](../ui/export-file-now.md)필요 시 여러 파일을 내보내기&#x200B;**[!UICONTROL Activation data]**&#x200B;할 수 있습니다. 이렇게 하려면 파일을 온디맨드로 내보낼 대상을 선택하고 **[!UICONTROL Export file now]** 컨트롤을 선택하여 일회성 내보내기를 트리거하면 선택한 각 대상에 대한 파일이 배치 대상에 전달됩니다.
+[&#x200B; 페이지에서 &#x200B;](../ui/export-file-now.md)필요 시 여러 파일을 내보내기&#x200B;**[!UICONTROL Activation data]**&#x200B;할 수 있습니다. 이렇게 하려면 파일을 온디맨드로 내보낼 대상을 선택하고 **[!UICONTROL Export file now]** 컨트롤을 선택하여 일회성 내보내기를 트리거하면 선택한 각 대상에 대한 파일이 배치 대상에 전달됩니다.
 
 ![지금 파일 내보내기 단추를 강조 표시하는 이미지](../assets/ui/details-page/bulk-export-file-now.png)
 

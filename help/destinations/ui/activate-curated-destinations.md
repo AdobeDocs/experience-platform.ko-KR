@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # LiveRamp 식별자를 기반으로 조정된 대상에 대상 활성화
 
-[!DNL Real-Time CDP]과(와) Adobe [!DNL LiveRamp] 통합을 사용하여 아래 나열된 대상과 같이 연결된 TV 및 오디오 대상을 포함하여 활성화를 위해 [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html)을(를) 사용하는 조정된 대상 목록에 대상을 활성화합니다.
+[!DNL Real-Time CDP]과(와) Adobe [!DNL LiveRamp] 통합을 사용하여 아래 나열된 대상과 같이 연결된 TV 및 오디오 대상을 포함하여 활성화를 위해 [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html)을(를) 사용하는 조정된 대상 목록에 대상을 활성화합니다.
 
 >[!IMPORTANT]
 >
 >Experience Platform 인터페이스에서 LiveRamp RampID를 수집하거나 사용할 필요가 없습니다.
 >
-> 공식 [!DNL Real-Time CDP]LiveRamp 설명서[에 설명된 대로 PII 기반 식별자, 알려진 식별자 및 사용자 지정 ID와 같은 ](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers)의 ID를 내보낼 수 있습니다. 그런 다음 이러한 ID는 활성화 프로세스에서 추가 다운스트림인 [!DNL LiveRamp RampIDs]과(와) 일치합니다.
+> 공식 [!DNL Real-Time CDP]LiveRamp 설명서[에 설명된 대로 PII 기반 식별자, 알려진 식별자 및 사용자 지정 ID와 같은 &#x200B;](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers)의 ID를 내보낼 수 있습니다. 그런 다음 이러한 ID는 활성화 프로세스에서 추가 다운스트림인 [!DNL LiveRamp RampIDs]과(와) 일치합니다.
 
 
 * [[!DNL 4C Insights]](#insights)
@@ -89,11 +89,11 @@ LiveRamp RampID를 기반으로 대상자를 조정된 대상으로 활성화하
 
 대상을 LiveRamp로 내보내는 데 성공했는지 [확인](../catalog/advertising/liveramp-onboarding.md#exported-data)한 후에는 [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney) 등과 같이 원하는 대상으로 대상을 활성화할 수 있습니다.
 
-[ 대상을 사용하여 대상(](#onboarding)단계 1 **[!DNL LiveRamp - Distribution]**&#x200B;에서 내보냄)을 활성화합니다.
+[&#x200B; 대상을 사용하여 대상(](#onboarding)단계 1 **[!DNL LiveRamp - Distribution]**&#x200B;에서 내보냄)을 활성화합니다.
 
 ![LiveRamp - 배포 대상 카드를 표시하는 Experience Platform UI 이미지](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
 
-**[!DNL LiveRamp - Distribution]**&#x200B;단계 1[에서 내보낸 대상을 활성화하고 ](#onboarding) 대상을 구성하는 방법에 대해 알아보려면 [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) 대상 설명서를 읽어 보십시오.
+**[!DNL LiveRamp - Distribution]**&#x200B;단계 1[에서 내보낸 대상을 활성화하고 &#x200B;](#onboarding) 대상을 구성하는 방법에 대해 알아보려면 [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) 대상 설명서를 읽어 보십시오.
 
 >[!IMPORTANT]
 >

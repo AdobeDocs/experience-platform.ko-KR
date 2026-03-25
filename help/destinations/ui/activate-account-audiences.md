@@ -14,9 +14,9 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->[의 ](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Business[ 및 ](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Person[!DNL Real-Time Customer Data Platform] 에디션을 구매하는 회사에서 계정 대상을 대상으로 활성화하는 기능을 사용할 수 있습니다.
+>[의 &#x200B;](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Business[&#x200B; 및 &#x200B;](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Person[!DNL Real-Time Customer Data Platform] 에디션을 구매하는 회사에서 계정 대상을 대상으로 활성화하는 기능을 사용할 수 있습니다.
 
-이 문서에서는 [에서 원하는 대상으로 ](/help/segmentation/types/account-audiences.md)계정 대상자[!DNL Adobe Experience Platform]를 내보내는 데 필요한 워크플로에 대해 설명합니다.
+이 문서에서는 [에서 원하는 대상으로 &#x200B;](/help/segmentation/types/account-audiences.md)계정 대상자[!DNL Adobe Experience Platform]를 내보내는 데 필요한 워크플로에 대해 설명합니다.
 
 ## 지원되는 대상 {#supported-destinations}
 
@@ -108,4 +108,4 @@ ht-degree: 0%
 
 ![동의 적용 제어가 회색으로 표시된 계정 대상자 활성화 워크플로의 검토 단계입니다.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 
-[!DNL Real-Time CDP]데이터 사용 정책 확인[ 및 ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)특성 기반 액세스 제어[와 같은 ](/help/destinations/home.md#attribute-based-access)의 다른 데이터 거버넌스 메커니즘이 지원됩니다.
+[!DNL Real-Time CDP]데이터 사용 정책 확인[&#x200B; 및 &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)특성 기반 액세스 제어[와 같은 &#x200B;](/help/destinations/home.md#attribute-based-access)의 다른 데이터 거버넌스 메커니즘이 지원됩니다.

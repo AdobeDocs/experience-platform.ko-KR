@@ -15,7 +15,7 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->이 대상 커넥터의 가용성은 제한되어 있으며 [!DNL Real-Time CDP]VA7 지역[에 프로비저닝된 ](/help/landing/multi-cloud.md#azure-regions)개의 Ultimate 고객만 사용할 수 있습니다.
+>이 대상 커넥터의 가용성은 제한되어 있으며 [!DNL Real-Time CDP]VA7 지역[에 프로비저닝된 &#x200B;](/help/landing/multi-cloud.md#azure-regions)개의 Ultimate 고객만 사용할 수 있습니다.
 
 ## 개요 {#overview}
 

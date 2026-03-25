@@ -16,7 +16,7 @@ ht-degree: 8%
 >
 >이 기능은 [!DNL Real-Time CDP] Prime 및 Ultimate 패키지를 구입한 고객이 사용할 수 있습니다. 더 많은 내용은 Adobe 담당자에게 문의하십시오.
 
-이 문서에서는 [에서 선호하는 대상으로 ](/help/segmentation/types/prospect-audiences.md)잠재 고객[!DNL Adobe Experience Platform]을(를) 내보내는 데 필요한 워크플로에 대해 설명합니다.
+이 문서에서는 [에서 선호하는 대상으로 &#x200B;](/help/segmentation/types/prospect-audiences.md)잠재 고객[!DNL Adobe Experience Platform]을(를) 내보내는 데 필요한 워크플로에 대해 설명합니다.
 
 ## 지원되는 대상 {#supported-destinations}
 

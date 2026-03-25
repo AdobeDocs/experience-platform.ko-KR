@@ -15,7 +15,7 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->[의 ](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Business[ 및 ](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Person[!DNL Real-Time Customer Data Platform] 버전을 구매하는 회사는 Demandbase 대상에 대해 계정 대상을 활성화할 수 있습니다.
+>[의 &#x200B;](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Business[&#x200B; 및 &#x200B;](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Person[!DNL Real-Time Customer Data Platform] 버전을 구매하는 회사는 Demandbase 대상에 대해 계정 대상을 활성화할 수 있습니다.
 
 [계정 대상자](/help/segmentation/types/account-audiences.md)를 기반으로 대상자 타깃팅, 개인화 및 제외를 위한 Demandbase 캠페인에 대한 프로필을 활성화합니다.
 

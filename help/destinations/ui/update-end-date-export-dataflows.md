@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Experience Platform의 [2024년 9월 릴리스](/help/release-notes/latest/latest.md#destinations)에서는 데이터 세트 데이터 흐름 내보내기에 대한 `endTime` 날짜를 설정하는 옵션을 도입했습니다. Adobe은 또한 2024년 9월 릴리스 전에 *생성된 모든 데이터 세트 내보내기 데이터 흐름에 대해 기본 종료 날짜를 2025년 5월 1일로 도입했습니다*. 이러한 데이터 흐름은 현재 아래에 표시된 것과 유사한 메시지를 표시합니다.
 
-내보내기 데이터 집합 데이터 흐름의 종료 날짜를 업데이트해야 한다는 UI 알림 ![1}](/help/destinations/assets/ui/export-datasets/update-end-date.png)
+내보내기 데이터 집합 데이터 흐름의 종료 날짜를 업데이트해야 한다는 UI 알림 ![1&rbrace;](/help/destinations/assets/ui/export-datasets/update-end-date.png)
 
 **작업 항목**: 이러한 데이터 흐름의 경우 만료되기 전에 종료 날짜를 수동으로 업데이트해야 합니다. 그렇지 않으면 내보내기가 중지됩니다. Experience Platform UI를 사용하여 2025년 5월 1일에 중지하도록 설정된 데이터 흐름을 식별합니다.
 
@@ -44,11 +44,11 @@ Experience Platform UI를 사용하여 종료 날짜가 2025년 5월 1일인 데
 
 데이터 흐름의 종료 날짜를 업데이트하려면:
 
-1. 이전 단계에서 검사하기 위해 선택한 데이터 흐름에서 **데이터 세트 내보내기**를 선택합니다.
+1. 이전 단계에서 검사하기 위해 선택한 데이터 흐름에서 **데이터 세트 내보내기**&#x200B;를 선택합니다.
    ![찾아보기 탭에서 강조 표시된 데이터 세트 내보내기 컨트롤입니다.](/help/destinations/assets/ui/export-datasets/export-datasets-control-highlighted.png)
-2. 워크플로우에서 **예약** 단계로 진행하고 **일정 편집**을 선택합니다.
+2. 워크플로우에서 **예약** 단계로 진행하고 **일정 편집**&#x200B;을 선택합니다.
    ![예약 단계에서 강조 표시된 예약 컨트롤을 편집합니다.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlighted.png)
-3. 2025년 5월 1일 이후에 원하는 종료 날짜를 선택하고 **저장**을 선택하세요.
+3. 2025년 5월 1일 이후에 원하는 종료 날짜를 선택하고 **저장**&#x200B;을 선택하세요.
    ![예약 단계에서 강조 표시된 종료 날짜 컨트롤을 선택하십시오.](/help/destinations/assets/ui/export-datasets/select-end-date.png)
 4. 워크플로우 끝으로 이동하고 업데이트를 저장합니다.
 

@@ -16,7 +16,7 @@ ht-degree: 3%
 
 이 확장을 사용하면 기존 Floodlight 형식(전역 사이트 태그 아님)을 사용하여 [!DNL DoubleClick Floodlight] 태그를 빠르고 쉽게 배포할 수 있습니다. 참고: 이 확장 기능은 Beta 버전입니다.
 
-[!DNL DoubleClick Floodlight]&#x200B;(Beta)은(는) [!DNL Adobe Experience Platform]의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 [!DNL Google]DoubleClick Floodlight[에 대한 ](https://support.google.com/dcm/answer/2823388?hl=en) 지원 설명서를 참조하십시오.
+[!DNL DoubleClick Floodlight]&#x200B;(Beta)은(는) [!DNL Adobe Experience Platform]의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 [!DNL Google]DoubleClick Floodlight[에 대한 &#x200B;](https://support.google.com/dcm/answer/2823388?hl=en) 지원 설명서를 참조하십시오.
 
 이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 

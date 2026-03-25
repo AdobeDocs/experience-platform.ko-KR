@@ -38,7 +38,7 @@ ht-degree: 1%
 
 ## [!DNL Adobe Experience Platform]에서 대상에 대한 설명서를 만드는 고급 지침 {#high-level-instructions}
 
-대략적으로 대상에 대한 설명서를 만들려면 [ 설명서 리포지토리의 ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository)포크를 만들고[!DNL Adobe Experience Platform] 새 분기에서 [제공된 설명서 템플릿](./self-service-template.md)을 편집해야 합니다. Adobe 제공 템플릿을 사용하여 새 대상 페이지를 만듭니다. 준비가 되면 가져오기 요청(PR)을 엽니다. 이 작업을 수행하는 지침은 [새 대상 페이지를 만드는 단계](./documentation-instructions.md#steps-to-create-docs-page)의 아래에 나와 있습니다.
+대략적으로 대상에 대한 설명서를 만들려면 [&#x200B; 설명서 리포지토리의 &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository)포크를 만들고[!DNL Adobe Experience Platform] 새 분기에서 [제공된 설명서 템플릿](./self-service-template.md)을 편집해야 합니다. Adobe 제공 템플릿을 사용하여 새 대상 페이지를 만듭니다. 준비가 되면 가져오기 요청(PR)을 엽니다. 이 작업을 수행하는 지침은 [새 대상 페이지를 만드는 단계](./documentation-instructions.md#steps-to-create-docs-page)의 아래에 나와 있습니다.
 
 <!--
 

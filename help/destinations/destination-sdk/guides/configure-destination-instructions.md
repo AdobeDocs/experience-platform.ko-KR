@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 1단계: 서버 및 템플릿 구성 만들기 {#create-server-template-configuration}
 
-[ 끝점을 사용하여 ](../authoring-api/destination-server/create-destination-server.md)서버 및 템플릿 구성을 만드는`/destinations-server`부터 시작합니다.
+[&#x200B; 끝점을 사용하여 &#x200B;](../authoring-api/destination-server/create-destination-server.md)서버 및 템플릿 구성을 만드는`/destinations-server`부터 시작합니다.
 
 다음은 구성 예입니다. `requestBody.value` 매개 변수의 메시지 변환 템플릿은 3단계, [변환 템플릿 만들기](#create-transformation-template)에서 처리됩니다.
 
@@ -275,7 +275,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 대상 구성에서 `"authenticationRule": "CUSTOMER_AUTHENTICATION"`을(를) 선택했으며 대상이 OAuth 2 인증 방법을 지원하는 경우 [OAuth 2 인증](../functionality/destination-configuration/oauth2-authorization.md)을 읽으십시오.
 
-`"authenticationRule": "PLATFORM_AUTHENTICATION"`을(를) 선택한 경우 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을(를) 만들고 `authenticationId`대상 게재[ 구성의 ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
+`"authenticationRule": "PLATFORM_AUTHENTICATION"`을(를) 선택한 경우 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을(를) 만들고 `authenticationId`대상 게재[&#x200B; 구성의 &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
 
 ## 6단계: 대상 테스트 {#test-destination}
 
