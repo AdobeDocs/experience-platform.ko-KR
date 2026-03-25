@@ -4,10 +4,10 @@ title: UI에서 XDM 스키마 내보내기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 스키마를 다른 샌드박스 또는 조직으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 11%
+source-wordcount: '690'
+ht-degree: 10%
 
 ---
 
@@ -29,6 +29,10 @@ ht-degree: 11%
 ## 전제 조건
 
 Experience Platform UI를 사용하여 XDM 리소스를 내보낼 수 있지만 워크플로우를 완료하려면 스키마 레지스트리 API를 사용하여 해당 리소스를 다른 샌드박스 또는 조직으로 가져와야 합니다. 이 안내서를 따르기 전에 필수 인증 헤더에 대한 중요한 정보가 필요하면 [스키마 레지스트리 API 시작하기](../api/getting-started.md)에 대한 안내서를 참조하십시오.
+
+>[!NOTE]
+>
+>**Delete** 또는 **JSON 구조 복사**&#x200B;와 같은 작업을 찾을 수 없는 경우 사용자 지정(테넌트 정의) 리소스로 작업하고 테이블 행 메뉴 또는 세부 정보 보기(**[!UICONTROL More]**)에서 액세스하는지 확인하십시오. 작업 가용성도 사용 권한 및 사용 제한에 따라 다릅니다. [스키마, 클래스, 필드 그룹 및 데이터 형식 관리: 작업 및 삭제](./explore.md#xdm-resource-actions)를 참조하십시오.
 
 ## 내보내기 페이로드 생성 {#generate-export-payload}
 

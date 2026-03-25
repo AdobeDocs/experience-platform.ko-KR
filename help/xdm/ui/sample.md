@@ -3,10 +3,10 @@ solution: Experience Platform
 title: UI에서 XDM 스키마에 대한 샘플 데이터 생성
 description: Adobe Experience Platform 사용자 인터페이스의 기존 스키마를 기반으로 샘플 JSON 데이터를 생성하는 방법에 대해 알아봅니다.
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 14%
+source-wordcount: '449'
+ht-degree: 13%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 14%
 데이터를 Adobe Experience Platform에 수집하려면 데이터의 형식 및 구조가 기존 XDM(경험 데이터 모델) 스키마를 준수해야 합니다. 특정 데이터 세트에 대한 스키마의 복잡성에 따라 데이터 세트에서 수집 시 예상하는 데이터의 정확한 모양을 결정하는 것이 어려울 수 있습니다.
 
 Experience Platform UI에서 정의하는 모든 스키마의 경우 스키마 구조를 준수하는 샘플 JSON 개체를 생성할 수 있습니다. 이 개체는 해당 스키마를 사용하는 데이터 세트에 수집되는 모든 데이터에 대한 템플릿 역할을 할 수 있습니다.
+
+>[!NOTE]
+>
+>**Delete** 또는 **JSON 구조 복사**&#x200B;와 같은 작업을 찾을 수 없는 경우 사용자 지정(테넌트 정의) 리소스로 작업하고 테이블 행 메뉴 또는 세부 정보 보기(**[!UICONTROL More]**)에서 액세스하는지 확인하십시오. 작업 가용성도 사용 권한 및 사용 제한에 따라 다릅니다. [스키마, 클래스, 필드 그룹 및 데이터 형식 관리: 작업 및 삭제](./explore.md#xdm-resource-actions)를 참조하십시오.
 
 Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Schemas]**&#x200B;을(를) 선택합니다. **[!UICONTROL Browse]** 탭에서 샘플 데이터를 생성할 스키마를 찾습니다. 목록에서 해당 스키마를 선택하면 오른쪽 레일이 업데이트되어 스키마에 대한 세부 정보가 표시됩니다. 여기에서 **[!UICONTROL Download sample file]**&#x200B;을(를) 선택합니다.
 
