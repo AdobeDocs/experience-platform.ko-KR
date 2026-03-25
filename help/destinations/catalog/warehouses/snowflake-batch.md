@@ -155,7 +155,7 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 
 >[!NOTE]
 >
-> 대상을 만든 후에는 **[!UICONTROL Snowflake Account ID]**&#x200B;대상 편집&#x200B;**[!UICONTROL Snowflake Region]** 워크플로우를 통해 [ 및 ](../../ui/edit-destination.md)을(를) 편집할 수 없습니다. 다른 계정 또는 지역 값을 사용하려면 [새 대상 연결을 만드세요](../../ui/connect-destination.md).
+> 대상을 만든 후에는 **[!UICONTROL Snowflake Account ID]**&#x200B;대상 편집&#x200B;**[!UICONTROL Snowflake Region]** 워크플로우를 통해 [&#x200B; 및 &#x200B;](../../ui/edit-destination.md)을(를) 편집할 수 없습니다. 다른 계정 또는 지역 값을 사용하려면 [새 대상 연결을 만드세요](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >
