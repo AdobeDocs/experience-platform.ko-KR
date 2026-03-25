@@ -16,7 +16,7 @@ ht-degree: 1%
 >
 >**API 끝점**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
-이 페이지에서는 `/authoring/testing/template/render`메시지 변환 템플릿[을(를) 기반으로 대상의 예상 형식과 일치하는 내보낸 프로필을 렌더링하기 위해 ](../../functionality/destination-server/message-format.md#using-templating) API 끝점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. 이 끝점에서 지원하는 기능에 대한 설명은 [템플릿 만들기](create-template.md)를 참조하십시오.
+이 페이지에서는 `/authoring/testing/template/render`메시지 변환 템플릿[을(를) 기반으로 대상의 예상 형식과 일치하는 내보낸 프로필을 렌더링하기 위해 &#x200B;](../../functionality/destination-server/message-format.md#using-templating) API 끝점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. 이 끝점에서 지원하는 기능에 대한 설명은 [템플릿 만들기](create-template.md)를 참조하십시오.
 
 ## 렌더링 템플릿 API 작업 시작 {#get-started}
 

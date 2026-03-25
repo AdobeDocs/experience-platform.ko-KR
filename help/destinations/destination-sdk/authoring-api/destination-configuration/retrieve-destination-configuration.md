@@ -23,7 +23,7 @@ ht-degree: 2%
 
 ## 대상 구성 검색 {#retrieve}
 
-[ 끝점에 대해 ](create-destination-configuration.md) 요청을 수행하여 `GET`기존`/authoring/destination` 대상 구성을 검색할 수 있습니다.
+[&#x200B; 끝점에 대해 &#x200B;](create-destination-configuration.md) 요청을 수행하여 `GET`기존`/authoring/destination` 대상 구성을 검색할 수 있습니다.
 
 >[!TIP]
 >

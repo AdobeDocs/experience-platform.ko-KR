@@ -94,4 +94,4 @@ curl -X DELETE \
 
 사용자 인터페이스를 사용하여 이러한 작업을 수행하는 방법에 대한 단계는 [UI에서 데이터 흐름 삭제](../ui/delete-destinations.md)에 대한 자습서를 참조하십시오.
 
-이제 [ API를 사용하여 ](/help/destinations/api/delete-destination-account.md)대상 계정을 삭제[!DNL Flow Service]할 수 있습니다.
+이제 [&#x200B; API를 사용하여 &#x200B;](/help/destinations/api/delete-destination-account.md)대상 계정을 삭제[!DNL Flow Service]할 수 있습니다.

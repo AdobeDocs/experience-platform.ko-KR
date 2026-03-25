@@ -36,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **요청**
 
 다음 요청은 페이로드에 제공된 매개 변수로 구성된 새 대상 서버 구성을 만듭니다.
-아래 페이로드에는 사용자가 Experience Platform UI에서 정의할 수 있는 사전 정의된 기본 [!DNL Amazon S3]CSV 파일 형식 지정[ 구성 매개 변수와 함께 일반 ](../../functionality/destination-server/file-formatting.md) 구성이 포함되어 있습니다.
+아래 페이로드에는 사용자가 Experience Platform UI에서 정의할 수 있는 사전 정의된 기본 [!DNL Amazon S3]CSV 파일 형식 지정[&#x200B; 구성 매개 변수와 함께 일반 &#x200B;](../../functionality/destination-server/file-formatting.md) 구성이 포함되어 있습니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -128,7 +128,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 이전 단계에서 대상 서버 및 파일 형식 지정 구성을 만든 후 이제 `/destinations` API 끝점을 사용하여 대상 구성을 만들 수 있습니다.
 
-[단계 1](#create-server-file-configuration)의 서버 구성을 이 대상 구성에 연결하려면 아래 API 요청의 `destinationServerId` 값을 `instanceId`단계 1[에서 대상 서버를 만들 때 얻은 ](#create-server-file-configuration) 값으로 바꾸십시오.
+[단계 1](#create-server-file-configuration)의 서버 구성을 이 대상 구성에 연결하려면 아래 API 요청의 `destinationServerId` 값을 `instanceId`단계 1[에서 대상 서버를 만들 때 얻은 &#x200B;](#create-server-file-configuration) 값으로 바꾸십시오.
 
 **API 형식**
 

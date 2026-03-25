@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-이 페이지에서는 Destination SDK을 사용하여 사용자 지정 [!DNL Data Landing Zone]파일 형식 옵션[ 및 사용자 지정 ](configure-file-formatting-options.md)파일 이름 구성[으로 ](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) 대상을 구성하는 방법에 대해 설명합니다.
+이 페이지에서는 Destination SDK을 사용하여 사용자 지정 [!DNL Data Landing Zone]파일 형식 옵션[&#x200B; 및 사용자 지정 &#x200B;](configure-file-formatting-options.md)파일 이름 구성[으로 &#x200B;](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) 대상을 구성하는 방법에 대해 설명합니다.
 
 이 페이지에는 [!DNL Data Landing Zone] 대상에 사용할 수 있는 모든 구성 옵션이 표시됩니다. 아래 단계에 표시된 구성을 편집하거나 필요에 따라 구성의 특정 부분을 삭제할 수 있습니다.
 
@@ -36,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **요청**
 
 다음 요청은 페이로드에 제공된 매개 변수로 구성된 새 대상 서버 구성을 만듭니다.
-아래 페이로드에는 사용자가 Experience Platform UI에서 정의할 수 있는 사용자 지정 [!DNL Data Landing Zone]CSV 파일 형식 지정[ 구성 매개 변수와 함께 일반 ](../../functionality/destination-server/file-formatting.md) 구성이 포함되어 있습니다.
+아래 페이로드에는 사용자가 Experience Platform UI에서 정의할 수 있는 사용자 지정 [!DNL Data Landing Zone]CSV 파일 형식 지정[&#x200B; 구성 매개 변수와 함께 일반 &#x200B;](../../functionality/destination-server/file-formatting.md) 구성이 포함되어 있습니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \

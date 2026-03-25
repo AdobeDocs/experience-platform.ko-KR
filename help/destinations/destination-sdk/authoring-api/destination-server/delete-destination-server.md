@@ -30,7 +30,7 @@ ht-degree: 1%
 
 ## 대상 서버 구성 삭제 {#delete}
 
-삭제하려는 대상 서버 구성의 [을(를) 사용하여 ](create-destination-server.md) 끝점에 대한 `DELETE` 요청을 수행하여 `/authoring/destination-servers`기존`{INSTANCE_ID}` 대상 서버 구성을 삭제할 수 있습니다.
+삭제하려는 대상 서버 구성의 [을(를) 사용하여 &#x200B;](create-destination-server.md) 끝점에 대한 `DELETE` 요청을 수행하여 `/authoring/destination-servers`기존`{INSTANCE_ID}` 대상 서버 구성을 삭제할 수 있습니다.
 
 >[!TIP]
 >

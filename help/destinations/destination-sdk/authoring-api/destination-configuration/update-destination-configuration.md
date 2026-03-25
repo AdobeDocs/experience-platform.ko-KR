@@ -42,7 +42,7 @@ ht-degree: 2%
 
 ## 대상 구성 업데이트 {#update}
 
-업데이트된 페이로드로 [ 끝점에 대한 ](create-destination-configuration.md) 요청을 수행하여 `PUT`기존`/authoring/destinations` 대상 구성을 업데이트할 수 있습니다.
+업데이트된 페이로드로 [&#x200B; 끝점에 대한 &#x200B;](create-destination-configuration.md) 요청을 수행하여 `PUT`기존`/authoring/destinations` 대상 구성을 업데이트할 수 있습니다.
 
 >[!TIP]
 >

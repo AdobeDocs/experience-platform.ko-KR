@@ -29,7 +29,7 @@ ht-degree: 2%
 
 ## 대상 템플릿 삭제 {#delete}
 
-삭제하려는 대상 템플릿의 [을(를) 사용하여 ](create-audience-template.md) 끝점에 대한 `DELETE` 요청을 수행하여 `/authoring/audience-templates`기존`{INSTANCE_ID}` 대상 템플릿을 삭제할 수 있습니다.
+삭제하려는 대상 템플릿의 [을(를) 사용하여 &#x200B;](create-audience-template.md) 끝점에 대한 `DELETE` 요청을 수행하여 `/authoring/audience-templates`기존`{INSTANCE_ID}` 대상 템플릿을 삭제할 수 있습니다.
 
 기존 대상 템플릿과 해당 `{INSTANCE_ID}`을(를) 가져오려면 [대상 템플릿 검색](retrieve-audience-template.md)에 대한 문서를 참조하십시오.
 

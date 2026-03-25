@@ -16,7 +16,7 @@ ht-degree: 4%
 
 [Responsys](https://www.oracle.com/cx/marketing/campaign-management/)은(는) [!DNL Oracle]이(가) 이메일, 모바일, 디스플레이 및 소셜에서 상호 작용을 개인화하기 위해 제공하는 크로스 채널 마케팅 캠페인용 엔터프라이즈 이메일 마케팅 도구입니다.
 
-대상 데이터를 [!DNL Oracle Responsys]에 보내려면 먼저 [에서 ](#connect-destination)대상에 연결[!DNL Adobe Experience Platform]한 다음 저장소 위치에서 [(으)로 ](#import-data-into-responsys)데이터 가져오기를 설정[!DNL Oracle Responsys]해야 합니다.
+대상 데이터를 [!DNL Oracle Responsys]에 보내려면 먼저 [에서 &#x200B;](#connect-destination)대상에 연결[!DNL Adobe Experience Platform]한 다음 저장소 위치에서 [(으)로 &#x200B;](#import-data-into-responsys)데이터 가져오기를 설정[!DNL Oracle Responsys]해야 합니다.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -126,4 +126,4 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## [!DNL Oracle Responsys]&#x200B;(으)로 데이터 가져오기 설정 {#import-data-into-responsys}
 
-[!DNL Experience Platform]을(를) [!DNL SFTP] 저장소에 연결한 후 저장소 위치에서 [!DNL Oracle Responsys]&#x200B;(으)로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대해 알아보려면 [에서 ](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm)연락처 또는 계정 가져오기[!DNL Oracle Responsys Help Center]를 참조하십시오.
+[!DNL Experience Platform]을(를) [!DNL SFTP] 저장소에 연결한 후 저장소 위치에서 [!DNL Oracle Responsys]&#x200B;(으)로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대해 알아보려면 [에서 &#x200B;](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm)연락처 또는 계정 가져오기[!DNL Oracle Responsys Help Center]를 참조하십시오.

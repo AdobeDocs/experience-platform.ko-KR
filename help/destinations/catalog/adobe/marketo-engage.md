@@ -117,7 +117,7 @@ Experience Platform의 속성을 조직이 Marketo에서 액세스할 수 있는
 
 ## 대상 모니터링 {#monitor-destination}
 
-대상에 연결하고 대상 데이터 흐름을 설정한 후 [의 ](/help/dataflows/ui/monitor-destinations.md)모니터링 기능[!DNL Real-Time CDP]을 사용하여 각 데이터 흐름 실행에서 대상에 활성화된 프로필 레코드에 대한 광범위한 정보를 얻을 수 있습니다.
+대상에 연결하고 대상 데이터 흐름을 설정한 후 [의 &#x200B;](/help/dataflows/ui/monitor-destinations.md)모니터링 기능[!DNL Real-Time CDP]을 사용하여 각 데이터 흐름 실행에서 대상에 활성화된 프로필 레코드에 대한 광범위한 정보를 얻을 수 있습니다.
 
 [!DNL Marketo Engage] 연결에 대한 모니터링 정보에는 각 데이터 흐름 및 데이터 흐름 실행에서 활성화, 제외 및 실패한 ID와 관련된 대상 수준 정보가 포함되어 있습니다. 기능에 대해 [자세히 알아보십시오](/help/dataflows/ui/monitor-destinations.md#segment-level-view).
 

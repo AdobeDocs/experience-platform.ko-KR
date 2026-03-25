@@ -107,7 +107,7 @@ ht-degree: 3%
 대상에 인증하려면 다음 단계를 수행합니다.
 
 1. *의 대상 카탈로그에서* Snap Inc[!DNL Adobe Experience Platform] 대상을 찾은 다음 **설정**&#x200B;을 선택하십시오.
-2. **[!UICONTROL Connect to destination]**을(를) 선택합니다. 다음 화면으로 리디렉션됩니다.
+2. **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택합니다. 다음 화면으로 리디렉션됩니다.
    ![인증 화면 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Snapchat 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 4. [!DNL Adobe Experience Platform]에서 액세스할 수 있는 Snapchat 데이터가 표시됩니다. 연결 프로세스를 계속하려면 **계속**&#x200B;을(를) 선택하십시오.

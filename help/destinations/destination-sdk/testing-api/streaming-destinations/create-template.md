@@ -109,7 +109,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 }
 ```
 
-제공한 대상 ID가 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 또는 [이(가) 둘 이상인 ](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)최상의 노력 집계`maxUsersPerRequest`인 대상 서버 템플릿에 해당하는 경우 요청은 다음과 유사한 샘플 템플릿을 반환합니다.
+제공한 대상 ID가 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 또는 [이(가) 둘 이상인 &#x200B;](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)최상의 노력 집계`maxUsersPerRequest`인 대상 서버 템플릿에 해당하는 경우 요청은 다음과 유사한 샘플 템플릿을 반환합니다.
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
@@ -169,4 +169,4 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## 문자가 이스케이프 처리된 템플릿을 대상 서버 구성에 추가합니다. {#add-template-to-server-config}
 
-메시지 변환 템플릿에 만족하면 [의 ](../../authoring-api/destination-server/create-destination-server.md)대상 서버 구성`httpTemplate.requestBody.value`에 추가하십시오.
+메시지 변환 템플릿에 만족하면 [의 &#x200B;](../../authoring-api/destination-server/create-destination-server.md)대상 서버 구성`httpTemplate.requestBody.value`에 추가하십시오.

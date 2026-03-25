@@ -50,7 +50,7 @@ ht-degree: 2%
 |---------|----------|------|
 | `authenticationRule` | 문자열 | [!DNL Experience Platform]이(가) 대상에 연결하는 방법을 나타냅니다. 지원되는 값:<ul><li>`CUSTOMER_AUTHENTICATION`: Experience Platform 고객이 [여기](customer-authentication.md)에 설명된 인증 방법을 통해 시스템에 로그인하는 경우 이 옵션을 사용합니다.</li><li>`PLATFORM_AUTHENTICATION`: Adobe과 대상 사이에 글로벌 인증 시스템이 있고 [!DNL Experience Platform] 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우 이 옵션을 사용합니다. 이 경우 [자격 증명 API](../../credentials-api/create-credential-configuration.md) 구성을 사용하여 자격 증명 개체를 만들고 `authenticationId` 매개 변수를 자격 증명 개체 ID 값으로 설정해야 합니다.</li><li>`NONE`: 데이터를 대상 플랫폼으로 보내는 데 인증이 필요하지 않은 경우 이 옵션을 사용합니다. </li></ul> |
 | `authenticationId` | 문자열 | 인증에 사용할 자격 증명 개체의 구성 ID의 `instanceId`입니다. 이 매개 변수는 특정 자격 증명 구성을 지정해야 하는 경우에만 필요합니다. |
-| `destinationServerId` | 문자열 | 데이터를 내보내려는 `instanceId`대상 서버[의 ](../../authoring-api/destination-server/create-destination-server.md)입니다. |
+| `destinationServerId` | 문자열 | 데이터를 내보내려는 `instanceId`대상 서버[의 &#x200B;](../../authoring-api/destination-server/create-destination-server.md)입니다. |
 | `deliveryMatchers.type` | 문자열 | <ul><li>파일 기반 대상에 대한 대상 게재를 구성할 때는 항상 `SOURCE`(으)로 설정하십시오.</li><li>스트리밍 대상에 대한 대상 게재를 구성할 때 `deliveryMatchers` 섹션이 필요하지 않습니다.</li></ul> |
 | `deliveryMatchers.value` | 문자열 | <ul><li>파일 기반 대상에 대한 대상 게재를 구성할 때는 항상 `batch`(으)로 설정하십시오.</li><li>스트리밍 대상에 대한 대상 게재를 구성할 때 `deliveryMatchers` 섹션이 필요하지 않습니다.</li></ul> |
 

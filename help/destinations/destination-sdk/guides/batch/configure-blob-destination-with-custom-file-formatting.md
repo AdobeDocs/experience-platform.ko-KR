@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-이 페이지에서는 Destination SDK을 사용하여 사용자 지정 [!DNL Azure Blob Storage]파일 서식 옵션[ 및 사용자 지정 ](configure-file-formatting-options.md)파일 이름 구성[으로 ](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) 대상을 구성하는 방법에 대해 설명합니다.
+이 페이지에서는 Destination SDK을 사용하여 사용자 지정 [!DNL Azure Blob Storage]파일 서식 옵션[&#x200B; 및 사용자 지정 &#x200B;](configure-file-formatting-options.md)파일 이름 구성[으로 &#x200B;](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) 대상을 구성하는 방법에 대해 설명합니다.
 
 이 페이지에는 Azure Blob 스토리지 대상에 사용할 수 있는 모든 구성 옵션이 표시됩니다. 아래 단계에 표시된 구성을 편집하거나 필요에 따라 구성의 특정 부분을 삭제할 수 있습니다.
 
