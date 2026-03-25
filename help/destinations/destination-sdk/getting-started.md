@@ -81,4 +81,4 @@ Adobe Exchange 팀은 Destination SDK API 엔드포인트 호출에 사용해야
    * [Destination SDK을 사용하여 파일 기반 대상 구성](guides/configure-file-based-destination-instructions.md)
 
 * 모든 작업에 대해서는 [대상 작성 API 설명서](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)를 참조하십시오.
-* [대상 작성 API Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)을(를) 사용하여 Destination SDK API 끝점을 사용하여 대상을 구성합니다. Postman을 시작하려면 환경 및 컬렉션을 가져오는 [단계](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) 및 Postman 환경을 만드는 [비디오 안내서](https://video.tv.adobe.com/v/28832)를 참조하세요.
+* [대상 작성 API Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)을(를) 사용하여 Destination SDK API 끝점을 사용하여 대상을 구성합니다. Postman을 시작하려면 환경 및 컬렉션을 가져오는 [단계](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) 및 Postman 환경을 만드는 [비디오 안내서](https://video.tv.adobe.com/v/31705?captions=kor)를 참조하세요.
