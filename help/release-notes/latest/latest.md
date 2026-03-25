@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2026년 3월
 description: Adobe Experience Platform의 2026년 3월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8c8b3b223c67dd6e9a00f9cf297f51fd09f3227f
+source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
 workflow-type: tm+mt
-source-wordcount: '1266'
-ht-degree: 33%
+source-wordcount: '1369'
+ht-degree: 31%
 
 ---
 
@@ -27,6 +27,7 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 
 - [고급 데이터 라이프사이클 관리](#advanced-data-lifecycle-management)
 - [Agent Orchestrator](#agent-orchestrator)
+- [데이터스트림](#datastreams)
 - [대상](#destinations)
 - [경험 데이터 모델 (XDM)](#xdm)
 - [실시간 고객 프로필](#real-time-customer-profile)
@@ -53,11 +54,23 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 
 | 기능 | 설명 |
 | --- | --- |
-| [Adobe Marketing Agent for [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/ko/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | [!DNL Microsoft 365 Copilot]용 Adobe Marketing Agent은 Adobe의 마케팅 인텔리전스를 [!DNL Teams], [!DNL Word], [!DNL PowerPoint] 및 기타 [!DNL Microsoft 365] 앱과 같은 일상적인 도구에 직접 가져오는 임베드된 에이전트입니다. [!DNL Microsoft 365] 워크플로를 종료하지 않고 캠페인을 계획하고, 대상을 검토하고, 동료와 협력하여 고객 질문에 답변하고, 데이터에 기반한 결정을 내리는 동안 이 에이전트를 사용하여 Adobe 애플리케이션에서 신뢰할 수 있는 캠페인 인사이트를 가져올 수 있습니다. |
+| [Adobe Marketing Agent for [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | [!DNL Microsoft 365 Copilot]용 Adobe Marketing Agent은 Adobe의 마케팅 인텔리전스를 [!DNL Teams], [!DNL Word], [!DNL PowerPoint] 및 기타 [!DNL Microsoft 365] 앱과 같은 일상적인 도구에 직접 가져오는 임베드된 에이전트입니다. [!DNL Microsoft 365] 워크플로를 종료하지 않고 캠페인을 계획하고, 대상을 검토하고, 동료와 협력하여 고객 질문에 답변하고, 데이터에 기반한 결정을 내리는 동안 이 에이전트를 사용하여 Adobe 애플리케이션에서 신뢰할 수 있는 캠페인 인사이트를 가져올 수 있습니다. |
 
 {style="table-layout:auto"}
 
 자세한 내용은 [Agent Orchestrator 설명서](https://experienceleague.adobe.com/ko/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator)를 참조하십시오.
+
+## 데이터스트림 {#datastreams}
+
+데이터 스트림은 Adobe Experience Platform 웹 및 모바일 SDK와 Adobe Experience Platform Edge Network Server API를 구현할 때의 서버측 구성을 나타냅니다. SDK의 데이터 스트림 구성 명령은 클라이언트가 상호 작용하는 모든 서비스를 처리합니다.
+
+| 기능 | 설명 |
+| --- | --- |
+| 동적 데이터 스트림 구성 일반 가용성 | 이제 동적 데이터 스트림 구성을 일반적으로 사용할 수 있습니다. 동적 데이터스트림 구성을 사용하면 데이터스트림에 대해 활성화된 각 서비스에 대해 사용자가 구성 가능한 규칙 세트를 정의할 수 있습니다. 이는 각 데이터 유형을 받아야 하는 Experience Cloud 솔루션을 지정합니다. 자세한 내용은 [동적 데이터 스트림 구성 가이드](../../datastreams/configure-dynamic-datastream.md)를 참조하십시오. |
+
+{style="table-layout:auto"}
+
+자세한 내용은 [데이터스트림 개요](../../datastreams/overview.md)를 참조하십시오.
 
 ## 대상 {#destinations}
 
@@ -146,7 +159,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 소스 | 설명 |
 | --- | --- |
-| [!DNL Talon.One] | 이제 새로운 [!DNL Talon.One] [!DNL Talon.One]일괄 처리[&#x200B; 및 &#x200B;](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md)스트리밍[&#x200B; 소스를 사용하여 Experience Platform을 &#x200B;](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md)에 연결할 수 있습니다. 새 소스를 사용하여 Experience Platform에 대한 거래 및 충성도 활동 이벤트뿐만 아니라 충성도 프로필 데이터를 수집할 수 있습니다. |
+| [!DNL Talon.One] | 이제 새로운 [!DNL Talon.One] [!DNL Talon.One]일괄 처리[ 및 ](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md)스트리밍[ 소스를 사용하여 Experience Platform을 ](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md)에 연결할 수 있습니다. 새 소스를 사용하여 Experience Platform에 대한 거래 및 충성도 활동 이벤트뿐만 아니라 충성도 프로필 데이터를 수집할 수 있습니다. |
 | 새로운 IP 주소 허용 목록 | GBR9: Azure에서 Experience Platform에 성공적으로 일괄 처리 소스 연결을 보장하기 위해 허용 목록에 추가하다해야 하는 주소 목록에 영국이 추가되었습니다. 자세한 내용은 [IP 주소 가이드](../../sources/ip-address-allow-list.md#gbr9-united-kingdom)의 목록을 참조하십시오. |
 | 변경 데이터 캡처 지원 향상 | 이제 [!DNL Marketo Engage], [!DNL Microsoft Dynamics] 및 [!DNL Salesforce CRM] 소스에서 변경 데이터 캡처를 사용할 수 있습니다. |
 | [[!DNL Google BigQuery]](../../sources/connectors/databases/bigquery.md)에 대한 인증 가이드 개선 | [!DNL Google BigQuery] 원본에 대한 인증 가이드가 다음 정보로 확장되었습니다. <ul><li>새로 고침 토큰에 필요한 범위입니다.</li><li>[!DNL Google] ID에 필요한 IAM 역할입니다.</li><li>`largeResultsDataSetId` 사용에 대한 추가 지침입니다.</li></ul> |

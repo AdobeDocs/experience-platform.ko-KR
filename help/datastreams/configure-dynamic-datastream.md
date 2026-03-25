@@ -1,22 +1,15 @@
 ---
 title: 동적 데이터 스트림 구성 만들기
 description: 규칙을 기반으로 다양한 Experience Cloud 서비스로 데이터를 라우팅하기 위해 동적 데이터스트림 구성을 만드는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
-badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: 8ce5b6718861d01731b9aab9f81645f2aeb2970f
+source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1098'
 ht-degree: 3%
 
 ---
 
 # 동적 데이터 스트림 구성 만들기
-
->[!AVAILABILITY]
->
->* 동적 데이터스트림 구성을 정의하는 옵션은 현재 Beta에 있으며 제한된 수의 고객이 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 받으려면 Adobe 담당자에게 문의하십시오. 설명서 및 기능은 변경될 수 있습니다.
 
 기본적으로 Experience Platform Edge Network은 데이터 스트림에 도달하는 모든 이벤트를 데이터 스트림에 대해 활성화한 모든 Experience Cloud [서비스](configure.md#add-services)로 보냅니다. 사용 사례에 따라 항상 적합한 워크플로는 아닐 수 있습니다.
 
@@ -42,7 +35,7 @@ ht-degree: 3%
 | Adobe Analytics에 대한 데이터스트림당 최대 동적 데이터스트림 구성 수 | 5 | 성능 보호 |
 | Adobe Target에 대한 데이터스트림당 최대 동적 데이터스트림 구성 수 | 5 | 성능 보호 |
 | Adobe Audience Manager에 대한 데이터스트림당 최대 동적 데이터스트림 구성 수 | 5 | 성능 보호 |
-| 단일 규칙 내에서 결합할 수 있는 최대 조건 수(술어) | 10 | 성능 보호 |
+| 단일 규칙 내에서 결합할 수 있는 최대 조건 수(술어) | 100 | 성능 보호 |
 | 시간 초과 전에 데이터스트림당 모든 동적 데이터스트림 구성을 평가하는 데 허용된 최대 시간 | 25밀리초 | 시스템 강제 보호 |
 
 ## 동적 데이터스트림 구성 및 데이터스트림 구성 재정의 {#dynamic-versus-overrides}
@@ -57,33 +50,33 @@ ht-degree: 3%
 
 [데이터 스트림을 만들고](configure.md)에 [서비스를 추가](configure.md#add-services)한 후 아래 단계에 따라 서비스에 동적 구성을 추가하십시오.
 
-1. **[!UICONTROL 데이터 수집]** > **[!UICONTROL 데이터스트림]** 페이지로 이동하여 만든 데이터스트림을 선택합니다.
+1. **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** 페이지로 이동하여 만든 데이터 스트림을 선택합니다.
 
    ![데이터스트림 목록을 표시하는 데이터스트림 사용자 인터페이스의 이미지](assets/configure-dynamic-datastream/select-datastream.png)
 
-1. 동적 구성을 정의할 서비스에서 **[!UICONTROL 편집]** 옵션을 선택하십시오.
+1. 동적 구성을 정의할 서비스에서 **[!UICONTROL Edit]** 옵션을 선택하십시오.
 
    ![데이터스트림에 추가된 서비스를 보여 주는 데이터스트림 사용자 인터페이스의 이미지입니다.](assets/configure-dynamic-datastream/select-service.png)
 
-1. **[!UICONTROL 구성]** 페이지에서 **[!UICONTROL 동적 구성 저장 및 편집]**&#x200B;을 선택합니다.
+1. **[!UICONTROL Configure]** 페이지에서 **[!UICONTROL Save and Edit Dynamic Configuration]**&#x200B;을(를) 선택합니다.
 
    ![데이터스트림 구성 페이지를 표시하는 데이터스트림 사용자 인터페이스 이미지.](assets/configure-dynamic-datastream/save-and-edit.png)
 
-1. **[!UICONTROL 동적 구성 추가]**&#x200B;를 선택합니다.
+1. **[!UICONTROL Add Dynamic Configuration]**&#x200B;를 선택합니다.
 
    ![규칙 추가 없는 동적 구성을 보여 주는 데이터스트림 사용자 인터페이스의 이미지입니다.](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
-1. **[!UICONTROL 리소스]** 패널에서 규칙을 작성할 항목을 창의 오른쪽으로 끌어다 놓습니다. 여러 리소스를 결합하여 복잡한 규칙을 작성할 수 있습니다.
+1. **[!UICONTROL Resources]** 패널에서 규칙을 작성할 항목을 창의 오른쪽에 끌어다 놓습니다. 여러 리소스를 결합하여 복잡한 규칙을 작성할 수 있습니다.
 
-   **[!UICONTROL 같음]**, **[!UICONTROL 같지 않음]**, **[!UICONTROL 존재]** 등과 같은 각 리소스의 옵션을 사용하여 규칙을 미세 조정하십시오.
+   **[!UICONTROL equals]**, **[!UICONTROL does not equal]**, **[!UICONTROL exists]** 등 각 리소스의 옵션을 사용하여 규칙을 미세 조정하십시오.
 
    ![동적 구성 규칙을 표시하는 데이터스트림 사용자 인터페이스의 이미지](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. **[!UICONTROL 구성]** 섹션에서 데이터를 각 서비스로 전송할지 여부에 따라 각 규칙에 대해 활성화하거나 비활성화할 서비스를 전환합니다. 토글을 끄면 서비스 라우팅이 비활성화되고 *데이터가 업스트림 서비스로 전송되지 않습니다*.
+1. **[!UICONTROL Configuration]** 섹션에서 데이터를 각 서비스로 전송할지 여부에 따라 각 규칙에 대해 활성화하거나 비활성화할 서비스를 전환합니다. 토글을 끄면 서비스 라우팅이 비활성화되고 *데이터가 업스트림 서비스로 전송되지 않습니다*.
 
    ![동적 구성 규칙을 표시하는 데이터스트림 사용자 인터페이스의 이미지](assets/configure-dynamic-datastream/enable-service.png)
 
-1. 규칙 구성이 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+1. 규칙 구성이 완료되면 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
 ## 규칙 우선 순위 고려 사항 {#considerations}
 
