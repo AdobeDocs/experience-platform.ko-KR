@@ -17,13 +17,13 @@ ht-degree: 1%
 
 ## 용어 {#terminology}
 
-이 안내서에서는 조직, 샌드박스 등 Experience Platform 관련 개념을 사용합니다. 이러한 용어에 대한 정의는 [Experience Platform 용어집](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html)을 참조하세요. 이 기능과 직접 관련된 용어는 [Destination SDK 용어집](/help/destinations/destination-sdk/glossary.md)을 참조하세요.
+이 안내서에서는 조직, 샌드박스 등 Experience Platform 관련 개념을 사용합니다. 이러한 용어에 대한 정의는 [Experience Platform 용어집](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ko)을 참조하세요. 이 기능과 직접 관련된 용어는 [Destination SDK 용어집](/help/destinations/destination-sdk/glossary.md)을 참조하세요.
 
 ## 필요한 인증 자격 증명 가져오기 {#obtain-authentication-credentials}
 
 Destination SDK은 인증에 [Adobe I/O](https://www.adobe.io/) 게이트웨이를 사용합니다. Destination SDK 종단점에 대한 API를 호출하려면 API 호출에 특정 헤더를 제공해야 합니다. Adobe Exchange 팀과 함께 [Adobe Developer Console](https://developer.adobe.com/console)에 대한 인증을 설정합니다.
 
-Destination SDK API 끝점을 정상적으로 호출하려면 [Experience Platform 인증 자습서](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ko)를 따르십시오. &quot;[API 키, 조직 ID 및 클라이언트 암호 생성](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; 단계에서 자습서를 시작합니다. Adobe Exchange 팀이 이전 단계를 처리합니다. 인증 자습서를 완료하면 아래와 같이 Destination SDK API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
+Destination SDK API 끝점을 정상적으로 호출하려면 [Experience Platform 인증 자습서](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ko)를 따르십시오. &quot;[API 키, 조직 ID 및 클라이언트 암호 생성](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ko#api-ims-secret)&quot; 단계에서 자습서를 시작합니다. Adobe Exchange 팀이 이전 단계를 처리합니다. 인증 자습서를 완료하면 아래와 같이 Destination SDK API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
 
 * `x-api-key: {API_KEY}`(클라이언트 ID라고도 함)
 * `x-gw-ims-org-id: {ORG_ID}`(조직 ID라고도 함)
@@ -64,7 +64,7 @@ Adobe Exchange 팀은 Destination SDK API 엔드포인트 호출에 사용해야
 
 * [제품 프로필에 대한 권한 관리](/help/access-control/ui/permissions.md)
 * [Experience Platform에 사용 가능한 권한](/help/access-control/home.md#permissions)
-* [Adobe Admin Console 설명서](https://helpx.adobe.com/enterprise/using/admin-console.html)
+* [Adobe Admin Console 설명서](https://helpx.adobe.com/kr/enterprise/using/admin-console.html)
 
 ## 추가 고려 사항 {#additional-considerations}
 
