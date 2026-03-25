@@ -1,10 +1,11 @@
 ---
 title: 대화
 description: Brand Concierge 채팅 설정을 구성합니다.
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+exl-id: 0f64c7f1-2c28-4c67-af05-dc9ee688fdc0
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 4%
+source-wordcount: '127'
+ht-degree: 3%
 
 ---
 
@@ -20,6 +21,7 @@ ht-degree: 4%
 
 | 속성 | 유형 | 설명 |
 | --- | --- | --- |
+| **`collectSources`** | `boolean` | 웹 SDK이 `adobe_brand_concierge_source` 쿼리 문자열 매개 변수를 읽고 `xdm.channel.referringSource`에 포함하는지 여부를 결정합니다. 기본값은 `false`입니다. |
 | **`stickyConversationSession`** | `boolean` | 웹 SDK이 페이지 로드 시 Brand Concierge 채팅 세션을 유지하기 위해 세션 쿠키를 설정하는지 여부를 결정합니다. 기본값은 `false`입니다. 생략하거나 `false`(으)로 설정하면 Brand Concierge 채팅은 페이지를 로드할 때마다 새 세션을 시작합니다. |
 
 ## 예
@@ -29,6 +31,7 @@ alloy("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   conversation: {
+    collectSources: true
     stickyConversationSession: true
   }
 });

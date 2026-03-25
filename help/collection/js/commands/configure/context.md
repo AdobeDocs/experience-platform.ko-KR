@@ -2,9 +2,9 @@
 title: 컨텍스트
 description: 장치, 환경 또는 위치 데이터를 자동으로 수집합니다.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '1017'
 ht-degree: 5%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 5%
 | 시/도 | 최종 사용자의 시/도 코드입니다. | `xdm.placeContext.geo.stateProvince` | `CA` |
 | 위도 | 최종 사용자 위치의 위도입니다. | `xdm.placeContext.geo._schema.latitude` | `37.3307447` |
 | 경도 | 최종 사용자 위치의 경도입니다. | `xdm.placeContext.geo._schema.longitude` | `-121.8945965` |
+| IANA 시간대 | 최종 사용자의 IANA 시간대입니다. 라이브러리 버전 2.32.0 이상에 포함됩니다. | `xdm.placeContext.ianaTimezone` | `America/Denver` |
 
 ### 타임스탬프
 
@@ -97,7 +98,7 @@ ht-degree: 5%
 
 ### 일회성 Analytics 레퍼러 {#one-time-analytics-referrer}
 
-`"oneTimeAnalyticsReferrer"` 키워드는 페이지에 대한 첫 번째 비의사 결정 `sendEvent` 호출에서만 Adobe Analytics에 레퍼러 값을 보냅니다. 이 컨텍스트 키워드의 기본 사용 사례는 Adobe Analytics의 [레퍼러](https://experienceleague.adobe.com/ko/docs/analytics/components/dimensions/referrer) 차원이 Analytics 및 Target 통합에 주로 사용되는 히트에 의해 부풀려지지 않도록 하는 것입니다.
+`"oneTimeAnalyticsReferrer"` 키워드는 페이지에 대한 첫 번째 비의사 결정 `sendEvent` 호출에서만 Adobe Analytics에 레퍼러 값을 보냅니다. 이 컨텍스트 키워드의 기본 사용 사례는 Adobe Analytics의 [레퍼러](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) 차원이 Analytics 및 Target 통합에 주로 사용되는 히트에 의해 부풀려지지 않도록 하는 것입니다.
 
 지정된 `sendEvent` 명령이 의사 결정 이벤트 유형(`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`)을 사용하는 경우 페이지에서 첫 번째 `sendEvent`을(를) 계산할 때 무시됩니다. 페이지에서 레퍼러 값이 변경되고 다른 `sendEvent`이(가) 트리거되면 새 레퍼러 값이 페이로드에 포함됩니다. 이 조건을 사용하면 기능을 단일 페이지 애플리케이션과 함께 사용할 수 있습니다.
 
