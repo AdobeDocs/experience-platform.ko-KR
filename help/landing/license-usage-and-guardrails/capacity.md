@@ -2,10 +2,10 @@
 title: 라이선스 사용 및 용량
 description: Adobe Experience Platform 내의 라이선스 사용 및 용량 제한에 대해 알아봅니다.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 8cef502f60a42de9c89c29923811215b3a8086c6
+source-git-commit: 1a7a074a455542bb1438b2cbf199d79229142389
 workflow-type: tm+mt
-source-wordcount: '1670'
-ht-degree: 5%
+source-wordcount: '2072'
+ht-degree: 4%
 
 ---
 
@@ -35,7 +35,7 @@ Experience Platform의 보호 기능에 대한 자세한 내용은 [Real-Time CD
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="스트리밍 처리량"
->abstract="스트리밍 처리량 값은 프로덕션 및 개발 샌드박스 전반에 걸쳐 프로필 서비스에 스트리밍을 도입할 때 초당 최대 인바운드 이벤트 수를 합산하여 측정합니다."
+>abstract="스트리밍 처리량 값은 프로덕션 및 개발 샌드박스에서 프로필로 수집하기 위한 초당 결합된 최대 인바운드 이벤트를 측정합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
@@ -51,14 +51,16 @@ Experience Platform의 보호 기능에 대한 자세한 내용은 [Real-Time CD
 
 - 스트리밍 세분화
 - 스트리밍 수집
+- 에지 세분화
 
 이러한 서비스에서는 다음과 같은 보호 기능이 추적됩니다.
 
 - 스트리밍 대상의 최대 수는 500개입니다.
-   - 이러한 500개의 스트리밍 대상 중 최대 Edge 대상 수는 150개입니다
+- 최대 Edge 대상 수는 150개입니다
 - 스트리밍 수집을 위한 초기 통합 처리량은 초당 레코드 1500개(rps)입니다
    - 이 결합된 스트리밍 처리량은 프로덕션 및 개발 샌드박스에서 실시간 고객 프로필로 수집을 스트리밍하기 위해 초당 결합된 최대 인바운드 이벤트를 측정합니다.
-   - 초당 최대 13,500개의 레코드로 스트리밍 세분화 지원을 추가로 구매할 수 있습니다. 추가 권한 구매에 대한 자세한 내용은 [Real-Time CDP 제품 설명](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)에서 확인할 수 있습니다.
+   - 초당 최대 13,500개의 레코드로 스트리밍 세분화 지원을 추가로 구매할 수 있습니다. 추가 권한 구매에 대한 자세한 내용은 [Real-Time CDP 제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)에서 확인할 수 있습니다.
+- 에지 세분화를 위해 결합된 처리량은 초당 레코드 1500개(rps)입니다
 
 대상자 수용작업량은 **샌드박스** 수준입니다. 즉, 조직에 있는 모든 샌드박스에 500개의 스트리밍 대상을 가질 수 있으며, 이 중 150개는 에지 대상이 될 수 있습니다.
 
@@ -88,7 +90,7 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 
 [수용작업량 개요] 페이지가 표시되어 경보 내역뿐만 아니라 조직의 수용작업량에 대한 세부 정보도 표시합니다.
 
-![경고 기록 및 용량 세부 정보 섹션이 표시된 용량 개요 페이지가 모두 표시됩니다.](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
+![경고 기록 및 용량 세부 정보 섹션을 표시하는 용량 개요 페이지가 표시됩니다.](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
 
 ### 경고 내역 {#alert-history}
 
@@ -106,17 +108,15 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 
 ![조직에 대한 전체 경고 기록이 표시됩니다.](/help/landing/images/capacity/full-alert-history.png)
 
-### 용량 세부 정보 {#capacity-details}
+### 스트리밍 용량 {#streaming-capacities}
 
-수용작업량 세부 정보 섹션에서는 조직의 수용작업량에 대한 정보를 간략하게 설명합니다. 이 섹션에서는 샌드박스별로 필터링하고 전환 확인 기간을 변경할 수 있습니다.
+스트리밍 용량 섹션에서는 조직의 스트리밍 용량에 대한 정보를 간략하게 설명합니다. 특히 이 섹션에는 스트리밍 처리량 및 스트리밍 대상에 대한 용량 정보가 표시됩니다. 이 정보를 샌드박스별로 필터링하고 전환 확인 기간을 변경할 수 있습니다.
 
 ![전환 확인 기간에 대한 샌드박스 선택기와 날짜 선택기가 강조 표시됩니다.](/help/landing/images/capacity/filter-sandbox-and-date.png)
 
-현재 스트리밍 처리량, 스트리밍 대상 및 에지 대상에 대한 용량 정보가 표시됩니다.
-
 #### 스트리밍 처리량 {#streaming-throughput}
 
-스트리밍 처리량 섹션에는 조직 샌드박스 내의 스트리밍 처리량에 대한 정보가 표시됩니다. 스트리밍 처리량 값은 프로필 서비스로 스트리밍 수집하기 위한 초당 결합된 최대 인바운드 이벤트를 측정합니다.
+**[!UICONTROL Streaming throughput]** 섹션에는 조직의 샌드박스 내 스트리밍 처리량에 대한 정보가 표시됩니다. 스트리밍 처리량 값은 프로필로 수집하기 위한 초당 결합된 최대 인바운드 이벤트를 측정합니다.
 
 ![용량 세부 정보 페이지에 스트리밍 처리량 섹션이 표시됩니다.](/help/landing/images/capacity/streaming-throughput-section.png)
 
@@ -153,11 +153,52 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 
 용량 할당을 업데이트한 후 **[!UICONTROL Save]**&#x200B;을(를) 선택하여 업데이트를 완료합니다. 변경 사항이 조직에 반영되기까지 최대 10분이 소요될 수 있습니다.
 
-#### 대상자 수 {#audience-count}
+#### 스트리밍 대상자 수 {#streaming-audience-count}
 
-**[!UICONTROL Streaming audience count]** 및 **[!UICONTROL Edge audience count]** 섹션에는 샌드박스 내의 스트리밍 및 Edge 대상 수와 샌드박스 내에서 허용되는 최대 스트리밍 및 Edge 대상 수가 표시됩니다.
+**[!UICONTROL Streaming audience count]** 섹션에는 샌드박스 내의 스트리밍 대상 수와 샌드박스 내에서 허용되는 최대 스트리밍 대상 수가 표시됩니다.
 
-![대상자 수 섹션이 표시됩니다.](/help/landing/images/capacity/audience-count.png)
+![대상자 규모 섹션이 표시됩니다.](/help/landing/images/capacity/audience-count.png)
+
+| 열 이름 | 설명 |
+| ----------- | ----------- |
+| 샌드박스 | 샌드박스의 이름. |
+| 서비스 | 샌드박스에 사용 중인 서비스. |
+| 사용 | 샌드박스에 있는 스트리밍 대상의 수입니다. |
+| 용량 | 샌드박스에서 허용되는 최대 스트리밍 대상 수입니다. |
+
+### 엣지 용량 {#edge-capacities}
+
+**[!UICONTROL Edge capacities]** 섹션에서는 조직의 에지 용량에 대한 정보를 간략하게 설명합니다. 특히 이 섹션에는 에지 세분화 처리량 및 에지 대상에 대한 용량 정보가 표시됩니다. 조직의 에지 용량에 대한 전환 확인 기간을 변경할 수 있습니다.
+
+![Edge 용량 섹션이 표시됩니다. 이는 에지 세그멘테이션 처리량 및 에지 대상자 규모를 포함한 정보를 간략하게 설명합니다.](/help/landing/images/capacity/edge-capacities.png)
+
+#### 에지 세분화 처리량 {#edge-streaming-throughput}
+
+**[!UICONTROL Edge segmentation throughput]** 섹션에는 조직 및 조직의 샌드박스 내에서 에지 세분화 처리량에 대한 정보가 표시됩니다. 에지 세그멘테이션 처리량 값은 프로필로 에지 수집에 대한 초당 결합된 최대 인바운드 이벤트를 측정합니다.
+
+![Edge 세그먼테이션 처리량 섹션이 표시됩니다. 조직 및 해당 샌드박스 내의 에지 세분화 처리량에 대한 정보를 표시합니다.](/help/landing/images/capacity/edge-segmentation-throughput.png)
+
+| 열 이름 | 설명 |
+| ----------- | ----------- |
+| 조직 | 조직의 이름입니다. 조직에 사용할 수 있는 샌드박스가 조직 이름 아래에 나열됩니다. |
+| 사용량 RPS(피크) | 선택한 전환 기간 내에 샌드박스에 있는 데이터의 최대 처리량입니다. |
+| 용량 RPS | 조직의 최대 피크 처리량입니다. |
+| 위반 | 위반이 발생한 경우, 위반 유형이 에지 세분화 처리량에 대한 것입니다. |
+| 권장 작업 | 위반을 완화하기 위해 권장되는 작업을 설명하는 열입니다. |
+
+조직의 에지 세분화 처리량을 자세히 보려면 조직을 선택할 수 있습니다.
+
+![조직이 강조 표시되어 있습니다.](/help/landing/images/capacity/select-organization.png)
+
+**[!UICONTROL Edge Segmentation Throughput]** 페이지가 표시됩니다. 용량 제한과 비교한 요청 처리량을 표시하는 그래프를 볼 수 있습니다. 이 페이지 내에서 표시된 그래프에 대한 전환 확인 기간을 조정할 수 있습니다.
+
+![Edge 세그먼테이션 처리량 페이지가 표시됩니다. 용량 제한과 비교한 처리량을 자세히 보여주는 그래프입니다.](/help/landing/images/capacity/edge-segmentation-throughput-details.png)
+
+#### 에지 대상자 수 {#edge-audience-count}
+
+**[!UICONTROL Edge audience count]** 섹션에는 각 샌드박스 내의 Edge 대상 수와 샌드박스 내에서 허용되는 최대 Edge 대상 수가 표시됩니다.
+
+![Edge 대상자 규모 섹션이 표시됩니다. 에지 대상자 규모 관련 정보를 표시합니다.](/help/landing/images/capacity/edge-audience-count.png)
 
 | 열 이름 | 설명 |
 | ----------- | ----------- |
@@ -166,9 +207,9 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 | 사용 | 샌드박스에 있는 나열된 유형의 대상 수입니다. |
 | 용량 | 샌드박스에서 허용되는 나열된 유형의 최대 대상 수입니다. |
 
-## 스트리밍 처리량 모범 사례 {#suggestions}
+## 스트리밍 처리량 모범 사례 {#streaming-throughput-suggestions}
 
-다음 권장 사항 중 하나를 채택하여 스트리밍 처리량 위반을 해결할 수 있습니다.
+다음 권장 사항 중 하나를 채택하여 처리량 위반 사항을 해결할 수 있습니다.
 
 1. 샌드박스에 할당된 용량을 늘립니다.
 2. [모니터링 대시보드](/help/dataflows/ui/monitor-streaming-profile.md)에서 처리량이 많은 데이터 흐름을 식별하고 필요한 경우 이러한 데이터 흐름에 대해 조절 또는 필터링을 적용합니다.
@@ -179,13 +220,21 @@ Experience Platform은 15분의 롤링 간격으로 샌드박스의 처리량을
 | 기여 요인 | 정의 | 사용 사례에 미치는 영향 | 모범 사례 |
 | --- | --- | --- | --- |
 | 일괄 처리-스트리밍 전환 | 스트리밍으로 전환된 일괄 작업 로드는 처리량을 크게 증가시켜 성능과 리소스 할당에 영향을 줄 수 있습니다. 예를 들어, 비율 제한 없이 이벤트 후에 벌크 프로필 업데이트를 수행하는 경우입니다. | 짧은 지연 처리가 필요하지 않은 일괄 사용 사례에는 스트리밍 전략이 필요하지 않습니다. | 사용 사례 요구 사항 평가 일괄 아웃바운드 마케팅의 경우 스트리밍 대신 [일괄 처리 수집](/help/ingestion/batch-ingestion/overview.md)을 사용하여 데이터 수집을 보다 효율적으로 관리하는 것이 좋습니다. |
-| 불필요한 데이터 수집 | 개인화에 필요하지 않은 데이터를 수집하면 가치를 추가하지 않고 처리량이 증가하여 리소스를 낭비할 수 있습니다. 예를 들어 관련성에 관계없이 모든 분석 트래픽을 프로필로 수집합니다. | 관련 없는 데이터가 너무 많으면 노이즈가 발생하여 영향을 미치는 데이터 포인트를 식별하기가 더 어려워집니다. 또한 대상자 및 프로필을 정의하고 관리할 때 마찰이 발생할 수 있습니다. | 사용 사례에 필요한 데이터만 수집합니다. 불필요한 데이터를 필터링해야 합니다.<ul><li>**Adobe Analytics**: [행 수준 필터링](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)을 사용하여 데이터 섭취를 최적화합니다.</li><li>**소스**: [[!DNL Flow Service] API를 사용하여 &#x200B;](/help/sources/tutorials/api/filter.md) 및 [!DNL Snowflake]과(와) 같은 지원되는 소스에 대해 행 수준 데이터를 필터링[!DNL Google BigQuery]합니다.</li></li>**Edge 데이터스트림**: WebSDK에서 들어오는 트래픽의 행 수준 필터링을 수행하려면 [동적 데이터스트림](/help/datastreams/configure-dynamic-datastream.md)을 구성하십시오.</li></ul> |
+| 불필요한 데이터 수집 | 개인화에 필요하지 않은 데이터를 수집하면 가치를 추가하지 않고 처리량이 증가하여 리소스를 낭비할 수 있습니다. 예를 들어 관련성에 관계없이 모든 분석 트래픽을 프로필로 수집합니다. | 관련 없는 데이터가 너무 많으면 노이즈가 발생하여 영향을 미치는 데이터 포인트를 식별하기가 더 어려워집니다. 또한 대상자 및 프로필을 정의하고 관리할 때 마찰이 발생할 수 있습니다. | 사용 사례에 필요한 데이터만 수집합니다. 불필요한 데이터를 필터링해야 합니다.<ul><li>**Adobe Analytics**: [행 수준 필터링](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)을 사용하여 데이터 섭취를 최적화합니다.</li><li>**소스**: [[!DNL Flow Service] API를 사용하여 ](/help/sources/tutorials/api/filter.md) 및 [!DNL Snowflake]과(와) 같은 지원되는 소스에 대해 행 수준 데이터를 필터링[!DNL Google BigQuery]합니다.</li></li>**Edge 데이터스트림**: WebSDK에서 들어오는 트래픽의 행 수준 필터링을 수행하려면 [동적 데이터스트림](/help/datastreams/configure-dynamic-datastream.md)을 구성하십시오.</li></ul> |
+
+## Edge 세그먼테이션 처리량 우수 사례 {#edge-best-practices}
+
+다음 권장 사항 중 하나를 채택하여 에지 세그멘테이션 처리량 위반을 해결할 수 있습니다.
+
+1. [모니터링 대시보드](/help/dataflows/ui/monitor-edge.md)에서 처리량이 많은 데이터스트림을 식별하고 필요한 경우 이러한 데이터스트림에 대해 조절 또는 필터링을 적용합니다.
+2. 배치 수집을 사용하여 수집을 최적화하여 지연 시간을 단축할 수 있습니다.
+3. 문제가 지속되는 경우 Adobe 고객 지원 센터 담당자에게 문의하십시오.
 
 ## 비디오 개요 {#video}
 
 다음 비디오에서는 용량에 대한 개요를 제공합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475280/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## 자주 묻는 질문 {#faq}
 

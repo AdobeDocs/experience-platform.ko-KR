@@ -2,9 +2,9 @@
 title: Real-Time Customer Data Platform의 Audience Builder
 description: Real-Time Customer Data Platform에서 Audience Builder를 사용하여 대상을 만드는 방법을 알아봅니다.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 7%
@@ -64,7 +64,7 @@ Adobe Experience Platform 위에 구축된 [!DNL Adobe Real-Time Customer Data P
 
 또는 최소값, 평균(평균) 및 최대값이 표시된 데이터 분포를 확인할 수 있습니다.
 
-![최소값, 평균값, 최대값을 포함하여 특성에 대한 통계를 표시하는 팝오버](../assets/segmentation/audience-builder/statistics.png)
+![최소값, 평균값, 최대값을 포함하여 특성에 대한 통계를 표시하는 팝오버](../assets/segmentation/audience-builder/statistics.png){width="300"}
 
 특성이 계정의 25% 미만으로 채워지는 경우 대신 ![데이터 알림 아이콘](../../images/icons/data-notice.png)이 표시됩니다. 속성에 관계없이 동일한 요약 데이터가 표시됩니다.
 
@@ -78,7 +78,7 @@ Adobe Experience Platform 위에 구축된 [!DNL Adobe Real-Time Customer Data P
 
 또한 특성에는 **[!UICONTROL Ingestion Type]**&#x200B;이(가) 있습니다. 수집 유형을 통해 데이터의 출처를 알 수 있으며 **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** 또는 **[!UICONTROL No Data Ingested]** 값 중 하나일 수 있습니다.
 
-![특성에 대한 수집 유형이 표시됩니다.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png)
+![특성에 대한 수집 유형이 표시됩니다.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png){width="300"}
 
 Audience Builder의 특성에 대한 자세한 내용은 [Audience Builder 사용 안내서](../../segmentation/ui/segment-builder.md){target="_blank"}를 참조하십시오.
 
