@@ -3,9 +3,9 @@ keywords: 카탈로그;카탈로그
 title: 대상 카탈로그 개요
 description: 대상 카탈로그는 데이터를 받을 준비가 된 사용 가능한 대상 목록을 제공합니다. 이러한 대상에는 Adobe 솔루션, 광고 플랫폼, 설문 조사 플랫폼, 이메일 마케팅 플랫폼 등이 포함됩니다.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 대상 범주 {#destination-categories}
 
-Adobe Experience Platform에서 다른 대상 카테고리에 데이터를 활성화할 수 있습니다. 아래 링크에서는 각 대상 카테고리에 대한 자세한 정보를 제공합니다.
+[!DNL Adobe Experience Platform]의 다른 대상 범주에 데이터를 활성화할 수 있습니다. 아래 링크에서는 각 대상 카테고리에 대한 자세한 정보를 제공합니다.
 
 - [Adobe [!UICONTROL destinations] 개요](adobe/overview.md)
 - [[!UICONTROL Advertising] [!UICONTROL destinations] 개요](advertising/overview.md)

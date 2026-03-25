@@ -3,9 +3,9 @@ keywords: contentsquare 확장;contentsquare 대상;contentsquare
 title: Contentsquare 확장
 description: Contentsquare 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: bf836a15-b87c-4a4b-a3fc-92d3cf9bc90e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '452'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 페이지 내 행동을 시각화하십시오. 고객이 포기하는 이유와 개선 가능한 방법을 확인하십시오. 각 Analytics 대상 및 Target 테스트에 대한 UX 및 콘텐츠 요소에 매출을 연결합니다. [!DNL Contentsquare] 태그를 설치하고 사용자 지정 변수 및 이벤트를 설정합니다. 몇 번의 클릭만으로 UX 분석을 위한 데이터 수집을 시작할 수 있습니다.
 
-[!DNL Contentsquare]은(는) Adobe Experience Platform의 analytics 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html)의 확장 페이지를 참조하십시오.
+[!DNL Contentsquare]은(는) [!DNL Adobe Experience Platform]의 analytics 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html)의 확장 페이지를 참조하십시오.
 
 이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 이 확장은 Experience Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 Adobe Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
+이 확장을 사용하려면 [!DNL Adobe Experience Platform]의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 [!DNL Adobe Experience Cloud] 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 

@@ -3,9 +3,9 @@ title: Google 클라우드 스토리지 연결
 description: Google Cloud Storage에 연결하고 대상을 활성화하거나 데이터 세트를 내보내는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1299'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-[!DNL Google Cloud Storage]에 대한 실시간 아웃바운드 연결을 생성하여 정기적으로 Adobe Experience Platform의 데이터 파일을 고유한 버킷으로 내보냅니다.
+[!DNL Google Cloud Storage]에 대한 실시간 아웃바운드 연결을 생성하여 [!DNL Adobe Experience Platform]의 데이터 파일을 정기적으로 고유한 버킷으로 내보냅니다.
 
 ## API 또는 UI를 통해 [!DNL Google Cloud Storage] 저장소에 연결합니다. {#connect-api-or-ui}
 
@@ -28,7 +28,7 @@ ht-degree: 2%
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -41,7 +41,7 @@ ht-degree: 2%
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 예 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 예 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 예 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 
@@ -143,7 +143,7 @@ Experience Platform을 [!DNL Google Cloud Storage]에 연결하려면 먼저 [!D
 * `storage.objects.create`
 * `storage.objects.list`
 
-[의 &#x200B;](https://cloud.google.com/storage/docs/access-control/iam-permissions)액세스 제어 및 권한[!DNL Google Cloud Storage]에 대해 자세히 알아보세요.
+[의 ](https://cloud.google.com/storage/docs/access-control/iam-permissions)액세스 제어 및 권한[!DNL Google Cloud Storage]에 대해 자세히 알아보세요.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
@@ -156,7 +156,7 @@ Experience Platform을 [!DNL Google Cloud Storage]에 연결하려면 먼저 [!D
 
 ### 일정 조정 {#scheduling}
 
-**[!UICONTROL Scheduling]** 단계에서는 [&#x200B; 대상에 대해 &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)내보내기 일정을 설정[!DNL Google Cloud Storage]할 수 있으며 [내보낸 파일의 이름을 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)할 수도 있습니다.
+**[!UICONTROL Scheduling]** 단계에서는 [ 대상에 대해 ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)내보내기 일정을 설정[!DNL Google Cloud Storage]할 수 있으며 [내보낸 파일의 이름을 구성](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names)할 수도 있습니다.
 
 ### 속성 및 ID 매핑 {#map}
 
@@ -166,6 +166,6 @@ Experience Platform을 [!DNL Google Cloud Storage]에 연결하려면 먼저 [!D
 
 데이터를 성공적으로 내보냈는지 확인하려면 [!DNL Google Cloud Storage] 버킷을 확인하고 내보낸 파일에 예상 프로필 모집단이 포함되어 있는지 확인하십시오.
 
-## 허용 목록에 추가하다 IP 주소 {#ip-address-allow-list}
+## IP 주소 {#ip-address-allow-list}
 
-허용 목록에 추가하다 Adobe IP를 허용 목록에 추가하다에 추가해야 하는 경우 [IP 주소](ip-address-allow-list.md) 문서를 참조하십시오.
+Adobe IP를 허용 목록에 추가하다에 추가해야 하는 경우 [IP 주소](ip-address-allow-list.md) 문서를 참조하십시오.

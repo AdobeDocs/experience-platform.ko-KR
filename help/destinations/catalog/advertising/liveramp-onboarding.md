@@ -3,22 +3,22 @@ title: LiveRamp - 온보드 연결
 description: LiveRamp 커넥터를 사용하여 Adobe Real-Time Customer Data Platform에서 LiveRamp Connect로 대상을 온보딩하는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: '1988'
 ht-degree: 4%
 
 ---
 
 # [!DNL LiveRamp - Onboarding] 연결 {#liveramp-onboarding}
 
-[!DNL LiveRamp - Onboarding] 연결을 사용하여 Adobe Real-Time Customer Data Platform에서 [!DNL LiveRamp Connect]&#x200B;(으)로 대상자를 온보딩합니다.
+[!DNL LiveRamp - Onboarding] 연결을 사용하여 Adobe [!DNL Real-Time Customer Data Platform]에서 [!DNL LiveRamp Connect]&#x200B;(으)로 대상자를 온보딩합니다.
 
 ## 사용 사례 {#use-cases}
 
-[!DNL LiveRamp - Onboarding] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례를 소개합니다.
+[!DNL LiveRamp - Onboarding] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 [!DNL Adobe Experience Platform] 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례 예제를 소개합니다.
 
-마케터로서 [!DNL LiveRamp Connect] 식별자를 사용하여 모바일, 오픈 웹, 소셜 및 [!DNL CTV] 플랫폼에서 사용자를 타깃팅할 수 있도록 Adobe Experience Platform에서 온보드 ID로 대상을 보내려고 합니다.[!DNL Ramp ID]
+마케터로서 [!DNL Adobe Experience Platform] 식별자를 사용하여 모바일, 오픈 웹, 소셜 및 [!DNL LiveRamp Connect] 플랫폼에서 사용자를 타깃팅할 수 있도록 [!DNL CTV]에서 온보드 ID로 대상을 [!DNL Ramp ID]&#x200B;(으)로 보내려고 합니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -39,7 +39,7 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -52,7 +52,7 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 
@@ -91,7 +91,7 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 * **[!UICONTROL Password]**: [!DNL LiveRamp - Onboarding] 저장소 위치의 암호입니다.
 * **[!UICONTROL PGP/GPG encryption key]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**&#x200B;암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
+* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
 
 **SSH 키 인증이 있는 SFTP** {#sftp-ssh}
 
@@ -106,7 +106,7 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 
 * **[!UICONTROL PGP/GPG encryption key]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**&#x200B;암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
+* **[!UICONTROL Subkey ID]**:If암호화 키를 제공하면&#x200B;**[!UICONTROL Subkey ID]**암호화도 제공해야 합니다. 하위 키 ID를 얻는 방법에 대해 알아보려면 [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key)를 참조하세요.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -123,7 +123,7 @@ Experience Platform에서 [!DNL LiveRamp - Onboarding]&#x200B;(으)로 데이터
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL Region]**: LiveRamp SFTP 저장소 인스턴스의 지리적 지역입니다.
-* **[!UICONTROL Folder path]**: 내보낸 파일을 호스팅할 [!DNL LiveRamp] `uploads` 하위 폴더의 경로입니다. `uploads` 접두사가 폴더 경로에 자동으로 추가됩니다. [!DNL LiveRamp]에서는 파일을 다른 기존 피드와 구분하고 모든 자동화가 원활하게 실행되도록 Adobe Real-Time CDP에서 게재할 전용 하위 폴더를 만들 것을 권장합니다.
+* **[!UICONTROL Folder path]**: 내보낸 파일을 호스팅할 [!DNL LiveRamp] `uploads` 하위 폴더의 경로입니다. `uploads` 접두사가 폴더 경로에 자동으로 추가됩니다. [!DNL LiveRamp]은(는) Adobe [!DNL Real-Time CDP]에서 게재할 전용 하위 폴더를 만들어 파일을 다른 기존 피드와 구분하고 모든 자동화가 원활하게 실행되도록 하는 것이 좋습니다.
    * 예를 들어 파일을 `uploads/my_export_folder`(으)로 내보내려면 `my_export_folder` 필드에 **[!UICONTROL Folder path]**&#x200B;을(를) 입력합니다.
 * **[!UICONTROL Compression format]**: 내보낸 파일에 Experience Platform에서 사용해야 하는 압축 형식을 선택합니다. 사용 가능한 옵션은 **[!UICONTROL GZIP]** 또는 **[!UICONTROL None]**&#x200B;입니다.
 
@@ -241,7 +241,7 @@ abc101@testemailabc.com,active,active,
 
 Experience Platform은 각 [병합 정책 ID](../../../profile/merge-policies/overview.md)에 대해 하나의 CSV 파일을 생성하므로 각 병합 정책 ID에 대해 별도의 데이터 흐름 실행도 생성합니다.
 
-즉, **[!UICONTROL Identities activated]**&#x200B;데이터 흐름 실행&#x200B;**[!UICONTROL Profiles received]** 페이지의 [&#x200B; 및 &#x200B;](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 지표가 각 대상에 대해 표시되지 않고 동일한 병합 정책을 사용하는 각 대상 그룹에 대해 집계됩니다.
+즉, **[!UICONTROL Identities activated]**&#x200B;데이터 흐름 실행&#x200B;**[!UICONTROL Profiles received]** 페이지의 [ 및 ](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 지표가 각 대상에 대해 표시되지 않고 동일한 병합 정책을 사용하는 각 대상 그룹에 대해 집계됩니다.
 
 동일한 병합 정책을 사용하는 대상자 그룹에 대해 데이터 흐름이 생성되면 대상자 이름이 [모니터링 대시보드](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)에 표시되지 않습니다.
 

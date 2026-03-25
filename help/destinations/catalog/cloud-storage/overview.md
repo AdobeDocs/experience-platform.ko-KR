@@ -1,11 +1,11 @@
 ---
 keywords: 클라우드 스토리지 대상;클라우드 스토리지
 title: 클라우드 스토리지 대상 개요
-description: Adobe Experience Platform은 대상을 Amazon S3, AWS Kinesis, Azure Event Hubs 또는 SFTP 클라우드 스토리지 위치에 데이터 파일로 전달할 수 있습니다.
+description: Adobe Experience Platform은 대상을 Amazon S3, AWS Kinesis, Azure 이벤트 허브 또는 SFTP 클라우드 스토리지 위치에 데이터 파일로 전달할 수 있습니다.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '457'
 ht-degree: 6%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 6%
 
 ## 개요 {#overview}
 
-Adobe Experience Platform은 대상을 클라우드 스토리지 위치에 데이터 파일로 제공할 수 있습니다. 이렇게 하면 [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] 및 SFTP에 대한 CSV 파일을 통해 대상자와 해당 프로필 속성을 내부 시스템으로 보낼 수 있습니다. [!DNL Amazon Kinesis] 및 [!DNL Azure Event Hubs] 대상의 경우 데이터가 [!DNL JSON] 형식으로 Experience Platform에서 스트리밍됩니다.
+[!DNL Adobe Experience Platform]은(는) 대상을 클라우드 저장소 위치에 데이터 파일로 전달할 수 있습니다. 이렇게 하면 [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] 및 SFTP에 대한 CSV 파일을 통해 대상자와 해당 프로필 속성을 내부 시스템으로 보낼 수 있습니다. [!DNL Amazon Kinesis] 및 [!DNL Azure Event Hubs] 대상의 경우 데이터가 [!DNL JSON] 형식으로 Experience Platform에서 스트리밍됩니다.
 
 ![Adobe 클라우드 저장소 대상](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## 지원되는 클라우드 스토리지 대상 {#supported-destinations}
 
-Adobe Experience Platform은 다음 클라우드 스토리지 대상으로 데이터 내보내기를 지원합니다.
+[!DNL Adobe Experience Platform]은(는) 다음 클라우드 저장소 대상으로 데이터 내보내기를 지원합니다.
 
 * [Amazon Kinesis 연결](amazon-kinesis.md)
 * [Amazon S3 연결](amazon-s3.md)

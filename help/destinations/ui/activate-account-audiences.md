@@ -3,9 +3,9 @@ title: 대상에 대한 계정 대상자 활성화
 type: Tutorial
 description: 대상에 대한 계정 대상을 활성화하는 방법을 알아봅니다
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Real-Time Customer Data Platform의 [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) 에디션을 구매하는 회사는 계정 대상자를 대상으로 활성화하는 기능을 사용할 수 있습니다.
+>[의 ](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Business[ 및 ](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Person[!DNL Real-Time Customer Data Platform] 에디션을 구매하는 회사에서 계정 대상을 대상으로 활성화하는 기능을 사용할 수 있습니다.
 
-이 문서에서는 [계정 대상자](/help/segmentation/types/account-audiences.md)를 Adobe Experience Platform에서 원하는 대상으로 내보내는 데 필요한 워크플로에 대해 설명합니다.
+이 문서에서는 [에서 원하는 대상으로 ](/help/segmentation/types/account-audiences.md)계정 대상자[!DNL Adobe Experience Platform]를 내보내는 데 필요한 워크플로에 대해 설명합니다.
 
 ## 지원되는 대상 {#supported-destinations}
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->계정 대상을 클라우드 저장소 대상으로 내보낼 때 예약 단계에서 계정 대상을 활성화하는 워크플로에서는 [전체 파일](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _을(를) 매일 일정_&#x200B;에 내보낼 수만 있습니다. 시간별 내보내기는 지원되지 않습니다. **[!UICONTROL After audience evaluation]**&#x200B;은(는) 유일하게 지원되는 평가 유형입니다.
+>계정 대상을 클라우드 저장소 대상으로 내보낼 때 예약 단계에서 계정 대상을 활성화하는 워크플로를 사용하면 [전체 파일](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _을(를) 매일 일정_&#x200B;에 내보낼 수 있습니다. 시간별 내보내기는 지원되지 않습니다. **[!UICONTROL After audience evaluation]**&#x200B;은(는) 유일하게 지원되는 평가 유형입니다.
 
 ## 중요한 콜아웃 및 알려진 제한 사항 {#important-callouts-known-limitations}
 
@@ -108,4 +108,4 @@ ht-degree: 0%
 
 ![동의 적용 제어가 회색으로 표시된 계정 대상자 활성화 워크플로의 검토 단계입니다.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 
-[데이터 사용 정책 확인](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 및 [특성 기반 액세스 제어](/help/destinations/home.md#attribute-based-access)와 같은 Real-Time CDP의 다른 데이터 거버넌스 메커니즘이 지원됩니다.
+[!DNL Real-Time CDP]데이터 사용 정책 확인[ 및 ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)특성 기반 액세스 제어[와 같은 ](/help/destinations/home.md#attribute-based-access)의 다른 데이터 거버넌스 메커니즘이 지원됩니다.

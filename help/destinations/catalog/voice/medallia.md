@@ -3,10 +3,10 @@ keywords: 메달리아;메달리아
 title: 메달리아 확장
 description: Medallia 확장은 Adobe Experience Platform의 고객 대상 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: c28cf31a-890c-4dcd-b936-5a030dc6e83e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 3%
+source-wordcount: '450'
+ht-degree: 4%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## 개요 {#overview}
 
-웹 속성에 [!DNL Medallia]을(를) 빠르고 원활하게 배포합니다. 또한 확장을 사용하면 설문 조사 이벤트를 감지하고, 데이터 요소를 통해 실시간으로 고객 피드백을 캡처하고, 규칙에 사용하여 고객 경험을 개인화하고, Adobe Analytics과 데이터를 공유할 수 있습니다.
+웹 속성에 [!DNL Medallia]을(를) 빠르고 원활하게 배포합니다. 또한 확장을 사용하면 설문 조사 이벤트를 감지하고, 데이터 요소를 통해 실시간으로 고객 피드백을 캡처하고, 규칙에 사용하여 고객의 경험을 개인화하고, [!DNL Adobe Analytics]과(와) 데이터를 공유할 수 있습니다.
 
-[!DNL Medallia]은(는) Adobe Experience Platform의 고객 확장에 대한 음성입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html)의 확장 페이지를 참조하십시오.
+[!DNL Medallia]은(는) [!DNL Adobe Experience Platform]에서 고객 확장의 음성입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html)의 확장 페이지를 참조하십시오.
 
 이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 이 확장은 Experience Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 Adobe Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
+이 확장을 사용하려면 [!DNL Adobe Experience Platform]의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 [!DNL Adobe Experience Cloud] 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 

@@ -2,9 +2,9 @@
 description: 대상에 대한 HTTP 요청을 그룹화하고 일괄 처리하는 방법을 결정하는 집계 정책을 설정하는 방법에 대해 알아봅니다.
 title: 집계 정책
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 92d7abcbd642cea4e0fa041d2926ba8868f506e5
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1233'
 ht-degree: 2%
 
 ---

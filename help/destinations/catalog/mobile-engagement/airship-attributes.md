@@ -3,9 +3,9 @@ keywords: 비행선 속성;비행선 목적지
 title: 비행선 속성 연결
 description: Airship 내에서 타깃팅할 대상 속성으로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1121'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!DNL Airship]은(는) 선도적인 Customer Engagement Experience Platform으로, 고객 수명 주기의 모든 단계에서 사용자에게 의미 있고 개인화된 옴니채널 메시지를 전달할 수 있도록 지원합니다.
 
-이 통합은 타깃팅 또는 트리거를 위해 Adobe 프로필 데이터를 [!DNL Airship]특성[(으)로 &#x200B;](https://docs.airship.com/guides/audience/attributes/)에 전달합니다.
+이 통합은 타깃팅 또는 트리거를 위해 Adobe 프로필 데이터를 [!DNL Airship]특성[(으)로 ](https://docs.airship.com/guides/audience/attributes/)에 전달합니다.
 
 [!DNL Airship]에 대한 자세한 내용은 [비행선 문서](https://docs.airship.com)를 참조하세요.
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 >[!TIP]
 >
->아직 만들지 않은 경우 [!DNL Airship]이 등록 링크[를 통해 &#x200B;](https://go.airship.eu/accounts/register/plan/starter/) 계정을 만드십시오.
+>아직 만들지 않은 경우 [!DNL Airship]이 등록 링크[를 통해 ](https://go.airship.eu/accounts/register/plan/starter/) 계정을 만드십시오.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -42,7 +42,7 @@ ht-degree: 3%
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ ht-degree: 3%
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 
@@ -73,13 +73,13 @@ ht-degree: 3%
 
 ## 속성 활성화 {#enable-attributes}
 
-Adobe Experience Platform 프로필 속성은 [!DNL Airship] 속성과 유사하며 이 페이지의 아래에 표시된 매핑 도구를 사용하여 Experience Platform에서 서로 쉽게 매핑할 수 있습니다.
+[!DNL Adobe Experience Platform] 프로필 특성은 [!DNL Airship] 특성과 유사하며 이 페이지의 아래에 표시된 매핑 도구를 사용하여 Experience Platform에서 서로 쉽게 매핑할 수 있습니다.
 
 [!DNL Airship] 프로젝트에는 몇 가지 사전 정의된 특성과 기본 특성이 있습니다. 사용자 지정 특성이 있는 경우 먼저 [!DNL Airship]에서 정의해야 합니다. 자세한 내용은 [특성 설정 및 관리](https://docs.airship.com/tutorials/audience/attributes/)를 참조하십시오.
 
 ## 전달자 토큰 생성 {#bearer-token}
 
-**[!UICONTROL Settings]** Airship 대시보드&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;의 [&quot; &#x200B;](https://go.airship.com)&#x200B;(으)로 이동한 다음 왼쪽 메뉴에서 **[!UICONTROL Tokens]**&#x200B;을(를) 선택하십시오.
+**[!UICONTROL Settings]** Airship 대시보드&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;의 [&quot; ](https://go.airship.com)&#x200B;(으)로 이동한 다음 왼쪽 메뉴에서 **[!UICONTROL Tokens]**&#x200B;을(를) 선택하십시오.
 
 **[!UICONTROL Create Token]**&#x200B;을(를) 클릭합니다.
 
@@ -89,15 +89,15 @@ Adobe Experience Platform 프로필 속성은 [!DNL Airship] 속성과 유사하
 
 ## 사용 사례 {#use-cases}
 
-[!DNL Airship Attributes] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례를 소개합니다.
+[!DNL Airship Attributes] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 [!DNL Adobe Experience Platform] 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례의 예제를 소개합니다.
 
 ### 사용 사례 #1 {#use-case-1}
 
-[!DNL Airship]의 채널 내에서 메시지 및 풍부한 콘텐츠를 개인화하기 위해 Adobe Experience Platform 내에서 수집된 프로필 데이터를 활용합니다. 예를 들어 [!DNL Experience Platform] 프로필 데이터를 활용하여 [!DNL Airship] 내에서 위치 특성을 설정합니다. 이렇게 하면 호텔 브랜드에서 각 사용자에 대해 가장 가까운 호텔 위치에 대한 이미지를 표시할 수 있습니다.
+[!DNL Adobe Experience Platform] 내에 수집된 프로필 데이터를 활용하여 [!DNL Airship]의 채널 내에서 메시지 및 풍부한 콘텐츠를 개인화할 수 있습니다. 예를 들어 [!DNL Experience Platform] 프로필 데이터를 활용하여 [!DNL Airship] 내에서 위치 특성을 설정합니다. 이렇게 하면 호텔 브랜드에서 각 사용자에 대해 가장 가까운 호텔 위치에 대한 이미지를 표시할 수 있습니다.
 
 ### 사용 사례 #2 {#use-case-2}
 
-Adobe Experience Platform의 특성을 활용하여 [!DNL Airship] 프로필을 더욱 보강하고 SDK 또는 [!DNL Airship] 예측 데이터와 결합합니다. 예를 들어 retailer은 충성도 상태 및 위치 데이터(Experience Platform의 특성)와 이탈할 것으로 예상되는 [!DNL Airship]을(를) 통해 대상을 만들어 NV의 라스베이거스에 거주하고 이탈 가능성이 높은 골드 충성도 상태의 사용자에게 높은 타깃팅된 메시지를 보낼 수 있습니다.
+[!DNL Adobe Experience Platform]의 특성을 활용하여 [!DNL Airship] 프로필을 더욱 보강하고 SDK 또는 [!DNL Airship] 예측 데이터와 결합하십시오. 예를 들어 retailer은 충성도 상태 및 위치 데이터(Experience Platform의 특성)와 이탈할 것으로 예상되는 [!DNL Airship]을(를) 통해 대상을 만들어 NV의 라스베이거스에 거주하고 이탈 가능성이 높은 골드 충성도 상태의 사용자에게 높은 타깃팅된 메시지를 보낼 수 있습니다.
 
 ## 대상에 연결 {#connect}
 

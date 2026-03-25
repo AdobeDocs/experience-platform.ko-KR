@@ -4,9 +4,9 @@ title: 흐름 서비스 API를 사용하여 대상 연결 편집
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 대상 연결의 다양한 구성 요소를 편집하는 방법에 대해 알아봅니다.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1604'
 ht-degree: 5%
 
 ---
@@ -27,9 +27,9 @@ ht-degree: 5%
 >
 > 이 자습서에서는 용어 *흐름*&#x200B;과(와) *데이터 흐름*&#x200B;을(를) 교환하여 사용합니다. 이 자습서의 컨텍스트에서 동일한 의미를 갖습니다.
 
-또한 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
+또한 이 자습서에서는 [!DNL Adobe Experience Platform]의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [대상](../home.md): [!DNL Destinations]은(는) Adobe Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+* [대상](../home.md): [!DNL Destinations]은(는) [!DNL Adobe Experience Platform]의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 * [샌드박스](../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 데이터 흐름을 성공적으로 업데이트하기 위해 알아야 하는 추가 정보를 제공합니다.
@@ -294,7 +294,7 @@ curl -X PATCH \
 
 **요청**
 
-다음 요청은 `advertiserId`대상 연결[[!DNL Pinterest] 의 &#x200B;](/help/destinations/catalog/advertising/pinterest.md#parameters) 매개 변수를 업데이트합니다.
+다음 요청은 `advertiserId`대상 연결[[!DNL Pinterest] 의 ](/help/destinations/catalog/advertising/pinterest.md#parameters) 매개 변수를 업데이트합니다.
 
 ```shell
 curl -X PATCH \
@@ -344,7 +344,7 @@ curl -X PATCH \
 
 기본 연결의 구성 요소를 업데이트하려면 기본 연결 ID, 버전 및 사용할 새 값을 제공하는 동안 `PATCH` 끝점에 대해 `/connections` 요청을 수행합니다.
 
-매개 변수 [에 대해 원하는 대상으로 기존 데이터 흐름을 검사했을 때 &#x200B;](#look-up-dataflow-details)이전 단계`baseConnection`에서 기본 연결 ID를 얻었습니다.
+매개 변수 [에 대해 원하는 대상으로 기존 데이터 흐름을 검사했을 때 ](#look-up-dataflow-details)이전 단계`baseConnection`에서 기본 연결 ID를 얻었습니다.
 
 >[!IMPORTANT]
 >

@@ -3,9 +3,9 @@ keywords: Marketo Web Personalization;marketo web personalization;Marketo Web Pe
 title: Marketo 웹 Personalization 확장
 description: Marketo Web Personalization 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '469'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 이 확장은 [!DNL Marketo's] 웹 Personalization 및 ContentAI 애플리케이션용 스크립트를 배포합니다. [!DNL Marketo] Web Personalization은 익명의 방문자에 대한 firmographics 및 알려진 방문자에 대한 [!DNL Marketo] 참여 플랫폼 내의 광범위한 동작 특성과 같은 웹 방문자 특성에 맞게 콘텐츠를 고유하게 식별하고 개인화합니다. [!DNL Marketo] ContentAI에는 B2B 고객에게만 해당하는 웹 및 이메일 캠페인을 위한 AI 기반 권장 사항 및 개인 맞춤화를 위한 기능이 포함되어 있습니다.
 
-[!DNL Marketo Web Personalization]은(는) Adobe Experience Platform의 개인화 확장입니다. Marketo의 웹 개인화 및 ContentAI에 대한 자세한 내용은 [웹 Personalization 개요](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=ko)를 참조하십시오.
+[!DNL Marketo Web Personalization]은(는) [!DNL Adobe Experience Platform]의 개인화 확장입니다. Marketo의 웹 개인화 및 ContentAI에 대한 자세한 내용은 [웹 Personalization 개요](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html)를 참조하십시오.
 
 이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 이 확장은 Experience Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 Adobe Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
+이 확장을 사용하려면 [!DNL Adobe Experience Platform]의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 [!DNL Adobe Experience Cloud] 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 

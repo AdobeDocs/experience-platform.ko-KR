@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 대상 데이터 흐름 업데이트
 type: Tutorial
 description: 이 튜토리얼에서는 대상 데이터 흐름을 업데이트하는 단계를 설명합니다. 흐름 서비스 API를 사용하여 데이터 흐름을 활성화 또는 비활성화하거나, 기본 정보를 업데이트하거나, 대상 및 속성을 추가 및 제거하는 방법을 알아봅니다.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2467'
+source-wordcount: '2459'
 ht-degree: 3%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 3%
 >
 > 이 자습서에서는 용어 *흐름*&#x200B;과(와) *데이터 흐름*&#x200B;을(를) 교환하여 사용합니다. 이 자습서의 컨텍스트에서 동일한 의미를 갖습니다.
 
-또한 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
+또한 이 자습서에서는 [!DNL Adobe Experience Platform]의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [대상](../home.md): [!DNL Destinations]은(는) Adobe Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+* [대상](../home.md): [!DNL Destinations]은(는) [!DNL Adobe Experience Platform]의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 * [샌드박스](../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 데이터 흐름을 성공적으로 업데이트하기 위해 알아야 하는 추가 정보를 제공합니다.
@@ -503,7 +503,7 @@ curl -X PATCH \
 | `value` | 매개 변수를 업데이트할 새 값입니다. |
 | `id` | 대상 데이터 흐름에 추가할 대상자의 ID를 지정합니다. |
 | `name` | **(선택 사항)**. 대상 데이터 흐름에 추가할 대상자의 이름을 지정합니다. 이 필드는 필수가 아니므로 이름을 제공하지 않고 대상 데이터 흐름에 대상을 성공적으로 추가할 수 있습니다. |
-| `filenameTemplate` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br> 이 필드는 대상으로 내보내는 파일의 파일 이름 형식을 결정합니다. <br> 다음 옵션을 사용할 수 있습니다. <br> <ul><li>`%DESTINATION_NAME%`: 필수입니다. 내보낸 파일에는 대상 이름이 포함되어 있습니다.</li><li>`%SEGMENT_ID%`: 필수입니다. 내보낸 파일에는 내보낸 대상자의 ID가 들어 있습니다.</li><li>`%SEGMENT_NAME%`: **(선택 사항)**. 내보낸 파일에는 내보낸 대상자의 이름이 포함됩니다.</li><li>`DATETIME(YYYYMMdd_HHmmss)` 또는 `%TIMESTAMP%`: **(선택 사항)**. Experience Platform에서 생성한 시간을 파일에 포함하려면 다음 두 옵션 중 하나를 선택합니다.</li><li>`custom-text`: **(선택 사항)**. 이 자리 표시자를 파일 이름 끝에 추가할 사용자 지정 텍스트로 바꿉니다.</li></ul> <br> 파일 이름 구성에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서의 [파일 이름 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 섹션을 참조하십시오. |
+| `filenameTemplate` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br> 이 필드는 대상으로 내보내는 파일의 파일 이름 형식을 결정합니다. <br> 다음 옵션을 사용할 수 있습니다. <br> <ul><li>`%DESTINATION_NAME%`: 필수입니다. 내보낸 파일에는 대상 이름이 포함되어 있습니다.</li><li>`%SEGMENT_ID%`: 필수입니다. 내보낸 파일에는 내보낸 대상자의 ID가 들어 있습니다.</li><li>`%SEGMENT_NAME%`: **(선택 사항)**. 내보낸 파일에는 내보낸 대상자의 이름이 포함됩니다.</li><li>`DATETIME(YYYYMMdd_HHmmss)` 또는 `%TIMESTAMP%`: **(선택 사항)**. Experience Platform에서 생성한 시간을 파일에 포함하려면 다음 두 옵션 중 하나를 선택합니다.</li><li>`custom-text`: **(선택 사항)**. 이 자리 표시자를 파일 이름 끝에 추가할 사용자 지정 텍스트로 바꿉니다.</li></ul> <br> 파일 이름 구성에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서의 [파일 이름 구성](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) 섹션을 참조하십시오. |
 | `exportMode` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br>은(는) 필수입니다. `"DAILY_FULL_EXPORT"` 또는 `"FIRST_FULL_THEN_INCREMENTAL"`을(를) 선택하십시오. 두 옵션에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서에서 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)를 참조하십시오. |
 | `startDate` | 대상자가 대상으로 프로필 내보내기를 시작할 날짜를 선택합니다. |
 | `frequency` | *일괄 처리 대상*&#x200B;에만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br>은(는) 필수입니다. <br> <ul><li>`"DAILY_FULL_EXPORT"` 내보내기 모드의 경우 `ONCE` 또는 `DAILY`을(를) 선택할 수 있습니다.</li><li>`"FIRST_FULL_THEN_INCREMENTAL"` 내보내기 모드의 경우 `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`을(를) 선택할 수 있습니다.</li></ul> |
@@ -761,7 +761,7 @@ curl -X PATCH \
 >
 >**대상별 매핑 요구 사항**
 >
->이 섹션에서 설명하는 `profileSelectors` 메서드는 대부분의 스트리밍 대상에 대해 작동합니다. 그러나 **Adobe Target**&#x200B;을(를) 포함한 일부 스트리밍 대상에는 데이터 준비 매핑 세트 워크플로우가 대신 필요합니다.
+>이 섹션에서 설명하는 `profileSelectors` 메서드는 대부분의 스트리밍 대상에 대해 작동합니다. 그러나 **[!DNL Adobe Target]**&#x200B;을(를) 포함한 일부 스트리밍 대상에는 데이터 준비 매핑 세트 워크플로우가 대신 필요합니다.
 >
 >**API 응답(202)**&#x200B;이 성공한 후 프로필 특성이 Experience Platform UI에 표시되지 않으면 [대상에 대한 대상자 활성화](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)에 설명된 매핑 집합 메서드를 사용해야 합니다.
 

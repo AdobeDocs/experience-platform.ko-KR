@@ -3,9 +3,9 @@ keywords: 디지털 피드백 확인;확장 확인;확인
 title: 디지털 피드백 확장 확인
 description: Confirmit 디지털 피드백 확장은 Adobe Experience Platform의 고객 대상 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: b45efd1f-318c-42c4-8a88-02f25fc31319
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '473'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 3%
 * 전반적인 고객 만족도
 * 및 기타
 
-[!DNL Confirmit] 디지털 피드백은 Adobe Experience Platform의 Voice of Customer 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html)의 확장 페이지를 참조하십시오.
+[!DNL Confirmit] 디지털 피드백은 [!DNL Adobe Experience Platform]의 고객 확장의 음성입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html)의 확장 페이지를 참조하십시오.
 
 이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 이 확장은 Experience Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 Adobe Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
+이 확장을 사용하려면 [!DNL Adobe Experience Platform]의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 [!DNL Adobe Experience Cloud] 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 

@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 파일 기반 대상을 구성하는 단계를 나열하고 설명합니다.
 title: Destination SDK을 사용하여 파일 기반 대상 구성
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '742'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 1단계: 서버 및 파일 구성 만들기 {#create-server-file-configuration}
 
-[&#x200B; 끝점을 사용하여 &#x200B;](../authoring-api/destination-server/create-destination-server.md)서버 및 파일 구성을 만드는`/destinations-server`부터 시작합니다.
+[ 끝점을 사용하여 ](../authoring-api/destination-server/create-destination-server.md)서버 및 파일 구성을 만드는`/destinations-server`부터 시작합니다.
 
 다음은 [!DNL Amazon S3] 대상에 대한 예제 구성입니다. 구성에 사용되는 필드에 대한 자세한 내용과 다른 유형의 파일 기반 대상을 구성하려면 해당 [서버 구성](../functionality/destination-server/server-specs.md)을 참조하십시오.
 
@@ -410,19 +410,19 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
    * [Azure Blob](../functionality/destination-configuration/customer-authentication.md#blob)
    * [Azure 데이터 레이크 스토리지](../functionality/destination-configuration/customer-authentication.md#adls)
    * [Google 클라우드 스토리지](../functionality/destination-configuration/customer-authentication.md#gcs)
-   * [SSH 키를 사용한 SFTP 인증](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
-   * [암호가 포함된 SFTP 인증](../functionality/destination-configuration/customer-authentication.md#sftp-password)
+   * [SSH 키를 사용한 SFTP 인증](../functionality/destination-configuration/customer-authentication.md#sftp-ssh-key-auth)
+   * [암호가 포함된 SFTP 인증](../functionality/destination-configuration/customer-authentication.md#sftp-password-auth)
 
-* `"authenticationRule": "PLATFORM_AUTHENTICATION"`을(를) 선택한 경우 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을(를) 만들고 `authenticationId`대상 게재[&#x200B; 구성의 &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
+* `"authenticationRule": "PLATFORM_AUTHENTICATION"`을(를) 선택한 경우 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을(를) 만들고 `authenticationId`대상 게재[ 구성의 ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
 
 ## 5단계: 대상 테스트 {#test-destination}
 
-이전 단계의 구성 끝점을 사용하여 대상을 설정한 후 [대상 테스트 도구](../testing-api/batch-destinations/file-based-destination-testing-overview.md)를 사용하여 Adobe Experience Platform과 대상 간의 통합을 테스트할 수 있습니다.
+이전 단계의 구성 끝점을 사용하여 대상을 설정한 후 [대상 테스트 도구](../testing-api/batch-destinations/file-based-destination-testing-overview.md)를 사용하여 [!DNL Adobe Experience Platform]과(와) 대상 간의 통합을 테스트할 수 있습니다.
 
 대상을 테스트하는 프로세스의 일부로 Experience Platform UI를 사용하여 대상에 활성화할 대상을 만들어야 합니다. Experience Platform에서 대상자를 만드는 방법에 대한 지침은 아래 두 리소스를 참조하십시오.
 
 * [대상자 만들기 - 설명서 페이지](/help/segmentation/ui/audience-portal.md#create-audience)
-* [대상 만들기 - 비디오 연습](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ko)
+* [대상 만들기 - 비디오 연습](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 6단계: 대상 게시 {#publish-destination}
 

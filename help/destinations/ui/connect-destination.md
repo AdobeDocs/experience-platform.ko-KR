@@ -3,9 +3,9 @@ title: 새 대상 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform에서 대상에 연결하고, 경고를 활성화하고, 연결된 대상에 대한 마케팅 작업을 설정하는 방법을 알아봅니다.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1233'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-대상 데이터를 대상으로 보내려면 먼저 대상 플랫폼에 대한 연결을 설정해야 합니다. 이 문서에서는 새 대상 연결을 설정하는 방법을 보여 줍니다. 그러면 Adobe Experience Platform 사용자 인터페이스를 사용하여 대상을 활성화하거나 데이터 세트를 내보낼 수 있습니다.
+대상 데이터를 대상으로 보내려면 먼저 대상 플랫폼에 대한 연결을 설정해야 합니다. 이 문서에서는 새 대상 연결을 설정하는 방법을 보여 줍니다. 그러면 대상을 활성화하거나 [!DNL Adobe Experience Platform] 사용자 인터페이스를 사용하여 데이터 세트를 내보낼 수 있습니다.
 
 ## 카탈로그에서 원하는 대상 찾기 {#setup}
 
@@ -123,7 +123,7 @@ ht-degree: 4%
 
    ![사용 가능한 마케팅 작업이 강조 표시된 새 대상 구성 대화 상자 대상에 연결 워크플로를 완료하는 데 사용할 수 있는 컨트롤도 강조 표시됩니다.](../assets/ui/connect-destinations/governance.png)
 
-2. 대상 구성을 저장하려면 **[!UICONTROL Save & Exit]**&#x200B;을(를) 선택하고 대상 데이터 **[!UICONTROL Next]**&#x200B;활성화 흐름[으로 진행하려면 &#x200B;](activation-overview.md)을(를) 선택하십시오.
+2. 대상 구성을 저장하려면 **[!UICONTROL Save & Exit]**&#x200B;을(를) 선택하고 대상 데이터 **[!UICONTROL Next]**&#x200B;활성화 흐름[으로 진행하려면 ](activation-overview.md)을(를) 선택하십시오.
 
 ## 다음 단계 {#next-steps}
 

@@ -3,10 +3,10 @@ keywords: livefyre;livefyre 확장
 title: Adobe Livefyre 확장
 description: Adobe Livefyre 확장은 Adobe Experience Platform의 소셜 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 3%
+source-wordcount: '423'
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Adobe Livefyre를 사용하면 사용자가 생성한 콘텐츠의 지속적인 흐름을 웹 사이트에서 검색, 구성 및 게시하여 진실하고 고도로 개인화된 경험을 만들 수 있습니다.
 
-Adobe Livefyre는 Adobe Experience Platform의 소셜 확장입니다. Adobe Livefyre에 대한 자세한 내용은 [Livefyre 구현 안내서](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=ko)를 참조하십시오.
+Adobe Livefyre는 [!DNL Adobe Experience Platform]의 소셜 확장입니다. Adobe Livefyre에 대한 자세한 내용은 [Livefyre 구현 안내서](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html)를 참조하십시오.
 
 이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방식에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
@@ -26,7 +26,7 @@ Adobe Livefyre는 Adobe Experience Platform의 소셜 확장입니다. Adobe Liv
 
 이 확장은 Experience Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 Adobe Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
+이 확장을 사용하려면 [!DNL Adobe Experience Platform]의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 [!DNL Adobe Experience Cloud] 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 

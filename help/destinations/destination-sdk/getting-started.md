@@ -2,32 +2,32 @@
 description: 이 페이지에서는 Adobe Experience Platform Destination SDK을 인증하고 사용하는 방법을 설명합니다. 여기에는 Adobe I/O 인증 자격 증명, 샌드박스 이름 및 대상 작성 액세스 제어 권한을 얻는 방법에 대한 지침이 포함되어 있습니다.
 title: Destination SDK 시작하기
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '589'
 ht-degree: 1%
 
 ---
 
-# 시작하기
+# 시작
 
 ## 개요 {#overview}
 
-이 페이지에서는 Adobe Experience Platform Destination SDK을 인증하고 사용하는 방법을 설명합니다. 여기에는 Adobe I/O 인증 자격 증명, 샌드박스 이름 및 대상 작성 액세스 제어 권한을 얻는 방법에 대한 지침이 포함되어 있습니다.
+이 페이지에서는 [!DNL Adobe Experience Platform] Destination SDK을 인증하고 사용하는 방법을 설명합니다. 여기에는 Adobe I/O 인증 자격 증명, 샌드박스 이름 및 대상 작성 액세스 제어 권한을 얻는 방법에 대한 지침이 포함되어 있습니다.
 
 ## 용어 {#terminology}
 
-이 안내서에서는 조직, 샌드박스 등 Experience Platform 관련 개념을 사용합니다. 이러한 용어에 대한 정의는 [Experience Platform 용어집](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=ko)을 참조하세요. 이 기능과 직접 관련된 용어는 [Destination SDK 용어집](/help/destinations/destination-sdk/glossary.md)을 참조하세요.
+이 안내서에서는 조직, 샌드박스 등 Experience Platform 관련 개념을 사용합니다. 이러한 용어에 대한 정의는 [Experience Platform 용어집](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html)을 참조하세요. 이 기능과 직접 관련된 용어는 [Destination SDK 용어집](/help/destinations/destination-sdk/glossary.md)을 참조하세요.
 
 ## 필요한 인증 자격 증명 가져오기 {#obtain-authentication-credentials}
 
 Destination SDK은 인증에 [Adobe I/O](https://www.adobe.io/) 게이트웨이를 사용합니다. Destination SDK 종단점에 대한 API를 호출하려면 API 호출에 특정 헤더를 제공해야 합니다. Adobe Exchange 팀과 함께 [Adobe Developer Console](https://developer.adobe.com/console)에 대한 인증을 설정합니다.
 
-Destination SDK API 끝점을 정상적으로 호출하려면 [Experience Platform 인증 자습서](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ko)를 따르십시오. &quot;[API 키, 조직 ID 및 클라이언트 암호 생성](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ko#api-ims-secret)&quot; 단계에서 자습서를 시작합니다. Adobe Exchange 팀이 이전 단계를 처리합니다. 인증 자습서를 완료하면 아래와 같이 Destination SDK API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
+Destination SDK API 끝점을 정상적으로 호출하려면 [Experience Platform 인증 자습서](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ko)를 따르십시오. &quot;[API 키, 조직 ID 및 클라이언트 암호 생성](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; 단계에서 자습서를 시작합니다. Adobe Exchange 팀이 이전 단계를 처리합니다. 인증 자습서를 완료하면 아래와 같이 Destination SDK API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
 
 * `x-api-key: {API_KEY}`(클라이언트 ID라고도 함)
 * `x-gw-ims-org-id: {ORG_ID}`(조직 ID라고도 함)
-* `Authorization: Bearer {ACCESS_TOKEN}` 질문에 답합니다. 액세스 토큰의 만료 시간은 밀리초 단위로 표시되는 24시간이므로 새로 고쳐야 합니다. 액세스 토큰을 새로 고치려면 인증 자습서에 설명된 단계를 반복합니다.
+* `Authorization: Bearer {ACCESS_TOKEN}` 구문을 사용하는 키-값 쌍으로 전달됩니다. 액세스 토큰의 만료 시간은 밀리초 단위로 표시되는 24시간이므로 새로 고쳐야 합니다. 액세스 토큰을 새로 고치려면 인증 자습서에 설명된 단계를 반복합니다.
 
 <!--
 
@@ -56,7 +56,7 @@ Adobe Exchange 팀은 Destination SDK API 엔드포인트 호출에 사용해야
 
 ## RBAC(역할 기반 액세스 제어) {#rbac}
 
-[참조 설명서](functionality/configuration-options.md)에 설명된 Destination SDK API 끝점을 사용하려면 **[!UICONTROL 대상 작성]** 액세스 제어 권한이 필요합니다. Adobe Exchange 팀과 함께 [Adobe Admin Console](https://adminconsole.adobe.com/)에서 이 권한을 귀하에게 할당해 보세요.
+[참조 설명서](functionality/configuration-options.md)에 설명된 Destination SDK API 끝점을 사용하려면 **[!UICONTROL Destination Authoring]** 액세스 제어 권한이 필요합니다. Adobe Exchange 팀과 함께 [Adobe Admin Console](https://adminconsole.adobe.com/)에서 이 권한을 귀하에게 할당해 보세요.
 
 ![대상 작성 권한](./assets/destination-authoring-permission.png)
 
@@ -64,7 +64,7 @@ Adobe Exchange 팀은 Destination SDK API 엔드포인트 호출에 사용해야
 
 * [제품 프로필에 대한 권한 관리](/help/access-control/ui/permissions.md)
 * [Experience Platform에 사용 가능한 권한](/help/access-control/home.md#permissions)
-* [Adobe Admin Console 설명서](https://helpx.adobe.com/kr/enterprise/using/admin-console.html)
+* [Adobe Admin Console 설명서](https://helpx.adobe.com/enterprise/using/admin-console.html)
 
 ## 추가 고려 사항 {#additional-considerations}
 
@@ -81,4 +81,4 @@ Adobe Exchange 팀은 Destination SDK API 엔드포인트 호출에 사용해야
    * [Destination SDK을 사용하여 파일 기반 대상 구성](guides/configure-file-based-destination-instructions.md)
 
 * 모든 작업에 대해서는 [대상 작성 API 설명서](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)를 참조하십시오.
-* [대상 작성 API Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)을(를) 사용하여 Destination SDK API 끝점을 사용하여 대상을 구성합니다. Postman을 시작하려면 환경 및 컬렉션을 가져오는 [단계](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) 및 Postman 환경을 만드는 [비디오 안내서](https://video.tv.adobe.com/v/31705?captions=kor)를 참조하세요.
+* [대상 작성 API Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)을(를) 사용하여 Destination SDK API 끝점을 사용하여 대상을 구성합니다. Postman을 시작하려면 환경 및 컬렉션을 가져오는 [단계](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) 및 Postman 환경을 만드는 [비디오 안내서](https://video.tv.adobe.com/v/28832)를 참조하세요.

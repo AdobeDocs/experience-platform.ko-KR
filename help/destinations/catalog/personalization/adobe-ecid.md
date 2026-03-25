@@ -3,9 +3,9 @@ Keywords: ECID;ecid
 title: Experience Cloud ID 서비스 확장
 description: Experience Cloud ID 서비스 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 4cc49c14-66ec-43e0-a106-70d9c3646d87
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '444'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 이 확장은 모든 [!DNL Experience Cloud] 솔루션에서 방문자를 식별하는 [!DNL Experience Cloud] ID 서비스를 구현합니다.
 
-[!DNL Experience Cloud] ID 서비스는 Adobe Experience Platform의 개인화 확장입니다. 확장 기능에 대한 자세한 내용은 태그 설명서의 [Experience Cloud ID 서비스 확장 페이지](../../../tags/extensions/client/id-service/overview.md)를 참조하십시오.
+[!DNL Experience Cloud] ID 서비스는 [!DNL Adobe Experience Platform]의 개인화 확장입니다. 확장 기능에 대한 자세한 내용은 태그 설명서의 [Experience Cloud ID 서비스 확장 페이지](../../../tags/extensions/client/id-service/overview.md)를 참조하십시오.
 
 이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방식에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
@@ -26,7 +26,7 @@ ht-degree: 4%
 
 이 확장은 Experience Platform을 구입한 모든 고객의 대상 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 문의하여 데이터 수집 UI에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있는 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
+이 확장을 사용하려면 Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 [!DNL Adobe Experience Cloud] 고객에게 제공됩니다. 조직 관리자에게 문의하여 데이터 수집 UI에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있는 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 

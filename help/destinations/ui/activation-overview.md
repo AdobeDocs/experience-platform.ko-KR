@@ -4,9 +4,9 @@ title: 활성화 개요
 type: Tutorial
 description: Adobe Experience Platform의 대상을 다양한 유형의 대상으로 활성화하는 방법을 알아봅니다.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '337'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
-Adobe Experience Platform은 다양한 대상을 지원합니다. 대상자 활성화 워크플로우는 대상자가 지원하는 대상자 데이터 유형과 데이터 내보내기 빈도에 따라 대상마다 다릅니다.
+[!DNL Adobe Experience Platform]은(는) 다양한 대상을 지원합니다. 대상자 활성화 워크플로우는 대상자가 지원하는 대상자 데이터 유형과 데이터 내보내기 빈도에 따라 대상마다 다릅니다.
 
 ## 활성화 방법 {#activation-methods}
 

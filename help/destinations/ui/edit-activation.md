@@ -4,16 +4,16 @@ title: 활성화 데이터 흐름 편집
 type: Tutorial
 description: 이 문서의 단계에 따라 Adobe Experience Platform에서 기존 활성화 데이터 흐름을 편집합니다.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 5fae3fe6a3647ba416a26f4cdb9e5b6ce308e990
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '922'
 ht-degree: 0%
 
 ---
 
 # 활성화 데이터 흐름 편집 {#edit-activation-flows}
 
-Adobe Experience Platform에서 다음과 같이 대상에 대한 기존 활성화 데이터 흐름의 다양한 구성 요소를 구성할 수 있습니다.
+[!DNL Adobe Experience Platform]에서 다음과 같이 대상에 대한 기존 활성화 데이터 흐름의 다양한 구성 요소를 구성할 수 있습니다.
 
 * [활성화 데이터 흐름을 활성화 또는 비활성화](#enable-disable-dataflows)합니다.
 * 활성화 데이터 흐름에 [추가 대상 추가](#add-audiences)

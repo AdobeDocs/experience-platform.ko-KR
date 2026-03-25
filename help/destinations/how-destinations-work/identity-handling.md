@@ -2,9 +2,9 @@
 title: 대상 활성화 워크플로에서의 ID 처리
 description: 대상 유형에 따라 활성화 워크플로에서 ID 내보내기가 처리되는 방법을 알아봅니다
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
@@ -71,13 +71,13 @@ ht-degree: 0%
 
 ## API 기반 스트리밍 대상 {#streaming-destinations}
 
-[Destination SDK](/help/destinations/destination-types.md#streaming-destination)(예: [, &#x200B;](/help/destinations/destination-sdk/overview.md), [!DNL Facebook], [!DNL Google Customer Match] 등)으로 빌드된 [!DNL Pinterest]API 기반 스트리밍 대상[!DNL Braze]은(는) 내보내기용 특정 ID만 지원합니다. 각 대상으로 내보낼 수 있는 특정 ID에 대한 자세한 내용은 각 대상 설명서 페이지의 *지원되는 ID* 섹션을 참조하십시오(예: [&#x200B; 대상 페이지의 &#x200B;](/help/destinations/catalog/advertising/pinterest.md)지원되는 ID 섹션[!DNL Pinterest] 참조).
+[Destination SDK](/help/destinations/destination-types.md#streaming-audience-export-destinations)(예: [, ](/help/destinations/destination-sdk/overview.md), [!DNL Facebook], [!DNL Google Customer Match] 등)으로 빌드된 [!DNL Pinterest]API 기반 스트리밍 대상[!DNL Braze]은(는) 내보내기용 특정 ID만 지원합니다. 각 대상으로 내보낼 수 있는 특정 ID에 대한 자세한 내용은 각 대상 설명서 페이지의 *지원되는 ID* 섹션을 참조하십시오(예: [ 대상 페이지의 ](/help/destinations/catalog/advertising/pinterest.md)지원되는 ID 섹션[!DNL Pinterest] 참조).
 
 그러나 [개인 그래프](/help/profile/merge-policies/overview.md#id-stitching) 또는 특성의 데이터를 ID로 유연하게 사용할 수 있습니다. 즉, XDM 속성을 대상에 필요한 ID 필드에 매핑할 수 있습니다. XDM 특성 [!DNL Pinterest]이(가) 필수 `personalEmail.address` ID [!DNL Pinterest]에 매핑되는 `pinterest_audience` 대상에 대한 아래 예를 참조하십시오.
 
 >[!TIP]
 >
->소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 Experience Platform이 활성화 시 데이터를 자동으로 해시하도록 합니다. **[!UICONTROL Apply transformation]**&#x200B;스트리밍 대상 활성화 자습서[에서 &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation) 옵션에 대해 자세히 알아보십시오.
+>소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 Experience Platform이 활성화 시 데이터를 자동으로 해시하도록 합니다. **[!UICONTROL Apply transformation]**&#x200B;스트리밍 대상 활성화 자습서[에서 ](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation) 옵션에 대해 자세히 알아보십시오.
 
 ![Pinterest 대상의 ID 필드에 매핑된 전자 메일 주소 특성의 예입니다.](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
 
@@ -93,15 +93,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->이러한 광고 대상의 대부분은 Audience Manager에서 지원됩니다(이러한 대상 유형은 Audience Manager에서 장치 기반 대상으로 알려져 있음). [Audience Manager에서 지원되는 모든 장치 기반 대상 목록](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=ko)을 참조하세요. Experience Platform에는 몇 개만 나열되어 있습니다. Experience Platform과 Audience Manager 간의 데이터 공유에 대한 자세한 내용은 [Experience Platform에서 Audience Manager으로 데이터 공유 활성화](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ko#enable-aep-to-aam-data)에 대한 섹션을 참조하십시오. 현재 더 많은 타사 쿠키 대상을 지원할 계획이 없습니다.
+>이러한 광고 대상의 대부분은 Audience Manager에서 지원됩니다(이러한 대상 유형은 Audience Manager에서 장치 기반 대상으로 알려져 있음). [Audience Manager에서 지원되는 모든 장치 기반 대상 목록](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)을 참조하세요. Experience Platform에는 몇 개만 나열되어 있습니다. Experience Platform과 Audience Manager 간의 데이터 공유에 대한 자세한 내용은 [Experience Platform에서 Audience Manager으로 데이터 공유 활성화](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data)에 대한 섹션을 참조하십시오. 현재 더 많은 타사 쿠키 대상을 지원할 계획이 없습니다.
 
 ## Enterprise 대상 {#enterprise-destinations}
 
-[Enterprise 대상](/help/destinations/destination-types.md#advanced-enterprise-destinations)([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP API)은(는) Enterprise 통합 사용 사례를 위해 설계되었으므로 데이터 내보내기에 특정 ID가 필요하지 않습니다. 그러나 원하는 경우 ID를 XDM 속성이나 ID 맵에서 내보낼 수 있습니다. ID 맵에서 [&#x200B; XDM 특성과 ID &#x200B;](/help/destinations/catalog/streaming/http-destination.md#exported-data) 및 `personalEmail.address`(해시된 이메일 주소)을(를) 모두 포함하는 HTTP 대상으로 내보낸 데이터의 `ECID`예를 봅니다`email_lc_sha256`.
+[Enterprise 대상](/help/destinations/destination-types.md#advanced-enterprise-destinations)([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP API)은(는) Enterprise 통합 사용 사례를 위해 설계되었으므로 데이터 내보내기에 특정 ID가 필요하지 않습니다. 그러나 원하는 경우 ID를 XDM 속성이나 ID 맵에서 내보낼 수 있습니다. ID 맵에서 [ XDM 특성과 ID ](/help/destinations/catalog/streaming/http-destination.md#exported-data) 및 `personalEmail.address`(해시된 이메일 주소)을(를) 모두 포함하는 HTTP 대상으로 내보낸 데이터의 `ECID`예를 봅니다`email_lc_sha256`.
 
 ## Personalization 대상 {#personalization-destinations}
 
-[Personalization(또는 edge) 대상](/help/destinations/destination-types.md#edge-personalization-destinations)(예: Adobe Target, [!DNL Custom Personalization])은 통합이 프로필 조회이므로 활성화 워크플로에서 ID를 선택할 필요가 없습니다. 클라이언트([!DNL Target], [!DNL Web SDK] 또는 기타)가 [[!UICONTROL Edge]](/help/collection/home.md#edge)을(를) 쿼리하고 사이트 내 개인화에 필요한 프로필 정보를 가져옵니다.
+통합이 프로필 조회이므로 [Personalization(또는 edge) 대상](/help/destinations/destination-types.md#edge-personalization-destinations)(예: [!DNL Adobe Target], [!DNL Custom Personalization])에는 활성화 워크플로에서 ID를 선택할 필요가 없습니다. 클라이언트([!DNL Target], [!DNL Web SDK] 또는 기타)가 [[!UICONTROL Edge]](/help/collection/home.md)을(를) 쿼리하고 사이트 내 개인화에 필요한 프로필 정보를 가져옵니다.
 
 <!--
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)

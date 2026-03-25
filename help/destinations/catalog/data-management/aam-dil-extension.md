@@ -3,9 +3,9 @@ keywords: Audience Manager DIL 확장;대상 audience manager;dil 확장
 title: Audience Manager DIL 확장
 description: Audience Manager DIL 확장은 Adobe Experience Platform의 데이터 관리 플랫폼(DMP) 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 7e1099de-0650-4ee2-b746-721afe194097
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '490'
 ht-degree: 3%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## 개요 {#overview}
 
-Adobe Audience Manager Data Integration Library 확장(클라이언트측 구현)입니다. 참고: 이 확장은 Adobe Analytics 데이터의 서버측 전달(SSF)에 사용하기 위한 것이 아닙니다. SSF의 경우 Adobe Analytics 확장을 사용합니다. 중요: 버전 8.0부터 DIL은 [!DNL Experience Cloud] ID 서비스, 버전 3.3 이상에 종속되어 있습니다. 전체 [!DNL Experience Cloud] 데이터 통합 기능을 사용하려면 [!DNL Audience Manager] ID 서비스와 DIL을 모두 구현하십시오.
+Adobe Audience Manager Data Integration Library 확장(클라이언트측 구현)입니다. 참고: 이 확장은 [!DNL Adobe Analytics] 데이터의 서버측 전달(SSF)에 사용하기 위한 것이 아닙니다. SSF의 경우 [!DNL Adobe Analytics] 확장을 사용합니다. 중요: 버전 8.0부터 DIL은 [!DNL Experience Cloud] ID 서비스, 버전 3.3 이상에 종속되어 있습니다. 전체 [!DNL Experience Cloud] 데이터 통합 기능을 사용하려면 [!DNL Audience Manager] ID 서비스와 DIL을 모두 구현하십시오.
 
-[!DNL Audience Manager] DIL은 Adobe Experience Platform의 데이터 관리 플랫폼(DMP) 확장 프로그램입니다. 확장 기능에 대한 자세한 내용은 태그 설명서의 [Audience Manager 확장 페이지](../../../tags/extensions/client/audience-manager/overview.md)를 참조하십시오.
+[!DNL Audience Manager] DIL은 [!DNL Adobe Experience Platform]의 데이터 관리 플랫폼(DMP) 확장입니다. 확장 기능에 대한 자세한 내용은 태그 설명서의 [Audience Manager 확장 페이지](../../../tags/extensions/client/audience-manager/overview.md)를 참조하십시오.
 
 이 대상은 태그 확장입니다. Experience Platform에서 확장이 작동하는 방식에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
@@ -26,7 +26,7 @@ Adobe Audience Manager Data Integration Library 확장(클라이언트측 구현
 
 이 확장은 Experience Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 Adobe Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
+이 확장을 사용하려면 [!DNL Adobe Experience Platform]의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 [!DNL Adobe Experience Cloud] 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 

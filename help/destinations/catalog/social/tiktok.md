@@ -3,9 +3,9 @@ title: TikTok 연결
 description: 광고 캠페인으로 타깃팅할 데이터를 사용하여 TikTok에서 사용자 지정 대상을 작성합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 대상을 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1211'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-광고 캠페인으로 타깃팅할 데이터를 사용하여 TikTok에서 사용자 지정 대상을 작성합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 대상을 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다. 자세한 내용은 [TikTok의 비즈니스 도움말 센터](https://ads.tiktok.com/help/article/audiences)를 참조하세요.
+광고 캠페인으로 타깃팅할 데이터를 사용하여 TikTok에서 사용자 지정 대상을 작성합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. TikTok Ads Manager와 Adobe의 실시간 통합을 사용하여 원하는 대상을 [!DNL Adobe Experience Platform]에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다. 자세한 내용은 [TikTok의 비즈니스 도움말 센터](https://ads.tiktok.com/help/article/audiences)를 참조하세요.
 
 >[!IMPORTANT]
 >
@@ -22,17 +22,17 @@ ht-degree: 4%
 
 ## 사용 사례 {#use-cases}
 
-TikTok 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객을 위한 샘플 사용 사례를 소개합니다.
+TikTok 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 [!DNL Adobe Experience Platform] 고객을 위한 샘플 사용 사례를 소개합니다.
 
 ### 사용 사례 {#use-case-1}
 
-한 스포츠 의류 브랜드는 자신의 소셜 미디어 계정을 통해 기존 고객에게 도달하기를 원합니다. 의류 브랜드는 자체 CRM에서 Adobe Experience Platform으로 이메일 주소를 수집하고, 자체 오프라인 데이터에서 대상을 만들고, 이러한 대상을 TikTok으로 보내 고객의 소셜 미디어 피드에 광고를 표시할 수 있습니다.
+한 스포츠 의류 브랜드는 자신의 소셜 미디어 계정을 통해 기존 고객에게 도달하기를 원합니다. 의류 브랜드는 자신의 CRM에서 [!DNL Adobe Experience Platform]&#x200B;(으)로 이메일 주소를 수집하고, 자신의 오프라인 데이터에서 대상을 만들고, 이러한 대상을 TikTok으로 보내 고객의 소셜 미디어 피드에 광고를 표시할 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
 대상자를 보낼 TikTok Ads Manager 계정에 대해 [!DNL Admin] 또는 [!DNL Operator] 액세스 권한이 있어야 합니다. 자세한 지침은 [TikTok 도움말 센터](https://ads.tiktok.com/help/article/add-users-tiktok-business-center)에서 확인할 수 있습니다.
 
-TikTok Ads Manager 계정으로 데이터를 보내기 전에 `Audience Management`의 광고 계정에 액세스할 수 있는 Adobe Experience Platform 권한을 부여해야 합니다. 이 권한은 [Experience Platform UI에서 광고 관리자 ID를 입력](#authenticate)하고 TikTok 광고 관리자 계정으로 리디렉션된 후 권한을 부여하여 제공할 수 있습니다.
+TikTok Ads Manager 계정에 데이터를 보내기 전에 [!DNL Adobe Experience Platform]의 광고 계정에 액세스할 수 있는 권한을 `Audience Management`에게 부여해야 합니다. 이 권한은 [Experience Platform UI에서 광고 관리자 ID를 입력](#authenticate)하고 TikTok 광고 관리자 계정으로 리디렉션된 후 권한을 부여하여 제공할 수 있습니다.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -40,10 +40,10 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. [ID](/help/id
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. 일반 텍스트와 SHA256 해시 GAID 값은 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
-| IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. 일반 텍스트와 SHA256 해시 IDFA 값은 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
-| 전화번호 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원되며 E.164 형식이어야 합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
-| 이메일 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
+| GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. 일반 텍스트와 SHA256 해시된 GAID 값은 모두 [!DNL Adobe Experience Platform]에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
+| IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. 일반 텍스트와 SHA256 해시된 IDFA 값은 모두 [!DNL Adobe Experience Platform]에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
+| 전화번호 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 [!DNL Adobe Experience Platform]에서 지원되며 E.164 형식이어야 합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
+| 이메일 | SHA256 알고리즘으로 해시된 이메일 주소 | [!DNL Adobe Experience Platform]은(는) 일반 텍스트와 SHA256 해시된 전자 메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
 
 {style="table-layout:auto"}
 
@@ -54,7 +54,7 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. [ID](/help/id
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 | [!DNL Federated Audience Composition] | 예 | [Federated Audience Composition](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/start/audiences)을(를) 통해 Experience Platform으로 가져온 대상입니다. |
 
 {style="table-layout:auto"}
@@ -68,7 +68,7 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. [ID](/help/id
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 
@@ -131,7 +131,7 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. [ID](/help/id
 
 소스 필드 선택:
 
-* Adobe Experience Platform 및 `Email_LC_SHA256`에서 프로필을 고유하게 식별하는 원본 ID로 식별자(예: [!DNL TikTok Ads Manager])를 선택하십시오.
+* `Email_LC_SHA256` 및 [!DNL Adobe Experience Platform]에서 프로필을 고유하게 식별하는 원본 ID로 식별자(예: [!DNL TikTok Ads Manager])를 선택하십시오.
 
 대상 필드 선택:
 

@@ -3,9 +3,9 @@ title: 색인 교환
 description: 색인 Exchange(색인)에 연결하고 데이터를 활성화하면 색인 UI에서 만들어진 거래로 대상 세그먼트를 타깃팅할 수 있습니다.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1202'
 ht-degree: 3%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 3%
 
 [!DNL Index]은(는) 미디어 소유자가 모든 화면에서 콘텐츠의 가치를 극대화할 수 있도록 지원하는 글로벌 광고 공급측 플랫폼입니다. 20년 이상의 업계 리더십 덕분에 [!DNL Index]은(는) 세계 최대 브랜드와 프리미엄 경험 메이커를 연결하여 고품질의 소비자 경험을 제공합니다.
 
-이 대상 커넥터를 사용하여 Adobe Experience Platform의 대상 세그먼트를 [!DNL Index Exchange]의 프로그래밍 방식 광고 플랫폼으로 직접 내보냅니다.
+대상 커넥터를 사용하여 [!DNL Adobe Experience Platform]의 대상 세그먼트를 [!DNL Index Exchange]의 프로그래밍 방식 광고 플랫폼으로 직접 내보냅니다.
 
-내보낸 대상 세그먼트는 미디어 소유자, 마켓 플레이스 파트너별로 거래를 타깃팅하는 데 사용하거나 마켓 플레이스 공급업체에서 게시자 및 큐레이터와 공유할 수 있습니다.
+내보내고 나면 이러한 대상 세그먼트는 미디어 소유자, 마켓플레이스 파트너에 의해 타겟팅되거나 마켓플레이스 공급업체에 의해 게시자 및 큐레이터와 공유됩니다.
 
 >[!IMPORTANT]
 >
@@ -66,7 +66,7 @@ ht-degree: 3%
 | 대상자 원본 | 지원됨 | 설명 |
 | --------- | ---------- | ---------- |
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -79,7 +79,7 @@ ht-degree: 3%
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 

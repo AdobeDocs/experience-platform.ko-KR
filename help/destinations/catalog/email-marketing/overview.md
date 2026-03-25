@@ -4,10 +4,10 @@ title: 이메일 마케팅 대상 개요
 type: Tutorial
 description: ESP(이메일 서비스 공급자)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다. Experience Platform 대상으로 지원되는 ESP에 대해 알아봅니다.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 4%
+source-wordcount: '371'
+ht-degree: 3%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-ESP(이메일 서비스 공급자)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다. Adobe Experience Platform은 이메일 마케팅 대상에 대한 대상을 활성화할 수 있도록 하여 ESP와 통합됩니다.
+ESP(이메일 서비스 공급자)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다. [!DNL Adobe Experience Platform]은(는) 대상자를 이메일 마케팅 대상으로 활성화할 수 있도록 하여 ESP와 통합됩니다.
 
 ## 지원되는 이메일 마케팅 대상 {#supported-destinations}
 
-Adobe Experience Platform은 다음과 같은 이메일 마케팅 대상을 지원합니다.
+[!DNL Adobe Experience Platform]은(는) 다음 이메일 마케팅 대상을 지원합니다.
 
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)

@@ -2,9 +2,9 @@
 title: Twitter 사용자 지정 대상 연결
 description: Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience Platform 내에 구축된 대상을 활성화하여 관련 리마케팅 캠페인을 만듭니다
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '937'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 ## 개요 {#overview}
 
-Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience Platform 내에 구축된 대상을 활성화하여 관련 리마케팅 캠페인을 만듭니다.
+Twitter에서 기존 팔로워와 고객을 타겟팅하고 [!DNL Adobe Experience Platform] 내에 작성한 대상을 활성화하여 관련 리마케팅 캠페인을 만드십시오.
 
 ## 전제 조건 {#prerequisites}
 
@@ -24,12 +24,12 @@ Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Twitter Custom Audiences]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko#getting-started)에 대해 자세히 알아보세요.
+[!DNL Twitter Custom Audiences]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)에 대해 자세히 알아보세요.
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| device_id | IDFA/AdID/Android ID | Google GAID(Advertising ID) 및 IDFA(Apple ID for Advertisers)는 Adobe Experience Platform에서 지원됩니다. 대상 활성화 워크플로의 [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)에서 원본 스키마의 이러한 네임스페이스 및/또는 특성을 적절하게 매핑하십시오. |
-| 이메일 | 사용자의 이메일 주소 | 일반 텍스트 이메일 주소와 SHA256 해시된 이메일 주소를 이 필드에 매핑하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. Adobe Experience Platform에 업로드하기 전에 고객 이메일 주소를 해시하는 경우 이러한 ID는 솔트 없이 SHA256을 사용하여 해시해야 합니다. |
+| device_id | IDFA/AdID/Android ID | Google GAID(Advertising ID) 및 IDFA(Apple ID for Advertisers)가 [!DNL Adobe Experience Platform]에서 지원됩니다. 대상 활성화 워크플로의 [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)에서 원본 스키마의 이러한 네임스페이스 및/또는 특성을 적절하게 매핑하십시오. |
+| 이메일 | 사용자의 이메일 주소 | 일반 텍스트 이메일 주소와 SHA256 해시된 이메일 주소를 이 필드에 매핑하십시오. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. 고객 이메일 주소를 [!DNL Adobe Experience Platform]에 업로드하기 전에 해시하는 경우 이러한 ID는 SHA256을 사용하여 소금 없이 해시해야 합니다. |
 
 {style="table-layout:auto"}
 
@@ -40,7 +40,7 @@ Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 
@@ -71,11 +71,11 @@ Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience
 
 ## 사용 사례 {#use-cases}
 
-[!DNL Twitter Custom Audiences] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례를 소개합니다.
+[!DNL Twitter Custom Audiences] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 [!DNL Adobe Experience Platform] 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례의 예제를 소개합니다.
 
 ### 사용 사례 #1 {#use-case-1}
 
-Twitter에서 기존 팔로워와 고객을 타겟팅하고 Twitter에서 [!DNL List Custom Audiences]&#x200B;(으)로 Adobe Experience Platform 내에 빌드된 대상을 활성화하여 관련 리마케팅 캠페인을 만드십시오.
+Twitter에서 기존 팔로워와 고객을 타겟팅하고 [!DNL Adobe Experience Platform] 내에 작성한 대상을 Twitter에서 [!DNL List Custom Audiences]&#x200B;(으)로 활성화하여 관련 리마케팅 캠페인을 만드십시오.
 
 ## 대상에 연결 {#connect}
 
@@ -88,7 +88,7 @@ Twitter에서 기존 팔로워와 고객을 타겟팅하고 Twitter에서 [!DNL 
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 [!DNL Twitter Custom Audiences] 대상을 찾은 다음 **[!UICONTROL Set Up]**&#x200B;을(를) 선택하십시오.
-2. **[!UICONTROL Connect to destination]**&#x200B;를 선택합니다.
+2. **[!UICONTROL Connect to destination]**를 선택합니다.
    ![LinkedIn 인증](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
 3. Twitter 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 

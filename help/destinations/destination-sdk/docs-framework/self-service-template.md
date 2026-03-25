@@ -2,9 +2,9 @@
 title: 설명서 셀프서비스 템플릿 // 대상 이름으로 바꾸기
 description: 이 템플릿을 사용하여 Adobe Experience Platform 카탈로그의 대상에 대한 공개 설명서를 만듭니다. // 개요 섹션의 단락으로 바꾸기
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1737'
+source-wordcount: '1710'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 ## 사용 사례 {#use-cases}
 
-*YourDestination* 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례를 소개합니다.
+*YourDestination* 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 [!DNL Adobe Experience Platform] 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례를 소개합니다.
 
 ### 사용 사례 #1 {#use-case-1}
 
@@ -42,11 +42,11 @@ ht-degree: 2%
 
 *소셜 네트워크 플랫폼의 경우:*
 
-*운동복 브랜드가 소셜 미디어 계정을 통해 기존 고객에게 연락하려고 합니다. 의류 브랜드는 자신의 CRM에서 Adobe Experience Platform으로 전자 메일 주소를 수집하고, 자신의 오프라인 데이터에서 대상을 만들고, 이러한 대상을 YourDestination으로 보내어 고객의 소셜 미디어 피드에 광고를 표시할 수 있습니다.*
+*운동복 브랜드가 소셜 미디어 계정을 통해 기존 고객에게 연락하려고 합니다. 의류 브랜드는 자신의 CRM에서 [!DNL Adobe Experience Platform]&#x200B;(으)로 이메일 주소를 수집하고, 자신의 오프라인 데이터에서 대상을 만들고, 이러한 대상을 YourDestination으로 전송하여 고객의 소셜 미디어 피드에 광고를 표시할 수 있습니다.*
 
 ## 전제 조건 {#prerequisites}
 
-*Adobe Experience Platform 사용자 인터페이스에서 대상 설정을 시작하기 전에 고객이 알아야 할 사항에 대한 정보를 이 섹션에 추가합니다. 이 값은*&#x200B;일 수 있습니다.
+*이 섹션에서 [!DNL Adobe Experience Platform] 사용자 인터페이스에서 대상 설정을 시작하기 전에 고객이 알아야 할 모든 정보를 추가합니다. 이 값은*&#x200B;일 수 있습니다.
 
 * *허용 목록에 추가되어야 함*
 * *전자 메일 해시에 대한 요구 사항*
@@ -65,9 +65,9 @@ ht-degree: 2%
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
-| ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 자세한 내용은 [ECID](/help/identity-service/features/ecid.md)에서 다음 문서를 참조하십시오. |
-| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
-| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
+| ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;[!DNL Adobe Experience Cloud] ID&quot;, &quot;[!DNL Adobe Experience Platform] ID&quot; 별칭에서도 참조할 수 있습니다. 자세한 내용은 [ECID](/help/identity-service/features/ecid.md)에서 다음 문서를 참조하십시오. |
+| phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시된 전화 번호는 모두 [!DNL Adobe Experience Platform]에서 지원됩니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
+| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | [!DNL Adobe Experience Platform]은(는) 일반 텍스트와 SHA256 해시된 전자 메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Experience Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 합니다. |
 | extern_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
 
 {style="table-layout:auto"}
@@ -81,7 +81,7 @@ ht-degree: 2%
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ ht-degree: 2%
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 예 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 예 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 예 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 예 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 
@@ -174,7 +174,7 @@ ht-degree: 2%
 
 *데이터를 대상으로 내보내는 방법에 대한 단락을 추가합니다. 이렇게 하면 고객이 대상과 올바르게 통합되었는지 확인하는 데 도움이 됩니다. 예를 들어 아래 샘플과 같은 샘플 JSON을 제공할 수 있습니다. 또는 고객이 대상 플랫폼에서 대상을 채울 것으로 예상하는 방법을 보여 주는 대상 인터페이스의 스크린샷과 정보를 제공할 수 있습니다.*
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.com"

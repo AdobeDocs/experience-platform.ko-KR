@@ -3,10 +3,10 @@ title: 대상에 대한 잠재 고객 활성화
 type: Tutorial
 description: 잠재 고객을 대상으로 활성화하는 방법을 알아봅니다
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 14%
+source-wordcount: '583'
+ht-degree: 8%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 14%
 
 >[!AVAILABILITY]
 >
->이 기능은 Real-Time CDP Prime 및 Ultimate 패키지를 구입한 고객이 사용할 수 있습니다. 더 많은 내용은 Adobe 담당자에게 문의하십시오.
+>이 기능은 [!DNL Real-Time CDP] Prime 및 Ultimate 패키지를 구입한 고객이 사용할 수 있습니다. 더 많은 내용은 Adobe 담당자에게 문의하십시오.
 
-이 문서에서는 Adobe Experience Platform에서 선호하는 대상으로 [잠재 고객](/help/segmentation/types/prospect-audiences.md)을(를) 내보내는 데 필요한 워크플로에 대해 설명합니다.
+이 문서에서는 [에서 선호하는 대상으로 ](/help/segmentation/types/prospect-audiences.md)잠재 고객[!DNL Adobe Experience Platform]을(를) 내보내는 데 필요한 워크플로에 대해 설명합니다.
 
 ## 지원되는 대상 {#supported-destinations}
 
@@ -77,7 +77,7 @@ ht-degree: 14%
 
 >[!NOTE]
 >
->예약 단계에서 잠재 고객 활성화 워크플로를 사용하면 [전체 파일을 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)만 가능합니다. 증분 파일 내보내기는 지원되지 않습니다.
+>예약 단계에서 잠재 고객 활성화 워크플로를 사용하면 [전체 파일을 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)만 할 수 있습니다. 증분 파일 내보내기는 지원되지 않습니다.
 
 <!--
 
@@ -87,8 +87,8 @@ Note that we will need to add links to other destination types here as more dest
 
 ## 파트너 데이터 지원을 통해 달성한 기타 사용 사례 {#other-use-cases}
 
-Real-Time CDP에서 파트너 데이터 지원을 통해 활성화된 추가 사용 사례를 살펴보십시오.
+[!DNL Real-Time CDP]에서 파트너 데이터 지원을 통해 사용할 수 있는 추가 사용 사례를 살펴보십시오.
 
 * [신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완](/help/rtcdp/partner-data/supplement-first-party-profiles.md)하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선합니다.
-* Real-Time CDP에서 서드파티 데이터 지원을 사용하여 [데이터 파트너의 잠재 고객 프로필로 프로필 기반을 확장하고 데이터 파트너와 협력하여 신규 고객에게 도달하거나 확보할 수 있습니다](/help/rtcdp/partner-data/prospecting.md).
+* [!DNL Real-Time CDP]에서 서드파티 데이터 지원을 사용하여 [데이터 파트너의 잠재 프로필로 프로필 기반을 확장하고 이들과 협력하여 새로운 고객을 확보하거나 연락하십시오](/help/rtcdp/partner-data/prospecting.md).
 * [방문에서 사용자 인증을 받지 않았거나 브랜드에 대한 이전 기록이 없는 상태에서 온사이트 경험을 개인화하기 위해 파트너 지원 인식을 활용합니다](/help/rtcdp/partner-data/onsite-personalization.md).

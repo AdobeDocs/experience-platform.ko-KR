@@ -3,14 +3,14 @@ title: Real-Time CDP에서 배열, 맵 및 개체 내보내기
 type: Tutorial
 description: Real-Time CDP에서 클라우드 스토리지 대상으로 배열, 맵 및 개체를 내보내는 방법에 대해 알아봅니다.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1056'
 ht-degree: 13%
 
 ---
 
-# Real-Time CDP에서 배열, 맵 및 개체 내보내기 {#export-arrays-cloud-storage}
+# [!DNL Real-Time CDP]에서 배열, 맵 및 개체 내보내기 {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
@@ -19,12 +19,12 @@ ht-degree: 13%
 >또한 맵 유형 필드를 [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) 대상으로 내보낼 수 있습니다.
 
 
-Real-Time CDP에서 [클라우드 저장소 대상](/help/destinations/catalog/cloud-storage/overview.md)(으)로 배열, 맵 및 개체를 내보내는 방법에 대해 알아봅니다. 또한 맵 유형 필드를 [엔터프라이즈 대상](/help/destinations/destination-types.md#advanced-enterprise-destinations) 및 제한된 [에지 개인화 대상](/help/destinations/destination-types.md#edge-personalization-destinations)(으)로 내보낼 수 있습니다. 내보내기 워크플로우, 이 기능에서 활성화된 사용 사례 및 알려진 제한 사항을 이해하려면 이 문서 를 참조하십시오. 대상 유형별로 사용할 수 있는 기능을 이해하려면 아래 표를 참조하십시오.
+배열, 맵 및 개체를 [!DNL Real-Time CDP]에서 [클라우드 저장소 대상](/help/destinations/catalog/cloud-storage/overview.md)(으)로 내보내는 방법에 대해 알아봅니다. 또한 맵 유형 필드를 [엔터프라이즈 대상](/help/destinations/destination-types.md#advanced-enterprise-destinations) 및 제한된 [에지 개인화 대상](/help/destinations/destination-types.md#edge-personalization-destinations)(으)로 내보낼 수 있습니다. 내보내기 워크플로우, 이 기능에서 활성화된 사용 사례 및 알려진 제한 사항을 이해하려면 이 문서 를 참조하십시오. 대상 유형별로 사용할 수 있는 기능을 이해하려면 아래 표를 참조하십시오.
 
 | 대상 유형 | 배열, 맵 및 기타 사용자 지정 개체 내보내기 기능 |
 |---|---|
 | Adobe 작성 클라우드 스토리지 대상(Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, Data Landing Zone, Google 클라우드 스토리지, SFTP) | 예. 대상 연결을 설정할 때 배열, 맵 및 개체의 내보내기 활성화 토글이 켜져 있습니다. |
-| 파일 기반 이메일 마케팅 대상(Adobe Campaign, Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | 아니요 |
+| 파일 기반 이메일 마케팅 대상([!DNL Adobe Campaign], Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | 아니요 |
 | 기존 사용자 지정 파트너가 빌드한 클라우드 스토리지 대상(Destination SDK을 통해 빌드한 사용자 지정 파일 기반 대상) | 아니요 |
 | 엔터프라이즈 대상(Amazon Kinesis, Azure Event Hubs, HTTP API) | 부분적으로요 활성화 워크플로의 매핑 단계에서 맵 유형 개체를 선택하고 내보낼 수 있습니다. |
 | 스트리밍 대상(예: Facebook, Braze, Google Customer Match 등) | 아니요 |
@@ -48,7 +48,7 @@ Experience Platform에서는 [XDM 스키마](/help/xdm/home.md)를 사용하여 
 
 Experience Platform의 다른 필드 유형에는 배열 필드가 포함됩니다. [Experience Platform UI에서 배열 필드 관리](/help/xdm/ui/fields/array.md)에 대해 자세히 알아보십시오. 이제 아래 예와 같은 배열 개체를 내보낼 수 있습니다.
 
-```
+```js
 organizations = [{
   id: 123,
   orgName: "Acme Inc",

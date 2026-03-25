@@ -2,9 +2,9 @@
 title: (V1) 페가 CDH 실시간 대상 연결
 description: Adobe Experience Platform의 Pega Customer Decision Hub 실시간 대상 을 사용하여 프로필 속성 및 대상 멤버십 데이터를 Pega Customer Decision Hub로 전송하여 차후 최상의 조치를 취할 수 있습니다.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1186'
 ht-degree: 3%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 3%
 
 ## 개요 {#overview}
 
-Adobe Experience Platform의 [!DNL Pega Customer Decision Hub] 실시간 대상 대상을 사용하여 프로필 특성 및 대상 멤버십 데이터를 [!DNL Pega Customer Decision Hub]&#x200B;(으)로 보내 다음 모범 사례를 결정하십시오.
+[!DNL Pega Customer Decision Hub]의 [!DNL Adobe Experience Platform] 실시간 대상 대상을 사용하여 프로필 특성 및 대상 멤버십 데이터를 [!DNL Pega Customer Decision Hub]&#x200B;(으)로 보내 다음 모범 사례를 결정하십시오.
 
-Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer Decision Hub]에 로드되면 적응형 모델의 예측 변수로 사용할 수 있으며, 최적의 다음 작업 결정을 위해 올바른 컨텍스트 및 행동 데이터를 제공하는 데 도움이 됩니다.
+[!DNL Adobe Experience Platform]의 프로필 대상 멤버십을 [!DNL Pega Customer Decision Hub]에 로드하면 적응형 모델의 예측 변수로 사용할 수 있으며, 최적의 다음 작업 결정을 위해 올바른 컨텍스트 및 행동 데이터를 제공하는 데 도움이 됩니다.
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 ## 사용 사례 {#use-cases}
 
-[!DNL Customer Decision Hub] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례를 소개합니다.
+[!DNL Customer Decision Hub] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 [!DNL Adobe Experience Platform] 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례의 예제를 소개합니다.
 
 ### 통신 {#telecommunications}
 
@@ -35,15 +35,15 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 ### 금융 서비스 {#financial-services}
 
-마케터는 연금 제도 또는 퇴직 연금 제도 뉴스레터를 구독하거나 구독 취소한 고객을 위해 오퍼를 최적화하려고 합니다. 금융 서비스 회사는 자체 CRM에서 여러 CustomerID를 Adobe Experience Platform으로 수집하고, 자체 오프라인 데이터에서 대상을 작성하고, 대상을 입력하거나 종료하는 프로필을 [!DNL Pega Customer Decision Hub]&#x200B;(으)로 전송하여 아웃바운드 채널에서 NBA(Next Best Action) 의사 결정을 내릴 수 있습니다.
+마케터는 연금 제도 또는 퇴직 연금 제도 뉴스레터를 구독하거나 구독 취소한 고객을 위해 오퍼를 최적화하려고 합니다. 금융 서비스 회사는 자체 CRM에서 여러 CustomerID를 [!DNL Adobe Experience Platform]&#x200B;(으)로 수집하고, 자체 오프라인 데이터에서 대상을 작성하고, 대상을 입력 및 종료하는 프로필을 [!DNL Pega Customer Decision Hub]&#x200B;(으)로 전송하여 아웃바운드 채널에서 다음 최적 작업(NBA) 결정을 내릴 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
-이 대상을 사용하여 Adobe Experience Platform에서 데이터를 내보내려면 먼저 [!DNL Pega Customer Decision Hub]에서 다음 사전 요구 사항을 완료하십시오.
+이 대상을 사용하여 [!DNL Adobe Experience Platform]에서 데이터를 내보내려면 먼저 [!DNL Pega Customer Decision Hub]에서 다음 필수 구성 요소를 완료하십시오.
 
-* [&#x200B; 인스턴스에서 &#x200B;](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소[!DNL Pega Customer Decision Hub]를 구성합니다.
-* [&#x200B; 인스턴스에서 클라이언트 자격 증명을 사용하여 OAuth 2.0 &#x200B;](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)클라이언트 등록[!DNL Pega Customer Decision Hub] 부여 유형을 구성합니다.
-* [&#x200B; 인스턴스에서 Adobe 대상 멤버십 데이터 흐름에 대한 &#x200B;](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)실시간 실행 데이터 흐름[!DNL Pega Customer Decision Hub]을 구성하십시오.
+* [ 인스턴스에서 ](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소[!DNL Pega Customer Decision Hub]를 구성합니다.
+* [ 인스턴스에서 클라이언트 자격 증명을 사용하여 OAuth 2.0 ](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)클라이언트 등록[!DNL Pega Customer Decision Hub] 부여 유형을 구성합니다.
+* [ 인스턴스에서 Adobe 대상 멤버십 데이터 흐름에 대한 ](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)실시간 실행 데이터 흐름[!DNL Pega Customer Decision Hub]을 구성하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -51,7 +51,7 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 | 대상 ID | 설명 |
 |---|---|
-| *고객 ID* | [!DNL Pega Customer Decision Hub] 및 Adobe Experience Platform에서 프로필을 고유하게 식별하는 공통 사용자 식별자 |
+| *고객 ID* | [!DNL Pega Customer Decision Hub] 및 [!DNL Adobe Experience Platform]에서 프로필을 고유하게 식별하는 공통 사용자 식별자 |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -75,7 +75,7 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 
@@ -130,7 +130,7 @@ Adobe Experience Platform의 프로필 대상 멤버십이 [!DNL Pega Customer D
 
 ### 대상 속성 {#attributes}
 
-Adobe [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) 단계에서는 [유니온 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다.
+[[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) 단계에서는 [유니온 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다.
 
 ### 매핑 예: [!DNL Pega Customer Decision Hub]에서 프로필 업데이트 활성화 {#mapping-example}
 
@@ -138,7 +138,7 @@ Adobe [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-desti
 
 소스 필드 선택:
 
-* Adobe Experience Platform 및 [!DNL Pega Customer Decision Hub]에서 프로필을 고유하게 식별하는 소스 ID로 식별자(예: CustomerID)를 선택하십시오.
+* [!DNL Adobe Experience Platform] 및 [!DNL Pega Customer Decision Hub]에서 프로필을 고유하게 식별하는 소스 ID로 식별자(예: CustomerID)를 선택하십시오.
 * [!DNL Pega Customer Decision Hub]에서 내보내고 업데이트해야 하는 XDM 소스 프로필 특성 변경 사항을 선택하십시오.
 
 대상 필드 선택:

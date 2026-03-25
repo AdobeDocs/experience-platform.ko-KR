@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 스트리밍 대상을 구성하는 단계를 나열하고 설명합니다.
 title: Destination SDK을 사용하여 스트리밍 대상 구성
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '876'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 1단계: 서버 및 템플릿 구성 만들기 {#create-server-template-configuration}
 
-[&#x200B; 끝점을 사용하여 &#x200B;](../authoring-api/destination-server/create-destination-server.md)서버 및 템플릿 구성을 만드는`/destinations-server`부터 시작합니다.
+[ 끝점을 사용하여 ](../authoring-api/destination-server/create-destination-server.md)서버 및 템플릿 구성을 만드는`/destinations-server`부터 시작합니다.
 
 다음은 구성 예입니다. `requestBody.value` 매개 변수의 메시지 변환 템플릿은 3단계, [변환 템플릿 만들기](#create-transformation-template)에서 처리됩니다.
 
@@ -275,16 +275,16 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 대상 구성에서 `"authenticationRule": "CUSTOMER_AUTHENTICATION"`을(를) 선택했으며 대상이 OAuth 2 인증 방법을 지원하는 경우 [OAuth 2 인증](../functionality/destination-configuration/oauth2-authorization.md)을 읽으십시오.
 
-`"authenticationRule": "PLATFORM_AUTHENTICATION"`을(를) 선택한 경우 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을(를) 만들고 `authenticationId`대상 게재[&#x200B; 구성의 &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
+`"authenticationRule": "PLATFORM_AUTHENTICATION"`을(를) 선택한 경우 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을(를) 만들고 `authenticationId`대상 게재[ 구성의 ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
 
 ## 6단계: 대상 테스트 {#test-destination}
 
-이전 단계의 구성 끝점을 사용하여 대상을 설정한 후 [대상 테스트 도구](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)를 사용하여 Adobe Experience Platform과 대상 간의 통합을 테스트할 수 있습니다.
+이전 단계의 구성 끝점을 사용하여 대상을 설정한 후 [대상 테스트 도구](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)를 사용하여 [!DNL Adobe Experience Platform]과(와) 대상 간의 통합을 테스트할 수 있습니다.
 
 대상을 테스트하는 프로세스의 일부로 Experience Platform UI를 사용하여 대상에 활성화할 세그먼트를 만들어야 합니다. Experience Platform에서 대상자를 만드는 방법에 대한 지침은 아래 두 리소스를 참조하십시오.
 
 * [대상 설명서 페이지 만들기](/help/segmentation/ui/audience-portal.md#create-audience)
-* [대상 비디오 연습 만들기](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ko)
+* [대상 비디오 연습 만들기](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 7단계: 대상 게시 {#publish-destination}
 

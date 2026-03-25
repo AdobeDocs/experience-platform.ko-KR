@@ -3,9 +3,9 @@ title: Mailchimp 태그
 description: Mailchimp 태그 대상을 사용하면 계정 데이터를 내보내고 Mailchimp 내에서 활성화하여 연락처에 참여할 수 있습니다.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1719'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 ## 사용 사례 {#use-cases}
 
-[!DNL Mailchimp Tags] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례를 소개합니다.
+[!DNL Mailchimp Tags] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 [!DNL Adobe Experience Platform] 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례 예제를 소개합니다.
 
 ### 마케팅 캠페인을 위해 연락처에 이메일 보내기 {#use-case-send-emails}
 
@@ -34,7 +34,7 @@ Experience Platform 및 [!DNL Mailchimp]에서 설정해야 하는 필수 구성
 
 ### Experience Platform의 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL Mailchimp Tags] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 &#x200B;](/help/xdm/schema/composition.md)스키마[, &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ko)데이터 세트[&#x200B; 및 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=ko)대상[!DNL Experience Platform]이 있어야 합니다.
+[!DNL Mailchimp Tags] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 ](/help/xdm/schema/composition.md)스키마[, ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en)데이터 세트[ 및 ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)대상[!DNL Experience Platform]이 있어야 합니다.
 
 ### [!DNL Mailchimp Tags] 대상에 대한 필수 구성 요소 {#prerequisites-destination}
 
@@ -48,7 +48,7 @@ Experience Platform에서 [!DNL Mailchimp Tags] 계정으로 데이터를 내보
 
 [!DNL Mailchimp] 계정에 대해 **대상을 인증하려면** [!DNL Mailchimp Interest Categories]API 키[!DNL Mailchimp]가 필요합니다. **대상을 인증**&#x200B;할 때 **API 키**&#x200B;이(가) [암호](#authenticate) 역할을 합니다.
 
-**API 키**&#x200B;가 없는 경우 [!DNL Mailchimp] 계정에 로그인하고 [!DNL Mailchimp]API 키 생성 방법[에 대한 &#x200B;](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) 설명서를 참조하십시오.
+**API 키**&#x200B;가 없는 경우 [!DNL Mailchimp] 계정에 로그인하고 [!DNL Mailchimp]API 키 생성 방법[에 대한 ](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) 설명서를 참조하십시오.
 
 API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
@@ -70,7 +70,7 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 ### 가드레일 {#guardrails}
 
-[!DNL Mailchimp] API에 의해 적용되는 제한에 대한 자세한 내용은 [&#x200B; &#x200B;](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)등급 제한[!DNL Mailchimp]을(를) 참조하십시오.
+[!DNL Mailchimp] API에 의해 적용되는 제한에 대한 자세한 내용은 [ ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)등급 제한[!DNL Mailchimp]을(를) 참조하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -89,7 +89,7 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 
@@ -135,7 +135,7 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 | 필드 | 설명 |
 | --- | --- |
 | **[!UICONTROL Username]** | [!DNL Mailchimp] 사용자 이름입니다. |
-| **[!UICONTROL Password]** | [!DNL Mailchimp]수집&#x200B;**자격 증명** 섹션에서 기록한 [&#x200B;  [!DNL Mailchimp] API 키](#gather-credentials).<br> API 키는 `{KEY}-{DC}` 형식을 사용합니다. 여기서 `{KEY}` 부분은 [[!DNL Mailchimp] API 키](#gather-credentials) 섹션에 언급된 값을 참조하고 `{DC}` 부분은 [[!DNL Mailchimp] 데이터 센터](#identify-data-center)를 참조합니다. <br>`{KEY}` 부분 또는 전체 양식을 제공할 수 있습니다.<br> 예를 들어 API 키가 <br>*`0123456789abcdef0123456789abcde-us14`*,<br>인 경우&#x200B;*`0123456789abcdef0123456789abcde`*또는&#x200B;*`0123456789abcdef0123456789abcde-us14`*을(를) 값으로 제공할 수 있습니다. |
+| **[!UICONTROL Password]** | [!DNL Mailchimp]수집&#x200B;**자격 증명** 섹션에서 기록한 [  [!DNL Mailchimp] API 키](#gather-credentials).<br> API 키는 `{KEY}-{DC}` 형식을 사용합니다. 여기서 `{KEY}` 부분은 [[!DNL Mailchimp] API 키](#gather-credentials) 섹션에 언급된 값을 참조하고 `{DC}` 부분은 [[!DNL Mailchimp] 데이터 센터](#identify-data-center)를 참조합니다. <br>`{KEY}` 부분 또는 전체 양식을 제공할 수 있습니다.<br> 예를 들어 API 키가 <br>*`0123456789abcdef0123456789abcde-us14`*,<br>인 경우&#x200B;*`0123456789abcdef0123456789abcde`*또는&#x200B;*`0123456789abcdef0123456789abcde-us14`*을(를) 값으로 제공할 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -175,7 +175,7 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 ### 매핑 고려 사항 및 예제 {#mapping-considerations-example}
 
-대상 데이터를 Adobe Experience Platform에서 [!DNL Mailchimp Tags] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Experience Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 스키마 필드 간에 링크를 작성하는 것으로 구성됩니다.
+대상 데이터를 [!DNL Adobe Experience Platform]에서 [!DNL Mailchimp Tags] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야 합니다. 매핑은 Experience Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 스키마 필드 간에 링크를 작성하는 것으로 구성됩니다.
 
 XDM 필드를 [!DNL Mailchimp Tags] 대상 필드에 올바르게 매핑하려면 아래 단계를 따르십시오.
 

@@ -2,9 +2,9 @@
 description: 파일 기반 대상에 대한 파일 서식 옵션 구성
 title: Destination SDK을 사용하여 파일 기반 대상에 대한 파일 형식 지정 옵션을 구성하는 방법에 대해 알아봅니다.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
@@ -718,7 +718,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 특정 파일 형식 옵션 조합을 사용하면 원하지 않는 파일 내보내기 결과가 발생할 수 있습니다.
 Adobe에서는 다음 CSV 옵션 조합을 선택하지 않는 것이 좋습니다.
 
-```
+```properties
 nullValue -> ""
 quote -> "
 emptyValue -> ""

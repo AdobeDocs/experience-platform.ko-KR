@@ -3,10 +3,10 @@ keywords: 설문 조사 대상;설문 조사;예측;순간;웹 절편 설문 조
 title: Survey 대상 개요
 description: 설문 조사 플랫폼은 설문 조사 이벤트를 감지하고 데이터 요소를 통해 실시간으로 고객 피드백을 캡처하며 Adobe Experience Platform과 데이터를 공유합니다.
 exl-id: 0358a73b-9f4a-4362-a7ed-e49ece6e5f02
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 1%
+source-wordcount: '98'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-설문 조사 플랫폼은 설문 조사 이벤트를 감지하고 데이터 요소를 통해 실시간으로 고객 피드백을 캡처하며 Adobe Experience Platform과 데이터를 공유합니다.
+설문 조사 플랫폼은 설문 조사 이벤트를 감지하고 데이터 요소를 통해 실시간으로 고객 피드백을 캡처하며 [!DNL Adobe Experience Platform]과(와) 데이터를 공유합니다.
 
 ## 지원되는 설문 조사 대상 {#supported-destinations}
 

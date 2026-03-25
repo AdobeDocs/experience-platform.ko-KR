@@ -3,9 +3,9 @@ title: Pega 프로필 커넥터
 description: Adobe Experience Platform의 Amazon S3용 Pega Profile Connector를 사용하여 전체 또는 증분, 또는 둘 다 프로필 데이터를 Amazon S3 클라우드 스토리지로 내보냅니다. Pega 고객 의사 결정 허브에서 Amazon S3 스토리지에서 주기적으로 프로필 데이터를 가져오기 위해 고객 프로필 Designer에서 데이터 작업을 예약할 수 있습니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1255'
+source-wordcount: '1225'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 [!DNL Amazon Web Services]&#x200B;(AWS) S3 저장소에 대한 실시간 아웃바운드 연결을 생성하여 프로필 데이터를 CSV 파일로 Adobe Experience Platform에서 고유한 S3 버킷으로 정기적으로 내보냅니다. [!DNL Pega Customer Decision Hub]에서는 S3 스토리지에서 이 프로필 데이터를 가져와서 [!DNL Pega Customer Decision Hub] 프로필을 업데이트하도록 데이터 작업을 예약할 수 있습니다
+[!DNL Pega Profile Connector]의 [!DNL Adobe Experience Platform]을(를) 사용하여 [!DNL Amazon Web Services]&#x200B;(AWS) S3 저장소에 대한 실시간 아웃바운드 연결을 생성하여 [!DNL Adobe Experience Platform]에서 자신의 S3 버킷으로 프로필 데이터를 CSV 파일로 정기적으로 내보냅니다. [!DNL Pega Customer Decision Hub]에서는 S3 스토리지에서 이 프로필 데이터를 가져와서 [!DNL Pega Customer Decision Hub] 프로필을 업데이트하도록 데이터 작업을 예약할 수 있습니다
 
 이 커넥터는 프로필 데이터의 초기 내보내기를 설정하는 데 도움이 되며 새 프로필을 [!DNL Pega Customer Decision Hub]에 주기적으로 동기화하는 데 도움이 됩니다.  Customer Decision Hub에 최신 데이터가 있으면 차후 최상의 조치 결정을 위해 고객 기반을 더 낫고 업데이트된 보기로 확인할 수 있습니다.
 
@@ -24,19 +24,19 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 
 ## 사용 사례 {#use-cases}
 
-[!DNL Pega Profile Connector] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례를 소개합니다.
+[!DNL Pega Profile Connector] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 [!DNL Adobe Experience Platform] 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례의 예제를 소개합니다.
 
 ### 사용 사례 1 {#use-case-1}
 
-마케터는 처음에 Adobe Experience Platform에서 로드된 프로필 데이터로 [!DNL Pega Customer Decision Hub]을(를) 설정하려고 합니다. 이는 초기 전체 로드 후 일정에 따라 델타 로드 가 이어집니다.
+마케터는 [!DNL Pega Customer Decision Hub]에서 로드된 프로필 데이터로 [!DNL Adobe Experience Platform]을(를) 처음에 설정하려고 합니다. 이는 초기 전체 로드 후 일정에 따라 델타 로드 가 이어집니다.
 
 ### 사용 사례 2 {#use-case-2}
 
-마케터는 지속적으로 고객 프로필에 대한 페가 통찰력을 향상시키는 Adobe Experience Platform의 최신 프로필 데이터를 [!DNL Pega Customer Decision Hub]에서 사용할 수 있기를 원합니다.
+마케터는 [!DNL Adobe Experience Platform]에서 사용할 수 있는 [!DNL Pega Customer Decision Hub]의 최신 프로필 데이터를 원하며, 이를 통해 지속적으로 고객 프로필에 대한 페가 통찰력을 향상시킬 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
-이 대상을 사용하여 Adobe Experience Platform에서 데이터를 내보내고 [!DNL Pega Customer Decision Hub]&#x200B;(으)로 프로필을 가져오려면 먼저 다음 전제 조건을 완료하십시오.
+이 대상을 사용하여 [!DNL Adobe Experience Platform]에서 데이터를 내보내고 [!DNL Pega Customer Decision Hub]&#x200B;(으)로 프로필을 가져오려면 먼저 다음 전제 조건을 완료하십시오.
 
 * 데이터 파일 내보내기 및 가져오기에 사용할 [!DNL Amazon S3] 버킷 및 폴더 경로를 구성하십시오.
 * [!DNL Amazon S3] 액세스 키와 [!DNL Amazon S3] 비밀 키를 구성하십시오. [!DNL Amazon S3]에서 `access key - secret access key` 쌍을 생성하여 [!DNL Amazon S3] 계정에 Experience Platform 액세스 권한을 부여하십시오.
@@ -49,7 +49,7 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 
 | 대상 ID | 설명 |
 |---|---|
-| *고객 ID* | [!DNL Pega Customer Decision Hub] 및 Adobe Experience Platform에서 프로필을 고유하게 식별하는 공통 사용자 식별자 |
+| *고객 ID* | [!DNL Pega Customer Decision Hub] 및 [!DNL Adobe Experience Platform]에서 프로필을 고유하게 식별하는 공통 사용자 식별자 |
 
 {style="table-layout:auto"}
 
@@ -60,7 +60,7 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 
@@ -101,7 +101,7 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 
 대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택하십시오.
 
-* **[!DNL Amazon S3]액세스 키** 및 **[!DNL Amazon S3]비밀 키**: [!DNL Amazon S3]에서 `access key - secret access key` 쌍을 생성하여 [!DNL Amazon S3] 계정에 Adobe Experience Platform 액세스 권한을 부여합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)를 참조하세요.
+* **[!DNL Amazon S3]액세스 키** 및 **[!DNL Amazon S3]비밀 키**: [!DNL Amazon S3]에서 `access key - secret access key` 쌍을 생성하여 [!DNL Adobe Experience Platform]에게 [!DNL Amazon S3] 계정에 대한 액세스 권한을 부여합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)를 참조하세요.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -147,12 +147,12 @@ Adobe Experience Platform의 [!DNL Pega Profile Connector]을(를) 사용하여 
 S3에서 프로필 데이터를 성공적으로 가져오면 [!DNL Pega Customer] 프로필 데이터 저장소에 데이터가 삽입됩니다. 가져온 고객 프로필 데이터는 다음 그림과 같이 [!DNL Pega Customer Profile Designer]에서 확인할 수 있습니다.
 ![고객 프로필 Designer에서 Adobe 프로필 데이터의 유효성을 검사할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-[!DNL Pega Customer Decision Hub]에서 데이터 관리자는 다음 그림과 같이 S3에서 주기적으로 프로필 데이터를 가져오도록 [!DNL Customer Profile Designer]의 데이터 작업을 구성할 수 있습니다. [에서 프로필 데이터를 가져오도록 데이터 작업을 구성하는 방법에 대한 자세한 내용은 &#x200B;](#additional-resources)추가 리소스[!DNL Amazon S3]를 참조하세요.
+[!DNL Pega Customer Decision Hub]에서 데이터 관리자는 다음 그림과 같이 S3에서 주기적으로 프로필 데이터를 가져오도록 [!DNL Customer Profile Designer]의 데이터 작업을 구성할 수 있습니다. [에서 프로필 데이터를 가져오도록 데이터 작업을 구성하는 방법에 대한 자세한 내용은 ](#additional-resources)추가 리소스[!DNL Amazon S3]를 참조하세요.
 고객 프로필 Designer에서 데이터 작업을 구성하기 위한 ![UI 화면의 이미지](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## 추가 리소스 {#additional-resources}
 
-[에서 &#x200B;](https://academy.pega.com/topic/import-data-jobs/v1)데이터 가져오기 작업[!DNL Pega Customer Decision Hub]을 참조하십시오.
+[에서 ](https://academy.pega.com/topic/import-data-jobs/v1)데이터 가져오기 작업[!DNL Pega Customer Decision Hub]을 참조하십시오.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

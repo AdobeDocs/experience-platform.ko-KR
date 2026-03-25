@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
 exl-id: 1f1d3e57-a8ef-4971-b3d1-43521bd158bb
-source-git-commit: 705e94b13af6830916e7d4bf500c48ae1be88874
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1525'
 ht-degree: 8%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 8%
 
 [!DNL FreeWheel]은(는) 연결된 TV(CTV), 비디오 및 디스플레이 인벤토리에서 프로그래밍 방식의 구매 및 판매를 지원하는 글로벌 광고 기술 플랫폼입니다. [!DNL FreeWheel]은(는) 광고주와 전 세계 프리미엄 미디어 소유자를 연결하는 데이터 기반 마켓플레이스를 제공합니다.
 
-이 대상을 사용하여 Adobe Experience Platform에서 [!DNL FreeWheel]&#x200B;(으)로 대상자를 보냅니다. 대상자는 일일 배치 파일로 제공되며 [!DNL FreeWheel]개의 거래 및 캠페인에서 타깃팅에 사용할 수 있습니다.
+대상을 [!DNL Adobe Experience Platform]에서 [!DNL FreeWheel]&#x200B;(으)로 보내려면 이 대상을 사용하십시오. 대상자는 일일 배치 파일로 제공되며 [!DNL FreeWheel]개의 거래 및 캠페인에서 타깃팅에 사용할 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -51,7 +51,7 @@ ht-degree: 8%
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li>CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li>유사 대상,</li><li>페더레이션 대상,</li><li>Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자</li><li>등.</li></ul> |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li>CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li>유사 대상,</li><li>페더레이션 대상,</li><li>[!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상,</li><li>등.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ ht-degree: 8%
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | CTV 재타겟팅, 도달 억제 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 

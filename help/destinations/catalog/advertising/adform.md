@@ -3,9 +3,9 @@ title: Adform
 description: Adform은 프로그램 방식의 미디어 구매 및 판매 솔루션을 제공하는 선도적인 공급업체입니다. Adform을 Adobe Experience Platform에 연결하면 ECID(Experience Cloud ID)를 기반으로 하는 Adform을 통해 자사 대상을 활성화할 수 있습니다.
 last-substantial-update: 2025-10-23T00:00:00Z
 exl-id: b87fe57f-10e3-4c10-9156-f102244fbbe7
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1077'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-Adform은 프로그램 방식의 미디어 구매 및 판매 솔루션을 제공하는 선도적인 공급업체입니다. Adform을 Adobe Experience Platform에 연결하면 ECID(Experience Cloud ID)를 기반으로 하는 Adform을 통해 자사 대상을 활성화할 수 있습니다.
+Adform은 프로그램 방식의 미디어 구매 및 판매 솔루션을 제공하는 선도적인 공급업체입니다. Adform을 [!DNL Adobe Experience Platform]에 연결하면 ECID(Experience Cloud ID)를 기반으로 하는 Adform을 통해 자사 대상을 활성화할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -22,22 +22,22 @@ Adform은 프로그램 방식의 미디어 구매 및 판매 솔루션을 제공
 
 ## 사용 사례 {#use-cases}
 
-Adobe Form 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례를 소개합니다.
+Adform 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 [!DNL Adobe Experience Platform] 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례를 소개합니다.
 
-### Adobe Real-Time CDP 대상자 활성화 {#use-case-1}
+### Adobe [!DNL Real-Time CDP] 대상 활성화 {#use-case-1}
 
-이 대상을 사용하여 Experience Cloud ID(ECID) 및 Adform의 ID Fusion을 기반으로 활성화를 위해 Adobe Real-Time CDP 대상을 Adform으로 보냅니다. Adform의 ID Fusion은 Experience Cloud ID(ECID)를 기반으로 자사 대상을 활성화할 수 있는 Adform의 ID 확인 서비스입니다.
+이 대상을 사용하여 ECID(Experience Cloud ID) 및 Adform의 ID Fusion을 기반으로 활성화할 Adobe [!DNL Real-Time CDP] 대상을 Adform으로 보냅니다. Adform의 ID Fusion은 ECID(Experience Cloud ID)를 기반으로 자사 대상을 활성화할 수 있는 Adform의 ID 확인 서비스입니다.
 
-일반적인 사례는 ECID(Experience Cloud ID)를 기반으로 웹 사이트 또는 앱에 대한 웹 사이트 방문자를 재타겟팅하는 것입니다. 이제 즉시 사용 가능한 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 또는 [클라이언트측](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/analytics/adform) Adform 확장을 통해 ECID(Experience Cloud ID)를 Adform으로 전송하기만 하면 됩니다. 이후 활성화를 위해 Adform 대상을 통해 ECID(Experience Cloud ID)만을 기준으로 Adform과 대상을 공유할 수 있습니다.
+일반적인 사례는 ECID(Experience Cloud ID)를 기반으로 웹 사이트 또는 앱에 대한 웹 사이트 방문자를 재타겟팅하는 것입니다. 이제 즉시 사용 가능한 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 또는 [클라이언트측](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform 확장을 통해 ECID(Experience Cloud ID)를 Adform으로 전송하기만 하면 됩니다. 이후 활성화를 위해 Adform 대상을 통해 ECID(Experience Cloud ID)만을 기준으로 Adform과 대상을 공유할 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
 * 이 대상을 사용하려면 기존 Adform 고객이어야 합니다.
 * Adform 대상자 기본 데이터 연결 자격 증명이 있어야 합니다.
    * Adform 대상자 기본 데이터 연결 자격 증명이 없는 경우 Adform 담당자에게 문의하십시오.
-* 적절한 동기화를 위해 엔터티에서 Adobe 사이트 추적에 대해 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 또는 [클라이언트측](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/analytics/adform) 연결이 있어야 합니다.
+* 적절한 동기화를 위해 엔터티에서 Adobe 사이트 추적에 대해 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 또는 [클라이언트측](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) 연결이 있어야 합니다.
    * 엔티티에서 Adform 사이트 추적에 대한 이벤트 스트리밍 또는 클라이언트측 연결이 없는 경우 Adform 담당자에게 문의하십시오.
-   * Adform은 [이벤트 스트리밍](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) 및 [클라이언트측](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/analytics/adform)에 모두 Adobe Experience Cloud 확장을 제공합니다.
+   * Adform은 [!DNL Adobe Experience Cloud]이벤트 스트리밍[ 및 ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)클라이언트측[ 모두에 대해 ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) 확장을 제공합니다.
 
 
 ## 지원되는 ID {#supported-identities}
@@ -46,7 +46,7 @@ Adform은 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/id
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 자세한 내용은 [ECID](/help/identity-service/features/ecid.md)에서 다음 문서를 참조하십시오. |
+| ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;[!DNL Adobe Experience Cloud] ID&quot;, &quot;[!DNL Adobe Experience Platform] ID&quot; 별칭에서도 참조할 수 있습니다. 자세한 내용은 [ECID](/help/identity-service/features/ecid.md)에서 다음 문서를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -57,7 +57,7 @@ Adform은 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/id
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -70,7 +70,7 @@ Adform은 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/id
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 

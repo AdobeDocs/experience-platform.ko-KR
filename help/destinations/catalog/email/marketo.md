@@ -3,9 +3,9 @@ keywords: Marketo;marketo;Marketo 확장;marketo 확장
 title: Marketo 확장
 description: Marketo 확장은 Adobe Experience Platform의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '429'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 [!DNL Marketo]의 강력한 마케팅 자동화 소프트웨어는 마케터가 고객 및 잠재 고객의 참여를 유도하기 위해 디지털 마케팅의 기술과 과학을 마스터하도록 도와줍니다.
 
-[!DNL Marketo]은(는) Adobe Experience Platform의 이메일 확장입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 [확장 페이지](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html)를 참조하십시오.
+[!DNL Marketo]은(는) [!DNL Adobe Experience Platform]의 전자 메일 확장입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 [확장 페이지](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html)를 참조하십시오.
 
 이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
@@ -26,7 +26,7 @@ ht-degree: 4%
 
 이 확장은 Experience Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 Adobe Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
+이 확장을 사용하려면 [!DNL Adobe Experience Platform]의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 [!DNL Adobe Experience Cloud] 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 

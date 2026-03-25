@@ -2,10 +2,10 @@
 description: Experience Platform Destination SDK은 페블 템플릿을 사용하므로 Experience Platform에서 내보낸 데이터를 대상에 필요한 형식으로 변환할 수 있습니다.
 title: Destination SDK에서 지원되는 변환 함수
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 1%
+source-wordcount: '548'
+ht-degree: 2%
 
 ---
 
@@ -27,7 +27,7 @@ Experience Platform에서 대상으로 내보낸 데이터에 대해 [메시지 
 
 ## 전제 조건 {#prerequisites}
 
-이 참조 페이지의 개념과 기능을 이해하려면 먼저 [메시지 형식](message-format.md) 문서를 읽으십시오. [&#x200B; 템플릿을 사용하여 내보낸 데이터를 변환하려면 먼저 Experience Platform의 &#x200B;](message-format.md#profile-structure)프로필 구조[!DNL Pebble]를 이해해야 합니다.
+이 참조 페이지의 개념과 기능을 이해하려면 먼저 [메시지 형식](message-format.md) 문서를 읽으십시오. [ 템플릿을 사용하여 내보낸 데이터를 변환하려면 먼저 Experience Platform의 ](message-format.md#profile-structure)프로필 구조[!DNL Pebble]를 이해해야 합니다.
 
 아래 문서화된 함수로 이동하기 전에 [ID, 특성 및 대상자 멤버십 변환에 대한 템플릿 언어 사용](message-format.md#using-templating) 섹션에서 템플릿 예제를 검토하십시오. 이 예제들의 시작은 매우 간단하고 복잡성이 증가합니다.
 
@@ -45,7 +45,7 @@ Experience Platform에서 대상으로 내보낸 데이터에 대해 [메시지 
 >템플릿에서 `for`array *또는* map *요소를 반복할 때*&#x200B;을(를) 사용하는 방법은 다릅니다. 배열을 반복할 때 요소를 직접 가져올 수 있습니다. 맵을 반복하면 키-값 쌍을 가지는 각 맵 항목을 얻습니다.
 >
 > * 배열 요소의 예로 [identityMap](message-format.md#identities) 네임스페이스의 ID에 대해 생각해 보십시오. 여기서 `identityMap.gaid`, `identityMap.email` 등의 요소를 반복할 수 있습니다.
-> * 맵 요소의 예를 보려면 [segmentMembership](message-format.md#segment-membership)을 생각해 보십시오.
+> * 맵 요소의 예를 보려면 [segmentMembership](message-format.md#audience-membership)을 생각해 보십시오.
 
 [!DNL Pebble] 필터 섹션에서 Destination SDK은 모든 함수를 지원합니다. 아래 예제에서는 Destination SDK 내에서 `date` 함수를 사용하는 방법을 보여 줍니다.
 
@@ -53,11 +53,11 @@ Experience Platform에서 대상으로 내보낸 데이터에 대해 [메시지 
 
 ## `date` 함수 사용 방법의 예 {#date-function}
 
-Destination SDK에서 [!DNL Pebble] 함수가 사용되는 방법을 예증하려면 아래 날짜 함수([Pebble 설명서의 링크](https://pebbletemplates.io/wiki/filter/date/))를 사용하여 타임스탬프의 형식을 변환하는 방법을 참조하십시오.
+Destination SDK에서 [!DNL Pebble] 함수가 사용되는 방법을 예증하려면 아래 날짜 함수([Pebble 설명서의 링크](https://pebbletemplates.io/wiki/filter/date/))가 타임스탬프의 형식을 변환하는 방법을 참조하십시오.
 
 ### 사용 사례 {#date-use-case}
 
-Experience Platform이 내보내는 기본 `lastQualificationTime`ISO 8601[&#x200B; 값에서 &#x200B;](https://en.wikipedia.org/wiki/ISO_8601) 타임스탬프를 대상이 선호하는 다른 값으로 변경하려는 경우
+Experience Platform이 내보내는 기본 `lastQualificationTime`ISO 8601[ 값에서 ](https://en.wikipedia.org/wiki/ISO_8601) 타임스탬프를 대상이 선호하는 다른 값으로 변경하려는 경우
 
 ### 예 {#date-example}
 

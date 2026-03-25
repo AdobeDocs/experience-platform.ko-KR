@@ -2,7 +2,7 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 템플릿을 만드는 데 사용되는 API 호출을 예시합니다.
 title: 대상자 템플릿 만들기
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 3%
@@ -262,9 +262,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `headers.header` | 문자열 | API 호출에 추가해야 하는 모든 HTTP 헤더를 지정합니다. 예, `"Content-Type"` |
 | `headers.value` | 문자열 | API 호출에 추가해야 하는 HTTP 헤더 값을 지정합니다. 예, `"application/x-www-form-urlencoded"` |
 | `requestBody` | 문자열 | API로 전송해야 하는 메시지 본문의 콘텐츠를 지정합니다. `requestBody` 개체에 추가해야 하는 매개 변수는 API에서 허용하는 필드에 따라 다릅니다. 메시지 본문에 포함할 수 있는 내용을 알아보려면 [지원되는 매크로 설명서](../functionality/audience-metadata-management.md#macros)를 참조하세요. |
-| `responseFields.name` | 문자열 | 호출 시 API가 반환하는 응답 필드를 지정합니다. 예를 들어 대상 메타데이터 기능 문서에서 [템플릿 예제](../functionality/audience-metadata-management.md#examples)를 참조하십시오. |
+| `responseFields.name` | 문자열 | 호출 시 API가 반환하는 응답 필드를 지정합니다. 예를 들어 대상 메타데이터 기능 문서에서 [템플릿 예제](../functionality/audience-metadata-management.md#configuration-examples)를 참조하십시오. |
 | `responseFields.value` | 문자열 | API가 호출될 때 반환되는 응답 필드의 값을 지정합니다. |
-| `responseErrorFields.name` | 문자열 | 호출 시 API가 반환하는 응답 필드를 지정합니다. 예를 들어 대상 메타데이터 기능 문서에서 [템플릿 예제](../functionality/audience-metadata-management.md#examples)를 참조하십시오. |
+| `responseErrorFields.name` | 문자열 | 호출 시 API가 반환하는 응답 필드를 지정합니다. 예를 들어 대상 메타데이터 기능 문서에서 [템플릿 예제](../functionality/audience-metadata-management.md#configuration-examples)를 참조하십시오. |
 | `responseErrorFields.value` | 문자열 | 대상의 API 호출 응답에 대해 반환되는 모든 오류 메시지를 구문 분석합니다. 이러한 오류 메시지는 Experience Platform 사용자 인터페이스의 사용자에게 표시됩니다. |
 | `validations.field` | 문자열 | 대상에 대한 API 호출이 수행되기 전에 모든 필드에 대해 유효성 검사를 실행해야 하는지 여부를 나타냅니다. 예를 들어 `{{validations.accountId}}`을(를) 사용하여 사용자의 계정 ID를 확인할 수 있습니다. |
 | `validations.regex` | 문자열 | 유효성 검사를 통과하기 위해 필드를 구조화하는 방법을 나타냅니다. |

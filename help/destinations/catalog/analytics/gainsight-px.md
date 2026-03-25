@@ -3,9 +3,9 @@ title: Gainsight PX 연결
 description: Gainsight PX 대상을 사용하여 Gainsight PX 플랫폼으로 세그멘테이션 정보를 보냅니다.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '968'
 ht-degree: 4%
 
 ---
@@ -22,16 +22,16 @@ ht-degree: 4%
 
 ## 사용 사례 {#use-cases}
 
-*Gainsight PX* 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례를 소개합니다.
+*Gainsight PX* 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 [!DNL Adobe Experience Platform] 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례를 소개합니다.
 
 ### 인앱 참여 타기팅 {#targeting-in-app-engagements}
 
-SaaS 회사는 Gainsight PX에서 작성한 애플리케이션 내 안내서를 통해 고객의 참여를 유도하려고 합니다. 이 참여를 받을 대상이 Adobe Experience Platform에 구축되었습니다. Gainsight PX 대상은 대상을 받고 Gainsight PX 환경 내에서 사용할 수 있도록 합니다.
+SaaS 회사는 Gainsight PX에서 작성한 애플리케이션 내 안내서를 통해 고객의 참여를 유도하려고 합니다. 이 참여를 받을 대상이 [!DNL Adobe Experience Platform]에 빌드되었습니다. Gainsight PX 대상은 대상을 받고 Gainsight PX 환경 내에서 사용할 수 있도록 합니다.
 
 ## 전제 조건 {#prerequisites}
 
 * [!DNL Gainsight] 지원 팀에 연락하여 구독에 대한 외부 세그먼트 기능 활성화를 요청하세요.
-* **[!UICONTROL Generate New Secret]**&#x200B;회사 세부 정보 페이지[의 맨 아래에 있는 &#x200B;](https://app.aptrinsic.com/settings/subscription) 단추를 사용하여 PX 구독에 대한 OAuth 암호 값을 생성합니다.
+* **[!UICONTROL Generate New Secret]**&#x200B;회사 세부 정보 페이지[의 맨 아래에 있는 ](https://app.aptrinsic.com/settings/subscription) 단추를 사용하여 PX 구독에 대한 OAuth 암호 값을 생성합니다.
   ![새 암호 생성 단추를 표시하는 Gainsight PX의 회사 세부 정보 화면](../../assets/catalog/analytics/gainsight-px/generate_oauth_secret.png)
 
 ## 지원되는 ID {#supported-identities}
@@ -40,7 +40,7 @@ Gainsight PX는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](..
 
 | 대상 ID | 설명 |
 |---|----|
-| ID 식별 | Gainsight PX 및 Adobe Experience Platform에서 사용자를 고유하게 식별하는 공통 사용자 식별자 |
+| ID 식별 | Gainsight PX 및 [!DNL Adobe Experience Platform]에서 사용자를 고유하게 식별하는 공통 사용자 식별자 |
 
 {style="table-layout:auto"}
 
@@ -51,7 +51,7 @@ Gainsight PX는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](..
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ Gainsight PX는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](..
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 
@@ -96,7 +96,7 @@ Gainsight PX는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](..
 
 * **[!UICONTROL Password]**: [[!DNL Gainsight PX]](https://app.aptrinsic.com)에 로그인하는 데 사용되는 암호
 * **[!UICONTROL Client ID]**: [회사 세부 정보 페이지](https://app.aptrinsic.com/settings/subscription)의 Gainsight PX 구독 ID
-* **[!UICONTROL Client secret]**: [&#x200B; UI의 &#x200B;](https://app.aptrinsic.com/settings/subscription)회사 세부 정보 페이지[!DNL Gainsight PX]의 맨 아래에 생성된 OAuth 암호입니다.
+* **[!UICONTROL Client secret]**: [ UI의 ](https://app.aptrinsic.com/settings/subscription)회사 세부 정보 페이지[!DNL Gainsight PX]의 맨 아래에 생성된 OAuth 암호입니다.
 * **[!UICONTROL Username]**: [[!DNL Gainsight PX]](https://app.aptrinsic.com) UI에 로그인하는 데 사용되는 전자 메일
 
 ### 대상 세부 정보 입력 {#destination-details}

@@ -2,9 +2,9 @@
 title: Snap Inc 연결
 description: Snapchat Ads Platform에 연결하고 Experience Platform에서 대상을 내보내는 방법에 대해 알아봅니다.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1141'
 ht-degree: 3%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 3%
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 | [!DNL Federated Audience Composition] | 예 | [Federated Audience Composition](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/start/audiences)을(를) 통해 Experience Platform으로 가져온 대상입니다. |
 
 {style="table-layout:auto"}
@@ -80,7 +80,7 @@ ht-degree: 3%
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 
@@ -106,15 +106,15 @@ ht-degree: 3%
 
 대상에 인증하려면 다음 단계를 수행합니다.
 
-1. Adobe Experience Platform의 대상 카탈로그에서 *Snap Inc* 대상을 찾아 **설정**&#x200B;을(를) 선택합니다.
-2. **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택합니다. 다음 화면으로 리디렉션됩니다.
+1. *의 대상 카탈로그에서* Snap Inc[!DNL Adobe Experience Platform] 대상을 찾은 다음 **설정**&#x200B;을 선택하십시오.
+2. **[!UICONTROL Connect to destination]**을(를) 선택합니다. 다음 화면으로 리디렉션됩니다.
    ![인증 화면 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Snapchat 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
-4. Adobe Experience Platform에서 액세스할 수 있는 Snapchat 데이터가 표시됩니다. 연결 프로세스를 계속하려면 **계속**&#x200B;을(를) 선택하십시오.
+4. [!DNL Adobe Experience Platform]에서 액세스할 수 있는 Snapchat 데이터가 표시됩니다. 연결 프로세스를 계속하려면 **계속**&#x200B;을(를) 선택하십시오.
 
 ![인증 화면 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
 
-계속을 선택한 후 Adobe Experience Platform으로 다시 리디렉션될 때까지 기다립니다.
+[계속]을 선택한 후 [!DNL Adobe Experience Platform]&#x200B;(으)로 다시 리디렉션될 때까지 기다리십시오.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -150,11 +150,11 @@ ht-degree: 3%
 대상을 *Snap Inc* 대상으로 활성화하면 스냅 광고 관리자의 [**대상** 섹션](https://businesshelp.snapchat.com/s/article/audience-sharing)에서 대상을 볼 수 있습니다. 이 섹션으로 이동하려면 다음 단계를 수행합니다.
 
 1. [스냅 광고 관리자](https://ads.snapchat.com/)에 로그인
-2. 화면 왼쪽 상단의 풀다운 메뉴에서 **대상**&#x200B;을 선택합니다. Adobe Experience Platform에서 활성화한 대상이 대상 라이브러리의 대상 라이브러리에 표시됩니다.
+2. 화면 왼쪽 상단의 풀다운 메뉴에서 **대상**&#x200B;을 선택합니다. 대상 라이브러리의 [!DNL Adobe Experience Platform]에서 활성화한 대상이 표시됩니다.
 
 ![대상자](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Adobe 대상자가 Snap Inc.에 처음 활성화되면 처음에는 빈 대상자로 표시됩니다. 이는 Adobe Experience Platform이 대상자를 평가할 때까지 멤버 데이터를 Snap Inc로 내보내지 않기 때문입니다. Experience Platform에서 대상을 평가하는 방법에 대한 자세한 내용은 [세그먼테이션 서비스 개요](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=ko#evaluate-segments)를 참조하세요.
+Adobe 대상자가 Snap Inc.에 처음 활성화되면 처음에는 빈 대상자로 표시됩니다. 이는 [!DNL Adobe Experience Platform]이(가) 대상자를 평가할 때까지 멤버 데이터를 Snap Inc로 내보내지 않기 때문입니다. Experience Platform에서 대상을 평가하는 방법에 대한 자세한 내용은 [세그먼테이션 서비스 개요](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments)를 참조하세요.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

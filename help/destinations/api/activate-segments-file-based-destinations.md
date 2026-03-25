@@ -4,9 +4,9 @@ title: 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로
 description: 흐름 서비스 API를 사용하여 적격 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '4973'
+source-wordcount: '4966'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 Experience Platform에서 파일을 내보낼 때 강화된 사용자 정의 기능에 액세스하려면 강화된 파일 내보내기 기능을 사용하십시오.
 
-* 추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+* 추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names).
 * [향상된 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능.
 * 내보낸 파일의 [파일 형식](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)을(를) 선택하는 기능.
 * [내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -29,7 +29,7 @@ Experience Platform에서 파일을 내보낼 때 강화된 사용자 정의 기
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-이 문서에서는 [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 사용하여 정규화된 프로필을 Adobe Experience Platform에서 위에 연결된 클라우드 저장소 위치 중 하나로 내보내는 데 필요한 워크플로에 대해 설명합니다.
+이 문서에서는 [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 사용하여 [!DNL Adobe Experience Platform]에서 위에 연결된 클라우드 저장소 위치 중 하나로 적격 프로필을 내보내는 데 필요한 워크플로에 대해 설명합니다.
 
 >[!TIP]
 >
@@ -47,7 +47,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ![사용자가 켜져 있는 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
+이 안내서를 사용하려면 [!DNL Adobe Experience Platform]의 다음 구성 요소를 제대로 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service]을(를) 사용하면 대상을 빌드하고 [!DNL Adobe Experience Platform] 데이터에서 [!DNL Real-Time Customer Profile]의 대상을 생성할 수 있습니다.
@@ -376,7 +376,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![사용자가 켜져 있는 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
-[기본 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)은(는) 대상에 자격 증명을 안전하게 저장합니다. 대상 유형에 따라 해당 대상에 대해 인증하는 데 필요한 자격 증명이 달라질 수 있습니다. 이러한 인증 매개 변수를 찾으려면 먼저 `connection spec`대상을 내보낼 대상 선택[&#x200B; 섹션에 설명된 대로 원하는 대상에 대해 &#x200B;](#select-destination)을(를) 검색한 다음 응답의 `authSpec`을(를) 살펴보십시오. 지원되는 모든 대상의 `authSpec` 속성을 보려면 아래 탭을 참조하십시오.
+[기본 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)은(는) 대상에 자격 증명을 안전하게 저장합니다. 대상 유형에 따라 해당 대상에 대해 인증하는 데 필요한 자격 증명이 달라질 수 있습니다. 이러한 인증 매개 변수를 찾으려면 먼저 `connection spec`대상을 내보낼 대상 선택[ 섹션에 설명된 대로 원하는 대상에 대해 ](#select-destination)을(를) 검색한 다음 응답의 `authSpec`을(를) 살펴보십시오. 지원되는 모든 대상의 `authSpec` 속성을 보려면 아래 탭을 참조하십시오.
 
 >[!BEGINTABS]
 
@@ -2402,7 +2402,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)대상 세부 정보 채우기[!DNL Amazon S3] 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)대상 세부 정보 채우기[!DNL Amazon S3] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2496,7 +2496,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details)대상 세부 정보 채우기[!DNL Azure Blob Storage] 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details)대상 세부 정보 채우기[!DNL Azure Blob Storage] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2590,7 +2590,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 Azure [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details)대상 세부 정보 채우기[!DNL Data Lake Gen 2(ADLS Gen2)] 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 Azure [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details)대상 세부 정보 채우기[!DNL Data Lake Gen 2(ADLS Gen2)] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2683,7 +2683,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details)대상 세부 정보 채우기[!DNL Data Landing Zone] 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details)대상 세부 정보 채우기[!DNL Data Landing Zone] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2776,7 +2776,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)대상 세부 정보 채우기[!DNL Google Cloud Storage] 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)대상 세부 정보 채우기[!DNL Google Cloud Storage] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -3489,7 +3489,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ 입력 스키마에서 사용할 수 있는 ID 보기
 
-이 응답은 입력 스키마를 만들 때 사용할 수 있는 ID를 반환합니다. 이 응답은 Experience Platform에서 설정한 [standard](/help/identity-service/features/namespaces.md#standard) 및 [custom](/help/identity-service/features/namespaces.md#manage-namespaces) ID 네임스페이스를 모두 반환합니다.
+이 응답은 입력 스키마를 만들 때 사용할 수 있는 ID를 반환합니다. 이 응답은 Experience Platform에서 설정한 [standard](/help/identity-service/features/namespaces.md#standard) 및 [custom](/help/identity-service/features/namespaces.md#create-namespaces) ID 네임스페이스를 모두 반환합니다.
 
 ```json
 [

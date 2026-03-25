@@ -2,9 +2,9 @@
 title: 메달리아 연결
 description: 타겟팅된 Medallia 설문 조사 및 피드백 수집을 위한 프로필을 활성화하여 고객의 요구 사항과 기대치를 보다 잘 이해할 수 있습니다.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1268'
+source-wordcount: '1256'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 ## 사용 사례 {#use-cases}
 
-Medallia 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례를 소개합니다.
+Medallia 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 [!DNL Adobe Experience Platform] 고객이 이 대상을 사용하여 해결할 수 있는 사용 사례의 예제를 소개합니다.
 
 ### 사용 사례 #1 {#use-case-1}
 
@@ -61,7 +61,7 @@ Medallia는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Medallia는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 
@@ -158,7 +158,7 @@ Medallia는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/
 
 ## 내보낸 데이터 {#exported-data}
 
-대상으로 세그먼트를 활성화하면 Adobe Experience Platform에서 Medallia로 내보낸 데이터의 유효성을 검사할 수 있는 Medallia 제공 팀에 알립니다. 성공적인 데이터 확인 후에만 Medallia 내에서만 설문 조사를 활성화할 수 있습니다. 이 전에 데이터가 Medallia로 내보내지지만 고객에게 설문 조사가 트리거되지 않습니다.
+대상으로 세그먼트를 활성화하면 [!DNL Adobe Experience Platform]에서 Medallia로 내보낸 데이터의 유효성을 검사할 수 있는 Medallia 제공 팀에 알립니다. 성공적인 데이터 확인 후에만 Medallia 내에서만 설문 조사를 활성화할 수 있습니다. 이 전에 데이터가 Medallia로 내보내지지만 고객에게 설문 조사가 트리거되지 않습니다.
 
 내보내진 데이터의 샘플 JSON이 아래에 제공됩니다. 이 예제 매핑은 **특성 및 ID 매핑** 섹션에서 위의 스크린샷의 매핑을 사용합니다.
 

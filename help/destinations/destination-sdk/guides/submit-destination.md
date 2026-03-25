@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 작성할 때 검토를 위해 제작된 대상을 제출하는 데 필요한 모든 정보를 제공합니다.
 title: 검토를 위해 제품화된 대상 제출
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 대상을 [Experience Platform 대상 카탈로그](/help/destinations/catalog/overview.md)에 게시하려면 먼저 사용자가 플랫폼으로 데이터를 활성화할 때 최상의 경험을 누릴 수 있도록 대상 및 수행한 테스트에 대한 특정 정보를 Adobe에 제공해야 합니다.
 
-이 페이지에는 Adobe Experience Platform Destination SDK을 사용하여 작성한 대상을 제출하거나 업데이트할 때 제공해야 하는 모든 정보가 나열됩니다. Adobe Experience Platform에서 대상을 제출하려면 다음을 포함하는 전자 메일을 <aepdestsdk@adobe.com>에게 보내십시오.
+이 페이지에는 [!DNL Adobe Experience Platform] Destination SDK을 사용하여 작성한 대상을 제출하거나 업데이트할 때 제공해야 하는 모든 정보가 나열됩니다. [!DNL Adobe Experience Platform]에서 대상을 제출하려면 다음을 포함하는 전자 메일을 <aepdestsdk@adobe.com>(으)로 보내십시오.
 
 * 대상이 해결하는 사용 사례에 대한 설명입니다. 새 대상 구성을 제출하는 경우에만 필요합니다.
 * 대상을 제출하는 이유에 대한 설명입니다. 기존 대상 구성을 업데이트하는 경우에만 필요합니다.

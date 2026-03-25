@@ -2,16 +2,16 @@
 description: Destination SDK으로 빌드된 대상의 설명서 링크, 대상 카드 카테고리, 대상 연결 유형 및 빈도와 같은 UI 속성을 구성하는 방법을 알아봅니다.
 title: UI 속성
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
 
 # UI 속성
 
-UI 속성은 로고, 설명서 페이지에 대한 링크, 대상 설명 및 카테고리 및 유형과 같은 Adobe이 Adobe Experience Platform 사용자 인터페이스에서 대상 카드에 대해 표시해야 하는 시각적 요소를 정의합니다.
+UI 특성은 로고, 설명서 페이지에 대한 링크, 대상 설명, 범주 및 유형과 같이, Adobe이 [!DNL Adobe Experience Platform] 사용자 인터페이스에서 대상 카드에 대해 표시해야 하는 시각적 요소를 정의합니다.
 
 이 구성 요소가 Destination SDK으로 만든 통합에 어디에 맞는지 이해하려면 [구성 옵션](../configuration-options.md) 설명서의 다이어그램을 참조하거나 다음 대상 구성 개요 페이지를 참조하십시오.
 
@@ -64,7 +64,7 @@ Destination SDK을 통해 [대상을 만들기](../../authoring-api/destination-
 
 ### `documentationLink` {#documentation-link}
 
-`documentationLink`은(는) 대상에 대한 [대상 카탈로그](../../../catalog/overview.md)의 문서 페이지를 참조하는 문자열 매개 변수입니다. Adobe Experience Platform에서 제품화된 모든 대상에는 해당 설명서 페이지가 있어야 합니다. [대상에 대한 대상 설명서 페이지를 만드는 방법을 알아보세요](../../docs-framework/documentation-instructions.md). 개인/사용자 지정 대상에는 필요하지 않습니다.
+`documentationLink`은(는) 대상에 대한 [대상 카탈로그](../../../catalog/overview.md)의 문서 페이지를 참조하는 문자열 매개 변수입니다. [!DNL Adobe Experience Platform]의 모든 제품화된 대상에는 해당 설명서 페이지가 있어야 합니다. [대상에 대한 대상 설명서 페이지를 만드는 방법을 알아보세요](../../docs-framework/documentation-instructions.md). 개인/사용자 지정 대상에는 필요하지 않습니다.
 
 `http://www.adobe.com/go/destinations-YOURDESTINATION-en` 형식을 사용하십시오. 여기서 `YOURDESTINATION`은(는) 대상 이름입니다. Moviestar라는 대상의 경우 `http://www.adobe.com/go/destinations-moviestar-en`을(를) 사용합니다.
 
@@ -78,7 +78,7 @@ Destination SDK을 통해 [대상을 만들기](../../authoring-api/destination-
 
 ### `category` {#category}
 
-`category`은(는) Adobe Experience Platform의 대상에 할당된 범주를 참조하는 문자열 매개 변수입니다. 자세한 내용은 [대상 범주](../../../destination-types.md)를 참조하세요. `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` 값 중 하나를 사용합니다.
+`category`은(는) [!DNL Adobe Experience Platform]의 대상에 할당된 범주를 참조하는 문자열 매개 변수입니다. 자세한 내용은 [대상 범주](../../../destination-types.md)를 참조하세요. `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` 값 중 하나를 사용합니다.
 
 사용자는 아래 이미지에 표시된 대로 대상 카탈로그의 화면 왼쪽에 대상 범주 목록을 볼 수 있습니다.
 

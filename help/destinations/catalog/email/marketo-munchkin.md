@@ -3,9 +3,9 @@ keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin 확장 프로그램
 title: Marketo Munchkin 확장 프로그램
 description: Marketo Munchkin 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 0639ff74-5450-456e-b030-8118814ed705
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '442'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 [!DNL Marketo’s Munchkin] JavaScript을 통해 [!DNL Marketo] 랜딩 페이지 및 외부 웹 페이지에 대한 최종 사용자 페이지 방문 수 및 클릭 수를 추적할 수 있습니다.
 
-[!DNL Marketo Munchkin]은(는) Adobe Experience Platform의 이메일 확장입니다. Marketo Munchkin에 대한 자세한 내용은 Marketo 설명서에서 [잠재 고객 추적](https://developers.marketo.com/javascript-api/lead-tracking/)을 참조하세요.
+[!DNL Marketo Munchkin]은(는) [!DNL Adobe Experience Platform]의 전자 메일 확장입니다. Marketo Munchkin에 대한 자세한 내용은 Marketo 설명서에서 [잠재 고객 추적](https://developers.marketo.com/javascript-api/lead-tracking/)을 참조하세요.
 
 이 대상은 태그 확장입니다. Experience Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
@@ -28,7 +28,7 @@ ht-degree: 5%
 
 이 확장은 Experience Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 Adobe Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
+이 확장을 사용하려면 [!DNL Adobe Experience Platform]의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 [!DNL Adobe Experience Cloud] 고객에게 제공됩니다. 조직 관리자에게 연락하여 태그에 대한 액세스 권한을 받은 다음 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 
