@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 2026년 3월
 description: Adobe Experience Platform의 2026년 3월 릴리스 정보.
 exl-id: 66b948fd-caa0-4e5e-83dd-3b15b77c09fa
-source-git-commit: 381d1f952067cece9f9a9618a00bbed304214906
+source-git-commit: 6b6a03fb8675ed01dd255f7206b23b05c809f2a6
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1713'
 ht-degree: 19%
 
 ---
@@ -54,7 +54,7 @@ Agent Orchestrator을 사용하여 워크플로우를 자동화하고 여러 채
 
 | 기능 | 설명 |
 | --- | --- |
-| [Adobe Marketing Agent for [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/ko/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | [!DNL Microsoft 365 Copilot]용 Adobe Marketing Agent은 Adobe의 마케팅 인텔리전스를 [!DNL Teams], [!DNL Word], [!DNL PowerPoint] 및 기타 [!DNL Microsoft 365] 앱과 같은 일상적인 도구에 직접 가져오는 임베드된 에이전트입니다. [!DNL Microsoft 365] 워크플로를 종료하지 않고 캠페인을 계획하고, 대상을 검토하고, 동료와 협력하여 고객 질문에 답변하고, 데이터에 기반한 결정을 내리는 동안 이 에이전트를 사용하여 Adobe 애플리케이션에서 신뢰할 수 있는 캠페인 인사이트를 가져올 수 있습니다. |
+| [Adobe Marketing Agent for [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | [!DNL Microsoft 365 Copilot]용 Adobe Marketing Agent은 Adobe의 마케팅 인텔리전스를 [!DNL Teams], [!DNL Word], [!DNL PowerPoint] 및 기타 [!DNL Microsoft 365] 앱과 같은 일상적인 도구에 직접 가져오는 임베드된 에이전트입니다. [!DNL Microsoft 365] 워크플로를 종료하지 않고 캠페인을 계획하고, 대상을 검토하고, 동료와 협력하여 고객 질문에 답변하고, 데이터에 기반한 결정을 내리는 동안 이 에이전트를 사용하여 Adobe 애플리케이션에서 신뢰할 수 있는 캠페인 인사이트를 가져올 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -162,7 +162,6 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 소스 | 설명 |
 | --- | --- |
-| [!DNL Talon.One] | 이제 새로운 [!DNL Talon.One] [!DNL Talon.One]일괄 처리[&#x200B; 및 &#x200B;](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md)스트리밍[&#x200B; 소스를 사용하여 Experience Platform을 &#x200B;](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md)에 연결할 수 있습니다. 새 소스를 사용하여 Experience Platform에 대한 거래 및 충성도 활동 이벤트뿐만 아니라 충성도 프로필 데이터를 수집할 수 있습니다. |
 | 새로운 IP 주소 허용 목록 | GBR9: Azure에서 Experience Platform에 성공적으로 일괄 처리 소스 연결을 보장하기 위해 허용 목록에 추가하다해야 하는 주소 목록에 영국이 추가되었습니다. 자세한 내용은 [IP 주소 가이드](../../sources/ip-address-allow-list.md#gbr9-united-kingdom)의 목록을 참조하십시오. |
 | 변경 데이터 캡처 지원 향상 | 이제 [!DNL Marketo Engage], [!DNL Microsoft Dynamics] 및 [!DNL Salesforce CRM] 소스에서 변경 데이터 캡처를 사용할 수 있습니다. |
 | [[!DNL Google BigQuery]](../../sources/connectors/databases/bigquery.md)에 대한 인증 가이드 개선 | [!DNL Google BigQuery] 원본에 대한 인증 가이드가 다음 정보로 확장되었습니다. <ul><li>새로 고침 토큰에 필요한 범위입니다.</li><li>[!DNL Google] ID에 필요한 IAM 역할입니다.</li><li>`largeResultsDataSetId` 사용에 대한 추가 지침입니다.</li></ul> |
