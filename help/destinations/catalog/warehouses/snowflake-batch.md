@@ -4,10 +4,10 @@ description: 라이브 Snowflake 데이터 공유를 만들어 매일 대상자 
 last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: f6565f7820d6d6394d26b88fdde3d42a90dedd63
 workflow-type: tm+mt
-source-wordcount: '1732'
-ht-degree: 4%
+source-wordcount: '1804'
+ht-degree: 3%
 
 ---
 
@@ -155,7 +155,7 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 
 >[!NOTE]
 >
-> 대상을 만든 후에는 **[!UICONTROL Snowflake Account ID]**&#x200B;대상 편집&#x200B;**[!UICONTROL Snowflake Region]** 워크플로우를 통해 [&#x200B; 및 &#x200B;](../../ui/edit-destination.md)을(를) 편집할 수 없습니다. 다른 계정 또는 지역 값을 사용하려면 [새 대상 연결을 만드세요](../../ui/connect-destination.md).
+> 대상을 만든 후에는 **[!UICONTROL Snowflake Account ID]**&#x200B;대상 편집&#x200B;**[!UICONTROL Snowflake Region]** 워크플로우를 통해 [ 및 ](../../ui/edit-destination.md)을(를) 편집할 수 없습니다. 다른 계정 또는 지역 값을 사용하려면 [새 대상 연결을 만드세요](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >
@@ -194,12 +194,19 @@ ID 및 프로필 속성을 이 대상으로 내보낼 수 있습니다.
 
 동적 테이블에는 다음 열이 포함되어 있습니다.
 
-* **TS**: 공유 테이블의 각 행이 마지막으로 업데이트된 시기를 나타내는 타임스탬프 열입니다.
-* **병합 정책 ID**: 활성화 중인 대상자가 속한 [병합 정책](../../../profile/merge-policies/overview.md)의 ID입니다
-* **매핑 특성**: 활성화 워크플로 중에 선택한 모든 매핑 특성은 Snowflake에서 열 헤더로 표시됩니다
-* **대상 멤버십**: 데이터 흐름에 매핑된 모든 대상에 대한 멤버십은 해당 셀의 `active` 항목을 통해 표시됩니다
+* **TS**: 각 행이 마지막으로 업데이트된 시기를 나타내는 타임스탬프
+* **MERGE_POLICY_ID**: 활성화된 대상이 속하는 [병합 정책](../../../profile/merge-policies/overview.md)의 ID
+* **AUDIENCE_ID**: 대상자의 ID
+* **AUDIENCE_NAME**: Experience Platform에 구성된 대상 이름
+* **AUDIENCE_ORIGIN**: 대상자의 [원본](../../../segmentation/ui/audience-portal.md)(예: `Segmentation Service` 또는 `Custom upload`)
+* **AUDIENCE_STATUS**: 대상자에 있는 프로필의 멤버십 상태(예: `active` 또는 `realized`)
+* **매핑 특성**: 활성화 워크플로 중에 선택한 모든 매핑 특성이 열로 표시됩니다.
 
 ![동적 테이블 데이터가 있는 Snowflake 인터페이스를 보여주는 스크린샷](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
+
+>[!NOTE]
+>
+>위에 설명된 표 구조는 2026년 3월 Experience Platform 릴리스 이후 생성된 대상 연결에 적용됩니다. 전환 기간 동안 새 커넥터는 두 테이블 구조를 모두 사용하며 새 구조는 `V2`(예: `V2_<table-name>`)이 접두사로 사용됩니다. 기존 연결에서는 각 대상이 별도의 열로 표시되는 이전 구조를 계속 사용합니다(예: `ups_<audience-id>` = `active`). 이전 구조는 2026년 6월 말에 더 이상 사용되지 않습니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
