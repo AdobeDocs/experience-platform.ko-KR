@@ -3,9 +3,9 @@ keywords: 광고 대상;대상;플랫폼 대상
 title: Advertising 대상 개요
 description: 'Adobe Experience Platform을 서드파티 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 이러한 플랫폼에 익명 대상을 공유합니다.'
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '287'
 ht-degree: 1%
 
 ---
@@ -28,8 +28,8 @@ ht-degree: 1%
 
 * [(Beta) Acxiom 대상 배포](acxiom-audience-connection.md)
 * [(Beta) Acxiom Real ID Audience 연결](acxiom-real-id-audience-connection.md)
-* [Adobe Advertising Cloud 연결](adobe-advertising-cloud-connection.md)
-* [기존 Adobe Advertising Cloud 연결](adobe-advertising-cloud-connection-legacy.md)
+* [Adobe Advertising DSP 연결](adobe-advertising-dsp-connection.md)
+* [기존 Adobe Advertising Cloud DSP 연결](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Amazon 광고 연결](amazon-ads.md)
 * [봄보라 접속](bombora.md)
 * [크리테오 연결](criteo.md)

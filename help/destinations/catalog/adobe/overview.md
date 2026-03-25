@@ -3,9 +3,9 @@ keywords: 대상;experience cloud 솔루션;target;target 대상;ad cloud;advert
 title: Adobe 대상 개요
 description: 광고 타기팅, 개인화, 마케팅 자동화 등을 위해 Experience Platform의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '224'
 ht-degree: 7%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 7%
 
 ### 연결 {#connections}
 
-* [Adobe Advertising Cloud DSP 연결](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP 연결](/help/destinations/catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Adobe Campaign 연결](../email-marketing/adobe-campaign.md)
 * [Adobe Target 연결](/help/destinations/catalog/personalization/adobe-target-connection.md)
 * [(Beta) Experience Cloud 대상](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
@@ -49,4 +49,4 @@ ht-degree: 7%
 
 Experience Platform 대상 공유 기능을 사용하여 Experience Platform 대상을 추가 Adobe 대상에 공유할 수 있습니다. 자세한 내용은 아래 페이지(Audience Manager 설명서 포털에 열림)를 참조하십시오.
 
-* [핵심 서비스 통합을 통해 Adobe Audience Manager, Adobe Advertising Cloud 및 Adobe Target과 공유하는 Experience Platform 대상](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=ko)
+* [핵심 서비스 통합을 통해 Adobe Audience Manager, Adobe Advertising Cloud 및 Adobe Target과 공유하는 Experience Platform 대상](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

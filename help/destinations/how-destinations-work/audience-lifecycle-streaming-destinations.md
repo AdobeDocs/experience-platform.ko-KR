@@ -2,9 +2,9 @@
 title: Experience Platform 및 스트리밍 대상의 고객 라이프사이클
 description: Experience Platform의 대상 이름 및 매핑이 스트리밍 대상 플랫폼에 어떻게 반영되는지 알아봅니다.
 exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 381d1f952067cece9f9a9618a00bbed304214906
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '466'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 * [Acxiom 대상 연결](../catalog/advertising/acxiom-audience-connection.md)
 * [Adobe Campaign Managed Cloud](../catalog/email-marketing/adobe-campaign-managed-services.md)
-* [Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [봄보라](../catalog/advertising/bombora.md)
 * [크리테오](../catalog/advertising/criteo.md)
 * [Demandbase](../catalog/advertising/demandbase.md)
@@ -67,7 +67,7 @@ ht-degree: 2%
 * [(API) Oracle Eloqua](../catalog/email-marketing/oracle-eloqua-api.md)
 * [(회사) LinkedIn 일치하는 대상](../catalog/social/linkedin-b2b.md)
 * [(기존) (V2) Marketo Engage](../catalog/adobe/marketo-engage.md)
-* [Adobe Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Bombora 계정 대상자](../catalog/advertising/bombora.md)
 * [크리테오](../catalog/advertising/criteo.md)
 * [Experience Cloud 대상자](../catalog/adobe/experience-cloud-audiences.md)
