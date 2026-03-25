@@ -177,7 +177,7 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 
 ![새 매핑을 추가합니다.](assets/data-prep/add-new-mapping.png)
 
-소스 아이콘(![ 소스 아이콘](/help/images/icons/source.png))을 선택하고 표시되는 대화 상자에서 제공된 캔버스에서 매핑하려는 소스 필드를 선택합니다. 필드를 선택하면 **[!UICONTROL Select]** 단추를 사용하여 계속합니다.
+소스 아이콘(![&#x200B; 소스 아이콘](/help/images/icons/source.png))을 선택하고 표시되는 대화 상자에서 제공된 캔버스에서 매핑하려는 소스 필드를 선택합니다. 필드를 선택하면 **[!UICONTROL Select]** 단추를 사용하여 계속합니다.
 
 ![원본 스키마에서 매핑할 필드를 선택합니다.](assets/data-prep/source-mapping.png)
 
