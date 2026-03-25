@@ -24,8 +24,8 @@ ht-degree: 1%
 
 * 새 대상에 대한 설명서 페이지를 만드는 단계별 지침
 * 대상을 위해 작성할 템플릿
-* [Markdown 사용에 대한 일반 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
-* [Adobe Markdown 풍미에 대한 특정 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions)&#x200B;(Adobe Markdown 풍미는 일반 Markdown과 매우 유사함).
+* [Markdown 사용에 대한 일반 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ko);
+* [Adobe Markdown 풍미에 대한 특정 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=ko#custom-markdown-extensions)&#x200B;(Adobe Markdown 풍미는 일반 Markdown과 매우 유사함).
 * Experience Platform 설명서 품질 표준을 충족하는 대상 페이지의 설명서 페이지를 작성하는 데 도움이 되는 [모범 사례 페이지](./authoring-best-practices.md).
 
 ## 전제 조건 {#prerequisites}
@@ -38,12 +38,12 @@ ht-degree: 1%
 
 ## [!DNL Adobe Experience Platform]에서 대상에 대한 설명서를 만드는 고급 지침 {#high-level-instructions}
 
-대략적으로 대상에 대한 설명서를 만들려면 [&#x200B; 설명서 리포지토리의 &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository)포크를 만들고[!DNL Adobe Experience Platform] 새 분기에서 [제공된 설명서 템플릿](./self-service-template.md)을 편집해야 합니다. Adobe 제공 템플릿을 사용하여 새 대상 페이지를 만듭니다. 준비가 되면 가져오기 요청(PR)을 엽니다. 이 작업을 수행하는 지침은 [새 대상 페이지를 만드는 단계](./documentation-instructions.md#steps-to-create-docs-page)의 아래에 나와 있습니다.
+대략적으로 대상에 대한 설명서를 만들려면 [&#x200B; 설명서 리포지토리의 &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=ko#fork-the-repository)포크를 만들고[!DNL Adobe Experience Platform] 새 분기에서 [제공된 설명서 템플릿](./self-service-template.md)을 편집해야 합니다. Adobe 제공 템플릿을 사용하여 새 대상 페이지를 만듭니다. 준비가 되면 가져오기 요청(PR)을 엽니다. 이 작업을 수행하는 지침은 [새 대상 페이지를 만드는 단계](./documentation-instructions.md#steps-to-create-docs-page)의 아래에 나와 있습니다.
 
 <!--
 
 * In the table of contents (TOC.md) `/help/rtcdp/TOC.md`, add a link to your new destination page. Place it within the category where your destination resides in the Adobe Experience Platform user interface (for example: mobile, social, advertising). 
-* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
+* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/ko-KR/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
 
 -->
 
@@ -64,4 +64,4 @@ GitHub 웹 인터페이스 또는 로컬 환경을 사용하여 [!DNL Adobe Expe
 
 ## 모범 사례 {#best-practices}
 
-대상 설명서 페이지를 만들기 전과 만드는 동안 [작성 모범 사례](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md)를 검토하십시오. 또한 Adobe 설명서 팀이 설명서를 작성할 때 사용하는 추가 작성 팁에 대해서는 [Adobe 설명서 작성 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html)을 참조하십시오.
+대상 설명서 페이지를 만들기 전과 만드는 동안 [작성 모범 사례](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md)를 검토하십시오. 또한 Adobe 설명서 팀이 설명서를 작성할 때 사용하는 추가 작성 팁에 대해서는 [Adobe 설명서 작성 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=ko)을 참조하십시오.
