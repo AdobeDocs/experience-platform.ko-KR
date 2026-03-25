@@ -3,9 +3,9 @@ keywords: InMoment;inmoment;Inmoment;Launch 통합
 title: InMoment 확장
 description: InMoment 확장은 Adobe Experience Platform의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 61f32bc1-97a6-45ff-a962-990a2e522735
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '445'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-[!DNL InMoment] 태그 확장을 사용하면 Digital Intercept 제품을 통해 빠르고 쉽게 온라인 피드백을 사용할 수 있습니다. 앱에서 가로채기는 CXI 클라우드 관리자를 통해 구성 및 관리할 수 있으므로 CX 관리자가 프로그램을 보다 효율적으로 제어할 수 있습니다.
+[!DNL InMoment] 태그 확장을 사용하면 Digital Intercept 제품을 통해 빠르고 쉽게 온라인 피드백을 제공할 수 있습니다. 앱에서 가로채기는 CXI 클라우드 관리자를 통해 구성 및 관리할 수 있으므로 CX 관리자가 프로그램을 보다 효율적으로 제어할 수 있습니다.
 
 [!DNL InMoment]은(는) [!DNL Adobe Experience Platform]의 설문 조사 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html)의 확장 페이지를 참조하십시오.
 

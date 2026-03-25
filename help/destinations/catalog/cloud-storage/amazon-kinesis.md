@@ -4,10 +4,10 @@ title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2067'
-ht-degree: 5%
+source-wordcount: '2061'
+ht-degree: 6%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
-[!DNL Kinesis Data Streams]의 [!DNL Amazon Web Services] 서비스를 사용하면 큰 데이터 레코드를 실시간으로 수집하고 처리할 수 있습니다.
+[!DNL Kinesis Data Streams]의 [!DNL Amazon Web Services] 서비스는 실시간으로 대용량 데이터 레코드를 수집하고 처리합니다.
 
 [!DNL Amazon Kinesis] 저장소에 대한 실시간 아웃바운드 연결을 만들어 [!DNL Adobe Experience Platform]에서 데이터를 스트리밍할 수 있습니다.
 
@@ -73,7 +73,7 @@ UI의 ![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalo
 
 ## IP 주소 {#ip-address-allowlist}
 
-고객 보안 및 규정 준수 요구 사항을 충족하기 위해 Experience Platform에서는 [!DNL Amazon Kinesis] 대상에 대해 허용 목록에 추가하다할 수 있는 정적 IP 목록을 제공합니다. 스트리밍 대상에 대한 [IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md)에서 IP에 대한 전체 목록을 참조하십시오.
+고객 보안 및 규정 준수 요구 사항을 충족하기 위해 Experience Platform에서는 [!DNL Amazon Kinesis] 대상에 대해 허용 목록에 추가하다할 수 있는 정적 IP 목록을 제공합니다. 스트리밍 대상에 대한 [IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md)의 전체 IP 목록(허용 목록에 추가하다)을 참조하십시오.
 
 ## 필요한 [!DNL Amazon Kinesis] 권한 {#required-kinesis-permission}
 

@@ -3,7 +3,7 @@ keywords: Yext 변환 추적;Yext;yext;yext 변환 추적
 title: Yext 전환 추적 확장
 description: Yext Conversion Tracking 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 786ea14c-25a3-40ac-906d-6a8f7de04f41
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-[!DNL Yext Conversion Tracking] 확장을 사용하면 Yext 제품의 사용으로 인한 전환을 측정할 수 있습니다.
+[!DNL Yext Conversion Tracking] 확장을 사용하여 Yext 제품의 사용으로 인한 전환을 측정합니다.
 
 [!DNL Yext Conversion Tracking]은(는) [!DNL Adobe Experience Platform]의 analytics 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html)의 확장 페이지를 참조하십시오.
 

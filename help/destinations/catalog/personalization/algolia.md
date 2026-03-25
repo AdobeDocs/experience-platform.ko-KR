@@ -2,9 +2,9 @@
 title: 알골리아
 description: 이 커넥터를 사용하여 Algolia에 대한 대상자를 활성화하여 개인화하고 검색 및 권장 사항 전반에서 사용할 수 있습니다. 그런 다음 Algolia 사용자 프로필 소스 커넥터를 사용하여 프로필을 Real-Time CDP으로 가져와 리치 대상자를 구축할 수 있습니다.
 exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1108'
 ht-degree: 4%
 
 ---
@@ -133,9 +133,9 @@ ht-degree: 4%
 >[!IMPORTANT]
 >
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* ID를 내보내려면 ID 그래프 보기 [액세스 제어 권한](https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/home#permissions)이 필요합니다.
+>* ID를 내보내려면 ID 그래프 보기 [액세스 제어 권한](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)이 필요합니다.
 
-이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)를 참조하십시오.
+이 대상으로 대상을 활성화하는 방법에 대한 지침은 [프로필 및 대상을 스트리밍 대상 내보내기 대상으로 활성화](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)를 참조하십시오.
 
 ### 속성 및 ID 매핑 {#mapping-attributes-identities}
 
@@ -163,4 +163,4 @@ ht-degree: 4%
 
 ## 다음 단계 {#next-steps}
 
-이 자습서를 따라 Experience Platform에서 [!DNL Algolia] 응용 프로그램으로 대상을 내보내는 데이터 흐름을 만들었습니다. [!DNL Algolia] 플랫폼에 대한 자세한 내용은 [Algolia 설명서](https://www.algolia.com/doc/)를 참조하십시오.
+Experience Platform에서 [!DNL Algolia] 응용 프로그램으로 대상을 내보내는 데이터 흐름을 만들었습니다. [!DNL Algolia] 플랫폼에 대한 자세한 내용은 [Algolia 설명서](https://www.algolia.com/doc/)를 참조하십시오.

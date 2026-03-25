@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 대상 계정 삭제
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 대상 계정을 삭제하는 방법을 알아봅니다.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '743'
 ht-degree: 17%
 
 ---
@@ -187,4 +187,4 @@ curl -X DELETE \
 
 ## 다음 단계 {#next-steps}
 
-이 자습서에 따라 [!DNL Flow Service] API를 사용하여 기존 대상 계정을 삭제했습니다. 대상 사용에 대한 자세한 내용은 [대상 개요](/help/destinations/home.md)를 참조하세요.
+[!DNL Flow Service] API를 사용하여 기존 대상 계정을 삭제했습니다. 대상 사용에 대한 자세한 내용은 [대상 개요](/help/destinations/home.md)를 참조하십시오.

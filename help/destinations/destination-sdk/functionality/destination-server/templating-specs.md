@@ -2,9 +2,9 @@
 description: 엔드포인트로 전송되는 HTTP 요청의 형식을 지정하는 방법을 알아봅니다. /authoring/destination-servers 끝점을 사용하여 Adobe Experience Platform Destination SDK에서 대상 서버 템플릿 사양을 구성합니다.
 title: Destination SDK으로 만든 대상에 대한 사양 템플릿
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '510'
 ht-degree: 2%
 
 ---
@@ -71,7 +71,7 @@ Adobe은 [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)와(과) 유사한
 |---|---|---|
 | `httpMethod` | 문자열 | *필수.* Adobe에서 서버 호출에 사용할 메서드입니다. 지원되는 메서드: `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
-| `value` | 문자열 | *필수.* 이 문자열은 Experience Platform에서 보낸 HTTP 요청의 형식을 대상에 필요한 형식으로 지정하는 문자 이스케이프 처리된 템플릿 버전입니다. <br> 서식 파일을 작성하는 방법에 대한 자세한 내용은 [서식 파일 사용](message-format.md#using-templating)의 섹션을 참조하십시오. <br> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. <br> 간단한 변환의 예를 보려면 [프로필 특성](message-format.md#attributes) 변환을 참조하십시오. |
+| `value` | 문자열 | *필수.* 이 문자열은 Experience Platform에서 보낸 HTTP 요청의 형식을 대상에 필요한 형식으로 지정하는 문자 이스케이프 처리된 템플릿 버전입니다. <br> 서식 파일을 작성하는 방법에 대한 자세한 내용은 [서식 파일 사용](message-format.md#using-templating)의 섹션을 참조하십시오. <br> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하십시오. <br> 간단한 변환의 예를 보려면 [프로필 특성](message-format.md#attributes) 변환을 참조하십시오. |
 | `contentType` | 문자열 | *필수.* 서버가 허용하는 콘텐츠 형식입니다. 변환 템플릿에서 생성되는 출력 유형에 따라 지원되는 [HTTP 응용 프로그램 콘텐츠 형식](https://www.iana.org/assignments/media-types/media-types.xhtml#application)이 될 수 있습니다. 대부분의 경우 이 값은 `application/json`(으)로 설정해야 합니다. |
 
 {style="table-layout:auto"}

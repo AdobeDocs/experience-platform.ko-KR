@@ -4,9 +4,9 @@ title: 대상 삭제
 type: Tutorial
 description: 이 자습서에는 Adobe Experience Platform UI에서 기존 대상을 삭제하는 단계가 나열되어 있습니다
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '394'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 [!UICONTROL Browse] 탭에서 대상을 삭제하려면 아래 단계를 따르십시오.
 
-1. [Experience Platform UI](https://platform.adobe.com/)에 로그인하고 왼쪽 탐색 모음에서 **[!UICONTROL Destinations]**&#x200B;을(를) 선택합니다. 기존 대상을 보려면 상단 헤더에서 **[!UICONTROL Browse]**&#x200B;을(를) 선택하십시오.
+1. [Experience Platform UI](https://platform.adobe.com/)&#x200B;(으)로 이동한 다음 왼쪽 탐색 모음에서 **[!UICONTROL Destinations]**&#x200B;을(를) 선택합니다. 기존 대상을 보려면 상단 헤더에서 **[!UICONTROL Browse]**&#x200B;을(를) 선택하십시오.
 
    ![대상 찾아보기](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -36,18 +36,18 @@ ht-degree: 0%
 
    ![대상 필터링](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. 이름 열에서 ![추가 단추](/help/images/icons/more.png) 단추를 선택한 다음 ![삭제 단추](/help/images/icons/delete.png) **[!UICONTROL Delete]**&#x200B;을(를) 선택하여 기존 대상 연결을 제거합니다.
+3. 이름 열에서 ![추가 단추](/help/images/icons/more.png) 단추를 선택한 다음 ![삭제 단추](/help/images/icons/delete.png) **[!UICONTROL Delete]**을(를) 선택하여 기존 대상 연결을 제거합니다.
    ![대상 삭제](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. 대상 연결 제거를 확인하려면 **[!UICONTROL Delete]**&#x200B;을(를) 선택하십시오.
 
    ![대상 삭제 확인](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
-## 대상 세부 사항 페이지에서 대상 삭제{#delete-destination-details-page}
+## 대상 세부 사항 페이지에서 대상 삭제 {#delete-destination-details-page}
 
 대상 세부 사항 페이지에서 대상을 삭제하려면 아래 단계를 따르십시오.
 
-1. [Experience Platform UI](https://platform.adobe.com/)에 로그인하고 왼쪽 탐색 모음에서 **[!UICONTROL Destinations]**&#x200B;을(를) 선택합니다. 기존 대상을 보려면 상단 헤더에서 **[!UICONTROL Browse]**&#x200B;을(를) 선택하십시오.
+1. [Experience Platform UI](https://platform.adobe.com/)&#x200B;(으)로 이동한 다음 왼쪽 탐색 모음에서 **[!UICONTROL Destinations]**&#x200B;을(를) 선택합니다. 기존 대상을 보려면 상단 헤더에서 **[!UICONTROL Browse]**&#x200B;을(를) 선택하십시오.
 
    ![대상 찾아보기](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -75,6 +75,6 @@ ht-degree: 0%
 
    ![대상 삭제 확인](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
-   >[!NOTE]
-   >
-   >서버 로드에 따라 [!DNL Experience Platform]에서 대상을 삭제하는 데 몇 분 정도 걸릴 수 있습니다.
+>[!NOTE]
+>
+>서버 로드에 따라 [!DNL Experience Platform]에서 대상을 삭제하는 데 몇 분 정도 걸릴 수 있습니다.

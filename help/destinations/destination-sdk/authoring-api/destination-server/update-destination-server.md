@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Adobe Experience Platform Destination SDK을 통해 기존 대상 서버 구성을 업데이트하는 데 사용되는 API 호출을 구현합니다.
 title: 대상 서버 구성 업데이트
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1098'
 ht-degree: 8%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 8%
 
 ## 대상 서버 구성 업데이트 {#update}
 
-업데이트된 페이로드로 [&#x200B; 끝점에 대한 &#x200B;](create-destination-server.md) 요청을 수행하여 `PUT`기존`/authoring/destination-servers` 대상 서버 구성을 업데이트할 수 있습니다.
+업데이트된 페이로드로 [ 끝점에 대한 ](create-destination-server.md) 요청을 수행하여 `PUT`기존`/authoring/destination-servers` 대상 서버 구성을 업데이트할 수 있습니다.
 
 >[!TIP]
 >
@@ -98,7 +98,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | `urlBasedDestination.url.value` | 문자열 | *필수.* Experience Platform에서 연결할 API 끝점의 주소를 입력합니다. |
 | `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe에서 서버 호출에 사용할 메서드입니다. 옵션은 `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`입니다. |
 | `httpTemplate.requestBody.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
-| `httpTemplate.requestBody.value` | 문자열 | *필수.* 이 문자열은 Experience Platform 고객의 데이터를 서비스에 필요한 형식으로 변환하는 문자 이스케이프 처리된 버전입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. </li><li> 간단한 변환의 예를 보려면 [프로필 특성](../../functionality/destination-server/message-format.md#attributes) 변환을 참조하십시오. </li></ul> |
+| `httpTemplate.requestBody.value` | 문자열 | *필수.* 이 문자열은 Experience Platform 고객의 데이터를 서비스에 필요한 형식으로 변환하는 문자 이스케이프 처리된 버전입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하십시오. </li><li> 간단한 변환의 예를 보려면 [프로필 특성](../../functionality/destination-server/message-format.md#attributes) 변환을 참조하십시오. </li></ul> |
 | `httpTemplate.contentType` | 문자열 | *필수.* 서버가 허용하는 콘텐츠 형식입니다. 이 값은 `application/json`일 수 있습니다. |
 
 {style="table-layout:auto"}

@@ -3,7 +3,7 @@ keywords: clicktale;clicktale 확장 프로그램;clicktale 대상
 title: Clicktale 확장
 description: Clicktale 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: fb721f0a-6026-4d7b-ba42-2e540e9c5426
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '421'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-[!DNL Clicktale] 태그 확장을 사용하면 [!DNL Clicktale's] 비주얼 편집기를 사용하여 코드를 배포하고 데이터 요소를 매핑할 수 있습니다.
+[!DNL Clicktale] 태그 확장을 사용하여 [!DNL Clicktale's] 비주얼 편집기를 사용하여 코드를 배포하고 데이터 요소를 매핑합니다.
 
 [!DNL Clicktale]은(는) [!DNL Adobe Experience Platform]의 analytics 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html)의 확장 페이지를 참조하십시오.
 

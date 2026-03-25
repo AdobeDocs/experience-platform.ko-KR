@@ -4,9 +4,9 @@ title: 대상 계정 업데이트
 type: Tutorial
 description: 이 자습서에는 Adobe Experience Platform UI에서 대상 계정을 업데이트하는 단계가 나와 있습니다
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-**[!UICONTROL Accounts]** 탭에는 다양한 대상으로 설정한 연결에 대한 세부 정보가 표시됩니다. 각 대상 계정에서 확인할 수 있는 모든 정보는 [계정 개요](../ui/destinations-workspace.md#accounts)를 참조하세요.
+**[!UICONTROL Accounts]** 탭에는 다양한 대상으로 설정한 연결에 대한 세부 정보가 표시됩니다. 각 대상 계정에 사용할 수 있는 모든 정보는 [계정 개요](../ui/destinations-workspace.md#accounts)를 참조하십시오.
 
 이 튜토리얼에서는 Experience Platform UI를 사용하여 대상 계정 세부 사항을 업데이트하는 단계를 설명합니다.
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 기존 대상에 대한 연결 세부 사항을 업데이트하려면 아래 단계를 따르십시오.
 
-1. [Experience Platform UI](https://platform.adobe.com/)에 로그인하고 왼쪽 탐색 모음에서 **[!UICONTROL Destinations]**&#x200B;을(를) 선택합니다. 기존 계정을 보려면 상단 헤더에서 **[!UICONTROL Accounts]**&#x200B;을(를) 선택하십시오.
+1. [Experience Platform UI](https://platform.adobe.com/)&#x200B;(으)로 이동한 다음 왼쪽 탐색 모음에서 **[!UICONTROL Destinations]**&#x200B;을(를) 선택합니다. 기존 계정을 보려면 상단 헤더에서 **[!UICONTROL Accounts]**&#x200B;을(를) 선택하십시오.
 
    ![계정 탭](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -63,6 +63,6 @@ ht-degree: 0%
 
 ## 다음 단계 {#next-steps}
 
-이 자습서에 따라 **[!UICONTROL destinations]** 작업 영역을 사용하여 기존 계정을 업데이트했습니다.
+**[!UICONTROL destinations]** 작업 영역을 사용하여 기존 계정을 업데이트했습니다.
 
-대상에 대한 자세한 내용은 [대상 개요](../catalog/overview.md)를 참조하세요.
+대상에 대한 자세한 내용은 [대상 개요](../catalog/overview.md)를 참조하십시오.

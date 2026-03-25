@@ -1,10 +1,10 @@
 ---
-description: Destination SDK을 사용하여 사용자 지정 파일 형식 지정 옵션 및 사용자 지정 파일 이름 구성으로 Azure Blob 저장 공간 대상을 구성하는 방법에 대해 알아봅니다.
+description: Destination SDK을 사용하여 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Azure Blob 스토리지 대상을 구성하는 방법을 알아봅니다.
 title: 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성을 사용하여 Azure Blob 저장소 대상을 구성합니다.
 exl-id: effbd218-3a7c-4986-9fba-f5727a21e480
-source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '710'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-이 페이지에서는 Destination SDK을 사용하여 사용자 지정 [파일 서식 옵션](configure-file-formatting-options.md) 및 사용자 지정 [파일 이름 구성](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration)으로 [!DNL Azure Blob Storage] 대상을 구성하는 방법에 대해 설명합니다.
+이 페이지에서는 Destination SDK을 사용하여 사용자 지정 [!DNL Azure Blob Storage]파일 서식 옵션[ 및 사용자 지정 ](configure-file-formatting-options.md)파일 이름 구성[으로 ](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) 대상을 구성하는 방법에 대해 설명합니다.
 
-이 페이지에는 Azure Blob 저장 공간 대상에 사용할 수 있는 모든 구성 옵션이 표시됩니다. 아래 단계에 표시된 구성을 편집하거나 필요에 따라 구성의 특정 부분을 삭제할 수 있습니다.
+이 페이지에는 Azure Blob 스토리지 대상에 사용할 수 있는 모든 구성 옵션이 표시됩니다. 아래 단계에 표시된 구성을 편집하거나 필요에 따라 구성의 특정 부분을 삭제할 수 있습니다.
 
 아래에 사용된 매개 변수에 대한 자세한 설명은 대상 SDK의 [구성 옵션](../../functionality/configuration-options.md)을 참조하세요.
 
 ## 전제 조건 {#prerequisites}
 
-아래 설명된 단계로 진행하기 전에 [Destination SDK 시작](../../getting-started.md) 페이지에서 Destination SDK API를 사용하는 데 필요한 Adobe I/O 인증 자격 증명 및 기타 필수 구성 요소를 얻는 방법에 대한 정보를 읽어 보십시오.
+아래 설명된 단계로 진행하기 전에 [Destination SDK 시작하기](../../getting-started.md) 페이지에서 Destination SDK API를 사용하는 데 필요한 Adobe I/O 인증 자격 증명 및 기타 필수 구성 요소를 얻는 방법에 대한 정보를 읽어 보십시오.
 
 ## 1단계: 서버 및 파일 구성 만들기 {#create-server-file-configuration}
 
@@ -408,7 +408,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 3단계: Experience Platform UI 확인 {#verify-ui}
 
-위의 구성에 따라 이제 Experience Platform 카탈로그에 사용할 새 개인 대상 카드가 표시됩니다.
+위의 구성을 기반으로 Experience Platform 카탈로그에 사용할 새 개인 대상 카드가 표시됩니다.
 
 ![선택한 대상 카드가 있는 대상 카탈로그 페이지를 표시하는 화면 기록입니다.](../../assets/guides/batch/blob-destination-card.gif)
 
@@ -430,7 +430,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 위에 언급된 필드를 조정하려면 [단계 1](#create-server-file-configuration)과 [단계 2](#create-destination-configuration)을(를) 반복하여 필요에 따라 구성을 수정하십시오.
 
-## 4단계: (선택 사항) 대상 Publish {#publish-destination}
+## 4단계: (선택 사항) 대상 게시 {#publish-destination}
 
 >[!NOTE]
 >
@@ -444,8 +444,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 >
 >이 단계는 직접 사용할 개인 대상을 만들고 다른 고객이 사용할 대상 카탈로그에 게시하려고 하지 않는 경우에는 필요하지 않습니다.
 
-[제품화된 통합을 만드는 ISV(독립 소프트웨어 공급업체) 또는 SI(시스템 통합자)인 경우](../../overview.md#productized-custom-integrations) [셀프서비스 설명서 프로세스](../../docs-framework/documentation-instructions.md)를 사용하여 [Experience Platform 대상 카탈로그](../../../catalog/overview.md)에서 대상에 대한 제품 설명서 페이지를 만드십시오.
+[제품화된 통합을 만드는 ISV(독립 소프트웨어 공급업체) 또는 SI(시스템 통합자)인 경우](../../overview.md#productized-custom-integrations) [셀프 서비스 설명서 프로세스](../../docs-framework/documentation-instructions.md)를 사용하여 [Experience Platform 대상 카탈로그](../../../catalog/overview.md)에서 대상에 대한 제품 설명서 페이지를 만드십시오.
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽으면 이제 Destination SDK을 사용하여 사용자 지정 [!DNL Azure Blob Storage] 대상을 작성하는 방법을 알 수 있습니다. 그런 다음 팀은 [파일 기반 대상에 대한 활성화 워크플로](../../../ui/activate-batch-profile-destinations.md)를 사용하여 데이터를 대상으로 내보낼 수 있습니다.
+이제 Destination SDK을 사용하여 사용자 지정 [!DNL Azure Blob Storage] 대상을 작성하는 방법을 알 수 있습니다. 그런 다음 팀은 [파일 기반 대상에 대한 활성화 워크플로](../../../ui/activate-batch-profile-destinations.md)를 사용하여 데이터를 대상으로 내보낼 수 있습니다.

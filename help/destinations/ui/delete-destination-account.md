@@ -4,9 +4,9 @@ title: 대상 계정 삭제
 type: Tutorial
 description: 이 자습서에는 Adobe Experience Platform UI에서 대상 계정을 삭제하는 단계가 나열되어 있습니다
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '285'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-**[!UICONTROL Accounts]** 탭에는 다양한 대상으로 설정한 연결에 대한 세부 정보가 표시됩니다. 각 대상 계정에서 확인할 수 있는 모든 정보는 [계정 개요](../ui/destinations-workspace.md#accounts)를 참조하세요.
+**[!UICONTROL Accounts]** 탭에는 다양한 대상으로 설정한 연결에 대한 세부 정보가 표시됩니다. 각 대상 계정에 사용할 수 있는 모든 정보는 [계정 개요](../ui/destinations-workspace.md#accounts)를 참조하십시오.
 
 이 자습서에서는 Experience Platform UI를 사용하여 더 이상 필요하지 않은 대상 계정을 삭제하는 단계를 설명합니다.
 
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 기존 대상 계정을 삭제하려면 아래 단계를 따르십시오.
 
-1. [Experience Platform UI](https://platform.adobe.com/)에 로그인하고 왼쪽 탐색 모음에서 **[!UICONTROL Destinations]**&#x200B;을(를) 선택합니다. 기존 계정을 보려면 상단 헤더에서 **[!UICONTROL Accounts]**&#x200B;을(를) 선택하십시오.
+1. [Experience Platform UI](https://platform.adobe.com/)&#x200B;(으)로 이동한 다음 왼쪽 탐색 모음에서 **[!UICONTROL Destinations]**&#x200B;을(를) 선택합니다. 기존 계정을 보려면 상단 헤더에서 **[!UICONTROL Accounts]**&#x200B;을(를) 선택하십시오.
 
    ![계정 탭](../assets/ui/delete-accounts/accounts-tab.png)
 
@@ -47,6 +47,6 @@ ht-degree: 1%
 
 ## 다음 단계 {#next-steps}
 
-이 자습서에 따라 대상 작업 영역을 사용하여 기존 계정을 삭제했습니다.
+대상 작업 영역을 사용하여 기존 계정을 삭제했습니다.
 
 [!DNL Flow Service] API를 사용하여 프로그래밍 방식으로 이러한 작업을 수행하는 방법에 대한 단계는 [흐름 서비스 API를 사용하여 연결 삭제](../api/delete-destination-account.md)에 대한 자습서를 참조하십시오

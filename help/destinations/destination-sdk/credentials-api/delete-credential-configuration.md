@@ -2,9 +2,9 @@
 description: 이 페이지는 자격 증명 구성 Adobe Experience Platform Destination SDK을 삭제하는 데 사용되는 API 호출을 예시합니다.
 title: 자격 증명 구성 삭제
 exl-id: a540e349-043c-4f04-8ca8-f650b9943492
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '415'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 Adobe과 대상 플랫폼 사이에 글로벌 인증 시스템이 있고 [!DNL Experience Platform] 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우에만 이 API 끝점을 사용하여 자격 증명 구성을 만드십시오. 이 경우 `/credentials` API 끝점을 사용하여 자격 증명 구성을 만들어야 합니다.
 
-글로벌 인증 시스템을 사용하는 경우 `"authenticationRule":"PLATFORM_AUTHENTICATION"`새 대상 구성을 만드는 경우[에 &#x200B;](../functionality/destination-configuration/destination-delivery.md)대상 게재[&#x200B; 구성에서 &#x200B;](../authoring-api/destination-configuration/create-destination-configuration.md)을(를) 설정해야 합니다. 그런 다음 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을 만들고 `authenticationId`대상 게재[&#x200B; 구성의 &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
+글로벌 인증 시스템을 사용하는 경우 `"authenticationRule":"PLATFORM_AUTHENTICATION"`새 대상 구성을 만드는 경우[에 ](../functionality/destination-configuration/destination-delivery.md)대상 게재[ 구성에서 ](../authoring-api/destination-configuration/create-destination-configuration.md)을(를) 설정해야 합니다. 그런 다음 [자격 증명 구성](../credentials-api/create-credential-configuration.md)을 만들고 `authenticationId`대상 게재[ 구성의 ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) 매개 변수에 자격 증명 개체의 ID를 전달해야 합니다.
 
 >[!IMPORTANT]
 >
@@ -39,7 +39,7 @@ Adobe과 대상 플랫폼 사이에 글로벌 인증 시스템이 있고 [!DNL E
 
 ## 자격 증명 구성 삭제 {#delete}
 
-삭제할 자격 증명 구성의 [을(를) 사용하여 &#x200B;](create-credential-configuration.md) 끝점에 `DELETE`을(를) 요청하여 `/authoring/credentials`기존`{INSTANCE_ID}` 자격 증명 구성을 삭제할 수 있습니다.
+삭제할 자격 증명 구성의 [을(를) 사용하여 ](create-credential-configuration.md) 끝점에 `DELETE`을(를) 요청하여 `/authoring/credentials`기존`{INSTANCE_ID}` 자격 증명 구성을 삭제할 수 있습니다.
 
 기존 대상 구성 및 해당 `{INSTANCE_ID}`을(를) 가져오려면 [자격 증명 구성 검색](retrieve-credential-configuration.md)에 대한 문서를 참조하십시오.
 

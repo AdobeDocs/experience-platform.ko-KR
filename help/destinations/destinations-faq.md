@@ -3,9 +3,9 @@ keywords: 대상; 질문; faq; faq; 대상 faq
 title: 자주 묻는 질문
 description: Adobe Experience Platform 대상에 대해 가장 자주 묻는 질문에 대한 답변
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1632'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-이 문서에서는 [!DNL Adobe Experience Platform] 대상에 대한 FAQ에 대한 답변을 제공합니다. 모든 [!DNL Experience Platform] API에서 발생한 문제를 포함하여 다른 [!DNL Experience Platform] 서비스와 관련된 질문 및 문제 해결은 [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md)를 참조하세요.
+이 문서에서는 [!DNL Adobe Experience Platform] 대상에 대한 FAQ에 대한 답변을 제공합니다. 모든 [!DNL Experience Platform] API에서 발생한 문제를 포함하여 다른 [!DNL Experience Platform] 서비스와 관련된 질문 및 문제 해결은 [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
 
 ## 일반 대상 질문 {#general}
 
@@ -229,7 +229,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### [!DNL Adobe Target]에서 활성화된 특성은 어디에서 볼 수 있습니까? {#target-activated-attributes-location}
 
 +++답변
-[JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=ko) 및 [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=ko) 오퍼의 Target에서 특성을 사용할 수 있습니다.
+[JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) 및 [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) 오퍼의 Target에서 특성을 사용할 수 있습니다.
 +++
 
 ### 데이터스트림 없이 대상을 만든 다음 나중에 동일한 대상에 데이터스트림을 추가할 수 있습니까? {#destination-without-datastream}
@@ -265,7 +265,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### [!DNL Adobe Target] 및 [!DNL Custom Personalization] 대상이 [!DNL HIPAA]을(를) 준수합니까? {#hipaa-compliance}
 
 +++답변
-[!DNL Adobe Target]이(가) [!DNL HIPPA][[!DNL Adobe Healthcare Shield]과(와) 호환되지 않습니다. &#x200B;](https://business.adobe.com/kr/solutions/industries/healthcare.html) 고객은 [!DNL HIPPA] 또는 [!DNL Adobe Target] 대상을 통해 Edge 개인화를 사용하기 전에 사용자 지정 최적화 채널에 대한 [!DNL Custom Personalization] 준비 상태를 자체 법률팀에 확인해야 합니다.
+[!DNL Adobe Target]이(가) [!DNL HIPPA][[!DNL Adobe Healthcare Shield]과(와) 호환되지 않습니다. ](https://business.adobe.com/solutions/industries/healthcare.html) 고객은 [!DNL HIPPA] 또는 [!DNL Adobe Target] 대상을 통해 Edge 개인화를 사용하기 전에 사용자 지정 최적화 채널에 대한 [!DNL Custom Personalization] 준비 상태를 자체 법률팀에 확인해야 합니다.
 
 동의 정책 관리를 규모에 맞게 적용해야 하는 사용 사례의 경우 고객은 [!DNL Adobe Privacy & Security Shield]을(를) 구매해야 합니다. [!DNL Adobe Privacy & Security Shield] 기능은 고급 기능 세트로 판매되며 별도로 구입할 수 없습니다.
 

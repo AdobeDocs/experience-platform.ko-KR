@@ -4,9 +4,9 @@ description: 이 커넥터를 사용하여 데이터 강화를 위해 Real-Time 
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: label="Beta" type="Informative"
 exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1413'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 ## 개요 {#overview}
 
-분석, 세분화 및 타기팅 응용 프로그램에서 사용할 수 있도록 [!DNL Acxiom Data Enhancement] 커넥터를 사용하여 고객 프로필에 추가 설명 데이터를 제공하십시오. 수백 개의 요소를 사용할 수 있으므로 데이터를 더 잘 세그먼트화하고 모델링할 수 있으므로 더 정확한 타겟팅 및 예측 모델링을 수행할 수 있습니다.
+분석, 세분화 및 타기팅 응용 프로그램에서 사용할 수 있도록 [!DNL Acxiom Data Enhancement] 커넥터를 사용하여 고객 프로필에 추가 설명 데이터를 제공하십시오. 수백 개의 요소를 사용할 수 있으므로 세분화 및 데이터 모델링이 향상되어 더 정확한 타겟팅 및 예측 모델링이 가능합니다.
 
 ![자사 데이터를 Acxiom으로 내보낸 다음 보강된 데이터를 다시 Real-Time CDP으로 가져오는 마케팅 다이어그램](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow-data-enhancement.png)
 
@@ -179,7 +179,7 @@ Acxiom 측에서 파일을 올바르게 처리하려면 이름 및 주소 요소
 
 ## 다음 단계 {#next-steps}
 
-이 자습서를 따라 Experience Platform에서 [!DNL Acxiom] 관리 S3 위치로 프로필 데이터를 내보내는 데이터 흐름을 만들었습니다. 다음으로, 처리를 설정할 수 있도록 계정 이름, 파일 이름 및 버킷 경로를 사용하여 Acxiom 담당자에게 문의해야 합니다.
+Experience Platform에서 [!DNL Acxiom] 관리 S3 위치로 프로필 데이터를 내보내는 데이터 흐름을 만들었습니다. 다음으로, 처리를 설정할 수 있도록 계정 이름, 파일 이름 및 버킷 경로를 사용하여 Acxiom 담당자에게 문의해야 합니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

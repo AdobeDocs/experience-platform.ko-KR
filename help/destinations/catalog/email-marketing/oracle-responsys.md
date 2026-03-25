@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;oracle responsys 대상
 title: Oracle Responsys 연결
 description: Responsys는 이메일, 모바일, 디스플레이 및 소셜에서 상호 작용을 개인화하기 위해 Oracle에서 제공하는 크로스 채널 마케팅 캠페인을 위한 엔터프라이즈 이메일 마케팅 도구입니다.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '778'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 [Responsys](https://www.oracle.com/cx/marketing/campaign-management/)은(는) [!DNL Oracle]이(가) 이메일, 모바일, 디스플레이 및 소셜에서 상호 작용을 개인화하기 위해 제공하는 크로스 채널 마케팅 캠페인용 엔터프라이즈 이메일 마케팅 도구입니다.
 
-대상 데이터를 [!DNL Oracle Responsys]에 보내려면 먼저 [에서 &#x200B;](#connect-destination)대상에 연결[!DNL Adobe Experience Platform]한 다음 저장소 위치에서 [(으)로 &#x200B;](#import-data-into-responsys)데이터 가져오기를 설정[!DNL Oracle Responsys]해야 합니다.
+대상 데이터를 [!DNL Oracle Responsys]에 보내려면 먼저 [에서 ](#connect-destination)대상에 연결[!DNL Adobe Experience Platform]한 다음 저장소 위치에서 [(으)로 ](#import-data-into-responsys)데이터 가져오기를 설정[!DNL Oracle Responsys]해야 합니다.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -58,7 +58,7 @@ ht-degree: 4%
 
 SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe에서는 특정 허용 목록에 추가하다에 IP 범위를 추가할 것을 권장합니다.
 
-허용 목록에 추가하다에 Adobe IP를 추가해야 하는 경우 [SFTP 대상에 대한 IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md)을 참조하세요.
+허용 목록에 추가하다 IP에 Adobe IP를 추가해야 하는 경우 [SFTP 대상의 IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md)을 참조하십시오.
 
 ## 대상에 연결 {#connect}
 
@@ -118,7 +118,7 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ### 대상 속성 {#destination-attributes}
 
-이 대상에 대한 대상을 활성화할 때 [공용 구조체 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 [대상자를 이메일 마케팅 대상으로 활성화할 때의 모범 사례](overview.md#best-practices)를 참조하세요.
+이 대상에 대한 대상을 활성화할 때 [공용 구조체 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 [대상자를 이메일 마케팅 대상으로 활성화할 때의 모범 사례](overview.md#best-practices)를 참조하십시오.
 
 ## 내보낸 데이터 {#exported-data}
 
@@ -126,4 +126,4 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## [!DNL Oracle Responsys]&#x200B;(으)로 데이터 가져오기 설정 {#import-data-into-responsys}
 
-[!DNL Experience Platform]을(를) [!DNL SFTP] 저장소에 연결한 후 저장소 위치에서 [!DNL Oracle Responsys]&#x200B;(으)로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대해 알아보려면 [에서 &#x200B;](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm)연락처 또는 계정 가져오기[!DNL Oracle Responsys Help Center]를 참조하십시오.
+[!DNL Experience Platform]을(를) [!DNL SFTP] 저장소에 연결한 후 저장소 위치에서 [!DNL Oracle Responsys]&#x200B;(으)로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대해 알아보려면 [에서 ](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm)연락처 또는 계정 가져오기[!DNL Oracle Responsys Help Center]를 참조하십시오.

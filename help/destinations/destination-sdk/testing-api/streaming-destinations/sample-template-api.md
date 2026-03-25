@@ -2,9 +2,9 @@
 description: 대상 테스트 API를 사용하여 대상에 대한 테스트 메시지 변형 템플릿을 생성하는 방법을 알아봅니다.
 title: 샘플 메시지 변환 템플릿 생성
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '373'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->* 여기에서 사용해야 하는 대상 ID는 `instanceId` 끝점을 사용하여 만든 대상 구성에 해당하는 `/destinations`입니다. 자세한 내용은 [대상 구성 검색](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)을 참조하세요.
+>* 여기에서 사용해야 하는 대상 ID는 `instanceId` 끝점을 사용하여 만든 대상 구성에 해당하는 `/destinations`입니다. 자세한 내용은 [대상 구성 검색](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)을 참조하십시오.
 
 **API 형식**
 
@@ -93,7 +93,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 }
 ```
 
-제공한 대상 ID가 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 또는 [이(가) 둘 이상인 &#x200B;](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)최상의 노력 집계`maxUsersPerRequest`인 대상 서버 템플릿에 해당하는 경우 요청은 다음과 유사한 샘플 템플릿을 반환합니다.
+제공한 대상 ID가 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 또는 [이(가) 둘 이상인 ](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)최상의 노력 집계`maxUsersPerRequest`인 대상 서버 템플릿에 해당하는 경우 요청은 다음과 유사한 샘플 템플릿을 반환합니다.
 
 ```python
 {#- THIS is an example template for multiple profiles -#}

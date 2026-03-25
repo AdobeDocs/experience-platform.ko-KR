@@ -2,9 +2,9 @@
 description: Adobe Experience Platform의 대상 서비스는 대상 기능을 빌드하는 여러 구성 요소에 대한 구성 끝점을 사용합니다. 이러한 구성 요소를 결합하여 Experience Platform이 대상 파트너에 연결하고, 사용자 지정 메시지를 전송하고, 디지털 에코시스템에서 프로필 데이터를 활성화하는 방법에 대해 알아봅니다.
 title: Destination SDK의 구성 옵션
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '817'
 ht-degree: 0%
 
 ---
@@ -56,8 +56,8 @@ ht-degree: 0%
 
 ## 대상 메타데이터 구성 {#audience-metadata-configuration}
 
-이 구성 요소를 사용하여 대상에서 대상을 프로그래밍 방식으로 만들거나, 업데이트하거나, 삭제하는 방법을 구성할 수 있습니다. 파일 기반 대상의 경우 파일이 대상에 성공적으로 전달될 때마다 알림을 설정할 수 있습니다. [대상 템플릿 끝점](../metadata-api/create-audience-template.md)을 통해 이 기능을 구성할 수 있습니다.
+이 구성 요소를 사용하여 대상에서 대상을 프로그래밍 방식으로 만들거나, 업데이트하거나, 삭제하는 방법을 구성합니다. 파일 기반 대상의 경우 파일이 대상에 성공적으로 전달될 때마다 알림을 설정하는 데 사용합니다. [대상 템플릿 끝점](../metadata-api/create-audience-template.md)을 통해 이 기능을 구성할 수 있습니다.
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽으면 이제 Destination SDK에서 제공하는 기능에 대한 일반적인 개요와 특정 구성에 대한 자세한 내용을 보기 위해 읽을 페이지를 얻을 수 있습니다. 다음으로, Destination SDK을 사용하여 [스트리밍을 구성](../guides/configure-destination-instructions.md) 또는 [파일 기반 대상](../guides/configure-file-based-destination-instructions.md)을 구성하는 단계를 모두 포함한 안내서를 읽을 수 있습니다.
+이제 Destination SDK에서 제공하는 기능에 대한 일반적인 개요와 특정 구성에 대한 자세한 내용을 보기 위해 읽을 페이지를 살펴볼 수 있습니다. 다음으로, Destination SDK을 사용하여 [스트리밍을 구성](../guides/configure-destination-instructions.md) 또는 [파일 기반 대상](../guides/configure-file-based-destination-instructions.md)을 구성하는 단계를 모두 포함한 안내서를 읽을 수 있습니다.

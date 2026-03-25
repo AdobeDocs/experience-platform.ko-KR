@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;oracle eloqua;oracle
 title: (파일) Oracle Eloqua 연결
 description: Oracle Eloqua는 B2B 마케터 및 조직이 마케팅 캠페인 및 판매 리드 생성을 관리할 수 있도록 지원하기 위해 Oracle에서 제공하는 마케팅 자동화용 SaaS(Software as a Service) 플랫폼입니다.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '790'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/)은(는) B2B 마케터와 조직이 마케팅 캠페인 및 판매 리드 생성을 관리하는 데 도움을 주기 위해 [!DNL Oracle]에서 제공하는 마케팅 자동화를 위한 SaaS(Software as a Service) 플랫폼입니다.
 
-대상 데이터를 [!DNL Oracle Eloqua]에 보내려면 먼저 [에서 &#x200B;](#connect-destination)대상을 연결[!DNL Adobe Experience Platform]한 다음 저장소 위치에서 [(으)로 &#x200B;](#import-data-into-eloqua)데이터 가져오기를 설정[!DNL Oracle Eloqua]해야 합니다.
+대상 데이터를 [!DNL Oracle Eloqua]에 보내려면 먼저 [에서 ](#connect-destination)대상을 연결[!DNL Adobe Experience Platform]한 다음 저장소 위치에서 [(으)로 ](#import-data-into-eloqua)데이터 가져오기를 설정[!DNL Oracle Eloqua]해야 합니다.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -56,7 +56,7 @@ ht-degree: 3%
 
 SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe에서는 특정 허용 목록에 추가하다에 IP 범위를 추가할 것을 권장합니다.
 
-허용 목록에 추가하다에 Adobe IP를 추가해야 하는 경우 [SFTP 대상에 대한 IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md)을 참조하세요.
+허용 목록에 추가하다 IP에 Adobe IP를 추가해야 하는 경우 [SFTP 대상의 IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md)을 참조하십시오.
 
 ## 대상에 연결 {#connect}
 
@@ -117,7 +117,7 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ### 대상 속성 {#destination-attributes}
 
-이 대상에 대한 대상을 활성화할 때 [공용 구조체 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 [대상자를 이메일 마케팅 대상으로 활성화할 때의 모범 사례](overview.md#best-practices)를 참조하세요.
+이 대상에 대한 대상을 활성화할 때 [공용 구조체 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 [대상자를 이메일 마케팅 대상으로 활성화할 때의 모범 사례](overview.md#best-practices)를 참조하십시오.
 
 ## 내보낸 데이터 {#exported-data}
 
@@ -125,4 +125,4 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## [!DNL Oracle Eloqua]&#x200B;(으)로 데이터 가져오기 설정 {#import-data-into-eloqua}
 
-[!DNL Experience Platform]을(를) [!DNL SFTP] 저장소에 연결한 후 저장소 위치에서 [!DNL Oracle Eloqua]&#x200B;(으)로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대해 알아보려면 [에서 &#x200B;](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)연락처 또는 계정 가져오기[!DNL Oracle Eloqua Help Center]를 참조하십시오.
+[!DNL Experience Platform]을(를) [!DNL SFTP] 저장소에 연결한 후 저장소 위치에서 [!DNL Oracle Eloqua]&#x200B;(으)로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대해 알아보려면 [에서 ](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)연락처 또는 계정 가져오기[!DNL Oracle Eloqua Help Center]를 참조하십시오.

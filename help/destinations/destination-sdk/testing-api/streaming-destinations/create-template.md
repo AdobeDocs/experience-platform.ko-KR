@@ -2,9 +2,9 @@
 description: 대상을 게시하기 전에 대상 테스트 API를 사용하여 스트리밍 대상 메시지 변환 템플릿을 테스트하는 방법을 알아봅니다.
 title: 메시지 변형 템플릿 만들기 및 테스트
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Destination SDK에서 대상을 만드는 첫 번째 단계 중 하나는 대상
 
 변환에 성공하려면 다음 예제와 유사한 변환 템플릿을 제공해야 합니다. [세그먼트, ID 및 프로필 특성을 보내는 템플릿을 만듭니다](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
-Adobe은 Adobe XDM 형식의 데이터를 대상에서 지원하는 형식으로 변환하는 메시지 템플릿을 만들고 테스트할 수 있는 템플릿 도구를 제공합니다. 이 도구에는 사용할 수 있는 두 개의 API 끝점이 있습니다.
+Adobe은 Adobe XDM 형식의 데이터를 대상에서 지원하는 형식으로 변환하는 메시지 템플릿을 만들고 테스트하기 위한 템플릿 도구를 제공합니다. 이 도구에는 사용할 수 있는 두 개의 API 끝점이 있습니다.
 
 * *샘플 템플릿 API*&#x200B;를 사용하여 샘플 템플릿을 가져옵니다.
 * 대상의 예상 데이터 형식과 결과를 비교할 수 있도록 *렌더링 템플릿 API*&#x200B;를 사용하여 샘플 템플릿을 렌더링합니다. 내보낸 데이터를 대상에 필요한 데이터 형식과 비교한 후 템플릿을 편집할 수 있습니다. 이렇게 하면 생성하는 내보낸 데이터가 대상에 필요한 데이터 형식과 일치합니다.
@@ -109,7 +109,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 }
 ```
 
-제공한 대상 ID가 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 또는 [이(가) 둘 이상인 &#x200B;](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)최상의 노력 집계`maxUsersPerRequest`인 대상 서버 템플릿에 해당하는 경우 요청은 다음과 유사한 샘플 템플릿을 반환합니다.
+제공한 대상 ID가 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 또는 [이(가) 둘 이상인 ](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)최상의 노력 집계`maxUsersPerRequest`인 대상 서버 템플릿에 해당하는 경우 요청은 다음과 유사한 샘플 템플릿을 반환합니다.
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
@@ -158,7 +158,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## 템플릿 API 렌더링 {#render-template-api}
 
-[샘플 템플릿 API](create-template.md#sample-template-api)를 사용하여 메시지 변환 템플릿을 만든 후 [템플릿을 렌더링](render-template-api.md)하여 이를 기반으로 내보낸 데이터를 생성할 수 있습니다. [!DNL Adobe Experience Platform]에서 대상으로 내보낼 프로필이 대상의 예상 형식과 일치하는지 확인할 수 있습니다.
+[샘플 템플릿 API](create-template.md#sample-template-api)를 사용하여 메시지 변환 템플릿을 만든 후 [템플릿을 렌더링](render-template-api.md)하여 이를 기반으로 내보낸 데이터를 생성할 수 있습니다. [!DNL Adobe Experience Platform]이(가) 대상으로 내보낼 프로필이 대상의 예상 형식과 일치하는지 확인하려면 이 옵션을 사용하십시오.
 
 수행할 수 있는 호출 예는 API 참조 를 참조하십시오.
 
@@ -169,4 +169,4 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## 문자가 이스케이프 처리된 템플릿을 대상 서버 구성에 추가합니다. {#add-template-to-server-config}
 
-메시지 변환 템플릿에 만족하면 [의 &#x200B;](../../authoring-api/destination-server/create-destination-server.md)대상 서버 구성`httpTemplate.requestBody.value`에 추가하십시오.
+메시지 변환 템플릿에 만족하면 [의 ](../../authoring-api/destination-server/create-destination-server.md)대상 서버 구성`httpTemplate.requestBody.value`에 추가하십시오.

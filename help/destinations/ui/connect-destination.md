@@ -3,9 +3,9 @@ title: 새 대상 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform에서 대상에 연결하고, 경고를 활성화하고, 연결된 대상에 대한 마케팅 작업을 설정하는 방법을 알아봅니다.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1215'
 ht-degree: 4%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 4%
    * **[!UICONTROL Activate]** 구문을 사용하는 키-값 쌍으로 전달됩니다. 이 대상에 대한 연결이 이미 설정되었습니다. 이 대상은 대상 활성화 및 데이터 세트 내보내기를 지원합니다.
    * **[!UICONTROL Activate audiences]** 구문을 사용하는 키-값 쌍으로 전달됩니다. 이 대상에 대한 연결이 이미 설정되었습니다. 이 대상은 대상자 활성화만 지원합니다.
 
-   이러한 컨트롤의 차이점에 대한 자세한 내용은 대상 작업 영역 설명서의 [카탈로그](../ui/destinations-workspace.md#catalog) 섹션도 참조하십시오.
+   이러한 컨트롤의 차이점에 대한 자세한 내용은 대상 작업 영역 설명서의 [카탈로그](../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
 
    사용 가능한 제어에 따라 **[!UICONTROL Set up]**, **[!UICONTROL Activate]** 또는 **[!UICONTROL Activate audiences]**&#x200B;을(를) 선택하십시오.
 
@@ -109,7 +109,7 @@ ht-degree: 4%
 
 ### 대상 경고 활성화 {#enable-alerts}
 
-1. (선택 사항) 구독하려는 대상 데이터 흐름 경고를 선택합니다. 데이터 흐름을 만들 때 경고를 구독하여 흐름 실행의 상태, 성공 또는 실패와 관련된 경고 메시지를 받을 수 있습니다. 사용 가능한 경고는 연결 중인 대상 유형(파일 기반 또는 스트리밍)에 따라 다릅니다. 대상 데이터 흐름 경고에 대한 자세한 내용은 [컨텍스트 내 대상 경고 구독](alerts.md)을 참조하십시오.
+1. (선택 사항) 구독하려는 대상 데이터 흐름 경고를 선택합니다. 데이터 흐름 생성 시 경고에 가입하여 흐름 실행의 상태, 성공 또는 실패와 관련된 경고 메시지를 받을 수 있습니다. 사용 가능한 경고는 연결 중인 대상 유형(파일 기반 또는 스트리밍)에 따라 다릅니다. 대상 데이터 흐름 경고에 대한 자세한 내용은 [컨텍스트 내 대상 경고 구독](alerts.md)을 참조하십시오.
 
    ![컨텍스트 내 대상 경고 구독 옵션이 강조 표시된 새 대상 구성 대화 상자.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
@@ -123,10 +123,10 @@ ht-degree: 4%
 
    ![사용 가능한 마케팅 작업이 강조 표시된 새 대상 구성 대화 상자 대상에 연결 워크플로를 완료하는 데 사용할 수 있는 컨트롤도 강조 표시됩니다.](../assets/ui/connect-destinations/governance.png)
 
-2. 대상 구성을 저장하려면 **[!UICONTROL Save & Exit]**&#x200B;을(를) 선택하고 대상 데이터 **[!UICONTROL Next]**&#x200B;활성화 흐름[으로 진행하려면 &#x200B;](activation-overview.md)을(를) 선택하십시오.
+2. 대상 구성을 저장하려면 **[!UICONTROL Save & Exit]**&#x200B;을(를) 선택하고 대상 데이터 **[!UICONTROL Next]**&#x200B;활성화 흐름[으로 진행하려면 ](activation-overview.md)을(를) 선택하십시오.
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽고 Experience Platform UI를 사용하여 대상에 대한 연결을 설정하는 방법에 대해 알아보았습니다. 다시 말해서 사용 가능한 연결 매개 변수와 필요한 연결 매개 변수는 대상마다 다릅니다. 대상 유형별 필수 입력 및 사용 가능한 옵션에 대한 특정 정보는 [대상 카탈로그](/help/destinations/catalog/overview.md)의 대상 설명서 페이지를 참조하십시오.
+이제 Experience Platform UI를 사용하여 대상에 대한 연결을 설정하는 방법을 알 수 있습니다. 사용 가능한 연결 매개 변수와 필요한 연결 매개 변수는 대상마다 다릅니다. 대상 유형별 필수 입력 및 사용 가능한 옵션에 대한 특정 정보는 [대상 카탈로그](/help/destinations/catalog/overview.md)의 대상 설명서 페이지를 참조하십시오.
 
-다음으로 [대상 활성화](/help/destinations/ui/activation-overview.md) 또는 [데이터 세트 내보내기](/help/destinations/ui/export-datasets.md)를 대상으로 진행할 수 있습니다.
+다음으로 [대상 활성화](/help/destinations/ui/activation-overview.md) 또는 [데이터 세트 내보내기](/help/destinations/ui/export-datasets.md)를 진행합니다.

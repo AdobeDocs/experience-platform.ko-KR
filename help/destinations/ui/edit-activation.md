@@ -4,9 +4,9 @@ title: 활성화 데이터 흐름 편집
 type: Tutorial
 description: 이 문서의 단계에 따라 Adobe Experience Platform에서 기존 활성화 데이터 흐름을 편집합니다.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '915'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 기존 활성화 데이터 흐름을 검색하고 편집할 데이터 흐름을 식별하려면 아래 단계를 따르십시오.
 
-1. [Experience Platform UI](https://platform.adobe.com/)에 로그인하고 왼쪽 탐색 모음에서 **[!UICONTROL Destinations]**&#x200B;을(를) 선택합니다. 기존 대상 데이터 흐름을 보려면 상단 헤더에서 **[!UICONTROL Browse]**&#x200B;을(를) 선택하십시오.
+1. [Experience Platform UI](https://platform.adobe.com/)&#x200B;(으)로 이동한 다음 왼쪽 탐색 모음에서 **[!UICONTROL Destinations]**&#x200B;을(를) 선택합니다. 기존 대상 데이터 흐름을 보려면 상단 헤더에서 **[!UICONTROL Browse]**&#x200B;을(를) 선택하십시오.
 
    ![대상 찾아보기](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 ![대상 데이터 흐름 활성화 실행 옵션을 보여 주는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/activate-audiences.png)
 
-활성화 워크플로에서 **[!UICONTROL Scheduling]** 단계를 선택하여 데이터 흐름의 활성화 일정 및 내보내기 빈도를 편집합니다. 이 단계에서는 데이터를 대상으로 내보내는 빈도를 구성할 수 있습니다.
+활성화 워크플로에서 **[!UICONTROL Scheduling]** 단계를 선택하여 데이터 흐름의 활성화 일정 및 내보내기 빈도를 편집합니다. 이 단계를 사용하여 데이터를 대상으로 내보내는 빈도를 구성합니다.
 
 활성화 워크플로의 **[!UICONTROL Scheduling]** 단계에서 다음을 수행할 수 있습니다.
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 ![대상 데이터 흐름 활성화 실행 옵션을 보여 주는 Experience Platform UI 이미지입니다.](../assets/ui/edit-activation/activate-audiences.png)
 
-활성화 워크플로에서 **[!UICONTROL Mapping]** 단계를 선택하여 활성화 데이터 흐름의 매핑된 속성 및 ID를 편집합니다. 이를 통해 대상으로 내보낼 프로필 속성 및 ID를 조정할 수 있습니다.
+활성화 워크플로에서 **[!UICONTROL Mapping]** 단계를 선택하여 활성화 데이터 흐름의 매핑된 속성 및 ID를 편집합니다. 이 단계를 사용하여 대상으로 내보낼 프로필 속성 및 ID를 조정합니다.
 
 활성화 워크플로의 **[!UICONTROL Mapping]** 단계에서 다음을 수행할 수 있습니다.
 
@@ -142,6 +142,6 @@ ht-degree: 0%
 
 ## 다음 단계 {#next-steps}
 
-이 자습서에 따라 **[!UICONTROL destinations]** 작업 영역을 사용하여 기존 대상 데이터 흐름을 업데이트했습니다.
+**[!UICONTROL destinations]** 작업 영역을 사용하여 대상 데이터 흐름을 업데이트했습니다.
 
-대상에 대한 자세한 내용은 [대상 개요](../catalog/overview.md)를 참조하세요.
+대상에 대한 자세한 내용은 [대상 개요](../catalog/overview.md)를 참조하십시오.

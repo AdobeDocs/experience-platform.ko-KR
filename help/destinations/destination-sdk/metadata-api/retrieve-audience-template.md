@@ -2,9 +2,9 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 템플릿을 검색하는 데 사용되는 API 호출을 예시합니다.
 title: 대상자 템플릿 검색
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '418'
 ht-degree: 1%
 
 ---

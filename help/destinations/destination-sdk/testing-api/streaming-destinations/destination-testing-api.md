@@ -2,9 +2,9 @@
 description: 대상 테스트 API를 사용하여 스트리밍 대상이 올바르게 구성되었는지 테스트하고 구성된 대상에 대한 데이터 흐름의 무결성을 확인하는 방법에 대해 알아봅니다.
 title: 샘플 프로필을 사용하여 스트리밍 대상 테스트
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '602'
 ht-degree: 1%
 
 ---
@@ -26,8 +26,8 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* 이 API를 사용하려면 Experience Platform UI에서 대상에 대한 기존 연결이 있어야 합니다. 자세한 내용은 [대상에 연결](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ko) 및 [대상에 프로필 및 대상자 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=ko)를 참조하십시오.
->* 대상에 대한 연결을 설정한 후 [대상과의 연결을 탐색](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=ko)할 때 이 끝점에 대한 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다.
+>* 이 API를 사용하려면 Experience Platform UI에서 대상에 대한 기존 연결이 있어야 합니다. 자세한 내용은 [대상에 연결](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 및 [대상에 프로필 및 대상자 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html)를 참조하십시오.
+>* 대상에 대한 연결을 설정한 후 [대상과의 연결을 탐색](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html)할 때 이 끝점에 대한 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다.
 >![대상 인스턴스 ID](../../assets/testing-api/get-destination-instance-id.png)을(를) 가져오는 방법 UI 이미지
 
 ## 대상 테스트 API 작업 시작 {#get-started}

@@ -2,9 +2,9 @@
 description: 파일 기반 대상에 대한 파일 서식 옵션 구성
 title: Destination SDK을 사용하여 파일 기반 대상에 대한 파일 형식 지정 옵션을 구성하는 방법에 대해 알아봅니다.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '896'
 ht-degree: 1%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-Destination SDK을 사용하면 내보낸 파일의 형식 지정 및 압축 옵션을 스토리지 위치의 다운스트림 요구 사항에 맞게 광범위하게 조정할 수 있습니다.
+Destination SDK을 사용하여 내보낸 파일의 형식 지정 및 압축 옵션을 스토리지 위치의 다운스트림 요구 사항에 맞게 광범위하게 조정할 수 있습니다.
 
 이 페이지에서는 Destination SDK을 사용하여 파일 기반 대상에 대한 파일 형식 지정 옵션을 구성하는 방법에 대해 설명합니다.
 
 ## 전제 조건 {#prerequisites}
 
-아래 설명된 단계로 진행하기 전에 [Destination SDK 시작하기](../../getting-started.md) 페이지에서 Destination SDK API를 사용하는 데 필요한 Adobe I/O 인증 자격 증명 및 기타 필수 구성 요소를 가져오는 방법에 대한 정보를 참조하십시오.
+아래 설명된 단계로 진행하기 전에 [Destination SDK 시작하기](../../getting-started.md) 페이지에서 Destination SDK API를 사용하는 데 필요한 Adobe I/O 인증 자격 증명 및 기타 필수 구성 요소를 얻는 방법에 대한 정보를 읽어 보십시오.
 
 Adobe은 계속하기 전에 다음 설명서를 읽고 숙지하는 것이 좋습니다.
 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽은 후에는 Destination SDK을 사용하여 내보낸 파일에 대한 사용자 정의 파일 서식 옵션을 설정하는 방법을 이해할 수 있습니다. 그런 다음 팀은 [파일 기반 대상에 대한 활성화 워크플로](../../../ui/activate-batch-profile-destinations.md)를 사용하여 데이터를 대상으로 내보낼 수 있습니다.
+이제 Destination SDK을 사용하여 내보낸 파일에 대한 사용자 정의 파일 서식 옵션을 설정하는 방법을 알 수 있습니다. 그런 다음 팀은 [파일 기반 대상에 대한 활성화 워크플로](../../../ui/activate-batch-profile-destinations.md)를 사용하여 데이터를 대상으로 내보낼 수 있습니다.

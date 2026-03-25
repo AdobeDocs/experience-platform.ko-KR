@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;adobe campaign;campaign
 title: Adobe Campaign 연결
 description: Adobe Campaign은 모든 온라인 및 오프라인 채널에서 캠페인을 개인화하고 전달하는 데 도움이 되는 솔루션 세트입니다.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '926'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 [!DNL Adobe Campaign]은(는) 모든 온라인 및 오프라인 채널에서 캠페인을 개인화하고 전달하는 데 도움이 되는 솔루션 집합입니다. 자세한 내용은 [Campaign Classic 시작하기](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html)를 참조하십시오.
 
-대상 데이터를 [!DNL Adobe Campaign]에 보내려면 먼저 [에서 &#x200B;](#connect-destination)대상을 연결[!DNL Adobe Experience Platform]한 다음 저장소 위치에서 [(으)로 &#x200B;](#import-data-into-campaign)데이터 가져오기를 설정[!DNL Adobe Campaign]해야 합니다.
+대상 데이터를 [!DNL Adobe Campaign]에 보내려면 먼저 [에서 ](#connect-destination)대상을 연결[!DNL Adobe Experience Platform]한 다음 저장소 위치에서 [(으)로 ](#import-data-into-campaign)데이터 가져오기를 설정[!DNL Adobe Campaign]해야 합니다.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -58,7 +58,7 @@ ht-degree: 5%
 
 SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe에서는 특정 허용 목록에 추가하다에 IP 범위를 추가할 것을 권장합니다.
 
-허용 목록에 추가하다에 Adobe IP를 추가해야 하는 경우 [SFTP 대상에 대한 IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md)을 참조하세요.
+허용 목록에 추가하다 IP에 Adobe IP를 추가해야 하는 경우 [SFTP 대상의 IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md)을 참조하십시오.
 
 ## 대상에 연결 {#connect}
 
@@ -111,7 +111,7 @@ SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe
 
 ### 대상 속성 {#destination-attributes}
 
-이 대상에 대한 대상을 활성화할 때 [공용 구조체 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 [대상자를 이메일 마케팅 대상으로 활성화할 때의 모범 사례](overview.md#best-practices)를 참조하세요.
+이 대상에 대한 대상을 활성화할 때 [공용 구조체 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 [대상자를 이메일 마케팅 대상으로 활성화할 때의 모범 사례](overview.md#best-practices)를 참조하십시오.
 
 ## 내보낸 데이터 {#exported-data}
 
@@ -122,10 +122,10 @@ SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe
 >[!IMPORTANT]
 >
 >* 이 통합을 수행하는 동안 [!DNL SFTP] 계약에 따라 [!DNL Adobe Campaign] 저장소 제한, 데이터베이스 저장소 제한 및 활성 프로필 제한을 염두에 두십시오.
->* [!DNL Adobe Campaign] 워크플로우를 사용하여 [!DNL Campaign]에서 내보낸 세그먼트를 예약, 가져오기 및 매핑해야 합니다. [&#x200B; 설명서에서 &#x200B;](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html)반복 가져오기 설정[!DNL Adobe Campaign Classic] 및 [&#x200B; 설명서에서 &#x200B;](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html?lang=ko)데이터 관리 활동 정보[!DNL Adobe Campaign Standard]를 참조하십시오.
+>* [!DNL Adobe Campaign] 워크플로우를 사용하여 [!DNL Campaign]에서 내보낸 세그먼트를 예약, 가져오기 및 매핑해야 합니다. [ 설명서에서 ](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html)반복 가져오기 설정[!DNL Adobe Campaign Classic] 및 [ 설명서에서 ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html)데이터 관리 활동 정보[!DNL Adobe Campaign Standard]를 참조하십시오.
 >* [!DNL Adobe Campaign]에 데이터를 보내는 기본 메서드는 [!DNL Amazon S3] 또는 [!DNL Azure Blob]입니다.
 
-[!DNL Experience Platform]을(를) [!DNL Amazon S3] 또는 [!DNL Azure Blob] 저장소에 연결한 후 저장소 위치에서 [!DNL Adobe Campaign]&#x200B;(으)로 데이터 가져오기를 설정해야 합니다. 이 작업을 수행하는 방법에 대해 알아보려면 다음 [!DNL Adobe Campaign] 설명서 페이지를 참조하세요.
+[!DNL Experience Platform]을(를) [!DNL Amazon S3] 또는 [!DNL Azure Blob] 저장소에 연결한 후 저장소 위치에서 [!DNL Adobe Campaign]&#x200B;(으)로 데이터 가져오기를 설정해야 합니다. 이 작업을 수행하는 방법에 대해 알아보려면 다음 [!DNL Adobe Campaign] 설명서 페이지를 참조하십시오.
 
-* [&#x200B; 설명서에서 &#x200B;](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=ko)데이터 가져오기 및 내보내기 시작[&#x200B; 및 &#x200B;](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html?lang=ko)데이터 로드(파일) [!DNL Adobe Campaign Classic].
-* [프로세스 및 데이터 관리 시작](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html?lang=ko) 및 [&#x200B; 설명서의 &#x200B;](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html?lang=ko)파일 로드[!DNL Adobe Campaign Standard].
+* [ 설명서에서 ](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=ko)데이터 가져오기 및 내보내기 시작[ 및 ](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html)데이터 로드(파일)[!DNL Adobe Campaign Classic].
+* [프로세스 및 데이터 관리 시작](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) 및 [ 설명서의 ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html)파일 로드[!DNL Adobe Campaign Standard].

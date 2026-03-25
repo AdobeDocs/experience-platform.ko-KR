@@ -2,9 +2,9 @@
 title: Snap Inc 연결
 description: Snapchat Ads Platform에 연결하고 Experience Platform에서 대상을 내보내는 방법에 대해 알아봅니다.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1139'
 ht-degree: 3%
 
 ---
@@ -107,7 +107,7 @@ ht-degree: 3%
 대상에 인증하려면 다음 단계를 수행합니다.
 
 1. *의 대상 카탈로그에서* Snap Inc[!DNL Adobe Experience Platform] 대상을 찾은 다음 **설정**&#x200B;을 선택하십시오.
-2. **[!UICONTROL Connect to destination]**&#x200B;을(를) 선택합니다. 다음 화면으로 리디렉션됩니다.
+2. **[!UICONTROL Connect to destination]**을(를) 선택합니다. 다음 화면으로 리디렉션됩니다.
    ![인증 화면 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Snapchat 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 4. [!DNL Adobe Experience Platform]에서 액세스할 수 있는 Snapchat 데이터가 표시됩니다. 연결 프로세스를 계속하려면 **계속**&#x200B;을(를) 선택하십시오.
@@ -124,7 +124,7 @@ ht-degree: 3%
 
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL Account ID]**: 대상자를 가져올 광고 계정과 연결된 광고 계정 ID입니다. 이 정보를 찾는 방법에 대한 자세한 내용은 [Snapchat 비즈니스 도움말 센터에서 이 설명서](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US)를 참조하십시오.
+* **[!UICONTROL Account ID]**: 대상자를 가져올 광고 계정과 연결된 광고 계정 ID입니다. 이 항목을 찾는 방법에 대한 자세한 내용은 [Snapchat 비즈니스 도움말 센터에서 이 설명서](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US)를 참조하십시오.
 
 >[!IMPORTANT]
 >
@@ -154,7 +154,7 @@ ht-degree: 3%
 
 ![대상자](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Adobe 대상자가 Snap Inc.에 처음 활성화되면 처음에는 빈 대상자로 표시됩니다. 이는 [!DNL Adobe Experience Platform]이(가) 대상자를 평가할 때까지 멤버 데이터를 Snap Inc로 내보내지 않기 때문입니다. Experience Platform에서 대상을 평가하는 방법에 대한 자세한 내용은 [세그먼테이션 서비스 개요](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=ko#evaluate-segments)를 참조하세요.
+Adobe 대상자가 Snap Inc.에 처음 활성화되면 처음에는 빈 대상자로 표시됩니다. 이는 [!DNL Adobe Experience Platform]이(가) 대상자를 평가할 때까지 멤버 데이터를 Snap Inc로 내보내지 않기 때문입니다. Experience Platform에서 대상을 평가하는 방법에 대한 자세한 내용은 [세그먼테이션 서비스 개요](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments)를 참조하십시오.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

@@ -3,9 +3,9 @@ title: Mailchimp 관심 범주
 description: Mailchimp(Intuit Mailchimp라고도 함)는 기업이 메일링 목록 및 이메일 마케팅 캠페인을 사용하여 연락처(고객, 고객 또는 기타 이해 당사자)를 관리하고 상담하는 데 사용하는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다. 이 커넥터를 사용하여 관심사 및 선호도에 따라 연락처를 정렬합니다.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2395'
+source-wordcount: '2390'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ Experience Platform 및 [!DNL Mailchimp]에서 설정해야 하는 필수 구성
 
 ### Experience Platform의 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL Mailchimp Interest Categories] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 &#x200B;](/help/xdm/schema/composition.md)스키마[, &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ko)데이터 세트[&#x200B; 및 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ko)세그먼트[!DNL Experience Platform]가 있어야 합니다.
+[!DNL Mailchimp Interest Categories] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 ](/help/xdm/schema/composition.md)스키마[, ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[ 및 ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)세그먼트[!DNL Experience Platform]가 있어야 합니다.
 
 ### [!DNL Mailchimp Interest Categories] 대상에 대한 필수 구성 요소 {#prerequisites-destination}
 
@@ -74,7 +74,7 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 
 각 [!DNL Mailchimp] 대상에는 단일 그룹 또는 동일한 대상자 내의 여러 그룹에 최대 60개의 그룹 이름(또는 관심 범주)이 포함될 수 있습니다. 필요한 설명이 필요하면 [!DNL Mailchimp] [그룹](https://mailchimp.com/help/getting-started-with-groups/)을(를) 참조하십시오. 이 제한에 도달하면 `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` API에서 오류 응답으로 [!DNL Mailchimp] 메시지가 표시됩니다.
 
-또한 [!DNL Mailchimp] API에 의해 적용되는 제한에 대한 자세한 내용은 [&#x200B; &#x200B;](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)속도 제한[!DNL Mailchimp]을(를) 참조하십시오.
+또한 [!DNL Mailchimp] API에 의해 적용되는 제한에 대한 자세한 내용은 [ ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)속도 제한[!DNL Mailchimp]을(를) 참조하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -136,7 +136,7 @@ API 키의 예는 `0123456789abcdef0123456789abcde-us14`입니다.
 | 필드 | 설명 |
 | --- | --- |
 | **[!UICONTROL Username]** | [!DNL Mailchimp Interest Categories] 사용자 이름입니다. |
-| **[!UICONTROL Password]** | [!DNL Mailchimp]수집&#x200B;**자격 증명** 섹션에서 기록한 [&#x200B;  [!DNL Mailchimp] API 키](#gather-credentials).<br> API 키는 `{KEY}-{DC}` 형식을 사용합니다. 여기서 `{KEY}` 부분은 [[!DNL Mailchimp] API 키](#gather-credentials) 섹션에 언급된 값을 참조하고 `{DC}` 부분은 [[!DNL Mailchimp] 데이터 센터](#identify-data-center)를 참조합니다. <br>`{KEY}` 부분 또는 전체 양식을 제공할 수 있습니다.<br> 예를 들어 API 키가 <br>*`0123456789abcdef0123456789abcde-us14`*,<br>인 경우&#x200B;*`0123456789abcdef0123456789abcde`*또는&#x200B;*`0123456789abcdef0123456789abcde-us14`*을(를) 값으로 제공할 수 있습니다. |
+| **[!UICONTROL Password]** | [!DNL Mailchimp]수집&#x200B;**자격 증명** 섹션에서 기록한 [  [!DNL Mailchimp] API 키](#gather-credentials).<br> API 키는 `{KEY}-{DC}` 형식을 사용합니다. 여기서 `{KEY}` 부분은 [[!DNL Mailchimp] API 키](#gather-credentials) 섹션에 언급된 값을 참조하고 `{DC}` 부분은 [[!DNL Mailchimp] 데이터 센터](#identify-data-center)를 참조합니다. <br>`{KEY}` 부분 또는 전체 양식을 제공할 수 있습니다.<br> 예를 들어 API 키가 <br>*`0123456789abcdef0123456789abcde-us14`*,<br>인 경우&#x200B;*`0123456789abcdef0123456789abcde`*또는&#x200B;*`0123456789abcdef0123456789abcde-us14`*을(를) 값으로 제공할 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -222,7 +222,7 @@ XDM 필드를 [!DNL Mailchimp Interest Categories] 대상 필드에 올바르게
 
 대상을 올바르게 설정했는지 확인하려면 아래 단계를 수행하십시오.
 
-* [[!DNL Mailchimp]](https://login.mailchimp.com/) 계정에 로그인합니다. 그런 다음 **[!DNL Audience]** 페이지로 이동합니다. 그런 다음 **[!DNL Manage Contacts]** 메뉴를 확장하고 **[!DNL Groups]**&#x200B;을(를) 선택합니다.
+* [[!DNL Mailchimp]](https://login.mailchimp.com/) 계정으로 이동합니다. 그런 다음 **[!DNL Audience]** 페이지로 이동합니다. 그런 다음 **[!DNL Manage Contacts]** 메뉴를 확장하고 **[!DNL Groups]**&#x200B;을(를) 선택합니다.
 
 대상 그룹 페이지를 표시하는 ![Mailchimp UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 

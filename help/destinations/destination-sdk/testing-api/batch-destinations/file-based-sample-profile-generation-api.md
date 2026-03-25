@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK의 /sample-profiles API 엔드포인트를 사용하여 소스 스키마를 기반으로 샘플 프로필을 생성하는 방법을 설명합니다. 이러한 샘플 프로필을 사용하여 파일 기반 대상 구성을 테스트할 수 있습니다.
 title: 소스 스키마를 기반으로 샘플 프로필 생성
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '651'
 ht-degree: 1%
 
 ---

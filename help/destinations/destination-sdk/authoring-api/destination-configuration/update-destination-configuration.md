@@ -2,9 +2,9 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 기존 대상 구성을 업데이트하는 데 사용되는 API 호출을 구현합니다.
 title: 대상 구성 업데이트
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '368'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 2%
 
 ## 대상 구성 업데이트 {#update}
 
-업데이트된 페이로드로 [&#x200B; 끝점에 대한 &#x200B;](create-destination-configuration.md) 요청을 수행하여 `PUT`기존`/authoring/destinations` 대상 구성을 업데이트할 수 있습니다.
+업데이트된 페이로드로 [ 끝점에 대한 ](create-destination-configuration.md) 요청을 수행하여 `PUT`기존`/authoring/destinations` 대상 구성을 업데이트할 수 있습니다.
 
 >[!TIP]
 >

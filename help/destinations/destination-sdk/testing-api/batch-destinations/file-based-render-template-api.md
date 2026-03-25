@@ -2,9 +2,9 @@
 description: 이 페이지에서는 /authoring/testing/template/render 끝점을 사용하여 대상 구성에 정의된 템플릿화된 고객 데이터 필드의 모양을 시각화하는 방법에 대해 설명합니다.
 title: 템플릿화된 고객 필드의 유효성 검사
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '385'
 ht-degree: 2%
 
 ---

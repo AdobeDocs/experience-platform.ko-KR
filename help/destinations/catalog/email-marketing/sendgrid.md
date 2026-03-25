@@ -1,11 +1,11 @@
 ---
 keywords: 이메일;이메일;이메일;이메일 대상;sendgrid;sendgrid 대상
 title: SendGrid 연결
-description: SendGrid 대상을 사용하면 자사 데이터를 내보내고 비즈니스 요구 사항에 맞게 SendGrid 내에서 활성화할 수 있습니다.
+description: SendGrid 대상을 사용하여 자사 데이터를 내보내고 비즈니스 요구 사항에 맞게 SendGrid 내에서 활성화합니다.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1928'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [SendGrid](https://www.sendgrid.com)은(는) 트랜잭션 및 마케팅 이메일에 널리 사용되는 고객 커뮤니케이션 플랫폼입니다.
 
-이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts)을(를) 활용합니다. 을(를) 사용하면 자사 이메일 프로필을 내보내고 비즈니스 요구 사항에 맞는 새로운 SendGrid 대상 내에서 활성화할 수 있습니다.
+이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md)은(는) [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts)을(를) 활용하여 자사 이메일 프로필을 내보내고 비즈니스 요구 사항에 맞는 새로운 SendGrid 대상 내에서 활성화합니다.
 
 SendGrid는 API 전달자 토큰을 인증 메커니즘으로 사용하여 SendGrid API와 통신합니다.
 
@@ -27,14 +27,14 @@ SendGrid는 API 전달자 토큰을 인증 메커니즘으로 사용하여 SendG
 1. SendGrid 계정이 있어야 합니다.
    * SendGrid 계정이 아직 없는 경우 SendGrid [signup](https://signup.sendgrid.com/) 페이지로 이동하여 등록하고 만듭니다.
 1. SendGrid 포털에 로그인한 후 API 토큰도 생성해야 합니다.
-1. SendGrid 웹 사이트로 이동하여 **[!DNL Settings]** > **[!DNL API Keys]** 페이지에 액세스합니다. 또는 [SendGrid 설명서](https://app.sendgrid.com/settings/api_keys)를 참조하여 SendGrid 앱의 해당 섹션에 액세스합니다.
+1. SendGrid 웹 사이트로 이동하여 **[!DNL Settings]** > **[!DNL API Keys]** 페이지에 액세스합니다. 또는 SendGrid 앱의 해당 섹션에 액세스하려면 [SendGrid 설명서](https://app.sendgrid.com/settings/api_keys)를 참조하십시오.
 1. 마지막으로 **[!DNL Create API Key]** 단추를 선택합니다.
    * 수행할 작업에 대한 지침이 필요한 경우 [SendGrid 설명서](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key)를 참조하세요.
-   * API 키를 프로그래밍 방식으로 생성하려면 [SendGrid 설명서](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys)를 참조하세요.
+   * API 키를 프로그래밍 방식으로 생성하려면 [SendGrid 설명서](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys)를 참조하십시오.
 
 ![API 키 만들기 단추를 표시하는 SendGrid API 키 설정 페이지](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-SendGrid 대상으로 데이터를 활성화하기 전에 [에서 만든 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko-KR)스키마[, &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=ko)데이터 세트[&#x200B; 및 &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=ko)세그먼트[!DNL Experience Platform]가 있어야 합니다. 이 페이지의 아래 [제한](#limits) 섹션도 참조하세요.
+SendGrid 대상으로 데이터를 활성화하기 전에 [에서 만든 ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko-KR)스키마[, ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)데이터 세트[ 및 ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)세그먼트[!DNL Experience Platform]가 있어야 합니다. 이 페이지의 아래 [제한](#limits) 섹션도 참조하세요.
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ SendGrid를 사용하는 마케팅 팀은 SendGrid 내에서 메일링 목록을
 1. **카탈로그** 탭을 선택하고 *SendGrid*&#x200B;을(를) 검색합니다. 그런 다음 **설정**&#x200B;을 선택합니다. 대상에 대한 연결을 설정한 후 UI 레이블이 **세그먼트 활성화**(으)로 변경됩니다.
    ![설정 단추가 강조 표시된 Experience Platform 대상 카탈로그의 SendGrid 대상 카드.](../../assets/catalog/email-marketing/sendgrid/02-catalog.jpg)
 
-1. SendGrid 대상을 구성하는 데 도움이 되는 마법사가 표시됩니다. **새 대상 구성**&#x200B;을 선택하여 새 대상을 만듭니다.
+1. SendGrid 대상을 구성하는 데 도움이 되는 마법사가 표시됩니다. **새 대상 구성**을 선택하여 새 대상을 만듭니다.
    ![SendGrid 대상 설정 마법사에서 새 대상 구성 옵션을 표시합니다.](../../assets/catalog/email-marketing/sendgrid/03.jpg)
 
 1. **새 계정** 옵션을 선택하고 **전달자 토큰** 값을 입력하십시오. 이 값은 이전에 *필수 구성 요소 섹션*&#x200B;에서 언급한 SendGrid [API 키](#prerequisites)입니다.
@@ -123,7 +123,7 @@ SendGrid를 사용하는 마케팅 팀은 SendGrid 내에서 메일링 목록을
 
 ### 대상 세부 정보 입력 {#destination-details}
 
-[이 대상을 설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ko)하는 동안 다음 정보를 제공해야 합니다.
+[이 대상을 설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)하는 동안 다음 정보를 제공해야 합니다.
 
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 이름입니다.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 선택적 설명입니다.
@@ -160,10 +160,10 @@ SendGrid를 사용하는 마케팅 팀은 SendGrid 내에서 메일링 목록을
    ![SendGrid 내보내기를 위한 소스 필드로 선택된 Experience Platform 프로필 특성을 표시하는 매핑 화면.](../../assets/catalog/email-marketing/sendgrid/17.jpg)
    ![Experience Platform XDM 필드와 SendGrid 대상 필드 간의 완료된 특성 매핑을 보여 주는 매핑 화면.](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
-1. 매핑을 완료한 후 **[!UICONTROL Next]**&#x200B;을(를) 선택하여 검토 화면으로 이동합니다.
+1. 매핑을 완료한 후 **[!UICONTROL Next]**을(를) 선택하여 검토 화면으로 이동합니다.
    ![설정을 완료하기 전에 구성된 매핑의 요약을 보여 주는 SendGrid 활성화 검토 화면입니다.](../../assets/catalog/email-marketing/sendgrid/22.png)
 
-1. **[!UICONTROL Finish]**&#x200B;을(를) 선택하여 설치를 완료합니다.
+1. **[!UICONTROL Finish]**을(를) 선택하여 설치를 완료합니다.
    ![완료 단추를 표시하는 SendGrid 활성화 워크플로 완료 화면입니다.](../../assets/catalog/email-marketing/sendgrid/23.jpg)
 
 [SendGrid Marketing 연락처 > 연락처 API 추가 또는 업데이트](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact)에 설정할 수 있는 지원되는 특성 매핑의 전체 목록은 다음과 같습니다.
@@ -185,10 +185,10 @@ SendGrid를 사용하는 마케팅 팀은 SendGrid 내에서 메일링 목록을
 
 대상을 올바르게 설정했는지 확인하려면 아래 단계를 수행하십시오.
 
-1. 대상 목록으로 이동하려면 **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**&#x200B;을(를) 선택합니다.
+1. 대상 목록으로 이동하려면 **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**을(를) 선택합니다.
    구성된 대상 목록을 표시하는 Experience Platform의 ![대상 찾아보기 탭입니다.](../../assets/catalog/email-marketing/sendgrid/25.jpg)
 
-1. 대상을 선택하고 상태가 **[!UICONTROL enabled]**&#x200B;인지 확인하십시오.
+1. 대상을 선택하고 상태가 **[!UICONTROL enabled]**인지 확인하십시오.
    ![찾아보기 탭의 SendGrid 대상에 사용 상태가 표시됩니다.](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
 1. **[!DNL Activation data]** 탭으로 전환한 다음 대상 이름을 선택합니다.

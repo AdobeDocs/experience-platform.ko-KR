@@ -5,17 +5,17 @@ solution: Experience Platform
 title: 데이터 흐름 모니터링
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 18%
+source-wordcount: '126'
+ht-degree: 19%
 
 ---
 
 # 데이터 흐름 모니터링
 
-[!UICONTROL Destinations]을(를) 통해 [!DNL Adobe Experience Platform]의 데이터를 수많은 외부 파트너에게 활성화할 수 있습니다.
+[!UICONTROL Destinations]을(를) 사용하여 [!DNL Adobe Experience Platform]의 데이터를 수많은 외부 파트너에게 활성화합니다.
 
 데이터 흐름은 [!DNL Experience Platform]에서 데이터를 이동하는 데이터 작업을 나타냅니다. 이러한 데이터 흐름은 서로 다른 서비스에 걸쳐 구성되어 있으므로 데이터를 소스 커넥터에서 대상 데이터 세트로 이동하는 데 도움이 됩니다. [!DNL Identity Service] 및[!DNL Real-Time Customer Profile]에서 해당 데이터를 사용한 후 대상으로 최종 활성화합니다.
 
-대상에 대한 데이터 흐름 모니터링에 대한 자세한 내용은 [UI의 대상에 대한 데이터 흐름 모니터링](../../dataflows/ui/monitor-destinations.md) 자습서를 참조하십시오.
+대상에 대한 데이터 흐름 모니터링에 대한 자세한 내용은 [UI에서 대상에 대한 데이터 흐름 모니터링](../../dataflows/ui/monitor-destinations.md) 자습서를 참조하십시오.

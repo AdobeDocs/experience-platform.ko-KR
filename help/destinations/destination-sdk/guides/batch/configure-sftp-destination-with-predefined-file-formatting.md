@@ -2,9 +2,9 @@
 description: Destination SDK을 사용하여 사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 SFTP 대상을 구성하는 방법을 알아봅니다.
 title: 사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성을 사용하여 SFTP 대상을 구성합니다.
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
-source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '708'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 전제 조건 {#prerequisites}
 
-아래 설명된 단계로 진행하기 전에 [Destination SDK 시작](../../getting-started.md) 페이지에서 Destination SDK API를 사용하는 데 필요한 Adobe I/O 인증 자격 증명 및 기타 필수 구성 요소를 얻는 방법에 대한 정보를 읽어 보십시오.
+아래 설명된 단계로 진행하기 전에 [Destination SDK 시작하기](../../getting-started.md) 페이지에서 Destination SDK API를 사용하는 데 필요한 Adobe I/O 인증 자격 증명 및 기타 필수 구성 요소를 얻는 방법에 대한 정보를 읽어 보십시오.
 
 ## 1단계: 서버 및 파일 구성 만들기 {#create-server-file-configuration}
 
@@ -251,7 +251,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 3단계: Experience Platform UI 확인 {#verify-ui}
 
-위의 구성에 따라 이제 Experience Platform 카탈로그에 사용할 새 개인 대상 카드가 표시됩니다.
+위의 구성을 기반으로 Experience Platform 카탈로그에 사용할 새 개인 대상 카드가 표시됩니다.
 
 ![선택한 대상 카드가 있는 대상 카탈로그 페이지를 표시하는 화면 기록입니다.](../../assets/guides/batch/destination-card.gif)
 
@@ -273,7 +273,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 위에 언급된 필드를 조정하려면 [단계 1](#create-server-file-configuration)과 [단계 2](#create-destination-configuration)을(를) 반복하여 필요에 따라 구성을 수정하십시오.
 
-## 4단계: (선택 사항) 대상 Publish {#publish-destination}
+## 4단계: (선택 사항) 대상 게시 {#publish-destination}
 
 >[!NOTE]
 >
@@ -287,8 +287,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 >
 >이 단계는 직접 사용할 개인 대상을 만들고 다른 고객이 사용할 대상 카탈로그에 게시하려고 하지 않는 경우에는 필요하지 않습니다.
 
-[제품화된 통합을 만드는 ISV(독립 소프트웨어 공급업체) 또는 SI(시스템 통합자)인 경우](../../overview.md#productized-custom-integrations) [셀프서비스 설명서 프로세스](../../docs-framework/documentation-instructions.md)를 사용하여 [Experience Platform 대상 카탈로그](../../../catalog/overview.md)에서 대상에 대한 제품 설명서 페이지를 만드십시오.
+[제품화된 통합을 만드는 ISV(독립 소프트웨어 공급업체) 또는 SI(시스템 통합자)인 경우](../../overview.md#productized-custom-integrations) [셀프 서비스 설명서 프로세스](../../docs-framework/documentation-instructions.md)를 사용하여 [Experience Platform 대상 카탈로그](../../../catalog/overview.md)에서 대상에 대한 제품 설명서 페이지를 만드십시오.
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽으면 이제 Destination SDK을 사용하여 사용자 지정 SFTP 대상을 작성하는 방법을 알 수 있습니다. 그런 다음 팀은 [파일 기반 대상에 대한 활성화 워크플로](../../../ui/activate-batch-profile-destinations.md)를 사용하여 데이터를 대상으로 내보낼 수 있습니다.
+이제 Destination SDK을 사용하여 사용자 지정 SFTP 대상을 작성하는 방법을 알 수 있습니다. 그런 다음 팀은 [파일 기반 대상에 대한 활성화 워크플로](../../../ui/activate-batch-profile-destinations.md)를 사용하여 데이터를 대상으로 내보낼 수 있습니다.

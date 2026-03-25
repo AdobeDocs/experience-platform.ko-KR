@@ -2,9 +2,9 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 기존 대상 구성을 삭제하는 데 사용되는 API 호출을 구현합니다.
 title: 대상 구성 삭제
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '276'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 ## 대상 구성 삭제 {#delete}
 
-삭제하려는 대상 구성의 [을(를) 사용하여 &#x200B;](create-destination-configuration.md) 끝점에 대한 `DELETE` 요청을 수행하여 `/authoring/destinations`기존`{INSTANCE_ID}` 대상 구성을 삭제할 수 있습니다.
+삭제하려는 대상 구성의 [을(를) 사용하여 ](create-destination-configuration.md) 끝점에 대한 `DELETE` 요청을 수행하여 `/authoring/destinations`기존`{INSTANCE_ID}` 대상 구성을 삭제할 수 있습니다.
 
 >[!TIP]
 >

@@ -3,27 +3,27 @@ keywords: Experience Platform;홈;인기 항목; 경고;대상
 description: 데이터 흐름을 만들 때 경고에 가입하여 흐름 실행의 상태, 성공 또는 실패와 관련된 경고 메시지를 받을 수 있습니다.
 title: 컨텍스트 내 대상 경고 구독
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '906'
 ht-degree: 9%
 
 ---
 
 # 컨텍스트 내 대상 경고 구독
 
-[!DNL Adobe Experience Platform]을(를) 사용하면 [!DNL Adobe Experience Platform] 활동과 관련된 이벤트 기반 경고를 구독할 수 있습니다. 경고는 [[!DNL Observability Insights] API](../../observability/api/overview.md)을(를) 폴링하여 작업이 완료되었는지, 워크플로우 내의 특정 마일스톤에 도달했는지 또는 오류가 발생했는지 확인할 필요가 없도록 합니다.
+[!DNL Adobe Experience Platform]을(를) 사용하여 [!DNL Adobe Experience Platform] 활동에 대한 이벤트 기반 경고를 구독하세요. 경고는 [[!DNL Observability Insights] API](../../observability/api/overview.md)을(를) 폴링하여 작업이 완료되었는지, 워크플로우 내의 특정 마일스톤에 도달했는지 또는 오류가 발생했는지 확인할 필요가 없도록 합니다.
 
 데이터 흐름을 만들 때 경고를 구독하여 흐름 실행의 상태, 성공 또는 실패와 관련된 경고 메시지를 받을 수 있습니다.
 
-이 문서에서는 대상 데이터 흐름에 대한 알림 메시지 수신을 구독하는 방법에 대한 단계를 설명합니다.
+이 문서에서는 대상 데이터 흐름에 대한 경고 메시지를 구독하는 단계를 제공합니다.
 
 ## 시작 {#getting-started}
 
 이 문서를 사용하려면 [!DNL Adobe Experience Platform]의 다음 구성 요소에 대해 잘 알고 있어야 합니다.
 
 * [대상](../home.md): [!DNL Adobe Experience Platform]의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 통합. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
-* [가시성](../../observability/home.md): [!DNL Observability Insights]을(를) 사용하면 통계 지표 및 이벤트 알림을 사용하여 Experience Platform 활동을 모니터링할 수 있습니다.
+* [가시성](../../observability/home.md): 통계 지표 및 이벤트 알림을 통해 Experience Platform 활동을 모니터링하려면 [!DNL Observability Insights]을(를) 사용합니다.
    * [경고](../../observability/alerts/overview.md): Experience Platform 작업의 특정 조건에 도달하면(예: 시스템이 임계값을 위반한 경우 발생할 수 있는 문제) Experience Platform에서 해당 조건을 구독한 조직의 모든 사용자에게 경고 메시지를 전달할 수 있습니다.
 
 ## UI에서 알림 구독 {#subscribe-destination-alerts}
@@ -38,7 +38,7 @@ ht-degree: 9%
 >
 >데이터 흐름에 대한 이메일 기반 경고 알림을 수신하려면 Experience Platform 계정에 대해 이메일 인스턴트 알림을 활성화해야 합니다.
 
-[!UICONTROL Configure new destination]대상 연결[&#x200B; 워크플로의 &#x200B;](connect-destination.md) 단계 동안 데이터 흐름에 대한 경고를 사용하도록 설정할 수 있습니다.
+[!UICONTROL Configure new destination]대상 연결[ 워크플로의 ](connect-destination.md) 단계 동안 데이터 흐름에 대한 경고를 사용하도록 설정할 수 있습니다.
 
 대상 경고 섹션을 표시하는 ![UI 이미지입니다.](../assets/ui/alerts/destination-alerts.png)
 
@@ -117,4 +117,4 @@ UI 경고와 마찬가지로 [!UICONTROL Dataflow run overview] 페이지가 나
 
 ## 다음 단계 {#next-steps}
 
-이 문서에서는 대상 데이터 흐름에 대한 컨텍스트 내 경고에 가입하는 방법에 대한 단계별 안내서를 제공합니다. 자세한 내용은 [경고 UI 안내서](../../observability/alerts/ui.md)를 참조하십시오.
+이제 대상 데이터 흐름에 대한 컨텍스트 내 경고에 가입할 수 있습니다. 자세한 내용은 [경고 UI 안내서](../../observability/alerts/ui.md)를 참조하십시오.

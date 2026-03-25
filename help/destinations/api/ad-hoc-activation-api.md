@@ -5,9 +5,9 @@ title: 임시 활성화 API를 통해 대상을 일괄 대상으로 활성화
 description: 이 문서에서는 활성화 전에 수행되는 세분화 작업을 포함하여 임시 활성화 API를 통해 대상을 활성화하기 위한 전체적인 워크플로를 보여 줍니다.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1670'
 ht-degree: 0%
 
 ---

@@ -2,9 +2,9 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 서버를 만드는 데 사용되는 API 호출을 보여 줍니다.
 title: 대상 서버 구성 만들기
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2029'
 ht-degree: 5%
 
 ---
@@ -96,11 +96,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | 문자열 | *필수.* Adobe에만 표시되는 서버의 알기 쉬운 이름을 나타냅니다. 이 이름은 파트너나 고객에게 표시되지 않습니다. 예 `Moviestar destination server`. |
 | `destinationServerType` | 문자열 | *필수.실시간(스트리밍) 대상에 대해*&#x200B;을(를) `URL_BASED`(으)로 설정합니다. |
-| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe에서 아래 `PEBBLE_V1` 필드의 URL을 변환해야 하는 경우 `value`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있고 고객 간에 `region` 부분이 다를 수 있는 경우 이 옵션을 사용합니다. 이 경우 `region`대상 구성[(../destination-configuration/create-destination-configuration.md)에서 &#x200B;](../../functionality/destination-configuration/customer-data-fields.md)을(를) [고객 데이터 필드]&#x200B;(으)로 구성해야 합니다. </li><li> Adobe 측에 변환이 필요하지 않은 경우(예: `NONE`과 같은 끝점이 있는 경우) `https://api.moviestar.com/data/items`을(를) 사용하십시오.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe에서 아래 `PEBBLE_V1` 필드의 URL을 변환해야 하는 경우 `value`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있고 고객 간에 `region` 부분이 다를 수 있는 경우 이 옵션을 사용합니다. 이 경우 `region`대상 구성[(../destination-configuration/create-destination-configuration.md)에서 ](../../functionality/destination-configuration/customer-data-fields.md)을(를) [고객 데이터 필드]&#x200B;(으)로 구성해야 합니다. </li><li> Adobe 측에 변환이 필요하지 않은 경우(예: `NONE`과 같은 끝점이 있는 경우) `https://api.moviestar.com/data/items`을(를) 사용하십시오.</li></ul> |
 | `urlBasedDestination.url.value` | 문자열 | *필수.* Experience Platform에서 연결할 API 끝점의 주소를 입력합니다. |
 | `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe에서 서버 호출에 사용할 메서드입니다. 옵션은 `GET`, `PUT`, `POST`, `DELETE`, `PATCH`입니다. |
 | `httpTemplate.requestBody.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
-| `httpTemplate.requestBody.value` | 문자열 | *필수.* 이 문자열은 Experience Platform 고객의 데이터를 서비스에 필요한 형식으로 변환하는 문자 이스케이프 처리된 버전입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. </li><li> 간단한 변환의 예를 보려면 [프로필 특성](../../functionality/destination-server/message-format.md#attributes) 변환을 참조하십시오. </li></ul> |
+| `httpTemplate.requestBody.value` | 문자열 | *필수.* 이 문자열은 Experience Platform 고객의 데이터를 서비스에 필요한 형식으로 변환하는 문자 이스케이프 처리된 버전입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하십시오. </li><li> 간단한 변환의 예를 보려면 [프로필 특성](../../functionality/destination-server/message-format.md#attributes) 변환을 참조하십시오. </li></ul> |
 | `httpTemplate.contentType` | 문자열 | *필수.* 서버가 허용하는 콘텐츠 형식입니다. 이 값은 `application/json`일 수 있습니다. |
 
 {style="table-layout:auto"}
@@ -782,7 +782,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ### 동적 스키마 대상 서버 만들기 {#dynamic-schema-servers}
 
-동적 스키마를 사용하면 지원되는 타겟 속성을 동적으로 검색하고 고유한 API를 기반으로 스키마를 생성할 수 있습니다. 스키마를 구성하려면 먼저 동적 스키마에 대한 대상 서버를 구성해야 합니다.
+동적 스키마는 지원되는 타겟 속성을 동적으로 검색하고 고유한 API를 기반으로 스키마를 생성합니다. 스키마를 구성하려면 먼저 동적 스키마에 대한 대상 서버를 구성해야 합니다.
 
 [동적 스키마](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration)를 사용하는 대상에 대한 대상 서버의 예제 아래 탭에서 참조하십시오.
 
@@ -836,7 +836,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `urlBasedDestination.url.value` | 문자열 | *필수.* 활성화 워크플로의 매핑 단계에서 대상 필드로 채울 스키마 필드를 Experience Platform이 연결해야 하는 API 끝점의 주소를 입력합니다. |
 | `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe에서 서버 호출에 사용할 메서드입니다. 동적 스키마 서버의 경우 `GET`을(를) 사용합니다. |
 | `responseFields.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
-| `responseFields.value` | 문자열 | *필수.* 이 문자열은 파트너 API에서 받은 응답을 Experience Platform UI에 표시될 파트너 스키마로 변환하는 문자 이스케이프 변환 템플릿입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. </li><li> 간단한 변환의 예를 보려면 [프로필 특성](../../functionality/destination-server/message-format.md#attributes) 변환을 참조하십시오. </li></ul> |
+| `responseFields.value` | 문자열 | *필수.* 이 문자열은 파트너 API에서 받은 응답을 Experience Platform UI에 표시될 파트너 스키마로 변환하는 문자 이스케이프 변환 템플릿입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하십시오. </li><li> 간단한 변환의 예를 보려면 [프로필 특성](../../functionality/destination-server/message-format.md#attributes) 변환을 참조하십시오. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -934,7 +934,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe에서 서버 호출에 사용할 메서드입니다. 동적 드롭다운 서버의 경우 `GET`을(를) 사용합니다. |
 | `httpTemplate.headers` | 오브젝트 | *Optiona.l* 동적 드롭다운 서버에 연결하는 데 필요한 모든 헤더를 포함합니다. |
 | `responseFields.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
-| `responseFields.value` | 문자열 | *필수.* 이 문자열은 API에서 받은 응답을 Experience Platform UI에 표시될 값으로 변환하는 문자 이스케이프 변환 템플릿입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. |
+| `responseFields.value` | 문자열 | *필수.* 이 문자열은 API에서 받은 응답을 Experience Platform UI에 표시될 값으로 변환하는 문자 이스케이프 변환 템플릿입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하십시오. |
 
 {style="table-layout:auto"}
 

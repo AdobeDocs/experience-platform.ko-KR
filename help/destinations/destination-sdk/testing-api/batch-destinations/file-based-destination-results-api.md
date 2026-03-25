@@ -2,9 +2,9 @@
 description: 이 페이지에서는 /testing/destinationInstance API 끝점을 사용하여 테스트 결과에 대한 전체 세부 정보를 보는 방법에 대해 설명합니다. 이 API 끝점은 흐름 서비스 API를 사용하여 데이터 흐름을 모니터링할 때 얻는 것과 동일한 결과를 반환합니다.
 title: 자세한 활성화 결과 보기
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '544'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 이미 [대상을 테스트하고](file-based-destination-testing-api.md)유효한 API 응답을 받은 경우 대상이 올바르게 작동합니다.
 
-활성화 흐름에 대한 자세한 정보를 보려면 아래 설명된 대로 `results`대상 테스트[&#x200B; 끝점 응답의 &#x200B;](file-based-destination-testing-api.md) 속성을 사용할 수 있습니다.
+활성화 흐름에 대한 자세한 정보를 보려면 아래 설명된 대로 `results`대상 테스트[ 끝점 응답의 ](file-based-destination-testing-api.md) 속성을 사용할 수 있습니다.
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ ht-degree: 2%
 
 [대상 구성의 유효성을 검사했습니다](file-based-destination-testing-api.md). `authoring/testing/destinationInstance/` 끝점에 대한 GET 요청을 만들고 테스트 중인 대상의 대상 인스턴스 ID와 활성화된 대상의 흐름 실행 ID를 제공하여 자세한 활성화 결과를 볼 수 있습니다.
 
-대상 테스트 호출의 `results`응답[에서 반환된 &#x200B;](file-based-destination-testing-api.md) 속성에서 사용해야 하는 전체 API URL을 찾을 수 있습니다.
+대상 테스트 호출의 `results`응답[에서 반환된 ](file-based-destination-testing-api.md) 속성에서 사용해야 하는 전체 API URL을 찾을 수 있습니다.
 
 **API 형식**
 
@@ -58,7 +58,7 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | 쿼리 문자열 매개 변수 | 설명 |
 | -------- | ----------- |
-| `flowRunIds` | 활성화된 대상자에 해당하는 흐름 실행 ID입니다. 대상 테스트 호출의 `results`응답[에서 반환된 &#x200B;](file-based-destination-testing-api.md) 속성에서 흐름 실행 ID를 찾을 수 있습니다. |
+| `flowRunIds` | 활성화된 대상자에 해당하는 흐름 실행 ID입니다. 대상 테스트 호출의 `results`응답[에서 반환된 ](file-based-destination-testing-api.md) 속성에서 흐름 실행 ID를 찾을 수 있습니다. |
 
 {style="table-layout:auto"}
 

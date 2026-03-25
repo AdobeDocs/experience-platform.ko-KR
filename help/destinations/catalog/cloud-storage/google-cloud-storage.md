@@ -3,9 +3,9 @@ title: Google 클라우드 스토리지 연결
 description: Google Cloud Storage에 연결하고 대상을 활성화하거나 데이터 세트를 내보내는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1297'
 ht-degree: 2%
 
 ---
@@ -104,7 +104,7 @@ Experience Platform을 [!DNL Google Cloud Storage]에 연결하려면 먼저 [!D
 
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-이러한 값에 대한 자세한 내용은 [Google Cloud Storage HMAC 키](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) 안내서를 참조하십시오. 자신의 액세스 키 ID와 비밀 액세스 키를 생성하는 방법에 대한 단계는 [[!DNL Google Cloud Storage] 소스 개요](/help/sources/connectors/cloud-storage/google-cloud-storage.md)를 참조하세요.
+이러한 값에 대한 자세한 내용은 [Google Cloud Storage HMAC 키](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) 안내서를 참조하십시오. 자신의 액세스 키 ID와 비밀 액세스 키를 생성하는 방법에 대한 단계는 [[!DNL Google Cloud Storage] 소스 개요](/help/sources/connectors/cloud-storage/google-cloud-storage.md)를 참조하십시오.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -143,7 +143,7 @@ Experience Platform을 [!DNL Google Cloud Storage]에 연결하려면 먼저 [!D
 * `storage.objects.create`
 * `storage.objects.list`
 
-[의 &#x200B;](https://cloud.google.com/storage/docs/access-control/iam-permissions)액세스 제어 및 권한[!DNL Google Cloud Storage]에 대해 자세히 알아보세요.
+[의 ](https://cloud.google.com/storage/docs/access-control/iam-permissions)액세스 제어 및 권한[!DNL Google Cloud Storage]에 대해 자세히 알아보세요.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
@@ -156,7 +156,7 @@ Experience Platform을 [!DNL Google Cloud Storage]에 연결하려면 먼저 [!D
 
 ### 일정 조정 {#scheduling}
 
-**[!UICONTROL Scheduling]** 단계에서는 [&#x200B; 대상에 대해 &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)내보내기 일정을 설정[!DNL Google Cloud Storage]할 수 있으며 [내보낸 파일의 이름을 구성](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names)할 수도 있습니다.
+**[!UICONTROL Scheduling]** 단계에서는 [ 대상에 대해 ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)내보내기 일정을 설정[!DNL Google Cloud Storage]할 수 있으며 [내보낸 파일의 이름을 구성](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names)할 수도 있습니다.
 
 ### 속성 및 ID 매핑 {#map}
 

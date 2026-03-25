@@ -2,9 +2,9 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 구성을 검색하는 데 사용되는 API 호출을 예시합니다.
 title: 대상 구성 검색
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '365'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 ## 대상 구성 검색 {#retrieve}
 
-[&#x200B; 끝점에 대해 &#x200B;](create-destination-configuration.md) 요청을 수행하여 `GET`기존`/authoring/destination` 대상 구성을 검색할 수 있습니다.
+[ 끝점에 대해 ](create-destination-configuration.md) 요청을 수행하여 `GET`기존`/authoring/destination` 대상 구성을 검색할 수 있습니다.
 
 >[!TIP]
 >

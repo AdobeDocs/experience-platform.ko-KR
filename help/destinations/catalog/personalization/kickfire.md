@@ -3,9 +3,9 @@ keywords: 킥파이어;킥파이어;킥파이어 확장;킥파이어 확장
 title: KickFire 확장
 description: KickFire 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: c2313474-05d5-4c06-8aa5-ed10e9e9226e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '418'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-[!DNL KickFire's] IP 주소 인텔리전스 및 B2B 그래픽 데이터를 사용하면 회사 IP 주소를 기반으로 IP 주소를 회사로 변환하고, 익명의 웹 방문자를 식별하며, 계정 데이터를 기술 스택에 통합할 수 있습니다.
+[!DNL KickFire's] IP 주소 인텔리전스 및 B2B 그래픽 데이터는 IP 주소를 회사로 변환하고, 익명의 웹 방문자를 식별하며, 계정 데이터를 기술 스택에 통합합니다. 이러한 모든 작업은 회사의 IP 주소를 기반으로 합니다.
 
 [!DNL KickFire]은(는) [!DNL Adobe Experience Platform]의 개인화 확장입니다. 확장 기능에 대한 자세한 내용은 [Kickfire 웹 사이트](https://www.kickfire.com/)를 참조하십시오.
 

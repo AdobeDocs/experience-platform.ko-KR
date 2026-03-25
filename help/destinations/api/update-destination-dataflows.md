@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 대상 데이터 흐름 업데이트
 type: Tutorial
 description: 이 튜토리얼에서는 대상 데이터 흐름을 업데이트하는 단계를 설명합니다. 흐름 서비스 API를 사용하여 데이터 흐름을 활성화 또는 비활성화하거나, 기본 정보를 업데이트하거나, 대상 및 속성을 추가 및 제거하는 방법을 알아봅니다.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2459'
+source-wordcount: '2452'
 ht-degree: 3%
 
 ---
@@ -877,4 +877,4 @@ curl -X PATCH \
 
 ## 다음 단계 {#next-steps}
 
-이 자습서를 통해 [!DNL Flow Service] API를 사용하여 대상 또는 프로필 특성을 추가하거나 제거하는 등 대상 데이터 흐름의 다양한 구성 요소를 업데이트하는 방법에 대해 알아보았습니다. 대상에 대한 자세한 내용은 [대상 개요](../home.md)를 참조하십시오.
+[!DNL Flow Service] API를 사용하여 대상 또는 프로필 특성을 추가하거나 제거하는 등 대상 데이터 흐름의 다양한 구성 요소를 업데이트하는 방법에 대해 배웠습니다. 대상에 대한 자세한 내용은 [대상 개요](../home.md)를 참조하십시오.

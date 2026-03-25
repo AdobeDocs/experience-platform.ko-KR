@@ -2,9 +2,9 @@
 title: 대상 개요
 description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과 미리 빌드된 통합입니다. Adobe Experience Platform의 대상 을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1298'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ Experience Platform의 핵심 기능 중 하나는 자사 데이터를 수집하
 
 ## 컨트롤 {#controls}
 
-[대상 작업 영역](./ui/destinations-workspace.md)의 컨트롤을 사용하면 다음 작업을 수행할 수 있습니다.
+[대상 작업 영역](./ui/destinations-workspace.md)의 컨트롤을 사용하여 다음을 수행할 수 있습니다.
 
 * 데이터를 활성화할 수 있는 대상 플랫폼의 카탈로그를 검색하십시오.
 * 카탈로그의 대상에 대한 데이터 흐름을 만들고, 편집하고, 활성화하고, 비활성화합니다.

@@ -2,9 +2,9 @@
 description: 대상 테스트 API를 사용하여 스트리밍 대상 구성을 게시하기 전에 테스트하는 방법을 알아봅니다.
 title: 스트리밍 대상 테스트 API 개요
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Adobe은 Destination SDK의 일부로 대상을 구성하고 테스트하는 데
 
 요청에 프로필을 추가하거나 추가하지 않고 대상 테스트 API 끝점을 호출할 수 있습니다.
 
-요청에 프로필을 추가하지 않으면 Adobe이 내부적으로 프로필을 생성하여 요청에 추가합니다. 이 요청에 사용할 프로필을 생성하려면 [샘플 프로필 생성 API 참조](../../testing-api/streaming-destinations/sample-profile-generation-api.md)를 참조하세요. [API 참조](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema)에 표시된 대로 소스 XDM 스키마를 기반으로 프로필을 생성해야 합니다. 소스 스키마는 사용 중인 샌드박스의 [유니온 스키마](../../../../profile/ui/union-schema.md)입니다.
+요청에 프로필을 추가하지 않으면 Adobe이 내부적으로 프로필을 생성하여 요청에 추가합니다. 이 요청에 사용할 프로필을 생성하려면 [샘플 프로필 생성 API 참조](../../testing-api/streaming-destinations/sample-profile-generation-api.md)를 참조하십시오. [API 참조](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema)에 표시된 대로 소스 XDM 스키마를 기반으로 프로필을 생성해야 합니다. 소스 스키마는 사용 중인 샌드박스의 [유니온 스키마](../../../../profile/ui/union-schema.md)입니다.
 
 응답에는 대상 요청 처리 결과가 포함됩니다. 이 요청에는 다음 세 가지 기본 섹션이 포함됩니다.
 

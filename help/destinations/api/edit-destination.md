@@ -4,9 +4,9 @@ title: 흐름 서비스 API를 사용하여 대상 연결 편집
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 대상 연결의 다양한 구성 요소를 편집하는 방법에 대해 알아봅니다.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1599'
 ht-degree: 5%
 
 ---
@@ -294,7 +294,7 @@ curl -X PATCH \
 
 **요청**
 
-다음 요청은 `advertiserId`대상 연결[[!DNL Pinterest] 의 &#x200B;](/help/destinations/catalog/advertising/pinterest.md#parameters) 매개 변수를 업데이트합니다.
+다음 요청은 `advertiserId`대상 연결[[!DNL Pinterest] 의 ](/help/destinations/catalog/advertising/pinterest.md#parameters) 매개 변수를 업데이트합니다.
 
 ```shell
 curl -X PATCH \
@@ -344,7 +344,7 @@ curl -X PATCH \
 
 기본 연결의 구성 요소를 업데이트하려면 기본 연결 ID, 버전 및 사용할 새 값을 제공하는 동안 `PATCH` 끝점에 대해 `/connections` 요청을 수행합니다.
 
-매개 변수 [에 대해 원하는 대상으로 기존 데이터 흐름을 검사했을 때 &#x200B;](#look-up-dataflow-details)이전 단계`baseConnection`에서 기본 연결 ID를 얻었습니다.
+매개 변수 [에 대해 원하는 대상으로 기존 데이터 흐름을 검사했을 때 ](#look-up-dataflow-details)이전 단계`baseConnection`에서 기본 연결 ID를 얻었습니다.
 
 >[!IMPORTANT]
 >
@@ -467,4 +467,4 @@ curl -X PATCH \
 
 ## 다음 단계 {#next-steps}
 
-이 자습서를 통해 [!DNL Flow Service] API를 사용하여 대상 연결의 다양한 구성 요소를 업데이트하는 방법을 배웠습니다. 대상에 대한 자세한 내용은 [대상 개요](../home.md)를 참조하십시오.
+[!DNL Flow Service] API를 사용하여 대상 연결의 다양한 구성 요소를 업데이트하는 방법을 배웠습니다. 대상에 대한 자세한 내용은 [대상 개요](../home.md)를 참조하십시오.

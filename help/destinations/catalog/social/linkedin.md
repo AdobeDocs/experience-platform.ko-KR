@@ -3,9 +3,9 @@ keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin;
 title: Linkedin 일치하는 대상 연결
 description: 해시된 이메일을 기반으로 대상자 타겟팅, 개인화 및 억제에 대한 LinkedIn 캠페인에 대한 프로필을 활성화합니다.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1311'
 ht-degree: 4%
 
 ---
@@ -124,16 +124,16 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 아래 비디오에서는 [!DNL LinkedIn Matched Audiences] 대상을 구성하고 대상을 활성화하는 단계도 보여 줍니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
->Experience Platform 사용자 인터페이스는 자주 업데이트되며, 이 비디오 녹화 이후 변경되었을 수 있습니다. 최신 정보는 [대상 구성 자습서](../../ui/connect-destination.md)를 참조하세요.
+>Experience Platform 사용자 인터페이스는 자주 업데이트되며, 이 비디오 녹화 이후 변경되었을 수 있습니다. 최신 정보는 [대상 구성 자습서](../../ui/connect-destination.md)를 참조하십시오.
 
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 [!DNL LinkedIn Matched Audiences] 대상을 찾은 다음 **[!UICONTROL Set Up]**&#x200B;을(를) 선택하십시오.
-2. **[!UICONTROL Connect to destination]**&#x200B;를 선택합니다.
+2. **[!UICONTROL Connect to destination]**를 선택합니다.
    ![LinkedIn 인증](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. LinkedIn 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 
@@ -146,9 +146,9 @@ LinkedIn 토큰은 60일마다 만료됩니다. **[!UICONTROL Account expiration
 1. **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**(으)로 이동
 2. (선택 사항) 페이지에서 사용할 수 있는 필터를 사용하여 LinkedIn 계정만 표시합니다.
    ![LinkedIn 계정만 표시하도록 필터링](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
-3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL Edit details]**&#x200B;을(를) 선택하십시오.
+3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL Edit details]**을(를) 선택하십시오.
    ![세부 정보 편집 컨트롤 선택](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
-4. 모달 창에서 **[!UICONTROL Reconnect OAuth]**&#x200B;을(를) 선택하고 LinkedIn 자격 증명으로 다시 인증합니다.
+4. 모달 창에서 **[!UICONTROL Reconnect OAuth]**을(를) 선택하고 LinkedIn 자격 증명으로 다시 인증합니다.
    ![다시 연결 OAuth 옵션이 있는 모달 창](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]

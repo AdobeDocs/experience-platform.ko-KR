@@ -3,9 +3,9 @@ keywords: 태그 확장;태그 확장;launch 대상;platform tag 확장;platform
 title: Adobe Experience Platform의 태그 확장
 description: Adobe Experience Platform은 Adobe의 차세대 태그 관리 기능을 제공합니다. Experience Platform은 관련 고객 환경을 향상시키는 데 필요한 모든 분석, 마케팅 및 광고 태그를 배포하고 관리하는 간단한 방법을 제공합니다.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '477'
 ht-degree: 2%
 
 ---
@@ -45,7 +45,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 ## 태그 확장 사용의 이점 {#extensions-benefits}
 
-기존 Experience Cloud 고객은 Experience Platform의 태그 기능을 무료로 사용할 수 있습니다. 이 시스템은 설치, 구성, 업데이트 및 삭제할 수 있는 사용하기 쉬운 확장을 통해 웹 사이트에서의 태그 배포를 단순화합니다. 태그는 웹 사이트에 작은 공간을 남겨 두므로 페이지를 빠르게 로드할 수 있습니다.
+기존 Experience Cloud 고객은 Experience Platform의 태그 기능을 무료로 사용할 수 있습니다. 이 시스템은 설치, 구성, 업데이트 및 삭제할 수 있는 사용하기 쉬운 확장을 통해 웹 사이트에서의 태그 배포를 단순화합니다. 태그는 웹 사이트에 작은 공간을 남겨 두고 페이지를 빠르게 로드합니다.
 
 태그 확장에 대해 대상을 활성화할 수 없지만, 특정 상황에서 이벤트 데이터만 전달하도록 규칙을 설정할 수 있습니다. 이 강력한 기능을 사용하면 모든 상호 작용에 이벤트 데이터를 보내는 것이 아니라 특정 상황에서만 이벤트 데이터를 전달할 수 있습니다. 자세한 내용은 [태그 설명서](../../../tags/ui/managing-resources/rules.md)에서 규칙에 대해 읽어 보십시오.
 
