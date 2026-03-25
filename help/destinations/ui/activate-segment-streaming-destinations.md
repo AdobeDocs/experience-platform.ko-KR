@@ -3,10 +3,10 @@ title: 스트리밍 대상으로 대상 데이터 활성화
 type: Tutorial
 description: 스트리밍 대상에 매핑하여 Adobe Experience Platform에 있는 대상을 활성화하는 방법을 알아봅니다.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 3%
+source-wordcount: '1115'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ## 개요 {#overview}
 
-이 문서에서는 Adobe Experience Platform 스트리밍 대상에서 대상을 활성화하는 데 필요한 워크플로에 대해 설명합니다.
+이 문서에서는 [!DNL Adobe Experience Platform] 스트리밍 대상에서 대상을 활성화하는 데 필요한 워크플로에 대해 설명합니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -102,9 +102,9 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="변환 적용"
->abstract="해시되지 않은 소스 필드를 사용할 때 이 옵션을 선택하면 Adobe Experience Platform에서 활성화 시 해당 필드를 자동으로 해시할 수 있습니다."
+>abstract="해시되지 않은 소스 필드를 사용할 때 [!DNL Adobe Experience Platform]이(가) 활성화 시 자동으로 해시하도록 하려면 이 옵션을 선택하십시오."
 
-해시되지 않은 소스 특성을 대상이 해시될 것으로 예상하는 대상 특성(예: `email_lc_sha256` 또는 `phone_sha256`)에 매핑할 때 **변환 적용** 옵션을 선택하여 Adobe Experience Platform이 활성화 시 소스 특성을 자동으로 해시하도록 합니다.
+해시되지 않은 소스 특성을 대상이 해시될 것으로 예상하는 대상 특성에 매핑할 때(예: `email_lc_sha256` 또는 `phone_sha256`) **변환 적용** 옵션을 선택하여 [!DNL Adobe Experience Platform]이(가) 활성화 시 소스 특성을 자동으로 해시하도록 하십시오.
 
 ![ID 매핑 단계에서 강조 표시된 변환 컨트롤을 적용하십시오.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
@@ -172,5 +172,5 @@ For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL 
 
 >[!TIP]
 >
->The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
+>The integration between [!DNL Adobe Experience Platform] and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
 -->

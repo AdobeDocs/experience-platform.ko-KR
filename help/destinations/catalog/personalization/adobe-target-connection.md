@@ -3,67 +3,67 @@ keywords: target 개인화, 대상, experience platform 대상, adobe target 대
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1888'
-ht-degree: 9%
+source-wordcount: '1772'
+ht-degree: 7%
 
 ---
 
-# Adobe Target 연결 {#adobe-target-connection}
+# [!DNL Adobe Target] 연결 {#adobe-target-connection}
 
 ## 대상 변경 로그 {#changelog}
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
 | 2024년 4월 | 기능 및 설명서 업데이트 | Target 대상에 연결하고 데이터 스트림을 사용할 때 이제 *에지 세그멘테이션을 위해 데이터 스트림을 활성화할 필요가 없습니다*. 즉, 수행할 수 있는 사용 사례는 다르지만 Target 대상이 일괄 처리 및 스트리밍 대상에서 작동합니다. 자세한 내용은 [연결 매개 변수](#parameters) 섹션의 표를 참조하십시오. |
-| 2024년 1월 | 기능 및 설명서 업데이트 | 이제 기본 프로덕션 샌드박스 및 기타 기본이 아닌 샌드박스에 대해 Adobe Target 연결에 대상 및 프로필 속성을 공유할 수 있습니다. |
-| 2023년 6월 | 기능 및 설명서 업데이트 | 2023년 6월부터 새 Adobe Target 대상 연결을 구성할 때 대상을 공유할 Adobe Target 작업 영역을 선택할 수 있습니다. 자세한 내용은 [연결 매개변수](#parameters) 섹션을 참조하십시오. 추가로 작업 영역에 대한 자세한 내용은 Adobe Target에서 [작업 공간을 구성하는 방법](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ko)에 대한 튜토리얼을 참조하십시오. |
+| 2024년 1월 | 기능 및 설명서 업데이트 | 이제 기본 프로덕션 샌드박스 및 기본값이 아닌 다른 샌드박스에 대해 대상 및 프로필 속성을 [!DNL Adobe Target] 연결에 공유할 수 있습니다. |
+| 2023년 6월 | 기능 및 설명서 업데이트 | 2023년 6월부터 새 [!DNL Adobe Target] 대상 연결을 구성할 때 대상을 공유할 [!DNL Adobe Target] 작업 영역을 선택할 수 있습니다. 자세한 내용은 [연결 매개변수](#parameters) 섹션을 참조하십시오. 또한 작업 영역에 대한 자세한 내용은 [에서 ](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html)작업 영역 구성[!DNL Adobe Target]에 대한 자습서를 참조하십시오. |
 | 2023년 5월 | 기능 및 설명서 업데이트 | 2023년 5월부터 **[!UICONTROL Adobe Target]** 연결은 [특성 기반 개인화](../../ui/activate-edge-personalization-destinations.md#map-attributes)를 지원하며 일반적으로 모든 고객이 사용할 수 있습니다. |
 
 {style="table-layout:auto"}
 
 ## 개요 {#overview}
 
-Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
+[!DNL Adobe Target]은(는) 웹 사이트, 모바일 앱 등에서 이루어지는 모든 인바운드 고객 상호 작용에서 AI 기반의 실시간 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 
-Adobe Target은 Adobe Experience Platform 대상 카탈로그의 개인화 연결입니다.
+[!DNL Adobe Target]은(는) [!DNL Adobe Experience Platform] 대상 카탈로그의 개인화 연결입니다.
 
 ## 비디오 개요 {#video-overview}
 
-Experience Platform에서 Adobe Target 연결을 구성하는 방법에 대한 간략한 개요는 아래 비디오를 참조하십시오.
+Experience Platform에서 [!DNL Adobe Target] 연결을 구성하는 방법에 대한 간단한 개요를 보려면 아래 비디오를 시청하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449800/?captions=kor&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 ## 구현 유형에 따라 지원되는 사용 사례 {#supported-use-cases}
 
-아래 표에는 구현 유형에 따라 Web SDK을 사용하거나 사용하지 않고 [에지 세분화](/help/segmentation/home.md#edge)를 사용하거나 사용하지 않고 Adobe Target 대상에 대해 지원되는 사용 사례가 표시됩니다.
+아래 표에는 구현 유형에 따라 [!DNL Adobe Target] 대상에 대해 지원되는 사용 사례가 표시됩니다. 웹 SDK을 사용하거나 사용하지 않거나 [에지 세분화](/help/segmentation/home.md#edge)를 사용하거나 사용하지 않는 것입니다.
 
-| Adobe Target 구현 *없음* Web SDK | Adobe Target 구현 *사용* Web SDK | Adobe Target 구현 *사용* Web SDK *및* 에지 세분화 해제 |
+| [!DNL Adobe Target] 구현 *없음* 웹 SDK | [!DNL Adobe Target] 구현 *포함* 웹 SDK | [!DNL Adobe Target] 구현 *포함* 웹 SDK *및* 에지 세분화 해제 |
 |---|---|---|
-| <ul><li>데이터 스트림은 필요하지 않습니다. Adobe Target은 [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [서버측](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=ko#server-side-implementation) 또는 [하이브리드](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=ko#hybrid-implementation) 구현 메서드를 통해 배포할 수 있습니다.</li><li>[Edge 세그멘테이션](../../../segmentation/methods/edge-segmentation.md)은(는) 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md)는 지원되지 않습니다.</li><li>*기본 프로덕션 샌드박스* 및 기본값이 아닌 샌드박스에 대해 대상과 프로필 속성을 Adobe Target 연결에 공유할 수 있습니다.</li><li>데이터 스트림을 사용하지 않고 다음 세션 개인 맞춤화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=ko)을(를) 사용합니다.</li></ul> | <ul><li>Adobe Target 및 Experience Platform이 서비스로 구성된 데이터 스트림이 필요합니다.</li><li>Edge 세그멘테이션은 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md#use-cases)가 지원됩니다.</li><li>다른 샌드박스의 대상 및 프로필 속성 공유가 지원됩니다.</li></ul> | <ul><li>Adobe Target 및 Experience Platform이 서비스로 구성된 데이터 스트림이 필요합니다.</li><li>[데이터 스트림을 구성](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)할 때 **Edge 세그먼테이션** 확인란을 선택하지 마십시오.</li><li>[다음 세션 개인화](../../ui/activate-edge-personalization-destinations.md#next-session)가 지원됩니다.</li><li>다른 샌드박스의 대상 및 프로필 속성 공유가 지원됩니다.</li></ul> |
+| <ul><li>데이터 스트림은 필요하지 않습니다. [!DNL Adobe Target]은(는) [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [서버측](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation) 또는 [하이브리드](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) 구현 메서드를 통해 배포할 수 있습니다.</li><li>[Edge 세그멘테이션](../../../segmentation/methods/edge-segmentation.md)은(는) 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md)는 지원되지 않습니다.</li><li>[!DNL Adobe Target]기본 프로덕션 샌드박스&#x200B;*및 기본값이 아닌 샌드박스에 대해 대상과 프로필 속성을* 연결에 공유할 수 있습니다.</li><li>데이터 스트림을 사용하지 않고 다음 세션 개인 맞춤화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html)을(를) 사용합니다.</li></ul> | <ul><li>[!DNL Adobe Target] 및 Experience Platform이 서비스로 구성된 데이터 스트림이 필요합니다.</li><li>Edge 세그멘테이션은 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md#use-cases)가 지원됩니다.</li><li>다른 샌드박스의 대상 및 프로필 속성 공유가 지원됩니다.</li></ul> | <ul><li>[!DNL Adobe Target] 및 Experience Platform이 서비스로 구성된 데이터 스트림이 필요합니다.</li><li>[데이터 스트림을 구성](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)할 때 **Edge 세그먼테이션** 확인란을 선택하지 마십시오.</li><li>[다음 세션 개인화](../../ui/activate-edge-personalization-destinations.md#next-session)가 지원됩니다.</li><li>다른 샌드박스의 대상 및 프로필 속성 공유가 지원됩니다.</li></ul> |
 
 
 ## 전제 조건 {#prerequisites}
 
 ### 데이터스트림 {#datastream}
 
-[데이터 스트림을 사용](#parameters)하는 Adobe Target 연결을 구성할 때는 [Adobe Experience Platform 데이터 수집](/help/collection/home.md)을 구현해야 합니다.
+[!DNL Adobe Target]데이터 스트림 사용[에 대한 ](#parameters) 연결을 구성할 때는 [Adobe Experience Platform 데이터 수집](/help/collection/home.md)을 구현해야 합니다.
 
-데이터스트림을 사용하지 않고 Adobe Target 연결을 구성해도 웹 SDK을 구현할 필요가 없습니다.
+데이터 스트림을 사용하지 않고 [!DNL Adobe Target] 연결을 구성해도 웹 SDK을 구현할 필요가 없습니다.
 
 >[!IMPORTANT]
 >
->[!DNL Adobe Target] 연결을 만들기 전에 [동일 페이지 및 다음 페이지 개인화에 대한 개인화 대상을 구성](../../ui/activate-edge-personalization-destinations.md)하는 방법에 대한 안내서를 읽어 보십시오. 이 안내서는 여러 Experience Platform 구성 요소에서 동일한 페이지 및 다음 페이지 개인화 사용 사례에 필요한 구성 단계를 안내합니다. 동일한 페이지 및 다음 페이지 개인화 사용 사례를 달성하려면 Adobe Target 연결을 구성할 때 데이터 스트림을 사용해야 합니다.
+>[!DNL Adobe Target] 연결을 만들기 전에 [동일 페이지 및 다음 페이지 개인화에 대한 개인화 대상을 구성](../../ui/activate-edge-personalization-destinations.md)하는 방법에 대한 안내서를 읽어 보십시오. 이 안내서는 여러 Experience Platform 구성 요소에서 동일한 페이지 및 다음 페이지 개인화 사용 사례에 필요한 구성 단계를 안내합니다. 동일한 페이지 및 다음 페이지 개인화 사용 사례를 달성하려면 [!DNL Adobe Target] 연결을 구성할 때 데이터 스트림을 사용해야 합니다.
 
-### Adobe Target의 사전 요구 사항 {#prerequisites-in-adobe-target}
+### [!DNL Adobe Target]의 필수 구성 요소 {#prerequisites-in-adobe-target}
 
-Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
+[!DNL Adobe Target]에서 사용자에게 다음이 있는지 확인하십시오.
 
-* [기본 작업 영역](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=ko#default-workspace)에 액세스;
-* **승인자** [역할](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=ko#roles-and-permissions).
+* [기본 작업 영역](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#default-workspace)에 액세스;
+* **승인자** [역할](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#roles-and-permissions).
 
-[Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=ko#section_8C425E43E5DD4111BBFC734A2B7ABC80) 및 [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=ko#roles-permissions)에 대한 권한 부여에 대해 자세히 알아보십시오.
+[Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) 및 [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions)에 대한 권한 부여에 대해 자세히 알아보십시오.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -72,14 +72,14 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 >[!IMPORTANT]
 >
 >동일한 페이지 및 다음 페이지 개인화 사용 사례&#x200B;*에 대해* Edge 대상을 활성화할 때 대상 *필수*&#x200B;이(가) [Active-On-Edge 병합 정책](../../../segmentation/ui/segment-builder.md#merge-policies)을(를) 사용합니다. [!DNL active-on-edge] 병합 정책을 사용하면 대상이 [Edge](../../../segmentation/methods/edge-segmentation.md)에서 지속적으로 평가되고 실시간 및 다음 페이지 개인화 사용 사례에 사용할 수 있습니다.  구현 유형에 따라 [사용 가능한 모든 사용 사례](#parameter)를 읽어 보십시오.
->다른 병합 정책을 사용하는 Edge 대상을 Adobe Target 대상에 매핑하면 실시간 및 다음 페이지 사용 사례에 대해 해당 대상이 평가되지 않습니다.
+>다른 병합 정책을 사용하는 Edge 대상을 [!DNL Adobe Target] 대상에 매핑하면 실시간 및 다음 페이지 사용 사례에 대해 해당 대상이 평가되지 않습니다.
 >[병합 정책 만들기](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)의 지침을 따라 **[!UICONTROL Active-On-Edge Merge Policy]** 전환을 사용하도록 설정하십시오.
 
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> Adobe Journey Optimizer과 같은 다른 Experience Platform 앱에서 생성된 대상자 </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 | [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
-| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | Adobe Experience Platform 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
+| [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 
@@ -103,7 +103,7 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 
 | 항목 | 유형 | 참고 |
 |---------|----------|---------|
-| 내보내기 유형 | **[!DNL Profile request]** | 단일 프로필에 대해 Adobe Target 대상에 매핑된 모든 대상을 요청합니다. |
+| 내보내기 유형 | **[!DNL Profile request]** | 단일 프로필에 대해 [!DNL Adobe Target] 대상에 매핑된 모든 대상을 요청하고 있습니다. |
 | 내보내기 빈도 | **[!UICONTROL Streaming]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
@@ -114,7 +114,7 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 >id="platform_destinations_target_datastream"
 >title="데이터 스트림 정보"
 >abstract="이 옵션은 대상자에 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에 Target 구성이 활성화된 데이터 스트림만 표시됩니다. 에지 세분화를 사용하려면 데이터 스트림을 선택해야 합니다. 없음을 선택하면 에지 세분화를 사용하는 모든 사용 사례가 비활성화됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=ko#parameters" text="데이터스트림 선택에 대해 자세히 알아보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="데이터스트림 선택에 대해 자세히 알아보기"
 
 >[!IMPORTANT]
 >
@@ -122,37 +122,37 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
 
-Adobe Experience Platform은 자동으로 회사의 Adobe Target 인스턴스에 연결합니다. 인증이 필요하지 않습니다.
+[!DNL Adobe Experience Platform]이(가) 회사의 [!DNL Adobe Target] 인스턴스에 자동으로 연결합니다. 인증이 필요하지 않습니다.
 
 ### 연결 매개변수 {#parameters}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_workspace"
->title="Adobe Target 작업 영역 정보"
->abstract="대상자를 공유할 Adobe Target 작업 영역을 선택하십시오. 각 Adobe Target 연결에 대해 단일 작업 영역을 선택할 수 있습니다. 활성화 시 대상자는 해당하는 Experience Platform 데이터 사용 레이블을 따르는 동안 선택한 작업 영역으로 라우팅됩니다."
->additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ko" text="Adobe Target 작업 영역에 대해 자세히 알아보기"
+>title="[!DNL Adobe Target]개 작업 영역 정보"
+>abstract="대상자를 공유할 [!DNL Adobe Target] 작업 영역을 선택하십시오. 각 [!DNL Adobe Target] 연결에 대해 단일 작업 영역을 선택할 수 있습니다. 활성화 시 대상자는 해당하는 Experience Platform 데이터 사용 레이블을 따르는 동안 선택한 작업 영역으로 라우팅됩니다."
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html" text=" [!DNL Adobe Target] 작업 영역에 대해 자세히 알아보기"
 
 [이 대상을 설정](../../ui/connect-destination.md)하는 동안 다음 정보를 제공해야 합니다.
 
 * **이름**: 이 대상의 기본 이름을 입력하십시오.
 * **설명**: 대상에 대한 설명을 입력하십시오. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다. 이 필드는 선택 사항입니다.
-* **데이터스트림**: 대상자가 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에는 Target 및 Adobe Experience Platform 서비스가 활성화된 데이터스트림만 표시됩니다. Adobe Experience Platform 및 Adobe Target용 데이터 스트림을 구성하는 방법에 대한 자세한 내용은 [데이터 스트림 구성](../../../datastreams/configure.md#aep)을 참조하십시오.
+* **데이터스트림**: 대상자가 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에는 Target 및 [!DNL Adobe Experience Platform] 서비스가 활성화된 데이터스트림만 표시됩니다. [ 및 ](../../../datastreams/configure.md#aep)에 대한 데이터 스트림을 구성하는 방법에 대한 자세한 내용은 [!DNL Adobe Experience Platform]데이터 스트림 구성[!DNL Adobe Target]을 참조하십시오.
 
   >[!IMPORTANT]
   >
-  >**조직 전체의 데이터 스트림 고유성**: 데이터 스트림 ID와 샌드박스 이름의 조합은 IMS 조직 내의 Adobe Target 대상 연결에 대해 고유해야 합니다. 이것은 다음을 의미합니다.
+  >**조직 전체의 데이터 스트림 고유성**: IMS 조직 내의 [!DNL Adobe Target] 대상 연결에 대해 데이터 스트림 ID와 샌드박스 이름의 조합이 고유해야 합니다. 이것은 다음을 의미합니다.
   >
-  >* 전체 조직의 여러 Adobe Target 대상 연결에 대해 동일한 데이터 스트림 ID + 샌드박스 이름 조합을 사용할 수 없습니다
+  >* 전체 조직의 여러 [!DNL Adobe Target] 대상 연결에 대해 동일한 데이터 스트림 ID + 샌드박스 이름 조합을 사용할 수 없습니다.
   >* 연결이 다른 샌드박스에 있는 한 서로 다른 대상 연결에 동일한 데이터스트림 ID를 사용할 수 있습니다
   >* 이 규칙은 **[!UICONTROL None]**&#x200B;을(를) 선택하는 경우를 포함하여 모든 데이터 스트림 선택 항목에 적용됩니다.
 
-   * **[!UICONTROL None]**: Adobe Target 개인화를 구성해야 하지만 Adobe Experience Platform Web SDK을 구현할 수 없는 경우 이 옵션을 선택하십시오. 이 옵션을 사용하는 경우 Experience Platform에서 Target으로 내보낸 대상은 다음 세션 개인화만 지원하며 에지 세분화는 비활성화됩니다. 구현 유형별 사용 가능한 사용 사례를 비교하려면 [지원되는 사용 사례](#supported-use-cases) 섹션의 표를 참조하십시오.
+   * **[!UICONTROL None]**: [!DNL Adobe Target] 개인화를 구성해야 하지만 [!DNL Adobe Experience Platform] 웹 SDK을 구현할 수 없는 경우 이 옵션을 선택하십시오. 이 옵션을 사용하는 경우 Experience Platform에서 Target으로 내보낸 대상은 다음 세션 개인화만 지원하며 에지 세분화는 비활성화됩니다. 구현 유형별 사용 가능한 사용 사례를 비교하려면 [지원되는 사용 사례](#supported-use-cases) 섹션의 표를 참조하십시오.
 
-  | Adobe Target 구현 *없음* Web SDK | Adobe Target 구현 *사용* Web SDK | Adobe Target 구현 *사용* Web SDK *및* 에지 세분화 해제 |
+  | [!DNL Adobe Target] 구현 *없음* 웹 SDK | [!DNL Adobe Target] 구현 *포함* 웹 SDK | [!DNL Adobe Target] 구현 *포함* 웹 SDK *및* 에지 세분화 해제 |
   |---|---|---|
-  | <ul><li>데이터 스트림은 필요하지 않습니다. Adobe Target은 [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [서버측](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=ko#server-side-implementation) 또는 [하이브리드](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=ko#hybrid-implementation) 구현 메서드를 통해 배포할 수 있습니다.</li><li>[Edge 세그멘테이션](../../../segmentation/methods/edge-segmentation.md)은(는) 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md)는 지원되지 않습니다.</li><li>*기본 프로덕션 샌드박스* 및 기본값이 아닌 샌드박스에 대해 대상과 프로필 속성을 Adobe Target 연결에 공유할 수 있습니다.</li><li>데이터 스트림을 사용하지 않고 다음 세션 개인 맞춤화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=ko)을(를) 사용합니다.</li></ul> | <ul><li>Adobe Target 및 Experience Platform이 서비스로 구성된 데이터 스트림이 필요합니다.</li><li>Edge 세그멘테이션은 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md#use-cases)가 지원됩니다.</li><li>다른 샌드박스의 대상 및 프로필 속성 공유가 지원됩니다.</li></ul> | <ul><li>Adobe Target 및 Experience Platform이 서비스로 구성된 데이터 스트림이 필요합니다.</li><li>[데이터 스트림을 구성](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)할 때 **Edge 세그먼테이션** 확인란을 선택하지 마십시오.</li><li>[다음 세션 개인화](../../ui/activate-edge-personalization-destinations.md#next-session)가 지원됩니다.</li><li>다른 샌드박스의 대상 및 프로필 속성 공유가 지원됩니다.</li></ul> |
+  | <ul><li>데이터 스트림은 필요하지 않습니다. [!DNL Adobe Target]은(는) [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [서버측](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation) 또는 [하이브리드](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) 구현 메서드를 통해 배포할 수 있습니다.</li><li>[Edge 세그멘테이션](../../../segmentation/methods/edge-segmentation.md)은(는) 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md)는 지원되지 않습니다.</li><li>[!DNL Adobe Target]기본 프로덕션 샌드박스&#x200B;*및 기본값이 아닌 샌드박스에 대해 대상과 프로필 속성을* 연결에 공유할 수 있습니다.</li><li>데이터 스트림을 사용하지 않고 다음 세션 개인 맞춤화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html)을(를) 사용합니다.</li></ul> | <ul><li>[!DNL Adobe Target] 및 Experience Platform이 서비스로 구성된 데이터 스트림이 필요합니다.</li><li>Edge 세그멘테이션은 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md#use-cases)가 지원됩니다.</li><li>다른 샌드박스의 대상 및 프로필 속성 공유가 지원됩니다.</li></ul> | <ul><li>[!DNL Adobe Target] 및 Experience Platform이 서비스로 구성된 데이터 스트림이 필요합니다.</li><li>[데이터 스트림을 구성](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)할 때 **Edge 세그먼테이션** 확인란을 선택하지 마십시오.</li><li>[다음 세션 개인화](../../ui/activate-edge-personalization-destinations.md#next-session)가 지원됩니다.</li><li>다른 샌드박스의 대상 및 프로필 속성 공유가 지원됩니다.</li></ul> |
 
-* **Workspace**: 대상을 공유할 Adobe Target [작업 영역](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ko)을(를) 선택하십시오. 각 Adobe Target 연결에 대해 단일 작업 영역을 선택할 수 있습니다. 활성화하면 적용 가능한 [Experience Platform 데이터 사용 레이블](../../../data-governance/labels/overview.md)을 따르는 동안 대상자가 선택한 작업 영역으로 라우팅됩니다.
+* **Workspace**: 대상을 공유할 [!DNL Adobe Target] [작업 영역](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html)을(를) 선택하십시오. 각 [!DNL Adobe Target] 연결에 대해 단일 작업 영역을 선택할 수 있습니다. 활성화하면 적용 가능한 [Experience Platform 데이터 사용 레이블](../../../data-governance/labels/overview.md)을 따르는 동안 대상자가 선택한 작업 영역으로 라우팅됩니다.
 
 >[!NOTE]
 >
@@ -176,7 +176,7 @@ Adobe Experience Platform은 자동으로 회사의 Adobe Target 인스턴스에
 
 ## Target 대상에서 대상 제거 {#remove}
 
-기존 Adobe Target 연결에서 대상을 제거하는 데 필요한 추가 단계가 있습니다. 해당 대상이 이미 Adobe Target [activity](https://experienceleague.adobe.com/ko/docs/target/using/activities/activities)에서 사용되고 있습니다. Adobe Target 활동에서 대상을 사용하는 경우 Adobe Target 연결에서 대상을 제거하려고 하면 오류가 발생합니다.
+기존 [!DNL Adobe Target] 연결에서 대상을 제거하는 데 필요한 추가 단계가 있습니다. 해당 대상이 [!DNL Adobe Target] [활동](https://experienceleague.adobe.com/en/docs/target/using/activities/activities)에서 이미 사용되고 있습니다. [!DNL Adobe Target] 활동에서 대상을 사용하는 경우 [!DNL Adobe Target] 연결에서 대상을 제거하려고 하면 오류가 발생합니다.
 
 ![Target 활동에서 사용하는 대상을 제거하려고 시도하여 오류가 표시되는 Experience Platform UI 이미지입니다.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
 
@@ -186,7 +186,7 @@ Adobe Experience Platform은 자동으로 회사의 Adobe Target 인스턴스에
 
 ## 내보낸 데이터 {#exported-data}
 
-Adobe Target Adobe Experience Platform Edge Network에서 프로필 데이터를 *읽기*&#x200B;하므로 데이터를 내보내지 않습니다.
+[!DNL Adobe Target] Edge Network에서 **&#x200B;읽기[!DNL Adobe Experience Platform] 프로필 데이터를 가져오므로 데이터를 내보내지 않습니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
