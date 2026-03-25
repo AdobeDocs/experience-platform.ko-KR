@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 2026년 3월
 description: Adobe Experience Platform의 2026년 3월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d7415a9deefac55b8583eb52a7c1f18caf5f3334
+source-git-commit: 8c8b3b223c67dd6e9a00f9cf297f51fd09f3227f
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '1266'
 ht-degree: 33%
 
 ---
@@ -29,6 +29,8 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 - [Agent Orchestrator](#agent-orchestrator)
 - [대상](#destinations)
 - [경험 데이터 모델 (XDM)](#xdm)
+- [실시간 고객 프로필](#real-time-customer-profile)
+- [Segmentation Service](#segmentation-service)
 - [소스](#sources)
 
 ## 고급 데이터 라이프사이클 관리 {#advanced-data-lifecycle-management}
@@ -51,7 +53,7 @@ Agent Orchestrator을 사용하면 워크플로우를 자동화하고 여러 채
 
 | 기능 | 설명 |
 | --- | --- |
-| [Adobe Marketing Agent for [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/ko/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | [!DNL Microsoft 365 Copilot]용 Adobe Marketing Agent은 Adobe의 마케팅 인텔리전스를 [!DNL Teams], [!DNL Word], [!DNL PowerPoint] 및 기타 [!DNL Microsoft 365] 앱과 같은 일상적인 도구에 직접 가져오는 임베드된 에이전트입니다. [!DNL Microsoft 365] 워크플로를 종료하지 않고 캠페인을 계획하고, 대상을 검토하고, 동료와 협력하여 고객 질문에 답변하고, 데이터에 기반한 결정을 내리는 동안 이 에이전트를 사용하여 Adobe 애플리케이션에서 신뢰할 수 있는 캠페인 인사이트를 가져올 수 있습니다. |
+| [Adobe Marketing Agent for [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | [!DNL Microsoft 365 Copilot]용 Adobe Marketing Agent은 Adobe의 마케팅 인텔리전스를 [!DNL Teams], [!DNL Word], [!DNL PowerPoint] 및 기타 [!DNL Microsoft 365] 앱과 같은 일상적인 도구에 직접 가져오는 임베드된 에이전트입니다. [!DNL Microsoft 365] 워크플로를 종료하지 않고 캠페인을 계획하고, 대상을 검토하고, 동료와 협력하여 고객 질문에 답변하고, 데이터에 기반한 결정을 내리는 동안 이 에이전트를 사용하여 Adobe 애플리케이션에서 신뢰할 수 있는 캠페인 인사이트를 가져올 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -93,6 +95,20 @@ XDM은 Experience Platform에 가져온 데이터에 대한 공통 구조와 정
 
 자세한 내용은 [XDM 개요](../../xdm/home.md)를 참조하십시오.
 
+## 실시간 고객 프로필 {#real-time-customer-profile}
+
+실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 여러 채널의 데이터를 결합하여 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. 프로필을 사용하면 모든 고객 상호 작용에 대해 실행 가능한 타임스탬프 계정을 제공하는 통합 보기로 고객 데이터를 통합할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 이벤트 | 이제 프로필을 검색할 때 이벤트의 전환 확인 기간을 설정할 수 있습니다. 이렇게 하면 프로필이 지정된 기간 동안 연결된 이벤트를 볼 수 있습니다. 자세한 내용은 [프로필 UI 안내서](/help/profile/ui/user-guide.md#events)를 참조하세요. |
+
+{style="table-layout:auto"}
+
+자세한 내용은 [[!DNL Real-Time Customer Profile] 개요](../../profile/home.md)를 참조하십시오.
+
 <!-- 
 ## Run and Operate {#run-and-operate}
 
@@ -109,6 +125,19 @@ Inspect, troubleshoot, and optimize your Experience Platform implementations wit
 
 For more information, read the [Run and Operate overview](../run-and-operate/overview.md), [Inspect job schedules](../run-and-operate/job-schedules.md), and the [Platform UI guide](../landing/ui-guide.md). -->
 
+## Segmentation Service {#segmentation-service}
+
+[!DNL Segmentation Service]는 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 프로필의 특정 하위 집합을 정의합니다. 대상자는 기록 데이터(예: 인구 통계 정보) 또는 고객과 브랜드의 상호 작용을 나타내는 시계열 이벤트를 기반으로 할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 수집 유형 | 이제 속성의 수집 유형을 볼 수 있습니다. 이를 통해 데이터의 출처를 알 수 있으므로 더 나은 대상자를 만들 수 있습니다. 이 기능에 대한 자세한 내용은 [세그먼트 빌더 안내서](/help/segmentation/ui/segment-builder.md)를 참조하세요. |
+| 요약 데이터 | 이제 계정 및 사용자 기반 대상의 속성에 대한 요약 데이터를 볼 수 있습니다. 계정 대상의 이 기능에 대한 자세한 내용은 계정 [Audience Builder 안내서](/help/rtcdp/segmentation/audience-builder.md)를 참조하십시오. 사용자 기반 대상의 이 기능에 대한 자세한 내용은 [세그먼트 빌더 안내서](/help/segmentation/ui/segment-builder.md)를 참조하십시오. |
+
+자세한 내용은 [[!DNL Segmentation Service] 개요](../../segmentation/home.md)를 참조하십시오.
+
 ## 소스
 
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
@@ -117,7 +146,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 소스 | 설명 |
 | --- | --- |
-| [!DNL Talon.One] | 이제 새로운 [!DNL Talon.One] [!DNL Talon.One]일괄 처리[&#x200B; 및 &#x200B;](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md)스트리밍[&#x200B; 소스를 사용하여 Experience Platform을 &#x200B;](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md)에 연결할 수 있습니다. 새 소스를 사용하여 Experience Platform에 대한 거래 및 충성도 활동 이벤트뿐만 아니라 충성도 프로필 데이터를 수집할 수 있습니다. |
+| [!DNL Talon.One] | 이제 새로운 [!DNL Talon.One] [!DNL Talon.One]일괄 처리[ 및 ](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md)스트리밍[ 소스를 사용하여 Experience Platform을 ](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md)에 연결할 수 있습니다. 새 소스를 사용하여 Experience Platform에 대한 거래 및 충성도 활동 이벤트뿐만 아니라 충성도 프로필 데이터를 수집할 수 있습니다. |
 | 새로운 IP 주소 허용 목록 | GBR9: Azure에서 Experience Platform에 성공적으로 일괄 처리 소스 연결을 보장하기 위해 허용 목록에 추가하다해야 하는 주소 목록에 영국이 추가되었습니다. 자세한 내용은 [IP 주소 가이드](../../sources/ip-address-allow-list.md#gbr9-united-kingdom)의 목록을 참조하십시오. |
 | 변경 데이터 캡처 지원 향상 | 이제 [!DNL Marketo Engage], [!DNL Microsoft Dynamics] 및 [!DNL Salesforce CRM] 소스에서 변경 데이터 캡처를 사용할 수 있습니다. |
 | [[!DNL Google BigQuery]](../../sources/connectors/databases/bigquery.md)에 대한 인증 가이드 개선 | [!DNL Google BigQuery] 원본에 대한 인증 가이드가 다음 정보로 확장되었습니다. <ul><li>새로 고침 토큰에 필요한 범위입니다.</li><li>[!DNL Google] ID에 필요한 IAM 역할입니다.</li><li>`largeResultsDataSetId` 사용에 대한 추가 지침입니다.</li></ul> |
