@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 2026년 3월
 description: Adobe Experience Platform의 2026년 3월 릴리스 정보.
 exl-id: 66b948fd-caa0-4e5e-83dd-3b15b77c09fa
-source-git-commit: 6b6a03fb8675ed01dd255f7206b23b05c809f2a6
+source-git-commit: fad4cd198eda42f530e731a22ea79096a3cf3807
 workflow-type: tm+mt
-source-wordcount: '1713'
+source-wordcount: '1805'
 ht-degree: 19%
 
 ---
@@ -27,6 +27,7 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 
 - [고급 데이터 라이프사이클 관리](#advanced-data-lifecycle-management)
 - [Agent Orchestrator](#agent-orchestrator)
+- [용량](#capacity)
 - [데이터스트림](#datastreams)
 - [대상](#destinations)
 - [경험 데이터 모델 (XDM)](#xdm)
@@ -54,11 +55,24 @@ Agent Orchestrator을 사용하여 워크플로우를 자동화하고 여러 채
 
 | 기능 | 설명 |
 | --- | --- |
-| [Adobe Marketing Agent for [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/ko/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | [!DNL Microsoft 365 Copilot]용 Adobe Marketing Agent은 Adobe의 마케팅 인텔리전스를 [!DNL Teams], [!DNL Word], [!DNL PowerPoint] 및 기타 [!DNL Microsoft 365] 앱과 같은 일상적인 도구에 직접 가져오는 임베드된 에이전트입니다. [!DNL Microsoft 365] 워크플로를 종료하지 않고 캠페인을 계획하고, 대상을 검토하고, 동료와 협력하여 고객 질문에 답변하고, 데이터에 기반한 결정을 내리는 동안 이 에이전트를 사용하여 Adobe 애플리케이션에서 신뢰할 수 있는 캠페인 인사이트를 가져올 수 있습니다. |
+| [Adobe Marketing Agent for [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | [!DNL Microsoft 365 Copilot]용 Adobe Marketing Agent은 Adobe의 마케팅 인텔리전스를 [!DNL Teams], [!DNL Word], [!DNL PowerPoint] 및 기타 [!DNL Microsoft 365] 앱과 같은 일상적인 도구에 직접 가져오는 임베드된 에이전트입니다. [!DNL Microsoft 365] 워크플로를 종료하지 않고 캠페인을 계획하고, 대상을 검토하고, 동료와 협력하여 고객 질문에 답변하고, 데이터에 기반한 결정을 내리는 동안 이 에이전트를 사용하여 Adobe 애플리케이션에서 신뢰할 수 있는 캠페인 인사이트를 가져올 수 있습니다. |
 
 {style="table-layout:auto"}
 
 자세한 내용은 [Agent Orchestrator 설명서](https://experienceleague.adobe.com/ko/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator)를 참조하십시오.
+
+## 용량 {#capacity}
+
+용량은 조직의 [보호 기능](../../rtcdp/guardrails/overview.md)을 종합적으로 볼 수 있으며, 샌드박스 수준에서 용량을 할당하여 잠재적인 용량 위반을 해결하는 방법에 대한 권장 사항을 제공합니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 에지 세분화 처리량 | 이제 에지 세그멘테이션 처리량과 관련된 보호 기능을 확인하고 관리할 수 있습니다. 자세한 내용은 [용량 개요](/help/landing/license-usage-and-guardrails/capacity.md#edge-segmentation-throughput)를 참조하십시오. |
+| 에지 데이터스트림 모니터링 지원 | 이제 에지 데이터스트림에 대한 실시간 모니터링을 사용할 수 있으므로 처리량 및 기타 지표에 투명성을 제공합니다. 자세한 내용은 [Monitoring Edge 안내서](/help/dataflows/ui/monitor-edge.md)를 참조하십시오. |
+
+자세한 내용은 [용량 개요](../../landing/license-usage-and-guardrails/capacity.md)를 참조하십시오.
 
 ## 데이터스트림 {#datastreams}
 
