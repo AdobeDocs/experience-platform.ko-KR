@@ -6,10 +6,10 @@ badge: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 40a9ea68fd855b2f0d92a4fa336f1b68142f0649
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 16%
+source-wordcount: '1511'
+ht-degree: 14%
 
 ---
 
@@ -25,15 +25,15 @@ ht-degree: 16%
 
 ## 사용 사례 {#use-cases}
 
-[!DNL Microsoft Ads Customer Match] 대상을 사용하는 방법과 시기를 더 잘 이해하는 데 도움이 되도록 [!DNL Adobe Experience Platform] 고객이 이 기능을 사용하여 해결할 수 있는 사용 사례의 예제를 소개합니다.
+[!DNL Microsoft Ads Customer Match] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 기능을 사용하여 해결할 수 있는 사용 사례를 소개합니다.
 
-### 사용 사례 #1 {#use-case-1}
+### 개인화된 오퍼로 기존 고객 재타겟팅 {#use-case-1}
 
 전자 상거래 브랜드는 [!DNL Microsoft Search] 및 [!DNL Microsoft Audience Network]을(를) 통해 기존 고객에게 연락하여 과거 구매 및 검색 기록을 기반으로 오퍼를 개인화하려고 합니다. 브랜드는 자체 CRM의 이메일 주소를 Experience Platform으로 수집하고, 자체 오프라인 데이터에서 대상을 만들고, 이러한 대상을 [!DNL Microsoft Ads Customer Match]에 보내 검색 및 대상 광고 전반에 걸쳐 사용할 수 있도록 함으로써 광고 비용을 최적화할 수 있습니다.
 
-### 사용 사례 #2 {#use-case-2}
+### 기존 고객에게 새 제품 홍보 {#use-case-2}
 
-한 기술 회사가 신제품을 출시했다. 이번 신제품 홍보를 위해 기존에 관련 제품을 구매한 고객들의 인지도를 끌어내고자 한다. CRM 데이터베이스의 이메일 주소를 식별자로 사용하여 Experience Platform에 업로드합니다. 관련 제품을 소유한 고객을 기반으로 대상을 만듭니다. 이러한 대상은 [!DNL Microsoft Ads Customer Match]&#x200B;(으)로 전송되므로 회사는 현재 고객과 [!DNL Microsoft Advertising Network]의 유사한 고객을 타깃팅할 수 있습니다.
+한 기술 회사가 새로운 제품을 출시했고 이전에 관련 제품을 구매한 고객들 사이에서 인지도를 끌어내고 싶어한다. CRM 데이터베이스의 이메일 주소를 식별자로 사용하여 Experience Platform에 업로드합니다. 관련 제품을 소유한 고객을 기반으로 대상을 만듭니다. 이러한 대상은 [!DNL Microsoft Ads Customer Match]&#x200B;(으)로 전송되므로 회사는 현재 고객과 [!DNL Microsoft Advertising Network]의 유사한 고객을 타깃팅할 수 있습니다.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -41,7 +41,7 @@ ht-degree: 16%
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| `email` | 일반 텍스트 이메일 주소 | [!DNL Microsoft Ads Customer Match] 연결에서는 일반 텍스트 전자 메일 주소만 지원됩니다. Experience Platform은 Microsoft의 요구 사항에 맞게 내보내기 시 이메일 주소를 자동으로 해시합니다. |
+| `email` | 일반 텍스트 이메일 주소 | 매핑 단계에서는 일반 텍스트(해시되지 않은) 전자 메일 주소만 **소스** 필드로 지원됩니다. 사전 해시된 소스 필드는 지원되지 않습니다. Experience Platform은 전자 메일 주소를 [!DNL Microsoft Ads]&#x200B;(으)로 내보내기 전에 항상 해시합니다. |
 
 {style="table-layout:auto"}
 
@@ -85,6 +85,20 @@ ht-degree: 16%
 ### 고객 일치 약관에 동의 {#accept-customer-match-terms}
 
 이 대상을 통해 대상을 활성화하기 전에 먼저 [!DNL Microsoft Advertising] 계정에서 고객 일치 목록을 수동으로 만들어야 합니다. 이 초기 수동 작성은 고객 일치 약관을 수락하는 데 필요합니다. 이렇게 하면 Experience Platform에서 보낸 대상자를 자동으로 만들 수 있습니다. 이 단계를 완료하지 않으면 대상을 활성화할 때 오류가 발생할 수 있습니다.
+
+### 작업 계정(MS Entra) IT 관리자 승인 {#work-account-admin-approval}
+
+Microsoft 작업 계정(Microsoft Entra 계정이라고도 함)으로 인증하는 경우 [!DNL Microsoft Advertising]에 연결하기 전에 조직의 IT 관리자가 승인을 받아야 할 수 있습니다.
+
+작업 계정을 사용하여 인증하려고 하면 **승인 필요** 페이지로 리디렉션될 수 있습니다. 이 페이지에서는 앱 연결 정당성을 요청하고 `ads.manage`을(를) 포함한 필수 권한을 나열합니다. 요청을 제출하면 IT 관리자가 이를 검토하라는 알림을 받게 됩니다. 요청이 제출되었다는 확인 이메일도 받게 됩니다.
+
+IT 관리자가 Azure 포털에서 요청을 승인하면 Experience Platform으로 돌아가서 작업 계정을 사용하여 인증할 수 있습니다. 지침은 Microsoft 설명서 를 참조하십시오.
+
+* [관리자 동의 요청을 검토하고 조치를 취합니다](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
+* [관리자 동의 워크플로 구성](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
+* [사용자가 애플리케이션에 동의하는 방법 구성](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
+
+IT 관리자가 아직 요청을 승인하지 않은 경우 다음 오류로 인해 인증이 실패합니다. `AADSTS650052: The app needs access to a service ('https://ads.microsoft.com') that your organization has not subscribed to or enabled. Contact your IT Admin to review the configuration of your service subscriptions.`
 
 ### 계정 구성 {#account-configuration}
 
@@ -135,7 +149,7 @@ ht-degree: 16%
 * **[!UICONTROL Membership Duration]**: 사용자가 고객 일치 목록에 남아 있는 일 수입니다. 허용되는 값은 1일에서 390일 사이입니다.
 * **[!UICONTROL Customer Match List Availability]**: 고객 일치 목록의 사용 가능 여부를 선택합니다. [!DNL Microsoft Advertising]에서 고객 ID에는 여러 고객 계정 ID(광고주 계정)가 있을 수 있습니다. 고객 ID의 모든 광고주 계정에서 목록을 사용할 수 있도록 하려면 **[!UICONTROL Customer ID (all advertising accounts)]**&#x200B;을(를) 선택하고, 위에서 제공한 특정 고객 계정 ID로 목록을 제한하려면 **[!UICONTROL Customer Account ID (single advertising account)]**&#x200B;을(를) 선택하십시오. 자세한 내용은 [Microsoft Advertising 설명서](https://help.ads.microsoft.com/apex/index/3/en/56727)를 참조하세요.
 
-![Microsoft Ads Customer Match 대상에 대한 대상 세부 정보 필드를 보여주는 Platform UI 이미지입니다.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
+  ![Microsoft Ads Customer Match 대상에 대한 대상 세부 정보 필드를 보여주는 Platform UI 이미지입니다.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -161,7 +175,7 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->해시되지 않은(일반 텍스트) 소스 필드를 사용해야 합니다. `Emails (SHA256, lowercased)`과(와) 같이 미리 해시된 소스 ID를 사용하지 마십시오. Experience Platform은 Microsoft의 요구 사항에 맞게 내보내기 시 이메일 주소를 자동으로 해시합니다.
+>일반 텍스트(해시되지 않은) 이메일 주소를 **소스** 필드로 매핑해야 합니다. `Emails (SHA256, lowercased)`과(와) 같은 사전 해시된 소스 ID는 지원되지 않습니다. Experience Platform은 전자 메일 주소를 [!DNL Microsoft Ads]&#x200B;(으)로 내보내기 전에 항상 해시합니다.
 
 ![IdentityMap 전자 메일이 ID 전자 메일에 매핑된 매핑 단계를 표시하는 UI 이미지입니다.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
 
