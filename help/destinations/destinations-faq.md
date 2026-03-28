@@ -199,7 +199,7 @@ ID 일치 요구 사항에 대한 자세한 설명은 [ID 일치 요구 사항](
 +++답변
 아니요. 웹 SDK은 대상자를 [[!DNL Adobe Target]](catalog/personalization/adobe-target-connection.md)에 활성화하는 데 필요하지 않습니다.
 
-그러나 Web SDK 대신 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html)을(를) 사용하면 다음 세션 개인화만 지원됩니다.
+그러나 Web SDK 대신 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=ko)을(를) 사용하면 다음 세션 개인화만 지원됩니다.
 
 [동일 페이지 및 다음 페이지 개인화](ui/activate-edge-personalization-destinations.md) 사용 사례의 경우 Web SDK 또는 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)를 사용해야 합니다. 자세한 구현 정보는 [Edge 대상으로 대상 활성화](ui/activate-edge-personalization-destinations.md)에 대한 설명서를 참조하십시오.
 +++
