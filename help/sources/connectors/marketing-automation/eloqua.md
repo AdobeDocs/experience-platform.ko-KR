@@ -2,9 +2,10 @@
 title: Oracle Eloqua (V2) Source 개요
 description: Oracle Eloqua를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2025-02-02T00:00:00Z
-source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
+exl-id: f63beebd-920c-41dd-a924-61511135a234
+source-git-commit: 2ffffbae2d267c4db05e386a41eb8707c9e5b736
 workflow-type: tm+mt
-source-wordcount: '1824'
+source-wordcount: '1822'
 ht-degree: 2%
 
 ---
@@ -79,7 +80,7 @@ ht-degree: 2%
 
 ![안내 캠페인이 포함된 보안 그룹이 추가되었습니다.](../../images/tutorials/create/eloqua/add-guided-campaigns.png)
 
-선택적으로 추가 사용자를 생성하고 해당 사용자를 보안 그룹에 추가할 수 있습니다. 자세한 단계는 [!DNL Eloqua]사용자 만들기[&#x200B; 및 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm)보안 그룹에 사용자 할당[에 대한 &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm) 설명서를 참조하십시오.
+선택적으로 추가 사용자를 생성하고 해당 사용자를 보안 그룹에 추가할 수 있습니다. 자세한 단계는 [!DNL Eloqua]사용자 만들기[ 및 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm)보안 그룹에 사용자 할당[에 대한 ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm) 설명서를 참조하십시오.
 
 ### 필요한 자격 증명 수집
 
@@ -102,7 +103,6 @@ ht-degree: 2%
 >- **연락처:** `C_DateModified`
 >- **계정:** `M_DateModified`
 >- **활동:** `CreatedAt`
->- **사용자 지정 개체:** `UpdatedAt`
 >- **캠페인:** `updatedAt`
 
 다음 표에서는 [!DNL Eloqua] 소스 필드와 Experience Platform의 해당 XDM(Experience Data Model) 대상 필드 간의 자세한 매핑을 제공합니다. 각 행에서는 필드를 변경할 수 없는지 여부에 대한 변환 논리에 대해 간략하게 설명하고 Experience Platform에서 [!DNL Eloqua] 데이터를 수집하고 구조화하는 방법을 이해하는 데 도움이 되는 추가 메모를 제공합니다.
@@ -244,4 +244,3 @@ ht-degree: 2%
 ## Experience Platform에 [!DNL Eloqua] 연결
 
 Experience Platform 내에서 [!DNL Eloqua] 소스 연결을 구성하십시오. UI를 통해 연결을 설정하는 방법에 대한 단계별 안내서는 [튜토리얼 여기](../../tutorials/ui/create/marketing-automation/eloqua.md)를 참조하십시오. 이 튜토리얼을 참조하여 [!DNL Eloqua] 계정 연결, 데이터 선택, 필드 매핑, 수집 예약 및 데이터 흐름 모니터링에 대해 알아보십시오.
-
