@@ -6,7 +6,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '1115'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -102,7 +102,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="변환 적용"
->abstract="해시되지 않은 소스 필드를 사용할 때 [!DNL Adobe Experience Platform]이(가) 활성화 시 자동으로 해시하도록 하려면 이 옵션을 선택하십시오."
+>abstract="해시되지 않은 소스 필드를 사용할 때 이 옵션을 선택하면 [!DNL Adobe Experience Platform]에서 활성화 시 해당 필드를 자동으로 해시할 수 있습니다."
 
 해시되지 않은 소스 특성을 대상이 해시될 것으로 예상하는 대상 특성에 매핑할 때(예: `email_lc_sha256` 또는 `phone_sha256`) **변환 적용** 옵션을 선택하여 [!DNL Adobe Experience Platform]이(가) 활성화 시 소스 특성을 자동으로 해시하도록 하십시오.
 
