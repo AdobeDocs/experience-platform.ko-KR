@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2026년 3월
 description: Adobe Experience Platform의 2026년 3월 릴리스 정보.
 exl-id: 66b948fd-caa0-4e5e-83dd-3b15b77c09fa
-source-git-commit: fad4cd198eda42f530e731a22ea79096a3cf3807
+source-git-commit: cd09f9e510052f6bae89ff730ba83aa16e95f193
 workflow-type: tm+mt
-source-wordcount: '1805'
-ht-degree: 19%
+source-wordcount: '1782'
+ht-degree: 20%
 
 ---
 
@@ -41,7 +41,7 @@ Experience Platform은 소비자 레코드 및 데이터 세트에 대한 프로
 
 | 기능 | 설명 |
 | --- | --- |
-| 다중 데이터 세트 및 프로필 전용 레코드 삭제(API만 해당) | 단일 데이터 세트 ID, 쉼표로 구분된 데이터 세트 ID 목록 또는 `ALL`의 리터럴 `datasetId`을(를) 제출하여 하나, 여러 데이터 세트 또는 모든 데이터 세트에서 ID를 삭제할 수 있습니다. `targetServices`을(를) `["identity","profile","ajo"]`(으)로 설정하여 프로필 관련 서비스의 삭제를 제한할 수도 있습니다. 이렇게 하면 데이터 레이크는 변경되지 않습니다. 이 기능은 데이터 위생 API를 통해서만 사용할 수 있습니다. 자세한 내용은 [작업 주문 기록 삭제 가이드](../../hygiene/api/workorder.md)를 참조하세요. |
+| 다중 데이터 세트 레코드 삭제(API만 해당) | 단일 API 요청에서 하나, 여러 데이터 세트 또는 모든 데이터 세트에서 ID를 삭제하여 데이터 위생 워크플로우를 간소화합니다. 데이터 레이크 레코드를 변경하지 않고 프로필 서비스로만 삭제를 제한할 수도 있습니다. 자세한 내용은 [작업 주문 기록 삭제 가이드](../../hygiene/api/workorder.md)를 참조하세요. |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ Agent Orchestrator을 사용하여 워크플로우를 자동화하고 여러 채
 
 | 기능 | 설명 |
 | --- | --- |
-| [Adobe Marketing Agent for [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/ko/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | [!DNL Microsoft 365 Copilot]용 Adobe Marketing Agent은 Adobe의 마케팅 인텔리전스를 [!DNL Teams], [!DNL Word], [!DNL PowerPoint] 및 기타 [!DNL Microsoft 365] 앱과 같은 일상적인 도구에 직접 가져오는 임베드된 에이전트입니다. [!DNL Microsoft 365] 워크플로를 종료하지 않고 캠페인을 계획하고, 대상을 검토하고, 동료와 협력하여 고객 질문에 답변하고, 데이터에 기반한 결정을 내리는 동안 이 에이전트를 사용하여 Adobe 애플리케이션에서 신뢰할 수 있는 캠페인 인사이트를 가져올 수 있습니다. |
+| [Adobe Marketing Agent for [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | [!DNL Microsoft 365 Copilot]용 Adobe Marketing Agent은 Adobe의 마케팅 인텔리전스를 [!DNL Teams], [!DNL Word], [!DNL PowerPoint] 및 기타 [!DNL Microsoft 365] 앱과 같은 일상적인 도구에 직접 가져오는 임베드된 에이전트입니다. [!DNL Microsoft 365] 워크플로를 종료하지 않고 캠페인을 계획하고, 대상을 검토하고, 동료와 협력하여 고객 질문에 답변하고, 데이터에 기반한 결정을 내리는 동안 이 에이전트를 사용하여 Adobe 애플리케이션에서 신뢰할 수 있는 캠페인 인사이트를 가져올 수 있습니다. |
 
 {style="table-layout:auto"}
 
