@@ -15,7 +15,7 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->이 대상 커넥터의 가용성은 제한되어 있으며 [!DNL Real-Time CDP]VA7 지역[에 프로비저닝된 ](/help/landing/multi-cloud.md#azure-regions)개의 Ultimate 고객만 사용할 수 있습니다.
+>이 대상 커넥터의 가용성은 제한되어 있으며 [!DNL Real-Time CDP]VA7 지역[에 프로비저닝된 &#x200B;](/help/landing/multi-cloud.md#azure-regions)개의 Ultimate 고객만 사용할 수 있습니다.
 
 ## 개요 {#overview}
 
@@ -88,7 +88,7 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | [!DNL Adobe Experience Platform] [세분화 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 [(으)로 사용자 지정 업로드 대상 ](../../../segmentation/ui/audience-portal.md#import-audience)가져옴[!DNL Adobe Experience Platform],</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Experience Platform]과(와) 같은 다른 [!DNL Adobe Journey Optimizer] 앱에서 생성된 대상, </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 [(으)로 사용자 지정 업로드 대상 &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)가져옴[!DNL Adobe Experience Platform],</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Experience Platform]과(와) 같은 다른 [!DNL Adobe Journey Optimizer] 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -148,7 +148,7 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 
 >[!NOTE]
 >
-> 대상을 만든 후에는 **[!UICONTROL Snowflake Account ID]**&#x200B;대상 편집[ 워크플로우를 통해 ](../../ui/edit-destination.md)을(를) 편집할 수 없습니다. 다른 계정을 사용하려면 [새 대상 연결을 만드세요](../../ui/connect-destination.md).
+> 대상을 만든 후에는 **[!UICONTROL Snowflake Account ID]**&#x200B;대상 편집[&#x200B; 워크플로우를 통해 &#x200B;](../../ui/edit-destination.md)을(를) 편집할 수 없습니다. 다른 계정을 사용하려면 [새 대상 연결을 만드세요](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >
