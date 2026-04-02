@@ -2,9 +2,9 @@
 title: 샌드박스 도구
 description: 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져옵니다.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: fad8cc977ec6928420abab4fd3dafca7475c33c4
+source-git-commit: f5c32c5687b5931ed59fa6a379ed5e5927e3a9ac
 workflow-type: tm+mt
-source-wordcount: '3448'
+source-wordcount: '3641'
 ht-degree: 5%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 5%
 
 ### Adobe Journey Optimizer 개체 {#abobe-journey-optimizer-objects}
 
-아래 표에는 현재 샌드박스 도구 및 제한 사항에 지원되는 [!DNL Adobe Journey Optimizer] 개체가 나와 있습니다. 전체 모범 사례 목록은 [Journey Optimizer 일반 모범 사례](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global) 안내서를 참조하십시오.
+아래 표에는 현재 샌드박스 도구 및 제한 사항에 지원되는 [!DNL Adobe Journey Optimizer] 개체가 나와 있습니다. 전체 모범 사례 목록은 [Journey Optimizer 일반 모범 사례](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global) 안내서를 참조하십시오.
 
 | 플랫폼 | 오브젝트 | 지원되는 종속 개체 | 세부 사항 |
 | --- | --- | --- | --- |
@@ -70,8 +70,8 @@ ht-degree: 5%
 | [!DNL Adobe Journey Optimizer] | 사용자 지정 작업 |  | 사용자 지정 작업은 패키지에 개별적으로 추가할 수 있습니다. 사용자 지정 작업이 여정에 할당되면 더 이상 편집할 수 없습니다. 사용자 지정 작업을 업데이트하려면 다음을 수행해야 합니다. <ul><li>여정 마이그레이션 전에 사용자 지정 작업 이동</li><li>마이그레이션 후 사용자 지정 작업에 대한 구성(예: 요청 헤더, 쿼리 매개 변수 및 인증) 업데이트</li><li>첫 번째 단계에서 추가한 사용자 지정 작업으로 여정 개체 마이그레이션</li></ul> |
 | [!DNL Adobe Journey Optimizer] | 콘텐츠 템플릿 | | 컨텐츠 템플릿은 여정 객체의 종속 객체로 복사할 수 있습니다. 독립형 템플릿을 사용하면 Journey Optimizer 캠페인 및 여정 전반에서 사용자 정의 콘텐츠를 쉽게 재사용할 수 있습니다. |
 | [!DNL Adobe Journey Optimizer] | 조각 | 모든 중첩된 조각. | 조각을 여정 개체의 종속 개체로 복사할 수 있습니다. 조각은 Journey Optimizer 캠페인 및 여정 간 하나 이상의 이메일에서 참조할 수 있는 재사용 가능한 구성 요소입니다. |
-| [!DNL Adobe Journey Optimizer] | 캠페인 | 캠페인에 사용된 다음 객체는 종속 객체로 복사됩니다. <ul><li>캠페인</li><li>대상자</li><li>스키마</li><li>콘텐츠 템플릿</li><li>조각</li><li>메시지/컨텐츠</li><li>채널 구성</li><li>통합 의사 결정 개체</li><li>실험 설정/변형</li></ul> | <ul><li>프로필, 대상자, 스키마, 인라인 메시지 및 종속 오브젝트와 관련된 모든 항목과 함께 캠페인을 복사할 수 있습니다. 데이터 사용 레이블 및 언어 설정과 같은 일부 항목은 복사되지 않습니다. 복사할 수 없는 전체 개체 목록은 [다른 샌드박스로 개체 내보내기](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) 안내서를 참조하십시오.</li><li>시스템은 동일한 구성이 존재하는 경우 타겟 샌드박스에서 기존 채널 구성 객체를 자동으로 감지하고 재사용합니다. 일치하는 구성을 찾을 수 없으면 가져오는 동안 채널 구성을 건너뛰며 사용자가 이 여정에 대한 대상 샌드박스의 채널 설정을 수동으로 업데이트해야 합니다.</li><li>사용자는 Target 샌드박스의 기존 실험 및 대상을 선택한 캠페인의 종속 오브젝트로 재사용할 수 있습니다.</li></ul> |
-| [!DNL Adobe Journey Optimizer] | 결정 | Decisioning 객체를 복사하기 전에 다음 객체가 대상 샌드박스에 있어야 합니다. <ul><li>Decisioning 개체 전체에 사용된 프로필 속성</li><li>사용자 정의 오퍼 속성의 필드 그룹</li><li>규칙, 등급 또는 캡핑에 대한 컨텍스트 속성에 사용되는 데이터 스트림의 스키마.</li></ul> | <ul><li>AI 모델을 사용하는 등급 수식 복사는 현재 지원되지 않습니다.</li><li>결정 항목(오퍼 항목)은 자동으로 포함되지 않습니다. 전송되었는지 확인하려면 **패키지에 추가** 옵션을 사용하여 수동으로 추가하십시오.</li><li>선택 전략을 사용하는 정책에서는 복사 프로세스 중에 관련 결정 항목을 수동으로 추가해야 합니다. 수동 또는 대체 결정 항목을 사용하는 정책에는 해당 항목이 직접 종속성으로 자동으로 포함됩니다.</li><li>의사 결정 항목을 다른 관련 객체 앞에 먼저 복사해야 합니다.</li><li>지원되는 개체의 전체 목록을 보려면 [다른 샌드박스로 개체 내보내기](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) 안내서를 참조하십시오.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 캠페인 | 캠페인에 사용된 다음 객체는 종속 객체로 복사됩니다. <ul><li>캠페인</li><li>대상자</li><li>스키마</li><li>콘텐츠 템플릿</li><li>조각</li><li>메시지/컨텐츠</li><li>채널 구성</li><li>통합 의사 결정 개체</li><li>실험 설정/변형</li></ul> | <ul><li>프로필, 대상자, 스키마, 인라인 메시지 및 종속 오브젝트와 관련된 모든 항목과 함께 캠페인을 복사할 수 있습니다. 데이터 사용 레이블 및 언어 설정과 같은 일부 항목은 복사되지 않습니다. 복사할 수 없는 전체 개체 목록은 [다른 샌드박스로 개체 내보내기](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) 안내서를 참조하십시오.</li><li>시스템은 동일한 구성이 존재하는 경우 타겟 샌드박스에서 기존 채널 구성 객체를 자동으로 감지하고 재사용합니다. 일치하는 구성을 찾을 수 없으면 가져오는 동안 채널 구성을 건너뛰며 사용자가 이 여정에 대한 대상 샌드박스의 채널 설정을 수동으로 업데이트해야 합니다.</li><li>사용자는 Target 샌드박스의 기존 실험 및 대상을 선택한 캠페인의 종속 오브젝트로 재사용할 수 있습니다.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 결정 | Decisioning 객체를 복사하기 전에 다음 객체가 대상 샌드박스에 있어야 합니다. <ul><li>Decisioning 개체 전체에 사용된 프로필 속성</li><li>사용자 정의 오퍼 속성의 필드 그룹</li><li>규칙, 등급 또는 캡핑에 대한 컨텍스트 속성에 사용되는 데이터 스트림의 스키마.</li></ul> | <ul><li>AI 모델을 사용하는 등급 수식 복사는 현재 지원되지 않습니다.</li><li>결정 항목(오퍼 항목)은 자동으로 포함되지 않습니다. 전송하려면 **패키지에 추가** 옵션을 사용하여 수동으로 추가하십시오.</li><li>선택 전략을 사용하는 정책에서는 복사 프로세스 중에 관련 결정 항목을 수동으로 추가해야 합니다. 수동 또는 대체 결정 항목을 사용하는 정책에는 해당 항목이 직접 종속성으로 자동으로 포함됩니다.</li><li>의사 결정 항목을 다른 관련 객체 앞에 먼저 복사해야 합니다.</li><li>지원되는 개체의 전체 목록을 보려면 [다른 샌드박스로 개체 내보내기](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) 안내서를 참조하십시오.</li></ul> |
 
 ## 패키지로 오브젝트 내보내기 {#export-objects}
 
@@ -229,13 +229,36 @@ ht-degree: 5%
 
 가져오기가 완료될 때까지 잠시 기다립니다. 완료 시간은 패키지에 있는 객체의 수에 따라 달라질 수 있습니다. [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** 탭에서 가져오기 작업을 모니터링할 수 있습니다.
 
+### 오브젝트를 샌드박스에 빠른 복사 {#express-copy}
+
+>[!IMPORTANT]
+>
+>Express Copy 기능은 현재 Beta 버전이며 일부 고객만 사용할 수 있습니다. Express Copy(Beta)는 현재 스키마 및 소스 데이터 흐름만 지원합니다.
+
+객체 인벤토리 페이지에서 빠른 사본에 액세스할 수 있습니다. 예를 들어 사용 가능한 스키마 목록을 보려면 왼쪽 탐색에서 **[!UICONTROL Schemas]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Browse]** 탭을 선택합니다. 그런 다음 선택한 스키마 옆의 생략 부호(`...`)를 선택하여 드롭다운 메뉴에서 제어 옵션을 확인합니다. 드롭다운에서 **[!UICONTROL Add to package]**&#x200B;을(를) 선택합니다.
+
+![[!UICONTROL Add to package] 컨트롤을 강조 표시하는 드롭다운 메뉴를 표시하는 스키마 목록입니다.](../images/ui/sandbox-tooling/add-to-package-express.png)
+
+**[!UICONTROL Add to package]** 대화 상자가 나타납니다. **[!UICONTROL Express copy]** 옵션을 선택한 다음 드롭다운에서 **[!UICONTROL Target sandbox]**&#x200B;을(를) 선택합니다. 마지막으로 **[!UICONTROL Add]**&#x200B;을(를) 선택하여 선택 항목을 확인합니다.
+
+드롭다운에서 선택한 패키지를 표시하는 대화 상자 ![[!UICONTROL Add to package]개.](../images/ui/sandbox-tooling/express-copy.png)
+
+>[!NOTE]
+>
+> Express Copy는 선택한 개체를 필요한 종속성과 함께 자동으로 패키지화하여 대상 샌드박스에 배포합니다. 대상 샌드박스에 종속 객체가 이미 존재하는 경우 재사용됩니다. 그렇지 않으면 새 객체가 생성됩니다.
+
+빠른 복사 요청의 상태를 확인하려면 왼쪽 탐색에서 **[!UICONTROL Sandboxes]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Jobs]** 탭을 선택합니다. 모든 작업 목록과 현재 처리 상태가 표시됩니다.
+
+![작업 목록을 표시하는 작업 탭입니다.](../images/ui/sandbox-tooling/sandboxes-jobs.png)
+
 ## 가져오기 세부 정보 모니터링 {#view-import-details}
 
 가져온 세부 정보를 보려면 [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** 탭으로 이동하여 목록에서 패키지를 선택하십시오. 또는 검색 창을 사용하여 패키지를 검색합니다.
 
 ![샌드박스 [!UICONTROL Jobs] 탭에서 패키지 가져오기 선택이 강조 표시됩니다.](../images/ui/sandbox-tooling/imports-tab.png)
 
-<!--### View imported objects {#view-imported-objects}
+<!--
+### View imported objects {#view-imported-objects}
 
 On the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment, select **[!UICONTROL View imported objects]** from the right details pane.
 
@@ -245,7 +268,8 @@ Select **[!UICONTROL View imported objects]** from the right details pane on the
 
 Use the arrows to expand objects to view the full list of fields that have been imported into the package.
 
-![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
+![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)
+-->
 
 샌드박스 환경의 **[!UICONTROL View import summary]** 탭에 있는 오른쪽 세부 정보 창에서 **[!UICONTROL Jobs]**&#x200B;을(를) 선택합니다.
 
@@ -353,7 +377,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 다음 비디오에서는 샌드박스 도구에 대한 이해를 돕기 위해 새 패키지를 만들고, 패키지를 게시하고, 패키지를 가져오는 방법을 간략하게 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446093/?captions=kor&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## 다음 단계
 
