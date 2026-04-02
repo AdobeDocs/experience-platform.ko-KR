@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '6574'
 ht-degree: 10%
@@ -144,7 +144,7 @@ ht-degree: 10%
 | 이번 달 | 이 값은 이번 달에 발생했습니다. | 이번 달 생월 **은(는)** |
 | 올해 | 이 값은 올해 발생했습니다. | 올해 등록 날짜 **은(는)** |
 | 사용자 정의 날짜 | 해당 값이 해당 날짜에 발생했습니다. | 구매 날짜 **은(는)** 사용자 지정 날짜에 있음 |
-| 마지막 | 선택한 마지막 기간 내에 값이 발생했습니다. 지난 달의 생일 **is** |
+| 마지막 | 선택한 마지막 기간 내에 값이 발생했습니다. 지난 달의 생일 **is** | |
 | 출처(대상) | 값이 선택한 두 캘린더 일자 내에서 발생했습니다. 이 기간은 두 날짜의 **포함**&#x200B;입니다. | 계정 생성일 **is**(4월 20일부터 7월 13일까지) |
 | 다음 기간 동안 | 값이 선택한 월 또는 연도 내에 발생했습니다. | 3월 동안 **is** 판매 |
 | 다음 범위 내(+/-) | 값은 선택한 날짜로부터 일, 주, 월 또는 년 이내에 발생했습니다. 이 기간은 두 날짜의 **포함**&#x200B;입니다. | 장바구니 포기는 **3일 이내** |
@@ -349,7 +349,7 @@ ht-degree: 10%
 
 코드 보기는 API 호출에 사용할 세그먼트 정의의 값을 복사할 수 있도록 하는 단추를 제공합니다. 최신 버전의 세그먼트 정의를 가져오려면 세그먼트 정의에 대한 최신 변경 사항을 저장했는지 확인합니다.
 
-![코드 복사 버튼이 강조 표시되어 &#x200B;](../images/ui/segment-builder/copy-code.png)할 수 있습니다.
+![코드 복사 버튼이 강조 표시되어 ](../images/ui/segment-builder/copy-code.png)할 수 있습니다.
 
 ### 집계 함수
 
@@ -549,7 +549,7 @@ ht-degree: 10%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="예상치 새로 고침"
 >abstract="세그먼트 대상의 예상치를 새로 고쳐 제안된 세그먼트 대상에 적합한 프로필 개수를 미리 볼 수 있습니다. 당일 샘플 데이터의 샘플 크기를 사용하여 대상자 예상치를 생성합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=ko#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
