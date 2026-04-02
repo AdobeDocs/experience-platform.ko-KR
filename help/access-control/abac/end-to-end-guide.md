@@ -140,7 +140,7 @@ Experience Platform UI에 대한 권한 작업 영역이 **[!UICONTROL Overview]
 
 >[!NOTE]
 >
-> [!UICONTROL Permissions]개체 수준 액세스 제어[를 사용하여 ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access) 작업 영역에서 만든 레이블(예: 위의 세그먼트 레이블)을 Adobe Journey Optimizer의 다양한 개체에 할당합니다.&quot;
+> [!UICONTROL Permissions]개체 수준 액세스 제어[를 사용하여 &#x200B;](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access) 작업 영역에서 만든 레이블(예: 위의 세그먼트 레이블)을 Adobe Journey Optimizer의 다양한 개체에 할당합니다.&quot;
 
 ## 액세스 제어 정책 활성화 {#policy}
 
