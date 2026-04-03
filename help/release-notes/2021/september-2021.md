@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2021년 9월
 description: Adobe Experience Platform에 대한 2021년 9월 릴리스 정보입니다.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 26%
@@ -11,7 +11,7 @@ ht-degree: 26%
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 일자: 2021년 9월 29일 목요일**
+**릴리스 날짜: 2021년 9월 29일 목요일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
@@ -51,8 +51,8 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| [!DNL Data Landing Zone] | 이제 [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) 또는 [사용자 인터페이스](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md)를 사용하여 [!DNL Data Landing Zone] 원본 연결을 만들 수 있습니다. [!DNL Data Landing Zone]은(는) Experience Platform에서 프로비저닝한 [!DNL Azure Blob] 저장소 인터페이스로서, 파일을 Experience Platform으로 가져올 수 있도록 안전한 클라우드 기반 파일 저장소 기능에 액세스할 수 있도록 허용합니다. 자세한 내용은 [[!DNL Data Landing Zone] 개요](../../sources/connectors/cloud-storage/data-landing-zone.md)를 참조하세요. |
-| [!DNL Snowflake] | 이제 [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) 또는 [사용자 인터페이스](../../sources/tutorials/ui/create/databases/snowflake.md)를 사용하여 [!DNL Snowflake] 원본 연결을 만들어 [!DNL Snowflake] 데이터베이스에서 Experience Platform으로 데이터를 가져올 수 있습니다. 자세한 내용은 [[!DNL Snowflake] 개요](../../sources/connectors/databases/snowflake.md)를 참조하세요. |
+| [!DNL Data Landing Zone] | 이제 [!DNL Data Landing Zone]API[[!DNL Flow Service]  또는 ](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md)사용자 인터페이스[를 사용하여 ](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) 원본 연결을 만들 수 있습니다. [!DNL Data Landing Zone]은(는) Experience Platform에서 프로비저닝한 [!DNL Azure Blob] 저장소 인터페이스로서, 파일을 Experience Platform으로 가져올 수 있도록 안전한 클라우드 기반 파일 저장소 기능에 액세스할 수 있도록 허용합니다. 자세한 내용은 [[!DNL Data Landing Zone] 개요](../../sources/connectors/cloud-storage/data-landing-zone.md)를 참조하세요. |
+| [!DNL Snowflake] | 이제 [!DNL Snowflake]API[[!DNL Flow Service]  또는 ](../../sources/tutorials/api/create/databases/snowflake.md)사용자 인터페이스[를 사용하여 ](../../sources/tutorials/ui/create/databases/snowflake.md) 원본 연결을 만들어 [!DNL Snowflake] 데이터베이스에서 Experience Platform으로 데이터를 가져올 수 있습니다. 자세한 내용은 [[!DNL Snowflake] 개요](../../sources/connectors/databases/snowflake.md)를 참조하세요. |
 | [!DNL SFTP] 소스 개선 사항 | [!DNL SFTP] 원본 연결을 만들 때 사용자 지정 포트 번호를 수동으로 설정할 수 있습니다. 자세한 내용은 [[!DNL SFTP] 개요](../../sources/connectors/cloud-storage/sftp.md)를 참조하세요. |
 
 소스에 대한 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하세요.
