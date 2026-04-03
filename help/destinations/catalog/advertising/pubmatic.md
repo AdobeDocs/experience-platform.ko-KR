@@ -3,7 +3,7 @@ title: PubMatic Connect
 description: PubMatic은 미래의 프로그램 방식의 디지털 마케팅 supply chain을 제공하여 고객 가치를 극대화합니다. PubMatic Connect는 플랫폼 기술과 전용 서비스를 결합하여 인벤토리와 데이터를 패키지하고 처리하는 방법을 개선합니다.
 last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1130'
 ht-degree: 3%
