@@ -2,7 +2,7 @@
 title: Adobe Analytics을 Experience Platform에 연결
 description: Adobe Analytics 보고서 세트 데이터를 Experience Platform으로 가져오는 방법 알아보기
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: dfc8a1d51e6dd25210a0b6f24dad4d0f00052414
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '2754'
 ht-degree: 4%
@@ -26,7 +26,7 @@ Adobe Analytics 소스를 사용하여 Analytics 보고서 세트 데이터를 A
 이 문서 전체에서 사용되는 다음 주요 용어를 이해하는 것이 중요합니다.
 
 * **표준 특성**: 표준 특성은 Adobe에서 미리 정의한 특성입니다. 모든 고객에 대해 동일한 의미를 포함하며 Analytics 소스 데이터 및 Analytics 스키마 필드 그룹에서 사용할 수 있습니다.
-* **사용자 지정 특성**: 사용자 지정 특성은 Analytics의 사용자 지정 변수 계층 구조에 있는 모든 특성입니다. 사용자 지정 속성은 Adobe Analytics 구현 내에서 특정 정보를 보고서 세트에 캡처하는 데 사용되며 보고서 세트마다 용도가 다를 수 있습니다. 사용자 지정 속성에는 eVar, prop 및 목록이 포함됩니다. eVar에 대한 자세한 내용은 다음 [전환 변수에 대한 Analytics 설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=ko)를 참조하십시오.
+* **사용자 지정 특성**: 사용자 지정 특성은 Analytics의 사용자 지정 변수 계층 구조에 있는 모든 특성입니다. 사용자 지정 속성은 Adobe Analytics 구현 내에서 특정 정보를 보고서 세트에 캡처하는 데 사용되며 보고서 세트마다 용도가 다를 수 있습니다. 사용자 지정 속성에는 eVar, prop 및 목록이 포함됩니다. eVar에 대한 자세한 내용은 다음 [전환 변수에 대한 Analytics 설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)를 참조하십시오.
 * **사용자 지정 필드 그룹의 모든 특성**: 고객이 만든 필드 그룹에서 시작된 특성은 모두 사용자 정의이며 표준 특성이나 사용자 지정 특성이 아닙니다.
 
 ## 소스 카탈로그 탐색
@@ -164,7 +164,8 @@ Similar to the source schema, you can use the interface to navigate through the 
 
 With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
-![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
+![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) 
+-->
 
 ## 실시간 고객 프로필에 대한 필터링 {#filtering-for-profile}
 
@@ -325,5 +326,5 @@ Analytics 데이터 흐름을 삭제하려면 소스 작업 영역의 상단 헤
 >
 > 다음 비디오에 표시된 [!DNL Experience Platform] UI가 최신 상태가 아닙니다. 최신 UI 스크린샷 및 기능은 위의 설명서를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430256?captions=kor&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
