@@ -4,7 +4,7 @@ title: API 끝점 미리 보기 및 예상
 description: 세그먼트 정의가 개발되면 Adobe Experience Platform 내의 예상 및 미리 보기 도구를 사용하여 요약 수준 정보를 보고 예상 대상을 격리할 수 있습니다.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 2%
