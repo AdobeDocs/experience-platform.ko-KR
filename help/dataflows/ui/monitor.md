@@ -2,9 +2,9 @@
 title: 모니터링 대시보드 개요
 description: Adobe Experience Platform UI에서 모니터링 대시보드를 사용하는 방법을 알아봅니다
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: cca405c58551a52a044ac513921298637974e88e
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform UI의 모니터링 대시보드를 사용하여 수집
 
 모니터링 대시보드는 다음과 같은 몇 가지 다양한 데이터 유형 보기를 지원합니다.
 
-* **고객 및 계정**: 고객 데이터는 [Real-Time Customer Data Platform](../../rtcdp/home.md)에서 사용되는 데이터를 참조하고, 계정 데이터는 [Real-Time CDP, B2B edition](../../rtcdp/b2b-overview.md)을(를) 구독할 때 액세스할 수 있는 [계정 프로필 데이터](../../rtcdp/accounts/account-profile-overview.md)를 참조합니다. Real-Time CDP 라이선스에 Real-Time CDP, B2B edition이 포함되지 않은 경우 모니터링 대시보드만 사용하여 고객 데이터를 모니터링할 수 있습니다.
+* **고객 및 계정**: 고객 데이터는 [Real-Time Customer Data Platform](../../rtcdp/home.md)에서 사용되는 데이터를 참조하고, 계정 데이터는 [Real-Time CDP, B2B edition](../../rtcdp/accounts/account-profile-overview.md)을(를) 구독할 때 액세스할 수 있는 [계정 프로필 데이터](../../rtcdp/b2b-overview.md)를 참조합니다. Real-Time CDP 라이선스에 Real-Time CDP, B2B edition이 포함되지 않은 경우 모니터링 대시보드만 사용하여 고객 데이터를 모니터링할 수 있습니다.
 * **잠재 고객**: [잠재 고객 프로필](../../profile/ui/prospect-profile.md)은(는) 아직 회사에 가입하지 않았지만 연락을 주고 받고 싶은 사람을 나타내는 데 사용됩니다. 잠재 고객 프로필을 통해 신뢰할 수 있는 타사 파트너의 특성을 통해 고객 프로필을 보완할 수 있습니다. 잠재 고객 데이터 유형을 보려면 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate 라이선스가 있어야 합니다.
 * **계정 프로필 보강**: 계정 프로필을 사용하면 여러 원본에서 계정 정보를 통합할 수 있습니다. 계정 프로필 보강 데이터를 모니터링하려면 Real-Time CDP, B2B edition에 대한 라이선스가 있어야 합니다.
 
@@ -38,11 +38,11 @@ Adobe Experience Platform UI의 모니터링 대시보드를 사용하여 수집
 
 ## 모니터링 대시보드 안내서
 
-Experience Platform UI의 왼쪽 탐색에서 [!UICONTROL 데이터 관리]의 **[!UICONTROL 모니터링]**&#x200B;을 선택합니다.
+Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL Monitoring]** 아래의 [!UICONTROL Data Management]을(를) 선택합니다.
 
 ![Experience Platform UI의 모니터링 대시보드입니다.](../assets/ui/monitor-overview/monitoring.png)
 
-**[!UICONTROL 데이터 형식]**&#x200B;을(를) 선택한 다음 드롭다운 메뉴를 사용하여 보려는 데이터 형식을 선택합니다. 데이터 유형은 XDM(Experience Data Model) 스키마 클래스로 정의하여 Experience Platform에 수집할 때 데이터가 표준 형식을 따르도록 합니다. 자세한 내용은 다음 설명서를 참조하십시오.
+**[!UICONTROL Data Type]**&#x200B;을(를) 선택한 다음 드롭다운 메뉴를 사용하여 보려는 데이터 형식을 선택합니다. 데이터 유형은 XDM(Experience Data Model) 스키마 클래스로 정의하여 Experience Platform에 수집할 때 데이터가 표준 형식을 따르도록 합니다. 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [B2B 계정 데이터 유형](../../rtcdp/b2b-tutorial.md)
 * [잠재 고객 데이터 유형](../../rtcdp/partner-data/prospecting.md)
@@ -53,19 +53,19 @@ Experience Platform UI의 왼쪽 탐색에서 [!UICONTROL 데이터 관리]의 *
 
 >[!TAB 모두]
 
-**[!UICONTROL 모두]**&#x200B;를 선택하여 대시보드를 업데이트하고 지정된 기간 동안 Experience Platform에 수집된 모든 데이터에 대한 지표를 표시합니다.
+**[!UICONTROL All]**&#x200B;을(를) 선택하여 대시보드를 업데이트하고 지정된 기간 동안 Experience Platform에 수집된 모든 데이터에 대한 지표를 표시합니다.
 
 ![모니터링 데이터 형식이 &quot;모두&quot;로 설정되어 있습니다.](../assets/ui/monitor-overview/all.png)
 
 >[!TAB 고객 및 계정]
 
-대시보드를 업데이트하고 지정된 기간 동안 Experience Platform에 수집된 고객 및 계정 데이터에 대한 지표를 표시하려면 **[!UICONTROL 고객 및 계정]**&#x200B;을(를) 선택하십시오.
+**[!UICONTROL Customer & Account]**&#x200B;을(를) 선택하여 대시보드를 업데이트하고 지정된 기간 동안 Experience Platform에 수집된 고객 및 계정 데이터에 대한 지표를 표시합니다.
 
 ![모니터링 데이터 형식이 &quot;고객 및 계정&quot;으로 설정되어 있습니다.](../assets/ui/monitor-overview/customer-account.png)
 
 >[!TAB 계정 프로필 보강]
 
-**[!UICONTROL 계정 프로필 보강]**&#x200B;을 선택하여 대시보드를 업데이트하고 프로필 보강 데이터에 지표를 표시합니다. **참고**: [B2B 데이터](../../rtcdp/b2b-tutorial.md)에 대한 권한이 있는 경우에만 계정 프로필 보강 지표를 볼 수 있습니다.
+**[!UICONTROL Account profile enrichment]**&#x200B;을(를) 선택하여 대시보드를 업데이트하고 프로필 강화 데이터에 지표를 표시합니다. **참고**: [B2B 데이터](../../rtcdp/b2b-tutorial.md)에 대한 권한이 있는 경우에만 계정 프로필 보강 지표를 볼 수 있습니다.
 
 ![모니터링 데이터 형식이 &quot;계정 프로필 보강&quot;으로 설정되어 있습니다.](../assets/ui/monitor-overview/account-profile-enrichment.png)
 
@@ -77,31 +77,31 @@ Experience Platform UI의 왼쪽 탐색에서 [!UICONTROL 데이터 관리]의 *
 
 >[!TAB 데이터 레이크]
 
-데이터 레이크 수집 속도에 대한 지표를 보려면 **[!UICONTROL 데이터 레이크]**&#x200B;를 선택하십시오. 자세한 내용은 [데이터 레이크 수집 모니터링](monitor-sources.md)에 대한 안내서를 참조하십시오.
+데이터 레이크 수집 속도에 대한 지표를 보려면 **[!UICONTROL Data lake]**&#x200B;을(를) 선택하십시오. 자세한 내용은 [데이터 레이크 수집 모니터링](monitor-sources.md)에 대한 안내서를 참조하십시오.
 
 ![UI에서 데이터 레이크 카드를 선택한 모니터링 대시보드입니다.](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB ID]
 
-ID 데이터의 처리 성공률을 보려면 **[!UICONTROL ID]**&#x200B;을(를) 선택하십시오. 자세한 내용은 [ID 데이터 모니터링](monitor-identities.md)에 대한 안내서를 참조하십시오.
+ID 데이터의 처리 성공률을 보려면 **[!UICONTROL Identities]**&#x200B;을(를) 선택하십시오. 자세한 내용은 [ID 데이터 모니터링](monitor-identities.md)에 대한 안내서를 참조하십시오.
 
 ![ID 카드가 선택된 UI의 모니터링 대시보드입니다.](../assets/ui/monitor-overview/identities.png)
 
 >[!TAB 프로필]
 
-프로필 데이터의 처리 성공률을 보려면 **[!UICONTROL 프로필]**&#x200B;을(를) 선택하십시오. 자세한 내용은 [프로필 데이터 모니터링](monitor-profiles.md)에 대한 안내서를 참조하십시오.
+프로필 데이터의 처리 성공률을 보려면 **[!UICONTROL Profiles]**&#x200B;을(를) 선택하십시오. 자세한 내용은 [프로필 데이터 모니터링](monitor-profiles.md)에 대한 안내서를 참조하십시오.
 
 ![UI에서 프로필 카드가 선택된 모니터링 대시보드입니다.](../assets/ui/monitor-overview/profiles.png)
 
 >[!TAB 대상자]
 
-대상자 및 세분화 작업에 대한 지표를 보려면 **[!UICONTROL 대상자]**&#x200B;를 선택하십시오. 자세한 내용은 [대상 데이터 모니터링](monitor-audiences.md)에 대한 안내서를 참조하십시오.
+대상자 및 세분화 작업에 대한 지표를 보려면 **[!UICONTROL Audiences]**&#x200B;을(를) 선택하십시오. 자세한 내용은 [대상 데이터 모니터링](monitor-audiences.md)에 대한 안내서를 참조하십시오.
 
 ![대상자 카드가 선택된 UI의 모니터링 대시보드입니다.](../assets/ui/monitor-overview/audiences.png)
 
 >[!TAB 대상]
 
-[!UICONTROL 스트리밍 활성화 비율] 및 [!UICONTROL 일괄 처리 실패 데이터 흐름 실행]에서 지표를 보려면 **[!UICONTROL 대상]**&#x200B;을 선택하십시오. 자세한 내용은 [대상 데이터 모니터링](monitor-destinations.md)에 대한 안내서를 참조하십시오.
+**[!UICONTROL Destinations]** 및 [!UICONTROL Streaming activate rate]에서 지표를 보려면 [!UICONTROL Batch failed dataflow runs]을(를) 선택하십시오. 자세한 내용은 [대상 데이터 모니터링](monitor-destinations.md)에 대한 안내서를 참조하십시오.
 
 ![대상 카드가 선택된 UI의 모니터링 대시보드입니다.](../assets/ui/monitor-overview/destinations.png)
 
@@ -109,17 +109,17 @@ ID 데이터의 처리 성공률을 보려면 **[!UICONTROL ID]**&#x200B;을(를
 
 ### 모니터링 시간대 구성 {#configure-monitoring-time-frame}
 
-기본적으로 모니터링 대시보드에는 지난 24시간 내에 수집된 데이터에 대한 지표가 표시됩니다. 시간대를 업데이트하려면 **[!UICONTROL 최근 24시간]**&#x200B;을(를) 선택하세요.
+기본적으로 모니터링 대시보드에는 지난 24시간 내에 수집된 데이터에 대한 지표가 표시됩니다. 시간대를 업데이트하려면 **[!UICONTROL Last 24 hours]**&#x200B;을(를) 선택하세요.
 
 ![시간 구성이 선택된 UI의 모니터링 대시보드입니다.](../assets/ui/monitor-overview/select-time.png)
 
 표시되는 대화 상자에서 데이터 모니터링 보기에 대한 새 시간대를 구성할 수 있습니다. 사용자 지정 시간대를 만들거나 사전 구성된 옵션 목록에서 선택할 수 있는 옵션이 있습니다.
 
-* [!UICONTROL 지난 24시간]
-* [!UICONTROL 최근 7일]
-* [!UICONTROL 최근 30일]
+* [!UICONTROL Last 24 hours]
+* [!UICONTROL Last 7 days]
+* [!UICONTROL Last 30 days]
 
-완료되면 **[!UICONTROL 적용]**&#x200B;을 선택합니다.
+완료되면 **[!UICONTROL Apply]**&#x200B;을(를) 선택합니다.
 
 ![모니터링 대시보드의 기간 구성 팝업 창입니다.](../assets/ui/monitor-overview/update-time.png)
 
@@ -133,6 +133,8 @@ ID 데이터의 처리 성공률을 보려면 **[!UICONTROL ID]**&#x200B;을(를
 * [대상 데이터 모니터링](monitor-audiences.md).
 * [대상 데이터 모니터링](monitor-destinations.md).
 
-<!-- >[!TAB Prospect]
+<!-- 
+>[!TAB Prospect]
 
-Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). 
+-->
