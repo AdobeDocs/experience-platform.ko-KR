@@ -2,7 +2,7 @@
 title: 쿼리 서비스 감사 로그 통합
 description: 쿼리 서비스 감사 로그는 다양한 사용자 작업에 대한 기록을 유지 관리하여 문제 해결 또는 기업 데이터 관리 정책 및 규정 요구 사항 준수에 대한 감사 추적을 구성합니다. 이 자습서에서는 쿼리 서비스와 관련된 감사 로그 기능에 대한 개요를 제공합니다.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
