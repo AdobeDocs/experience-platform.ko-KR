@@ -47,7 +47,7 @@ ID 마이그레이션은 다음과 같은 전환 패턴을 지원합니다.
 
 ## Audience Manager 트레이트 업데이트
 
-마이그레이션 중에 XDM 형식 데이터를 Audience Manager으로 전송하면 해당 데이터를 신호로 변환해야 합니다. XDM에서 제공하는 새 키를 반영하도록 트레이트를 업데이트해야 합니다. 이 프로세스는 [BAAAM 도구](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management)를 사용하여 쉽게 수행할 수 있습니다.
+마이그레이션 중에 XDM 형식 데이터를 Audience Manager으로 전송하면 해당 데이터를 신호로 변환해야 합니다. XDM에서 제공하는 새 키를 반영하도록 트레이트를 업데이트해야 합니다. 이 프로세스는 [BAAAM 도구](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=ko#getting-started-with-bulk-management)를 사용하여 쉽게 수행할 수 있습니다.
 
 ## 타사 ID 마이그레이션 {#third-party-id}
 

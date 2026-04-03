@@ -34,7 +34,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->ID 및 동의 쿠키는 방문자가 옵트아웃해도 설정됩니다. 이러한 쿠키는 방문자의 데이터 수집 환경 설정을 준수하는 데 필요합니다. 웹 SDK에서 설정하는 쿠키의 전체 목록은 [웹 SDK 쿠키](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)를 참조하십시오.
+>ID 및 동의 쿠키는 방문자가 옵트아웃해도 설정됩니다. 이러한 쿠키는 방문자의 데이터 수집 환경 설정을 준수하는 데 필요합니다. 웹 SDK에서 설정하는 쿠키의 전체 목록은 [웹 SDK 쿠키](https://experienceleague.adobe.com/ko/docs/core-services/interface/data-collection/cookies/web-sdk)를 참조하십시오.
 
 방문자가 이전에 쿠키를 취소한 후 다시 동의하면(`setConsent` 후 `"general": "in"`(으)로 `"general": "out"`을(를) 호출하여) 웹 SDK은 이벤트 전송을 다시 시작하고 쿠키가 만료되지 않은 경우 쿠키의 기존 ECID를 사용합니다. 방문자의 ID는 유지됩니다.
 
