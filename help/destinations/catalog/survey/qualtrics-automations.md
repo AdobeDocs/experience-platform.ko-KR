@@ -4,7 +4,7 @@ title: Qualtrics 자동화
 description: 경험과 운영 고객 데이터를 동기화하여 규모에 맞게 개인화를 잠금 해제할 수 있습니다. Adobe Experience Platform의 여러 운영 데이터 소스의 집계를 Qualtrics Experience iD의 입력으로 사용하여 고객을 더 잘 이해하고 의도, 감정 및 경험 드라이버를 이해하는 데 있어 타깃팅된 전달을 통해 간극을 좁힐 수 있습니다.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1259'
 ht-degree: 3%
@@ -122,7 +122,7 @@ ht-degree: 3%
 
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL URL]**: Qualtrics에서 [워크플로를 트리거하는 &#x200B;](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About)JSON 이벤트[에 있는 URL](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About)입니다. 예제는 아래 스크린샷 을 참조하십시오.
+* **[!UICONTROL URL]**: Qualtrics에서 [워크플로를 트리거하는 ](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About)JSON 이벤트[에 있는 URL](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About)입니다. 예제는 아래 스크린샷 을 참조하십시오.
 
 ![URL](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png)
 
