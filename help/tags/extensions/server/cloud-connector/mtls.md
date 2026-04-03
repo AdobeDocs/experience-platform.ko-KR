@@ -2,7 +2,7 @@
 title: mTLS(상호 전송 계층 보안) 개요
 description: mTLS를 사용하여 이벤트 전달을 위해 Adobe에서 발급한 공개 인증서를 안전하게 검색하는 방법에 대해 알아봅니다.
 exl-id: e8ee8655-213d-4d2a-93d4-d62824b53b1d
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 2%
