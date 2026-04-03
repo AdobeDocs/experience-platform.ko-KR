@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문에 대해 자세히 설명합니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '4686'
 ht-degree: 1%
@@ -892,7 +892,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 콘솔 출력이 아래와 같이 표시됩니다.
 
 ```console
-|     Statistics ID      | 
+|     Statistics ID      |
 | ---------------------- |
 | adc_geometric_stats_1  |
 (1 row)
@@ -1256,7 +1256,7 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 
 ##### 지원되는 데이터 유형
 
-다음 표는 Azure SQL에서 [!DNL Postgres SQL], XDM 및 [!DNL Accelerated Database Recovery]&#x200B;(ADR)이 있는 테이블에 열을 추가하는 데 허용되는 데이터 형식을 나열합니다.
+다음 표는 Azure SQL에서 [!DNL Postgres SQL], XDM 및 [!DNL Accelerated Database Recovery]&#x200B;(ADR)이 있는 테이블에 열을 추가하는 데 허용되는 데이터 형식을 보여 줍니다.
 
 | — | PSQL 클라이언트 | XDM | ADR | 설명 |
 |---|---|---|---|---|
