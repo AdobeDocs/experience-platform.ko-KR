@@ -3,7 +3,7 @@ title: Snapchat Conversions API 확장 개요
 description: Snapchat 변환을 사용하여 서버측 이벤트 데이터를 Snap으로 전송합니다.
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # [!DNL Snapchat] 전환 API 확장 개요
 
-[!DNL Snap] 전환 API 확장은 웹 사이트에서 사용자 작업에 대한 정보를 [과(와) 직접 공유할 수 있는 보안 &#x200B;](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API[!DNL Snapchat] 인터페이스입니다. 이벤트 전달 규칙을 활용하여 **[!DNL Adobe Experience Platform Edge Network]** 전환 API 확장을 사용하여 **[!DNL Snapchat]**&#x200B;에서 **[!DNL Snap]**(으)로 데이터를 보낼 수 있습니다.
+[!DNL Snap] 전환 API 확장은 웹 사이트에서 사용자 작업에 대한 정보를 [과(와) 직접 공유할 수 있는 보안 ](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API[!DNL Snapchat] 인터페이스입니다. 이벤트 전달 규칙을 활용하여 **[!DNL Adobe Experience Platform Edge Network]** 전환 API 확장을 사용하여 **[!DNL Snapchat]**&#x200B;에서 **[!DNL Snap]**(으)로 데이터를 보낼 수 있습니다.
 
 ## [!DNL Snapchat]개 필수 구성 요소 {#prerequisites}
 
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 전환 API를 사용하려면 **[!DNL Snapchat]** [비즈니스 관리자](https://business.snapchat.com/) 계정이 필요합니다. Business Manager는 광고주가 비즈니스 및 외부 파트너와 **[!DNL Snapchat]**&#x200B;의 마케팅 활동을 통합할 수 있도록 지원합니다. Business Manager 계정이 없는 경우 계정 만들기에 대한 **[!DNL Snapchat]** [도움말 센터 문서](https://businesshelp.snapchat.com/s/article/get-started?language=en_US)를 참조하십시오.
 
-Snapchat Ads 관리자에서 [[!DNL [Snap Pixel]]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US)을(를) 설정해야 하며 `Pixel ID`을(를) 볼 수 있는 액세스 권한이 있어야 합니다. `Pixel ID`은(는) [[!UICONTROL [Events Manager]]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) 섹션에서 찾을 수 있습니다.
+Snapchat Ads 관리자에서 [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US)을(를) 설정해야 하며 `Pixel ID`을(를) 볼 수 있는 액세스 권한이 있어야 합니다. `Pixel ID`은(는) [!UICONTROL [Events Manager]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) 섹션에서 찾을 수 있습니다.
 
 오래 지속되는 정적 API 토큰이 필요합니다. 이 토큰을 얻으려면 [[!DNL Snapchat] 전환 API 설명서](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token)를 참조하십시오.
 
@@ -48,12 +48,14 @@ Snapchat Ads 관리자에서 [[!DNL [Snap Pixel]]](https://businesshelp.snapchat
 완료되면 **[!UICONTROL Save]**&#x200B;을(를) 선택합니다.
 
 ![픽셀 ID 및 API 토큰 단추를 표시하는 이미지](../../../images/extensions/server/snap/configure.png)
+
 <!-- 
-![[!DNL Snap] configuration screen for the [!DNL Snap] conversion API extension.](../../../images/extensions/server/snap/configure.png) -->
+![[!DNL Snap] configuration screen for the [!DNL Snap] conversion API extension.](../../../images/extensions/server/snap/configure.png) 
+-->
 
 ## 데이터 요소 만들기 {#create-data-elements}
 
-데이터를 [!DNL Snapchat] 전환 API 확장으로 보내려면 각 데이터 매개 변수에 대해 [데이터 요소](https://experienceleague.adobe.com/ko/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element)를 만드십시오. 다음 단계를 수행하십시오.
+데이터를 [!DNL Snapchat] 전환 API 확장으로 보내려면 각 데이터 매개 변수에 대해 [데이터 요소](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element)를 만드십시오. 다음 단계를 수행하십시오.
 
 1. 속성의 **[!UICONTROL Authoring]** 화면에서 **[!UICONTROL Data Elements]**>**[!UICONTROL Property Info]**(으)로 이동한 다음 **[!UICONTROL Add Data Element]**&#x200B;을(를) 선택합니다.
 
@@ -79,7 +81,7 @@ Snapchat Ads 관리자에서 [[!DNL [Snap Pixel]]](https://businesshelp.snapchat
 
 ## 변환 이벤트를 스냅으로 보내는 규칙 만들기 {#create-snap-rules}
 
-[규칙](https://experienceleague.adobe.com/ko/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule)은(는) Experience Platform에서 확장을 트리거하는 데 사용됩니다. 이 섹션에서는 이벤트 전달 속성 내에 규칙을 만들어 전환 API 확장을 사용하여 스냅에 전환 이벤트를 보내는 방법에 대해 설명합니다.
+[규칙](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule)은(는) Experience Platform에서 확장을 트리거하는 데 사용됩니다. 이 섹션에서는 이벤트 전달 속성 내에 규칙을 만들어 전환 API 확장을 사용하여 스냅에 전환 이벤트를 보내는 방법에 대해 설명합니다.
 
 ### 새 규칙 만들기
 
@@ -101,7 +103,7 @@ Snapchat Ads 관리자에서 [[!DNL [Snap Pixel]]](https://businesshelp.snapchat
 
    ![작업 구성 화면을 표시하는 이미지](../../../images/extensions/server/snap/action_configuration.png)
 
-4. 오른쪽 패널의 [&#x200B; 섹션에서 이벤트에 대해 전송할 &#x200B;](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters)CAPI 매개 변수 값&#x200B;**[!UICONTROL Data Bindings]**&#x200B;을(를) 구성하십시오. 확장의 필드는 아래 표시된 대로 CAPI 매개 변수에 매핑됩니다. 각 매개 변수에 대한 자세한 내용은 [Snapchat 전환 API 설명서](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters)를 참조하십시오.
+4. 오른쪽 패널의 [ 섹션에서 이벤트에 대해 전송할 ](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters)CAPI 매개 변수 값&#x200B;**[!UICONTROL Data Bindings]**&#x200B;을(를) 구성하십시오. 확장의 필드는 아래 표시된 대로 CAPI 매개 변수에 매핑됩니다. 각 매개 변수에 대한 자세한 내용은 [Snapchat 전환 API 설명서](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters)를 참조하십시오.
 
 | 데이터 바인딩 필드 | 스냅 CAPI 매개 변수 |
 | --- | --- |
