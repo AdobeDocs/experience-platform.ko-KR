@@ -2,10 +2,10 @@
 title: UI에서 Zendesk Source 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Zendesk 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 7%
+source-wordcount: '724'
+ht-degree: 8%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 7%
 
 이 자습서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 [!DNL Zendesk] 소스 연결을 만드는 단계를 제공합니다.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
@@ -39,37 +39,37 @@ Experience Platform에서 [!DNL Zendesk] 계정에 액세스하려면 다음 자
 
 [!DNL Zendesk] 소스 연결을 만들기 전에 먼저 소스에 사용할 Experience Platform 스키마를 만들어야 합니다. 스키마를 만드는 방법에 대한 포괄적인 단계를 보려면 [Experience Platform 스키마 만들기](../../../../../xdm/schema/composition.md)에 대한 자습서를 참조하십시오.
 
-[!DNL Zendesk Search API]에 필요한 [!DNL Zendesk] 스키마에 대한 추가 지침은 아래의 [제한](#limits) 섹션을 참조하십시오.
+[!DNL Zendesk]에 필요한 [!DNL Zendesk Search API] 스키마에 대한 추가 지침은 아래의 [제한](#limits) 섹션을 참조하십시오.
 
 ![스키마 만들기](../../../../images/tutorials/create/zendesk/schema.png)
 
 ## [!DNL Zendesk] 계정 연결
 
-Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL Sources]**&#x200B;을(를) 선택하여 [!UICONTROL Sources] 작업 영역에 액세스합니다. [!UICONTROL Catalog] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-*고객 성공* 범주에서 **[!UICONTROL Zendesk]**&#x200B;을(를) 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
+*고객 성공* 범주에서 **[!UICONTROL Zendesk]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Add data]**&#x200B;을(를) 선택합니다.
 
 ![카탈로그](../../../../images/tutorials/create/zendesk/catalog.png)
 
-**[!UICONTROL Connect Zendesk 계정]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
+**[!UICONTROL Connect Zendesk account]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
 
 ### 기존 계정
 
-기존 계정을 사용하려면 새 데이터 흐름을 만들 *Zendesk* 계정을 선택한 후 **[!UICONTROL 다음]**&#x200B;을 선택하여 계속하십시오.
+기존 계정을 사용하려면 새 데이터 흐름을 만들 *Zendesk* 계정을 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택하여 계속하십시오.
 
 ![기존](../../../../images/tutorials/create/zendesk/existing.png)
 
 ### 새 계정
 
-새 계정을 만드는 경우 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택한 다음 이름, 설명(선택 사항) 및 자격 증명을 제공합니다. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택한 다음 새 연결을 설정할 수 있는 시간을 허용하세요.
+새 계정을 만드는 경우 **[!UICONTROL New account]**&#x200B;을(를) 선택한 다음 이름, 설명(선택 사항) 및 자격 증명을 제공합니다. 완료되면 **[!UICONTROL Connect to source]**&#x200B;을(를) 선택한 다음 새 연결을 설정할 시간을 허용합니다.
 
 ![새로 만들기](../../../../images/tutorials/create/zendesk/new.png)
 
 ### 데이터 선택
 
-소스가 인증되면 페이지는 데이터의 계층 구조를 탐색하고 검사할 수 있는 대화형 스키마 트리로 업데이트됩니다. 계속하려면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
+소스가 인증되면 페이지는 데이터의 계층 구조를 탐색하고 검사할 수 있는 대화형 스키마 트리로 업데이트됩니다. 계속하려면 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
 ![select-data](../../../../images/tutorials/create/zendesk/select-data.png)
 
@@ -85,7 +85,7 @@ Experience Platform UI의 왼쪽 탐색 모음에서 **[!UICONTROL 소스]**&#x2
 
 다음은 [!DNL Zendesk] 원본을 성공적으로 연결했는지 그리고 [!DNL Zendesk] 프로필이 Experience Platform에 수집되고 있는지 확인하기 위해 수행할 수 있는 단계입니다.
 
-Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 데이터 세트]**&#x200B;를 선택하여 [!UICONTROL 데이터 세트] 작업 영역에 액세스합니다. [!UICONTROL 데이터 집합 활동] 화면에 실행 세부 정보가 표시됩니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Datasets]**&#x200B;을(를) 선택하여 [!UICONTROL Datasets] 작업 영역에 액세스합니다. [!UICONTROL Dataset Activity] 화면에 실행 세부 정보가 표시됩니다.
 
 ![활동 페이지](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
@@ -93,7 +93,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 데이터 세트]**&
 
 ![데이터 흐름 페이지](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
-마지막으로 **[!UICONTROL 데이터 집합 미리 보기]**&#x200B;를 선택하여 수집된 데이터를 표시합니다.
+마지막으로 **[!UICONTROL Preview dataset]**&#x200B;을(를) 선택하여 수집된 데이터를 표시합니다.
 
 ![Zendesk 데이터 집합](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
