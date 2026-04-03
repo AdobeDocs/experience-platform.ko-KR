@@ -95,7 +95,7 @@ alloy("getIdentity", { namespaces: ["ECID", "CORE"] }).then(function(result) {
 
 **진단 단계**:
 
-1. **URL을 확인합니다**: WebView에 전달되는 URL을 기록합니다. `adobe_mc`[`getUrlVariables`에서 생성한 ](https://developer.adobe.com/client-sdks/edge/identity-for-edge-network/api-reference/#geturlvariables) 매개 변수를 포함해야 합니다.
+1. **URL을 확인합니다**: WebView에 전달되는 URL을 기록합니다. `adobe_mc`[`getUrlVariables`에서 생성한 &#x200B;](https://developer.adobe.com/client-sdks/edge/identity-for-edge-network/api-reference/#geturlvariables) 매개 변수를 포함해야 합니다.
 2. **SDK 버전 확인**: Edge Network 확장을 위한 모바일 ID는 버전 1.1.0 이상이어야 하며 웹 SDK은 버전 2.11.0 이상이어야 합니다.
 3. **시간 확인**: 도메인 간 공유와 마찬가지로 `adobe_mc` 매개 변수가 5분 후에 만료됩니다. URL이 구성된 후 WebView가 즉시 로드되는지 확인합니다.
 4. **일치 `orgId`확인**: Experience Cloud 조직 ID는 모바일 SDK 구성과 웹 SDK 구성 모두에서 동일해야 합니다.

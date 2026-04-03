@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ### 네임스페이스 키 {#namespace-keys}
 
-`identityMap`의 각 최상위 키는 식별자 유형(예: [, ](/help/identity-service/features/namespaces.md), `CRMID` 또는 `Email`)을 분류하는 문자열인 `Phone`ID 네임스페이스`LoyaltyId`입니다. 네임스페이스는 페이로드에서 참조하기 전에 ID 서비스에 있어야 합니다. 방문자에 대한 식별자가 두 개 이상 있는 경우 동일한 이벤트에 여러 네임스페이스 키를 포함할 수 있습니다.
+`identityMap`의 각 최상위 키는 식별자 유형(예: [, &#x200B;](/help/identity-service/features/namespaces.md), `CRMID` 또는 `Email`)을 분류하는 문자열인 `Phone`ID 네임스페이스`LoyaltyId`입니다. 네임스페이스는 페이로드에서 참조하기 전에 ID 서비스에 있어야 합니다. 방문자에 대한 식별자가 두 개 이상 있는 경우 동일한 이벤트에 여러 네임스페이스 키를 포함할 수 있습니다.
 
 ECID를 네임스페이스 키로 포함할 필요는 없습니다. Edge Network은 ID 페이로드에 ECID를 자동으로 추가합니다. ECID를 명시적으로 포함시키는 경우 개인 수준 ID도 있는 경우 `primary`(으)로 표시하지 마십시오.
 

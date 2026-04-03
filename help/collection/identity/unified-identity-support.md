@@ -64,7 +64,7 @@ ECID 및 Demdex ID는 결정론적 알고리즘을 통해 암호학적으로 연
 
 ## 구성
 
-1. **웹 SDK에서 타사 쿠키 사용**: 웹 SDK 구현에서 **타사 쿠키 사용** 설정을 사용합니다. 태그 확장을 사용하는 경우 **[!UICONTROL Use third-party cookies]** ID 구성 설정[에서 ](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies)을(를) 사용하도록 설정하십시오. JavaScript 라이브러리를 사용하는 경우 [`thirdPartyCookiesEnabled`](/help/collection/js/commands/configure/thirdpartycookiesenabled.md)을(를) `true`(으)로 설정합니다.
+1. **웹 SDK에서 타사 쿠키 사용**: 웹 SDK 구현에서 **타사 쿠키 사용** 설정을 사용합니다. 태그 확장을 사용하는 경우 **[!UICONTROL Use third-party cookies]** ID 구성 설정[에서 &#x200B;](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies)을(를) 사용하도록 설정하십시오. JavaScript 라이브러리를 사용하는 경우 [`thirdPartyCookiesEnabled`](/help/collection/js/commands/configure/thirdpartycookiesenabled.md)을(를) `true`(으)로 설정합니다.
 
 1. **데이터 스트림에서 타사 ID 동기화 사용**: 데이터 스트림의 고급 설정에서 **[!UICONTROL Third-Party ID Sync]** 옵션을 사용합니다. [데이터스트림 만들기 및 구성](/help/datastreams/configure.md#advanced-options)을 참조하세요.
 

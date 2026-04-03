@@ -12,7 +12,7 @@ ht-degree: 0%
 
 방문자가 모바일 앱에서 WebView 또는 모바일 웹 페이지로 이동하면 앱 및 웹 컨텍스트는 각각 고유한 ID를 유지합니다. 명시적인 전달 없이 웹 경험은 방문자를 새로운 알 수 없는 사람으로 취급하여 보고를 단편화하고 개인화를 다시 시작합니다.
 
-Mobile-to-web ID 공유는 [ 쿼리 문자열 매개 변수를 통해 방문자의 ](./overview.md)ECID(Experience Cloud ID)`adobe_mc`를 모바일 앱에서 웹 대상으로 전달하여 이 문제를 해결합니다. 매개 변수에는 ECID, Experience Cloud 조직 ID 및 타임스탬프가 전달됩니다. 웹 대상이 유효한 `adobe_mc` 매개 변수와 함께 로드되면 웹 SDK이 자동으로 이 대상을 읽고 첫 번째 Edge Network 요청에 전달된 ID를 적용하므로 두 컨텍스트가 동일한 방문자를 공유합니다.
+Mobile-to-web ID 공유는 [&#x200B; 쿼리 문자열 매개 변수를 통해 방문자의 &#x200B;](./overview.md)ECID(Experience Cloud ID)`adobe_mc`를 모바일 앱에서 웹 대상으로 전달하여 이 문제를 해결합니다. 매개 변수에는 ECID, Experience Cloud 조직 ID 및 타임스탬프가 전달됩니다. 웹 대상이 유효한 `adobe_mc` 매개 변수와 함께 로드되면 웹 SDK이 자동으로 이 대상을 읽고 첫 번째 Edge Network 요청에 전달된 ID를 적용하므로 두 컨텍스트가 동일한 방문자를 공유합니다.
 
 조직에서 제어하는 WebView 또는 모바일 웹 페이지를 모바일 앱에서 열고 앱 활동 및 웹 활동을 동일한 방문자에게 연결된 상태로 유지하려는 경우 이 패턴을 사용합니다. 다른 도메인의 웹 사이트 간 ID 연속성이 목표라면 대신 [도메인 간 공유](cross-domain-sharing.md)를 사용하십시오.
 
