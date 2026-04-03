@@ -2,7 +2,7 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 템플릿을 만드는 데 사용되는 API 호출을 예시합니다.
 title: 대상자 템플릿 만들기
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 3%
