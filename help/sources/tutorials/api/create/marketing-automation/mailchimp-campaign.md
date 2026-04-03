@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 Mailchimp Campaign에 대한 데이터 흐름 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 MailChimp Campaign에 연결하는 방법을 알아봅니다.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1934'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # 흐름 서비스 API를 사용하여 [!DNL Mailchimp Campaign]에 대한 데이터 흐름 만들기
 
-다음 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Mailchimp Campaign] 데이터를 Experience Platform으로 가져오기 위한 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다.
+다음 자습서에서는 [!DNL Mailchimp Campaign]API[[!DNL Flow Service] 를 사용하여 ](https://www.adobe.io/experience-platform-apis/references/flow-service/) 데이터를 Experience Platform으로 가져오기 위한 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다.
 
 ## 전제 조건
 
@@ -29,7 +29,7 @@ OAuth 2 새로 고침 코드를 사용하여 [!DNL Mailchimp]을(를) Adobe Expe
 
 ### 기본 인증을 사용하여 [!DNL Mailchimp] 기본 연결 만들기
 
-기본 인증을 사용하여 [!DNL Mailchimp] 기본 연결을 만들려면 `authorizationTestUrl`, `username` 및 `password`에 대한 자격 증명을 제공하는 동안 [!DNL Flow Service] API의 `/connections` 끝점에 POST 요청을 만듭니다.
+기본 인증을 사용하여 [!DNL Mailchimp] 기본 연결을 만들려면 `/connections`, [!DNL Flow Service] 및 `authorizationTestUrl`에 대한 자격 증명을 제공하는 동안 `username` API의 `password` 끝점에 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -90,7 +90,7 @@ curl -X POST \
 
 ### OAuth 2 새로 고침 코드를 사용하여 [!DNL Mailchimp] 기본 연결 만들기
 
-OAuth 2 새로 고침 코드를 사용하여 [!DNL Mailchimp] 기본 연결을 만들려면 `authorizationTestUrl` 및 `accessToken`에 대한 자격 증명을 제공하는 동안 `/connections` 끝점에 POST 요청을 만듭니다.
+OAuth 2 새로 고침 코드를 사용하여 [!DNL Mailchimp] 기본 연결을 만들려면 `/connections` 및 `authorizationTestUrl`에 대한 자격 증명을 제공하는 동안 `accessToken` 끝점에 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -467,7 +467,7 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
---->
+-->
 
 ## 플로우 만들기 {#flow}
 
@@ -551,11 +551,11 @@ curl -X POST \
 
 ### 데이터 흐름 업데이트
 
-데이터 흐름의 ID를 제공하면서 [!DNL Flow Service] API의 `/flows` 끝점에 PATCH 요청을 수행하여 데이터 흐름의 이름, 설명, 실행 일정 및 관련 매핑 세트와 같은 데이터 흐름의 세부 정보를 업데이트합니다. PATCH 요청을 할 때는 `If-Match` 헤더에 데이터 흐름의 고유한 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름을 업데이트하는 방법](../../update-dataflows.md)에 대한 안내서를 참조하십시오.
+데이터 흐름의 ID를 제공하면서 `/flows` API의 [!DNL Flow Service] 끝점에 PATCH 요청을 수행하여 데이터 흐름의 이름, 설명, 실행 일정 및 관련 매핑 세트와 같은 데이터 흐름의 세부 정보를 업데이트합니다. PATCH 요청을 할 때는 `etag` 헤더에 데이터 흐름의 고유한 `If-Match`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 데이터 흐름을 업데이트하는 방법](../../update-dataflows.md)에 대한 안내서를 참조하십시오.
 
 ### 계정 업데이트
 
-기본 연결 ID를 쿼리 매개 변수로 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. PATCH을 요청할 때 `If-Match` 헤더에 소스 계정의 고유 `etag`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 계정을 업데이트하는 방법](../../update.md)에 대한 안내서를 참조하십시오.
+기본 연결 ID를 쿼리 매개 변수로 제공하면서 [!DNL Flow Service] API에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. PATCH을 요청할 때 `etag` 헤더에 소스 계정의 고유 `If-Match`을(를) 제공해야 합니다. 전체 API 예제는 [API를 사용하여 소스 계정을 업데이트하는 방법](../../update.md)에 대한 안내서를 참조하십시오.
 
 ### 데이터 흐름 삭제
 
