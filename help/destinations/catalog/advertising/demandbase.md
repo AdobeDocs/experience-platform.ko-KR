@@ -3,7 +3,7 @@ title: Demandbase 연결
 description: 이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대한 계정 대상자를 활성화할 수 있습니다. DemandBase의 B2B Demand Side Platform(DSP)을 통해 대상 계정의 관련 페르소나와 역할에 광고를 게재하십시오. 대상 계정은 마케팅과 판매의 다른 다운스트림 사용 사례를 위해 Demandbase 서드파티 데이터로 강화할 수도 있습니다.
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 15%
@@ -15,7 +15,7 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->[의 &#x200B;](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Business[&#x200B; 및 &#x200B;](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Person[!DNL Real-Time Customer Data Platform] 버전을 구매하는 회사는 Demandbase 대상에 대해 계정 대상을 활성화할 수 있습니다.
+>[의 ](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Business[ 및 ](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Person[!DNL Real-Time Customer Data Platform] 버전을 구매하는 회사는 Demandbase 대상에 대해 계정 대상을 활성화할 수 있습니다.
 
 [계정 대상자](/help/segmentation/types/account-audiences.md)를 기반으로 대상자 타깃팅, 개인화 및 제외를 위한 Demandbase 캠페인에 대한 프로필을 활성화합니다.
 
