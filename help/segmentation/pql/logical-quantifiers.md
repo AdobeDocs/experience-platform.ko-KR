@@ -3,7 +3,7 @@ solution: Experience Platform
 title: PQL 논리 정량자
 description: 논리 한정자는 Profile Query Language(PQL)의 배열로 조건을 어설션하는 데 사용할 수 있습니다.
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 3%
@@ -12,9 +12,9 @@ ht-degree: 3%
 
 # 논리적 수량자 함수
 
-논리 한정자는 [!DNL Profile Query Language] (PQL)의 배열로 조건을 어설션하는 데 사용할 수 있습니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
+논리 한정자는 [!DNL Profile Query Language]&#x200B;(PQL)의 배열로 조건을 어설션하는 데 사용할 수 있습니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
 
-## 존재함
+## 존재
 
 `exists` 함수는 제공된 조건을 충족하는 경우 배열에 항목이 있는지 확인합니다.
 
