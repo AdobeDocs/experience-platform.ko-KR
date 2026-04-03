@@ -5,7 +5,7 @@ role: Developer
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 5%
@@ -14,15 +14,17 @@ ht-degree: 5%
 
 # 데이터 위생 API를 사용하여 레코드 삭제
 
-<!-- >[!IMPORTANT]
+<!-- 
+>[!IMPORTANT]
 >
->This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. -->
+>This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. 
+-->
 
 데이터 위생 API를 사용하면 Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제할 수 있습니다.
 
 [Privacy Service API](../../privacy-service/api/overview.md)와 동일한 루트 경로를 통해 API에 액세스할 수 있습니다. `https://platform.adobe.io/data/core/privacy/`
 
-## 시작하기
+## 시작
 
 이 섹션에서는 데이터 위생 API를 호출하기 전에 알아야 하는 핵심 개념에 대해 소개합니다.
 
