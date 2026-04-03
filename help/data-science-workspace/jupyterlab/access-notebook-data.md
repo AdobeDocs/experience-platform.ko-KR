@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jupyterlab Notebooks의 데이터 액세스
 description: 이 안내서는 Data Science Workspace 내에 구축된 Jupyter Notebooks를 사용하여 데이터에 액세스하는 방법에 중점을 둡니다.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3274'
 ht-degree: 3%
