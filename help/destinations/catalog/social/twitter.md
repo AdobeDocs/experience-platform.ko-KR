@@ -2,7 +2,7 @@
 title: Twitter 사용자 지정 대상 연결
 description: Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 Adobe Experience Platform 내에 구축된 대상을 활성화하여 관련 리마케팅 캠페인을 만듭니다
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '937'
 ht-degree: 6%
@@ -24,7 +24,7 @@ Twitter에서 기존 팔로워와 고객을 타겟팅하고 [!DNL Adobe Experien
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Twitter Custom Audiences]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko#getting-started)에 대해 자세히 알아보세요.
+[!DNL Twitter Custom Audiences]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)에 대해 자세히 알아보세요.
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
@@ -88,7 +88,7 @@ Twitter에서 기존 팔로워와 고객을 타겟팅하고 [!DNL Adobe Experien
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 [!DNL Twitter Custom Audiences] 대상을 찾은 다음 **[!UICONTROL Set Up]**&#x200B;을(를) 선택하십시오.
-2. **[!UICONTROL Connect to destination]**&#x200B;를 선택합니다.
+2. **[!UICONTROL Connect to destination]**를 선택합니다.
    ![LinkedIn 인증](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
 3. Twitter 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 
