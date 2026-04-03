@@ -2,9 +2,9 @@
 title: 더 높은 차수의 함수로 유사한 레코드 검색
 description: 유사성 지표 및 유사성 임계값을 기반으로 하나 이상의 데이터 세트에서 유사하거나 관련된 레코드를 식별하고 검색하는 방법을 알아봅니다. 이 워크플로우는 서로 다른 데이터 세트 간의 의미 있는 관계 또는 중복을 강조할 수 있습니다.
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '4031'
+source-wordcount: '4030'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 3%
   ![Jaccard 유사성 측정을 보여 주는 벤 다이어그램입니다.](../images/use-cases/jaccard-similarity.png)
 - Data Distiller의 **상위 함수**&#x200B;는 SQL 문 내에서 직접 데이터를 처리하고 변환하는 동적 인라인 도구입니다. 이러한 다목적 기능을 사용하면 데이터 조작에서 여러 단계를 수행할 필요가 없습니다. 특히 [배열 및 지도와 같은 복잡한 형식을 처리](../sql/higher-order-functions.md)할 때 더욱 그러합니다. 쿼리 효율성을 높이고 변환을 단순화함으로써 고차 함수는 다양한 비즈니스 시나리오에서 더 민첩한 분석과 더 나은 의사 결정에 기여합니다.
 
-## 시작하기
+## 시작
 
 Data Distiller SKU는 Adobe Experience Platform 데이터에 대해 더 높은 수준의 기능을 수행하는 데 필요합니다. Data Distiller SKU가 없는 경우 Adobe 고객 서비스 담당자에게 자세한 내용을 문의하십시오.
 
@@ -107,9 +107,9 @@ SELECT * FROM featurevector1;
 
 - 1행: `CREATE TEMP TABLE featurevector1 AS`: 이 문은 이름이 `featurevector1`인 임시 테이블을 만듭니다. 임시 테이블은 일반적으로 현재 세션 내에서만 액세스할 수 있으며 세션이 끝날 때 자동으로 삭제됩니다.
 - 1행 및 2행: `SELECT * FROM (...)`: 이 코드 부분은 `featurevector1` 테이블에 삽입된 데이터를 생성하는 데 사용되는 하위 쿼리입니다.
-하위 쿼리 내에서 `UNION ALL` 명령을 사용하여 여러 `SELECT` 문이 결합됩니다. 각 `SELECT` 문은 `ProductName` 열에 대해 지정된 값이 있는 데이터 행을 하나씩 생성합니다.
-- 3행: `SELECT 'iPad' AS ProductName`: `ProductName` 열에 값이 `iPad`인 행이 생성됩니다.
-- 5행: `SELECT 'iPhone'`: `ProductName` 열에 값이 `iPhone`인 행이 생성됩니다.
+하위 쿼리 내에서 `SELECT` 명령을 사용하여 여러 `UNION ALL` 문이 결합됩니다. 각 `SELECT` 문은 `ProductName` 열에 대해 지정된 값이 있는 데이터 행을 하나씩 생성합니다.
+- 3행: `SELECT 'iPad' AS ProductName`: `iPad` 열에 값이 `ProductName`인 행이 생성됩니다.
+- 5행: `SELECT 'iPhone'`: `iPhone` 열에 값이 `ProductName`인 행이 생성됩니다.
 
 SQL 문은 아래와 같이 테이블을 생성합니다.
 
@@ -157,7 +157,7 @@ SELECT DISTINCT(ProductName) AS featurevector2_distinct FROM featurevector2
 
 ### 공백 제거 {#whitespace-removal}
 
-다음 SQL 문에서는 피쳐 벡터에서 공백이 제거됩니다. 쿼리의 `replace(ProductName, ' ', '') AS featurevector1_nospaces` 부분은 `featurevector1` 테이블에서 `ProductName` 열을 사용하고 `replace()` 함수를 사용합니다. `REPLACE` 함수는 공백(&#39; &#39;)의 모든 항목을 빈 문자열(&#39;&#39;)로 바꿉니다. 이렇게 하면 `ProductName` 값에서 모든 공백이 효과적으로 제거됩니다. 결과에 `featurevector1_nospaces`(으)로 별칭이 지정되었습니다.
+다음 SQL 문에서는 피쳐 벡터에서 공백이 제거됩니다. 쿼리의 `replace(ProductName, ' ', '') AS featurevector1_nospaces` 부분은 `ProductName` 테이블에서 `featurevector1` 열을 사용하고 `replace()` 함수를 사용합니다. `REPLACE` 함수는 공백(&#39; &#39;)의 모든 항목을 빈 문자열(&#39;&#39;)로 바꿉니다. 이렇게 하면 `ProductName` 값에서 모든 공백이 효과적으로 제거됩니다. 결과에 `featurevector1_nospaces`(으)로 별칭이 지정되었습니다.
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, replace(ProductName, ' ', '') AS featurevector1_nospaces FROM featurevector1
@@ -196,7 +196,7 @@ SELECT DISTINCT(ProductName) AS featurevector2_distinct, replace(ProductName, ' 
 
 ### 소문자로 변환 {#lowercase-conversion}
 
-그런 다음 제품 이름을 소문자로 변환하고 공백을 제거하도록 SQL을 개선합니다. `replace()` 함수의 결과에 lower 함수(`lower(...)`)가 적용됩니다. lower 함수는 수정된 `ProductName` 값의 모든 문자를 소문자로 변환합니다. 이렇게 하면 값이 원래 대/소문자에 관계없이 소문자로 표시됩니다.
+그런 다음 제품 이름을 소문자로 변환하고 공백을 제거하도록 SQL을 개선합니다. `lower(...)` 함수의 결과에 lower 함수(`replace()`)가 적용됩니다. lower 함수는 수정된 `ProductName` 값의 모든 문자를 소문자로 변환합니다. 이렇게 하면 값이 원래 대/소문자에 관계없이 소문자로 표시됩니다.
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, lower(replace(ProductName, ' ', '')) AS featurevector1_transform FROM featurevector1;
@@ -325,7 +325,7 @@ FROM
 
 ### 토큰 길이 설정 확인 {#ensure-set-token-length}
 
-생성된 시퀀스가 특정 길이인지 확인하기 위해 문에 조건을 추가할 수 있습니다. 다음 SQL 문은 `transform` 함수를 더 복잡하게 만들어 토큰 생성 논리를 확장합니다. 문은 `transform` 내의 `filter` 함수를 사용하여 생성된 시퀀스가 6자 길이인지 확인합니다. 해당 Position에 NULL 값을 지정하여 해당 Position이 가능하지 않은 경우를 처리합니다.
+생성된 시퀀스가 특정 길이인지 확인하기 위해 문에 조건을 추가할 수 있습니다. 다음 SQL 문은 `transform` 함수를 더 복잡하게 만들어 토큰 생성 논리를 확장합니다. 문은 `filter` 내의 `transform` 함수를 사용하여 생성된 시퀀스가 6자 길이인지 확인합니다. 해당 Position에 NULL 값을 지정하여 해당 Position이 가능하지 않은 경우를 처리합니다.
 
 ```SQL
 SELECT
@@ -386,7 +386,7 @@ SELECT transform(
 - 줄 2: `sequence(1, 5)`은(는) 1부터 5까지의 숫자 시퀀스를 생성합니다.
 - 행 3: `x -> reduce(sequence(1, x), 0, (acc, y) -> acc + y)`은(는) 시퀀스의 각 요소 x에 대해 축소 작업을 수행합니다(1~5).
    - `reduce` 함수는 초기 누산 값 0을 사용하고, 1에서 현재 값 `x`까지의 시퀀스를 사용하며, 더 높은 차수의 함수 `(acc, y) -> acc + y`을(를) 사용하여 숫자를 추가합니다.
-   - 상위 함수 `acc + y`은(는) 누산기 `acc`에 현재 값 `y`을(를) 추가하여 합계를 누계합니다.
+   - 상위 함수 `acc + y`은(는) 누산기 `y`에 현재 값 `acc`을(를) 추가하여 합계를 누계합니다.
 - 8행: `AS sum_result`에서 결과 열의 이름을 sum_result로 바꿉니다.
 
 요약하면, 이 고차 함수는 두 개의 매개 변수(`acc` 및 `y`)를 사용하고 수행할 작업을 정의하며, 이 경우 `y`을(를) 누적기 `acc`에 추가합니다. 이 고차 함수는 축약 과정에서 수열의 각 요소에 대하여 실행된다.
@@ -397,7 +397,7 @@ SELECT transform(
 
 이 섹션에서는 Data Distiller의 고차 함수 값을 더 잘 이해하여 n-그램을 보다 효율적으로 만들기 위해 3그램 SQL 문의 슬림화된 버전을 분석합니다.
 
-아래 문은 `featurevector1` 테이블의 `ProductName` 열에서 작동합니다. 생성된 시퀀스에서 가져온 위치를 사용하여 테이블 내에서 수정된 제품 이름에서 파생된 세 문자 하위 문자열 세트를 생성합니다.
+아래 문은 `ProductName` 테이블의 `featurevector1` 열에서 작동합니다. 생성된 시퀀스에서 가져온 위치를 사용하여 테이블 내에서 수정된 제품 이름에서 파생된 세 문자 하위 문자열 세트를 생성합니다.
 
 ```SQL {line-numbers="true"}
 SELECT
@@ -423,7 +423,7 @@ FROM
 
 ## 결과 필터링 {#filter-results}
 
-후속 [데이터 변환](#data-transformation)을 통해 `filter` 함수를 사용하면 텍스트 데이터에서 관련 정보를 보다 정교하고 정확하게 추출할 수 있습니다. 이를 통해 통찰력을 도출하고, 데이터 품질을 개선하며, 더 나은 의사 결정 프로세스를 용이하게 할 수 있습니다.
+후속 `filter`데이터 변환[을 통해 ](#data-transformation) 함수를 사용하면 텍스트 데이터에서 관련 정보를 보다 정교하고 정확하게 추출할 수 있습니다. 이를 통해 통찰력을 도출하고, 데이터 품질을 개선하며, 더 나은 의사 결정 프로세스를 용이하게 할 수 있습니다.
 
 다음 SQL 문의 `filter` 함수는 후속 변환 함수를 사용하여 하위 문자열이 추출되는 문자열 내 위치 시퀀스를 세분화하고 제한하는 역할을 합니다.
 
@@ -447,7 +447,7 @@ FROM
 
 조건 `i -> i + 6 <= length(lower(replace(ProductName, ' ', '')))`을(를) 사용하면 시작 위치 `i`에 `6`을(를) 더한 길이(원하는 7자리 하위 문자열의 길이에서 1을 뺀 길이)가 수정된 `ProductName`의 길이를 초과하지 않습니다.
 
-`CASE` 문은 해당 길이에 따라 하위 문자열을 조건부로 포함하거나 제외하는 데 사용됩니다. 7자리 하위 문자열만 포함되고, 나머지 문자열은 NULL로 대체됩니다. 그런 다음 `transform` 함수에서 이러한 하위 문자열을 사용하여 `featurevector1` 테이블의 `ProductName` 열에서 하위 문자열 시퀀스를 만듭니다.
+`CASE` 문은 해당 길이에 따라 하위 문자열을 조건부로 포함하거나 제외하는 데 사용됩니다. 7자리 하위 문자열만 포함되고, 나머지 문자열은 NULL로 대체됩니다. 그런 다음 `transform` 함수에서 이러한 하위 문자열을 사용하여 `ProductName` 테이블의 `featurevector1` 열에서 하위 문자열 시퀀스를 만듭니다.
 
 >[!TIP]
 >
@@ -576,8 +576,8 @@ CROSS JOIN
 
 다음은 교차 결합을 만드는 데 사용되는 SQl에 대한 요약입니다.
 
-- 줄 2: `A.featurevector1_distinct AS SetA_ProductNames`은(는) 테이블 `A`에서 `featurevector1_distinct` 열을 선택하고 별칭 `SetA_ProductNames`을(를) 할당합니다. SQL의 이 섹션에는 첫 번째 데이터 세트와 구별되는 제품 이름이 나열됩니다.
-- 4행: `A.tokens AS SetA_tokens1`은(는) 테이블 또는 하위 쿼리 `A`에서 `tokens` 열을 선택하고 별칭 `SetA_tokens1`을(를) 할당합니다. SQL의 이 섹션에는 첫 번째 데이터 세트의 제품 이름과 연결된 토큰화된 값 목록이 표시됩니다.
+- 줄 2: `A.featurevector1_distinct AS SetA_ProductNames`은(는) 테이블 `featurevector1_distinct`에서 `A` 열을 선택하고 별칭 `SetA_ProductNames`을(를) 할당합니다. SQL의 이 섹션에는 첫 번째 데이터 세트와 구별되는 제품 이름이 나열됩니다.
+- 4행: `A.tokens AS SetA_tokens1`은(는) 테이블 또는 하위 쿼리 `tokens`에서 `A` 열을 선택하고 별칭 `SetA_tokens1`을(를) 할당합니다. SQL의 이 섹션에는 첫 번째 데이터 세트의 제품 이름과 연결된 토큰화된 값 목록이 표시됩니다.
 - 8행: `CROSS JOIN` 작업은 두 데이터 세트에서 가능한 모든 행 조합을 결합합니다. 즉, 첫 번째 테이블(`A`)의 각 제품 이름 및 연결된 토큰과 두 번째 테이블(`B`)의 각 제품 이름 및 연결된 토큰을 쌍으로 묶습니다. 이렇게 하면 두 데이터 세트의 데카르트 제품이 출력되며, 여기에서 각 행은 제품 이름과 두 데이터 세트의 관련 토큰의 조합을 나타냅니다.
 
 결과는 아래 표와 같습니다.
@@ -697,7 +697,7 @@ WHERE jaccard_similarity>=0.4
 
 이 쿼리의 결과는 아래와 같이 유사성 조인용 열을 제공합니다.
 
-+++확장하려면 선택
++++ 확장하려면 선택
 
 |   | SetA_ProductName | SetA_ProductName |
 |---|--------------------------|------------------------|
@@ -707,7 +707,7 @@ WHERE jaccard_similarity>=0.4
 
 {style="table-layout:auto"}
 
-+++:
++++
 
 ### 다음 단계 {#next-steps}
 
@@ -717,4 +717,4 @@ WHERE jaccard_similarity>=0.4
 - 데이터 정리: 데이터 품질을 개선합니다.
 - 시장 바구니 분석: 고객 행동, 환경 설정 및 잠재적 교차 판매 기회에 대한 통찰력을 제공합니다.
 
-아직 읽지 않았다면 [AI/ML 기능 파이프라인 개요](../data-distiller/ml-feature-pipelines/overview.md)를 읽는 것이 좋습니다. 이 개요를 통해 Data Distiller 및 선호하는 머신 러닝이 Experience Platform 데이터와 함께 마케팅 사용 사례를 지원하는 사용자 정의 데이터 모델을 구축하는 방법을 알아보십시오.
+아직 읽지 않았다면 [AI/ML 기능 파이프라인 개요](../data-distiller/ml-feature-pipelines/overview.md)를 읽는 것이 좋습니다. 해당 개요를 통해 Data Distiller 및 선호하는 머신 러닝이 Experience Platform 데이터를 통한 마케팅 사용 사례를 지원하는 사용자 정의 데이터 모델을 구축하는 방법에 대해 알아보십시오.
