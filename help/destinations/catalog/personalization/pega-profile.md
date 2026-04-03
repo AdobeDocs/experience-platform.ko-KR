@@ -3,7 +3,7 @@ title: Pega 프로필 커넥터
 description: Adobe Experience Platform의 Amazon S3용 Pega Profile Connector를 사용하여 전체 또는 증분, 또는 둘 다 프로필 데이터를 Amazon S3 클라우드 스토리지로 내보냅니다. Pega 고객 의사 결정 허브에서 Amazon S3 스토리지에서 주기적으로 프로필 데이터를 가져오기 위해 고객 프로필 Designer에서 데이터 작업을 예약할 수 있습니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1225'
 ht-degree: 4%
@@ -147,12 +147,12 @@ ht-degree: 4%
 S3에서 프로필 데이터를 성공적으로 가져오면 [!DNL Pega Customer] 프로필 데이터 저장소에 데이터가 삽입됩니다. 가져온 고객 프로필 데이터는 다음 그림과 같이 [!DNL Pega Customer Profile Designer]에서 확인할 수 있습니다.
 ![고객 프로필 Designer에서 Adobe 프로필 데이터의 유효성을 검사할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-[!DNL Pega Customer Decision Hub]에서 데이터 관리자는 다음 그림과 같이 S3에서 주기적으로 프로필 데이터를 가져오도록 [!DNL Customer Profile Designer]의 데이터 작업을 구성할 수 있습니다. [에서 프로필 데이터를 가져오도록 데이터 작업을 구성하는 방법에 대한 자세한 내용은 &#x200B;](#additional-resources)추가 리소스[!DNL Amazon S3]를 참조하세요.
+[!DNL Pega Customer Decision Hub]에서 데이터 관리자는 다음 그림과 같이 S3에서 주기적으로 프로필 데이터를 가져오도록 [!DNL Customer Profile Designer]의 데이터 작업을 구성할 수 있습니다. [에서 프로필 데이터를 가져오도록 데이터 작업을 구성하는 방법에 대한 자세한 내용은 ](#additional-resources)추가 리소스[!DNL Amazon S3]를 참조하세요.
 고객 프로필 Designer에서 데이터 작업을 구성하기 위한 ![UI 화면의 이미지](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## 추가 리소스 {#additional-resources}
 
-[에서 &#x200B;](https://academy.pega.com/topic/import-data-jobs/v1)데이터 가져오기 작업[!DNL Pega Customer Decision Hub]을 참조하십시오.
+[에서 ](https://academy.pega.com/topic/import-data-jobs/v1)데이터 가져오기 작업[!DNL Pega Customer Decision Hub]을 참조하십시오.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
