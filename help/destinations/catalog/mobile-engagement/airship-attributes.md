@@ -3,7 +3,7 @@ keywords: 비행선 속성;비행선 목적지
 title: 비행선 속성 연결
 description: Airship 내에서 타깃팅할 대상 속성으로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1121'
 ht-degree: 3%
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!DNL Airship]은(는) 선도적인 Customer Engagement Experience Platform으로, 고객 수명 주기의 모든 단계에서 사용자에게 의미 있고 개인화된 옴니채널 메시지를 전달할 수 있도록 지원합니다.
 
-이 통합은 타깃팅 또는 트리거를 위해 Adobe 프로필 데이터를 [!DNL Airship]특성[(으)로 &#x200B;](https://docs.airship.com/guides/audience/attributes/)에 전달합니다.
+이 통합은 타깃팅 또는 트리거를 위해 Adobe 프로필 데이터를 [!DNL Airship]특성[(으)로 ](https://docs.airship.com/guides/audience/attributes/)에 전달합니다.
 
 [!DNL Airship]에 대한 자세한 내용은 [비행선 문서](https://docs.airship.com)를 참조하세요.
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 >[!TIP]
 >
->아직 만들지 않은 경우 [!DNL Airship]이 등록 링크[를 통해 &#x200B;](https://go.airship.eu/accounts/register/plan/starter/) 계정을 만드십시오.
+>아직 만들지 않은 경우 [!DNL Airship]이 등록 링크[를 통해 ](https://go.airship.eu/accounts/register/plan/starter/) 계정을 만드십시오.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -79,7 +79,7 @@ ht-degree: 3%
 
 ## 전달자 토큰 생성 {#bearer-token}
 
-**[!UICONTROL Settings]** Airship 대시보드&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;의 [&quot; &#x200B;](https://go.airship.com)&#x200B;(으)로 이동한 다음 왼쪽 메뉴에서 **[!UICONTROL Tokens]**&#x200B;을(를) 선택하십시오.
+**[!UICONTROL Settings]** Airship 대시보드&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;의 [&quot; ](https://go.airship.com)&#x200B;(으)로 이동한 다음 왼쪽 메뉴에서 **[!UICONTROL Tokens]**&#x200B;을(를) 선택하십시오.
 
 **[!UICONTROL Create Token]**&#x200B;을(를) 클릭합니다.
 
