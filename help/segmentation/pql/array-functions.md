@@ -3,18 +3,18 @@ solution: Experience Platform
 title: PQL 함수 배열, 목록 및 설정
 description: Profile Query Language(PQL)는 배열, 목록 및 문자열과 보다 쉽게 상호 작용할 수 있도록 함수를 제공합니다.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '820'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
 # 배열, 목록 및 집합 함수
 
-[!DNL Profile Query Language] (PQL)에서는 배열, 목록 및 문자열과 보다 쉽게 상호 작용할 수 있도록 함수를 제공합니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
+[!DNL Profile Query Language]&#x200B;(PQL)에서는 배열, 목록 및 문자열과 보다 쉽게 상호 작용할 수 있도록 함수를 제공합니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
 
-## 안에 있음
+## 위치
 
 `in` 함수는 항목이 배열의 멤버인지 또는 부울의 멤버인지 확인하는 데 사용합니다.
 
@@ -32,7 +32,7 @@ ht-degree: 4%
 person.birthMonth in [3, 6, 9]
 ```
 
-## 안에 없음
+## 다음에 없음
 
 `notIn` 함수는 항목이 배열의 멤버인지 또는 목록의 멤버가 아닌지 부울로 확인하는 데 사용합니다.
 
@@ -126,7 +126,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 person.eatenFoods.supersetOf(["sushi", "pizza"])
 ```
 
-## 다음을 포함
+## 포함
 
 `includes` 함수는 배열 또는 목록에 지정된 항목이 부울로 포함되어 있는지 확인하는 데 사용합니다.
 
@@ -261,7 +261,7 @@ orders.topN(price, 5)
 ```
 
 | 인수 | 설명 |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{ARRAY}` | 정렬할 배열 또는 목록입니다. |
 | `{VALUE}` | 배열 또는 목록을 정렬할 속성입니다. |
 | `{AMOUNT}` | 반환할 항목의 수입니다. |
