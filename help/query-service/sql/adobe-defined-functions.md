@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 쿼리 서비스의 Adobe 정의 SQL 함수
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 사용할 수 있는 Adobe 정의 함수에 대한 정보를 제공합니다.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # 쿼리 서비스의 Adobe 정의 SQL 함수
 
-Adobe 정의 함수(여기서는 ADF라고 함)는 [!DNL Experience Event] 데이터에 대해 일반적인 비즈니스 관련 작업을 수행하는 데 도움이 되는 Adobe Experience Platform Query Service의 미리 빌드된 함수입니다. 여기에는 Adobe Analytics에 있는 것과 같은 [세션화](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=ko) 및 [속성](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ko)에 대한 함수가 포함됩니다.
+Adobe 정의 함수(여기서는 ADF라고 함)는 [!DNL Experience Event] 데이터에 대해 일반적인 비즈니스 관련 작업을 수행하는 데 도움이 되는 Adobe Experience Platform Query Service의 미리 빌드된 함수입니다. 여기에는 Adobe Analytics에 있는 것과 같은 [세션화](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) 및 [속성](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)에 대한 함수가 포함됩니다.
 
 이 문서에서는 [!DNL Query Service]에서 사용할 수 있는 Adobe 정의 함수에 대한 정보를 제공합니다.
 
@@ -47,7 +47,7 @@ OVER ({PARTITION} {ORDER} {FRAME})
 
 이러한 그룹화 또는 데이터 세션화는 이벤트를 연결하여 고객 경험에 대한 더 많은 컨텍스트를 발견하는 데 도움이 됩니다.
 
-Adobe Analytics의 세션화에 대한 자세한 내용은 [컨텍스트 인식 세션](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=ko)에 대한 설명서를 참조하십시오.
+Adobe Analytics의 세션화에 대한 자세한 내용은 [컨텍스트 인식 세션](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)에 대한 설명서를 참조하십시오.
 
 **쿼리 구문**
 
@@ -122,7 +122,7 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | 매개변수 | 설명 |
 | --------- | ----------- |
 | `{TIMESTAMP}` | 데이터 세트에 있는 타임스탬프 필드입니다. |
-| `{TEST_EXPRESSION}` | 데이터의 필드를 확인할 표현식입니다. 예: `application.launches > 0`. |
+| `{TEST_EXPRESSION}` | 데이터의 필드를 확인할 표현식입니다. 예, `application.launches > 0`. |
 
 `OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](#window-functions)에 있습니다.
 
@@ -187,7 +187,7 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | 매개변수 | 설명 |
 | --------- | ----------- |
 | `{TIMESTAMP}` | 데이터 세트에 있는 타임스탬프 필드입니다. |
-| `{TEST_EXPRESSION}` | 데이터의 필드를 확인할 표현식입니다. 예: `application.launches > 0`. |
+| `{TEST_EXPRESSION}` | 데이터의 필드를 확인할 표현식입니다. 예, `application.launches > 0`. |
 
 `OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](#window-functions)에 있습니다.
 
@@ -282,11 +282,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
 |-----------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | 
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | 
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     |
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                |
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 19:22:34.0 |                                     | (Kids)
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:12.0 | Home                                | 
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:12.0 | Home                                |
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:57.0 | Kids                                | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:03:36.0 | Search Results                      | (Kids)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:04:30.0 | Product Details: Pemmican Power Bar | (Search Results)
@@ -487,4 +487,4 @@ LIMIT 10
 
 다음 비디오는 Adobe Experience Platform 인터페이스 및 PSQL 클라이언트에서 쿼리를 실행하는 방법을 보여 줍니다. 또한 이 비디오에서는 Adobe 정의 함수 사용 및 CREATE TABLE AS SELECT(CTAS) 사용 시 XDM 개체의 개별 속성과 관련된 예제를 사용합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32942?captions=kor&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
