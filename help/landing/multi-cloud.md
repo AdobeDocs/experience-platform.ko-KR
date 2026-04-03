@@ -1,14 +1,14 @@
 ---
 solution: Experience Platform
 title: Adobe Experience Platform multi-cloud 개요
-description: Microsoft Azure에서 실행 중인 Experience Platform과 Amazon Web Services 간의 차이점에 대해 알아봅니다.
-source-git-commit: d3654573cec338f173d151fd5e62ef5c8b893c11
+description: Microsoft Azure에서 Experience Platform을 실행하는 것과 Amazon Web Services을 실행하는 것의 차이점에 대해 알아봅니다.
+exl-id: da552311-6e50-4b09-bcc8-696a25325796
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '560'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
-
 
 # Adobe Experience Platform multi-cloud 개요
 
@@ -16,17 +16,17 @@ Adobe Experience Platform은 다중 클라우드 제품이므로 [[!DNL Microsof
 
 >[!AVAILABILITY]
 >
->Amazon Web Services(AWS)에서 실행되는 Adobe Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. AWS에서의 Experience Platform에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+>Amazon Web Services(AWS)에서 실행되는 Adobe Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. AWS의 Experience Platform에 대해 자세히 알아보려면 Adobe 계정 팀에 문의하십시오.
 
 이 페이지에서는 사용 가능한 두 클라우드 인프라에 대한 높은 수준의 개요를 제공하며 비즈니스에 적합한 클라우드 인프라를 선택하는 방법에 대한 지침을 포함합니다.
 
 ## 나에게 적합한 클라우드 구현은 무엇입니까? {#which-cloud-is-right}
 
-Azure나 AWS의 Experience Platform 선택은 비즈니스와 관련된 몇 가지 요인에 따라 다릅니다.
+Azure의 Experience Platform과 AWS 중에서 선택하는 방법은 비즈니스와 관련된 몇 가지 요인에 따라 다릅니다.
 
 * **비즈니스 및 기술 요구 사항**: 조직의 요구 사항 및 장기 클라우드 전략을 평가합니다.
 * **기존 인프라**: 현재 클라우드 인프라 및 통합 요구 사항을 고려하십시오.
-* **클라우드 기술 신뢰**: 귀사에서 Microsoft 기술에 크게 의존하는 경우 Azure가 더 적합할 수 있습니다. Amazon 서비스에 더 많이 의존한다면 AWS이 더 나은 옵션이 될 수 있습니다.
+* **클라우드 기술 신뢰**: 귀사에서 Microsoft 기술에 상당히 의존하고 있다면 Azure이 더 적합할 수 있습니다. Amazon 서비스에 더 많이 의존한다면 AWS이 더 나은 옵션이 될 수 있습니다.
 * **데이터 상주 고려 사항**: 조직의 데이터 상주 요구 사항을 평가하고 선택한 클라우드 플랫폼이 이러한 규정을 준수하는 지역을 제공하는지 확인합니다.
 
 위의 요소를 고려하여 간소화된 이 의사 결정 트리를 사용하여 비즈니스 요구 사항에 적합한 클라우드 구현을 결정하는 데 도움이 됩니다.
@@ -68,26 +68,27 @@ Experience Platform은 6개의 Microsoft Azure 호스팅 위치와 1개의 Amazo
 
 ## 기능 패리티 {#feature-parity}
 
-Adobe은 다음과 같이 Experience Platform에서 실행되는 모든 애플리케이션에 대해 클라우드 플랫폼 간에 기능 패리티를 제공하기 위해 노력합니다.
+Adobe은 다음과 같이 Experience Platform에서 실행되는 모든 애플리케이션에 대해 클라우드 플랫폼 간에 기능 패리티를 제공하기 위해 노력하고 있습니다.
 
 * [Real-Time Customer Data Platform](../rtcdp/home.md)
 * [Adobe Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/ajo-home)
-* [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/cja-landing)
+* [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-landing)
 
-그러나 Azure와 AWS 구현에는 일부 기능이 다를 수 있습니다. 이러한 차이점은 아래 섹션과 해당되는 경우 제품 설명서의 다른 부분에 요약되어 있습니다.
+그러나 Azure과 AWS 구현에는 몇 가지 기능이 다를 수 있습니다. 이러한 차이점은 아래 섹션과 해당되는 경우 제품 설명서의 다른 부분에 요약되어 있습니다.
 
-### Microsoft Azure에서 실행 중인 Experience Platform과 AWS의 차이점 {#azure-aws-differences}
+### Microsoft Azure에서 Experience Platform 실행 및 AWS 간의 차이점 {#azure-aws-differences}
 
-아래 표에는 Microsoft Azure에서 실행 중인 Experience Platform과 AWS 간의 주요 차이점이 나와 있습니다.
+아래 표에는 Microsoft Azure에서 Experience Platform을 실행하는 것과 AWS에서 실행하는 것 사이의 주요 차이점이 나와 있습니다.
 
 | 기능 | Microsoft Azure | Amazon Web Services |
 | --- | --- | --- |
-| [HIPAA 준수](https://www.adobe.com/trust/compliance/hipaa-ready.html) | 지원됨 | 지원되지 않음 |
+| [HIPAA 준수](https://www.adobe.com/kr/trust/compliance/hipaa-ready.html) | 지원됨 | 지원되지 않음 |
 | [소스 커넥터 카탈로그](/help/sources/home.md) | 소스 카탈로그의 모든 커넥터가 지원됩니다 | 제한된 수의 소스 커넥터를 사용할 수 있습니다. AWS 구현에 사용할 수 있는 모든 소스 커넥터는 해당 설명서 페이지의 페이지 상단 노트에서 호출됩니다. |
 
 {style="table-layout:auto"}
 
-<!-- To be determined if we need to add this part about the AI Assistant 
+<!-- 
+To be determined if we need to add this part about the AI Assistant 
 
 | [Experience Platform AI Assistant](/help/ai-assistant/home.md) | Supported | Not supported |
 
