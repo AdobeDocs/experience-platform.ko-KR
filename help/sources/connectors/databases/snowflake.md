@@ -3,10 +3,10 @@ title: Snowflake Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Snowflake을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 687363ab664e43cc854b535760dfbfc55acefd2c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1570'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 이 섹션에서는 [!DNL Snowflake] 소스를 Experience Platform에 연결하기 전에 완료해야 하는 설정 작업에 대해 설명합니다.
 
-### 허용 목록에 추가하다 IP 주소
+### IP 주소
 
 소스를 Experience Platform에 연결하기 전에 지역별 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 자세한 내용은 [Experience Platform에 연결하기 위한 IP 주소 허용 목록에 추가](../../ip-address-allow-list.md)에 대한 안내서를 참조하십시오.
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 >[!TAB 계정 키 인증(Azure)]
 
-계정 키 인증을 사용하여 Azure의 Experience Platform에 [!DNL Snowflake]을(를) 연결하려면 다음 자격 증명의 값을 제공하세요.
+계정 키 인증을 사용하여 Azure의 Experience Platform에 [!DNL Snowflake]을(를) 연결하려면 다음 자격 증명의 값을 제공하십시오.
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 >[!TAB 키 쌍 인증(Azure)]
 
-키 쌍 인증을 사용하려면 먼저 2048비트 RSA 키 쌍을 생성합니다. 그런 다음 키 쌍 인증을 사용하여 Azure의 Experience Platform에 연결하기 위해 다음 자격 증명에 대한 값을 제공합니다.
+키 쌍 인증을 사용하려면 먼저 2048비트 RSA 키 쌍을 생성합니다. 다음으로, 키 쌍 인증을 사용하여 Azure의 Experience Platform에 연결하기 위해 다음 자격 증명에 대한 값을 제공합니다.
 
 | 자격 증명 | 설명 |
 | --- | --- |
