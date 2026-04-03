@@ -2,7 +2,7 @@
 title: 태그에 대한 사용자 권한
 description: 태그에 사용할 수 있는 다양한 유형의 권한과 다양한 비즈니스 사용 사례에 대한 몇 가지 기본 구현 전략에 대해 알아봅니다.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1260'
 ht-degree: 11%
