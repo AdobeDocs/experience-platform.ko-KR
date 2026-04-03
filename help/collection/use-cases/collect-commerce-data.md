@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK을 사용하여 상거래, 제품 및 주문 정보 수집
 description: Adobe Experience Platform Web SDK을 사용하여 제품 또는 장바구니와 관련된 데이터를 추가하는 방법을 알아봅니다.
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 9b2ecedfafbafed042eba73a034cb9b9e95af579
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '786'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 2%
 
 `commerce` 개체의 필드를 사용하는 웹 SDK 명령의 예제를 보려면 아래 섹션을 확장하세요.
 
-+++`productViews`
++++ 제품 보기
 
 `sendEvent` 필드를 `productViews`(으)로 설정하는 기본 웹 SDK `1` 호출:
 
@@ -91,7 +91,7 @@ alloy("sendEvent", {
 
 `commerce` 개체를 사용한 웹 SDK 명령의 예를 보려면 아래 섹션을 확장하십시오.
 
-+++`Order` 개체 예
++++ `Order` 개체 예
 
 `sendEvent` 배열의 여러 제품에 적용되는 `order` 개체를 설정하는 웹 SDK `productListItems` 호출:
 
@@ -151,7 +151,7 @@ alloy("sendEvent",{
 
 아래 섹션을 확장하여 `productListItems` 개체를 사용한 웹 SDK 명령의 예를 봅니다.
 
-+++`productListItems` 예
++++ `productListItems` 예
 
 웹 SDK `sendEvent` 호출에서 `productViews` 배열의 여러 제품에 대해 `productListItems`을(를) 설정하는 중:
 
@@ -179,7 +179,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`productListAdds` 예
++++ `productListAdds` 예
 
 웹 SDK `sendEvent` 호출에서 `productListAdds` 배열의 여러 제품에 대해 `productListItems` 이벤트를 설정합니다.
 
@@ -213,7 +213,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`checkouts` 예
++++ `checkouts` 예
 
 웹 SDK `sendEvent` 호출에서 `checkouts` 배열의 여러 제품에 대해 `productListItems` 이벤트를 설정합니다.
 
