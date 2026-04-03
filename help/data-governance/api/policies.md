@@ -5,7 +5,7 @@ title: 데이터 거버넌스 정책 API 끝점
 description: 데이터 거버넌스 정책은 Experience Platform 내에서 데이터 수행을 허용하거나 제한하는 마케팅 작업 종류를 설명하는 조직에서 채택하는 규칙입니다. /policies 끝점은 데이터 거버넌스 정책 보기, 만들기, 업데이트 또는 삭제와 관련된 모든 API 호출에 사용됩니다.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 2%
@@ -14,19 +14,19 @@ ht-degree: 2%
 
 # 데이터 거버넌스 정책 끝점
 
-데이터 거버넌스 정책은 [!DNL Experience Platform] 내의 데이터 수행을 허용하거나 제한하는 마케팅 작업의 종류를 설명하는 규칙입니다. [!DNL Policy Service API]의 `/policies` 끝점을 사용하면 조직의 데이터 거버넌스 정책을 프로그래밍 방식으로 관리할 수 있습니다.
+데이터 거버넌스 정책은 [!DNL Experience Platform] 내의 데이터 수행을 허용하거나 제한하는 마케팅 작업의 종류를 설명하는 규칙입니다. `/policies`의 [!DNL Policy Service API] 끝점을 사용하면 조직의 데이터 거버넌스 정책을 프로그래밍 방식으로 관리할 수 있습니다.
 
 >[!IMPORTANT]
 >
->거버넌스 정책은 조직의 특정 Experience Platform 사용자가 액세스할 수 있는 특정 데이터 속성을 결정하는 액세스 제어 정책과 혼동하지 않도록 합니다. 액세스 제어 정책을 프로그래밍 방식으로 관리하는 방법에 대한 자세한 내용은 [액세스 제어 API](../../access-control/abac/api/policies.md)에 대한 `/policies` 끝점 가이드를 참조하십시오.
+>거버넌스 정책은 조직의 특정 Experience Platform 사용자가 액세스할 수 있는 특정 데이터 속성을 결정하는 액세스 제어 정책과 혼동하지 않도록 합니다. 액세스 제어 정책을 프로그래밍 방식으로 관리하는 방법에 대한 자세한 내용은 `/policies`액세스 제어 API[에 대한 ](../../access-control/abac/api/policies.md) 끝점 가이드를 참조하십시오.
 
-## 시작하기
+## 시작
 
 이 가이드에 사용된 API 끝점은 [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/)의 일부입니다. 계속하기 전에 [시작 안내서](getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 [!DNL Experience Platform] API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
 ## 정책 목록 검색 {#list}
 
-`/policies/core` 또는 `/policies/custom`에 각각 GET 요청을 하여 `core` 또는 `custom` 정책을 모두 나열할 수 있습니다.
+`core` 또는 `custom`에 각각 GET 요청을 하여 `/policies/core` 또는 `/policies/custom` 정책을 모두 나열할 수 있습니다.
 
 **API 형식**
 
@@ -50,7 +50,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답에는 `id` 값을 포함하여 검색된 각 정책의 세부 사항을 나열하는 `children` 배열이 포함됩니다. 특정 정책의 `id` 필드를 사용하여 해당 정책에 대한 [조회](#lookup), [업데이트](#update) 및 [삭제](#delete) 요청을 수행할 수 있습니다.
+성공적인 응답에는 `children` 값을 포함하여 검색된 각 정책의 세부 사항을 나열하는 `id` 배열이 포함됩니다. 특정 정책의 `id` 필드를 사용하여 해당 정책에 대한 [조회](#lookup), [업데이트](#update) 및 [삭제](#delete) 요청을 수행할 수 있습니다.
 
 ```JSON
 {
@@ -284,7 +284,7 @@ POST /policies/custom
 
 **요청**
 
-다음 요청은 레이블 `C1 OR (C3 AND C7)`이(가) 포함된 데이터에 대해 마케팅 작업 `exportToThirdParty`을(를) 수행하지 못하도록 제한하는 새 정책을 만듭니다.
+다음 요청은 레이블 `exportToThirdParty`이(가) 포함된 데이터에 대해 마케팅 작업 `C1 OR (C3 AND C7)`을(를) 수행하지 못하도록 제한하는 새 정책을 만듭니다.
 
 ```shell
 curl -X POST \
@@ -321,7 +321,7 @@ curl -X POST \
 | --- | --- |
 | `name` | 정책의 표시 이름입니다. |
 | `status` | 정책의 현재 상태. 가능한 상태는 `DRAFT`, `ENABLED` 또는 `DISABLED`입니다. 기본적으로 `ENABLED`개의 정책만 평가에 참여합니다. 자세한 내용은 [정책 평가](../enforcement/overview.md)에 대한 개요를 참조하십시오. |
-| `marketingActionRefs` | 정책에 적용할 수 있는 모든 마케팅 작업의 URI를 나열하는 배열입니다. [마케팅 액션 조회](./marketing-actions.md#look-up)에 대한 응답의 `_links.self.href` 아래에 마케팅 액션에 대한 URI가 제공됩니다. |
+| `marketingActionRefs` | 정책에 적용할 수 있는 모든 마케팅 작업의 URI를 나열하는 배열입니다. `_links.self.href`마케팅 액션 조회[에 대한 응답의 ](./marketing-actions.md#look-up) 아래에 마케팅 액션에 대한 URI가 제공됩니다. |
 | `description` | 정책의 사용 사례에 대한 추가 컨텍스트를 제공하는 선택적 설명입니다. |
 | `deny` | 특정 데이터 사용 레이블을 설명하는 정책 표현식. 정책의 관련 마케팅 작업은 수행이 제한됩니다. |
 
@@ -429,7 +429,7 @@ curl -X PUT \
 | --- | --- |
 | `name` | 정책의 표시 이름입니다. |
 | `status` | 정책의 현재 상태. 가능한 상태는 `DRAFT`, `ENABLED` 또는 `DISABLED`입니다. 기본적으로 `ENABLED`개의 정책만 평가에 참여합니다. 자세한 내용은 [정책 평가](../enforcement/overview.md)에 대한 개요를 참조하십시오. |
-| `marketingActionRefs` | 정책에 적용할 수 있는 모든 마케팅 작업의 URI를 나열하는 배열입니다. [마케팅 액션 조회](./marketing-actions.md#look-up)에 대한 응답의 `_links.self.href` 아래에 마케팅 액션에 대한 URI가 제공됩니다. |
+| `marketingActionRefs` | 정책에 적용할 수 있는 모든 마케팅 작업의 URI를 나열하는 배열입니다. `_links.self.href`마케팅 액션 조회[에 대한 응답의 ](./marketing-actions.md#look-up) 아래에 마케팅 액션에 대한 URI가 제공됩니다. |
 | `description` | 정책의 사용 사례에 대한 추가 컨텍스트를 제공하는 선택적 설명입니다. |
 | `deny` | 특정 데이터 사용 레이블을 설명하는 정책 표현식. 정책의 관련 마케팅 작업은 수행이 제한됩니다. 이 속성에 대한 자세한 내용은 [정책 만들기](#create-policy) 섹션을 참조하십시오. |
 
