@@ -5,7 +5,7 @@ title: 스트리밍 수집 API를 사용하여 레코드 데이터 스트리밍
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 수집 서비스 API의 일부인 수집 API 스트리밍을 사용하는 데 도움이 됩니다.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1036'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 이 자습서는 Adobe Experience Platform [!DNL Data Ingestion Service] API의 일부인 수집 API 스트리밍을 사용하는 데 도움이 됩니다.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
@@ -166,7 +166,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->&#x200B;{&#x200B;0}ID 네임스페이스 코드&#x200B;**&#x200B;**
+>&#x200B;{&#x200B;0}ID 네임스페이스 코드&#x200B;****
 >
 > 코드가 유효한지 확인하십시오. 위의 예에서는 표준 ID 네임스페이스인 &quot;이메일&quot;을 사용합니다. 일반적으로 사용되는 다른 표준 ID 네임스페이스는 [ID 서비스 FAQ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)에서 찾을 수 있습니다.
 >
