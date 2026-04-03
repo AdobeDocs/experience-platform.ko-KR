@@ -3,7 +3,7 @@ keywords: 이메일;이메일;이메일;이메일 대상;oracle eloqua;oracle
 title: (파일) Oracle Eloqua 연결
 description: Oracle Eloqua는 B2B 마케터 및 조직이 마케팅 캠페인 및 판매 리드 생성을 관리할 수 있도록 지원하기 위해 Oracle에서 제공하는 마케팅 자동화용 SaaS(Software as a Service) 플랫폼입니다.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/)은(는) B2B 마케터와 조직이 마케팅 캠페인 및 판매 리드 생성을 관리하는 데 도움을 주기 위해 [!DNL Oracle]에서 제공하는 마케팅 자동화를 위한 SaaS(Software as a Service) 플랫폼입니다.
 
-대상 데이터를 [!DNL Oracle Eloqua]에 보내려면 먼저 [에서 &#x200B;](#connect-destination)대상을 연결[!DNL Adobe Experience Platform]한 다음 저장소 위치에서 [(으)로 &#x200B;](#import-data-into-eloqua)데이터 가져오기를 설정[!DNL Oracle Eloqua]해야 합니다.
+대상 데이터를 [!DNL Oracle Eloqua]에 보내려면 먼저 [에서 ](#connect-destination)대상을 연결[!DNL Adobe Experience Platform]한 다음 저장소 위치에서 [(으)로 ](#import-data-into-eloqua)데이터 가져오기를 설정[!DNL Oracle Eloqua]해야 합니다.
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -125,4 +125,4 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## [!DNL Oracle Eloqua]&#x200B;(으)로 데이터 가져오기 설정 {#import-data-into-eloqua}
 
-[!DNL Experience Platform]을(를) [!DNL SFTP] 저장소에 연결한 후 저장소 위치에서 [!DNL Oracle Eloqua]&#x200B;(으)로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대해 알아보려면 [에서 &#x200B;](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)연락처 또는 계정 가져오기[!DNL Oracle Eloqua Help Center]를 참조하십시오.
+[!DNL Experience Platform]을(를) [!DNL SFTP] 저장소에 연결한 후 저장소 위치에서 [!DNL Oracle Eloqua]&#x200B;(으)로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대해 알아보려면 [에서 ](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)연락처 또는 계정 가져오기[!DNL Oracle Eloqua Help Center]를 참조하십시오.
