@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 데이터 준비를 사용하여 데이터 형식 처리
 description: 이 문서는 데이터 준비에서 다양한 데이터 유형을 처리하는 방법에 대한 개요를 제공합니다.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 8%
+source-wordcount: '624'
+ht-degree: 10%
 
 ---
 
