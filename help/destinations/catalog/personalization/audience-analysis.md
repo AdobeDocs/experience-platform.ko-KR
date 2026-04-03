@@ -5,7 +5,7 @@ badgeLimitedAvailability: label="제한된 가용성" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
 hide: true
 hidefromtoc: true
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # 대상 분석 대상
 
-[!UICONTROL Audience Analysis] 대상을 사용하여 [!DNL Adobe Experience Platform] 대상 데이터를 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko)에 보강하세요. 보강된 결과 데이터에 포함할 대상을 선택할 수 있습니다. 그런 다음 대상 자격은 [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=ko) 보고에서 차원으로 사용할 수 있습니다.
+[!UICONTROL Audience Analysis] 대상을 사용하여 [!DNL Adobe Experience Platform] 대상 데이터를 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko)에 보강하세요. 보강된 결과 데이터에 포함할 대상을 선택할 수 있습니다. 그런 다음 대상 자격은 [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) 보고에서 차원으로 사용할 수 있습니다.
 
 >[!AVAILABILITY]
 >
