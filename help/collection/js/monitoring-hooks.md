@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK에 대한 후크 모니터링
 description: Adobe Experience Platform Web SDK에서 제공하는 모니터링 후크를 사용하여 구현을 디버깅하고 웹 SDK 로그를 캡처하는 방법을 알아봅니다.
 exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
-source-git-commit: 9b2ecedfafbafed042eba73a034cb9b9e95af579
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 6%
