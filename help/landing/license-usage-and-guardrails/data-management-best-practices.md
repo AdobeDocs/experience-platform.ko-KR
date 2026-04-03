@@ -2,7 +2,7 @@
 title: 데이터 관리 라이선스 권한 부여 우수 사례
 description: Adobe Experience Platform을 사용하여 라이선스 권한을 보다 효율적으로 관리하는 데 사용할 수 있는 모범 사례 및 도구에 대해 알아봅니다.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 163ff97da651ac3a68b5e37e8745b10440519e6f
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '3390'
 ht-degree: 1%
@@ -159,7 +159,7 @@ Experience Platform의 하나 또는 여러 시스템, 즉 [!DNL data lake] 및/
 | 프로필에 대한 데이터 세트 활성화/비활성화 지원 | 실시간 고객 프로필로 데이터를 수집하려면 프로필 스토어에서 사용할 데이터 세트를 활성화해야 합니다. 이렇게 하면 [!DNL Addressable Audience] 및 [!DNL Total Data Volume] 권한에 추가됩니다. 고객 프로필 사용 사례에 더 이상 데이터 세트가 필요하지 않으면 해당 데이터 세트의 프로필 통합을 비활성화하여 데이터가 라이센스 규정을 준수하는지 확인할 수 있습니다. 자세한 내용은 [프로필에 대한 데이터 세트 활성화 및 비활성화](../../catalog/datasets/enable-for-profile.md)에 대한 안내서를 참조하십시오. |
 | 웹 SDK 및 모바일 SDK 데이터 제외 | 웹 및 모바일 SDK에서 수집하는 데이터에는 자동으로 수집되는 데이터와 개발자가 명시적으로 수집하는 데이터의 두 가지 유형이 있습니다. 라이선스 준수를 보다 잘 관리하려면 컨텍스트 설정을 통해 SDK의 구성에서 자동 데이터 수집을 비활성화하면 됩니다. 사용자 정의 데이터는 개발자가 제거하거나 설정할 수도 없습니다. |
 | 서버 측 전달 데이터 제외 | 서버측 전달을 사용하여 Experience Platform으로 데이터를 전송하는 경우 규칙 작업에서 매핑을 제거하여 모든 이벤트에서 데이터를 제외하거나 규칙에 조건을 추가하여 특정 이벤트에 대해서만 데이터가 실행되도록 전송할 데이터를 제외할 수 있습니다. 자세한 내용은 [이벤트 및 조건](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if)에 대한 설명서를 참조하십시오. |
-| 소스 수준에서 데이터 필터링 | 연결을 만들고 Experience Platform으로 데이터를 수집하기 전에 논리 및 비교 연산자를 사용하여 소스에서 행 수준 데이터를 필터링할 수 있습니다. 자세한 내용은 [API [!DNL Flow Service] 를 사용하여 소스에 대한 &#x200B;](../../sources/tutorials/api/filter.md)행 수준 데이터 필터링에 대한 안내서를 참조하십시오. |
+| 소스 수준에서 데이터 필터링 | 연결을 만들고 Experience Platform으로 데이터를 수집하기 전에 논리 및 비교 연산자를 사용하여 소스에서 행 수준 데이터를 필터링할 수 있습니다. 자세한 내용은 [API [!DNL Flow Service] 를 사용하여 소스에 대한 ](../../sources/tutorials/api/filter.md)행 수준 데이터 필터링에 대한 안내서를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -182,7 +182,9 @@ Experience Platform의 하나 또는 여러 시스템, 즉 [!DNL data lake] 및/
 
 * **데이터 세트 중복 보고서 API**: 주소 지정 가능한 대상자에게 가장 많이 기여하는 데이터 세트를 표시합니다. 이 보고서를 사용하여 만료를 설정할 [!DNL ExperienceEvent]개의 데이터 세트를 식별할 수 있습니다. 자세한 내용은 [데이터 집합 중복 보고서 생성](../../profile/tutorials/dataset-overlap-report.md)에 대한 자습서를 참조하십시오.
 * **ID 중복 보고서 API**: 주소 지정 가능한 대상자에게 가장 많이 기여하는 ID 네임스페이스를 표시합니다. 자세한 내용은 [ID 중복 보고서 생성](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report)에 대한 자습서를 참조하십시오.
-<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+
+<!-- 
+* **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
 ### 익명 프로필 데이터 만료 {#pseudonymous-profile-expirations}
