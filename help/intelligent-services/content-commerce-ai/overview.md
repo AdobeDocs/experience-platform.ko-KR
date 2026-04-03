@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 컨텐츠 태그 지정 개요
 description: 콘텐츠 태깅은 콘텐츠에서 지능형 기능을 추출하고, 콘텐츠 흐름을 구성하고, 간소화하고, 고객에게 보다 효과적이고 개인화된 경험을 제공할 수 있는 일련의 AI 서비스입니다.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
