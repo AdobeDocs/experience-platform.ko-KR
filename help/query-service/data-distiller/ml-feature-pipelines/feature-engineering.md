@@ -2,7 +2,7 @@
 title: 머신 러닝을 위한 엔지니어 기능
 description: Adobe Experience Platform의 데이터를 머신 러닝 모델에서 사용할 수 있는 기능 또는 변수로 변환하는 방법에 대해 알아봅니다. Data Distiller을 사용하여 규모에 맞게 ML 기능을 계산하고 이러한 기능을 머신 러닝 환경과 공유하십시오.
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1140'
 ht-degree: 13%
@@ -57,7 +57,7 @@ df_labels.head()
 클래스 수: 50000
 
 |   | eventType | userId | subscriptionOccured | random_row_number_for_user |
-| ---  |   ---  |   ---  |   ---  |   --- | 
+| ---  |   ---  |   ---  |   ---  |   --- |
 | 0 | directMarketing.emailClicked | 01027994177972439148069092698714414382 | 0 | 1 |
 | 1 | directMarketing.emailOpened | 01054714817856066632264746967668888198 | 0 | 1 |
 | 2 | web.formFilledOut | 01117296890525140996735553609305695042 | 1 | 15 |
@@ -87,7 +87,7 @@ df_labels.head()
 
 다음 쿼리는 이러한 이벤트를 집계합니다.
 
-+++예제 쿼리를 보려면 선택
++++예제 쿼리를 보려면 선택하십시오.
 
 ```python
 query_features = f"""
@@ -147,7 +147,7 @@ df_features.head()
 **샘플 출력**
 
 |   | userId | 이메일 수신됨 | 이메일 열림 | 이메일 클릭됨 | productsViewed | propositionInteract | propositionDismissed | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
-| --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- | 
+| --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- |
 | 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | Nan | Nan | Nan | Nan | None | Nan |
 | 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | Nan | Nan | Nan | Nan | None | Nan |
 | 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | Nan | Nan | Nan | Nan | None | Nan |
@@ -160,7 +160,7 @@ df_features.head()
 
 마지막으로 레이블 쿼리 및 기능 쿼리를 결합하여 레이블 및 기능의 교육 데이터 세트를 반환하는 단일 쿼리로 만들 수 있습니다.
 
-+++예제 쿼리를 보려면 선택
++++예제 쿼리를 보려면 선택하십시오.
 
 ```python
 query_training_set = f"""
@@ -230,7 +230,7 @@ df_training_set.head()
 **샘플 출력**
 
 |  | userId | eventType | 타임스탬프 | subscriptionOccured | 이메일 수신됨 | 이메일 열림 | 이메일 클릭됨 | productsViewed | propositionInteract | propositionDismissed | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
-| ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |    
+| ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |
 | 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | Nan | Nan | Nan | Nan | None | Nan | 1 |
 | 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921.0 | 0.0 | Nan | 1703.0 | Nan | None | Nan | 1 |
 | 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365.0 | 26.0 | 1.0 | Nan | Nan | None | Nan | 7 |
@@ -252,7 +252,7 @@ df_training_set.head()
 
 이러한 변경 사항을 적용하면 다음 쿼리가 생성됩니다.
 
-+++예제 쿼리를 보려면 선택
++++예제 쿼리를 보려면 선택하십시오.
 
 ```python
 ctas_table_name = "propensity_training_set"
@@ -484,4 +484,4 @@ Query completed successfully in 473.8 seconds
 
 ## 다음 단계:
 
-이 문서를 읽고 Adobe Experience Platform의 데이터를 기계 학습 모델에서 사용할 수 있는 기능 또는 변수로 변환하는 방법을 배웠습니다. 머신 러닝 환경에서 Experience Platform에서 피드 사용자 지정 모델까지 기능 파이프라인을 만드는 다음 단계는 [기능 데이터 세트를 내보내기](./export-data.md)하는 것입니다.
+이 문서를 읽고 Adobe Experience Platform의 데이터를 기계 학습 모델에서 사용할 수 있는 기능 또는 변수로 변환하는 방법을 배웠습니다. Experience Platform에서 머신 러닝 환경의 피드 사용자 지정 모델에 대한 기능 파이프라인을 만드는 다음 단계는 [기능 데이터 세트를 내보내기](./export-data.md)하는 것입니다.
