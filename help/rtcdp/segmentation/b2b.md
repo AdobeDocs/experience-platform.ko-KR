@@ -2,9 +2,9 @@
 title: Real-Time Customer Data Platform B2B edition에 대한 세그멘테이션 사용 사례
 description: 사용 가능한 다양한 Adobe Real-Time Customer Data Platform B2B edition 사용 사례에 대한 개요입니다.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1603'
 ht-degree: 0%
@@ -165,6 +165,7 @@ actualCost가 budgetedCost를 초과하는 캠페인의 타겟이 되는 모든 
 Marketo 정적 목록 &quot;Anniversary users&quot;에 속하는 모든 사람을 찾습니다. 여기서 isDeleted=false입니다.
 
 ![상위 조직을 표시하는 UI](../assets/segmentation/b2b/example-13.png)
+
 <!-- 
 ### Example 14: Find "decision makers" by opportunity status using streaming or edge segmentation {#find-decision-makers-personalization}
 
@@ -180,7 +181,8 @@ To create this audience, you must use "segment of segments" by creating a base a
 
 After creating the first audience, you can combine that with another audience of  people who are a "Decision Maker" of any opportunity where both the "Closed Flag" is set to true and the "Lost Flag" is set to false.
 
-![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png) -->
+![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png) 
+-->
 
 ## 다음 단계 {#next-steps}
 
