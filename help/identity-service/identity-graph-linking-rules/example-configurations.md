@@ -2,7 +2,7 @@
 title: Id 그래프 연결 규칙 구성 안내서
 description: ID 그래프 연결 규칙을 사용하여 구성할 수 있는 다양한 구현 유형에 대해 알아봅니다.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -240,7 +240,7 @@ CRMID: Jill, CChash: undefined
 그래프를 시뮬레이션하기 전에 그래프 시뮬레이션 인터페이스에서 다음 설정을 구성합니다.
 
 | 표시 이름 | ID 심볼 | ID 유형 | 그래프별로 고유 | 네임스페이스 우선순위 |
-| --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
 | ECID | ECID | 쿠키 | | 3 |
@@ -281,6 +281,7 @@ CRMID: Jane, CRMIDhash: aaaa
 ![해시 프로세스에 오류가 발생하여 고유한 해시된 CRMID가 아닌 CRMID로 이어지는 공유된 Device Graph입니다.](../images/configs/intermediate/hashing-error.png)
 
 >[!ENDTABS]
+
 <!-- 
 ### Use case: You are using Real-Time CDP and Adobe Commerce
 
@@ -339,7 +340,8 @@ Email: jane@g, ECID: 111
 
 ![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
->[!ENDTABS] -->
+>[!ENDTABS] 
+-->
 
 ### 사용 사례: 데이터에는 세 개의 고유한 네임스페이스가 포함됩니다
 
