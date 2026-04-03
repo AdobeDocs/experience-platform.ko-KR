@@ -5,7 +5,7 @@ title: 스트리밍 수집 API를 사용하여 시계열 데이터 스트리밍
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 수집 서비스 API의 일부인 수집 API 스트리밍을 사용하는 데 도움이 됩니다.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 2%
@@ -193,7 +193,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->{&#x200B;0}ID 네임스페이스 코드&#x200B;**&#x200B;**
+>{&#x200B;0}ID 네임스페이스 코드&#x200B;****
 >
 > 코드가 유효한지 확인하십시오. 위의 예에서는 표준 ID 네임스페이스인 &quot;이메일&quot;을 사용합니다. 일반적으로 사용되는 다른 표준 ID 네임스페이스는 [ID 서비스 FAQ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)에서 찾을 수 있습니다.
 >
