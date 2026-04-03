@@ -3,7 +3,7 @@ title: 가속화된 쿼리 끝점
 description: 상태 비저장 방식으로 쿼리 가속 저장소에 액세스하여 집계된 데이터를 기반으로 결과를 빠르게 반환하는 방법을 알아봅니다. 이 문서에서는 쿼리 서비스 가속 쿼리 끝점에 대한 샘플 HTTP 요청 및 응답을 제공합니다.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 1%
@@ -16,7 +16,7 @@ Data Distiller SKU의 일부로 [쿼리 서비스 API](https://developer.adobe.c
 
 이 안내서를 계속하기 전에 쿼리 서비스 API를 성공적으로 사용하려면 [쿼리 서비스 API 안내서](./getting-started.md)를 읽고 이해했는지 확인하십시오.
 
-## 시작하기
+## 시작
 
 Data Distiller SKU는 쿼리 가속 스토어를 사용해야 합니다. Data Distiller SKU와 관련된 [패키징](../packaging.md) 및 [보호 기능](../guardrails.md#query-accelerated-store), [라이선스](../data-distiller/license-usage.md) 설명서를 참조하십시오. Data Distiller SKU가 없는 경우 Adobe 고객 서비스 담당자에게 자세한 내용을 문의하십시오.
 
@@ -24,7 +24,7 @@ Data Distiller SKU는 쿼리 가속 스토어를 사용해야 합니다. Data Di
 
 ## 가속화된 쿼리 실행 {#run-accelerated-query}
 
-가속화된 쿼리를 실행하려면 `/accelerated-queries` 끝점에 POST을 요청하세요. 쿼리가 요청 페이로드에 직접 포함되거나 템플릿 ID로 참조됩니다.
+가속화된 쿼리를 실행하려면 `/accelerated-queries` 끝점에 대한 POST 요청을 만듭니다. 쿼리가 요청 페이로드에 직접 포함되거나 템플릿 ID로 참조됩니다.
 
 **API 형식**
 
@@ -80,7 +80,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
 
 | 속성 | 설명 |
 |---|---|
-| `dbName` | 가속화된 쿼리를 만드는 데이터베이스의 이름입니다. `dbName`의 값은 `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}` 형식을 사용해야 합니다. 제공된 데이터베이스가 가속화된 저장소 내에 있어야 합니다. 그렇지 않으면 요청에서 오류가 발생합니다. 또한 `dbName`의 `x-sandbox-name` 헤더와 샌드박스 이름이 동일한 샌드박스를 참조하는지 확인해야 합니다. |
+| `dbName` | 가속화된 쿼리를 만드는 데이터베이스의 이름입니다. `dbName`의 값은 `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}` 형식을 사용해야 합니다. 제공된 데이터베이스가 가속화된 저장소 내에 있어야 합니다. 그렇지 않으면 요청에서 오류가 발생합니다. 또한 `x-sandbox-name`의 `dbName` 헤더와 샌드박스 이름이 동일한 샌드박스를 참조하는지 확인해야 합니다. |
 | `sql` | SQL 문 문자열입니다. 허용되는 최대 크기는 1000000자입니다. |
 | `templateId` | `/templates` 끝점에 대한 POST 요청이 수행될 때 만들어져 템플릿으로 저장되는 쿼리의 고유 식별자입니다. |
 | `name` | 가속화된 쿼리에 대한 사람 친화적인 수사적 이름(선택 사항)입니다. |
