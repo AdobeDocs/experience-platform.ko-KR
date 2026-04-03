@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스트리밍 수집 개요
 description: Adobe Experience Platform의 스트리밍 수집에 대해 알아봅니다.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 568208c9b2cb774bbbeed74ae2d456c87e99bca9
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 2%
@@ -21,7 +21,7 @@ Adobe Experience Platform을 사용하면 각 개별 고객에 대한 실시간 
 
 다음 비디오에서는 스트리밍 수집에 대한 이해를 돕기 위해 제작되었으며 위의 개념에 대해 간략히 설명합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/31706?captions=kor&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### 프로필 레코드 및 [!DNL ExperienceEvents] 스트리밍
 
