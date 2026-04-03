@@ -3,7 +3,7 @@ title: 흐름 서비스 API를 사용하여 Capillary를 Experience Platform에 
 description: API를 사용하여 Capillary를 Experience Platform에 연결하는 방법을 알아봅니다.
 badge: Beta
 exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 2%
@@ -234,7 +234,8 @@ curl -X POST \
 
 >[!ENDTABS]
 
-<!--### Supported Events
+<!--
+### Supported Events
 
 The [!DNL Capillary] source supports the following events:
 
@@ -251,7 +252,8 @@ The [!DNL Capillary] source supports the following events:
 * `pointsRedeemed`
 * `transactionAdded`
 * `tierRenewed`
-* `customerUpdated`-->
+* `customerUpdated`
+-->
 
 ### 이전 데이터 마이그레이션
 
@@ -316,7 +318,7 @@ curl -X POST \
 
 ### 매핑 만들기 {#mapping}
 
-그런 다음 소스 데이터를 타겟 데이터 세트가 준수하는 타겟 스키마에 매핑합니다. 매핑을 만들려면 `mappingSets`API[[!DNL Data Prep] 의 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-prep/) 끝점에 대한 POST 요청을 만듭니다. 대상 XDM 스키마 ID와 만들려는 매핑 세트에 대한 세부 사항을 포함합니다.
+그런 다음 소스 데이터를 타겟 데이터 세트가 준수하는 타겟 스키마에 매핑합니다. 매핑을 만들려면 `mappingSets`API[[!DNL Data Prep] 의 ](https://developer.adobe.com/experience-platform-apis/references/data-prep/) 끝점에 대한 POST 요청을 만듭니다. 대상 XDM 스키마 ID와 만들려는 매핑 세트에 대한 세부 사항을 포함합니다.
 
 다음과 같이 모세관 필드를 해당 XDM 스키마 필드에 매핑합니다.
 
@@ -330,7 +332,7 @@ curl -X POST \
 
 >[!TIP]
 >
->데이터를 매핑할 준비가 되면 [&#x200B; 및 &#x200B;](../../../../images/tutorials/create/capillary/mappings.zip)데이터 준비로 파일 가져오기[!DNL Capillary]에 대한 [이벤트 및 프로필 매핑](../../../../../data-prep/ui/mapping.md#import-mapping)을 다운로드할 수 있습니다.
+>데이터를 매핑할 준비가 되면 [ 및 ](../../../../images/tutorials/create/capillary/mappings.zip)데이터 준비로 파일 가져오기[!DNL Capillary]에 대한 [이벤트 및 프로필 매핑](../../../../../data-prep/ui/mapping.md#import-mapping)을 다운로드할 수 있습니다.
 
 ### 데이터 흐름 만들기 {#flow}
 
