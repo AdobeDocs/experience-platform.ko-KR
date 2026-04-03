@@ -5,7 +5,7 @@ badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1875'
 ht-degree: 3%
@@ -50,7 +50,7 @@ Experience Platform 및 [!DNL Salesforce]에서 설정해야 하는 필수 구�
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-[!DNL (V2) Marketing Cloud Account Engagement] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 &#x200B;](/help/xdm/schema/composition.md)스키마[, &#x200B;](../../../catalog/datasets/overview.md)데이터 세트[&#x200B; 및 &#x200B;](../../../segmentation/types/overview.md)대상[!DNL Experience Platform]이 있어야 합니다.
+[!DNL (V2) Marketing Cloud Account Engagement] 대상에 대한 데이터를 활성화하기 전에 [에서 만든 ](/help/xdm/schema/composition.md)스키마[, ](../../../catalog/datasets/overview.md)데이터 세트[ 및 ](../../../segmentation/types/overview.md)대상[!DNL Experience Platform]이 있어야 합니다.
 
 ### [!DNL Salesforce Marketing Cloud Account Engagement]개 필수 구성 요소 {#prerequisites-destination}
 
@@ -58,7 +58,7 @@ Experience Platform에서 [!DNL Marketing Cloud Account Engagement] 계정으로
 
 #### [!DNL Marketing Cloud Account Engagement] 계정이 있어야 합니다. {#prerequisites-account}
 
-계속하려면 [!DNL Marketing Cloud Account Engagement]Marketing Cloud 계정 참여[&#x200B; 제품에 대한 구독이 있는 &#x200B;](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) 계정이 필요합니다.
+계속하려면 [!DNL Marketing Cloud Account Engagement]Marketing Cloud 계정 참여[ 제품에 대한 구독이 있는 ](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) 계정이 필요합니다.
 
 #### [!DNL Marketing Cloud Account Engagement] 자격 증명 수집 {#gather-credentials}
 
