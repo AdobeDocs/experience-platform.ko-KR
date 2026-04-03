@@ -5,20 +5,20 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: 6d1745b93d2ad7cf6ef96510bd5128a43de9ef03
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '520'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL 의료] 데이터 모델 V2
+# [!UICONTROL Healthcare] 데이터 모델 V2
 
 ## 필드 그룹 및 클래스 {#field-groups}
 
 다음 표에서는 몇 가지 일반적인 의료 서비스 사용 사례에 대한 권장 클래스 및 스키마 필드 그룹을 간략하게 설명합니다.
 
-| 활용 사례 | 필드 그룹 및 호환 클래스 |
+| 사용 사례 | 필드 그룹 및 호환 클래스 |
 | --- | --- |
 | **환자 만들기/업데이트**: 환자가 병원 프런트 데스크에 도착하면 식별자(선택 사항), 환자 이름, 생년월일, 성별 및 주소 등 인구 통계학적 세부 정보를 포함한 환자 기록이 설정됩니다. 이는 의료 IT의 핵심 구성 요소 역할을 합니다. | <ul><li>**[XDM 개별 프로필](../../classes/individual-profile.md)**:<ul><li>[환자](./field-groups/patient.md)</li></ul></li></ul> |
 | **예방접종**: 예방접종 프로세스 촉진, 환자 예방접종 기록 관리 및 EMR과 백신 관리 시스템 통합. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[예방 접종](./field-groups/immunization.md)</li></ul></li><li>**[XDM 개별 프로필](../../classes/individual-profile.md)**:<ul><li>[의약품 분배](./field-groups/medication-dispense.md)</li><li>[약물 요청](./field-groups/medication-request.md)</li><li>[환자](./field-groups/patient.md)</li></ul></li><li>**[위치](./classes/location.md)**:<ul><li>[위치](./field-groups/location.md)</li></ul><li>**[약물](../../classes/medication.md)**:<ul><li>[약물](./field-groups/medication.md)</li><li>[의약품 분배](./field-groups/medication-dispense.md)</li><li>[약물 요청](./field-groups/medication-request.md)</li></ul></li><li>**[공급자](../../classes/provider.md)**:<ul><li>[의약품 분배](./field-groups/medication-dispense.md)</li><li>[약물 요청](./field-groups/medication-request.md)</li></ul></li></ul> |
@@ -34,27 +34,27 @@ ht-degree: 3%
 
 | 이름 | 설명 |
 | --- | --- |
-| [[!UICONTROL 주소]](./data-types/address.md) | GPS 또는 기타 위치 정의 형식이 아니라 우편 규칙을 사용하여 표현된 주소를 설명합니다. |
-| [[!UICONTROL 주석]](./data-types/annotation.md) | 작성자에 대한 속성이 있는 텍스트 노드입니다. |
-| [[!UICONTROL 가용성]](./data-types/availability.md) | 항목에 대한 가용성 데이터입니다. |
-| [[!UICONTROL 코드 가능한 개념]](./data-types/codeable-concept.md) | 한 리소스에서 다른 리소스로의 참조. |
-| [[!UICONTROL 코드 사용 가능한 참조]](./data-types/codeable-reference.md) | 리소스 또는 개념에 대한 참조입니다. |
-| [[!UICONTROL 코딩]](./data-types/coding.md) | 용어 시스템에 의해 정의된 코드에 대한 참조. |
-| [[!UICONTROL 연락처]](./data-types/contact-point.md) | 개인용 연락처 세부 정보. |
-| [[!UICONTROL 용량]](./data-types/dosage.md) | 약물 복용 방법/복용 또는 복용해야 하는 방법. |
-| [[!UICONTROL 기간]](./data-types/duration.md) | 오랜 시간. |
-| [[!UICONTROL 확장 연락처 세부 정보]](./data-types/extended-contact-detail.md) | 확장 연락처의 정보입니다. |
-| [[!UICONTROL 사람 이름]](./data-types/human-name.md) | 사람 또는 기타 살아있는 개체의 이름에 대한 정보입니다. |
-| [[!UICONTROL 식별자]](./data-types/identifier.md) | 계산용 식별자입니다. |
-| [[!UICONTROL 돈]](./data-types/money.md) | 일부 인정된 통화로 표시된 경제적 효용. |
-| [[!UICONTROL 기간]](./data-types/period.md) | 시작 및 종료 날짜/시간으로 정의된 기간. |
-| [[!UICONTROL 사용자]](./data-types/person.md) | 일반 개인 레코드에 대한 정보. |
-| [[!UICONTROL 수량]](./data-types/quantity.md) | 측정 또는 측정 가능한 양. |
+| [[!UICONTROL Address]](./data-types/address.md) | GPS 또는 기타 위치 정의 형식이 아니라 우편 규칙을 사용하여 표현된 주소를 설명합니다. |
+| [[!UICONTROL Annotation]](./data-types/annotation.md) | 작성자에 대한 속성이 있는 텍스트 노드입니다. |
+| [[!UICONTROL Availability]](./data-types/availability.md) | 항목에 대한 가용성 데이터입니다. |
+| [[!UICONTROL Codeable Concept]](./data-types/codeable-concept.md) | 한 리소스에서 다른 리소스로의 참조. |
+| [[!UICONTROL Codeable Reference]](./data-types/codeable-reference.md) | 리소스 또는 개념에 대한 참조입니다. |
+| [[!UICONTROL Coding]](./data-types/coding.md) | 용어 시스템에 의해 정의된 코드에 대한 참조. |
+| [[!UICONTROL Contact Point]](./data-types/contact-point.md) | 개인용 연락처 세부 정보. |
+| [[!UICONTROL Dosage]](./data-types/dosage.md) | 약물 복용 방법/복용 또는 복용해야 하는 방법. |
+| [[!UICONTROL Duration]](./data-types/duration.md) | 오랜 시간. |
+| [[!UICONTROL Extended Contact Details]](./data-types/extended-contact-detail.md) | 확장 연락처의 정보입니다. |
+| [[!UICONTROL Human Name]](./data-types/human-name.md) | 사람 또는 기타 살아있는 개체의 이름에 대한 정보입니다. |
+| [[!UICONTROL Identifier]](./data-types/identifier.md) | 계산용 식별자입니다. |
+| [[!UICONTROL Money]](./data-types/money.md) | 일부 인정된 통화로 표시된 경제적 효용. |
+| [[!UICONTROL Period]](./data-types/period.md) | 시작 및 종료 날짜/시간으로 정의된 기간. |
+| [[!UICONTROL Person]](./data-types/person.md) | 일반 개인 레코드에 대한 정보. |
+| [[!UICONTROL Quantity]](./data-types/quantity.md) | 측정 또는 측정 가능한 양. |
 | [[!UICONTROL Range]](./data-types/range.md) | 낮은 값과 높은 값으로 바인딩된 값 세트입니다. |
-| [[!UICONTROL 비율]](./data-types/ratio.md) | 분자 및 분모를 통한 두 [[!UICONTROL 수량]](./data-types/quantity.md) 값의 비율입니다. |
-| [[!UICONTROL 참조]](./data-types/reference.md) | 한 리소스에서 다른 리소스로의 참조. |
-| [[!UICONTROL 반복]](./data-types/repeat.md) | 이벤트가 예약되는 시기를 설명하는 규칙 세트입니다. |
-| [[!UICONTROL 단순 수량]](./data-types/simple-quantity.md) | 측정 또는 측정 가능한 양. |
-| [[!UICONTROL 시간]](./data-types/timing.md) | 여러 번 발생할 수 있는 이벤트에 대한 정보입니다. |
-| [[!UICONTROL 가상 서비스 세부 정보]](./data-types/virtual-service-detail.md) | 가상 서비스 연락처 세부 정보. |
+| [[!UICONTROL Ratio]](./data-types/ratio.md) | 분자 및 분모를 통한 두 [[!UICONTROL Quantity]](./data-types/quantity.md) 값의 비율입니다. |
+| [[!UICONTROL Reference]](./data-types/reference.md) | 한 리소스에서 다른 리소스로의 참조. |
+| [[!UICONTROL Repeat]](./data-types/repeat.md) | 이벤트가 예약되는 시기를 설명하는 규칙 세트입니다. |
+| [[!UICONTROL Simple Quantity]](./data-types/simple-quantity.md) | 측정 또는 측정 가능한 양. |
+| [[!UICONTROL Timing]](./data-types/timing.md) | 여러 번 발생할 수 있는 이벤트에 대한 정보입니다. |
+| [[!UICONTROL Virtual Service Detail]](./data-types/virtual-service-detail.md) | 가상 서비스 연락처 세부 정보. |
 
