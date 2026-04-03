@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 소매 판매 레시피
 description: 소매 판매 레시피를 사용하여 특정 기간 동안 초기 설정된 모든 상점에 대한 판매 예측을 예측할 수 있습니다. retailer은 정확한 예측 모델을 통해 수요와 가격 정책 간의 관계를 찾고 최적화된 가격 결정을 내려 매출과 수익을 극대화할 수 있습니다.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 2%
