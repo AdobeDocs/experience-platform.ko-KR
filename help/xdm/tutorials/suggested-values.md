@@ -2,7 +2,7 @@
 title: API에서 제안된 값 관리
 description: 스키마 레지스트리 API의 문자열 필드에 제안된 값을 추가하는 방법을 알아봅니다.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 1%
@@ -69,9 +69,11 @@ API에서 **enum** 필드에 대한 제약 조건 값은 `enum` 배열로 표시
 
 문자열에 제약 조건을 정의하는 `enum` 배열이 없으므로 해당 `meta:enum` 속성을 확장하여 새 값을 포함할 수 있습니다.
 
-<!-- ## Manage suggested values for standard fields
+<!-- 
+## Manage suggested values for standard fields
 
-For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). 
+-->
 
 ## 표준 필드에 제안 값 추가 {#add-suggested-standard}
 
@@ -81,7 +83,7 @@ For existing standard fields, you can [add suggested values](#add-suggested-stan
 >
 >문자열 필드에 대한 제안 값은 스키마 수준에서만 추가할 수 있습니다. 즉, 한 스키마에서 표준 필드의 `meta:enum`을(를) 확장해도 동일한 표준 필드를 사용하는 다른 스키마에는 영향을 주지 않습니다.
 
-다음 요청은 `sourceSchema`에서 식별된 스키마의 표준 `eventType` 필드([XDM ExperienceEvent 클래스](../classes/experienceevent.md)에서 제공)에 제안된 값을 추가합니다.
+다음 요청은 `eventType`에서 식별된 스키마의 표준 [ 필드(](../classes/experienceevent.md)XDM ExperienceEvent 클래스`sourceSchema`에서 제공)에 제안된 값을 추가합니다.
 
 ```curl
 curl -X POST \
@@ -150,7 +152,8 @@ curl -X POST \
 >}
 >```
 
-<!-- ### Remove suggested values {#remove-suggested-standard}
+<!-- 
+### Remove suggested values {#remove-suggested-standard}
 
 If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
@@ -210,7 +213,8 @@ A successful response returns HTTP status 201 (Created) and the details of the n
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-``` -->
+``` 
+-->
 
 ## 사용자 정의 필드에 대한 제안 값 관리 {#suggested-custom}
 
