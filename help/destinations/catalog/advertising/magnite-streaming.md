@@ -3,7 +3,7 @@ title: Magnite 실시간 대상 연결
 description: 이 대상을 사용하여 Adobe CDP 대상자를 Magnite 스트리밍 플랫폼에 실시간으로 전달하십시오.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-[!DNL Magnite: Real-Time]의 [&#x200B; 및 &#x200B;](/help/destinations/catalog/advertising/magnite-batch.md)Magnite: Batch[!DNL Adobe Experience Platform] 대상을 사용하면 Magnite 스트리밍 플랫폼에서 타깃팅 및 활성화를 위해 대상을 매핑하고 내보낼 수 있습니다.
+[!DNL Magnite: Real-Time]의 [ 및 ](/help/destinations/catalog/advertising/magnite-batch.md)Magnite: Batch[!DNL Adobe Experience Platform] 대상을 사용하면 Magnite 스트리밍 플랫폼에서 타깃팅 및 활성화를 위해 대상을 매핑하고 내보낼 수 있습니다.
 
 [!DNL Magnite Streaming] 플랫폼으로 대상을 활성화하려면 Magnite: Real-Time과 Magnite: Batch 대상을 모두 사용해야 하는 2단계 프로세스입니다.
 
