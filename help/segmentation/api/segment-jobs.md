@@ -4,7 +4,7 @@ title: 세그먼트 작업 API 엔드포인트
 description: Adobe Experience Platform Segmentation Service API의 세그먼트 작업 끝점을 사용하면 조직의 세그먼트 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # 세그먼트 작업 엔드포인트
 
-세그먼트 작업은 요청 시 대상 세그먼트를 만드는 비동기 프로세스입니다. [이(가) 프로필 조각에서 겹치는 특성을 병합하는 방법을 제어하는 &#x200B;](./segment-definitions.md)병합 정책[뿐만 아니라 &#x200B;](../../profile/api/merge-policies.md)세그먼트 정의[!DNL Real-Time Customer Profile]을(를) 참조합니다. 세그먼트 작업이 성공적으로 완료되면 처리 중에 발생할 수 있는 오류와 대상자의 최종 크기 등 세그먼트에 대한 다양한 정보를 수집할 수 있습니다.
+세그먼트 작업은 요청 시 대상 세그먼트를 만드는 비동기 프로세스입니다. [이(가) 프로필 조각에서 겹치는 특성을 병합하는 방법을 제어하는 ](./segment-definitions.md)병합 정책[뿐만 아니라 ](../../profile/api/merge-policies.md)세그먼트 정의[!DNL Real-Time Customer Profile]을(를) 참조합니다. 세그먼트 작업이 성공적으로 완료되면 처리 중에 발생할 수 있는 오류와 대상자의 최종 크기 등 세그먼트에 대한 다양한 정보를 수집할 수 있습니다.
 
 이 안내서에서는 세그먼트 작업을 더 잘 이해하는 데 도움이 되는 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 
@@ -358,7 +358,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 ```
 
 | 속성 | 설명 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{SEGMENT_JOB_ID}` | 검색할 세그먼트 작업의 `id` 값입니다. |
 
 **요청**
@@ -583,7 +583,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 ```
 
 | 속성 | 설명 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{SEGMENT_JOB_ID}` | 삭제할 세그먼트 작업의 `id` 값입니다. |
 
 **요청**
