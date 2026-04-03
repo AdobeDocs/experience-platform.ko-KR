@@ -3,7 +3,7 @@ title: 색인 교환
 description: 색인 Exchange(색인)에 연결하고 데이터를 활성화하면 색인 UI에서 만들어진 거래로 대상 세그먼트를 타깃팅할 수 있습니다.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 3%
@@ -89,7 +89,7 @@ ht-degree: 3%
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
-| --------- | ---------- | --------- | 
+| --------- | ---------- | --------- |
 | 내보내기 유형 | **[!UICONTROL Segment export]** | [!DNL Index Exchange] 대상에 사용된 식별자(IDFA, GAID 또는 기타)로 세그먼트의 모든 멤버(대상)를 내보냅니다. |
 | 내보내기 빈도 | **[!UICONTROL Batch]** | 3, 6, 8, 12 또는 24시간 간격으로 파일을 다운스트림 플랫폼으로 내보냅니다. [일괄 파일 기반 대상](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
 
