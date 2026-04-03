@@ -3,16 +3,16 @@ solution: Experience Platform
 title: Profile Query Language(PQL) 개요
 description: 이 안내서에서는 서식 지정 지침에 대해 설명하고 PQL 표현식의 예를 제공하는 PQL에 대한 일반적인 개요를 제공합니다.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '706'
 ht-degree: 3%
 
 ---
 
-# [!DNL Profile Query Language] (PQL) 개요
+# [!DNL Profile Query Language]&#x200B;(PQL) 개요
 
-[!DNL Profile Query Language] (PQL)은(는) [!DNL Real-Time Customer Profile] 데이터에 대한 세분화 쿼리의 정의 및 실행을 지원하도록 설계된 [!DNL Experience Data Model] (XDM) 호환 쿼리 언어입니다.
+[!DNL Profile Query Language]&#x200B;(PQL)은(는) [!DNL Experience Data Model] 데이터에 대한 세분화 쿼리의 정의 및 실행을 지원하도록 설계된 [!DNL Real-Time Customer Profile]&#x200B;(XDM) 호환 쿼리 언어입니다.
 
 이 안내서에서는 서식 지정 지침에 대해 설명하고 PQL 표현식의 예를 제공하는 PQL에 대한 일반적인 개요를 제공합니다.
 
@@ -62,7 +62,7 @@ PQL은 다음과 같은 리터럴 유형을 지원합니다.
 | 부울 | true 또는 false인 데이터 유형입니다. | `true`, `false` |
 | 정수 | 정수를 나타내는 데이터 형식입니다. 양수, 음수 또는 0일 수 있습니다. | `-201`, `0`, `412` |
 | 더블 | 실수를 나타내는 데이터 유형입니다. 양수, 음수 또는 0일 수 있습니다. | `-51.24`, `3.14`, `0.6942058` |
-| 날짜 | 연도, 월 및 일을 기준으로 날짜를 정수 매개 변수로 만드는 데 사용할 수 있는 데이터 형식입니다. 형식이 `date(year, month, day)`(으)로 지정되었습니다. | `date(2020, 3, 14)` |
+| 일자 | 연도, 월 및 일을 기준으로 날짜를 정수 매개 변수로 만드는 데 사용할 수 있는 데이터 형식입니다. 형식이 `date(year, month, day)`(으)로 지정되었습니다. | `date(2020, 3, 14)` |
 | 배열 | 다른 리터럴 값의 그룹으로 구성된 데이터 유형입니다. 대괄호를 사용하여 그룹화하고 쉼표를 사용하여 서로 다른 값 사이를 구분합니다. <br> **참고:** 배열 내의 항목 속성에 직접 액세스할 수 없습니다. 따라서 배열 내의 속성에 액세스해야 하는 경우 지원되는 메서드는 `select X from array where X.item = ...`입니다. <br> PQL은 프로필에 연결된 일련의 경험 이벤트를 참조하기 위해 `xEvent`이라는 단어를 예약합니다. | `[1, 4, 7]`, `["US", "CA"]` |
 | 상대 시간 참조 | 타임스탬프 및 시간 간격 참조를 구성하는 데 사용할 수 있는 예약어입니다. <ul><li>지금, 오늘, 어제, 내일</li><li>이, 마지막, 다음</li><li>전, 후, 후</li><li>밀리초, 초, 분, 시간, 일, 주, 월, 년, 10년, 세기/세기, 천년/천년</li></ul> | `X.timestamp occurs before today`, `X.timestamp occurs last month`, `X.timestamp occurs <= 3 days before now` |
 
