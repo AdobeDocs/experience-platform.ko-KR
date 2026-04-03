@@ -1,13 +1,13 @@
 ---
 title: 에지 세분화 모니터링
 description: 모니터링 대시보드를 사용하여 에지 세분화 처리량을 관찰하는 방법을 알아봅니다.
-source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
+exl-id: 7abba7e8-1f2d-4a21-a93f-8bda7aa4d849
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 3%
 
 ---
-
 
 # 에지 세분화 모니터링
 
