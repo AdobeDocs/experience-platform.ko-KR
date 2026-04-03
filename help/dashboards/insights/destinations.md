@@ -2,7 +2,7 @@
 title: 대상 통찰력
 description: 대상 통찰력을 제공하는 SQL을 살펴보고 이러한 쿼리를 사용하여 사용자 지정 통찰력을 생성하여 Adobe Experience Platform에서 데이터 활성화를 자세히 살펴보십시오.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1137'
 ht-degree: 3%
@@ -17,16 +17,16 @@ ht-degree: 3%
 
 PLatform UI를 통해 직접 인사이트의 SQL을 조정하는 방법에 대한 자세한 내용은 [SQL 보기 설명서](../view-sql.md)를 참조하십시오.
 
-다음 인사이트는 모두 [대상 대시보드](../guides/destinations.md) 또는 사용자 지정 [사용자 정의 대시보드](../standard-dashboards.md)의 일부로 사용할 수 있습니다. 위젯 라이브러리 및 [사용자 정의 대시보드](../standard-dashboards.md#create-widget)에서 대시보드를 사용자 정의하거나 [새 위젯을 만들고 편집](../customize/custom-widgets.md)하는 방법에 대한 지침은 [사용자 정의 개요](../customize/overview.md)를 참조하세요.
+다음 인사이트는 모두 [대상 대시보드](../guides/destinations.md) 또는 사용자 지정 [사용자 정의 대시보드](../standard-dashboards.md)의 일부로 사용할 수 있습니다. 위젯 라이브러리 및 [사용자 정의 대시보드](../customize/overview.md)에서 대시보드를 사용자 정의하거나 [새 위젯을 만들고 편집](../customize/custom-widgets.md)하는 방법에 대한 지침은 [사용자 정의 개요](../standard-dashboards.md#create-widget)를 참조하세요.
 
 ## 활성화된 대상자 {#activated-audiences}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 특정 대상으로 필터링된 활성화된 총 대상자 수는 얼마입니까?
-- 각 대상별로 활성화된 대상자 수는 얼마입니까?
+- 각 대상에 의해 활성화된 대상자 규모는 무엇입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT
@@ -48,16 +48,16 @@ WHERE
 
 +++
 
-이 인사이트의 모양과 기능에 대한 자세한 내용은 [활성화된 대상 위젯 설명서](../guides/destinations.md#activated-audiences)를 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [활성화된 대상 위젯 설명서](../guides/destinations.md#activated-audiences)를 참조하십시오.
 
 ## 모든 대상에 대해 활성화된 대상자 {#activated-audiences-across-all-destinations}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 모든 대상에서 활성화된 대상은 몇 명입니까?
 - 활성화된 총 대상자 수는 얼마입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT count(segment_id) AS Activated_Audiences_Count
@@ -71,17 +71,17 @@ WHERE
 
 +++
 
-이 인사이트의 모양과 기능에 대한 자세한 내용은 [모든 대상 위젯에서 활성화된 대상 설명서](../guides/destinations.md#activated-audiences-across-all-destinations)를 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [모든 대상 위젯에서 활성화된 대상 설명서](../guides/destinations.md#activated-audiences-across-all-destinations)를 참조하십시오.
 
 ## 대상 플랫폼별 활성 대상 {#active-destinations-by-destination-platform}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 활성화된 대상이 몇 개입니까?
 - 대상 플랫폼별 활성 대상 분류는 무엇입니까?
 - 각 대상 플랫폼별로 분류된 활성 대상 수는 얼마입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT destination_platform_name AS Destination_Platform_Name,
@@ -96,17 +96,17 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-이 인사이트의 모양과 기능에 대한 자세한 내용은 [대상 플랫폼 위젯 설명서별 활성 대상](../guides/destinations.md#active-destinations-by-destination-platform)을 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [대상 플랫폼 위젯 설명서별 활성 대상](../guides/destinations.md#active-destinations-by-destination-platform)을 참조하십시오.
 
 ## 대상자 크기 트렌드 {#audience-size-trend}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 대상에 매핑된 대상자의 예외 항목을 포함하여 시간이 지남에 따라 대상자 크기가 어떻게 변경됩니까?
 - 지정된 30일, 90일 및 12개월 동안 대상별 대상 크기의 전반적인 트렌드를 어떻게 찾을 수 있습니까?
 - 이메일 마케팅 캠페인과 관련된 스파이크 등 크기에 기여하는 대상자의 주요 특성은 무엇입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT d.destination_name,
@@ -142,17 +142,17 @@ SELECT d.destination_name,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 크기 트렌드 위젯 설명서](../guides/destinations.md#audience-size-trend)를 참조하세요.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [대상 크기 트렌드 위젯 설명서](../guides/destinations.md#audience-size-trend)를 참조하세요.
 
 ## 공통 대상자 {#common-audiences}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 두 개의 서로 다른 대상 간에 공통되는 대상은 무엇입니까?
 - 서로 다른 두 대상 간의 각 공통 대상에는 몇 개의 프로필이 있습니까?
 - 두 대상이 매핑되는 가장 큰 대상은 무엇입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT k.destination_name1,
@@ -214,17 +214,17 @@ SELECT k.destination_name1,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [일반 대상 위젯 설명서](../guides/destinations.md#common-audiences)를 참조하세요.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [일반 대상 위젯 설명서](../guides/destinations.md#common-audiences)를 참조하세요.
 
 ## 대상 상태 {#destination-status}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 사용할 수 있는 총 대상 수는 얼마입니까?
 - 비활성화된 총 대상 수는 얼마입니까?
 - 활성화 대상과 비활성화 대상 사이의 비율 분할은 얼마입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT COUNT(CASE
@@ -238,16 +238,16 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 상태 위젯 설명서](../guides/destinations.md#destination-status)를 참조하세요.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [대상 상태 위젯 설명서](../guides/destinations.md#destination-status)를 참조하세요.
 
 ## 대상 개수 {#destinations-count}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 현재 구성된 대상은 몇 개입니까?
 - 시간이 지남에 따라 총 대상 수가 어떻게 변경됩니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT count(destination_id) AS total_number_of_destinations
@@ -256,17 +256,17 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-이 인사이트의 모양과 기능에 대한 자세한 내용은 [대상 수 위젯 설명서](../guides/destinations.md#destinations-count)를 참조하세요.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [대상 개수 위젯 설명서](../guides/destinations.md#destinations-count)를 참조하세요.
 
 ## 매핑된 대상자 상태 {#mapped-audience-health}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 지난 30일 동안 중요한 변형이 있는 대상에 매핑된 대상자를 선택하십시오.
 - 매핑된 대상자의 최신 크기는 얼마입니까? 그리고 지난 달 동안 변경되었습니까?
 - 지난 달의 크기 변경 심각도를 기반으로 대상에 매핑된 모든 대상을 나열하려면 어떻게 합니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT destination_name,
@@ -325,17 +325,17 @@ SELECT destination_name,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [매핑된 대상자 상태 위젯 설명서](../guides/destinations.md#mapped-audience-health)를 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [매핑된 대상자 상태 위젯 설명서](../guides/destinations.md#mapped-audience-health)를 참조하십시오.
 
 ## 매핑된 대상자 {#mapped-audiences}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 몇 개의 대상이 특정 대상에 매핑됩니까?
 - 시간이 지남에 따라 매핑된 대상자의 수는 어떻게 변경되었습니까?
 - 두 대상을 비교하여 각 대상에 매핑된 대상자 중첩을 볼 수 있는 곳은 어디입니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT COUNT(segment_id) AS mapped_audiences_count
@@ -345,9 +345,10 @@ WHERE destination_id = 1458738325;
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [매핑된 대상자 위젯 설명서](../guides/destinations.md#mapped-audiences)를 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [매핑된 대상자 위젯 설명서](../guides/destinations.md#mapped-audiences)를 참조하십시오.
 
-<!-- Commented out until the Jan release as the SQL IS MISSING:
+<!-- 
+Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
 
 Questions answered by this insight:
@@ -368,13 +369,13 @@ See the [Mapped audiences by identity widget documentation](../guides/destinatio
 
 ## 가장 많이 사용하는 대상 {#most-used-destinations}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 가장 많이 사용하는 목적지는 어디입니까?
 - 얼마나 많은 대상이 각 대상에 매핑되며, 최다 항목에서 최다 항목순으로 정렬됩니까?
 - 대상에 대한 대상의 매핑은 한 스냅샷에서 다른 스냅샷으로 어떻게 변경됩니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
@@ -393,17 +394,17 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-이 인사이트의 모양과 기능에 대한 자세한 내용은 [가장 많이 사용된 대상 위젯 설명서](../guides/destinations.md#most-used-destinations)를 참조하세요.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [가장 많이 사용되는 대상 위젯 설명서](../guides/destinations.md#most-used-destinations)를 참조하세요.
 
 ## 최근 활성화된 대상자 {#recently-activated-audiences}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 대상이 가장 최근에 활성화된 대상은 무엇입니까?
 - 마지막으로 업데이트된 날짜별로 정렬된 모든 대상 목록을 찾으려면 어떻게 해야 합니까?
 - 가장 최근의 활성화를 기준으로 두 대상을 비교하려면 어떻게 해야 합니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT
@@ -424,17 +425,17 @@ LIMIT
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [최근에 활성화된 대상 위젯 설명서](../guides/destinations.md#recently-activated-audiences)를 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [최근 활성화된 대상 위젯 설명서](../guides/destinations.md#recently-activated-audiences)를 참조하십시오.
 
 ## 대상별로 최근 활성화된 대상자 {#recently-activated-audiences-by-destination}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 특정 대상에 대해 활성화된 대상은 무엇입니까?
 - 가장 최근에서 가장 최근까지 특정 대상자에 의해 활성화된 대상자 목록을 어떻게 찾을 수 있습니까?
 - 특정 대상에 대해 활성화된 날짜까지 대상자 목록을 찾으려면 어떻게 해야 합니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT c.destination_name,
@@ -455,17 +456,17 @@ SELECT c.destination_name,
 
 +++
 
-이 인사이트의 모양 및 기능에 대한 자세한 내용은 [최근 활성화된 대상 위젯별 설명서](../guides/destinations.md#recently-activated-audiences-by-destination)를 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [최근 활성화된 대상 위젯별 설명서](../guides/destinations.md#recently-activated-audiences-by-destination)를 참조하십시오.
 
 ## 최근에 생성된 대상 {#recently-created-destinations}
 
-이 통찰력에 의해 답변된 질문:
+이 insight에서 답변한 질문:
 
 - 가장 최근에 생성된 대상은 무엇입니까?
 - 생성된 날짜가 포함된 대상 목록은 어떻게 찾을 수 있습니까?
 - 최근에 어떤 새 대상이 생성되었습니까?
 
-+++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
++++이 insight을 생성하는 SQL을 표시하려면 선택하십시오.
 
 ```sql
 SELECT DISTINCT
@@ -484,9 +485,10 @@ LIMIT
 
 +++
 
-이 인사이트의 모양과 기능에 대한 자세한 내용은 [최근에 만든 대상 위젯 설명서](../guides/destinations.md#recently-created-destinations)를 참조하십시오.
+이 insight의 모양 및 기능에 대한 자세한 내용은 [최근에 만든 대상 위젯 설명서](../guides/destinations.md#recently-created-destinations)를 참조하십시오.
 
-<!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
+<!-- 
+Commented out until the Jan release as SQL MISSING FROM WIKI:
 
 ## Unmapped audiences by identity {#unmapped-audiences-by-identity}
 
