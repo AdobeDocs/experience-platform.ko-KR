@@ -2,10 +2,10 @@
 title: TTL을 사용하여 데이터 레이크에서 경험 이벤트 데이터 세트 유지 관리
 description: Adobe Experience Platform API의 TTL(Time-To-Live) 구성을 사용하여 데이터 레이크에서 경험 이벤트 데이터 세트 보존을 평가, 설정 및 관리하는 방법을 알아봅니다. 이 안내서에서는 TTL 행 수준 만료가 데이터 보존 정책을 지원하고, 스토리지 효율성을 최적화하고, 효과적인 데이터 수명주기 관리를 보장하는 방법을 설명합니다. 또한 TTL을 효과적으로 적용하는 데 도움이 되는 사용 사례와 모범 사례를 제공합니다.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: a4662d1042122fa9c3260c0e53c50bd78935cf31
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '2472'
-ht-degree: 0%
+source-wordcount: '2471'
+ht-degree: 1%
 
 ---
 
@@ -318,7 +318,8 @@ curl -X PATCH \
 데이터 세트 TTL은 30일마다 평가 및 처리되며 만료된 모든 레코드를 삭제합니다. 이벤트가 30일 이상 전(수집 날짜 > 30일)에 Experience Platform에 수집되고 이벤트 날짜가 정의된 유지 기간(TTL)을 초과하는 경우 만료된 것으로 간주됩니다.
 +++
 
-<!-- ### How soon will the Dataset Retention job delete data from Profile services?
+<!-- 
+### How soon will the Dataset Retention job delete data from Profile services?
 
 +++Answer
 Once a retention policy is set, existing events that already exceed the newly defined TTL are immediately deleted. Newer events remain until their timestamps surpass the retention period.
@@ -328,7 +329,8 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 - New events receive a 30-day expiration as they are ingested.
 - Existing events with a timestamp older than April 15th are immediately deleted.
 - Existing events with a timestamp after April 15th are set to expire 30 days after their timestamp (for example, an event from April 18th would be deleted on May 18th).
-+++ -->
++++ 
+-->
 
 ### 데이터 레이크 및 프로필 서비스에 대해 서로 다른 보존 정책을 설정할 수 있습니까?
 
@@ -345,7 +347,7 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### 현재 데이터 세트 사용을 확인하려면 어떻게 해야 합니까?
 
 +++답변
-[!UICONTROL 데이터 세트] 인벤토리 작업 영역에서 별도의 지표로 데이터 레이크 및 프로필 저장소의 최신 데이터 세트 저장소 크기를 확인할 수 있습니다. 열을 정렬하여 가장 큰 데이터 세트를 식별하고 보존 정책이 적용되는지 확인합니다.
+[!UICONTROL Dataset] 인벤토리 작업 영역에서 별도의 지표로 데이터 레이크 및 프로필 저장소의 최신 데이터 세트 저장소 크기를 확인할 수 있습니다. 열을 정렬하여 가장 큰 데이터 세트를 식별하고 보존 정책이 적용되는지 확인합니다.
 
 샌드박스 수준 사용법은 라이선스 사용량 대시보드를 참조하십시오. 자세한 내용은 [라이선스 사용 설명서](../../dashboards/guides/license-usage.md)를 참조하세요.
 +++
