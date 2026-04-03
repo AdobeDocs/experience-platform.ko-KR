@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 쿼리 서비스의 Spark SQL 함수
 description: SQL 기능을 확장하는 지원되는 Spark SQL 함수에 대해 알아봅니다.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: 7ac1521adb916313c8b53fe2a095821d756480be
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 1%
@@ -95,11 +95,11 @@ ht-degree: 1%
 | 연산자/함수 | 설명 |
 | ----------------- | ----------- |
 | [`!`](https://spark.apache.org/docs/latest/api/sql/index.html#_1) 또는 [`not`](https://spark.apache.org/docs/latest/api/sql/index.html#not) | 논리적 아님 |
-| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | 보다 작음 |
-| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | 보다 작거나 같음 |
+| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | 다음보다 작음 |
+| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | 다음보다 작거나 같음 |
 | [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | 다음과 같음 |
-| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | 보다 큼 |
-| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | 보다 크거나 같음 |
+| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | 다음보다 큼 |
+| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | 다음보다 크거나 같음 |
 | [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | 비트 전용 또는 |
 | [`\|`](https://spark.apache.org/docs/latest/api/sql/index.html#_17) | 비트 OR |
 | [`~`](https://spark.apache.org/docs/latest/api/sql/index.html#_19) | 비트 아님 |
@@ -288,7 +288,7 @@ ht-degree: 1%
 | [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)개의 공백이 있는 문자열 반환 |
 | [`split`](https://spark.apache.org/docs/latest/api/sql/index.html#split) | 문자열 분할 |
 | [`substring_index`](https://spark.apache.org/docs/latest/api/sql/index.html#substring_index) | 하위 문자열의 인덱스 반환 |
-| [`window`](https://spark.apache.org/docs/latest/api/sql/index.html#window) | 창 |
+| [`window`](https://spark.apache.org/docs/latest/api/sql/index.html#window) | Window |
 | [`xpath`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath) | XML 노드 구문 분석 |
 | [`xpath_double`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_double), [`xpath_number`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_number) | XML 노드를 double로 구문 분석 |
 | [`xpath_float`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_float) | 부동 소수점에 대한 XML 노드 구문 분석 |
