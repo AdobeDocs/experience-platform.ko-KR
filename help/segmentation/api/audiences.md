@@ -3,7 +3,7 @@ title: 대상 API 엔드포인트
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 대상 끝점을 사용하여 프로그래밍 방식으로 조직의 대상을 만들고, 관리하고, 업데이트합니다.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 2%
@@ -183,7 +183,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
 ```
 
 | 속성 | 대상자 유형 | 설명 |
-| -------- | ------------- | ----------- | 
+| -------- | ------------- | ----------- |
 | `id` | 모두 | 대상에 대해 시스템에서 생성한 읽기 전용 식별자입니다. |
 | `audienceId` | 모두 | 대상이 플랫폼에서 생성한 대상이면 `id`과(와) 동일한 값입니다. 대상자가 외부에서 생성된 경우 이 값은 클라이언트가 제공합니다. |
 | `schema` | 모두 | 대상의 XDM(Experience Data Model) 스키마. |
@@ -205,7 +205,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
 
 +++
 
-## 새 대상 만들기 {#create}
+## 새 대상자 만들기 {#create}
 
 `/audiences` 끝점에 대한 POST 요청을 수행하여 새 대상을 만들 수 있습니다.
 
@@ -246,7 +246,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 ```
 
 | 속성 | 설명 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `name` | 대상자의 이름입니다. |
 | `description` | 대상자에 대한 설명. |
 | `type` | 대상자가 플랫폼에서 생성되었는지 또는 외부에서 생성된 대상자인지 여부를 표시하는 필드입니다. 가능한 값은 `SegmentDefinition` 및 `ExternalSegment`입니다. `SegmentDefinition`은(는) 플랫폼에서 생성된 대상을 참조하지만 `ExternalSegment`은(는) 플랫폼에서 생성되지 않은 대상을 참조합니다. |
@@ -339,7 +339,7 @@ GET /audiences/{AUDIENCE_ID}
 ```
 
 | 매개변수 | 설명 |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{AUDIENCE_ID}` | 검색하려는 대상자의 ID입니다. 이 필드는 `id` 필드이며 **필드는**&#x200B;이(가) 아닙니다`audienceId`. |
 
 **요청**
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 ```
 
 | 속성 | 설명 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `audienceId` | 대상자의 ID입니다. 외부에서 생성된 대상자에 대해 이 값은 사용자에 의해 제공될 수 있다. |
 | `name` | 대상자의 이름입니다. |
 | `namespace` | 대상자를 위한 네임스페이스입니다. |
