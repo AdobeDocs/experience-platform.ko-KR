@@ -3,7 +3,7 @@ title: Acxiom 대상 연결
 description: ' [!DNL Acxiom Audience Connection] 대상을 사용하여 [!DNL Acxiom''s Real ID] 기술로 대상을 향상하고  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등의 여러 플랫폼에 대상을 활성화합니다.'
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1030'
 ht-degree: 7%
@@ -33,7 +33,7 @@ ht-degree: 7%
 ## 전제 조건 {#prerequisites}
 
 * **사용 약관 확인:** 새 [!DNL Acxiom Audience Connection] 대상을 구성하려면 [!DNL Acxiom's] 사용 약관 계약을 읽고 서명해야 합니다. 실행된 판매 주문이 완료되면 계약 링크를 받게 됩니다.
-* **Adobe 조직 ID를 알고 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [!DNL Adobe's]조직 ID를 보는 방법&#x200B;*에 대한 자세한 내용은* [Experience Cloud의 조직](https://experienceleague.adobe.com/ko/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) 항목을 참조하십시오.
+* **Adobe 조직 ID를 알고 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [!DNL Adobe's]조직 ID를 보는 방법&#x200B;*에 대한 자세한 내용은* [Experience Cloud의 조직](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) 항목을 참조하십시오.
 
 ## 지원되는 대상 {#supported-destinations}
 
@@ -108,7 +108,7 @@ ht-degree: 7%
 [!DNL Acxiom Audience Connection]에서는 다음 대상 필드에 대한 매핑만 허용합니다. 아래 표에 설명된 대상 필드는 아래 표시된 순서대로 매핑해야 합니다.
 
 | 필드 이름 | 설명 | 필수 여부 | 필드 순서 | 최대 길이 |
-|---|---|---|---|---|          
+|---|---|---|---|---|
 | 이름 | 개인의 이름 | 아니요 | 1 | 255 |
 | 가운데 | 개인의 중간 이름 또는 이니셜 | 아니요 | 2 | 50 |
 | 성 | 개인의 성 | 예 | 3 | 255 |
@@ -126,7 +126,7 @@ ht-degree: 7%
 
 모든 필드를 매핑했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
-[!DNL Adobe's] 표준 스키마를 사용하지 않는 경우 쿼리 서비스를 사용하여 [&#x200B; 표준 스키마를 필드 이름으로 채우는 방법에 대한 자세한 내용은 &#x200B;](../../../query-service/ui/overview.md)쿼리 서비스 UI 안내서[!DNL Adobe] 설명서를 참조하십시오.
+[!DNL Adobe's] 표준 스키마를 사용하지 않는 경우 쿼리 서비스를 사용하여 [ 표준 스키마를 필드 이름으로 채우는 방법에 대한 자세한 내용은 ](../../../query-service/ui/overview.md)쿼리 서비스 UI 안내서[!DNL Adobe] 설명서를 참조하십시오.
 
 ### 검토 {#review}
 
@@ -153,4 +153,4 @@ ht-degree: 7%
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
-데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/data-governance/home)를 참조하십시오.
+데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)를 참조하십시오.
