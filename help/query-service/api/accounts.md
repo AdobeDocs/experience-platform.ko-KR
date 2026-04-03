@@ -5,7 +5,7 @@ title: 계정 API 끝점
 description: 지속에 대한 쿼리 서비스 계정을 만들 수 있습니다.
 role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 4%
@@ -16,13 +16,13 @@ ht-degree: 4%
 
 Adobe Experience Platform 쿼리 서비스에서 계정은 외부 SQL 클라이언트와 함께 사용할 수 있는 만료되지 않는 자격 증명을 만드는 데 사용됩니다. 쿼리 서비스 API에서 `/accounts` 끝점을 사용하여 쿼리 서비스 통합 계정(기술 계정이라고도 함)을 프로그래밍 방식으로 만들고, 검색하고, 편집하고, 삭제할 수 있습니다.
 
-## 시작하기
+## 시작
 
 이 안내서에 사용된 끝점은 쿼리 서비스 API의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
 
 ## 계정 만들기
 
-`/accounts` 끝점에 대한 POST 요청을 만들어 Query Service 통합 계정을 만들 수 있습니다.
+`/accounts` 끝점에 대한 POST 요청을 수행하여 쿼리 서비스 통합 계정을 만들 수 있습니다.
 
 **API 형식**
 
@@ -77,7 +77,7 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 
 ## 계정 업데이트
 
-`/accounts` 끝점에 PUT 요청을 하여 Query Service 통합 계정을 업데이트할 수 있습니다.
+`/accounts` 끝점에 대한 PUT 요청을 만들어 Query Service 통합 계정을 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -135,7 +135,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
 
 ## 모든 계정 나열
 
-`/accounts` 끝점에 GET 요청을 하여 모든 Query Service 통합 계정 목록을 검색할 수 있습니다.
+`/accounts` 끝점에 대한 GET 요청을 만들어 모든 Query Service 통합 계정 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -206,7 +206,7 @@ curl -X GET https://platform.adobe.io/foundation/queryauth/accounts \
 
 ## 계정 삭제
 
-`/accounts` 끝점에 DELETE 요청을 하여 Query Service 통합 계정을 삭제할 수 있습니다.
+`/accounts` 끝점에 대한 DELETE 요청을 만들어 Query Service 통합 계정을 삭제할 수 있습니다.
 
 **API 형식**
 
