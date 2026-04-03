@@ -3,7 +3,7 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 동의 및 환경 설정 데이터 유형
 description: 개인 정보, Personalization 및 마케팅 환경 설정 데이터 유형에 대한 동의는 데이터 작업에서 CMP(동의 관리 플랫폼) 및 기타 소스에서 생성된 고객 권한 및 환경 설정의 수집을 지원하기 위한 것입니다.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2305'
 ht-degree: 1%
@@ -184,7 +184,7 @@ ht-degree: 1%
 >
 >`personalize`은(는) 마케팅 사용 사례를 다루지 않습니다. 예를 들어 고객이 모든 채널에 대한 개인화를 옵트아웃하는 경우 해당 채널을 통한 커뮤니케이션 수신을 중단해서는 안 됩니다. 대신, 수신하는 메시지는 프로필을 기반으로 하지 않고 일반적이어야 합니다.
 >
->동일한 예에서 고객이 모든 채널에 대한 직접 마케팅을 옵트아웃하는 경우(`marketing`다음 섹션[에 설명된 &#x200B;](#marketing)을 통해) 해당 고객은 개인화가 허용되더라도 메시지를 받지 않아야 합니다.
+>동일한 예에서 고객이 모든 채널에 대한 직접 마케팅을 옵트아웃하는 경우(`marketing`다음 섹션[에 설명된 ](#marketing)을 통해) 해당 고객은 개인화가 허용되더라도 메시지를 받지 않아야 합니다.
 
 ```json
 "personalize": {
