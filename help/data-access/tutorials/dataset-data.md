@@ -5,7 +5,7 @@ title: 데이터 액세스 API를 사용하여 데이터 세트 데이터 보기
 type: Tutorial
 description: Adobe Experience Platform의 Data Access API를 사용하여 데이터 세트 내에 저장된 데이터를 찾고, 액세스하고, 다운로드하는 방법을 알아봅니다. 이 문서에서는 페이징 및 부분 다운로드와 같은 Data Access API의 고유한 기능 중 일부를 소개합니다.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 9%
@@ -348,7 +348,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 ```
 
 | 속성 | 설명 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `data._links.self.href` | 연결된 파일을 다운로드할 URL입니다. |
 
 이 응답은 ID가 `{FILE_ID_2}` 및 `{FILE_ID_3}`인 두 개의 개별 파일이 포함된 디렉터리를 반환합니다. 이 시나리오에서는 각 파일의 URL을 따라 파일에 액세스해야 합니다.
@@ -443,7 +443,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 ```
 
 | 속성 | 설명 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `Range: bytes=0-99` | 다운로드할 바이트 범위를 지정합니다. 이 항목을 지정하지 않으면 API가 전체 파일을 다운로드합니다. 이 예에서는 처음 100바이트가 다운로드됩니다. |
 
 **응답**
