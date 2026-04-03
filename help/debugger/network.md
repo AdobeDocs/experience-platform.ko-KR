@@ -6,10 +6,10 @@ seo-description: Experience Platform Debugger Network screen
 seo-title: Network Tab
 uuid: 839686c9-6e4f-4661-acf6-150ea24dc47f
 exl-id: ed0579ef-ec26-43df-9453-a395c105038a
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 62%
+source-wordcount: '215'
+ht-degree: 63%
 
 ---
 
@@ -29,16 +29,18 @@ ht-degree: 62%
 
 ![](images/network-analytics.jpg)
 
-모든 솔루션이 표시되도록 돌아가려면 **[!UICONTROL 네트워크]**&#x200B;를 선택하십시오.
+모든 솔루션이 표시되도록 돌아가려면 **[!UICONTROL Network]**&#x200B;을(를) 선택합니다.
 
 확장된 보기를 보려면 네트워크 보기에서 항목을 선택합니다. 확장된 보기 창에서 표시된 정보를 클립보드에 복사할 수 있습니다.
 
 ![](images/network-expand.jpg)
 
-<!--Use the icon at the top of each column to copy the server call URL to your clipboard, where you can paste it into another document for reference or debugging purposes.
+<!--
+Use the icon at the top of each column to copy the server call URL to your clipboard, where you can paste it into another document for reference or debugging purposes.
 
-![](images/copy.jpg)-->
+![](images/copy.jpg)
+-->
 
-목록을 지우려면 **[!UICONTROL 이벤트 제거]**&#x200B;를 선택하십시오.
+목록을 지우려면 **[!UICONTROL Remove Events]**&#x200B;을(를) 선택합니다.
 
-이 화면의 정보가 포함된 Excel 파일을 다운로드하려면 **[!UICONTROL 다운로드]**&#x200B;를 선택하십시오.
+이 화면의 정보가 포함된 Excel 파일을 다운로드하려면 **[!UICONTROL Download]**&#x200B;을(를) 선택합니다.
