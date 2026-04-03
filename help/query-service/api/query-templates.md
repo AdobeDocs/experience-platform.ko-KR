@@ -5,7 +5,7 @@ title: 쿼리 템플릿 API 끝점
 description: 이 안내서에서는 쿼리 서비스 API를 사용하여 수행할 수 있는 다양한 쿼리 템플릿 API 호출에 대해 자세히 설명합니다.
 role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 2%
@@ -44,7 +44,7 @@ GET /query-templates?{QUERY_PARAMETERS}
 | `orderby` | 결과를 정렬하는 데 사용할 필드를 지정합니다. 지원되는 필드는 `created` 및 `updated`입니다. 예를 들어 `orderby=created`은(는) 만들어진 항목별로 오름차순으로 결과를 정렬합니다. 만들기 전에 `-`을(를) 추가하면(`orderby=-created`) 내림차순으로 만들어진 항목별로 정렬됩니다. |
 | `limit` | 페이지에 포함된 결과 수를 제어할 페이지 크기 제한을 지정합니다. (*기본값: 20*) |
 | `start` | ISO 형식 타임스탬프를 지정하여 결과 순서를 지정합니다. 시작 날짜를 지정하지 않으면 API 호출이 가장 오래 전에 만든 템플릿을 먼저 반환한 다음 더 최근 결과를 계속 나열합니다.<br> ISO 타임스탬프를 사용하면 날짜 및 시간에 서로 다른 수준의 세부기간을 사용할 수 있습니다. 기본 ISO 타임스탬프는 `2020-09-07` 형식을 사용하여 2020년 9월 7일의 날짜를 나타냅니다. 보다 복잡한 예제는 `2022-11-05T08:15:30-05:00`(으)로 작성되며 2022년 11월 5일 오전 8:15:30(미국 동부 표준시)에 해당합니다. 시간대는 UTC 오프셋을 사용하여 제공될 수 있으며 접미사 &quot;Z&quot;(`2020-01-01T01:01:01Z`)로 표시됩니다. 시간대가 제공되지 않으면 기본값은 0입니다. |
-| `property` | 필드를 기반으로 결과를 필터링합니다. **must** 필터는 HTML 이스케이프해야 합니다. 쉼표는 여러 필터 세트를 결합하는 데 사용됩니다. 지원되는 필드는 `name` 및 `userId`입니다. 지원되는 유일한 연산자는 `==`(과 같음)입니다. 예를 들어 `name==my_template`은(는) 이름이 `my_template`인 모든 쿼리 템플릿을 반환합니다. |
+| `property` | 필드를 기반으로 결과를 필터링합니다. **must** 필터는 HTML 이스케이프되어야 합니다. 쉼표는 여러 필터 세트를 결합하는 데 사용됩니다. 지원되는 필드는 `name` 및 `userId`입니다. 지원되는 유일한 연산자는 `==`(과 같음)입니다. 예를 들어 `name==my_template`은(는) 이름이 `my_template`인 모든 쿼리 템플릿을 반환합니다. |
 
 **요청**
 
@@ -113,7 +113,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 ### 쿼리 템플릿 만들기
 
-`/query-templates` 끝점에 대한 POST 요청을 만들어 쿼리 템플릿을 만들 수 있습니다.
+`/query-templates` 끝점에 대한 POST 요청을 수행하여 쿼리 템플릿을 만들 수 있습니다.
 
 **API 형식**
 
@@ -189,7 +189,7 @@ GET /query-templates/{TEMPLATE_ID}
 ```
 
 | 속성 | 설명 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{TEMPLATE_ID}` | 검색할 쿼리 템플릿의 `id` 값입니다. |
 
 **요청**
@@ -238,7 +238,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 ### 지정된 쿼리 템플릿 업데이트
 
-`/query-templates/{TEMPLATE_ID}` 끝점에 PUT 요청을 하고 요청 경로에 쿼리 템플릿의 ID를 제공하여 특정 쿼리 템플릿을 업데이트할 수 있습니다.
+`/query-templates/{TEMPLATE_ID}` 끝점에 대한 PUT 요청을 만들고 요청 경로에 쿼리 템플릿의 ID를 제공하여 특정 쿼리 템플릿을 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -314,7 +314,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 ### 지정된 쿼리 템플릿 삭제
 
-`/query-templates/{TEMPLATE_ID}`에 DELETE 요청을 하고 요청 경로에 쿼리 템플릿의 ID를 제공하여 특정 쿼리 템플릿을 삭제할 수 있습니다.
+`/query-templates/{TEMPLATE_ID}`에 DELETE을 요청하고 요청 경로에 쿼리 템플릿의 ID를 제공하여 특정 쿼리 템플릿을 삭제할 수 있습니다.
 
 **API 형식**
 
