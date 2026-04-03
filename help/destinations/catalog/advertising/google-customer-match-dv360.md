@@ -3,7 +3,7 @@ title: Google Customer Match + Display & Video 360 연결
 description: Google Customer Match + Display & Video 360 대상 커넥터를 사용하면 Experience Platform의 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail 및 YouTube과 같은 Google의 소유 및 운영 속성에서 고객에게 연락하고 다시 연결할 수 있습니다.
 badge: label="제한 공개" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '2442'
 ht-degree: 5%
@@ -109,7 +109,7 @@ Adobe [!DNL Real-Time CDP]과(와) 같은 특정 Google 통합 서드파티는 [
 
 ## [!DNL Google Customer Match] 계정 필수 구성 요소 {#google-account-prerequisites}
 
-Experience Platform에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [!DNL Customer Match]Google 지원 설명서[에 설명된 &#x200B;](https://support.google.com/google-ads/answer/6299717) 사용에 대한 Google 정책을 읽고 준수하는지 확인하십시오.
+Experience Platform에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [!DNL Customer Match]Google 지원 설명서[에 설명된 ](https://support.google.com/google-ads/answer/6299717) 사용에 대한 Google 정책을 읽고 준수하는지 확인하십시오.
 
 그런 다음 [!DNL Google] 계정이 [!DNL Standard] 이상의 권한 수준에 대해 구성되어 있는지 확인하십시오. 자세한 내용은 [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1)를 참조하세요.
 
@@ -177,20 +177,26 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 이메일 주소를 해시하도록 선택하는 경우 위의 링크에 설명된 Google 요구 사항을 준수해야 합니다.
 
-<!-- ### Using custom namespaces {#custom-namespaces}
+<!-- 
+### Using custom namespaces {#custom-namespaces}
 
-Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information. -->
+Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information. 
+-->
 
-<!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
+<!-- 
+Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
-![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
+![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) 
+-->
 
-<!-- ## Configure destination - video walkthrough {#video}
+<!-- 
+## Configure destination - video walkthrough {#video}
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) 
+-->
 
 ## 대상에 연결 {#connect}
 
@@ -231,11 +237,13 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 이 대상에 대한 대상 활성화에 대한 지침은 [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
-<!-- In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
+<!-- 
+In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
 
 ![Google Customer Match App ID field highlighted in the Segment schedule step of the activation workflow.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative. -->
+For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative. 
+-->
 
 ### 매핑 예: [!DNL Google Customer Match + Display & Video 360]에서 대상 데이터 활성화 {#example-gcm}
 
@@ -244,9 +252,9 @@ For details on how to find the [!DNL App ID], refer to the [Google official docu
 소스 필드 선택:
 
 * 사용 중인 전자 메일 주소가 해시되지 않은 경우 `Email` 네임스페이스를 원본 ID로 선택하십시오.
-* `Email_LC_SHA256` [!DNL Experience Platform]전자 메일 해시 요구 사항[!DNL Google Customer Match]에 따라 데이터 수집 시 고객 전자 메일 주소를 [(으)로 해시했다면 &#x200B;](#hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
+* `Email_LC_SHA256` [!DNL Experience Platform]전자 메일 해시 요구 사항[!DNL Google Customer Match]에 따라 데이터 수집 시 고객 전자 메일 주소를 [(으)로 해시했다면 ](#hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 해시되지 않은 전화 번호로 구성된 경우 `PHONE_E.164` 네임스페이스를 원본 ID로 선택하십시오. [!DNL Experience Platform]이(가) [!DNL Google Customer Match] 요구 사항을 준수하기 위해 전화 번호를 해시합니다.
-* `Phone_SHA256_E.164` [!DNL Experience Platform]전화 번호 해시 요구 사항[!DNL Facebook]에 따라 데이터 수집 시 전화 번호를 [(으)로 해시했다면 &#x200B;](#phone-number-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
+* `Phone_SHA256_E.164` [!DNL Experience Platform]전화 번호 해시 요구 사항[!DNL Facebook]에 따라 데이터 수집 시 전화 번호를 [(으)로 해시했다면 ](#phone-number-hashing-requirements) 네임스페이스를 원본 ID로 선택하십시오.
 
 대상 필드 선택:
 
@@ -263,7 +271,7 @@ For details on how to find the [!DNL App ID], refer to the [Google official docu
 
 ## 대상 모니터링 {#monitor-destination}
 
-대상에 연결하고 대상 데이터 흐름을 설정한 후 [의 &#x200B;](/help/dataflows/ui/monitor-destinations.md)모니터링 기능[!DNL Real-Time CDP]을 사용하여 각 데이터 흐름 실행에서 대상에 활성화된 프로필 레코드에 대한 광범위한 정보를 얻을 수 있습니다.
+대상에 연결하고 대상 데이터 흐름을 설정한 후 [의 ](/help/dataflows/ui/monitor-destinations.md)모니터링 기능[!DNL Real-Time CDP]을 사용하여 각 데이터 흐름 실행에서 대상에 활성화된 프로필 레코드에 대한 광범위한 정보를 얻을 수 있습니다.
 
 [!DNL Google Customer Match + Display & Video 360] 연결에 대한 모니터링 정보에는 각 데이터 흐름 및 데이터 흐름 실행에서 활성화, 제외 및 실패한 ID와 관련된 대상 수준 정보가 포함되어 있습니다. 기능에 대해 [자세히 알아보십시오](/help/dataflows/ui/monitor-destinations.md#segment-level-view).
 
