@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 일괄 처리 수집 API 안내서
 description: 이 문서에서는 Adobe Experience Platform용 일괄 처리 수집 API를 사용하는 개발자를 위한 포괄적인 안내서를 제공합니다.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 0e484dffa38d454561f9d67c6bea92f426d3515d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2435'
 ht-degree: 4%
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 이 문서의 부록에서는 샘플 CSV 및 JSON 데이터 파일을 포함하여 [수집에 사용할 데이터 서식 지정](#data-transformation-for-batch-ingestion)에 대한 정보를 제공합니다.
 
-## 시작하기
+## 시작
 
 이 안내서에 사용된 API 끝점은 [일괄 처리 수집 API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)의 일부입니다. 지원되는 객체 유형에 대해 기본 CRUD 작업을 수행할 수 있는 RESTful API를 통해 일괄 수집이 제공됩니다.
 
@@ -31,7 +31,7 @@ ht-degree: 4%
 >
 >- 일괄 처리 수집을 위한 입력으로 다중 라인 JSON 대신 단일 라인 JSON을 사용합니다. 한 줄 JSON을 사용하면 시스템에서 하나의 입력 파일을 여러 청크로 분할하여 병렬로 처리할 수 있으므로 성능이 향상되지만 여러 줄 JSON은 분할할 수 없습니다. 이를 통해 데이터 처리 비용을 크게 줄이고 일괄 처리 지연 시간을 개선할 수 있습니다.
 
-### 일괄 처리 만들기
+### 배치만들기
 
 먼저 JSON을 입력 형식으로 한 일괄 처리를 만들어야 합니다. 배치를 생성할 때 데이터 세트 ID를 제공해야 합니다. 또한 배치의 일부로 업로드된 모든 파일이 제공된 데이터 세트에 연결된 XDM 스키마를 준수하는지 확인해야 합니다.
 
@@ -175,7 +175,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 >
 >다음 단계는 작은 파일(256MB 이하)에 적용할 수 있습니다. 게이트웨이 시간 초과 또는 요청 본문 크기 오류가 있는 경우 대용량 파일 업로드로 전환해야 합니다.
 
-### 일괄 처리 만들기
+### 배치만들기
 
 먼저 Parquet를 입력 형식으로 하여 일괄 처리를 만들어야 합니다. 배치를 생성할 때 데이터 세트 ID를 제공해야 합니다. 또한 배치의 일부로 업로드된 모든 파일이 제공된 데이터 세트에 연결된 XDM 스키마를 준수하는지 확인해야 합니다.
 
@@ -310,7 +310,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 >
 >이 섹션에서는 256MB보다 큰 파일을 업로드하는 방법에 대해 자세히 설명합니다. 큰 파일은 청크로 업로드된 다음 API 신호를 통해 결합됩니다.
 
-### 일괄 처리 만들기
+### 배치만들기
 
 먼저 Parquet를 입력 형식으로 하여 일괄 처리를 만들어야 합니다. 배치를 생성할 때 데이터 세트 ID를 제공해야 합니다. 또한 배치의 일부로 업로드된 모든 파일이 제공된 데이터 세트에 연결된 XDM 스키마를 준수하는지 확인해야 합니다.
 
@@ -554,7 +554,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 | `{TENANT_ID}` | 이 ID는 사용자가 만드는 리소스의 이름 간격이 제대로 지정되고 조직 내에 포함되어 있는지 확인하는 데 사용됩니다. |
 | `{SCHEMA_ID}` | 생성한 스키마의 ID입니다. |
 
-### 일괄 처리 만들기
+### 배치만들기
 
 그런 다음 CSV를 입력 형식으로 사용하여 일괄 처리를 만들어야 합니다. 배치를 생성할 때 데이터 세트 ID를 제공해야 합니다. 또한 배치의 일부로 업로드된 모든 파일이 제공된 데이터 세트에 연결된 스키마를 준수하는지 확인해야 합니다.
 
@@ -769,7 +769,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 이미 수집된 배치를 바꾸려면 &quot;배치 재생&quot;을 사용합니다. 이 작업은 이전 배치를 삭제하고 대신 새 배치를 수집하는 것과 같습니다.
 
-### 일괄 처리 만들기
+### 배치만들기
 
 먼저 JSON을 입력 형식으로 한 일괄 처리를 만들어야 합니다. 배치를 생성할 때 데이터 세트 ID를 제공해야 합니다. 또한 배치의 일부로 업로드된 모든 파일이 제공된 데이터 세트에 연결된 XDM 스키마를 준수하는지 확인해야 합니다. 또한 이전 배치를 재생 섹션에 참조로 제공해야 합니다. 아래 예에서는 ID가 `batchIdA` 및 `batchIdB`인 배치를 재생하고 있습니다.
 
@@ -801,7 +801,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | 매개변수 | 설명 |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{DATASET_ID}` | 참조 데이터 세트의 ID입니다. |
 
 **응답**
