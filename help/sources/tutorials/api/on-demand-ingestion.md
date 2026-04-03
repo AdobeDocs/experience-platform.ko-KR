@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;흐름 서비스;
 title: 흐름 서비스 API를 사용하여 온디맨드 수집에 대한 흐름 실행 만들기
 description: 흐름 서비스 API를 사용하여 온디맨드 수집을 위한 흐름 실행을 만드는 방법을 알아봅니다
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 1%
@@ -125,7 +125,8 @@ curl -X POST \
 | `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
 | `params.deltaColumn.name` | The name of the delta column. |
 | `etag` | The resource version of the flow run. |
-| `metrics` | This property displays a status summary for the flow run. | -->
+| `metrics` | This property displays a status summary for the flow run. | 
+-->
 
 ## 파일 기반 소스에 대한 흐름 실행 만들기
 
