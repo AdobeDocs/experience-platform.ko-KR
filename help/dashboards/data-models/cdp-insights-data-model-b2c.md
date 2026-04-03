@@ -3,7 +3,7 @@ title: Real-Time Customer Data Platform Insights 데이터 모델 B2C Edition
 description: Real-Time Customer Data Platform Insights 데이터 모델(B2C Edition)과 함께 SQL 쿼리를 사용하여 마케팅 및 KPI 사용 사례에 맞게 고유한 Real-Time CDP 보고서를 사용자 지정하는 방법을 알아봅니다.
 badgeB2C: null
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 2%
@@ -326,7 +326,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### ID 중복(프로필) 사용 사례 {#profiles-identity-overlap}
 
-[!UICONTROL Identity overlap] 위젯에서 사용되는 로직은 **프로필 저장소**&#x200B;에서 선택한 두 ID를 포함하는 프로필이 겹치는 것을 표시합니다. 자세한 내용은 [[!UICONTROL Identity overlap] 대시보드 설명서[!UICONTROL Profiles]의 &#x200B;](../guides/profiles.md#identity-overlap) 위젯 섹션을 참조하십시오.
+[!UICONTROL Identity overlap] 위젯에서 사용되는 로직은 **프로필 저장소**&#x200B;에서 선택한 두 ID를 포함하는 프로필이 겹치는 것을 표시합니다. 자세한 내용은 [[!UICONTROL Identity overlap] 대시보드 설명서[!UICONTROL Profiles]의 ](../guides/profiles.md#identity-overlap) 위젯 섹션을 참조하십시오.
 
 [!UICONTROL Identity overlap] 위젯을 생성하는 SQL이 아래의 축소 가능 섹션에 표시됩니다.
 
@@ -395,7 +395,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 #### ID 중복(대상) 사용 사례 {#audiences-identity-overlap}
 
-[!UICONTROL Audiences] 대시보드 [!UICONTROL Identity overlap] 위젯에서 사용되는 논리는 특정 대상에 대해 선택한 두 ID가 포함된 프로필의 겹침을 보여 줍니다. 자세한 내용은 [[!UICONTROL Identity overlap] 대시보드 설명서[!UICONTROL Audiences]의 &#x200B;](../guides/audiences.md#identity-overlap) 위젯 섹션을 참조하십시오.
+[!UICONTROL Audiences] 대시보드 [!UICONTROL Identity overlap] 위젯에서 사용되는 논리는 특정 대상에 대해 선택한 두 ID가 포함된 프로필의 겹침을 보여 줍니다. 자세한 내용은 [[!UICONTROL Identity overlap] 대시보드 설명서[!UICONTROL Audiences]의 ](../guides/audiences.md#identity-overlap) 위젯 섹션을 참조하십시오.
 
 [!UICONTROL Identity overlap] 위젯을 생성하는 SQL이 아래의 축소 가능 섹션에 표시됩니다.
 
@@ -448,7 +448,8 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-<!-- Commented out as Anil wanted to add something but did not provide information yet:
+<!-- 
+Commented out as Anil wanted to add something but did not provide information yet:
 ### Overlap Namespace-Audience model {#overlap-namespace-audience-model}
 
 The overlap namespace-audience model is comprised of the following datasets: 
@@ -463,11 +464,13 @@ The overlap namespace-audience model is comprised of the following datasets:
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
 
-![An ERD of the overlap namespace-audience model.](../images/cdp-insights/overlap-namespace-audience-model.png) -->
+![An ERD of the overlap namespace-audience model.](../images/cdp-insights/overlap-namespace-audience-model.png) 
+-->
 
 <!-- What insights are gathered from this particular data model? -->
 
-<!-- Commented out as Anil wanted to add something but did not provide information yet:
+<!-- 
+Commented out as Anil wanted to add something but did not provide information yet:
 ### AI model {#ai-model}
 
 The AI model is comprised of the following datasets: 
@@ -477,7 +480,8 @@ The AI model is comprised of the following datasets:
 - `adwh_dim_merge_policies`
 - `adwh_dim_ai_models`
 
-![An ERD of the AI model.](./images/cdp-insights/ai-model.png) -->
+![An ERD of the AI model.](./images/cdp-insights/ai-model.png) 
+-->
 
 <!-- What insights are gathered from this particular data model? -->
 
