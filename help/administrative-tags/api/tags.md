@@ -3,7 +3,7 @@ title: 통합 태그 엔드포인트
 description: Adobe Experience Platform API를 사용하여 태그 범주와 태그를 만들고, 업데이트하고, 관리하고, 삭제하는 방법에 대해 알아봅니다.
 role: Developer
 exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 3%
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 이 안내서에서는 태그와 태그 범주를 더 잘 이해하는 데 도움이 되는 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출이 포함되어 있습니다.
 
-## 시작하기
+## 시작
 
 이 안내서에 사용되는 끝점은 Adobe Experience Platform API의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 필요한 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 할 중요한 정보를 확인하십시오
 
@@ -45,7 +45,7 @@ GET /tagCategory?{QUERY_PARAMETERS}
 
 태그 범주를 검색할 때 다음과 같은 선택적 쿼리 매개 변수를 사용할 수 있습니다.
 
-| 쿼리 매개 변수 | 설명 | 예 |
+| 쿼리 매개변수 | 설명 | 예 |
 | --------------- | ----------- | ------- |
 | `start` | 결과 목록이 시작되는 위치입니다. 이를 사용하여 결과의 페이지 매김을 위한 시작 색인을 나타낼 수 있습니다. | `start=a` |
 | `limit` | 페이지당 검색할 최대 태그 범주 수입니다. | `limit=20` |
@@ -104,7 +104,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory
 >
 >시스템 관리자와 제품 관리자만 이 API 호출을 사용할 수 있습니다.
 
-`/tagCategory` 끝점에 POST 요청을 하여 새 태그 범주를 만들 수 있습니다.
+`/tagCategory` 끝점에 대한 POST 요청을 수행하여 새 태그 범주를 만들 수 있습니다.
 
 **API 형식**
 
@@ -114,7 +114,7 @@ POST /tagCategory
 
 **요청**
 
-+++새 태그 카테고리를 만드는 샘플 요청입니다.
++++새 태그 범주를 만들기 위한 샘플 요청입니다.
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
@@ -159,7 +159,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
 
 ## 특정 태그 범주 검색 {#get-tag-category}
 
-`/tagCategory` 끝점에 GET 요청을 하고 태그 범주의 ID를 지정하여 조직에 속한 특정 태그 범주를 검색할 수 있습니다.
+`/tagCategory` 끝점에 대한 GET 요청을 만들고 태그 범주의 ID를 지정하여 조직에 속한 특정 태그 범주를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -189,7 +189,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-44
 
 성공한 응답은 지정된 태그 카테고리의 세부 정보와 함께 HTTP 상태 200을 반환합니다.
 
-+++지정된 태그 카테고리에 대한 세부 정보가 포함된 샘플 응답입니다.
++++지정된 태그 카테고리의 세부 정보를 포함하는 샘플 응답입니다.
 
 ```json
 {
@@ -267,7 +267,7 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 
 새로 업데이트된 태그 카테고리에 대한 정보가 포함된 성공적인 응답 HTTP 상태 200입니다.
 
-+++새로 업데이트된 태그 카테고리에 대한 세부 정보가 포함된 샘플 응답.
++++새로 업데이트된 태그 카테고리에 대한 세부 정보가 포함된 샘플 응답입니다.
 
 ```json
 {
@@ -291,7 +291,7 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 >
 >시스템 관리자와 제품 관리자만 이 API 호출을 사용할 수 있습니다.
 
-`/tagCategory` 끝점에 DELETE 요청을 하고 태그 범주의 ID를 지정하여 조직에 속한 특정 태그 범주를 삭제할 수 있습니다.
+`/tagCategory` 끝점에 대한 DELETE 요청을 만들고 태그 범주의 ID를 지정하여 조직에 속한 특정 태그 범주를 삭제할 수 있습니다.
 
 **API 형식**
 
@@ -305,7 +305,7 @@ DELETE /tagCategory/{TAG_CATEGORY_ID}
 
 **요청**
 
-+++특정 태그 카테고리 삭제를 위한 샘플 요청
++++특정 태그 범주 삭제에 대한 샘플 요청
 
 ```shell
 curl -X DELETE https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
@@ -323,7 +323,7 @@ curl -X DELETE https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b
 
 ## 태그 목록 검색 {#get-tags}
 
-`/tags` 끝점과 태그 범주의 ID에 대한 GET 요청을 통해 조직에 속한 태그 목록을 검색할 수 있습니다.
+`/tags` 끝점 및 태그 범주의 ID에 대한 GET 요청을 통해 조직에 속한 태그 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -334,7 +334,7 @@ GET /tags?{QUERY_PARAMETERS}
 
 태그를 검색할 때 다음과 같은 선택적 쿼리 매개 변수를 사용할 수 있습니다.
 
-| 쿼리 매개 변수 | 설명 | 예 |
+| 쿼리 매개변수 | 설명 | 예 |
 | --------------- | ----------- | ------- |
 | `start` | 결과 목록이 시작되는 위치입니다. 이를 사용하여 결과의 페이지 매김을 위한 시작 색인을 나타낼 수 있습니다. | `start=a` |
 | `limit` | 페이지당 검색할 최대 태그 수입니다. | `limit=20` |
@@ -605,7 +605,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 성공한 응답은 지정된 태그의 세부 정보와 함께 HTTP 상태 200을 반환합니다.
 
-+++지정된 태그의 세부 정보를 포함하는 샘플 응답입니다.
++++지정된 태그의 세부 정보를 포함하는 샘플 응답입니다. 
 
 ```json
 {
@@ -639,7 +639,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 ## 태그 유효성 검사 {#validate-tags}
 
-`/tags/validate` 끝점에 대한 POST 요청을 통해 태그가 있는지 확인할 수 있습니다.
+`/tags/validate` 끝점에 대한 POST 요청을 수행하여 태그가 있는지 확인할 수 있습니다.
 
 **API 형식**
 
@@ -649,7 +649,7 @@ POST /tags/validate
 
 **요청**
 
-+++제공된 태그 ID의 유효성을 검사하기 위한 샘플 요청입니다.
++++제공된 태그 ID의 유효성을 검사하는 샘플 요청입니다.
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
@@ -676,7 +676,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 
 성공적인 응답은 유효한 태그와 유효하지 않은 태그에 대한 정보와 함께 HTTP 상태 200을 반환합니다.
 
-+++유효하고 잘못된 태그를 표시하는 샘플 응답입니다.
++++유효한 태그와 유효하지 않은 태그를 표시하는 샘플 응답입니다.
 
 ```json
 {
@@ -705,7 +705,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 
 ## 특정 태그 업데이트 {#update-tag}
 
-`/tags` 끝점에 PATCH 요청을 하고 업데이트할 태그의 ID를 제공하여 지정된 태그를 업데이트할 수 있습니다.
+`/tags` 끝점에 PATCH을 요청하고 업데이트할 태그의 ID를 제공하여 지정된 태그를 업데이트할 수 있습니다.
 
 **API 형식**
 
