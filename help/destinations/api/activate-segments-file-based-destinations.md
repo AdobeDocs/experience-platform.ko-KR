@@ -4,7 +4,7 @@ title: 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로
 description: 흐름 서비스 API를 사용하여 적격 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '4933'
 ht-degree: 4%
@@ -376,7 +376,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![사용자가 켜져 있는 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
-[기본 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)은(는) 대상에 자격 증명을 안전하게 저장합니다. 대상 유형에 따라 해당 대상에 대해 인증하는 데 필요한 자격 증명이 달라질 수 있습니다. 이러한 인증 매개 변수를 찾으려면 먼저 `connection spec`대상을 내보낼 대상 선택[&#x200B; 섹션에 설명된 대로 원하는 대상에 대해 &#x200B;](#select-destination)을(를) 검색한 다음 응답의 `authSpec`을(를) 살펴보십시오. 지원되는 모든 대상의 `authSpec` 속성을 보려면 아래 탭을 참조하십시오.
+[기본 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)은(는) 대상에 자격 증명을 안전하게 저장합니다. 대상 유형에 따라 해당 대상에 대해 인증하는 데 필요한 자격 증명이 달라질 수 있습니다. 이러한 인증 매개 변수를 찾으려면 먼저 `connection spec`대상을 내보낼 대상 선택[ 섹션에 설명된 대로 원하는 대상에 대해 ](#select-destination)을(를) 검색한 다음 응답의 `authSpec`을(를) 살펴보십시오. 지원되는 모든 대상의 `authSpec` 속성을 보려면 아래 탭을 참조하십시오.
 
 >[!BEGINTABS]
 
@@ -2402,7 +2402,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)대상 세부 정보 채우기[!DNL Amazon S3] 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)대상 세부 정보 채우기[!DNL Amazon S3] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2496,7 +2496,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details)대상 세부 정보 채우기[!DNL Azure Blob Storage] 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details)대상 세부 정보 채우기[!DNL Azure Blob Storage] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2590,7 +2590,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 Azure [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details)대상 세부 정보 채우기[!DNL Data Lake Gen 2(ADLS Gen2)] 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 Azure [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details)대상 세부 정보 채우기[!DNL Data Lake Gen 2(ADLS Gen2)] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2683,7 +2683,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details)대상 세부 정보 채우기[!DNL Data Landing Zone] 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details)대상 세부 정보 채우기[!DNL Data Landing Zone] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2776,7 +2776,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [&#x200B; 대상 설명서 페이지의 &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)대상 세부 정보 채우기[!DNL Google Cloud Storage] 섹션을 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [ 대상 설명서 페이지의 ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)대상 세부 정보 채우기[!DNL Google Cloud Storage] 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -4066,7 +4066,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **응답**
 
-+++출력 스키마 만들기 - 응답
++++ 출력 스키마 만들기 - 응답
 
 ```json
 {
@@ -4372,6 +4372,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 응답의 ID는 생성한 입력 스키마의 고유 식별자를 나타냅니다. 이후 단계에서 재사용할 예정이므로 응답에서 ID를 복사합니다.
 
++++
+
 >[!ENDSHADEBOX]
 
 ### 매핑 세트 만들기 {#create-mapping-set}
@@ -4382,7 +4384,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **요청**
 
-+++매핑 세트 만들기 - 요청
++++ 매핑 세트 만들기 - 요청
 
 >[!IMPORTANT]
 >
@@ -4775,7 +4777,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **요청**
 
-+++기존 대상 연결에 파일 매니페스트 추가 - 요청
++++ 기존 대상 연결에 파일 매니페스트 추가 - 요청
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
@@ -4795,6 +4797,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]'
 ```
 
++++
+
 >[!ENDSHADEBOX]
 
 ## 데이터 흐름 유효성 검사(데이터 흐름 실행 가져오기) {#get-dataflow-runs}
@@ -4807,7 +4811,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **요청**
 
-+++데이터 흐름 실행 가져오기 - 요청
++++ 데이터 흐름 실행 가져오기 - 요청
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
@@ -4823,7 +4827,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **응답**
 
-+++데이터 흐름 실행 가져오기 - 응답
++++ 데이터 흐름 실행 가져오기 - 응답
 
 ```json
 {
