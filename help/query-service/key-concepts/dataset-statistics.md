@@ -2,7 +2,7 @@
 title: 데이터 세트 통계 계산
 description: 이 문서에서는 SQL 명령을 사용하여 Azure ADLS(데이터 레이크 저장소) 데이터 세트에 대한 열 수준 통계를 계산하는 방법을 설명합니다.
 exl-id: 66f11cd4-b115-40b8-ba8a-c4bb3606bbbf
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 0%
@@ -62,7 +62,7 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS AS alias_name;
 `COMPUTE STATISTICS` 쿼리의 출력 예는 다음과 같습니다.
 
 ```console
-| Statistics ID         | 
+| Statistics ID         |
 | --------------------- |
 | adc_geometric_stats_1 |
 (1 row)
