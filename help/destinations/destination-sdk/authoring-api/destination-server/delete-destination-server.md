@@ -2,7 +2,7 @@
 description: 이 페이지에서는 Adobe Experience Platform Destination SDK을 통해 기존 대상 서버 구성을 삭제하는 데 사용되는 API 호출을 구현합니다.
 title: 대상 서버 구성 삭제
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 1%
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 ## 대상 서버 구성 삭제 {#delete}
 
-삭제하려는 대상 서버 구성의 [을(를) 사용하여 &#x200B;](create-destination-server.md) 끝점에 대한 `DELETE` 요청을 수행하여 `/authoring/destination-servers`기존`{INSTANCE_ID}` 대상 서버 구성을 삭제할 수 있습니다.
+삭제하려는 대상 서버 구성의 [을(를) 사용하여 ](create-destination-server.md) 끝점에 대한 `DELETE` 요청을 수행하여 `/authoring/destination-servers`기존`{INSTANCE_ID}` 대상 서버 구성을 삭제할 수 있습니다.
 
 >[!TIP]
 >
@@ -50,7 +50,7 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 
 {style="table-layout:auto"}
 
-+++요청
++++ 요청
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -60,9 +60,13 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++응답
++++
+
++++ 응답
 
 성공적인 응답은 빈 HTTP 응답과 함께 HTTP 상태 200을 반환합니다.
+
++++
 
 ## API 오류 처리 {#error-handling}
 
