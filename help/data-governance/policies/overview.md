@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 사용 정책 개요
 description: 데이터 사용 정책은 Adobe Experience Platform 내에서 데이터 수행을 허용하거나 제한하는 마케팅 작업 종류를 설명하는 규칙입니다.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 18%
@@ -52,12 +52,13 @@ ht-degree: 18%
 
 [사용 가능한 Adobe 정의 마케팅 작업](#core-actions) 목록은 이 문서의 부록을 참조하십시오. [!DNL Policy Service] API 또는 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 사용자 지정 마케팅 작업을 정의할 수도 있습니다. 마케팅 작업 및 정책 작업에 대한 자세한 내용은 다음 섹션에 나와 있습니다.
 
-<!-- (Add after AAM DEC mapping doc is published)
+<!-- 
+(Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=ko).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## 데이터 사용 정책 관리 {#manage}
@@ -95,7 +96,7 @@ API에서 마케팅 작업 및 데이터 사용 정책을 사용하는 방법에
 | 크로스 사이트 타겟팅 | 사이트 간 광고 타겟팅에 데이터를 사용하는 작업입니다. 온사이트 데이터와 오프사이트 데이터의 조합 또는 여러 오프사이트 소스의 데이터 조합을 포함하는 여러 사이트의 데이터 조합을 크로스 사이트 데이터라고 합니다. 크로스 사이트 데이터는 일반적으로 사용자의 관심 분야를 추론하기 위해 수집 및 처리됩니다. |
 | 데이터 과학 | 데이터 과학 워크플로에 데이터를 사용하는 작업입니다. 일부 계약에는 데이터 과학을 위한 데이터 사용에 대한 명시적 금지가 포함되어 있습니다. 이는 인공 지능(AI), 머신 러닝(ML) 또는 모델링을 위한 데이터 사용을 금지하는 용어로 표현됩니다. |
 | 데이터 내보내기 | Adobe 제품 및 서비스 외부의 모든 위치 또는 대상으로 데이터를 내보내는 작업입니다. 예를 들어, 데이터를 로컬 시스템으로 다운로드하고, 화면에서 데이터를 복사하고, Adobe, Customer Journey Analytics 예약된 프로젝트, 보고서 다운로드, 보고 API 등의 외부에 데이터 전달을 예약합니다. |
-| 이메일 타겟팅 | 이메일 타겟팅 캠페인에서 데이터를 사용하는 액션입니다. |
+| 이메일 타기팅 | 이메일 타기팅 캠페인에서 데이터를 사용하는 액션입니다. |
 | 서드파티로 내보내기 | 고객과 직접적인 관계가 없는 프로세서 및 엔티티에 데이터를 내보내는 작업입니다. 많은 데이터 공급자는 원래 데이터가 수집되었던 곳에서 데이터를 내보내는 것을 금지하는 조건을 계약서에 포함합니다. 예를 들어, 소셜 네트워크 계약은 종종 수신된 데이터의 전송을 제한합니다. |
 | 온사이트 Advertising | 조직의 웹 사이트 또는 앱에서 광고를 선택하고 게재하는 작업을 포함하여 온사이트 광고에 대한 데이터를 사용하거나 이러한 광고의 전달 및 효과를 측정하는 작업입니다. |
 | 온사이트 Personalization | 온사이트 콘텐츠 개인화에 데이터를 사용하는 작업입니다. 온사이트 개인화는 사용자의 관심 분야를 추론하는 데 사용되는 모든 데이터이며 이러한 추론을 기반으로 어떤 콘텐츠 또는 광고를 제공할지 선택하는 데 사용됩니다. |
