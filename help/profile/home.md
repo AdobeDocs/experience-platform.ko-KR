@@ -2,7 +2,7 @@
 title: 실시간 고객 프로필 개요
 description: Real-Time Customer Profile은 다양한 소스의 데이터를 병합하고 개별 고객 프로필 및 관련 시계열 이벤트의 형태로 해당 데이터에 대한 액세스를 제공합니다. 이 기능을 통해 마케터는 여러 채널에서 대상자와 일관되고, 관련성이 높은 경험을 제공할 수 있습니다.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # [!DNL Real-Time Customer Profile] 개요
 
-Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드와 상호 작용하는지에 관계없이 고객을 위한 조직화되고 일관되며 관련성 높은 경험을 제공할 수 있습니다. [!DNL Real-Time Customer Profile]을(를) 사용하면 온라인, 오프라인, CRM 및 서드파티를 비롯한 여러 채널의 데이터를 결합하여 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. [!DNL Profile]을(를) 사용하면 모든 고객 상호 작용에 대해 실행 가능한 타임스탬프 계정을 제공하는 통합 보기로 고객 데이터를 통합할 수 있습니다. 이 개요는 [!DNL Experience Platform]에서 [!DNL Real-Time Customer Profile]의 역할 및 사용을 이해하는 데 도움이 됩니다.
+Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드와 상호 작용하는지에 관계없이 고객을 위한 조직화되고 일관되며 관련성 높은 경험을 제공할 수 있습니다. [!DNL Real-Time Customer Profile]을(를) 사용하면 온라인, 오프라인, CRM 및 서드파티를 비롯한 여러 채널의 데이터를 결합하여 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. [!DNL Profile]을(를) 사용하면 모든 고객 상호 작용에 대해 실행 가능한 타임스탬프 계정을 제공하는 통합 보기로 고객 데이터를 통합할 수 있습니다. 이 개요는 [!DNL Real-Time Customer Profile]에서 [!DNL Experience Platform]의 역할 및 사용을 이해하는 데 도움이 됩니다.
 
 ## Experience Platform의 [!DNL Profile]
 
@@ -45,7 +45,7 @@ Dimension 및 B2B 엔터티가 **스키마 관계**&#x200B;를 통해 기본 엔
 
 [!DNL Real-Time Customer Profile]이(가) 수집된 데이터를 처리하고 Adobe Experience Platform [!DNL Identity Service]을(를) 사용하여 ID 매핑을 통해 관련 데이터를 병합하지만 [!DNL Profile] 데이터 저장소에 자체 데이터를 유지합니다. [!DNL Profile] 저장소는 데이터 레이크의 카탈로그 데이터와 ID 그래프의 [!DNL Identity Service] 데이터와 별개입니다.
 
-프로필 저장소는 Microsoft Azure Cosmos DB 인프라를 사용하고 Experience Platform 데이터 레이크는 Microsoft Azure 데이터 레이크 저장소를 사용합니다.
+프로필 저장소는 Microsoft Azure Cosmos DB 인프라를 사용하며 Experience Platform 데이터 레이크는 Microsoft Azure 데이터 레이크 스토리지를 사용합니다.
 
 ### 프로필 보호 기능
 
@@ -83,19 +83,21 @@ Experience Platform UI는 일별 스냅샷 중에 캡처한 대로 실시간 고
 
 Experience Platform 내의 병합 정책 및 역할에 대해 자세히 알아보려면 [병합 정책 개요](merge-policies/overview.md)를 읽어 보십시오.
 
-### 유니온 스키마 {#profile-fragments-and-union-schemas}
+### 공용 구조체 스키마 {#profile-fragments-and-union-schemas}
 
 [!DNL Real-Time Customer Profile]의 주요 기능 중 하나는 다중 채널 데이터를 통합하는 기능입니다. [!DNL Real-Time Customer Profile]을(를) 사용하여 엔터티에 액세스하면 여러 데이터 세트에서 해당 엔터티에 대한 모든 프로필 조각의 병합된 보기를 제공할 수 있습니다. &quot;유니온 보기&quot;라고 하며 유니온 스키마라고 하는 것을 통해 가능합니다.
 
 UI의 유니온 스키마에 액세스하는 방법을 포함하여 유니온 스키마에 대한 자세한 내용은 [유니온 스키마 UI 안내서](ui/union-schema.md)를 참조하십시오.
 
-<!-- ### (Alpha) Computed attributes
+<!--
+### (Alpha) Computed attributes
 
 >[!IMPORTANT]
 >
 >Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). 
+-->
 
 ## 프로필 및 대상자
 
