@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API를 사용하여 데이터 세트의 데이터 사용 레이블 관리
 description: 데이터 세트 서비스 API를 사용하면 데이터 세트에 대한 사용 레이블을 적용하고 편집할 수 있습니다. Adobe Experience Platform의 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 카탈로그 서비스 API와 별개입니다.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 1%
@@ -19,9 +19,9 @@ ht-degree: 1%
 >
 >데이터 세트 수준에서 레이블을 적용하는 것은 데이터 거버넌스 사용 사례에 대해서만 지원됩니다. 데이터에 대한 액세스 정책을 만들려면 데이터 집합이 기반으로 하는 [스키마에 레이블을 적용](../../xdm/tutorials/labels.md)해야 합니다. 자세한 내용은 [특성 기반 액세스 제어](../../access-control/abac/overview.md)에 대한 개요를 참조하십시오.
 
-이 문서에서는 [!DNL Dataset Service API]을(를) 사용하여 데이터 세트 및 필드의 레이블을 관리하는 방법을 다룹니다. API 호출을 사용하여 데이터 사용 레이블 자체를 관리하는 방법에 대한 단계는 [!DNL Policy Service API]의 [레이블 끝점 안내서](../api/labels.md)를 참조하십시오.
+이 문서에서는 [!DNL Dataset Service API]을(를) 사용하여 데이터 세트 및 필드의 레이블을 관리하는 방법을 다룹니다. API 호출을 사용하여 데이터 사용 레이블 자체를 관리하는 방법에 대한 단계는 [의 ](../api/labels.md)레이블 끝점 안내서[!DNL Policy Service API]를 참조하십시오.
 
-## 시작하기
+## 시작
 
 이 안내서를 읽기 전에 카탈로그 개발자 안내서의 [시작 섹션](../../catalog/api/getting-started.md)에 설명된 단계에 따라 [!DNL Experience Platform] API를 호출하는 데 필요한 자격 증명을 수집합니다.
 
@@ -105,7 +105,7 @@ PUT /datasets/{DATASET_ID}/labels
 >
 >해당 데이터 세트에 대한 레이블이 현재 있는 경우 새 레이블은 `If-Match` 헤더가 필요한 PUT 요청을 통해서만 추가할 수 있습니다. 레이블이 데이터 집합에 추가되면 나중에 레이블을 업데이트하거나 제거하려면 가장 최근 `etag` 값이 필요합니다.<br>PUT 메서드를 실행하기 전에 데이터 집합 레이블에 대해 GET 요청을 수행해야 합니다. 요청에서 수정할 특정 필드만 업데이트하고 나머지는 그대로 두십시오. 또한 PUT 호출이 GET 호출과 동일한 상위 엔티티를 유지하는지 확인하십시오. 모든 불일치는 고객에게 오류를 발생시킵니다.
 
-데이터 세트 레이블 엔터티의 최신 버전을 검색하려면 `/datasets/{DATASET_ID}/labels` 끝점에 대해 [GET 요청](#look-up)을 만듭니다. 현재 값은 `etag` 헤더 아래의 응답에서 반환됩니다. 기존 데이터 세트 레이블을 업데이트할 때 가장 좋은 방법은 후속 PUT 요청의 `If-Match` 헤더에서 해당 값을 사용하기 전에 최신 `etag` 값을 가져오기 위해 먼저 데이터 세트에 대한 조회 요청을 수행하는 것입니다.
+데이터 세트 레이블 엔터티의 최신 버전을 검색하려면 [ 끝점에 대해 ](#look-up)GET 요청`/datasets/{DATASET_ID}/labels`을 만듭니다. 현재 값은 `etag` 헤더 아래의 응답에서 반환됩니다. 기존 데이터 세트 레이블을 업데이트할 때 가장 좋은 방법은 후속 PUT 요청의 `etag` 헤더에서 해당 값을 사용하기 전에 최신 `If-Match` 값을 가져오기 위해 먼저 데이터 세트에 대한 조회 요청을 수행하는 것입니다.
 
 ```shell
 curl -X POST \
@@ -185,7 +185,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 PUT 작업이 적용되는 아래 데이터 세트에는 속성/개인/속성/주소 필드에 C1 optionalLabel이 있었으며 /properties/person/properties/name/properties/fullName 필드에 C1, C2 optionalLabels가 있었습니다. put 작업 후, 첫 번째 필드에는 레이블이 없고(C1 레이블이 제거됨) 두 번째 필드에는 C1 레이블만 있습니다(C2 레이블이 제거됨)
 
-아래 예제 시나리오에서는 PUT 요청을 사용하여 개별 필드에 추가된 레이블을 제거합니다. 요청이 이루어지기 전에 `fullName` 필드에 `C1` 및 `C2` 레이블이 적용되었으며 `address` 필드에 이미 `C1` 레이블이 적용되었습니다. PUT 요청은 `optionalLabels.labels` 매개 변수를 사용하여 `C1` 레이블로 `fullName` 필드의 기존 레이블 `C1, C2` 레이블을 재정의합니다. 또한 이 요청은 필드 레이블 집합이 비어 있는 `address` 필드의 `C1` 레이블을 재정의합니다.
+아래 예제 시나리오에서는 PUT 요청을 사용하여 개별 필드에 추가된 레이블을 제거합니다. 요청이 이루어지기 전에 `fullName` 필드에 `C1` 및 `C2` 레이블이 적용되었으며 `address` 필드에 이미 `C1` 레이블이 적용되었습니다. PUT 요청은 `C1, C2` 매개 변수를 사용하여 `fullName` 레이블로 `C1` 필드의 기존 레이블 `optionalLabels.labels` 레이블을 재정의합니다. 또한 이 요청은 필드 레이블 집합이 비어 있는 `C1` 필드의 `address` 레이블을 재정의합니다.
 
 ```shell
 curl -X PUT \
