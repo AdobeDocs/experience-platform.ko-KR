@@ -2,7 +2,7 @@
 title: 타사 쿠키 사용
 description: 서드파티 쿠키를 사용하여 방문자를 식별할 수 있습니다.
 exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
-source-git-commit: c6a2b9700f0a688f65fec9febf5622c6c7b6aafa
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 `thirdPartyCookiesEnabled` 속성은 웹 SDK이 서드파티 컨텍스트에서 쿠키를 설정하는지 여부를 결정하는 부울입니다. 이 옵션을 활성화하면 조직이 소유하는 하위 도메인 또는 도메인 간 방문자를 식별하려는 경우 유용합니다. 그러나 많은 최신 브라우저는 서드파티 쿠키의 설정 및 만료를 제한합니다. 방문자의 브라우저가 서드파티 쿠키를 지원하지 않는 경우에는 이 속성은 아무 작업도 수행하지 않습니다.
 
-`thirdPartyCookiesEnabled` 속성은 [`CORE ID`](/help/collection/use-cases/identity/id-overview.md#tracking-coreid-web-sdk) 호출 시 [`getIdentity`](../getidentity.md)을(를) 요청할 수 있는지 여부도 제어합니다.
+`thirdPartyCookiesEnabled` 속성은 [`CORE ID`](/help/collection/identity/overview.md#core-id-and-third-party-identity) 호출 시 [`getIdentity`](../getidentity.md)을(를) 요청할 수 있는지 여부도 제어합니다.
 
 이 옵션이 활성화되면 웹 SDK은 Adobe Audience Manager을 사용하여 방문자를 식별합니다. 이 옵션이 비활성화되면 Audience Manager 호출이 비활성화됩니다. 자세한 내용은 Audience Manager 사용 안내서의 [Demdex 도메인에 대한 호출 이해](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=ko-KR)를 참조하십시오.
 

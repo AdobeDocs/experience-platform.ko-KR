@@ -2,10 +2,10 @@
 title: defaultConsent
 description: 웹 속성에 대한 기본 동의 수집 방법을 설정합니다.
 exl-id: 2a22fa8b-a234-4d3e-9b55-c7482a928fe6
-source-git-commit: 1e272eb18fac2f59f9737756d48947a25573d772
+source-git-commit: bf0bb72777cacd822fd6e887ac3ef71764784214
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 5%
+source-wordcount: '431'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->페이지 로드 사이에 `defaultConsent` 값이 유지되지 않습니다. `configure` 명령을 호출할 때마다 원하는 기본 동의를 설정해야 합니다.
+>페이지 로드 사이에 `defaultConsent` 값이 유지되지 않습니다. `configure` 명령을 호출할 때마다 원하는 기본 동의를 설정해야 합니다. 반대로 방문자의 해결된 동의([`setConsent`](../setconsent.md)을 통해 설정됨)는 쿠키에 유지되고 후속 페이지 로드 시 자동으로 적용됩니다.
 
 ```js
 alloy("configure", {
@@ -40,32 +40,7 @@ alloy("configure", {
 
 ## `defaultConsent`과(와) 함께 `setConsent` 사용 {#using-consent}
 
-웹 SDK은 두 가지 상호 보완적인 동의 옵션을 제공합니다.
-
-* `defaultConsent`(이 페이지): 기본 동의 환경 설정을 결정합니다.
-* [`setConsent`](../setconsent.md): 방문자의 동의 환경 설정을 캡처합니다.
-
-이러한 설정을 함께 사용하면 구성된 값에 따라 데이터 수집 및 쿠키 설정 결과가 달라질 수 있습니다.
-
-동의 설정을 기반으로 데이터 수집이 발생하는 시점과 쿠키가 설정되는 시점을 이해하려면 아래 표를 참조하십시오.
-
-| `defaultConsent` | `setConsent` | 데이터 수집 발생 | 웹 SDK 브라우저 쿠키 설정 |
-|---------|----------|---------|---------|
-| `in` | `in` | 예 | 예 |
-| `in` | `out` | 아니요 | 예 |
-| `in` | 설정되지 않음 | 예 | 예 |
-| `pending` | `in` | 예 | 예 |
-| `pending` | `out` | 아니요 | 예 |
-| `pending` | 설정되지 않음 | 아니요 | 아니요 |
-| `out` | `in` | 예 | 예 |
-| `out` | `out` | 아니요 | 예 |
-| `out` | 설정되지 않음 | 아니요 | 아니요 |
-
-라이브러리에서 설정하는 쿠키 목록은 [Adobe Experience Platform Web SDK 쿠키](https://experienceleague.adobe.com/ko/docs/core-services/interface/data-collection/cookies/web-sdk)를 참조하십시오.
-
->[!NOTE]
->
->ID 및 동의 쿠키는 방문자가 추적을 옵트아웃하는 경우에도 설정됩니다. 이러한 쿠키는 해당 데이터 수집 환경 설정을 준수하는 데 필요합니다.
+`defaultConsent`과(와) `setConsent`을(를) 함께 사용하면 구성된 값에 따라 다른 데이터 수집, 쿠키 설정 및 ID 결과를 생성합니다. 전체 상호 작용 테이블을 보려면 [데이터 수집에서 동의 및 ID](/help/collection/identity/consent.md#how-consent-affects-identity)를 참조하십시오.
 
 ## `gdprApplies`을(를) 기반으로 기본 동의 설정 중
 

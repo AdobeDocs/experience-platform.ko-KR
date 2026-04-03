@@ -2,16 +2,20 @@
 title: getIdentity
 description: 이벤트 데이터를 전송하지 않고 방문자의 ID를 얻습니다.
 exl-id: 28b99f62-14c4-4e52-a5c7-9f6fe9852a87
-source-git-commit: aea46e3804d315c1237fc853540771f1b5c2b767
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 2%
+source-wordcount: '331'
+ht-degree: 1%
 
 ---
 
 # `getIdentity`
 
 [`sendEvent`](sendevent/overview.md) 명령을 실행하면 웹 SDK에서 방문자의 ID가 없는 경우 자동으로 해당 방문자의 ID를 가져옵니다. `getIdentity` 명령을 사용하면 이벤트 데이터를 보내지 않고 방문자 ID를 가져올 수 있습니다. 방문자 ID를 생성하고 데이터를 보내기 위해 별도의 호출이 필요한 경우 이 명령을 사용할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>클라이언트측의 ID 정보가 필요한 경우 `getIdentity`을(를) 사용합니다. ECID를 XDM에 매핑하기만 하면 되는 경우에는 대신 [데이터 수집을 위한 데이터 준비](/help/datastreams/data-prep.md) 또는 [태그 ECID 액세스 지침](/help/tags/extensions/client/web-sdk/accessing-the-ecid.md)을 사용하십시오.
 
 `getIdentity` 명령은 다음 흐름을 통해 `ECID`을(를) 검색합니다.
 

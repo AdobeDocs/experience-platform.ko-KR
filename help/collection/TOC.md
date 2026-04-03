@@ -6,10 +6,10 @@ breadcrumb-title: 데이터 수집
 user-guide-description: Adobe Experience Platform에 데이터를 전송하는 방법에 대해 알아봅니다.
 feature: Data Collection
 role: Developer
-source-git-commit: c848f821ea911c82531c6784a17df0116572cd86
+source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 36%
+source-wordcount: '167'
+ht-degree: 33%
 
 ---
 
@@ -18,6 +18,15 @@ ht-degree: 36%
 
 + [개요](home.md)
 + [권한](permissions.md)
++ ID {#identity}
+   + [개요](identity/overview.md)
+   + [identityMap 사용](identity/identity-map.md)
+   + [자사 디바이스 ID](identity/fpid.md)
+   + [도메인 간 공유](identity/cross-domain-sharing.md)
+   + [모바일 앱을 모바일 웹/웹 보기로 변환](identity/mobile-to-web.md)
+   + [통합 ID 지원](identity/unified-identity-support.md)
+   + [동의 및 ID](identity/consent.md)
+   + [문제 해결](identity/troubleshooting.md)
 + BrightScript {#brightscript}
    + [BrightScript 개요](brightscript/brs-overview.md)
 + JavaScript {#js}
@@ -99,10 +108,6 @@ ht-degree: 36%
    + [CSP 구성](use-cases/configuring-a-csp.md)
    + [디버깅](use-cases/debugging.md)
    + [이벤트 중복 제거](use-cases/event-duplication.md)
-   + ID {#identity}
-      + [개요](use-cases/identity/id-overview.md)
-      + [자사 디바이스 ID](use-cases/identity/first-party-device-ids.md)
-      + [ID 공유](use-cases/identity/id-sharing.md)
    + MCP {#mcp}
       + [ChatGPT 앱](use-cases/mcp/chatgpt.md)
    + [여러 SDK 인스턴스](use-cases/multiple-instances.md)

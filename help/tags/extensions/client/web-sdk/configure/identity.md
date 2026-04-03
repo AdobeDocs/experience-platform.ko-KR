@@ -2,10 +2,10 @@
 title: ID 구성 설정
 description: 태그 확장 기능이 방문자를 식별하는 방법을 정의합니다.
 exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 9%
+source-wordcount: '265'
+ht-degree: 10%
 
 ---
 
@@ -35,7 +35,3 @@ ht-degree: 9%
 ## [!UICONTROL Use third-party cookies]
 
 이 옵션이 활성화되면 웹 SDK은 사용자 ID를 서드파티 쿠키에 저장하려고 합니다. 성공하면 사용자는 각 도메인에서 별도의 사용자로 식별되지 않고 여러 도메인을 탐색할 때 단일 사용자로 식별됩니다. 이 옵션이 활성화된 경우, 브라우저가 서드파티 쿠키를 지원하지 않거나 사용자가 서드파티 쿠키를 허용하지 않도록 구성한 경우 SDK은 여전히 사용자 식별자를 서드파티 쿠키에 저장하지 못할 수 있습니다. 이 경우 SDK은 식별자를 자사 도메인에만 저장합니다. 이 확인란에 해당하는 JavaScript 라이브러리는 [`thirdPartyCookiesEnabled`](/help/collection/js/commands/configure/thirdpartycookiesenabled.md)입니다.
-
->[!IMPORTANT]
->
->타사 쿠키는 Web SDK의 [자사 장치 ID](/help/collection/use-cases/identity/first-party-device-ids.md) 기능과 호환되지 않습니다. 자사 디바이스 ID를 사용하거나 서드파티 쿠키를 사용할 수 있습니다. 두 기능을 동시에 사용할 수는 없습니다.

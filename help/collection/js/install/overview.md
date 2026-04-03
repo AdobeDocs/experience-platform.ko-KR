@@ -3,7 +3,7 @@ title: 웹 SDK 설치 개요
 description: Experience Platform 웹 SDK을 설치하는 방법을 알아봅니다.
 keywords: web sdk 설치;web sdk 설치;internet explorer;promise;npm 패키지
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: a490c429047f5e5997d69f30a51e6b78debe2d5d
+source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
@@ -24,4 +24,4 @@ Adobe Experience Platform Web SDK을 사용하는 방법에는 세 가지가 있
 
 * Adobe Experience Platform의 아키텍처를 먼저 구성해야 합니다. 이러한 설정에는 필요한 스키마, ID 및 데이터스트림이 포함됩니다.
 * 적절한 도구에 액세스하려면 적절한 권한이 구성되어 있어야 합니다. 예를 들어 조직에서 태그 확장을 사용하려는 경우 데이터 수집 UI에 액세스할 수 있는 올바른 권한이 있어야 합니다. 자세한 내용은 [데이터 수집 권한](../../permissions.md)을 참조하세요.
-* 자사 도메인(CNAME)을 사용하는 것이 좋습니다. Adobe Analytics용 CNAME이 이미 있는 경우 해당 CNAME을 사용할 수 있습니다. 개발의 테스트는 CNAME 없이 작동하지만 Adobe은 프로덕션에 게시하기 전에 테스트를 하는 것을 권장합니다. 자세한 내용은 [자사 장치 ID](../../use-cases/identity/first-party-device-ids.md)를 참조하십시오.
+* 자사 도메인(CNAME)을 사용하는 것이 좋습니다. Adobe Analytics용 CNAME이 이미 있는 경우 해당 CNAME을 사용할 수 있습니다. 개발의 테스트는 CNAME 없이 작동하지만 Adobe은 프로덕션에 게시하기 전에 테스트를 하는 것을 권장합니다. 자세한 내용은 [자사 장치 ID](../../identity/fpid.md)를 참조하십시오.
