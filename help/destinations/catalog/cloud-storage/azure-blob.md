@@ -2,7 +2,7 @@
 title: Azure Blob 연결
 description: Azure Blob 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 CSV 데이터 파일을 정기적으로 내보냅니다.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 7%
