@@ -2,7 +2,7 @@
 title: 탐색적 데이터 분석
 description: Data Distiller을 사용하여 Python 노트북에서 데이터를 탐색하고 분석하는 방법에 대해 알아봅니다.
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 13%
@@ -103,9 +103,9 @@ print(f"Approximate count: {approx_count} using {sampling_rate *10}% sample")
 Approximate count: 1284600.0 using 5.0% sample
 ```
 
-## 이메일 단계 분석 {#email-funnel-analysis}
+## 이메일 funnel 분석 {#email-funnel-analysis}
 
-단계 분석은 목표 결과에 도달하는 데 필요한 단계와 이러한 각 단계를 통과하는 사용자 수를 이해하는 방법입니다. 아래 예제는 뉴스레터를 구독하는 사용자에게 연결되는 단계를 간단하게 분석하는 방법을 보여 줍니다. 구독 결과가 이벤트 유형 `web.formFilledOut`(으)로 표시됩니다.
+funnel 분석은 목표 결과에 도달하는 데 필요한 단계와 이러한 각 단계를 통과하는 사용자 수를 이해하는 방법입니다. 아래 예제는 뉴스레터를 구독하는 사용자로 이어지는 단계를 간단하게 funnel에서 분석하는 것입니다. 구독 결과가 이벤트 유형 `web.formFilledOut`(으)로 표시됩니다.
 
 먼저 쿼리를 실행하여 각 단계의 사용자 수를 가져옵니다.
 
@@ -152,7 +152,7 @@ fig.show()
 
 **샘플 출력**
 
-![eventType 전자 메일 단계의 인포그래픽입니다.](../../images/data-distiller/email-funnel.png)
+![eventType 전자 메일 funnel의 인포그래픽입니다.](../../images/data-distiller/email-funnel.png)
 
 ## 이벤트 상관 관계 {#event-correlations}
 
@@ -234,7 +234,7 @@ corrdf.fillna(0)
 
 **샘플 출력**:
 
-|    | 변수 | 값 | 기능 | pearsonCorrelation |
+|    | 변수 | value | 기능 | pearsonCorrelation |
 | --- | ---  |  ---  |  ---  | --- |
 | 0 | `webForms_EmailOpens` | 0.218874 | 이메일 열람수 | 0.218874 |
 | 1 | `webForms_advertisingClicks` | 0.026805 | advertisingClicks | 0.026805 |
@@ -262,4 +262,4 @@ ax.set_title("Pearson Correlation of Events with the outcome event")
 
 ## 다음 단계
 
-이 문서를 읽고 Data Distiller을 사용하여 [!DNL Python] 전자 필기장의 데이터를 탐색하고 분석하는 방법을 배웠습니다. Experience Platform에서 머신 러닝 환경의 피드 사용자 지정 모델까지 기능 파이프라인을 만드는 다음 단계는 [머신 러닝용 기능 엔지니어](./feature-engineering.md)입니다.
+이 문서를 읽고 Data Distiller을 사용하여 [!DNL Python] 전자 필기장의 데이터를 탐색하고 분석하는 방법을 배웠습니다. Experience Platform에서 머신 러닝 환경에서 사용자 지정 모델을 피드하기 위한 기능 파이프라인을 만드는 다음 단계는 [머신 러닝용 기능 엔지니어](./feature-engineering.md)입니다.
