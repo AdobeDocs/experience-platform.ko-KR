@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 66084e9847cca7ce6afd6a5b8c67689c9deef580
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '2293'
 ht-degree: 16%
@@ -14,7 +14,7 @@ ht-degree: 16%
 
 >[!BEGINSHADEBOX]
 
-Adobe Journey Optimizer 고객인 경우 해당 컨텍스트에서 대상 구성 작업에 대한 자세한 내용은 Adobe Journey Optimizer 설명서의 [대상 구성 시작 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=ko)를 참조하십시오.
+Adobe Journey Optimizer 고객인 경우 해당 컨텍스트에서 대상 구성 작업에 대한 자세한 내용은 Adobe Journey Optimizer 설명서의 [대상 구성 시작 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html)를 참조하십시오.
 
 >[!ENDSHADEBOX]
 
@@ -135,7 +135,7 @@ Adobe Journey Optimizer 고객인 경우 해당 컨텍스트에서 대상 구성
 
 ![제외 옵션을 선택했습니다.](../images/ui/audience-composition/add-exclude-block.png)
 
-**[!UICONTROL Exclude]** 블록이 추가되었습니다. 이 블록을 선택하면 제외에 대한 세부 정보가 오른쪽 레일에 표시됩니다. 여기에는 블록의 레이블 및 제외 유형이 포함됩니다. 대상별로 [또는 특성별로 &#x200B;](#exclude-audience)을(를) 제외할 수 있습니다[.](#exclude-attribute)
+**[!UICONTROL Exclude]** 블록이 추가되었습니다. 이 블록을 선택하면 제외에 대한 세부 정보가 오른쪽 레일에 표시됩니다. 여기에는 블록의 레이블 및 제외 유형이 포함됩니다. 대상별로 [또는 특성별로 ](#exclude-audience)을(를) 제외할 수 있습니다[.](#exclude-attribute)
 
 ![사용 가능한 두 가지 제외 유형을 강조 표시하는 제외 블록입니다.](../images/ui/audience-composition/exclude.png)
 
@@ -160,7 +160,7 @@ Adobe Journey Optimizer 고객인 경우 해당 컨텍스트에서 대상 구성
 >title="속성별 제외"
 >abstract="속성별로 제외하면 선택한 속성에 따라 특정 프로필이 컴포지션에 나타나지 않도록 제외할 수 있습니다."
 
-특성별로 제외하는 경우 ![&#x200B; 섹션 내에서 &#x200B;](/help/images/icons/project-edit.png)필터&#x200B;**[!UICONTROL Exclusion rule]** 아이콘을 선택하여 제외할 특성을 선택할 수 있습니다. 속성을 제외하면 이 속성을 포함하는 모든 프로필을 결과 대상자에서 제외할 수 있습니다.
+특성별로 제외하는 경우 ![ 섹션 내에서 ](/help/images/icons/project-edit.png)필터&#x200B;**[!UICONTROL Exclusion rule]** 아이콘을 선택하여 제외할 특성을 선택할 수 있습니다. 속성을 제외하면 이 속성을 포함하는 모든 프로필을 결과 대상자에서 제외할 수 있습니다.
 
 ![특성 섹션이 강조 표시되어 제외할 특성을 선택할 위치를 표시합니다.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -244,7 +244,8 @@ Adobe Journey Optimizer 고객인 경우 해당 컨텍스트에서 대상 구성
 
 ![추가하려는 데이터 보강 특성이 강조 표시됩니다.](../images/ui/audience-composition/select-enrichment-attribute.png)
 
-<!-- ## [!UICONTROL Join] {#join-block}
+<!-- 
+## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
 
@@ -262,7 +263,8 @@ After selecting **[!UICONTROL Add Audience]**, a list of audiences appears. Sele
 
 Your selected audiences now appear within the right rail when the **[!UICONTROL Join]** block is selected. 
 
-![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) -->
+![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) 
+-->
 
 ## [!UICONTROL Rank] {#rank-block}
 
