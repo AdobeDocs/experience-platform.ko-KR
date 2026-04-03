@@ -2,7 +2,7 @@
 title: (회사) LinkedIn 연결
 description: 이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대한 계정 대상자를 활성화할 수 있습니다. 해시된 이메일을 기반으로 대상자 타겟팅, 개인화 및 억제에 대한 LinkedIn 캠페인에 대한 프로필을 활성화합니다.
 exl-id: 68d2cca3-952b-49d0-8ea2-e776a233b752
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 6%
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->[의 &#x200B;](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Business[&#x200B; 및 &#x200B;](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Person[!DNL Real-Time Customer Data Platform] 에디션을 구매하는 회사는 (회사) LinkedIn 대상에 계정 대상을 활성화할 수 있습니다.
+>[의 ](/help/rtcdp/overview.md#rtcdp-b2b)Business-to-Business[ 및 ](/help/rtcdp/overview.md#rtcdp-b2p)Business-to-Person[!DNL Real-Time Customer Data Platform] 에디션을 구매하는 회사는 (회사) LinkedIn 대상에 계정 대상을 활성화할 수 있습니다.
 
 이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대해 [계정 대상](/help/segmentation/types/account-audiences.md)을 활성화하십시오. **[!UICONTROL (Companies) LinkedIn]** Business-to-Business 대상을 통해 대상 계정의 관련 담당자 및 역할에 알립니다. LinkedIn 설명서를 방문하여 [LinkedIn 플랫폼에서 계정 타깃팅에 대해 자세히 알아보세요](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting).
 
@@ -80,7 +80,7 @@ ht-degree: 6%
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 [!DNL (Companies) LinkedIn Matched Audiences] 대상을 찾은 다음 **[!UICONTROL Set Up]**&#x200B;을(를) 선택하십시오.
-2. **[!UICONTROL Connect to destination]**&#x200B;를 선택합니다.
+2. **[!UICONTROL Connect to destination]**를 선택합니다.
    ![LinkedIn 인증](/help/destinations/assets/catalog/social/linkedin-b2b/authenticate-linkedin-destination.png)
 3. LinkedIn 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 
