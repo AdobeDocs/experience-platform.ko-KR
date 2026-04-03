@@ -2,7 +2,7 @@
 title: 속성 분석
 description: 이 문서에서는 쿼리 서비스를 사용하여 첫 번째 및 마지막 터치의 마케팅 속성 모델을 기반으로 마케팅 효율성 측정 기법을 만드는 방법을 설명합니다.
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -19,10 +19,10 @@ ht-degree: 0%
 
 * [보고서 세트 데이터 개요용 Adobe Analytics 소스 커넥터](../../sources/connectors/adobe-applications/mapping/analytics.md).
 * [Analytics 필드 매핑 설명서](../../sources/connectors/adobe-applications/mapping/analytics.md)에서 쿼리 서비스에 사용할 분석 데이터를 수집 및 매핑하는 방법에 대한 자세한 정보를 제공합니다.
-* [Attribution IQ 개요](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ko)
-* [Adobe Analytics 속성 패널 안내서](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=ko).
+* [Attribution IQ 개요](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [Adobe Analytics 속성 패널 안내서](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
 
-`OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](../sql/adobe-defined-functions.md#window-functions)에 있습니다. [Adobe 마케팅 및 Commerce 용어 용어집](https://business.adobe.com/kr/glossary/index.html)도 사용할 수 있습니다.
+`OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](../sql/adobe-defined-functions.md#window-functions)에 있습니다. [Adobe 마케팅 및 Commerce 용어 용어집](https://business.adobe.com/glossary/index.html)도 사용할 수 있습니다.
 
 다음 각 사용 사례에 대해 사용자 정의할 템플릿으로 매개 변수가 있는 SQL 쿼리 예제가 제공됩니다. 평가하려는 SQL 예제에 `{ }`이(가) 표시되는 모든 위치에 매개 변수를 제공합니다.
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 | 매개변수 | 설명 |
 | ---------- | ----------- |
-| `{NAME}` | Azure Data Factory(ADF)에 레이블로 입력한 `{CHANNEL_NAME}`입니다. |
+| `{NAME}` | ADF(Azure Data Factory)에서 레이블로 입력한 `{CHANNEL_NAME}`입니다. |
 | `{VALUE}` | 지정된 `{CHANNEL_VALUE}` 간격 내의 마지막 터치인 `{EXP_TIMEOUT}`의 값 |
 | `{TIMESTAMP}` | 마지막 터치가 발생한 [!DNL Experience Event]의 타임스탬프 |
 | `{FRACTION}` | 소수 값으로 표현되는 마지막 터치 속성입니다. |
