@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 UI 안내서
 description: Adobe Experience Platform UI에서 대상 및 세그먼트 정의를 만들고 관리하는 방법을 알아봅니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 2%
+source-wordcount: '1028'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 [!DNL Adobe Experience Platform Segmentation Service]은(는) 대상 및 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 
-## 시작하기
+## 시작
 
 대상 및 세그먼트 정의를 사용하여 작업하려면 세그먼테이션과 관련된 다양한 [!DNL Experience Platform] 서비스를 이해해야 합니다. 이 사용 안내서를 읽기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
@@ -31,15 +31,15 @@ ht-degree: 2%
 
 ## 개요
 
-Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 대상]**&#x200B;을(를) 선택하여 [!UICONTROL 대상] 대시보드를 표시하는 **[!UICONTROL 개요]** 탭을 엽니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Audiences]**&#x200B;을(를) 선택하여 **[!UICONTROL Overview]** 대시보드를 표시하는 [!UICONTROL Audiences] 탭을 엽니다.
 
 >[!NOTE]
 >
->조직이 Experience Platform을 처음 사용하고 아직 활성 프로필 데이터 세트 또는 병합 정책을 만들지 않은 경우 [!UICONTROL 대상] 대시보드가 표시되지 않습니다. 대신 [!UICONTROL 개요] 탭에 대상자를 시작하는 데 도움이 되는 링크와 설명서가 표시됩니다.
+>조직이 Experience Platform을 처음 사용하고 아직 활성 프로필 데이터 세트 또는 병합 정책을 만들지 않은 경우 [!UICONTROL Audiences] 대시보드가 표시되지 않습니다. 대신 [!UICONTROL Overview] 탭에는 대상을 시작하는 데 도움이 되는 링크와 설명서가 표시됩니다.
 
-### [!UICONTROL 대상자] 대시보드 {#segments-dashboard}
+### [!UICONTROL Audiences] 대시보드 {#segments-dashboard}
 
-**[!UICONTROL 대상]** 대시보드는 조직의 대상 데이터와 관련된 주요 지표를 간략하게 설명합니다.
+**[!UICONTROL Audiences]** 대시보드는 조직의 대상 데이터와 관련된 주요 지표를 간략하게 설명합니다.
 
 자세한 내용은 [대상자 대시보드 가이드](../../dashboards/guides/audiences.md)를 참조하세요.
 
@@ -47,15 +47,15 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 대상]**&#x200B;을
 
 ## 찾아보기 {#browse}
 
-대상 포털을 보려면 **[!UICONTROL 찾아보기]** 탭을 선택하십시오. Audience Portal은 조직 및 샌드박스에 속하는 모든 Audiences 목록을 제공하며 프로필 수, 원본, 생성 날짜, 마지막 수정 날짜, 태그 및 분류와 같은 세부 정보를 포함합니다.
+대상 포털을 보려면 **[!UICONTROL Browse]** 탭을 선택하십시오. Audience Portal은 조직 및 샌드박스에 속하는 모든 Audiences 목록을 제공하며 프로필 수, 원본, 생성 날짜, 마지막 수정 날짜, 태그 및 분류와 같은 세부 정보를 포함합니다.
 
 또한 대상 포털을 사용하면 세그먼트 빌더 또는 대상 구성을 사용하여 새 대상을 만들 수 있을 뿐만 아니라 외부에서 생성된 대상을 Experience Platform으로 가져올 수 있습니다.
 
 Audience Portal에 대한 자세한 내용은 [Audience Portal 개요](./audience-portal.md)를 참조하십시오.
 
-## 구성 {#compositions}
+## 컴포지션 {#compositions}
 
-조직의 대상 구성을 통해 생성된 모든 대상 목록을 보려면 **[!UICONTROL 구성]** 탭을 선택하십시오.
+조직의 대상 구성을 통해 생성된 모든 대상 목록을 보려면 **[!UICONTROL Compositions]** 탭을 선택하십시오.
 
 ![조직의 대상 구성에서 만든 대상 목록입니다.](../images/ui/overview/compositions.png)
 
@@ -78,19 +78,19 @@ Audience Portal에 대한 자세한 내용은 [Audience Portal 개요](./audienc
 ![컴포지션 섹션에 표시할 수 있는 특성입니다.](../images/ui/overview/compositions-customize-table.png)
 
 | 필드 | 설명 |
-| ----- | ----------- | 
-| [!UICONTROL 이름] | 대상자의 이름입니다. |
-| [!UICONTROL 상태] | 대상의 상태입니다. 이 필드에 사용할 수 있는 값은 `Draft`, `Inactive` 및 `Published`입니다. |
-| [!UICONTROL 생성일] | 대상자가 생성된 시간과 날짜. |
-| [!UICONTROL 만든 사람] | 대상을 만든 사람의 이름입니다. |
-| [!UICONTROL 업데이트됨] | 대상자가 마지막으로 업데이트된 시간 및 날짜입니다. |
-| [!UICONTROL 업데이트한 사람] | 대상자를 마지막으로 업데이트한 사람의 이름입니다. |
+| ----- | ----------- |
+| [!UICONTROL Name] | 대상자의 이름입니다. |
+| [!UICONTROL Status] | 대상의 상태입니다. 이 필드에 사용할 수 있는 값은 `Draft`, `Inactive` 및 `Published`입니다. |
+| [!UICONTROL Created] | 대상자가 생성된 시간과 날짜. |
+| [!UICONTROL Created by] | 대상을 만든 사람의 이름입니다. |
+| [!UICONTROL Updated] | 대상자가 마지막으로 업데이트된 시간 및 날짜입니다. |
+| [!UICONTROL Updated by] | 대상자를 마지막으로 업데이트한 사람의 이름입니다. |
 
-대상자가 구성되는 방식을 보려면 [!UICONTROL 대상자] 탭에서 대상자의 이름을 선택하십시오.
+대상자가 구성되는 방식을 보려면 [!UICONTROL Audiences] 탭에서 대상자의 이름을 선택하십시오.
 
 대상을 구성하는 빌딩 블록이 포함된 [대상 구성] 페이지가 나타납니다. 대상 구성을 사용하는 방법에 대한 자세한 내용은 [대상 구성 UI 안내서](./audience-composition.md)를 참조하십시오.
 
-## 페더레이션된 대상자 구성 {#fac}
+## 페더레이션된 대상자 컴포지션 {#fac}
 
 대상 구성 및 세그먼트 정의 외에 Adobe Federated Audience Composition을 사용하여 기본 데이터를 복사하지 않고 Enterprise 데이터 세트에서 새 대상을 작성하고 이러한 대상을 Adobe Experience Platform Audience Portal에 저장할 수 있습니다. Enterprise Data Warehouse에서 페더레이션된 구성된 대상 데이터를 활용하여 Adobe Experience Platform의 기존 대상을 강화할 수도 있습니다. [Federated Audience Composition](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)에 대한 안내서를 읽어 보십시오.
 
