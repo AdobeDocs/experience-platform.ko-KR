@@ -3,7 +3,7 @@ title: 폴더 끝점
 description: Adobe Experience Platform API를 사용하여 폴더를 만들고, 업데이트하고, 관리하고, 삭제하는 방법에 대해 알아봅니다.
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
-source-git-commit: 78aa48701abaadea963b25e390aa96d7b31386f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 4%
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 이 안내서에서는 폴더를 더 잘 이해하는 데 도움이 되는 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 
-## 시작하기
+## 시작
 
 계속하기 전에 [시작 안내서](./getting-started.md)에서 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
 
@@ -185,7 +185,7 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
 
 ## 특정 폴더 검색 {#get}
 
-`/folder` 끝점에 대한 GET 요청을 만들고 폴더 유형 및 폴더의 ID를 지정하여 조직에 속하는 특정 폴더를 검색할 수 있습니다.
+`/folder` 끝점에 대한 GET 요청을 만들고 폴더 유형 및 폴더 ID를 지정하여 조직에 속하는 특정 폴더를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -271,7 +271,7 @@ GET /folders/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 **요청**
 
-+++특정 폴더의 유효성을 검사하는 샘플 요청
++++특정 폴더의 유효성을 검사하기 위한 샘플 요청
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
@@ -316,7 +316,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 ## 특정 폴더 업데이트 {#update}
 
-`/folder` 끝점에 대한 PATCH 요청을 하고 폴더 유형과 폴더 ID를 지정하여 조직에 속한 특정 폴더의 세부 정보를 업데이트할 수 있습니다.
+`/folder` 끝점에 대한 PATCH 요청을 만들고 폴더 유형 및 폴더 ID를 지정하여 조직에 속한 특정 폴더의 세부 정보를 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -378,7 +378,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 ## 특정 폴더 삭제 {#delete}
 
-`/folder`에 DELETE 요청을 하고 폴더 유형 및 폴더의 ID를 지정하여 조직에 속한 특정 폴더를 삭제할 수 있습니다.
+`/folder`에 DELETE을 요청하고 폴더 유형 및 폴더 ID를 지정하여 조직에 속한 특정 폴더를 삭제할 수 있습니다.
 
 ***API 형식**
 
