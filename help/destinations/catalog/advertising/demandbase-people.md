@@ -2,7 +2,7 @@
 title: Demandbase 사용자 연결
 description: 이 대상을 사용하여 마케팅 및 판매의 다른 다운스트림 사용 사례에서 대상을 활성화하고 Demandbase 타사 데이터로 대상자를 보강합니다.
 exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 4%
