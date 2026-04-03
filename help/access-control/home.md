@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: da3328e58b9009d80fea1c84e79fb14c9cc1ecf2
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3279'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # 액세스 제어 개요
 
-Adobe Experience Platform에 대한 액세스 제어는 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 &#x200B;](https://experience.adobe.com/)을(를) 통해 제공됩니다. 이 기능은 권한 및 샌드박스를 사용자와 연결하는 역할 및 정책을 활용합니다.
+Adobe Experience Platform에 대한 액세스 제어는 **[!UICONTROL Permissions]** Adobe Experience Cloud[의 ](https://experience.adobe.com/)을(를) 통해 제공됩니다. 이 기능은 권한 및 샌드박스를 사용자와 연결하는 역할 및 정책을 활용합니다.
 
 ## 액세스 제어 계층 및 워크플로
 
-Experience Platform에 대한 액세스 제어를 구성하려면 Experience Platform 제품이 있는 조직에 대한 시스템 또는 제품 관리자 권한이 있어야 합니다. 권한을 부여하거나 철회할 수 있는 최소 역할은 제품 관리자입니다. 권한을 관리할 수 있는 다른 관리자 역할은 시스템 관리자(제한 없음)입니다. 자세한 내용은 [관리 역할](https://helpx.adobe.com/kr/enterprise/using/admin-roles.html)에 대한 Adobe 도움말 센터 문서를 참조하십시오.
+Experience Platform에 대한 액세스 제어를 구성하려면 Experience Platform 제품이 있는 조직에 대한 시스템 또는 제품 관리자 권한이 있어야 합니다. 권한을 부여하거나 철회할 수 있는 최소 역할은 제품 관리자입니다. 권한을 관리할 수 있는 다른 관리자 역할은 시스템 관리자(제한 없음)입니다. 자세한 내용은 [관리 역할](https://helpx.adobe.com/enterprise/using/admin-roles.html)에 대한 Adobe 도움말 센터 문서를 참조하십시오.
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Configurations] | 모델 구성에 대한 읽기 전용 액세스 권한. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Manage Adobe Mix Modeler Models Plans Configurations] | 계획 구성을 보고 수정하는 기능입니다. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Plans Configurations] | 계획 구성에 대한 읽기 전용 액세스 권한. |
-| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | [[!DNL [AI assistant]]](../ai-assistant/access.md)개의 질문을 할 수 있습니다. |
+| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | [!DNL [AI assistant]](../ai-assistant/access.md)개의 질문을 할 수 있습니다. |
 | [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | [operational insights](../ai-assistant/home.md##operational-insights) 쿼리에 대한 응답을 얻을 수 있는 액세스 권한. |
 | [!DNL AI Assistant] | [!UICONTROL Generate Content] | 사용자가 [!DNL AI Assistant]을(를) 사용하여 콘텐츠를 생성할 수 있도록 설정하십시오. |
 | [!DNL AI Assistant] | [!UICONTROL Manage Brand Kit] | 사용자가 [!DNL AI Assistant]을(를) 사용하여 브랜드 지침을 만들 수 있도록 합니다. |
