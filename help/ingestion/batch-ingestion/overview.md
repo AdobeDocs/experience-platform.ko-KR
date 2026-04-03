@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 일괄 처리 수집 API 개요
 description: 'Adobe Experience Platform 일괄 처리 수집 API 를 사용하면 데이터를 Experience Platform에 일괄 처리 파일로 수집할 수 있습니다. 수집되는 데이터는 CRM 시스템의 플랫 파일(예: Parquet 파일)의 프로필 데이터이거나 Experience Data Model(XDM) 레지스트리의 알려진 스키마를 준수하는 데이터일 수 있습니다.'
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: dace7bc2f7940748422628b62f0f57854036ad3f
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 4%
@@ -60,7 +60,7 @@ Adobe Experience Platform 일괄 처리 수집 API 를 사용하면 데이터를
 
 아래 표는 데이터 수집 시 지원되는 전환을 보여 줍니다.
 
-| 인바운드(행)와 대상(열) | 문자열 | 바이트 | 짧음 | 정수 | Long | 더블 | Date | 날짜-시간 | 오브젝트 | 맵 |
+| 인바운드(행)와 대상(열) | 문자열 | 바이트 | 짧음 | 정수 | Long | 더블 | 일자 | 날짜-시간 | 오브젝트 | 맵 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 문자열 | X | X | X | X | X | X | X | X |   |   |
 | 바이트 | X | X | X | X | X | X |   |   |   |   |
@@ -68,7 +68,7 @@ Adobe Experience Platform 일괄 처리 수집 API 를 사용하면 데이터를
 | 정수 | X | X | X | X | X | X |   |   |   |   |
 | Long | X | X | X | X | X | X | X | X |   |   |
 | 더블 | X | X | X | X | X | X |   |   |   |   |
-| Date |   |   |   |   |   |   | X |   |   |   |
+| 일자 |   |   |   |   |   |   | X |   |   |   |
 | 날짜-시간 |   |   |   |   |   |   |   | X |   |   |
 | 오브젝트 |   |   |   |   |   |   |   |   | X | X |
 | 맵 |   |   |   |   |   |   |   |   | X | X |
