@@ -14,7 +14,7 @@ ht-degree: 16%
 
 >[!BEGINSHADEBOX]
 
-Adobe Journey Optimizer 고객인 경우 해당 컨텍스트에서 대상 구성 작업에 대한 자세한 내용은 Adobe Journey Optimizer 설명서의 [대상 구성 시작 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html)를 참조하십시오.
+Adobe Journey Optimizer 고객인 경우 해당 컨텍스트에서 대상 구성 작업에 대한 자세한 내용은 Adobe Journey Optimizer 설명서의 [대상 구성 시작 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=ko)를 참조하십시오.
 
 >[!ENDSHADEBOX]
 

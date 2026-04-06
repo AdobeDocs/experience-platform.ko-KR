@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # 쿼리 서비스의 Adobe 정의 SQL 함수
 
-Adobe 정의 함수(여기서는 ADF라고 함)는 [!DNL Experience Event] 데이터에 대해 일반적인 비즈니스 관련 작업을 수행하는 데 도움이 되는 Adobe Experience Platform Query Service의 미리 빌드된 함수입니다. 여기에는 Adobe Analytics에 있는 것과 같은 [세션화](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) 및 [속성](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)에 대한 함수가 포함됩니다.
+Adobe 정의 함수(여기서는 ADF라고 함)는 [!DNL Experience Event] 데이터에 대해 일반적인 비즈니스 관련 작업을 수행하는 데 도움이 되는 Adobe Experience Platform Query Service의 미리 빌드된 함수입니다. 여기에는 Adobe Analytics에 있는 것과 같은 [세션화](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=ko) 및 [속성](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=ko)에 대한 함수가 포함됩니다.
 
 이 문서에서는 [!DNL Query Service]에서 사용할 수 있는 Adobe 정의 함수에 대한 정보를 제공합니다.
 
@@ -47,7 +47,7 @@ OVER ({PARTITION} {ORDER} {FRAME})
 
 이러한 그룹화 또는 데이터 세션화는 이벤트를 연결하여 고객 경험에 대한 더 많은 컨텍스트를 발견하는 데 도움이 됩니다.
 
-Adobe Analytics의 세션화에 대한 자세한 내용은 [컨텍스트 인식 세션](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)에 대한 설명서를 참조하십시오.
+Adobe Analytics의 세션화에 대한 자세한 내용은 [컨텍스트 인식 세션](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=ko)에 대한 설명서를 참조하십시오.
 
 **쿼리 구문**
 
