@@ -49,8 +49,8 @@ ht-degree: 1%
 
 - [Analytics 소스 커넥터](../../sources/tutorials/ui/create/adobe-applications/analytics.md)를 사용하는 Adobe Analytics 데이터
 - [Audience Manager 소스 커넥터](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)를 사용하는 Adobe Audience Manager 데이터
-- [경험 이벤트 데이터 세트](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=ko)
-- [고객 경험 이벤트 데이터 세트](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=ko#cee-schema)
+- [경험 이벤트 데이터 세트](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
+- [고객 경험 이벤트 데이터 세트](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
 각 데이터 세트가 ECID와 같은 동일한 ID 유형(네임스페이스)을 공유하는 경우 서로 다른 소스에서 여러 데이터 세트를 추가할 수 있습니다. 여러 데이터 세트를 추가하는 방법에 대한 자세한 내용은 [Customer AI 사용 안내서](../customer-ai/user-guide/configure.md)를 참조하십시오.
 

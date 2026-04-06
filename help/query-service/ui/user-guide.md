@@ -314,7 +314,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >비디오에 표시된 UI는 오래되었지만 워크플로우에 사용된 로직은 그대로 유지됩니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/32942?captions=kor&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## 동시 세션 모니터링 및 관리 {#monitor-manage-sessions}
 

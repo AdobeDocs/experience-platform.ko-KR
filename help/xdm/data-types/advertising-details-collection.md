@@ -23,15 +23,15 @@ ht-degree: 8%
 
 | 표시 이름 | 속성 | 데이터 유형 | 필수 여부 | 설명 |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------|-----------------------------------------------------------------------------------------------------------------------|
-| [[!UICONTROL Ad Advertiser]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ko#advertiser) | `advertiser` | 문자열 | 아니요 | 광고에서 다루고 있는 제품의 회사 또는 브랜드입니다. |
-| [[!UICONTROL Ad Campaign]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ko#campaign-id) | `campaignID` | 문자열 | 아니요 | 광고 캠페인의 ID입니다. |
-| [[!UICONTROL Ad Creative ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ko#creative-id) | `creativeID` | 문자열 | 아니요 | 광고 문안 ID. |
-| [[!UICONTROL Ad Creative URL]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ko#creative-url) | `creativeURL` | 문자열 | 아니요 | 광고 문안 URL. |
-| [[!UICONTROL Ad In Pod Position (Ad Start)]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ko#ad-start) | `podPosition` | 정수 | 예 | 상위 광고 시작 내의 광고 색인. 예를 들어, 첫 번째 광고에는 색인 0이 있고 두 번째 광고에는 색인 1이 있습니다. |
-| [[!UICONTROL Ad Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ko#ad-length) | `length` | 정수 | 예 | 비디오 광고 길이(초)입니다. |
-| [[!UICONTROL Ad Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ko#ad-name) | `friendlyName` | 문자열 | 예 | 사람이 인식할 수 있는 광고 이름. 보고에서 &quot;광고 이름&quot;은 분류이고 &quot;광고 이름(변수)&quot;은 eVar입니다. |
-| [[!UICONTROL Ad Placement ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ko#placement-id) | `placementID` | 문자열 | 아니요 | 광고의 배치 ID입니다. |
-| [[!UICONTROL Ad Player Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ko#ad-player-name) | `playerName` | 문자열 | 예 | 광고 렌더링을 담당하는 플레이어의 이름입니다. |
-| [[!UICONTROL Ad Site ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=ko#site-id) | `siteID` | 문자열 | 아니요 | 광고 사이트의 ID입니다. |
+| [[!UICONTROL Ad Advertiser]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#advertiser) | `advertiser` | 문자열 | 아니요 | 광고에서 다루고 있는 제품의 회사 또는 브랜드입니다. |
+| [[!UICONTROL Ad Campaign]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#campaign-id) | `campaignID` | 문자열 | 아니요 | 광고 캠페인의 ID입니다. |
+| [[!UICONTROL Ad Creative ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#creative-id) | `creativeID` | 문자열 | 아니요 | 광고 문안 ID. |
+| [[!UICONTROL Ad Creative URL]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#creative-url) | `creativeURL` | 문자열 | 아니요 | 광고 문안 URL. |
+| [[!UICONTROL Ad In Pod Position (Ad Start)]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-start) | `podPosition` | 정수 | 예 | 상위 광고 시작 내의 광고 색인. 예를 들어, 첫 번째 광고에는 색인 0이 있고 두 번째 광고에는 색인 1이 있습니다. |
+| [[!UICONTROL Ad Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-length) | `length` | 정수 | 예 | 비디오 광고 길이(초)입니다. |
+| [[!UICONTROL Ad Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-name) | `friendlyName` | 문자열 | 예 | 사람이 인식할 수 있는 광고 이름. 보고에서 &quot;광고 이름&quot;은 분류이고 &quot;광고 이름(변수)&quot;은 eVar입니다. |
+| [[!UICONTROL Ad Placement ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#placement-id) | `placementID` | 문자열 | 아니요 | 광고의 배치 ID입니다. |
+| [[!UICONTROL Ad Player Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-player-name) | `playerName` | 문자열 | 예 | 광고 렌더링을 담당하는 플레이어의 이름입니다. |
+| [[!UICONTROL Ad Site ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#site-id) | `siteID` | 문자열 | 아니요 | 광고 사이트의 ID입니다. |
 
 {style="table-layout:auto"}

@@ -13,11 +13,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 통합은 [[!DNL Adobe Campaign] 버전 8.4 이상](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=ko#release-8-4-1)에서 작동합니다.
+>이 통합은 [[!DNL Adobe Campaign] 버전 8.4 이상](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1)에서 작동합니다.
 
 ## 개요 {#overview}
 
-[!DNL Adobe Campaign Managed Cloud Services]은(는) 크로스 채널 고객 경험을 디자인할 수 있는 플랫폼을 제공하며 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스 채널 실행을 위한 환경을 제공합니다. [Campaign 시작](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=ko)
+[!DNL Adobe Campaign Managed Cloud Services]은(는) 크로스 채널 고객 경험을 디자인할 수 있는 플랫폼을 제공하며 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스 채널 실행을 위한 환경을 제공합니다. [Campaign 시작](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 Campaign을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 
@@ -61,7 +61,7 @@ Campaign을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
   >
   >[!DNL Adobe Campaign] 데이터베이스에 이미 있는 프로필에 대해 프로필 특성 동기화를 사용할 수 있습니다.
 
-[자세히 알아보기 [!DNL Adobe Campaign] 통합 [!DNL Adobe Experience Platform]](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=ko)
+[자세히 알아보기 [!DNL Adobe Campaign] 통합 [!DNL Adobe Experience Platform]](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
 
 ## 지원되는 ID {#supported-identities}
 
@@ -131,7 +131,7 @@ Campaign을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL Select instance]**: **[!DNL Campaign]** 마케팅 인스턴스입니다.
-* **[!UICONTROL Target mapping]**: **[!DNL Adobe Campaign]**&#x200B;에서 게재를 보낼 대상 매핑을 선택합니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=ko).
+* **[!UICONTROL Target mapping]**: **[!DNL Adobe Campaign]**&#x200B;에서 게재를 보낼 대상 매핑을 선택합니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
 * **[!UICONTROL Select sync type]**:
 
    * **[!UICONTROL Audience sync]**: 이 옵션을 사용하여 [!DNL Adobe Experience Platform] 대상자를 [!DNL Adobe Campaign]&#x200B;(으)로 보냅니다.
@@ -156,7 +156,7 @@ Campaign을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 >* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
-대상 데이터를 이 대상으로 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko)를 참조하십시오.
+대상 데이터를 이 대상으로 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html)를 참조하십시오.
 
 ### 속성 및 ID 매핑 {#map}
 

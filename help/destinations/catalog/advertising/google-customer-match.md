@@ -173,14 +173,14 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411788/?quality=12&learn=on&captions=kor) 
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) 
 -->
 
 ## 비디오 개요 {#video-overview}
 
 아래 비디오를 통해 혜택과 Google Customer Match에 대한 데이터 활성화 방법에 대해 알아보십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/326488?captions=kor)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## 대상에 연결 {#connect}
 
