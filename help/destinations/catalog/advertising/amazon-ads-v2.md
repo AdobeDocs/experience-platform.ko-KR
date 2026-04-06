@@ -43,7 +43,7 @@ ht-degree: 3%
 
 ## 전제 조건 {#prerequisites}
 
-[!DNL Amazon Ads v2]과(와) [!DNL Adobe Experience Platform] 연결을 사용하려면 **[!DNL Amazon Ads Data Manager]**&#x200B;관리자 계정[을(를) 사용하여 ](https://advertising.amazon.com/help/G69CDSR9MNSWJH95)에 액세스할 수 있어야 합니다. 자세한 내용은 [Amazon 광고 데이터 관리자 시작하기](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview)를 참조하십시오.
+[!DNL Amazon Ads v2]과(와) [!DNL Adobe Experience Platform] 연결을 사용하려면 **[!DNL Amazon Ads Data Manager]**&#x200B;관리자 계정[을(를) 사용하여 &#x200B;](https://advertising.amazon.com/help/G69CDSR9MNSWJH95)에 액세스할 수 있어야 합니다. 자세한 내용은 [Amazon 광고 데이터 관리자 시작하기](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview)를 참조하십시오.
 
 ### Amazon Ads Data Manager 약관에 동의 {#accept-terms}
 
@@ -82,7 +82,7 @@ ht-degree: 3%
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | [!DNL Experience Platform] [세분화 서비스](/help/segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 [(으)로 사용자 지정 업로드 대상 ](/help/segmentation/ui/audience-portal.md#import-audience)가져옴[!DNL Experience Platform],</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Experience Platform]과(와) 같은 다른 [!DNL Adobe Journey Optimizer] 앱에서 생성된 대상, </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 [(으)로 사용자 지정 업로드 대상 &#x200B;](/help/segmentation/ui/audience-portal.md#import-audience)가져옴[!DNL Experience Platform],</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Experience Platform]과(와) 같은 다른 [!DNL Adobe Journey Optimizer] 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -190,7 +190,7 @@ ht-degree: 3%
 
 활성화 후 **[!DNL Ads Data Manager]콘솔에서 대상 수집의 유효성을 검사하십시오**.
 
-**[!UICONTROL Audiences]** → **[!UICONTROL Uploaded Sources]**(으)로 이동합니다. 대상자 수집 상태, 크기 및 오류 로그를 확인합니다. [ 설명서의 ](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data)데이터 관리[ 및 ](https://advertising.amazon.com/API/docs/en-us/adm/7_adm-destinations)대상[!DNL Amazon Ads] 페이지에서 추가 유효성 검사 지침을 제공합니다.
+**[!UICONTROL Audiences]** → **[!UICONTROL Uploaded Sources]**(으)로 이동합니다. 대상자 수집 상태, 크기 및 오류 로그를 확인합니다. [&#x200B; 설명서의 &#x200B;](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data)데이터 관리[&#x200B; 및 &#x200B;](https://advertising.amazon.com/API/docs/en-us/adm/7_adm-destinations)대상[!DNL Amazon Ads] 페이지에서 추가 유효성 검사 지침을 제공합니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
