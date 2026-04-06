@@ -83,7 +83,7 @@ For existing standard fields, you can [add suggested values](#add-suggested-stan
 >
 >문자열 필드에 대한 제안 값은 스키마 수준에서만 추가할 수 있습니다. 즉, 한 스키마에서 표준 필드의 `meta:enum`을(를) 확장해도 동일한 표준 필드를 사용하는 다른 스키마에는 영향을 주지 않습니다.
 
-다음 요청은 `eventType`에서 식별된 스키마의 표준 [ 필드(](../classes/experienceevent.md)XDM ExperienceEvent 클래스`sourceSchema`에서 제공)에 제안된 값을 추가합니다.
+다음 요청은 `eventType`에서 식별된 스키마의 표준 [&#x200B; 필드(](../classes/experienceevent.md)XDM ExperienceEvent 클래스`sourceSchema`에서 제공)에 제안된 값을 추가합니다.
 
 ```curl
 curl -X POST \

@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # 흐름 서비스 API를 사용하여 [!DNL Mailchimp Campaign]에 대한 데이터 흐름 만들기
 
-다음 자습서에서는 [!DNL Mailchimp Campaign]API[[!DNL Flow Service] 를 사용하여 ](https://www.adobe.io/experience-platform-apis/references/flow-service/) 데이터를 Experience Platform으로 가져오기 위한 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다.
+다음 자습서에서는 [!DNL Mailchimp Campaign]API[[!DNL Flow Service] 를 사용하여 &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) 데이터를 Experience Platform으로 가져오기 위한 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다.
 
 ## 전제 조건
 

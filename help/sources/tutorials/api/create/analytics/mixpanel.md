@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # [!DNL Mixpanel] API를 사용하여 [!DNL Flow Service]에 대한 소스 연결 및 데이터 흐름을 만듭니다.
 
-다음 자습서에서는 [!DNL Mixpanel]흐름 서비스 API[를 사용하여 ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) 데이터를 Adobe Experience Platform으로 가져오기 위해 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다.
+다음 자습서에서는 [!DNL Mixpanel]흐름 서비스 API[를 사용하여 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/) 데이터를 Adobe Experience Platform으로 가져오기 위해 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다.
 
 ## 시작
 

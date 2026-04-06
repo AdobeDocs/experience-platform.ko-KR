@@ -14,7 +14,7 @@ ht-degree: 13%
 
 <!-- UPDATE ROLES WITH A MORE COMPREHENSIVE EXPLANATION -->
 
-역할 관리를 시작하려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[에서 ](https://experience.adobe.com/){target="_blank"}(으)로 이동하고 왼쪽 패널에서 **[!UICONTROL Roles]**&#x200B;을(를) 선택합니다.
+역할 관리를 시작하려면 **[!UICONTROL Permissions]** Adobe Experience Cloud[에서 &#x200B;](https://experience.adobe.com/){target="_blank"}(으)로 이동하고 왼쪽 패널에서 **[!UICONTROL Roles]**&#x200B;을(를) 선택합니다.
 
 ![권한 내의 역할 작업 영역입니다.](../../images/ui/roles/roles-overview.png)
 

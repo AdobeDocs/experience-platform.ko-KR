@@ -18,7 +18,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->거버넌스 정책은 조직의 특정 Experience Platform 사용자가 액세스할 수 있는 특정 데이터 속성을 결정하는 액세스 제어 정책과 혼동하지 않도록 합니다. 액세스 제어 정책을 프로그래밍 방식으로 관리하는 방법에 대한 자세한 내용은 `/policies`액세스 제어 API[에 대한 ](../../access-control/abac/api/policies.md) 끝점 가이드를 참조하십시오.
+>거버넌스 정책은 조직의 특정 Experience Platform 사용자가 액세스할 수 있는 특정 데이터 속성을 결정하는 액세스 제어 정책과 혼동하지 않도록 합니다. 액세스 제어 정책을 프로그래밍 방식으로 관리하는 방법에 대한 자세한 내용은 `/policies`액세스 제어 API[에 대한 &#x200B;](../../access-control/abac/api/policies.md) 끝점 가이드를 참조하십시오.
 
 ## 시작
 
@@ -321,7 +321,7 @@ curl -X POST \
 | --- | --- |
 | `name` | 정책의 표시 이름입니다. |
 | `status` | 정책의 현재 상태. 가능한 상태는 `DRAFT`, `ENABLED` 또는 `DISABLED`입니다. 기본적으로 `ENABLED`개의 정책만 평가에 참여합니다. 자세한 내용은 [정책 평가](../enforcement/overview.md)에 대한 개요를 참조하십시오. |
-| `marketingActionRefs` | 정책에 적용할 수 있는 모든 마케팅 작업의 URI를 나열하는 배열입니다. `_links.self.href`마케팅 액션 조회[에 대한 응답의 ](./marketing-actions.md#look-up) 아래에 마케팅 액션에 대한 URI가 제공됩니다. |
+| `marketingActionRefs` | 정책에 적용할 수 있는 모든 마케팅 작업의 URI를 나열하는 배열입니다. `_links.self.href`마케팅 액션 조회[에 대한 응답의 &#x200B;](./marketing-actions.md#look-up) 아래에 마케팅 액션에 대한 URI가 제공됩니다. |
 | `description` | 정책의 사용 사례에 대한 추가 컨텍스트를 제공하는 선택적 설명입니다. |
 | `deny` | 특정 데이터 사용 레이블을 설명하는 정책 표현식. 정책의 관련 마케팅 작업은 수행이 제한됩니다. |
 
@@ -429,7 +429,7 @@ curl -X PUT \
 | --- | --- |
 | `name` | 정책의 표시 이름입니다. |
 | `status` | 정책의 현재 상태. 가능한 상태는 `DRAFT`, `ENABLED` 또는 `DISABLED`입니다. 기본적으로 `ENABLED`개의 정책만 평가에 참여합니다. 자세한 내용은 [정책 평가](../enforcement/overview.md)에 대한 개요를 참조하십시오. |
-| `marketingActionRefs` | 정책에 적용할 수 있는 모든 마케팅 작업의 URI를 나열하는 배열입니다. `_links.self.href`마케팅 액션 조회[에 대한 응답의 ](./marketing-actions.md#look-up) 아래에 마케팅 액션에 대한 URI가 제공됩니다. |
+| `marketingActionRefs` | 정책에 적용할 수 있는 모든 마케팅 작업의 URI를 나열하는 배열입니다. `_links.self.href`마케팅 액션 조회[에 대한 응답의 &#x200B;](./marketing-actions.md#look-up) 아래에 마케팅 액션에 대한 URI가 제공됩니다. |
 | `description` | 정책의 사용 사례에 대한 추가 컨텍스트를 제공하는 선택적 설명입니다. |
 | `deny` | 특정 데이터 사용 레이블을 설명하는 정책 표현식. 정책의 관련 마케팅 작업은 수행이 제한됩니다. 이 속성에 대한 자세한 내용은 [정책 만들기](#create-policy) 섹션을 참조하십시오. |
 

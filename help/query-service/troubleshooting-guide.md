@@ -65,7 +65,7 @@ FAQ에 대한 다음 답변 목록은 다음 카테고리로 구분됩니다.
 ### 쿼리 서비스 API에 [!DNL Postman]을(를) 사용할 수 있습니까?
 
 +++답변
-예. [!DNL Postman]&#x200B;(무료 타사 애플리케이션)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. Adobe Developer Console에서 프로젝트를 설정하고 [[!DNL Postman] 에서 사용하는 데 필요한 모든 자격 증명을 얻는 방법에 대한 단계별 지침은 ](https://video.tv.adobe.com/v/28832)설치 가이드[!DNL Postman]를 참조하세요. [시작, 실행 및 공유에 대한 지침 [!DNL Postman] 컬렉션](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)에 대해서는 공식 설명서를 참조하세요.
+예. [!DNL Postman]&#x200B;(무료 타사 애플리케이션)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. Adobe Developer Console에서 프로젝트를 설정하고 [[!DNL Postman] 에서 사용하는 데 필요한 모든 자격 증명을 얻는 방법에 대한 단계별 지침은 &#x200B;](https://video.tv.adobe.com/v/28832)설치 가이드[!DNL Postman]를 참조하세요. [시작, 실행 및 공유에 대한 지침 [!DNL Postman] 컬렉션](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)에 대해서는 공식 설명서를 참조하세요.
 +++
 
 ### UI를 통해 쿼리에서 반환되는 최대 행 수에 제한이 있습니까?
@@ -91,7 +91,7 @@ FAQ에 대한 다음 답변 목록은 다음 카테고리로 구분됩니다.
 +++답변
 쿼리 제한 시간이 초과된 경우 다음 솔루션 중 하나 이상을 사용하는 것이 좋습니다.
 
-- [쿼리를 CTAS 쿼리로 변환](./sql/syntax.md#create-table-as-select)하고 실행을 예약합니다. 실행 예약은 UI를 통해 [하거나 ](./ui/user-guide.md#scheduled-queries)API[를 통해 수행할 수 있습니다.](./api/scheduled-queries.md#create)
+- [쿼리를 CTAS 쿼리로 변환](./sql/syntax.md#create-table-as-select)하고 실행을 예약합니다. 실행 예약은 UI를 통해 [하거나 &#x200B;](./ui/user-guide.md#scheduled-queries)API[를 통해 수행할 수 있습니다.](./api/scheduled-queries.md#create)
 - 추가 [필터 조건](https://spark.apache.org/docs/latest/api/sql/index.html#filter)을 적용하여 더 작은 데이터 청크에서 쿼리를 실행하십시오.
 - 자세한 내용을 수집하려면 [EXPLAIN 명령을 실행](./sql/syntax.md#explain)하십시오.
 - 데이터 세트 내의 데이터 통계를 검토합니다.

@@ -208,7 +208,7 @@ Real-Time Customer Data Platform(Real-Time CDP)을 기반으로 구축된 Real-T
 
 | 기능 | 설명 |
 | --- | --- |
-| `isDeleted` 기능 지원 | 이제 [!DNL Marketo]을(를) 제외한 모든 `Activities` 데이터 세트가 `isDeleted` 매핑을 지원합니다. 새 매핑은 기존 B2B 데이터 흐름에 자동으로 추가됩니다. `isDeleted` 매핑을 사용하여 [!DNL Data Lake]의 데이터가 원본 데이터와 일치하도록 삭제된 레코드를 필터링할 수 있습니다. [[!DNL Marketo] 에 대한 자세한 내용은 ](../../sources/connectors/adobe-applications/mapping/marketo.md)매핑 필드 가이드`isDeleted`를 참조하십시오. |
+| `isDeleted` 기능 지원 | 이제 [!DNL Marketo]을(를) 제외한 모든 `Activities` 데이터 세트가 `isDeleted` 매핑을 지원합니다. 새 매핑은 기존 B2B 데이터 흐름에 자동으로 추가됩니다. `isDeleted` 매핑을 사용하여 [!DNL Data Lake]의 데이터가 원본 데이터와 일치하도록 삭제된 레코드를 필터링할 수 있습니다. [[!DNL Marketo] 에 대한 자세한 내용은 &#x200B;](../../sources/connectors/adobe-applications/mapping/marketo.md)매핑 필드 가이드`isDeleted`를 참조하십시오. |
 
 Real-Time Customer Data Platform B2B edition에 대한 자세한 내용은 [B2B 개요](../../rtcdp/b2b-overview.md)를 참조하세요.
 

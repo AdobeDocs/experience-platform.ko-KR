@@ -42,14 +42,14 @@ B2B 네임스페이스 및 스키마 자동 생성 유틸리티를 지원하도�
 
 | 변수 | 설명 | 예 |
 | --- | --- | --- |
-| `CLIENT_SECRET` | `{ACCESS_TOKEN}`을(를) 생성하는 데 사용되는 고유 식별자입니다. [을(를) 검색하는 방법에 대한 자세한 내용은 ](../../../../landing/api-authentication.md)Experience Platform API 인증 및 액세스`{CLIENT_SECRET}`에 대한 자습서를 참조하십시오. | `{CLIENT_SECRET}` |
-| `API_KEY` | Experience Platform API 호출을 인증하는 데 사용되는 고유 식별자입니다. [을(를) 검색하는 방법에 대한 자세한 내용은 ](../../../../landing/api-authentication.md)Experience Platform API 인증 및 액세스`{API_KEY}`에 대한 자습서를 참조하십시오. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Experience Platform API 호출을 완료하는 데 필요한 인증 토큰입니다. [을(를) 검색하는 방법에 대한 자세한 내용은 ](../../../../landing/api-authentication.md)Experience Platform API 인증 및 액세스`{ACCESS_TOKEN}`에 대한 자습서를 참조하십시오. | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | `{ACCESS_TOKEN}`을(를) 생성하는 데 사용되는 고유 식별자입니다. [을(를) 검색하는 방법에 대한 자세한 내용은 &#x200B;](../../../../landing/api-authentication.md)Experience Platform API 인증 및 액세스`{CLIENT_SECRET}`에 대한 자습서를 참조하십시오. | `{CLIENT_SECRET}` |
+| `API_KEY` | Experience Platform API 호출을 인증하는 데 사용되는 고유 식별자입니다. [을(를) 검색하는 방법에 대한 자세한 내용은 &#x200B;](../../../../landing/api-authentication.md)Experience Platform API 인증 및 액세스`{API_KEY}`에 대한 자습서를 참조하십시오. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Experience Platform API 호출을 완료하는 데 필요한 인증 토큰입니다. [을(를) 검색하는 방법에 대한 자세한 내용은 &#x200B;](../../../../landing/api-authentication.md)Experience Platform API 인증 및 액세스`{ACCESS_TOKEN}`에 대한 자습서를 참조하십시오. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | [!DNL Marketo]과(와) 관련하여 이 값은 고정되어 있으며 항상 `ent_dataservices_sdk`(으)로 설정되어 있습니다. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | `global` 컨테이너에는 모든 표준 Adobe 및 Experience Platform 파트너가 제공한 클래스, 스키마 필드 그룹, 데이터 형식 및 스키마가 들어 있습니다. [!DNL Marketo]과(와) 관련하여 이 값은 고정되어 있으며 항상 `global`(으)로 설정됩니다. | `global` |
 | `TECHNICAL_ACCOUNT_ID` | Adobe I/O에 통합하는 데 사용되는 자격 증명입니다. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | IMS(Identity Management System)는 Adobe 서비스에 인증을 위한 프레임워크를 제공합니다. [!DNL Marketo]과(와) 관련하여 이 값은 고정되어 있으며 항상 `ims-na1.adobelogin.com`(으)로 설정됩니다. | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | 제품 및 서비스를 소유하거나 라이선스를 부여하고 해당 구성원에 대한 액세스를 허용할 수 있는 법인 엔티티입니다. [ 정보를 검색하는 방법에 대한 지침은  [!DNL Postman]](../../../../landing/postman.md)개발자 콘솔 설정 및`{ORG_ID}`에 대한 자습서를 참조하십시오. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | 제품 및 서비스를 소유하거나 라이선스를 부여하고 해당 구성원에 대한 액세스를 허용할 수 있는 법인 엔티티입니다. [&#x200B; 정보를 검색하는 방법에 대한 지침은  [!DNL Postman]](../../../../landing/postman.md)개발자 콘솔 설정 및`{ORG_ID}`에 대한 자습서를 참조하십시오. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | 사용 중인 가상 샌드박스 파티션의 이름입니다. | `prod` |
 | `TENANT_ID` | 만든 리소스의 이름 간격이 제대로 지정되고 조직 내에 포함되어 있는지 확인하는 데 사용되는 ID입니다. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | API 호출을 수행하는 URL 엔드포인트. 이 값은 고정되어 있으며 항상 `http://platform.adobe.io/`(으)로 설정됩니다. | `http://platform.adobe.io/` |

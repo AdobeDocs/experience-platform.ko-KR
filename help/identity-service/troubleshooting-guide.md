@@ -194,7 +194,7 @@ ID 그래프 데이터를 보려면 Experience Platform 관리자가 `view-ident
 }
 ```
 
-이 오류 메시지는 `graph-type` 쿼리 매개 변수에 요청 경로에서 잘못된 값이 지정될 때 표시됩니다. 지원되는 그래프 유형을 알아보려면 [ 개요에서 ](./home.md)ID 그래프[!DNL Identity Service]의 섹션을 참조하십시오.
+이 오류 메시지는 `graph-type` 쿼리 매개 변수에 요청 경로에서 잘못된 값이 지정될 때 표시됩니다. 지원되는 그래프 유형을 알아보려면 [&#x200B; 개요에서 &#x200B;](./home.md)ID 그래프[!DNL Identity Service]의 섹션을 참조하십시오.
 
 ### 서비스 토큰에 유효한 범위가 없습니다.
 
@@ -242,7 +242,7 @@ ID 그래프 데이터를 보려면 Experience Platform 관리자가 `view-ident
 }
 ```
 
-이 오류 메시지는 액세스 토큰이 [!DNL Experience Platform] 통합에서 생성되지 않은 경우 표시됩니다. [ 통합을 위한 새 액세스 토큰을 생성하는 방법은 ](https://www.adobe.com/go/platform-api-authentication-en)인증 자습서[!DNL Experience Platform]를 참조하십시오.
+이 오류 메시지는 액세스 토큰이 [!DNL Experience Platform] 통합에서 생성되지 않은 경우 표시됩니다. [&#x200B; 통합을 위한 새 액세스 토큰을 생성하는 방법은 &#x200B;](https://www.adobe.com/go/platform-api-authentication-en)인증 자습서[!DNL Experience Platform]를 참조하십시오.
 
 ### ID 및 네임스페이스 코드에서 네이티브 XID를 가져올 때 내부 오류 발생
 
@@ -284,7 +284,7 @@ ID 그래프 데이터를 보려면 Experience Platform 관리자가 `view-ident
 
 [!DNL Identity Service]은(는) 일괄 처리 수집을 사용하여 [!DNL Experience Platform]에 업로드된 레코드 및 시계열 데이터에서 ID 데이터를 수집합니다. 일괄 처리 수집은 비동기 프로세스이므로 오류를 보려면 일괄 처리에 대한 세부 정보를 확인해야 합니다. 배치가 완료될 때까지 배치가 진행됨에 따라 오류가 누적됩니다.
 
-다음은 [!DNL Identity Service]일괄 처리 수집 API[를 사용할 때 발생할 수 있는 ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)과(와) 관련된 오류 메시지 목록입니다.
+다음은 [!DNL Identity Service]일괄 처리 수집 API[를 사용할 때 발생할 수 있는 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)과(와) 관련된 오류 메시지 목록입니다.
 
 ### 알 수 없는 XDM 스키마
 

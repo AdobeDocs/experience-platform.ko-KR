@@ -75,9 +75,9 @@ Mailchimp 플랜과 트랜잭션 이메일, 고객 여정 또는 기타 Mailchim
 
 ### 암호 및 데이터 요소 만들기
 
-이벤트 전달 속성에서 [[!UICONTROL Token]&#x200B;(이)라는 ](../../../ui/event-forwarding/secrets.md#token) 암호를 만듭니다`Mailchimp API Key`.
+이벤트 전달 속성에서 [[!UICONTROL Token]&#x200B;(이)라는 &#x200B;](../../../ui/event-forwarding/secrets.md#token) 암호를 만듭니다`Mailchimp API Key`.
 
-다음으로, 방금 만든 [ 암호를 참조하기 위해 ](../../../ui/managing-resources/data-elements.md#create-a-data-element) 확장 및 [!UICONTROL Core] 데이터 요소 형식을 사용하여 [!UICONTROL Secret]데이터 요소를 만듭니다`Mailchimp API Key`. `Mailchimp Token`을(를) 데이터 요소 이름으로 입력하십시오.
+다음으로, 방금 만든 [&#x200B; 암호를 참조하기 위해 &#x200B;](../../../ui/managing-resources/data-elements.md#create-a-data-element) 확장 및 [!UICONTROL Core] 데이터 요소 형식을 사용하여 [!UICONTROL Secret]데이터 요소를 만듭니다`Mailchimp API Key`. `Mailchimp Token`을(를) 데이터 요소 이름으로 입력하십시오.
 
 ### 확장 설치 및 구성
 
@@ -99,7 +99,7 @@ Mailchimp 플랜과 트랜잭션 이메일, 고객 여정 또는 기타 Mailchim
 
 ## 데이터 수집
 
-[규칙](../../../ui/managing-resources/rules.md)에서 이 확장을 사용할 때 확장에서 각 이벤트와 함께 Mailchimp에 보내는 여러 데이터 값이 있습니다. 일반적인 구현의 경우 이벤트 전달 속성에서 확장을 사용할 수 있도록 해당 데이터를 [에 보내도록 ](../../client/web-sdk/overview.md)Adobe Experience Platform Web SDK 확장[!DNL Experience Platform Edge Network]을 구성할 수 있습니다.
+[규칙](../../../ui/managing-resources/rules.md)에서 이 확장을 사용할 때 확장에서 각 이벤트와 함께 Mailchimp에 보내는 여러 데이터 값이 있습니다. 일반적인 구현의 경우 이벤트 전달 속성에서 확장을 사용할 수 있도록 해당 데이터를 [에 보내도록 &#x200B;](../../client/web-sdk/overview.md)Adobe Experience Platform Web SDK 확장[!DNL Experience Platform Edge Network]을 구성할 수 있습니다.
 
 이 확장에 필요한 데이터는 Web SDK에서 XDM 데이터([`xdm`](/help/collection/js/commands/sendevent/xdm.md) 개체 사용) 또는 비 XDM 데이터([`data`](/help/collection/js/commands/sendevent/data.md) 개체 사용)로 보낼 수 있습니다.
 

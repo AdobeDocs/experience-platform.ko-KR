@@ -41,9 +41,9 @@ ht-degree: 3%
 
 이 대상을 사용하여 [!DNL Adobe Experience Platform]에서 데이터를 내보내려면 먼저 [!DNL Pega Customer Decision Hub]에서 다음 필수 구성 요소를 완료하십시오.
 
-* [ 인스턴스에서 ](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소[!DNL Pega Customer Decision Hub]를 구성합니다.
-* [ 인스턴스에서 클라이언트 자격 증명을 사용하여 OAuth 2.0 ](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)클라이언트 등록[!DNL Pega Customer Decision Hub] 부여 유형을 구성합니다.
-* [ 인스턴스에서 Adobe 대상 멤버십 데이터 흐름에 대한 ](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)실시간 실행 데이터 흐름[!DNL Pega Customer Decision Hub]을 구성하십시오.
+* [&#x200B; 인스턴스에서 &#x200B;](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소[!DNL Pega Customer Decision Hub]를 구성합니다.
+* [&#x200B; 인스턴스에서 클라이언트 자격 증명을 사용하여 OAuth 2.0 &#x200B;](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)클라이언트 등록[!DNL Pega Customer Decision Hub] 부여 유형을 구성합니다.
+* [&#x200B; 인스턴스에서 Adobe 대상 멤버십 데이터 흐름에 대한 &#x200B;](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)실시간 실행 데이터 흐름[!DNL Pega Customer Decision Hub]을 구성하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
