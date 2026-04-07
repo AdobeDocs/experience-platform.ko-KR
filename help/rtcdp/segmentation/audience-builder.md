@@ -2,11 +2,11 @@
 title: Real-Time Customer Data Platform의 Audience Builder
 description: Real-Time Customer Data Platform에서 Audience Builder를 사용하여 대상을 만드는 방법을 알아봅니다.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=ko#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: ec31766ade15eb04907803c8cfe450fd9bdc1406
+source-git-commit: fed1c2e2fea0b2de67c75b24cb636f68a1a3e035
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1146'
 ht-degree: 7%
 
 ---
@@ -54,13 +54,13 @@ Adobe Experience Platform 위에 구축된 [!DNL Adobe Real-Time Customer Data P
 
 ![Audience Builder에 특성 탭이 표시됩니다](../assets/segmentation/audience-builder/attributes.png)
 
->[!NOTE]
+>[!AVAILABILITY]
 >
->요약 데이터가 **제한된 가용성**&#x200B;에 있습니다.
+>요약 데이터는 **제한된 가용성**&#x200B;에 있으며 B2B edition 및 B2P 버전 모두에서 사용할 수 있습니다.
 
 특성을 선택할 때 [정보 아이콘](../../images/icons/info.png)을 선택하면 요약 데이터를 볼 수 있습니다. 요약 데이터에는 최상위 값, 필드에 대한 설명, 값의 레코드 수 및 이 속성에 대한 값이 포함된 계정의 백분율과 같은 정보가 포함됩니다.
 
-**[!UICONTROL Populated]** 섹션에는 사용 가능한 총 레코드 수와 비교하여 특성이 채워진 레코드 수와 이 필드에 대한 값이 있는 계정의 비율이 표시됩니다.
+**[!UICONTROL Populated]** 섹션에는 이 필드에 대한 값이 있는 계정의 비율이 표시됩니다.
 
 **[!UICONTROL Top values]** 섹션에는 특성에 대해 가장 자주 발생하는 값이 표시되며 값, 값이 있는 레코드 수 및 값이 나타내는 총 레코드 비율과 같은 세부 정보가 포함됩니다. 각 필드의 레코드 수는 모든 기여 데이터 세트 데이터가 병합된 후 통합 레코드 보기를 제공하는 프로필 스냅숏에 의해 결정됩니다.
 
@@ -74,11 +74,17 @@ Adobe Experience Platform 위에 구축된 [!DNL Adobe Real-Time Customer Data P
 
 ![25% 미만의 계정으로 채워질 때 특성에 대한 요약 데이터 버전을 표시하는 팝오버입니다.](../assets/segmentation/audience-builder/empty-summary-data.png){width="300"}
 
+요약 데이터가 있는 속성을 추가하면 규칙 빌드 캔버스에서도 요약 데이터를 볼 수 있습니다.
+
+![요약 데이터가 있는 특성이 표시됩니다.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary.png)
+
+드롭다운을 사용하여 최상위 값 중에서 선택하거나 값을 입력하여 최상위 값 중 하나로 자동 확인할 수 있습니다.
+
+![특성 값을 추가할 수 있는 드롭다운이 강조 표시됩니다.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary-dialog.png)
+
 >[!NOTE]
 >
->요약 데이터는 속성이 Account, Person 또는 Opportunity 스키마에 속하는 경우에만 사용할 수 있습니다. 또한 필드가 **not**&#x200B;에 너무 많은 다른 값을 포함하고 해당 필드의 값이 일반적으로 반복되는 경우에만 맨 위 값이 표시됩니다.
->
->이 요약 데이터는 **일별**&#x200B;로 업데이트됩니다.
+>요약 데이터는 **일별**&#x200B;로 업데이트됩니다. 또한 값이 배열 또는 키/값 쌍인 특성에 대해 요약 데이터가 **지원되지 않습니다**.
 
 또한 특성에는 **[!UICONTROL Ingestion Type]**&#x200B;이(가) 있습니다. 수집 유형을 통해 데이터의 출처를 알 수 있으며 **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** 또는 **[!UICONTROL No Data Ingested]** 값 중 하나일 수 있습니다.
 
