@@ -25,7 +25,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화에 대해 [ 대상을 구성할 때 ](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API **[!UICONTROL Custom Personalization]**&#x200B;를 사용하십시오. 모든 Edge Network API 호출은 [인증된 컨텍스트](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)에서 수행되어야 합니다.
+>프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 특성 기반 개인화에 대해 [&#x200B; 대상을 구성할 때 &#x200B;](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API **[!UICONTROL Custom Personalization]**&#x200B;를 사용하십시오. 모든 Edge Network API 호출은 [인증된 컨텍스트](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)에서 수행되어야 합니다.
 >
 >웹 또는 모바일 SDK 구현에 이미 사용하고 있는 동일한 데이터 스트림을 사용하는 서버측 통합을 추가하여 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)를 통해 프로필 속성을 검색합니다.
 >
