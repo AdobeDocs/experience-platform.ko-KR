@@ -2,9 +2,9 @@
 title: subscribeRulesetItems
 description: subscribeRulesetItems 명령을 사용하여 특정 표면에 대한 컨텐트 카드에 가입합니다.
 exl-id: bc932ba5-a810-4fa6-82cc-998af39fdd34
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: 3ecfc2258e63a34a739ab8b296437c357d1dd9d1
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '436'
 ht-degree: 3%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 3%
 
 `subscribeRulesetItems` 명령을 사용하면 충족된 규칙 세트의 결과인 제안을 구독할 수 있습니다. 필터링할 기준 표면 및 스키마를 지정하고 콜백 함수를 제공하여 이 작업을 수행할 수 있습니다.
 
-모든 시간 규칙 집합이 평가되면 콜백 함수는 그 안에 제안 배열이 있는 `result` 개체를 수신합니다.
+[`sendEvent`](sendevent/overview.md) 명령이 전송될 때마다 규칙 집합이 평가됩니다. 콜백 함수에서 제안 배열이 포함된 `result` 개체를 받습니다.
 
 >[!IMPORTANT]
 >
->`subscribeRulesetItems` 명령은 [`sendEvent`](sendevent/overview.md)개의 결과와 함께 반환되지 않으므로 규칙 세트에서 가져온 제안을 가져올 수 있는 유일한 방법입니다.
+>`subscribeRulesetItems` 명령은 [`sendEvent`](sendevent/overview.md)개의 결과와 함께 반환되지 않으므로 규칙 세트에서 가져온 제안을 가져올 수 있는 유일한 방법입니다. `sendEvent`을(를) 호출하기 전에 구독을 설정하여 제안을 캡처해야 합니다.
 
 
 ```js
@@ -42,7 +42,11 @@ alloy("subscribeRulesetItems", {
 | --- | --- | --- |
 | `surfaces` | 문자열 배열 | 서피스 목록입니다. 여기에 제공된 표면 중 하나와 일치하는 경우에만 제안이 콜백 함수에 의해 수신됩니다. |
 | `schemas` | 문자열 배열 | 스키마 목록. 제안이 여기에 제공된 스키마 중 하나와 일치하는 경우 콜백 함수에서만 수신됩니다. |
-| `callback` | 함수 | 제안이 충족된 규칙 세트의 결과일 때 호출되는 콜백 함수입니다. 콜백 함수를 호출할 때 두 개의 매개 변수를 받습니다. `result` 및 `collectEvent`. 자세한 내용은 [콜백 매개 변수](#callback-parameters)를 참조하십시오. |
+| `callback` | 함수 | 제안이 충족된 규칙 세트의 결과인 경우 호출되는 콜백 함수입니다. 콜백 함수를 호출할 때 두 개의 매개 변수를 받습니다. `result` 및 `collectEvent`. 자세한 내용은 [콜백 매개 변수](#callback-parameters)를 참조하십시오. |
+
+>[!TIP]
+>
+>추가 값을 `surfaces` 및 `schemas` 배열에 전달하여 단일 명령으로 여러 표면 및 스키마를 구독할 수 있습니다.
 
 ### 콜백 매개 변수 {#callback-parameters}
 
@@ -50,17 +54,24 @@ alloy("subscribeRulesetItems", {
 
 | 매개변수 | 유형 | 설명 |
 | --- | --- | --- |
-| `result` | 오브젝트 | 이 개체에는 `propositions` 배열이 있습니다.  이 제안은 충족된 규칙 세트의 직접적인 결과입니다. `result` 개체는 [&#x200B; 절을 사용하여 &#x200B;](command-responses.md)에서 반환된 `sendEvent`결과 개체`then`와 동일하게 구조화되었습니다. |
+| `result` | 오브젝트 | 이 개체에는 `propositions` 배열이 있습니다.  이 제안은 충족된 규칙 세트의 직접적인 결과입니다. `result` 개체는 [ 절을 사용하여 ](command-responses.md)에서 반환된 `sendEvent`결과 개체`then`와 동일하게 구조화되었습니다. |
 | `collectEvent` | 함수 | 인터랙션, 디스플레이 및 기타 이벤트를 추적하기 위해 Edge Network 이벤트를 전송하는 데 사용할 수 있는 편의 기능입니다. |
 
 ### `collectEvent` 함수 {#collectevent-function}
 
-`collectEvent` 함수는 Edge Network 이벤트를 전송하여 상호 작용, 디스플레이 및 기타 이벤트를 추적하는 데 사용할 수 있는 편의 함수입니다. 이는 아래 표에 설명된 두 매개 변수를 허용합니다.
+`collectEvent` 함수는 상호 작용, 디스플레이 및 기타 이벤트를 추적하기 위해 Edge Network 이벤트를 전송하는 데 사용할 수 있는 편의 함수입니다. 이는 아래 표에 설명된 두 매개 변수를 허용합니다.
 
 | 매개변수 | 유형 | 설명 |
 | --- | --- | --- |
 | 이벤트 유형 | 문자열 | 내보낼 제안 이벤트 유형을 나타내는 문자열입니다. 지원되는 이벤트 유형은 `display`, `interact` 또는 `dismiss`입니다. |
 | `propositions` | 배열 | 이벤트에 해당하는 제안 배열. |
+
+
+`collectEvent` 함수는 콜백 외부에서 독립적으로 호출할 수 있습니다. 이 함수를 호출하면 사용자 작업에 대한 응답과 같이 나중에 상호 작용이나 해제를 추적할 때 유용합니다.
+
+```js
+collectEvent("interact", propositions);
+```
 
 ## 웹 SDK 태그 확장을 사용하여 콘텐츠 카드 구독
 
