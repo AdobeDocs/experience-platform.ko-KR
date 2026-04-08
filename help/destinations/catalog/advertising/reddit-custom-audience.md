@@ -2,13 +2,14 @@
 title: 사용자 지정 대상 편집
 description: Reddit Ads는 브랜드를 실시간으로 열정과 문제를 적극적으로 탐색하는 사람들에게 연결합니다. Reddit Ads는 유연한 광고 형식과 강력한 타깃팅으로 커뮤니티 중심의 높은 목적의 대화를 연결하여 광고주가 참여하는 대상에게 도달하고, 성과 성과를 창출하며, 온라인으로 문화를 형성하는 커뮤니티에서 직접 학습할 수 있도록 지원합니다. 이 안내서는 Adobe Experience Platform을 사용하여 Reddit Ads에 대상을 보내는 광고주 및 미디어 팀을 위한 것입니다. 계정을 연결하고, ID를 매핑하고, 대상자를 활성화하는 데 필요한 사항을 다룹니다.
 last-substantial-update: 2026-03-31T00:00:00Z
-source-git-commit: c7c74ba9b5c6a66f92dc6a5403d4f2c5614c0049
+exl-id: bcce02bd-d508-47a0-8f5c-bf162db1859d
+badgeBeta: label="Beta" type="Informative"
+source-git-commit: 28bbad7ccbec0b669082658b912d0b52e0374667
 workflow-type: tm+mt
-source-wordcount: '1230'
-ht-degree: 3%
+source-wordcount: '1231'
+ht-degree: 4%
 
 ---
-
 
 # [!DNL Reddit Custom Audience] 연결 {#reddit-custom-audience-connection}
 
