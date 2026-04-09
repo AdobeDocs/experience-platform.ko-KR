@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: eaa256ff7574b1b6221869c290cae8b8e3606f2a
 workflow-type: tm+mt
-source-wordcount: '6574'
+source-wordcount: '6708'
 ht-degree: 10%
 
 ---
@@ -349,7 +349,7 @@ ht-degree: 10%
 
 코드 보기는 API 호출에 사용할 세그먼트 정의의 값을 복사할 수 있도록 하는 단추를 제공합니다. 최신 버전의 세그먼트 정의를 가져오려면 세그먼트 정의에 대한 최신 변경 사항을 저장했는지 확인합니다.
 
-![코드 복사 버튼이 강조 표시되어 &#x200B;](../images/ui/segment-builder/copy-code.png)할 수 있습니다.
+![코드 복사 버튼이 강조 표시되어 ](../images/ui/segment-builder/copy-code.png)할 수 있습니다.
 
 ### 집계 함수
 
@@ -407,7 +407,7 @@ ht-degree: 10%
 
 | 시간 제한 | 설명 | 연도 무시를 활성화할 수 있습니다 | 예 |
 | --------------- | ----------- | ------------------- | ------- |
-| 오늘 | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트가 오늘 발생합니다. | 예 | ![사용 중인 &quot;오늘&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| 오늘 | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트가 오늘 발생합니다. 선택한 기본 시간 제약 조건입니다. | 예 | ![사용 중인 &quot;오늘&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | 어제 | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트가 어제 발생했습니다. | 예 | ![사용 중인 &quot;어제&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | 이번 달 | 비교 중인 특성 또는 이벤트는 **반드시**&#x200B;이 달력에 발생합니다. | 예 | ![사용 중인 &quot;이번 달&quot; 시간 제한의 예입니다.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | 올해 | 비교 중인 특성 또는 이벤트는 **must**&#x200B;이(가) 이번 연도에 발생합니다. | 아니요 | ![사용 중인 &quot;올해&quot; 시간 제한의 예입니다.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -422,6 +422,16 @@ ht-degree: 10%
 | 다음에서 | 비교되는 속성 또는 이벤트는 선택한 다음 기간 내에 발생해야 합니다. 선택한 기간에는 분, 시간, 일, 주, 월 및 년이 포함됩니다. | 아니요 | ![사용 중인 &quot;다음 시간 내&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
 | 존재 | 속성이 존재합니다. | 아니요 | ![사용 중인 &quot;존재&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
 | 존재하지 않음 | 속성이 존재하지 않습니다. | 아니요 | ![사용 중인 &quot;존재하지 않음&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| 지금 | 대상을 평가할 때 **must**&#x200B;하는 비교되는 특성 또는 이벤트가 바로 발생합니다. 이 시간 제한은 &quot;이전&quot; 또는 &quot;이후&quot;와 같은 시간 제한 내에서만 보조 수준 옵션으로 사용할 수 있습니다. | 예 | ![사용 중인 &quot;Now&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/now.png){width="100" zoomable="yes"} |
+
+>[!TIP]
+>
+>&quot;오늘&quot; 시간 제한과 &quot;지금&quot; 시간 제한 간의 차이는 미묘하지만 유의미합니다.
+>
+>- &quot;Today&quot; 시간 제약 조건을 사용하여 비교되는 특성 또는 이벤트가 현재 날짜의 **자정**&#x200B;에 발생하는지 확인하십시오.
+>- &quot;Now&quot; 시간 제약 조건을 사용하여 비교 중인 특성 또는 이벤트가 **지금**&#x200B;에 발생하고 있는지 확인하십시오.
+>
+>그러나 &quot;Today&quot;를 최상위 시간 제한으로 사용하는 경우 한 가지 주요 예외가 있습니다. 즉, 특성 또는 이벤트가 오늘 **any** 지점에서 발생했는지 확인하는 것입니다.
 
 +++
 
@@ -549,7 +559,7 @@ ht-degree: 10%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="예상치 새로 고침"
 >abstract="세그먼트 대상의 예상치를 새로 고쳐 제안된 세그먼트 대상에 적합한 프로필 개수를 미리 볼 수 있습니다. 당일 샘플 데이터의 샘플 크기를 사용하여 대상자 예상치를 생성합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=ko#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
