@@ -1,11 +1,10 @@
 ---
 title: Acxiom Real ID Audience 연결
 description: ' [!DNL Acxiom Real ID Audience Connection] 대상을 사용하여 [!DNL Acxiom''s Real ID] 기술로 대상을 향상하고  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등의 여러 플랫폼에 대상을 활성화합니다.'
-badge: label="Beta" type="Informative"
 exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 2be649980ecff5931ae61060ff43f6c98abe16d2
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '993'
 ht-degree: 6%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->[!DNL Acxiom Real ID Audience Connection] 대상이 Beta 상태입니다. 이 대상 커넥터 및 설명서 페이지는 [!DNL Acxiom] 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 Acxiom에 직접 [여기](mailto:acxiom-adobe-help@acxiom.com)로 문의하십시오.
+>이 대상 커넥터 및 설명서 페이지는 [!DNL Acxiom] 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 Acxiom에 직접 [여기](mailto:acxiom-adobe-help@acxiom.com)로 문의하십시오.
 
 [!DNL Acxiom Real ID Audience Connection] 대상을 사용하여 [!DNL Acxiom's] [Real ID](https://www.acxiom.com/real-id/real-id/) 기술을 통해 대상자를 개선하고, 다양한 플랫폼(예: [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등)으로 대상자를 활성화하십시오.
 
@@ -34,8 +33,8 @@ ht-degree: 6%
 ## 전제 조건 {#prerequisites}
 
 * **사용 약관 확인:** 새 [!DNL Acxiom Real ID Audience Connection] 대상을 구성하려면 [!DNL Acxiom's] 사용 약관 계약을 읽고 서명해야 합니다. 실행된 판매 주문이 완료되면 계약 링크를 받게 됩니다.
-* **Adobe 조직 ID를 알고 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [!DNL Adobe's]조직 ID를 보는 방법&#x200B;*에 대한 자세한 내용은* [Experience Cloud의 조직](https://experienceleague.adobe.com/ko/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) 항목을 참조하십시오.
-* **[!DNL Acxiom's Real ID] 제품에 대한 라이선스 가져오기:** 라이선스를 얻으면 [!DNL Real-Time CDP] 내에서 Acxiom의 Real ID를 사용할 수 있도록 설정하십시오. 자세한 내용은 [Acxiom 데이터 개선 사항](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)을 참조하십시오.
+* **Adobe 조직 ID를 알고 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [!DNL Adobe's]조직 ID를 보는 방법&#x200B;*에 대한 자세한 내용은* [Experience Cloud의 조직](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) 항목을 참조하십시오.
+* **[!DNL Acxiom's Real ID] 제품에 대한 라이선스 가져오기:** 라이선스를 얻으면 [!DNL Real-Time CDP] 내에서 Acxiom의 Real ID를 사용할 수 있도록 설정하십시오. 자세한 내용은 [Acxiom 데이터 개선 사항](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)을 참조하십시오.
 
 
 ## 지원되는 ID {#supported-identities}
@@ -107,7 +106,7 @@ ht-degree: 6%
 
 
 
-이 대상으로 대상을 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)를 참조하십시오.
+이 대상으로 대상을 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)를 참조하십시오.
 
 >[!NOTE]
 >
@@ -126,11 +125,11 @@ ht-degree: 6%
 
 {style="table-layout:auto"}
 
-**[!UICONTROL Source Field]** 열에서 해당 대상 필드에 매핑할 원본 특성의 이름을 입력하거나 화살표 아이콘을 선택하여 **[!UICONTROL Select source field]** 화면을 엽니다. **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
+**[!UICONTROL Source Field]** 열에서 해당 대상 필드에 매핑할 원본 특성의 이름을 입력하거나 화살표 아이콘을 선택하여 **[!UICONTROL Select source field]** 화면을 엽니다. **[!UICONTROL Next]**을(를) 선택합니다.
 ![매핑 화면](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 
-[!DNL Adobe's] 표준 스키마를 사용하지 않는 경우 쿼리 서비스를 사용하여 [&#x200B; 표준 스키마를 필드 이름으로 채우는 방법에 대한 자세한 내용은 &#x200B;](../../../query-service/ui/overview.md)쿼리 서비스 UI 안내서[!DNL Adobe] 설명서를 참조하십시오.
+[!DNL Adobe's] 표준 스키마를 사용하지 않는 경우 쿼리 서비스를 사용하여 [ 표준 스키마를 필드 이름으로 채우는 방법에 대한 자세한 내용은 ](../../../query-service/ui/overview.md)쿼리 서비스 UI 안내서[!DNL Adobe] 설명서를 참조하십시오.
 
 
 ### 검토 {#review}
@@ -144,7 +143,7 @@ ht-degree: 6%
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
-데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/data-governance/home)를 참조하십시오.
+데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)를 참조하십시오.
 
 ## 문제 해결 {#troubleshooting}
 
