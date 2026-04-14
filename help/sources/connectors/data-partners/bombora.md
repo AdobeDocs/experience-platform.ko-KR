@@ -3,9 +3,9 @@ title: 봄보라 의도
 description: Experience Platform의 Bombora Intent 소스에 대해 알아봅니다.
 last-substantial-update: 2025-03-26T00:00:00Z
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
+source-git-commit: 627d939678a6bde0e7298e71f0dc142d46dc8e99
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1591'
 ht-degree: 1%
 
 ---
@@ -40,9 +40,9 @@ B2B 마케터는 Real-Time CDP에서 계정 목록을 만들어 높은 의도를
 
 [!DNL Bombora]을(를) Experience Platform에 연결하기 전에 필수 구성 요소 단계에 대해 다음 섹션을 읽어 보십시오.
 
-### 허용 목록에 추가하다 IP 주소
+### IP 주소
 
-소스 커넥터를 사용하기 전에 IP 주소 목록을 허용 목록에 추가하다에 추가해야 합니다. 영역별 IP 주소를 허용 목록에 추가하다에 추가하지 않으면 소스를 사용할 때 오류나 성능이 저하될 수 있습니다. 허용 목록에 추가하다 자세한 내용은 [IP 주소](../../ip-address-allow-list.md) 페이지를 참조하십시오.
+소스 커넥터를 사용하기 전에 IP 주소 목록을 허용 목록에 추가하다에 추가해야 합니다. 영역별 IP 주소를 허용 목록에 추가하다에 추가하지 않으면 소스를 사용할 때 오류나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소](../../ip-address-allow-list.md) 페이지를 참조하십시오.
 
 ### Experience Platform에 대한 권한 구성
 
@@ -69,7 +69,7 @@ Experience Platform의 [!DNL Bombora]은(는) [!DNL Google Cloud Storage]에 의
 | 비밀 액세스 키 | [!DNL Bombora] 비밀 액세스 키입니다. Experience Platform 계정을 인증하는 데 필요한 40자의 Base64로 인코딩된 문자열입니다. |
 | 버킷 이름 | 데이터를 가져올 [!DNL Bombora] 버킷. |
 
-이러한 자격 증명에 대한 자세한 내용은 [[!DNL Google Cloud Storage] HMAC 키 안내서](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)를 참조하십시오. 액세스 키를 생성하는 방법에 대한 단계는 [소스 개요 [!DNL Google Cloud Storage] 의 &#x200B;](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)사전 요구 사항 안내서를 참조하십시오.
+이러한 자격 증명에 대한 자세한 내용은 [[!DNL Google Cloud Storage] HMAC 키 안내서](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)를 참조하십시오. 액세스 키를 생성하는 방법에 대한 단계는 [소스 개요 [!DNL Google Cloud Storage] 의 ](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)사전 요구 사항 안내서를 참조하십시오.
 
 ## [!DNL Bombora] 스키마 {#schema}
 
@@ -79,13 +79,13 @@ Experience Platform의 [!DNL Bombora]은(는) [!DNL Google Cloud Storage]에 의
 
 * 클래스 - XDM [!DNL Bombora Account Intent]
 * 네임스페이스 - B2B [!DNL Bombora Account Intent]
-* 기본 ID - `intentID`
+* 기본 ID - `intentID`(**필수 필드**)
 * 관계 - B2B 계정
 
 | 필드 이름 | 데이터 유형 | 설명 |
-|------------------------|-----------|----------------------------------------------------------------------------------------|
+| --- | --- | --- |
 | `extSourceSystemAudit` | 오브젝트 | 이 필드는 시스템에서 소스 시스템 감사에 사용됩니다. |
-| `_id` | 문자열 | 이 필드는 시스템에서 고유 식별자로 사용됩니다. |
+| `_id` | 문자열 | 이 필드는 시스템에서 생성됩니다. |
 | `accountDomain` | 문자열 | 이 필드에는 계정 도메인이 포함됩니다. |
 | `accountID` | 문자열 | 이 필드에는 해당 의도 레코드와 연결된 B2B 계정 ID가 포함됩니다. |
 | `bomboraAccountName` | 문자열 | 이 필드에는 Bombora에 있는 회사 ID가 포함됩니다. |
