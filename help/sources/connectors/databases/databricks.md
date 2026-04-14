@@ -2,12 +2,11 @@
 title: Databricks
 description: Databricks를 Experience Platform에 연결하는 데 필요한 전제 조건 단계에 대해 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
-last-substantial-update: 2025-06-17T00:00:00Z
+last-substantial-update: 2026-03-14T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '606'
 ht-degree: 2%
 
 ---
@@ -16,9 +15,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->* [!DNL Databricks] 소스는 Real-Time CDP Ultimate을 구매한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
->
->* [!DNL Databricks] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 소스 개요에서 [약관](../../home.md#terms-and-conditions)을 참조하십시오.
+>[!DNL Databricks] 소스는 Real-Time CDP Ultimate을 구매한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
 
 [!DNL Databricks]은(는) 데이터 분석, 머신 러닝 및 AI용으로 설계된 클라우드 기반 플랫폼입니다. [!DNL Databricks]을(를) 사용하여 데이터 솔루션을 규모에 맞게 구축, 배포 및 관리할 수 있는 전체적인 환경을 통합하고 제공할 수 있습니다.
 
