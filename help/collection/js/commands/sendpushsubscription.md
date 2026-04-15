@@ -1,19 +1,15 @@
 ---
 title: sendPushSubscription
 description: Adobe Experience Platform으로 푸시 알림 구독을 등록합니다.
-source-git-commit: 3abe25a9c538bf4d1b439d48f624d8cad109a99e
+exl-id: 7cb13834-46f4-481c-bd9d-600083eb6cfb
+source-git-commit: 76ba5719bd922c4ff9bff6fda4a359b18f549c5e
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '398'
 ht-degree: 2%
 
 ---
 
-
 # `sendPushSubscription` {#send-push-subscription}
-
->[!AVAILABILITY]
->
->웹 SDK에 대한 푸시 알림이 현재 **베타**&#x200B;에 있습니다. 기능 및 설명서는 변경될 수 있습니다.
 
 `sendPushSubscription` 명령은 Adobe Experience Platform에 푸시 알림 구독을 등록합니다. 이 명령은 브라우저에서 푸시 구독 세부 정보 검색을 처리하고 구성된 데이터 스트림으로 보냅니다. 웹 SDK 버전 2.29.0 이상에서 사용할 수 있습니다.
 
