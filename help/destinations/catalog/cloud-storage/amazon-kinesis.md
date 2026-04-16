@@ -17,7 +17,7 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 [!DNL Kinesis Data Streams]의 [!DNL Amazon Web Services] 서비스는 실시간으로 대용량 데이터 레코드를 수집하고 처리합니다.
 
