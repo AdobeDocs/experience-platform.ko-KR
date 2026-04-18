@@ -2,9 +2,9 @@
 title: 고객 관리 키에 대한 AWS KMS 구성
 description: Adobe Experience Platform의 고객 관리 키와 함께 사용할 Amazon Web Services KMS(키 관리 서비스)를 구성하는 방법을 알아봅니다.
 exl-id: 0cf0deab-dc30-412f-b511-dee5504c3953
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5d59dffa00e041c91b3e1a8943fa3df9e9d7b4ef
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1532'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,11 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->이 문서는 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/landing/multi-cloud)를 참조하세요.
->
->AWS의 [고객 관리 키](../overview.md)(CMK)는 Privacy 및 Security Shield에서 지원되지만 Healthcare Shield에서는 사용할 수 없습니다. Azure의 CMK는 Healthcare Shield뿐만 아니라 Privacy 및 Security Shield 모두에서 지원됩니다.
+>이 문서는 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
 
 이 안내서를 사용하여 Adobe Experience Platform에 대한 암호화 키를 생성, 관리 및 제어하여 Amazon Web Services(AWS) KMS(키 관리 서비스)로 데이터를 보호합니다. 이러한 통합을 통해 규정 준수를 간소화하고 자동화를 통해 운영을 간소화하며 자체 주요 관리 인프라를 유지 관리할 필요가 없어집니다.
 
-Customer Journey Analytics 관련 지침은 [Customer Journey Analytics CMK 설명서](https://experienceleague.adobe.com/ko/docs/analytics-platform/using/cja-privacy/cmk)를 참조하세요.
+Customer Journey Analytics 관련 지침은 [Customer Journey Analytics CMK 설명서](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)를 참조하세요.
 
 >[!IMPORTANT]
 >
@@ -152,4 +150,4 @@ AWS 계정이 AWS KMS 서비스를 사용하도록 설정되어 있는지 확인
 
 ## 다음 단계
 
-AWS KMS가 구성되면 [!UICONTROL 플랫폼 암호화 구성] UI 또는 Adobe Experience Platform API를 사용하여 통합을 설정하십시오. 고객 관리 키 기능을 설정하는 1회 프로세스를 계속하려면 [UI 설정 안내서](./ui-set-up.md)를 계속 사용하십시오.
+AWS KMS가 구성되면 [!UICONTROL Platform Encryption Configuration] UI 또는 Adobe Experience Platform API를 사용하여 통합 설정을 계속 진행합니다. 고객 관리 키 기능을 설정하는 1회 프로세스를 계속하려면 [UI 설정 안내서](./ui-set-up.md)를 계속 사용하십시오.
