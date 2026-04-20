@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이들 프로필에서 대상자를 생성하며, 이들 대상자를 서드파티 대상으로 활성화할 수 있습니다.
 role: Admin
-source-git-commit: 74a73b568c850f8e749afea039afd2821858bd69
+source-git-commit: 70dcebedd06c342e02ee2307042d4a5267b364d9
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 62%
+source-wordcount: '320'
+ht-degree: 60%
 
 ---
 
@@ -47,12 +47,12 @@ ht-degree: 62%
    * [Real-Time CDP B2B 에디션의 대상](destinations/b2b.md)
 * 가드레일 {#guardrails}
    * [Real-Time CDP 보호 개요](guardrails/overview.md)
-   * [데이터 수집을 위한 보호](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=ko){target="_blank"}
-   * [&#x200B; [!DNL Edge Network API]에 대한보호 기능](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
+   * [데이터 수집을 위한 보호](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [ [!DNL Edge Network API]에 대한 ](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}보호 기능
    * [데이터 및 세분화에 대한 보호 [!DNL Real-Time Customer Profile] 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ko){target="_blank"}
-   * [데이터 [!DNL Identity Service] 보호 기능](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=ko){target="_blank"}
-   * [다음에 대한 보호 기능 [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=ko){target="_blank"}
-   * [대상을 통한 데이터 활성화를 위한 보호 기능](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=ko){target="_blank"}
+   * [데이터 [!DNL Identity Service] 보호 기능](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [다음에 대한 보호 기능 [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [대상을 통한 데이터 활성화를 위한 보호 기능](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * ID {#identity}
    * [ID 및 ID 네임스페이스](profile/identities-overview.md)
 * 병합 정책 {#merge-policies}
@@ -77,6 +77,7 @@ ht-degree: 62%
    * [Real-Time CDP B2B 에디션의 소스](sources/b2b.md)
 * 사용 사례 {#use-cases}
    * [샘플 사용 사례 개요](/help/rtcdp/use-case-guides/overview.md)
+   * [고객 경험 사용 사례를 활용하여 비즈니스 목표 달성](/help/rtcdp/use-case-guides/business-use-case-framework.md)
    * 고객 확보 {#customer-acquisition}
       * [서드파티 쿠키에 의존하지 않고 새 고객 참여 및 확보](/help/rtcdp/partner-data/prospecting.md)
       * [파트너 지원 방문자 인식을 사용하여 알 수 없는 방문자에 대한 온사이트 경험 개인화](/help/rtcdp/partner-data/onsite-personalization.md)
