@@ -5,9 +5,9 @@ title: 임시 활성화 API를 통해 대상을 일괄 대상으로 활성화
 description: 이 문서에서는 활성화 전에 수행되는 세분화 작업을 포함하여 임시 활성화 API를 통해 대상을 활성화하기 위한 전체적인 워크플로를 보여 줍니다.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 944cb03ae8a432b09b54b148e94b2ee1e1bcbc5d
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1695'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,10 @@ Experience Platform의 리소스는 특정 가상 샌드박스로 분리될 수 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
 * Content-Type: `application/json`
+
+### API 참조 설명서 {#api-reference-documentation}
+
+이 자습서에서 모든 API 작업에 대한 참조 설명서를 함께 찾을 수 있습니다. [Ad Hoc Activation API 참조](https://developer.adobe.com/experience-platform-apis/references/ad-hoc-activation)를 참조하십시오.
 
 ## 3단계: Experience Platform UI에서 활성화 흐름 만들기 {#activation-flow}
 
