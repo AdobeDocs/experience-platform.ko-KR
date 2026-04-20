@@ -19,7 +19,7 @@ ht-degree: 5%
 >새 **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** 대상으로 원활하게 전환하려면 다음 주요 사항과 필요한 작업을 검토하십시오.
 >
 >* 모든 사용자는 **Marketo Engage Person 동기화 대상 사용을 중지**&#x200B;하고 2025년 10월까지 새 **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** 대상으로 마이그레이션해야 합니다.
->* **기존 데이터 흐름은 자동으로 마이그레이션되지 않습니다.** 새 [ 대상에 대해 ](marketo-engage-connection.md#connect-to-the-destination)새 연결을 설정&#x200B;**[!UICONTROL Marketo Engage]**&#x200B;하고 대상자를 활성화해야 합니다.
+>* **기존 데이터 흐름은 자동으로 마이그레이션되지 않습니다.** 새 [&#x200B; 대상에 대해 &#x200B;](marketo-engage-connection.md#connect-to-the-destination)새 연결을 설정&#x200B;**[!UICONTROL Marketo Engage]**&#x200B;하고 대상자를 활성화해야 합니다.
 
 
 ## 개요 {#overview}
