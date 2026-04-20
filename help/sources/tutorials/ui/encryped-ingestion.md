@@ -160,4 +160,4 @@ Experience Platform UI에서 소스 작업 영역으로 이동한 다음 상단 
 
 ## 다음 단계
 
-이제 이 문서를 검토하여 클라우드 스토리지 배치 소스에서 Experience Platform으로 암호화된 데이터를 수집할 수 있습니다. API를 사용하여 암호화된 데이터를 수집하는 방법에 대한 자세한 내용은 [API를 사용하여 암호화된 데이터 수집 [!DNL Flow Service] 에 대한 안내서를 참조하십시오. ](../api/encrypt-data.md) Experience Platform의 소스에 대한 일반적인 정보는 [소스 개요](../../home.md)를 참조하십시오.
+이제 이 문서를 검토하여 클라우드 스토리지 배치 소스에서 Experience Platform으로 암호화된 데이터를 수집할 수 있습니다. API를 사용하여 암호화된 데이터를 수집하는 방법에 대한 자세한 내용은 [API를 사용하여 암호화된 데이터 수집 [!DNL Flow Service] 에 대한 안내서를 참조하십시오. &#x200B;](../api/encrypt-data.md) Experience Platform의 소스에 대한 일반적인 정보는 [소스 개요](../../home.md)를 참조하십시오.
