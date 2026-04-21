@@ -17,7 +17,7 @@ ht-degree: 8%
 
 >[!AVAILABILITY]
 >
-> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/kr/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 HTTP API 대상은 프로필 데이터를 타사 HTTP 끝점으로 전송하는 데 도움이 되는 Experience Platform 스트리밍 대상입니다.
 
@@ -85,11 +85,11 @@ mTLS는 데이터를 공유하기 전에 정보를 공유하는 양쪽이 자신
 
 ### mTLS 고려 사항 {#mtls-considerations}
 
-HTTP API 대상에 대한 mTLS 지원은 프로필 내보내기가 전송되는 데이터 수신 끝점&#x200B;**에만**&#x200B;적용됩니다(**[!UICONTROL HTTP Endpoint]**&#x200B;대상 세부 정보[의 &#x200B;](#destination-details) 필드).
+HTTP API 대상에 대한 mTLS 지원은 프로필 내보내기가 전송되는 데이터 수신 끝점&#x200B;**에만**&#x200B;적용됩니다(**[!UICONTROL HTTP Endpoint]**&#x200B;대상 세부 정보[의 ](#destination-details) 필드).
 
 ### 데이터 내보내기를 위한 mTLS 구성 {#configuring-mtls}
 
-HTTP API 대상에 mTLS를 사용하려면 **[!UICONTROL HTTP Endpoint]**&#x200B;대상 세부 정보[&#x200B; 페이지에서 구성한 &#x200B;](#destination-details)(데이터 수신 끝점)에 TLS 프로토콜이 비활성화되어 있어야 하며 mTLS만 활성화되어야 합니다. 끝점에서 TLS 1.2 프로토콜이 여전히 활성화되어 있으면 클라이언트 인증을 위한 인증서가 전송되지 않습니다. 즉, HTTP API 대상에 mTLS를 사용하려면 데이터 수신 서버 끝점이 mTLS 전용 활성화 연결 끝점이어야 합니다.
+HTTP API 대상에 mTLS를 사용하려면 **[!UICONTROL HTTP Endpoint]**&#x200B;대상 세부 정보[ 페이지에서 구성한 ](#destination-details)(데이터 수신 끝점)에 TLS 프로토콜이 비활성화되어 있어야 하며 mTLS만 활성화되어야 합니다. 끝점에서 TLS 1.2 프로토콜이 여전히 활성화되어 있으면 클라이언트 인증을 위한 인증서가 전송되지 않습니다. 즉, HTTP API 대상에 mTLS를 사용하려면 데이터 수신 서버 끝점이 mTLS 전용 활성화 연결 끝점이어야 합니다.
 
 ### 인증서 세부 정보 검색 및 검사 {#certificate}
 
@@ -107,7 +107,7 @@ HTTP API 대상은 HTTP 끝점에 대한 여러 인증 유형을 지원합니다
 
 * 인증이 없는 HTTP 끝점;
 * 전달자 토큰 인증;
-* 아래 예와 같이 HTTP 요청의 본문에 [, &#x200B;](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 및 [!DNL client ID]이(가) 있는 본문 형식의 [!DNL client secret]OAuth 2.0 클라이언트 자격 증명[!DNL grant type] 인증.
+* 아래 예와 같이 HTTP 요청의 본문에 [, ](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 및 [!DNL client ID]이(가) 있는 본문 형식의 [!DNL client secret]OAuth 2.0 클라이언트 자격 증명[!DNL grant type] 인증.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -117,7 +117,7 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-* URL로 인코딩된 [&#x200B; 및 &#x200B;](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)이(가) 포함된 권한 부여 헤더가 있는 기본 권한 부여가 있는 [!DNL client ID]OAuth 2.0 클라이언트 자격 증명[!DNL client secret].
+* URL로 인코딩된 [ 및 ](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)이(가) 포함된 권한 부여 헤더가 있는 기본 권한 부여가 있는 [!DNL client ID]OAuth 2.0 클라이언트 자격 증명[!DNL client secret].
 
 ```shell
 curl --location --request POST 'https://some-api.com/token' \
