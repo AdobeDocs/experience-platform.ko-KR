@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: eb69e67847305c4b02d377e032aad3490b0b84e0
+source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -49,4 +49,5 @@ ht-degree: 0%
 
 ## 시작하기
 
-프레임워크 템플릿과 지원 리소스를 다운로드하여 구조화된 워크숍을 실행하고 우선 순위가 지정되고 측정 가능한 활성화 준비 로드맵을 생성합니다.
+[프레임워크 템플릿과 지원 리소스](../assets/S651-use-case-framework-template.pdf)를 다운로드하여 구조화된 워크샵을 실행하고 우선 순위가 지정되고 측정 가능한 활성화 로드맵을 생성합니다.
+
