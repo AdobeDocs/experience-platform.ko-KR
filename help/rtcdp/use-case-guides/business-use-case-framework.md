@@ -1,11 +1,9 @@
 ---
 title: 고객 경험 사용 사례를 활용하여 비즈니스 목표 달성
 description: 워크샵을 위한 실용적인 프레임워크를 사용하여 측정 가능한 비즈니스 성과와 관련된 고객 경험 사용 사례를 정의, 우선 순위 지정 및 활성화합니다. Why → Who/What/Where → How 모델을 적용하여 팀을 조정하고 실행을 안내하며 효과를 제공합니다.
-hide: true
-hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
+source-git-commit: 1c856af1e192ac26a530fb69b1a8629c8ee72e1f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
