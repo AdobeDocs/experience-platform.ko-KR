@@ -2,10 +2,10 @@
 title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d052230ec5ddc4a28495f4928ab32957bf9038ac
+source-git-commit: 8f898e618fbc2b414a3c899511ac410465f280d8
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 20%
+source-wordcount: '1344'
+ht-degree: 17%
 
 ---
 
@@ -45,10 +45,13 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 
 | 대상 | 설명 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [Microsoft 광고 고객 일치](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | 이메일 주소로 고객을 일치시키고 검색 및 대상 광고를 포함하여 [!DNL Microsoft Advertising Network]에서 고객과 다시 교류하십시오. [!DNL Microsoft Advertising] 계정을 Real-Time CDP에 연결하여 Experience Platform에서 직접 고객 일치 목록 생성 및 관리를 자동화합니다. |
+| [!BADGE Beta]{type=Informative} [Microsoft 광고 고객 일치](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | 이메일 주소로 고객을 일치시키고 검색 및 대상 광고를 포함하여 [!DNL Microsoft Advertising Network]에서 고객과 다시 교류하십시오. [!DNL Microsoft Advertising] 계정을 Real-Time CDP에 연결하여 Experience Platform에서 직접 고객 일치 목록 생성 및 관리를 자동화합니다. 액세스 권한을 얻으려면 Adobe 계정 관리자에게 문의하십시오. |
 | [!BADGE Beta]{type=Informative} [사용자 지정 대상 편집](../destinations/catalog/advertising/reddit-custom-audience.md) | Experience Platform에서 [!DNL Reddit Ads]&#x200B;(으)로 대상자를 보냅니다. [!DNL Reddit] 계정을 연결하고, ID를 매핑하고, 대상을 활성화하여 [!DNL Reddit]에서 사람들이 관심 영역을 적극적으로 탐색하도록 합니다. |
 | [Amazon 광고 v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2]은(는) 모든 새 [!DNL Amazon Ads] 연결의 현재 대상입니다. 기존 [(레거시) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) 연결이 있는 경우 필요한 변경 없이 계속 작동합니다. [!DNL Amazon Ads v2]이(가) [!DNL Ads Data Manager]에 연결되어 확장된 ID 유형, 주소 관련 필드 및 [!DNL Amazon Ads] 제품 간 데이터 공유를 지원하므로 [(레거시) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)에 비해 타깃팅 및 대상 일치율이 향상됩니다. |
 | [!DNL Rokt] | [!DNL Rokt]을(를) 사용하여 Experience Platform 대상자를 AI 기반 실시간 의사 결정에 연결하여 보다 정확한 타기팅, 억제 및 개인화를 통해 캠페인 성과를 향상시킵니다. |
+| [크리터](../destinations/catalog/advertising/criteo.md)에 대한 외부 대상 지원 | 사용자 지정 업로드 대상(CSV에서 가져옴), 유사 대상, 페더레이션 대상 및 [!DNL Criteo] 등의 다른 Experience Platform 앱에서 만든 대상을 포함하여 세분화 서비스 이상의 원본에서 [!DNL Adobe Journey Optimizer]&#x200B;(으)로 대상을 활성화합니다. 자세한 내용은 [지원되는 대상](../destinations/catalog/advertising/criteo.md#supported-audiences) 섹션을 참조하십시오. |
+| [Acxiom 대상자 연결](../destinations/catalog/advertising/acxiom-audience-connection.md) | 이제 [!DNL Acxiom Audience Connection] 대상을 일반적으로 사용할 수 있습니다. [!DNL Acxiom's Real ID] 기술로 대상을 향상하고 [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] 및 [!DNL Viant]을(를) 포함한 추가 플랫폼에 활성화하려면 이 함수를 사용하십시오. |
+| [Acxiom Real ID 대상 연결](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | 이제 [!DNL Acxiom Real ID Audience Connection] 대상을 일반적으로 사용할 수 있습니다. [!DNL Acxiom's Real ID], [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads] 및 [!DNL Spectrum]을(를) 포함하여 지원되는 동일한 플랫폼 집합에서 일치 키로 [!DNL Viant]을(를) 사용하여 대상을 활성화하려면 이 함수를 사용합니다. |
 
 {style="table-layout:auto"}
 
@@ -57,6 +60,10 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 | 변수 이름이 아니라, 필터링된 보고서의 머리글로 잘못 표시하는 | 설명 |
 | --- | --- |
 | 사용자 지정 Personalization 모니터링 지원 | 대상에 대한 모니터링 대시보드에서 [!DNL Custom Personalization]개의 대상을 지원합니다. 모니터링에서 [!DNL Custom Personalization]을(를) 제외한 제한 메모를 제거했습니다. |
+| 활성화 검토의 프로필 개수 | 이제 활성화 검토 단계에 이미 활성화된 대상에 대한 프로필 수가 표시됩니다. 일괄 처리 대상뿐만 아니라 스트리밍 대상에 대해서도 프로필 수가 표시됩니다. |
+| [!DNL Pinterest] 토큰 만료 가시성 | 이제 [!DNL Pinterest] 대상에 [!DNL Pinterest]에서 직접 반환한 토큰 만료 시간이 표시되므로 재인증이 필요한 시기를 확인할 수 있습니다. |
+| 이제 잘못된 일정에 대해 파일 내보내기가 비활성화되었습니다. | 대상자 일정이 잘못되었거나 오래된 경우 **[!UICONTROL Export file now]** 작업이 이제 비활성화됩니다. 도구 설명은 작업을 사용할 수 없는 이유를 설명합니다. |
+| 활성화 워크플로의 열 가시성 수정 | 한 테이블의 표시 열을 변경하면 활성화 워크플로에서 다른 테이블에 잘못 영향을 주는 문제가 해결되었습니다. |
 
 {style="table-layout:auto"}
 
