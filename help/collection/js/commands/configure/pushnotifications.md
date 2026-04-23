@@ -1,18 +1,15 @@
 ---
 title: 푸시 알림
 description: 웹 SDK에 대한 푸시 알림을 구성하여 브라우저 기반 푸시 메시지를 활성화합니다.
-source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
+exl-id: a5cf4817-a4c2-4cf1-8f3a-7e92b807de8f
+source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '414'
 ht-degree: 3%
 
 ---
 
 # `pushNotifications` {#push-notifications}
-
->[!AVAILABILITY]
->
->웹 SDK에 대한 푸시 알림이 현재 **베타**&#x200B;에 있습니다. 기능 및 설명서는 변경될 수 있습니다.
 
 `pushNotifications` 속성을 사용하면 웹 응용 프로그램에 대한 푸시 알림을 구성할 수 있습니다. 이 기능을 사용하면 웹 사이트가 현재 브라우저에 로드되지 않은 경우에도 웹 앱이 서버에서 푸시된 메시지를 받을 수 있습니다.
 

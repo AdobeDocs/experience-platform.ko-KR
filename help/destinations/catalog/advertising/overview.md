@@ -3,9 +3,9 @@ keywords: 광고 대상;대상;플랫폼 대상
 title: Advertising 대상 개요
 description: 'Adobe Experience Platform을 서드파티 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 이러한 플랫폼에 익명 대상을 공유합니다.'
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 2084f45ca89e78f980a8d2a53a08966e0588fcdd
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '289'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 * [(Beta) Acxiom 대상 배포](acxiom-audience-connection.md)
 * [(Beta) Acxiom Real ID Audience 연결](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising DSP 연결](adobe-advertising-dsp-connection.md)
-* [기존 Adobe Advertising Cloud DSP 연결](adobe-advertising-cloud-dsp-connection-legacy.md)
+* [레거시 Adobe Advertising DSP 연결](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Amazon 광고 연결](amazon-ads.md)
 * [Amazon Ads v2 연결](amazon-ads-v2.md)
 * [봄보라 접속](bombora.md)
@@ -53,7 +53,7 @@ ht-degree: 1%
 
 ### 확장 {#extensions}
 
-* [Adobe Advertising Cloud 확장](adobe-advertising-cloud.md)
+* [Adobe Advertising 확장](adobe-advertising-cloud.md)
 * [Awin Advertising 변환 태그 확장](awin-conversiontag.md)
 * [Awin Advertising 마스터태그 확장](awin-mastertag.md)
 * [Bing Ads 범용 이벤트 추적 확장](bing-ads.md)

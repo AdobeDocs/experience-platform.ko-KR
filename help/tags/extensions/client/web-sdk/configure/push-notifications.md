@@ -2,10 +2,10 @@
 title: 푸시 알림 설정
 description: 웹 SDK 태그 확장에 대한 푸시 알림 설정을 구성합니다.
 exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 1%
+source-wordcount: '178'
+ht-degree: 10%
 
 ---
 
@@ -15,10 +15,6 @@ ht-degree: 1%
 >id="platform_tags_websdk_pushnotifications"
 >title="푸시 알림"
 >abstract="푸시 알림 인증을 위한 VAPID 공개 키를 설정합니다."
-
->[!AVAILABILITY]
->
->웹 SDK에 대한 푸시 알림이 현재 **베타**&#x200B;에 있습니다. 기능 및 설명서는 변경될 수 있습니다.
 
 이 구성 섹션에서는 푸시 알림 인증을 위한 VAPID 공개 키를 설정할 수 있습니다.
 

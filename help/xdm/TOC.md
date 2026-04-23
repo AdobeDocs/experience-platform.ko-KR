@@ -5,9 +5,9 @@ breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: Experience Platform 내의 경험 데이터 모델(XDM) 시스템 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법을 알아봅니다.
 feature: Schemas
 role: Developer
-source-git-commit: 511c93342d112056ead54c0d82184cc262a43383
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '710'
 ht-degree: 21%
 
 ---
@@ -116,7 +116,7 @@ ht-degree: 21%
       * [파트너 잠재 고객 세부 정보 (샘플)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics 전체 확장](./field-groups/event/analytics-full-extension.md)
-      * [Adobe Advertising Cloud 전체 확장](./field-groups/event/advertising-full-extension.md)
+      * [Adobe Advertising 전체 확장](./field-groups/event/advertising-full-extension.md)
       * [Advertising 세부 정보](./field-groups/event/advertising-details.md)
       * [애플리케이션 세부 정보](./field-groups/event/application-details.md)
       * [잔고 이체](./field-groups/event/balance-transfers.md)
