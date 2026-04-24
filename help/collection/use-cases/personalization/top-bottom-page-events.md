@@ -43,7 +43,7 @@ alloy("sendEvent", {
 
 | 매개변수 | 필수/선택 사항 | 설명 |
 | --- | --- | --- |
-| `type` | 필수 여부 | 이 매개 변수를 `decisioning.propositionFetch`(으)로 설정하십시오. 이 특수 이벤트 유형은 Adobe Analytics에 이 이벤트를 삭제하도록 지시합니다. Customer Journey Analytics을 사용할 때 이러한 이벤트를 삭제하는 필터를 설정할 수도 있습니다. 자세한 내용은 [Adobe Analytics의 Edge Network 이벤트 유형](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/hit-types)을 참조하십시오. |
+| `type` | 필수 여부 | 이 매개 변수를 `decisioning.propositionFetch`(으)로 설정하십시오. 이 특수 이벤트 유형은 Adobe Analytics에 이 이벤트를 삭제하도록 지시합니다. Customer Journey Analytics을 사용할 때 이러한 이벤트를 삭제하는 필터를 설정할 수도 있습니다. 자세한 내용은 [Adobe Analytics의 Edge Network 이벤트 유형](https://experienceleague.adobe.com/ko/docs/analytics/implementation/aep-edge/hit-types)을 참조하십시오. |
 | `renderDecisions` | 필수 여부 | 이 매개 변수를 `true`(으)로 설정하십시오. 이 매개 변수는 Web SDK에 Edge Network에서 반환한 결정을 렌더링하도록 지시합니다. |
 | `personalization.sendDisplayEvent` | 필수 여부 | 이 매개 변수를 `false`(으)로 설정하십시오. 이 매개 변수는 디스플레이 이벤트의 전송을 중지합니다. |
 

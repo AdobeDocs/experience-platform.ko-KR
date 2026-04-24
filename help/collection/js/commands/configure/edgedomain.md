@@ -17,7 +17,7 @@ ht-degree: 3%
 >
 >이 속성은 쿠키가 설정되는 위치를 변경하지 않습니다. 웹 SDK은 궁극적으로 데이터를 보내는 위치에 관계없이 항상 [자사 쿠키](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ko-KR)를 설정합니다.
 
-`edgeDomain`에 사용하는 값은 [Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)에 대한 기여도에 따라 다릅니다.
+`edgeDomain`에 사용하는 값은 [Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/ko/docs/core-services/interface/data-collection/adobe-managed-cert)에 대한 기여도에 따라 다릅니다.
 
 **조직에서 Adobe 관리 인증서 프로그램에 참여하는 경우** 값을 인증서를 설정할 때 선택한 자사 도메인으로 설정하십시오. 일반적으로 이 값은 조직이 소유한 하위 도메인입니다. 예, `data.example.com`. 조직의 CNAME 레코드는 해당 데이터를 Adobe에 전달합니다.
 
