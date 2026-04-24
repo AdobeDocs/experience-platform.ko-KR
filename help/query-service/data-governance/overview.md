@@ -200,7 +200,7 @@ Experience Platform의 데이터 거버넌스 프레임워크는 모든 Adobe �
 
 데이터 거버넌스를 위한 쿼리 서비스 기능은 데이터 분류 프로세스 및 데이터 사용 규정 준수를 간소화하고 간소화합니다. 데이터가 식별되면 쿼리 서비스를 사용하여 모든 출력 데이터 세트에 기본 ID를 할당할 수 있습니다. 데이터 개인 정보 보호 요청을 용이하게 하고 데이터 규정 준수 작업을 위해 **데이터 집합에 ID를**&#x200B;추가해야 합니다.
 
-Experience Platform UI를 통해 스키마 데이터 필드를 ID 필드로 설정할 수 있으며 쿼리 서비스를 통해 SQL 명령 &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table)을(를) 사용하여 [기본 ID를 표시할 수도 있습니다. `ALTER TABLE` 명령을 사용하여 ID를 설정하는 것은 Experience Platform UI를 통해 스키마에서 직접 가져오는 대신 SQL을 사용하여 데이터 세트를 만들 때 특히 유용합니다. 표준 스키마를 사용할 때 [UI에서 ID 필드를 정의](../../xdm/ui/fields/identity.md)하는 방법에 대한 지침은 설명서를 참조하세요.
+Experience Platform UI를 통해 스키마 데이터 필드를 ID 필드로 설정할 수 있으며 쿼리 서비스를 통해 SQL 명령 &#39;ALTER TABLE&#39;[&#128279;](../sql/syntax.md#alter-table)을(를) 사용하여 기본 ID를 표시할 수도 있습니다. `ALTER TABLE` 명령을 사용하여 ID를 설정하는 것은 Experience Platform UI를 통해 스키마에서 직접 가져오는 대신 SQL을 사용하여 데이터 세트를 만들 때 특히 유용합니다. 표준 스키마를 사용할 때 [UI에서 ID 필드를 정의](../../xdm/ui/fields/identity.md)하는 방법에 대한 지침은 설명서를 참조하세요.
 
 ## 데이터 위생 {#data-hygiene}
 
