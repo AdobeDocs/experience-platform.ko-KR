@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 &#39;[!UICONTROL Use guided events]&#39; 옵션은 이 시나리오를 다루지 않으므로 작업을 수동으로 구성하십시오.
 
-1. 렌더링된 각 명제의 [, ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) 및 [(으)로 ](/help/tags/extensions/client/web-sdk/data-element-types.md#variable)을(를) 채우고 `_experience.decisioning.propositions`을(를) `id`(으)로 설정하는 `scope`XDM 개체`scopeDetails`(또는 `_experience.decisioning.propositionEventType.display`변수`1`) 데이터 요소를 만듭니다. 자세한 내용은 [디스플레이 이벤트 관리](display-events.md)를 참조하십시오.
+1. 렌더링된 각 명제의 [, &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) 및 [(으)로 &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#variable)을(를) 채우고 `_experience.decisioning.propositions`을(를) `id`(으)로 설정하는 `scope`XDM 개체`scopeDetails`(또는 `_experience.decisioning.propositionEventType.display`변수`1`) 데이터 요소를 만듭니다. 자세한 내용은 [디스플레이 이벤트 관리](display-events.md)를 참조하십시오.
 1. 페이지 규칙의 맨 아래에 대한 [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) 작업에서 **[!UICONTROL Use guided events]**&#x200B;을(를) 사용하지 않도록 설정하고 **[!UICONTROL XDM]** 필드의 데이터 요소를 참조합니다.
 
 >[!ENDTABS]
@@ -185,7 +185,7 @@ alloy("sendEvent", {
 
 >[!TAB 웹 SDK 태그 확장]
 
-1. [을(를) 보기의 이름(예: ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object))으로 설정하는 `web.webPageDetails.viewName`XDM 개체`home` 데이터 요소를 만듭니다.
+1. [을(를) 보기의 이름(예: &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object))으로 설정하는 `web.webPageDetails.viewName`XDM 개체`home` 데이터 요소를 만듭니다.
 1. 페이지 상단 [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) 작업을 구성하십시오. **[!UICONTROL Use guided events]**&#x200B;을(를) 활성화하고 **[!UICONTROL Request personalization]**&#x200B;을(를) 선택한 다음 **[!UICONTROL XDM]** 필드의 데이터 요소를 참조하십시오.
 1. **[!UICONTROL Send event]** 페이지의 하단 작업을 구성하십시오. **[!UICONTROL Use guided events]**&#x200B;을(를) 활성화하고 **[!UICONTROL Collect analytics]**&#x200B;을(를) 선택한 다음 **[!UICONTROL XDM]** 필드에서 동일한 데이터 요소를 참조하여 `viewName`이(가) 두 이벤트에서 일치하게 하십시오.
 
@@ -215,7 +215,7 @@ alloy("sendEvent", {
 
 >[!TAB 웹 SDK 태그 확장]
 
-1. [을(를) 새 보기의 이름(예: ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object))으로 설정하는 `web.webPageDetails.viewName`XDM 개체`cart` 데이터 요소를 만듭니다.
+1. [을(를) 새 보기의 이름(예: &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object))으로 설정하는 `web.webPageDetails.viewName`XDM 개체`cart` 데이터 요소를 만듭니다.
 1. 보기 변경 시 단일 [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) 작업을 구성하십시오. **[!UICONTROL Use guided events]**&#x200B;을(를) 사용하지 않도록 설정하고 **[!UICONTROL Render visual personalization decisions]**&#x200B;을(를) 사용하도록 설정하고 **[!UICONTROL XDM]** 필드의 데이터 요소를 참조합니다.
 
 >[!ENDTABS]
@@ -259,7 +259,7 @@ alloy("sendEvent", {
 
 >[!TAB 웹 SDK 태그 확장]
 
-1. [을(를) 새 보기의 이름(예: ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object))으로 설정하는 `web.webPageDetails.viewName`XDM 개체`cart` 데이터 요소를 만듭니다.
+1. [을(를) 새 보기의 이름(예: &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object))으로 설정하는 `web.webPageDetails.viewName`XDM 개체`cart` 데이터 요소를 만듭니다.
 1. 페이지 이벤트의 맨 위에 대해 [[!UICONTROL Apply propositions]](/help/tags/extensions/client/web-sdk/actions/apply-propositions.md) 작업을 구성하고 **[!UICONTROL View name]** 필드를 보기의 이름(예: `cart`)으로 설정합니다. 이 작업은 Edge Network에 연결하지 않고 이미 가져온 제안을 렌더링합니다.
 1. 페이지 이벤트의 맨 아래에 대해 [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) 작업을 구성하십시오. **[!UICONTROL Use guided events]**&#x200B;을(를) 활성화하고 **[!UICONTROL Collect analytics]**&#x200B;을(를) 선택한 다음 **[!UICONTROL XDM]** 필드의 데이터 요소를 참조하십시오.
 
