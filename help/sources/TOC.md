@@ -5,7 +5,7 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 8a9dd740bb210ef125bca65a8358bb6b51f6d28f
+source-git-commit: 79527635a61a43e2995f08d8c5981cd2030c5840
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 34%
@@ -107,7 +107,7 @@ ht-degree: 34%
       - [로컬 파일 업로드 커넥터](connectors/local-system/local-file-upload.md)
    - 충성도 {#loyalty}
       - [모세관 스트리밍 이벤트](connectors/loyalty/capillary.md)
-      - [코비](tutorials/ui/create/loyalty/kobie-streaming.md)
+      - [코비](tutorials/ui/create/loyalty/kobie.md)
       - [탈론](connectors/loyalty/talon-one.md)
    - 마케팅 자동화 {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
