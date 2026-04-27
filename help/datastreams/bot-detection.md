@@ -49,7 +49,7 @@ Edge Network에 대한 요청이 보트 감지 규칙과 일치하는 경우, XD
 
 ## 전제 조건 {#prerequisites}
 
-데이터 스트림에서 봇 탐지가 작동하려면 **[!UICONTROL [Bot Detection Information]](../xdm/field-groups/event/bot-detection-information.md)** 필드 그룹을 스키마에 추가해야 합니다. 스키마에 필드 그룹을 추가하는 방법에 대해 알아보려면 [XDM 스키마](../xdm/ui/resources/schemas.md#add-field-groups) 설명서를 참조하세요.
+데이터 스트림에서 봇 탐지가 작동하려면 **[[!UICONTROL [Bot Detection Information]]](../xdm/field-groups/event/bot-detection-information.md)** 필드 그룹을 스키마에 추가해야 합니다. 스키마에 필드 그룹을 추가하는 방법에 대해 알아보려면 [XDM 스키마](../xdm/ui/resources/schemas.md#add-field-groups) 설명서를 참조하세요.
 
 ## 데이터스트림에 대한 보트 탐지 구성 {#configure}
 
