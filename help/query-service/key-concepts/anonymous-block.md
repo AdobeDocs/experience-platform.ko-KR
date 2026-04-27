@@ -2,9 +2,9 @@
 title: 쿼리 서비스의 익명 블록
 description: 익명 블록은 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문으로, 쿼리 시퀀스를 효율적으로 실행할 수 있습니다
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ $$ BEGIN
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
     CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....; 
-    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+    EXCEPTION WHEN OTHERS THEN SET @ret = SELECT 'ERROR';
 END
 $$;
 ```
@@ -66,7 +66,7 @@ $$ BEGIN
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
     CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
-    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+    EXCEPTION WHEN OTHERS THEN SET @ret = SELECT 'ERROR';
 END
 $$;
 /

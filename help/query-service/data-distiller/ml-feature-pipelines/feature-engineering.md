@@ -2,10 +2,10 @@
 title: 머신 러닝을 위한 엔지니어 기능
 description: Adobe Experience Platform의 데이터를 머신 러닝 모델에서 사용할 수 있는 기능 또는 변수로 변환하는 방법에 대해 알아봅니다. Data Distiller을 사용하여 규모에 맞게 ML 기능을 계산하고 이러한 기능을 머신 러닝 환경과 공유하십시오.
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '1140'
-ht-degree: 13%
+source-wordcount: '1146'
+ht-degree: 18%
 
 ---
 
@@ -148,11 +148,11 @@ df_features.head()
 
 |   | userId | 이메일 수신됨 | 이메일 열림 | 이메일 클릭됨 | productsViewed | propositionInteract | propositionDismissed | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
 | --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- |
-| 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | Nan | Nan | Nan | Nan | None | Nan |
-| 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | Nan | Nan | Nan | Nan | None | Nan |
-| 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | Nan | Nan | Nan | Nan | None | Nan |
-| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540.0 | 0.0 | Nan | Nan | Nan | None | Nan |
-| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588.0 | 0.0 | Nan | Nan | Nan | None | Nan |
+| 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN |
+| 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN |
+| 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN |
+| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540.0 | 0.0 | NaN | NaN | NaN | None | NaN |
+| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588.0 | 0.0 | NaN | NaN | NaN | None | NaN |
 
 {style="table-layout:auto"}
 
@@ -231,11 +231,11 @@ df_training_set.head()
 
 |  | userId | eventType | 타임스탬프 | subscriptionOccured | 이메일 수신됨 | 이메일 열림 | 이메일 클릭됨 | productsViewed | propositionInteract | propositionDismissed | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |
-| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | Nan | Nan | Nan | Nan | None | Nan | 1 |
-| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921.0 | 0.0 | Nan | 1703.0 | Nan | None | Nan | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365.0 | 26.0 | 1.0 | Nan | Nan | None | Nan | 7 |
-| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | Nan | Nan | Nan | Nan | None | Nan | 1 |
-| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | Nan | Nan | Nan | Nan | None | Nan | 1 |
+| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
+| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921.0 | 0.0 | NaN | 1703.0 | NaN | None | NaN | 1 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365.0 | 26.0 | 1.0 | NaN | NaN | None | NaN | 7 |
+| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
+| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
 
 {style="table-layout:auto"}
 
@@ -381,7 +381,7 @@ WHERE
 ORDER BY timestamp;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 
 END $$;

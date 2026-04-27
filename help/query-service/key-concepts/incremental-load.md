@@ -2,9 +2,9 @@
 title: 쿼리 서비스의 증분 로드
 description: 증분 로드 기능은 익명 블록 및 스냅샷 기능을 모두 사용하여 일치하는 데이터를 무시하면서 데이터 레이크에서 데이터 웨어하우스로 데이터를 이동하는 거의 실시간 솔루션을 제공합니다.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 이 문서에서는 증분 처리를 위한 디자인 패턴을 작성하는 일련의 지침을 제공합니다. 이러한 단계는 템플릿으로 사용하여 고유한 증분 데이터 로드 쿼리를 만들 수 있습니다.
 
-## 시작하기
+## 시작
 
 이 문서 전체에서 SQL 예제를 사용하려면 익명 블록 및 스냅샷 기능을 이해해야 합니다. [샘플 익명 블록 쿼리](./anonymous-block.md) 설명서 및 [스냅숏 절](../sql/syntax.md#snapshot-clause) 설명서를 읽는 것이 좋습니다.
 
@@ -84,7 +84,7 @@ ht-degree: 0%
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
    
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END 
    $$;
@@ -116,7 +116,7 @@ ht-degree: 0%
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
    
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END
    $$;
@@ -154,7 +154,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;
