@@ -3,31 +3,22 @@ title: Kobie Source 개요
 description: Kobie 계정을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: c9f35b85f6c71ceff42a724a189098ed26ba1354
+exl-id: e0a263f1-2803-45c2-be88-21a1975d3286
+source-git-commit: 4feff9b123aa7bf73f5f936c290cba15815c3f3a
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 5%
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
 # [!DNL Kobie]
 
-[!DNL Kobie]은(는) 충성도 프로그램의 전체 라이프사이클을 관리하는 데 사용할 수 있는 구성 가능한 SaaS 플랫폼을 제공합니다. 일반적으로 마케팅 팀, 데이터 과학자 및 고객 경험 관리자가 사용하는 [!DNL Kobie] 플랫폼에는 복잡한 충성도 규칙을 오케스트레이션하는 데 사용할 수 있는 코드 없는 인터페이스가 포함되어 있습니다.
+[!DNL Kobie Alchemy Loyalty Cloud (KALC)]은(는) 고객 충성도 전략에 맞게 구성 가능하고, 안전하며, 확장 가능한 MACH 플랫폼으로 가치 실현 시간을 단축하고, 효율성을 개선하며, 엔터프라이즈급 거버넌스를 통해 브랜드를 보호합니다. CDP, CRM, CMS 등에서 원활한 통합을 통해 [!DNL KALC]은(는) 마케터에게 모든 채널에서 실시간 개인화를 제공할 수 있는 동시에 브랜드 충성도가 증가함에 따라 발전하는 유연성과 추적 가능성을 제공합니다.
 
-Adobe Experience Platform 소스 카탈로그의 [!DNL Kobie] 소스를 사용하여 [!DNL Kobie] 계정에서 일괄 처리 및 스트리밍 충성도 데이터를 모두 수집할 수 있습니다.
+>[!NOTE]
+>
+>**Experience Platform에 대한 권한 구성**
+>
+>[!DNL Kobie Streaming Events] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL View Sources]** 및 **[!UICONTROL Manage Sources]** 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/abac/ui/permissions.md)를 참조하십시오.
 
-- [일괄 처리 [!DNL Kobie]개](../../tutorials/ui/create/loyalty/kobie-batch.md)
-- [[!DNL Kobie] 스트리밍](../../tutorials/ui/create/loyalty/kobie-streaming.md)
-
-## 전제 조건
-
-[!DNL Kobie Batch Source Connector]을(를) 인증하고 연결하려면 다음 자격 증명의 값을 제공하십시오.
-
-| 자격 증명 | 설명 | 예 |
-| --- | --- | --- |
-
-## 매핑 {#mapping}
-
-<!-- Mapping info here -->
-
-## 다음 단계
+소스 카탈로그의 [[!DNL Kobie Streaming Events] source](../../tutorials/ui/create/loyalty/kobie-streaming.md)을(를) 사용하여 [!DNL Kobie] 계정의 충성도 데이터를 Adobe Experience Platform으로 스트리밍합니다.

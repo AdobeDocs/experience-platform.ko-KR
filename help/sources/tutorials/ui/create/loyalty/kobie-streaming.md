@@ -1,19 +1,25 @@
 ---
 title: Ui를 사용하여 Kobie에서 Experience Platform으로 데이터 스트리밍
 description: UI를 사용하여 Kobie에서 Adobe Experience Platform으로 데이터를 스트리밍하는 방법에 대해 알아봅니다.
-badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 3cba7ab5ddadc0f3b940f25280eb66a85725d1a6
+exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
+source-git-commit: 8c78ef8897bd160ad50688deeef83f029e6940cf
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 2%
+source-wordcount: '881'
+ht-degree: 1%
 
 ---
 
-# UI를 사용하여 [!DNL Kobie]에서 Experience Platform으로 데이터 스트리밍
+# UI를 사용하여 [!DNL Kobie Streaming Events]에서 Experience Platform으로 데이터 스트리밍
 
-UI의 소스 작업 영역을 사용하여 [!DNL Kobie]에서 Adobe Experience Platform으로 데이터를 연결하고 스트리밍하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
+[!DNL Kobie Alchemy Loyalty Cloud (KALC)]은(는) 고객 충성도 전략에 맞게 구성 가능하고, 안전하며, 확장 가능한 MACH 플랫폼으로 가치 실현 시간을 단축하고, 효율성을 개선하며, 엔터프라이즈급 거버넌스를 통해 브랜드를 보호합니다. CDP, CRM, CMS 등에서 원활한 통합을 통해 [!DNL KALC]은(는) 마케터에게 모든 채널에서 실시간 개인화를 제공할 수 있는 동시에 브랜드 충성도가 증가함에 따라 발전하는 유연성과 추적 가능성을 제공합니다.
+
+UI의 소스 작업 영역을 사용하여 [!DNL Kobie Streaming Events]에서 Adobe Experience Platform으로 데이터를 연결하고 스트리밍하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
+
+>[!IMPORTANT]
+>
+>필수 구성 요소 설정 및 매핑에 대한 자세한 내용은 [!DNL Kobie Client Services] 담당자에게 직접 문의하십시오.
 
 ## 시작
 
@@ -24,15 +30,11 @@ UI의 소스 작업 영역을 사용하여 [!DNL Kobie]에서 Adobe Experience P
    * [스키마 편집기 튜토리얼](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아봅니다.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
->[!IMPORTANT]
->
->계정을 Experience Platform에 연결하기 전에 완료해야 하는 필수 구성 요소 단계에 대해 알아보려면 [[!DNL Kobie] 개요](../../../../connectors/loyalty/kobie.md)를 읽어 보십시오.
-
 ## 소스 카탈로그 탐색
 
 Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Sources]**&#x200B;을(를) 선택하여 *[!UICONTROL Sources]* 작업 영역에 액세스합니다. *[!UICONTROL Categories]* 패널에서 적절한 범주를 선택합니다. 또는 검색 창을 사용하여 사용할 특정 소스로 이동합니다.
 
-[!DNL Kobie]에서 데이터를 스트리밍하려면 **[!UICONTROL Kobie Streaming Events]**&#x200B;에서 *[!UICONTROL Loyalty]* 원본 카드를 선택한 다음 **[!UICONTROL Add data]**&#x200B;을(를) 선택하십시오.
+[!DNL Kobie]에서 데이터를 스트리밍하려면 *[!UICONTROL Loyalty]*&#x200B;에서 **[!UICONTROL Kobie Streaming Events]** 원본 카드를 선택한 다음 **[!UICONTROL Add data]**&#x200B;을(를) 선택하십시오.
 
 >[!TIP]
 >

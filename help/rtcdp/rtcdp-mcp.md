@@ -1,6 +1,5 @@
 ---
 solution: Real-Time Customer Data Platform
-product: real-time customer data platform
 title: MCP 클라이언트(Beta) 작업
 description: MCP 서버를 사용하여 Adobe Real-Time CDP을 MCP 클라이언트에 연결하는 방법에 대해 알아봅니다
 feature: Integrations
@@ -11,7 +10,7 @@ level: Beginner, Intermediate
 hide: true
 hidefromtoc: true
 exl-id: 48dba0d2-7df9-4d76-bc87-5af49a8a40cc
-source-git-commit: b340d118051e2c38e1098b601e9944a7029129dc
+source-git-commit: 8a9dd740bb210ef125bca65a8358bb6b51f6d28f
 workflow-type: tm+mt
 source-wordcount: '2379'
 ht-degree: 0%

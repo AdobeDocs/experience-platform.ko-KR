@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
+source-git-commit: 8a9dd740bb210ef125bca65a8358bb6b51f6d28f
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1113'
 ht-degree: 34%
 
 ---
@@ -107,8 +107,8 @@ ht-degree: 34%
       - [로컬 파일 업로드 커넥터](connectors/local-system/local-file-upload.md)
    - 충성도 {#loyalty}
       - [모세관 스트리밍 이벤트](connectors/loyalty/capillary.md)
-      - [코비](connectors/loyalty/kobie.md)
-      - [Talon.One](connectors/loyalty/talon-one.md)
+      - [코비](tutorials/ui/create/loyalty/kobie-streaming.md)
+      - [탈론](connectors/loyalty/talon-one.md)
    - 마케팅 자동화 {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -323,8 +323,6 @@ ht-degree: 34%
          - [로컬 파일 업로드](tutorials/ui/create/local-system/local-file-upload.md)
       - 충성도 {#loyalty}
          - [모세관 스트리밍 이벤트](tutorials/ui/create/loyalty/capillary.md)
-         - [Kobie(일괄 처리)](tutorials/ui/create/loyalty/kobie-batch.md)
-         - [Kobie(스트리밍)](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Talon.One 스트리밍 이벤트](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Talon.One 일괄 처리 Source 커넥터](tutorials/ui/create/loyalty/talon-one-batch.md)
       - 마케팅 자동화 {#marketing-automation}
@@ -412,4 +410,4 @@ ht-degree: 34%
 - [IP 주소](ip-address-allow-list.md)
 - [자주 묻는 질문](./troubleshooting.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+- [Experience Platform 릴리스 노트](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
