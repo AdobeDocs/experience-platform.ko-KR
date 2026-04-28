@@ -3,15 +3,20 @@ title: Ui를 사용하여 Kobie에서 Experience Platform으로 데이터 스트
 description: UI를 사용하여 Kobie에서 Adobe Experience Platform으로 데이터를 스트리밍하는 방법에 대해 알아봅니다.
 hide: true
 hidefromtoc: true
+badge: Beta
 exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
-source-git-commit: 1939a3914b796985a837aee00b6ad14299b976ec
+source-git-commit: 90b197a632a5210c4502094de665cab53b76378b
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '904'
 ht-degree: 1%
 
 ---
 
 # UI를 사용하여 [!DNL Kobie Streaming Events]에서 Experience Platform으로 데이터 스트리밍
+
+>[!AVAILABILITY]
+>
+>[!DNL Kobie Streaming Events] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 소스 개요에서 [약관](../../../../home.md#terms-and-conditions)을 참조하십시오.
 
 [!DNL Kobie Alchemy Loyalty Cloud (KALC)]은(는) 고객 충성도 전략에 맞게 구성 가능하고, 안전하며, 확장 가능한 MACH 플랫폼으로 가치 실현 시간을 단축하고, 효율성을 개선하며, 엔터프라이즈급 거버넌스를 통해 브랜드를 보호합니다. CDP, CRM, CMS 등에서 원활한 통합을 통해 [!DNL KALC]은(는) 마케터에게 모든 채널에서 실시간 개인화를 제공할 수 있는 동시에 브랜드 충성도가 증가함에 따라 발전하는 유연성과 추적 가능성을 제공합니다.
 
