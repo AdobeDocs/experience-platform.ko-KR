@@ -1,100 +1,152 @@
 ---
 title: Acxiom 대상 연결
-description: ' [!DNL Acxiom Audience Connection] 대상을 사용하여 [!DNL Acxiom''s Real ID] 기술로 대상을 향상하고  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등의 여러 플랫폼에 대상을 활성화합니다.'
-exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 2be649980ecff5931ae61060ff43f6c98abe16d2
+description: ' [!DNL Acxiom Audience Connection] 대상을 사용하여  [!DNL Acxiom]''s [!DNL Real ID] 기술로 대상을 향상하고 광고 플랫폼에서 대상을 활성화하십시오.'
+source-git-commit: 71e655be2bdae3c89bd1652e2f83ab7bcc8c18fa
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1284'
 ht-degree: 7%
 
 ---
 
+
 # [!DNL Acxiom Audience Connection] 대상
+
+[!DNL Acxiom Audience Connection] 대상을 사용하여 [!DNL Acxiom]의 [Real ID™](https://www.acxiom.com/real-id/real-id/) 기술로 대상을 향상시킵니다. 그런 다음 [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등의 플랫폼에서 이러한 대상을 활성화합니다.
 
 >[!NOTE]
 >
->이 대상 커넥터 및 설명서 페이지는 [!DNL Acxiom] 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 Acxiom에 직접 [여기](mailto:acxiom-adobe-help@acxiom.com)로 문의하십시오.
+>이 대상 커넥터 및 설명서 페이지는 [!DNL Acxiom] 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청이 있으면 [!DNL Acxiom]에게 [acxiom-adobe-help@acxiom.com](mailto:acxiom-adobe-help@acxiom.com)로 직접 문의하십시오.
 
-[!DNL Acxiom Audience Connection] 대상을 사용하여 [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/) 기술로 대상을 향상하고 [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등과 같은 여러 플랫폼으로 대상을 활성화하십시오.
-
-이 자습서에서는 [!DNL Acxiom Audience Connection] 사용자 인터페이스를 사용하여 [!DNL Adobe Experience Platform] 대상 커넥터를 만드는 지침을 제공합니다. 이 커넥터는 대상을 빌드하고 선택한 대상에 배포합니다.
+[!DNL Adobe Experience Platform] 사용자 인터페이스를 사용하여 [!DNL Acxiom Audience Connection] 대상 커넥터를 만들려면 다음 단계를 따르십시오. 이 커넥터를 사용하여 대상자를 빌드하고 선택한 대상에 배포합니다.
 
 ## 사용 사례 {#use-cases}
 
-[!DNL Acxiom Audience Connection] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 [!DNL Adobe Experience Platform] 고객이 이 커넥터를 사용하여 해결할 수 있는 사용 사례 예제를 소개합니다.
+다음 사용 사례에서는 [!DNL Acxiom Audience Connection] 대상을 사용하는 방법을 보여 줍니다.
 
-### Experience Platform에서 Acxiom 계정으로 대상자 보내기 {#send-audiences}
+### [!DNL Experience Platform]에서 [!DNL Acxiom] 계정으로 대상자 보내기 {#send-audiences}
 
-채널 간 획득을 위해 대상을 [!DNL Experience Platform]에서 [!DNL Acxiom] 계정으로 보내려는 마케팅 전문가인 경우 이 대상 커넥터를 사용하십시오.
+이 대상 커넥터를 사용하여 채널 간 획득을 위해 대상을 [!DNL Experience Platform]에서 [!DNL Acxiom] 계정으로 보낼 수 있습니다.
 
-예를 들어 글로벌 금융 서비스 브랜드의 마케팅 운영 부서에서는 여러 광고 플랫폼을 통한 크로스 채널 고객 확보에 관심이 있습니다. [!DNL Acxiom Audience Connection] 대상 커넥터를 사용하여 대상을 [!DNL Experience Platform]에서 [!DNL Acxiom]&#x200B;(으)로 보내고, [!DNL Acxiom's Real ID] 기술로 대상을 향상시키며, [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등과 같은 여러 플랫폼에 대상을 활성화할 수 있습니다.
+예를 들어 글로벌 금융 서비스 브랜드의 마케팅 운영 부서에서는 여러 광고 플랫폼을 통한 크로스 채널 고객 확보에 관심이 있습니다. [!DNL Acxiom Audience Connection] 대상 커넥터를 사용하여 대상을 [!DNL Experience Platform]에서 [!DNL Acxiom]&#x200B;(으)로 보내고, [!DNL Acxiom]의 [!DNL Real ID] 기술로 대상을 향상시키며, [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] 등과 같은 여러 플랫폼에 대상을 활성화할 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
-* **사용 약관 확인:** 새 [!DNL Acxiom Audience Connection] 대상을 구성하려면 [!DNL Acxiom's] 사용 약관 계약을 읽고 서명해야 합니다. 실행된 판매 주문이 완료되면 계약 링크를 받게 됩니다.
-* **Adobe 조직 ID를 알고 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [!DNL Adobe's]조직 ID를 보는 방법&#x200B;*에 대한 자세한 내용은* [Experience Cloud의 조직](https://experienceleague.adobe.com/ko/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) 항목을 참조하십시오.
+[!DNL Acxiom Audience Connection] 대상을 구성하기 전에 다음 필수 구성 요소를 완료하십시오.
 
-## 지원되는 대상 {#supported-destinations}
-
-[!DNL Acxiom Audience Connection] 대상은 현재 다음 플랫폼에 대한 대상 활성화를 지원합니다.<br>
-
-* [!DNL Altice]
-* [!DNL Ampersand]
-* [!DNL Comcast]
-* [!DNL Cox]
-* [[!DNL LG Ads]](#lg-ads)
-* [!DNL Spectrum]
-* [!DNL Viant]
+* **사용 약관 확인:** [!DNL Acxiom]의 사용 약관을 읽고 서명합니다. 실행된 판매 주문이 완료되면 계약 링크를 받습니다. 계약에 서명할 때까지 [!DNL Acxiom Audience Connection] 대상 카드가 [!DNL Experience Platform] 대상 카탈로그에 표시되지 않습니다. 계약에 동의하고 서명하면 [!DNL Adobe]이(가) 설정을 완료하고 [!DNL Acxiom Audience Connection] 대상 카드가 표시됩니다.
+* **조직 ID [!DNL Adobe]을(를) 알 수 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [조직 ID를 확인](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)하는 방법에 대한 자세한 내용은 [!DNL Adobe]의 *Experience Cloud의 조직* 항목을 참조하십시오.
 
 ## 지원되는 대상자 {#supported-audiences}
 
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
-|---------|----------|----------|
-| [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
+| --------- | ---------- | ---------- |
+| [!DNL Segmentation Service] | 예 | [!DNL Experience Platform] [세분화 서비스](/help/segmentation/home.md)를 통해 생성된 대상입니다. |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li>CSV 파일에서 [!DNL Experience Platform]&#x200B;(으)로 사용자 지정 업로드 대상 [가져옴](/help/segmentation/ui/audience-portal.md#import-audience),</li><li>유사 대상,</li><li>페더레이션 대상,</li><li>[!DNL Adobe Journey Optimizer]과(와) 같은 다른 [!DNL Experience Platform] 앱에서 생성된 대상,</li><li>등.</li></ul> |
 
 {style="table-layout:auto"}
 
+### 데이터 유형별 지원되는 대상 {#supported-audiences-data-type}
 
-
-대상 데이터 유형별 지원되는 대상:
+다음 표에서는 이 대상으로 내보낼 수 있는 대상 데이터 유형을 설명합니다.
 
 | 대상 데이터 유형 | 지원됨 | 설명 | 사용 사례 |
-|--------------------|-----------|-------------|-----------|
-| [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필을 기반으로 마케팅 캠페인을 위해 특정 사용자 그룹을 타깃팅할 수 있습니다. | 빈번한 구매자, 장바구니 포기 |
+| -------------------- | ----------- | ------------- | ----------- |
+| [사람 대상](/help/segmentation/types/people-audiences.md) | 예 | 고객 프로필 기반. 마케팅 캠페인에 대한 특정 사용자 그룹을 타겟팅하는 데 사용합니다. | 빈번한 구매자, 장바구니 포기 |
 | [계정 대상자](/help/segmentation/types/account-audiences.md) | 아니요 | 계정 기반 마케팅 전략을 위해 특정 조직 내의 개인을 타깃팅합니다. | B2B 마케팅 |
 | [잠재 고객](/help/segmentation/types/prospect-audiences.md) | 아니요 | 아직 고객이 아니지만 타겟 대상자와 특성을 공유하는 개인을 타겟팅합니다. | 타사 데이터를 이용한 잠재 고객 확보 |
 | [데이터 집합 내보내기](/help/catalog/datasets/overview.md) | 아니요 | [!DNL Adobe Experience Platform] 데이터 레이크에 저장된 구조화된 데이터의 컬렉션입니다. | 보고, 데이터 과학 워크플로 |
 
 {style="table-layout:auto"}
 
+## 내보내기 유형 및 빈도 {#export-type-frequency}
+
+다음 표에서는 대상 내보내기 유형 및 빈도에 대해 설명합니다.
+
+| 항목 | 유형 | 참고 |
+| ---- | ---- | ----- |
+| 내보내기 유형 | **[!UICONTROL Audience export]** | [!DNL Acxiom Audience Connection] 대상에 사용된 식별자(이름, 전화번호 또는 기타)로 대상자의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL Batch]** | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. [일괄 파일 기반 대상](/help/destinations/destination-types.md#file-based)에 대해 자세히 알아보세요. |
+
+{style="table-layout:auto"}
+
+## 지원되는 대상 {#supported-destinations}
+
+[!DNL Acxiom Audience Connection] 대상을 통해 다음 플랫폼에 대한 대상을 활성화합니다.
+
+* [!DNL Altice]
+* [[!DNL Amazon]](#amazon)
+* [!DNL Ampersand]
+* [!DNL Comcast]
+* [!DNL Cox]
+* [[!DNL Facebook]](#facebook)
+* [[!DNL LG Ads]](#lg-ads)
+* [[!DNL Pinterest]](#pinterest)
+* [!DNL Spectrum]
+* [!DNL Viant]
+* [[!DNL Vizio]](#vizio)
 
 ## 대상에 연결 {#connect}
 
-[!DNL Acxiom's Audience Connection] 대상에 대한 인증은 사용자 편의를 위해 백그라운드에서 자동으로 처리됩니다.
+[!DNL Experience Platform]이(가) [!DNL Acxiom Audience Connection] 대상에 대한 인증을 자동으로 처리합니다.
+
+>[!IMPORTANT]
+>
+>대상에 연결하려면 **[!UICONTROL View Destinations]** 및 **[!UICONTROL Manage Destinations]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 ## 대상별 설정 {#destination-settings}
 
-일부 [!DNL Acxiom Audience Connection] 대상에 추가 정보가 필요합니다. 아래 섹션에서는 이러한 옵션을 구성하는 방법에 대한 자세한 지침을 제공합니다.
+일부 [!DNL Acxiom Audience Connection] 대상에 추가 정보가 필요합니다. 다음 섹션에서는 이러한 옵션을 구성하는 방법에 대한 자세한 지침을 제공합니다.
+
+### [!DNL Amazon] {#amazon}
+
+대상에 대한 세부 정보를 구성하려면 다음 필드를 완료하십시오.
+
+* **[!UICONTROL Publisher Account ID]**: 이 대상과 연결된 게시자 계정 ID를 입력하십시오.
+
+  게시자 계정 ID 필드를 표시하는 [!DNL Amazon] 대상 세부 정보 패널의 ![스크린샷입니다.](../../assets/catalog/advertising/acxiom-audience-distribution/amazon_destination_details.png){zoomable="yes"}
+
+### [!DNL Facebook] {#facebook}
+
+대상에 대한 세부 정보를 구성하려면 다음 필드를 완료하십시오.
+
+* **[!UICONTROL Destination Account ID]**: 이 대상의 대상 계정 ID를 입력하십시오.
+
+  대상 계정 ID 필드를 표시하는 [!DNL Facebook] 대상 세부 정보 패널의 ![스크린샷입니다.](../../assets/catalog/advertising/acxiom-audience-distribution/facebook_destination_details.png){zoomable="yes"}
 
 ### [!DNL LG Ads] {#lg-ads}
 
-대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
+대상에 대한 세부 정보를 구성하려면 다음 필드를 완료하십시오.
 
-* **세그먼트 범주**: 세그먼트가 속하는 대상 범주 또는 세로 범주. 예: 금융 서비스, 자동차, 건강 등
+* **[!UICONTROL Segment Category]**: 세그먼트가 속하는 대상 범주 또는 세로 범주. 예: 금융 서비스, 자동차 또는 건강.
 
-![LG 광고 대상 세부 정보](../../assets/catalog/advertising/acxiom-audience-distribution/lg_ads_destination_details.png)
+  세그먼트 범주 필드를 표시하는 [!DNL LG Ads] 대상 세부 정보 패널의 ![스크린샷입니다.](../../assets/catalog/advertising/acxiom-audience-distribution/lg_ads_destination_details.png){zoomable="yes"}
+
+### [!DNL Pinterest] {#pinterest}
+
+대상에 대한 세부 정보를 구성하려면 다음 필드를 완료하십시오.
+
+* **[!UICONTROL Destination Account ID]**: 이 대상의 대상 계정 ID를 입력하십시오.
+
+  대상 계정 ID 필드를 표시하는 [!DNL Pinterest] 대상 세부 정보 패널의 ![스크린샷입니다.](../../assets/catalog/advertising/acxiom-audience-distribution/pinterest_destination_details.png){zoomable="yes"}
+
+### [!DNL Vizio] {#vizio}
+
+대상에 대한 세부 정보를 구성하려면 다음 필드를 완료하십시오.
+
+* **[!UICONTROL Advertiser Name]**: 이 대상의 광고주 이름을 입력하십시오.
+
+  광고주 이름 필드를 표시하는 [!DNL Vizio] 대상 세부 정보 패널의 ![스크린샷입니다.](../../assets/catalog/advertising/acxiom-audience-distribution/vizio_destination_details.png){zoomable="yes"}
 
 ## 이 대상으로 대상자 활성화 {#activate}
+
+이 대상으로 대상을 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](/help/destinations/ui/activate-batch-profile-destinations.md)를 참조하십시오.
 
 >[!IMPORTANT]
 >
 >* 데이터를 활성화하려면 **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** 및 **[!UICONTROL View Segments]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
->* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
-
-이 대상으로 대상을 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](/help/destinations/ui/activate-batch-profile-destinations.md)를 참조하십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL View Identity Graph]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png){width="100" zoomable="yes"}
 
 >[!NOTE]
 >
@@ -102,44 +154,51 @@ ht-degree: 7%
 
 ### 속성 및 ID 매핑 {#map}
 
-[!DNL Acxiom Audience Connection] 대상이 대상 데이터를 올바르게 수신하려면 Experience Platform의 소스 필드를 올바른 [!DNL Acxiom Audience Connection] 대상 필드에 매핑해야 합니다.
+대상 데이터를 올바르게 받으려면 [!DNL Experience Platform]의 원본 필드를 올바른 [!DNL Acxiom Audience Connection] 대상 필드에 매핑하십시오.
 
-[!DNL Acxiom Audience Connection]에서는 다음 대상 필드에 대한 매핑만 허용합니다. 아래 표에 설명된 대상 필드는 아래 표시된 순서대로 매핑해야 합니다.
+다음 대상 필드는 [!DNL Acxiom]에 필요한 순서대로 자동으로 미리 채워집니다. 활성화 플로우를 완료하려면 소스 필드를 모든 대상 필드에 매핑해야 합니다.
 
-| 필드 이름 | 설명 | 필수 여부 | 필드 순서 | 최대 길이 |
-|---|---|---|---|---|
-| 이름 | 개인의 이름 | 아니요 | 1 | 255 |
-| 가운데 | 개인의 중간 이름 또는 이니셜 | 아니요 | 2 | 50 |
-| 성 | 개인의 성 | 예 | 3 | 255 |
-| 세대 접미사 | 개인의 접미사 | 아니요 | 4 | 10 |
-| 주소란 1 | 기본 거주지의 주소 1 필드 | 예 | 5 | 255 |
-| 주소란 2 | 기본 거주지의 주소 2 필드 | 아니요 | 6 | 255 |
-| 구/군/시 | 시티 오브 프라이머리 레지던스 | 예 | 7 | 255 |
-| 주/도 | 주 거주지의 약어 | 예 | 8 | 2 |
-| 우편번호 | 기본 거주지의 전체 우편 번호 | 예 | 9 | 10 |
-| 이메일 | 기본 이메일 기본적으로 이 필드는 중복 제거 키로 사용되어 레코드를 고유하게 만듭니다. | 아니요 | 10 | 255 |
-| 휴대폰 | 개인 전화 번호(지역 코드 + 번호)<br> 기본적으로 이 필드는 중복 제거 키로 사용되어 레코드를 고유하게 만듭니다. | 아니요 | 11 | 10 |
+>[!IMPORTANT]
+>
+>모든 대상 필드는 UI에서 매핑되어야 합니다. 그러나 **[!UICONTROL Last Name]**, **[!UICONTROL Address Line 1]**, **[!UICONTROL City]**, **[!UICONTROL State]** 및 **[!UICONTROL Zip Code]**&#x200B;만 프로필 스키마에 실제 데이터가 필요합니다. UI 요구 사항을 충족하도록 사용 가능한 모든 소스 필드를 나머지 타겟 필드에 매핑합니다.
 
-**[!UICONTROL Source Field]** 열에서 해당 대상 필드에 매핑할 각 원본 특성의 이름을 입력하거나 화살표 아이콘을 선택하여 **[!UICONTROL Select source field]** 화면을 엽니다.<br>
-![매핑 화면](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
+| 필드 이름 | 설명 | UI에 필요 | 처리에 필요한 데이터 | 필드 순서 | 최대 길이 |
+| -------------------- | ------------ | ------------------ | ---------------------------- | ----------- | ---------- |
+| 이름 | 개인의 이름 | 예 | 아니요 | 1 | 255 |
+| 가운데 | 개인의 중간 이름 또는 이니셜 | 예 | 아니요 | 2 | 50 |
+| 성 | 개인의 성 | 예 | **예** | 3 | 255 |
+| 세대 접미사 | 개인의 접미사 | 예 | 아니요 | 4 | 10 |
+| 주소란 1 | 기본 거주지의 주소 1 필드 | 예 | **예** | 5 | 255 |
+| 주소란 2 | 기본 거주지의 주소 2 필드 | 예 | 아니요 | 6 | 255 |
+| 구/군/시 | 시티 오브 프라이머리 레지던스 | 예 | **예** | 7 | 255 |
+| 주/도 | 주 거주지의 약어 | 예 | **예** | 8 | 2 |
+| 우편번호 | 기본 거주지의 전체 우편 번호 | 예 | **예** | 9 | 10 |
+| 이메일 | 기본 이메일. 기본적으로 이 필드는 중복 제거 키로 사용되어 레코드를 고유하게 만듭니다. | 예 | 아니요 | 10 | 255 |
+| 휴대폰 | 개인 전화번호(지역 번호 + 번호). 기본적으로 이 필드는 중복 제거 키로 사용되어 레코드를 고유하게 만듭니다. | 예 | 아니요 | 11 | 10 |
 
-모든 필드를 매핑했으면 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
+{style="table-layout:auto"}
 
-[!DNL Adobe's] 표준 스키마를 사용하지 않는 경우 쿼리 서비스를 사용하여 [&#x200B; 표준 스키마를 필드 이름으로 채우는 방법에 대한 자세한 내용은 &#x200B;](../../../query-service/ui/overview.md)쿼리 서비스 UI 안내서[!DNL Adobe] 설명서를 참조하십시오.
+**[!UICONTROL Source Field]** 열에서 해당 대상 필드에 매핑할 각 원본 특성의 이름을 입력합니다. 또는 **[!UICONTROL Select source field]**&#x200B;을(를) 선택하여 사용 가능한 소스 필드를 찾아봅니다.
 
-### 검토 {#review}
+[!DNL Acxiom Audience Connection] 대상에 대해 [!DNL Acxiom]의 필수 필드가 미리 채워진 원본 및 대상 필드 열을 표시하는 ![매핑 화면입니다.](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png){zoomable="yes"}
 
-위의 모든 단계를 완료하면 대상 연결 상태 및 대상 세부 사항을 검토한 후 활성화(배포)할 수 있습니다. 선택한 대상이 목록의 맨 아래에 표시됩니다. 각 대상자는 [!DNL Acxiom Audience Connection] API에 대한 별도의 호출이 됩니다.
+모든 필드를 매핑한 후 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
+
+비표준 스키마를 사용하려면 [쿼리 서비스 UI 안내서](/help/query-service/ui/overview.md)를 참조하여 필드 이름을 [!DNL Adobe] 표준 스키마에 매핑하십시오.
+
+### 대상 검토 {#review}
+
+모든 단계를 완료한 후 대상 연결 상태 및 대상 세부 사항을 검토한 후 활성화합니다. 선택한 대상이 목록에 나타납니다. 각 대상자는 [!DNL Acxiom Audience Connection] API에 대한 별도의 호출입니다.
 
 결과에 만족하면 **[!UICONTROL Finish]**&#x200B;을(를) 선택하여 대상을 활성화하십시오.
 
-![대상자 검토](../../assets/catalog/advertising/acxiom-audience-distribution/review_audience.png)
+![대상 연결 상태 및 선택한 대상을 표시하는 대상 화면을 검토합니다.](../../assets/catalog/advertising/acxiom-audience-distribution/review_audience.png){zoomable="yes"}
 
 ## 문제 해결 {#troubleshooting}
 
 대상 담당자가 대상자를 찾을 수 없는 경우 [!DNL Adobe] 담당자에게 지원을 요청하십시오.
 
-[!DNL Adobe] 담당자에게 다음 정보를 제공해야 합니다.
+[!DNL Adobe] 담당자에게 다음 정보를 제공하십시오.
 
 * 대상자 이름
 * 대상 이름
@@ -152,4 +211,4 @@ ht-degree: 7%
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
-데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/ko/docs/experience-platform/data-governance/home)를 참조하십시오.
+데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](/help/data-governance/home.md)를 참조하십시오.
