@@ -34,7 +34,7 @@ ht-degree: 4%
 [!DNL Acxiom Real ID Audience Connection] 대상을 구성하기 전에 다음 필수 구성 요소를 완료하십시오.
 
 * **사용 약관 확인:** [!DNL Acxiom]의 사용 약관을 읽고 서명합니다. 실행된 판매 주문이 완료되면 계약 링크를 받습니다. 계약에 서명할 때까지 [!DNL Acxiom Real ID Audience Connection] 대상 카드가 [!DNL Experience Platform] 대상 카탈로그에 표시되지 않습니다. 계약에 동의하고 서명하면 [!DNL Adobe]이(가) 설정을 완료하고 [!DNL Acxiom Real ID Audience Connection] 대상 카드가 표시됩니다.
-* **조직 ID [!DNL Adobe]을(를) 알 수 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [조직 ID를 확인](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)하는 방법에 대한 자세한 내용은 [!DNL Adobe]의 *Experience Cloud의 조직* 항목을 참조하십시오.
+* **조직 ID [!DNL Adobe]을(를) 알 수 있습니다.** 사용 약관 계약을 완료하려면 [!DNL Adobe] 조직 ID가 필요합니다. [조직 ID를 확인](https://experienceleague.adobe.com/ko/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)하는 방법에 대한 자세한 내용은 [!DNL Adobe]의 *Experience Cloud의 조직* 항목을 참조하십시오.
 * **[!DNL Acxiom]의 [!DNL Real ID] 제품에 대한 라이선스 취득:** 라이선스를 취득한 후 [!DNL Acxiom]의 [!DNL Real ID]을(를) [!DNL Real-Time CDP] 내에 사용할 수 있도록 하십시오. 자세한 내용은 [Acxiom 데이터 개선 사항](/help/destinations/catalog/data-partner/acxiom-data-enhancement.md)을 참조하십시오.
 
 ## 지원되는 ID {#supported-identities}
