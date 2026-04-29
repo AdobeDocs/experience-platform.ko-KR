@@ -35,7 +35,7 @@ Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인�
 
 ## 지원되는 ID {#supported-identities}
 
-크리터는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)에 대해 자세히 알아보세요.
+크리터는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko#getting-started)에 대해 자세히 알아보세요.
 
 | 대상 ID | 설명 | 고려 사항 |
 | --- | --- | --- |
