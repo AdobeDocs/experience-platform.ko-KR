@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2026년 4월
 description: Adobe Experience Platform에 대한 2026년 4월 릴리스 정보입니다.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+exl-id: 47070fcf-b585-43f4-b43b-0d62c18f0693
 source-git-commit: 4a92f929c8d9ec727eee8365f576718b31c6084c
 workflow-type: tm+mt
 source-wordcount: '1632'
@@ -70,10 +70,10 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | 고정 | 설명 |
 | --- | --- |
 | [Snowflake 스트리밍](../../destinations/catalog/warehouses/snowflake.md) 대상에 대한 새 `TS` 열 | 이제 [Snowflake 스트리밍](../../destinations/catalog/warehouses/snowflake.md) 대상에 각 행이 마지막으로 업데이트된 시기를 표시하는 `TS` 타임스탬프 열이 공유 테이블에 포함됩니다. 이 업데이트는 4월 말까지 배포됩니다. |
-| [사용자 지정 Personalization](../../destinations/catalog/personalization/custom-personalization.md) 대상에 대한 지원 모니터링 | 이제 [데이터 흐름 실행 페이지](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations)에 [사용자 지정 Personalization](../../destinations/catalog/personalization/custom-personalization.md) 대상에 대한 지표가 표시됩니다. 이전에는 이러한 지표를 이 대상 유형에 사용할 수 없었습니다. 대상자가 예상대로 활성화되는지 확인하고 문제를 진단할 때 사용합니다. <br> ![데이터 흐름은 사용자 지정 Personalization 대상에 대해 표시된 지표를 실행하여 활성화, 제외 및 실패한 ID를 표시합니다.](../2026/assets/april/dataflow-run-custom-personalization.png "데이터 흐름에서 사용자 지정 Personalization 대상에 대한 지표를 실행합니다."){zoomable="yes"} |
-| 활성화 워크플로 검토 단계의 프로필 개수 | 이제 활성화 워크플로의 검토 단계에 이미 활성화된 대상에 대한 프로필 수가 표시됩니다. [일괄 처리 대상](../../destinations/ui/activate-batch-profile-destinations.md)뿐만 아니라 [스트리밍 대상](../../destinations/ui/activate-segment-streaming-destinations.md)에 대해서도 프로필 수가 표시됩니다. <br> ![이미 활성화된 대상자 및 스트리밍 대상자에 대한 활성화 워크플로의 검토 단계에 표시되는 프로필 수입니다.](../2026/assets/april/profile-count-review.png "활성화 워크플로 검토 단계의 프로필 수입니다."){zoomable="yes"} |
+| [사용자 지정 Personalization](../../destinations/catalog/personalization/custom-personalization.md) 대상에 대한 지원 모니터링 | 이제 [데이터 흐름 실행 페이지](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations)에 [사용자 지정 Personalization](../../destinations/catalog/personalization/custom-personalization.md) 대상에 대한 지표가 표시됩니다. 이전에는 이러한 지표를 이 대상 유형에 사용할 수 없었습니다. 대상자가 예상대로 활성화되는지 확인하고 문제를 진단할 때 사용합니다. <br> ![데이터 흐름은 사용자 지정 Personalization 대상에 대해 표시된 지표를 실행하여 활성화, 제외 및 실패한 ID를 표시합니다.](./assets/april/dataflow-run-custom-personalization.png "데이터 흐름에서 사용자 지정 Personalization 대상에 대한 지표를 실행합니다."){zoomable="yes"} |
+| 활성화 워크플로 검토 단계의 프로필 개수 | 이제 활성화 워크플로의 검토 단계에 이미 활성화된 대상에 대한 프로필 수가 표시됩니다. [일괄 처리 대상](../../destinations/ui/activate-batch-profile-destinations.md)뿐만 아니라 [스트리밍 대상](../../destinations/ui/activate-segment-streaming-destinations.md)에 대해서도 프로필 수가 표시됩니다. <br> ![이미 활성화된 대상자 및 스트리밍 대상자에 대한 활성화 워크플로의 검토 단계에 표시되는 프로필 수입니다.](./assets/april/profile-count-review.png "활성화 워크플로 검토 단계의 프로필 수입니다."){zoomable="yes"} |
 | [!DNL Pinterest] 토큰 만료 가시성 | 이제 [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) 대상에 토큰 만료 날짜가 표시되므로 재인증이 필요한 시기를 확인할 수 있습니다. 토큰 [!DNL Pinterest]개가 30일마다 만료됩니다. 토큰이 만료되면 데이터 내보내기가 작동하지 않습니다. 중단이 발생하지 않도록 하려면 토큰이 만료되기 전에 [인증 자격 증명을 새로 고치십시오](../../destinations/catalog/advertising/pinterest.md#refresh-authentication-credentials). |
-| 만료된 일정에 대해 이제 파일 내보내기가 비활성화되었습니다. | 대상자 일정이 만료되면 이제 **[!UICONTROL Export file now]**&#x200B;을(를) 사용할 수 없게 됩니다. 그 이유를 설명하는 도구 설명이 제공됩니다. 이전에는 작업을 선택하면 오류가 발생했습니다. <br> ![작업을 사용할 수 없는 이유를 설명하는 도구 설명과 함께 파일 내보내기 작업을 사용할 수 없습니다.](../2026/assets/april/export-file-now-disabled.png "지금 파일 내보내기 작업을 사용할 수 없습니다."){zoomable="yes"} |
+| 만료된 일정에 대해 이제 파일 내보내기가 비활성화되었습니다. | 대상자 일정이 만료되면 이제 **[!UICONTROL Export file now]**&#x200B;을(를) 사용할 수 없게 됩니다. 그 이유를 설명하는 도구 설명이 제공됩니다. 이전에는 작업을 선택하면 오류가 발생했습니다. <br> ![작업을 사용할 수 없는 이유를 설명하는 도구 설명과 함께 파일 내보내기 작업을 사용할 수 없습니다.](./assets/april/export-file-now-disabled.png "지금 파일 내보내기 작업을 사용할 수 없습니다."){zoomable="yes"} |
 | 활성화 워크플로의 열 가시성 수정 | 한 테이블의 표시 열을 변경하면 활성화 워크플로에서 다른 테이블에 잘못 영향을 주는 문제가 해결되었습니다. |
 
 {style="table-layout:auto"}
@@ -151,6 +151,9 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | Data Distiller Accelerators | Run and schedule Adobe-managed, parameterized SQL templates in the Query Service UI to perform common analyses without writing SQL. This helps you standardize analytics workflows and reuse trusted query logic across your organization. See the [Data Distiller accelerators guide](../../query-service/ui/accelerators.md) for more details. |
 
+| [!DNL Delta Sharing] | You can use the [!DNL Delta Sharing] source to bring Delta tables into Experience Platform through a secure, open data‑sharing protocol. After you configure a [!DNL Delta Sharing] connection and select the shares and tables you want to ingest, Platform automatically brings that data into your datasets so you can use it for analysis, segmentation, and activation. |
+| [!DNL Meta Ads] (Beta) | You can use the [!DNL Meta Ads] source connector (Beta) in the Sources workspace to authenticate to [!DNL Meta], select your ad accounts, and schedule ingestion of [!DNL Meta Ads] campaign and performance data into Experience Platform datasets. |
+
 | Automatic dataflow disabling | Sources ingestion dataflows that fail continuously for 30 days are automatically disabled, helping to surface unhealthy dataflows and reduce repeated failed runs. |
 
---->
+-->

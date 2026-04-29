@@ -3,9 +3,9 @@ keywords: advertising; criteo;
 title: 크리테오 연결
 description: Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인터넷을 이용하는 모든 소비자에게 더욱 풍부한 경험을 제공합니다. Criteo는 세계 최대 규모의 상거래 데이터 세트와 동급 최고의 AI를 바탕으로 쇼핑 여정 전반의 각 터치포인트를 개인화하여 적절한 시점에 적절한 광고를 고객에게 전달합니다.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 12f762e4a27da6f3fafb9e5339476fdf4eda9854
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1183'
 ht-degree: 12%
 
 ---
@@ -24,7 +24,7 @@ Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인�
 
 * [Criteo 관리 센터](https://marketing.criteo.com)에 관리자 계정이 있어야 합니다.
 * Criteo 광고주 ID가 필요합니다(이 ID가 없는 경우 Criteo 담당자에게 문의).
-* [!DNL GUM caller ID]을(를) 식별자로 사용하려면 [!DNL GUM ID]을(를) 제공해야 합니다.
+* [!DNL GUM ID]을(를) 식별자로 사용하려면 [!DNL GUM caller ID]을(를) 제공해야 합니다.
 
 ## 제한 사항 {#limitations}
 
@@ -35,7 +35,7 @@ Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인�
 
 ## 지원되는 ID {#supported-identities}
 
-크리터는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko#getting-started)에 대해 자세히 알아보세요.
+크리터는 아래 표에 설명된 ID 활성화를 지원합니다. [ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)에 대해 자세히 알아보세요.
 
 | 대상 ID | 설명 | 고려 사항 |
 | --- | --- | --- |
@@ -49,7 +49,7 @@ Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인�
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 아니요 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 Experience Platform으로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 Experience Platform 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
