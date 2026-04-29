@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그먼트 일치 개요
 description: 세그먼트 일치 는 두 명 이상의 Experience Platform 사용자가 안전하고 관리되며 개인 정보 보호 친화적인 방식으로 세그먼트 데이터를 교환할 수 있는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: d4b6b83e37762f73f628b8922bf77f1739492eef
+source-git-commit: bf5a474d7ba6ef27d196bc88c10ff9f19151e111
 workflow-type: tm+mt
-source-wordcount: '2000'
+source-wordcount: '2123'
 ht-degree: 3%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Adobe은 고객이 공동 작업을 수행하고 대상을 교환할 수 있도록 2021년에 [!DNL Segment Match]을(를) 도입했습니다. 2025년 초에 Adobe에서는 이 사용 사례를 충족하기 위한 보다 장기적인 접근 방식인 [Real-Time CDP Collaboration](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/home)을(를) 도입했습니다.
+>Adobe은 고객이 공동 작업을 수행하고 대상을 교환할 수 있도록 2021년에 [!DNL Segment Match]을(를) 도입했습니다. 2025년 초에 Adobe에서는 이 사용 사례를 충족하기 위한 보다 장기적인 접근 방식인 [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)을(를) 도입했습니다.
 >
->* 미국, 캐나다, 호주, 뉴질랜드 및 EMEA의 고객을 위한: Adobe은 Real-Time CDP Prime 및 Ultimate 고객에게 데이터 공동 작업 사용 사례를 [!DNL Segment Match]에서 Real-Time CDP Collaboration으로 전환할 것을 권장합니다. Real-Time CDP Collaboration에 대한 [설명서](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/home) 및 [빠른 시작 안내서](https://experienceleague.adobe.com/ko/docs/real-time-cdp-collaboration/using/quick-start-guide)를 보고 자세한 내용을 알아보려면 Adobe 계정 팀에 문의하십시오.
+>* 미국, 캐나다, 호주, 뉴질랜드 및 EMEA의 고객을 위한: Adobe은 Real-Time CDP Prime 및 Ultimate 고객에게 데이터 공동 작업 사용 사례를 [!DNL Segment Match]에서 Real-Time CDP Collaboration으로 전환할 것을 권장합니다. Real-Time CDP Collaboration에 대한 [설명서](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) 및 [빠른 시작 안내서](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide)를 보고 자세한 내용을 알아보려면 Adobe 계정 팀에 문의하십시오.
 >* 다른 모든 지역의 고객의 경우: 2026년에 Real-Time CDP Collaboration이 해당 지역에 릴리스될 때까지 [!DNL Segment Match]이(가) 권장됩니다.
 
 Adobe Experience Platform 세그먼트 일치 는 두 명 이상의 Experience Platform 사용자가 안전하고 통제되며 개인 정보 보호 방식으로 세그먼트 데이터를 교환할 수 있는 세그먼트 공유 서비스입니다. [!DNL Segment Match]은(는) Experience Platform 개인 정보 보호 표준과 해시된 이메일, 해시된 전화번호, IDFA 및 GAID와 같은 장치 식별자 등의 개인 식별자를 사용합니다.
@@ -51,7 +51,7 @@ ID 네임스페이스는 [Adobe Experience Platform ID 서비스](../../../ident
 
 | 네임스페이스 | 설명 |
 | --------- | ----------- |
-| 이메일 (SHA256, 소문자) | 사전 해시된 이메일 주소를 위한 네임스페이스입니다. 이 네임스페이스에 제공된 값은 SHA256으로 해싱하기 전에 소문자로 변환됩니다. 전자 메일 주소가 정규화되기 전에 선행 및 후행 공백을 잘라내야 합니다. 이 설정은 소급하여 변경할 수 없습니다. Experience Platform은 데이터 수집 시 해싱을 지원하는 두 가지 방법을 제공합니다([`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=ko#hashing-support) 및 [데이터 준비](../../../data-prep/functions.md#hashing)). |
+| 이메일 (SHA256, 소문자) | 사전 해시된 이메일 주소를 위한 네임스페이스입니다. 이 네임스페이스에 제공된 값은 SHA256으로 해싱하기 전에 소문자로 변환됩니다. 전자 메일 주소가 정규화되기 전에 선행 및 후행 공백을 잘라내야 합니다. 이 설정은 소급하여 변경할 수 없습니다. Experience Platform은 데이터 수집 시 해싱을 지원하는 두 가지 방법을 제공합니다([`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) 및 [데이터 준비](../../../data-prep/functions.md#hashing)). |
 | 전화(SHA256_E.164) | SHA256과 E.164 포맷을 모두 사용하여 해시해야 하는 원시 전화번호를 나타내는 네임스페이스입니다. |
 | ECID | ECID(Experience Cloud ID) 값을 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 자세한 내용은 [ECID 개요](../../../identity-service/features/ecid.md)를 참조하십시오. |
 | Apple IDFA (광고주용 ID) | 광고주용 Apple ID를 나타내는 네임스페이스입니다. 자세한 내용은 [관심 기반 광고](https://support.apple.com/en-us/HT202074)에 대한 다음 문서를 참조하십시오. |
@@ -59,11 +59,11 @@ ID 네임스페이스는 [Adobe Experience Platform ID 서비스](../../../ident
 
 ### 동의 구성 설정
 
-동의 구성을 제공하고 동의 확인을 위해 기본값을 `opt-in` 또는 `opt-out`(으)로 설정해야 합니다.
+동의 구성을 제공하고 동의 확인에 대한 옵트인 또는 옵트아웃으로 기본값을 설정해야 합니다.
 
-옵트인 및 옵트아웃 동의 확인은 기본적으로 사용자 데이터를 공유하는 데 동의하고 작업할 수 있는지 여부를 결정합니다. 동의 구성 기본값이 `opt-out`(으)로 설정된 경우 사용자가 명시적으로 옵트아웃하지 않는 한 사용자 데이터를 공유할 수 있습니다. 기본값이 `opt-in`(으)로 설정된 경우 사용자가 명시적으로 옵트인하지 않는 한 사용자 데이터를 공유할 수 없습니다.
+옵트인 및 옵트아웃 동의 확인은 기본적으로 사용자 데이터를 공유하는 데 동의하고 작업할 수 있는지 여부를 결정합니다. 동의 구성 기본값이 옵트인으로 설정된 경우 사용자가 명시적으로 옵트아웃하지 않는 한 사용자 데이터를 공유할 수 있습니다. 기본값이 옵트아웃으로 설정된 경우 사용자가 명시적으로 옵트인하지 않는 한 사용자 데이터를 공유할 수 없습니다.
 
-[!DNL Segment Match]에 대한 기본 동의 구성이 `opt-out`(으)로 설정되어 있습니다. 데이터에 옵트인 모델을 적용하려면 Adobe 계정 팀에 이메일 요청을 전송하십시오.
+세그먼트 일치에 대한 기본 동의 구성은 옵트아웃으로 설정됩니다. 데이터에 옵트인 모델을 적용하려면 Adobe 계정 팀에 이메일 요청을 전송하십시오.
 
 데이터 공유 동의 값을 설정하는 데 사용되는 `share` 특성에 대한 자세한 내용은 [개인 정보 및 동의 필드 그룹](../../../xdm/field-groups/profile/consents.md)에 대한 다음 설명서를 참조하십시오. 개인 정보, 개인화 및 마케팅 환경 설정 관련 데이터 수집 및 사용에 대한 소비자 동의를 캡처하는 데 사용되는 특정 필드 그룹에 대한 자세한 내용은 다음 [개인 정보, Personalization 및 마케팅 환경 설정에 대한 동의 GitHub 예제](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md)를 참조하십시오.
 
@@ -84,7 +84,7 @@ ID 네임스페이스는 [Adobe Experience Platform ID 서비스](../../../ident
 | 사용 권한 | 설명 |
 | --- | --- |
 | 대상자 공유 연결 관리 | 이 권한을 사용하면 두 조직을 연결하여 [!DNL Segment Match] 흐름을 사용하도록 설정하는 파트너 핸드셰이크 프로세스를 완료할 수 있습니다. |
-| 대상 공유 관리 | 이 권한을 사용하면 활성 파트너([!DNL Segment Match] 액세스 권한을 가진 관리자 사용자가 연결한 파트너)와 피드(**[!UICONTROL Audience Share Connections]**&#x200B;에 사용되는 데이터 패키지)를 만들고 편집하고 게시할 수 있습니다. |
+| 대상 공유 관리 | 이 권한을 사용하면 활성 파트너(**[!UICONTROL Audience Share Connections]** 액세스 권한을 가진 관리자 사용자가 연결한 파트너)와 피드([!DNL Segment Match]에 사용되는 데이터 패키지)를 만들고 편집하고 게시할 수 있습니다. |
 
 액세스 제어 및 사용 권한에 대한 자세한 내용은 [액세스 제어 개요](../../../access-control/home.md)를 참조하십시오.
 
@@ -108,11 +108,11 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Segments]**&#x200B;�
 >
 >당신과 파트너 사이의 &quot;양방향 악수&quot;는 엄밀히 말해 연결이다. 이 프로세스 중에는 데이터가 교환되지 않습니다.
 
-[!UICONTROL Manage partners] 화면의 기본 인터페이스에서 기존 파트너와의 연결 목록을 볼 수 있습니다. 오른쪽 레일에는 새 [!UICONTROL Share setting]을(를) 생성하는 옵션과 파트너의 [!UICONTROL connect ID]을(를) 입력할 수 있는 입력 상자가 있는 [!UICONTROL connect ID] 패널이 있습니다.
+[!UICONTROL Manage partners] 화면의 기본 인터페이스에서 기존 파트너와의 연결 목록을 볼 수 있습니다. 오른쪽 레일에는 새 [!UICONTROL connect ID]을(를) 생성하는 옵션과 파트너의 [!UICONTROL connect ID]을(를) 입력할 수 있는 입력 상자가 있는 [!UICONTROL Share setting] 패널이 있습니다.
 
 ![establish-connection.png](./images/establish-connection.png)
 
-새 [!UICONTROL connect ID]을(를) 만들려면 **[!UICONTROL Regenerate]**&#x200B;에서 [!UICONTROL Share setting]을(를) 선택한 다음 새로 생성된 ID 옆의 복사 아이콘을 선택합니다.
+새 [!UICONTROL connect ID]을(를) 만들려면 [!UICONTROL Share setting]에서 **[!UICONTROL Regenerate]**&#x200B;을(를) 선택한 다음 새로 생성된 ID 옆의 복사 아이콘을 선택합니다.
 
 ![share-setting.png](./images/share-setting.png)
 
@@ -130,7 +130,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Segments]**&#x200B;�
 
 **피드**&#x200B;는 데이터(세그먼트) 그룹, 데이터를 노출하거나 사용하는 방법에 대한 규칙, 데이터가 파트너의 데이터와 일치하는 방식을 결정하는 구성입니다. 피드는 독립적으로 관리하고 [!DNL Segment Match]을(를) 통해 다른 Experience Platform 사용자와 교환할 수 있습니다.
 
-새 피드를 만들려면 **[!UICONTROL Create feed]** 대시보드에서 [!UICONTROL Feeds]을(를) 선택하십시오.
+새 피드를 만들려면 [!UICONTROL Feeds] 대시보드에서 **[!UICONTROL Create feed]**&#x200B;을(를) 선택하십시오.
 
 ![create-feed.png](./images/create-feed.png)
 
@@ -184,7 +184,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Segments]**&#x200B;�
 
 ### 피드 업데이트
 
-세그먼트를 추가하거나 제거하려면 **[!UICONTROL Create feed]** 페이지에서 [!UICONTROL Feeds]을(를) 선택한 다음 **[!UICONTROL Existing feed]**&#x200B;을(를) 선택하십시오. 표시되는 기존 피드 목록에서 업데이트할 피드를 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
+세그먼트를 추가하거나 제거하려면 [!UICONTROL Feeds] 페이지에서 **[!UICONTROL Create feed]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Existing feed]**&#x200B;을(를) 선택하십시오. 표시되는 기존 피드 목록에서 업데이트할 피드를 선택한 다음 **[!UICONTROL Next]**&#x200B;을(를) 선택합니다.
 
 ![피드 목록](./images/feed-list.png)
 
@@ -198,7 +198,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Segments]**&#x200B;�
 
 ### 수신 피드 수락
 
-들어오는 피드를 보려면 **[!UICONTROL Received]** 페이지의 헤더에서 [!UICONTROL Feeds]을(를) 선택한 다음 목록에서 보려는 피드를 선택하십시오. 피드를 수락하려면 **[!UICONTROL Enable for profile]**&#x200B;을(를) 선택하고 [!UICONTROL Pending]에서 [!UICONTROL Enabled]&#x200B;(으)로 상태를 업데이트할 수 있도록 잠시 기다려 주십시오.
+들어오는 피드를 보려면 [!UICONTROL Feeds] 페이지의 헤더에서 **[!UICONTROL Received]**&#x200B;을(를) 선택한 다음 목록에서 보려는 피드를 선택하십시오. 피드를 수락하려면 **[!UICONTROL Enable for profile]**&#x200B;을(를) 선택하고 [!UICONTROL Pending]에서 [!UICONTROL Enabled]&#x200B;(으)로 상태를 업데이트할 수 있도록 잠시 기다려 주십시오.
 
 ![received.png](./images/received.png)
 
