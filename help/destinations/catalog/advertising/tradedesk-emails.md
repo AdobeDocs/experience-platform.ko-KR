@@ -1,11 +1,11 @@
 ---
 title: 트레이드 데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타기팅 및 억제에 대한 프로필을 트레이드 데스크 계정에 활성화합니다.
-last-substantial-update: 2025-01-16T00:00:00Z
+last-substantial-update: 2026-04-29T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: a052203dce4949bc795fe181821a8d890c341673
 workflow-type: tm+mt
-source-wordcount: '1799'
+source-wordcount: '1861'
 ht-degree: 2%
 
 ---
@@ -101,10 +101,9 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 * 모든 ASCII 문자를 소문자로 변환합니다.
 * `gmail.com` 전자 메일 주소의 사용자 이름 부분에서 다음 문자를 제거하십시오.
 
-      * 기간(`.`) 문자(ASCII 코드 46). 예를 들어 &#39;jane.doe@gmail.com&#39;을 &#39;janedoe@gmail.com&#39;으로 정규화합니다.
-     * 더하기 기호(`+`) 문자(ASCII 코드 43) 및 모든 후속 문자입니다. 예를 들어 &#39;janedoe+home@gmail.com&#39;을 &#39;janedoe@gmail.com&#39;으로 정규화합니다.
+      * 마침표(`.`) 문자(ASCII 코드 46)입니다. 예를 들어 &#39;jane.doe@gmail.com&#39;을 &#39;janedoe@gmail.com&#39;.
+     * 더하기 기호(`+) 문자(ASCII 코드 43) 및 모든 후속 문자로 정규화합니다. 예를 들어 &#39;janedoe+home@gmail.com&#39;을 &#39;janedoe@gmail.com&#39;으로 정규화합니다.
   
-
 ## 전화번호 표준화 및 해시 요구 사항 {#phone-hashing}
 
 다음은 전화번호 업로드에 대해 알아야 할 사항입니다.
@@ -124,10 +123,10 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 * E.164 전화 번호는 최대 15자리까지 사용할 수 있습니다.
 * 정규화된 E.164 전화 번호에서는 공백, 하이픈, 괄호 또는 기타 특수 문자가 없는 `[+][country code][subscriber number including area code]` 구문을 사용합니다. 다음은 몇 가지 예입니다.
 
-      * US: 1 (234) 567-8901이 +12345678901으로 표준화되었습니다.
-     * 싱가포르: 65 1243 5678이 +6512345678으로 표준화되었습니다.
-     * 오스트레일리아: 휴대폰 번호 0491 570 006이 국가 코드를 추가하고 앞에 있는 0을 삭제하도록 표준화되었습니다. +61491570006.
-     * 영국: 휴대폰 번호 07812 345678은 국가 코드를 추가하고 선행 0을 삭제하도록 표준화되었습니다. +447812345678.
+      * US: 1 (234) 567-8901이 +12345678901.
+     * 싱가포르: 65 1243 5678이 +6512345678.
+     * 오스트레일리아: 휴대폰 번호 0491 570 006이 국가 코드를 추가하고 선행 0을 삭제하도록 표준화되었습니다. +61491570006.
+     * UK: 휴대폰 번호 07812345678 가 국가 코드를 추가하고 선행 0을 삭제하도록 표준화되었습니다. +447812345678.
   
 정규화된 전화 번호가 UTF-16과 같은 다른 인코딩 시스템이 아닌 UTF-8인지 확인하십시오.
 
@@ -156,6 +155,10 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 
 {style="table-layout:auto"}
 
+>[!NOTE]
+>
+>[!DNL The Trade Desk] CRM 대상에는 **[지금 파일 내보내기](/help/destinations/ui/export-file-now.md)** 기능을 사용할 수 없습니다. 대상을 내보내려면 [예약된 일별 일괄 내보내기](#activate)를 사용하십시오.
+
 ## 대상에 연결 {#connect}
 
 ### 대상에 인증 {#authenticate}
@@ -164,12 +167,12 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 
 ### 대상 세부 사항 입력 {#fill-in-details}
 
-대상 데이터를 대상으로 보내거나 활성화하려면 먼저 고유한 대상 플랫폼에 대한 연결을 설정해야 합니다. [이 대상을 설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=ko)하는 동안 다음 정보를 제공해야 합니다.
+대상 데이터를 대상으로 보내거나 활성화하려면 먼저 고유한 대상 플랫폼에 대한 연결을 설정해야 합니다. [이 대상을 설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)하는 동안 다음 정보를 제공해야 합니다.
 
 * **[!UICONTROL Account Type]**: **[!UICONTROL Existing Account]** 옵션을 선택하십시오.
 * **[!UICONTROL Name]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL Description]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL Advertiser ID]**: [!DNL Trade Desk Advertiser ID] 계정 관리자가 공유하거나 [!DNL Trade Desk] UI의 [!DNL Advertiser Preferences]에서 찾을 수 있는 [!DNL Trade Desk].
+* **[!UICONTROL Advertiser ID]**: [!DNL Trade Desk] 계정 관리자가 공유하거나 [!DNL Trade Desk] UI의 [!DNL Advertiser Preferences]에서 찾을 수 있는 [!DNL Trade Desk Advertiser ID].
 
 대상 세부 정보를 채우는 방법을 보여 주는 ![Experience Platform UI 스크린샷입니다.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
