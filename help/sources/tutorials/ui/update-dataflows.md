@@ -2,9 +2,9 @@
 description: Experience Platform UI에서 기존 소스 데이터 흐름을 업데이트하는 방법을 알아봅니다.
 title: UI에서 Source 연결 데이터 흐름 업데이트
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: 4c4f221a5060360fa0381c8532227e854ad40a77
+source-git-commit: 2139566a7c44de8736f7433ba826796dad44715f
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '893'
 ht-degree: 7%
 
 ---
@@ -47,7 +47,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Sources]**&#x200B;�
 
 >[!NOTE]
 >
->Adobe Analytics, Adobe Audience Manager, HTTP API 및 [!DNL Marketo Engage] 소스에 대해서는 매핑 편집 기능이 현재 지원되지 않습니다.
+>매핑 편집 기능은 현재 Adobe Analytics, Adobe Audience Manager 및 HTTP API 소스에 대해 지원되지 않습니다.
 
 이 프로세스 중에 데이터 흐름과 연결된 매핑 세트를 업데이트할 수도 있습니다.  매핑 인터페이스는 새 권장 매핑 세트가 아니라 데이터 흐름의 기존 매핑을 표시합니다. 매핑 업데이트는 향후 예약된 데이터 흐름 실행에만 적용됩니다. 일회성 수집으로 예약된 데이터 흐름에는 매핑 세트가 업데이트될 수 없습니다.
 
