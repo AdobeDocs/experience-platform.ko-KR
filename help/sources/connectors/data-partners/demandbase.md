@@ -3,9 +3,9 @@ title: Demandbase 의도
 description: Experience Platform의 Demandbase Intent 소스에 대해 알아봅니다.
 last-substantial-update: 2025-03-26T00:00:00Z
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
+source-git-commit: 6d86b6cfe966b210d105c9561428c001908007af
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1675'
 ht-degree: 2%
 
 ---
@@ -22,13 +22,13 @@ ht-degree: 2%
 
 [!DNL Demandbase]을(를) Experience Platform에 연결하기 전에 필수 구성 요소 단계에 대해 다음 섹션을 읽어 보십시오.
 
-### 허용 목록에 추가하다 IP 주소
+### IP 주소
 
-소스 커넥터를 사용하기 전에 IP 주소 목록을 허용 목록에 추가하다에 추가해야 합니다. 영역별 IP 주소를 허용 목록에 추가하다에 추가하지 않으면 소스를 사용할 때 오류나 성능이 저하될 수 있습니다. 허용 목록에 추가하다 자세한 내용은 [IP 주소](../../ip-address-allow-list.md) 페이지를 참조하십시오.
+소스 커넥터를 사용하기 전에 IP 주소 목록을 허용 목록에 추가하다에 추가해야 합니다. 영역별 IP 주소를 허용 목록에 추가하다에 추가하지 않으면 소스를 사용할 때 오류나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소](../../ip-address-allow-list.md) 페이지를 참조하십시오.
 
 ### Experience Platform에 대한 권한 구성
 
-**[!UICONTROL View Sources]** 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL Manage Sources]** 및 [!DNL Demandbase] 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/abac/ui/permissions.md)를 참조하십시오.
+[!DNL Demandbase] 계정을 Experience Platform에 연결하려면 계정에 대해 **[!UICONTROL View Sources]** 및 **[!UICONTROL Manage Sources]** 권한이 모두 활성화되어야 합니다. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/abac/ui/permissions.md)를 참조하십시오.
 
 ### 파일 및 디렉터리에 대한 이름 지정 제약 조건
 
@@ -52,7 +52,7 @@ Experience Platform의 [!DNL Demandbase]은(는) [!DNL Google Cloud Storage]에 
 | 버킷 이름 | 데이터를 가져올 [!DNL Demandbase] 버킷. |
 | 폴더 경로 | 액세스 권한을 제공할 폴더의 경로입니다. |
 
-이러한 자격 증명에 대한 자세한 내용은 [[!DNL Google Cloud Storage] HMAC 키 안내서](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)를 참조하십시오. 액세스 키를 생성하는 방법에 대한 단계는 [소스 개요 [!DNL Google Cloud Storage] 의 &#x200B;](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)사전 요구 사항 안내서를 참조하십시오.
+이러한 자격 증명에 대한 자세한 내용은 [[!DNL Google Cloud Storage] HMAC 키 안내서](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)를 참조하십시오. 액세스 키를 생성하는 방법에 대한 단계는  [!DNL Google Cloud Storage] 소스 개요](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)의 [사전 요구 사항 안내서를 참조하십시오.
 
 ## [!DNL Demandbase] 스키마
 
@@ -188,7 +188,7 @@ Experience Platform에서 의도 데이터를 삭제하려면 [데이터 세트�
 
 +++답변
 
-Experience Platform의 도메인 일치는 스크러빙된 도메인 필드 값의 정확한 일치를 기반으로 합니다. Experience Platform은 접두사(예: https:/<span>/www.)를 자동으로 제거하고 최상위 도메인(예: adobe.com)을 유지합니다. 일치에는 정확한 도메인 값이 필요하며 퍼지 일치 또는 하위 도메인은 지원되지 않습니다.
+Experience Platform의 도메인 일치는 스크러빙된 도메인 필드 값의 정확한 일치를 기반으로 합니다. Experience Platform은 접두사를 자동으로 제거합니다(예: https:/<span>/www.). 최상위 도메인(예: adobe.com)을 유지합니다. 일치에는 정확한 도메인 값이 필요하며 퍼지 일치 또는 하위 도메인은 지원되지 않습니다.
 
 +++
 
@@ -197,5 +197,28 @@ Experience Platform의 도메인 일치는 스크러빙된 도메인 필드 값�
 +++답변
 
 의도 데이터는 [계정 대상](../../../segmentation/types/account-audiences.md)에서 사용하여 타깃팅, 세분화 및 개인화를 향상시킬 수 있습니다. 의도한 신호를 활용함으로써 기업은 특정 주제에 높은 관심을 보이는 계정을 식별하고 참여하여 마케팅 및 판매 활동을 최적화할 수 있습니다
+
++++
+
+### 표준 [!DNL Account Key] 필드 그룹이 [!DNL Demandbase Account Intent] 스키마와 호환됩니까?
+
++++답변
+
+아니요. B2B 계정 스키마와의 관계를 설정하려면 `accountID` 필드를 사용하십시오. 이렇게 하면 참조 또는 소스 스키마에 전체 필드 그룹을 도입할 필요가 없습니다.
++++
+
+### [!DNL Demandbase Account Intent] 스키마가 B2B 계정 스키마와 관계를 설정하는 방법은 무엇입니까?
+
++++답변
+
+[!DNL Demandbase Account Intent] 스키마는 `accountID` 필드를 사용하여 해당 B2B 계정 레코드에 연결합니다. 이 필드는 수집 중에 두 데이터 세트에서 일치하는 도메인을 찾으면 자동으로 채워집니다. 특히 [!DNL Demandbase] 스키마의 `accountID`은(는) 표준 B2B 계정 스키마의 `accountKey.sourceKey`을(를) 참조합니다.
+
++++
+
+### [!DNL Demandbase Account Intent] 스키마에서 일반적인 [!DNL Account Key] 필드 그룹 구조 대신 `accountID`을(를) 사용하는 이유는 무엇입니까?
+
++++답변
+
+[!DNL Demandbase Intent] 스키마는 저장소 및 처리 효율성에 중점을 둡니다. 스키마는 전체 필드 그룹을 사용하는 대신 관계를 설정하는 간소화된 단일 필드(`accountID`)를 사용합니다. 이는 복잡성을 줄이고 의도 데이터에 대한 최적의 처리 패턴에 맞춥니다.
 
 +++
