@@ -48,7 +48,7 @@ ht-degree: 29%
 
 데이터 수집을 위한 데이터 준비 프로세스에 대한 빠른 데모는 다음 비디오를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345567?captions=kor&quality=12&enable10seconds=on&speedcontrol=on)
 
 ## 샘플 데이터 제공 {#select-data}
 
