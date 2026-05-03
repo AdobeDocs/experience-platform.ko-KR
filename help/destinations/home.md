@@ -2,9 +2,9 @@
 title: 대상 개요
 description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과 미리 빌드된 통합입니다. Adobe Experience Platform의 대상 을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 7f69bbafa5ccd6759b5afcc2b99cbec32220ad3b
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1379'
 ht-degree: 2%
 
 ---
@@ -99,6 +99,12 @@ Experience Platform의 대상 기능은 [!DNL Adobe Experience Platform] 액세�
 ![대상 모니터링 페이지 예입니다.](./assets/overview/monitoring-page-example.png)
 
 데이터가 대상으로 성공적으로 전달되고 있는지 확인할 수도 있습니다. 카탈로그의 대부분의 대상 설명서 페이지에는 Experience Platform에서 데이터를 성공적으로 가져왔음을 대상 플랫폼에서 확인하는 방법을 나타내는 *데이터 내보내기 유효성 검사*&#x200B;이(가) 있습니다. [Amazon 광고 대상](/help/destinations/catalog/advertising/amazon-ads.md#exported-data)에 대한 이 섹션의 예를 봅니다.
+
+## 데이터 암호화 {#encryption}
+
+대상을 통해 [!DNL Experience Platform]에서 내보낸 전송 중인 모든 데이터는 [HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246) 이상을 사용하여 안전하고 암호화된 연결을 통해 이동합니다. 아웃바운드 통신에서 [!DNL Experience Platform]이(가) 사용하는 TLS 프로토콜도 [SNI(서버 이름 표시)](https://www.rfc-editor.org/rfc/rfc6066#page-6)을(를) 지원합니다.
+
+데이터를 수집, 암호화 및 유지하는 방법에 대한 자세한 내용은 [Experience Platform의 데이터 암호화](../landing/governance-privacy-security/encryption.md)를 참조하십시오.
 
 ## 대상으로 데이터 활성화에 대한 데이터 거버넌스 제한 사항 {#data-governance}
 
