@@ -2,24 +2,24 @@
 title: 데이터스트림 개요
 description: 데이터스트림을 통해 클라이언트측 Experience Platform SDK 통합을 Adobe 제품 및 서드파티 대상과 연결하는 방법에 대해 알아봅니다.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '706'
-ht-degree: 56%
+source-wordcount: '710'
+ht-degree: 48%
 
 ---
 
 # 데이터스트림 개요
 
-데이터 스트림은 Adobe Experience Platform 웹 및 Mobile SDK에 대한 서버측 구성을 나타냅니다. SDK의 [`configure`](/help/collection/js/commands/configure/overview.md) 명령은 클라이언트측 설정(예: `edgeDomain`)을 처리하는 동안 데이터스트림은 다른 모든 구성을 관리합니다.
+데이터 스트림은 [!DNL Adobe Experience Platform] 웹 및 모바일 SDK에 대한 서버측 구성을 나타냅니다. SDK의 [`configure`](/help/collection/js/commands/configure/overview.md) 명령은 클라이언트측 설정(예: `edgeDomain`)을 처리하는 동안 데이터스트림은 다른 모든 구성을 관리합니다.
 
-Edge Network에 요청을 보낼 때 `datastreamId`은(는) 데이터가 전송되는 데이터 스트림을 참조합니다. 웹 사이트의 코드를 변경하지 않고 서버측 구성을 업데이트할 수 있습니다.
+[!DNL Edge Network]에 요청을 보낼 때 `datastreamId`에서 데이터가 전송되는 데이터 스트림을 참조합니다. 웹 사이트의 코드를 변경하지 않고 서버측 구성을 업데이트할 수 있습니다.
 
-Adobe Experience Platform UI 또는 데이터 수집 UI 내의 왼쪽 탐색에서 **[!UICONTROL Datastreams]**&#x200B;을(를) 선택하여 데이터스트림을 만들고 관리할 수 있습니다.
+[!DNL Adobe Experience Platform] UI 또는 데이터 수집 UI 내의 왼쪽 탐색에서 **[!UICONTROL Datastreams]**&#x200B;을(를) 선택하여 데이터스트림을 만들고 관리할 수 있습니다.
 
-![UI의 데이터스트림 탭](assets/overview/datastreams-tab.png)
+![Adobe Experience Platform UI에서 데이터스트림 탭의 스크린샷](assets/overview/datastreams-tab.png)
 
-UI에서 데이터스트림을 구성하는 방법에 대한 자세한 내용은 [&#x200B; 구성 안내서](./configure.md)를 참조하십시오.
+UI에서 데이터스트림을 구성하는 방법에 대한 자세한 내용은 [ 구성 안내서](/help/datastreams/configure.md)를 참조하십시오.
 
 ## 데이터스트림의 민감한 데이터 처리 {#sensitive}
 
@@ -37,7 +37,7 @@ UI에서 데이터스트림을 구성하는 방법에 대한 자세한 내용은
 
 ### 향상된 암호화 {#encryption}
 
-Edge Network를 통해 전송 중인 모든 데이터는 [HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246)를 사용하여 암호화된 보안 연결을 통해 제공됩니다. 데이터스트림이 데이터를 Experience Platform으로 가져올 경우 데이터는 Experience Platform 데이터 레이크에서 사용하지 않을 때 암호화됩니다. 자세한 내용은 [Experience Platform의 데이터 암호화](../landing/governance-privacy-security/encryption.md)에 대한 문서를 참조하십시오.
+[!DNL Edge Network]을(를) 통해 전송되는 모든 데이터는 [HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246)을(를) 사용하여 암호화된 보안 연결을 통해 수행됩니다. 데이터스트림이 데이터를 Experience Platform으로 가져올 경우 데이터는 Experience Platform 데이터 레이크에서 사용하지 않을 때 암호화됩니다. 자세한 내용은 [Experience Platform의 데이터 암호화](/help/landing/governance-privacy-security/encryption.md)에 대한 문서를 참조하십시오.
 
 ### 데이터 거버넌스 {#governance}
 
@@ -45,26 +45,26 @@ Edge Network를 통해 전송 중인 모든 데이터는 [HTTPS TLS 1.2](https:/
 
 다음 비디오는 UI에서 데이터스트림의 데이터 사용 제한이 구성 및 적용되는 방법에 대한 간략한 개요를 제공합니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3413105/?captions=kor&quality=12&learn=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
 
-조직에서 민감하다고 판단되는 스키마와 필드에 Experience Platform의 [민감한 데이터 사용 레이블](../data-governance/labels/reference.md#sensitive)을 적용할 수 있습니다. 예를 들어 `RHD` 레이블은 개인건강정보(PHI)를 나타내는 데 사용되고 `S1` 레이블은 지리적 위치 데이터를 나타냅니다.
+조직에서 민감하다고 판단되는 스키마와 필드에 Experience Platform의 [민감한 데이터 사용 레이블](/help/data-governance/labels/reference.md#sensitive)을 적용할 수 있습니다. 예를 들어 `RHD` 레이블은 개인건강정보(PHI)를 나타내는 데 사용되고 `S1` 레이블은 지리적 위치 데이터를 나타냅니다.
 
 >[!NOTE]
 >
->Experience Platform UI 또는 데이터 수집 UI의 [!UICONTROL Schemas] 탭 내에서 데이터 사용 레이블을 적용하는 방법에 대한 자세한 내용은 [스키마 레이블 지정 자습서](../xdm/tutorials/labels.md)를 참조하십시오.
+>Experience Platform UI 또는 데이터 수집 UI의 [!UICONTROL Schemas] 탭 내에서 데이터 사용 레이블을 적용하는 방법에 대한 자세한 내용은 [스키마 레이블 지정 자습서](/help/xdm/tutorials/labels.md)를 참조하십시오.
 
-데이터스트림을 생성할 때 선택한 스키마에 중요한 데이터 사용 레이블이 포함된 경우 해당 데이터를 HIPAA 준비 대상으로 보내도록 데이터스트림만 구성할 수 있습니다. 현재 데이터스트림에서 지원하는 유일한 HIPAA 지원 대상은 Adobe Experience Platform입니다. Adobe Target, Adobe Analytics, Adobe Audience Manager, 이벤트 전달 및 에지 대상 등 기타 대상 서비스는 민감한 데이터 사용 레이블이 포함된 데이터스트림에 대해 비활성화되어 있습니다.
+데이터스트림을 생성할 때 선택한 스키마에 중요한 데이터 사용 레이블이 포함된 경우 해당 데이터를 HIPAA 준비 대상으로 보내도록 데이터스트림만 구성할 수 있습니다. 현재 데이터 스트림에서 지원하는 유일한 HIPAA 준비 대상은 [!DNL Adobe Experience Platform]입니다. 중요한 데이터 사용 레이블이 포함된 데이터스트림에 대해 [!DNL Adobe Target], [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], 이벤트 전달 및 에지 대상을 포함한 다른 대상 서비스를 사용할 수 없습니다.
 
 HIPAA 지원 서비스가 아닌 기존 데이터스트림에서 스키마를 사용 중인 경우 민감한 데이터 사용 레이블을 스키마에 추가하게 되면 정책 위반 메시지가 표시되고 작업이 차단됩니다. 이 메시지는 위반을 트리거한 데이터 스트림을 지정하고 문제를 해결하기 위해 데이터 스트림에서 비 HIPAA 준비 서비스를 제거하도록 제안합니다.
 
-### 감사 로그
+### 감사 로그 {#audit-logs}
 
 Experience Platform에서 감사 로그 형식으로 데이터스트림 활동을 모니터링할 수 있습니다. 감사 로그는 **누가**&#x200B;에서 **무엇을** 작업하고 **언제**&#x200B;을(를) 수행했으며, 데이터 스트림과 관련된 문제를 해결하는 데 도움이 되는 다른 상황별 데이터와 함께 귀사에서 기업 데이터 관리 정책 및 규제 요구 사항을 준수하도록 도와줍니다.
 
-사용자가 데이터스트림을 생성하고 업데이트하거나 삭제할 때마다 감사 로그를 생성하여 작업을 기록합니다. 사용자가 [데이터 수집을 위한 데이터 준비](./data-prep.md)를 통해 매핑을 생성하고 업데이트하거나 삭제할 때도 마찬가지입니다. 데이터 스트림인지 또는 업데이트된 매핑인지에 관계없이 결과 감사 로그는 [!UICONTROL Datastreams] 리소스 유형으로 분류됩니다.
+사용자가 데이터스트림을 생성하고 업데이트하거나 삭제할 때마다 감사 로그를 생성하여 작업을 기록합니다. 사용자가 [데이터 수집을 위한 데이터 준비](/help/datastreams/data-prep.md)를 통해 매핑을 생성하고 업데이트하거나 삭제할 때도 마찬가지입니다. 데이터 스트림인지 또는 업데이트된 매핑인지에 관계없이 결과 감사 로그는 [!UICONTROL Datastreams] 리소스 유형으로 분류됩니다.
 
-데이터스트림 및 다른 지원되는 서비스에서 로그를 해석하는 방법에 대한 자세한 내용은 [감사 로그](../landing/governance-privacy-security/audit-logs/overview.md)에 관한 설명서를 참조하십시오.
+데이터스트림 및 다른 지원되는 서비스에서 로그를 해석하는 방법에 대한 자세한 내용은 [감사 로그](/help/landing/governance-privacy-security/audit-logs/overview.md)에 관한 설명서를 참조하십시오.
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
-이 안내서에서는 데이터스트림 및 데이터 수집에서의 사용과 민감한 데이터 처리에 대한 높은 수준의 개요를 제공했습니다. 새 데이터스트림을 설정하는 방법에 대한 단계는 [&#x200B; 데이터스트림 구성 안내서](./configure.md)를 참조하십시오.
+이 안내서에서는 데이터스트림 및 데이터 수집에서의 사용과 민감한 데이터 처리에 대한 높은 수준의 개요를 제공했습니다. 새 데이터스트림을 설정하는 방법에 대한 단계는 [ 데이터스트림 구성 안내서](/help/datastreams/configure.md)를 참조하십시오.

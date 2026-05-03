@@ -2,55 +2,55 @@
 title: 데이터 수집을 위한 데이터 준비
 description: Adobe Experience Platform Web 및 Mobile SDK용 데이터스트림 구성 시 데이터를 Experience Data Model(XDM) 이벤트 스키마에 매핑하는 방법에 대해 알아봅니다.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 41%
+source-wordcount: '1143'
+ht-degree: 29%
 
 ---
 
 # 데이터 수집을 위한 데이터 준비
 
-데이터 준비는 [XDM(Experience Data Model)](../xdm/home.md)에서 데이터를 매핑, 변환 및 확인하는 데 사용할 수 있는 Adobe Experience Platform 서비스입니다. Experience Platform 지원 [데이터스트림](./overview.md)을 구성할 때 Experience Platform Edge Network에 전송할 때 데이터 준비 기능을 사용하여 소스 데이터를 XDM에 매핑할 수 있습니다.
+[!DNL Adobe Experience Platform] 서비스인 [!DNL Data Prep]을(를) 사용하여 [XDM(Experience Data Model)](/help/xdm/home.md)과(와) 데이터를 매핑, 변환 및 확인할 수 있습니다. Experience Platform 지원 [데이터스트림](/help/datastreams/overview.md)을 구성할 때 [!DNL Adobe Experience Platform Edge Network]에 보낼 때 [!DNL Data Prep] 기능을 사용하여 소스 데이터를 XDM에 매핑할 수 있습니다.
 
-웹 페이지에서 전송된 모든 데이터는 Experience Platform에 XDM으로 도착해야 합니다. 3가지 방법으로 페이지 내 데이터 레이어의 데이터를 Experience Platform에서 허용하는 XDM으로 변환할 수 있습니다.
+웹 페이지에서 전송된 모든 데이터는 Experience Platform에 XDM으로 도착해야 합니다. 페이지 내 데이터 레이어의 데이터를 Experience Platform에서 허용하는 XDM으로 변환하는 세 가지 방법이 있습니다.
 
 1. 웹 페이지 자체에서 데이터 레이어를 XDM으로 다시 포맷합니다.
-2. 태그 기본 데이터 요소 기능을 사용하여 웹 페이지의 기존 데이터 레이어 형식을 XDM으로 다시 지정합니다.
-3. 데이터 수집을 위한 데이터 준비를 사용하여 Edge Network을 통해 웹 페이지의 기존 데이터 레이어 형식을 XDM으로 다시 지정합니다.
+2. [!DNL Tags] 기본 제공 데이터 요소 기능을 사용하여 웹 페이지의 기존 데이터 레이어 형식을 XDM으로 다시 지정합니다.
+3. 데이터 수집을 위한 데이터 준비를 사용하여 [!DNL Edge Network]을(를) 통해 웹 페이지의 기존 데이터 레이어 형식을 XDM으로 다시 포맷합니다.
 
-이 안내서는 세 번째 옵션에 중점을 둡니다.
+이 안내서에서는 세 번째 옵션을 다룹니다.
 
 ## 데이터 수집을 위해 데이터 준비를 사용해야 하는 경우 {#when-to-use-data-prep}
 
-데이터 수집을 위한 데이터 준비가 유용한 두 가지 사용 사례가 있습니다.
+데이터 수집을 위한 데이터 준비는 다음 두 가지 상황에서 유용합니다.
 
-1. 웹 사이트에는 잘 구성되고, 관리되고, 유지되는 데이터 레이어가 있으며, JavaScript 조작을 사용하여 페이지에서 XDM으로 변환하는 대신(태그 데이터 요소를 통해 또는 수동으로 JavaScript 조작을 통해) Edge Network으로 직접 전송하는 것이 좋습니다.
-2. 태그 이외의 태그 지정 시스템이 사이트에 배포됩니다.
+1. 웹 사이트에는 잘 구성되고 관리되고 유지되는 데이터 레이어가 있으며, [!DNL Tags] 데이터 요소를 통해 또는 수동으로 JavaScript 조작을 통해 JavaScript 조작을 통해 페이지의 XDM으로 변환하는 대신 [!DNL Edge Network]에 직접 전송하는 것이 좋습니다.
+2. [!DNL Tags] 이외의 태그 지정 시스템이 사이트에 배포되어 있습니다.
 
-## WebSDK를 통해 Edge Network에 기존 데이터 레이어 보내기 {#send-datalayer-via-websdk}
+## Web SDK을 통해 기존 데이터 레이어를 Edge Network으로 전송 {#send-datalayer-via-websdk}
 
-기존 데이터 레이어는 [`data`](/help/collection/js/commands/sendevent/data.md) 명령 내에서 `sendEvent` 개체를 사용하여 보내야 합니다.
+기존 데이터 레이어는 `sendEvent` 명령 내에서 [`data`](/help/collection/js/commands/sendevent/data.md) 개체를 사용하여 보내야 합니다.
 
-태그를 사용하는 경우 **[!UICONTROL Data]** 작업 유형의 [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md) 필드를 사용해야 합니다.
+[!DNL Tags]을(를) 사용하는 경우 [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md) 작업 유형의 **[!UICONTROL Data]** 필드를 사용해야 합니다.
 
-이 안내서의 나머지 부분에서는 WebSDK에서 데이터 레이어를 전송한 후 XDM 표준에 매핑하는 방법에 중점을 둡니다.
+이 안내서의 나머지 부분에서는 웹 SDK에서 데이터 레이어를 보낸 후 XDM 표준에 매핑하는 방법을 다룹니다.
 
 >[!NOTE]
 >
->계산된 필드의 변환 기능을 포함하여 모든 데이터 준비 기능에 대한 포괄적인 지침은 다음 설명서를 참조하십시오.
+>계산된 필드에 대한 변환 함수를 포함하여 모든 [!DNL Data Prep] 기능에 대한 포괄적인 지침은 다음 설명서를 참조하십시오.
 >
->* [데이터 준비 개요](../data-prep/home.md)
->* [데이터 준비 매핑 기능](../data-prep/functions.md)
->* [데이터 준비로 데이터 포맷 처리](../data-prep/data-handling.md)
+>* [데이터 준비 개요](/help/data-prep/home.md)
+>* [데이터 준비 매핑 기능](/help/data-prep/functions.md)
+>* [데이터 준비로 데이터 포맷 처리](/help/data-prep/data-handling.md)
 
-이 안내서에는 UI에서 데이터를 매핑하는 방법을 설명합니다. 단계와 함께 팔로우하려면 [기본 구성 단계](./overview.md#create)까지(이를 포함) 데이터스트림을 생성하는 프로세스를 시작합니다.
+이 안내서에는 UI에서 데이터를 매핑하는 방법을 설명합니다. 단계를 완료하려면 [기본 구성 단계](/help/datastreams/configure.md#create)까지 데이터 스트림을 만드는 프로세스를 시작하십시오.
 
-데이터 수집 프로세스에 대한 데이터 준비 데모를 빠르게 보려면 다음 비디오를 참조하십시오.
+데이터 수집을 위한 데이터 준비 프로세스에 대한 빠른 데모는 다음 비디오를 참조하십시오.
 
->[!VIDEO](https://video.tv.adobe.com/v/345567?captions=kor&quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
-## [!UICONTROL Select data] {#select-data}
+## 샘플 데이터 제공 {#select-data}
 
 데이터 스트림에 대한 기본 구성을 완료한 후 **[!UICONTROL Save and Add Mapping]**&#x200B;을(를) 선택하면 **[!UICONTROL Select data]** 단계가 나타납니다. 여기에서 Experience Platform으로 전송할 예정인 데이터의 구조를 나타내는 샘플 JSON 개체를 제공해야 합니다.
 
@@ -158,9 +158,9 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 
 >[!NOTE]
 >
->모든 페이지에서 사용할 수 있는 모든 데이터 레이어 요소를 나타내는 샘플 JSON 개체를 사용합니다. 예를 들어 모든 페이지에서 장바구니 데이터 계층 요소를 사용하는 것은 아닙니다. 그러나 장바구니 데이터 계층 요소는 이 샘플 JSON 개체에 포함되어야 합니다.
+>모든 페이지에서 사용할 수 있는 모든 데이터 레이어 요소를 나타내는 샘플 JSON 개체를 사용합니다. 예를 들어 모든 페이지에서 장바구니 데이터 계층 요소를 사용하는 것은 아닙니다. 그러나 이 샘플 JSON 개체에 장바구니 데이터 계층 요소를 포함합니다.
 
-## [!UICONTROL Mapping]
+## 데이터 매핑 {#mapping}
 
 소스 데이터의 필드를 Experience Platform의 대상 이벤트 스키마의 필드에 매핑할 수 있는 **[!UICONTROL Mapping]** 단계가 나타납니다. 여기서 두 가지 방법으로 매핑을 구성할 수 있습니다.
 
@@ -169,7 +169,7 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 
 >[!IMPORTANT]
 >
->데이터 준비 매핑은 `identityMap` XDM 페이로드를 무시하며, 이는 Real-Time CDP 대상에 대한 프로필 일치에 더 영향을 줄 수 있습니다.
+>[!DNL Data Prep] 매핑은 `identityMap` XDM 페이로드를 재정의하며, 이는 [!DNL Real-Time CDP] 대상에 대한 프로필 일치에 더 영향을 줄 수 있습니다.
 
 ### 매핑 규칙 만들기 {#create-mapping}
 
@@ -177,11 +177,11 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 
 ![새 매핑을 추가합니다.](assets/data-prep/add-new-mapping.png)
 
-소스 아이콘(![&#x200B; 소스 아이콘](/help/images/icons/source.png))을 선택하고 표시되는 대화 상자에서 제공된 캔버스에서 매핑하려는 소스 필드를 선택합니다. 필드를 선택하면 **[!UICONTROL Select]** 단추를 사용하여 계속합니다.
+소스 아이콘(![Source 필드 선택기 아이콘](/help/images/icons/source.png))을 선택하고 표시되는 대화 상자에서 제공된 캔버스에 매핑할 소스 필드를 선택합니다. 필드를 선택하면 **[!UICONTROL Select]** 단추를 사용하여 계속합니다.
 
 ![원본 스키마에서 매핑할 필드를 선택합니다.](assets/data-prep/source-mapping.png)
 
-다음으로 스키마 아이콘(![스키마 아이콘](/help/images/icons/schema.png))을 선택하여 대상 이벤트 스키마에 유사한 대화 상자를 엽니다. **[!UICONTROL Select]**(으)로 확인하기 전에 데이터를 매핑할 필드를 선택하십시오.
+그런 다음 스키마 아이콘(![대상 스키마 선택기 아이콘](/help/images/icons/schema.png))을 선택하여 대상 이벤트 스키마에 대한 유사한 대화 상자를 엽니다. **[!UICONTROL Select]**(으)로 확인하기 전에 데이터를 매핑할 필드를 선택하십시오.
 
 ![대상 스키마에서 매핑할 필드를 선택합니다.](assets/data-prep/target-mapping.png)
 
@@ -213,7 +213,7 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 
 >[!NOTE]
 >
->데이터스트림은 동일한 [샌드박스](../sandboxes/home.md) 내에서만 가져올 수 있습니다. 다시 말해, 한 샌드박스에서 다른 샌드박스로 데이터스트림을 가져올 수 없습니다.
+>데이터스트림은 동일한 [샌드박스](/help/sandboxes/home.md) 내에서만 가져올 수 있습니다. 한 샌드박스에서 다른 샌드박스로 데이터 스트림을 가져올 수 없습니다.
 
 다음 화면에는 선택한 데이터스트림에 대해 저장된 매핑 규칙의 미리보기가 표시됩니다. 표시된 매핑이 예상대로 표시되는지 확인한 다음 **[!UICONTROL Import]**&#x200B;을(를) 선택하여 매핑을 확인하고 새 데이터 스트림에 추가하십시오.
 
@@ -223,14 +223,14 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 >
 >가져온 매핑 규칙의 소스 필드가 [이전에 제공한](#select-data) 샘플 JSON 데이터에 포함되지 않은 경우 해당 필드 매핑은 가져오기에 포함되지 않습니다.
 
-### 매핑 완료
+### 매핑 완료 {#complete-mapping}
 
-위 단계를 따라 나머지 필드를 대상 스키마에 계속 매핑합니다. 사용 가능한 모든 소스 필드를 매핑할 필요는 없지만 필요에 따라 설정된 대상 스키마의 모든 필드를 매핑해야 이 단계를 완료할 수 있습니다. **[!UICONTROL Required fields]** 카운터는 현재 구성에서 아직 매핑되지 않은 필수 필드 수를 나타냅니다.
+나머지 필드를 대상 스키마에 계속 매핑합니다. 사용 가능한 모든 소스 필드를 매핑할 필요는 없지만 필요에 따라 설정된 대상 스키마의 모든 필드를 매핑해야 이 단계를 완료할 수 있습니다. **[!UICONTROL Required fields]** 카운터는 현재 구성에서 아직 매핑되지 않은 필수 필드 수를 나타냅니다.
 
 필수 필드 수가 0에 도달하고 매핑에 만족하면 **[!UICONTROL Save]**&#x200B;을(를) 선택하여 변경 내용을 완료합니다.
 
-![매핑 완료](assets/data-prep/mapping-complete.png)
+![모든 필수 필드를 표시하는 매핑 인터페이스가 필수 필드 수가 0인 매핑을 완료했습니다.](assets/data-prep/mapping-complete.png)
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
-이 안내서에서는 UI에서 데이터스트림 설정 시 데이터를 XDM에 매핑하는 방법이 나와 있습니다. 일반 데이터스트림 튜토리얼을 참조하는 경우 이제 [데이터스트림 세부 정보 보기](./overview.md) 단계로 돌아갈 수 있습니다.
+이 안내서에서는 UI에서 데이터스트림 설정 시 데이터를 XDM에 매핑하는 방법이 나와 있습니다. 일반 데이터스트림 자습서를 따르는 경우 이제 [데이터스트림 세부 정보를 보는 단계](/help/datastreams/overview.md)로 돌아갈 수 있습니다.
