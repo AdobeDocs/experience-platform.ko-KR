@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 데이터 준비 개요
 description: 이 문서에서는 Adobe Experience Platform 내의 데이터 준비에 대해 소개합니다.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4df6f85701f2a509b3f9c7ceddb8d002dd81c6f0
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 0%
+source-wordcount: '800'
+ht-degree: 3%
 
 ---
 
 
 # 데이터 준비 개요
 
-데이터 준비를 통해 데이터 엔지니어는 데이터를 XDM(Experience Data Model)에 매핑하고, 변환하고, 유효성을 확인할 수 있습니다. 데이터 준비는 CSV 수집 워크플로를 포함하여 데이터 수집 프로세스에서 &quot;맵&quot; 단계로 표시됩니다. 데이터 엔지니어는 데이터 준비를 사용하여 수집 중에 다음 데이터 조작을 수행할 수 있습니다.
+데이터 준비를 사용하면 데이터 엔지니어가 XDM(Experience Data Model)과의 데이터를 매핑, 변환 및 확인할 수 있습니다. 데이터 준비는 CSV 수집 워크플로를 포함하여 데이터 수집 프로세스에서 &quot;맵&quot; 단계로 표시됩니다. 데이터 엔지니어는 데이터 준비를 사용하여 수집 중에 다음 데이터 조작을 수행할 수 있습니다.
 
 - 단순 통과 매핑을 정의하여 입력 속성을 XDM 속성에 지정
 - XDM 속성에 지정할 수 있는 행 내 계산을 수행하기 위해 계산된 필드를 생성합니다.
@@ -42,7 +42,20 @@ ht-degree: 0%
 
 ### 특수 문자 이스케이프 처리 {#escape-special-characters}
 
-`${...}`을(를) 사용하여 필드의 특수 문자를 이스케이프 처리할 수 있습니다. 그러나 마침표(`.`)가 있는 필드가 포함된 JSON 파일은 이 메커니즘에서 지원되지 않습니다. 계층과 상호 작용할 때 자식 특성에 마침표(`.`)가 있으면 백슬래시(`\`)를 사용하여 특수 문자를 이스케이프 처리해야 합니다. 예를 들어 `address`은(는) 특성 `street.name`을(를) 포함하는 개체로, `address.street.name` 대신 `address.street\.name`로 참조할 수 있습니다.
+`${...}`을(를) 사용하여 필드의 특수 문자를 이스케이프 처리할 수 있습니다. 그러나 마침표(`.`)가 있는 필드가 포함된 JSON 파일은 이 메커니즘에서 지원되지 않습니다.
+
+계층과 상호 작용할 때 자식 특성에 마침표(`.`)가 있으면 백슬래시(`\`)를 사용하여 특수 문자를 이스케이프 처리해야 합니다. 예를 들어 다음 `address`은(는) `street.name` 특성을 포함하는 개체입니다.
+
+```json
+{ 
+  "address": 
+      { 
+        "street.name": "myId" 
+      }
+}
+```
+
+매핑에서 이 필드를 참조하려면 `${address.street\.name}`을(를) 사용해야 합니다.
 
 ## 매핑 세트
 
