@@ -2,10 +2,10 @@
 title: 데이터 라이프사이클 작업 주문 찾아보기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 데이터 라이프사이클 작업 주문을 보고 관리하는 방법을 알아봅니다.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 26%
+source-wordcount: '846'
+ht-degree: 25%
 
 ---
 
@@ -86,6 +86,10 @@ UI에서 **[!UICONTROL Data Lifecycle]** 작업 영역에 처음 액세스하면
 ### 삭제 세부 정보 기록 {#record-delete}
 
 레코드 삭제 요청의 세부 정보에는 현재 상태와 요청이 수행된 이후 경과된 시간이 포함됩니다. 각 요청에는 삭제와 관련된 각 다운스트림 서비스에 대한 개별 상태 세부 정보를 제공하는 **[!UICONTROL Status by service]** 섹션도 포함됩니다. 오른쪽 레일에서 컨트롤을 사용하여 작업 주문의 이름과 설명을 업데이트할 수 있습니다.
+
+>[!TIP]
+>
+>레코드 삭제 요청은 처리가 시작되기 전에 일괄 처리되며, 표준 SLA에서 완료하는 데 최대 30일이 걸릴 수 있습니다. 각 단계에서 발생하는 사항에 대한 자세한 내용은 [삭제 타임라인 기록](../home.md#record-delete-transparency)을 참조하세요.
 
 ![레코드 삭제 작업 순서에 대한 세부 정보 페이지를 표시하는 이미지](../images/ui/browse/record-delete-details.png)
 

@@ -2,9 +2,9 @@
 title: 고급 데이터 수명주기 관리 모범 사례
 description: 고급 데이터 수명 주기 관리 UI 및 데이터 위생 API를 사용하여 Adobe Experience Platform에서 데이터 위생 요청을 효율적으로 관리하는 방법을 알아봅니다. 이 안내서에서는 요청당 ID 최대화, 개별 데이터 세트 지정, 속도 저하를 방지하기 위한 API 조절 주의와 같은 모범 사례를 다룹니다. 이 문서에는 자동 데이터 세트 정리 설정 지침, 작업 주문 상태를 모니터링하는 방법 및 자세한 응답 검색 방법이 포함되어 있습니다. 다음 절차에 따라 요청 처리를 간소화하고 응답 시간을 최적화합니다.
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 작업 주문 생성 지침 {#work-order-creation-guidelines}
 
-데이터 위생 API의 `/workorder` 끝점을 사용하여 Experience Platform에서 레코드 삭제 요청을 프로그래밍 방식으로 관리할 수 있습니다. 이 끝점을 사용하면 삭제 요청을 만들거나 삭제 요청의 상태를 확인하거나 기존 요청을 업데이트할 수 있습니다. API를 사용하여 이러한 작업을 수행하는 방법에 대해 알아보려면 [작업 주문 끝점 문서](./api/workorder.md)를 참조하세요.
+데이터 위생 API의 `/workorder` 끝점을 사용하여 Experience Platform에서 레코드 삭제 요청을 프로그래밍 방식으로 관리할 수 있습니다. 이 끝점을 사용하면 삭제 요청을 만들거나 삭제 요청의 상태를 확인하거나 기존 요청을 업데이트할 수 있습니다. API를 사용하여 이러한 작업을 수행하는 방법에 대해 알아보려면 [작업 주문 끝점 문서](./api/workorder.md)를 참조하세요. 레코드 삭제 요청은 처리가 시작되기 전에 일괄 처리되며, 완료하는 데 최대 30일(표준 SLA) 또는 15일(Privacy and Security Shield 또는 Healthcare Shield)이 걸릴 수 있습니다. 각 단계에서 발생하는 사항에 대한 전체 분석을 보려면 [삭제 타임라인 기록](./home.md#record-delete-transparency)을 참조하십시오.
 
 >[!TIP]
 >
