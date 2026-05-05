@@ -1,12 +1,12 @@
 ---
 title: Snowflake 스트리밍 연결
 description: 라이브 Snowflake 데이터 공유를 만들어 스트리밍 대상 업데이트를 계정에 공유 테이블로 바로 받을 수 있습니다.
-last-substantial-update: 2026-03-24T00:00:00Z
+last-substantial-update: 2026-04-28T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 0d5bb74473551c9eddd823439e8bbe18126242e9
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1681'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->이 대상 커넥터의 가용성은 제한되어 있으며 [!DNL Real-Time CDP]VA7 지역[에 프로비저닝된 &#x200B;](/help/landing/multi-cloud.md#azure-regions)개의 Ultimate 고객만 사용할 수 있습니다.
+>이 대상 커넥터의 가용성은 제한되어 있으며 [VA7 지역](/help/landing/multi-cloud.md#azure-regions)에 프로비저닝된 [!DNL Real-Time CDP]개의 Ultimate 고객만 사용할 수 있습니다.
 
 ## 개요 {#overview}
 
@@ -88,7 +88,7 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 예 | [!DNL Adobe Experience Platform] [세분화 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 [(으)로 사용자 지정 업로드 대상 &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience)가져옴[!DNL Adobe Experience Platform],</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Experience Platform]과(와) 같은 다른 [!DNL Adobe Journey Optimizer] 앱에서 생성된 대상, </li><li> 등. </li></ul> |
+| 기타 모든 대상 원본 | 예 | 이 범주에는 [!DNL Segmentation Service]을(를) 통해 생성된 대상 외부의 모든 대상 출처가 포함됩니다. [다양한 대상 원본](/help/segmentation/ui/audience-portal.md#customize)에 대해 읽어 보십시오. 예를 들면 다음과 같습니다. <ul><li> CSV 파일에서 [!DNL Adobe Experience Platform]&#x200B;(으)로 사용자 지정 업로드 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience),</li><li> 유사 대상, </li><li> 페더레이션 대상, </li><li> [!DNL Adobe Journey Optimizer]과(와) 같은 다른 [!DNL Adobe Experience Platform] 앱에서 생성된 대상, </li><li> 등. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -148,11 +148,11 @@ Snowflake 연결을 구성하기 전에 다음 전제 조건을 충족하는지 
 
 >[!NOTE]
 >
-> 대상을 만든 후에는 **[!UICONTROL Snowflake Account ID]**&#x200B;대상 편집[&#x200B; 워크플로우를 통해 &#x200B;](../../ui/edit-destination.md)을(를) 편집할 수 없습니다. 다른 계정을 사용하려면 [새 대상 연결을 만드세요](../../ui/connect-destination.md).
+> 대상을 만든 후에는 [대상 편집](../../ui/edit-destination.md) 워크플로우를 통해 **[!UICONTROL Snowflake Account ID]**&#x200B;을(를) 편집할 수 없습니다. 다른 계정을 사용하려면 [새 대상 연결을 만드세요](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >
-> 대상 이름 및 [!DNL Adobe Experience Platform] 샌드박스 이름에 사용된 특수 문자는 `_`에서 밑줄([!DNL Snowflake])로 자동 변환됩니다. 혼동을 피하기 위해 대상 및 샌드박스 이름에 특수 문자를 사용하지 마십시오.
+> 대상 이름 및 [!DNL Adobe Experience Platform] 샌드박스 이름에 사용된 특수 문자는 [!DNL Snowflake]에서 밑줄(`_`)로 자동 변환됩니다. 혼동을 피하기 위해 대상 및 샌드박스 이름에 특수 문자를 사용하지 마십시오.
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -183,12 +183,13 @@ Snowflake 대상은 프로필 속성을 사용자 지정 속성에 매핑할 수
 
 다음 예제에서는 공유 테이블의 샘플 행을 보여줍니다. 일부 열은 ID와 세그먼트 멤버십을 JSON으로 저장합니다. 매핑된 프로필 속성은 개별 문자열 열로 표시됩니다.
 
-![IDENTITYMAP, SEGMENT_MEMBERSHIP 및 매핑된 특성 열을 표시하는 샘플 Snowflake 워크시트 행](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
+![TS, IDENTITYMAP, SEGMENT_MEMBERSHIP 및 매핑된 특성 열을 표시하는 샘플 Snowflake 워크시트 행](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
 
 ### 데이터 구조 {#data-structure}
 
 위의 스크린샷에는 다음 열이 표시됩니다.
 
+* **TS**: 각 행이 마지막으로 업데이트된 시기를 나타내는 타임스탬프입니다.
 * **IDENTITYMAP**: 각 프로필 ID 맵에 대한 JSON 개체입니다.
 * **SEGMENT_MEMBERSHIP**: 데이터 흐름에서 활성화된 각 대상에 대한 JSON 개체입니다. 값에는 `lastQualificationTime` 및 `status`이(가) 포함됩니다(예: 프로필이 세그먼트에 적합한 경우 `realized`).
 * **매핑 특성**: 활성화 워크플로 동안 선택한 모든 매핑 특성은 [!DNL Snowflake]에서 열 헤더로 표시됩니다.
