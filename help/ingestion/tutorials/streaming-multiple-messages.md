@@ -5,9 +5,9 @@ title: 단일 HTTP 요청으로 여러 메시지 보내기
 type: Tutorial
 description: 이 문서에서는 스트리밍 수집을 사용하여 단일 HTTP 요청 내에서 Adobe Experience Platform에 여러 메시지를 전송하는 자습서를 제공합니다.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1724'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform으로 데이터를 스트리밍할 때 많은 HTTP 호
 - [데이터 수집 개요](../home.md): 수집 방법 및 Data Connectors를 포함하여 [!DNL Experience Platform Data Ingestion]의 핵심 개념을 다룹니다.
 - [스트리밍 수집 개요](../streaming-ingestion/overview.md): 스트리밍 연결, 데이터 세트, [!DNL XDM Individual Profile] 및 [!DNL XDM ExperienceEvent]과(와) 같은 스트리밍 수집의 워크플로 및 기본 구성 요소입니다.
 
-또한 이 자습서에서는 [개의 API를 성공적으로 호출하려면 &#x200B;](https://www.adobe.com/go/platform-api-authentication-en)Adobe Experience Platform에 대한 인증[!DNL Experience Platform] 자습서를 완료해야 합니다. 인증 자습서를 완료하면 이 자습서의 모든 API 호출에 필요한 인증 헤더 값이 제공됩니다. 헤더는 다음과 같이 샘플 호출에 표시됩니다.
+또한 이 자습서에서는 [!DNL Experience Platform]개의 API를 성공적으로 호출하려면 [Adobe Experience Platform에 대한 인증](https://www.adobe.com/go/platform-api-authentication-en) 자습서를 완료해야 합니다. 인증 자습서를 완료하면 이 자습서의 모든 API 호출에 필요한 인증 헤더 값이 제공됩니다. 헤더는 다음과 같이 샘플 호출에 표시됩니다.
 
 - 인증: 전달자 `{ACCESS_TOKEN}`
 
@@ -39,11 +39,11 @@ Adobe Experience Platform으로 데이터를 스트리밍할 때 많은 HTTP 호
 
 스트리밍 연결을 등록한 후 데이터 생성자는 Experience Platform에 데이터를 스트리밍하는 데 사용할 수 있는 고유한 URL을 갖게 됩니다.
 
-## 데이터 세트로 스트리밍
+## 데이터 세트로 스트리밍 {#stream-to-dataset}
 
 다음 예는 단일 HTTP 요청 내의 특정 데이터 세트에 여러 메시지를 보내는 방법을 보여줍니다. 데이터 세트 ID를 메시지 헤더에 삽입하여 해당 메시지를 직접 수집할 수 있습니다.
 
-[!DNL Experience Platform] UI를 사용하거나 API의 목록 작업을 사용하여 기존 데이터 세트의 ID를 가져올 수 있습니다. [&#x200B; 탭으로 이동하여 ID를 지정할 데이터 세트를 클릭하고 &#x200B;](https://platform.adobe.com) 탭의 데이터 세트 ID 필드에서 문자열을 복사하여 **[!UICONTROL Datasets]** Experience Platform **[!UICONTROL Info]**&#x200B;에서 데이터 세트 ID를 찾을 수 있습니다. API를 사용하여 데이터 세트를 검색하는 방법에 대한 자세한 내용은 [카탈로그 서비스 개요](../../catalog/home.md)를 참조하세요.
+[!DNL Experience Platform] UI를 사용하거나 API의 목록 작업을 사용하여 기존 데이터 세트의 ID를 가져올 수 있습니다. **[!UICONTROL Datasets]** 탭으로 이동하여 ID를 지정할 데이터 세트를 클릭하고 **[!UICONTROL Info]** 탭의 데이터 세트 ID 필드에서 문자열을 복사하여 [Experience Platform](https://platform.adobe.com)에서 데이터 세트 ID를 찾을 수 있습니다. API를 사용하여 데이터 세트를 검색하는 방법에 대한 자세한 내용은 [카탈로그 서비스 개요](../../catalog/home.md)를 참조하세요.
 
 기존 데이터 세트를 사용하는 대신 새 데이터 세트를 만들 수 있습니다. API를 사용하여 데이터 집합을 만드는 방법에 대한 자세한 내용은 [API를 사용하여 데이터 집합 만들기](../../catalog/api/create-dataset.md) 자습서를 참조하십시오.
 
@@ -509,9 +509,9 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
     },
 ```
 
-세 번째 메시지는 헤더에 잘못된 조직 ID가 사용되었기 때문에 실패했습니다. 조직은 게시하려는 {CONNECTION_ID}과(와) 일치해야 합니다. 사용 중인 스트리밍 연결과 일치하는 조직 ID를 확인하려면 `GET inlet`[[!DNL Streaming Ingestion API]을(를) 사용하여 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) 요청을 수행할 수 있습니다. 이전에 만든 스트리밍 연결을 검색하는 방법에 대한 예는 [스트리밍 연결 검색](./create-streaming-connection.md#get-data-collection-url)을 참조하십시오.
+세 번째 메시지는 헤더에 잘못된 조직 ID가 사용되었기 때문에 실패했습니다. 조직은 게시하려는 {CONNECTION_ID}과(와) 일치해야 합니다. 사용 중인 스트리밍 연결과 일치하는 조직 ID를 확인하려면 [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)을(를) 사용하여 `GET inlet` 요청을 수행할 수 있습니다. 이전에 만든 스트리밍 연결을 검색하는 방법에 대한 예는 [스트리밍 연결 검색](./create-streaming-connection.md#get-data-collection-url)을 참조하십시오.
 
-네 번째 메시지는 예상 XDM 스키마를 따르지 않아 실패했습니다. 요청의 헤더 및 본문에 포함된 `xdmSchema`이(가) `{DATASET_ID}`의 XDM 스키마와 일치하지 않습니다. 메시지 헤더와 본문에서 스키마를 수정하면 DCCS 유효성 검사를 통과하고 [!DNL Experience Platform]&#x200B;(으)로 성공적으로 전송될 수 있습니다. `{DATASET_ID}`에서 스트리밍 유효성 검사를 통과하려면 [!DNL Experience Platform]의 XDM 스키마와 일치하도록 메시지 본문도 업데이트해야 합니다. Experience Platform으로 성공적으로 스트리밍된 메시지에 대한 자세한 내용은 이 자습서의 [수집된 메시지 확인](#confirm-messages-ingested) 섹션을 참조하십시오.
+네 번째 메시지는 예상 XDM 스키마를 따르지 않아 실패했습니다. 요청의 헤더 및 본문에 포함된 `xdmSchema`이(가) `{DATASET_ID}`의 XDM 스키마와 일치하지 않습니다. 메시지 헤더와 본문에서 스키마를 수정하면 DCCS 유효성 검사를 통과하고 [!DNL Experience Platform]&#x200B;(으)로 성공적으로 전송될 수 있습니다. [!DNL Experience Platform]에서 스트리밍 유효성 검사를 통과하려면 `{DATASET_ID}`의 XDM 스키마와 일치하도록 메시지 본문도 업데이트해야 합니다. Experience Platform으로 성공적으로 스트리밍된 메시지에 대한 자세한 내용은 이 자습서의 [수집된 메시지 확인](#confirm-messages-ingested) 섹션을 참조하십시오.
 
 ### [!DNL Experience Platform]에서 실패한 메시지 검색
 
@@ -520,11 +520,47 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 실패한 일괄 처리 메시지 복구에 대한 자세한 내용은 [실패한 일괄 처리 검색](../quality/retrieve-failed-batches.md) 안내서를 참조하십시오.
 
+### 데이터 흐름에 여러 XDM 엔티티 보내기 {#send-multiple-xdm-entities-to-a-dataflow}
+
+여러 XDM 엔티티를 데이터 흐름에 보내려면 다음 중 하나를 수행할 수 있습니다.
+
+- 하나의 HTTP 요청 내에서 `messages` 배열에 있는 하나 이상의 엔터티를 스트리밍 끝점으로 보냅니다.
+- 일괄 처리 수집을 사용하여 여러 엔티티가 있는 파일을 업로드합니다.
+
+데이터 볼륨 및 사용 사례와 일치하는 메서드를 선택합니다.
+
+>[!BEGINTABS]
+
+>[!TAB HTTP 요청의 엔터티 그룹화]
+
+스트리밍 수집 끝점에 대한 단일 HTTP 요청 내에 `messages` 배열에 여러 XDM 엔터티를 포함할 수 있습니다. 모든 메시지가 **동일** 조직 및 샌드박스에 속해 있는 한 모든 메시지는 동일하거나 다른 데이터 세트 및 스키마를 타깃팅할 수 있습니다.
+
+다음 작업을 원할 때 이 옵션을 사용합니다.
+
+- 하나의 HTTP 호출에서 여러 XDM 엔티티를 전송하여 요청을 줄입니다.
+- 수집 끝점을 통해 실시간으로 데이터를 스트리밍합니다.
+
+요청을 보내는 방법에 대한 자세한 내용과 자세한 지침은 [데이터 세트로 스트리밍](#stream-to-dataset) 섹션을 참조하세요.
+
+>[!TAB 일괄 처리 파일 업로드]
+
+하나 이상의 XDM 엔티티가 포함된 배치 파일을 데이터 흐름에 업로드할 수 있습니다. 동일한 배치에 업로드된 모든 파일은 하나의 수집 단위로 함께 처리됩니다.
+
+다음과 같은 경우에 이 메서드를 사용합니다.
+
+- 더 큰 데이터 볼륨(예: CSV, JSON 또는 Parquet 파일)을 수집합니다.
+- 는 업스트림 시스템의 파일 기반 내보내기로 작동합니다.
+- 예약 또는 일괄 수집을 선호합니다.
+
+단계별 지침은 [일괄 처리 수집 안내서](../batch-ingestion/api-overview.md)를 참조하십시오.
+
+>[!ENDTABS]
+
 ## 수집된 메시지 확인
 
 DCCS 유효성 검사를 통과한 메시지는 [!DNL Experience Platform]&#x200B;(으)로 스트리밍됩니다. [!DNL Experience Platform]에서 일괄 처리 메시지는 [!DNL Data Lake]&#x200B;(으)로 수집되기 전에 스트리밍 유효성 검사로 테스트됩니다. 성공 여부에 관계없이 일괄 처리의 상태가 `{DATASET_ID}`에서 지정한 데이터 집합 내에 나타납니다.
 
-[!DNL Experience Platform] 탭으로 이동하여 스트리밍 중인 데이터 세트를 클릭하고 [&#x200B; 탭을 확인하여 &#x200B;](https://platform.adobe.com)Experience Platform UI **[!UICONTROL Datasets]**&#x200B;를 사용하여 **[!UICONTROL Dataset Activity]**&#x200B;에 성공적으로 스트리밍된 일괄 처리 메시지의 상태를 볼 수 있습니다.
+**[!UICONTROL Datasets]** 탭으로 이동하여 스트리밍 중인 데이터 세트를 클릭하고 **[!UICONTROL Dataset Activity]** 탭을 확인하여 [Experience Platform UI](https://platform.adobe.com)를 사용하여 [!DNL Experience Platform]에 성공적으로 스트리밍된 일괄 처리 메시지의 상태를 볼 수 있습니다.
 
 [!DNL Experience Platform]에서 스트리밍 유효성 검사를 통과한 일괄 처리 메시지는 [!DNL Data Lake]에 수집됩니다. 그런 다음 메시지를 분석 또는 내보내기에 사용할 수 있습니다.
 

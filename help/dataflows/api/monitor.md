@@ -5,10 +5,10 @@ title: 흐름 서비스 API를 사용하여 데이터 흐름 모니터링
 type: Tutorial
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 완전성, 오류 및 지표에 대한 흐름 실행 데이터를 모니터링하는 단계를 다룹니다.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 8%
+source-wordcount: '770'
+ht-degree: 12%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수�
 
 이 자습서에서는 [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/)을(를) 사용하여 완전성, 오류 및 지표에 대한 흐름 실행 데이터를 모니터링하는 단계를 다룹니다.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 유효한 데이터 흐름의 ID 값이 있어야 합니다. 유효한 데이터 흐름 ID가 없는 경우 [소스 개요](../../sources/home.md) 또는 [대상 개요](../../destinations/catalog/overview.md)에서 선택한 커넥터를 선택하고 이 자습서를 시도하기 전에 설명된 단계를 따르십시오.
 
@@ -34,11 +34,11 @@ Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수�
 
 ### 샘플 API 호출 읽기
 
-이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request)에 대한 섹션을 참조하십시오.
+이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 문서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 섹션을 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [인증 튜토리얼](https://www.adobe.com/go/platform-api-authentication-en)을 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -62,7 +62,7 @@ Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수�
 GET /runs?property=flowId=={FLOW_ID}
 ```
 
-| 매개변수 | 설명 |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `{FLOW_ID}` | 모니터링할 데이터 흐름의 고유한 `id` 값입니다. |
 
@@ -201,3 +201,5 @@ curl -X GET \
 ## 다음 단계
 
 이 자습서를 따라 [!DNL Flow Service] API를 사용하여 데이터 흐름의 지표 및 오류 정보를 검색했습니다. 이제 수집 일정에 따라 데이터 흐름을 계속 모니터링하여 데이터 흐름 상태 및 수집 비율을 추적할 수 있습니다. 소스에 대한 데이터 흐름을 모니터링하는 방법에 대한 자세한 내용은 [사용자 인터페이스를 사용하여 소스에 대한 데이터 흐름 모니터링](../ui/monitor-sources.md) 자습서를 참조하십시오. 대상에 대한 데이터 흐름을 모니터링하는 방법에 대한 자세한 내용은 [사용자 인터페이스를 사용하여 대상에 대한 데이터 흐름 모니터링](../ui/monitor-destinations.md) 자습서를 참조하십시오.
+
+여러 XDM 엔터티를 데이터 흐름으로 보내려면 HTTP 요청에서 `messages` 배열을 사용하거나 여러 레코드가 있는 파일(CSV, JSON 또는 Parquet)을 업로드하십시오. 자세한 지침과 모범 사례를 보려면 [여러 XDM 엔터티를 데이터 흐름으로 보내는 방법](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow)을 읽어 보십시오.
