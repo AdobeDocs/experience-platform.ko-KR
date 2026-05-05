@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 Source에 대한 행 수준 데이터 필터링
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 소스 수준에서 데이터를 필터링하는 방법에 대한 단계를 다룹니다
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: cf5c460f1db4970217b881688c994787696d1ce1
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '2086'
 ht-degree: 3%
 
 ---
@@ -43,7 +43,7 @@ Experience Platform API를 성공적으로 호출하는 방법에 대한 자세�
 
 소스에 대한 행 수준 데이터를 필터링하는 첫 번째 단계는 소스의 연결 사양을 검색하고 소스가 지원하는 연산자 및 언어를 결정하는 것입니다.
 
-지정된 소스의 연결 사양을 검색하려면 `/connectionSpecs` API의 [!DNL Flow Service] 끝점에 대한 GET 요청을 만들고 소스의 속성 이름을 쿼리 매개 변수의 일부로 제공합니다.
+지정된 소스의 연결 사양을 검색하려면 [!DNL Flow Service] API의 `/connectionSpecs` 끝점에 대한 GET 요청을 만들고 소스의 속성 이름을 쿼리 매개 변수의 일부로 제공합니다.
 
 **API 형식**
 
@@ -51,9 +51,9 @@ Experience Platform API를 성공적으로 호출하는 방법에 대한 자세�
 GET /connectionSpecs/{QUERY_PARAMS}
 ```
 
-| 매개변수 | 설명 |
+| 매개 변수 | 설명 |
 | --- | --- |
-| `{QUERY_PARAMS}` | 결과를 필터링할 선택적 쿼리 매개 변수입니다. [!DNL Google BigQuery] 속성을 적용하고 검색에서 `name`을(를) 지정하여 `"google-big-query"` 연결 사양을 검색할 수 있습니다. |
+| `{QUERY_PARAMS}` | 결과를 필터링할 선택적 쿼리 매개 변수입니다. `name` 속성을 적용하고 검색에서 `"google-big-query"`을(를) 지정하여 [!DNL Google BigQuery] 연결 사양을 검색할 수 있습니다. |
 
 +++요청
 
@@ -156,7 +156,7 @@ curl -X GET \
 
 ### 데이터 미리 보기 {#preview-your-data}
 
-`/explore`을(를) 쿼리 매개 변수의 일부로 제공하고 [!DNL Flow Service]에서 PQL 입력 조건을 지정하는 동안 `filters` API의 [!DNL Base64] 끝점에 GET 요청을 수행하여 데이터를 미리 볼 수 있습니다.
+`filters`을(를) 쿼리 매개 변수의 일부로 제공하고 [!DNL Base64]에서 PQL 입력 조건을 지정하는 동안 [!DNL Flow Service] API의 `/explore` 끝점에 GET 요청을 수행하여 데이터를 미리 볼 수 있습니다.
 
 **API 형식**
 
@@ -164,7 +164,7 @@ curl -X GET \
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}&preview=true&filters={FILTERS}
 ```
 
-| 매개변수 | 설명 |
+| 매개 변수 | 설명 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 소스의 기본 연결 ID입니다. |
 | `{TABLE_PATH}` | 검사할 테이블의 경로 속성입니다. |
@@ -345,7 +345,7 @@ POST /sourceConnections
 
 +++요청
 
-다음 요청은 `test1.fasTestTable` = `city`인 `DDN`에서 데이터를 수집하기 위한 원본 연결을 만듭니다.
+다음 요청은 `city` = `DDN`인 `test1.fasTestTable`에서 데이터를 수집하기 위한 원본 연결을 만듭니다.
 
 ```shell
 curl -X POST \
@@ -401,6 +401,177 @@ curl -X POST \
     "id": "b7581b59-c603-4df1-a689-d23d7ac440f3",
     "etag": "\"ef05d265-0000-0200-0000-6019e0080000\""
 }
+```
+
++++
+
+## [!DNL Salesforce]개 데이터 흐름 필터링
+
+다음 예제에서는 [!DNL Flow Service] API를 사용하여 기존 [!DNL Salesforce] 데이터 흐름에 행 수준 필터링을 적용하는 전체 방법을 보여 줍니다.
+
+### 쿼리 언어 및 이스케이프
+
+[!DNL Salesforce] 원본과 함께 OAuth 2.0 클라이언트 자격 증명을 사용하는 경우 SOQL([!DNL Salesforce] 개체 쿼리 언어)을 사용하여 행 수준 필터링을 수행합니다.
+
+* SOQL 필터의 열 이름은 백틱 또는 기타 특수 문자 없이 정확한 [!DNL Salesforce] 필드 API 이름을 사용합니다.
+* 문자열 값은 SOQL 구문에 필요한 대로 작은 따옴표로 묶어야 합니다.
+* 부울 값의 경우 숫자 값(`0` 또는 `1`) 대신 키워드 `true` 또는 `false`을 사용하십시오.
+* 필터에 날짜/시간 형식을 나타낸다고 표시되면 `WHERE` 절의 날짜 및 dateTime 값은 따옴표로 묶인 문자열이 아닌 따옴표로 묶이지 않은 SOQL 날짜 또는 dateTime 리터럴로 작성되어야 합니다.
+
+PQL 기반 행 수준 필터링의 경우 값이 `boolean` 또는 `dateTime`인 모든 리터럴 노드에는 `literalType`이(가) 포함되어야 값이 올바르게 해석 및 변환됩니다.
+
+PQL 예:
+
+>[!BEGINTABS]
+
+>[!TAB PQL 예 1]
+
+```json
+{
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": "like",
+    "params": [
+      {
+        "nodeType": "fieldLookup",
+        "fieldName": "Name"
+      },
+      {
+        "nodeType": "literal",
+        "value": "ro%"
+      }
+    ]
+  }
+}
+```
+
+>[!TAB PQL 예제 2]
+
+```json
+{
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": ">",
+    "params": [
+      { "nodeType": "fieldLookup", "fieldName": "CreatedDate" },
+      {
+        "nodeType": "literal",
+        "literalType": "DateTime",
+        "value": "2024-05-15T00:00:00Z"
+      }
+    ]
+  }
+}
+```
+
+>[!TAB PQL 예 3]
+
+```json
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": "=",
+    "params": [
+      { "nodeType": "fieldLookup", "fieldName": "IsDeleted" },
+      {
+        "nodeType": "literal",
+        "literalType": "boolean",
+        "value": false
+      }
+    ]
+  }
+}
+```
+
+>[!ENDTABS]
+
+#### [!DNL Salesforce]에 대한 연결 사양을 검색합니다.
+
+[!DNL Salesforce] 소스에 대한 연결 사양 정보를 검색하려면 [!DNL Flow Service] API의 `/connectionSpecs` 끝점에 GET 요청을 만들고 소스의 속성 이름을 쿼리 매개 변수의 일부로 제공합니다.
+
+**API 형식**
+
+```http
+GET /connectionSpecs/{QUERY_PARAMS}
+```
+
+| 매개 변수 | 설명 |
+| --- | --- |
+| `{QUERY_PARAMS}` | 결과를 필터링할 선택적 쿼리 매개 변수입니다. `name` 속성을 적용하고 검색에서 `"salesforce"`을(를) 지정하여 [!DNL Salesforce] 연결 사양을 검색할 수 있습니다. |
+
++++요청
+
+다음 요청은 [!DNL Salesforce]의 연결 사양을 검색합니다.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="salesforce"' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-api-key: {API_KEY}'
+```
+
++++응답
+
+성공한 응답은 지원되는 쿼리 언어 및 논리 연산자에 대한 정보를 포함하여 [!DNL Salesforce]의 상태 코드 200과 연결 사양을 반환합니다.
+
+
+```json
+ "attributes": {
+    "filterAtSource": {
+      "enabled": true,
+      "queryLanguage": "SQL",
+      "logicalOperators": [
+        "and",
+        "or",
+        "not"
+      ],
+      "comparisonOperators": [
+        "=",
+        "!=",
+        "<",
+        "<=",
+        ">",
+        ">=",
+        "like",
+        "in",
+        "isNull",
+        "isNotNull"
+      ],
+      "columnNameEscapeChar": "`",
+      "valueEscapeChar": "'",
+      "v2": {
+        "oAuth2ClientCredential": {
+          "queryLanguage": "SOQL",
+          "logicalOperators": [
+            "and",
+            "or",
+            "not"
+          ],
+          "comparisonOperators": [
+            "=",
+            "!=",
+            "<",
+            "<=",
+            ">",
+            ">=",
+            "like",
+            "in",
+            "isNull",
+            "isNotNull"
+          ],
+          "columnNameEscapeChar": "",
+          "valueEscapeChar": "'"
+        }
+      }
+    }
+  }
 ```
 
 +++
@@ -469,7 +640,7 @@ UI에서 소스 카탈로그로 이동한 다음 상단 헤더에서 **[!UICONTR
 GET /flows/{FLOW_ID}
 ```
 
-| 매개변수 | 설명 |
+| 매개 변수 | 설명 |
 | --- | --- |
 | `{FLOW_ID}` | 검색할 데이터 흐름의 ID입니다. |
 
@@ -600,7 +771,7 @@ curl -X GET \
 GET /sourceConnections/{SOURCE_CONNECTION_ID}
 ```
 
-| 매개변수 | 설명 |
+| 매개 변수 | 설명 |
 | --- | --- |
 | `{SOURCE_CONNECTION_ID}` | 검색할 소스 연결의 ID입니다. |
 
@@ -691,7 +862,7 @@ curl -X GET \
 PATCH /sourceConnections/{SOURCE_CONNECTION_ID}
 ```
 
-| 매개변수 | 설명 |
+| 매개 변수 | 설명 |
 | --- | --- |
 | `{SOURCE_CONNECTION_ID}` | 업데이트하려는 소스 연결의 ID |
 
@@ -758,7 +929,7 @@ curl -X PATCH \
 POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
 ```
 
-| 매개변수 | 설명 |
+| 매개 변수 | 설명 |
 | --- | --- |
 | `{SOURCE_CONNECTION_ID}` | 게시할 소스 연결의 ID입니다. |
 | `op` | 쿼리된 소스 연결의 상태를 업데이트하는 작업 작업입니다. 초안 원본 연결을 게시하려면 `op`을(를) `publish`(으)로 설정하십시오. |
@@ -802,7 +973,7 @@ curl -X POST \
 POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
 ```
 
-| 매개변수 | 설명 |
+| 매개 변수 | 설명 |
 | --- | --- |
 | `{TARGET_CONNECTION_ID}` | 게시하려는 타겟 연결의 ID입니다. |
 | `op` | 쿼리된 대상 연결의 상태를 업데이트하는 작업 작업입니다. 초안 대상 연결을 게시하려면 `op`을(를) `publish`(으)로 설정하십시오. |
@@ -847,7 +1018,7 @@ curl -X POST \
 POST /flows/{FLOW_ID}/action?op=publish
 ```
 
-| 매개변수 | 설명 |
+| 매개 변수 | 설명 |
 | --- | --- |
 | `{FLOW_ID}` | 게시할 데이터 흐름의 ID입니다. |
 | `op` | 쿼리된 데이터 흐름의 상태를 업데이트하는 작업 작업입니다. 초안 데이터 흐름을 게시하려면 `op`을(를) `publish`(으)로 설정하십시오. |

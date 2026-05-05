@@ -2,10 +2,10 @@
 title: Experience Platform 프리릴리스 노트
 description: Adobe Experience Platform의 최신 릴리스 정보 미리보기.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 8f898e618fbc2b414a3c899511ac410465f280d8
+source-git-commit: 9b191535ba96c8791a4528361a1945ae27c6456c
 workflow-type: tm+mt
-source-wordcount: '1344'
-ht-degree: 17%
+source-wordcount: '1428'
+ht-degree: 21%
 
 ---
 
@@ -49,15 +49,15 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 | [!BADGE Beta]{type=Informative} [사용자 지정 대상 편집](../destinations/catalog/advertising/reddit-custom-audience.md) | Experience Platform에서 [!DNL Reddit Ads]&#x200B;(으)로 대상자를 보냅니다. [!DNL Reddit] 계정을 연결하고, ID를 매핑하고, 대상을 활성화하여 [!DNL Reddit]에서 사람들이 관심 영역을 적극적으로 탐색하도록 합니다. |
 | [Amazon 광고 v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2]은(는) 모든 새 [!DNL Amazon Ads] 연결의 현재 대상입니다. 기존 [(레거시) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) 연결이 있는 경우 필요한 변경 없이 계속 작동합니다. [!DNL Amazon Ads v2]이(가) [!DNL Ads Data Manager]에 연결되어 확장된 ID 유형, 주소 관련 필드 및 [!DNL Amazon Ads] 제품 간 데이터 공유를 지원하므로 [(레거시) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)에 비해 타깃팅 및 대상 일치율이 향상됩니다. |
 | [!DNL Rokt] | [!DNL Rokt]을(를) 사용하여 Experience Platform 대상자를 AI 기반 실시간 의사 결정에 연결하여 보다 정확한 타기팅, 억제 및 개인화를 통해 캠페인 성과를 향상시킵니다. |
-| [크리터](../destinations/catalog/advertising/criteo.md)에 대한 외부 대상 지원 | 사용자 지정 업로드 대상(CSV에서 가져옴), 유사 대상, 페더레이션 대상 및 [!DNL Criteo] 등의 다른 Experience Platform 앱에서 만든 대상을 포함하여 세분화 서비스 이상의 원본에서 [!DNL Adobe Journey Optimizer]&#x200B;(으)로 대상을 활성화합니다. 자세한 내용은 [지원되는 대상](../destinations/catalog/advertising/criteo.md#supported-audiences) 섹션을 참조하십시오. |
+| [크리터](../destinations/catalog/advertising/criteo.md)에 대한 외부 대상 지원 | 사용자 지정 업로드 대상(CSV에서 가져옴), 유사 대상, 페더레이션 대상 및 [!DNL Adobe Journey Optimizer] 등의 다른 Experience Platform 앱에서 만든 대상을 포함하여 세분화 서비스 이상의 원본에서 [!DNL Criteo]&#x200B;(으)로 대상을 활성화합니다. 자세한 내용은 [지원되는 대상](../destinations/catalog/advertising/criteo.md#supported-audiences) 섹션을 참조하십시오. |
 | [Acxiom 대상자 연결](../destinations/catalog/advertising/acxiom-audience-connection.md) | 이제 [!DNL Acxiom Audience Connection] 대상을 일반적으로 사용할 수 있습니다. [!DNL Acxiom's Real ID] 기술로 대상을 향상하고 [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] 및 [!DNL Viant]을(를) 포함한 추가 플랫폼에 활성화하려면 이 함수를 사용하십시오. |
-| [Acxiom Real ID 대상 연결](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | 이제 [!DNL Acxiom Real ID Audience Connection] 대상을 일반적으로 사용할 수 있습니다. [!DNL Acxiom's Real ID], [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads] 및 [!DNL Spectrum]을(를) 포함하여 지원되는 동일한 플랫폼 집합에서 일치 키로 [!DNL Viant]을(를) 사용하여 대상을 활성화하려면 이 함수를 사용합니다. |
+| [Acxiom Real ID 대상 연결](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | 이제 [!DNL Acxiom Real ID Audience Connection] 대상을 일반적으로 사용할 수 있습니다. [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] 및 [!DNL Viant]을(를) 포함하여 지원되는 동일한 플랫폼 집합에서 일치 키로 [!DNL Acxiom's Real ID]을(를) 사용하여 대상을 활성화하려면 이 함수를 사용합니다. |
 
 {style="table-layout:auto"}
 
 **수정 사항 및 개선 사항**
 
-| 변수 이름이 아니라, 필터링된 보고서의 머리글로 잘못 표시하는 | 설명 |
+| 고정 | 설명 |
 | --- | --- |
 | 사용자 지정 Personalization 모니터링 지원 | 대상에 대한 모니터링 대시보드에서 [!DNL Custom Personalization]개의 대상을 지원합니다. 모니터링에서 [!DNL Custom Personalization]을(를) 제외한 제한 메모를 제거했습니다. |
 | 활성화 검토의 프로필 개수 | 이제 활성화 검토 단계에 이미 활성화된 대상에 대한 프로필 수가 표시됩니다. 일괄 처리 대상뿐만 아니라 스트리밍 대상에 대해서도 프로필 수가 표시됩니다. |
@@ -71,7 +71,7 @@ Adobe Experience Platform의 새로운 기능 및 기존 기능 업데이트:
 
 ## 경험 데이터 모델 (XDM) {#xdm}
 
-XDM은 Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 일반적인 표현에 통합하여 보다 빠르고 통합적인 방식으로 통찰력을 제공할 수 있습니다.
+XDM은 Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
@@ -105,7 +105,7 @@ XDM은 Experience Platform으로 가져온 데이터에 대한 일반적인 구�
 
 | 기능 | 설명 |
 | --- | --- |
-| Real-Time CDP MCP(Beta) | Real-Time CDP MCP를 사용하여 Real-Time CDP을 AI 에이전트 및 MCP 호환 클라이언트로 가져와 기본 LLM 경험을 통해 직접 Real-Time CDP 도구와 상호 작용할 수 있습니다. MCP 호환 클라이언트(예: Claude, ChatGPT, Claude Code, Codex, Cursor 또는 VS 코드)를 `https://rtcdp-mcp.adobe.io/mcp`에 연결하면 자연어를 사용하여 Experience Platform REST API 호출을 작성하거나 여러 UI 워크플로를 탐색하지 않고도 대상, 대상 구성 및 활성화 실행 기록을 검사할 수 있습니다. 브라우저 기반 Adobe 로그인을 완료하면 다음을 포함한 도구에 대한 읽기 전용 액세스 권한을 갖게 됩니다. <ul><li>기존 대상자 검색</li><li>대상자 멤버십 미리 보기</li><li>목록 대상 유형</li><li>구성된 계정 나열</li><li>구성된 대상 나열</li><li>Source 연결 나열</li><li>Target 연결 나열</li><li>활성화 실행 검사</li></ul>. 각 요청에는 `imsOrgId` 및 `sandboxName` 매개 변수가 있어야 작업을 조직과 샌드박스에 지정할 수 있습니다. 이 Beta 릴리스에서는 쓰기 작업이 지원되지 않습니다. |
+| Real-Time CDP MCP(Beta) | Real-Time CDP MCP를 사용하여 Real-Time CDP을 AI 에이전트 및 MCP 호환 클라이언트로 가져와 기본 LLM 경험을 통해 직접 Real-Time CDP 도구와 상호 작용할 수 있습니다. MCP 호환 클라이언트(예: Claude, ChatGPT, Claude Code, Codex, Cursor 또는 VS 코드)를 Adobe 담당자가 제공하는 끝점에 연결하면 Experience Platform REST API 호출을 작성하거나 여러 UI 워크플로우를 탐색하지 않고도 자연어를 사용하여 대상자, 대상 구성 및 활성화 실행 기록을 검사할 수 있습니다. 브라우저 기반 Adobe 로그인을 완료하면 다음을 포함한 도구에 대한 읽기 전용 액세스 권한을 갖게 됩니다. <ul><li>기존 대상자 검색</li><li>대상자 멤버십 미리 보기</li><li>목록 대상 유형</li><li>구성된 계정 나열</li><li>구성된 대상 나열</li><li>Source 연결 나열</li><li>Target 연결 나열</li><li>활성화 실행 검사</li></ul>. 각 요청에는 `imsOrgId` 및 `sandboxName` 매개 변수가 있어야 작업을 조직과 샌드박스에 지정할 수 있습니다. 이 Beta 릴리스에서는 쓰기 작업이 지원되지 않습니다. |
 
 {style="table-layout:auto"}
 
