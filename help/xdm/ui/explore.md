@@ -5,9 +5,9 @@ title: UI에서 스키마 리소스 살펴보기
 description: Experience Platform 사용자 인터페이스에서 기존 스키마, 클래스, 스키마 필드 그룹 및 데이터 유형을 탐색하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ca90fd3f8615e21fb4c44104c2de7679db1e1025
+source-git-commit: 80d5e90dba710fcf8f1e941668f4a506e92f5bcf
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '2820'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,13 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Schemas]**&#x200B;�
 
 ![여러 탭이 강조 표시된 스키마 작업 영역](../images/ui/explore/tabs.png)
 
-필터 아이콘(![필터 아이콘 이미지](/help/images/icons/filter.png))은 나열된 결과를 좁히기 위해 왼쪽 레일에 컨트롤을 표시합니다. 리소스 필터는 **[!UICONTROL Browse]** 및 **[!UICONTROL Relationships]** 탭에서 각각 스키마 및 관계에 사용할 수 있습니다.
+필터 아이콘(![필터 아이콘 이미지](/help/images/icons/filter.png))은 나열된 결과를 좁히기 위해 왼쪽 레일에 컨트롤을 표시합니다. 리소스 필터는 **[!UICONTROL Browse]** 및 **[!UICONTROL Relationships]** 탭에서 각각 스키마 및 관계에 사용할 수 있습니다. **[!UICONTROL Field groups]** 탭에서 [필드 그룹 메타데이터 및 필터링](#field-group-metadata-and-filtering)에 설명된 필터를 사용하여 호환 가능한 클래스 및 업계 태그로 목록의 범위를 좁힙니다.
 
-[!UICONTROL Browse] 작업 영역의 [!UICONTROL Schemas] 탭에서 스키마 인벤토리를 필터링할 수 있습니다. **[!UICONTROL Included in Profile]** 전환을 사용하여 [실시간 고객 프로필](../../profile/home.md)에서 사용할 수 있도록 설정된 스키마만 표시합니다. **[!UICONTROL Show adhoc schemas]** 토글을 사용하여 단일 데이터 집합에서만 사용할 수 있도록 네임스페이스가 지정된 필드를 사용하여 만든 스키마 목록을 필터링합니다.
+[!UICONTROL Schemas] 작업 영역의 [!UICONTROL Browse] 탭에서 스키마 인벤토리를 필터링할 수 있습니다. **[!UICONTROL Included in Profile]** 전환을 사용하여 [실시간 고객 프로필](../../profile/home.md)에서 사용할 수 있도록 설정된 스키마만 표시합니다. **[!UICONTROL Show adhoc schemas]** 토글을 사용하여 단일 데이터 집합에서만 사용할 수 있도록 네임스페이스가 지정된 필드를 사용하여 만든 스키마 목록을 필터링합니다.
 
 ![필터 패널이 강조 표시된 [!UICONTROL Schemas] 작업 영역 [!UICONTROL Browse] 탭입니다.](../images/ui/explore/filters.png)
 
-[!UICONTROL Relationship] 작업 영역의 [!UICONTROL Schemas] 탭에서 4가지 기준을 기반으로 관계 목록을 필터링할 수 있습니다. 필터에는 [!UICONTROL Source schema], [!UICONTROL Destination schema], [!UICONTROL Source class] 및 [!UICONTROL Destination class]이(가) 포함됩니다. 아래 표에는 필터에 대한 설명이 나와 있습니다.
+[!UICONTROL Schemas] 작업 영역의 [!UICONTROL Relationship] 탭에서 4가지 기준을 기반으로 관계 목록을 필터링할 수 있습니다. 필터에는 [!UICONTROL Source schema], [!UICONTROL Destination schema], [!UICONTROL Source class] 및 [!UICONTROL Destination class]이(가) 포함됩니다. 아래 표에는 필터에 대한 설명이 나와 있습니다.
 
 | 필터 | 설명 |
 |-----------------------------------|------------|
@@ -138,7 +138,7 @@ XDM 리소스를 관리하거나 삭제해야 할 때 또는 작업(예: 삭제)
 
 ### 표준 클래스 및 필드 그룹 표시기 {#standard-class-and-field-group-indicator}
 
-스키마 편집기 내에서 표준(Adobe에서 생성한) 클래스와 필드 그룹은 자물쇠 아이콘(![자물쇠 아이콘)으로 표시됩니다.](/help/images/icons/lock-closed.png) 구문을 사용하는 키-값 쌍으로 전달됩니다. 자물쇠는 클래스 또는 필드 그룹 이름 옆의 왼쪽 레일과 시스템 생성 리소스의 일부인 스키마 다이어그램의 필드 옆에 나타납니다.
+스키마 편집기 내에서 표준(Adobe에서 생성한) 클래스와 필드 그룹은 자물쇠 아이콘(![자물쇠 아이콘](/help/images/icons/lock-closed.png))으로 표시됩니다. 자물쇠는 클래스 또는 필드 그룹 이름 옆의 왼쪽 레일과 시스템 생성 리소스의 일부인 스키마 다이어그램의 필드 옆에 나타납니다.
 
 ![자물쇠 아이콘이 강조 표시된 스키마 편집기](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -164,7 +164,7 @@ XDM 리소스를 관리하거나 삭제해야 할 때 또는 작업(예: 삭제)
 
 ### [!UICONTROL Field properties] {#field-properties}
 
-캔버스에서 필드 이름을 선택하면 오른쪽 레일이 업데이트되어 **[!UICONTROL Field properties]** 아래에 해당 필드에 대한 세부 정보가 표시됩니다. 여기에는 필드의 의도된 사용 사례, 기본값, 패턴, 형식, 필드가 필요한지 여부 등에 대한 설명이 포함될 수 있습니다.
+캔버스에서 필드 이름을 선택하면 오른쪽 레일이 업데이트되어 **[!UICONTROL Field properties]** 아래에 해당 필드에 대한 세부 정보가 표시됩니다. 여기에는 필드의 의도된 사용 사례, 기본값, 패턴, 형식, 필드가 필요한지 여부 등에 대한 설명이 포함될 수 있습니다. 필드 그룹을 탐색하는 경우 선택한 필드에 대한 레이블 관련 세부 정보도 여기에 표시될 수 있습니다. [구조 보기의 레이블](#field-group-labels-in-structure)을 참조하십시오.
 
 ![필드 속성이 강조 표시된 Commerce 데이터 형식에서 선택한 필드입니다.](../images/ui/explore/field-properties.png)
 
@@ -190,11 +190,97 @@ ID 필드가 포함된 스키마를 검사할 때 이러한 필드는 스키마�
 
 ![관계 필드 및 관계 편집이 강조 표시된 스키마 편집기입니다.](../images/ui/explore/relationship-field.png)
 
-참조 스키마의 기본 ID에 대한 ID 네임스페이스를 보려면 관계 필드를 선택한 다음 **[!UICONTROL Edit relationship]** 사이드바에서 [!UICONTROL Field properties]을(를) 선택합니다. 관계의 매개 변수가 표시되는 [!UICONTROL Edit relationship] 대화 상자에 표시됩니다.
+참조 스키마의 기본 ID에 대한 ID 네임스페이스를 보려면 관계 필드를 선택한 다음 [!UICONTROL Field properties] 사이드바에서 **[!UICONTROL Edit relationship]**&#x200B;을(를) 선택합니다. 관계의 매개 변수가 표시되는 [!UICONTROL Edit relationship] 대화 상자에 표시됩니다.
 
 ![관계 매개 변수가 표시된 관계 편집 대화 상자입니다.](../images/ui/explore/edit-relationship-dialog.png)
 
 XDM 스키마에서의 관계 사용에 대한 자세한 내용은 [UI에서 관계 만들기](../tutorials/relationship-ui.md)에 대한 자습서를 참조하십시오.
+
+## 필드 그룹 탐색: 사용 및 메타데이터 {#explore-field-groups}
+
+필드 그룹을 탐색하려면 **[!UICONTROL Schemas]** > **[!UICONTROL Field groups]**(으)로 이동합니다. **[!UICONTROL Field groups]** 탭에서 추가 기능을 통해 호환성, 필수 필드(수집 요구 사항을 적용) 및 거버넌스 신호와 같이 스키마 전체에서 필드 그룹이 사용되는 위치와 필드 그룹이 포함하는 내용을 이해할 수 있습니다.
+
+이러한 기능을 사용하면 변경 전에 영향을 평가하고 스키마 디자인 중에 관련 필드 그룹을 보다 효율적으로 식별할 수 있습니다.
+
+### 필드 그룹에 대한 스키마 사용 보기 {#view-schema-usage-for-field-groups}
+
+**[!UICONTROL Field groups]** 테이블에서 세부 정보 보기를 열 필드 그룹을 선택합니다. 캔버스는 필드 그룹 구조를 표시하도록 업데이트되고, 속성 레일에는 선택한 리소스에 대한 추가 정보가 표시됩니다.
+
+#### 이 필드 그룹을 사용하는 스키마
+
+오른쪽 속성 레일의 **[!UICONTROL Schemas using this field group]** 섹션에는 현재 필드 그룹을 포함하는 스키마가 나열됩니다.
+
+![이 필드 그룹 섹션을 사용하여 스키마를 표시하는 필드 그룹 속성 레일입니다.](../images/ui/explore/field-group-properties.png)
+
+- 필드 그룹이 3개 이하의 스키마에서 사용되는 경우 모든 스키마 이름이 표시됩니다.
+- 세 개 이상의 스키마에서 사용하는 경우 전체 목록을 보는 옵션과 함께 일부 이름만 표시됩니다.
+
+스키마 이름을 선택하여 새 탭에서 세부 사항 보기를 열고 해당 스키마 내에서 필드 그룹이 어떻게 구현되는지 검사합니다.
+
+#### 더 많은 전체 스키마 목록 보기
+
+인라인으로 표시할 수 있는 것보다 많은 스키마가 있는 경우 **[!UICONTROL View more]**&#x200B;을(를) 선택하여 전체 대화 상자를 엽니다.
+
+![이 필드 그룹 섹션을 사용하여 스키마의 추가 항목 보기 옵션입니다.](../images/ui/explore/view-more-schemas.png)
+
+필드 그룹을 사용하는 스키마의 전체 목록이 표시된 **[!UICONTROL Schemas using this field group]** 대화 상자가 나타납니다.
+
+![이 필드 그룹을 사용하는 스키마 대화 상자에 스키마 목록과 열이 표시됩니다.](../images/ui/explore/schemas-using-this-field-group-dialog.png)
+
+**[!UICONTROL Schemas using this field group]** 대화 상자에서 다음 작업을 수행할 수 있습니다.
+
+- 필드 그룹을 사용하는 모든 스키마 찾아보기
+- 큰 결과 세트를 통한 페이지
+- 스키마를 선택하여 새 탭에서 세부 사항 보기를 엽니다.
+
+스키마 이름, 클래스 및 기타 속성과 같은 스키마 세부 정보를 볼 수 있습니다.
+
+이 워크플로는 **영향 분석 및 탐색만**&#x200B;하기 위한 것입니다. 스키마나 필드 그룹은 수정하지 않습니다. 스키마 구조를 변경하려면 [UI에서 스키마 만들기 및 편집](./resources/schemas.md)을 참조하세요.
+
+### 필드 그룹 메타데이터 및 필터링 {#field-group-metadata-and-filtering}
+
+**[!UICONTROL Field groups]** 탭은 필드 그룹을 선택하기 전에 찾고 평가하는 데 도움이 되는 메타데이터 및 필터링 도구를 제공합니다.
+
+#### 테이블 및 필터 찾아보기
+
+필드 그룹 인벤토리 테이블에는 필드 그룹을 적용할 수 있는 클래스를 나타내는 **[!UICONTROL Compatible classes]**&#x200B;과(와) 같이 목록 보기에서 직접 메타데이터를 표시하는 추가 열이 포함되어 있습니다. 필드 그룹은 나타내는 데이터(예: 레코드 기반 또는 시계열 데이터)의 동작을 기반으로 나열된 호환 클래스 중 하나를 사용하는 스키마에만 추가할 수 있습니다. 필드 그룹이 모든 클래스와 호환되는 경우 테이블에 **[!UICONTROL All]**&#x200B;이(가) 표시될 수 있습니다. **[!UICONTROL Industry tags]** 검색을 위해 필드 그룹을 분류하는 데 도움이 됩니다.
+
+목록을 세분화하려면 필터 아이콘(![필터 아이콘 이미지](/help/images/icons/filter.png))을 선택하여 왼쪽 레일에서 필터 패널을 엽니다. 다음 이미지는 왼쪽 레일에서 열려 있는 필터 패널을 보여 줍니다.
+
+![호환 가능한 클래스, 업계 태그 및 필터 패널을 표시하는 필드 그룹 탭입니다.](../images/ui/explore/field-group-filters.png)
+
+필터 패널에서 다음 작업을 수행할 수 있습니다.
+
+- **[!UICONTROL Compatible classes]** — 드롭다운을 사용하여 클래스 호환성을 기준으로 필드 그룹을 필터링합니다.
+- **[!UICONTROL Industry tags]** — 확인란을 사용하여 하나 이상의 산업 범주를 기준으로 필터링합니다.
+
+탐색하는 동안 표에서 행을 선택하여 정보 레일을 업데이트합니다. 정보 레일에는 호환 가능한 클래스 및 업계 태그와 같은 메타데이터가 표시되므로 필드 그룹을 열지 않고도 주요 세부 사항을 검토할 수 있습니다.
+
+#### 필드 그룹 세부 정보 메타데이터
+
+필드 그룹을 열면 속성 레일에 리소스와 연결된 추가 메타데이터가 표시됩니다.
+
+속성 레일에는 다음 메타데이터가 표시될 수 있습니다.
+
+- **[!UICONTROL Compatible classes]** — 필드 그룹이 확장할 수 있는 클래스
+- **[!UICONTROL Required attributes]** — 데이터를 수집하는 동안 필드 그룹에 필요할 때 유효한 값을 가져야 하는 속성입니다. 요구 사항은 데이터 구조에 따라 다르며 필수 값이 없거나 잘못된 레코드를 확인하지 못합니다
+- **[!UICONTROL Labels]** — 레이블이 필드 그룹 수준에 표시되지 않습니다. **[!UICONTROL Field properties]** 레일에서 레이블 세부 정보를 볼 필드 선택
+
+이 정보는 필드 그룹을 사용하거나 수정하기 전에 제한 및 요구 사항을 이해하는 데 도움이 됩니다.
+
+#### 구조 보기의 레이블
+
+필드 그룹이 캔버스에서 열려 있는 경우 구조에서 직접 레이블 정보를 볼 수 있습니다. 설정 아이콘(![설정 아이콘](../../images/icons/settings.png))을 선택합니다. 캔버스 도구 모음에서 **[!UICONTROL Show labels on tree]**&#x200B;을(를) 사용하여 캔버스의 필드에 레이블 표시기를 표시할 수 있습니다.
+
+![트리의 레이블 표시가 강조 표시된 트리 표시 옵션 대화 상자를 표시하는 필드 그룹 캔버스입니다.](../images/ui/explore/show-labels-on-tree.png)
+
+**[!UICONTROL Field properties]** 레일에서 해당 필드에 적용된 레이블을 포함하여 레이블 세부 정보를 보려면 캔버스에서 필드를 선택하십시오.
+
+![필드 속성 레일의 필드 및 레이블 세부 정보에 레이블을 표시하는 필드 그룹 캔버스입니다.](../images/ui/explore/field-group-labels.png)
+
+레이블은 카테고리별로 그룹화되고(예: ID 및 중요 레이블), 데이터에 적용되는 거버넌스 또는 액세스 관련 제한에 대한 가시성을 제공합니다.
+
+이러한 표시기는 가시성만을 위한 것이며 스키마 구조를 변경하지는 않습니다. 자세한 내용은 [스키마에 대한 데이터 사용 레이블 관리](../tutorials/labels.md)를 참조하십시오.
 
 ## 다음 단계
 
