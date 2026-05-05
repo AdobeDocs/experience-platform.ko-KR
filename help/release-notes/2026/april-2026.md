@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2026년 4월
 description: Adobe Experience Platform에 대한 2026년 4월 릴리스 정보입니다.
 exl-id: 47070fcf-b585-43f4-b43b-0d62c18f0693
-source-git-commit: 4a92f929c8d9ec727eee8365f576718b31c6084c
+source-git-commit: 9ebf498257378f4c5002276a84f104cf2d337601
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 21%
+source-wordcount: '1580'
+ht-degree: 22%
 
 ---
 
@@ -59,7 +59,6 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | [!BADGE Beta]{type=Informative} [사용자 지정 대상 편집](../../destinations/catalog/advertising/reddit-custom-audience.md) | Experience Platform에서 [!DNL Reddit Ads]&#x200B;(으)로 대상자를 보냅니다. [!DNL Reddit] 계정을 연결하고, ID를 매핑하고, 대상을 활성화하여 [!DNL Reddit]에서 사람들이 관심 영역을 적극적으로 탐색하도록 합니다. |
 | [Amazon 광고 v2](../../destinations/catalog/advertising/amazon-ads-v2.md) | 모든 새 [!DNL Amazon Ads] 연결에 [!DNL Amazon Ads v2] 카드를 사용하십시오. [!DNL Amazon Ads v2]이(가) [!DNL Ads Data Manager]에 연결되어 확장된 ID 유형, 주소 관련 필드 및 [!DNL Amazon Ads] 제품 간 데이터 공유를 지원하므로 타깃팅 및 대상 일치율이 향상됩니다. 카탈로그의 기존 [!DNL Amazon Ads] 커넥터의 이름이 [(레거시) [!DNL Amazon Ads]](../../destinations/catalog/advertising/amazon-ads.md)(으)로 변경되었습니다. 기존 레거시 연결이 있는 경우 필요한 변경 없이 계속 작동합니다. |
 | [[!DNL Rokt]](../../destinations/catalog/advertising/rokt.md) | [!DNL Rokt]을(를) 사용하여 Experience Platform 대상자를 AI 기반 실시간 의사 결정에 연결하여 보다 정확한 타기팅, 억제 및 개인화를 통해 캠페인 성과를 향상시킵니다. |
-| [크리터](../../destinations/catalog/advertising/criteo.md)에 대한 외부 대상 지원 | 사용자 지정 업로드 대상(CSV에서 가져옴), 유사 대상, 페더레이션 대상 및 [!DNL Adobe Journey Optimizer] 등의 다른 Experience Platform 앱에서 만든 대상을 포함하여 세분화 서비스 이상의 원본에서 [!DNL Criteo]&#x200B;(으)로 대상을 활성화합니다. 자세한 내용은 [지원되는 대상](../../destinations/catalog/advertising/criteo.md#supported-audiences) 섹션을 참조하십시오. 이 업데이트는 4월 말까지 배포됩니다. |
 | [Acxiom 대상자 연결](../../destinations/catalog/advertising/acxiom-audience-connection.md) | 이제 [!DNL Acxiom Audience Connection] 대상을 일반적으로 사용할 수 있습니다. [!DNL Acxiom's Real ID] 기술로 대상을 향상하고 [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL Facebook], [!DNL Amazon], [!DNL Pinterest], [!DNL Vizio], [!DNL LG Ads], [!DNL Spectrum] 및 [!DNL Viant]&#x200B;(으)로 활성화하려면 이 함수를 사용하십시오. |
 | [Acxiom Real ID 대상 연결](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | 이제 [!DNL Acxiom Real ID Audience Connection] 대상을 일반적으로 사용할 수 있습니다. [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL Facebook], [!DNL Amazon], [!DNL Pinterest], [!DNL Vizio], [!DNL LG Ads], [!DNL Spectrum] 및 [!DNL Viant]에서 일치 키로 [!DNL Acxiom's Real ID]을(를) 사용하여 대상을 활성화하려면 이 함수를 사용합니다. |
 
