@@ -3,10 +3,10 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: ce9b0bd5cc733ed67909898b45f4ee42ae015608
 workflow-type: tm+mt
-source-wordcount: '4769'
-ht-degree: 11%
+source-wordcount: '4961'
+ht-degree: 12%
 
 ---
 
@@ -119,8 +119,8 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="파일 내보내기 옵션"
->abstract="**전체 파일 내보내기**&#x200B;를 선택하여 대상자 조건에 적합한 모든 프로필의 전체 스냅샷을 내보냅니다. **증분 파일 내보내기**&#x200B;를 선택하여 마지막 내보내기 이후 대상자 조건에 적합한 프로필만 내보냅니다. <br>첫 번째 증분 파일 내보내기에는 채우기 역할을 하는 대상자에 적합한 모든 프로필이 포함됩니다. 향후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 대상자 조건에 적합한 프로필만 포함됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko#export-incremental-files" text="증분 파일 내보내기"
+>abstract="**전체 파일 내보내기**&#x200B;를 선택하여 대상자 조건에 적합한 모든 프로필의 전체 스냅샷을 내보냅니다. **증분 파일 내보내기**&#x200B;를 선택하여 마지막 내보내기 이후 대상자 조건에 적합한 프로필만 내보냅니다. <br> 첫 번째 증분 파일 내보내기에는 채우기 역할을 하는 대상자에 적합한 모든 프로필이 포함됩니다. 향후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 대상자 조건에 적합한 프로필만 포함됩니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="증분 파일 내보내기"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
@@ -226,7 +226,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
    * **[!UICONTROL Hourly]**: 증분 파일 내보내기를 3, 6, 8 또는 12시간마다 예약합니다.
 
 
-2. 내보내기를 수행할 시간을 **[!UICONTROL Time]** 형식으로 선택하려면 [!DNL UTC] 선택기를 사용하십시오.
+2. 내보내기를 수행할 시간을 [!DNL UTC] 형식으로 선택하려면 **[!UICONTROL Time]** 선택기를 사용하십시오.
 
 3. **[!UICONTROL Date]** 선택기를 사용하여 내보내기를 수행할 간격을 선택하십시오. 가장 좋은 방법은 다운스트림 플랫폼의 캠페인 기간에 맞춰 시작 및 종료 날짜를 설정하는 것입니다.
 
@@ -496,7 +496,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 ### 타임스탬프가 동일한 프로필에 대한 중복 제거 동작 {#deduplication-same-timestamp}
 
-프로필을 파일 기반 대상으로 내보낼 때 중복 제거는 여러 프로필이 동일한 중복 제거 키와 동일한 참조 타임스탬프를 공유하는 경우 단 하나의 프로필만 내보내도록 할 수 있습니다. 이 타임스탬프는 프로필의 대상 멤버십 또는 ID 그래프가 마지막으로 업데이트된 순간을 나타냅니다. 프로필을 업데이트하고 내보내는 방법에 대한 자세한 내용은 [프로필 내보내기 동작](https://experienceleague.adobe.com/ko/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) 문서를 참조하십시오.
+프로필을 파일 기반 대상으로 내보낼 때 중복 제거는 여러 프로필이 동일한 중복 제거 키와 동일한 참조 타임스탬프를 공유하는 경우 단 하나의 프로필만 내보내도록 할 수 있습니다. 이 타임스탬프는 프로필의 대상 멤버십 또는 ID 그래프가 마지막으로 업데이트된 순간을 나타냅니다. 프로필을 업데이트하고 내보내는 방법에 대한 자세한 내용은 [프로필 내보내기 동작](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) 문서를 참조하십시오.
 
 #### 주요 고려 사항 {#key-considerations}
 
@@ -571,7 +571,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 >[!IMPORTANT]
 >
->카탈로그의 모든 클라우드 저장소 대상은 이 섹션에서 설명한 [[!UICONTROL Mapping] 단계를 대체하는 향상된 &#x200B;](#mapping) 단계&#x200B;**[!UICONTROL Select attributes]**&#x200B;을(를) 볼 수 있습니다.
+>카탈로그의 모든 클라우드 저장소 대상은 이 섹션에서 설명한 **[!UICONTROL Select attributes]** 단계를 대체하는 향상된 [[!UICONTROL Mapping] 단계](#mapping)을(를) 볼 수 있습니다.
 >
 >이 **[!UICONTROL Select attributes]** 단계는 [!DNL Adobe Campaign], Oracle Responsys, Oracle Eloqua 및 Salesforce Marketing Cloud 이메일 마케팅 대상에 대해 계속 표시됩니다.
 
@@ -615,9 +615,24 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 >title="보강 속성 제외"
 >abstract="모든 속성을 제외하고 선택한 사용자 정의 업로드된 대상자의 프로필을 대상으로 내보내려면 이 옵션을 활성화합니다."
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_info_alert"
+>title="계층 구조 출력 활성화됨"
+>abstract="이 대상은 배열, 맵 및 개체의 내보내기 활성화 토글이 켜져 있으므로 계층적 출력을 지원합니다. 하나의 매핑에서 동일한 배열의 최상위 배열, 배열 요소 또는 여러 필드를 내보낼 수 있습니다. 자세한 내용은 이 문서를 참조하십시오."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_source_field"
+>title="소스 필드"
+>abstract="내보낼 데이터 보강 속성을 선택합니다. 배열 내의 필드의 경우 소스는 변형 식으로 자동 채워집니다. 여러 필드를 하나의 매핑으로 내보내려면 먼저 한 필드를 추가한 다음 소스 표현식을 편집합니다. 자세한 내용은 이 문서를 참조하십시오."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_target_field"
+>title="대상 필드"
+>abstract="대상 필드가 소스 필드 이름으로 자동 채워집니다. 내보낸 파일에 다른 이름을 두려면 다른 별칭을 사용하도록 편집합니다."
+
 >[!IMPORTANT]
 >
->이 단계는 **[!UICONTROL Custom upload]**&#x200B;대상자 선택[&#x200B; 단계 동안 &#x200B;](#select-audiences)대상자를 선택한 경우에만 표시됩니다.
+>이 단계는 [대상자 선택](#select-audiences) 단계 동안 **[!UICONTROL Custom upload]**&#x200B;대상자를 선택한 경우에만 표시됩니다.
 
 데이터 보강 속성은 **[!UICONTROL Custom uploads]**(으)로 Experience Platform에서 수집된 사용자 지정 업로드 대상자에 해당합니다. 이 단계에서는 선택한 각 외부 대상에 대해 대상으로 내보낼 속성을 선택할 수 있습니다.
 
@@ -626,7 +641,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 각 외부 대상에 대한 데이터 보강 속성을 선택하려면 아래 단계를 따르십시오.
 
 1. **[!UICONTROL Enrichment attributes]** 열에서 ![편집 단추](/help/images/icons/edit.png)(편집) 단추를 선택합니다.
-1. **[!UICONTROL Add enrichment attribute]**&#x200B;을(를) 선택합니다. 새 빈 스키마 필드가 표시됩니다.
+1. **[!UICONTROL Add enrichment attribute]**을(를) 선택합니다. 새 빈 스키마 필드가 표시됩니다.
    데이터 보강 특성 모달 화면을 표시하는 ![UI 이미지입니다.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
 1. 빈 필드 오른쪽의 버튼을 선택하여 필드 선택 화면을 엽니다.
 1. 대상자를 위해 내보낼 속성을 선택합니다.
@@ -638,7 +653,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 
 ![데이터 보강 특성 제외 전환을 보여 주는 UI 이미지입니다.](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)
 
-**[!UICONTROL Next]**&#x200B;검토[&#x200B; 단계로 이동하려면 &#x200B;](#review)을(를) 선택하십시오.
+[검토](#review) 단계로 이동하려면 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
 ## 검토 {#review}
 
@@ -649,7 +664,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 >* 필드는 대상 정의에 사용됩니다.
 >* 필드는 대상 대상에 대한 예상 속성으로 구성됩니다.
 >
-> 예를 들어 `person.name.firstName` 필드에 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있는 경우 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은 [의  [!DNL Adobe Experience Platform]](../../rtcdp/privacy/data-governance-overview.md#destinations)데이터 거버넌스를 참조하십시오.
+> 예를 들어 `person.name.firstName` 필드에 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있는 경우 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은  [!DNL Adobe Experience Platform]](../../rtcdp/privacy/data-governance-overview.md#destinations)의 [데이터 거버넌스를 참조하십시오.
 
 **[!UICONTROL Review]** 페이지에서 선택 항목의 요약을 볼 수 있습니다. **[!UICONTROL Cancel]**&#x200B;을(를) 선택하여 흐름을 분류하거나, **[!UICONTROL Back]**&#x200B;을(를) 선택하여 설정을 수정하거나, **[!UICONTROL Finish]**&#x200B;을(를) 선택하여 선택을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
