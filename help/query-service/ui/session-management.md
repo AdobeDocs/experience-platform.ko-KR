@@ -3,11 +3,10 @@ title: Adobe Experience Platform에서 쿼리 서비스 세션 관리
 description: 관리자가 활성 쿼리 서비스 세션을 보고, 모니터링하고, 종료하여 유휴 용량을 늘리고 신뢰할 수 있는 데이터 Distiller 워크플로우를 유지 관리하는 방법을 알아봅니다.
 keywords: Experience Platform;쿼리 서비스;세션;세션 관리;Data Distiller;관리자
 solution: Experience Platform
-badgeLimitedAvailability: label="제한된 가용성" type="Informative"
 exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
-source-git-commit: 2117b7ad0f507b5a35595d702cb8a70e2e09f39d
+source-git-commit: f9b5e32da94625623926102fb236ba2d17bdecea
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '725'
 ht-degree: 1%
 
 ---
@@ -16,7 +15,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Session management for Query Service is currently in limited availability and is only available to organizations with **Data Distiller** entitlements. To request access, contact your Adobe Account Team.
+>쿼리 서비스에 대한 세션 관리는 **Data Distiller** 권한을 가진 조직에서만 사용할 수 있습니다. 액세스 권한을 요청하려면 Adobe 계정 팀에 문의하십시오.
 
 이 안내서를 사용하여 Adobe Experience Platform 사용자 인터페이스에서 활성 쿼리 서비스 세션을 관리합니다. 세션 관리는 관리자가 샌드박스 간 동시 쿼리 편집기 세션을 모니터링하고 사용자가 세션을 열어 놓을 때 사용 가능한 용량을 모니터링하는 데 도움이 됩니다.
 

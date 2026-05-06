@@ -5,9 +5,9 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
+source-git-commit: 71d8268a209036291c41da3fef84a331aec2172b
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '439'
 ht-degree: 26%
 
 ---
@@ -105,6 +105,7 @@ ht-degree: 26%
    - [UI 개요](ui/overview.md)
    - [쿼리 편집기 사용 안내서](ui/user-guide.md)
    - [쿼리 템플릿](ui/query-templates.md)
+   - [데이터 Distiller Accelerator](ui/accelerators.md)
    - [매개변수화된 쿼리](ui/parameterized-queries.md)
    - [쿼리 일정](ui/query-schedules.md)
    - [쿼리 로그](ui/query-logs.md)
@@ -144,6 +145,6 @@ ht-degree: 26%
    - [메타데이터 명령](sql/metadata.md)
    - [준비된 문](sql/prepared-statements.md)
 - [자주 묻는 질문](troubleshooting-guide.md)
-- [허용 목록에 추가하다 IP 주소](ip-address-allowlist.md)
+- [IP 주소](ip-address-allowlist.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+- [Experience Platform 릴리스 노트](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

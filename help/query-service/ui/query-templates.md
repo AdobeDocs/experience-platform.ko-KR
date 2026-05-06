@@ -2,9 +2,9 @@
 title: 쿼리 템플릿
 description: 쿼리 템플릿은 다른 사용자가 재사용하여 시간과 노력을 절약할 수 있는 재사용 가능한 저장된 SQL 쿼리입니다. 쿼리 편집기 또는 쿼리 서비스 API를 사용하여 만들 수 있으며, 모든 Experience Platform 데이터 세트에서 사용할 수 있습니다.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 839d8ac398ca8523e9d726c6990c79b65334eb88
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '651'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform Query Service를 사용하면 SQL 코드를 쿼리 템
 
 ## 전제 조건
 
-쿼리 편집기에 액세스하고 Experience Platform UI 내에서 쿼리 대시보드를 보려면 [!UICONTROL 쿼리 관리] 권한을 활성화해야 합니다. 권한은 Adobe [Admin Console](https://adminconsole.adobe.com/)을 통해 사용할 수 있습니다. 이 권한을 활성화하기 위한 관리자 권한이 없는 경우 조직의 관리자에게 문의하십시오. Admin Console을 통해 권한을 추가하는 방법에 대한 [전체 지침](../../access-control/home.md)은 액세스 제어 설명서를 참조하십시오.
+쿼리 편집기에 액세스하고 Experience Platform UI 내에서 쿼리 대시보드를 보려면 [!UICONTROL Manage queries] 권한을 활성화해야 합니다. 권한은 Adobe [Admin Console](https://adminconsole.adobe.com/)을 통해 사용할 수 있습니다. 이 권한을 활성화하기 위한 관리자 권한이 없는 경우 조직의 관리자에게 문의하십시오. Admin Console을 통해 권한을 추가하는 방법에 대한 [전체 지침](../../access-control/home.md)은 액세스 제어 설명서를 참조하십시오.
 
 ## 쿼리 템플릿 만들기
 
@@ -25,7 +25,15 @@ Adobe Experience Platform Query Service를 사용하면 SQL 코드를 쿼리 템
 
 ### 쿼리 편집기를 사용하여 쿼리를 템플릿으로 작성 및 저장
 
-쿼리 편집기를 사용하여 [작성](./user-guide.md#query-authoring) 및 [쿼리 저장](./user-guide.md#saving-queries)하는 방법에 대한 지침은 설명서를 참조하세요. 쿼리의 이름을 지정하고 저장하면 [!UICONTROL 템플릿] 탭에서 쿼리 템플릿으로 다시 사용할 수 있습니다.
+쿼리 편집기를 사용하여 [작성](./user-guide.md#query-authoring) 및 [쿼리 저장](./user-guide.md#saving-queries)하는 방법에 대한 지침은 설명서를 참조하세요. 쿼리의 이름을 지정하고 저장하면 [!UICONTROL Templates] 탭에서 쿼리 템플릿으로 다시 사용할 수 있습니다.
+
+### Data Distiller 가속기에서 템플릿 만들기 {#create-from-accelerator}
+
+데이터 Distiller 가속기는 읽기 전용입니다. 가속기를 수정하려면 쿼리 편집기에서 편집 가능한 템플릿을 만듭니다.
+
+가속기를 연 다음 **[!UICONTROL Create custom template]**&#x200B;을(를) 선택하여 SQL을 복제합니다. 템플릿을 저장하여 **[!UICONTROL Templates]** 탭에 추가하십시오. 복제된 템플릿은 완전히 편집 가능하며 필요에 따라 실행, 예약 또는 수정할 수 있습니다.
+
+자세한 지침은 [데이터 Distiller 가속기](./accelerators.md#create-custom-template) 안내서를 참조하세요.
 
 >[!TIP]
 >
@@ -33,7 +41,7 @@ Adobe Experience Platform Query Service를 사용하면 SQL 코드를 쿼리 템
 
 ## 쿼리 템플릿 찾아보기 {#browse}
 
-Experience Platform UI의 쿼리 작업 영역에서 **[!UICONTROL 템플릿]**&#x200B;을(를) 선택하여 사용 가능한 저장된 쿼리 목록을 표시합니다.
+Experience Platform UI의 쿼리 작업 영역에서 **[!UICONTROL Templates]**&#x200B;을(를) 선택하여 사용 가능한 저장된 쿼리 목록을 표시합니다.
 
 ![템플릿 탭이 강조 표시된 쿼리 작업 영역입니다.](../images/ui/query-templates/query-templates.png)
 
@@ -43,10 +51,10 @@ Experience Platform UI의 쿼리 작업 영역에서 **[!UICONTROL 템플릿]**&
 
 세부 정보 패널에서 다음 작업을 실행할 수 있습니다.
 
-* 기존 테이블에서 데이터를 선택하여 새 테이블을 만들려면 **[!UICONTROL CTAS로 실행]**&#x200B;을 선택하십시오. 이 옵션은 SELECT 쿼리가 있는 경우에만 사용할 수 있습니다.
-* 쿼리 템플릿에 대한 일정 편집을 시작하려면 **[!UICONTROL 일정 추가]**&#x200B;를 선택하십시오.
-* **[!UICONTROL 일정 보기]**&#x200B;를 선택하여 쿼리 편집기의 [!UICONTROL 일정] 탭으로 이동합니다. 이 보기에는 쿼리와 관련된 모든 일정 정보가 포함됩니다.
-* 템플릿을 삭제하려면 **[!UICONTROL 쿼리 삭제]**&#x200B;를 선택하십시오.
+* 기존 테이블에서 데이터를 선택하여 새 테이블을 만들려면 **[!UICONTROL Run as CTAS]**&#x200B;을(를) 선택하십시오. 이 옵션은 SELECT 쿼리가 있는 경우에만 사용할 수 있습니다.
+* 쿼리 템플릿에 대한 일정 편집을 시작하려면 **[!UICONTROL Add schedule]**&#x200B;을(를) 선택하십시오.
+* 쿼리 편집기의 [!UICONTROL Schedules] 탭으로 이동하려면 **[!UICONTROL View schedule]**&#x200B;을(를) 선택합니다. 이 보기에는 쿼리와 관련된 모든 일정 정보가 포함됩니다.
+* 템플릿을 삭제하려면 **[!UICONTROL Delete query]**&#x200B;을(를) 선택하십시오.
 * 템플릿 이름을 선택하여 편집할 SQL이 미리 채워진 쿼리 편집기로 이동합니다.
 
 ### 쿼리 서비스 API를 사용하여 템플릿 만들기

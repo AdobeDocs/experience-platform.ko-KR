@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스 UI 안내서
 description: Adobe Experience Platform Query Service는 쿼리를 작성하여 실행하고, 이전에 실행한 쿼리를 보고, 조직 내에서 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+source-git-commit: 839d8ac398ca8523e9d726c6990c79b65334eb88
 workflow-type: tm+mt
-source-wordcount: '2409'
+source-wordcount: '2471'
 ht-degree: 1%
 
 ---
@@ -26,8 +26,8 @@ Adobe Experience Platform 쿼리 서비스는 쿼리를 작성 및 실행하고,
 [!UICONTROL Overview] 페이지에는 시작하는 데 도움이 되는 몇 가지 기본 섹션이 있습니다.
 
 1. 새 쿼리를 작성하여 실행하려면 쿼리 편집기로 빠르게 이동하려면 **[!UICONTROL Create query]**&#x200B;을(를) 선택하십시오.
-2. **[!UICONTROL Learn more]** 방법에 대한 자세한 설명서를 보려면 **[!UICONTROL Write queries]**&#x200B;을(를) 선택하십시오.
-3. **[!UICONTROL Get started]** 섹션에서 **[!UICONTROL Discover Data Distiller]**&#x200B;을(를) 선택하여 Data Distiller 개요를 열고 사용 가능한 기능에 대해 알아봅니다.
+2. **[!UICONTROL Write queries]** 방법에 대한 자세한 설명서를 보려면 **[!UICONTROL Learn more]**&#x200B;을(를) 선택하십시오.
+3. **[!UICONTROL Discover Data Distiller]** 섹션에서 **[!UICONTROL Get started]**&#x200B;을(를) 선택하여 Data Distiller 개요를 열고 사용 가능한 기능에 대해 알아봅니다.
 
 ![쿼리 만들기가 포함된 쿼리 서비스 작업 영역입니다. 자세히 알아보고 시작하세요.](../images/ui/overview/main-panels.png)
 
@@ -42,17 +42,29 @@ Adobe Experience Platform 쿼리 서비스는 쿼리를 작성 및 실행하고,
 
 ![데이터 Distiller 기능 섹션이 강조 표시된 쿼리 서비스 작업 영역입니다.](../images/ui/overview/data-distiller-capabilities.png)
 
+### 가속기 {#accelerators}
+
+쿼리 작업 영역의 **[!UICONTROL Accelerators]** 탭은 일반적인 분석 사용 사례를 위해 Adobe에서 만든 매개 변수가 있는 SQL 템플릿 카탈로그를 제공합니다. 각 가속기는 이름, SQL 미리보기 및 메타데이터가 있는 테이블의 행으로 나타납니다.
+
+가속기를 선택하여 쿼리 편집기에서 엽니다. 매개 변수 값을 제공하고 쿼리를 실행하여 결과를 생성합니다. 가속기는 읽기 전용이며 Adobe에서 유지 관리하여 일관성을 보장합니다. 논리를 수정하려면 **[!UICONTROL Create custom template]**&#x200B;을(를) 사용하여 편집 가능한 복사본을 만드십시오. 바로 연결을 검색, 실행, 예약 및 사용자 지정하는 방법을 알아보려면 [데이터 Distiller 바로 연결](./accelerators.md) 안내서를 참조하세요.
+
 ### 추천 Data Distiller 액셀러레이터 {#recommended-accelerators}
 
-빠른 링크를 선택하여 관련 Data Distiller 대시보드 [!UICONTROL Templates]&#x200B;(으)로 이동합니다. 각 가속기는 대상 데이터를 분석하고, 세그먼테이션을 최적화하고, 타깃팅 전략을 향상시키는 데 도움이 되는 강력한 도구와 시각화를 제공합니다.
+개요 탭의 **[!UICONTROL Recommended Data Distiller accelerators]** 섹션에서는 일반적으로 사용되는 바로 연결에 빠르게 액세스할 수 있습니다. 카드로 표시되며 두 가지 워크플로를 지원합니다.
 
-- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: 이 대시보드에서 여러 대상 세그먼트 간의 대상 교차를 분석하여 중요한 통찰력을 발견하고 세그멘테이션 전략을 최적화할 수 있습니다. 추가적인 오프라인 분석 또는 보고 목적으로 인사이트를 내보낼 수도 있습니다.
-- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: 이 대시보드에서 주요 대상 지표를 나란히 비교 및 대조하여 두 대상 그룹을 자세히 분석할 수 있습니다. 이러한 통찰력을 통해 대상자 크기, 증가 및 기타 주요 성과 지표를 이해하여 세분화를 세분화하고 데이터 기반 결정으로 타기팅 전략을 최적화할 수 있습니다.
-- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: [!UICONTROL Audience trends] 대시보드를 사용하여 대상 증가, ID 수 및 단일 ID 프로필과 같은 주요 지표를 통해 시간이 지남에 따라 대상이 어떻게 진화하는지 시각화하십시오. 트렌드를 추적하여 대상자 행동에 대한 중요한 통찰력을 발견하고, 세분화를 세분화하고, 참여를 강화하고, 보다 효과적인 캠페인을 위해 타깃팅 전략을 최적화할 수 있습니다.
-시간 경과에 따른 대상 지표를 추적하여 대상 규모, ID 증가 및 전체 참여의 변화를 모니터링합니다.
-- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: 대상 ID 중복 대시보드를 사용하여 선택한 대상 내에서 ID 중복을 분석하십시오. 시각화 및 표로 작성된 데이터는 ID 결합을 최적화하고, 중복을 줄이고, 세그멘테이션을 개선하는 통찰력을 제공합니다. 이러한 통찰력을 통해 보다 효과적인 타겟팅, 향상된 개인화 및 간소화된 고객 상호 작용을 수행할 수 있습니다.
+- **대시보드 연결 액셀러레이터** 미리 작성된 시각화가 있는 대시보드 작업 영역에서 열립니다. 매개 변수 입력이나 수동 쿼리 실행이 필요하지 않습니다.
+- **쿼리 기반 바로 연결**&#x200B;을 쿼리 편집기에서 열어 매개 변수 값을 제공하거나 쿼리를 실행하거나 예약합니다.
 
-![데이터 Distiller 바로 연결 섹션이 강조 표시된 쿼리 서비스 작업 영역입니다.](../images/ui/overview/data-distiller-accelerators.png)
+카드를 선택하여 가속기를 엽니다. 일반 워크플로에 빠르게 액세스하려면 이 섹션을 사용하거나 **[!UICONTROL Accelerators]** 탭으로 이동하여 전체 카탈로그를 검색하십시오. 전체 액셀러레이터 목록 및 자세한 지침은 [액셀러레이터 탭](./accelerators.md#discovery-paths) 또는 [데이터 Distiller 액셀러레이터 안내서](./accelerators.md)를 참조하십시오.
+
+다음과 같은 대시보드 연결 액셀러레이터를 사용할 수 있습니다.
+
+- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: 대상 세그먼트 간의 교차를 분석하여 겹침 패턴을 식별하고 세그멘테이션을 세분화합니다.
+- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: 크기, 구성 및 시간에 따른 변경 사항을 포함하여 두 대상 간의 주요 지표를 비교합니다.
+- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: 대상 크기 및 ID 수를 포함하여 시간 경과에 따라 대상 지표가 변경되는 방법을 추적합니다.
+- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: ID 결합 및 세그멘테이션 정확성을 지원하기 위해 ID 형식이 대상 내에서 어떻게 겹치는지 검사합니다.
+
+![권장되는 액셀러레이터 카드가 있는 데이터 Distiller 액셀러레이터 섹션을 보여 주는 쿼리 서비스 개요](../images/ui/overview/data-distiller-accelerators.png)
 
 ### Data Distiller 예시 {#data-distiller-examples}
 
@@ -72,7 +84,7 @@ Data Distiller을 최대한 활용할 수 있는 설명서 가이드 및 예제�
 
 #### 날짜 필터 설정 {#set-date-filter}
 
-이러한 시각화에 대한 전역 날짜 필터를 적용하려면 필터 아이콘(![필터 아이콘)을 선택합니다.](../../images/icons/filter-icon-white.png)) 및 **[!UICONTROL Filters]** 대화 상자에서 날짜 범위를 조정합니다. 이 필터를 적용하여 표시된 지표를 특정 시간대에 맞게 조정하고 분석의 관련성을 높입니다.
+이러한 시각화에 대한 전역 날짜 필터를 적용하려면 필터 아이콘(![필터 아이콘](../../images/icons/filter-icon-white.png))을 선택합니다. **[!UICONTROL Filters]** 대화 상자에서 날짜 범위를 조정합니다. 이 필터를 적용하여 표시된 지표를 특정 시간대에 맞게 조정하고 분석의 관련성을 높입니다.
 
 ![쿼리 서비스 Workspace의 주요 지표 차트에 대한 필터 대화 상자입니다.](../images/ui/overview/filters-dialog.png)
 
@@ -100,7 +112,7 @@ Data Distiller을 최대한 활용할 수 있는 설명서 가이드 및 예제�
 
 ![쿼리 만들기가 강조 표시된 쿼리 대시보드입니다.](../images/ui/overview/overview-create-query.png)
 
-쿼리 편집기에 입력하면 SQL 예약어, 테이블 및 테이블 내 필드 이름이 자동으로 완료됩니다. 쿼리 쓰기가 끝나면 재생 아이콘(![재생 아이콘)을 선택합니다.](../../images/icons/play.png))을(를) 사용하여 쿼리를 실행합니다. 편집기 아래의 **[!UICONTROL Console]** 탭은 쿼리 서비스가 현재 수행 중인 작업을 보여 주며 쿼리가 반환된 시기를 나타냅니다. **[!UICONTROL Result]** 옆의 [!UICONTROL Console] 탭에 쿼리 결과가 표시됩니다. 쿼리 편집기 사용에 대한 자세한 내용은 [쿼리 편집기 안내서](./user-guide.md)를 참조하십시오.
+쿼리 편집기에 입력하면 SQL 예약어, 테이블 및 테이블 내 필드 이름이 자동으로 완료됩니다. 쿼리 쓰기가 끝나면 재생 아이콘(![재생 아이콘](../../images/icons/play.png))을 선택합니다. 쿼리를 실행합니다. 편집기 아래의 **[!UICONTROL Console]** 탭은 쿼리 서비스가 현재 수행 중인 작업을 보여 주며 쿼리가 반환된 시기를 나타냅니다. [!UICONTROL Console] 옆의 **[!UICONTROL Result]** 탭에 쿼리 결과가 표시됩니다. 쿼리 편집기 사용에 대한 자세한 내용은 [쿼리 편집기 안내서](./user-guide.md)를 참조하십시오.
 
 ![쿼리 편집기 작업 영역입니다.](../images/ui/overview/query-editor.png)
 
@@ -178,7 +190,7 @@ Experience Platform UI의 템플릿에 대한 자세한 내용은 [쿼리 템플
 
 >[!NOTE]
 >
->연필 아이콘(![연필 아이콘)을 선택합니다.](/help/images/icons/edit.png)) 쿼리 로그의 모든 행에서 쿼리 편집기로 이동합니다. 편리한 편집을 위해 쿼리가 미리 채워집니다.
+>연필 아이콘(![연필 아이콘](/help/images/icons/edit.png))을 선택합니다. 쿼리 로그의 모든 행에서 쿼리 편집기로 이동합니다. 편리한 편집을 위해 쿼리가 미리 채워집니다.
 
 쿼리 이벤트에 의해 자동으로 생성된 로그 파일에 대한 자세한 내용은 [쿼리 로그 설명서](./query-logs.md)를 참조하십시오.
 
