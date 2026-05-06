@@ -3,13 +3,11 @@ keywords: advertising; microsoft ads; customer match;
 title: Microsoft Ads 고객 일치 연결
 description: Microsoft Ads Customer Match 대상을 사용하여 이메일 주소로 고객을 일치시키고 검색 및 대상 광고를 포함하여 Microsoft Advertising 네트워크에서 고객과 다시 교류합니다.
 badge: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 50bd5be385f62a290fefae60c6ed286d893e430a
 workflow-type: tm+mt
-source-wordcount: '1511'
-ht-degree: 14%
+source-wordcount: '1642'
+ht-degree: 18%
 
 ---
 
@@ -94,9 +92,9 @@ Microsoft 작업 계정(Microsoft Entra 계정이라고도 함)으로 인증하�
 
 IT 관리자가 Azure 포털에서 요청을 승인하면 Experience Platform으로 돌아가서 작업 계정을 사용하여 인증할 수 있습니다. 지침은 Microsoft 설명서 를 참조하십시오.
 
-* [관리자 동의 요청을 검토하고 조치를 취합니다](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
+* [관리자 동의 요청을 검토하고 조치를 수행합니다.](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
 * [관리자 동의 워크플로 구성](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
-* [사용자가 애플리케이션에 동의하는 방법 구성](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
+* [사용자가 애플리케이션에 동의하는 방식 구성](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
 
 IT 관리자가 아직 요청을 승인하지 않은 경우 다음 오류로 인해 인증이 실패합니다. `AADSTS650052: The app needs access to a service ('https://ads.microsoft.com') that your organization has not subscribed to or enabled. Contact your IT Admin to review the configuration of your service subscriptions.`
 
