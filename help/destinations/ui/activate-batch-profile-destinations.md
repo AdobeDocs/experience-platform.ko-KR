@@ -641,7 +641,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 각 외부 대상에 대한 데이터 보강 속성을 선택하려면 아래 단계를 따르십시오.
 
 1. **[!UICONTROL Enrichment attributes]** 열에서 ![편집 단추](/help/images/icons/edit.png)(편집) 단추를 선택합니다.
-1. **[!UICONTROL Add enrichment attribute]**을(를) 선택합니다. 새 빈 스키마 필드가 표시됩니다.
+1. **[!UICONTROL Add enrichment attribute]**&#x200B;을(를) 선택합니다. 새 빈 스키마 필드가 표시됩니다.
    데이터 보강 특성 모달 화면을 표시하는 ![UI 이미지입니다.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
 1. 빈 필드 오른쪽의 버튼을 선택하여 필드 선택 화면을 엽니다.
 1. 대상자를 위해 내보낼 속성을 선택합니다.
@@ -664,7 +664,7 @@ Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL 
 >* 필드는 대상 정의에 사용됩니다.
 >* 필드는 대상 대상에 대한 예상 속성으로 구성됩니다.
 >
-> 예를 들어 `person.name.firstName` 필드에 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있는 경우 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은  [!DNL Adobe Experience Platform]](../../rtcdp/privacy/data-governance-overview.md#destinations)의 [데이터 거버넌스를 참조하십시오.
+> 예를 들어 `person.name.firstName` 필드에 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있는 경우 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은  [!DNL Adobe Experience Platform][&#128279;](../../rtcdp/privacy/data-governance-overview.md#destinations)의 데이터 거버넌스를 참조하십시오.
 
 **[!UICONTROL Review]** 페이지에서 선택 항목의 요약을 볼 수 있습니다. **[!UICONTROL Cancel]**&#x200B;을(를) 선택하여 흐름을 분류하거나, **[!UICONTROL Back]**&#x200B;을(를) 선택하여 설정을 수정하거나, **[!UICONTROL Finish]**&#x200B;을(를) 선택하여 선택을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
