@@ -2,10 +2,10 @@
 title: Experience Platform 사용자 인터페이스를 사용하여 Salesforce 계정 연결
 description: 사용자 인터페이스를 사용하여 Salesforce 계정을 연결하고 CRM 데이터를 Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
+source-git-commit: 11e9e1a25a45f4011f15b1e28753a98d4158012c
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 2%
+source-wordcount: '724'
+ht-degree: 3%
 
 ---
 
@@ -26,31 +26,7 @@ Experience Platform 사용자 인터페이스를 사용하여 [!DNL Salesforce] 
 
 ### 필요한 자격 증명 수집 {#gather-required-credentials}
 
->[!WARNING]
->
->[!DNL Salesforce] 원본에 대한 기본 인증은 2026년 1월에 더 이상 사용되지 않습니다. 소스를 계속 사용하고 [!DNL Salesforce] 계정의 데이터를 Experience Platform으로 수집하려면 OAuth 2 클라이언트 자격 증명 인증으로 이동해야 합니다.
-
-[!DNL Salesforce] 원본은 기본 인증과 OAuth2 클라이언트 자격 증명을 지원합니다.
-
->[!BEGINTABS]
-
->[!TAB 기본 인증]
-
-기본 인증을 사용하여 [!DNL Salesforce] 계정에 연결하려면 다음 자격 증명에 대한 값을 제공해야 합니다.
-
-| 자격 증명 | 설명 |
-| --- | --- |
-| 환경 URL | [!DNL Salesforce] 원본 인스턴스의 URL입니다. 환경 URL의 형식은 `https://[domain].my.salesforce.com`입니다. |
-| 사용자 이름 | [!DNL Salesforce] 사용자 계정의 사용자 이름입니다. |
-| 암호 | [!DNL Salesforce] 사용자 계정의 암호입니다. |
-| 보안 토큰 | [!DNL Salesforce] 사용자 계정의 보안 토큰입니다. |
-| API 버전 | (선택 사항) 사용 중인 [!DNL Salesforce] 인스턴스의 REST API 버전입니다. API 버전의 값은 십진수로 형식을 지정해야 합니다. 예를 들어 API 버전 `52`을(를) 사용하는 경우 값을 `52.0`(으)로 입력해야 합니다. 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. |
-
-인증에 대한 자세한 내용은 [이 [!DNL Salesforce] 인증 가이드](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm)를 참조하세요.
-
->[!TAB OAuth2 클라이언트 자격 증명]
-
-OAuth2 클라이언트 자격 증명을 사용하여 [!DNL Salesforce] 계정에 연결하려면 다음 자격 증명에 대한 값을 제공해야 합니다.
+[!DNL Salesforce] 원본은 OAuth2 클라이언트 자격 증명을 통해 인증을 지원합니다.
 
 | 자격 증명 | 설명 |
 | --- | --- |
@@ -62,56 +38,31 @@ OAuth2 클라이언트 자격 증명을 사용하여 [!DNL Salesforce] 계정에
 
 [!DNL Salesforce]에 대한 OAuth 사용에 대한 자세한 내용은 OAuth 인증 흐름에 대한 [[!DNL Salesforce] 안내서](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)를 참조하십시오.
 
->[!ENDTABS]
-
-필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL Salesforce] 계정을 Experience Platform에 연결할 수 있습니다.
-
 ## [!DNL Salesforce] 계정 연결
 
-Experience Platform UI의 왼쪽 메뉴에서 **[!UICONTROL 소스]**(으)로 이동하여 [!UICONTROL 소스] 작업 영역을 엽니다. 왼쪽의 카탈로그를 사용하여 범주를 찾아보거나 검색 창을 사용하여 연결할 소스를 빠르게 찾을 수 있습니다.
+Experience Platform UI에서 왼쪽 메뉴에서 **[!UICONTROL Sources]**(으)로 이동하여 [!UICONTROL Sources] 작업 영역을 엽니다. 왼쪽의 카탈로그를 사용하여 범주를 찾아보거나 검색 창을 사용하여 연결할 소스를 빠르게 찾을 수 있습니다.
 
-**[!DNL Salesforce]** CRM *[!UICONTROL 범주에서]*&#x200B;을(를) 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
+*[!UICONTROL CRM]* 범주에서 **[!DNL Salesforce]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Add data]**&#x200B;을(를) 선택합니다.
 
 >[!TIP]
 >
->소스 카탈로그에는 계정이 연결되어 있지 않은 경우 **[!UICONTROL 설정]**&#x200B;이 표시되고, 계정이 이미 인증된 경우 **[!UICONTROL 데이터 추가]**&#x200B;가 표시됩니다.
+>소스 카탈로그에 계정이 연결되어 있지 않으면 **[!UICONTROL Set up]**&#x200B;이 표시되고, 계정이 이미 인증되면 **[!UICONTROL Add data]**&#x200B;이 표시됩니다.
 
 ![Salesforce 소스 카드가 선택된 Experience Platform UI의 소스 카탈로그입니다.](../../../../images/tutorials/create/salesforce/catalog.png)
 
-**[!UICONTROL Salesforce에 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
+**[!UICONTROL Connect to Salesforce]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
 
 ### 기존 계정 사용
 
-기존 계정을 사용하려면 **[!UICONTROL 기존 계정]**&#x200B;을 선택한 다음 표시되는 목록에서 사용할 계정을 선택하십시오. 완료되면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 계속하십시오.
+기존 계정을 사용하려면 **[!UICONTROL Existing account]**&#x200B;을(를) 선택한 다음 표시되는 목록에서 사용할 계정을 선택하십시오. 완료되면 계속하려면 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
 ![이미 조직에 있는 인증된 Salesforce 계정 목록입니다.](../../../../images/tutorials/create/salesforce/existing.png)
 
 ### 새 계정 만들기
 
-새 계정을 만들려면 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택하고 새 [!DNL Salesforce] 계정의 이름과 설명을 입력하십시오.
+새 계정을 만들려면 **[!UICONTROL New account]**&#x200B;을(를) 선택하고 새 [!DNL Salesforce] 계정의 이름과 설명을 입력하십시오.
 
-![적절한 인증 자격 증명을 제공하여 새 Salesforce 계정을 만들 수 있는 인터페이스입니다.](../../../../images/tutorials/create/salesforce/new.png)
-
-그런 다음 새 계정에 사용할 인증 유형을 선택합니다.
-
->[!BEGINTABS]
-
->[!TAB 기본 인증]
-
-기본 인증의 경우 **[!UICONTROL 기본 인증]**&#x200B;을 선택한 후 다음 자격 증명의 값을 제공하십시오.
-
-* 환경 URL
-* 사용자 이름
-* 암호
-* API 버전(선택 사항)
-
-완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택합니다.
-
-![Salesforce 계정 생성을 위한 기본 인증 인터페이스입니다.](../../../../images/tutorials/create/salesforce/basic.png)
-
->[!TAB OAuth2 클라이언트 자격 증명]
-
-OAuth2 클라이언트 자격 증명의 경우 **[!UICONTROL OAuth2 클라이언트 자격 증명]**&#x200B;을(를) 선택한 다음 다음 자격 증명의 값을 제공합니다.
+OAuth 2 클라이언트 자격 증명의 경우 **[!UICONTROL OAuth2 Client Credential]**&#x200B;을(를) 선택한 다음 다음 자격 증명의 값을 제공합니다.
 
 * 환경 URL
 * 클라이언트 ID
@@ -119,15 +70,14 @@ OAuth2 클라이언트 자격 증명의 경우 **[!UICONTROL OAuth2 클라이언
 * API 버전
 * 삭제 개체 포함
 
-완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택합니다.
+완료되면 **[!UICONTROL Connect to source]**&#x200B;을(를) 선택합니다.
 
-![Salesforce 계정 생성을 위한 OAuth 인터페이스입니다.](../../../../images/tutorials/create/salesforce/oauth.png)
 
->[!ENDTABS]
+![적절한 인증 자격 증명을 제공하여 새 Salesforce 계정을 만들 수 있는 인터페이스입니다.](../../../../images/tutorials/create/salesforce/new.png)
 
 ### 샘플 데이터의 미리 보기 건너뛰기 {#skip-preview-of-sample-data}
 
-데이터 선택 단계에서 큰 테이블 또는 데이터 파일을 수집할 때 시간 초과가 발생할 수 있습니다. 샘플 데이터가 없어도 데이터 미리 보기를 건너뛰어 시간 초과를 우회하고 스키마를 볼 수 있습니다. 데이터 미리 보기를 건너뛰려면 **[!UICONTROL 샘플 데이터 미리 보기 건너뛰기]** 전환을 사용하도록 설정하십시오.
+데이터 선택 단계에서 큰 테이블 또는 데이터 파일을 수집할 때 시간 초과가 발생할 수 있습니다. 샘플 데이터가 없어도 데이터 미리 보기를 건너뛰어 시간 초과를 우회하고 스키마를 볼 수 있습니다. 데이터 미리 보기를 건너뛰려면 **[!UICONTROL Skip previewing sample data]** 전환을 사용하도록 설정하십시오.
 
 워크플로우의 나머지 부분은 그대로 유지됩니다. 유일한 주의 사항은 데이터 미리보기를 건너뛰면 매핑 단계에서 계산된 필드 및 필수 필드의 자동 유효성 검사를 방지할 수 있으므로 매핑 중에 이러한 필드의 유효성을 수동으로 검사해야 한다는 것입니다.
 

@@ -4,9 +4,9 @@ type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Snowflake 소스 연결을 만드는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 80ea8b5aa46e7aa4fdecfee3c962a77989a9b191
+source-git-commit: ea8100cf8e032371b6c5187ba142bc12047b35d1
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1079'
 ht-degree: 2%
 
 ---
@@ -32,17 +32,17 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->`PREVENT_UNLOAD_TO_INLINE_URL` 데이터베이스에서 Experience Platform으로 데이터를 언로드하려면 `FALSE` 플래그를 [!DNL Snowflake]&#x200B;(으)로 설정해야 합니다.
+>[!DNL Snowflake] 데이터베이스에서 Experience Platform으로 데이터를 언로드하려면 `PREVENT_UNLOAD_TO_INLINE_URL` 플래그를 `FALSE`(으)로 설정해야 합니다.
 
 ## 소스 카탈로그 탐색 {#navigate}
 
-Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL Sources]**&#x200B;을(를) 선택하여 [!UICONTROL Sources] 작업 영역에 액세스합니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-**[!DNL Snowflake]**&#x200B;데이터베이스&#x200B;*[!UICONTROL 범주에서]*&#x200B;을(를) 선택한 다음 **[!UICONTROL 설정]**&#x200B;을(를) 선택합니다.
+*[!UICONTROL Databases]* 범주에서 **[!DNL Snowflake]**&#x200B;을(를) 선택한 다음 **[!UICONTROL Set up]**&#x200B;을(를) 선택합니다.
 
 >[!TIP]
 >
->지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL 설정]** 옵션이 표시됩니다. 인증된 계정이 있으면 이 옵션이 **[!UICONTROL 데이터 추가]**(으)로 변경됩니다.
+>지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL Set up]** 옵션이 표시됩니다. 인증된 계정이 있으면 이 옵션이 **[!UICONTROL Add data]**(으)로 변경됩니다.
 
 ![Snowflake 카드가 선택된 소스 카탈로그..](../../../../images/tutorials/create/snowflake/catalog.png)
 
@@ -50,7 +50,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 그런 다음 소스 워크플로우의 인증 단계로 이동합니다. 여기에서 기존 계정을 사용하거나 새 계정을 만들 수 있습니다.
 
-기존 계정을 사용하려면 연결할 [!DNL Snowflake] 계정을 선택한 다음 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 계속하십시오.
+기존 계정을 사용하려면 연결할 [!DNL Snowflake] 계정을 선택한 다음 계속하려면 **[!UICONTROL Next]**&#x200B;을(를) 선택하십시오.
 
 ![원본 워크플로의 기존 계정 인터페이스입니다.](../../../../images/tutorials/create/snowflake/existing.png)
 
@@ -58,35 +58,15 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 기존 계정이 없는 경우 소스와 일치하는 필요한 인증 자격 증명을 제공하여 새 계정을 만들어야 합니다.
 
-새 계정을 만들려면 **[!UICONTROL 새 계정]**&#x200B;을 선택한 다음 이름을 입력하고 필요에 따라 계정에 대한 설명을 추가하십시오.
+새 계정을 만들려면 **[!UICONTROL New account]**&#x200B;을(를) 선택한 다음 이름을 입력하고 필요에 따라 계정에 대한 설명을 추가하십시오.
 
 ### Azure에서 Experience Platform에 연결 {#azure}
 
-계정 키 인증 또는 키 쌍 인증을 사용하여 [!DNL Snowflake] 계정을 Azure의 Experience Platform에 연결할 수 있습니다.
+키 쌍 인증을 사용하여 [!DNL Snowflake] 계정을 Azure의 Experience Platform에 연결할 수 있습니다.
 
->[!BEGINTABS]
+키 쌍 인증을 사용하려면 **[!UICONTROL KeyPair authentication]**&#x200B;을(를) 선택하고 계정, 사용자 이름, 개인 키, 개인 키 암호, 데이터베이스 및 웨어하우스에 대한 값을 제공한 다음 **[!UICONTROL Connect to source]**&#x200B;을(를) 선택하십시오.
 
->[!TAB 계정 키 인증]
-
-계정 키 인증을 사용하려면 **[!UICONTROL 계정 키 인증]**&#x200B;을 선택하고 입력 양식에 연결 문자열을 입력한 다음 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하십시오.
-
-![계정 키 인증 인터페이스입니다.](../../../../images/tutorials/create/snowflake/account-key-auth.png)
-
-| 자격 증명 | 설명 |
-| --- | --- |
-| 계정 | 계정 이름은 조직 내에서 계정을 고유하게 식별합니다. 이 경우 서로 다른 [!DNL Snowflake] 조직에서 계정을 고유하게 식별해야 합니다. 이렇게 하려면 계정 이름 앞에 조직 이름을 추가해야 합니다. 예: `orgname-account_name`. 추가 지침은 [계정 식별자 검색 [!DNL Snowflake] 에 대한 안내서를 참조하십시오](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier). 자세한 내용은 [[!DNL Snowflake] 설명서](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)를 참조하세요. |
-| 웨어하우스 | [!DNL Snowflake] 웨어하우스에서 응용 프로그램의 쿼리 실행 프로세스를 관리합니다. 각 [!DNL Snowflake] 웨어하우스는 서로 독립적이므로 Experience Platform으로 데이터를 가져올 때 개별적으로 액세스해야 합니다. |
-| 데이터베이스 | [!DNL Snowflake] 데이터베이스에 Experience Platform으로 가져올 데이터가 있습니다. |
-| 사용자 이름 | [!DNL Snowflake] 계정의 사용자 이름입니다. |
-| 암호 | [!DNL Snowflake] 사용자 계정의 암호입니다. |
-| 역할 | [!DNL Snowflake] 세션에서 사용할 기본 액세스 제어 역할입니다. 역할은 지정된 사용자에게 이미 할당된 기존 역할이어야 합니다. 기본 역할은 `PUBLIC`입니다. |
-| 연결 문자열 | [!DNL Snowflake] 인스턴스에 연결하는 데 사용되는 연결 문자열입니다. [!DNL Snowflake]에 대한 연결 문자열 패턴은 `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`입니다. |
-
->[!TAB 키 쌍 인증]
-
-키 쌍 인증을 사용하려면 **[!UICONTROL KeyPair 인증]**&#x200B;을 선택하고 계정, 사용자 이름, 개인 키, 개인 키 암호, 데이터베이스 및 웨어하우스에 대한 값을 제공한 다음 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하십시오.
-
-![계정 키 쌍 인증 인터페이스](../../../../images/tutorials/create/snowflake/key-pair-auth.png)
+![계정 키 쌍 인증 인터페이스](../../../../images/tutorials/create/snowflake/new.png)
 
 키 쌍 인증을 사용하면 [!DNL Snowflake] 소스에 대한 계정을 만들 때 2048비트 RSA 키 쌍을 생성한 다음 다음 다음 값을 제공해야 합니다.
 
@@ -94,14 +74,12 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 | --- | --- |
 | 계정 | 계정 이름은 조직 내에서 계정을 고유하게 식별합니다. 이 경우 서로 다른 [!DNL Snowflake] 조직에서 계정을 고유하게 식별해야 합니다. 이렇게 하려면 계정 이름 앞에 조직 이름을 추가해야 합니다. 예: `orgname-account_name`. 추가 지침은 [계정 식별자 검색 [!DNL Snowflake] 에 대한 안내서를 참조하십시오](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier). 자세한 내용은 [[!DNL Snowflake] 설명서](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)를 참조하세요. |
 | 사용자 이름 | [!DNL Snowflake] 계정의 사용자 이름입니다. |
-| 개인 키 | [!DNL Base64-] 계정의 [!DNL Snowflake]인코딩된 개인 키입니다. 암호화되거나 암호화되지 않은 개인 키를 생성할 수 있습니다. 암호화된 개인 키를 사용하는 경우 Experience Platform에 대해 인증할 때 개인 키 암호도 제공해야 합니다. 자세한 내용은 [개인 키 검색 [!DNL Snowflake] 2&rbrace;에 대한 안내서를 참조하십시오.](../../../../connectors/databases/snowflake.md) |
-| 개인 키 암호 | 개인 키 암호는 암호화된 개인 키로 인증할 때 사용해야 하는 추가 보안 계층입니다. 암호화되지 않은 개인 키를 사용하는 경우에는 암호를 제공할 필요가 없습니다. |
+| 비공개 키 | [!DNL Snowflake] 계정의 [!DNL Base64-]인코딩된 개인 키입니다. 암호화되거나 암호화되지 않은 개인 키를 생성할 수 있습니다. 암호화된 개인 키를 사용하는 경우 Experience Platform에 대해 인증할 때 개인 키 암호도 제공해야 합니다. 자세한 내용은 [개인 키 검색 [!DNL Snowflake] 2}에 대한 안내서를 참조하십시오.](../../../../connectors/databases/snowflake.md) |
+| 비공개 키 암호문구 | 개인 키 암호는 암호화된 개인 키로 인증할 때 사용해야 하는 추가 보안 계층입니다. 암호화되지 않은 개인 키를 사용하는 경우에는 암호를 제공할 필요가 없습니다. |
 | 데이터베이스 | Experience Platform으로 수집할 데이터가 포함된 [!DNL Snowflake] 데이터베이스입니다. |
 | 웨어하우스 | [!DNL Snowflake] 웨어하우스에서 응용 프로그램의 쿼리 실행 프로세스를 관리합니다. 각 [!DNL Snowflake] 웨어하우스는 서로 독립적이므로 Experience Platform으로 데이터를 가져올 때 개별적으로 액세스해야 합니다. |
 
 이러한 값에 대한 자세한 내용은 [이 Snowflake 문서](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)를 참조하세요.
-
->[!ENDTABS]
 
 ### AWS에서 Experience Platform에 연결 {#aws}
 
@@ -115,7 +93,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 >[!TAB 키 쌍 인증]
 
-키 쌍을 사용하여 연결하려면 **[!UICONTROL KeyPair 인증]**&#x200B;을 선택하고 인증 자격 증명을 제공한 다음 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하십시오. 이러한 자격 증명에 대한 자세한 내용은 [[!DNL Snowflake] 일괄 처리 개요](../../../../connectors/databases/snowflake.md#gather-required-credentials)를 참조하십시오.
+키 쌍을 사용하여 연결하려면 **[!UICONTROL KeyPair Authentication]**&#x200B;을(를) 선택하고 인증 자격 증명을 제공한 다음 **[!UICONTROL Connect to source]**&#x200B;을(를) 선택하십시오. 이러한 자격 증명에 대한 자세한 내용은 [[!DNL Snowflake] 일괄 처리 개요](../../../../connectors/databases/snowflake.md#gather-required-credentials)를 참조하십시오.
 
 ![키 쌍 인증을 위한 새 계정 만들기 단계입니다.](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
 
@@ -125,7 +103,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 >
 >[!DNL Snowflake] 원본에 대한 기본 인증(또는 계정 키 인증)은 2025년 11월에 더 이상 사용되지 않습니다. 소스를 계속 사용하고 데이터베이스에서 Experience Platform으로 데이터를 수집하려면 키 쌍 기반 인증으로 이동해야 합니다. 사용 중단에 대한 자세한 내용은 [[!DNL Snowflake] 자격 증명 손상 위험 완화에 대한 모범 사례 가이드](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/)를 참조하세요.
 
-사용자 이름과 암호 조합을 사용하여 연결하려면 **[!UICONTROL 기본 인증]**&#x200B;을 선택하고 인증 자격 증명을 제공한 다음 **[!UICONTROL 소스에 연결]**&#x200B;을 선택합니다. 이러한 자격 증명에 대한 자세한 내용은 [[!DNL Snowflake] 일괄 처리 개요](../../../../connectors/databases/snowflake.md#gather-required-credentials)를 참조하십시오.
+사용자 이름과 암호 조합을 사용하여 연결하려면 **[!UICONTROL Basic authentication]**&#x200B;을(를) 선택하고 인증 자격 증명을 제공한 다음 **[!UICONTROL Connect to source]**&#x200B;을(를) 선택합니다. 이러한 자격 증명에 대한 자세한 내용은 [[!DNL Snowflake] 일괄 처리 개요](../../../../connectors/databases/snowflake.md#gather-required-credentials)를 참조하십시오.
 
 ![Snowflake을 AWS의 Experience Platform에 연결할 수 있는 소스 워크플로의 새 계정 단계입니다.](../../../../images/tutorials/create/snowflake/aws-auth.png)
 
@@ -133,7 +111,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를
 
 ### 샘플 데이터의 미리 보기 건너뛰기 {#skip-preview-of-sample-data}
 
-데이터 선택 단계에서 큰 테이블 또는 데이터 파일을 수집할 때 시간 초과가 발생할 수 있습니다. 샘플 데이터가 없어도 데이터 미리 보기를 건너뛰어 시간 초과를 우회하고 스키마를 볼 수 있습니다. 데이터 미리 보기를 건너뛰려면 **[!UICONTROL 샘플 데이터 미리 보기 건너뛰기]** 전환을 사용하도록 설정하십시오.
+데이터 선택 단계에서 큰 테이블 또는 데이터 파일을 수집할 때 시간 초과가 발생할 수 있습니다. 샘플 데이터가 없어도 데이터 미리 보기를 건너뛰어 시간 초과를 우회하고 스키마를 볼 수 있습니다. 데이터 미리 보기를 건너뛰려면 **[!UICONTROL Skip previewing sample data]** 전환을 사용하도록 설정하십시오.
 
 워크플로우의 나머지 부분은 그대로 유지됩니다. 유일한 주의 사항은 데이터 미리보기를 건너뛰면 매핑 단계에서 계산된 필드 및 필수 필드의 자동 유효성 검사를 방지할 수 있으므로 매핑 중에 이러한 필드의 유효성을 수동으로 검사해야 한다는 것입니다.
 

@@ -2,9 +2,9 @@
 title: Salesforce Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 501cb5e34e565b40160b39aed306a23cf77328ea
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
@@ -14,10 +14,6 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 >이제 Amazon Web Services(AWS)에서 Adobe Experience Platform을 실행할 때 [!DNL Salesforce] 소스를 사용할 수 있습니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../landing/multi-cloud.md)를 참조하세요.
-
->[!WARNING]
->
->[!DNL Salesforce] 원본에 대한 기본 인증은 2026년 1월에 더 이상 사용되지 않습니다. 소스를 계속 사용하고 [!DNL Salesforce] 계정의 데이터를 Experience Platform으로 수집하려면 OAuth 2 클라이언트 자격 증명 인증으로 이동해야 합니다.
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집하는 동시에 Experience Platform 서비스를 사용하여 수신 데이터를 구조화하고 레이블을 지정하며 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
@@ -239,21 +235,21 @@ Azure에서 Experience Platform에 소스를 연결하기 전에 지역별 IP �
 
 | 변수 | 설명 | 예 |
 | --- | --- | --- |
-| `CLIENT_SECRET` | `{ACCESS_TOKEN}`을(를) 생성하는 데 사용되는 고유 식별자입니다. [을(를) 검색하는 방법에 대한 자세한 내용은 &#x200B;](../../../landing/api-authentication.md)Experience Platform API 인증 및 액세스`{CLIENT_SECRET}`에 대한 자습서를 참조하십시오. | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | JSON 웹 토큰(JWT)은 {ACCESS_TOKEN}을(를) 생성하는 데 사용되는 인증 자격 증명입니다. [을(를) 생성하는 방법에 대한 자세한 내용은 &#x200B;](../../../landing/api-authentication.md)Experience Platform API 인증 및 액세스`{JWT_TOKEN}`에 대한 자습서를 참조하십시오. | `{JWT_TOKEN}` |
-| `API_KEY` | Experience Platform API 호출을 인증하는 데 사용되는 고유 식별자입니다. [을(를) 검색하는 방법에 대한 자세한 내용은 &#x200B;](../../../landing/api-authentication.md)Experience Platform API 인증 및 액세스`{API_KEY}`에 대한 자습서를 참조하십시오. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Experience Platform API 호출을 완료하는 데 필요한 인증 토큰입니다. [을(를) 검색하는 방법에 대한 자세한 내용은 &#x200B;](../../../landing/api-authentication.md)Experience Platform API 인증 및 액세스`{ACCESS_TOKEN}`에 대한 자습서를 참조하십시오. | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | `{ACCESS_TOKEN}`을(를) 생성하는 데 사용되는 고유 식별자입니다. `{CLIENT_SECRET}`을(를) 검색하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md)에 대한 자습서를 참조하십시오. | `{CLIENT_SECRET}` |
+| `JWT_TOKEN` | JSON 웹 토큰(JWT)은 {ACCESS_TOKEN}을(를) 생성하는 데 사용되는 인증 자격 증명입니다. `{JWT_TOKEN}`을(를) 생성하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md)에 대한 자습서를 참조하십시오. | `{JWT_TOKEN}` |
+| `API_KEY` | Experience Platform API 호출을 인증하는 데 사용되는 고유 식별자입니다. `{API_KEY}`을(를) 검색하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md)에 대한 자습서를 참조하십시오. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Experience Platform API 호출을 완료하는 데 필요한 인증 토큰입니다. `{ACCESS_TOKEN}`을(를) 검색하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md)에 대한 자습서를 참조하십시오. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | [!DNL Marketo]과(와) 관련하여 이 값은 고정되어 있으며 항상 `ent_dataservices_sdk`(으)로 설정되어 있습니다. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | `global` 컨테이너에는 모든 표준 Adobe 및 Experience Platform 파트너가 제공한 클래스, 스키마 필드 그룹, 데이터 형식 및 스키마가 들어 있습니다. [!DNL Marketo]과(와) 관련하여 이 값은 고정되어 있으며 항상 `global`(으)로 설정됩니다. | `global` |
-| `PRIVATE_KEY` | Experience Platform API에 대한 [!DNL Postman] 인스턴스를 인증하는 데 사용되는 자격 증명입니다. [을(를) 검색하는 방법에 대한 지침은 개발자 콘솔 설정 및  [!DNL Postman]](../../../landing/postman.md)개발자 콘솔 설정 및{PRIVATE_KEY}에 대한 자습서를 참조하십시오. | `{PRIVATE_KEY}` |
+| `PRIVATE_KEY` | Experience Platform API에 대한 [!DNL Postman] 인스턴스를 인증하는 데 사용되는 자격 증명입니다. {PRIVATE_KEY}을(를) 검색하는 방법에 대한 지침은 개발자 콘솔 설정 및 [개발자 콘솔 설정 및 [!DNL Postman]](../../../landing/postman.md)에 대한 자습서를 참조하십시오. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Adobe I/O에 통합하는 데 사용되는 자격 증명입니다. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | IMS(Identity Management System)는 Adobe 서비스에 인증을 위한 프레임워크를 제공합니다. [!DNL Marketo]과(와) 관련하여 이 값은 고정되어 있으며 항상 `ims-na1.adobelogin.com`(으)로 설정됩니다. | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | 제품 및 서비스를 소유하거나 라이선스를 부여하고 해당 구성원에 대한 액세스를 허용할 수 있는 법인 엔티티입니다. [&#x200B; 정보를 검색하는 방법에 대한 지침은  [!DNL Postman]](../../../landing/postman.md)개발자 콘솔 설정 및`{ORG_ID}`에 대한 자습서를 참조하십시오. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | 제품 및 서비스를 소유하거나 라이선스를 부여하고 해당 구성원에 대한 액세스를 허용할 수 있는 법인 엔티티입니다. `{ORG_ID}` 정보를 검색하는 방법에 대한 지침은 [개발자 콘솔 설정 및 [!DNL Postman]](../../../landing/postman.md)에 대한 자습서를 참조하십시오. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | 사용 중인 가상 샌드박스 파티션의 이름입니다. | `prod` |
 | `TENANT_ID` | 만든 리소스의 이름 간격이 제대로 지정되고 조직 내에 포함되어 있는지 확인하는 데 사용되는 ID입니다. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | API 호출을 수행하는 URL 엔드포인트. 이 값은 고정되어 있으며 항상 `http://platform.adobe.io/`(으)로 설정됩니다. | `http://platform.adobe.io/` |
-| `munchkinId` | [!DNL Marketo] 계정의 고유 ID입니다. [을(를) 검색하는 방법에 대한 자세한 내용은  [!DNL Marketo] 인스턴스 인증](../adobe-applications/marketo/marketo-auth.md)에 대한 자습서를 참조하십시오.`munchkinId` | `123-ABC-456` |
-| `sfdc_org_id` | [!DNL Salesforce] 계정의 조직 ID입니다. [[!DNL Salesforce]  조직 ID를 가져오는 방법에 대한 자세한 내용은 다음 &#x200B;](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1)안내서[!DNL Salesforce]를 참조하십시오. | `00D4W000000FgYJUA0` |
+| `munchkinId` | [!DNL Marketo] 계정의 고유 ID입니다. `munchkinId`을(를) 검색하는 방법에 대한 자세한 내용은 [인스턴스 인증 [!DNL Marketo] 에 대한 자습서를 참조하십시오.](../adobe-applications/marketo/marketo-auth.md) | `123-ABC-456` |
+| `sfdc_org_id` | [!DNL Salesforce] 계정의 조직 ID입니다. [!DNL Salesforce] 조직 ID를 가져오는 방법에 대한 자세한 내용은 다음 [[!DNL Salesforce] 안내서](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1)를 참조하십시오. | `00D4W000000FgYJUA0` |
 | `has_abm` | [!DNL Marketo Account-Based Marketing]을(를) 구독하는지 여부를 나타내는 부울 값입니다. | `false` |
 | `has_msi` | [!DNL Marketo Sales Insight]을(를) 구독하는지 여부를 나타내는 부울 값입니다. | `false` |
 
@@ -303,7 +299,7 @@ AWS에서 Experience Platform에 소스를 연결하기 전에 지역별 IP 주�
 openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem  
 ```
 
-1. [!DNL Salesforce] 대시보드에서 설정(![설정 아이콘)을 선택합니다.](/help/images/icons/settings.png))을(를) 선택한 다음 **[!DNL Setup]**&#x200B;을(를) 선택합니다.
+1. [!DNL Salesforce] 대시보드에서 설정(![설정 아이콘](/help/images/icons/settings.png))을 선택합니다. **[!DNL Setup]**&#x200B;을(를) 선택합니다.
 2. [!DNL App Manager]&#x200B;(으)로 이동한 다음 **[!DNL New Connection App]**&#x200B;을(를) 선택합니다.
 3. 앱 이름을 입력하고 나머지 필드는 자동으로 채울 수 있도록 합니다.
 4. [!DNL Enable OAuth Settings]에 대해 상자를 사용하도록 설정합니다.
@@ -438,8 +434,8 @@ public class Main {
 | 속성 | 구성 |
 | --- | --- |
 | `claimArray[0]` | 클라이언트 ID로 `claimArray[0]`을(를) 업데이트합니다. |
-| `claimArray[1]` | 앱에 대해 승인된 `claimArray[1]` 사용자 이름으로 [!DNL Salesforce]을(를) 업데이트합니다. |
-| `claimArray[2]` | `claimArray[2]` 로그인 URL로 [!DNL Salesforce]을(를) 업데이트합니다. |
+| `claimArray[1]` | 앱에 대해 승인된 [!DNL Salesforce] 사용자 이름으로 `claimArray[1]`을(를) 업데이트합니다. |
+| `claimArray[2]` | [!DNL Salesforce] 로그인 URL로 `claimArray[2]`을(를) 업데이트합니다. |
 | `claimArray[3]` | epoch 시간 이후 만료 날짜가 밀리초 단위로 지정된 `claimArray[3]`을(를) 업데이트합니다. 예를 들어 `3660624000000`은(는) 12-31-2085입니다. |
 | `/path/to/keystore` | `/path/to/keystore`을(를) keystore.jks에 대한 올바른 경로로 바꿉니다. |
 | `keystorepassword` | `keystorepassword`을(를) 대상 키 저장소 암호로 바꾸십시오. |

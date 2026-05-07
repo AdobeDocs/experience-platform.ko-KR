@@ -3,20 +3,20 @@ title: 흐름 서비스 API를 사용하여 Snowflake을 Experience Platform에 
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Snowflake에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 0476c42924bf0163380e650141fad8e50b98d4cf
+source-git-commit: 7ccb8f7c6cfe6e3d030e79bc03ea0136003e5dfa
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '776'
 ht-degree: 4%
 
 ---
 
-# [!DNL Snowflake] API를 사용하여 [!DNL Flow Service]을(를) Experience Platform에 연결
+# [!DNL Flow Service] API를 사용하여 [!DNL Snowflake]을(를) Experience Platform에 연결
 
 >[!IMPORTANT]
 >
 >[!DNL Snowflake] 소스는 Real-Time Customer Data Platform Ultimate을 구매한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
 
-[!DNL Snowflake]API[[!DNL Flow Service] 를 사용하여 &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/) 소스 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
+[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Snowflake] 소스 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
 
 ## 시작
 
@@ -29,7 +29,7 @@ ht-degree: 4%
 
 Experience Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Experience Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
-다음 섹션에서는 [!DNL Snowflake] API를 사용하여 [!DNL Flow Service]에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL Snowflake]에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### 필요한 자격 증명 수집
 
@@ -37,21 +37,17 @@ Experience Platform API를 성공적으로 호출하는 방법에 대한 자세�
 
 ## Azure에서 [!DNL Snowflake]을(를) Experience Platform에 연결 {#azure}
 
->[!WARNING]
->
->[!DNL Snowflake] 원본에 대한 기본 인증(또는 계정 키 인증)은 2025년 11월에 더 이상 사용되지 않습니다. 소스를 계속 사용하고 데이터베이스에서 Experience Platform으로 데이터를 수집하려면 키 쌍 기반 인증으로 이동해야 합니다. 사용 중단에 대한 자세한 내용은 [[!DNL Snowflake] 자격 증명 손상 위험 완화에 대한 모범 사례 가이드](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/)를 참조하세요.
-
-[!DNL Snowflake] 소스를 Azure의 Experience Platform에 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하세요.
+[!DNL Snowflake] 소스를 Azure의 Experience Platform에 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하십시오.
 
 >[!NOTE]
 >
->`PREVENT_UNLOAD_TO_INLINE_URL` 데이터베이스에서 Experience Platform으로 데이터를 언로드하려면 `FALSE` 플래그를 [!DNL Snowflake]&#x200B;(으)로 설정해야 합니다.
+>[!DNL Snowflake] 데이터베이스에서 Experience Platform으로 데이터를 언로드하려면 `PREVENT_UNLOAD_TO_INLINE_URL` 플래그를 `FALSE`(으)로 설정해야 합니다.
 
 ### Azure의 Experience Platform에서 [!DNL Snowflake]에 대한 기본 연결 만들기 {#azure-base}
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 Experience Platform 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-기본 연결 ID를 만들려면 `/connections` 인증 자격 증명을 요청 본문의 일부로 제공하는 동안 [!DNL Snowflake] 끝점에 대한 POST 요청을 만듭니다.
+기본 연결 ID를 만들려면 [!DNL Snowflake] 인증 자격 증명을 요청 본문의 일부로 제공하는 동안 `/connections` 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -61,58 +57,7 @@ POST /connections
 
 >[!BEGINTABS]
 
->[!TAB 연결 문자열]
-
-+++요청
-
-다음 요청은 [!DNL Snowflake]에 대한 기본 연결을 만듭니다.
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "Snowflake base connection",
-      "description": "Snowflake base connection",
-      "auth": {
-          "specName": "ConnectionString",
-          "params": {
-              "connectionString": "jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}"
-          }
-      },
-      "connectionSpec": {
-          "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
-          "version": "1.0"
-      }
-  }'
-```
-
-| 속성 | 설명 |
-| -------- | ----------- |
-| `auth.params.connectionString` | [!DNL Snowflake] 인스턴스에 연결하는 데 사용되는 연결 문자열입니다. [!DNL Snowflake]에 대한 연결 문자열 패턴은 `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`입니다. |
-| `connectionSpec.id` | [!DNL Snowflake] 연결 사양 ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
-
-+++
-
-+++응답
-
-성공한 응답은 고유 연결 식별자(`id`)를 포함하여 새로 만든 연결을 반환합니다. 이 ID는 다음 자습서에서 데이터를 탐색하는 데 필요합니다.
-
-```json
-{
-    "id": "2fce94c1-9a93-4971-8e94-c19a93097129",
-    "etag": "\"d403848a-0000-0200-0000-5e978f7b0000\""
-}
-```
-
-+++
-
-
->[!TAB 암호화된 개인 키를 사용한  키 쌍 인증]
+>암호화된 개인 키를 사용한 [!TAB 키 쌍 인증]
 
 +++요청
 
@@ -150,7 +95,7 @@ curl -X POST \
 | `auth.params.account` | [!DNL Snowflake] 계정의 이름입니다. |
 | `auth.params.username` | [!DNL Snowflake] 계정과 연결된 사용자 이름. |
 | `auth.params.database` | 데이터를 가져올 위치의 [!DNL Snowflake] 데이터베이스입니다. |
-| `auth.params.privateKey` | [!DNL Base64-] 계정의 [!DNL Snowflake]암호화된 개인 키입니다. |
+| `auth.params.privateKey` | [!DNL Snowflake] 계정의 [!DNL Base64-]암호화된 개인 키입니다. |
 | `auth.params.privateKeyPassphrase` | 개인 키에 해당하는 암호입니다. |
 | `auth.params.warehouse` | 사용 중인 [!DNL Snowflake] 웨어하우스입니다. |
 | `connectionSpec.id` | [!DNL Snowflake] 연결 사양 ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
@@ -170,7 +115,7 @@ curl -X POST \
 
 +++
 
->[!TAB 암호화되지 않은 개인 키를 사용한  키 쌍 인증]
+>암호화되지 않은 개인 키를 사용한 [!TAB 키 쌍 인증]
 
 +++요청
 
@@ -207,7 +152,7 @@ curl -X POST \
 | `auth.params.account` | [!DNL Snowflake] 계정의 이름입니다. |
 | `auth.params.username` | [!DNL Snowflake] 계정과 연결된 사용자 이름. |
 | `auth.params.database` | 데이터를 가져올 위치의 [!DNL Snowflake] 데이터베이스입니다. |
-| `auth.params.privateKey` | [!DNL Base64-] 계정의 [!DNL Snowflake]암호화되지 않은 개인 키입니다. |
+| `auth.params.privateKey` | [!DNL Snowflake] 계정의 [!DNL Base64-]암호화되지 않은 개인 키입니다. |
 | `auth.params.warehouse` | 사용 중인 [!DNL Snowflake] 웨어하우스입니다. |
 | `connectionSpec.id` | [!DNL Snowflake] 연결 사양 ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
@@ -307,7 +252,7 @@ curl -X POST \
 
 +++
 
->[!TAB 암호화되지 않은 개인 키를 사용한  키 쌍 인증]
+>암호화되지 않은 개인 키를 사용한 [!TAB 키 쌍 인증]
 
 +++요청
 
@@ -344,7 +289,7 @@ curl -X POST \
 | `auth.params.account` | [!DNL Snowflake] 계정의 이름입니다. |
 | `auth.params.username` | [!DNL Snowflake] 계정과 연결된 사용자 이름. |
 | `auth.params.database` | 데이터를 가져올 위치의 [!DNL Snowflake] 데이터베이스입니다. |
-| `auth.params.privateKey` | [!DNL Base64-] 계정의 [!DNL Snowflake]암호화되지 않은 개인 키입니다. |
+| `auth.params.privateKey` | [!DNL Snowflake] 계정의 [!DNL Base64-]암호화되지 않은 개인 키입니다. |
 | `auth.params.warehouse` | 사용 중인 [!DNL Snowflake] 웨어하우스입니다. |
 | `connectionSpec.id` | [!DNL Snowflake] 연결 사양 ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
@@ -366,7 +311,7 @@ curl -X POST \
 
 >[!ENDTABS]
 
-이 자습서에 따라 [!DNL Snowflake] API를 사용하여 [!DNL Flow Service] 기본 연결을 만들었습니다. 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다.
+이 자습서에 따라 [!DNL Flow Service] API를 사용하여 [!DNL Snowflake] 기본 연결을 만들었습니다. 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다.
 
-* [&#x200B; [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
-* [&#x200B; [!DNL Flow Service] API를 사용하여 데이터베이스 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/database-nosql.md)
+* [ [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
+* [ [!DNL Flow Service] API를 사용하여 데이터베이스 데이터를 Experience Platform으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/database-nosql.md)

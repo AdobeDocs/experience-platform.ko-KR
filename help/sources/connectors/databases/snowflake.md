@@ -3,9 +3,9 @@ title: Snowflake Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Snowflake을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: fdc66601db3e8ae8fb55503b9e32d88ed48381cf
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1705'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 2%
 | --- | --- |
 | `account` | 계정 이름은 조직 내에서 계정을 고유하게 식별합니다. 이 경우 서로 다른 [!DNL Snowflake] 조직에서 계정을 고유하게 식별해야 합니다. 이렇게 하려면 계정 이름 앞에 조직 이름을 추가해야 합니다. 예: `myorg-myaccount.snowflakecomputing.com`. 추가 지침을 보려면 [계정 식별자 검색 [!DNL Snowflake] 의 섹션을 참조하십시오](#retrieve-your-account-identifier). 자세한 내용은 [[!DNL Snowflake] 설명서](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)를 참조하세요. |
 | `username` | [!DNL Snowflake] 계정의 사용자 이름입니다. |
-| `privateKey` | [!DNL Base64-] 계정의 [!DNL Snowflake]인코딩된 개인 키입니다. 암호화되거나 암호화되지 않은 개인 키를 생성할 수 있습니다. 암호화된 개인 키를 사용하는 경우 Experience Platform에 대해 인증할 때 개인 키 암호도 제공해야 합니다. 자세한 내용은 [개인 키 검색](#retrieve-your-private-key)의 섹션을 참조하십시오. |
+| `privateKey` | [!DNL Snowflake] 계정의 [!DNL Base64-]인코딩된 개인 키입니다. 암호화되거나 암호화되지 않은 개인 키를 생성할 수 있습니다. 암호화된 개인 키를 사용하는 경우 Experience Platform에 대해 인증할 때 개인 키 암호도 제공해야 합니다. 자세한 내용은 [개인 키 검색](#retrieve-your-private-key)의 섹션을 참조하십시오. |
 | `privateKeyPassphrase` | 개인 키 암호는 암호화된 개인 키로 인증할 때 사용해야 하는 추가 보안 계층입니다. 암호화되지 않은 개인 키를 사용하는 경우에는 암호를 제공할 필요가 없습니다. |
 | `port` | [!DNL Snowflake]이(가) 인터넷을 통해 서버에 연결할 때 사용하는 포트 번호입니다. |
 | `database` | Experience Platform으로 수집할 데이터가 포함된 [!DNL Snowflake] 데이터베이스입니다. |
@@ -72,7 +72,11 @@ ht-degree: 2%
 
 >[!WARNING]
 >
->[!DNL Snowflake] 원본에 대한 기본 인증(또는 계정 키 인증)은 2025년 11월에 더 이상 사용되지 않습니다. 소스를 계속 사용하고 데이터베이스에서 Experience Platform으로 데이터를 수집하려면 키 쌍 기반 인증으로 이동해야 합니다. 사용 중단에 대한 자세한 내용은 [[!DNL Snowflake] 자격 증명 손상 위험 완화에 대한 모범 사례 가이드](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/)를 참조하세요.
+>[!DNL Snowflake] 소스에 대한 기본 인증(계정 키 인증이라고도 함)은 **Azure 지역에서 Experience Platform 연결에 대해 완전히 사용 중단됩니다**. 모든 신규 및 기존 Azure 기반 연결에 대해 키 쌍 인증을 사용해야 합니다.
+>
+>**AWS 지역**&#x200B;의 Experience Platform에 연결하는 [!DNL Snowflake] 소스의 경우 기본 인증이 현재 계속 지원되지만 사용 중단 중이며 향후 제거될 예정입니다. 지속적인 연결을 위해 가능한 한 빨리 키 쌍 인증으로 마이그레이션하는 것이 좋습니다.
+>
+>사용 중단 및 지침에 대한 자세한 내용은 [[!DNL Snowflake] 자격 증명 손상 위험 완화에 대한 모범 사례 안내서](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/)를 참조하세요.
 
 | 자격 증명 | 설명 |
 | --- | --- |
@@ -147,7 +151,7 @@ openssl rsa -in rsa_key.p8 -pubout -out rsa_key.pub# You will be prompted to ent
 
 ### [!DNL Snowflake] 사용자에게 공개 키 할당
 
-생성된 공개 키를 Experience Platform에서 사용할 [!DNL Snowflake] 서비스 사용자와 연결하려면 **관리자 역할(예:** SECURITYADMIN[!DNL Snowflake])을 사용해야 합니다. 공개 키 콘텐츠를 검색하려면 `rsa_key.pub` 파일을 열고 `-----BEGIN PUBLIC KEY----- and -----END PUBLIC KEY-----` 줄을 제외한 전체 콘텐츠를 복사하십시오. 그런 다음 [!DNL Snowflake]에서 다음 SQL을 실행하십시오.
+생성된 공개 키를 Experience Platform에서 사용할 [!DNL Snowflake] 서비스 사용자와 연결하려면 [!DNL Snowflake] 관리자 역할(예: **SECURITYADMIN**)을 사용해야 합니다. 공개 키 콘텐츠를 검색하려면 `rsa_key.pub` 파일을 열고 `-----BEGIN PUBLIC KEY----- and -----END PUBLIC KEY-----` 줄을 제외한 전체 콘텐츠를 복사하십시오. 그런 다음 [!DNL Snowflake]에서 다음 SQL을 실행하십시오.
 
 ```sql
 ALTER USER {YOUR_SNOWFLAKE_USERNAME}>SET RSA_PUBLIC_KEY='{PUBLIC_KEY_CONTENT}';
@@ -163,7 +167,7 @@ Experience Platform에서는 연결을 설정하는 동안 개인 키를 [!DNL B
 
 ### 구성 확인
 
-Experience Platform에서 [!DNL Snowflake] 소스 연결을 만들기 전에 사용자의 **[!DNL Default Role]** 및 **[!DNL Default Warehouse]**&#x200B;이(가) Experience Platform에서 제공하는 값과 일치하는지 확인해야 합니다. [!DNL Snowflake] SQL 명령을 사용하여 `DESCRIBE USER {USERNAME}` UI에서 이러한 설정을 확인할 수 있습니다.
+Experience Platform에서 [!DNL Snowflake] 소스 연결을 만들기 전에 사용자의 **[!DNL Default Role]** 및 **[!DNL Default Warehouse]**&#x200B;이(가) Experience Platform에서 제공하는 값과 일치하는지 확인해야 합니다. `DESCRIBE USER {USERNAME}` SQL 명령을 사용하여 [!DNL Snowflake] UI에서 이러한 설정을 확인할 수 있습니다.
 
 또는 아래 단계에 따라 설정을 확인할 수 있습니다.
 
