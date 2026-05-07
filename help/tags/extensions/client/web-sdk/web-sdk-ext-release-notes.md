@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
+source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
 workflow-type: tm+mt
-source-wordcount: '3230'
-ht-degree: 20%
+source-wordcount: '3320'
+ht-degree: 21%
 
 ---
 
@@ -13,6 +13,13 @@ ht-degree: 20%
 # 웹 SDK 태그 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform Web SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Adobe Experience Platform Web SDK 릴리스 노트](/help/collection/js/release-notes.md)를 참조하십시오.
+
+## 버전 2.35.0 - 2026년 5월 7일
+
+- Adobe Experience Platform Web SDK의 [버전 2.33.0](/help/collection/js/release-notes.md)을 포함합니다.
+- 확장의 구성 페이지에 있는 Advertising 및 푸시 알림 섹션에서 Beta 플래그를 제거했습니다.
+- 편집하기 전에 푸시 알림 구성에 오류가 표시되는 문제를 해결했습니다.
+- 순차적 업데이트 변수 작업에서 analytics 이벤트를 덮어쓰는 문제가 해결되었습니다.
 
 ## 버전 2.34.2 - 2026년 3월 23일
 
@@ -22,8 +29,8 @@ ht-degree: 20%
 ## 버전 2.34.1 - 2026년 2월 11일
 
 - Adobe Experience Platform Web SDK의 [버전 2.31.1](/help/collection/js/release-notes.md)을 포함합니다.
-- [이벤트 보내기](configure/advertising.md) 작업에서 [Adobe Advertising 구성 설정](actions/send-event.md)을(를) 편집할 수 없는 문제가 수정되었습니다.
-- `edge.adobedc.net`을(를) 사용할 수 없을 때 [Edge 도메인](configure/general.md) 구성 설정에 대한 `tenant-id`에 대체 항목이 추가되었습니다.
+- [이벤트 보내기](actions/send-event.md) 작업에서 [Adobe Advertising 구성 설정](configure/advertising.md)을(를) 편집할 수 없는 문제가 수정되었습니다.
+- `tenant-id`을(를) 사용할 수 없을 때 [Edge 도메인](configure/general.md) 구성 설정에 대한 `edge.adobedc.net`에 대체 항목이 추가되었습니다.
 
 ## 버전 2.34.0 - 2026년 2월 9일
 
@@ -38,10 +45,10 @@ ht-degree: 20%
 **수정 사항 및 개선 사항**
 
 - 회사 ID를 하위 도메인으로 포함하도록 [기본 에지 도메인](configure/general.md#edge-domain)을 업데이트했습니다.
-- **[!UICONTROL No overrides]**&#x200B;데이터 스트림 구성 재정의[에 &#x200B;](configure/configuration-overrides.md) 옵션을 추가했습니다.
+- [데이터 스트림 구성 재정의](configure/configuration-overrides.md)에 **[!UICONTROL No overrides]** 옵션을 추가했습니다.
 - 일부 입력 필드의 항목을 다시 채우는 새로 고침 단추가 추가되었습니다.
 - 이제 인스턴스가 생성될 때마다 고유 인스턴스 이름이 자동으로 생성됩니다.
-- 값이 `combinedValidator` 또는 `undefined`일 때 `null`에서 오류가 발생하는 오류를 해결했습니다.
+- 값이 `undefined` 또는 `null`일 때 `combinedValidator`에서 오류가 발생하는 오류를 해결했습니다.
 - 인스턴스가 삭제될 때 발생하는 오류를 수정했습니다.
 - 스키마를 가져오는 동안 오류가 발생하여 XDM 개체 데이터 요소를 사용할 수 없던 문제를 해결했습니다.
 - [미디어 이벤트 보내기](actions/send-media-event.md) 작업에서 설정을 저장하는 문제를 해결했습니다.
@@ -194,15 +201,15 @@ Adobe Experience Platform Web SDK 버전 2.20.0을 포함합니다.
 **새로운 기능**
 
 - 확장 구성에 [`Streaming Media Collection`](configure/streaming-media.md) 구성 요소에 대한 지원을 추가했습니다.
-- [`Send Media Event`](actions/send-media-event.md) 기능에 대한 [!DNL Streaming Media Collection] 작업을 추가했습니다.
-- [`Media: Quality of Experience`](data-element-types.md#quality-experience) 기능에 대한 [!DNL Streaming Media Collection] 데이터 요소를 추가했습니다.
+- [!DNL Streaming Media Collection] 기능에 대한 [`Send Media Event`](actions/send-media-event.md) 작업을 추가했습니다.
+- [!DNL Streaming Media Collection] 기능에 대한 [`Media: Quality of Experience`](data-element-types.md#quality-experience) 데이터 요소를 추가했습니다.
 
 Adobe Experience Platform Web SDK 버전 2.20.0을 포함합니다.
 
 **수정 사항 및 개선 사항**
 
 - [변수 업데이트](actions/update-variable.md) 작업에서 데이터 요소를 검색할 때 발생하는 오류를 수정했습니다.
-- [!UICONTROL Media] 작업에 사용하도록 제안된 이벤트 유형에서 `sendEvent`개의 이벤트 유형을 제거했습니다.
+- `sendEvent` 작업에 사용하도록 제안된 이벤트 유형에서 [!UICONTROL Media]개의 이벤트 유형을 제거했습니다.
 
 ## 버전 2.22.0 - 2024년 5월 3일 토요일
 
@@ -260,11 +267,11 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
 **새로운 기능**
 
-- 데이터 스트림 ID[의 명령당 &#x200B;](../../../../datastreams/overrides.md)재정의에 대한 지원을 추가했습니다.
+- 데이터 스트림 ID](../../../../datastreams/overrides.md)의 명령당 [재정의에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
-- SDK 구성에서 `edgeConfigId`을(를) 위해 더 이상 사용되지 않는 `datastreamId`입니다.
+- SDK 구성에서 `datastreamId`을(를) 위해 더 이상 사용되지 않는 `edgeConfigId`입니다.
 - 데이터 스트림 구성에 대한 여러 사용자 경험 개선 사항이 사용자 인터페이스를 무시합니다.
 
 ## 버전 2.19.0 - 2023년 6월 21일 목요일
@@ -281,7 +288,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
 - Adobe Experience Platform Web SDK 버전 2.16.0을 포함합니다.
 - [데이터 스트림 구성 재정의](/help/datastreams/overrides.md)에 대한 지원이 추가되었습니다.
-- `datasetId` 명령의 `sendEvent` 옵션에 사용 중단 알림을 추가합니다.
+- `sendEvent` 명령의 `datasetId` 옵션에 사용 중단 알림을 추가합니다.
 
 **수정 사항 및 개선 사항**
 
@@ -420,7 +427,7 @@ Adobe Experience Platform Web SDK 라이브러리의 버전 2.5.0을 포함합�
 Adobe Experience Platform Web SDK 라이브러리의 버전 2.4.0을 포함합니다.
 
 - [이벤트 보내기](actions/send-event.md) 작업에 &#39;문서 언로드&#39; 확인란이 추가되었습니다.
-- `out`기본 동의를 구성[할 때 &#x200B;](configure/consent.md) 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
+- [기본 동의를 구성](configure/consent.md)할 때 `out` 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
 - 기본 동의 필드에 도구 설명을 추가했습니다.
 - [`Set consent`](actions/set-consent.md) 작업을 사용할 때 Adobe의 동의 2.0 표준에 대한 지원이 추가되었습니다.
 - 사용자의 액세스 토큰이 잘못되었거나 잘못 제공된 경우 XDM 개체 데이터 요소 UI에 더 나은 오류가 표시됩니다.
@@ -466,7 +473,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
    - `getDecisions` 명령이 제거되었습니다.
    - `scopes` 옵션이 `sendEvent` 명령에 추가되었습니다. 결정은 `sendEvent`에서 확인된 약속에서 반환됩니다.
    - 페이지/보기 전체 오퍼를 반환하는 기본 제공 `__view__` 범위가 추가되었습니다. (예: Target의 VEC 오퍼)
-`sendEvent`이(가) false로 설정된 경우에만 `renderDecisions` 명령에서 이러한 결과가 반환됩니다.
+`renderDecisions`이(가) false로 설정된 경우에만 `sendEvent` 명령에서 이러한 결과가 반환됩니다.
    - 결정을 사용할 수 있을 때 발생하는 `Decisions Received` 이벤트가 추가되었습니다.
 - 단일 서버 호출에 여러 개인화 알림이 결합되었습니다.
 - 데이터 요소가 참조될 때마다 재설정되는 이벤트 병합 ID의 문제가 해결되었습니다.
