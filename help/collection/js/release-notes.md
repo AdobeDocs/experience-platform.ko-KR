@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
+source-git-commit: a8a466778b74e6f64d258f759a36e1a4361f0a6b
 workflow-type: tm+mt
-source-wordcount: '2963'
+source-wordcount: '2988'
 ht-degree: 6%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 6%
 
 이 문서에서는 Adobe Experience Platform Web SDK의 릴리스 정보를 다룹니다.
 웹 SDK 태그 확장에 대한 최신 릴리스 노트는 [웹 SDK 태그 확장 릴리스 노트](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)를 참조하십시오.
+
+## 버전 2.33.1 - 2026년 5월 7일
+
+- 컨텍스트와 같은 필수 구성 요소가 SDK 번들에서 제외되고 이벤트가 전송되지 않던 문제를 수정했습니다.
 
 ## 버전 2.33.0 - 2026년 5월 7일
 
@@ -233,7 +237,7 @@ ht-degree: 6%
 
 **새로운 기능**
 
-- 데이터 스트림 ID[&#128279;](/help/datastreams/overrides.md)의 명령당 재정의에 대한 지원을 추가했습니다.
+- 데이터 스트림 ID](/help/datastreams/overrides.md)의 명령당 [재정의에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 
